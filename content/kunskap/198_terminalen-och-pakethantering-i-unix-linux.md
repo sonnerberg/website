@@ -1,10 +1,12 @@
 ---
-author: mos
-category: webbprogrammering
+author:
+    - mos
+category:
+     - labbmiljö
+     - linux
+     - terminalen
 revision:
   "2015-04-10": (A, mos) Första utgåvan.
-updated: "2015-04-10 14:03:57"
-created: "2015-04-10 14:03:25"
 ...
 Terminalen och pakethantering i Unix/Linux
 ==================================
@@ -31,11 +33,11 @@ Om du sitter på ett Unix-system så är du kanske bekant med terminaler sen tid
 Pakethantering {#paket}
 --------------------------------------
 
-Olika *nix-system har olika pakethanterare. Eller inte. När jag sitter på Unix-systemet FreeBSD så finns det en pakethanterare men ibland kompilerar man programmen från dess källkod.
+Olika \*nix-system har olika pakethanterare. Eller inte. När jag sitter på Unix-systemet FreeBSD så finns det en pakethanterare men ibland kompilerar man programmen från dess källkod.
 
 När jag sitter på min Debian-maskin (Linux) så använder jag pakethanteraren apt-get.
 
-Så här installerar jag paketet wget på Debian.
+Så här installerar jag paketet wget på Debian. Gör du så också, du behöver det kommandot framöver.
 
 ```text
 apt-get install wget
@@ -49,7 +51,3 @@ Avslutningsvis {#avslutning}
 Har du tips, förslag eller frågor om terminalen, unix och Linux, så finns det ett [subforum om Unix och Linux](forum/viewforum.php?f=49).
 
 Vill du lära dig mer om grunderna i Unix så finns artikeln ["20 steg för att komma i gång med Unix och terminalen"](kunskap/20-steg-for-att-komma-i-gang-med-unix-och-terminalen).
-
-
-
-
