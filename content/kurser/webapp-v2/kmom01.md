@@ -113,11 +113,11 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom tipset om "[Developer tools i webbläsaren för mobila enheter](coachen/developer-tools-i-webblasaren-for-mobila-enheter)".
 
-2. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)".
+1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)".
 
-3. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)".
+1. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)".
 
-
+1. Läs igenom artikeln "[Virtuella noder](kunskap/virtuella-noder)".
 
 ###Uppgifter {#uppgifter}
 
