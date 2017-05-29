@@ -1,10 +1,11 @@
 ---
-author: mos
-category: webbprogrammering
+author:
+    - mos
+category:
+    - mac os
+    - labbmiljö
 revision:
-  "2015-04-10": (A, mos) Första utgåvan.
-updated: "2015-04-10 14:04:00"
-created: "2015-04-10 14:02:13"
+    "2015-04-10": (A, mos) Första utgåvan.
 ...
 Terminalen och pakethantering med Brew på Mac OS
 ==================================
@@ -49,7 +50,7 @@ Ett Unix-system har normalt en pakethanterare som gör det enkelt att installera
 
 Följ instruktionerna på deras hemsida för att installera Homebrew som pakethanterare på din Mac.
 
-När du väl installerat Homebrew så kan du testa att installera wget.
+När du väl installerat Homebrew så kan du testa att installera wget. Det är ett kommando som du kommer att behöva.
 
 
 ```text
@@ -70,7 +71,3 @@ Avslutningsvis {#avslutning}
 Har du tips, förslag eller frågor om terminalen på Mac OS så finns det ett [subforum om Unix och Linux](forum/viewforum.php?f=49).
 
 Vill du lära dig mer om grunderna i Unix så finns artikeln ["20 steg för att komma i gång med Unix och terminalen"](kunskap/20-steg-for-att-komma-i-gang-med-unix-och-terminalen).
-
-
-
-

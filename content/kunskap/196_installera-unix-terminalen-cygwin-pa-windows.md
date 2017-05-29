@@ -96,7 +96,7 @@ apt-cyg
 
 Så här ser det ut när jag installerar `apt-cyg`.
 
-[YOUTUBE src=TMHCO-pau5E width=630 caption="Så här kommer man igång med pakethanteraren apt-cyg."]
+[YOUTUBE src=d2KqaqCUfGk width=630 caption="Så här kommer man igång med pakethanteraren apt-cyg."]
 
 
 
@@ -105,13 +105,13 @@ Lägg till Cygwin i Windows-menyn {#install-menu}
 
 Det är bra att kunna starta en Cygwin-terminal i nuvarande katalog, till exempel om man är i filväljaren och vill starta en terminal i just den katalogen. Det kan vi lösa genom att lägga till ett menyval i context-menyn (högerklick-menyn).
 
-Starta Cygwin (som Administratör) och installera programmet `chere`.
+Starta Cygwin och installera programmet `chere`.
 
 ```text
 apt-cyg install chere
 ```
 
-Kör programmet för att installera shell-extensions i Windows-registret.
+Starta nu **Cygwin som Administratör** (högerklicka på Cygwin ikonen och välj "Run as Administrator") och kör programmet `chere` för att installera shell-extensions i Windows-registret.
 
 ```text
 chere -i -c -t mintty
@@ -123,7 +123,9 @@ Om du glömde starta som Admin och fick felmeddelande, starta då om cygwin som 
 chere -i -f -c -t mintty
 ```
 
-Klart. Nu kan du högerklicka på desktopen och välja menyvalet "Bash Prompt Here" och en Cygwin-terminal startar i nuvarande katalog.
+Klart. Stäng ned det Cygwin som kör som administratör.
+
+Nu kan du högerklicka på desktopen och välja menyvalet "Bash Prompt Here" och en Cygwin-terminal startar i nuvarande katalog.
 
 Om du vill lära dig mer om vad programmet `chere` nyss gjorde så skriver du följande kommandon.
 
@@ -132,7 +134,7 @@ chere
 man chere
 ```
 
-[YOUTUBE src=TMHCO-pau5E width=630 caption="Så här kommer man igång med Cygwin på Windows context meny."]
+[YOUTUBE src=w_TBWeb5drI width=630 caption="Så här kommer man igång med Cygwin på Windows context meny."]
 
 Det finns en forumtråd för [Cygwin och `chere`](t/4030), kika där om du får bekymmer.
 
