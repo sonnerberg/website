@@ -6,7 +6,7 @@ category:
     - windows
     - bash
 revision:
-    "2017-05-11": (PA1, mos) Första revisionen.
+    "2017-05-29": (PA1, mos) Första revisionen.
 ...
 Installera Bash i Windows 10
 ==================================
@@ -16,6 +16,11 @@ Installera Bash i Windows 10
 Så här gör du för att installera Bash i Windows 10.
 
 <!--more-->
+
+[WARNING]
+Dokumentet är inte färdigt. Arbete pågår.
+[WARNING]
+
 
 
 

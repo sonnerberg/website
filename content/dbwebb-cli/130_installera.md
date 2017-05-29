@@ -7,7 +7,7 @@ Installera `dbwebb` genom att köra följande kommando i din terminal.
 bash -c "$(wget -qO- https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/install.bash)"
 ```
 
-Kommandosekvensen laddar först ned filen dbwebb som en temporär fil. Därefter kopieras den filen till katalogen `/usr/local/bin`, alternativt `/usr/bin`. Den kopieringen kan kräva att du kör skriptet som root, eller med sudo, så här.
+Kommandosekvensen laddar först ned filen dbwebb som en temporär fil. Därefter kopieras den filen till katalogen `/usr/local/bin`, alternativt `/usr/bin`. Den kopieringen kan kräva att du kör skriptet som root, eller med sudo, (gäller Mac OS eller Linux) så här.
 
 ```text
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/install.bash)"
@@ -18,7 +18,7 @@ Du kommer att se ett felmeddelande om det inte går bra att installera. om du f�
 När installationen är klar så kan du pröva om det gick bra genom att kolla vilken version du har.
 
 ```text
-$ dbwebb --version
+dbwebb --version
 ```
 
 Om du är intresserad så kan du dubbelkolla vad installationsskriptet gör, genom att [studera det på GitHub](https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/install.bash).

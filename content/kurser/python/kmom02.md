@@ -73,6 +73,12 @@ Titta på följande:
 
 Det finns inga lästips.
 
+<!--
+1. Bekanta dig kort med verktyget [Pylint](http://www.pylint.org/).
+
+3. Läs de två inledande kapitlen i [Python styleguide](http://legacy.python.org/dev/peps/pep-0008/). Läs så att du får en känsla för vad en styleguide är för ett programmeringsspråk. Använd sedan styleguiden som uppslagsverk.
+-->
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -115,7 +121,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns syntaxen i Python? Är det enkelt att se programmets struktur och vad det gör?
 * Hur går det med valideringen av uppgifterna? Är du överens med pylint om eventuella felmeddelanden vid valideringen?
 * Hur gick det att utföra uppgifterna, var de enkla eller svåra?
-
-
-
-

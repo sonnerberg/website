@@ -166,7 +166,9 @@ Kurslitteratur {#litteratur}
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
+<!--
 Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
+-->
 
 
 

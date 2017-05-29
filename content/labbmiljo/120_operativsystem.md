@@ -7,7 +7,7 @@ Du kan använda Windows, Mac OS eller någon variant av Linux/Unix. Du undviker 
 
 Om du kör Windows, se då till att göra det som en användare som har Administratörsrättigheter.
 
-Behöver du hjälp med frågor om operativsystem så finns följande subforum.
+Behöver du hjälp med frågor om operativsystem så finns följande subforum i forumet.
 
 * [Windows för Webbprogrammerare](forum/viewforum.php?f=55)
 * [Unix och Linux](forum/viewforum.php?f=49)

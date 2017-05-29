@@ -1,12 +1,14 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - labbmiljö
+    - terminal
+    - windows
 revision:
-  "2016-02-03": (C, mos) Ändrade länk för att installera apt-cyg, [bakgrund](t/5042).
-  "2015-08-24": (B, mos) Om kommandot `chere` går fel första gången.
-  "2015-04-10": (A, mos) Första utgåvan.
-updated: "2016-02-03 11:37:33"
-created: "2015-04-10 07:05:00"
+    "2017-06-29": (D, mos) Genomgång inför ht17.
+    "2016-02-03": (C, mos) Ändrade länk för att installera apt-cyg.
+    "2015-08-24": (B, mos) Om kommandot `chere` går fel första gången.
+    "2015-04-10": (A, mos) Första utgåvan.
 ...
 Installera Unix-terminalen Cygwin på Windows
 ==================================
@@ -23,10 +25,23 @@ Här är en guide till hur du installerar Cygwin och pakethanteraren `apt-cyg` o
 
 
 
-Läs på {#laspa}
+Förutsättningar {#forutsattning}
 --------------------------------------
 
-[Gå till Cygwins hemsida](https://www.cygwin.com/) och bekanta dig med Cygwin.
+Du har Windows installerat.
+
+Behöver du mer information så går du till [Cygwins hemsida](https://www.cygwin.com/).
+
+
+
+Kontrollera vilken version jag har {#msinfo}
+--------------------------------------
+
+Du kan kontrollera vilken version av Windows du har installerat med hjälp av kommandot `msinfo32`. Via menyn kan du välja att köra kommandot.
+
+[FIGURE src=image/snapvt17/msinfo32.png caption="Kör igång programmet msinfo32."]
+
+Leta reda på "System Type" som berättar om du har ett 64 bitars eller 32 bitars system.
 
 
 
@@ -35,18 +50,24 @@ Installera Cygwin {#install-cygwin}
 
 Det finns två varianter att installera, 32 bitars eller 64 bitars. Kolla upp vad din dator har för system och välj motsvarande installationsprogram för Cygwin.
 
-Ladda ned och starta installationsprogrammet. Du kan använda standardinställningar rakt av.
+Gå till [Cygwins hemsida](https://www.cygwin.com/) och ladda ned installationsprogrammet och starta det.
+
+Du kan använda standardinställningar men du behöver se till att programmet `lynx` installeras som en del i installationen.
 
 Så här gör jag när jag installerar Cygwin.
 
-[YOUTUBE src=h_eTCIjEPyw width=630 caption="En snabb översikt av stegen för att installera Cygwin."]
+[YOUTUBE src=QC-m5jJ5CME width=630 caption="En snabb översikt av stegen för att installera Cygwin."]
+
+Om du senare behöver uppdatera din installation så behöver du bara köra installationsprogrammet igen.
 
 
 
 Installera pakethanteraren apt-cyg {#install-apt-cyg}
 --------------------------------------
 
-Stegen för att installera pakethanteraren [`apt-cyg`](https://github.com/transcode-open/apt-cyg) är så här.
+Vi skall i Cygwin använda en pakethanterare [`apt-cyg`](https://github.com/transcode-open/apt-cyg) för att göra det enkelt att installera olika program.
+
+Stegen för att installera pakethanteraren är så här.
 
 Starta en cygwin-terminal och kör följande kommandon, först det ena och sedan det andra.
 
@@ -54,20 +75,6 @@ Starta en cygwin-terminal och kör följande kommandon, först det ena och sedan
 lynx -source dbwebb.se/apt-cyg > apt-cyg
 install apt-cyg /bin
 ```
-
-[WARNING]
-**lynx saknas**
-
-Om du får felmeddelande om att lynx saknas, ungefär så här:
-
-```bash
-$ lynx -source dbwebb.se/apt-cyg > apt-cyg
-bash: lynx: command not found
-```
-
-Läs då i forumet om hur du [installerar kommandot lynx för hand med Cygwins installationsprogram](/t/5487).
-[/WARNING]
-
 
 Klart. Nu kan du testa att installera kommandot `wget` med `apt-cyg`.
 
@@ -90,22 +97,6 @@ apt-cyg
 Så här ser det ut när jag installerar `apt-cyg`.
 
 [YOUTUBE src=TMHCO-pau5E width=630 caption="Så här kommer man igång med pakethanteraren apt-cyg."]
-
-[INFO]
-**Installationslänken för apt-cyg**
-
-Jag har för tillfället valt att lägga installationslänken till apt-cyg på dbwebb.se. Du kan läsa om [bakgrunden](t/5042) till detta i forumet.
-
-Följande är alltså ändrat.
-
-```bash
-# Original installation link
-$ lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
-
-# Current installation link
-$ lynx -source dbwebb.se/apt-cyg > apt-cyg
-```
-[/INFO]
 
 
 

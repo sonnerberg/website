@@ -5,6 +5,8 @@ Du kan också installera `dbwebb` för hand, steg för steg.
 
 Först ladda ned skriptet och spara det som `dbwebb` och sätt rättigheterna så att skriptet blir körbart.
 
+_($-tecknet representerar prompten och är inte en del av kommandot)_
+
 ```text
 $ wget -O dbwebb https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2
 $ chmod 755 dbwebb

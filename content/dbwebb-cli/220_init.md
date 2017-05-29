@@ -9,15 +9,20 @@ $ dbwebb init
 
 Det som händer är ett antal saker. 
 
-För det första så initieras ditt kurs-repo genom att katalogen `me` skapas tillsammans med ett antal underkataloger. Det är en standardstruktur som du skall följa i kursen.
+För det första så initieras ditt kursrepo genom att katalogen `me` skapas tillsammans med ett antal underkataloger. Det är en standardstruktur som du skall följa i kursen.
 
 För det andra så loggar `dbwebb` in på studentservern och skapar en katalogstruktur, dels skapas katalogen `$HOME/dbwebb-kurser` dit ditt kursrepo kommer att laddas upp och dels skapas katalogen `$HOME/www/dbwebb-kurser` där dina filer läggs som blir synliga via webbservern.
 
-För det tredje så laddas din katalogstruktur upp till servern. Först till serverns katalog `$HOME/dbwebb-kurser` och därefter till serverns katalog `$HOME/www/dbwebb-kurser`.
+I båda fallen så skrivs inga filer eller kataloger över, om de redan finns så får de vara var. Det betyder att du kan köra `dbwebb init` flera gånger utan att något förstörs lokalt.
 
-När du kört kommandot kan du pröva att logga in på studentservern och se att katalogerna har skapats.
+När du kört kommandot kan du pröva att logga in på studentservern via `dbwebb login` och se att katalogerna har skapats.
 
-I båda fallen så skrivs inga filer eller kataloger över, om de redan finns så får de vara var. Det betyder att du kan köra `dbwebb init` flera gånger utan att något förstörs lokalt. Däremot laddas din lokala version upp till servern varje gång.
+```bash
+$ dbwebb login
+$ ls dbwebb-kurser
+$ ls www/dbwebb-kurser
+$ exit 
+```
 
 Kommandot `dbwebb init` är samma som att köra följande kommandon.
 

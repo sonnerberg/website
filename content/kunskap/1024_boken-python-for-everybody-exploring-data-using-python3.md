@@ -1,9 +1,12 @@
 ---
-author: lew
-category: bok
+author:
+    - lew
+category:
+    - bok
+    - python
 revision:
-  "2016-08-10": (A, lew) Första revisionen.
-created: "2016-08-10 09:20:03"
+    "2017-05-29": (B, lew) Ändrade länk till bokens webbplats.
+    "2016-08-10": (A, lew) Första revisionen.
 ...
 Boken: Python for Everybody - Exploring data using Python3
 ==================================
@@ -12,11 +15,13 @@ En introduktionsbok till Python som fokuserar på informationsbehandling, med in
 
 <!--more-->
 
-Boken ger en introduktion till Python och en översikt av språkets grundkonstruktioner i ett sammanhang av informationsbehandling. Boken har en öppen licens och finns [tillgänglig online](http://pythonlearn.com/book.php).
+Boken ger en introduktion till Python och en översikt av språkets grundkonstruktioner i ett sammanhang av informationsbehandling. Boken har en öppen licens och finns [tillgänglig online](https://www.py4e.com/book).
 
 Boken får ett bra betyg av mig :-).
 
 Boken används som kurslitteratur i kursen [python](python).
+
+Boken hette i en tidigare utgåva [Python for Informatics - Exploring information](kunskap/boken-python-for-informatics-exploring-information).
 
 
 
@@ -41,7 +46,3 @@ Diskutera boken i forumet {#forum}
 ----------------------------------
 
 Det finns en [forumtråd](t/2491) där du kan fråga eller berätta vad du tyckte om boken.
-
-
-
-

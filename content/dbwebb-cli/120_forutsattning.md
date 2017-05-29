@@ -4,11 +4,11 @@ Förutsättningar
 Innan du kan jobba med kursrepot behöver du ha en terminal installerad. Din terminal behöver ha stöd för följande kommandon.
 
 ```text
-$ bash
-$ git
-$ ssh
-$ rsync
-$ wget # alternativt curl
+bash
+git
+ssh
+rsync
+wget
 ```
 
-*Dollartecknet $ markerar prompten och är inte en del av kommandot.*
+När du har installerat så kan du kontrollera din miljö via kommandot `dbwebb check`.

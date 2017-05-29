@@ -1,8 +1,8 @@
 ---
 title: python
-
 author: mos
 revision:
+    "2017-05-29": (E, mos) Genomgång och mindre uppdatering kursplan, justering kurslitteratur.
     "2016-11-01": (D, mos) Ladokmoment och studieplan omskrivna.
     "2015-01-09": (C, mos) Text om studieplan kurspaket.
     "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
@@ -11,14 +11,13 @@ revision:
 Kursen python
 ==================================
 
-Kursen **Programmering och Problemlösning i Python**, a.k.a. *python*, lär ut grunderna i programmering och problemlösning med programmerinsspråket Python.
-
+Kursen **Programmering och Problemlösning i Python**, a.k.a. *python*, lär ut grunderna i strukturerad programmering och problemlösning med programmerinsspråket Python.
 
 <!--more-->
 
 Detta är en grundkurs i programmering vilket innebär att vi startar med att skapa rutiner för problemlösning och felsökning via enkla grundkonstruktioner i Python. Vi bygger en utvecklingsmiljö som hjälper oss med utveckling och felsökning. Efterhand bygger vi mer och mer avancerade konstruktioner i Python, men fortfarande på en rimlig nivå som passar en nybörjare i programmering.
 
-Programmeringsspråket Python är ett högnivåspråk med stöd för olika programmeringsparadigmer som objektorientering och funktionell programmering. Du använder Python för att bekanta dig med dessa olika sätt att skriva sin kod. Du använder också Pythons inbyggda standardbibliotek med bland annat filhantering, datastrukturer, kopplingar till databaser tillsammans med tekniker för att bygga grafiska användargränssnitt och för att skapa webbsidor i Python. 
+Programmeringsspråket Python är ett högnivåspråk med stöd för olika programmeringsparadigmer som objektorientering och funktionell programmering. Du använder Python för att bekanta dig med dessa olika sätt att skriva sin kod. Du får pröva på att använda Pythons inbyggda standardbibliotek med funktioner för stränghantering, filhantering och datastrukturer. 
 
 Via litteraturstudier och praktiska övningar får du möjlighet att via programmeringsspråket Python, lära dig grunderna i strukturerad programmering och problemlösning. I slutet av kursen får du visa dina färdigheter i ett praktiskt programmeringsprojekt.
 
@@ -40,10 +39,12 @@ Innehåll {#innehall}
 Kursen omfattar följande områden:
 
 * Allmän problemlösning och strukturerad programmering.
-* Grundläggande programmering i Python med variabler, loopar, funktioner, argument.
+* Grundläggande programmering med variabler, loopar, funktioner med argument och returvärde.
+* Grunden i och användande av datastrukturer och algoritmer.
+* Översikt av standardbibliotek samt introduktion till externa moduler med pip.
+* Organisation av större kodmassa i moduler.
 * Felsökning, felkoder och tekniker att debugga sitt program.
-* Översikt av Pythons standardbibliotek och användande av datastrukturer och algoritmer, filhantering, koppling till databaser, grafiska gränssnitt och skapande av webbsidor.
-* Utvecklingsmiljö och verktyg för programvaruutveckling med Python samt publicera kod på en driftserver och visa resultat via webbsidor
+* Utvecklingsmiljö och verktyg för programvaruutveckling med Python.
 
 
 
@@ -57,6 +58,9 @@ Mål {#mal}
 Efter genomförd kurs skall studenten:
 
 * påvisa grundläggande kunskaper i problemlösning med strukturerad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* påvisa grundläggande kunskaper i att lösa
+definierade problem via programmering i Python.
+
 
 
 ###Färdighet och förmåga {#fardighet}
@@ -65,6 +69,15 @@ Efter genomförd kurs skall studenten:
 
 * utifrån en specifikation kunna utveckla en lösning i Python samt dokumentera och via text kunna presentera denna lösning.
 * ha god praktisk förmåga att hantera de verktyg och utvecklingsmiljöer som används vid utveckling och felsökningar med Python.
+
+
+
+###Värderingsförmåga och förhållningssätt {#vardera}
+
+Efter genomförd kurs skall studenten:
+
+* påvisa grundläggande förmåga att reflektera över bra och mindre bra kod i sammanhanget kodstruktur och lösningar på definierade problem via redovisningstexter.
+
 
 
 Kursmoment {#kursmoment}
@@ -77,7 +90,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Sedan måste vi börja skriva våra första enkla program också.
 
-[Instruktion till kursmoment 01](python/kmom01).
+[Instruktion till kursmoment 01](kurser/python/kmom01).
 
 
 
@@ -85,7 +98,7 @@ Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i ku
 
 Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if-satser, loopar och hur du använder de inbyggda funktionerna. Därefter är det dags att skriva egna funktioner i ditt första lite större program där Marvin skall få lite intelligens så han kan svara på frågor.
 
-[Instruktion till kursmoment 02](python/kmom02).
+[Instruktion till kursmoment 02](kurser/python/kmom02).
 
 
 
@@ -93,7 +106,7 @@ Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if
 
 Lär dig om strängar och filhantering i Python samt börja strukturera din kod i moduler genom att dela upp den i olika filer.
 
-[Instruktion till kursmoment 03](python/kmom03).
+[Instruktion till kursmoment 03](kurser/python/kmom03).
 
 
 
@@ -101,7 +114,7 @@ Lär dig om strängar och filhantering i Python samt börja strukturera din kod 
 
 Lär dig grunderna i datastrukturen listor och vad du kan göra med den. Pröva på att skriva ett grafiskt program i terminalen men Python-modulen Curses.
 
-[Instruktion till kursmoment 04](python/kmom04).
+[Instruktion till kursmoment 04](kurser/python/kmom04).
 
 
 
@@ -109,7 +122,7 @@ Lär dig grunderna i datastrukturen listor och vad du kan göra med den. Pröva 
 
 Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler. Bygg vidare på ditt curses-program och gör ett litet spel.
 
-[Instruktion till kursmoment 05](python/kmom05).
+[Instruktion till kursmoment 05](kurser/python/kmom05).
 
 
 
@@ -117,7 +130,7 @@ Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupl
 
 Lär dig att installera och använda externa moduler i Python med pip. Momentet är inriktat på en samling av moduler som hjälper dig att koppla upp dig mot webbplatser och hämta information från dem.
 
-[Instruktion till kursmoment 06](python/kmom06).
+[Instruktion till kursmoment 06](kurser/python/kmom06).
 
 
 
@@ -125,7 +138,7 @@ Lär dig att installera och använda externa moduler i Python med pip. Momentet 
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](python/kmom10).
+[Instruktion till kursmoment 10](kurser/python/kmom10).
 
 
 
@@ -134,29 +147,36 @@ Kurslitteratur {#litteratur}
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
+<!--
 Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
+-->
 
 
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal artiklar som finns tillgängliga på nätet. Böckerna är väldigt lika men exemplen skiljer sig åt i dem, den ena boken fokuserar på datavetenskap och matematik medan den andra fokuserar på informatik och informationsbehandling. Det räcker att fokusera på en av böckerna och skumläsa den andra.
+Följande bok är kurslitteratur tillsammans med övrigt material som finns i respektive kursmoment.
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
 * **[Python for Everybody - Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)** -- Charles R Severance  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
-
-* **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
+  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python via fokus på informatik och informationsbehandling.
 
 
 
 ###Referenslitteratur {#referenslitteratur}
 
-Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
+Följande bok är referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter.
 
+* **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
+  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python via fokus på datavetenskap och matematik.
+
+
+
+###Övrig litteratur {#ovriglitteratur}
+
+Det finns flera fria böcker till Python. Här följer ett par andra böcker som inte är kurslitteratur men som kan vara intressanta att kika på för den som ytterligare vill dyka ned i Python.
 
 * **[Dive into Python 3](kunskap/boken-dive-into-python-3)** -- Mark Pilgrim  
   En intro-bok till Python 3 för den som redan kan Python 2 eller kan ett annat programmeringsspråk.
@@ -218,9 +238,9 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 
 | Kursens moment  | Ladok moment enligt kursplan  |
 |-----------------|-------------------------------|
-| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
-| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
-| Kmom05 - kmom10 | Projekt á 2.5hp               |
+| Kmom01 + kmom02 | Inlämning 1 á 2.5hp           |
+| Kmom03 + kmom04 | Inlämning 2 á 2.5hp           |
+| Kmom05 - kmom10 | Inlämning 3 á 2.5hp           |
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
