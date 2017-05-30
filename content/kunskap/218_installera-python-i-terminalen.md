@@ -119,6 +119,11 @@ Interpretatorn är bra för att testa och debugga kodkonstruktioner eller skriva
 
 Allt du skriver i interpretatorn tolkas som Python-kod. Skriver du rätt körs koden annars får du ett felmeddelande.
 
+
+
+Python-kod i filer och exekvera {#filer}
+-------------------------------
+
 Här följer ett par videor där du kan se Kenneth ta ett par första stapplande steg med Python och när han kör Python i interpretator och genom att spara koden i en fil och sedan exekvera den.
  
 [YOUTUBE src=dRZF1Crf1wg width=630 caption="Kenneth kör Python i terminalen."]
