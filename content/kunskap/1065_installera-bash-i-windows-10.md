@@ -6,87 +6,161 @@ category:
     - windows
     - bash
 revision:
-    "2017-05-29": (PA1, mos) Första revisionen.
+    "2017-05-29": (A, mos) Första revisionen.
 ...
 Installera Bash i Windows 10
 ==================================
 
-[FIGURE src=/image/snapvt17/phpunit.png?w=c5&a=0,50,70,0 class="right"]
+[FIGURE src=image/snapvt17/win10-bash-cowsay.png?w=c5&a=0,70,60,0 class="right"]
 
-Så här gör du för att installera Bash i Windows 10.
+Så här gör du för att installera Bash i Windows 10 samt installera det som behövs för att komma igång med kurserna.
 
 <!--more-->
-
-[WARNING]
-Dokumentet är inte färdigt. Arbete pågår.
-[WARNING]
-
 
 
 
 Förutsättning {#pre}
 -------------------------------
 
-Du har en installation a Windows 10 som är uppgraderad till senaste versionen via Windows Update.
+Du har minst en 64-bitars version av Windows 10 Creators Update installerad. 
+
+Dubbelkolla att ditt versionsnummer startar på minst 1703 (Creators Update). Tryck `Windows key + R` och kör programmet `winver`. 
+
+[FIGURE src=image/snapvt17/win10-winver.png caption="Version 1703 eller högre visat att Creators update är installerad."]
 
 
 
-
-
-Dubbelkolla om phpunit är installerat {#test}
+Installera Bash {#install}
 -------------------------------
 
-Du kan börja med att dubbelkolla om phpunit redan finns i din PATH.
+Bash finns med i din Windows installation men du behöver sätta på det på följande sätt.
 
-```bash
-$ whereis phpunit
-$ which phpunit
-$ phpunit --version
-$ php --version
+
+
+###Sätt på "Developer Mode" {#devmode}
+
+Öppna fönstret "Windows Settings" via `Windows key + I`. Välj "Update & security" samt "For developers". Klicka i "Developer mode".
+
+[FIGURE src=image/snapvt17/windows10-developers-mode.png?w=w2 caption="Sätt på Developer mode som ett steg i att installera Bash på Windows."]
+
+
+
+###Sätt på "Windows Subsystem for Linux (beta)" {#winsublin}
+
+Via startmenyn, skriv "turn windows" för att söka efter "Turn Windows features on or off". Starta programmet och klicka i rutan för "Windows subsystem for Linux (beta)".
+
+[FIGURE src=image/snapvt17/win10-windows-features-on-off.png caption="Sätt på Windows Subsystem för Linux."]
+
+
+
+<!--
+###Aktivera "Windows Subsystem for Linux (beta)" {#aktivera}
+
+Du kan nu aktivera bash för Windows genom att köra följande kommandorad i Power Shell som Administratör.
+
+```text
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+-->
+
+
+
+Starta Bash första gången {#start1}
+-------------------------------
+
+Kör kommandot `bash` via sökfältet eller via `Windows key + R`.
+
+En Bash-terminal öppnar sig och Ubuntu laddas ned och installeras.
+
+Du behöver skapa en ny Linux-användare och ange dess lösenord.
+
+[FIGURE src=image/snapvt17/win10-bash.png?w=w2 caption="Nu är Bash för Windows installerat och klart."]
+
+
+
+Pakethantering {#paket}
+------------------------------
+
+Det finns med en pakethanterare som heter `apt-get`. Med den kan du installera paket, tjänster och programvaror i din Bash terminal.
+
+De grundläggande paket som du behöver för kurserna finns redan installerade.
+
+För att testa pakethanteraren kan du installera paketet `cowsay` som är ett litet skoj-paket.
+
+```text
+$ sudo apt-get install cowsay
+$ cowsay "Hej alla webbprogrammerare!"
 ```
 
-Även om du har en viss version installerad, så kan det tänkas att du vill installera en annan version. Din version av PHP behöver matcha din version av PHPUnit.
+[FIGURE src=image/snapvt17/win10-bash-cowsay.png?w=w2 caption="Nu är du redo för Bash på Windows."]
 
-[Hemsidan för PHPUnit](https://phpunit.de/) brukar vara tydliga med vilken version av PHPUnit som stödjer vilken version av PHP.
+Vill du vet mer om programmet så öppnar du dess manualsida.
 
-
-
-Installera phpunit {#install}
--------------------------------
-
-Programmet phpunit är en PHAR-fil (PHP-arkiv) som du kan ladda ned och spara någonstans i din sökväg.
-
-Säg jag vill ladda hem en godtycklig version av phpunit. Så här gör jag.
-
-```bash
-# Ladda ned från hemsidan, via webbläsare eller via curl/wget
-$ wget https://phar.phpunit.de/phpunit-5.7.phar -Ophpunit && chmod 755 phpunit
-$ ./phpunit --version
-PHPUnit 5.7.19 by Sebastian Bergmann and contributors.
-$ cp phpunit /usr/local/bin 
-$ which phpunit
-/usr/local/bin/phpunit
-$ phpunit --version
+```text
+$ man cowsay
 ```
 
-Du kan lägga den exekverabara filen i godtycklig katalog som du har i din PATH.
-
-Du kan nu dubbelkolla att du verkligen använder den versionen du nyss installerat, använd `whereis` och `which` samt kolla vilken version det är på den phpunit du använder.
 
 
+Bra att ha {#braattha}
+------------------------------
 
-Dubbelkolla att phpunit fungerar {#funkar}
--------------------------------
+Följande tips kan göra din bekantskap med Bash för Windows lite trevligare.
 
-I kursrepot för oophp-kursen finns ett [exempelprogram](https://github.com/dbwebb-se/oophp/tree/master/example/phpunit) som kan användas för att testa att phpunit fungerar.
 
-Läs README-filen för instruktioner om hur du kommer igång och testa att phpunit fungerar som det ska.
 
-Notera att du behöver även [PHP Xdebug](labbmiljo/xdebug) för att kodtäckningen skall fungera.
+###Sudo utan lösenord {#sudo}
+
+För att slippa skriva lösenord varje gång du skriver kommandot `sudo` så kan du lägga en fil i katalogen `/etc/sudoers.d/` och döpa filen till ditt användarnamn. Filen skall innehålla en rad likt denna (om min användare är "mos").
+
+```text
+mos ALL=NOPASSWD: ALL
+```
+
+Följande kommandorad skapar en sådan fil för din användare.
+
+```bash
+sudo bash -c "echo '$USER ALL=NOPASSWD: ALL' > /etc/sudoers.d/$USER && cat /etc/sudoers.d/$USER"
+```
+
+Här är en forumtråd som hanterar [sudo utan lösenord](t/4327).
+
+
+
+###Kopiera i terminal {#copypaste}
+
+När du är i terminalen kan du markera ett textstycke med musen och högerklicka. Sedan kan du göra paste genom att högerklicka igen. Detta fungerar även om du vill göra paste till ett fönster utanför Bash.
+
+Vill du kopiera från ett annat fönster till Bash så markerar du texten och lägger den i copy-bufferten (via `ctrl-c` eller högerklickmenyn) och du gör paste i Bash via högerklick.
+
+
+
+###Vilken version av Bash {#version}
+
+Du kan kontrollera vilken version av Bash du har med kommandot `lsb_release`.
+
+```
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 16.04.2 LTS
+Release:        16.04
+Codename:       xenial
+```
+
+
+
+###Installera och uppdatera Bash {#update}
+
+Det finns ett Windows kommando `lxrun` som du kan installera, avinstallera, uppdatera och uppgradera din installation av Bash.
+
+[Kika i MSDN manualen](https://msdn.microsoft.com/en-us/commandline/wsl/reference) vad du kan göra.
 
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det finns en [forumtråd](t/6465) där du kan ställa frågor, eller ge tips och trix, om denna artikel. Kika där om du får problem.
+Det finns en [forumtråd](t/6515) där du kan ställa frågor, eller ge tips och trix, om denna artikel. Kika där om du får problem. Tråden ligger i subforumet [Windows för Webbprogrammerare](forum/viewforum.php?f=55).
+
+Vill du ställa specifika frågor om Unix/Linux och Bash så passar subforumet [Unix och Linux](forum/viewforum.php?f=49)
