@@ -1,14 +1,16 @@
 ---
-author: mos
-category: webbprogrammering
+author:
+    - mos
+category:
+    - labbmiljö
+    - texteditor
 revision:
+    "2017-05-30": (F, mos) Genomgång inför ht17.
     "2016-08-29": (E, mos) Mer info om att fixa LF.
     "2016-08-24": (D, mos) Bort blå ruta om LF.
     "2015-10-05": (C, mos) Not om externa beroenden för paket.
     "2015-08-24": (B, mos) Not om Windows och Unix-stil på radslut.
     "2015-03-31": (A, mos) Första utgåvan.
-updated: "2015-08-24 08:36:21"
-created: "2015-03-31 09:10:29"
 ...
 Installera texteditorn Atom
 ==================================
@@ -41,7 +43,7 @@ Testa din editor {#testa}
 
 För att testa hur din editor fungerar, så kan du göra följande exempel.
 
-Ta koden nedan och kopiera in till din editor.
+Ta koden nedan och kopiera in till din editor och spara som `hello.html` i din hemmakatalog.
 
 ```text
 <!doctype html>
@@ -60,8 +62,6 @@ Så här kan det se ut.
 
 Titta nere i högra hörnet av Atom, så ser du att editorn håller koll på vilken typ av fil som du editerar och färgkodar din kod enligt det språk du använder.
 
-Spara filen som `hello.html` i din hemmakatalog.
-
 Öppna din filebrowser och leta reda på vad du sparade filen, dubbelklicka på filen och öppna den i en webbläsare. Det kan se ut så här.
 
 [FIGURE src=/image/atom/atom-ie.png?w=w2 caption="öppnar filen och visar i en webbläsare på Windows."]
@@ -77,11 +77,19 @@ Atom har inställningar som kan ändras, öppna dem via `ctrl ,` eller `cmd ,` (
 
 [FIGURE src=/image/atom/atom-settings.png?w=w2 caption="Fönstret för inställningar för Atom."]
 
+Du behöver nu dubbelkolla att Atom har ett antal nödvändiga inställningar.
+
+* UTF-8 NOBOM
+* Soft tabs, tab längd 4 mellanslag
+* Radslut Unix style
+
 
 
 ###Använd UTF-8 NOBOM {#utf8}
 
-Standardinställningen är att filerna sparas i UTF-8 utan byte order mark (NOBOM). Låt det vara på det viset.
+Kika under "Core" och leta reda på "File Encoding".
+
+Standardinställningen är att filerna sparas i formatet UTF-8 utan byte order mark (NOBOM). Låt det vara på det viset. Det handlar om hur filen sparas på disken och vilket format de olika tecknen får. Vi vill använda UTF-8.
 
 [FIGURE src=/image/atom/atom-settings-fileencoding.png caption="Encoding skall vara UTF-8 NOBOM"]
 
@@ -89,40 +97,53 @@ Standardinställningen är att filerna sparas i UTF-8 utan byte order mark (NOBO
 
 ###Använd soft tabs, tab-längd 4 {#softtabs}
 
-Standardinställningen är att *soft tabs* används. Låt det vara på det viset.
+Leta under fliken "Editor" och finn "Soft Tabs". Standardinställningen är att *soft tabs* används. Låt det vara på det viset.
 
 [FIGURE src=/image/atom/atom-soft-tabs.png caption="Använd soft tabs."]
 
 Soft tabs betyder att en tab ersätts med ett motsvarande antal mellanslag. Det gör att det blir enklare att flytta filer mellan olika editorer och användare som kan ha olika inställningar.
 
-Ställ in *tab length* till 4 mellanslag.
+Leta efter "Tab Length" och ställ in *tab length* till 4 mellanslag.
  
 [FIGURE src=/image/atom/atom-tab-length.png caption="Använd 4 mellanslag för att ersätta en tab."]
 
-Olika kodstandarder kan ha olika rekommendationer om storleken på en tab. De vanliga inställningarna är 2 eller 4 mellanslag. I kurserna använder vi 4.
+Olika kodstandarder kan ha olika rekommendationer om storleken på en soft tab. De vanliga inställningarna är 2 eller 4 mellanslag. I kurserna använder vi 4.
 
 
 
 ###Radslut enligt Unix-style {#lineending}
 
-Vi vill använda radslut enligt Unix-style `\n`, också kallad LF. Det blir enklast så, för en webbprogrammerare.
+Vi vill använda radslut enligt Unix-style (`\n`), också kallad LF. Det blir enklast så, för en webbprogrammerare.
 
 Du kan se vilket radslut som används, genom att titta nere till höger. Öppna en ny fil (`ctrl-n`) och kika.
 
 [FIGURE src=/image/snapht16/atom-crlf-to-lf.png caption="På Windows är radbrytning CRLF standard."]
 
-För att ändra filens radslut så klicka på (i detta fallet) CRLF och byt till LF. Det skall se ut så här.
+För att ändra filens radslut så klicka på (i detta fallet) CRLF och byt till LF samt spara filen. Det skall se ut så här.
 
 [FIGURE src=/image/snapht16/atom-lf.png caption="Använd alltid Unix style radbrytning LF."]
 
-Det finns en [forumtråd som visar hur du byter default radbrytning till LF](f/45202).
+Förutom Windows style radbrytning LF + CR (`\n\r`) så kan du även komma i kontakt med äldre Mac style CR (`\r`).
 
-Förutom Windows style radbrytning LF + CR `\n\r` så kan du även komma i kontakt med äldre Mac style CR `\r`.
+Vi kör alltid på LF för att undvika problem när vi flyttar filer mellan olika datorer. I vissa fall kan det bli problem när man använder andra typer av radslut. 
 
-Men vi kör alltid på LF.
+
+
+###Radslut nya filer enligt LF {#linendstd}
+
+För att underlätta att alla nya filer du skapar verkligen har LF som radslut så kan du konfigurera ett förinstallerat paket till Atom som heter "line-ending-selector".
+
+I "Settings" gå till fliken "Packages" och sök efter "line-ending". Du bör få upp paketet "line-ending-selector" och du klickar på "Settings" för det paketet.
+
+Du får upp en flik där du kan sätta "Default line ending" till LF.
+
+[FIGURE src=image/snapvt17/atom-default-lineending.png?w=w2 caption="Alltid default radslut till LF."]
+
 
 
 <!--
+Det finns en [forumtråd som visar hur du byter default radbrytning till LF](f/45202).
+
 [INFO]
 **Windows och Unix-stil på radslut**
 
@@ -145,6 +166,9 @@ Atom har också ett kommandorads-interface till pakethanteringen. Det är trevli
 
 [FIGURE src=/image/atom/atom-apm.png?w=w2 caption="Använd kommandoraden för att hantera dina paket för Atom."]
 
+Allt eftersom du blir varm i kläderna så är det en bra idé att se vilka paket som finns som kan underlätta din vardag som programmerare. Men till att börja med så nöjer vi oss med att konstatera att det finns möjligheter att anpassa sin editor.
+
+<!--
 Så här installerar jag mina paket från kommandoraden. 
 
 *Notera att varje paket kan vara beroende av att ditt system har relaterade programvaror installerade. Du bör därför installera varje paket för sig så att du har koll på eventuella externa beroenden.*
@@ -154,6 +178,7 @@ Det är inte nödvändigt att du installerar paketen nu, du kan ta det som det k
 ```bash
 $ apm install linter linter-less linter-pylint linter-jscs linter-phpcs block-travel linter-jshint linter-phpmd linter-csslint linter-pep8 linter-shellcheck linter-htmlhint linter-php linter-xmllint
 ```
+-->
 
 
 
@@ -164,6 +189,9 @@ Atom sparar sina konfigurationsfiler i din hemmakatalog under katalogen `.atom`,
 
 [FIGURE src=/image/atom/atom-config.png?w=w2 caption="Alla konfigurationsfiler sparas i din hemmakatalog, under `.atom`."]
 
+När man vill anpassa sin editor så är konfigurationsfilerna en variant. Men vi låter det vara, tills vidare, en mer avancerad användning av texteditorn.
+
+<!--
 Så här har jag uppdaterat min `.atom/keymap.cson` för att den skall passa hur jag vill navigera bland flikar och i texteditorn.
 
 ```text
@@ -177,6 +205,7 @@ Så här har jag uppdaterat min `.atom/keymap.cson` för att den skall passa hur
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-shift-tab': 'pane:show-previous-item'
 ```
+-->
 
 
 
@@ -185,9 +214,9 @@ Alternativ till Atom {#alternativ}
 
 Här är ett par alternativ till texteditorn Atom.
 
-* [TextWrangler](http://www.barebones.com/products/textwrangler/download.html) (Mac OS)
-* [Notepad++](http://notepad-plus-plus.org/download/) (Windows)
-* [jEdit](kunskap/installera-en-texteditor-jedit) (flera plattformar)
+* TextWrangler (Mac OS)
+* Notepad++ (Windows)
+* SublimeText, jEdit (flera plattformar)
 
 Självklart kan du använda din egen favoriteditor, men det är inte säkert att vi har en liknande och kan hjälpa dig om du får problem. Bortsett från det så är det fritt fram att pröva vilka editorer du vill. Se bara till att du har samma [grundinställningar som vi har i Atom](#grund).
 
