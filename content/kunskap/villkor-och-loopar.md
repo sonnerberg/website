@@ -93,17 +93,16 @@ for i in range(10):
 
 Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta in mer på detta.
 
-Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program.
+Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Här räknas `number_of_apples` variablen upp från 0 till 12 och med hjälp av `if`-satsen skriver vi ut meddelanden.
 
 ```python
-for i in range(10):
-    number = i + 1
-    if number > 5:
-        print("Stor")
+for number_of_apples in range(13):
+    if number_of_apples > 10:
+        print("Du har mer än 10 äpplen")
+    elif number_of_apples <= 10 and number_of_apples > 5:
+        print("Du blev snabbt mätt och åt bara upp några av dina äpplen")
     else:
-        print("Liten")
-
-# skriver ut: Liten 5 gånger och Stor 5 gånger
+        print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
 Om vi bara vill göra något ett bestämt antal gånger utan att bry os om index `i` kan vi använda oss av `_` istället för `i` enligt nedan. Detta göra att vi inte skapar en variabel som tar plats i minnet på datorn och som förvirrar personer som läser koden.
@@ -115,7 +114,7 @@ for _ in range(5):
 # skriver ut: python är ett spännande programmeringsspråk 5 gånger
 ```
 
-Vi kan även loopa över annat än talföljder och vi kommer senare i kursen lära oss många olika konstruktioner som vi kan loopa över. I nedanstående exempel loppar vi igenom en sträng bokstav för bokstav med hjälp an samma `in` konstruktion som vi använde för talföljderna.
+Vi kan även loopa över annat än talföljder och vi kommer senare i kursen lära oss många olika konstruktioner som vi kan loopa över. I nedanstående exempel loopar vi igenom en sträng bokstav för bokstav med hjälp av samma `in` konstruktion som vi använde för talföljderna.
 
 ```python
 for letter in "räksmörgås":
@@ -145,19 +144,23 @@ while number < 20:
 
 Det viktiga med en `while`-loop är att vi någongång avslutar loppen för annars kommer den fortsätta i al oändlighet eller tills datorn stängs av.
 
-`while`-loopar kan även användas för att ta emot indata från användaren. Om vi vill ta emot tills användaren skriver in ett specifikt värde kan vi använda `break` när användaren skriver in detta värde. Vi har tidigare sett hur vi använder `input` och hur vi konverterar data från en sträng till ett heltal. I `while`-loopen brytar vi mot regeln ovan att vi skulle ha ett villkor som någongång avslutas. Villkoret `True` avslutas aldrig då detta är alltid är sant, men vi använder konstruktionen `break` för att avsluta. Inne i loopen är det förste vi gör att kolla om användaren har skrivit in värdet för avslut (q). Om användaren har gjort det avslutar vi programmet med att skriva ut totala summan annars konverterar vi till ett heltal och summerar heltalet med den totala summan.
+`while`-loopar kan även användas för att ta emot indata från användaren. Om vi vill ta emot indata tills användaren skriver in ett specifikt värde kan vi använda `break` när användaren skriver in detta värde. Vi har tidigare sett hur vi använder `input` och hur vi konverterar data från en sträng till ett heltal. I `while`-loopen brytar vi mot regeln ovan att vi skulle ha ett villkor som någongång avslutas. Villkoret `True` avslutas aldrig då detta är alltid är sant, men vi använder konstruktionen `break` för att avsluta. Inne i loopen är det förste vi gör att kolla om användaren har skrivit in värdet för avslut (q), om användaren har gjort det avslutar vi programmet. Annars skriver vi ut ett meddelande baserat på de `if`-staser vi har sett tidigare.
 
 ```python
-mega_sum = 0
-
 while True:
-    user_input = input("Skriv in en siffra (eller q för avslut): ")
+    user_input = input("Skriv in antal äpplen (eller q för avslut): ")
     if user_input == "q":
-        print("MegaSum: " + str(mega_sum))
+        print("Du är nu klar med att äta äpplen.")
+        print("Hej då!")
         break
     else:
-        number = int(user_input)
-        mega_sum += number
+        number_of_apples = int(user_input)
+        if number_of_apples > 10:
+            print("Du har mer än 10 äpplen")
+        elif number_of_apples <= 10 and number_of_apples > 5:
+            print("Du blev snabbt mätt och åt bara upp några av dina äpplen")
+        else:
+            print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
 
