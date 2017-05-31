@@ -105,7 +105,7 @@ Det finns inga extra lästips.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 6-8 studietimmar)*
+*(ca: 6-10 studietimmar)*
 
 
 
@@ -113,7 +113,7 @@ Det finns inga extra lästips.
 
 Genomför följande övning för att träna dig och förbereda inför uppgifterna.
 
-1. Kom igång och gör ditt första program i Python tillsammans med artikeln "[Kom igång med ditt första program i Python](kunskap/kom-igang-med-ditt-forsta-program-i-python)".
+1. Kom igång och gör ditt första program i Python tillsammans med artikeln "[Kom igång med ditt första program i Python](kunskap/kom-igang-med-ditt-forsta-program-i-python-v2)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom01/hello`.
 
 
 

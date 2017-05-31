@@ -4,6 +4,7 @@ author:
 category:
     - python
 revision:
+    "2017-05-31": (D, mos) Genomgången inför ht17, bort med CGI.
     "2016-02-22": (C, mos) Genomgången, bort med onödig info och in med videor.
     "2016-01-20": (B, mos) Uppdaterad asciinema som refererade till bin/dbwebb.
     "2015-08-25": (A, mos) Flyttad från äldre artikel i tidigare utgåva av python.
@@ -13,111 +14,113 @@ Kom igång med ditt första program i Python
 
 [FIGURE src=/image/snapht15/python3.png?w=c5&a=0,50,60,0 class="right"]
 
-Denna artikel visar hur du kommer igång med Python och visar hur du skriver ditt första program i Python. Du får även skriva ett CGI-skript som du kör via webbläsaren.
+Denna artikel visar hur du kommer igång med Python och visar hur du skriver ditt första program i Python.
 
-Allt som allt så hjälper dig denna artikel att komma igång med programmeringsspråket Python.
+Artikeln visar även hur du kan jobba med exempelfiler från kursrepot för python-kursen.
 
 <!--more-->
 
-[WARNING]
-Från och med hösten 2017 finns det en [nyare artikel med samma namn](kunskap/kom-igang-med-ditt-forsta-program-i-python-v2) som du skall läsa istället. Den artikeln tar inte med CGI.
-[/WARNING]
 
 
 
 Förutsättning {#pre}
 -------------------------------
 
-Artikeln är en del av kursen python och förutsätter att du har gjort motsvarande "[Installera Python i terminalen](kunskap/installera-python-i-terminalen)".
+Artikeln är en del av kursen python och förutsätter att du har en labbmiljö som motsvaras av [labbmiljön för kursen python](kurser/python/kmom01#labbmiljo).
 
 
 
 ###Kursmaterial från GitHub {#material}
 
-I denna kursen jobbar du med exempelprogram och övningar som finns samlade i ett kursrepo, en kurskatalog. Du bör alltså ha ditt kursrepo framför dig nu.
+I denna kursen jobbar du med exempelprogram och övningar som finns samlade i ett kursrepo, en kurskatalog. Du bör alltså ha ditt kursrepo framför dig nu. Du har det troligen i en katalog som du döpt till `dbwebb-kurser/python`.
 
-Du kan se allt [innehåll i det så kallade *repositoryt*](https://github.com/mosbth/python) via webbplatens GitHub, det innehåller alla övningar, exempelprogram och tips och trix som finns i det som du nu laddat ned.
+Du kan även se allt [innehåll i kursrepot](https://github.com/dbwebb-se/python) via webbplatens GitHub. Det är den versionen som du har laddat ned lokalt när du _klonade_ ditt kursrepo för kursen python.
 
 
 
 Ditt första exempelprogram i Python {#forsta}
 -------------------------------
 
-Här är ett fungerande Python-program.
+I ditt kursrepo finns med ett par exempelprogram som ligger under katalogen `example`.
 
-```python
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-Some various ways of saying Hello World in Python
-"""
-
-# Define a function
-def hello():
-    """
-    Print out Hello World in a function.
-    """
-    print("Hello World in a function.")
-
-# Call a function that prints out Hello World
-hello()
-
-# Print out Hello World 
-print("Just saying Hello World")
-
-# Assign the string Hello World to a variable and print it out
-str = "Hello World in a variable"
-print(str)
-```
-
-Du kan även se [exempelprogrammet i kursrepot på GitHub](https://github.com/mosbth/python/blob/master/example/hello_world/hello.py).
-
-Använd din vanliga texteditor och ta en kopia av ovanstående program och spara det i din me-katalog för kursmoment 01, `python/me/kmom01/hello/hello.py`. 
+Du kan gå in i katalogen `example/hello` och köra ett av programmen som finns där.
 
 ```bash
-# Gå till din kurskatalog/kursrepo för python
-$ cd me/kmom01/hello
-$ touch hello.py
-$ ls -l hello.py
+# Gå till ditt kursrepo python
+# Flytta nu till katalogen där exempelprogrammet ligger
+$ cd example/hello
+$ python3 hello.py
 ```
 
-När du är klar kan du provköra ditt python-program via terminalen.
+Du kan skriva kommandot `ls` för att se vilka filer som ligger i katalogen.
+
+De filer som är Python-program brukar sluta på filändelsen `.py` och du kan köra med genom att ange filnamnet som ett argument till kommandot `python3`.
 
 ```bash
 $ python3 hello.py
 ```
 
-Du kan också exekvera programmet som ett vanligt program vid terminalen. Men först måste du ge det rättigheter att exekveras. Det gör du med `chmod 755 hello.py`.
+Så här kan det se ut när du kör programmet.
+
+[ASCIINEMA src=122865]
+
+Så här kan du alltså köra ett Python-program vid terminalen.
+
+
+
+Ditt första egna exempelprogram {#andra}
+-------------------------------
+
+Så här tar du en kopia av exempelprogrammet, öppnar upp det i din editor och redigerar det med din egen kod.
+
+
+###Ta en kopia {#kopia}
+
+Du kan nu ta en kopia av exempel-programmet `hello.py` och spara i din me-katalog där du kan editera och testa fler konstruktioner.
+
+Först ställer vi oss i rooten av kursrepot. Sedan kopierar vi filen `example/hello/hello.py` till katalogen `me/kmom01/hello`.
 
 ```bash
-$ chmod 755 hello.py
-$ ls -l hello.py
-
-total 4
--rwxr-xr-x 1 mos mos 415 Jul  3 13:07 hello.py*
+# Gå till ditt kursrepo python
+$ cp example/hello/hello.py me/kmom01/hello
 ```
 
-Nu kan du köra programmet på följande sätt.
+Tanken är att dina egna filer som du jobbar med under kursen samlas under katalogen `me`. Du kan nu gå in i din katalog `me/kmom01/hello` och köra filen igen.
 
 ```bash
-$ ./hello.py
+# Gå till ditt kursrepo python
+$ cd me/kmom01/hello
+$ python3 hello.py
 ```
 
-Om du missar att sätta korrekta rättigheter så får du ett felmeddelande.
+Du bör få samma utskrift som tidigare.
+
+
+
+###Redigera exempelprogrammet {#redigera}
+
+Låt se om vi kan redigera exempelprogrammet `hello.py` och lägga dit egen kod, till exempel att skriva ut vårt eget namn.
+
+När du jobbar i terminalen kommer du att flytta runt bland katalogerna en del. Det är därför bra att kunna jobba i flera terminaler samtidigt, men i olika kataloger. Pröva att öppna en ny terminal och ställ dig i kursrepot och öppna texteditorn utifrån den katalogen.
 
 ```bash
-$ ./hello.py
-./hello.py: Permission denied.
+# Gå till ditt kursrepo python
+$ atom .
 ```
 
-Men förhoppningsvis blir det samma resultat som när du körde `python3 hello.py`.
+Kommandot ovan startar texteditorn Atom och använder `.` (den katalogen du står i) som nuvarande arbetskatalog.
 
-Så här ser det ut när Kenneth kör igenom övningen. 
+Det kan vara en bra idé att alltid starta editorn på detta sätt, från rooten av kursrepot. Det finns nämligen en del konfigurationsfiler som ligger i rooten av kursrepot. De kommer att användas av Atoms pluginer, lite längre fram i kursen. När du öppnar editorn i rooten av kursrepot, så får Atom tillgång till dem.
 
-[YOUTUBE src=7RWf0788uDE width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python och validerar det."]
+Du kan nu redigera exempelprogrammet och lägga till en utskrift av ditt eget namn. Sedan kan du pröva att lägga till en ASCII art, bilder gjorda med ASCII tecken, och skriva ut det. Bild-googla "ASCII art" så hittar du exempel på bilder du kan använda.
 
-Du kan nu testa att lägga in lite egen kod i skriptet. Men ta det försiktigt i början. 
+Det skulle kunna se ut så här när du är klar.
+
+[ASCIINEMA src=122883]
+
+Så här ser det ut när Kenneth kör igenom övningen från början till slut.
+
+[YOUTUBE src=7RWf0788uDE width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python med sitt namn."]
 
 Du har nu ett fungerande python-program som ligger i en egen fil och som du kan exekvera genom att "köra" filen. Ditt första python-program i denna kursen, en bra start.
 
