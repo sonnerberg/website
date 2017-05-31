@@ -90,9 +90,7 @@ Titta på följande:
     * [Python for Informatics: Chapter 1 - Introduction](https://www.youtube.com/watch?v=G721cooZXgs)
     * [Python for Informatics: Chapter 2 - Expressions](https://www.youtube.com/watch?v=IXXHH6ztsSA)
 
-<!--
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 0 och 1.
--->
+1. Här är en videoserie [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) som är tätt kopplad till kursmaterialet. Kika på de videor som börjar med 0 och 1. Det är korta videor som tar upp delar som är relevanta i respektive kursmoment.
 
 
 
@@ -146,8 +144,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/python/redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken utvecklingsmiljö använder du?
-* Är du bekant med programmering och problemlösning sedan tidigare?
-* Är du bekant med Python sedan tidigare?
+* Är du bekant med programmering och problemlösning och/eller Python sedan tidigare?
 * Är du bekant med terminalen och Unix-kommandon sedan tidigare?
 * Gick det bra att komma i gång med kursmomentet, fanns det svårigheter som du fastnade på?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest, använde du dem alla?

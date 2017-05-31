@@ -13,7 +13,7 @@ Kommandosekvensen laddar först ned filen dbwebb som en temporär fil. Därefter
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/install.bash)"
 ```
 
-Du kommer att se ett felmeddelande om det inte går bra att installera. om du får problem så kan du [installera steg för steg](installera-steg-for-steg) istället.
+Du kommer att se ett felmeddelande om det inte går bra att installera. Om du får problem så kan du [installera steg för steg](installera-steg-for-steg) istället.
 
 När installationen är klar så kan du pröva om det gick bra genom att kolla vilken version du har.
 
@@ -25,4 +25,4 @@ Om du är intresserad så kan du dubbelkolla vad installationsskriptet gör, gen
 
 Så här kan det se ut.
 
-[ASCIINEMA src=24614]
+[ASCIINEMA src=122841]
