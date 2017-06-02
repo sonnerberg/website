@@ -178,11 +178,42 @@ Vi har nu två funktioner som kan återanvändas. Vi skickar in parametrar både
 
 Formattering för bättre utskrifter {#format}
 --------------------------------------
+Vi har ett fungerande program men finns nästan alltid små detaljer vi kan förbättra. I detta fallet tycker jag att utskrifter blir tråkiga med alla dessa decimaler, så lått oss titta på ett sätt att få bättre utskrifter från våra program i python. Vi ska använda pythons sträng formatera `format`. Vi använder `{}` för de värden vi vill ersätta med de beräknade värden. Sen tilldelar vi ett namn så vi kan tilldela rätt värde till den del av strängen vi vill ersätta. Inom parentesen anger vi vilka värden vi vill koppla till formateringsvariablerna `{energy}` och `{cost}`.
+
+```python
+emil_time = 2.5 / 60
+emil_energy = calculate_energy(emil_time)
+emil_cost = calculate_cost(emil_energy)
+
+nice_string = "Emil använder {energy} kWh och detta kostar {cost} kr".format(
+                energy=emil_energy,
+                cost=emil_cost
+)
+# skriver ut:
+# Emil använder 0.033333333333333326 kWh och detta kostar 0.02601333333333333 kr
+```
+
+Vi har nu kopplat `emil_energy` till `{energy}` och `emil_cost` till {cost} i strängen. Vi har dock fortfarande en ful utskrift så vi använder en formaterings parameter. Vi vill ha 4 decimaler efter kommat i våra flyttal så vi använder formateringen: `:.4f`.
+
+```python
+emil_time = 2.5 / 60
+emil_energy = calculate_energy(emil_time)
+emil_cost = calculate_cost(emil_energy)
+
+nice_string = "Emil använder {energy:.4f} kWh och detta kostar {cost:.4f} kr".format(
+                energy=emil_energy,
+                cost=emil_cost
+)
+# skriver ut:
+# Emil använder 0.0333 kWh och detta kostar 0.0260 kr
+```
+
+Vi nöjer oss med detta enkla exempel än så länge, men för de som vill läsa på om sträng formattering är [pythons dokumentation](https://docs.python.org/2/library/string.html#format-string-syntax) ett bra ställe att börja.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Funktioner är en av de viktigaste byggstenarna i programmering.
+Funktioner är en av de viktigaste byggstenarna i programmering. Funktioner ger oss möjligheten att kapsla in kod som vi kan återanvända. Vi kan dessutom ge logiska namn åt delar av koden som gör att utomstående mycket lättare kan förstå hur du har tänkt när du skrev programmet.
 
 Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/functions) och här på [dbwebb](https://dbwebb.se/repo/python/example/functions). Funktionsnamnen har ändrats i kodexemplen då funktioner i samma modul måste ha unika namn.
