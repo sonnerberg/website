@@ -12,7 +12,9 @@ Vi har nu bra koll på variabler och datatyper i python. Vi känner till sträng
 
 <!--more-->
 
-Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/flow) och här på [dbwebb](https://dbwebb.se/repo/python/example/flow).
+
+
+Vi rekommenderar att du kodar med i denna övning så du själv får känna på hur det är att skriva python kod.
 
 
 
@@ -29,7 +31,7 @@ if number_of_apples > 10:
 # skriver ut: Du har mer än 10 äpplen
 ```
 
-I kodexemplet ovan definerar vi först en variabel `number_of_apples` och sätter den lika med heltalet 13. Vi gör sedan en jämförelse mellan vår variabel `number_of_apples` och heltalet 10. Om vi läsar ut raden, där vi gör jämförelsen, på svenska blir det ungefär 'om antalet äpplen är större än 10 skriver vi ut Du har mer än 10 äpplen'. I python använder vi indentering, att vi har flyttat in koden ett snäpp som ett sätt att avgränsa det som hör till `if`-satsen. Du kommer i andra programmeringsspråk se andra sett att avgränsa det som hör till `if`-satsen. I kodexemplet ovan händer det ingenting om vi har 10 eller färre äpplen, men är ju trevligt om vårt program även skriver ut ett meddelande till de med få äpplen. Så låt oss äta 4 äpplen och titta på nedanstående exempel.
+I kodexemplet ovan definerar vi först en variabel `number_of_apples` och sätter den lika med heltalet 13. Vi gör sedan en jämförelse mellan vår variabel `number_of_apples` och heltalet 10. Om vi läsar ut raden, där vi gör jämförelsen, på svenska blir det ungefär 'om antalet äpplen är större än 10 skriver vi ut Du har mer än 10 äpplen'. I python använder vi indentering, att vi har flyttat in koden ett snäpp, som ett sätt att avgränsa det som hör till `if`-satsen. I kodexemplet ovan händer det ingenting om vi har 10 eller färre äpplen, men är ju trevligt om vårt program även skriver ut ett meddelande till de med få äpplen. Så låt oss äta 4 äpplen och titta på nedanstående exempel.
 
 ```python
 number_of_apples = 9
@@ -91,7 +93,7 @@ for i in range(10):
 # skriver ut: siffrorna 0-9 i följd
 ```
 
-Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta in mer på detta.
+Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta in mer på detta. Vi ser även att vi här använder indentering för att avgränsa det som hör till `for`-loopen precis som vi använde det i vår `if`-sats.
 
 Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Här räknas `number_of_apples` variablen upp från 0 till 12 och med hjälp av `if`-satsen skriver vi ut meddelanden.
 
@@ -163,6 +165,48 @@ while True:
             print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
+På rad 8 i koden ovan gör vi om variabeln `user_input` från en sträng till ett heltal med hjälp av `int()`. Då datat som finns i variabeln kommer från en användare kan vi inte lita på att variabeln innehåller ett heltal. Om vi skriver in annat än ett heltal får vi följande fel i python.
+
+```bash
+Traceback (most recent call last):
+  File "while.py", line 23, in <module>
+    number_of_apples = int(user_input)
+ValueError: invalid literal for int() with base 10: 'g'
+```
+
+I python finns en konstruktion som kan rädda os från såna fel. Konstruktionen heter try-except och fungerar så att vi har två delar ungefär som en `if`-sats. En del när allt går som vanligt och en del för när det går åt skogen.
+
+```python
+try:
+    number_of_apples = int(user_input)
+except ValueError:
+    print("Oj! Du skrev inte in en siffra.")
+```
+
+I koden ovan försöker vi omvandla `user_input` till ett heltal, om detta inte går får vi ett `ValueError` som vi såg i felmeddelandet. I `except` skriver vi bara ut att det blev fel och fortsätter. Ett uppdaterat kodexempel med felhantering ses nedan. Notera att vi använder `continue` för att hoppa till nästa upprepning i `while`-loop. Vi har tidigare sett `break` som avslutar hela loopen, `continue` bara den nuvarande upprepning och fortsätter sedan med nästa upprepning.
+
+```python
+while True:
+    user_input = input("Skriv in antal äpplen (eller q för avslut): ")
+    if user_input == "q":
+        print("Du är nu klar med att äta äpplen.")
+        print("Hej då!")
+        break
+    else:
+        try:
+            number_of_apples = int(user_input)
+        except ValueError:
+            print("Oj! Du skrev inte in en siffra.")
+            continue
+
+        if number_of_apples > 10:
+            print("Du har mer än 10 äpplen")
+        elif number_of_apples <= 10 and number_of_apples > 5:
+            print("Du blev snabbt mätt och åt bara upp några av dina äpplen")
+        else:
+            print("Du har nog varit hungrig och ätit upp dina äpplen")
+```
+
 
 
 Avslutningsvis {#avslutning}
@@ -170,3 +214,5 @@ Avslutningsvis {#avslutning}
 Vi har i denna övning tittat på konstruktioner i python som låter oss styra flödet av data i våra program. Vi använder `if` för att jämföra värden och beroende på utfallet av jämförelsen körs olika delar av programmet. `for`-loopen används för att upprepa en del av koden ett bestämt antal gånger och vi kan loopa genom talföljder och strängar. `while`-loopen används för att loopa till ett villkor går från sant till falskt. När villkoret är falskt avslutas upprepningen. Vi har även tittat på hur vi kontinuerligt kan ta emot indata från användaren tills användaren skriver in ett bestämt värde och då bryta loopen med hjälp av `break`.
 
 `if`, `for` och `while` konstruktioner finns i de flesta programmeringsspråken. Dessa konstruktioner används för att styra flödet av data och utgör stora delar av de program vi kommer skriva i resten av kursen och vidare fram i programmet.
+
+Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/flow) och här på [dbwebb](https://dbwebb.se/repo/python/example/flow).

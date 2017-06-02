@@ -14,6 +14,10 @@ Vi har i tidigare övningar och uppgifter introducerats till variabler, matemati
 
 
 
+Vi rekommenderar att du kodar med i denna övning så du själv får känna på hur det är att skriva python kod.
+
+
+
 Funktioner {#funktioner}
 --------------------------------------
 Funktioner används för att dela upp och kategorisera delar av vår kod som gör det möjligt att återanvända koden på flera ställen i våra program. Funktioner finns i nästan alla programmeringsspråk och är en av viktigaste verktygen vi har som programmerare. Vi kommer i denna övning utgå ifrån kod utan funktioner och långsamt men säkert delar vi upp koden i återanvändbara delar. I exemplen nedan utgår vi från ett verkligt problem och bygger vår kod utifrån det samtidigt som vi delar upp och återanvänder vår kod genom att introducera funktioner.
