@@ -170,13 +170,19 @@ emil_cost = calculate_cost(emil_energy)
 print("Emil använder " + str(emil_energy) + " kWh och detta kostar " + str(emil_cost) + " kr")
 # skriver ut:
 # Emil använder 0.033333333333333326 kWh och detta kostar 0.02601333333333333 kr
-
 ```
+
+Vi har nu två funktioner som kan återanvändas. Vi skickar in parametrar både med och utan fördefinerat värde och returnerar värden från våra funktioner.
+
+
+
+Formattering för bättre utskrifter {#format}
+--------------------------------------
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-
+Funktioner är en av de viktigaste byggstenarna i programmering.
 
 Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/functions) och här på [dbwebb](https://dbwebb.se/repo/python/example/functions). Funktionsnamnen har ändrats i kodexemplen då funktioner i samma modul måste ha unika namn.
