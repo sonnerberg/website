@@ -166,6 +166,7 @@ def calculate_cost(energy, prize_per_kwh=78.04):
     Returns the cost in kr
     """
     cost = energy * prize_per_kwh / 100
+    return cost
 
 emil_time = 2.5 / 60
 emil_energy = calculate_energy(emil_time)
