@@ -6,7 +6,7 @@ revision:
 ...
 Villkor och loopar
 ==================================
-Vi har nu bra koll på variabler och datatyper i python. Vi känner till stränger, heltal, flyttal och boolska värden (sant eller falskt). Vi ska i denna övning titta på hur data flöder igenom våra program. Vi kommer titta på villkors-satsen `if` och på två olika sätt `for` och `while` för att upprepa delar av koden.
+Vi har nu bra koll på variabler och datatyper i python. Vi känner till stränger, heltal, flyttal och boolska värden (sant eller falskt). Vi ska i denna övning titta på hur data flödar igenom våra program. Vi kommer titta på villkors-satsen `if` och på två olika sätt `for` och `while` för att upprepa delar av koden.
 
 
 
@@ -107,7 +107,7 @@ for number_of_apples in range(13):
         print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
-Om vi bara vill göra något ett bestämt antal gånger utan att bry os om index `i` kan vi använda oss av `_` istället för `i` enligt nedan. Detta göra att vi inte skapar en variabel som tar plats i minnet på datorn och som förvirrar personer som läser koden.
+Om vi bara vill göra något ett bestämt antal gånger utan att bry os om index `i` kan vi använda oss av `_` istället för `i` enligt nedan. Detta gör att vi inte behöver skapa en variabel som tar plats i minnet på datorn och som förvirrar personer som läser koden.
 
 ```python
 for _ in range(5):
@@ -116,7 +116,7 @@ for _ in range(5):
 # skriver ut: python är ett spännande programmeringsspråk 5 gånger
 ```
 
-Vi kan även loopa över annat än talföljder och vi kommer senare i kursen lära oss många olika konstruktioner som vi kan loopa över. I nedanstående exempel loopar vi igenom en sträng bokstav för bokstav med hjälp av samma `in` konstruktion som vi använde för talföljderna.
+Vi kan även loopa över annat än talföljder och vi kommer senare i kursen lära oss många olika konstruktioner som vi kan loopa över. I nedanstående exempel loopar vi igenom en sträng bokstav för bokstav med hjälp av samma `in` konstruktion som vi använde för talföljderna. Variabeln `letter`
 
 ```python
 for letter in "räksmörgås":
@@ -132,7 +132,7 @@ Notera att vi använder `in` konstruktionen även i en `if`-sats för att kolla 
 
 While-loop {#while}
 --------------------------------------
-Vi använde `for`-loopen för att upprepa delar av ett program ett bestämt antal gånger. Om vi inte på förhand vet exakt hur många gånger vi vill upprepa kan vi använda oss av en `while`-loop. Vi måste dock ha ett villkor som är sant så länge vi vill upprepa den specifika delen av programmet. I nedanstående kodexempel loopar vi så länge `number` är mindre än 20 och varje gång vi fortsätter loopen duplerar vi `number`.
+Vi använde `for`-loopen för att upprepa delar av ett program ett bestämt antal gånger. Om vi inte på förhand vet exakt hur många gånger vi vill upprepa kan vi använda oss av en `while`-loop. Vi måste dock ha ett villkor som är sant så länge vi vill upprepa den specifika delen av programmet. I nedanstående kodexempel loopar vi så länge `number` är mindre än 20 och varje gång vi fortsätter loopen dubblerar vi `number`.
 
 ```python
 number = 2
@@ -144,7 +144,9 @@ while number < 20:
 # skriver ut: 2 4 8 16
 ```
 
-Det viktiga med en `while`-loop är att vi någongång avslutar loppen för annars kommer den fortsätta i al oändlighet eller tills datorn stängs av.
+Det viktiga med en `while`-loop är att vi någon gång avslutar loppen för annars kommer den fortsätta i all oändlighet eller tills datorn stängs av. Vi avsultar loopen genom att ändra så att villkoret är falskt. I exemplet ovan avslutar vi alltså loopen när
+`number` blir 20 eller större.
+
 
 `while`-loopar kan även användas för att ta emot indata från användaren. Om vi vill ta emot indata tills användaren skriver in ett specifikt värde kan vi använda `break` när användaren skriver in detta värde. Vi har tidigare sett hur vi använder `input` och hur vi konverterar data från en sträng till ett heltal. I `while`-loopen brytar vi mot regeln ovan att vi skulle ha ett villkor som någongång avslutas. Villkoret `True` avslutas aldrig då detta är alltid är sant, men vi använder konstruktionen `break` för att avsluta. Inne i loopen är det förste vi gör att kolla om användaren har skrivit in värdet för avslut (q), om användaren har gjort det avslutar vi programmet. Annars skriver vi ut ett meddelande baserat på de `if`-staser vi har sett tidigare.
 
