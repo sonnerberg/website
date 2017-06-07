@@ -9,7 +9,7 @@ revision:
   "2014-04-25": (H, mos) Uppdaterad med kmom05 i phpmvc-kursen version 2.
   "2014-04-21": (G, mos) Uppdaterad med kmom04 i phpmvc-kursen version 2.
   "2014-04-02": (F, mos) Uppdaterad med kmom02 i phpmvc-kursen version 2.
-  "2014-03-24": (E, mos) Första utkastet till en version 2 av phpmvc-kursen.
+  "2014-03-24": "(E, mos) Första utkastet till en version 2 av phpmvc-kursen."
   "2013-08-12": (D, mos) Ny kurskod DV1486 ersätter DV1440.
   "2013-03-28": (C, mos) Uppdaterad inför campuskursen vt13.
   "2012-08-31": (B, mos) Överflyttad från forumet till lydia, uppdaterad med mer innehåll.
