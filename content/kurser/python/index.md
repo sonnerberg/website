@@ -76,7 +76,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* påvisa grundläggande förmåga att reflektera över bra och mindre bra kod i sammanhanget kodstruktur och lösningar på definierade problem via redovisningstexter.
+* via redovisningstexter påvisa grundläggande förmåga att reflektera över bra och mindre bra kod i sammanhanget kodstruktur och lösningar på definierade problem.
 
 
 
@@ -147,10 +147,6 @@ Kurslitteratur {#litteratur}
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
-<!--
-Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
--->
-
 
 
 ###Kurslitteratur {#kurslitteratur}
@@ -161,7 +157,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 
 * **[Python for Everybody - Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)** -- Charles R Severance  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python via fokus på informatik och informationsbehandling.
+    En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python via fokus på informatik och informationsbehandling.
 
 
 
@@ -170,7 +166,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 Följande bok är referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter.
 
 * **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python via fokus på datavetenskap och matematik.
+    En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python via fokus på datavetenskap och matematik.
 
 
 
@@ -208,9 +204,9 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1).
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod1).
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
+Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet webutv](webutv#studieplan).
 
 För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](python/studieplan) kopplad till de kurstillfällen som erbjuds.
 
@@ -236,11 +232,13 @@ Ladok {#ladok}
 
 Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
 
-| Kursens moment  | Ladok moment enligt kursplan  |
-|-----------------|-------------------------------|
-| Kmom01 + kmom02 | Inlämning 1 á 2.5hp           |
-| Kmom03 + kmom04 | Inlämning 2 á 2.5hp           |
-| Kmom05 - kmom10 | Inlämning 3 á 2.5hp           |
+| Kursens moment  | Ladok moment enligt kursplan  | Betyg |
+|-----------------|-------------------------------|-------|
+| Kmom01 + kmom02 | Inlämning 1 á 2.5hp           | G-U   |
+| Kmom03 + kmom04 | Inlämning 2 á 2.5hp           | G-U   |
+| Kmom05 - kmom10 | Inlämning 3 á 2.5hp           | A-F   |
+
+Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
@@ -256,7 +254,7 @@ Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättnin
 Kursutvärdering och kursutveckling {#kursutvardering}
 -----------------------------------------------------
 
-Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
+Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
 Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
 
