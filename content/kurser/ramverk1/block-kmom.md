@@ -1,4 +1,4 @@
-####[ramverk1](kurser/ramverk1)
+####Kursmoment instruktioner
 
 * [01: MVC](kurser/ramverk1/kmom01)
 * [02: Kontroller och modeller](kurser/ramverk1/kmom02)

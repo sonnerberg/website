@@ -107,7 +107,7 @@ TBD.
 
 
 
-###Kmom04: TDD {#kmom04}
+###Kmom04: Formulär och CRUD {#kmom04}
 
 TBD.
 
@@ -115,7 +115,7 @@ TBD.
 
 
 
-###Kmom05: DI {#kmom05}
+###Kmom05: CI {#kmom05}
 
 TBD.
 
