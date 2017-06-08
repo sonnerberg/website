@@ -87,7 +87,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 TBD.
 
-[Instruktion till kursmoment 01](kurser/ramverk1/kmom01).
+[Instruktion till kursmoment 01](./kmom01).
 
 
 
@@ -95,7 +95,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 02](kurser/ramverk1/kmom02).
+[Instruktion till kursmoment 02](./kmom02).
 
 
 
@@ -103,7 +103,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 03](kurser/ramverk1/kmom03).
+[Instruktion till kursmoment 03](./kmom03).
 
 
 
@@ -111,7 +111,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 04](kurser/ramverk1/kmom04).
+[Instruktion till kursmoment 04](./kmom04).
 
 
 
@@ -119,7 +119,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 05](kurser/ramverk1/kmom05).
+[Instruktion till kursmoment 05](./kmom05).
 
 
 
@@ -127,7 +127,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 06](kurser/ramverk1/kmom06).
+[Instruktion till kursmoment 06](./kmom06).
 
 
 
@@ -135,7 +135,7 @@ TBD.
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](kurser/ramverk1/kmom10).
+[Instruktion till kursmoment 10](./kmom10).
 
 
 

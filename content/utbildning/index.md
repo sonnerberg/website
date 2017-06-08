@@ -1,5 +1,5 @@
 ---
-title: Utbildningar BTH Webbprogrammering
+title: Utbildning
 
 views:
     main:

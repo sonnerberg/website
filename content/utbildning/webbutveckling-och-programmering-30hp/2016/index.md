@@ -1,12 +1,11 @@
 ---
+title: Antagen 2016 (eller tidigare)
 author: mos
 revision:
-    2016-07-04: (D mos) Genomgången inför ht16.
-    "2016-03-11": (C, mos) Bort med länk till kursutvärdering eftersom den kräver inloggning i forumet.
-    "2015-12-18": (B, mos) Om studietakter.
-    "2015-01-08": (A, mos) Första utgåvan inför vårterminen 2015.
-updated: "2016-03-11 10:05:53"
-created: "2015-01-08 16:10:21"
+    "2016-07-04": "(D mos) Genomgången inför ht16."
+    "2016-03-11": "(C, mos) Bort med länk till kursutvärdering eftersom den kräver inloggning i forumet."
+    "2015-12-18": "(B, mos) Om studietakter."
+    "2015-01-08": "(A, mos) Första utgåvan inför vårterminen 2015."
 
 views:
     flash:
@@ -40,15 +39,15 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/linux/block-kurser-kmom
+                                route: kurser/linux-v2/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
-                                route: kurser/webapp/block-kurser-kmom
+                                route: kurser/webapp-v2/block-kurser-kmom
 
 ...
-Webbutveckling och programmering 30hp
+Webbutveckling och programmering, 30hp
 ==================================
 
 Kurspaketet "Webbutveckling och Programmering", också kallad **webutv**, består av fyra kurser som hjälper dig att komma igång med programmering och webbutveckling.

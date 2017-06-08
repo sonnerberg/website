@@ -1,17 +1,14 @@
 ---
+title: Antagen 2016 (eller tidigare)
 author: mos
 revision:
   "2016-03-14": (G, mos) Info om paus i kurspaketet.
   "2015-12-18": (F, mos) Information om studietakter.
   "2015-01-07": (E, mos) Uppdateringar när det blev två kurspaket.
-  "2014-08-07": (D, mos) Uppdateringar inför hösten 2014, bort med flexibel studietakt
-    och in med nya studieplaner.
-  "2013-09-26": (C, mos) Mindre uppdateringar i samband med ny info om 3-veckors upprop.
-  "2013-09-12": (B, mos) Tog bort referens till kurskoder som byts till och från,
-    smärre justeringar.
+  "2014-08-07": (D, mos) Uppdateringar inför hösten 2014, bort med flexibel studietakt och in med nya studieplaner.
+  "2013-09-26": "(C, mos) Mindre uppdateringar i samband med ny info om 3-veckors upprop."
+  "2013-09-12": (B, mos) Tog bort referens till kurskoder som byts till och från, smärre justeringar.
   "2013-01-08": (A, mos) Första utgåvan inför vårterminen 2013.
-updated: "2016-03-14 14:07:31"
-created: "2015-01-07 13:27:17"
 
 views:
     flash:
@@ -40,7 +37,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp/block-kurser-kmom
+                                route: kurser/oophp-v2/block-kurser-kmom
                     column-3:
                         data:
                             meta:
@@ -51,10 +48,8 @@ views:
                             meta:
                                 type: content
                                 route: kurser/javascript/block-kurser-kmom
-
-
 ...
-Databaser, HTML, CSS, JavaScript och PHP 30hp
+Databaser, HTML, CSS, JavaScript och PHP, 30hp
 ==================================
 
 Kurspaketet "Databaser, HTML, CSS, JavaScript och PHP", också kallad **webprog**, består av fyra kurser som hjälper dig att utvecklas till webbprogrammerare.
