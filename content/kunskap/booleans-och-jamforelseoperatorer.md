@@ -6,7 +6,7 @@ revision:
 ...
 Jämförelseoperatorer och booleanska värden
 ==================================
-När det kommer till att jämföra värden av olika typer använder vi så kallade jämförelseoperatorer. Det kan definieras som *kriterier i sökningar och formler*. De vanligaste operatorerna (kriterierna) är: lika med, större än, mindre än, större än eller lika med, mindre än eller lika med samt inte lika med. Gemensamt för dessa kriterierna är dess retur värde som är *True* eller *False*, en så kallad boolean, booleanskt värde eller kort och gott bool. Det finns i nästan alla programmeringsspråk och här tittar vi på hur man kan arbeta med det i Python3.
+När det kommer till att jämföra värden av olika typer använder vi så kallade jämförelseoperatorer. Det kan definieras som *kriterier i sökningar och formler*. De vanligaste operatorerna (kriterierna) är: lika med, större än, mindre än, större än eller lika med, mindre än eller lika med samt inte lika med. Gemensamt för dessa kriterierna är dess returvärde som är *True* eller *False*, sant eller falskt. Dessa värden kallas boolean, booleanskt värde eller kort och gott `bool`. Det finns i nästan alla programmeringsspråk och här tittar vi på hur man kan arbeta med det i python.
 
 
 
@@ -15,7 +15,6 @@ När det kommer till att jämföra värden av olika typer använder vi så kalla
 Du kan hitta exempel och mer information i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/blob/master/tutorial/bool-expr.md) och här på [pythons dokumentation](https://docs.python.org/3/reference/lexical_analysis.html#operators).
 
 Koda gärna med i Pythons interpretator. Vill du se hur det går till, kan du kika på [videon](https://www.youtube.com/watch?v=UttaDaPfnI0) som förklarar det.
-
 
 
 
@@ -32,7 +31,7 @@ True                  # Returvärdet, en boolean
 
 
 
-Det som sker i koden ovan är att båda variablerna `apples` och `oranges` får värdet 5. Raden `apples == oranges` kan utläsas som: *apples är lika med oranges*. Operatorn `==` jämför värdet på de olika variablerna. Då båda har värdet 5, och är således lika, returneras det booleanska värdet *True*. Tänk på att det hela tiden är **värdet** på variablerna som jämförs med operatorerna. Variablerna kan i sin tu heta (nästan) vad som helst.
+Det som sker i koden ovan är att båda variablerna `apples` och `oranges` får värdet 5. Raden `apples == oranges` kan utläsas som: *apples är lika med oranges*. Operatorn `==` jämför värdet på variablerna. Då båda har värdet 5, och är således lika, returneras det booleanska värdet *True*. Tänk på att det hela tiden är **värdet** på variablerna som jämförs med operatorerna. Variablerna kan i sin tur heta (nästan) vad som helst.
 
 Vi kan även se hur det blir om man jämför två värden som inte är likadana:
 
@@ -72,7 +71,7 @@ True                # Värdet i variabeln 'kiwis' är större än värdet i vari
 False               # Värdet i variabeln 'kiwis' är INTE större än värdet i variabeln 'oranges'
 ```
 
-I kodexemplet jämför vi om *kiwis är större än apples* (7 är större än 5) och om *kiwis är större än oranges* (7 är större än 10). 
+I kodexemplet jämför vi om *kiwis är större än apples* (7 är större än 5) och om *kiwis är större än oranges* (7 är större än 10).
 
 
 
@@ -122,7 +121,7 @@ Som komplement till operatorn ovan, finns också operatorn *mindre än eller lik
 >>> apples = 5
 >>> oranges = 7
 >>> kiwis = 5
->>> oranges <= apples 
+>>> oranges <= apples
 False                 # Värdet i variabeln 'oranges' är INTE mindre än eller lika med värdet i variabeln 'apples'
 >>> apples <= kiwis
 True                  # Värdet i variabeln 'apples' är mindre än eller lika med värdet i variabeln 'kiwis'
