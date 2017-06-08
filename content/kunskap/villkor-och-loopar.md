@@ -6,7 +6,8 @@ revision:
 ...
 Villkor och loopar
 ==================================
-Vi har nu bra koll på variabler och datatyper i python. Vi känner till stränger, heltal, flyttal och boolska värden (sant eller falskt). Vi ska i denna övning titta på hur data flödar igenom våra program. Vi kommer titta på villkors-satsen `if` och på två olika sätt `for` och `while` för att upprepa delar av koden.
+
+Vi har nu bra koll på variabler och datatyper i python. Vi känner till stränger, heltal, flyttal och boolska värden (sant eller falskt). Vi ska i denna övning titta på hur data flödar igenom våra program. Vi kommer titta på villkors-satsen `if` och på två olika sätt, `for` och `while`, för att upprepa delar av koden.
 
 
 
