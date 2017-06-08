@@ -19,7 +19,7 @@ views:
         template: default/columns
         sort: 1
         data:
-            title: Kurspaket webutv
+            title: Kurspaket webutv (antagna ht16)
             class: col4
             classes: no-bullet
             meta:
@@ -45,6 +45,39 @@ views:
                             meta:
                                 type: content
                                 route: kurser/webapp-v2/block-kurser-kmom
+
+    columns-vt16:
+        region: columns-above
+        template: default/columns
+        sort: 2
+        data:
+            title: Kurspaket webutv (antagna vt16 och tidigare)
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/python/block-kurser-kmom
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/javascript1/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/linux-v1/block-kurser-kmom
+                    column-4:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/webapp-v1/block-kurser-kmom
+
 
 ...
 Webbutveckling och programmering, 30hp
