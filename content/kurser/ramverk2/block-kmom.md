@@ -1,4 +1,4 @@
-####[ramverk1](kurser/ramverk2)
+####Kursmoment instruktioner
 
 * [01: Docker](kurser/ramverk2/kmom01)
 * [02: Realtid](kurser/ramverk2/kmom02)

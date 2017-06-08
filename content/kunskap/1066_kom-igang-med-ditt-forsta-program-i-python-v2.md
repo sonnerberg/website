@@ -122,7 +122,11 @@ Så här ser det ut när Kenneth kör igenom övningen från början till slut.
 
 [YOUTUBE src=7RWf0788uDE width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python med sitt namn."]
 
-Du har nu ett fungerande python-program som ligger i en egen fil och som du kan exekvera genom att "köra" filen. Ditt första python-program i denna kursen, en bra start.
+Du har nu ett fungerande python-program som ligger i en egen fil och som du kan exekvera genom att "köra" filen. Ditt första python-program i denna kursen, det är en god start.
+
+
+När det blir fel {#fel}
+-------------------------------
 
 
 
