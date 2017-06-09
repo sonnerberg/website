@@ -34,7 +34,7 @@ Artikeln är en del av kursen python och förutsätter att du har en labbmiljö 
 
 I denna kursen jobbar du med exempelprogram och övningar som finns samlade i ett kursrepo, en kurskatalog. Du bör alltså ha ditt kursrepo framför dig nu. Du har det troligen i en katalog som du döpt till `dbwebb-kurser/python`.
 
-Du kan även se allt [innehåll i kursrepot](https://github.com/dbwebb-se/python) via webbplatens GitHub. Det är den versionen som du har laddat ned lokalt när du _klonade_ ditt kursrepo för kursen python.
+Du kan även se allt [innehåll i kursrepot](https://github.com/dbwebb-se/python) via webbplatens GitHub. Det är samma innehåll som du laddade ned när du _klonade_ ditt kursrepo för kursen python.
 
 
 
@@ -128,67 +128,114 @@ Du har nu ett fungerande python-program som ligger i en egen fil och som du kan 
 När det blir fel {#fel}
 -------------------------------
 
+Låt oss prata kort om fel i programkoden.
+
+
+
+###Ibland blir det fel {#ibland}
+
+Ibland blir det fel. Din uppgift som programmerare är att undvika fel och när de uppträder så måste du avgränsa felet till en rad eller ett litet område och sedan fixa problemet.
+
+Kom ihåg att det finns ingen magi i programmering. Det är instruktioner som exekveras och instruktionerna måste följa ett mönster. När mönstret inte följs så kan programmet inte exekvera. När du rättat till instruktionern, programkoden, så fungerar det igen.
+
+Kom ihåg, ingen magi, bara instruktioner som måste följa givna regler.
+
+Det är lätt att bli stressad när man försöker laga ett fel, det hjälper ingen att bli stressad. Försök vara lugn, metodisk och försök avgränsa vad som fungerar och vad som inte fungerar.
+
+
+
+###Ett program med fel {#felprogram}
+
+Det finns ett exempelprogram som innehåller ett par felaktigheter. Ta en kopia av det och lägg i din katalog `me/kmom01/hello`.
+
+```bash
+# Gå till ditt kursrepo python
+$ cp example/hello/hello-fel.py_ me/kmom01/hello/hello-fel.py
+$ cd me/kmom01/hello
+$ python3 hello-fel.py
+Traceback (most recent call last):
+  File "hello-fel.py", line 8, in <module>
+    prin("Just saying Hello World")
+NameError: name 'prin' is not defined
+```
+
+Det du ser är ett felmeddelande som pekar på en viss rad i programmet. Det säger att namnet "prin" inte är definierat. Kika på kodraden så kan du se att programmeraren försöker skriva ut ett meddelande men funktionen som skriver ut heter `print` och inte `prin`.
+
+Rätta raden och kör programmet igen.
+
+```bash
+$ python3 example/hello/hello-fel.py_
+Just saying Hello World
+Traceback (most recent call last):
+  File "example/hello/hello-fel.py_", line 12, in <module>
+    print(str2)
+NameError: name 'str2' is not defined
+```
+
+Ett nytt felmeddelande som pekar på raden 12. Här används en variabel `str2` som inte är definierad. Här har programmeraren troligen missat att det är variabeln `str1` som skall användas.
+
+Rätta det felet och försök igen.
+
+Här är en video där Kenneth rättar alla fel som finns i programmet.
+
+**VIDEO KENNETH**
+
+Det var lite kort om felsökning. Det är vardag för en programmerare.
+
 
 
 Validera din kod {#validera}
 -------------------------------
 
-När du är klar med ditt `hello.py` så kan du validera det. Validering innebär att programmet `dbwebb` används för att göra statisk kodanalys av ditt program. Tanken är att vi tar hjälp av program som analyserar vår kod och berättar om vi skrivit bra kod eller om koden har förbättringspotential. Låt mig visa ett exempel på hur det fungerar.
+De fel som du fick ovan var exekveringsfel, de inträffade när du exekverade programmet. För att undvika dem så kan man validera sitt program. En validator går igenom koden och försöker upptäcka felaktigheter innan programmet körs.
+
+I kurserna använder vi ett antal olika validatorer som körs via kommandot `dbwebb`.
+
+För att testa så kan du ta en ny kopia av programkoden som innehöll felaktigheter och sedan kör du `dbwebb validate kmom01` som validerar koden i mappen `me/kmom01`.
 
 ```bash
-# Ställ dig i kurskatalogen
-$ dbwebb validate hello
+# Gå till ditt kursrepo python
+$ cp example/hello/hello-fel.py_ me/kmom01/hello/hello-fel-igen.py
+$ dbwebb validate kmom01
+# utelämna vissa delar av utskriften...
+*.py using pylint
+
+WARNING pylint failed: './me/kmom01/hello/hello-fel-igen.py'
+************* Module hello-fel-igen
+E:  8, 0: Undefined variable 'prin' (undefined-variable)
+E: 12, 6: Using variable 'str2' before assignment (used-before-assignment)
+E: 17,19: Using variable 'str4' before assignment (used-before-assignment)
 ```
 
-Du får troligen ett fel:
+Du du ser är liknande felaktigheter som du fick när du exekverade programmet tidigare. Detta är ett sätt att analysera ett program utan att köra det. På det viset kan man upptäcka problem med koden innan man exekverar den.
+
+Du kan nu radera filen så att den inte ligger och ger felmeddelande.
 
 ```bash
-WARNING. pylint failed: /home/mosstud/dbwebb-kurser/python/me/kmom01/hello/hello.py
-************* Module hello
-W: 19,0: Redefining built-in 'str'
+# Gå till ditt kursrepo python
+$ rm me/kmom01/hello/hello-fel-igen.py
 ```
 
-Det är på rad 19, om du ändrar `str` till `str1` så kommer det att gå igenom valideringen. Pröva.
+Så här kan det se ut när du kör kommandona.
 
-Du kan se hur Kenneth löste det i video ovan och så här ser det ut för mig, när jag gör samma sak vid terminalen.
+[ASCIINEMA src=124048]
 
-[ASCIINEMA src=34147]
+Du vill att alla dina filer skall validera så när du får valideringsfel så behöver du fixa dem. Det finns många olika typer av valideringsfel så det enklaste är att lösa dem efterhand som de dyker upp.
 
-Validera ofta när du skriver din kod, tills du lärt dig hur koden bör skrivas för att undvika valideringsfelen. 
+Valideringen kan upptäcka direkta felaktigheter men också tveksamma konstruktioner i din kod, konstruktioner som kan vara fel, men behöver inte vara det. Det kan också vara konstruktioner som inte är lämpliga för att de är en felkälla och det kan varna för konstruktioner som 
 
+Så här gjorde Kenneth.
 
+**VIDEO KENNETH**
 
-Inspektera Python med python-kod {#inspekt}
--------------------------------
-
-Verktyget [Pylint](http://www.pylint.org/) används för valideringen och klagade på `str` för att det var en inbyggd funktion. Hur kan man då se vad som är inbyggt i Python? Låt oss kika på det lite snabbt, bara som en övning.
-
-Först de reserverade nyckelorden. Python, likt alla programmeringsspråk, innehåller reserverade ord. Låt oss se om `str` finns bland dem.
-
-[ASCIINEMA src=11568]
-
-Jag använde [modulen keyword](https://docs.python.org/3/library/keyword.html?highlight=keyword#module-keyword) som du kan läsa om i manualen.
-
-Men nej, `str` fanns inte som ett inbyggt nyckelord. Låt oss istället titta bland de inbyggda funktionerna. Funktionen [`dir(modulnamn)`](https://docs.python.org/3/library/functions.html?highlight=dir#dir) listar allt innehåll i en modul.
-
-[ASCIINEMA src=11574]
-
-[Modulen `__builtins__`](https://docs.python.org/3/library/builtins.html?highlight=__builtins__) innehåller de inbyggda funktioner som finns i språket och där fanns `str`. Låt oss kika lite till på vad det `str` är för något.
-
-Den inbyggda funktionen [`help(modul/funktion)`](https://docs.python.org/3/library/functions.html?highlight=help#help) visar hjälptexter om objektet. Låt se vad hjälptexten säger om `str`.
-
-[ASCIINEMA src=11570]
-
-Ah, det är en inbyggd modul för stränghantering. Ok. Då är det dumt att använda det som variabelnamn. 
-
-Sånt här kan Pylint hjälpa oss med, att styra upp vårt kodande så att vi gör mer rätt. Det är alltså Pylint som utför valideringen i form av statisk kodanalys.
+Validering är alltså ett sätt att kvalitetssäkra din kod. Valideringen kan upptäcka potentiella felaktigheter som inte syns när du exekverar koden. Valideringsverktyg är viktiga verktyg för en proffsprogrammerare.
 
 
 
 Pylint styleguide {#styleguide}
 -----------------------------------------------------
 
-Vad är Pylint som säger hur jag skall skriva min kod? Vad ligger bakom Pylints resonemang? 
+Pylint varnar inte enbart för direkta felaktigheter utan även för "dålig" programmeringsstil. Vem är Pylint som säger hur jag skall skriva min kod? Vad ligger bakom Pylints resonemang?
 
 Python har en egen [styleguide](http://legacy.python.org/dev/peps/pep-0008/) för hur man skall skriva sin kod. Kika gärna i den och använd den som referens under kursens gång. En styleguide är alltid en rekommendation, men det är viktigt att följa en styleguide när man kodar. Pylint använder sig av styleguiden när den kontrollerar din kod.
 
@@ -200,115 +247,10 @@ Har du [funderingar om Pylint och hur det används i kursen](/t/2565) så finns 
 
 
 
-Publicera på studentservern {#publicera}
--------------------------------
-
-När du är klar med dina program kan du publicera dem på studentservern så att vissa delar blir tillgängliga via studenternas webbserver. Det är dock bara dina `cgi`-program som går att köra via webbservern. [CGI-skript](http://en.wikipedia.org/wiki/Common_Gateway_Interface) är en äldre teknik som fanns i webbens barndom, men den är enkel och snabb att lära sig.
-
-
-
-###Ett första cgi-skript {#cgi}
-
-Det står i Python-manualen hur man [skapar ett cgi-skript](https://docs.python.org/3/howto/webservers.html#common-gateway-interface) av ett godtyckligt Python-program.
-
-Det handlar alltså om att lägga följande kod i ett skript. 
-
-```python
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-Execute as cgi-skript and send a correct HTTP header.
-"""
-
-# To write pagecontent to sys.stdout as bytes instead of string
-import sys
-import codecs
-
-# Enable debugging of cgi-.scripts
-import cgitb
-cgitb.enable()
-
-# Send the HTTP header for plain text or for html
-print("Content-Type: text/plain;charset=utf-8")
-#print("Content-Type: text/html;charset=utf-8")
-print("")
-
-# Here comes the content of the webpage 
-content = """
-Hello The World of Web
-"""
-
-# Write page content
-sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
-sys.stdout.write(content)
-```
-
-Gör så här för att testa.
-
-1. Ta koden ovan och lägg i en ny fil `hello-web.cgi` och spara filen i katalogen `me/kmom01/hello`
-
-2. Validera.
-
-```bash
-# Ställ dig i kurskatalogen
-$ dbwebb validate hello
-```
-
-3\. Bra, nu är det dags att publicera cgi-skriptet på webbservern. Gör så här.
-
-```bash
-# Ställ dig i kurskatalogen
-$ dbwebb publish hello
-```
-
-I slutet av skriptet finns en länk till webbservern. Kopiera den till din webbläsare och leta dig fram till filen `hello-web.cgi` och klicka på den i din webbläsare.
-
-Får du problem så är det säkert ett av de [vanliga problemen med Python och cgi-skript](t/2568).
-
-Så här ser det ut när Kenneth löser uppgiften.
-
-[YOUTUBE src=qGp0XZp8EuY width=630 caption="Kenneth gör ett CGI-script och publicerar på studentservern."]
-
-
-
-###Katalog med exempel på cgi-skript {#exempel-cgi}
-
-I ditt kursrepo finns en exempel-mapp `example/cgi` som innehåller ett par cgi-script.
-
-Du kan dels studera källkoden för dem.
-
-Dels kan du testa att de fungerar genom att publicera dem.
-
-```bash
-# Ställ dig i kurskatalogen
-$ dbwebb publish example
-```
-
-Följ länken som skrivs ut och leta dig fram till `example/cgi` och testa de två skripten som heter `serve-as-*.cgi`. Titta på källkoden så ser du hur de är uppbyggda.
-
-
-
-###Testa att göra din eget cgi-skript {#eget-cgi}
-
-Testa nu att göra ditt eget cgi-skript. Ta din befintliga fil `hello.py` och gör om den till ett cgi-skript som du publicerar. Lägg det i katalogen `me/kmom01/hello`.
-
-Nu kan du alltså även skapa en webbsida med Python. Bra, bra. Vi kommer inte göra så många sådana, det blir ett par stycken, men jag tänkte att det är lite kul att se hur det fungerar. Det är ett sätt man kan använda Python på. Ett av många.
-
-
-
 Hjälp mig online {#hjalp}
 -------------------------------
 
-När man kodar behöver man hjälp. Ett sätt är att göra en *fiddle*, ett enkelt exempel-program som visar hur man försöker göra en viss sak. En fiddle är liten och visar enbart det man försöker göra, alla annan kod rensar man bort.
-
-Här är en [fiddle](http://pythonfiddle.com/mos-hello-world-demo) som jag gjort på webbtjänsten [Python Fiddle](http://pythonfiddle.com/). 
-
-Denna typen av länkar är utmärkta att dela med sig av via chatt eller forum. Då kan din hjälpare se precis vad du menar och vad du försöker göra. Då blir det alltid enklare att hjälpa dig och alltid enklare att få hjälp.
-
-Hamnar du i bekymmer? Gör en fiddle och dela med dig av den.
-
-Pröva även verktyg som [Code Share](http://codeshare.io/) och [Gist](https://gist.github.com/). De hjälper dig att dela med dig av din kod.
+När man kodar kan man behöva hjälp av en kompis. För att enklast få hjälp så behöver man formulera sin fråga och visa upp koden man jobbar med. Ett sätt att visa koden är att skapa en CodeShare eller en Gist. Då får man länkar som man kan dela med sig i en chatt eller forum. Men kom ihåg att formulera din fråga, det ger dig snabbare och bättre svar.
 
 Här kan du se två exempel på när jag använder dessa tjänster.
 
@@ -322,6 +264,6 @@ Men kom i håg. Dela bara med dig av den koden som är problematisk, förenkla f
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Du har nu gjort ditt första (?) program i Python. Då är det bara att köra vidare med större utmaningar.
+Du har nu kommit igång med struktiren kring Python och du har kört och felsökt i ditt första Python-program. Det är en god start och nu är du redo att börja lära dig programmeringsspråket Python. Allt är på plats.
 
-Har du fler frågor eller funderingar så tar vi det i [forumet för Python-frågor](forum/viewforum.php?f=44). 
+Det finns en [forumtråd till denna artikel](t/XXX), i forumtråden kan du ställa frågor om artikeln eller bidra med tips och trix.
