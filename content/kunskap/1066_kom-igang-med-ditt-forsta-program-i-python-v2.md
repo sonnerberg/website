@@ -164,7 +164,7 @@ Det du ser är ett felmeddelande som pekar på en viss rad i programmet. Det sä
 Rätta raden och kör programmet igen.
 
 ```bash
-$ python3 example/hello/hello-fel.py_
+$ python3 hello-fel.py
 Just saying Hello World
 Traceback (most recent call last):
   File "example/hello/hello-fel.py_", line 12, in <module>
