@@ -11,7 +11,7 @@ Introduktion till variabler och datatyper
 
 I denna artikel ska vi lära oss vad värden och variabler är i programmering. Vi ska titta på hur man skriver ut information till terminalen och hur man kan mata in information till programmet från terminalen. När du har jobbat igenom artikeln har du gjort ett program som tar emot ett namn och en ålder från användaren, åldern används bland annat till att räkna ut födelseår. Namnet, ålder och födelseåret som en del av en hälsning som skrivs ut i terminalen. Vi kommer gå igenom hur man skriver kod i en fil och kör den koden från terminalen.
 
-Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/python/blob/master/example/first_program/) och i `example/first_program`.
+Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/python/tree/master/example/greeting) och i `example/greeting`.
 
 
 
@@ -270,6 +270,8 @@ Precis som med värden kan vi med variabler utföra matematiska operationer i oc
 >>> print(the_sum)
 9.14
 ```
+
+[FIGURE src=/image/python/variable-memory8.png caption="Flera variabler refererar vill värden i minnet."]
 
 
 
