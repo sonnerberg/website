@@ -117,7 +117,7 @@ Du kan nu redigera exempelprogrammet och lägga till en utskrift av ditt eget na
 
 Det skulle kunna se ut så här när du är klar.
 
-[ASCIINEMA src=122883]
+[ASCIINEMA src=122883 caption="Jag döpte min fil till hello-name.py..."]
 
 Så här ser det ut när Kenneth kör igenom övningen från början till slut.
 
