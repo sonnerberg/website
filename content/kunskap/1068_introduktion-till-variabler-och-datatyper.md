@@ -29,7 +29,7 @@ Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/
 Förkunskap {#forkunskap}
 --------------------------------------
 
-Du har gjort övningen [Kom igång med ditt första program i python](kunskap/kom-igang-med-ditt-forsta-program-i-python).
+Du har gjort övningen [Kom igång med ditt första program i python](kunskap/kom-igang-med-ditt-forsta-program-i-python-v2).
 
 
 
