@@ -120,7 +120,7 @@ Det skulle kunna se ut så här när du är klar.
 
 Så här ser det ut när Kenneth kör igenom övningen från början till slut.
 
-[YOUTUBE src=7RWf0788uDE width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python med sitt namn."]
+[YOUTUBE src=Qw57psOiLio width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python med sitt namn."]
 
 Du har nu ett fungerande python-program som ligger i en egen fil och som du kan exekvera genom att "köra" filen. Ditt första python-program i denna kursen, det är en god start.
 
@@ -178,7 +178,7 @@ Rätta det felet och försök igen.
 
 Här är en video där Kenneth rättar alla fel som finns i programmet.
 
-**VIDEO KENNETH**
+[YOUTUBE src=8NN1YUEUYlQ width=630 caption="Kenneth visar hur man rättar alla fel som finns i programmet."]
 
 Det var lite kort om felsökning. Det är vardag för en programmerare.
 
@@ -226,7 +226,7 @@ Valideringen kan upptäcka direkta felaktigheter men också tveksamma konstrukti
 
 Så här gjorde Kenneth.
 
-**VIDEO KENNETH**
+[YOUTUBE src=MVobjdbN4bw width=630 caption="Kenneth visar hur man validerar koden."]
 
 Validering är alltså ett sätt att kvalitetssäkra din kod. Valideringen kan upptäcka potentiella felaktigheter som inte syns när du exekverar koden. Valideringsverktyg är viktiga verktyg för en proffsprogrammerare.
 
@@ -259,7 +259,7 @@ Här kan du se två exempel på när jag använder dessa tjänster.
 
 Men kom i håg. Dela bara med dig av den koden som är problematisk, förenkla för den som skall hjälpa dig. Stora exempelprogram är det få som vill hjälpa till med. Förenkla för den som skall hjälpa dig. Då får du snabbare svar.
 
-**VIDEO KENNETH**
+[YOUTUBE src=lrVtvqlhWjY width=630 caption="Kenneth visar hur man delar och visar upp koden."]
 
 
 
