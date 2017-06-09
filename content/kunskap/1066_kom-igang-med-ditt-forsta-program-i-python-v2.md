@@ -4,7 +4,7 @@ author:
 category:
     - python
 revision:
-    "2017-05-31": (D, mos) Genomgången inför ht17, bort med CGI.
+    "2017-06-09": (D, mos) Genomgången inför ht17, bort med CGI.
     "2016-02-22": (C, mos) Genomgången, bort med onödig info och in med videor.
     "2016-01-20": (B, mos) Uppdaterad asciinema som refererade till bin/dbwebb.
     "2015-08-25": (A, mos) Flyttad från äldre artikel i tidigare utgåva av python.
@@ -258,6 +258,8 @@ Här kan du se två exempel på när jag använder dessa tjänster.
 * [Hello World på Gist](https://gist.github.com/mosbth/b274bd08aab0ed0f9521)
 
 Men kom i håg. Dela bara med dig av den koden som är problematisk, förenkla för den som skall hjälpa dig. Stora exempelprogram är det få som vill hjälpa till med. Förenkla för den som skall hjälpa dig. Då får du snabbare svar.
+
+**VIDEO KENNETH**
 
 
 
