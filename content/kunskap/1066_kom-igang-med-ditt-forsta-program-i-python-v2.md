@@ -1,10 +1,11 @@
 ---
 author:
     - mos
+    - lew
 category:
     - python
 revision:
-    "2017-06-09": (D, mos) Genomgången inför ht17, bort med CGI.
+    "2017-06-09": (D, mos) Genomgången inför ht17, bort med CGI, nya videor.
     "2016-02-22": (C, mos) Genomgången, bort med onödig info och in med videor.
     "2016-01-20": (B, mos) Uppdaterad asciinema som refererade till bin/dbwebb.
     "2015-08-25": (A, mos) Flyttad från äldre artikel i tidigare utgåva av python.
@@ -268,4 +269,4 @@ Avslutningsvis {#avslutning}
 
 Du har nu kommit igång med struktiren kring Python och du har kört och felsökt i ditt första Python-program. Det är en god start och nu är du redo att börja lära dig programmeringsspråket Python. Allt är på plats.
 
-Det finns en [forumtråd till denna artikel](t/XXX), i forumtråden kan du ställa frågor om artikeln eller bidra med tips och trix.
+Det finns en [forumtråd till denna artikel](t/6524), i forumtråden kan du ställa frågor om artikeln eller bidra med tips och trix.
