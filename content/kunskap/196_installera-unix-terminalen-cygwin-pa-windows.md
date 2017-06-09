@@ -5,7 +5,8 @@ category:
     - terminal
     - windows
 revision:
-    "2017-06-29": (D, mos) Genomgång inför ht17.
+    "2017-06-09": (E, mos) Förtydliga lynx vid installationen.
+    "2017-05-29": (D, mos) Genomgång inför ht17.
     "2016-02-03": (C, mos) Ändrade länk för att installera apt-cyg.
     "2015-08-24": (B, mos) Om kommandot `chere` går fel första gången.
     "2015-04-10": (A, mos) Första utgåvan.
@@ -57,6 +58,14 @@ Du kan använda standardinställningar men du behöver se till att programmet `l
 Så här gör jag när jag installerar Cygwin.
 
 [YOUTUBE src=QC-m5jJ5CME width=630 caption="En snabb översikt av stegen för att installera Cygwin."]
+
+Du kan nu dubbelkolla att `lynx` är installerat. Gå till terminalen Cygwin och se till att ett meddelande med versionsnumret för lynx skrivs ut.
+
+```bash
+$ lynx --version
+```
+
+Om du får ett felmeddelande om att "Kommandot lynx finns inte" så behöver du köra om installationsprogrammet och installera lynx på det sättet som jag gör i videon ovan.
 
 Om du senare behöver uppdatera din installation så behöver du bara köra installationsprogrammet igen.
 
