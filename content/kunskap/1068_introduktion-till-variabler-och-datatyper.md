@@ -73,6 +73,8 @@ Vid [operationer](https://sv.wikipedia.org/wiki/Operation_(matematik)) (+ , - , 
 1. Addition och subtraktion.
 1. Operatorer med samma prioritering exekveras från vänster till höger.
 
+Notera att 3:e beräkningen vi gör använder sig av `%` också kallat modulus. Modulus är resten som är kvar vid heltalsdivision. I beräkningen vi gör `5 % 3` blir resultatet 2, dvs gör vi en heltalsdivision med 5 och 3 är resten 2. Detta kan tillexempel användas om vi vill avgöra om en siffra är jämn eller udda. Då använder vi `% 2` om resultatet är 0 är siffran jämn annars är siffran udda.
+
 
 
 ### Decimaltal (Float) {#decimaltal}

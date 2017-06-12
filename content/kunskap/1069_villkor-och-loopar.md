@@ -96,10 +96,10 @@ for i in range(10):
 
 Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta in mer på detta. Vi ser även att vi här använder indentering för att avgränsa det som hör till `for`-loopen precis som vi använde det i vår `if`-sats.
 
-Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Här räknas `number_of_apples` variablen upp från 0 till 12 och med hjälp av `if`-satsen skriver vi ut meddelanden.
+Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Om man anger två siffor till `range()` får vi siffrorna imellan dessa två siffror Här räknas `number_of_apples` variablen upp från 3 till 15 och med hjälp av `if`-satsen skriver vi ut meddelanden.
 
 ```python
-for number_of_apples in range(13):
+for number_of_apples in range(3, 15):
     if number_of_apples > 10:
         print("Du har mer än 10 äpplen")
     elif number_of_apples <= 10 and number_of_apples > 5:
