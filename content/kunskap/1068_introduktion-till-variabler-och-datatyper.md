@@ -89,6 +89,17 @@ Vid [operationer](https://sv.wikipedia.org/wiki/Operation_(matematik)) (+ , - , 
 >>>
 ```
 
+Vi vill ibland bara visa några få decimaler genom att avrunda decimaltalen. I Python kan detta göras med hjälp av funktionen `round()`. Vi skickar in siffran som ska avrundas och antalet decimaler vi vill ha efter kommat. Om vi inte skickar in hur många decimaler vi vill ha, avrundas siffran till ett heltal, dvs. inga decimaler alls.
+
+```python
+>>> 3.14 + 3
+6.140000000000001
+>>> round(3.14 + 3)
+6
+>>> round(3.14 + 3, 2)
+6.14
+```
+
 
 
 ### Sträng (String) {#strang}
@@ -525,7 +536,7 @@ Titta över koden en extra gång och se till att du förstår alla delar. Undrar
 Vårt program del 3 {#program-del3}
 --------------------------------------
 
-Vi kan räkna ut vilket år personen föddes med hjälp av åldern som användaren skriver in och ett _hårdkodat_ värde för vilket år det är nu. Ett hårdkodat värde skapas i koden, det kommer inte från inmatning.  
+Vi kan räkna ut vilket år personen föddes med hjälp av åldern som användaren skriver in och ett _hårdkodat_ värde för vilket år det är nu. Ett hårdkodat värde skapas i koden, det kommer inte från inmatning.
 I vår kod behövs ett heltalsvärde för vilket år det är nu, räkna ut födelseåret och lägga in det i hälsningen.
 
 Jag tar bort kommentarerna på gammal kod för att det ska bli luftigare i koden och lättare för dig att läsa den nya.
