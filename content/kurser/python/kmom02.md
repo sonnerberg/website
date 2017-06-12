@@ -97,6 +97,16 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
+<!--
+Värden och variabler
+Villkor och loopar
+Funktioner och strängar
+Listor
+Dictionaries och Tupler
+
+1. Gör laborationen "[Python med värden och variabler](uppgift/python-med-varden-och-variabler)" för att träna på grunderna i Python. Spara alla filer under `me/kmom02/lab2`.
+-->
+
 1. Gör uppgiften "[Python med variabler, villkor, funktioner och loopar](uppgift/python-med-variabler-villkor-funktioner-och-loopar)".
 
 2. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)".

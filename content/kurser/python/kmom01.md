@@ -25,6 +25,8 @@ Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i ku
 
 [FIGURE src=/image/snapht14/python-mos-me-page.png?w=w2 caption="Mikaels me-sida i Python som cgi-skript."]
 
+[ASCIINEMA src=122865 caption="Kör ditt första Python-program."]
+
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
@@ -36,11 +38,11 @@ Labbmiljön  {#labbmiljo}
 
 Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
 
-1. Du kan börja med att [installera labbmiljön](kurser/python/labbmiljo) som behövs för kursen. 
+1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen. 
 
 1. Fortsätt med sektionen för att [installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
 
-1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration) så att det blir enkelt att jobba med det.
+1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
 
 1. Du kan nu [ladda ned (klona) ditt lokala kursrepo](dbwebb-cli/clone) som innehåller kursmaterial för kursen. Här kommer du att skriva all kod till övningar och uppgifter.
 
@@ -76,7 +78,7 @@ Efterhand som du lär dig Python kommer du att märka att du referensmanualen ä
 
 1. Bekanta dig översiktligt med [dokumentationen som finns på Pythons webbplats](https://www.python.org/doc/). Kika runt och orientera dig. Vi använder Python 3.
 
-1. Se översikten av referensdokumentation för [Python 3.x Doc](https://docs.python.org/3/). Bekanta dig med strukturen och se vilken typ av information som du kan hitta samt hur 
+1. Se översikten av referensdokumentation för [Python 3.x Doc](https://docs.python.org/3/). Bekanta dig översiktligt med strukturen och se vilken typ av information som du kan hitta.
 
 1. Läs första kapitlet i [The Python Tutorial](https://docs.python.org/3/tutorial/index.html). Det är mest för att du skall se vilken typ av information som finns i tutorialen och för att bekanta dig med den typen av material.
 
@@ -86,11 +88,11 @@ Efterhand som du lär dig Python kommer du att märka att du referensmanualen ä
 
 Titta på följande:
 
-1. Följande videor som följer med och kompletterar kurslitteraturen. Det är författaren som har föreläsningar kopplade till bokens kapitel.
+1. Följande videor följer med och kompletterar kurslitteraturen. Det är författaren som har föreläsningar kopplade till bokens kapitel.
     * [Python for Informatics: Chapter 1 - Introduction](https://www.youtube.com/watch?v=G721cooZXgs)
     * [Python for Informatics: Chapter 2 - Expressions](https://www.youtube.com/watch?v=IXXHH6ztsSA)
 
-1. Här är en videoserie [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) som är tätt kopplad till kursmaterialet. Kika på de videor som börjar med 0 och 1. Det är korta videor som tar upp delar som är relevanta i respektive kursmoment.
+1. I videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) hittar du videor som är tätt kopplad till kursmaterialet. Kika på de videor som börjar med 0 och 1. Det är korta videor som tar upp delar som är relevanta i respektive kursmoment.
 
 
 
@@ -115,16 +117,19 @@ Genomför följande övning för att träna dig och förbereda inför uppgiftern
 
 1. Kom igång och gör ditt första program i Python tillsammans med artikeln "[Kom igång med ditt första program i Python](kunskap/kom-igang-med-ditt-forsta-program-i-python-v2)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom01/hello`.
 
+1. Jobba igenom artikeln "[Introduktion till variabler och datatyper](kunskap/introduktion-till-variabler-och-datatyper)" som hjälper dig att komma igång med grunderna i programmering med Python.  De exempelprogram du gör kan du spara under `me/kmom01/hello`.
+
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[En me-sida i Python som cgi-skript](uppgift/en-me-sida-i-python-som-cgi-skript)".
+1. Gör laborationen "[Python med värden och variabler](uppgift/python-med-varden-och-variabler)" för att träna på grunderna i Python. Spara alla filer under `me/kmom01/lab1`.
 
-2. Gör uppgiften "[Ditt första Python-skript](uppgift/ditt-forsta-python-skript)".
+1. Gör uppgiften "[Ditt första Python-skript](uppgift/ditt-forsta-python-skript)" för att visa att du har koll på grunderna. Spara alla filer under `me/kmom01/plane`.
 
+1. Gör uppgiften "[En me-sida i python-kursen](uppgift/en-me-sida-i-python-som-cgi-skript)". Spara alla filer under `me/redovisa`.
 
 
 
@@ -139,7 +144,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/python/redovisa).
+Läs [instruktionen om hur du skall redovisa](./redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
