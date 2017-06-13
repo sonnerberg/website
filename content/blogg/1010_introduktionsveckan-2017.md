@@ -21,10 +21,6 @@ Tanken med veckan är att komma igång med studierna och samtidigt bekanta sig m
 
 <!--more-->
 
-[WARNING]
-**Artikeln håller på att skrivas och är inte färdigställd.**
-[/WARNING]
-
 [Förra årets introvecka](blogg/schema-introveckan-2016) hade en del inslag av trivsel, tävlingar och aktiviteter.
 
 Detta året tänker vi att hålla oss mer i labbsalen och fokusera på att komma igång med labbmiljön och förbereda oss inför kurserna.
