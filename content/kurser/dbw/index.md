@@ -11,6 +11,10 @@ Kursen **Databasteknologier för webben**, a.k.a. *dbw*, lär ut utveckling, tes
 
 <!--more-->
 
+[WARNING]
+**Kursutveckling pågår.**
+[/WARNING]
+
 Vi bygger en större totallösning där flera klienter kopplas mot en eller flera servrar som bygger på olika tekniker och ramverk. All samverkar för att skapa en total lösning, ett system, enligt en given specifikation.
 
 Vi arbetar med tekniker för virtualisering samt hur test och driftsättning kan ske i molnet i form av mindre tjänster som samverkar en den totala lösningen.
@@ -240,4 +244,4 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Kursens namn är "Webbaserade ramverk 2". Du hittar [kursplanen genom att söka på kurskoden PA1442 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1442).
+Kursens namn är "Databasteknologier för webben". Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).

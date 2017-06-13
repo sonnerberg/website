@@ -1,5 +1,5 @@
 ####Blekinge Tekniska Högskola
 
-Information om kurspaketet finns via BTHs webbsida för [antagningsomgång hösten 2017](https://www.bth.se/kurspaket/KP851/20172/).
+BTHs webbsida innehåller [information om kurspaketet samt välkomstbrev](https://www.bth.se/kurspaket/KP851/20172/).
 
-Där finner du även välkomstbrevet, läs det.
+Du [ansöker till kurspaketet via antagning.se](https://www.antagning.se/se/search?period=HT_2017&freeText=BTH-KP851).
