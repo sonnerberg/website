@@ -28,7 +28,7 @@ Du har utfört uppgiften "[Bygg en styleväljare till din webbplats](uppgift/byg
 Introduktion {#intro}
 -----------------------
 
-Du skall uppdatera din me-sida och samtidigt integrera den med den styleväljare som du gjort i den andra uppgiften.
+Du skall uppdatera din me-sida och samtidigt integrera den med en styleväljare, likt den som du gjort i den andra uppgiften.
 
 
 
@@ -55,7 +55,7 @@ Krav {#krav}
 
 1. Skapa en sida `config.php`, inkludera den överst i alla sidor. Starta sessionen överst i `config.php`. Nu startas sessionen på enbart en plats. Det är DRY.
 
-1. Integrera multisidan för styleväljaren i din me-sida. Döp den till `stylechooser.php`. I första hand så länkar du till multisidans resurser, inte kopiera, precis som tidigare multisidor. 
+1. Integrera en multisida för styleväljaren i din me-sida. Döp den till `stylechooser.php`.
 
 1. Se till att stödja tre olika stylesheets via din multisida.
 
