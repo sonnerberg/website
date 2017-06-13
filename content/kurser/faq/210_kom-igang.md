@@ -1,13 +1,12 @@
 ---
 author: mos
 revision:
-  "2015-12-22": (F, mos) Länk välkomstbrev inför VT16.
-  "2015-08-13": (E, mos) Mindre justeringar inför hösten 2015.
-  "2014-08-06": (D, mos) Mindre justeringar inför hösten 2014.
-  "2013-01-08": (A, mos) Första utgåvan inför vårterminen 2013.
-  "2013-08-31": (B, mos) Uppdateringar inför höstterminen 2013.
-updated: "2015-12-22 11:58:35"
-created: "2013-01-08 09:57:19"
+    "2017-06-12": (H, mos) Genomgången inför ht17.
+    "2015-12-22": (F, mos) Länk välkomstbrev inför VT16.
+    "2015-08-13": (E, mos) Mindre justeringar inför hösten 2015.
+    "2014-08-06": (D, mos) Mindre justeringar inför hösten 2014.
+    "2013-01-08": (A, mos) Första utgåvan inför vårterminen 2013.
+    "2013-08-31": (B, mos) Uppdateringar inför höstterminen 2013.
 ...
 Kom igång med kurserna
 ==================================
@@ -24,9 +23,6 @@ En kort sammanfattning av vad du skall göra:
 
 <!--more-->
 
-<!--
-[YOUTUBE src=3qUi72Tvbow width=630 caption="Mikael kommer visar vilka webbplatser som gäller för att komma igång."]
--->
 
 
 Läs välkomstbrevet {#valkomstbrev}
@@ -38,7 +34,7 @@ Du har fått ett välkomstbrev, läs det, hur inspirerande det än ser ut att va
 
 Eller hur?
 
-Saknar du välkomstbrevet så sök på kursen via [BTHs kurshemsida](http://edu.bth.se/utbildning/utb_sok_utbildning.asp) där alla utbildningar visas.
+Saknar du välkomstbrevet så ser du till att hitta det, eller fråga efter det.
 
 
 
@@ -82,14 +78,6 @@ Nu är du redo att börja jobba med kursen. Gör först ett inlägg i uppropstr�
 
 Gör alltid upprop i respektive kurs när du startar den. Går du flera kurser på en termin så väntar du med upprop tills du verkligen sätter tänderna i kursen.
 
-
-
-<!--
-FAQ för allmänna kursfrågor {#faq}
------------------------------------------------------------
-
-Innan du sätter i gång så kan du gå till forumdelen "[Allmän kursinformation](forum/viewforum.php?f=30)" och kika in [FAQ:en för allmänna administrativa kursfrågor](t/1113). Bara så du vet var du hittar den.
--->
 
 
 Klar -- då kör vi {#klar}

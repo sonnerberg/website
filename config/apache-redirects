@@ -248,11 +248,13 @@ Redirect /program/webbprogrammering/lektionsplan/lasperiod4 https://goo.gl/cBjsl
 # Kurspaket webutv
 Redirect /webutv/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFkxaUtQMTItZ1IydWZPNHMxSFQwa0E&usp=sharing
 Redirect /webutv/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFlXdHF6RWNYang2UEEwaFZFaG5SSnc&usp=sharing
+Redirect /webutv/studieplan   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFlXdHF6RWNYang2UEEwaFZFaG5SSnc&usp=sharing
 
 # Kurspaket webprog
 Redirect /webprog/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHJxeVo1cFlsTXlDd21NcEFsOW1iMkE&usp=sharing
 Redirect /webprog/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHZPc1h4VTVsZk1DZTdUbEZNNlpVdHc&usp=sharing
 Redirect /webprog/studieplan/100  https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFVUUUJsNGdTc3dmMHItUVdjQmhnMUE&usp=sharing
+Redirect /webprog/studieplan   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHZPc1h4VTVsZk1DZTdUbEZNNlpVdHc&usp=sharing
 
 # Moved webutv and webprog to utbildning/
 Redirect /webutv    /utbildning/webbutveckling-och-programmering-30hp
