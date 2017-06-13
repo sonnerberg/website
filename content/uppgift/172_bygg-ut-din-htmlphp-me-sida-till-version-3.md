@@ -28,7 +28,7 @@ Du har utfört uppgiften "[Bygg en multisida och testa arrayer](uppgift/bygg-en-
 Introduktion {#intro}
 -----------------------
 
-Du skall uppdatera din me-sida, som du gjorde i förra kursmomentet. Du skall nu integrera din me-sida med den multisida du gjort i uppgiften "Bygg en multisida och testa arrayer".
+Du skall uppdatera din me-sida, som du gjorde i förra kursmomentet. Du skall nu integrera din me-sida med en multisida, likt den du gjort i uppgiften "Bygg en multisida och testa arrayer".
 
 
 
@@ -48,9 +48,11 @@ Nu har du din bas du kan utgå ifrån. Din resulterande sida skall finnas i kata
 
 ###Återanvänd innehållet i din multisida {#reuse}
 
-Trixet är att du nu ska skapa en *ny* multisida i din webbplats `me/kmom03/me3/`. För att göra det behöver du skapa en sida `me/kmom03/me3/multipage.php` som innehåller switchsatsen. Men, du skall **återanvända**, inte kopiera, resten av innehållet från katalogen `me/kmom03/multi`. Du skall låta filerna `aside.php` och katalogen `content` ligga kvar där de ligger. Uppdatera istället sökvägarna i din nya multisida, `multipage.php` så den återanvänder innehållet som redan ligger i `me/kmom03/multi`.
+Trixet är att du nu ska skapa en *ny* multisida i din webbplats `me/kmom03/me3/`. För att göra det behöver du skapa en sida `me/kmom03/me3/multipage.php` som innehåller switchsatsen. Kopiera resten av innehållet från katalogen `me/kmom03/multi`.
 
-Var sak har sin plats, vi behöver inte kopiera runt filer om det inte behövs. Det är inte DRY.
+<!-- Men, du skall **återanvända**, inte kopiera, resten av innehållet från katalogen `me/kmom03/multi`. Du skall låta filerna `aside.php` och katalogen `content` ligga kvar där de ligger. Uppdatera istället sökvägarna i din nya multisida, `multipage.php` så den återanvänder innehållet som redan ligger i `me/kmom03/multi`.
+
+Var sak har sin plats, vi behöver inte kopiera runt filer om det inte behövs. Det är inte DRY. -->
 
 
 
@@ -61,11 +63,10 @@ Krav {#krav}
 
 1. Din `multipage.php` skall ha samma *innehåll* som du har i `kmom03/multi`.
 
-1. Se till att din kod är DRY. Länka till filerna, inte kopiera. Det kan finnas undantag från regeln. Till exempel så hade jag troligen valt att kopiera stylesheeten.
-
 1. Styla din menyn likt din navbar, så det känns som de hänger ihop stilmässigt. Ge den en stil så att det ser lite mer ut som en meny, eller en länklista.
 
 1. Validera och publicera din kod enligt följande.
+<!-- 1. Se till att din kod är DRY. Länka till filerna, inte kopiera. Det kan finnas undantag från regeln. Till exempel så hade jag troligen valt att kopiera stylesheeten. -->
 
 ```bash
 # Ställ dig i kurskatalogen
