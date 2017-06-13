@@ -71,7 +71,7 @@ Lärarteamet hänger i labbsalen från klockan 10. Dyk gärna in där och säg h
 
 På campus samlas alla nya studenter nere vid bryggan för välkomsttal och information klockan 11.
 
-Klockan 13:15-14:00 hälsar lärarteamet välkommen i labbsalen (streamas) och visar upp programmens och kurspaketens upplägg och struktur. Lärarteamet finns sedan i labbsalen (hangout) till klockan 15 för dig som har frågor och funderingar.
+Klockan 13-14 hälsar lärarteamet välkommen i labbsalen (streamas) och visar upp programmens och kurspaketens upplägg och struktur. Lärarteamet finns sedan i labbsalen (hangout) till klockan 15 för dig som har frågor och funderingar.
 
 
 
