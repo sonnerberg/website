@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+  "2017-06-13": (G, efo) Uppdaterade marvin menyval, la till funktioner och modul.
   "2015-08-25": (F, mos) Uppgraderade till dbwebb v2.
   "2015-01-29": (E, mos) Sökväg för cd-kommandot.
   "2014-10-24": (D, mos/sylvanas) Mindre omformulering krav 2 och krav 3.
@@ -33,14 +34,12 @@ Spelet "Guess the number" är ett enkelt gissningsspel där någon tänker på e
 
 Kapitel 4 i boken [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) beskriver hur spelet "Guess the number" kan implementeras.
 
-Kursrepot innehåller ett [exempel på strängformattering med fil](https://github.com/reechani/python/blob/master/example/marvin/format.py) som du kan använda som grund för formatteringsuppgiften.
-
 
 
 Krav {#krav}
 -----------------------
 
-Kopiera din Marvin från föregående kursmoment och utgå från den koden.
+1. Kopiera din Marvin från föregående kursmoment och utgå från den koden.
 
 ```bash
 # Flytta till kurskatalogen
@@ -49,30 +48,37 @@ cp -ri kmom02/marvin1/marvin.py kmom03/marvin2/
 cd kmom03/marvin2
 ```
 
-2. Skriv om koden så att kod för själva Marvin samlas i en egen fil `marvin.py`. Main-funktionen, den som använder Marvin-funktionerna, ska finnas kvar i den andra filen som ska döpas om till `main.py`.
+2. Skriv om koden så att menyn och varje menyval finns i en egen funktion.
 
-3. Gör ett menyval som löser spelet "Guess the number" där Marvin tänker på ett tal mellan 1-100 och spelare ska gissa vilket det är. För varje gissning ska Marvin berätta om gissningen var högre eller lägre än det han tänkte på. Spelaren ska ha 6 gissningar på sig.
+3. Döp om nuvarande `marvin.py` till `main.py`.
 
-4. Gör ett menyval där Marvin i samma sträng skriver ut: dagens datum och nuvarande tid, hur han mår (slumpmässigt humör), ett heltal, samt ett floattal med 3 decimaler. Ge talen ett sammanhang i texten.
-Strängen ska hämtas från en textfil som du själv skapar och formateras med ovanstående variabler. Notera att du i programmet inte ska ändra i filen.
+4. Skapa en ny fil `marvin.py` och lägg alla menyvals funktioner i denna nya Python modul. Importera `marvin.py` i `main.py`.
 
-5. Menyval: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut.
+5. Gör ett menyval som löser spelet "Guess the number" där Marvin tänker på ett tal mellan 1-100 och spelare ska gissa vilket det är. För varje gissning ska Marvin berätta om gissningen var högre eller lägre än det han tänkte på. Spelaren ska ha 6 gissningar på sig.
 
-6. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
+6. Menyval: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut.
+
+7. Validera och publicera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
 dbwebb validate marvin2
+dbwebb publish marvin2
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-* Kasta om bokstäver: Ha en fil med ett ord per rad och plocka fram ett av orden. Kasta om det och låt användaren gissa vilket det faktiska ordet är.
+<!-- * Kasta om bokstäver: Ha en fil med ett ord per rad och plocka fram ett av orden. Kasta om det och låt användaren gissa vilket det faktiska ordet är. -->
+
+* Gör ett menyval där Marvin i samma sträng skriver ut: dagens datum och nuvarande tid, hur han mår (slumpmässigt humör), ett heltal, samt ett floattal med 3 decimaler. Ge talen ett sammanhang i texten.
+Strängen ska hämtas från en textfil som du själv skapar och formateras med ovanstående variabler. Notera att du i programmet inte ska ändra i filen. Kursrepot innehåller ett [exempel på strängformattering med fil](https://github.com/reechani/python/blob/master/example/marvin/format.py) som du kan använda som grund för denna uppgift.
+
+* Gör ett menyval Poäng till betyg. Marvin ska fråga efter maxpoäng samt dina poäng och sedan ska Marvin skriva ut vilket betyg dina poäng motsvarade. Kika på övning 3.3 i boken [Python for Informatics](kunskap/boken-python-for-informatics-exploring-information).
 
 
 
@@ -84,7 +90,3 @@ Lär dig felsöka med debuggern, använd den när du får problem. komplettera m
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
