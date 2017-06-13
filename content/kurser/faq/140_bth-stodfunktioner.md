@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-06-12": (H, mos) Bytte intitution och länk till utbildningsförening.
     "2016-08-04": (G, mos) Justerade länkar.
     "2016-04-22": (F, mos) Uppdatering i samband med ny webbplats.
     "2015-01-09": (E, mos) Ny organisation.
@@ -57,10 +58,10 @@ Biblioteket {#biblioteket}
 
 
 
-Institutionen DIPT {#dipt}
+Institutionen DIDD {#inst}
 --------------------------------------------------------------------
 
-Det lärarteam som undervisar på dbwebb-kurserna tillhör institutionen DIPT, [institutionen för Programvaruteknik](https://www.bth.se/om-bth/organisation/fakulteten-for-datavetenskaper/dipt/).
+Det lärarteam som undervisar på dbwebb-kurserna tillhör institutionen DIDD, [Institutionen för Datalogi och Datorsystemteknik]https://www.bth.se/om-bth/organisation/fakulteten-for-datavetenskaper/didd/).
 
 
 
@@ -75,3 +76,5 @@ Studentkåren {#studentkaren}
 --------------------------------------------------------------------
 
 Studentkår är samtalspart för högskolan i utbildningsfrågor. [Blekinge studentkår har en webbplats](https://www.bthstudent.se/) där du kan se mer om deras aktiviteter.
+
+Det finns en [utbildningsförening BITS](https://www.bthstudent.se/utbildning/utbildningsforeningar/) som är kopplad till utbildningarna och kurserna inom Webbprogrammering.
