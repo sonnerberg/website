@@ -1,8 +1,9 @@
 ---
 title: htmlphp
-
-author: mos
+author:
+    - mos
 revision:
+    "2017-06-13": (PD1, mos) Förbereder genomgång inför ht17.
     "2016-11-01": (C, mos) Ladokmoment och studieplan omskrivna.
     "2016-02-22": (B, mos) Bort med not om kursutveckling samt not ny kurskod från ht16.
     "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
@@ -23,17 +24,6 @@ Detta är en introduktionskurs för den som vill lära sig teknikerna från grun
 Därefter introduceras PHP som ett skriptspråk och med enkla programmeringskonstruktioner får vi möjlighet att bygga ut vår webbplats på ett strukturerat sätt. Vi fortsätter med att lagra information i en filbaserad databas (SQLite) via PHP's gränssnitt PHP Data Objekt. Vi använder på frågespråket SQL och lär oss de grundläggande konstruktionerna.
 
 Sammantaget blir kursen en grundlig introduktion och orientering i de tekniker som ofta används för att skapa webbplatser. 
-
-[INFO]
-**Tidigare version av kursen.**
-
-Om du gick kursen tidigare, fram till och med vårterminen 2015, så [finns kursmaterialet till den kursen här](htmlphp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
-
-Länken till den tidigare versionen av kursen htmlphp, numer kallad htmlphp-v1, är alltså:
-
-* [htmlphp-v1](htmlphp-v1)
-
-[/INFO]
 
 
 
@@ -288,3 +278,10 @@ Från och med hösten 2016 hittar du [kursplanen genom att söka på kurskoden P
 Mellan höstterminen 2013 och vårterminen 2016 hade kursen kurskoden [DV1462](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1462) och hette "Databaser, HTML, CSS och skriptbaserad PHP-programmering".
 
 Från 2010 till och med vårterminen 2013 hade kursen kurskoden [DV1401](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1401) och hette "Databaser, HTML, CSS och skriptbaserad PHP-programmering".
+
+
+
+Versioner av kursen {#versioner}
+-----------------------------------------------------
+
+Om du gick kursen tidigare, fram till och med vårterminen 2015, så [finns kursmaterialet till den kursen här](kurser/htmlphp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
