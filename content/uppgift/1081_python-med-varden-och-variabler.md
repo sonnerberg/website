@@ -63,6 +63,8 @@ Hamnar du i bekymmer så finns det ledtrådar som du kan få. Du aktiverar ledtr
 
 Du behöver göra ett visst antal uppgifter för att bli godkänd på labben. Sedan finns extra uppgifter du kan utföra om du så väljer. [Varför skall jag göra extrauppgiftena](kurser/faq/varfor-gora-extra-uppgifter)?
 
+[YOUTUBE src=7pPjt__amAM width=630 caption="Kenneth visar hur man kommer igång med labbarna."]
+
 
 
 Krav {#krav}
