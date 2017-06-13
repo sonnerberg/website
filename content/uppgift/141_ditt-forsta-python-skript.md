@@ -2,7 +2,7 @@
 author: mos
 category: python
 revision:
-  "2017-06-31": (E, efo) Cleaned assignment to be without .cgi.
+  "2017-06-31": (E, efo) Rensade uppgiften så den inte är .cgi.
   "2016-03-17": (D, mos) hur man kopierar plane.py.
   "2015-08-25": (C, mos) Uppdaterade till dbwebb v2.
   "2014-08-25": (B, mos) Rättade fleaktig filnamn vid kopiering.
