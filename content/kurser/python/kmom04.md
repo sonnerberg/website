@@ -43,9 +43,9 @@ Läs följande:
     * Ch7 Files
     * Ch8 Lists
 
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * Ch10 Lists
-    * Ch14 Files
+    * Ch14 Files -->
 
 
 
@@ -70,8 +70,8 @@ Titta på följande:
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 
-    * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o)
     * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois)
+    * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o)
 
 
 
@@ -110,9 +110,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1](uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
+Det finns inga extrauppgifter.
+
+<!-- 1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1](uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
     * [Curses Programming with Python](https://docs.python.org/3/howto/curses.html)
-    * [Curses — Terminal handling for character-cell displays](https://docs.python.org/3/library/curses.html)
+    * [Curses — Terminal handling for character-cell displays](https://docs.python.org/3/library/curses.html) -->
 
 
 
