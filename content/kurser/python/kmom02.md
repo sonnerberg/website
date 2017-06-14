@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2016-03-15": (H, efo) Rensade i kurslitteratur och länkade in nytt material.
   "2016-03-15": (G, mos) Tog bort videoserie MonkeyLords och NewBoston.
   "2016-02-22": (F, mos) Lade till videoserien "Lär dig Python".
   "2015-01-30": (E, mos) Länk till läsanvisning appendix 2.
@@ -14,7 +15,7 @@ Kmom02: Villkor, funktioner och loopar
 
 Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if-satser, loopar och hur du använder de inbyggda funktionerna. Därefter är det dags att skriva egna funktioner i ditt första lite större program där Marvin skall få lite intelligens så han kan svara på frågor.
 
-[FIGURE src=/image/snap/py-marvin.png?w=w2 caption="Marvin i Python."]
+[FIGURE src=/image/python/py-marvin.png?w=w2 caption="Marvin i Python."]
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -30,22 +31,22 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
     * Ch3 Conditional execution
-    * Ch4 Functions
+    <!-- * Ch4 Functions -->
     * Ch5 Iteration
 
-2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) 
+<!-- 2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python)
     * [Appendix A - Differences Between Python 2 and 3](http://inventwithpython.com/appendixa.html)
 
 
 Det räcker om du läser ovanstående, men vill du ha lite till och samtidigt lite repetition, så läser du motsvarande kapitel i Think Python.
 
-1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Ch3 Functions
     * Ch5 Conditionals and recursion
     * Ch6 Fruitful functions
-    * Ch7 Iteration 
+    * Ch7 Iteration  -->
 
 
 
@@ -64,7 +65,7 @@ Titta på följande:
 2. De videor som följer med och kompletterar kurslitteraturen.
 
     * [Python for Informatics: Chapter 3 - Conditional execution](https://www.youtube.com/watch?v=VXyRfgnzL2o)
-    * [Python for Informatics: Chapter 4 - Functions](https://www.youtube.com/watch?v=Wdi6lhcrtBU)
+    <!-- * [Python for Informatics: Chapter 4 - Functions](https://www.youtube.com/watch?v=Wdi6lhcrtBU) -->
     * [Python for Informatics: Chapter 5 - Iteration](https://www.youtube.com/watch?v=6KgArgGi6Mk)
 
 
@@ -89,7 +90,9 @@ Det finns inga lästips.
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+1. Jobba igenom artikeln/övningen [Jämförelseoperatorer och booleanska värden](kunskap/booleans-och-jamforelseoperatorer).
+
+1. Jobba igenom artikeln/övningen [Villkor och loopar](kunskap/villkor-och-loopar).
 
 
 
@@ -107,7 +110,7 @@ Dictionaries och Tupler
 1. Gör laborationen "[Python med värden och variabler](uppgift/python-med-varden-och-variabler)" för att träna på grunderna i Python. Spara alla filer under `me/kmom02/lab2`.
 -->
 
-1. Gör uppgiften "[Python med variabler, villkor, funktioner och loopar](uppgift/python-med-variabler-villkor-funktioner-och-loopar)".
+1. Gör uppgiften "[Python med villkor och loopar](uppgift/python-med-variabler-villkor-funktioner-och-loopar)".
 
 2. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)".
 

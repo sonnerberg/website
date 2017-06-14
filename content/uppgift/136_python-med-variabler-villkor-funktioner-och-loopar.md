@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+  "2015-08-25": (E, efo) Uppdaterade till ny kursstruktur utan funktioner i kmom02.
   "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
   "2015-01-14": (C, mos) Fel länk till förkunskaperna.
   "2014-08-26": (B, mos) Testad, genomgången och uppdaterad.
@@ -9,10 +10,10 @@ revision:
 updated: "2015-08-25 12:44:35"
 created: "2014-07-03 06:35:53"
 ...
-Python med variabler, villkor, funktioner och loopar
+Python med villkor och loopar
 ==================================
 
-Jobba igenom grunderna i Python med datatyper, variabler, villkor, inbyggda funktioner och loopar.
+Jobba igenom grunderna i Python med villkor och loopar.
 
 <!--more-->
 
@@ -69,7 +70,7 @@ Krav {#krav}
 dbwebb validate lab1
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -88,7 +89,3 @@ Debugga och felsök genom att skriva ut variablernas olika innehåll med `print(
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
