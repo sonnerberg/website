@@ -57,6 +57,8 @@ Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) ti
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 
+[Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
+
 
 
 Klart! {#klar}
