@@ -2,6 +2,7 @@
 author: sylvanas
 category: python
 revision:
+  "2017-06-14": (G, lew) Uppdaterade med en asciinema och ett krav. Förtydligande av uppgift.
   "2015-10-12": (F, mos) Förtydligade (lade till) krav om att spara på fil.
   "2015-09-03": (E, mos) Ändrade max antal till 4 istället för 7 samt tog bort grundkrav
     om att det redan skall finnas 4 i ryggsäcken.
@@ -36,15 +37,9 @@ Studera gärna [exemplet för hur man skriver och läser listor till fil](https:
 -->
 Du skall bygga en ryggsäck till Marvin och du skall spara innehållet i ryggsäcken till fil.
 
-Du skall kommunicera med Marvin via text och inte via ett menyval. Det skall alltså inte se ut så här i menyn.
+Du skall kommunicera med Marvin via text och inte via ett menyval. 
 
-```text
-18. Visa inventory.
-19. Plocka upp sak till inventory.
-20. Kasta sak från inventory.
-```
-
-Du skall istället kommunicera via text, på liknande sätt som du gjorde i [ Marvin citat-uppgiften](uppgift/din-egen-chattbot-marvin-steg-3). Så här.
+Du skall istället kommunicera via text, på liknande sätt som du gjorde i [Marvin citat-uppgiften](uppgift/din-egen-chattbot-marvin-steg-3). Så här.
 
 ```text
 > inv
@@ -56,6 +51,10 @@ Du skall istället kommunicera via text, på liknande sätt som du gjorde i [ Ma
 > inv drop mumintrollet
 *marvin svarar med att han släppte mumintrollet*
 ```
+
+Se hur det kan se ut när uppgiften är klar:  
+
+[ASCIINEMA src=124668]
 
 
 
@@ -69,15 +68,17 @@ Bygg vidare på din Marvin 3.
 cd me/kmom04/marvin3
 ```
 
-1\. Uppgradera din Marvin så att han kan hantera en *ryggsäck*, eller ett *inventory*, där han kan bära saker.
+1. Uppgradera din Marvin så att han kan hantera en *ryggsäck*, eller ett *inventory*, där han kan bära saker.
 
-2\. Spara innehållet i ryggsäcken i en fil som du döper till `inv.data`.
+1. Marvin ska kunna plocka upp vad som helst.
 
-3\. När du börjar så läser du in ryggsäckens innehåll från filen.
+1. Spara innehållet i ryggsäcken i en fil som du döper till `inv.data`.
 
-4\. När du ger inventory-kommandon till Marvin så skall det ske i klartext. Genom att prata med Marvin, via kommandon, så ska han kunna visa och förändra innehållet i sitt *inventory*.
+1. När du börjar så läser du in ryggsäckens innehåll från filen.
 
-Följande kommandon skall fungera.
+1. När du ger inventory-kommandon till Marvin så skall det ske i klartext. Genom att prata med Marvin, via kommandon, så ska han kunna visa och förändra innehållet i sitt *inventory*.
+
+Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad som helst. Nedan visas `flower` enbart som exempel.
 
 | Kommando        | Vad händer                       |
 |-----------------|----------------------------------|
