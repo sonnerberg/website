@@ -110,9 +110,11 @@ Lär dig om strängar och filhantering i Python samt börja strukturera din kod 
 
 
 
-###Kmom04: Listor {#kmom04}
+###Kmom04: Listor och filer {#kmom04}
 
-Lär dig grunderna i datastrukturen listor och vad du kan göra med den. Pröva på att skriva ett grafiskt program i terminalen men Python-modulen Curses.
+Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lsita behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i. 
+
+Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil. 
 
 [Instruktion till kursmoment 04](kurser/python/kmom04).
 
