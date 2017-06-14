@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-  "2017-06-14": (J, lew) Uppdatering inför hösten 2017, filer samt en video.
+  "2017-06-14": (J, lew) Uppdatering inför hösten 2017.
   "2016-03-15": (I, mos) Tog bort videoserie MonkeyLords och NewBoston.
   "2016-02-29": (H, mos) Tog bort material om två dimensionell lista och lade till
     övning "Kom igång med datatypen lista i Python".
@@ -17,7 +17,9 @@ revision:
 Kmom04: Listor och filer
 ==================================
 
-Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. 
+Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lsita behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i.  
+
+Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil. 
 
 Så här kan det se ut när du bekantar dig med listor.
 
