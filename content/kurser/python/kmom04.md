@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-06-14": (J, lew) Uppdatering inför hösten 2017, filer samt en video.
   "2016-03-15": (I, mos) Tog bort videoserie MonkeyLords och NewBoston.
   "2016-02-29": (H, mos) Tog bort material om två dimensionell lista och lade till
     övning "Kom igång med datatypen lista i Python".
@@ -16,7 +17,7 @@ revision:
 Kmom04: Listor och filer
 ==================================
 
-Lär dig grunderna i datastrukturen listor och se vad du kan göra med dem.
+Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. 
 
 Så här kan det se ut när du bekantar dig med listor.
 
@@ -39,10 +40,12 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
+    * Ch7 Files
     * Ch8 Lists
 
 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * Ch10 Lists
+    * Ch14 Files
 
 
 
@@ -68,6 +71,7 @@ Titta på följande:
 2. De videor som följer med och kompletterar kurslitteraturen.
 
     * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o)
+    * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois)
 
 
 
@@ -89,6 +93,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)".
 
+1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python)".
 
 
 ###Uppgifter {#uppgifter}
