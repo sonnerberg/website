@@ -2,7 +2,6 @@
 author: mos
 category: python
 revision:
-  "2017-06-14": (E, lew) Uppdaterade till lab4.
   "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
   "2015-01-14": (C, mos) Fel länk till förkunskaperna.
   "2014-08-27": (B, mos) Genomgången och testad.
@@ -34,10 +33,10 @@ Gå till din kurskatalog i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab4
+dbwebb create lab3
 ```
 
-Materialet till labben ligger nu i din kurskatalog i `me/kmom04/lab4` enligt följande.
+Materialet till labben ligger nu i din kurskatalog i `me/kmom04/lab3` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -67,7 +66,7 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab4
+dbwebb validate lab3
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
