@@ -2,16 +2,17 @@
 author: mos
 category: python
 revision:
+  "2017-06-14": (D, efo) Uppdaterade till ny kursstruktur med funktioner i kmom03.
   "2015-08-25": (C, mos) Uppdaterade till dbwebb v2.
   "2014-08-27": (B, mos) Gneomgången och uppdaterad inför kursstart.
   "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
 updated: "2015-08-25 12:49:49"
 created: "2014-07-03 06:38:04"
 ...
-Python med strängar och filer
+Python med funktioner
 ==================================
 
-Jobba igenom grunderna i Python med strängar och filhantering.
+Jobba igenom grunderna i Python med funktioner.
 
 <!--more-->
 
@@ -32,10 +33,10 @@ Gå till din kurskatalog i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab2
+dbwebb create lab3
 ```
 
-Materialet till labben ligger nu i din kurskatalog i `me/kmom03/lab2` enligt följande.
+Materialet till labben ligger nu i din kurskatalog i `me/kmom03/lab3` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -65,10 +66,10 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab2
+dbwebb validate lab3
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -89,7 +90,3 @@ Testa att köra labben i debuggern och stega igenom hur den validerar dina svar.
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

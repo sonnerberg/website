@@ -1,11 +1,14 @@
 ---
 author: efo
-category: Python
+category: python
 revision:
-  "2017-05-31": (A, efo) Första utgåvan inför kursen Python H17.
+  "2017-05-31": (A, efo) Första utgåvan inför kursen python H17.
 ...
 Funktioner, argument och returvärden
 ==================================
+
+[FIGURE src=image/python/function.png?w=c5 class="right"]
+
 Vi har i tidigare övningar och uppgifter introducerats till variabler, matematiska operationer, `if`-satser och loopar. Vi ska i denna övning bekanta oss med ett sätt att dela in kod, som gör det möjligt att återanvända delar av program. Vi ser hur vi skapar funktioner, hur vi kan skicka med data till funktioner och hur funktionerna kan skicka tillbaka resultat.
 
 

@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-06-14": (G, efo) Ändrade kursliteratur till funktioner i kmom03, la till övningar.
   "2016-03-15": (F, mos) Tog bort videoserie MonkeyLords och NewBoston.
   "2016-02-22": (E, mos) Lade till videoserien "Lär dig Python".
   "2015-01-08": (D, mos) Bort blå ruta med kursutveckling pågår.
@@ -8,10 +9,10 @@ revision:
   "2014-09-08": (B, mos) Första publika releasen.
   "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom03: Strängar och filer
+Kmom03: Funktioner och moduler
 ==================================
 
-Lär dig om strängar och filhantering i Python samt börja strukturera din kod i moduler genom att dela upp den i olika filer.
+Lär dig om funktioner i Python samt börja strukturera din kod i moduler genom att dela upp den i olika filer.
 
 
 [FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
@@ -30,21 +31,20 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
-    * Ch6 Strings
-    * Ch7 Files
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
+    * Ch4 Functions
 
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist).  
+<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist).
     * Ch8 Strings
-    * Ch14 Files 
+    * Ch14 Files
 
 Python har en inbyggd debugger som kan användas för att felsöka och rätta upp felaktiga program. Läs om den i följande böcker.
 
-1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
-    * App A Debugging 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
+    * App A Debugging
 
-2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) 
-    * Chapter 7 - Using the Debugger
+2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python)
+    * Chapter 7 - Using the Debugger -->
 
 
 
@@ -53,7 +53,7 @@ Python har en inbyggd debugger som kan användas för att felsöka och rätta up
 Läs följande:
 
 1. Om moduler och att strukturera funktioner i egna filer.
-    * [Python Tutorial Chapter 6 Modules](https://docs.python.org/3/tutorial/modules.html) 
+    * [Python Tutorial Chapter 6 Modules](https://docs.python.org/3/tutorial/modules.html)
 
 
 
@@ -64,9 +64,9 @@ Titta på följande:
 1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 3.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
-
-    * [Python for Informatics: Chapter 6 - Strings](https://www.youtube.com/watch?v=L2IUSArpG98)
-    * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois)
+    * [Python for Informatics: Chapter 4 - Functions](https://www.youtube.com/watch?v=Wdi6lhcrtBU)
+    <!-- * [Python for Informatics: Chapter 6 - Strings](https://www.youtube.com/watch?v=L2IUSArpG98)
+    * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois) -->
 
 
 
@@ -86,7 +86,9 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-Det finns inga övningar.
+1. Jobba igenom artikeln/övningen [Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden).
+
+1. Jobba igenom artikeln/övningen [Moduler i Python](kunskap/moduler-i-python).
 
 
 
@@ -94,13 +96,9 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med strängar och filer](uppgift/python-med-strangar-och-filer)".
+1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)".
 
 2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2)".
-
-
-
-
 
 
 
@@ -119,11 +117,7 @@ Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du programmerat med filhantering tidigare, känns det lätt eller svårt?
+* Har du programmerat med funktioner tidigare, vad tycker du om sättet att dela upp koden?
 * Vad tycker du om video som läromedel, tycker du att de tillför något som läromedel?
 * Du har gjort din första modul i Python, känns strukturen bra?
 * Vad tyckte du om de olika uppgifterna? Hur tänkte du när du utförde dem? Var de utmanande eller lätta?
-
-
-
-
