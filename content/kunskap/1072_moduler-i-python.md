@@ -9,7 +9,7 @@ Moduler i Python
 
 [FIGURE src=image/python/lego.jpg?w=c5 class="right"]
 
-Funktioner i Python gjorde att vi kan återanvända kod och att vi hade möjlighet för att sätta namn koden som vi vill använda. Ibland vill vi dela upp koden ännu mer för att enkelt kunna återanvända flera funktioner i flera olika program. Vi ska i denna övning titta på hu vi kan skapa en modul och hur vi importerar modulen i en annan Python fil.
+Funktioner i Python gjorde att vi kan återanvända kod och att vi hade möjlighet för att sätta namn koden som vi vill använda. Ibland vill vi dela upp koden ännu mer för att enkelt kunna återanvända flera funktioner i flera olika program. Vi ska i denna övning titta på hur vi kan skapa en modul och hur vi importerar modulen i en annan Python-fil.
 
 
 
@@ -17,13 +17,13 @@ Funktioner i Python gjorde att vi kan återanvända kod och att vi hade möjligh
 
 
 
-Vi fortsätter på exemplet från övningen [Funktioner, parametrar och returvärden](kunskap/funktioner-parametrar-och-returvarden) så har du inte gjort den övningen rekommenderar vi att du gör den först.
+Vi fortsätter på exemplet från övningen [Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden) så har du inte gjort den övningen rekommenderar vi att du gör den först.
 
 
 
 Moduler {#moduler}
 --------------------------------------
-I slutet av övningen [Funktioner, parametrar och returvärden](kunskap/funktioner-parametrar-och-returvarden) ser våra funktioner ut på följande sätt.
+I slutet av övningen [Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden) ser våra funktioner ut på följande sätt.
 
 ```python
 # energy_calculation.py
@@ -44,7 +44,7 @@ def calculate_cost(energy, prize_per_kwh=78.04):
     return cost
 ```
 
-Dessa två funktioner hänger ihop och har ett sammanhang och som de strukturerade programmerare vi är tänker vi att dessa kan vi ju använda en annan gång. Detta görs lättaste i Python genom att skapa en modul. Vi skapar en ny fil `energy_calculation.py` där vi lägger ovanstående två funktioner.
+Dessa två funktioner hänger ihop och har ett sammanhang och som de strukturerade programmerare vi är tänker vi att dessa kan vi ju använda en annan gång. Detta görs lättast i Python genom att skapa en modul. Vi skapar en ny fil `energy_calculation.py` där vi lägger ovanstående två funktioner.
 
 I en annan ny fil `main.py` skriver vi själva programmet. Vi har alltså nu våra funktioner i en fil och själva programmet i ett annat. För att vi kan använda våra funktioner från filen `energy_calculation.py` måste vi importera den filen in i `main.py`. Detta gör vi genom att använda `import`. Notera att vi skriver `import energy_calculation` och inte att vi importerar själva filen, så ingen filändelse. Vi har nu tillgång till alla funktioner vi har definerat i `energy_calculation.py`. Vi kommer åt funktionerna genom att skriva modulens namn följd av en punkt (.) och sen funktionens namn.
 
