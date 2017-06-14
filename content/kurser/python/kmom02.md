@@ -10,10 +10,10 @@ revision:
   "2014-09-03": (B, mos) Första officiella versionen.
   "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom02: Villkor, funktioner och loopar
+Kmom02: Villkor och loopar
 ==================================
 
-Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if-satser, loopar och hur du använder de inbyggda funktionerna. Därefter är det dags att skriva egna funktioner i ditt första lite större program där Marvin skall få lite intelligens så han kan svara på frågor.
+Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if-satser och loopar. Därefter är det dags att skriva ditt första lite större program där Marvin skall få lite intelligens när han svarar på frågor.
 
 [FIGURE src=/image/python/py-marvin.png?w=w2 caption="Marvin i Python."]
 
