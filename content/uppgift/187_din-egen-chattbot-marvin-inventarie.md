@@ -17,7 +17,7 @@ created: "2015-02-02 16:53:39"
 Din egen chattbot - Marvin - inventarie
 ==================================
 
-Programmering och problemlösning i Python. Använd listor för att hjälpa Marvin att ha koll på sina inventarier.
+Programmering och problemlösning i Python. Använd listor och fil för att hjälpa Marvin att ha koll på sina inventarier.
 
 <!--more-->
 
@@ -25,7 +25,7 @@ Programmering och problemlösning i Python. Använd listor för att hjälpa Marv
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och listor och du har byggt [tredje delen av Marvin](uppgift/din-egen-chattbot-marvin-steg-3).
+Du kan grunderna i Python, listor och filhantering. Du har även byggt [tredje delen av Marvin](uppgift/din-egen-chattbot-marvin-steg-3).
 
 
 
