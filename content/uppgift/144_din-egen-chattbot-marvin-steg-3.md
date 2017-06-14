@@ -31,7 +31,7 @@ Du kan grunderna i Python och stränghantering och du har byggt [andra delen av 
 Introduktion {#intro}
 -----------------------
 
-Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär  att lära Marvin att svara på löpande text istället för siffror. 
+Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär att lära Marvin att svara på löpande text istället för siffror. 
 
 Marvin skall kunna svara på frågor som dessa.
 
@@ -47,6 +47,10 @@ Det enkla sättet att göra det är att kolla om texten som skrivs till Marvin i
 Du kan kika lite på hur en liknande lösning hanteras av [IRC-Marvin på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L358).
 
 Vi kommer att lära Marvin att ge oss ett citat, där citaten är lagrade på fil.
+
+Se hur det kan se ut när uppgiften är klar:  
+
+[ASCIINEMA src=124661]
 
 
 
@@ -65,7 +69,9 @@ cd kmom04/marvin3
 
 1. Lär Marvin kommandot "citat". Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`.
 
-2. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
+1. Kommandot ska skrivas direkt till Marvin. Det ska **inte** ligga bakom ett menyval som tidigare.
+
+1. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
