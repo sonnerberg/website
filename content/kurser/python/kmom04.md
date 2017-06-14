@@ -13,7 +13,7 @@ revision:
   "2014-09-19": (B, mos) Tog bort beta status.
   "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom04: Listor
+Kmom04: Listor och filer
 ==================================
 
 Lär dig grunderna i datastrukturen listor och se vad du kan göra med dem.
