@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+  "2017-06-14": (H, lew) Uppdaterade med en asciinema och ett krav.
   "2016-02-29": (G, mos) Uppdaterade länk till IRC-marvin.
   "2016-01-29": (F, mos) Uppdaterade länk till IRC-marvin.
   "2015-08-25": (E, mos) Uppgraderade till dbwebb v2.
