@@ -73,7 +73,7 @@ def calculate_energy():
     print("Emil använder " + str(emil_energy) + " kWh")
 ```
 
-På första raden använder vi `def` för att tala om för Python att här vill vi definera ett namn som vi kan återanvända. Efter `def` skriver vi funktionens namn, som vi använder när vi vill köra koden inuti funktionen. Efter namnet anger vi `()` för att markera att detta är en funktion. Raden avslutas som till exempel en `if`-sats eller en `for`-loop med `:`. Efter att vi har definerat vår funktion lägger vi till en 'docstring' som dokumenterar vad funktionen gör.
+På första raden använder vi `def` för att tala om för Python att här vill vi definiera ett namn som vi kan återanvända. Efter `def` skriver vi funktionens namn, som vi använder när vi vill köra koden inuti funktionen. Efter namnet anger vi `()` för att markera att detta är en funktion. Raden avslutas som till exempel en `if`-sats eller en `for`-loop med `:`. Efter att vi har definierat vår funktion lägger vi till en 'docstring' som dokumenterar vad funktionen gör.
 
 
 
@@ -103,9 +103,9 @@ calculate_energy(andreas_time, "Andreas")
 
 Vi har nu kapslat in vår kod för att beräkna energiåtgången. Denna koden kan återanvändas för nya personer som ska värma mat så låt oss titta på ett sånt exempel.
 
-> Emil och Andreas kollegor Mikael och Kenneth köper mat i restaurangen. Men hissen upp till matsalen är långsam så deras mat hinnar kalna innan de är uppe. Båda värmar maten, men bara på 600W i 30 sek.
+> Emil och Andreas kollegor Mikael och Kenneth köper mat i restaurangen. Men hissen upp till matsalen är långsam så deras mat hinnar kallna innan de är uppe. Båda värmer maten, men bara på 600W i 30 sek.
 
-Vi måste nu skriva om funktionen lite grann då vi förutom tiden och namnet även vill kunna ta emot effekten som maten ska värmas med. Vi definerar alltså ett nytt argument `effect`. I och med att vi oftast vill värma vår mat på 800W kan vi lägga till ett fördefinerat värde, som argumentet får om man inte anger ett annat värde när man använder funktionen. Det fördefinerade värde defineras med ett lika med tecken efter argument. Vi kan nu använda funktionen med antingen två eller tre paramatrar. Om vi använder med två argument får variabeln `effect` värdet 800.
+Vi måste nu skriva om funktionen lite grann då vi förutom tiden och namnet även vill kunna ta emot effekten som maten ska värmas med. Vi definierar alltså ett nytt argument `effect`. I och med att vi oftast vill värma vår mat på 800W kan vi lägga till ett fördefinierat värde, som argumentet får om man inte anger ett annat värde när man använder funktionen. Det fördefinierade värdet definieras med ett lika-med tecken (`=`) efter argumentet. Vi kan nu använda funktionen med antingen två eller tre argument. Om vi använder två argument får variabeln `effect` värdet 800.
 
 ```python
 def calculate_energy(time_in_microwave, name, effect=800):
@@ -152,7 +152,7 @@ emil_time = 2.5 / 60
 emil_energy = calculate_energy(emil_time)
 ```
 
-Vår variabel `emil_energy` innehåller nu värdet från variabeln `energy` inne i funktionen. Vi kan nu definera ytterligare en funktion som beräknar kostnaden av elen utifrån en energiåtgång för att vårt program ska fungera som tidigare.
+Vår variabel `emil_energy` innehåller nu värdet från variabeln `energy` inne i funktionen. Vi kan nu definiera ytterligare en funktion som beräknar kostnaden av elen utifrån en energiåtgång för att vårt program ska fungera som tidigare.
 
 ```python
 def calculate_energy(time_in_microwave, effect=800):
@@ -180,13 +180,13 @@ print("Emil använder " + str(emil_energy) + " kWh och detta kostar " + str(emil
 # Emil använder 0.033333333333333326 kWh och detta kostar 0.02601333333333333 kr
 ```
 
-Vi har nu två funktioner som kan återanvändas. Vi skickar in argument både med och utan fördefinerat värde och returnerar värden från våra funktioner.
+Vi har nu två funktioner som kan återanvändas. Vi skickar in argument både med och utan fördefinierat värde och returnerar värden från våra funktioner.
 
 
 
 Formattering för bättre utskrifter {#format}
 --------------------------------------
-Vi har ett fungerande program men finns nästan alltid små detaljer vi kan förbättra. I detta fallet tycker jag att utskrifter blir tråkiga med alla dessa decimaler, så lått oss titta på ett sätt att få bättre utskrifter från våra program i Python. Vi ska använda Pythons strängformaterare `format`. Vi använder `{}` för de värden vi vill ersätta med beräknade värden. Sen tilldelar vi ett namn så vi kan tilldela rätt värde till den del av strängen vi vill ersätta. Inom parentesen anger vi vilka värden vi vill koppla till formateringsvariablerna `{energy}` och `{cost}`.
+Vi har ett fungerande program men det finns nästan alltid små detaljer vi kan förbättra. I detta fallet tycker jag att utskrifter blir tråkiga med alla dessa decimaler, så låt oss titta på ett sätt att få bättre utskrifter från våra program i Python. Vi ska använda Pythons strängformaterare `format`. Vi använder `{}` för de värden vi vill ersätta med beräknade värden. Sen tilldelar vi ett namn så vi kan tilldela rätt värde till den del av strängen vi vill ersätta. Inom parentesen anger vi vilka värden vi vill koppla till formateringsvariablerna `{energy}` och `{cost}`.
 
 ```python
 emil_time = 2.5 / 60
