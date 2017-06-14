@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-  "2016-03-15": (H, efo) Rensade i kurslitteratur och länkade in nytt material.
+  "2017-06-14": (H, efo) Rensade i kurslitteratur och länkade in nytt material.
   "2016-03-15": (G, mos) Tog bort videoserie MonkeyLords och NewBoston.
   "2016-02-22": (F, mos) Lade till videoserien "Lär dig Python".
   "2015-01-30": (E, mos) Länk till läsanvisning appendix 2.
