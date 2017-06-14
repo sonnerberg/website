@@ -71,7 +71,7 @@ Ta en kort mental paus innan du ger dig på nästa kursmoment.
 Hur testas mitt resultat? {#inspect}
 ---------------------------------------
 
-Den som rättar och ger feedback utgår från följande kommando när din inlämning gås igenom.
+Den som rättar och kontrollerar din inlämning utgår från följande kommando.
 
 ```bash
 dbwebb inspect kmom01
@@ -79,4 +79,4 @@ dbwebb inspect kmom01
 
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
-Du kan själv provköra och se samma resultat som läraren ser. Det är en bra idé att alltid testköra sin inlämning på samma sätt som rättaren gör. 
+Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.

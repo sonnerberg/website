@@ -15,7 +15,7 @@ Vilken feedback får man på inlämningarna?
 Rättning av redovisningar {#rattning}
 ------------------------------------------
 
-Vi rättar löpande när kurserna pågår. I slutet av varje vecka försöker vi hantera de inlämningar som är gjorda under föregående vecka. Det betyder att man normalt får vänta upp till två veckor på att få feedback på en inlämning. Ibland kan det gå fortare. Om det dröjer mer än tre veckor så har vi missat din inlämning, då kan du skicka ett mail till den som brukar rätta dina inlämningar.
+Vi rättar löpande när kurserna pågår och när rättningsfönstret för respektive kmom är öppet. I slutet av varje vecka försöker vi hantera de inlämningar som är gjorda under föregående vecka. Det betyder att man normalt får vänta upp till två veckor på att få feedback på en inlämning. Ibland kan det gå fortare.
 
 
 

@@ -129,7 +129,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Ditt första Python-skript](uppgift/ditt-forsta-python-skript)" för att visa att du har koll på grunderna. Spara alla filer under `me/kmom01/plane`.
 
-1. Gör uppgiften "[En me-sida i python-kursen](uppgift/en-me-sida-i-python-som-cgi-skript)". Spara alla filer under `me/redovisa`.
+1. Gör uppgiften "[Skapa en me-sida för Python-kursen](uppgift/skapa-en-me-sida-till-python-kursen)" så du kan skriva dina redovisningstexter. Spara alla filer under `me/redovisa`.
 
 
 
