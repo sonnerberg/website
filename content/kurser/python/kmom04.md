@@ -93,20 +93,20 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)".
+1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/list`.
 
-1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python)".
+1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python och listor](uppgift/python-och-listor)".
+1. Gör laborationen "[Python och listor](uppgift/python-och-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom04/lab4`.
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3)".
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3)". Spara alla filer under `me/kmom04/marvin3`.
 
-3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)".
+3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom04/marvin3`.
 
 
 
