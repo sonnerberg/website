@@ -13,7 +13,7 @@ revision:
 Kmom02: Villkor och loopar
 ==================================
 
-Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if-satser och loopar. Därefter är det dags att skriva ditt första lite större program där Marvin skall få lite intelligens när han svarar på frågor.
+Vi har bekantat oss med värden, datatyper och variabler och det är nu dags för en introduktion till hur vi kan styra flödet av data i våra program. Först tittar vi på booleska operatorer och hur vi kan använda sant eller falsk för att exekverera olika delar av koden. Efter det introduceras loopar som kan användas för upprepa delar av koden. Till slut är det dags att skriva ditt första lite större program där Marvin skall få lite intelligens när han svarar på frågor.
 
 [FIGURE src=/image/python/py-marvin.png?w=w2 caption="Marvin i Python."]
 
@@ -90,9 +90,9 @@ Det finns inga lästips.
 
 ###Övningar {#ovningar}
 
-1. Jobba igenom artikeln/övningen [Jämförelseoperatorer och booleanska värden](kunskap/booleans-och-jamforelseoperatorer).
+1. Jobba igenom artikeln/övningen "[Jämförelseoperatorer och booleska värden](kunskap/booleans-och-jamforelseoperatorer)" för att träna på hur värden jämföras i Python. Python interpretatorn används för att testa koden.
 
-1. Jobba igenom artikeln/övningen [Villkor och loopar](kunskap/villkor-och-loopar).
+1. Jobba igenom artikeln/övningen "[Villkor och loopar](kunskap/villkor-och-loopar)" för att öva in hur vi kan styra flödet i våra program. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
 
 
 
@@ -110,9 +110,9 @@ Dictionaries och Tupler
 1. Gör laborationen "[Python med värden och variabler](uppgift/python-med-varden-och-variabler)" för att träna på grunderna i Python. Spara alla filer under `me/kmom02/lab2`.
 -->
 
-1. Gör uppgiften "[Python med villkor och loopar](uppgift/python-med-villkor-och-loopar)".
+1. Gör uppgiften "[Python med villkor och loopar](uppgift/python-med-villkor-och-loopar)" för att träna på `if`-staser, `for`- och `while`-loopar. Spara alla filer under `me/kmom02/lab2`.
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)".
+1. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)", ditt första lite större Python program där du lär Marvin att svara på frågor. Spara alla filer under `me/kmom02/marvin1`.
 
 
 
