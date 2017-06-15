@@ -3,7 +3,7 @@ title: htmlphp
 author:
     - mos
 revision:
-    "2017-06-13": (PD1, mos) Förbereder genomgång inför ht17.
+    "2017-06-15": (D, mos) Förbereder genomgång inför ht17.
     "2016-11-01": (C, mos) Ladokmoment och studieplan omskrivna.
     "2016-02-22": (B, mos) Bort med not om kursutveckling samt not ny kurskod från ht16.
     "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
@@ -11,7 +11,7 @@ revision:
 Kursen "htmlphp"
 ==================================
 
-Kursen **Databaser, HTML, CSS och skriptbaserad PHP-programmering**, a.k.a. *htmlphp*, lär dig hur du bygger webbplatser med HTML, CSS, PHP och databaser.
+Kursen **Webbteknologier**, a.k.a. *htmlphp*, lär dig hur du bygger webbplatser med HTML, CSS, PHP och databaser.
 
 <!--more-->
 
@@ -85,7 +85,7 @@ Kursmomentet visar hur du kommer igång med labbmiljön, dels via en installatio
 
 Du skall gå igenom ett par exempel på kodning i HTML, CSS och PHP och använda lärdomarna för att bygga en me-sida. Me-sidan är en enkel webbplats som innehåller en presentation av dig själv tillsammans med redovisningstexterna för kursmomenten.
 
-[Instruktion till kursmoment 01](htmlphp/kmom01).
+[Instruktion till kursmoment 01](./kmom01).
 
 
 
@@ -97,7 +97,7 @@ Vi börjar använda lite fler enkla PHP-konstruktioner för att dra nytta av PHP
 
 Vi gör en första laboration i PHP för att få en känsla för hur det är att koda med PHP.
 
-[Instruktion till kursmoment 02](htmlphp/kmom02).
+[Instruktion till kursmoment 02](./kmom02).
 
 
 
@@ -109,7 +109,7 @@ Vi skapar en sida, som har sin egen meny, vi kallar den multisida och löser bå
 
 Till slut knyter vi ihop det genom att integrera multisidan i din me-webbplats. Resultatet blir me-sida version 3.0.
 
-[Instruktion till kursmoment 03](htmlphp/kmom03).
+[Instruktion till kursmoment 03](./kmom03).
 
 
 
@@ -119,7 +119,7 @@ Vi tillägnar detta kursmoment åt att gå igenom fler grunder i CSS, grunder s�
 
 Avslutningsvis gör vi en programmeringsövning där vi skapar en stylesheetväljare med PHP. Med den kan vi dynamiskt ändra vilken stylesheet som används till webbplatsen. I samband med det så tittar vi på lite fler PHP-konstruktioner som sessioner och postade formulär.
 
-[Instruktion till kursmoment 04](htmlphp/kmom04).
+[Instruktion till kursmoment 04](./kmom04).
 
 
 
@@ -129,7 +129,7 @@ Låt oss börja med databaser. Jag har valt att introducera databasen SQLite som
 
 Till databasen SQLite behövs klientprogram som kan användas för att prata med databasen. Vi prövar olika klienter, en variant för desktop, en som är webbaserad och en terminalbaserade.
 
-[Instruktion till kursmoment 05](htmlphp/kmom05).
+[Instruktion till kursmoment 05](./kmom05).
 
 
 
@@ -137,7 +137,7 @@ Till databasen SQLite behövs klientprogram som kan användas för att prata med
 
 Vi fortsätter jobba med databasen SQLite och integrerar databasen med en PHP applikation. Vi använder PHP PDO för att koppla oss till databasen.
 
-[Instruktion till kursmoment 06](htmlphp/kmom06).
+[Instruktion till kursmoment 06](./kmom06).
 
 
 
@@ -145,7 +145,7 @@ Vi fortsätter jobba med databasen SQLite och integrerar databasen med en PHP ap
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](htmlphp/kmom10).
+[Instruktion till kursmoment 10](./kmom10).
 
 
 
@@ -153,8 +153,6 @@ Kurslitteratur {#litteratur}
 ----------------------------
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
-
-Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
 
 
 
@@ -175,8 +173,13 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 ###Referenslitteratur {#referenslitteratur}
 
-Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
+Det finns ingen referenslitteratur.
 
+
+
+###Övrig litteratur {#ovriglitteratur}
+
+Följande bok kan vara bra att titta i om du har tillgång till den, se den som ett extra lästips.
 
 * **[Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)** -- Gilmore, W  
   En tjockare bok för den som vill ha en mer komplett vy över PHP och MySQL från början. 
@@ -205,9 +208,9 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1).
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod1).
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
+Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet webprog](webprog/studieplan).
 
 För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](htmlphp/studieplan) kopplad till de kurstillfällen som erbjuds.
 
@@ -239,6 +242,8 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
+Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
+
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
 
@@ -247,15 +252,6 @@ Betygsättning {#betyg}
 ------------------------
 
 Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
-
-
-
-Lärarstöd och handledning {#handledning}
-----------------------------------------
-
-I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
-
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).  
 
 
 
