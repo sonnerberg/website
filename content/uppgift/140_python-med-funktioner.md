@@ -12,7 +12,7 @@ created: "2014-07-03 06:38:04"
 Python med funktioner
 ==================================
 
-Jobba igenom grunderna i Python med funktioner.
+Vi ska i denna laboration träna på funktioner, argument och returvärden i Python.
 
 <!--more-->
 
@@ -40,16 +40,28 @@ Materialet till labben ligger nu i din kurskatalog i `me/kmom03/lab3` enligt fö
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
-| `instruction.html` | Beskrivning av labben och de uppgifter som skall göras.               |
+| `instruction.html` | Beskrivning av labben och de uppgifter som skall göras, öppna och läs via en webbläsare.               |
 | `answer.py`        | Här skall du skriva din kod för att lösa respektive uppgift i labben. |
 | `Dbwebb.py`        | Används av `answer.py` för att testa din labb.                        |
-| `answer.json`      | Används av `Dbwebb.py` för att testa din labb.                        |
+| `.answer.json`      | Används av `Dbwebb.py` för att testa din labb.                        |
 
 Öppna filen `instruction.html` i en webbläsare och läs igenom de uppgifter som labben omfattar.
 
 Öppna filen `answer.py` i din texteditor och koda ihop svaren på uppgifterna.
 
-Du kan testa dina lösningar genom att köra programmet `answer.py` som ett vanligt Python-program.
+Du kan testa dina lösningar genom att köra programmet `answer.py` som ett vanligt Python-program. Labben rättar sig själv.
+
+```python
+$ python3 answer.py
+```
+
+Glöm inte att validera ofta, då slipper du bekymmer i slutet.
+
+Hamnar du i bekymmer så finns det ledtrådar som du kan få. Du aktiverar ledtrådarna för respektive uppgift i filen `answer.py`.
+
+Du behöver göra ett visst antal uppgifter för att bli godkänd på labben. Sedan finns extra uppgifter du kan utföra om du så väljer. [Varför skall jag göra extrauppgiftena](kurser/faq/varfor-gora-extra-uppgifter)?
+
+[YOUTUBE src=7pPjt__amAM width=630 caption="Kenneth visar hur man kommer igång med labbarna."]
 
 
 
