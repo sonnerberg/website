@@ -190,15 +190,15 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Python for Everybody   | Think Python       | 
-|------------|------------------------|--------------------|
-| Kmom01     | Ch 1, 2                | Ch 1, 2            |
-| Kmom02     | Ch 3, 4, 5             | Ch 3, 5, 6, 7      |
-| Kmom03     | Ch 6, 7                | App A, Ch 8, 9, 14 | 
-| Kmom04     | Ch 8                   | Ch 10              |
-| Kmom05     | Ch 9, 10               | Ch 11, 12, 13      | 
-| Kmom06     | Ch 12, 13, 15          |                    | 
-| Kmom10     |                        |                    |
+| Kursmoment | Python for Everybody   | 
+|------------|------------------------|
+| Kmom01     | Ch 1, 2                |
+| Kmom02     | Ch 3, 5                |
+| Kmom03     | Ch 4                   |
+| Kmom04     | Ch 7, 8                |
+| Kmom05     | Ch 9, 10               |
+| Kmom06     | Ch 12, 13, 15          |
+| Kmom10     |                        |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
 
@@ -209,7 +209,7 @@ Lektionsplan och rekommenderad studieplan {#schema}
 
 Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod1).
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet webutv](webutv#studieplan).
+Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet webutv](webutv/studieplan).
 
 För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](python/studieplan) kopplad till de kurstillfällen som erbjuds.
 

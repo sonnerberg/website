@@ -36,11 +36,12 @@ Läs följande:
     * Ch9 Dictionaries
     * Ch10 Tuples
 
-
+<!--
 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * Ch11 Dictionaries
     * Ch12 Tuples
     * Ch13 Case study: data structure selection
+-->
 
 
 
