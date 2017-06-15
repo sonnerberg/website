@@ -84,11 +84,11 @@ Efterhand som du lär dig Python kommer du att märka att du referensmanualen ä
 
 Titta på följande:
 
+1. I videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) hittar du videor som är tätt kopplad till kursmaterialet. Kika på de videor som börjar med 0 och 1. Det är korta videor som tar upp delar som är relevanta i respektive kursmoment.
+
 1. Följande videor följer med och kompletterar kurslitteraturen. Det är författaren som har föreläsningar kopplade till bokens kapitel.
     * [Python for Informatics: Chapter 1 - Introduction](https://www.youtube.com/watch?v=G721cooZXgs)
     * [Python for Informatics: Chapter 2 - Expressions](https://www.youtube.com/watch?v=IXXHH6ztsSA)
-
-1. I videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) hittar du videor som är tätt kopplad till kursmaterialet. Kika på de videor som börjar med 0 och 1. Det är korta videor som tar upp delar som är relevanta i respektive kursmoment.
 
 
 

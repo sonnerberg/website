@@ -36,7 +36,7 @@ Målet med kursmomentet är att du lär dig hantera och använda interna och ext
 Målet är inte att du till fullo skall behärska de tekniker som modulerna hanterar. Se detta som ett smakprov på saker du kan lära dig mer om i kommande kurser.
 [/INFO]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -54,7 +54,7 @@ Läs följande:
     * Ch12 Networked programs
     * Ch13 Using Web Services
     * Ch15 Using databases and SQL  
-    
+
 
 
 ###Artiklar {#artiklar}
@@ -132,7 +132,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](python/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
@@ -140,7 +140,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Känns det bra att jobba på kommandoraden, ser du ett användningsområde för den typen av Python-program?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Var uppgiften i tuffaste laget, vilken del hade du valt bort om du hade haft det valet?
-
-
-
-
