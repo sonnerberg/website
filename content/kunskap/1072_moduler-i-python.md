@@ -60,6 +60,6 @@ emil_energy = energy_calculation.calculate_energy(emil_time)
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har nu kort introducerat moduler i Python. Moduler är ett sätt att kategorisera och dela upp kod för återanvändning och ett bra arbetssätt när mängden av kod växer eller att du vill använda samma kod i olika projekt.
+Vi har nu kort introducerat moduler i Python. Moduler är ett sätt att kategorisera och dela upp kod för återanvändning och ett bra arbetssätt när mängden av kod växer eller att du vill använda samma kod i olika projekt. För de som vill veta mer om moduler i Python beskrivs moduler i [Python Tutorial Chapter 6 Modules](https://docs.python.org/3/tutorial/modules.html).
 
-Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/functions) och här på [dbwebb](https://dbwebb.se/repo/python/example/functions). Kodexemplet innehåller hela exemplet från tidigare övningar, men uppdelat i en modul och en `main.py`.
+Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/functions) och här på [dbwebb](https://dbwebb.se/repo/python/example/functions). Kodexemplet innehåller hela exemplet från tidigare övningar, men uppdelat i modulen `energy_calculation.py` och huvudprogrammet finns i `main.py`.

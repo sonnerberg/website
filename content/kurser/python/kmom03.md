@@ -12,7 +12,7 @@ revision:
 Kmom03: Funktioner och moduler
 ==================================
 
-Lär dig om funktioner i Python samt börja strukturera din kod i moduler genom att dela upp den i olika filer.
+I detta kursmoment introduceras du till funktioner och hur de kan underlätta för att återanvända koden. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Dessutom introduceras ett sätt för att strukturera koden i flera olika filer. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
 
 [FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
@@ -50,10 +50,7 @@ Python har en inbyggd debugger som kan användas för att felsöka och rätta up
 
 ###Artiklar {#artiklar}
 
-Läs följande:
-
-1. Om moduler och att strukturera funktioner i egna filer.
-    * [Python Tutorial Chapter 6 Modules](https://docs.python.org/3/tutorial/modules.html)
+Det finns inga artiklar.
 
 
 
@@ -86,9 +83,9 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen [Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden).
+1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
 
-1. Jobba igenom artikeln/övningen [Moduler i Python](kunskap/moduler-i-python).
+1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
 
 
 
@@ -96,9 +93,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)".
+1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom03/lab3`.
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2)".
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom03/marvin2`.
 
 
 

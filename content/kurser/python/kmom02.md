@@ -110,7 +110,7 @@ Dictionaries och Tupler
 1. Gör laborationen "[Python med värden och variabler](uppgift/python-med-varden-och-variabler)" för att träna på grunderna i Python. Spara alla filer under `me/kmom02/lab2`.
 -->
 
-1. Gör uppgiften "[Python med villkor och loopar](uppgift/python-med-villkor-och-loopar)" för att träna på `if`-staser, `for`- och `while`-loopar. Spara alla filer under `me/kmom02/lab2`.
+1. Gör uppgiften "[Python med villkor och loopar](uppgift/python-med-villkor-och-loopar)" för att träna på `if`-satser, `for`- och `while`-loopar. Spara alla filer under `me/kmom02/lab2`.
 
 1. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)", ditt första lite större Python program där du lär Marvin att svara på frågor. Spara alla filer under `me/kmom02/marvin1`.
 
