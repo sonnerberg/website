@@ -17,9 +17,9 @@ revision:
 Kmom04: Listor och filer
 ==================================
 
-Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lsita behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i.  
+Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lsita behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i.
 
-Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil. 
+Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
 
 Så här kan det se ut när du bekantar dig med listor.
 
@@ -41,11 +41,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
     * Ch7 Files
     * Ch8 Lists
 
-<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Ch10 Lists
     * Ch14 Files -->
 
@@ -102,7 +102,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[Python och listor](uppgift/python-och-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom04/lab4`.
+1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom04/lab4`.
 
 2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3)". Spara alla filer under `me/kmom04/marvin3`.
 
@@ -133,7 +133,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Var det svårt att bekanta sig med datastrukturen för listor eller flöt det på bra?
 * Har du jobbat med listor, eller arrayer, i andra programmeringsspråk -- kan du isåfall jämföra Python listor mot andra programmeringsspråk?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?
-
-
-
-
