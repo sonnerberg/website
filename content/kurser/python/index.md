@@ -1,6 +1,7 @@
 ---
 title: python
-author: mos
+author:
+    - mos
 revision:
     "2017-05-29": (E, mos) Genomgång och mindre uppdatering kursplan, justering kurslitteratur.
     "2016-11-01": (D, mos) Ladokmoment och studieplan omskrivna.

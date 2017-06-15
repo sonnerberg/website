@@ -1,6 +1,8 @@
 ---
-author: mos
+author:
+    - mos
 revision:
+    "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2017-02-14": (E, mos) Kommenterade bort sql1 temporärt.
     "2016-09-26": (D, mos) La till extrauppgift sql1.
     "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
@@ -26,7 +28,7 @@ När vi väl bekantat oss med SQLite, dess klienter och SQL så tar vi ett förs
 
 Vi avslutar med en programmeringsövning där du bygger en söksida som jobbar mot en SQLite databas.
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -97,11 +99,11 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lab 4: PHP och inbyggda funktioner](htmlphp/lab4)".
+1. Gör uppgiften "[PHP lab 5: utforska inbyggda funktioner](uppgift/php-lab5-utforska-inbyggda-funktioner)". Spara filerna i katalogen `me/kmom05/lab5`.
 
-1. Gör uppgiften "[Gör en multisida för att söka i en databas](uppgift/bygg-en-multisida-for-att-soka-i-en-databas)".
+1. Gör uppgiften "[Gör en multisida för att söka i en databas](uppgift/bygg-en-multisida-for-att-soka-i-en-databas)". Spara filerna under `me/kmom05/jetty`.
 
-1. Gör uppgiften "[Bygg ut din htmlphp me-sida till version 5](htmlphp/proj5)".
+1. Gör uppgiften "[Bygg ut din htmlphp me-sida till version 5](uppgift/htmlphp-projekt-5)". Spara filerna i katalogen `me/kmom05/me5`.
 
 
 
@@ -122,7 +124,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](htmlphp/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

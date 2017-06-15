@@ -5,13 +5,14 @@ category:
     - php
     - lab
 revision:
+    "2017-06-15": (C, mos) Genomgången inför labbar v2, delad och bytte namn.
     "2016-09-08": (B, mos) Går att köra php answer.php.
     "2015-05-12": (A, mos) Första utgåvan i samband med kursen htmlphp version 2.
 ...
-PHP lab 1, grundkonstruktioner
+PHP lab 2: villkor, loopar och inbyggda funktioner
 ==================================
 
-Jobba igenom grunderna i PHP med typer, variabler, villkor, inbyggda funktioner och loopar.
+Jobba igenom grunderna i PHP med villkor, loopar och inbyggda funktioner.
 
 <!--more-->
 
@@ -20,9 +21,7 @@ Jobba igenom grunderna i PHP med typer, variabler, villkor, inbyggda funktioner 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat en labbmiljö där du kan köra PHP, motsvarande [labbmiljön för kursen htmlphp](kurser/htmlphp/labbmiljo)".
-
-Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för htmlphp-kursen.
+Du har installerat labbmiljön och du har tillgång till kursrepot.
 
 
 
@@ -35,7 +34,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab1
+dbwebb create lab2
 ```
 
 Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
@@ -50,6 +49,8 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 Öppna filen `instruction.html` i en webbläsare och läs igenom de uppgifter som labben omfattar.
 
 Öppna filen `answer.php` i din texteditor och koda ihop svaren på uppgifterna.
+
+Du får svar direkt om du har gjort rätt eller inte. Du kan även få fram en ledtråd som visar dig vilket rätt svar är.
 
 Du kan testa dina lösningar genom att köra programmet `answer.php` i din webbläsare, via din lokala webbserver.
 
@@ -70,7 +71,7 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb publish lab1
+dbwebb publish lab2
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar. 
@@ -91,6 +92,6 @@ Debugga och felsök genom att skriva ut variablernas olika innehåll med `echo`,
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
-När du gör *publish* så körs även *validate*. Blir det för mycket fel när du kör *publish* så kan det bli enklare att bara göra *validate* till att börja med.
+Felsöker du på studnetservern så använder du `dbwebb publish-pure` så att radnumren stämmer.
 
 Lycka till och hojta till i forumet om du behöver hjälp!

@@ -1,6 +1,8 @@
 ---
-author: mos
+author:
+    - mos
 revision:
+    "2017-06-15": (E, mos) Uppdaterad labbserie.
     "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
     "2015-08-25": (B, mos) Genomgången och första versionen släppt.
@@ -21,7 +23,7 @@ Dessutom gör du en labb för att komma igång med funktioner i PHP. Allt efters
 
 Här kan du testa exemplet som ligger till grund för resultatet, du hittar det i [kursrepot på dbwebb](/repo/htmlphp/example/stylechooser).
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -89,11 +91,11 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lab 3: PHP och funktioner](htmlphp/lab3)".
+1. Gör uppgiften "[PHP lab 4: skapa egna funktioner](uppgift/php-lab4-skapa-egna-funktioner)". Spara alla filerna i katalogen `me/kmom04/lab4`.
 
-1. Gör uppgiften "[Bygg en styleväljare till din webbplats](uppgift/bygg-en-stylevaljare-till-din-webbplats)".
+1. Gör uppgiften "[Bygg en styleväljare till din webbplats](uppgift/bygg-en-stylevaljare-till-din-webbplats)". Spara filerna i `me/kmom04/stylechooser`.
 
-1. Gör uppgiften "[Bygg ut din me-sida till version 4](uppgift/bygg-ut-din-me-sida-till-version-4)".
+1. Gör uppgiften "[Bygg ut din me-sida till version 4](uppgift/bygg-ut-din-me-sida-till-version-4)". Spara filerna i katalogen `me/kmom04/me4`.
 
 
 
@@ -108,7 +110,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](htmlphp/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

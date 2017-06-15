@@ -1,6 +1,8 @@
 ---
-author: mos
+author:
+    - mos
 revision:
+    "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
     "2015-08-06": (B, mos) Genomgång inför ht15.
@@ -19,7 +21,7 @@ Vi gör en första laboration i PHP för att få en känsla för hur det är att
 
 [FIGURE src=/image/snapvt15/me2-res.png?w=w2 caption="Mikaels me-sida version 2."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -90,9 +92,10 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lab 1: Grunderna i PHP](htmlphp/lab1)".
+1. Gör uppgiften "[PHP lab 2: villkor, loopar och inbyggda funktioner](uppgift/php-lab2-villkor-loopar-och-inbyggda-funktioner)". Spara alla filerna i katalogen `me/kmom02/lab2`.
 
-1. Gör uppgiften "[Bygg ut din me-sida till version 2](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-2)".
+1. Gör uppgiften "[Bygg ut din me-sida till version 2](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-2)". Spara alla filerna i katalogen `me/kmom02/me2`.
+
 
 
 
@@ -107,7 +110,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](htmlphp/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

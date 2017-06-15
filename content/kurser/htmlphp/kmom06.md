@@ -1,6 +1,8 @@
 ---
-author: mos
+author:
+    - mos
 revision:
+    "2017-06-15": (E, mos) Uppdaterad labbserie.
     "2016-11-04": (D, mos) Lade till extrauppgift om login.
     "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
@@ -20,7 +22,7 @@ Momentet bygger vidare på det du gjorde i föregående kursmoment.
 
 [FIGURE src=/image/snapht15/htmlphp-kmom05-search.png?w=w2 caption="Bygg vidare på din sökmotor för dinosaurier (eller vad du nu valde)."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -74,9 +76,9 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lab 5: PHP, PDO och databasen SQLite](htmlphp/lab5)".
+1. Gör uppgiften "[Lab 6: PHP PDO och databasen SQLite](uppgift/php-lab6-php-pdo-och-databasen-sqlite)". Spara filerna i katalogen `me/kmom06/lab6`.
 
-1. Gör uppgiften "[Bygg ut din me-sida till version 6](htmlphp/proj6)".
+1. Gör uppgiften "[Bygg ut din me-sida till version 6](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-6)". Spara filerna i katalogen `me/kmom06/me6`.
 
 
 
@@ -84,7 +86,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 Gör följande extrauppgifter om du har tid och lust.
 
-1. Lägg till en inloggning på din mesida och styr så att man måste vara inloggad för att kunna redigera (lägga till, uppdatera, radera) i databasen. kursrepot innehåller ett exempel [`example/login`](https://dbwebb.se/repo/htmlphp/example/login/login.php) som du kan utgå ifrån.
+1. Lägg till en inloggning på din mesida och styr så att man måste vara inloggad för att kunna redigera (lägga till, uppdatera, radera) i databasen. Kursrepot innehåller ett exempel [`example/login`](repo/htmlphp/example/login/login.php) som du kan utgå ifrån.
 
 
 
@@ -93,7 +95,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](htmlphp/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

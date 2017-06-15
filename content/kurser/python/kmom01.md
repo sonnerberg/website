@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2017-05-29": (PI1, mos) Omarbetning inför ht17.
+    "2017-06-15": (I, mos) Omarbetning inför ht17.
     "2016-03-15": (H, mos) Tog bort videoserie MonkeyLords och NewBoston.
     "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
     "2015-08-25": (F, mos) Ändrar till hur labbmiljön installeras samt dbwebb-cli v2.
@@ -15,13 +15,9 @@ revision:
 Kmom01: Kom i gång med Python
 ==================================
 
-[WARNING]
-Arbete pågår med uppdatering inför HT2017.
-[/WARNING]
+Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Python fungerar på många miljöer och i olika varianter.
 
-<!-- Why learn python? -->
-
-Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Python fungerar på många miljöer och i olika varianter. Vi börjar skriva de första enkla programmen för att komma underfund med hur Python kan användas.
+Vi börjar skriva de första enkla programmen för att komma underfund med hur Python kan användas och hur programmeringsspråket fungerar i grunden.
 
 [FIGURE src=/image/snapht14/python-mos-me-page.png?w=w2 caption="Mikaels me-sida i Python som cgi-skript."]
 
@@ -44,7 +40,7 @@ Det första du behöver göra är att installera en labbmiljö för kursen. Om d
 
 1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
 
-1. Du kan nu [ladda ned (klona) ditt lokala kursrepo](dbwebb-cli/clone) som innehåller kursmaterial för kursen. Här kommer du att skriva all kod till övningar och uppgifter.
+1. Du kan nu [ladda ned (klona) ditt lokala kursrepo `python`](dbwebb-cli/clone) som innehåller kursmaterial för kursen. Här kommer du att skriva all kod till övningar och uppgifter.
 
 
 
@@ -144,7 +140,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

@@ -57,16 +57,12 @@ Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) ti
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 
-[Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
-
-
-
-Klart! {#klar}
+Feedback och frågor {#feedback}
 ---------------------------------------
 
-Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
+[Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
 
-Ta en kort mental paus innan du ger dig på nästa kursmoment.
+Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
 
 
 
@@ -82,3 +78,10 @@ dbwebb inspect kmom01
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
 Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
+
+
+
+Klart! {#klar}
+---------------------------------------
+
+Ta en kort mental paus innan du ger dig på nästa kursmoment.

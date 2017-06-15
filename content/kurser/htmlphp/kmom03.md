@@ -1,6 +1,8 @@
 ---
-author: mos
+author:
+    - mos
 revision:
+    "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2016-08-31": (E, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (D, mos) Bort med not om kursutveckling och länk till version 1.
     "2015-08-24": (C, mos) Släppt till ht15.
@@ -23,7 +25,7 @@ Det blir en hel del PHP i detta kursmomentet.
 [FIGURE src=/image/snapvt15/me3-intro.png?w=w2 caption="En multisida i PHP, inte snygg, men det är koden bakom som räknas för tillfället."]
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -88,11 +90,12 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lab 2: PHP och arrayer](htmlphp/lab2)".
+1. Gör uppgiften "[PHP lab 3: arrayer](uppgift/php-lab3-arrayer)". Spara alla filerna i katalogen `me/kmom03/lab3`.
 
-1. Gör uppgiften "[Bygg en multisida och testa arrayer](uppgift/bygg-en-multisida-och-testa-arrayer)".
+1. Gör uppgiften "[Bygg en multisida och testa arrayer](uppgift/bygg-en-multisida-och-testa-arrayer)". Spara filerna i katalogen `me/kmom03/multi`.
 
-1. Gör uppgiften "[Bygg ut din me-sida till version 3](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3)".
+1. Gör uppgiften "[Bygg ut din me-sida till version 3](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3)". Spara filerna i katalogen `me/kmom03/me3`.
+
 
 
 
@@ -107,7 +110,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](htmlphp/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

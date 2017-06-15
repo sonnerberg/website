@@ -5,13 +5,14 @@ category:
     - php
     - lab
 revision:
+    "2017-06-15": (C, mos) Genomgången inför labbar v2, delad och bytte namn.
     "2016-09-08": (B, mos) Går att köra php answer.php.
     "2015-05-12": (A, mos) Första utgåvan i samband med kursen htmlphp version 2.
 ...
-PHP lab 1, grundkonstruktioner
+PHP lab 1: uttryck, datatyper och variabler
 ==================================
 
-Jobba igenom grunderna i PHP med typer, variabler, villkor, inbyggda funktioner och loopar.
+Jobba igenom grunderna i PHP med uttryck, datatyper och variabler.
 
 <!--more-->
 
@@ -50,6 +51,8 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 Öppna filen `instruction.html` i en webbläsare och läs igenom de uppgifter som labben omfattar.
 
 Öppna filen `answer.php` i din texteditor och koda ihop svaren på uppgifterna.
+
+Du får svar direkt om du har gjort rätt eller inte. Du kan även få fram en ledtråd som visar dig vilket rätt svar är.
 
 Du kan testa dina lösningar genom att köra programmet `answer.php` i din webbläsare, via din lokala webbserver.
 
@@ -91,6 +94,6 @@ Debugga och felsök genom att skriva ut variablernas olika innehåll med `echo`,
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
-När du gör *publish* så körs även *validate*. Blir det för mycket fel när du kör *publish* så kan det bli enklare att bara göra *validate* till att börja med.
+Felsöker du på studnetservern så använder du `dbwebb publish-pure` så att radnumren stämmer.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
