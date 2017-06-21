@@ -107,9 +107,9 @@ Följande är relevant extra läsning.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. [Installera pakethantering med `pip3` för Python](http://dbwebb.se/kunskap/python-pakethantering-med-pip).
+1. [Installera pakethantering med `pip3` för Python](kunskap/python-pakethantering-med-pip).
 
-2. Jobba igenom övningen "[Använd externa moduler i Python för att hämta information på webben](http://dbwebb.se/kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben)". När det finns exempelprogram, kopiera dem och gör dem till dina egna. Kör dem. Ändra små saker i dem så du har koll på hur de fungerar.
+2. Jobba igenom övningen "[Använd externa moduler i Python för att hämta information på webben](kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben)". När det finns exempelprogram, kopiera dem och gör dem till dina egna. Kör dem. Ändra små saker i dem så du har koll på hur de fungerar.
 
 
 
