@@ -6,9 +6,12 @@ revision:
 ...
 Modulen argparse
 ==================================
-För att kunna spara data mellan två exekveringar av våra program kan filer användas.
 
-Vi ska i denna övning läsa från filer och använda datan som finns i filen och övningen avslutas med att vi skriver till en fil.
+[FIGURE src=image/python/terminal.png?w=c5 class="right"]
+
+Vi har jobbat en del med terminalen och nu är det dags att se hur vi själva kan bygga program som med fördel styrs ifrån en terminal. För att kunna tolka kommandoradsargument kan vi använda modulen *argparse*. Den finns i Python's bibliotek och behöver inte laddas ner och kan hantera inkommande alternativ (options), argument och sub-kommandon i vårt program.
+
+Artikeln går igenom grunderna i argparse.
 
 
 
@@ -16,80 +19,138 @@ Vi ska i denna övning läsa från filer och använda datan som finns i filen oc
 
 
 
-Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/file) och här på [dbwebb](https://dbwebb.se/repo/python/example/file). Där finns även den filen vi läsar data från.
+Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/argparse) och här på [dbwebb](repo/python/example/argparse). Där finns även ett fristående exempel, *extended.py*, som visar lite mer funktionalitet, dock inte som egen modul.
 
+<!-- https://asciinema.org/a/125672-->
 
-
-Läsa från fil {#lasa}
+main.py {#main}
 --------------------------------------
-Vi börjar med att öppna filen `items.txt` med hjälp av konstruktionen `with`, där definerar vi variabeln `filehandle` som innehåller kopplingen till filen. Med `filehandle` kan vi läsa hela filen genom att använda `read()`, men vi väljer att bara läsa en rad med hjälp av funktionen `readline()`.
+Vi börjar med filen som startar programmet, `main.py`, och tittar på den:  
 
 ```python
-# the name of the file
-filename = "items.txt"
+import sys
+import usage
 
-# with - as for reading a file automatically closes it after reading is done
-with open(filename) as filehandle:
-    line = filehandle.readline()
 
-# print the line read from the file
-print(line)
+def main():
+    """
+    Main function where it all starts.
+    """
+    
+    usage.parse_options()
+    
+    print(usage.options)
 
-# skriver ut: cookie,cake,tea
+    sys.exit()
+
+
+if __name__ == "__main__":
+    main()
 ```
 
-Vi har i övningen [Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python) tittat på hur vi kan använda listor och här ser vi ett ypperligt tillfälle att använda oss av en lista. Vi har en komma-separerat sträng med tre delsträngar. Vi vill dela upp den komma-separerade strängen så varje delsträng blir ett element i en lista, detta kan göras med sträng-funktionen `split()`.
+Vi importerar vår egna cli-modul (command-line-interface) från `usage.py`, och kan då använda den. I detta fallet innehåller den en funktion, `parse_options()` som tar hand om allt vi skickar med in till den här start-filen. Vi skriver ut variablen `options` som innehåller informationen som skickats in och den nås via modulen `usage.options`. 
+
+Den sista delen talar om hur filen ska köras. Alla moduler har en definierad `__name__`-variabel och om vi kör filen med `python3 main.py` så är det `__main__` som återfinns i `__name__` och funktionen main() körs. Filen som körs har alltid `__main__` som namn. Om vi hade importerat den här filen till en annan, till exempel `another_main.py` och kört den: `python3 another_main.py`, så hade inte funktionen main() exekverats då `__name__` inte hade varit `__main__`.
+
+En visualisering kan se ut såhär: 
 
 ```python
-# split the line into a list on the comma ","
-items_as_list = line.split(",")
-# print what the list looks like
-print(items_as_list)
-
-# skriver ut: ['cookie', 'cake', 'tea\n']
+if __name__ == '__main__':
+	print 'This program is being run by itself'
+else:
+	print 'I am being imported from another module'
 ```
 
-Vi har nu en lista som innehäller tre element som vi har läst in från filen `items.txt`. Notera `\n` i sista elementet, `\n` är en radbrytning och egentligen inget vi vill ha med i listan. Så vi kan använda funktionen `strip()` för att ta bort såkallat whitespace (mellanrum, radbrytning osv.) från änderna av strängen.
 
-```python
-# the name of the file
-filename = "items.txt"
 
-# with - as for reading a file automatically closes it after reading is done
-with open(filename) as filehandle:
-    line = filehandle.readline().strip
-
-# split the line into a list on the comma ","
-items_as_list = line.split(",")
-# print what the list looks like
-print(items_as_list)
-```
-
-Vi får nu utskriften `['cookie', 'cake', 'tea']` som vi hade förväntat från första början.
-
-Dock ger inläsning från fil än så länge inte mer än vad vi hade fått om vi bara hade skapat listan för hand. Vi ska nu titta på hur vi kan lägga till flera element i listan och hur vi skriver listan till fil.
+Inga konstigheter? Bra. Vi går vidare och tittar i filen `usage.py`.
 
 
 
-Skriva till fil {#skriva}
+usage.py {#usage}
 --------------------------------------
-Vi vill lägga till ett element i slutet av listan och vet sen tidigare att då använder vi `list` funktionen `append()`. Då vi inte vill skriva listan direkt till fil gör vi om den med motsatsen till `split()` som heter `join()`. Precis som `split()` är `join()` en strängfunktion så vi anger först strängen som vi vill använda som 'lim' och sen anger vi listan som vi vill sätta ihop till en sträng. Precis som när vi läste från fil använder vi `with` när vi vill skriva till en fil. Dock måste vi öppna filen med skrivrättigheter och det gör vi genom att använda flaggan `w`.
+usage.py är filen, modulen, som importerar och använder `argparse`. 
 
 ```python
-# add item to the list
-items_as_list.append("cup")
-# print what the list looks like after change
-print(items_as_list)
+import argparse
 
-# join the list into a string with a comma ","" between every item
-list_as_str = ",".join(items_as_list)
-# show what the string looks like after join
-print(list_as_str)
+VERSION = "v1.0.0 (2017-06-16)"
 
-# write the line to the file
-with open(filename, "w") as filehandle:
-    filehandle.write(list_as_str)
+options = {}
+
+# omitted code in explanation purpose
 ```
+
+Vi importerar modulen argparse och tilldelar en global variabel, `VERSION`, ett versionsnummer. `options` är variabeln vi ämnar returnera i slutet. 
+
+```python
+# omitted code in explanation purpose
+
+def parse_options():
+    """
+    Parse all command line options and arguments and return them as a dictionary.
+    """
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group()
+
+# omitted code in explanation purpose
+
+```
+
+Vi skapar en funktion, `parse_options()`, som vi kallade på från main.py. Det första vi gör i funktionen är att skapa en ny variabel, *parser*, utifrån `argparse.ArgumentParser()`. Det är den variabeln som hanterar all information.  
+
+Variabeln `group` blir sedan tilldelad `parser.add_mutually_exclusive_group()` och betyder att alla kommandon eller argument som tilldelas gruppen blir *ömsesidigt uteslutande*. Man kan inte använda fler än ett argument från en grupp samtidigt. Övriga argument petar vi in i `parser`. Vi hoppar raskt vidare i koden och ser hur det ser ut.
+
+```python
+# omitted code in explanation purpose
+
+    group.add_argument("-v", "--verbose", dest="verbose", default="False", help="increase output verbosity", action="store_true")
+    group.add_argument("-s", "--silent", dest="silent", default="False", help="decrease output verbosity", action="store_true")    
+
+    parser.add_argument("-V", "--version", action="version", version=VERSION)
+
+
+# omitted code in explanation purpose
+
+```
+
+Här ser vi att man ska inte kunna använda --silent samtidigt som --verbose, så `python3 main.py --silent --verbose` kommer resultera i ett felmeddelande. När vi lägger till argument som ska kännas till finns det en uppsättning parametrar vi kan använda. I fallet ovan har vi: dest, default, help, action och version. 
+
+Parametern *dest* är namnet på attributet i resultatet. När vi tolkar argumenten sen så returneras ett objekt som innehåller de attributen vi skickat in.  
+Parametern *default* är värdet om argumentet inte skickas med från kommandoraden.  
+Parametern *help* är en kortfattad beskrivning av vad argumentet gör. Den skrivs ut i den automatiskta hjälpen (-h, --help).  
+Parametern *action* talar om vad som ska hända med argumentet. `store_true` talar om att vi vill spara ner värdet i objektet. 
+Parametern *version* är kopplat till `action="version"` och skriver ut variabeln `VERSION`.  
+
+Vi har inte lagt till `-h, --help` utan de genereras automatiskt:  
+
+```
+$ python3 main.py -h
+usage: main.py [-h] [-v | -s] [-V]
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --verbose  increase output verbosity
+  -s, --silent   decrease output verbosity
+  -V, --version  show program's version number and exit
+```
+
+Nu vill vi kunna använda argumenten vi skickat in så vi tittar på den sista delen i filen `usage.py`:
+
+```python
+# omitted code in explanation purpose
+
+    args, unknownargs = parser.parse_known_args()
+
+    options["known_args"] = vars(args)
+    options["unknown_args"] = unknownargs
+    
+    return options
+
+# omitted code in explanation purpose
+```
+
+Med hjälp av `parser.parse_known_args()` får vi tag på alla inskickade argument. De som är kända av programmet returneras i `args` och de argument som vi inte definierat hamnar i `unknownargs.args` är av typen `<class 'argparse.Namespace'>`, vilket fungerar som en dictionary. Vi använder vars() för att omvandla den till en ren dictionary. Alla okända argument hamnar i en vanlig lista. Det är varabeln options som skrivs ut i startfilen main.py.
 
 
 
