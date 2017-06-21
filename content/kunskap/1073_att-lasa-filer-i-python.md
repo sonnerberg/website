@@ -16,7 +16,7 @@ Vi ska i denna övning läsa från filer och använda datan som finns i filen oc
 
 
 
-Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/file) och här på [dbwebb](https://dbwebb.se/repo/python/example/file). Där finns även den filen vi läsar data från.
+Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/file) och här på [dbwebb](repo/python/example/file). Där finns även den filen vi läsar data från.
 
 
 
