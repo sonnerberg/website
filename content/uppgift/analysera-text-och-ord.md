@@ -19,7 +19,7 @@ Vi har i Marvin byggt ett program bestående av två moduler och ett antal funkt
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har en bra förståelse för `dictionary` och har jobbat igenom "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Du har även jobbat med CLI-program i "[Argparse](kunskap/argparse)".
+Du har en bra förståelse för `dictionary` och har jobbat igenom "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Du har även jobbat med CLI-program i "[Modulen argparse](kunskap/argparse)".
 
 
 
@@ -45,6 +45,9 @@ $ python3 main.py [options] filename [command]
 # Visa hjälp text
 $ python3 main.py --help
 
+# Kör alla analyser för phil.txt
+$ python3 main.py phil.txt lines
+
 # Visa antal rader i texten phil.txt
 $ python3 main.py phil.txt lines
 
@@ -60,11 +63,10 @@ $ python3 main.py --verbose phil.txt letter_frequency
 Krav {#krav}
 -----------------------
 
-Kopiera din Marvin från föregående kursmoment och utgå från den koden.
+Börja med att kopiera koden från övningen "[Modulen argparse](kunskap/argparse)".
 
 ```bash
 # Ställ dig i kursmoment katalogen
-
 cp -ri argparse/*.py analyzer/
 cp -ri ../../example/text/phil.txt analyzer/
 cd analyzer
@@ -80,9 +82,9 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Som andra kommando ska ditt program ta emot ett sätt att analysera texten på och enbart analysera texten på det sättet.
 
-1. Analysera antal rader, ord och bokstäver.
+1. Analysera antal rader, ord och bokstäver med kommandon `lines`, `words` och `letters`.
 
-1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Ange frekvensen i % av totala mängden ord eller bokstäver.
+1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Ange frekvensen i % av totala mängden ord eller bokstäver. Använd kommandon `word_frequency` och `letter_frequency`.
 
 1. Validera Marvin genom att göra följande kommando i kurskatalogen i terminalen.
 
