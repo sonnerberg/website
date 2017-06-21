@@ -2,11 +2,12 @@
 author: mos
 category: python
 revision:
+  "2017-06-21": (E, aar) Gallring inför HT17.
   "2015-03-31": (D, mos) Felstavat till Soup.
   "2015-03-09": (C, mos) Bort med tidsstämpel i ping-exempel.
   "2015-02-03": (B, mos) Info-ruta om att hoppa över SQLite.
   "2014-10-15": (A, mos) Första utgåvan för python kursen.
-updated: "2015-03-31 09:05:03"
+updated: "2017-06-21 09:05:03"
 created: "2014-09-17 08:28:23"
 ...
 Använd externa moduler i Python för att hämta information på webben
@@ -118,7 +119,7 @@ Så här ser det ut när man kör exempelprogrammet.
 [ASCIINEMA src=12234]
 
 
-
+<!--
 Jobba mot en filbaserad SQL-databas {#sqlite}
 --------------------------------------
 
@@ -157,7 +158,7 @@ Så här ser det ut när man kör exempelprogrammet.
 
 [ASCIINEMA src=12875]
 
-
+-->
 
 Hämta information från en webbtjänst {#api}
 --------------------------------------
@@ -248,7 +249,7 @@ Så här ser det ut när man kör exempelprogrammet.
 [ASCIINEMA src=12935]
 
 
-
+<!--
 Ta emot argument på kommandoraden {#cli}
 --------------------------------------
 
@@ -307,6 +308,7 @@ Som du kan se av källkoden så blir det snabbt ett par rader kod när man vill 
 
 Hanteringen av options beskrivs i [manualen för `getopt`](https://docs.python.org/3/library/getopt.html) och i [boken Dive Into Python har ett kapitel](http://www.diveintopython.net/scripts_and_streams/command_line_arguments.html) om detta.
 
+-->
 
 
 Avslutningsvis {#avslutning}
