@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+    "2017-06-21": (J, aar) Omgjord inför AAA.
     "2016-09-29": (I, mos) Länkade till exempel för asciibild.
     "2015-08-25": (H, mos) Uppgraderade till dbwebb v2 samt la till extrauppgift om ascii-bild.
     "2015-04-22": (G, mos) Förtydligade att marvin4 inte skall stödjas.
@@ -14,10 +15,10 @@ revision:
 updated: "2015-08-25 14:16:01"
 created: "2014-07-03 08:14:49"
 ...
-Din egen chattbot - Marvin - steg 5
+Analysera texter från webbsidor
 ==================================
 
-Programmering och problemlösning i Python. Utveckla din chattbot Marvin så att den får ett kommandorads interface där du kan skicka olika argument till Marvin via kommandoraden.
+Här ska du utveckla nya moduler för att hämta texter från webbsidor och skriva data till fil. Texten ska analyseras med modulerna från kmom05. Möjligheten att spara resultatet i en JSON fil ska också finnas.
 
 <!--more-->
 
@@ -25,7 +26,7 @@ Programmering och problemlösning i Python. Utveckla din chattbot Marvin så att
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har gjort de steg 1 till 3 med Marvin, kanske även steg 4.
+Du har gjort [Analysera text och ord](uppgift/analysera-text-och-ord).
 
 Du har jobbat igenom artikeln "[Använd externa moduler i Python för att hämta information på webben](kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben)".
 
@@ -34,51 +35,42 @@ Du har jobbat igenom artikeln "[Använd externa moduler i Python för att hämta
 Introduktion {#introduktion}
 -----------------------
 
-Du skall du göra en kommandorads-version av Marvin. Du skall skicka in argument, eller options, på kommandoraden och därmed styra vad Marvin gör.
-
-Så här kan det se ut.
+Så här kan det se ut när du kör ditt färdiga program.
 
 ```bash
-# Generell användning av Marvin
-./marvin-cli.py [options] command [arguments-to-the-command]
+# Generell användning av programemt
+python3 main.py [options] command [arguments-to-the-command]
 
-# Visa en hjälptext till vad din Marvin kan göra
-./marvin-cli.py --help
-
-# Pinga en webbsida med din Marvin
-./marvin-cli.py ping http://dbwebb.se/humans.txt
+# Pinga en webbsida
+python3 main.py ping http://dbwebb.se/humans.txt
 
 # Hämta och skriv ut innehållet i en webbsida
-./marvin-cli.py get http://dbwebb.se/humans.txt
+python3 main.py get https://dbwebb.se/blogg/grillcon-2017-var-i-utokad-version
 
 # Hämta och spara webbsidan på en fil
-./marvin-cli.py --output=humans.txt get http://dbwebb.se/humans.txt
+python3 main.py --output=humans.txt get https://dbwebb.se/blogg/grillcon-2017-var-i-utokad-version
 
 # Visa upp dagens citat genom att hämta det från en webbtjänst
-./marvin-cli.py quote
+python3 main.py quote
 
 # Hämta och visa titeln för en webbsida
-./marvin-cli.py title http://dbwebb.se
+python3 main.py title http://dbwebb.se
 ```
-
-Ett argument inom `<>` skall finnas med, ett argument inom `[]` kan finnas med.
-
-I denna uppgiften börjar du på ett nytt vitt blad, du ska inte stödja den gamla funktionaliteten som redan finns i ditt Marvin. Du ska bara koda in de nya kraven i din `marvin-cli`.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. <strike>Kopiera din Marvin från föregående kursmoment samla den i katalogen `me/kmom06/marvin5`. Utgå från den koden.</strike>
 
+1. Kopiera innehållet från katalogen `me/kmom05/analyzer` till `me/kmom06/analyzer2`.
 
+```bash
+# Stå i me-katalogen
+cp me/kmom05/analyzer/* me/kmom06/analyzer2/
+```
 
-2. I katalogen `me/kmom06/marvin5`, skapa filen `marvin-cli.py` och låt det bli din kommandoradsklient för Marvin.
-
-
-
-3. Följande options skall fungera.
+2. Följande options skall fungera.
 
 * `-h, --help` skall visa en hjälptext som beskriver ditt program och hur det används.
 * `-v, --version` skall visa versionen av programmet.
@@ -87,47 +79,40 @@ Krav {#krav}
 
 
 
-4\. Om programmet exekverar på ett lyckat sätt så skall du använda exit-status 0. Blir det fel i parsningen av av options/argument så skall du använda exit-status 1. Blir det fel i exekveringen av ett kommando, till exempel att webbsidan inte svarar, då skall du ge exit-status 2.
+3. Om programmet exekverar på ett lyckat sätt så skall du använda exit-status 0. Blir det fel i parsningen av av options/argument så skall du använda exit-status 1. Blir det fel i exekveringen av ett kommando, till exempel att webbsidan inte svarar, då skall du ge exit-status 2.
 
 Du kan dubbelkolla din exit-status genom att skriva:
 
 ```bash
-./marvin-cli.py --help; echo $?   # Borde ge 0
-./marvin-cli.py --moped; echo $?  # Borde ge 1
+python3 main.py --help; echo $?   # Borde ge 0
+python3 main.py --moped; echo $?  # Borde ge 1
 ```
 
 
 
-5\. Pinga en webbsida med följande kommando.
+4. Skapa en tre nya moduler, en för att hantera funktionaliteten med `Request` (`requester.py`), en för `BeautifulSoup` (`html_parser.py`) och en för att skriva till fil (`output_to_file.py`).
+
+
+
+5. Pinga en webbsida med följande kommando.
 
 ```bash
-./marvin-cli.py ping <url>
+python3 main.py ping <url>
 ```
 
-Programmet skall ange status-koden för HTTP-anropet tillsammans med länken som besöktes. Ange `--silent` för att enbart visa statuskoden. Lagra undan resultatet i en fil eller i en SQLite-databas. Visa innehållet i filen (databasen) genom att ange kommandot.
+Programmet skall ange status-koden för HTTP-anropet tillsammans med länken som besöktes. Ange `--silent` för att enbart visa statuskoden. Lagra undan resultatet i en fil. Visa innehållet i filen genom att ange kommandot.
 
 ```bash
-./marvin-cli.py ping-history
+python3 main.py ping-history
 ```
 
 
 
-6\. Ladda hem en webbsida med följande kommando.
+6. Visa dagens citat genom att hämta det från en webbtjänst.
 
 ```bash
-./marvin-cli.py get <url>
-./marvin-cli.py --output=<file> get <url>
-```
-
-Resultatet skall bli att webbsidans innehåll skrivs ut på skärmen. Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
-
-
-
-7\. Visa dagens citat genom att hämta det från en webbtjänst.
-
-```bash
-./marvin-cli.py quote
-./marvin-cli.py --input=<file> quote
+python3 main.py quote
+python3 main.py --input=<file> quote
 ```
 
 Resultatet skall bli att citatet från webbtjänsten http://dbwebb.se/javascript/lekplats/get-marvin-quotes-using-ajax/quote.php skrivs ut.
@@ -136,43 +121,43 @@ Ange option `--input=<file>` för att hämta ett JSON-objekt från vald fil, ist
 
 
 
-8\. Hämta och visa titeln från en vald webbsida. Titeln är det innehåll som ligger i elementet `<title></<title>`.
+7. Hämta och visa titeln från en vald webbsida. Titeln är det innehåll som ligger i elementet `<title></<title>`.
 
 ```bash
-./marvin-cli.py title <url>
-./marvin-cli.py --input=<file> title
+python3 main.py title <url>
+python3 main.py --input=<file> title
 ```
 
 Ange option `--input=<file>` för att hämta webbsidan från vald fil, istället för att hämta webbsidan från en webbplats.
 
 
 
-9\. Hämta en webbsida och analysera den ur perspektivet sökmotoroptimering.
+8. Ladda hem en webbsida med följande kommando.
 
 ```bash
-./marvin-cli.py seo <url> 
-./marvin-cli.py --json seo <url>
-./marvin-cli.py --input=<file> seo
-./marvin-cli.py --json --input=<file> seo
+python3 main.py get <url>
+python3 main.py --output=<file> get <url>
 ```
 
-Ange option `--input=<file>` för att hämta webbsidan från vald fil, istället för att hämta webbsidan från en webbplats.
+Parsa hemsidan och hämta bara ut innehållet som finns i html-taggen `article`. Programmet kan bara användas på hemsidor där `<article>` används. 
 
-Ange option `--json` för att generera rapporten i ett JSON-format och skriv ut den på ett snyggt sätt.
-
-När du analyserar sidan ur SEO-perspektiv så skall du ta reda på följande om sidan.
-
-* Sidan har (endast) ett element `<title>`, räkna antalet tecken i elementet.
-* Räkna antalet element som är `<h1>` respektive `<h2>`.
-* Räkna antalet länkar, element av typen `<a>`.
+Resultatet skall bli att webbsidans innehåll skrivs ut på skärmen. Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
 
 
 
-10\. Validera Marvin genom att göra följande kommando i kurskatalogen i terminalen.
+9. Det ska gå att analysera texten i filen, som föregående krav resulterar i, med samma kommandon som används i [kmom05, analysera text och ord](uppgift/analysera-text-och-ord). Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
+
+
+
+10. Resultatet från textanalysen ska presenteras i JSON-format. 
+
+
+
+11. Validera analyzer2 genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate marvin5
+dbwebb validate analyzer2
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
@@ -189,15 +174,35 @@ dbwebb inspect kmom06
 Extrauppgift {#extra}
 -----------------------
 
+<!--
 1\. I uppgift 5 så kan du använda databasen SQLite, istället för att lagra på fil.
 
 2\. Hämta hem en bild från webben och skriv ut den som en ASCII-bild enligt följande. Använd biblioteket [Pillow](http://pillow.readthedocs.org/) för att lösa bildhanteringen. Du kan se hur man kan göra i exemplet [`example/image`](https://github.com/dbwebb-se/python/tree/master/example/image).
 
 ```bash
-./marvin-cli.py ascii <url-to-image> 
+python3 main.py ascii <url-to-image> 
+```
+-->
+
+1. Lägg till ett option för att kunna hämta text från andra taggar än `<article>`.
+```bash
+# Hämtar text från alla `div` taggar istället för article
+python3 main.py --tag=div get <url>
 ```
 
 
+2. Lägg till ett option för att kunna hämta text från taggar med ett id.
+```bash
+# Hämtar text från alla taggar med id `text` istället för article
+python3 main.py --id=text get <url>
+```
+
+
+3. Lägg till ett option för att kunna hämta text från taggar med en klass.
+```bash
+# Hämtar text från alla taggar med klass `text` istället för article
+python3 main.py --class=text get <url>
+```
 
 Tips från coachen {#tips}
 -----------------------

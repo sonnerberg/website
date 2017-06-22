@@ -117,7 +117,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - steg 5](uppgift/din-egen-chattbot-marvin-steg-5)".
+1. Gör uppgiften "[Analysera texter från webbsidor](uppgift/din-egen-chattbot-marvin-steg-5)".
 
 
 
@@ -136,7 +136,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du jobbat med liknande tekniker innan (JSON, HTTP, webbtjänster, SQLite, scrapa från HTML-formatet, kommandorads options), eller var detta helt nytt för dig?
+* Har du jobbat med liknande tekniker innan (JSON, HTTP, webbtjänster, scrapa från HTML-formatet), eller var detta helt nytt för dig?
 * Känns det bra att jobba på kommandoraden, ser du ett användningsområde för den typen av Python-program?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Var uppgiften i tuffaste laget, vilken del hade du valt bort om du hade haft det valet?
