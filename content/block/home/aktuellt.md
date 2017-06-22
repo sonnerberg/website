@@ -5,7 +5,7 @@ Sommarlov och förberedelser inför hösten...
 * [Jag skall studera i höst (frågor/svar)](t/6532)
 * [Köpa dator inför hösten](t/4469)
 * [Omregistrering och restinlämningar inför hösten](kurser/faq/omregistrering)
-*
+
 <!--
 * [3-veckors upprop våren 2017 läsperiod 4](t/6481)
 * [Extra presentationstillfälle i slutet av lp4](t/6478) 
