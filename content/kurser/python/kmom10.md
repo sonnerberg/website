@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-06-22": (G, aar) Minskade antalet rum till 5 och la till fusk kommando.
     "2016-10-13": (F, mos) Bort med gammalt stycke om curses och tillåt väderstreck.
     "2015-08-25": (E, mos) Uppgraderade till dbwebb v2.
     "2015-02-12": (D, mos, Sylvanas) Uppdaterade krav 6 och 5 (tog bort curses).
@@ -28,7 +29,7 @@ Du frilansar som python-utvecklare och har precis tackat ja till ett uppdrag att
 
 Kunden låter dig välja spelidé - han vill testa dig. Men vissa gränser finns det som du måste hålla dig inom och vissa saker måste du uppfylla.
 
-Spelet skall innehålla sju rum. Varje rum innehåller någon form av problem som skall lösas, när man löst problemet kommer man vidare till nästa rum. Klarar man sista rummet så har man klarat spelet.
+Spelet skall innehålla fem rum. Varje rum innehåller någon form av problem som skall lösas, när man löst problemet kommer man vidare till nästa rum. Klarar man sista rummet så har man klarat spelet.
 
 Spelet behöver inte nödvändigtvis vara ett klassiskt "spel". Du kan tolka det annorlunda och välja att skapa motsvarande som kanske utbildar i Python, eller ett verktyg som tar dig igenom dagen genom att hämta och visa information från olika webbplatser. Kanske har du en idé om att skapa och utveckla din python-Tamagotchi. Fri tolkning alltså. Men håll dig inom kraven nedan. Om din spelidé kräver att du justerar kraven aningen så dokumenterar du vad du gör och varför. 
 
@@ -68,11 +69,11 @@ Det skall gå att skicka in en parameter till `adventure.py`, enligt följande.
 | `-i`, `--info`    | Skriver ut en beskrivning av spelet och spelets idé. |
 | `-v`, `--version` | Skriver ut versionen av spelet. |
 | `-a`, `--about`   | Skriver ut en kort beskrivning av dig själv, du som gjort spelet. |
-| `-c`, `--cheat`   | Skriver ut minsta möjliga väg för att klara spelet och berättar hur du kan fuska dig fram. |
+| `-c`, `--cheat`   | Skriver ut minsta möjliga väg för att klara spelet.|
 
 Spelet startar med att en text visas om spelets handling. Därefter flyttas spelaren in till den första rummet.
 
-Spelet har sju rum. Varje rum har en beskrivning i text som visas när man kommer in i rummet. Varje rum har en textbaserad grafisk representation -- en bild av själva rummet.
+Spelet har fem rum. Varje rum har en beskrivning i text som visas när man kommer in i rummet. Varje rum har en textbaserad grafisk representation -- en bild av själva rummet.
 
 I rummet har du sällskap av en spelledare, din egen coach -- Marvin (eller motsvarande). Se det som att din spelledare hjälper dig att utföra kommandona. Det är med spelledaren du kommunicerar.
 
@@ -86,6 +87,7 @@ Väl i rummet kan du skriva vad du vill göra, det är kommandon som du kan ge t
 | `ba`, `bak`    | Gå bakåt till föregående rum. |
 | `se`           | Titta dig runt omkring - spelet svarar med om det finns något särskilt att se i rummet. |
 | `l`, `ledtråd` | Ge en ledtråd, eller fler om det finns, en ledtråd för varje gång man skriver kommandot. |
+| `c`, `cheat` | Utför automatiskt alla handlingar som krävs för att klara rummet användaren står i. |
 
 Du kan ersätta `fram` och `bak` med väderstreck, om du så önskar, dvs `norr`, `söder`, `väst`, `öst`.
 

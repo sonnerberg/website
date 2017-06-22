@@ -46,7 +46,7 @@ $ python3 main.py [options] filename [command]
 $ python3 main.py --help
 
 # Kör alla analyser för phil.txt
-$ python3 main.py phil.txt lines
+$ python3 main.py phil.txt
 
 # Visa antal rader i texten phil.txt
 $ python3 main.py phil.txt lines
@@ -80,7 +80,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Ditt program ska ta emot ett filnamn som första kommando och analysera texten i den filen.
 
-1. Som andra kommando ska ditt program ta emot ett sätt att analysera texten på och enbart analysera texten på det sättet.
+1. Efter filnamnet ska det skickas med ett kommando som specificerar hur texten ska analyseras.
 
 1. Analysera antal rader, ord och bokstäver med kommandon `lines`, `words` och `letters`.
 

@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-06-22": (E, aar) Rensade SQLite och args/getopts.
   "2016-02-22": (D, mos) Lade till videoserien "Lär dig Python".
   "2015-04-08": (C, mos) Länk till screencast om beautifulsoap.
   "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
@@ -9,7 +10,7 @@ revision:
 Kmom06: Externa moduler och webben
 ==================================
 
-Lär dig att installera och använda externa moduler i Python med `pip`. Momentet är inriktat på en samling av moduler som hjälper dig att koppla upp dig mot webbplatser och hämta information från dem. Det finns även inslag av JSON och databasen SQLite. Det blir ett potpurri av bra-att-ha moduler och allt samlas i en kommandorads-version av Marvin som -- via argument på kommandoraden -- utför jobbet.
+Lär dig att installera och använda externa moduler i Python med `pip`. Momentet är inriktat på en samling av moduler som hjälper dig att koppla upp dig mot webbplatser och hämta information från dem. Det finns även inslag av JSON.
 
 Så här kan det se ut när du testar exempelprogrammet för att hämta hem ett citat från en webbtjänst i JSON-format.
 
@@ -53,7 +54,6 @@ Läs följande:
 1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
     * Ch12 Networked programs
     * Ch13 Using Web Services
-    * Ch15 Using databases and SQL  
 
 
 
@@ -61,15 +61,11 @@ Läs följande:
 
 Läs följande:
 
-1. Läs om Python modulerna [`json`](https://docs.python.org/3/library/json.html) och [`sqlite3`](https://docs.python.org/3/library/sqlite3.html).
+1. Läs om Python modulerna [`json`](https://docs.python.org/3/library/json.html).
 
 2. Läs om den externa [Python-modulen `request`](http://docs.python-requests.org/en/latest/) på deras hemsida.
 
 3. Läs om den externa [Python-modulen `BeautifulSoap`](http://www.crummy.com/software/BeautifulSoup/) på deras hemsida.
-
-4. Hantera argument och *options* på kommandoraden. Läs kapitlet "[10.6. Handling command-line arguments](http://www.diveintopython.net/scripts_and_streams/command_line_arguments.html)" i boken [Dive Into Python](http://www.diveintopython.net/).
-
-5. Studera Python-manulen för funktionen [`getopts()`](https://docs.python.org/3/library/getopt.html).
 
 
 
@@ -109,7 +105,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. [Installera pakethantering med `pip3` för Python](kunskap/python-pakethantering-med-pip).
 
-2. Jobba igenom övningen "[Använd externa moduler i Python för att hämta information på webben](kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben)". När det finns exempelprogram, kopiera dem och gör dem till dina egna. Kör dem. Ändra små saker i dem så du har koll på hur de fungerar.
+2. Jobba igenom övningen "[Använd externa moduler i Python för att hämta information på webben](kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben)". När det finns exempelprogram, kopiera dem och gör dem till dina egna. Kör dem. Ändra små saker i dem så du har koll på hur de fungerar. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/external`.
 
 
 
@@ -117,7 +113,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Analysera texter från webbsidor](uppgift/din-egen-chattbot-marvin-steg-5)".
+1. Gör uppgiften "[Analysera texter från webbsidor](uppgift/din-egen-chattbot-marvin-steg-5)". Spara alla filer under `me/kmom06/analyzer2`.
 
 
 
