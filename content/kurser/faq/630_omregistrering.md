@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-06-22": (I, mos) Restinlämningar för HT17.
     "2016-12-22": (H, mos) Restinlämningar för VT17.
     "2016-11-10": (G, mos) La till ktillfälle webgl.
     "2016-08-29": (F, mos) Tog bort onödiga, icke fungerande länkar.
@@ -23,7 +24,9 @@ Om du inte hinner klart en kurs under dess ordinarie tid så har du möjligheten
 Hur omregistrerar jag mig? {#hur}
 --------------------------------------------------------------------
 
-Gå till [studentportalen](https://studentportal.bth.se/) och kika efter ansökningsblanketten under "Mina e-tjänster". 
+Du kan bara omregistrera dig om du har en tidigare registrering. Om du har fått ett tidigt avbrott kan du inte göra en omregistrering. Vid tidigt avbrott måste du kontakta kursansvarig för råd.
+
+När du vill omregistrera dig så går du till [studentportalen](https://studentportal.bth.se/) och kika efter ansökningsblanketten under "Mina e-tjänster". 
 
 Sist jag var där så fanns ansökningsblanketten under ["Mina e-tjänster - Ansökningsblanketter - Förändrad studiegång"](https://studentportal.bth.se/web/studentportal.nsf/web.xsp/antagning_forandrad_studiegang).
 
@@ -52,12 +55,28 @@ Följande kurstillfällen finns tillgängliga för dig som omregistrerar dig. No
 
 
 
-###Omregistrering vårterminen 2017 {#vt17omreg}
+###Omregistrering höstterminen 2017 {#ht17omreg}
 
-Om du var aktiv student under ht16, så kan du också lämna in restinlämningar på det kurstillfälle du redan ligger i.
+Om du var aktiv student under läsåret 16/17, så kan du också lämna in restinlämningar på det kurstillfälle du redan ligger i.
 
-Om du inte var aktiv i ett kurstillfälle under ht16, och har restinlämningar på gamla kurser, så gäller att du kan lämna in på följande kurstillfällen på ITs.
+Du kan också välja att följa de aktuella kurstillfällena på ITs. Rådgör gärna med din lärare eller dbwebb@bth.se för att se vilket som är bäst.
 
+Om du inte var aktiv i ett kurstillfälle under 16/17, och har restinlämningar på gamla kurser, så gäller att du kan lämna in på följande kurstillfällen på ITs.
+
+| Kurs        |  Läsperiod |
+|-------------|------------|
+| python      | lp1 |
+| htmlphp     | lp1 |
+| javascript1 | lp2 |
+| design      | lp2 |
+| webgl       | lp2 |
+| linux       | lp3 |
+| oopython    | lp3 |
+| dbjs        | lp34 |
+| webapp      | lp4 |
+| oophp       | lp4 |
+
+<!--
 | Kurs        |  Kurstillfälle på ITs |
 |-------------|-----------------------|
 | htmlphp     | PA1439 H16 Lp1 Webbteknologier-program |
@@ -69,19 +88,24 @@ Om du inte var aktiv i ett kurstillfälle under ht16, och har restinlämningar p
 | linux       | DV1547 H16 Lp1 Programmera webbtjänster på Linux-kp50 |
 | webapp      | DV1546 H16 Lp2 Webbapplikationer för mobila enheter-kp50 |
 | webgl       | DV1506 H16 Lp2 Spelteknik för webben (campus) |
+-->
 
-Observera att htmlphp-kursen har bytt kurskod till PA1439.
+Observera att htmlphp-kursen har bytt kurskod till PA1439 och kursen javascript1 har bytt kurskod till DV1561.
 
-
-
-###Rättning av restinlämningar vårterminen 2017 {#vt17rest}
-
-Du kan lämna in restinlämningar för samtliga kurstillfällen som gick ht16.
-
-Sista inlämningsdag är den 2:a april 2017. Rättningsfönstret pågår från den 3:e april fram till och med den sista april.
+Det finns inga kurstillfällen för phpmvc eller javascript. De har utgått som kurser.
 
 
 
+###Rättning av restinlämningar höstterminen 2017 {#ht17rest}
+
+Du kan lämna in restinlämningar för samtliga kurstillfällen som gick ht16 eller vt17.
+
+Sista inlämningsdag är den 2:a oktober 2017. Rättningsfönstret pågår från den 3:e oktober fram till och med den sista oktober. Får du komplettering bör du lämna in den omgående.
+
+Om du gör restinlämningar så måste du skicka mail till dbwebb@bth.se och ange vilka kurstillfällen på ITs det gäller samt vilka kmom det är. Annars kommer det inte med i rättningen.
+
+
+<!--
 ###Omregistrering höstterminen 2016 {#ht16}
 
 Denna information gällde inför höstterminen 2016.
@@ -101,6 +125,7 @@ Denna information gällde inför höstterminen 2016.
 | webgl       | lp2  | 50% | DV1506 H16 Lp2 Spelteknik för webben (campus) |
 
 Observera att htmlphp-kursen har bytt kurskod till PA1439.
+-->
 
 
 
@@ -117,12 +142,14 @@ Normalt gäller följande ungefärliga tider för läsperioderna.
 | lp3       | 20-ish januari -- mars          |
 | lp4       | april -- juni                   |
 
+<!--
 *Studietakt 25%, 10h per vecka.*
 
 | Läsperiod | Cirka datum för start och stopp | 
 |:---------:|---------------------------------|
 | lp12      | september -- mitten av januari  |
 | lp34      | 20-ish januari -- juni          |
+-->
 
 För att få exakta tider så googlar du "[BTH läsårsindelning](https://www.google.se/search?q=BTH+läsårsindelning)" så brukar det vara första träffen i söklistan.
 
