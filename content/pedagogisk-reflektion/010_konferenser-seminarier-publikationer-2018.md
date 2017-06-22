@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-06-22": "(B, mos) Info om Swednet."
     "2017-06-21": "(A, mos) Forskning om högre utbildning – konferens i Lund 15-16 maj 2018."
 category:
     - pedagogik
@@ -20,3 +21,10 @@ Konferenser {#konferenser}
 -----------------------
 
 Institutionen för utbildningsvetenskap vid Lunds universitet, tidskriften Högre utbildning och forskarutbildningsnätverket FonSyd bjuder in till en [forskningskonferens om högre utbildning i Lund den 15-16 maj 2018]( http://konferens.ht.lu.se/forskning-om-hogre-utbildning).
+
+
+
+Organisationer {#organisationer}
+-----------------------
+
+[Swednet](http://www.swednetwork.se/) är ett svenskt nätverk för pedagogisk utveckling inom högre utbildning. Man kan följa deras nyhetsflöde som innehåller information om konferenser, seminarier och liknande.
