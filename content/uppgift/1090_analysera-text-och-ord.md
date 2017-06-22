@@ -86,11 +86,11 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Ange frekvensen i % av totala mängden ord eller bokstäver. Använd kommandon `word_frequency` och `letter_frequency`.
 
-1. Validera Marvin genom att göra följande kommando i kurskatalogen i terminalen.
+1. Validera ditt program genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate marvin4
+dbwebb validate analyzer
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

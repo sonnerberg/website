@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-06-22": (I, efo) La till nya artiklar och ändrade namn på uppgifter.
   "2016-03-15": (H, mos) Tog bort videoserie MonkeyLords och NewBoston.
   "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
   "2015-02-05": (F, mos) Bort med curses och in med marvin för textanalys och tic-tac-toe.
@@ -32,12 +33,12 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
     * Ch9 Dictionaries
     * Ch10 Tuples
 
 <!--
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Ch11 Dictionaries
     * Ch12 Tuples
     * Ch13 Case study: data structure selection
@@ -80,7 +81,9 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-Det finns inga övningar.
+1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/warehouse`.
+
+1. Gör övningen "[Modulen argparse](kunskap/argparse)" där vi skriver ett CLI-program som tar emot options och argument. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/argparse`.
 
 
 
@@ -90,7 +93,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)".
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - analysera text och ord](uppgift/din-egen-chattbot-marvin-analysera-text-och-ord)".
+1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord)".
 
 
 
@@ -100,7 +103,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)".
 
-1. Gör den Curses-baserade uppgiften "[Ett terminal-baserat spel i Python - steg2](uppgift/ett-terminal-baserat-spel-i-python-steg2)". 
+<!-- 1. Gör den Curses-baserade uppgiften "[Ett terminal-baserat spel i Python - steg2](uppgift/ett-terminal-baserat-spel-i-python-steg2)". -->
 
 
 

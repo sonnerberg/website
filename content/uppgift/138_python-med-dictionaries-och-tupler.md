@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+  "2017-06-15": (E, efo) Uppdaterades till nya kursstrukturen.
   "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
   "2015-01-14": (C, mos) Fel länk till förkunskaperna.
   "2014-08-27": (B, mos) Texten uppdaterad och genomgången.
