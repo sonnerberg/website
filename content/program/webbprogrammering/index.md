@@ -14,7 +14,9 @@ Bra att ha saker.
 Övergripande planering {#cal}
 --------------------------------------------------------------
 
-* [Google kalender](cal)
+Det finns övergripande planering i Google kalender som riktar sig till de som går läsår1 och kurspaket, läsår 2 samt generella dbwebb-aktiviteter.
+
+[Läs mer om kalendrarna](kalender).
 
 
 

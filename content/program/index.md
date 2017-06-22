@@ -7,3 +7,5 @@ Utbildningsprogram
 ==================================
 
 * [Webbprogrammering 120/180hp](program/webbprogrammering)
+* [Webbutveckling och programmering 30hp](webutv)
+* [Webbprogrammering och databaser 30hp](webprog)
