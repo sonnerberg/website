@@ -42,7 +42,7 @@ Webbprogrammering läsår 2 {#cal2}
 
 Länk till [kalender BTH Webbprogrammering läsår 2](https://calendar.google.com/calendar/embed?src=ev4v5s6lode3e59jrlko14g0b4%40group.calendar.google.com&ctz=Europe/Stockholm). 
 
-Kalendern omfattar alla kurser som går i läsår 2 på programmet Webbprogrammering. Finns det programspecifika händelser som enbart gäller tvåor finns det även i denna kalendern.
+Kalendern omfattar dbwebb-kurser som går i läsår 2 på programmet Webbprogrammering. Finns det programspecifika händelser som enbart gäller tvåor finns det även i denna kalendern.
 
 <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=ev4v5s6lode3e59jrlko14g0b4%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=Europe%2FStockholm" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
@@ -53,6 +53,6 @@ Webbprogrammering läsår 3 {#cal3}
 
 Länk till [kalender BTH Webbprogrammering läsår 3](https://calendar.google.com/calendar/embed?src=fq8jnrf85b4os4csvk8fth4r7s%40group.calendar.google.com&ctz=Europe/Stockholm).
 
-Kalendern omfattar alla kurser som går i läsår 3 på programmet Webbprogrammering. Finns det programspecifika händelser som enbart gäller treor finns det även i denna kalendern.
+Kalendern omfattar dbwebb-kurser som går i läsår 3 på programmet Webbprogrammering. Finns det programspecifika händelser som enbart gäller treor finns det även i denna kalendern.
 
 <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=fq8jnrf85b4os4csvk8fth4r7s%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=Europe%2FStockholm" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
