@@ -67,7 +67,7 @@ Krav {#krav}
 
 ```bash
 # Stå i me-katalogen
-cp me/kmom05/analyzer/* me/kmom06/analyzer2/
+cp -ri kmom05/analyzer/*.py kmom06/analyzer2/
 ```
 
 2. Följande options skall fungera.
@@ -112,12 +112,9 @@ python3 main.py ping-history
 
 ```bash
 python3 main.py quote
-python3 main.py --input=<file> quote
 ```
 
 Resultatet skall bli att citatet från webbtjänsten http://dbwebb.se/javascript/lekplats/get-marvin-quotes-using-ajax/quote.php skrivs ut.
-
-Ange option `--input=<file>` för att hämta ett JSON-objekt från vald fil, istället för att hämta det från webbtjänsten. Du kan hämta ett JSON-objekt med flera quotes [här](javascript/lekplats/get-marvin-quotes-using-ajax/quote.php?all). Var uppmärksam på att formatet är lite annorlunda. Läs upp JSON-objektet och skriv ut det för att se dess struktur.
 
 
 
@@ -125,10 +122,7 @@ Ange option `--input=<file>` för att hämta ett JSON-objekt från vald fil, ist
 
 ```bash
 python3 main.py title <url>
-python3 main.py --input=<file> title
 ```
-
-Ange option `--input=<file>` för att hämta webbsidan från vald fil, istället för att hämta webbsidan från en webbplats.
 
 
 
