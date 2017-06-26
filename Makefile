@@ -227,14 +227,27 @@ backup:
 
 
 
-# target: load-backup             - Load latest backup.
-.PHONY: load-backup
-load-backup:
+# target: load-latest-backup      - Load latest backup from backup/latest.
+.PHONY: load-latest-backup
+load-latest-backup:
 	@$(call HELPTEXT,$@)
 	
 	# Forum
 	zcat backup/latest/dbw_forum.gz | mysql -uroot dbw_forum
 	rsync -a --delete backup/latest/forum/files/ htdocs/forum/files/ 
+
+
+
+# target: get-latest-backup       - Get latest backup from production.
+.PHONY: get-latest-backup
+get-latest-backup:
+	@$(call HELPTEXT,$@)
+	install -d backup/$(TODAY)
+	rsync -av --delete -e "ssh -p 2222" mos@$(WWW_SITE):$(GIT_BASE)/backup/latest/ backup/$(TODAY)/ 
+
+	# Point to latest successful backup
+	rm -f backup/latest
+	ln -s $(TODAY) backup/latest
 
 
 
