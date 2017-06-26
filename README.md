@@ -89,7 +89,7 @@ $ make update
 
 
 
-###Keep updated
+### Keep updated
 
 Update the code base, the external packages and publish locally.
 
@@ -99,7 +99,7 @@ $ make update
 
 
 
-###Develop and test locally
+### Develop and test locally
 
 Make changes in your repo, publish using `make local-publish` and reload your browser.
 
@@ -113,7 +113,7 @@ $ make local-publish-clear
 
 
 
-###Install all submodules
+### Install all submodules
 
 Some content is available in external submodules. To install them, where you have the properties to do so, do like this.
 
