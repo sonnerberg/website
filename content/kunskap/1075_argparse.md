@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
 Vi importerar vår egna cli-modul (command-line-interface) från `usage.py`, och kan då använda den. I detta fallet innehåller den en funktion, `parse_options()` som tar hand om allt vi skickar med in till den här start-filen. Vi skriver ut variablen `options` som innehåller informationen som skickats in och den nås via modulen `usage.options`. 
 
-Den sista delen talar om hur filen ska köras. Alla moduler har en definierad `__name__`-variabel och om vi kör filen med `python3 main.py` så är det `__main__` som återfinns i `__name__` och funktionen main() körs. Filen som körs har alltid `__main__` som namn. Om vi hade importerat den här filen till en annan, till exempel `another_main.py` och kört den: `python3 another_main.py`, så hade inte funktionen main() exekverats då `__name__` inte hade varit `__main__`.
+Den sista delen talar om hur filen ska köras. Alla moduler har en definierad `__name__`-variabel och om vi kör filen med `python3 main.py` så är det `__main__` som återfinns i `__name__` och funktionen main() körs. Filen som körs har alltid `__main__` som namn. Om vi hade importerat den här filen till en annan, till exempel `another_module.py` och kört den: `python3 another_module.py`, så hade inte funktionen main() exekverats då `__name__` inte hade varit `__main__`, utan `main`.
 
 En visualisering kan se ut såhär: 
 
@@ -156,4 +156,4 @@ Med hjälp av `parser.parse_known_args()` får vi tag på alla inskickade argume
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har nu sett hur vi kan läsa raderna från en fil via en sträng till en lista, hur vi lägger till element i listan och hur vi skriver den ändrade listan till fil. Filhantering är ett viktigt verktyg för att spara undan data som kan återanvändas vid nästa exekvering av programmet och vi har i denna övning fått en introduktion till hur man gör detta i Python.
+Vi har nu sett hur modulen argparse fungerar. Eller i alla fall grunderna i den. För den som vill veta mer, finns det både översiktlig information i [pydocs dokumentation](https://docs.python.org/3/library/argparse.html) och ett [API / tutorial](https://docs.python.org/3/howto/argparse.html#id1)
