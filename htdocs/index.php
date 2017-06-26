@@ -5,6 +5,9 @@
 define("ANAX_INSTALL_PATH", realpath(__DIR__ . "/../vendor/mos/anax"));
 define("ANAX_APP_PATH", __DIR__ . "/..");
 
+// To load frontmatter
+ini_set('max_execution_time', 60);
+
 require __DIR__ . "/../vendor/autoload.php";
 
 $di  = new \Anax\DI\CDIFactoryDefault();
