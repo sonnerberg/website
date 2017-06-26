@@ -21,7 +21,7 @@ Artikeln går igenom grunderna i argparse.
 
 Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/argparse) och här på [dbwebb](repo/python/example/argparse). Där finns även ett fristående exempel, *extended.py*, som visar lite mer funktionalitet, dock inte som egen modul.
 
-<!-- https://asciinema.org/a/125672-->
+https://asciinema.org/a/125672
 
 main.py {#main}
 --------------------------------------
