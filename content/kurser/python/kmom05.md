@@ -91,9 +91,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)".
+1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Spara alla filer under `me/kmom05/lab5`.
 
-1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord)".
+1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord)". Spara alla filer under `me/kmom05/analyzer`.
 
 
 
