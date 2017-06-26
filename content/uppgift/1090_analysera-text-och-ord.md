@@ -40,22 +40,22 @@ Du ska i uppgiften göra ett CLI-program som analyserar en text från en fil. De
 
 ```bash
 # Generell använding av vårt text analys verktyg
-$ python3 main.py [options] filename [command]
+$ python3 main.py [options] command [arguments-to-the-command]
 
 # Visa hjälp text
 $ python3 main.py --help
 
 # Kör alla analyser för phil.txt
-$ python3 main.py phil.txt
+$ python3 main.py all phil.txt
 
 # Visa antal rader i texten phil.txt
-$ python3 main.py phil.txt lines
+$ python3 main.py lines phil.txt
 
 # Visa ordfrekvensen i texten phil.txt
-$ python3 main.py phil.txt word_frequency
+$ python3 main.py word_frequency phil.txt
 
 # Visa bokstavsfrekvensen i texten phil.txt med extra utskrift
-$ python3 main.py --verbose phil.txt letter_frequency
+$ python3 main.py --verbose letter_frequency phil.txt
 ```
 
 
@@ -78,13 +78,13 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Ditt program ska ha följande options: `-h, --help`, `-s, --silent`, `-v, --version` och `--verbose`.
 
-1. Ditt program ska ta emot ett filnamn som första kommando och analysera texten i den filen.
+1. Ditt program ska ta emot ett filnamn som kommando och analysera texten i den filen.
 
-1. Efter filnamnet ska det skickas med ett kommando som specificerar hur texten ska analyseras.
+1. Ditt program ska kunna hantera *options*, *commands* och *arguments*, på samma sätt som exemplet ovan.
 
-1. Analysera antal rader, ord och bokstäver med kommandon `lines`, `words` och `letters`.
+1. Analysera antal rader, ord och bokstäver med kommandon `lines`, `words` och `letters`. Den ska även klara av kommandot `all` som kör alla övriga kommandon i följd.
 
-1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Ange frekvensen i % av totala mängden ord eller bokstäver. Använd kommandon `word_frequency` och `letter_frequency`.
+1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Ange frekvensen i % av totala mängden ord eller bokstäver. Använd kommandona `word_frequency` och `letter_frequency`.
 
 1. Validera ditt program genom att göra följande kommando i kurskatalogen i terminalen.
 
