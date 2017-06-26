@@ -90,7 +90,7 @@ python3 main.py --moped; echo $?  # Borde ge 1
 
 
 
-4. Skapa en tre nya moduler, en för att hantera funktionaliteten med `Request` (`requester.py`), en för `BeautifulSoup` (`html_parser.py`) och en för att skriva till fil (`output_to_file.py`).
+4. Skapa tre nya moduler, en för att hantera funktionaliteten med `Request` (`requester.py`), en för `BeautifulSoup` (`html_parser.py`) och en för att skriva till fil (`output_to_file.py`).
 
 
 
