@@ -21,13 +21,13 @@ Artikeln går igenom grunderna i argparse.
 
 Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/argparse) och här på [dbwebb](repo/python/example/argparse). Där finns även ett fristående exempel, *extended.py*, som visar lite mer funktionalitet, dock inte som egen modul.
 
-[ASCIINEMA src=125672]
+[ASCIINEMA src=126459]
 
 
 
 Options, commands och arguments {#options-commands-arguments}
 --------------------------------------
-När vi skickar in parametrar till ett script så talar vi om *options*, *commands* och *arguments*. 
+När vi skickar in parametrar till ett script så talar vi om *options*, *commands* och *arguments*. Parametrarna skrivs vanligtvis i ordningen [options] command [arguments].
 
 **options:** Ett option (alternativ) markeras oftast med `--` eller bara `-` som prefix. Det kallas även *optional argument* i Python och är som det låter, valfritt att skicka med.  
 **commands:** Man måste skicka med ett kommando till programmet. Det är det som talar om vad programmet ska göra. I Python kallas det för *positional argument*.  
@@ -134,36 +134,47 @@ Variabeln `group` blir sedan tilldelad `parser.add_mutually_exclusive_group()` o
 
     parser.add_argument("-V", "--version", action="version", version=VERSION)
     
-    parser.add_argument("command")
-    parser.add_argument("argument", nargs='?')
+    subparsers = parser.add_subparsers(title="commands (positional arguments)", help='Available commands', dest="command")
+    subparsers.add_parser("command1", help="information on command1")
+    subparsers.add_parser("command2", help="information on command2")
+
 
 
 # omitted code in explanation purpose
 
 ```
 
-Här ser vi att man ska inte kunna använda --silent samtidigt som --verbose, så `python3 main.py --silent --verbose` kommer resultera i ett felmeddelande. Vi börjar med att lägga till tre stycken *options* (börjar med `-` eller `--`). De sista två, *command* och *argument* är så kallade *positional arguments eller (commands)*. När vi lägger till argument som ska kännas till finns det en uppsättning parametrar vi kan använda. I fallet ovan har vi: dest, default, help, action och version samt nargs. 
+Här ser vi att man ska inte kunna använda --silent samtidigt som --verbose, så `python3 main.py --silent --verbose` kommer resultera i ett felmeddelande. Vi börjar med att lägga till tre stycken *options* (börjar med `-` eller `--`). När vi lägger till options eller argument som ska kännas till finns det en uppsättning parametrar vi kan använda. I fallet ovan har vi: dest, default, help, action och version samt nargs. 
 
 Parametern *dest* är namnet på attributet i resultatet. När vi tolkar argumenten sen så returneras ett objekt som innehåller de attributen vi skickat in.  
 Parametern *default* är värdet om argumentet inte skickas med från kommandoraden.  
 Parametern *help* är en kortfattad beskrivning av vad argumentet gör. Den skrivs ut i den automatiskta hjälpen (-h, --help).  
-Parametern *action* talar om vad som ska hända med argumentet. `store_true` talar om att vi vill spara ner värdet i objektet. 
+Parametern *action* talar om vad som ska hända med argumentet. `store_true` talar om att vi vill spara ner värdet som en boolean (True) i objektet om argumentet skickats med. 
 Parametern *version* är kopplat till `action="version"` och skriver ut variabeln `VERSION`.  
 Parametern *nargs* talar om hur många argument som kommer följa kommandot i resultatet. `?` betyder noll eller ett argument. Vill man specifiera ett okänt antal, använder man `*`. Man kan även sätta siffran direkt.
 
+För att hantera kommandon kan vi använda oss av en *subparser*. Den grupperar kommandon och sparar ner de som är kända, i detta fallet *command1* och *command2* i objektet under namnet *command* som sätts i `dest="command"`. En styrka ser vi om vi tittar på hjälptexten:
 
-Vi har inte lagt till `-h, --help` utan de genereras automatiskt:  
 
-```
+```python
 $ python3 main.py -h
-cli_parser: main.py [-h] [-v | -s] [-V]
+usage: main.py [-h] [-v | -s] [-V] {command1,command2} ...
 
 optional arguments:
-  -h, --help     show this help message and exit
-  -v, --verbose  increase output verbosity
-  -s, --silent   decrease output verbosity
-  -V, --version  show program's version number and exit
+  -h, --help           show this help message and exit
+  -v, --verbose        increase output verbosity
+  -s, --silent         decrease output verbosity
+  -V, --version        show program's version number and exit
+
+commands (positional arguments):
+  {command1,command2}  Available commands
+    command1           information on command1
+    command2           information on command2
+
 ```
+
+
+Vi har inte lagt till `-h, --help` utan de genereras automatiskt. 
 
 Nu vill vi kunna använda argumenten vi skickat in så vi tittar på den sista delen i filen `cli_parser.py`:
 
@@ -180,8 +191,9 @@ Nu vill vi kunna använda argumenten vi skickat in så vi tittar på den sista d
 # omitted code in explanation purpose
 ```
 
-Med hjälp av `parser.parse_known_args()` får vi tag på alla inskickade argument. De som är kända av programmet returneras i `args` och de argument som vi inte definierat hamnar i `unknownargs.args` är av typen `<class 'argparse.Namespace'>`, vilket fungerar som en dictionary. Vi använder vars() för att omvandla den till en ren dictionary. Alla okända argument hamnar i en vanlig lista. Det är varabeln options som skrivs ut i startfilen main.py.
+Med hjälp av `parser.parse_known_args()` får vi tag på alla inskickade argument. De som är kända av programmet returneras i `args` och de argument som vi inte definierat hamnar i `unknownargs`. Variabeln args är av typen `<class 'argparse.Namespace'>`, vilket fungerar som en dictionary. Vi kan använda vars() för att omvandla den till en ren dictionary. Alla okända argument hamnar i en vanlig lista. Det är varabeln options som skrivs ut i startfilen main.py.
 
+Nu kan vi antingen hantera de inskickade parametrarna direkt i `cli_parser.py` eller ifrån vår main-fil. Resultatet ligger i dictionaryn "options" och lägger vi till en rad i main.py: `print(cli_parser.options["known_args"]["command"])` når vi det inskickade kommandot. (tips: kika i options och se hur du kan nå de okända argumenten)
 
 
 Avslutningsvis {#avslutning}
