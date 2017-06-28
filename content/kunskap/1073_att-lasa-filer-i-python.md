@@ -57,7 +57,7 @@ filename = "items.txt"
 
 # with - as for reading a file automatically closes it after reading is done
 with open(filename) as filehandle:
-    line = filehandle.readline().strip
+    line = filehandle.readline().strip()
 
 # split the line into a list on the comma ","
 items_as_list = line.split(",")
