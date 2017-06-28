@@ -1,6 +1,6 @@
 ---
 author: mos
-updated: "2016-12-19"
+updated: "2017-06-27"
 ...
 Automatiserade tester på Travis
 ==================================
@@ -24,9 +24,11 @@ Så här ser nuvarande status ut för de senaste testerna som körts på Travis 
 | [oopython](https://github.com/dbwebb-se/oopython) | [![Build Status](https://travis-ci.org/dbwebb-se/oopython.svg?branch=master)](https://travis-ci.org/dbwebb-se/oopython) | [![CircleCI](https://circleci.com/gh/dbwebb-se/oopython.svg?style=svg)](https://circleci.com/gh/dbwebb-se/oopython) |
 | [webapp](https://github.com/dbwebb-se/webapp) | [![Build Status](https://travis-ci.org/dbwebb-se/webapp.svg?branch=master)](https://travis-ci.org/dbwebb-se/webapp) | [![CircleCI](https://circleci.com/gh/dbwebb-se/webapp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/webapp) |
 | [oophp](https://github.com/dbwebb-se/oophp) | [![Build Status](https://travis-ci.org/dbwebb-se/oophp.svg?branch=master)](https://travis-ci.org/dbwebb-se/oophp) | [![CircleCI](https://circleci.com/gh/dbwebb-se/oophp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/oophp) |
-| [phpmvc](https://github.com/dbwebb-se/phpmvc) | [![Build Status](https://travis-ci.org/dbwebb-se/phpmvc.svg?branch=master)](https://travis-ci.org/dbwebb-se/phpmvc) | [![CircleCI](https://circleci.com/gh/dbwebb-se/phpmvc.svg?style=svg)](https://circleci.com/gh/dbwebb-se/phpmvc) |
+| [ramverk1](https://github.com/dbwebb-se/ramverk1) | [![Build Status](https://travis-ci.org/dbwebb-se/ramverk1.svg?branch=master)](https://travis-ci.org/dbwebb-se/ramverk1) | [![CircleCI](https://circleci.com/gh/dbwebb-se/ramverk1.svg?style=svg)](https://circleci.com/gh/dbwebb-se/ramverk1) |
+| [ramverk2](https://github.com/dbwebb-se/ramverk2) | [![Build Status](https://travis-ci.org/dbwebb-se/ramverk2.svg?branch=master)](https://travis-ci.org/dbwebb-se/ramverk2) | [![CircleCI](https://circleci.com/gh/dbwebb-se/ramverk2.svg?style=svg)](https://circleci.com/gh/dbwebb-se/ramverk2) |
 | [webgl](https://github.com/dbwebb-se/webgl) | [![Build Status](https://travis-ci.org/dbwebb-se/webgl.svg?branch=master)](https://travis-ci.org/dbwebb-se/webgl) | [![CircleCI](https://circleci.com/gh/dbwebb-se/webgl.svg?style=svg)](https://circleci.com/gh/dbwebb-se/webgl) |
 | [dbjs](https://github.com/dbwebb-se/dbjs) | [![Build Status](https://travis-ci.org/dbwebb-se/dbjs.svg?branch=master)](https://travis-ci.org/dbwebb-se/dbjs) | [![CircleCI](https://circleci.com/gh/dbwebb-se/dbjs.svg?style=svg)](https://circleci.com/gh/dbwebb-se/dbjs) |
+| [phpmvc](https://github.com/dbwebb-se/phpmvc) | [![Build Status](https://travis-ci.org/dbwebb-se/phpmvc.svg?branch=master)](https://travis-ci.org/dbwebb-se/phpmvc) | [![CircleCI](https://circleci.com/gh/dbwebb-se/phpmvc.svg?style=svg)](https://circleci.com/gh/dbwebb-se/phpmvc) |
 | [javascript](https://github.com/dbwebb-se/javascript) | [![Build Status](https://travis-ci.org/dbwebb-se/javascript.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript) | [![CircleCI](https://circleci.com/gh/dbwebb-se/javascript.svg?style=svg)](https://circleci.com/gh/dbwebb-se/javascript) |
 
 

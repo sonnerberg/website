@@ -56,7 +56,7 @@ Mål {#mal}
 Efter genomförd kurs skall studenten:
 
 * ingående redogöra för webbutveckling baserat på de tekniker som omfattas genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* påvisa goda kunskaper i att använda valda tekniker genom att tillämpa dessa tekniker i praktiska övningar och projekt.
+* kunna visa goda kunskaper i att använda valda tekniker genom att tillämpa dessa tekniker i praktiska övningar och projekt.
 
 
 
@@ -73,7 +73,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* via redovisningstexter påvisa god förmåga att reflektera över kodstruktur i ramverk och perspektivet fullstack.
+* via redovisningstexter kunna visa god förmåga att reflektera över kodstruktur i ramverk och perspektivet fullstack.
 
 
 

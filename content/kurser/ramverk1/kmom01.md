@@ -4,7 +4,7 @@ author:
 revision:
     "2017-03-24": "(PA1, mos) Jobbet börjar."
 ...
-Kmom01: TBD
+Kmom01: Ramverk
 ==================================
 
 [WARNING]
@@ -14,10 +14,119 @@ Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
 
 [/WARNING]
 
-TBD.
+Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper som ligger som nödvändiga verktyg, en infrastruktur, kring våra ramverk. 
+
+Vi tittar på ett par konferensseminarier och funderar på vad de försöker säga oss om aktuella tekniker och trender och vi försöker skapa oss en egen bild av ramverksläget i PHP.
 
 <!--stop-->
 
+
+
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Förkunskaper {#forkunskaper}
+---------------------------------
+
+Denna kurs bygger vidare på det du lärt dig under första året på programmet Webbprogrammering och de kurserna som du tagit. Även om du har några kurser släpande efter dig så bör du dock kunna komma igång med kursen då inledningen är av karaktären läs, se och reflektera.
+
+
+
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Det första du behöver göra är att installera en labbmiljö för kursen. Se till att du har gott om tid när du gör detta.
+
+1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+
+1. [Uppdatera kommandot `dbwebb`](dbwebb-cli/selfupdate).
+
+1. Du kan nu [ladda ned (klona) ditt lokala kursrepo `ramverk1`](dbwebb-cli/clone) som innehåller kursmaterial för kursen.
+
+
+
+Läsanvisningar  {#lasanvisningar}
+---------------------------------
+
+*(ca: 4-8 studietimmar)*
+
+
+###Artiklar {#artiklar}
+
+Kika igenom följande artiklar.
+
+1. Läs igenom [PHP The Right Way](http://www.phptherightway.com/). Det ger dig en allmän översikt om verktyg och processer som rekommenderas inom PHP communityn. Gör din egen kunskapsinventering och se vilka delar du kan, villka delar du behöver bli bättre på och vilka delar har du ännu inte koll på? Du skriver resultatet som en del i din redovisningstext.
+
+1. För ett par år sedan kikade jag på vilka PHP ramverk som var mest populära. Läs artikeln på "[Vilka blir de mest populära PHP-ramverken inför 2014?](blogg/vilka-blir-de-mest-populara-php-ramverken-infor-2014)". Gör sedan din egen (mini) undersökning för att finna mer aktuella resultat för att se vilka ramverk som för tillfället är mest populära inom PHP. Du skriver resultatet som en del i din redovisningstext.
+
+
+
+###Videor {#videor}
+
+Kika på följande videos.
+
+1. Titta på videon "[PHP UK Conference 2017 - Eli White - State of the PHP Community](https://www.youtube.com/watch?v=1vFycFnVhaw)". Den ger dig en känsla av hur en community kring ett språk kan fungera, på gott och ont. Fundera över utmaningar som ligger i att hålla en community levande.
+
+1. Titta på videon "[PHP UK Conference 2017 - Michael Cullum - Towards a frameworkless world](https://www.youtube.com/watch?v=aFhwnjFF96I)". Den ger dig en bakgrund och översikt till PHP och ramverk och den föreslår en ramverkslös framtid. Håller du med föredragshållaren?
+
+
+
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 8-10 studietimmar)*
+
+
+
+###Övningar {#ovningar}
+
+Gör följande övningar, de behövs normalt för att klara uppgifterna.
+
+1. Jobba igenom artikeln "[Sätt samman ett ett ramverkslöst ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till en webbplats baserad på komponenter. DU känner igenom koden från oophp och design. Du sparar koden i `me/anax`.
+
+
+
+###Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+
+1. Gör uppgiften "[Bygg en me-sida till ramverk1](uppgift/me-sida-till-ramverk1)". Det handlar om att bygga din me-sida med Anax och publicera på Github. Spara allt under `me/anax`.
+
+1. Gör uppgiften "[Förbed dig för att bygga ett kommentarssystem](uppgift/XXX)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara din kod under `me/anax`.
+
+1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (1.0.\*) när du är klar med kursmomentet.
+
+
+<!--
+###Extra {#extra}
+
+Det finns inga extra uppgifter.
+-->
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 3-4 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Se till att följande frågor besvaras i texten:
+
+* Gör din egen kunskapsinventering baserat på PHP The Right Way, berätta om dina styrkor och svagheter som du vill förstärka under det kommande året.
+* Berätta om din syn generellt kring communities och specifikt communities inom opensource och programmeringsdomänen.
+* Berätta kort om dina (goda/mindre goda) erfarenheter av ramverk inom PHP och inom andra programmeringsspråk.
+* Vilka ramverk är de som för närvarande är mest populära inom PHP (ange källa)?
+* Vad tror du om begreppet "en ramverkslös värld" som framfördes i videon?
+
+Har du frågor eller funderingar så ställer du dem i forumet.
+
+
+<!--stop-->
 
 RAMVERK1:
 
@@ -150,6 +259,7 @@ RAMVERK2:
 01:
 ---------------------------------
 Express.js, routes, någon tjänst?
+AJAX.
 
 0x:
 Flex mm? Hur förhåller sig till Mithril?
@@ -193,136 +303,3 @@ Tema:
 
 Övrigt:
 * Desktop GUI (Atom)
-
-
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-
-Läsanvisningar  {#lasanvisningar}
----------------------------------
-
-*(ca: 2-4 studietimmar)*
-
-
-
-###Kurslitteratur  {#kurslitteratur}
-
-Det finns inga specifika läsanvisningar i kurslitteraturen.
-
-
-
-###Artiklar {#artiklar}
-
-Kika igenom följande artiklar.
-
-1. Kika igenom manualen för MySQL, bara kort och översiktligt, men se till att du kan hitta till den delen som visar hur SQL skall skrivas i MySQL.
-    * [Ch14 SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html)
-
-1. Läs om "[The MicroPHP Manifesto](https://funkatron.com/posts/the-microphp-manifesto.html)" som ger en reaktion på ramverk och termen mikroramverk. ([Alternativ länk till artikeln](https://dbwebb.se/t/6379)).
-
-1. Kika översiktligt i [PHP The Right Way](http://www.phptherightway.com/). Bekanta dig kort med dokumentet som presenterar allmänt om verktyg och processer som rekommenderas inom PHP communityn.
-
-
-
-###Verktyg {#verktyg}
-
-Läs översiktligt in dig på följande verktyg som används i kursen.
-
-1. Vi använder pakethanteraren [Composer](https://getcomposer.org/) för att installera PHP moduler.
-
-1. De PHP-moduler vi använder är publicerade på [Packagist](https://packagist.org/), ett sökbart repository för PHP-moduler.
-
-1. Bekanta dig kort med [manualen till phpdoc](https://phpdoc.org/) som beskriver hur docblock-kommentarer skrivs till PHP.
-
-
-
-###Videor {#videor}
-
-Det finns inga videos.
-
-<!--
-Kika på följande videos.
-
-1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 0 och 1.
--->
-
-
-
-###Lästips {#lastips}
-
-Följande lästips är att rekommendera.
-
-1. Bekanta dig med PHP manualen och [Klasser och Objekt](http://php.net/manual/en/oop5.intro.php).
-
-1. [Dia](https://wiki.gnome.org/Apps/Dia/) är ett ritverktyg där du kan skapa UML-diagram. Du vill ha ett sådant, eller motsvarande, i din arsenal av verktyg.
-
-1. Vi skriver PHP i enlighet med kodstandarden [PSR-1](http://www.php-fig.org/psr/psr-1/) och [PSR-2](http://www.php-fig.org/psr/psr-2/).
-
-1. Kika gärna på valideringsverktygen vi använder, [phpcs](https://github.com/squizlabs/PHP_CodeSniffer/wiki) och [phpmd](https://phpmd.org/). Du kan installera dem som linters i Atom, men först måste du installera dem i din PATH på ditt lokala system.
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 12-16 studietimmar)*
-
-
-
-###Labbmiljö {#labbmiljo}
-
-Installera labbmiljön för kursen.
-
-1. [Installera labbmiljön](kurser/oophp-v3/labbmiljo) som behövs för kursen.
-
-1. Klona kursrepot för kursen.
-
-
-
-###Övningar {#ovningar}
-
-Gör följande övningar, de behövs normalt för att klara uppgifterna.
-
-1. Fräscha upp ditt minne av PHP genom att snabbt skumma igenom guiden [20 steg för att komma igång med PHP (php20)](kunskap/kom-i-gang-med-php-pa-20-steg). Du bör sedan tidigare (htmlphp) ha koll på det som nämns i guiden. Om du bygger exempelprogram så kan du lägga dem i `me/kmom01/php20`.
-
-1. Jobba igenom guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg). Det handlar om grunderna med objektorienterad programmering i PHP. Exempelprogram som du bygger för din egna skull kan du spara i `me/kmom01/oophp20`.
-
-1. Jobba igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till ett eget litet ramverk. Delvis känner du igen ramverket från kursen design. Du sparar koden i `me/anax-lite`.
-
-
-
-###Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
-
-1. Gör uppgiften "[Gissa vilket nummer jag tänker på](uppgift/gissa-numret)". Spara din kod i `me/kmom01/guess`. Uppgiften värmer upp din gamla PHP-kunskaper och inför några nya i form av objekt och lite mer.
-
-1. Gör uppgiften "[Bygg en me-sida med Anax Lite](uppgift/me-sida-med-anax-lite)". Det handlar om att skapa ditt eget anax-lite och publicera på Github. Använd sedan ditt anax-lite för att göra grunden till en me-sida för kursen. Spara allt under `me/anax-lite`.
-
-1. Gör uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)" som ger dig en struktur för att separera HTML och konfiguration av din navbar. Spara din kod i `me/anax-lite`.
-
-1. Jobba igenom första tredjedelen av uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan/skolan.sql`. Du får göra resten av uppgiften i de två kommande kursmomenten. Jobba gärna i grupp och hjälp varandra, men se alltid till att alltid skriva dina egna SQL-satser.
-
-1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (1.0.\*) när du är klar med alla uppgifter i kursmomentet.
-
-
-
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
-
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
-
-Se till att följande frågor besvaras i texten:
-
-* Hur känns det att hoppa rakt in i klasser med PHP, gick det bra?
-* Berätta om dina reflektioner kring ramverk, anax-lite och din me-sida.
-* Gick det bra att komma igång med MySQL, har du liknande erfarenheter sedan tidigare?

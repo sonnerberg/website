@@ -58,8 +58,8 @@ Mål {#mal}
 
 Efter genomförd kurs skall studenten:
 
-* påvisa grundläggande kunskaper i klientbaserad webbprogrammering med JavaScript genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* påvisa grundläggande kunskaper i att använda JavaScript, HTML och CSS genom att tillämpa dessa tekniker i praktiska övningar och projekt.
+* kunna visa grundläggande kunskaper i klientbaserad webbprogrammering med JavaScript genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* kunna visa grundläggande kunskaper i att använda JavaScript, HTML och CSS genom att tillämpa dessa tekniker i praktiska övningar och projekt.
 
 
 
@@ -76,7 +76,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* via redovisningstexter påvisa grundläggande förmåga att reflektera över bra och mindre bra kod i sammanhanget kodstruktur och lösningar på definierade problem.
+* via redovisningstexter kunna visa grundläggande förmåga att reflektera över bra och mindre bra kod i sammanhanget kodstruktur och lösningar på definierade problem.
 
 
 

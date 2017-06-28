@@ -42,7 +42,7 @@ Kursen omfattar följande områden:
 * Allmän problemlösning och strukturerad programmering.
 * Grundläggande programmering med variabler, loopar, funktioner med argument och returvärde.
 * Grunden i och användande av datastrukturer och algoritmer.
-* Översikt av standardbibliotek samt introduktion till externa moduler med pip.
+* Översikt av standardbibliotek samt introduktion till externa moduler.
 * Organisation av större kodmassa i moduler.
 * Felsökning, felkoder och tekniker att debugga sitt program.
 * Utvecklingsmiljö och verktyg för programvaruutveckling med Python.
@@ -58,8 +58,8 @@ Mål {#mal}
 
 Efter genomförd kurs skall studenten:
 
-* påvisa grundläggande kunskaper i problemlösning med strukturerad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* påvisa grundläggande kunskaper i att lösa
+* kunna visa grundläggande kunskaper i problemlösning med strukturerad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* kunna visa grundläggande kunskaper i att lösa
 definierade problem via programmering i Python.
 
 
@@ -77,7 +77,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* via redovisningstexter påvisa grundläggande förmåga att reflektera över bra och mindre bra kod i sammanhanget kodstruktur och lösningar på definierade problem.
+* via redovisningstexter kunna visa grundläggande förmåga att reflektera över bra och mindre bra kod i sammanhanget kodstruktur och lösningar på definierade problem.
 
 
 

@@ -196,11 +196,13 @@ Redirect /kurser/oophp          /kurser/oophp-v3
 
 
 # ramverk1
-Redirect /ramverk1      /kurser/ramverk1
+Redirect /ramverk1                  /kurser/ramverk1
+Redirect /forum/utbildning/ramverk1 /forum/viewforum.php?f=59
 
 
 #ramverk2
-Redirect /ramverk2      /kurser/ramverk2
+Redirect /ramverk2                  /kurser/ramverk2
+Redirect /forum/utbildning/ramverk2 /forum/viewforum.php?f=60
 
 
 # webgl

@@ -99,4 +99,6 @@ Du kan själv provköra och se samma resultat som läraren ser. Det är en mycke
 Klart! {#klar}
 ---------------------------------------
 
+Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
+
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
