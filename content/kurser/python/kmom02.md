@@ -131,6 +131,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känns syntaxen i Python? Är det enkelt att se programmets struktur och vad det gör?
-* Hur går det med valideringen av uppgifterna? Är du överens med pylint om eventuella felmeddelanden vid valideringen?
+* Hur känns syntaxen i Python?
+* Är det enkelt att se programmets struktur och vad det gör?
+* Har du fått en förståelse om hur loopar och villkor fungerar?
+* Hur går det med valideringen av uppgifterna? 
+* Är du överens med pylint om eventuella felmeddelanden vid valideringen?
 * Hur gick det att utföra uppgifterna, var de enkla eller svåra?
