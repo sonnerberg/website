@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+    "2017-06-28": (K, aar) Tog bort krav om exit-status.
     "2017-06-21": (J, aar) Omgjord inför AAA.
     "2016-09-29": (I, mos) Länkade till exempel för asciibild.
     "2015-08-25": (H, mos) Uppgraderade till dbwebb v2 samt la till extrauppgift om ascii-bild.
@@ -67,7 +68,7 @@ Krav {#krav}
 
 ```bash
 # Stå i me-katalogen
-cp -ri kmom05/analyzer/*.py kmom06/analyzer2/
+cp -ri kmom05/analyzer/{*.py,*.txt} kmom06/analyzer2/
 ```
 
 2. Följande options skall fungera.
@@ -79,6 +80,7 @@ cp -ri kmom05/analyzer/*.py kmom06/analyzer2/
 
 
 
+<!--
 3. Om programmet exekverar på ett lyckat sätt så skall du använda exit-status 0. Blir det fel i parsningen av av options/argument så skall du använda exit-status 1. Blir det fel i exekveringen av ett kommando, till exempel att webbsidan inte svarar, då skall du ge exit-status 2.
 
 Du kan dubbelkolla din exit-status genom att skriva:
@@ -87,14 +89,14 @@ Du kan dubbelkolla din exit-status genom att skriva:
 python3 main.py --help; echo $?   # Borde ge 0
 python3 main.py --moped; echo $?  # Borde ge 1
 ```
+-->
+
+
+3. Skapa tre nya moduler, en för att hantera funktionaliteten med `Request` (`requester.py`), en för `BeautifulSoup` (`html_parser.py`) och en för att skriva till fil (`output_to_file.py`).
 
 
 
-4. Skapa tre nya moduler, en för att hantera funktionaliteten med `Request` (`requester.py`), en för `BeautifulSoup` (`html_parser.py`) och en för att skriva till fil (`output_to_file.py`).
-
-
-
-5. Pinga en webbsida med följande kommando.
+4. Pinga en webbsida med följande kommando.
 
 ```bash
 python3 main.py ping <url>
@@ -108,7 +110,7 @@ python3 main.py ping-history
 
 
 
-6. Visa dagens citat genom att hämta det från en webbtjänst.
+5. Visa dagens citat genom att hämta det från en webbtjänst.
 
 ```bash
 python3 main.py quote
@@ -118,7 +120,7 @@ Resultatet skall bli att citatet från webbtjänsten http://dbwebb.se/javascript
 
 
 
-7. Hämta och visa titeln från en vald webbsida. Titeln är det innehåll som ligger i elementet `<title></<title>`.
+6. Hämta och visa titeln från en vald webbsida. Titeln är det innehåll som ligger i elementet `<title></<title>`.
 
 ```bash
 python3 main.py title <url>
@@ -126,28 +128,28 @@ python3 main.py title <url>
 
 
 
-8. Ladda hem en webbsida med följande kommando.
+7. Ladda hem en webbsida med följande kommando.
 
 ```bash
 python3 main.py get <url>
 python3 main.py --output=<file> get <url>
 ```
 
-Parsa hemsidan och hämta bara ut innehållet som finns i html-taggen `article`. Programmet kan bara användas på hemsidor där `<article>` används. 
+Parsa hemsidan och hämta bara ut texten som finns i html-taggen `article`. Programmet kan bara användas på hemsidor där `<article>` finns.
 
-Resultatet skall bli att webbsidans innehåll skrivs ut på skärmen. Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
-
-
-
-9. Det ska gå att analysera texten i filen, som föregående krav resulterar i, med samma kommandon som används i [kmom05, analysera text och ord](uppgift/analysera-text-och-ord). Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
+Resultatet skall bli att webbsidans text från <article> skrivs ut på skärmen. Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
 
 
 
-10. Resultatet från textanalysen ska presenteras i JSON-format. 
+8. Det ska gå att analysera texten i filen, som föregående krav resulterar i, med samma kommandon som används i [kmom05, analysera text och ord](uppgift/analysera-text-och-ord). Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
 
 
 
-11. Validera analyzer2 genom att göra följande kommando i kurskatalogen i terminalen.
+9. Resultatet från textanalysen ska presenteras i JSON-format.
+
+
+
+10. Validera analyzer2 genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
