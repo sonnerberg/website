@@ -137,7 +137,7 @@ python3 main.py --output=<file> get <url>
 
 Parsa hemsidan och hämta bara ut texten som finns i html-taggen `article`. Programmet kan bara användas på hemsidor där `<article>` finns.
 
-Resultatet skall bli att webbsidans text från <article> skrivs ut på skärmen. Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
+Resultatet skall bli att webbsidans text från `<article>` skrivs ut på skärmen. Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
 
 
 

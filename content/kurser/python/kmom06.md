@@ -14,7 +14,10 @@ Lär dig att installera och använda externa moduler i Python med `pip`. Momente
 
 Så här kan det se ut när du testar exempelprogrammet för att hämta hem ett citat från en webbtjänst i JSON-format.
 
-[ASCIINEMA src=12934]
+<!-- [ASCIINEMA src=12934] -->
+
+[YOUTUBE src=Wq6cpkPJDaU width=630 caption="Andreas visar hur ett färdigt kmom06 kan se ut."]
+
 
 [INFO]
 **Hur ta dig an kursmomentet?**
