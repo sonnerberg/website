@@ -136,3 +136,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Känns det bra att jobba på kommandoraden, ser du ett användningsområde för den typen av Python-program?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Var uppgiften i tuffaste laget, vilken del hade du valt bort om du hade haft det valet?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

@@ -121,3 +121,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad tyckte du om de olika uppgifterna? 
 * Hur tänkte du när du utförde dem? 
 * Var de utmanande eller lätta?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

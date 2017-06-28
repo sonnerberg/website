@@ -136,3 +136,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du jobbat med listor, eller arrayer, i andra programmeringsspråk?
 * Kan du isåfall jämföra Python listor mot andra programmeringsspråk?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

@@ -137,3 +137,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur går det med valideringen av uppgifterna? 
 * Är du överens med pylint om eventuella felmeddelanden vid valideringen?
 * Hur gick det att utföra uppgifterna, var de enkla eller svåra?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

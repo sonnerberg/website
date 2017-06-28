@@ -100,7 +100,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-Det finns inga extra uppgifter.
+1. Lägg till ett option, `--amount=<integer>` till kommandona `word_frequency` och `letter_frequency`. Det ska styra hur många ord eller bokstäver som ska visas. 
 
 
 
