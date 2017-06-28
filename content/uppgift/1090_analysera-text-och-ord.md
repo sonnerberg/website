@@ -76,13 +76,13 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Ditt program ska bestå av tre moduler: `main.py`, `cli_parser.py` och `analyzer.py`.
 
-1. Ditt program ska ha följande options: `-h, --help`, `-s, --silent`, `-v, --version` och `--verbose`.
-
-1. Ditt program ska ta emot ett filnamn som kommando och analysera texten i den filen.
-
 1. Ditt program ska kunna hantera *options*, *commands* och *arguments*, på samma sätt som exemplet ovan.
 
-1. Analysera antal rader, ord och bokstäver med kommandon `lines`, `words` och `letters`. Den ska även klara av kommandot `all` som kör alla övriga kommandon i följd.
+1. Ditt program ska ha följande options: `-h, --help`, `-s, --silent`, `-v, --version` och `--verbose`.
+
+1. Ditt program ska ta emot ett filnamn som argument och analysera texten i den filen.
+
+1. Analysera antal rader (ej tomma), ord och bokstäver med kommandon `lines`, `words` och `letters`. Den ska även klara av kommandot `all` som kör alla övriga analyserings kommandon i följd.
 
 1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Ange frekvensen i % av totala mängden ord eller bokstäver. Använd kommandona `word_frequency` och `letter_frequency`.
 
