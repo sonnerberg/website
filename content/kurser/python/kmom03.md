@@ -114,7 +114,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du programmerat med funktioner tidigare, vad tycker du om sättet att dela upp koden?
-* Vad tycker du om video som läromedel, tycker du att de tillför något som läromedel?
+* Har du programmerat med funktioner tidigare?
+* Vad tycker du om sättet att dela upp koden?
+* Vad tycker du om video som läromedel, tycker du att de tillför något utöver litteraturen?
 * Du har gjort din första modul i Python, känns strukturen bra?
-* Vad tyckte du om de olika uppgifterna? Hur tänkte du när du utförde dem? Var de utmanande eller lätta?
+* Vad tyckte du om de olika uppgifterna? 
+* Hur tänkte du när du utförde dem? 
+* Var de utmanande eller lätta?
