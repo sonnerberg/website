@@ -37,7 +37,9 @@ Kika igenom följande artiklar.
 
 1. Bekanta dig med begreppet Active record genom att översiktligt titta på Wikipedias information.
 
-1. Artiklen PHP The Right Way innehåller ett kort stycke om "[Abstraction Layers (Databases)](http://www.phptherightway.com/#databases_abstraction_layers)", läs igenom det som en introduktion.
+1. ORM?
+
+1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Abstraction Layers (Databases)](http://www.phptherightway.com/#databases_abstraction_layers)", läs igenom det som en introduktion.
 
 
 
@@ -61,6 +63,8 @@ Kika på följande videos.
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Anax med databasdrivna modeller](kunskap/XXX)" som visar dig hur du använder begreppet i Anax. Du sparar koden i `me/anax` och integrerar den i din me-sida.
+
+1. Anax med formulär och CRUD.
 
 
 

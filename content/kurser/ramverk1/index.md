@@ -83,31 +83,35 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: MVC {#kmom01}
+###Kmom01: Ramverk {#kmom01}
 
-TBD.
+Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att anamma ett PHP modul-tänkande. 
 
 [Instruktion till kursmoment 01](./kmom01).
 
 
 
-###Kmom02: Kontroller och modeller {#kmom02}
+###Kmom02: MVC {#kmom02}
 
-TBD.
+Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket.
+
+Vi bekantar oss även med begreppet SOLID som är en akronym för designmönster som är aktuella i sammhanget kring ramverk och objektorienterad utveckling.
 
 [Instruktion till kursmoment 02](./kmom02).
 
 
 
-###Kmom03: Databasdrivna modeller {#kmom03}
+###Kmom03: DI {#kmom03}
 
-TBD.
+Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" och moduler in i ramverket.
+
+Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, nämligen service locator och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som betraktas som god programmeringssed.
 
 [Instruktion till kursmoment 03](./kmom03).
 
 
 
-###Kmom04: Formulär och CRUD {#kmom04}
+###Kmom04: Databasdrivna modeller {#kmom04}
 
 TBD.
 
@@ -115,7 +119,7 @@ TBD.
 
 
 
-###Kmom05: CI {#kmom05}
+###Kmom05: Automatisera tester {#kmom05}
 
 TBD.
 
@@ -123,7 +127,7 @@ TBD.
 
 
 
-###Kmom06: Egen modul {#kmom06}
+###Kmom06: CI {#kmom06}
 
 TBD.
 

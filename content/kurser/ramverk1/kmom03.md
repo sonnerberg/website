@@ -14,9 +14,15 @@ Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
 
 [/WARNING]
 
-TBD.
+Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" och moduler in i ramverket. Hittills har vi använt `$app` som en kontainer för alla tjänster som finns i ramverket.
 
-<!--stop-->
+Vi skall se om det finns alternativa lösningar på detta. Vi vill ha en flexibilitet när vi utökar ramverket och lägger till nya moduler. Hittills har vi gjort detta i frontkontrollern `index.php` men kanske kan vi finna ett alternativt sätt som är bättre när antalet moduler växer.
+
+Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, nämligen service locator och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som betraktas som god programmeringssed.
+
+När vi lärt oss grunden i begreppen så använder vi dem för att bygga vår kod. Samtidigt funderar vi på om det är en god kodstruktur vi uppnår, vi vill ha ett modulärt system och vi vill helst att varje modul skall vara oberoende av de andra, eller beroende av så få som möjligt och dess beroenden skall _injectas_ in i respektive modul.
+
+<!--more-->
 
 
 
@@ -27,7 +33,7 @@ TBD.
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 4-8 studietimmar)*
 
 
 
@@ -49,14 +55,14 @@ Kika igenom följande artiklar.
 
 Kika på följande videos.
 
-1. Titta på en [kort kort intro till Dependency Injection](https://www.youtube.com/watch?v=IKD2-MAkXyQ) med Anthony Ferrara.
+1. Titta på en [kort kort intro till Dependency Injection](https://www.youtube.com/watch?v=IKD2-MAkXyQ) med Anthony Ferrara. Vdeo ger en mycket bra introduktion till begreppet.
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 12-16 studietimmar)*
+*(ca: 6-10 studietimmar)*
 
 
 
@@ -64,7 +70,7 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Anax med dependency injection](kunskap/XXX)" som visar dig hur du använder begreppet DI i Anax. Du sparar koden i `me/anax` och integrerar den i din me-sida.
+1. Jobba igenom artikeln "[Anax med dependency injection](kunskap/anax-med-dependency-injection)" som visar dig hur du använder begreppet DI i Anax. Du sparar koden i `me/anax` och integrerar den i din me-sida.
 
 
 
@@ -72,7 +78,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Bygg vidare på en kommentarsmodul i ditt Anax. Använd DI container.
+1. Gör uppgiften "[Kommentarssystem med användare](uppgift/kommentarssystem-med-anvandare)". Bygg vidare på ditt kommentarssystem och se till att integrera med användare. Spara koden under `me/anax`.
 
 1. Skriv gruppvis en artikel om ["Dependency Injection (DI)"](uppgift/skriv-artikel-om-di). Spara artikeln i din me-sida.
 
@@ -91,6 +97,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Hur känns det att jobba med begreppen dependency injection, service locator och lazy loading?
-* 
+* Använde du begreppen när du vidareutvecklade ditt kommentarssystem?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

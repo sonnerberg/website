@@ -20,7 +20,7 @@ Vi bekantar oss även med begreppet SOLID som är en akronym för designmönster
 
 Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar enligt MVC.
 
-<!--stop-->
+<!--more-->
 
 
 
@@ -31,7 +31,7 @@ Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar en
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 4-8 studietimmar)*
 
 
 
@@ -51,14 +51,14 @@ Kika igenom följande artiklar.
 
 Kika på följande videos.
 
-1. Titta på seminariet "[PHP UK Conference 2017 - Gareth Ellis - Introduction to SOLID](https://www.youtube.com/watch?v=86Tt2pW9pv4)" som ger dig en introduktion till de designmönster som ligger bakom bokstäverna i SOLID och är en grund i ramverkstänkande. Om du tycker videon är "svår/tung" så kan du själv leta reda på motsvarande innehåll som ger dig en intro till begreppet SOLID. Youtube innehåller många små korta videor på ämnet.
+1. Titta på seminariet "[PHP UK Conference 2017 - Gareth Ellis - Introduction to SOLID](https://www.youtube.com/watch?v=86Tt2pW9pv4)" som ger dig en introduktion till de designmönster som ligger bakom bokstäverna i SOLID och är en grund i ramverkstänkande. Om du tycker videon är "svår/tung" så kan du själv leta reda på motsvarande innehåll som ger dig en intro till begreppet SOLID. YouTube innehåller många små korta videor på ämnet.
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 12-16 studietimmar)*
+*(ca: 6-10 studietimmar)*
 
 
 
@@ -66,7 +66,7 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[En REM Server som Kontroller och Modell](kunskap/XXX)" som ger dig ett exempel hur du skriver kod i form av en kontroller och en modell. Du sparar koden i `me/anax` och integrerar den i din me-sida.
+1. Jobba igenom artikeln "[En REM Server som Kontroller och Modell](kunskap/en-rem-server-som-kontroller-och-modell)" som ger dig ett exempel hur du skriver kod i form av en kontroller och en modell. Du sparar koden i `me/anax` och integrerar den i din me-sida.
 
 
 
@@ -74,7 +74,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Bygg en kommentarsmodul i ditt Anax. Använd MVC-principer när du gör koden.
+1. Gör uppgiften "[Bygg en prototyp till ett kommentarssystem](uppgift/bygg-en-prototyp-till-ett-kommentarssystem)". Du kommer igång och skriver ett enkelt kommentarssystem, det blir en prototyp för att lära sig domänen och skapa en kodbas. Spara koden under `me/anax`.
 
 1. Skriv gruppvis en artikel om ["Model, View, Controller (MVC)"](uppgift/skriv-artikel-om-mvc). Spara artikeln i din me-sida.
 
@@ -94,5 +94,6 @@ Se till att följande frågor besvaras i texten:
 * Berätta om hur du strukturerade din kommentarsmodul.
 * Vilka tidigare erfarenheter har du av MVC? Gick arbetet bra med artikeln om MVC?
 * Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader?
+* Ge en statusuppdatering om ditt kommentarssystem, hur gick det?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

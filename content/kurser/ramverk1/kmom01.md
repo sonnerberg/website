@@ -14,11 +14,11 @@ Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
 
 [/WARNING]
 
-Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper som ligger som nödvändiga verktyg, en infrastruktur, kring våra ramverk. 
+Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att anamma ett PHP modul-tänkande. 
 
-Vi tittar på ett par konferensseminarier och funderar på vad de försöker säga oss om aktuella tekniker och trender och vi försöker skapa oss en egen bild av ramverksläget i PHP.
+Vi tittar på ett par seminarier från konferenser och funderar på vad de försöker säga oss om aktuella tekniker och trender. Kanske kan det hjälpa oss när vi nu skall försöka skapa oss en egen bild av ramverksläget i PHP och om allmänna interna strukturer och designmänster i ramverk.
 
-<!--stop-->
+<!--more-->
 
 
 
@@ -29,7 +29,11 @@ Vi tittar på ett par konferensseminarier och funderar på vad de försöker sä
 Förkunskaper {#forkunskaper}
 ---------------------------------
 
-Denna kurs bygger vidare på det du lärt dig under första året på programmet Webbprogrammering och de kurserna som du tagit. Även om du har några kurser släpande efter dig så bör du dock kunna komma igång med kursen då inledningen är av karaktären läs, se och reflektera.
+Denna kurs bygger vidare på det du lärt dig under första året på programmet Webbprogrammering och de kurserna du tagit. Även om du har några kurser/kmom släpande efter dig så bör du dock kunna komma igång med kursen då inledningen är av karaktären läs, se och reflektera.
+
+Teknikmässigt bygger kursen främst vidare på strukturen du känner igen från kurserna design och oophp. Vi kodar vidare i Anax som får en uppgraderad struktur av designmönster och modularitet.
+
+Det förekommer skrivuppgifter som man med fördel kan göra i grupp, så skaffa dig en studiekompis eller två, för att hitta någon att diskutera med och för att hjälpas åt med skrivandet.
 
 
 
@@ -51,7 +55,7 @@ Det första du behöver göra är att installera en labbmiljö för kursen. Se t
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-8 studietimmar)*
+*(ca: 4-6 studietimmar)*
 
 
 ###Artiklar {#artiklar}
@@ -68,7 +72,7 @@ Kika igenom följande artiklar.
 
 Kika på följande videos.
 
-1. Titta på videon "[PHP UK Conference 2017 - Eli White - State of the PHP Community](https://www.youtube.com/watch?v=1vFycFnVhaw)". Den ger dig en känsla av hur en community kring ett språk kan fungera, på gott och ont. Fundera över utmaningar som ligger i att hålla en community levande.
+1. Titta på videon "[PHP UK Conference 2017 - Eli White - State of the PHP Community](https://www.youtube.com/watch?v=1vFycFnVhaw)". Den ger dig en känsla av hur en community kring ett språk (PHP) kan fungera, på gott och ont. Fundera över utmaningar som ligger i att hålla en community levande och om det finns någon nytta med en commity.
 
 1. Titta på videon "[PHP UK Conference 2017 - Michael Cullum - Towards a frameworkless world](https://www.youtube.com/watch?v=aFhwnjFF96I)". Den ger dig en bakgrund och översikt till PHP och ramverk och den föreslår en ramverkslös framtid. Håller du med föredragshållaren?
 
@@ -77,7 +81,7 @@ Kika på följande videos.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 6-10 studietimmar)*
 
 
 
@@ -85,7 +89,7 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Sätt samman ett ett ramverkslöst ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till en webbplats baserad på komponenter. DU känner igenom koden från oophp och design. Du sparar koden i `me/anax`.
+1. Jobba igenom artikeln "[Bygg ett ramverkslöst ramverk](kunskap/bygg-ett-ramverkslost-ramverk)" som ger dig grunden till en webbplats baserad på komponenter. Du känner igenom koden från oophp och design. Du sparar koden i `me/anax`.
 
 
 
@@ -93,18 +97,11 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk1](uppgift/me-sida-till-ramverk1)". Det handlar om att bygga din me-sida med Anax och publicera på Github. Spara allt under `me/anax`.
+1. Gör uppgiften "[Bygg en me-sida till ramverk1](uppgift/bygg-en-me-sida-till-ramverk1)". Det handlar om att bygga din me-sida med Anax och publicera på Github. Spara allt under `me/anax`.
 
-1. Gör uppgiften "[Förbed dig för att bygga ett kommentarssystem](uppgift/XXX)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara din kod under `me/anax`.
+1. Gör uppgiften "[Förbed för att bygga ett kommentarssystem](uppgift/forbered-for-att-bygga-ett-kommentarssystem)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara eventuell kod under `me/anax`.
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (1.0.\*) när du är klar med kursmomentet.
-
-
-<!--
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
--->
 
 
 
@@ -115,13 +112,16 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
+Det är extra tid på detta inledande momentet då redovisningstexten är lite mer omfattande än du är van vid.
+
 Se till att följande frågor besvaras i texten:
 
 * Gör din egen kunskapsinventering baserat på PHP The Right Way, berätta om dina styrkor och svagheter som du vill förstärka under det kommande året.
+* Vilket blev resultatet från din mini-undersökning om vilka ramverk som för närvarande är mest populära inom PHP (ange källa)?
 * Berätta om din syn generellt kring communities och specifikt communities inom opensource och programmeringsdomänen.
 * Berätta kort om dina (goda/mindre goda) erfarenheter av ramverk inom PHP och inom andra programmeringsspråk.
-* Vilka ramverk är de som för närvarande är mest populära inom PHP (ange källa)?
 * Vad tror du om begreppet "en ramverkslös värld" som framfördes i videon?
+* Hur gick dina förberedelser inför kommentarssystemet?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
 
