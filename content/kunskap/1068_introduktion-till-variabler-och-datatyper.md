@@ -79,7 +79,7 @@ Notera att 3:e beräkningen vi gör använder sig av `%` också kallat modulus. 
 
 ### Decimaltal (Float) {#decimaltal}
 
-`3.14` är ett decimaltal och heter _Float_ på engelska. Decimaltal (Float) precis som heltal (Integer) användas för att göra matematiska operationer. Det går även att blanda decimaltal och heltal i aritmetiska operationer, det resulterar i ett nytt decimaltal.
+`3.14` är ett decimaltal och heter _Float_ på engelska. Decimaltal (Float) precis som heltal (Integer) kan användas för att göra matematiska operationer. Det går även att blanda decimaltal och heltal i aritmetiska operationer, det resulterar i ett nytt decimaltal.
 
 ```python
 >>> 3.14 + 3
