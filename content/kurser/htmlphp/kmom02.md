@@ -118,4 +118,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Me-sidan börjar bli en liten webbplats, vad tycker du om dess struktur av filer och kataloger, känns det okey eller ovant?
 * Hur bekant är du med PHP och programmering rent allmänt, hur känns det att utveckla med PHP?
 * Vad tyckte du om PHP-labben, enkel eller utmanande?
-* Gjorde du någon av extrauppgifterna?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.

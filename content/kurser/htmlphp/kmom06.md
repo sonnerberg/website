@@ -103,3 +103,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Fick du hjälp av SQLite-artikeln och dess kod, eller skrev du mycket kod själv?
 * Var det något som var extra utmanande i kursmomentet?
 * Nu när kursen närmar sig slutet, känns det som du har kommit in i HTML, CSS, PHP och SQL?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.

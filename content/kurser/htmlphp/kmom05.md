@@ -131,4 +131,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Var detta din första bekantskap med databaser och SQL, eller har du tidigare kunskaper?
 * Var det lätt att förstå SQL eller kändes det som en helt ny teknik?
 * Hur gick det att utföra övningarna med enbart SQLite, var det något du fastnade på?
-* Hur gick det med övningarna i PDO och SQLite, var det något som tog extra mycket tid? 
+* Hur gick det med övningarna i PDO och SQLite, var det något som tog extra mycket tid?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.

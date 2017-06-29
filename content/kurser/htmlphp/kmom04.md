@@ -116,6 +116,8 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Börjar du känna att du bemästrar CSS? Beskriv hur väl du kan CSS (nybörjare, erfaren).
 * Vad tycker du om CSS så här långt in i kursen?
-* Hur lyckades du med din styleväljare, var det svårt? Det var ju både formulär, sessioner, POST, GET och lite till, hur kändes det? 
+* Hur lyckades du med din styleväljare, var det svårt? 
+* Det var ju både formulär, sessioner, POST, GET och lite till, hur kändes det? 
 * Hur tänkte du när du gjorde din extra stylesheet och vad tycker du om resultatet?
-* Hur går det med ditt PHP:ande? Börjar det bli mycket/svår kod, eller går det finfint?
+* Hur går det med ditt PHP:ande, börjar det bli mycket/svår kod, eller går det finfint?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.

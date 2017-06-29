@@ -151,3 +151,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Gick det smärtfritt att installera labbmiljön eller fick du bekymmer?
 * Är du bekant med terminalen och Unix-kommandon sedan tidigare?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
+
