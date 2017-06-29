@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-06-29": (J, mos) Uppdaterade om kurstillfällen ht17/vt18.
     "2017-06-22": (I, mos) Restinlämningar för HT17.
     "2016-12-22": (H, mos) Restinlämningar för VT17.
     "2016-11-10": (G, mos) La till ktillfälle webgl.
@@ -51,44 +52,36 @@ Du får själv lägga till dig på kurstillfället på ITs (registreringsnyckel 
 
 Det är viktigt att du ligger i rätt kurstillfälle. Varje kurstillfälle har rättningsfönster när kursmomenten rättas. Rättningsfönstret finns i den rekommenderade studieplanen. Du måste lämna in dina nya kursmoment enligt de tidplanerna för att du skall vara garanterad att få det rättat.
 
-Följande kurstillfällen finns tillgängliga för dig som omregistrerar dig. Notera att namnet på kurstillfället anger vilken studietakt det går på (25%/50%) samt vilken läsperiod som gäller (lp1/lp2/lp12 etc).
+Fortsätt läsa vilka kurstillfällen du kan välja bland.
 
 
 
-###Omregistrering höstterminen 2017 {#ht17omreg}
+###Läsåret 2017/18 {#omreg}
 
-Om du var aktiv student under läsåret 16/17, så kan du också lämna in restinlämningar på det kurstillfälle du redan ligger i.
+Du kan välja att lägga till dig på ITs bland följande kurstillfällen. Rådgör med mos eller dbwebb@bth.se om du är osäker.
 
-Du kan också välja att följa de aktuella kurstillfällena på ITs. Rådgör gärna med din lärare eller dbwebb@bth.se för att se vilket som är bäst.
+| Kurs        | Läsperiod | Kurskod |
+|-------------|:---------:|:--------|
+| python      | lp1       | DV1531  | 
+| htmlphp     | lp1       | PA1439 (DV1461) |
+| javascript1 | lp2       | DV1561 (DV1532) |
+| design      | lp2       | PA1436  |
+| webgl       | lp2       | DV1506  |
+| linux       | lp3       | DV1547  |
+| oopython    | lp3       | DV1546  |
+| dbjs        | lp34      | PA1444  |
+| webapp      | lp4       | DV1546  |
+| oophp       | lp4       | PA1440  |
 
-Om du inte var aktiv i ett kurstillfälle under 16/17, och har restinlämningar på gamla kurser, så gäller att du kan lämna in på följande kurstillfällen på ITs.
+När du söker efter kurserna på ITs så är de uppdelade efter vem som går dem.
 
-| Kurs        |  Läsperiod |
-|-------------|------------|
-| python      | lp1 |
-| htmlphp     | lp1 |
-| javascript1 | lp2 |
-| design      | lp2 |
-| webgl       | lp2 |
-| linux       | lp3 |
-| oopython    | lp3 |
-| dbjs        | lp34 |
-| webapp      | lp4 |
-| oophp       | lp4 |
+| Beteckning | Beskrivning |
+|------------|-------------|
+| (campus)   | Programstudenter campus |
+| (distans)  | Programstudenter distans |
+| (kp)       | Kurspaket distans |
 
-<!--
-| Kurs        |  Kurstillfälle på ITs |
-|-------------|-----------------------|
-| htmlphp     | PA1439 H16 Lp1 Webbteknologier-program |
-| oophp       | DV1485 H16 Lp12 Databaser och OO programmering i PHP-omreg |
-| phpmvc      | DV1486 H16 Lp1 Databasdrivna webbappl med PHP och MVC-kp50 |
-| javascript  | DV1483 H16 Lp12 JavaScript, jQuery och AJAX med HTML5 o PHP-kp50 |
-| python      | DV1531 H16 Lp1 Programmering och problemlös i Python-kp50 |
-| javascript1 | DV1532 H16 Lp2 Programmering med JavaScript, HTML och CSS-kp50  |
-| linux       | DV1547 H16 Lp1 Programmera webbtjänster på Linux-kp50 |
-| webapp      | DV1546 H16 Lp2 Webbapplikationer för mobila enheter-kp50 |
-| webgl       | DV1506 H16 Lp2 Spelteknik för webben (campus) |
--->
+Är du omregistrerad så väljer du ett av dessa som passar bäst till det du skall göra.
 
 Observera att htmlphp-kursen har bytt kurskod till PA1439 och kursen javascript1 har bytt kurskod till DV1561.
 
@@ -98,7 +91,7 @@ Det finns inga kurstillfällen för phpmvc eller javascript. De har utgått som 
 
 ###Rättning av restinlämningar höstterminen 2017 {#ht17rest}
 
-Du kan lämna in restinlämningar för samtliga kurstillfällen som gick ht16 eller vt17.
+Du kan lämna in restinlämningar för samtliga kurstillfällen som gick ht16 eller vt17 (eller tidigare).
 
 Sista inlämningsdag är den 2:a oktober 2017. Rättningsfönstret pågår från den 3:e oktober fram till och med den sista oktober. Får du komplettering bör du lämna in den omgående.
 
