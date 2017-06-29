@@ -126,8 +126,6 @@ Observera att htmlphp-kursen har bytt kurskod till PA1439.
 
 Normalt gäller följande ungefärliga tider för läsperioderna.
 
-*Studietakt 50%, 20h per vecka.*
-
 | Läsperiod | Cirka datum för start och stopp | 
 |:---------:|---------------------------------|
 | lp1       | september -- oktober            |
