@@ -68,7 +68,7 @@ Du kan välja att lägga till dig på ITs bland följande kurstillfällen. Rådg
 | design      | lp2       | PA1436  |
 | webgl       | lp2       | DV1506  |
 | linux       | lp3       | DV1547  |
-| oopython    | lp3       | DV1546  |
+| oopython    | lp3       | PA1437  |
 | dbjs        | lp34      | PA1444  |
 | webapp      | lp4       | DV1546  |
 | oophp       | lp4       | PA1440  |
