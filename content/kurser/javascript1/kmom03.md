@@ -77,6 +77,8 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
+<!-- Lab 3 Funktioner-->
+
 1. Gör uppgiften "[JavaScript med funktioner](uppgift/javascript-med-funktioner)".
 
 2. Gör uppgiften "[Rita flaggor med JavaScript och funktioner](uppgift/gor-svenska-flaggan-med-javascript-html-och-css)".

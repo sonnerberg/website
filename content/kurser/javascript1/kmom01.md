@@ -42,6 +42,8 @@ Läs följande:
 
 ###Artiklar {#artiklar}
 
+<!-- läs även på om variabler (integers, strängar) -->
+
 Läs följande:
 
 1. Bekanta dig med Mozilla Developers Network (MDN) och börja på [MDN: Web technology for developers](https://developer.mozilla.org/en-US/docs/Web). Där ser du artiklar om de tekniker som kursen hanterar. Här kan du finna hjälp och stöd, du behöver bara lära dig att navigera på webbplatsen. Använd 15 minuter så att du känner dig hemma på webbplatsen och får en känsla för vad den innehåller. Titta främst på delarna för HTML, CSS, JavaScript och DOM. 
@@ -112,6 +114,9 @@ När du är klar med ovanstående introduktionsartiklar så genomför du följan
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+<!-- Lab1  Variables and built-in functions -->
+
 
 1. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)". 
 

@@ -7,7 +7,7 @@ revision:
   "2014-09-03": (B, mos) Första officiella versionen.
   "2014-08-12": (A, mos) Första utgåvan för javascript1 kursen.
 ...
-Kmom02: Variabler och loopar
+Kmom02: Variabler och loopar <!-- Villkor och loopar -->
 ==================================
 
 Vi skall nu komma i gång med att koda JavaScript. Vi bekantar oss med grundkonstruktionerna i språket och använder strängar, siffror, variabler och loopar tillsammans med en del inbyggda funktioner för strängar, matematiska operationer och datum.
@@ -98,6 +98,8 @@ Det finns inga övningar.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+<!-- Lab2 Villkor och loopar -->
 
 1. Gör uppgiften "[JavaScript med variabler, loopar och inbyggda funktioner](uppgift/javascript-med-variabler-loopar-och-inbyggda-funktioner)".
 

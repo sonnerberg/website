@@ -48,11 +48,11 @@ Så här kan det se ut (ungefär) när du är klar.
 Uppgift 1. Storlekar och position {#uppgift1}
 -----------------------
 
-Använd din sandbox, kopiera den till katalogen `me/kmom05/lab5` enligt följande.
+Använd din sandbox, kopiera den till katalogen `me/kmom05/dom` enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
-cp -ri me/kmom01/sandbox/* me/kmom05/lab5/
+cp -ri me/kmom01/sandbox/* me/kmom05/dom/
 ```
 
 
@@ -311,8 +311,8 @@ Validera och publicera labben, som en del av din me-sida.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate lab5
-dbwebb publish lab5
+dbwebb validate dom
+dbwebb publish dom
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 

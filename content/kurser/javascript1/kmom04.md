@@ -87,6 +87,7 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
+<!-- Lab4 Arrayer och Lab5 Object -->
 
 1. Gör uppgiften "[JavaScript och arrayer](uppgift/javascript-och-arrayer)".
 
