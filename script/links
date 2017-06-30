@@ -1,0 +1,93 @@
+#
+# Check 404 and ish.
+#
+# sudo apt-get install linkchecker
+#
+# https://gist.github.com/lewenhagen/490d2b2ac6d8e6a50435f11dce745bd9
+#
+BADUSAGE="\
+For an overview of the command, execute:
+links --help
+"
+
+USAGE="\
+Utility to check dbwebb.se links for issues.
+Usage: links [options] <command> [arguments]
+
+Command:
+  check [url]           Check all links starting from url.
+
+Options:
+    --help, -h          Show info on how to use it.
+    --output [format]   Set the output format, default is text.
+"
+
+
+
+#
+#
+#
+function linkchecker-check
+{
+    hash linkchecker 2>/dev/null || { echo >&2 "I require linkchecker but it's not installed.  Aborting."; exit 1; }
+
+    linkchecker $URL                  \
+        --file-output=$OUTPUT         \
+        --ignore-url=/forum           \
+        --ignore-url=/f               \
+        --ignore-url=/t               \
+#        --output=none                 \
+#        --ignore-url=/repo            \
+#        --ignore-url=/utbildning      \
+#        --ignore-url=/community       \
+}
+
+
+
+#
+# Parse incoming options and arguments
+#
+OUTPUT=text
+
+while (( $# )); do
+    case "$1" in
+        --help | -h)
+            printf "%s" "$USAGE"
+            exit 0
+        ;;
+
+        # --url)
+        #     shift
+        #     URL=$( echo $1 | sed 's/[\/]*$//')
+        #     shift
+        # ;;
+
+        --output)
+            shift
+            OUTPUT=$1
+            shift
+        ;;
+
+        check)
+            COMMAND=$1
+            shift
+            URL=$( echo $1 | sed 's/[\/]*$//')
+            shift
+        ;;
+
+        *)
+            ARGS+=("$1")
+            shift
+        ;;
+    esac
+done
+
+
+
+# Execute the command 
+if type -t linkchecker-$COMMAND | grep -q function; then
+    linkchecker-$COMMAND
+else
+    printf "%s" "$BADUSAGE"
+    exit 1
+fi
