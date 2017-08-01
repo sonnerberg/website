@@ -17,7 +17,7 @@ Chatta med IRC, Gitter och Hangouts
 
 I kurserna används IRC och Gitter som chatt-kanaler för umgänge och handledning.
 
-[FIGURE src="http://imgs.xkcd.com/comics/team_chat.png" caption="2078: He announces that he's finally making the jump from screen+irssi to tmux+weechat."]
+[FIGURE src="https://imgs.xkcd.com/comics/team_chat.png" caption="2078: He announces that he's finally making the jump from screen+irssi to tmux+weechat."]
 
 
 
@@ -117,21 +117,22 @@ Chatta på Gitter {#gitter}
 
 Som ett komplement till irc finns en chatt på Gitter vilket kan vara enklare att komma igång med för en nybörjare eller icke-irc-kunnig. Gitter har även bra appar som fungerar på mobila enheter.
 
-Följande kanaler finns.
-
-* [dbwebb](https://gitter.im/mosbth/dbwebb) (allmän kanal)
-* [webbprogrammering](https://gitter.im/mosbth/webbprogrammering) (för programstudenter)
-* [kurspaketare](https://gitter.im/mosbth/kurspaket) (för de som går ett av kurspaketen)
-
-Länkar till kursspecifika gitter-kanaler, fördelade i de läsperioder kurserna normalt går.
+Här är länkar till kursspecifika gitter-kanaler, fördelade i de läsperioder kurserna normalt går.
 
 | lp1 | lp2 | lp3 | lp4 |
 |-----|-----|-----|-----|
 | [python](https://gitter.im/mosbth/python) | [javascript1](https://gitter.im/mosbth/javascript1) | [linux](https://gitter.im/mosbth/linux) | [webapp](https://gitter.im/mosbth/webapp) |
 | [htmlphp](https://gitter.im/mosbth/htmlphp) | [design](https://gitter.im/mosbth/design) | [oopython](https://gitter.im/mosbth/oopython) | [oophp](https://gitter.im/mosbth/oophp) |
-| |  [javascript](https://gitter.im/mosbth/javascript) | | [phpmvc](https://gitter.im/mosbth/phpmvc) |
-| | [webgl](https://gitter.im/mosbth/webgl) | | |
+| [ramverk1](https://gitter.im/dbwebb-se/ramverk1) | [ramverk2](https://gitter.im/dbwebb-se/ramverk2) | | |
+| | [webgl](https://gitter.im/mosbth/webgl) | [dbjs](https://gitter.im/dbwebb-se/dbjs) | |
 
+Det finns kanaler för respektive antagningsomgång till program och kurspaket samt generella kanaler oavsett antagningsomgång.
+
+* [Alla](https://gitter.im/dbwebb-se/webbprogrammering) [2017](https://gitter.im/dbwebb-se/webbprogrammering17) [2016](https://gitter.im/mosbth/webbprogrammering)
+* Webbprogrammering 180 [2017](https://gitter.im/dbwebb-se/wip17)
+* Webbprogrammering 120 [2017](https://gitter.im/dbwebb-se/wip17d)
+* [Kurspaket webutv](https://gitter.im/dbwebb-se/webutv) [2017](https://gitter.im/dbwebb-se/webutv17)
+* [Kurspaket webprog](https://gitter.im/dbwebb-se/webprog) [2017](https://gitter.im/dbwebb-se/webprog17)
 
 
 
