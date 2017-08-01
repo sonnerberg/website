@@ -7,7 +7,7 @@ revision:
   "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
   "2014-10-17": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom06: Externa moduler och webben
+Kmom06: Externa moduler
 ==================================
 
 Lär dig att installera och använda externa moduler i Python med `pip`. Momentet är inriktat på en samling av moduler som hjälper dig att koppla upp dig mot webbplatser och hämta information från dem. Det finns även inslag av JSON.

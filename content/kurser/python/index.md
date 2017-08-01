@@ -129,7 +129,7 @@ Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupl
 
 
 
-###Kmom06: Externa moduler och webben {#kmom06}
+###Kmom06: Externa moduler {#kmom06}
 
 Lär dig att installera och använda externa moduler i Python med pip. Momentet är inriktat på en samling av moduler som hjälper dig att koppla upp dig mot webbplatser och hämta information från dem.
 
