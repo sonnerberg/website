@@ -239,12 +239,18 @@ Redirect /webtopic          /kurser/arkiv/webtopic
 # Rekommenderad studieplan
 Redirect /program/webbprogrammering/studieplan/termin1 https://goo.gl/pqvkaj
 Redirect /program/webbprogrammering/studieplan/termin2 https://goo.gl/axc1bk
+Redirect /program/webbprogrammering/studieplan/termin3 https://docs.google.com/spreadsheets/d/14_8vGBuHJBXTVt4HhhBChzBexE1v37kQipNn2jMw-j4/edit?usp=sharing
 
 # Lektionsplaner
 Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://goo.gl/av2XHO
+Redirect /program/webbprogrammering/lektionsplan/termin1/lasperiod1 https://goo.gl/av2XHO
 Redirect /program/webbprogrammering/lektionsplan/lasperiod2 https://goo.gl/HW07CY
+Redirect /program/webbprogrammering/lektionsplan/termin1/lasperiod2 https://goo.gl/HW07CY
 Redirect /program/webbprogrammering/lektionsplan/lasperiod3 https://goo.gl/rn1XAm
+Redirect /program/webbprogrammering/lektionsplan/termin2/lasperiod3 https://goo.gl/rn1XAm
 Redirect /program/webbprogrammering/lektionsplan/lasperiod4 https://goo.gl/cBjslv
+Redirect /program/webbprogrammering/lektionsplan/termin2/lasperiod4 https://goo.gl/cBjslv
+Redirect /program/webbprogrammering/lektionsplan/termin3/lasperiod1 https://docs.google.com/spreadsheets/d/1CC1uoLIm5bXRu4V6KL2HszK1Aq2Vl3GeIoNiu_wpjtE/edit?usp=sharing
 
 
 
