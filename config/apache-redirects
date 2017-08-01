@@ -252,12 +252,22 @@ Redirect /program/webbprogrammering/lektionsplan/lasperiod4 https://goo.gl/cBjsl
 Redirect /webutv/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFkxaUtQMTItZ1IydWZPNHMxSFQwa0E&usp=sharing
 Redirect /webutv/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFlXdHF6RWNYang2UEEwaFZFaG5SSnc&usp=sharing
 Redirect /webutv/studieplan   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFlXdHF6RWNYang2UEEwaFZFaG5SSnc&usp=sharing
+Redirect /utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs1 https://docs.google.com/spreadsheets/d/1baElOfxlvFGutUJu1SJ6Rj_TNxiVNhYcqbV4hjnu5EA/edit?usp=sharing
+Redirect /utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs2 https://docs.google.com/spreadsheets/d/1PBADd1GwwUkZuls22IMNa0cV8dG2KNbete5q1vGDfK8/edit?usp=sharing
+Redirect /utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs3 https://docs.google.com/spreadsheets/d/1LvOSqE5mz2XaI6WazcFR8o1OCYHJanmuMcYukjaBXI0/edit?usp=sharing
+Redirect /utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs4 https://docs.google.com/spreadsheets/d/19HfttrwelK5__PTUtuALM79P8tlS4uE2YpHQOMO4_PY/edit?usp=sharing
 
 # Kurspaket webprog
 Redirect /webprog/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHJxeVo1cFlsTXlDd21NcEFsOW1iMkE&usp=sharing
 Redirect /webprog/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHZPc1h4VTVsZk1DZTdUbEZNNlpVdHc&usp=sharing
 Redirect /webprog/studieplan/100  https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFVUUUJsNGdTc3dmMHItUVdjQmhnMUE&usp=sharing
 Redirect /webprog/studieplan   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHZPc1h4VTVsZk1DZTdUbEZNNlpVdHc&usp=sharing
+Redirect /utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs1 https://docs.google.com/spreadsheets/d/19xDq5SgPbzcEHuU5yFFXfHzHeS6o7dURhoJ8ysKsh-U/edit?usp=sharing
+Redirect /utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs2 https://docs.google.com/spreadsheets/d/1sciqWg_WPeHWfpXrlvvLLghBdLbhNDfBLrEzeutOe4I/edit?usp=sharing
+Redirect /utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs3 https://docs.google.com/spreadsheets/d/1W16XJuVw-N6UCmcOBnKNmGC3ZExBqlSUuNn89fFGyRI/edit?usp=sharing
+Redirect /utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs4 https://docs.google.com/spreadsheets/d/1lFwY_bePrORxrb6AOYKlLBK1sxN6T6bilIRUdKb9OM8/edit?usp=sharing
+
+
 
 # Moved webutv and webprog to utbildning/
 Redirect /webutv    /utbildning/webbutveckling-och-programmering-30hp

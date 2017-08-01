@@ -109,6 +109,18 @@ Det finns [rekommenderade studieplaner](webprog/studieplan/50) som ger dig en gr
 
 
 
+Lektionsplan {#lektionsplan}
+-----------------------------------------------------------
+
+Det finns lektionsplaner för varje kurs som visar när det finns bokade tillfällen för undervisning och handledning.
+
+* [Lektionsplan htmlphp (kurs 1)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs1)
+* [Lektionsplan design (kurs 2)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs2)
+* [Lektionsplan dbw (kurs 3)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs3)
+* [Lektionsplan oophp (kurs 4)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs4)
+
+
+
 Registrering och avregistrering per kurs {#reg}
 -----------------------------------------------------------
 

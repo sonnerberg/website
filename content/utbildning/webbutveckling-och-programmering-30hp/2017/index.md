@@ -111,6 +111,18 @@ Det finns [rekommenderade studieplaner](webutv/studieplan/50) som ger dig en gru
 
 
 
+Lektionsplan {#lektionsplan}
+-----------------------------------------------------------
+
+Det finns lektionsplaner för varje kurs som visar när det finns bokade tillfällen för undervisning och handledning.
+
+* [Lektionsplan python (kurs 1)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs1)
+* [Lektionsplan javascript1 (kurs 2)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs2)
+* [Lektionsplan linux (kurs 3)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs3)
+* [Lektionsplan webapp (kurs 4)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs4)
+
+
+
 Registrering och avregistrering per kurs {#reg}
 -----------------------------------------------------------
 
