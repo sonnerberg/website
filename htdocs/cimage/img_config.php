@@ -278,12 +278,12 @@ return array(
      *  allow_hotlinking:     true
      *  hotlinking_whitelist: array()
      */
-     /*
-    'allow_hotlinking' => false,
+    /*'allow_hotlinking' => false,
     'hotlinking_whitelist' => array(
         '^dbwebb\.se$',
-    ),
-    */
+        //'\.dbwebb\.se$',
+    ),*/
+
 
 
     /**
