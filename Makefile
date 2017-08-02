@@ -398,12 +398,15 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerAlias bth1.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
 
+	Include $(HTDOCS_BASE)/$${site}/config/apache-env
+
 	<Directory />
 		Options Indexes FollowSymLinks
 		AllowOverride All
 		Require all granted
 		Order allow,deny
 		Allow from all
+		Deny from env=spambot
 
 		Options +ExecCGI
 		AddHandler cgi-script .cgi
@@ -447,7 +450,7 @@ virtual-host:
 	$(ECHO) "$$VIRTUAL_HOST_80" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
 	$(ECHO) "$$VIRTUAL_HOST_80_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
 	sudo a2ensite $(WWW_SITE) www.$(WWW_SITE)
-	sudo a2enmod rewrite expires cgi
+	sudo a2enmod rewrite expires cgi setenvif
 	sudo apachectl configtest
 	sudo service apache2 reload
 
@@ -480,6 +483,8 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerAlias do1.$${site}
 	ServerAlias do2.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
+	
+	Include $(HTDOCS_BASE)/$${site}/config/apache-env
 
 	<Directory />
 		Options Indexes FollowSymLinks
@@ -487,6 +492,7 @@ ServerAdmin $(SERVER_ADMIN)
 		Require all granted
 		Order allow,deny
 		Allow from all
+		Deny from env=spambot
 
 		Options +ExecCGI
 		AddHandler cgi-script .cgi

@@ -1,0 +1,2 @@
+SetEnvIfNoCase Referer healthacadiemy\.ga spambot=yes
+SetEnvIfNoCase REMOTE_ADDR "185\.32\.189\.38" spambot=yes
