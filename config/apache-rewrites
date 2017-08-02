@@ -1,5 +1,9 @@
 RewriteEngine on
 
+# Block sites
+RewriteCond %{HTTP_REFERER} healthacadiemy\.ga [NC]
+RewriteRule .* - [F] 
+
 #LogLevel alert rewrite:trace6
 # tail -f error.log | fgrep '[rewrite:'
 
