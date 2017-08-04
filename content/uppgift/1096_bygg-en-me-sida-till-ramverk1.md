@@ -40,7 +40,7 @@ Krav {#krav}
 
 1. Skapa en första sida där du ger en presentation av dig tillsammans med en bild.
 
-1. Skapa en about-sida där du skriver en rad om denna kursen samt länkar till ditt repo på GitHub som innehåller din version av Anax Lite. Lägg även till en godtycklig bild som du anser kompletterar sidans innehåll.
+1. Skapa en about-sida där du skriver en rad om denna kursen samt länkar till ditt repo på GitHub. Lägg även till en godtycklig bild som du anser kompletterar sidans innehåll.
 
 1. Skapa en report-sida som du förbereder för att innehålla alla dina redovisningstexter för kursen.
 

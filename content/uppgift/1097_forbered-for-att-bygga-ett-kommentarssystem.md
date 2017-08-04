@@ -33,6 +33,8 @@ Under kursen kommer du att utveckla kod i form av ett kommentarssystem som i slu
 
 Du kan räkna med att din kommentarsmodul kommer att vara central i projektet i kmom10, vare sig det blir fokus på ett projekt som liknar StackOverflow, Twitter, Facebook, Instagram, Flickr, ett forum eller Disqus.
 
+Eller kanske hitta du på något nytt innovativt koncept kring ett kommentarssystem för webben?
+
 
 
 Krav {#krav}

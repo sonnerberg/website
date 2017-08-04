@@ -1170,11 +1170,11 @@ Du är på gång att skapa ett större projekt och du kan ha nytta av en Makefil
 
 ###Hämta Makefilen {#cpmake}
 
-För att komma igång kan du låna en Makefile som används av de moduler du installerat.
+För att komma igång kan du använda en Makefile som finns med i kursrepot.
 
 ```bash
 # Gå till me/anax-lite
-$ cp vendor/anax/view/Makefile . 
+$ cp ../../example/anax-lite/Makefile . 
 ```
 
 Du kan nu köra `make` för att se vilka targets som finns.

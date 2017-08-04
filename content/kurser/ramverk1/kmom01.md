@@ -62,9 +62,9 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande artiklar.
 
-1. Läs igenom [PHP The Right Way](http://www.phptherightway.com/). Det ger dig en allmän översikt om verktyg och processer som rekommenderas inom PHP communityn. Gör din egen kunskapsinventering och se vilka delar du kan, villka delar du behöver bli bättre på och vilka delar har du ännu inte koll på? Du skriver resultatet som en del i din redovisningstext.
+1. Läs igenom [PHP The Right Way](http://www.phptherightway.com/). Det ger dig en allmän översikt om verktyg och processer som rekommenderas inom PHP communityn. Gör din egen kunskapsinventering och se vilka delar du kan, vilka delar du behöver bli bättre på och vilka delar har du ännu inte koll på? Du skriver resultatet som en del i din redovisningstext.
 
-1. För ett par år sedan kikade jag på vilka PHP ramverk som var mest populära. Läs artikeln på "[Vilka blir de mest populära PHP-ramverken inför 2014?](blogg/vilka-blir-de-mest-populara-php-ramverken-infor-2014)". Gör sedan din egen (mini) undersökning för att finna mer aktuella resultat för att se vilka ramverk som för tillfället är mest populära inom PHP. Du skriver resultatet som en del i din redovisningstext.
+1. För ett par år sedan kikade jag på vilka PHP ramverk som var mest populära. Läs artikeln på "[Vilka blir de mest populära PHP-ramverken inför 2014?](blogg/vilka-blir-de-mest-populara-php-ramverken-infor-2014)". Gör sedan din egen (mini) undersökning för att finna mer aktuella resultat för att se vilka ramverk som för tillfället är mest populära inom PHP. Utför gärna arbetet i grupp så har du någon att diskutera med. Du skriver resultatet som en del i din redovisningstext.
 
 
 
@@ -117,8 +117,8 @@ Det är extra tid på detta inledande momentet då redovisningstexten är lite m
 Se till att följande frågor besvaras i texten:
 
 * Gör din egen kunskapsinventering baserat på PHP The Right Way, berätta om dina styrkor och svagheter som du vill förstärka under det kommande året.
-* Vilket blev resultatet från din mini-undersökning om vilka ramverk som för närvarande är mest populära inom PHP (ange källa)?
-* Berätta om din syn generellt kring communities och specifikt communities inom opensource och programmeringsdomänen.
+* Vilket blev resultatet från din mini-undersökning om vilka ramverk som för närvarande är mest populära inom PHP (ange källa var du fann informationen)?
+* Berätta om din syn/erfarenhet generellt kring communities och specifikt communities inom opensource och programmeringsdomänen.
 * Berätta kort om dina (goda/mindre goda) erfarenheter av ramverk inom PHP och inom andra programmeringsspråk.
 * Vad tror du om begreppet "en ramverkslös värld" som framfördes i videon?
 * Hur gick dina förberedelser inför kommentarssystemet?

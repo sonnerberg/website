@@ -2,22 +2,25 @@
 title: ramverk1
 author: mos
 revision:
+    "2017-08-03": "(B, mos) JavaScript flyttas till ramverk2."
     "2017-06-07": "(A, mos) Första revisionen inför kursstart HT2017, bygger på phpmvc-kursen."
 ...
 Kursen ramverk1
 ==================================
 
-Kursen **Webbaserade ramverk 1**, a.k.a. *ramverk1*, lär ut programmering och kodstrukturer med ramverk, designmönster och återanvändbara moduler i en fullstack webbmiljö.
+Kursen **Webbaserade ramverk 1**, a.k.a. *ramverk1*, lär ut programmering och kodstrukturer med ramverk, designmönster och återanvändbara moduler samt tekniker för automatiserad testning och continuous integration.</strike>i en fullstack webbmiljö.</strike>
 
 <!--more-->
 
-Genom att använda ramverk för webbutveckling tillsammans med tekniker HTML, CSS, JavaScript, PHP och databas tränas studenten i att hantera en större kodmassa som behöver organiseras i god kodstruktur med stöd av ramverk, designmönster och återanvändning av befintliga moduler för att effektivisera utvecklingsprocessen.
+Genom att använda ramverk för webbutveckling tillsammans med tekniker HTML, CSS, <strike>JavaScript,</strike> PHP och databas tränas studenten i att hantera en större kodmassa som behöver organiseras i god kodstruktur med stöd av ramverk, designmönster och återanvändning av befintliga moduler för att effektivisera utvecklingsprocessen.
 
-Frontend är HTML, CSS och JavaScript med delvis Ajax-baserade anrop till en backend som byggs med PHP-baserade ramverk och moduler samt databaskoppling. Kursens fokus är främst kodstruktur och ramverk på backend men fullstack-perspektivet är viktigt.
+<strike>Frontend är HTML, CSS och JavaScript med delvis Ajax-baserade anrop till en backend som byggs med PHP-baserade ramverk och moduler samt databaskoppling.</strike>
 
-Kursen introducerar utvecklingsmetoder för testdriven utveckling.
+Kursens fokus är främst kodstruktur och ramverk på backend men fullstack-perspektivet är viktigt. Kursen introducerar utvecklingsmetoder för testdriven utveckling och continuous integration.
 
 Via litteraturstudier, praktiska övningar och ett större avslutningsprojekt ges möjlighet att skapa sig en egen bild av vad koncepten kan innebära för ett webbutvecklingsprojekt.
+
+_JavaScript och Ajax är flyttat till ramverk2_.
 
 
 
@@ -35,7 +38,7 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* JavaScript med AJAX.
+* <strike>JavaScript med AJAX.</strike>
 * PHP med objektorienterade teknologier.
 * PHP med befintligt ramverk.
 * PHP med återanvändbara moduler.
@@ -73,7 +76,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* via redovisningstexter kunna visa god förmåga att reflektera över kodstruktur i ramverk och perspektivet fullstack.
+* via redovisningstexter kunna visa god förmåga att reflektera över kodstruktur i ramverk<strike> och perspektivet fullstack</strike>.
 
 
 
