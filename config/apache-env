@@ -1,3 +1,9 @@
 # Using referer did not work
-SetEnvIfNoCase Referer healthacadiemy\.ga spambot=yes
+SetEnvIfNoCase Referer "healthacadiemy\.ga" spambot=yes
 SetEnvIfNoCase REMOTE_ADDR "185\.32\.189\.38" spambot=yes
+
+# Use this on sstatic.se to allow access from dbwebb.se
+#SetEnvIf Referer "dbwebb\.se" localreferer
+#<FilesMatch "\.(jpg|png|gif|css)$">
+#    Require env localreferer
+#</FilesMatch>
