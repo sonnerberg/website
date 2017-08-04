@@ -397,6 +397,7 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerAlias do2.$${site}
 	ServerAlias bth1.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
+	ServerSignature Off
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-env
 
@@ -411,11 +412,6 @@ ServerAdmin $(SERVER_ADMIN)
 		Options +ExecCGI
 		AddHandler cgi-script .cgi
 	</Directory>
-
-	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
-		ExpiresActive On
-		ExpiresDefault "access plus 1 week"
-	</FilesMatch>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
 		ExpiresActive On
@@ -483,7 +479,8 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerAlias do1.$${site}
 	ServerAlias do2.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
-	
+	ServerSignature Off
+
 	Include $(HTDOCS_BASE)/$${site}/config/apache-env
 
 	<Directory />

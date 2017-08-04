@@ -15,3 +15,5 @@ RewriteRule ^/f/([0-9]+)$ /forum/viewtopic.php?p=$1#p$1 [NE,R=301,L]
 #RewriteCond %{REQUEST_FILENAME} !-d
 
 #RewriteRule ^/(.*)$ /index.php/$1 [NC,L]
+
+#RewriteEngine off

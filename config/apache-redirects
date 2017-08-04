@@ -1,17 +1,20 @@
 # Error documents
-ErrorDocument 403 /error/403.php
-ErrorDocument 404 /error/404.php
-ErrorDocument 410 /error/410.php
+#ErrorDocument 403 /error/403.php
+#ErrorDocument 404 /error/404.php
+#ErrorDocument 410 /error/410.php
 
 
 # Removed old content
 Redirect 410 /betapal
+Redirect 410 /omvarldsbevakning
+
 
 # Avoid double linking
 Redirect 301 /example	/kod-exempel
 Redirect 301 /examples	/kod-exempel
 Redirect 301 /kod-exempel/dynamic_menu.php  /kod-exempel/dynamic_php_menu
 Redirect 301 /kod-exempel https://arkiv.dbwebb.se/kod-exempel/
+
 
 # Archive
 Redirect 301 /skalle    https://arkiv.dbwebb.se/skalle/
