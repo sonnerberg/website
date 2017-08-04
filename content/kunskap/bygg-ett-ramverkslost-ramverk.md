@@ -398,6 +398,17 @@ image/car.png?width=700
 
 Båda varianterna bör fungera, den andra kräver en fungerande `.htaccess`.
 
+Det sista du bör göra är att lägga till en fil `.gitignore` i cache-katalogen `cache/cimage`. Spara följande i en fil `cache/cimage/.gitignore`.
+
+```text
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+```
+
+Du kan se en förklaring på vad filen gör i [svaret på Stackoverflow](https://stackoverflow.com/questions/115983/how-can-i-add-an-empty-directory-to-a-git-repository). Poängen är att man annars riskerar att "tappa bort" tomma kataloger i sitt git repo och vi vill inte riskera att checka in cachade filer.
+
 
 
 Makefile {#makefile}
@@ -463,38 +474,12 @@ När vyer eftersöks så söks alltså i flera kataloger och den första matchan
 Låt oss skapa en sådan, det är bra att ha.
 
 ```bash
-mkdir view
+install -d view/test/
+touch view/test/test.php
 ```
-
-Nu kan du lägga dit egna vyer, kika på de som ligger i modulen views egna katalog, så kan du få inspiration.
-
-
-
-Scaffolding {#scaffolding}
---------------------------------------
-
-Nu är vi klara. Hur gick det med vår plan om fem minuters installation? Nja, som du ser är det en del saker som behöver komma på plats innan man börjar bygga sin webbplats. Men säg att vi vill bygga ytterligare en webbplats, borde vi inte kunna göra det på fem minuter nu när vi vet hur vi gör?
-
-Visst kan vi kopiera undan allt vi gjort och lägga en kopia av det någonstans, sen behöver vi bara komma ihåg var den ligger. Det kan vara en variant av copy/past för att uppnå fem minuters installation.
-
-En aningen mer strukturerad variant är _scaffolding_. I ramverk- och webbsammanhang stöds scaffolding ofta av ett CLI som följer med ramverket. Det man scaffoldar fram är strukturer att utgå ifrån. Tanken är att minska enklare arbeten som kan automatiseras genom att ge en mall man kan utgå ifrån. En mall är ungefär vad vi har så här långt, en mall som fungerar för en me-sida i kursen ramverk1.
-
-Nu är det så bevänt att det finns en CLI till Anax via Anax-CLI, eller anax/anax-cli. Via det kan man scaffolda fram exakt det som vi hittills har gjort.
-
-Låt oss se hur det fungerar. Först behöver vi installera anax-cli.
-
-```bash
-curl ... | bash
-```
-
-
-
-Ramverk eller ramverkslöst {#ramverk}
---------------------------------------
-
-Nu har vi plockat ihop ett eget "ramverk" utifrån ett antal moduler. Nåja, nu är modulerna tänkta att fungera tillsammans och de behöver ett lim, _glue_, mellan sig för att fungera som tänkt.
-
-När man pratar om ramverkslöst så tänker man att det finns en samling av moduler som är utbytbara men löser en viss funktion, man kan välja godtycklig modul och använda den i sitt system. Kanske är det en utopi att ramverkslöst skall fungera. Det lim som behövs för att saker skall fungera är en viktig bit för att knyta ihop modulerna. Men limmet behöver inte vara så stort och modulerna kan man försöka bygga som fristående moduler utan alltför stort beroende mellan varandra. 
+Där skapade vi en testvy som du kan ladda via dess namn `test/test`. Pröva att göra en ny testroute som laddar vyn. Lägg någon utskrift i vyn för att se att det fungerar som tänkt.
+ 
+Nu är du redo att skapa vyer, kika gärna på de som ligger i katalogen `view` för modulen views, om du behöver inspiration.
 
 
 
@@ -508,9 +493,47 @@ Det kan vara bra att lägga till en `.gitignore` i stil med följande.
 ```text
 /.bin
 /build
-/cache
 /vendor
 ```
+
+
+
+Scaffolding {#scaffolding}
+--------------------------------------
+
+Nu är vi klara. Hur gick det med vår plan om fem minuters installation? Nja, som du ser är det en del saker som behöver komma på plats innan man börjar bygga sin webbplats. Men säg att vi vill bygga ytterligare en webbplats, borde vi inte kunna göra det på fem minuter nu när vi vet hur vi gör?
+
+Visst kan vi kopiera undan allt vi gjort och lägga en kopia av det någonstans, sen behöver vi bara komma ihåg var den ligger. Det kan vara en variant av copy/past för att uppnå fem minuters installation.
+
+En aningen mer strukturerad variant är _scaffolding_. I ramverk- och webbsammanhang stöds scaffolding ofta av ett CLI som följer med ramverket. Det man scaffoldar fram är strukturer att utgå ifrån. Tanken är att minska enklare arbeten som kan automatiseras genom att ge en mall man kan utgå ifrån. En mall är ungefär vad vi har så här långt, en mall som fungerar för en me-sida i kursen ramverk1.
+
+
+
+###Installera anax-cli {#anax-cli-install}
+
+Nu är det så bevänt att det finns en CLI till Anax, [anax/anax-cli](https://packagist.org/packages/anax/anax-cli). Via det kan man scaffolda fram exakt det som vi hittills har gjort.
+
+Låt oss se hur det fungerar. Först behöver vi installera anax-cli.
+
+```bash
+curl https://raw.githubusercontent.com/canax/anax-cli/master/src/install.bash | bash
+```
+
+Eller om du behöver sudo för att installera.
+
+```bash
+curl https://raw.githubusercontent.com/canax/anax-cli/master/src/install.bash | sudo bash
+```
+
+
+
+
+Ramverk eller ramverkslöst {#ramverk}
+--------------------------------------
+
+Nu har vi plockat ihop ett eget "ramverk" utifrån ett antal moduler. Nåja, nu är modulerna tänkta att fungera tillsammans och de behöver ett lim, _glue_, mellan sig för att fungera som tänkt.
+
+När man pratar om ramverkslöst så tänker man att det finns en samling av moduler som är utbytbara men löser en viss funktion, man kan välja godtycklig modul och använda den i sitt system. Kanske är det en utopi att ramverkslöst skall fungera. Det lim som behövs för att saker skall fungera är en viktig bit för att knyta ihop modulerna. Men limmet behöver inte vara så stort och modulerna kan man försöka bygga som fristående moduler utan alltför stort beroende mellan varandra. 
 
 
 
