@@ -400,10 +400,12 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerSignature Off
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-env
+	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
+	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
 
 	<Directory />
 		Options Indexes FollowSymLinks
-		AllowOverride All
+		AllowOverride None
 		Require all granted
 		Order allow,deny
 		Allow from all
@@ -411,15 +413,18 @@ ServerAdmin $(SERVER_ADMIN)
 
 		Options +ExecCGI
 		AddHandler cgi-script .cgi
+
+		# Rewrite to frontcontroller
+		RewriteEngine on
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule (.*) index.php/$1 [NC,L]
 	</Directory>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
 		ExpiresActive On
 		ExpiresDefault "access plus 1 week"
 	</FilesMatch>
-
-	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
-	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
 
 	#LogLevel alert rewrite:trace6
 	# tail -f error.log | fgrep '[rewrite:'
@@ -482,10 +487,12 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerSignature Off
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-env
+	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
+	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
 
 	<Directory />
 		Options Indexes FollowSymLinks
-		AllowOverride All
+		AllowOverride None
 		Require all granted
 		Order allow,deny
 		Allow from all
@@ -493,15 +500,18 @@ ServerAdmin $(SERVER_ADMIN)
 
 		Options +ExecCGI
 		AddHandler cgi-script .cgi
+
+		# Rewrite to frontcontroller
+		RewriteEngine on
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule (.*) index.php/$1 [NC,L]
 	</Directory>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
 		ExpiresActive On
 		ExpiresDefault "access plus 1 week"
 	</FilesMatch>
-
-	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
-	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
 
 	#LogLevel alert rewrite:trace6
 	# tail -f error.log | fgrep '[rewrite:'
