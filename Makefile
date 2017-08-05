@@ -420,7 +420,7 @@ ServerAdmin $(SERVER_ADMIN)
 		RewriteEngine on
 		RewriteCond %{REQUEST_FILENAME} !-f
 		RewriteCond %{REQUEST_FILENAME} !-d
-		RewriteRule (.*) index.php/$1 [NC,L]
+		RewriteRule .* index.php [NC,L]
 	</Directory>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
@@ -509,7 +509,7 @@ ServerAdmin $(SERVER_ADMIN)
 		RewriteEngine on
 		RewriteCond %{REQUEST_FILENAME} !-f
 		RewriteCond %{REQUEST_FILENAME} !-d
-		RewriteRule (.*) index.php/$1 [NC,L]
+		RewriteRule .* index.php [NC,L]
 	</Directory>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
