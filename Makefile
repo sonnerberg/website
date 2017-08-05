@@ -414,13 +414,13 @@ ServerAdmin $(SERVER_ADMIN)
 		Options +ExecCGI
 		AddHandler cgi-script .cgi
 
-	    FallbackResource /index.php
+	    #FallbackResource /index.php
 
 		# Rewrite to frontcontroller
-		#RewriteEngine on
-		#RewriteCond %{REQUEST_FILENAME} !-f
-		#RewriteCond %{REQUEST_FILENAME} !-d
-		#RewriteRule (.*) index.php/$1 [NC,L]
+		RewriteEngine on
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule (.*) index.php/$1 [NC,L]
 	</Directory>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
@@ -503,13 +503,13 @@ ServerAdmin $(SERVER_ADMIN)
 		Options +ExecCGI
 		AddHandler cgi-script .cgi
 
-		FallbackResource /index.php
+		#FallbackResource /index.php
 
 		# Rewrite to frontcontroller
-		#RewriteEngine on
-		#RewriteCond %{REQUEST_FILENAME} !-f
-		#RewriteCond %{REQUEST_FILENAME} !-d
-		#RewriteRule (.*) index.php/$1 [NC,L]
+		RewriteEngine on
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule (.*) index.php/$1 [NC,L]
 	</Directory>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
