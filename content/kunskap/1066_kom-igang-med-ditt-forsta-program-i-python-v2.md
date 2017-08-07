@@ -223,7 +223,7 @@ Så här kan det se ut när du kör kommandona.
 
 Du vill att alla dina filer skall validera så när du får valideringsfel så behöver du fixa dem. Det finns många olika typer av valideringsfel så det enklaste är att lösa dem efterhand som de dyker upp.
 
-Valideringen kan upptäcka direkta felaktigheter men också tveksamma konstruktioner i din kod, konstruktioner som kan vara fel, men behöver inte vara det. Det kan också vara konstruktioner som inte är lämpliga för att de är en felkälla och det kan varna för konstruktioner som 
+Valideringen kan upptäcka direkta felaktigheter men också tveksamma konstruktioner i din kod, konstruktioner som kan vara fel, men behöver inte vara det. Det kan också vara konstruktioner som inte är lämpliga för att de är en potentiell felkälla.
 
 Så här gjorde Kenneth.
 
@@ -267,6 +267,6 @@ Men kom i håg. Dela bara med dig av den koden som är problematisk, förenkla f
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Du har nu kommit igång med struktiren kring Python och du har kört och felsökt i ditt första Python-program. Det är en god start och nu är du redo att börja lära dig programmeringsspråket Python. Allt är på plats.
+Du har nu kommit igång med strukturen kring Python och du har kört och felsökt i ditt första Python-program. Det är en god start och nu är du redo att börja lära dig programmeringsspråket Python. Allt är på plats.
 
 Det finns en [forumtråd till denna artikel](t/6524), i forumtråden kan du ställa frågor om artikeln eller bidra med tips och trix.
