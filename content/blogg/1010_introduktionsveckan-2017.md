@@ -9,9 +9,7 @@ revision:
 Introduktionsveckan Webbprogrammering 2017
 ==================================
 
-<!--
-[FIGURE src="image/grillcon/grill-vimmel.jpg?w=w2&a=30,0,0,0"]
--->
+[FIGURE src="image/vimmel/forsmak-ht15.jpg?w=w2&cf&a=30,0,30,0"]
 
 Introduktionsveckan är den inledande veckan på terminen för de som startar första året på program och kurspaket.
 
@@ -41,8 +39,26 @@ Det som är gemensamt för er är att ni alla läser samma dbwebb-kurser med sam
 
 
 
+Är introveckan obligatorisk? {#obli}
+-----------------------------------
+
+Introveckan är starten på programmen 180/120hp. De båda programmen har upprop på måndagen och undervisningen startar på tisdagen i de båda kurserna. Svar obligatorisk ja.
+
+För kurspaketen så är kursstarten egentligen en vecka senare. Men eftersom de som går kurspaketen läser samma kurser som programmen så vill jag ge kurspaketare samma förutsättningar och bjuder därför in även dem till introveckan. Svar obligatorisk nej.
+
+Under introveckan kommer det vara allmän info och fokus på att installera labbmiljön. Det handlar främst om att komma igång med labbmiljön i kmom01 i kurserna python och htmlphp.
+
+* [python/kmom01/labbmiljö](kurser/python/labbmiljo)
+* [htmlphp/kmom01/labbmiljö](kurser/htmlphp/labbmiljo)
+
+När det är klart är vi nöjda. Det är veckans huvudsakliga fokus. Om du är kurspaketare eller programdistans och löser det på egen hand så är allt grönt inför starten av kmom01 den 28/8.
+
+
+
 Planering och schema {#plan}
 -----------------------------------
+
+Aktiviteterna i introveckan utgår från campus och vissa av aktiviteterna streamas via Youtube. När aktiviteter pågår i salen finns också extra hjälp i chatterna och forumet samt möjlighet till videochatt via Google hangout.
 
 Här är den övergripande planeringen för introveckan.
 
@@ -65,7 +81,7 @@ Fortsätt läsa för att se vad som händer dag för dag.
 
 ###Måndag {#mandag}
 
-Uppropsdagen. Det sker upprop enligt informationen som finns i respektive välkomstbrev.
+Uppropsdagen. Det sker upprop enligt informationen som finns i respektive välkomstbrev. För att hålla dig uppdaterad så besöker du Gitterchatten [dbwebb-se/webbprogrammering17](https://gitter.im/dbwebb-se/webbprogrammering17), där ser du vad som händer och vad som du kan behöva göra för att utföra det formella uppropet.
 
 Lärarteamet hänger i labbsalen från klockan 10. Dyk gärna in där och säg hej.
 
