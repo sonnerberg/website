@@ -64,8 +64,13 @@ Här är den övergripande planeringen för introveckan.
 
 | Tid | Måndag | Tisdag | Onsdag | Torsdag | Fredag |
 |-----|--------|--------|--------|---------|--------|
-| 10:00-12:00| Upprop | Labbsal | Labbsal | Labbsal | Labbsal |
-| 13:00-15:00| Introduktion | Info + labbsal | Info + labbsal | Info + labbsal | Studentkåren |
+| 10:00-11:00| Häng i labbsal | Generell labbmiljö (s+h)| python labbmiljö (s+h) | htmlphp labbmiljö (s+h) | Hjälp i labbsal (s+h) |
+| 11:00-12:00| Upprop | Generell labbmiljö (s+h) | dbwebb-cli (s+h) | Skapa webbsida (s+h) | Hjälp i labbsal (s+h) |
+| 13:00-14:00| Introduktion (s+h) | Info + python labbmiljö (s+h) | Info | Info | Studentkåren |
+| 14:00-15:00| Frågestund (s+h) | python labbmiljö (s+h) | utmaning (s+h) | Publisera webbsida (s+h) | Studentkåren |
+
+* (s) = streamas
+* (h) = hangout
 
 Labbsal innebär salarna H430 och H429.
 
@@ -107,22 +112,23 @@ Klockan 13:00-13:30 är campus på genomgång med biblioteket.
 
 ###Onsdag {#onsdag}
 
-Lärarteamet är i labbsalen 10-12. Vi fortsätter med labbmiljön för python-kursen fram till 11:00. 11:00 börjar vi installera dbwebb-cli, ett program för att jobba med kurserna.
+Lärarteamet är i labbsalen 10-12 (streamas och hangout). Vi fortsätter med labbmiljön för python-kursen fram till 11:00.
+11:00 börjar vi installera dbwebb-cli, ett program för att jobba med kurserna (streamas och hangout).
 
 Klockan 13-14 är campus på genomgång med BTH stödfunktioner.
 
-14-15 har vi en programmeringsutmaning i labbsalen. Om du inte är klar med labbmiljön finns möjlighet till extra hjälp.
+14-15 har vi en programmeringsutmaning i labbsalen (streamas och hangout). Om du inte är klar med labbmiljön finns möjlighet till extra hjälp.
 I utmaningen ska vi öva på att jobba i terminalen. Hur man orientera sig och hitta filer m.m.
 
 
 
 ###Torsdag {#torsdag}
 
-Lärarteamet är i labbsalen 10-12. Vi installerar labbmiljön för htmlphp och skapar en webbsida lokalt.
+Lärarteamet är i labbsalen 10-12 (streamas). Vi installerar labbmiljön för htmlphp och skapar en webbsida lokalt.
 
 Klockan 13-14 är campus på genomgång med BTH studievägledare.
 
-14-15 tar vi vår lokala webbplats och publicerar på studentservern.
+14-15 tar vi vår lokala webbplats och publicerar på studentservern (streamas).
 
 
 
