@@ -64,13 +64,13 @@ Här är den övergripande planeringen för introveckan.
 
 | Tid | Måndag | Tisdag | Onsdag | Torsdag | Fredag |
 |-----|--------|--------|--------|---------|--------|
-| 10:00-11:00| Häng i labbsal | Generell labbmiljö (s+h)| python labbmiljö (s+h) | htmlphp labbmiljö (s+h) | Hjälp i labbsal (s+h) |
-| 11:00-12:00| Upprop | Generell labbmiljö (s+h) | dbwebb-cli (s+h) | Skapa webbsida (s+h) | Hjälp i labbsal (s+h) |
-| 13:00-14:00| Introduktion (s+h) | Info + python labbmiljö (s+h) | Info | Info | Studentkåren |
-| 14:00-15:00| Frågestund (s+h) | python labbmiljö (s+h) | utmaning (s+h) | Publisera webbsida (s+h) | Studentkåren |
+| 10:00-11:00| Häng i labbsal (c) | Generell labbmiljö (s)| python labbmiljö (s) | htmlphp labbmiljö (s) | Hjälp i labbsal (s) |
+| 11:00-12:00| BTH hälsar välkommen (c) | Generell labbmiljö (s) | dbwebb-cli (s) | Skapa webbsida (s) | Hjälp i labbsal (s) |
+| 13:00-14:00| Introduktion (s) | Info + python labbmiljö (s) | Info (c) | Info (c) | Studentkåren (c) |
+| 14:00-15:00| Frågestund (s) | python labbmiljö (s) | Utmaning (s) | Publisera webbsida (s) | Studentkåren (c) |
 
-* (s) = streamas
-* (h) = hangout
+* (s) = Streamas
+* (c) = Endast campusaktivitet
 
 Labbsal innebär salarna H430 och H429.
 
