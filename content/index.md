@@ -19,6 +19,7 @@ views:
                 route: blogg
                 orderby: publishTime
                 orderorder: desc
+                items: 10
 
     aktuellt:
         region: sidebar-right
