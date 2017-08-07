@@ -6,12 +6,12 @@ category:
     - php
     - kursen ramverk1
 revision:
-    "2017-06-28": "(PA1, mos) Första utgåvan."
+    "2017-08-07": "(A, mos) Första utgåvan."
 ...
 Bygg ett ramverkslöst ramverk
 ==================================
 
-[FIGURE src=image/snapvt17/anax-lite.png?w=c5 class="right"]
+[FIGURE src=image/snapht17/ramverk1-me.png?w=c5&cf&a=0,70,70,0 class="right"]
 
 Vi bygger ihop ett ramverk baserat på Anax, Anax komponenter och eventuellt andra komponenter som vi själva väljer.
 
@@ -20,6 +20,8 @@ Tanken är att fundera igenom om det är modulerna som är viktiga eller det sj�
 Samtidigt behöver i en kodbas som vi kan använda i kursen, det får bli det som kommer ut när du jobbat igenom denna artikeln.
 
 <!--more-->
+
+Innan vi är klara kommer vi även att introduceras i begreppet _scaffolding_.
 
 
 
@@ -49,6 +51,10 @@ Steg för steg {#steg}
 Vi tar det steg för steg, sen ser vi om vi kan effektivisera processen. Vi vill ju ändå ha koll på vilka stegen är.
 
 Ta detta som en repetition från förra kursen om vilka delar som kan finnas i ett ramverk och en webbplats samt hur de kan sättas ihop.
+
+När vi är klara kan det se ut så här.
+
+[FIGURE src=image/snapht17/ramverk1-me.png caption="Kataloger och filer på plats i grunden till en Anax me-sida för kursen ramverk1."]
 
 
 
@@ -122,6 +128,8 @@ namespace Anax\App;
 
 /**
  * An App class to wrap the resources of the framework.
+ *
+ * @SuppressWarnings(PHPMD.ExitExpression)
  */
 class App
 {
@@ -507,39 +515,36 @@ Visst kan vi kopiera undan allt vi gjort och lägga en kopia av det någonstans,
 
 En aningen mer strukturerad variant är _scaffolding_. I ramverk- och webbsammanhang stöds scaffolding ofta av ett CLI som följer med ramverket. Det man scaffoldar fram är strukturer att utgå ifrån. Tanken är att minska enklare arbeten som kan automatiseras genom att ge en mall man kan utgå ifrån. En mall är ungefär vad vi har så här långt, en mall som fungerar för en me-sida i kursen ramverk1.
 
-
-
-###Installera anax-cli {#anax-cli-install}
-
 Nu är det så bevänt att det finns en CLI till Anax, [anax/anax-cli](https://packagist.org/packages/anax/anax-cli). Via det kan man scaffolda fram exakt det som vi hittills har gjort.
 
-Låt oss se hur det fungerar. Först behöver vi installera anax-cli.
+Förutsatt att jag har [installerat kommandot `anax`](anax-cli/kom-igang-och-installera) så kan jag scaffolda fram samma sak som vi nu gjort tillsammans i denna artikel.
 
-```bash
-curl https://raw.githubusercontent.com/canax/anax-cli/master/src/install.bash | bash
-```
+[ASCIINEMA src=132473 caption="Att via kommandot anax scaffolda fram grundstrukturen till me-saidn i ramverk1."]
 
-Eller om du behöver sudo för att installera.
+Där fick vi vår fem-minutare.
 
-```bash
-curl https://raw.githubusercontent.com/canax/anax-cli/master/src/install.bash | sudo bash
-```
+Det är inte ovanligt att ett ramverk innehåller stöd av cli-verktyg som erbjuder scaffolding för att förenkla och snabba upp utvecklingen.
 
+Lägg begreppet scaffolding på minnet och tänk efter när du tycker du borde kunna spara tid genom att scaffolda fram strukturer.
 
 
 
 Ramverk eller ramverkslöst {#ramverk}
 --------------------------------------
 
-Nu har vi plockat ihop ett eget "ramverk" utifrån ett antal moduler. Nåja, nu är modulerna tänkta att fungera tillsammans och de behöver ett lim, _glue_, mellan sig för att fungera som tänkt.
+Nu har vi plockat ihop ett eget "ramverk" utifrån ett antal moduler. Modulerna är tänkta att fungera tillsammans och de behöver ett lim, _glue_, mellan sig för att fungera som tänkt.
 
-När man pratar om ramverkslöst så tänker man att det finns en samling av moduler som är utbytbara men löser en viss funktion, man kan välja godtycklig modul och använda den i sitt system. Kanske är det en utopi att ramverkslöst skall fungera. Det lim som behövs för att saker skall fungera är en viktig bit för att knyta ihop modulerna. Men limmet behöver inte vara så stort och modulerna kan man försöka bygga som fristående moduler utan alltför stort beroende mellan varandra. 
+Även om modulerna till viss del är utbytbara, så är grundtanken att de skall fungera ihop. Kanske är det så i ramverksvärlden att de moduler som ligger närmast är enklast att utveckla med tanken att de skall användas tillsammans.
+
+När man pratar om ramverkslöst så tänker man att det finns en samling av moduler som är utbytbara men löser en viss funktion, man kan välja godtycklig modul och använda den i sitt system. Kanske är det en utopi att ramverkslöst skall fungera, kanske inte. Det lim som behövs för att saker skall fungera är en viktig bit för att knyta ihop modulerna. Men limmet behöver inte vara så stort och modulerna kan man försöka bygga som fristående moduler utan alltför stort beroende mellan varandra. 
+
+Det arbete som standardiseringsgruppen PHP-FIG utför är en variant att likforma moduler och ramverk och göra dem mer utbytbara. Kanske kan det i längden leda till ett mer ramverkslöst samhälle. Oklart om det är en bra mål eller ej, men att själv kunna välja väg låter som en god idé.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Då har du en mall att utgå ifrån när du skapar webbplatser. Det består av Anax moduler och lite lim mellan dem samt någon ytterligare modul och ett skal av utvecklings och testverktyg.
+Då har du en mall att utgå ifrån när du skapar din me-webbplats i kursen och det blev en genomgång av dess olika delar.
 
 Denna artikel har en [egen forumtråd](t/6308) som du kan ställa frågor i, eller bidra med tips och trix.

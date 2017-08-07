@@ -50,7 +50,7 @@ Krav {#krav}
 
 1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS, återanvänd kunskaper från design-kursen eller använd ramverk liknande Bootstrap, välj själv.
 
-1. Kör `make test` för att kolla att du inte har några valideringsfel.
+1. Kör `make install test` för att kolla att du inte har några valideringsfel.
 
 1. Gör en `dbwebb publish anax` för att kolla att allt validerar och fungerar.
 
