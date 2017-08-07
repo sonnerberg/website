@@ -107,11 +107,12 @@ Klockan 13:00-13:30 är campus på genomgång med biblioteket.
 
 ###Onsdag {#onsdag}
 
-Lärarteamet är i labbsalen 10-12. Vi fortsätter med labbmiljön för python-kursen, innan lunch är vi klara.
+Lärarteamet är i labbsalen 10-12. Vi fortsätter med labbmiljön för python-kursen fram till 11:00. 11:00 börjar vi installera dbwebb-cli, ett program för att jobba med kurserna.
 
 Klockan 13-14 är campus på genomgång med BTH stödfunktioner.
 
 14-15 har vi en programmeringsutmaning i labbsalen. Om du inte är klar med labbmiljön finns möjlighet till extra hjälp.
+I utmaningen ska vi öva på att jobba i terminalen. Hur man orientera sig och hitta filer m.m.
 
 
 
