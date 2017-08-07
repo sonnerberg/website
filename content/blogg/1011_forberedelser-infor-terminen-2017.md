@@ -76,16 +76,6 @@ Höstens GrillCon är planerad till fredagen den 15:e september och tanken är a
 Är du ny på GrillCon så kan du läsa mer om [GrillCon](https://grillcon.dbwebb.se).
 
 
-Du som deltar på introveckan är nyantagen till något av följande utbildningar.
-
-* Webbprogrammering 180hp campus <!--wip/2017 -->
-* Webbprogrammering 120hp distans <!-- wipd/2017 -->
-* [Webbutveckling och programmering 30hp distans](webutv/2017)
-* [Webbprogrammering och databaser 30hp distans](webprog/2017)
-
-Det som är gemensamt för er är att ni alla läser samma dbwebb-kurser med samma lärarteam.
-
-
 
 ###Varning - dbwebb hijackad i serpen {#serpen}
 
@@ -172,6 +162,19 @@ Hemma städar du ditt skrivbord och rensar din dator från program och länkar s
 [FIGURE src=image/skrivbord-webbprogrammerare-version-2-0.jpg?w=w2&cf&a=5,0,20,0 caption="Städa skrivbord och rensa datorn från saker som kan störa studierna."]]
 
 Välj det operativsystem du vill jobba i, Windows, Mac OS eller Linux, de funkar lika bra men se till att du är uppdaterad och har senaste utgåvorna, allt för att undvika bekymmer och kompabilitet med programvaror.
+
+
+
+###Introveckan {#introveckan}
+
+Du som deltar på [introveckan](blogg/introduktionsveckan-2017) är nyantagen till något av följande utbildningar.
+
+* Webbprogrammering 180hp campus
+* Webbprogrammering 120hp distans
+* Webbutveckling och programmering 30hp distans
+* Webbprogrammering och databaser 30hp distans
+
+Det som är gemensamt för er är att ni alla läser samma dbwebb-kurser med samma lärarteam.
 
 
 
