@@ -25,16 +25,33 @@ Rekommenderade studieplaner {#studieplan}
 
 * [Termin 1](program/webbprogrammering/studieplan/termin1)
 * [Termin 2](program/webbprogrammering/studieplan/termin2)
+* [Termin 3](program/webbprogrammering/studieplan/termin3)
 
 
 
 Lektionsplaner {#lektionsplan}
 --------------------------------------------------------------
 
-* [Läsperiod 1](program/webbprogrammering/lektionsplan/lasperiod1)
-* [Läsperiod 2](program/webbprogrammering/lektionsplan/lasperiod2)
-* [Läsperiod 3](program/webbprogrammering/lektionsplan/lasperiod3)
-* [Läsperiod 4](program/webbprogrammering/lektionsplan/lasperiod4)
+
+
+###Termin 1 {#termin1}
+
+* [Läsperiod 1](program/webbprogrammering/lektionsplan/termin1/lasperiod1)
+* [Läsperiod 2](program/webbprogrammering/lektionsplan/termin1/lasperiod2)
+
+
+
+###Termin 2 {#termin2}
+
+* [Läsperiod 3](program/webbprogrammering/lektionsplan/termin2/lasperiod3)
+* [Läsperiod 4](program/webbprogrammering/lektionsplan/termin2/lasperiod4)
+
+
+
+###Termin 3 {#termin3}
+
+* [Läsperiod 1](program/webbprogrammering/lektionsplan/termin3/lasperiod1)
+* [Läsperiod 2](program/webbprogrammering/lektionsplan/termin3/lasperiod2)
 
 
 
