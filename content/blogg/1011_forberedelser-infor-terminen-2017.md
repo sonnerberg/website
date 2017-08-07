@@ -32,8 +32,8 @@ Jag kikade på hur många som är antagna till höstens utbildningar. Det såg u
 |------------|--------:|-------------------:|---------:|
 | Webbprogrammering 180 (campus)                  |  30 |  31 |   0 |
 | Webbprogrammering 120 (distans)                 |  45 |  74 | 136 |
-| Webbutveckling och programmering 30hp (distans) | 105 | 150 | 256 |
-| Webbprogrammering och databaser 30hp (distans)  | 105 | 150 | 438 |
+| Webbutveckling och programmering 30hp (distans) | 105 | 150 | 438 |
+| Webbprogrammering och databaser 30hp (distans)  | 105 | 150 | 256 |
 
 Vi ser att trycket är högt på de olika distansutbildningarna men att det kan finnas någon plats för de som gjort sen anmälan till campusprogrammet.
 
