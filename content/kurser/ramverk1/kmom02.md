@@ -20,6 +20,8 @@ Vi bekantar oss även med begreppet SOLID som är en akronym för designmönster
 
 Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar enligt MVC.
 
+Under arbetets gång funderar vi på hur man bäst organiserar sin kod i moduler för att göra dem återanvändbara, testbara och lätta att underhålla och vidareutveckla.
+
 <!--more-->
 
 
@@ -66,7 +68,7 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[En REM Server som Kontroller och Modell](kunskap/en-rem-server-som-kontroller-och-modell)" som ger dig ett exempel hur du skriver kod i form av en kontroller och en modell. Du sparar koden i `me/anax` och integrerar den i din me-sida.
+1. Jobba igenom artikeln "[En REM Server som Kontroller och Modell](kunskap/en-rem-server-som-kontroller-och-modell)" som ger dig ett exempel hur du skriver kod i form av en kontroller och en modell. REM servern lägger du i `kmom02/rem-server` och när du jobbar i kursmomentet kan du jobba i `kmom02/anax2`. När du är klar så placerar du den färdiga koden i `me/anax` och integrerar i din me-sida.
 
 
 
@@ -91,9 +93,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta om hur du strukturerade din kommentarsmodul.
 * Vilka tidigare erfarenheter har du av MVC? Gick arbetet bra med artikeln om MVC?
 * Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader?
-* Ge en statusuppdatering om ditt kommentarssystem, hur gick det?
+* Berätta om hur du strukturerade din kommentarsmodul.
+* Ge en statusuppdatering om ditt kommentarssystem, hur tänker du kring det?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

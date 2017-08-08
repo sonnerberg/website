@@ -547,4 +547,4 @@ Avslutningsvis {#avslutning}
 
 Då har du en mall att utgå ifrån när du skapar din me-webbplats i kursen och det blev en genomgång av dess olika delar.
 
-Denna artikel har en [egen forumtråd](t/6308) som du kan ställa frågor i, eller bidra med tips och trix.
+Denna artikel har en [egen forumtråd](t/6602) som du kan ställa frågor i, eller bidra med tips och trix.
