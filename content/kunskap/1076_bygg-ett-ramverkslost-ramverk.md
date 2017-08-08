@@ -253,7 +253,7 @@ Ramverkets tjänster {#services}
 
 Du behöver nu skapa de tjänsterna som skall finnas i ramverket. Här har jag valt att flytta dem från frontkontrollern till en egen konfigurationsfil i `config/service.php`.
 
-Det handlar om att lägga till tjänsterna i `$app` och returnera objektet. Dt kan se ut så här.
+Det handlar om att lägga till tjänsterna i `$app` och returnera objektet. Det kan se ut så här.
 
 ```php
 <?php
