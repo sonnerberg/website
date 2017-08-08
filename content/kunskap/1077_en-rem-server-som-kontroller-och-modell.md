@@ -11,7 +11,7 @@ revision:
 En REM Server som Kontroller och Modell
 ==================================
 
-[FIGURE src=image/snapvt17/remserver-docs.png?w=c5&cf&a=0,70,70,0 class="right"]
+[FIGURE src=image/snapht17/remserver-docs.png?w=c5&cf&a=0,70,70,0 class="right"]
 
 Vi studerar ett exempel av en REM Server som är byggd i Anax. Större delen av koden ligger i samma fil där routerna skapas och vi tittar på hur koden kan struktureras genom att jobba med kontroller och modeller i MVC.
 
