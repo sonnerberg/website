@@ -6,6 +6,7 @@ category:
     - php
     - kursen ramverk1
 revision:
+    "2017-08-08": "(B, mos) La till YAML som packagist modul."
     "2017-08-07": "(A, mos) Första utgåvan."
 ...
 Bygg ett ramverkslöst ramverk
@@ -77,7 +78,7 @@ PHP Moduler {#moduler}
 Vi behöver ett antal PHP moduler som bygger upp det ramverket vi bygger webbplatsen i. Alla PHP moduler finns tillgängliga via Packagist.
 
 ```bash
-composer require anax/request anax/url anax/router anax/response anax/view anax/session anax/textfilter anax/configure
+composer require anax/request anax/url anax/router anax/response anax/view anax/session anax/configure anax/textfilter symfony/yaml
 ```
 
 Nu finns moduler på plats i vendor-katalogen tillsammans med filerna composer.json och composer.lock som hjälper composer att hålla koll på vad som finns installerat och med vilka versioner.
