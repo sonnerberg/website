@@ -6,6 +6,7 @@ category:
     - anax
     - kurs ramverk1
 revision:
+    "2017-08-08": "(B, mos) Genomgång, mindre ändringar."
     "2017-06-28": "(A, mos) Första utgåvan."
 ...
 Bygg en me-sida till ramverk1
@@ -63,11 +64,13 @@ Krav {#krav}
 Extrauppgift {#extra}
 -----------------------
 
+Det finns inga extra uppgifter.
+
+<!--
 Lös följande extrauppgifter om du har tid och lust.
 
-1. Lägg till så att du kan använda Cimage för att hantera dina bilder.
-
 1. Lägg till så att du kan logga in på webbplatsen och hantera användare. Du har troligen kod från tidigare kurser som kan återanvändas.
+-->
 
 
 
