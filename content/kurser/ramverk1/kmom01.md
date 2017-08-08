@@ -2,17 +2,10 @@
 author:
     - mos
 revision:
-    "2017-03-24": "(PA1, mos) Jobbet börjar."
+    "2017-08-08": "(A, mos) Första utgåvan."
 ...
 Kmom01: Ramverk
 ==================================
-
-[WARNING]
-**Version 1 av ramverk1.**
-
-Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
-
-[/WARNING]
 
 Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att anamma ett PHP modul-tänkande. 
 
@@ -20,6 +13,7 @@ Vi tittar på ett par seminarier från konferenser och funderar på vad de förs
 
 <!--more-->
 
+[FIGURE src=image/snapht17/ramverk1-me.png caption="Kataloger och filer på plats i grunden till en Anax me-sida för kursen ramverk1."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -112,14 +106,13 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Det är extra tid på detta inledande momentet då redovisningstexten är lite mer omfattande än du är van vid.
+Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten är mer omfattande än du är van vid.
 
 Se till att följande frågor besvaras i texten:
 
 * Gör din egen kunskapsinventering baserat på PHP The Right Way, berätta om dina styrkor och svagheter som du vill förstärka under det kommande året.
 * Vilket blev resultatet från din mini-undersökning om vilka ramverk som för närvarande är mest populära inom PHP (ange källa var du fann informationen)?
 * Berätta om din syn/erfarenhet generellt kring communities och specifikt communities inom opensource och programmeringsdomänen.
-* Berätta kort om dina (goda/mindre goda) erfarenheter av ramverk inom PHP och inom andra programmeringsspråk.
 * Vad tror du om begreppet "en ramverkslös värld" som framfördes i videon?
 * Hur gick dina förberedelser inför kommentarssystemet?
 
