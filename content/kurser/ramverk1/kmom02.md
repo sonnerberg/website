@@ -2,17 +2,10 @@
 author:
     - mos
 revision:
-    "2017-03-24": "(PA1, mos) Jobbet börjar."
+    "2017-08-08": "(A, mos) Första utgåvan."
 ...
 Kmom02: MVC
 ==================================
-
-[WARNING]
-**Version 1 av ramverk1.**
-
-Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
-
-[/WARNING]
 
 Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket.
 
@@ -76,6 +69,8 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
+1. Integrera REM servern i din me-sida i `me/anax`. Gör en "framsida" till din REM server och berätta vilka länkar du har till REM servern. Denna "framsida" skall vara en del av din me-sida.
+
 1. Gör uppgiften "[Bygg en prototyp till ett kommentarssystem](uppgift/bygg-en-prototyp-till-ett-kommentarssystem)". Du kommer igång och skriver ett enkelt kommentarssystem, det blir en prototyp för att lära sig domänen och skapa en kodbas. Spara koden under `me/anax`.
 
 1. Skriv gruppvis en artikel om ["Model, View, Controller (MVC)"](uppgift/skriv-artikel-om-mvc). Spara artikeln i din me-sida.
@@ -94,8 +89,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Vilka tidigare erfarenheter har du av MVC? Gick arbetet bra med artikeln om MVC?
-* Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader?
-* Berätta om hur du strukturerade din kommentarsmodul.
-* Ge en statusuppdatering om ditt kommentarssystem, hur tänker du kring det?
+* Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader med dina egna ord?
+* Gick arbetet med REM servern bra och du lyckades integrera den i din me-sida?
+* Berätta om arbetet med din kommentarsmodul, hur långt har du kommit och hur tänker du?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

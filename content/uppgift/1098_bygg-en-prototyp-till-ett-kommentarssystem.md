@@ -6,12 +6,12 @@ category:
     - anax
     - kurs ramverk1
 revision:
-    "2017-06-28": "(A, mos) Första utgåvan."
+    "2017-08-08": "(A, mos) Första utgåvan."
 ...
 Bygg en prototyp till ett kommentarssystem
 ===================================
 
-Du skall bygga en prototyp, ett utkast, till ett kommentarssystem och du skall bygga det enligt MVC.
+Du skall bygga en prototyp, ett utkast, till ett kommentarssystem och du skall bygga det enligt MVC där din kod skrivs i kontroller-klasser och klasser i modell-lager.
 
 <!--more-->
 
@@ -31,22 +31,24 @@ Under kursen kommer du att utveckla kod i form av ett kommentarssystem som i slu
 
 Du kan räkna med att din kommentarsmodul kommer att vara central i projektet i kmom10, vare sig det blir fokus på ett projekt som liknar StackOverflow, Twitter, Facebook, Instagram, Flickr, GitHub issues, ett forum eller Disqus.
 
-Försök skapa kod som är generell för godtyckligt kommentarssystem, iallafall är det ansatsen vi tar inledningsvis.
+Försök skapa kod som är generell för godtyckligt kommentarssystem, iallafall är det ansatsen vi inledningsvis tar.
 
 Du är nu redo att göra en fungerande prototyp som ditt första utkast. Du skall göra grunden så att en användare kan kommentera ditt innehåll. Olika innehåll kan ha olika kommentarsflöden.
 
-Till att börja med så sparar vi kommentarerna i sessionen. Databasen får bli ett senare tillskott.
+Till att börja med så sparar vi kommentarerna i sessionen. Databasen får bli ett senare tillskott men räkna med att vi byter ut sessionen mot en databas inom kort.
 
 Kom ihåg att det är en prototyp, du vill bara få vissa kodgrunder på plats i en MVC-struktur.
 
-Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom den tiden du har och prioritera bort det som inte är nödvändigt.
+Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom den tiden du har och prioritera bort det som inte är nödvändigt. Det finns inget krav på hur mycket du hinner med i detta kursmomentet, men se till att du kan kalla ditt jobb för en "första prototyp". KISS.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Bygg två separata routes som innehåller godtyckligt innehåll och varsitt kommentarsflöde.
+1. Skriv koden i kontroller-klasser och i'modell-lagret. Skriv ingen kod i routerna.
+
+1. Eftersom du har fria händer så är kraven nedan mer förslag till hur man normalt bygger en enklare kommentarsfunktion till en sida/innehåll. Men, du måste dokumentera vad du gör i en sida på din webbplats. Berätta vad som kan testas och hur man gör det samt hur du delat upp din kod.
 
 1. Man kan lägga till kommentarer.
 
@@ -69,7 +71,7 @@ Krav {#krav}
 Extrauppgift {#extra}
 -----------------------
 
-Gör följande extrauppgifter om du har tid och lust.
+Gör följande extrauppgifter om du har tid och lust, eller spara dem till nästa kursmoment.
 
 1. Lägg till så att man måste vara en inloggad användare för att göra kommentarer och att en användare bara kan radera och redigera egna kommentarer. Skapa en användare som heter doe med lösenord doe.
 

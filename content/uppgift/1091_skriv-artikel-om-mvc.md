@@ -6,9 +6,9 @@ category:
     - anax
     - kurs ramverk1
 revision:
-    "2017-06-28": (A, mos) Första utgåvan.
+    "2017-08-08": (A, mos) Första utgåvan.
 ...
-Skriv kort artikel om Model, View, Controller (MVC)
+Skriv artikel om Model, View, Controller (MVC)
 ==================================
 
 Du skall skriva en kortare artikel om ämnet "Model View Controller (MVC)".
@@ -29,15 +29,17 @@ Inledning {#intro}
 
 Gör en litteraturstudie och sök efter texter, artiklar och video som förklarar begreppet, läs igenom dem och sammanfatta sedan dina egan synpunkter i en artikel.
 
-Det finns inget krav på att de artiklar du hittar måste vara vetenskapliga. Men försök finna så bra, trovärdigt och välskrivet material som möjligt.
+Det finns inget krav på att de artiklar du hittar måste vara vetenskapliga. Men försök finna så trovärdigt och välskrivet material som möjligt.
 
 
 
 ###Vinkla artikeln {#vinkla}
 
-Du kan vinkla in artikel hur du vill och du kan skriva en artikel som är positivt eller negativt inställd till begreppet. Du kan välja att skriv om historiken, förklara begreppet, sia om den tänkta framtiden eller välja en helt egen vinkling.
+Du kan vinkla din artikel hur du vill och du kan skriva en artikel som är positivt eller negativt inställd till begreppet. Du kan välja att skriv om historiken, förklara begreppet, sia om den tänkta framtiden eller välja en helt egen vinkling.
 
 När din vinkling är klar så bestämmer du en titel på artikeln.
+
+Du kan inte få fel oavsett vilken vinkling du väljer, det handlar om ditt resonemang och hur du underbygger det med kunskap och referenser.
 
 
 
