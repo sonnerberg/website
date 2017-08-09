@@ -16,7 +16,7 @@ Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
 
 Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" och moduler in i ramverket. Hittills har vi använt `$app` som en kontainer för alla tjänster som finns i ramverket.
 
-Vi skall se om det finns alternativa lösningar på detta. Vi vill ha en flexibilitet när vi utökar ramverket och lägger till nya moduler. Hittills har vi gjort detta i frontkontrollern `index.php` men kanske kan vi finna ett alternativt sätt som är bättre när antalet moduler växer.
+Vi skall se om det finns alternativa lösningar på detta. Vi vill ha en flexibilitet när vi utökar ramverket och lägger till nya moduler. Hittills har vi gjort detta i frontkontrollern `index.php`/`config/service.php` men kanske kan vi finna ett alternativt sätt som är bättre när antalet moduler växer.
 
 Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, nämligen service locator och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som betraktas som god programmeringssed.
 
@@ -41,7 +41,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande artiklar.
 
-1. Artikeln PHP The Right Way innehåller ett stycke om "[Dependency Injection](http://www.phptherightway.com/#dependency_injection)", läs igenom det som en introduktion.
+1. Artikeln PHP The Right Way innehåller ett stycke om "[Dependency Injection](http://www.phptherightway.com/#dependency_injection)", läs igenom det som en introduktion till begreppet.
 
 1. Bekanta dig med begreppet Dependecy Injection (DI) genom att översiktligt titta på [Wikipedia om DI](https://en.wikipedia.org/wiki/Dependency_injection).
 
