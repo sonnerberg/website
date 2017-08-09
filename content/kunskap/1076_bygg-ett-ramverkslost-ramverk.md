@@ -457,7 +457,7 @@ make test
 En del av testverktygen använder sig av konfigurationsfiler. Du kan kopiera även dem från en av modulerna.
 
 ```bash
-# Gå till me/anax-lite
+# Gå till me/anax
 cp vendor/anax/view/.php{cs,md}.xml . 
 ```
 
