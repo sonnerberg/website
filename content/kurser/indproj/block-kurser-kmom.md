@@ -1,3 +1,3 @@
-####[indproj](indproj)
+####[indproj](kurser/indproj)
 
-Ej dbwebb-kurs.
+Individuellt programvaruprojekt.
