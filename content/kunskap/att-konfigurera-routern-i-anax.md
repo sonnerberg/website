@@ -14,12 +14,15 @@ Att konfigurera routern i Anax
 
 [FIGURE src=image/snapht17/anax-di.png?w=c5 class="right"]
 
-Vi jobbar vidare med Anax och REM Servern och använder oss av begreppen dependency injection och lazy loading i ett försök att förbättra strukturen på vår kod.
+Vi skall se hur det finns alternativ på hur routern och dess routes kan konfigureras. Nu när vi infört dependency injection så vill vi försöka bli av med beroendet till `$app` och istället införa `$di` som den primärar resursen för ramverkets tjänster. Ett steg på den vägen är att se över hur routerna skapas, de är ju sedan tidigare rätt beroende av just `$app`.
 
 Det blir en övning i refactoring av kod och resultatet blir förhoppningsvis kod som blir enklare att underhålla, vidareutveckla och testa.
 
 <!--more-->
 
+Som vanligt funderar vi och utvärderar efter hand.
+
+Vi fortsätter att använda REM servern som exempelkod.
 
 
 
@@ -36,21 +39,32 @@ Glöm inte `.htaccess` {#htaccess}
 Glöm inte att redigera din `.htaccess` när du publicerar till studentservern.
 
 
-<!--stop-->
-
 
 En tom Anax {#initanax}
 --------------------------------------
 
-När jag jobbar i denna artikeln vill jag ha en tom webbplats att leka med så jag använder kommandot `anax` för att scaffolda en sådan.
+När jag jobbar i denna artikeln vill jag ha en tom webbplats att leka med så jag använder kommandot `anax` för att scaffolda en grundstruktur som bygger på Anax och DI.
 
 ```bash
 # Gå till kursrepot
 cd me/kmom03/
-anax create anax3/ ramverk1-me
+anax create anaxr/ ramverk1-di
+cd anaxr
 ```
 
-Öpnna din webbläsare mot `me/kmom03/anax3/htdocs` för att kontrollera att webbplatsen fungerar. Kontrollera även att routen `htdocs/debug/info` fungerar.
+Öpnna din webbläsare mot `htdocs` för att kontrollera att webbplatsen fungerar. Kontrollera att routen `htdocs/debug/info` också fungerar.
+
+
+
+
+
+
+
+
+<!--stop-->
+
+Need to make new routes in anax/router config/route2*
+
 
 
 
