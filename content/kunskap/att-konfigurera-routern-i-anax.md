@@ -12,7 +12,7 @@ revision:
 Att konfigurera routern i Anax
 ==================================
 
-[FIGURE src=image/snapvt17/anax-lite.png?w=c5 class="right"]
+[FIGURE src=image/snapht17/anax-di.png?w=c5 class="right"]
 
 Vi jobbar vidare med Anax och REM Servern och använder oss av begreppen dependency injection och lazy loading i ett försök att förbättra strukturen på vår kod.
 

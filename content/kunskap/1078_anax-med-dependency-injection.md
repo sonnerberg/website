@@ -7,12 +7,12 @@ category:
     - php
     - kursen ramverk1
 revision:
-    "2017-08-10": "(PA1, mos) Första utgåvan."
+    "2017-08-11": "(A, mos) Första utgåvan."
 ...
 Anax med Dependency Injection
 ==================================
 
-[FIGURE src=image/snapvt17/anax-lite.png?w=c5 class="right"]
+[FIGURE src=image/snapht17/anax-di.png?w=c5 class="right"]
 
 Vi jobbar vidare med Anax och REM Servern och använder oss av begreppen dependency injection och lazy loading i ett försök att förbättra strukturen på vår kod.
 
@@ -479,4 +479,4 @@ Avslutningsvis {#avslutning}
 
 Vi har gått igenom hur Anax jobbar med konceptet dependency injection och vi har sett en modul som löser DI kontainern enligt PSR-11. Samtidigt har vi sett hur REM serverns kontroller och modell anpassats till DI-konceptet.
 
-Denna artikel har en [egen forumtråd](t/6308) som du kan ställa frågor i, eller bidra med tips och trix.
+Denna artikel har en [egen forumtråd](t/6611) som du kan ställa frågor i, eller bidra med tips och trix.
