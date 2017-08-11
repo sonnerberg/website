@@ -2,23 +2,16 @@
 author:
     - mos
 revision:
-    "2017-03-24": "(PA1, mos) Jobbet börjar."
+    "2017-08-11": "(A, mos) Första utgåvan."
 ...
 Kmom03: DI
 ==================================
 
-[WARNING]
-**Version 1 av ramverk1.**
+Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" och moduler in i ramverket. Hittills har vi använt `$app` som en kontainer för alla tjänster som finns i ramverket. Nu skall vi introducera `$di`.
 
-Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
+Vi skall undersöka hur ramverket ser ut när vi använder Anax DI för att sätta grundstrukturen i ramverket. Vi vill ha en flexibilitet när vi utökar ramverket och lägger till nya moduler. Hittills har vi gjort detta i frontkontrollern `index.php` och i `config/service.php` men kanske kan vi finna ett alternativt sätt som är bättre när antalet moduler växer. Vi skall utvärdera hur DI kontainern eventuellt kan förbättra strukturen.
 
-[/WARNING]
-
-Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" och moduler in i ramverket. Hittills har vi använt `$app` som en kontainer för alla tjänster som finns i ramverket.
-
-Vi skall se om det finns alternativa lösningar på detta. Vi vill ha en flexibilitet när vi utökar ramverket och lägger till nya moduler. Hittills har vi gjort detta i frontkontrollern `index.php`/`config/service.php` men kanske kan vi finna ett alternativt sätt som är bättre när antalet moduler växer.
-
-Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, nämligen service locator och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som betraktas som god programmeringssed.
+Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, begrepp såsom service locator, service container och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som betraktas som god programmeringssed.
 
 När vi lärt oss grunden i begreppen så använder vi dem för att bygga vår kod. Samtidigt funderar vi på om det är en god kodstruktur vi uppnår, vi vill ha ett modulärt system och vi vill helst att varje modul skall vara oberoende av de andra, eller beroende av så få som möjligt och dess beroenden skall _injectas_ in i respektive modul.
 
@@ -49,6 +42,8 @@ Kika igenom följande artiklar.
 
 1. Bekanta dig med begreppet Lazy Loading genom att översiktligt titta på [Wikipedia om Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading).
 
+1. Kika kort och översiktligt på rekommendationen [PSR-11: Container Interface på PHP-FIG](http://www.php-fig.org/psr/psr-11/). Den erbjuder en rekommendation om vilket interface en DI kontainer skall implementera. Tanken är att låta programmeraren själv välja DI kontainer i sitt ramverk.
+
 
 
 ###Videor {#videor}
@@ -78,6 +73,8 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
+1. Refactoring av din me-sida. Uppdatera din me-sida i `me/anax`, inklusive den REM server du har integrerat. Se till att den använder tekniker för Anax DI och `$di`. Det finns inte längre någon anledning att injecta `$app`, utgå istället från `$di`.
+
 1. Gör uppgiften "[Kommentarssystem med användare](uppgift/kommentarssystem-med-anvandare)". Bygg vidare på ditt kommentarssystem och se till att integrera med användare. Spara koden under `me/anax`.
 
 1. Skriv gruppvis en artikel om ["Dependency Injection (DI)"](uppgift/skriv-artikel-om-di). Spara artikeln i din me-sida.
@@ -96,7 +93,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur känns det att jobba med begreppen dependency injection, service locator och lazy loading?
-* Använde du begreppen när du vidareutvecklade ditt kommentarssystem?
+* Hur känns det att jobba med begreppen kring dependency injection, service locator och lazy loading?
+* Lyckades du införa begreppen när du vidareutvecklade ditt kommentarssystem?
+* Allmänna kommentare kring din me-sida och REM servern och dess kodstruktur?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
