@@ -166,6 +166,12 @@ class App
 
 Ta en kopia av den koden och lägg den i `src/App/App.php` så har du något att utgå ifrån.
 
+Du kan även kopiera koden från modulen `anax/common` som har samma kod.
+
+```bash
+cp vendor/anax/common/App/App.php src/App/
+```
+
 
 
 Composer autoloader {#composer autoloader}
