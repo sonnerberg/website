@@ -27,6 +27,6 @@ De lokala templates behöver bara käll-katalogen, det behövs inga arkiv eller 
 
 ###Postprocess {#post}
 
-När mallen är hämtad så kan ett skript exekveras som utför vissa postprocessingåtgärder. Du kan se ett exempel på det i filen [`ramverk1-me/.scaffold/ramverk1-me.bash`](https://github.com/canax/scaffold/blob/master/scaffold/ramverk1-me/.scaffold/ramverk1-me.bash).
+När mallen är hämtad så kan ett skript exekveras som utför vissa postprocessingåtgärder. Du kan se ett exempel på det i filen [`ramverk1-me/.scaffold/ramverk1-me`](https://github.com/canax/scaffold/blob/master/scaffold/ramverk1-me/.scaffold/ramverk1-me).
 
-Postprocessingfilen skall ligga i din mall-katalog under katalogen `.scaffold` och döpas till `<template>.bash`.
+Postprocessingfilen skall ligga i din mall-katalog under katalogen `.scaffold` och döpas till `<template>` och den måste kunna exekveras, det vill säga ha rättigheter 755 eller motsvarande.
