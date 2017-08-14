@@ -438,7 +438,7 @@ Du behöver lägga till så att stylesheeten laddas, sist gjorde vi det i `src/A
 
 Du behöver editera filen `config/route.php` för att inkludera REM serverns route fil `config/route/remserver.php`.
 
-Nu bör din Anax fungera tillsammans med REM servern, precis som i förra kursmomentet, med branchen `mvc` från REM server.
+Nu bör din Anax fungera tillsammans med REM servern, precis som i förra kursmomentet.
 
 Öpnna din webbläsare mot `me/kmom03/anax2/htdocs/api/users` för att kontrollera att REM servern är integrerad och fungerar, du bör se ett JSON-objekt. Om du öppnar `me/kmom02/remserver/htdocs/remserver` i webbläsaren så bör du se manualen för REM server och via routen `htdocs/debug/info` bör du se att ett antal routers är laddade.
 
