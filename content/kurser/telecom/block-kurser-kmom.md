@@ -1,3 +1,3 @@
-####[telecom](telecom)
+####[telecom](kurser/telecom)
 
-Ej dbwebb-kurs.
+Data- och telekommunikation.

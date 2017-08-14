@@ -3,15 +3,16 @@ author:
     - mos
 category:
     - anax
+    - remserver
     - php
     - kursen ramverk1
 revision:
-    "2017-06-28": "(PA1, mos) Första utgåvan."
+    "2017-08-11": "(A, mos) Första utgåvan."
 ...
 Anax med Dependency Injection
 ==================================
 
-[FIGURE src=image/snapvt17/anax-lite.png?w=c5 class="right"]
+[FIGURE src=image/snapht17/anax-di.png?w=c5 class="right"]
 
 Vi jobbar vidare med Anax och REM Servern och använder oss av begreppen dependency injection och lazy loading i ett försök att förbättra strukturen på vår kod.
 
@@ -73,7 +74,7 @@ cd me/kmom03/anax3
 composer require anax/di
 ```
 
-Nu finns modulen på plats, du kan se hur den är uppbyggt i katalogen `vencor/anax/di`. Katalogstrukturen är som en vanlig modul till Anax.
+Nu finns modulen på plats, du kan se hur den är uppbyggt i katalogen `vendor/anax/di`. Katalogstrukturen är som en vanlig modul till Anax.
 
 
 
@@ -115,7 +116,7 @@ return [
         ],
 ```
 
-Koden ovan ersätter alltså den vi såg tidigare i `config/service.php`.
+Koden ovan ersätter alltså den vi tidigare såg i `config/service.php`.
 
 Så här såg den tidigare varianten ut.
 
@@ -277,7 +278,7 @@ Om vi studerar tjänsterna i `config/di.php` så kan vi se, om vi tittar noggran
 
 En annan uppdatering är tjänsten `viewRenderFile` som är en ny tjänst som är den som ansvarar för att rendera en view genom att inkludera template-filen och göra data tillgängligt för vyn. Den klassen har egentligen inget med DI-konceptet att göra utan jag tog bara tillfället i akt och exponerade den som en ramverkstjänst. Nu kan man enkelt byta ut den tjänsten mot en egen renderingsklass, så länge renderingsklassen uppfyller interfacet `\App\View\    ViewRenderFileInterface`. Så även om denna tjänsten inte är direkt relevant så är den ändå ett exempel på hur man kan exponera något som sker inuti View-klasserna och erbjuda en egen implementation genom att bara konfigurera tjänsten som skapas i.
 
-Nåväl, bakåtkompatibel `$app` och en ny arbetshäst i `$di`.
+Nåväl, en bakåtkompatibel `$app` och en ny arbetshäst i form av `$di`.
 
 Tidigare skickade vi runt en referens till `$app` men nu är tanken att vi skickar runt `$di` istället. Man skulle kunna säga att båda två är variationer av konceptet _Service Container_.
 
@@ -445,9 +446,37 @@ Det gäller att hålla tungan rätt i munnen då det är många filer. Men när 
 
 
 
+Blev det bättre? {#battre}
+--------------------------------------
+
+Nu har du en uppdaterad `anax3` som använder sig av Anax DI och du har integrerat REM servern som också använder sig av DI. Blev det bättre elle rbara annorlunda?
+
+Kanske är det svårt att se, eller greppa, efter så här kort tid. Om man har en service kontainer i form av `$app` eller `$di` kan ju kvitta lika. Men begreppet DI är känt i ramverkssammanhang oavsett språk så det är nog ett gott tips att anamman den.
+
+Vår `$app` som tidigare innehöll all viktig information gör det fortfarande, men vi ser, och kommer fortsätta se, att dess viktighet blir mindre och mindre när vi bygger ut klasser i ramverket. Det blir mer fokus på `$di` och att injecta delar av `$di` in i de klasser som behöver det.
+
+Bara för man har en service kontainer så behöver man inte nödvändigtvis injecta den i alla klasser. Se på RemServer modellen som enbart behövde tillgång till sessionen, där väljer vi att enbart injecta det beroendet. Men i RemServerController så används frekvent de tjänster som ligge i `$di` vilket gör det rimligt att injecta hela `$di`.
+
+Anax DI blir nu ett lim som håller samman modulerna i ramverket. En del av beroendena löses med `$di`. Det innebär också att beroendena till koden som löser DI-delen ökar. Det finns inget som säger att man måste ha just modulen `anax/di` som löser DI funktionen. Det finns ett arbete i [PHP FIG PSR-11](http://www.php-fig.org/psr/psr-11/) där man försöker definiera en generell DI kontainer. Anax DI implementation är gjord enligt de interface som finns i PSR-11 vilket innebär att den kan bytas ut mot godtycklig kontainer som stödjer PSR-11. Se det som ett exempel på hur moduler kan göras mer oberoende av den miljö de arbetar i.
+
+
+
+Scaffolding av Anax med DI {#scaffold}
+--------------------------------------
+
+Nu när vi gått igenom stegen för att göra en installation av Anax med Anax DI så kan vi lika gärna spara undan den mallen så att den blir enkel att scaffolda i framtiden. Sagt och gjort. Det går nu att scaffolda en grund av Anax DI via mallen `ramverk1-di`.
+
+```bash
+anax create di ramverk1-di
+```
+
+Mallen innehåller samma som vi gjort i `anax3` i denna artikel, bortsett från integrationen med REM servern.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Nu har du ett eget PHP ramverk som du skapat med egna händer, delvis genom att återanvända befintliga moduler. Förhoppningsvis har du fått en grov förståelse för grunden i ett ramverk.
+Vi har gått igenom hur Anax jobbar med konceptet dependency injection och vi har sett en modul som löser DI kontainern enligt PSR-11. Samtidigt har vi sett hur REM serverns kontroller och modell anpassats till DI-konceptet.
 
-Denna artikel har en [egen forumtråd](t/6308) som du kan ställa frågor i, eller bidra med tips och trix.
+Denna artikel har en [egen forumtråd](t/6611) som du kan ställa frågor i, eller bidra med tips och trix.

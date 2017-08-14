@@ -69,7 +69,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Integrera REM servern i din me-sida i `me/anax`. Gör en "framsida" till din REM server och berätta vilka länkar du har till REM servern. Denna "framsida" skall vara en del av din me-sida.
+1. Refactoring av din me-sida. Integrera REM servern i din me-sida i `me/anax`. Gör en "framsida" till din REM server och berätta vilka länkar du har till REM servern. Denna "framsida" skall vara en del av din me-sida. Har du kod som borde vara strukturerad enligt kontroller/modell? Överväg isåfall att skriva om den.
 
 1. Gör uppgiften "[Bygg en prototyp till ett kommentarssystem](uppgift/bygg-en-prototyp-till-ett-kommentarssystem)". Du kommer igång och skriver ett enkelt kommentarssystem, det blir en prototyp för att lära sig domänen och skapa en kodbas. Spara koden under `me/anax`.
 

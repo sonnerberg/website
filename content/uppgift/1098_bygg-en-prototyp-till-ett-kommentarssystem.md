@@ -35,7 +35,7 @@ Försök skapa kod som är generell för godtyckligt kommentarssystem, iallafall
 
 Du är nu redo att göra en fungerande prototyp som ditt första utkast. Du skall göra grunden så att en användare kan kommentera ditt innehåll. Olika innehåll kan ha olika kommentarsflöden.
 
-Till att börja med så sparar vi kommentarerna i sessionen. Databasen får bli ett senare tillskott men räkna med att vi byter ut sessionen mot en databas inom kort.
+Till att börja med så sparar vi kommentarerna i sessionen. Databasen får bli ett senare tillskott men räkna med att vi byter ut sessionen mot en databas inom kort. Om du ändå vill införa en databas så går det bra.
 
 Kom ihåg att det är en prototyp, du vill bara få vissa kodgrunder på plats i en MVC-struktur.
 
@@ -46,9 +46,9 @@ Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom
 Krav {#krav}
 -----------------------
 
-1. Skriv koden i kontroller-klasser och i'modell-lagret. Skriv ingen kod i routerna.
+1. Skriv koden i kontroller-klasser och i modell-lagret. Skriv ingen/minimal kod i routerna.
 
-1. Eftersom du har fria händer så är kraven nedan mer förslag till hur man normalt bygger en enklare kommentarsfunktion till en sida/innehåll. Men, du måste dokumentera vad du gör i en sida på din webbplats. Berätta vad som kan testas och hur man gör det samt hur du delat upp din kod.
+1. Eftersom du har fria händer så är kraven nedan mer förslag till hur man normalt bygger en enklare kommentarsfunktion till en sida/innehåll.
 
 1. Man kan lägga till kommentarer.
 

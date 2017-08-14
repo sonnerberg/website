@@ -29,9 +29,9 @@ Introduktion {#intro}
 
 Vi kan anta att ditt kommentarssystem kommer att kräva inloggade användare, det är alltså inte ett kommentarssystem för anonyma användare som vi skall skapa.
 
-Du behöver alltså stöd för att användare kan registrera sig och logga in i ditt system och att de enbart kan påverka sina egna kommentarer.
+Du behöver stöd för att användare kan registrera sig och logga in i ditt system och att de enbart kan påverka sina egna kommentarer.
 
-Du kan fortsätt att spara kommentarerna i sessionen, snart inför vi en databas.
+Du kan fortsätt att spara kommentarerna i sessionen, snart inför vi en databas. Vill du börja använda en databas så går det bra, du vill troligen ha en databas till användarhanteringen.
 
 Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom den tiden du har och prioritera bort det som inte är nödvändigt.
 
@@ -40,7 +40,7 @@ Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom
 Krav {#krav}
 -----------------------
 
-1. Koden du skriver skall använda sig av MVC och Dependency Injection där det passar.
+1. Koden du skriver skall använda sig av MVC och Dependency Injection där det passar. Strukturera koden i kontroller och modeller där det passar.
 
 1. Man kan registrera ett konto och logga in.
 
@@ -49,6 +49,8 @@ Krav {#krav}
 1. En registrerad användare kan lägga till en kommentar, redigera den och ta bort den.
 
 1. En administratör kan redigera och ta bort kommentarer oavsett användare.
+
+1. En administratör kan hantera användarna, uppdatera, lägga till och ta bort dem.
 
 1. Kör `make test` för att kolla att du inte har några valideringsfel.
 

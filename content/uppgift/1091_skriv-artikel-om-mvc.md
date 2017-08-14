@@ -35,7 +35,7 @@ Det finns inget krav på att de artiklar du hittar måste vara vetenskapliga. Me
 
 ###Vinkla artikeln {#vinkla}
 
-Du kan vinkla din artikel hur du vill och du kan skriva en artikel som är positivt eller negativt inställd till begreppet. Du kan välja att skriv om historiken, förklara begreppet, sia om den tänkta framtiden eller välja en helt egen vinkling.
+Du kan vinkla din artikel hur du vill och du kan skriva en artikel som är positivt eller kritiskt inställd till begreppet. Du kan välja att skriv om historiken, förklara begreppet, sia om den tänkta framtiden eller välja en helt egen vinkling.
 
 När din vinkling är klar så bestämmer du en titel på artikeln.
 
