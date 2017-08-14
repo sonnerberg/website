@@ -1,6 +1,6 @@
 # Using referer did not work
 SetEnvIfNoCase Referer "healthacadiemy\.ga" spambot=yes
-SetEnvIfNoCase REMOTE_ADDR "185\.32\.189\.38" spambot=yes
+SetEnvIfNoCase Remote_Addr "185\.32\.189\.38" spambot=yes
 
 # AppEngine-Google; (+http://code.google.com/appengine; appid: s~gce-spider)
-#SetEnvIf User-Agent "appid: s~gce-spider\)$" spambot=yes
+SetEnvIf User-Agent "appid: s~gce-spider\)$" spambot=yes
