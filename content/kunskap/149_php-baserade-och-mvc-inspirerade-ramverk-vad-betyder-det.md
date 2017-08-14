@@ -71,7 +71,7 @@ Låt se hur MVC kan se ut när vi applicerar det på en webbplats.
 
 Säg att vi har en gästbok och den är gjord enligt MVC. När användaren klickar för att visa alla inläggen kan en skiss över hanteringen se ut så här.
 
-[FIGURE-SVG path=phpmvc/msc/mvc-guestbook-flow.svg caption="Sekvensdiagram för användaren som sitter i en webbläsare och klickar för att se alla inläggen i gästboken."]
+[FIGURE src=img/phpmvc/mvc-guestbook-flow.svg caption="Sekvensdiagram för användaren som sitter i en webbläsare och klickar för att se alla inläggen i gästboken."]
 
 Användare klickar på länken *guestbook/view* och förfrågan landar i frontcontrollern *index.php*. Frontcontrollern mappar länken till en kontroller, i detta fallet kontrollern *CCGuestbook* och dess metod *View()*.
 
