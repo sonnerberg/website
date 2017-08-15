@@ -5,7 +5,7 @@ category:
     - pedagogik
     - konferenser
 revision:
-    "2017-06-22": "(B, mos) ICED 2018 samt Copenhagen."
+    "2017-08-15": "(C, mos) ICED 2018 samt Copenhagen."
     "2017-06-22": "(B, mos) Info om Swednet."
     "2017-06-21": "(A, mos) Forskning om högre utbildning – konferens i Lund 15-16 maj 2018."
 ...
