@@ -326,6 +326,6 @@ Backar vi två steg för att få en översikt över koden så känns det som vi 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Vi har återgien gjort en övning i refaktoring av ramverkets kod för att studera olika alternativ till strukturer. Nu var det routern som fick en genomgång och förändring i hur konfigurationen sker.
+Vi har återigen gjort en övning i refaktoring av ramverkets kod för att studera olika alternativ till strukturer. Nu var det routern som fick en genomgång och förändring i hur konfigurationen sker.
 
 Denna artikel har en [egen forumtråd](t/6619) som du kan ställa frågor i, eller bidra med tips och trix.

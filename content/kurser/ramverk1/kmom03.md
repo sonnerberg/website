@@ -65,7 +65,9 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Anax med dependency injection](kunskap/anax-med-dependency-injection)" som visar dig hur du använder begreppet DI i Anax. Du sparar koden i `me/anax` och integrerar den i din me-sida.
+1. Jobba igenom artikeln "[Anax med dependency injection](kunskap/anax-med-dependency-injection)" som visar dig hur du använder begreppet DI i Anax. Du sparar koden i `me/kmom03/anax3`.
+
+1. Jobba igenom artikeln "[Att konfigurera routern i Anax](kunskap/att-konfigurera-routern-i-anax)" som bygger vidare på användning av dependency injection genom att förändra hur konfigurering av routern sker. Du sparar koden i `me/kmom03/anaxr`.
 
 
 
@@ -73,7 +75,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Refactoring av din me-sida. Uppdatera din me-sida i `me/anax`, inklusive den REM server du har integrerat. Se till att den använder tekniker för Anax DI och `$di`. Det finns inte längre någon anledning att injecta `$app`, utgå istället från `$di`.
+1. Refactoring av din me-sida. Uppdatera din me-sida i `me/anax`, inklusive den REM server du har integrerat. Se till att den använder tekniker för Anax DI och `$di`. Det finns inte längre någon anledning att injecta `$app`, utgå istället från `$di`. Uppdatera även hur du konfigurerar dina routes, så att du gör som i övningen.
 
 1. Gör uppgiften "[Kommentarssystem med användare](uppgift/kommentarssystem-med-anvandare)". Bygg vidare på ditt kommentarssystem och se till att integrera med användare. Spara koden under `me/anax`.
 
@@ -94,6 +96,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Hur känns det att jobba med begreppen kring dependency injection, service locator och lazy loading?
+* Hur känns det att återigen göra refaktoring på din me-sida, blir det bättre?
 * Lyckades du införa begreppen när du vidareutvecklade ditt kommentarssystem?
 * Allmänna kommentare kring din me-sida och REM servern och dess kodstruktur?
 
