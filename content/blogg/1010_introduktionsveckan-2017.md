@@ -64,9 +64,9 @@ Här är den övergripande planeringen för introveckan.
 
 | Tid | Måndag | Tisdag | Onsdag | Torsdag | Fredag |
 |-----|--------|--------|--------|---------|--------|
-| 10:00-11:00| Häng i labbsal (c) | Generell labbmiljö (s)| python labbmiljö (s) | htmlphp labbmiljö (s) | Hjälp i labbsal (s) |
+| 10:00-11:00| Häng i labbsal (c) | Generell labbmiljö (s)| Introduktion till terminalen (s) | htmlphp labbmiljö (s) | Hjälp i labbsal (s) |
 | 11:00-12:00| BTH hälsar välkommen (c) | Generell labbmiljö (s) | dbwebb-cli (s) | Skapa webbsida (s) | Hjälp i labbsal (s) |
-| 13:00-14:00| Introduktion (s) | Info + python labbmiljö (s) | Info (c) | Info (c) | Studentkåren (c) |
+| 13:00-14:00| Introduktion (s) | Info (c) + python labbmiljö (s) | Info (c) | Info (c) | Studentkåren (c) |
 | 14:00-15:00| Frågestund (s) | python labbmiljö (s) | Utmaning (s) | Publisera webbsida (s) | Studentkåren (c) |
 
 * (s) = Streamas
