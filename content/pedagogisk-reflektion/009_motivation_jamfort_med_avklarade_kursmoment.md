@@ -8,7 +8,7 @@ category:
     - pedagogik
     - not yet peer reviewed
 ...
-Introduktion
+Motivation hos programmeringsstudenter
 ===================================
 Jag och Andreas har gjort en studie under våren 2017. Studien är ett resultat av den pedagogiska kompetensutveckling jag, Andreas och Emil har deltagit i. Studien är en djupdykning i studenternas motivation i relation till deras avklarade kursmoment och omfattar studenter på campus efter en termins studier. En önskan är att resultatet går att använda som ett hjälpmedel när vi tar emot nya studenter, där vi vill kunna ge dem ett bättre underlag för att lyckas med sina studier. 
 
