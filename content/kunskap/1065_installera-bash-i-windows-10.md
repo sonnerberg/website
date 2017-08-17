@@ -72,7 +72,7 @@ Kör kommandot `bash` via sökfältet eller via `Windows key + R`.
 
 En Bash-terminal öppnar sig och Ubuntu laddas ned och installeras.
 
-Du behöver skapa en ny Linux-användare och ange dess lösenord.
+Du blir ombedd att skapa en nytt användarnamn och lösenord i Linux-terminalen.
 
 [FIGURE src=image/snapvt17/win10-bash.png?w=w2 caption="Nu är Bash för Windows installerat och klart."]
 
