@@ -65,7 +65,7 @@ Så här kan det se ut när du kör programmet.
 
 [ASCIINEMA src=122865]
 
-Så här kan du alltså köra ett Python-program vid terminalen.
+Så här kan du alltså köra ett Python-program via terminalen.
 
 
 
@@ -77,7 +77,7 @@ Så här tar du en kopia av exempelprogrammet, öppnar upp det i din editor och 
 
 ###Ta en kopia {#kopia}
 
-Du kan nu ta en kopia av exempel-programmet `hello.py` och spara i din me-katalog där du kan editera och testa fler konstruktioner.
+Du ska nu ta en kopia av exempel-programmet `hello.py` och spara i din me-katalog där du kan editera och testa fler konstruktioner.
 
 Först ställer vi oss i rooten av kursrepot. Sedan kopierar vi filen `example/hello/hello.py` till katalogen `me/kmom01/hello`.
 
