@@ -79,19 +79,19 @@ Notera att den tredje beräkningen i exemplet ovan använder sig av modulusopera
 
 ### Decimaltal (Float) {#decimaltal}
 
-`3.14` är ett decimaltal och heter _Float_ på engelska. Decimaltal (Float) precis som heltal (Integer) kan användas för att göra matematiska operationer. Det går även att blanda decimaltal och heltal i aritmetiska operationer, det resulterar i ett nytt decimaltal.
+`3.14` är ett decimaltal, vilket kallas _Float_ på engelska. Decimaltal (Float) precis som heltal (Integer) kan användas för att göra matematiska operationer. Det går även att blanda decimaltal och heltal i aritmetiska operationer, det resulterar i ett nytt decimaltal.
 
 ```python
->>> 3.14 + 3
-6.140000000000001
 >>> 3.14 + 3.14
 6.28
+>>> 3.14 + 3
+6.140000000000001
 >>> 2.5 * 4
 10.0
 >>>
 ```
 
-Vi vill ibland bara visa några få decimaler genom att avrunda decimaltalen. I Python kan detta göras med hjälp av funktionen `round()`. Vi skickar in siffran som ska avrundas och antalet decimaler vi vill ha efter kommat. Om vi inte skickar in hur många decimaler vi vill ha, avrundas siffran till ett heltal, dvs. inga decimaler alls.
+Ibland vill vi bara visa några få decimaler genom att avrunda decimaltalen. I Python kan detta göras med hjälp av funktionen `round()`. Vi skickar först in siffran som ska avrundas, och antalet decimaler vi vill ha efter ett kommatecken. Om vi inte skickar in hur många decimaler vi vill ha så avrundas siffran till ett heltal, dvs inga decimaler alls.
 
 ```python
 >>> 3.14 + 3
