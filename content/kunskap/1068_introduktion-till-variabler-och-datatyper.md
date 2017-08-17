@@ -235,7 +235,7 @@ I nästa version av programmet ska vi göra så att användaren som startar prog
 Variabler {#variabler}
 --------------------------------------
 
-Variabler används för att lagra värden som vi kan referera till och manipulera. Fördelen med variabler är att vi kan ge dem förklarande namn, så det är lätt att veta vad dem gör när man läser koden, och vi kan återanvända och ändra värdet genom att använda variabeln. Vi leker lite i python3 interpretatorn i terminalen. Tänk alltid på att använda förklarande variabelnamn.
+Variabler används för att lagra värden som vi kan referera till och manipulera. Fördelen med variabler är att vi kan ge dem förklarande namn, så det är lätt att veta vad de gör när man läser koden, och vi kan återanvända och ändra värdet genom att använda variabeln. Vi leker lite i python3 interpretatorn i terminalen. Tänk alltid på att använda förklarande variabelnamn.
 
 ```python
 >>> an_integer = 23
@@ -247,7 +247,7 @@ Variabler används för att lagra värden som vi kan referera till och manipuler
 
 [FIGURE src=/image/python/variable-memory1.png class="right" caption="an_integer refererar till värdet 23 i minnet."]
 
-Jag börjar med att tilldela heltalet 23 till variabeln `an_integer`. Precis som med värden kan vi använda `type()` funktionen för att kolla vilken datatyp variabeln har och som förväntat är det ett heltal (int). Vi fortsätter med att skapa några fler variabler.
+Jag börjar med att tilldela heltalet 23 till variabeln `an_integer`. Precis som med värden kan vi använda funktionen `type()` för att kolla vilken datatyp variabeln har och som förväntat är det ett heltal (int). Vi fortsätter med att skapa några fler variabler.
 
 <div style="overflow:auto;">
 
@@ -376,7 +376,7 @@ Ta en 10 min paus innan du fortsätter med nästa del. Tänk igenom vad du har l
 Vårt program del 2 {#program-del2}
 --------------------------------------
 
-Vi går tillbaka till vår fil `greeting.py` och fortsätter utvecklingen av vårt program. Nästa steg är att be användaren skriva in ett namn och en ålder och använda det i hälsningen. Vad behöver vi i koden? Vi behöver input från användaren, namn och ålder, spara värdena så vi kan använda dem, bygga hälsnings strängen med värdena och skriva ut hälsningen.
+Vi går tillbaka till vår fil `greeting.py` och fortsätter utvecklingen av vårt program. Nästa steg är att be användaren skriva in ett namn och en ålder och använda det i hälsningen. Vad behöver vi i koden? Vi behöver input från användaren (namn och ålder), spara värdena så vi kan använda dem, bygga hälsningssträngen med värdena och skriva ut hälsningen.
 
 Först ska vi kommentera koden vi redan har så andra utvecklare och du själv vet vad den gör.
 
@@ -384,7 +384,7 @@ Först ska vi kommentera koden vi redan har så andra utvecklare och du själv v
 
 ### Kommentera {#kommentera}
 
-Kommentarer används för att förklara vad kod och program gör så att andra utvecklare lätt vet vad saker ska göra. Du gör det även för dig själv, om det var länge sedan du jobbade med ett program och sen återvänder kan det vara svårt att komma ihåg vad all kod gör, då är det bra om du har kommenterat den. Karaktären "#" används för att kommentera en rad. När Python interpretatorn läser en "#" vet den att allt som kommer efter på samma rad är en kommentar och försöker inte exekvera det som kod.
+Kommentarer används för att förklara vad kod och program gör så att du själv och andra utvecklare lätt vet vad saker ska göra. Om det var länge sedan du jobbade med ett program och sen återvänder kan det vara svårt att komma ihåg vad all kod gör, då är det bra om du har kommenterat den. Karaktären "#" används för att kommentera en rad. När Python interpretatorn läser en "#" vet den att allt som kommer efter på samma rad är en kommentar och låter bli att exekvera det som kod.
 
 Vårt program innehåller inte mycket än så länge men vi kan lägga en kommentar överst i filen som förklarar vad programmet ska göra.
 
@@ -401,7 +401,7 @@ $ python3 greeting.py
 Hej Jack Black, du är 48 år gammal.
 ```
 
-Det finns en till typ av kommentar som kallas _Docstring_. Den brukar användas överst i filer för att förklara vad koden i filen gör eller när en kommentar är flera rader lång. Docstring görs med trippel citattecken `"""`.
+Det finns en till typ av kommentar som kallas _Docstring_. Den brukar användas överst i filer för att förklara vad koden i filen gör eller när en kommentar är flera rader lång. Docstring görs med trippla citattecken `"""`.
 
 ```python
 """
@@ -415,7 +415,7 @@ print("Hej Jack Black, du är 48 år gammal.") # Skriver ut ett sträng värde
 
 ### Inmatning {#inmatning}
 
-Python är ett såkallat sekventiellt programmeringsspråk. Det betyder att när vi kör programmet kör vi det ovanifrån och ner en rad i taget. Vi vet alltid att vi är klara med raden ovan när vi börjar på nästa rad.
+Python är ett såkallat sekventiellt programmeringsspråk. Det betyder att när vi kör programmet kör vi det ovanifrån och ner, en rad i taget. Vi vet alltid att vi är klara med raden ovan när vi börjar på nästa rad.
 
 Funktionen "[input()](https://docs.python.org/3/library/functions.html#input)" gör att användaren kan mata in ett strängvärde till programmet. Vi testar att använda `input()` i vår fil `greeting.py`.
 
@@ -454,7 +454,7 @@ Skriv något, klicka sen enter: skriver något igen
 Hej Jack Black, du är 48 år gammal.
 ```
 
-Jag skrev in "skriver något igen". Än så länge gör vi inget med värdet vi har skrivit in. `input()` är en funktion som skickar tillbaka (även kallat returnera) värdet vi skriver in. Om vi vill spara värdet i en variabel behöver vi tilldela en variabel vad `input()` returnerar. Tänk dig att när `input()` returnerar skickas värdet till vänster och sparas i variabeln. Vi ändrar koden igen och ber användaren skriva in namnet, som programmet ska hälsa till, och skriver ut namnet med `print()`.
+Jag skrev in "skriver något igen". Än så länge gör vi inget med värdet vi har skrivit in. `input()` är en funktion som skickar tillbaka (även kallat returnerar) värdet vi skriver in. Om vi vill spara värdet i en variabel behöver vi tilldela en variabel vad `input()` returnerar. Tänk dig att när `input()` returnerar skickas värdet till vänster och sparas i variabeln. Vi ändrar koden igen och ber användaren skriva in namnet, som programmet ska hälsa till, och skriver ut namnet med `print()`.
 
 ```python
 """
