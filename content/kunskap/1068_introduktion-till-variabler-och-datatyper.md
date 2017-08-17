@@ -9,7 +9,7 @@ revision:
 Introduktion till variabler och datatyper
 ==================================
 
-I denna artikel ska vi lära oss vad värden och variabler är i programmering. Vi ska titta på hur man skriver ut information till terminalen och hur man kan mata in information till programmet från terminalen. När du har jobbat igenom artikeln har du gjort ett program som tar emot ett namn och en ålder från användaren, åldern används bland annat till att räkna ut födelseår. Namnet, åldern och födelseåret används som en del av en hälsning som skrivs ut i terminalen. Vi kommer gå igenom hur man skriver kod i en fil och kör den koden från terminalen.
+I denna artikel ska vi lära oss vad värden och variabler är i programmering. Vi ska titta på hur man skriver ut information till terminalen och hur man kan mata in information till programmet från terminalen. När du har jobbat igenom artikeln har du gjort ett program som tar emot ett namn och en ålder från användaren. Åldern används bland annat till att räkna ut födelseår. Namn, ålder och födelseår skrivs ut i terminalen som en del av en hälsning. Vi kommer gå igenom hur man skriver kod i en fil och kör den koden från terminalen.
 
 Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/python/tree/master/example/greeting) och i `example/greeting`.
 
@@ -18,7 +18,7 @@ Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/
 <!--more-->
 
 # Ordlista {#ordlista}
-* Interpretator: Gör om din kod så datorn förstår.
+* Interpretator: Verktyg som gör om din kod så datorn förstår.
 * Exekvera: Interpretatorn kör din kod.
 * Funktion: En återanvändbar del av koden.
 * Argument: Ett värde som skickas med till en funktion.
@@ -36,7 +36,7 @@ Du har gjort övningen [Kom igång med ditt första program i python](kunskap/ko
 Introduktion {#introduktion}
 --------------------------------------
 
-När du programmerar skapar du ett program som har ett specifik syfte. Du har en startpunkt och en slutpunkt. Det är viktigt att veta vad du börjar med och hur det ska fungera när du är klar. För att ta dig från punkt A till punkt B kan vi bland annat använda oss av värden och variabler.
+När du programmerar skapar du ett program som har ett specifikt syfte. Du har en startpunkt och en slutpunkt. Det är viktigt att veta vad du börjar med och hur det ska fungera när du är klar. För att ta dig från punkt A till punkt B kan vi bland annat använda oss av värden och variabler.
 
 Vi ska börja med att skriva ett program som skriver ut en hälsning och en ålder. Sen utvecklar vi programmet så det tar emot inmatning (input) från användaren under tiden som programmet körs. Ett namn och en ålder ska skickas in och användas i hälsningen. Vi avslutar med att även räkna ut vilket år personen föddes.
 
@@ -48,9 +48,9 @@ Inom programmering används värden, t.ex. heltalet 4 (Integer) eller en sträng
 
 ### Heltal (Integer) {#heltal}
 
-Vi kan använda oss av heltal, även kallat _Integer_ på engelska (förkortas med __int__), för bland annat att göra [matematisk operationer](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex).
+Vi kan använda oss av heltal, även kallat _Integer_ på engelska (förkortas med __int__), för att bland annat göra [matematiska operationer](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex).
 
-Följande kod är exekverad i Python interpretatorn, du startar interpretatorn genom att skriva `python3` i din terminal. För att lämna Python interpretatorn håll in `ctrl + d` eller skriv `exit()`. När du läser nedanstående kodexempel rekommenderar vi att du själv har en interpretator öppen och kodar med.
+Följande kod är exekverad i Python-interpretatorn, du startar interpretatorn genom att skriva `python3` i din terminal. För att lämna Python-interpretatorn trycker du `ctrl + d` eller skriver `exit()`. När du läser nedanstående kodexempel rekommenderar vi att du själv har en interpretator öppen och kodar med.
 
 ```python
 >>> 4 + 4
@@ -69,11 +69,11 @@ Vid [operationer](https://sv.wikipedia.org/wiki/Operation_(matematik)) (+ , - , 
 
 1. Paranteser.
 1. Upphöjning (exponentiering).
-1. Multiplikation och Division.
+1. Multiplikation och division.
 1. Addition och subtraktion.
 1. Operatorer med samma prioritering exekveras från vänster till höger.
 
-Notera att 3:e beräkningen vi gör använder sig av `%` också kallat modulus. Modulus är resten som är kvar vid heltalsdivision. I beräkningen vi gör `5 % 3` blir resultatet 2, dvs gör vi en heltalsdivision med 5 och 3 är resten 2. Detta kan tillexempel användas om vi vill avgöra om en siffra är jämn eller udda. Då använder vi `% 2` om resultatet är 0 är siffran jämn annars är siffran udda.
+Notera att den tredje beräkningen i exemplet ovan använder sig av modulusoperatorn `%`. Modulus är resten som är kvar vid heltalsdivision. Vår beräkning av `5 % 3` får resultatet 2, dvs om vi gör en heltalsdivision med 5 och 3 är resten 2. Detta kan till exempel användas om vi vill avgöra om en siffra är jämn eller udda. Då använder vi `% 2` och om resultatet är 0 är siffran jämn, annars är siffran udda.
 
 
 
