@@ -198,7 +198,7 @@ För att testa så kan du ta en ny kopia av programkoden som innehöll felaktigh
 # Gå till ditt kursrepo python
 $ cp example/hello/hello-fel.py_ me/kmom01/hello/hello-fel-igen.py
 $ dbwebb validate kmom01
-# utelämna vissa delar av utskriften...
+# utelämnar vissa delar av utskriften...
 *.py using pylint
 
 WARNING pylint failed: './me/kmom01/hello/hello-fel-igen.py'
@@ -208,7 +208,7 @@ E: 12, 6: Using variable 'str2' before assignment (used-before-assignment)
 E: 17,19: Using variable 'str4' before assignment (used-before-assignment)
 ```
 
-Du du ser är liknande felaktigheter som du fick när du exekverade programmet tidigare. Detta är ett sätt att analysera ett program utan att köra det. På det viset kan man upptäcka problem med koden innan man exekverar den.
+Det du ser är liknande felaktigheter som du fick när du exekverade programmet tidigare. Detta är ett sätt att analysera ett program utan att köra det. På det viset kan man upptäcka problem med koden innan man exekverar den.
 
 Du kan nu radera filen så att den inte ligger och ger felmeddelande.
 
@@ -217,7 +217,7 @@ Du kan nu radera filen så att den inte ligger och ger felmeddelande.
 $ rm me/kmom01/hello/hello-fel-igen.py
 ```
 
-Så här kan det se ut när du kör kommandona.
+Så här kan det se ut när du kör alla kommandon.
 
 [ASCIINEMA src=124048]
 
@@ -258,7 +258,7 @@ Här kan du se två exempel på när jag använder dessa tjänster.
 * [Hello World på Code Share](http://codeshare.io/jql9s)
 * [Hello World på Gist](https://gist.github.com/mosbth/b274bd08aab0ed0f9521)
 
-Men kom i håg. Dela bara med dig av den koden som är problematisk, förenkla för den som skall hjälpa dig. Stora exempelprogram är det få som vill hjälpa till med. Förenkla för den som skall hjälpa dig. Då får du snabbare svar.
+Dela bara med dig av den koden som är problematisk. Stora exempelprogram är det få som vill hjälpa till med. Förenkla för den som skall hjälpa dig. Då får du snabbare svar.
 
 [YOUTUBE src=lrVtvqlhWjY width=630 caption="Kenneth visar hur man delar och visar upp koden."]
 
@@ -267,6 +267,6 @@ Men kom i håg. Dela bara med dig av den koden som är problematisk, förenkla f
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Du har nu kommit igång med strukturen kring Python och du har kört och felsökt i ditt första Python-program. Det är en god start och nu är du redo att börja lära dig programmeringsspråket Python. Allt är på plats.
+Du har nu kommit igång med strukturen kring Python och du har kört och felsökt i ditt första Python-program. Det är en bra start och nu är du redo att börja lära dig programmeringsspråket Python. Allt är på plats.
 
 Det finns en [forumtråd till denna artikel](t/6524), i forumtråden kan du ställa frågor om artikeln eller bidra med tips och trix.
