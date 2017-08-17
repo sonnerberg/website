@@ -9,7 +9,7 @@ Moduler i Python
 
 [FIGURE src=image/python/lego.jpg?w=c5 class="right"]
 
-Funktioner i Python gjorde att vi kan återanvända kod och att vi hade möjlighet för att sätta namn koden som vi vill använda. Ibland vill vi dela upp koden ännu mer för att enkelt kunna återanvända flera funktioner i flera olika program. Vi ska i denna övning titta på hur vi kan skapa en modul och hur vi importerar modulen i en annan Python-fil.
+Funktioner i Python gjorde att vi kan återanvända kod och att vi hade möjlighet för att sätta namn på koden som vi vill använda. Ibland vill vi dela upp koden ännu mer för att enkelt kunna återanvända flera funktioner i flera olika program. Vi ska i denna övning titta på hur vi kan skapa en modul och hur vi importerar modulen i en annan Python-fil.
 
 
 

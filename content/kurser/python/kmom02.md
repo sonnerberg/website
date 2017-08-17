@@ -90,7 +90,7 @@ Det finns inga lästips.
 
 ###Övningar {#ovningar}
 
-1. Jobba igenom artikeln/övningen "[Jämförelseoperatorer och booleska värden](kunskap/booleans-och-jamforelseoperatorer)" för att träna på hur värden jämföras i Python. Python interpretatorn används för att testa koden.
+1. Jobba igenom artikeln/övningen "[Jämförelseoperatorer och booleska värden](kunskap/booleans-och-jamforelseoperatorer)" för att träna på hur värden jämföras i Python. Python interpretatorn används för att testa koden. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
 
 1. Jobba igenom artikeln/övningen "[Villkor och loopar](kunskap/villkor-och-loopar)" för att öva in hur vi kan styra flödet i våra program. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
 
