@@ -142,7 +142,7 @@ Det går att lägga ihop strängar (konkatenera) med ett "+" mellan två sträng
 
 ### Boolean {#boolean}
 
-[Boolean](https://docs.python.org/3/library/stdtypes.html#boolean-values) (förkortas med __bool__) är en datatyp som endast kan vara sann eller falsk. Även värden av andra typer kan vara falska eller sanna. Vi kan kolla om ett värde räknas som True eller False med funktionen _[bool()](https://docs.python.org/3/library/functions.html#bool)_. `bool()` är en inbyggd funktion i Python som tar emot ett argument (ett värde) och returnerar True eller False beroende på om värdet räknas som sant eller falskt (skicka in ett värde inom funktionens paranteser och då skickar den tillbaka True eller False).
+[Boolean](https://docs.python.org/3/library/stdtypes.html#boolean-values) (förkortas __bool__) är en datatyp som endast kan vara sann eller falsk. Även värden av andra typer kan vara falska eller sanna. Vi kan kolla om ett värde räknas som True eller False med funktionen _[bool()](https://docs.python.org/3/library/functions.html#bool)_. `bool()` är en inbyggd funktion i Python som tar emot ett argument (ett värde) och returnerar True eller False beroende på om värdet räknas som sant eller falskt. Skicka in ett värde inom funktionens paranteser och då skickar den tillbaka True eller False.
 
 ```python
 >>> bool(0)
@@ -194,11 +194,11 @@ För att kolla vilken typ ett värde har kan vi använda den inbyggda funktionen
 
 Vårt program del 1 {#program-del1}
 --------------------------------------
-Än så länge har vi bara skrivit kod i Python interpretatorn i terminalen, den är bra för att testa små enskilda saker som vi har gjort nu. Men nu ska vi skriva ett sammanhängande program som består av flera rader och då underlättar det att skriva all [kod i en fil](https://www.youtube.com/watch?v=LokzBtJ-ssY&index=2&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd), vi kan sedan exekvera filen i terminalen. Tänk på att när du skriver kod i en fil, till skillnad från i Python interpretatorn, så skrivs inte saker ut av sig själv. Vi måste använda oss av funktionen `print()` för att specifikt skriva ut något i terminalen.
+Än så länge har vi bara skrivit kod i Python interpretatorn i terminalen, den är bra för att testa små enskilda saker som vi har gjort nu. Men nu ska vi skriva ett sammanhängande program som består av flera rader och då underlättar det att skriva all [kod i en fil](https://www.youtube.com/watch?v=LokzBtJ-ssY&index=2&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd), vi kan sedan exekvera filen i terminalen. När du skriver kod i en fil, till skillnad från i Python interpretatorn, så skrivs inte saker ut av sig själv. Vi måste använda oss av funktionen `print()` för att specifikt skriva ut något i terminalen.
 
-Programmet vi ska skapa har ett syfte, att skriva ut en hälsning, vilken kod behövs för att uppnå det? Vi behöver en hälsning, alltså ett värde, som ska vara en sträng om hälsningen ska innehålla bokstäver. Sen behöver vi möjligheten att skriva ut värdet i terminalen.
+Programmet vi ska skapa har ett syfte: att skriva ut en hälsning. Vilken kod behövs för att uppnå det? Vi behöver en hälsning, alltså ett värde, som måste vara en sträng eftersom hälsningen ska innehålla bokstäver. Sen behöver vi möjligheten att skriva ut värdet i terminalen.
 
-Gå till kurskatalogen i din terminal och skapa en ny fil som heter "greeting.py", öppna sedan filen med atom eller din favorit texteditor. Vi använder kommandot `touch` för att skapa filen.
+Gå till kurskatalogen i din terminal och skapa en ny fil som heter "greeting.py". Öppna sedan filen med atom eller din favorit texteditor. Vi använder kommandot `touch` för att skapa filen.
 
 ```bash
 # Gå till ditt kursrepo python
