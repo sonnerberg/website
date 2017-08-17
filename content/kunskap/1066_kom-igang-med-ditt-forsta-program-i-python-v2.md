@@ -55,7 +55,7 @@ $ python3 hello.py
 
 Du kan skriva kommandot `ls` för att se vilka filer som ligger i katalogen.
 
-De filer som är Python-program brukar sluta på filändelsen `.py` och du kan köra med genom att ange filnamnet som ett argument till kommandot `python3`.
+De filer som är Python-program brukar sluta på filändelsen `.py` och du kan köra dem genom att ange filnamnet som ett argument till kommandot `python3`.
 
 ```bash
 $ python3 hello.py
