@@ -113,7 +113,7 @@ Kommandot ovan startar texteditorn Atom och använder `.` (den katalogen du stå
 
 Det kan vara en bra idé att alltid starta editorn på detta sätt, från rooten av kursrepot. Det finns nämligen en del konfigurationsfiler som ligger i rooten av kursrepot. De kommer att användas av Atoms pluginer, lite längre fram i kursen. När du öppnar editorn i rooten av kursrepot, så får Atom tillgång till dem.
 
-Du kan nu redigera exempelprogrammet och lägga till en utskrift av ditt eget namn. Sedan kan du pröva att lägga till en ASCII art, bilder gjorda med ASCII tecken, och skriva ut det. Bild-googla "ASCII art" så hittar du exempel på bilder du kan använda.
+Du kan nu redigera exempelprogrammet och lägga till en utskrift av ditt eget namn. Sedan kan du pröva att lägga till lite ASCII art (bilder gjorda med ASCII-tecken) och skriva ut det. Bild-googla "ASCII art" så hittar du exempel på bilder du kan använda.
 
 Det skulle kunna se ut så här när du är klar.
 
@@ -123,7 +123,7 @@ Så här ser det ut när Kenneth kör igenom övningen från början till slut.
 
 [YOUTUBE src=Qw57psOiLio width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python med sitt namn."]
 
-Du har nu ett fungerande python-program som ligger i en egen fil och som du kan exekvera genom att "köra" filen. Ditt första python-program i denna kursen, det är en god start.
+Du har nu ett fungerande python-program som ligger i en egen fil och som du kan exekvera genom att "köra" filen. Ditt första python-program i denna kursen, det är en bra start.
 
 
 När det blir fel {#fel}
@@ -137,11 +137,11 @@ Låt oss prata kort om fel i programkoden.
 
 Ibland blir det fel. Din uppgift som programmerare är att undvika fel och när de uppträder så måste du avgränsa felet till en rad eller ett litet område och sedan fixa problemet.
 
-Kom ihåg att det finns ingen magi i programmering. Det är instruktioner som exekveras och instruktionerna måste följa ett mönster. När mönstret inte följs så kan programmet inte exekvera. När du rättat till instruktionern, programkoden, så fungerar det igen.
+Kom ihåg att det finns ingen magi i programmering. Det är instruktioner som exekveras och instruktionerna måste följa ett mönster. När mönstret inte följs så kan programmet inte exekvera. När du har rättat till instruktionerna, programkoden, så fungerar det igen.
 
-Kom ihåg, ingen magi, bara instruktioner som måste följa givna regler.
+Kom ihåg: ingen magi, bara instruktioner som måste följa givna regler.
 
-Det är lätt att bli stressad när man försöker laga ett fel, det hjälper ingen att bli stressad. Försök vara lugn, metodisk och försök avgränsa vad som fungerar och vad som inte fungerar.
+Det är lätt att bli stressad när man försöker laga ett fel men det hjälper ingen att bli stressad. Försök att vara lugn, metodisk och avgränsa vad som fungerar och vad som inte fungerar.
 
 
 
@@ -173,7 +173,7 @@ Traceback (most recent call last):
 NameError: name 'str2' is not defined
 ```
 
-Ett nytt felmeddelande som pekar på raden 12. Här används en variabel `str2` som inte är definierad. Här har programmeraren troligen missat att det är variabeln `str1` som skall användas.
+Ett nytt felmeddelande som pekar på rad 12. Här används en variabel `str2` som inte är definierad. Här har programmeraren troligen missat att det är variabeln `str1` som skall användas.
 
 Rätta det felet och försök igen.
 
