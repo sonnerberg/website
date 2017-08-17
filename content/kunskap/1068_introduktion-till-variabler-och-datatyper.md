@@ -9,7 +9,7 @@ revision:
 Introduktion till variabler och datatyper
 ==================================
 
-I denna artikel ska vi lära oss vad värden och variabler är i programmering. Vi ska titta på hur man skriver ut information till terminalen och hur man kan mata in information till programmet från terminalen. När du har jobbat igenom artikeln har du gjort ett program som tar emot ett namn och en ålder från användaren, åldern används bland annat till att räkna ut födelseår. Namnet, ålder och födelseåret som en del av en hälsning som skrivs ut i terminalen. Vi kommer gå igenom hur man skriver kod i en fil och kör den koden från terminalen.
+I denna artikel ska vi lära oss vad värden och variabler är i programmering. Vi ska titta på hur man skriver ut information till terminalen och hur man kan mata in information till programmet från terminalen. När du har jobbat igenom artikeln har du gjort ett program som tar emot ett namn och en ålder från användaren, åldern används bland annat till att räkna ut födelseår. Namnet, åldern och födelseåret används som en del av en hälsning som skrivs ut i terminalen. Vi kommer gå igenom hur man skriver kod i en fil och kör den koden från terminalen.
 
 Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/python/tree/master/example/greeting) och i `example/greeting`.
 
@@ -125,7 +125,7 @@ I koden nedan visas vårt första felmeddelande. Felmeddelanden visas när någo
 SyntaxError: invalid syntax
 ```
 
-Python interpretatorn klarar bara av att exekvera kod som följer en dess struktur. När vi skriver `"It"s Learning"` skapar vi en sträng som innehåller karaktärerna `It`. När den andra `"` påträffas i koden avslutas strängen och då blir de efterföljande karaktärerna inte en del av strängen. Python interpretatorn klara inte av att det kommer ett `s` efter en sträng och då stoppas programmet och interpretatorn visar felet som vi ser ovanför, ett så kallat syntaxfel. Syntaxfel betyder att koden inte är korrekt skriven. Vi kan även se att koden är på rad 1 och en "^" som pekar på vart felet är.
+Python interpretatorn klarar bara av att exekvera kod som följer dess struktur. När vi skriver `"It"s Learning"` skapar vi en sträng som innehåller karaktärerna `It`. När den andra `"` påträffas i koden avslutas strängen och då blir de efterföljande karaktärerna inte en del av strängen. Python interpretatorn klara inte av att det kommer ett `s` efter en sträng och då stoppas programmet och interpretatorn visar felet som vi ser ovanför, ett så kallat syntaxfel. Syntaxfel betyder att koden inte är korrekt skriven. Vi kan även se att koden är på rad 1 och en "^" som pekar på vart felet är.
 
 Det går att lägga ihop strängar (konkatenera) med ett "+" mellan två strängar.
 
@@ -415,7 +415,7 @@ print("Hej Jack Black, du är 48 år gammal.") # Skriver ut ett sträng värde
 
 ### Inmatning {#inmatning}
 
-Python är ett såkallat sekventiellt programmeringsspråk. Det betyder att när vi kör programmet kör vi det ovanifrån och ner en kod rad i taget. Vi vet alltid att vi är klara med raden ovan när vi börjar på nästa kod rad.
+Python är ett såkallat sekventiellt programmeringsspråk. Det betyder att när vi kör programmet kör vi det ovanifrån och ner en rad i taget. Vi vet alltid att vi är klara med raden ovan när vi börjar på nästa rad.
 
 Funktionen "[input()](https://docs.python.org/3/library/functions.html#input)" gör att användaren kan mata in ett strängvärde till programmet. Vi testar att använda `input()` i vår fil `greeting.py`.
 
