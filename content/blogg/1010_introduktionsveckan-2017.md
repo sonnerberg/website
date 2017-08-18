@@ -72,6 +72,8 @@ Här är den övergripande planeringen för introveckan.
 * (s) = Streamas
 * (c) = Endast campusaktivitet
 
+Måndagen mellan 12-13 är det korvgrillning med kåren.
+
 Labbsal innebär salarna H430 och H429.
 
 Aktiviteterna skiljer sig lite åt beroende på om du går programmet Webbprogrammering 180hp campus, 120hp distans eller om du går ett kurspaket.
