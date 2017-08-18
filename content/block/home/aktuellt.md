@@ -1,7 +1,10 @@
 ####Aktuellt
 
-Sommarlov och förberedelser inför hösten...
+[FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
 
+* [Förberedelser inför höstterminen 2017](blogg/forberedelser-infor-terminen-2017)
+* [Introduktionsveckan Webbprogrammering 2017](blogg/introduktionsveckan-2017)
+* [dbwebb hijackat i serpen av ondsint bov](t/6598)
 * [Jag skall studera i höst (frågor/svar)](t/6532)
 * [Köpa dator inför hösten](t/4469)
 * [Omregistrering och restinlämningar inför hösten](kurser/faq/omregistrering)

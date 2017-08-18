@@ -8,7 +8,7 @@ Den traditionella höstgrillen för nya, befintliga och utgångna studenter på 
 <h4>Utbilda dig till webbprogrammerare vid BTH!</h4>
 -->
 
-[FIGURE src=/image/person/emma-pagwe.jpg?w=c7]
+[FIGURE src=/image/person/emma-pagwe.jpg?w=c8]
 
 Studera på utbildningsprogram och kurspaket i Webbprogrammering på campus & distans vid Blekinge Tekniska Högskola i Karlskrona.
 
@@ -28,7 +28,7 @@ Finn mer information i forumet:
 * [Frågor och svar](t/6119)
 -->
 
-[FIGURE src=/image/bobba_webprog2.jpg?w=c7]
+[FIGURE src=/image/bobba_webprog2.jpg?w=c8]
 
 Välkommen med din ansökan så syns vi här!
 
