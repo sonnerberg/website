@@ -90,7 +90,7 @@ Det finns inga lästips.
 
 ###Övningar {#ovningar}
 
-1. Jobba igenom artikeln/övningen "[Jämförelseoperatorer och booleska värden](kunskap/booleans-och-jamforelseoperatorer)" för att träna på hur värden jämföras i Python. Python interpretatorn används för att testa koden. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
+1. Jobba igenom artikeln/övningen "[Jämförelseoperatorer och booleska värden](kunskap/booleans-och-jamforelseoperatorer)" för att träna på hur värden jämförs i Python. Python-interpretatorn används för att testa koden. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
 
 1. Jobba igenom artikeln/övningen "[Villkor och loopar](kunskap/villkor-och-loopar)" för att öva in hur vi kan styra flödet i våra program. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
 
@@ -112,7 +112,7 @@ Dictionaries och Tupler
 
 1. Gör uppgiften "[Python med villkor och loopar](uppgift/python-med-villkor-och-loopar)" för att träna på `if`-satser, `for`- och `while`-loopar. Spara alla filer under `me/kmom02/lab2`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)", ditt första lite större Python program där du lär Marvin att svara på frågor. Spara alla filer under `me/kmom02/marvin1`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)", ditt första lite större Pythonprogram där du lär Marvin att svara på frågor. Spara alla filer under `me/kmom02/marvin1`.
 
 
 
@@ -133,7 +133,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur känns syntaxen i Python?
 * Är det enkelt att se programmets struktur och vad det gör?
-* Har du fått en förståelse om hur loopar och villkor fungerar?
+* Har du fått en förståelse för hur loopar och villkor fungerar?
 * Hur går det med valideringen av uppgifterna? 
 * Är du överens med pylint om eventuella felmeddelanden vid valideringen?
 * Hur gick det att utföra uppgifterna, var de enkla eller svåra?
