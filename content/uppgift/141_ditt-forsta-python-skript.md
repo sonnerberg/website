@@ -66,7 +66,7 @@ Krav {#krav}
 ```bash
 # Ställ dig i roten av kurskatalogen python
 cd me/kmom01/
-cp -i greeting/greeting.py plane/plane.py
+cp -i hello/greeting.py plane/plane.py
 cd plane
 ls
 ```
