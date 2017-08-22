@@ -17,7 +17,7 @@ revision:
 Kmom04: Listor och filer
 ==================================
 
-Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lsita behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i.
+Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lista behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i.
 
 Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
 

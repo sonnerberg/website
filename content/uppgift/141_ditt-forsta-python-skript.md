@@ -61,12 +61,12 @@ För att konvertera från Celcius till [Farenheit](http://en.wikipedia.org/wiki/
 Krav {#krav}
 -----------------------
 
-1. Kopiera ditt program `hello.py` och utgå från det. Spara ditt resultat i filen `me/kmom01/plane/plane.py`.
+1. Kopiera ditt program `greeting.py` och utgå från det. Spara ditt resultat i filen `me/kmom01/plane/plane.py`.
 
 ```bash
 # Ställ dig i roten av kurskatalogen python
 cd me/kmom01/
-cp -i hello/hello.py plane/plane.py
+cp -i greeting/greeting.py plane/plane.py
 cd plane
 ls
 ```
