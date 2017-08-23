@@ -11,7 +11,7 @@ created: "2012-07-02 13:55:06"
 Boken: Beginning PHP and MySQL: From Novice to Professional
 ==================================
 
-En tjockare bok för den som vill ha en mer komplett vy över PHP och MySQL från början. Läsanvisningar finns. Lite tyngre att läsa men mer komplett. Bra för den som är van vid programmering eller utveckling och för den som vill ha lite mer koll.
+En tjockare bok för den som vill ha en mer komplett vy över PHP och MySQL från början. Lite tyngre att läsa men mer komplett. Bra för den som är van vid programmering eller utveckling och för den som vill ha lite mer koll.
 
 <!--more-->
 
