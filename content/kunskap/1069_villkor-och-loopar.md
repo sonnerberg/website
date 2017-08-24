@@ -147,11 +147,11 @@ while number < 20:
 # skriver ut: 2 4 8 16
 ```
 
-Det viktiga med en `while`-loop är att vi någon gång avslutar loppen för annars kommer den fortsätta i all oändlighet eller tills datorn stängs av. Vi avsultar loopen genom att ändra så att villkoret är falskt. I exemplet ovan avslutar vi alltså loopen när
+Det viktiga med en `while`-loop är att vi någon gång avslutar loopen för annars kommer den fortsätta i all oändlighet eller tills datorn stängs av. Vi avslutar loopen genom att ändra så att villkoret är falskt. I exemplet ovan avslutar vi alltså loopen när
 `number` blir 20 eller större.
 
 
-`while`-loopar kan även användas för att ta emot indata från användaren. Om vi vill ta emot indata tills användaren skriver in ett specifikt värde kan vi använda `break` när användaren skriver in detta värde. Vi har tidigare sett hur vi använder `input` och hur vi konverterar data från en sträng till ett heltal. I `while`-loopen brytar vi mot regeln ovan att vi skulle ha ett villkor som någongång avslutas. Villkoret `True` avslutas aldrig då detta är alltid är sant, men vi använder konstruktionen `break` för att avsluta. Inne i loopen är det förste vi gör att kolla om användaren har skrivit in värdet för avslut (q), om användaren har gjort det avslutar vi programmet. Annars skriver vi ut ett meddelande baserat på de `if`-staser vi har sett tidigare.
+`while`-loopar kan även användas för att ta emot indata från användaren. Om vi vill ta emot indata tills användaren skriver in ett specifikt värde kan vi använda `break` när användaren skriver in detta värde. Vi har tidigare sett hur vi använder `input` och hur vi konverterar data från en sträng till ett heltal. I `while`-loopen brytar vi mot regeln ovan att vi skulle ha ett villkor som någongång avslutas. Villkoret `True` avslutas aldrig då detta alltid är sant, men vi använder konstruktionen `break` för att avsluta. Inne i loopen är det första vi gör att kolla om användaren har skrivit in värdet för avslut (q), om användaren har gjort det avslutar vi programmet. Annars skriver vi ut ett meddelande baserat på de `if`-staser vi har sett tidigare.
 
 ```python
 while True:
@@ -170,7 +170,7 @@ while True:
             print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
-På rad 8 i koden ovan gör vi om variabeln `user_input` från en sträng till ett heltal med hjälp av `int()`. Då datat som finns i variabeln kommer från en användare kan vi inte lita på att variabeln innehåller ett heltal. Om vi skriver in annat än ett heltal får vi följande fel i python.
+På rad 8 i koden ovan gör vi om variabeln `user_input` från en sträng till ett heltal med hjälp av `int()`. Då datat som finns i variabeln kommer från en användare kan vi inte lita på att variabeln innehåller ett heltal. Om vi skriver in något annat än ett heltal (till exempel bokstaven `g`) får vi följande fel i python.
 
 ```bash
 Traceback (most recent call last):
@@ -179,7 +179,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: 'g'
 ```
 
-I python finns en konstruktion som kan rädda os från såna fel. Konstruktionen heter try-except och fungerar så att vi har två delar ungefär som en `if`-sats. En del när allt går som vanligt och en del för när det går åt skogen.
+I python finns en konstruktion som kan rädda oss från såna fel. Konstruktionen heter try-except och fungerar så att vi har två delar ungefär som en `if`-sats. En del när allt går som vanligt och en del för när det går åt skogen.
 
 ```python
 try:
@@ -216,7 +216,7 @@ while True:
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna övning tittat på konstruktioner i python som låter oss styra flödet av data i våra program. Vi använder `if` för att jämföra värden och beroende på utfallet av jämförelsen körs olika delar av programmet. `for`-loopen används för att upprepa en del av koden ett bestämt antal gånger och vi kan loopa genom talföljder och strängar. `while`-loopen används för att loopa till ett villkor går från sant till falskt. När villkoret är falskt avslutas upprepningen. Vi har även tittat på hur vi kontinuerligt kan ta emot indata från användaren tills användaren skriver in ett bestämt värde och då bryta loopen med hjälp av `break`.
+Vi har i denna övning tittat på konstruktioner i python som låter oss styra flödet av data i våra program. Vi använder `if` för att jämföra värden och beroende på utfallet av jämförelsen körs olika delar av programmet. `for`-loopen används för att upprepa en del av koden ett bestämt antal gånger och vi kan loopa genom talföljder och strängar. `while`-loopen används för att loopa tills ett villkor går från sant till falskt. När villkoret är falskt avslutas upprepningen. Vi har även tittat på hur vi kontinuerligt kan ta emot indata från användaren tills användaren skriver in ett bestämt värde och då bryta loopen med hjälp av `break`.
 
 `if`, `for` och `while` konstruktioner finns i de flesta programmeringsspråken. Dessa konstruktioner används för att styra flödet av data och utgör stora delar av de program vi kommer skriva i resten av kursen och vidare fram i programmet.
 
