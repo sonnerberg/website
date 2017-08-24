@@ -17,6 +17,10 @@ $ exit
 
 Studentservern är en Linux-server och du har ditt eget konto och hemmakatalog på servern.
 
+Normalt är du inte inloggad på studentservern när du jobbar. Du jobbar alltid lokalt i din egen miljö och relevanta filer kommer att kopieras till studentservern. Att logga in på studentservern kan vara bra vid felsökning eller av ren kuriosa för att se vilka filer som finns där.
+
+Så logga ut innan du fortsätter.
+
 Så här kan det se ut.
 
 [ASCIINEMA src=24618]

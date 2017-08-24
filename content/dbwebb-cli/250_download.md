@@ -13,4 +13,6 @@ $ dbwebb download lab1
 
 Hela kursrepot, eller den valda delen, laddas ned från studentservern. om du har filer på i din lokala katalog, som du ändrat i, så skrivs de inte över.
 
-Det kan vara lite svårt att hålla sina filer synkroniserade, så om du jobbar på flera datorer så är det bättre att lägga ditt kursrepo på Dropbox eller motsvarande disk som du kan dela mellan flera datorer.
+Det kan vara lite svårt att hålla sina filer synkroniserade, så om du jobbar på flera datorer så är det bättre att lägga ditt kursrepo på Dropbox eller motsvarande disk som du kan dela mellan flera datorer. Använd inte download som en metod för att jobba på flera datorer.
+
+Lärarteamet kan använda download för att hämta dina filer och hjälpa dig med mer avancerad felsökning eller för att rätta dina inlämningar.
