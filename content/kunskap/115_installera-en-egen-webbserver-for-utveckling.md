@@ -157,7 +157,7 @@ Länka från webbkatalogen till andra kataloger {#link}
 
 Säg att du har en katalog i din hemmakatalog, som du vill skall synas via webbservern. Lös det med en symbolisk länk från webbkatalogen till den katalog du vill visa.
 
-Som exempel, säg att du har en katalog `dbwebb-kurser` i din hemmakatalog och du vill öppna den via webblänken `http://localhost/dbwebb/`. Du behöver då en länk `dbwebb`, som ligger i webbkatalogen och som pekar på katalogen `dbwebb-kurser` som ligger i din hemmakatalog.
+Som exempel, säg att du har en katalog `dbwebb-kurser` i din hemmakatalog och du vill öppna den via webblänken `http://localhost/dbwebb/` (eller `http://localhost:8080/dbwebb/` om du har valt en annan port). Du behöver då en länk `dbwebb`, som ligger i webbkatalogen och som pekar på katalogen `dbwebb-kurser` som ligger i din hemmakatalog.
 
 Följ nedan instruktioner för att skapa länken på Windows eller på Mac OS.
 
