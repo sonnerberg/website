@@ -152,4 +152,4 @@ False                   # Värdet i variabeln 'oranges' är samma som värdet i 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har lärt oss om booleska värden och jämförelseoperatorer. Booleska värden skrivs som `True` eller `False`. Viktigt att tänka på är att även värdena `1` och `0` kan tolkas som booleska värden. De operatorer som artikeln har tagit upp är generella och kan användas i de flesta programmeringsspråken. Jämförelseoperatorer är även en viktig del i villkorshantering, loopar och if-satser som nästa artikel handlar om.
+Vi har lärt oss om booleska värden och jämförelseoperatorer. Booleska värden skrivs som `True` eller `False`. Viktigt att tänka på är att även värdena `1` och `0` kan tolkas som booleska värden. De operatorer som artikeln har tagit upp är generella och kan användas i de flesta programmeringsspråk. Jämförelseoperatorer är även en viktig del i villkorshantering, loopar och if-satser som [nästa artikel](kunskap/villkor-och-loopar) handlar om.
