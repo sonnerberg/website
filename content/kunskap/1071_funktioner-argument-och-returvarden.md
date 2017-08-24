@@ -23,19 +23,19 @@ Vi rekommenderar att du kodar med i denna övning så du själv får känna på 
 
 Funktioner {#funktioner}
 --------------------------------------
-Funktioner används för att dela upp och kategorisera delar av vår kod som gör det möjligt att återanvända koden på flera ställen i våra program. Funktioner finns i nästan alla programmeringsspråk och är en av viktigaste verktygen vi har som programmerare. Vi kommer i denna övning utgå ifrån kod utan funktioner och långsamt men säkert delar vi upp koden i återanvändbara delar. I exemplen nedan utgår vi från ett verkligt problem och bygger vår kod utifrån det samtidigt som vi delar upp och återanvänder vår kod genom att introducera funktioner.
+Funktioner används för att dela upp och kategorisera delar av vår kod som gör det möjligt att återanvända koden på flera ställen i våra program. Funktioner finns i nästan alla programmeringsspråk och är en av de viktigaste verktygen vi har som programmerare. Vi kommer i denna övning utgå ifrån kod utan funktioner och sakta men säkert delar vi upp koden i återanvändbara delar. I exemplen nedan utgår vi från ett verkligt problem och bygger vår kod utifrån det samtidigt som vi delar upp och återanvänder vår kod genom att introducera funktioner.
 
-> Två kollegor ska äta lunch tillsammans och har båda med lunchlådor. Dansken Emil har med Rød Pølse och Svensken Andreas har med köttbullar med mos. Emil värmar sin mat i microvågsugnen på 800 W i 2,5 minut och Andreas värmar sin mat i 3,5 minut också han på 800W. Hur mycket energi går åt till att värma varje maträtt? Vad kostar det att värma maten med ett kWh pris på 78.04 öre per kWh?
+> Två kollegor ska äta lunch tillsammans och har båda med lunchlådor. Dansken Emil har med Rød Pølse och Svensken Andreas har med köttbullar med mos. Emil värmer sin mat i microvågsugnen på 800W i 2,5 minut och Andreas värmer också sin mat på 800W, men i 3,5 minut. Hur mycket energi går det åt till att värma varje maträtt? Vad kostar det att värma maten med ett kWh pris på 78.04 öre per kWh?
 
 Vilken data får vi i uppgiften?
 
-Emil värmar i 2,5 minut på 800W.
-Andreas värmar i 3,5 minut på 800W.
+Emil värmer i 2,5 minut på 800W.
+Andreas värmer i 3,5 minut på 800W.
 kWh pris för el på 78,04 öre per kWh.
 
-Vi kan även formeln för att beräkna energiåtgången i kWh om vi kan tiden och effekten: energi = effekt gångar tiden i timmar delat med 1000.
+Vi kan även formeln för att beräkna energiåtgången i kWh om vi kan tiden och effekten: energi = effekt gånger tiden i timmar delat med 1000.
 
-Låt oss se hur vi översättar detta till Python kod.
+Låt oss se hur vi översätter detta till pythonkod.
 
 ```python
 emil_time = 2.5 / 60
@@ -47,10 +47,10 @@ andreas_energy = 800 * andreas_time / 1000
 print("Emil använder " + str(emil_energy) + " kWh")
 print("Andreas använder " + str(andreas_energy) + " kWh")
 
-prize_per_kwh = 78.04
+price_per_kwh = 78.04
 
-emil_cost = emil_energy * prize_per_kwh / 100
-andreas_cost = andreas_energy * prize_per_kwh / 100
+emil_cost = emil_energy * price_per_kwh / 100
+andreas_cost = andreas_energy * price_per_kwh / 100
 
 print("Emils lunch kostar " + str(emil_cost) + " kr")
 print("Andreas lunch kostar " + str(andreas_cost) + " kr")
@@ -62,7 +62,7 @@ print("Andreas lunch kostar " + str(andreas_cost) + " kr")
 # Andreas lunch kostar 0.03641866666666667 kr
 ```
 
-Vi noterar att beräkningarna på raderna 4 och 5 samt 12 och 13 är lika förutom att raderna använder olika variabler. Vi ser här en möjlighet att skapa delar av koden som är återanvändbara med hjälp av funktioner. Hur ser då en funktion ut i Python.
+Vi noterar att beräkningarna på raderna 4 och 5 samt 12 och 13 är lika förutom att raderna använder olika variabler. Vi ser här en möjlighet att skapa delar av koden som är återanvändbara med hjälp av funktioner. Hur ser då en funktion ut i Python?
 
 ```python
 def calculate_energy():
@@ -163,12 +163,12 @@ def calculate_energy(time_in_microwave, effect=800):
     energy = effect * time_in_microwave / 1000
     return energy
 
-def calculate_cost(energy, prize_per_kwh=78.04):
+def calculate_cost(energy, price_per_kwh=78.04):
     """
     Calculates the cost for a given energy consumption
     Returns the cost in kr
     """
-    cost = energy * prize_per_kwh / 100
+    cost = energy * price_per_kwh / 100
     return cost
 
 emil_time = 2.5 / 60
