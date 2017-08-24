@@ -17,13 +17,13 @@ Vi har nu bra koll på variabler och datatyper i python. Vi känner till sträng
 
 
 
-Vi rekommenderar att du kodar med i denna övning så du själv får känna på hur det är att skriva python kod.
+Vi rekommenderar att du kodar med i denna övning så du själv får känna på hur det är att skriva pythonkod.
 
 
 
 Villkor {#villkor}
 --------------------------------------
-Ofta vill vi ta reda på om våra variabler uppfyller vissa krav. Det kan vara om en heltals variabel är större än 10 eller om en sträng variabel är lika med en annan sträng. För att undersöka om våra variabler uppfyller dessa kraven kan vi använda oss av en `if`-sats. Låt oss titta på hur en `if`-sats ser ut i python.
+Ofta vill vi ta reda på om våra variabler uppfyller vissa krav. Det kan vara om en heltalsvariabel är större än 10 eller om en strängvariabel är lika med en annan sträng. För att undersöka om våra variabler uppfyller dessa krav kan vi använda oss av en `if`-sats. Låt oss titta på hur en `if`-sats ser ut i python.
 
 ```python
 number_of_apples = 13
@@ -34,7 +34,7 @@ if number_of_apples > 10:
 # skriver ut: Du har mer än 10 äpplen
 ```
 
-I kodexemplet ovan definerar vi först en variabel `number_of_apples` och sätter den lika med heltalet 13. Vi gör sedan en jämförelse mellan vår variabel `number_of_apples` och heltalet 10. Om vi läsar ut raden, där vi gör jämförelsen, på svenska blir det ungefär 'om antalet äpplen är större än 10 skriver vi ut Du har mer än 10 äpplen'. I python använder vi indentering, att vi har flyttat in koden ett snäpp, som ett sätt att avgränsa det som hör till `if`-satsen. I kodexemplet ovan händer det ingenting om vi har 10 eller färre äpplen, men är ju trevligt om vårt program även skriver ut ett meddelande till de med få äpplen. Så låt oss äta 4 äpplen och titta på nedanstående exempel.
+I kodexemplet ovan definierar vi först en variabel `number_of_apples` och sätter den lika med heltalet 13. Vi gör sedan en jämförelse mellan vår variabel `number_of_apples` och heltalet 10. Om vi läsar ut raden, där vi gör jämförelsen, på svenska blir det ungefär "om antalet äpplen är större än 10 skriver vi ut 'Du har mer än 10 äpplen'". I python använder vi indentering, att vi har flyttat in koden ett snäpp, som ett sätt att avgränsa det som hör till `if`-satsen. I kodexemplet ovan händer det ingenting om vi har 10 eller färre äpplen, men det vore ju trevligt om vårt program även skrev ut ett meddelande till de med få äpplen. Så låt oss äta 4 äpplen och titta på nedanstående exempel.
 
 ```python
 number_of_apples = 9
@@ -47,7 +47,7 @@ else:
 # skriver ut: Du har nog varit hungrig och ätit upp dina äpplen
 ```
 
-Om vi läsar ut ovanstående exempel blir det ungefär: 'om antalet äpplen är större än 10 skriver vi ut Du har mer än 10 äpplen annars skriver vi ut Du har nog varit hungrig och ätit upp dina äpplen'. Om vi istället vill kolla att antalet äpplen ligger i ett intervall kan vi använda ytterligare ett villkor i vår `if`-sats. Detta gör vi genom att använda konstruktioner `elif`.
+Om vi läser upp ovanstående exempel blir det ungefär: "om antalet äpplen är större än 10 skriver vi ut 'Du har mer än 10 äpplen', annars skriver vi ut 'Du har nog varit hungrig och ätit upp dina äpplen'". Om vi istället vill kolla att antalet äpplen ligger inom ett intervall kan vi använda ytterligare ett villkor i vår `if`-sats. Detta gör vi genom att använda konstruktionen `elif`.
 
 ```python
 number_of_apples = 9
@@ -79,7 +79,7 @@ if number_of_fruits > 10:
 # skriver ut: Du har mer än 10 frukter
 ```
 
-Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra flödet av data i våra program. Ett sätt att få en överblick över flödet är att rita så kallade flödes-diagram (flow charts). Det enklaste sättet att rita på ett blankt papper och ger en bra möjlighet för att tänka över det problem, som vi löser med python programmet. Ett exempel på flödesdiagram för kodexempel 2 syns nedan.
+Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra flödet av data i våra program. Ett sätt att få en överblick över flödet är att rita så kallade flödesdiagram (flow charts). Det enklaste sättet är att rita på ett blankt papper och det ger en bra möjlighet för att tänka över det problem, som vi löser med pythonprogrammet. Ett exempel på flödesdiagram för kodexempel 2 syns nedan.
 
 [FIGURE src=image/kunskap/python/flow-chart-if.jpg caption="Flödesdiagram för en if-sats."]
 
