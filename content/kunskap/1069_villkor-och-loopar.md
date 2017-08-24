@@ -87,7 +87,7 @@ Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra f
 
 For-loop {#for}
 --------------------------------------
-Nu har vi tittat på hur vi kan styra flödet av data genom våra program med villkor och programmeringskontruktionen `if`. I detta avsnitt ska vi kolla på hur vi kan upprepa delar av koden med hjälp av konstruktionerna `for`, `range` och `in`. En `for`-loop är en konstruktion för att upprepa en del av koden ett bestämt antal gånger. Så vet vi tillexempel att vi vill skriva ut en text 10 gånger är `for`-loopen ett perfekt verktyg istället för att manuellt använda `print()` 10 gånger.
+Nu har vi tittat på hur vi kan styra flödet av data genom våra program med villkor och programmeringskontruktionen `if`. I detta avsnitt ska vi kolla på hur vi kan upprepa delar av koden med hjälp av konstruktionerna `for`, `range` och `in`. En `for`-loop är en konstruktion för att upprepa en del av koden ett bestämt antal gånger. Så vet vi till exempel att vi vill skriva ut en text 10 gånger är `for`-loopen ett perfekt verktyg istället för att manuellt använda `print()` 10 gånger.
 
 ```python
 for i in range(10):
@@ -96,9 +96,9 @@ for i in range(10):
 # skriver ut: siffrorna 0-9 i följd
 ```
 
-Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta in mer på detta. Vi ser även att vi här använder indentering för att avgränsa det som hör till `for`-loopen precis som vi använde det i vår `if`-sats.
+Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta mer på detta. Vi ser även att vi här använder indentering för att avgränsa det som hör till `for`-loopen precis som vi använde det i vår `if`-sats.
 
-Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Om man anger två siffor till `range()` får vi siffrorna imellan dessa två siffror Här räknas `number_of_apples` variablen upp från 3 till 15 och med hjälp av `if`-satsen skriver vi ut meddelanden.
+Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Om vi anger två siffor till `range()` får vi siffrorna däremellan till svar. Här räknas `number_of_apples`-variablen upp från 3 till 15 och med hjälp av `if`-satsen skriver vi ut olika meddelanden.
 
 ```python
 for number_of_apples in range(3, 15):
@@ -110,7 +110,7 @@ for number_of_apples in range(3, 15):
         print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
-Om vi bara vill göra något ett bestämt antal gånger utan att bry os om index `i` kan vi använda oss av `_` istället för `i` enligt nedan. Detta gör att vi inte behöver skapa en variabel som tar plats i minnet på datorn och som förvirrar personer som läser koden.
+Om vi bara vill göra något ett bestämt antal gånger utan att bry oss om index `i` kan vi använda oss av `_` istället för `i` enligt nedan. Detta gör att vi inte behöver skapa en variabel som tar plats i minnet på datorn och som förvirrar personer som läser koden.
 
 ```python
 for _ in range(5):
@@ -119,7 +119,7 @@ for _ in range(5):
 # skriver ut: python är ett spännande programmeringsspråk 5 gånger
 ```
 
-Vi kan även loopa över annat än talföljder och vi kommer senare i kursen lära oss många olika konstruktioner som vi kan loopa över. I nedanstående exempel loopar vi igenom en sträng bokstav för bokstav med hjälp av samma `in` konstruktion som vi använde för talföljderna. Variabeln `letter`
+Vi kan även loopa över annat än talföljder och vi kommer senare i kursen lära oss många olika konstruktioner som vi kan loopa över. I nedanstående exempel loopar vi igenom en sträng bokstav för bokstav med hjälp av samma `in` konstruktion som vi använde för talföljderna.
 
 ```python
 for letter in "räksmörgås":
