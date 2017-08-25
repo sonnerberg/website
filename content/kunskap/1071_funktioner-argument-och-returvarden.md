@@ -29,11 +29,13 @@ Funktioner används för att dela upp och kategorisera delar av vår kod som gö
 
 Vilken data får vi i uppgiften?
 
-Emil värmer i 2,5 minut på 800W.
-Andreas värmer i 3,5 minut på 800W.
-kWh pris för el på 78,04 öre per kWh.
+Emil värmer i 2,5 minut på 800W.  
+Andreas värmer i 3,5 minut på 800W.  
+kWh pris för el på 78,04 öre per kWh.  
 
-Vi kan även formeln för att beräkna energiåtgången i kWh om vi kan tiden och effekten: energi = effekt gånger tiden i timmar delat med 1000.
+Vi kan även formeln för att beräkna energiåtgången i kWh om vi kan tiden och effekten:
+
+energi = effekt * tiden i timmar / 1000.
 
 Låt oss se hur vi översätter detta till pythonkod.
 
