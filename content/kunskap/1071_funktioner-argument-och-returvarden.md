@@ -35,7 +35,7 @@ kWh pris för el på 78,04 öre per kWh.
 
 Vi kan även formeln för att beräkna energiåtgången i kWh om vi kan tiden och effekten:
 
-energi = effekt * tiden i timmar / 1000.
+energi = effekt * tiden i timmar / 1000
 
 Låt oss se hur vi översätter detta till pythonkod.
 
@@ -64,7 +64,7 @@ print("Andreas lunch kostar " + str(andreas_cost) + " kr")
 # Andreas lunch kostar 0.03641866666666667 kr
 ```
 
-Vi noterar att beräkningarna på raderna 4 och 5 samt 12 och 13 är lika förutom att raderna använder olika variabler. Vi ser här en möjlighet att skapa delar av koden som är återanvändbara med hjälp av funktioner. Hur ser då en funktion ut i Python?
+Vi noterar att beräkningarna på raderna 4 och 5 är lika förutom att de använder olika variabler. Detsamma gäller raderna 12 och 13. Vi ser här en möjlighet att skapa delar av koden som är återanvändbara med hjälp av funktioner. Hur ser då en funktion ut i Python?
 
 ```python
 def calculate_energy():
@@ -75,13 +75,13 @@ def calculate_energy():
     print("Emil använder " + str(emil_energy) + " kWh")
 ```
 
-På första raden använder vi `def` för att tala om för Python att här vill vi definiera ett namn som vi kan återanvända. Efter `def` skriver vi funktionens namn, som vi använder när vi vill köra koden inuti funktionen. Efter namnet anger vi `()` för att markera att detta är en funktion. Raden avslutas som till exempel en `if`-sats eller en `for`-loop med `:`. Efter att vi har definierat vår funktion lägger vi till en 'docstring' som dokumenterar vad funktionen gör.
+På första raden använder vi `def` för att tala om för Python att vi vill definiera ett namn som vi kan återanvända. Efter `def` skriver vi funktionens namn, som vi använder när vi vill köra den kod som finns inuti funktionen. Efter namnet anger vi `()` för att markera att detta är en funktion. Raden avslutas med `:`, precis som en `if`-sats eller en `for`-loop. Efter att vi har definierat vår funktion lägger vi till en "docstring" som dokumenterar vad funktionen gör.
 
 
 
 Argument {#argument}
 --------------------------------------
-Ovanstående exempel på funktion beräknar bara energiåtgången för Emils tillagning. Så än så länge har vi ingen vinst av att skapa funktionen, men med hjälp av argument till funktionen kan vi använda samma kod för både Emil och Andreas. Argument är värden som vi skickar in till en funktion. Värdena blir automatisk till variabler, som existerar enbart inuti funktionens kod. I kodexemplet nedan är `time_in_microwave` och `name` argument till funktionen. Dessa blir variabler inne i funktionen och bara där.
+Ovanstående exempel på funktion beräknar bara energiåtgången för Emils tillagning, inte Andreas, så än så länge har vi ingen vinst av att skapa funktionen. Men med hjälp av argument till funktionen kan vi använda samma kod för både Emil och Andreas. Argument är värden som vi skickar in till en funktion. Värdena blir automatiskt till variabler som existerar enbart inuti funktionens kod. I kodexemplet nedan är `time_in_microwave` och `name` argument till funktionen. Dessa blir variabler inne i funktionen och bara där.
 
 ```python
 def calculate_energy(time_in_microwave, name):
@@ -103,7 +103,7 @@ calculate_energy(andreas_time, "Andreas")
 # Andreas använder 0.04666666666666666 kWh
 ```
 
-Vi har nu kapslat in vår kod för att beräkna energiåtgången. Denna koden kan återanvändas för nya personer som ska värma mat så låt oss titta på ett sånt exempel.
+Vi har nu kapslat in vår kod för att beräkna energiåtgången. Denna koden kan återanvändas för nya personer som ska värma mat så låt oss titta på ett sådant exempel.
 
 > Emil och Andreas kollegor Mikael och Kenneth köper mat i restaurangen. Men hissen upp till matsalen är långsam så deras mat hinnar kallna innan de är uppe. Båda värmer maten, men bara på 600W i 30 sek.
 
@@ -139,7 +139,7 @@ calculate_energy(kenneth_and_mikael_time, "Kenneth", 600)
 
 Returvärden {#returvarden}
 --------------------------------------
-I vårt ursprungliga exempel använde vi den beräknade energiåtgången till att beräkna kostnaden för att värma maten. Det enda vi gör i vår funktion är att skriva ut ett meddelande och vårt beräknade värde finns enbart inne i funktionen. För att resten av vårt program ska kunna ta del av det beräknade värdet måste vi skicka tillbaka det till programmet eller som det heter inom programmering returnera. Vi använder oss av konstruktionen `return` för att skicka tillbaka värdet. Notera att vi har tagit bort argumentet `name` då den inte längre behövs för utskriften.
+I vårt ursprungliga exempel använde vi den beräknade energiåtgången till att beräkna kostnaden för att värma maten. Det enda vi gör i vår funktion är att skriva ut ett meddelande och vårt beräknade värde finns enbart inne i funktionen. För att resten av vårt program ska kunna ta del av det beräknade värdet måste vi skicka tillbaka det till programmet, eller som det heter inom programmering: returnera. Vi använder oss av konstruktionen `return` för att skicka tillbaka värdet. Notera att vi har tagit bort argumentet `name` då den inte längre behövs för utskriften.
 
 ```python
 def calculate_energy(time_in_microwave, effect=800):
@@ -188,7 +188,7 @@ Vi har nu två funktioner som kan återanvändas. Vi skickar in argument både m
 
 Formattering för bättre utskrifter {#format}
 --------------------------------------
-Vi har ett fungerande program men det finns nästan alltid små detaljer vi kan förbättra. I detta fallet tycker jag att utskrifter blir tråkiga med alla dessa decimaler, så låt oss titta på ett sätt att få bättre utskrifter från våra program i Python. Vi ska använda Pythons strängformaterare `format`. Vi använder `{}` för de värden vi vill ersätta med beräknade värden. Sen tilldelar vi ett namn så vi kan tilldela rätt värde till den del av strängen vi vill ersätta. Inom parentesen anger vi vilka värden vi vill koppla till formateringsvariablerna `{energy}` och `{cost}`.
+Vi har ett fungerande program men det finns nästan alltid små detaljer vi kan förbättra. I detta fallet tycker jag att utskrifterna blir tråkiga med alla dessa decimaler, så låt oss titta på ett sätt att få bättre utskrifter från våra program i Python. Vi ska använda Pythons strängformaterare `format`. Vi använder `{}` för de värden vi vill ersätta med beräknade värden. Sen tilldelar vi ett namn så vi kan tilldela rätt värde till den del av strängen vi vill ersätta. Inom parentesen anger vi vilka värden vi vill koppla till formateringsvariablerna `{energy}` och `{cost}`.
 
 ```python
 emil_time = 2.5 / 60
@@ -203,7 +203,7 @@ nice_string = "Emil använder {energy} kWh och detta kostar {cost} kr".format(
 # Emil använder 0.033333333333333326 kWh och detta kostar 0.02601333333333333 kr
 ```
 
-Vi har nu kopplat `emil_energy` till `{energy}` och `emil_cost` till `{cost}` i strängen. Vi har dock fortfarande en ful utskrift så vi använder ett formateringsargument. Vi vill ha 4 decimaler efter kommat i våra flyttal så vi använder formateringen: `:.4f`. Formateringsargument läggs efter värdet med ett komma. För decimaltal kan vi ange att vi vill ha ett visst antal decimaler, detta görs med `.` följd av antalet decimaler och ett f för float.
+Vi har nu kopplat `emil_energy` till `{energy}` och `emil_cost` till `{cost}` i strängen. Vi har dock fortfarande en ful utskrift så vi använder ett formateringsargument. Vi vill ha 4 decimaler efter punkten i våra flyttal så vi använder formateringen: `:.4f`. Formateringsargument läggs efter värdet med ett kolon. För decimaltal kan vi ange att vi vill ha ett visst antal decimaler, detta görs med `.` följd av antalet decimaler och ett f för float.
 
 ```python
 emil_time = 2.5 / 60
