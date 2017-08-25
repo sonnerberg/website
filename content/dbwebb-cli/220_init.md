@@ -3,11 +3,15 @@ Initiera kursrepo och server
 
 Innan du kan börja jobba med ett kursrepo så behöver du initiera både kursrepot och studentservern.
 
-```text
+```bash
+# Flytta in i katalogen för kursrepot, tex kursrepot htmlphp
+$ cd htmlphp
 $ dbwebb init
 ```
 
-Det som händer är ett antal saker. 
+Du måste stå i ett kursrepo för att köra kommandot.
+
+Det som händer vid init är ett antal saker. 
 
 För det första så initieras ditt kursrepo genom att katalogen `me` skapas tillsammans med ett antal underkataloger. Det är en standardstruktur som du skall följa i kursen.
 
