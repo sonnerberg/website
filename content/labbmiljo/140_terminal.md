@@ -13,11 +13,11 @@ För att installera vår labbmiljö kommer vi att använda en mix av pakethanter
 
 Här är guider för hur du kommer igång med terminalen, för respektive operativsystem.
 
-* Windows: [Installera Unix-terminalen Cygwin på Windows](kunskap/installera-unix-terminalen-cygwin-pa-windows)
-* Windows 10: [Installera Bash i Windows 10](kunskap/installera-bash-i-windows-10)
+I Windows har du två alternativ till terminal, är du osäker så väljer du Cygwin och är du sugen på nya saker och kan hantera eventuella barnsjukdomar så väljer du Bash.
+
+* Windows (alla): [Installera Unix-terminalen Cygwin på Windows](kunskap/installera-unix-terminalen-cygwin-pa-windows) (rekommenderas)
+* Windows 10: [Installera Bash i Windows 10](kunskap/installera-bash-i-windows-10) (endast avancerad)
 * Mac OS: [Terminalen och pakethantering med Brew på Mac OS](kunskap/terminalen-och-pakethantering-med-brew-pa-mac-os)
 * Unix/Linux: [Terminalen och pakethantering i Unix/Linux](kunskap/terminalen-och-pakethantering-i-unix-linux)
-
-I Windows har du två alternativ till terminal, är du osäker så väljer du Cygwin och är du sugen på nya saker och kan hantera eventuella barnsjukdomar så väljer du Bash.
 
 Om du är osäker på grunderna i en Unix-terminal så finns det en [guide som hjälper dig att komma igång med Unix på kommandoraden](kunskap/20-steg-for-att-komma-i-gang-med-unix-och-terminalen).
