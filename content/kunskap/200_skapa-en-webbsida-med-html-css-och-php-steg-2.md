@@ -2,11 +2,10 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2015-09-17": (C, mos) Stängde article element.
-  "2015-09-15": (B, mos) La till semikolon som saknades i exempelkod.
-  "2015-05-20": (A, mos) Första utgåvan inför htmlphp version 2.
-updated: "2015-09-17 10:20:42"
-created: "2015-05-06 13:05:00"
+    "2017-08-28": (D, mos) Bort referens till Firebug.
+    "2015-09-17": (C, mos) Stängde article element.
+    "2015-09-15": (B, mos) La till semikolon som saknades i exempelkod.
+    "2015-05-20": (A, mos) Första utgåvan inför htmlphp version 2.
 ...
 Skapa en webbsida med HTML, CSS och PHP, steg 2
 ==================================
@@ -526,7 +525,7 @@ Så här långt har du ett antal tekniker för att felsöka.
 
 1. Validera enligt HTML och CSS
 1. Högerklicka och visa källkod, ser sidan ut som jag tänkte? Har PHP genererat den HTML-kod som jag ville?
-1. Firebug, visa HTML-koden och dess tillhörande CSS-konstruktioner. Det som visas i Firebug är inte exakt samma som finns i källkoden. Webbläsaren har tolkat källkoden och lagt till element som den anser saknas.
+1. Devtools, visa HTML-koden och dess tillhörande CSS-konstruktioner. Det som visas i Devtools är inte exakt samma som finns i källkoden. Webbläsaren har tolkat källkoden och lagt till element som den anser saknas.
 1. PHP felmeddelande, lös alltid det översta först, resten kan vara följdfel.
 1. Googla felet, eller konstruktionen. I din googlingsfråga, lägg alltid tekniken först "html main", "css color" eller "php strlen", så får du bättre träffar.
 
