@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-08-28": (G, mos) Bort referens till Firebug.
     "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
@@ -59,7 +60,9 @@ Läs följande:
 
 Titta på följande:
 
+<!--
 1. [Kom i gång och installera Firebug som utvecklarverktyg]( coachen/kom-i-gang-och-installera-firebug-som-utvecklarverktyg).
+-->
 
 1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 2.
 
