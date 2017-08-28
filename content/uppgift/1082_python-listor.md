@@ -5,6 +5,7 @@ category:
     - python
     - lab
 revision:
+    "2017-08-28": (F, mos) Bort med stycke om extrauppgifter.
     "2017-06-12": (E, mos) Uppdatering inför ht17 och v2 av labben.
     "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
     "2015-01-14": (C, mos) Fel länk till förkunskaperna.
@@ -63,8 +64,6 @@ Hamnar du i bekymmer så finns det ledtrådar som du kan få. Du aktiverar ledtr
 
 Du behöver göra ett visst antal uppgifter för att bli godkänd på labben. Sedan finns extra uppgifter du kan utföra om du så väljer. [Varför skall jag göra extrauppgiftena](kurser/faq/varfor-gora-extra-uppgifter)?
 
-[YOUTUBE src=7pPjt__amAM width=630 caption="Kenneth visar hur man kommer igång med labbarna."]
-
 
 
 Krav {#krav}
@@ -87,13 +86,6 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 
 
 
-Extrauppgift {#extra}
------------------------
-
-Det finns ingen extra uppgift.
-
-
-
 Tips från coachen {#tips}
 -----------------------
 
@@ -102,12 +94,3 @@ Debugga och felsök genom att skriva ut variablernas olika innehåll med `print(
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-Versioner av labben {#version}
------------------------
-
-Detta är version 2 av labben.
-
-Det finns en tidigare version v1 av labben som beskrivs i "[Python med variabler, villkor, funktioner och loopar](uppgift/python-med-variabler-villkor-funktioner-och-loopar)".

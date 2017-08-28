@@ -1,13 +1,15 @@
 ---
-author: mos
-category: python
+author:
+    - mos
+category:
+    - python
+    - lab
 revision:
-  "2017-06-14": (D, efo) Uppdaterade till ny kursstruktur med funktioner i kmom03.
-  "2015-08-25": (C, mos) Uppdaterade till dbwebb v2.
-  "2014-08-27": (B, mos) Gneomgången och uppdaterad inför kursstart.
-  "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
-updated: "2015-08-25 12:49:49"
-created: "2014-07-03 06:38:04"
+    "2017-08-28": (E, mos) Bort med stycke om extrauppgifter.
+    "2017-06-14": (D, efo) Uppdaterade till ny kursstruktur med funktioner i kmom03.
+    "2015-08-25": (C, mos) Uppdaterade till dbwebb v2.
+    "2014-08-27": (B, mos) Gneomgången och uppdaterad inför kursstart.
+    "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
 ...
 Python med funktioner
 ==================================
@@ -61,8 +63,6 @@ Hamnar du i bekymmer så finns det ledtrådar som du kan få. Du aktiverar ledtr
 
 Du behöver göra ett visst antal uppgifter för att bli godkänd på labben. Sedan finns extra uppgifter du kan utföra om du så väljer. [Varför skall jag göra extrauppgiftena](kurser/faq/varfor-gora-extra-uppgifter)?
 
-[YOUTUBE src=7pPjt__amAM width=630 caption="Kenneth visar hur man kommer igång med labbarna."]
-
 
 
 Krav {#krav}
@@ -82,13 +82,6 @@ dbwebb validate lab3
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Det finns ingen extra uppgift.
 
 
 

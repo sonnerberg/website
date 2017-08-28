@@ -5,6 +5,7 @@ category:
     - python
     - lab
 revision:
+    "2017-08-28": (F, mos) Bort med stycke om extrauppgifter.
     "2017-06-12": (E, mos) Uppdatering inför ht17 och v2 av labben.
     "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
     "2015-01-14": (C, mos) Fel länk till förkunskaperna.
@@ -84,13 +85,6 @@ dbwebb validate lab1
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Det finns ingen extra uppgift.
 
 
 

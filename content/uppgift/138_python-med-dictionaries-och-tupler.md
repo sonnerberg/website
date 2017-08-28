@@ -1,14 +1,16 @@
 ---
-author: mos
-category: python
+author:
+    - mos
+category:
+    - python
+    - lab
 revision:
-  "2017-06-15": (E, efo) Uppdaterades till nya kursstrukturen.
-  "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
-  "2015-01-14": (C, mos) Fel länk till förkunskaperna.
-  "2014-08-27": (B, mos) Texten uppdaterad och genomgången.
-  "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
-updated: "2015-08-25 14:01:00"
-created: "2014-07-03 06:37:02"
+    "2017-08-28": (F, mos) Bort med stycke om extrauppgifter.
+    "2017-06-15": (E, efo) Uppdaterades till nya kursstrukturen.
+    "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
+    "2015-01-14": (C, mos) Fel länk till förkunskaperna.
+    "2014-08-27": (B, mos) Texten uppdaterad och genomgången.
+    "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
 ...
 Python med dictionaries och tupler
 ==================================
@@ -81,13 +83,6 @@ dbwebb validate lab5
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Det finns ingen extra uppgift.
 
 
 
