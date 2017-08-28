@@ -12,7 +12,7 @@ revision:
     "2014-08-26": (B, mos) Testad, genomgången och uppdaterad.
     "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
 ...
-Python med värden och variabler
+Python och listor
 ==================================
 
 En laboration där du jobbar igenom grunderna i Python med värden, variabler och grundläggande datatyper.
@@ -58,7 +58,7 @@ Du kan testa dina lösningar genom att köra programmet `answer.py` som ett vanl
 $ python3 answer.py
 ```
 
-Glöm inte att validera ofta, då slipper du bekymmer i slutet. 
+Glöm inte att validera ofta, då slipper du bekymmer i slutet.
 
 Hamnar du i bekymmer så finns det ledtrådar som du kan få. Du aktiverar ledtrådarna för respektive uppgift i filen `answer.py`.
 
@@ -84,7 +84,7 @@ Krav {#krav}
 dbwebb validate lab1
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
