@@ -30,7 +30,7 @@ Du kan grunderna i Python och stränghantering och du har byggt [första delen](
 Introduktion {#intro}
 -----------------------
 
-Spelet "Guess the number" är ett enkelt gissningsspel där någon tänker på ett tal mellan 1-100. Man har 6 gissningar på sig att gissa rätt tal. Vid varje gissning så får man svaret om talet "för lågt", "för högt" eller "rätt gissat".
+Spelet "Guess the number" är ett enkelt gissningsspel där någon tänker på ett tal mellan 1-100. Man har 6 gissningar på sig att gissa rätt tal. Vid varje gissning så får man svar om talet är "för lågt", "för högt" eller "rätt gissat".
 
 Kapitel 4 i boken [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) beskriver hur spelet "Guess the number" kan implementeras.
 
@@ -52,9 +52,9 @@ cd kmom03/marvin2
 
 3. Döp om nuvarande `marvin.py` till `main.py`.
 
-4. Skapa en ny fil `marvin.py` och lägg alla menyvals funktioner i denna nya Python modul. Importera `marvin.py` i `main.py`.
+4. Skapa en ny fil `marvin.py` och lägg alla menyvalsfunktioner i denna nya Pythonmodul. Importera `marvin.py` i `main.py`.
 
-5. Gör ett menyval som löser spelet "Guess the number" där Marvin tänker på ett tal mellan 1-100 och spelare ska gissa vilket det är. För varje gissning ska Marvin berätta om gissningen var högre eller lägre än det han tänkte på. Spelaren ska ha 6 gissningar på sig.
+5. Gör ett menyval som löser spelet "Guess the number" där Marvin tänker på ett tal mellan 1-100 och spelaren ska gissa vilket det är. För varje gissning ska Marvin berätta om gissningen var högre eller lägre än det han tänkte på. Spelaren ska ha 6 gissningar på sig.
 
 6. Menyval: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut.
 
