@@ -1,8 +1,12 @@
 ---
-author: mos
-category: php
-updated: "2015-01-12 09:14:38"
-created: "2013-03-25 15:22:55"
+author:
+    - mos
+category:
+    - php
+revision:
+    "2017-08-29": "(C, mos) Bort blå ruta om phps."
+    "2015-01-12": "(B, mos) Uppdaterad utgåva."
+    "2013-03-25": "(A, mos) Första utgåvan."
 ...
 Kom i gång med PHP på 20 steg
 ==================================
@@ -120,14 +124,6 @@ Skillnaden mellan `mall.html` och `mall.php` är att sidan som slutar på ändel
 // Nu kommer PHP sluttag.
 ?>
 ```
-
-[INFO]
-**Tips om filändelse `.phps`**
-  
-Filändelsen `.phps` är en specialare som webbservern tolkar till att visa källkoden för PHP. Döp filen med ändelsen `.phps` och resultatet blir att filens källkod visas utan att köras genom preprocessorn. Detta kan vara bra att använda om man vill visa filens  källkod (om man inte har tillgång till `source.php`).
-
-Se exempel hur källkoden visas på [`mall.phps`](kod-exempel/guiden-php-20/2/mall.phps).
-[/INFO]
 
 Nu har vi grunderna till ett testprogram för PHP. Då går vi vidare.
 
@@ -1598,5 +1594,3 @@ Följande är referenser som använts som fotnötter i texten.
 [^2]: [Läs om PHP på Wikipedia](http://en.wikipedia.org/wiki/PHP).
 
 [^3]: [Läs om scope på Wikipedia](http://en.wikipedia.org/wiki/Scope_%28computer_science%29).
-
-
