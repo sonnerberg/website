@@ -52,7 +52,7 @@ Läs följande:
 
 Läs följande:
 
-1. Del 4-6, 8-9, 11, 13 av artikeln [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg).
+1. Del 6, 8-9, 11, 13 av artikeln [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg).
 
 
 

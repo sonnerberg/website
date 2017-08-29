@@ -78,7 +78,7 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 Läs följande:
 
-1. Del 1-4, 7 av artikeln [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg)
+1. Del 1-5, 7 av artikeln [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg)
 
 1. HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
 
