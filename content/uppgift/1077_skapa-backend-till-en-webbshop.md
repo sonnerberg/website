@@ -78,7 +78,7 @@ Krav {#krav}
 
 1. Skapa en backend till en webbshop som kan nås av en inloggad administratör. Ha en länk i din navbar till webbshoppen.
 
-1. Du skall använda minst en lagrad procedur, en inbyggd funktion, en trigger och en transaktion. Skapa en fil `anax-lite/sql/setup-webshop.sql` där du sparar all SQL-kod.
+1. Du skall använda minst en lagrad procedur, en egendefinierad funktion, en trigger och en transaktion. Skapa en fil `anax-lite/sql/setup-webshop.sql` där du sparar all SQL-kod.
 
 1. Lägg till minst 5 produkter av minst två olika kategorier i databasen. En produkt skall ha en beskrivning, bild, kategori, pris, lagerstatus.
 
