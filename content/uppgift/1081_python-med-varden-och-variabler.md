@@ -12,7 +12,7 @@ revision:
     "2014-08-26": (B, mos) Testad, genomgången och uppdaterad.
     "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
 ...
-Python och listor
+Python med värden och variabler
 ==================================
 
 En laboration där du jobbar igenom grunderna i Python med värden, variabler och grundläggande datatyper.
