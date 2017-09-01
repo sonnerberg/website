@@ -1,32 +1,27 @@
 ---
-author: mos
-published: "2016-08-26"
+author:
+    - mos
 category:
     - kursnyheter
+published: "2017-09-01"
 ...
-Välkommen till distansprogrammet i Webbprogrammering 2016
+Var finns alla webbprogrammerare anno 2017
 ==================================
 
-[FIGURE src="/image/snapht16/var-bor-programstudenter-distans.png?w=c5&cf" class="right"]
+[FIGURE src="/image/snapht17/var-bor-alla-distansare.png?w=c5&cf" class="right"]
 
-Då var det upprop för distansprogrammet i Webbprogrammering anno 2016.
+Vi gör en koll på var alla våra studenter finns och kommer ifrån, oavsett om de går på campus eller deltar via distans.
 
-Man får säga välkommen hit!
-
-Låt oss starta.
+Kollen baseras på de som påbörjar sina studier hösten 2017 och är registrerad någon av våra webb-utbildningar/kurspaket.
 
 <!--more-->
-
-Det finns 60 studieplatser och i dagsläget är 83 studenter antagna. Vi får se hur många som dyker upp till uppropet och hur många som är kvar efter första månaden.
-
-Oavsett vad så är ni alla hjärtligt välkomna hit!
 
 
 
 Var kommer ni ifrån? {#var}
 -----------------------------------
 
-Här kan ni se en översikt över var ni kommer ifrån. Ni är utspridda över större delen av landet.
+Här kan ni se en översikt över var ni blivande webbprogrammerare kommer ifrån. Som ni ser så är ni utspridda över större delen av landet. De som saknar adress eller kommer från utlandet är borttagna ur listan.
 
 <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
 
@@ -41,64 +36,133 @@ Här kan ni se en översikt över var ni kommer ifrån. Ni är utspridda över s
   function drawMarkersMap() {
   var data = google.visualization.arrayToDataTable([
     ['Ort',   'Antal'],
-    ["Björna", 1],
+    ["Agnesberg", 2],
+    ["Aplared", 1],
+    ["Backaryd", 1],
+    ["Billesholm", 1],
+    ["Bjärred", 1],
+    ["Björklinge", 1],
+    ["Bollebygd", 1],
+    ["Borgholm", 2],
     ["Borlänge", 2],
-    ["Borås", 1],
-    ["Bräkne-Hoby", 1],
-    ["Djursholm", 1],
-    ["Dyltabruk", 2],
-    ["Enskede", 1],
+    ["Borås", 5],
+    ["Brastad", 1],
+    ["Bromma", 2],
+    ["Bromölla", 1],
+    ["Bunkeflostrand", 1],
+    ["Ellös", 1],
+    ["Enköping", 5],
+    ["Enskede", 3],
     ["Eskilstuna", 2],
-    ["Finspång", 2],
-    ["Gävle", 2],
-    ["Göteborg", 4],
-    ["Helsingborg", 1],
-    ["Huddinge", 1],
-    ["Hägersten", 1],
-    ["Hällefors", 1],
+    ["Falkenberg", 1],
+    ["Falun", 2],
+    ["Farsta", 2],
+    ["Floda", 1],
+    ["Forshaga", 1],
+    ["Färila", 1],
+    ["Gimo", 2],
+    ["Gislaved", 1],
+    ["Gävle", 3],
+    ["Göteborg ", 13],
+    ["Halmstad", 1],
+    ["Handen", 1],
+    ["Helsingborg", 7],
+    ["Hisings Backa", 1],
+    ["Hudiksvall", 3],
+    ["Hägersten", 5],
+    ["Hälleforsnäs", 1],
     ["Hässelby", 1],
     ["Hässleholm", 1],
-    ["Iggesund", 1],
-    ["Järfälla", 2],
+    ["Hästveda", 1],
+    ["Höör", 1],
+    ["Johanneshov", 1],
+    ["Jämjö", 3],
+    ["Järfälla", 1],
+    ["Järna", 1],
     ["Jönköping", 1],
-    ["Karlskrona", 1],
-    ["Kista", 1],
-    ["Kullavik", 1],
-    ["Lessebo", 1],
-    ["Lidingö", 1],
-    ["Linköping", 1],
-    ["Malmö", 5],
-    ["Nyköping", 1],
-    ["Nässjö", 1],
-    ["Saltsjö-Boo", 1],
-    ["Sandviken", 1],
+    ["Kalmar", 4],
+    ["Karlshamn", 1],
+    ["Karlskoga", 1],
+    ["Karlskrona", 6],
+    ["Karlstad", 1],
+    ["Katrineholm", 3],
+    ["Kista", 4],
+    ["Knislinge", 1],
+    ["Kristianstad", 1],
+    ["Kullavik", 3],
+    ["Kungälv", 1],
+    ["Kållekärr", 1],
+    ["Kävlinge", 1],
+    ["Köping", 1],
+    ["Landskrona", 1],
+    ["Lidingö", 3],
+    ["Lidköping", 1],
+    ["Limhamn", 4],
+    ["Linderöd", 1],
+    ["Linköping", 5],
+    ["Ljusdal", 1],
+    ["Luleå", 2],
+    ["Lund", 3],
+    ["Lönneberga", 1],
+    ["Malmö", 13],
+    ["Mellerud", 1],
+    ["Nacka", 1],
+    ["Norrköping", 3],
+    ["Norsborg", 2],
+    ["Nybro", 1],
+    ["Nykvarn", 1],
+    ["Nynäshamn", 1],
+    ["Oxie", 1],
+    ["Perstorp", 1],
+    ["Piteå", 1],
+    ["Rimforsa", 1],
+    ["Ronneby", 2],
+    ["Rödeby", 1],
+    ["Sandviken", 2],
+    ["Segeltorp", 1],
+    ["Sjuntorp", 1],
+    ["Skanör", 2],
     ["Skellefteå", 1],
-    ["Skogås", 1],
-    ["Skutskär", 1],
-    ["Skyttorp", 1],
-    ["Sollentuna", 2],
-    ["Stockholm", 3],
-    ["Sundbyberg", 1],
-    ["Sundsvall", 1],
-    ["Södra Sandby", 1],
-    ["Tibro", 1],
-    ["Trollhättan", 1],
-    ["Tomelilla", 1],
-    ["Trångsund", 2],
+    ["Skene", 1],
+    ["Skärholmen", 2],
+    ["Skövde", 2],
+    ["Sollentuna", 5],
+    ["Solna", 4],
+    ["Spånga", 1],
+    ["Stavanger", 1],
+    ["Stockholm", 18],
+    ["Stora Höga", 1],
+    ["Strängnäs", 1],
+    ["Sundbyberg", 3],
+    ["Sundsvall", 2],
+    ["Svängsta", 1],
+    ["Sävedalen", 1],
+    ["Söderbärke", 1],
+    ["Södertälje", 1],
+    ["Tavelsjö", 1],
+    ["Torestorp", 1],
+    ["Torslanda", 1],
+    ["Trelleborg", 1],
+    ["Trensum", 2],
+    ["Tungelsta", 2],
+    ["Täby", 4],
+    ["Tävelsås", 1],
+    ["Töreboda", 1],
+    ["Uddevalla", 2],
     ["Umeå", 1],
-    ["Upplands Väsby", 1],
-    ["Uppsala", 4],
-    ["Valla", 1],
-    ["Veberöd", 1],
-    ["Vendelsö", 1],
-    ["Vällingby", 1],
+    ["Uppsala", 12],
+    ["Vallentuna", 3],
+    ["Vasa", 1],
+    ["Vällingby", 2],
     ["Vänge", 1],
-    ["Västra Frölunda", 1],
+    ["Västervik", 1],
+    ["Västerås", 2],
+    ["Västra Frölunda", 2],
     ["Växjö", 2],
-    ["Älghult", 1],
-    ["Älvsjö", 1],
-    ["Ånäset", 1],
-    ["Örebro", 1],
+    ["Åkersberga", 3],
+    ["Årsta", 1],
+    ["Ängelholm", 1],
+    ["Örebro", 6],
     ["Östersund", 1]
   ]);
 
@@ -117,83 +181,15 @@ Här kan ni se en översikt över var ni kommer ifrån. Ni är utspridda över s
 
 Det tar lite tid att ladda alla orterna i kartan, varje ortsnamn geokodas av Googles API, så de ploppar fram efterhand.
 
-Om jag bara lyckas få min karta ovan att fungera dynamiskt, så borde det se ut så här.
+Håll musen över kartan så zoomar den in på området.
 
-[FIGURE src=/image/snapht16/var-bor-alla-distansare.png caption="Skärmdump av kartan som fungerar lokalt hos Mikael..."]
+Om kartan ovan fungerar dynamiskt så borde det se ut så här.
 
-
-
-Uppropet {#uppropet}
------------------------------------
-
-Det formella uppropet består i att ni [fyller i en enkät](https://goo.gl/forms/a8c78UeoThbWfhtB2) som ni även fått skickad till ert mail.
-
-När ni skickat in den så är ni formellt uppropade på programmet och studieplatsen är er. Förvalta platsen nu väl.
-
-
-Följande har hänt, och händer nu vidare.
+[FIGURE src=/image/snapht17/var-bor-alla-distansare.png caption="Skärmdump av kartan som fungerar lokalt hos Mikael..."]
 
 
 
-Introveckan {#intro}
------------------------------------
+Förra årets koll {#anno2016}
+----------------------------------------
 
-På [campus hade vi en introvecka](blogg/schema-introveckan-2016) och den avslutades med studentkårsaktiviteter som pågår under helgen och under kommande vecka.
-
-På förmiddagarna träffades vi i labbsalarna och där var målet att alla skulle ha labbmiljön installerad innan veckan var slut.
-
-Distansstudenterna var inbjudna att delta via hangout och nånstans mellan 10-20 blivande studenter dök upp under veckan.
-
-På eftermiddagarna var det diverse info varvat med aktiviteter från lärarteamet.
-
-Om du inte deltog i introveckan så är tipset att du försöker komma igång och installera labbmiljön så fort det bara går.
-
-
-
-Presentation kring uppropet {#pres}
------------------------------------
-
-Mikael har några [videos där han säger hej och välkommen till dig som distansstudent](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_strrmFRWhLnPJzViNcwee).
-
-Kika på dem. De hjälper dig med en första orientering och underlättar att komma igång med kurserna.
-
-
-
-Kurserna startar nu {#kursstart}
------------------------------------
-
-Då kör vi.
-
-[Kom igång med kurserna](https://dbwebb.se/kurser/faq/kom-igang).
-
-Det är basen du behöver för att komma igång med kurserna. Fixa den.
-
-
-
-Börja jobba {#jobba}
------------------------------------
-
-Du har två kurser som inleder terminen. Du har nu tillgång till dem via ITs och därmed tillgång till allt kursmaterial samt information kring kurserna.
-
-Skumma igenom instruktionerna för kmom01 i de båda kurserna.
-
-Gå sen direkt till att installera labbmiljön i respektive kurs. 
-
-* [Labbmiljö htmlphp](kurser/htmlphp/kmom01#labbmiljo).
-* [Labbmiljö python](kurser/python/kmom01#labbmiljo).
-
-När det är klart kan du återigen läsa igenom instruktionen för respektive kmom och börja jobba.
-
-
-
-Avslutningsvis {#avslut}
------------------------------------
-
-Du kan säkert tycka det är mycket att sätta dig in i på en gång. Det är det. Ge det den tiden som behövs. 
-
-Hör av dig i hangout, forum, chatt eller mail om du har frågor.
-
-Här är en [egen tråd i forumet om uppropet](t/5527). Fråga gärna där.
-
-
-/Mikael och resten av lärarteamet
+Vi gjorde två liknande kollar förra året i artiklarna "[Välkommen till distansprogrammet i Webbprogrammering 2016](blogg/var-finns-alla-programstudenter-pa-distans)" och "[Var finns alla kurspaketare på distans anno 2016?](blogg/var-finns-alla-kurspaketare-pa-distans)".
