@@ -95,9 +95,14 @@ Byt ut kmom01 mot det kursmoment du vill inspektera.
 Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
 
 
+[YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
+
+
 
 Klart! {#klar}
 ---------------------------------------
+
+[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
 
 Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
 
