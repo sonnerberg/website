@@ -5,6 +5,7 @@ category:
     - pedagogik
     - konferenser
 revision:
+    "2017-09-01": "(D, mos) ICED 2018 samt Copenhagen."
     "2017-08-15": "(C, mos) ICED 2018 samt Copenhagen."
     "2017-06-22": "(B, mos) Info om Swednet."
     "2017-06-21": "(A, mos) Forskning om högre utbildning – konferens i Lund 15-16 maj 2018."
@@ -20,6 +21,8 @@ Jag gör ett försök att göra en sida med konferenser, seminarier och möjligh
 
 Konferenser {#konferenser}
 -----------------------
+
+Högskolan Väst i Trollhättan har [VILÄR-konferensen](https://www.hv.se/en/vilar) som går av stapeln den 7-8 december, 2017.
 
 ICED 2018 går av stapeln i Atlanta, Georgia 5-8 Juni. Call for pre conference workshop proposals är öppen och stänger redan den 1 september, 2017. Konferensarrangörerna söka förslag på 3-timmars workshoppar om pedagogisk utveckling. (källa [swednet](http://www.swednetwork.se/iced-2018-2/)).
 
