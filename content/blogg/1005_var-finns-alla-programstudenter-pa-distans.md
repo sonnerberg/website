@@ -8,7 +8,7 @@ published: "2017-09-01"
 Var finns alla webbprogrammerare anno 2017
 ==================================
 
-[FIGURE src="/image/snapht17/var-bor-alla-distansare.png?w=c5&cf" class="right"]
+[FIGURE src="image/snapht17/var-bor-alla-distansare.png?w=c5&cf&a=50,40,10,30" class="right"]
 
 Vi gör en koll på var alla våra studenter finns och kommer ifrån, oavsett om de går på campus eller deltar via distans.
 
@@ -185,7 +185,7 @@ Håll musen över kartan så zoomar den in på området.
 
 Om kartan ovan fungerar dynamiskt så borde det se ut så här.
 
-[FIGURE src=/image/snapht17/var-bor-alla-distansare.png caption="Skärmdump av kartan som fungerar lokalt hos Mikael..."]
+[FIGURE src=image/snapht17/var-bor-alla-distansare.png caption="Skärmdump av kartan som fungerar lokalt hos Mikael..."]
 
 
 
