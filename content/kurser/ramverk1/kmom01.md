@@ -93,7 +93,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgiften "[Bygg en me-sida till ramverk1](uppgift/bygg-en-me-sida-till-ramverk1)". Det handlar om att bygga din me-sida med Anax och publicera på Github. Spara allt under `me/anax`.
 
-1. Gör uppgiften "[Förbed för att bygga ett kommentarssystem](uppgift/forbered-for-att-bygga-ett-kommentarssystem)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara eventuell kod under `me/anax`.
+1. Gör uppgiften "[Förbered för att bygga ett kommentarssystem](uppgift/forbered-for-att-bygga-ett-kommentarssystem)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara eventuell kod under `me/anax`.
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (1.0.\*) när du är klar med kursmomentet.
 

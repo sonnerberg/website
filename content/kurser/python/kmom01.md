@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-09-01": (J, mos) Video till installation av dbwebb-cli.
     "2017-06-15": (I, mos) Omarbetning inför ht17.
     "2016-03-15": (H, mos) Tog bort videoserie MonkeyLords och NewBoston.
     "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
@@ -33,6 +34,8 @@ Labbmiljön  {#labbmiljo}
 *(ca: 2-4 studietimmar)*
 
 Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
+
+Om du vill ha en introduktion till det som händer i steg 2-4 så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
 
 1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen. 
 
