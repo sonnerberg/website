@@ -73,7 +73,7 @@ Krav {#krav}
 
 1. Menyval: Slumpmässiga tal. Marvin ska fråga efter min och max och sedan skriva ut 10 slumpmässiga tal mellan min och max. Dessa ska skrivas ut kommaseparerat på samma rad.
 
-1. Menuval: Summa och medel: Marvin ska fråga efter tal tills du anser dig vara klar (t.ex skriver "done") och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal.
+1. Menyval: Summa och medel: Marvin ska fråga efter tal tills du anser dig vara klar (t.ex skriver "done") och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal.
 
 1. Validera och publicera din kod enligt följande.
 
