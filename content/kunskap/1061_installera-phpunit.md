@@ -84,7 +84,7 @@ Bra, då vet vi att den nedladdade filen fungerar.
 
 
 
-###Placera skriptet i sökvägen (endast Cygwin) {#ipathen}
+###Placera skriptet i sökvägen {#ipathen}
 
 Du kan nu kopiera skriptet till en katalog som ligger i din `$PATH` variabel. Du kan lägga den exekverabara filen i godtycklig katalog som du har i din PATH. Jag väljer `/usr/local/bin`.
 
@@ -92,7 +92,7 @@ Du kan nu kopiera skriptet till en katalog som ligger i din `$PATH` variabel. Du
 
 ####Windows Cygwin {#wincygwin}
 
-Så här gör du på Windows Cygwin.
+Så här gör du på Windows Cygwin, för övriga plattformar skrollar du till nsäta stycke.
 
 Placera skriptet `phpunit.phar` i en katalog som ligger i sökvägen.
 
