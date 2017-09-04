@@ -46,14 +46,10 @@ $ php --version
 
 
 
-Installera phpunit {#install}
+Ladda ned phpunit {#download}
 -------------------------------
 
 Programmet phpunit är en PHAR-fil (PHP-arkiv) som du kan ladda ned och spara någonstans i din sökväg.
-
-
-
-###Ladda ned och verifiera {#laddaned}
 
 Säg jag vill ladda hem en godtycklig version av phpunit. Så här gör jag.
 
@@ -84,15 +80,16 @@ Bra, då vet vi att den nedladdade filen fungerar.
 
 
 
-###Placera skriptet i sökvägen {#ipathen}
+Installera phpunit i sökvägen {#install}
+-------------------------------
 
 Du kan nu kopiera skriptet till en katalog som ligger i din `$PATH` variabel. Du kan lägga den exekverabara filen i godtycklig katalog som du har i din PATH. Jag väljer `/usr/local/bin`.
 
 
 
-####Windows Cygwin {#wincygwin}
+###Windows Cygwin {#wincygwin}
 
-Så här gör du på Windows Cygwin, för övriga plattformar skrollar du till nsäta stycke.
+Så här gör du på Windows Cygwin, för övriga plattformar skrollar du till nästa stycke.
 
 Placera skriptet `phpunit.phar` i en katalog som ligger i sökvägen.
 
@@ -125,13 +122,13 @@ Om det inte fungerar direkt så kan du behöva uppdatera sökvägen med följand
 $ hash -r
 ```
 
-Nu är du klar.
+Pröva sedan att köra kommandot `phpunit` igen. Det bör nu fungera.
 
 
 
-####Övriga plattformar {#wincygwin}
+###Linux, Mac OS, Windows 10 Bash {#linux}
 
-Så här gör du på övriga plattformar, inklusive Linux, Mac OS, Windows 10 Bash.
+Så här gör du på Linux, Mac OS, Windows 10 Bash.
 
 Placera skriptet `phpunit.phar` som kommandot `phpunit` i en katalog som ligger i sökvägen.
 
