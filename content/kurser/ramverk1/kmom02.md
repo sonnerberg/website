@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-09-04": "(B, mos) Minskade omfattningen genom att ta bort skrivuppgiften om MVC."
     "2017-08-08": "(A, mos) Första utgåvan."
 ...
 Kmom02: MVC
@@ -16,6 +17,12 @@ Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar en
 Under arbetets gång funderar vi på hur man bäst organiserar sin kod i moduler för att göra dem återanvändbara, testbara och lätta att underhålla och vidareutveckla.
 
 <!--more-->
+
+Som exempelkod används en REM-server som är byggd enligt MVC med fokus på delarna Model och Kontroller.
+
+[FIGURE src=image/snapht17/remserver-docs.png?w=w2 caption="Manualen för REM servern som också visar att REM servern är installerad och fungerar."]
+
+[FIGURE src=image/snapht17/remserver-rest-client.png?w=w2 caption="En REST fråga till REM servern."]
 
 
 
@@ -61,7 +68,7 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[En REM Server som Kontroller och Modell](kunskap/en-rem-server-som-kontroller-och-modell)" som ger dig ett exempel hur du skriver kod i form av en kontroller och en modell. REM servern lägger du i `kmom02/rem-server` och när du jobbar i kursmomentet kan du jobba i `kmom02/anax2`. När du är klar så placerar du den färdiga koden i `me/anax` och integrerar i din me-sida.
+1. Jobba igenom artikeln "[En REM Server som Kontroller och Modell](kunskap/en-rem-server-som-kontroller-och-modell)" som ger dig ett exempel hur du skriver kod i form av en kontroller och en modell. REM servern lägger du i `kmom02/remserver`. När du är klar så placerar du den färdiga koden i `me/anax` och integrerar i din me-sida.
 
 
 
@@ -73,7 +80,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgiften "[Bygg en prototyp till ett kommentarssystem](uppgift/bygg-en-prototyp-till-ett-kommentarssystem)". Du kommer igång och skriver ett enkelt kommentarssystem, det blir en prototyp för att lära sig domänen och skapa en kodbas. Spara koden under `me/anax`.
 
+<!--
 1. Skriv gruppvis en artikel om ["Model, View, Controller (MVC)"](uppgift/skriv-artikel-om-mvc). Spara artikeln i din me-sida.
+-->
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
@@ -88,7 +97,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Vilka tidigare erfarenheter har du av MVC? Gick arbetet bra med artikeln om MVC?
+* Vilka tidigare erfarenheter har du av MVC? Använde du någon speciell källa för att läsa på om MVC? Kan du med egna ord förklara någon fördel med kontroller/modell-begreppet, så som du ser på det?
 * Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader med dina egna ord?
 * Gick arbetet med REM servern bra och du lyckades integrera den i din me-sida?
 * Berätta om arbetet med din kommentarsmodul, hur långt har du kommit och hur tänker du?
