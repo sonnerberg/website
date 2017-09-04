@@ -84,11 +84,15 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Bygg vidare på en kommentarsmodul i ditt Anax. Använd databasdrivna modeller och formulärhantering enligt ovan övningar.
+1. Se över grunden till din me-sida och överväg om något av de nya begreppen bör introduceras i din generella me-sida. Eventuella ändringar gör du under `me/anax`.
 
-1. Skriv gruppvis en artikel om ["Active record"](uppgift/skriv-artikel-om-active-record) (eller ORM, bra eller dåligt). Spara artikeln i din me-sida.
+1. Gör uppgiften "[Kommentarssystem med användare](uppgift/kommentarssystem-med-anvandare)". Bygg vidare på ditt kommentarssystem och se till att integrera med användare. Spara koden under `me/anax`.
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med alla uppgifter i kursmomentet.
+
+<!--
+1. Skriv gruppvis en artikel om ["Active record"](uppgift/skriv-artikel-om-active-record) (eller ORM, bra eller dåligt). Spara artikeln i din me-sida.
+-->
 
 
 
@@ -101,7 +105,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* HUr gick det att integrera formulärhantering och databashantering i ditt kommentarssystem?
-* ORM, Active Record PHP implementation.
+* Hur gick det att integrera formulärhantering och databashantering i ditt kommentarssystem?
+* Berätta om din syn på Active record och liknande upplägg, ser du fördelar och nackdelar?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
