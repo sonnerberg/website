@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-09-04": "(B, mos) Bort med skrivuppgift och flytta User CRUD till kmom04."
     "2017-08-11": "(A, mos) Första utgåvan."
 ...
 Kmom03: DI
@@ -77,12 +78,13 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Refactoring av din me-sida. Uppdatera din me-sida i `me/anax`, inklusive den REM server du har integrerat. Se till att den använder tekniker för Anax DI och `$di`. Det finns inte längre någon anledning att injecta `$app`, utgå istället från `$di`. Uppdatera även hur du konfigurerar dina routes, så att du gör som i övningen.
 
-1. Gör uppgiften "[Kommentarssystem med användare](uppgift/kommentarssystem-med-anvandare)". Bygg vidare på ditt kommentarssystem och se till att integrera med användare. Spara koden under `me/anax`.
-
-1. Skriv gruppvis en artikel om ["Dependency Injection (DI)"](uppgift/skriv-artikel-om-di). Spara artikeln i din me-sida.
+1. Bygg vidare på ditt kommentarssystem och förbered för att lägga till användarhantering. Det finns inget att redovisa förutom frågor i redovisningstexten. I nästa kmom kommer databas och CRUD, så förebered vad du kan och tänk igenom din struktur. Se till att du använder `$di` och inte `$app` samt använd senaste strukturen av routern. Spara koden under `me/anax`.
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
+<!--
+1. Skriv gruppvis en artikel om ["Dependency Injection (DI)"](uppgift/skriv-artikel-om-di). Spara artikeln i din me-sida.
+-->
 
 
 
@@ -96,8 +98,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Hur känns det att jobba med begreppen kring dependency injection, service locator och lazy loading?
-* Hur känns det att återigen göra refaktoring på din me-sida, blir det bättre?
-* Lyckades du införa begreppen när du vidareutvecklade ditt kommentarssystem?
-* Allmänna kommentare kring din me-sida och REM servern och dess kodstruktur?
+* Hur känns det att göra dig av med beroendet till `$app`, blir `$id` bättre?
+* Hur känns det att återigen göra refaktoring på din me-sida, blir det förbättringar på kodstrukturen, eller bara annorlunda?
+* Lyckades du införa begreppen kring DI när du vidareutvecklade ditt kommentarssystem?
+* Allmänna kommentare kring din me-sida och dess kodstruktur?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
