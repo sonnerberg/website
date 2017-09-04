@@ -16,7 +16,7 @@ Vi fortsätter att bygga ut me-sidan med HTML, CSS och PHP. Detta moment är en 
 
 Vi börjar använda lite fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
 
-Vi gör en första laboration i PHP för att få en känsla för hur det är att koda med PHP.
+<!-- Vi gör en första laboration i PHP för att få en känsla för hur det är att koda med PHP. -->
 
 <!--more-->
 
