@@ -1,6 +1,8 @@
 ---
 author: mos
+baseurl: null
 revision:
+    "2017-09-04": (B, mos) Rättade länkar.
     "2017-06-12": (A, mos) Första utgåvan.
 ...
 Labbmiljö och Verktyg
@@ -21,7 +23,7 @@ De flesta studenter startar med kursen python eller htmlphp och du finner instru
 
 
 
-Labbmiljö samtliga kurser {#}
+Labbmiljö samtliga kurser {#laballa}
 ---------------------------------
 
 När du går samtliga dbwebb-kurser så finns en [översikt av all labbmiljö](labbmiljo) som kan förekomma på kurserna.
@@ -33,7 +35,7 @@ Alla verktyg är fria programvaror och många är opensource alternativ som dess
 Verktyget dbwebb-cli {#dbwebb-cli}
 ---------------------------------
 
-[Verktyget dbwebb-cli](dbwbeb-cli) är ett program som du kör på kommandoraden i terminalen och hjälper dig att jobba med kursmaterialet.
+[Verktyget dbwebb-cli](dbwebb-cli) är ett program som du kör på kommandoraden i terminalen och hjälper dig att jobba med kursmaterialet.
 
 
 

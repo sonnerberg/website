@@ -1,4 +1,4 @@
-8---
+---
 author:
     - mos
 category:
@@ -74,6 +74,14 @@ En tabell för användare {#tabell}
 --------------------------------------
 
 Jag skapar en enkel tabell för användare. Databasmodulen innehåller ett exempel som hjälper mig skapa tabellen, ett exempel för SQLite och ett för MySQL. Jag tar och använder båda för skoj skull.
+
+Jag börjar med att hämta SQL-koden från modulen och lägger i min egen katalog `sql/`.
+
+```bash
+rsync -av vendor/anax/database/sql/ sql/
+```
+
+Nu finns exempelfiler för att skapa databastabeller i katalogen `sql/`.
 
 
 
@@ -579,7 +587,7 @@ Nu är det slut, detta var hela klassen `User`. Det innebär att en hel del kod 
 
 ###Vinsten med active record {#arvinst}
 
-Låt oss ställa frågan om och vad vi kan vinna med ytterligare ett lager framför databasen, vilket active record tillför.
+Låt oss ställa frågan om och vad vi kan vinna med ytterligare ett lager framför databasen, det lager som active record tillför.
 
 Vinsten kan vara att dölja databaskoden och jobba enbart mot metoder likt `find()` och `save()`. Implementationen döljs i klassen `ActiveRecordModel` och m vi hade kikat i den hade vi sett tydligt hur den jobbar mot databasen.
 

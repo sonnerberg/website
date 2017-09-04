@@ -1,5 +1,6 @@
 ---
 author: mos
+baseurl: null
 revision:
     "2016-08-04": (B, mos) Info om uppropet.
     "2016-04-22": (A, mos) Överflyttat till eget dokument.
