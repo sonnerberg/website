@@ -80,11 +80,11 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgiften "[Bygg en prototyp till ett kommentarssystem](uppgift/bygg-en-prototyp-till-ett-kommentarssystem)". Du kommer igång och skriver ett enkelt kommentarssystem, det blir en prototyp för att lära sig domänen och skapa en kodbas. Spara koden under `me/anax`.
 
+1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
+
 <!--
 1. Skriv gruppvis en artikel om ["Model, View, Controller (MVC)"](uppgift/skriv-artikel-om-mvc). Spara artikeln i din me-sida.
 -->
-
-1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
 
 

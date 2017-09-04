@@ -46,7 +46,7 @@ Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom
 Krav {#krav}
 -----------------------
 
-1. Skriv koden i kontroller-klasser och i modell-lagret. Skriv ingen/minimal kod i routerna.
+1. Skriv koden i kontrollerklasser och i modell-lagret. Skriv ingen/minimal kod i routerna.
 
 1. Eftersom du har fria händer så är kraven nedan mer förslag till hur man normalt bygger en enklare kommentarsfunktion till en sida/innehåll.
 
