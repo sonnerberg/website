@@ -4,6 +4,7 @@ category:
     - labbmiljo
     - php
 revision:
+    "2017-09-04": (B, mos) Windows 10 Bash likt Linux.
     "2016-10-11": (A, mos) Första revisionen.
 ...
 Lägg PHP i pathen
@@ -58,7 +59,7 @@ Nu har du verktyg att testa och felsöka via PHP på terminalen.
 
 
 
-Installera på Windows {#windows}
+Installera på Windows Cygwin {#windows}
 -------------------------------
 
 Om du har installerat XAMPP så ligger troligen den exekverbara PHP-filen i följande katalog. Öppna en `cmd.exe` för att kontrollera att du har rätt sökväg.
@@ -94,6 +95,15 @@ Starta om `cmd.exe` och testa att det nu fungerar.
 Starta en Cygwin-terminal och verifiera att det även fungerar där.
 
 Om det inte fungerar, pröva att logga ut och logga in igen.
+
+
+
+Installera på Linux och Windows10 Bash {#linux}
+-------------------------------
+
+På Linux (debian) installerar jag PHP med `apt-get` och den exekverbara hamnar i `usr/bin` vilket redan ligger i min path. Allt klart.
+
+På samma sätt fungerar det om du använder Windows 10 och Bash.
 
 
 
@@ -138,13 +148,6 @@ lrwxr-xr-x  1 mikaelroos  staff  30 Oct 11 12:22 phpize -> /Applications/XAMPP/b
 ```
 
 Klart. Nu kan du verifera att php fungerar som det ska.
-
-
-
-Installera på Linux {#linux}
--------------------------------
-
-På Linux (debian) installerar jag PHP med `apt-get` och den exekverbara hamnar i `usr/bin` vilket redan ligger i min path. Allt klart.
 
 
 
