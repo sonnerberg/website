@@ -171,7 +171,7 @@ Avslutningsvis {#avslutning}
 
 Så, artikeln försöker ge dig en bild av vad MVC är och hur det förhåller sig till webbaserade ramverk. Nästa steg vore att försöka bygga den där gästboken som visas i sekvensdiagrammet. Det vore ett bra sätt att få lite mer grepp om vad MVC handlar om.
 
-Ställ dina frågor och kommentarer i forumet. Det finns en [egen tråd](t/xxx) till denna artikel.
+Ställ dina frågor och kommentarer i forumet.
 
 
 
