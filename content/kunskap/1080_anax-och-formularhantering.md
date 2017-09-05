@@ -590,4 +590,4 @@ Finns det alternativa sätt att göra detta, integrera formulärhanteringen in i
 
 Låt oss nu använda detta sättet och utvärdera efterhand som vi blir klara på dess för- och nackdelar.
 
-Denna artikel har en [egen forumtråd](t/6619) som du kan ställa frågor i, eller bidra med tips och trix.
+Denna artikel har en [egen forumtråd](t/6728) som du kan ställa frågor i, eller bidra med tips och trix.

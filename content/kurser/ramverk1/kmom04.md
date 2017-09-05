@@ -2,17 +2,10 @@
 author:
     - mos
 revision:
-    "2017-03-24": "(PA1, mos) Jobbet börjar."
+    "2017-09-05": "(A, mos) Första utgåvan."
 ...
 Kmom04: Databasdrivna modeller
 ==================================
-
-[WARNING]
-**Version 1 av ramverk1.**
-
-Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
-
-[/WARNING]
 
 Vi skall titta på klasser i modell-lagret och utöka vår struktur med formulärhantering och databasdrivna modell-klasser.
 
@@ -22,9 +15,13 @@ I arbetet skapar vi basklasser i modellagret som underlättar då vi implementer
 
 I slutet tar vi våra nya kunskaper och integrerar i vår befintliga kod, ytterligare en möjlighet till refactoring.
 
-<!--stop-->
+I vårt arbete kommer vi i kontakt med designmönstret Active Record och en implementation av databasen, en _query builder_ som erbjuder metoder för att producera SQL-koden.
 
+<!--more-->
 
+[FIGURE src=image/snapht17/create-user-4.png?w=w2 caption="Förbereder mig att skapa en ny användare."]
+
+[FIGURE src=image/snapht17/login-user-1.png?w=w2 caption="Första försöket, redo att logga in med rätt akronym och rätt lösenord."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -47,19 +44,17 @@ Kika igenom följande artiklar.
 
 1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Abstraction Layers (Databases)](http://www.phptherightway.com/#databases_abstraction_layers)", läs igenom det som en introduktion och kika på de länkar som leder till olika ramverks implementationer av databas-moduler.
 
+<!--
 1. Utifrån artiklarna så väljer du att översiktligt studera någon implementation av PHP ORM eller PHP Active Record. Du har nytta av det inför skrivövningen.
+-->
 
 
 
 ###Videor {#videor}
 
-Det finns inga video.
+Kika på följande videor.
 
-<!--
-Kika på följande videos.
-
-1. Titta på seminariet?
--->
+1. Jag försökte finna en video som visade innebörden av Active Record och fann "[Easy PHP Database Handling With PHP ActiveRecord](https://www.youtube.com/watch?v=9Oau7fLiq7Y)", kika på den som ett komplement till artiklarna nedan.
 
 
 
@@ -76,7 +71,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Anax och formulärhantering](kunskap/anax-och-formularhantering)" som visar hur du använder en extern modul för formulärhatering och hur du integrerar den i Anax. Du sparar koden i `me/kmom04/anax4`.
 
-1. Jobba igenom artikeln "[Anax och formulärhantering](kunskap/kunskap/anax-och-databasdrivna-modeller)" som visar hur du använder en extern modul för databashantering och hur du integrerar den i Anax. Du sparar koden i `me/kmom04/anax4`.
+1. Jobba igenom artikeln "[Anax och databasdrivna modeller](kunskap/anax-och-databasdrivna-modeller)" som visar hur du använder en extern modul för databashantering och hur du integrerar den i Anax samt hur du kan jobba med den tillsammans med formulär. Du sparar koden i `me/kmom04/anax4`.
+
+1. Fortsätt fördjupa dig i databasdrivna modeller med ett exempel genom att jobba igenom artikeln "[Anax med databasdrivna modeller enligt Active Record, ett exempel](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel)". Då får se hur koden hänger samman i ett CRUD-exempel som använder den databasdrivna modellen tillsammans med designmönstret Active Record. Du sparar koden i `me/kmom04/anax4`.
 
 
 
@@ -99,7 +96,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 2-4 studietimmar)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
@@ -107,5 +104,7 @@ Se till att följande frågor besvaras i texten:
 
 * Hur gick det att integrera formulärhantering och databashantering i ditt kommentarssystem?
 * Berätta om din syn på Active record och liknande upplägg, ser du fördelar och nackdelar?
+* Utveckla din syn på koden du nu har i ramverket och din kommentars- och användarkod. Hur känns det?
+* Om du vill, och har kunskap om, kan du även berätta om din syn på ORM och designmönstret Data Mapper som är närbesläktade med Active Record. Du kanske har erfarenhet av likande upplägg i andra sammanhang?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

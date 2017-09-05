@@ -6,16 +6,18 @@ category:
     - php
     - kursen ramverk1
 revision:
-    "2017-08-15": "(A, mos) Första utgåvan."
+    "2017-09-05": "(A, mos) Första utgåvan."
 ...
 Anax och databasdrivna modeller
 ==================================
 
-[FIGURE src=image/snapht17/anax-route-config.png?w=c5&cf&a=10,50,40,0 class="right"]
+[FIGURE src=image/snapht17/create-user-4.png?w=c5&cf&a=10,60,20,0 class="right"]
 
 Vi bygger vidare på ett exempel med formulärhantering i Anax och integrerar med en extern modul för databashantering.
 
+Vi använder en del av databasmodulen som heter _query builder_ där man bygger SQL-frågan utifrån metodanrop. Den blir basen i vår databasdrivna modell, som är en implementation av designmönstret Active Record.
 
+Vårt mål är att skapa en kodbas som är enkel att återanvända för databasdrivna modeller som använder formulärhantering. Att använda Active Record är en del i att uppfylla målet.
 
 <!--more-->
 
@@ -24,7 +26,7 @@ Vi bygger vidare på ett exempel med formulärhantering i Anax och integrerar me
 Förutsättning {#pre}
 --------------------------------------
 
-Du har läst artikeln "[Anax och formulärhantering](kunskap/anax-och-formularhantering)". Denna artikel om databashantering tar vid där formulärartikeln slutade.
+Du har läst artikeln "[Anax och formulärhantering](kunskap/anax-och-formularhantering)".
 
 
 
@@ -40,14 +42,14 @@ Bygg vidare på formulärexemplet {#initanax}
 
 Vi jobbar vidare i samma katalog `anax4` där vi gjorde formulärexemplet. Du bör alltså ha tre routes som fungerar, nämligen `user`, `user/login` och `user/create`.
 
-Tanken är att vi skall implementera så att vi kan skapa en användare och logga in som en användare. Vi vill visa på ett flöde som omfattar delar av formulär och CRUD mot en databas.
-
 Testa även att öppna din webbläsare mot `htdocs` för att kontrollera att index-sidan för webbplatsen fungerar tillsammans med routen `htdocs/debug/info`.
 
-Om du av någon anledning vill starta på nytt och utgå från koden som fanns i formulärartikeln så kan du scaffolda fram den. Se det som ett alternativ.
+Tanken är att vi skall implementera så att vi kan skapa en användare och logga in som en användare. Vi vill visa på ett flöde som omfattar delar av formulärhantering och CRUD mot en databas.
+
+Om du av någon anledning vill starta på nytt och utgå från koden som fanns i formulärartikeln så kan du scaffolda fram den.
 
 ```bash
-# Ställ dig i kursrepot me/kmom04 
+# Ställ dig i kursrepot me/kmom04
 anax create anax4f ramverk1-form
 cd anax4f
 ```
@@ -64,16 +66,18 @@ Installera modul för databas {#instdb}
 Vi skall installera en Anax modul som hjälper oss med databashanteringen.
 
 ```bash
-# Gå till anax4
+# Gå till anax4 eller anax4f, vilket du nu valt att jobba i
 composer require anax/database
 ```
+
+Kika gärna i katalogen `vendor/anax/database` för att se vilka delar som modulen består av.
 
 
 
 En tabell för användare {#tabell}
 --------------------------------------
 
-Jag skapar en enkel tabell för användare. Databasmodulen innehåller ett exempel som hjälper mig skapa tabellen, ett exempel för SQLite och ett för MySQL. Jag tar och använder båda för skoj skull.
+Det första jag behöver är en databastabell `User` för användare. Databasmodulen innehåller ett DDL-exempel som hjälper mig skapa tabellen. Det finns ett exempel för SQLite och ett för MySQL. Jag tar och använder båda för skoj skull.
 
 Jag börjar med att hämta SQL-koden från modulen och lägger i min egen katalog `sql/`.
 
@@ -81,25 +85,88 @@ Jag börjar med att hämta SQL-koden från modulen och lägger i min egen katalo
 rsync -av vendor/anax/database/sql/ sql/
 ```
 
-Nu finns exempelfiler för att skapa databastabeller i katalogen `sql/`.
-
-
-
-###MySQL tabell för User {#mysqlcreate}
-
-Create database & user
-
-mysql < sql/ddl/user_mysql.sql
-mysql -uanax -panax
+Nu finns exempelfiler för att skapa databastabeller i katalogen `sql/`. Jag tänker använda de som heter `sql/ddl/user_*.sql`.
 
 
 
 ###SQLite tabell för User {#sqlitecreate}
 
-$ sqlite3 data/db.sqlite < sql/ddl/user_sqlite.sql
-$ chmod 777 data
-$ chmod 666 data/db.sqlite
-$ sqlite3 data/db.sqlite
+Så här skapar jag tabell och databas för SQLite.
+
+För det första väljer jag att skapa en ny katalog `data` där jag kan spara min databasfil. Katalogen behöver vara skrivbar för att databasen skall fungera och databasfilen behöver vara skrivbar för alla som skall redigera den, inklusive webbservern. Enklast är att sätta `chmod 666` på filen och `chmod 777` på katalogen.
+
+```bash
+# Gå till anax4/anax4f
+mkdir data
+chmod 777 data
+sqlite3 data/db.sqlite # gör exit via ctrl-d direkt
+chmod 666 data/db.sqlite
+```
+
+Nu vill vi inte committa och checka in databasen som en del av Git-repot. Det löser vi genom att lägga till en fil `data/.gitignore`. Du har sett samma fil tidigare, bland annat i katalogen `cache/cimage`.
+
+```text
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+```
+
+Filen ser till att katalogen `data` blir en del av Git-repot men exkluderar alla filer som ligger i katalogen. En databas är inget vi (normalt) vill checka in i Git.
+
+Då fyller vi databasen med innehåll.
+
+```bash
+sqlite3 data/db.sqlite < sql/ddl/user_sqlite.sql
+```
+
+Du kan nu gå in i databasen och se att det finns en tabell som heter `User`. Tabellen är tom än så länge.
+
+```bash
+sqlite3 data/db.sqlite
+```
+
+Det var SQLite det.
+
+
+
+###MySQL tabell för User {#mysqlcreate}
+
+Då skapar vi en tabell `User` i MySQL. Du kan öppna filen `sql/ddl/user_mysql.sql` i Workbench och se vad den innehåller. Du kan köra alla kommandon i Workbench om du vill, men det går lika bra i terminalklienten.
+
+Det första jag behöver göra är att skapa en databas och lägga till en användare till databasen. Jag använder terminalklienten.
+
+```sql
+mysql> CREATE DATABASE IF NOT EXISTS anaxdb;
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> GRANT ALL ON anaxdb.* TO anax@localhost IDENTIFIED BY 'anax';
+Query OK, 0 rows affected (0.01 sec)
+```
+
+Nu har jag en testdatabas `anaxdb` och en testanvändare `anax` som har lösenordet `anax`. Jag använder dessa för att koppla upp mig mot databasen.
+
+Först startar jag terminalklienten mot min nyskapade databas med min nya användare.
+
+```bash
+mysql -uanax -panax anaxdb
+```
+
+Sedan kör jag SQL-skriptet via terminalklienten.
+
+```bash
+mysql> source sql/ddl/user_mysql.sql
+Database changed
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+```
+
+Nu kan du kontrollera att tabellen `User` finns på plats och att den är tom.
+
+Oavsett hur du går tillväga så handlar det om att skapa en databas och en tabell i MySQL.
 
 
 
@@ -108,7 +175,7 @@ Formulär för att skapa användare {#createuserform}
 
 Då skall vi använda databasen genom att skapa en användare som vi lägger i databasen.
 
-Jag har ju sedan tidigare exempel en modell-klass som heter `Anax\User\HTMLForm\CreateUser`, men den är scaffoldad och är inte perfekt i sin ursprungsform. Jag uppdaterar den och skapar ett formulär som ser ut så här.
+Jag har från tidigare exempel en modell-klass som heter `Anax\User\HTMLForm\CreateUser`, men den är scaffoldad och är inte perfekt i sin ursprungsform. Jag uppdaterar den och skapar ett formulär som ser ut så här.
 
 ```php
 $this->form->create(
@@ -120,7 +187,7 @@ $this->form->create(
         "acronym" => [
             "type"        => "text",
         ],
-                
+
         "password" => [
             "type"        => "password",
         ],
@@ -143,7 +210,7 @@ $this->form->create(
 
 Jag uppdaterar metoden `callbackSubmit()` och för att visa hur det ser ut så plockar jag ut formulärets innehåll och lägger i variabler som jag skriver ut, bara för att visa hur man kan testa sitt forumlär.
 
-Så här ser metoden ut, bortsett från delen med databasen.
+Så här ser metoden ut, bortsett från delen med databasen som ännu inte är på plats.
 
 ```php
 /**
@@ -175,11 +242,11 @@ public function callbackSubmit()
 
 Om jag provkör via `user/create` så kan det se ut så här.
 
-[FIGURE src=image/snapht17/user-create-4.png caption="Förbereder mig att skapa en ny användare."]
+[FIGURE src=image/snapht17/create-user-4.png?w=w2 caption="Förbereder mig att skapa en ny användare."]
 
 Det gick "bra" att skapa användaren.
 
-[FIGURE src=image/snapht17/user-create-3.png caption="Användaren skapades."]
+[FIGURE src=image/snapht17/create-user-3.png?w=w2 caption="Användaren skapades."]
 
 Det ser ju ut som det kan fungera. Då skall vi bara skriva till databasen också.
 
@@ -205,7 +272,13 @@ Koden för att lägga till tjänsten ser ut så här.
 
 Databasklassen läser in sin konfiguration från `config/database.php` och via den filen kan vi bestämma om databasen är MySQL eller SQLite. Det finns en exempelfil du kan utgå ifrån som ligger i modulen. Du hittar den i `vendor/anax/database/config/database.php`.
 
-Jag börjar med att sätta upp databasen som en SQLite-databas och placerar databasfilen bland övriga konfigurationersfiler i `data/db.sqlite`.
+Jag utgår från den och kopierar till min katalog `config`.
+
+```bash
+rsync -av vendor/anax/database/config/database.php config/
+```
+
+Jag börjar med att sätta upp databasen som en SQLite-databas och pekar ut platsen där databasfilen finns, nämligen `data/db.sqlite`.
 
 Så här blir konfigurationsfilen i det fallet.
 
@@ -240,25 +313,6 @@ return [
 ];
 ```
 
-För att det skall fungera behöver vi skapa katalogen `data` och göra den skrivbar för alla.
-
-```bash
-# Gå till roten av anax4
-mkdir data
-chmod 777 data
-```
-
-Om du vill att ditt Git-repo skall innehålla katalogen data, men ingen av dess filer, så kan du skapa filen `data/.gitignore` med följande innehåll.
-
-```text
-# Ignore everything in this directory
-*
-# Except this file
-!.gitignore
-```
-
-Det är en teknik för att checka in en tom katalog och låta bli att checka in någon av de filer som senare hamnar i katalogen.
-
 Nu har vi alltså en tjänst i ramverket för databasen och vilken databas det är styrs av konfigurationsfilen. Då kan vi börja använda databasen i formuläret.
 
 
@@ -266,7 +320,7 @@ Nu har vi alltså en tjänst i ramverket för databasen och vilken databas det �
 Spara till databas i formulärmodellen {#savetodb}
 --------------------------------------
 
-Då har vi en ramverkstjänst för databasen. Låt oss använda den för att spara användaren i formulärklassen. Den uppdaterade `callbackSubmit()` kan se ut så här.
+Då skall vi använda ramverkstjänst för databasen för att spara användaren i formulärklassen. Den uppdaterade `callbackSubmit()` kan se ut så här.
 
 ```php
 /**
@@ -312,7 +366,20 @@ $db->connect()
    ->execute([$acronym, $password]);
 ```
 
-Som du ser skriver vi inte någon SQL-kod utan använder en inbyggd _Query-builder_ som bygger upp SQL-koden bakom fasaden via metoder. Det finns inget som hindrar att du istället väljer att skriva SQL-koden som du är van vid, men jag tänkte använda Query-buildern i mitt exempel.
+Som du ser skriver vi inte någon SQL-kod utan använder en inbyggd _query builder_ som bygger upp SQL-koden via metoder. Det finns inget som hindrar att du istället väljer att skriva SQL-koden som du är van vid, men jag tänkte använda Query-buildern i mitt exempel så det är bra om även du gör det.
+
+Du kan med dessa ändringar köra formuläret för att skapa användaren och dubbelkolla att användaren verkligen ligger i databasen.
+
+Så här kan det se ut när användaren doe hamnar i databasen.
+
+```text
+$ sqlite3 --column --header data/db.sqlite "SELECT * FROM User;"
+id          acronym     password                                                      created     updated     deleted     active     
+----------  ----------  ------------------------------------------------------------  ----------  ----------  ----------  ---------- 
+1           doe         $2y$10$42SmOGZzSiXPFeb.xmyumeGHfEdNErHPDYCdGezGJ/LcOxmyebMAy
+```
+
+Då skall vi pröva att använda användaren genom att simulera logga in.
 
 
 
@@ -321,7 +388,7 @@ Logga in mot databasen {#loginthroughdb}
 
 Då tar jag och uppdaterar koden för inloggningen och lägger till databaskod i min formulärklass `Anax\User\HTMLForm\UserLoginForm`. Jag skall kontrollera att användare och lösenord matchar.
 
-Koden i callbackSubmit() 
+Koden i `callbackSubmit()` ser ut som följer och all databashantering finns med för att simulera en inloggning och testa mot innehållet i databasen.
 
 ```php
 /**
@@ -344,11 +411,12 @@ public function callbackSubmit()
                ->where("acronym = ?")
                ->executeFetch([$acronym]);
 
-   if (!password_verify($password, $user->password)) {
+    // $user is false if user is not found
+    if (!$user || !password_verify($password, $user->password)) {
        $this->form->rememberValues();
        $this->form->addOutput("User or password did not match.");
        return false;
-   }
+    }
 
     $this->form->addOutput("User logged in.");
     return true;
@@ -357,16 +425,29 @@ public function callbackSubmit()
 
 Om du studerar koden ovan ser du hur informationen plockas ut formuläret, en fråga ställs till databasen för att hämta den användaren som försöker logga in. Därefter kontrolleras lösenordet om det matchar och baserat på det tillåter man att användaren blir inloggade eller ej.
 
+Du kan nu testköra koden via routen `user/login`. Det kan se ut så här.
+
+[FIGURE src=image/snapht17/login-user-1.png?w=w2 caption="Första försöket, redo att logga in med rätt akronym och rätt lösenord."]
+
+När inloggningen fungerade så ser man följande resultat.
+
+[FIGURE src=image/snapht17/login-user-2.png?w=w2 caption="Inloggningen fungerade."]
+
+Pröva gärna att skriva in fel lösenord och se ett annat svar, det skall inte gå att logga in med felaktigt lösenord eller felaktig användare.
+
 Kodexemplet sparar inte undan i sessionen om inloggningen gick bra eller ej, det behöver det göra för att det skall bli en riktigt inloggning, men för tillfället nöjer vi oss med att fokusera på databasbiten.
+
 
 
 
 En databasdriven modell {#dbdrivenmodel}
 --------------------------------------
 
-Låt oss fokusera på databaskoden vi nu sett. Det vore en tanke att flytta den koden och kapsla in i en klass `User` som ligger i modellagret och har ansvar för alla detaljer om en användare, inklusive vetskapen om hur användarens detaljer kan lagras i databasen.
+Låt oss studera databaskoden vi nu sett. Det vore en tanke att flytta den koden och kapsla in i en klass `User` som ligger i modellagret och har ansvar för alla detaljer om en användare, inklusive vetskapen om hur användarens detaljer kan lagras i databasen.
 
 Vi kan kalla det en modellklass som använder sig av databasen, eller en databasdriven modellklass.
+
+Låt se hur det kan se ut.
 
 
 
@@ -385,11 +466,13 @@ $book->save();
 
 Koden ovan laddar en bok från en databastabell, ökar priset med 10 och sparar boken till databasen. Active record ger ett enkelt sätt att låta ett objekt spara sig i databasen. Det ger ett interface och en kodstruktur som blir enhetlig för alla klasser som väljer att jobba enligt designmönstret.
 
+Det finns många olika implementationer av designmönstret Active Record, men principen är densamma, ungefär som i exemplet ovan.
 
 
-###CreateUserForm och active record {#arcreateuserform}
 
-Hur skulle detta kunna se ut i formulärklassen `CreateUserForm`? Vi tittar på en uppdatering av metoden `callbackSubmit()`. Du kan se dels den tidigare och nu bortkommenterade koden samt den nya koden som jobbar mot klassen `User` som nu använder sig av active record.
+###CreateUserForm och Active Record {#arcreateuserform}
+
+Hur skulle detta kunna se ut i formulärklassen `CreateUserForm`? Vi tittar på en uppdatering av metoden `callbackSubmit()`. Du kan se dels den tidigare och nu bortkommenterade koden samt den nya koden som jobbar mot klassen `User` som nu använder sig av Active Record.
 
 ```php
 /**
@@ -418,7 +501,8 @@ public function callbackSubmit()
     // $db->connect()
     //    ->insert("User", ["acronym", "password"])
     //    ->execute([$acronym, $password]);
-    $user = new User($this->di->get("db"));
+    $user = new User();
+    $user->setDb($this->di->get("db"));
     $user->acronym = $acronym;
     $user->setPassword($password);
     $user->save();
@@ -431,17 +515,24 @@ public function callbackSubmit()
 Det är följande rader som nu skapar användaren.
 
 ```php
-$user = new User($this->di->get("db"));
+$user = new User();
+$user->setDb($this->di->get("db"));
 $user->acronym = $acronym;
 $user->setPassword($password);
 $user->save();
 ```
 
-Kanske blir det inte mycket färre rader men vi får en inkapsling och klassen `User` har själv full koll på hur den lagras i databasen.
+Ett objekt skapas och injectas med en databasklass, fält läggs till och objektet sparas till databasen. Klassen `User` har själv full kontroll över detaljer och erbjuder ett snyggt gränssnitt till alla som vill jobba med objekt av klassen.
+
+Glöm inte lägga till att `use \Anax\User\User;` överst i formulärklassen, så den vet vilken implementation av klasse `User` du vill använda.
+
+Kanske blir det inte mycket färre rader men vi får en inkapsling och klassen `User` har själv full koll på hur den lagras i databasen. Jag vill nog säga att koden i formulärklassen blev snyggare och bättre inkapslad.
+
+Vi kan inte köra vårt exempel än, vi saknar klassen `User`, men innan vi tar tag i den så ser vi hur en uppdaterad formulärklass för login kan se ut med motsvarande ändringar.
 
 
 
-###LoginUserForm och active record {#arloginform}
+###LoginUserForm och Active Record {#arloginform}
 
 Hur ser då formuläret för login ut `UserLoginForm` med motsvarande ändring? Låt oss titta.
 
@@ -465,16 +556,18 @@ public function callbackSubmit()
     //            ->from("User")
     //            ->where("acronym = ?")
     //            ->executeFetch([$acronym]);
-    // 
-    // if (!password_verify($password, $user->password)) {
+    //
+    // // $user is false if user is not found
+    // if (!$user || !password_verify($password, $user->password)) {
     //    $this->form->rememberValues();
     //    $this->form->addOutput("User or password did not match.");
     //    return false;
     // }
 
-    $user = new User($this->di->get("db"));
+    $user = new User();
+    $user->setDb($this->di->get("db"));
     $res = $user->verifyPassword($acronym, $password);
-    
+
     if (!$res) {
        $this->form->rememberValues();
        $this->form->addOutput("User or password did not match.");
@@ -486,7 +579,15 @@ public function callbackSubmit()
 }
 ```
 
-Här är det nu två rader kod som stämmer av om akronymen och lösenordet passar. Om det passar så är objektet `$user` fyllt med detaljer från databasen och kan användas som publika medlemmar i objektet.
+Här är det nu ett par rader kod som stämmer av om akronymen och lösenordet passar, nu via klassen `User`.
+
+```php
+$user = new User();
+$user->setDb($this->di->get("db"));
+$res = $user->verifyPassword($acronym, $password);
+```
+
+Om akronymen finns och lösenordet stämmer är objektet `$user` fyllt med detaljer från databasen och dessa kan användas som publika medlemmar i objektet.
 
 Så här med `$user->acronym`.
 
@@ -494,9 +595,13 @@ Så här med `$user->acronym`.
 $this->form->addOutput("User " . $user->acronym . " logged in.");
 ```
 
+Glöm inte lägga till att `use \Anax\User\User;` överst i formulärklassen, så den vet vilken implementation av klasse `User` du vill använda.
+
+Vårt exempel fungerar fortfarande inte då vi behöver implementationen av klassen `User`. Låt oss då titta på den.
 
 
-###Klassen User och active record {#arusermodel}
+
+###Klassen User och Active Record {#arusermodel}
 
 Jag får säga att det är en trevlig tanke att kapsla in koden i `User` och göra den klassen ansvarig för relevanta delar, inklusive hanteringen mot databasen. Låt oss titta på klassen `User` och dess olika delar.
 
@@ -522,13 +627,13 @@ Sedan följer en referens till databastabellen och de kolumner som finns i tabel
 
 ```php
 /**
- * @var string TABLE_NAME name of the database table.
+ * @var string $tableName name of the database table.
  */
 protected $tableName = "User";
 
 /**
  * Columns in the table.
- * 
+ *
  * @var integer $id primary key auto incremented.
  */
 public $id;
@@ -540,7 +645,7 @@ public $deleted;
 public $active;
 ```
 
-I denna implementationen av active record är det viktigt att klassens medlemmar matchar direkt mot databastabellens kolumner. Det är en restriktion som krävs.
+I denna implementationen av Active Record är det viktigt att klassens medlemmar matchar direkt mot databastabellens kolumner. Det är en restriktion som är nödvändig.
 
 Vi fortsätter att titta i klassen och ser en metod för att skapa lösenordet när användaren skapas.
 
@@ -583,44 +688,86 @@ Vi känner igen delar av koden som tidigare låg i formulärklassen för login.
 
 Nu är det slut, detta var hela klassen `User`. Det innebär att en hel del kod och metoder ärvs ned från klassen `ActiveRecordModel`. Där finns bland annat metoderna för `find()` och `save()`.
 
+Du kan nu provköra och skapa en ny användare och logga in med den. Det bör fungera.
 
 
-###Vinsten med active record {#arvinst}
 
-Låt oss ställa frågan om och vad vi kan vinna med ytterligare ett lager framför databasen, det lager som active record tillför.
+###Vinsten med Active Record {#arvinst}
 
-Vinsten kan vara att dölja databaskoden och jobba enbart mot metoder likt `find()` och `save()`. Implementationen döljs i klassen `ActiveRecordModel` och m vi hade kikat i den hade vi sett tydligt hur den jobbar mot databasen.
+Låt oss ställa frågan om vi kan vinna något med ytterligare ett lager framför databasen, det lager som Active Record tillför.
+
+Vinsten kan vara att dölja databaskoden och jobba enbart mot metoder likt `find()` och `save()`. Implementationen döljs i klassen `ActiveRecordModel` och om vi hade kikat i den hade vi sett tydligt hur den jobbar mot databasen i form av en query builder som erbjuder metoder för att skapa SQL-koden.
 
 En annan vinst är att det blir en tydlig struktur för att jobba mot modellklasser som vill spara sig i databasen.En del av den repetetiva databaskoden ligger nu återanvändbar i `ActiveRecordModel` och varje ny klass som vill jobba mot databasen behöver bara utöka den.
 
-Kanske kan vi också se att vi abstraherar bort databasen ytterligare ett steg och gör oss mer oberoende av vilken databas vi använder. Vi kan nu skriva modellklasser utan att tänka på om det är MySQL eller SQLite. De eventuella inkompabiliteter som finns mellan databaser har vi nu lager som kan hantera. Det lagret är egentligen konstruktionen av _QueryBuilder_ som databasmodulen erbjuder. När vi använder den så låter vi metoder skapa SQL-koden, vi skapar inte själva SQL-koden och klassen kan då ta hänsyn till de skillnader som finns mellan olika databaser. Detta är något som abstraktionslagret PDO inte tar hänsyn till.
+Vi får en kodstruktur som är generell och det kan bli enkelt att scaffolda fram CRUD för en modell-klass.
+
+Kanske kan vi också se att vi abstraherar bort databasen ytterligare ett steg och gör oss mer oberoende av vilken databas vi använder. Vi kan nu skriva modellklasser utan att tänka på om det är MySQL eller SQLite. De eventuella inkompabiliteter som finns mellan databaser har vi nu lager som kan hantera. Det lagret är egentligen konstruktionen av den _query builder_ som databasmodulen erbjuder. När vi använder den så låter vi metoder skapa SQL-koden, vi skapar inte själva SQL-koden och klassen kan då ta hänsyn till de skillnader som finns mellan olika databaser. Detta är något som abstraktionslagret PDO inte tar hänsyn till.
 
 Kanske är detta ett bra sätt att skriva PHP-kod som är mer oberoende av databasen. Men det kan också bli svårare att utnyttja specifika delar i databasen såsom lagrade procedurer och funktioner. Kanske, inte nödvändigtvis dock. Egentligen så är det nog så att vi kan fortfarande skriva specifik databaskod om vi vill, det går bra med lagrade procedurer och funktioner bakom variationer av ett active record mönster. Iallafall om du frågar mig.
 
-Nåväl, åter till saken. Det kan finnas flera delar av en struktur som erbjuds av active record. Låt oss titta på ett större exempel för att se hur koden kan se ut.
+Nåväl, åter till saken. Sakll vi avsluta med att kontroller att det går lika bra att köra exemplet mot MySQL?
 
 
 
-CRUD av böcker med active record {#arcrud}
+Byt databas från SQLite till MySQL {#bytmysql}
 --------------------------------------
 
-För att visa hur det kan se ut i ett större sammanhang så valde jag att skapa ett exempel med en samling av böcker. I exemplet kan du skapa böcker, editera dem, radera dem och visa dem. Det blir CRUD och formulär samt en databasdriven modell som använder sig av active record.
+Det enda vi behöver göra är att uppdatera konfigurationsfilen `config/database.php`. Jag sparar undan nuvarande konfiguration som `config/database_sqlite.php` och gör en ny konfiguration i `config/database_mysql.php` som jag till slut kopierar över till `config/database.php`.
 
+```bash
+cp config/database.php config/database_sqlite.php
+cp config/database.php config/database_mysql.php
+```
 
+Jag redigerar konfigfilen `config/database_mysql.php` så att den använder min MySQL-databas.
 
-###Scaffolda exemplet bok {#scaffbook}
+```php
+<?php
+/**
+ * Config file for Database.
+ *
+ * Example for MySQL.
+ *  "dsn" => "mysql:host=localhost;dbname=test;",
+ *  "username" => "test",
+ *  "password" => "test",
+ *  "driver_options"  => [\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"],
+ *
+ * Example for SQLite.
+ *  "dsn" => "sqlite:memory::",
+ */
+return [
+    "dsn"             => "mysql:host=localhost;dbname=anaxdb;",
+    "username"        => "anax",
+    "password"        => "anax",
+    "driver_options"  => [\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"],
+    "fetch_mode"      => \PDO::FETCH_OBJ,
+    "table_prefix"    => null,
+    "session_key"     => "Anax\Database",
 
+    // True to be very verbose during development
+    "verbose"         => null,
 
+    // True to be verbose on connection failed
+    "debug_connect"   => false,
+];
+```
 
+Till slut aktiverar jag så att konfigfilen `config/database.php` är konfigurationen från MySQL.
 
+```bash
+cp config/database_mysql.php config/database.php
+```
 
-
+Nu kan jag enkelt hoppa mellan databaserna och testkör du genom att skapa en användare och pröva logga in så skall det fungera.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Vi har återigen gjort en övning i refaktoring av ramverkets kod för att studera olika alternativ till strukturer. Nu var det routern som fick en genomgång och förändring i hur konfigurationen sker.
+Vi har gått igenom hur formulärhantering och databashantering kan byggas ihop till en väl strukturerad kodmassa för modellagret som är väl förberedd för att hantera bland annat CRUD-liknande operationer. Vi väljer att kalla detta för databasdrivna modeller och som en del i vår implementation använde vi oss av designmönstret Active Record.
 
-Denna artikel har en [egen forumtråd](t/6619) som du kan ställa frågor i, eller bidra med tips och trix.
+För att få ännu bättre koll på hur detta med databasdrivna modeller fungerar så finns det en artikel som tar ett utökat exempel, fortsätt gärna att läsa artikeln "[Anax med databasdrivna modeller enligt Active Record, ett exempel](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel)".
+
+Denna artikel har en [egen forumtråd](t/6729) som du kan ställa frågor i, eller bidra med tips och trix.

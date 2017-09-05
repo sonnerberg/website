@@ -6,12 +6,15 @@ category:
     - anax
     - kurs ramverk1
 revision:
+    "2017-09-05": "(B, mos) Flyttad till kmom04 och tydligare CRUD samt databas."
     "2017-06-28": "(A, mos) Första utgåvan."
 ...
 Kommentarssystem med användare
 ===================================
 
 Bygg ut ditt kommentarssystem så att endast inloggade användare kan göra kommenterar.
+
+Bygg även en administrationsdel där du kan hantera kommentarer och användare.
 
 <!--more-->
 
@@ -20,7 +23,7 @@ Bygg ut ditt kommentarssystem så att endast inloggade användare kan göra komm
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Anax med dependency injection](kunskap/anax-med-dependency-injection)".
+Du har jobbat igenom artiklarna "[Anax och formulärhantering](kunskap/anax-och-formularhantering)", "[Anax och databasdrivna modeller](kunskap/anax-och-databasdrivna-modeller)" samt "[Anax med databasdrivna modeller enligt Active Record, ett exempel](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel)".
 
 
 
@@ -31,18 +34,16 @@ Vi kan anta att ditt kommentarssystem kommer att kräva inloggade användare, de
 
 Du behöver stöd för att användare kan registrera sig och logga in i ditt system och att de enbart kan påverka sina egna kommentarer.
 
-Du kan fortsätt att spara kommentarerna i sessionen, snart inför vi en databas. Vill du börja använda en databas så går det bra, du vill troligen ha en databas till användarhanteringen.
+Du kan nu börja spara kommentarerna i databasen.
 
-Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom den tiden du har och prioritera bort det som inte är nödvändigt.
+Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom den tiden du har och prioritera bort det som inte är nödvändigt. Du kan välja att spara saker och göra dem i projektet istället.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Koden du skriver skall använda sig av MVC och Dependency Injection där det passar. Strukturera koden i kontroller och modeller där det passar.
-
-1. Man kan registrera ett konto och logga in.
+1. Skapa hantering så att användaren kan skapa ett konto, logga in och redigera sin profil.
 
 1. Man kan ange sin emailadress när man registrerar sig. Emailadressen används som gravatar. Man kan uppdatera sin emailadress via en profilsida.
 

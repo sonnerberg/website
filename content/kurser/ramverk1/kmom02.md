@@ -91,7 +91,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 2-4 studietimmar)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
