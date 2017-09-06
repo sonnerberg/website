@@ -11,17 +11,13 @@ revision:
 Anax med databasdrivna modeller enligt Active Record, ett exempel
 ==================================
 
-Artikeln är under produktion.
-
-<!--stop-->
-
 [FIGURE src=image/snapht17/create-user-4.png?w=c5&cf&a=10,60,20,0 class="right"]
 
-Vi bygger vidare på ett exempel med formulärhantering i Anax och integrerar med en extern modul för databashantering.
+Vi bygger vidare på hanteringen med formulär och databasdrivna modeller genom att presentera ett exempel som implementerar CRUD med givna tekniker.
 
-Vi använder en del av databasmodulen som heter _query builder_ där man bygger SQL-frågan utifrån metodanrop. Den blir basen i vår databasdrivna modell, som är en implementation av designmönstret Active Record.
+Det blir ett komplett kodexempel som visar hur man kan skriva koden i modellagret med stöd av de moduler som presenteras, inklusive formulärhanterin, databas med query builder och designmönstret Active Record.
 
-Vårt mål är att skapa en kodbas som är enkel att återanvända för databasdrivna modeller som använder formulärhantering. Att använda Active Record är en del i att uppfylla målet.
+Via detta kodexempel kan vi se om kodstrukturen är något som tilltalar oss.
 
 <!--more-->
 
@@ -30,7 +26,7 @@ Vårt mål är att skapa en kodbas som är enkel att återanvända för databasd
 Förutsättning {#pre}
 --------------------------------------
 
-Du har läst artikeln "[Anax och formulärhantering](kunskap/anax-och-formularhantering)".
+Du har läst artikeln "[Anax och databasdrivna modeller](kunskap/anax-och-databasdrivna-modeller)".
 
 
 
@@ -41,26 +37,45 @@ Glöm inte att redigera din `.htaccess` när du publicerar till studentservern.
 
 
 
-Bygg vidare på formulärexemplet {#initanax}
+Bygg vidare på tidigare exempel {#initanax}
 --------------------------------------
 
-Vi jobbar vidare i samma katalog `anax4` där vi gjorde formulärexemplet. Du bör alltså ha tre routes som fungerar, nämligen `user`, `user/login` och `user/create`.
+Vi jobbar vidare i samma katalog `anax4` där vi gjorde formulär- och databas-exemplet. Du bör alltså ha tre routes som fungerar, nämligen `user`, `user/login` och `user/create`.
 
 Testa även att öppna din webbläsare mot `htdocs` för att kontrollera att index-sidan för webbplatsen fungerar tillsammans med routen `htdocs/debug/info`.
 
-Tanken är att vi skall implementera så att vi kan skapa en användare och logga in som en användare. Vi vill visa på ett flöde som omfattar delar av formulärhantering och CRUD mot en databas.
+Tanken är att vi skall scaffolda fram ett CRUD exempel som använder sig av samma tekniker som `user` gör och sedan studera koden som använts.
 
-Om du av någon anledning vill starta på nytt och utgå från koden som fanns i formulärartikeln så kan du scaffolda fram den.
+Om du av någon anledning vill starta på nytt och utgå från koden som fanns i föregående artikel så kan du scaffolda fram den.
 
 ```bash
 # Ställ dig i kursrepot me/kmom04
-anax create anax4f ramverk1-form
-cd anax4f
+anax create anax4u ramverk1-database-user
+cd anax4u
 ```
 
 Om du väljer att skapa nytt behöver du kontrollera att de olika routerna fungerar som tänkt.
 
 Oavsett vad så bör vi nu ha en liknande kodbas att utgå ifrån. Jag jobbar vidare i min katalog `anax4`.
+
+
+
+Exemplet Bok {#exbok}
+--------------------------------------
+
+Vår exempel handlar om klassen `Book` och dess kontroller som hjälper oss att göra CRUD för böcker. Vi kan lägga till böcker, redigera dem, visa dem och radera dem. Exemplet är tänkt att visa på en mer komplett implementation av en databasdriven modell och dess hantering av CRUD.
+
+När exemplet fungerar och är på plats kan det se ut så här.
+
+[FIGURE src=image/snapht17/book-view-all.png?w=w2 caption=""]
+
+
+
+
+
+
+
+
 
 
 
