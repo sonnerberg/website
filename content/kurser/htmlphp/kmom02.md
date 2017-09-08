@@ -41,8 +41,6 @@ Läs följande:
     * Kapitel 4 Bilder
 
 2. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)
-    * Kapitel 2 Variabler (ej vektor, objekt, 2.4 Miljövariabler)
-    * Kapitel 4 Operatorer
     * Kapitel 5 Villkorssatser
     * Kapitel 6 Iterationer (ej `foreach`)
 

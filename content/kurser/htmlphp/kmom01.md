@@ -65,6 +65,8 @@ Läs följande:
 
 2. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)
     * Kapitel 1 Introduktion
+    * Kapitel 2 Variabler (ej vektor, objekt, 2.4 Miljövariabler)
+    * Kapitel 4 Operatorer
 
 <!--
 I referenslitteraturen, är följande kapitel relevanta.

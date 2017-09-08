@@ -44,6 +44,7 @@ Läs följande:
     * Kapitel 7 Listor och Tabeller
 
 2. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)
+    * Kapitel 2.3.5 Vektor
     * Kapitel 2.4 Miljövariabler
     * Kapitel 3 Konstanter
 
