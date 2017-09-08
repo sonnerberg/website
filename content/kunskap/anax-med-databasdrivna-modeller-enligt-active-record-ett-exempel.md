@@ -19,7 +19,9 @@ Det blir ett komplett kodexempel som visar hur man kan skriva koden i modellagre
 
 Via detta kodexempel kan vi se om kodstrukturen är något som tilltalar oss.
 
-<!--more-->
+**ARBETE PÅGÅR**
+
+<!--stop-->
 
 
 
