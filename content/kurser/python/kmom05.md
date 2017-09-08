@@ -1,15 +1,16 @@
 ---
 author: mos
 revision:
-  "2017-06-22": (I, efo) La till nya artiklar och ändrade namn på uppgifter.
-  "2016-03-15": (H, mos) Tog bort videoserie MonkeyLords och NewBoston.
-  "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
-  "2015-02-05": (F, mos) Bort med curses och in med marvin för textanalys och tic-tac-toe.
-  "2015-01-08": (E, mos) Bort blå ruta med kursutveckling pågår.
-  "2014-10-01": (D, mos) Ändrade länken till redovisa-instruktionen.
-  "2014-09-26": (C, mos) Tog bort beta stämpel.
-  "2014-09-15": (B, mos) Flyttade Marvin till extrauppgift.
-  "2014-09-12": (A, mos) Första utgåvan för python kursen.
+    "2017-09-08": (J, mos) Bort någon fråga.
+    "2017-06-22": (I, efo) La till nya artiklar och ändrade namn på uppgifter.
+    "2016-03-15": (H, mos) Tog bort videoserie MonkeyLords och NewBoston.
+    "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
+    "2015-02-05": (F, mos) Bort med curses och in med marvin för textanalys och tic-tac-toe.
+    "2015-01-08": (E, mos) Bort blå ruta med kursutveckling pågår.
+    "2014-10-01": (D, mos) Ändrade länken till redovisa-instruktionen.
+    "2014-09-26": (C, mos) Tog bort beta stämpel.
+    "2014-09-15": (B, mos) Flyttade Marvin till extrauppgift.
+    "2014-09-12": (A, mos) Första utgåvan för python kursen.
 ...
 Kmom05: Dictionaries och Tupler
 ==================================
@@ -116,10 +117,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur kändes det med datastrukturerna dictionaries och tupler? 
-* Har du sett något liknande förut?
-* Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas?
-* Använde du något av listor, dictionaries eller tupler när du gjorde uppgifterna, på vilket sätt?
+* Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas? 
+* Hur använde du dem i uppgifterna?
 * Har du fått koll på grunderna i modulen argparse?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

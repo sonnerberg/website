@@ -1,11 +1,12 @@
 ---
 author: mos
 revision:
-  "2017-06-22": (E, aar) Rensade SQLite och args/getopts.
-  "2016-02-22": (D, mos) Lade till videoserien "Lär dig Python".
-  "2015-04-08": (C, mos) Länk till screencast om beautifulsoap.
-  "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
-  "2014-10-17": (A, mos) Första utgåvan för python kursen.
+    "2017-09-08": (F, mos) Bort blå text.
+    "2017-06-22": (E, aar) Rensade SQLite och args/getopts.
+    "2016-02-22": (D, mos) Lade till videoserien "Lär dig Python".
+    "2015-04-08": (C, mos) Länk till screencast om beautifulsoap.
+    "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
+    "2014-10-17": (A, mos) Första utgåvan för python kursen.
 ...
 Kmom06: Externa moduler
 ==================================
@@ -19,6 +20,7 @@ Så här kan det se ut när du testar exempelprogrammet för att hämta hem ett 
 [YOUTUBE src=Wq6cpkPJDaU width=630 caption="Andreas visar hur ett färdigt kmom06 kan se ut."]
 
 
+<!--
 [INFO]
 **Hur ta dig an kursmomentet?**
 
@@ -39,6 +41,7 @@ Målet med kursmomentet är att du lär dig hantera och använda interna och ext
 
 Målet är inte att du till fullo skall behärska de tekniker som modulerna hanterar. Se detta som ett smakprov på saker du kan lära dig mer om i kommande kurser.
 [/INFO]
+-->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -64,11 +67,11 @@ Läs följande:
 
 Läs följande:
 
-1. Läs om Python modulerna [`json`](https://docs.python.org/3/library/json.html).
+1. Läs kort och översiktligt om Python modulerna [`json`](https://docs.python.org/3/library/json.html).
 
-2. Läs om den externa [Python-modulen `request`](http://docs.python-requests.org/en/latest/) på deras hemsida.
+2. Läs kort och översiktligt om den externa [Python-modulen `request`](http://docs.python-requests.org/en/latest/) på deras hemsida.
 
-3. Läs om den externa [Python-modulen `BeautifulSoap`](http://www.crummy.com/software/BeautifulSoup/) på deras hemsida.
+3. Läs kort och översiktligt om den externa [Python-modulen `BeautifulSoap`](http://www.crummy.com/software/BeautifulSoup/) på deras hemsida.
 
 
 
@@ -90,7 +93,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Följande är relevant extra läsning.
+Följande är relevant extra läsning om du har tid och lust.
 
 1. I boken [Dive Into Python 3](kunskap/boken-dive-into-python-3) handlar kapitel 14 om [HTTP Web Services](http://www.diveintopython3.net/http-web-services.html).
 
@@ -138,5 +141,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du jobbat med liknande tekniker innan (JSON, HTTP, webbtjänster, scrapa från HTML-formatet), eller var detta helt nytt för dig?
 * Känns det bra att jobba på kommandoraden, ser du ett användningsområde för den typen av Python-program?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
-* Var uppgiften i tuffaste laget, vilken del hade du valt bort om du hade haft det valet?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
