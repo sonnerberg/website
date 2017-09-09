@@ -6,6 +6,7 @@ category:
     - windows
     - bash
 revision:
+    "2017-09-09": (B, mos) Start Windows features by run.
     "2017-05-29": (A, mos) Första revisionen.
 ...
 Installera Bash i Windows 10
@@ -47,7 +48,7 @@ Bash finns med i din Windows installation men du behöver sätta på det på fö
 
 ###Sätt på "Windows Subsystem for Linux (beta)" {#winsublin}
 
-Via startmenyn, skriv "turn windows" för att söka efter "Turn Windows features on or off". Starta programmet och klicka i rutan för "Windows subsystem for Linux (beta)".
+Kör kommandot `optionalfeatures` via sökfältet eller via `Windows key + R`. Klicka i rutan för "Windows subsystem for Linux (beta)".
 
 [FIGURE src=image/snapvt17/win10-windows-features-on-off.png caption="Sätt på Windows Subsystem för Linux."]
 
