@@ -25,12 +25,12 @@ Funktioner {#funktioner}
 --------------------------------------
 Funktioner används för att dela upp och kategorisera delar av vår kod som gör det möjligt att återanvända koden på flera ställen i våra program. Funktioner finns i nästan alla programmeringsspråk och är en av de viktigaste verktygen vi har som programmerare. Vi kommer i denna övning utgå ifrån kod utan funktioner och sakta men säkert delar vi upp koden i återanvändbara delar. I exemplen nedan utgår vi från ett verkligt problem och bygger vår kod utifrån det samtidigt som vi delar upp och återanvänder vår kod genom att introducera funktioner.
 
-> Två kollegor ska äta lunch tillsammans och har båda med lunchlådor. Dansken Emil har med Rød Pølse och Svensken Andreas har med köttbullar med mos. Emil värmer sin mat i microvågsugnen på 800W i 2,5 minut och Andreas värmer också sin mat på 800W, men i 3,5 minut. Hur mycket energi går det åt till att värma varje maträtt? Vad kostar det att värma maten med ett kWh pris på 78.04 öre per kWh?
+> Två kollegor ska äta lunch tillsammans och har båda med lunchlådor. Dansken Emil har med Rød Pølse och Svensken Andreas har med köttbullar med mos. Emil värmer sin mat i microvågsugnen på 800W i 2,5 minuter och Andreas värmer också sin mat på 800W, men i 3,5 minuter. Hur mycket energi går det åt till att värma varje maträtt? Vad kostar det att värma maten med ett kWh pris på 78.04 öre per kWh?
 
 Vilken data får vi i uppgiften?
 
-Emil värmer i 2,5 minut på 800W.  
-Andreas värmer i 3,5 minut på 800W.  
+Emil värmer i 2,5 minuter på 800W.  
+Andreas värmer i 3,5 minuter på 800W.  
 kWh pris för el på 78,04 öre per kWh.  
 
 Vi kan även formeln för att beräkna energiåtgången i kWh om vi kan tiden och effekten:
