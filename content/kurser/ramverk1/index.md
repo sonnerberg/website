@@ -116,7 +116,11 @@ Vi skall titta på begreppet Dependency Injection och några begrepp som är nä
 
 ###Kmom04: Databasdrivna modeller {#kmom04}
 
-TBD.
+Vi skall titta på klasser i modell-lagret och utöka vår struktur med formulärhantering och databasdrivna modell-klasser.
+
+Vi skall använda en extern modul för HTML-formulär och vi skall använda en extern modul för databashanteringen.
+
+I arbetet skapar vi basklasser i modellagret som underlättar då vi implementerar applikationsspecifik kod. Vi kan se det som vi bygger upp modellklasser som kan scaffoldas fram, en form av återanvändning och ett försök att effektivisera vårt kodande.
 
 [Instruktion till kursmoment 04](./kmom04).
 

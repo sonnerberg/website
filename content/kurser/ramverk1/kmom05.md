@@ -2,21 +2,19 @@
 author:
     - mos
 revision:
-    "2017-03-24": "(PA1, mos) Jobbet börjar."
+    "2017-09-11": "(A, mos) Preliminär release, artikel saknas."
 ...
-Kmom05: Automatisera tester
+Kmom05: Modul på Packagist
 ==================================
 
-[WARNING]
-**Version 1 av ramverk1.**
+Du skall skapa en fristående modul av ditt kommentarssystem och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din me-sida och placera allt som modulen behöver i ett eget repo.
 
-Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
+Du skall sedan publicera repot som en PHP modul på Packagist. När det är klart kan du åter installera modulen i din me-sida med hjälp av kommandot composer.
 
-[/WARNING]
+När du är klar så har du alltså samma kodbas som från början. Men du har brutit loss en självstädnig del från din me-sida och gjort den modulär. Vi vinner förhoppningsvis en bättre kodstruktur som gör det enklare att jobba med vidareutveckling, underhåll och test.
 
-Skapa egen modul av koden och enhetstesta den samt kör BDD tester och via Docker container.
-
-<!--stop-->
+<!--more-->
+<!--st op-->
 
 
 
@@ -35,17 +33,23 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande artiklar.
 
-1. Bekanta dig med begreppet TDD och Behaviour driven testing genom att översiktligt titta på Wikipedias information.
+1. Artiklen PHP The Right Way innehåller ett kort stycke om "[Dependency Management](http://www.phptherightway.com/#dependency_management)", läs igenom det som en introduktion.
 
-1. Artiklen PHP The Right Way innehåller ett kort stycke om "[Testing](http://www.phptherightway.com/#testing)", läs igenom det som en introduktion.
+1. Läs om begreppet "[Sematic versioning](http://semver.org/)" som berättar hur du bör hantera versionsnummer på dina programvara.
+
+1. Bekanta dig med webbplatsen "[Packagist](https://packagist.org/about)" och skaffa dig ett konto på webbplatsen.
+
+1. Det skadar inte att färska upp minnet om "[dokumentationen för composer](https://getcomposer.org/doc/)" vilket kan komma till användning när du skall publicera din modul till Packagist.
 
 
 
+<!--
 ###Videor {#videor}
 
 Kika på följande videos.
 
 1. Titta på seminariet?
+-->
 
 
 
@@ -60,7 +64,7 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Skapa och testa en modul till Anax](kunskap/XXX)" som visar dig hur du använder begreppet i Anax. Du sparar koden i `me/anax` och integrerar den i din me-sida.
+1. Jobba igenom artikeln "[Skapa en PHP-modul på Packagist och integrera med Anax](kunskap/skapa-en-php-modul-pa-packagist-och-integrera-med-anax)" som visar dig hur du skapar en egen PHP-modul som du kan installera med kommandot `composer`. Du sparar koden i `me/kmom05/anax5`.
 
 
 
@@ -68,11 +72,15 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Bygg vidare på en kommentarsmodul i ditt Anax. Fokus test
+1. Utför uppgiften "[Skapa en PHP-modul och publicera på GitHub och Packagist](uppgift/skapa-en-php-modul-och-publicera-pa-github-och-packagist)". Du kan spara källkoden till din modul i `me/comment`.
 
+1. Gör uppgiften "[Integrera me-sidan med egen kommentarsmodul från Packagist](uppgift/integrera-me-sidan-med-egen-kommentarsmodul-fran-packagist)". Du får använda den modulen som du nyligen publicerat på Packagist och installera den med composer i din me-sida. Koden uppdaterar du i `me/anax`.
+
+1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (5.0.\*) när du är klar med alla uppgifter i kursmomentet.
+
+<!--
 1. Skriv gruppvis en artikel om ["Testdriven development (TDD)"](uppgift/skriv-artikel-om-tdd). Spara artikeln i din me-sida.
-
-1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med alla uppgifter i kursmomentet.
+-->
 
 
 
@@ -85,6 +93,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* 
+* Hur gick arbetet med att lyfta ut koden ur me-sidan och placera i en egen modul?
+* Flöt det på bra med GitHub och kopplingen till Packagist?
+* Hur gick det att åter installera modulen i din me-sida med composer, kunde du följa du din installationsmanual?
+* Några reflektioner över skillnaden med och utan modul?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

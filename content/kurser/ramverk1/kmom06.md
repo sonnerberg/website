@@ -40,6 +40,8 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande artiklar.
 
+1. Bekanta dig med begreppet TDD och Behaviour driven testing genom att översiktligt titta på Wikipedias information.
+
 1. Bekanta dig med begreppet automatiserad testning och regression testing genom att översiktligt titta på Wikipedias information.
 
 1. Artiklen PHP The Right Way innehåller ett kort stycke om "[Testing](http://www.phptherightway.com/#testing)", läs igenom det som en introduktion.
