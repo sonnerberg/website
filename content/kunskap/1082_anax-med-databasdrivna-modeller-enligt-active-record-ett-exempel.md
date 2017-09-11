@@ -168,25 +168,25 @@ Du kan verifiera att tjänsten ligger i ramverket via din `debug/info`.
 
 Det kan se ut så här.
 
-[FIGURE src=image/snapht17/book-debug-info.png?w=w2&cf&a=0,0,50,0 caption="Tjänsten bookController är nu en del av ramverkets tjänster."]
+[FIGURE src=image/snapht17/book-debug-info.png?w=w2&cf&a=58,0,0,0 caption="Tjänsten bookController är nu en del av ramverkets tjänster."]
 
 
 
-###Lägg till routes för `book/`{#addroutes}
+###Lägg till routes för `book/` {#addroutes}
 
-Lägg till routes. Du finner kodbas du kan använda i `extra/config/route.php` och i `extra/config/route/bookController.php`.
+Lägg till routes så att ramverket känner igen dem och skickar dem vidare till kontrollern. Du finner kodbas du kan använda i `extra/config/route.php` och i `extra/config/route/bookController.php`.
 
 Du kan verifiera att routerna är tillagda via din `debug/info`.
 
 Det kan se ut så här.
 
-[FIGURE src=image/snapht17/book-debug-info.png?w=w2&cf&a=58,0,0,0 caption="Routerna för kontrollern bookController är nu laddade i ramverkets router."]
+[FIGURE src=image/snapht17/book-debug-info.png?w=w2&cf&a=0,0,50,0 caption="Routerna för kontrollern bookController är nu laddade i ramverkets router."]
 
 
 
 ###Skapa databastabellen `Book` {#adddbtable}
 
-Jag tar och kopierar de SQL-filer som scaffoldats och lägger dem i min egen `sql/ddl`.
+Jag tar och kopierar de SQL-filer som scaffoldats fram och lägger dem i min egen `sql/ddl`.
 
 ```bash
 # Gå till roten av anax4/anax4u
@@ -238,7 +238,7 @@ Då vet vi att tabellerna finns i båda databaserna.
 
 ###Kopiera vyerna {#addview}
 
-Du kan kopiera template-filern till vyerna som ligger i katalogen `extra/view/` till din vy-katalog i `view/book/crud/`.
+Du kan kopiera template-filern till vyerna som ligger i katalogen `extra/view/book/crud/` till din egen vy-katalog i `view/book/crud/`.
 
 ```bash
 # Stå i rooten av anax4/anax4u
@@ -258,7 +258,7 @@ Vi prövar routen `book/`. Det bör se ut så här.
 
 Om det gick bra så prövar du att lägga till en bok via `book/create` som finns som ett menyval i sidan.
 
-[FIGURE src=image/snapht17/book-create-png?w=w2 caption="Då försöker vi skapa en bok till boksamlingen."]
+[FIGURE src=image/snapht17/book-create.png?w=w2 caption="Då försöker vi skapa en bok till boksamlingen."]
 
 När det går bra så ser det ut så här.
 
@@ -274,13 +274,9 @@ Du kan även radera en bok via menyvalet "Delete". Det kan se ut så här.
 
 [FIGURE src=image/snapht17/book-delete.png?w=w2 caption="Radera en book via formuläret."]
 
+Det vara det. Ett fungerande CRUD-exempel med databasdrivna modeller.
 
-
-
-
-
-
-
+NU vore det ett bra läge att gå in och uppdatera koden så att den blir mer som en riktig bokhantering. Det vore ett bra sätt att se hur koden hänger ihop. Men det är en annan historia.
 
 
 
@@ -291,4 +287,4 @@ Vi har gått igenom hur formulärhantering och databashantering med databasdrivn
 
 Vi har sett hur vi kan integrera den scaffoldade koden in i vårt eget ramverk och vi får en känsla för hur andra liknande moduler kan scaffoldas fram. Dessutom får vi ett större kodexempel på hur CRUD kan fungera i våra databasdrivna modeller.
 
-Denna artikel har en [egen forumtråd](t/6619) som du kan ställa frågor i, eller bidra med tips och trix.
+Denna artikel har en [egen forumtråd](t/6766) som du kan ställa frågor i, eller bidra med tips och trix.

@@ -6,6 +6,7 @@ category:
     - anax
     - kurs ramverk1
 revision:
+    "2017-09-11": "(C, mos) Uppdaterade introduktion för att passa uppgift i kmom03."
     "2017-09-05": "(B, mos) Flyttad till kmom04 och tydligare CRUD samt databas."
     "2017-06-28": "(A, mos) Första utgåvan."
 ...
@@ -23,20 +24,22 @@ Bygg även en administrationsdel där du kan hantera kommentarer och användare.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artiklarna "[Anax och formulärhantering](kunskap/anax-och-formularhantering)", "[Anax och databasdrivna modeller](kunskap/anax-och-databasdrivna-modeller)" samt "[Anax med databasdrivna modeller enligt Active Record, ett exempel](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel)".
+Du har jobbat igenom artikeln "[Anax med databasdrivna modeller enligt Active Record, ett exempel](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel)" och de artiklar som föregår den.
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Vi kan anta att ditt kommentarssystem kommer att kräva inloggade användare, det är alltså inte ett kommentarssystem för anonyma användare som vi skall skapa.
+Ditt kommentarssystem kräver inloggade användare, det är en begränsning cvi väljer. Det är alltså inte ett kommentarssystem för anonyma användare som vi skall skapa.
 
 Du behöver stöd för att användare kan registrera sig och logga in i ditt system och att de enbart kan påverka sina egna kommentarer.
 
-Du kan nu börja spara kommentarerna i databasen.
+Nu är det dags att implementera en databasmodell och hantera både kommentarer och användare i databasen.
 
 Fundera på hur mycket tid du har och se till att få en fungerade prototyp inom den tiden du har och prioritera bort det som inte är nödvändigt. Du kan välja att spara saker och göra dem i projektet istället.
+
+Att ha en väl fungerande prototyp, innan du lämnar kursmomentet, är av yttersta vikt. Annars får du problem i nästa kmom. Det är viktigare att det fungerar än att det innehåller en massa features.
 
 
 
