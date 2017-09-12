@@ -71,7 +71,7 @@ Krav {#krav}
 
 1. Menyval: Ordmultiplicering. Marvin ska fråga efter ett ord och en siffra och sedan skriva ut det ordet så många gånger.
 
-1. Menyval: Slumpmässiga tal. Marvin ska fråga efter min och max och sedan skriva ut 10 slumpmässiga tal mellan min och max. Dessa ska skrivas ut kommaseparerat på samma rad.
+1. Menyval: Slumpmässiga tal. Marvin ska fråga efter min och max och sedan skriva ut 10 slumpmässiga tal mellan min och max. Dessa ska skrivas ut kommaseparerat på samma rad. Till exempel: `29, 34, 45, 43, 22, 34`.
 
 1. Menyval: Summa och medel: Marvin ska fråga efter tal tills du anser dig vara klar (t.ex skriver "done") och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal.
 
