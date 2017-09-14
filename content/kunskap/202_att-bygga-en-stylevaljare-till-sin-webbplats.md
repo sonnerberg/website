@@ -331,7 +331,7 @@ Detta är alltså en variant på hur man kan posta ett formulär, via länkens *
 
 Du ser kanske klurigheten att vi skickar med ett *hidden* fält som innehåller namnet på multisidan, annars hamnar vi inte på rätt undersida. Man måste skapa hela querysträngen, och det löser vi med formulärets dolda fält.
 
-Här kan du se en översikt av de olika [formulärelement som finns i HTML](form).
+Här kan du se en översikt av de olika [formulärelement som finns i HTML](forms).
 
 
 
