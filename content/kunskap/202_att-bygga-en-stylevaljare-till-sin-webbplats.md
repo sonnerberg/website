@@ -12,9 +12,9 @@ Att bygga en styleväljare till sin webbplats
 
 [FIGURE src=/image/snapvt15/stylechooser.png?w=c5&a=20,50,50,0 class="right" caption="En styleväljare i PHP."]
 
-Tanken är att bygga en styleväljare som du kan inkludera på din webbplats. Styleväljaren skall erbjuda en möjlighet att byta stylesheet för att testa olika utseenden på webbplatsen. 
+Tanken är att bygga en styleväljare som du kan inkludera på din webbplats. Styleväljaren skall erbjuda en möjlighet att byta stylesheet för att testa olika utseenden på webbplatsen.
 
-För att lyckas med detta behöver vi använda sessioner och ett formulär. Sedan har vi en infrastruktur som vi kan lägga till vår webbplats, som gör det enkelt att testa och utvärdera olika stylesheets. 
+För att lyckas med detta behöver vi använda sessioner och ett formulär. Sedan har vi en infrastruktur som vi kan lägga till vår webbplats, som gör det enkelt att testa och utvärdera olika stylesheets.
 
 <!--more-->
 
@@ -43,7 +43,7 @@ Hur skall stylesheet väljaren fungera?
 
 > Stylesheetväljaren skall ha ett formulär där man kan välja mellan de stylesheets som finns på webbplatsen. Via formuläret bestämmer man vilken stylesheet som skall användas. Den valda stylesheeten lagras i sessionen. Om man inte valt någon stylesheet så används webbplatsens standard stylesheet.
 
-Hur löser man detta? 
+Hur löser man detta?
 
 Kika på min lösning så ser du hur det är tänkt att fungera när det är integrerad i en webbplats.
 
@@ -56,7 +56,7 @@ När allt är på plats så fungerar det smidigt. Men hur ser delarna ut? För a
 Använd sessionen för att komma ihåg saker {#session}
 ------------------------------------------------------------------------------
 
-Anrop till en webbsida är [*stateless*](https://en.wikipedia.org/wiki/Stateless_protocol), anropet minns inget från föregående anrop. Det finns inget minne. Men, att ge sin webbplats ett minne kan man göra med en session. 
+Anrop till en webbsida är [*stateless*](https://en.wikipedia.org/wiki/Stateless_protocol), anropet minns inget från föregående anrop. Det finns inget minne. Men, att ge sin webbplats ett minne kan man göra med en session.
 
 Sessionen lagras på webbservern. Sessionsdatat kan lagras i en fil eller i en databas. För att komma åt sessionsdatan så används en sessionsnyckel. Nyckel skapas av webbservern och skickas till webbläsaren. När webbläsaren hämtar nästa webbsida så bifogas nyckeln och servern vet vilken sessionsdata som är kopplad till anropet.
 
@@ -91,7 +91,7 @@ Nu blir det enklare och dina sessioner i dina olika exempelprogram krockar inte 
 
 ###Hämta och sätt värden i sessionen {#set}
 
-Sessionsdatat görs tillgänglig i en global array som heter `$_SERVER`. Här är kod som räknar upp en räknare med ett för varje gång en sida laddas.
+Sessionsdatat görs tillgänglig i en global array som heter `$_SESSION`. Här är kod som räknar upp en räknare med ett för varje gång en sida laddas.
 
 ```php
 // Get current value of the counter, if it exists, else init it to zero
@@ -104,7 +104,7 @@ $counter += 1;
 $_SESSION['counter'] = $counter;
 ```
 
-Om du lägger koden i en sida kan det se ut så här (ungefär). 
+Om du lägger koden i en sida kan det se ut så här (ungefär).
 
 [FIGURE src=/image/snapvt15/session-raknare.png?w=w2 caption="En räknare i sessionen som ökar med ett för varje gång sidan laddas om."]
 
@@ -120,7 +120,7 @@ Ibland vill man förstöra sessionen, det är speciellt behändigt när man test
 ```php
 // Unset all of the session variables.
 $_SESSION = array();
- 
+
 // If it's desired to kill the session, also delete the session cookie.
 // Note: This will destroy the session, and not just the session data!
 if (ini_get("session.use_cookies")) {
@@ -135,7 +135,7 @@ if (ini_get("session.use_cookies")) {
         $params["httponly"]
     );
 }
- 
+
 // Finally, destroy the session.
 session_destroy();
 ```
@@ -151,12 +151,12 @@ Ibland blir det fel. Kanske så här.
 
 [FIGURE src=/image/snapvt15/can-not-send-session-cache-limiter.png?w=w2 caption="Felmeddelande om att sessionen inte kan startas."]
 
-Det som är viktigt att tänka på i samband med sessionen är att sessionens id skickas som en del av HTTP headern, tillsammans med hur länge sessionen skall gälla. HTTP headern skapas så fort man skriver ut första delen av webbsidan. Det räcker med en tom rad eller ett mellanslag för att det skall hända. 
+Det som är viktigt att tänka på i samband med sessionen är att sessionens id skickas som en del av HTTP headern, tillsammans med hur länge sessionen skall gälla. HTTP headern skapas så fort man skriver ut första delen av webbsidan. Det räcker med en tom rad eller ett mellanslag för att det skall hända.
 
 Det är alltså viktigt att starta sessionen, innan man skriver ut något. Bäst är att starta sessionen så tidigt som möjligt. Då undviker man problem.
 
 Felmeddelandet säger att den inte kan skriva detaljer om sessionens regler för cachen. Det är en del av HTTP headern.
- 
+
 Så här kan man kika, med Firebug, på varje HTTP-request och se vad HTTP headern innehåller.
 
 [FIGURE src=/image/snapvt15/session-part-of-header.png?w=w2 caption="Felmeddelande om att sessionen inte kan startas."]
@@ -230,7 +230,7 @@ if (isset($stylesheets[$key])) {
 }
 ```
 
-Är det krångligt? Ja, lite granna kanske. Det kan bli lite mycket att ha koll på vad som finns i sessionen, veta vad som är nyckel i arrayer och så vidare. Men det handlar inte om så mycket kod, så det är överskådligt. Lägg tid på att förstå de olika delarna av koden, även om det kanske känns lite *ruskigt*. 
+Är det krångligt? Ja, lite granna kanske. Det kan bli lite mycket att ha koll på vad som finns i sessionen, veta vad som är nyckel i arrayer och så vidare. Men det handlar inte om så mycket kod, så det är överskådligt. Lägg tid på att förstå de olika delarna av koden, även om det kanske känns lite *ruskigt*.
 
 Så här skulle man kunna läsa koden:
 
@@ -297,7 +297,7 @@ if ($style !== null) {
 
 Nu kan jag med länkar och `$_GET` ändra stylesheeten.
 
- 
+
 
 Sätt värdet på sessionen med en dropdown {#form-dropdown}
 ----------------------------------------------------------------
@@ -425,7 +425,7 @@ header("Location: chooser.php?page=postform");
 
 Som du ser så måste jag starta sessionen i varje sida som använder den. När detta skedde i multisidan så var det inget problem, men nu måste jag starta den även i processingsidan. Annars kan jag inte ändra värden i sessionen.
 
-Det som kan vara lite klurigt är att debugga en processingsida. Eftersom den utför ett arbete och sen skickar vidare till en annan sida så kan man inte direkt använda `echo` för att skriva ut och se vad som händer. 
+Det som kan vara lite klurigt är att debugga en processingsida. Eftersom den utför ett arbete och sen skickar vidare till en annan sida så kan man inte direkt använda `echo` för att skriva ut och se vad som händer.
 
 För egen del brukar jag lite brutalt skriva ut saker och sen avbryta exekveringen i processingsidan, så här.
 
@@ -442,7 +442,7 @@ Det är en god taktik som fungerar för mig.
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Det var grunderna i sessioner och vi såg hur vi kunde skapa en styleväljare genom att använda sessionen. 
+Det var grunderna i sessioner och vi såg hur vi kunde skapa en styleväljare genom att använda sessionen.
 
 Dessutom fick du prova på formulär med både GET och POST samt se hur en processingsida kan förbättra hanteringen av ett postat formulär.
 
