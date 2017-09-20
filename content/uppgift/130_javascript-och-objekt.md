@@ -2,6 +2,7 @@
 author: mos
 category: javascript
 revision:
+  "2015-08-27": (D, lew) Korrigerade labben.
   "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
   "2014-08-18": (B, mos) Genomgången, mindre justering.
   "2014-06-30": (A, mos) Första utgåvan i samband med javascript1.
@@ -21,7 +22,7 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom artikeln "[Labbmiljö för JavaScript i webbläsaren](kunskap/labbmiljo-for-javascript-i-webblasaren)" och har den labbmiljö som krävs.
 
-Du har även utfört [lab3](uppgift/javascript-och-arrayer).
+Du har även utfört [lab4](uppgift/javascript-och-arrayer).
 
 
 
@@ -34,7 +35,7 @@ Gå till din kurskatalog i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb create lab4
+dbwebb create lab5
 ```
 
 Materialet till labben ligger nu i din kurskatalog i `me/kmom04/lab4` enligt följande.
@@ -72,11 +73,11 @@ Ladda upp och publicera labben, som en del av din me-sida, genom att göra följ
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate lab4
-dbwebb publish lab4
+dbwebb validate lab5
+dbwebb publish lab5
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 Dubbelkolla att din me-sida innehåller resultatet från uppgiften.
 
@@ -86,7 +87,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
