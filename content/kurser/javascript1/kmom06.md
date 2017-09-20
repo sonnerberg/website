@@ -26,13 +26,10 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
-
 1. Läs följande kapitel i boken [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/).
     * [Introduction](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#introduction)
     * [What is a Pattern?](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#whatisapattern)
     * [The Module Pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
-
 
 ###Artiklar {#artiklar}
 

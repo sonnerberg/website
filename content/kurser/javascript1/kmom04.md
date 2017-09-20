@@ -32,8 +32,9 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming) 
+1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
     * [Ch4 Data structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
+    * [Ch5 Higher-Order Functions](http://http://eloquentjavascript.net/05_higher_order.html)
     * [Ch6 The Secret Life of Objects](http://eloquentjavascript.net/06_object.html)
 
 
@@ -118,7 +119,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur kändes det att bekanta sig med begreppet array?
 * Hur kändes det att bekanta sig med begreppet objekt?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
-
-
-
-

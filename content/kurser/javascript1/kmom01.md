@@ -34,8 +34,9 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming) 
-    * [Ch1 Introduction](http://eloquentjavascript.net/00_intro.html)
+1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
+    * [Ch0 Introduction](http://eloquentjavascript.net/00_intro.html)
+    * [Ch1 Values, Types, and Operators](http://http://eloquentjavascript.net/01_values.html)
     * [Ch12 JavaScript and the browser](http://eloquentjavascript.net/12_browser.html)
 
 
@@ -46,13 +47,13 @@ Läs följande:
 
 Läs följande:
 
-1. Bekanta dig med Mozilla Developers Network (MDN) och börja på [MDN: Web technology for developers](https://developer.mozilla.org/en-US/docs/Web). Där ser du artiklar om de tekniker som kursen hanterar. Här kan du finna hjälp och stöd, du behöver bara lära dig att navigera på webbplatsen. Använd 15 minuter så att du känner dig hemma på webbplatsen och får en känsla för vad den innehåller. Titta främst på delarna för HTML, CSS, JavaScript och DOM. 
+1. Bekanta dig med Mozilla Developers Network (MDN) och börja på [MDN: Web technology for developers](https://developer.mozilla.org/en-US/docs/Web). Där ser du artiklar om de tekniker som kursen hanterar. Här kan du finna hjälp och stöd, du behöver bara lära dig att navigera på webbplatsen. Använd 15 minuter så att du känner dig hemma på webbplatsen och får en känsla för vad den innehåller. Titta främst på delarna för HTML, CSS, JavaScript och DOM.
 
 2. När du är klar med ovanstående så tittar du bland de (MDN) mest [populära demo-programmen i JavaScript](https://developer.mozilla.org/en-US/demos/tag/tech:javascript?sort=likes) för att få en känsla för vad man kan göra med JavaScript i en webbläsare. Kika runt och se om du hittar något extra kul, kanske hittar du något som du vill lära dig hur man gör?
 
 3. [MDN Tutorial: Introduction to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction). Läs snabbt igenom guiden för att bekanta dig med HTML.
 
-4. [MDN Tutorial: Getting started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started). Gå snabbt igenom guiden (Part I: The Basics of CSS) översiktligt för att bekanta dig med CSS och se vad du kan göra med CSS. 
+4. [MDN Tutorial: Getting started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started). Gå snabbt igenom guiden (Part I: The Basics of CSS) översiktligt för att bekanta dig med CSS och se vad du kan göra med CSS.
 
 5. Bekanta dig med guiden [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) och läs följande kapitel.
     * [Ch 1: Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction) en kort introduktion till JavaScript.
@@ -116,11 +117,11 @@ När du är klar med ovanstående introduktionsartiklar så genomför du följan
 Dessa uppgifter skall utföras och redovisas.
 
 <!-- Lab1  Variables and built-in functions -->
+1. Gör uppgiften "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)"
 
+2. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)".
 
-1. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)". 
-
-2. Gör uppgiften "[Skapa en me-sida för kursen javascript1](uppgift/skapa-en-me-sida-i-kursen-javascript1)". 
+3. Gör uppgiften "[Skapa en me-sida för kursen javascript1](uppgift/skapa-en-me-sida-i-kursen-javascript1)".
 
 
 
@@ -144,8 +145,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du bekant med terminalen och Unix-kommandon sedan tidigare?
 * Gick det bra med JSFiddle? Länka till din JSFiddle.
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-
-
-
-
-
