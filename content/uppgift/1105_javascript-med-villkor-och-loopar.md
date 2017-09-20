@@ -1,18 +1,15 @@
 ---
-author: mos
+author: lew
 category:
     - javascript
-    - kursen javascript1
+    - kursen dbjs
 revision:
-    "2017-09-20": (D, lew) Korrigerade labben.
-    "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
-    "2014-08-12": (B, mos) Mindre redaktionella ändringar.
-    "2014-06-30": (A, mos) Första utgåvan i samband med javascript1.
+    "2017-09-20": (A, lew) Ny version av javascript1, ny labb.
 ...
-JavaScript med funktioner
+JavaScript med villkor och loopar
 ==================================
 
-Jobba igenom grunderna med funktioner i JavaScript.
+Jobba igenom grunderna i JavaScript med villkor och loopar.
 
 <!--more-->
 
@@ -33,7 +30,7 @@ Gå till din kurskatalog i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb create lab3
+dbwebb create lab2
 ```
 
 Materialet till labben ligger nu i din kurskatalog, enligt följande.
@@ -61,7 +58,7 @@ Krav {#krav}
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish lab3
+dbwebb publish lab2
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.

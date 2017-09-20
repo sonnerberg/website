@@ -1,18 +1,19 @@
 ---
 author: mos
 revision:
+  "2016-03-15": (F, lew) korrigerade labben".
   "2016-03-15": (E, mos) Lade till videoserie med "Lär dig JavaScript".
   "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
   "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
   "2014-09-03": (B, mos) Första officiella versionen.
   "2014-08-12": (A, mos) Första utgåvan för javascript1 kursen.
 ...
-Kmom02: Variabler och loopar <!-- Villkor och loopar -->
+Kmom02: Villkor och loopar <!-- Villkor och loopar -->
 ==================================
 
 Vi skall nu komma i gång med att koda JavaScript. Vi bekantar oss med grundkonstruktionerna i språket och använder strängar, siffror, variabler och loopar tillsammans med en del inbyggda funktioner för strängar, matematiska operationer och datum.
 
-Samtidigt gör vi ett par enklare program som övar oss i hur HTML, CSS och JavaScript kan samarbeta för att bygga upp en webbsida. 
+Samtidigt gör vi ett par enklare program som övar oss i hur HTML, CSS och JavaScript kan samarbeta för att bygga upp en webbsida.
 
 <!--more-->
 
@@ -32,7 +33,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming) 
+1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
     * [Ch2 Program structure](http://eloquentjavascript.net/02_program_structure.html)
 
 <!--
@@ -101,7 +102,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 <!-- Lab2 Villkor och loopar -->
 
-1. Gör uppgiften "[JavaScript med variabler, loopar och inbyggda funktioner](uppgift/javascript-med-variabler-loopar-och-inbyggda-funktioner)".
+1. Gör uppgiften "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)".
 
 2. Gör uppgiften "[Rita flaggor med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css)".
 
