@@ -99,10 +99,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Hur känns det att jobba med begreppen kring dependency injection, service locator och lazy loading?
-* Hur känns det att göra dig av med beroendet till `$app`, blir `$id` bättre?
+* Hur känns det att göra dig av med beroendet till `$app`, blir `$di` bättre?
 * Hur känns det att återigen göra refaktoring på din me-sida, blir det förbättringar på kodstrukturen, eller bara annorlunda?
 * Lyckades du införa begreppen kring DI när du vidareutvecklade ditt kommentarssystem?
 * Påbörjade du arbetet (hur gick det) med databasmodellen eller avvaktar du till kommande kmom?
-* Allmänna kommentare kring din me-sida och dess kodstruktur?
+* Allmänna kommentarer kring din me-sida och dess kodstruktur?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
