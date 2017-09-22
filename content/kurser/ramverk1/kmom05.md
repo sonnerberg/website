@@ -11,7 +11,9 @@ Du skall skapa en fristående modul av ditt kommentarssystem och placera det i e
 
 Du skall sedan publicera repot som en PHP modul på Packagist. När det är klart kan du åter installera modulen i din me-sida med hjälp av kommandot composer.
 
-När du är klar så har du alltså samma kodbas som från början. Men du har brutit loss en självstädnig del från din me-sida och gjort den modulär. Vi vinner förhoppningsvis en bättre kodstruktur som gör det enklare att jobba med vidareutveckling, underhåll och test.
+Du börjar införa enhetstestning på din modul.
+
+När du är klar så har du alltså samma kodbas som från början. Men du har brutit loss en självständig del från din me-sida och gjort den till en egen fristående modul. Vi vinner förhoppningsvis en bättre kodstruktur som gör det enklare att jobba med vidareutveckling, underhåll och test.
 
 <!--more-->
 <!--st op-->
@@ -96,6 +98,7 @@ Se till att följande frågor besvaras i texten:
 * Hur gick arbetet med att lyfta ut koden ur me-sidan och placera i en egen modul?
 * Flöt det på bra med GitHub och kopplingen till Packagist?
 * Hur gick det att åter installera modulen i din me-sida med composer, kunde du följa du din installationsmanual?
+* Hur väl lyckas du enhetstesta din modul och hur mycket kodtäckning fick du med?
 * Några reflektioner över skillnaden med och utan modul?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

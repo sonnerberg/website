@@ -29,7 +29,7 @@ Du har också jobbat igenom artikeln "[Skapa en PHP-modul på Packagist och inte
 Introduktion {#intro}
 -----------------------
 
-Du skall lyfta ut koden för ditt kommentarssystem och placera i en egen modul som blir till sitt egna repo på GitHub. Du publicerar sedan modulen på webbplatsen Packagist så att den går att installera med kommadnot composer.
+Du skall lyfta ut koden för ditt kommentarssystem och placera i en egen modul som blir till sitt egna repo på GitHub. Du publicerar sedan modulen på webbplatsen Packagist så att den går att installera med kommandot composer.
 
 
 
@@ -46,7 +46,7 @@ Krav {#krav}
 
 1. Publicera repot på Packagist. Se till att Packagist blir automatiskt uppdaterat med senaste informationen när du pushar till GitHub.
 
-1. Lägg till enhetstester med `phpunit` som testar din modul. Det finns inga krav på omfattningen av enhetstesterna, men det måste finnas minst ett test.
+1. Lägg till enhetstester med `phpunit` som testar din modul. Det finns inga krav på omfattningen av enhetstesterna, men det måste finnas tester. Kan du nå kodtäckning om 30%, 50% eller mer?
 
 1. Dokumentera i din `README.md`-fil hur man tar din modul och integrerar med Anax. Det går bra att vara kortfattade och räkna med att läsaren kan sin Anax.
 
