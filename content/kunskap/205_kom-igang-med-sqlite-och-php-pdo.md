@@ -34,13 +34,13 @@ Det kan också vara en fördel att vara bekant med klienter för SQLlite, både 
 Om PHP PDO och SQLite {#om}
 --------------------------------------
 
-Via PHP kan man komma åt informationen i en SQLite-databas. Det finns olika PHP-interface för att jobba mot SQLite, det finns [sqlite](http://php.net/manual/en/book.sqlite.php), [sqlite3](http://php.net/manual/en/book.sqlite3.php) eller [pdo-sqlite](http://php.net/manual/en/ref.pdo-sqlite.php). 
+Via PHP kan man komma åt informationen i en SQLite-databas. Det finns olika PHP-interface för att jobba mot SQLite, det finns [sqlite](http://php.net/manual/en/book.sqlite.php), [sqlite3](http://php.net/manual/en/book.sqlite3.php) eller [pdo-sqlite](http://php.net/manual/en/ref.pdo-sqlite.php).
 
 Jag kommer att använda interfacet PDO för att jobba mot SQLite. Databasen SQLite är version 3.
 
 Läs den korta [introduktionen om PHP PDO](http://php.net/manual/en/intro.pdo.php).
 
-PHP Data Objects (PDO) är ett generiskt gränssnitt för att jobba mot olika underliggande databaser. Det ger ett gemensamt gränssnitt, oavsett vilken databas man använder. PDO stödjer även databaser som MySQL, PostgreSQL och Microsoft SQL Server. 
+PHP Data Objects (PDO) är ett generiskt gränssnitt för att jobba mot olika underliggande databaser. Det ger ett gemensamt gränssnitt, oavsett vilken databas man använder. PDO stödjer även databaser som MySQL, PostgreSQL och Microsoft SQL Server.
 
 En PDO driver krävs för att PDO ska kunna prata med den valda databasen. En PDO driver sköter den specifika kommunikationen mellan PDO och databasen. I manualen finns en [lista över de PDO driver som finns](http://php.net/manual/en/pdo.drivers.php).
 
@@ -103,11 +103,11 @@ Använd nu ovanstående PHP-kod för att kontrollera att PHP PDO och SQLite är 
 Koppla ett PHP-skript till en SQLite-databas med PDO {#connect}
 --------------------------------------
 
-Vi gör ett minsta möjliga skript som kopplar sig mot en SQLite databas via PHP PDO och ställer en fråga samt skriver ut resultatet till webbläsare. Låt oss använda samma databas som [vi jobbade med tidigare](kunskap/kom-igang-med-databasen-sqlite). Ta en kopia av databasfilen `boats.sqlite` och spara den till en katalog på din webbserver. Jag sparade min databas som `jetty.sqlite` i underkatalogen `db`. 
+Vi gör ett minsta möjliga skript som kopplar sig mot en SQLite databas via PHP PDO och ställer en fråga samt skriver ut resultatet till webbläsare. Låt oss använda samma databas som [vi jobbade med tidigare](kunskap/kom-igang-med-databasen-sqlite). Ta en kopia av databasfilen `boats.sqlite` och spara den till en katalog på din webbserver. Jag sparade min databas som `jetty.sqlite` i underkatalogen `db`.
 
 Därefter kan du skapa ett PHP-skript med följande kod.
 
-*PHP-kod för att kopppla till en SQLite databas och ställa en fråga.*
+*PHP-kod för att koppla till en SQLite databas och ställa en fråga.*
 
 ```php
 <?php
@@ -151,9 +151,9 @@ Studera istället källkoden i exemplet och försök att skapa dig en mental bil
 
 Kopiera koden till din egna fil och gör ett eget exempel. Testa så att det fungerar. Detta är grunden i att koppla PHP mot en databas. Inte så svårt va?
 
-Databasfilen ligger i underkatalogen `db` och sökvägen dit är alltså `db/jetty.sqlite`. 
+Databasfilen ligger i underkatalogen `db` och sökvägen dit är alltså `db/jetty.sqlite`.
 
-En DSN är en sträng som innehåller informationen för att koppla dig till databasen. En DSN ser olika ut för varje databas. I vårt fall består den av strängen `sqlite:` följt av filens sökväg. 
+En DSN är en sträng som innehåller informationen för att koppla dig till databasen. En DSN ser olika ut för varje databas. I vårt fall består den av strängen `sqlite:` följt av filens sökväg.
 
 Du kan läsa lite om DSN i metoden för att koppla upp sig mot databasen, [PDO::__construct()](http://php.net/manual/en/pdo.construct.php), kika under stycket om *Parameters*. Du kan också kort [läsa om DSN på Wikipedia](https://en.wikipedia.org/wiki/Data_source_name).
 
@@ -166,7 +166,7 @@ Då kikar vi vidare.
 Felmeddelande om PDO inte har skrivrättigheter i katalogen {#err-open}
 --------------------------------------
 
-Om du skriver fel sökväg till databasen, eller om databasfilen inte finns, så försöker PDO att skapa databasfilen. För att lyckas med det så behöver PDO ha skrivrättigheter i den katalogen där databasfilen skall ligga. 
+Om du skriver fel sökväg till databasen, eller om databasfilen inte finns, så försöker PDO att skapa databasfilen. För att lyckas med det så behöver PDO ha skrivrättigheter i den katalogen där databasfilen skall ligga.
 
 I vårt exempel så har vi redan databasfilen så det bör inte bli ett problem.
 
@@ -176,9 +176,9 @@ Men, om vi till exempel stavar fel på databasfilen eller dess sökväg så kan 
 
 [FIGURE src=/image/snapvt15/pdo-connect-fail.png?w=w2 caption="Misslyckades med att koppla sig, eller skapa den felstavade databasen."]
 
-Det som skrivs ut är dels vår egen felsökningstext som visar sökvägen/dsn och dels felmeddelandet från PHP om det fel som kastades. 
+Det som skrivs ut är dels vår egen felsökningstext som visar sökvägen/dsn och dels felmeddelandet från PHP om det fel som kastades.
 
-Kom ihåg att det alltid är det översta felet som är intressant, resten av felen är ofta följdfel och fixar man det första så kan de försvinna. 
+Kom ihåg att det alltid är det översta felet som är intressant, resten av felen är ofta följdfel och fixar man det första så kan de försvinna.
 
 > *"Lös alltid det översta felet först och lös ett fel i taget."*
 
@@ -286,7 +286,7 @@ $search = isset($_GET['search'])
 
 ?>
 ```
- 
+
 Sedan väljer jag att skriva ut webbsidan inklusive formuläret. Nu kan jag även skriva ut nuvarande söksträng, det ser bra ut.
 
 ```php
@@ -372,11 +372,11 @@ När vi jobbade med SQLite Manager så såg vi SQL-koden för att skapa en tabel
 
 ```sql
 CREATE TABLE "main"."Jetty" (
-    "jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
-    "boatType" VARCHAR(20) NOT NULL, 
-    "boatEngine" VARCHAR(20) NOT NULL, 
-    "boatLength" INTEGER, 
-    "boatWidth" INTEGER, 
+    "jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE,
+    "boatType" VARCHAR(20) NOT NULL,
+    "boatEngine" VARCHAR(20) NOT NULL,
+    "boatLength" INTEGER,
+    "boatWidth" INTEGER,
     "ownerName" VARCHAR(20)
 )
 
@@ -410,11 +410,11 @@ Sedan skapar jag tabellen.
 echo "<p>Prepare to create the table.<p>";
 $sql = <<<EOD
 CREATE TABLE "main"."Jetty" (
-    "jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
-    "boatType" VARCHAR(20) NOT NULL, 
-    "boatEngine" VARCHAR(20) NOT NULL, 
-    "boatLength" INTEGER, 
-    "boatWidth" INTEGER, 
+    "jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE,
+    "boatType" VARCHAR(20) NOT NULL,
+    "boatEngine" VARCHAR(20) NOT NULL,
+    "boatLength" INTEGER,
+    "boatWidth" INTEGER,
     "ownerName" VARCHAR(20)
 )
 EOD;
@@ -564,7 +564,7 @@ Det finns ingen enkel guide till det här med säker programmering i webbmiljö.
 
 > *"Lita aldrig på det som användaren kan mata in i din webbplats. Oavsett om det är ett formulär eller någon del i HTTP-headern. Lita aldrig på användaren."*
 
-Principen som jag använder i exemplet är att spara allt i databasen som användaren skriver in. Men när jag skriver ut det till webbsidan så använder jag `htmlentities()`. Det är den taktiken jag brukar använda. 
+Principen som jag använder i exemplet är att spara allt i databasen som användaren skriver in. Men när jag skriver ut det till webbsidan så använder jag `htmlentities()`. Det är den taktiken jag brukar använda.
 
 Men man borde också kontrollera att användaren postar rätt typ av information. Till exempel så skall båtens id vara en siffra. Det borde man kontrollera. Men vi hoppar över det nu.
 
@@ -581,17 +581,17 @@ Till exempel så här.
 
 > *Fatal error: Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: Jetty.jettyPosition' in /home/mos/git/htmlphp/example/pdo-sqlite/insert-process.php on line 41*
 
-Så här blir det när man försöker lägga in en båt med ett id som redan finns. Id:et är unikt i databasen. Det sa vi när vi skapade tabellen. 
+Så här blir det när man försöker lägga in en båt med ett id som redan finns. Id:et är unikt i databasen. Det sa vi när vi skapade tabellen.
 
 ```sql
-"jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
+"jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE,
 ```
 
 Felmeddelandet visas tillsammans med ett par extra utskrifter.
 
 [FIGURE src=/image/snapvt15/pdo-insert-fail.png?w=w2 caption="Felmeddelande visas som säger att en båt med id 1 redan finns."]
 
-Tanken är inte att användaren skall se detta. Skriptet bör hantera alla felsituationer och ge enkla och tydliga felmeddelanden till användaren. Det kan alltså bli en hel del kod kring att hantera inmatning från användaren. 
+Tanken är inte att användaren skall se detta. Skriptet bör hantera alla felsituationer och ge enkla och tydliga felmeddelanden till användaren. Det kan alltså bli en hel del kod kring att hantera inmatning från användaren.
 
 
 
@@ -646,11 +646,11 @@ if ($jettyPosition) {
 
     // Get the results as an array with column names as array keys
     $res = $stmt->fetchAll(PDO::FETCH_BOTH);
-    
+
     if (empty($res)) {
         die("No such jettyPosition.");
     }
-    
+
     // Move content of array to individual variables, for ease of use.
     list($jettyPosition, $boatType, $boatEngine, $boatLength, $boatWidth, $ownerName) = $res[0];
 }
@@ -678,7 +678,7 @@ Därefter är det som vanligt. Det finns en `update-process.php` och den är i s
 ```php
 // Prepare SQL statement to UPDATE a row in the table
 $sql = <<<EOD
-UPDATE Jetty 
+UPDATE Jetty
 SET
     boatType = ?,
     boatEngine = ?,
@@ -691,18 +691,18 @@ EOD;
 $stmt = $db->prepare($sql);
 ```
 
-Har du tänkt på en sak? Här finns kodrader att spara, ser du det? Här finns möjligheter för att använda funktioner för att strukturera koden, istället för att göra copy-paste som jag valt att göra i exempelkoden. 
+Har du tänkt på en sak? Här finns kodrader att spara, ser du det? Här finns möjligheter för att använda funktioner för att strukturera koden, istället för att göra copy-paste som jag valt att göra i exempelkoden.
 
 
 
 Ta bort rader i tabellen med DELETE {#delete}
 --------------------------------------
 
-Slutligen skall vi då skapa en hantering för att ta bort en rad ur tabellen. 
+Slutligen skall vi då skapa en hantering för att ta bort en rad ur tabellen.
 
 Först kan du kort läsa om [SQL-satsen DELETE på www.sqlite.org](http://www.sqlite.org/lang_delete.html).
 
-Det får bli ett nytt skript, `delete.php` och `delete-process.php`. Vi lägger till en knapp "Delete" och kod för att radera båten. Användaren väljer först en båt och därefter kan båten rades med ett klick på knappen. 
+Det får bli ett nytt skript, `delete.php` och `delete-process.php`. Vi lägger till en knapp "Delete" och kod för att radera båten. Användaren väljer först en båt och därefter kan båten rades med ett klick på knappen.
 
 Så här blev det för mig.
 
@@ -748,7 +748,7 @@ Sen är det så klart SQL-koden för att radera raden ur tabellen, men det är m
 ```php
 // Prepare SQL statement to DELETE a row in the table
 $sql = <<<EOD
-DELETE FROM Jetty 
+DELETE FROM Jetty
 WHERE
     jettyPosition = ?
 EOD;
