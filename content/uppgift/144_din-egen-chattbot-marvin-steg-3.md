@@ -88,6 +88,8 @@ Extrauppgift {#extra}
 
 1. Lär Marvin svara på meningar som innehåller orden "hej" och "lunch". Svaren skall slumpas fram och kombineras från de [standardsvar som IRC-Marvin använder på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L179-L193).
 
+[ASCIINEMA src=139383]
+
 
 
 Tips från coachen {#tips}
