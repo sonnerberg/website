@@ -100,6 +100,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
+Om du har tid och lust finns extra uppgifter att utföra.
+
 1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe)". Spara alla filer under `me/kmom05/marvin4`.
 
 1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)". Spara alla filer under `me/kmom05/marvin4`.
