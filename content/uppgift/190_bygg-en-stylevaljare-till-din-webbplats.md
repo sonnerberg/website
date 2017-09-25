@@ -68,7 +68,7 @@ Krav {#krav}
 1. Validera och publicera din kod enligt följande.
 
 ```bash
-# Ställ dig i roten av kurskatalogen för python
+# Ställ dig i roten av kurskatalogen
 dbwebb publish stylechooser
 ```
 
