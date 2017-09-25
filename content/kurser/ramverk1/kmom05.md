@@ -16,7 +16,13 @@ Du börjar införa enhetstestning på din modul.
 När du är klar så har du alltså samma kodbas som från början. Men du har brutit loss en självständig del från din me-sida och gjort den till en egen fristående modul. Vi vinner förhoppningsvis en bättre kodstruktur som gör det enklare att jobba med vidareutveckling, underhåll och test.
 
 <!--more-->
-<!--st op-->
+
+
+Så här ser det ut när vi submittar paketet till Packagist.
+
+[FIGURE src=image/snapht17/packagist-submit.png?w=w2 caption="Submitta ett paket till Packagist genom att ange dess url till GitHub."]
+
+[FIGURE src=image/snapht17/packagist-submitted.png?w=w2 caption="Nu är paketet på plats på Packagist."]
 
 
 
@@ -35,7 +41,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande artiklar.
 
-1. Artiklen PHP The Right Way innehåller ett kort stycke om "[Dependency Management](http://www.phptherightway.com/#dependency_management)", läs igenom det som en introduktion.
+1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Dependency Management](http://www.phptherightway.com/#dependency_management)", läs igenom det som en introduktion.
 
 1. Läs om begreppet "[Sematic versioning](http://semver.org/)" som berättar hur du bör hantera versionsnummer på dina programvara.
 
@@ -67,6 +73,10 @@ Kika på följande videos.
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Skapa en PHP-modul på Packagist och integrera med Anax](kunskap/skapa-en-php-modul-pa-packagist-och-integrera-med-anax)" som visar dig hur du skapar en egen PHP-modul som du kan installera med kommandot `composer`. Du sparar koden i `me/kmom05/anax5`.
+
+<!--
+1. Jobba igenom artikeln "[Validera och enhetstesta din modul](kunskap/XXX)" som visar hur du kan införa lokala tester i din modul. 
+-->
 
 
 
