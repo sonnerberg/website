@@ -44,15 +44,18 @@ Kika igenom följande artiklar.
 
 1. Bekanta dig med begreppet automatiserad testning och regression testing genom att översiktligt titta på Wikipedias information.
 
-1. Artiklen PHP The Right Way innehåller ett kort stycke om "[Testing](http://www.phptherightway.com/#testing)", läs igenom det som en introduktion.
+1. Begreppet CI.
+
+1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Testing](http://www.phptherightway.com/#testing)", läs igenom det som en introduktion.
 
 
-
+<!--
 ###Videor {#videor}
 
 Kika på följande videos.
 
 1. Titta på seminariet?
+-->
 
 
 
@@ -67,7 +70,9 @@ Kika på följande videos.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Publicera din Anax modul](kunskap/XXX)" som visar dig hur du använder begreppet i Anax. Du sparar koden i `me/anax` och integrerar den i din me-sida.
+1. Jobba igenom artikeln "[Integrera din packagist modul med verktyg för autmatisk test och validering](integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" som visar dig hur du använder använder `make test` för att bygga grunden till automatiserade tester och ett CI-flöde. Du kan jobba mot din egna modul för kommentarshanteringen och spara koden i `me/comment`.
+
+1. Artikel om BDD.
 
 
 
@@ -75,11 +80,17 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Bygg vidare på en kommentarsmodul i ditt Anax.
+1. Bygg vidare på en kommentarsmodul i ditt Anax och se till att den är integrerad mot Travis, CircleCI, Scrutinizer, Sensiolabs och Gitter. Bygg ut din testbas med fler enhetstester. Överväg att göra så att phpcs och/eller phpmd påverkar om tester misslyckas eller ej.
 
-1. Skriv gruppvis en artikel om ["Continous Integration (CI)"](uppgift/skriv-artikel-om-ci). Spara artikeln i din me-sida.
+1. Utöka testbasen, inklusiva BDD.
+
+1. Generera dokumentation för modulen med phpdoc.
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (6.0.\*) när du är klar med alla uppgifter i kursmomentet.
+
+<!--
+1. Skriv gruppvis en artikel om ["Continous Integration (CI)"](uppgift/skriv-artikel-om-ci). Spara artikeln i din me-sida.
+-->
 
 
 
@@ -92,6 +103,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* 
+* Berätta hur det gick att integrera mot de olika tjänsterna?
+* Vilken extern tjänst uppskattade du mest, eller har du förslag på ytterligare externa tjänster att använda?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
