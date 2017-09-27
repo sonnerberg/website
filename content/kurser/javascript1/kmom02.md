@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-  "2017-09-27": (G, lew) Ny kurslitteratur".
+  "2017-09-27": (G, lew) Ny kurslitteratur.
   "2016-03-15": (F, lew) korrigerade labben".
   "2016-03-15": (E, mos) Lade till videoserie med "Lär dig JavaScript".
   "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.

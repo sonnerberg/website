@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-09-27": (I, lew) Ny kurslitteratur.
   "2016-03-15": (H, mos) Lade till videoserie med "Lär dig JavaScript".
   "2015-11-09": (G, mos) Ändrade läsansvisningar i MDN Guide.
   "2015-09-09": '(F, mos) Temporärt bort med extrauppgift om baddie #4.'
@@ -32,10 +33,15 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
+1. [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)
+    * [Ch17 Objects and Inheritance](http://speakingjs.com/es5/ch17.html)
+    * [Ch18 Arrays](http://speakingjs.com/es5/ch18.html)
+
+
+<!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
     * [Ch4 Data structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
     * [Ch5 Higher-Order Functions](http://http://eloquentjavascript.net/05_higher_order.html)
-    * [Ch6 The Secret Life of Objects](http://eloquentjavascript.net/06_object.html)
+    * [Ch6 The Secret Life of Objects](http://eloquentjavascript.net/06_object.html) -->
 
 
 
