@@ -6,6 +6,7 @@ category:
     - php
     - kursen ramverk1
 revision:
+    "2017-09-27": "(B, mos) Förtydligande om  hur jobba composer lokalt."
     "2017-09-25": "(A, mos) Första utgåvan."
 ...
 Skapa en PHP-modul på Packagist och integrera med Anax
