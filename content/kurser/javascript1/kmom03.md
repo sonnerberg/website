@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-09-27": (F, lew) Ny kurslitteratur".
   "2016-03-15": (E, mos) Lade till videoserie med "Lär dig JavaScript".
   "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
   "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
@@ -28,8 +29,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming) 
-    * [Ch3 Functions](http://eloquentjavascript.net/03_functions.html)
+1. [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)
+    * [Ch15 Functions](http://speakingjs.com/es5/ch15.html)
+
+<!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
+    * [Ch3 Functions](http://eloquentjavascript.net/03_functions.html) -->
 
 
 
@@ -106,7 +110,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du programmerat med funktioner tidigare, känns det lätt eller svårt?
 * Vad tycker du om video som läromedel, tycker du att de tillför något som läromedel?
 * Vad tyckte du om de olika uppgifterna? Hur tänkte du när du utförde dem? Var de svåra eller lätta?
-
-
-
-
