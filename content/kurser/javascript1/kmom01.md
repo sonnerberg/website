@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-09-27": (H, lew) Ny kurslitteratur.
   "2016-03-15": (G, mos) Lade till videoserie med "Lär dig JavaScript".
   "2015-08-26": (F, mos) Ny struktur på inledning och installaiton av labbmiljö.
   "2015-01-19": (E, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
@@ -34,10 +35,19 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
+1. [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)
+    * [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html) (Skumma igenom till och med Strings)
+    * [Ch7 Syntax](http://speakingjs.com/es5/ch07.html)
+    * [Ch8 Values](http://speakingjs.com/es5/ch08.html)
+    * [Ch9 Operators](http://speakingjs.com/es5/ch09.html)
+    * [Ch10 Booleans](http://speakingjs.com/es5/ch10.html)
+    * [Ch11 Numbers](http://speakingjs.com/es5/ch11.html)
+    * [Ch12 Strings](http://speakingjs.com/es5/ch12.html)
+
+<!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
     * [Ch0 Introduction](http://eloquentjavascript.net/00_intro.html)
     * [Ch1 Values, Types, and Operators](http://http://eloquentjavascript.net/01_values.html)
-    * [Ch12 JavaScript and the browser](http://eloquentjavascript.net/12_browser.html)
+    * [Ch12 JavaScript and the browser](http://eloquentjavascript.net/12_browser.html) -->
 
 
 
