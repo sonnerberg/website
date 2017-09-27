@@ -524,7 +524,7 @@ $user->save();
 
 Ett objekt skapas och injectas med en databasklass, fält läggs till och objektet sparas till databasen. Klassen `User` har själv full kontroll över detaljer och erbjuder ett snyggt gränssnitt till alla som vill jobba med objekt av klassen.
 
-Glöm inte lägga till att `use \Anax\User\User;` överst i formulärklassen, så den vet vilken implementation av klasse `User` du vill använda.
+Glöm inte lägga till att `use \Anax\User\User;` överst i formulärklassen, så den vet vilken implementation av klassen `User` du vill använda.
 
 Kanske blir det inte mycket färre rader men vi får en inkapsling och klassen `User` har själv full koll på hur den lagras i databasen. Jag vill nog säga att koden i formulärklassen blev snyggare och bättre inkapslad.
 
