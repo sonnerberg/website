@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-09-27": (G, lew) Ny kurslitteratur".
   "2016-03-15": (F, lew) korrigerade labben".
   "2016-03-15": (E, mos) Lade till videoserie med "Lär dig JavaScript".
   "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
@@ -33,14 +34,17 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
-    * [Ch2 Program structure](http://eloquentjavascript.net/02_program_structure.html)
 
-<!--
-1. [Speaking JavaScript](kunskap/boken-speaking-javascript)
+1. [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)
+    * [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html#_statements) (Conditionals, loops)
+    * [Ch13 Statements](http://speakingjs.com/es5/ch13.html)
 
-    * Chapter 1. Basic JavaScript
--->
+
+
+<!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
+    * [Ch2 Program structure](http://eloquentjavascript.net/02_program_structure.html) -->
+
+
 
 
 
