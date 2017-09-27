@@ -179,6 +179,8 @@ Så här kan det se ut när jag uppdaterar min installation med ovanstående och
 
 Detta innebär att jag kan uppdatera koden på GitHub och sedan göra composer update och min lokala installation blir uppdaterad genom att senaste koden hämtas från repot på GitHub.
 
+Verktyget composer jobbar nu direkt mot senaste versionen som ligger på GitHub.
+
 
 
 ###Jobba lokalt med länkar {#link}
@@ -194,34 +196,38 @@ rm -rf remserver
 ln -s ~/git/remserver
 ```
 
-Det innebär att alla ändringar jag gör lokalt i `~/git/remserver` slår direkt igenom i min installation och testmiljö. Det blir enkelt att utveckla på det viset.
+Det innebär att alla ändringar jag gör lokalt i repot `~/git/remserver` slår direkt igenom i min installation och testmiljö. Jag slipper göra uppdateringar som skall committas och pushas till GitHub och sedan hämtas hem med composer.
+
+När jag sedan är klar, jag har pushat allt till GitHub, så kan jag göra en `composer update` och composer tar då bort länken och ersätter den med en ny katalog med innehållet från Github.
+
+Det blir enkelt att utveckla på det viset.
 
 
 
 Integrera REM server med Anax {#integrera}
 --------------------------------------
 
-Då är modulen på plats i min installation av Anax. Då kan jag börja integrera den. Följande är stegen.
+Då är modulen på plats i min installation av Anax. Modulen ligger i sitt eget repo och jag kan börja att integrera den. Följande är stegen jag behöver göra för att integrera modulen.
 
 1. Kopiera konfigurationsfilerna för REM servern.
 1. Kopiera API dokumentationen.
 1. Kopiera och konfigurera router-filerna.
 1. Konfigurera tjänsterna `$di`.
 
-Du kan läsa om [installationen steg för steg i README-filen](https://github.com/canax/remserver/blob/master/README.md).
+Du kan läsa om [installationen steg för steg i README-filen](https://github.com/canax/remserver/blob/master/README.md), men hoppa över biten med "composer require anax/remserver", den biten är redan löst genom att vi hämtar repot från GitHub (eller via länken till det lokala repot).
 
-Nu kan jag testa och rätta eventuella fel.
+Nu kan jag integrera, testa och rätta eventuella fel.
 
-Ett av felen rörde sessionen som startas i `$di` och i min remserver. Jag valde att låta sessionen startas i `$di`.
+Ett av felen som uppträdde rörde sessionen som startas i `$di` och i min remserver. Jag valde att låta sessionen startas i `$di`.
 
-I övrigt gick integrationen väl. Jag har nu ett repo som fungerar tillsammans med Anax. Då tar jag och taggar repot i en första godkänd version v1.0.0.
+I övrigt gick integrationen väl. Jag har nu ett modul-repo som fungerar tillsammans med Anax. Då tar jag och taggar repot i en första godkänd version v1.0.0.
 
 ```bash
 git tag -a v1.0.0
 git push && git push --tags
 ```
 
-Nu är jag redo att publicera repot på Packagist.
+Nu är jag redo att publicera repot på Packagist så att jag slutligen kan göra en komplett installation med `composer require anax/remserver`.
 
 
 
