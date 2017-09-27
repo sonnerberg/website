@@ -116,12 +116,11 @@ När du är klar med ovanstående introduktionsartiklar så genomför du följan
 
 Dessa uppgifter skall utföras och redovisas.
 
-<!-- Lab1  Variables and built-in functions -->
-1. Gör uppgiften "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)"
+1. Gör uppgiften "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)".
 
-2. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)".
+1. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)".
 
-3. Gör uppgiften "[Skapa en me-sida för kursen javascript1](uppgift/skapa-en-me-sida-i-kursen-javascript1)".
+1. Gör uppgiften "[Skapa en me-sida för kursen javascript1](uppgift/skapa-en-me-sida-i-kursen-javascript1)".
 
 
 
