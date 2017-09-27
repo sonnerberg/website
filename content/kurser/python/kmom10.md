@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-09-27": (H, aar) Uppdaterade krav 6, tog bort curses.
     "2017-06-22": (G, aar) Minskade antalet rum till 5 och la till fusk kommando.
     "2016-10-13": (F, mos) Bort med gammalt stycke om curses och tillåt väderstreck.
     "2015-08-25": (E, mos) Uppgraderade till dbwebb v2.
@@ -165,9 +166,7 @@ Du har tre möjligheter, välj en.
 
 1. Gör ett TicTacToe som man måste vinna för att komma vidare från rummet (se extrauppgiften i kmom05).
 
-2. Använd curses-spelet du gjorde i kmom04 & kmom05 (finns som extrauppgift).
-
-3. Gör ett "spel" av ditt Ceasar-krypto där du konstruerar ett krypterat meddelande som du visar upp och sedan kan spelaren be om hjälp med att få meddelandet krypterat och då hjälper du användaren att automatiskt försöka avkryptera meddelandet enligt "den hårda vägen" (se extrauppgiften i kmom05).
+2. Gör ett "spel" av ditt Ceasar-krypto där du konstruerar ett krypterat meddelande som du visar upp och sedan kan spelaren be om hjälp med att få meddelandet krypterat och då hjälper du användaren att automatiskt försöka avkryptera meddelandet enligt "den hårda vägen" (se extrauppgiften i kmom05).
 
 
 
