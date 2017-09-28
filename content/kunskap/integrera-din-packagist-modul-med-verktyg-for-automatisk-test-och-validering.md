@@ -21,9 +21,6 @@ Vi integrerar med en handfull tjänster såsom Travis, CircleCI, Scrutinizer och
 
 Jag väljer att jobba vidare med min REM server som nu är modulariserad och publicerad på GitHub och Packagist.
 
-**ARBETE PÅGÅR**
-<!--stop-->
-
 
 
 Förutsättning {#pre}
@@ -32,6 +29,15 @@ Förutsättning {#pre}
 Du har jobbat igenom artikeln "[Skapa en PHP-modul på Packagist och integrera med Anax](kunskap/skapa-en-php-modul-pa-packagist-och-integrera-med-anax)".
 
 
+
+Videoserie {#video}
+--------------------------------------
+
+Till denna artikel finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-IxTc7j499fXMJ9tMOpTHH) som visar hur jag integrerar mot de olika tjänsterna. Videornas namn börjar på 600 till 610. Kika på videorna parallellt med att du läser artikeln eller börja med att titta på dem innan du går igenom artikeln.
+
+
+**ARBETE PÅGÅR**
+<!--stop-->
 
 En REM server {#remserver}
 --------------------------------------

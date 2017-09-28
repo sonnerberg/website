@@ -49,13 +49,11 @@ Kika igenom följande artiklar.
 1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Testing](http://www.phptherightway.com/#testing)", läs igenom det som en introduktion.
 
 
-<!--
 ###Videor {#videor}
 
-Kika på följande videos.
+Kika på följande videor.
 
-1. Titta på seminariet?
--->
+1. Titta på [kursens spellista](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-IxTc7j499fXMJ9tMOpTHH) och de videor som börjar med 6, de är kopplade till detta kursmoment.
 
 
 
