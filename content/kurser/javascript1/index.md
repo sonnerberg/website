@@ -14,7 +14,7 @@ revision:
 Kursen javascript1
 ==================================
 
-Kursen **Programmering med JavaScript**, a.k.a. *javascript1*, lär ut programmering och problemlösning med programmerinsspråket JavaScript tillsammans med HTML och CSS i en webbmiljö.
+Kursen **Programmering med JavaScript**, a.k.a. *javascript1*, lär ut programmering och problemlösning med programmeringsspråket JavaScript tillsammans med HTML och CSS i en webbmiljö.
 
 <!--more-->
 
