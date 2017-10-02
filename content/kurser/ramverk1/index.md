@@ -127,7 +127,7 @@ I arbetet skapar vi basklasser i modellagret som underlättar då vi implementer
 
 
 
-###Kmom05: Automatisera tester {#kmom05}
+###Kmom05: Modul {#kmom05}
 
 Du skall skapa en fristående modul av ditt kommentarssystem och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din me-sida och placera allt som modulen behöver i ett eget repo.
 
@@ -141,7 +141,7 @@ Du börjar införa enhetstestning på din modul.
 
 ###Kmom06: CI {#kmom06}
 
-Tanken är att ge en bild av hur automatiserad testning och continuous integration fungerar (CI) mot en PHP modul som ligger publicerad på GitHub och Packagist.
+Tanken är att ge en bild av hur automatiserad testning och continuous integration (CI) fungerar mot en PHP modul som ligger publicerad på GitHub och Packagist.
 
 Vi fortsätter jobba mot modulen vi publicerade på GitHub och Packagist i föregående kursmoment. Vi använder de tester som körs via `make install test` för att låta externa verktyg checka ut vår kod och exekvera testerna och analysera koden ur olika aspekter.
 

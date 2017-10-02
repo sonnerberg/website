@@ -193,4 +193,4 @@ Vi har gått igenom hur man integrerar en fristående modul med externa tjänste
 
 Det finns flera andra tjänster du kan integrera mot, eller verktyg för statisk kodanalys som du kan bygga in i din makefil. Men detta är en start. 
 
-Denna artikel har en [egen forumtråd](t/6840) som du kan ställa frågor i, eller bidra med tips och trix.
+Denna artikel har en [egen forumtråd](t/6882) som du kan ställa frågor i, eller bidra med tips och trix.
