@@ -2,6 +2,7 @@
 title: ramverk1
 author: mos
 revision:
+    "2017-10-02": "(C, mos) Info om samtliga kmom."
     "2017-08-03": "(B, mos) JavaScript flyttas till ramverk2."
     "2017-06-07": "(A, mos) Första revisionen inför kursstart HT2017, bygger på phpmvc-kursen."
 ...
@@ -128,7 +129,11 @@ I arbetet skapar vi basklasser i modellagret som underlättar då vi implementer
 
 ###Kmom05: Automatisera tester {#kmom05}
 
-TBD.
+Du skall skapa en fristående modul av ditt kommentarssystem och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din me-sida och placera allt som modulen behöver i ett eget repo.
+
+Du skall sedan publicera repot som en PHP modul på Packagist. När det är klart kan du åter installera modulen i din me-sida med hjälp av kommandot composer.
+
+Du börjar införa enhetstestning på din modul.
 
 [Instruktion till kursmoment 05](./kmom05).
 
@@ -136,7 +141,11 @@ TBD.
 
 ###Kmom06: CI {#kmom06}
 
-TBD.
+Tanken är att ge en bild av hur automatiserad testning och continuous integration fungerar (CI) mot en PHP modul som ligger publicerad på GitHub och Packagist.
+
+Vi fortsätter jobba mot modulen vi publicerade på GitHub och Packagist i föregående kursmoment. Vi använder de tester som körs via `make install test` för att låta externa verktyg checka ut vår kod och exekvera testerna och analysera koden ur olika aspekter.
+
+Vi bekantar oss med ett antal olika externa verktyg och försöker förstå vad de kan tillföra till en utvecklares vardag.
 
 [Instruktion till kursmoment 06](./kmom06).
 
