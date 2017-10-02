@@ -144,6 +144,7 @@ Variabeln `group` blir sedan tilldelad `parser.add_mutually_exclusive_group()` o
 # omitted code in explanation purpose
 
 ```
+Om [silent/verbose](t/6870).
 
 Här ser vi att man ska inte kunna använda --silent samtidigt som --verbose, så `python3 main.py --silent --verbose` kommer resultera i ett felmeddelande. Vi börjar med att lägga till tre stycken *options* (börjar med `-` eller `--`). När vi lägger till options eller argument som ska kännas till finns det en uppsättning parametrar vi kan använda. I fallet ovan har vi: dest, default, help, action och version samt nargs.  
 Parametern [*dest*](https://docs.python.org/3.6/library/argparse.html#dest) är namnet på attributet i resultatet. När vi tolkar argumenten sen så returneras ett objekt som innehåller de attributen vi skickat in.  
