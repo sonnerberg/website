@@ -167,6 +167,26 @@ När du är klar får du naturligtvis en badge.
 
 
 
+CodeClimate {#codeclimate}
+--------------------------------------
+
+Tjänsten [CodeClimate](https://codeclimate.com/) är ytterligare ett exempel på en tjänst för kodkvalitet och statisk kodanalys.
+
+Här kan du se rapporten för [CodeClimate och anax/remserver](https://codeclimate.com/github/canax/remserver).
+
+[FIGURE src=image/snapht17/codeclimate.png?w=w2 caption="Via CodeClimate kan du få detaljerad information om din kod via statiskt kodanalys."]
+
+När du integrerar mot CodeClimate får du två eller tre badges.
+
+[![Code Climate](https://codeclimate.com/github/canax/remserver/badges/gpa.svg)](https://codeclimate.com/github/canax/remserver)
+[![Issue Count](https://codeclimate.com/github/canax/remserver/badges/issue_count.svg)](https://codeclimate.com/github/canax/remserver)
+
+Den tredje badgen har med kodtäckning att göra. Dock kan CodeClimate inte på egen hand generera en rapport för kodtäckning. Ditt byggsystem som kör testerna, till exempel Travis eller CircleCI, behöver konfigureras så att de skickar en rapport till CodeClimate. Se detta som ett exempel på hur system i din CI kedja kan samverka och bifoga information till varandra.
+
+Konfigurationsfilen för CodeClimate heter `.codeclimate.yml`.
+
+
+
 Gitter {#gitter}
 --------------------------------------
 
@@ -183,6 +203,23 @@ Så här kan det se ut när jag skapar Gitter-kanalen och konfigurerar den för 
 När du är klar får du ytterligare en badge som kan pryda README och uttrycka ett _statement_ om din modul och aktiviteter kring den.
 
 [![Join the chat at https://gitter.im/canax/remserver](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/canax/remserver/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+
+Jämför Travis och CircleCI {#bygg}
+--------------------------------------
+
+Travis och CircleCI är två byggtjänster, de kan checka ut din kod, installera det som behövs (`make install`) och köra dina tester (`make test`). På en byggtjänst som dessa vill du också ha möjligheten att köra testerna på olika versioner av operativsystem och PHP (eller vilket språk du nu använder).
+
+Tjänster likt dessa kan generera kodtäckning. De kan också initiera ytterligare händelser i din CI kedja, till exempel att bifoga rapport av kodtäckning till ett annat system, eller driftsätta din modul i ett större sammanhang där du kan utföra ytterligare tester som funktionstester eller integrationstester.
+
+Tjänster likt dessa kan alltså vara startpunkten i ditt CI flöde.
+
+
+
+Jämför Scrutinizer, SensioLabs och CodeClimate {#kvalitet}
+--------------------------------------
+
 
 
 
