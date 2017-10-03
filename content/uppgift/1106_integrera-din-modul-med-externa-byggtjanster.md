@@ -6,6 +6,7 @@ category:
     - anax
     - kurs ramverk1
 revision:
+    "2017-10-02": "(B, mos) Välj Travis eller CircleCI."
     "2017-10-02": "(A, mos) Första utgåvan."
 ...
 Integrera din modul med externa byggtjänster
@@ -41,9 +42,7 @@ Krav {#krav}
 
 1. Försök nå 100% kodtäckning med dina enhetstester. Men 50% kan också vara okey. Även andra procenttal kan accepteras lite beroende på hur stor din modul är. Var tydlig i redovisningstexten hur långt du nådde.
 
-1. Integrera din modul med Travis. Lägg badgen i din README.
-
-1. Integrera din modul med CircleCI. Lägg badgen i din README.
+1. Integrera din modul med Travis alternativt CircleCI. Lägg badgen i din README.
 
 1. Integrera din modul med Scrutinizer. Lägg tre badges i din README.
 
