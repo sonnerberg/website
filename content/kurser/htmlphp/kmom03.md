@@ -85,6 +85,11 @@ Genomför följande övningar.
 
 1. Jobba igenom övningen "[Bygg en multisida med PHP](kunskap/bygg-en-multisida-med-php)". Öva dig att tänka som en PHP-programmerare.
 
+<!--
+TODO
+* filer, include, scope? Använd labben för att träna.
+-->
+
 
 
 ###Uppgifter {#uppgifter}

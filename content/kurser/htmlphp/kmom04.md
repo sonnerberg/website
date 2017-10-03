@@ -85,6 +85,11 @@ Genomför följande övningar.
 
 1. Jobba igenom övningen "[Att bygga en styleväljare till sin webbplats](kunskap/att-bygga-en-stylevaljare-till-sin-webbplats)".
 
+<!--
+TODO
+* Artikel om funktioner, scope? Använd labben för att träna.
+-->
+
 
 
 ###Uppgifter {#uppgifter}
