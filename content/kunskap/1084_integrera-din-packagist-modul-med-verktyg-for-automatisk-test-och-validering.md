@@ -6,6 +6,7 @@ category:
     - php
     - kursen ramverk1
 revision:
+    "2017-10-03": "(B, mos) Stycke om CodeClimate och om jämförelse mellan tjänsterna."
     "2017-10-02": "(A, mos) Första utgåvan."
 ...
 Integrera din packagist modul med verktyg för automatisk test och validering
@@ -220,6 +221,13 @@ Tjänster likt dessa kan alltså vara startpunkten i ditt CI flöde.
 Jämför Scrutinizer, SensioLabs och CodeClimate {#kvalitet}
 --------------------------------------
 
+Dessa tre tjänster är exempel på tjänster som gör statisk kodanalys, bedömmer kvaliteten på din kod, visar issue som du kan/bör hantera och har möjligheten att visa upp kodtäckning av dina tester.
+
+Se tjänsterna som ett hjälpmedel för att inspektera din egen och andras kod och som en möjlighet att enkelt få en översikt över koden och dess hälsoläge.
+
+Resultatet från dessa tjänster säger inget om hur bra din kod fungerar i verklig drift, men de ger indikationer om hur "bra kod" du har i allmänhet och de försöker påvisa hur enkel din kod är att underhålla och vidareutveckla.
+
+Jobbar man i team kan detta vara bra tjänster att komplettera till vanlig traditionell kodgranskning.
 
 
 
