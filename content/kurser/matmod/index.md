@@ -3,6 +3,7 @@ title: matmod
 author:
     - mos
 revision:
+    "2017-10-05": "(B, mos) Lade till kursmaterial."
     "2017-08-11": "(A, mos) Första revisionen."
 ...
 Kursen matmod
@@ -13,6 +14,19 @@ Kursen **Matematisk modellering**, a.k.a. *matmod*, avser att ge studenten en ma
 
 <!--more-->
 
+
+
+
+Kursmaterial {#kursmaterial}
+-----------------------------------------------------
+
+Det finns ett [kursrepo matmod](https://github.com/dbwebb-se/matmod) till kursen.
+
+```bash
+dbwebb clone matmod
+```
+
+Det finns ett [forum](forum/utbildning/matmod) och en [gitter-kanal](https://gitter.im/dbwebb-se/matmod) till kursen.
 
 
 

@@ -221,6 +221,10 @@ Redirect /webgl/repo    /repo/webgl
 Redirect /webgl         /kurser/webgl
 
 
+#matmod
+Redirect /forum/utbildning/matmod /forum/viewforum.php?f=72
+
+
 # dbjs
 Redirect /dbjs          /kurser/dbjs
 
