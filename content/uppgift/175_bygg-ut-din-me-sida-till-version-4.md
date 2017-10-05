@@ -76,7 +76,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-* Lägg extra tid på att leka runt med de olika stylehseetarna. Pröva gärna att kopiera/återskapa style från andra webbplatser.
+* Lägg extra tid på att leka runt med de olika stylesheetarna. Pröva gärna att kopiera/återskapa style från andra webbplatser.
 
 * Fundera över strukturen på din kod, finns det något som kan samlas i en funktion som du kan placera i filen `config.php`. Kanske koden som visar aktivt val i navbaren? Pröva att skapa en funktion av den koden.
 
