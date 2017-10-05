@@ -120,7 +120,7 @@ Resultatet skall bli att citatet från webbtjänsten http://dbwebb.se/javascript
 
 
 
-6. Hämta och visa titeln från en vald webbsida. Titeln är det innehåll som ligger i elementet `<title></<title>`.
+6. Hämta och visa titeln från en vald webbsida. Titeln är det innehåll som ligger i elementet `<title></title>`.
 
 ```bash
 python3 main.py title <url>
