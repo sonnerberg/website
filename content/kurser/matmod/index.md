@@ -22,7 +22,9 @@ Kursmaterial {#kursmaterial}
 
 Det finns ett [kursrepo matmod](https://github.com/dbwebb-se/matmod) till kursen.
 
-```bash
+Du kan clona en kopia av kursrepot med [dbwebb-cli](dbwebb-cli).
+
+```text
 dbwebb clone matmod
 ```
 

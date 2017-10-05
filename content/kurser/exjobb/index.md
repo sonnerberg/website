@@ -3,6 +3,7 @@ title: exjobb
 author:
     - mos
 revision:
+    "2017-10-05": "(C, mos) Stycke om kursmaterial."
     "2017-09-21": "(B, mos) Stycke om kurslitteratur."
     "2017-08-11": "(A, mos) Första revisionen."
 ...
@@ -27,6 +28,21 @@ En resurs som finns online där man kan läsa generellt om rapportskrivning är 
 
 
 
+Kursmaterial {#kursmaterial}
+-----------------------------------------------------
+
+Det finns ett [kursrepo exjobb](https://github.com/dbwebb-se/exjobb) till kursen.
+
+Du kan clona en kopia av kursrepot med [dbwebb-cli](dbwebb-cli).
+
+```text
+dbwebb clone exjobb
+```
+
+Det finns ett [forum](forum/utbildning/exjobb) och en [gitter-kanal](https://gitter.im/dbwebb-se/exjobb) till kursen.
+
+
+
 Kursplan {#kursplan}
 -----------------------------------------------------
 
@@ -34,9 +50,7 @@ Kursens namn är "Självständigt arbete i Webbprogrammering". Du hittar [kurspl
 
 
 
-Icke dbwebb-kurs {#icke}
+Nästan dbwebb-kurs {#icke}
 -----------------------------------------------------
 
-Kursen är inte en dbwebb-kurs och ges av ett annat lärarteam.
-
-Det finns dock stöd i [forumet](forum/viewforum.php?f=68) och i en [gitter](https://gitter.im/dbwebb-se/exjobb).
+Kursen är delvis upplagd som en dbwebb-kurs och hälften av lärarteamet består av dbwebb:are.
