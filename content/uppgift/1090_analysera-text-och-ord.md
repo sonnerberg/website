@@ -117,6 +117,7 @@ dbwebb validate analyzer
 <!-- 
 TODO Gör om till --words, --letters, osv.
 glöm inte inspect
+splitta uppgiften i två delar.
 -->
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
