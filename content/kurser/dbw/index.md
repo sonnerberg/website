@@ -7,13 +7,15 @@ revision:
 Kursen databas
 ==================================
 
-Kursen **Databasteknologier för webben**, a.k.a. *dbw*, lär ut utveckling, test och driftsättning av applikationer och servrar där flertalet olika ramverk är ingående delar av de applikationer och tjänster som skapar en totallösning.
+Kursen **Databasteknologier för webben**, a.k.a. *dbw*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med ett olika databaser i ett applikationsspråk i webbsammanhang.
 
 <!--more-->
 
 [WARNING]
 **Kursutveckling pågår.**
 [/WARNING]
+
+<!--stop-->
 
 Vi bygger en större totallösning där flera klienter kopplas mot en eller flera servrar som bygger på olika tekniker och ramverk. All samverkar för att skapa en total lösning, ett system, enligt en given specifikation.
 
