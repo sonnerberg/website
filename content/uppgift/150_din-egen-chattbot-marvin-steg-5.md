@@ -13,8 +13,6 @@ revision:
     "2014-12-16": (C, mos) Tog bort extrauppgiften eftersom den ofta löstes med extern modul som gjorde uppgiften svår att rättad.
     "2014-12-01": (B, mos) Förtydligade att title i kombination med `--input` inte behöver url.
     "2014-10-15": (A, mos) Första utgåvan i samband med kursen python.
-updated: "2015-08-25 14:16:01"
-created: "2014-07-03 08:14:49"
 ...
 Analysera texter från webbsidor
 ==================================
@@ -76,7 +74,7 @@ cp -ri kmom05/analyzer/{*.py,*.txt} kmom06/analyzer2/
 * `-h, --help` skall visa en hjälptext som beskriver ditt program och hur det används.
 * `-v, --version` skall visa versionen av programmet.
 * `--verbose` skall innebära att mer text skrivs ut, kanske bra för debugging?
-* `-s, --silent` skall innebära att minimalt med utskrift sker, bra om man bara vill se svaret.
+* `--silent` skall innebära att minimalt med utskrift sker, bra om man bara vill se svaret.
 
 
 
@@ -141,15 +139,17 @@ Resultatet skall bli att webbsidans text från `<article>` skrivs ut på skärme
 
 
 
-8. Det ska gå att analysera texten i filen, som föregående krav resulterar i, med samma kommandon som används i [kmom05, analysera text och ord](uppgift/analysera-text-och-ord). Om man anger ett option `--output=<file>` så skall utskriften ske till en fil, istället för skärmen.
+8. Det ska gå att analysera texten i filen, som föregående krav resulterar i, med samma kommandon som används i [kmom05, analysera text och ord](uppgift/analysera-text-och-ord). Resultatet från textanalysen, ska presenteras i JSON-format. Gäller samtliga kommandon för textanalys, inklusive `all`.
+
+```text
+$ python3 main.py --silent lines phil.txt
+{
+    "lines": 1133
+}
+```
 
 
-
-9. Resultatet från textanalysen ska presenteras i JSON-format.
-
-
-
-10. Validera analyzer2 genom att göra följande kommando i kurskatalogen i terminalen.
+9\. Validera analyzer2 genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen

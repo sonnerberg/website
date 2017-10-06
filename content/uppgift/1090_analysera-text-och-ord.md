@@ -76,22 +76,48 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Ditt program ska bestå av tre moduler: `main.py`, `cli_parser.py` och `analyzer.py`.
 
-1. Ditt program ska kunna hantera *options*, *commands* och *arguments*, på samma sätt som exemplet ovan.
+1. Du skall skapa funktioner för textanalysering i modulen `analyzer.py`.
 
-1. Ditt program ska ha följande options: `-h, --help`, `-s, --silent`, `-v, --version` och `--verbose`.
+1. Modulen `cli_parser.py` skall enbart innehålla kod för att hantera inkommande argument, kommandon och options.
 
-1. Ditt program ska ta emot ett filnamn som argument och analysera texten i den filen.
+1. Filen `main.py` skall använda sig av modulerna `analyzer` och `cli_parser` för att lösa uppgiften.
 
-1. Analysera antal rader (ej tomma), ord och bokstäver med kommandon `lines`, `words` och `letters`. Den ska även klara av kommandot `all` som kör alla övriga analyserings kommandon i följd.
+1. Följande options skall fungera.
 
-1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Ange frekvensen i % av totala mängden ord eller bokstäver. Använd kommandona `word_frequency` och `letter_frequency`.
+    * `-h, --help` skall visa en hjälptext som beskriver ditt program och hur det används.
+    * `-v, --version` skall visa versionen av programmet.
+    * `--verbose` skall innebära att mer text skrivs ut, kanske bra för debugging?
+    * `--silent` skall innebära att minimalt med utskrift sker, bra om man bara vill se svaret.
 
-1. Validera ditt program genom att göra följande kommando i kurskatalogen i terminalen.
+1. Ditt program ska ta emot ett filnamn som argument och analysera texten i den filen enligt olika kommandon.
+
+```bash
+python3 main.py <kommando> <filnamn>
+python3 main.py lines <filnamn>
+python3 main.py words <filnamn>
+python3 main.py letters <filnamn>
+python3 main.py word_frequency <filnamn>
+python3 main.py letter_frequency <filnamn>
+python3 main.py all <filnamn>
+```
+
+7\. Analysera antal rader (ej tomma), ord och bokstäver med kommandon `lines`, `words` och `letters`. Skriv en funktion för varje kommando.
+
+8\. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd kommandona `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver.
+
+9\. Ditt program skall klara av kommandot `all` som kör alla analyserings kommandon i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion.
+
+10\. Validera ditt program genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb validate analyzer
 ```
+
+<!-- 
+TODO Gör om till --words, --letters, osv.
+glöm inte inspect
+-->
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
