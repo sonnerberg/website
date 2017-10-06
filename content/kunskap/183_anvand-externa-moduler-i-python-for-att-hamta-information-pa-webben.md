@@ -237,7 +237,7 @@ req = requests.get(url)
 soup = BeautifulSoup(req.text)
 
 # Get all elements looking like <p class="irclog">
-ircLog = soup.find("p", class_="irclog")
+ircLog = soup.find_all("p", class_="irclog")
 ```
 
 Paketet `BeautifulSoup` bygger upp en intern struktur av webbsidan och erbjuder dig att söka igenom strukturen via vissa funktioner.

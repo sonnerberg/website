@@ -130,8 +130,8 @@ Variabeln `group` blir sedan tilldelad `parser.add_mutually_exclusive_group()` o
 ```python
 # omitted code in explanation purpose
 
-    group.add_argument("-v", "--verbose", dest="verbose", default="False", help="increase output verbosity", action="store_true")
-    group.add_argument("-s", "--silent", dest="silent", default="False", help="decrease output verbosity", action="store_true")    
+    group.add_argument("-v", "--verbose", dest="verbose", help="increase output verbosity", action="store_true")
+    group.add_argument("-s", "--silent", dest="silent", help="decrease output verbosity", action="store_true")    
 
     parser.add_argument("-V", "--version", action="version", version=VERSION)
 
@@ -148,10 +148,10 @@ Om [silent/verbose](t/6870).
 
 Här ser vi att man ska inte kunna använda --silent samtidigt som --verbose, så `python3 main.py --silent --verbose` kommer resultera i ett felmeddelande. Vi börjar med att lägga till tre stycken *options* (börjar med `-` eller `--`). När vi lägger till options eller argument som ska kännas till finns det en uppsättning parametrar vi kan använda. I fallet ovan har vi: dest, default, help, action och version samt nargs.  
 Parametern [*dest*](https://docs.python.org/3.6/library/argparse.html#dest) är namnet på attributet i resultatet. När vi tolkar argumenten sen så returneras ett objekt som innehåller de attributen vi skickat in.  
-Parametern [*default*](https://docs.python.org/3.6/library/argparse.html#default) är värdet om argumentet inte skickas med från kommandoraden.  
 Parametern [*help*](https://docs.python.org/3.6/library/argparse.html#help) är en kortfattad beskrivning av vad argumentet gör. Den skrivs ut i den automatiskta hjälpen (-h, --help).  
 Parametern [*action*](https://docs.python.org/3.6/library/argparse.html#action) talar om vad som ska hända med argumentet. `store_true` talar om att vi vill spara ner värdet som en boolean (True) i objektet om argumentet skickats med. 
 Parametern *version* är kopplat till `action="version"` och skriver ut variabeln `VERSION`.  
+Parametern [*default*](https://docs.python.org/3.6/library/argparse.html#default) är värdet om argumentet inte skickas med från kommandoraden.  
 Parametern [*nargs*](https://docs.python.org/3.6/library/argparse.html#nargs) talar om hur många argument som kommer följa kommandot i resultatet. `?` betyder noll eller ett argument. Vill man specifiera ett okänt antal, använder man `*`. Man kan även sätta siffran direkt.
 
 För att hantera kommandon kan vi använda oss av en *subparser*. Den grupperar kommandon och sparar ner de som är kända, i detta fallet *command1* och *command2* i objektet under namnet *command* som sätts i `dest="command"`. En styrka ser vi om vi tittar på hjälptexten:
