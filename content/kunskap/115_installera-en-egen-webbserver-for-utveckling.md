@@ -2,13 +2,11 @@
 author: mos
 category: labbmiljo
 revision:
-  "2015-08-17": (E, mos) La till info om symboliska länkar.
-  "2015-04-10": (D, mos) Tog bort referens till jEdit.
-  "2015-01-21": (C, mos) Ändrade hur man byter port på Apache i Windows.
-  "2014-09-15": (B, mos) Bytte till XAMPP och lade hit instruktionen från forumtråd.
-  "2012-08-29": (A, mos) Första versionen, flyttad från annat dokument och uppdaterad.
-updated: "2015-08-17 06:41:56"
-created: "2012-08-29 21:02:30"
+    "2015-08-17": (E, mos) La till info om symboliska länkar.
+    "2015-04-10": (D, mos) Tog bort referens till jEdit.
+    "2015-01-21": (C, mos) Ändrade hur man byter port på Apache i Windows.
+    "2014-09-15": (B, mos) Bytte till XAMPP och lade hit instruktionen från forumtråd.
+    "2012-08-29": (A, mos) Första versionen, flyttad från annat dokument och uppdaterad.
 ...
 Installera en egen webbserver för utveckling
 ==================================
@@ -233,7 +231,3 @@ Möjliga problem vid installation på Windows:
 
 * Vid problem, kontrollera alltid vad det står i loggfilerna för Apache, MySQL och PHP?
 [/INFO]
-
-
-
-

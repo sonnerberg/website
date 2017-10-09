@@ -21,7 +21,41 @@ Detta kursmoment ger dig basen för resten av kursen, det hanterar grunderna som
 
 [FIGURE src=/image/snap/js1-sandbox-mod.png?w=w2 caption="En aningen gulare sandbox för mina testprogram."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Kursens miljö  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Du behöver installera kursens labbmiljö samt ha tillgång till verktyget `dbwebb-cli` som du installerar på terminalen. När du är klar kan du klona kursrepot där du finner en del av kursens material.
+
+
+
+###Labbmiljön {#kurslabbmiljo}
+
+Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta. Har du redan gått en dbwebb-kurs sedan tidigare så kommer detta att gå snabbt.
+
+1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+
+
+
+Om du redan har installerat kommandot `dbwebb-cli` så gör du en selfupdate för att vara säker på att du har senaste versionen. Sedan kan du klona kursrepot och du är klar.
+
+```text
+dbwebb selfupdate
+dbwebb clone javascript1
+```
+
+Om du vill ha en introduktion till det som händer i steg 2-4 så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
+
+1. Fortsätt med sektionen för att [installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
+
+1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
+
+1. Du kan nu [ladda ned (klona) ditt lokala kursrepo `javascript1`](dbwebb-cli/clone) som innehåller kursmaterial för kursen. Här kommer du att skriva all kod till övningar och uppgifter.
 
 
 
