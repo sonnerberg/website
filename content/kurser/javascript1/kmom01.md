@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2017-10-09": (I, mos) Genomgång inför ht17, ny struktur labbmiljö.
+    "2017-10-09": "(I, mos) Genomgång inför ht17, ny struktur labbmiljö, redovisa, uppgradering dbwebb-cli v2."
     "2017-09-27": (H, lew) Ny kurslitteratur.
     "2016-03-15": (G, mos) Lade till videoserie med "Lär dig JavaScript".
     "2015-08-26": (F, mos) Ny struktur på inledning och installaiton av labbmiljö.
