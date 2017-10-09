@@ -5,6 +5,7 @@ category:
     - kursen dbjs
     - javascript
 revision:
+    "2017-10-09": (C, mos) Not om att jshint ersatts av eslint samt not om dbwebb kodstandard.
     "2016-01-04": (B, mos) Omfatta även kursen dbjs.
     "2015-08-26": (A, mos) Första utgåvan inför hösten 15.
 ...
@@ -169,6 +170,8 @@ Kom nu ihåg att alltid dubbelkolla att din sida validerar. Hamnar du i trubbel 
 Kodkvalitet med JSHint {#kvalitet}
 -------------------------------
 
+*Från och med hösten 2017 ersätts jshint av eslint då utveckling har upphört på jshint till förmån för eslint.*
+
 Kodkvalitet handlar om att skriva bra kod. Kod som är läsbar och enkel att underhålla, vidarutveckla och felsöka i. Till många programmeringsspråk finns ett verktyg som kallas [Lint](http://en.wikipedia.org/wiki/Lint_(software)). Verktyget varnar för potentiellt dåliga kodkonstruktioner och det är tips som vi gärna lyssnar till.
 
 I JavaScript finns verktyget [JSLint](http://www.jslint.com/) och en utveckling av det som heter [JSHint](http://www.jshint.com/). I denna kursen tänkta jag att vi använder JSHint.
@@ -180,6 +183,8 @@ I video-serien "[Kom igång med JavaScript och skriv din första kod](https://ww
 Kör alltid igenom din JavaScript-kod igenom JSHint. Det kan spara dig en hel de felsökning. JSHint hjälper dig att hitta potentiella problem i din kod.
 
 Använd JSHint för att kolla att ditt sandbox-exempel går igenom utan felmeddelande och varningar.
+
+I kurserna använder vi en dbwebb-kodstandard som är beskriven på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
 
 
 
