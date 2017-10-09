@@ -2,8 +2,6 @@
 author: mos
 revision:
   "2014-05-13": (A) Första utgåvan
-updated: "2014-08-08 09:27:54"
-created: "2013-10-24 15:08:22"
 ...
 Kmom07/10: Projekt och examination
 ==================================
@@ -127,7 +125,3 @@ Redovisning {#redovisning}
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
 
 3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/phpmvc-v2) och berätta att du är klar.
-
-
-
-

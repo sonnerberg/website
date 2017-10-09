@@ -2,17 +2,10 @@
 author:
     - mos
 revision:
-    "2017-03-24": "(PA1, mos) Jobbet börjar."
+    "2017-10-09": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
 ==================================
-
-[WARNING]
-**Version 1 av ramverk1.**
-
-Utveckling av nytt kursmoment. Kursmomentet släpps hösten 2017.
-
-[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -34,147 +27,94 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-TBD.
+Under kursen har du byggt upp en kodbas för ett kommentarshanteringssystem. Nu skall du använda din(a) moduler och kod för att bygga en webbplats som liknar webbplatsen Stack Overflow i sin uppbyggnad.
 
-<!--stop-->
+Du har fått en kund som heter WGTOTW (We Gonna Take Over The World) och kunden har en enorm kassa och är villig att spendera en hel del på dig.
 
-Ryktet har spritt sig att du är en högst kompetent programutvecklare vilket resulterat i att en välkänd investerare, låt oss kalla henne fru BeckSten, har bett dig utveckla nästa generations webbshop.
+Kunden vill ha en Stack Overflow-kopia och det tänkta fokuset är "Allt om att trimma en moppe". Kunden tror att marknadspotentialen är stor.
 
-Du accepterar uppdraget, väl medveten om att du redan har en god grund till lösningen. 
+PS. Du kan (bör) byta temat från "Att trimma en moppe" till "Allt om att sköta minigrisar", "Allt du vill veta om bubbelbad", "Allt om tv-serien 2 1/2 män", "Allt om filmen XXX", "Allt om snowboard", "Allt om Kalle Anka". Ta vilket ämne du vill, försök att hitta på ett själv, det gör det hela lite roligare.
 
-Du tar din grund `me/anax-lite` och skapar ett helt nytt repo i `me/kmom10`. Om du lägger projektet på GitHub/Bitbucket så behöver det vara privat, eftersom detta är projektet och vi vill undvika att någon hittar och lånar dina affärshemligheter.
+PS. Du kan ge kunden något den inte beställt men som du anser passa kunden. Du kan själv välja fokus och inrikta din lösning till att lösa ett forum, twitter-kopia, reddit-kopia eller någon liknande tjänst som är tungt beroende av ett kommentarssystem. Fråga om du är osäker.
 
-Du skall alltså göra en webbshop där användare kan registrera sig och köpa saker, samtidigt skall det finnas en backend för administration av webbplats och produkter. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil webbshopen skall ha och vilka produkter den skall innehålla.
+Om du gör ditt eget upplägg kan du behöva formulera egna motsvarande krav för de optionella kraven. Fråga i forumet om du behöver stöd.
 
 
 
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv göra en bedömning och välja väg, dokumentera dina val i redovisningstexten.
+Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
-De tre första kraven är obligatoriska. De tre sista kraven är optionella krav,  lös dem för att samla poäng och därmed nå högre betyg.
+De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös optionella kraven för att samla poäng och nå högre betyg.
+
+För allra högsta betyg krävs en allmänt god webbplats. Den skall vara både snygg, tilltalande, lättanvänd och felfri.
 
 Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 
 
-###Krav 1: Struktur och innehåll {#k1}
+###Krav 1, 2, 3: Grunden {#k1}
 
-Följande struktur/innehåll skall (minst) finnas på webbplatsen:
+Skapa ett nytt repo för projektet, spara i `me/kmom10`.
 
-1. Sida - Produkter, visa upp de produkter som kan säljas.
-1. Sida - Nyheter, blogglista med nyheter om produkter och ditt företag.
-1. Sida - Om företaget, sida med information om företaget, skriv något relevant och trevligt.
-1. Gemensam Header med logo och titel. En navbar med länkar till webbplatsens olika delar.
-1. Gemensam Footer, med text om Copyright med företagsnamnet.
+Webbsidan skall skyddas av inloggning. Det skall gå att skapa en ny användare.
+Användaren skall ha en profil som kan uppdateras. Användarens bild skall vara en gravatar.
 
-Webbsidan skyddas av inloggning och när man är inloggad (och har behörighet som "administratör") kan man via ett gränssnitt ändra innehållet på webbplatsen enligt följande.
+Webbplatsen skall ha en förstasida, en sida för frågor, en sida för taggar och en sida för användare. Det skall finnas en About-sida med information om webbplatsen, dess GitHub-repo och dig själv.
 
-* Hantera nyhetsbloggen.
-* Administrera produkterna.
-* Administrera innehållet i "om"-sidan och footern.
+En användare kan ställa frågor, eller besvara dem. Alla inlägg som en användare gör kan kopplas till denna. Klickar man på en användare så ser man vilka frågor som användaren ställt och vilka frågor som besvarats.
 
-I nyhetsblogg släpper företaget nyheter om sina produkter, sin verksamhet och erbjudande. I översikten skall det visas inledningen till minst 7 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas. 
+En fråga kan ha en eller flera taggar kopplade till sig. När man listar en tagg kan man se de frågor som har den taggen. Klicka på en tagg för att komma till de frågor som har taggen kopplat till sig.
 
-Ditt projekt innehåller en makefil som kan generera dokumentation med phpdoc och köra enhetstester med phpunit och generera kodtäckning. Det räcker om det finns testfall i samma omfång som i kmom06.
+En fråga kan ha många svar. Varje fråga och svar kan i sin tur ha kommentarer kopplade till sig. 
 
-Din databaskod skriver du i `me/kmom10/sql/setup.sql` och hela filen kan köras utan problem, för att skapa/återskapa en databas.
+Alla frågor, svar och kommentarer skrivs i Markdown.
 
-Du skapar ett ER-diagram av din färdiga databas och sparar i `me/kmom10/sql/er.png`.
+Förstasidan skall ge en översikt av senaste frågor tillsammans med de mest populära taggarna och de mest aktiva användarna.
 
-Ditt system fungerar att köra på studentservern.
-
-
-
-###Krav 2: Skapa kundkonto {#k2}
-
-En kund kan själv skapa ett nytt konto på webbplatsen. En kund kan redigera detaljer om sitt konto (mailadress, mer efter eget sinne, kanske en avatar från Gravatar?).
-
-En kund har bara behörighet att köpa, hen kan inte redigera andra delar av webbplatsens innehåll.
-
-Det skall finnas förskapade användarkonton, minst ett administratörskonto (admin/admin) och ett kundkonto (doe/doe).
-
-Administratören kan se vilka konton som finns skapade (administratörskonton och kundkonton) och kan redigera detaljer om dem.
-
-
-
-###Krav 3: Sida - Produkter {#k3}
-
-Varje produkt tillhör en produktkategori.
-
-Produkterna visas upp med en bild, ett namn och en beskrivande text samt ett pris och antalet produkter som finns i lagret.
-
-När man visar produkterna skall de kunna sorteras efter namn och pris. Man kan välja hur många produkter som visas och det finns stöd för paginering.
-
-Man kan söka efter produkter via produkternas namn och beskrivning.
-
-En användare måste logga in för att köpa. Eventuellt kan man använda varukorgen först och logga in när man gör köpet (välj väg).
+Webbplatsen skall finnas på GitHub, tillsammans med en README som beskriver hur man checkar ut och installerar sin egen version.
  
-En användare kan köpa produkter genom att lägga dem i en varukorg och sedan checka ut varukorgen. Användaren får då en visuell rapport över sin order och ordern sparas.
+Webbplatsen skall finnas i drift med innehåll på studentservern.
 
-Varukorgen är implementerad i databasen (likt kmom05).
+Kommandot `make test` skall passera för källkoden.
 
-En kund kan se sin orderhistorik och se innehållet i varje order.
-
-Lagret skall uppdateras när en order görs. Innehåll i varukorgen behöver inte påverka lagret.
-
-Det skall finnas minst tio produkter, fördelade över minst tre produktkategorier. Samtliga produkter skall finnas i olika mängd i lagret.
+Repot på GitHub skall vara länkat till en byggtjänst likt Travis/CircleCI och till en tjänst för kodkvalitet likt Scrutinizer/CodeClimate. README-filen på GitHub innehåller motsvarande badges.
 
 
 
-###Krav 4: Förstasidan (optionell) {#k4}
+###Krav 4: Frågor (optionell) {#k4}
 
-Gör en förstasida som (minst) innehåller:
+Ett svar kan märkas ut som ett accepterat svar.
 
-De tre senaste inläggen från din nyhetsblogg. Visa inledningen och en länk för att läsa hela blogginlägget.
+Varje svar, fråga och kommentar kan röstas på av användare med +1 (up-vote) eller -1 (down-vote), summan av en fråga/svar/kommentars rank är ett betyg på hur "bra" den var.
 
-samt:
+Svaren på en fråga kan sorteras och visas antingen enligt datum, eller rank (antalet röster).
 
-* Senaste inkomna produkter
-* Din mest sålda produkt(er)
-* Veckans erbjudande(n)
-* Rekommenderad produkt(er)
-
-Den mest sålda produkten och senast inkomna produkter uppdateras automatiskt baserat på databasens innehåll. För de andra kan man justera innehållet om man loggar in som administratör.
+Översikten av frågorna visar hur många svar en fråga har samt vilken rank. 
 
 
 
-###Krav 5: Produktkategorier (optionell) {#k5}
+###Krav 5: Användare (optionell) {#k5}
 
-Du förbättrar flexibiliteten och en produkt kan vara kopplad till många produktkategorier.
+Inför ett poängsystem som baseras på användarens aktivitet. Följande kan ge poäng:
 
-Uppdatera dina produkter så att de är kopplade till en mix av 1, 2 och 3 produktkategorier.
+* Skriva fråga
+* Skriva svar
+* Skriva kommentar
+* Ranken på skriven fråga, svar, kommentar.
 
-På din förstasida, lägg till en översikt av dina kategorier, formattera kategorinamnen så att de får ett större typsnitt baserat på antalet produkter som är kopplade till just den kategorin.
+Summera allt och sätt det till användarens rykte.
 
-När man tittar på produktsidan skall man kunna filtrera per kategori (visa vilka produkter som finns i en kategori).
+Visa en översikt på användarens sida om all aktivitet som användaren gjort, dvs frågor, svar, kommentarer, antalet röstningar gjorda samt vilket rykte användaren har.
 
-Kan man välja att se produkter från flera produktkategorier så är det bonus (men inte nödvändigt).
+Du kan efter eget tycke modifiera reglerna för hur användarens rykte beräknas.
 
 
 
-###Krav 6: Extra (optionell) {#k6}
+###Krav 6: Valfritt (optionell) {#k6}
 
-Välj en utbyggnad som du tycker passar in. Det kan vara något i stil med:
-
-* Betalning
-* Faktura
-* Tävla för att vinna bonuskod (100-spelet) (och använda bonuskoden)
-
-Eller visa mer information på förstasidan/alla sidor likt:
-
-* Lista senaste produkter som användaren tittat på.
-* Lista de produkter som är mest populära (antalet användare som tittat på dem).
-* Lista senast köpta produkter (oavsett vem som köpt dem).
-
-Eller något som du själv anser är relevant och där du kan argumentera dig fram till några extrapoäng. 70% kodtäckning med enhetstester kanske?
-
-Kanske kan du integrera din kalender för att visa när nya produkter kommer att släppas?
-
-Kanske hämtar du information till dina produkter från ett externt API? Till exempel en affär som säljer DVD-filmer och hämtar information till nya produkter via ett interface från IMDB.
-
-Skriv vad du gjort och skriv även hur många poäng du anser dina utbyggnader vara värda.
+Förutsatt att du gjort krav 4 och 5 kan du använda detta krav som ett valfritt krav. Beskriv något som du gjort i uppgiften som du anser vara lite extra utöver det vanliga och berätta hur du löst det. Det kan vara en utseendemässig sak, eller en kodmässig sak. Den bör vara något som du lagt mer än 4-8h på och något som höjer sig lite extra i svårighet eller problemlösning.
 
 
 
