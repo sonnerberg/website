@@ -35,7 +35,7 @@ Kunden vill ha en Stack Overflow-kopia och det tänkta fokuset är "Allt om att 
 
 PS. Du kan (bör) byta temat från "Att trimma en moppe" till "Allt om att sköta minigrisar", "Allt du vill veta om bubbelbad", "Allt om tv-serien 2 1/2 män", "Allt om filmen XXX", "Allt om snowboard", "Allt om Kalle Anka". Ta vilket ämne du vill, försök att hitta på ett själv, det gör det hela lite roligare.
 
-PS. Du kan ge kunden något den inte beställt men som du anser passa kunden. Du kan själv välja fokus och inrikta din lösning till att lösa ett forum, twitter-kopia, reddit-kopia eller någon liknande tjänst som är tungt beroende av ett kommentarssystem. Fråga om du är osäker.
+PS. Du kan ge kunden något den inte beställt men som du anser passa kunden. Du kan själv välja fokus och inrikta din lösning till att lösa ett forum, twitter-kopia, reddit-kopia, Disqus-klon eller någon liknande tjänst som är tungt beroende av ett kommentarssystem. Fråga om du är osäker.
 
 Om du gör ditt eget upplägg kan du behöva formulera egna motsvarande krav för de optionella kraven. Fråga i forumet om du behöver stöd.
 
