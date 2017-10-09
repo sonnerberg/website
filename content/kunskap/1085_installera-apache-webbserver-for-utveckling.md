@@ -111,7 +111,7 @@ Kod till HTML-sidan `test.html`.
 <!doctype html>
 <meta charset="utf-8">
 <title>My test page</title>
-<h1>My nice test page for PHP</h1>
+<h1>My nice test page for HTML</h1>
 ```
 
 [FIGURE src=/image/xampp/jedit-test-html.png?w=w2 caption="Filen `test.html` skapas i texteditorn."[/FIGURE]
