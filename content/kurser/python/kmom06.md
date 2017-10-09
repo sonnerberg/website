@@ -4,7 +4,7 @@ revision:
     "2017-09-08": (F, mos) Bort blå text.
     "2017-06-22": (E, aar) Rensade SQLite och args/getopts.
     "2016-02-22": (D, mos) Lade till videoserien "Lär dig Python".
-    "2015-04-08": (C, mos) Länk till screencast om beautifulsoap.
+    "2015-04-08": (C, mos) Länk till screencast om beautifulsoup.
     "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
     "2014-10-17": (A, mos) Första utgåvan för python kursen.
 ...
@@ -71,7 +71,7 @@ Läs följande:
 
 2. Läs kort och översiktligt om den externa [Python-modulen `request`](http://docs.python-requests.org/en/latest/) på deras hemsida.
 
-3. Läs kort och översiktligt om den externa [Python-modulen `BeautifulSoap`](http://www.crummy.com/software/BeautifulSoup/) på deras hemsida.
+3. Läs kort och översiktligt om den externa [Python-modulen `BeautifulSoup`](http://www.crummy.com/software/BeautifulSoup/) på deras hemsida.
 
 
 
