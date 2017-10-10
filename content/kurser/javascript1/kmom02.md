@@ -1,15 +1,16 @@
 ---
 author: mos
 revision:
-  "2017-09-27": (G, lew) Ny kurslitteratur.
-  "2016-03-15": (F, lew) korrigerade labben".
-  "2016-03-15": (E, mos) Lade till videoserie med "Lär dig JavaScript".
-  "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
-  "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
-  "2014-09-03": (B, mos) Första officiella versionen.
-  "2014-08-12": (A, mos) Första utgåvan för javascript1 kursen.
+    "2017-10-10": (H, mos) Genomgång inför ht17.
+    "2017-09-27": (G, lew) Ny kurslitteratur.
+    "2016-03-15": (F, lew) korrigerade labben.
+    "2016-03-15": (E, mos) Lade till videoserie med "Lär dig JavaScript".
+    "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
+    "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
+    "2014-09-03": (B, mos) Första officiella versionen.
+    "2014-08-12": (A, mos) Första utgåvan för javascript1 kursen.
 ...
-Kmom02: Villkor och loopar <!-- Villkor och loopar -->
+Kmom02: Villkor och loopar
 ==================================
 
 Vi skall nu komma i gång med att koda JavaScript. Vi bekantar oss med grundkonstruktionerna i språket och använder strängar, siffror, variabler och loopar tillsammans med en del inbyggda funktioner för strängar, matematiska operationer och datum.
@@ -20,7 +21,7 @@ Samtidigt gör vi ett par enklare program som övar oss i hur HTML, CSS och Java
 
 [FIGURE src=/image/snap/flag1-demo.png?w=w2 caption="En flagga i HTML, CSS och JavaScript."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -35,31 +36,35 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 
-1. [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)
-    * [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html#_statements) (Conditionals, loops)
-    * [Ch13 Statements](http://speakingjs.com/es5/ch13.html)
-
-
+1. Läs i kurslitteraturen [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) om villkor och loopar.
+    * [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html#_statements) (läs endast om conditionals och loops)
+    * [Ch13 Statements](http://speakingjs.com/es5/ch13.html) (hoppa över `with`)
 
 <!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
     * [Ch2 Program structure](http://eloquentjavascript.net/02_program_structure.html) -->
 
 
 
+###MDN {#mdn}
+
+Läs igenom följande.
+
+1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för villkor och loopar.
+    * Control flow and error handling
+    * Loops and iteation
+
+1. Bekanta dig med referensmanualen [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference). Som en introduktion kan du kika på konstruktioner för villkor och loopar.
+    * [Statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
+    * [if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+    * [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+
 
 
 ###Artiklar {#artiklar}
 
-Läs följande:
+Läs följande.
 
-1. [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-    * [Ch 5: Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
-    * [Ch 7: Statements (Control Flow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Statements)
-
-2. Bekanta dig med [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference), där hittar du facit till vad du kan göra med JavaScript. Bli vän med denna och återkom hit när du vill slå upp någon konstruktion. Som en introduktion kan du kika kort och översiktligt på följande delar.
-    * [Built-in object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)
-    * [Expressions & Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
-    * [Statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
+1. På MDN finns en längre artikel om grunderna i JavaScript, som en översiktlig introduktion till grundläggande begrepp i JavaScript. Du kan kika i artikeln "[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)" och läsa översiktligt. Kanske vill du komma tillbaka till artikeln i senare kursmoment. Artikeln ger en bra översikt till den som redan kan andra programmeringsspråk.
 
 
 
@@ -72,10 +77,11 @@ Titta på följande:
 1. Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Chapter 2: And Then There Was JavaScript](https://www.youtube.com/watch?v=RO1Wnu-xKoY)".
 
 
-
+<!--
 ###Lästips {#lastips}
 
 Det finns inga lästips.
+-->
 
 <!--
 1. Artikel "[The World's Most Misunderstood Programming Language](http://javascript.crockford.com/javascript.html)" från 2001 av Douglas Crockford där han förklarar varför han tror att JavaScript fick dåligt rykte inledningsvis.
@@ -89,10 +95,11 @@ Det finns inga lästips.
 *(ca: 12-16 studietimmar)*
 
 
+<!--
 ###Övningar {#ovningar}
 
 Det finns inga övningar.
-
+-->
 
 <!--
 1. Läs igenom artiklen "[Programmering med grunderna i JavaScript](kunskap/programmering-med-grunderna-i-javascript)". Om du gör exempelprogrammen så kan du spara dem i kursrepot under me/kmom02/core.
@@ -106,18 +113,18 @@ Dessa uppgifter skall utföras och redovisas.
 
 <!-- Lab2 Villkor och loopar -->
 
-1. Gör uppgiften "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)".
+1. Gör laborationen "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)". Spara arbetet i `me/kmom02/lab2`.
 
-2. Gör uppgiften "[Rita flaggor med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css)".
+2. Gör uppgiften "[Rita flaggor med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css)". Spara resultatet i `me/kmom02/flag1`.
 
-3. Gör uppgiften ["Flytta runt Baddie på webbsidan"](uppgift/flytta-runt-en-baddie-pa-webbsidan).
+3. Gör uppgiften ["Flytta runt Baddie på webbsidan"](uppgift/flytta-runt-en-baddie-pa-webbsidan). Spara resultatet i `me/kmom02/baddie1`.
 
 
-
+<!--
 ###Extra {#extra}
 
 Det finns inga extra uppgifter.
-
+-->
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -125,10 +132,10 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](javascript1/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du programmerat i JavaScript tidigare?
+* Har du programmerat i JavaScript tidigare, eller kan de relatera till andra språk du programmerat i?
 * Vad tycker du är det svåraste, mest utmanande i utveckling med HTML, CSS och JavaScript - så här långt?
 * Hur gick det att utföra respektive uppgift, vilken tog mest tid och vilken var mest lärorik?

@@ -19,6 +19,11 @@ Upplägget är enligt följande:
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 
+[WARNING]
+Kursutveckling pågår inför ht17 läsperiod 2.
+[/WARNING]
+
+<!--stop-->
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
@@ -207,7 +212,3 @@ Redovisning {#redovisning}
 # Ställ dig i kurskatalogen
 dbwebb publish me
 ```
-
-
-
-

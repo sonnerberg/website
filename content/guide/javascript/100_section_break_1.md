@@ -1,9 +1,8 @@
 ---
-title: Introduktion
 sectionHeader: true
 linkable: true
 ...
-Introduktion
+Inledning
 =======================
 
-Börja dig med att bekanta dig med denna guide i allmänhet och om programmeringsspråket JavaScript i synnerhet.
+En inledning till guiden och vad den omfattar och inte omfattar.

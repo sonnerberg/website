@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
-  "2016-03-15": (C, mos) Lade till videoserie med "Lär dig JavaScript".
-  "2015-01-19": (B, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
-  "2014-10-30": (A, mos) Första utgåvan för javascript1 kursen.
+    "2017-10-10": (D, mos) Genomgång inför ht17.
+    "2016-03-15": (C, mos) Lade till videoserie med "Lär dig JavaScript".
+    "2015-01-19": (B, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
+    "2014-10-30": (A, mos) Första utgåvan för javascript1 kursen.
 ...
 Kmom06: Modul och closure
 ==================================
@@ -14,7 +15,7 @@ När kodbasen växer blir det mer och mer viktigt att ha en bra struktur på den
 
 [FIGURE src=/img/hangman/hangman-validates-inline.svg caption="En SVG-bild till ett hänga gubben-spel som byggs enligt module pattern."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -26,17 +27,27 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-1. Läs följande kapitel i boken [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/).
+Läs följande.
+
+1. Läs i boken [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/) för att ta reda på vad ett module pattern är.
     * [Introduction](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#introduction)
     * [What is a Pattern?](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#whatisapattern)
     * [The Module Pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
 
-###Artiklar {#artiklar}
+
+
+###MDN {#mdn}
 
 Läs följande:
 
-1. [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-    * [Ch 14: Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
+1. Läs i [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) för att studera begreppet closure.
+    * [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
+
+
+
+<!--
+###Artiklar {#artiklar}
+-->
 
 
 
@@ -48,14 +59,13 @@ Titta på följande:
 
 1. Se Douglas Crockford på konferensen HTML5DevConf 2011 när han pratar om ["JavaScript Programming Style and Your Brain"](https://www.youtube.com/watch?v=cIOIyfRoGcM). Video riktar sig till mer erfarna programmerare men även nybörjare har nytta av den.
 
+
+
 <!--
-2. Fortsätt titta på Code Academy serien om "[Learning JavaScript Programming](https://www.youtube.com/playlist?list=PLoDk0fP8MgnKzxbjc1-mp4ljRO0JRrPUA)". Titta på delarna 45-50 som handlar om closures och moduler i JavaScript.
--->
-
-
 ###Lästips {#lastips}
 
 Det finns inga lästips.
+-->
 
 
 
@@ -77,13 +87,15 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Hänga gubben som modul i JavaScript](uppgift/hanga-gubben-som-modul-i-javascript)".
+1. Gör uppgiften "[Hänga gubben som modul i JavaScript](uppgift/hanga-gubben-som-modul-i-javascript)". Spara koden i `me/kmom06/hangman`.
 
 
 
+<!--
 ###Extra {#extra}
 
 Det finns inga extra uppgifter.
+-->
 
 
 
@@ -92,12 +104,12 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](javascript1/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du några erfarenheter av design mönster sedan tidigare?
 * Var det svårt att greppa hur function scope och closure fungerar eller känns det naturligt?
-* Kan du jämföra "module pattern" med någon annat liknande datastruktur?
+* Har du några erfarenheter av designmönster sedan tidigare?
+* Kan du jämföra "module pattern" med någon annan liknande datastruktur?
 * Känns "module pattern som en bra kodstruktur"?
-* Var boken "Learning JavaScript Design Patterns" lättläst eller lite för svår?
+* Var boken "Learning JavaScript Design Patterns" lättläst eller utmanande?

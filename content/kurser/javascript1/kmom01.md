@@ -29,7 +29,7 @@ Detta kursmoment ger dig basen för resten av kursen, det hanterar grunderna som
 Kursens labbmiljö  {#labbmiljo}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 2-6 studietimmar)*
 
 Du behöver installera kursens labbmiljö samt ha tillgång till verktyget `dbwebb` som du installerar på terminalen. När du är klar kan du klona kursrepot där du finner en del av kursens material.
 
@@ -122,8 +122,7 @@ Gör följande:
 1. För en snabb introduktion till konstruktionerna i språket JavaScript kan jag rekommendera dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" och de inledande kapitlen som kompletterar det du läst i kurslitteraturen.
     * Introduction
     * Grammar and types
-    * Control flow and error handling
-    * Loops and iteation
+    * Expressions and operators
 
 
 
