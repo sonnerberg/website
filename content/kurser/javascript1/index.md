@@ -173,15 +173,17 @@ Följande böcker har jag valt som referenslitteratur som är en fördjupning av
 
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
 
-* **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)** -- Rolf Staflin  
-    En stabil bok för att komma igång med HTMl och CSS.
-
 * **[Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)** -- Marijn Haverbeke  
     En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i JavaScript.
 
 * **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford  
     En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
 
+<!--
+Boken utgått.
+* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin  
+  En stabil bok för att komma igång med HTML och CSS.
+-->
 
 
 <!--

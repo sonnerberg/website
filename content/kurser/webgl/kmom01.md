@@ -1,9 +1,8 @@
 ---
 author: mos
 revision:
-  "2015-10-15": (A, mos) Första utgåvan för kursen.
-updated: "2015-11-29 15:34:00"
-created: "2015-10-06 19:40:23"
+    "2017-10-10": (B, mos) Genomgången inför ht17.
+    "2015-10-15": (A, mos) Första utgåvan för kursen.
 ...
 Kmom01: JavaScript och WebGL
 ==================================
@@ -19,7 +18,59 @@ Så här långt kommer du när du läst boken och testat dess exempel.
 
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Kursens labbmiljö  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-6 studietimmar)*
+
+Du behöver installera kursens labbmiljö samt ha tillgång till verktyget `dbwebb` som du installerar på terminalen. När du är klar kan du klona kursrepot där du finner en del av kursens material.
+
+
+
+###Labbmiljön {#kurslabbmiljo}
+
+Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
+
+1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+
+
+
+###Installera/uppdatera kommandot dbwebb {#dbwebbcli}
+
+Om du redan har installerat kommandot dbwebb så gör du en selfupdate för att vara säker på att du har senaste versionen. Sedan kan du fortsätta till nästa stycke.
+
+```text
+dbwebb selfupdate
+```
+
+Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
+
+Utför följande steg för att installera kommandot dbwebb.
+
+1. [Installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
+
+1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
+
+
+
+###Klona kursrepot {#clona}
+
+Kursrepot innehåller en viss del av kursmaterialet och det ger en struktur där du skriver kod för att lösa övningar och uppgifter i kursen. Du hämter det med hjälp av kommandot dbwebb. Vi kallar det för att du klonar ditt kursrepo. Klona är ett begrepp som används i versionshanteringssystemet Git.
+
+1. Läs om hur du [laddar ned (klona) ditt lokala kursrepo](dbwebb-cli/clone) som innehåller kursmaterial för kursen.
+
+Den snabba vägen.
+
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb clone webgl
+```
+
+Bra, det var inledningen och vissa nödvändiga saker. Nu kan du sätta igång "på riktigt" med det första kursmomentet.
 
 
 
@@ -39,15 +90,34 @@ Läs följande:
 
 I kapitel 2 finns en del exempelprogram som du kan testa direkt i ditt kursrepo `example/webgl/theBook/Chapter2/`, eller via [dbwebb's kopia av kursrepot](webgl/repo/example/webgl/theBook/Chapter2/).
 
+1. Bekanta dig med boken [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att läsa igenom det första kapitlet [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode") som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript.
+
+
+
+###MDN {#mdn}
+
+I kursen används Mozilla Developers Network (MDN) som en resurs generellt för webbresurser och specifikt för referensmanual till programmeringsspråket JavaScript.
+
+Vill du hamna på rätt manualsida så lägger du alltid till "mdn" till din googling. Det finns många versioner av JavaScript och du vill gå tillbaka till källan i referensmanualen för att veta vad som är rätt (eller fel).
+
+Gör följande:
+
+1. Bekanta dig kort med översikten på [MDN: Web technology for developers](https://developer.mozilla.org/en-US/docs/Web). Där ser du generellt material om webbteknologier.
+
+1. Bekanta dig specifikt med det som finns under rubriken "JavaScript". Använd minst 10 minuter av din tid för att kika runt och läsa någon av de inledande artiklarna om JavaScript.
+
+1. För en snabb introduktion till konstruktionerna i språket JavaScript kan jag rekommendera dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" och de inledande kapitlen som kompletterar det du läst i kurslitteraturen.
+    * Introduction
+    * Grammar and types
+    * Expressions and operators
+
 
 
 ###Artiklar {#artiklar}
 
-Läs följande artiklar för att få bakgrunden till övningarna.
+Läs följande:
 
-1. Bekanta dig med Mozilla Developers Network (MDN) och börja på [MDN: Web technology for developers](https://developer.mozilla.org/en-US/docs/Web). Där ser du artiklar om de tekniker som kursen hanterar. Här kan du finna hjälp och stöd, du behöver bara lära dig att navigera på webbplatsen. Använd 15 minuter så att du känner dig hemma på webbplatsen och får en känsla för vad den innehåller. Titta främst på delarna för HTML, CSS, JavaScript, DOM och WebGL. 
-
-2. När du är klar med ovanstående så tittar du bland de (MDN) mest [populära demo-programmen i JavaScript](https://developer.mozilla.org/en-US/demos/tag/tech:javascript?sort=likes) för att få en känsla för vad man kan göra med JavaScript i en webbläsare. Kika runt och se om du hittar något extra kul, kanske hittar du något som du vill lära dig hur man gör?
+1. I kursen används validatorer och en kodstandard för att testa att du skriver kod på ett, enligt kodstandarden, acceptabelt sätt. Du kan läsa om dbwebb-kodstandarden på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
 
 
 
@@ -61,7 +131,7 @@ Kika på följande videor.
 
 ###Föreläsningsmaterial {#slide}
 
-Eventuellt föreläsningsmaterial finner du i kursrepot under [`slide/01.*`](webgl/repo/slide).
+Föreläsningsmaterial finner du i kursrepot under [`slide/01.*`](webgl/repo/slide).
 
 
 
@@ -83,18 +153,6 @@ Följande källor är relevanta och ger dig en orientering i WebGL och det som k
 -------------------------------------------
 
 *(ca: 10-12 studietimmar)*
-
-
-
-###Labbmiljö {#labbmiljo}
-
-Installera labbmiljön för kursen.
-
-1. [Installera labbmiljön](webgl/labbmiljo) som behövs för kursen.
-
-1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `webgl`](dbwebb-cli/clone).
-
-Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`](dbwebb-cli).
 
 
 
@@ -126,18 +184,12 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
-
-Det finns ingen extrauppgift.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](webgl/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
@@ -147,7 +199,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Gick det bra att skapa me-sidan? Var det någon som var svårt att hantera i me-sidan?
 * Vad tycker du om kursboken så här långt?
 * Berätta lite om hur du löste uppgiften med punkterna. Var det något som var svårt, lurigt eller utmanande?
-
-
-
-

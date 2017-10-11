@@ -1,14 +1,11 @@
 ---
 title: webgl
-
 author: mos
 revision:
     "2016-10-19": (D, mos) Lade till rekommenderad studieplan.
     "2015-11-29": (C, mos) Justerade namnen på kursmomenten.
     "2015-10-11": (B, mos) Uppdateringar om respektive kursmoment.
     "2015-10-07": (A, mos) Första preliminära revision inför kursstart HT2015.
-updated: "2015-10-06 19:51:12"
-created: "2015-10-06 19:51:08"
 ...
 Kursen "webgl"
 ==================================
@@ -18,8 +15,7 @@ Kursen **Spelteknik för webben**, a.k.a. *webgl*, introducerar dig till webbtek
 <!--more-->
 
 För att implementera ett webbaserat datorspel krävs en process där ett flertal olika tekniker samverkar. Kunskaper om hur, när och varför olika tekniker
-kan och bör nyttjas påverkar till hög grad i samtliga utvecklingsstadier. Kursen syftar till att studenten skall förstå hur spelteknik kan appliceras, utan
-direkta plattformsrestriktioner, inom ramarna för webbutveckling.
+kan och bör nyttjas påverkar till hög grad i samtliga utvecklingsstadier. Kursen syftar till att studenten skall förstå hur spelteknik kan appliceras, utan direkta plattformsrestriktioner, inom ramarna för webbutveckling.
 
 
 
@@ -136,9 +132,8 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
-
-* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin  
-  En stabil bok för att komma igång med HTML och CSS.
+* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+    En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
 * **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
   En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
@@ -146,8 +141,12 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 * **[WebGL: Up and Running](kunskap/boken-webgl-up-and-running)** -- Tony Parisi  
     Visar hur du kommer igång med 3D-programmering och WebGL via 3D-bibliotek. För dig som hellre använder 3D bibliotek än skriver din egen kod direkt i WebGL.
 
+<!--
+Boken utgått.
+* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin  
+  En stabil bok för att komma igång med HTML och CSS.
+-->
 
-  
 
 
 Läsanvisningar {#lasanvisning}
@@ -175,10 +174,12 @@ Det finns en [rekommenderad studieplan](webgl/studieplan) som är kopplad till v
 
 
 
-Betygsättning {#betyg}
-------------------------
+Lärarstöd och handledning {#handledning}
+----------------------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Kursen ges på campus och handledning sker i anslutning till tid i labbsalen.
+
+Det finns även forum och chatt där man kan få hjälp och handledning.
 
 
 
@@ -195,12 +196,10 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 
 
 
-Lärarstöd och handledning {#handledning}
-----------------------------------------
+Betygsättning {#betyg}
+------------------------
 
-Kursen ges på campus och handledning sker i anslutning till tid i labbsalen.
-
-Det finns även forum och chatt där man kan få hjälp och handledning.
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
