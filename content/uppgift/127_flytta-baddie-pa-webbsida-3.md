@@ -62,7 +62,7 @@ ls
 5. Baddie ska vända sig åt höger respektive vänster när han går åt dessa håll.
 6. Baddie ska inte kunna gå in i väggar.
 7. Baddie ska kunna flytta på lådor så länge det inte är något annat i vägen.
-8. Baddie3 ska valideras och publiceras med bin/dbwebb enligt följande:
+8. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen

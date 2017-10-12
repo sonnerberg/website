@@ -64,7 +64,7 @@ ls
 3. Baddie ska kunna röra sig upp, ner, höger och vänster med hjälp av piltangenterna på tangentbordet.
 4. Baddies rörelse ska hanteras av en switch-case eller en if/else.
 5. En egen baddie-bild ska användas.
-5. Baddie1 ska valideras och publiceras, utan fel, med bin/dbwebb enligt följande:
+6. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
