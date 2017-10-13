@@ -158,15 +158,7 @@ Följande källor är relevanta och ger dig en orientering i WebGL och det som k
 
 ###Övningar {#ovningar}
 
-Börja med att kika på följande introduktionsartiklar om HTML, CSS och JavaScript. Beroende på dina förkunskaper så får du välja hur mycket tid du spenderar på dem. De innehåller grunder och ger dig en introduktion i de olika teknikerna.
-
-* HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
-* CSS - [Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)
-* JavaScript - [Kom igång med JavaScript och skriv din första kod](coachen/kom-igang-med-javascript-och-skriv-din-forsta-kod)
-
-
-
-När du är klar med ovanstående introduktionsartiklar så genomför du följande övning.
+1. Du behöver ha grundläggande koll på HTML och CSS. Som en uppfräschning av dina kunskaper, eller som en kort intro, så jobbar du igenom materialet i tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)". Jobba igenom materialet grundligt eller översiktligt, beroende på ditt eget behov.
 
 1. Kom igång och gör ditt första program i JavaScript tillsammans med artikeln "[Kom i gång med HTML, CSS, JavaScript och Canvas](kunskap/kom-i-gang-med-html-css-javascript-och-canvas)".
 
