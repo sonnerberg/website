@@ -84,15 +84,17 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: Docker {#kmom01}
+###Kmom01: Express {#kmom01}
 
-TBD.
+Vi skall bygga grunden till en applikations/webbplats med hjälp av ramverket Express. Express bygger på Node.js. Webbplatsen får bli vår me-sida och det blir en grund att jobba vidare på i kursen.
+
+Me-sidan får bli ett eget repo på GitHub som vi kopplar ihop med externa tjänster för automatiskt builds och kodkvalitet som blir basen i ett CI-flöde (Continuous integration).
 
 [Instruktion till kursmoment 01](./kmom01).
 
 
 
-###Kmom02: Realtid {#kmom02}
+###Kmom02: Docker {#kmom02}
 
 TBD.
 
@@ -100,7 +102,7 @@ TBD.
 
 
 
-###Kmom03: Molnet {#kmom03}
+###Kmom03: Test {#kmom03}
 
 TBD.
 
@@ -108,7 +110,7 @@ TBD.
 
 
 
-###Kmom04: Devops {#kmom04}
+###Kmom04: Realtid {#kmom04}
 
 TBD.
 
@@ -116,7 +118,7 @@ TBD.
 
 
 
-###Kmom05: Desktop {#kmom05}
+###Kmom05: Databas {#kmom05}
 
 TBD.
 
