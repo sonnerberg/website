@@ -1,1 +1,0 @@
-../../../labbmiljo/261_cordova.md

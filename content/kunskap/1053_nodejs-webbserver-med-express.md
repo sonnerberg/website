@@ -5,7 +5,9 @@ category:
     - javascript
     - express
     - kursen dbjs
+    - kursen ramverk2
 revision:
+    "2017-10-14": (C, mos) Uppdatering inför kursen ramverk2, mer om pug.
     "2017-03-22": (B, mos) Flytta npm pug till toppen.
     "2017-03-20": (A, mos) Första utgåvan i kursen dbjs.
 ...
@@ -29,20 +31,28 @@ Förutsättning {#pre}
 
 Du kan grunderna i Node.js och JavaScript på serversidan.
 
-Exempelprogram finns i ditt kursrepo (dbjs) under `example/nodejs/express`.
+Exempelprogram finns i ditt kursrepo under `example/nodejs/express` (dbjs) eller `example/express` (ramverk2).
 
 
 
 Installera modulen med npm {#npm}
 --------------------------------------
 
-Modulen [Express finns på npm](https://www.npmjs.com/package/express). Express är också en del av [MEAN](http://mean.io/) som är en samling moduler för att bygga webbapplikationer med Node.js. I denna artikeln kommer vi enbart att använda Express.
+Modulen [Express finns på npm](https://www.npmjs.com/package/express). Express är en del av [MEAN](http://mean.io/) som är en samling moduler för att bygga webbapplikationer med Node.js. I denna artikeln kommer vi att använda Express (E) och Node.js (N).
 
-Jag går till kursrepot och installerar modulen, tillsammans med templatemotorn Pug, med npm.
+Innan vi börjar så skapar vi en `package.json` som kan spara information om de moduler vi nu skall använda.
 
 ```bash
-# Ställ dig i rooten av ditt kursrepo.
-$ npm install express pug
+# Ställ dig i katalogen du vill jobba
+npm init
+```
+
+När du ombeds döpa paketet så ange "express-demo". Använde inte "express" eftersom det paketnamnet redan finns och du får problem i nästa steg. Du kan köra om `npm init` om du vill ändra namn, eller redigera namnet i filen `package.json`.
+
+Nu kan vi installera paketen vi skall använda, `express` och `pug`. Vi väljer att spara dem i vår `package.json`.
+
+```bash
+npm install express pug --save
 ```
 
 Klart. Då testar vi om installationen gick bra.
@@ -188,7 +198,7 @@ Det var de statiska resurserna det. Bra, bra.
 
 
 
-Routing mot request metoder {#routemet}
+Routing mot olika request metoder {#routemet}
 --------------------------------------
 
 En route sätts upp för att svara mot en speciell request metod såsom GET, POST, PUT, DELETE. Det är på det sättet man bygger upp en RESTful tjänst.
@@ -226,18 +236,70 @@ Det var routes och stöd för olika metoder det. Se till att du installerar en k
 
 
 
-Felhantering med routes {#routefel}
+Middleware {#middleware}
 --------------------------------------
 
-När användaren accessar en route som inte finns så blir det statuskod 404.
+I express finns termen "middleware" som benämning på callbacks som anropas innan själva routens hanterare anropas. Eller på en hanterare som alltid anropas för alla routes.
+
+Låt oss skapa en sådan middleware som skriver ut vilken route som accessades och med vilken metod.
+
+Vi lägger till middleware via metoden `app.use()`. Vi kan lägga till dem för en specifik route, eller för alla routes. 
+
+```javascript
+// This is middleware called for all routes.
+// Middleware takes three parameters.
+app.use((req, res, next) => {
+    console.log(req.method);
+    console.log(req.path);
+    console.log(req.params);
+    next();
+});
+```
+
+Middleware anropas i den ordningen de är definierade, när de matchar en route. Använd ett anrop till `next()` när du är klar och vill skicka vidare kontroller till nästa middleware och slutligen routens hanterare.
+
+<!--
+Resultatet kan se ut så här.
+
+[FIGURE src=image/snapvt17/express-route-params.png?w=w2 caption="Innehållet i HTML-sidan kommer från routens innehåll."]
+
+En udda sida måhända, men den får demonstrera hur man kan jobba med dynamisk information och parametriserade routes.
+-->
+
+På serversidan ser du nu delar av innehållet i request-objektet som visar metoden och pathen som anropats, samt eventuellt inkommande parametrar.
+
+Liknande utskrifter är bra att ha för att förstå vilken data som routen jobbar med.
+
+<!--
+Webbläsaren konverterar länken, urlencodar, så att mellanslagen byts ut mot `%20`. När länken tas emot som en route och översätts till parametrar, så gör Express en urldecode på innehållet. Detta är sättet som används för att hantera udda tecken i en webblänk och det sker automatiskt av webbläsaren och Express.
+
+Det fungerar så här, om man översätter det till ren JavaScript.
+
+```bash
+$ node                       
+> a = encodeURIComponent("Jag kan svenska åäö")
+'Jag%20kan%20svenska%20%C3%A5%C3%A4%C3%B6'     
+> b = decodeURIComponent(a)                    
+'Jag kan svenska åäö'                          
+>                                              
+```
+-->
+
+
+
+404 med routes {#routefel}
+--------------------------------------
+
+När användaren försöker nå en route som inte finns så blir det ett svar med statuskod 404.
 
 [FIGURE src=image/snapvt17/express-default-404.png?w=w2 caption="Ett standard felmeddelande när routen saknas."]
 
-Man kan lägga till en egen route som agerar kontrollerad felhanterare för routes som inte finns.
+Man kan lägga till en egen route som blir en "catch all" och agerar kontrollerad hantering av 404.
 
 ```javascript
 // Add routes for 404 and error handling
 // Catch 404 and forward to error handler
+// Put this last
 app.use((req, res, next) => {
     var err = new Error("Not Found");
     err.status = 404;
@@ -245,7 +307,7 @@ app.use((req, res, next) => {
 });
 ```
 
-Ovan så använder min felhanterare den inbyggda felhanteraren, det sker via anropet `next(err)`. 
+Ovan så använder min hanterare för 404 den inbyggda felhanteraren. Det sker via anropet `next(err)` där `err` är ett objekt av typen `Error`. Min variant är alltså att säga att nu är det felkod 404 och jag överlämnar till den inbyggda felhanteraren att skriva ut felmeddelandet.
 
 [FIGURE src=image/snapvt17/express-default-error-handler.png?w=w2 caption="Den inbyggda felhanteraren ger ett fel och en stacktrace."]
 
@@ -257,11 +319,11 @@ När node startar upp Express så är det default i utvecklingsläge. Du kan tes
 $ NODE_ENV="production" node index.js
 ```
 
-Nu försvann stacktracen från klienten, men den syns fortfarande där servern körs.
+Nu försvann stacktracen från klienten, men den syns fortfarande i terminalen där servern körs.
 
 [FIGURE src=image/snapvt17/express-error-handling-production.png?w=w2 caption="I production så visar inte stacktrace för klienten."]
 
-När vi utvecklar så får det bli development läge som också är standard, men när man sätter en server i produktion så får man se till att det också är produktionsläge för felmeddelandena.
+När vi utvecklar så blir det enklast att köra standard, vilket är development läge. Men när man sätter en server i produktion så får man se till att det också är produktionsläge för felmeddelandena, vilket innebär så lite information som möjligt.
 
 
 
@@ -270,7 +332,7 @@ Vyer {#vyer}
 
 Låt oss kika på hur vi kan rendera svar som är en kombination av HTML och utskrift av JavaScript variabler.
 
-Vi använder [Pug](https://www.npmjs.com/package/pug) som templatemotorn. [Manualen till Pug](https://pugjs.org/api/getting-started.html) finner vi på deras hemsida. Den är bra att ha tillhanda nu när vi skall börja använda template-motorn för att skapa dynamiska HTML-sidor.
+Vi använder [Pug](https://www.npmjs.com/package/pug) som templatemotor. [Manualen till Pug](https://pugjs.org/api/getting-started.html) finner vi på deras hemsida. Den är bra att ha tillhanda nu när vi skall börja använda Pug för att skapa dynamiska HTML-sidor.
 
 
 
@@ -287,7 +349,7 @@ app.set('view engine', 'pug');
 
 ###En vy-fil {#viewfile}
 
-Vi behöver även skapa ett par vy-filer.
+Vi behöver även skapa vy-filer, eller template-filer som de också kan kallas. Jag kallar dem vy-filer i denna artikeln.
 
 Express förutsätter att vy-filerna finns i katalogen `views/` och namnges med filändelsen `.pug`.
 
@@ -303,20 +365,20 @@ Spara följande kod i `views/page.pug`.
 ```text
 doctype html
 html
-head
-    title= title
-    link(rel="stylesheet", href="/css/style.css")
-body
-    h1= message
-    p This is a plain paragraph with a url. Here comes <a href="/test/page">the actual link</a>.
-    p Here is a image <img id="image" src="/img/mos.jpg">.
+    head
+        title= title
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1= message
+        p This is a plain paragraph with a url. Here comes <a href="/test/page">the actual link</a>.
+        p Here is a image <img id="image" src="/img/mos.jpg">.
 
-    script(src="/js/move.js")
+        script(src="/js/move.js")
 ```
 
 Med Pug kan man skriva enligt deras egen variant av förenklad HTML och kombinera den med vanlig HTML, samtidigt kan man skriva ut innehållet från de medskickade JavaScript-variablerna inuti HTML-koden.
 
-En template-motor kopplar samman JavaScript-variabler med statisk HTML-kod och låter oss generera sidor med dynamiskt innehåll, innehåll som vi till exempel kan hämta från en databas eller annan källa.
+En templatemotor kopplar samman JavaScript-variabler med statisk HTML-kod och låter oss generera sidor med dynamiskt innehåll, innehåll som vi till exempel kan hämta från en databas eller annan källa.
 
 
 
@@ -341,14 +403,28 @@ Om du kan klicka på bilden så att den flyttar sig så fungerar även det inklu
 
 
 
-###Ännu mer dynamiskt innehåll {#routepara}
+###Dubbelkolla vilken HTML som genereras {#pretty}
+
+När Pug genererar HTML-koden så är den minifierad. Det kan vara svårt att utveckla och debugga sina vy-filer med minifierad HTML kod.
+
+När vi är i utvecklingsläge kan det därför vara bättre att generera HTML-koden så den blir snyggt formatterad. Lägg till följande kod så kommer Pug att generera snyggt formatterad HTML-kod.
+
+```javascript
+if (app.get('env') === 'development') {
+    app.locals.pretty = true;
+}
+```
+
+Du kan dubbelkolla vilken HTML-kod som genereras genom att högerklicka och visa källkoden i webbläsaren.
+
+
+
+###Mer dynamiskt innehåll {#routepara}
 
 Vi kan få innehållet i sidan att ändra sig beroende på hur routen ser ut. Om vi parametriserar routens delar så kan vi skriva så här.
 
 ```javascript
 app.get("/test/:title/:message", (req, res) => {
-    console.log(req.path);
-    console.log(req.params);
     res.render("page", {
         title: req.params.title,
         message: req.params.message
@@ -366,141 +442,243 @@ Resultatet kan se ut så här.
 
 En udda sida måhända, men den får demonstrera hur man kan jobba med dynamisk information och parametriserade routes.
 
-På serversidan ser du innehållet i request-objektet som visar både den route (path) som användes och hur delarna av routen översattes till inkommande parametrar.
-
-```javascript
-console.log(req.path);
-console.log(req.params);
-```
-
-Koden ovan, från routen, ger oss följande utskrift i servern.
-
-```text
-$ node index.js
-Express is ready.
-/test/My%20Title/No%20particular%20message
-{ title: 'My Title', message: 'No particular message' }
-```
-
-Webbläsaren konverterar, urlencodar, länken där mellanslagen byts ut mot `%20`. När länken tas emot som en route och översätts till parametrar, så gör Express en urldecode på innehållet. Detta är sättet som används för att hantera udda tecken i en webblänk och det sker automatiskt av webbläsaren och Express.
-
-Det fungerar så här, om man översätter det till ren JavaScript.
-
-```bash
-$ node                       
-> a = encodeURIComponent("Jag kan svenska åäö")
-'Jag%20kan%20svenska%20%C3%A5%C3%A4%C3%B6'     
-> b = decodeURIComponent(a)                    
-'Jag kan svenska åäö'                          
->                                              
-```
-
-Nåväl, åter till vyerna.
 
 
+Layout för vyer {#layout}
+--------------------------------
 
-###Inkludera vyer {#inclview}
+Du kan bygga upp en vy-struktur där du skapar en sidlayout som du sedan anpassar, med innehåll, när sidresultatet skall genereras. Detta är ett bra sätt att lägga en gemensam struktur för alla sidor på en webbplats.
 
-Du kan bygga upp en vy-struktur med header och footer så att du återanvänder vyer och du förenklar hur du gör webbplatsens utseende likadant på alla sidor.
-
-Låt oss göra en ny testroute `/test/home/:title/:message` som renderar en ny vy som vi kallar `home`.
+Låt oss göra en ny testroute `/test/home` som renderar en sida via vy-filen `views/home.pug` som i sin tur använder layoutfilen `views/layout.pug`.
 
 Först skapar vi routens hanterare.
 
 ```javascript
-app.get("/test/home/:title/:message", (req, res) => {
+app.get("/test/home", (req, res) => {
     res.render("home", {
-        title: req.params.title,
-        message: req.params.message
+        title: "Home"
     });
 });
 ```
 
-Sedan skapar vi vy-filen `views/home.pug`.
-
-```text
-include header.pug
-
-h1= message
-p This is a plain paragraph with a url. Here comes <a href="/test/page">the actual link</a>.
-p Here is a image <img id="image" src="/img/mos.jpg">.
-
-include footer.pug
-```
-
-Som du ser så inkluderar vy-filen både `header.pug` och `footer.pug`. De filerna kan se ut så här.
+Vi skapar så en layoutfil `views/layout.pug` som ger webbplatsen en standardlayout.
 
 ```text
 doctype html
 html
-head
-    title= title
-    link(rel="stylesheet", href="/css/style.css")
-body
+    head
+        meta(charset="utf-8")
+        title= title
+        block style
+            link(rel="stylesheet", href="/css/style.css")
+    body
+        block header
+            div(class="site-header") Site header
+        block navbar
+            div(class="site-navbar") Site navbar
+        block main
+            main(class="main") Mainblock
+        block footer
+            div(class="site-footer")
+                p Copyright (c) by MegaMic
+        block script
+            script(src="/js/move.js")
 ```
+
+Kika igenom koden och se om den kan ge en grundstruktur som en webbpalts vill ha.
+
+Sedan skapar vi vy-filen `views/home.pug` som skall använda sig av `views/layout.pug` för att rendera en sida.
 
 ```text
-footer
-    p Copyright (c) by MegaMic
+extend layout.pug
 
-script(src="/js/move.js")
+block main
+    h1 My home page
+    p This is a plain paragraph with a url. Here comes <a href="/test/page">the actual link</a>.
+    p Here is a image <img id="image" src="/img/mos.jpg">.
 ```
 
-Nu har vi delat upp vyn i tre delar och två av delarna (header, footer) är nu återanvändbara för andra vyer, bara att inkludera.
+Vi extendar, utökar, `views/layout.pug` och när vi gör det kan vi skriva om innehållet för de block vi väljer.
 
-Resultatet ser ut som man kan förvänta sig.
+Nu har du en struktur där varje sida kan ha sitt specifika innehåll och samtidigt bygga på en och samma (eller flera) sidlayouter.
 
+<!--
 [FIGURE src=image/snapvt17/express-pug-include.png?w=w2 caption="Vyer med include ger en sammanhållen sida."]
 
-Du kan med include förhoppningsvis se möjligheten att strukturera dina vyer för återanvändning.
+Fixa ny bild.
+-->
 
 
 
-En egen errorHandler {#errorHandler}
+
+Loopa och skriv ut i vyer {#loop}
 --------------------------------------
 
-Vi kan nu skapa vår egen felhanterare genom att rendera innehållet i en vy.
+Vi tar ett exempel på hur vi kan loopa igenom data från routen och skriva ut det i vyn i en loop. Vi simulerar en bloggsida.
 
-Mallen för en egen felhanterare i Express ser ut så här.
+Först lägger vi till routen för `/test/blog` som skickar en titel och en array med bloggposter till vyn.
 
 ```javascript
-function errorHandler (err, req, res, next) {
+app.get("/test/blog", (req, res) => {
+    res.render("blog", {
+        title: "Blog",
+        posts: [
+            {
+                title: "Blog post 1",
+                content: "Content 1."
+            },
+            {
+                title: "Blog post 2",
+                content: "Content 2."
+            },
+            {
+                title: "Blog post 3",
+                content: "Content 3."
+            },
+        ]
+    });
+});
+```
+
+Sedan skapar vi vyn som loopar genom arrayen och skriver ut varje bloggpost för sig.
+
+```text
+extend layout.pug
+
+block main
+    each value, index in posts
+        section
+            h1= value.title
+            p= value.content
+            p= index
+```
+
+Loopkonstruktionen är inbyggd i Pug.
+
+
+
+Hantera Markdown i Pug {#markdown}
+--------------------------------------
+
+Man kan hantera innehåll i Markdown direkt i en Pug template. Featuren i Pug heter filter och ett av de filter som stöds är `markdown-it`.
+
+Först behöver du installera npm-paketet för Markdown.
+
+```bash
+npm install jstransformer-markdown-it --save
+```
+
+
+
+###Skriva Markdown direkt i vy-filen {#mdvy}
+
+Vi gör en ny route för att testa hur det fungerar.
+
+```javascript
+app.get("/test/markdown", (req, res) => {
+    res.render("markdown", {
+        title: "Markdown"
+    });
+});
+```
+
+Jag skapar då vy-filen `views/markdown.pug` och lägger in text skriven i Markdown som konverteras till HTML när vyn renderas.
+
+```text
+extend layout.pug
+
+block main
+    main
+        :markdown-it(linkify langPrefix='highlight-')
+            # Markdown
+
+            ## Another headline
+            
+            Markdown document with http://links.com and codeblocks.
+
+            Another paragraph.
+```
+
+
+
+###Inkludera fil skriven i Markdown {#mdinclude}
+
+Du kan också inkludera en extern Markdown-fil och använda filtret `:markdown-it` för att rendera innehållet till HTML.
+
+Låt oss testa med en ny route.
+
+```javascript
+app.get("/test/markdown-include", (req, res) => {
+    res.render("markdown-include", {
+        title: "Markdown include"
+    });
+});
+```
+
+Vår vy-fil `views/markdown-include.pug` inkluderar nu en extern Markdown-fil som passerar filtret `:markdown-it`.
+
+```text
+extend layout.pug
+
+block main
+    main
+        include:markdown-it ../content/article.md
+```
+
+Det går alltså att separera vy-filer från dess innehåll, vilket är en bra sak.
+
+Ett alternativ till att göra detta i vy-filerna är att låta routens hanterare läsa och kompilera markdown-filen, och hantera cachning. 
+
+
+
+En egen hanterare för felutskrift {#errorHandler}
+--------------------------------------
+
+Vi kan skapa vår egen felhanterare och rendera innehållet i en vy.
+
+En egen felhanterare i Express kan se ut så här.
+
+```javascript
+// Note the error handler takes four arguments
+app.use((err, req, res, next) => {
     if (res.headersSent) {
         return next(err);
     }
-    res.status(500);
+    err.status = err.status || 500;
+    res.status(err.status);
     res.render("error", {
         error: err
     });
-}
-app.use(errorHandler);
+});
 ```
 
-Nu använder vi egen kod till en felhanterare. Men vi behöver en vy-fil `error.pug` för att rendera svaret i.
+Kom ihåg att en sådan här felhanterare är som all annan middleware och det är viktigt i vilken ordning de ligger. De kan anropas i den ordningen som de definieras.
+
+Vi behöver en vy-fil `error.pug` för att rendera svaret i.
 
 ```text
-include header.pug
+extend layout.pug
 
-h1= error.message
-h2= error.status
-pre #{error.stack}
-
-include footer.pug
+block main
+    main
+        h1= error.message
+        h2= error.status
+        pre #{error.stack}
 ```
 
-Om vi nu tar en route som inte finns så kan svaret se ut så här.
+Om vi nu tar en route som inte finns så kommer svaret att renderas i vår egen vy.
 
+<!--
 [FIGURE src=image/snapvt17/express-custom-error-handler.png?w=w2 caption="Min egen felhanterare som renderar ett anpassat fel."]
-
-Det ser ut som vi lyckas knyta ihop Express, router och vy-filer till skapande av både dynamiska och statiska HTML-sidor.
+-->
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Detta var en introduktion i webb- och applikationsservern Express tillsammans med grundläggande begrepp såsom router, request, response, vyer och template-motor.
+Detta var en introduktion i webb- och applikationsservern Express tillsammans med grundläggande begrepp såsom router, request, response, vyer och templatemotor.
 
-Du har nu grunderna för att skriva din egen applikationsserver.
+Du har nu grunderna för att skriva din egen webb/applikationsserver.
 
 Denna artikel har en [egen forumtråd](t/6329) som du kan ställa frågor i, eller ge tips.

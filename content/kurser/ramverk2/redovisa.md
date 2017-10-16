@@ -29,7 +29,7 @@ Skriv ett stycke om 15-30 meningar som blir din redovisningstext.
 Tagga ny version {#tag}
 ---------------------------------------
 
-Se till att du har taggat en ny version på ditt Anax, så att dina senaste ändringar finns med i taggen och är pushade till GitHub. Versionen ger en historik över dina ändringar enligt följande.
+Se till att du har taggat en ny version på ditt repo, så att dina senaste ändringar finns med i taggen och är pushade till GitHub. Versionen ger en historik över dina ändringar enligt följande.
 
 | Version | Kmom   |
 |---------|--------|
