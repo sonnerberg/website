@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2017-10-14": (A, mos) Första utgåvan.
+    "2017-10-16": (A, mos) Första utgåvan.
 ...
 Installera kursens labbmiljö
 ==================================
@@ -30,17 +30,20 @@ Om du redan har installerat kommandot dbwebb så gör du en selfupdate för att 
 dbwebb selfupdate
 ```
 
-Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
-
-Utför följande steg för att installera kommandot dbwebb.
+Utför följande steg för att göra en fräsh installera kommandot dbwebb.
 
 1. [Installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
 
 1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
 
+Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar du på följande video.
+
+[YOUTUBE src=vlZRW2OZamE width=639 caption="Mikael installerar dbwebb-cli som en del av labbmiljön"]
 
 
-Klona kursrepot {#clona}
+
+
+Klona och initiera kursrepot {#clona}
 ----------------------------------
 
 Kursrepot innehåller en viss del av kursmaterialet och det ger en struktur där du skriver kod för att lösa övningar och uppgifter i kursen. Du hämter det med hjälp av kommandot dbwebb. Vi kallar det för att du klonar ditt kursrepo. Klona är ett begrepp som används i versionshanteringssystemet Git.
@@ -56,4 +59,4 @@ cd ramverk2
 dbwebb init
 ```
 
-Bra, det var inledningen och vissa nödvändiga saker. Nu kan du sätta igång "på riktigt" med det första kursmomentet.
+Bra, det var grunden som behövs. Nu kan du sätta igång "på riktigt" med det första kursmomentet.

@@ -2,20 +2,21 @@
 author:
     - mos
 revision:
-    "2017-10-14": "(A, mos) Första utgåvan."
+    "2017-10-16": "(A, mos) Första utgåvan."
 ...
 Kmom01: Express
 ==================================
 
-Vi skall bygga grunden till en applikations/webbplats med hjälp av ramverket Express. Express bygger på Node.js. Webbplatsen får bli vår me-sida och det blir en grund att jobba vidare på.
+Vi skall bygga grunden till en applikations/webbplats med hjälp av ramverket Express. Express bygger på Node.js. Webbplatsen får bli vår me-sida och det blir en grund att jobba vidare på i kursen.
+
+Me-sidan får bli ett eget repo på GitHub som vi kopplar ihop med externa tjänster för automatiskt builds och kodkvalitet som blir basen i ett CI-flöde (Continuous integration).
 
 <!--more-->
 
 [FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
 
-<!--
-[FIGURE src=image/snapvt17/express-mysql-view-all.png?w=w2 caption="Via Express använder vi oss av MySQL och HTML formulär för att visa och uppdatera databasens innehåll."]
--->
+Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Du har valt Express och nu behöver du sätta dig in i det så du kan coacha ditt team. Tänk så, det blir en bra attityd inför kursmomentet.
+
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -38,7 +39,7 @@ Labbmiljön  {#labbmiljo}
 
 Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras.
 
-Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) och klona kursrepot.
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
@@ -61,7 +62,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång.
+1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen.
 
 
 

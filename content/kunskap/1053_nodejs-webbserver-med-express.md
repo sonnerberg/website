@@ -7,7 +7,7 @@ category:
     - kursen dbjs
     - kursen ramverk2
 revision:
-    "2017-10-14": (C, mos) Uppdatering inför kursen ramverk2, mer om pug.
+    "2017-10-16": (C, mos) Uppdatering inför kursen ramverk2, mer om pug.
     "2017-03-22": (B, mos) Flytta npm pug till toppen.
     "2017-03-20": (A, mos) Första utgåvan i kursen dbjs.
 ...
@@ -38,7 +38,7 @@ Exempelprogram finns i ditt kursrepo under `example/nodejs/express` (dbjs) eller
 Installera modulen med npm {#npm}
 --------------------------------------
 
-Modulen [Express finns på npm](https://www.npmjs.com/package/express). Express är en del av [MEAN](http://mean.io/) som är en samling moduler för att bygga webbapplikationer med Node.js. I denna artikeln kommer vi att använda Express (E) och Node.js (N).
+Modulen [Express finns på npm](https://www.npmjs.com/package/express). Express är en del av [MEAN](http://mean.io/) som är en samling moduler för att bygga webbapplikationer med Node.js. I denna artikeln kommer vi att använda Express (E) och Node.js (N) i MEAN.
 
 Innan vi börjar så skapar vi en `package.json` som kan spara information om de moduler vi nu skall använda.
 
@@ -47,7 +47,7 @@ Innan vi börjar så skapar vi en `package.json` som kan spara information om de
 npm init
 ```
 
-När du ombeds döpa paketet så ange "express-demo". Använde inte "express" eftersom det paketnamnet redan finns och du får problem i nästa steg. Du kan köra om `npm init` om du vill ändra namn, eller redigera namnet i filen `package.json`.
+När du ombeds döpa paketet så ange "express-demo" eller något liknande (det spelar ingen roll). Använd bara inte "express" eftersom det paketnamnet redan finns och du får problem i nästa steg. Du kan köra om `npm init` om du vill ändra namn, eller redigera namnet direkt i filen `package.json`.
 
 Nu kan vi installera paketen vi skall använda, `express` och `pug`. Vi väljer att spara dem i vår `package.json`.
 
@@ -128,6 +128,22 @@ Det verkar som allt gick bra och Express är uppe och snurrar och svarar på til
 
 
 
+###Låt npm köra dina skript {#skript}
+
+I filen `package.json` kan du lägga in skript och köra dem via `npm`. Du kan till exempel lägga till skriptet för att starta servern så här.
+
+```json
+{
+    "scripts": {
+        "start": "node index.js"
+    }
+}
+```
+
+Nu kan du starta servern via `npm start`. Det blir ett sätt att samla enklare skript in i din `package.json`.
+
+
+
 Läs på om Express {#laspa}
 --------------------------------------
 
@@ -154,7 +170,7 @@ app.use(express.static(staticFiles));
 
 Ovan kod lägger jag i min `index.js`.
 
-Säg att katalogen public nu har följande struktur och innehåll.
+Säg att katalogen public nu har följande struktur och innehåll (se exempelprogrammet).
 
 ```bash
 $ tree public/
@@ -239,9 +255,9 @@ Det var routes och stöd för olika metoder det. Se till att du installerar en k
 Middleware {#middleware}
 --------------------------------------
 
-I express finns termen "middleware" som benämning på callbacks som anropas innan själva routens hanterare anropas. Eller på en hanterare som alltid anropas för alla routes.
+I express finns termen "middleware" som benämning på callbacks som anropas innan själva routens hanterare anropas. En middleware kan också vara en hanterare som alltid anropas för alla routes.
 
-Låt oss skapa en sådan middleware som skriver ut vilken route som accessades och med vilken metod.
+Låt oss skapa en sådan middleware, som alltid anropas, oavsett route. Den skall skriva ut vilken route som accessades och med vilken metod.
 
 Vi lägger till middleware via metoden `app.use()`. Vi kan lägga till dem för en specifik route, eller för alla routes. 
 
@@ -251,26 +267,61 @@ Vi lägger till middleware via metoden `app.use()`. Vi kan lägga till dem för 
 app.use((req, res, next) => {
     console.log(req.method);
     console.log(req.path);
-    console.log(req.params);
     next();
 });
 ```
 
-Middleware anropas i den ordningen de är definierade, när de matchar en route. Använd ett anrop till `next()` när du är klar och vill skicka vidare kontroller till nästa middleware och slutligen routens hanterare.
+Middleware anropas i den ordningen de är definierade, när de matchar en route. Använd ett anrop till `next()` när du är klar och vill skicka vidare kontrollen till nästa middleware och slutligen till routens hanterare.
 
-<!--
-Resultatet kan se ut så här.
-
-[FIGURE src=image/snapvt17/express-route-params.png?w=w2 caption="Innehållet i HTML-sidan kommer från routens innehåll."]
-
-En udda sida måhända, men den får demonstrera hur man kan jobba med dynamisk information och parametriserade routes.
--->
+Om du vill att denna middleware alltid skall anropas så behöver du lägga den högst upp i din kod.
 
 På serversidan ser du nu delar av innehållet i request-objektet som visar metoden och pathen som anropats, samt eventuellt inkommande parametrar.
 
 Liknande utskrifter är bra att ha för att förstå vilken data som routen jobbar med.
 
-<!--
+
+
+Route med dynamiskt innehåll {#dynamiskt}
+--------------------------------------
+
+Vi skapar nya routes för att se hur routern hanterar dynamiskt innehåll i form av parametrar.
+
+```javascript
+// Add a saying hello
+app.get("/hello", (req, res) => {
+    res.send("Hello World");
+});
+
+// Route with dynamic content save in a parameter
+app.get("/hello/:message", (req, res) => {
+    res.send(req.params.message);
+});
+```
+
+Vi kan nu använda följande routes och se vad som händer.
+
+```text
+/hello
+/hello/Hello-World
+/hello/Hello World
+/hello/Jag kan svenska ÅÄÖ
+```
+
+Vi ser att parametern hanteras och kan nås i routen via `req.params`. Vi ser också att mellanslag och svenska tecken hanteras och översätts med `encodeURIComponent()`.
+
+I webbsidan ser det ut som det ska.
+
+[FIGURE src=image/snapht17/express-encodeuri.png?w=w2 caption="I webbsidan ser det bra ut, ungefär som man tänkte."]
+
+I terminalen där servern kör ser det ut så här.
+
+```text
+GET
+/hello/Jag%20kan%20svenska%20%C3%85%C3%84%C3%96
+```
+
+Det vi ser är exempel på hur webbläsaren och servern hanterar encodning av udda tecken.
+
 Webbläsaren konverterar länken, urlencodar, så att mellanslagen byts ut mot `%20`. När länken tas emot som en route och översätts till parametrar, så gör Express en urldecode på innehållet. Detta är sättet som används för att hantera udda tecken i en webblänk och det sker automatiskt av webbläsaren och Express.
 
 Det fungerar så här, om man översätter det till ren JavaScript.
@@ -283,7 +334,8 @@ $ node
 'Jag kan svenska åäö'                          
 >                                              
 ```
--->
+
+Det är bra att veta om att det finns en hantering av udda tecken som sker i bakgrunden.
 
 
 
@@ -311,7 +363,7 @@ Ovan så använder min hanterare för 404 den inbyggda felhanteraren. Det sker v
 
 [FIGURE src=image/snapvt17/express-default-error-handler.png?w=w2 caption="Den inbyggda felhanteraren ger ett fel och en stacktrace."]
 
-Det finns alltså en inbyggd default felhanterare som visar upp information om felet, tillsammans med en stacktrace. Det är användbart när man utvecklar.
+Det finns alltså en inbyggd felhanterare som visar upp information om felet, tillsammans med en stacktrace. Det är användbart när man utvecklar.
 
 När node startar upp Express så är det default i utvecklingsläge. Du kan testa att starta upp i produktionsläge, det ger mindre information i felmeddelandena.
 
@@ -321,9 +373,9 @@ $ NODE_ENV="production" node index.js
 
 Nu försvann stacktracen från klienten, men den syns fortfarande i terminalen där servern körs.
 
-[FIGURE src=image/snapvt17/express-error-handling-production.png?w=w2 caption="I production så visar inte stacktrace för klienten."]
+[FIGURE src=image/snapvt17/express-error-handling-production.png?w=w2 caption="I produktion så visas inte stacktrace för klienten."]
 
-När vi utvecklar så blir det enklast att köra standard, vilket är development läge. Men när man sätter en server i produktion så får man se till att det också är produktionsläge för felmeddelandena, vilket innebär så lite information som möjligt.
+När vi utvecklar så blir det enklast att köra development läge (standard). Men när man sätter en server i produktion så får man se till att det också är produktionsläge för felmeddelandena, vilket innebär att visa så lite information som möjligt.
 
 
 
@@ -502,11 +554,7 @@ Vi extendar, utökar, `views/layout.pug` och när vi gör det kan vi skriva om i
 
 Nu har du en struktur där varje sida kan ha sitt specifika innehåll och samtidigt bygga på en och samma (eller flera) sidlayouter.
 
-<!--
-[FIGURE src=image/snapvt17/express-pug-include.png?w=w2 caption="Vyer med include ger en sammanhållen sida."]
-
-Fixa ny bild.
--->
+[FIGURE src=image/snapht17/express-layout.png?w=w2 caption="En sida med en vy-fil som extendar en annan."]
 
 
 
@@ -540,7 +588,7 @@ app.get("/test/blog", (req, res) => {
 });
 ```
 
-Sedan skapar vi vyn som loopar genom arrayen och skriver ut varje bloggpost för sig.
+Sedan skapar vi vyn `views/blog.pug` som loopar genom arrayen och skriver ut varje bloggpost för sig.
 
 ```text
 extend layout.pug
@@ -553,6 +601,10 @@ block main
             p= index
 ```
 
+Så här kan det se ut.
+
+[FIGURE src=image/snapht17/express-blog.png?w=w2 caption="En blogg-sida som bygger på en loop-konstruktion."]
+
 Loopkonstruktionen är inbyggd i Pug.
 
 
@@ -562,7 +614,7 @@ Hantera Markdown i Pug {#markdown}
 
 Man kan hantera innehåll i Markdown direkt i en Pug template. Featuren i Pug heter filter och ett av de filter som stöds är `markdown-it`.
 
-Först behöver du installera npm-paketet för Markdown.
+Först behöver du installera npm-paketet [`jstransformer-markdown-it`](https://www.npmjs.com/package/jstransformer-markdown-it).
 
 ```bash
 npm install jstransformer-markdown-it --save
@@ -599,6 +651,10 @@ block main
             Another paragraph.
 ```
 
+Så här kan det se ut.
+
+[FIGURE src=image/snapht17/express-markdown.png?w=w2 caption="En sida med Markdown direkt från vy-filen via filter."]
+
 
 
 ###Inkludera fil skriven i Markdown {#mdinclude}
@@ -624,6 +680,10 @@ block main
     main
         include:markdown-it ../content/article.md
 ```
+
+Så här kan det se ut.
+
+[FIGURE src=image/snapht17/express-markdown-include.png?w=w2 caption="En sida med Markdown där innehållet inkluderats från en extern fil."]
 
 Det går alltså att separera vy-filer från dess innehåll, vilket är en bra sak.
 
@@ -668,9 +728,7 @@ block main
 
 Om vi nu tar en route som inte finns så kommer svaret att renderas i vår egen vy.
 
-<!--
-[FIGURE src=image/snapvt17/express-custom-error-handler.png?w=w2 caption="Min egen felhanterare som renderar ett anpassat fel."]
--->
+[FIGURE src=image/snapht17/express-view-404.png?w=w2 caption="Vår egen felhanterare som nu renderas i vår egen vy."]
 
 
 
