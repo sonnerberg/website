@@ -8,7 +8,7 @@ Kmom04: Färg
 ====================================
 
 [WARNING]
-Kursutveckling pågåg inför ht17.
+Kursutveckling pågår inför ht17.
 [/WARNING]
 
 Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Många teman, men finns det då ett sätt att skriva sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända temats bas-kod?
@@ -27,7 +27,7 @@ Vi kikar även på lite typografi, som en del i att skapa smakfulla teman.
 
 [FIGURE src=/image/snapht16/theme-variables.png?w=w2 caption="Nu har jag ytterligare anpassat genom att ändra värden för variabler."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -132,7 +132,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](design/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

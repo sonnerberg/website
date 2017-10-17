@@ -8,7 +8,7 @@ Kmom01: Ramverk och innehåll
 ====================================
 
 [WARNING]
-Kursutveckling pågåg inför ht17.
+Kursutveckling pågår inför ht17.
 [/WARNING]
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
@@ -140,7 +140,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](design/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

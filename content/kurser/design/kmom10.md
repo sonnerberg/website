@@ -8,7 +8,7 @@ Kmom10: Projekt och examination
 ====================================
 
 [WARNING]
-Kursutveckling pågåg inför ht17.
+Kursutveckling pågår inför ht17.
 [/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
