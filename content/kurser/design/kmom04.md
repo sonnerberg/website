@@ -1,11 +1,15 @@
 ---
 author: mos
 revision:
-    2016-10-26: (B, mos) Bytte plats från kmom03 till kmom04.
-    2016-10-21: (A, mos) Första utgåvan.
+    "2016-10-26": (B, mos) Bytte plats från kmom03 till kmom04.
+    "2016-10-21": (A, mos) Första utgåvan.
 ...
 Kmom04: Färg
 ====================================
+
+[WARNING]
+Kursutveckling pågåg inför ht17.
+[/WARNING]
 
 Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Många teman, men finns det då ett sätt att skriva sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända temats bas-kod?
 

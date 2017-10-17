@@ -1,11 +1,15 @@
 ---
 author: mos
 revision:
-    2016-12-13: (B, mos) Använd cimage med snygga länkar via htaccess.
-    2016-12-12: (A, mos) Första utgåvan.
+    "2016-12-13": (B, mos) Använd cimage med snygga länkar via htaccess.
+    "2016-12-12": (A, mos) Första utgåvan.
 ...
 Kmom10: Projekt och examination
 ====================================
+
+[WARNING]
+Kursutveckling pågåg inför ht17.
+[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 

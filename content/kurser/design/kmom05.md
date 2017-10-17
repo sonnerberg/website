@@ -1,11 +1,15 @@
 ---
 author: mos
 revision:
-    2016-11-28: (B, mos) La till manualen om CImage som läsresurs.
-    2016-11-15: (A, mos) Första utgåvan.
+    "2016-11-28": (B, mos) La till manualen om CImage som läsresurs.
+    "2016-11-15": (A, mos) Första utgåvan.
 ...
 Kmom05: Bild
 ====================================
+
+[WARNING]
+Kursutveckling pågåg inför ht17.
+[/WARNING]
 
 [FIGURE src="image/dbwebbisar.jpg?w=200&h=150&a=0,20,20,50&cf" class="right"]
 

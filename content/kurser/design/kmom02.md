@@ -1,12 +1,16 @@
 ---
 author: mos
 revision:
-    2016-10-26: (C, mos) Flyttad från kmom01 till 02 efter feedback.
-    2016-10-15: (B, mos) Testad och genomgången.
-    2016-06-22: (A, mos) Första utgåvan.
+    "2016-10-26": (C, mos) Flyttad från kmom01 till 02 efter feedback.
+    "2016-10-15": (B, mos) Testad och genomgången.
+    "2016-06-22": (A, mos) Första utgåvan.
 ...
 Kmom02: LESS och responsiv design
 ====================================
+
+[WARNING]
+Kursutveckling pågåg inför ht17.
+[/WARNING]
 
 Då är det dags att vi skapar vårt eget tema till webbplatsen. Låt oss fylla vår me-sida med style med hjälp av LESS ooch en god och modulariserad kodstruktur.
 

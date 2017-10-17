@@ -1,13 +1,17 @@
 ---
 author: mos
 revision:
-    2016-12-02: (D, mos) Lade till videoserie om vgrid.
-    2016-10-26: (C, mos) Flyttad från 02 till 03 efter feedback.
-    2016-10-15: (B, mos) Testad och genomgången.
-    2016-06-22: (A, mos) Första utgåvan.
+    "2016-12-02": (D, mos) Lade till videoserie om vgrid.
+    "2016-10-26": (C, mos) Flyttad från 02 till 03 efter feedback.
+    "2016-10-15": (B, mos) Testad och genomgången.
+    "2016-06-22": (A, mos) Första utgåvan.
 ...
 Kmom03: Grid, layout och typografi
 ====================================
+
+[WARNING]
+Kursutveckling pågåg inför ht17.
+[/WARNING]
 
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
 

@@ -1,8 +1,8 @@
 ---
 author: mos
 revision:
-    2016-11-01: (B, mos) Skrev om lektionsplan/studieplan.
-    2016-10-26: (A, mos) Strukturen omarbetad och 4 kmom publicerade.
+    "2016-11-01": (B, mos) Skrev om lektionsplan/studieplan.
+    "2016-10-26": (A, mos) Strukturen omarbetad och 4 kmom publicerade.
 ...
 Kursen design
 ===================================================

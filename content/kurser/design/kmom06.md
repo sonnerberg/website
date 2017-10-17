@@ -1,11 +1,15 @@
 ---
 author: mos
 revision:
-    2016-12-02: (B, mos) Mer material inkl videoserie.
-    2016-11-29: (A, mos) Första utgåva.
+    "2016-12-02": (B, mos) Mer material inkl videoserie.
+    "2016-11-29": (A, mos) Första utgåva.
 ...
 Kmom06: Design
 ====================================
+
+[WARNING]
+Kursutveckling pågåg inför ht17.
+[/WARNING]
 
 Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
