@@ -162,7 +162,7 @@ Du skall återanvända kunskaper från kursmoment 06, du har två möjligheter, 
 
 Dedikera ett av rummen till ett spel-rum, eller lös-en-uppgift-rum.
 
-Du har tre möjligheter, välj en.
+Du har två möjligheter, välj en.
 
 1. Gör ett TicTacToe som man måste vinna för att komma vidare från rummet (se extrauppgiften i kmom05).
 
