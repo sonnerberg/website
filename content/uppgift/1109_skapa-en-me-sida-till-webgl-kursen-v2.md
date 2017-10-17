@@ -2,15 +2,15 @@
 author: mos
 category:
     - webbprogrammering
-    - kursen javascript1
+    - javascript
+    - kurs webgl
 revision:
-    "2017-10-17": (B, mos) Stycke med introduktion.
-    "2017-10-09": (A, mos) Ny omarbetead utgåvan.
+  "2015-10-08": (A, mos) Första utgåvan i samband med kursen webgl.
 ...
-Skapa en me-sida för redovisning i kursen javascript1
+Skapa en me-sida till webgl-kursen (v2)
 ==================================
 
-Skapa en me-sida för redovisningar i kursen javascript1.
+Du skall bygga en me-sida där du samlar redovisningar och exempel som du gör i kursen webgl.
 
 <!--more-->
 
@@ -19,7 +19,7 @@ Skapa en me-sida för redovisningar i kursen javascript1.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har utfört uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)".
+Du har laddat ned kursrepot för kursen webgl och du har jobbat igenom övningen "[Kom i gång med HTML, CSS, JavaScript och Canvas](kunskap/kom-i-gang-med-html-css-javascript-och-canvas)".
 
 
 
@@ -70,7 +70,6 @@ Om du har tid och kraft.
 1. Lägg extra kraft på style.
 
 1. Lägg till något enkelt JavaScript som snurrar på din bild på me-sidan, när man klickar på den.
-
 
 
 

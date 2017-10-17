@@ -62,7 +62,7 @@ Läs följande:
 
 Titta på följande:
 
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Id4-mxJK1Pi91_7Ob1W-K) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
+1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
 1. Se JavaScript-gurun Douglas Crockford i slutet om historian om JavaScript: "[Crockford on JavaScript - Part 5: The End of All Things](https://www.youtube.com/watch?v=47Ceot8yqeI)".
 

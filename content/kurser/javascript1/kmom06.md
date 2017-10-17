@@ -55,7 +55,7 @@ Läs följande:
 
 Titta på följande:
 
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Id4-mxJK1Pi91_7Ob1W-K) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 6.
+1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
 1. Se Douglas Crockford på konferensen HTML5DevConf 2011 när han pratar om ["JavaScript Programming Style and Your Brain"](https://www.youtube.com/watch?v=cIOIyfRoGcM). Video riktar sig till mer erfarna programmerare men även nybörjare har nytta av den.
 

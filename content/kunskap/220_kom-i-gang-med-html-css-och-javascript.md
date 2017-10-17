@@ -170,7 +170,7 @@ Kom nu ihåg att alltid dubbelkolla att din sida validerar. Hamnar du i trubbel 
 Kodkvalitet med JSHint {#kvalitet}
 -------------------------------
 
-*Från och med hösten 2017 ersätts jshint av eslint då utveckling har upphört på jshint till förmån för eslint.*
+*Från och med hösten 2017 ersätts jshint av eslint då utveckling har upphört på jshint till förmån för eslint. Webbplatsen för jshint fungerar dock fortfarande bra som exempel.*
 
 Kodkvalitet handlar om att skriva bra kod. Kod som är läsbar och enkel att underhålla, vidarutveckla och felsöka i. Till många programmeringsspråk finns ett verktyg som kallas [Lint](http://en.wikipedia.org/wiki/Lint_(software)). Verktyget varnar för potentiellt dåliga kodkonstruktioner och det är tips som vi gärna lyssnar till.
 

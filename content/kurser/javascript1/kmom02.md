@@ -51,7 +51,7 @@ Läs igenom följande.
 
 1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för villkor och loopar.
     * Control flow and error handling
-    * Loops and iteation
+    * Loops and iteration
 
 1. Bekanta dig med referensmanualen [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference). Som en introduktion kan du kika på konstruktioner för villkor och loopar.
     * [Statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
@@ -72,7 +72,7 @@ Läs följande.
 
 Titta på följande:
 
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Id4-mxJK1Pi91_7Ob1W-K) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 2.
+1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
 1. Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Chapter 2: And Then There Was JavaScript](https://www.youtube.com/watch?v=RO1Wnu-xKoY)".
 
@@ -111,20 +111,12 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-<!-- Lab2 Villkor och loopar -->
-
 1. Gör laborationen "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)". Spara arbetet i `me/kmom02/lab2`.
 
 2. Gör uppgiften "[Rita flaggor med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css)". Spara resultatet i `me/kmom02/flag1`.
 
 3. Gör uppgiften ["Flytta runt Baddie på webbsidan"](uppgift/flytta-runt-en-baddie-pa-webbsidan). Spara resultatet i `me/kmom02/baddie1`.
 
-
-<!--
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
--->
 
 
 Resultat & Redovisning  {#resultat_redovisning}

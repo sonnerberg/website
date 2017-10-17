@@ -1,8 +1,8 @@
 ---
 author: mos
 revision:
-    2016-10-26: (B, mos) Omstrukturerad efter feedback.
-    2016-10-07: (A, mos) Första release.
+    "2016-10-26": (B, mos) Omstrukturerad efter feedback.
+    "2016-10-07": (A, mos) Första release.
 ...
 Kmom01: Ramverk och innehåll
 ====================================
@@ -25,9 +25,26 @@ Under kursens gång så kommer du att introduceras till ett par tekniker som är
 
 
 
-<!-- Flytta nedan text till eget dokumet/vy/block -->
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+
+
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
+
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
+dbwebb clone design
+cd design
+dbwebb init
+```
 
 
 
@@ -88,16 +105,6 @@ Kika på följande om du är intresserad och finner det värt tiden.
 -------------------------------------------
 
 *(ca: 8-10 studietimmar)*
-
-
-
-###Labbmiljö {#labbmiljo}
-
-Installera labbmiljön för kursen.
-
-1. [Installera labbmiljön](design/labbmiljo) som behövs för kursen.
-
-1. [Installera kursrepot för kursen](dbwebb-cli/clone).
 
 
 

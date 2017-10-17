@@ -70,7 +70,7 @@ Låna konfigurationsfiler för testverktygen genom att kopiera dem från kursrep
 
 ```bash
 # Gå till kursrepot
-cp .htmlhintrc .csslintrc .stylelintrc.json .jscsrc .eslintrc.json me/redovisa/
+cp .htmlhintrc .stylelintrc.json .jscsrc .eslintrc.json me/redovisa/
 ```
 
 Modifiera dem efter behov, liksom makefilen. Använd inline kommentarer för att bli av med validaeringsfel som inte borde finnas. Redigera makefilen om det behövs.

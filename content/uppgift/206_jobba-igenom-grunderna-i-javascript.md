@@ -3,8 +3,6 @@ author: mos
 category: javascript
 revision:
   "2015-10-11": (A, mos) Första utgåvan i samband med webgl.
-updated: "2015-10-11 16:14:58"
-created: "2015-10-11 16:14:18"
 ...
 Jobba igenom grunderna i JavaScript
 ==================================
@@ -77,7 +75,3 @@ Tips från coachen {#tips}
 Validera ofta.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

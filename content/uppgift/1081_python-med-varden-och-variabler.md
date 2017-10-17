@@ -73,11 +73,11 @@ Krav {#krav}
 
 1. Gör de uppgifter som finns i labben `instruction.html`.
 
-2. Skriv dina lösningar, på rätt plats, i filen `answer.py`.
+1. Skriv dina lösningar, på rätt plats, i filen `answer.py`.
 
-3. Testkör din labb genom att köra filen `answer.py`.
+1. Testkör din labb genom att köra filen `answer.py`.
 
-4. Ladda upp och validera labben genom att göra följande kommando i kurskatalogen i terminalen.
+1. Ladda upp och validera labben genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen

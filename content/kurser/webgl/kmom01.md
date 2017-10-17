@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2017-10-10": (B, mos) Genomgången inför ht17.
+    "2017-10-17": (B, mos) Uppdaterad inför ht17.
     "2015-10-15": (A, mos) Första utgåvan för kursen.
 ...
 Kmom01: JavaScript och WebGL
@@ -22,55 +22,12 @@ Så här långt kommer du när du läst boken och testat dess exempel.
 
 
 
-Kursens labbmiljö  {#labbmiljo}
+Labbmiljön  {#labbmiljo}
 ---------------------------------
 
 *(ca: 2-6 studietimmar)*
 
-Du behöver installera kursens labbmiljö samt ha tillgång till verktyget `dbwebb` som du installerar på terminalen. När du är klar kan du klona kursrepot där du finner en del av kursens material.
-
-
-
-###Labbmiljön {#kurslabbmiljo}
-
-Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
-
-1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen. 
-
-
-
-###Installera/uppdatera kommandot dbwebb {#dbwebbcli}
-
-Om du redan har installerat kommandot dbwebb så gör du en selfupdate för att vara säker på att du har senaste versionen. Sedan kan du fortsätta till nästa stycke.
-
-```text
-dbwebb selfupdate
-```
-
-Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
-
-Utför följande steg för att installera kommandot dbwebb.
-
-1. [Installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
-
-1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
-
-
-
-###Klona kursrepot {#clona}
-
-Kursrepot innehåller en viss del av kursmaterialet och det ger en struktur där du skriver kod för att lösa övningar och uppgifter i kursen. Du hämter det med hjälp av kommandot dbwebb. Vi kallar det för att du klonar ditt kursrepo. Klona är ett begrepp som används i versionshanteringssystemet Git.
-
-1. Läs om hur du [laddar ned (klona) ditt lokala kursrepo](dbwebb-cli/clone) som innehåller kursmaterial för kursen.
-
-Den snabba vägen.
-
-```text
-# Gå till din katalog för dbwebb-kurser
-dbwebb clone webgl
-```
-
-Bra, det var inledningen och vissa nödvändiga saker. Nu kan du sätta igång "på riktigt" med det första kursmomentet.
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Jobba igenom den för att få kursens labbmiljö på plats.den om du är osäker på vad som skall göras.
 
 
 
@@ -119,19 +76,30 @@ Läs följande:
 
 1. I kursen används validatorer och en kodstandard för att testa att du skriver kod på ett, enligt kodstandarden, acceptabelt sätt. Du kan läsa om dbwebb-kodstandarden på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
 
+<!--
+1. CSS style guide.
+-->
+
 
 
 ###Video  {#video}
 
 Kika på följande videor.
 
+1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
+
 1. Videon "[The Future of WebGL and Gaming](https://www.youtube.com/watch?v=6lnEmAYVziA)" ger dig en inblick i en möjlig framtid för 3D-spel på webben.
 
+<!--
+1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Id4-mxJK1Pi91_7Ob1W-K) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 1.
+-->
 
 
+<!--
 ###Föreläsningsmaterial {#slide}
 
 Föreläsningsmaterial finner du i kursrepot under [`slide/01.*`](webgl/repo/slide).
+-->
 
 
 
@@ -170,9 +138,12 @@ Följande källor är relevanta och ger dig en orientering i WebGL och det som k
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)".
+1. Gör uppgiften "[Skapa en me-sida till webgl-kursen](uppgift/skapa-en-me-sida-till-webgl-kursen)". Spara resultatet i `me/redovisa`.
 
-1. Gör uppgiften "[Skapa en me-sida till webgl-kursen](uppgift/skapa-en-me-sida-till-webgl-kursen)".
+1. Gör labben "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)"  Labben genereras i `me/kmom01/lab1`.
+
+1. Gör uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)". Ditt resultat sparar du delvis i `me/kmom01/sandbox2` och delvis i `me/kmom01/point`.
+
 
 
 
@@ -187,7 +158,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken utvecklingsmiljö sitter du på?
 * Hur väl känner du dig hemma i webbtekniker som JavaScript, HTML och CSS?
+* Vilket är ditt första intryck av programmeringsspråket JavaScript, kan du relatera till något annat programmeringsspråk?
 * Hur väl känner du dig hemma i 3D programmering med OpenGL, WebGL eller motsvarande?
-* Gick det bra att skapa me-sidan? Var det någon som var svårt att hantera i me-sidan?
 * Vad tycker du om kursboken så här långt?
 * Berätta lite om hur du löste uppgiften med punkterna. Var det något som var svårt, lurigt eller utmanande?

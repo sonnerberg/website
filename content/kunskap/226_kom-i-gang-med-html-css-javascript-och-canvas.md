@@ -1,11 +1,11 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - javascript
+    - kursen webgl
 revision:
-  "2015-10-15": (A, mos) Första utgåvan inför webgl hösten 15, en vidarutveckling
-    av samma dokument från kursen javascript1.
-updated: "2015-10-15 13:33:10"
-created: "2015-10-11 16:01:23"
+  "2015-10-15": (A, mos) Första utgåvan inför webgl hösten 15, en vidarutveckling av samma dokument från kursen javascript1.
 ...
 Kom i gång med HTML, CSS, JavaScript och Canvas
 ==================================
@@ -159,6 +159,8 @@ Kom alltid ihåg att validera dina sidor. Det kommer att spara dig en del tid i 
 Kodkvalitet med JSHint {#kvalitet}
 -------------------------------
 
+*Från och med hösten 2017 ersätts jshint av eslint då utveckling har upphört på jshint till förmån för eslint. Webbplatsen för jshint fungerar dock fortfarande bra som exempel.*
+
 Kodkvalitet handlar om att skriva bra kod. Kod som är läsbar och enkel att underhålla, vidarutveckla och felsöka i. Till många programmeringsspråk finns ett verktyg som kallas [Lint](http://en.wikipedia.org/wiki/Lint_(software)). Verktyget varnar för potentiellt dåliga kodkonstruktioner och det är tips som vi gärna lyssnar till.
 
 I JavaScript finns verktyget [JSLint](http://www.jslint.com/) och en utveckling av det som heter [JSHint](http://www.jshint.com/). I denna kursen tänkta jag att vi använder JSHint.
@@ -170,6 +172,8 @@ I video-serien "[Kom igång med JavaScript och skriv din första kod](https://ww
 Kör alltid igenom din JavaScript-kod igenom JSHint. Det kan spara dig en hel de felsökning. JSHint hjälper dig att hitta potentiella problem i din kod.
 
 Använd JSHint för att kolla att ditt sandbox-exempel går igenom utan felmeddelande och varningar.
+
+I kurserna använder vi en dbwebb-kodstandard som är beskriven på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
 
 
 

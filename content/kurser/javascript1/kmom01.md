@@ -26,55 +26,22 @@ Detta kursmoment ger dig basen för resten av kursen, det hanterar grunderna som
 
 
 
-Kursens labbmiljö  {#labbmiljo}
+Labbmiljön  {#labbmiljo}
 ---------------------------------
 
-*(ca: 2-6 studietimmar)*
+*(ca: 2-4 studietimmar)*
 
-Du behöver installera kursens labbmiljö samt ha tillgång till verktyget `dbwebb` som du installerar på terminalen. När du är klar kan du klona kursrepot där du finner en del av kursens material.
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
 
-
-
-###Labbmiljön {#kurslabbmiljo}
-
-Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
-
-1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen. 
-
-
-
-###Installera/uppdatera kommandot dbwebb {#dbwebbcli}
-
-Om du redan har installerat kommandot dbwebb så gör du en selfupdate för att vara säker på att du har senaste versionen. Sedan kan du fortsätta till nästa stycke.
-
-```text
-dbwebb selfupdate
-```
-
-Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
-
-Utför följande steg för att installera kommandot dbwebb.
-
-1. [Installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
-
-1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
-
-
-
-###Klona kursrepot {#clona}
-
-Kursrepot innehåller en viss del av kursmaterialet och det ger en struktur där du skriver kod för att lösa övningar och uppgifter i kursen. Du hämter det med hjälp av kommandot dbwebb. Vi kallar det för att du klonar ditt kursrepo. Klona är ett begrepp som används i versionshanteringssystemet Git.
-
-1. Läs om hur du [laddar ned (klona) ditt lokala kursrepo](dbwebb-cli/clone) som innehåller kursmaterial för kursen.
-
-Den snabba vägen.
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
 dbwebb clone javascript1
+cd javascript1
+dbwebb init
 ```
-
-Bra, det var inledningen och vissa nödvändiga saker. Nu kan du sätta igång "på riktigt" med det första kursmomentet.
 
 
 
@@ -132,13 +99,17 @@ Läs följande:
 
 1. I kursen används validatorer och en kodstandard för att testa att du skriver kod på ett, enligt kodstandarden, acceptabelt sätt. Du kan läsa om dbwebb-kodstandarden på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
 
+<!--
+1. CSS style guide.
+-->
+
 
 
 ###Video  {#video}
 
 Titta på följande:
 
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Id4-mxJK1Pi91_7Ob1W-K) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 1.
+1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
 1. Se JavaScript-gurun Douglas Crockford i en historisk bakgrund om programmeringsspråk och en introduktion till JavaScript: "[Crockford on JavaScript - Volume 1: The Early Years](https://www.youtube.com/watch?v=JxAXlJEmNMg)".
 
@@ -146,7 +117,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Följande är intressant att ha koll på.
+Följande kan vara intressant att ha koll på.
 
 1. Lär dig mer om historian om datorer, eller som de säger, "[The mother of All Demos](http://en.wikipedia.org/wiki/The_Mother_of_All_Demos)", när Douglas Engelbart, för första gången demonstrerar det som numer är vardagsmat för oss alla. [Se hela presentationen](https://www.youtube.com/watch?v=VScVgXM7lQQ&list=PL76DBC8D6718B8FD3).
 
@@ -178,14 +149,6 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Skapa en me-sida för redovisning i kursen javascript1](uppgift/skapa-en-me-sida-for-redovisning-i-kursen-javascript1)". Spara resultatet i `me/redovisa`.
 
 1. Gör laborationen "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)". Labben genereras i `me/kmom01/lab1`.
-
-
-
-<!--
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
--->
 
 
 

@@ -2,8 +2,6 @@
 author: mos
 revision:
   "2015-12-08": (A, mos) Första versionen.
-updated: "2015-12-08 08:20:24"
-created: "2015-10-06 19:43:59"
 ...
 Kmom05: Projekt och examination
 ==================================

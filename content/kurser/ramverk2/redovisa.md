@@ -52,7 +52,7 @@ Ladda upp ditt kurskatalog med alla dina övningar genom att göra följande kom
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish me
+dbwebb validate me
 ```
 
 Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt.

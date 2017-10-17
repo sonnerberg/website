@@ -54,8 +54,8 @@ Den snabba vägen.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
-dbwebb clone ramverk2
-cd ramverk2
+dbwebb clone design
+cd design
 dbwebb init
 ```
 

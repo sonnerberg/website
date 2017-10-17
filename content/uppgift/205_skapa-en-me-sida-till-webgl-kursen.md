@@ -1,10 +1,11 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - javascript
+    - kurs webgl
 revision:
   "2015-10-08": (A, mos) Första utgåvan i samband med kursen webgl.
-updated: "2015-10-11 16:07:22"
-created: "2015-10-11 16:07:20"
 ...
 Skapa en me-sida till webgl-kursen
 ==================================
@@ -18,7 +19,7 @@ Du skall bygga en me-sida där du samlar redovisningar och exempel som du gör i
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har laddat ned kursrepot för kursen webgl och du har genomfört uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)".
+Du har laddat ned kursrepot för kursen webgl och du har jobbat igenom övningen "[Kom i gång med HTML, CSS, JavaScript och Canvas](kunskap/kom-i-gang-med-html-css-javascript-och-canvas)".
 
 
 
@@ -84,7 +85,3 @@ Validera och publicera ofta. Så slipper du en massa validerings- och publicerin
 När du gör *publish* så körs även *validate*. Blir det för mycket fel när du kör *publish* så kan det bli enklare att bara göra *validate* till att börja med.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
