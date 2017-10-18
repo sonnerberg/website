@@ -48,6 +48,9 @@ Använd samma baddie-bild du hittade i förra kursmomentet.
 *Om du känner dig begränsad av uppgiftens utformning och hellre vill skriva din egen kod fritt och efter eget huvud, så går det bra. Skriv i så fall en kommentar om det i redovisningstexten och berätta hur du gjorde.*
 
 
+[YOUTUBE src=U1HZXfJgmFA width=700 caption="Andreas går igenom baddie2 koden."]
+
+
 
 Krav {#krav}
 -----------------------

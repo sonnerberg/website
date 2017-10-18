@@ -48,6 +48,9 @@ En del av uppgiften går ut på att byta ut min baddie mot en egen figur. Du kan
 *Om du känner dig begränsad av uppgiftens utformning och hellre vill skriva din egen kod fritt och efter eget huvud, så går det bra. Skriv i så fall en kommentar om det i redovisningstexten och berätta hur du gjorde.*
 
 
+[YOUTUBE src=koOttbVOzcU width=700 caption="Andreas går igenom baddie1 koden."]
+
+
 
 Krav {#krav}
 -----------------------
