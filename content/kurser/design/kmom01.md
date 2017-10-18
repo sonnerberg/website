@@ -13,11 +13,11 @@ Kursutveckling pågår inför ht17.
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
-Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Det handlar främst om hur vi, som programmerare, rent tekniskt kan förbereda webbplatserna för design och användbarhet. Allt för att vi skall vara förberedda när det kommer en webbdesigner, eller designer inom användbarhet, och berättar hur webbplatsen skall se ut.
+Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Hur kan vi som programmerare rent tekniskt kan förbereda webbplatserna för design och användbarhet? Vi vill vara förberedda när det kommer en webbdesigner, eller designer inom användbarhet, och berättar hur webbplatsen skall se ut. Då vill vi med enkla (rimliga) medel uppfylla deras visioner.
 
 <!--more-->
 
-För att komma igång snabbt så använder vi ett PHP-baserat ramverk för att bygga en me-sida som vi fyller med innehåll genom att skriva Markdown. I nästa kursmoment börjar vi jobba med stylen av webbplatsen.
+För att komma igång med en grundstruktur så använder vi ett PHP-baserat ramverk (Anax) för att bygga en me-sida som vi fyller med innehåll genom att skriva texter i Markdown. Vi börjar med grundstrukturen och vi avvaktar med style och utseende till nästa kursmoment.
 
 Öppna ditt sinne och låt oss börja.
 
@@ -60,7 +60,7 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa i samband med nästa kmom.
+Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa mer i samband med nästa kmom.
 
 
 
@@ -101,7 +101,7 @@ Kika på följande om du är intresserad och finner det värt tiden.
 
 1. Ramverket du använder i kursen är Anax. Bekanta dig gärna med [Anax dokumentationen](anax).
 
-1. Anax Flat kan sägas vara ett flat-file framework. Bekanta dig kort med ett annat sådant ramverk som heter [Grav](https://getgrav.org/) och är byggt med PHP. Du kan kika på vilka features det har och kika översiktligt på dess dokumentation.
+1. Anax Flat, en variant av Anax, kan sägas vara ett flat-file framework. Bekanta dig kort med ett annat sådant ramverk som heter [Grav](https://getgrav.org/) och är byggt med PHP. Du kan kika på vilka features det har och kika översiktligt på dess dokumentation.
 
 
 
@@ -126,12 +126,6 @@ Genomför följande övning för att förbereda inför uppgifterna.
 Dessa uppgifter skall utföras och redovisas.
 
 1. Lös uppgiften "[Bygg en me-sida med Anax Flat](uppgift/me-sida-med-anax-flat)".
-
-
-
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
 
 
 

@@ -1,9 +1,8 @@
 ---
 author: mos
 revision:
-  "2015-10-07": (A, mos) Första utgåvan för kursen.
-updated: "2015-10-07 08:44:20"
-created: "2015-10-06 19:46:20"
+    "2017-10-18": (B, mos) Översyn inför ht17.
+    "2015-10-07": (A, mos) Första utgåvan för kursen.
 ...
 Resultat och redovisning
 ==================================
@@ -23,7 +22,9 @@ Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Skriv ett stycke om 15-30 meningar under respektive kursmoment i din me-sida.
+Skriv ett stycke om 15-30 meningar under respektive kursmoment i filen `me/redovisa/redovisning.html`.
+
+När du är klar innehåller filen `me/redovisa/redovisning.html` redovisningstexter från samtliga kursmoment.
 
 
 
@@ -39,32 +40,32 @@ dbwebb publish me
 
 Den länken som visas i utskriften av kommandot, är länken till din me-sida. Där kan du se ditt publicerade resultat.
 
-Rätta eventuella fel som dyker upp. Det som du laddar upp bör vara felfritt.
+Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
 Kopiera redovisningstexten till ITs {#its}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
 
-Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
+Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
 
 
 
-Klart! {#klar}
+Feedback och frågor {#feedback}
 ---------------------------------------
 
-Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
+[Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
 
-Ta en kort mental paus innan du ger dig på nästa kursmoment.
+Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
 
 
 
 Hur testas mitt resultat? {#inspect}
 ---------------------------------------
 
-Den som rättar och ger feedback utgår från följande kommando när din inlämning gås igenom.
+Den som rättar och kontrollerar din inlämning utgår från följande kommando.
 
 ```bash
 dbwebb inspect kmom01
@@ -72,8 +73,17 @@ dbwebb inspect kmom01
 
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
-Du kan själv provköra och se samma resultat som läraren ser. Det är en bra idé att alltid testköra sin inlämning på samma sätt som rättaren gör. 
+Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
+
+[YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
 
 
 
+Klart! {#klar}
+---------------------------------------
 
+[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
+
+Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
+
+Ta en kort mental paus innan du ger dig på nästa kursmoment.

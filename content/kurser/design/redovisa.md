@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-10-19": "(B, mos) Uppdaterad inför ht17."
     "2016-10-07": "(A, mos) Första utgåvan."
 ...
 Resultat och redovisning
@@ -15,13 +16,13 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-I din me-sida har du en dedikerad plats för dina redovisningstexter. Där skall du [redovisa dina reflektioner](kurser/faq/att-skriva-en-bra-redovisningstext) från varje kursmoment.
+Skriv en redovisningstext och [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från kursmomentet.
+
+Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Besvara även de specifika frågor som finns för varje kursmoment.
-
-Skriv minst 15 meningar.
+Skriv ett stycke om 15-30 meningar.
 
 
 
@@ -30,15 +31,15 @@ Tagga ny version {#tag}
 
 Se till att du har taggat en ny version så att dina senaste ändringar finns med i respektive repo och tag. Versionen ger en historik över dina ändringar enligt följande.
 
-| Version | Kmom   |
-|---------|--------|
-| 1.0.*, 1.1.*   | kmom01 | 
-| 2.0.*   | kmom02 | 
-| 3.0.*   | kmom03 | 
-| 4.0.*   | kmom04 | 
-| 5.0.*   | kmom05 | 
-| 6.0.*   | kmom06 | 
-| 10.0.*   | kmom10 | 
+| Version      | Kmom   |
+|--------------|--------|
+| 1.0.*, 1.1.* | kmom01 | 
+| 2.0.*        | kmom02 | 
+| 3.0.*        | kmom03 | 
+| 4.0.*        | kmom04 | 
+| 5.0.*        | kmom05 | 
+| 6.0.*        | kmom06 | 
+| 10.0.*       | kmom10 | 
 
 Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du historik och du kan få problem med inlämningarna.
 
@@ -47,54 +48,66 @@ Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du hist
 Ladda upp och publicera din kurskatalog {#repo}
 ---------------------------------------
 
-Ladda upp ditt kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
+Ladda upp din kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
 
 ```bash
-# Ställ dig i kurskatalogen
+# Gå till din kurskatalog
 dbwebb publish me
 ```
 
-Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt.
+Den länken som visas i utskriften av kommandot, är länken till din me-sida. Där kan du se ditt publicerade resultat.
 
-Den länken som dyker upp längst ned är länken till din me-sida. Där kan du se ditt publicerade resultat.
+Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/design). 
-
-Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-sida.
+Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/design). Bifoga länken till din me-sida.
 
 
 
 Kopiera redovisningstexten till ITs {#its}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida. 
+Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
 
-Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
+Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
 
 
 
-Testa din kurskatalog {#test}
+Feedback och frågor {#feedback}
 ---------------------------------------
 
-Du kan göra ett självtest med [`dbwebb inspect`](https://dbwebb.se/dbwebb-cli/inspect) som berättar för dig om du har med alla delar i ett kursmoment. Det är samma test som den som rättar ditt kursmoment kommer att köra.
+[Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
+
+Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
+
+
+
+Hur testas mitt resultat? {#inspect}
+---------------------------------------
+
+Den som rättar och kontrollerar din inlämning utgår från följande kommando.
 
 ```bash
-# Ställ dig i kursrepot och ange kursmomentet du vill inspektera
 dbwebb inspect kmom01
 ```
 
-Gör alltid ett självtest så kan du slippa onödiga kompletteringar.
+Byt ut kmom01 mot det kursmoment du vill inspektera.
+
+Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
+
+[YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
 
 
 
 Klart! {#klar}
 ---------------------------------------
 
-Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade. Skapa alltid en tråd i forumet om du funderar på något.
+[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
+
+Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
