@@ -101,7 +101,7 @@ Kika på följande om du är intresserad och finner det värt tiden.
 
 1. Ramverket du använder i kursen är Anax. Bekanta dig gärna med [Anax dokumentationen](anax).
 
-1. Anax Flat, en variant av Anax, kan sägas vara ett flat-file framework. Bekanta dig kort med ett annat sådant ramverk som heter [Grav](https://getgrav.org/) och är byggt med PHP. Du kan kika på vilka features det har och kika översiktligt på dess dokumentation.
+1. Anax Flat, en variant av Anax som vi kommer använda i denna kursen, kan sägas vara ett flat-file framework. Bekanta dig kort med ett annat sådant ramverk som heter [Grav](https://getgrav.org/) och är byggt med PHP. Du kan kika på vilka features det har och kika översiktligt på dess dokumentation.
 
 
 

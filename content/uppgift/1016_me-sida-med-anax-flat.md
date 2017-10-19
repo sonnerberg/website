@@ -4,6 +4,7 @@ category:
     - kurs/design
     - anax-flat
 revision:
+    "2017-10-18": "(F, mos) Förtydligade om minimal style."
     "2016-11-09": "(E, mos) Förtydligade att byling skall stylas och ha bild."
     "2016-11-01": "(D, mos) Bort referens till temat."
     "2016-10-26": "(C, mos) Omstrukturerad efter feedback."
@@ -35,7 +36,7 @@ Spara allt du gör i ditt kursrepo under katalogen `me`.
 
 Din version av Anax Flat skall ligga i katalogen `me/anax-flat` och vara ett eget repo på GitHub som är taggat i minst version 1.0.0.
 
-Tipset är att hålla det enkelt i detta kursmomentet. Det kommer fler kursmoment där du kommer få jobba vidare med stylen. Fokusera på att få alla delar på plats och bekanta dig med verktygen så att de känns naturliga i din utvecklingsprocess.
+Tipset är att hålla det enkelt i detta kursmomentet. Det kommer fler kursmoment där du kommer få jobba vidare med stylen. Fokusera på att få alla delar på plats och bekanta dig med verktygen så att de känns naturliga i din utvecklingsprocess. Gör minsta möjliga på din style och CSS.
 
 
 
@@ -55,6 +56,8 @@ Krav {#krav}
 1. Byt ut den bilden som nu finns med som *flash-bild* på alla sidorna. Lägg dit en egen bild som du tycker passar. Du kan ha olika bilder på olika sidor, om du vill.
 
 1. Fyll i *ett utkast* till din redovisningstext för detta kursmomentet på rätt plats i sidan för redovisningar.
+
+1. Gör begränsat/minimalt med style och CSS. Du får utrymme till det i nästa kursmoment.
 
 
 

@@ -1,16 +1,16 @@
 ---
 author: mos
-revision:
-    2016-10-26: (C, mos) Bytte namn på videoserien.
-    2016-10-21: (B, mos) Tog bort echo i makefilerna, cp av regions.less.
-    2016-10-06: (A, mos) Testad och släppt.
 category:
-    - kurs-design
+    - kursen design
     - less
     - css
     - ramverk
     - anax
     - anax-flat
+revision:
+    "2016-10-26": (C, mos) Bytte namn på videoserien.
+    "2016-10-21": (B, mos) Tog bort echo i makefilerna, cp av regions.less.
+    "2016-10-06": (A, mos) Testad och släppt.
 ...
 Bygg ett tema till Anax Flat
 ===================================

@@ -1,15 +1,16 @@
 ---
 author: mos
-revision:
-    2016-11-01: (D, mos) Bort med referenser till YAML.
-    2016-10-26: (C, mos) Bort med referenser till att ändra temat.
-    2016-09-22: (B, mos) Testad inför kursstart.
-    2016-06-03: (A, mos) Första versionen.
 category:
     - kurs-design
     - ramverk
     - anax
     - anax-flat
+revision:
+    "2017-10-19": (E, mos) Genomgången inför ht17, mindre uppdateringar.
+    "2016-11-01": (D, mos) Bort med referenser till YAML.
+    "2016-10-26": (C, mos) Bort med referenser till att ändra temat.
+    "2016-09-22": (B, mos) Testad inför kursstart.
+    "2016-06-03": (A, mos) Första versionen.
 ...
 Bygg en me-sida med Anax Flat
 ===================================
@@ -47,27 +48,71 @@ De videor som är relaterade till denna artikel börjar på "[110 Anax Flat me-s
 Börja med en tom katalog {#tom}
 -------------------------------
 
-Låt oss börja från ingenting. En tom katalog. Skapa en ny katalog och döp den till `anax-flat`. Se till att katalogen ligger på en plats där du kan öppna den via din lokala webbserver.
-
-Om du jobbar i kursrepot så kan du jobba i katalogen `me/anax-flat`. Den katalogen skall redan finnas i ditt kursrepo så jobba gärna där.
+Låt oss börja från ingenting. En tom katalog. Om du jobbar i kursrepot så skall du jobba i katalogen `me/anax-flat`. Katalogen bör finnas där.
 
 ```bash
-$ mkdir anax-flat
-$ cd anax-flat
+# Gå till kursrepot
+cd me/anax-flat
 ```
 
 Anax Flat finns på GitHub och på Packagist. Du kan kika på hur paketet [Anax Flat presenteras på Packagist](https://packagist.org/packages/mos/anax-flat).
 
-Jag väljer att installera Anax Flat med composer.
+Vi tar och installerar Anax Flat med composer.
 
 ```bash
+# Du står i kursrepot under me/anax-flat
 $ composer require mos/anax-flat
-$ composer update
+$ tree -L 1 . 
+.                                               
+├── composer.json                               
+├── composer.lock                               
+└── vendor                                      
+                                                
+1 directory, 2 files                            
 ```
 
-Nu har du en fil `composer.json` och du har Anax Flat installerat under vendor-mappen. Då kan vi skapa en webbplats med hjälp av filer som ligger i Anax Flat.
+Nu har du en fil `composer.json` som visar vad composer har installerat. Lockfilen är en snapshot över det som är installerat, om du ändrar i `composer.json` så matchas den mot lockfilen.
 
-Dubbelkolla vilka filer och kataloger som du nu har i katalogen `me/anax-flat`. Så här långt är de alla relaterade till kommandot composer.
+Du har alla moduler för Anax Flat installerade under vendor-mappen. Kika i mappen så kan de se koden för de olika modulerna.
+
+```text
+$ tree -L 1 vendor/ 
+vendor/                                               
+├── autoload.php                                      
+├── composer                                          
+├── ezyang                                            
+├── michelf                                           
+├── mos                                               
+├── scrivo                                            
+└── symfony                                           
+                                                      
+6 directories, 1 file                                 
+```
+
+Filen `autoload.php` har koll på vilka filer som finns och hjälper till att laddar in dem när de behövs i PHP-skripten.
+
+Resten av katalogerna är strukturerade enligt `<vendor>/<modul>`. Vi kan titta i katalogen `vendor/mos` för att se vilka moduler vi använder från vendor "mos".
+
+```text
+$ tree -L 1 vendor/mos/ 
+vendor/mos/                                               
+├── anax                                                  
+├── anax-flat                                             
+├── cimage                                                
+└── ctextfilter                                           
+                                                          
+4 directories, 0 files                                    
+```
+
+Det ligger fyra moduler under vendornamnet "mos". Under varje modulkatalog finner vi källkod och testprogram för respektive modul.
+
+Nåväl, det var lite kuriosa om hur vendor-mappen är strukturerad.
+
+Om du hamnar i trubbel så är det bra att veta att man har senaste versionerna av modulerna. Du kan lista vilka moduler du har installerade och vilka versioner de har med kommandot `composer show`.
+
+När modulerna uppdateras och släpps i ny version, så kan du ladda hem dem med kommandot `composer update`. Kör det kommandot så är du säker på att du har senaste versionerna.
+
+Då kan vi skapa en webbplats med hjälp av filer som ligger i Anax Flat.
 
 
 
@@ -79,12 +124,12 @@ Anax Flat innehåller en Makefile som vi kan återanvända. Makefilen innehålle
 ```bash
 $ cp vendor/mos/anax-flat/Makefile .
 $ ls -l
-$ make help
+$ make
 ```
 
-Det sista kommandot `make help` ger dig en utskrift av de kommandon som Makefilen stödjer. Det är med hjälp av dessa kommandon som vi nu skall bygga en webbplats.
+Kommandot `make` ger dig en utskrift av de kommandon som Makefilen stödjer. Det är med hjälp av dessa kommandon som vi nu skall bygga en webbplats.
 
-Öppna gärna filen `Makefile` i din texteditor och studera den. Den innehåller kod som är en blandning av make-specifik syntax och Bash-syntax. För att bli duktig på makefiler behöver du lära dig både make och bash, men det är ett sidospår.
+Öppna filen `Makefile` i din texteditor och studera den. Den innehåller kod som är en blandning av make-specifik syntax och Bash-syntax. För att bli duktig på makefiler behöver du lära dig både make och bash, men det är ett sidospår som vi återkommer till i senare kurser. Notera att makefilen är strukturerad med hårda tabbar `\t` och inte soft spaces. Det är viktigt att det är så.
 
 Nu kan vi använda makefilen för att skapa grunden till en webbplats.
 
@@ -99,25 +144,25 @@ Makefilen innehåller ett kommando för att skapa en grundstruktur till din webb
 $ make site-build
 ```
 
-Det som sker, när du kör kommandot, är att instruktioner i makefilen dels skapar ett antal kataloger och dels kopierar filer och katalogstrukturer från de paketen som ligger i `vendor` mappen.
+Det som sker, när du kör kommandot, är att instruktioner i makefilen skapar ett antal kataloger samt kopierar filer och katalogstrukturer från de paketen som ligger i `vendor` mappen.
 
 Du kan själv studera [källkoden för makefilen](https://github.com/canax/anax-flat/blob/master/Makefile) och se vad som händer. Leta reda på den action som heter *site-build* så kan du se vilka kommandon som utförs.
 
-Här följer en förteckning av några av de kataloger som skapas.
+Här följer en förteckning av några av de kataloger som skapas. Det räcker att ha en ungefärlig koll på dem. Du behöver inte kunna dem i detalj för att kunna skapa en webbplats.
 
 | Katalog        | Beskrivning                            |
 |----------------|----------------------------------------|
 | `cache/`       | Temporär lagring av cachade filer.     |
 | `config/`      | Konfigurationsfiler för webbplatsen.   |
 | `content/`     | Filer som motsvarar innehållet i webbplatsen. Här redigerar vi innehållet i webbplatsen. |
-| `htdocs/`      | Rooten till den publika delen av webbplatsen. Här lagras alla filer som skall vara tillgängliga via en länk. |
+| `htdocs/`      | Rooten till den publika delen av webbplatsen. Här finns bilder, stylesheets och startpunkten `index.php`. |
 | `view/`        | View-filer som används för att mappa innehåll till layout i webbsidans regioner. |
 
-Du kan nu öppna katalogen `htdocs` i din webbläsare, via din lokala webbserver. För min del gäller länken `http://localhost/anax-flat/htdocs` men du får justera den så att den passar just din installation.
+Du kan nu öppna katalogen `htdocs` i din webbläsare, via din lokala webbserver, och du bör se en webbsida i stil med denna.
 
-[FIGURE src=/image/snapvt16/anax-flat-start.png?w=w2 caption="En webbsida redan klar att modifiera."]
+[FIGURE src=image/snapht17/anax-flat-start.png?w=w2 caption="En webbsida redan klar att modifiera."]
 
-Nu har vi en webbplats.
+Nu har vi grunden till en webbplats.
 
 Låt oss nu anpassa webbplatsen, först genom att modifiera dess innehåll och därefter genom att modifiera dess style.
 
@@ -125,6 +170,12 @@ Låt oss nu anpassa webbplatsen, först genom att modifiera dess innehåll och d
 
 Byt språk på webbplatsen {#lang}
 -------------------------------
+
+Du kan titta i videon hur jag jobbar med grunden i Anax Flat.
+
+[YOUTUBE src="tnJtNrieF0Q" width=630 list="PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET" caption="Mikael jobbar med grunden i Anax Flat."]
+
+Glöm inte att det finns fler videor kopplade till artikeln i spellistan benämda med "[110 Anax Flat me-sida*](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)".
 
 Filerna som nu finns är grunden till en mesida. De är på engelska, men du får gärna skriva på svenska. Om du väljer svenska så kan du ändra grundinställningen i temat så att den säger att detta är en webbplats på svenska.
 
@@ -185,7 +236,7 @@ Det du ser överst i sidorna, mellan start taggen `---` och slut taggen `...` ä
 
 Vi kallar denna del sidornas *frontmatter*. Det är data om själva sidorna, vi kan kalla det *meta data*, eller *data om data*.
 
-Sak samma, det ger oss möjlighet att konfigurera hur sidorna presenteras. Exempel på hur det kan användas ser du i filerna `report/.meta` och i `report/000_index.md`.
+Frontmattern ger oss möjlighet att konfigurera hur sidorna presenteras. Exempel på hur det kan användas ser du i filerna `report/.meta` och i `report/000_index.md`.
 
 
 
@@ -230,7 +281,7 @@ Men hur laddar man blocket i en sida?
 
 Man kan lägga in blocket via frontmattern, antingen direkt i en sida, eller via filen `.meta.md`.
 
-Filen `.meta.md` är speciell fil som ger en mall av frontmatter som påverkar alla sidor i den katalogen. Syntaxen är lika, oavsett om du lägger din frontmatter i `.meta.md` eller direkt i filen `test.md`.
+Filen `.meta.md` är speciell fil som ger en mall av frontmatter som påverkar alla sidor i katalogen. Syntaxen är lika, oavsett om du lägger din frontmatter i `.meta.md` eller direkt i filen `test.md`.
 
 Så här ser frontmattern ut för att länka till blocket. Pröva att lägga den direkt i filen `content/test.md`.
 
@@ -250,7 +301,7 @@ views:
 
 Ovan är `views:` en behållare, en kontainer, av vyer. Benämningen `byline:` är ett godtyckligt och unikt namn på en specifik vy. Man kan lägga till fler vyer för att ytterligare lägga till innehåll i sidan.
 
-Regionen `after-main` är en av de kända regionerna som finns i den *master template* som används. I ditt fall hittar du master templaten i `vendor/mos/anax/views/default/index.tpl.php`.
+Regionen `after-main` är en av de kända regionerna som finns i den *master template* som används. I ditt fall hittar du master templaten i `vendor/mos/anax/views/default/index.tpl.php`. Det är den filen som styr webbsidans uppbyggnad.
 
 Templaten `default/content` är en av de templates som finns för att rendera vyer i regioner. Standarduppsättningen av vyerna ligger i samma katalog som master templaten `vendor/mos/anax/views/default/`.
 
@@ -258,7 +309,7 @@ Data `data:`är den information som skickas till templaten för att renderas. I 
 
 Huh, måste jag lära mig allt detta?
 
-Nej, men lär dig de enkla grunderna så du kan skapa de webbsidor du vill. Lyssna på terminologin som används. Resten bokför du på kontot som rör hur ett ramverk kan fungera. I denna kursen så använder vi ett ramverk och bekantar oss med vissa av dess termer. I kommande kurser skall vi själva bygga liknande ramverk. Men det är senare, inte nu.
+Nej, men lär dig de enkla grunderna (copy och paste och redigera) så du kan skapa de webbsidor du vill. Lyssna på terminologin som används. Resten bokför du på kontot som rör hur ett ramverk kan fungera. I denna kursen så använder vi ett ramverk och bekantar oss med vissa av dess termer. I kommande kurser skall vi själva bygga liknande ramverk. Men det är senare kurser, inte nu, nu är fokus att använda ramverket.
 
 
 
@@ -271,7 +322,7 @@ Genom att använda webbläsarens devtools kan du dock se vilka CSS-konstruktione
 
 Men hur gör man för att bygga en eget style?
 
-Jo, det kan du läsa om i artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)". Men det tar vi vid ett senare tillfälle. Låt oss först avsluta denna artikel.
+Jo, låt oss avvakta med det. Vi tar det i nästa kursmoment.
 
 
 
