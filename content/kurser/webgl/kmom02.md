@@ -123,9 +123,9 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)". Spara arbetet i `me/kmom02/lab2`.
-
 1. Gör laborationen "[JavaScript med funktioner](uppgift/javascript-med-funktioner)". Spara resultatet i `me/kmom02/lab3`.
+
+1. Gör uppgiften "[JavaScript och arrayer](uppgift/javascript-och-arrayer)". Spara resultatet i `me/kmom02/lab4`.
 
 1. Gör uppgiften "[Rita trianglar med WebGL och animera dem](uppgift/rita-trianglar-med-webgl-och-animera-dem)". Ditt resultat sparar du delvis i `me/kmom02/sandbox3` och delvis i `me/kmom02/tri`.
 

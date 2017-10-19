@@ -142,6 +142,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör labben "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)"  Labben genereras i `me/kmom01/lab1`.
 
+1. Gör laborationen "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)". Spara arbetet i `me/kmom01/lab2`.
+
 1. Gör uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)". Ditt resultat sparar du delvis i `me/kmom01/sandbox2` och delvis i `me/kmom01/point`.
 
 

@@ -19,7 +19,7 @@ Totalt omfattar kursmomentet (04/05) ca 20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Projekt går ut på att programmera [Metaballs](https://en.wikipedia.org/wiki/Metaballs) i WebGL och visa upp resultatet i en webbläsare.
+Projekt går ut på att programmera 3D [Metaballs](https://en.wikipedia.org/wiki/Metaballs) i WebGL och visa upp resultatet i en webbläsare.
 
 *"Lös det".*
 

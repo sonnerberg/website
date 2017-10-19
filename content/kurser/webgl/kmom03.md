@@ -104,16 +104,15 @@ Gör följande övningar för att träna inför uppgifterna.
 1. Studera koden i de exempelprogram som finns i kursrepot och är döpta till `example/sandboxWebGL5*` och `example/sandboxWebGL7*`. De kan hjälpa dig att lösa uppgifterna.
 
 <!-- Fixa övning i animering och 3D-värld som motsvarar uppgiften. -->
-<!-- Fixa artikel om javaScript objekt och prototyper. -->
+<!-- Fixa artikel om JavaScript objekt och prototyper. -->
 <!-- Fixa artikel om partikelexplosion. -->
+<!-- .... -->
 
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
-
-1. Gör uppgiften "[JavaScript och arrayer](uppgift/javascript-och-arrayer)". Spara resultatet i `me/kmom03/lab4`.
 
 2. Gör uppgiften "[JavaScript med objekt](uppgift/javascript-och-objekt)". Spara resultatet i `me/kmom03/lab5`.
 
