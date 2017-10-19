@@ -7,10 +7,6 @@ revision:
 Kmom01: Ramverk och innehåll
 ====================================
 
-[WARNING]
-Kursutveckling pågår inför ht17.
-[/WARNING]
-
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
 Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Hur kan vi som programmerare rent tekniskt kan förbereda webbplatserna för design och användbarhet? Vi vill vara förberedda när det kommer en webbdesigner, eller designer inom användbarhet, och berättar hur webbplatsen skall se ut. Då vill vi med enkla (rimliga) medel uppfylla deras visioner.
