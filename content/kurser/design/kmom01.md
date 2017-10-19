@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-10-19": (C, mos) Genomläst, labbmiljön justerad.
     "2016-10-26": (B, mos) Omstrukturerad efter feedback.
     "2016-10-07": (A, mos) Första release.
 ...
