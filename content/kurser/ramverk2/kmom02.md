@@ -2,23 +2,20 @@
 author:
     - mos
 revision:
-    "2017-10-16": "(PA1, mos) Arbete påbörjat."
+    "2017-10-20": "(A, mos) Första utgåvan."
 ...
 Kmom02: Docker
 ==================================
 
-Vi installerar docker och gör det till en integrerad del av vårt repo och testmiljö.
+Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
 
-[WARNING]
-Kursutveckling pågår.
-[/WARNING]
-
-<!--stop-->
 <!--more-->
 
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
+[FIGURE src=image/snapht17/cimage-php56.png?w=w2 caption="Tre flikar mot tre olika installationer och versioner av PHP, samtidigt."]
 
-Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
+[ASCIINEMA src=143344 caption="Starta och stoppa flera kontainrar samtidigt med docker-compose."]
+
+Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet. Tänk att kursmomentetn går ut på att du skall utvärdera och introducera en helt ny teknik till ditt utvecklingsteam. Är tekniken bra och värdefull? Var kritisk och utvärdera.
 
 
 
@@ -37,14 +34,14 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen.
+1. [Webbplatsen för Docker](https://www.docker.com/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom samt instruktioner till hur du installerar verktyget.
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 6-10 studietimmar)*
+*(ca: 6-14 studietimmar)*
 
 
 
@@ -52,8 +49,7 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom01/express`.
-
+1. Jobba igenom artikeln "[Kom igång med Docker som utvecklingsmiljö](kunskap/kom-igang-med-docker-som-utvecklingsmiljo)" för att komma igång och installera Docker och dess verktyg. Spara din exempelkod i `me/kmom02/docker`.
 
 
 
@@ -61,7 +57,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk2](uppgift/bygg-en-me-sida-till-ramverk2)". Det handlar om att bygga din me-sida med Express och publicera på Github. Spara allt under `me/redovisa`.
+1. Gör uppgiften "[Integrera docker-compose med Express](uppgift/integrera-docker-compose-med-express)". Det handlar om lägga till stöd för att testköra din Express-applikation under Docker i flera versioner av Node.
 
 
 
@@ -76,9 +72,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
-* Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
-* Använde du någon form av scaffolding som Express erbjuder?
-* Jobbar du med Markdown för innehållet, eller annat liknande?
+* Har du jobbat med Docker eller andra virtualiseringstekniker innan?
+* Hur ser du på möjligheterna att använda dig av Docker för att jobba med tester av ditt repo?
+* Gick allt smidigt eller stötte du på problem?
+* Skapade du din egen image, berätta om den?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
