@@ -65,7 +65,7 @@ Installera på Windows Cygwin {#windows}
 Om du har installerat XAMPP så ligger troligen den exekverbara PHP-filen i följande katalog. Öppna en `cmd.exe` för att kontrollera att du har rätt sökväg.
 
 ```bash
-C\: \xampp\php\php.exe --version
+C:\xampp\php\php.exe --version
 ```
 
 Starta nu kontrollpanelen för din dator `Control Panel\System and Security\System`.
@@ -73,7 +73,7 @@ Starta nu kontrollpanelen för din dator `Control Panel\System and Security\Syst
 Du kan starta den direkt från `cmd.exe` på följande sätt.
 
 ```bash
-C\: control system
+control system
 ```
 
 Klicka på ändra inställningar för din dator.
@@ -86,7 +86,7 @@ Välj fliken "Advanced" och klicka på "Environment Variables".
 
 Välj "Path" i listan och klicka "Edit...".
 
-Redigera så att sökvägen till din exekverbara `php.exe` kommer in i listan.
+Redigera så att sökvägen till din exekverbara `php.exe` kommer in i listan. Filens namn ska inte vara en del av sökvägen. Med exemplet från ovan ska sökvägen se ut ```C:\xampp\php\```.
 
 [FIGURE src=/image/snapht16/windows-php-path3.png caption="Nu ligger sökvägen på plats."]
 
