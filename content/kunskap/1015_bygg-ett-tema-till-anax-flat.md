@@ -8,6 +8,7 @@ category:
     - anax
     - anax-flat
 revision:
+    "2017-10-27": (D, mos) Genomgång inför ht17, nu npm och inte wget.
     "2016-10-26": (C, mos) Bytte namn på videoserien.
     "2016-10-21": (B, mos) Tog bort echo i makefilerna, cp av regions.less.
     "2016-10-06": (A, mos) Testad och släppt.
@@ -56,7 +57,7 @@ Forka gör du via GitHub, klicka på knappen "Fork".
 
 Nu skapas en kopia av `canax/anax-flat-theme` och det hamnar på ditt eget konto. Det är bra för att du skall kunna skapa dina egna ändringar som du kommer göra.
 
-Nu kan du clona din kopia av `canax/anax-flat-theme`. Gör det i rooten av din Anax Flat-katalog.
+Nu kan du clona din kopia av `anax-flat-theme`. Gör det i rooten av din Anax Flat-katalog.
 
 ```text
 # Flytta till rooten av din Anax Flat, ändra XXX till din egen användare
@@ -74,13 +75,13 @@ Kika nu runt bland filerna och öppna dem i din texteditor. Bekanta dig med dem,
 Verktyg för att kompilera och linta LESS {#less}
 -------------------------------
 
-Innan vi kan börja bygga vårt tema behöver vi en lokal utvecklingsmiljö för att kompilera LESS till CSS. Jag tänker installera en LESS-kompilator i form av NPM-paket.
+Innan vi kan börja bygga vårt tema behöver vi en lokal utvecklingsmiljö för att kompilera LESS till CSS. Jag tänker installera en LESS-kompilator i form av NPM-paket. NPM är en pakethanterare för JavaScript och Node.
 
 
 
 ###Installera verktygen med npm {#install-npm}
 
-Installationen blir lokal till detta repo. Att installera en utvecklingsmiljö lokalt tillsammans med ett repo gör att man kan ha specifika versioner som inte krockar med andra verktyg som är installerade på din dator.
+Installationen blir lokal till detta repo, alla verktyg installeras i samma katalog som repot. Att installera en utvecklingsmiljö lokalt tillsammans med ett repo gör att man kan ha specifika versioner som inte krockar med andra verktyg som är installerade på din dator.
 
 Du kan använda makefilen för att installera det som behövs samt kontrollera vilka versioner du har installerade.
 
@@ -106,18 +107,19 @@ Visst hade vi kunnat skriva in kommandona direkt via kommandoraden, men makefile
 
 ###Testa att verktygen fungerar {#test-npm}
 
-Nu har du två verktyg för att kompilera LESS till CSS. Du har kommandot `lessc` som lintar, kompilerar och minifierar din stylesheet. Du har även kommandot `csslint` som lintar din slutliga CSS-kod.
+Nu har du två verktyg för att kompilera LESS till CSS. Du har kommandot `lessc` som lintar, kompilerar och minifierar din stylesheet. Du har även kommandona `csslint` och `stylelint` som lintar din slutliga CSS-kod.
 
 Du kan testa att köra dem direkt via kommandoraden för att se att de fungerar.
 
 ```bash
 $ node_modules/.bin/lessc --version
 $ node_modules/.bin/csslint --version
+$ node_modules/.bin/stylelint --version
 ```
 
-Kommandona ovan är exakt samma som utförs av makefilen vid `make npm-version`. Kika i filen `Makefile` för att se likheten.
+Du kan även använda makefilen för att kontrollera vilka versioner som finns installerade. Test att köra `make check` så ser du ungefär motsvarande.
 
-Vi kommer låta makefilen sköta kompilering och lintning. Det blir mindre att skriva, vi sparar tid.
+Vi kommer låta makefilen sköta en del av arbetet kring kompilering och lintning. Det blir mindre att skriva för oss och vi sparar tid.
 
 
 
@@ -134,22 +136,23 @@ total 8.0K
 -rw-r--r-- 1 mos mos  94 May 11 18:13 style.min.css
 ```
 
-Öppna gärna de båda filerna för att se hur den kompilerade stylen ser ut.
+Källkoden för stylen ligger i `style.less`. Kompilatorn kompilerar LESS-koden till CSS. Öppna gärna de båda filerna för att se hur den kompilerade stylen ser ut.
 
-Den resulterande stylesheeten hamnar i katalogen `build/css`. Stylesheeten kopieras också till `htdocs/css/` så du kan testa den lokalt, om du skulle vilja göra det. Efter varje kompilering har du alltså de senaste versionerna av din stylesheet i `htdocs/css`.
+Den resulterande stylesheeten hamnar i katalogen `build/css`. Stylesheeten kopieras också till `htdocs/css/` så du kan testa den lokalt, om du skulle vilja göra det. Efter varje kompilering har du alltså den senaste versionen av din (miniferade) stylesheet i `htdocs/css`.
 
 
 
 Använd stylesheeten i ditt Anax Flat {#copy}
 -------------------------------
 
-I makefilen finns redan ett *target* `less-install` som både kompilerar less *och* kopierar till katalogen `htdocs/css` i din Anax Flat. Det är för att göra saker smidiga att jobba med. Det temat vi nu jobbar i förutsätter alltså att det kan finnas på en viss plats i en installation av Anax Flat.
+I makefilen finns ett *target* `less-install` som kompilerar less *och* kopierar till katalogen `../htdocs/css` i din Anax Flat. Det är för att göra saker smidiga att jobba med. Det temat vi nu jobbar i förutsätter alltså att det kan finnas på en viss plats i en installation av Anax Flat.
 
 Vill du ha superkoll på kikar du i din makefil för att se vad som händer.
 
 Gör så här för att kompilera och uppdatera stylesheeten i ditt Anax Flat.
 
 ```text
+# Du står i din katalog theme/
 $ make less-install
 ```
 
@@ -166,32 +169,49 @@ Du kan nu ladda om ditt Anax Flat i din webbläsare och använda din nya stil, o
 
 Då kan vi börja att bygga upp stilen från början. Du kan notera att även om det inte finns någon style så går det ändock att läsa innehållet i webbplatsen. Det är viktigt att man kan göra det, ur användbarhetssynpunkt. Ibland kanske stylesheeten inte hinner laddas och då skall användaren ändå kunna använda webbplatsen.
 
-Då börjar vi lägga till LESS moduler för att bygga upp stylen.
+Du kan även stå i ditt Anax Flat och kompilera stylen, det är ett target i makefilen som löser det genom att använda `theme/Makefile`. 
+
+```text
+# Du står i din katalog för Anax Flat
+$ make theme
+```
+
+Då börjar vi lägga till LESS moduler för att bygga upp stylen i ditt Anax Flat.
 
 
 
 Normalisera stylen {#normalisera}
 -------------------------------
 
-Det första vi gör är att nollställa stylen, eller egentligen vill vi normalisera stylen. Det vi vill uppnå är att vår grundstyle är lika i alla webbläsare, oavsett om vissa webbläsare lägger på sin egen personliga style. Detta kan [normalize.css](http://necolas.github.io/normalize.css/) hjälpa mig med.
+Det första vi gör är att nollställa stylen. Eller, egentligen så normaliserar vi stylen. Vi vill att vår grundstyle är lika i alla webbläsare, oavsett om vissa webbläsare lägger på sin egen personliga style. Detta kan modulen  [normalize.css](http://necolas.github.io/normalize.css/) hjälpa oss med.
+
+Låt oss ladda ned stylen för normalisering och integrera i vårt tema.
 
 
 
-###Ladda ned Normalize {#downnorm}
+###Hämta Normalize {#downnorm}
 
-Jag hämtar normalize.css från GitHub och sparar filen i katalogen `modules`. Jag döper filen till `normalize.less` för att LESS kompilatorn skall betrakta filen som en LESS fil.
+Jag vill hämta filen för `normalize.css` och spara undan bland mina egna moduler i katalogen `modules/`. Jag gör detta med kommandot `npm`.
 
 ```bash
-$ wget https://necolas.github.io/normalize.css/latest/normalize.css -O modules/normalize.less
+# Du står i katalogen theme/
+npm install normalize.css --save-dev
+ls -l ls node_modules/normalize.css/
 ```
 
-Öppna gärna filen i din editor och kika på dess innehåll.
+Pakethanteraren npm installerar modulen under `node_modules/normalize.css` samt sparar en referens till modulen i `package.json`. Jag kan nu kopiera stylesheeten till min `modules/`.  Jag döper filen till `normalize.less` för att LESS kompilatorn skall betrakta filen som en LESS fil.
+
+```bash
+cp node_modules/normalize.css/normalize.css modules/normalize.less
+```
+
+Öppna filen `modules/normalize.less` i din editor och kika snabbt på dess innehåll.
 
 
 
 ###Gör Normalize till en modul {#normmod}
 
-Jag uppdaterar `modules.less` så att den importerar modulen.
+Jag uppdaterar `modules.less` så att den importerar min modul.
 
 ```css
 // Reset, or normalize the browser style
@@ -202,13 +222,13 @@ Jag behöver inte ange katalogen eftersom jag har angivit i makefilen att katalo
 
 Nu kan jag kompilera stylen och testa den. Det bör inte bli någon förändring rent utseendemässigt. Så vill du vara säker på att normalize.less är inkluderad så kan du titta i den genererade källkoden `build/css/style.css` som nu bör vara lite större än tidigare.
 
-Dubbelkolla även att du har samma variant i ditt Anax Flat under `htdocs/css`.
+Dubbelkolla även att du har samma variant i ditt Anax Flat under `htdocs/css`. Utseendemässigt är det nästan ingen förändring, men det kan bero på vilken webbläsare du använder.
 
 
 
 ###Nedladdning av Normalize som del i Makefile {#nednorm}
 
-Vad händer när det kommer uppdateringar till `normalize.css`? Ja, förr eller senare behöver du uppdatera. Tänk nu att vi kommer ha flera moduler så blir det rätt jobbigt att hålla koll på uppdateringar. Men tänk om vi fyllar på i makefilen?
+Vad händer när det kommer uppdateringar till `normalize.css`? Ja, förr eller senare behöver du uppdatera. Tänk nu att vi kommer ha flera moduler så blir det rätt jobbigt att hålla koll på uppdateringar. Men tänk om vi fyllar på i makefilen med ett target som hjälper oss att vara uppdaterade?
 
 Vad sägs om ett make *target* som gör `make upgrade` genom att hämta hem senaste versionerna av alla moduler? Jag tycker det låter som en bra idè. Så här kan det se ut i makefilen.
 
@@ -217,22 +237,33 @@ Vad sägs om ett make *target* som gör `make upgrade` genom att hämta hem sena
 .PHONY: upgrade-normalize
 upgrade-normalize:
 	@$(call HELPTEXT,$@)
-
-	# Normalizer
-	wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O $(LESS_MODULES)/normalize.less
+	npm update normalize.css
+	cp node_modules/normalize.css/normalize.css modules/normalize.less
 ```
+
+[INFO]
+**Tips** När du redigerar en Makefile så används hårda tabbar och inte soft tabs (tabbar ersätts med mellanslag). Använder du mellanslag får du följande fel.
+
+```text
+$ make upgrade-normalize
+Makefile:173: *** missing separator.  Stop.
+```
+
+Du fixar genom att använda hårda tabbar istället.
+[/INFO]
 
 Så här kan det se ut när du kör det.
 
 ```text
 $ make upgrade-normalize
---> Upgrade LESS module - Normalize
-wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O modules/normalize.less
+---> Upgrade LESS module - Normalize. 
+npm update normalize.css
+cp node_modules/normalize.css/normalize.css modules/normalize.less
 ```
 
-Det var vår första LESS modul, på vår långa resa där vi försöker skapa en god bas av LESS moduler för att bygga egna stylesheets.
+Det var vår första LESS modul, på vår långa resa där vi försöker skapa en god bas av LESS moduler för att bygga egna stylesheets och teman.
 
-Dessutom en effektiv hantering av att hålla vårt tema uppdaterat med eventuella uppdateringar av modulen. En god start.
+Vi fick dessutom en effektiv hantering av att hålla vårt tema uppdaterat med eventuella uppdateringar av modulen. Det är en god start.
 
 
 
@@ -249,7 +280,7 @@ Jag tänkte försöka skapa  en `regions.less` för att uppnå så att webbplats
 
 [FIGURE src=/image/kurs/design/anax-flat-regions.png?w=w2 caption="Anax Flat stylad in i regioner."]
 
-Till min hjälp har jag kunskapen om den templatefil som används när HTML-koden genereras. Du kan själv studera den i katalogen `vendor/mos/anax/view/default/index.tpl.php`, eller via GitHub i repot mos/anax där [alla template-filerna  finns](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php), specifikt är det [`index.tpl.php`](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php) som skapar grunden för HTML sidan.
+Till min hjälp har jag kunskapen om den templatefil som används när HTML-koden genereras. Du kan själv studera `index.tpl.php` i katalogen `vendor/mos/anax/view/default/`, eller via GitHub i repot mos/anax där [alla template-filerna  finns](https://github.com/mosbth/anax/blob/master/view/default/), specifikt är det [`index.tpl.php`](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php) som skapar grunden för HTML sidan.
 
 **För att komma framåt**, så kan du låna den färdiga `regions.less` som du hittar i kursrepot under `example/anax-flat/theme/regions.less`. Glöm inte kika på videorna där jag visar hur jag gör.
 
@@ -257,13 +288,12 @@ Till min hjälp har jag kunskapen om den templatefil som används när HTML-kode
 
 ###Kopiera regions.less {#regions.less}
 
-Vill du köra utan videor så gör du så här.
+Så här kopierar du filen `regions.less`.
 
 ```text
-# Kopiera filen regions.less från kursrepot
 # Du står i katalogen me/anax-flat/theme
-$ cp ../../../example/anax-flat/theme/regions.less modules
-$ ls -l modules
+cp ../../../example/anax-flat/theme/regions.less modules
+ls -l modules
 ```
 
 Lägg till så filen inkluderas i `modules.less`.
@@ -279,111 +309,118 @@ I videoserien går jag igenom innehållet i filen `regions.less` i en lugnare ta
 
 
 
-En responsiv navbar {#navbar}
+En responsiv hamburger-navbar {#navbar}
 -------------------------------
 
-Navbaren är, som du kanske kan ana, automatgenererad utifrån den information som finns i Anax Flat `config/navbar.php`. Dessutom har den en struktur som är förberedd för att stylas på ett resonsivt sätt. Att göra det på egen hand från grunden kan ta sin lilla tid så jag tänkte att vi lånar en LESS modul som ger oss grundstylen till den responsiva navbaren.
+Navbaren på Anax Flat är automatgenererad utifrån den information som finns i `config/navbar.php`. Den har en struktur som är förberedd för att stylas på ett responsivt sätt, har stöd för undermenyer och en _hamburger-meny_. Att göra en liknande navbar, på egen hand, från grunden, kan ta sin lilla tid så jag tänkte att vi lånar en LESS modul som ger oss en grund att stå på.
 
-Återanvändning är ju bra, eller hur?
+Kanske kan det vara bra att ha några LESS-moduler att kika på, innan vi börjar skriva våra egna.
 
-Den modulen jag tänkte låna finns på GitHub under namnet [mosbth/responsive-menu](https://github.com/mosbth/responsive-menu).
-
-Låt oss testa den.
+Den modulen jag tänkte låna finns på GitHub under namnet [desinax/responsive-menu](https://github.com/desinax/responsive-menu) och den är tillgänglig via pakethanteraren npm på [`desinax-responsive-menu`](https://www.npmjs.com/package/desinax-responsive-menu).
 
 
 
-###Bekanta dig med `responsive-menu` {#downresp}
+###Bekanta dig med responsive-menu {#downresp}
 
-Börja med att clona ned en kopia.
+Innan vi integrerar modulen så vill vi testa den. Vi installerar den med `npm install desinax-responsive-menu`.
 
 ```text
-# Ställ dig i temats root-katalog
-$ git clone https://github.com/mosbth/responsive-menu.git
-$ cd responsive-menu
+# Ställ dig i katalogen theme/
+npm install desinax-responsive-menu --save-dev
+ls node_modules/desinax-responsive-menu
 ```
 
-Det ligger en körbar version som visar hur menyn fungerar `htdocs/index.php` i repot, öppna den i webbläsaren för att testa hur menyn fungerar.
+Det ligger en testbar version som visar hur menyn fungerar i `htdocs/index.php` i repot, öppna den i webbläsaren för att testa och se hur menyn fungerar.
 
-Bekanta dig någorlunda översiktligt med källkoden som ligger i `htdocs`.
+Bekanta dig någorlunda översiktligt med källkoden som ligger i repot.
 
-| Fil   | Syfte   |
-|-------|---------|
-| `index.php` | Inkluderar samtliga filer som behövs för att få ett körbart exempel. |
-| `menu.php`  | HTML-strukturen för menyn. |
-| `style/style.css`       | Stylesheet för menyn. |
-| `js/responsive-menu.js` | JavaScript kod som behövs av menyn. |
+| Fil                     | Syfte   |
+|-------------------------|---------|
+| `htdocs/`               | Inkluderar samtliga filer som behövs för att få ett körbart exempel. |
+| `src/less/responsive-menu.less` | LESS-kod för att styla och skapa menyn. |
+| `src/js/responsive-menu.js`     | JavaScript-kod som används av menyn. |
 
-Det är alltså detta som behövs för att få ett körbart exempel.
-
-Källkoden hittar vi i `src/less` respektive `src/js`.
+Det är alltså detta som behövs för att få ett körbart exempel, en kombination av HTML, CSS och JavaScript. PHP förenklar för att exemplet skall fungera smidigare.
 
 
 
-###Använd modulen `responsive-menu` {#useresp}
+###Använd modulen responsive-menu {#useresp}
 
-Då försöker vi integrera den responsiva menyn som en av våra egna LESS moduler. Det handlar om två filer som vi behöver. Jag väljer att hämta hem filerna med `wget` för att senare kunna integrera proceduren i makefilens `make upgrade-responsive-menu`.
+Då försöker vi integrera den responsiva menyn in i Anax Flat såsom en av våra egna LESS moduler. Vill vill göra den till "vår egen modul" i vårt tema, så att vi har full kontroll över den.
 
-Jag ställer mig i rooten av temat `me/anax-flat/theme`.
+Det handlar om två filer som vi behöver. Eftersom vi har installerat modulen med npm så kan vi kopiera filerna.
 
-Först hämtar jag hem LESS-filen och sparar som en av våra LESS moduler.
-
-```bash
-$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O modules/responsive-menu.less
+```text
+# Du står i roten av katalogen theme/
+cp node_modules/desinax-responsive-menu/src/less/responsive-menu.less modules/
+cp node_modules/desinax-responsive-menu/src/js/responsive-menu.js js/
+ls js/ modules/
 ```
 
-Jag lägger in den så att den importeras i `modules.less`. Jag kan nu testa att kompilera stylen och ladda om webbsidan.
+Fortsätt nu och lägg in så att LESS-modulen importeras via `modules.less`.
 
 ```css
 // Responsive menu
 @import url(responsive-menu.less);
 ```
 
-Dock, innan allt fungerar så behöver jag hämta hem JavaScript-filen också. Den sparar jag i katalogen `js`.
+Vi kan nu testa att kompilera stylen och ladda om webbsidan. Dock, innan allt fungerar så behöver vi aktivera JavaScript-filen också. Den sparade jag i katalogen `js` och nu vill jag säga till Anax Flat att använda den. Makefilen har redan inbyggt i sig att den kopierar katalogen `js` till rätt plats i Anax Flat under `htdocs/js`.
 
-```bash
-$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/js/responsive-menu.js -O js/responsive-menu.js
+Vi bygger om temat och kollar att filen ligger på rätt plats.
+
+```text
+# Du står i me/anax-flat
+$ make theme
+$ ls htdocs/js/resp*
+responsive-menu.js 
 ```
 
-Jag kan nu kompilera om stylen igen. Makefilen har redan inbyggt i sig att den kopierar katalogen `js` till rätt plats i Anax Flat under `htdocs/js`.
-
-Du behöver dubbelkolla att Anax Flat är inställt på att ladda filen. Det är en inställning i `config/theme.php` som skall se ut så här.
+Du behöver nu ordna så att Anax Flat är inställt på att ladda js-filen. Det är en inställning Anax Flat i `config/theme.php` som skall se ut så här.
 
 ```php
 //"javascripts" => [],
 "javascripts" => ["js/responsive-menu.js"],
 ```
 
-Nu kan du testa menyn genom att ladda om din webbläsare. Den bör se ut precis som tidigare.
+Nu kan du testa menyn genom att ladda om din webbläsare. Den bör se ut precis som tidigare. Vi är inte färdiga än. Vill du vara säker på att något händer kan du öppna devtools i webbläsaren för att se vilka resurser som laddas, du bör se att din JavaScript-fil laddas. Vill du se vilken CSS-kod som används så är det nog enklast att titta i den icke-minifierade som generats under `theme/build/css/style.css`. Kommentarerna ligger kvar i den filen så vet du vilken kommentar som finns i din LESS-modul så skall du kunna hitta motsvarande i den kompilerade `style.css`.
 
 
 
 ###Beroende av Font Awesome {#berofa}
 
-Den responsiva menyn vi använder är beroende av en extern modul som heter [Font Awesome](http://fontawesome.io/), ett style och font-bibliotek med en stor mängd ikoner.
+Den responsiva menyn vi använder är beroende av en extern modul som heter [Font Awesome](http://fontawesome.io/), ett style- och font-bibliotek med en stor mängd bra-att-ha ikoner.
 
-Vi kommer att integrera Font Awesome i vårt tema i ett senare stadie. Men för tillfället vill vi bara ha snabbaste vägen fram och det får vi genom att inkludera en färdig stylesheet som vi når via en [CDN som stödjer Font Awesome](https://www.bootstrapcdn.com/fontawesome/).
+Vi kommer att integrera Font Awesome i vårt tema i ett senare stadie. Men för tillfället vill vi ha snabbaste vägen fram och det får vi genom att inkludera en färdig stylesheet som vi når via en [CDN som stödjer Font Awesome](https://www.bootstrapcdn.com/fontawesome/).
 
 Uppdatera ditt Anax Flat i filen `config/theme.php` så att följande stylesheet inkluderas.
 
 ```php
+//"stylesheets" => ["css/default.min.css"],
 "stylesheets" => [
-    //...
-    "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    "css/style.min.css",
+    "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 ],
 ```
 
 Notera att länken ovan troligen har ett annat versionsnummer av Font Awesome. Du bör använda senaste möjliga versionen.
 
+Testa att ladda om din sida och tittar du i devtools -> network så bör du se att resursen `font-awesome.min.css` laddas som en resurs.
 
 
-###Lägg till den expanderande menyn {#expmenu}
 
-I exemplet för responsive-menu fanns med en andra, eller alternativ, expanderande meny. Låt oss använda den i vår webbplats.
+###Lägg till hamburger-menyn {#expmenu}
+
+I exemplet för responsive-menu fanns det en hamburger-meny som expanderade om man klickade på den. Låt oss använda den i vår webbplats.
+
+[FIGURE src=image/snapht17/responsive-menu-closed.png?w=w2 caption="Hamburgermenyn som är klickbar."]
+
+[FIGURE src=image/snapht17/responsive-menu-open.png?w=w2 caption="När man klickar på hamburgermenyn så öppnas en ny navbar/meny."]
 
 
-####Aktivera en andra meny {#menu2}
 
-Dels behöver vi ytterligare en navbar i `config/navbar.php`. Det finns ett kodstycke som redan ligger i filen som går att kommentera bort. Det blir som en helt ny meny med sina egna menyval.
+####Aktivera hamburger-meny {#menu2}
+
+Det vi behöver göra är att aktivera ytterligare en navbar i `config/navbar.php`. Det finns ett kodstycke som redan ligger i filen som går att kommentera bort. Det blir som en helt ny meny med sina egna menyval.
 
 Kodstycket inleds med följande.
 
@@ -393,13 +430,13 @@ Kodstycket inleds med följande.
 "navbarMax" => [
 ```
 
-Ta bort kommentaren runt detta kodstycke för att aktivera menyn.
+Ta bort kommentaren runt detta kodstycke för att aktivera menyn med dess menyalternativ.
 
 
 
-####Rendera den andra menyn {#menu2}
+####Rendera hamburger-menyn {#menu2}
 
-Därefter behöver vi lägga till så att den andra menyn renderas i en vy och placeras ut i en region, det gör vi i `config/theme.php`. Det finns ett kodstycke som nu är bortkommenterat.
+Sedan behöver vi lägga till så att den nya menyn renderas i en vy och placeras ut i en region, det gör vi i `config/theme.php`. Det finns ett kodstycke som nu är bortkommenterat.
 
 Kodstycket består av följande.
 
@@ -428,20 +465,19 @@ Om du kan se motsvarande bilden ovan, på din webbplats, då gick allt bra. Nu h
 
 ###Förbered för uppdateringar i makefilen {#respupgr}
 
-Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av den responsiva menyn i fortsättningen.
+Jag förbereder för uppdateringar genom att lägga in en target i makefilen så den kan uppdatera "sig själv".
 
 ```text
 # target: upgrade-responsive-menu - Upgrade LESS module - Responsive menu
 .PHONY: upgrade-responsive-menu
 upgrade-responsive-menu:
 	@$(call HELPTEXT,$@)
-
-	# Responsive-menu
-	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
-	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/js/responsive-menu.js -O js/responsive-menu.js
+	npm update desinax-responsive-menu
+	cp node_modules/desinax-responsive-menu/src/less/responsive-menu.less modules/
+	cp node_modules/desinax-responsive-menu/src/js/responsive-menu.js js/
 ```
 
-Bra. Då har vi integrerat en responsiv meny i vårt tema.
+Bra. Då har vi integrerat en responsiv meny i vårt tema, tillsammans med en hamburger-meny.
 
 
 
@@ -456,9 +492,9 @@ Det skulle kunna se ut så här när vi är klara. Nåja, klara och klara. Men �
 
 En start är det iallafall.
 
-Ovan style kan man uppnå med den stylen som ligger i kursrepots exempel-katalog `example/anax-flat/theme/header.less`.
+Ovan style kan man uppnå med den stylen som ligger i kursrepots exempel-katalog `example/anax-flat/theme/header.less`. Du kan utgå från den stylen om du vill se hur det kan se ut. Eller så bygger du din egen style.
 
-Bör man lägga denna stylen som en egen återanvändbar modul eller bör man anse att den inte är generell utan kan samlas i `style.less`. Ja, det är en bedömning man får göra, båda varianterna fungerar.
+Bör man lägga denna stylen som en egen återanvändbar modul eller bör man anse att den inte är generell utan kan samlas i `style.less`. Ja, det är en bedömning man får göra, båda varianterna fungerar men jag föredrar nog en egen LESS-modul.
 
 
 
@@ -467,11 +503,11 @@ Responsivitet {#resp}
 
 Responsiv design innebär att man stylar webbplatsen så att den anpassar sig efter skärmens storlek. En responsiv webbplats fungerar både på små och stora skärmar, och alla varianter därimellan.
 
-Det kan vara att man väljer att designa webbplatsen till små enheter i första hand, så kallat *Mobile First*. Man väljer en layout som fungerar för små enheter och sedan skalar man upp den när skärmens bredd ökar.
+Ibland väljer man att designa webbplatsen till små enheter i första hand, så kallat *Mobile First*. Man väljer en layout som fungerar för små enheter och sedan skalar man upp den när skärmens bredd ökar.
 
-Vi har redan en webbplats som fungerar för större skärmar så i vårt fall handlar det om att få innehållet att även fungera på små enheter.
+Vi har redan en webbplats som fungerar för större skärmar så i vårt fall handlar det om att få innehållet att fungera även på små enheter.
 
-Vår lösning blir att använda *media queries* vid de brytpunkter som vi anser behövs. Vi har inte fasta brytpunkter utan väljer de som passar vår design. Fasta brytpunkter skulle kunna vara till exempel skärstorlek på en iPad2 eller iPhone 7 eller Samsung Galaxy. Men vi väljer alltså inte att hålla oss fast till dessa enheter.
+Vår lösning blir att använda *media queries* vid de brytpunkter som vi anser behövs. Vi har inte fasta brytpunkter kopplade till existerande läsplattor/telefoner. Vi väljer istället de brytpunkter som passar vår design. Fasta brytpunkter skulle kunna vara skärmstorlek på en iPad2 eller iPhone 7 eller Samsung Galaxy. I porträttläge och/eller landskap. Men vi väljer alltså inte att hålla oss fast till dessa enheter utan väljer brytpunkter mer fritt.
 
 Så här kan en media query se ut när skärmens bredd blir mindre än 900 pixlar.
 
@@ -491,9 +527,11 @@ Så här kan en media query se ut när skärmens bredd blir mindre än 900 pixla
 }
 ```
 
-Pröva nu att styla din webbplats responsivt med media queries.
+Pröva att styla din webbplats responsivt med media queries. Försök få menyn att flyta och fungera på mindre enheter och när bredden blir alltför smal så visar du enbar hamburger-meny. Testa hur webbplatsen dbwebb.se fungerar när bredden blir mindre och mindre, så får du ett exempel på hur det kan fungera.
 
 Jag har gjort en enkel variant och min exempelkod finns i kursrepot under `example/anax-flat/theme/media-queries.less`. Kika gärna där för tips.
+
+Var noga med att lägga dina mediaqueries i slutet av LESS-koden, ordningen är viktig för hur CSS-reglerna tolkas. Öppna devtools om du är osäker på vilken ordning som reglerna tolkas i.
 
 
 
@@ -571,6 +609,6 @@ Vill du göra fler uppdateringar och tagga dem så inkrementerar du tredje siffr
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Nu har du kommit igång med Anax Flat och du kan anpassa webbplatsen med ditt eget innehåll.
+Du har sedan tidigare kommit igång med Anax Flat och du kan anpassa webbplatsen med ditt eget innehåll. Nu har du även kunskap om hur du kan anpassa stylen och göra den till "din egen", grunden till ditt eget tema baserat på LESS moduler.
 
-Nu har du kunskap om hur du kan gå vidare och anpassa stylen och göra den till "din egen".
+Artikeln har en [egen tråd i forumet](t/6978) där du kan ställa frågor eller bidra med tips och trix. 

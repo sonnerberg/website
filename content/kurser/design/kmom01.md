@@ -18,7 +18,7 @@ För att komma igång med en grundstruktur så använder vi ett PHP-baserat ramv
 
 Öppna ditt sinne och låt oss börja.
 
-[FIGURE src=/image/snapvt16/anax-flat-start.png?w=w2 caption="En me-sida med PHP-ramverket Anax Flat."]
+[FIGURE src=/image/snapht17/anax-flat-start.png?w=w2 caption="En me-sida med PHP-ramverket Anax Flat."]
 
 Under kursens gång så kommer du att introduceras till ett par tekniker som är bra att ha för en webbprogrammerare. En av de är versionshantering med Git och GitHub.
 
