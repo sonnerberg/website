@@ -10,9 +10,13 @@ revision:
 Integrera en testmiljö med JavaScript i me-sida och Express
 ==================================
 
-Du skall använda Docker för att skapa en miljö för testning som använder flera versioner av Node. Du gör detta genom att skapa en konfiguration för kommandot `docker-compose`.
+Du skall bygga upp en testmiljö för ditt JavaScript-projekt. Det handlar om vilka verktyg du använder för enhetstestning, kodtäckning, funktionstester och en kedja av Continuos Integration samt hur du kan använda Docker vid tester.
 
 <!--more-->
+[WARNING]
+** Arbete pågår **
+<[/WARNING]
+<!--stop-->
 
 
 

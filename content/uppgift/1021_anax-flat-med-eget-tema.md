@@ -4,7 +4,7 @@ category:
     - kursen design
     - LESS
 revision:
-    "2017-10-27": (C, mos) Mindre formuleringar i text inför ht17.
+    "2017-10-27": (C, mos) Mindre formuleringar i text inför ht17, förtydliga om egna moduler.
     "2016-11-01": (B, mos) Nytt krav om att länka till temat på github.
     "2016-10-26": (A, mos) Första utgåvan.
 ...

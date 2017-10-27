@@ -19,6 +19,11 @@ Vilken typ av tester vill vi göra och vilka verktyg kan hjälpa oss med detta? 
 
 <!--more-->
 
+[WARNING]
+** Arbete pågår **
+<[/WARNING]
+<!--stop-->
+
 
 
 Förkunskaper {#forkunskaper}
