@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-10-27": (D, mos) Genomgången inför ht17.
     "2016-10-26": (C, mos) Flyttad från kmom01 till 02 efter feedback.
     "2016-10-15": (B, mos) Testad och genomgången.
     "2016-06-22": (A, mos) Första utgåvan.
@@ -8,21 +9,17 @@ revision:
 Kmom02: LESS och responsiv design
 ====================================
 
-[WARNING]
-Kursutveckling pågår inför ht17.
-[/WARNING]
+Låt oss påbörja skapandet av vårt eget tema till webbplatsen. Vi fyller vår me-sida med style med hjälp av LESS och vi eftersträvar en god och modulariserad kodstruktur.
 
-Då är det dags att vi skapar vårt eget tema till webbplatsen. Låt oss fylla vår me-sida med style med hjälp av LESS ooch en god och modulariserad kodstruktur.
+Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en modulär struktur av LESS-filer, LESS-moduler, som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser behöver fungera lika bra på desktop liksom på läsplatta och mobil.
 
-Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
+Vi behöver alltså lära oss LESS och responsiv design samt hur LESS förhåller sig till CSS.
 
-Vi behöver alltså lära oss LESS och responsiv design.
+Vi behöver också fortsätta att bekanta oss generellt med begreppen webbdesign och användbarhet på webben. Det viktigt med förståelse för vissa grundkoncept inom området.
 
-Vi behöver också fortsätta att bekanta oss med begreppen webbdesign och användbarhet på webben.
+Vi börjar försiktigt för att se hur LESS fungerar tillsammans med Anax Flat och hur vi kan jobba med ett tema via moduler i LESS.
 
-Vi håller det enkelt för att komma igång med hur LESS fungerar tillsammans med Anax Flat och hur vi kan jobba med ett tema via moduler i LESS.
-
-I nästa kmom bygger vi vidare på temat, så det kommer mer.
+I nästa kmom bygger vi vidare på temat med grid-baserad layout. Så det kommer mera och det gör inget om du tar det lite lugnt med stylen i detta kmom. 
 
 
 
@@ -98,6 +95,8 @@ Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 2. Videorna som börjar på 210* är kopplade till en av de artiklar du skall jobba igenom under övningarna nedan. Titta på dem samtidigt som du jobbar igenom artikeln.
 
+1. Det finns en videoserie "[Lär dig LESS]()" som visar hur du kommer igång och jobbar med LESS. Spellistan visar grundkonstruktioner i LESS.
+
 
 
 
@@ -108,6 +107,8 @@ Kika igenom följande styleguides till CSS för att få en känsla av hur du bö
 1. Kika snabbt igenom "[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)".
 
 1. Kika snabbt igenom [kod-guidelines för GitHubs Primer](http://primercss.io/guidelines/).
+
+1. De valideringsregler som gäller för CSS-kod i dbwebb-kurser är samlade i repot [`desinax/css-styleguide`](desinax/css-styleguide). Repot finns även som ett npm-paket [css-styleguide](https://www.npmjs.com/package/css-styleguide). Du kan [diskutera stylen i forumet](https://dbwebb.se/forum/viewtopic.php?f=9&t=6822).
 
 
 
@@ -134,12 +135,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -151,5 +146,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vad tycker du om LESS så här långt, och det sättet vi jobbar med LESS-moduler i vårt tema?
 * Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
-* Har du varit bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad tycker du om make så här långt?
+* Har du varit bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Hur uppfattar du make så här långt?
 * Fann du nytta i de videor som var kopplade till detta kursmoment?
