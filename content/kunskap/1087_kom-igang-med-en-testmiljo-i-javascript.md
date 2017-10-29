@@ -158,7 +158,7 @@ Kodmoduler att testa {#kodmoduler}
 
 Innan jag väljer verktyg så behöver jag en kodbas som jag vill testa. För denna övnings skull så bygger jag en kortlek och ett [kortspel Black Jack](https://sv.wikipedia.org/wiki/Black_Jack). Det bör fungera för att visa hur testerna kan fungera med den testmiljö jag nu skall välja.
 
-Du hittar mitt exempelprogram i kursrepot för ramverk2 under `example/black-jack`. Där finns det körbart i form av ett CLI-program, ett RESTful API och ett webb-GUI. Se dess README-fil för att se hur du startar upp respektive klient och hur du kör testsuiten.
+_Du hittar mitt exempelprogram i kursrepot för ramverk2 under `example/black-jack`. Där finns det körbart i form av ett CLI-program, ett RESTful API och ett webb-GUI. Se dess README-fil för att se hur du startar upp respektive klient och hur du kör testsuiten._
 
 Låt oss då titta på de olika tester som körs på systemet och vilka verktyg jag valde.
 
@@ -167,10 +167,226 @@ Låt oss då titta på de olika tester som körs på systemet och vilka verktyg 
 Enhetstestning i JavaScript {#unitjs}
 --------------------------------------------------------------------
 
+Det första testverktyget jag valde är för enhetstester. De verktygen jag valde mellan var främst [Mocha](https://mochajs.org/), [Yasmine](https://jasmine.github.io/) och [Jest](http://facebook.github.io/jest/). Mitt val föll på Mocha och jag gjorde ett testprogram i `example/test/unittest-mocha` för att se hur det fungerade.
+
+```text
+example/test/unittest-mocha$ tree .
+.          
+├── package.json     
+├── src             
+│   └── card        
+│       └── card.js 
+└── test           
+    └── card 
+        ├── card.js   
+        └── cardParameterized.js
+```
+
+Min källkod finns i `src/card` och mina enhetstester ligger i `test/card`. De båda filerna under test-katalogen innehåller samma tester, men testfallen är olika implementerade. Börja att kika i filen `card.js` då den är tydligast i hur testfallen kan skrivas. När du tycker att det blir alltför mycket kod i testfallen så tittar du istället i `cardParameterized.js` för att se hur man kan skriva mindre kod för samma testfall.
+
+Koden som testas är en klass `Card` som skall fungera som ett kort i en vanlig kortlek.
+
+Innan vi kan köra testerna så behöver vi installera Mocha. Det går att installera med `npm install mocha` eller bara `npm install` eftersom filen `package.json` redan innehåller en referens till Mocha. När installationen är klar kan du köra testfallen med `npm test` eftersom `package.json` redan är konfigurerad för att köra Mocha med enhetstesterna.
+
+```text
+npm install
+npm test
+```
+
+Resultatet du ser är körningen av samtliga enhetstester. Men hur väl lyckas vi med kodtäckningen?
+
 
 
 Kodtäckning vid enhetstestning {#covjs}
 --------------------------------------------------------------------
+
+När man kör enhetstester är man i princip beroende av ett verktyg som kan visa kodtäckningen för testfallen. Här väljer jag verktygen [Istanbul](https://istanbul.js.org/). I katalogen `example/test/unittest-mocha-istanbul` har jag utökat mitt exempel med att använda Istanbul tillsammans med Mocha.
+
+För att kunna köra testerna med kodtäckning behöver du först installera kommandoradsklienten [`nyc`](https://github.com/istanbuljs/nyc) via `npm install nyc` eller bara `npm install`. Sedan kan du köra testerna igen, nu med kodtäckning inkluderat.
+
+```text
+npm install
+npm test
+```
+
+I filen `package.json` körs nu kommandot `nyc --reporter=html --reporter=text mocha 'test/**/*.js'` där `nyc` sköter kodtäckningen för alla testfall som `mocha` exekverar. Vi får en rapport i ren text och i katalogen `cover` genereras en HTML-rapport.
+
+[FIGURE src=image/snapht17/mocha-nyc-codecoverage.png?w=w2 caption="Kodtäckningen är på 100% i vårt exempel."]
+
+Med en HTML-rapport är det enkelt att klicka sig fram och se vilka delar av koden som täcks av testfallen. Kodtäckning är ett viktigt verktyg när man gör enhetstester.
+
+
+
+Docker mot olika Node versioner {#docker}
+--------------------------------------------------------------------
+
+Ibland vill man välja vilken version av Node man använder för sina enhetstester. Det kan vara bra att kunna köra testerna mot godtycklig version av Node, eventuellt kombinerad med specifika versioner av andra programvaror. Här kan Docker hjälpa oss.
+
+I katalogen `example/test/unittest-docker` har jag förberett ett exempel som köra samma testfall men man kan välja att köra dem mot en Docker kontainer som kör en specifik installation av Node.
+
+Du kan köra testerna mot en specifik kontainer på något av följande sätt.
+
+```text
+docker-compose run node_alpine npm test
+npm run docker-alpine
+```
+
+Du kan sedan köra testerna mot en äldre version av Node på följande sätt.
+
+```text
+# Node version 7
+docker-compose run node_7_alpine npm test
+npm run docker-7
+
+# Node version 6
+docker-compose run node_6_alpine npm test
+npm run docker-6
+```
+
+Nu har du alltså möjligheten att köra tester med samma kodbas mot flera versioner av Node. Det är kraftfullt och kan spara dig tid när du utvecklar och måste ha koll på att koden fungerar på olika versioner.
+
+Det är filen `docker-compose.yml` som styr vilka kontainrar som startas upp. I `package-json` ligger de kommandon som körs och npm erbjuder en kortare väg att starta upp testerna.
+
+Filen `docker-compose.yml` hänvisar till de Docker-filer som ligger i katalogen `docker/`. Det är instruktioner till hur respektive image skall byggas upp och vad den skall innehålla. Alla images utgår från [node](https://store.docker.com/images/node). Kommandot `docker-compose` bygger upp respektive image första gången den används. Om du gör ändringar i en image-fil kan det kräva att du bygger om den, till exempel via `docker-compose build node_7_alpine`.
+
+
+
+### Dubbelkolla vilken version som körs {#nodeversion}
+
+Om du vill dubbelkolla vilken version av Node som körs i en kontainer, bara för att vara säker, så kan du starta upp en interaktiv session och kolla versionerna.
+
+```text
+$ docker-compose run node_alpine node
+> process.version       
+'v8.8.1'                
+> process.versions      
+{ http_parser: '2.7.0', 
+  node: '8.8.1',        
+  v8: '6.1.534.42',     
+  uv: '1.15.0',         
+  zlib: '1.2.11',       
+  ares: '1.10.1-DEV',   
+  modules: '57',        
+  nghttp2: '1.25.0',    
+  openssl: '1.0.2l',    
+  icu: '59.1',          
+  unicode: '9.0',       
+  cldr: '31.0.1',       
+  tz: '2017b' }         
+```
+
+
+
+Valideringsverktyg {#validering}
+--------------------------------------------------------------------
+
+Vi är ju inne på tester, men låt oss ta ett litet sidospår och säkerställa att vi även har validering av koden vi skriver, vi vill ha validering av kodstil och en linter. Det finns ett förberett exempel under `example/test/validate`.
+
+Eftersom vi utgår från kodstilen som definieras i [`javascript-style-guide`](https://www.npmjs.com/package/javascript-style-guide) så hämtar vi hem den och använder dess konfigurationsfiler.
+
+```text
+npm install javascript-style-guide --save-dev
+cp node_modules/javascript-style-guide/{.eslintrc.json,.jscsrc} .
+```
+
+Vi behöver installera respektive validator.
+
+```text
+npm install jscs eslint --save-dev
+```
+
+Nu kan vi köra dem och eftersom de redan finns definierade i `package.json` så kör vi dem via npm.
+
+```text
+npm run jscs
+npm run eslint
+```
+
+Om du hellre vill jobba med kommandot make och en Makefile så finns det i exempelkatalogen. Förutsatt att du har installerat även mocha och nyc (`npm install`) kan du köra samtliga tester via `make test`. Makefilen är föreberedd för att köra både validering och enhetstester.
+
+```text
+make test
+```
+
+När makefilen kör enhetstester så genereras kodtäckningen till katalogen `build/`. Det är för att undvika att skräpa ned i katalogen och samla bygg-relaterade filer i en katalog som är enkel att ta bort vid behov. Du kan se detaljer för hur `nyc` konfigureras i dess konfigfil `.nycrc`.
+
+
+
+Continuous integration {#cichain}
+--------------------------------------------------------------------
+
+Nu när vi har en makefil på plats kan vi fortsätta och sätta igång en CI-kedja för att automatisera våra tester.
+
+Det som sammanhåller alla tester är nu sekvensen `make install check test` som installerar det som behövs via `package.json` och sen kör testerna.
+
+```text
+make install   # Installerar allt som finns i package.json
+make check     # Kollar och visar versioner på installerade verktyg
+make test      # Exekvera validatorer och testfall
+```
+
+Då bygger vi en CI kedja. Som demo objekt använder jag GitHub repot [janaxs/blackjack](https://github.com/janaxs/blackjack). Kika där så ser du allt integrerat och badges som visar status.
+
+
+
+### Byggverktyg Travis och CircleCI {#buildtools}
+
+Först tar vi ett byggsystem, eller två. Jag väljer [Travis](https://travis-ci.org/) och [CircleCI](https://circleci.com/). Syftet med byggsystemet är att checka ut din kod och köra dina tester varje gång du checkar in en ny version av din kod.
+
+Jag lägger till mitt repo till Travis och CircleCI.
+
+I katalogen `example/test/ci` ligger en konfigurationsfil `.travis.yml` och en `.circleci/config.yml` som är exempel på konfigurationsfiler för Travis respektive CircleCI (v2). Om du kikar i filerna ser du referenser till `make install` och `make test`.
+
+
+
+### Kodtäckning med Coveralls och Codecov {#codecov}
+
+Byggsystemen kör testerna och kan sedan rapportera kodtäckningen till två system som är specialiserade på kodtäckning. I detta fallet använder jag [Coveralls](https://codecov.io/gh/janaxs/blackjack) och [Codecov](https://codecov.io/).
+
+Jag lägger till mitt repo till Coveralls och Codecov.
+
+Sedan behöver jag skicka en rapport från byggsystemets senaste tester. Det gör jag med `package.json` på följande sätt.
+
+```json
+"scripts": {
+  "report-coveralls": "nyc report --reporter=text-lcov | coveralls",
+  "report-codecov": "nyc report --reporter=lcov > coverage.lcov && codecov"
+},
+``` 
+
+Det som behövs för att detta skall fungera är att paketen `coveralls` och `codecov` installeras. Det är specifika paket som bara är till för att rapportera kodtäckningen.
+
+```text
+npm install coveralls codecov --save-dev
+```
+
+Vid nästa bygge kommer ny kodtäckningen skickas upp till respektive system, förutsatt att kommandona körs. Jag har valt att köra dem från Travis så du kan se hur de körs i konfigurationsfilen `.travis.yml`.
+
+```text
+after_success:
+    - npm run report-coveralls
+    - npm run report-codecov
+```
+
+
+
+### Kodkvalitet med Codeclimate och Codacy {#codequal}
+
+Till slut integrerar jag även med två verktyg som har fokus på kodkvalitet. Det är [Codeclimate](https://codeclimate.com/) och [Codacy](https://www.codacy.com/app/mosbth/blackjack/dashboard).
+
+Jag lägger till mitt repo till Codeclimate och Codacy.
+
+De båda verktygen har olika sätt att visualisera hur de upplever min kodkvalitet. Verktygen kan också visa kodtäckning om jag väljer att bifoga en sådan rapport.
+
+Delvis kan alltså dessa båda verktyg ersätta de två verktyg vi såg som enbart hade fokus på kodtäckning. Vilka verktyg man i slutändan använder får bli en sak att utvärdera.
+
+I detta läget behöver jag inte göra mer, de båda verktygen checkar automatiskt ut min kod när den uppdateras.
+
+
+
+### CI kedja klar {#ciklar}
+
+Då var vår CI kedja klar med två alternativ för byggsystem, kodtäckning och kodkvalitet. 
 
 
 
@@ -178,21 +394,6 @@ Funktionstestning i JavaScript {#funktionjs}
 --------------------------------------------------------------------
 
 
-
-Docker mot olika Node versioner {#docker}
---------------------------------------------------------------------
-
-
-
-
-CI kedja {#cichain}
---------------------------------------------------------------------
-
-Travis CircleCi
-
-Codecov ..
-
-CodeClimate ...
 
 
 
