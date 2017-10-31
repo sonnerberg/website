@@ -6,6 +6,7 @@ category:
     - anax
     - anax-flat
 revision:
+    "2017-10-31": (F, mos) Infotext om HTTPS/SSH.
     "2017-10-19": (E, mos) Genomgången inför ht17, mindre uppdateringar.
     "2016-11-01": (D, mos) Bort med referenser till YAML.
     "2016-10-26": (C, mos) Bort med referenser till att ändra temat.
@@ -379,6 +380,16 @@ Utför sedan de instruktioner du  ser på GitHub, under rubriken som säger någ
 > *"…or push an existing repository from the command line"*
 
 [FIGURE src=/image/snapht16/design-create-github-repo.png?w=w2 caption="Instruktioner på GitHub när du skapar nytt tomt repo."]
+
+[INFO]
+**Välj SSH eller HTTPS**
+
+Bilden ovan visar SSH som kräver att du har SSH-nycklar kopplade mellan din dator och GitHub. För varje ny dator man använder så behöver man sätta upp SSH-nycklarna. Så här gör man när man jobbar "på riktigt" med Git och GitHub.
+
+Välj HTTPS så authentiserar du dig med ditt login och lösenord. Detta är enklast att komma igång med. Välj HTTPS om du är osäker på vad SSH-nycklar innebär.
+
+Det är väl investerad tid att lägga till SSH-nycklar.
+[/INFO]
 
 Ladda om sidan på GitHub så ser du nu ditt repo, om allt gick bra.
 
