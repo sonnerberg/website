@@ -2,6 +2,7 @@
 title: javascript1
 author: mos
 revision:
+    "2017-10-31": (I, mos) Referens till bok om ES6.
     "2017-06-07": (H, mos) Uppdatering av kursplan med ny kurskod.
     "2016-11-01": (G, mos) Ladok moment och skrev om lektionsplan/studieplan.
     "2016-03-04": (F, mos) Notis om nytt namn och ny kurskod.
@@ -173,11 +174,15 @@ Följande böcker har jag valt som referenslitteratur som är en fördjupning av
 
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
 
-* **[Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)** -- Marijn Haverbeke  
-    En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i JavaScript.
+* **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
+    En bok om ES6 som förutsätter att man kan ES5. Samma författare som kurslitteraturen.
 
 * **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford  
     En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
+
+* **[Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)** -- Marijn Haverbeke  
+    En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i JavaScript.
+
 
 <!--
 Boken utgått.
