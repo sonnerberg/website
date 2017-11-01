@@ -386,7 +386,9 @@ I detta läget behöver jag inte göra mer, de båda verktygen checkar automatis
 
 ### CI kedja klar {#ciklar}
 
-Då var vår CI kedja klar med två alternativ för byggsystem, kodtäckning och kodkvalitet. 
+Då var vår CI kedja klar med två alternativ för byggsystem, kodtäckning och kodkvalitet.
+
+Du kan ta en närmare titt på repot `janaxs/blackjack` om du vill se valideringsverktyg, enhetstester och ci-kedjan i ett sammanhang i ett repo.
 
 
 
