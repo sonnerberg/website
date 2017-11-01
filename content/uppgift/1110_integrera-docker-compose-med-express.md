@@ -5,7 +5,8 @@ category:
     - docker
     - kurs ramverk2
 revision:
-  "2017-10-20": (A, mos) Första utgåvan.
+    "2017-11-01": (B, mos) Förtydliga om att tagga v2.0.0 + en extrauppgift om Dockerfiles.
+    "2017-10-20": (A, mos) Första utgåvan.
 ...
 Integrera docker-compose med Express
 ==================================
@@ -37,6 +38,8 @@ Krav {#krav}
 
 1. Skapa en fil `docker-compose.yml` som startar upp tre olika kontainrar av olika version med Node. Spara filen i `me/redovisa`.
 
+1. Tagga och pusha ditt redovisa-repo med v2.0.0. 
+
 1. Gör en dbwebb publish för att kolla att allt validerar och fungerar.
 
 ```text
@@ -48,9 +51,11 @@ dbwebb publish me
 Extrauppgift {#extra}
 -----------------------
 
-Här är en extrauppgift som du verkligen borde försöka lösa. Sen har du god koll på basen i Docker.
+Här är extrauppgifter som du kan försöka lösa för att bli mer vän med Docker.
 
-1. Se hur Cimage har skapat egna images och publicerat dem i Docker Store. Gör en egen image (som bygger på Node) som du publicerar på Docker Store och använder i ditt repo i `me/redovisa`.
+1. Skapa egna images i form av Dockerfile och lägg dem i ditt redovisa-repo. Låt sedan din `docker-composer.yml` använda sig av dina egna images (vi kommer se exempel på hur detta fungerar i nästa kmom).
+
+1. Se hur Cimage har skapat egna images och publicerat dem i Docker Store. Gör egna images (som bygger på Node) som du publicerar på Docker Store och använder i ditt repo i `me/redovisa`.
 
 
 
