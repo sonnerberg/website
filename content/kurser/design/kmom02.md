@@ -106,7 +106,7 @@ Kika igenom följande styleguides till CSS för att få en känsla av hur du bö
 
 1. Kika snabbt igenom "[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)".
 
-1. Kika snabbt igenom [kod-guidelines för GitHubs Primer](http://primercss.io/guidelines/).
+<!-- 1. Kika snabbt igenom [kod-guidelines för GitHubs Primer](http://primercss.io/guidelines/). -->
 
 1. De valideringsregler som gäller för CSS-kod i dbwebb-kurser är samlade i repot [`desinax/css-styleguide`](desinax/css-styleguide). Repot finns även som ett npm-paket [css-styleguide](https://www.npmjs.com/package/css-styleguide). Du kan [diskutera stylen i forumet](https://dbwebb.se/forum/viewtopic.php?f=9&t=6822).
 
