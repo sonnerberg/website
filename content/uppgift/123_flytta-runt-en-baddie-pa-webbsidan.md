@@ -15,7 +15,7 @@ created: "2014-06-18 08:47:26"
 Flytta runt en Baddie på webbsidan
 ==================================
 
-En enklare uppgift för att öva på att använda variablar och skapa if- eller switch-sats i JavaScript.
+En enklare uppgift för att öva på att använda variabler och skapa if- eller switch-sats i JavaScript.
 
 <!--more-->
 
@@ -36,7 +36,7 @@ Du har gjort [lab1](uppgift/javascript-med-variabler-loopar-och-inbyggda-funktio
 Introduktion {#intro}
 -----------------------
 
-För att lyckas med uppgiften behöver du kunna hur du sätter och använder variablar i JavaScript, hur du deklarerar en if/switch-sats samt kunna grundläggande artimetik och villkorsatser i JavaScript.
+För att lyckas med uppgiften behöver du kunna hur du sätter och använder variabler i JavaScript, hur du deklarerar en if/switch-sats samt kunna grundläggande aritmetik och villkorsatser i JavaScript.
 
 Använd dina kunskaper från tidigare övningar och exempel för att fullfölja uppgiften.
 
