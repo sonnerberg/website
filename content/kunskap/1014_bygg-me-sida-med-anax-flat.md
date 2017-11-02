@@ -6,6 +6,7 @@ category:
     - anax
     - anax-flat
 revision:
+    "2017-11-02": (G, mos) Ignore theme/.
     "2017-10-31": (F, mos) Infotext om HTTPS/SSH.
     "2017-10-19": (E, mos) Genomgången inför ht17, mindre uppdateringar.
     "2016-11-01": (D, mos) Bort med referenser till YAML.
@@ -348,8 +349,9 @@ $ git status    # Visa vilka filer som är (inte) del av repot
 Vi skall inte committa alla filer, några vill vi inte committa och därför skapar vi en fil `.gitignore` som innehåller följande.
 
 ```text
-cache
-vendor
+/cache/
+/vendor/
+/theme/
 ```
 
 Nu kan vi köra `git status` följt av `git add` för att lägga till de filerna vi vill ha.
