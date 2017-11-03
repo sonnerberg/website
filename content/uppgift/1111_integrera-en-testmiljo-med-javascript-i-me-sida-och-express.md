@@ -5,64 +5,66 @@ category:
     - test
     - kurs ramverk2
 revision:
-  "2017-10-23": (A, mos) Första utgåvan.
+  "2017-11-03": (A, mos) Första utgåvan.
 ...
 Integrera en testmiljö med JavaScript i me-sida och Express
 ==================================
 
-Du skall bygga upp en testmiljö för ditt JavaScript-projekt. Det handlar om vilka verktyg du använder för enhetstestning, kodtäckning, funktionstester och en kedja av Continuos Integration samt hur du kan använda Docker vid tester.
+Du skall bygga upp en testmiljö för ditt JavaScript-projekt. Det handlar om vilka verktyg du använder för enhetstestning, kodtäckning och en kedja av Continuous Integration samt hur du kan använda Docker vid tester.
 
 <!--more-->
-[WARNING]
-** Arbete pågår **
-<[/WARNING]
-<!--stop-->
 
 
 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat Docker och du har jobbat igenom artikeln "[Kom igång med Docker som utvecklingsmiljö](kunskap/kom-igang-med-docker-som-utvecklingsmiljo)".
+Du har kunskaper motsvarande artikeln "[Kom igång med en testmiljö i JavaScript](kunskap/kom-igang-med-en-testmiljo-i-javascript)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Du skall lägga till kontainrar för test. Kontainrarna skall kunna köra flera versioner av Node (och PHP).
+Du skall skapa grunden för enhetstester och kodtäckning samt integrera dessa i ditt projekt, din redovisa-sida. 
+
+Du skall använda dessa grunder för att bygga en CI-kedja med externa tjänster som bygger din kod och visar kodtäckning samt kodkvalitet.
+
+Du skall lägga till images för test. Du skall kunna exekvera enhetstester i flera kontainrarna som kör olika versioner av din mälmiljö.
+
+Som ett alternativ till `make` kan du använda script i `npm`. Men se till att de fungerar på liknande sätt.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Skapa en fil `docker-compose.yml` som startar upp tre olika kontainrar av olika version med PHP och Apache (eller Nginx). Spara filen i `me/kmom02/docker`.
+1. Allt som behövs i ditt repo skall installeras vid `make install`.
 
-1. Skapa en fil `docker-compose.yml` som startar upp tre olika kontainrar av olika version med Node. Spara filen i `me/redovisa`.
+1. Välj och integrera ett verktyg för enhetstester. Verktyget skall exekvera enhetstester vid `make test`.
 
-1. Gör en dbwebb publish för att kolla att allt validerar och fungerar.
+1. Lägg till så att kodtäckning fungerar vid enhetstester.
 
-```text
-dbwebb publish me
-```
+1. Docker skall fungera tillsammans med dina tester. Använd egna Dockerfiler som skapar dina anpassade images. Skapa minst tre images för olika versioner av din målmiljö. Starta testerna via `docker-compose run` och genom `make` mot dina tre images via `make test1`, `make test2` och `make test3`.
+
+1. Bygg en CI-kedja och integrera med en byggtjänst likt Travis eller CircleCI som checkar ut ditt repo och utför `make install test`. Badga din README.
+
+1. Bygg vidare på din CI-kedja och integrera med minst en tjänst för kodkvalitet och kodtäckning. Du kan välja att integrera mot flera tjänster och/eller en tjänst som löser kodtäckning och en tjänst som löser kodkvalitet. Badga din README.
+
+1. Committa och tagga ditt redovisa-repo med taggen 3.0.0 eller senare, ladda upp till GitHub.
+
+1. Kontrollera att allt validerar och fungerar. Ladda upp det på studentservern.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-Här är en extrauppgift som du verkligen borde försöka lösa. Sen har du god koll på basen i Docker.
-
-1. Se hur Cimage har skapat egna images och publicerat dem i Docker Store. Gör en egen image (som bygger på Node) som du publicerar på Docker Store och använder i ditt repo i `me/redovisa`.
+Det finns inga extrauppgifter.
 
 
 
 Tips från coachen {#tips}
 -----------------------
-
-Docker är virtualisering, så det kan troligen krångla beroende på den miljö du har. Ta det lugnt och var envis.
-
-Läs manualen för Docker för att förstå hur det hänger ihop och fungerar.
 
 Lycka till och hojta till i forumet om du behöver hjälp!

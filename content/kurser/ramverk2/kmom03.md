@@ -2,21 +2,22 @@
 author:
     - mos
 revision:
-    "2017-10-23": "(PA1, mos) Arbete påbörjat."
+    "2017-11-03": "(A, mos) Första utgåvan."
 ...
 Kmom03: Test
 ==================================
 
-Vi finner ut en testmiljö och förbereder olika typer av tester.
+Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi upp grunden i en testmiljö för JavaScript. Det handlar främst om enhetstestning och kodtäckning samt basen för en CI-kedja (Continuous integration).
 
-[WARNING]
-Kursutveckling pågår.
-[/WARNING]
+Det blir också en introduktion i hur vi kan använda Docker för att köra våra enhetstester mot olika versioner av en målmiljö och vi får möjligheten att skapa våra egna anpassade Docker-images.
 
-<!--stop-->
+Vi påbörjar samtidigt grunden till en klient/server applikation i JavaScript som vi under resten av kursen bygger vidare på och använder för att testa och utvärdera olika aspekter av JavaScript i ramverk.
+
+Du får möjligheten att pröva på testdriven utveckling genom att utveckla testfallen innan du skriver koden.
+
 <!--more-->
 
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
+[FIGURE src=image/snapht17/mocha-nyc-codecoverage.png?w=w2 caption="Kodtäckningen är på 100% i vårt exempel."]
 
 Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
 
@@ -37,7 +38,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen.
+1. Webbplatsen för [Mocha](https://mochajs.org/) ger dig en översikt av ett verktyg för att testa din JavaScript-kod med enhetstester. Du skall själv välja ett eget testverktyg att använda, Mocha är en av möjligheterna.
+
+1. Verktyget [Istanbul](https://istanbul.js.org/) kan kopplas till Mocha för att hantera kodtäckning vid enhetstester. 
+
+1. Det finns en forumtråd med tips om [artiklar för testning](t/6984). Kika där för inspiration.
 
 
 
@@ -52,8 +57,7 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom01/express`.
-
+1. Jobba igenom artikeln "[Kom igång med en testmiljö i JavaScript](kunskap/kom-igang-med-en-testmiljo-i-javascript)" för att komma igång med tester och en testmiljö. Spara dina exempelprogram i `me/kmom03/unittest`.
 
 
 
@@ -61,7 +65,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk2](uppgift/bygg-en-me-sida-till-ramverk2)". Det handlar om att bygga din me-sida med Express och publicera på Github. Spara allt under `me/redovisa`.
+1. Gör uppgiften "[Integrera en testmiljö med JavaScript i me-sida och Express](uppgift/integrera-en-testmiljo-med-javascript-i-me-sida-och-express)". Det handlar om att integrera enhetstester, kodtäckning och en CI-kedja i din me-sida. Spara allt under `me/redovisa`.
+
+1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript](uppgift/bygg-en-klient-server-applikation-i-javascript)". Du kan inledningsvis jobba i `me/kmom03/tdd`. I slutet skall du integrera en demo av din applikation i repot `me/redovisa`.
 
 
 
@@ -76,9 +82,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
-* Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
-* Använde du någon form av scaffolding som Express erbjuder?
-* Jobbar du med Markdown för innehållet, eller annat liknande?
+* Berätta vilka tekniker/verktyg du valde för enhetstester och kodtäckning och varför?
+* Berätta om cin CI-kedja och reflektera över de valen du gjorde?
+* Hur väl lyckades du utvärdera TDD-konceptet och vilka är dina reflektioner?
+* Berätta om tankarna kring din klient/server applikation och nämn de tekniker du använder.
 
 Har du frågor eller funderingar så ställer du dem i forumet.
