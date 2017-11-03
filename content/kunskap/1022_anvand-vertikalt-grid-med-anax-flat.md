@@ -1,24 +1,25 @@
 ---
 author: mos
-revision:
-    2016-11-01: (E, mos) Förtydligande om användning av container().
-    2016-11-01: (D, mos) La till avslutande div.
-    2016-10-26: (C, mos) Ändrade upplägg för clearfix och dess användning.
-    2016-10-24: (B, mos) La till en intro till artikeln.
-    2016-06-21: (A, mos) Första utgåvan.
 category:
     - kurs/design
     - anax flat
     - theme
     - less
     - css grid system
+revision:
+    "2017-11-03": (F, mos) Översyn inför ht17 och lade till repo i desinax/npm.
+    "2016-11-01": (E, mos) Förtydligande om användning av container().
+    "2016-11-01": (D, mos) La till avslutande div.
+    "2016-10-26": (C, mos) Ändrade upplägg för clearfix och dess användning.
+    "2016-10-24": (B, mos) La till en intro till artikeln.
+    "2016-06-21": (A, mos) Första utgåvan.
 ...
 Använd ett vertikalt grid med Anax Flat
 ===================================
 
 [FIGURE src=/image/snapvt16/grid-displayed.png?w=c5&a=30,30,40,40 class="right"]
 
-Vi har sedan tidigare byggt ett responsivt tema till Anax Flat och nu är det dags att bygga ut det med ett vertikalt grid.
+Vi har sedan tidigare byggt ett responsivt tema till Anax Flat och nu är det dags att bygga ut det baserat på ett vertikalt grid.
 
 Vi skall använda LESS-moduler för att bygga ut vårt tema, delvis med *mixins* som hjälper oss att implementera ett grid, ett rutmönster där vi placerar ut webbsidans olika element.
 
@@ -42,17 +43,17 @@ Exempel i kursrepot {#exempel}
 
 Informationen i denna artikel bygger på de exempelprogram som återfinns i kursrepot under [`example/grid`](/repo/design/example/grid/).
 
-I [`example/grid/css/css`](/repo/design/example/grid/css) så bygger vi upp en enkel gridlayout med CSS-klasser. Vi kikar på hur en sådan CSS-fil kan genereras med JavaScript. Detta fungerar som en introduktion till konceptet och för att komma igång med tankarna kring hur ett grid fungerar.
+I [`example/grid/css/css`](/repo/design/example/grid/css) så bygger vi upp en enkel gridbaserad layout med CSS-klasser. Vi kikar på hur en sådan CSS-fil kan genereras med JavaScript. Detta fungerar som en introduktion till konceptet och för att komma igång med tankarna kring hur ett grid fungerar.
 
-Vi går sedan raskt vidare till [`example/grid/less`](/repo/design/example/grid/less) där vi bygger ett liknande grid med LESS-kod som baseras på ett litet "grid-ramverk" som heter "The Semantic Grid System". Vi tittar på hur mixinen löser det som vi kunde lösa med CSS/JavaScript.
+Vi går sedan raskt vidare till [`example/grid/less`](/repo/design/example/grid/less) där vi bygger ett liknande grid med LESS-kod som baseras på en modul som heter "The Semantic Grid System". Vi tittar på hur LESS-modulen med mixins löser det som vi tidigare löste med CSS/JavaScript.
 
 Så här långt har vi koncepten om fluid och fixed grid. Nu för vi över det till ett responsivt grid med media queries.
 
-I tredje exemplet [`example/grid/flex`](/repo/design/example/grid/flex) så visar vi hur tekniken med CSS FlexBox kan användas i vårt LESS-baserade grid, som ett alternativ till layout med float.
+I tredje exemplet [`example/grid/flex`](/repo/design/example/grid/flex) visar vi hur tekniken med CSS FlexBox kan användas i vårt LESS-baserade grid, som ett alternativ till layout med float.
 
-Avslutningsvis finns det sista exemplet [`example/grid/fluid`](/repo/design/example/grid/fluid) som visar hur ett renodlat fluid-grid kan implementeras med antingen float eller Flexbox som modell för layouten.
+Avslutningsvis finns det sista exemplet [`example/grid/fluid`](/repo/design/example/grid/fluid) som visar hur ett renodlat fluid-grid kan implementeras med antingen float eller flexbox som modell för layouten.
 
-Det kan vara en god idé att du klickar runt bland exemplen innan du fortsätter att läsa. Det kan ju inte skada att få en visuell bild av vart artikeln tänker ta dig.
+Det kan vara en god idé att du klickar runt bland exemplen innan du fortsätter att läsa. Det kan ju inte skada att få en visuell bild av vart artikeln tänker ta dig. Länkarna ovan leder dig till körbara exempel som du kan testa i din webbläsare.
 
 
 
@@ -82,6 +83,8 @@ Man laddar ned scriptet med kompilatorn via [webbplatsen lesscss.org](http://les
 Notera att länken till stylesheeten har `rel=stylesheet/less` och att man kan skicka in inställningar till kompilatorn via objektet `less`.
 
 När man har en webbplats i produktion så vill man inte kompilera stylen på detta viset. Men vid utveckling så är det inte alls dumt. Bra att ha, helt enkelt.
+
+Detta var enbart för att visa hur kompileringen av exempelkoden är uppbyggd.
 
 
 
@@ -120,15 +123,15 @@ Säg sedan att vi har följande CSS-kod.
 
 Nu har vi grunden till ett grid som ger oss en rad som består av kolumner. En kolumn kan ha olika storlekar och en viss marginal till nästa kolumn, en *gutter*.
 
-Om man istället för pixlar låter bredden vara baserad på procent, så kan man få ett *fluid* grid som ändrar sig efter webbläsarens bredd. Ett fluid grid är grunden för ett *responsivt* grid.
+Ovan har vi ett grid med fast bredd, _fixed width grid_. Om man istället för pixlar låter bredden vara baserad på procent, så får man ett *fluid* grid som ändrar sig efter webbläsarens bredd. Ett fluid grid är grunden för ett *responsivt* grid som kompletterats med media queries.
 
-Det vi får är alltså rader och kolumner där varje kolumn sedan kan fyllas med innehåll. Vi får ett strukturerat sätt att placera ut innehåll på vår webbplats.
+Det vi har är alltså rader och kolumner där varje kolumn kan fyllas med innehåll. Vi får ett strukturerat sätt att placera ut innehåll på vår webbplats. Innehåll skall placeras i en region, i en ruta, eller kolumn om man så vill.
 
 Det kan se ut så här.
 
 [FIGURE src=/image/snapvt16/grid-fixed.png?w=w2 caption="Ett vanligt grid för en webbplats med rader och kolumner."]
 
-I kursrepot design finns ett exempel som visar hur ett [fixed](/repo/design/example/grid/css/grid-fixed.html) och ett [fluid](/repo/design/example/grid/css/grid-fluid.html) grid kan se ut när man inplementerar det med CSS-klasser. Testa det och se hur de båda griden fungerar när du ändrar webbläsarens bredd.
+I kursrepot design finns ett exempel som visar hur ett [fixed](/repo/design/example/grid/css/grid-fixed.html) och ett [fluid](/repo/design/example/grid/css/grid-fluid.html) grid kan se ut när man implementerar det med CSS-klasser. Testa det och se hur de båda griden fungerar när du ändrar webbläsarens bredd.
 
 
 
@@ -142,7 +145,7 @@ Vad händer då om man vill ha en annan storlek på gridet? Då kan man generera
 
 Här kan du alltså sätta förutsättningar för det grid du vill ha och generera CSS-klasser som löser ditt grid. Välj `px` eller `%` för vilken typ av grid du vill skapa.
 
-Låt nu se om vi kan förenkla vårt grid med LESS och mixins, för att göra det mer dynamiskt än CSS-klasserna.
+Låt nu se om vi kan förenkla vårt grid med LESS och mixins, för att göra det mer dynamiskt än de hårdkodade CSS-klasserna.
 
 
 
@@ -159,10 +162,9 @@ Vi skall nu kika på ett par enkla mixins som hjälper oss att skapa ett grid.
 
 Basen i vårt grid kommer från "[The Semantic Grid System](http://dbwebb-se.github.io/semantic.gs/webroot/)". Det är ett projekt som numer [inte verkar uppdateras](https://github.com/tylertate/semantic.gs/issues/94) och jag har valt att plocka ur grunden ur det och jobba vidare med den. Jag tycker koden är enkel och ren och på ett enkelt sätt visar hur ett grid kan fungera.
 
-Jag gjorde en exempelsida där jag visar hur jag [använder orginalet](/repo/design/example/grid/less/grid-original.html), bara så jag ser att jag är någorlunda kompatibel. Dock fungerar inte att flytta en kolumn utanför gridets ram, det fungerade bara i min uppdaterade variant.
+Jag gjorde en exempelsida där jag visar hur jag [använder orginalet](/repo/design/example/grid/less/grid-original.html), bara så jag ser att jag är någorlunda kompatibel. Du kan kika på [orginalets grid.less](/repo/design/example/grid/less/less/grid-original.less) och min aningen [uppdaterade grid.less](/repo/design/example/grid/less/less/grid.less). Det är inga stora skillnader.
 
-Du kan kika på [orginalets grid.less](/repo/design/example/grid/less/less/grid-original.less) och min aningen [uppdaterade grid.less](/repo/design/example/grid/less/less/grid.less). Det är inga stora ändringar.
-
+Som du ser ryms nästan all kod i LESS-modulen inom en A4-sida. Det är inte mycket kod som behövs för att skapa ett grid.
 
 
 
@@ -196,7 +198,7 @@ Du känner igen dem sen tidigare. De sista två raderna bestämmer om det blir e
 
 ####Mixin `.row()` {#row}
 
-I HTML-koden kan en rad se ut så här.
+I HTML-koden som är förberedd för att stylas enligt grid kan en _rad_ se ut så här.
 
 ```html
 <div class="row">
@@ -261,8 +263,9 @@ Det är alltså en traditionell variant av *clearfix* som tvingar en omritning a
 
 Om vi nu kopierar in ovanstående LESS-kod på webbplatsen [LESS2CSS](http://less2css.org/) så kan vi testa och se vilken CSS_kod som genereras.
 
-
 [FIGURE src=/image/snapvt16/less2css.png?w=w2 caption="LESS2CSS kan hjälpa dig att utveckla och testa din LESS_kod."]
+
+Du bör verkligen kopiera in koden för att se hur det ser ut i verktyget. Det kan hjälpa dig att förstå hur LESS blir till CSS och vilka konstruktioner som genererar vilken kod.
 
 Rätt kod som genereras bör alltså bli följande.
 
@@ -338,11 +341,11 @@ Den viktiga delen för vårt exempel är följande rader som återfinns i layout
 }
 ```
 
-Här använder vi mixinen för `.column()` för att bestämma antalet kolumners bredd.
+Här använder vi mixinen för `.column()` för att bestämma hur många kolumner i gridet som de olika HTML-elementen skall spänna över.
 
 Ta LESS-koden ovan och lägg till i ditt exempel i LESS2CSS så ser du exakt vilken CSS-kod som genereras. Det är ett bra sätt att testa och felsöka, så ta det gärna som en vana att ha en flik öppen med LESS2CSS. 
 
-Det ser ut så här.
+Den genererade koden ser ut så här.
 
 ```css
 .flash {
@@ -361,7 +364,7 @@ Det ser ut så här.
 }
 ```
 
-En fördel är att vi kan styra all layout i filen `layout.less` och vi "skräpar" inte ned HTML-koden med layout-klasser.
+En fördel med `layout.less` är att vi kan styra all layout i den filen och vi "skräpar" inte ned HTML-koden med specifika grid/layout-klasser.
 
 
 
@@ -436,7 +439,7 @@ Sidor som är optimerade för olika enheter skall sätta en meta-header med `wid
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-Vill du läsa mer om bakgrunden, så kika på Google Developers om "[Responsive web design basics](https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport)".
+Vill du läsa mer om bakgrunden, så kika på Google Developers om "[Responsive web design basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)".
 
 
 
@@ -490,7 +493,7 @@ Du kan testa mitt responsiva exempel på [`grid-responsive.html`](/repo/design/e
 Ett grid på Anax Flat {#aflat}
 -------------------------------
 
-Vårt Anax Flat har en bestämd struktur av HTML-kod. Det är en vy som bestämmer hur HTML-koden genereras. För att applicera vårt nya grid på Anax Flat behöver vi viss vetskap om hur HTML-koden generas.
+Vårt Anax Flat har en bestämd struktur av HTML-kod. Det är en vy som bestämmer hur HTML-koden genereras. För att applicera ett grid på Anax Flat behöver vi viss vetskap om hur HTML-koden generas.
 
 
 
@@ -572,13 +575,13 @@ Läs om respektive konstruktion i artikeln om [flex på MDN](https://developer.m
 Ett fluid grid med float och flex {#fluidfloatflex}
 -------------------------------
 
-Man kan fråga sig om det numer kommer byggas speciellt många webbplatser som har en fast bredd. Vad tror du? Jag tror inte det. Men så många olika storlekar på läsplattor och mobiler så bör varje webbplats innehålla element av responsivitet. Användarna kräver det.
+Man kan fråga sig om det numer kommer byggas speciellt många webbplatser som har en fast bredd. Vad tror du? Jag tror inte det. Med så många olika storlekar på läsplattor och mobiler så bör varje webbplats innehålla element av responsivitet. Användarna kräver det.
 
-Så, med det i tanken så förädlar jag koden bakom griddet ytterligare en gång. Nu rensar jag bort koden som fanns för att stödja fast bredd och kvar blir ett grid som enbart är fluid. Men det räcker troligen rätt långt.
+Så, med det i tanken så förädlar jag koden bakom gridet ytterligare en gång. Nu rensar jag bort koden som fanns för att stödja fast bredd och kvar blir ett grid som enbart är fluid. Men det räcker troligen rätt långt.
 
 Det finns två exempel, ett som är gjort med tekniken [float](/repo/design/example/grid/fluid/grid-responsive-float.html) och ett som är gjort med [flex](/repo/design/example/grid/fluid/grid-responsive-flex.html). Kika på dem och ta fram koden bakom dem. Lägg koden sida vid sida och se vad som skiljer dem åt. Du kommer att märka att det inte är så stor skillnad.
 
-En viktig likhet är att båda implementationerna av gridet har samma interface i form av mixins. Det innebär att du kan bygga en webbplats baserad på gridets mixins och du får möjlighet att byta ut gridets implementation, utan att störa webbplatsens utseende. Ett gemensamt interface. Det är bra det.
+En viktig likhet är att båda implementationerna av gridet har samma interface i form av mixins. Det innebär att du kan bygga en webbplats baserad på gridets mixins och du får möjlighet att byta ut gridets implementation, utan att störa webbplatsens utseende. Ett gemensamt interface, du kan välja float eller flexbox. Det är bra det, planerad kodåteranvändning och god kodstruktur även i LESS/CSS.
 
 
 
@@ -608,9 +611,9 @@ I fallet ovan har jag kompletterat mitt grid med en mixin `.showGrid()` som hjä
 }
 ```
 
-Nu när vi har ett fluid grid så behöver även det visualiserade gridet vara fluid. Men i fallet ovan är det löst i ovan mixin.
+Nu när vi har ett fluid grid så behöver även det visualiserade gridet vara fluid. Men i mitt fall är det löst i ovan mixin.
 
-Du behöver även en bild som representerar ditt grid. Här är en länk till ett par [varianter av grid-bilder](/img/grid/) som jag själv brukar använda vid behov.  
+Du behöver även en bild som representerar ditt grid. Här är en länk till ett par [varianter av grid-bilder](/img/grid/) som jag själv brukar använda vid behov. Du kan själv se vilken min mixin använder ovan.
 
 
 
@@ -619,7 +622,15 @@ Använd `box-sizing: border-box` {#boxsising}
 
 Jag har inte använt det i mina exempel av gridet. Men, en konstruktion som är bra att använda --- och gör att man slipper en del bekymmer --- är `box-sizing: border-box`. Den gör så att ett elements bredd och höjd räknar in eventuell padding och border. Det gör det enklare att kombinera den style som säger `width: 100%` tillsammans med padding och border.
 
-Så, tipset är att lägga in konstruktionen i din mixin för kolumnerna.
+Så, tipset är att lägga in konstruktionen i din mixin `.column()` för kolumnerna. Det gör det enklare att hantera innehållet i respektive kolumn och styla det med padding och border.
+
+```less
+.column(@col, @columns: @columns) {
+    // resten av koden...
+    box-sizing: border-box;
+}
+```
+
 
 
 
@@ -629,3 +640,7 @@ Avslutningsvis {#avslutning}
 Detta var en genomgång av tekniker bakom att implementera gridsystem med CSS och LESS. Vi har pratat om fixed, fluid och responsive varianter och du har sett grid-implementationer med både float och flex.
 
 Du har nu en grund att stå på när det blir dags för dig att implementera ett eget grid i din webbplats.
+
+Koden som utvecklades i samband med denna artikeln ligger i repot [`desinax/vertical-grid`](https://github.com/desinax/vertical-grid) och finns att installera via [`npm install desinax-vertical-grid`](https://www.npmjs.com/package/desinax-vertical-grid).
+
+Det finns en [forumtråd till artikeln](t/7009) där du kan ställa frågor eller bidra med tips och trix.
