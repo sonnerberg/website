@@ -7,7 +7,12 @@ revision:
 Kmom04: Realtid
 ==================================
 
-Websocket chatt med Express.
+Vi skall studera realdtisprogrammering i webbsammanhang med webscokets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
+
+Sedan bygger du vidare på din klient/server applikation i JavaScript och integrerar chatten och utvecklar ytterligare realtidsfunktioner.
+
+Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare.
+
 
 [WARNING]
 Kursutveckling pågår.
@@ -37,7 +42,9 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen.
+1. Kika på webbplatsen för [socket.io](https://socket.io/) för att få en överblick av en modul som hjälper till att implementera websockets i klient och server.
+
+1. Bekanta dig översiktligt med [Selenium WebDriver](http://www.seleniumhq.org/) på dess webbplats. Det är programvara som ger oss möjlighet att skriva funktionstester och exekvera dem via en webbläsare.
 
 
 
@@ -52,8 +59,9 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom01/express`.
+1. Jobba igenom artikeln "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)" för att komma igång med konceptet websockets. Spara dina exempelprogram i `me/kmom04/websocket`.
 
+1. Jobba igenom artikeln "[Kom igång med funktionstester i JavaScript](kunskap/kom-igang-med-funktionstester-i-javascript)" för att komma igång med konceptet websockets. Spara dina exempelprogram i `me/kmom04/functest`.
 
 
 
@@ -61,7 +69,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk2](uppgift/bygg-en-me-sida-till-ramverk2)". Det handlar om att bygga din me-sida med Express och publicera på Github. Spara allt under `me/redovisa`.
+1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript  (realtid)](uppgift/bygg-en-klient-server-applikation-i-javascript-realtid)". Du skall integrera en demo av din applikation i repot `me/redovisa`.
 
 
 
@@ -76,9 +84,6 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
-* Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
-* Använde du någon form av scaffolding som Express erbjuder?
-* Jobbar du med Markdown för innehållet, eller annat liknande?
+* Hur gick det att jobba med konceptet realtidsprogrammering i webben, några reflektioner?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
