@@ -641,6 +641,6 @@ Detta var en genomgång av tekniker bakom att implementera gridsystem med CSS oc
 
 Du har nu en grund att stå på när det blir dags för dig att implementera ett eget grid i din webbplats.
 
-Koden som utvecklades i samband med denna artikeln ligger i repot [`desinax/vertical-grid`](https://github.com/desinax/vertical-grid) och finns att installera via [`npm install desinax-vertical-grid`](https://www.npmjs.com/package/desinax-vertical-grid).
+Koden som utvecklades i samband med denna artikeln ligger (även) i repot [`desinax/vertical-grid`](https://github.com/desinax/vertical-grid) och finns att installera via [`npm install desinax-vertical-grid`](https://www.npmjs.com/package/desinax-vertical-grid).
 
 Det finns en [forumtråd till artikeln](t/7009) där du kan ställa frågor eller bidra med tips och trix.

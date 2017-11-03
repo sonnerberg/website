@@ -1,26 +1,27 @@
 ---
 author: mos
-revision:
-    2016-06-23: (A, mos) Första versionen.
 category:
     - kurs/design
     - anax flat
     - theme
     - less
     - css grid system
+revision:
+    "2017-11-03": (B, mos) Genomgång inför ht17, kod även i desinax/npm.
+    "2016-06-23": (A, mos) Första versionen.
 ...
 Skapa ett horisontellt grid för typografi
 ===================================
 
 [FIGURE src=/image/snapvt16/horisontellt-grid.png?w=c5&a=55,25,20,50 class="right"]
 
-Vi skall skapa ett typografiskt grid. Jag kallar det ett horisontellt grid för att skilja det från det vertikala gridet vi tidigare pratat om. Horisontellt eftersom gridet baseras på rader och fonternas *baseline*. Ett sådant här grid kan även kallas för baseline grid. Dess huvudsakliga syfte är att skapa en rytm i sidan, en rytm som innebär att alla typografiska element delar en och samma multipel av en höjd. En sådan rytm kallas även för vertikal rytm.
+Vi skall skapa ett typografiskt grid. Jag kallar det ett horisontellt grid för att skilja det från det vertikala gridet vi tidigare pratat om. Horisontellt eftersom gridet baseras på rader och fonternas _baseline_. Ett sådant här grid kan även kallas för baseline grid. Dess huvudsakliga syfte är att skapa en rytm i sidan, en rytm som innebär att alla typografiska element delar en och samma multipel av en höjd. En sådan rytm kallas även för _vertikal rytm_.
 
 <!--more-->
 
-När vi har skapat vårat horisontella grid så är vi redo att integrera det med det vertikala grid vi tidigare skapat. De båda griden skall samverka.
+När vi har skapat vårt horisontella grid så är vi sedan redo att integrera det tillsammans med det vertikala grid vi tidigare skapat. De båda griden skall samverka.
 
-Dessa båda grid blir basen i vår tekniska webbdesign.
+Dessa båda grid blir basen i vår tekniska webbdesign för att göra vår layout.
 
 
 
@@ -34,11 +35,13 @@ Du har jobbat igenom materialet i artiklarna "[Använd ett vertikalt grid med An
 Det magiska numret {#magic}
 -------------------------------
 
-I ett horisontellt grid så finns det ett magiskt nummer som styr allt. 
+I ett horisontellt grid finns det ett magiskt nummer som styr allt. 
 
 Det magiska numret ger radernas höjd i gridet. Ett vanligt magiskt tal är 22. Eller 24. Jag väljer 24 idag.
 
-I bilden nedan finns lusbruna streck som visualiserar det horisontella gridet. Det är 24 pixlar mellan varje streck. Det är ett magiskt tal --- `@magicNumber: 24px;` --- mellan varje streck.
+I bilden nedan finns ljusbruna streck som visualiserar det horisontella gridet. Det är 24 pixlar mellan varje streck. Det är ett magiskt tal --- `@magicNumber: 24px;` --- mellan varje streck.
+
+Allt innehåll, skall luta mot en multipel av det horisontella gridet och matcha en ljusbrun rad.
 
 [FIGURE src=/image/snapvt16/horisontellt-grid.png?w=w2 caption="All typografi lutar mot en rad i det horisontella gridet."]
 
@@ -56,7 +59,6 @@ Det ger oss två olika magiska tal, 22 eller 24, enligt följande, kodat i LESS.
 @magicNumber:   24px;   /* 16px - 100%/1.5 */
 //@magicNumber:   22px; /* 16px - 100%/1.375 */
 @fontSizeBody:  16px;
-@fontSizeBody:  16px;
 @lineHeight:    (unit(@magicNumber) / unit(@fontSizeBody));
 ```
 
@@ -67,7 +69,7 @@ Som jag sa, jag väljer 24 för mitt exempel idag.
 Körbart exempel {#exempel}
 ------------------------------
 
-Du kan testa hela mitt exempel på typografiskt grid och stylning av typografiska element så att de matchar gridet via [typography.html](/repo/design/example/typography-grid/typography.html).
+Du kan testa hela mitt exempel på typografiskt grid och stylning av typografiska element så att de matchar gridet via [typography.html](repo/design/example/typography-grid/typography.html) och du ser alla filer i exemplet i katalogen [example/typography-grid](repo/design/example/typography-grid/).
 
 
 
@@ -138,9 +140,13 @@ h1 {
 }
 ```
 
-Konstruktioner ser ut att stämma bra med tabellen ovan. För att testa om det blev rätt så kan vi multiplicera fontens storlek med radhöjden. Det bör bli vårt magiska tal, eller iallafall en multipel av vårt magiska tal.
+Konstruktioner ser ut att stämma bra med tabellen ovan. Det skadar inte att kontrollera. För att testa om det blev rätt så kan vi multiplicera fontens storlek med radhöjden och multiplicera med basfontens storlek (`@fontSizeBody`). Det bör bli vårt magiska tal, eller iallafall en multipel av vårt magiska tal.
 
-Detta var den svåra biten. Nu gäller det bara att använda mixinen och säkerställa att samtliga typografiska element håller sig till vårt `@magicNumber`.
+```text
+2.375 * 1.2632 * 16 = 48 (en multipel av det magiska talet 24)
+```
+
+Detta var den svåra biten. Nu gäller det bara att använda mixinen och säkerställa att samtliga typografiska element håller sig till vårt `@magicNumber`. Men även det kan visa sig utmanande ibland.
 
 
 
@@ -180,7 +186,7 @@ Här väljer jag att lägga till en border, men då måste jag justera storleken
 
 Det är enklast att styla alla typografiska element med en margin-bottom för att skapa utrymme mellan elementen.
 
-Om du väljer att även jobba med margin-top så måste du vara medveten om att *margin collapse*.
+Om du väljer att även jobba med margin-top så måste du vara medveten om konceptet [*margin collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
 
 Jag fortsätter att styla H1 och sätter att alla underrubriker skall ha ett litet större utrymme, här använder jag margin-top. 
 
@@ -287,7 +293,7 @@ body {
 }
 ```
 
-Om du är osäker på vad resultatet borde bli så kan du dubbelkolla i LESS2CSS.
+Om du är osäker på vad resultatet borde bli så kan du dubbelkolla i LESS2CSS. Minns att det är ett riktigt bra verktyg för att dubbelkolla vad en LESS-konstruktion genererar för CSS-kod. Använd det.
 
 
 
@@ -297,3 +303,7 @@ Avslutningsvis {#avslutning}
 Vi har gått igenom grunderna i ett typografiskt grid. Ett grid som även kan kallas horisontellt grid eller baseline grid. 
 
 Som du ser så är det magiska numret inte så magiskt, enkel matematik. Men, oerhört viktigt att alltid hålla sig till, annars hamnar man utanför gridet.
+
+Koden som utvecklades i samband med denna artikeln ligger (även) i repot [`desinax/typographic-grid`](https://github.com/desinax/typographic-grid) och finns att installera via [`npm install desinax-typographic-grid`](https://www.npmjs.com/package/desinax-typographic-grid).
+
+Det finns en [forumtråd till artikeln](t/7010) där du kan ställa frågor eller bidra med tips och trix.

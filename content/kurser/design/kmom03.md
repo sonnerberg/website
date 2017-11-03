@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-11-03": (E, mos) Genomgång inför ht17.
     "2016-12-02": (D, mos) Lade till videoserie om vgrid.
     "2016-10-26": (C, mos) Flyttad från 02 till 03 efter feedback.
     "2016-10-15": (B, mos) Testad och genomgången.
@@ -9,17 +10,13 @@ revision:
 Kmom03: Grid, layout och typografi
 ====================================
 
-[WARNING]
-Kursutveckling pågår inför ht17.
-[/WARNING]
-
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
 
 Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*.
 
 Sedan tittar på på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen. Vårt horisontella grid skall inte bara gälla de typografiska elementen utan samtliga element som placeras ut på webbsidan.
 
-Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt grid. Samtidigt förbereder vi temat för att bli enkelt att style med olika typsnitt.
+Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt grid. Samtidigt förbereder vi temat för att bli enkelt att styla med olika typsnitt.
 
 
 
@@ -54,9 +51,9 @@ Läs följande:
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
-    * 3. Hur vi läser på webben
+    * Kap 3. Hur vi läser på webben
 
-1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur markdown-texten i Anax Flat formatteras till HTML.
+1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur Markdown-texten i Anax Flat formatteras till HTML.
 
 
 
@@ -77,7 +74,7 @@ Läs följande artiklar.
 
 1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Denna artikel hanterar samma teknik som tas upp i övningen och uppgiften så se det som en bakgrundsartikel.
 
-1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/layout/) och [typografi](http://primercss.io/type/). Se det som ett exempel på hur ett ramverk för grid och typografi kan se ut.
+1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/archive/layout/) och [typografi](http://primercss.io/archive/type/). Se det som ett exempel på hur ett ramverk för grid och typografi kan se ut. (_note 2017: Google håller på och uppdaterar sitt ramverk_).
 
 
 
@@ -87,7 +84,7 @@ Tänk dig en typografisk webbplats där all styling har lagts på de typografisk
 
 1. [En praktisk guide till typografi på webben](http://webtypography.net/), en högst läsbar bok och samtidigt ett stilexempel på hur en typografiskt stilad webbplats kan se ut. Läs Introduktionen och kapitlet 2.2 Vertical Motion. Övrigt kan du se online-boken som en resurs in i typografins värld.
 
-1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik om används till webbplatsen dbwebb när det handlar om typografiska element.
+1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik som används till webbplatsen dbwebb när det handlar om typografiska element.
 
 
 
@@ -103,7 +100,11 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Se följande som extra men relevanta läsövningar. Det är närbesläktade koncept till kursmomentets innehåll.
+
+1. [CSS Flexible Box](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) är en layoutmodell som försöker hantera olika skärmstorlekar och erbjuda en fleibel modell för webbutvecklaren att göra layout. I kursmaterialet används huvudsakligen layoutmodellen float, men flexbox nämns och exempel visas.
+
+1. [CSS Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) är en standard (på gång) som kan erbjuda ett gridbaserat system med ren och standardiserad CSS.
 
 
 
@@ -132,12 +133,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -149,6 +144,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur känns det att vara styrd till ett vertikalt grid, hämmande eller stödjande?
 * Hur känns det att jobba med ett typografiskt horisontellt/baseline grid, ser du någon poäng med det?
+* Berätta om hur du valde typsnitt till din webbplats.
 * Har du jobbat med liknande layouttekniker sedan tidigare?
 * Du börjar se hur man kan jobba med LESS, kommentarer på det?
 * Hur uppfattade du nivån på detta kmom? Svårt, lagom, många nya begrepp?
