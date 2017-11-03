@@ -96,7 +96,7 @@ Me-sidan får bli ett eget repo på GitHub som vi kopplar ihop med externa tjän
 
 ###Kmom02: Docker {#kmom02}
 
-TBD.
+Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
 
 [Instruktion till kursmoment 02](./kmom02).
 
@@ -104,7 +104,9 @@ TBD.
 
 ###Kmom03: Test {#kmom03}
 
-TBD.
+Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi upp grunden i en testmiljö för JavaScript. Det handlar främst om enhetstestning och kodtäckning samt basen för en CI-kedja (Continuous integration).
+
+Det blir också en introduktion i hur vi kan använda Docker för att köra våra enhetstester mot olika versioner av en målmiljö och vi får möjligheten att skapa våra egna anpassade Docker-images.
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -112,7 +114,11 @@ TBD.
 
 ###Kmom04: Realtid {#kmom04}
 
-TBD.
+Vi skall studera realdtisprogrammering i webbsammanhang med webscokets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
+
+Sedan bygger du vidare på din klient/server applikation i JavaScript och integrerar chatten och utvecklar ytterligare realtidsfunktioner.
+
+Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare.
 
 [Instruktion till kursmoment 04](./kmom04).
 
