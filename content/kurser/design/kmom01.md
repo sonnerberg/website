@@ -138,5 +138,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser? Om ja, vilka ramverk/språk har du jobbat med?
 * Det blev en del nya verktyg i labbmiljön, var de nya för dig eller kände du igen dem?
 * Hur kändes det att jobba med Anax Flat och bygga din me-sida?
-* Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarthet för webben?
+* Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarhet för webben?
 * Det fanns videor som kompletterade artiklarna, hjälpte de dig att förstå materialet bättre?
