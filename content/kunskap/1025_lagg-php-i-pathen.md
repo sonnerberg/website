@@ -4,6 +4,7 @@ category:
     - labbmiljo
     - php
 revision:
+    "2017-11-07": (C, mos) Not om krav PHP 5.6 eller högre.
     "2017-09-04": (B, mos) Windows 10 Bash likt Linux.
     "2016-10-11": (A, mos) Första revisionen.
 ...
@@ -23,6 +24,7 @@ Förutsättning {#pre}
 
 Du har installerat PHP på ditt system.
 
+Din PHP-installation är av version 5.6 eller senare.
 
 
 
