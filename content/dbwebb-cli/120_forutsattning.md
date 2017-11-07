@@ -11,4 +11,4 @@ rsync
 wget
 ```
 
-När du har installerat så kan du kontrollera din miljö via kommandot `dbwebb check`.
+När du har installerat dbwebb-cli så kan du använda kommandot `dbwebb check` för att kontrollera detaljer i din miljö.
