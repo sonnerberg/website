@@ -600,7 +600,7 @@ $ git tag -a 1.0.0 -m "First version"
 $ git push --tags
 ```
 
-Du kan lista vilka taggar du har med `git tags`.
+Du kan lista vilka taggar du har med `git tag`.
 
 Vill du göra fler uppdateringar och tagga dem så inkrementerar du tredje siffran. Så här: 1.0.1, 1.0.2 och så vidare.
 
