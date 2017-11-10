@@ -65,7 +65,7 @@ class Car():
     carCount = 0
 ```
 
-Sådär ja, vad fint det blev. De statiska variablerna som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Den metoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
+Sådär ja, vad fint det blev. De statiska variablerna som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Konstruktor metoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
 
 ```python
 class Car():
@@ -79,7 +79,7 @@ class Car():
         Car.carCount += 1
 ```
 
-Som du ser så används argumentet "self" i klassen. Den behöver man inte skicka med som parameter, utan det gör Python åt dig. Alla metoder måste dock börja med "self" i argumentlistan. Det som händer är att med det magiska första argumentet vet metoden vilken instans som äger anropet.
+Som du ser så används argumentet "self" i klassen. Den behöver man inte skicka med som argument, utan det gör Python åt dig. Alla metoder måste dock börja med "self" i parameterlistan. Det som händer är att med det magiska första parametern vet metoden vilken instans som äger anropet.
 
 Nu kan vi skapa en ny instans med:
 
@@ -108,30 +108,7 @@ Antal bilar: 2
 
 Det ser ju bra ut. Två instanser av "Car" som inte refererar till samma minnesplats. Vi ser också att räknaren fungerar.
 
-För att nå medlemsvariablerna använder man så kallad "dot-notation". Vi provar.
 
-```python
->>> print(bmw.wheels)
-4
-
->>> print(bmw.model)
-BMW
-
->>> print(bmw.price)
-100000
-```
-
-"bmw" är en instans av Car så om vi ändrar attributet `wheels` i efterhand, så ändras den för alla objekt skapade från klassen:
-
-```python
->>> print(bmw.wheels)
-4
-
->>> Car.wheels = 12
-
->>> print(bmw.wheels)
-12
-```
 
 För att instanserna ska äga variablerna kan man flytta tex `wheels` till __init__-metoden. Då äger instanserna ett eget attribut och påverkas inte om man ändrar i basklassen:
 
@@ -150,10 +127,116 @@ class Car():
 För stunden kan vi ha kvar `wheels` som statisk variabel. Alla våra bilar ska ha 4 hjul.
 
 
+För att komma åt medlemsvariablerna kan vi använda så kallad dot-notation, vi tittar på hur det kan se ut.
+
+```python
+>>> print(bmw.wheels)
+ 4
+
+>>> print(bmw.model)
+BMW
+
+>>> print(volvo.model)
+Volvo
+```
+
+Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i nästa sektion visar vi hur man jobbar med medlemsvariablerna via metoder istället.
+
+"bmw" är en instans av Car så om vi ändrar attributet `wheels` i efterhand, så ändras den för alla objekt skapade från klassen:
+
+```python
+>>> print(bmw.wheels)
+4
+
+>>> Car.wheels = 12
+
+>>> print(bmw.wheels)
+12
+ 
+>>> print(volvo.wheels)
+12
+```
+
+
 
 ###Metoder {#metoder}
 
-En metod är en funktion som är definierad inuti en klass. Vi har redan skapat en i form av `__init__` men vi tittar närmare på hur en sådan kan se ut. Vi skapar en metod för att skriva ut information om bilen:
+En metod är en funktion som är definierad inuti en klass. Vi har redan skapat en i form av `__init__` men vi tittar närmare på hur en sådan kan se ut. 
+
+Som sagt ska vi inte använda dot-notation för att jobba med medlemsvariablerna utan istället ska vi skapa "get" och "set" metoder för varje medlemsvariable. En "get" metod för en medlemsvariabel brukar oftast enbart returnerar variabelns värde. Vi provar skapa get-funktioner för våra medlemsvariabler:
+
+```python
+class Car():
+    wheels = 4
+    carCount = 0
+
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+
+        Car.carCount += 1
+        
+    def get_model(self):
+        return self.model
+    
+    def get_price(self):
+        return self.price
+```
+
+Vi skapade två get metoder, en för varje medlemsvariabel. I och med att de enbart ska returnera ett medlemsvariable värde behövs bara `self` som parameter, så vi kommer åt rätt instans värde.
+
+Vi testa använda metoderna.
+
+```
+>>> print(bmw.get_model())
+BMW
+
+>>> print(bmw.get_price())
+100000
+```
+
+
+Då tittar vi på "set" och precis som ni gissar så används oftats "set" metoder för att ändra värdet på medlemsvariabler. En "set" metod brukar enbart tilldela ett argument till en medlemsvariabel.
+
+
+```python
+class Car():
+    wheels = 4
+    carCount = 0
+
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+
+        Car.carCount += 1
+        
+    def get_model(self):
+        return self.model
+    
+    def get_price(self):
+        return self.price
+        
+    def set_model(self, model):
+        self.model = model
+        
+    def set_price(self, price):
+        self.price = price
+```
+
+Att skapa set metoder var inte svårare än så. Låt oss testa använda dem också.
+
+```
+>>> print(bmw.set_model("BMW X2"))
+>>> print(bmw.get_model())
+BMW X2
+
+>>> print(bmw.set_price(500000))
+>>> print(bmw.get_price())
+500000
+```
+
+
+Vi skapar en metod för att skriva ut information om bilen:
 
 ```python
 class Car():
@@ -174,7 +257,7 @@ Nu kan vi använda den på följande sätt:
 
 ```python
 >>> bmw.presentCar()
-Model: BMW, Price: 100000
+Model: BMW X2, Price: 500000
 
 >>> volvo.presentCar()
 Volvo, Price: 150000
@@ -358,7 +441,7 @@ class Car():
             print("* " + eq)
 
     def __add__(self, other):
-        return self.price + other.price
+        return self.price + other.get_price()
 ```
 
 Vi använder `__` före och efter metoden, `__<method>__`, och skickar in ett annat objekt kallat _other_ som parameter. Vi testar igen:
@@ -401,14 +484,14 @@ class Car():
             print("* " + eq)
 
     def __add__(self, other):
-        return self.price + other.price
+        return self.price + other.get_price()
 
     def __iadd__(self, other):
-        self.price += other.price
+        self.price += other.get_price()
         return self
 
 bmw += volvo
-print(bmw.price)
+print(bmw.get_price())
 250000
 ```
 

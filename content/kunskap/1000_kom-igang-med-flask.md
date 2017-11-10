@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2017-11-10": (A, lew) Explain route.
     "2016-04-13": (A, lew) Första versionen.
 category:
     - oopython
@@ -88,7 +89,9 @@ if __name__ == "__main__":
     app.run()
 ```
 
-Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat innehåll, i det här fallet strängen "Välkommen!". Routen / är roten, start eller index om man så vill.
+Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat innehåll, i det här fallet strängen "Välkommen!".
+
+Routen / är roten, start eller index om man så vill. En route kan ses som en trafikpolis som dirigerar om trafiken. Om vi har en route `@app.route('/telefon')` kan vi nå den via `http://example.com/telefon`. Funktionen som definieras under behöver inte ha samma namn som routen. Det underlättar dock då Flask bland annat använder funktionsnamnet för att hänvisa till dess sökväg. Flask kan använda till exempel `url_for('main')`, och hade i detta fallet hänvisat till routen `/` (roten). Men mer om det senare, nu går vi vidare.
 
 Starta applikationen med:
 
@@ -188,6 +191,28 @@ För Bootstrap's och JQuery's filer använder vi oss av [CDN](https://en.wikiped
 Det här är en klassisk Bootstrap-mall. Vi laddar även in en egen stylesheet efter Bootstraps. Det är med den vi kan "personifiera" stylen då vi inte har Bootstraps filer lokalt.  
 
 
+
+###url_for() {#url-for}
+
+Som tidigare nämnt så använder Flask `url_for()` för sökvägen ska bli korrekt. I koden ovan ser vi bland annat:
+
+```html
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+```
+
+Stylesheets och bilder ska ligga i mappen static/. Med argumentet `filename=` kan vi skicka med ett filnamn, eller resten av sökvägen om det är uppdelat i mappar i static/. Om man har en bild till exempel me.png i mappen static/images/ når man den med:
+
+```html
+<img src="{{ url_for('static',filename='images/me.png') }}">
+```
+
+Vi har även länken i navbaren:
+
+```html
+<a href="{{ url_for('main') }}">
+```
+
+Här hämtas sökvägen till routen `main`. Jämför det med `<a href="index.html">` i detta fallet.
 
 ###style.css {#style}
 
