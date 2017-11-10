@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2017-11-10": (A, lew) Explain route.
     "2016-04-13": (A, lew) Första versionen.
 category:
     - oopython
@@ -88,7 +89,9 @@ if __name__ == "__main__":
     app.run()
 ```
 
-Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat innehåll, i det här fallet strängen "Välkommen!". Routen / är roten, start eller index om man så vill.
+Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat innehåll, i det här fallet strängen "Välkommen!".
+
+Routen / är roten, start eller index om man så vill. En route kan ses som en trafikpolis som dirigerar om trafiken. Om vi har en route `@app.route('/telefon')` kan vi nå den via `http://example.com/telefon`. Funktionen som definieras under behöver inte ha samma namn som routen. Det underlättar dock då Flask bland annat använder funktionsnamnet för att hänvisa till dess sökväg. Flask kan använda till exempel `url_for('main')`, och hade i detta fallet hänvisat till routen `/` (roten). Men mer om det senare, nu går vi vidare.
 
 Starta applikationen med:
 
