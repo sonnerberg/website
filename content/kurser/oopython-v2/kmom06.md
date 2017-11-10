@@ -1,16 +1,15 @@
 ---
 author: lew
 revision:
+    "2017-11-10": (PB1, mos) Utkast till v2.
     "2017-02-14": (A, lew) First version.
-category:
-    - oopython
 ...
 Kmom06: Bokningssystem
 ====================================
 
-[INFO]
-Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 20/2-2017**</strike> släpptes 2017-02-17.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.
+[/WARNING]
 
 Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler antal klasser än tidigare och tanken är att öva på att interagera mellan klasser och hantera flera klasser samtidigt i ett terminalprogram.
 
@@ -19,9 +18,7 @@ Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler
 [FIGURE src=/image/oopython/kmom06/index_top.jpg?w=w2 caption="Ett annat sorts bokningssystem."]
 
 
-<!-- Flytta nedan text till eget dokument/vy/block -->
-
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -94,7 +91,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

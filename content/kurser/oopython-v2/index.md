@@ -1,16 +1,14 @@
 ---
-title: oopython
-
+title: oopython v2
 author:
     - lew
     - mos
 revision:
+    "2017-11-10": (PC1, mos) Utkast till v2.
     "2016-11-28": (B, mos) Text till kursplanen.
     "2016-04-12": (A, lew) Första versionen.
-category:
-    - oopython
 ...
-Kursen oopython
+Kursen oopython (v2)
 ===================================================
 
 Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*, lär ut objektorienterad analys och design tillsammans med objektorienterad programmering med Python.
@@ -19,6 +17,9 @@ Kursen använder sig till stor del av webbaserade teknologier och programmen som
 
 <!--more-->
 
+[WARNING]
+**Kursutveckling pågår inför vt18.
+[/WARNING]
 
 
 
@@ -84,7 +85,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa en webbsida med routes i ramverket Flask.
 
-[Instruktion till kursmoment 01](oopython/kmom01).
+[Instruktion till kursmoment 01](kurser/oopython/kmom01).
 
 
 
@@ -92,7 +93,7 @@ Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa e
 
 Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi lite på UML diagram och unittest. Några verktyg som är bra att känna till i en produktionsmiljö.
 
-[Instruktion till kursmoment 02](oopython/kmom02).
+[Instruktion till kursmoment 02](kurser/oopython/kmom02).
 
 
 
@@ -100,7 +101,7 @@ Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi lite på UML diagra
 
 I Python finns det verktyg och moduler för att autogenerera UML-diagram och dokumentation. Vi ska titta närmare på dem, samtidigt som vi jobbar vidare med me-sidan i Flask.
 
-[Instruktion till kursmoment 03](oopython/kmom03).
+[Instruktion till kursmoment 03](kurser/oopython/kmom03).
 
 
 
@@ -108,7 +109,7 @@ I Python finns det verktyg och moduler för att autogenerera UML-diagram och dok
 
 [Regex, regexp eller reguljära uttryck](https://sv.wikipedia.org/wiki/Regulj%C3%A4ra_uttryck) används för att hantera strängmatchning på olika sätt. Vi ska även utöka me-sidan med en databas.
 
-[Instruktion till kursmoment 04](oopython/kmom04).
+[Instruktion till kursmoment 04](kurser/oopython/kmom04).
 
 
 
@@ -116,7 +117,7 @@ I Python finns det verktyg och moduler för att autogenerera UML-diagram och dok
 
 Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem samt titta närmare på datastrukturer och rekursion.
 
-[Instruktion till kursmoment 05](oopython/kmom05).
+[Instruktion till kursmoment 05](kurser/oopython/kmom05).
 
 
 
@@ -124,7 +125,7 @@ Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika
 
 Det här är ett praktiskt kursmoment. Vi ska ska öva på att arbeta med flera klasser samtidigt och interagera mellan dem.
 
-[Instruktion till kursmoment 06](oopython/kmom06).
+[Instruktion till kursmoment 06](kurser/oopython/kmom06).
 
 
 
@@ -132,7 +133,7 @@ Det här är ett praktiskt kursmoment. Vi ska ska öva på att arbeta med flera 
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](oopython/kmom10).
+[Instruktion till kursmoment 10](kurser/oopython/kmom10).
 
 
 
@@ -140,8 +141,6 @@ Kurslitteratur {#litteratur}
 ----------------------------
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
-
-Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
 
 
 
@@ -214,6 +213,13 @@ Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källor
 
 
 
+Betygsättning {#betyg}
+------------------------
+
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+
+
+
 Ladok {#ladok}
 ------------------------
 
@@ -226,13 +232,6 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
-
-
-
-Betygsättning {#betyg}
-------------------------
-
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 

@@ -1,21 +1,18 @@
 ---
 author: lew
 revision:
+    "2017-11-10": (PE1, mos) Utkast till v2.
     "2016-12-16": (D, lew) Updated flask structure.
     "2016-06-01": (C, lew) Fixade något.
     "2016-05-25": (B, aar) Ändrade något.
     "2016-04-12": (A, lew) Första versionen.
-category:
-    - oopython
 ...
 Kmom02: UML och unittest
 ====================================
 
-[INFO]
-<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 23/1-2017**.</strike>
-
-Kursmomentet tillgängligt per den 2017-01-16.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.
+[/WARNING]
 
 Kom igång med _UML_ och _unittest_. Det är kraftfulla verktyg som används i "riktig" produktionsmiljö. UML kan användas för att beskriva klassernas relation och unittester (enhetstester) används för att testa delar av koden såsom funktioner och metoder.  
 
@@ -25,9 +22,9 @@ Du kommer även skapa klasser utifrån ett färdigt UML-diagram och skriva unitt
 
 [FIGURE src=/image/oopython/kmom02/kmom02_top.jpg?w=w2 caption="UML logotyp."]
 
-<!-- Flytta nedan text till eget dokument/vy/block -->
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -127,7 +124,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

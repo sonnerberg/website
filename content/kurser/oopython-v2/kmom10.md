@@ -1,17 +1,16 @@
 ---
 author: lew
 revision:
+    "2017-11-10": (PC1, mos) Utkast till v2.
     "2017-02-22": (B, aar) nytt projekt.
     "2016-04-12": (A, lew) Första version.
-category:
-    - oopython
 ...
 Kmom10: Projekt och examination
 ====================================
 
-[INFO]
-Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 27/2-2017**</strike> blev tillgängligt 2017-02-23.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.
+[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
