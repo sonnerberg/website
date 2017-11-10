@@ -192,6 +192,28 @@ Det här är en klassisk Bootstrap-mall. Vi laddar även in en egen stylesheet e
 
 
 
+###url_for() {#url-for}
+
+Som tidigare nämnt så använder Flask `url_for()` för sökvägen ska bli korrekt. I koden ovan ser vi bland annat:
+
+```html
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+```
+
+Stylesheets och bilder ska ligga i mappen static/. Med argumentet `filename=` kan vi skicka med ett filnamn, eller resten av sökvägen om det är uppdelat i mappar i static/. Om man har en bild till exempel me.png i mappen static/images/ når man den med:
+
+```html
+<img src="{{ url_for('static',filename='images/me.png') }}">
+```
+
+Vi har även länken i navbaren:
+
+```html
+<a href="{{ url_for('main') }}">
+```
+
+Här hämtas sökvägen till routen `main`. Jämför det med `<a href="index.html">` i detta fallet.
+
 ###style.css {#style}
 
 Vi har som sagt vår egna stylesheet att tillgå. Kopiera in följande kod:
