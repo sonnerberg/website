@@ -94,6 +94,8 @@ Om du känner att du har tid och lust.
 
 1. Bekanta dig med debugger-verktyget [PDB](https://docs.python.org/3.2/library/pdb.html).
 
+1. Kika på [Jinja2's dokumentation](http://jinja.pocoo.org/).
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -121,11 +123,13 @@ Genomför följande övning för att träna dig.
 
 1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
 
+1. Utöka din applikation med verktyget Jinja2 med övningen "[Flask och Jinja2](kunskap/jinja2)".
+
 1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`.
 
-2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
+1. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
 
-3. Läs igenom artikeln om "[Klass relationer](kunskap/klass-relationer)" i Python.
+1. Läs igenom artikeln om "[Klass relationer](kunskap/klass-relationer)" i Python.
 
 
 
@@ -135,7 +139,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser)" (lab 1)
 
-2. Gör uppgiften "[En me-sida med Python och Flask](uppgift/en-me-sida-med-python-och-flask)".
+2. Gör uppgiften "[En me-sida med Python och Flask](uppgift/en-me-sida-med-flask)".
 
 
 
