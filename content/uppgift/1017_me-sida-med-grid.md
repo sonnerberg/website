@@ -5,6 +5,7 @@ category:
     - tema
     - less
 revision:
+    "2017-11-10": (I, mos) Lade till att hgrid och vgrid skall fungera.
     "2017-11-03": (H, mos) Bort med krav om make update.
     "2016-11-14": (G, mos) Förenklade kraven och gjorde endast två delar.
     "2016-11-04": (F, mos) Tillbaka och förtydliga krav om dubbla kolumner.
