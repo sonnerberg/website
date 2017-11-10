@@ -70,7 +70,7 @@ Krav {#krav}
 
 1. Gör ditt tema responsivt med media queries och förberett för mindre skärmar.
 
-1. Lägg till så att `?vgrid` fungerar på godtycklig sida likt https://dbwebb.se/?vgrid.
+1. Lägg till så att `?vgrid` fungerar på godtycklig sida likt [https://dbwebb.se/?vgrid](https://dbwebb.se/?vgrid).
 
 <!--
 1. Skapa ett target för `upgrade-grid` i din Makefile som hämtar hem senaste versionen av grid-filerna från [kursrepot på GitHub](https://github.com/dbwebb-se/design/tree/master/example/grid/fluid/less).
@@ -88,7 +88,7 @@ Krav {#krav}
 
 1. Gör så att alla regioner på sidan (till exempel flash, main och footer-regionerna) matchar det magiska numret och lutar mot det typografiska gridet. Använd `@magicNumber` där det finns möjlighet och jobba främst med `margin-bottom`. Gör det *tillräckligt bra*.
 
-1. Lägg till så att `?hgrid` fungerar på godtycklig sida likt https://dbwebb.se/?hgrid.
+1. Lägg till så att `?hgrid` fungerar på godtycklig sida likt [https://dbwebb.se/?hgrid](https://dbwebb.se/?hgrid).
 
 
 
