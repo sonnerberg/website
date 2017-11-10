@@ -23,6 +23,25 @@ Kursutveckling pågår.
 
 [FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
 
+<!--
+Input till kurs Realtidsprogrammering för webben
+
+Fler än en server. Delad information mellan servrar.
+Uppstart och nedstart av servrar.
+(containers, docker)
+(databaser)
+Subscripter/publisher patterns
+IOT
+Desktop klient för övervakning
+Servrar med JSON API
+Prestanda
+Systemtest
+wss
+Security
+Redis
+(massive multiplayer game)
+-->
+
 Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
 
 
@@ -42,7 +61,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Kika på webbplatsen för [socket.io](https://socket.io/) för att få en överblick av en modul som hjälper till att implementera websockets i klient och server.
+1. Kika på webbplatsen för [socket.io](https://socket.io/) för att få en överblick av en modul som hjälper till att implementera websockets (och andra tekniker) för realtid i klient och server.
+
+1. Kika på [websocket modulen ws](https://github.com/websockets/ws) för server del som använder rena Websockets.
+
+1. Titta över [MDN WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) som ger dig material för klientsidan samt bakomliggande information om hur man bygger en server från grunden.
 
 1. Bekanta dig översiktligt med [Selenium WebDriver](http://www.seleniumhq.org/) på dess webbplats. Det är programvara som ger oss möjlighet att skriva funktionstester och exekvera dem via en webbläsare.
 

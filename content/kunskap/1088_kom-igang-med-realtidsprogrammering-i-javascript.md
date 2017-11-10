@@ -181,12 +181,128 @@ http://demos.kaazing.com/echo/
 
 
 
+Echo klient {#echo-klient}
+--------------------------------------------------------------------
+
+
+
+Echo server {#echo-server}
+--------------------------------------------------------------------
+
+
+
+Broadcast server {#broadcast}
+--------------------------------------------------------------------
+
+
+
+Subprotokoll {#sub}
+--------------------------------------------------------------------
+
+(klienten behöver implementera subprotokoll för att klara dbwebb.se)
+
+
+```javascript
+websocket = new WebSocket(url, 'broadcast-protocol');
+```
+
+
+
+```javascript
+// Loop through protocols. Accept by highest order first.
+for (var i=0; i < request.requestedProtocols.length; i++) {
+  if(request.requestedProtocols[i] === 'broadcast-protocol') {
+    status = acceptConnectionAsBroadcast(request);
+  } else if(request.requestedProtocols[i] === 'echo-protocol') {
+    status = acceptConnectionAsEcho(request);
+  }
+};
+
+// Unsupported protocol.
+if(!status) {
+  //acceptConnectionAsEcho(request, null);
+  console.log('Subprotocol not supported');
+  request.reject(403, 'Subprotocol not supported, only supporting "echo-protocol" or "broadcast-protocol".');
+}
+
+
+
+/**
+ * Accept connection under the broadcast-protocol
+ *
+ */
+function acceptConnectionAsBroadcast(request) {
+  var connection = request.accept('broadcast-protocol', request.origin);
+  connection.broadcastId = broadcastTo.push(connection) - 1;
+  console.log((new Date()) + ' Broadcast connection accepted from ' + request.origin + ' id = ' + connection.broadcastId);
+
+
+
+/**
+* Accept connection under the echo-protocol
+*
+*/
+function acceptConnectionAsEcho(request, subprotocol) {
+if(subprotocol === undefined) {
+  subprotocol = 'echo-protocol';
+}
+var connection = request.accept(subprotocol, request.origin);
+console.log((new Date()) + ' Echo connection accepted from ' + request.origin);
+
+```
 
 
 
 
+Eget protokoll med JSON {#json}
+--------------------------------------------------------------------
+
+Skicka eget protokoll via JSON.
 
 
+
+Same origin policy {#sameorigin}
+--------------------------------------------------------------------
+
+SOP/CORS does not apply to WebSocket, but browsers will send an origin header that contains the hostname of the server that served the HTML with the JS that opened the WebSocket connection. A WebSocket server can then restrict access by checking origin
+
+```javascript
+  if (!originIsAllowed(request.origin)) {
+    // Make sure we only accept requests from an allowed origin
+    request.reject();
+    console.log((new Date()) + ' Connection from origin ' + request.origin + ' rejected.');
+    return;
+  }
+
+/**
+ * Always check and explicitly allow the origin
+ *
+ */
+function originIsAllowed(origin) {
+  return true;
+  if(origin === 'http://dbwebb.se') {
+    return true;    
+  }
+  return false;
+}
+```
+
+
+
+Cross site scripting (XSS) {#xss}
+--------------------------------------------------------------------
+
+Avoid injections.
+
+```javascript
+/**
+ * Avoid injections
+ *
+ */
+function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+```
 
 
 
