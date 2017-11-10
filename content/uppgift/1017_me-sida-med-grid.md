@@ -41,6 +41,17 @@ En filosofi som kan komma till nytta här är [POGE - Principle of good enough](
 
 
 
+### Testa hur väl dbwbeb följer gridet {#dbwebbgrid}
+
+Du kan utvärdera hur väl dbwebb följer det vertikala och det horisontella gridet. Lägg till `?vgrid` eller `?hgrid` till godtycklig länk, så här:
+
+* https://dbwebb.se/?vgrid
+* https://dbwebb.se/?hgrid
+
+Du kan ställa frågor om hur detta fungerar i forumtråd om "[Visa gridet på godtycklig sida](t/5974)". Du skall göra samma sak själv i uppgiften nedan.
+
+
+
 Krav {#krav}
 -----------------------
 
@@ -58,6 +69,8 @@ Krav {#krav}
 
 1. Gör ditt tema responsivt med media queries och förberett för mindre skärmar.
 
+1. Lägg till så att `?vgrid` fungerar på godtycklig sida likt https://dbwebb.se/?vgrid.
+
 <!--
 1. Skapa ett target för `upgrade-grid` i din Makefile som hämtar hem senaste versionen av grid-filerna från [kursrepot på GitHub](https://github.com/dbwebb-se/design/tree/master/example/grid/fluid/less).
 -->
@@ -66,11 +79,15 @@ Krav {#krav}
 
 ###Del 2 Horisontellt grid (testa) {#horisontellt}
 
-1. Aktivera det typografiska grider genom att kopiera de relevanta LESS-filer som finns i exemplet under `example/typography-grid/less/typography-*`. Lägg till dem så att de finns med i ditt tema. Aktivera typografin och förändra den som du vill (gör medvetna val).
+1. Aktivera det typografiska grider genom att kopiera de relevanta LESS-filer som finns i exemplet under `example/typography-grid/less/typography-*`. Lägg till dem så att de finns med i ditt tema.
+
+1. Aktivera typografin och förändra den som du vill (gör medvetna val). Förslagsvis kan förändra typsnitt och storlekar på texten, uppdatera ditt typografiska grid om det krävs.
 
 1. Skapa en sida `content/typography.md`. Lägg in sidan i menyn. Fyll sidan med text och typografiska element som visar hur du stylat dem. Ungefär som textmassan som fanns i [exemplet](repo/design/example/typography-grid/typography.html). När man tittar på sidan skall gridet visas i bakgrunden. De typografiska elementen skall *någorlunda väl* matcha gridet.
 
 1. Gör så att alla regioner på sidan (till exempel flash, main och footer-regionerna) matchar det magiska numret och lutar mot det typografiska gridet. Använd `@magicNumber` där det finns möjlighet och jobba främst med `margin-bottom`. Gör det *tillräckligt bra*.
+
+1. Lägg till så att `?hgrid` fungerar på godtycklig sida likt https://dbwebb.se/?hgrid.
 
 
 
