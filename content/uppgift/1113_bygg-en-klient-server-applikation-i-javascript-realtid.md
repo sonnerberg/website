@@ -38,7 +38,7 @@ Kommer du inte på nåt så kan du alltid välja chatt-varianten.
 
 Samtidigt kan du fortsätta att utveckla din applikation. Glöm inte att försöka täcka det mesta av din kod med enhetstester (i rimlig omfattning).
 
-Tänk god kodstruktur och bygg moduler som är fristående och återanvändbara, så långt det är möjligt och rimligt.
+Tänk god kodstruktur och bygg moduler som är fristående och återanvändbara, så långt det är möjligt och skäligt.
 
 
 
@@ -49,7 +49,7 @@ Krav {#krav}
 
 1. Integrera realtidsaspekten i din applikation genom att använda WebSockets.
 
-1. Uppdatera landningssidan i din redovisa och berätta kort om realtidsaspekten.
+1. Uppdatera landningssidan i din redovisa och berätta kort om realtidsaspekten i din applikation.
 
 1. Committa, tagga och pusha relevanta repon samt ladda upp det på studentservern.
 
