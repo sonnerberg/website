@@ -5,7 +5,8 @@ category:
     - test
     - kurs ramverk2
 revision:
-  "2017-11-03": (A, mos) Första utgåvan.
+    "2017-11-13": (B, mos) Förtydliga var koden skall sparas i repot samt om docker.
+    "2017-11-03": (A, mos) Första utgåvan.
 ...
 Bygg en klient/server applikation i JavaScript
 ==================================
@@ -51,19 +52,21 @@ Det finns en forumtråd som ger [mer information rörande val av applikationen](
 Krav {#krav}
 -----------------------
 
-1. Påbörja arbetet med din applikation. Ha ambitionen att i liten skala utveckla enligt TDD för att utvärdera konceptet.
+1. Spara koden under `me/app` och gör det till ett eget repo som du publicerar på GitHub. Du kan lägga till underkataloger om du väljer att jobba i flera repon.
+
+1. Påbörja arbetet med din applikation. Ha ambitionen att i liten skala utveckla enligt TDD för att utvärdera konceptet. Gör så gott du kan och utvärdera.
 
 1. Bygg en testsuite av enhetstester till din applikation.
 
-1. Se till att din applikation (ditt repo) omfattas av en CI-kedja.
+1. Se till att din applikation (repo) omfattas av en CI-kedja.
 
-1. Infoga en landningssida/demo/prototyp av din applikation i din redovisa-sida.
+1. Enhetstesterna skall gå att köra i tre olika Docker kontainers (`make test1 test2 test3`). 
 
-1. Committa, tagga (v3.x.x) och pusha relevanta repon.
+1. Om du har en klient och/eller server till din applikation, se till att den går att köra i en Docker-kontainer (`make start-docker`). Om du ännu inte har en klient/server så kan du avvakta.
 
-1. Om du lägger applikationen i eget repo så länka till det från din redovisa/about-sida.
+1. Infoga en landningssida av din applikation i din redovisa-sida. Beskriv vad applikationen går ut på, vilka tekniker som används och vilka delar/repon applikationen består av. Länka till relevanta repon.
 
-1. Kontrollera att allt validerar och fungerar. Ladda upp det på studentservern.
+1. Committa, tagga och pusha relevanta repon samt ladda upp på studentservern.
 
 
 
