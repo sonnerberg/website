@@ -648,4 +648,4 @@ Avslutningvis {#avslutning}
 
 Vi har gått igenom grunderna för WebSockets och sett hur modulen ws kan användas på serversidan tillsammans native WebSockets i klienten, med eller utan subprotkoll och i ett sammanhang av echo- samt broadcast-server.
 
-Det finns en [forumtråd kopplad till denna artikeln](t/7007). Där kan du ställa frågor eller bidra med tips och trix.
+Det finns en [forumtråd kopplad till denna artikeln](t/7040). Där kan du ställa frågor eller bidra med tips och trix.
