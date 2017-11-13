@@ -2,26 +2,20 @@
 author:
     - mos
 revision:
-    "2017-10-16": "(PA1, mos) Arbete påbörjat."
+    "2017-11-13": "(A, mos) Första utgåvan."
 ...
 Kmom04: Realtid
 ==================================
 
-Vi skall studera realdtisprogrammering i webbsammanhang med webscokets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
+Vi skall studera realtidsprogrammering i webbsammanhang med WebSocket. Vi tittar på grunderna i websockets och ser hur klienter och servrar byggs upp med. Vi tittar på en echo-server och en broadcast-server och vi avslutar med att bygge en enkel chatt för att göra vårt eget applikationsprotokoll ovanpå websockets. Chatten integrerar vi i vår redovisa sida.
 
-Sedan bygger du vidare på din klient/server applikation i JavaScript och integrerar chatten och utvecklar ytterligare realtidsfunktioner.
+När koncepten om websockets är utredda så har du grunden för att bygga vidare på din klient/server applikation i JavaScript. Syftet är att lägga till den realtidsfunktionalitet som du anser lämpligt i din applikation.
 
-Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare.
+<!-- Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare. -->
 
-
-[WARNING]
-Kursutveckling pågår.
-[/WARNING]
-
-<!--stop-->
 <!--more-->
 
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
+[FIGURE src=image/snapht17/websocket-upgrade-firefox.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
 
 <!--
 Input till kurs Realtidsprogrammering för webben
@@ -40,9 +34,14 @@ wss
 Security
 Redis
 (massive multiplayer game)
+(gameloop)
+realtime prediction estimation
+web workers
+performace evaluation/optimization webclient (devtools)
+Nätverk av många chattservrar, hur synkronisera att flera servrar samverkar för att klara belastningen av ett chattnätverk.
 -->
 
-Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
+Även i detta kursmoment kommer du att göra teknikval inför implementationen av din applikation. Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
 
 
 
@@ -61,13 +60,15 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Kika på webbplatsen för [socket.io](https://socket.io/) för att få en överblick av en modul som hjälper till att implementera websockets (och andra tekniker) för realtid i klient och server.
-
-1. Kika på [websocket modulen ws](https://github.com/websockets/ws) för server del som använder rena Websockets.
+1. Kika på [websocket modulen ws](https://github.com/websockets/ws) för en websocket server som använder rena (_native_) WebSockets.
 
 1. Titta över [MDN WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) som ger dig material för klientsidan samt bakomliggande information om hur man bygger en server från grunden.
 
+1. Kika på webbplatsen för [socket.io](https://socket.io/) för att få en introduktion till en modul som implementerar websockets (och närliggande tekniker) för realtid i klient och server.
+
+<!--
 1. Bekanta dig översiktligt med [Selenium WebDriver](http://www.seleniumhq.org/) på dess webbplats. Det är programvara som ger oss möjlighet att skriva funktionstester och exekvera dem via en webbläsare.
+-->
 
 
 
@@ -84,7 +85,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)" för att komma igång med konceptet websockets. Spara dina exempelprogram i `me/kmom04/websocket`.
 
+<!--
 1. Jobba igenom artikeln "[Kom igång med funktionstester i JavaScript](kunskap/kom-igang-med-funktionstester-i-javascript)" för att komma igång med konceptet websockets. Spara dina exempelprogram i `me/kmom04/functest`.
+-->
 
 
 
@@ -92,7 +95,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript  (realtid)](uppgift/bygg-en-klient-server-applikation-i-javascript-realtid)". Du skall integrera en demo av din applikation i repot `me/redovisa`.
+1. Gör uppgiften "[Bygg en chatt med WebSocket](uppgift/bygg-en-chatt-med-websocket)". Du bygger ut din redovisa-sida med en chatt. Spara koden i repot `me/redovisa`.
+
+1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript  (realtid)](uppgift/bygg-en-klient-server-applikation-i-javascript-realtid)". Du skall lägga till realtidsfunktionalitet i din applikation. Du sparar koden under `me/app`.
 
 
 
@@ -107,6 +112,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
+* Är du ny på relatidsprogrammering eller har du gjort liknande tidigare? 
 * Hur gick det att jobba med konceptet realtidsprogrammering i webben, några reflektioner?
+* Berätta om din chatt som du integrerade i redovisa-sidan.
+* Berätta om den realtidsfunktionalitet du väljer att integrera i din klient/server applikation.
 
 Har du frågor eller funderingar så ställer du dem i forumet.
