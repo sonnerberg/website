@@ -2,74 +2,56 @@
 author: mos
 category:
     - javascript
-    - test
+    - websocket
     - kurs ramverk2
 revision:
-    "2017-10-03": (PA1, mos) Första utgåvan.
+    "2017-11-13": (A, mos) Första utgåvan.
 ...
 Bygg en klient/server applikation i JavaScript (realtid)
 ==================================
 
-Du skall bygga ut din klient/server applikation med en realtidsdel. Du skall dels lägga till en realtidschatt samt lägga till relatidsaspekten på ytterligare nåogn relevant plats i din applikation.
+Du skall bygga ut din klient/server applikation med en realtidsdel. Du väljer själv teknik och exakt på vilket sätt som du implementerar realtidsaspekter i din applikation.
+
+Om du saknar idéer så lägger du till en chatt.
 
 <!--more-->
-
-[WARNING]
-**Kursutveckling pågår**
-[/WARNING]
 
 
 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artiklarna "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)", "[Kom igång med funktionstester i JavaScript](kunskap/kom-igang-med-funktionstester-i-javascript)" och du har sedan tidigare en klient/server applikation enligt uppgiften "[Bygg en klient/server applikation i JavaScript](uppgift/bygg-en-klient-server-applikation-i-javascript)".
+Du har jobbat igenom artikeln "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)".
 
-<!--stop-->
+Du har löst uppgiften "[Bygg en chatt med WebSocket](uppgift/bygg-en-chatt-med-websocket)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Din applikation har en server-del och en klient-del. Klienten är godtycklig JavaScript, SPA, webb, desktop, mobil, etc. Server-delen är troligen en Express-server som "frontend/router/REST-API" mot din applikationskod.
+Uppgiften är fri i sin utformning. Mitt utgångsläge har varit att en applikation kan ha nytta av en chatt och att man kan integrera denna chatt i sin applikation, kanske som en delvis fristående modul.
 
-Din kod skall vara testbar. Du kan organisera din kod i ett eller flera repon eller i redovisa-repot. Du kan göra det enkelt till att börja med och fortsätta jobba i redovisa-repot, eller så bryter du ut din applikationskod till eget/egna repon.
+Men, det finns många variationer på applikationer så jag överlåter åt dig att integrera realtidsaspekterna.
 
-Din applikation skall omslutas av enhetstester.
+Kommer du inte på nåt så kan du alltid välja chatt-varianten.
 
-I kommande kursmoment gäller även följande.
+Samtidigt kan du fortsätta att utveckla din applikation. Glöm inte att försöka täcka det mesta av din kod med enhetstester (i rimlig omfattning).
 
-Din applikation kommer omslutas av funktionstester.
-
-Din applikation skall kunna användas av flera användare samtidigt och användarna skall samverka.
-
-Din applikation skall innehålla inslag av realtid med websockets.
-
-Din applikation skall integreras med en databas.
-
-Din applikation, eller delar av den, skall publiceras som en npm-modul.
-
-Det finns en forumtråd som ger [mer information rörande val av applikationen](t/7005).
+Tänk god kodstruktur och bygg moduler som är fristående och återanvändbara, så långt det är möjligt och rimligt.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Påbörja arbetet med din applikation. Ha ambitionen att i liten skala utveckla enligt TDD för att utvärdera konceptet.
+1. Bygg vidare på din klient/server applikation.
 
-1. Bygg en testsuite av enhetstester till din applikation.
+1. Integrera realtidsaspekten i din applikation genom att använda WebSockets.
 
-1. Se till att din applikation (ditt repo) omfattas av en CI-kedja.
+1. Uppdatera landningssidan i din redovisa och berätta kort om realtidsaspekten.
 
-1. Infoga en landningssida/demo/prototyp av din applikation i din redovisa-sida.
-
-1. Committa, tagga (v3.x.x) och pusha relevanta repon.
-
-1. Om du lägger applikationen i eget repo så länka till det från din redovisa/about-sida.
-
-1. Kontrollera att allt validerar och fungerar. Ladda upp det på studentservern.
+1. Committa, tagga och pusha relevanta repon samt ladda upp det på studentservern.
 
 
 
