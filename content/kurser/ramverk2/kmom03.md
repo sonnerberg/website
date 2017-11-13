@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-11-13": "(B, mos) Uppdatera var koden kan sparas samt redovisningsfråga om enhetstester i Docker."
     "2017-11-03": "(A, mos) Första utgåvan."
 ...
 Kmom03: Test
@@ -67,7 +68,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgiften "[Integrera en testmiljö med JavaScript i me-sida och Express](uppgift/integrera-en-testmiljo-med-javascript-i-me-sida-och-express)". Det handlar om att integrera enhetstester, kodtäckning och en CI-kedja i din me-sida. Spara allt under `me/redovisa`.
 
-1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript](uppgift/bygg-en-klient-server-applikation-i-javascript)". Du kan inledningsvis jobba i `me/kmom03/tdd`. I slutet skall du integrera en demo av din applikation i repot `me/redovisa`.
+1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript](uppgift/bygg-en-klient-server-applikation-i-javascript)". Spara koden i eget repo under `me/app`.
 
 
 
@@ -84,6 +85,7 @@ Se till att följande frågor besvaras i texten:
 
 * Berätta vilka tekniker/verktyg du valde för enhetstester och kodtäckning och varför?
 * Berätta om cin CI-kedja och reflektera över de valen du gjorde?
+* Reflektera över hur det gick att integrera enhetstesterna i olika Docker-kontainerns och om du ser någon nytta med detta. 
 * Hur väl lyckades du utvärdera TDD-konceptet och vilka är dina reflektioner?
 * Berätta om tankarna kring din klient/server applikation och nämn de tekniker du använder.
 
