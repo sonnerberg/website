@@ -5,6 +5,7 @@ category:
     - docker
     - kurs ramverk2
 revision:
+    "2017-11-13": (C, mos) Lägg till att Express skall köras i godtycklig kontainer.
     "2017-11-01": (B, mos) Förtydliga om att tagga v2.0.0 + en extrauppgift om Dockerfiles.
     "2017-10-20": (A, mos) Första utgåvan.
 ...
@@ -37,6 +38,8 @@ Krav {#krav}
 1. Skapa en fil `docker-compose.yml` som startar upp tre olika kontainrar av olika version med PHP och Apache (eller Nginx). Spara filen i `me/kmom02/docker`.
 
 1. Skapa en fil `docker-compose.yml` som startar upp tre olika kontainrar av olika version med Node. Spara filen i `me/redovisa`.
+
+1. Lägg till så man kan starta din redovisa-server i någon av de tre kontainrarna via `make` (alternativt `npm run`) och `make node1`, `make node2` och `make node3`.
 
 1. Tagga och pusha ditt redovisa-repo med v2.0.0. 
 
