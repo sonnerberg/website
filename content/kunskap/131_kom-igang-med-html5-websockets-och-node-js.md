@@ -14,6 +14,14 @@ För att komma igång med grunderna i HTML5 Websocket så bygger vi en enkel kli
 
 <!--more-->
 
+[WARNING]
+**Nyare artikel finns**
+
+Det finns en nyare utgåva av denna artikel vars syfte också är att visa hur du kommer igång med WebSockets tillsammans med Node (och Express).
+
+Du hittar artikeln på "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)".
+[/WARNING]
+
 Till att börja med så installerar vi node.js och för att se hur det fungerar så skapar vi en enkel webbserver som körs i node.js. Därefter sätter vi tänderna i HTML5 Websockets och vi bygger en enkel echo-server i node.js. En echo-server som skickar tillbaka samma meddelande som den tar emot. Sedan bygger vi ut den till en broadcast-server som tar emot ett meddelande och skickar ut samma meddelande till alla klienter som är uppkopplade mot servern. Till slut har vi alltså nästan en chatt-klient och en chatt-server, med HTML5 Websockets och en server i JavaScript som körs med node.js.
 
 [FIGURE src=/image/kunskap/javascript/html5-websocket-client-to-echo-server.jpg?w=w1&q=70 caption="En websocket-klient som kopplar sig till en echo-server."] 
