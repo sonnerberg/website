@@ -1,12 +1,13 @@
 ---
 author:
     - mos
-revision:
-    "2016-11-14": "(A, mos) Första utgåvan i format av ett utkast."
 category:
     - case
     - sokratiska samtal
     - not yet peer reviewed
+revision:
+    "2017-11-14": "(B, mos) Mindre justeringar i texten i slutet."
+    "2016-11-14": "(A, mos) Första utgåvan i format av ett utkast."
 ...
 Om svårigheten att ge bra feedback
 ===================================
@@ -140,7 +141,7 @@ Bryr sig alla studenter om feedback?
             rätt/önskvärt ställe. håller med dig.
 ```
 
-Alla studenter bryr sig väldigt lite om feedbacken som ges. Själv är jag en sådan student. Ibland ser jag att läraren ger feedback på ett område som jag inte fann intressant eller som jag valde att prioritera. Jag gick nyss en seminarieserie inom pedagogisk utveckling och seminarieledarna förklarade att de inte avsåg att lämna feedback på inlämningar, men de hade ett upplägg där alla studenter såg och kunde läsa allas inlämningar. Jag hade inga problem med det. Om jag ville ha feedback på ett område så frågade jag istället, och fick svar.
+Ibland ser jag att läraren ger feedback på ett område som jag (när jag är student) inte fann intressant eller som jag valde att inte prioritera. Jag gick nyss en seminarieserie inom pedagogisk utveckling och seminarieledarna förklarade att de inte avsåg att lämna feedback på inlämningar, men de hade ett upplägg där alla studenter såg och kunde läsa allas inlämningar. Jag hade inga problem med det. Om jag ville ha feedback på ett område så frågade jag och fick svar. Jag räknade helt enkelt inte med någon feedback.
 
 Men vi är alla olika. Dessutom vill vi ha feedback inom just det som vi själva fann intressant, och inte det som läraren fann intressant. Det kan vara så för vissa studenter.
 
@@ -239,23 +240,3 @@ Något som återkommer, i form av förbättringsförslag och önskemål, är kod
 Jag tror jag kan vara tydligare i vilken feedback som ges, vi kan också finslipa det sättet vi ger den skrivna feedbacken på, så även om den är liten så kan den vara tydlig och informativ.
 
 Jag ser flera möjligheter till förbättringar, men vilka vägar som är bäst att vandra på, för att ge bättre feedback, får vi se. Men samtalet med gel var givande och det hjälpte mig att belysa mina funderingar kring feedback.
-
-
-
-Diskussion om artikeln {#diskussion}
------------------------
-
-I [artikelns forumtråd](t/XXX) kan du ge din feedback till författaren och vidare diskutera ämnet som artikeln hanterar.
-
-
-
-Peer reviewed {#peer}
------------------------
-
-Följande har läst denn artikel, givit sin feedback och samtalat om artikelns innehåll.
-
-| Granskare |
-|-----------|
-|TBD |
-|TBD |
-|TBD |

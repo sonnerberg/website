@@ -12,7 +12,7 @@ revision:
 Kmom03: Funktioner
 ==================================
 
-I JavaScript handlar det mycket om funktioner och språket är delvis ett funktionsorienterat programmeringsspråk. Låt oss nu träna på funktioner i alla dess varianter för att komma i gång med hur de fungerar , är uppbyggda och strukturerade. Att organisera sin kod i funktioner är första steget mot att skriva större och väl organiserade program.
+I JavaScript handlar det mycket om funktioner och språket är delvis ett funktionsorienterat programmeringsspråk. Låt oss nu träna på funktioner i alla dess varianter för att komma i gång med hur de fungerar, är uppbyggda och strukturerade. Att organisera sin kod i funktioner är första steget mot att skriva större och väl organiserade program.
 
 [FIGURE src=/image/snapht14/js1-megasandbox2.png?w=w2 caption="En flagga med HTML CSS och JavaScript."]
 

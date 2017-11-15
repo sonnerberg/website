@@ -51,7 +51,7 @@ Läs följande:
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
-    * Kap 3. Hur vi läser på webben
+    * Kap 4. Målgrupper - vem vill du nå?
 
 1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur Markdown-texten i Anax Flat formatteras till HTML.
 
