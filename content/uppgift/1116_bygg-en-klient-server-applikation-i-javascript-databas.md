@@ -7,14 +7,18 @@ category:
 revision:
     "2017-11-13": (A, mos) Första utgåvan.
 ...
-Bygg en klient/server applikation i JavaScript (realtid)
+Bygg en klient/server applikation i JavaScript (databas)
 ==================================
 
-Du skall bygga ut din klient/server applikation med en realtidsdel. Du väljer själv teknik och exakt på vilket sätt som du implementerar realtidsaspekter i din applikation.
-
-Om du saknar idéer så lägger du till en chatt.
+Du skall bygga ut din klient/server applikation med en del som använder databasen. Du väljer själv teknik och exakt på vilket sätt som du implementerar databasaspekter i din applikation.
 
 <!--more-->
+
+[WARNING]
+**Arbete pågår**
+[/WARNING]
+
+<!--stop-->
 
 
 
