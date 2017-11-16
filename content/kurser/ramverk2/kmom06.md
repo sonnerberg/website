@@ -52,7 +52,7 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom01/express`.
+1. Jobba igenom artikeln "[Publicera en kodmodul på npm](kunskap/XXX)" för att se hur man publicerar moduler till npm och hur man sedan återanvänder dem i sin kod.
 
 
 
@@ -61,7 +61,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk2](uppgift/bygg-en-me-sida-till-ramverk2)". Det handlar om att bygga din me-sida med Express och publicera på Github. Spara allt under `me/redovisa`.
+1. Gör uppgiften "[Publicera en modul till NPM](uppgift/publicera-en-modul-till-npm)". Du skall bekanta dig med npm genom att publicera en av dina moduler som ett npm-paket. Modulen du väljer måste du återanvända i ditt projekt (eller publicera hela projektet). Du jobbar i `me/app` och eventuellt i fler underkataloger/repon.
 
 
 

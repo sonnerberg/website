@@ -61,7 +61,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk2](uppgift/bygg-en-me-sida-till-ramverk2)". Det handlar om att bygga din me-sida med Express och publicera på Github. Spara allt under `me/redovisa`.
+1. Gör uppgiften "[Skapa en CRUD med MongoDB](uppgift/skapa-en-crud-med-mongodb)". Du skall lägga till databasfunktionalitet i din applikation. Du sparar koden under `me/redovisa`.
+
+1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript (databas)](uppgift/bygg-en-klient-server-applikation-i-javascript-databas)". Du bygger ut din redovisa-sida med en chatt. Spara koden i repot `me/app`.
 
 
 
@@ -76,9 +78,6 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
-* Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
-* Använde du någon form av scaffolding som Express erbjuder?
-* Jobbar du med Markdown för innehållet, eller annat liknande?
+* 
 
 Har du frågor eller funderingar så ställer du dem i forumet.
