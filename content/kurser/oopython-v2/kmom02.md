@@ -85,7 +85,10 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln om UML-diagram "[Vad är UML?](kunskap/vad-ar-uml)".
 
-2. Läs igenom artikeln som handlar om unittest "[Att skriva unittester](kunskap/att-skriva-unittester)".
+1. Läs igenom artikeln som handlar om unittest "[Att skriva unittester](kunskap/att-skriva-unittester)".
+
+1. Läs igenom artikeln om "[Klass relationer](kunskap/klass-relationer)" i Python.
+
 
 
 

@@ -127,8 +127,6 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
 
-1. Läs igenom artikeln om "[Klass relationer](kunskap/klass-relationer)" i Python.
-
 
 
 ###Uppgifter {#uppgifter}
