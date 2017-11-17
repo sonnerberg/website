@@ -1,13 +1,14 @@
 ---
 author: mos
-revision:
-    2016-11-14: (C, mos) Förtydligade att även separata stylesheets fungerar.
-    2016-10-26: (B, mos) Ändrade vilket versionsnummer som skall gälla.
-    2016-10-21: (A, mos) Första utgåvan.
 category:
     - kurs/design
     - tema
     - less
+revision:
+    "2017-11-17": (D, mos) Genomgång inför ht17.
+    "2016-11-14": (C, mos) Förtydligade att även separata stylesheets fungerar.
+    "2016-10-26": (B, mos) Ändrade vilket versionsnummer som skall gälla.
+    "2016-10-21": (A, mos) Första utgåvan.
 ...
 Bygg en bas och en familj av teman
 ===================================
@@ -27,6 +28,8 @@ Du har jobbat igenom artikeln "[Skapa en familj av teman till Anax Flat](kunskap
 
 Du har läst kurslitteraturen och skaffat dig kunskaper om grundläggande färgteori.
 
+Du har ett typografiskt grid som du kan anpassa.
+
 
 
 Introduktion {#intro}
@@ -42,9 +45,7 @@ I varje tema kan du använda vitt, svart och nyanser av grått som grund.
 
 När du väljer färger så kan du även lägga till nyanser av en färg, där du jobbat med färgmättnad eller ljusnivå på färgen.
 
-I din tekniska lösning så är du begränsad till den temaväljare som finns med i ditt Anax Flat. Du måste bygga dina teman så att temaväljaren kan användas. Men din [temaväljare kan konfigureras](t/5923) för att hantera både stylesheets och klasser och din [makefile kan generera flera stylesheets](t/5922).
-
-Du bör läsa lite mer om temaväljaren, det finns en [beskrivning i Anax manualen](anax).
+I din tekniska lösning så är du begränsad till den temaväljare som finns med i ditt Anax Flat. Läs om [hur temaväljaren fungerar](anax).
 
 [INFO]
 **TIPS.**
