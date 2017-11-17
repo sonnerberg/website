@@ -121,15 +121,11 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 
 Genomför följande övning för att träna dig.
 
-1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
-
-1. Utöka din applikation med verktyget Jinja2 med övningen "[Flask och Jinja2](kunskap/jinja2)".
+1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
 
 1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`.
 
 1. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
-
-1. Läs igenom artikeln om "[Klass relationer](kunskap/klass-relationer)" i Python.
 
 
 
