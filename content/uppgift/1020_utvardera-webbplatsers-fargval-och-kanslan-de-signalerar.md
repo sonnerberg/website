@@ -1,19 +1,20 @@
 ---
 author: mos
-revision:
-    2016-12-04: (D, mos) Berätta omverktyg användes.
-    2016-12-04: (C, mos) Berätta hur urvalet gjordes.
-    2016-10-26: (B, mos) La till fråga om typografival.
-    2016-10-21: (A, mos) Första utgåvan.
 category:
     - kurs/design
     - tema
     - less
+revision:
+    "2017-11-17": (E, mos) Genomläst inför ht17.
+    "2016-12-04": (D, mos) Berätta om verktyg användes.
+    "2016-12-04": (C, mos) Berätta hur urvalet gjordes.
+    "2016-10-26": (B, mos) La till fråga om typografival.
+    "2016-10-21": (A, mos) Första utgåvan.
 ...
 Utvärdera webbplatsers färgval och känslan de signalerar
 ===================================
 
-Du skall välja ut ett antal olika webbplatser och dokumentera deras färgpalett och beskriva känslan du får via respektive webbplats. Du skall argumentera kring känslan som signaleras, via färgvalen, och om den känns relevant för webbplatsens profil.
+Du skall välja ut ett antal olika webbplatser och dokumentera deras färgpalett och beskriva känslan du får från respektive webbplats. Du skall argumentera kring känslan som webbplatsens design ger, via färgvalen, och om den känns relevant för webbplatsens profil.
 
 Du kan jobba i grupp för att lösa denna uppiften. Förslagsvis jobbar du i grupp med 2 till 5 medlemmar per grupp.
 
@@ -35,8 +36,8 @@ Skapa en struktur för din rapport, din analys, det kommer fler sådana här upp
 
 ```bash
 # Gå till kursrepot
-$ cd me/anax-flat/content
-$ rsync -av report/{.meta.md,000_index.md,100_intro.md} analysis/
+cd me/anax-flat/content
+rsync -av report/{.meta.md,000_index.md,100_intro.md} analysis/
 ```
 
 Lägg till så sidan syns i din navbar.
