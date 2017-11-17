@@ -61,7 +61,9 @@ När du dokumenterar en färgpalett så kan du lägga den direkt i dokumentet vi
 Krav {#krav}
 -----------------------
 
-1. Välj ut 4 webbplatser som skall analyseras, berätta hur du gjorde urvalet. Berätta även om du använda något särskilt verktyg för att göra färganalysen.
+1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet. Berätta även om du använda något särskilt verktyg för att göra färganalysen.
+
+1. Om du jobbar i grupp om 3 eller flera så väljer ni 4 webbplatser att analysera.
 
 1. För varje webbplats, gör följande:
     1. Ta en snapshot (bild) på webbplats.
