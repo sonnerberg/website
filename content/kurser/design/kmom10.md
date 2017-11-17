@@ -20,6 +20,11 @@ Upplägget är enligt följande:
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 
+<!--
+* Vilka krav skall dokumenteras i projektredovisningen?
+-->
+
+
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------

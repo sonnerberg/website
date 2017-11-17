@@ -1,11 +1,11 @@
 ---
 author: mos
 revision:
-  "2015-08-27": (D, mos) Uppgraderad till dbwebb-cli version 2.
-  "2015-01-19": (C, mos) Bort ruta om kursutveckling.
-  "2014-11-24": (B, mos) Berättar var koden skall sparas och hur man validerar, samt
-    hur man räknar max intelligens.
-  "2014-11-19": (A, mos) Första versionen.
+    "2017-11-17": (E, mos) Slumpa fizzbuzz start och fler tipsfrågor.
+    "2015-08-27": (D, mos) Uppgraderad till dbwebb-cli version 2.
+    "2015-01-19": (C, mos) Bort ruta om kursutveckling.
+    "2014-11-24": (B, mos) Berättar var koden skall sparas och hur man validerar, samt hur man räknar max intelligens.
+    "2014-11-19": (A, mos) Första versionen.
 ...
 Kmom10: Projekt och examination
 ==================================
@@ -19,11 +19,6 @@ Upplägget är enligt följande:
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 
-[WARNING]
-Kursutveckling pågår inför ht17 läsperiod 2.
-[/WARNING]
-
-<!--stop-->
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
@@ -101,7 +96,7 @@ Hela testet skall köras i en enda HTML-sida, utan omladdningar. Varje test skal
 
 Första delen av testet är valfritt antal 1X2-frågor. Som en tipspromenad. Frågan visas upp i webbsidan. Testpersonen svarar på frågan (genom att till exempel klicka på svarsalternativen) och får därefter direkt se det rätta svaret. Sedan kan testpersonen välja att gå vidare till nästa fråga.
 
-Du väljer att ta med 3 tipsfrågor, bara för att visa hur det fungerar.
+Du väljer att ta med 5 tipsfrågor, bara för att visa hur det fungerar.
 
 Testpersonen samlar poäng i varje deltest. Här är förslaget att rätt svar ger tre poäng per fråga och fel ger 0 poäng.
 
@@ -114,6 +109,8 @@ På detta testet så visar du upp en sekvens av spelet FizzBuzz. Testpersonen sk
 När testpersonen klickat på svaret så visas det rätta svaret tillsammans med en länk till nästa test.
 
 Rätt klick ger tre poäng och fel ger 0 poäng.
+
+Startvärdet för FizzBuzz-sekvensens skall slumpas fram så det inte är samma varje gång.
 
 
 
