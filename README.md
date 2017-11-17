@@ -7,6 +7,25 @@ This is the main website for dbwebb.se, live at [https://dbwebb.se](https://dbwe
 
 
 
+Really short story
+--------------------------------
+
+Start up the webserver using `docker-compose`.
+
+```
+docker-compose up website -d
+```
+
+Open a web browser to localhost:8080 to view the site.
+
+Close down the docker container.
+
+```
+docker-compose down website
+```
+
+
+
 Short story
 --------------------------------
 

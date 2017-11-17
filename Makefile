@@ -350,7 +350,7 @@ site-build:
 
 
 
-# target: etc-hosts - Create a entry in the /etc/hosts for local access.
+# target: etc-hosts          - Create a entry in the /etc/hosts for local access.
 .PHONY: etc-hosts
 etc-hosts:
 	$(ECHO) "127.0.0.1 $(WWW_LOCAL)" | sudo bash -c 'cat >> /etc/hosts'
@@ -358,7 +358,7 @@ etc-hosts:
 
 
 
-# target: ssl-cert-create - One way to create the certificates.
+# target: ssl-cert-create    - One way to create the certificates.
 .PHONY: ssl-cert-create
 ssl-cert-create:
 	#cd $(HOME)/git/letsencrypt
@@ -367,7 +367,7 @@ ssl-cert-create:
 
 
 
-# target: ssl-cert-update - Update certificates with new expiray date.
+# target: ssl-cert-update    - Update certificates with new expiray date.
 .PHONY: ssl-cert-renew
 ssl-cert-renew:
 	#cd $(HOME)/git/letsencrypt
@@ -377,13 +377,13 @@ ssl-cert-renew:
 	sudo service apache2 start
 
 
-# target: install-fresh - Do a fresh installation of a new server.
+# target: install-fresh      - Do a fresh installation of a new server.
 .PHONY: install-fresh
 install-fresh: etc-hosts virtual-host update
 
 
 
-# target: virtual-host - Create entries for the virtual host http.
+# target: virtual-host       - Create entries for the virtual host http.
 .PHONY: virtual-host
 
 define VIRTUAL_HOST_80
@@ -459,9 +459,14 @@ virtual-host:
 	sudo apachectl configtest
 	sudo service apache2 reload
 
+
+
+# target: virtual-host-echo  - Echo virtual host for http.
 virtual-host-echo:
 	@$(ECHO) "$$VIRTUAL_HOST_80"
 	#$(ECHO) "$$VIRTUAL_HOST_80_WWW"
+
+
 
 # target: virtual-host-https - Create entries for the virtual host https.
 .PHONY: virtual-host-https
