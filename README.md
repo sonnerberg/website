@@ -10,6 +10,12 @@ This is the main website for dbwebb.se, live at [https://dbwebb.se](https://dbwe
 Really short story
 --------------------------------
 
+Prepare to run in docker and update all local files.
+
+```
+make update-docker
+```
+
 Start up the webserver using `docker-compose`.
 
 ```
