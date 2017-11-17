@@ -31,6 +31,12 @@ En resurs som finns online där man kan läsa generellt om rapportskrivning är 
 Kursmaterial {#kursmaterial}
 -----------------------------------------------------
 
+Följande generella kursmaterial finns till kursen.
+
+
+
+### Kursrepo {#kursrepo}
+
 Det finns ett [kursrepo exjobb](https://github.com/dbwebb-se/exjobb) till kursen.
 
 Du kan clona en kopia av kursrepot med [dbwebb-cli](dbwebb-cli).
@@ -39,7 +45,27 @@ Du kan clona en kopia av kursrepot med [dbwebb-cli](dbwebb-cli).
 dbwebb clone exjobb
 ```
 
+
+
+### Forum och chatt {#chatt}
+
 Det finns ett [forum](forum/utbildning/exjobb) och en [gitter-kanal](https://gitter.im/dbwebb-se/exjobb) till kursen.
+
+
+
+### Video {#video}
+
+De videor som finns ligger på dbwebb-kanalen under spellistan "[Kursen exjobb](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8ZNqNxnWc0cd2ZtlwTWye7)".
+
+
+
+### Introduktionsföreläsning {#intro}
+
+Det finns en introföreläsning där grunderna för kursen presenteras.
+
+Det finns [slides till presentationen](https://goo.gl/TvxGzT).
+
+[YOUTUBE src=pdUspBHTIJI list="PLKtP9l5q3ce8ZNqNxnWc0cd2ZtlwTWye7" caption="Video för introduktionsföreläsningen som hålls av Conny."]
 
 
 
