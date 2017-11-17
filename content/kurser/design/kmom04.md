@@ -1,21 +1,18 @@
 ---
 author: mos
 revision:
+    "2017-11-17": (C, mos) Genomläst ingör ht17, förtydliganden.
     "2016-10-26": (B, mos) Bytte plats från kmom03 till kmom04.
     "2016-10-21": (A, mos) Första utgåvan.
 ...
 Kmom04: Färg
 ====================================
 
-[WARNING]
-Kursutveckling pågår inför ht17.
-[/WARNING]
+Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Det blir flera teman. Finns det något bra sätt att organisera sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända delar av ett tematemats bas-kod?
 
-Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Många teman, men finns det då ett sätt att skriva sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända temats bas-kod?
+Låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt lära oss grunderna i vissa designkoncept.
 
-Låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt lära oss grunderna i färglära.
-
-Vi kikar även på lite typografi, som en del i att skapa smakfulla teman.
+De designkoncept vi först väljer att fokusera på är färglära och typografi. Vi tittar på hur man väljer färger och vi prövar olika typografiska val och vi utvärderar hur dessa val påverkar vår design.
 
 
 
@@ -71,10 +68,11 @@ Lös följande artiklar.
 1. Gå tillbaka till boken [En praktisk guide till typografi på webben](http://webtypography.net/) och se om du hitta något kapitel i den som kan inspirera dig till typografiska mästerverk i dina teman.
 
 
-
+<!--
 ###Video  {#video}
 
 Det finns inga videor.
+-->
 
 <!--
 Titta på följande:
@@ -107,7 +105,10 @@ Följande tips hjälper dig igenom kursmomentet.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. Jobba igenom artikeln "[Skapa en familj av teman till Anax Flat](kunskap/skapa-en-familj-av-teman-till-anax-flat)".
+1. I uppgiften används en temaväljare som finns i ditt Anax Flat. [Läs om temaväljaren](anax/jobba-med-temavaljaren) och se hur du kan konfigurera den och använda olika LESS-filer som grund till ett tema och din kommande familj av teman.
+
+1. Läs igenom artikeln "[Skapa en familj av teman till Anax Flat](kunskap/skapa-en-familj-av-teman-till-anax-flat)". Artikeln ger dig viss orientering i hur man kan tänka kring familjer av teman och visst underlag i konstruktioner som är bra att ha.
+
 
 
 
@@ -118,12 +119,6 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
 
 1. Utför uppgiften "[Bygg en bas och en familj av teman](uppgift/en-bas-och-en-familj-av-teman)".
-
-
-
-###Extra {#extra}
-
-Det finns ingen extrauppgift.
 
 
 

@@ -1,13 +1,14 @@
 ---
 author: mos
-revision:
-    2016-11-14: (B, mos) Genomgången, smärre justeringar i text.
-    2016-10-21: (A, mos) Första versionen.
 category:
     - kurs/design
     - anax flat
     - theme
     - less
+revision:
+    "2017-11-17": (C, mos) Genomläst inför ht17.
+    "2016-11-14": (B, mos) Genomgången, smärre justeringar i text.
+    "2016-10-21": (A, mos) Första versionen.
 ...
 Skapa en familj av teman till Anax Flat
 ===================================
@@ -64,13 +65,16 @@ I vår version av Anax Flat finns en temaväljare som är förberedd för att ha
 
 Du kan testa din temaväljare under routen `index.php/theme-selector`.
 
-Tekniken bygger i sitt grundutförande på att man använder en CSS-klass i HTML-elementet `<html>` som pekar ut vilket tema man vill använda. Men du kan själv konfigurera temaväljaren till att använda separata stylesheets och/eller CSS-klasser på `<html>` elementet.
+Du kan läsa mer om temaväljaren och hur du konfigurerar den via "[Jobba med temaväljaren](anax/jobba-med-temavaljaren)".
 
 
 
-###Att använda html-klasser för enklare temaändringar {#htmlclass}
+Att använda html-klasser för enklare temaändringar {#htmlclass}
+-------------------------------
 
-Tanken är att man har ett bastema och sen väljer man en CSS-klass för det anpassade temat, resultatet blir det som visas i webbläsaren.
+Om man med enkla medel vill uppnå helt olika teman baserade på ett och samma ursprungstema så kan man använda klass attributet på till exempel `<html>`.
+
+Tanken är att man har ett bastema och sen väljer man en CSS-klass för det anpassade temat.
 
 Titta på följande LESS-kod som exemplifierar hur det fungerar.
 
@@ -110,9 +114,11 @@ Eller så ser den ut så här.
 
 Ser du skillnaden och kan du se hur det vi kallar temat kopplas mellan LESS och HTML med klassen på `<html>`-elementet?
 
+Detta är en enkel variant att åstakomma specifika teman utifrån ett bastema.
 
 
-Ett exempel {#exempel}
+
+Ett exempel på tema och bas {#exempel}
 -------------------------------
 
 Låt oss kika på ett exempel som jag gjort. Så blir det tydligare hur jag menar. Exemplet är en del av kursrepot design och ligger i katalogen [`example/theme`](https://github.com/dbwebb-se/design/tree/master/example/theme). Du kan [testa det via dbwebb](repo/design/example/theme).
@@ -121,9 +127,9 @@ Låt oss kika på ett exempel som jag gjort. Så blir det tydligare hur jag mena
 
 ###Bastemat {#basetheme}
 
-Vi har ett bastema som vi utgår ifrån. Det behöver inte vara ett helt tomt tema, det kan innehålla delar som är gemensamma för familjen. Det är ett beslut vi tar. Ett bastema som är helt generellt, eller ett bastema som passar till en viss familj av teman. Vå håller oss till familjetanken.
+Vi har ett bastema som vi utgår ifrån. Det behöver inte vara ett helt tomt tema, det kan innehålla delar som är gemensamma för familjen. Det är ett beslut vi tar. Ett bastema som är helt generellt, eller ett bastema som passar till en viss familj av teman. Vi håller oss till familjetanken i detta exemplet.
 
-Nåväl, så här ser min exempelsida ut.
+Så här ser min exempelsida ut.
 
 [FIGURE src=/image/snapht16/theme-base.png?w=w2 caption="Detta är mitt bastema i exemplet."]
 
@@ -231,28 +237,55 @@ Ser du att du kan definiera variabler i LESS-moduler och senare ge dem nya värd
 
 
 
-Måste man ha med CSS-klassen i HTML {#fraga}
+Hur skall man tänka kring tema familjer  {#fraga}
 -------------------------------
 
-Måste man bygga strukturen med en CSS-klass i `<html>`-elementet? Kan man inte bara göra separata stylesheets?
+Vi har sett ett par varianter av hur man kan anpassa och specialisera ett tema.
 
-Jodå, visst kan man göra det. Det är ju delvis så som exemplet är uppbyggt. Så det är en väg att gå.
+En variant var att styra vilken anpassning som verkställs genom att sätta klass-attributet på det övergripande elementet `<html>`. Det ger oss vissa möjligheter.
 
-Men om man väljer att även se tema-klassen som en möjlighet så kan man skapa en stylesheet som är förberedd till att användas på olika sätt. Stylesheeten, temat, innehåller redan flera olika stilar, teman. 
-
-För att ta ett exempel. Säg att jag vill visualisera årstider på dbwebb och byta tema för varje årstid. Jag *kan* välja att jobba med helt olika stylesheets separerade i filer som jag inkluderar. **Eller** så väljer jag att lägga in allt i en och samma stylesheet och styr vilken style jag använder genom att sätta tema-klassen i `<html>`-elementet.
-
-Man kan även tänka sig att man sätter flera tema-klasser som på olika sätt påverkar resultatet. Tänk på följande konstruktion och vad den skulle kunna innebära i LESS-kod.
+Här är en variant som applicerar ett Hallowen-inspirerat tema samt ger ljus text på svart bakgrund. Det är små justeringar som kan göras mot vilket tema som helst.
 
 ```html
 <html class="white-on-black hallowen">
+    <link rel="stylesheet/css" href="theme-adaptive.css">
 ```
 
-Det viktiga är att vi får upp ögonen för hur vi kan jobba med LESS-kod för att förbereda den för olika stylingalternativ, alternativ som vi inte alltid är medvetna om när vi först utvecklar koden.
+Vi kan skriva helt skilda stylesheets som uppfyller samma sak.
+
+```html
+<html>
+    <link rel="stylesheet/css" href="theme.css">
+    <link rel="stylesheet/css" href="theme-white-on-black.css">
+    <link rel="stylesheet/css" href="theme-hallowen.css">
+```
+
+Eller med enbart ett specifikt tema.
+
+```html
+<html>
+    <link rel="stylesheet/css" href="theme-white-on-black-hallowen.css">
+```
+
+Ovan ser vi varianter av hur vi aktiverar ett tema genom små justeringar i HTML-koden.
+
+Det som kanske är mer viktigt är hur vi väljer att strukturera vår LESS-kod som genererar själva CSS-koden.
+
+Om vi tänker oss en familj av teman. Med små anpassningar skall vi enkelt kunna skapa ett nytt tema baserat på de moduler vi redan har och använder.
+
+Vi vill då ha en gemensam bas som är samma för alla teman. Basen bör vara så enkel som möjligt, kanske till och med utan grid, den kanske bara skall nollställa till en basstil.
+
+Sedan bygger vi på lager med lager, och slutligen ett tema som är det slutliga anpassade temat som används av vår webbplats.
+
+Med LESS blir det enkelt att dela upp koden i moduler som går att återanvända. Vi kan använda variabler för de delar som vi vill anpassa.
+
+Varje tema kan vi skapa i en egen LESS-fil som sammanfogar alla delar till ett eget anpassat tema.
+
+Det viktiga är att vi får upp ögonen för hur vi kan jobba med LESS-kod för att förbereda den för olika stylingalternativ. LESS-koden blir som programmeringskod och kodmoduler som går att återanvända och anpassa.
 
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Du har fått en översyn av hur du kan jobba med LESS i form av moduler. Du har sett hur variabler fungerar i LESS och du har sett hur du kan koppla ett tema mellan LESS och HTML-koden via en CSS-klass.
+Artikeln har givit dig en liten orientering i att tänka kring temafamiljer, hur du kan strukturera kod i LESS och hur du kan aktivera teman i HTML-koden.
