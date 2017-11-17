@@ -47,6 +47,8 @@ När du väljer färger så kan du även lägga till nyanser av en färg, där d
 
 I din tekniska lösning så är du begränsad till den temaväljare som finns med i ditt Anax Flat. Läs om [hur temaväljaren fungerar](anax).
 
+Jobba med LESS moduler, en bra struktur kan spara dig mycket tid. Gör moduler som går att anpassa i respektive tema.
+
 När du jobbar med val av typografi, välj gärna typsnitt från till exempel Googles online typsnitt, [Google Fonts](https://fonts.google.com/).
 
 [INFO]
@@ -68,17 +70,17 @@ Krav {#krav}
 
 ###En familj av teman {#teman}
 
-1. Skapa ett bastema `base` som ger dig grunden för din temafamilj. Det spelar ingen roll om temat inte ser så bra ut. Detta är bara grunden. Tanken är att man måste anpassa det för att det skall se ut som ett mer riktigt tema.
-
 1. Skapa en ny sida i `content/theme.md` och lägg den i menyn. I sidan beskriver du varje anpassat tema som du nu kommer att skapa. Skriv vad som inspirerade dig och visa den färgpalett du jobbat med samt identifiera eventuell accentfärg.
 
-1. Skapa ett tema för `light` som ger ett ljust tema med mycket vitt. Det blir en vit och ljus webbplats. Om du vill kan du använda svart och nyanser av grått för att komplettera det ljusa. 
+1. Skapa ett bastema `base` som ger dig grunden för din temafamilj. Det spelar ingen roll om temat inte ser så bra ut. Detta är bara grunden. Tanken är att man måste anpassa det för att det skall se ut som ett mer riktigt tema.
 
-1. Skapa ett tema för `color` som bygger vidare på temat `light` och ger en liten och smakfull färgsättning av temat. Välj ett monochromatiskt färgschema. Låt gärna en av nyanserna vara en accentfärg.
+1. Skapa ett tema `light` som ger ett ljust tema med mycket vitt. Det blir en vit och ljus webbplats. Om du vill kan du använda svart och nyanser av grått för att komplettera det ljusa. 
 
-1. Skapa ett tema för `dark` som inverterar temat `light` och ger en mörk bakgrund och ljus text. Välj sedan ett kompletterande färgschema och låt den ena vara dominerande färg och den andra en accentfärg.
+1. Skapa ett tema `color` som bygger vidare på temat `light` och ger en liten och smakfull färgsättning av temat. Välj ett monochromatiskt färgschema. Låt gärna en av nyanserna vara en accentfärg.
 
-1. Skapa ett tema för `colorful`. Du kan använda `light` eller `dark` som bas. Välj sedan ett triadiskt färgschema och skapa ett färgfullt tema.
+1. Skapa ett tema `dark` som inverterar temat `light` och ger en mörk bakgrund och ljus text. Välj sedan ett kompletterande färgschema och låt den ena vara dominerande färg och den andra en accentfärg.
+
+1. Skapa ett tema `colorful`. Du kan använda `light` eller `dark` som bas. Välj sedan ett triadiskt färgschema och skapa ett färgfullt tema.
 
 1. Skapa ett tema `typography` där du främst jobbar med typografin och de typgrafiska element. Välj typsnitt som är smakfulla och kompletterar varandra men välj dem så att de "står ut" så man kan identifiera webbplatsen såsom stylad med typografiska element. Du kan välja vilket färgschema som du vill som bas, eller återanvänd någon av de som du redan gjort.
 
@@ -111,7 +113,7 @@ $ dbwebb publish me
 Extrauppgift {#extra}
 -----------------------
 
-1. När man kommer till din webbplats så möts man av temat med klassen `default`. Se till att det är ditt personliga tema, ditt eget personliga mästerverk bland teman.
+1. När man kommer till din webbplats så möts man av temat med klassen `default`. Se till att det är ditt personliga tema, ditt eget personliga mästerverk bland teman. Lägg extra kraft på detta tema.
 
 1. Jobba med ett extravagant tema via klassen `fun`. Lek och gör ett riktigt udda tema. Här är ett exempel på [udda teman](t/5663). Gör en sida `content/fun` och lägg i menyn. Där kan du skapa innehåll som passar in i detta temat.
 
@@ -120,7 +122,7 @@ Extrauppgift {#extra}
 Tips från coachen {#tips}
 -----------------------
 
-Ta det lugnt och försök förstå hur LESS-koden fungerar. Finn en god struktur.
+Ta det lugnt och försök förstå hur LESS-koden fungerar. Finn en god struktur. Jobba med moduler som du återanvänder och anpassar.
 
 Var inte rädd för att skriva om din struktur om du behöver det. När kod växer så kommer man alltid till lägen där man behöver omstrukturera sin kod. Så även i sammanhanget stylesheet.
 
