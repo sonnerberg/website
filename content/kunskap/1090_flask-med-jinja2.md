@@ -36,25 +36,16 @@ Både Flask och Jinja2 kan installeras med pakethanteraren `pip`. Har du inte pi
 Sparka igång en terminal och installera Flask:
 
 ```bash
-sudo pip3 install Flask
+$ sudo pip3 install Flask
 ```
 
 Paketet Jinja2 ingår i Flask. Skulle det inte finnas installerat så installerar du det på följande vis:
 
 ```python
-sudo pip3 install Jinja2
+$ sudo pip3 install Jinja2
 ```
 
-Skapa en mapp, me/kmom01/my_app och gå in i den:
-
-```bash
-# Ställ dig i kursens rotkatalog
-$ cd me/kmom01
-$ mkdir my_app
-$ cd my_app
-```
-
-Bra, nu är det bara att köra igång.
+Allt klart? Bra, nu är det bara att köra igång.
 
 
 
@@ -63,10 +54,10 @@ Frontcontroller {#frontcontroller}
 
 Vi skapar en fil som vi döper till `app.py`. Det är frontcontrollern till applikationen, dvs den fil som hanterar alla inkommande routes och servar webbläsaren med korrekt fil.
 
-I mappen "my_app":
+Öppna en terminal och leta dig fram till mappen `kmom01/my_app`.
 
 ```bash
-touch app.py
+$ touch app.py
 ```
 
 Öppna filen i en editor, förslagsvis Atom, och kopiera in följande kod:
@@ -97,7 +88,7 @@ Routen / är roten, start eller index om man så vill. En route kan ses som en t
 Starta applikationen med:
 
 ```bash
-python3 app.py
+$ python3 app.py
 ```
 
 Om allt är ok ser du: ` * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)`  
@@ -125,12 +116,12 @@ Först stänger vi ner servern (ctrl-c) och skapar vi filerna som behövs.
 
 Använd terminalen och ställ dig i "my_app":
 ```bash
-mkdir templates static
-mkdir static/styles
-touch templates/index.html
-touch templates/header.html
-touch templates/footer.html
-touch static/styles/style.css
+$ mkdir templates static
+$ mkdir static/styles
+$ touch templates/index.html
+$ touch templates/header.html
+$ touch templates/footer.html
+$ touch static/styles/style.css
 ```
 
 [FIGURE src=/image/oopython/kmom01/tree1.png caption="Filstruktur."]
@@ -372,7 +363,7 @@ def about():
     return render_template("about.html", name=my_name, course=my_course)
 ```
 
-Nu fattas det bara att använda variablerna i about.html. Vi lägger till placeholders med hjälp av `{{ }}`:
+Nu fattas det bara att använda variablerna i about.html. Vi lägger till placeholders med hjälp av `{{ }}`.
 
 ```html
 <p>Jag heter {{ name }} och det här är kursen {{ course }}.</p>

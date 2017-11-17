@@ -16,9 +16,9 @@ Använd ett microramverk för att skapa en webbapplikation (alt. me-sida).
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
+Du har jobbat igenom övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
 
-Du har jobbat igenom övningen "[Flask och Jinja2](kunskap/jinja2)".
+Du har gått igenom artikeln "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".
 
 Du har också gjort din [Flask applikation körbar via CGI](coachen/flask-som-cgi-script).
 
@@ -43,6 +43,13 @@ Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar 
 1. Applikationen ska ha minst tre sidor, index.html, about.html och redovisning.html.
 
 1. header.html och footer.html ska inkluderas med Jinja2.
+
+1. Skapa filen `person.py`, vilken ska innehålla en personklass, som ska användas i din me-sida. Fyll på klassen med information som:
+    * Förnamn
+    * Efternamn
+    * Ålder
+    * länk till en bild som används
+    * Godtyckliga metoder för att underlätta utskrift.
 
 1. index.html ska innehålla minst
     * en bild
