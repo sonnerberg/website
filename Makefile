@@ -80,6 +80,13 @@ help:
 
 
 
+# target: update-docker           - Create/update basis for docker installation of website.
+.PHONY: update-docker
+update-docker: codebase-update site-build-docker clean-cache-anax
+	@$(call HELPTEXT,$@)
+
+
+
 # target: update                  - Update codebase (no submodules) and publish by clearing the cache.
 .PHONY: update
 update: codebase-update site-build local-publish-clear
@@ -113,6 +120,14 @@ local-publish:
 	# Make soma parts writable
 	# https://dbwebb.se/repo/htmlphp/example/pdo-sqlite/
 	if [ -d $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/ ]; then chmod 777 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/; chmod 666 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/*; fi
+
+
+
+# target: clean-cache-anax        - Clean the local anax cache directory.
+.PHONY: clean-cache-anax
+clean-cache-anax:
+	@$(call HELPTEXT,$@)
+	-rm -f cache/anax/*
 
 
 
@@ -336,12 +351,25 @@ lint: less
 
 
 
-# target: site-build   - Create essential directories and copy from vendor.
+# target: site-build              - Create essential directories and copy from vendor.
 .PHONY: site-build
 site-build:
 	# Create and sync cache
 	bash -c "install -d -m 777 cache/{cimage,anax,forum,forum-files}"
 	rsync -av cache $(LOCAL_HTDOCS)
+
+	# Copy from CImage
+	install -d htdocs/cimage
+	bash -c "rsync -av vendor/mos/cimage/webroot/{img,imgd,imgf,imgp,imgs,check_system}.php vendor/mos/cimage/icc htdocs/cimage"
+	rsync -av vendor/mos/cimage/webroot/img/ htdocs/img/cimage/
+
+
+
+# target: site-build-docker       - Create essential directories for a docker installation.
+.PHONY: site-build-docker
+site-build-docker:
+	# Create and sync cache
+	bash -c "install -d -m 777 cache/{cimage,anax,forum,forum-files}"
 
 	# Copy from CImage
 	install -d htdocs/cimage

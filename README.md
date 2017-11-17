@@ -13,7 +13,7 @@ Really short story
 Start up the webserver using `docker-compose`.
 
 ```
-docker-compose up website -d
+docker-compose up -d website
 ```
 
 Open a web browser to localhost:8080 to view the site.
