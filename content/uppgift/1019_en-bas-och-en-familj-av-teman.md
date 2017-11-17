@@ -47,21 +47,16 @@ När du väljer färger så kan du även lägga till nyanser av en färg, där d
 
 I din tekniska lösning så är du begränsad till den temaväljare som finns med i ditt Anax Flat. Läs om [hur temaväljaren fungerar](anax).
 
+När du jobbar med val av typografi, välj gärna typsnitt från till exempel Googles online typsnitt, [Google Fonts](https://fonts.google.com/).
+
 [INFO]
 **TIPS.**
 
-Ett bra sätt att påbörja uppgiften är att ta ditt befintliga tema och bestämma dig för vad som är ditt bastema (`base`) och vad som är en anpassning till bastemat (`default`).
+Ett bra sätt att påbörja uppgiften är att ta ditt befintliga tema och bestämma dig för vad som är ditt bastema (`base`) och vad som är en anpassning till bastemat (`default`). Dela upp ditt tema i två delar och två skilda filer.
 
 Sedan jobbar du vidare med varje nytt tema i uppgiften och när du behöver justera bastemat så gör du det, allt för att behålla en bra kodstruktur.
 
 Var inte rädd för att kasta koden och börja om.
-[/INFO]
-
-
-[INFO]
-**TIPS.**
-
-När du jobbar med val av typografi, välj gärna typsnitt från till exempel Googles online typsnitt, [Google Fonts](https://fonts.google.com/).
 [/INFO]
 
 
