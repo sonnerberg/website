@@ -46,7 +46,7 @@ För läsåret 2017/2018 är följande lärarassistenter, i olika omfattning.
 | ![André](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | André&nbsp;Johansson |  | andy-greenday@hotmail.com |
 | ![Magnus](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Magnus&nbsp;Greiff |  | mangegreiff@gmail.com |
 | ![Viktoria](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Viktoria&nbsp;Haapaoja |  | viktoria.haa@hotmail.com |
-| ![David](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson | TBA  | divad1_agaren@hotmail.com |
+| ![David](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson | TBA  | david_andersson96@outlook.com |
 | ![Gustav](image/lararteam/gel.jpg?w=100&h=100&cf) | Gustav&nbsp;Elmgren | gel  | gustavelmgren@gmail.com [LinkedIn](https://www.linkedin.com/in/gustav-elmgren-4035a07a) |
 | ![Dennis](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Dennis&nbsp;Skoko | desk  | dennis.skoko@hotmail.com |
 
