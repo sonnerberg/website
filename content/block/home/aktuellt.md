@@ -1,16 +1,21 @@
 ####Aktuellt
 
-[FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
+[FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
-* [Om 3-veckors uppropet](t/6758)
-* [Förberedelser inför höstterminen 2017](blogg/forberedelser-infor-terminen-2017)
-* [Introduktionsveckan Webbprogrammering 2017](blogg/introduktionsveckan-2017)
-* [dbwebb hijackat i serpen av ondsint bov](t/6598)
-* [Jag skall studera i höst (frågor/svar)](t/6532)
-* [Köpa dator inför hösten](t/4469)
-* [Omregistrering och restinlämningar inför hösten](kurser/faq/omregistrering)
+* [Om 3-veckors uppropet lp2](t/7062)
+* [Uppsamlingsheat rättningar nov 30](t/7061)
+* [Omregistrering och restinlämningar under hösten](kurser/faq/omregistrering)
+
+Sista programmeringsstugan är torsdagen den 14:e december.
+
+Redovisningsveckan är 8-14 januari.
+
+Vårterminen startar den måndagen den 15:e januari.
 
 <!--
+[FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
+
+
 * [Förberedelser inför höstterminen 2017](blogg/forberedelser-infor-terminen-2017)
 * [Introduktionsveckan Webbprogrammering 2017](blogg/introduktionsveckan-2017)
 * [dbwebb hijackat i serpen av ondsint bov](t/6598)
