@@ -1,9 +1,15 @@
 version: "3"
 services:
-    website:
+    website: &website
         image: anax/dev
         ports:
             - "8080:80"
         volumes:
             - .:/app
             - ./config/docker/dbwebb.se.conf:/etc/apache2/sites-enabled/000-default.conf
+    php70:
+        <<: *website
+        image: anax/dev:php70-apache
+    php56:
+        <<: *website
+        image: anax/dev:php56-apache
