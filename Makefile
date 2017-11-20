@@ -112,7 +112,7 @@ local-publish:
 
 	@# Recreate the link to the forum cache, since its not rsynced
 	if [ -d  $(LOCAL_HTDOCS)/htdocs/forum ]; then ln -sf ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache; fi
-	rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
+	#rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
 
 	@# Enable robots if available
 	[ ! -f $(ROBOTSTXT) ] || cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
