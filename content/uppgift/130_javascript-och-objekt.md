@@ -78,7 +78,7 @@ Krav {#krav}
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish lab3
+dbwebb publish lab5
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
