@@ -51,7 +51,11 @@ Det finns ett kommande kursmoment som handlar om att göra en npm-modul av godty
 Krav {#krav}
 -----------------------
 
+1. Använd environmentvariabeln `DBWEBB_DNS` som ett sätt att undvika hårdkodning av den DSN som kopplar upp dig mot databasen MongoDB.
+
+
 1. Skapa en klient och en server för chatt. Välj en teknik som grundar sig på websockets. Visa att chatten fungerar genom att integrera den i din redovisa-sida.
+
 
 1. Bygg ett eget applikationsprotokoll ovanpå websockets. Förslagsvis använder du JSON (eller annat du väljer).
 

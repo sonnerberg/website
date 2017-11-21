@@ -9,11 +9,6 @@ Kmom05: Databas
 
 Någon no-sql-databas, tex Mongo. Eventuellt exempel på SQLite och MySQL.
 
-[WARNING]
-Kursutveckling pågår.
-[/WARNING]
-
-<!--stop-->
 <!--more-->
 
 [FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
@@ -37,7 +32,15 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen.
+1. Bekanta dig översiktligt med [organisationen kring databasen MongoDB](https://www.mongodb.com/). Övningen (längre ned) kommer vidare utgå från informationen på denna webbplatsen. 
+
+1. Läs översiktligt igenom [Wikipedia om NoSQL](https://en.wikipedia.org/wiki/NoSQL) för en introduktion till konceptet NoSQL samt en översikt av de olika typer av databaser som ligger under samlingsnamnet. Du kan se att MongoDB är en dokumentorienterad databas.
+
+1. Läs igenom [kapitel 5 Async functions](http://exploringjs.com/es2016-es2017/ch_async-functions.html) i boken "[Exploring ES2016 and ES2017](http://exploringjs.com/es2016-es2017/)". Du behöver förståelse för dessa koncept om asynkron programmering, kommande exempelkod bygger på dessa koncept. Jag kan inte nog poängtera vikten av att förstå grunderna i det som kapitlet hanterar.
+
+1. Bekanta dig översiktligt med dokumentationen för "[MongoDB Node.js driver](http://mongodb.github.io/node-mongodb-native/)" vilken är den driver vi kommer använda för att koppla JavaScript i Node.js till MongoDB. Det handlar både om referens-dokumentationen och API-dokumentationen.
+
+1. Läs igenom inledande tutorials för MongoDB Node.js driver som du hittar i Referensmanualen. Titta främst i "Connect to MongoDB", "Collections", "CRUD Operations" och "Projections".
 
 
 
@@ -52,7 +55,7 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom01/express`.
+1. Jobba igenom artikeln "[Kom igång med MongoDB i Nodejs](kunskap/kom-igang-med-mongodb-i-nodejs)" för att komma igång med databasen MongoDB tillsammans med Express, Node.js och Docker. Spara dina exempelprogram i `me/kmom05/db`.
 
 
 
@@ -78,6 +81,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* 
+* Hur gick det att komma igång med databasen MongoDB?
+* Vilken syn har du på databaser inom konceptet NoSQL?
+* Reflektera över skillnader och likheter mellan relationsdatabaser och databaser inom NoSQL.
+* Vilka är dina tankar om asynkron programmering med JavaScript?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
