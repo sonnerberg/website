@@ -2,18 +2,24 @@
 author:
     - mos
 revision:
-    "2017-10-16": "(PA1, mos) Arbete påbörjat."
+    "2017-11-23": "(A, mos) Första utgåvan."
 ...
 Kmom05: Databas
 ==================================
 
-Någon no-sql-databas, tex Mongo. Eventuellt exempel på SQLite och MySQL.
+Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databas som klassas i NoSQL-gruppen av databaser. För att koppla oss till databasen använder vi klienter i terminalen och kod i Node.js, med och utan Express.
+
+Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en kontainer och vi kör Express i en egen kontainer och låter de båda kontainrarna kommunicera, samtidigt som vi kan kommunicera direkt med varje kontainer från terminalen.
 
 <!--more-->
 
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
+[FIGURE src=image/snapht17/kmom05-summary.png?w=w3 caption="Databasen MongoDB tillsammans med klient, express och samlad i Docker."]
 
-Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
+I följande asciinema kan du se flödet hur man jobbar med Docker i olika kontainerar för Express och MongoDB och hur man på olika sätt kan koppla sig mot dem.
+
+[ASCIINEMA src=149154 caption="Ett flöde hur man kan jobba i terminalen i kmom05."]
+
+Tänk dig som vanligt in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet. Undersök och testa, var nyfiken.
 
 
 
@@ -40,7 +46,7 @@ Kika igenom följande material.
 
 1. Bekanta dig översiktligt med dokumentationen för "[MongoDB Node.js driver](http://mongodb.github.io/node-mongodb-native/)" vilken är den driver vi kommer använda för att koppla JavaScript i Node.js till MongoDB. Det handlar både om referens-dokumentationen och API-dokumentationen.
 
-1. Läs igenom inledande tutorials för MongoDB Node.js driver som du hittar i Referensmanualen. Titta främst i "Connect to MongoDB", "Collections", "CRUD Operations" och "Projections".
+1. Läs igenom inledande tutorials för MongoDB Node.js driver som du hittar i Referensmanualen. Titta främst i "Connect to MongoDB", "Collections", "CRUD Operations" och "Projections". De ger dig snabbt en känsla av hur man jobbar med datan. 
 
 
 
@@ -64,9 +70,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Skapa en CRUD med MongoDB](uppgift/skapa-en-crud-med-mongodb)". Du skall lägga till databasfunktionalitet i din applikation. Du sparar koden under `me/redovisa`.
+1. Gör uppgiften "[Skapa en CRUD med MongoDB till din redovisa-sida](uppgift/skapa-en-crud-med-mongodb-till-din-redovisa-sida)". Du skall lägga till databasfunktionalitet i din applikation. Du sparar koden under `me/redovisa`.
 
-1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript (databas)](uppgift/bygg-en-klient-server-applikation-i-javascript-databas)". Du bygger ut din redovisa-sida med en chatt. Spara koden i repot `me/app`.
+1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript (databas)](uppgift/bygg-en-klient-server-applikation-i-javascript-databas)". Du bygger ut din applikation med stöd för databasen. Spara koden i repot `me/app`.
 
 
 
@@ -85,5 +91,6 @@ Se till att följande frågor besvaras i texten:
 * Vilken syn har du på databaser inom konceptet NoSQL?
 * Reflektera över skillnader och likheter mellan relationsdatabaser och databaser inom NoSQL.
 * Vilka är dina tankar om asynkron programmering med JavaScript?
+* Hur känner du för Docker och det sättet vi jobbar med tjänster i kontainrar?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

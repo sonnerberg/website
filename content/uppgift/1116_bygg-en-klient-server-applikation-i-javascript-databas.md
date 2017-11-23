@@ -14,33 +14,25 @@ Du skall bygga ut din klient/server applikation med en del som använder databas
 
 <!--more-->
 
-[WARNING]
-**Arbete pågår**
-[/WARNING]
-
-<!--stop-->
-
 
 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)".
+Du har jobbat igenom artikeln "[Kom igång med MongoDB i Nodejs](kunskap/kom-igang-med-mongodb-i-nodejs)".
 
-Du har löst uppgiften "[Bygg en chatt med WebSocket](uppgift/bygg-en-chatt-med-websocket)".
+Du har löst uppgiften "[Skapa en CRUD med MongoDB till din redovisa-sida](uppgift/skapa-en-crud-med-mongodb-till-din-redovisa-sida)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Uppgiften är fri i sin utformning. Mitt utgångsläge har varit att en applikation kan ha nytta av en chatt och att man kan integrera denna chatt i sin applikation, kanske som en delvis fristående modul.
+Uppgiften är fri i sin utformning. Mitt utgångsläge har varit att en applikation kan ha nytta av en databas som lagringsplats.
 
-Men, det finns många variationer på applikationer så jag överlåter åt dig att integrera realtidsaspekterna.
+Du behöver inte välja MongoDB, har du skäl för att välja en annan databas så formulerar du dig i en forumtråd som du kan länka till från din redovisa-sida. Du bör dock välja en variant av en NoSQL-databas eftersom det är ett fokus i sammanhanget.
 
-Kommer du inte på nåt så kan du alltid välja chatt-varianten.
-
-Samtidigt kan du fortsätta att utveckla din applikation. Glöm inte att försöka täcka det mesta av din kod med enhetstester (i rimlig omfattning).
+Samtidigt kan du fortsätta att utveckla din applikation. Glöm inte att försöka täcka det mesta av din kod med enhetstester (i rimlig omfattning baserat på den tiden du har tillgänglig).
 
 Tänk god kodstruktur och bygg moduler som är fristående och återanvändbara, så långt det är möjligt och skäligt.
 
@@ -51,11 +43,11 @@ Krav {#krav}
 
 1. Bygg vidare på din klient/server applikation.
 
-1. Integrera realtidsaspekten i din applikation genom att använda WebSockets.
+1. Integrera databasaspekten i din applikation genom att använda MongoDb.
 
 1. Du behöver inte göra en komplett implementation. Du kan skjuta upp hela eller delar av implementationen till projektet. 
 
-1. Uppdatera landningssidan i din redovisa och berätta kort om hur du kommer införa realtidsaspekten i din applikation.
+1. Uppdatera landningssidan i din redovisa och berätta kort om hur du kommer införa databasaspekten i din applikation.
 
 1. Committa, tagga och pusha relevanta repon samt ladda upp det på studentservern.
 

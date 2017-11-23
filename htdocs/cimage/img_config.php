@@ -319,13 +319,13 @@ return array(
      * Default values.
      *  size_constant: As specified by the function below.
      */
-    /*
     'size_constant' => function () {
 
         // Set sizes to map constant to value, easier to use with width or height
         $sizes = array(
           'w1' => 613,
           'w2' => 630,
+          'w3' => 729,
         );
 
         // Add grid column width, useful for use as predefined size for width (or height).
@@ -338,7 +338,7 @@ return array(
         }
 
         return $sizes;
-    },*/
+    },/**/
 
 
 

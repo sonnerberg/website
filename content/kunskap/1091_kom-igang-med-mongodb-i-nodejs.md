@@ -458,11 +458,19 @@ services:
 Om vi startar upp kontainern enligt ovan så kan vi nå tjänsten med curl.
 
 ```text
+$ docker-compose up express
+```
+
+```text
 $ curl http://localhost:1337
 Hello World
 ```
 
 Om vi startar upp kontainern för mongodb så vet vi sedan tidigare att den går att nå utifrån.
+
+```text
+$ docker-compose up mongodb
+```
 
 ```text
 docker-compose run mongodb mongo mongodb://mongodb/mumin --eval "db.crowd.find().pretty()"
@@ -505,7 +513,7 @@ Den andra delen med `links` är inte nödvändig för att kommunikation skall sk
 Om vi nu försöker nå routen `/list` igen så bör vi få ett lyckat resultat.
 
 ```text
-desktop:~/git/v2.dbwebb.se$ curl -s http://localhost:1337/list | jq .[0]
+$ curl -s http://localhost:1337/list | jq .[0]
 {
   "_id": "5a13efb54dbe18550bce601b",
   "namn": "Mumintrollet",
@@ -548,6 +556,14 @@ services:
 
 Det får avsluta ett gott dagsverke.
 
+Så här kan det se ut när du kör igenom allt i en terminal.
+
+[FIGURE src=image/snapht17/kmom05-summary.png?w=w3 caption="Databasen MongoDB tillsammans med klient, express och samlad i Docker."]
+
+I följande asciinema kan du se flödet hur man jobbar med Docker i olika kontainerar för Express och MongoDB och hur man på olika sätt kan koppla sig mot dem.
+
+[ASCIINEMA src=149154 caption="Ett flöde hur man kan jobba i terminalen i kmom05."]
+
 
 
 Avslutningvis {#avslutning}
@@ -557,4 +573,4 @@ Vi har gått igenom grunderna i den dokumentorienterade databasen MongoDB, hur m
 
 Det blev en orientering i asynkron programmering i Node.js och avslutningsvis såg vi hur Docker-kontainrar kan samverka och kommunicera sinsemellan.
 
-Det finns en [forumtråd kopplad till denna artikeln](t/7007). Där kan du ställa frågor eller bidra med tips och trix.
+Det finns en [forumtråd kopplad till denna artikeln](t/7074). Där kan du ställa frågor eller bidra med tips och trix.
