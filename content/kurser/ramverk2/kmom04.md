@@ -15,7 +15,9 @@ När koncepten om websockets är utredda så har du grunden för att bygga vidar
 
 <!--more-->
 
-[FIGURE src=image/snapht17/websocket-upgrade-firefox.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
+[FIGURE src=image/snapht17/websocket-upgrade-firefox.png?w=w2 caption="En uppkoppling av websocket etableras."]
+
+[FIGURE src=image/snapht17/websocket-subprotocols.png?w=w2 caption="En klient där man kan välja subprotokoll."]
 
 <!--
 Input till kurs Realtidsprogrammering för webben

@@ -5,7 +5,7 @@ category:
     - kurs dbjs
     - examination
 revision:
-    "2017-04-12": "(A, mos) Första examinationen april 2017."
+    "2017-04-12": "(A, mos) Examinationen april 2017."
 ...
 Examination April 12, 2017
 =======================================

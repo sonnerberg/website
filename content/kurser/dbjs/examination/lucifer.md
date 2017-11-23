@@ -5,14 +5,16 @@ category:
     - kurs dbjs
     - examination
 revision:
-    "2017-05-04": "(A, mos) Examinationen maj 2017."
+    "2017-11-23": "(A, mos) Examinationen november 2017."
 ...
 Examination Maj 5, 2017
 =======================================
 
 Detta är den individuella examinationen som är en del av kmom07-10.
 
-Examinationen pågår 9-14 och uppgifterna skall lösas individuellt. Hjälpmedel är tillåtna, inklusive egen dator, access till Internet och tillgång till tidigare kursmoment. 
+Examinationen pågår 9-14 och uppgifterna skall lösas individuellt och du får inte prata, diskutera eller chatta med någon för att ta hjälp. Fråga läraren om något är oklart med uppgifterna.
+
+Övriga hjälpmedel är tillåtna, inklusive egen dator, access till Internet och tillgång till tidigare kursmoment.
 
 Du behöver samla ihop minst 7 poäng för att få godkänt. Samla fler poäng för att nå ett högre slutbetyg på kursen.
 
@@ -27,7 +29,7 @@ Se till att koden validerar.
 Inledning {#inledning}
 ---------------------------------------
 
-Du har fått i uppdrag av kunden "Hotel Paradise" att bygga en webbplats för boende, mat, dryck och nöje. Kunden är verksam inom hotellbranschen.
+Du har fått i uppdrag av kunden "Lucifer Morningstar" att bygga en webbplats till hans nattclub Lux. Kunden är verksam inom en bransch av nöjen, begär och bestraffning.
 
 
 
@@ -70,19 +72,21 @@ All SQL-kod skall sparas i filen `exam/db/db.sql` tillsammans med tydliga kommen
 
 Skapa en databas `dbjsexam` och en ny användare `user` som har alla rättigheter på databasen via lösenordet `pass`.
 
-Bygg en databas för hotellets rum och rumskategorier. Det finns ett antal rum (namn, beskrivning, kostnad, kategori) och varje rum tillhör en eller flera kategorier.
+Bygg en databas för nattklubbens produkter och produktkategorier. Det finns ett antal produkter (namn, beskrivning, kostnad, kategori) och varje produkt tillhör en eller flera kategorier.
 
-* Sviten, "Det finaste hotellet kan erbjuda", 100 pengar, kategori: AA, bubbelpool, dubbelrum.
-* Maxat, "För den festlige", 50 pengar, kategori A, bubbelpool, dubbelrum.
-* Solo, "I brist på annat", 10 pengar, kategori: B, toalett, enkelrum.
+Följande produkter skall finnas.
+
+* All-inclusive, "Det finaste Lux kan erbjuda", 100 pengar, kategori: pleasure, punishment, wishful.
+* Punishment, "För den som vill bli bestraffad", 50 pengar, kategori: punishment.
+* What-do-you-desire, "En enmanshow med Lucifer om dina framtidsplaner", 30 pengar, kategori: wishful.
 
 Skriv SQL DDL för att skapa tabellerna. Skapa tabellerna.
 
-Skriv en SELECT-sats som visar all information från tabellen för rumskategorierna.
+Skriv en SELECT-sats som visar all information från tabellen för kategorierna.
 
-Skapa en lagrad procedur `show` som visar all information om rummen (inklusive kategorierna).
+Skapa en lagrad procedur `showit` som visar all information om produkterna (inklusive kategorierna).
 
-Skapa en webbsida "Rum" som du länkar till från navbaren. Sidan skall visa all information om de rum som finns.
+Skapa en webbsida "Produkter" som du länkar till från navbaren. Sidan skall visa all information om de produkter som finns.
 
 Rita ett ER-diagram över databasmodellen. Spara som `exam/db/er.png`.
 
@@ -98,7 +102,7 @@ Skapa en terminalklient som kan startas med `node index.js`. Klienten kan ta arg
 
 Klienten skall kunna visa följande.
 
-* Visa information om rummen (inklusive dess kategorier).
+* Visa information om produkterna (inklusive dess kategorier).
 * Visa information om kategorierna.
 
 
@@ -109,27 +113,27 @@ Uppgift 2 10p {#u2}
 
 I terminalprogrammet, lägg till följande funktioner.
 
-* Höj priset på hotellrummen med 10%
-* Sänk priset på hotellrummen med 10%
+* Höj priset på produkt med 10%
+* Sänk priset på produkt med 10%
 
 I webbplatsen, lägg till följande funktioner. Sidan skall synas via navbaren.
 
-* Uppdatera priset på ett rum.
+* Uppdatera priset på en produkt.
 
-Man skall kunna välja ett rum och sätta dess pris. 
+Man skall kunna välja en produkt och sätta dess pris. 
 
 
 
 Uppgift 3 20p {#u3}
 ---------------------------------------
 
-Kunden vill att man skall kunna boka rum via webbplatsen.
+Kunden vill att man skall kunna beställa en produkt via webbplatsen.
 
-Skapa en databastabell som håller koll på vilken dag ett rum är bokat.
+Skapa en databastabell som håller koll på vilken dag en produkt är bokat.
 
-Skapa en webbsida (lägg i navbaren) där man kan boka ett rum en viss dag.
+Skapa en webbsida (lägg i navbaren) där man kan boka en produkt en viss dag.
 
-Skapa en webbsida (lägg i navbaren) som visar alla bokningar (rummets namn och datum då det är bokat).
+Skapa en webbsida (lägg i navbaren) som visar alla bokningar (produktens namn och datum då det är bokat).
 
 Lägg till i terminalklienten att man kan avboka en bokning för ett rum ett visst datum samt att man kan visa samtliga bokningar.
 
