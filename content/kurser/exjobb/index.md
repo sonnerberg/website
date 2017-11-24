@@ -3,6 +3,7 @@ title: exjobb
 author:
     - mos
 revision:
+    "2017-11-24": "(D, mos) Stycke om arbetsgången, ladok, studieplan och plagiering."
     "2017-10-05": "(C, mos) Stycke om kursmaterial."
     "2017-09-21": "(B, mos) Stycke om kurslitteratur."
     "2017-08-11": "(A, mos) Första revisionen."
@@ -66,6 +67,85 @@ Det finns en introföreläsning där grunderna för kursen presenteras.
 Det finns [slides till presentationen](https://goo.gl/TvxGzT).
 
 [YOUTUBE src=pdUspBHTIJI list="PLKtP9l5q3ce8ZNqNxnWc0cd2ZtlwTWye7" caption="Video för introduktionsföreläsningen som hålls av Conny."]
+
+
+
+Arbetsgång {#arbete}
+-----------------------------------------------------
+
+Följande är stegen i kursen, grovt sett. Introduktionsföreläsningen ger detaljer om de olika stegen.
+
+
+
+### Kund och input till arbetet {#input}
+
+Studenten etablerar kontakt med en kund som har ett problem och är villig att låta studenten lösa problemet inom ramen för exjobbet.
+
+Kunden skriver ihop en enkel A4 om problemställningen de har.
+
+Detta arbete sker förslagsvis innan julen, inför och innan kursen officiellt har startat.
+
+
+
+### Student och topic {#topic}
+
+Studenten tar kundens problemställning och formulerar ett topic i ett dokument. 
+
+Topicet formulerar en grov ram för arbetet.
+
+Topicet lämnas in och utvärderas av kursansvarig i samråd med examinatorn och när det är godkänt så tilldelas en handledare. Kunden bör samtycka till topicet.
+
+
+
+### Student, handledare och proposal {#proposal}
+
+När handledaren är tilldelad så jobbar studenten vidare med sitt topic i formen av ett proposal som formas i samråd med handledaren.
+
+Ett proposal skall lämnas in in senast sex veckor in i kursen.
+
+Ett proposal godkänns av handledaren, eventuellt i samråd med kursansvarig och examinatorn. Kunden bör samtycka till proposalet.
+
+
+
+### Genomförande, självständigt arbete {#arbete}
+
+När proposal är godkänt så genomför studenten det självständiga arbetet och aktivt samråder löpande med handledare och kund.
+
+I slutet av kursen lämnas rapporten in, tillsammans med en inspelad presentation av arbetet. Inför inlämningen så avger kunden en rekommendation om arbetet uppfyller förväntningarna. Likaså gör handledaren som också gör en bedömning om rapporten motsvarar kursens krav om form, innehåll och kvalitet.
+
+Varje arbete opponeras på av andra studenter. Kunden har möjlighet att ge feedback på arbetet.
+
+Varje student opponerar på en annan students arbete.
+
+Studenten uppdaterar sitt arbete och lämnar in det slutliga resultatet som slutligen godkänns/underkänns.
+
+
+
+Rekommenderad studieplan {#studieplan}
+-----------------------------------------------------
+
+Det finns en rekommenderad studieplan för kursen som ligger i studieplanen för [Webbprogrammering termin 4](program/webbprogrammering/studieplan/termin4).
+
+
+
+Plagieringskontroll {#plagiering}
+-----------------------------------------------------
+
+Alla inlämnade dokument körs per automatik genom en plagieringskontroll.
+
+
+
+Ladok {#ladok}
+------------------------
+
+Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
+
+| Kursens moment   | Ladok moment enligt kursplan  | Betyg |
+|------------------|-------------------------------|-------|
+| Topic + Proposal | Projektförslag á 2.5hp        | G-U   |
+| Rapport, presentation samt opponering | Uppsats á 12hp | A-F   |
+
+Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
 
 
