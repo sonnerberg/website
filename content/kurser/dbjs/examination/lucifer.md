@@ -5,9 +5,9 @@ category:
     - kurs dbjs
     - examination
 revision:
-    "2017-11-23": "(A, mos) Examinationen november 2017."
+    "2017-11-24": "(A, mos) Examinationen november 2017."
 ...
-Examination Maj 5, 2017
+Examination November 24, 2017
 =======================================
 
 Detta är den individuella examinationen som är en del av kmom07-10.
@@ -29,7 +29,7 @@ Se till att koden validerar.
 Inledning {#inledning}
 ---------------------------------------
 
-Du har fått i uppdrag av kunden "Lucifer Morningstar" att bygga en webbplats till hans nattclub Lux. Kunden är verksam inom en bransch av nöjen, begär och bestraffning.
+Du har fått i uppdrag av kunden "Lucifer Morningstar" att bygga en webbplats till hans nattklubb Lux. Kunden är verksam inom en bransch av nöjen, begär och bestraffning.
 
 
 

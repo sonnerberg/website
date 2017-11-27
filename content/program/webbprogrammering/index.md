@@ -26,6 +26,7 @@ Rekommenderade studieplaner {#studieplan}
 * [Termin 1](program/webbprogrammering/studieplan/termin1)
 * [Termin 2](program/webbprogrammering/studieplan/termin2)
 * [Termin 3](program/webbprogrammering/studieplan/termin3)
+* [Termin 4](program/webbprogrammering/studieplan/termin4)
 
 
 

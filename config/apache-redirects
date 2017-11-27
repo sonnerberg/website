@@ -259,6 +259,8 @@ Redirect /webtopic          /kurser/arkiv/webtopic
 Redirect /program/webbprogrammering/studieplan/termin1 https://goo.gl/pqvkaj
 Redirect /program/webbprogrammering/studieplan/termin2 https://goo.gl/axc1bk
 Redirect /program/webbprogrammering/studieplan/termin3 https://docs.google.com/spreadsheets/d/14_8vGBuHJBXTVt4HhhBChzBexE1v37kQipNn2jMw-j4/edit?usp=sharing
+Redirect /program/webbprogrammering/studieplan/termin4 https://docs.google.com/spreadsheets/d/1Qvl4-bFvollxdQODPuImdO5wT7ds47BLCr5XNFrStQk/edit?usp=sharing
+
 
 # Lektionsplaner
 Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://goo.gl/av2XHO

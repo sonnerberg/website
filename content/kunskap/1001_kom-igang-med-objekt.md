@@ -51,7 +51,7 @@ Objekt kommer väl till pass när ens kod börjar kräva beteenden. Är det ren 
 Skapa ett objekt {#skapa-ett-objekt}
 ------------------------------
 
-Låt oss gå igenom hur man skapar ett bil-objekt, "Car". För enkelhetens skull hoppar jag över docstrings i artikeln. Ett klass-objekt skapas med:  
+Låt oss gå igenom hur man skapar ett bil-objekt, "Car". För enkelhetens skull hoppar jag över [docstrings](https://en.wikipedia.org/wiki/Docstring) i artikeln. Ett klass-objekt skapas med:  
 
 ```python
 class Car():
@@ -62,24 +62,24 @@ Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser komme
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 ```
 
-Sådär ja, vad fint det blev. De statiska variablerna som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Konstruktor metoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
+Sådär ja, vad fint det blev. De statiska variablerna som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Konstruktormetoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
 
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
 
-        Car.carCount += 1
+        Car.car_count += 1
 ```
 
-Som du ser så används argumentet "self" i klassen. Den behöver man inte skicka med som argument, utan det gör Python åt dig. Alla metoder måste dock börja med "self" i parameterlistan. Det som händer är att med det magiska första parametern vet metoden vilken instans som äger anropet.
+Som du ser så används argumentet *self* i klassen. Den behöver man inte skicka med som argument, utan det gör Python åt dig. Alla metoder måste dock börja med "self" i parameterlistan. Det som händer är att med den magiska första parametern vet metoden vilken instans som äger anropet.
 
 Nu kan vi skapa en ny instans med:
 
@@ -102,7 +102,7 @@ Vi testar att skriva ut objekten:
 >>> print(volvo)
 <__main__.Car object at 0x7f824cc7b4a8>
 
->>> print("Antal bilar: {antal}".format(antal=Car.carCount))
+>>> print("Antal bilar: {antal}".format(antal=Car.car_count))
 Antal bilar: 2
 ```
 
@@ -110,18 +110,18 @@ Det ser ju bra ut. Två instanser av "Car" som inte refererar till samma minnesp
 
 
 
-För att instanserna ska äga variablerna kan man flytta tex `wheels` till __init__-metoden. Då äger instanserna ett eget attribut och påverkas inte om man ändrar i basklassen:
+För att instanserna ska äga variablerna kan man flytta tex `wheels` till \__init__-metoden. Då äger instanserna ett eget attribut och påverkas inte om man ändrar i basklassen:
 
 ```python
 class Car():
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
         self.wheels = 4
 
-        Car.carCount += 1
+        Car.car_count += 1
 ```
 
 För stunden kan vi ha kvar `wheels` som statisk variabel. Alla våra bilar ska ha 4 hjul.
@@ -152,7 +152,7 @@ Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i
 
 >>> print(bmw.wheels)
 12
- 
+
 >>> print(volvo.wheels)
 12
 ```
@@ -161,31 +161,31 @@ Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i
 
 ###Metoder {#metoder}
 
-En metod är en funktion som är definierad inuti en klass. Vi har redan skapat en i form av `__init__` men vi tittar närmare på hur en sådan kan se ut. 
+En metod är en funktion som är definierad inuti en klass. Vi har redan skapat en i form av `__init__` men vi tittar närmare på hur en sådan kan se ut.
 
-Som sagt ska vi inte använda dot-notation för att jobba med medlemsvariablerna utan istället ska vi skapa "get" och "set" metoder för varje medlemsvariable. En "get" metod för en medlemsvariabel brukar oftast enbart returnerar variabelns värde. Vi provar skapa get-funktioner för våra medlemsvariabler:
+Som sagt ska vi inte använda dot-notation för att jobba med medlemsvariablerna utan istället ska vi skapa "get" och "set" metoder för varje medlemsvariabel. En "get" metod för en medlemsvariabel brukar oftast enbart returnerar variabelns värde. Vi provar skapa get-funktioner för våra medlemsvariabler:
 
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
 
-        Car.carCount += 1
-        
+        Car.car_count += 1
+
     def get_model(self):
         return self.model
-    
+
     def get_price(self):
         return self.price
 ```
 
-Vi skapade två get metoder, en för varje medlemsvariabel. I och med att de enbart ska returnera ett medlemsvariable värde behövs bara `self` som parameter, så vi kommer åt rätt instans värde.
+Vi skapade två get metoder, en för varje medlemsvariabel. I och med att de enbart ska returnera ett medlemsvariabelvärde behövs bara `self` som parameter, så vi kommer åt rätt instans värde.
 
-Vi testa använda metoderna.
+Vi testar att använda metoderna.
 
 ```
 >>> print(bmw.get_model())
@@ -196,29 +196,29 @@ BMW
 ```
 
 
-Då tittar vi på "set" och precis som ni gissar så används oftats "set" metoder för att ändra värdet på medlemsvariabler. En "set" metod brukar enbart tilldela ett argument till en medlemsvariabel.
+Då tittar vi på "set" och precis som ni gissar så används oftasts "set" metoder för att ändra värdet på medlemsvariabler. En "set" metod brukar enbart tilldela ett argument till en medlemsvariabel.
 
 
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
 
-        Car.carCount += 1
-        
+        Car.car_count += 1
+
     def get_model(self):
         return self.model
-    
+
     def get_price(self):
         return self.price
-        
+
     def set_model(self, model):
         self.model = model
-        
+
     def set_price(self, price):
         self.price = price
 ```
@@ -241,25 +241,25 @@ Vi skapar en metod för att skriva ut information om bilen:
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
 
-        Car.carCount += 1
+        Car.car_count += 1
 
-    def presentCar(self):
+    def present_car(self):
         print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
 ```
 
 Nu kan vi använda den på följande sätt:
 
 ```python
->>> bmw.presentCar()
+>>> bmw.present_car()
 Model: BMW X2, Price: 500000
 
->>> volvo.presentCar()
+>>> volvo.present_car()
 Volvo, Price: 150000
 ```
 
@@ -273,23 +273,23 @@ instanserna kan man använda _statiska metoder_. Det är metoder som används av
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
 
-        Car.carCount += 1
+        Car.car_count += 1
 
-    def presentCar(self):
+    def present_car(self):
         print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
 
     @staticmethod
-    def calculatePriceReduction(aPrice):
+    def calculate_price_reduction(aPrice):
         return int(aPrice * 0.66)
 
-    def reducePrice(self):
-        self.price = self.calculatePriceReduction(self.price)
+    def reduce_price(self):
+        self.price = self.calculate_price_reduction(self.price)
         return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 ```
 
@@ -298,7 +298,7 @@ Som du ser agerar metoden oberoende av resten av klassen. **@staticmethod** gör
 ```python
 >>> bmw = Car("BMW", 100000)
 
->>> print( bmw.reducePrice() )
+>>> print( bmw.reduce_price() )
 Priset för BMW är nu 66000
 ```
 
@@ -311,30 +311,30 @@ Vi lägger till en lista som ska innehålla information om övrig utrustning. Vi
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
         self.equipment = []
 
-        Car.carCount += 1
+        Car.car_count += 1
 
-    def presentCar(self):
+    def present_car(self):
         print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
 
     @staticmethod
-    def calculatePriceReduction(aPrice):
+    def calculate_price_reduction(aPrice):
         return int(aPrice * 0.66)
 
-    def reducePrice(self):
-        self.price = self.calculatePriceReduction(self.price)
+    def reduce_price(self):
+        self.price = self.calculate_price_reduction(self.price)
         return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 
-    def addEquipment(self, newEquipment):
-        self.equipment.append(newEquipment)
+    def add_equipment(self, new_equipment):
+        self.equipment.append(new_equipment)
 
-    def printEquipment(self):
+    def print_equipment(self):
         for eq in self.equipment:
             print("* " + eq)
 ```
@@ -343,10 +343,10 @@ Nu kan vi lägga till utrustning:
 
 ```python
 >>> volvo = Car("Volvo", 150000)
->>> volvo.addEquipment("Bluetooth")
->>> volvo.addEquipment("7 inch display")
+>>> volvo.add_equipment("Bluetooth")
+>>> volvo.add_equipment("7 inch display")
 
->>> volvo.printEquipment()
+>>> volvo.print_equipment()
 * Bluetooth
 * 7 inch display
 ```
@@ -413,30 +413,30 @@ Det gick inte så bra. `+`-operatorn vill ju ha siffror och inte objekt. Vi läg
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
         self.equipment = []
 
-        Car.carCount += 1
+        Car.car_count += 1
 
-    def presentCar(self):
+    def present_car(self):
         print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
 
     @staticmethod
-    def calculatePriceReduction(aPrice):
+    def calculate_price_reduction(aPrice):
         return int(aPrice * 0.66)
 
-    def reducePrice(self):
-        self.price = self.calculatePriceReduction(self.price)
+    def reduce_price(self):
+        self.price = self.calculate_price_reduction(self.price)
         return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 
-    def addEquipment(self, newEquipment):
-        self.equipment.append(newEquipment)
+    def add_equipment(self, new_equipment):
+        self.equipment.append(new_equipment)
 
-    def printEquipment(self):
+    def print_equipment(self):
         for eq in self.equipment:
             print("* " + eq)
 
@@ -456,30 +456,30 @@ Det går även att överlagra `+=`, genom att göra en egen `__iadd__` funktion.
 ```python
 class Car():
     wheels = 4
-    carCount = 0
+    car_count = 0
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
         self.equipment = []
 
-        Car.carCount += 1
+        Car.car_count += 1
 
-    def presentCar(self):
+    def present_car(self):
         print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
 
     @staticmethod
-    def calculatePriceReduction(aPrice):
+    def calculate_price_reduction(aPrice):
         return int(aPrice * 0.66)
 
-    def reducePrice(self):
-        self.price = self.calculatePriceReduction(self.price)
+    def reduce_price(self):
+        self.price = self.calculate_price_reduction(self.price)
         return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 
-    def addEquipment(self, newEquipment):
-        self.equipment.append(newEquipment)
+    def add_equipment(self, new_equipment):
+        self.equipment.append(new_equipment)
 
-    def printEquipment(self):
+    def print_equipment(self):
         for eq in self.equipment:
             print("* " + eq)
 
