@@ -43,6 +43,13 @@ Du bör få en bild som är 500 pixlar bred och 200 pixlar hög och ser ut så h
 
 
 
+Shortcode för figure {#figure}
+-----------------------------------
+
+Det finns en [shortcode för figure-elementet](anax/shortcodes#figure) som du kan kombinera tillsammans med Cimage.
+
+
+
 Läs mer {#mer}
 -----------------------------------
 

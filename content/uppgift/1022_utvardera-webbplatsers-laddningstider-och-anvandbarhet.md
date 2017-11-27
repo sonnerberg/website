@@ -1,12 +1,13 @@
 ---
 author: mos
-revision:
-    2016-12-04: (D, mos) Ta en snapshot på webbplatsen och rangordna dem.
-    2016-12-04: (C, mos) Använd snittvärde som mätvärde.
-    2016-12-02: (B, mos) La till krav om att beskriva urvalet och metoden.
-    2016-10-26: (A, mos) Första utgåvan.
 category:
     - kurs/design
+revision:
+    "2017-11-27": (E, mos) Genomgången inför ht17, justerade antal webbplatser.
+    "2016-12-04": (D, mos) Ta en snapshot på webbplatsen och rangordna dem.
+    "2016-12-04": (C, mos) Använd snittvärde som mätvärde.
+    "2016-12-02": (B, mos) La till krav om att beskriva urvalet och metoden.
+    "2016-10-26": (A, mos) Första utgåvan.
 ...
 Utvärdera webbplatsers laddningstid och användbarhet
 ===================================
@@ -44,13 +45,13 @@ Krav {#krav}
 
 1. Skapa filen `content/analysis/500_speed-and-usability.md`. Det är där du skriver dokumentationen för denna uppgiften.
 
+1. Välj ut 3 webbplatser som skall analyseras. Om du jobbar i grupp om 3 eller flera så väljer ni 4 webbplatser att analysera.
+
 1. Börja med ett inledande stycke som beskriver hur du gjort urvalet.
 
-1. Beskriv också hur du mätt de olika delarna. Det blir en kort beskrivning av din metod.
+1. Gör ett stycke där du beskriv vilka verktyg du använde och hur du utförde arbetet för att samla in dina mätvärden. Det blir en kort beskrivning av din metod.
 
 1. Skapa ett excelark, till exempel Google Kalkylark. För allt du nu skall mäta, dokumentera det i excelarket. Länka till ditt excelark så man ser rådatan.
-
-1. Välj ut 4 webbplatser som skall analyseras.
 
 1. För varje webbplats, gör följande:
     1. Ta en snapshot på webbplatsen.
