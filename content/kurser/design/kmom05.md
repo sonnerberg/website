@@ -1,15 +1,12 @@
 ---
 author: mos
 revision:
+    "2017-11-27": (C, mos) Genomgången inför ht17.
     "2016-11-28": (B, mos) La till manualen om CImage som läsresurs.
     "2016-11-15": (A, mos) Första utgåvan.
 ...
 Kmom05: Bild
 ====================================
-
-[WARNING]
-Kursutveckling pågår inför ht17.
-[/WARNING]
 
 [FIGURE src="image/dbwebbisar.jpg?w=200&h=150&a=0,20,20,50&cf" class="right"]
 
@@ -104,6 +101,10 @@ Kika igenom följande tips.
 
 1. [Inkscape](https://inkscape.org/en/) är ett fritt program för att rita och hantera bilder i vektorgrafik såsom SVG. Ett typiskt bra verktyg att ha i sin verktygslåda som webbprogrammerare.
 
+1. Snapshot-verktyg vill du integrera i din verktygslåda, du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation. Det är smidigt om det är kopplat ett ritverktyg till ditt snapshot-verktyg, då kan du snabbt och enkelt förtydliga din snapshot. Ett tips är att aldrig skala om bilder som bygger på snapshots, du får bäst kvalitet om du tar en snapshot i den storleken den skall vara och visas. På Linux använder jag ett verktyg som heter Shutter.
+
+1. Verktyg som hjälper dig att analysera bild-filer och göra enkla och mer svåra konverteringar av bildfilerna, eller batcher av bild-filer, är [ImageMagick](imagemagick.org/) med kommandoradsverktygen convert/identify. Dessa går att installera på både Windows, Mac OS och Linux. 
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -117,14 +118,27 @@ Kika igenom följande tips.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
+1. Gå översiktligt igenom [manualen för Cimage](https://cimage.se/), för att få en uppfattning om koncepten kring bildhantering. Cimage är ett PHP-skript som kan beskära och hantera bilder för webbruk. Via dess manual kan du få insyn i olika bildformat och hur bilder rent generellt kan hanteras för webbruk. Cimage är redan en del av din installation av Anax Flat.
+
 1. I kursrepot `example/figure` finns två exempel som visar hur man kan jobba med `<figure>` och uppnå responsiva bilder. Studera och undersök exemplet och försök förstå hur det fungerar och hur det är uppbyggt. Där hittar du LESS-kod du kan låna till uppgiften.
     * [Figure and figcaption](repo/design/example/figure/figure.html)
     * [Figure and figcaption med media queries](repo/design/example/figure/figure-responsive.html)
 
-1. Lär dig hur CImage fungerar och lär dig samtidigt en del av hur bildhantering på webben kan fungera. Gå översiktligt igenom [manualen för CImage](https://cimage.se/), för att få en uppfattning om koncepten kring bildhantering.
+1. Pröva att bygga en enkel blogg i Anax Flat genom att studera exempel på [hur man gör en blogg i Anax Flat](anax/gor-en-blogg) i Anax läs igenom hur du kan använda [shortcodes i Markdown](anax/shortcodes).
+
 
 <!--
-Bildlära.
+Artikel om hjälpverktyg för bildhantering.
+    * Var hittar jag fria bilder?
+    * Bilder kan man köpa?
+
+Artikel om att spara utrymme i img/-katalogen. (använd bash-skriptet för att testköra och installera några av postprocessingverktygen)
+
+Bildlära, vad tänka på om bilder.
+
+Fotolära, hur ta fotografier.
+
+Image sprites.
 
 jpeg (foton) kontra png (skärmdump)
 color space
@@ -140,9 +154,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet)".
 
-1. Integrera din webbplats så den drar nytta av [CImage](anax/cimage-for-bildskalning) och [snygga länkar](anax/snygga-lankar).
+1. Integrera din webbplats så den drar nytta av [CImage](anax/cimage-for-bildskalning) och [snygga länkar](anax/snygga-lankar). Du behöver därefter inte ladda onödigt stora bilder i din webbplats. Använd shortcoden för FIGURE så blir din Markdown-kod snyggare och enklare att läsa.
 
-1. Gör uppgiften "[Bygg ut ditt Anax Flat tema med stöd för bilder](uppgift/anax-flat-tema-med-bilder)".
+1. Gör uppgiften "[Bygg ut ditt Anax Flat tema med stöd för bilder](uppgift/anax-flat-tema-med-bilder)". Du skall bygga en blogg som är full av bilder och på det sättet visa upp att du behärskar bildhanteringen med Cimage, FIGURE och LESS-modulen som stylar figure-elementet.
 
 
 
@@ -150,7 +164,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 Följande extrauppgifter finns.
 
-1. Läs om begreppet responsive images i följande två artiklar som visar hur man kan använda `picture`, `srcset` och `sizes` för att jobba responsivt med bilder. Fundera på om det kan vara något för din me-sida.
+1. Läs om begreppet responsive images i följande två artiklar som visar hur man kan använda `picture`, `srcset` och `sizes` för att jobba responsivt med att ladda bilder av olika storlekar till olika skärmstorlekar. Fundera på om det kan vara något för din me-sida.
     * [AlistApart: Responsive Images in Practice (2014)](http://alistapart.com/article/responsive-images-in-practice)
     * [AlistApart: Using Responsive Images (Now) (2015)](http://alistapart.com/article/using-responsive-images-now)
 
@@ -168,4 +182,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Berätta kort om erfarenheterna med din undersökning av webbplatsers laddningstid.
 * Har du några funderingar kring Cimage och dess nytta och features?
 * Lyckades du uppnå ett bra sätt och en LESS-struktur för att jobba med dina bilder i webbplatsen?
-* I extrauppgiften om `picture`, `srcset` och `sizes`, fick du någon känsla för för- och nackdelar med konceptet?
+* OM du gjorde extrauppgiften med `picture`, `srcset` och `sizes`, fick du någon känsla för för- och nackdelar med konceptet?
