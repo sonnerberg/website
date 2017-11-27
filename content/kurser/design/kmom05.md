@@ -128,6 +128,8 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 <!--
+Installera LESS-modulen via npm https://www.npmjs.com/package/@desinax/figure.
+
 Artikel om hjälpverktyg för bildhantering.
     * Var hittar jag fria bilder?
     * Bilder kan man köpa?
@@ -182,4 +184,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Berätta kort om erfarenheterna med din undersökning av webbplatsers laddningstid.
 * Har du några funderingar kring Cimage och dess nytta och features?
 * Lyckades du uppnå ett bra sätt och en LESS-struktur för att jobba med dina bilder i webbplatsen?
-* OM du gjorde extrauppgiften med `picture`, `srcset` och `sizes`, fick du någon känsla för för- och nackdelar med konceptet?
+* Om du gjorde extrauppgiften med `picture`, `srcset` och `sizes`, fick du någon känsla för för- och nackdelar med konceptet?
