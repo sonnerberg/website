@@ -2,6 +2,7 @@
 
 [FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
+* [Förkunskaper och förkunskapskontroll (inför VT18)](t/7086)
 * [Om 3-veckors uppropet lp2](t/7062)
 * [Uppsamlingsheat rättningar nov 30](t/7061)
 * [Omregistrering och restinlämningar under hösten](kurser/faq/omregistrering)
