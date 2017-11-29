@@ -115,7 +115,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur upplevde du labben, var något svårt eller utmanande?
-* Beskriv vad du gjorde som sista uppgift i labben.
+* Hur upplevde du DOM-uppgiften, var något svårt eller utmanande?
+* Beskriv vad du gjorde som sista uppgift i DOM-uppgiften.
 * Berätta hur du tänkte när du gjorde ditt flagg-memory. Gick det bra?
 * Vad anser du om Crockfords videor, har du tittat på dem och gav de något?
