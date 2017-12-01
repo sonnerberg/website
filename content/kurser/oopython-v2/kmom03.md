@@ -95,7 +95,10 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Automatgenerera dokumentation för ditt Black Jack spel  
 
-2. Automatgenerera klassdiagram för ditt Black Jack spel
+1. Automatgenerera klassdiagram för ditt Black Jack spel
+
+1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)".
+
 
 
 

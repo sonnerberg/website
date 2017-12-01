@@ -49,8 +49,6 @@ Det finns inga extra artiklar.
 ###Video  {#video}
 
 Titta på följande:  
-=======
-Titta på följande video:  
 
 
 
@@ -97,8 +95,7 @@ dbwebb publish flask
 
 ###Extra {#extra}
 
-1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)".
-
+Det finns inga extrauppgifter.
 
 
 Resultat & Redovisning  {#resultat_redovisning}
