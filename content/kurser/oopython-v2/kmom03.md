@@ -40,13 +40,17 @@ Det finns inga läsanvisningar.
 
 ###Artiklar {#artiklar}
 
-Det finns inga extra artiklar.
+1. [UML basics på IBM](http://www.ibm.com/developerworks/rational/library/769.html)  
 
 
 
 ###Video {#video}
 
 Titta på följande:
+
+1. Video om sequence diagrams: [UML Behavioral Diagrams: Sequence - Georgia Tech - Software Development Process](https://www.youtube.com/watch?v=XIQKt5Bs7II).  
+
+2. Videos 12-22 i spellistan [Software Development Process: Part 2 of 3](https://www.youtube.com/watch?v=pZ9-ujSP_48&index=12&list=PLAwxTw4SYaPm8PAGH7ov2Bj-nG4sXgCtJ)  om class diagrams.
 
 
 
@@ -91,7 +95,10 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Automatgenerera dokumentation för ditt Black Jack spel  
 
-2. Automatgenerera klassdiagram för ditt Black Jack spel
+1. Automatgenerera klassdiagram för ditt Black Jack spel
+
+1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)".
+
 
 
 

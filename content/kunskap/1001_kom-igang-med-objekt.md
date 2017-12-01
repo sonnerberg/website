@@ -10,7 +10,7 @@ Kom igång med objekt i Python
 
 [FIGURE src=/image/oopython/kmom01/kom_igang_top.png?w=c5 class="right"]
 
-Allt i Python är på ett eller annat sätt ett objekt. Strängar, integers, listor, moduler - ja, allt. Det vi ska titta på är hur man skapar egna objekt (klasser) och hur man hanterar dem.
+Allt i Python är på ett eller annat sätt ett objekt. Strängar, integers, listor, moduler - ja, allt. Vi ska titta på är hur man skapar egna klasser och objekt och hur man hanterar dem.
 
 <!--more-->
 

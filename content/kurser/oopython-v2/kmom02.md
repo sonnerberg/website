@@ -35,15 +35,14 @@ Läs följande: ??????????????????????????????
 
 [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
     * Ch 3 - When Objects Are Alike  
-    * Ch 5 - When to use Object-oriented Programming  
-    * Ch 12 - Testing Object-oriented Programs
+    * Ch 4 - Expecting the Unexpected
+    * Ch 5 - When to use Object-oriented Programming
+
 
 
 ###Artiklar {#artiklar}
 
-Läs följande:
-
-???????????????????????????????
+Det finns inga extra artiklar.
 
 
 
@@ -96,8 +95,7 @@ dbwebb publish flask
 
 ###Extra {#extra}
 
-1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)".
-
+Det finns inga extrauppgifter.
 
 
 Resultat & Redovisning  {#resultat_redovisning}
