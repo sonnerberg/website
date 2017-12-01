@@ -19,7 +19,7 @@ På studentservern kan du köra CGI-skript på detta sättet. Så här gör du f
 
 
 
-En Flask applikation {#flask}
+En Flaskapplikation {#flask}
 -----------------------------------
 
 Du har en Flaskapplikation som är sparad i `app.py`. Den kan se ut så här, enklast möjliga inklusive två användbara felhanterare som gör felsökningen lättare.
@@ -121,7 +121,7 @@ Får du problem på studentservern så kan du alltid logga in där och testköra
 Testkör och se källkod {#testa}
 -----------------------------------
 
-Du kan testköra skriptet på följande platser.
+Du kan testköra skriptet på följande platser. Glöm inte en avslutande `/`.
 
 * [dbwebb.se](repo/oopython/example/flask/cgi-minimal/app.cgi/)
 * [www.student.bth.se](http://www.student.bth.se/~mosstud/kurser/oopython/example/flask/cgi-minimal/app.cgi/)
