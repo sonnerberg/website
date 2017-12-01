@@ -5,7 +5,7 @@ category:
     - flask
     - kurs oopython
 revision:
-    "2017-11-01": (B, mos) Lade till felhantering och indelat i stycken.
+    "2017-11-01": (B, mos) Lade till felhantering och indelat i stycken samt kort note om hur lägga till CGI i Apache.
     "2017-01-06": (A, mos) Första versionen.
 ...
 Flask som CGI-skript
@@ -127,6 +127,34 @@ Du kan testköra skriptet på följande platser.
 * [www.student.bth.se](http://www.student.bth.se/~mosstud/kurser/oopython/example/flask/cgi-minimal/app.cgi/)
 
 Du kan se [källkoden till exemplet i kursrepot för oopython](https://github.com/dbwebb-se/oopython/tree/master/example/flask/cgi-minimal).
+
+
+
+Lägg till CGI i Apache webbserver {#apache}
+-----------------------------------
+
+Här är en kort-kort variant av hur du sätter upp CGI på din Apache webbserver.
+
+Om du inte har konfigurerat din Apache webbserver för att köra CGI skript så är följande de steg som behövs utföras (på en Linux-maskin).
+
+Lägg till så att modulen för CGI är aktiv.
+
+```text
+sudo a2enmod cgi
+```
+
+Sedan behöver du aktivera CGI i din Apache konfigurationsfil, inom ett `<directory>` direktiv.
+
+```text
+Options +ExecCGI
+AddHandler cgi-script .cgi
+```
+
+Sedan kan du starta om Apache och testköra.
+
+```text
+sudo service apache2 restart
+```
 
 
 
