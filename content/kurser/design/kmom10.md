@@ -7,10 +7,6 @@ revision:
 Kmom10: Projekt och examination
 ====================================
 
-[WARNING]
-Kursutveckling pågår inför ht17.
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
