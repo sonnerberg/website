@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2017-12-01": (B, aar) Bytte namn från variabel till attribut.
     "2016-04-12": (A, lew) Första versionen.
 category:
     - oopython
@@ -26,17 +27,15 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 Terminologi {#terminologi}
 -------------------------------
 
-* **Klass**: En användardefinierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klassvariabler, instansvariabler och metoder, som nås via "dot-notation".
+* **Klass**: En användardefinierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klassattribut och instansattribut, som nås via "dot-notation".
 
-* **Klassvariabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. En klassvariabel kallas även _statisk variabel_.
+* **Klassattribut**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. Ett klassattribut kallas även _statiskt attribut.
 
-* **Instansvariabel**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
+* **Instansattribut**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
 
 * **Instans**: Ett individuellt objekt av en speciell klass.
 
 * **Metod**: En funktion som är definierad inuti en klass.
-
-* **Attribut**:  De specifika egenskaperna (variablerna) för en klass.
 
 * **Statisk metod**: En metod i klassen som fungerar oberoende av klassen och _self_.
 
@@ -57,7 +56,7 @@ Låt oss gå igenom hur man skapar ett bil-objekt, "Car". För enkelhetens skull
 class Car():
 ```
 
-Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser kommer ha. Vi lägger också till en räknare som har koll på hur många bilar vi har, två så kallade _statiska variabler_ eller _klassvariabler_:
+Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser kommer ha. Vi lägger också till en räknare som har koll på hur många bilar vi har, två så kallade _statiska attributen_ eller _klassattribut_:
 
 ```python
 class Car():
@@ -65,7 +64,7 @@ class Car():
     car_count = 0
 ```
 
-Sådär ja, vad fint det blev. De statiska variablerna som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Konstruktormetoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
+Sådär ja, vad fint det blev. De statiska attributen som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Konstruktormetoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
 
 ```python
 class Car():
@@ -110,7 +109,7 @@ Det ser ju bra ut. Två instanser av "Car" som inte refererar till samma minnesp
 
 
 
-För att instanserna ska äga variablerna kan man flytta tex `wheels` till \__init__-metoden. Då äger instanserna ett eget attribut och påverkas inte om man ändrar i basklassen:
+För att instanserna ska äga attributen kan man flytta tex `wheels` till \__init__-metoden. Då äger instanserna ett eget attribut och påverkas inte om man ändrar i basklassen:
 
 ```python
 class Car():
@@ -124,10 +123,10 @@ class Car():
         Car.car_count += 1
 ```
 
-För stunden kan vi ha kvar `wheels` som statisk variabel. Alla våra bilar ska ha 4 hjul.
+För stunden kan vi ha kvar `wheels` som statiskt attribut. Alla våra bilar ska ha 4 hjul.
 
 
-För att komma åt medlemsvariablerna kan vi använda så kallad dot-notation, vi tittar på hur det kan se ut.
+För att komma åt attributen kan vi använda så kallad dot-notation, vi tittar på hur det kan se ut.
 
 ```python
 >>> print(bmw.wheels)
@@ -140,7 +139,7 @@ BMW
 Volvo
 ```
 
-Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i nästa sektion visar vi hur man jobbar med medlemsvariablerna via metoder istället.
+Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i nästa sektion visar vi hur man jobbar med attributen via metoder istället.
 
 "bmw" är en instans av Car så om vi ändrar attributet `wheels` i efterhand, så ändras den för alla objekt skapade från klassen:
 
@@ -163,7 +162,7 @@ Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i
 
 En metod är en funktion som är definierad inuti en klass. Vi har redan skapat en i form av `__init__` men vi tittar närmare på hur en sådan kan se ut.
 
-Som sagt ska vi inte använda dot-notation för att jobba med medlemsvariablerna utan istället ska vi skapa "get" och "set" metoder för varje medlemsvariabel. En "get" metod för en medlemsvariabel brukar oftast enbart returnerar variabelns värde. Vi provar skapa get-funktioner för våra medlemsvariabler:
+Som sagt ska vi inte använda dot-notation för att jobba med attributen utan istället ska vi skapa "get" och "set" metoder för varje attribut. En "get" metod för ett attribut brukar oftast enbart returnerar attributets värde. Vi provar skapa get-metoder för våra instansattribut:
 
 ```python
 class Car():
@@ -183,7 +182,7 @@ class Car():
         return self.price
 ```
 
-Vi skapade två get metoder, en för varje medlemsvariabel. I och med att de enbart ska returnera ett medlemsvariabelvärde behövs bara `self` som parameter, så vi kommer åt rätt instans värde.
+Vi skapade två get metoder, en för varje attribut. I och med att de enbart ska returnera ett attributs värde behövs bara `self` som parameter, så vi kommer åt rätt instans värde.
 
 Vi testar att använda metoderna.
 
@@ -196,7 +195,7 @@ BMW
 ```
 
 
-Då tittar vi på "set" och precis som ni gissar så används oftasts "set" metoder för att ändra värdet på medlemsvariabler. En "set" metod brukar enbart tilldela ett argument till en medlemsvariabel.
+Då tittar vi på "set" och precis som ni gissar så används oftasts "set" metoder för att ändra värdet på attribut. En "set" metod brukar enbart tilldela ett argument till ett attribut.
 
 
 ```python
@@ -268,7 +267,7 @@ Volvo, Price: 150000
 ###Statiska metoder {#statiska-metoder}
 
 En metod i ett klassobjekt använder oftast parametern _self_ och tillhör därför varje instans. Vill man ha en mer generell metod som inte behöver vara enskilt beroende utav
-instanserna kan man använda _statiska metoder_. Det är metoder som används av klassen men utför inget direkt mot dess egna variabler. Vi lägger till en metod som räknar ut priset när man kört ut från bilfirman, samt en metod som använder den:
+instanserna kan man använda _statiska metoder_. Det är metoder som används av klassen men utför inget direkt mot dess egna attribut. Vi lägger till en metod som räknar ut priset när man kört ut från bilfirman, samt en metod som använder den:
 
 ```python
 class Car():
@@ -304,7 +303,7 @@ Priset för BMW är nu 66000
 
 
 
-###En lista som medlemsvariabel {#en-lista-som-medlem}
+###En lista som instansattribut {#en-lista-som-attribut}
 
 Vi lägger till en lista som ska innehålla information om övrig utrustning. Vi initierar klassen med en tom lista och en metod som lägger till saker och en utskriftsmetod.
 
@@ -353,9 +352,9 @@ Nu kan vi lägga till utrustning:
 
 
 
-<!-- ###Privata medlemsvariabler {#privata-medlemsvariabler}
+<!-- ###Privata instansattribut {#privata-instansattribut}
 
-För att komma åt ett objekts medlemsvariabler använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska kunna komma åt variablerna kan man göra dem _privata_. Det gör man med `_` innan variabeln. Låt oss titta på hur det ser ut och fungerar. Vi skapar en klass med en publik och en privat instansvariabel:
+För att komma åt ett objekts attribut använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska kunna komma åt attributen kan man göra dem _privata_. Det gör man med `_` innan attributet. Låt oss titta på hur det ser ut och fungerar. Vi skapar en klass med ett publik och ett privat instansattribut:
 
 ```python
 class Test_private():
@@ -371,7 +370,7 @@ class Test_private():
         print(self._privateMember)
 ```
 
-Nu ser du att vi även har två metoder som skriver ut respektive variabel. Det är instansen som äger dem båda, även den privata, och kan således hantera dem:
+Nu ser du att vi även har två metoder som skriver ut respektive attribut. Det är instansen som äger dem båda, även den privata, och kan således hantera dem:
 
 ```python
 >>> test = Test_private()
@@ -383,7 +382,7 @@ publik
 privat
 ```
 
-Om vi testar att nå variablerna utanför...
+Om vi testar att nå attributen utanför...
 
 ```python
 >>> test = Test_private()
@@ -395,7 +394,7 @@ publik
 AttributeError: 'Test_private' object has no attribute '__privateMember'
 ```
 
-...så får vi ett felmeddelande som talar om för oss att objektet inte har det attributet. Bra. Att använda privata variabler och metoder kan lämpa sig bra i till exempel en arvskedja eller för att visa andra utvecklare att de inte ska peta på de variablerna eller metoderna. -->
+...så får vi ett felmeddelande som talar om för oss att objektet inte har det attributet. Bra. Att använda privata attribut och metoder kan lämpa sig bra i till exempel en arvskedja eller för att visa andra utvecklare att de inte ska peta på de attribut eller metoderna. -->
 
 
 
@@ -495,7 +494,7 @@ print(bmw.get_price())
 250000
 ```
 
-I `__iadd__` ändrar vi värder på `price` och returnerar `self` istället för värdet. `bmw += volvo` kan även visualiseras som `bmw = bmw.__iadd__(volvo)`. Med andra ord tilldelar vi `bmw` variabeln samma objekt som den redan hade.
+I `__iadd__` ändrar vi värder på `price` och returnerar `self` istället för värdet. `bmw += volvo` kan även visualiseras som `bmw = bmw.__iadd__(volvo)`. Med andra ord tilldelar vi `bmw` attributet samma objekt som den redan hade.
 
 
 Nuså. Samma koncept gäller för övriga operatorer och kan vara behändigt vid hantering av objekt av olika slag.
