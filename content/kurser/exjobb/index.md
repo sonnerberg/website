@@ -83,6 +83,8 @@ Studenten etablerar kontakt med en kund som har ett problem och är villig att l
 
 Kunden skriver ihop en enkel A4 om problemställningen de har.
 
+Om studenten är pådrivande så kan studenten och kunden gemensamt skapa dokumentet om problemställningen. Ytterst är det kunden som är ansvarig för att input är relevant för arbetet.
+
 Detta arbete sker förslagsvis innan julen, inför och innan kursen officiellt har startat.
 
 
