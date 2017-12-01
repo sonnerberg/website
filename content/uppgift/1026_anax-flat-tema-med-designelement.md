@@ -1,9 +1,9 @@
 ---
 author: mos
-revision:
-    2016-11-29: (A, mos) Första utgåvan.
 category:
     - kurs/design
+revision:
+    "2016-11-29": (A, mos) Första utgåvan.
 ...
 Skapa teman med designelement till ditt Anax Flat
 ===================================
@@ -26,7 +26,20 @@ Du har jobbat med [teman i temaväljaren](uppgift/en-bas-och-en-familj-av-teman)
 Introduktion {#intro}
 -----------------------
 
-Låt oss använda grafiska element såsom bilder, texturer, streck, former och färger för att skapa god design.
+Låt oss använda grafiska element som ett bidrag till att skapa god design.
+
+Följande är exempel på tekniker som du kan jobba med för dina designelement:
+
+* Punkter
+* Streck
+* Former
+* Texturer, mönster
+* Färger
+* Gradients
+* Kontrast
+* Typografi
+* Space (förhållandet mellan element)
+* Bilder
 
 Om temat som sådant är perfekt eller inte spelar mindre roll, du tränar att jobba med olika designelement, så vi har fokus på dem.
 
@@ -59,28 +72,16 @@ Krav {#krav}
 
 1. Ett tema skall använda ett par bilder som placerats ut som designelement på sidan (i bakgrunden).
 
+1. Du committar och taggar relevanta repona som version 6.0.0 (eller högre).
 
-
-###Klar och taggad {#tag}
-
-1. Se till att ditt tema passerar testerna som körs vid `make test`.
-
-1. Committa och tagga relevant repo som version 6.0.x (6.0.1 eller högre).
-
-1. Pusha upp repona till GitHub, inklusive taggarna.
-
-1. Gör en `dbwebb publish` för att kolla att allt fungerar.
-
-```bash
-$ dbwebb publish me
-```
+1. Publicera med `dbwebb publish me`.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-Det finns inga extrauppgifter.
+Gör ytterligare ett tema där du gör allt för att krocka olika designelement, gör en design som står ut där man känner att den designen fungerar verkligen inte. Lek och busa.
 
 
 
