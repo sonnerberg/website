@@ -3,7 +3,7 @@ author: mos
 category:
     - kurs/design
 revision:
-    "2017-12-01": (B, mos) Lade till tema som extrauppgift.
+    "2017-12-01": (B, mos) Lade till tema som extrauppgift, två istället för tre teman.
     "2016-11-29": (A, mos) Första utgåvan.
 ...
 Skapa teman enligt designprinciper
@@ -48,9 +48,9 @@ Krav {#krav}
 
 1. Bygg en testsida `content/design-principle.md` där du kort beskriver varje tema som du nu skall skapa. Lägg sidan i menyn. På sidan länkar du till temaväljaren.
 
-1. Gör tre olika teman som var och ett åskådliggör minst en designprincip.
+1. Gör två olika teman som var och ett åskådliggör minst två designprinciper.
 
-1. För varje tema beskriver du den/de designprinciper du valt. Ange även källan för din/dina design principer.
+1. För varje tema beskriver du den designprinciper du valt. Ange även källan för dina design principer.
 
 1. Du committar och taggar relevanta repona som version 6.0.0.
 
