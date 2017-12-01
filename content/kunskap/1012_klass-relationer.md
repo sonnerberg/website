@@ -1,7 +1,8 @@
 ---
 author: aar
 revision:
-    "2017-12-01": (A, aar) Genomläst och uppdaterad.
+    "2017-12-01": (C, aar) Bytte namn från variabel till attribut.
+    "2017-12-01": (B, aar) Genomläst och uppdaterad inför V2.
     "2016-04-19": (A, aar) Första versionen.
 category:
     - oopython
@@ -28,17 +29,15 @@ Du kan grunderna i Python och objektorienterad programmering.
 Terminologi {#terminologi}
 -------------------------------
 
-* **Klass**: En användardefinierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klassvariabler, instansvariabler och metoder, som nås via "dot-notation".
+* **Klass**: En användardefinierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klassattribut och instansattribut, som nås via "dot-notation".
 
-* **Klassvariabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. En klassvariabel kallas även _statisk variabel_.
+* **Klassattribut**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. Ett klassattribut kallas även _statiskt attribut.
 
-* **Instansvariabel**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
+* **Instansattribut**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
 
 * **Instans**: Ett individuellt objekt av en speciell klass.
 
 * **Metod**: En funktion som är definierad inuti en klass.
-
-* **Attribut**:  De specifika egenskaperna (variablerna) för en klass.
 
 * **Statisk metod**: En metod i klassen som fungerar oberoende av klassen och _self_.
 
@@ -84,9 +83,9 @@ class Child(Parent):
 ```
 
 
-Med metoden `super(Child, self)` kommer vi åt basklassen, Parent, och kan då komma åt Parents konstruktor med `.__init__`. Det är denna raden som gör att vi får tillgång till Parents metoder och variabler från Child.
+Med metoden `super(Child, self)` kommer vi åt basklassen, Parent, och kan då komma åt Parents konstruktor med `.__init__`. Det är denna raden som gör att vi får tillgång till Parents metoder och attribut från Child.
 
-Nu kan vi initiera ett Child objekt och ge de ett namn utan att ha skapat en namn variabel i Child klassen.  
+Nu kan vi initiera ett Child objekt och ge de ett namn utan att ha skapat ett namn attribut i Child klassen.  
 Vi kan även anropa funktionen `print_parent` både från ett Child och ett Parent objekt.
 
 ```python
@@ -115,7 +114,7 @@ class Child(Parent):
 ```
 
 
-Child har fått en ny variabel, `nickname`, och en ny metod som skriver ut namn och smeknamn. I funktionen `print_nickname` kommer vi åt variabeln `name`, som vi ärver, med enkel dot.notation.
+Child har fått ett nytt attribut, `nickname`, och en ny metod som skriver ut namn och smeknamn. I funktionen `print_nickname` kommer vi åt attributet `name`, som vi ärver, med enkel dot.notation.
 
 ```python
 >>> son.print_nickname()
@@ -123,7 +122,7 @@ My nickname is  Zeldah and name is Andreas
 ```
 
 
-I en subklass kommer vi åt alla variabler och metoder som finns i en basklass med ett undantag, som vi kommer gå igenom längre ner. Det går även att ärva i flera steg. T.ex. klassen Grandchild kan ärva från Child som ärver av Parent. Då har vi tillgång till variabler och metoder både från Child och Parent. En klass kan även ärva från flera klasser samtidigt, Child kan t.ex. ärva från Parent och Deity samtidigt. Det kallas för multipelt arv.
+I en subklass kommer vi åt alla attribut och metoder som finns i en basklass med ett undantag, som vi kommer gå igenom längre ner. Det går även att ärva i flera steg. T.ex. klassen Grandchild kan ärva från Child som ärver av Parent. Då har vi tillgång till attribut och metoder både från Child och Parent. En klass kan även ärva från flera klasser samtidigt, Child kan t.ex. ärva från Parent och Deity samtidigt. Det kallas för multipelt arv.
 
 Vi fortsätter med vår Parent och Child klass.
 
@@ -212,13 +211,13 @@ We did it!
 
 
 
-Privata variabler och metoder {#privatVariablerMetoder}
+Privata attribut och metoder {#privatAttributMetoder}
 ------------------------------
 
-Vill man inte att någon annan än den egna instansen ska komma åt variabler och metoder kan man göra dem _privata_. Det gör man med ett `_` först i variabel/metod namnet.
+Vill man inte att någon annan än den egna instansen ska komma åt attribut och metoder kan man göra dem _privata_. Det gör man med ett `_` först i attribut/metod namnet.
 
-`_<namn>` Används för att markera att en metod/variabel inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
-Vi testar att skapa en privat variabel:
+`_<namn>` Används för att markera att en metod/attribut inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
+Vi testar att skapa ett privat attribut:
 
 ```python
 class Parent():
@@ -256,8 +255,8 @@ Som sagt, det går att accessa den både utanför och innanför instansen men ja
 Name mangling {#nameMangling}
 ------------------------------
 
-Vi går vidare till `__`, även kallat "name mangling". Name mangling är till för att förhindra en subklass från att använda/skriva över en metod/variabel i basklassen. Alltså inte för att göra något privat.  
-En metod med `__` i början är kan "bara" användas i instansen den skapas i, med `self.__<namn>`. Detta är en egenskap privata variabler/metoder har i många andra programmeringsspråk, men inte i python, och därför är det lätt hänt att `__` används istället för `_`.
+Vi går vidare till `__`, även kallat "name mangling". Name mangling är till för att förhindra en subklass från att använda/skriva över en metod/attribut i basklassen. Alltså inte för att göra något privat.  
+En metod med `__` i början är kan "bara" användas i instansen den skapas i, med `self.__<namn>`. Detta är en egenskap privata attribut/metoder har i många andra programmeringsspråk, men inte i python, och därför är det lätt hänt att `__` används istället för `_`.
 Vi testar skapa en `__<namn>` funktion:
 
 ```python
@@ -306,11 +305,11 @@ Can't access outside of instance
 Komposition och aggregation {#komposition_aggregation}
 ------------------------------
 
-Komposition och aggregation är en annan typ av relation mellan klasser. Arv är när klasser har en _is-a_ relation och komposition/aggregation är när klasserna har en _has-a_ relation. T.ex. om klassen Person har en variabler som är ett objeket av klassen Dog, då är relationen "Person has-a Dog".  
+Komposition och aggregation är en annan typ av relation mellan klasser. Arv är när klasser har en _is-a_ relation och komposition/aggregation är när klasserna har en _has-a_ relation. T.ex. om klassen Person har ett attribut vars värde är ett objeket av klassen Dog, då är relationen "Person has-a Dog".  
 Relationen kan vara enkelriktad eller dubbelriktade.
 
-* Enkelriktiad: Objekt X har objekt Y, av en annan klass, som variabel. Objekt X är medveten om Y men Y är inte medveten om X.
-* Dubbelriktade: Objekt X har objekt Y, av en annan klass, som variabel och objekt Y har objekt X som variabel. Objekt X är medveten om Y och Y är medveten om X.
+* Enkelriktiad: Objekt X har objekt Y, av en annan klass, som attribut. Objekt X är medveten om Y men Y är inte medveten om X.
+* Dubbelriktade: Objekt X har objekt Y, av en annan klass, som attribut och objekt Y har objekt X som attribut. Objekt X är medveten om Y och Y är medveten om X.
   
 
 
@@ -367,7 +366,7 @@ Vi kan uppnå samma funktionalitet med Parent som en modul, komposition, iställ
 ###Arv mot komposition {#arv_mot_komposition}
 
 Som utvecklare vill vi återanvända så mycket kod som möjligt men samtidigt undvika komplex kod.
-Om man har en djup arvskedja med multipla arv blir det jobbigt att håll koll på var metoder och variabler kommer ifrån. För att förstå en klass behöver man gå igenom alla klasser i arvskedjan och då har vi genast komplex kod.
+Om man har en djup arvskedja med multipla arv blir det jobbigt att håll koll på var metoder och attribut kommer ifrån. För att förstå en klass behöver man gå igenom alla klasser i arvskedjan och då har vi genast komplex kod.
 Komposition löser återanvändning av kod med moduler.
 
 När vad ska användas är inte spikat i sten utan det handlar om vilket du som utvecklare tycker passar bäst och vad du känner dig bekväm med. För att veta när ena är att föredra kan ni följa dessa tre guidelines.
