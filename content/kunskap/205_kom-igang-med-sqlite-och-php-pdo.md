@@ -115,7 +115,7 @@ Därefter kan du skapa ett PHP-skript med följande kod.
 $fileName = __DIR__ . "/db/jetty.sqlite";
 $dsn = "sqlite:$fileName";
 
-// Open the database file and catch the exception it it fails.
+// Open the database file and catch the exception if it fails.
 try {
     $db = new PDO($dsn);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
