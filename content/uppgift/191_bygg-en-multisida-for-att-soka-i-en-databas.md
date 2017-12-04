@@ -56,7 +56,7 @@ Funktionshuvudet kan se ut så här.
 
 ```php
 /**
- * Open the database file and catch the exception it it fails,
+ * Open the database file and catch the exception if it fails,
  * add an explanation and re-throw the exception.
  *
  * @param string $dsn the DSN for the database to connect to.
