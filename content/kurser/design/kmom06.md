@@ -65,9 +65,9 @@ Gå igenom följande material om designelement och designprinciper.
 
 1. Studera ett par olika designprinciper och se hur designelement kan användas för att uppnå dessa principer. Materialet finns på webbplatsen [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/) och en offline-kopia av webbplatsen finns i dokumentet [vl.pdf](article/vl.pdf).
 
-* Läs mer om designprinciper i "[Design Elements & Principles](https://www.canva.com/learn/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 designprinciper.
+1. Läs mer om designprinciper i "[Design Elements & Principles](https://www.canva.com/learn/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 designprinciper.
 
-* Hämta inspiration till designeffekter och designelement via exempel från CodePen. Här är en [CodePen sökning på "effects"](http://codepen.io/search/pens?q=effects) som ger en god start in bland exempel.
+1. Hämta inspiration till designeffekter och designelement via exempel från CodePen. Här är en [CodePen sökning på "effects"](http://codepen.io/search/pens?q=effects) som ger en god start in bland exempel.
 
 
 
