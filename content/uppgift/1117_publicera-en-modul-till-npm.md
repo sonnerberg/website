@@ -4,46 +4,34 @@ category:
     - javascript
     - kurs ramverk2
 revision:
-    "2017-11-16": (PA1, mos) Arbete påbörjat.
+    "2017-12-05": (A, mos) Första utgåvan.
 ...
-Publicera en modul till NPM
+Publicera en modul till npm
 ==================================
 
-Du skall publicera en modul till paketdatabasen NPM. Du skapar ett nytt repo, eller använder ett av de du redan gjort i kursen, och publicerar det till NPM så att det i slutändan går att installera via `npm install din-modul`.
+Du skall publicera en modul till paketdatabasen npm. Du skapar ett nytt repo, eller använder ett av de du redan gjort i kursen, och publicerar det till npm så att det i slutändan går att installera via `npm install din-modul`.
 
-Det måste vara en modul som du kan återanvända i ditt projekt.
+Det måste vara en modul som du kan återanvända i din applikation.
 
 <!--more-->
-
-[WARNING]
-**Arbete pågår**
-[/WARNING]
-
-<!--stop-->
 
 
 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)".
-
-Du har löst uppgiften "[Bygg en chatt med WebSocket](uppgift/bygg-en-chatt-med-websocket)".
+Du har löst uppgiften "[Bygg en klient/server applikation i JavaScript (databas)](uppgift/bygg-en-klient-server-applikation-i-javascript-databas)" så du har en grund till din applikation.
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Uppgiften är fri i sin utformning. Mitt utgångsläge har varit att en applikation kan ha nytta av en chatt och att man kan integrera denna chatt i sin applikation, kanske som en delvis fristående modul.
+Vi behöver en modul att jobba med för att träna på hur det är att jobba med moduler i JavaScript via npm.
 
-Men, det finns många variationer på applikationer så jag överlåter åt dig att integrera realtidsaspekterna.
+Du väljer själv vilken del som skall forma din modul. Det skall vara en modul som du kan återanvända i din applikation.
 
-Kommer du inte på nåt så kan du alltid välja chatt-varianten.
-
-Samtidigt kan du fortsätta att utveckla din applikation. Glöm inte att försöka täcka det mesta av din kod med enhetstester (i rimlig omfattning).
-
-Tänk god kodstruktur och bygg moduler som är fristående och återanvändbara, så långt det är möjligt och skäligt.
+Tänk god kodstruktur och försök lyfta ut en modul som är fristående och potentiellt återanvändbar även i andra sammanhang.
 
 
 
@@ -52,13 +40,19 @@ Krav {#krav}
 
 1. Bygg vidare på din klient/server applikation.
 
-1. Integrera realtidsaspekten i din applikation genom att använda WebSockets.
+1. Lyft ut en del av din kod i en egen modul. Du kan välja att lägga repot i `me/module`.
 
-1. Du behöver inte göra en komplett implementation. Du kan skjuta upp hela eller delar av implementationen till projektet. 
+1. Modulen blir sitt eget Git-repo som du publicerar på GitHub tillsammans med enhetstester och en CI-kedja.
 
-1. Uppdatera landningssidan i din redovisa och berätta kort om hur du kommer införa realtidsaspekten i din applikation.
+1. Skapa en README.md (i modulens repo) som kort beskriver modulen och berättar hur man installerar och använder den.
 
-1. Committa, tagga och pusha relevanta repon samt ladda upp det på studentservern.
+1. Publicera modulen på npmjs.com. Dubbelkolla att du har publicerat senaste versionen på både GitHub och npm.
+
+1. Integrera modulen med din applikation via `npm install`.
+
+1. Uppdatera din landningssida i din redovisa och berätta kort om modulen och länka till dess npm-sida.
+
+1. Committa, tagga och pusha relevanta repon (GitHub, npm) samt ladda upp det på studentservern.
 
 
 

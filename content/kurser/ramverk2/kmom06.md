@@ -2,25 +2,22 @@
 author:
     - mos
 revision:
-    "2017-10-16": "(PA1, mos) Arbete påbörjat."
+    "2017-12-05": "(A, mos) Första utgåvan."
 ...
 Kmom06: Egen modul
 ==================================
 
-Egen modul till npm.
+Som en del i infrastrukturen kring JavaScript finns pakethanteraren npm som erbjuder en hantering av återanvändbara moduler och färdiga program. Från början var npm utvecklat i samband med att Node.js växte fram. Numer ser vi både färdiga program, klient- och server-moduler som distribueras via npm.
 
-[WARNING]
-Kursutveckling pågår.
-[/WARNING]
+Vi dedikerar detta kursmoment till att forma en egen modul som publiceras på npm och som sedan återanvänds i din applikation.
 
-<!--stop-->
 <!--more-->
 
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
+Du väljer själv en mindre del av din applikation som skall formas som en egen modul med eget Git-repo på GitHub med enhetstester och CI-kedja samt publicering på npm. Därefter kan du åter installera och använda modulen som en fristående modul i din applikation.
 
-Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
+[FIGURE src=image/snapht17/modulecounts.png?w=w3 caption="Jämförelse mellan antal paket på tre olika modulbibliotek för JavaScript, Python och PHP. Bild från [Module counts](http://www.modulecounts.com/)."]
 
-
+I bilden ovan ser vi den exponentiella tillväxten av paket som publicerats på npm sedan starten.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -29,7 +26,7 @@ Tänk dig in i rollen som systemarkitekt på ett företag där du är den som g�
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar)*
+*(ca: 2-4 studietimmar)*
 
 
 
@@ -37,23 +34,25 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen.
+1. Jämför tillväxten och omfattningen för olika modulbibliotek för olika programmeringsspråk via webbtjänsten [Module Counts](http://www.modulecounts.com/). Det är bara för att ge dig en känsla för omfattningen av moduler på npm, jmfört med andra programmeringsspråk.
+
+1. Kika igenom webbplatsen för [npm](https://www.npmjs.com/) och se hur den presenterar npm-paket. Skapa ett konto på webbplatsen och förbered dig att skapa en modul.
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 6-10 studietimmar)*
+*(ca: 6-15 studietimmar)*
 
 
-
+<!--
 ###Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Publicera en kodmodul på npm](kunskap/XXX)" för att se hur man publicerar moduler till npm och hur man sedan återanvänder dem i sin kod.
-
+-->
 
 
 
@@ -61,7 +60,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Publicera en modul till NPM](uppgift/publicera-en-modul-till-npm)". Du skall bekanta dig med npm genom att publicera en av dina moduler som ett npm-paket. Modulen du väljer måste du återanvända i ditt projekt (eller publicera hela projektet). Du jobbar i `me/app` och eventuellt i fler underkataloger/repon.
+1. Gör uppgiften "[Publicera en modul till NPM](uppgift/publicera-en-modul-till-npm)". Du skall bekanta dig med npm genom att publicera en av dina moduler som ett npm-paket. Modulen du väljer måste du återanvända i din applikation. Du jobbar i `me/app` och eventuellt i fler underkataloger/repon. Din modul kan ha ett eget repo under `me/module` om du så väljer.
+
+1. Gör uppgiften "[Färdigställ din redovisa-sida i ramverk2](uppgift/fardigstall-din-redovisa-sida-i-ramverk2)". Det handlar mest om att dokumentera hur din redovisa-sida fungerar samt lägga till npm run-skript om det saknas.
 
 
 
@@ -76,9 +77,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
-* Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
-* Använde du någon form av scaffolding som Express erbjuder?
-* Jobbar du med Markdown för innehållet, eller annat liknande?
+* Reflektera över vikten av infrastruktur för moduler för ett programmeringsspråk.
+* Vill du ge dig på att förklara att just npm är den tjänsten som växt snabbast av de modulerkataloger som presenteras på webbplatsen "Module Counts"?
+* Reflektera över hur arbetet gick att välja, separera, publisera och sedan åter integrera module i din applikation.
+* Sista uppgiften om att dokumentera och färdigställa redovisa-sidan, tog det mycket tid eller hade du allt klart?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
