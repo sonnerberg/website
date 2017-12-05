@@ -2,6 +2,7 @@
 title: ramverk2
 author: mos
 revision:
+    "2017-12-05": "(B, mos) Uppdaterad med alla kmoms."
     "2017-06-07": "(A, mos) Första revisionen inför kursstart HT2017."
 ...
 Kursen ramverk2
@@ -136,7 +137,9 @@ Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en ko
 
 ###Kmom06: Egen modul {#kmom06}
 
-TBD.
+Som en del i infrastrukturen kring JavaScript finns pakethanteraren npm som erbjuder en hantering av återanvändbara moduler och färdiga program. Från början var npm utvecklat i samband med att Node.js växte fram. Numer ser vi både färdiga program, klient- och server-moduler som distribueras via npm.
+
+Vi dedikerar detta kursmoment till att forma en egen modul som publiceras på npm och som sedan återanvänds i projektet.
 
 [Instruktion till kursmoment 06](./kmom06).
 
