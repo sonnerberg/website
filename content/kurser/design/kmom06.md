@@ -97,7 +97,7 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-Det finns ingen övning. Förbered dig inför uppgifterna genom att studera begreppen om olika designprinciper.
+Det finns ingen övning. Förbered dig inför uppgifterna genom att studera begreppen om olika designelement och designprinciper.
 
 <!--
 Genomför följande övning för att förbereda inför uppgifterna.

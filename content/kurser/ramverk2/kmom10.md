@@ -33,6 +33,19 @@ Kursutveckling pågår.
 
 <!--stop-->
 
+klient/server applikation
+enhetstester
+ci-kedja
+docker
+realtid
+databas
+
+olika tekniker (inklusive skriva om dem)
+
+proffsig readme
+
+
+
 Under kursen har du byggt upp en kodbas för ett kommentarshanteringssystem. Nu skall du använda din(a) moduler och kod för att bygga en webbplats som liknar webbplatsen Stack Overflow i sin uppbyggnad.
 
 Du har fått en kund som heter WGTOTW (We Gonna Take Over The World) och kunden har en enorm kassa och är villig att spendera en hel del på dig.
