@@ -40,14 +40,18 @@ Du har läst artikeln om "[Flask med Jinja2](kunskap/flask-med-jinja2)".
 Struktur {#struktur}
 -------------------------------
 
-Innan vi kommer igång med koden kan det vara bra att tänka igenom vad det är man vill åstadkomma. Det minskar risken att hamna snett och behöva kasta kod och göra om. Målet är en sida som kan lägga till en person, en *employee*, i en lista, som i sin tur visas upp i en tabell. Tabellen ska uppdateras automatiskt och vi blandar inte in någon databas, utan vi lämnar koden med några personer hårdkodade. Till detta skapar vi en klass, `Employee`. Vi ska hantera GET och POST i routen och agera korrekt beroende hur vi skickar en request till routen. När vi klickar på länken i navbaren görs ett GET-request och när vi postar formuläret kan vi använda POST. Vi kan med fördel i detta fallet använda samma route, kallad "company" i artikeln.
+Innan vi kommer igång med koden kan det vara bra att tänka igenom vad det är man vill åstadkomma. Det minskar risken att hamna snett och behöva kasta kod och göra om. Målet är en sida som kan lägga till en person, en *employee*, i en lista, som i sin tur visas upp i en tabell. Tabellen ska uppdateras automatiskt och vi blandar inte in någon databas, utan vi lämnar koden med några personer hårdkodade. Till detta skapar vi en klass, `Employee`. Vi ska hantera GET och POST i routen och agera korrekt beroende hur vi skickar en request till routen. När vi klickar på länken i navbaren görs ett GET-request och när vi postar formuläret kan vi använda POST. Vi kan med fördel i detta fallet använda samma route, kallad "company" i artikeln. Vi vill även undvika lösa funktioner i app.py så vi skapar en fil, *handler*, som får sköta mappningen mellan app.py och klassen.
 
 En vattentät plan är på plats så vi börjar kika på koden.
 
-Klassen Employee {#klassen-emplyee}
+
+
+Filerna {#filerna}
 -------------------------------
 
-Nu tar vi en titt på hur klassen ser ut.
+###employee.py {#emplyee-py}
+
+Nu tar vi en titt på hur klassen Employee ser ut.
 
 ```python
 #!/usr/bin/env python3
@@ -91,9 +95,6 @@ class Employee():
 
 
 
-Formulär och tabell {#formular-och-tabell}
--------------------------------
-
 ###company.html {#company.html}
 
 Börja med att lägga till ett menyval i navbaren för `company.html`, samt en route som returnerar rätt sida. Vi ska utnyttja Jinja2's funktionalitet för att hantera mallar och skapa mallar, *templates*, för tabellen och formuläret. Som du såg i början av artikeln så har vi mapparna templates/forms och templates/tables. Kika sedan på company.html:
@@ -121,7 +122,7 @@ När vi kallar på `{% include ... %}` letar Jinja2 automatiskt i mappen templat
 
 
 
-###Mallen för formuläret {#mall-formular}
+###templates/forms {#templates-forms}
 
 Mallen för formuläret, templates/forms/add_employee.html, ser ut på följande sätt:
 
@@ -157,17 +158,49 @@ def company():
     """ Company route """
 
     if request.method == "POST":
-        temp_employee = Employee(request.form["firstname"], request.form["lastname"], request.form["salary"])
-        persons.append(temp_employee)
+        handler.addEmployee(request.form)
 
-    return render_template("company.html", persons=persons)
+    return render_template("company.html", persons=handler.get_persons())
 ```
 
-Här talar vi om att det är helt i sin ordning att ta sig hit via både POST och GET. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. Tidigare nämndes att det är formulärets attribut `name` som används och det når vi via request.form["attribut"]. Sedan skapar vi en instans av den klassen och lägger i listan `persons`. Listan är skapad ovanför alla routes med några hårdkodade instanser. Sist så skickar vi med listan till company.html och låter tabellen ta hand om den för utskrift.
+Här talar vi om att det är helt i sin ordning att ta sig hit via både POST och GET. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. Här ser vi att routen använder filen *handler*. Den importeras högst upp i app.py och tanken är att den ska vara en form av controller, eller hanterare, mellan klassen och app.py. Sist så skickar vi med listan till company.html och låter tabellen ta hand om den för utskrift.
 
 
 
-###Mallen för tabell {#mallen-for-tabell}
+###handler.py {#handler-py}
+
+```python
+#!/usr/bin/env python3
+"""
+Handler file
+"""
+
+from employee import Employee
+
+persons = []
+
+emil = Employee("Pelle", "Scriptsson", 30000)
+mikael = Employee("Mikael", "Roos", 31000)
+kenneth = Employee("Kenneth", "Lewenhagen", 75000)
+andreas = Employee("Andreas", "Arnesson", 12000)
+
+persons.append(emil)
+persons.append(mikael)
+persons.append(kenneth)
+persons.append(andreas)
+
+def add_employee(form):
+    persons.append(Employee(form["firstname"], form["lastname"], form["salary"]))
+
+def get_persons():
+    return persons
+```
+
+Tidigare nämndes att det är formulärets attribut `name` som används och det når vi via request.form["attribut"]. Vi skickade med formulärets data och tar emot det i funktionen `add_employee()` som *form*. Sedan skapar vi en instans av klassen och lägger i listan `persons` som kan hämtas med funktionen `get_persons()`.
+
+
+
+###templates/tables {#templates-tables}
 
 Vi hoppar in i mappen templates/tables/ och tittar på `show_employees.html`.
 
