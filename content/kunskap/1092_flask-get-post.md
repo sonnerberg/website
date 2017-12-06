@@ -1,16 +1,16 @@
 ---
 author: lew
 revision:
-    "2017-02-02": (A, lew) First version.
+    "2017-12-01": (A, lew) First version for v2.
 category:
     - oopython
 ...
-Flask, SQLite, SQLAlchemy, POST och GET
+Flask, POST och GET
 ===================================
 
-[FIGURE src=/image/oopython/kmom04/cars_table1.png?w=c5 class="right"]
+[FIGURE src=/image/oopython/kmom02/topimage-art1.png?w=c5 class="right"]
 
-Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Till vår hjälp har vi SQLAlchemy för att hantera databasen. Målet är att presentera en tabell, med data hämtad från databasen, i en Flask-applikation.  
+Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Målet är att vi ska med hjälp av formulär, tabeller och klasser med arv, presentera innehåll i vår Flask-applikation.  
 
 <!--more-->  
 
@@ -22,11 +22,9 @@ Vill vi däremot inte att datan, eller informationen vi skickar, ska synas, så 
 
 [Läs mer om POST och GET](http://www.w3schools.com/tags/ref_httpmethods.asp).
 
-Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans med Python, Flask och SQLAlchemy. Vill du hänga med och koda själv redan nu, kopierar du in cars.sqlite och flask-appen (me/flask) in i en ny mapp på valfritt ställe. Filerna vi använder är:
+Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans med Python och Flask. Vill du hänga med och koda själv redan nu kan du skapa filerna som används i artikeln:
 
-[FIGURE src=/image/oopython/kmom04/tree_flask2.png]
-
-<!--more-->
+[FIGURE src=/image/oopython/kmom02/tree_flask2.png]
 
 
 
@@ -34,255 +32,211 @@ Förutsättning {#pre}
 -------------------------------
 
 Du har läst delen om GET och POST i guiden "[Php på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg#globals)" eller vet vad det innebär.  
-Du har läst artikeln om "[Flask och Jinja2](kunskap/flask-och-jinja2)".  
-Du har läst artikeln om "[SQLAlchemy](kunskap/sqlalchemy)".  
+Du har läst artikeln om "[Flask med Jinja2](kunskap/flask-med-jinja2)".  
+Du har läst artikeln om "[Klassrelationer](kunskap/klass-relationer)".  
 
 
 
-Strukturera funktionerna {#strukturera-funktionerna}
+Struktur {#struktur}
 -------------------------------
 
-Vi kommer använda en del egna funktioner så vi skapar en ny fil, "functions.py", där vi samlar alla funktioner. I "app.py" importerar vi filen så vi kan använda dess funktioner. Vi kan även ge importen ett alias:  
+Innan vi kommer igång med koden kan det vara bra att tänka igenom vad det är man vill åstadkomma. Det minskar risken att hamna snett och behöva kasta kod och göra om. Målet är en sida som kan lägga till fordon i ett "garage", som i sin tur visas upp i en tabell. Tabellen ska uppdateras automatiskt och vi blandar inte in någon databas, utan det vi lämnar koden med några fordon hårdkodade. Till detta skapar vi en basklass, `Vehicle` och subklasser i form av `Car`, `Motorcycle` och `Trailer`. Vi ska hantera GET och POST i routen och agera korrekt beroende hur vi skickar en request till routen. När vi klickar på länken i navbaren görs ett GET-request och när vi postar formuläret kan vi använda POST. Vi kan med fördel i detta fallet använda samma route, kallad "garage" i artikeln.
 
-```python
-import functions as func
-```
+En vattentät plan är på plats så vi börjar kika på koden.
 
-I functions.py importerar vi det vi behöver från SQLAlchemy, Car-klassen samt modulen "request" från flask:  
-
-```python
-from flask import request
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from car import Car
-```
-
-Vi skapar också sessionen till SQLAlchemy i functions.py:
-
-```python
-engine = create_engine("sqlite:///db/cars.sqlite")
-
-Session = sessionmaker(bind=engine)
-session = Session()
-```
-
-Vi behöver även request-modulen i app.py. Nu är vi redo att köra igång.  
-
-
-
-Tabell i Bootstrap {#tabell-i-bootstrap}
+Klasserna {#klasserna}
 -------------------------------
 
-Vi använder ju [Bootstrap](https://getbootstrap.com/examples/theme/) i Flask-appen och följer vi länken ser vi att de har en mall för en tabell, ett "table". Högerklickar vi och visar källkoden kan vi kopiera den för att hålla appen responsiv och enligt temat.  
+Nu tar vi en titt på hur klasserna ser ut.
 
-Vi behöver en ny flik i navbaren. Den döper vi till "Cars" och sätter den till routen "/cars" och skickar med data-variabeln som innehåller bland annat länkarna till headern och footern.
 
-I mappen "/templates" skapar vi en fil, "cars.html" som vi servar via routen.  
 
-Tittar vi nu på temats tabell ser vi att det är i `<tbody>` det händer grejjer. Vi kan ta strukturen runt om och klistra in i cars.html så genererar vi innehållet baserat på datan i databasen.
+###Basklassen Vehicle {#basklass-vehicle}
 
-cars.html:
+```python
+#!/usr/bin/env python3
+
+"""
+Class file for Vehicle
+"""
+
+class Vehicle():
+    """
+    Base class
+    """
+    def __init__(self, brand, model, color):
+        """
+        init method
+        """
+        self.brand = brand
+        self.model = model
+        self.color = color
+
+    def get_brand(self):
+        return self.brand
+
+    def get_model(self):
+        return self.model
+
+    def get_color(self):
+        return self.color
+```
+
+
+
+###Subklassen Car {#subklass-car}
+
+```python
+#!/usr/bin/env python3
+"""
+Class file for Car
+"""
+
+from vehicle import Vehicle
+
+class Car(Vehicle):
+    """
+    Class for Car
+    """
+    vehicle_type = "Car"
+
+    def __init__(self, brand, model, color):
+        super(Car, self).__init__(brand, model, color)
+
+    def get_type(self):
+        """
+        returns the type
+        """
+        return self.vehicle_type
+```
+Här skickar vi vidare initieringsvariablerna till super-klassen, basklassen, Vehicle. Metoderna i basklassen kommer gälla för subklasserna med, fast för den egna instansen.
+
+Nu kan vi skapa en instans av klassen Car som ärver från klassen Vehicle: `volvo = Car("Volvo", "XC90", "Blå")`. Den informationen vill vi ha från formuläret. Du bör nu kunna se hur klasserna för Motorcycle och Trailer ska se ut. Det löser du.
+
+
+
+Formulär och tabell {#formular-och-tabell}
+-------------------------------
+
+###Garage.html {#garage.html}
+
+Börja med att lägga till ett menyval i navbaren för `garage.html`, samt en route som returnerar rätt sida. Vi ska utnyttja Jinja2's funktionalitet för att hantera mallar och skapa mallar, *templates*, för tabellen och formuläret. Som du såg i början av artikeln så har vi mapparna templates/forms och templates/tables. Kika sedan på garage.html:
 
 ```html
 {% include 'header.html' %}
 
-<div class="container" role="main">
+<div class="container">
+    <div class="page-header">
+        <h1>Hantera garaget</h1>
+    </div>
     <div class="row">
-        <div class="col-md-6">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Modell</th>
-                <th>Pris</th>
-                <th>Land</th>
-                <th>Tillverkare</th>
-              </tr>
-            </thead>
-            <tbody>
-                <!-- Här kommer datan -->
-            </tbody>
-          </table>
+        <div class="col-md-3 col-md-offset-1">
+            <h3>Lägg till</h3>
+            {% include 'forms/add_vehicle.html' %}
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+            <h3>Garage</h3>
+            {% include 'tables/show_vehicles.html' %}
         </div>
     </div>
 </div>
 
 {% include 'footer.html' %}
 ```
+När vi kallar på `{% include ... %}` letar Jinja2 automatiskt i mappen templates/. Vi kan på detta sättet separera koden och inkludera formulär, tabeller och övrig html-kod. För att få en snygg layout använder vi Bootstrap's färdiga klasser. Klassen `row` gör sitt bästa för att innehållet ska hamna på en rad. Klassen `col-md-3` tar upp 3 kolumner av 12. Klassen `col-md-offset-1` puttar elementet 1 kolumn till åt höger. Forumläret och tabellen kommer hamna brevid varandra på samma rad, och vara lika breda.
 
 
 
-Generera tabell utifrån databasen {#generera-tabell}  
--------------------------------
+###Mallen för formuläret {#mall-formular}
 
-Vi skapar en funktion i "functions.py" som hämtar all data från databasen och returnerar en html-sträng som passar in i tabellens "&lt;tbody&gt;" med innehållet:  
-
-```python
-def fix_car_table():
-    car_table = ""
-    all_cars = session.query(Car).all()
-    for car in all_cars:
-        car_table += """<tr><td>{id}</td><td>{model}</td>
-                    <td>{price}</td><td>{country}</td>
-                    <td>{manu}</td>
-                    </tr>""".format(id=car.id, model=car.model, price=car.price, country=car.country, manu=car.manufacturer)
-    return car_table
-```
-
-Funktionen har ju ett returvärde så vi skickar med den i routen till "/cars" och använder den i "cars.html":  
-
-app.py
-```python
-...
-
-@app.route('/cars'):
-    return render_template('cars.html', data=data, car_table=func.fix_car_table())
-```
-
-cars.html  
-```html
-...
-<tbody>
-    {{ car_table|safe }}
-</tbody>
-...
-```
-
-Använder vi `|safe` så talar vi om att det är OK att det är html-kod. Utan den får vi resultatet som en sträng som skrivs ut.  
-
-
-
-GET {#get}
--------------------------------
-
-Vi testar GET-metoden för att ta bort en rad ur databasen. Först och främst måste vi ordna till en länk vid sidan om varje rad i tabellen. Tanken är att när man klickat på den så skickar man med id:t via GET och kan då ta bort den. För att inte behöva använda fler externa bibliotek eller moduler för att ladda om sidan kan vi använda samma route.  
-
-Vi börjar med länken. I funktionen som genererar tabell-datan lägger vi till en länk som skickar med id:t i urlen:  
-```python
-def fix_car_table():
-    car_table = ""
-    all_cars = session.query(Car).all()
-    for car in all_cars:
-        car_table += """<tr><td>{id}</td><td>{model}</td>
-                    <td>{price}</td><td>{country}</td>
-                    <td>{manu}</td>
-                    <td><a href='?del={id}'>Ta bort</a></td>
-                    </tr>""".format(id=car.id, model=car.model, price=car.price, country=car.country, manu=car.manufacturer)
-    return car_table
-```
-
-Vi kan även lägga till en kolumn i cars.html:
-```html
-...
-<tr>
-    <th>#</th>
-    <th>Modell</th>
-    <th>Pris</th>
-    <th>Land</th>
-    <th>Tillverkare</th>
-    <th></th> <!-- En till kolumn -->
-</tr>
-```
-
-Nu återstår bara att hantera detta i routen. Vi behöver tala om för routen "/cars" att den ska kunna ta hand om GET-parametrar. Om man klickar på länken för att ta bort data nu så ser vi i URL:en att det skickas med en parameter, till exempel: `localhost:5000/cars?del=2`  
-
-Det gör vi på följande sätt i app.py:
-```python
-...
-@app.route('/cars', methods=["GET"])
-...
-```
-
-Tack vare modulen `request` som vi importerat kan vi göra en kontroll i routen om det finns någon "del"-parameter:  
-```python
-@app.route('/cars', methods=["GET"])
-def show_cars():
-    if request.method == "GET":
-        del_this_car = request.args.get("del")    # Här tar vi hand om parametern 'del'
-        if del_this_car != None:                  # Om den är satt...
-            func.remove_car(del_this_car)         # ...så kallar vi på en funktion som tar bort raden
-
-    return render_template('cars.html', data=data, car_table=func.fix_car_table())
-```
-
-Nu skickar vi id:t till funktionen "remove_car(...)". Funktionen behöver få tag på raden med korrekt id och sedan ta bort den:  
-
-functions.py:
-```python
-def remove_car(del_this_car):
-    session.query(Car).filter(Car.id == del_this_car).delete()
-    session.commit()
-```
-
-Routen returnerar oss tillbaka till cars.html och på vägen kallar vi på "func.fix_car_table()" som hämtar det som finns i databastabellen. Det gör att sidan laddas om med rätt innehåll.  
-
-[FIGURE src=/image/oopython/kmom04/cars_table2.png caption="Resultatet kan se ut så här."]
-
-POST {#post}
--------------------------------
-
-Vi behöver kunna lägga till bilar i vår tabell. Det testar vi att göra med POST-metoden.  
-
-Vi börjar med att titta på strukturen för Bootstraps formulär på [temats sida](https://getbootstrap.com/examples/theme/). Vi väljer ut de delarna vi vill ha med och petar in de i cars.html:
+Mallen för formuläret, templates/forms/add_vehicle.html, ser ut på följande sätt:
 
 ```html
-...
-<div class="row">
-    <h3>Lägg till bilar</h3>
-    <form role="form" method="POST" action="/cars">
-        <div class="form-group">
-            <label for="model">Modell: </label>
-            <input type="text" name="model" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label for="price">Pris: </label>
-            <input type="number" name="price" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label for="country">Land: </label>
-            <input type="text" name="country" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label for="model">Tillverkare: </label>
-            <input type="text" name="manufacturer" class="form-control" />
-        </div>
-        <button type="submit" class="btn btn-default">Lägg till</button>
-    </form>
-        <!-- </div> -->
+<form role="form" method="POST" action="{{ url_for('garage') }}">
+    <div class="form-group">
+        <label for="type">Type: </label>
+        <select class="form-control" name="type" id="type">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="trailer">Trailer</option>
+        </select>
     </div>
+    <div class="form-group">
+        <label for="brand">Tillverkare: </label>
+        <input type="text" name="brand" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="model">Modell: </label>
+        <input type="text" name="model" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="color">Färg: </label>
+        <input type="text" name="color" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-default">Lägg till</button>
+</form>
 ```
 
-Om vi tittar på attributen till formuläret: `<form role="form" method="POST" action="/cars">` så ser vi att vi definierar metoden POST och skickar resultatet till routen "/cars". POST-variablerna som skickas vid submit heter det som du sätter attributet "name" till i input-fälten.  
+Vi sätter metoden till POST och action till den sökvägen vi vill skicka formuläret när vi gör submit. Attributet `name` är även här namnet vi når formulärets data med när vi tar hand om det.
 
-Nu måste vi ta hand om POST-variablerna i routen. Vi måste definiera metoden i routen och sedan göra en koll på POST med i metoden:  
+
+
+###app.py {#app-py}
+
+Nu återstår bara att hantera det inskickade formuläret. Det kan vi göra i routen för garage.html:
 
 ```python
-@app.route('/cars', methods=["POST", "GET"])
-def show_cars():
+@app.route("/garage", methods=["POST", "GET"])
+def garage():
+    """ Garage route """
+
     if request.method == "POST":
-        func.add_car()
+        if request.form["type"] == "car":
+            vehicle = Car(request.form["brand"], request.form["model"], request.form["color"])
+            garage_list.add_vehicle(vehicle)
+        if request.form["type"] == "motorcycle":
+            vehicle = Motorcycle(request.form["brand"], request.form["model"], request.form["color"])
+            garage_list.add_vehicle(vehicle)
 
-    if request.method == "GET":
-        # Koden för hantering av GET
+        # omitted code in explanation purpose
+
+    return render_template("garage.html", garage=garage_list)
 ```
 
-Vi kallar på en funktion, i detta fallet "func.add_car()". Vi hoppar till functions.py och tittar på hur den kan se ut:  
+Här talar vi om att det är helt i sin ordning att ta sig hit via både POST och GET. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. Tidigare nämndes att det är formulärets attribut `name` som används och det når vi via request.form["attribut"]. Sedan skapar vi en instans av den klassen och lägger i listan `garage`. Listan är skapad ovanför alla routes med några hårdkodade instanser. Sist så skickar vi med listan till garage.html och låter tabellen ta hand om den för utskrift.
 
-```python
-def add_car():
-    new_car = Car(
-    model=request.form["model"],
-    price=request.form["price"],
-    country=request.form["country"],
-    manufacturer=request.form["manufacturer"])
 
-    session.add(new_car)
-    session.commit()
+
+###Mallen för tabell {#mallen-for-tabell}
+
+Vi hoppar in i templates/ igen och mappen tables/.
+
+```html
+<table class="table">
+    <thead>
+        <tr>
+            <th>Typ</th>
+            <th>Tillverkare</th>
+            <th>Modell</th>
+            <th>Färg</th>
+        </tr>
+    </thead>
+<tbody>
+    {% for vehicle in garage.show_vehicles() %}
+    <tr>
+        <td>{{ vehicle.get_type() }}</td>
+        <td>{{ vehicle.get_brand() }}</td>
+        <td>{{ vehicle.get_model() }}</td>
+        <td>{{ vehicle.get_color() }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
 ```
 
-Strukturen känner vi igen från SQLAlchemy-artikeln. Vi kommer åt POST-variablerna med `request.form["variable name"]`.  
+Här skapar vi tabellen och i `<tbody>` där magin händer, använder vi en for-loop som går igenom den inskickade listan och dess respektive metoder.
 
-[FIGURE src=/image/oopython/kmom04/cars_table1.png caption="Så här kan det se ut med alla delarna på plats."]
+
 
 
 
