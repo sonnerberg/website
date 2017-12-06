@@ -5,6 +5,7 @@ category:
     - websocket
     - kurs ramverk2
 revision:
+    "2017-12-06": (B, mos) Ändrade till DBWEBB_DSN.
     "2017-11-23": (A, mos) Första utgåvan.
 ...
 Skapa en CRUD med MongoDB till din redovisa-sida
@@ -49,7 +50,7 @@ Krav {#krav}
 
 1. Låt de båda kontainrarna prata med varandra för att lösa uppgiften.
 
-1. Använd environmentvariabeln `DBWEBB_DNS` som ett sätt att undvika hårdkodning av den DSN som kopplar upp dig mot databasen MongoDB.
+1. Använd environmentvariabeln `DBWEBB_DSN` som ett sätt att undvika hårdkodning av den DSN som kopplar upp dig mot databasen MongoDB.
 
 1. Alla tjänster startas via kommandot `docker-compose up`.
 
