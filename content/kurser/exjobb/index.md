@@ -76,16 +76,15 @@ Arbetsgång {#arbete}
 Följande är stegen i kursen, grovt sett. Introduktionsföreläsningen ger detaljer om de olika stegen.
 
 
+n del av uppgiften: Att själv hitta företaget och själv vara den aktiva i formulerandet.
 
 ### Kund och input till arbetet {#input}
 
-Studenten etablerar kontakt med en kund som har ett problem och är villig att låta studenten lösa problemet inom ramen för exjobbet.
+Studenten söker upp och etablerar kontakt med en kund som har ett problem och är villig att låta studenten lösa problemet inom ramen för exjobbet.
 
-Kunden skriver ihop en enkel A4 om problemställningen de har.
+Kunden skriver ihop en enkel A4 om problemställningen de har. Om studenten är pådrivande så kan studenten och kunden gemensamt skapa dokumentet om problemställningen. Ytterst är det kunden som är ansvarig för att inputen är relevant för arbetet.
 
-Om studenten är pådrivande så kan studenten och kunden gemensamt skapa dokumentet om problemställningen. Ytterst är det kunden som är ansvarig för att input är relevant för arbetet.
-
-Detta arbete sker förslagsvis innan julen, inför och innan kursen officiellt har startat.
+Detta arbete sker förslagsvis innan julen, inför och innan kursen officiellt har startat. Se det som en del i kursen att vara aktiv och själv söka upp företag och tillsammans med kunden aktivt medverka i formulering av topic.
 
 
 
