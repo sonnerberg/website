@@ -6,6 +6,7 @@ category:
     - kursen ramverk2
     - mongodb
 revision:
+    "2017-12-07": (B, mos) Docker-compose uppgradering MongoDB 3.6.
     "2017-11-21": (A, mos) Första utgåvan.
 ...
 Kom igång med MongoDB i Nodejs
@@ -53,14 +54,13 @@ version: '3'
 services:
     mongodb:
         image: mongo
-        container_name: "mongodb"
         environment:
             - MONGO_DATA_DIR=/data/db
         volumes:
             - ./data/db:/data/db
         ports:
             - 27017:27017
-        command: mongod
+        command: mongod --bind_ip_all
 ```
 
 Lokalt i min katalog har jag `data/db` som kommer att innehålla själva databasen, katalogen skapas om jag inte har den. Porten 27017 är standardporten för MongoDB.
