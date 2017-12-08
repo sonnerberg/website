@@ -133,7 +133,7 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser)" (lab 1)
+1. Gör uppgiften "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser2)" (lab 1)
 
 2. Gör uppgiften "[En me-sida med Python och Flask](uppgift/en-me-sida-med-flask)".
 

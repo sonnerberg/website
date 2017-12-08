@@ -82,7 +82,7 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med mer Objekt och klasser](uppgift/python-med-mer-objekt-och-klasser)" (lab 2)
+1. Gör uppgiften "[Python med mer Objekt och klasser](uppgift/python-med-klass-relationer)" (lab 2)
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
