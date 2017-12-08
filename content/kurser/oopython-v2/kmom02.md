@@ -84,6 +84,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med mer Objekt och klasser](uppgift/python-med-klass-relationer)" (lab 2)
 
+1. Gör uppgiften "[Skapa former](uppgift/skapa-former)". Spara koden i mappen `Flask/`.
+
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 ```bash
