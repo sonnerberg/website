@@ -31,7 +31,7 @@ Du jobbar som teknisk arkitekt och teamledare och du skall nu visa vägen för d
 
 Du har valt att bygga ihop en väl fungerande applikation som påvisar alla de tekniker du tror på.
 
-När du är klar så är tanken att du presenterar projektet och teknikerna för dina medlemmar i teamet och din applikation fungerar som utbildningsmaterial för ditt team.
+När du är klar så är tanken att du presenterar projektet och teknikerna för dina medlemmar i teamet och din applikation fungerar som utvärderings- och utbildningsmaterial för ditt team.
 
 Tänk på att ditt team är kritiska mot nya tekniker, du behöver göra ett gott jobb för att imponera på dem. Annars är risken att de sågar dina nya idéer.
 
@@ -56,43 +56,43 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 #### Repon på GitHub {#r1}
   
-Skapa ett nytt/flera repo för projektet, eller återanvänd det du redan gjort i kursen, spara resultatet i `me/kmom10`.
+Skapa ett/flera repon för projektet, eller återanvänd det du redan gjort i kursen, spara resultatet i `me/kmom10`.
 
-När du är klar, committa, tagga, pusha till GitHub samt gör dbwebb upload till studentservern.
+När du är klar, committa, tagga, pusha till GitHub samt gör `dbwebb upload` till studentservern.
 
 
 
 #### Applikationen och teknikval {#r2}
 
-Du bygger en väl fungerande och komplett klient/server-applikation med JavaScript och de ramverk du väljer att använda. Utgångsläget är att använda de tekniker som presenterats i kursen.
+Du bygger en väl fungerande och komplett klient/server-applikation med JavaScript och de ramverk du väljer att använda. Utgångsläget är att använda de tekniker som presenterats i kursen, eller de tekniker som du själv valt utifrån kursens fokus och diskussioner i forumet.
 
-I din README skriver du ett stycke om din kravbild för applikationen. Så att det blir tydligt för läsaren vilka krav/features du inkluderar och exkluderar. Du skriver också vilka bastekniker och ramverk du valt att använda tillsammans med korta argument om dina val samt en kort utvärdering av hur väl du anser verktygen har fungerat i sammanhanget.
+I din README skriver du ett stycke om din kravbild för applikationen. Det skall vara tydligt för läsaren vilka krav/features du inkluderar och vilka du medvetet exkluderar. Du skriver vilka bastekniker och ramverk du valt att använda tillsammans med korta argument om dina val samt en kort utvärdering av hur väl du anser dina val har fungerat i sammanhanget.
 
 
 
 #### Installation {#r7}
 
-I din README beskriver du kort hur man installerar och startar upp din applikation. Du satsar på att allt går att installera med `npm install` och sedan starta lokalt med `npm start` (eventuellt `npm stop`).
+I din README beskriver du kort hur man installerar och startar upp din applikation. Du satsar på att allt går att installera med `npm install` och starta lokalt med `npm start` (eventuellt `npm stop`).
 
-Du visar även hur man startar igång servern i en (samling av) Docker-kontainers via `npm run start-docker` och de kan stoppas med `npm run stop-docker`.
+Du visar hur man startar igång servern i en (samling av) Docker-kontainers via `npm run start-docker` och de kan stoppas med `npm run stop-docker`.
 
-Normalt fungerar en installation utan övriga inställningar. Men dokumentera de möjligheter som eventuellt finns i form av `DBWEBB_PORT`, `DBWEBB_DSN` och liknande.
+Normalt fungerar en installation utan övriga inställningar. Men, dokumentera de möjligheter som eventuellt finns i form av `DBWEBB_PORT`, `DBWEBB_DSN` och liknande.
 
 Var tydlig och kortfattad i din README om hur installationsfasen ser ut.
 
 
 
-#### Enhetstestning {#r3}
+#### Testning {#r3}
 
-Du har god kodtäckning i enhetstesterna, sträva efter 70% där det är rimligt.
+Du har god kodtäckning i enhetstesterna, sträva efter 70% där det är rimligt, men se det som en riktlinje och inte ett hårt krav.
 
-I din README skriver du ett stycke om hur du implementerat enhetstesterna och vilka verktyg du använder samt om det är delar av applikationen som inte täcks av testsuiten. Du reflekterar kort över hur dina teknikval fungerat för dig. Du reflekterar också över hur lätt/svårt det är att få kodtäckning på din applikation.
+I din README skriver du ett stycke om vilka verktyg du använt för din testsuite och om det är delar av applikationen som inte täcks av tester. Du reflekterar kort över hur dina teknikval fungerat för dig. Du reflekterar också över hur lätt/svårt det är att få kodtäckning på din applikation.
 
 Man kan köra hela din testsuite lokalt via `npm test`.
 
 I README visar du hur man kan se kodtäckningen lokalt i webbläsaren.
 
-Du kan även köra testerna i tre olika versioner av Node via Docker och du kör dessa tester via `npm run test-docker`, `npm run test-docker1` samt `npm run test-docker2`. 
+Du kan köra testerna i tre olika versioner av Node via Docker och du kör dessa tester via `npm run test-docker`, `npm run test-docker1` samt `npm run test-docker2`. 
 
 
 
@@ -116,7 +116,7 @@ I din README beskriver du i ett eget stycke om hur realtidsaspekten fungerar i d
 
 Du har valt en icke-SQL baserad databas i din applikation. I din README beskriver du vilken du valde och du reflekterar över hur databasen har fungerat i sammanhanget.
 
-Du gör även en utläggning om hur du tror att traditionella relationsdatabaser hör hemma i dina framtida projekt.
+Du gör även en kortare utvikning om hur du tror att traditionella relationsdatabaser hör hemma i dina framtida projekt.
 
 
 
@@ -136,7 +136,7 @@ Din dokumentation och reflektion i README är bättre än bra, välskriven och t
 
 Du har skapat en egen image som du publicerat på Docker store och återanvänder i projektet. Länka till din image på Docker store. Basen för din image finns i ett GitHub repo som du länkar till.
 
-Du skriver ett eget stycke om detta i din README och reflekterar över för- och nackdelar med detta arbetssätt.
+Du skriver ett eget stycke om detta i din README och reflekterar över för- och nackdelar i att jobba med Docker.
 
 
 
@@ -150,7 +150,7 @@ Följande är ett exempel på en artikel som kan ge 10p.
 
 * "[GraphQL istället för REST API](t/7082)"
 
-I din README gör du ett eget stycke om denna artikel där du kort länkar till artikeln och berättar på en rad om artikelns syfte.
+I din README gör du ett eget stycke om din artikel där du kort länkar till artikeln och berättar på en rad om artikelns syfte.
 
 
 
