@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2017-10-16": "(PA1, mos) Arbete påbörjat."
+    "2017-12-11": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
 ==================================
@@ -27,36 +27,13 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-[WARNING]
-Kursutveckling pågår.
-[/WARNING]
+Du jobbar som teknisk arkitekt och teamledare och du skall nu visa vägen för ditt team till nya tekniker som ni kan komma att använda i ert nästa högprofil projekt som är kritiskt för ert företags överlevnad.
 
-<!--stop-->
+Du har valt att bygga ihop en väl fungerande applikation som påvisar alla de tekniker du tror på.
 
-klient/server applikation
-enhetstester
-ci-kedja
-docker
-realtid
-databas
+När du är klar så är tanken att du presenterar projektet och teknikerna för dina medlemmar i teamet och din applikation fungerar som utbildningsmaterial för ditt team.
 
-olika tekniker (inklusive skriva om dem)
-
-proffsig readme
-
-
-
-Under kursen har du byggt upp en kodbas för ett kommentarshanteringssystem. Nu skall du använda din(a) moduler och kod för att bygga en webbplats som liknar webbplatsen Stack Overflow i sin uppbyggnad.
-
-Du har fått en kund som heter WGTOTW (We Gonna Take Over The World) och kunden har en enorm kassa och är villig att spendera en hel del på dig.
-
-Kunden vill ha en Stack Overflow-kopia och det tänkta fokuset är "Allt om att trimma en moppe". Kunden tror att marknadspotentialen är stor.
-
-PS. Du kan (bör) byta temat från "Att trimma en moppe" till "Allt om att sköta minigrisar", "Allt du vill veta om bubbelbad", "Allt om tv-serien 2 1/2 män", "Allt om filmen XXX", "Allt om snowboard", "Allt om Kalle Anka". Ta vilket ämne du vill, försök att hitta på ett själv, det gör det hela lite roligare.
-
-PS. Du kan ge kunden något den inte beställt men som du anser passa kunden. Du kan själv välja fokus och inrikta din lösning till att lösa ett forum, twitter-kopia, reddit-kopia, Disqus-klon eller någon liknande tjänst som är tungt beroende av ett kommentarssystem. Fråga om du är osäker.
-
-Om du gör ditt eget upplägg kan du behöva formulera egna motsvarande krav för de optionella kraven. Fråga i forumet om du behöver stöd.
+Tänk på att ditt team är kritiska mot nya tekniker, du behöver göra ett gott jobb för att imponera på dem. Annars är risken att de sågar dina nya idéer.
 
 
 
@@ -67,73 +44,113 @@ Utveckla och leverera projektet enligt följande specifikationen. Saknas info i 
 
 De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös optionella kraven för att samla poäng och nå högre betyg.
 
-För allra högsta betyg krävs en allmänt god webbplats. Den skall vara både snygg, tilltalande, lättanvänd och felfri.
+För allra högsta betyg krävs en allmänt god applikation. Den skall vara snygg, tilltalande, lättanvänd, väl dokumenterad och felfri.
 
 Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 
 
-###Krav 1, 2, 3: Grunden {#k1}
-
-Skapa ett nytt repo för projektet, spara i `me/kmom10`.
-
-Webbsidan skall skyddas av inloggning. Det skall gå att skapa en ny användare.
-Användaren skall ha en profil som kan uppdateras. Användarens bild skall vara en gravatar.
-
-Webbplatsen skall ha en förstasida, en sida för frågor, en sida för taggar och en sida för användare. Det skall finnas en About-sida med information om webbplatsen, dess GitHub-repo och dig själv.
-
-En användare kan ställa frågor, eller besvara dem. Alla inlägg som en användare gör kan kopplas till denna. Klickar man på en användare så ser man vilka frågor som användaren ställt och vilka frågor som besvarats.
-
-En fråga kan ha en eller flera taggar kopplade till sig. När man listar en tagg kan man se de frågor som har den taggen. Klicka på en tagg för att komma till de frågor som har taggen kopplat till sig.
-
-En fråga kan ha många svar. Varje fråga och svar kan i sin tur ha kommentarer kopplade till sig. 
-
-Alla frågor, svar och kommentarer skrivs i Markdown.
-
-Förstasidan skall ge en översikt av senaste frågor tillsammans med de mest populära taggarna och de mest aktiva användarna.
-
-Webbplatsen skall finnas på GitHub, tillsammans med en README som beskriver hur man checkar ut och installerar sin egen version.
- 
-Webbplatsen skall finnas i drift med innehåll på studentservern.
-
-Kommandot `make test` skall passera för källkoden.
-
-Repot på GitHub skall vara länkat till en byggtjänst likt Travis/CircleCI och till en tjänst för kodkvalitet likt Scrutinizer/CodeClimate. README-filen på GitHub innehåller motsvarande badges.
+### Krav 1, 2, 3: Grunden {#k1}
 
 
 
-###Krav 4: Frågor (optionell) {#k4}
+#### Repon på GitHub {#r1}
+  
+Skapa ett nytt/flera repo för projektet, eller återanvänd det du redan gjort i kursen, spara resultatet i `me/kmom10`.
 
-Ett svar kan märkas ut som ett accepterat svar.
-
-Varje svar, fråga och kommentar kan röstas på av användare med +1 (up-vote) eller -1 (down-vote), summan av en fråga/svar/kommentars rank är ett betyg på hur "bra" den var.
-
-Svaren på en fråga kan sorteras och visas antingen enligt datum, eller rank (antalet röster).
-
-Översikten av frågorna visar hur många svar en fråga har samt vilken rank. 
+När du är klar, committa, tagga, pusha till GitHub samt gör dbwebb upload till studentservern.
 
 
 
-###Krav 5: Användare (optionell) {#k5}
+#### Applikationen och teknikval {#r2}
 
-Inför ett poängsystem som baseras på användarens aktivitet. Följande kan ge poäng:
+Du bygger en väl fungerande och komplett klient/server-applikation med JavaScript och de ramverk du väljer att använda. Utgångsläget är att använda de tekniker som presenterats i kursen.
 
-* Skriva fråga
-* Skriva svar
-* Skriva kommentar
-* Ranken på skriven fråga, svar, kommentar.
-
-Summera allt och sätt det till användarens rykte.
-
-Visa en översikt på användarens sida om all aktivitet som användaren gjort, dvs frågor, svar, kommentarer, antalet röstningar gjorda samt vilket rykte användaren har.
-
-Du kan efter eget tycke modifiera reglerna för hur användarens rykte beräknas.
+I din README skriver du ett stycke om din kravbild för applikationen. Så att det blir tydligt för läsaren vilka krav/features du inkluderar och exkluderar. Du skriver också vilka bastekniker och ramverk du valt att använda tillsammans med korta argument om dina val samt en kort utvärdering av hur väl du anser verktygen har fungerat i sammanhanget.
 
 
 
-###Krav 6: Valfritt (optionell) {#k6}
+#### Installation {#r7}
 
-Förutsatt att du gjort krav 4 och 5 kan du använda detta krav som ett valfritt krav. Beskriv något som du gjort i uppgiften som du anser vara lite extra utöver det vanliga och berätta hur du löst det. Det kan vara en utseendemässig sak, eller en kodmässig sak. Den bör vara något som du lagt mer än 4-8h på och något som höjer sig lite extra i svårighet eller problemlösning.
+I din README beskriver du kort hur man installerar och startar upp din applikation. Du satsar på att allt går att installera med `npm install` och sedan starta lokalt med `npm start` (eventuellt `npm stop`).
+
+Du visar även hur man startar igång servern i en (samling av) Docker-kontainers via `npm run start-docker` och de kan stoppas med `npm run stop-docker`.
+
+Normalt fungerar en installation utan övriga inställningar. Men dokumentera de möjligheter som eventuellt finns i form av `DBWEBB_PORT`, `DBWEBB_DSN` och liknande.
+
+Var tydlig och kortfattad i din README om hur installationsfasen ser ut.
+
+
+
+#### Enhetstestning {#r3}
+
+Du har god kodtäckning i enhetstesterna, sträva efter 70% där det är rimligt.
+
+I din README skriver du ett stycke om hur du implementerat enhetstesterna och vilka verktyg du använder samt om det är delar av applikationen som inte täcks av testsuiten. Du reflekterar kort över hur dina teknikval fungerat för dig. Du reflekterar också över hur lätt/svårt det är att få kodtäckning på din applikation.
+
+Man kan köra hela din testsuite lokalt via `npm test`.
+
+I README visar du hur man kan se kodtäckningen lokalt i webbläsaren.
+
+Du kan även köra testerna i tre olika versioner av Node via Docker och du kör dessa tester via `npm run test-docker`, `npm run test-docker1` samt `npm run test-docker2`. 
+
+
+
+#### Kedja för Continuous integration {#r4}
+
+Dina repon har en CI-kedja och automatiserade tester med tillhörande badges för byggtjänst, kodtäckning och tjänst för kodkvalitet.
+
+I din README skriver du ett stycke om CI-kedjan, vilka tjänster du valt och varför samt eventuella begränsningar i hur CI-kedjan kan hantera din applikation. Du gör en kort reflektion över din syn på den hjälpen liknande verktyg ger dig.
+
+Berätta om du är nöjd eller inte med de betyg som tjänsten för kodkvalitet ger dig.
+
+
+
+#### Realtid {#r5}
+
+I din README beskriver du i ett eget stycke om hur realtidsaspekten fungerar i din applikation. Du skriver också om vilken teknik/verktyg du valt för din implementation samt en kort reflektion av hur du tycker tekniken fungerar.
+
+
+
+#### Databas {#r6}
+
+Du har valt en icke-SQL baserad databas i din applikation. I din README beskriver du vilken du valde och du reflekterar över hur databasen har fungerat i sammanhanget.
+
+Du gör även en utläggning om hur du tror att traditionella relationsdatabaser hör hemma i dina framtida projekt.
+
+
+
+#### Egen modul på npm {#r8}
+
+Du har gjort en (eller flera) egna moduler som du använder i ditt projekt. Du skriver ett eget stycke i din README om dessa moduler och hur du ser på NPM som paketverktyg. Glöm inte att länka till modulernas sida på npm.
+
+
+
+###Krav 4: README (optionell) {#k4}
+
+Din dokumentation och reflektion i README är bättre än bra, välskriven och tydlig. Ditt utvecklingsteam har sällan sett en så välskriven README.
+
+
+
+###Krav 5: Docker (optionell) {#k5}
+
+Du har skapat en egen image som du publicerat på Docker store och återanvänder i projektet. Länka till din image på Docker store. Basen för din image finns i ett GitHub repo som du länkar till.
+
+Du skriver ett eget stycke om detta i din README och reflekterar över för- och nackdelar med detta arbetssätt.
+
+
+
+###Krav 6: Teknik, arbetssätt, verkyg, ramverk (optionell) {#k6}
+
+Du väljer en eller ett par av de teknikerna/arbetssätten/verktygen/ramverken du använt i ditt projekt och tar på dig rollen som evangelist och försöker aktivt sälja in och argumentera för teknikerna genom att skriva ihop en "A4" i form av ett foruminlägg (eller motsvarande).
+
+Du behöver inte nödvändigtvis vara säljande, du kan vara utbildande och/eller förhålla dig mer nyanserat till teknikerna men samtidigt förklara dess för- och nackdelar i ett sammanhang. Ett balanserat inlägg ger troligen bättre effekt i ditt arbetsteam. Utvecklare kan delvis vara skeptiska om du upplevs alltför insäljande.
+
+Följande är ett exempel på en artikel som kan ge 10p.
+
+* "[GraphQL istället för REST API](t/7082)"
+
+I din README gör du ett eget stycke om denna artikel där du kort länkar till artikeln och berättar på en rad om artikelns syfte.
 
 
 
@@ -142,7 +159,7 @@ Redovisning {#redovisning}
 
 1. På din [redovisningssida](./../redovisa), skriv följande:
 
-    1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+    1. Länka till ditt GitHub repo och berätta om/vilka optionella krav du gjort. Berätta också om du byggde vidare på applikationen från kursmomenten eller om du gjorde nya vägval rörande tekniker och applikation inför projektet.
 
     1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
@@ -150,11 +167,4 @@ Redovisning {#redovisning}
 
 2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida med projektet. 
 
-3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/ramverk1) och berätta att du är klar.
-
-4. Se till att samtliga kursmoment validerar.
-
-```bash
-# Ställ dig i kursrepot
-dbwebb publish me
-```
+3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/ramverk2) och berätta att du är klar.
