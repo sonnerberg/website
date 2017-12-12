@@ -32,12 +32,16 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs följande: ??????????????????????????????
+Läs följande: 
 
-[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 1 - Object-oriented Design
+        - Hiding details and creating the public interface --- Summary
+    * Ch 2 - Objects in Python
+        - Who can access my data?
+        - Case study - Summary
     * Ch 3 - When Objects Are Alike  
     * Ch 4 - Expecting the Unexpected
-    * Ch 5 - When to use Object-oriented Programming
 
 
 
@@ -56,7 +60,8 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.  
+1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 12 - Testing Object-oriented Programs
 
 
 

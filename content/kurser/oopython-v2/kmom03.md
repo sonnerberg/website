@@ -34,7 +34,8 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur {#kurslitteratur}
 
-Det finns inga läsanvisningar.
+1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 5 - When to Use Object-oriented Programming.
 
 
 
@@ -57,6 +58,9 @@ Titta på följande:
 ###Lästips {#lastips}
 
 1. [Jinja2](http://jinja.pocoo.org/) går lite utanför kursramen. Det skadar dock aldrig att kika på.  
+
+1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 7 - Python Object-oriented Shortcuts. 
 
 
 

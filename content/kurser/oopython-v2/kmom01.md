@@ -1,12 +1,8 @@
 ---
 author: lew
 revision:
-    "2017-11-10": (PF1, mos) Utkast till v2.
-    "2017-01-06": (E, mos) Lade till CGI på studentservern.
-    "2016-12-16": (D, lew) Ändrade ännu mer saker.
-    "2016-06-01": (C, lew) Ändrade mer saker.
-    "2016-05-25": (B, aar) Ändrade saker.
-    "2016-04-12": (A, lew) Skapade dokument.
+    "2017-11-10": (PB1, mos) Utkast till v2.
+    "2017-01-06": (A, mos) Lade till CGI på studentservern.
 ...
 Kmom01: Kom igång med objekt och Flask
 ====================================
@@ -57,9 +53,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
     * Ch 1 - Object-oriented Design  
-    * Ch 2 - Objects in Python
+        - Introducing object-oriented --- Specifying attributes and behaviors.
+    * Ch 2 - Objects in Python  
+        - Creating Python classes
 
 
 
@@ -91,6 +89,9 @@ Titta på följande:
 ###Lästips {#lastips}
 
 Om du känner att du har tid och lust.
+
+1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 4 - Expecting the Unexpected. 
 
 1. Bekanta dig med debugger-verktyget [PDB](https://docs.python.org/3.2/library/pdb.html).
 
