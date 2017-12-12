@@ -4,9 +4,8 @@ author:
     - lew
     - mos
 revision:
-    "2017-11-10": (PC1, mos) Utkast till v2.
-    "2016-11-28": (B, mos) Text till kursplanen.
-    "2016-04-12": (A, lew) Första versionen.
+    "2017-12-11": (PA2, mos) Påbyggnad utkasst till V2.
+    "2017-11-10": (PA1, mos) Utkast till v2.
 ...
 Kursen oopython (v2)
 ===================================================
@@ -89,25 +88,27 @@ Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa e
 
 
 
-###Kmom02: UML och unittest {#kmom02}
+###Kmom02:klassrelationer {#kmom02}
 
-Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi lite på UML diagram och unittest. Några verktyg som är bra att känna till i en produktionsmiljö.
+Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi klassrelationer.
 
 [Instruktion till kursmoment 02](kurser/oopython/kmom02).
 
 
 
-###Kmom03: Autogenerering av UML och dokumentation {#kmom03}
+###Kmom03: UML {#kmom03}
 
-I Python finns det verktyg och moduler för att autogenerera UML-diagram och dokumentation. Vi ska titta närmare på dem, samtidigt som vi jobbar vidare med me-sidan i Flask.
+Vi lär oss om UML diagram.
+
 
 [Instruktion till kursmoment 03](kurser/oopython/kmom03).
 
 
 
-###Kmom04: Regex och databaser {#kmom04}
+###Kmom04: Sorteringsalgoritmer och datastrukturer {#kmom04}
 
-[Regex, regexp eller reguljära uttryck](https://sv.wikipedia.org/wiki/Regulj%C3%A4ra_uttryck) används för att hantera strängmatchning på olika sätt. Vi ska även utöka me-sidan med en databas.
+TBA.
+<!-- [Regex, regexp eller reguljära uttryck](https://sv.wikipedia.org/wiki/Regulj%C3%A4ra_uttryck) används för att hantera strängmatchning på olika sätt. Vi ska även utöka me-sidan med en databas. -->
 
 [Instruktion till kursmoment 04](kurser/oopython/kmom04).
 
@@ -121,9 +122,9 @@ Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika
 
 
 
-###Kmom06: Bokningssystem {#kmom06}
+###Kmom06: Sorteringsalgoritmer och datastrukturer {#kmom06}
 
-Det här är ett praktiskt kursmoment. Vi ska ska öva på att arbeta med flera klasser samtidigt och interagera mellan dem.
+TBA.
 
 [Instruktion till kursmoment 06](kurser/oopython/kmom06).
 
@@ -174,8 +175,8 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kursmoment | Python 3 Object-oriented Programming |
 |------------|--------------------------------------|
 | Kmom01     | Ch 1, 2                              |
-| Kmom02     | Ch 3, 5, 12                          |
-| Kmom03     |                                      |
+| Kmom02     | Ch 1, 2, 3, 4                        |
+| Kmom03     | Ch 3                                 |
 | Kmom04     | Ch 8 - Regular Expressions           |
 | Kmom05     | Ch 7 - Queues                        |
 | Kmom06     | Ch 6                                 |
