@@ -3,6 +3,7 @@ title: exjobb
 author:
     - mos
 revision:
+    "2017-12-12": "(E, mos) Enskilt eller 2 och 2. Aktiv i sökande efter kund."
     "2017-11-24": "(D, mos) Stycke om arbetsgången, ladok, studieplan och plagiering."
     "2017-10-05": "(C, mos) Stycke om kursmaterial."
     "2017-09-21": "(B, mos) Stycke om kurslitteratur."
@@ -11,8 +12,15 @@ revision:
 Kursen exjobb
 ==================================
 
-Kursen **Självständigt arbete i Webbprogrammering**, a.k.a. *exjobb*, syftet med examensarbetet är att studenten integrerar, fördjupar och vidareutvecklar sina kunskaper och färdigheter inom ett begränsat område av det som behandlats inom tidigare genomförda kurser inom programmet. Betoningen i examensarbetet ligger på det tekniska innehållet. Arbetet kan vara av utredande eller konstruktiv karaktär. Resultatet från examensarbetet är en rapport där studenten som visar kunskaper, förståelse, förmågor och förhållningssätt som krävs av en högskoleingenjör. Examensarbetet genomförs företrädesvis i samarbete med ett företag.
+Kursen **Självständigt arbete i Webbprogrammering**, a.k.a. *exjobb*, syftet med examensarbetet är att studenten integrerar, fördjupar och vidareutvecklar sina kunskaper och färdigheter inom ett begränsat område av det som behandlats inom tidigare genomförda kurser inom programmet.
 
+Betoningen i examensarbetet ligger på det tekniska innehållet. Arbetet kan vara av utredande eller konstruktiv karaktär.
+
+Resultatet från examensarbetet är en rapport där studenten som visar kunskaper, förståelse, förmågor och förhållningssätt som krävs av en högskoleingenjör. 
+
+Examensarbetet genomförs företrädesvis i samarbete med ett företag.
+
+Studenten utför arbetet individuellt, eller i grupp om två.
 
 <!--more-->
 
@@ -76,15 +84,14 @@ Arbetsgång {#arbete}
 Följande är stegen i kursen, grovt sett. Introduktionsföreläsningen ger detaljer om de olika stegen.
 
 
-n del av uppgiften: Att själv hitta företaget och själv vara den aktiva i formulerandet.
 
 ### Kund och input till arbetet {#input}
 
 Studenten söker upp och etablerar kontakt med en kund som har ett problem och är villig att låta studenten lösa problemet inom ramen för exjobbet.
 
-Kunden skriver ihop en enkel A4 om problemställningen de har. Om studenten är pådrivande så kan studenten och kunden gemensamt skapa dokumentet om problemställningen. Ytterst är det kunden som är ansvarig för att inputen är relevant för arbetet.
+Kunden skriver ihop en enkel A4 om problemställningen de har. Om studenten är pådrivande så kan studenten och kunden gemensamt skapa dokumentet om problemställningen. Ytterst är det kunden som är ansvarig/samtycker för att inputen är relevant för arbetet.
 
-Detta arbete sker förslagsvis innan julen, inför och innan kursen officiellt har startat. Se det som en del i kursen att vara aktiv och själv söka upp företag och tillsammans med kunden aktivt medverka i formulering av topic.
+Detta arbete sker förslagsvis innan julen, inför och innan kursen officiellt har startat. Se det som en del i kursen att vara aktiv och själv söka upp företag och tillsammans med kunden aktivt medverka i formulering av input till arbetet.
 
 
 
