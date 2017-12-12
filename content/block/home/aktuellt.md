@@ -2,16 +2,18 @@
 
 [FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
+* [GrillCon 2018 Vår](t/7110)
 * [Förkunskaper och förkunskapskontroll (inför VT18)](t/7086)
+* [Förkunskapskontroll våren 2018 för kurspaket](t/7103)
 * [Om 3-veckors uppropet lp2](t/7062)
-* [Uppsamlingsheat rättningar nov 30](t/7061)
+* [ppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
 * [Omregistrering och restinlämningar under hösten](kurser/faq/omregistrering)
 
 Sista programmeringsstugan är torsdagen den 14:e december.
 
 Redovisningsveckan är 8-14 januari.
 
-Vårterminen startar den måndagen den 15:e januari.
+Vårterminen startar måndagen den 15:e januari.
 
 <!--
 [FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
