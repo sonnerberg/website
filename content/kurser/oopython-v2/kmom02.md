@@ -13,7 +13,7 @@ Kmom02: Arv och andra klassrelationer
 
 [FIGURE src=/image/oopython/kmom02/kmom02-class-relations.png class="right"]
 
-Kom igång med _arv_ och andra klassrelationer. Vi ska titta närmare på klassrelationer och hur de implementeras. Vi tar även ett steg till med Flaskapplikationen och ser hur vi hanterar fomulär med _GET_ och _POST_.
+Kom igång med _arv_ och andra klassrelationer. Vi ska titta närmare på klassrelationer och hur de kan implementeras. Vi tar även ett steg till med Flaskapplikationen och ser hur vi hanterar fomulär med _GET_ och _POST_.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs följande: 
+Läs följande:
 
 1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
     * Ch 1 - Object-oriented Design
@@ -55,7 +55,7 @@ Det finns inga extra artiklar.
 
 Titta på följande:  
 
-
+1. Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika igenom videorna som börjar med 2.
 
 
 ###Lästips {#lastips}
@@ -115,10 +115,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du bekant med UML sedan tidigare?  
-* Är du bekant med unittester sedan tidigare?
-* Vad gjorde du för uppdatering på me-sidan?
-* Kan du se nyttan med UML och tester inom ramen för ett projekt?
+* Är du bekant med objektorientering sedan tidigare?  
+* Kan du ge exempel på något användningsområde där objektorientering och arv hade passat bra?
+* Är du bekant med metoderna GET och POST sedan tidigare?
+* Hur tyckte du det gick med formulärhantering i Flask?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Gjorde du extrauppgiften?
+* Gjorde du extrauppgiften i "[Skapa former](uppgift/skapa-former)"?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
