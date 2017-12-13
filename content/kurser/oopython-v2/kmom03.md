@@ -8,13 +8,18 @@ category:
 Kmom03: UML och unittest
 ====================================
 
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
+
+[FIGURE src=/image/oopython/kmom02/kmom02_top.jpg class="right"]
+
 Kom igång med _UML_ och _unittest_. Det är kraftfulla verktyg som används i "riktig" produktionsmiljö. UML kan användas för att beskriva klassernas relation och unittester (enhetstester) används för att testa delar av koden såsom funktioner och metoder.  
 
 Du kommer även skapa klasser utifrån ett färdigt UML-diagram och skriva unittester på dem.
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom02/kmom02_top.jpg?w=w2 caption="UML logotyp."]
 
 <!-- Flytta nedan text till eget dokument/vy/block -->
 

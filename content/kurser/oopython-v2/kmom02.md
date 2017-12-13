@@ -15,12 +15,14 @@ Kmom02: Arv och andra klassrelationer
 
 Kom igång med _arv_ och andra klassrelationer. Vi ska titta närmare på klassrelationer och hur de kan implementeras. Vi tar även ett steg till med Flaskapplikationen och ser hur vi hanterar fomulär med _GET_ och _POST_.
 
+Vi ska skapa en basklass och subklasser som får sin data från ett formulär och sedan ritas ut i Flaskapplikationen.
+
 <!--more-->
 
 
+<!-- Flytta nedan text till eget dokument/vy/block -->
 
-
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
 
 
