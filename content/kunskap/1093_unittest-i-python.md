@@ -108,7 +108,7 @@ Vi använder metoden _assertEqual_ för att jämföra om två värden är lika. 
 
 Om vi nu kör testet får vi utskriften:
 
-```bash
+```text
 .
 ----------------------------------------------------
 Ran 1 test in 0.000s
@@ -134,7 +134,7 @@ Med flaggan `-v` ser vi att vi får en tydligare utskrift, där testerna skrivs 
 
 Nu är det dags att titta på hur vi skriver några enhetstester för vår klass, _Phone_. Klassen ligger i filen `phone.py`.
 
-Vi öppnar `test.py` och kikar några delar av koden. Om du undrar varför testerna är döpta med en versal (A-L) så är anledningen att testerna exekveras i bokstavsordning och man vill ha kontroll på när exekveringen ska ske. Med hjälp av _doc-strings_ får vi som sagt bättre utskrifter:
+Vi öppnar `test.py` och kikar några delar av koden. Om du undrar varför testerna är döpta med en bokstäverna a-l så är anledningen att testerna exekveras i bokstavsordning och man vill ha kontroll på när exekveringen ska ske. Med hjälp av _doc-strings_ får vi som sagt bättre utskrifter:
 
 ```python
 #!/usr/bin/env python3
@@ -152,46 +152,46 @@ class Testcase(unittest.TestCase):
     phone_two = Phone("Apple", "iPhone 8", "iOS")
 
     # Tests if the objects are the same
-    def test_A_equal_objects(self):
+    def test_a_equal_objects(self):
         """ Should return True, they are not the same """
         self.assertIsNot(self.phone, self.phone_two)
 
     # Tests if the objects are instances of Person
-    def test_B_are_object_instance_of(self):
+    def test_b_are_object_instance_of(self):
         """ Should return True, is is instance of Phone """
         self.assertIsInstance(self.phone, Phone)
 
     # Tests if owner returns correct when none is set
-    def test_C_no_owner(self):
+    def test_c_no_owner(self):
         """Should return 'No owner yet' if correct"""
         self.assertEqual(self.phone.get_owner(), "No owner yet")
 
-    ########## Omitted test D-G ##########
+    ########## Omitted test d-g ##########
 
     # Test if phonebook is empty
-    def test_H_empty_phonebook(self):
+    def test_h_empty_phonebook(self):
         """Should return False if phonebook is empty"""
         self.assertFalse(self.phone.has_contacts())
 
     # Test if phonebook is not empty
-    def test_I_not_empty_phonebook(self):
+    def test_i_not_empty_phonebook(self):
         """Should return True if phonebook has contacts"""
         self.phone.add_contact("Andreas", 12345)
         self.phone.add_contact("Emil", 67890)
         self.assertTrue(self.phone.has_contacts())
 
     # Test phonebook length
-    def test_J_phonebook_length(self):
+    def test_j_phonebook_length(self):
         """Should return the number 2"""
         self.assertEqual(self.phone.get_contacts_length(), 2)
 
     # Test get contact that not exists
-    def test_K_faulty_contact(self):
+    def test_k_faulty_contact(self):
         """Should return None"""
         self.assertIsNone(self.phone.get_contact("Kenneth"))
 
     # Test get contact that exists
-    def test_L_get_contact(self):
+    def test_l_get_contact(self):
         """Should return tuple with contact name and number"""
         self.assertEqual(self.phone.get_contact("Andreas"), ("Andreas", 12345))
 
@@ -201,37 +201,37 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Ett exempel på varför metoderna är skrivna med A-L kan vi se i testet `test_L_get_contact`. Om testerna inte styrdes med A-L hade testet inte exekverats i rätt läge. Personerna läggs till i `test_I_not_empty_phonebook`, vilken kommer efter `test_L_get_contact` (om vi tar bort versalen) och personen hade då inte funnits i testet. Detta går såklart att motverka på fler sätt, till exempel med att skapa utgångsläget i varje deltest, eller lägga till personerna överst, efter instansieringen. Välj själv väg och ha i åtanke vad det är du vill testa och vilket sätt som hade fungerat bäst.
+Ett exempel på varför metoderna är skrivna med a-l kan vi se i testet `test_l_get_contact`. Om testerna inte styrdes med bokstäverna hade testet inte exekverats i rätt läge. Personerna läggs till i `test_i_not_empty_phonebook`, vilken kommer efter `test_l_get_contact` (om vi tar bort bokstaven) och personen hade då inte funnits i testet. Detta går såklart att motverka på fler sätt, till exempel med att skapa utgångsläget i varje deltest, eller lägga till personerna överst, efter instansieringen. Välj själv väg och ha i åtanke vad det är du vill testa och vilket sätt som hade fungerat bäst.
 
 Kör vi alla test i testfilen får vi resultatet:
 
-```bash
+```text
 >>> python3 test.py -v
 
-test_A_equal_objects (__main__.Testcase)
+test_a_equal_objects (__main__.Testcase)
 Should return True, they are not the same ... ok
-test_B_are_object_instance_of (__main__.Testcase)
+test_b_are_object_instance_of (__main__.Testcase)
 Should return True, is is instance of Phone ... ok
-test_C_no_owner (__main__.Testcase)
+test_c_no_owner (__main__.Testcase)
 
 Should return 'No owner yet' if correct ... ok
-test_D_set_owner (__main__.Testcase)
+test_d_set_owner (__main__.Testcase)
 Should return 'Pelle' if correct ... ok
-test_E_prop_manufacturer (__main__.Testcase)
+test_e_prop_manufacturer (__main__.Testcase)
 Should return 'Samsung' if correct ... ok
-test_F_prop_model (__main__.Testcase)
+test_f_prop_model (__main__.Testcase)
 Should return 'S8' if correct ... ok
-test_G_prop_os (__main__.Testcase)
+test_g_prop_os (__main__.Testcase)
 Should return 'Android' if correct ... ok
-test_H_empty_phonebook (__main__.Testcase)
+test_h_empty_phonebook (__main__.Testcase)
 Should return False if phonebook is empty ... ok
-test_I_not_empty_phonebook (__main__.Testcase)
+test_i_not_empty_phonebook (__main__.Testcase)
 Should return True if phonebook has contacts ... ok
-test_J_phonebook_length (__main__.Testcase)
+test_j_phonebook_length (__main__.Testcase)
 Should return the number 2 ... ok
-test_K_faulty_contact (__main__.Testcase)
+test_k_faulty_contact (__main__.Testcase)
 Should return None ... ok
-test_L_get_contact (__main__.Testcase)
+test_l_get_contact (__main__.Testcase)
 Should return tuple with contact name and number ... ok
 
 ----------------------------------------------------------------------
