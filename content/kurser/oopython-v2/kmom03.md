@@ -139,7 +139,8 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du bekant med UML sedan tidigare?  
 * Är du bekant med unittester sedan tidigare?
 * Kan du se nyttan med UML och tester inom ramen för ett projekt?
-* Vad tycker du om objektorienterad programmering än så länge? Är det förståelig?
+* Vad tycker du om objektorienterad programmering än så länge?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
+* Vilka metoder överlagrade du i uppgiften "Kortpelet War"?
 <!-- * Gjorde du extrauppgiften? -->
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
