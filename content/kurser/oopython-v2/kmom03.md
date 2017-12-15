@@ -120,7 +120,7 @@ dbwebb publish flask
 
 ###Extra {#extra}
 
-Det finns ingen extrauppgiften.
+Det finns ingen extrauppgift.
 <!-- 1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)". -->
 
 
