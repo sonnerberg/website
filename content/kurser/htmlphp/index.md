@@ -11,11 +11,9 @@ revision:
 Kursen "htmlphp"
 ==================================
 
-Kursen **Webbteknologier**, a.k.a. *htmlphp*, lär dig hur du bygger webbplatser med HTML, CSS, PHP och databaser.
+Kursen **Webbteknologier**, a.k.a. *htmlphp*, lär ut webbutveckling där teknikerna  HTML, CSS, PHP och SQL används för att tillsammans bygga en databasdriven webbplats.
 
 <!--more-->
-
-Kursen lär ut webbutveckling där teknikerna HTML, CSS, PHP och SQL används för att tillsammans bygga en databasdriven webbplats.
 
 HTML och CSS ger grundförutsättningarna för hur en webbapplikation kan byggas. Genom att använda server-side skriptprogrammering med PHP så kan webbapplikationen bli mer dynamisk och lagra information i databaser. Dessutom kan webbapplikationen byggas upp med en programmeringsmässig struktur, en struktur som underlättar utveckling och underhåll av webbplatsen.
 

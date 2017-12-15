@@ -19,10 +19,10 @@ På studentservern kan du köra CGI-skript på detta sättet. Så här gör du f
 
 
 
-En Flaskapplikation {#flask}
+En Flask-applikation {#flask}
 -----------------------------------
 
-Du har en Flaskapplikation som är sparad i `app.py`. Den kan se ut så här, enklast möjliga inklusive två användbara felhanterare som gör felsökningen lättare.
+Du har en Flask-applikation som är sparad i `app.py`. Den kan se ut så här, enklast möjliga inklusive två användbara felhanterare som gör felsökningen lättare.
 
 ```python
 #!/usr/bin/env python3

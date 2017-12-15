@@ -66,7 +66,7 @@ Krav {#krav}
 
 1. Infoga en landningssida av din applikation i din redovisa-sida. Beskriv vad applikationen går ut på, vilka tekniker som används och vilka delar/repon applikationen består av. Länka till relevanta repon.
 
-1. Committa, tagga och pusha relevanta repon samt ladda upp på studentservern.
+1. Committa, tagga (v1.0.0) och pusha relevanta repon samt ladda upp på studentservern.
 
 
 
