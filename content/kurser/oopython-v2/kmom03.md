@@ -107,6 +107,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 
+1. Gör uppgiften "[Kortspelet War](uppgift/kortspelet-war)". Utför uppgiften i mappen `war`.  
+
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
