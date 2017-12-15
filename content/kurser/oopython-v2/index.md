@@ -96,9 +96,9 @@ Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi klassrelationer.
 
 
 
-###Kmom03: UML {#kmom03}
+###Kmom03: UML och enhetstester {#kmom03}
 
-Vi lär oss om UML diagram.
+Vi lär oss om UML diagram och enhetstester.
 
 
 [Instruktion till kursmoment 03](kurser/oopython-v2/kmom03).

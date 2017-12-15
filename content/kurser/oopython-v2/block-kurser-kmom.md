@@ -2,7 +2,7 @@
 
 * [01: Kom igång med objekt...](kurser/oopython-v2/kmom01)
 * [02: Klassrelationer](kurser/oopython-v2/kmom02)
-* [03: UML](kurser/oopython-v2/kmom03)
+* [03: UML och enhetstester](kurser/oopython-v2/kmom03)
 * [04: Sorteringsalgoritmer](kurser/oopython-v2/kmom04)
 * [05: Sorteringsalgoritmer...](kurser/oopython-v2/kmom05)
 * [06: Sorteringsalgoritmer](kurser/oopython-v2/kmom06)

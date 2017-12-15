@@ -31,7 +31,7 @@ Förutsättning {#pre}
 -------------------------------
 
 Du kan grunderna i objektorienterad programmering, arv, komposition och aggregation.  
-Du hittar exempel kod för de olika UML diagrammen i [example/uml/klass_diagram](https://github.com/dbwebb-se/oopython/tree/master/example/uml/klass_diagram)
+Du hittar exempel kod för de olika UML diagrammen i [example/uml/klass_diagram](https://github.com/dbwebb-se/oopython/tree/master/example/uml)
 
 
 

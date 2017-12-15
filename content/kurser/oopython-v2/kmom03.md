@@ -101,17 +101,14 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med mer Objekt och klasser](uppgift/python-med-mer-objekt-och-klasser)" (lab 2)
+1. Gör uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)"
 
-2. Gör uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)"
+1. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".  
 
-3. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".  
+1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 
-4. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 
-5. Uppdatera din me-sida till version 2 i me/flask. Fördjupa dig i Bootstrap och Flask. Gör uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext.  
-
-6. Fyll på redovisning.html med kursmomentets redovisningstext.
+1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -123,7 +120,8 @@ dbwebb publish flask
 
 ###Extra {#extra}
 
-1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)".
+Det finns ingen extrauppgiften.
+<!-- 1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)". -->
 
 
 
@@ -138,8 +136,8 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Är du bekant med UML sedan tidigare?  
 * Är du bekant med unittester sedan tidigare?
-* Vad gjorde du för uppdatering på me-sidan?
 * Kan du se nyttan med UML och tester inom ramen för ett projekt?
+* Vad tycker du om objektorienterad programmering än så länge? Är det förståelig?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Gjorde du extrauppgiften?
+<!-- * Gjorde du extrauppgiften? -->
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
