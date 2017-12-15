@@ -49,7 +49,11 @@ Läs följande:
 
 ###Artiklar {#artiklar}
 
-Det finns inga extra artiklar.
+1. [Klass relationer](https://atomicobject.com/resources/oo-programming/oo-class-relationships)
+
+1. [Aggregation](https://atomicobject.com/resources/oo-programming/object-oriented-aggregation)
+
+1. [Arv](https://atomicobject.com/resources/oo-programming/object-oriented-interitance.)
 
 
 
@@ -62,8 +66,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
-    * Ch 12 - Testing Object-oriented Programs
+1. [Objektorienterad programmering och klass relationer](https://python-textbok.readthedocs.io/en/1.0/Object_Oriented_Programming.html)
 
 
 
@@ -117,8 +120,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du bekant med objektorientering sedan tidigare?  
 * Kan du ge exempel på något användningsområde där objektorientering och arv hade passat bra?
+* Förstod du de olika relationerna och skillnaden på dem?
 * Är du bekant med metoderna GET och POST sedan tidigare?
 * Hur tyckte du det gick med formulärhantering i Flask?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?

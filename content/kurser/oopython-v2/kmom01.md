@@ -67,9 +67,20 @@ Läs följande:
 
 1. Fräscha upp minnet med [dokumentationen som finns på Pythons webbplats](https://www.python.org/doc/). Kika runt lite och orientera dig.
 
-2. Se översikten av dokumentationen för [Python 3.x Doc](https://docs.python.org/3/).
+1. Se översikten av dokumentationen för [Python 3.x Doc](https://docs.python.org/3/).
 
-3. Titta på [Flasks hemsida](http://flask.pocoo.org/). Där hittar du även installationsanvisningar och exempel.
+1. Titta på [Flasks hemsida](http://flask.pocoo.org/). Där hittar du även installationsanvisningar och exempel.
+
+Följande artiklar är korta och bra att läsa:  
+1. [Motivation for obejct-oriented](https://atomicobject.com/resources/oo-programming/introduction-motivation-for-oo).
+
+1. [The object-oriented paradigm](https://atomicobject.com/resources/oo-programming/the-oo-paradigm).
+
+1. [Naming conventions](https://atomicobject.com/resources/oo-programming/naming-conventions).
+
+1. [Messaging](https://atomicobject.com/resources/oo-programming/messaging).
+
+1. [Abstraction and identity](https://atomicobject.com/resources/oo-programming/abstraction-and-identity).
 
 
 

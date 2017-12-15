@@ -84,7 +84,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa en webbsida med routes i ramverket Flask.
 
-[Instruktion till kursmoment 01](kurser/oopython/kmom01).
+[Instruktion till kursmoment 01](kurser/oopython-v2/kmom01).
 
 
 
@@ -92,7 +92,7 @@ Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa e
 
 Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi klassrelationer.
 
-[Instruktion till kursmoment 02](kurser/oopython/kmom02).
+[Instruktion till kursmoment 02](kurser/oopython-v2/kmom02).
 
 
 
@@ -101,7 +101,7 @@ Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi klassrelationer.
 Vi lär oss om UML diagram.
 
 
-[Instruktion till kursmoment 03](kurser/oopython/kmom03).
+[Instruktion till kursmoment 03](kurser/oopython-v2/kmom03).
 
 
 
@@ -110,7 +110,7 @@ Vi lär oss om UML diagram.
 TBA.
 <!-- [Regex, regexp eller reguljära uttryck](https://sv.wikipedia.org/wiki/Regulj%C3%A4ra_uttryck) används för att hantera strängmatchning på olika sätt. Vi ska även utöka me-sidan med en databas. -->
 
-[Instruktion till kursmoment 04](kurser/oopython/kmom04).
+[Instruktion till kursmoment 04](kurser/oopython-v2/kmom04).
 
 
 
@@ -118,7 +118,7 @@ TBA.
 
 Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem samt titta närmare på datastrukturer och rekursion.
 
-[Instruktion till kursmoment 05](kurser/oopython/kmom05).
+[Instruktion till kursmoment 05](kurser/oopython-v2/kmom05).
 
 
 
@@ -126,7 +126,7 @@ Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika
 
 TBA.
 
-[Instruktion till kursmoment 06](kurser/oopython/kmom06).
+[Instruktion till kursmoment 06](kurser/oopython-v2/kmom06).
 
 
 
@@ -134,7 +134,7 @@ TBA.
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](kurser/oopython/kmom10).
+[Instruktion till kursmoment 10](kurser/oopython-v2/kmom10).
 
 
 

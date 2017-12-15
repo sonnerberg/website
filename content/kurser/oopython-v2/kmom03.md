@@ -49,7 +49,11 @@ Läs följande:
 
 1. [The art of unit testing](http://artofunittesting.com/definition-of-a-unit-test/)  
 
-2. [UML basics på IBM](http://www.ibm.com/developerworks/rational/library/769.html)  
+1. [UML notation](https://atomicobject.com/resources/oo-programming/uml-notation)
+
+1. [Visualizing program execution](https://atomicobject.com/resources/oo-programming/visualizing-program-execution)
+
+1. [UML basics på IBM](http://www.ibm.com/developerworks/rational/library/769.html)  
 
 
 
@@ -67,7 +71,12 @@ Titta på följande video:
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.  
+1. [UML class relationships](http://creately.com/blog/diagrams/class-diagram-relationships/)
+
+1. [OO development process](https://atomicobject.com/resources/oo-programming/oo-development-process)
+
+1. [CRC cards](https://atomicobject.com/resources/oo-programming/crc-cards)
+
 
 
 
