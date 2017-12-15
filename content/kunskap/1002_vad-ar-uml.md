@@ -189,30 +189,65 @@ Med sekvens diagram kan vi visa vilka klasser som finns/behövs i ett system och
 Om vi tittar på bilden ovanför, sekvens diagrammet med restaurangen. Den visar vilka människor(klasser/objekt) som behövs och hur de kommunicerar för att en kund ska kunna äta mat hos dem.
 
 
+####Lifeline {#lifeline}
+
 [FIGURE src=/image/oopython/kmom02/diagrams/lifeLines.png caption="Actor lifeline och Objekt lifeline"]
 
-Här ser vi två stycken **lifelines** en som representerar en Actor och en som representerar ett anonymt objekt av klassen Object.
-Objekt lifelines består av en rektangel i toppen som innehåller klassens namn, med ":" framför, och en vertikal linje, linjen representerar objektets livstid.  
+Ovanför ser vi två stycken **lifelines** en som representerar en Actor och en som representerar ett anonymt objekt av klassen Object. En Actor är en användare till systemet, någon som startar ett händelseförlopp.  
+Objekt lifelines består av en rektangel i toppen som innehåller klassens namn, med ":" framför, och en vertikal linje. Linjen representerar objektets livstid.  
 För att specificera vilken instans av en klass som ska användas lägger man till instansens namn framför ":", t.ex. "Andreas:Person". Det visar att objektet Andreas, som är en instans av klassen Person, ska användas specifikt.
+
+
+####Funktionsanrop {#funktionsanrop}
 
 [FIGURE src=/image/oopython/kmom02/diagrams/syncCall.png caption="Ett funktionsanrop"]
 
-Så här ser ett funktionsanrop ut. Den svarta ifyllda pilen motsvarar ett synkront funktionsanrop, t.ex. en klass X anropar klass Y's funktion doA, som startat exekveringen av funktionen doA hos klass Y.
+Så här ser ett **funktionsanrop** ut. Den svarta ifyllda pilen motsvarar ett synkront funktionsanrop, t.ex. en klass X anropar klass Y's metod doA, som startat exekveringen av metoden doA hos klass Y.
 Tiden det tar för Y att exekvera doA representeras av den vertikala stången. När doA är klar returnerar den ett resultat tillbaka till X, det representeras med den streckade pilen.
 
-[FIGURE src=/image/oopython/kmom02/diagrams/bookRegisterSeq.png]
 
-Ett simpelt sekvens diagram för att registrera en bok. Klassen Handler anropar BookRegister's funktion registerBook(), som tar ett ISBN nummer som argument. Funktionen exekveras och returnerar true
+Nedanför visas kod, för att registrera en bok på ett bibliotek, och sen hur det ser ut som ett sekvens diagram.
+
+```python
+class Library:
+    def __init__(self):
+        self.book_register = BookRegister()
+
+    def register_book(self, isbn):
+        self.book_register.register_book(isbn)
+
+class BookRegister:
+    def __init__(self):
+        self.books = []
+
+    def register_book(self, isbn):
+        return self.books.append(isbn)
+```
+
+[FIGURE src=/image/oopython/kmom02/diagrams/bookRegisterSeq.png caption="Sekvens diagram av bok registrering"]
+
+Vi har en systemanvändare, Librarian, som lägger till en ny bok i bibliotekets system. Librarian gör något i GUI:et så att metoden register_book() anropas i klassen Library som i sin tur anropar BookRegister's metod register_book(). register_book() tar ett ISBN nummer som argument, lägger till boken i systemet och returnerar en boolean, om den lyckas eller inte.
+
+
+####Loop {#loop}
+
 
 [FIGURE src=/image/oopython/kmom02/diagrams/loopImg.png caption="Sekvens diagram med loop"]
 
-Bilden ovan visar en kassörska som använder affärens sälj-system för att behandla en ny kund. Hon börjar med att starta en ny transaktion. Hon registrerar alla produkter som kunde ska köpa, detta sker i **loop**.
-För varje produkt kunden vill köpa kommer kassörskan slå in produkten och systemet kommer returnera summan av vad kunden har handlat än så länge. När alla produkter är inslagna i systemet slår kassörskan in betalningen och sista avslutar hon transaktionen.  
+Diagrammet ovan visar händesleförloppet när en kassörska använder ett sälj-system för att behandla en ny kund.  
+Actor:n **Cashier** gör något med systemet så att metoden start_new_sale() anropas i **System**. Där i skapar ett nytt objekt av klassen **Sale** och tilldelas till attributet `curretn_sale`, vi kan se det överst i lifeline rutan för klassen, `current_sale:Sale`.  
+Sen sker en **loop** för varje item (produkt) Cashier slår in i systemet. Varje item läggs till i current_sale och total summan för current_sale, upp till den tidpunkten, returneras till System och den returnerar vidare till Cashier (skriver ut på någon display). När loopen är klar anropar Cashier make_payment(amount). I make_payment anropas metoden end_sale() i System, ett självanrop, som i sin tur anropas set_paid() i Sale. make_payment() returnerar success, vi utgår ifrån att hela summan har betalats. I nästa del lägger vi till en if-sats som kollar om hela summan inte betalas.
+
 Det som händer inuti **loop** rutan kommer upprepas X antal gånger. Om man vill specificera att det ska upprepas t.ex. 10 gånger ersätter man "loop" uppe i vänstra hörnet med "loop(10)".
+
+####Alt {#alt}
+
 
 [FIGURE src=/image/oopython/kmom02/diagrams/if_self_img_seq.png caption="Sekvens diagram med if-sats"]
 
-Vi har lagt till en if-sats som kollar att kunden har tillräckligt med pengar för att köpa alla produkter. Om det var tillräckligt med pengar avlsutas transaktionen som den ska annars avbryts transaktionen och alla produkter återlämnas.
+Vi har lagt till en if-sats som kollar att kunden har tillräckligt med pengar för att köpa alla produkter. Översta delen av diagrammet är oförändrad. I make_payment() i System har vi lagt till en if-sats som kollar om `amount==totalSum`. Om det är sant sker händelserna som finns i den övre halvan av "alt"-rutan, annars sker det som finns i den nedre halvan. Om det var sant sker saker som i förra diagrammet och success returneras. Om det var falskt avbryts köpet med metoden cancel_sale() och fail returneras.
+
+Om vi hade haft en if-elseif-else sats, t.ex. att amount är med än totalSum, hade vi bara lagt till en tredje ruta i "alt" mellan de två vi har. I den nya rutan visar vi flödet för det fallet och lägger till `[amount > totalSum]` överst för visa vilket villkor den gäller.
 
 
 
