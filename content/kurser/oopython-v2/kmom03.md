@@ -89,7 +89,7 @@ Titta på följande video:
 
 ###Övningar {#ovningar}
 
-Genomför följande övning för att träna dig.
+Genomför följande övningar för att träna dig.
 
 1. Läs igenom artikeln om UML-diagram "[Vad är UML?](kunskap/vad-ar-uml)".
 
@@ -103,7 +103,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)"
 
-1. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".  
+<!-- 1. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".   -->
 
 1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 

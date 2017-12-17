@@ -45,16 +45,18 @@ $ cd me/kmom03/war
 
 1. Spelet ska startas med kommandot `python3 main.py`.
 
-1. Spelet ska använda klasserna `Deck`, `Hand` och `Card`. `Hand` ska ärva från `Deck` som ska bestå av 52 stycken `Card` (se bild ovan).
+1. Spelet ska använda klasserna `Deck`, `Hand` och `Card`. `Hand` ska ärva från `Deck` som ska bestå av 52 stycken `Card`.
 
 1. Spelfunktionaliteten ska hanteras via klassen `War`.
 
-1. Skapa en fil, `test.py`, som ska bestå av enhetstester för klassen `Hand`. Alla medlemsvariabler och metoder ska testas.
+1. Skapa en fil, `test.py`, som ska bestå av enhetstester för klassen `Hand`. Alla medlemsvariabler och metoder ska testas. Spara den i mappen `war`.
+
+1. Skapa ett uml diagram över klasserna. Döp filen till `uml.png` och spara den i mappen `war`.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate war
-dbwebb publish war
+$ dbwebb validate war
+$ dbwebb publish war
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
