@@ -3,6 +3,7 @@ title: exjobb
 author:
     - mos
 revision:
+    "2017-12-18": "(F, mos) In roller, bort nästan-dbwebb-kurs."
     "2017-12-12": "(E, mos) Enskilt eller 2 och 2. Aktiv i sökande efter kund."
     "2017-11-24": "(D, mos) Stycke om arbetsgången, ladok, studieplan och plagiering."
     "2017-10-05": "(C, mos) Stycke om kursmaterial."
@@ -75,6 +76,21 @@ Det finns en introföreläsning där grunderna för kursen presenteras.
 Det finns [slides till presentationen](https://goo.gl/TvxGzT).
 
 [YOUTUBE src=pdUspBHTIJI list="PLKtP9l5q3ce8ZNqNxnWc0cd2ZtlwTWye7" caption="Video för introduktionsföreläsningen som hålls av Conny."]
+
+
+
+Roller {#roller}
+-----------------------------------------------------
+
+Det finns följande viktiga roller i kursen.
+
+* Student
+* Kursansvarig
+* Företagskontakt
+* Handledare
+* Examinator
+
+Se [introföreläsningen](#intro) för en presentation av rollerna. Du kan även läsa en [översikt av rollerna och deras syften](./roller).
 
 
 
@@ -161,10 +177,3 @@ Kursplan {#kursplan}
 -----------------------------------------------------
 
 Kursens namn är "Självständigt arbete i Webbprogrammering". Du hittar [kursplanen genom att söka på kurskoden pa1438 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=pa1438).
-
-
-
-Nästan dbwebb-kurs {#icke}
------------------------------------------------------
-
-Kursen är delvis upplagd som en dbwebb-kurs och hälften av lärarteamet består av dbwebb:are.
