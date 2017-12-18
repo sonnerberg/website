@@ -9,8 +9,6 @@ revision:
     "2014-08-21": (C, mos) Lade till stycke om statistik.
     "2013-03-12": (B, mos) Bytte ut XChat mot HexChat.
     "2012-09-01": (A, mos) Första utgåvan.
-updated: "2016-01-15 13:19:55"
-created: "2012-08-09 06:59:55"
 ...
 Chatta med IRC, Gitter och Hangouts
 ==================================
@@ -123,7 +121,7 @@ Här är länkar till kursspecifika gitter-kanaler, fördelade i de läsperioder
 |-----|-----|-----|-----|
 | [python](https://gitter.im/mosbth/python) | [javascript1](https://gitter.im/mosbth/javascript1) | [linux](https://gitter.im/mosbth/linux) | [webapp](https://gitter.im/mosbth/webapp) |
 | [htmlphp](https://gitter.im/mosbth/htmlphp) | [design](https://gitter.im/mosbth/design) | [oopython](https://gitter.im/mosbth/oopython) | [oophp](https://gitter.im/mosbth/oophp) |
-| [ramverk1](https://gitter.im/dbwebb-se/ramverk1) | [ramverk2](https://gitter.im/dbwebb-se/ramverk2) | | |
+| [ramverk1](https://gitter.im/dbwebb-se/ramverk1) | [ramverk2](https://gitter.im/dbwebb-se/ramverk2) | [dbw](https://gitter.im/dbwebb-se/dbw) | |
 | | [webgl](https://gitter.im/mosbth/webgl) | [dbjs](https://gitter.im/dbwebb-se/dbjs) | |
 
 Det finns kanaler för respektive antagningsomgång till program och kurspaket samt generella kanaler oavsett antagningsomgång.
