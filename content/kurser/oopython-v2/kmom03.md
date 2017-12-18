@@ -101,21 +101,21 @@ Genomför följande övningar för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)"
+<!-- 1. Gör uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)" -->
 
 <!-- 1. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".   -->
 
-1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
-
 1. Gör uppgiften "[Kortspelet War](uppgift/kortspelet-war)". Utför uppgiften i mappen `war`.  
+
+1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)". Utför uppgiften i mappen `uml`.  
 
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate flask
-dbwebb publish flask
+# dbwebb validate kmom03
+dbwebb publish kmom03
 ```
 
 
@@ -142,5 +142,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad tycker du om objektorienterad programmering än så länge?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilka metoder överlagrade du i uppgiften "Kortpelet War"?
+* Hur gick det med sekvensdiagrammet?
 <!-- * Gjorde du extrauppgiften? -->
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
