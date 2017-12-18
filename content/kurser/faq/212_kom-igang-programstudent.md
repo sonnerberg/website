@@ -7,7 +7,9 @@ revision:
 Kom igång med kurserna (programstudent)
 ==================================
 
-Välkommen till en dbwebb-kurs. Här visas några saker som kan vara bra att veta och du får framförallt hjälp att komma igång med de initiala stegen.
+Välkommen till en dbwebb-kurs, kanske din första. Kurser benämnda dbwebb-kurser delar en gemensam kursstruktur som främst finns på webbplatsen dbwebb.se.
+
+Här visas några saker som kan vara bra att veta nu när du startar din kurs. Du får framförallt hjälp att komma igång med de första stegen in i kursen.
 
 Detta dokument riktar sig till dig som redan är BTH programstudent och du är redan registrerad på kursen och har tillgång till kurstillfället på läroplattformen.
 
