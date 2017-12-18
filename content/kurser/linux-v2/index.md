@@ -3,7 +3,8 @@ title: linux
 
 author: mos
 revision:
-    "2016-12-16": (PD1, mos) Förberedelse inför linux-v2.
+    "2017-12-18": (E, mos) Bort varningstext.
+    "2016-12-16": (D, mos) Förberedelse inför linux-v2.
     "2016-09-09": (C, mos) Bytte till rätt kursnamn.
     "2015-08-03": (B, mos) Klar med texter för kursmomenten.
     "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
@@ -14,13 +15,6 @@ Kursen "linux" version 2
 Kursen **Programmera webbtjänster i Linux**, a.k.a. *linux*, lär ut programmering med JavaScript och Node.js på serversidan i en Linux-miljö tillsammans med grunderna i operativsystemet Linux.
 
 <!--more-->
-
-[WARNING]
-Kursen är under uppgradering till linux version 2 och kommer få nya lärmoment till kursstarten i januari 2017.
-
-Det finns en tidigare versionen av kursen, [linux-v1](kurser/linux-v1), som var aktiv fram till och med hösten 2016. Om du gick kursen fram till och med hösten 2016 så är det den versionen av kursmomenten som du skall färdigställa.
-
-[/WARNING]
 
 Kursen har två fokus, dels att lära ut grunder och beståndsdelar i operativsystemet Linux och dels att lära ut programmering med JavaScript och Node.js i en Linux-miljö. Kursen är för de som skall jobba med webbprogrammering.
 
