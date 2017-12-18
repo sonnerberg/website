@@ -7,13 +7,6 @@ revision:
 Kmom02: Apache Virtual Hosts
 ==================================
 
-[INFO]
-<s>Kursmomentet är under översyn och blir tillgängligt **senast den 23/1-2017**.</s>
-
-Kursmomentet är tillgängligt per den 2017-01-16.
-
-[/INFO]
-
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 
 Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med.

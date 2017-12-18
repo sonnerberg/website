@@ -10,12 +10,6 @@ revision:
 Kmom03: Skript med Bash
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under översyn och blir tillgängligt **senast den 30/1-2017**.</strike>
-
-Kursmomentet är blev tillgängligt den 24/1-2017.
-[/INFO]
-
 Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med skriptprogrammering i Bash.
 
 Mycket handlar om att förenkla vardagen, som programmerare, genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.

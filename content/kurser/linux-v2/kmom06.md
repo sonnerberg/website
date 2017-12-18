@@ -7,10 +7,6 @@ revision:
 Kmom06: Klient och server
 ==================================
 
-[INFO]
-Kursmomentet är under översyn och <strike>blir tillgängligt **senast den 20/2-2017**</strike> släpptes 2017-02-10.
-[/INFO]
-
 Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i bash, vi kan bygga servrar med Node.js och kan bygga klienter som kommunicerar med webbtjänster via RESTful API:er. Visst låter det som en hel del?
 
 Låt oss nu ta ytterligare ett steg in i klient och serverprogrammering med Node.js. Vi skall koda i Node.js, både på klient och serversidan. Tanken är att vi får en känsla för hur vi kan dela upp koden och en övning i klient och server med RESTful API.
