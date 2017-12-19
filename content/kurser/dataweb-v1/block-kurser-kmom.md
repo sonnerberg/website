@@ -1,4 +1,4 @@
-####[dbw](kurser/dataweb)
+####[dataweb](kurser/dataweb)
 
 * [01: TBD](kurser/dataweb/kmom01)
 * [02: TBD](kurser/dataweb/kmom02)
