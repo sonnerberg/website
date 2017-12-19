@@ -231,7 +231,7 @@ Redirect /forum/utbildning/exjobb /forum/viewforum.php?f=68
 
 
 # dbjs
-Redirect /dbjs                      /kurser/dbjs
+Redirect /dbjs                      /kurser/dbjs-v2
 Redirect /forum/utbildning/dbjs     /forum/viewforum.php?f=64
 
 # dataweb (dbw)
