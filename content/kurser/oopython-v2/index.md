@@ -82,13 +82,13 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ###Kmom01: Kom igång med objekt och Flask {#kmom01}
 
-Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa en webbsida med routes i ramverket Flask.
+Vi rivstartar med grundstrukturen för objekt och hur man kan skapa en webbsida med routes i ramverket Flask.
 
 [Instruktion till kursmoment 01](kurser/oopython-v2/kmom01).
 
 
 
-###Kmom02:klassrelationer {#kmom02}
+###Kmom02: Klassrelationer {#kmom02}
 
 Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi klassrelationer.
 
@@ -217,7 +217,7 @@ Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källor
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
