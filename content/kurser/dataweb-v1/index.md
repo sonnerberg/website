@@ -1,13 +1,13 @@
 ---
-title: databas
+title: dataweb
 author: mos
 revision:
     "2017-06-07": "(A, mos) Första revisionen inför kursstart HT2017."
 ...
-Kursen databas
+Kursen dataweb
 ==================================
 
-Kursen **Databasteknologier för webben**, a.k.a. *dbw*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med ett olika databaser i ett applikationsspråk i webbsammanhang.
+Kursen **Databasteknologier för webben**, a.k.a. *dataweb*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med ett olika databaser i ett applikationsspråk i webbsammanhang.
 
 <!--more-->
 
