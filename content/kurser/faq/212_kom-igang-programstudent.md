@@ -13,11 +13,7 @@ Här visas några saker som kan vara bra att veta nu när du startar din kurs. D
 
 Detta dokument riktar sig till dig som redan är BTH programstudent och du är redan registrerad på kursen och har tillgång till kurstillfället på läroplattformen.
 
-En kort sammanfattning av vad du ytterligare kan/borde göra för att få en bra resa genom kursen.
-
-1. Bekanta dig med kurstillfället på läroplattformen ITs.
-1. Skaffa konto på dbwebb.se.
-1. Gör upprop på kursen i forumet.
+Här följer nu en kort sammanfattning av vad du ytterligare kan/borde göra för att få en bra resa genom kursen.
 
 <!--more-->
 
