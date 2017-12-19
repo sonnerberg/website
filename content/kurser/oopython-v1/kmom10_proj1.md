@@ -1,10 +1,10 @@
 ---
 author: lew
+category:
+    - oopython
 revision:
     "2017-02-27": (B, lew) Removed documentation requirement.
     "2017-02-22": (A, lew) First version.
-category:
-    - oopython
 ...
 Kmom10: Projekt och examination
 ====================================

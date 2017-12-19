@@ -1,4 +1,4 @@
-####[oopython v2](kurser/oopython-v2)
+####[oopython-v2](kurser/oopython-v2)
 
 * [01: Kom igång med objekt...](kurser/oopython-v2/kmom01)
 * [02: Klassrelationer](kurser/oopython-v2/kmom02)

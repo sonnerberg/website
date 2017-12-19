@@ -4,7 +4,7 @@ author:
     - lew
     - mos
 revision:
-    "2017-12-11": (PA2, mos) Påbyggnad utkasst till V2.
+    "2017-12-11": (PA2, lew) Påbyggnad utkasst till V2.
     "2017-11-10": (PA1, mos) Utkast till v2.
 ...
 Kursen oopython (v2)
@@ -17,8 +17,18 @@ Kursen använder sig till stor del av webbaserade teknologier och programmen som
 <!--more-->
 
 [WARNING]
-**Kursutveckling pågår inför vt18.
+**Kursutveckling pågår inför vt18.**
 [/WARNING]
+
+[INFO]
+**Tidigare version av kursen**
+
+Om du gick kursen under vårterminen 2017, så finns kursmaterialet i [oopython version 1](kurser/oopython-v1).
+
+Version 2 går första gången vårterminen 2018.
+
+Om du påbörjat en äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
+[/INFO]
 
 
 

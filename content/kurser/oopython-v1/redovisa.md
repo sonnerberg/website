@@ -1,10 +1,10 @@
 ---
 author: mos
+category:
+    - oopython
 revision:
     "2017-01-20": (B, aar) Uppdaterade vilken fil som skrivs i och ändrade från python till oopython.
     "2016-04-12": (A, lew) Första versionen.
-category:
-    - oopython
 ...
 Resultat och redovisning
 ====================================

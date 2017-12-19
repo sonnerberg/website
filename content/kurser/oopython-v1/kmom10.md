@@ -1,10 +1,10 @@
 ---
 author: lew
+category:
+    - oopython
 revision:
     "2017-02-22": (B, aar) nytt projekt.
     "2016-04-12": (A, lew) Första version.
-category:
-    - oopython
 ...
 Kmom10: Projekt och examination
 ====================================
@@ -40,8 +40,8 @@ Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
 Välj ett av följande projekt att slutföra:  
-    * [Blue pill](kurser/oopython/kmom10_proj1)  
-    * [Red pill](kurser/oopython/kmom10_proj2)
+    * [Blue pill](./../kmom10_proj1)  
+    * [Red pill](./../kmom10_proj2)
 
 ###När du är klar {#klar}
 
@@ -71,7 +71,7 @@ Redovisning {#redovisning}
 
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
+3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oopython) och berätta att du är klar.
 
 4\. Se till att samtliga kursmoment validerar.
 

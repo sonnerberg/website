@@ -1,13 +1,13 @@
 ---
 author: lew
+category:
+    - oopython
 revision:
     "2016-12-16": (B, lew) Updated flask structure.
     "2016-06-09": (A, aar) Fler ändringar.
     "2016-06-01": (A, lew) Ändrade något.
     "2016-05-25": (A, aar) wow such change.
     "2016-04-12": (A, lew) Första utgåva.
-category:
-    - oopython
 ...
 Kmom05: Sorteringsalgoritmer och datastrukturer
 ====================================
@@ -124,7 +124,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

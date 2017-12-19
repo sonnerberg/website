@@ -9,7 +9,7 @@ Kmom10: Projekt och examination
 ====================================
 
 [WARNING]
-**Kursutveckling pågår inför vt18.
+**Kursutveckling pågår inför vt18.**
 [/WARNING]
 
 

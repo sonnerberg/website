@@ -8,7 +8,7 @@ Kmom06: Bokningssystem
 ====================================
 
 [WARNING]
-**Kursutveckling pågår inför vt18.
+**Kursutveckling pågår inför vt18.**
 [/WARNING]
 
 Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler antal klasser än tidigare och tanken är att öva på att interagera mellan klasser och hantera flera klasser samtidigt i ett terminalprogram.
