@@ -1,13 +1,13 @@
 ---
 author: lew
+category:
+    - oopython
 revision:
     "2017-01-06": (E, mos) Lade till CGI på studentservern.
     "2016-12-16": (D, lew) Ändrade ännu mer saker.
     "2016-06-01": (C, lew) Ändrade mer saker.
     "2016-05-25": (B, aar) Ändrade saker.
     "2016-04-12": (A, lew) Skapade dokument.
-category:
-    - oopython
 ...
 Kmom01: Kom igång med objekt och Flask
 ====================================
@@ -86,7 +86,7 @@ Om du känner att du har tid och lust.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](oopython/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](kurser/oopython-v1/labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen](dbwebb-cli/clone).
 
@@ -129,7 +129,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

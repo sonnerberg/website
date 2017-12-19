@@ -182,7 +182,8 @@ Redirect /kurser/linux      /kurser/linux-v2
 
 
 # oopython
-Redirect /oopython      /kurser/oopython
+Redirect /oopython         /kurser/oopython-v2
+Redirect /kurser/oopython  /kurser/oopython-v2
 
 
 # webapp

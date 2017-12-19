@@ -1,9 +1,9 @@
 ---
 author: lew
-revision:
-    "2017-02-14": (A, lew) First version.
 category:
     - oopython
+revision:
+    "2017-02-14": (A, lew) First version.
 ...
 Kmom06: Bokningssystem
 ====================================
@@ -90,7 +90,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

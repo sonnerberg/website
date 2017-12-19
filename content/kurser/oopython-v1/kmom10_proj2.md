@@ -1,10 +1,10 @@
 ---
 author: aar
+category:
+    - oopython
 revision:
     "2017-02-27": (B, lew) Removed documentation requirement and edited req 6.
     "2017-02-22": (A, aar) Första versionen.
-category:
-    - oopython
 ...
 Kmom10: Projekt och examination
 ====================================

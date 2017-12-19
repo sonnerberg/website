@@ -1,10 +1,10 @@
 ---
 author: lew
+category:
+    - oopython
 revision:
     "2017-01-24": (B, mos) Publicerat.
     "2016-04-12": (A, lew) Första utkastet.
-category:
-    - oopython
 ...
 Kmom03: Autogenerering av UML och dokumentation
 ====================================
@@ -98,7 +98,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

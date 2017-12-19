@@ -9,7 +9,7 @@ Kmom10: Projekt och examination
 ====================================
 
 [WARNING]
-**Kursutveckling pågår inför vt18.
+**Kursutveckling pågår inför vt18.**
 [/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
@@ -43,8 +43,8 @@ Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
 Välj ett av följande projekt att slutföra:  
-    * [Blue pill](kurser/oopython/kmom10_proj1)  
-    * [Red pill](kurser/oopython/kmom10_proj2)
+    * [Blue pill](./../kmom10_proj1)  
+    * [Red pill](./../kmom10_proj2)
 
 ###När du är klar {#klar}
 
@@ -74,7 +74,7 @@ Redovisning {#redovisning}
 
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
+3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oopython) och berätta att du är klar.
 
 4\. Se till att samtliga kursmoment validerar.
 

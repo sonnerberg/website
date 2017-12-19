@@ -1,12 +1,12 @@
 ---
 author: lew
+category:
+    - oopython
 revision:
     "2016-12-16": (D, lew) Updated flask structure.
     "2016-06-01": (C, lew) Fixade något.
     "2016-05-25": (B, aar) Ändrade något.
     "2016-04-12": (A, lew) Första versionen.
-category:
-    - oopython
 ...
 Kmom02: UML och unittest
 ====================================
@@ -121,7 +121,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

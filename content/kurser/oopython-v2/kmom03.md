@@ -1,9 +1,9 @@
 ---
 author: lew
-revision:
-    "2017-12-13": (A, lew) New version for v2.
 category:
     - oopython
+revision:
+    "2017-12-13": (A, lew) New version for v2.
 ...
 Kmom03: UML och unittest
 ====================================
@@ -132,7 +132,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
