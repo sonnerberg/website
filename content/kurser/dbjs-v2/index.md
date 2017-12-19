@@ -1,5 +1,5 @@
 ---
-title: dbjs
+title: dbjs-v2
 
 author:
     - mos
@@ -103,7 +103,7 @@ Det blir inledningsvis en del labbmiljö för att komma igång med kursen, så v
 
 Det blir en introduktion till programmeringsspråket JavaScript och hur det används i webbläsaren tillsammans med HTML och CSS. Det blir fokus på JavaScript och minimalt med HTML och CSS.
 
-[Instruktion till kursmoment 01](kurser/dbjs/kmom01).
+[Instruktion till kursmoment 01](kurser/dbjs-v2/kmom01).
 
 
 
@@ -111,7 +111,7 @@ Det blir en introduktion till programmeringsspråket JavaScript och hur det anv�
 
 Då dyker vi in i databaser tillsammans med SQL och ER-modellering. Jag har valt att introducera databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
 
-[Instruktion till kursmoment 02](kurser/dbjs/kmom02).
+[Instruktion till kursmoment 02](kurser/dbjs-v2/kmom02).
 
 
 
@@ -121,7 +121,7 @@ De blir kodning på serversidan och där har vi valt Node.js och JavaScript. Vi 
 
 När vi fått ordning på Node.js och en enkel server så börjar vi koppla upp oss mot databasen. Vi fortsätter med SQLite ett tag till.
 
-[Instruktion till kursmoment 03](kurser/dbjs/kmom03).
+[Instruktion till kursmoment 03](kurser/dbjs-v2/kmom03).
 
 
 
@@ -131,7 +131,7 @@ Då går vi vidare till databasen MySQL och dess olika klienter samt prövar att
 
 Du kommer även jobba vidare med JavaScript, Node.js och se hur du kan koppla dig till en MySQL databas.
 
-[Instruktion till kursmoment 04](kurser/dbjs/kmom04).
+[Instruktion till kursmoment 04](kurser/dbjs-v2/kmom04).
 
 
 
@@ -141,7 +141,7 @@ Kursmomenten handlar dels om att programmera en databas med transaktioner, lagra
 
 I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp en webb/RESTFul server och hur du kan skriva din applikationskod för att till exempel komma åt en databas och visa och uppdatera dess innehåll.
 
-[Instruktion till kursmoment 05](kurser/dbjs/kmom05).
+[Instruktion till kursmoment 05](kurser/dbjs-v2/kmom05).
 
 
 
@@ -149,7 +149,7 @@ I kursmomentet introduceras också en webbserver för Node.js i form av Express.
 
 Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du bör använda index för att optimera din databas.
 
-[Instruktion till kursmoment 06](kurser/dbjs/kmom06).
+[Instruktion till kursmoment 06](kurser/dbjs-v2/kmom06).
 
 
 
@@ -157,7 +157,7 @@ Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](kurser/dbjs/kmom10).
+[Instruktion till kursmoment 10](kurser/dbjs-v2/kmom10).
 
 
 
@@ -235,7 +235,7 @@ Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är
 För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](linux/studieplan) kopplad till de kurstillfällen som erbjuds.
 -->
 
-Det finns en [rekommenderad studieplan](kurser/dbjs/studieplan) kopplad till de kurstillfällen som erbjuds.
+Det finns en [rekommenderad studieplan](kurser/dbjs-v2/studieplan) kopplad till de kurstillfällen som erbjuds.
 
 Det finns även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
 

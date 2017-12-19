@@ -6,10 +6,6 @@ revision:
 Kmom05: Procedur, trigger, funktion
 ==================================
 
-[INFO]
-Kursmomentet är under utveckling och blir tillgängligt <strike>**senast den 13/3-2017** **delvis den 2017-03-15** och resterande delar släpps 2017-03-22</strike> i sin helhet per 2017-03-24.
-[/INFO]
-
 Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
 
 I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp en webb/RESTFul server och hur du kan skriva din applikationskod för att till exempel komma åt en databas och visa och uppdatera dess innehåll.

@@ -6,12 +6,6 @@ revision:
 Kmom02: Databas
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 30/1-2017**.</strike>
-
-Kursmomentet publicerades 2017-01-16.
-[/INFO]
-
 Då dyker vi in i databaser tillsammans med SQL och ER-modellering. Jag har valt att introducera databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
 
 Till databasen SQLite behövs klientprogram som kan användas för att prata med databasen. Vi prövar olika klienter, en variant för desktop och en terminalbaserad.

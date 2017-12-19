@@ -88,7 +88,7 @@ Här finns extra lästips som ger dig mer matnyttig info kring kursmomentet.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](kurser/dbjs/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `dbjs`](dbwebb-cli/clone).
 
@@ -138,7 +138,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/dbjs/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

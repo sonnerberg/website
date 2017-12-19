@@ -7,12 +7,6 @@ revision:
 Kmom01: JavaScript klient
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 16/1-2017**.</strike>
-
-Kursmomentet publicerades 2017-01-16.
-[/INFO]
-
 Vi skall studera databasteknik tillsammans med webbteknologier och vi börjar med de båda, var för sig, för att senare knyta samman dem i applikationer. Men i detta inledande kursmoment håller vi oss till JavaScript. Databaser får komma i nästa kmom.
 
 Det blir inledningsvis en del labbmiljö för att komma igång med kursen, så vi börjar med att få saker på plats, samtidigt som vi bekantar oss med de olika teknologier som kursen hanterar.
@@ -88,7 +82,7 @@ Här finns extra lästips som ger dig mer matnyttig info kring kursmomentet.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](kurser/dbjs/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `dbjs`](dbwebb-cli/clone).
 
@@ -138,7 +132,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/dbjs/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
