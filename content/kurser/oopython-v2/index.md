@@ -115,7 +115,7 @@ Vi lär oss om UML diagram och enhetstester.
 
 
 
-###Kmom04: Sorteringsalgoritmer och datastrukturer {#kmom04}
+###Kmom04: Datastrukturer {#kmom04}
 
 TBA.
 <!-- [Regex, regexp eller reguljära uttryck](https://sv.wikipedia.org/wiki/Regulj%C3%A4ra_uttryck) används för att hantera strängmatchning på olika sätt. Vi ska även utöka me-sidan med en databas. -->
@@ -124,7 +124,7 @@ TBA.
 
 
 
-###Kmom05: Sorteringsalgoritmer och datastrukturer {#kmom05}
+###Kmom05: Sorteringsalgoritmer {#kmom05}
 
 Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem samt titta närmare på datastrukturer och rekursion.
 
@@ -132,7 +132,7 @@ Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika
 
 
 
-###Kmom06: Sorteringsalgoritmer och datastrukturer {#kmom06}
+###Kmom06: Övriga algoritmer och rekursion {#kmom06}
 
 TBA.
 
