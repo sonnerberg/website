@@ -6,9 +6,9 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
-[INFO]
-Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 1/3-2017**</strike> presenteras i samband med föreläsningen den 1/3 2017.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen. Kursmomentet omfattar ett projekt som kan utföras i grupp, samt ett individuellt examinationsmoment.
 

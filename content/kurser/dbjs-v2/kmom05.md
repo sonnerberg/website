@@ -6,9 +6,9 @@ revision:
 Kmom05: Procedur, trigger, funktion
 ==================================
 
-[INFO]
-Kursmomentet är under utveckling och blir tillgängligt <strike>**senast den 13/3-2017** **delvis den 2017-03-15** och resterande delar släpps 2017-03-22</strike> i sin helhet per 2017-03-24.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
 
 Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
 

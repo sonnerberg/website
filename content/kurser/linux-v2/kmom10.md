@@ -8,6 +8,10 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+**Genomgång av kursmomentet är ännu ej gjord inför VT18.**
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:

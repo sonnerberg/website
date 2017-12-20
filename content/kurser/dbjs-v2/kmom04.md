@@ -6,9 +6,9 @@ revision:
 Kmom04: MySQL
 ==================================
 
-[INFO]
-Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 1/3-2017**</strike> blev tillgängligt 2017-02-27.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
 
 Då går vi vidare till databasen MySQL och dess olika klienter samt prövar att använda SQL tillsammans med MySQL. Du får jobba igenom en övning i SQL som tar dig från de enklare konstruktionerna till mer utmanande saker som subqueries och `RIGHT/LEFT OUTER JOIN`. När övningen är slut så har du både kommit in i MySQL och bekantat dig med ytterligare varianter av SQL.
 

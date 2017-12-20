@@ -7,11 +7,9 @@ revision:
 Kmom01: JavaScript klient
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 16/1-2017**.</strike>
-
-Kursmomentet publicerades 2017-01-16.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
 
 Vi skall studera databasteknik tillsammans med webbteknologier och vi börjar med de båda, var för sig, för att senare knyta samman dem i applikationer. Men i detta inledande kursmoment håller vi oss till JavaScript. Databaser får komma i nästa kmom.
 

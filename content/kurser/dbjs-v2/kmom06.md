@@ -7,9 +7,9 @@ revision:
 Kmom06: Index och prestanda
 ==================================
 
-[INFO]
-Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 27/3-2017**</strike> blev tillgängligt 2017-03-28.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
 
 Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du bör använda index för att optimera din databas.
 

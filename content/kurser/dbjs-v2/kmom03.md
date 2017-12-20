@@ -6,9 +6,9 @@ revision:
 Kmom03: JavaScript server
 ==================================
 
-[INFO]
-Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 13/2-2017**</strike> släpptes på föreläsningen den 2017-02-15.
-[/INFO]
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
 
 Vi vill nu ha kodning på serversidan och där har vi valt Node.js och JavaScript.  JavaScript på serversidan använder en intressant programmeringmodell med asynkron och eventbaserad hantering. På samma sätt som det fungerar i webbläsaren. Node.js erbjuder också ett flertal API när vi vill jobba med operativsystemets delar som filer och processer.
 

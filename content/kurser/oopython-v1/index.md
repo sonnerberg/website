@@ -24,7 +24,7 @@ Kursen använder sig till stor del av webbaserade teknologier och programmen som
 
 Detta dokument är version 1 av oopython. Denna version av kursen gavs vårterminen 2017.
 
-Från och med vårterminen 2018 är kursen uppgraderad till [oopython version 2](kurser/oopython-v2).
+Från och med vårterminen 2018 är kursen förändrad till [oopython version 2](kurser/oopython-v2).
 
 Om du påbörjat en äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
 [/INFO]
