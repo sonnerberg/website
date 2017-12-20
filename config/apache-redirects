@@ -127,9 +127,6 @@ Redirect /webgl/studieplan      https://goo.gl/Sp5Fhz
 Redirect /javascript/studieplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdE9oSE00YVoxVi1HVjQ2eFZLVnV2bmc
 Redirect /javascript/lektionsplan	https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHlSZkp2QVEyVlRHdWRfUGVPTDdVR1E
 
-Redirect /kurser/dbjs/lektionsplan    https://goo.gl/gYcKGk
-Redirect /kurser/dbjs/studieplan      https://goo.gl/oP1wIE
-
 
 
 #
@@ -232,7 +229,10 @@ Redirect /forum/utbildning/exjobb   /forum/viewforum.php?f=68
 
 
 # dbjs
-Redirect /dbjs                      /kurser/dbjs-v2
+Redirect /dbjs                      /kurser/dbjs
+Redirect /kurser/dbjs/lektionsplan  https://goo.gl/gYcKGk
+Redirect /kurser/dbjs/studieplan    https://goo.gl/oP1wIE
+Redirect /kurser/dbjs               /kurser/dbjs-v2
 Redirect /forum/utbildning/dbjs     /forum/viewforum.php?f=64
 
 # dataweb (dbw)
@@ -394,7 +394,6 @@ Redirect /forum/utbildning/webapp       /forum/viewforum.php?f=47
 Redirect /forum/utbildning/webgl        /forum/viewforum.php?f=56
 Redirect /forum/utbildning/webgl        /forum/viewforum.php?f=56
 Redirect /forum/utbildning/oopython     /forum/viewforum.php?f=57
-Redirect /forum/utbildning/dbjs         /forum/viewforum.php?f=64
 
 
 
