@@ -145,6 +145,13 @@ Studenten uppdaterar sitt arbete och lämnar in det slutliga resultatet som slut
 
 
 
+Publicera i DiVA {#diva}
+-----------------------------------------------------
+
+När du är klar skall du [publicera din rapport i DiVA](https://www.bth.se/bibliotek/publicera/).
+
+
+
 Rekommenderad studieplan {#studieplan}
 -----------------------------------------------------
 
