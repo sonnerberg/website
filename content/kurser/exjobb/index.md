@@ -117,7 +117,9 @@ Studenten tar kundens problemställning och formulerar ett topic i ett dokument.
 
 Topicet formulerar en grov ram för arbetet.
 
-Topicet lämnas in och utvärderas av kursansvarig i samråd med examinatorn och när det är godkänt så tilldelas en handledare. Kunden bör samtycka till topicet.
+Topicet lämnas in och utvärderas och godkänns av examinatorn. Kursansvarig deltar i utvärderingen av topic. När topic är godkänt så tilldelas (kursansvarig) en handledare.
+
+Kunden bör samtycka till topicet. Studenter sköter detta efter bästa förmåga.
 
 
 
