@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-12-21": "(B, mos) Kommentar om alternativ för krav 5."
     "2017-12-11": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
@@ -137,6 +138,8 @@ Din dokumentation och reflektion i README är bättre än bra, välskriven och t
 Du har skapat en egen image som du publicerat på Docker store och återanvänder i projektet. Länka till din image på Docker store. Basen för din image finns i ett GitHub repo som du länkar till.
 
 Du skriver ett eget stycke om detta i din README och reflekterar över för- och nackdelar i att jobba med Docker.
+
+Det finns variationer i hur du kan uppfylla detta kravet. Se föreläsningen som innehåll en intro till projejektet då detta kravet diskuterades.
 
 
 
