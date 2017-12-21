@@ -39,7 +39,7 @@ Det finns ett par saker som du måste skriva i filen `log.txt`, det står isåfa
 Krav {#krav}
 -----------------------
 
-1. Installera Debian Jessie. Notera i loggen vilket namn du ger servern.
+1. Installera Debian. Notera i loggen vilket namn du ger servern.
 
 2. Logga in på din server. Notera i loggen vilken ip-adress servern har.
 
