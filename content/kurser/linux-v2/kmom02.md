@@ -1,15 +1,12 @@
 ---
 author: mos
 revision:
-    "2017-01-16": (B, efo/mos) Genomgången och ändring av länk till ny bash lab
+    "2017-12-21": (C, mos) Genomgången inför vt17.
+    "2017-01-16": (B, efo/mos) Genomgången och ändring av länk till ny bash lab.
     "2015-07-03": (A, mos) Första utgåvan för kursen.
 ...
 Kmom02: Apache Virtual Hosts
 ==================================
-
-[WARNING]
-**Genomgång av kursmomentet är ännu ej gjord inför VT18.**
-[/WARNING]
 
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 
@@ -25,7 +22,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 [FIGURE src=/image/snapht15/vhosts.png caption="Låt oss skapa en webbplats som en Apache Name-based Virtual Host."]
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -64,12 +61,6 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
-
-Det finns inga extra lästips.
-
-
-
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
@@ -103,18 +94,12 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/linux-v2/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
@@ -122,3 +107,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Det blir allt fler kommandon i terminalen, hur känns det med terminalen och dess kommandon?
 * Gick det bra med ssh-nycklar och rsync över ssh?
 * Hur kändes det att jobba med tmux?
+* Reflektera över hur du känner inför Unix som operativsystem så här långt?
