@@ -73,7 +73,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
-[Instruktion till kursmoment 01](design/kmom01).
+[Instruktion till kursmoment 01](kurser/design-v1/kmom01).
 
 
 
@@ -83,7 +83,7 @@ Då är det dags att vi skapar vårt eget tema till webbplatsen. Låt oss fylla 
 
 Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
 
-[Instruktion till kursmoment 02](design/kmom02).
+[Instruktion till kursmoment 02](kurser/design-v1/kmom02).
 
 
 
@@ -91,7 +91,7 @@ Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur 
 
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor. Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner och vi skall undersöka ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*.
 
-[Instruktion till kursmoment 03](design/kmom03).
+[Instruktion till kursmoment 03](kurser/design-v1/kmom03).
 
 
 
@@ -99,7 +99,7 @@ Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar u
 
 Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi.
 
-[Instruktion till kursmoment 04](design/kmom04).
+[Instruktion till kursmoment 04](kurser/design-v1/kmom04).
 
 
 
@@ -107,7 +107,7 @@ Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats
 
 Kursmomentet har ett fokus på att hantera och presentera bilder i olika storlekar i webbplatsen.
 
-[Instruktion till kursmoment 05](design/kmom05).
+[Instruktion till kursmoment 05](kurser/design-v1/kmom05).
 
 
 
@@ -117,7 +117,7 @@ Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget desig
 
 Vi tittar på "the final touch" i form av design element och designprinciper.
 
-[Instruktion till kursmoment 06](design/kmom06).
+[Instruktion till kursmoment 06](kurser/design-v1/kmom06).
 
 
 
@@ -125,7 +125,7 @@ Vi tittar på "the final touch" i form av design element och designprinciper.
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](design/kmom10).
+[Instruktion till kursmoment 10](kurser/design-v1/kmom10).
 
 
 
@@ -178,7 +178,7 @@ Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) s
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
-För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](design/studieplan) kopplad till de kurstillfällen som erbjuds.
+För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](kurser/design-v1/studieplan) kopplad till de kurstillfällen som erbjuds.
 
 Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
 

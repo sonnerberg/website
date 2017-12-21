@@ -175,7 +175,7 @@ Följande böcker har jag valt som referenslitteratur som är en fördjupning av
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
 
 * **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
-    En bok om ES6 som förutsätter att man kan ES5. Samma författare som kurslitteraturen.
+    En bok om ES6 som förutsätter att man kan ES5.
 
 * **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford  
     En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
@@ -210,7 +210,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom06     |                                                           | 
 | Kmom10     |                                                           |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion för kursmomentet. 
 
 -->
 
@@ -225,7 +225,7 @@ Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är
 
 För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](javascript1/studieplan) kopplad till de kurstillfällen som erbjuds.
 
-Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
+Vissa av kurstillfällena kan ha en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
 
 Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
 
