@@ -5,6 +5,7 @@ category:
     - pedagogik
     - konferenser
 revision:
+    "2017-12-21": "(E, mos) Swednet skrivinternat och årskonferens."
     "2017-09-01": "(D, mos) ICED 2018 samt Copenhagen."
     "2017-08-15": "(C, mos) ICED 2018 samt Copenhagen."
     "2017-06-22": "(B, mos) Info om Swednet."
@@ -21,6 +22,10 @@ Jag gör ett försök att göra en sida med konferenser, seminarier och möjligh
 
 Konferenser {#konferenser}
 -----------------------
+
+Swednets allra första skrivinternat kommer att hållas den 13-15 augusti. Här finns det möjlighet att skriva klart den där artikeln, ansökan eller kanske rent av arbeta på din pedagogiska portfölj. Mer information kommer i januari/februari då även anmälningen öppnar. 
+
+Årskonferensen 2018 för Swednet kommer att hållas vid Göteborgs universitet den 24-25 maj. Mer information kommer efter det nya året när konferensens webbsida lanseras.
 
 Högskolan Väst i Trollhättan har [VILÄR-konferensen](https://www.hv.se/en/vilar) som går av stapeln den 7-8 december, 2017.
 
