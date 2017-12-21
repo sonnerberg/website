@@ -89,6 +89,8 @@ Titta på följande:
 
 Det finns inga övningar.
 
+Som en del av labbmiljön har du redan installerat Debian i en VirtualBox. Det är den stora biten i detta kursmomentet.
+
 
 
 ###Uppgifter {#uppgifter}
