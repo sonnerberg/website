@@ -2,12 +2,13 @@
 
 [FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
-* [GrillCon 2018 Vår](t/7110)
+* [Registrera dig för vårterminens kurser](t/7177)
 * [Förkunskaper och förkunskapskontroll (inför VT18)](t/7086)
 * [Förkunskapskontroll våren 2018 för kurspaket](t/7103)
+* [Uppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
+* [GrillCon 2018 Vår](t/7110)
 * [Om 3-veckors uppropet lp2](t/7062)
-* [ppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
-* [Omregistrering och restinlämningar under hösten](kurser/faq/omregistrering)
+* [Omregistrering och restinlämningar](kurser/faq/omregistrering)
 
 Sista programmeringsstugan är torsdagen den 14:e december.
 

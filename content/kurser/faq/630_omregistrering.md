@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-12-21": (K, mos) Generaliserade stycke om restinlämningar.
     "2017-06-29": (J, mos) Uppdaterade om kurstillfällen ht17/vt18.
     "2017-06-22": (I, mos) Restinlämningar för HT17.
     "2016-12-22": (H, mos) Restinlämningar för VT17.
@@ -89,13 +90,22 @@ Det finns inga kurstillfällen för phpmvc eller javascript. De har utgått som 
 
 
 
-###Rättning av restinlämningar höstterminen 2017 {#ht17rest}
+###Uppsamlingsheat och restinlämningar {#rest}
 
-Du kan lämna in restinlämningar för samtliga kurstillfällen som gick ht16 eller vt17 (eller tidigare).
+Generellt gäller följande för inlämningar utanför kurstillfällen och planerade rättningsfönster.
 
-Sista inlämningsdag är den 2:a oktober 2017. Rättningsfönstret pågår från den 3:e oktober fram till och med den sista oktober. Får du komplettering bör du lämna in den omgående.
+Det finns uppsamlingsheat som annonseras i forumet. Generellt gäller följande, men detaljer annonseras alltid specifikt i forumet.
 
-Om du gör restinlämningar så måste du skicka mail till dbwebb@bth.se och ange vilka kurstillfällen på ITs det gäller samt vilka kmom det är. Annars kommer det inte med i rättningen.
+| Uppsamlingsheat | Sista inlämning | Rättningsfönster |
+|-----------------|-----------------|------------------|
+| Oktober         | September 30    | Oktober 1 -- 31  |
+| December        | November 31     | December 1 -- 15 |
+| April           | Mars 31         | April 1 -- 30    |
+
+När du gjort en restinlämning på ett kurstillfälle som inte är i den aktuella pågående terminen så behöver du alltid skicka mail till dbwebb@bth.se och ange vilka kurstillfällen på ITs det gäller samt vilka kmom det är. Annars kommer det inte med i rättningen.
+ 
+Rättningsfönstret pågår under angiven period. Får du komplettering bör du lämna in den omgående.
+
 
 
 <!--
@@ -130,7 +140,7 @@ Normalt gäller följande ungefärliga tider för läsperioderna.
 |:---------:|---------------------------------|
 | lp1       | september -- oktober            |
 | lp2       | november -- mitten av januari   |
-| lp3       | 20-ish januari -- mars          |
+| lp3       |mitten januari -- mars          |
 | lp4       | april -- juni                   |
 
 <!--
