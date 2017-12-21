@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-12-21": (F, mos) Genomgången inför vt18.
     "2017-02-09": (E, mos) Ändrade frågor för redovisningen.
     "2017-01-24": (D, mos) Publicerat.
     "2016-12-21": (C, efo) Ändring av länk till ny bash lab och extrauppgiften gjordes om till en del av kursmomentet
@@ -9,10 +10,6 @@ revision:
 ...
 Kmom03: Skript med Bash
 ==================================
-
-[WARNING]
-**Genomgång av kursmomentet är ännu ej gjord inför VT18.**
-[/WARNING]
 
 Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med skriptprogrammering i Bash.
 
@@ -25,7 +22,7 @@ Man behöver också ha en rätt bra koll på vanliga kommandon i Linux-terminale
 [FIGURE src=/image/snapht15/vim-solutions.png caption="Låt oss komma igång med skriptprogrammering i Bash."]
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -48,7 +45,6 @@ Läs följande:
 ###Artiklar {#artiklar}
 
 1. Boken "The Linux Command Line" har en webbplats där det finns [ett stycke med fokus på att skriva shell scripts](http://linuxcommand.org/lc3_writing_shell_scripts.php). Ta det som ett komplement till boken.
-
 
 
 
@@ -114,11 +110,12 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/linux-v2/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Är detta din första bekantskap med skriptprogrammering i Bash?
+* Berätta om din uppfattning om Bash som programmameringsmiljö, relatera till andra programspråk du kan.
 * Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?
 * Var det något som var extra svårt eller utmanande i uppgifterna?
 * Tittade du på videoserien? Vad tyckte du om den?
