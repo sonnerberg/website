@@ -1,8 +1,9 @@
 ---
-title: linux
+title: linux-v2
 
 author: mos
 revision:
+    "2017-12-21": (F, mos) Genomgången inför vt18.
     "2017-12-18": (E, mos) Bort varningstext.
     "2016-12-16": (D, mos) Förberedelse inför linux-v2.
     "2016-09-09": (C, mos) Bytte till rätt kursnamn.
@@ -163,8 +164,6 @@ Kurslitteratur {#litteratur}
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
-Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
-
 
 
 ###Kurslitteratur {#kurslitteratur}
@@ -175,7 +174,10 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 
 * **[The Linux Command Line](kunskap/boken-the-linux-command-line)** -- William Shotts  
-  En lättläst och trevlig bok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Linux, systemkommandon och terminalen.
+    En lättläst och trevlig bok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Linux, systemkommandon och terminalen.
+
+* **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
+    En bok om ES6 som förutsätter att man kan ES5.
 
 
 
@@ -183,15 +185,24 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
-
 * **[The Debian Administrator's Handbook, Debian Wheezy from Discovery to Mastery](kunskap/boken-the-debian-administrator-s-handbook)** -- Raphaël Hertzog, Roland Mas  
-  En gedigen referensmanual för den som är allvarlig med att lära sig Linux.
+    En gedigen referensmanual för den som är allvarlig med att lära sig Linux.
 
-* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
-  En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
+
+
+###Övrig litteratur {#ovriglitteratur}
+
+Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
+
+
+* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+    En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
 * **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford  
-  En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
+    En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
+
+* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
+    En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
 
 
 
@@ -200,24 +211,24 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | The Linux Command Line | The Debian Administrator's Handbook |
-|------------|------------------------|-------------------------------------|
-| Kmom01     |                        |                                     |
-| Kmom02     |                        |                                     |
-| Kmom03     |                        |                                     | 
-| Kmom04     |                        |                                     |
-| Kmom05     |                        |                                     | 
-| Kmom06     |                        |                                     | 
-| Kmom10     |                        |                                     |
+| Kursmoment | Linux Command Line | Debian Handbook | Exploring ES6     |
+|------------|--------------------|-----------------|-------------------|
+| Kmom01     | 1, 2, 3, 4         | 1, 4            |                   |
+| Kmom02     | Repetera 1-4       | 6, 7            |                   |
+| Kmom03     | 6, 24              |                 |                   | 
+| Kmom04     |                    |                 | 1, 2              |
+| Kmom05     |                    |                 |                   | 
+| Kmom06     |                    |                 |                   | 
+| Kmom10     |                    |                 |                   |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion för kursmomentet. 
 
 
 
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2).
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod3).
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
@@ -225,7 +236,7 @@ Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är
 För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](linux/studieplan) kopplad till de kurstillfällen som erbjuds.
 -->
 
-Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
+Vissa av kurstillfällena kan ha en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
 
 Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
 
@@ -247,11 +258,13 @@ Ladok {#ladok}
 
 Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
 
-| Kursens moment  | Ladok moment enligt kursplan  |
-|-----------------|-------------------------------|
-| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
-| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
-| Kmom05 - kmom10 | Projekt á 2.5hp               |
+| Kursens moment  | Ladok moment enligt kursplan  | Betyg |
+|-----------------|-------------------------------|-------|
+| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             | G-U   |
+| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             | G-U   |
+| Kmom05 - kmom10 | Projekt á 2.5hp               | A-F   |
+
+Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
