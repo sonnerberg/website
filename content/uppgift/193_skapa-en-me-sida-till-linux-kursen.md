@@ -1,15 +1,16 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - kursen linux
 revision:
-  "2015-06-24": (A, mos) Första utgåvan i samband med kursen linux.
-updated: "2015-06-24 09:55:28"
-created: "2015-06-24 06:36:06"
+    "2017-12-21": (B, mos) Kopierade upplägget från javascript1.
+    "2015-06-24": (A, mos) Första utgåvan i samband med kursen linux.
 ...
 Skapa en me-sida till linux-kursen
 ==================================
 
-Bygg en enkel webbplats för kursen linux, den ska innehålla två saker, en me-sida som berättar lite om dig själv och en redovisningssida som sammanställer  dina redovisningar i kursen.
+Skapa en me-sida för redovisningar i kursen linux.
 
 <!--more-->
 
@@ -25,42 +26,50 @@ Du har installerat kursens labbmiljö samt installerat kommandot `dbwebb` och du
 Introduktion {#intro}
 -----------------------
 
-Du skall spara alla filer i ditt kursrepo i katalogen `me/redovisa`. Det finns exempelfiler som du kan utgå ifrån. Börja med att kopiera in dem till ditt kursrepo.
+I din me-sida skall du samla redovisningstexter och du länka till de uppgifter du löst. Det ger dig en samlad plats att utgå ifrån när du vill visa upp vad du gjort i kursen.
 
-```bash
-# Ställ dig i rooten av kursrepot
-cp -i example/me/* me/redovisa/
-```
+Du kan testa hur me-sidan bör fungera, genom att öppna din exempel-katalog i kursrepot under `example/redovisa`.
 
-Nu har du din bas du kan utgå ifrån.
+Du kan bygga en mer avancerad me-sida om du vill, det går bra. Mallen finns med för de som vill ha en enkel me-sida.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Skriv en kort presentation av dig själv, vem du är, vad du gör och vad dina förväntningar är på kursen. Välj själv. Det räcker med 10-15 rader, det behöver inte vara så avancerat. Skriv i filen `me/redovisa/me.html`.
-
-2. Titta i file `me/redovisa/report.html`. Skriv in vilken utvecklingsmiljö du sitter på, bara för att testa så allt fungerar.
-
-3. Förbered din redovisningssida så att den innehåller rubriker för samtliga kursmoment. Ha alla redovisningarna på en sida.
-
-4. Validera och publicera din kod enligt följande.
+I din kurskatalog (repot) för kursen, skall du ta en kopia av exempelkatalogen `example/redovisa` och lägga i din me-katalog under `me/redovisa`.
 
 ```bash
-# Ställ dig i kurskatalogen
-#dbwebb validate redovisa
-dbwebb publish redovisa
+# Gå till kurskatalogen
+cp -ri example/redovisa me
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+1. Du har nu en grund för din me-sida i kursen. Modifiera den så den blir "din egen".
+
+1. Uppdatera sidan `me.html` så att den innehåller en kort presentation av dig själv tillsammans med en bild som får representera dig.
+
+1. I sidan `redovisning.html` skall du skriva dina redovisningstexter. Du kan förbereda redovisningstexten för det första kursmomentet.
+
+1. I sidan `om.html` lägger du till en godtycklig bild som du finner representativ för kursen.
+
+1. Leta reda på kursrepot på GitHub och länka till det från din `om.html`.
+
+1. Du kan uppdatera stylesheet och eventuellt JavaScript i katalogerna `me/style` och `me/js`. Det är inte nödvändigt, gör det om du vill och känner att du har tid.
+
+1. Gör en dbwebb publish för att kolla att allt validerar och fungerar.
+
+```text
+dbwebb publish redovisa
+```
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-Det finns ingen extrauppgift.
+Om du har tid och kraft.
+
+1. Bygg en snyggare och mer avancerad me-sida.
 
 
 
@@ -68,7 +77,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
