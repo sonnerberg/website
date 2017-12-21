@@ -121,4 +121,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du sedan tidigare bekant med Unix, Linux, Debian och/eller terminalen?
 * Hur känns det med Unix-kommandon på terminalen, är det udda eller bekvämt?
 * Valde du att köra standard med VirtualBox och Debian eller hur gjorde du?
+* Om du kör VirtualBox, hur kändes det att jobba med det verktyget och ser du fördelar med det arbetssättet?
 * Var det något som krånglade eller tog extra mycket tid?
