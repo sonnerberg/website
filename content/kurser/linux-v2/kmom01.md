@@ -1,16 +1,13 @@
 ---
 author: mos
 revision:
+    "2017-12-21": (D, mos) Eget dok labbmiljö, genomgången.
     "2017-01-16": (C, mos) Länk till videoserie.
     "2017-01-04": (B, mos) Förberedelse inför linux-v2.
     "2015-06-23": (A, mos) Första utgåvan för kursen.
 ...
 Kmom01: Linux som server
 ==================================
-
-[WARNING]
-**Genomgång av kursmomentet är ännu ej gjord inför VT18.**
-[/WARNING]
 
 Det första vi behöver är en Linux-server. På något sätt.
 
@@ -26,7 +23,26 @@ För att lyckas med det så behöver du bekanta dig med grunderna i terminalen o
 [FIGURE src=/image/snapht15/linux-what-now.png?w=w2 caption="Okey, terminalen, och nu då?"]
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
+
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
+dbwebb clone linux
+cd linux
+dbwebb init
+```
 
 
 
@@ -54,12 +70,6 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 
 
-###Artiklar {#artiklar}
-
-Det finns inga artiklar.
-
-
-
 ###Video  {#video}
 
 Titta på följande:
@@ -68,29 +78,10 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
-
-Det finns inga extra lästips.
-
-
-
-
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
 *(ca: 6-10 studietimmar)*
-
-
-
-###Labbmiljö {#labbmiljo}
-
-Installera labbmiljön för kursen.
-
-1. [Installera labbmiljön](kurser/linux-v2/labbmiljo) som behövs för kursen.
-
-1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `linux`](dbwebb-cli/clone).
-
-Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`](dbwebb-cli).
 
 
 
@@ -112,7 +103,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-* Skaffa ett konto på Digital Ocean och installera Debian på en virtuell maskin. Koppla en domänadress till maskinen. Via GitHub kan du få rabattkod som ger dig gratis månader hos Digital Ocean (gällde 2015, 2016).
+* Skaffa ett konto på Digital Ocean och installera Debian på en virtuell maskin. Koppla en domänadress till maskinen. Via GitHub kan du få rabattkod som ger dig gratis månader hos Digital Ocean (gällde 2015, 2016, 2017).
 
 
 
@@ -121,7 +112,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/linux-v2/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
