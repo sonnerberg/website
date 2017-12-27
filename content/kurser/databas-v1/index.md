@@ -1,13 +1,13 @@
 ---
-title: dataweb
+title: databas
 author: mos
 revision:
     "2017-12-27": "(PA1, mos) Arbetsmaterial inför kursstart VT2018."
 ...
-Kursen dataweb
+Kursen databas
 ==================================
 
-Kursen **Databasteknologier för webben**, a.k.a. *dataweb*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med <s>olika</s> databaser i ett applikationsspråk i webbsammanhang.
+Kursen **Databasteknologier för webben**, a.k.a. *databas*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med <s>olika</s> databaser i ett applikationsspråk i webbsammanhang.
 
 <!--more-->
 
