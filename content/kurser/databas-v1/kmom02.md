@@ -209,7 +209,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är detta den första bekantskap med JavaScript på serversidan och Node.js, hur känns det?
 * Gick det smärtfritt att koppla ihop Node med SQLite?
 * Fanns det något som var extra utmanande eller någon större svårighet i detta kursmomentet?
-* Vilken är din TIL; för detta kmom?
+* Vilken är din TIL för detta kmom?
 
 <!--
 * Hur känns det med Node.js, har du till exempel känt av den asynkrona programmeringsmodellen?
