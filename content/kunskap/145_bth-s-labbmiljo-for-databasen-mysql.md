@@ -4,13 +4,14 @@ category:
     - labbmiljo
     - databas
     - mysql
+    - mariadb
 revision:
-    "2017-02-24": (F, mos) Länkade till artikel om ssh och klienter.
-    "2014-11-10": (E, mos) Länkade till artikel om ssh och klienter.
-    "2014-11-05": (D, mos) Inforuta om SSH KeepAlive med Workbench.
-    "2013-10-22": (C, mos) Inforuta om secure_auth med Workbench.
-    "2013-10-17": (B, mos) Lade till information om att man inte kan skapa nya databaser på studentservern.
-    "2013-08-20": (A, mos) Första utgåvan som en del av kursen oophp. Omskriven från en [äldre version](https://docs.google.com/document/d/1kyemM3VIHh2u7df8ALQPmwB2S-LBFRNrgN11VaaCIbQ/preview?pli=1#).  
+    "2017-02-24": "(F, mos) Länkade till artikel om ssh och klienter."
+    "2014-11-10": "(E, mos) Länkade till artikel om ssh och klienter."
+    "2014-11-05": "(D, mos) Inforuta om SSH KeepAlive med Workbench."
+    "2013-10-22": "(C, mos) Inforuta om secure_auth med Workbench."
+    "2013-10-17": "(B, mos) Lade till information om att man inte kan skapa nya databaser på studentservern."
+    "2013-08-20": "(A, mos) Första utgåvan som en del av kursen oophp. Omskriven från en [äldre version](https://docs.google.com/document/d/1kyemM3VIHh2u7df8ALQPmwB2S-LBFRNrgN11VaaCIbQ/preview?pli=1#)."
 ...
 BTH's labbmiljö för databasen MySQL
 ==================================
@@ -216,6 +217,6 @@ Så här kan det se ut i Workbench.
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Då vet du hur du kan jobba med BTH's labbmiljö för MySQL. Vill du öva mer SQL så finns en övning / uppgift "[Kom igång med SQL](uppgift/kom-igang-med-sql)"
+Nu vet du hur du kan jobba med BTH's labbmiljö för MySQL och dess olika klienter.
 
 Frågor och kommentarer tar vi i forumet, det finns en [egen tråd för denna artikel](t/6264).

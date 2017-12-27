@@ -88,7 +88,7 @@ Kika igenom följande artiklar.
 
 ###Övningar {#ovningar}
 
-Följande två dokument gick du igenom som en del av labbmiljön, när du installerade MySQL. Dubbelkolla så att du har koll på dem.
+Följande två dokument gick du igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har koll på dem.
 
 1. Jobba igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/mysql`.
 
