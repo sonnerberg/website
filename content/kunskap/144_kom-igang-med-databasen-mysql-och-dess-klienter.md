@@ -4,7 +4,9 @@ category:
     - labbmiljo
     - databas
     - mysql
+    - mariadb
 revision:
+    "2017-12-27": (F, mos) Stycke om förutsättning och länk till installation.
     "2017-03-02": (E, mos) Logga in med användare root.
     "2017-02-23": (D, mos) Bort med MAMP och WAMP, bara kvar med XAMPP samt genomgång.
     "2015-03-05": (C, mos) Info om CLI på XAMPP och MAC.
@@ -24,6 +26,15 @@ Låt oss därför kika lite på databasen MySQL och dess olika klienter.
 
 
 
+Förutsättning {#pre}
+------------------------------
+
+Artiklen förutsätter att du har tillgång till MySQL/MariaDB och har gjort en lokal installation, eller gör det i inledningen av artikeln.
+
+I [labbmiljön för dbwebb](labbmiljo/mysql) finns stöd för hur man kan installera MySQL/MariaDB som en del av XAMPP.
+
+
+
 Databasen MySQL {#mysql}
 ------------------------------
 
@@ -39,7 +50,7 @@ MySQL ägdes från början av ett svenskt företag som köptes upp och numer äg
 
 ###Ladda ned och installera {#installera}
 
-Åter till MySQL. Det går att ladda ned en kopia av databasen från [hemsidan](http://dev.mysql.com/downloads/) och installera, eller så kommer den med automatiskt när man [installerar LAMP, WAMP, MAMP eller motsvarande](kunskap/installera-en-egen-webbserver-for-utveckling) samlingar av Apache, PHP och MySQL.
+Åter till MySQL. Det går att ladda ned en kopia av databasen från [hemsidan](http://dev.mysql.com/downloads/) och installera, eller så kommer den med automatiskt när man installerar LAMP, WAMP, MAMP eller motsvarande som är en samling av Apache, PHP och MySQL.
 
 När man väl har installerat och startat igång databasen så ligger den normalt och lyssnar på porten 3306 och det är dit som en klient kopplar upp sig. Databasen körs som en server och det behövs klientprogram för att koppla upp sig och jobba mot databasen. Databasen har ett behörighetssystem där man måste ange användare och lösenord för att koppla upp sig. Det är något man ställer in när man installerar databasen.
 
