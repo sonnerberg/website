@@ -81,6 +81,8 @@ Om du har tid och kraft.
 
 1. Lägg till något enkelt JavaScript som gör din me-sida än mer personlig.
 
+1. Tips till dig som redan gått design-kursen. Skriv [redovisningstexter i Markdown](coachen/anvand-markdown-till-me-sidan) (kräver PHP och composer installerat). 
+
 
 
 Tips från coachen {#tips}
