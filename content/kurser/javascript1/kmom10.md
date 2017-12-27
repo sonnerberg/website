@@ -114,7 +114,7 @@ Startvärdet för FizzBuzz-sekvensens skall slumpas fram så det inte är samma 
 
 
 
-###Deltest 3: Minne {#tips}
+###Deltest 3: Minne {#minne}
 
 Detta är ett litet minnes-test som kollar hur bra bildminne man har.
 
