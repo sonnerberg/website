@@ -32,6 +32,8 @@ Introduktion {#intro}
 
 I din me-sida skall du samla redovisningstexter och du länkar till de uppgifter du löst. Det ger dig en samlad plats att utgå ifrån när du vill visa upp vad du gjort i kursen.
 
+Redovisningstexterna är en del av underlaget till [bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning) i kursen.
+
 Du kan testa hur me-sidan bör fungera, genom att öppna din exempel-katalog i kursrepot under `example/redovisa`.
 
 Du kan bygga en mer avancerad me-sida om du vill, det går bra. Mallen finns med för de som vill ha en enkel me-sida.
