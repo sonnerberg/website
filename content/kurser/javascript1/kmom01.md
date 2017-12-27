@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-12-27": "(J, mos) Enhetlig mall för me-sida."
     "2017-10-09": "(I, mos) Genomgång inför ht17, ny struktur labbmiljö, redovisa, uppgradering dbwebb-cli v2."
     "2017-09-27": (H, lew) Ny kurslitteratur.
     "2016-03-15": (G, mos) Lade till videoserie med "Lär dig JavaScript".
@@ -146,7 +147,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)". Spara resultatet i `me/kmom01/sandbox`.
 
-1. Gör uppgiften "[Skapa en me-sida för redovisning i kursen javascript1](uppgift/skapa-en-me-sida-for-redovisning-i-kursen-javascript1)". Spara resultatet i `me/redovisa`.
+1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
 1. Gör laborationen "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)". Labben genereras i `me/kmom01/lab1`.
 

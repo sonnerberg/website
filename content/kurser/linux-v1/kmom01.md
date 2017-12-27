@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-  "2015-06-23": (A, mos) Första utgåvan för kursen.
+    "2017-12-27": "(B, mos) Enhetlig mall för me-sida."
+    "2015-06-23": "(A, mos) Första utgåvan för kursen."
 ...
 Kmom01: Linux som server
 ==================================
@@ -98,7 +99,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Installera Debian som server](uppgift/installera-debian-som-server)".
 
-1. Gör uppgiften "[Skapa en me-sida till linux-kursen](uppgift/skapa-en-me-sida-till-linux-kursen)".
+1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
 
 
@@ -122,7 +123,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns det med Unix-kommandon på terminalen, är det udda eller bekvämt?
 * Valde du att köra standard med VirtualBox och Debian eller hur gjorde du?
 * Var det något som krånglade eller tog extra mycket tid?
-
-
-
-

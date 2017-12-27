@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-12-27": "(D, mos) Enhetlig mall för me-sida."
     "2017-11-01": "(C, mos) Länk till rätt uppgift om me-sidan (v2)."
     "2017-10-17": (B, mos) Uppdaterad inför ht17.
     "2015-10-15": (A, mos) Första utgåvan för kursen.
@@ -139,7 +140,7 @@ Följande källor är relevanta och ger dig en orientering i WebGL och det som k
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa en me-sida till webgl-kursen](uppgift/skapa-en-me-sida-till-webgl-kursen-v2)". Spara resultatet i `me/redovisa`.
+1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
 1. Gör labben "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)"  Labben genereras i `me/kmom01/lab1`.
 
