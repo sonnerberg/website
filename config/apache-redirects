@@ -235,11 +235,10 @@ Redirect /kurser/dbjs/studieplan    https://goo.gl/oP1wIE
 Redirect /kurser/dbjs               /kurser/dbjs-v2
 Redirect /forum/utbildning/dbjs     /forum/viewforum.php?f=64
 
-# dataweb (dbw)
-Redirect /dbw                   /kurser/dataweb-v1
-Redirect /kurser/dbw            /kurser/dataweb-v1
-Redirect /dataweb               /kurser/dataweb-v1
-Redirect /forum/utbildning/dataweb  /forum/viewforum.php?f=73
+# databas (dataweb (dbw))
+Redirect /databas                   /kurser/databas-v1
+Redirect /kurser/databas            /kurser/databas-v1
+Redirect /forum/utbildning/databas  /forum/viewforum.php?f=73
 
 # phpmvc
 Redirect /phpmvc-v1         /kurser/arkiv/phpmvc-v1
