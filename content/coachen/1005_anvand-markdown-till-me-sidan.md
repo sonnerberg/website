@@ -80,4 +80,4 @@ echo $parsed->text;
 
 Nu kan jag lugnt skriva min redovisningstext i Markdown och överlåta åt PHP att hjälpa mig med formatteringen till HTML.
 
-Har du frågor eller funderingar, eller vill bidra med tips, så finns en [forumtråd för detta tips](t/XX).
+Har du frågor eller funderingar, eller vill bidra med tips, så finns en [forumtråd för detta tips](t/7185).
