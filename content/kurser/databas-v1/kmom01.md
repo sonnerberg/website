@@ -100,7 +100,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa en me-sida för redovisning i kursen javascript1](uppgift/skapa-en-me-sida-for-redovisning-i-kursen-javascript1)". Spara resultatet i `me/redovisa`.
+1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
 1. Jobba igenom uppgiften "[Kom igång med SQL (del 1)](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan1/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att skriva dina egna SQL-satser. Se till att du förstår begreppen HAVING, subqueries och OUTER JOIN. (inkl export, import)
 
