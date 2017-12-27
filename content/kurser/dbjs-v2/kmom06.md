@@ -29,7 +29,7 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
+Läs följande i kurslitteraturen.
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 9: Sammanfattning av SQL-kommandon
@@ -37,11 +37,13 @@ Läs följande:
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
+Det finns ytterligare ett kapitel i boken som är relaterat till prestanda, det går utanför kursens ram men läs vid intresse.
+    * Kap 22: Fysiska lagringsstrukturer i databaser
+
+
 <!--
 Saker vi inte hanterat:
 
-* Kap 3: Mer om datamodellering
-* Kap 11: Normalformer och normalisering
 * Kap 13: Säkerhet i databaser
 -->
 
@@ -52,21 +54,6 @@ Saker vi inte hanterat:
 Läs följande.
 
 1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
-
-
-
-###Video  {#video}
-
-Det finns inga videoförslag.
-
-
-
-###Lästips {#lastips}
-
-Kika på följande lästips om du finner dem intressanta.
-
-1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 22: Fysiska lagringsstrukturer i databaser
 
 
 
@@ -105,18 +92,12 @@ Potentiell som en lab (mot MySQL)?
 
 
 
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/dbjs/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Uppgiften löser själva redovisningstexten, uppgiften är en skrivuppgift.
 

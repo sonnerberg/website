@@ -49,19 +49,6 @@ Läs följande:
 
 
 
-
-###Artiklar {#artiklar}
-
-Det finns inga artiklar.
-
-
-
-###Video  {#video}
-
-Det finns inga videoförslag.
-
-
-
 ###Lästips {#lastips}
 
 Kika på följande lästips om du finner dem intressanta.

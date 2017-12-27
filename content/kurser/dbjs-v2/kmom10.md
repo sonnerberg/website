@@ -14,12 +14,12 @@ Detta kursmoment avslutar och examinerar kursen. Kursmomentet omfattar ett proje
 
 Upplägget är enligt följande:
 
-* Projektet och redovisning (ca 50h)
-* Individuell examination (ca 10h)
+* Projektet och redovisning (ca 20-40h)
+* Individuell examination (ca 20-40h)
 
-Som individuellt examinationsmoment sker en programmeringstentamen med dator.
+Som individuellt examinationsmoment sker en programmeringsuppgift med dator.
 
-Totalt omfattar kursmomentet (07/10) ca 20*3 studietimmar.
+Totalt omfattar kursmomentet (07/10) ca 20*4 studietimmar.
 
 
 
