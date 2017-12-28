@@ -10,7 +10,7 @@ Kmom03: ER-modellering
 Kursutveckling pågår inför VT18.
 [/WARNING]
 
-Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationsship modelling, ER-modellering.
+Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering.
 
 
 <!--more-->

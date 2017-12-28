@@ -93,7 +93,9 @@ Du får pröva att använda tre olika klienter till MySQL, alla tre har sin plat
 
 ###Kmom02: SQL {#kmom02}
 
-TBD.
+Vi jobbar vidare med SQL och tränar mer på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries och `RIGHT/LEFT OUTER JOIN`. När övningen är slut så har du både kommit in i MySQL och du har god översikt av olika baskonstruktioner med SQL.
+
+Du kommer även jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Det innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm.
 
 [Instruktion till kursmoment 02](./kmom02).
 
@@ -101,7 +103,7 @@ TBD.
 
 ###Kmom03: ER-modellering {#kmom03}
 
-TBD.
+Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering.
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -109,7 +111,9 @@ TBD.
 
 ###Kmom04: Transaktioner {#kmom04}
 
-TBD.
+Kursmomenten handlar om begreppet transaktioner i en databas.
+
+I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp en webb/RESTful server och hur du kan skriva din applikationskod för att till exempel komma åt en databas och visa och uppdatera dess innehåll.
 
 [Instruktion till kursmoment 04](./kmom04).
 
@@ -117,7 +121,9 @@ TBD.
 
 ###Kmom05: Procedur, trigger, funktion {#kmom05}
 
-TBD.
+Kursmomenten handlar om att programmera en databas med inbyggda integritetsregler, lagrade procedurer, triggers och inbyggda funktioner.
+
+Vi bygger vidare på vår databasdrivna applikationsserver.
 
 [Instruktion till kursmoment 05](./kmom05).
 
@@ -125,7 +131,9 @@ TBD.
 
 ###Kmom06: Prestanda {#kmom06}
 
-TBD.
+Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du bör använda index för att optimera din databas.
+
+Vi bygger vidare på vår databasdrivna applikationsserver.
 
 [Instruktion till kursmoment 06](./kmom06).
 
