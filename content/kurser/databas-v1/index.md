@@ -159,14 +159,19 @@ Kurslitteratur {#litteratur}
 Det finns läsanvisningar i samband med varje kursmoment.
 
 * **[Databasteknik](kunskap/boken-databasteknik)** -- Radron-McCarthy och Risch  
-  Komplett med det man vill veta om databasteknik, både grunder, modellering och SQL. En databasbok helt enkelt. 
+    Komplett med det man vill veta om databasteknik, både grunder, modellering och SQL. En databasbok helt enkelt. 
+
+* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+    En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
+
+* **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
+    En bok om ES6 som bygger vidare på att man kan ES5.
 
 
 
 ###Referenslitteratur {#referenslitteratur}
 
 Referensdokumentationen är främst olika online-resurser i form av manualer.
-
 
 
 <!--
