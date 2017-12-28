@@ -2,6 +2,7 @@
 
 [FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
+* [Redovisning kurser i januari 2018](t/7187)
 * [Registrera dig för vårterminens kurser](t/7177)
 * [Förkunskaper och förkunskapskontroll (inför VT18)](t/7086)
 * [Förkunskapskontroll våren 2018 för kurspaket](t/7103)
