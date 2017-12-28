@@ -10,14 +10,14 @@ Kmom03: ER-modellering
 Kursutveckling pågår inför VT18.
 [/WARNING]
 
-[ER]
+Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationsship modelling, ER-modellering.
 
-Samtidigt kikar vi på hur man modellerar och tänker när man bygger upp en databas.
 
 <!--more-->
 
+<!--
 [ERBILD]
-
+-->
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -55,6 +55,9 @@ Saker vi inte hanterat:
 Läs igenom följande artiklar.
 
 1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig ett exempel på databasmodellering och dess olika faser.
+
+
+<!--stop-->
 
 
 

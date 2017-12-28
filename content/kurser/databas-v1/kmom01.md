@@ -1,14 +1,10 @@
 ---
 author: mos
 revision:
-    "2017-12-27": (PA1, mos) Arbete pågår.
+    "2017-12-28": (A, mos) Första utgåvan.
 ...
 Kmom01: Databas
 ====================================
-
-[WARNING]
-Kursutveckling pågår inför VT18.
-[/WARNING]
 
 Då dyker vi in i relationsdatabaser tillsammans med SQL och modellering av databaser.
 
@@ -102,9 +98,13 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
-1. Jobba igenom uppgiften "[Kom igång med SQL (del 1)](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan1` och utför minst 2/3 av uppgifterna. Dokumentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att skriva dina egna SQL-satser. Se till att du förstår begreppen HAVING, subqueries och OUTER JOIN. (inkl export, import)
+1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". Spara all SQL-kod i filer i katalogen `me/kmom01/skolan1`. Jobba gärna i grupp och hjälp varandra, men se alltid till att skriva dina egna SQL-satser.
+
+<!--
+IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad guiden går igenom. Använd databasen som finns i guiden.
 
 1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon.
+-->
 
 
 
@@ -119,6 +119,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur känns det att komma igång med MySQL och dess klienter?
 * Har du jobbat med databaser eller liknande tidigare?
+* Hur gick det att jobba med SQL?
 * Jämför SQL med andra sätt att programmera.
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.

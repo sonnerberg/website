@@ -81,15 +81,17 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: TBD {#kmom01}
+###Kmom01: Databas {#kmom01}
 
-TBD.
+Vi introduceras till databasen MySQL och dess olika klienter samt lär oss använda SQL tillsammans med MySQL. Du får jobba igenom en övning i SQL som introducerar dig i grundläggande konstruktioner för att skapa och uppdatera en databas.
+
+Du får pröva att använda tre olika klienter till MySQL, alla tre har sin plats och användningsområde vid olika tillfällen.
 
 [Instruktion till kursmoment 01](./kmom01).
 
 
 
-###Kmom02: TBD {#kmom02}
+###Kmom02: SQL {#kmom02}
 
 TBD.
 
@@ -97,7 +99,7 @@ TBD.
 
 
 
-###Kmom03: TBD {#kmom03}
+###Kmom03: ER-modellering {#kmom03}
 
 TBD.
 
@@ -105,7 +107,7 @@ TBD.
 
 
 
-###Kmom04: TBD {#kmom04}
+###Kmom04: Transaktioner {#kmom04}
 
 TBD.
 
@@ -113,7 +115,7 @@ TBD.
 
 
 
-###Kmom05: TBD {#kmom05}
+###Kmom05: Procedur, trigger, funktion {#kmom05}
 
 TBD.
 
@@ -121,7 +123,7 @@ TBD.
 
 
 
-###Kmom06: TBD {#kmom06}
+###Kmom06: Prestanda {#kmom06}
 
 TBD.
 

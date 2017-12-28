@@ -30,18 +30,7 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du har blivit känd som en webbprogrammerare med känsla för design och kunderna står nu i kö. Du har ett antal uppdrag som dina kunder vill ha utförda och du har begränsad tid.
-
-Välj bland de uppdrag du har nedan. De som är märkta optionella kan du välja om du vill göra, de andra är obligatoriska.
-
-Utveckla och leverera enligt specifikation. Om information saknas så kan du själv tolka kravet, dokumentera hur du gör i redovisningstexten.
-
-Fråga i forumet om du känner dig osäker.
-
-
-
-Projektet {#projekt}
---------------------------------------------------------------------
+<!--stop-->
 
 Ni kan lösa uppgiften i grupp om max tre medlemmar.
 

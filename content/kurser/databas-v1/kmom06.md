@@ -10,7 +10,6 @@ Kmom06: Prestanda
 Kursutveckling pågår inför VT18.
 [/WARNING]
 
-
 Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du bör använda index för att optimera din databas.
 
 Vi bygger vidare på vår databasdrivna applikationsserver.
@@ -59,6 +58,9 @@ Läs följande.
 
 1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
 
+
+
+<!--stop-->
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

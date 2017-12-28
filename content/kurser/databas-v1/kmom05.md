@@ -43,6 +43,8 @@ Läs följande:
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 
+<!--stop-->
+
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------

@@ -35,6 +35,10 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
+
+
+#### Databasteknik {#dbteknik}
+
 1. [Databasteknik](kunskap/boken-databasteknik) om mer SQL.
     * Kap 8: Mer om SQL: Aggregatfunktioner, null-värden, yttre join
     * Kap 20: SQL inuti ett program
@@ -46,7 +50,11 @@ Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går u
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 10: Relationsalgebra
 
-**LÄSANVISNING ES5**
+
+
+#### JavaScript {#javascript}
+
+1. Bekanta dig med kurslitteraturen [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att läsa igenom det första kapitlet [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode") som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript.
 
 1. [Exploring ES6](kunskap/boken-exploring-es6). Läs inledande kapitlet för att få en grov känsla av ES6 kontra ES5.
     * Ch 1: About ECMAScript 6 (ES6)
@@ -123,6 +131,9 @@ Titta på följande:
 Installera labbmiljön för nodejs delen av kursen.
 
 1. [Installera nodejs och npm](kunskap/installera-node-och-npm)
+
+
+<!--stop-->
 
 
 
