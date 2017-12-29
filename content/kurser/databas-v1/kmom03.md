@@ -50,6 +50,16 @@ Saker vi inte hanterat:
 * Kap 11: Normalformer och normalisering
 -->
 
+
+<!--
+1. [Speaking JavaScript](kunskap/boken-speaking-javascript).
+
+    1. [Ch 15: Functions](http://speakingjs.com/es5/ch15.html)
+    1. [Ch 16: Variables: Scopes, Environments, and Closures](http://speakingjs.com/es5/ch16.html)
+-->
+
+
+
 ###Artiklar {#artiklar}
 
 Läs igenom följande artiklar.
@@ -76,6 +86,15 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Gör några extra övningar från övningsfilen (skall redovisas).
 
+<!--
+1. **JS/Node.js klient?** kommandoradsklient. (CRUD), Lönerevision
+
+1. Jobba igenom övningen "[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)". Spara dina eventuella exempelprogram under `me/kmom04/client`.
+
+1. Jobba igenom artikeln "[Skicka environment variabler till Node.js](kunskap/skicka-environment-variabler-till-nodejs)".
+
+-->
+
 
 
 ###Uppgifter {#uppgifter}
@@ -89,6 +108,10 @@ Dessa uppgifter skall utföras och redovisas.
 1. **KOPPLA SQL TILL KLIENT JS**
 
 1. Gör uppgiften "[Bygg en faktureringsmotor för båtklubben (invoice)](uppgift/bygg-en-faktureringsmotor-for-batklubben)". Spara koden i `me/kmom03/invoice`.
+
+<!--
+1. Gör laborationen "[Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler)" för att träna på inbyggda moduler i Node.js. Spara koden i `me/kmom04/node2`.
+-->
 
 
 

@@ -6,6 +6,7 @@ category:
     - mysql
     - kursen dbjs
 revision:
+    "2017-12-29": (B, mos) Länk till uppdaterad version.
     "2017-02-24": (A, mos) Första utgåvan i kursen dbjs.
 ...
 MySQL och Node.js 
@@ -17,6 +18,12 @@ Databasen MySQL är välkänd i webbsammanhang och ser hur vi kan koppla oss fr�
 
 
 <!--more-->
+
+[INFO]
+**Nyare utgåva av artikeln.**
+
+Det finns en uppdaterad version av artikeln i "[MySQL och Node.js (v2)](kunskap/mysql-och-nodejs-v2)".
+[/INFO]
 
 
 

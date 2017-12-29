@@ -86,9 +86,9 @@ Kika igenom följande artiklar.
 
 Följande två dokument gick du igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har koll på dem. De ger dig basen för kursens utvecklingsmiljö mot databasen.
 
-1. Jobba igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/mysql`.
+1. Jobba igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
-1. Bekanta dig med "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)". Se hur du kan använda BTH's databasserver för MySQL och hur du kan använda de olika klienterna för att koppla upp dig. Spara dina eventuella testfiler i `me/kmom01/mysql`.
+1. Bekanta dig med "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)". Se hur du kan använda BTH's databasserver för MySQL och hur du kan använda de olika klienterna för att koppla upp dig. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
 
 
@@ -98,7 +98,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
-1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". Spara all SQL-kod i filer i katalogen `me/kmom01/skolan1`. Jobba gärna i grupp och hjälp varandra, men se alltid till att skriva dina egna SQL-satser.
+1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". Spara all SQL-kod i filer i katalogen `me/kmom01/skolan1`.
 
 <!--
 IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad guiden går igenom. Använd databasen som finns i guiden.
