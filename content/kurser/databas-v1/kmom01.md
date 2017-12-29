@@ -98,13 +98,20 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
-1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". Spara all SQL-kod i filer i katalogen `me/kmom01/skolan1`.
+1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". Spara all SQL-kod i filer i katalogen `me/kmom01/skolan1`. I nästa kmom fortsätter du med avslutande delen.
 
 <!--
 IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad guiden går igenom. Använd databasen som finns i guiden.
 
 1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon.
 -->
+
+
+### Extra {#extra}
+
+Utför detta om du har tid och lust.
+
+1. I nästa kmom kommer du att avsluta och göra resterande delar av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Om du har flyt så kan du jobbar vidare i guiden redan nu och spara lite arbete i nästa kmom.
 
 
 

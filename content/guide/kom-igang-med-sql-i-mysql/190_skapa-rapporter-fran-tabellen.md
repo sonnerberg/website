@@ -24,10 +24,12 @@ mysql> SELECT * FROM larare;
 | hag     | ADM       | Hagrid    | Rubeus     | M    | 30000 | 1956-05-06 |         2 |
 | hoc     | DIDD      | Madam     | Hooch      | K    | 37580 | 1948-04-08 |         1 |
 | min     | DIDD      | Minerva   | McGonagall | K    | 49880 | 1955-05-05 |         2 |
-| sna     | DIPT      | Severus   | Snape      | M    | 40880 | 1951-05-01 |         1 |
+| sna     | DIPT      | Severus   | Snape      | M    | 45000 | 1951-05-01 |         2 |
 +---------+-----------+-----------+------------+------+-------+------------+-----------+
 8 rows in set (0.00 sec)
 ```
+
+OM du inte har exakt samma värden så har du troligen missat något i samband med lönerevisionen som gjordes. Försök åtgärda det.
 
 
 
@@ -40,7 +42,7 @@ Gör följande SELECT-frågor, du kan se ledtrådar till svaren i slutet av styc
 2. Visa de rader som har en akronym som börjar med bokstaven 'h' (ledtråd `LIKE`).
 3. Visa de rader vars lärares förnamn innehåller bokstaven 'o'.
 4. Visa de rader där lärarna tjänar mellan 30 000 - 50 000.
-5. Visa de rader där lärarens kompetens är lika med 1 och lönen är större än 40 000.
+5. Visa de rader där lärarens kompetens är mindre än 7 och lönen är större än 40 000.
 6. Visa rader som innehåller lärarna sna, dum, min (ledtråd `IN`).
 7. Visa de lärare som har lön över 80 000, tillsammans med de lärare som har en kompetens om 2 och jobbar på avdelningen ADM.
 
@@ -52,7 +54,7 @@ För min egen del får jag följande svar på ovan frågor, du kan använda det 
 2. hag, hoc
 3. ala, gyl
 4. hag, hoc, min, sna
-5. sna
+5. min, sna
 6. sna, dum, min
 7. dum, hag
 

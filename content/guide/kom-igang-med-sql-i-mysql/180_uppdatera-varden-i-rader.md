@@ -10,6 +10,8 @@ Vi skall använda `UPDATE` för att uppdatera värden i rader och kolumner. Beka
 
 Spara det du nu gör i filen `dml_update.sql`.
 
+Vi skall göra en lönerevision för lärarna och höja deras löner.
+
 
 
 Grundlön till alla lärare {#grund}
@@ -127,7 +129,7 @@ mysql> SELECT SUM(lon) AS 'Lönesumma' FROM larare;
 +------------+
 | Lönesumma  |
 +------------+
-|     326122 |
+|     330242 |
 +------------+
 1 row in set (0.00 sec)
 
@@ -135,12 +137,12 @@ mysql> SELECT SUM(lon)/305000*100-100 AS 'Lönesumma ökning %' FROM larare;
 +--------------------+
 | Lönesumma ökning % |
 +--------------------+
-|             6.9252 |
+|             8.2761 |
 +--------------------+
 1 row in set (0.00 sec)
 ```
 
-Nåväl, det blev lite högre löneökning än planerat, men så må det vara.
+Nåväl, det blev lite högre löneökning än planerat, men så må det vara, vi bokför det som löneglidning.
 
 
 
@@ -166,7 +168,7 @@ mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens FROM larare ORDER
 +---------+-----------+-----------+------+-------+-----------+
 | dum     | ADM       | Albus     | M    | 85000 |         7 |
 | min     | DIDD      | Minerva   | K    | 49880 |         2 |
-| sna     | DIPT      | Severus   | M    | 40880 |         1 |
+| sna     | DIPT      | Severus   | M    | 45000 |         2 |
 | hoc     | DIDD      | Madam     | K    | 37580 |         1 |
 | hag     | ADM       | Hagrid    | M    | 30000 |         2 |
 | ala     | DIPT      | Alastor   | M    | 27594 |         1 |
@@ -198,7 +200,7 @@ $ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
 +------------+
 | Lönesumma  |
 +------------+
-|     326122 |
+|     330242 |
 +------------+
 ```
 
@@ -210,6 +212,6 @@ $ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
 +------------+
 | Lönesumma  |
 +------------+
-|     326122 |
+|     330242 |
 +------------+
 ```

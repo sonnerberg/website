@@ -63,9 +63,10 @@ Gör ytterligare en rapport.
 | ADM       |         3 |     27594 |
 | DIDD      |         2 |     49880 |
 | DIDD      |         1 |     37580 |
-| DIPT      |         1 |     32023 |
+| DIPT      |         2 |     45000 |
+| DIPT      |         1 |     27594 |
 +-----------+-----------+-----------+
-6 rows in set (0.00 sec)
+7 rows in set (0.00 sec)
 ```
 
 
@@ -94,16 +95,15 @@ mysql> SELECT avdelning, kompetens, ROUND(AVG(lon)) as Snittlön
 +-----------+-----------+-----------+
 | ADM       |         7 |     85000 |
 | DIDD      |         1 |     37580 |
-| DIPT      |         1 |     32023 |
 +-----------+-----------+-----------+
-3 rows in set (0.00 sec)
+2 rows in set (0.00 sec)
 ```
 
 Se hur WHERE ligger i SELECT-satsen, innan GROUP BY som innebär att den aggregerande funktionen AVG styrs av, efter att snittlönen är uträknad kan HAVING göra sitt urval.
 
 Gör nu en egen rapport.
 
-1. Visa per avdelning de kompetenser som finns och hur många anställda det finns per kompetens samt gruppens snittlön, men visa bara för kompetenser som är lägre än 7 och sortera per avdelning i stigande ordning och per kompetens i sjunkande ordning.
+1. Visa per avdelning de kompetenser som finns och hur många anställda det finns per kompetens samt gruppens snittlön, men visa bara för kompetenser som är lägre än 7 bara om gruppens snittlön är mellan 30 000 - 45 000. Sortera per kompetens i sjunkande ordning.
 
 Ditt svar bör se ut så här.
 
@@ -111,16 +111,14 @@ Ditt svar bör se ut så här.
 +-----------+-----------+-------+-----------+
 | avdelning | kompetens | Antal | Snittlön  |
 +-----------+-----------+-------+-----------+
-| ADM       |         3 |     1 |     27594 |
 | ADM       |         2 |     1 |     30000 |
-| DIDD      |         2 |     1 |     49880 |
+| DIPT      |         2 |     1 |     45000 |
 | DIDD      |         1 |     1 |     37580 |
-| DIPT      |         1 |     3 |     32023 |
 +-----------+-----------+-------+-----------+
-5 rows in set (0.00 sec)
+3 rows in set (0.00 sec)
 ```
 
-Alltså, HAVING är till för att göra urval på aggregerad data och enbart visa de rader som matchar villkoret.
+Alltså, HAVING är till för att göra urval på aggregerad data och enbart visa de rader som matchar villkoret. WHERE gör urvalet innan det aggregerade datat beräknas.
 
 
 

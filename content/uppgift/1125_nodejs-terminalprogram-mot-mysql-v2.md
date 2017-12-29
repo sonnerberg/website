@@ -22,7 +22,7 @@ Du skall bygga terminalprogram i Node.js som skapar rapporter och söker i en My
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)".
+Du har jobbat igenom första delarna av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql/grunderna)".
 
 Du har jobbat igenom artikeln "[MySQL och Node.js (v2)](kunskap/mysql-och-nodejs-v2)".
 
