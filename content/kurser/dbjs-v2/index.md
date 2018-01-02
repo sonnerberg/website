@@ -182,39 +182,26 @@ Kurslitteratur {#litteratur}
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
-<!--
-Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
--->
-
 
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
-
 Det finns läsanvisningar i samband med varje kursmoment.
 
+* **[Databasteknik](kunskap/boken-databasteknik)** -- Radron-McCarthy och Risch  
+    Komplett med det man vill veta om databasteknik, både grunder, modellering och SQL. En databasbok helt enkelt. 
 
-* **[Databasteknik](kunskap/boken-databasteknik)** -- Thomas Radron-McCarthy, Tore Risch  
-  En lättläst och trevlig bok om grunderna i klassisk databasteknik.
+* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+    En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
-* **[Speaking JavaScript](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer.  
-  En bra strukturerad fri bok om JavaScript ES5, finns även efterföljare om ES6.
+* **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
+    En bok om ES6 som bygger vidare på att man kan ES5.
 
 
 
 ###Referenslitteratur {#referenslitteratur}
 
-Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
-
-* **Database Systems - A Practical Approach to Design, Implementation and Management** -- Connolly, Begg  
-  Alternativ bok till kurslitteraturen Databasteknik.
-
-* **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)** -- Rolf Staflin  
-  En stabil bok för att komma igång med HTML och CSS.
-
-* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
-  En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
+Referensdokumentationen är främst olika online-resurser i form av manualer.
 
 
 
