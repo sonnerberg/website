@@ -12,6 +12,9 @@ Kursutveckling pågår inför VT18.
 
 Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering.
 
+Vi jobbar vidare med SQL och tränar mer på utmanande saker som subqueries, JOIN och LEFT/RIGHT OUTER JOIN.
+
+Vi bygger vidare på våra terminalskript i JavaScript och Node.js och kopplar dem till databasen.
 
 <!--more-->
 
@@ -35,6 +38,7 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 8: (repetera) Mer om SQL: Aggregatfunktioner, null-värden, yttre join
     * Kap 2: ER-modellering
     * Kap 4: Designpocessen
     * Kap 5: Relationsmodellen
@@ -82,6 +86,8 @@ Läs igenom följande artiklar.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
+1. Jobba igenom delen "Koppla tabeller" av guiden "[Kom igång med SQL i MySQL (Koppla tabeller)](guide/kom-igang-med-sql-i-mysql/koppla-tabeller)". Spara all SQL-kod i filer i katalogen `me/kmom03/skolan3`. Du kan gärna kopiera de skript du sparat tidigare och utgå från dem.
+
 1. **? (extra i dbjs)** Skapa en ER-modell för din databas Skolan via [reverse engineering med MySQL Workbench](coachen/reverse-engineering-av-databasen-mysql-med-workbench).
 
 1. Gör några extra övningar från övningsfilen (skall redovisas).
@@ -113,6 +119,12 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör laborationen "[Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler)" för att träna på inbyggda moduler i Node.js. Spara koden i `me/kmom04/node2`.
 -->
 
+<!--
+Enkel SQL laboration som visar att studenten kan göra joins/subquery.
+
+1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
+-->
+
 
 
 
@@ -126,3 +138,4 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * 
+* Vilken är din TIL för detta kmom?

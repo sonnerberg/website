@@ -1,16 +1,12 @@
 ---
 author: mos
 revision:
-    "2017-12-27": (PA1, mos) Arbete pågår.
+    "2018-01-02": (A, mos) Första utgåvan.
 ...
 Kmom02: SQL
 ====================================
 
-[WARNING]
-Kursutveckling pågår inför VT18.
-[/WARNING]
-
-Vi jobbar vidare med SQL och tränar mer på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries och `RIGHT/LEFT OUTER JOIN`. När övningen är slut så har du både kommit in i MySQL och du har god översikt av olika baskonstruktioner med SQL.
+Vi jobbar vidare med SQL och tränar mer på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
 Du kommer även jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Det innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm.
 
@@ -65,7 +61,7 @@ Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går u
 
 ###MDN dokumentation {#mdn}
 
-I kursen används Mozilla Developers Network (MDN) som en resurs generellt för webbresurser och specifikt för referensmanual till programmeringsspråket JavaScript.
+I kursen används [Mozilla Developers Network (MDN)](https://developer.mozilla.org/) som en resurs generellt för webbresurser och specifikt för referensmanual till programmeringsspråket JavaScript.
 
 Vill du hamna på rätt manualsida så lägger du alltid till "mdn" till din googling. Det finns många versioner av JavaScript och du behöver ofta gå tillbaka till källan i referensmanualen för att veta vad som är rätt (eller fel).
 
@@ -78,7 +74,7 @@ Vill du hamna på rätt manualsida så lägger du alltid till "mdn" till din goo
 
 ###Node.js dokumentation {#nodejs}
 
-Node.js är en påbyggnad till grunden i JavaScript. Via webbplatsen för Node.js finner du referensdokumentationen med de delar och moduler som är specifika för JavaScript i sammanhanget Node.js.
+[Node.js](https://nodejs.org/) låter dig köra JavaScript utan en webbläsare. Via webbplatsen för Node.js finner du referensdokumentationen med de delar och moduler som är specifika för JavaScript i sammanhanget Node.js. Node.js innehåller ett API som bland annat ger dig tillgång till operativsystemets resurser och låter dig skriva terminalprogram.
 
 1. Bekanta dig med [dokumentationen till Node.js](https://nodejs.org/en/docs/). Kika översiktligt på API dokumentationen för den senaste LTS-versionen (Long Time Support).
 
@@ -103,10 +99,7 @@ Läs följande:
 
 Installera följande.
 
-1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](kunskap/installera-node-och-npm)".
-
-
-<!--stop-->
+1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](labbmiljo/node-och-npm)".
 
 
 
@@ -128,7 +121,7 @@ Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någ
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Jobba igenom resterande del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql/grunderna)". Spara all SQL-kod i filer i katalogen `me/kmom02/skolan2`. Du kan gärna kopiera alla skript du redan sparat i `me/kmom01/skolan1` och utgå från dem.
+1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Spara all SQL-kod i filer i katalogen `me/kmom02/skolan2`. Du kan gärna kopiera alla skript du redan sparat i `me/kmom01/skolan1` och utgå från dem.
 
 1. Lös uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)". Spara alla filer i `me/kmom02/terminal1`.
 
@@ -143,6 +136,8 @@ Enkel SQL laboration som visar att studenten kan göra joins/subquery.
 ###Extra {#extra}
 
 Gör följande extrauppgifter om du har tid och lust.
+
+1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Om du har flyt så kan du jobbar vidare i guiden redan nu och spara lite arbete i nästa kmom.
 
 1. Jobba igenom guiden "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)" för att lära dig hur du jobbar mer effektivt i terminalen med tmux. Tmux ger dig möjlighet att dela in din terminal i olika flikar och varje flik i olika delar.
 

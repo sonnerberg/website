@@ -109,9 +109,9 @@ IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad 
 
 ### Extra {#extra}
 
-Utför detta om du har tid och lust.
+Gör följande extrauppgifter om du har tid och lust.
 
-1. I nästa kmom kommer du att avsluta och göra resterande delar av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Om du har flyt så kan du jobbar vidare i guiden redan nu och spara lite arbete i nästa kmom.
+1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Om du har flyt så kan du jobbar vidare i guiden redan nu och spara lite arbete i nästa kmom.
 
 
 

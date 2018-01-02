@@ -9,17 +9,8 @@ Minnesanteckning
 * export data
 * import data
 * insert from csv
+* mysqldump
 
 * datatyper?
 * konstruktioner för where?
 * distinct
- 
-
-UNION
-
-
-
- 
- 
-
- 

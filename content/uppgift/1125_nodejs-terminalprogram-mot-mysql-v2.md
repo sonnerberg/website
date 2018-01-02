@@ -7,7 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2017-12-29": (A, mos) Uppdaterad version från tidigare dokument.
+    "2018-01-02": (A, mos) Uppdaterad version från tidigare dokument.
 ...
 Node.js terminalprogram mot MySQL (v2)
 ==================================
@@ -42,11 +42,11 @@ Krav {#krav}
 
 1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av respektive fil.
 
-1. Skapa filen `skolan.js` och lägg all kod i den filen. Strukturera din kod i funktioner.
+1. Strukturera din kod i funktioner där det är lämpligt.
 
-1. Skapa filen `lonerevision.js` och lägg all kod i den filen. Strukturera din kod i funktioner.
+1. Skapa filen `larare.js` som skall visa all information om lärare, inklusive deras ålder. Man skall kunna söka/filtrera alla fält så att endast de rader som matchar en söksträng skall visas.
 
-1. Skapa filen `kompetens.js` och lägg all kod i den filen. Strukturera din kod i funktioner.
+1. Skapa filen `lonerevision.js` och gör det möjligt att höja/sänka samtliga lärares lön med en procentsiffra som matas infrån tangentbordet. När programmet körs skall det avslutas med att visa en rapport över lärarnas uppdaterade lön.
 
 1. Validera din kod.
 

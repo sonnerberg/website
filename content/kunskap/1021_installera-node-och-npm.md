@@ -6,8 +6,8 @@ category:
     - nodejs
     - npm
 revision:
-    2016-11-01: (B, mos) Bytte ut nodejs mode node i verifiering.
-    2016-10-14: (A, mos) Första utgåvan.
+    "2016-11-01": (B, mos) Bytte ut nodejs mode node i verifiering.
+    "2016-10-14": (A, mos) Första utgåvan.
 ...
 Installera Node.js och npm
 ===================================
