@@ -4,6 +4,7 @@ category:
     - sql
     - databas
 revision:
+    "2018-01-03": "(Q, mos) Uppgraderade dokumentet till en guide."
     "2017-02-28": "(P, mos) Update on HAVING."
     "2017-02-24": "(O, mos) Genomgång inför dbjs."
     "2013-11-18": "(N, mos) Bytte ut bild om 3-tabellers join, stycke om teckenkodning, stycke om ER-diagram."
@@ -33,6 +34,12 @@ Om du redan kan SQL så är den här övningen någorlunda enkel. Men då får d
 Övningen är utvecklad för MySQL men använder standard SQL så den bör gå bra att köra även i andra databaser. När det finns hänvisningar till referensmanualen så avses [referensmanualen för MySQL](http://dev.mysql.com/doc/refman/5.7/en/). Välj senaste GA versionen av manualen, men även äldre versioner fungerar för övningens omfattning.
 
 Du kan välja att göra övningen i valfri klient. Jag har gjort övningen i MySQL Workbench.
+
+[INFO]
+**Nyare utgåva**
+
+Det finns en utgåva av detta dokument som är vidareutvecklat. Du hittar det uppdaterade dokumentet i form av en guide på "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)".
+[/INFO]
 
 
 
