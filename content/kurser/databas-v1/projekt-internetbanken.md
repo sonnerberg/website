@@ -12,7 +12,19 @@ Du har en case study som någon har förberett. Du har även kraven på systemet
 
 Lycka till!
 
+<!--
+excel, csv för input och sätta upp tabellerna.
+csv output till excel för att visa resultat (admin-delen)
+backup av databasen?
 
+Visa hur projektet testas?
+
+Förtydliga % hur överförs
+
+Visa senaste transaktioner (bra testa).
+Visa summan på banken (bra testa).
+Visa antalet konton på banken (test).
+-->
 
 Case study {#studie}
 --------------------------------------------------------------------
