@@ -23,7 +23,8 @@ Låt oss börja med att skapa tabellen för kurs.
 |-----------|------------------------------|
 | kod       | CHAR(6) PRIMARY KEY NOT NULL |
 | namn      | VARCHAR(40)                  |
-| poang     | FLOAT                        |
+| poang     | INT                          |
+| niva      | CHAR(3)                      |
 
 Skriv SQL-koden för att skapa tabellen.
 
