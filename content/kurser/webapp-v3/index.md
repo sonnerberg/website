@@ -2,7 +2,9 @@
 title: webapp v3
 author:
     - mos
+    - efo
 revision:
+    "2018-01-04": (H, efo) Ändring av kmom namn och innehåll.
     "2018-01-03": (G, mos) Förberedelser inför webapp-v3.
     "2017-03-17": (F, efo) Förberedelser inför webapp-v2.
     "2015-12-11": (E, mos) Inklusive kmom06 och översyn av syftet.
@@ -65,7 +67,7 @@ Kursen omfattar följande områden:
 * Mobilen och läsplattan som test och utvecklingsmiljö.
 * Touch-event.
 * Responsive design, storlekar, landskap, portätt.
-* Koppling mot server och databas.
+<!-- * Koppling mot server och databas. -->
 * Jobba med RESTful API:er och JSON.
 * Mobil prestanda och tillgänglighet.
 * Att använda hårdvarufunktioner som är specifika på mobila enheter, tex splash-screens, logotyper och filhantering.
@@ -83,16 +85,18 @@ Mål {#mal}
 Efter genomförd kurs skall studenten:
 
 * påvisa grundläggande förståelse för utveckling av mobila applikationer med valda tekniker genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* påvisa god förståelse för mobila enheters begränsningar och styrkor samt anpassa mobila applikationer för tillgänglighet och användbarhet.
 * påvisa goda kunskaper i att skapa mobila appar, med HTML, CSS och JavaScript, genom att tillämpa dessa tekniker i praktiska övningar och projekt.
-* påvisa goda kunskaper i att använda JavaScript på serversidan tillsammans med Node.js genom att tillämpa dessa tekniker i praktiska övningar och projekt.
-
+<!-- * påvisa goda kunskaper i att använda JavaScript på serversidan tillsammans med Node.js genom att tillämpa dessa tekniker i praktiska övningar och projekt. -->
+* påvisa goda kunskaper i att använda JSON API:er för att hämta, skapa, uppdatera och ta bort data genom att använda JSON API:er i praktiska övningar och projekt.
 
 
 ###Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
-* självständigt utveckla, dokumentera och presentera ett projekt baserat på utveckling av en mobil app med både klient- och server-kod.
+* självständigt utveckla, dokumentera och presentera ett projekt baserat på utveckling av en mobil app.
+<!-- * med både klient- och server-kod. -->
 * ha god praktisk förmåga att hantera de verktyg och miljöer som används vid utveckling och felsökning av mobila appar med valda tekniker.
 
 
@@ -103,19 +107,19 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: En mobil webapp i mithril {#kmom01}
+###Kmom01: Single Page Application {#kmom01}
 
-Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript och vi kallar dem för mobila webbapplikationer. Som ett första steg så läser vi på om grunderna och vi bygger en me-app med fokus på mindre terminaler.
+Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript. Vi ser hur vi kan utnyttja dessa tekniker för att ändra innehållet utan att ladda om applikationen. Som ett första steg så läser vi på om grunderna, bygger en me-sida med fokus på mindre terminaler och börjar så smått med det löpande projektet för alla sex kursmoment.
 
 [Instruktion till kursmoment 01](kurser/webapp-v3/kmom01).
 
 
 
-###Kmom02: Bygg ut din mobila webapp {#kmom02}
+###Kmom02: Mobila enheters begränsningar {#kmom02}
 
-Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. I detta kursmoment bygger vi vidare på vår me-app genom att hämta information från Githubs API.
+Vi tar en titt på vilka begränsningar och utmaningar man står inför som användare av en mobil enhet. Vi brytar ut CSS koden från kmom01 till ett GUI komponentbaserad ramverk och lägger till fler GUI komponenter till vårt ramverk.
 
-Vi bygger även en app inför Nobel festen där vi använder oss av Nobelprisets API för att visa information om pristagare.
+Vi fortsätter med vår applikation från kmom01 och använder tekniker för att strukturera JavaScript koden på ett bättre sätt.
 
 Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och visa information i JSON-filer.
 
@@ -123,17 +127,17 @@ Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och vis
 
 
 
-###Kmom03: Dashboard {#kmom03}
+###Kmom03: Formulär och CRUD {#kmom03}
 
-I detta kursmoment skall vi bygga en SPA, som fungerar på alla våra olika stora skärmar. Vi hämtar data från minst två API'er och visualiserar det på en dashboard designat för att ge användaren en snabb överblikk.
+I detta kursmoment fortsätter vi med att utveckla våra GUI komponenter från tidigare kursmoment. Vi skapar lättanvända formulärfält med hjälp av HTML5 och kopplar ihop fälten i formulär som är lätta att använda på små skärmar där kontext och möjligheten att skriva snabbt och enkelt saknas.
 
-Vi kollar på hur vi kan skapa ett enkelt grid-layout och hur vi kan återanvända komponenter i javascript ramverket mithril.
+I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort data via formulär. Vi har i tidigare kursmoment arbetat enbart med JavaScript, men ska i detta kursmoment titta på hur vi kan använda oss ett JavaScript ramverk för att underlätta hanteringen av hämtning av data, rendering av HTML-element och de olika vyer.
 
 [Instruktion till kursmoment 03](kurser/webapp-v3/kmom03).
 
 
 
-###Kmom04: CRUD {#kmom04}
+###Kmom04: Autentisering med JWT {#kmom04}
 
 Än så länge har vi bara hämtat data från API'er. I detta kursmoment bygger vi en app som hämtar, skapar, uppdaterar och tar bort data med hjälp av ett API.
 
@@ -143,19 +147,17 @@ Vi tittar på hur vi kan optimera formulär för att fungera bra på mobila enhe
 
 
 
-###Kmom05: Litet kundprojekt {#kmom05}
+###Kmom05: Native {#kmom05}
 
-Du skall nu utföra ett mindre projekt till en kund. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
-
-Vi tittar även på hur vi kan använda våra mobila enheter för att ladda filer.
+Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på riktigt för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
 
 [Instruktion till kursmoment 05](kurser/webapp-v3/kmom05).
 
 
 
-###Kmom06: Gomoku {#kmom06}
+###Kmom06: Mobila enheters styrkor {#kmom06}
 
-Vi har tidigare gjort en server för Gomoku och nu är det dags att göra en klient för webbläsaren och mobila enheter. Här använder vi all kunskap från tidigare kursmoment för att skap en trevlig spelupplevelse för användaren.
+I detta kursmoment fortsätter vi att utnyttja styrkorna i våra mobila enheter. Vi kopplar in kamera och GPS för att skapa en fulländad applikation, som utnyttjar alla möjligheter vi har på en mobil plattform.
 
 [Instruktion till kursmoment 06](kurser/webapp-v3/kmom06).
 
@@ -164,6 +166,8 @@ Vi har tidigare gjort en server för Gomoku och nu är det dags att göra en kli
 ###Kmom07/10: Projekt och examination {#kmom10}
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
+
+Projektet bygger på tidigare kursmoment och med dina nya erfarenheter skapar du en tillgänglig och användbar mobil applikation enligt specifikationen.
 
 [Instruktion till kursmoment 10](kurser/webapp-v3/kmom10).
 
@@ -258,7 +262,7 @@ Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källor
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
