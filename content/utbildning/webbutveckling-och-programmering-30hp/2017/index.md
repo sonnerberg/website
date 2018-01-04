@@ -29,12 +29,12 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/python/block-kurser-kmom
+                                route: kurser/python-v1/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/javascript1/block-kurser-kmom
+                                route: kurser/javascript1-v1/block-kurser-kmom
                     column-3:
                         data:
                             meta:
@@ -44,7 +44,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/webapp-v2/block-kurser-kmom
+                                route: kurser/webapp-v3/block-kurser-kmom
 ...
 Webbutveckling och Programmering, 30hp (webutv)
 ==================================
