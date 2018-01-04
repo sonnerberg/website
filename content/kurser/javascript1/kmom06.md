@@ -111,5 +111,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Var det svårt att greppa hur function scope och closure fungerar eller känns det naturligt?
 * Har du några erfarenheter av designmönster sedan tidigare?
 * Kan du jämföra "module pattern" med någon annan liknande datastruktur?
-* Känns "module pattern som en bra kodstruktur"?
+* Känns "module pattern" som en bra kodstruktur?
 * Var boken "Learning JavaScript Design Patterns" lättläst eller utmanande?
