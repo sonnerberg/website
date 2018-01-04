@@ -8,6 +8,10 @@ revision:
 Kmom06: Gomoku
 ==================================
 
+[WARNING]
+**Kursutveckling pågår.**
+[/WARNING]
+
 Vi har vid ett tidigare tillfälle skrivit en server som kan spela Gomoku. I detta kursmoment skall vi använda denna server, men spela via servern på våra mobila enheter.
 
 

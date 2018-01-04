@@ -8,6 +8,10 @@ revision:
 Kmom02: Bygg ut din mobila webapp
 ==================================
 
+[WARNING]
+**Kursutveckling pågår.**
+[/WARNING]
+
 Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. Men med mobila terminaler finns det en del som är specifikt och skiljer sig från desktop miljöer. Låt oss bygga vidare på me-appen och testa runt för att se vilka möjligheter och begränsningar som kan finnas. Det blir en blandning av olika tekniker men fokus är att lära oss mer om den mobila utvecklingsmiljön.
 
 Vi kommer även titta på hur vi hämtar data från externa API'er och jobba med verktyg som underlättar när vi jobabr med JSON API'er.

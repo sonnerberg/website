@@ -8,6 +8,10 @@ revision:
 Kmom01: En mobil webapp i mithril
 ==================================
 
+[WARNING]
+**Kursutveckling pågår.**
+[/WARNING]
+
 Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript och vi kallar dem för mobila webbapplikationer. Som ett första steg så läser vi på om grunderna och vi bygger en me-app med fokus på mindre terminaler.
 
 Eller ja, den blir skalbar så den fungerar även på större plattformar, men vårt fokus är mindre, mobila enheter.
@@ -29,6 +33,25 @@ Det kan se ut så här när vi är klara.
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
+
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
+dbwebb clone webapp
+cd webapp
+dbwebb init
+```
 
 
 
@@ -85,18 +108,6 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 -------------------------------------------
 
 *(ca: 6-10 studietimmar)*
-
-
-
-###Labbmiljö {#labbmiljo}
-
-Installera labbmiljön för kursen.
-
-1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen.
-
-1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `webapp`](dbwebb-cli/clone).
-
-Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`](dbwebb-cli).
 
 
 

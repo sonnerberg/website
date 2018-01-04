@@ -7,6 +7,10 @@ revision:
 Kmom05: Litet kundprojekt
 ==================================
 
+[WARNING]
+**Kursutveckling pågår.**
+[/WARNING]
+
 I detta kursmomentet ska vi kolla på hur vi kan läsa data från en lokal fil och utföra ett mindre projekt till en kund. Uppgiften är friare i sin utformning, prioritera kraven och tänka till vad kunden egentligen vill ha.
 
 <!--more-->

@@ -32,17 +32,17 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/htmlphp/block-kurser-kmom
+                                route: kurser/htmlphp-v2/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/design/block-kurser-kmom
+                                route: kurser/design-v1/block-kurser-kmom
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: kurser/dbw-v1/block-kurser-kmom
+                                route: kurser/databas-v1/block-kurser-kmom
                     column-4:
                         data:
                             meta:

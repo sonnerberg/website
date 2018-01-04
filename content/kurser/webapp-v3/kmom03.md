@@ -1,11 +1,15 @@
 ---
 author: mos
 revision:
-  "2017-03-13": (A, efo) Första utgåvan för webapp-v2.
+  "2017-03-13": (B, efo) Första utgåvan för webapp-v2.
   "2015-11-23": (A, mos) Första utgåvan för kursen.
 ...
 Kmom03: Dashboard
 ==================================
+
+[WARNING]
+**Kursutveckling pågår.**
+[/WARNING]
 
 Vi jobbar vidare med mithril och att hämta data från api'er. Nu handlar det om att skapa mithril komponenter, som underlätter för att återanvända kod. Vi ska även titta på hur vi skapar ett grid system för att skapa en SPA-applikation som kan visas upp på enheter i fem olika storlekar.
 
