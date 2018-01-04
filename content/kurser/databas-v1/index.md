@@ -174,6 +174,12 @@ Det finns läsanvisningar i samband med varje kursmoment.
 Referensdokumentationen är främst olika online-resurser i form av manualer.
 
 
+
+###Övrig litteratur {#ovriglitteratur}
+
+I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
+
+
 <!--
 
 Kursbok saknas så inga speciella läsanvisningar syns här.

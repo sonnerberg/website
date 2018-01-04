@@ -1,42 +1,48 @@
 ---
-title: webapp v1
-
-author: mos
+title: webapp v3
+author:
+    - mos
 revision:
-    "2017-04-26": (F, mos) Fixa länkar till webapp-v1.
+    "2018-01-03": (G, mos) Förberedelser inför webapp-v3.
+    "2017-03-17": (F, efo) Förberedelser inför webapp-v2.
     "2015-12-11": (E, mos) Inklusive kmom06 och översyn av syftet.
     "2015-12-04": (D, mos) Inklusive kmom05.
     "2015-11-23": (C, mos) Inklusive kmom03 & 04.
     "2015-10-26": (B, mos) Inklusive kmom01 & 02.
     "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
 ...
-Kursen webapp v1
+Kursen webapp v3
 ==================================
 
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med HTML, CSS och JavaScript.
 
-[INFO]
-**Tidigare version av kursen**
-
-Dett är version 1 av kursen webapp.
-
-Från och med vårterminen 2017 läsperiod 4 finns en ny version av kursen, version 2. Kursmaterialet till [den nya kursen finns här](kurser/webapp-v2).
-
-Om du har påbörjat version 1 så skall du avsluta den och dess kursmoment, eller kan du välja att gå om webapp-v2 från början.
-  
-[/INFO]
-
-
-
 <!--more-->
+
+[WARNING]
+**Kursutveckling pågår.**
+[/WARNING]
 
 Kursen syftar till att lära ut utveckling av webbapplikationer med HTML, CSS och JavaScript och fokuserar på mobila enheter och läsplattor.
 
 Kursen går igenom konstruktioner i HTML, CSS och JavaScript som hjälper dig bygga applikationer som är oberoende av skärmens storlek och enhetens styrning (mus, touchscreen, penna, tangentbord).
 
-Du bygger en applikation som använder sig av HTML, CSS och JavaScript på klientsidan <strike>och JavaScript med Node.js på server-sidan</strike> och du jobbar med RESTful API:er och JSON-data för att bygga både webappar och hybrid webappar. <strike>Du skapar ett RESTful API som applikationen använder för att komma åt information på serversidan.</strike>
+Du bygger en applikation som använder sig av HTML, CSS och JavaScript på klientsidan och du jobbar med RESTful API:er och JSON-data för att bygga både webappar och hybrid webappar.
 
 Via litteraturstudier och praktiska övningar förkovrar du dig i området. I slutet av kursen får du visa dina färdigheter i ett praktiskt programmeringsprojekt där allt integreras.
+
+
+
+[INFO]
+**Tidigare/Nyare version av kursen**
+
+Från och med vårterminen 2018 gäller version 3 av kursen.
+
+Under vårterminen 2017 gällde version 2 av kursen, [webapp-v2](kurser/webapp-v2).
+
+Fram till och med höstterminen 2016 gällde version 1 av kursen, [webapp-v1](kurser/webapp-v1).
+
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
+[/INFO]
 
 
 
@@ -60,10 +66,9 @@ Kursen omfattar följande områden:
 * Touch-event.
 * Responsive design, storlekar, landskap, portätt.
 * Koppling mot server och databas.
-* <strike>Skapa RESTful API med JavaScript och Node.js.</strike>
 * Jobba med RESTful API:er och JSON.
 * Mobil prestanda och tillgänglighet.
-* <strike>Att använda hårdvarufunktioner som är specifika på mobila enheter, tex positionering och kartor.</strike>
+* Att använda hårdvarufunktioner som är specifika på mobila enheter, tex splash-screens, logotyper och filhantering.
 * Jobba med webappar och hybrid webapp för att komma åt hårdvarunära funktioner.
 * Felsökning och tekniker att debugga sitt program.
 * Utvecklingsmiljö och verktyg för utveckling av mobila appar.
@@ -72,8 +77,6 @@ Kursen omfattar följande områden:
 
 Mål {#mal}
 ------------------------
-
-
 
 ###Kunskap och förståelse {#kunskap}
 
@@ -100,58 +103,61 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: En mobil webapp i HTML {#kmom01}
+###Kmom01: En mobil webapp i mithril {#kmom01}
 
 Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript och vi kallar dem för mobila webbapplikationer. Som ett första steg så läser vi på om grunderna och vi bygger en me-app med fokus på mindre terminaler.
 
-[Instruktion till kursmoment 01](webapp-v1/kmom01).
+[Instruktion till kursmoment 01](kurser/webapp-v3/kmom01).
 
 
 
 ###Kmom02: Bygg ut din mobila webapp {#kmom02}
 
-Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. Men med mobila terminaler finns det en del som är specifikt och skiljer sig från desktop miljöer. Låt oss bygga vidare på me-appen och testa runt för att se vilka möjligheter och begränsningar som kan finnas. Det blir en blandning av olika tekniker men fokus är att lära oss mer om den mobila utvecklingsmiljön.
+Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. I detta kursmoment bygger vi vidare på vår me-app genom att hämta information från Githubs API.
 
+Vi bygger även en app inför Nobel festen där vi använder oss av Nobelprisets API för att visa information om pristagare.
 
-[Instruktion till kursmoment 02](webapp-v1/kmom02).
+Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och visa information i JSON-filer.
 
-
-
-###Kmom03: JSON och RESTful {#kmom03}
-
-Vi jobbar vidare med meappen och jQueryMobile. Nu handlar det om tekniken att hämta JSON data från RESTful servrar via Ajax och hur man kan hantera den informationen i en klientfokuserad webapp.
-
-Kanske når vi en gräns där vi tycker att ett ramverk likt jQm börjar inkränka på vår kod-arkitektur? Eller så är vi nöjda med hur jQm hanterar detta. Låt se.
-
-På vägen tar vi och övar att söka och visa information i JSON-filer.
-
-[Instruktion till kursmoment 03](webapp-v1/kmom03).
+[Instruktion till kursmoment 02](kurser/webapp-v3/kmom02).
 
 
 
-###Kmom04: SPA och MVC {#kmom04}
+###Kmom03: Dashboard {#kmom03}
 
-Vi använt jQuery Mobile en del, låt oss nu titta på ett alternativ till att skriva klientfokuserad kod. Jag väljer att titta på ramverket Mithril som är ett ungt och inte alltför stort JavaScript-ramverk med fokus på klientbaserad programmering.
+I detta kursmoment skall vi bygga en SPA, som fungerar på alla våra olika stora skärmar. Vi hämtar data från minst två API'er och visualiserar det på en dashboard designat för att ge användaren en snabb överblikk.
 
-Mithril erbjuder en kodstruktur som är likt *model, view, controller (MVC)* som är en ofta använd design arkitektur. Vi prövar hur en lösning motsvarande meappen kan se ut med Mithril, därefter utvärderar vi och jämför med jQuery Mobile.
+Vi kollar på hur vi kan skapa ett enkelt grid-layout och hur vi kan återanvända komponenter i javascript ramverket mithril.
 
-[Instruktion till kursmoment 04](webapp-v1/kmom04).
-
-
-
-###Kmom05: Litet projekt {#kmom05}
-
-Du skall nu utföra ett mindre projekt till en kund. Du får själv välja vilken teknik du jobbar med -- jQuery Mobile eller Mithril. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
-
-[Instruktion till kursmoment 05](webapp-v1/kmom05).
+[Instruktion till kursmoment 03](kurser/webapp-v3/kmom03).
 
 
 
-###Kmom06: Hybrid webapp {#kmom06}
+###Kmom04: CRUD {#kmom04}
 
-Du tar din nyligen utvecklade webapp och gör den till en hybrid webapp som går att installera på enheter likt en vanlig native app.
+Än så länge har vi bara hämtat data från API'er. I detta kursmoment bygger vi en app som hämtar, skapar, uppdaterar och tar bort data med hjälp av ett API.
 
-[Instruktion till kursmoment 06](webapp-v1/kmom06).
+Vi tittar på hur vi kan optimera formulär för att fungera bra på mobila enheter genom att använda HTML5 input typer.
+
+[Instruktion till kursmoment 04](kurser/webapp-v3/kmom04).
+
+
+
+###Kmom05: Litet kundprojekt {#kmom05}
+
+Du skall nu utföra ett mindre projekt till en kund. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
+
+Vi tittar även på hur vi kan använda våra mobila enheter för att ladda filer.
+
+[Instruktion till kursmoment 05](kurser/webapp-v3/kmom05).
+
+
+
+###Kmom06: Gomoku {#kmom06}
+
+Vi har tidigare gjort en server för Gomoku och nu är det dags att göra en klient för webbläsaren och mobila enheter. Här använder vi all kunskap från tidigare kursmoment för att skap en trevlig spelupplevelse för användaren.
+
+[Instruktion till kursmoment 06](kurser/webapp-v3/kmom06).
 
 
 
@@ -159,7 +165,7 @@ Du tar din nyligen utvecklade webapp och gör den till en hybrid webapp som går
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](webapp-v1/kmom10).
+[Instruktion till kursmoment 10](kurser/webapp-v3/kmom10).
 
 
 
@@ -168,13 +174,9 @@ Kurslitteratur {#litteratur}
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
-Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
-
 
 
 ###Kurslitteratur {#kurslitteratur}
-
-Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet.
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
@@ -200,6 +202,10 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 
 
 
+###Övrig litteratur {#ovriglitteratur}
+
+I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
+
 
 
 Läsanvisningar {#lasanvisning}
@@ -209,12 +215,12 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 
 | Kursmoment | Mobile HTML5  |
 |------------|-------------------------------------------------------------|
-| Kmom01     | 1                                                           |
-| Kmom02     | 5, 6                                                        |
+| Kmom01     | Introduction, 1                                             |
+| Kmom02     | 6                                                           |
 | Kmom03     | 11, 12                                                      |
-| Kmom04     | 13, 14                                                      |
-| Kmom05     |                                                             |
-| Kmom06     | Introduction                                                |
+| Kmom04     | 4, 10, 13                                                   |
+| Kmom05     | 14                                                          |
+| Kmom06     |                                                             |
 | Kmom10     |                                                             |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
@@ -224,29 +230,50 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](webapp/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar.
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasar1/lasperiod4).
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
-Går du på campus får du en lektionsplan i samband med kursstart.
+<!--
+För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](linux/studieplan) kopplad till de kurstillfällen som erbjuds.
+-->
 
-Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
+Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
 
+Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
 
+Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
 
-Betygsättning {#betyg}
-------------------------
-
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
 
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).
+
+
+Betygsättning {#betyg}
+------------------------
+
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+
+
+
+Ladok {#ladok}
+------------------------
+
+Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
+
+| Kursens moment  | Ladok moment enligt kursplan  |
+|-----------------|-------------------------------|
+| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
+| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
+| Kmom05 - kmom10 | Projekt á 2.5hp               |
+
+Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
 
 

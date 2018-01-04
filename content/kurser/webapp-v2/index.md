@@ -10,7 +10,7 @@ revision:
   "2015-10-26": (B, mos) Inklusive kmom01 & 02.
   "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
 ...
-Kursen "webapp"
+Kursen webapp v2
 ==================================
 
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med HTML, CSS och JavaScript.
