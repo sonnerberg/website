@@ -7,14 +7,6 @@ revision:
 Kmom05: Litet kundprojekt
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-24</strike>.
-
-Kursmomentet tillgängligt per den 2017-04-12.
-[/INFO]
-
-
-
 I detta kursmomentet ska vi kolla på hur vi kan läsa data från en lokal fil och utföra ett mindre projekt till en kund. Uppgiften är friare i sin utformning, prioritera kraven och tänka till vad kunden egentligen vill ha.
 
 <!--more-->
@@ -28,7 +20,7 @@ Nedan finns ett exempel på hur det kan se ut när din app är klar.
 
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 

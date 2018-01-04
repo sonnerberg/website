@@ -10,12 +10,6 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-05-08</strike>.
-
-Kursmomentet tillgängligt per den 2017-05-05.
-[/INFO]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -142,7 +136,7 @@ På denna del kan du få totalt 20 poäng (10 + 10).
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din [redovisningssida](kurser/webapp-v2/redovisa), skriv följande:
+1. På din [redovisningssida](./../redovisa), skriv följande:
 
     1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 

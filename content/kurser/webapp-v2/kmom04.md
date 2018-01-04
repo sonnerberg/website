@@ -8,12 +8,6 @@ revision:
 Kmom04: CRUD
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-17</strike>.
-
-Kursmomentet tillgängligt per den 2017-04-7.
-[/INFO]
-
 Vi har jobbat en del mot olika api'er, men än så länga har vi bara använt `GET` anrop för att hämta data. I detta kursmoment skall vi kolla på de tre andra anrop: `POST`, `PUT` och `DELETE`. CRUD står för Create, Read, Update, Delete och är de fyra HTTP anrop som görs i bakgrunden när vi skapar, läsar, redigerar och tar bort data.
 
 
@@ -27,7 +21,7 @@ Så här kan det se ut när vi är klara.
 
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -108,7 +102,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

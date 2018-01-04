@@ -13,14 +13,6 @@ revision:
 Kursen "webapp"
 ==================================
 
-[WARNING]
-
-Detta är arbetsmaterial till version 2 av webapp-kursen. Den uppdaterade kursen ges första gången under läsperiod 4 2017.
-
-Det finns en [version 1 av kursen](kurser/webapp-v1) som gick sista gången under höstterminen 2016.
-
-[/WARNING]
-
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med HTML, CSS och JavaScript.
 
 <!--more-->
@@ -36,10 +28,15 @@ Via litteraturstudier och praktiska övningar förkovrar du dig i området. I sl
 
 
 [INFO]
-**Tidigare version av kursen**
+**Tidigare/Nyare version av kursen**
 
-Om du gick kursen tidigare, fram till och med höstterminen 2016, så finns kursmaterialet till [kursen webapp-v1 här](kurser/webapp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
+Från och med vårterminen 2018 gäller version 3 av denna kursen, [webapp-v3](kurser/webapp-v3).
 
+Denna versionen av kursen (webapp-v2) gick under vårterminen 2017.
+
+Fram till och med höstterminen 2016 gällde version 1 av kursen, [webapp-v1](kurser/webapp-v1).
+
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
 [/INFO]
 
 

@@ -8,13 +8,6 @@ revision:
 Kmom01: En mobil webapp i mithril
 ==================================
 
-[INFO]
-<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-03-27</strike>.
-
-Kursmomentet tillgängligt per den 2017-03-24.
-[/INFO]
-
-
 Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript och vi kallar dem för mobila webbapplikationer. Som ett första steg så läser vi på om grunderna och vi bygger en me-app med fokus på mindre terminaler.
 
 Eller ja, den blir skalbar så den fungerar även på större plattformar, men vårt fokus är mindre, mobila enheter.
@@ -35,7 +28,7 @@ Det kan se ut så här när vi är klara.
 
 
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -99,7 +92,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](kurser/webapp-v2/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `webapp`](dbwebb-cli/clone).
 
@@ -138,7 +131,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
