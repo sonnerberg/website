@@ -161,7 +161,7 @@ Ditt svar bör se ut så här, får du dubletter av vissa rader så är tipset a
 3 rows in set (0.00 sec)
 ```
 
-Nu har du fått fram de tre namnen som undevisar på kurser och är närmast pensionen, men vilka kurser är de ansvariga för? Hur många och vilka kurser handlar det om?
+Nu har du fått fram de tre namnen som undervisar på kurser och är närmast pensionen, men vilka kurser är de ansvariga för? Hur många och vilka kurser handlar det om?
 
 I rapporten visa kurskoden, kursens namn, akronymen, lärarens för och efternamn.
 

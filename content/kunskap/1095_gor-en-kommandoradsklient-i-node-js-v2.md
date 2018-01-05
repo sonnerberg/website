@@ -22,6 +22,10 @@ Ett terminalprogram kan vara en användbar klient, både vid utveckling och när
 
 <!--more-->
 
+Så här kan det se ut när vi är klara.
+
+[FIGURE src=image/snapvt18/guess-my-number-terminal.png?w=w3 caption="En terminalklient som implementerar spelet Gissa talet jag tänker på."]
+
 
 
 Förutsättning {#forutsattning}

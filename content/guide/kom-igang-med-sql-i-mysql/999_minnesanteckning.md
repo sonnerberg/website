@@ -8,3 +8,4 @@ Minnesanteckning
 
 * datatyper?
 * konstruktioner för where?
+* memorytabell (index/prestanda)

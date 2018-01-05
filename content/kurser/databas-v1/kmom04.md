@@ -81,14 +81,18 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom artikeln "[Databas appserver med Express och MySQL](kunskap/databas-appserver-med-express-och-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express och Node.js. Spara dina exempelprogram i `me/kmom04/express-sql`.
 
-1. **KLIENT FÖR ATT TESTA TRANSAKTIONER OCH LÅSNING?**
-
 <!-- PHP alternativ? Eller kanske inte. -->
 
 <!--
+1. **KLIENT FÖR ATT TESTA TRANSAKTIONER OCH LÅSNING?**
+
 1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)". Du kan spara dina testprogram i `me/kmom03/nodetest`.
 
 1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
+
+1. Jobba igenom artikeln "[Skicka environment variabler till Node.js](kunskap/skicka-environment-variabler-till-nodejs)".
+
+1. Skicka options och arguments till en kommandoradsklient i JavaScript och Node.js.
 -->
 
 
@@ -97,9 +101,15 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
+1. Gör uppgiften "[Skapa ER-modell för en databas (logisk/fysisk)](uppgift/skapa-er-modell-for-en-databas-logisk-fysisk)". Detta är den avslutande delen av uppgiften. Spara allt du gör i `me/kmom04/er2`.
+
+1. **Skapa KLIENT, ÅTERANVÄND GEMENSAM MODUL?** (skolan, båtklubben), ER-uppgiften, nu med data som kan importeras från csv?
+
+1. BYGG VIDARE PÅ ER-UPPGIFTEN. Först i terminalklient och sen i express? Gör uppgiften "[Bygg en faktureringsmotor för båtklubben (invoice)](uppgift/bygg-en-faktureringsmotor-for-batklubben)". Spara koden i `me/kmom03/invoice`.
+
 1. **FOKUS TRANSAKTION** Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/app`.
 
-1. **LÄGG TILL KOD I KLIENT, ÅTERANVÄND GEMENSAM MODUL?** (skolan, båtklubben)
+
 
 <!--
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js (server)](uppgift/skapa-en-restful-http-server-med-node-js)". Spara koden i `me/kmom03/server`.
