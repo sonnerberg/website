@@ -10,9 +10,11 @@ Kmom04: Transaktioner
 Kursutveckling pågår inför VT18.
 [/WARNING]
 
-Kursmomenten handlar om begreppet transaktioner i en databas.
+Kursmomenten hanterar begreppet transaktioner i en databas.
 
-I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp en webb/RESTful server och hur du kan skriva din applikationskod för att till exempel komma åt en databas och visa och uppdatera dess innehåll.
+I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp grunderna i en webbtjänst och hur du kan skriva din applikationskod för att komma åt en databas, visa rapporter och uppdatera innehåll.
+
+Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulterande databasen implementeras och vi använder Express för att skapa ett webbaserat gränssnitt. Vi bygger en terminalklient för att skapa ett textbaserat gränssnitt mot databasen.
 
 <!--more-->
 
@@ -55,9 +57,6 @@ Läs följande:
 1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kolla runt i dokumentationen och bekanta dig med begrepp och exempelkod.
 
 
-<!--stop-->
-
-
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
@@ -76,6 +75,8 @@ Läs följande:
 Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)" för att lära dig grunderna i hur du använder transaktioner i databaser. Spara dina exempelprogram i `me/kmom04/trans`.
+
+<!--stop-->
 
 1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom04/express`.
 
