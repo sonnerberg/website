@@ -16,19 +16,22 @@ I övningen "[En Single Page Application](kunskap/en-single-page-application-me-
 
 Förkunskaper {#forkunskaper}
 -----------------------
-"[En Single Page Application](kunskap/en-single-page-application-me-app)".
-
-"[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)"
+Du har jobbat igenom övningarna "[En Single Page Application](kunskap/en-single-page-application-me-app)" och "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)"
 
 
 Introduktion {#intro}
 -----------------------
+I övningnen "[En Single Page Application](kunskap/en-single-page-application-me-app)" skapas grunden för en me-app. Du ska i denna uppgift bygga klart appen enligt specifikationen nedan.
 
 
 
 Krav {#krav}
 -----------------------
+1. Din Me-app ska innehålla fyra vyer Me, Om, Github och Redovisning.
 
+1. Din Github vy ska innehålla en lista med länkar till dina Github repon.
+
+1. Redovisningsvyn ska vara lättläst och ett medvetet val av typsnitt ska göras.
 
 1. Validera och publicera din kod enligt följande.
 
