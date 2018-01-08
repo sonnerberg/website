@@ -71,7 +71,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. **FOKUS PROC, TRIG, FUNC** Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/app`.
 
-1. **BYGG VIDARE PÅ WEBBEN/KLIENTEN? MODUL SOM ÅTERANVÄNDS MED SERVERN?** (skolan, hacka lönen, ge betyg, båtklubben) CRUD?
+1. **BYGG VIDARE PÅ WEBBEN/KLIENTEN? MODUL SOM ÅTERANVÄNDS MED SERVERN?** (skolan, hacka lönen, ge betyg, båtklubben) CRUD? Terminalklienten.
 
 
 

@@ -9,3 +9,5 @@ Minnesanteckning
 * datatyper?
 * konstruktioner för where?
 * memorytabell (index/prestanda)
+
+* exportera till cvs från webbtjänst, öppna i lokal excel

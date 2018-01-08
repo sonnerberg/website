@@ -54,6 +54,8 @@ Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, 
 
 Läs följande:
 
+1. Om du känner behov av att träna upp dig i, eller repetera, klientsidetekniker med HTML, CSS och JavaScript så kan du utgå från tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)" som ger dig en snabb insyn i de tre teknikerna och hur de samverkar i webbläsaren.
+
 1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kolla runt i dokumentationen och bekanta dig med begrepp och exempelkod.
 
 
@@ -76,11 +78,18 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)" för att lära dig grunderna i hur du använder transaktioner i databaser. Spara dina exempelprogram i `me/kmom04/trans`.
 
+1. Jobba igenom artikeln "[Node.js och Express](kunskap/nodejs-och-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom04/myexpress`.
+
 <!--stop-->
 
-1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom04/express`.
-
 1. Jobba igenom artikeln "[Databas appserver med Express och MySQL](kunskap/databas-appserver-med-express-och-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express och Node.js. Spara dina exempelprogram i `me/kmom04/express-sql`.
+
+
+<!--
+1. Update transaktions (new article) with document on Isolation levels and Dirty reads and Deadlock. https://docs.google.com/document/d/15k4XbQxNOpJp-sqxwWX-FmG8UyerGSF36YDerSelbBc/preview
+
+-->
+
 
 <!-- PHP alternativ? Eller kanske inte. -->
 
