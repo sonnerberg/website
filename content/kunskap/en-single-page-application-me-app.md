@@ -92,7 +92,7 @@ För att vi ska kunna lägga till fler element i vår börjar vi med att hämta 
 
 Vi har nu en enkel sida med en `main.container` och vårt namn som ett `h1`-element. Som beroende på webbläsare ser ut ungefär som skärmbilden nedan. Jag använder "responsive mode" i webbläsaren för att se det som en mobil enhet.
 
-[FIGURE src=image/webapp/screenshot_namn.png?w=c8]
+[FIGURE src=image/webapp/screenshot_namn.png?w=c8 caption="Vårt första utkast."]
 
 > Men Emil hade det inte varit enklare att bara lägga till det i `index.html`, är ju 3 rader HTML-kod och sen är vi klara med detta.
 
@@ -183,20 +183,20 @@ Navigationen skapas som ett element med fyra stycken länkar i. En loop används
 
 Nedan syns resultatet och som vi ser är vi definitivt redo för att börja jobba med utseendet för vår me-app.
 
-[FIGURE src=image/webapp/screenshot_beforecss.png?w=c8]
+[FIGURE src=image/webapp/screenshot_beforecss.png?w=c8 caption="Vår me-app utan styling."]
 
 
 
 CSS {#css}
 --------------------------------------
-Vi börjar med att normalisera så att grunden blir den samma oavsett vilken webbläsare våra användare tycker om att titta på våra mobila applikationer i. Vi använder oss av [normalize.css](https://necolas.github.io/normalize.css/) och laddas enklast ner genom att använda `wget`.
+Vi börjar med att normalisera stylen så att grunden blir den samma oavsett vilken webbläsare våra användare tycker om att titta på våra mobila applikationer i. Vi använder oss av [normalize.css](https://necolas.github.io/normalize.css/) som enklast laddas ner genom att använda `wget`.
 
 ```bash
 # me/redovisa
 wget https://necolas.github.io/normalize.css/7.0.0/normalize.css
 ```
 
-Och vi lägger till `normalize.css` filen i `index.html` så den laddas och kan nollställa ursprungsstilerna i de olika webbläsare. Notera att jag lägger till `normalize.css` innan vår än så länge tomma `style.css`.
+Vi lägger till `normalize.css` filen i `index.html` så den laddas och kan nollställa ursprungsstilerna i de olika webbläsare. Notera att jag lägger till `normalize.css` innan vår än så länge tomma `style.css`.
 
 ```html
 <!-- index.html -->
@@ -208,14 +208,262 @@ Och vi lägger till `normalize.css` filen i `index.html` så den laddas och kan 
 ...
 ```
 
-Vi kommer i denna del fokusera på att göra om navigationen och kommer under redovisningsvyn fokusera på att tillämpa den kunskap vi fick i artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
+Tanken är att vi ska ha en navigationsmeny längst nere på skärmen, som man känner igen det från många mobil-appar. Menyn ligger längst nere på skärmen för att underlätta för användaren av den mobila enheten. Nedan finns exempel på en meny längst ner i en mobil-app, till vänster syns det på android och till höger i iOS.
+
+[FIGURE src=image/webapp/ios-bottom-menu.jpeg?w=c7 class="right" caption="Meny längst ner på iOS."]
+
+[FIGURE src=image/webapp/android-bottom-menu.png?w=c7 caption="Meny längst ner på android."]
+
+Vi börjar med att placera menyn längst ner på skärmen och samtidigt fylla ut hela bredden genom att använda följande CSS.
+
+```css
+/* style.css */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+}
+```
+
+Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på skärmen med `bottom: 0;`. Vi använder `overflow: hidden;` för att inte få problem med scrollning där vi inte vill ha det. För att fördela länkerna jämt i menyn använder vi [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox). Flexbox är en förhållandevis ny teknik för att skapa 1-dimensionella layouter på ett enkelt sätt. I detta tillfälle använder vi följande attribut.
+
+```css
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+```
+
+Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Med attributen `flex-direction: row;` och     `flex-wrap: nowrap;` anger vi att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkerna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen.
+
+[FIGURE src=image/webapp/screenshot-styled-menu.png?w=c8  caption="Menyn är nu på plats längst ner."]
+
+Jag har i exemplet lagt till ikoner i menyn med hjälp av [Material icons](http://materializecss.com/icons.html) och lagt till lite mellanrum uppe och nere. Dessutom har jag vald ett annat typsnitt än standard vilket gör att min mobila-app redan ser mycket trevligare ut.
 
 
-[Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+
+Navigation mellan vyerna {#navigation}
+--------------------------------------
+Nu har vi en fin meny, men än så länge är det, det enda den är. För att underlätta när vi ska navigera mellan de olika vyerna och för att ta ett första steg i att strukturera vår kod bryter vi ut renderingen av menyn och renderingen av Me-vy till var sin funktion. Det sista vi gör i `main.js` är att anropa funktionen `showHome()`, som i sin tur anropar `showMenu()` för att visa menyn. Jag har även flyttat ut skapandet av grund HTML-element utanför funktionerna.
+
+```javascript
+"use strict";
+
+(function () {
+    var rootElement = document.getElementById("root");
+
+    var mainContainer = document.createElement("main");
+    mainContainer.className = "container";
+
+    var navigation = document.createElement("nav");
+    navigation.className = "bottom-nav";
+
+    var showHome = function () {
+        mainContainer.innerHTML = "";
+
+        var title = document.createElement("h1");
+        title.className = "title";
+        title.textContent = "Emil Folino";
+
+        var greeting = document.createElement("p");
+        var timeOfDayGreeting = "Hej";
+        var now = new Date();
+        if (now.getHours() <= 10) {
+            timeOfDayGreeting = "Godmorgon";
+        } else if (now.getHours() >= 17) {
+            timeOfDayGreeting = "Godkväll";
+        }
+
+        greeting.textContent = timeOfDayGreeting + ", jag heter Emil Folino och är lärare i kursen webapp. ";
+
+        mainContainer.appendChild(title);
+        mainContainer.appendChild(greeting);
+
+        rootElement.appendChild(mainContainer);
+
+        showMenu("home");
+    }
+
+    var showMenu = function (selected) {
+        navigation.innerHTML = "";
+
+        var navElements = [{name: "Me", class: "home", nav: showHome},
+                            {name: "Om", class: "free_breakfast", nav: showAbout},
+                            {name: "Github", class: "folder", nav: showGithub},
+                            {name: "Redovisning", class: "people", nav: showPresentation}];
+
+        navElements.forEach(function (element) {
+            var navElement = document.createElement("a");
+
+            if (selected === element.class) {
+                navElement.className = "active";
+            }
+
+            navElement.addEventListener("click", element.nav);
+
+            var icon = document.createElement("i");
+            icon.className = "material-icons";
+            icon.textContent = element.class;
+            navElement.appendChild(icon);
+
+            var text = document.createElement("span");
+            text.className = "icon-text";
+            text.textContent = element.name;
+            navElement.appendChild(text);
+
+            navigation.appendChild(navElement);
+        });
+
+        rootElement.appendChild(navigation);
+    }
+
+    showHome();
+})();
+```
+
+I början av varje funktion som ritar upp en vy eller delvy rensar jag elementet som vyn ska ritas i med hjälp av attributet `innerHTML`. Denna funktion kommer även vara användbar när vi ska skapa redovisningssidan där vi ska lägga stora mängder formaterat text. Vi hade tidigare definerat våra länkar i menyn `var navElements = ["Me", "Om", "Github", "Redovisning"];` som en array med bara namnen. Denna array har jag i detta exempel bytt ut till en array av objekt. Dels för att lägga till ikoner med en specifik class, men även med den funktion som anropas när man klickar på länken i menyn. När länken sedan skapas läggs det till en `EventListener` för varje länk och funktionen som renderar vyn skickas med som argument. Detta är ett sätt att få till navigationen och leka gärna runt med koden för att få till det på exakt det sättet du vill ha. Vyerna Me, Om och Redovisning är oerhört lika och borde inte innebära några problem att skapa. I nästa del av övningen ska vi titta på hur vi hämtar data från Githubs API för att visa upp repon på Github sidan i me-appen.
+
+
+
+Hämta data från ett API {#api}
+--------------------------------------
+Än så länge har all data i vår me-app varit statisk och hårdkodat in av oss själva. Vi ska i denna del av övningen titta på hur vi kan hämta JSON data från ett API och hur vi sedan renderar datan i en vy. Vi börjar med att använda [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) för att sedan går över till det förenklade [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). Vi vill hämta data från Github och som alltid när du använder ett API är [dokumentationen](https://developer.github.com/v3/) din bästa vän.
+
+Funktionen `showGithub()` börjar som de andra vy funktionen med att vi rensar `mainContainer` och skapar ett titel element. Vi skapar därefter en `XMLHttpRequest` genom följande fyra rader kod.
+
+```javascript
+var githubRequest = new XMLHttpRequest();
+githubRequest.addEventListener("load", renderGithubRepos);
+githubRequest.open("GET", "https://api.github.com/users/:username/repos");
+githubRequest.send();
+```
+
+Först skapar vi ett `XMLHttpRequest` objekt `githubRequest`. Vi tilldelar en callback funktion `renderGithubRepos`, som anropas när vi har laddat datan. De två sista raderna definerar vilket sorts anrop vi vill göra `GET` och den URL vi vill anropa. Byt ut `:username` mot ditt Github användarenamn så hämtar du dina egna repon. Sista raden skickar iväg anropet till Githubs api. När vi får tillbaka svar anropas funktionen `renderGithubRepos`.
+
+```javascript
+var renderGithubRepos = function () {
+    var repos = JSON.parse(this.responseText);
+
+    repos.forEach(function(repo) {
+        var repoElement = document.createElement("p");
+        repoElement.textContent = repo.name;
+        mainContainer.appendChild(repoElement);
+    });
+
+    rootElement.appendChild(mainContainer);
+
+    ...
+```
+
+I variabeln `this` finns svaret vi fick tillbaka från Githubs API. Undersöka gärna vad som finns i svaret genom att använda `console.log(this)`. Vi ser att `this.responseText` innehåll arrayen, som en text sträng, med svaret vi förväntade oss och vi gör om text strängen till JSON. Vi kan nu skriva ut våra repon som element i `mainContainer`.
+
+Om vi vill använda oss av det modernare Fetch API kan koden se ut på följande sätt.
+
+```javascript
+fetch("https://api.github.com/users/:username/repos").then(function (response) {
+    return response.json();
+}).then(function(data) {
+    data.forEach(function(repo) {
+        var repoElement = document.createElement("p");
+        repoElement.textContent = repo.name;
+        mainContainer.appendChild(repoElement);
+    });
+
+    ...
+```
+
+`fetch` anropas med URL'en för Githubs API på samma sätt som `XMLHttpRequest`. `fetch` returnerar ett promise, som vi tar hand om med `then`. Här returnerar vi svaret som JSON och ytterligare ett promise tar sedan hand om JSON datan och renderar våra repon i vyn på samma sätt som för `XMLHttpRequest`. Det är upp till er själva vad ni tycker verkar smidigast. `XMLHttpRequest` har hängt med ett tag och utgör stommen i AJAX, som revolutionerade webben runt år 2007. `fetch` är ett nyare alternativ som utnyttjar promise för att ta hand om datat som hämtas. Genom att utnyttja promise blir felhantering lättare och ger även möjlighet för att rendera i samma funktionen som vi göra anropet.
+
+
+
+Strukturera koden {#strukturera}
+--------------------------------------
+Vi har nu en del kod både i vår `main.js` och i `style.css` så nu är det dags att strukturera upp koden lite grann så vi har ett bra utgångspunkt. Vi gör detta med hjälp av module pattern och delar upp vår `main.js` upp i sex olika filer.
+
+Vi börjar med att göra vår grund HTML-element till en del av window objektet, så vi kommer åt de i all JavaScript kod. Det sista vi gör i `main.js` är att anropa `showHome` funktionen för att visa upp me-vyn.
+
+```javascript
+// main.js
+"use strict";
+
+(function () {
+    window.rootElement = document.getElementById("root");
+
+    window.mainContainer = document.createElement("main");
+    window.mainContainer.className = "container";
+
+    window.navigation = document.createElement("nav");
+    window.navigation.className = "bottom-nav";
+
+    home.showHome();
+})();
+```
+
+Vi måste nu skapa en fil för varje vy och en för menyn. I följande exempel visas Me-vyn i filen `home.js`. Samma princip som visas i exemplet nedan gäller för alla vyer och menyn.
+
+```javascript
+"use strict";
+
+var home = (function () {
+    var showHome = function () {
+        window.mainContainer.innerHTML = "";
+
+        var title = document.createElement("h1");
+        title.className = "title";
+        title.textContent = "Emil Folino";
+
+        var greeting = document.createElement("p");
+        var timeOfDayGreeting = "Hej";
+        var now = new Date();
+        if (now.getHours() <= 10) {
+            timeOfDayGreeting = "Godmorgon";
+        } else if (now.getHours() >= 17) {
+            timeOfDayGreeting = "Godkväll";
+        }
+
+        greeting.textContent = timeOfDayGreeting + ", jag heter Emil Folino och är lärare i kursen webapp. ";
+
+        window.mainContainer.appendChild(title);
+        window.mainContainer.appendChild(greeting);
+
+        window.rootElement.appendChild(window.mainContainer);
+
+        menu.showMenu("home");
+    }
+
+    return {
+        showHome: showHome
+    };
+})();
+```
+
+Vi skapar ett `home` objekt/modul och vi returnerar `showHome` funktionen. Vi kan sedan använda `home` modulen i de andra moduler för att anropa funktionen. Notera att för att komma åt våra grundelement använder vi till exempel `window.rootElement` istället för `rootElement`.
+
+För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`. Viktigt att `main.js` är sist i ordningen.
+
+```html
+<body>
+    <div id="root"></div>
+
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="about.js"></script>
+    <script type="text/javascript" src="presentation.js"></script>
+    <script type="text/javascript" src="github.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+```
+
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Asynkron programming ställer ofta till med huvudbry för utvecklare, som är vana vid synkron och sekventiell programming. De tre tekniker beskrivna i denna övning underlättar för oss när vi utvecklar vår kod. Men som alltid övning ger färdighet.
-
-Alla kodexempel från denna övningen finns i kursrepot för [linux-kursen](https://github.com/dbwebb-se/linux/tree/master/example/asynkron) och här på [dbwebb](https://dbwebb.se/repo/linux/example/asynkron).
+Vi har nu skapat en början till en me-app. Vi har fyra olika vyer och navigation för att ta oss mellan vyerna. Vi har sett hur vi kan använda en `EventListener` för att gå mellan de olika vyerna och vi har skapat en lättanvänt meny för mobila enheter. Vi har strukturerat vår kod enligt module pattern och har en bra grund i vår CSS, som blir enkel att bygga vidare på.
