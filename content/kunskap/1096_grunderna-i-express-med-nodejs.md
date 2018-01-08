@@ -9,7 +9,7 @@ category:
 revision:
     "2018-01-08": (A, mos) Uppdaterad utgåva, omskriven från annan artikel, att användas till dbjs och databas.
 ...
-Node.js och Express 
+Grunderna i Express med Node.js 
 ==================================
 
 [FIGURE src=image/snapvt17/npm-express.png?w=c5&a=0,30,20,0&cf class="right"]
@@ -18,7 +18,7 @@ Vi skall bygga en applikations- och webbserver med hjälp av Node.js och modulen
 
 Servern skall servera statiska filer som bilder, CSS och JavaScript (klientsidan) tillsammans med dynamiska routes som hanteras av JavaScript på serversidan med Express och Node.js.
 
-Som templatemotor använder vi Pug, den hjälper oss att rendera HTML-sidor med dynamisk information från JavaScript. Vi tittar också på ren HTML-kod för att se hur den skiljer sig åt när vi använder Pug. Med Pug kan vi generera delar av HTML-koden och skriva ut innehåll från variabler i JavaScript, så att sidornas innehåll blir dynamiskt.
+Som templatemotor använder vi EJS, den hjälper oss att rendera HTML-sidor med dynamisk information från JavaScript. Med en templatemotor kan vi generera delar av HTML-koden och skriva ut innehåll från variabler i JavaScript, så att sidornas innehåll blir dynamiskt.
 
 <!--more-->
 

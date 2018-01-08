@@ -78,7 +78,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)" för att lära dig grunderna i hur du använder transaktioner i databaser. Spara dina exempelprogram i `me/kmom04/trans`.
 
-1. Jobba igenom artikeln "[Node.js och Express](kunskap/nodejs-och-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom04/myexpress`.
+1. Jobba igenom artikeln "[Grunderna i Express med Node.js](kunskap/grunderna-i-express-med-nodejs)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom04/myexpress`.
 
 <!--stop-->
 
