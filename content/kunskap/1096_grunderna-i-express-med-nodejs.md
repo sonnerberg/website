@@ -564,4 +564,4 @@ Detta var en introduktion för att komma igång med webb- och applikationsserver
 
 Du har nu grunderna för att skriva din egen webb/applikationsserver.
 
-Denna artikel har en [egen forumtråd](t/6329) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/7216) som du kan ställa frågor i, eller ge tips.
