@@ -6,7 +6,9 @@ category:
     - sql
     - kurs dbjs
     - kurs oophp
+    - kurs databas
 revision:
+    "2018-01-09": "(C, mos) Genomgången inför kursen databas."
     "2017-04-25": "(B, mos) Nu även i kursen oophp."
     "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
 ...
@@ -34,7 +36,7 @@ Artikeln visar grunderna i [triggers i MySQL](https://dev.mysql.com/doc/refman/5
 
 Om du jobbar i [SQLite så fungerar triggers](https://www.sqlite.org/lang_createtrigger.html) även där.
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/triggers.sql) finner du på GitHub eller i ditt kursrepo (dbjs, oophp) under `example/sql/stored_procedure.sql`.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/databas/blob/master/example/sql/triggers.sql) finner du på GitHub eller i ditt kursrepo (databas, dbjs, oophp) under `example/sql/triggers.sql`.
 
 
 
@@ -49,21 +51,21 @@ Följande kod skapar tabell och innehåll.
 --
 -- Example
 -- 
-DROP TABLE IF EXISTS Account;
-CREATE TABLE Account
+DROP TABLE IF EXISTS account;
+CREATE TABLE account
 (
 	`id` CHAR(4) PRIMARY KEY,
     `name` VARCHAR(8),
     `balance` DECIMAL(4, 2)
 );
 
-INSERT INTO Account
+INSERT INTO account
 VALUES
 	("1111", "Adam", 10.0),
     ("2222", "Eva", 7.0)
 ;
 
-SELECT * FROM Account;
+SELECT * FROM account;
 ```
 
 Sedan har vi den lagrade proceduren som utför flytten mellan två konton, i skydd av en transaktion.
@@ -77,8 +79,8 @@ DROP PROCEDURE moveMoney;
 DELIMITER //
 
 CREATE PROCEDURE moveMoney(
-	fromAccount CHAR(4),
-    toAccount CHAR(4),
+	fromaccount CHAR(4),
+    toaccount CHAR(4),
     amount NUMERIC(4, 2)
 )
 BEGIN
@@ -86,7 +88,7 @@ BEGIN
     
     START TRANSACTION;
 
-	SET currentBalance = (SELECT balance FROM Account WHERE id = fromAccount);
+	SET currentBalance = (SELECT balance FROM account WHERE id = fromaccount);
     SELECT currentBalance;
 
 	IF currentBalance - amount < 0 THEN
@@ -95,23 +97,23 @@ BEGIN
 
 	ELSE
 
-		UPDATE Account 
+		UPDATE account 
 		SET
 			balance = balance + amount
 		WHERE
-			id = toAccount;
+			id = toaccount;
 
-		UPDATE Account 
+		UPDATE account 
 		SET
 			balance = balance - amount
 		WHERE
-			id = fromAccount;
+			id = fromaccount;
 			
 		COMMIT;
 
     END IF;
 
-    SELECT * FROM Account;
+    SELECT * FROM account;
 END
 //
 
@@ -127,7 +129,7 @@ Låt det vara vår startpunkt när vi nu går vidare och bygger ut exemplet med 
 En tabell för loggar {#logg}
 --------------------------------------
 
-Tanken är att vi har en tabell som loggar alla förändringar i tabellen Account. På det viset kan man se samtliga förändringar i balansen och återskapa alla transaktioner som skett.
+Tanken är att vi har en tabell som loggar alla förändringar i tabellen account. På det viset kan man se samtliga förändringar i balansen och återskapa alla transaktioner som skett.
 
 Det kan vara bra att ha om något går snett. Som felsökning och extra kontroll. Det låter som en bra grej, speciellt när pengar eller annan känslig data är inblandad.
 
@@ -137,8 +139,8 @@ Vi behöver en loggtabell.
 --
 -- Log table
 --
-DROP TABLE IF EXISTS AccountLog;
-CREATE TABLE AccountLog
+DROP TABLE IF EXISTS accountLog;
+CREATE TABLE accountLog
 (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT,
     `when` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -148,7 +150,7 @@ CREATE TABLE AccountLog
     `amount` DECIMAL(4, 2)
 );
 
-SELECT * FROM AccountLog;
+SELECT * FROM accountLog;
 ```
 
 Det blir en tabell med autoincrementerande id och en kolumn som automatiskt loggar en tidsstämpel för när en rad läggs till i tabellen. I övrigt så loggar vi en anledning till förändringen tillsammans med kontot och det belopp som förändras.
@@ -165,10 +167,10 @@ Bara som ett exempel, innan jag visar triggern, så visar jag hur jag kan utför
 Det handlar om att utföra följande INSERT inom ramen för den lyckade transaktionen.
 
 ```sql
-INSERT INTO AccountLog (`what`, `account`, `amount`)
+INSERT INTO accountLog (`what`, `account`, `amount`)
 VALUES
-    ("moveMoney from", fromAccount, -amount),
-    ("moveMoney to", toAccount, amount);
+    ("moveMoney from", fromaccount, -amount),
+    ("moveMoney to", toaccount, amount);
 ```
 
 Det är en enkel INSERT-sats som lägger till två rader, en rad för varje förändring som gjorts. I den lagrade proceduren kan jag lägga koden direkt innan COMMIT.
@@ -182,7 +184,7 @@ Jag vill logga saker, men inte krångla alltför mycket.
 Logga med triggers {#loggatri}
 --------------------------------------
 
-Låt oss nu se hur vi kan göra samma sak med en databastrigger. Vi kopplar en trigger till Account-tabellen och vid varje UPDATE på Account så lägger vi till en ny rad i AccountLog-tabellen.
+Låt oss nu se hur vi kan göra samma sak med en databastrigger. Vi kopplar en trigger till account-tabellen och vid varje UPDATE på account så lägger vi till en ny rad i accountLog-tabellen.
 
 En [trigger](https://dev.mysql.com/doc/refman/5.7/en/create-trigger.html) alltså.
 
@@ -194,12 +196,12 @@ DROP TRIGGER IF EXISTS LogBalanceUpdate;
 
 CREATE TRIGGER LogBalanceUpdate
 AFTER UPDATE
-ON Account FOR EACH ROW
-    INSERT INTO AccountLog (`what`, `account`, `balance`, `amount`)
+ON account FOR EACH ROW
+    INSERT INTO accountLog (`what`, `account`, `balance`, `amount`)
         VALUES ("trigger", NEW.id, NEW.balance, NEW.balance - OLD.balance);
 ```
 
-Vad vi ser är en trigger som utförs varje gång någon gör UPDATE på tabellen Account.
+Vad vi ser är en trigger som utförs varje gång någon gör UPDATE på tabellen account.
 
 Triggern tar emot samtliga rader som är på gång att uppdateras, det kan vara flera rader som uppdateras på en gång. I en loop får vi då möjlighet att utföra compound statements.
 
@@ -207,7 +209,7 @@ I mitt exempel är det bara en INSERT-sats som jag utför i bodyn, så jag behö
 
 När man är inne i triggern, inuti loopen, så har man tillgång till den nya raden `NEW` som är den som skall bli, man har också tillgång till den gamla raden `OLD`, den befintliga raden som är på väg att uppdateras.
 
-Det visade sig vara enklare att logga nuvarande balans i en trigger, vi hade tillgång både till den befintliga balansen och den uppdaterade balansen. Här gäller det bara att välja den som är mest logisk i sammanhanget. Som du ser så valde jag `NEW.balance`, den uppdaterade balansen.
+Det visade sig vara enkelt att logga nuvarande balans i en trigger, vi hade tillgång både till den befintliga balansen och den uppdaterade balansen. Här gäller det bara att välja den som är mest logisk i sammanhanget. Som du ser så valde jag `NEW.balance`, den uppdaterade balansen.
 
 I triggern kan jag välja att den skall exekveras före (BEFORE) eller (AFTER) själva uppdateringen är gjord. Ibland spelar det ingen roll, som i vårt exempel, men ibland kan det spela roll. Ett exempel på en BEFORE trigger kan vara en valideringstrigger som kontrollerar om en ändring kan utföras.
 
