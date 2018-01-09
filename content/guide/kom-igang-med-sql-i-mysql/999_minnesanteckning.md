@@ -11,3 +11,5 @@ Minnesanteckning
 * memorytabell (index/prestanda)
 
 * exportera till cvs från webbtjänst, öppna i lokal excel
+
+* group_concat

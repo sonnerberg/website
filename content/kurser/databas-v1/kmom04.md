@@ -91,12 +91,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Flytta pengar med terminalprogram och med Express](uppgift/flytta-pengar-med-terminal-program-och-med-express)" för att jobba med flera klienter mot samma databas. Bygg vidare på din kod i `me/kmom04/express-sql`.
 
-1. ER-uppgiften, skapa produkter i Excel och importera från csv? Visa produkter (termial + webb). Exportera till csv.
-
-<!--
-1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js (server)](uppgift/skapa-en-restful-http-server-med-node-js)". Spara koden i `me/kmom03/server`.
-
--->
+1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`.
 
 
 
@@ -109,8 +104,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Gick det bra att sluföra uppgiften om ER modellering?
 * Hur gick det att förstå konceptet transaktioner i databas?
-* Gick det bra att komma igång med Express?
-* Gick det bra att använda MySQL tillsammans med Express/Node.js?
+* Gick det bra att komma igång med Express och MySQL?
+* Lyckas du med god kodstruktur för terminal och webbklient?
+* Gick det bra att sluföra uppgiften om ER modellering samt implementera databasen och de båda klienterna?
 * Känns det som du har koll på teknikerna och hur de samverkar eller känner du saknad av något?
