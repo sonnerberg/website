@@ -6,7 +6,9 @@ category:
     - sql
     - kurs dbjs
     - kurs oophp
+    - kurs databas
 revision:
+    "2018-01-09": "(C, mos) Genomgången inför kursen databas."
     "2017-04-25": "(B, mos) Nu även i kursen oophp, la till stycke om parametrar och variabler."
     "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
 ...
@@ -34,7 +36,7 @@ Exemplet visar hur du jobbar med lagrade procedurer i MySQL.
 
 SQLite stödjer inte lagrade procedurer.
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/stored_procedure.sql) finner du på GitHub eller i ditt kursrepo (dbjs, oophp) under `example/sql/stored_procedure.sql`.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/databas/blob/master/example/sql/stored_procedure.sql) finner du på GitHub eller i ditt kursrepo (databas, dbjs, oophp) under `example/sql/stored_procedure.sql`.
 
 
 
@@ -58,21 +60,21 @@ Vi tar samma exempel vi använde i "[Transaktioner i databas](kunskap/transaktio
 --
 -- Example transactions
 -- 
-DROP TABLE IF EXISTS Account;
-CREATE TABLE Account
+DROP TABLE IF EXISTS account;
+CREATE TABLE account
 (
 	`id` CHAR(4) PRIMARY KEY,
     `name` VARCHAR(8),
     `balance` DECIMAL(4, 2)
 );
 
-INSERT INTO Account
+INSERT INTO account
 VALUES
 	("1111", "Adam", 10.0),
     ("2222", "Eva", 7.0)
 ;
 
-SELECT * FROM Account;
+SELECT * FROM account;
 ```
 
 Sen är det själva flytten av pengarna, från ett konto till ett annat, som är omslutet av en transaktion.
@@ -85,13 +87,13 @@ Eva skall få 1.5 pengar av Adam.
 --
 START TRANSACTION;
 
-UPDATE Account 
+UPDATE account 
 SET
 	balance = balance + 1.5
 WHERE
 	id = "2222";
 
-UPDATE Account 
+UPDATE account 
 SET
 	balance = balance - 1.5
 WHERE
@@ -99,7 +101,7 @@ WHERE
     
 COMMIT;
 
-SELECT * FROM Account;
+SELECT * FROM account;
 ```
 
 Vad kan en lagrad procedur göra för oss här?
@@ -130,8 +132,8 @@ DROP PROCEDURE IF EXISTS moveMoney;
 DELIMITER //
 
 CREATE PROCEDURE moveMoney(
-	fromAccount CHAR(4),
-    toAccount CHAR(4),
+	fromaccount CHAR(4),
+    toaccount CHAR(4),
     amount NUMERIC(4, 2)
 )
     -- Here comes SQL and compund statements
@@ -148,12 +150,12 @@ Låt oss göra en minimal procedur för att anropa den, som ett litet test.
 
 ```sql
 CREATE PROCEDURE moveMoney(
-	fromAccount CHAR(4),
-    toAccount CHAR(4),
+	fromaccount CHAR(4),
+    toaccount CHAR(4),
     amount NUMERIC(4, 2)
 )
 BEGIN
-    SELECT fromAccount, toAccount, amount;
+    SELECT fromaccount, toaccount, amount;
 END
 //
 ```
@@ -176,28 +178,28 @@ Då plockar vi in koden som flyttar pengarna, in i proceduren. Det kan se ut så
 
 ```sql
 CREATE PROCEDURE moveMoney(
-	fromAccount CHAR(4),
-    toAccount CHAR(4),
+	fromaccount CHAR(4),
+    toaccount CHAR(4),
     amount NUMERIC(4, 2)
 )
 BEGIN
     START TRANSACTION;
 
-    UPDATE Account 
+    UPDATE account 
     SET
     	balance = balance + amount
     WHERE
-    	id = toAccount;
+    	id = toaccount;
 
-    UPDATE Account 
+    UPDATE account 
     SET
     	balance = balance - amount
     WHERE
-    	id = fromAccount;
+    	id = fromaccount;
         
     COMMIT;
 
-    SELECT * FROM Account;
+    SELECT * FROM account;
 END
 //
 ```
@@ -235,7 +237,7 @@ BEGIN
     
     START TRANSACTION;
 
-	SET currentBalance = (SELECT balance FROM Account WHERE id = fromAccount);
+	SET currentBalance = (SELECT balance FROM account WHERE id = fromaccount);
     SELECT currentBalance;
 
     -- Some code omitted
@@ -256,17 +258,17 @@ IF currentBalance - amount < 0 THEN
 
 ELSE
 
-    UPDATE Account 
+    UPDATE account 
     SET
         balance = balance + amount
     WHERE
-        id = toAccount;
+        id = toaccount;
 
-    UPDATE Account 
+    UPDATE account 
     SET
         balance = balance - amount
     WHERE
-        id = fromAccount;
+        id = fromaccount;
         
     COMMIT;
 
@@ -295,7 +297,7 @@ CREATE PROCEDURE getMoney(
     OUT total NUMERIC(4, 2)
 )
 BEGIN
-	SELECT balance INTO total FROM Account WHERE id = account;
+	SELECT balance INTO total FROM account WHERE id = account;
 END
 //
 
@@ -316,7 +318,7 @@ En lagrad procedur kan även ta ett argument som är INOUT.
 Vill du skriva en SELECT-sats som sätter flera variabler på en gång så skriver du så här.
 
 ```sql
-SELECT id, balance INTO idx, total FROM Account WHERE id = account;
+SELECT id, balance INTO idx, total FROM account WHERE id = account;
 ```
 
 Ovan förutsätts att `idx` och `total` är argument, eller lokala variabler i den lagrade proceduren.
