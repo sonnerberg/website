@@ -66,7 +66,7 @@ Här är SQL-koden som hjälper dig att skapa databasen `dbwebb` med användaren
 -- Create a sample database useful for testing.
 --
 CREATE DATABASE IF NOT EXISTS dbwebb;
-GRANT ALL ON dbwebb.* TO user@localhos IDENTIFIED BY 'pass';
+GRANT ALL ON dbwebb.* TO user@localhost IDENTIFIED BY 'pass';
 
 USE dbwebb;
 SHOW DATABASES LIKE 'dbwebb';
@@ -98,21 +98,21 @@ Först skapar vi en tabell med innehåll.
 --
 -- Example transactions
 -- 
-DROP TABLE IF EXISTS Account;
-CREATE TABLE Account
+DROP TABLE IF EXISTS account;
+CREATE TABLE account
 (
 	`id` CHAR(4) PRIMARY KEY,
     `name` VARCHAR(8),
     `balance` DECIMAL(4, 2)
 );
 
-INSERT INTO Account
+INSERT INTO account
 VALUES
 	("1111", "Adam", 10.0),
     ("2222", "Eva", 7.0)
 ;
 
-SELECT * FROM Account;
+SELECT * FROM account;
 ```
 
 Bra, då har vi en tabell att ugå ifrån. Adam har 10 bitcoins och Eva har 7.
@@ -129,19 +129,19 @@ SQL-koden för den flytten ser ut så här.
 --
 -- Move the money
 --
-UPDATE Account 
+UPDATE account 
 SET
 	balance = balance + 1.5
 WHERE
 	id = "2222";
 
-UPDATE Account 
+UPDATE account 
 SET
 	balance = balance - 1.5
 WHERE
 	id = "1111";
     
-SELECT * FROM Account;
+SELECT * FROM account;
 ```
 
 I den första satsen lägger vi till pengen till Evas konto, i den andra satsen så tar vi bort pengen från Admas konto.
@@ -164,13 +164,13 @@ Vi lägger flytten av pengarna inom ramen för en transaktion, så att flytten a
 --
 START TRANSACTION;
 
-UPDATE Account 
+UPDATE account 
 SET
 	balance = balance + 1.5
 WHERE
 	id = "2222";
 
-UPDATE Account 
+UPDATE account 
 SET
 	balance = balance - 1.5
 WHERE
@@ -178,7 +178,7 @@ WHERE
     
 COMMIT;
 
-SELECT * FROM Account;
+SELECT * FROM account;
 ```
 
 Det är alltså `START TRANSACTION` som påbörjar transaktionen och det är `COMMIT` som avslutar den. Alla skeenden som utförs inom transaktionen är nu atomära.

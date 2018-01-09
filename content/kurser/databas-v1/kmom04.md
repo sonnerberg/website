@@ -82,7 +82,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 <!--stop-->
 
-1. Jobba igenom artikeln "[Databas appserver med Express och MySQL](kunskap/databas-appserver-med-express-och-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express och Node.js. Spara dina exempelprogram i `me/kmom04/express-sql`.
+1. Jobba igenom artikeln "[Koppla appservern Express till databasen MySQL](kunskap/koppla-appservern-express-till-databasen-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express och Node.js. Spara dina exempelprogram i `me/kmom04/express-sql`.
 
 
 <!--
@@ -119,6 +119,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. **FOKUS TRANSAKTION** Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/app`.
 
+Move money i balance, webb.
 
 
 <!--
