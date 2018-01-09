@@ -80,29 +80,11 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom artikeln "[Grunderna i Express med Node.js](kunskap/grunderna-i-express-med-nodejs)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom04/myexpress`.
 
-<!--stop-->
-
 1. Jobba igenom artikeln "[Koppla appservern Express till databasen MySQL](kunskap/koppla-appservern-express-till-databasen-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express och Node.js. Spara dina exempelprogram i `me/kmom04/express-sql`.
 
 
 <!--
-1. Update transaktions (new article) with document on Isolation levels and Dirty reads and Deadlock. https://docs.google.com/document/d/15k4XbQxNOpJp-sqxwWX-FmG8UyerGSF36YDerSelbBc/preview
-
--->
-
-
-<!-- PHP alternativ? Eller kanske inte. -->
-
-<!--
-1. **KLIENT FÖR ATT TESTA TRANSAKTIONER OCH LÅSNING?**
-
-1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)". Du kan spara dina testprogram i `me/kmom03/nodetest`.
-
-1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
-
-1. Jobba igenom artikeln "[Skicka environment variabler till Node.js](kunskap/skicka-environment-variabler-till-nodejs)".
-
-1. Skicka options och arguments till en kommandoradsklient i JavaScript och Node.js.
+1. Update transaktions (new article) with document on Isolation levels and Dirty reads and Deadlock. Eventuell klient för att testa låsning? https://docs.google.com/document/d/15k4XbQxNOpJp-sqxwWX-FmG8UyerGSF36YDerSelbBc/preview
 -->
 
 
@@ -112,6 +94,8 @@ Genomför följande övning för att förbereda inför uppgifterna.
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa ER-modell för en databas (logisk/fysisk)](uppgift/skapa-er-modell-for-en-databas-logisk-fysisk)". Detta är den avslutande delen av uppgiften. Spara allt du gör i `me/kmom04/er2`.
+
+<!--stop-->
 
 1. **Skapa KLIENT, ÅTERANVÄND GEMENSAM MODUL?** (skolan, båtklubben), ER-uppgiften, nu med data som kan importeras från csv?
 
@@ -140,6 +124,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur gick det att förstå konceptet transaktioner i databas?
 * Gick det bra att komma igång med Express?
-* Gick det bra att komma igång med en kommandoradsklient i Node.js?
 * Gick det bra att använda MySQL tillsammans med Express/Node.js?
-* Känns det som du har koll på teknikerna och hur de samverkar?
+* Känns det som du har koll på teknikerna och hur de samverkar eller känner du saknad av något?
