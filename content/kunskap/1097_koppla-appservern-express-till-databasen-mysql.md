@@ -7,7 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-09": (A, mos) Uppdaterad utgåva, omskriven från annan artikel, att användas till dbjs och databas.
+    "2018-01-09": (A, mos) Första utgåvan.
 ...
 Koppla appservern Express till databasen MySQL
 ==================================
