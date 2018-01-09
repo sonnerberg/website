@@ -6,10 +6,11 @@ category:
     - sql
     - kurs dbjs
     - kurs oophp
+    - kurs databas
 revision:
+    "2018-01-09": "(C, mos) Genomgång inför kursen databas."
     "2017-04-25": "(B, mos) Nu även i kursen oophp."
     "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
-...
 ...
 Egendefinierade funktioner i databas
 ==================================
@@ -33,7 +34,7 @@ Artikeln visar grunderna i [egendefinierade funktioner](https://dev.mysql.com/do
 
 SQLite har inte stöd för egendefinierade funktioner som kan skrivas likt MySQL. Däremot erbjuder [SQLite ett API](http://www.sqlite.org/c3ref/create_function.html) där du kan skriva egna C-funktioner som kan användas i dina SQL uttryck. Det ger dig liknande möjligheter.
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/function.sql) finner du på GitHub eller i ditt kursrepo (dbjs, oophp) under `example/sql/function.sql`.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/databas/blob/master/example/sql/function.sql) finner du på GitHub eller i ditt kursrepo (databas, dbjs, oophp) under `example/sql/function.sql`.
 
 
 
