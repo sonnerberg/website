@@ -19,7 +19,7 @@ Egendefinierade funktioner i databas
 
 Låt oss kika på vad en egen-definierad funktion är, i en databas. Konceptet kallas även UDF som *User Defined Function* och det kan erbjuda en möjlighet att skriva snyggare och mer kraftfull SQL-kod.
 
-Dagens ämne är alltså egen-definerade funktioner i databasen.
+Dagens ämne är alltså egendefinerade funktioner i databasen.
 
 <!--more-->
 
@@ -67,7 +67,7 @@ VALUES
 SELECT * FROM Exam;
 ```
 
-Se där. Då behöver vi en betygskala, denna blir bra.
+Se där, vi är redo för betygsättningen. Då behöver vi en betygskala, följande blir bra.
 
 | A-F | Poäng | Definition |
 |:---:|:-----:|------------|
@@ -81,14 +81,16 @@ Se där. Då behöver vi en betygskala, denna blir bra.
 
 Japp, då var det bara att koppla ihop tabellen med poängen.
 
-Till vår hjälp, egendefinierade funktioner.
+Till vår hjälp, egendefinierade funktioner. Tanken är att skriva en funktion som kan användas i en SELECT-sats och returnera betyget utifrån antalet poäng. Funktionen skall alltså översätta ett poäng till ett betyg.
+
+Kunde man inte gjort detta med en tabell som innehåller betygstabellen och joinat? Jo, det kan man säkert. Funktionen blir en alternativ lösning. I databaser finns ofta olika varianter på lösning.
 
 
 
 CREATE FUNCTION {#create}
 --------------------------------------
 
-Låt oss börja med en enkel function, en som bara returnerar inkommande parameter. Det är bara för att ha ett skal att komma igång med.
+Låt oss börja med en enkel funktion, en som bara returnerar inkommande parameter. Det är bara för att ha ett skal att komma igång med.
 
 Här är skalet till en sådan funktion.
 
@@ -110,6 +112,8 @@ END
 
 DELIMITER ;
 ```
+
+Funktionen tar en parameter och returnerar ett värde. För tillfället returneras samma värde vi skickar in i funktionen.
 
 Som du ser så använder jag nu *delimiter* till att avgränsa koden så att semikolon fungerar som avslutare, inne i funktionens body.
 
@@ -142,7 +146,7 @@ mysql> SELECT
 6 rows in set (0.00 sec)
 ```
 
-Låt oss göra en mer intelligent funktion.
+Låt oss göra en mer intelligent funktion som kan ge oss betyget enligt betygsskalan.
 
 
 
@@ -227,7 +231,7 @@ Skapa ytterligare en funktion {#func2}
 
 Läraren Sture har fått problem, tydligen var det en annan betygsskala som några av studenterna skulle använda. En skala som gick mellan 3-5 och U.
 
-Så här ser det ut numer.
+Så här ser det ut numer, en kombination mellan betygen A-F och U,3-5.
 
 | A-F | U,3-5 | Poäng | Definition |
 |:---:|:-----:|:-----:|------------|
@@ -260,7 +264,7 @@ BEGIN
 	ELSEIF score >= 55 THEN
 		RETURN "3";
 	END IF;
-    RETURN "F";
+    RETURN "U";
 END
 //
 
@@ -285,8 +289,8 @@ mysql> SELECT
 | siva    |    88 | B       | 4      |
 | adam    |    77 | C       | 4      |
 | john    |    63 | D       | 3      |
-| ubbe    |    52 | F       | F      |
-| june    |    49 | F       | F      |
+| ubbe    |    52 | F       | U      |
+| june    |    49 | F       | U      |
 +---------+-------+---------+--------+
 6 rows in set, 1 warning (0.00 sec)
 ```

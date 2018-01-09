@@ -127,9 +127,11 @@ Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulter
 
 ###Kmom05: Procedur, trigger, funktion {#kmom05}
 
-Kursmomenten handlar om att programmera en databas med inbyggda integritetsregler, lagrade procedurer, triggers och inbyggda funktioner.
+Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer, triggers och inbyggda funktioner. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
 
-Vi bygger vidare på vår databasdrivna applikationsserver.
+Vi bygger vidare på vår databasdrivna applikationsserver och utvecklar terminalklienten parallellt med webbklienten.
+
+Vi ser hur man bygger upp en CRUD-baserad webbklient med HTML-formulär som ger användaren möjlighet att skapa nya rader i databasen, ta bort dem, redigera dem och visa dem. CRUD står för Create, Read, Update, Delete.
 
 [Instruktion till kursmoment 05](./kmom05).
 
