@@ -240,6 +240,14 @@ Eftersom triggers inte "syns" utan de bara verkställer i bakgrunden, så kan de
 
 Glöm inte bort `SHOW TRIGGERS` för att se vilken eventuell magi som kan dölja sig bakom den vanliga SQL-koden.
 
+Det finns också möjligheten att se vilken kod som användes för att skapa en trigger.
+
+```sql
+SHOW CREATE TRIGGER <trigger-name>;
+```
+
+Det visar SQL-koden som skapade triggern.
+
 
 
 Avslutningsvis {#avslutning}
