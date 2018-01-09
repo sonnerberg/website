@@ -1,14 +1,10 @@
 ---
 author: mos
 revision:
-    "2017-12-27": (PA1, mos) Arbete pågår.
+    "2018-01-09": (A, mos) Första utgåvan.
 ...
 Kmom04: Transaktioner
 ====================================
-
-[WARNING]
-Kursutveckling pågår inför VT18.
-[/WARNING]
 
 Kursmomenten hanterar begreppet transaktioner i en databas.
 
@@ -18,11 +14,9 @@ Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulter
 
 <!--more-->
 
-[FIGURE src=image/snapvt17/sqlite-transaction.png?w=w2 caption="Transaktioner för att utföra många saker i en sekvens utan avbrott och störmoment."]
+[FIGURE src=image/snapvt18/bank-header-footer.png caption="En bank i Express som kopplar sig till MySQL, redo för transaktioner."]
 
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
-
-[FIGURE src=image/snapvt17/express-mysql-view-all.png?w=w2 caption="Via Express använder vi oss av MySQL och HTML formulär för att visa och uppdatera databasens innehåll."]
+[FIGURE src=image/snapvt18/bank-terminal-move.png caption="Via terminalklienten kan du flytta pengar mellan två konton, i skydd av en transaktion."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -54,7 +48,7 @@ Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, 
 
 Läs följande:
 
-1. Om du känner behov av att träna upp dig i, eller repetera, klientsidetekniker med HTML, CSS och JavaScript så kan du utgå från tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)" som ger dig en snabb insyn i de tre teknikerna och hur de samverkar i webbläsaren.
+1. Om du känner behov av att träna upp dig i, eller repetera, tekniker för klientsidan (webbläsaren) med HTML, CSS och JavaScript så kan du utgå från tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)" som ger dig en snabb insyn i de tre teknikerna och hur de samverkar i webbläsaren.
 
 1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kolla runt i dokumentationen och bekanta dig med begrepp och exempelkod.
 
@@ -95,16 +89,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa ER-modell för en databas (logisk/fysisk)](uppgift/skapa-er-modell-for-en-databas-logisk-fysisk)". Detta är den avslutande delen av uppgiften. Spara allt du gör i `me/kmom04/er2`.
 
-<!--stop-->
+1. Gör uppgiften "[Flytta pengar med terminalprogram och med Express](uppgift/flytta-pengar-med-terminal-program-och-med-express)" för att jobba med flera klienter mot samma databas. Bygg vidare på din kod i `me/kmom04/express-sql`.
 
-1. **Skapa KLIENT, ÅTERANVÄND GEMENSAM MODUL?** (skolan, båtklubben), ER-uppgiften, nu med data som kan importeras från csv?
-
-1. BYGG VIDARE PÅ ER-UPPGIFTEN. Först i terminalklient och sen i express? Gör uppgiften "[Bygg en faktureringsmotor för båtklubben (invoice)](uppgift/bygg-en-faktureringsmotor-for-batklubben)". Spara koden i `me/kmom03/invoice`.
-
-1. **FOKUS TRANSAKTION** Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/app`.
-
-Move money i balance, webb.
-
+1. ER-uppgiften, skapa produkter i Excel och importera från csv? Visa produkter (termial + webb). Exportera till csv.
 
 <!--
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js (server)](uppgift/skapa-en-restful-http-server-med-node-js)". Spara koden i `me/kmom03/server`.
@@ -122,6 +109,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
+* Gick det bra att sluföra uppgiften om ER modellering?
 * Hur gick det att förstå konceptet transaktioner i databas?
 * Gick det bra att komma igång med Express?
 * Gick det bra att använda MySQL tillsammans med Express/Node.js?

@@ -73,6 +73,12 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. **BYGG VIDARE PÅ WEBBEN/KLIENTEN? MODUL SOM ÅTERANVÄNDS MED SERVERN?** (skolan, hacka lönen, ge betyg, båtklubben) CRUD? Terminalklienten.
 
+<!--
+1. Faktureringsmotor?
+
+1. Exportera data från webben till csv?
+-->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -88,3 +94,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Gick det bra att komma igång med lagrade procedurer, triggers, funktioner?
 * Skriv ett kort stycke (3-5 meningar) om respektive inbyggda integritetsregler, lagrade procedurer, triggers och funktioner där du förklarar begreppen för en som inte är insatt i begreppen.
 * Hur är din syn på att "programmera" på detta viset i databasen, jämför med traditionell SQL?
+* Är du nöjd med din kodstruktur 
