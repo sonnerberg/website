@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2018-01-03": "(A, mos) Första versionen, uppdelad av större dokument."
+    "2018-01-09": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Ta backup av databasen
 ==================================
@@ -31,7 +31,7 @@ På din dator kan de ligga på en annan plats, beroende av hur du installerat My
 
 När du hittar programmet kan du dubbelkolla att det går att köra genom att visa dess version.
 
-```bash
+```text
 $ mysqldump --version
 mysqldump  Ver 10.13 Distrib 5.6.30, for debian-linux-gnu (x86_64)
 ```

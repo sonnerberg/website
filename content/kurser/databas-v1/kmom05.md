@@ -43,8 +43,6 @@ Läs följande:
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 
-<!--stop-->
-
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
@@ -63,11 +61,16 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/prog`.
 
+1. CRUD (web & client)
+
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+<!--stop-->
+
 
 1. **FOKUS PROC, TRIG, FUNC** Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/app`.
 

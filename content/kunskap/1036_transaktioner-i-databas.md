@@ -34,7 +34,7 @@ Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/
 
 Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.org/transactional.html).
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/database/blob/master/example/sql/transaction.sql) finner du på GitHub eller i ditt kursrepo (databas, dbjs, oophp) under `example/sql/transaction.sql`.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/databas/blob/master/example/sql/transaction.sql) finner du på GitHub eller i ditt kursrepo (databas, dbjs, oophp) under `example/sql/transaction.sql`.
 
 
 

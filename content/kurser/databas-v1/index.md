@@ -103,7 +103,11 @@ Du kommer även jobba med JavaScript och Node.js för att se hur du kan koppla d
 
 ###Kmom03: ER-modellering {#kmom03}
 
-Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering.
+Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering.
+
+Vi jobbar vidare med SQL och tränar mer på utmanande saker som subqueries, JOIN och LEFT/RIGHT OUTER JOIN.
+
+Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en mer potent klient som kan utföra olika saker mot databasen.
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -111,9 +115,11 @@ Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-R
 
 ###Kmom04: Transaktioner {#kmom04}
 
-Kursmomenten handlar om begreppet transaktioner i en databas.
+Kursmomenten hanterar begreppet transaktioner i en databas.
 
-I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp en webb/RESTful server och hur du kan skriva din applikationskod för att till exempel komma åt en databas och visa och uppdatera dess innehåll.
+I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp grunderna i en webbtjänst och hur du kan skriva din applikationskod för att komma åt en databas, visa rapporter och uppdatera innehåll.
+
+Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulterande databasen implementeras och vi använder Express för att skapa ett webbaserat gränssnitt. Vi bygger en terminalklient för att skapa ett textbaserat gränssnitt mot databasen.
 
 [Instruktion till kursmoment 04](./kmom04).
 
