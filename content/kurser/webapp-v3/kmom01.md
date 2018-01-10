@@ -101,7 +101,9 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 ###Lästips {#lastips}
 
-1. Läs och spara denna samling av "best-practices" för typografi på webben i dina bokmärken [Typography Handbook](http://typographyhandbook.com).
+1. Läs och spara följande samlinger av "best-practices" för typografi på webben i dina bokmärken [Typography Handbook](http://typographyhandbook.com) och [Butterick's Practical Typography](https://practicaltypography.com/).
+
+1. För mer om tillgänglighet (accessibility, a11y) titta in på [The A11Y Project](https://a11yproject.com/).
 
 <!-- 1. Läs artikeln [Choosing between a native, hybrid or webapp](https://crew.co/how-to-build-an-online-business/native-hybrid-web-app-differences/). -->
 
@@ -120,9 +122,9 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom tipset om "[Developer tools i webbläsaren för mobila enheter](coachen/developer-tools-i-webblasaren-for-mobila-enheter)".
 
-1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
-
 1. Gör övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)".
+
+1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
 
 <!-- 1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)".
 
@@ -158,6 +160,5 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Är du sedan tidigare bekant med utveckling av mobila appar?
-* Är du bekant med mithril?
-* Hur känns det att jobba i mithril?
-* Var det något som krånglade eller tog extra mycket tid?
+* Vilket är den viktigaste lärdomen du gjort om typografi för mobila enheter?
+* Du har i kursmomentet hämtat data från två stycken API. Hur kändes detta?

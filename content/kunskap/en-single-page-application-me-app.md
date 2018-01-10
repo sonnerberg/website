@@ -32,6 +32,7 @@ Som med allt annat vi gör för webben behöver vi någonstans ha en HTML sida, 
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Me-app</title>
 
     <link rel="stylesheet" href="style.css" />
