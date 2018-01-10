@@ -5,10 +5,10 @@ revision:
 category:
     - oopython
 ...
-Exceptions
+Exceptions i Python
 ===================================
 
-[FIGURE src=/image/oopython/kmom04/cars_table1.png?w=c5 class="right"]
+[FIGURE src=/image/oopython/kmom04/exceptions_top.png?w=c8 class="right"]
 
 Something something...  
 
