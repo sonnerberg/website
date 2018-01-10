@@ -51,7 +51,7 @@ $ cd me/kmom03/war
 
 1. Skapa en fil, `test.py`, som ska bestå av enhetstester för klassen `Hand`. Alla medlemsvariabler och metoder ska testas. Spara den i mappen `war`.
 
-1. Skapa ett uml diagram över klasserna. Döp filen till `uml.png` och spara den i mappen `war`.
+1. Skapa uml diagram över två valfria klasser. Döp filen till `uml.png` och spara den i mappen `war`.
 
 ```bash
 # Ställ dig i kurskatalogen
