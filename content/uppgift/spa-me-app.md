@@ -6,7 +6,7 @@ revision:
 ...
 SPA me-app
 ==================================
-I övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)" fick du grunderna till me-app. I denna uppgift ska du bygga vidare och skapa din helt egna me-app med navigation, Github sida och som även ska användas för dina redovisningstexter.
+I övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)" fick du grunderna till en me-app. I denna uppgift ska du bygga vidare och skapa din helt egna me-app med navigation, Github sida och som även ska användas för dina redovisningstexter.
 
 
 
@@ -16,7 +16,7 @@ I övningen "[En Single Page Application](kunskap/en-single-page-application-me-
 
 Förkunskaper {#forkunskaper}
 -----------------------
-Du har jobbat igenom övningarna "[En Single Page Application](kunskap/en-single-page-application-me-app)" och "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)"
+Du har jobbat igenom övningarna "[En Single Page Application](kunskap/en-single-page-application-me-app)" och "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
 
 
 Introduktion {#intro}
@@ -28,6 +28,8 @@ I övningnen "[En Single Page Application](kunskap/en-single-page-application-me
 Krav {#krav}
 -----------------------
 1. Din Me-app ska innehålla fyra vyer Me, Om, Github och Redovisning.
+
+1. Din navigation ska tydligt visa nuvarande aktiva vy.
 
 1. Din Github vy ska innehålla en lista med länkar till dina Github repon.
 
