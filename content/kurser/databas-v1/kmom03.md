@@ -85,8 +85,6 @@ https://docs.google.com/document/d/1kKoSO2BQL5T2cnzshpM_hnk5JbqT0_00khfGJKZQ2Fo/
 
 Genomför följande för att förbereda inför uppgifter.
 
-1. Jobba igenom delen "Koppla tabeller" av guiden "[Kom igång med SQL i MySQL (Koppla tabeller)](guide/kom-igang-med-sql-i-mysql/koppla-tabeller)". Spara all SQL-kod i filer i katalogen `me/kmom03/skolan3`. Du kan gärna kopiera de skript du sparat tidigare och utgå från dem.
-
 1. Jobba igenom artikeln "[Gör en kommandoradsklient i Node.js (v2)](kunskap/gor-en-kommandoradsklient-i-node-js-v2)". Spara alla filer du gör i `me/kmom03/cli`.
 
 <!--
@@ -99,6 +97,8 @@ Svårt göra övning per distans.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+1. Jobba igenom delen "Koppla tabeller" av guiden "[Kom igång med SQL i MySQL (Koppla tabeller)](guide/kom-igang-med-sql-i-mysql/koppla-tabeller)". Spara all SQL-kod i filer i katalogen `me/kmom03/skolan3`. Du behöver kopiera alla skript du redan sparat i `me/kmom02/skolan2` och utgå från dem och bygga vidare.
 
 1. Gör uppgiften "[Node.js terminalprogram mot MySQL med kommandoloop](uppgift/nodejs-terminalprogram-mot-mysql-med-kommandoloop)". Spara alla filer i `me/kmom03/terminal2`.
 

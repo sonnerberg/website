@@ -6,7 +6,9 @@ revision:
 Lägg till rader
 ==================================
 
-Vi lägger till lärare i tabellen. Lägg all SQL-kod, som handlar om att lägga in värden i en tom databas, i filen `dml_insert.sql` och inled filen med en header som berättar vem du är.
+Vi lägger till lärare i tabellen.
+
+Lägg SQL-koden, som handlar om att lägga in värden i en tom databas, i filen `dml_insert.sql` och inled filen med en header som berättar vem du är.
 
 ```sql
 --

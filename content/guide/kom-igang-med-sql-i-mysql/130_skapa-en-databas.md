@@ -6,7 +6,9 @@ revision:
 Skapa en databas
 ==================================
 
-Vi skapar en databas för detta exemplet och vi lägger till en användare som kan använda databasen. Vi sparar allt vi gör i en fil och döper den till `setup.sql`.
+Vi skapar en databas för detta exemplet och vi lägger till en användare som kan använda databasen.
+
+Spara SQL-koden du gör i en fil och döp den till `setup.sql`.
 
 [INFO]
 Om du kör på BTH's server så har du [inte rättigheter att skapa en ny databas](kunskap/bth-s-labbmiljo-for-databasen-mysql#dbserver) eller lägga till en användare. Du har en befintlig databas och du har fått en användare och lösenord tilldelat.

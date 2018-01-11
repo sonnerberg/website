@@ -121,7 +121,7 @@ Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någ
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Spara all SQL-kod i filer i katalogen `me/kmom02/skolan2`. Du kan gärna kopiera alla skript du redan sparat i `me/kmom01/skolan1` och utgå från dem.
+1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Spara all SQL-kod i filer i katalogen `me/kmom02/skolan2`. Du behöver kopiera alla skript du redan sparat i `me/kmom01/skolan1` och utgå från dem och bygga vidare.
 
 1. Lös uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)". Spara alla filer i `me/kmom02/terminal1`.
 
@@ -137,7 +137,7 @@ Enkel SQL laboration som visar att studenten kan göra joins/subquery.
 
 Gör följande extrauppgifter om du har tid och lust.
 
-1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Om du har flyt så kan du jobbar vidare i guiden redan nu och spara lite arbete i nästa kmom.
+1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Du kan redan nu tjuvkika på guidens kommande delar.
 
 1. Jobba igenom guiden "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)" för att lära dig hur du jobbar mer effektivt i terminalen med tmux. Tmux ger dig möjlighet att dela in din terminal i olika flikar och varje flik i olika delar.
 

@@ -6,7 +6,9 @@ revision:
 Ta bort rader
 ==================================
 
-Vi använder `DELETE` för att radera rader från en tabell. Lägg all SQL-kod för detta exemplet i filen `dml_delete.sql` och inled filen med en header som berättar vem du är.
+Vi använder `DELETE` för att radera rader från en tabell.
+
+Lägg SQL-koden för detta exemplet i filen `dml_delete.sql` och inled filen med en header som berättar vem du är.
 
 ```sql
 --

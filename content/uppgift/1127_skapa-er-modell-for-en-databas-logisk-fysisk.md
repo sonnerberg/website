@@ -68,7 +68,7 @@ Krav {#krav}
 
 1. Försäkra dig själv om att din databasmodell kommer att klara av att hantera ordrar och fakturer. Se det som ditt eget sätt att verifiera att din modell fungerar.
 
-1. Spara ditt dokument som pdf i katalogen du jobbar.
+1. Spara ditt orginal dokument i katalogen du jobbar. Generera även en PDF som `er.pdf`.
 
 1. När du är klar så publicerar du ditt kursrepo.
 

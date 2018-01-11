@@ -62,9 +62,6 @@ Läs följande.
 
 
 
-<!--stop-->
-
-
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
@@ -77,6 +74,8 @@ Läs följande.
 Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/prog`.
+
+<!--stop-->
 
 1. Jobba igenom övningen "[Index och prestanda i MySQL](kunskap/index-och-prestanda-i-mysql)" som tränar dig i hur du kan optimera dina databasfrågor med index. Spara dina testprogram i `me/kmom06/index`.
 

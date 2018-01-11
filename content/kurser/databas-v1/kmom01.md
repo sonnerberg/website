@@ -84,7 +84,7 @@ Kika igenom följande artiklar.
 
 ###Övningar {#ovningar}
 
-Följande två dokument gick du igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har koll på dem. De ger dig basen för kursens utvecklingsmiljö mot databasen.
+Följande två dokument gick du eventuellt igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har koll på dem. De ger dig basen för kursens utvecklingsmiljö mot databasen.
 
 1. Jobba igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
@@ -98,7 +98,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
-1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". Spara all SQL-kod i filer i katalogen `me/kmom01/skolan1`. I nästa kmom fortsätter du med avslutande delen.
+1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/kmom01/skolan1` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
 
 <!--
 IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad guiden går igenom. Använd databasen som finns i guiden.
@@ -111,7 +111,7 @@ IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad 
 
 Gör följande extrauppgifter om du har tid och lust.
 
-1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Om du har flyt så kan du jobbar vidare i guiden redan nu och spara lite arbete i nästa kmom.
+1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Du kan redan nu tjuvkika på guidens kommande delar.
 
 
 

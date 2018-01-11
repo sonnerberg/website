@@ -8,6 +8,8 @@ Ta backup av databasen
 
 Vi skall ta en backup av databasen med verktyget mysqldump. Resultatet blir en testfil med SQL-kommandon som är både DDL för att skapa databas och tabeller samt DML för att lägga till innehållet i tabellerna.
 
+Spara din backup i filen `skolan.sql`.
+
 Vi får alltså hela vår databas exporterad till SQL-kommandon i en behändig fil som enkelt går att flytta mellan olika system.
 
 Du kan läsa om programmet [mysqldump i manualen](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html).

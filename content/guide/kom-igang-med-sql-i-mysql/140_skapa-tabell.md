@@ -6,7 +6,9 @@ revision:
 Skapa tabell
 ==================================
 
-Vi börjar nu att skapa tabeller. Lägg all SQL-kod i filen `ddl.sql` och inled filen med en header som berättar vem du är.
+Vi börjar nu att skapa tabeller.
+
+Lägg SQL-koden i filen `ddl.sql` och inled filen med en header som berättar vem du är.
 
 ```sql
 --
