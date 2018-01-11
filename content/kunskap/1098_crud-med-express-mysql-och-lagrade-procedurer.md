@@ -4,19 +4,21 @@ category:
     - nodejs
     - javascript
     - express
+    - mysql
+    - crud
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-10": (A, mos) Första utgåvan.
+    "2018-01-11": (A, mos) Första utgåvan.
 ...
 CRUD med Express, MySQL och lagrade procedurer
 ==================================
 
-[FIGURE src=image/snapvt18/image/snapvt18/bank2-delete-account.png?w=c5&a=0,30,20,0&cf class="right"]
+[FIGURE src=image/snapvt18/bank2-delete-account.png?w=c5&a=0,30,20,0&cf class="right"]
 
-Vi skall jobba igenom begreppet CRUD, Create, Read, Update, Delete, via ett webbgränssnitt baserat på Express och kopplat mot databasen MySQL.
+Vi skall jobba igenom begreppet CRUD, Create, Read, Update, Delete, via ett webbgränssnitt baserat på JavaScript i Node.js med Express och kopplat mot databasen MySQL.
 
-Vi skall använda oss av lagrade procedurer i databasen för att skapa ett API mot databasen som alla frågor från klienterna går via. Det ger oss ett exempel på hur vi kan kapsla in SQL-koden och förenkla för klienterna.
+Vi skall använda oss av lagrade procedurer i databasen för att skapa ett API mot databasen. Alla potentiella klienter kan sedan använda samma gränssnitt. Det ger oss ett exempel på hur vi kan kapsla in SQL-koden och förenkla för klienterna.
 
 <!--more-->
 
@@ -27,7 +29,7 @@ Förutsättning {#pre}
 
 Du har jobbat igenom artikeln "[Koppla appservern Express till databasen MySQL](kunskap/koppla-appservern-express-till-databasen-mysql)" och har tillgång til kod du kan utgå ifrån.
 
-Du har jobbat igenom artikelserien som visar hur du programmerar i en databas via "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)", "[Triggers i databas](kunskap/triggers-i-databas)" och "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)". Du har tillgång till den databas som används i artikelserien.
+Du har jobbat igenom artikeln som visar hur du programmerar i en databas via "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)". Du har tillgång till den databas som används i artikelserien.
 
 De exempelprogram som används i artikeln finns i ditt kursrepo (dbjs, databas) under `example/express-crud` (det färdiga exemplet) och `example/express-mysql` (koden jag startar med).
 
@@ -138,6 +140,12 @@ Det ger en JSON representation av datat jag jobbar på. Det kan se ut så här.
 
 Vill jag inte se utskriften kan jag kommentera bort den, men konstruktionen är bra vid behov.
 
+Du kommenterar bort den via en brädgård `#`. Det är en kostruktion i EJS.
+
+```html
+<pre><%#= JSON.stringify(res, null, 4) %></pre>
+```
+
 
 
 C i CRUD, Create {#create}
@@ -186,7 +194,7 @@ Formuläret postas till servern via HTTP-metoden POST. Då gör vi en route `ban
 
 Routen lägger vi tillsammans med övriga bank-routes i `route/bank.js`.
 
-Låt oss först titta på ett utkast till routern, där vi använder post istället för get.
+Låt oss först titta på ett utkast till routern, där vi använder post `router.post()` istället för get `router.get()`.
 
 ```javascript
 router.post("/create", async (req, res) => {
@@ -198,7 +206,7 @@ router.post("/create", async (req, res) => {
 
 Routen ovan fungerar som den är. Om vi klickar på submit-knappen i formuläret så hamnar vi i denna routen och det enda som händer är att vi redirectas till routen `/bank/balance`.
 
-Det vi nu måste göra är att extrahera datat som kommer i det postade formuläret. Till det använder vi en npm modul [body-parser](https://www.npmjs.com/package/body-parser) vars uppgift är att extrahera den kodade informationen i HTTP-requesten.
+Det vi nu måste göra är att extrahera datat som kommer i det postade formuläret. Till det använder vi npm modulen [body-parser](https://www.npmjs.com/package/body-parser) vars uppgift är att extrahera den kodade informationen i HTTP-requesten.
 
 Vi installerar modulen.
 
@@ -224,9 +232,11 @@ router.post("/create", urlencodedParser, async (req, res) => {
 });
 ```
 
-Vi har nu det postade formuläret i requesten i `req.body`. Vi kan debugga inkommande genom att skriva ut dess innehåll. Det blir enklare och tydligare att läsa innehållet om man formaterar det som JSON-data.
+Som middleware kommer `urlencodedParser()` att anropas innan routens hanterar. Funktionen kan då koda upp det postade formuläret och lägga som en del i requesten.
 
-Postar vi ett tomt formulär ser utskriften ut så här.
+I routens callback har vi nu det postade formuläret via requesten i `req.body`. Vi kan debugga inkommande genom att skriva ut dess innehåll. Det blir enklare och tydligare att läsa innehållet om man formaterar det som JSON-data.
+
+Postar vi ett tomt formulär ser utskriften i terminalen ut så här.
 
 ```json
 {
@@ -303,7 +313,7 @@ async function createAccount(id, name, balance) {
     console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
 }
-``` 
+```
 
 Jag anropar funktionen från min route och skickar med argumenten som kommer från det postade formuläret.
 
@@ -352,7 +362,7 @@ router.get("/account/:id", async (req, res) => {
 });
 ```
 
-Det som är nytt här är hur routen specificeras och hur `:id` kan hämtas i routen via `req.params.id`. Det är som att skicka en parameter via routen. Resten i routen är saker du känner till, en funktion `bank.showAccount()` som anropar en lagrad procedur som hämtar detaljer om just ett konto. Vyn kan ha liknande struktur som den som visar balansen, det är samma typ av information som skall visas upp.
+Det som är nytt här är hur routen specificeras och hur `:id` kan hämtas i routen via `req.params.id`. Det är som att skicka en parameter via länken. Resten i routen är saker du känner till, en funktion `bank.showAccount()` som anropar en lagrad procedur som hämtar detaljer om just ett konto. Vyn kan ha liknande struktur som den som visar balansen, det är samma typ av information som skall visas upp.
 
 Resultatet av en sådan route skulle kunna visas upp så här.
 
@@ -367,7 +377,7 @@ U som i Uppdatera detaljer om ett konto {#uppdatera}
 
 U:et i CRUD handlar om att uppdatera befintlig data. Säg att vi vill uppdatera detaljer om ett specifikt konto.
 
-Nu kan vi länka till varje konto, låt oss då skapa ytterligare en länk som leder oss till ett formulär där vi kan uppdatera detaljer om ett konto.
+Vi har nu möjligheten att länka till varje konto, låt oss då skapa ytterligare en länk som leder oss till ett formulär där vi kan uppdatera detaljer om ett konto.
 
 
 
@@ -375,11 +385,11 @@ Nu kan vi länka till varje konto, låt oss då skapa ytterligare en länk som l
 
 Jag tycker det vore trevligt med ikoner att klicka på och jag väljer att använda [FontAwesome](http://fontawesome.io/) för det syftet.
 
-När jag ändå håller på med ikoner så lägger jag till en ikon för att radera också. Så här blev det.
+När jag ändå håller på med ikoner så lägger jag till en ikon för att göra update och en för att radera. Så här blev det.
 
 [FIGURE src=image/snapvt18/bank2-account-actions.png caption="Nu förberedd med ikoner för att göra edit och delete."]
 
-Själva ikonerna, och dess länkar, skapas med följande kod (se hemsidan för FontAwesome).
+Själva ikonerna, och dess länkar, skapas med följande kod (se hemsidan för FontAwesome). Delen med `<i>...</i>` ger ikonen och länken har jag själv lagt till.
 
 ```html
 <a href="/bank/edit/<%= row.id %>">
@@ -396,11 +406,13 @@ Man behöver även lägga dit en stylesheet som ger mig tillgång till ikonerna 
 <script src="https://use.fontawesome.com/0aee473986.js"></script>
 ```
 
+Du kan återanvända den, om du vill.
+
 
 
 ### GET route för uppdatera kontodetaljer {#geteditaccount}
 
-För edit-ikonen länkar jag till routen `/bank/edit/:id`. Den routen ser ut ungefär som routen `/bank/account/:id`, det är bara dess path, title och vy som ändras.
+För edit-ikonen länkar jag till routen `/bank/edit/:id`. Den routen ser ut ungefär som routen `/bank/account/:id`, det är bara dess title och vy som ändras.
 
 ```javascript
 router.get("/edit/:id", async (req, res) => {
@@ -416,7 +428,7 @@ router.get("/edit/:id", async (req, res) => {
 });
 ```
 
-I routen hämtar jag detaljer om kontot för det specifika kontot och visar upp det i en vy som ser ut ungefär som formuläret för att skapa konto. Det är ju ungefär samma upplägg för ett edit-formulär, men med fälten ifyllda med dess värde.
+I routen hämtar jag detaljer om kontot för det specifika kontot och visar upp det i en vy som ser ut ungefär som formuläret för att skapa konto. Det är ju ungefär samma upplägg för ett edit-formulär, men med skillnaden att fälten är ifyllda med sitt värde.
 
 ```html
 <% res = res[0] %>
@@ -438,7 +450,7 @@ I routen hämtar jag detaljer om kontot för det specifika kontot och visar upp 
 </form>
 ```
 
-Notera att formulärelementet för "id" är markerat som `readonly`, användaren skall inte kunna ändra det. Rent strikt är detta inget säkert sätt att hindra användaren från att uppdatera fältet. När man pratar om säkerhet måste man alltid validera ett postat formulär på serversidan, det går inte att lita på klienten. Men det får vara en annan historia.
+Notera att formulärelementet för "id" är markerat som `readonly` då användaren inte skall kunna ändra det. Rent strikt är detta inget säkert sätt att hindra användaren från att uppdatera fältet. När man pratar om säkerhet måste man alltid validera ett postat formulär på serversidan, det går inte att lita på klienten. Men det får vara en annan historia.
 
 Notera också att första raden i formuläret säger `action="/bank/edit"` vilket innebär att detta formulär postas till just den routen. Om vi utelämnar det fältet så postas formuläret till samma route man är på.
 
@@ -542,7 +554,7 @@ mysql> CALL showAccount("1337");
 Query OK, 0 rows affected (0.00 sec)
 ```
 
-Då kan vi utföra samma sak i webbklienten.
+Då kan vi utföra samma sak i webbklienten, nu när vi vet att den lagrade proceduren gör det den ska.
 
 
 
@@ -559,7 +571,7 @@ R som i Radera ett konto {#radera}
 
 D:et i CRUD handlar om att göra delete på rader. Säg att vi vill radera ett konto.
 
-För delete-ikonen länkar jag till routen `GET /bank/delete/:id` och där tänker jag skriva ut detaljer om kontot och erbjuda en submit-knapp om de verkligen vill radera kontot.
+För delete-ikonen länkar jag till routen `GET /bank/delete/:id` och där tänker jag skriva ut detaljer om kontot och erbjuda en submit-knapp om användaren verkligen vill radera kontot.
 
 Det känns som jag borde kunna återanvända de strukturer jag redan byggt upp.
 
@@ -579,6 +591,21 @@ Alltid POST för ändringar {#alltidpost}
 ---------------------------------------
 
 Märk att vi alltid gör en HTTP POST-request när vi uppdaterar databasen. Du ser det i Create, Update och Delete-fallen. Det är så det skall vara. Vi skall aldrig göra en uppdatering av databasen via en GET-request. Hade vi använt GET till uppdateringar så hade det exponerat en säkerhetsrisk. Mer om det är en annan historia som vi väljer att inte fördjupa oss i just nu. Vi nöjer oss med att säga -- _POST för alla uppdateringar_.
+
+
+
+Kör exemplet i sin helhet {#exemplet}
+--------------------------------------
+
+Du kan testköra exemplet som ligger under `example/express-crud`. Principen för att starta igång servern är följande.
+
+```text
+npm install
+mysql -uuser -ppass dbwebb < sql/bank/ddl_procedure.sql
+node index
+```
+
+Provkör gärna och jämför med din egen variant, om du nu gjorde någon. Oavsett så har du en kodbas att studera, för att se hur man kan strukturera sin CRUD.
 
 
 

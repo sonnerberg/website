@@ -10,7 +10,9 @@ Kmom06: Prestanda
 Kursutveckling pågår inför VT18.
 [/WARNING]
 
-Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du bör använda index för att optimera din databas.
+Vi fortsätter med programmering i databasen, denna gången med egendefinierade funktioner som har en liknande struktur som lagrade procedurer och triggers.
+
+Sedan studerar vi hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du kan använda index för att optimera din databas.
 
 Vi bygger vidare på vår databasdrivna applikationsserver.
 
@@ -73,6 +75,8 @@ Läs följande.
 ###Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
+
+1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/prog`.
 
 1. Jobba igenom övningen "[Index och prestanda i MySQL](kunskap/index-och-prestanda-i-mysql)" som tränar dig i hur du kan optimera dina databasfrågor med index. Spara dina testprogram i `me/kmom06/index`.
 

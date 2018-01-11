@@ -109,3 +109,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Lyckas du med god kodstruktur för terminal och webbklient?
 * Gick det bra att sluföra uppgiften om ER modellering samt implementera databasen och de båda klienterna?
 * Känns det som du har koll på teknikerna och hur de samverkar eller känner du saknad av något?
+* Vilken är din TIL för detta kmom?
