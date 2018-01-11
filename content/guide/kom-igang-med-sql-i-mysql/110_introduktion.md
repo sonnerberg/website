@@ -25,6 +25,8 @@ Du behöver tillgång till en klient likt MySQL WorkBench, PHPMyAdmin eller komm
 
 Du kan jobba [BTH's labbmiljö för MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql).
 
+Mitt förslag är att du jobbar lokalt mot en egen databasserver och använder terminalklienten `mysql` samt desktopklienten MySQL Workbench.
+
 
 
 Forumtråd kopplad till guiden {#forum}
