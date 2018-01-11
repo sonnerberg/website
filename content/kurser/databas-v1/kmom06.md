@@ -77,7 +77,14 @@ Genomför följande övning för att förbereda inför uppgifterna.
 1. Jobba igenom övningen "[Index och prestanda i MySQL](kunskap/index-och-prestanda-i-mysql)" som tränar dig i hur du kan optimera dina databasfrågor med index. Spara dina testprogram i `me/kmom06/index`.
 
 <!--
-Artikel om hur man skriver bra SQL frågor på ett optimerat sätt.
+1. Artikel om hur man skriver bra SQL frågor på ett optimerat sätt.
+
+1. Inloggning, session, express.
+
+1. Usability with messages on what happens.
+
+1. Driftsättning?
+
 -->
 
 

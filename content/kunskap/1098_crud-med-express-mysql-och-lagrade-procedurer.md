@@ -7,12 +7,12 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-09": (A, mos) Första utgåvan.
+    "2018-01-10": (A, mos) Första utgåvan.
 ...
 CRUD med Express, MySQL och lagrade procedurer
 ==================================
 
-[FIGURE src=image/snapvt18/bank-header-footer.png?w=c5&a=0,30,20,0&cf class="right"]
+[FIGURE src=image/snapvt18/image/snapvt18/bank2-delete-account.png?w=c5&a=0,30,20,0&cf class="right"]
 
 Vi skall jobba igenom begreppet CRUD, Create, Read, Update, Delete, via ett webbgränssnitt baserat på Express och kopplat mot databasen MySQL.
 
@@ -293,7 +293,7 @@ Först skapar jag en funktion i databasmodulen `src/bank.js`. Jag döper den til
  * @param {string} name    The name of the account holder.
  * @param {string} balance Initial amount in the account.
  *
- * @returns {RowDataPacket} Resultset from the query.
+ * @returns {void}
  */
 async function createAccount(id, name, balance) {
     let sql = `CALL createAccount(?, ?, ?);`;
@@ -369,15 +369,189 @@ U:et i CRUD handlar om att uppdatera befintlig data. Säg att vi vill uppdatera 
 
 Nu kan vi länka till varje konto, låt oss då skapa ytterligare en länk som leder oss till ett formulär där vi kan uppdatera detaljer om ett konto.
 
-Jag tycker det vore trevligt med lite ikoner för detta och väljer att använda [FontAwesome](http://fontawesome.io/) för det syftet.
+
+
+### Klickbara ikoner {#klickikon}
+
+Jag tycker det vore trevligt med ikoner att klicka på och jag väljer att använda [FontAwesome](http://fontawesome.io/) för det syftet.
 
 När jag ändå håller på med ikoner så lägger jag till en ikon för att radera också. Så här blev det.
 
 [FIGURE src=image/snapvt18/bank2-account-actions.png caption="Nu förberedd med ikoner för att göra edit och delete."]
 
-För edit-ikonen länkar jag till routen `/bank/edit/:id`. I routen hämtar jag detaljer om kontot för det specifika kontot och visar upp det i en vy som ser ut ungefär som formuläret för att skapa konto. Det är ju ungefär samma upplägg för ett edit-formulär.
+Själva ikonerna, och dess länkar, skapas med följande kod (se hemsidan för FontAwesome).
 
- 
+```html
+<a href="/bank/edit/<%= row.id %>">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+</a>
+<a href="/bank/delete/<%= row.id %>">
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+</a>
+```
+
+Man behöver även lägga dit en stylesheet som ger mig tillgång till ikonerna (detaljer, se FontAwesome), i mitt fall blev det följande i min `views/bank/header.ejs`.
+
+```html
+<script src="https://use.fontawesome.com/0aee473986.js"></script>
+```
+
+
+
+### GET route för uppdatera kontodetaljer {#geteditaccount}
+
+För edit-ikonen länkar jag till routen `/bank/edit/:id`. Den routen ser ut ungefär som routen `/bank/account/:id`, det är bara dess path, title och vy som ändras.
+
+```javascript
+router.get("/edit/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `Edit account ${id} ${sitename}`,
+        account: id
+    };
+
+    data.res = await bank.showAccount(id);
+
+    res.render("bank/account-edit", data);
+});
+```
+
+I routen hämtar jag detaljer om kontot för det specifika kontot och visar upp det i en vy som ser ut ungefär som formuläret för att skapa konto. Det är ju ungefär samma upplägg för ett edit-formulär, men med fälten ifyllda med dess värde.
+
+```html
+<% res = res[0] %>
+<form class="label-left" method="post" action="/bank/edit">
+    <fieldset>
+        <legend>Edit account</legend>
+
+        <label for="id">Id</label>
+        <input id="id" type="text" name="id" readonly value="<%= res.id %>">
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" value="<%= res.name %>">
+
+        <label for="balance">Balance</label>
+        <input id="balance" type="number" name="balance" value="<%= res.balance %>">
+
+        <input type="submit" name="doit" value="Edit">
+    </fieldset>
+</form>
+```
+
+Notera att formulärelementet för "id" är markerat som `readonly`, användaren skall inte kunna ändra det. Rent strikt är detta inget säkert sätt att hindra användaren från att uppdatera fältet. När man pratar om säkerhet måste man alltid validera ett postat formulär på serversidan, det går inte att lita på klienten. Men det får vara en annan historia.
+
+Notera också att första raden i formuläret säger `action="/bank/edit"` vilket innebär att detta formulär postas till just den routen. Om vi utelämnar det fältet så postas formuläret till samma route man är på.
+
+Om jag nu utgår från översikten av kontona och klickar på edit-knappen så hamnar jag på edit-sidan, med formuläret ifyllt.
+
+[FIGURE src=image/snapvt18/bank2-edit-account-details.png caption="Nu kan jag uppdatera detaljer om kontot."]
+
+Då behöver vi en route för det submittade formuläret.
+
+
+
+### POST route för uppdatera kontodetaljer {#posteditaccount}
+
+På samma sätt som när vi skapade ett konto, så behöver vi nu en POST route till `/edit`.
+
+```javascript
+router.post("/edit", urlencodedParser, async (req, res) => {
+    // console.log(JSON.stringify(req.body, null, 4));
+    await bank.editAccount(req.body.id, req.body.name, req.body.balance);
+    res.redirect(`/bank/edit/${req.body.id}`);
+});
+```
+
+Jag behöver skapa en funktion som löser databaskoden. Jag väljer att göra redirect till formulärsidan igen. Det kommer se bra ut, varje gång man klickar på edit-knappen så ser användaren att hen kommer till samma sida igen och kan fortsätta göra uppdateringar.
+
+Att välja vilken sida man gör redirect till, är en viktig komponent i webbapplikationens flöde. Det är något som markant påverkar användarens upplevelse och webbapplikationens användarvänlighet.
+
+
+
+### Databasfunktion för att editera kontodetaljer {#dbeditaccount}
+
+Vi kan kika på funktionen som uppdaterar kontodetaljerna i databasen.
+
+```javascript
+/**
+ * Edit details on an account.
+ *
+ * @async
+ * @param {string} id      The id of the account to be updated.
+ * @param {string} name    The updated name of the account holder.
+ * @param {string} balance The updated amount in the account.
+ *
+ * @returns {void}
+ */
+async function editAccount(id, name, balance) {
+    let sql = `CALL editAccount(?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [id, name, balance]);
+    console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+```
+
+Funktionen ser ut som tidigare motsvarigheter, den liknar mycket den funktion som skapade ett konto. Det är samma parametrar som används, men med lite annat syfte i denna funktionen.
+
+Det behövs en lagrad procedur för att utför själva databasoperationen.
+
+
+
+### Lagrad procedur för att uppdatera kontodetaljer {#dbeditsp}
+
+Då har vi sista delen i kedjan, den lagrade proceduren som utför själva UPDATE-satsen i databasen.
+
+```sql
+--
+-- Create procedure for edit account details
+--
+DROP PROCEDURE IF EXISTS editAccount;
+DELIMITER //
+CREATE PROCEDURE editAccount(
+	aId CHAR(4),
+    aName VARCHAR(8),
+    aBalance DECIMAL(4, 2)
+)
+BEGIN
+    UPDATE account SET
+		`name` = aName,
+        `balance` = aBalance
+	WHERE
+		`id` = aId;
+END
+//
+DELIMITER ;
+```
+
+Som vanligt kan vi testköra den lagrade proceduren, för att se att den fungerar som den ska.
+
+```sql
+mysql> CALL editAccount("1337", "Mega", 7.0);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> CALL showAccount("1337");
++------+------+---------+
+| id   | name | balance |
++------+------+---------+
+| 1337 | Mega |    7.00 |
++------+------+---------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+```
+
+Då kan vi utföra samma sak i webbklienten.
+
+
+
+### Testa att flödet fungerar {#dbedittest}
+
+Om vi då startar om vår server så kan vi testa hela flödet. I översikten klickar vi på edit-ikonen som visar `GET /bank/edit/:id`, i formuläret uppdaterar vi ett fält och submittar till `POST /bank/edit` som uppdaterar databastabellen via en funktion som anropar en lagrad procedur. När allt är klart så redirectas användare till ursprungsformuläret som läser in all uppdaterad data från databasen.
+
+Det var U i CRUD, Update, i en webbapplikation med formulär. 
+
 
 
 R som i Radera ett konto {#radera}
@@ -385,24 +559,32 @@ R som i Radera ett konto {#radera}
 
 D:et i CRUD handlar om att göra delete på rader. Säg att vi vill radera ett konto.
 
-För delete-ikonen länkar jag till routen `/bank/delete/:id`.
+För delete-ikonen länkar jag till routen `GET /bank/delete/:id` och där tänker jag skriva ut detaljer om kontot och erbjuda en submit-knapp om de verkligen vill radera kontot.
+
+Det känns som jag borde kunna återanvända de strukturer jag redan byggt upp.
+
+Routen blir nästan likadan som `/bank/update/:id`. Jag återanvänder vyn `views/bank/account-update` och sparar som `views/bank/account-delete` och uppdaterar så att alla fälten blir readonly, knappen säger "Delete account" och formulärets action leder till `POST /bank/delete`.
+
+Jag tänker att det är bra att användaren får se kontot innan hen raderar det.
+
+[FIGURE src=image/snapvt18/bank2-delete-account.png caption="Sida som förbereder användaren för att radera ett konto."]
+
+Klickar du på "Delete account" så submittas formuläret till `POST /bank/delete` med id:et som den viktiga ingrediensen. I routen anropas (som vanligt) en funktion (`bank.deleteAccount(id)`) som raderar kontot via en lagrad procedur `deleteAccount(?)`.
+
+Om du tänker efter så har vi i tidigare exempel byggt upp liknande saker så på det här stadiet handlar det mest om att kopiera, modifiera och lägga saker på rätt plats i flödet. Men minns, när man har en god struktur så kan saker bli enkelt, eller enklare. Lägg tid på att underhålla din kodstruktur så den känns behändig för sitt syfte.
 
 
 
-
-Flytta pengar mellan konton {#move}
+Alltid POST för ändringar {#alltidpost}
 ---------------------------------------
 
-Gör som uppgift.
-
+Märk att vi alltid gör en HTTP POST-request när vi uppdaterar databasen. Du ser det i Create, Update och Delete-fallen. Det är så det skall vara. Vi skall aldrig göra en uppdatering av databasen via en GET-request. Hade vi använt GET till uppdateringar så hade det exponerat en säkerhetsrisk. Mer om det är en annan historia som vi väljer att inte fördjupa oss i just nu. Vi nöjer oss med att säga -- _POST för alla uppdateringar_.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Detta var en introduktion för att komma igång Express och MySQL. Vi byggde vidare på en kodstruktur vi fick i föregående artiklar och lade till kod för att koppla upp oss mot databasen och vi såg hur resultsetet kunde presenteras i vyerna.
-
-Du har nu grunderna för att skriva din egen webb/applikationsserver som kopplar sig mot en databas och presenterar innehåll i rapporter.
+Detta var en introduktion för att komma igång CRUD konceptet i Express och MySQL. Det visades upp en kodstruktur som var enkelt att uppdatera med de olika delarna i CRUD och slutresultatet blev att alla delar av kontohanteringen kunde administreras via det grafiska gränssnittet.
 
 Denna artikel har en [egen forumtråd](t/7218) som du kan ställa frågor i, eller ge tips.
