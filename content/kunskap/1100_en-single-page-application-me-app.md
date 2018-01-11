@@ -208,17 +208,17 @@ Vi börjar med att normalisera stylen så att grunden blir den samma oavsett vil
 
 ```bash
 # me/redovisa
-wget https://necolas.github.io/normalize.css/7.0.0/normalize.css
+wget https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css
 ```
 
-Vi lägger till `normalize.css` filen i `index.html` så den laddas och kan nollställa ursprungsstilerna i de olika webbläsare. Notera att jag lägger till `normalize.css` innan vår än så länge tomma `style.css`.
+Vi lägger till `normalize.min.css` filen i `index.html` så den laddas och kan nollställa ursprungsstilerna i de olika webbläsare. Notera att jag lägger till `normalize.min.css` innan vår än så länge tomma `style.css`.
 
 ```html
 <!-- index.html -->
 ...
 <title>Me-app</title>
 
-<link rel="stylesheet" href="normalize.css" />
+<link rel="stylesheet" href="normalize.min.css" />
 <link rel="stylesheet" href="style.css" />
 ...
 ```

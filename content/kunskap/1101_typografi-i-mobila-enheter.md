@@ -19,7 +19,7 @@ I denna artikel går vi igenom hur vi anpassar typsnitt och typografin för vår
 
 En grund i HTML {#html}
 --------------------------------------
-Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen `style.css`, vi nollställar även webbläsarens grundstil med `normalize.css`.
+Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen `style.css`, vi nollställar även webbläsarens grundstil med `normalize.min.css`. Vi laddar ner `normalize.min.css` med kommandot `wget https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css`.
 
 ```html
 <!-- index.html -->
@@ -31,7 +31,7 @@ Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Redovisning</title>
 
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="normalize.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
