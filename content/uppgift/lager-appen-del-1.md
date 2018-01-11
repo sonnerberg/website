@@ -32,9 +32,17 @@ Krav {#krav}
 -----------------------
 1. Skapa en webbapplikation anpassad för mobilen.
 
-1. Appen ska innehålla 3 vyer: en välkomstvy, en produktlistningsvy och en vy som visar all data för enskilda produkter.
+1. Appen ska innehålla 3 vyer. Som beskrivs nedan.
+
+1. Välkomstvy med en kort hälsning.
+
+1. Lagerförteckningslista där produkterna listas med namn och hur många som finns.
+
+1. Ska gå att klicka på varje produkt då visas en vy med information om den produkt som det klickats på.
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
+
+1. Skapa en navigations meny längst upp som används när man går från en enskild produkt tillbaka till listningen av produkter.
 
 1. Validera och publicera din kod enligt följande.
 
