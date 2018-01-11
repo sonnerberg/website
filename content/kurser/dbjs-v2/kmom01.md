@@ -1,11 +1,18 @@
 ---
 author: mos
+
+views:
+    block-about: null
+
 revision:
-    "2017-01-23": (B, mos) Lästips artikel om programmera i JavaScript.
-    "2017-01-16": (A, mos) Första utgåvan.
+    "2018-01-11": (A, mos) Kursen ersätts med kursen databas.
 ...
 Kmom01: JavaScript klient
 ==================================
+
+I samband med utvecklingen av version 2 av dbjs bestämdes att istället sammanfoga kursen med "[kursen databas](kurser/databas-v1)".
+
+<!--stop-->
 
 [WARNING]
 **Kursutveckling pågår inför vt18.**

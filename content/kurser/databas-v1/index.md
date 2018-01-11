@@ -1,8 +1,8 @@
 ---
-title: databas
+title: databas-v1
 author: mos
 revision:
-    "2017-12-27": "(PA1, mos) Arbetsmaterial inför kursstart VT2018."
+    "2018-01-11": "(A, mos) Arbetsmaterial inför kursstart VT2018."
 ...
 Kursen databas
 ==================================
@@ -11,9 +11,7 @@ Kursen **Databasteknologier för webben**, a.k.a. *databas*. Syftet med kursen �
 
 <!--more-->
 
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
+Kursen erbjuds även under namnet "Webbprogrammering och databaser".
 
 
 
@@ -23,6 +21,10 @@ Förkunskaper {#forkunskaper}
 Det formella förkunskapskravet är:
 
 > Genomgångna kurser i "Webbteknologier" och "Teknisk webbdesign och Användbarhet".
+
+Alternativt för "Webbprogrammering och databaser":
+
+> För tillträde till kursen krävs att den studerande har genomgått 15 högskolepoäng i programmering.
 
 
 
@@ -125,7 +127,7 @@ Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulter
 
 
 
-###Kmom05: Procedur, trigger, funktion {#kmom05}
+###Kmom05: Procedur och trigger {#kmom05}
 
 Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
 
@@ -190,41 +192,38 @@ Referensdokumentationen är främst olika online-resurser i form av manualer.
 I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
 
 
-<!--
-
-Kursbok saknas så inga speciella läsanvisningar syns här.
 
 Läsanvisningar {#lasanvisning}
 ------------------------------
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming | 
-|------------|-----------------------------------------------------------|
-| Kmom01     | Ch 1, 12                                                  |
-| Kmom02     | Ch 2                                                      |
-| Kmom03     | Ch 3,                                                     | 
-| Kmom04     | Ch 4, 6                                                   |
-| Kmom05     | Ch 12, 13, 14                                             | 
-| Kmom06     |                                                           | 
-| Kmom10     |                                                           |
+| Kursmoment | Databasteknik          | Javascript ES5   | JavaScript ES6   |
+|------------|------------------------|------------------|------------------|
+| Kmom01     | 1, 7, 28               |                  |                  |
+| Kmom02     | 8, 20 (10)             | 1, 13            | 4                |
+| Kmom03     | 2, 4, 5, 6 (3, 11)     |                  |                  | 
+| Kmom04     | 23 (24)                |                  |                  |
+| Kmom05     | 12, 14, 15             |                  |                  | 
+| Kmom06     | 9, 21 (22)             |                  |                  | 
+| Kmom10     |                        |                  |                  |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
-
--->
 
 
 
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasar1/lasperiod3).
+<!--
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasar1/lasperiod3).
+-->
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webprog#studieplan).
+Läser du kursen som en del i ett kurspaket så finns det en [studieplan för kursen som är kopplad till kurspaketet](webprog#studieplan).
 
-Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
+Läser du kursen som en del av programmet Software Engineering eller International Software Engineering, så finns en [studieplan för kurskurstillfället som är kopplad till ditt program](kurser/databas/studieplan). Det finns också en [lektionsplan](kurser/databas/lektionsplan) kopplad till kurstillfället.
 
-Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
+En lektionsplanen visar de tillfällena som är schemalagda träffar. Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
 
 Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
 
@@ -277,4 +276,8 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Kursens namn är "Databasteknologier för webben". Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).
+Kursen ges under olika kurskoder till olika målgrupper.
+
+Kursens namn är "Databasteknologier för webben" för programmet Webbprogrammering (från VT19) och kurspaketet webprog (från VT18). Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).
+
+Kursens namn är "Webbprogrammering och databaser" till programmen Software Engineering och International Software Engieering (från VT17). Du hittar [kursplanen genom att söka på kurskoden PA1444 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1444).

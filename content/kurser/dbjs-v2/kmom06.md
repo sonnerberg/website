@@ -1,11 +1,19 @@
 ---
 author:
     - mos
+
+views:
+    block-about: null
+
 revision:
-    "2017-03-28": "(A, mos) Första utgåvan."
+    "2018-01-11": (A, mos) Kursen ersätts med kursen databas.
 ...
 Kmom06: Index och prestanda
 ==================================
+
+I samband med utvecklingen av version 2 av dbjs bestämdes att istället sammanfoga kursen med "[kursen databas](kurser/databas-v1)".
+
+<!--stop-->
 
 [WARNING]
 **Kursutveckling pågår inför vt18.**

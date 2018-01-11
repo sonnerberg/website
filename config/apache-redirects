@@ -232,13 +232,15 @@ Redirect /forum/utbildning/exjobb   /forum/viewforum.php?f=68
 Redirect /dbjs                      /kurser/dbjs
 Redirect /kurser/dbjs/lektionsplan  https://goo.gl/gYcKGk
 Redirect /kurser/dbjs/studieplan    https://goo.gl/oP1wIE
-Redirect /kurser/dbjs               /kurser/dbjs-v2
+Redirect /kurser/dbjs               /kurser/dbjs-v1
 Redirect /forum/utbildning/dbjs     /forum/viewforum.php?f=64
 
-# databas (dataweb (dbw))
-Redirect /databas                   /kurser/databas-v1
-Redirect /kurser/databas            /kurser/databas-v1
-Redirect /forum/utbildning/databas  /forum/viewforum.php?f=73
+# databas (dataweb (dbw) + dbjs v2)
+Redirect /databas                      /kurser/databas
+Redirect /kurser/databas/lektionsplan  https://goo.gl/gYcKGk
+Redirect /kurser/databas/studieplan    https://goo.gl/oP1wIE
+Redirect /kurser/databas               /kurser/databas-v1
+Redirect /forum/utbildning/databas     /forum/viewforum.php?f=73
 
 # phpmvc
 Redirect /phpmvc-v1         /kurser/arkiv/phpmvc-v1

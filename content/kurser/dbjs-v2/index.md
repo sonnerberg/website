@@ -1,18 +1,26 @@
 ---
 title: dbjs-v2
 
+views:
+    block-about: null
+
 author:
     - mos
 revision:
-    "2017-03-27": (A, mos) Alla kmom publicerade i samband med första rundan.
+    "2018-01-11": (A, mos) Kursen ersätts med kursen databas.
 ...
 Kursen dbjs (v2)
 ==================================
 
+I samband med utvecklingen av version 2 av dbjs bestämdes att istället sammanfoga kursen med "[kursen databas](kurser/databas-v1)".
+
+<!--stop-->
+<!--more-->
+
+
 Kursen **Webbprogrammering och databaser**, a.k.a. *dbjs*, lär ut traditionell databasteknik med databaser, modellering, SQL tillsammans med databasprogrammering i JavaScript via webbklient och Node.js i Linux-miljö.
 
 
-<!--more-->
 
 
 

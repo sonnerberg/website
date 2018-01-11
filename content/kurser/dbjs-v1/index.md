@@ -21,7 +21,7 @@ Kursen **Webbprogrammering och databaser**, a.k.a. *dbjs*, lär ut traditionell 
 
 Detta dokument är version 1 av dbjs. Denna version av kursen gavs vårterminen 2017.
 
-Från och med vårterminen 2018 är kursen förändrad till [dbjs version 2](kurser/dbjs-v2).
+Från och med vårterminen 2018 är kursen förändrad till [databas version 1](kurser/databas-v1).
 
 Om du påbörjat en äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
 [/INFO]
