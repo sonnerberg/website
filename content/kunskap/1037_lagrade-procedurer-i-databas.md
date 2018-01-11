@@ -8,6 +8,7 @@ category:
     - kurs oophp
     - kurs databas
 revision:
+    "2018-01-11": "(D, mos) Nytt stycke SHOW WARNINGS."
     "2018-01-09": "(C, mos) Genomgången inför kursen databas."
     "2017-04-25": "(B, mos) Nu även i kursen oophp, la till stycke om parametrar och variabler."
     "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
@@ -334,6 +335,32 @@ SELECT @a, @b;
 ```
 
 Med sådan taktik kan man göra "lite mer" i en vanlig SQL-fil, vilket kan vara behändigt när databasen växer.
+
+
+
+SHOW WARNINGS {#warnings}
+--------------------------------------
+
+Ibland kan man se att man får en varning av ett anrop till en lagrad procedur. I följande exempel anger jag ett värde på en variabeln som är utanför variabelens range.
+
+```sql
+mysql> CALL editAccount("1337", "Mega", 4200000);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+```
+
+För att se vad varningen säger så kan jag läsa av den.
+
+```sql
+mysql> SHOW WARNINGS;
++---------+------+---------------------------------------------------+
+| Level   | Code | Message                                           |
++---------+------+---------------------------------------------------+
+| Warning | 1264 | Out of range value for column 'aBalance' at row 1 |
++---------+------+---------------------------------------------------+
+1 row in set (0.00 sec)
+```
+
+Det kan vara bra att ha koll på detta, det är en felkälla och ett bra verktyg för felsökning och utveckling.
 
 
 
