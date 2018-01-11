@@ -67,6 +67,7 @@ Då vi inte har några element på HTML sida än så länge, förutom vårt rot-
 
 (function () {
     var rootElement = document.getElementById("root");
+
 })();
 ```
 
@@ -80,9 +81,11 @@ För att vi ska kunna lägga till fler element i vår börjar vi med att hämta 
     var rootElement = document.getElementById("root");
 
     var mainContainer = document.createElement("main");
+
     mainContainer.className = "container";
 
     var title = document.createElement("h1");
+
     title.className = "title";
     title.textContent = "Emil Folino";
 
@@ -109,22 +112,26 @@ Ett simpelt exempel som kan visa på de dynamiska egenskaperna med att rendera H
     var rootElement = document.getElementById("root");
 
     var mainContainer = document.createElement("main");
+
     mainContainer.className = "container";
 
     var title = document.createElement("h1");
+
     title.className = "title";
     title.textContent = "Emil Folino";
 
     var greeting = document.createElement("p");
     var timeOfDayGreeting = "Hej";
     var now = new Date();
+
     if (now.getHours() < 10) {
         timeOfDayGreeting = "Godmorgon";
     } else if (now.getHours() >= 17) {
         timeOfDayGreeting = "Godkväll";
     }
 
-    greeting.textContent = timeOfDayGreeting + ", jag heter Emil Folino och är lärare i kursen webapp.";
+    greeting.textContent = timeOfDayGreeting +
+        ", jag heter Emil Folino och är lärare i kursen webapp.";
 
     mainContainer.appendChild(title);
     mainContainer.appendChild(greeting);
@@ -144,22 +151,26 @@ Innan vi ser till att vår me-app blir snyggare med hjälp av CSS lägger vi til
     var rootElement = document.getElementById("root");
 
     var mainContainer = document.createElement("main");
+
     mainContainer.className = "container";
 
     var title = document.createElement("h1");
+
     title.className = "title";
     title.textContent = "Emil Folino";
 
     var greeting = document.createElement("p");
     var timeOfDayGreeting = "Hej";
     var now = new Date();
+
     if (now.getHours() <= 10) {
         timeOfDayGreeting = "Godmorgon";
     } else if (now.getHours() >= 17) {
         timeOfDayGreeting = "Godkväll";
     }
 
-    greeting.textContent = timeOfDayGreeting + ", jag heter Emil Folino och är lärare i kursen webapp.";
+    greeting.textContent = timeOfDayGreeting +
+        ", jag heter Emil Folino och är lärare i kursen webapp.";
 
     mainContainer.appendChild(title);
     mainContainer.appendChild(greeting);
@@ -167,11 +178,14 @@ Innan vi ser till att vår me-app blir snyggare med hjälp av CSS lägger vi til
     rootElement.appendChild(mainContainer);
 
     var navigation = document.createElement("nav");
+
     navigation.className = "bottom-nav";
 
     var navElements = ["Me", "Om", "Github", "Redovisning"];
+
     navElements.forEach(function (element) {
         var navElement = document.createElement("a");
+
         navElement.textContent = element;
         navigation.appendChild(navElement);
     });
@@ -235,15 +249,13 @@ Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på
     bottom: 0;
     overflow: hidden;
     width: 100%;
-
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row | nowrap;
     justify-content: space-evenly;
 }
 ```
 
-Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Med attributen `flex-direction: row;` och     `flex-wrap: nowrap;` anger vi att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkerna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen.
+Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Attributet `flex-flow: row | nowrap;` är kort notation för  `flex-direction: row;` och `flex-wrap: nowrap;` och vi vill här att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkerna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen.
 
 [FIGURE src=image/webapp/screenshot-styled-menu.png?w=c8  caption="Menyn är nu på plats längst ner."]
 
@@ -262,28 +274,33 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
     var rootElement = document.getElementById("root");
 
     var mainContainer = document.createElement("main");
+
     mainContainer.className = "container";
 
     var navigation = document.createElement("nav");
+
     navigation.className = "bottom-nav";
 
     var showHome = function () {
         mainContainer.innerHTML = "";
 
         var title = document.createElement("h1");
+
         title.className = "title";
         title.textContent = "Emil Folino";
 
         var greeting = document.createElement("p");
         var timeOfDayGreeting = "Hej";
         var now = new Date();
+
         if (now.getHours() <= 10) {
             timeOfDayGreeting = "Godmorgon";
         } else if (now.getHours() >= 17) {
             timeOfDayGreeting = "Godkväll";
         }
 
-        greeting.textContent = timeOfDayGreeting + ", jag heter Emil Folino och är lärare i kursen webapp. ";
+        greeting.textContent = timeOfDayGreeting +
+            ", jag heter Emil Folino och är lärare i kursen webapp. ";
 
         mainContainer.appendChild(title);
         mainContainer.appendChild(greeting);
@@ -291,7 +308,7 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
         rootElement.appendChild(mainContainer);
 
         showMenu("home");
-    }
+    };
 
     var showMenu = function (selected) {
         navigation.innerHTML = "";
@@ -311,11 +328,13 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
             navElement.addEventListener("click", element.nav);
 
             var icon = document.createElement("i");
+
             icon.className = "material-icons";
             icon.textContent = element.class;
             navElement.appendChild(icon);
 
             var text = document.createElement("span");
+
             text.className = "icon-text";
             text.textContent = element.name;
             navElement.appendChild(text);
@@ -324,7 +343,7 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
         });
 
         rootElement.appendChild(navigation);
-    }
+    };
 
     showHome();
 })();
@@ -342,6 +361,7 @@ Funktionen `showGithub()` börjar som de andra vy funktionen med att vi rensar `
 
 ```javascript
 var githubRequest = new XMLHttpRequest();
+
 githubRequest.addEventListener("load", renderGithubRepos);
 githubRequest.open("GET", "https://api.github.com/users/:username/repos");
 githubRequest.send();
@@ -355,6 +375,7 @@ var renderGithubRepos = function () {
 
     repos.forEach(function(repo) {
         var repoElement = document.createElement("p");
+
         repoElement.textContent = repo.name;
         mainContainer.appendChild(repoElement);
     });
@@ -374,6 +395,7 @@ fetch("https://api.github.com/users/:username/repos").then(function (response) {
 }).then(function(data) {
     data.forEach(function(repo) {
         var repoElement = document.createElement("p");
+
         repoElement.textContent = repo.name;
         mainContainer.appendChild(repoElement);
     });
@@ -418,19 +440,22 @@ var home = (function () {
         window.mainContainer.innerHTML = "";
 
         var title = document.createElement("h1");
+
         title.className = "title";
         title.textContent = "Emil Folino";
 
         var greeting = document.createElement("p");
         var timeOfDayGreeting = "Hej";
         var now = new Date();
+
         if (now.getHours() <= 10) {
             timeOfDayGreeting = "Godmorgon";
         } else if (now.getHours() >= 17) {
             timeOfDayGreeting = "Godkväll";
         }
 
-        greeting.textContent = timeOfDayGreeting + ", jag heter Emil Folino och är lärare i kursen webapp. ";
+        greeting.textContent = timeOfDayGreeting +
+            ", jag heter Emil Folino och är lärare i kursen webapp. ";
 
         window.mainContainer.appendChild(title);
         window.mainContainer.appendChild(greeting);
@@ -438,12 +463,12 @@ var home = (function () {
         window.rootElement.appendChild(window.mainContainer);
 
         menu.showMenu("home");
-    }
+    };
 
     return {
         showHome: showHome
     };
-})();
+})(home);
 ```
 
 Vi skapar ett `home` objekt/modul och vi returnerar `showHome` funktionen. Vi kan sedan använda `home` modulen i de andra moduler för att anropa funktionen. Notera att för att komma åt våra grundelement använder vi till exempel `window.rootElement` istället för `rootElement`.
@@ -462,6 +487,8 @@ För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`.
     <script type="text/javascript" src="main.js"></script>
 </body>
 ```
+
+För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinerade.
 
 
 
