@@ -1,14 +1,10 @@
 ---
 author: mos
 revision:
-    "2017-12-27": (PA1, mos) Arbete pågår.
+    "2018-01-11": (A, mos) Första utgåvan.
 ...
-Kmom05: Programmera i databas
+Kmom05: Procedur och trigger
 ====================================
-
-[WARNING]
-Kursutveckling pågår inför VT18.
-[/WARNING]
 
 Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
 
@@ -69,18 +65,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-<!--stop-->
-
-
-1. **FOKUS PROC, TRIG, FUNC** Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/app`.
-
-1. **BYGG VIDARE PÅ WEBBEN/KLIENTEN? MODUL SOM ÅTERANVÄNDS MED SERVERN?** (skolan, hacka lönen, ge betyg, båtklubben) CRUD? Terminalklienten.
-
-<!--
-1. Faktureringsmotor?
-
-1. Exportera data från webben till csv?
--->
+1. Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Kopiera din befintliga lösning och fortsätt jobba i `me/kmom05/eshop2`.
 
 
 
@@ -96,7 +81,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Gick det bra att komma igång med lagrade procedurer och triggers?
 * Skriv ett kort stycke (3-5 meningar) om lagrade procedurer och om triggers där du förklarar begreppen (fördel, nackdel, användningsområde) för en som inte är insatt.
 * Hur är din syn på att "programmera" på detta viset i databasen, jämför med traditionell SQL som exponeras i JavaScript-koden?
-* Hur gick det att utföra uppgifterna? 
+* Hur gick det att utföra uppgiften med din Eshop? 
 * Vilken är din TIL för detta kmom?
 
 <!--

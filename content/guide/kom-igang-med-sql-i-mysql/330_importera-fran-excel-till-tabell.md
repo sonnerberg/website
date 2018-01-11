@@ -3,7 +3,7 @@ author: mos
 revision:
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
-Från Excel till Tabell
+Importera från Excel till Tabell
 ==================================
 
 Ibland sitter man i Excel och har en lång lista på saker som man vill föra in i en databastabell. Hur gör man det på ett snabbt och enkelt sätt?

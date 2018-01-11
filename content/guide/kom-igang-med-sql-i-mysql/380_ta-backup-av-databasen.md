@@ -64,7 +64,7 @@ Då skapar du en ny databas och gör grant på en user till databasen. Sedan kö
 
 ```bash
 # Låt säga att du har skapat en ny databas som heter skolan1
-$ mysql -uuser -ppass skolan < skolan.sql
+$ mysql -uuser -ppass skolan1 < skolan.sql
 ```
 
 Nu har du en kopia av databasen skolan, i skolan1.

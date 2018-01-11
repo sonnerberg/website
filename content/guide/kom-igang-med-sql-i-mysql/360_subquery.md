@@ -16,7 +16,7 @@ Spara den SQL-kod du skriver i filen `dml_subquery.sql`.
 
 
 
-... {#undervisa}
+Skall skrivas... {#undervisa}
 ----------------------------------
 
 

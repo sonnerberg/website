@@ -57,7 +57,7 @@ Krav {#krav}
 
 1. SQL-filer lägger du i `sql/eshop`. Du har filen `setup.sql` för att skapa databasen och användaren. Du har `ddl.sql` för att skapa tabellerna.
 
-1. Skapa ett Excelark, förslagsvis Google Sheet, skapa en flik för produktkategorier och en flik för produkter. Lägg in 7 rader produkter och 3 produktkategorier. Exportera de två flikarna som `products.csv` och `categories.csv` och spara i `sql/eshop`. I samma katalog, skapa filen `insert.sql` och skriv SQL-satser som laddar informationen från `*.csv` in till respektive tabell.
+1. Skapa ett Excelark, förslagsvis Google Sheet, skapa en flik för produktkategorier, en för produkter och en för kunder. Lägg in 7 rader produkter och 3 produktkategorier samt 3 kunder. Exportera flikarna som `product.csv`, `category.csv` samt `customer.csv` och spara i `sql/eshop`. I samma katalog, skapa filen `insert.sql` och skriv SQL-satser som laddar informationen från `*.csv` in till respektive tabell.
 
 1. Ta en backup av databasen med mysqldump och spara i `sql/eshop/backup.sql`.
 
@@ -67,7 +67,9 @@ Krav {#krav}
 
 1. I terminalprogrammet, skapa kommandot `products` som visar en tabell över de produkter som finns.
 
-1. Skapa en webbklient med Express. Skapa routen `/eshop/index` som visar en välkomstssida med header, footer och navigering mellan sidorna. Alla sidor skall ha samma sidlayout och det skall gå att klicka sig fram mellan sidorna, via navigeringen.
+1. Skapa en webbklient med Express. Servern startas via `index.js`.
+
+1. I webbklienten, skapa routen `/eshop/index` som visar en välkomstssida med header, footer och navigering mellan sidorna. Alla sidor skall ha samma sidlayout och det skall gå att klicka sig fram mellan sidorna, via navigeringen.
 
 1. I webbklienten, skapa en sida `/eshop/products` som visar en tabell över de produkter som finns.
 

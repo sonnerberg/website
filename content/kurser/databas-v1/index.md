@@ -127,7 +127,7 @@ Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulter
 
 ###Kmom05: Procedur, trigger, funktion {#kmom05}
 
-Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer, triggers och inbyggda funktioner. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
+Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
 
 Vi bygger vidare på vår databasdrivna applikationsserver och utvecklar terminalklienten parallellt med webbklienten.
 
@@ -139,7 +139,9 @@ Vi ser hur man bygger upp en CRUD-baserad webbklient med HTML-formulär som ger 
 
 ###Kmom06: Prestanda {#kmom06}
 
-Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du bör använda index för att optimera din databas.
+Vi fortsätter med programmering i databasen, denna gången med egendefinierade funktioner som har en liknande struktur som lagrade procedurer och triggers.
+
+Sedan studerar vi hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du kan använda index för att optimera din databas.
 
 Vi bygger vidare på vår databasdrivna applikationsserver.
 

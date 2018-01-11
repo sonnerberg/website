@@ -1,27 +1,17 @@
 ---
 author: mos
 revision:
-    "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
+    "2018-01-11": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Minnesanteckning
 ==================================
 
-* datatyper?
-* konstruktioner för where?
-* memorytabell (index/prestanda)
+Mina egna minnesanteckningar för saker som kan ingå (mer) i guiden. Eller inte. Tankar om att utveckla guiden.
 
-* exportera till cvs från webbtjänst, öppna i lokal excel
+* Mer om datatyper?
+* Mer konstruktioner för where?
+* Om memorytabell (index/prestanda)
 
-* group_concat
+* Att exportera till CSV från webbtjänst, öppna i lokal Excel.
 
-* Lär dig än mer (trans, proc, )
-    * [Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)
-    * [Transaktioner i databas](kunskap/transaktioner-i-databas)
-    * [Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)
-    * [Triggers i databas](kunskap/triggers-i-databas)
-    * [Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)
-    
-    + grunderna i terminal och express
-    terminal, node.js mot databas
-    webbklient mot databas
-    crud mot databas
+* Om group_concat.
