@@ -27,7 +27,9 @@ Vi har i tidigare kurser sett hur vi man kan skapa applikationer i webbläsaren 
 
 Som ett första steg skapar vi en me-app anpassat främst för mobilen, men som även fungerar klockrent på en större enhet. På en av sidorna i vår me-app hämtar vi data från Github för att visa upp våra repon. Det är även här vi skriver redovisningstexten så vi ska titta på hur vi gör mycket text lättläst på små och stora enheter.
 
-Som en sista del av kursmomentet ska vi börja med en löpande uppgift där vi i detta kursmoment skapar början till en lagerhanteringsapp.
+Som en sista del av kursmomentet ska vi börja med en löpande uppgift där vi i detta kursmoment skapar början till en lagerhanteringsapp. Nedan finns en liten video som visar hur det kan se ut när man är klar med Lager appen del 1.
+
+[YOUTUBE src=pliCkobxLCE width=630 caption="Lager appen del 1."]
 
 
 
