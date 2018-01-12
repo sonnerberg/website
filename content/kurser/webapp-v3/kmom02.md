@@ -12,17 +12,20 @@ Kmom02: Bygg ut din mobila webapp
 **Kursutveckling pågår.**
 [/WARNING]
 
-Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. Men med mobila terminaler finns det en del som är specifikt och skiljer sig från desktop miljöer. Låt oss bygga vidare på me-appen och testa runt för att se vilka möjligheter och begränsningar som kan finnas. Det blir en blandning av olika tekniker men fokus är att lära oss mer om den mobila utvecklingsmiljön.
+Vi tar en titt på vilka begränsningar och utmaningar man står inför som användare av en mobil enhet. Vi brytar ut CSS koden från kmom01 till ett GUI komponentbaserad ramverk och lägger till fler GUI komponenter till vårt ramverk.
 
-Vi kommer även titta på hur vi hämtar data från externa API'er och jobba med verktyg som underlättar när vi jobabr med JSON API'er.
+Vi fortsätter med vår applikation från kmom01 och använder tekniker för att strukturera JavaScript koden på ett bättre sätt.
+
+Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och visa information i JSON-filer.
+
+Det kan se ut så här när vi har gjort klart Lager appen del 2.
+
+[YOUTUBE src=hbQOZR4R5mo width=630 caption="Nobelappen i kursmoment 2."]
+
 
 <!--more-->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-Det kan se ut så här när vi är klara med Nobelappen.
-
-[YOUTUBE src=hbQOZR4R5mo width=630 caption="Nobelappen i kursmoment 2."]
 
 
 
@@ -52,6 +55,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 1. Läs översiktligt om introduktionen till [webappar på Firefox OS](https://developer.mozilla.org/en-US/Apps/Quickstart). -->
 
 
+
 ###Video  {#video}
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 2.
@@ -59,7 +63,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 <!-- 1. Se videon om jQuery Mobile "[Alex Schmitz - jQuery Mobile - What’s New in 1.5 and the Road to 2.0](https://www.youtube.com/watch?v=2qF7kW9SdJQ)". -->
 
 
-* Vilken utvecklingsmiljö sitter du på?
+
 ###Lästips {#lastips}
 
 * Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
@@ -68,6 +72,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 * Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
 * Vilken utvecklingsmiljö sitter du på?
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -87,10 +92,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom artikeln "[Enhetens storlek och orientering](kunskap/enhetens-storlek-och-orientering)".
 
-1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
-
 <!-- 1. Installera utvecklingsverktygen för [Installera en emulator för Android](kunskap/installera-en-emulator-for-android). -->
-
 
 
 
@@ -100,9 +102,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)".
 
-1. Gör uppgiften "[Bygg vidare på din me-app](uppgift/github-sida-i-din-me-app)".
+<!-- 1. Gör uppgiften "[Bygg vidare på din me-app](uppgift/github-sida-i-din-me-app)".
 
-1. Gör uppgiften "[Skapa en Nobel app](uppgift/skapa-en-nobel-app)".
+1. Gör uppgiften "[Skapa en Nobel app](uppgift/skapa-en-nobel-app)". -->
 
 
 

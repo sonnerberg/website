@@ -11,7 +11,9 @@ Kmom03: Dashboard
 **Kursutveckling pågår.**
 [/WARNING]
 
-Vi jobbar vidare med mithril och att hämta data från api'er. Nu handlar det om att skapa mithril komponenter, som underlätter för att återanvända kod. Vi ska även titta på hur vi skapar ett grid system för att skapa en SPA-applikation som kan visas upp på enheter i fem olika storlekar.
+I detta kursmoment fortsätter vi med att utveckla våra GUI komponenter från tidigare kursmoment. Vi skapar lättanvända formulärfält med hjälp av HTML5 och kopplar ihop fälten i formulär som är lätta att använda på små skärmar där kontext och möjligheten att skriva snabbt och enkelt saknas.
+
+I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort data via formulär. Vi har i tidigare kursmoment arbetat enbart med vanilla JavaScript, men ska i detta kursmoment titta på hur vi kan använda oss av JavaScript ramverket mithril för att underlätta hämtning av data, rendering av HTML-element och de olika vyer.
 
 <!--more-->
 
@@ -51,6 +53,8 @@ Läs följande:
 
 1. Skumma igenom "[Googles artikel shadow DOM-v1](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom?hl=en)".
 
+1. Bekanta dig med dokumentationen för javascript ramverket [mithril](http://mithril.js.org/api.html) och genomgången av en enkel app i deras [tutorial](http://mithril.js.org/simple-application.html).
+
 
 ###Video  {#video}
 
@@ -77,13 +81,19 @@ Läs följande:
 
 Gör följande övningar för att träna inför uppgifterna.
 
+1. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)".
+
+1. Läs igenom artikeln "[Virtuella noder](kunskap/virtuella-noder)".
+
+1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
+
+<!-- 1. Läs igenom artikeln och gör övningarna i "[Mobil webapp och RESTful server](kunskap/mobil-webapp-och-restful-server)". Spara de övningar du gör i mappen `me/kmom03/ajax`.
+
 1. Läs igenom artikeln "[Ett enkelt grid för alla våra enheter](kunskap/ett-enkelt-grid-for-alla-vara-enheter)".
 
 1. Läs igenom artikeln "[En kalender med mithril components](kunskap/en-kalender-med-mithril-components)".
 
-1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".
-
-<!-- 1. Läs igenom artikeln och gör övningarna i "[Mobil webapp och RESTful server](kunskap/mobil-webapp-och-restful-server)". Spara de övningar du gör i mappen `me/kmom03/ajax`. -->
+-->
 
 
 
@@ -93,7 +103,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Dashboard](uppgift/mithril-dashboard)".
 
-1. Lägg till en Splash screen och en ikon till din meapp.
+<!-- 1. Lägg till en Splash screen och en ikon till din meapp. -->
 
 
 

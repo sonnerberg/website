@@ -131,7 +131,7 @@ Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och vis
 
 I detta kursmoment fortsätter vi med att utveckla våra GUI komponenter från tidigare kursmoment. Vi skapar lättanvända formulärfält med hjälp av HTML5 och kopplar ihop fälten i formulär som är lätta att använda på små skärmar där kontext och möjligheten att skriva snabbt och enkelt saknas.
 
-I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort data via formulär. Vi har i tidigare kursmoment arbetat enbart med JavaScript, men ska i detta kursmoment titta på hur vi kan använda oss ett JavaScript ramverk för att underlätta hanteringen av hämtning av data, rendering av HTML-element och de olika vyer.
+I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort data via formulär. Vi har i tidigare kursmoment arbetat enbart med vanilla JavaScript, men ska i detta kursmoment titta på hur vi kan använda oss av JavaScript ramverket mithril för att underlätta hämtning av data, rendering av HTML-element och de olika vyer.
 
 [Instruktion till kursmoment 03](kurser/webapp-v3/kmom03).
 

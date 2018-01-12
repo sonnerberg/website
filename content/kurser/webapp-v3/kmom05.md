@@ -11,21 +11,17 @@ Kmom05: Litet kundprojekt
 **Kursutveckling pågår.**
 [/WARNING]
 
-I detta kursmomentet ska vi kolla på hur vi kan läsa data från en lokal fil och utföra ett mindre projekt till en kund. Uppgiften är friare i sin utformning, prioritera kraven och tänka till vad kunden egentligen vill ha.
+Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på riktigt för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
+
+
 
 <!--more-->
+
+
 
 [FIGURE src=/image/snapht15/Strip-dileme-appli-mobile-650-Finalenglish3.jpg caption="Så här kan man ibland känna när man väljer mellan native app och hybrid app." href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/"]
 
 Bilden ovan ger en vy av hur man kan känna när man väljer mellan native app och hybrid webapp. Men om man tänker igenom sitt projekt och målgrupp så kommer nog det ena eller andra alternativet framstå som bästa vägen att gå. För vår del gäller hybrid webapp, vi har redan investerat tid och kraft i HTML, CSS och JavaScript och vår webapp är inte speciellt avancerad eller krävande och dessutom är det väldigt lockande att stödja flera plattformar med en kodbas.
-
-
-När du är klar har du skapat en mobil webapp till kunden.
-
-Nedan finns ett exempel på hur det kan se ut när din app är klar.
-
-
-[YOUTUBE src=xmri6W5wB2E width=630 caption="Pizza app."]
 
 
 
@@ -52,7 +48,6 @@ Det finns inga artiklar.
 
 
 
-
 ###Video  {#video}
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 5.
@@ -74,7 +69,11 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-1. Gör uppgiften "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)".
+1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)".
+
+1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".
+
+<!-- 1. Gör uppgiften "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)". -->
 
 
 
@@ -82,7 +81,9 @@ Det finns inga extra lästips.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Me-app till din lokala pizzeria](uppgift/me-app-till-din-lokala-pizzeria-v2)".
+
+
+<!-- 1. Gör uppgiften "[Me-app till din lokala pizzeria](uppgift/me-app-till-din-lokala-pizzeria-v2)". -->
 
 
 

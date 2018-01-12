@@ -84,8 +84,6 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 <!-- 1. Läs om "[MVC architektur](https://www.tmprod.com/blog/2012/what-is-mvc-architecture-in-a-web-based-application/)".
 
-1. Bekanta dig med dokumentationen för javascript ramverket [mithril](http://mithril.js.org/api.html) och genomgången av en enkel app i deras [tutorial](http://mithril.js.org/simple-application.html). -->
-
 <!-- 1. Titta i manualen om jQuery Mobile. Du finner den på deras [webbplats under demo](http://demos.jquerymobile.com/). Börja med att läsa artikeln som heter "Introduction" och läs därefter artikeln "Responsive Web Design". Avsluta med att skumma igenom manualen för att se vad där finns och för att bygga en känsla om vad jQuery Mobile innehåller.
 
 1. Titta på olika [varianter av mobila webappar med jQuery Mobile](http://jquerymobile.com/resources/) och få en känsla för vad man kan bygga med jQuery Mobile. -->
@@ -128,11 +126,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
 
-<!-- 1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)".
 
-1. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)".
-
-1. Läs igenom artikeln "[Virtuella noder](kunskap/virtuella-noder)". -->
 
 ###Uppgifter {#uppgifter}
 

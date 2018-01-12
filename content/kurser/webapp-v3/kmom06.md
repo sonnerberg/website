@@ -12,16 +12,11 @@ Kmom06: Gomoku
 **Kursutveckling pågår.**
 [/WARNING]
 
-Vi har vid ett tidigare tillfälle skrivit en server som kan spela Gomoku. I detta kursmoment skall vi använda denna server, men spela via servern på våra mobila enheter.
+I detta kursmoment fortsätter vi att utnyttja styrkorna i våra mobila enheter. Vi kopplar in kamera och GPS för att skapa en fulländad applikation, som utnyttjar alla möjligheter vi har på en mobil plattform.
 
 
 
 <!--more-->
-
-Nedan finns ett exempel på hur det kan se ut när vi spelar via vår mobila enhet mot Gomoku servern.
-
-
-[YOUTUBE src=bso8oeUIFvg width=630 caption="Gomoku i kursmoment 6."]
 
 
 
