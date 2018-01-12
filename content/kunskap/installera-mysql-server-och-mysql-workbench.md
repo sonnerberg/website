@@ -301,4 +301,4 @@ Avslutningsvis {#avslutning}
 
 Detta var de steg som krävs för att installera databasen MySQL, dess terminalklienter i PATH och desktopklienten MySQL Workbench.
 
-Denna artikel har en [egen forumtråd](t/XXXX) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/7236) som du kan ställa frågor i, eller ge tips.
