@@ -54,13 +54,15 @@ Läs följande:
 
 ###Video  {#video}
 
-1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8uaZ3nj3joyr1H05xQNZ5w) kopplat till kursen, titta på videos som börjar på 3.
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 3.
 
 
 
 ###Lästips {#lastips}
 
-* Bekanta dig med [mithril Components](http://mithril.js.org/components.html), som hjälper dig att skapa återanvändbar kod.
+<!-- * Bekanta dig med [mithril Components](http://mithril.js.org/components.html), som hjälper dig att skapa återanvändbar kod. -->
+
+* Hur ser det egentligen ut med JavaScript ramverk 2018. Stack Overflow har publicerad statistik angående ramverk i artikeln [The Brutal Lifecycle of JavaScript Frameworks](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/).
 
 
 
