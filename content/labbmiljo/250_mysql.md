@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-01-12": "(B, mos) Struktur i stycken samt nytt dok för installation utan XAMPP."
     "2017-12-27": "(A, mos) Uppdaterade dokumentet inför VT18."
 ...
 MySQL / MariaDB
@@ -8,22 +9,40 @@ MySQL / MariaDB
 
 Du behöver installera MariaDB/MySQL lokalt på din egna maskin samt ha tillgång till MariaDB/MySQL på BTH's labbmiljö.
 
-Ett enkelt sätt att installera MariaDB/MySQL är att göra det genom XAMPP som är en utvecklingsmiljö för webbutveckling där databasen kommer tillsammans med en webbserver.
+Det finns flera sätt att göra en lokal installation, här är två alternativ.
 
-Du får hjälp att installera XAMPP i följande artikel. Se till att du inkluderar MySQL/MariaDB som en del av installationen.
 
-* "[Installera Apache webbserver för utveckling](kunskap/installera-apache-webbserver-for-utveckling)"
 
-Om du sitter på Linux/Unix så är det troligen enklare att installera MySQL/MariaDB med din pakethanterare.
+Installera enbart MySQL och MySQL Workbench {mysql}
+----------------------------------
+
+Du vill enbart installera MySQL och desktopklienten MySQL Workbench. Du får hjälp att göra det i artikeln "[Installera MySQL Server och MySQL WorkBench](kunskap/installera-mysql-server-och-mysql-workbench)".
+
+Detta är ett bra alternativ om du enbart går kursen databas, utan att ha gått någon webbutvecklingskurs där XAMPP används.
+
+Även om du redan har XAMPP så är det en bra övning att installera databasen och desktopklienten på det sätt som artikeln beskriver. De båda installationerna (denna och XAMPP) kan samexistera.
+
+
+
+Installation tillsammans med XAMPP {#xampp}
+----------------------------------
+
+Du har redan en installation av XAMPP, eller vill använda MySQL som en del av XAMPP. I artikeln "[Installera Apache webbserver för utveckling](kunskap/installera-apache-webbserver-for-utveckling)" får du hjälp att installera XAMPP. Se till att du inkluderar MySQL/MariaDB som en del av installationen.
+
+
+
+Kom igång {#kom}
+----------------------------------
 
 När du är klar med installationen kan du gå vidare och bekanta dig med de klienter som används för att koppla upp sig mot MySQL.
 
-* "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)"
+Först kan du gå igenom artikeln "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)" som ger dig grunderna i terminalklient, webbklient och desktopklient.
 
-Fortsätt sedan att bekanta dig med BTH's labbmiljö för MySQL.
+Sedan kan du, om du så väljer, gå vidare och bekanta dig med BTH's labbmiljö för MySQL. I artikeln "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)" visas hur du använder klienter för att komma åt BTH's installation och studentmiljö.
 
-* "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)"
 
-Nu är du klar med installationen.
+
+Fråga i forumet {#forum}
+----------------------------------
 
 Ställ frågor och bidra med tips och trix i forumtråden som är [kopplad till detta dokument](t/7186).
