@@ -56,7 +56,8 @@ Prestanda index
 Subqueries
 Exportera till Excelark
 
-Login, flash, session.
+Login m session
+Flash, felhantering med session.
 
 
 
