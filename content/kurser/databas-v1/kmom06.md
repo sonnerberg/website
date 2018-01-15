@@ -73,11 +73,11 @@ Läs följande.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/prog`.
-
-<!--stop-->
+1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom06/func`.
 
 1. Jobba igenom övningen "[Index och prestanda i MySQL](kunskap/index-och-prestanda-i-mysql)" som tränar dig i hur du kan optimera dina databasfrågor med index. Spara dina testprogram i `me/kmom06/index`.
+
+<!--stop-->
 
 <!--
 1. Artikel om hur man skriver bra SQL frågor på ett optimerat sätt.
@@ -103,6 +103,10 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. **BYGG ÄVEN VIDARE PÅ KLIENTEN? MODUL SOM ÅTERANVÄNDS MED SERVERN?** (skolan, båtklubben)
 
+<!--
+Index o prestanda behöver egen uppgift för att det skall hänga ihop.
+-->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -115,4 +119,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Förklara begreppet index i databas, och varför det är viktigt, på ett par rader.
+* skriv mer om index execution plan, query optimizer, full table scan.
 * Se tillbaka på de kmom du gjort, känner du att du har koll på databas nu, eller känner du att något saknas eller behövs tränas ytterligare?
+* Vilken är din TIL för detta kmom?

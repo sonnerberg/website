@@ -52,6 +52,11 @@ Fråga i forumet om du känner dig osäker.
 
 ###Krav 6: (optionellt) {#k6}
 
+Prestanda index
+Subqueries
+Exportera till Excelark
+
+Login, flash, session.
 
 
 

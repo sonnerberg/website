@@ -6,7 +6,9 @@ category:
     - sql
     - kurs dbjs
     - kurs oophp
+    - kurs databas
 revision:
+    "2018-01-15": "(C, mos) Tillagd i kurs databas."
     "2017-05-02": "(B, mos) Genomgång, inkl främmande nycklar och stödjer oophp."
     "2017-03-28": "(A, mos) Första versionen."
 ...
@@ -29,17 +31,17 @@ Du har goda kunskaper i SQL och i MySQL.
 
 En del av underlaget till denna artikel har utgått från [delen Optimization i manualen för MySQL](https://dev.mysql.com/doc/refman/5.7/en/optimization.html).
 
+I ditt kursrepo (databas, dbjs, oophp) under `example/sql/index.sql` finns grunden till de exempel som används i artikeln.
+
 
 
 Skapa egen tabell för tester {#testabell}
 ------------------------------
 
-I ditt kursrepo (dbjs, oophp) under `example/sql/index.sql` finns grunden till de exempel som används i artikeln.
+Gör så här för att skapa en egen tabell i din testdatabas, men dubbelkolla först i SQL-filen så du ser vad den gör.
 
-Gör så här för att skapa en egen tabell i godtycklig databas (byt ut anyDatabase mot din egen databas), men dubbelkolla först i SQL-filen så du ser vad den gör.
-
-```bash
-$ mysql -uuser -ppass anyDatabase < example/sql/index.sql
+```text
+mysql --table -uuser -ppass dbwebb < example/sql/index.sql
 ```
 
 Du kan även köra allt i Workbench. 
@@ -57,7 +59,7 @@ Det finns många olika sätt att optimera en databas på. Det kan röra sig om t
 
 Det finns många aspekter att beakta.
 
-Låt oss undvika delen med hårdvaran och hur MySQL är installerad och konfigurerad. Vi väljer istället att fokusera på vilken optimering som kan göras på databasnivå.
+Låt oss undvika delen med hårdvaran och hur MySQL är installerad och konfigurerad. Vi väljer istället att fokusera på vilken optimering som kan göras på databasnivå med SQL-frågor och tabeller.
 
 Här handlar det om grundläggande saker som om databasen har en hälsosam struktur där tabeller och kolumner matchar den typen av applikation man vill ha. De frågor man ställer mot databasen bör vara optimerade och endast hämta/använda de resurser som krävs.
 
@@ -83,7 +85,7 @@ Ingen vill vänta extra sekunder, timmar, dagar på ett resultat, iallafall inte
 Använd index {#index}
 ------------------------------
 
-Den enklaste regeln må vara att alla dina sökningar i databasen görs på kolumner som har ett index kopplat till sig. Låt se vad det innebär i praktiken och hur vi kan försäkra oss om att så sker.
+Den enklaste regeln må vara att alla dina sökningar i databasen skall göras på kolumner som har ett index kopplat till sig. Låt se vad det innebär i praktiken och hur vi kan försäkra oss om att så sker.
 
 
 

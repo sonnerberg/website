@@ -67,6 +67,8 @@ Följande kan du använda för att fördjupa dig i ER-modellering, läs som öve
 
 1. [IBM Entity Relationship Modeling with UML](http://www.ibm.com/developerworks/rational/library/319.html).
 
+1. [Vad välja som primärnyckel till en databastabell](t/6439)?
+
 <!--
 Modelleringsövningsuppgifter 
 https://docs.google.com/document/d/1kKoSO2BQL5T2cnzshpM_hnk5JbqT0_00khfGJKZQ2Fo/edit
