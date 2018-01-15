@@ -3,7 +3,7 @@ author: mos
 revision:
     "2018-01-03": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
-OUTER JOIN
+Outer join, rader som inte matchar
 ==================================
 
 Vi har joinat tabeller och visat de rader som kan matchas mellan tabellerna. Men hur kan vi se de rader som inte har en matchning. Hur kan vi se de lärare som inte undervisar på kurser och hur kan vi se de kurser som inte har ett kurstillfälle?
