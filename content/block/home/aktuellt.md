@@ -1,23 +1,22 @@
 ####Aktuellt
 
-[FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
-* [Redovisning kurser i januari 2018](t/7187)
+
+[FIGURE src=image/fsync-giving-up-on-dirty.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårterminen 2018, vi är redo..."]
+
 * [Registrera dig för vårterminens kurser](t/7177)
 * [Förkunskaper och förkunskapskontroll (inför VT18)](t/7086)
 * [Förkunskapskontroll våren 2018 för kurspaket](t/7103)
 * [Uppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
 * [GrillCon 2018 Vår](t/7110)
-* [Om 3-veckors uppropet lp2](t/7062)
+* [Om 3-veckors uppropet lp3](t/7242)
 * [Omregistrering och restinlämningar](kurser/faq/omregistrering)
 
-Sista programmeringsstugan är torsdagen den 14:e december.
-
-Redovisningsveckan är 8-14 januari.
-
-Vårterminen startar måndagen den 15:e januari.
+Läsperiod 4 börjar den 26:e mars.
 
 <!--
+[FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
+
 [FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
 
 
