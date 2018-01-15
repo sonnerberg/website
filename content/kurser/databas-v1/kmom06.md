@@ -60,6 +60,8 @@ Läs följande.
 
 1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
 
+1. Läs igenom foruminlägget om "[Vad välja som primärnyckel till en databastabell](t/6439)?", det ger en orientering i hur man kan tänka när man väljer primärnyckel i en tabell.
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

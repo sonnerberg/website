@@ -1,12 +1,15 @@
 ---
 author: mos
-category: unix
+category: 
+    - unix
+    - debian
+    - virtualbox
+    - kurs linux
 revision:
-  "2015-07-05": (C, mos) .
-  "2015-06-30": (B, mos) Port forwarding kontra bridged network.
-  "2015-06-26": (A, mos) Första utgåvan.
-updated: "2015-06-30 08:40:27"
-created: "2015-06-24 06:26:16"
+    "2018-01-15": (D, mos) Lade till egen tråd i forumet och tips om att installera desktopmiljön.
+    "2015-07-05": (C, mos) .
+    "2015-06-30": (B, mos) Port forwarding kontra bridged network.
+    "2015-06-26": (A, mos) Första utgåvan.
 ...
 Installera Debian (på VirtualBox)
 ==================================
@@ -69,9 +72,19 @@ Det som du behöver göra är i princip att:
 
 * Välja ditt land, tangentbordslayout och teckenkodning till UTF-8.
 * Välj lösenord för root-användaren och skapa en ny användare.
-* Välj att bara installera de nödvändiga programvarorna. 
+* Välj att bara installera de nödvändiga programvarorna.
+* I videon klickar jag bort desktopmiljön, men det är trevligare om du installerar den.
 
 När du är klar kan du logga in på din nya Debian server med antingen root-användaren eller den användaren som du skapade i installationsprocessen. Normalt vill du inte logga in som root-användaren så välj den användare som du skapade.
+
+
+
+<!--
+Installera desktopmiljön  {#desktop}
+---------------------------------
+
+Om du missade att installera desktopmiljön i installationsfasen så kan du på egen hand installera den i efterhand.
+-->
 
 
 
@@ -204,4 +217,4 @@ Avslutningsvis {#avslutning}
 
 Nu har du kommit igång och du har den labbmiljö som krävs för att genomföra det första kursmomentet i kursen.
 
-Om du stöter på problem så kan du alltid [fråga i forumet om Utvecklings- Drift- och Servermiljö](forum/viewforum.php?f=23).
+Det finns en [egen tråd i forumet](t/7245) för denna artikel. Ställ frågor eller bidra med tips och trix.
