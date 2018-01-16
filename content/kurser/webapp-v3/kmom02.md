@@ -127,3 +127,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns det att jobba i mithril, fördelar och nackdelar?
 * Så här långt, känner du att du har koll på koden? Är det något särskilt du funderar på?
 * Var det något som krånglade eller tog extra mycket tid?
+* Vilken är din TIL för detta kmom?

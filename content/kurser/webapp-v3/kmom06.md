@@ -126,3 +126,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Beskriv kort hur du tekniskt löste renderingen av spelbrädan?
 * Var det något som krånglade eller tog extra mycket tid?
 * Är du nöjd med din Gomoku klient?
+* Vilken är din TIL för detta kmom?

@@ -107,3 +107,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Fick du göra prioriteringar för att hålla dig inom max 20h, berätta om dem.
 * Gjorde du något som du är extra stolt/nöjd över i din app, berätta om det.
 * Var det något som krånglade eller tog extra mycket tid?
+* Vilken är din TIL för detta kmom?

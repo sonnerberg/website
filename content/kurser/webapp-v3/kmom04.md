@@ -114,3 +114,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns det att jobba mot REM api't?
 * Var det något som krånglade eller tog extra mycket tid?
 * Hur tycker slutresultatet blev för din app?
+* Vilken är din TIL för detta kmom?

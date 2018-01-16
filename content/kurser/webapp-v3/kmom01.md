@@ -158,3 +158,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du sedan tidigare bekant med utveckling av mobila appar?
 * Vilket är den viktigaste lärdomen du gjort om typografi för mobila enheter?
 * Du har i kursmomentet hämtat data från två stycken API. Hur kändes detta?
+
+TIL är en akronym för “Today I Learned” vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
+
+* Vilken är din TIL för detta kmom?

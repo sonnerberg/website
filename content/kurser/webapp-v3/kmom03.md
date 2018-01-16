@@ -127,3 +127,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Valde du flex eller float grid? Varför?
 * Vilket API valde du förutom Github? Varför?
 * Var det något som krånglade eller tog extra mycket tid?
+* Vilken är din TIL för detta kmom?
