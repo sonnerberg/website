@@ -9,7 +9,7 @@ En Single Page Application me-app
 
 [FIGURE src=image/webapp/javascript-logo.png?w=c5 class="right"]
 
-Vi ska i denna övning skapa en me-app i HTML5, CSS3 och JavaScript. Vi gör ett medvetet val om design för att vi ska få ett utseende som en "native" app. Vi skapar navigation som fungerar för både stora och små enheter. Webbläsarens inbyggda teknologier används för att hämta data från ett JSON API och vi gör en redovisningssida som är lättläst på alla enheter.
+Vi ska i denna övning skapa en me-app i HTML5, CSS3 och JavaScript. Vi gör ett medvetet val om design för att vi ska få ett utseende som liknar en "native" mobil-app. Vi skapar navigation anpassat för små enheter, men som även fungerar för stora. Webbläsarens inbyggda teknologier används för att hämta data från ett JSON API och vi gör en redovisningssida, som är lättläst på alla enheter.
 
 
 
@@ -23,7 +23,7 @@ Vi rekommenderar att du kodar med i denna övning så du själv får känna på 
 
 Grunden i HTML {#html}
 --------------------------------------
-Som med allt annat vi gör för webben behöver vi någonstans ha en HTML sida, som vi använder för att rita upp våra enskilda HTML-element i. Vi börjar med en enkel sida `index.html`, som inte kommer utvecklas mycket under övningens och kursens gång. Detta blir grunden för alla HTML-element, som vi sedan renderar med hjälp av JavaScript.
+Som med allt annat vi gör för webben behöver vi en HTML fil. Vi börjar med en enkel sida `index.html`, som inte kommer utvecklas mycket under övningens och kursens gång. Detta blir grunden för alla HTML-element, som vi sedan renderar med hjälp av JavaScript.
 
 ```html
 <!-- index.html -->
@@ -45,7 +45,7 @@ Som med allt annat vi gör för webben behöver vi någonstans ha en HTML sida, 
 </html>
 ```
 
-Vårt tränade öga ser direkt att vi behöver två filer till `style.css` för vår CSS kod och `main.js` för vår JavaScript kod. Vi skapar dessa två filer enkelt med `touch`.
+Vårt tränade öga ser direkt att vi behöver två filer `style.css` för vår CSS kod och `main.js` för vår JavaScript kod. Vi skapar dessa två filer enkelt med `touch`.
 
 ```bash
 # stå i me/redovisa
@@ -59,7 +59,7 @@ Vi har nu allt vi behöver för vår Single Page Application me-app.
 
 Rendera HTML-element i JavaScript {#html-element}
 --------------------------------------
-Då vi inte har några element på HTML sida än så länge, förutom vårt rot-element `<div id="root"></div>`, öppnar vi upp `main.js`.
+Då vi inte har några element på HTML sidan än så länge, förutom vårt rot-element `<div id="root"></div>`, öppnar vi upp `main.js`.
 
 ```javascript
 // main.js
@@ -71,7 +71,7 @@ Då vi inte har några element på HTML sida än så länge, förutom vårt rot-
 })();
 ```
 
-För att vi ska kunna lägga till fler element i vår börjar vi med att hämta ut rot-elementet `#root`. Detta görs som vi har sett tidigare med funktionen `document.getElementById()`. Kodraden är omkretsat av en IIFE (Immediately-invoked function expression), som säkerställar att vi inte skräpar ner den globala namn rymden. Nu är vi redo för att lägga till element i rot-elementet. Detta görs med funktionerna `document.createElement()` och `element.appendChild()`. Vi tilldelar även klasser och innehåll med hjälp av attributen `className` och `textContent`. I [dokumentationen](https://developer.mozilla.org/en-US/docs/Web/API/Element) för element finns alla attribut.
+För att vi ska kunna lägga till fler element börjar vi med att hämta ut rot-elementet `#root`. Detta görs som vi har sett tidigare med funktionen `document.getElementById()`. Kodraden är skriven inuti en IIFE (Immediately-Invoked Function Expression), som säkerställer att vi inte skräpar ner den globala namn rymden. Nu är vi redo för att lägga till element i rot-elementet. Detta görs med funktionerna `document.createElement()` och `element.appendChild()`. Vi tilldelar även klasser och innehåll med hjälp av attributen `className` och `textContent`. I [dokumentationen](https://developer.mozilla.org/en-US/docs/Web/API/Element) för element finns alla attribut.
 
 ```javascript
 // main.js
@@ -94,15 +94,13 @@ För att vi ska kunna lägga till fler element i vår börjar vi med att hämta 
 })();
 ```
 
-Vi har nu en enkel sida med en `main.container` och vårt namn som ett `h1`-element. Som beroende på webbläsare ser ut ungefär som skärmbilden nedan. Jag använder "responsive mode" i webbläsaren för att se det som en mobil enhet.
+Vi har nu en enkel sida med en `main.container` och vårt namn som ett `h1`-element. Som beroende på webbläsare ser ut ungefär som skärmbilden nedan. Jag använder "Responsive Design Mode" i valfri webbläsare för att få det att se ut som en mobil enhet.
 
 [FIGURE src=image/webapp/screenshot_namn.png?w=c8 caption="Vårt första utkast."]
 
 > Men Emil hade det inte varit enklare att bara lägga till det i `index.html`, är ju 3 rader HTML-kod och sen är vi klara med detta.
 
-Just nu kanske det känns onödigt, men när vi i slutet av övningen har fyra olika vyer och dynamisk växling mellan dessa är det mer rimligt med alla dessa rader kod för att skriva ut ett namn.
-
-Ett simpelt exempel som kan visa på de dynamiska egenskaperna med att rendera HTML-element med hjälp av JavaScript är om vi lägger till en liten hälsning i me-appen.
+Just nu kanske det känns onödigt, men när vi i slutet av övningen har fyra olika vyer och dynamisk växling mellan dessa är det mer rimligt med alla dessa rader kod för att skriva ut ett namn. Ett simpelt exempel som kan visa på de dynamiska egenskaperna med att rendera HTML-element med hjälp av JavaScript är om vi lägger till en liten hälsning i me-appen.
 
 ```javascript
 // main.js
@@ -127,7 +125,7 @@ Ett simpelt exempel som kan visa på de dynamiska egenskaperna med att rendera H
     if (now.getHours() < 10) {
         timeOfDayGreeting = "Godmorgon";
     } else if (now.getHours() >= 17) {
-        timeOfDayGreeting = "Godkväll";
+        timeOfDayGreeting = "God kväll";
     }
 
     greeting.textContent = timeOfDayGreeting +
@@ -140,9 +138,9 @@ Ett simpelt exempel som kan visa på de dynamiska egenskaperna med att rendera H
 })();
 ```
 
-Nu har vi en hälsning, som beroende på tiden på dagen, skriver ut olika öppningsfraser. En liten dynamisk del av sidan som visar på en av styrkorna hos JavaScript. Notera gärna ordningen som vi använder funktionen `appendChild()`. Vi lägger först till `title` och `greeting` i `mainContainer` innan vi lägger till den i rot-elementet.
+Nu har vi en hälsning, som beroende av tiden på dagen, skriver ut olika öppningsfraser. En liten dynamisk del av sidan som visar på en av styrkorna hos JavaScript. Notera gärna ordningen som vi använder funktionen `appendChild()`. Vi lägger först till `title` och `greeting` i `mainContainer` innan vi lägger till den i rot-elementet.
 
-Innan vi ser till att vår me-app blir snyggare med hjälp av CSS lägger vi till ytterligare ett element. En navigationsdel som vi senare med hjälp av CSS kommer placera i botten av skärmen för att underlätta för navigation på mobila enheter.
+Innan vi ser till att vår me-app blir snyggare med hjälp av CSS lägger vi till ytterligare ett element. En meny som vi senare med hjälp av CSS kommer placera i botten av skärmen för att underlätta för navigation på mobila enheter.
 
 ```javascript
 "use strict";
@@ -166,7 +164,7 @@ Innan vi ser till att vår me-app blir snyggare med hjälp av CSS lägger vi til
     if (now.getHours() <= 10) {
         timeOfDayGreeting = "Godmorgon";
     } else if (now.getHours() >= 17) {
-        timeOfDayGreeting = "Godkväll";
+        timeOfDayGreeting = "God kväll";
     }
 
     greeting.textContent = timeOfDayGreeting +
@@ -204,14 +202,14 @@ Nedan syns resultatet och som vi ser är vi definitivt redo för att börja jobb
 
 CSS {#css}
 --------------------------------------
-Vi börjar med att normalisera stylen så att grunden blir den samma oavsett vilken webbläsare våra användare tycker om att titta på våra mobila applikationer i. Vi använder oss av [normalize.css](https://necolas.github.io/normalize.css/) som enklast laddas ner genom att använda `wget`.
+Vi börjar med att normalisera stilen så att grunden blir den samma oavsett vilken webbläsare våra användare tycker om att titta på våra mobila applikationer i. Vi använder oss av [normalize.css](https://necolas.github.io/normalize.css/) som enklast laddas ner genom att använda `wget`.
 
 ```bash
 # me/redovisa
 wget https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css
 ```
 
-Vi lägger till `normalize.min.css` filen i `index.html` så den laddas och kan nollställa ursprungsstilerna i de olika webbläsare. Notera att jag lägger till `normalize.min.css` innan vår än så länge tomma `style.css`.
+Vi lägger till `normalize.min.css` filen i `index.html` så den laddas och kan nollställa ursprungsstilen i olika webbläsare. Notera att jag lägger till `normalize.min.css` innan vår än så länge tomma `style.css`.
 
 ```html
 <!-- index.html -->
@@ -241,7 +239,7 @@ Vi börjar med att placera menyn längst ner på skärmen och samtidigt fylla ut
 }
 ```
 
-Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på skärmen med `bottom: 0;`. Vi använder `overflow: hidden;` för att inte få problem med scrollning där vi inte vill ha det. För att fördela länkerna jämt i menyn använder vi [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox). Flexbox är en förhållandevis ny teknik för att skapa 1-dimensionella layouter på ett enkelt sätt. I detta tillfälle använder vi följande attribut.
+Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på skärmen med `bottom: 0;`. Vi använder `overflow: hidden;` för att inte få problem med scrolling där vi inte vill ha det. För att fördela länkarna jämt i menyn använder vi [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox). Flexbox är en förhållandevis ny teknik för att skapa 1-endimensionella layouter på ett enkelt sätt. I detta tillfälle använder vi följande attribut.
 
 ```css
 .bottom-nav {
@@ -255,7 +253,7 @@ Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på
 }
 ```
 
-Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Attributet `flex-flow: row | nowrap;` är kort notation för  `flex-direction: row;` och `flex-wrap: nowrap;` och vi vill här att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkerna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen.
+Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Attributet `flex-flow: row | nowrap;` är kort notation för  `flex-direction: row;` och `flex-wrap: nowrap;` och vi vill här att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkarna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen.
 
 [FIGURE src=image/webapp/screenshot-styled-menu.png?w=c8  caption="Menyn är nu på plats längst ner."]
 
@@ -265,7 +263,7 @@ Jag har i exemplet lagt till ikoner i menyn med hjälp av [Material icons](http:
 
 Navigation mellan vyerna {#navigation}
 --------------------------------------
-Nu har vi en fin meny, men än så länge är det, det enda den är. För att underlätta när vi ska navigera mellan de olika vyerna och för att ta ett första steg i att strukturera vår kod bryter vi ut renderingen av menyn och renderingen av Me-vy till var sin funktion. Det sista vi gör i `main.js` är att anropa funktionen `showHome()`, som i sin tur anropar `showMenu()` för att visa menyn. Jag har även flyttat ut skapandet av grund HTML-element utanför funktionerna.
+Nu har vi en fin meny, men än så länge är det, det enda den är. För att underlätta när vi ska navigera mellan de olika vyerna och för att ta ett första steg i att strukturera vår kod bryter vi ut renderingen av menyn och renderingen av Me-vyn till var sin funktion. Det sista vi gör i `main.js` är att anropa funktionen `showHome()`, som i sin tur anropar `showMenu()` för att visa menyn. Jag har även flyttat ut skapandet av grund HTML-elementen utanför funktionerna.
 
 ```javascript
 "use strict";
@@ -296,7 +294,7 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
         if (now.getHours() <= 10) {
             timeOfDayGreeting = "Godmorgon";
         } else if (now.getHours() >= 17) {
-            timeOfDayGreeting = "Godkväll";
+            timeOfDayGreeting = "God kväll";
         }
 
         greeting.textContent = timeOfDayGreeting +
@@ -349,13 +347,13 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
 })();
 ```
 
-I början av varje funktion som ritar upp en vy eller delvy rensar jag elementet som vyn ska ritas i med hjälp av attributet `innerHTML`. Denna funktion kommer även vara användbar när vi ska skapa redovisningssidan där vi ska lägga stora mängder formaterat text. Vi hade tidigare definerat våra länkar i menyn `var navElements = ["Me", "Om", "Github", "Redovisning"];` som en array med bara namnen. Denna array har jag i detta exempel bytt ut till en array av objekt. Dels för att lägga till ikoner med en specifik class, men även med den funktion som anropas när man klickar på länken i menyn. När länken sedan skapas läggs det till en `EventListener` för varje länk och funktionen som renderar vyn skickas med som argument. Detta är ett sätt att få till navigationen och leka gärna runt med koden för att få till det på exakt det sättet du vill ha. Vyerna Me, Om och Redovisning är oerhört lika och borde inte innebära några problem att skapa. I nästa del av övningen ska vi titta på hur vi hämtar data från Githubs API för att visa upp repon på Github sidan i me-appen.
+I början av varje funktion som ritar upp en vy eller en del av en vy rensar jag elementet som vyn ska ritas i med hjälp av attributet `innerHTML`. Denna funktion kommer även vara användbar när vi ska skapa redovisningssidan där vi ska lägga stora mängder formaterat text. Vi hade tidigare definierat våra länkar i menyn `var navElements = ["Me", "Om", "Github", "Redovisning"];` som en array med bara namnen. Denna array har jag i detta exempel bytt ut till en array av objekt. Dels för att lägga till ikoner med en specifik class, men objekten innehåller även funktionen som anropas när man klickar på länken i menyn. När länken sedan skapas läggs det till en `EventListener` för varje länk och funktionen som renderar vyn skickas med som argument. Detta är ett sätt att få till navigationen och leka gärna runt med koden för att få till det på exakt det sättet du vill ha. Vyerna Me, Om och Redovisning är oerhört lika och borde inte innebära några problem att skapa. I nästa del av övningen ska vi titta på hur vi hämtar data från Githubs API för att visa upp repon på Github sidan i me-appen.
 
 
 
 Hämta data från ett API {#api}
 --------------------------------------
-Än så länge har all data i vår me-app varit statisk och hårdkodat in av oss själva. Vi ska i denna del av övningen titta på hur vi kan hämta JSON data från ett API och hur vi sedan renderar datan i en vy. Vi börjar med att använda [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) för att sedan går över till det förenklade [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). Vi vill hämta data från Github och som alltid när du använder ett API är [dokumentationen](https://developer.github.com/v3/) din bästa vän.
+Än så länge har all data i vår me-app varit statisk och hårdkodat in av oss själva. Vi ska i denna del av övningen titta på hur vi kan hämta JSON data från ett API och hur vi sedan renderar data i en vy. Vi börjar med att använda [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) för att sedan går över till det förenklade och modernare [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). Vi vill hämta data från Github och som alltid när du använder ett API är [dokumentationen](https://developer.github.com/v3/) din bästa vän.
 
 Funktionen `showGithub()` börjar som de andra vy funktionen med att vi rensar `mainContainer` och skapar ett titel element. Vi skapar därefter en `XMLHttpRequest` genom följande fyra rader kod.
 
@@ -367,7 +365,7 @@ githubRequest.open("GET", "https://api.github.com/users/:username/repos");
 githubRequest.send();
 ```
 
-Först skapar vi ett `XMLHttpRequest` objekt `githubRequest`. Vi tilldelar en callback funktion `renderGithubRepos`, som anropas när vi har laddat datan. De två sista raderna definerar vilket sorts anrop vi vill göra `GET` och den URL vi vill anropa. Byt ut `:username` mot ditt Github användarenamn så hämtar du dina egna repon. Sista raden skickar iväg anropet till Githubs api. När vi får tillbaka svar anropas funktionen `renderGithubRepos`.
+Först skapar vi ett `XMLHttpRequest` objekt `githubRequest`. Vi tilldelar en callback funktion `renderGithubRepos`, som anropas när vi har laddat data. De två sista raderna definierar vilket sorts anrop vi vill göra `GET` och den URL vi vill anropa. Byt ut `:username` mot ditt Github användarnamn så hämtar du dina egna repon. Sista raden skickar iväg anropet till Githubs api. När vi får tillbaka svar anropas funktionen `renderGithubRepos`.
 
 ```javascript
 var renderGithubRepos = function () {
@@ -382,10 +380,11 @@ var renderGithubRepos = function () {
 
     rootElement.appendChild(mainContainer);
 
-    ...
+    showMenu("folder");
+};
 ```
 
-I variabeln `this` finns svaret vi fick tillbaka från Githubs API. Undersöka gärna vad som finns i svaret genom att använda `console.log(this)`. Vi ser att `this.responseText` innehåll arrayen, som en text sträng, med svaret vi förväntade oss och vi gör om text strängen till JSON. Vi kan nu skriva ut våra repon som element i `mainContainer`.
+I variabeln `this` finns svaret vi fick tillbaka från Githubs API. Undersöka gärna vad som finns i svaret genom att använda `console.log(this)`. Vi ser att `this.responseText` innehåller arrayen, som en text sträng, med svaret vi förväntade oss och vi gör om text strängen till JSON. Vi kan nu skriva ut våra repon som element i `mainContainer`.
 
 Om vi vill använda oss av det modernare Fetch API kan koden se ut på följande sätt.
 
@@ -400,18 +399,44 @@ fetch("https://api.github.com/users/:username/repos").then(function (response) {
         mainContainer.appendChild(repoElement);
     });
 
-    ...
+    rootElement.appendChild(mainContainer);
+
+    showMenu("folder");
+});
 ```
 
-`fetch` anropas med URL'en för Githubs API på samma sätt som `XMLHttpRequest`. `fetch` returnerar ett promise, som vi tar hand om med `then`. Här returnerar vi svaret som JSON och ytterligare ett promise tar sedan hand om JSON datan och renderar våra repon i vyn på samma sätt som för `XMLHttpRequest`. Det är upp till er själva vad ni tycker verkar smidigast. `XMLHttpRequest` har hängt med ett tag och utgör stommen i AJAX, som revolutionerade webben runt år 2007. `fetch` är ett nyare alternativ som utnyttjar promise för att ta hand om datat som hämtas. Genom att utnyttja promise blir felhantering lättare och ger även möjlighet för att rendera i samma funktionen som vi göra anropet.
+`fetch` anropas med URL'en för Githubs API på samma sätt som `XMLHttpRequest`. `fetch` returnerar ett promise, som vi tar hand om med `then`. Här returnerar vi svaret som JSON och ytterligare ett promise tar sedan hand om JSON data och renderar våra repon i vyn på samma sätt som för `XMLHttpRequest`.
+
+Det är upp till er själva vad ni tycker verkar smidigast. `XMLHttpRequest` har hängt med ett tag och utgör stommen i AJAX, som revolutionerade webben runt år 2007. `fetch` är ett nyare alternativ som utnyttjar promise för att ta hand om data som hämtas. Genom att utnyttja promise blir felhantering lättare och ger även möjlighet för rendering i samma funktion som vi gör anropet.
+
+För att ta hand om eventuella fel som uppstår under hämtning av data kan vi använda oss av `.catch` på vårt `fetch` promise. Här väljer vi sedan att skriva ut felmeddelandet.
+
+```javascript
+fetch("https://api.github.com/users/:username/repos").then(function (response) {
+    return response.json();
+}).then(function(data) {
+    data.forEach(function(repo) {
+        var repoElement = document.createElement("p");
+
+        repoElement.textContent = repo.name;
+        mainContainer.appendChild(repoElement);
+    });
+
+    rootElement.appendChild(mainContainer);
+
+    showMenu("folder");
+}).catch(function(error) {
+    console.log('The fetch operation failed due to the following error: ', error.message);
+});
+```
 
 
 
 Strukturera koden {#strukturera}
 --------------------------------------
-Vi har nu en del kod både i vår `main.js` och i `style.css` så nu är det dags att strukturera upp koden lite grann så vi har ett bra utgångspunkt. Vi gör detta med hjälp av module pattern och delar upp vår `main.js` upp i sex olika filer.
+Vi har nu en del kod både i vår `main.js` och i `style.css` så nu är det dags att strukturera upp koden lite grann så vi har ett bra utgångspunkt. Vi gör detta med hjälp av module pattern och delar upp `main.js` i sex olika filer.
 
-Vi börjar med att göra vår grund HTML-element till en del av window objektet, så vi kommer åt de i all JavaScript kod. Det sista vi gör i `main.js` är att anropa `showHome` funktionen för att visa upp me-vyn.
+Vi börjar med att göra vår grund HTML-element till en del av window objektet, så vi kommer åt de i alla JavaScript filer. Det sista vi gör i `main.js` är att anropa `showHome` funktionen för att visa upp me-vyn.
 
 ```javascript
 // main.js
@@ -451,7 +476,7 @@ var home = (function () {
         if (now.getHours() <= 10) {
             timeOfDayGreeting = "Godmorgon";
         } else if (now.getHours() >= 17) {
-            timeOfDayGreeting = "Godkväll";
+            timeOfDayGreeting = "God kväll";
         }
 
         greeting.textContent = timeOfDayGreeting +
@@ -488,7 +513,7 @@ För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`.
 </body>
 ```
 
-För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinerade.
+För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade .
 
 
 
