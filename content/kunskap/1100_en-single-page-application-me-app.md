@@ -259,6 +259,31 @@ Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex
 
 Jag har i exemplet lagt till ikoner i menyn med hjälp av [Material icons](http://materializecss.com/icons.html) och lagt till lite mellanrum uppe och nere. Dessutom har jag vald ett annat typsnitt än standard vilket gör att min mobila-app redan ser mycket trevligare ut.
 
+En me-app är ingen riktigt me-app utan en bild, så vi lägger till några rader kod för att få till den sista lilla detaljen. Och i `style.css` lägger vi till att bilden ska fylla ut hela bredden av `.container`så den varken är större eller mindre beroende på bildstorlek.
+
+```javascript
+...
+var image = document.createElement("img");
+
+image.src = "emilfolino.jpg";
+image.alt = "Emil Folino";
+
+window.mainContainer.appendChild(title);
+window.mainContainer.appendChild(greeting);
+window.mainContainer.appendChild(image);
+...
+```
+
+```css
+.container img {
+    width: 100%;
+}
+```
+
+Vi är nu klar med Me-sidan och kan fokusera på resten av vyerna.
+
+[FIGURE src=image/webapp/screenshot-with-image.png?w=c8  caption="En bild hör sig till."]
+
 
 
 Navigation mellan vyerna {#navigation}
