@@ -71,13 +71,13 @@ mysql> SELECT akronym, avdelning, fornamn, efternamn, kon, lon, fodd FROM larare
 +---------+-----------+-----------+------------+------+-------+------------+
 | akronym | avdelning | fornamn   | efternamn  | kon  | lon   | fodd       |
 +---------+-----------+-----------+------------+------+-------+------------+
-| ala     | DIPT      | Alastor   | Moody      | M    | 30000 | 1943-04-03 |
-| dum     | ADM       | Albus     | Dumbledore | M    | 85000 | 1941-04-01 |
+| ala     | DIPT      | Alastor   | Moody      | M    |  NULL | 1943-04-03 |
+| dum     | ADM       | Albus     | Dumbledore | M    | 80000 | 1941-04-01 |
 | fil     | ADM       | Argus     | Filch      | M    | 25000 | 1946-04-06 |
-| gyl     | DIPT      | Gyllenroy | Lockman    | M    | 30000 | 1952-05-02 |
+| gyl     | DIPT      | Gyllenroy | Lockman    | M    |  NULL | 1952-05-02 |
 | hag     | ADM       | Hagrid    | Rubeus     | M    | 25000 | 1956-05-06 |
 | hoc     | DIDD      | Madam     | Hooch      | K    | 35000 | 1948-04-08 |
-| min     | DIDD      | Minerva   | McGonagall | K    | 46000 | 1955-05-05 |
+| min     | DIDD      | Minerva   | McGonagall | K    | 40000 | 1955-05-05 |
 | sna     | DIPT      | Severus   | Snape      | M    | 40000 | 1951-05-01 |
 +---------+-----------+-----------+------------+------+-------+------------+
 8 rows in set (0.00 sec)
