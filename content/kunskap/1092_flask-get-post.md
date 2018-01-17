@@ -150,6 +150,10 @@ Vi sätter metoden till POST och action till den sökvägen vi vill skicka formu
 
 ###app.py {#app-py}
 
+Vi behöver modulen `request` så vi importerar den överst i filen:  
+```
+from flask import Flask, render_template, request
+```
 Nu återstår bara att hantera det inskickade formuläret. Det kan vi göra i routen för garage.html:
 
 ```python
@@ -158,7 +162,7 @@ def company():
     """ Company route """
 
     if request.method == "POST":
-        handler.addEmployee(request.form)
+        handler.add_employee(request.form)
 
     return render_template("company.html", persons=handler.get_persons())
 ```
