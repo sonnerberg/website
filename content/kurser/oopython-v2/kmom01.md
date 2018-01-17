@@ -7,10 +7,6 @@ revision:
 Kmom01: Kom igång med objekt och Flask
 ====================================
 
-[WARNING]
-**Kursutveckling pågår inför vt18.**
-[/WARNING]
-
 Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask", där vi skriver redovisningstexten och en kort presentation om oss själva. Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objektorienterad programmering.
 
 <!--more-->
@@ -90,10 +86,12 @@ Titta på följande:
 
 1. Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 1.
 
-2. Titta på följande videos om Flask av "TheNewBoston":  
+1. Titta på följande videos om Flask av "TheNewBoston":  
 
     * [Basic app](https://www.youtube.com/watch?v=ZVGwqnjOKjk)  
     * [Routing](https://www.youtube.com/watch?v=27Fjrlx4s-o)
+
+1. Titta på de första 7-minuterna av [Object-oriented programming](https://www.youtube.com/watch?v=lbXsrHGhBAU).  
 
 
 

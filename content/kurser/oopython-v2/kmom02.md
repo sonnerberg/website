@@ -7,10 +7,6 @@ revision:
 Kmom02: Arv och andra klassrelationer
 ====================================
 
-[WARNING]
-**Kursutveckling pågår inför vt18.**
-[/WARNING]
-
 [FIGURE src=/image/oopython/kmom02/kmom02-class-relations.png class="right"]
 
 Kom igång med _arv_ och andra klassrelationer. Vi ska titta närmare på klassrelationer och hur de kan implementeras. Vi tar även ett steg till med Flaskapplikationen och ser hur vi hanterar fomulär med _GET_ och _POST_.
@@ -62,6 +58,8 @@ Läs följande:
 Titta på följande:  
 
 1. Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika igenom videorna som börjar med 2.
+
+1. Titta på resten av [Object-oriented programming](https://www.youtube.com/watch?v=lbXsrHGhBAU) (7.45 och fram).  
 
 
 ###Lästips {#lastips}
