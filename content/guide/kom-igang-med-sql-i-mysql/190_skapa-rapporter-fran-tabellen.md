@@ -29,7 +29,7 @@ mysql> SELECT * FROM larare;
 8 rows in set (0.00 sec)
 ```
 
-OM du inte har exakt samma värden så har du troligen missat något i samband med lönerevisionen som gjordes. Försök åtgärda det.
+Om du inte har exakt samma värden så har du troligen missat något i samband med lönerevisionen som gjordes. Försök åtgärda det.
 
 
 

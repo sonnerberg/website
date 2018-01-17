@@ -133,7 +133,7 @@ Du kan se [källkoden till exemplet i kursrepot för oopython](https://github.co
 Lägg till CGI i Apache webbserver {#apache}
 -----------------------------------
 
-Här är en kort-kort variant av hur du sätter upp CGI på din Apache webbserver.
+Här är en kort-kort generell variant av hur du sätter upp CGI på din Apache webbserver.
 
 Om du inte har konfigurerat din Apache webbserver för att köra CGI skript så är följande de steg som behövs utföras (på en Linux-maskin).
 
