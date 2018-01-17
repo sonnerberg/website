@@ -70,6 +70,8 @@ Följande kan du använda för att fördjupa dig i ER-modellering, läs som öve
 <!--
 Modelleringsövningsuppgifter 
 https://docs.google.com/document/d/1kKoSO2BQL5T2cnzshpM_hnk5JbqT0_00khfGJKZQ2Fo/edit
+
+Gjort modelleringsövning i sal med draw.io: https://goo.gl/vNRvKt
 -->
 
 
