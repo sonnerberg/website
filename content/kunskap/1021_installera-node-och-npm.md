@@ -6,6 +6,7 @@ category:
     - nodejs
     - npm
 revision:
+    "2018-01-18": (C, mos) Uppdatera linux och pakethanterare installationen.
     "2016-11-01": (B, mos) Bytte ut nodejs mode node i verifiering.
     "2016-10-14": (A, mos) Första utgåvan.
 ...
@@ -77,17 +78,9 @@ $ npm --version
 Installera på Linux {#linux}
 -------------------------------
 
-Olika linux-varianter har olika sätt att installera node och npm. Följ instruktionerna på nedladdningssidan. Det kan finnas vissa förberedelser som behövs för att du skall kunna installera den senaste versionen, det handlar om vilket repo som apt-get använder för att hämta installationsfilern från. Kolla nedladndingssidan för att vara säker.
-
-På min debian gör jag så här.
-
-```bash
-$ sudo apt-get update
-$ sudo apt-get install nodejs npm
-```
+Olika linux-varianter har olika sätt att installera node och npm. Följ instruktionerna på [nedladdningssidan för olika pakethanterare](https://nodejs.org/en/download/package-manager/). Det kan finnas vissa förberedelser som behövs för att du skall kunna installera den senaste versionen, det handlar om vilket repo som apt-get använder för att hämta installationsfilern från. Kolla nedladndingssidan för att vara säker.
 
 Du kan nu starta programmen från din terminal.  
-På vissa linux system heter kommandot `nodejs` istället för `node`.
 
 ```bash
 $ which node
