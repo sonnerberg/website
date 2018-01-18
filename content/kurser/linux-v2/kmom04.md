@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-01-18": (H, mos) Bort med Babel.
     "2017-02-06": (G, mos) Tydligare läsanvisning om ES6.
     "2017-02-02": (F, mos) In med lokal installation av node, npm och babel, åter in med debian node artikeln.
     "2017-01-27": (E, efo,mos) Bort installation debian node.
@@ -11,10 +12,6 @@ revision:
 ...
 Kmom04: Server med Node.js
 ==================================
-
-[WARNING]
-**Genomgång av kursmomentet är ännu ej gjord inför VT18.**
-[/WARNING]
 
 Nu har vi en Linux-server, en webbserver och vi kan grunderna i att bygga skript i bash. Låt oss nu kika på en annan sak, hur man bygger egna servrar i Linux med Node.js.
 
@@ -55,12 +52,6 @@ Läs följande:
 
 
 
-###Artiklar {#artiklar}
-
-Det finns inga artiklar.
-
-
-
 ###Video  {#video}
 
 Titta på följande:
@@ -75,9 +66,7 @@ Titta på följande:
 
 1. Titta översiktligt på de [nya konstruktionerna i JavaScript ECMA6](https://github.com/lukehoban/es6features/blob/master/README.md).
 
-1. Titta översiktligt på [Babel](https://babeljs.io/) som är en JavaScript till JavaScript kompilator som stödjer ECMA6.
-
-1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet.
+1. Följ gärna med i forumtråden [Functional Programming](t/5980) där funktionell programmering diskuteras i allmänhet.
 
 1. I boken [Exploring ES6](kunskap/boken-exploring-es6) handlar kapitel 15 om klasser och kapitel 16 om moduler, två goda sätt att strukturera sin kod i ES6.
 
@@ -94,9 +83,9 @@ Installera labbmiljön för nodejs delen av kursen.
 
 1. [Installera nodejs och npm lokalt](kunskap/installera-node-och-npm)
 
+<!--
 1. [Installera babel-node lokalt](labbmiljo/babel-node)
 
-<!--
 1. [Installera lokal utvecklingsmiljö](labbmiljo/lokal-utvecklingsmiljo) inklusive babel-node.
 -->
 
@@ -106,13 +95,15 @@ Installera labbmiljön för nodejs delen av kursen.
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden "[Kom igång med Node.js på Debian](kunskap/kom-igang-med-node-js-pa-debian)".
-
 1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
 
 1. Jobba igenom artikeln "[Skicka environment variabler till Bash och Node.js ](kunskap/skicka-environment-variabler-till-bash-och-node-js)".
 
 1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
+
+<!--
+1. Jobba igenom guiden "[Kom igång med Node.js på Debian](kunskap/kom-igang-med-node-js-pa-debian)".
+-->
 
 <!--
 1. Jobba igenom guiden "[Kom igång och gör övningar i Nodeschool.io](kunskap/kom-igang-och-gor-ovningar-i-nodeschool-io)".
@@ -135,12 +126,6 @@ VT18 ÄNDRA TILL GENERELL LAB MED NODE
 
 
 
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -151,7 +136,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Är detta din första bekantskap med JavaScript på servern eller har du testat det tidigare?
-* Vad tänker du om ECMA6, dess nya funktioner och sättet att få tillgång till dem via `babel-node`?
+* Vad tänker du om ECMA6, dess nya funktioner jämfört med ES5?
 * Hur gick det att förstå koncepten kring klient och server?
 * Är du bekant med begreppet funktionell programmering och har du några tankar kring det?
 

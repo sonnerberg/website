@@ -7,8 +7,8 @@ category:
 revision:
     "2017-02-02": (D, mos) Version 6 av nodejs och senaste versionen av Babel samt babel presets.
     "2016-01-26": (C, mos) Återgår till version 5 av Babel.
-    "2016-01-21": (B, mos) Babel installeras nu som babel-cli.
-    "2015-08-07": (A, mos) Första utgåvan för linux-kursen.
+    "2016-01-21": "(B, mos) Babel installeras nu som babel-cli."
+    "2015-08-07": "(A, mos) Första utgåvan för linux-kursen."
 ...
 Kom igång med Node.js på Debian
 ==================================
