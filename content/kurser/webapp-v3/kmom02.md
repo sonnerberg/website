@@ -90,7 +90,11 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
 
-1. Läs igenom artikeln "[Enhetens storlek och orientering](kunskap/enhetens-storlek-och-orientering)".
+1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)".
+
+1. Gör övningen "[Struktur i vår JavaScript](kunskap/struktur-i-var-javascript)".
+
+<!-- 1. Läs igenom artikeln "[Enhetens storlek och orientering](kunskap/enhetens-storlek-och-orientering)". -->
 
 <!-- 1. Installera utvecklingsverktygen för [Installera en emulator för Android](kunskap/installera-en-emulator-for-android). -->
 
@@ -101,6 +105,8 @@ Gör följande övningar för att träna inför uppgifterna.
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)".
+
+1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)".
 
 <!-- 1. Gör uppgiften "[Bygg vidare på din me-app](uppgift/github-sida-i-din-me-app)".
 
