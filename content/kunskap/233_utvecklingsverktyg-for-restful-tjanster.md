@@ -59,7 +59,7 @@ Postman känns som ett potent verktyg med möjligheter att spara undan och synka
 
 
 
-REST Easy för Firefox {#resteasy}
+<!-- REST Easy för Firefox {#resteasy}
 -----------------------
 
 Till Firefox finns en Addn-on som heter [REST Easy](https://github.com/nathan-osman/REST-Easy). Jag söker efter den bland Firefox Add-ons och installerar den.
@@ -70,7 +70,7 @@ Så här kan det se ut när jag gör en request med REST Easy.
 
 [FIGURE src=/image/snapht15/resteasy.png?w=w2 caption="En request mot AFs API med Postman."]
 
-REST Easy känns som en enklare lillebror till Postman, men ändock lika användbart och enkelt utan att krångla till saker.
+REST Easy känns som en enklare lillebror till Postman, men ändock lika användbart och enkelt utan att krångla till saker. -->
 
 
 
@@ -94,7 +94,7 @@ $ curl --header "Accept-Language: sv"  http://api.arbetsformedlingen.se/af/v0/pl
 ...
 ```
 
-Nu gick det bättre. Jag behövde inte sätta alla värden i headern, uppenbarligen. 
+Nu gick det bättre. Jag behövde inte sätta alla värden i headern, uppenbarligen.
 
 
 
@@ -119,18 +119,18 @@ Så här ser det ut när jag kör skriptet.
 
 ```bash
 $ ./af.bash platsannonser/soklista/lan
-{                                        
-  "soklista": {                          
-    "listnamn": "lan",                   
-    "totalt_antal_platsannonser": 35250, 
-    "totalt_antal_ledigajobb": 64362,    
-    "sokdata": [                         
-      {                                  
-        "id": 10,                        
-        "namn": "Blekinge län",          
-        "antal_platsannonser": 400,      
-        "antal_ledigajobb": 715          
-      },                                 
+{
+  "soklista": {
+    "listnamn": "lan",
+    "totalt_antal_platsannonser": 35250,
+    "totalt_antal_ledigajobb": 64362,
+    "sokdata": [
+      {
+        "id": 10,
+        "namn": "Blekinge län",
+        "antal_platsannonser": 400,
+        "antal_ledigajobb": 715
+      },
 ```
 
 Nu blir det enklare att se resultatet.
@@ -144,20 +144,20 @@ En annan variant att formattera snyggt är programmet [jq](https://stedolan.gith
 Här är ett exempel där jag sparat undan svaret i en fil `a.json` och använder `jq` för att ställa frågor mot filens innehåll.
 
 ```bash
-$ jq '.soklista.totalt_antal_platsannonser' a.json 
-35602                                                          
+$ jq '.soklista.totalt_antal_platsannonser' a.json
+35602
 ```
 
 ```bash
 Eller att plocka ut första svaret i svaret.
 
-$ jq '.soklista.sokdata[0]' a.json 
-{                                           
-  "id": 10,                                 
-  "namn": "Blekinge län",                   
-  "antal_platsannonser": 405,               
-  "antal_ledigajobb": 723                   
-}                                           
+$ jq '.soklista.sokdata[0]' a.json
+{
+  "id": 10,
+  "namn": "Blekinge län",
+  "antal_platsannonser": 405,
+  "antal_ledigajobb": 723
+}
 ```
 
 Som du ser så kan curl och jq vara alternativa verktyg att jobba mot RESTful tjänster. Att använda kommandoraden kan vara ett kraftfullt alternativ till de verktyg vi såg inledningvis.
@@ -170,7 +170,3 @@ Avslutningsvis {#avslutning}
 Detta var en genomgång av ett par användbara verktyg när man jobbar mot en RESTful server.
 
 Du kan ställa frågor eller ge tips och förslag i den [forumtråd som är kopplad till artikeln](t/4750).
-
-
-
-
