@@ -36,7 +36,7 @@ Vi ska skapa en me-sida som vi senare kommer bygga vidare på genom kursen. Utg�
 Krav {#krav}
 -----------------------
 
-Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar via `app.cgi`.
+Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar via `app.cgi`. `app.cgi` behöver bara fungera på studentservern.
 
 1. Applikationen ska använda Bootstrap.
 

@@ -11,7 +11,7 @@ revision:
 Flask som CGI-skript
 ==================================
 
-När man sätter en Flask-applikation i drift tillsammans med en webbserver finns det flera alternativ. Ett av de enklaste är att använda CGI för att köra din Flaskapplikation.
+När man sätter en Flask-applikation i drift tillsammans med en webbserver finns det flera alternativ. Ett av de enklaste är att använda CGI för att köra din Flaskapplikation. För att köra Flask **på studentservern** behöver vi ett CGI-skript.
 
 På studentservern kan du köra CGI-skript på detta sättet. Så här gör du för att koppla ett CGI-skript till din Flaskapplikation.
 

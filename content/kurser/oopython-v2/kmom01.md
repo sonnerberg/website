@@ -133,7 +133,7 @@ Genomför följande övning för att träna dig.
 
 1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
 
-1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`.
+1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`. Detta behöver bara fungera på studentservern, alltså inte lokalt.
 
 1. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
 

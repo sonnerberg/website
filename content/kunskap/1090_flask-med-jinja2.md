@@ -171,7 +171,7 @@ För Bootstrap's filer använder vi oss av [CDN](https://en.wikipedia.org/wiki/C
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('main') }}">Min första Flask app</a>
+                <a class="navbar-brand" href="{{ url_for('main') }}">Min första Flask app</a>säkerxhetsrisk
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -285,7 +285,7 @@ Utöka applikationen {#utoka}
 
 Det är ju lite tråkigt att bara ha en sida. Vi tittar på hur man utökar med en sida till.
 
-Vi kommer behöva skapa en ny sida i /templates-mappen lägga till en route i `app.py` samt uppdatera header.html med ett nytt meyval. Inte krångligare än så.
+Vi kommer behöva skapa en ny sida i /templates-mappen lägga till en route i `app.py` samt uppdatera header.html med ett nytt menyval. Inte krångligare än så.
 
 
 
@@ -353,7 +353,7 @@ my_name = "Kenneth Lewenhagen"
 my_course = "OOPython"
 ```
 
-Låt säga att vi vill skicka med variablerna till `about.html`. Om du kommer ihåg [strängformatering](https://www.youtube.com/watch?v=BkMm0lX-Ytc&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd&index=18) från förra pythonkursen kan du nog lista ut hur det fungerar.  
+Låt säga att vi vill skicka med variablerna till `about.html`. Om du kommer ihåg [strängformatering](https://www.youtube.com/watch?v=BkMm0lX-Ytc&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd&index=18) från förra Pythonkursen kan du nog lista ut hur det fungerar.  
 
 I app.py:
 
@@ -376,6 +376,15 @@ Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
 [FIGURE src=/image/oopython/kmom01/jinja2_result.png?w=w2 caption="Utskrift via variabler."]
 
 
+Flask i debug-läge {#debug}
+------------------------------
+
+Det finns ett [debug-läge](http://flask.pocoo.org/docs/0.12/quickstart/#debug-mode) inbyggt i Flask som automatiskt startar om Python servern när du ändrar din Python kod. Det funkar inte när du ändrat i någon template kod, ex. html filerna, utan bara när du ändrat på din Python kod. Nedanför kan du se hur man startar Flask i debug-läge. Obs! Tanken är att man bara kör med debug-läge i utvecklingsfasen då att ha det aktiverat är en säkerhetsrisk.
+
+```python
+if __name__ == "__main__":
+    app.run(debug=True)
+```
 
 Avslutningsvis {#avslutning}
 ------------------------------
