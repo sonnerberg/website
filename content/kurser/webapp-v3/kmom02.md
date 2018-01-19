@@ -129,8 +129,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känns det att jobba med modeller och hämta data från api'er med `m.request`?
-* Hur känns det att jobba i mithril, fördelar och nackdelar?
-* Så här långt, känner du att du har koll på koden? Är det något särskilt du funderar på?
-* Var det något som krånglade eller tog extra mycket tid?
+* Vilka fördelar ser du med verktyg som Postman, curl och jq?
+* Fick du till en bra struktur i för din CSS kod?
+* Vilka fördelar ser du med verktyg som webpack och SASS?
+* Är du nöjd med din lager app så här långt?
 * Vilken är din TIL för detta kmom?
