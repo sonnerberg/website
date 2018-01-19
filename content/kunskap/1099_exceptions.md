@@ -10,23 +10,29 @@ Exceptions i Python
 
 [FIGURE src=/image/oopython/kmom04/exceptions_top.png?w=c8 class="right"]
 
-Something something...  
-
+Det finns två vanliga fel, eller *errors*, som man kan snubbla över i Python. Det är *syntax errors* och *exceptions*. Vi ska titta närmare på exceptions och hur vi kan jobba med dem.
 <!--more-->  
 
 Intro {#intro}
 -------------------------------
-När vi hämtar en webbsida används HTTP-metoden GET. Det man skickar hamnar då synligt i adressfältet, tex: `http://localhost:5000?id=2&car=volvo`.
 
-Vill vi däremot inte att datan, eller informationen vi skickar, ska synas, så kan vi använda metoden POST. POST kan bland annat inte bokmärkas, cachas eller sparas i historiken till skillnad från GET-metoden. POST-data skickas i headern, så den är ej synlig i URL:en.  
+Det vanligaste felet är syntax errors. Det uppstår när syntaxen är fel och programmet inte kan köras. Ett exempel är:
 
-[Läs mer om POST och GET](http://www.w3schools.com/tags/ref_httpmethods.asp).
+```
+if 100 > 5
+    print("Oj då, nu blev det fel...")
+```
 
-Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans med Python, Flask och SQLAlchemy. Vill du hänga med och koda själv redan nu, kopierar du in cars.sqlite och flask-appen (me/flask) in i en ny mapp på valfritt ställe. Filerna vi använder är:
+Programmet resulterar i ett fel:
 
-[FIGURE src=/image/oopython/kmom04/tree_flask2.png]
+```bash
+>>> File "main.py", line 21
+    if 100 > 5
+             ^
+SyntaxError: invalid syntax
+```
 
-<!--more-->
+
 
 
 
