@@ -176,19 +176,67 @@ För att knappar kan signalera olika funktioner introducerar vi färger. En röd
 
 Struktur i CSS {#struktur}
 --------------------------------------
-Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i samma CSS fil. För att strukturera upp detta kan det vara en fördel att dela upp koden i olika moduler. Ett enkelt och fullt tillräckligt sätt är att dela upp CSS-koden i olika filer och importera alle filer i `index.html`. Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil, men finns inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av olika moduler.
+Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i samma CSS fil. För att strukturera upp detta kan det vara en fördel att dela upp koden i olika moduler. Ett enkelt och fullt tillräckligt sätt är att dela upp CSS-koden i olika filer och importera alla filer i `index.html`.
+
+Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil, men finns inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av olika moduler.
 
 Vissa har i kursen design träffat på LESS, det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS följ instruktionerna på [installationssidan](http://sass-lang.com/install).
 
-Vi börjar med att skapa en fil `base.scss` där vi importerar alla moduler, som vi senare kommer skapa. Det är denna fil vi använder när vi sedan ska kompilera till CSS. Vi skapar även en katalog `style` där vi sparar alla SASS filer. Jag använder `.scss` då jag gillar syntaxen bättre då den påminner mer om CSS.
+Följande är en kort introduktion till import, variabler och färghantering i SASS. För mer avancerade funktioner rekommenderas [SASS dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
+För att importera CSS och SASS filer och typsnitt används `@import` och variabler skrivs med ett dollar-tecken framför. Så i följande kodexempel importeras typsnittet Merriweather och det skapas en variabel för brödtext. Variabeln används sedan för att ge `p`-element ett typsnitt.
 
+```scss
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
+$font-body: 'Merriweather', serif;
 
+p {
+    font-family: $font-body;
+}
+```
 
+När vi skapade våra knappar använde vi variationer av samma färg för ramen och skuggningen. Med CSS-preprocessors är det busenkelt att räkna fram dessa variationer av färgerna. Med funktioner som `lighten` och `darken` kan vi ljusa upp eller mörka våra grundfärger enligt exemplet nedan där vi i gradienten gör färgen `$blue` 10% mörkare och ramen görs 20% mörkare.
+
+```scss
+$blue: #0074d9;
+
+.blue-button {
+    background-color: $blue;
+    background-image: linear-gradient($blue, darken($blue, 10%));
+    border-color: darken($blue, 20%);
+}
+```
+
+För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss` där vi importerar alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen bättre då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
+
+Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan.
+
+```scss
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+
+@import 'normalize.min.css';
+@import 'style/variables';
+@import 'style/container';
+@import 'style/navigation';
+@import 'style/typography';
+@import 'style/button';
+```
+
+När vi sedan vill skapa en CSS fil av SASS koden används följande kommando på kommandoraden.
+
+```bash
+sass base.scss style.css
+```
+
+Om man istället vill skapa en komprimerad version av CSS koden kan man använda följande kommando.
+
+```bash
+sass base.scss style.min.css --style compressed
+```
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna artikeln skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](http://typographyhandbook.com/) och [Butterick's Practical Typography](https://practicaltypography.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.
+Vi har i denna artikeln skapat knappar som är lätta att klicka på och samtidigt inbjuder till att bli klickade på. Vi designade först en grund knapp och med hjälp av andra klasser designade vi knappar som fyller hela skärmens bredd och knappar med andra färger för olika funktioner. Vi har även tittat på ett sätt att strukturera vår CSS kod med CSS-preprocessorn SASS.
