@@ -128,6 +128,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du programmerat i JavaScript tidigare, eller kan de relatera till andra språk du programmerat i?
+* Har du programmerat i JavaScript tidigare, eller kan du relatera till andra språk du har programmerat i?
 * Vad tycker du är det svåraste, mest utmanande i utveckling med HTML, CSS och JavaScript - så här långt?
 * Hur gick det att utföra respektive uppgift, vilken tog mest tid och vilken var mest lärorik?
