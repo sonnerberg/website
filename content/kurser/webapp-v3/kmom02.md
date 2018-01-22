@@ -92,7 +92,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)".
 
-1. Gör övningen "[Struktur i vår JavaScript](kunskap/struktur-i-var-javascript)".
+1. Gör övningen "[Struktur i JavaScript](kunskap/struktur-i-var-javascript)".
 
 <!-- 1. Läs igenom artikeln "[Enhetens storlek och orientering](kunskap/enhetens-storlek-och-orientering)". -->
 

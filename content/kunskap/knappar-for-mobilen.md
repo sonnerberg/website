@@ -210,7 +210,7 @@ $blue: #0074d9;
 
 För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss` där vi importerar alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen bättre då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
 
-Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan.
+Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar SASS-filerna.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
