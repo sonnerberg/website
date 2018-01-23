@@ -120,8 +120,8 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Kan du ge exempel på något användningsområde där objektorientering och arv hade passat bra?
 * Förstod du de olika relationerna och skillnaden på dem?
-* Är du bekant med metoderna GET och POST sedan tidigare?
+* Vad innebär polymorfism inom objektorienterad programmering?
+* Vad innebär inkapsling och publika interface inom objektorienterad programmering?
 * Hur tyckte du det gick med formulärhantering i Flask?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Gjorde du extrauppgiften i "[Skapa former](uppgift/skapa-former)"?
-* Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
