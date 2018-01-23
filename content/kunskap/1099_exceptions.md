@@ -68,39 +68,89 @@ Kika i [dokumentationen](https://docs.python.org/3/library/exceptions.html) för
 
 
 
-###try except {#try-och-except}
+raise Exception {#raise-exception}
+-------------------------------
 
-När man pratar om felhantering stöter man på termer som att *kasta ett exception* (throw exception) och *fånga ett exception* (catch exception). När man kastar ett exception så talar man om att det har blivit ett fel och definierar vilket fel som ska uppbringas. Sedan fångar man felet och agerar därefter. I Python kallas det *raise*
+När man pratar om felhantering stöter man på termer som att *kasta ett exception* (throw exception) och *fånga ett exception* (catch exception). När man kastar ett exception så talar man om att det har blivit ett fel och definierar vilket fel som ska uppbringas. Sedan fångar man felet och agerar därefter. I Python kallas det *raise* exception, och kan med fördel användas i en try/except. Det är då i `try:` man kastar ett exception och fångar det i `except:`.
 
+För att själv tvinga fram det använder vi `raise`:
+
+```
+>>> raise Exception("Something happened!")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+Exception: Something happened!
+```
+
+Vi ser ovan att man kan skicka med ett meddelande till Exception som skrivs ut. I följande stycke tar vi reda på hur man kan skapa egna exceptions och använda dem i ett sammanhang.
 
 
 Extend Exception {#extend-exception}
 -------------------------------
 
-Vi kan skapa egna exceptions genom att ärva från basklassen `Exception` och tvinga fram dem vid behov. Det kan hända att vi vill kunna tvinga fram fel som i vanliga fall inte är ett fel. Först skapar vi en egendefinierad basklass för våra *custom exceptions*:
+Vi kan som sagt skapa egna exceptions. Det gör vi genom att ärva från basklassen `Exception` och tvinga fram dem vid behov. Det kan hända att vi vill kunna tvinga fram fel som i vanliga fall inte är ett fel.
+
+Ponera att vi ska skapa ett spel, där man ska gissa på ett nummer och får för varje gång reda på om vi gissat för lågt eller för högt.
+
+Först skapar vi en egendefinierad basklass för våra *custom exceptions*, eller *extended exceptions*. Ett vanligt sätt är att samla dem i en fil, exceptions.py eller errors.py.
 
 ```python
 class Error(Exception):
    """User defined class for custom exceptions"""
    pass
 ```
-Vi ser att den ärver från klassen Exception och därmed möjligheten att skicka med ett meddelande som kan skrivas ut när felet kastats.
 
+Det är inget krav att vi skapar en egen basklass utifrån Exception. Det är dock en god standard så vi nöjer oss med det. Vi ser att den ärver från klassen Exception och därmed möjligheten att skicka med ett meddelande som kan skrivas ut när felet kastats.
 
-Förutsättning {#pre}
--------------------------------
-<!--
-Du har läst delen om GET och POST i guiden "[Php på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg#globals)" eller vet vad det innebär.  
-Du har läst artikeln om "[Flask och Jinja2](kunskap/flask-och-jinja2)".  
-Du har läst artikeln om "[SQLAlchemy](kunskap/sqlalchemy)".   -->
+Vi vill ha exceptions för när man gissat för högt och för lågt, så vi fyller på vår klass-fil med två klasser till:
 
+```python
+class ValueTooLowError(Error):
+   """Raised when the input value is too low"""
+   pass
 
+class ValueTooHighError(Error):
+   """Raised when the input value is too high"""
+   pass
+```
 
+Nu har vi ett exception för varje fel som vi vill tvinga fram. Studera main.py och se hur vi kan tvinga fram våra exceptions:
 
+```python
+#!/usr/bin/env python3
+
+"""
+Main file for testing exceptions
+"""
+import random
+from exceptions import ValueTooLowError
+from exceptions import ValueTooHighError
+
+rand_val = random.randint(1, 100)
+
+while True:
+    try:
+        in_val = int(input("Ange siffra: "))
+
+        if in_val < rand_val:
+            raise ValueTooLowError
+        elif in_val > rand_val:
+            raise ValueTooHighError
+        break
+    except ValueTooLowError:
+        print("För lågt, prova igen!")
+
+    except ValueTooHighError:
+        print("För högt, prova igen!")
+
+print("Siffran {} är rätt!".format(in_val))
+```
+
+Ett alternativ är att byta `print("...")` mot att skicka med meddelandet direkt till respektive exception, `raise ValueTooHighError("För högt, prova igen!")`.
 
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det var det hela. Smidigt och strukturerat. Prova gärna att lägga till fler funktioner i tabellen, tex sortering eller visa max antal och paginering.
+Nu har vi tittat på hur vi kan skapa egna exceptions, så kallade *custom exceptions* eller *extended exceptions*. Vill du läsa mer kan du göra det i [dokumentationen](https://docs.python.org/3/tutorial/errors.html)
