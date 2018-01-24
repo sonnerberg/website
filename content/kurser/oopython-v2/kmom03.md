@@ -140,4 +140,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vilka metoder överlagrade du i uppgiften "Kortpelet War"?
 * Hur gick det med sekvensdiagrammet?
 <!-- * Gjorde du extrauppgiften? -->
-* Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
