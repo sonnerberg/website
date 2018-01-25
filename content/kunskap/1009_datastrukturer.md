@@ -182,7 +182,7 @@ För en länkad lista med noder kan vi inte göra antagandet att värdena ligger
 Den enklaste versionen av en Node klass innehåller bara två attribut, ett för att hålla data och ett för att hålla koll på nästa nod. Den typen av listor kallas för enkellänkade listor. Det finns även dubbellänkade listor, då är varje nod kopplad till noden före och efter.
 
 [FIGURE src=/image/oopython/kmom05/noder.png caption="Enkel- och dubbellänkade noder"]  
- 
+
 En annan vanlig typ är Cirkulär länkad lista. I en Cirkulär länkad lista är sista noden länkad till den första.
 
 [FIGURE src=/image/oopython/kmom04/circl-list.png caption="Cirkulär Enkellänkad lista"]
@@ -244,7 +244,7 @@ Vi måste på något sätt traversera igenom våra node för att kunna hämta, s
 
 ```python
 head = Node(0) # Create Node and set as head
-temp = Node(2) # Create Node and assign to temp variable 
+temp = Node(2) # Create Node and assign to temp variable
 temp.next = Node(4) # Create Node and assign to temp.next
 head.next = temp # Assign head.next to temp
 ```
@@ -300,11 +300,22 @@ else:
 Efter vår while loop behöver vi kolla om den tog slut för att index är för högt eller om vi har hittat index. Om vi är på index printar vi värdet annars lyfter vi ett index-out-of-bounds error.  
 Detta är ett sätt att skriva koden för att leta igenom en lista för ett index, det finns minst 20 andra sätt att skriva den på. Försök gärna komma på andra sätt att skriva den.
 
-Nu har kod för att hämta från listan och även sett hur vi kan koppla ihop flera noder. hur gör vi för att ta bort en nod från listan?
+Nu har kod för att hämta från listan och även sett hur vi kan koppla ihop flera noder. Hur gör vi för att ta bort en nod från listan?
 
-### Ta bort nod {#del_nod}
+### Ta bort nod {#del_node}
 
-Problem med att ta bort en nod är att vi måste koppla ihop noden före den vi tar bort med node efter. Vi utgår ifrån att vi har de tre noderna från ovan i den ordningen, `[0, 2, 4]`.
+För att ta bort en nod behöver vi först traversera igenom noderna och hitta noden som ska raderas. Sen kopplar vi om noden som är före till noden efter den vi vill ta bort. Sist radera vi noden vi vill ta bort, `del temp`.
+
+[FIGURE src=/image/oopython/kmom04/del_node.png caption="Ta bort en nod"]
+
+### Lägg till nod {#add_node}
+
+När vi ska lägga till en nod är det viktigt med vilken ordning vi gör saker annars kan vi råka tappa alla noder som ska vara efter den nya vi lägger till. I bilden nedan utgår vi från listan `[0, 2, 4]` och vi vill stoppa in en ny nod, med siffran `5` som värde, mellan `2` och `4`. Listan ska se ut `[0, 2, 5, 4]` när den är klar.
+
+[FIGURE src=/image/oopython/kmom04/add_node.png caption="Lägg till ny nod"]
+
+Först letar vi upp noden som ska vara framför den nya och tilldelar den till variabeln `temp`. Tilldela `temp.next` till den nya nodens `.next`. Avsluta med att tilldela `temp.next` till den nya noden. Om vi gör det i denna ordningen behvöer vi inte vara oroliga för att tappa några noder. Tänk på vad som hade hänt om vi hade skippat steg 2 och istället direkt tilldelade `temp.next` till den nya noden.
+
 
 
 Heap {#heap}
