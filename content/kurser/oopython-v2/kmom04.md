@@ -103,6 +103,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
+```bash
+# Ställ dig i kurskatalogen
+dbwebb publish flask
+```
+
 
 
 ###Extra {#extra}
