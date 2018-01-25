@@ -2,21 +2,26 @@
 author: lew
 revision:
     "2018-01-25": (A, lew) First version.
+category:
+    - oopython
 ...
-Kmom04: Regex och databaser
+Kmom04: Datastrukturer
 ====================================
 
 [WARNING]
 **Kursutveckling pågår inför vt18.**
 [/WARNING]
 
-I det här kursmomentet övar vi oss på datastrukturer och felhantering med exceptions.  
+[FIGURE src=/image/oopython/kmom04/index_list.png?w=c8 class="right"]
 
-SKRIV NÅT FINT HÄR
+I det här kursmomentet övar vi oss på datastrukturer och felhantering med exceptions. En datastruktur är en struktur för organisering av datan.
+
+Vi ska titta närmare på några av de vanligaste datastrukturerna och hur de fungerar. Vi avslutar med att skapa egna strukturer.
+
+Exceptions hjälper oss med att få reda på vad som gått fel. Det finns en hel del inbyggda exceptions som vi säkert stött på tidigare. Nu ska vi se hur vi skapar egna exceptions och på så sätt ta ett steg till mot att ha full kontroll över hur programmet ska fungera.
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom04/index_list.png?w=w2 caption="länkad lista"]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -35,8 +40,8 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
-    * Ch 4 - Expecting the unexpected
-    * Ch 6 - Python Data Structures  
+    * Ch 4 - Expecting the unexpected  
+    * Ch 6 - Python Data Structures
 
 
 
@@ -82,7 +87,7 @@ Om du känner att du har tid och lust.
 
 Genomför följande övning för att träna dig.
 
-1. Läs artikeln "[Exceptions](kunskap/exceptions)"
+1. Läs artikeln "[Exceptions](kunskap/exceptions)".
 
 1. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
 
