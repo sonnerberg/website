@@ -54,15 +54,11 @@ Det finns inga extra artiklar.
 
 Titta på följande:
 
-Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
+1. [Linked lists](https://www.youtube.com/watch?v=pBrz9HmjFOs) visualiserar en Linked list.  
 
-Titta på följande video av "TheNewBoston":  
+1. [Data Structures: Queue](https://www.youtube.com/watch?v=PjQdvpWfCmE) visualiserar en Queue.
 
-1. [HTTP methods](https://www.youtube.com/watch?v=PWF_WyvgKqY)
-
-Titta på följande video av "Trevor Payne":  
-
-1. [Regular expressions](https://www.youtube.com/watch?v=ZdDOauFIDkw)
+1. [Data Structures: Stack](https://www.youtube.com/watch?v=XSdXSmwb550) visualiserar en Stack.
 
 
 
@@ -70,12 +66,11 @@ Titta på följande video av "Trevor Payne":
 
 Om du känner att du har tid och lust.
 
-1. Öva dig med [regex korsord](https://regexcrossword.com/)
+1. kolla på [CS50 - Data structures](https://youtu.be/pA-8eBZvN1E?t=455), från tidsstämpeln fram till 28:15. Väldigt lärorik video, men de kan använda termer ni inte känner igen för de jobbar i C.
 
-2. Bekanta dig med [regex101](https://regex101.com/#python)  
+1. [Datastructures - geeksforgeeks](http://www.geeksforgeeks.org/data-structures/)  
 
-3. Även [regexpal](http://www.regexpal.com/) är ett bra verktyg.
-
+1. Kolla på [Abstract Data Type (ADT)](https://www.youtube.com/watch?v=HcxqzYsiJ3k)
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -89,11 +84,7 @@ Om du känner att du har tid och lust.
 
 Genomför följande övning för att träna dig.
 
-1. Läs igenom artikeln "[Vad är regex?](kunskap/regex)".
-
-2. Jobba igenom övningen med "[SQLAlchemy](kunskap/sqlalchemy)".  
-
-3. Titta igenom artikeln som handlar om "[GET, POST i Flask](kunskap/flask-sqlite-sqlalchemy-post-get)"  
+ 1. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
 
 
 
@@ -101,13 +92,9 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med regex](uppgift/python-med-regex)" (lab 3)
+1. !!Skapa uppgift för göra datastruktur.!!
 
-2. Gör uppgiften "[Skapa en bondgårds-databas](uppgift/skapa-en-bondgards-databas)"
-
-3. Gör uppgiften "[Visa bondgården på me-sidan](uppgift/visa-bondgarden-pa-me-sida)".  
-
-4. Fyll på redovisning.html med kursmomentets redovisningstext.
+1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 
 

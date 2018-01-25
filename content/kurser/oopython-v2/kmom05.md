@@ -94,9 +94,7 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln "[Rekursion](kunskap/rekursion)".
 
-2. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".
-
-3. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
+1. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".
 
 
 

@@ -28,7 +28,7 @@ I artikeln kommer det tas upp tre olika datastrukturer.
 Förutsättning {#pre}
 -------------------------------
 
-Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebär.
+Du kan grunderna i Python och objektorientering. Du har jobbat igenom övningen.. länka till exception övningen.
 
 
 
@@ -165,6 +165,146 @@ False
 'Lion'
 ```
 
+
+Länkad lista {#lankad_lista}
+------------------------------
+
+För både Queue och Stack har vi använt oss av Pythons inbyggda List:a för att lagra värden, så än så länge har vi bara gjort en specialversion av Pythons List. Tanken är att vi inte ska behöva List utan att vi ska bygga hela datastrukturen själva. För att lyckas med det ska vi använda oss av noder och kommer bygga en egen länkad lista. Queue och Stack är även bara en specialversion av Länkad lista.
+
+Vi kan tänka oss en vanlig List/Array som bilden nedan. Arrayen ligger sparad i minnet som en bit och i den biten ligger värdena ordnade efter varandra. Då behöver vi inte ha koll på var varje värde ligger utan bara arrayen.
+
+[FIGURE src=/image/oopython/kmom04/array2.png caption="Array i minnet"]
+
+För en länkad lista med noder kan vi inte göra antagandet att värdena ligger intill varandra utan de allokeras till olika platser i minnet. Därför måste varje värde i den Länkade listan ha koll på nästa värde. Det använder vi en Node klass för.  
+
+[FIGURE src=/image/oopython/kmom04/linked_list.png caption="Länkad lista med noder"]  
+
+Den enklaste versionen av en Node klass innehåller bara två attribut, ett för att hålla data och ett för att hålla koll på nästa nod. Den typen av listor kallas för enkellänkade listor. Det finns även dubbellänkade listor, då är varje nod kopplad till noden före och efter.
+
+[FIGURE src=/image/oopython/kmom05/noder.png caption="Enkel- och dubbellänkade noder"]  
+ 
+En annan vanlig typ är Cirkulär länkad lista. I en Cirkulär länkad lista är sista noden länkad till den första.
+
+[FIGURE src=/image/oopython/kmom04/circl-list.png caption="Cirkulär Enkellänkad lista"]
+
+Sen finns det så klart också Cirkulär dubbellänkad lista och de kan vara sorted eller unsorted. En sorted lista sorterar automatiskt lista. När man lägger in ny data i listan letas hela listan igenom för att hitta rätt plats i ordningen. En unsorted lista lägger enbart till värdet, oftast sist i listan.
+
+## Nod klassen {#nod}
+
+Då ska vi titta på hur koden kan se ut för nod klassen. Det behövs väldigt lite kod då vi enbart behöver ett attribut för data och ett för nästa nod.
+
+```python
+class Node:
+    """
+    Node class
+    """
+    def __init__(self, data):
+        """
+        Initialize object with the data and set next to None.
+        next will be assigned later when new data needs to be added.
+        """
+        self.data = data
+        self.next = None
+```
+
+Vi testar använda den i python3 interpretatorn.
+
+```python
+>>>n1 = Node(1)
+>>>n1
+<__main__.Node object at 0x743545132>
+>>>n1.data
+1
+```
+
+Vi har skapat ett Node objekt och testat skriva ut det och dess data.
+Nu ska vi skapa ett till objekt och koppla ihop vår `n1` med det nya.
+
+```python
+>>>n2 = Node(32)
+>>>n2.data
+32
+>>>n1.next
+
+>>>n1.next = n2
+>>>n1.next
+<__main__.Node object at 0x7453468745>
+>>>n1.next.data
+32
+```
+
+När vi printar `n1.next` första gången får vi ingen output för värdet är `None`. Efter vi tilldelat "n1.next" till `n2` innehåller "n1.next" vårt "n2" objekt. Då kan vi skrive `n1.next.data` för att komma åt datan, 32 i "n2" objektet.  
+Testa själva att skapa en till nod, `n3`, och tilldela till `n2.next`. Skriv ut "n3's" värde via `n1.next.next.data` och `n2.next.data`.
+
+
+
+### Traversera noder {#trav_nod}
+
+Vi måste på något sätt traversera igenom våra node för att kunna hämta, sätta och radera data. Det gör vi lättast med en `while` loop och en temp variabel.
+
+```python
+head = Node(0) # Create Node and set as head
+temp = Node(2) # Create Node and assign to temp variable 
+temp.next = Node(4) # Create Node and assign to temp.next
+head.next = temp # Assign head.next to temp
+```
+Ovanför skapar vi en enkel lista som innehåller `[0, 2, 4]`. Listan skapas i följande ordning `0`, `2`, `[2, 4]` och sist sätts den ihop `[0, 2, 4]`.  
+Nu ska vi traversera igenom den för att hämta ut ett värde med index.
+
+```python
+# Get value by index
+if head is not None:
+    current_node = head
+    counter = 0
+    pass
+else:
+    pass
+    # Raise exception for index out of bound
+```
+Vi börjar med att kolla så "head" inte är `None`, alltså att listan är tom. Sen skapa vi variabeln `current_node` som vi kommer använda när vi traversera för att hålla noden vi är på. `counter` används för räkna vilket index vi är på. Om listan då är tom, `head == None`, vet vi att vad än index är så kommer det vara out-of-bound och ska då lyfta ett exception.  
+Nu ska vi skapa en loop som går igenom listan.
+
+```python
+# Get value by index
+if head is not None:
+    current_node = head
+    counter = 0
+    while current_node.next is not None and counter < index:
+        current_node = current_node.next
+        counter += 1
+else:
+    pass
+    # Raise exception for index out of bound
+```
+
+Vi har en "while" loop som kör så länge det finns en nästa nod, alltså `head.next` inte är `None`, och vår räknare är under `index`. `index` ska innehålla vilket index vi vill hämta värdet från. Om "next" inte är "None" ändrar vi `current_node` till nästa nod och ökar räknaren med ett. Med andra ord fortsätter loopen antingen tills listan är slut eller `counter == index`.
+
+```python
+# Get value by index
+if head is not None:
+    current_node = head
+    counter = 0
+    while current_node.next is not None and counter < index:
+        current_node = current_node.next
+        counter += 1
+    if counter == index:
+        print(current_node.data)
+    else:
+        # Raise exception for index out of bound
+        raise IndexError()
+else:
+    # Raise exception for index out of bound
+    raise IndexError()
+```
+
+Efter vår while loop behöver vi kolla om den tog slut för att index är för högt eller om vi har hittat index. Om vi är på index printar vi värdet annars lyfter vi ett index-out-of-bounds error.  
+Detta är ett sätt att skriva koden för att leta igenom en lista för ett index, det finns minst 20 andra sätt att skriva den på. Försök gärna komma på andra sätt att skriva den.
+
+Nu har kod för att hämta från listan och även sett hur vi kan koppla ihop flera noder. hur gör vi för att ta bort en nod från listan?
+
+### Ta bort nod {#del_nod}
+
+Problem med att ta bort en nod är att vi måste koppla ihop noden före den vi tar bort med node efter. Vi utgår ifrån att vi har de tre noderna från ovan i den ordningen, `[0, 2, 4]`.
 
 
 Heap {#heap}
