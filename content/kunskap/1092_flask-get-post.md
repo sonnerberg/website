@@ -154,7 +154,7 @@ Vi behöver modulen `request` så vi importerar den överst i filen:
 ```
 from flask import Flask, render_template, request
 ```
-Nu återstår bara att hantera det inskickade formuläret. Det kan vi göra i routen för garage.html:
+Nu återstår bara att hantera det inskickade formuläret. Det kan vi göra i routen för company.html:
 
 ```python
 @app.route("/company", methods=["POST", "GET"])
