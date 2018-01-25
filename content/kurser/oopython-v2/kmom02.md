@@ -39,7 +39,6 @@ Läs följande:
         - Who can access my data?
         - Case study - Summary
     * Ch 3 - When Objects Are Alike  
-    * Ch 4 - Expecting the Unexpected
 
 
 

@@ -1,8 +1,7 @@
 ---
 author: lew
 revision:
-    "2017-11-10": (PB1, mos) Utkast till v2.
-    "2017-02-02": (A, lew) First version.
+    "2018-01-25": (A, lew) First version.
 ...
 Kmom04: Regex och databaser
 ====================================
@@ -11,15 +10,13 @@ Kmom04: Regex och databaser
 **Kursutveckling pågår inför vt18.**
 [/WARNING]
 
-I det här kursmomentet övar vi oss på regex, hantering av SQLite-databas och HTTP-metoderna GET och POST i Flask.  
+I det här kursmomentet övar vi oss på datastrukturer och felhantering med exceptions.  
 
-Regex matchar textmönster och används framförallt för att extrahera specifik information ur större mängder text och text-filer.  
-
-Till Flask-appen använder vi SQLAlchemy för att mappa klasser mot tabeller i databasen. Vi hanterar sedan informationen med hjälp av GET och POST.
+SKRIV NÅT FINT HÄR
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom04/index_top.png?w=w2 caption="Wooho regex!"]
+[FIGURE src=/image/oopython/kmom04/index_list.png?w=w2 caption="länkad lista"]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -38,7 +35,8 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
-    * Ch 8 - Regular Expressions  
+    * Ch 4 - Expecting the unexpected
+    * Ch 6 - Python Data Structures  
 
 
 
@@ -84,7 +82,9 @@ Om du känner att du har tid och lust.
 
 Genomför följande övning för att träna dig.
 
- 1. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
+1. Läs artikeln "[Exceptions](kunskap/exceptions)"
+
+1. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
 
 
 
@@ -92,7 +92,9 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. !!Skapa uppgift för göra datastruktur.!!
+1. Gör uppgiften "[Skapa lista](uppgift/skapa-lista)". Spara din kod i mappen `list`.
+
+1. Gör uppgiften "[Skapa queue](uppgift/skapa-queue)". Spara din kod i mappen `queue`.
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
