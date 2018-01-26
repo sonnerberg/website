@@ -127,6 +127,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Har du skapat egna datastrukturer förut?
 * Vilken typ av lista valde du att göra och varför?
+* Vilka exceptions skapade du? Hur gör man för att de ska kastas i listan?
 * Gjorde du någon extrauppgiften?
 * Förstår du hur en lista är uppbyggd?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
