@@ -300,7 +300,7 @@ else:
 Efter vår while loop behöver vi kolla om den tog slut för att index är för högt eller om vi har hittat index. Om vi är på index printar vi värdet annars lyfter vi ett index-out-of-bounds error.  
 Detta är ett sätt att skriva koden för att leta igenom en lista för ett index, det finns minst 20 andra sätt att skriva den på. Försök gärna komma på andra sätt att skriva den.
 
-Nu har kod för att hämta från listan och även sett hur vi kan koppla ihop flera noder. Hur gör vi för att ta bort en nod från listan?
+Nu har vi kod för att hämta från listan och även sett hur vi kan koppla ihop flera noder. Hur gör vi för att ta bort en nod från listan?
 
 ### Ta bort nod {#del_node}
 
@@ -310,11 +310,11 @@ För att ta bort en nod behöver vi först traversera igenom noderna och hitta n
 
 ### Lägg till nod {#add_node}
 
-När vi ska lägga till en nod är det viktigt med vilken ordning vi gör saker annars kan vi råka tappa alla noder som ska vara efter den nya vi lägger till. I bilden nedan utgår vi från listan `[0, 2, 4]` och vi vill stoppa in en ny nod, med siffran `5` som värde, mellan `2` och `4`. Listan ska se ut `[0, 2, 5, 4]` när den är klar.
+När vi ska lägga till en nod är det viktigt med vilken ordning vi gör saker annars kan vi tappa alla noder som ska vara efter den nya vi lägger till. I bilden nedan utgår vi från listan `[0, 2, 4]` och vi vill stoppa in en ny nod, med siffran `5` som värde, mellan `2` och `4`. Listan ska se ut `[0, 2, 5, 4]` när den är klar.
 
-[FIGURE src=/image/oopython/kmom04/add_node.png caption="Lägg till ny nod"]
+[FIGURE src=/image/oopython/kmom04/add_node.png caption="Lägg till en ny nod"]
 
-Först letar vi upp noden som ska vara framför den nya och tilldelar den till variabeln `temp`. Tilldela `temp.next` till den nya nodens `.next`. Avsluta med att tilldela `temp.next` till den nya noden. Om vi gör det i denna ordningen behvöer vi inte vara oroliga för att tappa några noder. Tänk på vad som hade hänt om vi hade skippat steg 2 och istället direkt tilldelade `temp.next` till den nya noden.
+Först letar vi upp noden som ska vara framför den nya och tilldelar den till variabeln `temp`. Tilldela `temp.next` till den nya nodens `.next`. Avsluta med att tilldela den nya noden till `temp.next`. Om vi gör det i den här ordningen behöver vi inte vara oroliga för att tappa några noder. Fundera på vad som hade hänt om vi hade skippat steg 2 och istället direkt tilldelade den nya noden till `temp.next`.
 
 
 

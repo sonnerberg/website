@@ -9,10 +9,12 @@ category:
 Skapa queue
 ===================================
 
-Vi ska skapa en egen datastruktur, en "queue".  
-Utgå från koden för en Queue från övningen om datastrukturer och skriv om den så den inte använder Pythons inbyggda lista utan istället använder Node objekt.
+Vi ska bygga om datastrukturen "queue".  
+Utgå från koden för en Queue från övningen om datastrukturer och skriv om den så den inte använder Pythons inbyggda lista utan istället använder Node objekt för att hålla datan.
 
 <!--more-->
+
+[YOUTUBE src=1Kj1qVpRD50 width=630 caption="Så här kan det se ut när det är färdigt."]
 
 
 Förkunskaper {#forkunskaper}
@@ -38,16 +40,19 @@ cd me/kmom04/queue
 1. Skapa en fil med namnet `node.py` i "queue" mappen. Kopiera koden [för en Node](kunskap/datastrukturer#node) och klistra in i node.py filen.  
 
 1. Pythons inbyggda lista ska inte användas längre. Varje element i kön ska ligga i ett Node objekt och bilda en list struktur.  
-Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `head` för att referera till första noden i kön.
+Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `head` för att referera till första noden i kön.  
 
-1. Skapa filen `main.py`. ...innehålla loop som marvin, med val för lägga till och andra saker...
+1. Det är helt OK att lägga till fler metoder/attribut om man vill det i Queue klassen.
 
+1. Skapa filen `main.py` i "queue" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i Queue klassen. Det ska gå att kolla om en kö är tom, lägga till data, plocka ut data, kolla vilket som är nästa element och se storleken. Det ska givetvis också gå att avsluta loopen.
+
+1. Om man gör peek på en tom kö ska ett exception lyftas som fångas i din handler. Det ska alltså inte krascha.
 
 
 ```bash
 # Ställ dig i kurskatalogen
 #dbwebb validate list
-dbwebb publish list
+dbwebb publish queue
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
@@ -57,8 +62,9 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-Det finns inga extrauppgifter.
+1. Skapa ett sekvensdiagram över flödet som sker vid en valfri input från användaren. Spara det som "sekvens.png" i "queue" mappen.
 
+1. Skapa ett klassdiagram över Queue klassen. Spara det som "klass.png" i "queue" mappen.
 
 Tips från coachen {#tips}
 -----------------------

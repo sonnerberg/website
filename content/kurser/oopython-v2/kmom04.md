@@ -97,9 +97,9 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa lista](uppgift/skapa-lista)". Spara din kod i mappen `list`.
-
 1. Gör uppgiften "[Skapa queue](uppgift/skapa-queue)". Spara din kod i mappen `queue`.
+
+1. Gör uppgiften "[Skapa lista](uppgift/skapa-lista)". Spara din kod i mappen `list`.
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
