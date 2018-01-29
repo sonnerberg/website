@@ -46,13 +46,13 @@ cd me/flask/
 
 1. Det ska vara möjligt att skapa `Square`, `Circle` och `Triangle`.
 
-1. Alla klasser ska ärva från basklassen `Shape`.
+1. `Square`, `Circle` och `Triangle` ska ärva från basklassen `Shape`.
 
 1. Basklassen ska kräva att metoderna `get_area()` och `validate()` implementeras.
 
 1. Varje subklass ska ha sin egna validering. Till exempel så måste höjd och bredd vara samma för att det ska bli en kvadrat eller cirkel.
 
-1. Kommunikationen med klasserna ska skes via en Handler/Controller klass.
+1. Kommunikationen med klasserna ska ske via en Handler/Controller klass.
 
 1. De ska finnas minst tre färger att välja mellan.
 
