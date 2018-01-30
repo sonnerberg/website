@@ -122,9 +122,9 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom tipset om "[Developer tools i webbläsaren för mobila enheter](coachen/developer-tools-i-webblasaren-for-mobila-enheter)".
 
-1. Gör övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)".
+1. Gör övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)". Spara resultatet i `me/redovisa`.
 
-1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
+1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Spara koden i `me/kmom01/typography`.
 
 
 
@@ -134,7 +134,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[SPA me-app](uppgift/spa-me-app)". Spara din kod i `me/redovisa`.
 
-1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i `me/kmom01/lager`.
+1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i `me/kmom01/lager1`.
 
 <!-- 1. Gör uppgiften "[Skapa en mithril me-app](uppgift/skapa-en-mithril-me-app-till-webapp-kursen)". -->
 

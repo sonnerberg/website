@@ -1,10 +1,13 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+  "2018-01-30": (C, efo) Första utgåvan för webapp-v3.
   "2017-03-13": (B, efo) Första utgåvan för webapp-v2.
   "2015-11-23": (A, mos) Första utgåvan för kursen.
 ...
-Kmom03: Dashboard
+Kmom03: Formulär och CRUD
 ==================================
 
 [WARNING]
@@ -47,11 +50,11 @@ Läs följande:
 
 ###Artiklar {#artiklar}
 
-1. Läs "[What the heck is shadow DOM](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/)".
+<!-- 1. Läs "[What the heck is shadow DOM](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/)".
 
 1. Läs om vilka "[use case som finns för shadow DOM](https://www.w3.org/2008/webapps/wiki/Component_Model_Use_Cases)".
 
-1. Skumma igenom "[Googles artikel shadow DOM-v1](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom?hl=en)".
+1. Skumma igenom "[Googles artikel shadow DOM-v1](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom?hl=en)". -->
 
 1. Bekanta dig med dokumentationen för javascript ramverket [mithril](http://mithril.js.org/api.html) och genomgången av en enkel app i deras [tutorial](http://mithril.js.org/simple-application.html).
 
@@ -81,11 +84,13 @@ Läs följande:
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)".
+1. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-v2)". Spara eventuella testfiler i `me/kmom03/nobel`.
 
-1. Läs igenom artikeln "[Virtuella noder](kunskap/virtuella-noder)".
+1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". Spara eventuella testfiler i `me/kmom03/formular`.
 
-1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
+<!-- 1. Läs igenom artikeln "[Virtuella noder](kunskap/virtuella-noder)".
+
+1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)". -->
 
 <!-- 1. Läs igenom artikeln och gör övningarna i "[Mobil webapp och RESTful server](kunskap/mobil-webapp-och-restful-server)". Spara de övningar du gör i mappen `me/kmom03/ajax`.
 
@@ -101,7 +106,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Dashboard](uppgift/mithril-dashboard)".
+1. Gör uppgiften "[Lager appen del 3](uppgift/lager-appen-del-3)". Spara resultatet i `me/kmom03/lager3`.
 
 <!-- 1. Lägg till en Splash screen och en ikon till din meapp. -->
 
@@ -122,9 +127,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur är din generella uppfattning om mithril nu efter tre kursmoment?
-* Hur känns det att utveckla för enheter med olika stora skärmar?
-* Valde du flex eller float grid? Varför?
-* Vilket API valde du förutom Github? Varför?
-* Var det något som krånglade eller tog extra mycket tid?
+* Vilka faktorer spelar in när du ska designa ett formulär för mobila enheter?
+* Hur känns övergången från vanilla JavaScript till ett JavaScript ramverk?
+* Är du nöjd med din lager app så här långt?
 * Vilken är din TIL för detta kmom?

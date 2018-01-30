@@ -4,11 +4,11 @@ category: javascript
 revision:
   "2018-01-17": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ...
-Lager appen del 2
+Lager appen del 3
 ==================================
 [FIGURE src=image/webapp/pick-list.png?w=c5 class="right"]
 
-I kursmoment 1 skapade vi grunden för vår lager app. Vi ska i detta kursmoment förbättra strukturen på både vår JavaScript kod och CSS kod. Vi ska bygga en plock lista vy där lagerarbetarna får en bra översikt över vart produkterna från en order finns. När varorna är plockade ska status ändras för ordern och lagersaldo ska minskas.
+I kursmoment 1 skapade vi grunden för får lager app. Vi ska i detta kursmoment förbättra strukturen på både vår JavaScript kod och CSS kod. Vi ska bygga en plock lista vy där lagerarbetarna får en bra översikt över vart produkterna från en order finns. När varorna är plockade ska status ändras för ordern och lagersaldo ska minskas.
 
 
 

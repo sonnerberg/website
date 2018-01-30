@@ -85,7 +85,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom artikeln och gör övningarna i "[Mithril och CRUD](kunskap/mithril-och-crud)".
 
-1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)".
+<!-- 1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". -->
 
 ###Uppgifter {#uppgifter}
 

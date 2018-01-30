@@ -1,11 +1,14 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+  "2018-01-30": (D, efo) Gjorde om för webapp-v3.
   "2017-03-09": (C, efo) Gjorde om för webapp-v2.
   "2016-02-08": (B, mos) Lade till extrauppgift om detect-swipe-event.
   "2015-10-26": (A, mos) Första utgåvan för kursen.
 ...
-Kmom02: Bygg ut din mobila webapp
+Kmom02: Mobila enheters begränsningar
 ==================================
 
 [WARNING]
@@ -105,9 +108,9 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)".
+1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)". Spara resultatet i `me/kmom02/jq`.
 
-1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)".
+1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)". Spara resultatet i `me/kmom02/lager2`.
 
 <!-- 1. Gör uppgiften "[Bygg vidare på din me-app](uppgift/github-sida-i-din-me-app)".
 
@@ -131,7 +134,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka fördelar ser du med verktyg som Postman, curl och jq?
-* Fick du till en bra struktur i för din CSS kod?
+* Fick du till en bra struktur i din CSS kod?
 * Vilka fördelar ser du med verktyg som webpack och SASS?
-* Är du nöjd med din lager app så här långt?
+* Valda du flat design eller ej för dina knappar? Varför?
 * Vilken är din TIL för detta kmom?
