@@ -26,7 +26,8 @@ Introduktion {#intro}
 Börja med att kopiera din lager app från kmom01, så har du nått att utgå ifrån.
 
 ```bash
-
+# stå i me-katalogen
+cp kmom01/lager1/* kmom02/lager2/
 ```
 
 
@@ -41,7 +42,9 @@ Krav {#krav}
 
 1. Plocklista vyn visar alla varor i en order och vart dessa finns.
 
-1. När varorna är plockade ska det finnas möjlighet att byta status för ordern.
+1. När varorna är plockade ska det finnas möjlighet att byta status för ordern med en knapp.
+
+1. Gör ett medvetet val om du vill använda flat design eller ej.
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
 

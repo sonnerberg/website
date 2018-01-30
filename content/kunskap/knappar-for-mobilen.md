@@ -178,13 +178,15 @@ Struktur i CSS {#struktur}
 --------------------------------------
 Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i samma CSS fil. För att strukturera upp detta kan det vara en fördel att dela upp koden i olika moduler. Ett enkelt och fullt tillräckligt sätt är att dela upp CSS-koden i olika filer och importera alla filer i `index.html`.
 
-Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil, men finns inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av olika moduler.
+Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil. I CSS-preprocessors finns det inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av moduler.
 
-Vissa har i kursen design träffat på LESS, det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS följ instruktionerna på [installationssidan](http://sass-lang.com/install).
+Vissa har i kursen [design](kurser/design) träffat på LESS, det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS följ instruktionerna på [installationssidan](http://sass-lang.com/install).
 
 Följande är en kort introduktion till import, variabler och färghantering i SASS. För mer avancerade funktioner rekommenderas [SASS dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
-För att importera CSS och SASS filer och typsnitt används `@import` och variabler skrivs med ett dollar-tecken framför. Så i följande kodexempel importeras typsnittet Merriweather och det skapas en variabel för brödtext. Variabeln används sedan för att ge `p`-element ett typsnitt.
+För att importera CSS, SASS filer och typsnitt används `@import`. Variabler defineras med ett dollar-tecken framför, som vi känner igen det från tillexempel PHP.
+
+I följande kodexempel importeras typsnittet Merriweather och det skapas en variabel för brödtext. Variabeln används sedan för att ge `p`-element ett typsnitt.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
@@ -196,7 +198,7 @@ p {
 }
 ```
 
-När vi skapade våra knappar använde vi variationer av samma färg för ramen och skuggningen. Med CSS-preprocessors är det busenkelt att räkna fram dessa variationer av färgerna. Med funktioner som `lighten` och `darken` kan vi ljusa upp eller mörka våra grundfärger enligt exemplet nedan där vi i gradienten gör färgen `$blue` 10% mörkare och ramen görs 20% mörkare.
+När vi skapade våra knappar använde vi variationer av samma färg för ramen och skuggningen. Hexadecimal-aritmetik är inte världens lättaste sak, men med CSS-preprocessors är det busenkelt att räkna fram dessa variationer av färgerna. Med funktioner som `lighten` och `darken` kan vi ljusa upp eller mörka våra grundfärger enligt exemplet nedan där vi i gradienten gör färgen `$blue` 10% mörkare och ramen görs 20% mörkare. Funktionen `lighten` fungerar på samma sätt som `darken`, men ljuser upp färgen istället för att göra den mörkare.
 
 ```scss
 $blue: #0074d9;
@@ -208,9 +210,11 @@ $blue: #0074d9;
 }
 ```
 
-För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss` där vi importerar alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen bättre då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
+För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I filen `base.scss` importerar vi alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS.
 
-Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar SASS-filerna.
+Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
+
+Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');

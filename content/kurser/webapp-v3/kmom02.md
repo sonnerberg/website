@@ -68,10 +68,11 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 * Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
 
-* Läs om "[Use Cases and Requirements for Installable Web Apps](https://w3c-webmob.github.io/installable-webapps/)".
+* Kika igenom [Getting Started](https://webpack.js.org/guides/getting-started/) för att bekanta dig med webpack.
 
-* Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
-* Vilken utvecklingsmiljö sitter du på?
+<!-- * Läs om "[Use Cases and Requirements for Installable Web Apps](https://w3c-webmob.github.io/installable-webapps/)".
+
+* Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html). -->
 
 
 
