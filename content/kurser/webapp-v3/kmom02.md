@@ -94,7 +94,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
 
-1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)".
+1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `me/kmom02/buttons`.
 
 1. Gör övningen "[Struktur i JavaScript](kunskap/struktur-i-var-javascript)".
 

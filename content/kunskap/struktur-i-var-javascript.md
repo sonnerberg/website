@@ -12,14 +12,49 @@ Vi har nu bra struktur på vår CSS/SASS kod och tiden har nu kommit för att ta
 
 
 
+npm och package.json {#npm}
+--------------------------------------
+Vi har i tidigare kurser använd [npm](https://www.npmjs.com/) (Node Package Manager) för att installera JavaScript moduler. Nu ska vi ta detta ett steg vidare och titta på vissa av möjligheterna med npm och konfigurationsfilen `package.json`. Vi börjar med att initiera att vi vill ha ett npm projekt och att vi vill installera webpack som en modul vi är beroende av (dependency).
+
+```bash
+$ npm init --yes
+$ npm install --save webpack
+```
+
+Låt oss titta på filen `package.json` skapade
+
+
+
 webpack {#webpack}
 --------------------------------------
-I koden vi skrev i kmom01 avslutade vi med att dela upp JavaScript koden i ett flertal `.js`-filer, som vi importerade i `index.html`. När vi använder en modul som finns i en annan JavaScript fil förlitar vi oss på att den har laddats i `index.html`. För att komma bort från detta kan vi använda webpack. webpack används för att kompilera JavaScript moduler och gör det möjligt att dela upp vår JavaScript kod i ett flertal moduler. Vi kan även hämta in externa moduler och på samma sätt som egna modulerna kompilera ner det till en enda fil.
+I koden vi skrev i kmom01 avslutade vi med att dela upp JavaScript koden i ett flertal `.js`-filer, som vi importerade i `index.html`. När vi använder en modul som finns i en annan JavaScript fil förlitar vi oss på att den har laddats i `index.html`. För att komma bort från detta kan vi använda webpack. webpack används för att kompilera JavaScript moduler och gör det möjligt att dela upp vår JavaScript kod i ett flertal moduler. Vi kan även hämta in externa moduler och på samma sätt som de egna modulerna kompilera ner det till en enda fil.
 
-Låt oss titta på ett exempel för att konkretisera detta.
+Vi börjar med att skapa en konfigurationsfil för webpack där vi pekar ut vilken JavaScript fil vi vill ha som ingång till applikationer och vilken fil vi vill att alla moduler ska kompileras till. Vi döper konfigurationsfilen till `webpack.config.js`.
+
+```javascript
+// webpack.config.js
+
+module.exports = {
+    entry: './js/main.js',
+    output: {
+        filename: './bin/bundle.js'
+    }
+};
+```
+
+Vi vill alltså börja appen från filen `/js/main.js` och den kompilerade filen ska hamna i `/bin/bundle.js`. Jag har strukturerat upp min kod lite ytterligare från kmom01 och lagt alla JavaScript filer i katalogen `js`. Då målet med denna övning är att kompilera ner alla våra filer till en enda fil ändrar vi direkt i `index.html` för att använda `/bin/bundle.js`. För att kompilera JavaScript koden använder vi oss av kommandot `webpack -d` och då vi har en konfigurationsfilen `webpack.config.js` vet `webpack -d` redan om vilka filer vi ska utgå ifrån och vart den kompilerade filen ska läggas. För att automatisera detta ytterligare lägger vi till ett skript i `package.json` som kör kommandot `webpack -d` varje gång vi sparar filer som ingår i projektet.
+
+```json
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "watch": "webpack -d --watch"
+},
+```
+
+Genom att köra kommandot `npm run watch` i terminalen kompileras alla filer som används från ingångspunkten, i detta fallet `/js/main.js`.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definerar vilka JavaScript moduler vi vill använda.
+Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definierar vilka JavaScript moduler vi vill använda.
