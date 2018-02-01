@@ -137,6 +137,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kan du se nyttan med UML och tester inom ramen för ett projekt?
 * Vad tycker du om objektorienterad programmering än så länge?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Vilka metoder överlagrade du i uppgiften "Kortpelet War"?
+* Överskuggade du någon metod i "Kortspelet War"?
 * Hur gick det med sekvensdiagrammet?
 <!-- * Gjorde du extrauppgiften? -->
