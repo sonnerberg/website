@@ -42,7 +42,9 @@ module.exports = {
 };
 ```
 
-Vi vill alltså börja appen från filen `/js/main.js` och den kompilerade filen ska hamna i `/bin/bundle.js`. Jag har strukturerat upp min kod lite ytterligare från kmom01 och lagt alla JavaScript filer i katalogen `js`. Då målet med denna övning är att kompilera ner alla våra filer till en enda fil ändrar vi direkt i `index.html` för att använda `/bin/bundle.js`. För att kompilera JavaScript koden använder vi oss av kommandot `webpack -d` och då vi har en konfigurationsfilen `webpack.config.js` vet `webpack -d` redan om vilka filer vi ska utgå ifrån och vart den kompilerade filen ska läggas. För att automatisera detta ytterligare lägger vi till ett skript i `package.json` som kör kommandot `webpack -d` varje gång vi sparar filer som ingår i projektet.
+Vi vill alltså börja appen från filen `/js/main.js` och den kompilerade filen ska hamna i `/bin/bundle.js`. Jag har strukturerat upp min kod lite ytterligare från kmom01 och lagt alla JavaScript filer i katalogen `js`.
+
+För att kompilera JavaScript koden använder vi oss av kommandot `webpack -d` och då vi har en konfigurationsfilen `webpack.config.js` vet `webpack -d` redan om vilka filer vi ska utgå ifrån och vart den kompilerade filen ska läggas. Flaggan `-d` står för development och vi kommer köra med `-d` i dessa första kursmoment. För att automatisera detta ytterligare lägger vi till ett skript i `package.json` som kör kommandot `webpack -d` varje gång vi sparar filer som ingår i projektet. Flaggan `--watch` håller koll på vilka filer som uppdateras och kompilera om de som behövs.
 
 ```json
 "scripts": {
@@ -51,10 +53,38 @@ Vi vill alltså börja appen från filen `/js/main.js` och den kompilerade filen
 },
 ```
 
-Genom att köra kommandot `npm run watch` i terminalen kompileras alla filer som används från ingångspunkten, i detta fallet `/js/main.js`.
+Genom att köra kommandot `npm run watch` i terminalen kompileras alla filer som används från ingångspunkten, i detta fallet `/js/main.js`, till en fil `/bin/bundle.js`. Vi kan nu lägga till `/bin/bundle.js` längst ner i `index.html` som den enda JavaScript filen vi importerar.
+
+
+
+import och export {#importexport}
+--------------------------------------
+Om vi öppnar upp `index.html` i en webbläsare stöter vi på patrull direkt. Öppnar vi upp JavaScript konsollen i webbläsaren ser vi varför.
+
+> ReferenceError: Can't find variable: home
+
+I och med att vi inte laddar JavaScript filerna implicit längre då vi bara har en JavaScript fil i `index.html` måste vi importera modulerna explicit. `import` och `export` är två nyckelord som vi kan använda för detta. För mer information om `import` och `export` se [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) och [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) dokumentationen.
+
+Vi vill importera home-objektet från filen `/js/home.js` och det gör vi med följande kodrad längst upp i `main.js`:
+
+```javascript
+import { home } from './home.js';
+```
+
+Men för att vi kan importera en modul måste den först exporteras. Så i slutet av filen `/js/home.js` lägger vi följande.
+
+```javascript
+export { home };
+```
+
+Vi laddar om sidan och stora delar av vyn visas nu. Vi får dock fortfarande ett JavaScript fel i konsollen.
+
+> ReferenceError: Can't find variable: menu
+
+På samma sätt som vi importerade och exporterade `/js/home.js` måste vi nu göra med `/js/menu.js` och de resterande filerna.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definierar vilka JavaScript moduler vi vill använda.
+Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definierar vilka JavaScript moduler vi vill använda. Webpack kan konfigureras till att ta hand om alla våra assets: JavaScript, CSS/SASS och bilder, men i denna övning får det räcka med att vi kompilerar vår JavaScript till en enda fil. För mer information om [webpack](https://webpack.js.org) se deras utmärkta hemsida med bra dokumentation och guides.
