@@ -1,5 +1,5 @@
 ---
-author: lew
+author: aar
 revision:
     "2018-01-31": (A, aar) Första versionen.
     "2016-04-12": (PA, lew) Pre-release.

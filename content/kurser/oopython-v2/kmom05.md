@@ -1,5 +1,5 @@
 ---
-author: lew
+author: aar
 revision:
     "2018-01-31": (A, aar) Första version v2.
     "2017-11-10": (PF1, mos) Utkast till v2.
