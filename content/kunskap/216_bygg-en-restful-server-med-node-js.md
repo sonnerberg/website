@@ -133,14 +133,14 @@ var server = http.createServer((req, res) => {
 });
 
 // Export the server as a module.
-export default server;
+module.exports = server;
 ```
 
 Det vi ser framför oss är en modul enligt ES6. Tanken är att fördela sin kod i moduler och varje modul ligger i en egen fil. I slutet på filen ser vi vad modulen exporterar för funktioner. I detta fallet är det variabeln `server` som exporteras.
 
 ```javascript
 // Export the server as a module.
-export default server;
+module.exports = server;
 ```
 
 Nu har vi all kod för servern samlad i en fil, en modul. För att använda den så behöver vi ett *main-program*, eller en `index.js` som man normalt kallade dess motsvarighet i node-världen.
@@ -152,7 +152,7 @@ Här är vår variant av index.js som importerar `server` och sedan startar igå
  * Main program to run a simple server that says Hello World.
  *
  */
-import server from "./server.js";
+var server = require("./server.js");
 
 // Start the server to listen on a port
 server.listen(1337);
@@ -252,7 +252,7 @@ Så här ser det ut när jag kör exemplet.
 Vill du bara kolla HTTP headern så ser det ut så här via curl.
 
 ```bash
-$ curl -I http://localhost:1337/ 
+$ curl -I http://localhost:1337/
 HTTP/1.1 200 OK
 Content-Type: text/plain
 Date: Mon, 06 Feb 2017 13:45:37 GMT
@@ -288,7 +288,7 @@ res.writeHead(200, { "Content-Type": "text/plain" });
 res.end(data);
 ```
 
-Inget konstigt, ett vanligt funktionsanrop. Men vi kallar det synkront och blockande. Exekveringen av programmet kan inte fortsätta innan filen är inläst. 
+Inget konstigt, ett vanligt funktionsanrop. Men vi kallar det synkront och blockande. Exekveringen av programmet kan inte fortsätta innan filen är inläst.
 
 Samma resultat får vi om vi använder ett asynkront sätt att läsa filens innehåll.
 
@@ -391,14 +391,14 @@ routes.home = (res) => {
 };
 
 // Export as a module
-export default routes;
+module.exports = routes;
 ```
 
 Sen importerar jag modulen i min `server.js` och använder callbacken i switch-case-satsen.
 
 ```javascript
 // My handlers for each route is now within this module
-import routes from "./routes.js";
+var routes = require("./routes.js");
 
     // code is omitted...
 
