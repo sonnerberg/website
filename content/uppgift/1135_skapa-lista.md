@@ -1,5 +1,5 @@
 ---
-author: lew
+author: aar
 revision:
     "2018-01-26": (B, aar) Added requirements.
     "2018-01-25": (A, lew) First version.
@@ -33,7 +33,7 @@ Vi ska skapa en egen datastruktur, en "Unordered list", som en klass. Unordered 
 
 Nedanför ser vi ett klassdiagram för en UnorderedList klass. Under diagrammet beskrivs varje metod. Diagrammet ska uppfyllas av er implementation.
 
-[FIGURE src=/image/oopython/kmom04/UnorderedList_klass.png caption="klass diagram för UnorderedList"]  
+[FIGURE src=/image/oopython/kmom04/UnorderedList_klass.png caption="klassdiagram för UnorderedList"]  
 
 * `is_empty`: Returnera True/False för om listan är tom eller inte.
 * `add`: Lägg till nytt element/nod sist i listan.
@@ -67,7 +67,7 @@ cd me/kmom04/list
 
 1. Välj själv om listan ska vara cirkulär, dubbellänkad eller enkellänkad.  
 
-1. Skapa filen `exceptions.py` i "list mappen. Den ska innehålla minst 2 egna exceptions. Använd dig av dem i UnorderedList klassen. T.ex. ett för Value error och ett för Index error. Skriv i redovisningstexten vilka det är och hur man får dem.
+1. Skapa filen `exceptions.py` i "list" mappen. Den ska innehålla minst 2 egna exceptions. Använd dig av dem i UnorderedList klassen. T.ex. ett för Value error och ett för Index error. Skriv i redovisningstexten vilka det är och hur man får dem.
 
 1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i UnorderedList klassen.
 

@@ -1,5 +1,5 @@
 ---
-author: lew
+author: aar
 revision:
     "2018-01-25": (B, aar) Added requirements.
     "2018-01-25": (A, lew) First version.
@@ -47,8 +47,6 @@ Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `he
 1. Skapa filen `main.py` i "queue" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i Queue klassen. Det ska gå att kolla om en kö är tom, lägga till data, plocka ut data, kolla vilket som är nästa element och se storleken. Det ska givetvis också gå att avsluta loopen.
 
 1. Om man gör peek på en tom kö ska ett exception kastas som fångas i din handler. Det ska alltså inte krascha.
-
-1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i UnorderedList klassen. Det ska gå att kolla om en kö är tom, lägga till data, plocka ut data, kolla vilket som är nästa element och se storleken. Det ska givetvis också gå att avsluta loopen.
 
 
 
