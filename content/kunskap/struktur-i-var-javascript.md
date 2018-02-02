@@ -10,6 +10,13 @@ Struktur i JavaScript
 
 Vi har nu bra struktur på vår CSS/SASS kod och tiden har nu kommit för att ta ett steg i rätt riktning även för JavaScript koden. Sista delen av kursmoment 1 var att dela upp koden för Me-appen i olika filer för att få en bättre struktur på koden. Vi ska i denna övning titta på verktyg för att strukturera vår JavaScript kod. Målet är att vi bara importerar en JavaScript-fil i `index.html` och att vi använder modulerna på ett bättre sätt än vi har gjort tidigare.
 
+Du kan med fördel strukturera upp koden från uppgiften [Lager appen del 1](uppgift/lager-appen-del-1). Smidigast är isåfall att kopiera koden från kmom01.
+
+```bash
+# stå i me-katalogen
+cp kmom01/lager1/* kmom02/lager2/
+```
+
 
 
 npm och package.json {#npm}
