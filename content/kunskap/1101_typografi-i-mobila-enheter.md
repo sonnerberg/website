@@ -110,7 +110,7 @@ p {
 }
 ```
 
-Vi har redan fått till en bättre sammanhang mellan frågor och svar samt att mer luft i designen. Vi jämför ursprungssidan med som det ser ut nu och ser hur stor skillnad vitt utrymme kan göra.
+Vi har redan fått till en bättre sammanhang mellan frågor och svar. Vi har även skapat luft runt texten genom att använda vitt utrymme runt texten. Vi jämför ursprungssidan med som det ser ut nu och ser hur stor skillnad vitt utrymme kan göra.
 
 [FIGURE src=image/webapp/screenshot-typo-whitespace.png?w=c7 class=right caption="Redovisningstext med vitt urymme"]
 [FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
@@ -119,9 +119,9 @@ Vi har redan fått till en bättre sammanhang mellan frågor och svar samt att m
 
 Typsnitt {#font}
 --------------------------------------
-Nu är det dags för det som faktiskt syns på sidan och det nog enklaste sättet att förändra känslan av en hemsida. Jag har vald ut två stycken [Google Fonts](https://fonts.google.com/). Ett serif typsnitt Merriweather för brödtexten och sans-serif typsnitt Source Sans Pro för rubriker. Båda typsnittet har stora och tydliga vita områden i bokstäver som 'o', 'e' och 'c', som ger bra läsbarhet. Merriweather har små men ändå tydliga [seriffer](https://en.wikipedia.org/wiki/Serif), som skapar linjer i texten och förankrar typsnittet.
+Nu är det dags för det som faktiskt syns på sidan och det nog enklaste sättet att förändra känslan av en hemsida. Jag har vald ut två stycken [Google Fonts](https://fonts.google.com/). Ett serif typsnitt Merriweather för brödtexten och sans-serif typsnitt Source Sans Pro för rubriker. Båda typsnitten har stora och tydliga vita områden i bokstäver som 'o', 'e' och 'c', som ger bra läsbarhet. Merriweather har små men ändå tydliga [seriffer](https://en.wikipedia.org/wiki/Serif), som skapar linjer i texten och förankrar typsnittet.
 
-En annan viktig del av utseendet på en hemsida är storleken på typsnittet. Detta är oerhört viktigt ur ett tillgänglighetsperspektiv då rätt hantering underlättar för de som har svårigheter med synen. Vi använder "best-practice" från [Typography Handbook](http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av de relativa enheterna `em` eller `rem` för att sätta storleken på typsnittet för paragrafer och rubriker.
+En annan viktig del av utseendet på en hemsida är storleken på typsnittet. Detta är oerhört viktigt ur ett tillgänglighetsperspektiv då rätt hantering underlättar för de som har svårigheter med synen. Vi använder "best-practice" från [Typography Handbook](http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av den relativa enheterna `rem` för att sätta storleken på typsnittet för paragrafer och rubriker.
 
 ```css
 html { font-size: 100% }
@@ -146,4 +146,4 @@ Vi jämför skillnaden mellan den nollställda stilen innan våra ändringar och
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna artikeln skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](http://typographyhandbook.com/) och [Butterick's Practical Typography](https://practicaltypography.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.
+Vi har i denna övning skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](http://typographyhandbook.com/) och [Butterick's Practical Typography](https://practicaltypography.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.

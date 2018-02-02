@@ -94,7 +94,7 @@ För att vi ska kunna lägga till fler element börjar vi med att hämta ut rot-
 })();
 ```
 
-Vi har nu en enkel sida med en `main.container` och vårt namn som ett `h1`-element. Som beroende på webbläsare ser ut ungefär som skärmbilden nedan. Jag använder "Responsive Design Mode" i valfri webbläsare för att få det att se ut som en mobil enhet.
+Vi har nu en enkel sida med en `main.container` och vårt namn som ett `h1`-element,  som ser ut ungefär som skärmbilden nedan beroende på webbläsare. Jag använder "Responsive Design Mode" i valfri webbläsare för att få det att se ut som en mobil enhet. Mikael visar i detta [tips](coachen/developer-tools-i-webblasaren-for-mobila-enheter) hur du kan använda utvecklareverktyg specifikt för mobila enheter.
 
 [FIGURE src=image/webapp/screenshot_namn.png?w=c8 caption="Vårt första utkast."]
 
@@ -192,7 +192,7 @@ Innan vi ser till att vår me-app blir snyggare med hjälp av CSS lägger vi til
 })();
 ```
 
-Navigationen skapas som ett element med fyra stycken länkar i. En loop används då vi vill skapa fyra exakt likadana element förutom texten i länken. Ta gärna en stund och titta igenom JavaScript koden som vi har skrivit än så länge. Förstår du alla delar?
+Navigationen skapas som ett element med fyra stycken länkar i. En loop används, då vi vill skapa fyra exakt likadana element förutom texten i länken. Ta gärna en stund och titta igenom JavaScript koden som vi har skrivit än så länge. Förstår du alla delar?
 
 Nedan syns resultatet och som vi ser är vi definitivt redo för att börja jobba med utseendet för vår me-app.
 
@@ -253,13 +253,13 @@ Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på
 }
 ```
 
-Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Attributet `flex-flow: row | nowrap;` är kort notation för  `flex-direction: row;` och `flex-wrap: nowrap;` och vi vill här att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkarna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen.
+Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Attributet `flex-flow: row | nowrap;` är kort notation för  `flex-direction: row;` och `flex-wrap: nowrap;` och vi vill här att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkarna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen. Vi kommer använda flexbox under kursens gång så oroa dig inte om du inte känner att du har fullt koll på flexbox, vi kommer bygga på det vidare i kursen.
 
 [FIGURE src=image/webapp/screenshot-styled-menu.png?w=c8  caption="Menyn är nu på plats längst ner."]
 
 Jag har i exemplet lagt till ikoner i menyn med hjälp av [Material icons](http://materializecss.com/icons.html) och lagt till lite mellanrum uppe och nere. Dessutom har jag vald ett annat typsnitt än standard vilket gör att min mobila-app redan ser mycket trevligare ut.
 
-En me-app är ingen riktigt me-app utan en bild, så vi lägger till några rader kod för att få till den sista lilla detaljen. Och i `style.css` lägger vi till att bilden ska fylla ut hela bredden av `.container`så den varken är större eller mindre beroende på bildstorlek.
+En me-app är ingen riktigt me-app utan en bild, så vi lägger till några rader kod för att få till den sista lilla detaljen. Och i `style.css` lägger vi till att bilden ska fylla ut hela bredden av `.container` så den varken är större eller mindre beroende på bildstorlek.
 
 ```javascript
 ...
@@ -390,7 +390,7 @@ githubRequest.open("GET", "https://api.github.com/users/:username/repos");
 githubRequest.send();
 ```
 
-Först skapar vi ett `XMLHttpRequest` objekt `githubRequest`. Vi tilldelar en callback funktion `renderGithubRepos`, som anropas när vi har laddat data. De två sista raderna definierar vilket sorts anrop vi vill göra `GET` och den URL vi vill anropa. Byt ut `:username` mot ditt Github användarnamn så hämtar du dina egna repon. Sista raden skickar iväg anropet till Githubs api. När vi får tillbaka svar anropas funktionen `renderGithubRepos`.
+Först skapar vi ett `XMLHttpRequest` objekt `githubRequest`. Då hämtning av data från ett API är en asynkron process skapar vi en `EventListener` för händelsen `load` för `githubRequest`. Vi tilldelar en callback funktion `renderGithubRepos`, som anropas när vi har laddat data. De två sista raderna definierar vilket sorts anrop vi vill göra `GET` och den URL vi vill anropa. Byt ut `:username` mot ditt Github användarnamn så hämtar du dina egna repon. Sista raden skickar iväg anropet till Githubs api. När vi får tillbaka svar anropas funktionen `renderGithubRepos`, som vi tilldelade som callback funktion när vi la till vår `EventListener`.
 
 ```javascript
 var renderGithubRepos = function () {
@@ -409,12 +409,13 @@ var renderGithubRepos = function () {
 };
 ```
 
-I variabeln `this` finns svaret vi fick tillbaka från Githubs API. Undersöka gärna vad som finns i svaret genom att använda `console.log(this)`. Vi ser att `this.responseText` innehåller arrayen, som en text sträng, med svaret vi förväntade oss och vi gör om text strängen till JSON. Vi kan nu skriva ut våra repon som element i `mainContainer`.
+I variabeln `this` finns svaret vi fick tillbaka från Githubs API. Undersöka gärna vad som finns i svaret genom att använda `console.log(this)`. Vi ser att `this.responseText` innehåller arrayen, som en text sträng, med svaret vi förväntade oss och vi gör om text strängen till JSON med hjälp av funktionen `JSON.parse(this.responseText)`. Vi kan nu skriva ut våra repon som element i `mainContainer`.
 
 Om vi vill använda oss av det modernare Fetch API kan koden se ut på följande sätt.
 
 ```javascript
-fetch("https://api.github.com/users/:username/repos").then(function (response) {
+fetch("https://api.github.com/users/:username/repos")
+.then(function (response) {
     return response.json();
 }).then(function(data) {
     data.forEach(function(repo) {
@@ -437,7 +438,8 @@ Det är upp till er själva vad ni tycker verkar smidigast. `XMLHttpRequest` har
 För att ta hand om eventuella fel som uppstår under hämtning av data kan vi använda oss av `.catch` på vårt `fetch` promise. Här väljer vi sedan att skriva ut felmeddelandet.
 
 ```javascript
-fetch("https://api.github.com/users/:username/repos").then(function (response) {
+fetch("https://api.github.com/users/:username/repos")
+.then(function (response) {
     return response.json();
 }).then(function(data) {
     data.forEach(function(repo) {
@@ -523,7 +525,7 @@ var home = (function () {
 
 Vi skapar ett `home` objekt/modul och vi returnerar `showHome` funktionen. Vi kan sedan använda `home` modulen i de andra moduler för att anropa funktionen. Notera att för att komma åt våra grundelement använder vi till exempel `window.rootElement` istället för `rootElement`.
 
-För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`. Viktigt att `main.js` är sist i ordningen.
+För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`. Viktigt att `main.js` är sist i ordningen då modulerna måste vara definierade innan vi kan använda modulerna.
 
 ```html
 <body>
@@ -538,7 +540,7 @@ För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`.
 </body>
 ```
 
-För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade .
+För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] [annat_variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade .
 
 
 
