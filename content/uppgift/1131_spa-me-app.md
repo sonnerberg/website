@@ -21,7 +21,7 @@ Du har jobbat igenom övningarna "[En Single Page Application](kunskap/en-single
 
 Introduktion {#intro}
 -----------------------
-I övningnen "[En Single Page Application](kunskap/en-single-page-application-me-app)" skapas grunden för en me-app. Du ska i denna uppgift bygga klart appen enligt specifikationen nedan.
+I övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)" skapas grunden för en me-app. Du ska i denna uppgift bygga klart appen enligt specifikationen nedan.
 
 
 
@@ -50,9 +50,9 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-1. Använd swipe event för att blädra mellan dina olika vyer.
+* Använd swipe event för att blädra mellan dina olika vyer.
 
-1. Din app ska visa sin navigation i botten om det är en liten mobil enhet, annars visas navigationen längst upp.
+* Din app ska visa sin navigation i botten om det är en liten mobil enhet, annars visas navigationen längst upp.
 
 
 

@@ -122,6 +122,8 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom tipset om "[Developer tools i webbläsaren för mobila enheter](coachen/developer-tools-i-webblasaren-for-mobila-enheter)".
 
+1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)".
+
 1. Gör övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)". Spara resultatet i `me/redovisa`.
 
 1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Spara koden i `me/kmom01/typography`.
