@@ -11,9 +11,9 @@ Kom igång med ramverket Mithril
 
 [FIGURE src=/image/webapp/mithril-logo.png class="right"]
 
-Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data allt har gjorts i samma funktioner eller modul. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, dela upp våra vyer och modeller, där vi hämtar data, och virtuella noder för att skapa en SPA-applikation.
+Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Vanilla JavaScript är beteckningen för ren JavaScript där vi inte använder annat är det som är implementerat i weblläsaren. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data, allt har gjorts i samma funktioner och/eller modul. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, dela upp våra vyer och modeller, där vi hämtar data, och använda virtuella noder för att skapa en SPA-applikation.
 
-I övningen skapar vi en SPA-applikation inför Nobelfesten där vi hämtar data från det officiella Nobel API.
+I övningen skapar vi en SPA-applikation inför Nobelfesten där vi hämtar data från det officiella Nobel API:t.
 
 
 
@@ -38,13 +38,13 @@ Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För at
 
 Förutsättningar {#forutsattningar}
 --------------------------------------
-Du har installerat labbmiljön för kursen webapp. Du är bekant med SPA-applikationer i vanilla JavaScript.
+Du har installerat labbmiljön för kursen webapp. Du är bekant med SPA-applikationer i vanilla JavaScript och har bekantat dig med webpack.
 
 
 
 Installera mithril via npm {#install}
 --------------------------------------
-Vi har i tidigare kurser använd pakethanteraren npm för att installera javascript och nodejs moduler. Vi kommer i denna kurs använda npm för att installera och administrera vår mithril installation och moduler som mithril är beroende av. Detta görs med hjälp av en `package.json` fil, som vi initiellt skapar genom att skriva följande i terminalen.
+I tidigare kursmoment installera vi webpack med hjälp av npm. Vi ska nu titta på hur vi installerar och konfigurerar ett mithril projekt med hjälp av npm, `package.json` och webpack. Vi börjar med att initiera en grund `package.json` fil som innehåller konfigurationen för vårt projekt.
 
 ```bash
 # gå till me
@@ -52,11 +52,11 @@ $ cd me/kmom03/nobel
 $ npm init --yes
 ```
 
-Vi har nu skapat vår egna paket fil för just detta projektet som än så länge inte innehåller mycket, men som vi i denna övning kommer bygga vidare på. Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
+Vi ska nu installerar nu mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
 
 ```bash
-$ npm install mithril --save
-$ npm install webpack --save
+$ npm install --save mithril
+$ npm install --save webpack
 ```
 
 Det kan hända att du får varningar när du kör ovanstående kommandon, men dessa kan du ignorera för nu.
@@ -82,21 +82,32 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
 }
 ```
 
-I scripts attributet ändrar vi så det blir följande för att löpande under utveckling packa ihop koden till en fil `bin/app.js` med hjälp av webpack. Vi använder här möjligheten för att skapa scripts via npm CLI-verktyget. Vi har nedan skapat två scripts `start` för att packa ihop mithril appen till ett script och `watch` för att kontinuerligt göra detta under utveckling. Våra två npm scripts anropas på följande sätt `npm start` eller `npm run watch`.
+Vi skapar även en webpack konfigurationsfil `webpack.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `bin/app.js`.
+
+```javascript
+module.exports = {
+    entry: './js/index.js',
+    output: {
+        filename: './bin/app.js'
+    }
+};
+```
+
+Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` och skapar två nya. Kör vi `npm start` kompileras filerna till `bin/app.js` och kör vi `npm run watch` kompileras filerna automatisk varje gång vi sparar.
 
 ```json
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "webpack js/index.js bin/app.js -d",
-  "watch": "webpack js/index.js bin/app.js -d --watch"
+  "start": "webpack -d",
+  "watch": "webpack -d --watch"
 },
 ```
 
 
 
-Vår första mithril app {#forsta}
+Början till en mithril app {#forsta}
 --------------------------------------
-Vi börjar med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`.
+Vi börjar med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`. Vi inkluderar även `bin/app.js` längst ner i `index.html`.
 
 ```html
 <!doctype html>
@@ -115,24 +126,57 @@ Vi börjar med en enkel `index.html`, där vi känner igen det mesta från tidig
 </html>
 ```
 
-Vi behåller `Content-Security-Policy` taggen för att skydda oss mot XSS attacker, vi kommer dock i senare kursmoment lägga till så vi kan hämta data från api'er. `viewport` meta-taggen talar om att vi vill visa upp våra appar på enheter i olika storlekar. Längst ner i `index.html` ändrar vi från att inkludera `index.js` till att istället inkludera vår mithril app som finns i `bin/app.js`.
+Nu saknas bara `js/index.js` så är vi på bana och redo för att skapa vår första mithril app.
+
+```bash
+# stå i me/kmom03/nobel
+$ mkdir js
+$ touch js/index.js
+```
+
+Filen `js/index.js` är vår utgångspunkt för appen och i den kommer vi senare i övningen lägga vår router, som pekar ut rätt vy.
 
 
 
 Vår första vy {#vy}
 --------------------------------------
+En av fördelarna med att använda ett JavaScript ramverk är att vi kan separera vyerna från modeller och därmed hämtningen av data. Vi börjar med att skapa katalogen `js/views` och en vy `js/views/list.js`.
 
-Skapa mappen `js/views` och vår första mithril vy `js/views/me.js`.
 
 ```bash
 # utgår från www/
 $ mkdir js/views
-$ touch js/views/me.js
+$ touch js/views/list.js
 ```
 
-Den befintliga filen `js/index.js` är vår utgångspunkt för appen och den pekar ut vad som ska visas när en användare kommer till vår app. Vi skapar desutom en katalog för våra vyer, med vårt första mithril vy `me.js`.
+I `js/views/list.js` filen vill vi än så länge bara visa upp för användaren att vi har hamnat i en app för Nobelfesten. Vi börjar med att hämta in modulen mithril och spara den i variablen `m`. Vi exporterar sedan det som inom mithril kallas en komponent, det är ett objekt med en funktion kallat `view`. Det som händer när vi använder komponenten i filen `js/views/list.js` är att funktionen `view` anropas och där returneras den virtuell noden `m("h1", "Nobelfesten")`. Denna virtuella noden kommer sedan i webbläsaren renderas som `<h1>Nobelfesten</h1>`. Det virtuella DOM-trädet som ritas upp av JavaScript genom ramverket mithril består av dessa virtuella noder. För mer information om virtuella noder i kontexten av mithril se denna utmärkta [introduktion](http://mithril.js.org/vnodes.html).
 
-I `js/views/me.js` filen vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion `view`, som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
+```javascript
+"use strict";
+
+var m = require("mithril");
+
+module.exports = {
+    view: function() {
+        return m("h1", "Nobelfesten");
+    }
+};
+```
+
+För att appen ska veta om att vi vill visa upp list-vyn måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
+
+```javascript
+"use strict";
+
+var m = require("mithril");
+var list = require("./views/list.js");
+
+m.mount(document.body, list);
+```
+
+Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definerade tidigare som ett npm script i `package.json`.
+
+Öppna upp filen `index.html` i din webbläsare och skåda mästervärket eller iallafall Nobelfesten som en fin rubrik. Låt oss använda lite av stylingen från tidigare kursmoment och samtidigt titta på hur vi lägger till flera virtuella noder i samma vy/komponent.
 
 ```javascript
 "use strict";
@@ -140,45 +184,19 @@ var m = require("mithril");
 
 module.exports = {
     view: function() {
-        return m("h1", "Emil Folino");
+        return m("main.container", [
+            m("h1", "Nobelfesten"),
+            m("p", "Välj ett årtal i listan:")
+        ]);
     }
 };
 ```
-Kodsnutten `m("h1", "Emil Folino")` skapar en "[virtual DOM node](http://mithril.js.org/hyperscript.html)" en så kallad [vnode](http://mithril.js.org/vnodes.html). En `vnode` är ett JavaScript objekt som representerar ett DOM element. Det blir först ett DOM element när vi använder den i en `render` eller `mount` funktion.
-
-För att appen ska veta om att vi vill visa upp vårt me-vy måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
-
-```javascript
-"use strict";
-var m = require("mithril");
-var Me = require("./views/me");
-
-var app = {
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-    onDeviceReady: function() {
-        m.mount(document.body, Me);
-    },
-};
-app.initialize();
-```
-
-Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att se me-appen för första gången. Detta gör vi i terminalen med följande kommando, som vi definerade tidigare som ett npm script i `package.json`.
-
-```bash
-$ npm start
-$ cordova emulate android
-```
-Du kan även testa appen i webbläsaren med `cordova emulate browser`.
-
-Nu borde du se din me-sida med ditt namn.
 
 
 
 En router för flera sidor {#router}
 --------------------------------------
-Med bara en sida har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I den här vyn ser du att vi returnerar en array av virtuella noder, som placeras i ordning efter varann i vyn.
+Med bara en sida har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/year.js` och precis som `list.js` definerar våra nya `year.js` en vy. I denna här vyn ser du att vi returnerar en array av virtuella noder, som placeras i ordning efter varann i vyn.
 
 ```javascript
 "use strict";

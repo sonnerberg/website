@@ -71,6 +71,7 @@ Läs följande:
 
 * Hur ser det egentligen ut med JavaScript ramverk 2018. Stack Overflow har publicerad statistik angående ramverk i artikeln [The Brutal Lifecycle of JavaScript Frameworks](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/).
 
+* I forumet finns en tråd om val av JavaScript ramverk och vad man kan tänka på [Hur tänka inför val av JavaScript ramverk?](forum/viewtopic.php?f=11&t=7195).
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
