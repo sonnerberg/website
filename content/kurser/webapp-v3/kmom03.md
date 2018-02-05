@@ -89,6 +89,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". Spara eventuella testfiler i `me/kmom03/formular`.
 
+
 <!-- 1. Läs igenom artikeln "[Virtuella noder](kunskap/virtuella-noder)".
 
 1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)". -->
