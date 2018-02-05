@@ -67,7 +67,7 @@ cd me/kmom04/list
 
 1. Välj själv om listan ska vara cirkulär, dubbellänkad eller enkellänkad.  
 
-1. Skapa filen `exceptions.py` i "list" mappen. Den ska innehålla minst 2 egna exceptions. Använd dig av dem i UnorderedList klassen. T.ex. ett för Value error och ett för Index error. Skriv i redovisningstexten vilka det är och hur man får dem.
+1. Skapa filen `errors.py` i "list" mappen. Den ska innehålla minst 2 egna exceptions. Använd dig av dem i UnorderedList klassen. T.ex. ett för Value error och ett för Index error. Skriv i redovisningstexten vilka det är och hur man får dem.
 
 1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i UnorderedList klassen.
 
