@@ -7,7 +7,7 @@ revision:
 Ett mobilanpassad formulär
 ==================================
 
-Vi ska i denna övning titta på hur vi med hjälp av HTML5 input göra våra mobila appar mer användarvänliga och säkra.
+Vi ska i denna övning titta på hur vi med hjälp av HTML5 input göra våra mobila appar mer användarvänliga och säkra. Vi skapar även formulär komponenter till vårt GUI komponent ramverk. I slutet av övningen tittar vi på hur vi skapar ett formulär i mithril.
 
 
 <!--more-->
@@ -56,6 +56,35 @@ Vid ifyllning av telefonnummer kan det vara fördelaktigt att använda input av 
 ```
 
 [FIGURE src="/image/snapvt17/input-tel.png?w=200" caption="Telephone input"]
+
+
+
+När vi har datumfält finns input av typen `date`. Med `date` får användaren av en mobil enhet upp en datum väljare. På desktop skiljer det mellan de olika webbläsare, men Chrome och Firefox ger användaren möjlighet för att välja på formatet 'YYYY-mm-dd'.
+
+```html
+<input type="date">
+```
+
+[FIGURE src="/image/snapvt17/input-tel.png?w=200" caption="Date input"]
+
+
+
+För fält där vi vill skriva in lösenord använder vi naturligtvis `password`.
+
+```html
+<input type="password">
+```
+
+[FIGURE src="/image/snapvt17/input-tel.png?w=200" caption="Password input"]
+
+
+Styling av formulär {#styling}
+--------------------------------------
+När vi designade våra knappar i förra kursmomentet ville vi att de tre olika elementen `button`, `a` och `input[type=submit]` skulle se likadana ut. När vi designar formulärfält vill vi att de olika fälten ser likadana ut. Vi ska i denna del av övningen titta på hur vi kan designa formulärfält som är enhetligt designade i olika webbläsare, hur vi ligger till genomtänkta förifyllda värden och hur vi tydligt visar för användaren vilket fält som är i fokus.
+
+Vi börjar med den enhetliga stylingen. Vi vill som knapparna ha ett mjukt utseende och rundar där för hörnen på samma sätt som för 
+
+
 
 
 
