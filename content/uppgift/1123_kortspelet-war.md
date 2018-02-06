@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2018-02-05": (B, aar) clarified two requirements.
     "2017-12-15": (A, lew) First version for v2.
 category:
     - oopython
@@ -45,13 +46,13 @@ $ cd me/kmom03/war
 
 1. Spelet ska startas med kommandot `python3 main.py`.
 
-1. Spelet ska använda klasserna `Deck`, `Hand` och `Card`. `Hand` ska ärva från `Deck` som ska bestå av 52 stycken `Card`.
+1. Spelet ska använda klasserna `Deck`, `Hand` och `Card`. `Deck` ska bestå av 52 stycken `Card`. `Hand` kan ärva från `Deck`.
 
 1. Spelfunktionaliteten ska hanteras via klassen `War`.
 
 1. Skapa en fil, `test.py`, som ska bestå av enhetstester för klassen `Hand`. Alla medlemsvariabler och metoder ska testas. Spara den i mappen `war`.
 
-1. Skapa uml diagram över två valfria klasser. Döp filen till `uml.png` och spara den i mappen `war`.
+1. Skapa klassdiagram över två valfria klasser. Döp filen till `uml.png` och spara den i mappen `war`.
 
 ```bash
 # Ställ dig i kurskatalogen
