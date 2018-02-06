@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2018-02-05": (B, aar) Updated few requirements.
     "2017-12-08": (A, lew) First version for v2.
 category:
     - oopython
@@ -44,15 +45,20 @@ Arbeta i mappen Flask/.
 cd me/flask/
 ```
 
-1. Det ska vara möjligt att skapa `Square`, `Circle` och `Triangle`.
+1. Det ska vara möjligt att skapa formerna `Square`, `Circle` och `Triangle`.
 
-1. `Square`, `Circle` och `Triangle` ska ärva från basklassen `Shape`.
+1. Skapa en basklass `Shape`. Låt klasserna för `Square`, `Circle` och `Triangle` ärva från `Shape`. Du kommer inte skapa några objekt av "Shape", den klassen ska bara användas för att samla attribut och metoder så vi kan ärva dem och använda i subklasserna.
 
-1. Basklassen ska kräva att metoderna `get_area()` och `validate()` implementeras.
+1. Basklassen ska kräva att metoderna `draw()`, `get_area()` och `validate(height, width)` implementeras i subklasserna. Låt `validate(height, width)` vara en statisk metod.
 
-1. Varje subklass ska ha sin egna validering. Till exempel så måste höjd och bredd vara samma för att det ska bli en kvadrat eller cirkel.
+1. Varje subklass ska ha sin egna validering. I `validate()`, för varje subklass, ska du sätta en regel för vilka mått som är OK för den typen av form. Till exempel så måste höjd och bredd vara samma för att det ska bli en kvadrat eller cirkel.  
+Innan du skapar ett objekt av en klass ska dess mått skickas till validerings metoden. Bara om måtten är godkända skapar du ett objekt med dem.
 
-1. Kommunikationen med klasserna ska ske via en Handler/Controller klass.
+1. Läs [introduktionen](uppgift/skapa-former#intro) för att se vad `get_area()` ska användas till/göra.
+
+1. Låt `draw()` returnera en sträng som innehåller html kod för en div som innehåller inline style för formen, kolla [tips från coachen](uppgift/skapa-former#tips).
+
+1. Kommunikationen med klasserna ska ske via en Handler/Controller klass. app.py ska bara prata med Handler som pratar med de olika shape klasserna.
 
 1. De ska finnas minst tre färger att välja mellan.
 
