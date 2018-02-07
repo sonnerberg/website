@@ -115,7 +115,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Är detta din första bekantskap med skriptprogrammering i Bash?
-* Berätta om din uppfattning om Bash som programmameringsmiljö, relatera till andra programspråk du kan.
+* Berätta om din uppfattning om Bash som programmeringsmiljö, relatera till andra programspråk du kan.
 * Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?
 * Var det något som var extra svårt eller utmanande i uppgifterna?
 * Tittade du på videoserien? Vad tyckte du om den?
