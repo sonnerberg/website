@@ -37,7 +37,7 @@ cd me/kmom04/queue
 
 1. Skapa en fil med namnet `queue.py` i "queue" mappen. Kopiera koden [för en Queue](kunskap/datastrukturer#queue) och klistra in i queue.py filen.  
 
-1. Skapa en fil med namnet `node.py` i "queue" mappen. Kopiera koden [för en Node](kunskap/datastrukturer#node) och klistra in i node.py filen.  
+1. Skapa en fil med namnet `node.py` i "queue" mappen. Kopiera koden [för en Node](kunskap/datastrukturer#nod) och klistra in i node.py filen.  
 
 1. Pythons inbyggda lista ska inte användas längre. Varje element i kön ska ligga i ett Node objekt och bilda en list struktur.  
 Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `head` för att referera till första noden i kön.  
