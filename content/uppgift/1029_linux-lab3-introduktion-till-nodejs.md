@@ -58,7 +58,7 @@ Du kan testa dina lösningar genom att köra programmet `answer.js` från `me/km
 me/kmom04/node1/` i din terminal enligt nedan:
 
 ```javascript
-$ babel-node answer.js
+$ node answer.js
 ```
 
 
@@ -70,7 +70,7 @@ Krav {#krav}
 
 2. Skriv dina lösningar, på rätt plats, i filen `answer.js`.
 
-3. Testkör din labb genom att köra kommandot `babel-node answer.js`.
+3. Testkör din labb genom att köra kommandot `node answer.js`.
 
 4. Ladda upp, validera och publicera labben genom att göra följande kommando i kurskatalogen i terminalen.
 

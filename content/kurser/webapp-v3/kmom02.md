@@ -90,11 +90,11 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)".
+<!-- 1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)". -->
 
 1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
 
-1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)".
+1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `me/kmom02/buttons`.
 
 1. Gör övningen "[Struktur i JavaScript](kunskap/struktur-i-var-javascript)".
 
@@ -134,7 +134,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka fördelar ser du med verktyg som Postman, curl och jq?
-* Fick du till en bra struktur i din CSS kod?
+* Fick du till en bra struktur i din CSS/SASS kod?
 * Vilka fördelar ser du med verktyg som webpack och SASS?
 * Valda du flat design eller ej för dina knappar? Varför?
 * Vilken är din TIL för detta kmom?

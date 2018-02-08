@@ -40,11 +40,11 @@ Som en sista del av kursmomentet ska vi börja med en löpande uppgift där vi i
 Labbmiljön  {#labbmiljo}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 1 studietimme)*
 
 Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
 
-Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+Uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
@@ -121,6 +121,8 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom tipset om "[Developer tools i webbläsaren för mobila enheter](coachen/developer-tools-i-webblasaren-for-mobila-enheter)".
+
+1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)".
 
 1. Gör övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)". Spara resultatet i `me/redovisa`.
 

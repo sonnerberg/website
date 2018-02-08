@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-02-05": "(B, mos) Uppdaterade vilka lönesummor som gäller efter olika steg, fix #63."
     "2017-12-29": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Kopiera tabell
@@ -43,7 +44,7 @@ Bra, då är vi i läget precis innan lönerevisionen.
 Kopiera tabell {#copy}
 ----------------------------------
 
-Så, alla uppdateringar i lönerevisionen ligger i filen `dml_update.sql`, men innan vi kör dem så tar vi en kopia, eller backup, av tabellen.
+Så, alla uppdateringar i lönerevisionen ligger i filen `dml_update.sql`, men innan vi kör dem så tar vi en kopia, eller backup, av tabellen. Vi vill spara hela tabellen som den är, innan vi utför lönerevisionens ändringar.
 
 ```sql
 --
@@ -52,12 +53,17 @@ Så, alla uppdateringar i lönerevisionen ligger i filen `dml_update.sql`, men i
 DROP TABLE IF EXISTS larare_pre;
 CREATE TABLE larare_pre LIKE larare;
 INSERT INTO larare_pre SELECT * FROM larare;
-SELECT SUM(lon) AS 'Lönesumma' FROM larare;  
+
+-- Check the content of the tables, for sanity checking
+SELECT SUM(lon) AS 'Lönesumma' FROM larare;
+SELECT SUM(lon) AS 'Lönesumma' FROM larare_pre;
 ```
 
 Principen är att skapa en ny tabell med den gamla som mall. Sedan kan man inserta rader i den nya tabellen genom att selecta dem från den gamla tabellen.
 
-Innan vi går vidare så har vi två lärare som ännu inte fått lön. Vi ger dem deras grundlön innan vi går vidare, det var ju en del av arbetet inför lönerevisionen.
+Innan vi går vidare så har vi två lärare som ännu inte fått lön. Vi ger dem deras grundlön innan vi går vidare, det var ju en del av förarbetet inför lönerevisionen. Annars blir det jobbigt att jämföra deras nya löner med de gamla lönerna som är NULL-värden, det vill vi undvika.
+
+Uppdateringen gör vi enbart i den kopierade tabellen. 
 
 ```sql
 UPDATE larare_pre
@@ -65,6 +71,17 @@ UPDATE larare_pre
     WHERE
         lon IS NULL
 ;
+```
+
+Vi kan dubbelkolla lönesumman i vår kopierade tabell.
+
+```text
+$ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare_pre;"
++------------+
+| Lönesumma  |
++------------+
+|     305000 |
++------------+
 ```
 
 Då kan vi göra lönerevision.
@@ -86,18 +103,7 @@ $ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
 +------------+
 ```
 
-Vi kan dubbelkolla lönesummar i vår kopierade tabell.
-
-```text
-$ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare_pre;"
-+------------+
-| Lönesumma  |
-+------------+
-|     245000 |
-+------------+
-```
-
-Perfekt, så långt.
+Bra, då har vi en tabell med värden innan lönerevisionen, och en tabell med värden efter lönerevisionen.
 
 Nu vore det trevligt om vi kunde slå samman raderna från de båda tabellerna och få en visuell översikt av resultatet.
 

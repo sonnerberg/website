@@ -1,23 +1,15 @@
 ---
-author: lew
+author: aar
 revision:
+    "2018-01-31": (A, aar) Första version v2.
     "2017-11-10": (PF1, mos) Utkast till v2.
-    "2016-12-16": (E, lew) Updated flask structure.
-    "2016-06-09": (D, aar) Fler ändringar.
-    "2016-06-01": (C, lew) Ändrade något.
-    "2016-05-25": (B, aar) wow such change.
-    "2016-04-12": (A, lew) Första utgåva.
 ...
 Kmom05: Sorteringsalgoritmer och datastrukturer
 ====================================
 
-[WARNING]
-**Kursutveckling pågår inför vt18.**
-[/WARNING]
+
 
 Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Inbyggda sorteringsfunktioner baseras på en eller flera av de klassiska algoritmerna.  
-
-Vi ska även titta på några datastrukturer och implementera en egen som vi använder i ett terminalprogram.  
 
 <!--more-->
 
@@ -38,8 +30,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
-    * Ch 7 - Queues
+Det finns inget kapitel för det här kursmomentet.
 
 
 
@@ -47,7 +38,9 @@ Läs följande:
 
 Läs följande:
 
-Det finns inga extra artiklar.
+1. [Sorting algorithms and big-O](https://brilliant.org/wiki/sorting-algorithms/). Visar inte kod men är tydlig med bilder och förklarar hur de fungerar.
+
+1. [visualgo](https://visualgo.net/en/sorting). Interaktiv sida som visualiserar hur tal sorteras och hur koden exekveras med olika algoritmer.
 
 
 
@@ -63,21 +56,13 @@ Titta på följande:
 
 4. [Quick Sort](https://www.youtube.com/watch?kgBjXUE_Nwc&v=XE4VP_8Y0BU) visualiserar quick sort.
 
-5. [Data Structures: Queue](https://www.youtube.com/watch?v=PjQdvpWfCmE) visualiserar en Queue.
-
-6. [Data Structures: Stack](https://www.youtube.com/watch?v=XSdXSmwb550) visualiserar en Stack.
-
 
 
 ###Lästips {#lastips}
 
 Om du känner att du har tid och lust.
 
-1. [Datastructures - geeksforgeeks](http://www.geeksforgeeks.org/data-structures/)  
-
-2. [Sorting algoritms - geeksforgeeks](http://www.geeksforgeeks.org/fundamentals-of-algorithms/#SearchingandSorting)
-
-3. Kolla på [Abstract Data Type (ADT)](https://www.youtube.com/watch?v=HcxqzYsiJ3k)
+1. [Sorting algoritms - geeksforgeeks](http://www.geeksforgeeks.org/fundamentals-of-algorithms/#SearchingandSorting)
 
 
 
@@ -94,7 +79,7 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln "[Rekursion](kunskap/rekursion)".
 
-1. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".
+1. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer-v2)".
 
 
 
@@ -102,15 +87,16 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med rekursiva funktioner](uppgift/python-med-rekursiva-funktioner)" (lab 4)
+1. Gör uppgiften "[Python med rekursiva funktioner](uppgift/python-med-rekursiva-funktioner-v2)" (lab 3)
 
-2. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/terminalprogram-med-sortering-av-lista)"  
+1. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/sortering-av-egen-lista)". Spara din kod i mappen `sort`.  
 
-3. Skapa din me-sida version 5. Fördjupa dig i Bootstrap och Flask. Gör uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext.
+1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
-4. Fyll på redovisning.html med kursmomentets redovisningstext.
-
-
+```bash
+# Ställ dig i kurskatalogen
+dbwebb publish flask
+```
 
 ###Extra {#extra}
 
@@ -127,9 +113,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vad gjorde du för uppdatering av me-sidan?
-* Har du fått mer förståelse för datastrukturer?
-* Gick det bra att komma igång med rekursion?  
+* Vad är rekursion?  
 * Känner du att du har förståelse för hur sorteringsalgoritmerna fungerar?  
+* Vad är big-O?
+* Gjorde du någon av extrauppgift?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?

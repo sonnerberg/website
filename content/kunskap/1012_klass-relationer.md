@@ -256,7 +256,7 @@ Name mangling {#nameMangling}
 ------------------------------
 
 Vi går vidare till `__`, även kallat "name mangling". Name mangling är till för att förhindra en subklass från att använda/skriva över en metod/attribut i basklassen. Alltså inte för att göra något privat.  
-En metod med `__` i början är kan "bara" användas i instansen den skapas i, med `self.__<namn>`. Detta är en egenskap privata attribut/metoder har i många andra programmeringsspråk, men inte i python, och därför är det lätt hänt att `__` används istället för `_`.
+En metod med `__` i början kan "bara" användas i instansen den skapas i, med `self.__<namn>`. Detta är en egenskap privata attribut/metoder har i många andra programmeringsspråk, men inte i python, och därför är det lätt hänt att `__` används istället för `_`.
 Vi testar skapa en `__<namn>` funktion:
 
 ```python

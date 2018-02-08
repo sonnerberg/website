@@ -99,7 +99,9 @@ För att få mer yta att trycka på i knapparna lägger vi till `padding` och vi
 }
 ```
 
-Nu har vi nått som liknar knapparna på iOS och Android, men viss kritik riktas mot design filosofin Flat Design, som vi såg ovan. Om man vill designa sin webb-app specifikt för ett mobil operativsystem kan det vara bra att följa designriktlinjer från det operativsystemet. Vi kommer dock fortsätta med vår design då vi vill ha knappar, som ser ut som de går att trycka på och vi vill även lägga till färg. Vi lägger en gradient in i knapparna som får det att se ut som knappen är i 3D.
+Nu har vi nått som liknar knapparna på iOS och Android, men viss kritik riktas mot design filosofin Flat Design, som vi såg ovan. Om man vill designa sin webb-app specifikt för ett mobil operativsystem kan det vara bra att följa designriktlinjer från det operativsystemet. [Design - Apple Developer](https://developer.apple.com/design/) och [Design | Android Developers](https://developer.android.com/design/index.html) är två dokument med riktlinjer för design för iOS respektive android.
+
+Vi kommer dock fortsätta med vår design då vi vill ha knappar, som ser ut som de går att trycka på och vi vill även lägga till färg. Vi lägger en gradient i knapparna som får det att se ut som knappen är i 3D.
 
 ```css
 .button {
@@ -180,7 +182,7 @@ Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i sam
 
 Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil. I CSS-preprocessors finns det inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av moduler.
 
-Vissa har i kursen [design](kurser/design) träffat på LESS, det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS följ instruktionerna på [installationssidan](http://sass-lang.com/install).
+Vissa har i kursen [design](kurser/design) träffat på LESS och det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS följ instruktionerna på [installationssidan](http://sass-lang.com/install).
 
 Följande är en kort introduktion till import, variabler och färghantering i SASS. För mer avancerade funktioner rekommenderas [SASS dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
@@ -214,7 +216,7 @@ För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I fi
 
 Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
 
-Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer.
+Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer. I exemplet nedan har jag skapat en fil där jag lägger alla variabler, till exempel vilket typsnitt som ska användas eller vilken färg som är blå. Sedan har jag flyttat CSS koden för navigationen, typografin och knapperna till var sin `.scss`-fil. Koden som definierar grunddesignen finns i `container.scss`.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
@@ -227,7 +229,7 @@ Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan
 @import 'style/button';
 ```
 
-När vi sedan vill skapa en CSS fil av SASS koden används följande kommando på kommandoraden.
+När vi sedan vill kompilera SASS till en CSS-fil används följande kommando på kommandoraden.
 
 ```bash
 sass base.scss style.css

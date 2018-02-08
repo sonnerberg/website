@@ -71,6 +71,7 @@ Läs följande:
 
 * Hur ser det egentligen ut med JavaScript ramverk 2018. Stack Overflow har publicerad statistik angående ramverk i artikeln [The Brutal Lifecycle of JavaScript Frameworks](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/).
 
+* I forumet finns en tråd om val av JavaScript ramverk och vad man kan tänka på [Hur tänka inför val av JavaScript ramverk?](forum/viewtopic.php?f=11&t=7195).
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -87,6 +88,7 @@ Gör följande övningar för att träna inför uppgifterna.
 1. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-v2)". Spara eventuella testfiler i `me/kmom03/nobel`.
 
 1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". Spara eventuella testfiler i `me/kmom03/formular`.
+
 
 <!-- 1. Läs igenom artikeln "[Virtuella noder](kunskap/virtuella-noder)".
 

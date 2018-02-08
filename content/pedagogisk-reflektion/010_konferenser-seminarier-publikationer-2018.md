@@ -5,6 +5,7 @@ category:
     - pedagogik
     - konferenser
 revision:
+    "2018-02-05": "(F, mos) Mer info från Swednet."
     "2017-12-21": "(E, mos) Swednet skrivinternat och årskonferens."
     "2017-09-01": "(D, mos) ICED 2018 samt Copenhagen."
     "2017-08-15": "(C, mos) ICED 2018 samt Copenhagen."
@@ -20,10 +21,14 @@ Jag gör ett försök att göra en sida med konferenser, seminarier och möjligh
 
 
 
-Konferenser {#konferenser}
+Konferenser, seminarier och workshops {#konferenser}
 -----------------------
 
-Swednets allra första skrivinternat kommer att hållas den 13-15 augusti. Här finns det möjlighet att skriva klart den där artikeln, ansökan eller kanske rent av arbeta på din pedagogiska portfölj. Mer information kommer i januari/februari då även anmälningen öppnar. 
+[NU2018](http://nu2018.se/) går av stapeln 9-11 oktober i Västerås.
+
+[ISSOTL18](http://www.swednetwork.se/issotl18-kommer-till-norden/) – The international Society for the Scholarship of Teaching and Learnings årliga konferens har i år 15-årsjubileum och äger rum i Bergen, Norge, den 24-27 oktober, 2018. 
+
+[Swednets allra första skrivinternat](http://www.swednetwork.se/skrivinternat-i-swednets-regi/) kommer att hållas den 13-15 augusti. Här finns det möjlighet att skriva klart den där artikeln, ansökan eller kanske rent av arbeta på din pedagogiska portfölj. Mer information kommer i januari/februari då även anmälningen öppnar. 
 
 Årskonferensen 2018 för Swednet kommer att hållas vid Göteborgs universitet den 24-25 maj. Mer information kommer efter det nya året när konferensens webbsida lanseras.
 
@@ -34,6 +39,8 @@ ICED 2018 går av stapeln i Atlanta, Georgia 5-8 Juni. Call for pre conference w
 Innovative Teaching and Learning Practices in Higher Education – the 19th International Symposium in Copenhagen, May 14-16, 2018. Möjlighet att bidra med ett kapitel i en antologi kring temat INNOVATIVE TEACHING AND LEARNING PRACTICES IN HIGHER EDUCATION. Deadline för att skicka in kapitalförslag är 29 januari, 2018. (källa [swednet](http://www.swednetwork.se/innovative-teaching-and-learning-practices-in-higher-education-the-19th-international-symposium-in-copenhagen-may-14-16-2018/)).
 
 Institutionen för utbildningsvetenskap vid Lunds universitet, tidskriften Högre utbildning och forskarutbildningsnätverket FonSyd bjuder in till en [forskningskonferens om högre utbildning i Lund den 15-16 maj 2018]( http://konferens.ht.lu.se/forskning-om-hogre-utbildning).
+
+Swednet har en [inspirationsdag i Malmö](http://www.swednetwork.se/valkommen-till-swednets-inspirationsdag/) den 6:e februari.
 
 
 

@@ -11,9 +11,9 @@ Kom igång med ramverket Mithril
 
 [FIGURE src=/image/webapp/mithril-logo.png class="right"]
 
-Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data allt har gjorts i samma funktioner eller modul. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, dela upp våra vyer och modeller, där vi hämtar data, och virtuella noder för att skapa en SPA-applikation.
+Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Vanilla JavaScript är beteckningen för ren JavaScript där vi inte använder annat är det som är implementerat i weblläsaren. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data, allt har gjorts i samma funktioner och/eller modul. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, dela upp våra vyer och modeller, där vi hämtar data, och använda virtuella noder för att skapa en SPA-applikation.
 
-I övningen skapar vi en SPA-applikation inför Nobelfesten där vi hämtar data från det officiella Nobel API.
+I övningen skapar vi en SPA-applikation inför Nobelfesten där vi hämtar data från det officiella Nobel API:t.
 
 
 
@@ -38,13 +38,13 @@ Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För at
 
 Förutsättningar {#forutsattningar}
 --------------------------------------
-Du har installerat labbmiljön för kursen webapp. Du är bekant med SPA-applikationer i vanilla JavaScript.
+Du har installerat labbmiljön för kursen webapp. Du är bekant med SPA-applikationer i vanilla JavaScript och har bekantat dig med webpack.
 
 
 
 Installera mithril via npm {#install}
 --------------------------------------
-Vi har i tidigare kurser använd pakethanteraren npm för att installera javascript och nodejs moduler. Vi kommer i denna kurs använda npm för att installera och administrera vår mithril installation och moduler som mithril är beroende av. Detta görs med hjälp av en `package.json` fil, som vi initiellt skapar genom att skriva följande i terminalen.
+I tidigare kursmoment installera vi webpack med hjälp av npm. Vi ska nu titta på hur vi installerar och konfigurerar ett mithril projekt med hjälp av npm, `package.json` och webpack. Vi börjar med att initiera en grund `package.json` fil som innehåller konfigurationen för vårt projekt.
 
 ```bash
 # gå till me
@@ -52,11 +52,11 @@ $ cd me/kmom03/nobel
 $ npm init --yes
 ```
 
-Vi har nu skapat vår egna paket fil för just detta projektet som än så länge inte innehåller mycket, men som vi i denna övning kommer bygga vidare på. Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
+Vi ska nu installerar nu mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
 
 ```bash
-$ npm install mithril --save
-$ npm install webpack --save
+$ npm install --save mithril
+$ npm install --save webpack
 ```
 
 Det kan hända att du får varningar när du kör ovanstående kommandon, men dessa kan du ignorera för nu.
@@ -82,21 +82,34 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
 }
 ```
 
-I scripts attributet ändrar vi så det blir följande för att löpande under utveckling packa ihop koden till en fil `bin/app.js` med hjälp av webpack. Vi använder här möjligheten för att skapa scripts via npm CLI-verktyget. Vi har nedan skapat två scripts `start` för att packa ihop mithril appen till ett script och `watch` för att kontinuerligt göra detta under utveckling. Våra två npm scripts anropas på följande sätt `npm start` eller `npm run watch`.
+Vi skapar även en webpack konfigurationsfil `webpack.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `bin/app.js`.
+
+```javascript
+module.exports = {
+    entry: './js/index.js',
+    output: {
+        filename: './bin/app.js'
+    }
+};
+```
+
+Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` och skapar två nya. Kör vi `npm start` kompileras filerna till `bin/app.js` och kör vi `npm run watch` kompileras filerna automatisk varje gång vi sparar.
 
 ```json
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "webpack js/index.js bin/app.js -d",
-  "watch": "webpack js/index.js bin/app.js -d --watch"
+  "start": "webpack -d",
+  "watch": "webpack -d --watch"
 },
 ```
 
 
 
-Vår första mithril app {#forsta}
+Början till en mithril app {#forsta}
 --------------------------------------
-Vi börjar med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`.
+Tanken med appen är att vi har en lista med knappar för åren 2010 till 2017, när man klickar på knapparna kommer man till en vy med information om det årets nobelvinnare.
+
+Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`. Vi inkluderar även `bin/app.js` längst ner i `index.html`.
 
 ```html
 <!doctype html>
@@ -115,70 +128,57 @@ Vi börjar med en enkel `index.html`, där vi känner igen det mesta från tidig
 </html>
 ```
 
-Vi behåller `Content-Security-Policy` taggen för att skydda oss mot XSS attacker, vi kommer dock i senare kursmoment lägga till så vi kan hämta data från api'er. `viewport` meta-taggen talar om att vi vill visa upp våra appar på enheter i olika storlekar. Längst ner i `index.html` ändrar vi från att inkludera `index.js` till att istället inkludera vår mithril app som finns i `bin/app.js`.
+Nu saknas bara `js/index.js` så är vi på bana och redo för att skapa vår första mithril app.
+
+```bash
+# stå i me/kmom03/nobel
+$ mkdir js
+$ touch js/index.js
+```
+
+Filen `js/index.js` är vår utgångspunkt för appen och i den kommer vi senare i övningen lägga vår router, som pekar ut rätt vy.
 
 
 
 Vår första vy {#vy}
 --------------------------------------
+En av fördelarna med att använda ett JavaScript ramverk är att vi kan separera vyerna från modeller och därmed hämtningen av data. Vi börjar med att skapa katalogen `js/views` och en vy `js/views/list.js`.
 
-Skapa mappen `js/views` och vår första mithril vy `js/views/me.js`.
 
 ```bash
 # utgår från www/
 $ mkdir js/views
-$ touch js/views/me.js
+$ touch js/views/list.js
 ```
 
-Den befintliga filen `js/index.js` är vår utgångspunkt för appen och den pekar ut vad som ska visas när en användare kommer till vår app. Vi skapar desutom en katalog för våra vyer, med vårt första mithril vy `me.js`.
-
-I `js/views/me.js` filen vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion `view`, som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
+I `js/views/list.js` filen vill vi än så länge bara visa upp för användaren att vi har hamnat i en app för Nobelfesten. Vi börjar med att hämta in modulen mithril och spara den i variablen `m`. Vi exporterar sedan det som inom mithril kallas en komponent, det är ett objekt med en funktion kallat `view`. Det som händer när vi använder komponenten i filen `js/views/list.js` är att funktionen `view` anropas och där returneras den virtuell noden `m("h1", "Nobelfesten")`. Denna virtuella noden kommer sedan i webbläsaren renderas som `<h1>Nobelfesten</h1>`. Det virtuella DOM-trädet som ritas upp av JavaScript genom ramverket mithril består av dessa virtuella noder. För mer information om virtuella noder i kontexten av mithril se denna utmärkta [introduktion](http://mithril.js.org/vnodes.html).
 
 ```javascript
 "use strict";
+
 var m = require("mithril");
 
 module.exports = {
     view: function() {
-        return m("h1", "Emil Folino");
+        return m("h1", "Nobelfesten");
     }
 };
 ```
-Kodsnutten `m("h1", "Emil Folino")` skapar en "[virtual DOM node](http://mithril.js.org/hyperscript.html)" en så kallad [vnode](http://mithril.js.org/vnodes.html). En `vnode` är ett JavaScript objekt som representerar ett DOM element. Det blir först ett DOM element när vi använder den i en `render` eller `mount` funktion.
 
-För att appen ska veta om att vi vill visa upp vårt me-vy måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
+För att appen ska veta om att vi vill visa upp list-vyn måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
 
 ```javascript
 "use strict";
+
 var m = require("mithril");
-var Me = require("./views/me");
+var list = require("./views/list.js");
 
-var app = {
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-    onDeviceReady: function() {
-        m.mount(document.body, Me);
-    },
-};
-app.initialize();
+m.mount(document.body, list);
 ```
 
-Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att se me-appen för första gången. Detta gör vi i terminalen med följande kommando, som vi definerade tidigare som ett npm script i `package.json`.
+Nu behöver vi bara kompilera vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definerade tidigare som ett npm script i `package.json`.
 
-```bash
-$ npm start
-$ cordova emulate android
-```
-Du kan även testa appen i webbläsaren med `cordova emulate browser`.
-
-Nu borde du se din me-sida med ditt namn.
-
-
-
-En router för flera sidor {#router}
---------------------------------------
-Med bara en sida har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I den här vyn ser du att vi returnerar en array av virtuella noder, som placeras i ordning efter varann i vyn.
+Öppna upp filen `index.html` i din webbläsare och skåda mästervärket eller iallafall Nobelfesten som en fin rubrik. Låt oss använda lite av stylingen från tidigare kursmoment och samtidigt titta på hur vi lägger till flera virtuella noder i samma vy/komponent.
 
 ```javascript
 "use strict";
@@ -186,10 +186,62 @@ var m = require("mithril");
 
 module.exports = {
     view: function() {
-        return [
-            m("h1", "My hobby"),
-            m("p", "I run orienteering most of the time. And was pretty good at it before I blew my knee.")
-        ];
+        return m("main.container", [
+            m("h1", "Nobelfesten"),
+            m("p", "Välj ett årtal i listan:")
+        ]);
+    }
+};
+```
+
+I ovanstående kod skapar vi först en virtuell nod `<main class="container"></main>`. Vi tilldelar barn till denna virtuella nod genom att tilldela en array som värde. Arrayen innehåller två stycken virtuella noder en `<h1>Nobelfesten</h1>` och `<p>Välj ett årtal i listan:</p>`. Nästa del är att skapa listan med årtal, vi använder en `while`-loop för att iterera från 2010 till och med 2017. För varje år lägger vi till en virtuell nod i arrayen `years`. Vi lägger till den virtuella noden `<a class="button blue-button"></a>`, som har värdet för ett av åren mellan 2010 och 2017. Vi vill även att knappen ska kunna ta oss till en annan sida så vi skickar även med ett objekt med konfiguration: `{ href: "/year/" + startYear, oncreate: m.route.link }`. Vi vill gå till routen `/year` och skickar med året som parameter. Vi använder livscykel-metoden `oncreate` och den inbyggda funktionen `m.route.link` för att koppla länken till routern.
+
+```javascript
+"use strict";
+var m = require("mithril");
+
+module.exports = {
+    view: function() {
+        var startYear = 2010;
+        var endYear = 2017;
+        var years = [];
+
+        while (startYear <= endYear) {
+            years.push(
+                m("a.button.blue-button",
+                { href: "/year/" + startYear, oncreate: m.route.link },
+                startYear)
+            );
+            startYear++;
+        }
+
+        return m("main.container", [
+            m("h1", "Nobelfesten"),
+            m("p", "Välj ett årtal i listan:"),
+            m("div.year-container", years)
+        ]);
+    }
+};
+```
+
+Kolla igenom koden ovan så att du förstår alla delar innan vi går vidare.
+
+
+
+En router för flera vyer {#router}
+--------------------------------------
+Med bara en vy har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/year.js` och precis som `list.js` definerar våra nya `year.js` en vy. Än så länge visar vi bara rubriken Year i vyn, vi vill se så att routingens fungerar och kommer sedan bygga ut funktionaliteten.
+
+```javascript
+"use strict";
+
+var m = require("mithril");
+
+module.exports = {
+    view: function() {
+        return m("main.container", [
+            m("h1", "Year")
+        ]);
     }
 };
 ```
@@ -198,7 +250,7 @@ I vår `index.js` ändrar vi så vi använder funktionen `m.route()` istället f
 
 1. Vilket element som skall fyllas med de virtuella noder.
 
-1. Vår ursprungsroute som är det vy där appen börjar.
+1. Vår ursprungsroute som är den vy där appen börjar.
 
 1. Ett objekt som definerar alla routes i appen.
 
@@ -207,135 +259,263 @@ Och vår index.js fil ser nu ut så här:
 ```javascript
 "use strict";
 var m = require("mithril");
-var Me = require("./views/me");
-var Hobby = require("./views/hobby");
-var app = {
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-    onDeviceReady: function() {
-        m.route(document.body, "/", {
-            "/": Me,
-            "/hobby" : Hobby
-        });
-    },
+var list = require("./views/list");
+var year = require("./views/year");
 
-};
-app.initialize();
+m.route(document.body, "/", {
+    "/": list,
+    "/year/:year" : year
+});
 ```
 
-Om du manuellt skriver in `/hobby` efter `index.html#!` i din webbläsares adressfält, ser du innehållet från din hobby-vy. `#!` är en _hashbang_, det används vanligen till routing på klient sidan. Det går att ändra vad som ska vara hashbang med [m.route.prefix](http://mithril.js.org/route.html#mrouteprefix).
-
-Vi vill inte skriva in adresser manuellt, så vi ska nu titta på hur vi kan skapa navigering för vår app. Vi kan skapa länkar precis som vi har skapat andra virtuella noder tidigare, så vi lägger till en länk längst upp i vårt me-vy med följande kod. Vi kan nu gå från vårt Me-vy till hobby-vyn.
+Vi kan nu klicka på våra knappar och kommer till year-vyn. I routern har vi lagt till `:year` i year-routen. `:year` är en placeholder för året vi skickar med till vyn och vi kommer åt värdet genom att använda `vnode.attrs.year`. För att kunna använda `vnode` måste vi dock definiera `vnode` som parameter till vår `view` funktion. Så låt oss istället för `<h1>Year</h1>` skriva ut året.
 
 ```javascript
-m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby")
+"use strict";
+
+var m = require("mithril");
+
+module.exports = {
+    view: function(vnode) {
+        return m("main.container", [
+            m("h1", vnode.attrs.year)
+        ]);
+    }
+};
 ```
 
 Mithrils route funktion är användbar för mer än bara vår huvudrouter. Vi kan till exempel göra omdirigeringar, hämta nuvarande route och mycket annat. [Dokumentationen för `m.route()`](http://mithril.js.org/route.html).
 
 
 
-Styling {#styling}
+En modell i mithril {#modell}
 --------------------------------------
-Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och användarvänliga, så därför vill vi kunna styla våra sidor. Öppna `css/index.css` och fixa en egen snygg design.
+Tanken med appen var att visa upp information om Nobelvinnare för ett givet år så låt oss titta på hur vi hämtar JSON-data från Nobel-API:t med hjälp av en modell i mithril. Vi börjar med att skapa katalogen `js/models` och filen `js/models/nobel.js`.
 
-Jag valde att lägga till några extra element i min `me-vy` enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det andra elementet `div`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
+```bash
+# stå i nobel katalogen
 
-```javascript
-"use strict";
-var m = require("mithril");
-
-module.exports = {
-    view: function() {
-        return [
-            m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby"),
-            m("div", [
-                m("h1", "Emil Folino"),
-                m("p", "My name is Emil, I'm originally from Denmark, but now I live in Sweden."),
-                m("p", "I run orienteering and drive an old Saab.")
-            ])
-        ];
-    }
-};
+$ mkdir js/models
+$ touch js/models/nobel.js
 ```
 
-[FIGURE src="/image/snapvt17/mithril-me-screen.png" caption="Screenshot enkel me-sida i mithril"]
+Som alltid är när vi jobbar mot ett API är [dokumentationen](https://nobelprize.readme.io) viktigt, så vi tar en titt i den. Vi hittar den endpoint vi vill använda och urlen som hör till. Vi har tidigare i kursen använd `XMLHttpRequest` och `fetch` för att hämta data. När vi hämtar data i mithril gör vi det med funktionen [m.request](https://mithril.js.org/request.html). `m.request` använder sig precis som `fetch` av promises, men vi får direkt tillbaka JSON-data om vi inte angett nått annat.
 
-
-
-Layout {#layout}
---------------------------------------
-Om vi vill ha navigering i alla vyer kan vi lägga till länkar längst upp, men som vanligt vill vi hålla vår kod DRY. I mithril kan vi använda oss av layouts för att återanvända kod i flera vyer. Vi skapar först ett nytt vy `js/views/layout.js`, som blir vår mall för andra vyer.
+Vi börjar med att bara hämta data och skriva ut det med `console.log` så vi ser att det fungerar. Vår model består förutom funktionen `load`, även av attributet `current`, vi använder `current` för att spara den senaste data vi har hämtat från API:t.
 
 ```javascript
+// js/models/nobel.js
 "use strict";
+
 var m = require("mithril");
 
+var nobel = {
+    current: {},
+    load: function(year) {
+        return m.request({
+            method: "GET",
+            url: "http://api.nobelprize.org/v1/prize.json?year=" + year
+        })
+        .then(function(result) {
+            console.log(result);
+        });
+    }
+};
+
+module.exports = nobel;
+```
+
+Vi måste anropa funktionen för att den körs och det gör vi från vyn. Vi använder oss av livscykel metoden `oninit`, funktionen anropas 1 gång när vyn initieras och innan nått ritas upp. Vi använder oss utav `vnode.attrs.year` på samma sätt som när vi skrev ut årtalet.
+
+```javascript
+// js/views/year.js
+"use strict";
+
+var m = require("mithril");
+var nobel = require("../models/nobel.js")
+
 module.exports = {
+    oninit: function(vnode) {
+        nobel.load(vnode.attrs.year);
+    },
     view: function(vnode) {
-        return m("main", [
-            m("navbar", [
-                m("div.container", [
-                    m("h2.brand", "Emil Folino"),
-                    m("ul.nav", [
-                        m("li", [m("a", {href: "/", oncreate: m.route.link}, "Me")]),
-                        m("li", [m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby")])
-                    ])
-                ])
-            ]),
-            m("section.container", vnode.children)
+        return m("main.container", [
+            m("h1", vnode.attrs.year)
         ]);
     }
 };
 ```
 
-I ovanstående kodexempel skapar vi vår navigation som en navbar med en "logga" och två stycken länkar. Efter navbar skapas ett section-element (`m("section.container", vnode.children)`), som innehåller de virtuella noder från vyn som använder sig av layout. Så lått oss titta på hur vi använder oss av layout från `index.js`.
+Vi öppnar upp konsollen i webbläsaren och ser att vi har skrivit ut ett JSON-objekt. Det vi vill åt för varje objekt `prizes` arrayen är `category` och både förnamn och efternamn inne i `laureates` arrayen. Först tilldelar vi resultat från API:t till `current` och sedan kan vi använda detta i vyn.
 
 ```javascript
+// js/models/nobel.js
 "use strict";
+
 var m = require("mithril");
-var Layout = require("./views/layout");
-var Me = require("./views/me");
-var Hobby = require("./views/hobby");
-var app = {
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-    onDeviceReady: function() {
-        m.route(document.body, "/", {
-            "/": {
-                render: function() {
-                    return m(Layout, m(Me));
-                }
-            },
-            "/hobby": {
-                render: function() {
-                    return m(Layout, m(Hobby));
-                }
-            }
+
+var nobel = {
+    current: {},
+    load: function(year) {
+        return m.request({
+            method: "GET",
+            url: "http://api.nobelprize.org/v1/prize.json?year=" + year
+        })
+        .then(function(result) {
+            nobel.current = result;
         });
     }
 };
 
-app.initialize();
+module.exports = nobel;
+```
+
+I vyn kan vi sedan komma åt data genom att använda `nobel.current`. Vi använder oss av funktionen [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), för att iterera oss igenom JSON arrayen.
+
+```javascript
+"use strict";
+
+var m = require("mithril");
+var nobel = require("../models/nobel.js")
+
+module.exports = {
+    oninit: function(vnode) {
+        nobel.load(vnode.attrs.year);
+    },
+    view: function(vnode) {
+        return m("main.container", [
+            m("h1", vnode.attrs.year),
+            m("div.year-container", nobel.current.prizes.map(function(prize) {
+                return [
+                    m("h2", prize.category),
+                    prize.laureates.map(function(laureate) {
+                        return m("p", laureate.firstname + " " + laureate.surname);
+                    })
+                ];
+            }))
+        ]);
+    }
+};
+```
+
+Om vi laddar om sidan i webbläsaren får vi ett JavaScript fel `Uncaught TypeError: Cannot read property 'map' of undefined`. Detta beror på mithrils sätt att rendera på och det asynkrona anrop till API:t. Ordningen för rendering i mithril är följande:
+
+1. `oninit` anropas
+
+1. `view` anropas och ritar upp vyn
+
+1. `m.request` är klar med att hämta data
+
+1. `view` anropas en gång till och ritar upp vyn data från `m.request`
+
+För dokumentation av livscykel metoder och renderingsordning se [Lifecycle methods](https://mithril.js.org/lifecycle-methods.html#lifecycle-methods).
+
+För att kunna använda oss av koden i vyn `year` definierar vi `nobel.current` enligt nedan, med ett `prizes` attribut med en tom array.
+
+```javascript
+// js/models/nobel.js
+"use strict";
+
+var m = require("mithril");
+
+var nobel = {
+    current: { prizes: [] },
+    load: function(year) {
+        return m.request({
+            method: "GET",
+            url: "http://api.nobelprize.org/v1/prize.json?year=" + year
+        })
+        .then(function(result) {
+            nobel.current = result;
+        });
+    }
+};
+
+module.exports = nobel;
+```
+
+När vi sedan öppnar applikationen i webbläsaren skriv namnen på Nobelpristagarna ut som väntat. Kolla gärna igenom koden ovan så du förstår alla delar. Ta även en titt på renderingsordningen för att förstå hur de virtuella noderna ritas upp av mithril.
+
+
+
+Layout {#layout}
+--------------------------------------
+En del av den koden vi skriver är samma för våra två vyer. Vi vill kunna återanvända koden och även lägga till navigation längst upp för att ta oss från årsvyerna tillbaka till listningen, precis som vi har gjort i tidigare kursmoment.
+
+I mithril kan vi använda oss av layouts för att återanvända kod i flera vyer. Vi skapar först en ny vy `js/views/layout.js`, som blir vår mall för andra vyer.
+
+```javascript
+"use strict";
+
+var m = require("mithril");
+
+module.exports = {
+    view: function(vnode) {
+        return [
+            m("nav.top-nav", "Nobel"),
+            m("main.container", vnode.children)
+        ];
+    }
+};
+```
+
+I ovanstående kodexempel skapar vi `.top-nav` som vi känner igen från tidigare kursmoment. Vi skapar även en `main.container` där vi skickar med de virtuella noderna som vi vill ska renderas i den. I detta fallet är det list-vyn och års-vyn vi skickar med. För att använda oss av layouten gör vi som nedan. För varje route visar vi layouten och skickar med vyn vi vill visa i layouten.
+
+```javascript
+"use strict";
+
+var m = require("mithril");
+var layout = require("./views/layout");
+var list = require("./views/list");
+var year = require("./views/year");
+
+m.route(document.body, "/", {
+    "/": {
+        render: function() {
+            return m(layout, m(list));
+        }
+    },
+    "/year/:year": {
+        render: function(vnode) {
+            return m(layout, m(year, vnode.attrs));
+        }
+    }
+});
 ```
 
 Vi använder oss utav en [RouteResolver](http://mithril.js.org/route.html#routeresolver) för att rendera layout och skickar med de virtuella noder, i detta fallet vår två vyer, som ska renderas inuti layouten.
 
-Här under kan ni se ett exempel på en mithril me-app med navigation.
+För att vyerna inte ska renderas inne i två stycken `main.container` tar vi bort de från vyerna. Just nu tillför layouten inte mer än att vi har gjort koden lite mera DRY. Vi vill ha en möjlighet för att ta sig tillbaka till listan med år när vi är inne på ett specifikt år. Vi gör detta i `layout` och använder oss av en 'ternary operator' och `m.route.get()`. Vi jämför om första delen av routen är 'year' och är den det skriver vi ut en länk tillbaka till listan annars skriver vi ut ingenting.
 
-[FIGURE src="/image/snapvt17/mithril-me-screen-final.png" caption="Screenshot enkel me-sida i mithril med navigation"]
+```javascript
+"use strict";
+
+var m = require("mithril");
+
+module.exports = {
+    view: function(vnode) {
+        return [
+            m("nav.top-nav",
+                { textContent: "Nobel"},
+                [
+                    m.route.get().split("/")[1] == "year" ?
+                        m("span", [
+                            m("a", { href: "/", oncreate: m.route.link }, "Alla år")
+                        ]) : null
+                ]),
+            m("main.container", vnode.children)
+        ];
+    }
+};
+```
+
+Här under kan ni se ett exempel på Nobel applikation med navigation.
+
+[FIGURE src="/image/webapp/nobel-app-final-year.png?w=c7" class="right" caption="Screenshot Nobel app år vy"]
+[FIGURE src="/image/webapp/nobel-app-final-list.png?w=c7" caption="Screenshot Nobel app list-vy"]
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-
-Det finns många olika varianter på MVC-liknande ramverk för klientbaserad utveckling av JavaScript. På webbplatsen [TodoMVC](http://todomvc.com/) kan du se en översikt av några av dem och jämföra hur deras kod ser ut när man bygger en Todo applikation.
-
-Att använda designmönstret MVC kan ge dig en god uppdelning av din kod i olika delar som har olika syften. Det ger en god grund för en bra arkitektur i din applikation.
-
-Mithril är en spännande lösning på klientbaserad programmering med JavaScript. Det är inte helt enkelt att komma in i det, men koden är liten och överskådlig.
-
-Har du [tips, förslag eller frågor om artikeln](t/6313) så finns det en specifik forumtråd för det.
+Vi har i denna övning skapat en app inför Nobelfesten, som hämtar information från det officiella Nobel-api. Vi har bekantat oss med virtuella noder och hur vi skapar dessa med `m`. Vi har tittat på en router i mithril och hur vi kan använda den för att koppla vyer till specifika router och skicka med parametrar till dessa. Vi har skapat modeller i mithril där vi hämtar data och skickar tillbaka till vyerna.

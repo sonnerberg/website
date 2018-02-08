@@ -24,7 +24,9 @@ Introduktion {#intro}
 -----------------------
 Du har blivit kontaktat av företaget Infinity Warehouses då ryktet går på stan att du har koll på mobila applikationer. Infinity Warehouses vill ta steget in i 2000-talet och automatisera deras gamla omoderna lagerhanteringssystem. Infinity Warehouses har tidigare anställd en backendprogrammerare, men när hen hörde orden design, användbarhet och tillgänglighet sprang hen skrikande bort. Backendprogrammeraren hade dock hunnit skapa ett REST API innan hen försvann ner i serverrummet. [Dokumentationen för API:t](https://lager.dbwebb.se) hjälper dig en bit på vägen.
 
-Skapa först en API-nyckel som du använder för att hämta just din data. Du kan sedan välja om du vill skapa nya produkter eller kopiera de befintliga produkter. Du kommer i kommande kursmoment fortsätta arbetet med din lager-app, så rekommendationen är att skapa dina egna produkter då du kan vinkla din app mot dina intressen.
+Skapa först en API-nyckel som du använder för att hämta just din data. Du kan sedan välja om du vill skapa nya produkter eller kopiera de befintliga produkterna. Du kommer i kommande kursmoment fortsätta arbetet med din lager-app, så rekommendationen är att skapa dina egna produkter då du kan vinkla din app mot dina intressen.
+
+Ett bra verktyg för att testa sig fram med API:er är Postman. Du kan även skapa egna produkter eller ändra de som du kopierade med Postman.
 
 
 
@@ -38,11 +40,11 @@ Krav {#krav}
 
 1. Lagerförteckningslista där produkterna listas med namn och hur många som finns.
 
-1. Ska gå att klicka på varje produkt då visas en vy med information om den produkt som det klickats på.
+1. Ska gå att klicka på varje produkt och då visas en vy med information om den produkt som det klickats på.
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
 
-1. Skapa en navigations meny längst upp som används när man går från en enskild produkt tillbaka till listningen av produkter.
+1. Skapa en navigationsmeny längst upp som används när man går från en enskild produkt tillbaka till listningen av produkter.
 
 1. Validera och publicera din kod enligt följande.
 

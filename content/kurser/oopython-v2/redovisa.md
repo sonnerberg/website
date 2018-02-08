@@ -11,10 +11,6 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 
 <!--more-->
 
-[WARNING]
-**Kursutveckling pågår inför vt18.
-[/WARNING]
-
 
 
 Skriv redovisningstext {#text}

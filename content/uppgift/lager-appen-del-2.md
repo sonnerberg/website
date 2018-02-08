@@ -6,9 +6,9 @@ revision:
 ...
 Lager appen del 2
 ==================================
-[FIGURE src=image/webapp/pick-list.png?w=c5 class="right"]
+[FIGURE src=image/webapp/pick-list.png?w=c4 class="right"]
 
-I kursmoment 1 skapade vi grunden för vår lager app. Vi ska i detta kursmoment förbättra strukturen på både vår JavaScript kod och CSS kod. Vi ska bygga en plock lista vy där lagerarbetarna får en bra översikt över vart produkterna från en order finns. När varorna är plockade ska status ändras för ordern och lagersaldo ska minskas.
+I kursmoment 1 skapade vi grunden för vår lager app. Vi ska i detta kursmoment förbättra strukturen på både vår JavaScript kod och CSS kod. Vi ska bygga en plocklista vy där lagerarbetarna får en bra översikt över vart produkterna från en order finns. När varorna är plockade ska status ändras för ordern och lagersaldo ska minskas.
 
 
 
@@ -18,12 +18,14 @@ I kursmoment 1 skapade vi grunden för vår lager app. Vi ska i detta kursmoment
 
 Förkunskaper {#forkunskaper}
 -----------------------
-
+Du har gjort uppgiften [Lager appen del 1](uppgift/lager-appen-del-1). Du har jobbat dig igenom övningarna [Knappar för mobilen](kunskap/knappar-for-mobilen) och [Struktur i JavaScript](kunskap/struktur-i-var-javascript).
 
 
 Introduktion {#intro}
 -----------------------
-Börja med att kopiera din lager app från kmom01, så har du nått att utgå ifrån.
+Börja med att kopiera din lager app från kmom01, om du inte gjorde det i övningen, så har du nått att utgå ifrån.
+
+<strong>OBS! Gör bara detta om du inte gjorde det i övningen.</strong>
 
 ```bash
 # stå i me-katalogen
@@ -44,6 +46,8 @@ Krav {#krav}
 
 1. När varorna är plockade ska det finnas möjlighet att byta status för ordern med en knapp.
 
+1. När status för ordern ändras måste även lagersaldot för de packade varorna minskas.
+
 1. Gör ett medvetet val om du vill använda flat design eller ej.
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
@@ -62,7 +66,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-Det finns inga extrauppgifter.
+* Använd en checkbox för varje produkt, ska bara gå att klicka på knappen om alla checkboxar är iklickade.
 
 
 

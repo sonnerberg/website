@@ -10,16 +10,88 @@ Struktur i JavaScript
 
 Vi har nu bra struktur på vår CSS/SASS kod och tiden har nu kommit för att ta ett steg i rätt riktning även för JavaScript koden. Sista delen av kursmoment 1 var att dela upp koden för Me-appen i olika filer för att få en bättre struktur på koden. Vi ska i denna övning titta på verktyg för att strukturera vår JavaScript kod. Målet är att vi bara importerar en JavaScript-fil i `index.html` och att vi använder modulerna på ett bättre sätt än vi har gjort tidigare.
 
+Du kan med fördel strukturera upp koden från uppgiften [Lager appen del 1](uppgift/lager-appen-del-1). Smidigast är isåfall att kopiera koden från kmom01.
+
+```bash
+# stå i me-katalogen
+cp kmom01/lager1/* kmom02/lager2/
+```
+
+
+
+npm och package.json {#npm}
+--------------------------------------
+Vi har i tidigare kurser använd [npm](https://www.npmjs.com/) (Node Package Manager) för att installera JavaScript moduler. Nu ska vi ta detta ett steg vidare och titta på vissa av möjligheterna med npm och konfigurationsfilen `package.json`. Vi börjar med att initiera att vi vill ha ett npm projekt och att vi vill installera webpack som en modul vi är beroende av (dependency).
+
+```bash
+$ npm init --yes
+$ npm install --save webpack
+```
+
+Låt oss titta på filen `package.json` skapade
+
 
 
 webpack {#webpack}
 --------------------------------------
-I koden vi skrev i kmom01 avslutade vi med att dela upp JavaScript koden i ett flertal `.js`-filer, som vi importerade i `index.html`. När vi använder en modul som finns i en annan JavaScript fil förlitar vi oss på att den har laddats i `index.html`. För att komma bort från detta kan vi använda webpack. webpack används för att kompilera JavaScript moduler och gör det möjligt att dela upp vår JavaScript kod i ett flertal moduler. Vi kan även hämta in externa moduler och på samma sätt som egna modulerna kompilera ner det till en enda fil.
+I koden vi skrev i kmom01 avslutade vi med att dela upp JavaScript koden i ett flertal `.js`-filer, som vi importerade i `index.html`. När vi använder en modul som finns i en annan JavaScript fil förlitar vi oss på att den har laddats i `index.html`. För att komma bort från detta kan vi använda webpack. webpack används för att kompilera JavaScript moduler och gör det möjligt att dela upp vår JavaScript kod i ett flertal moduler. Vi kan även hämta in externa moduler och på samma sätt som de egna modulerna kompilera ner det till en enda fil.
 
-Låt oss titta på ett exempel för att konkretisera detta.
+Vi börjar med att skapa en konfigurationsfil för webpack där vi pekar ut vilken JavaScript fil vi vill ha som ingång till applikationer och vilken fil vi vill att alla moduler ska kompileras till. Vi döper konfigurationsfilen till `webpack.config.js`.
+
+```javascript
+// webpack.config.js
+
+module.exports = {
+    entry: './js/main.js',
+    output: {
+        filename: './bin/bundle.js'
+    }
+};
+```
+
+Vi vill alltså börja appen från filen `/js/main.js` och den kompilerade filen ska hamna i `/bin/bundle.js`. Jag har strukturerat upp min kod lite ytterligare från kmom01 och lagt alla JavaScript filer i katalogen `js`.
+
+För att kompilera JavaScript koden använder vi oss av kommandot `webpack -d` och då vi har en konfigurationsfilen `webpack.config.js` vet `webpack -d` redan om vilka filer vi ska utgå ifrån och vart den kompilerade filen ska läggas. Flaggan `-d` står för development och vi kommer köra med `-d` i dessa första kursmoment. För att automatisera detta ytterligare lägger vi till ett skript i `package.json` som kör kommandot `webpack -d` varje gång vi sparar filer som ingår i projektet. Flaggan `--watch` håller koll på vilka filer som uppdateras och kompilera om de som behövs.
+
+```json
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "watch": "webpack -d --watch"
+},
+```
+
+Genom att köra kommandot `npm run watch` i terminalen kompileras alla filer som används från ingångspunkten, i detta fallet `/js/main.js`, till en fil `/bin/bundle.js`. Vi kan nu lägga till `/bin/bundle.js` längst ner i `index.html` som den enda JavaScript filen vi importerar.
+
+
+
+import och export {#importexport}
+--------------------------------------
+Om vi öppnar upp `index.html` i en webbläsare stöter vi på patrull direkt. Öppnar vi upp JavaScript konsollen i webbläsaren ser vi varför.
+
+> ReferenceError: Can't find variable: home
+
+I och med att vi inte laddar JavaScript filerna implicit längre då vi bara har en JavaScript fil i `index.html` måste vi importera modulerna explicit. `import` och `export` är två nyckelord som vi kan använda för detta. För mer information om `import` och `export` se [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) och [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) dokumentationen.
+
+Vi vill importera home-objektet från filen `/js/home.js` och det gör vi med följande kodrad längst upp i `main.js`:
+
+```javascript
+import { home } from './home.js';
+```
+
+Men för att vi kan importera en modul måste den först exporteras. Så i slutet av filen `/js/home.js` lägger vi följande.
+
+```javascript
+export { home };
+```
+
+Vi laddar om sidan och stora delar av vyn visas nu. Vi får dock fortfarande ett JavaScript fel i konsollen.
+
+> ReferenceError: Can't find variable: menu
+
+På samma sätt som vi importerade och exporterade `/js/home.js` måste vi nu göra med `/js/menu.js` och de resterande filerna.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definerar vilka JavaScript moduler vi vill använda.
+Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definierar vilka JavaScript moduler vi vill använda. Webpack kan konfigureras till att ta hand om alla våra assets: JavaScript, CSS/SASS och bilder, men i denna övning får det räcka med att vi kompilerar vår JavaScript till en enda fil. För mer information om [webpack](https://webpack.js.org) se deras utmärkta hemsida med bra dokumentation och guides.
