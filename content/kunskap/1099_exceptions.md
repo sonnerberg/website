@@ -19,7 +19,7 @@ Det finns två vanliga fel, eller *errors*, som man kan snubbla över i Python. 
 Intro {#intro}
 -------------------------------
 
-En stor fördel med exceptions är att de tvingar fram en utskrift när något går fel. Med egna exceptions kan vi tvinga fram egna uaölkjgjsdgjafdsjkgdfg
+En stor fördel med exceptions är att de tvingar fram en utskrift när något går fel. Med egna exceptions kan vi tvinga fram egen definierade utskrifter.
 
 
 Errors {#errors}
