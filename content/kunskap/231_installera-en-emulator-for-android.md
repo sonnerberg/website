@@ -30,7 +30,7 @@ Installera SDK {#sdk}
 
 Du kan börja med att läsa översiktligt [om Android SDK och Android Studio](https://developer.android.com/sdk/index.html) som är ett mer komplett utvecklarverktyg.
 
-Du kan behöva [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html), i så fall ladda ner det. Version 7 eller senare. Se till att den finns i din PATH. Du kan testa med `java -h` i terminalen.
+Du kan behöva [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html), i så fall ladda ner det. Version 7 eller senare. Se till att den finns i din PATH. Du kan testa med `java --version` i terminalen.
 
 För att installera Android SDK:n scrolla ner till [Get just the command line tools](https://developer.android.com/studio/index.html) och ladda ner ett **SDK tools package**. Det är inte meningen att ni ska ladda hem Android studio utan enbart Android SDK.
 
@@ -41,8 +41,8 @@ Extrahera innehållet till valfri plats.
 Starta och uppdatera ditt SDK {#uppdatera}
 --------------------------------------
 
-Gå till mappen du extraherade innehållet till och kör följande kommandon.  
-På windows behöver du lägga till `.bat` som filändelse på `android`. Det kan vara så att du behöver köra filen  som admin. 
+Gå till mappen du extraherade innehållet till och kör följande kommandon.
+På windows behöver du lägga till `.bat` som filändelse på `android`. Det kan vara så att du behöver köra filen  som admin.
 
 ```bash
 # Gå till installationskatalogen
@@ -68,7 +68,7 @@ Du behöver nu [uppdatera ditt SDK](https://developer.android.com/sdk/installing
 * Extras
     * Android support Repository
 
-För att kolla om du har ARM eller Intel på windows, håll in `window key` + `Pause/Break`. Kolla vad som står under `Processor`.  
+För att kolla om du har ARM eller Intel på windows, håll in `window key` + `Pause/Break`. Kolla vad som står under `Processor`.
 På Linux/Mac kan du använda kommandot `uname -m`. Leta efter `vendor_id`, om det står "GenuineIntel" har du Intel.
 
 Klicka på knappen för att installera paketen.
@@ -114,7 +114,7 @@ Starta emulatorn med kommandot.
 ```bash
 # Gå till installationskatalogen
 $ cd tools
-$ ./emulator -avd Mynexus7   
+$ ./emulator -avd Mynexus7
 ```
 
 Det tar en liten stund att starta emulatorn. Om du får ett felmeddelande om HAXM eller virtualisering finns det en [tråd i forumet med hjälp](t/6369).
@@ -192,9 +192,5 @@ Avslutningsvis {#avslutning}
 
 Nu har du förhoppningsvis kommit igång och har en Android emulator som du kan använda för att testköra och prova dina mobila webbapplikationer.
 
-Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/4741) för denna artikeln. 
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/4741) för denna artikeln.
 Det kan även finnas nyttig information i [den här tråden](t/4901).
-
-
-
-

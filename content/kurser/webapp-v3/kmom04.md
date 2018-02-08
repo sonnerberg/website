@@ -50,9 +50,9 @@ Läs följande:
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
-1. Läs igenom artikeln från Jonatan och Henrik om en [djungel av ramverk för JavaScript](article/Henrik_Jonatan_Article_rev_c.pdf).
+<!-- 1. Läs igenom artikeln från Jonatan och Henrik om en [djungel av ramverk för JavaScript](article/Henrik_Jonatan_Article_rev_c.pdf).
 
-1. Läs Wikipedia artikeln om [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
+1. Läs Wikipedia artikeln om [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete). -->
 
 
 
@@ -83,7 +83,11 @@ Det finns inga extra lästips.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln och gör övningarna i "[Mithril och CRUD](kunskap/mithril-och-crud)".
+1. Gör övningen [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter). Spara eventuella testfiler i `me/kmom04/tabeller`.
+
+1. Gör övningen [Login med OAuth](kunskap/login-med-oauth). Spara eventuella testfiler i `me/kmom04/oauth`.
+
+<!-- 1. Läs igenom artikeln och gör övningarna i "[Mithril och CRUD](kunskap/mithril-och-crud)". -->
 
 <!-- 1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". -->
 
@@ -91,7 +95,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Din egna vinkällare app](uppgift/vinkallare-appen)".
+1. Gör uppgiften "[Lager appen del 4](uppgift/lager-appen-del-4)".
 
 
 
@@ -110,8 +114,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du sedan tidigare bekant med CRUD?
-* Hur känns det att jobba mot REM api't?
-* Var det något som krånglade eller tog extra mycket tid?
-* Hur tycker slutresultatet blev för din app?
+* Vilka utmaningar finns med tabeller i mobila enheter?
+* Vilka fördelar finns med OAuth och inloggning via externa tjänster?
+* Vilka fördelar finns med JWT i jämförelse med sessions inloggning?
 * Vilken är din TIL för detta kmom?

@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+  "2018-02-14": (B, aar) Tagit bort JQuery mobile.
   "2017-03-14": (B, aar) Tagit bort JQuery mobile.
   "2015-12-04": (A, mos) Första utgåvan för kursen.
 ...
@@ -26,6 +29,27 @@ Bilden ovan ger en vy av hur man kan känna när man väljer mellan native app o
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 3 studietimmar)*
+
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
+
+Inför kursmomentet installera 'Android SDK och emulator' samt 'Apache Cordova' från [labbmiljö](./../labbmiljo).
+
+Ett bra tips är att uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
+dbwebb clone webapp
+cd webapp
+dbwebb init
+```
 
 
 
@@ -68,6 +92,8 @@ Det finns inga extra lästips.
 
 
 ###Övningar {#ovningar}
+
+
 
 1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)".
 

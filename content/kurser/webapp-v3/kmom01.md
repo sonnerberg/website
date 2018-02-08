@@ -40,11 +40,11 @@ Som en sista del av kursmomentet ska vi börja med en löpande uppgift där vi i
 Labbmiljön  {#labbmiljo}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 1 studietimme)*
 
 Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
 
-Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+Uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
