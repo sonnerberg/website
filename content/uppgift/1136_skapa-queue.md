@@ -44,7 +44,7 @@ Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `he
 
 1. Det är helt OK att lägga till fler metoder/attribut om man vill det i Queue klassen.
 
-1. Skapa filen `main.py` i "queue" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i Queue klassen. Det ska gå att kolla om en kö är tom, lägga till data, plocka ut data, kolla vilket som är nästa element och se storleken. Det ska givetvis också gå att avsluta loopen.
+1. Skapa filen `main.py` i "queue" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i Queue klassen, kolla om den är tom, lägga till, ta bort, kolla på första värdet och kolla storlek. Det ska givetvis också gå att avsluta loopen.
 
 1. Om man gör peek på en tom kö ska ett exception kastas som fångas i din handler. Det ska alltså inte krascha.
 
