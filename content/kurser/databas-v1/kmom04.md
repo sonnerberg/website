@@ -91,6 +91,12 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Flytta pengar med terminalprogram och med Express](uppgift/flytta-pengar-med-terminal-program-och-med-express)" för att jobba med flera klienter mot samma databas. Bygg vidare på din kod i `me/kmom04/express-sql`.
 
+
+
+###Extra {#extra}
+
+Dessa uppgifter är extrauppgifter och görs om du har tid och kraft över.
+
 1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`.
 
 
