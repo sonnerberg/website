@@ -26,37 +26,6 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 De vanligaste sorteringsalgoritmerna {#de-vanligaste-sorteringsalgoritmerna}
 ------------------------------
 
-###Quicksort {#quick-sort}
-
-Quick sort använder sig utav ett [pivot-värde](https://en.wikipedia.org/wiki/Quicksort#Choice_of_pivot). Efter valet av pivot är gjort så delar man upp listan i två delar. Den ena delen hanterar värdena som är mindre än pivot och den andra delen hanterar värdena som är större än pivot. Quick sort arbetar med fördel rekursivt där varje anrop till funktionen hanterar ett nytt pivot-värde baserat på den nya listan som skickats in. Bas-fallet är när listans längd har nått 1. Till slut så slår man samman de tre delarna.  
-
-```python
-def quick_sort(items):
-    """ Quicksort """
-    if len(items) > 1:
-        pivot_index = len(items) // 2
-        smaller_items = []
-        larger_items = []
-
-        for i, val in enumerate(items):
-            if i != pivot_index:
-                if val < items[pivot_index]:
-                    smaller_items.append(val)
-                else:
-                    larger_items.append(val)
-
-        quick_sort(smaller_items)
-        quick_sort(larger_items)
-        items[:] = smaller_items + [items[pivot_index]] + larger_items
-
-    return items
-```
-
-Här används `//` för att returnera en integer. (Enkel division `/` kan returnera en float). Vi ser även "enumerate()" som skapar tupler av elementen i listan och möjliggör indexering till exempel (i, val).  
-
-[Quick sort dance](https://www.youtube.com/watch?v=3San3uKKHgg)
-
-
 
 ###Bubble sort {#bubble-sort}  
 
@@ -96,6 +65,38 @@ def insertion_sort(items):
 ```
 
 [Insertion sort dance](https://www.youtube.com/watch?v=ROalU379l3U)  
+
+
+
+###Quicksort {#quick-sort}
+
+Quick sort använder sig utav ett [pivot-värde](https://en.wikipedia.org/wiki/Quicksort#Choice_of_pivot). Efter valet av pivot är gjort så delar man upp listan i två delar. Den ena delen hanterar värdena som är mindre än pivot och den andra delen hanterar värdena som är större än pivot. Quick sort arbetar med fördel rekursivt där varje anrop till funktionen hanterar ett nytt pivot-värde baserat på den nya listan som skickats in. Bas-fallet är när listans längd har nått 1. Till slut så slår man samman de tre delarna.  
+
+```python
+def quick_sort(items):
+    """ Quicksort """
+    if len(items) > 1:
+        pivot_index = len(items) // 2
+        smaller_items = []
+        larger_items = []
+
+        for i, val in enumerate(items):
+            if i != pivot_index:
+                if val < items[pivot_index]:
+                    smaller_items.append(val)
+                else:
+                    larger_items.append(val)
+
+        quick_sort(smaller_items)
+        quick_sort(larger_items)
+        items[:] = smaller_items + [items[pivot_index]] + larger_items
+
+    return items
+```
+
+Här används `//` för att returnera en integer. (Enkel division `/` kan returnera en float). Vi ser även "enumerate()" som skapar tupler av elementen i listan och möjliggör indexering till exempel (i, val).  
+
+[Quick sort dance](https://www.youtube.com/watch?v=3San3uKKHgg)
 
 
 
@@ -201,4 +202,4 @@ Vi går inte in närmare på detta här utan nu har ni en kännedom om att det f
 Avslutningsvis {#avslutning}
 ------------------------------  
 
-Det här var lite grunder om sorteringsalgoritmer. Hoppas ni har fått en liten förståelse vad som kan dölja sig bakom en `array.sort()` och liknande inbyggda funktioner. 
+Det här var lite grunder om sorteringsalgoritmer. Hoppas ni har fått en liten förståelse vad som kan dölja sig bakom en `array.sort()` och liknande inbyggda funktioner.
