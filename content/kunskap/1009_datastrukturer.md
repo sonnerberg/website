@@ -28,7 +28,7 @@ I artikeln kommer det tas upp tre olika datastrukturer.
 Förutsättning {#pre}
 -------------------------------
 
-Du kan grunderna i Python och objektorientering. Du har jobbat igenom övningen.. länka till exception övningen.
+Du kan grunderna i Python och objektorientering. Du har jobbat igenom övningen [exceptions](kunskap/exceptions).
 
 
 
