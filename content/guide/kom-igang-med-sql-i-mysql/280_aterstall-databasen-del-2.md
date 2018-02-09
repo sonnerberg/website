@@ -23,7 +23,7 @@ Vilka filer behövs köras? {#filer}
 
 Vi utgår från [filen som återskapar databasen efter första delen av guiden](./../aterstall-databasen-del-1), `reset_part1.bash`. Jag tar en kopia av den och modifierar så att den fungerar för både del 1 del och del 2 av guiden.
 
-Här är filerna som behövs, och ordningen de körs i. Ordningen är viktig. man behöver ha koll på sin datamängd.
+Här är filerna som behövs, och ordningen de körs i. Ordningen är viktig. Man behöver ha koll på sin datamängd.
 
 | Fil               | Vad gör den?         |
 |-------------------|----------------------|
