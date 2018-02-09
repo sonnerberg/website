@@ -45,7 +45,7 @@ Då är vi redo.
 Skapa backupfil {#backup}
 ----------------------------------
 
-Låt oss ta en backup på databasen skolan.
+Låt oss ta en backup på databasen skolan. 
 
 ```bash
 $ mysqldump skolan > skolan.sql
