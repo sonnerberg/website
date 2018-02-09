@@ -3,7 +3,7 @@ author: mos
 revision:
     "2018-02-09": "(A, mos) Tillagd för att fokusera på hur man återställer databasen."
 ...
-Återställ databasen
+Återställ databasen (del 1)
 ==================================
 
 Vi skall se hur vi kan återställa databasen genom att köra de SQL-skript som sätter upp databasen, skapa tabellerna, lägger till rader och manipulerar innehållet.
