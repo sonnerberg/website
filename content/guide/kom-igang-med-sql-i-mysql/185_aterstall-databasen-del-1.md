@@ -37,22 +37,23 @@ Det kan se ut så här om du kör varje SQL-skript i terminalen (exklusive utskr
 mysql -uroot -p skolan < setup.sql
 mysql -uuser -ppass skolan < ddl.sql
 mysql -uuser -ppass skolan < dml_insert.sql
-mysql -uuser -ppass skolan < ddl_migrate.sq
+mysql -uuser -ppass skolan < ddl_migrate.sql
 mysql -uuser -ppass skolan < dml_update.sql
 ```
 
 När du har kört igenom alla så kan du dubbelkolla att du har den korrekta lönesumman.
 
 ```text
-$ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
-+------------+
-| Lönesumma  |
-+------------+
-|     330242 |
-+------------+
+$ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     330242 |        19 |
++------------+-----------+
 ```
 
 Låt se hur vi kan samla dessa kommandon till ett bash-skript.
+
 
 
 Ett bash-skript för många kommandon {#bash}
@@ -67,8 +68,8 @@ Grunden till bash-skriptet ser ut så här.
 #
 # Recreate and reset the database to be as after part I.
 #
-echo ">>> Check Lönesumman = 330242."
-mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
+echo ">>> Check Lönesumman = 330242, Kompetens = 19."
+mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
 ```
 
 Den första raden kallas shebang och säger att alla raderna i filen skall exekveras med kommandot bash. Brädgården på rad 2-4 `#` är kommentar och echo skriver ut texten.
@@ -77,12 +78,12 @@ Den sista raden exekverar en SQL-sats i terminalklienten mysql och skriver ut re
 
 ```text
 $ bash reset_part1.bash 
->>> Check Lönesumman = 330242.
-+------------+
-| Lönesumma  |
-+------------+
-|     330242 |
-+------------+
+>>> Check Lönesumman = 330242, Kompetens = 19.
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     330242 |        19 |
++------------+-----------+
 ```
 
 Bra, då lägger vi in samtliga kommandon i skriptet.
@@ -119,8 +120,8 @@ file="dml_update.sql"
 echo ">>> Lönerevision larare ($file)"
 mysql -uuser -ppass skolan < $file > /dev/null
 
-echo ">>> Check Lönesumman = 330242."
-mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
+echo ">>> Check Lönesumman = 330242, Kompetens = 19."
+mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
 ```
 
 Konstruktionen `file="filnamnet"` är en variabel som sedan nås via `$file`.
@@ -138,12 +139,12 @@ Enter password:
 >>> Insert into larare (dml_insert.sql)
 >>> Alter table larare (ddl_migrate.sql)
 >>> Lönerevision larare (dml_update.sql)
->>> Check Lönesumman = 330242.
-+------------+
-| Lönesumma  |
-+------------+
-|     330242 |
-+------------+
+>>> Check Lönesumman = 330242, Kompetens = 19.
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     330242 |        19 |
++------------+-----------+
 ```
 
 Du får gärna modifiera och vidarutveckla ditt bash-skript. Men det räcker om det fungerar som jag visar ovan.

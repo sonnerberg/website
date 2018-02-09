@@ -101,7 +101,7 @@ Då är vi redo för en övning.
 Återställ databasen {#aterstall}
 ----------------------------------
 
-Glöm inte att du i förra artikeln lärde dig hur du [återställer databasen till sitt ursprungliga läge, innan lönerevisionen](./uppdatera-tabellens-struktur#filer). Det är bra om det kör ihop sig med dina kommande UPDATE-satser. Att börja om är alltid en god idé.
+Glöm inte att du i förra artikeln lärde dig hur du [återställer databasen till sitt ursprungliga läge, innan lönerevisionen](./../uppdatera-tabellens-struktur#filer). Det är bra om det kör ihop sig med dina kommande UPDATE-satser. Att börja om är alltid en god idé.
 
 
 
