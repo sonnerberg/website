@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-02-09": "(B, mos) Genomgången, mindre typo."
     "2017-12-29": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 UNION och slå samman tabeller
@@ -55,7 +56,7 @@ FROM
 ) AS l
 WHERE
 	akronym IN ('ala', 'dum')
-ORDER BY akronym
+ORDER BY akronym, l.kalla
 ;
 ```
 
@@ -66,23 +67,24 @@ När jag först gjorde bekantskap med databaser så föll jag för vyer och anv�
 Så här ser det ut om vi kör frågan.
 
 ```text
-->     l.kalla,
-->     akronym,
-->     fornamn,
-->     efternamn,
-->     kon,
-->     kompetens,
-->     lon
--> FROM
--> (
-->     SELECT *, 'src' AS 'kalla' FROM larare
-->     UNION
-->     SELECT *, 'pre' AS 'kalla' FROM larare_pre
--> ) AS l
--> WHERE
-->     akronym IN ('ala', 'dum')
--> ORDER BY akronym, kalla
--> ;
+mysql> SELECT
+    ->     l.kalla,
+    ->     akronym,
+    ->     fornamn,
+    ->     efternamn,
+    ->     kon,
+    ->     kompetens,
+    ->     lon
+    -> FROM
+    -> (
+    ->     SELECT *, 'src' AS 'kalla' FROM larare
+    ->     UNION
+    ->     SELECT *, 'pre' AS 'kalla' FROM larare_pre
+    -> ) AS l
+    -> WHERE
+    ->     akronym IN ('ala', 'dum')
+    -> ORDER BY akronym, l.kalla
+    -> ;
 +-------+---------+---------+------------+------+-----------+-------+
 | kalla | akronym | fornamn | efternamn  | kon  | kompetens | lon   |
 +-------+---------+---------+------------+------+-----------+-------+
