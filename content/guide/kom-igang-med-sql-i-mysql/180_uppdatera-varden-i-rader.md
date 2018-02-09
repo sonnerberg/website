@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2018-02-09": "(B, mos) Flyttade bash-återskapa till eget dokument."
+    "2018-02-09": "(B, mos) Flyttade bash-återskapa till eget dokument, utskrift av sum kompetens."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Uppdatera värden i rader
@@ -98,6 +98,13 @@ Då är vi redo för en övning.
 
 
 
+Återställ databasen {#aterstall}
+----------------------------------
+
+Glöm inte att du i förra artikeln lärde dig hur du [återställer databasen till sitt ursprungliga läge, innan lönerevisionen](./uppdatera-tabellens-struktur#filer). Det är bra om det kör ihop sig med dina kommande UPDATE-satser. Att börja om är alltid en god idé.
+
+
+
 Årlig lönerevision {#revision}
 ----------------------------------
 
@@ -158,7 +165,8 @@ Om du inte kan besvara frågorna, fundera kort över vad du tror hade krävts f�
 
 
 
-### Kontrollera att det blev rätt {#kontroll}
+Kontrollera att det blev rätt {#kontroll}
+-----------------------------------------
 
 Se till att du har samma värden på lönerna som jag har, det underlättar i kommande övningar om du får samma svar som jag fått.
 
@@ -179,9 +187,14 @@ mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens FROM larare ORDER
 8 rows in set (0.00 sec)
 ```
 
+Du kan även summera lönesumman och kompetensen för att få en snabb överblick att det blivit rätt.
 
-
-Kontrollera filen {#filen}
-----------------------------------
-
-Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser, i en och samma sekvens, i filen du jobbar i.
+```sql
+mysql> SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     330242 |        19 |
++------------+-----------+
+1 row in set (0.00 sec)
+```
