@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-02-09": "(B, mos) Flyttade bash-återskapa till eget dokument."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Uppdatera värden i rader
@@ -180,38 +181,7 @@ mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens FROM larare ORDER
 
 
 
-### Kontrollera filerna {#filer}
+Kontrollera filen {#filen}
+----------------------------------
 
-Det sista du gör är att dubbelkolla att du nu kan återskapa och köra allt via filerna i följande ordning.
-
-1. `ddl.sql`
-2. `dml_insert.sql`
-3. `ddl_migrate.sql`
-4. `dml_update.sql`
-
-Det kan se ut så här om du gör det i terminalen (exklusive utskrifter), inklusive en kontroll att lönesumman är korrekt efter lönerevisionen.
-
-```text
-$ mysql -uuser -ppass skolan < ddl.sql
-$ mysql -uuser -ppass skolan < dml_insert.sql
-$ mysql -uuser -ppass skolan < ddl_migrate.sq
-$ mysql -uuser -ppass skolan < dml_update.sql
-$ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
-+------------+
-| Lönesumma  |
-+------------+
-|     330242 |
-+------------+
-```
-
-Om du av någon anledning hamnar i trångomål och du vill återställa din databas så kan du även göra det med följande "enradskommando" i terminalen i form av en foor-loop i bash.
-
-```text
-$ for f in ddl dml_insert ddl_migrate dml_update; do mysql -uuser -ppass skolan < $f.sql; done
-$ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma' FROM larare;"
-+------------+
-| Lönesumma  |
-+------------+
-|     330242 |
-+------------+
-```
+Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser, i en och samma sekvens, i filen du jobbar i.
