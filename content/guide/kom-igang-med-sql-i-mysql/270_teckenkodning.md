@@ -8,11 +8,11 @@ Teckenkodning
 
 Låt oss dyka ned i teckenkodning med character set och collation. Det handlar om hur en sträng lagras och hur strängen tolkas när den används vid sortering.
 
+Spara den SQL-kod du skriver i filen `test_encoding.sql`.
+
 En installation av databasen MySQL har (kan ha) en förvald teckenkodning på systemnivå, databasnivå, tabell och kolumnnivå. Den förvalda teckenkodningen kan skilja sig mellan olika miljöer. Det är därför att rekommendera, om det så krävs, att man skapar sina tabeller och explicit anger vilken teckenkodning som skall användas per tabell och/eller per kolumn.
 
 Låt oss se ett fall där det är absolut nödvändigt att ange teckenkodningen.
-
-Spara den SQL-kod du skriver i filen `test_encoding.sql`.
 
 Innan du börjar kan du ta en kort titt i [manualen om teckenkodning](https://dev.mysql.com/doc/refman/5.7/en/charset-mysql.html).
 

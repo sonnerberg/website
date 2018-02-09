@@ -101,7 +101,7 @@ Här kan du se hur mitt skript ser ut, du kan använda det rakt av och det bör 
 # Recreate and reset the database to be as after part I.
 #
 echo ">>> Reset skolan to after part 1"
-echo ">>> Recreate the database"
+echo ">>> Recreate the database (as root)"
 mysql -uroot -p skolan < setup.sql > /dev/null
 
 file="ddl.sql"
@@ -133,7 +133,7 @@ När jag kör mitt program får jag följande utskrift, du bör få motsvarande.
 ```text
 $ bash reset_part1.bash 
 >>> Reset skolan to after part 1
->>> Recreate the database
+>>> Recreate the database (as root)
 Enter password: 
 >>> Create tables (ddl.sql)
 >>> Insert into larare (dml_insert.sql)
