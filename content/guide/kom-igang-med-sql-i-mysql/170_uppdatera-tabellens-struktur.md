@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-02-09": "(B, mos) Mer text om hur återskapa."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Uppdatera tabellens struktur
@@ -9,6 +10,11 @@ Uppdatera tabellens struktur
 _Oops_, vi glömde ett fält i tabellen lärare. Vi vill nämligen lagra lärarens kompetens som en siffra mellan 1-10.
 
 Spara det du nu gör i filen `ddl_migrate.sql`.
+
+
+
+ALTER TABLE {#alter}
+---------------------------------
 
 Ofta vill man kunna ändra befintlig tabellstruktur och ta bort, modifiera eller lägga till nya kolumner i en tabell. Man vill göra detta när databasen redan innehåller rader som man inte vill ta bort. Detta görs med kommandot `ALTER TABLE`.
 
@@ -67,4 +73,36 @@ mysql> SHOW COLUMNS FROM larare;
 
 Vi kan se vår nya kolumn kompetens längst ned där det står att den inte får vara NULL och defaultvärdet är 1.
 
-Som en sista åtgärd så kontrollerar du att du kan återskapa din struktur genom att först köra `ddl.sql` för att återskapa tabellen, följt av `dml_insert.sql` för att lägga in raderna och till slut `ddl_migrate.sql`. Du skall nu återigen ha en tabell med samtliga lärare, nu med en kompetens av 1.
+
+
+Kontrollera att filerna fungerar {#filer}
+-----------------------------------
+
+Som en sista åtgärd så kontrollerar du att du kan återskapa din struktur genom att först köra `ddl.sql` för att återskapa tabellen, följt av `dml_insert.sql` för att lägga in raderna och till slut `ddl_migrate.sql` som lägger till kompetensen. Du skall därefter ha en tabell med samtliga lärare som har kompetensen 1.
+
+Det är alltså följande kommandon du skall köra.
+
+```text
+mysql -uuser -ppass skolan < ddl.sql
+mysql -uuser -ppass skolan < dml_insert.sql
+mysql -uuser -ppass skolan < ddl_migrate.sql
+```
+
+Du kan dubbelkolla att du har rätt innehåll genom att summera lönesumman och kompetensen med följande kommando.
+
+```text
+mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
+```
+
+Det kan se ut så här när du kör det.
+
+```text
+$ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     245000 |         8 |
++------------+-----------+
+```
+
+Bra, nu kan du återställa databasen till detta läget. Det är bra inför nästa steg då du skall börja göra uppdateringar i databasen.
