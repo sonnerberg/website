@@ -50,11 +50,13 @@ Titta på följande:
 
 1. Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
 
-2. [What on Earth is Recursion?](https://www.youtube.com/watch?v=Mv9NEXX1VHc) förklarar rekursion.
+1. [CS50 Algorithms](https://www.youtube.com/watch?v=U9o49qwa6hk&t=2743s) kolla från tidstämpel fram till 55 min.
 
-3. [Getting sorted](https://www.youtube.com/watch?v=kgBjXUE_Nwc) visualiserar olika sorteringsalgoritmer och går igenom komplexitet.
+1. [What on Earth is Recursion?](https://www.youtube.com/watch?v=Mv9NEXX1VHc) förklarar rekursion.
 
-4. [Quick Sort](https://www.youtube.com/watch?kgBjXUE_Nwc&v=XE4VP_8Y0BU) visualiserar quick sort.
+1. [Getting sorted](https://www.youtube.com/watch?v=kgBjXUE_Nwc) visualiserar olika sorteringsalgoritmer och går igenom komplexitet.
+
+1. [Quick Sort](https://www.youtube.com/watch?kgBjXUE_Nwc&v=XE4VP_8Y0BU) visualiserar quick sort.
 
 
 
