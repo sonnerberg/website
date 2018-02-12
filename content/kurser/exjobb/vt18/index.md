@@ -20,7 +20,7 @@ Arbeten {#arbeten}
 
 Fokuset ligger på följande delar: Att jobba i ett distribuerat team på ett projekt. Jobba mot en kund i en annan tidszon. Här tänker jag undersöka för och nackdelar med detta sätt att jobba och undersöka vilka fallgropar som kan uppkomma. Hitta metoder som fungerar för att jobba distribuerat och internationellt.   
 
-Peder Tornberg
+Peder Tornberg (torbjörn) (khe)
 
 
 
@@ -28,7 +28,7 @@ Peder Tornberg
 
 Målet med undersökningen är att ge webbutvecklingsföretag en inblick i om FaaS/Serverless kan hjälpa de att upp nå bättre prestanda och bättre tillgänglighet vid högre belastning på specifika funktioner.
 
-Niclas Söderkvist
+Niclas Söderkvist (zeldah)
 
 
 
@@ -55,15 +55,15 @@ Jag kommer att undersöka hur man kan öka interaktion på sin hemsida. Detta ko
 * Hur påverkar gamification användandet av en hemsida?
 * Hur påverkar en bra design användandet av en hemsida?
 
-Nicklas Envall
+Nicklas Envall (lew) (torbjörn)
 
 
 
 **Interaktiv tidslinje**
 
-Skapa en visuellt intressant ochlevande/dynamisk tidslinje i webbformat.
+Skapa en visuellt intressant och levande/dynamisk tidslinje i webbformat.
 
-Karl Brisland
+Karl Brisland (khe)
 
 
 
@@ -85,9 +85,9 @@ Marcus Gustafsson
 
 **Web scraping**
 
-Det jag kommer att undersöka är hurweb scraping kan användas för att samla in information till sökfunktionen. Detta kommer att användas då inte all info som behövs går att komma åt via api:er.
+Det jag kommer att undersöka är hur web scraping kan användas för att samla in information till sökfunktionen. Detta kommer att användas då inte all info som behövs går att komma åt via api:er.
 
-Philip Klingzell
+Philip Klingzell (zeldah)
 
 
 
@@ -95,7 +95,7 @@ Philip Klingzell
 
 Jag ska även utreda hur man på bästa sätt kan presentera information av sökfunktionen samt hur den ska upplevas med hjälp av användargränssnitt och användarupplevelse. 
 
-Ara Nour Bakhsh
+Ara Nour Bakhsh (lew)
 
 
 
@@ -111,7 +111,7 @@ Anders Nygren
 
 Parametrar från olika informationskällor behöver samlas in för att minska behovet av dyra investeringar i elnätet, vilket enbart behövs under korta stunder. (kravhantering)
 
-Gunvor Nilsson
+Gunvor Nilsson (zeldah?)
 
 
 
@@ -119,4 +119,4 @@ Gunvor Nilsson
 
 Hur visualiseras data på bästa sätt? Tabeller? Olika typer av grafer? Vad passar bäst för vilkentyp av data och vad bör man ta i beaktande? Vilka usabilityaspekter finns att ta hänsyn till?
 
-Tobias Almroth
+Tobias Almroth (khe)

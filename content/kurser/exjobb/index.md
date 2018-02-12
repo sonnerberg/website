@@ -3,6 +3,7 @@ title: exjobb
 author:
     - mos
 revision:
+    "2018-02-12": "(G, mos) 3v i samband med topic."
     "2017-12-18": "(F, mos) In roller, bort nästan-dbwebb-kurs."
     "2017-12-12": "(E, mos) Enskilt eller 2 och 2. Aktiv i sökande efter kund."
     "2017-11-24": "(D, mos) Stycke om arbetsgången, ladok, studieplan och plagiering."
@@ -158,6 +159,8 @@ Rekommenderad studieplan {#studieplan}
 -----------------------------------------------------
 
 Det finns en rekommenderad studieplan för kursen som ligger i studieplanen för [Webbprogrammering termin 4](program/webbprogrammering/studieplan/termin4).
+
+För att klara 3-veckorsuppropet så måste man lämna in topic enligt tidplanen.
 
 
 
