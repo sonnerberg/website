@@ -117,7 +117,7 @@ Vi lär oss om UML diagram och enhetstester.
 
 ###Kmom04: Datastrukturer {#kmom04}
 
-TBA.
+I det här kursmomentet övar vi oss på datastrukturer och felhantering med exceptions. En datastruktur är en struktur för organisering av datan.
 <!-- [Regex, regexp eller reguljära uttryck](https://sv.wikipedia.org/wiki/Regulj%C3%A4ra_uttryck) används för att hantera strängmatchning på olika sätt. Vi ska även utöka me-sidan med en databas. -->
 
 [Instruktion till kursmoment 04](kurser/oopython-v2/kmom04).
@@ -132,9 +132,10 @@ Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika
 
 
 
-###Kmom06: Övriga algoritmer och rekursion {#kmom06}
+###Kmom06: Analysera och förbättra kod {#kmom06}
 
-TBA.
+Vi ska öva på att läsa och förstå kod. När vi har gjort det ska vi även förbättra koden genom att skriva om den så den exekverar snabbare.
+
 
 [Instruktion till kursmoment 06](kurser/oopython-v2/kmom06).
 

@@ -1,21 +1,19 @@
 ---
 author: lew
 revision:
+    "2018-02-12": (B, aar) First version v2.
     "2017-11-10": (PB1, mos) Utkast till v2.
     "2017-02-14": (A, lew) First version.
 ...
-Kmom06: Bokningssystem
+Kmom06: Analysera och Förbättra kod
 ====================================
 
-[WARNING]
-**Kursutveckling pågår inför vt18.**
-[/WARNING]
 
-Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler antal klasser än tidigare och tanken är att öva på att interagera mellan klasser och hantera flera klasser samtidigt i ett terminalprogram.
+Vi ska öva på att läsa och förstå kod. När vi har gjort det ska vi även förbättra koden genom att skriva om den så den exekverar snabbare.
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom06/index_top.jpg?w=w2 caption="Ett annat sorts bokningssystem."]
+[FIGURE src=/image/oopython/kmom06/improve.png?w=w2 caption="För upptagen för att förbättra?"]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -32,14 +30,15 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
-    * Ch 6 - Datastructures  
+Inget att läsa.
 
 
 
 ###Artiklar {#artiklar}
 
-Det finns inga extra artiklar.
+1. [The secrets to learning code](http://blog.teamtreehouse.com/the-secret-to-learning-code).
+
+1. [Why I Love Reading Other People’s Code And You Should Too](https://www.skorks.com/2010/05/why-i-love-reading-other-peoples-code-and-you-should-too/).
 
 
 
@@ -47,7 +46,7 @@ Det finns inga extra artiklar.
 
 Titta på följande:
 
-
+1. [How to read code](https://www.youtube.com/watch?v=-KgU5sxGtuM).
 
 ###Lästips {#lastips}
 
@@ -72,18 +71,21 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Bokningssystem](uppgift/bokningssystem)"  
+1. Gör uppgiften "[Förbättra exekeringstid](uppgift/improve-exectime)"  
 
-2. Skapa din me-sida version 6. Fördjupa dig i Bootstrap och Flask. Gör uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext. 
+1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
-3. Fyll på redovisning.html med kursmomentets redovisningstext.
-
+```bash
+# Ställ dig i kurskatalogen
+dbwebb publish flask
+```
 
 
 ###Extra {#extra}
 
 Det finns inga extrauppgifter.
 
+<!--Big O analys av deras kod!!!! kanske som vanlig uppgift om det går snabbt för dem med den smo finns -->
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -95,7 +97,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Gick det bra att hantera många klasser?
-* Vad gjorde du för uppdateringar av me-sidan?
-* Kunde du använda kunskaper från förra Python-kursen?  
-* Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
+* Läste något av läsanvisningarna? Hade du nytta av dem när du löste uppgiften?
+
+* Vad var din metod för att förstå och förbättra koden?
+
+* Vad tycker du om denna typen av uppgifter?
+
+* Hur var uppgiften svårighet- och tidsmässigt?
