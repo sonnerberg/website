@@ -85,7 +85,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Gör övningen [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter). Spara eventuella testfiler i `me/kmom04/tabeller`.
 
-1. Gör övningen [Login med OAuth](kunskap/login-med-oauth). Spara eventuella testfiler i `me/kmom04/oauth`.
+1. Gör övningen [Login med JWT](kunskap/login-med-jwt).
 
 <!-- 1. Läs igenom artikeln och gör övningarna i "[Mithril och CRUD](kunskap/mithril-och-crud)". -->
 

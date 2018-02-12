@@ -32,6 +32,8 @@ Börja med att kopiera din lager app från kmom01, om du inte gjorde det i övni
 cp kmom01/lager1/* kmom02/lager2/
 ```
 
+Använd lager [API:t](https://lager.dbwebb.se) dokumentationen och speciellt sektionen om order. Här kan du hämta ut ordern och alla orderrader. När du ska uppdatera lagersaldot använder du dig av `PUT` HTTP-metoden för produkterna.
+
 
 
 Krav {#krav}

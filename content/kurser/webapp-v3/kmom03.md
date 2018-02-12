@@ -132,4 +132,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vilka faktorer spelar in när du ska designa ett formulär för mobila enheter?
 * Hur känns övergången från vanilla JavaScript till ett JavaScript ramverk?
 * Är du nöjd med din lager app så här långt?
+* Gjorde du extrauppgifterna i lager appen?
 * Vilken är din TIL för detta kmom?

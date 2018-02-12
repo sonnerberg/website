@@ -6,9 +6,9 @@ revision:
 ...
 Lager appen del 3
 ==================================
-[FIGURE src=image/webapp/pick-list.png?w=c5 class="right"]
+[FIGURE src=image/webapp/truck.jpg?w=c5 class="right"]
 
-I kursmoment 1 skapade vi grunden för får lager app. Vi ska i detta kursmoment förbättra strukturen på både vår JavaScript kod och CSS kod. Vi ska bygga en plock lista vy där lagerarbetarna får en bra översikt över vart produkterna från en order finns. När varorna är plockade ska status ändras för ordern och lagersaldo ska minskas.
+I kursmoment 1 & 2 skapade vi en lagerföringslista och en plocklista för lagerarbetarna. I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskapen från övningarna. Vi skriver appen i mithril och använder vår kunskap om att skapa lättanvända formulär för att snabbt kunna göra inleveranser på produkter.
 
 
 
@@ -18,42 +18,33 @@ I kursmoment 1 skapade vi grunden för får lager app. Vi ska i detta kursmoment
 
 Förkunskaper {#forkunskaper}
 -----------------------
-
+Du har gjort övningarna [Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-v2) och [Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular).
 
 
 Introduktion {#intro}
 -----------------------
-Börja med att kopiera din lager app från kmom01, så har du nått att utgå ifrån.
-
-```bash
-# stå i me-katalogen
-cp kmom01/lager1/* kmom02/lager2/
-```
+En inleverans är när lagret får varor levererade och vi ska underlätta för lagerarbetarna att snabbt ta emot varor. I lager [API:t](https://lager.dbwebb.se) finns en datatyp `deliveries` där alla inleveranser ska lagras och dessutom ska du uppdatera lagersaldot för den levererade produkten.
 
 
 
 Krav {#krav}
 -----------------------
-1. Strukturera dina JavaScript filer med webpack, så bara en fil inkluderas i `index.html`.
+1. Din app ska använda sig av JavaScript ramverket mithril.
 
-1. Strukturera din CSS kod, så du har olika moduler för dina komponenter, gärna med hjälp av en CSS preprocessor (less eller sass).
+1. Använd dina kunskapar i att göra ett lättanvänd formulär där man kan göra inleverans av en produkt.
 
-1. Skapa en vy där lagerarbetarna ser alla ordrar redo för att packas. Från order-vyn kan man ta sig till plocklista vyn.
+1. När formuläret skickas ska det skapas en inleverans i API:t.
 
-1. Plocklista vyn visar alla varor i en order och vart dessa finns.
+1. Lagersaldot för produkten ska ökas med den levererade mängden.
 
-1. När varorna är plockade ska det finnas möjlighet att byta status för ordern med en knapp.
-
-1. Gör ett medvetet val om du vill använda flat design eller ej.
-
-1. Navigationen ska tydligt visa vilken vy användaren är i.
+1. Använd ett `select`-element för att välja produkten som har levererats. Designa `select`-elementet så det passar in i resten av stilen för formuläret.
 
 1. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate lager2
-dbwebb publish lager2
+dbwebb validate lager3
+dbwebb publish lager3
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
@@ -62,7 +53,9 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-Det finns inga extrauppgifter.
+* Gör det möjligt att skapa en ny produkt i inleverans formuläret.
+
+* Gör ett autocomplete-formulärfält, som fyller i befintliga produkter under tiden användaren skriver.
 
 
 
