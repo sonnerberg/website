@@ -33,7 +33,7 @@ Gå till din kurskatalog i terminalen.
 dbwebb create lab3
 ```
 
-Materialet till labben ligger nu i din kurskatalog i `me/kmom05/lab4` enligt följande.
+Materialet till labben ligger nu i din kurskatalog i `me/kmom05/lab3` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -55,18 +55,18 @@ Krav {#krav}
 
 1. Gör de uppgifter som finns i labben `instruction.html`.
 
-2. Skriv dina lösningar, på rätt plats, i filen `answer.py`.
+1. Skriv dina lösningar, på rätt plats, i filen `answer.py`.
 
-3. Testkör din labb genom att köra filen `answer.py`.
+1. Testkör din labb genom att köra filen `answer.py`.
 
-4. Ladda upp och validera labben genom att göra följande kommando i kurskatalogen i terminalen.
+1. Ladda upp och validera labben genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
 dbwebb validate lab3
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -87,7 +87,3 @@ Testa att köra labben i debuggern och stega igenom hur den validerar dina svar.
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
