@@ -9,7 +9,7 @@ Kmom06: Analysera och Förbättra kod
 ====================================
 
 
-Vi ska öva på att läsa och förstå kod. När vi har gjort det ska vi även förbättra koden genom att skriva om den så den exekverar snabbare.
+Vi ska öva på att läsa och förstå kod. Hur förstår vi koden på bästa sätt? Vad är det som tar tid i koden? Kan vi förbättra koden?
 
 <!--more-->
 
@@ -96,6 +96,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
+
+* Vad gör koden?
 
 * Läste något av läsanvisningarna? Hade du nytta av dem när du löste uppgiften?
 
