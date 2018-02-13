@@ -47,13 +47,30 @@ Skapa backupfil {#backup}
 
 Låt oss ta en backup på databasen skolan. 
 
-```bash
-$ mysqldump skolan > skolan.sql
+```text
+mysqldump skolan > skolan.sql
 ```
 
 Nu finns alla SQL-kommandon som kan återskapa databasen skolan i filen `skolan.sql`.
 
 Spara filen som en backup, såna är bra att ha.
+
+
+
+Alltid radbrytningar alá Unix {#radbryt}
+----------------------------------
+
+När du använder konstruktionen `> skolan.sql` så innebär det att resultatfilen skapas med inflytande av det operativsystem du jobbar på. Konstruktionen kallas _output redirection_ och skapar en fil med innehållet som skrivs ut av kommandot. När du är på Windows kan det innebära att din backupfil skapas med Windows stil radbrytningar och vi vill ha Unix stil radbrytningar.
+
+När du är på Windows kan du istället skapa backup-filen på följande sätt.
+
+```text
+# Båda ger samma resultat
+mysqldump --result-file=skolan.sql skolan
+mysqldump -r skolan.sql skolan
+```
+
+Det ger att du får Unix stil NL som radbrytning och undviker eventuella problem med CRLF Windows stil radbrytning.
 
 
 
