@@ -123,7 +123,7 @@ function usage
 ""
 "Options:"
 "  --help, -h     Print help."
-"  --version, -h  Print version."
+"  --version, -v  Print version."
     )
     
     printf "%s\n" "${txt[@]}"
