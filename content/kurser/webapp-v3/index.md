@@ -139,9 +139,9 @@ I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort
 
 ###Kmom04: Autentisering med JWT {#kmom04}
 
-Än så länge har vi bara hämtat data från API'er. I detta kursmoment bygger vi en app som hämtar, skapar, uppdaterar och tar bort data med hjälp av ett API.
+Vi fortsätter med Lager appen och lägger till en funktion för att skapa fakturor utifrån en order. Alla ska inte kunna skapa fakturor så innan vi skapar faktura funktionen skapar vi inloggning och tittar på JSON Web Tokens för autentisering.
 
-Vi tittar på hur vi kan optimera formulär för att fungera bra på mobila enheter genom att använda HTML5 input typer.
+När man skapar en faktura är det bra att ha snygga och responsiva tabeller. Så kursmomentets GUI-komponent är just tabeller och hur vi optimerar dessa för mobila enheter.
 
 [Instruktion till kursmoment 04](kurser/webapp-v3/kmom04).
 
@@ -149,7 +149,7 @@ Vi tittar på hur vi kan optimera formulär för att fungera bra på mobila enhe
 
 ###Kmom05: Native {#kmom05}
 
-Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på riktigt för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
+Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på 'riktigt' för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
 
 [Instruktion till kursmoment 05](kurser/webapp-v3/kmom05).
 

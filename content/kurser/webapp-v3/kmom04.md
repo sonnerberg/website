@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+    - mos
+    - efo
 revision:
+  "2017-02-13": (D, efo) Förberedelser för webapp-v3.
   "2017-03-17": (C, efo) Förberedelser för webapp-v2.
   "2015-12-04": (B, mos) lade till läsanvisningar i boken samt rev c av artikeln.
   "2015-11-04": (A, mos) Första utgåvan för kursen.
@@ -12,7 +15,9 @@ Kmom04: CRUD
 **Kursutveckling pågår.**
 [/WARNING]
 
-Vi har jobbat en del mot olika api'er, men än så länga har vi bara använt `GET` anrop för att hämta data. I detta kursmoment skall vi kolla på de tre andra anrop: `POST`, `PUT` och `DELETE`. CRUD står för Create, Read, Update, Delete och är de fyra HTTP anrop som görs i bakgrunden när vi skapar, läsar, redigerar och tar bort data.
+Vi fortsätter med Lager appen och lägger till en funktion för att skapa fakturor utifrån en order. Alla ska inte kunna skapa fakturor så innan vi skapar faktura funktionen skapar vi inloggning och tittar på JSON Web Tokens för autentisering.
+
+När man skapar en faktura är det bra att ha snygga och responsiva tabeller. Så kursmomentets GUI-komponent är just tabeller och hur vi optimerar dessa för mobila enheter.
 
 
 
@@ -49,6 +54,8 @@ Läs följande:
 ###Artiklar {#artiklar}
 
 Läs följande artiklar för att få bakgrunden till övningarna.
+
+1. Bekanta dig med [JSON Web Tokens](https://jwt.io).
 
 <!-- 1. Läs igenom artikeln från Jonatan och Henrik om en [djungel av ramverk för JavaScript](article/Henrik_Jonatan_Article_rev_c.pdf).
 
@@ -115,6 +122,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka utmaningar finns med tabeller i mobila enheter?
-* Vilka fördelar finns med OAuth och inloggning via externa tjänster?
 * Vilka fördelar finns med JWT i jämförelse med sessions inloggning?
+* Hur använde du din kunskap från tidigare kursmoment för att göra inloggningsformuläret?
 * Vilken är din TIL för detta kmom?
