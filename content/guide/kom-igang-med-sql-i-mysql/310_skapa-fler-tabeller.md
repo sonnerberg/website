@@ -168,9 +168,11 @@ För att lösa detta så uppdaterar vi tabellen lärare och sätter samma charse
 
 ```sql
 --
--- Update table larare to use same charset and collation.
+-- Update table larare and larare_pre to use same charset
+-- and collation.
 --
 ALTER TABLE larare CONVERT TO CHARSET utf8 COLLATE utf8_swedish_ci;
+ALTER TABLE larare_pre CONVERT TO CHARSET utf8 COLLATE utf8_swedish_ci;
 ```
 
 Nu går det åter att skapa ett foreign key constraint mellan tabellerna.
