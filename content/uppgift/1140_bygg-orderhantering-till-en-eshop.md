@@ -10,9 +10,10 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-11": (A, mos) Första utgåvan.
+    "2018-02-13": "(B, mos) Genomgången, förtydligad."
+    "2018-01-11": "(A, mos) Första utgåvan."
 ...
-Bygg klienter till en Eshop med CRUD mot lagrade procedurer
+Bygg orderhantering till en Eshop
 ==================================
 
 Du har utfört en ER-modellering av en databas för en Eshop och du har skapat en databas som motsvarar modellen. Du har byggt en terminalklient och en webbklient mot databasen.
@@ -60,7 +61,7 @@ Krav {#krav}
 
 1. Försäkra dig om att du kan återställa databasen till sitt ursprungsläge, genom att köra SQL-filerna i `sql/eshop`. Du har filen `setup.sql` för att skapa databasen och användaren. Du har `ddl.sql` för att skapa tabeller och `insert.ddl` för att fylla tabellerna med innehåll.
 
-1. När du skapar lagrade procedurer och triggers så lägger du dem i `sql/eshop/ddl.sql`.
+1. All kod för att skapa tabeller, vyer, lagrade procedurer, triggers, etc lägger du dem i `sql/eshop/ddl.sql`.
 
 1. Dina klienter skall klara de krav som fanns i föregående uppgift "[Skapa grunden till en Eshop](uppgift/skapa-grunden-till-en-eshop)". Det är utgångsläget.
 
@@ -76,11 +77,11 @@ Krav {#krav}
 
 1. Varje gång en orderrad skapas/raderas/uppdateras så skall det loggas i loggtabellen med relevant information (implementera med trigger).
 
-1. I din terminalklient (`cli.js`), lägg till ett kommando `order` som visar en översikt över de ordrar som finns.
+1. I din terminalklient lägg till ett kommando `order` som visar en översikt över de ordrar som finns.
 
 1. I din terminalklient, lägg till ett kommando `order <id>` som visar detaljer om vald order, inklusive dess orderrader.
 
-1. I din terminalklient, lägg till ett kommando `log` som visar en utskrift från loggtabellens tio senaste inlagda rader. (Även `log <num rows>`)
+1. I din terminalklient, lägg till ett kommando `log` som visar en utskrift från loggtabellens tio senaste inlagda rader. 
 
 1. Ta en uppdaterad backup av databasen med mysqldump och spara i `sql/eshop/backup.sql`.
 
@@ -101,6 +102,10 @@ Extrauppgift {#extra}
 Gör följande om du har tid och ro.
 
 1. Lägg till CRUD för produkter, produktkategorier och kunder.
+
+1. Gör så att webbklienten kan visa innehållet i loggtabellen.
+
+1. I terminal, gör kommandot `log <antal rader>` som ger möjlighet att begränsa hur många rader som skrivs ut från loggtabellen, man vill se de senaste raderna.
 
 1. Jobba på din kodstruktur så att du bli nöjd.
 

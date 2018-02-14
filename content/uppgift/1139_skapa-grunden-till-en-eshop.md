@@ -9,7 +9,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-02-12": "(B, mos) Förenklad, utgår från Skapa en Eshop med två klienter."
+    "2018-02-13": "(B, mos) Förenklad, utgår från Skapa en Eshop med två klienter."
     "2018-01-09": "(A, mos) Första utgåvan."
 ...
 Skapa grunden till en Eshop

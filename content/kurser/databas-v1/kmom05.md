@@ -68,9 +68,10 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa grunden till en Eshop](uppgift/skapa-grunden-till-en-eshop)" som låter dig implementera din ER-modell och skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom05/eshop2`.
 
-1. Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`.
+1. Lös (minst) en av följande uppgifter (den första är troligen aningen enklare):
+    * Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`.
 
-<!-- Eventuell extrauppgift om CRUD på order, orderrader, får se om uppgiften kommer i kmom06 -->
+    * Lös uppgiften "[Bygg orderhantering till en Eshop](uppgift/bygg-orderhantering-till-en-eshop)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`.
 
 
 
@@ -86,7 +87,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Gick det bra att komma igång med lagrade procedurer och triggers?
 * Skriv ett kort stycke (3-5 meningar) om lagrade procedurer och om triggers där du förklarar begreppen (fördel, nackdel, användningsområde) för en som inte är insatt.
 * Hur är din syn på att "programmera" på detta viset i databasen, jämför med traditionell SQL som exponeras i JavaScript-koden?
-* Hur gick det att utföra uppgiften med din Eshop? 
+* Hur gick det att utföra uppgiften med din Eshop, vilken/vilka gjorde du? 
 * Vilken är din TIL för detta kmom?
 
 <!--

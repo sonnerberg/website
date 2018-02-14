@@ -10,7 +10,8 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-11": (A, mos) Första utgåvan.
+    "2018-02-13": "(B, mos) Bytte fokus från orderhantering till kund/produkt."
+    "2018-01-11": "(A, mos) Första utgåvan."
 ...
 Bygg klienter till en Eshop med CRUD mot lagrade procedurer
 ==================================
