@@ -95,9 +95,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
+<!-- Ta bort till nästa kursrunda -->
+
 Dessa uppgifter är extrauppgifter och görs om du har tid och kraft över.
 
-1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`.
+1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`. (En liknande uppgift kommer i nästa kursmoment).
 
 
 

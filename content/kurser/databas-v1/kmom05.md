@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-02-13": (B, mos) Ny uppgift, skapa grunden till eshop, flyttad från kmom04.
     "2018-01-11": (A, mos) Första utgåvan.
 ...
 Kmom05: Procedur och trigger
@@ -65,7 +66,9 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Kopiera din befintliga lösning och fortsätt jobba i `me/kmom05/eshop2`.
+1. Gör uppgiften "[Skapa grunden till en Eshop](uppgift/skapa-grunden-till-en-eshop)" som låter dig implementera din ER-modell och skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom05/eshop2`.
+
+1. Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`.
 
 
 
