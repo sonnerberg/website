@@ -8,10 +8,6 @@ revision:
 Kmom05: Webbtjänst med RESTful API
 ==================================
 
-[WARNING]
-**Genomgång av kursmomentet är ännu ej gjord inför VT18.**
-[/WARNING]
-
 Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i bash och vi kan bygga servrar med Node.js. Låt oss fortsätta titta på serverprogrammering i Node.js och se hur en mer renodlad webbtjänst kan se ut och fungera.
 
 Du kommer få en färdig server, skriven i Node.js, och ett RESTful API till servern. Servern implementerar en [*maze*](https://en.wikipedia.org/wiki/Maze). Servern är färdig och du kan testköra den via kommandot curl.
@@ -97,7 +93,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 <!--
 VT18 ÄNDRA TILL GENERELL LAB MED NODE
-Gör laborationen [Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler) för att träna på inbyggda moduler i Node.js. 
+Gör laborationen [Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler) för att träna på inbyggda moduler i Node.js.
 -->
 
 
