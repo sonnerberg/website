@@ -9,7 +9,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-02-12":" (B, mos) Förenklad, utgår från Skapa en 'Eshop med två klienter'."
+    "2018-02-12": "(B, mos) Förenklad, utgår från Skapa en Eshop med två klienter."
     "2018-01-09": "(A, mos) Första utgåvan."
 ...
 Skapa grunden till en Eshop
@@ -47,6 +47,8 @@ Tänk på att ha en god kodstruktur.
 
 Se till att du alltid kan återskapa databasen med sitt innehåll.
 
+Du har tidigare kod som du kan utgå ifrån. Kopiera den för att komma igång snabbt.
+
 
 
 Krav {#krav}
@@ -57,8 +59,6 @@ Krav {#krav}
 1. SQL-filer lägger du i `sql/eshop`. Skapa filen `setup.sql` för att skapa databasen och användaren. Skapa filen `ddl.sql` där du samlar all kod som skapar tabeller och vyer.
 
 1. Skapa filen `insert.sql` med SQL-kod för att lägga in 5 produkter, 2 produktkategorier och 3 kunder.
-
-1. Ta en backup av databasen med mysqldump och spara i `sql/eshop/backup.sql`.
 
 1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Eventuell övrig kod lägger du i moduler under katalogen `src/`. Terminalprogrammet skall startas med `node cli.js`.
 
@@ -71,6 +71,8 @@ Krav {#krav}
 1. I webbklienten, skapa routen `/eshop/index` som visar en välkomstssida med header, footer och navigering mellan sidorna. Alla sidor skall ha samma sidlayout och det skall gå att klicka sig fram mellan sidorna, via navigeringen.
 
 1. I webbklienten, skapa en sida `/eshop/products` som visar en tabell över de produkter som finns.
+
+1. Ta en backup av databasen med mysqldump och spara i `sql/eshop/backup.sql`.
 
 1. Validera din kod.
 

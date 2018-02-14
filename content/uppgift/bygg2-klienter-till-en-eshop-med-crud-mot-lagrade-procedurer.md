@@ -17,9 +17,7 @@ Bygg klienter till en Eshop med CRUD mot lagrade procedurer
 
 Du har utfört en ER-modellering av en databas för en Eshop och du har skapat en databas som motsvarar modellen. Du har byggt en terminalklient och en webbklient mot databasen.
 
-Du skall nu uppdatera dina klienter för att jobba med CRUD mot databasens tabeller. Man skall kunna lägga till, ta bort, redigera och visa raderna.
-
-Du skall uppdatera dina klienter och du skall jobba med lagrade procedurer och triggers.
+Du skall nu uppdatera dina klienter för att jobba med CRUD mot ordertabellerna.
 
 Du kan utföra denna uppgift enskilt, eller i samma grupp som utförde ER-modelleringen. 
 
@@ -68,15 +66,21 @@ Krav {#krav}
 
 1. Bygg din nya databaskod som lagrade procedurer, tänk API mot databasdelen.
 
-1. Bygg CRUD för kunder, produkter och produktkategorier. Via webbinterfacet kan man utföra CRUD på dem och lägga till, redigera och ta bort rader samt visa tabellernas innehåll.
+1. I din webbklient, skapa CRUD för orderhantering. Via webbinterfacet kan man utföra CRUD på ordrar och dess innehåll.
 
-1. Din databas skall innehålla en generell loggtabell där man kan logga viktiga händelser för information.
+1. Man skall kunna skapa en ny order, uppdatera den och ta bort den. Man skall kunna se vilka ordrar som finns.
 
-1. Skapa triggers som loggar till din loggtabell, varje gång en produkt skapas eller raderas.
+1. Varje order kan innehålla en beställning av 0 eller flera produkter. Vi kallar detta orderrader. Varje produkt kan beställas i ett visst antal. 
 
-1. I din terminalklient bygger du kommandon för att visa innehållet i tabellerna för kunder, produkter och produktkategorier.
+1. Man kan lägga till, ta bort, och redigera orderrader i en order.
 
-1. I din terminalklient bygger du ett kommando `log` för att visa innehållet i loggtabellen.
+1. Varje gång en orderrad skapas/raderas/uppdateras så skall det loggas i loggtabellen med relevant information (implementera med trigger).
+
+1. I din terminalklient (`cli.js`), lägg till ett kommando `order` som visar en översikt över de ordrar som finns.
+
+1. I din terminalklient, lägg till ett kommando `order <id>` som visar detaljer om vald order, inklusive dess orderrader.
+
+1. I din terminalklient, lägg till ett kommando `log` som visar en utskrift från loggtabellens tio senaste inlagda rader. (Även `log <num rows>`)
 
 1. Ta en uppdaterad backup av databasen med mysqldump och spara i `sql/eshop/backup.sql`.
 
@@ -96,7 +100,7 @@ Extrauppgift {#extra}
 
 Gör följande om du har tid och ro.
 
-1. Visa innehållet i loggtabellen i webbklienten.
+1. Lägg till CRUD för produkter, produktkategorier och kunder.
 
 1. Jobba på din kodstruktur så att du bli nöjd.
 
