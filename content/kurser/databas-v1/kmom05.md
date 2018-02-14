@@ -69,9 +69,9 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Skapa grunden till en Eshop](uppgift/skapa-grunden-till-en-eshop)" som låter dig implementera din ER-modell och skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom05/eshop2`.
 
 1. Lös (minst) en av följande uppgifter (den första är troligen aningen enklare):
-    * Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`.
+    * Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för tabellerna kund, produkt och produktkategori.
 
-    * Lös uppgiften "[Bygg orderhantering till en Eshop](uppgift/bygg-orderhantering-till-en-eshop)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`.
+    * Lös uppgiften "[Bygg orderhantering till en Eshop](uppgift/bygg-orderhantering-till-en-eshop)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för orderhantering.
 
 
 
