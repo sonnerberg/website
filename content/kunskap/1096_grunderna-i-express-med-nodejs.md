@@ -7,6 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2018-02-13": (B, mos) Uppdaterad routeIndex istället för index.
     "2018-01-08": (A, mos) Uppdaterad utgåva, omskriven från annan artikel, att användas till dbjs och databas.
 ...
 Grunderna i Express med Node.js 
@@ -207,7 +208,7 @@ Nu kan vi uppdatera `index2.js` och göra require på router-modulen. Sedan anv�
 
 ```javascript
 const routeIndex = require("./route/index.js");
-app.use("/", index);
+app.use("/", routeIndex);
 ```
 
 Vi kan säga att vi monterar routes från modulen `route/index.js` till monteringspunkten `/`.
