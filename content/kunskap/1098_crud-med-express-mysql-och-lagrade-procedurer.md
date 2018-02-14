@@ -46,6 +46,8 @@ Pröva sedan att starta servern och använda webbläsaren för att koppla dig ti
 
 Vi har främst routen `bank/index` och routen `bank/balance` att utgå ifrån.
 
+Mitt färdiga exempel, som jag skapar i denna artikeln, finner du i `example/express-crud`.
+
 
 
 R i CRUD, Read {#read}

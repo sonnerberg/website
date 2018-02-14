@@ -159,7 +159,7 @@ Bra, då är det bara att börja logga.
 
 
 
-Logga MED SQL i den lagrade proceduren {#loggasp}
+Logga med SQL i den lagrade proceduren {#loggasp}
 --------------------------------------
 
 Bara som ett exempel, innan jag visar triggern, så visar jag hur jag kan utföra loggningen i den lagrade proceduren.

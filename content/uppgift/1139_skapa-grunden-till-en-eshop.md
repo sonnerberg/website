@@ -56,7 +56,9 @@ Krav {#krav}
 
 1. Inloggningsdetaljer till databasen skall sparas i `config/db/eshop.json`.
 
-1. SQL-filer lägger du i `sql/eshop`. Skapa filen `setup.sql` för att skapa databasen och användaren. Skapa filen `ddl.sql` där du samlar all kod som skapar tabeller och vyer.
+1. SQL-filer lägger du i `sql/eshop`. Skapa filen `setup.sql` för att skapa databasen och användaren. Låt din databas heta `eshop` och skapa användaren `user:pass` som tidigare.
+
+1. Skapa filen `ddl.sql` där du samlar all kod som skapar tabeller och vyer.
 
 1. Skapa filen `insert.sql` med SQL-kod för att lägga in 5 produkter, 2 produktkategorier och 3 kunder.
 
