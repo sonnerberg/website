@@ -70,6 +70,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`.
 
+<!-- Eventuell extrauppgift om CRUD på order, orderrader, får se om uppgiften kommer i kmom06 -->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
