@@ -50,7 +50,9 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+1. [How to use the Python debugger](https://www.digitalocean.com/community/tutorials/how-to-use-the-python-debugger). Lär er använda Pythons debugger för att stega igenom koden.
+
+1. [Python debugger i atom](https://atom.io/packages/python-debugger). Installera Pythons debugger i atom så du kan stega igenom koden i atom istället för i terminalen. (Har inte testat den än. Om du testar skriv i redovisningstexten om den funkade bra).
 
 
 
@@ -99,7 +101,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vad gör koden?
 
-* Läste något av läsanvisningarna? Hade du nytta av dem när du löste uppgiften?
+* Läste någon av läsanvisningarna? Hade du nytta av dem när du löste uppgiften?
 
 * Vad var din metod för att förstå och förbättra koden?
 
