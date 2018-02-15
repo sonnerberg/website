@@ -88,7 +88,7 @@ Själva kärnan i att använda routern kan sammanfatts i följande kodexempel.
 
 ```javascript
 // A better router to create a handler for all routes
-import Router from "../router/router";
+var Router = require("../router/router");
 var router = new Router();
 
 /**
