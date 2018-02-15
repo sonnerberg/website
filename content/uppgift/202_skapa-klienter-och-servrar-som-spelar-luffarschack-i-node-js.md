@@ -72,8 +72,8 @@ Gomoku$ 9 9
 1\. Kopiera in koden för servern `example/nodejs/gomoku/GomokuServer.js`, `example/nodejs/gomoku/index-server.js` samt routern som du hittar i `example/nodejs/router/router.js`. Ändra sedan så att sökvägen till routern blir korrekt i importeringen överst i filen `GomokuServer.js`.
 
 ```javascript
-import Router from "./router";
-//import Router from "../router/router";
+var Router = require("./router");
+//var Router = require("../router/router");
 ```
 Nu har du en körbar server via `index-server.js`. Testa den.
 
@@ -111,7 +111,7 @@ dbwebb validate gomoku
 dbwebb publish gomoku
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
