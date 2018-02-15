@@ -1,6 +1,6 @@
 ---
 ...
-Android SDK och emulator
+Android SDK, Emulator och Device
 ==================================
 [Android](https://developer.android.com/index.html) är ett mobilt operativsystem som drivs open source av Google.
 

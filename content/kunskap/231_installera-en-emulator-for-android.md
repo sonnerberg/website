@@ -187,6 +187,34 @@ emulator: ERROR: No AVD specified. Use '@foo' or '-avd foo' to launch a virtual 
 Om det fungerar ska du få ett felmeddelande liknande det ovanför.
 
 
+
+Cordova i Android Emulatorn {#cordova}
+--------------------------------------
+Gå till HelloWorld cordova exemplet och kör följande kommandon för att öppna Cordova appen i Android Emulatorn.
+
+```bash
+# Stå i me/kmom05/hello
+cordova platform add android --save
+cordova run android
+```
+
+
+
+Kända fel {#fel}
+--------------------------------------
+
+**Gradles sync failed create process error=216...**: kan förekomma om man inte har Java JDK installerat eller den inte finns i PATH.
+
+**Failed to find target with hash string ‘android-25’...**: kan beroe på fel path till SDK:n.
+
+**Android SDK not found**: kan förekomma om du inte har installerat SDK:n, du har inte lagt den i din PATH eller om du har installerat Android studio istället för bara SDK:n. Om du har installerat Android studio behöver du ladda ner SDK:n, endast SDK:n, och ersätta din nuvarande med den nya.
+
+**Could not find gradle wrapper within Android SDK**: om du har installerat Android studio istället för enbart SDK:n behöver du ladda ner SDK:n och ersätta din gamla.
+
+**Error: No emulator images (avds) found**: du behöver skapa en emulator. Kör kommandot `android avd` och skapa en emulator.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
