@@ -44,7 +44,7 @@ cd me/kmom06/improve
 
 1. Analysera och förstå koden.
 
-1. Ersätt koden i funktionen `func` med kod som gör samma sak men snabbare.
+1. Ersätt koden i funktionen `func` med kod som uppnår samma resultat men snabbare.
 
 1. Alla tester som finns i `test.py` ska gå igenom när du är klar. Även de två som är utkommenterade. Läs introduktionen.
 
