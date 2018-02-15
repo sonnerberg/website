@@ -8,7 +8,7 @@ revision:
   "2015-12-04": (B, mos) lade till läsanvisningar i boken samt rev c av artikeln.
   "2015-11-04": (A, mos) Första utgåvan för kursen.
 ...
-Kmom04: CRUD
+Kmom04: Autentisering med JWT
 ==================================
 
 [WARNING]

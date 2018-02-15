@@ -95,3 +95,5 @@ På samma sätt som vi importerade och exporterade `/js/home.js` måste vi nu g�
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definierar vilka JavaScript moduler vi vill använda. Webpack kan konfigureras till att ta hand om alla våra assets: JavaScript, CSS/SASS och bilder, men i denna övning får det räcka med att vi kompilerar vår JavaScript till en enda fil. För mer information om [webpack](https://webpack.js.org) se deras utmärkta hemsida med bra dokumentation och guides.
+
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7315) om denna artikeln.

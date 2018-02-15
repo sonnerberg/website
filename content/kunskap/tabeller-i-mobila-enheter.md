@@ -249,3 +249,5 @@ Istället för att visa all data i tabellen kan du som utvecklare/designare gör
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt underlättar när vi gör responsiv design för mobila enheter.
+
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7318) om denna artikeln.

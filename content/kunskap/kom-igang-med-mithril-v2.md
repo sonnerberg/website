@@ -6,7 +6,7 @@ revision:
   "2017-03-09": (B, aar) Cordova anpassade artikeln.
   "2017-03-03": (A, efo) Första utgåvan inför kursen webapp v2.
 ...
-Kom igång med ramverket Mithril
+Kom igång med ramverket Mithril v2
 ==================================
 
 [FIGURE src=/image/webapp/mithril-logo.png class="right"]
@@ -519,3 +519,5 @@ Här under kan ni se ett exempel på Nobel applikation med navigation.
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna övning skapat en app inför Nobelfesten, som hämtar information från det officiella Nobel-api. Vi har bekantat oss med virtuella noder och hur vi skapar dessa med `m`. Vi har tittat på en router i mithril och hur vi kan använda den för att koppla vyer till specifika router och skicka med parametrar till dessa. Vi har skapat modeller i mithril där vi hämtar data och skickar tillbaka till vyerna.
+
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7316) om denna artikeln.

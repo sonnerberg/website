@@ -185,3 +185,5 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Detta var en genomgång av ett antal olika input typer i HTML5, som ger bättre användbarhet speciellt på mobila enheter. Genom att tala om vilken sorts data, som varje formulärfält är gjort för, kan den mobila enhet anpassa tangentbord och användargränssnitt för den specifika användningen.
+
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7317) om denna artikeln.

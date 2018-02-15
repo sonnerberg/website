@@ -246,3 +246,5 @@ sass base.scss style.min.css --style compressed
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna artikeln skapat knappar som är lätta att klicka på och samtidigt inbjuder till att bli klickade på. Vi designade först en grund knapp och med hjälp av andra klasser designade vi knappar som fyller hela skärmens bredd och knappar med andra färger för olika funktioner. Vi har även tittat på ett sätt att strukturera vår CSS kod med CSS-preprocessorn SASS.
+
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7314) om denna artikeln.
