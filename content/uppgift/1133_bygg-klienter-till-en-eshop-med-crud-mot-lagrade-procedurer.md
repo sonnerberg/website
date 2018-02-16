@@ -10,6 +10,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2018-02-16": "(C, mos) Bort krav om produktkategori."
     "2018-02-13": "(B, mos) Bytte fokus från orderhantering till kund/produkt."
     "2018-01-11": "(A, mos) Första utgåvan."
 ...
@@ -69,7 +70,7 @@ Krav {#krav}
 
 1. Bygg din nya databaskod som lagrade procedurer, tänk API mot databasdelen.
 
-1. Bygg CRUD för kunder, produkter och produktkategorier. Via webbinterfacet kan man utföra CRUD på dem och lägga till, redigera och ta bort rader samt visa tabellernas innehåll.
+1. Bygg CRUD för kunder och produkter. Via webbinterfacet kan man utföra CRUD på dem och lägga till, redigera och ta bort rader samt visa tabellernas innehåll.
 
 1. Din databas skall innehålla en generell loggtabell där man kan logga viktiga händelser för information.
 
