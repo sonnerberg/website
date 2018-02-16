@@ -22,6 +22,20 @@ Inför min undersökning så gjorde jag följande gissning om löneläget.
 
 Då skall vi se hur bra jag gissade.
 
+[INFO]
+**Uppdatering februari 2018**
+
+När jag dubbelkollat med de nyutexade studenter som gått ut de senaste åren så känns det som ingångslönen ligger kring 28 kSEK. Några får mer, upp till 30 kSEK.
+
+Lättare få högre lön i storstäder än i mindre orter. Några stora arbetsgivare håller nere ingångslönerna med ett par tusenlappar.
+
+De som jobbat ett par år, 3-5 år, kommer upp i löner 35-45 kSEK. Enklast att få upp sin lön är att byta jobb eller argumentera för löneglidning (mer ansvar, förändrade arbetsuppgifter) utanför vanligt avtal om årlig löneökning.
+
+En arbetsgivare som vill anställa en webbprogrammerare som har 3-5 års erfarenhet får troligen betala mellan 35-45 kSEK.
+
+Allt baseras på samtal jag haft med gamla studenter.
+[/INFO]
+
 
 
 Löneläge för nyutexaminerad Webbprogrammerare {#nyexad}
@@ -192,6 +206,3 @@ Avslutningsvis {#avslut}
 Håller du med om löneläge och utsikt till löneökning eller har du tips och trix som underlättar argumentationen vid lönediskussionerna? Diskutera i så fall i forumet, det finns en [egen tråd](t/2256) kopplad till denna artikel.
 
 Nu har du i alla fall fått en orientering om vad som väntar dig i din karriär som Webbprogrammerare.
-
-
-
