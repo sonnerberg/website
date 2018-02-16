@@ -5,7 +5,7 @@ category:
   - kursnyheter
   - alumni
 revision:
-  "2018-02-15": "(PA1, mos) Preliminär."
+  "2018-02-16": "(A, mos) Publicerad."
 ...
 Fråga Filip Ekberg om livet som egenkonsult
 ==================================
@@ -82,7 +82,7 @@ Det är svårt att sätta fingret exakt på vad som skiljde sig i arbetslivet, p
  
 [FIGURE src=image/person/filip-ekberg-speaker.jpg?w=c5&a=23,0,0,10 class="right" caption="Filip som talare."]
 
-Australien var extremt tacksamt att jobba i, det är mycket folk från hela världen och alla jag träffade var genuint trevliga och väldigt inbjudande. Det gjorde absolut vardagen roligare!
+Australien var extremt tacksamt att jobba i, det är mycket folk från hela världen och **alla jag träffade var genuint trevliga och väldigt inbjudande**. Det gjorde absolut vardagen roligare!
  
 Det var inte bara en underbar kaffekultur, utan även en helt fantastisk IT-kultur (även om jag hade ADSL2): hög kompetens och riktigt spännande utmaningar. Jag fick chansen att jobba med allt från bank till system för att sälja kol. Samtidigt som jag fick chansen att prata på en av Australiens största Microsoft konferenser; TechEd.
 
@@ -90,7 +90,7 @@ Det var inte bara en underbar kaffekultur, utan även en helt fantastisk IT-kult
 
 ### Har du några tips att ge den student som gärna vill jobba utomlands? {#5}
 
-Gör klart dina studier först, det blir extremt mycket lättare att få arbetsvisum om man har en kandidatexamen.
+**Gör klart dina studier först**, det blir extremt mycket lättare att få arbetsvisum om man har en kandidatexamen.
 
 Vi hade tre krav när vi valde var vi ville flytta: Engelsktalande, varmt och inte USA. Det lämnade inte mycket till fantasin, men efter att ha blivit erbjuden ett jobb i Australien packade vi in allt vi ägde i ett magasin och flyttade ner; utan att ens ha besökt landet.
 
@@ -107,9 +107,9 @@ Tips från Filip {#tips}
 
 Jag tror det beror på vad man har för mål med sin karriär, det kan såklart ändras under åren man jobbar också, men personligen har en gyllene regel varit att arbeta på hur man hanterar olika typer av människor.
  
-Speciellt som konsult är det extremt viktigt att kunna hantera olika typer av människor, men även snabbt kunna sätta sig in i kniviga situationer som behöver lösas snabbt och effektivt. Tänk också på att ofta får man uppgifter där man behöver hjälpa beställaren att förstå vad de egentligen vill ha, och vad implikationerna blir av att göra vissa vägval.
+Speciellt som konsult är det extremt viktigt **att kunna hantera olika typer av människor**, men även snabbt kunna sätta sig in i kniviga situationer som behöver lösas snabbt och effektivt. Tänk också på att ofta får man uppgifter där man behöver **hjälpa beställaren att förstå vad de egentligen vill ha**, och vad implikationerna blir av att göra vissa vägval.
  
-Teknik kan man alltid lära sig, som jag tidigare nämnde så har jag med åren insett hur mycket jag faktiskt inte kan. Utan en viktig färdighet hos en duktig utvecklare är att veta hur man hittar lösningar på problemen, snabbt. Det handlar mycket om att bli duktig på att veta vad man ska söka efter, och våga tänka utanför boxen.
+Teknik kan man alltid lära sig, som jag tidigare nämnde så har jag med åren insett hur mycket jag faktiskt inte kan. Utan en viktig färdighet hos en duktig utvecklare är att veta hur man hittar lösningar på problemen, snabbt. Det handlar mycket om att **bli duktig på att veta vad man ska söka efter**, och våga tänka utanför boxen.
  
 
 
@@ -119,13 +119,13 @@ Under nästan hela min karriär har jag jobbat med Microsoft-tekniker, allt frå
  
 Jag tror också det finns en framtid i att lära sig applicera machine learning i olika typer av system för att lista ut vad användarna vill ha innan de vet det själva.
  
-Tittar man på webb så får man vara med i svängarna, för där blir teknikerna föråldrade snabbare än du hinner ladda ner paketen. Men det är väl det som gör utveckling spännande? Idag handlar det mer om att snabba upp, eller kanske snarare effektivisera vårt arbete, medans för 5–10 år sedan fokuserade vi väldigt mycket på att bara leverera något av hög kvalitet "out of the box". Med continious integration, och deployment vågar man släppa snabbare och ta risken med ett par småbuggar så länge vi får ut en fix snabbt!
+**Tittar man på webb så får man vara med i svängarna**, för där blir teknikerna föråldrade snabbare än du hinner ladda ner paketen. Men det är väl det som gör utveckling spännande? Idag handlar det mer om att snabba upp, eller kanske snarare effektivisera vårt arbete, medans för 5–10 år sedan fokuserade vi väldigt mycket på att bara leverera något av hög kvalitet "out of the box". Med **continious integration, och deployment** vågar man släppa snabbare och ta risken med ett par småbuggar så länge vi får ut en fix snabbt!
  
 
 
 ### Några mer tips att ge studenter som snart skall ut i arbetslivet (eller de som har några år kvar på sina studier)? {#8}
 
-Njut av studietiden! Våga ställa mycket frågor och utmana varandra att testa nya spännande tekniker, det är så vi tar oss framåt.
+Njut av studietiden! Våga **ställa mycket frågor och utmana varandra** att testa nya spännande tekniker, det är så vi tar oss framåt.
  
 Ni kommer hinna med att jobba efter studierna är över, och det finns alltid intressanta projekt att hoppa på sen också, även om de är lätt att stryka med i hypen av alla start-ups redan nu.
 
