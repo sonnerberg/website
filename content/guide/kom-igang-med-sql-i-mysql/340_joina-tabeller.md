@@ -30,7 +30,7 @@ Du får väldigt många rader. Lika många rader som du har rader i Kurs (11 sty
 
 Du har gjort en join, en cross join vilken säger "för varje rad i ena tabellen, matcha mot samliga rader i den andra tabellen".
 
-När man joinar så  brukar man vilka koppla ihop raaderna på dett bättre sätt. Vad är det som länkar ihop dessa två tabeller? Kurskoden. Prova med att lägga till en WHERE-sats för att göra länkningen. Så här:
+När man joinar så  brukar man vilka koppla ihop raderna på dett bättre sätt. Vad är det som länkar ihop dessa två tabeller? Kurskoden. Prova med att lägga till en WHERE-sats för att göra länkningen. Så här:
 
 ```sql
 --

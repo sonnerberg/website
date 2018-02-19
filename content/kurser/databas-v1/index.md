@@ -2,7 +2,7 @@
 title: databas-v1
 author: mos
 revision:
-    "2018-01-11": "(A, mos) Arbetsmaterial inför kursstart VT2018."
+    "2018-01-11": "(A, mos) Första utgåva inför kursstart VT2018."
 ...
 Kursen databas
 ==================================
