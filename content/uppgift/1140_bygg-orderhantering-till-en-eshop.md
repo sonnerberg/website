@@ -10,6 +10,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2018-02-17": "(C, mos) Mindre justeringar i text."
     "2018-02-13": "(B, mos) Genomgången, förtydligad."
     "2018-01-11": "(A, mos) Första utgåvan."
 ...
@@ -59,9 +60,7 @@ Krav {#krav}
 
 1. Inloggningsdetaljer till databasen finns i `config/db/eshop.json`.
 
-1. Försäkra dig om att du kan återställa databasen till sitt ursprungsläge, genom att köra SQL-filerna i `sql/eshop`. Du har filen `setup.sql` för att skapa databasen och användaren. Du har `ddl.sql` för att skapa tabeller och `insert.ddl` för att fylla tabellerna med innehåll.
-
-1. All kod för att skapa tabeller, vyer, lagrade procedurer, triggers, etc lägger du dem i `sql/eshop/ddl.sql`.
+1. Försäkra dig om att du kan återställa databasen till sitt ursprungsläge, genom att köra SQL-filerna i `sql/eshop`. Du har filen `setup.sql` för att skapa databasen och användaren. Du har `ddl.sql` för att skapa tabeller, vyer, procedurer, triggers, etc. Du har `insert.ddl` för att fylla tabellerna med innehåll.
 
 1. Dina klienter skall klara de krav som fanns i föregående uppgift "[Skapa grunden till en Eshop](uppgift/skapa-grunden-till-en-eshop)". Det är utgångsläget.
 
@@ -101,7 +100,7 @@ Extrauppgift {#extra}
 
 Gör följande om du har tid och ro.
 
-1. Lägg till CRUD för produkter, produktkategorier och kunder.
+1. Lägg till CRUD för produkter och kunder.
 
 1. Gör så att webbklienten kan visa innehållet i loggtabellen.
 
