@@ -76,7 +76,7 @@ Krav {#krav}
 
 1. Skapa triggers som loggar till din loggtabell, varje gång en produkt skapas eller raderas.
 
-1. I din terminalklient bygger du kommandon för att visa innehållet i tabellerna för kunder, produkter och produktkategorier.
+1. I din terminalklient bygger du kommandon för att visa innehållet i tabellerna för kunder och produkter.
 
 1. I din terminalklient bygger du ett kommando `log` för att visa innehållet i loggtabellen.
 
