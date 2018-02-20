@@ -37,19 +37,7 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 3 studietimmar)*
 
-Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
-
-Från [labbmiljö](./../labbmiljo) börja med att installera 'Apache Cordova' och skapa Hello World exemplet. Efter det installera antigen 'Android SDK, Emulator och Device' eller 'iOS Simulator och Device'.
-
-Ett bra tips är att uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
-
-```text
-# Gå till din katalog för dbwebb-kurser
-dbwebb selfupdate
-dbwebb clone webapp
-cd webapp
-dbwebb init
-```
+Från [labbmiljö](./../labbmiljo) börja med att installera 'Apache Cordova' och skapa Hello World exemplet. Efter det följ rekommendationerna i 'Emulator och fysisk enhet'.
 
 
 

@@ -11,13 +11,21 @@ Cordova appar på iOS
 
 [FIGURE src=/image/webapp/ios_logo.png?w=c5 class="right"]
 
-I denna artikel ska vi installera en utvecklingsmiljö för att kunna köra Android appar på Mac och iOS.
+I denna artikel ska vi installera en utvecklingsmiljö för att kunna köra Cordova appar på Mac och iOS.
 
+
+
+Xcode {#xcode}
+---------------------------------
 Installera först Xcode från Mac App Store om du inte har gjort det tidigare.
 
 Kör sedan kommandot `xcode-select --install` i terminalen för att installera 'command-line tools'.
 
-För att kunna köra apparna i antigen en simulator eller på en mobil enhet installera vi 'ios-deploy' med hjälp av kommandot `npm install -g ios-deploy`.
+
+
+Cordova {#cordova}
+---------------------------------
+För att kunna köra apparna i antigen en simulator eller på en mobil enhet installerar vi 'ios-deploy' med hjälp av kommandot `npm install -g ios-deploy`.
 
 För att lägga till iOS som plattform i Cordova projekt kör vi följande kommando. Jag kör det i HelloWorld exemplet i `me/kmom05/hello`.
 
@@ -58,7 +66,7 @@ Tryck på knappen 'Add Account...' och logga in med ditt Apple-ID. Om du inte f�
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Nu har du förhoppningsvis kommit igång med Cordova på iOS och har skapat HelloWorld exemplet och har kört exemplet i Simulatorn och på din fysiska enhet.
+Nu har du förhoppningsvis kommit igång med Cordova på iOS och har skapat HelloWorld exemplet och har kört exemplet i Simulatorn och eventuellt på din fysiska enhet.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7311) om denna artikeln.
 
