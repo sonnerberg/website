@@ -10,6 +10,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2018-02-20": "(D, mos) Slog ihop 6&7."
     "2018-02-17": "(C, mos) Mindre justeringar i text."
     "2018-02-13": "(B, mos) Genomgången, förtydligad."
     "2018-01-11": "(A, mos) Första utgåvan."
@@ -66,9 +67,7 @@ Krav {#krav}
 
 1. Bygg din nya databaskod som lagrade procedurer, tänk API mot databasdelen.
 
-1. I din webbklient, skapa CRUD för orderhantering. Via webbinterfacet kan man utföra CRUD på ordrar och dess innehåll.
-
-1. Man skall kunna skapa en ny order, uppdatera den och ta bort den. Man skall kunna se vilka ordrar som finns.
+1. I din webbklient, skapa CRUD för orderhantering. Via webbinterfacet kan man utföra CRUD på ordrar och dess innehåll. Man skall kunna skapa en ny order, uppdatera den och ta bort den. Man skall kunna se vilka ordrar som finns.
 
 1. Varje order kan innehålla en beställning av 0 eller flera produkter. Vi kallar detta orderrader. Varje produkt kan beställas i ett visst antal. 
 

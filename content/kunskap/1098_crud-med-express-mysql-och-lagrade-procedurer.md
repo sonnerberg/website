@@ -577,7 +577,7 @@ För delete-ikonen länkar jag till routen `GET /bank/delete/:id` och där tänk
 
 Det känns som jag borde kunna återanvända de strukturer jag redan byggt upp.
 
-Routen blir nästan likadan som `/bank/update/:id`. Jag återanvänder vyn `views/bank/account-update` och sparar som `views/bank/account-delete` och uppdaterar så att alla fälten blir readonly, knappen säger "Delete account" och formulärets action leder till `POST /bank/delete`.
+Routen blir nästan likadan som `/bank/edit/:id`. Jag återanvänder vyn `views/bank/account-edit` och sparar som `views/bank/account-delete` och uppdaterar så att alla fälten blir readonly, knappen säger "Delete account" och formulärets action leder till `POST /bank/delete`.
 
 Jag tänker att det är bra att användaren får se kontot innan hen raderar det.
 
