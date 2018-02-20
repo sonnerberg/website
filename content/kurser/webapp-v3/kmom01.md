@@ -29,7 +29,7 @@ Som ett första steg skapar vi en me-app anpassat främst för mobilen, men som 
 
 Som en sista del av kursmomentet ska vi börja med en löpande uppgift där vi i detta kursmoment skapar början till en lagerhanteringsapp. Nedan finns en liten video som visar hur det kan se ut när man är klar med Lager appen del 1.
 
-[YOUTUBE src=pliCkobxLCE width=630 caption="Lager appen del 1."]
+[YOUTUBE src=xp8blJ060XM width=630 caption="Lager appen del 1."]
 
 
 
