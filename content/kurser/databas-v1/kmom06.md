@@ -85,6 +85,8 @@ Genomför följande övning för att förbereda inför uppgifterna.
 1. Faktureringsmotor?
 
 1. Exportera data från webben till csv?
+
+1. Visualisering i tabeller via JavaScript libs.
 -->
 
 
