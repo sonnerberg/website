@@ -1,24 +1,20 @@
 ---
 author: mos
 revision:
-    "2017-12-27": (PA1, mos) Arbete pågår.
+    "2018-02-20": (A, mos) Första utgåvan.
 ...
 Kmom06: Prestanda
 ====================================
-
-[WARNING]
-Kursutveckling pågår inför VT18.
-[/WARNING]
 
 Vi fortsätter med programmering i databasen, denna gången med egendefinierade funktioner som har en liknande struktur som lagrade procedurer och triggers.
 
 Sedan studerar vi hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du kan använda index för att optimera din databas.
 
-Vi bygger vidare på vår databasdrivna applikationsserver.
+Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och förhoppningsvis har vi fått en allt bättre koll på JavaScript-koden.
 
 <!--more-->
 
-[FIGURE src=image/snapvt17/mysql-optimize.png?w=w2 caption="Optimering av en databas sker på många olika nivåer."]
+[FIGURE src=image/snapvt17/mysql-optimize.png?w=w3 caption="Optimering av en databas sker på många olika nivåer."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -79,16 +75,12 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Jobba igenom övningen "[Index och prestanda i MySQL](kunskap/index-och-prestanda-i-mysql)" som tränar dig i hur du kan optimera dina databasfrågor med index. Spara dina testprogram i `me/kmom06/index`.
 
-<!--stop-->
-
 <!--
 1. Artikel om hur man skriver bra SQL frågor på ett optimerat sätt.
 
 1. Inloggning, session, express.
 
 1. Usability with messages on what happens.
-
-1. Driftsättning?
 
 1. Faktureringsmotor?
 
@@ -101,13 +93,9 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. **FOKUS INDEX** Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/app`.
+1. Jobba igenom följande del i guiden "[Kom igång med SQL i MySQL (Programmera i databasen)](guide/kom-igang-med-sql-i-mysql/programmera-i-databasen)". Spara all SQL-kod i filer i katalogen `me/kmom06/skolan6`.
 
-1. **BYGG ÄVEN VIDARE PÅ KLIENTEN? MODUL SOM ÅTERANVÄNDS MED SERVERN?** (skolan, båtklubben)
-
-<!--
-Index o prestanda behöver egen uppgift för att det skall hänga ihop.
--->
+1. Lös uppgiften "[Bygg kursbeställningsverktyg till skolan](uppgift/bygg-bestallningsverktyg-till-skolan)". Spara all kod i katalogen `me/kmom06/bestall`.
 
 
 
@@ -121,6 +109,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Förklara begreppet index i databas, och varför det är viktigt, på ett par rader.
-* skriv mer om index execution plan, query optimizer, full table scan.
+* Hur ser du på att programmera i databasen på det viset vi gör, fördelar och nackdelar, bra eller dåligt?
 * Se tillbaka på de kmom du gjort, känner du att du har koll på databas nu, eller känner du att något saknas eller behövs tränas ytterligare?
+* Nu när kursen närmar sig slutet, hur är din relation till JavaScript, Node och Express?
 * Vilken är din TIL för detta kmom?

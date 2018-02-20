@@ -92,6 +92,8 @@ Genomför följande för att förbereda inför uppgifter.
 <!--
 1. ER-modellering. Gör några extra övningar från övningsfilen (skall redovisas isåfall uppgift).
 Svårt göra övning per distans.
+
+1. Normalisering
 -->
 
 
@@ -111,6 +113,8 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör laborationen "[Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler)" för att träna på inbyggda moduler i Node.js. Spara koden i `me/kmom04/node2`.
 
 1. Enkel SQL laboration som visar att studenten kan göra joins/subquery.
+
+1. SQL injections (terminal)
 -->
 
 

@@ -261,6 +261,8 @@ async function findAllInTable(table) {
 }
 ```
 
+Det dubbla `??` säger till npm-modulen `mysql` att göra _escape_ på den variabeln för att undvika SQL injections. Dubbla frågetecken används för tabellens namn eller dess kolumnnamn. Enkla frågetecken används för värden.
+
 Nu kan vi avkommentera koden i router-filen och börja använda modulen.
 
 

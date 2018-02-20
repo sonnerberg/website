@@ -79,6 +79,8 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 <!--
 1. Update transaktions (new article) with document on Isolation levels and Dirty reads and Deadlock. Eventuell klient för att testa låsning? https://docs.google.com/document/d/15k4XbQxNOpJp-sqxwWX-FmG8UyerGSF36YDerSelbBc/preview
+
+1. SQL injections (web)
 -->
 
 

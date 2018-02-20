@@ -145,7 +145,7 @@ Vi fortsätter med programmering i databasen, denna gången med egendefinierade 
 
 Sedan studerar vi hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du kan använda index för att optimera din databas.
 
-Vi bygger vidare på vår databasdrivna applikationsserver.
+Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och förhoppningsvis har vi fått en allt bättre koll på JavaScript-koden.
 
 [Instruktion till kursmoment 06](./kmom06).
 
