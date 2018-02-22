@@ -50,9 +50,9 @@ Krav {#krav}
 
 1. Minst en av kuberna skall ha texturer på sidorna.
 
-1. Använd en mvp-matris för att styra scenen.
+1. Använd en VP-matris för att styra scenen.
 
-1. Skapa en kontrollpanel som visualiserar nuvarande inställningar på mvp-matrisen.
+1. Skapa en kontrollpanel som visualiserar nuvarande inställningar på VP-matrisen.
 
 1. Scenen skall animeras.
 
@@ -81,7 +81,7 @@ Extrauppgift {#extra}
 
 Gör extrauppgifterna om du har tid och vill förkovra dig ytterligare.
 
-1. Gör så att kontrollpanelen kan justera samtliga värden i mvp-matrisen.
+1. Gör så att kontrollpanelen kan justera samtliga värden i VP-matrisen.
 
 1. Fördela din JavaScript-kod så att varje objekt ligger i en egen fil.
 
@@ -95,7 +95,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

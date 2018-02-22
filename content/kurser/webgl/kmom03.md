@@ -7,7 +7,7 @@ revision:
 Kmom03: Kuber och texturer
 ==================================
 
-Du fortsätter att öva på programmering med JavaScript. Denna gången är det fokus på arrayer och objekt. Samtidigt fördjupar du dig i WebGL med texturer, MVP-matrisen och du ritar kuber i en 3D-värld.
+Du fortsätter att öva på programmering med JavaScript. Denna gången är det fokus på arrayer och objekt. Samtidigt fördjupar du dig i WebGL med texturer, MVP-matriser och du ritar kuber i en 3D-värld.
 
 <!--more-->
 
