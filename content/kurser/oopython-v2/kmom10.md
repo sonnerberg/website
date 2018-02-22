@@ -1,16 +1,10 @@
 ---
-author: lew
+author: aar
 revision:
-    "2017-11-10": (PC1, mos) Utkast till v2.
-    "2017-02-22": (B, aar) nytt projekt.
-    "2016-04-12": (A, lew) Första version.
+    "2018-02-21": (A, aar) Först utgåva till V2.
 ...
 Kmom10: Projekt och examination
-====================================
-
-[WARNING]
-**Kursutveckling pågår inför vt18.**
-[/WARNING]
+==================================
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -25,11 +19,18 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-[FIGURE src=/image/oopython/kmom10/classified.jpg?w=c5 class="right"]
+Du frilansar som python-utvecklare och har precis tackat ja till ett uppdrag att utveckla ett bokningssytem för restauranger. Du tänker att "ja, ja - det här kan jag fixa, jag har mycket kod som går att återanvända".
 
-Du ansvarar för ett klassifcerat uppdrag kallat Black Ops. Hemlighetsmakeriet är stort, du får inte berätta för någon vad du jobbar med.
+Kunden låter dig välja spelidé - han vill testa dig. Men vissa gränser finns det som du måste hålla dig inom och vissa saker måste du uppfylla.
 
-Längre ner på sidan behöver du göra ett val som kommer påverka din framtid.  
+Spelet skall innehålla fem rum. Varje rum innehåller någon form av problem som skall lösas, när man löst problemet kommer man vidare till nästa rum. Klarar man sista rummet så har man klarat spelet.
+
+Spelet behöver inte nödvändigtvis vara ett klassiskt "spel". Du kan tolka det annorlunda och välja att skapa motsvarande som kanske utbildar i Python, eller ett verktyg som tar dig igenom dagen genom att hämta och visa information från olika webbplatser. Kanske har du en idé om att skapa och utveckla din python-Tamagotchi. Fri tolkning alltså. Men håll dig inom kraven nedan. Om din spelidé kräver att du justerar kraven aningen så dokumenterar du vad du gör och varför. 
+
+Har du svårt att komma på en idé? Välj något från ett spel, en film eller bok du läst och återskapa det.
+
+Fråga i forumet om du känner dig osäker.
+
 
 
 Bedömning och betygsättning {#bedomning}
@@ -42,13 +43,31 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Välj ett av följande projekt att slutföra:  
-    * [Blue pill](./../kmom10_proj1)  
-    * [Red pill](./../kmom10_proj2)
+Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
-###När du är klar {#klar}
+De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
 
-Se till att din kod validerar och publiceras.
+Varje krav ger max 10 poäng, totalt är det 60 poäng.
+
+
+
+###Krav 1, 2, 3: Grunden {#k1}
+
+Placera din kod i katalogen `me/kmom10/booking`. Programmet som startar spelet skall heta `main.py`.
+
+De ska lämna in Klass diagram första veckan med hur de tänker
+
+Gör ett program där det går att boka bord på restauranger, tänkt onlinepizza fast för att boka bord istället.
+
+Tester
+
+Sök  med binary search?
+
+Behöver inte göra både terminal och webb gränssnitt. Antingen eller.
+
+
+
+Se till att din kod validerar.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -59,22 +78,30 @@ Förklara i redovisningstexten hur du tänkt när du strukturerat ditt program, 
 
 
 
+###Krav 4, 5 och 6: Grafiskt gränssnitt på webben (optionell) {#k4}
+
+Spara data i json fil mellan requests.
+Behövs kanske ett exempel program för att de ska förstå. Gick aldrig direkt igeon i kmom02 felet. Bygg ut exempel med company från artikel.
+
+
+
+
+
+
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1\. På din redovisningssida, skriv följande:
+1. På din [redovisningssida](python/redovisa), skriv följande:
 
-1.1. Vad fick dig att välja det här projektet?
+    1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
-1.2. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+    2. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
-1.3. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+    3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-1.4. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och föreslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
 
-2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
-
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oopython) och berätta att du är klar.
+3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
 
 4\. Se till att samtliga kursmoment validerar.
 
