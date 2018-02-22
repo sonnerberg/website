@@ -23,9 +23,7 @@ Du har gjort uppgiften [Lager appen del 3](uppgift/lager-appen-del-3). Du har jo
 
 Introduktion {#intro}
 -----------------------
-Börja med att kopiera din lager app från kmom03, om du inte gjorde det i övningen, så har du nått att utgå ifrån.
-
-<strong>OBS! Gör bara detta om du inte gjorde det i övningen.</strong>
+Börja med att kopiera din lager app från kmom03 så har du nått att utgå ifrån.
 
 ```bash
 # stå i me-katalogen
@@ -38,13 +36,19 @@ Använd lager [API:t](https://lager.dbwebb.se) dokumentationen och speciellt sek
 
 Krav {#krav}
 -----------------------
-1. Skapa möjlighet för att logga in i Lager appen.
+1. Skapa ett formulär för att registrera sig som användare i Lager appen.
 
-1. Bakom de skyddade delarna ska faktura sidan ligga.
+1. Skapa ett formulär för att logga in i Lager appen med en registrerad användare.
 
-1. Skapa en tabell med information om tidigare fakturor.
+1. Bakom de skyddade delarna ska faktura vyerna ligga.
 
 1. Skapa ett formulär för att göra om en order till en faktura.
+
+1. Skapa en tabell med information om befintliga fakturor.
+
+1. Tabellen ska fungera på alla enheter, gör ett medvetet val av design.
+
+1. Från tabellen ska man kunna ta sig till en faktura där all information från fakturan visas.
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
 
@@ -62,7 +66,9 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-* Om tid och lust finns portera Lager appen del 1 och Lager appen del 2 till mithril. Så vi har en stor Lager app istället för två mindre.
+* Användaren ska automatisk loggas in efter registrering.
+
+* Om tid och lust finns portera Lager appen del 1 och del 2 till mithril. Så du har en stor Lager app istället för två mindre.
 
 
 

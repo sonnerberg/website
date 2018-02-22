@@ -33,11 +33,22 @@ Krav {#krav}
 
 1. Använd dina kunskapar i att göra ett lättanvänd formulär där man kan göra inleverans av en produkt.
 
+1. Formuläret ska innehålla alla attribut för en inleverans förutom Leverans ID (id) dvs.:
+
+* Produkt (product_id)
+* Antal (amount)
+* Leveransdatum (delivery_date)
+* Kommentar (comment)
+
+1. Leverans ID ska beräknas automatisk utifrån antal av tidigare inleveranser.
+
 1. När formuläret skickas ska det skapas en inleverans i API:t.
 
 1. Lagersaldot för produkten ska ökas med den levererade mängden.
 
 1. Använd ett `select`-element för att välja produkten som har levererats. Designa `select`-elementet så det passar in i resten av stilen för formuläret.
+
+1. Använd ett `textarea`-element för kommentaren. Designa `textarea`-elementet så det passar in i resten av stilen för formuläret. Använd ett lämpligt standard-värde (default) för textarean.
 
 1. Validera och publicera din kod enligt följande.
 
