@@ -6,6 +6,11 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+
+[WARNING]
+**Kursutveckling pågår inför vt18.**
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -25,7 +30,7 @@ Kunden låter dig välja spelidé - han vill testa dig. Men vissa gränser finns
 
 Spelet skall innehålla fem rum. Varje rum innehåller någon form av problem som skall lösas, när man löst problemet kommer man vidare till nästa rum. Klarar man sista rummet så har man klarat spelet.
 
-Spelet behöver inte nödvändigtvis vara ett klassiskt "spel". Du kan tolka det annorlunda och välja att skapa motsvarande som kanske utbildar i Python, eller ett verktyg som tar dig igenom dagen genom att hämta och visa information från olika webbplatser. Kanske har du en idé om att skapa och utveckla din python-Tamagotchi. Fri tolkning alltså. Men håll dig inom kraven nedan. Om din spelidé kräver att du justerar kraven aningen så dokumenterar du vad du gör och varför. 
+Spelet behöver inte nödvändigtvis vara ett klassiskt "spel". Du kan tolka det annorlunda och välja att skapa motsvarande som kanske utbildar i Python, eller ett verktyg som tar dig igenom dagen genom att hämta och visa information från olika webbplatser. Kanske har du en idé om att skapa och utveckla din python-Tamagotchi. Fri tolkning alltså. Men håll dig inom kraven nedan. Om din spelidé kräver att du justerar kraven aningen så dokumenterar du vad du gör och varför.
 
 Har du svårt att komma på en idé? Välj något från ett spel, en film eller bok du läst och återskapa det.
 
@@ -51,19 +56,67 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 
 
-###Krav 1, 2, 3: Grunden {#k1}
+###Krav 1: Grunden {#k1}
 
-Placera din kod i katalogen `me/kmom10/booking`. Programmet som startar spelet skall heta `main.py`.
+Placera din kod i katalogen `me/kmom10/booking`. Filen som startar programmet skall heta `main.py`.
 
-De ska lämna in Klass diagram första veckan med hur de tänker
 
-Gör ett program där det går att boka bord på restauranger, tänkt onlinepizza fast för att boka bord istället.
+Gör ett program där en användare kan boka bord på olika restauranger. Tänkt onlinepizza fast för att boka bord istället. Programmet ska användas via terminalen, som ni gjorde i kmom04 och 05.
 
-Tester
+####Kravspec:
+Ska finnas:
 
-Sök  med binary search?
+* En restuarang ska ha ett namn, address och X antal bord.
+* Ett bord ska ha X antal sittplatser. Borden ska kunna ha olika priser.
+* En användare ska ha ett namn och historik över vilka bord på vilka restauranger den har bokat.
 
-Behöver inte göra både terminal och webb gränssnitt. Antingen eller.
+Funktionalitet:
+* Det ska gå att lägga till nya restauranger och bord till restaurangen.
+* Det ska gå att lägga till nya användare.
+* Det ska gå att ändra namn på restaurangen och användaren och lägga till/ta bort bord på existerande restauranger.
+* Det ska gå att se alla restauranger som finns.
+* Det ska gå att se alla bord som finns på en restaurang.
+    * Ska även kunna välja att bara se obokade eller bokade bord.
+    * Det ska gå att sen vem som har bokat bordet.
+* En användare ska kunna boka ett eller flera bord på en restaurang.
+* Det ska gå att välja en användare och se vilka bord och på vilken restaurang den har bokat.
+* En användare ska kunna avboka bord.
+* Det ska gå att söka efter en specifik restaurang.
+
+
+Det ska inte finnas några "lösa" funktioner i din kod. Allt ska vara i klasser.
+
+!!!!
+Bestämma att det ska finnas minst Restaurant, Table, User och Handler?
+!!!!
+
+
+###Krav 2: Testning {#k2}
+
+Du ska skriva enhetstester för dina klasser. Spara testerna i filen `test.py`.
+
+Minst tre tester för vaje klass. Testa inte bara positiva utfall, testa även när saker går fel.
+I dina enhetsterster ska du ha en TestCase klass för varje klass du testar. Alltså lägg inte alla tester i en och samma TestCase klass.
+
+
+###Krav 3: Klassdiagram {#k3}
+
+<u>Innan du börjar programmera</u> ska du analyser och planera vad du ska koda. Tänkt ut vilka klasser du behöver och vilka attribut och metoder klasserna ska.
+
+Skapa klassdiagram för alla klasser du tänker att du behöver. Klassdiagrammen ska innehålla attribut, metoder och relationer mellan klasserna.
+
+Klassdiagrammen ska lämnas in före du börjar koda och lämnar in resten av projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammen. Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.
+
+Så gör klassdiagram, lämna in dem och sen börjar du koda projektet.
+
+Det gör inget om koden skiljer sig från diagrammen när du är klar.
+
+När du har kodat klart projektet jämför din kod med hur du tänkte dig att det skulle fungera. I redovisningstexten skriv hur din kod förhåller sig till diagrammen.
+
+
+Spara som `classdiagrams.png`.
+
+Ska vi tvinga dem att bifoga bilderna på It's Learning?
 
 
 
@@ -74,17 +127,23 @@ Se till att din kod validerar.
 dbwebb publish kmom10
 ```
 
-Förklara i redovisningstexten hur du tänkt när du strukturerat ditt program, vilka filer du har och vad de fyller för funktion.
 
 
+###Krav 4: Binary search (optionell) {#k4}
 
-###Krav 4, 5 och 6: Grafiskt gränssnitt på webben (optionell) {#k4}
+Implementera en Binary search algoritm och använd den när man ska söka efter en restaurang i programmet.
 
-Spara data i json fil mellan requests.
-Behövs kanske ett exempel program för att de ska förstå. Gick aldrig direkt igeon i kmom02 felet. Bygg ut exempel med company från artikel.
-
+Kolla in [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search) för en förklaring av hur algoritmen fungerar.
 
 
+###Krav 5 och 6: Grafiskt gränssnitt på webben (optionell) {#k5}
+
+Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminal menyn. Webbsidan behöver fortfarande uppfylla kravspeccen från Krav 1.
+
+Det ska även fungera på studentservern!  
+Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när när requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, och när du CGI skickar nästa request är listorna tomma. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request. Kortfattat: Vid varje request läser du upp data från fil och när du är klar sparar du data till filen.
+
+Spara datan i en JSON fil. Den ska heta `data.json`.
 
 
 
@@ -99,7 +158,7 @@ Redovisning {#redovisning}
 
     3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
+2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
 3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
 
