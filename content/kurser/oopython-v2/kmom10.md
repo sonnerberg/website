@@ -43,7 +43,7 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
+Utveckla och leverera projektet enligt följande specifikation. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
 De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
 
@@ -102,11 +102,11 @@ Skapa klassdiagram för alla klasser du tänker att du behöver. Klassdiagrammen
 
 Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammet. Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.
 
-Så gör klassdiagram, lämna in det och sen börjar du koda projektet.
+Så gör ett klassdiagram, lämna in det och sen börjar du koda projektet.
 
 Det gör inget om koden skiljer sig från diagrammen när du är klar med projektet. Det blir inte alltid som man tänker sig.
 
-När du har kodat klart projektet jämför hur din kod faktiskt blev med hur du tänkte dig att det skulle fungera. I redovisningstexten skriv hur din kod förhåller sig till diagrammet.
+När du har kodat klart projektet, jämför hur din kod faktiskt blev med hur du tänkte dig att det skulle fungera. I redovisningstexten skriver du hur din kod förhåller sig till diagrammet.
 
 
 Spara som `classdiagrams.png`.
@@ -137,7 +137,7 @@ Kolla in [Khan Academy](https://www.khanacademy.org/computing/computer-science/a
 Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminalen. Webbsidan ska uppfylla kravspecen från Krav 1.
 
 Webbsidan ska även fungera på studentservern!  
-Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när  requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, mellan requesten CGI skickar. Det gör att listorna och variablerna återställs till default vid varje request. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request. 
+Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när  requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, mellan requesten CGI skickar. Det gör att listorna och variablerna återställs till default vid varje request. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request.
 
 Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
 
