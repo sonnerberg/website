@@ -7,9 +7,9 @@ Kmom10: Projekt och examination
 ==================================
 
 
-[WARNING]
-**Kursutveckling pågår inför vt18.**
-[/WARNING]
+[INFO]
+**Gör `dbwebb update` innan du börjar med projektet.**
+[/INFO]
 
 Detta kursmoment avslutar och examinerar kursen.
 
