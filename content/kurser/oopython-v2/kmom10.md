@@ -24,18 +24,13 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du frilansar som python-utvecklare och har precis tackat ja till ett uppdrag att utveckla ett bokningssytem för restauranger. Du tänker att "ja, ja - det här kan jag fixa, jag har mycket kod som går att återanvända".
+Du frilansar som python-utvecklare och har precis tackat ja till ett uppdrag att utveckla ett bokningssytem för restauranger.
 
-Kunden låter dig välja spelidé - han vill testa dig. Men vissa gränser finns det som du måste hålla dig inom och vissa saker måste du uppfylla.
+Utveckla ett objektorienterat system där det går att att skapa användare och boka bord på restauranger. Du har möjligheten att själv välj om man ska använda systemet via terminalen eller om du vill ha en webbsida.
 
-Spelet skall innehålla fem rum. Varje rum innehåller någon form av problem som skall lösas, när man löst problemet kommer man vidare till nästa rum. Klarar man sista rummet så har man klarat spelet.
-
-Spelet behöver inte nödvändigtvis vara ett klassiskt "spel". Du kan tolka det annorlunda och välja att skapa motsvarande som kanske utbildar i Python, eller ett verktyg som tar dig igenom dagen genom att hämta och visa information från olika webbplatser. Kanske har du en idé om att skapa och utveckla din python-Tamagotchi. Fri tolkning alltså. Men håll dig inom kraven nedan. Om din spelidé kräver att du justerar kraven aningen så dokumenterar du vad du gör och varför.
-
-Har du svårt att komma på en idé? Välj något från ett spel, en film eller bok du läst och återskapa det.
+Innan du börjar med programmering ska du göra en analys över systemet du vill bygga och dokumentera det med klassdiagram.
 
 Fråga i forumet om du känner dig osäker.
-
 
 
 Bedömning och betygsättning {#bedomning}
@@ -66,57 +61,52 @@ Gör ett program där en användare kan boka bord på olika restauranger. Tänkt
 ####Kravspec:
 Ska finnas:
 
-* En restuarang ska ha ett namn, address och X antal bord.
+* En restaurang ska ha ett namn, address och X antal bord.
 * Ett bord ska ha X antal sittplatser. Borden ska kunna ha olika priser.
 * En användare ska ha ett namn och historik över vilka bord på vilka restauranger den har bokat.
 
 Funktionalitet:
+
 * Det ska gå att lägga till nya restauranger och bord till restaurangen.
 * Det ska gå att lägga till nya användare.
 * Det ska gå att ändra namn på restaurangen och användaren och lägga till/ta bort bord på existerande restauranger.
 * Det ska gå att se alla restauranger som finns.
 * Det ska gå att se alla bord som finns på en restaurang.
     * Ska även kunna välja att bara se obokade eller bokade bord.
-    * Det ska gå att sen vem som har bokat bordet.
+    * Det ska gå att se vem som har bokat borden.
 * En användare ska kunna boka ett eller flera bord på en restaurang.
 * Det ska gå att välja en användare och se vilka bord och på vilken restaurang den har bokat.
 * En användare ska kunna avboka bord.
 * Det ska gå att söka efter en specifik restaurang.
 
 
+Skapa minst två egna exceptions och använd i din kod. Beskriv dem i din redovisningstext.
+
 Det ska inte finnas några "lösa" funktioner i din kod. Allt ska vara i klasser.
 
-!!!!
-Bestämma att det ska finnas minst Restaurant, Table, User och Handler?
-Ha med egna exceptions?
-Fixa inspect.
-
-Dela upp krav 5 och 6 i två? En för funktionalitet och en för utförande? Design och funktionalitet.
-
-!!!!
 
 
 ###Krav 2: Testning {#k2}
 
-Du ska skriva enhetstester för dina klasser. Spara testerna i filen `test.py`.
+Skriv enhetstester för dina klasser. Spara testerna i filen `test.py`.
 
-Minst tre tester för vaje klass. Testa inte bara positiva utfall, testa även när saker går fel.
-I dina enhetsterster ska du ha en TestCase klass för varje klass du testar. Alltså lägg inte alla tester i en och samma TestCase klass.
+Minst tre tester för varje klass. Testa inte bara positiva utfall, testa även när saker går fel.
+I dina enhetstester ska du ha en TestCase klass för varje klass du testar. Alltså lägg inte alla tester i en och samma TestCase klass.
 
 
 ###Krav 3: Klassdiagram {#k3}
 
-<u>Innan du börjar programmera</u> ska du analyser och planera vad du ska koda. Tänkt ut vilka klasser du behöver och vilka attribut och metoder klasserna ska.
+<u>Innan du börjar programmera</u> ska du analyser och planera vad du ska koda. Tänkt ut vilka klasser du behöver och vilka attribut och metoder de ska.
 
 Skapa klassdiagram för alla klasser du tänker att du behöver. Klassdiagrammen ska innehålla attribut, metoder och relationer mellan klasserna.
 
-Klassdiagrammen ska lämnas in före du börjar koda och lämnar in resten av projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammen. Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.
+Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammet. Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.
 
-Så gör klassdiagram, lämna in dem och sen börjar du koda projektet.
+Så gör klassdiagram, lämna in det och sen börjar du koda projektet.
 
-Det gör inget om koden skiljer sig från diagrammen när du är klar.
+Det gör inget om koden skiljer sig från diagrammen när du är klar med projektet. Det blir inte alltid som man tänker sig.
 
-När du har kodat klart projektet jämför din kod med hur du tänkte dig att det skulle fungera. I redovisningstexten skriv hur din kod förhåller sig till diagrammen.
+När du har kodat klart projektet jämför hur din kod faktiskt blev med hur du tänkte dig att det skulle fungera. I redovisningstexten skriv hur din kod förhåller sig till diagrammet.
 
 
 Spara som `classdiagrams.png`.
@@ -144,16 +134,15 @@ Kolla in [Khan Academy](https://www.khanacademy.org/computing/computer-science/a
 
 ###Krav 5 och 6: Grafiskt gränssnitt på webben (optionell) {#k5}
 
-Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminalen. Webbsidan behöver fortfarande uppfylla kravspeccen från Krav 1.
+Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminalen. Webbsidan ska uppfylla kravspecen från Krav 1.
 
-Det ska även fungera på studentservern!  
-Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när när requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, mellan requesten CGI skickar, vilket gör att listorna och variablerna återställs till defualt vid varje request. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request. Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
+Webbsidan ska även fungera på studentservern!  
+Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när  requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, mellan requesten CGI skickar. Det gör att listorna och variablerna återställs till default vid varje request. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request. 
+
+Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
 
 Spara data i en JSON fil. Den ska heta `data.json`.
 
-!!!!
-Exempel med company från artikel.
-!!!!
 
 
 Redovisning {#redovisning}
