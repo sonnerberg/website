@@ -26,7 +26,7 @@ Projektidé och upplägg {#upplagg}
 
 Du frilansar som python-utvecklare och har precis tackat ja till ett uppdrag att utveckla ett bokningssytem för restauranger.
 
-Utveckla ett objektorienterat system där det går att att skapa användare och boka bord på restauranger. Du har möjligheten att själv välj om man ska använda systemet via terminalen eller om du vill ha en webbsida.
+Utveckla ett objektorienterat system där det går att skapa användare och boka bord på restauranger. Du har möjligheten att själv välja om man ska använda systemet via terminalen eller om du vill ha en webbsida.
 
 Innan du börjar med programmering ska du göra en analys över systemet du vill bygga och dokumentera det med klassdiagram.
 
@@ -62,7 +62,7 @@ Gör ett program där en användare kan boka bord på olika restauranger. Tänkt
 Ska finnas:
 
 * En restaurang ska ha ett namn, address och X antal bord.
-* Ett bord ska ha X antal sittplatser. Borden ska kunna ha olika priser.
+* Ett bord ska ha X antal sittplatser. Där borden ska kunna ha olika antal platser var.
 * En användare ska ha ett namn och historik över vilka bord på vilka restauranger den har bokat.
 
 Funktionalitet:
@@ -94,13 +94,14 @@ Minst tre tester för varje klass. Testa inte bara positiva utfall, testa även 
 I dina enhetstester ska du ha en TestCase klass för varje klass du testar. Alltså lägg inte alla tester i en och samma TestCase klass.
 
 
+
 ###Krav 3: Klassdiagram {#k3}
 
 <u>Innan du börjar programmera</u> ska du analyser och planera vad du ska koda. Tänkt ut vilka klasser du behöver och vilka attribut och metoder de ska.
 
 Skapa klassdiagram för alla klasser du tänker att du behöver. Klassdiagrammen ska innehålla attribut, metoder och relationer mellan klasserna.
 
-Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammet. Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.
+Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammet. <u>Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.</u>
 
 Så gör ett klassdiagram, lämna in det och sen börjar du koda projektet.
 
@@ -109,11 +110,7 @@ Det gör inget om koden skiljer sig från diagrammen när du är klar med projek
 När du har kodat klart projektet, jämför hur din kod faktiskt blev med hur du tänkte dig att det skulle fungera. I redovisningstexten skriver du hur din kod förhåller sig till diagrammet.
 
 
-Spara som `classdiagrams.png`.
-
-!!!!
-Ska vi tvinga dem att bifoga bilderna på It's Learning?
-!!!!
+Spara som `classdiagrams.png`. Ladda upp filen på It's inlämningsuppgiften.
 
 
 Se till att din kod validerar.
@@ -132,6 +129,7 @@ Implementera en Binary search algoritm och använd den när man ska söka efter 
 Kolla in [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search) för en förklaring av hur algoritmen fungerar.
 
 
+
 ###Krav 5 och 6: Grafiskt gränssnitt på webben (optionell) {#k5}
 
 Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminalen. Webbsidan ska uppfylla kravspecen från Krav 1.
@@ -142,10 +140,6 @@ Problemet vi har med studentservern och Flask är att CGI startar upp ditt progr
 Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
 
 Spara data i en JSON fil. Den ska heta `data.json`.
-
-!!!
-Lägg in länk till exempel!
-!!!
 
 
 
