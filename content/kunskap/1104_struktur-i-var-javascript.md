@@ -19,6 +19,10 @@ cp kmom01/lager1/* kmom02/lager2/
 
 
 
+<!--more-->
+
+
+
 npm och package.json {#npm}
 --------------------------------------
 Vi har i tidigare kurser använd [npm](https://www.npmjs.com/) (Node Package Manager) för att installera JavaScript moduler. Nu ska vi ta detta ett steg vidare och titta på vissa av möjligheterna med npm och konfigurationsfilen `package.json`. Vi börjar med att initiera att vi vill ha ett npm projekt och att vi vill installera webpack som en modul vi är beroende av (dependency).

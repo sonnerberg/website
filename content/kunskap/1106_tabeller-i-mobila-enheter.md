@@ -13,6 +13,10 @@ Tabeller används i stor utsträckning i affärssystem och andra administrations
 
 
 
+<!--more-->
+
+
+
 En tabell att börja med {#tabell}
 --------------------------------------
 Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet. Det finns inte tillräckligt mycket plats för att visa tabellen utan radbrytningar.

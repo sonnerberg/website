@@ -15,6 +15,10 @@ I denna övning tittar vi på hur vi med hjälp av Postman registrerar en använ
 
 
 
+<!--more-->
+
+
+
 Registrering och inloggning {#login}
 --------------------------------------
 Vi börjar med att registrera en användare i Lager API:t genom att skicka en `POST` till URL'en `/register` med 3 parametrar: `api_key`, `email` och `password`.
