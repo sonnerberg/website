@@ -137,7 +137,7 @@ Kolla in [Khan Academy](https://www.khanacademy.org/computing/computer-science/a
 Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminalen. Webbsidan ska uppfylla kravspecen från Krav 1.
 
 Webbsidan ska även fungera på studentservern!  
-Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när  requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, mellan requesten CGI skickar. Det gör att listorna och variablerna återställs till default vid varje request. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request.
+Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när  requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har sparat i listor och variabler, mellan requesten CGI skickar. Det gör att listorna och variablerna återställs till default vid varje request. Så när du har ändrat eller lagt till någon data, tex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request.
 
 Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
 
