@@ -9,10 +9,12 @@ revision:
 Cordova appar på iOS
 ==================================
 
-[FIGURE src=/image/webapp/ios_logo.png?w=c5 class="right"]
+[FIGURE src=/image/webapp/ios_logo.png?w=c3 class="right"]
 
-I denna artikel ska vi installera en utvecklingsmiljö för att kunna köra Cordova appar på Mac och iOS.
+I denna artikel ska vi installera en utvecklingsmiljö för att kunna köra Cordova appar på Mac och iOS. Vi börjar med Apples IDE Xcode för att sedan koppla ihop Cordova med Xcode.
 
+
+<!--more-->
 
 
 Xcode {#xcode}
