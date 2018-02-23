@@ -28,7 +28,7 @@ Du frilansar som python-utvecklare och har precis tackat ja till ett uppdrag att
 
 Utveckla ett objektorienterat system där det går att skapa användare och boka bord på restauranger. Du har möjligheten att själv välja om man ska använda systemet via terminalen eller om du vill ha en webbsida.
 
-Innan du börjar med programmering ska du göra en analys över systemet du vill bygga och dokumentera det med klassdiagram.
+Innan du börjar med programmeringen ska du göra en analys över systemet du vill bygga och dokumentera det med klassdiagram.
 
 Fråga i forumet om du känner dig osäker.
 
@@ -43,7 +43,7 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikation. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
+Utveckla och leverera projektet enligt följande specifikation. Saknas info i specen kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
 De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
 
@@ -56,28 +56,28 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 Placera din kod i katalogen `me/kmom10/booking`. Filen som startar programmet skall heta `main.py`.
 
 
-Gör ett program där en användare kan boka bord på olika restauranger. Tänkt onlinepizza fast för att boka bord istället. Programmet ska användas via terminalen, som ni gjorde i kmom04 och 05.
+Gör ett program där en användare kan boka bord på olika restauranger. Tänk onlinepizza fast för att boka bord istället. Programmet ska användas via terminalen, som ni gjorde i kmom04 och 05.
 
 ####Kravspec:
 Ska finnas:
 
 * En restaurang ska ha ett namn, address och X antal bord.
-* Ett bord ska ha X antal sittplatser. Där borden ska kunna ha olika antal platser var.
+* Ett bord ska ha X antal sittplatser. Borden ska kunna ha olika antal platser var.
 * En användare ska ha ett namn och historik över vilka bord på vilka restauranger den har bokat.
 
 Funktionalitet:
 
 * Det ska gå att lägga till nya restauranger och bord till restaurangen.
+* Det ska gå att lägga till/ta bort bord på existerande restauranger.
 * Det ska gå att lägga till nya användare.
-* Det ska gå att ändra namn på restaurangen och användaren och lägga till/ta bort bord på existerande restauranger.
+* En användare ska kunna boka ett eller flera bord på en restaurang.
+* Det ska gå att välja en användare och se vilka bord och på vilken restaurang den har bokat.
 * Det ska gå att se alla restauranger som finns.
 * Det ska gå att se alla bord som finns på en restaurang.
     * Ska även kunna välja att bara se obokade eller bokade bord.
     * Det ska gå att se vem som har bokat borden.
-* En användare ska kunna boka ett eller flera bord på en restaurang.
-* Det ska gå att välja en användare och se vilka bord och på vilken restaurang den har bokat.
-* En användare ska kunna avboka bord.
 * Det ska gå att söka efter en specifik restaurang.
+* En användare ska kunna avboka bord.
 
 
 Skapa minst två egna exceptions och använd i din kod. Beskriv dem i din redovisningstext.
@@ -97,11 +97,11 @@ I dina enhetstester ska du ha en TestCase klass för varje klass du testar. Allt
 
 ###Krav 3: Klassdiagram {#k3}
 
-<u>Innan du börjar programmera</u> ska du analyser och planera vad du ska koda. Tänkt ut vilka klasser du behöver och vilka attribut och metoder de ska.
+**Innan du börjar programmera** ska du analyser och planera vad du ska koda. Tänkt ut vilka klasser du behöver och vilka attribut och metoder de ska.
 
 Skapa klassdiagram för alla klasser du tänker att du behöver. Klassdiagrammen ska innehålla attribut, metoder och relationer mellan klasserna.
 
-Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammet. <u>Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.</u>
+Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammet. **Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.**
 
 Så gör ett klassdiagram, lämna in det och sen börjar du koda projektet.
 
