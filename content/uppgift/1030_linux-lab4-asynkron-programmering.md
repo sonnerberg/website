@@ -4,7 +4,7 @@ category:
     - nodejs
     - lab
 revision:
-    "2017-02-01": (B, efo) Gjorde om labben från asynkronprogrammering till nodejs api.
+    "2017-02-23": (C, mos) Bort med babel.
     "2017-02-01": (B, efo) Gjorde om labben från asynkronprogrammering till nodejs api.
     "2016-12-21": (A, efo) Första utgåvan av lab4 i kursen linux.
 ...
@@ -59,7 +59,7 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 Du kan testa dina lösningar genom att köra programmet `answer.js` från `me/kmom05/node2/` i din terminal enligt nedan:
 
 ```javascript
-$ babel-node answer.js
+$ node answer.js
 ```
 
 
@@ -71,7 +71,7 @@ Krav {#krav}
 
 2. Skriv dina lösningar, på rätt plats, i filen `answer.js`.
 
-3. Testkör din labb genom att köra kommandot `babel-node answer.js`.
+3. Testkör din labb genom att köra kommandot `node answer.js`.
 
 4. Ladda upp, validera och publicera labben genom att göra följande kommando i kurskatalogen i terminalen.
 
