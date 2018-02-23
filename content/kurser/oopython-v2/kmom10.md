@@ -8,7 +8,7 @@ Kmom10: Projekt och examination
 
 
 [INFO]
-**Gör `dbwebb update` innan du börjar med projektet.**
+**Gör `dbwebb selfupdate` och `dbwebb update` innan du börjar med projektet.**
 [/INFO]
 
 Detta kursmoment avslutar och examinerar kursen.
@@ -139,7 +139,9 @@ Problemet vi har med studentservern och Flask är att CGI startar upp ditt progr
 
 Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
 
-Spara data i en JSON fil. Den ska heta `data.json`.
+Skapa filen `booking/db/data.json` och spara data i den.
+
+I [example/read_write](https://github.com/dbwebb-se/oopython/tree/master/example/flask/read_write) finns kod som visar hur du kan jobba med att läsa och skriva till fil.
 
 
 
