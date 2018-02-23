@@ -88,6 +88,11 @@ Det ska inte finnas några "lösa" funktioner i din kod. Allt ska vara i klasser
 
 !!!!
 Bestämma att det ska finnas minst Restaurant, Table, User och Handler?
+Ha med egna exceptions?
+Fixa inspect.
+
+Dela upp krav 5 och 6 i två? En för funktionalitet och en för utförande? Design och funktionalitet.
+
 !!!!
 
 
@@ -116,8 +121,9 @@ När du har kodat klart projektet jämför din kod med hur du tänkte dig att de
 
 Spara som `classdiagrams.png`.
 
+!!!!
 Ska vi tvinga dem att bifoga bilderna på It's Learning?
-
+!!!!
 
 
 Se till att din kod validerar.
@@ -138,19 +144,22 @@ Kolla in [Khan Academy](https://www.khanacademy.org/computing/computer-science/a
 
 ###Krav 5 och 6: Grafiskt gränssnitt på webben (optionell) {#k5}
 
-Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminal menyn. Webbsidan behöver fortfarande uppfylla kravspeccen från Krav 1.
+Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminalen. Webbsidan behöver fortfarande uppfylla kravspeccen från Krav 1.
 
 Det ska även fungera på studentservern!  
-Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när när requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, och när du CGI skickar nästa request är listorna tomma. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request. Kortfattat: Vid varje request läser du upp data från fil och när du är klar sparar du data till filen.
+Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när när requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har spara i listor och variabler, mellan requesten CGI skickar, vilket gör att listorna och variablerna återställs till defualt vid varje request. Så när du har ändrat eller lagt till någon data, ex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request. Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
 
-Spara datan i en JSON fil. Den ska heta `data.json`.
+Spara data i en JSON fil. Den ska heta `data.json`.
 
+!!!!
+Exempel med company från artikel.
+!!!!
 
 
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din [redovisningssida](python/redovisa), skriv följande:
+1. På din [redovisningssida](oopython-v2/redovisa), skriv följande:
 
     1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
@@ -160,7 +169,7 @@ Redovisning {#redovisning}
 
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
+3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oopython) och berätta att du är klar.
 
 4\. Se till att samtliga kursmoment validerar.
 
