@@ -113,7 +113,7 @@ Du hjälper honom genom att skapa en lagrad procedur `godkannKurstillfalle` som 
 
 Använd proceduren för att godkänna alla beställda kurstillfällen som ligger i läsperiod 1 och 2. Avvakta med de andra.
 
-När du är klar kan det se ut så här för Snape.
+När du är klar kan det se ut så här för Snape's programtillfällen där två kurstillfällen är godkända. Det ser ut som det är mos som är kursansvarig för de båda kurstillfällena på Snapes program.
 
 ```text
 mysql> SELECT kurskod, kursansvarig, lasperiod, status, created, updated
