@@ -80,7 +80,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 1. Läs om viewport på MDN i artikeln "[Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)".
 
-1. Läs artikeln om "[Mobile: native Apps, Web Apps, and hybrid Apps](http://www.nngroup.com/articles/mobile-native-apps/)".
+<!-- 1. Läs artikeln om "[Mobile: native Apps, Web Apps, and hybrid Apps](http://www.nngroup.com/articles/mobile-native-apps/)". -->
 
 1. Bekanta dig med dokumentationen för [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) och [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) som vi använder för att ladda data via JavaScript.
 
@@ -103,9 +103,9 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 ###Lästips {#lastips}
 
-1. Läs och spara följande samlinger av "best-practices" för typografi på webben i dina bokmärken [Typography Handbook](http://typographyhandbook.com) och [Butterick's Practical Typography](https://practicaltypography.com/).
+1. Läs översiktligt denna samling av "best-practices" för typografi på webben [Typography Handbook](http://typographyhandbook.com). Spara den i dina bokmärken som en framtida referens.
 
-1. För mer om tillgänglighet (accessibility, a11y) titta in på [The A11Y Project](https://a11yproject.com/).
+<!-- 1. För mer om tillgänglighet (accessibility, a11y) titta in på [The A11Y Project](https://a11yproject.com/). -->
 
 <!-- 1. Läs artikeln [Choosing between a native, hybrid or webapp](https://crew.co/how-to-build-an-online-business/native-hybrid-web-app-differences/). -->
 

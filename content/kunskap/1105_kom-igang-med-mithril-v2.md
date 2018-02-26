@@ -107,7 +107,7 @@ Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` o
 
 Början till en mithril app {#forsta}
 --------------------------------------
-Tanken med appen är att vi har en lista med knappar för åren 2010 till 2017, när man klickar på knapparna kommer man till en vy med information om det årets nobelvinnare.
+Tanken med appen är att vi har en lista med knappar från åren 2010 till 2017. När man klickar på knapparna kommer man till en vy med information om det valda årets nobelvinnare.
 
 Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`. Vi inkluderar även `bin/app.js` längst ner i `index.html`.
 
@@ -176,9 +176,9 @@ var list = require("./views/list.js");
 m.mount(document.body, list);
 ```
 
-Nu behöver vi bara kompilera vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definerade tidigare som ett npm script i `package.json`.
+Nu behöver vi bara kompilera vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definerade tidigare som ett npm script i `package.json`. Öppna upp filen `index.html` i din webbläsare och skåda mästervärket eller iallafall Nobelfesten som en fin rubrik. Vi kan nu köra kommandot `npm run watch` i terminalen för att löpande under utveckling kopilera om filerna när de sparas.
 
-Öppna upp filen `index.html` i din webbläsare och skåda mästervärket eller iallafall Nobelfesten som en fin rubrik. Låt oss använda lite av stylingen från tidigare kursmoment och samtidigt titta på hur vi lägger till flera virtuella noder i samma vy/komponent.
+Låt oss använda lite av stylingen från tidigare kursmoment och samtidigt titta på hur vi lägger till flera virtuella noder i samma vy/komponent.
 
 ```javascript
 "use strict";
@@ -194,7 +194,9 @@ module.exports = {
 };
 ```
 
-I ovanstående kod skapar vi först en virtuell nod `<main class="container"></main>`. Vi tilldelar barn till denna virtuella nod genom att tilldela en array som värde. Arrayen innehåller två stycken virtuella noder en `<h1>Nobelfesten</h1>` och `<p>Välj ett årtal i listan:</p>`. Nästa del är att skapa listan med årtal, vi använder en `while`-loop för att iterera från 2010 till och med 2017. För varje år lägger vi till en virtuell nod i arrayen `years`. Vi lägger till den virtuella noden `<a class="button blue-button"></a>`, som har värdet för ett av åren mellan 2010 och 2017. Vi vill även att knappen ska kunna ta oss till en annan sida så vi skickar även med ett objekt med konfiguration: `{ href: "/year/" + startYear, oncreate: m.route.link }`. Vi vill gå till routen `/year` och skickar med året som parameter. Vi använder livscykel-metoden `oncreate` och den inbyggda funktionen `m.route.link` för att koppla länken till routern.
+I ovanstående kod skapar vi först en virtuell nod `<main class="container"></main>`. Vi tilldelar barn till denna virtuella nod genom att tilldela en array som värde. Arrayen innehåller två stycken virtuella noder en `<h1>Nobelfesten</h1>` och `<p>Välj ett årtal i listan:</p>`.
+
+Nästa del är att skapa listan med årtal, vi använder en `while`-loop för att iterera från 2010 till och med 2017. För varje år lägger vi till en virtuell nod i arrayen `years`. Vi lägger till den virtuella noden `<a class="button blue-button"></a>`, som har värdet för ett av åren mellan 2010 och 2017. Vi vill även att knappen ska kunna ta oss till en annan sida så vi skickar även med ett objekt med konfiguration: `{ href: "/year/" + startYear, oncreate: m.route.link }`. Vi vill gå till routen `/year` och skickar med året som parameter. Vi använder livscykel-metoden `oncreate` och den inbyggda funktionen `m.route.link` för att koppla länken till routern.
 
 ```javascript
 "use strict";
@@ -290,7 +292,9 @@ Mithrils route funktion är användbar för mer än bara vår huvudrouter. Vi ka
 
 En modell i mithril {#modell}
 --------------------------------------
-Tanken med appen var att visa upp information om Nobelvinnare för ett givet år så låt oss titta på hur vi hämtar JSON-data från Nobel-API:t med hjälp av en modell i mithril. Vi börjar med att skapa katalogen `js/models` och filen `js/models/nobel.js`.
+Tanken med appen var att visa upp information om Nobelvinnare för ett givet år så låt oss titta på hur vi hämtar JSON-data från Nobel-API:t med hjälp av en modell i mithril. Varenda gång du ska hämta data från ett API gör du det i en modell. Vi ska aldrig hämta data från ett API direkt i en vy.
+
+Vi börjar med att skapa katalogen `js/models` och filen `js/models/nobel.js`.
 
 ```bash
 # stå i nobel katalogen
@@ -299,9 +303,9 @@ $ mkdir js/models
 $ touch js/models/nobel.js
 ```
 
-Som alltid är när vi jobbar mot ett API är [dokumentationen](https://nobelprize.readme.io) viktigt, så vi tar en titt i den. Vi hittar den endpoint vi vill använda och urlen som hör till. Vi har tidigare i kursen använd `XMLHttpRequest` och `fetch` för att hämta data. När vi hämtar data i mithril gör vi det med funktionen [m.request](https://mithril.js.org/request.html). `m.request` använder sig precis som `fetch` av promises, men vi får direkt tillbaka JSON-data om vi inte angett nått annat.
+Som alltid när vi hämtar data från ett API är [dokumentationen](https://nobelprize.readme.io) viktigt, så vi tar en titt i den. Vi hittar den endpoint vi vill använda och urlen som hör till `http://api.nobelprize.org/v1/prize.json?year=[YEAR]`. Vi har tidigare i kursen använd `XMLHttpRequest` och `fetch` för att hämta data. När vi hämtar data i mithril gör vi det med funktionen [m.request](https://mithril.js.org/request.html). `m.request` använder sig precis som `fetch` av promises, men vi får direkt tillbaka JSON-data om vi inte angett nått annat.
 
-Vi börjar med att bara hämta data och skriva ut det med `console.log` så vi ser att det fungerar. Vår model består förutom funktionen `load`, även av attributet `current`, vi använder `current` för att spara den senaste data vi har hämtat från API:t.
+Vi börjar med att bara hämta data och skriva ut det med `console.log` så vi ser att det fungerar. Vår model består förutom funktionen `load`, även av attributet `current`. Vi använder objektet `current` för att spara den senaste data vi har hämtat från API:t.
 
 ```javascript
 // js/models/nobel.js
@@ -325,7 +329,7 @@ var nobel = {
 module.exports = nobel;
 ```
 
-Vi måste anropa funktionen för att den körs och det gör vi från vyn. Vi använder oss av livscykel metoden `oninit`, funktionen anropas 1 gång när vyn initieras och innan nått ritas upp. Vi använder oss utav `vnode.attrs.year` på samma sätt som när vi skrev ut årtalet.
+Vi måste anropa funktionen för att den kan köras och detta gör vi från vyn. Vi använder oss av livscykel metoden `oninit`, funktionen anropas 1 gång när vyn initieras och innan nått ritas upp. I de flesta fall när vi hämtar data som ska visas upp i vyn använder vi `oninit`, då denna bara anropas en gång. Vi använder oss utav `vnode.attrs.year` på samma sätt som när vi skrev ut årtalet och skickar med årtalet till modellen.
 
 ```javascript
 // js/views/year.js
@@ -346,7 +350,7 @@ module.exports = {
 };
 ```
 
-Vi öppnar upp konsollen i webbläsaren och ser att vi har skrivit ut ett JSON-objekt. Det vi vill åt för varje objekt `prizes` arrayen är `category` och både förnamn och efternamn inne i `laureates` arrayen. Först tilldelar vi resultat från API:t till `current` och sedan kan vi använda detta i vyn.
+Vi laddar om sidan och öppnar upp konsollen i webbläsaren och ser att vi har skrivit ut ett JSON-objekt. Det vi vill åt för varje objekt i `prizes` arrayen är `category` och både förnamn och efternamn inne i `laureates` arrayen. Först tilldelar vi resultat från API:t till `current` och sedan kan vi använda detta i vyn.
 
 ```javascript
 // js/models/nobel.js
@@ -370,7 +374,7 @@ var nobel = {
 module.exports = nobel;
 ```
 
-I vyn kan vi sedan komma åt data genom att använda `nobel.current`. Vi använder oss av funktionen [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), för att iterera oss igenom JSON arrayen.
+Då vi har importerad `nobel` modellen i vår vy kan vi komma åt `current` genom att använda `nobel.current`. Vi använder oss av funktionen [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), för att iterera oss igenom JSON arrayen.
 
 ```javascript
 "use strict";
@@ -398,7 +402,7 @@ module.exports = {
 };
 ```
 
-Om vi laddar om sidan i webbläsaren får vi ett JavaScript fel `Uncaught TypeError: Cannot read property 'map' of undefined`. Detta beror på mithrils sätt att rendera på och det asynkrona anrop till API:t. Ordningen för rendering i mithril är följande:
+Om vi laddar om sidan i webbläsaren får vi ett JavaScript fel `Uncaught TypeError: Cannot read property 'map' of undefined`. Detta beror på mithrils sätt att rendera på och det asynkrona `m.request` anrop till API:t. Ordningen för rendering i mithril är följande:
 
 1. `oninit` anropas
 
@@ -408,7 +412,7 @@ Om vi laddar om sidan i webbläsaren får vi ett JavaScript fel `Uncaught TypeEr
 
 1. `view` anropas en gång till och ritar upp vyn data från `m.request`
 
-För dokumentation av livscykel metoder och renderingsordning se [Lifecycle methods](https://mithril.js.org/lifecycle-methods.html#lifecycle-methods).
+Detta är även anledningen till att vi **ALDRIG** hämtar data direkt från en vy, då detta skulle resultera i en oändlig loop. För dokumentation av livscykel metoder och renderingsordning se [Lifecycle methods](https://mithril.js.org/lifecycle-methods.html#lifecycle-methods).
 
 För att kunna använda oss av koden i vyn `year` definierar vi `nobel.current` enligt nedan, med ett `prizes` attribut med en tom array.
 
@@ -434,7 +438,7 @@ var nobel = {
 module.exports = nobel;
 ```
 
-När vi sedan öppnar applikationen i webbläsaren skriv namnen på Nobelpristagarna ut som väntat. Kolla gärna igenom koden ovan så du förstår alla delar. Ta även en titt på renderingsordningen för att förstå hur de virtuella noderna ritas upp av mithril.
+När vi sedan öppnar applikationen i webbläsaren skrivs namnen på Nobelpristagarna ut som väntat. Kolla gärna igenom koden ovan så du förstår alla delar. Ta även en titt på renderingsordningen för att förstå hur de virtuella noderna ritas upp av mithril.
 
 
 
@@ -459,7 +463,7 @@ module.exports = {
 };
 ```
 
-I ovanstående kodexempel skapar vi `.top-nav` som vi känner igen från tidigare kursmoment. Vi skapar även en `main.container` där vi skickar med de virtuella noderna som vi vill ska renderas i den. I detta fallet är det list-vyn och års-vyn vi skickar med. För att använda oss av layouten gör vi som nedan. För varje route visar vi layouten och skickar med vyn vi vill visa i layouten.
+I ovanstående kodexempel skapar vi `.top-nav` som vi känner igen från tidigare kursmoment. Vi skapar även en `main.container` där vi skickar med de virtuella noderna (`vnode.children`) som vi vill ska renderas i den. I detta fallet är det list-vyn och års-vyn vi skickar med. För att använda oss av layouten gör vi som nedan. För varje route visar vi layouten och skickar med vyn vi vill visa i layouten.
 
 ```javascript
 "use strict";
@@ -485,7 +489,7 @@ m.route(document.body, "/", {
 
 Vi använder oss utav en [RouteResolver](http://mithril.js.org/route.html#routeresolver) för att rendera layout och skickar med de virtuella noder, i detta fallet vår två vyer, som ska renderas inuti layouten.
 
-För att vyerna inte ska renderas inne i två stycken `main.container` tar vi bort de från vyerna. Just nu tillför layouten inte mer än att vi har gjort koden lite mera DRY. Vi vill ha en möjlighet för att ta sig tillbaka till listan med år när vi är inne på ett specifikt år. Vi gör detta i `layout` och använder oss av en 'ternary operator' och `m.route.get()`. Vi jämför om första delen av routen är 'year' och är den det skriver vi ut en länk tillbaka till listan annars skriver vi ut ingenting.
+För att vyerna inte ska renderas inne i två stycken `main.container` tar vi bort de från vyerna. Just nu tillför layouten inte mer än att vi har gjort koden lite mera DRY. Vi vill ge användaren en möjlighet för att ta sig tillbaka till listan med år när vi är inne på ett specifikt år. Vi gör detta i `layout` och använder oss av en 'ternary operator' och `m.route.get()`. Vi jämför om första delen av routen är 'year' och är den det skriver vi ut en länk tillbaka till listan annars skriver vi ut ingenting.
 
 ```javascript
 "use strict";
