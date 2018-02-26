@@ -11,6 +11,14 @@ Installera Android utvecklingsmiljö på windows
 
 [FIGURE src=/image/webapp/android-robot.png?w=c5 class="right"]
 
+Denna guide visar dig hur du installerar de nödvändiga komponenterna av Android SDK för att kunna köra en Android emulator.
+
+Jag kommer att installera endast det nödvändigaste för att få tillgång till emulatorn. SDK:n kan ta mycket plats på din hårddisk, om du bara installerar de absolut nödvändiga paketen tar det upp mot 6-7 GiB.
+
+
+
+<!--more-->
+
 
 
 Avslutningsvis {#avslutning}

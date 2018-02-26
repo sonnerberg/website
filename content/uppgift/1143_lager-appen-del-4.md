@@ -42,7 +42,9 @@ Krav {#krav}
 
 1. Bakom de skyddade delarna ska faktura vyerna ligga.
 
-1. Skapa ett formulär för att göra om en order till en faktura.
+1. Skapa ett formulär för att göra om en order till en faktura. Ändra orderns status till 'fakturerad' enligt API:t.
+
+1. Det ska inte gå att fakturera en order två gånger.
 
 1. Skapa en tabell med information om befintliga fakturor.
 
