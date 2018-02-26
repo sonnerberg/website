@@ -45,8 +45,6 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
-    * Ch 4: HTML5 Web Forms
-    * Ch 10: CSS3: Transforms, Transitions, and Animations
     * Ch 13: Targeting Mobile Devices and Touch
 
 

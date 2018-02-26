@@ -32,7 +32,8 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Det finns ingen kurslitteratur.
+1. [Mobile HTML5](kunskap/boken-mobile-html5).
+    * Ch 10: CSS3: Transforms, Transitions, and Animations.
 
 
 
@@ -73,29 +74,9 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)". Spara eventuella testfiler i `me/kmom06/animation`.
 
-<!-- 1. Det finns ett par foruminlägg som hjälper dig att komma igång med Cordova på din plattform.
-
-    * [Installera Cordova på Windows](t/4899)
-    * [Installera Cordova på Mac OS](t/4903)
-    * [Kör en Cordova app i Firefox OS](t/4900)
-    * [Kör Cordova app i Android SDK](t/4901)
-    * [Cordova plugin för kamera](t/4910) -->
-
-<!--
-* [Cordova ikoner](t/xxxx)
-* [Cordova plugin för splashscreen](t/xxxx)
-* [Cordova plugin för launch browser](t/xxxx)
-* [Cordova plugin för maps](t/xxxx)
-* [Kör Cordova app i Windows phone](t/xxxx)
-* [Kör Cordova app i iOS](t/xxxx)
-
-Gör exempel/cordovaApp (validera)
-Testa me/kmom06/cordova/[me5,pizza,mithril] (validera)
-Testa så att alla exempel på pluginer fungerar i samtliga plattformar.
-Dubbelkolla hur man debuggar i olika miljöer via console.log.
--->
+1. Jobba igenom övningen "[GPS och karta](kunskap/)". Spara eventuella testfiler i `me/kmom06/gps`.
 
 
 
@@ -103,7 +84,7 @@ Dubbelkolla hur man debuggar i olika miljöer via console.log.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Gomoku klient](uppgift/gomoku-klient-i-mithril)".
+1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6)". Spara dina filer i `me/kmom06/lager6`.
 
 
 
@@ -122,8 +103,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur kändes det att jobba mot ett lokalt API?
-* Beskriv kort hur du tekniskt löste renderingen av spelbrädan?
-* Var det något som krånglade eller tog extra mycket tid?
-* Är du nöjd med din Gomoku klient?
+* Vilka fördelar ger Cordova plugins?
+* Fick du till ett bra gränssnitt med kartan?
+* Vilka effekter gav animationer och övergångar?
 * Vilken är din TIL för detta kmom?

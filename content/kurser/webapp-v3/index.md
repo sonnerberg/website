@@ -186,7 +186,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 
 * **[Mobile HTML5](kunskap/boken-mobile-html5)** -- Estelle Weyl
-  Boken går igenom de delar av HTMl5, CSS3 och JavaScript som är relevanta när man bygger applikationer för mobila enheter.
+  Boken går igenom de delar av HTML5, CSS3 och JavaScript som är relevanta när man bygger applikationer för mobila enheter. Använd boken som ett uppslagsverk och skumma bara igenom den.
 
 
 
@@ -220,11 +220,11 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kursmoment | Mobile HTML5  |
 |------------|-------------------------------------------------------------|
 | Kmom01     | Introduction, 1                                             |
-| Kmom02     | 6                                                           |
-| Kmom03     | 11, 12                                                      |
-| Kmom04     | 4, 10, 13                                                   |
+| Kmom02     | 11, 12                                                      |
+| Kmom03     | 4                                                           |
+| Kmom04     | 13                                                          |
 | Kmom05     | 14                                                          |
-| Kmom06     |                                                             |
+| Kmom06     | 10                                                          |
 | Kmom10     |                                                             |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.

@@ -43,8 +43,9 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
-    * Ch 6: Other HTML5 APIs
-
+    * Ch 11: CSS Features in Responsive Web Design.
+    * Ch 12: Designing Mobile Applications.
+    * 
 
 
 ###Artiklar {#artiklar}

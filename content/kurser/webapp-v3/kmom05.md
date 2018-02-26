@@ -83,9 +83,9 @@ Det finns inga extra lästips.
 
 
 
-1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)".
+1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)". Spara dina filer i `me/kmom05/lager5`.
 
-1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".
+1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".  Spara dina filer i `me/kmom05/lager5`.
 
 <!-- 1. Gör uppgiften "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)". -->
 
@@ -97,7 +97,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-<!-- 1. Gör uppgiften "[Me-app till din lokala pizzeria](uppgift/me-app-till-din-lokala-pizzeria-v2)". -->
+1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)". Spara dina filer i `me/kmom05/lager5`.
 
 
 
@@ -116,9 +116,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Berätta utförligt vilka val du gjorde och hur din app fungerar.
-* Gick det bra att läsa filen?
-* Fick du göra prioriteringar för att hålla dig inom max 20h, berätta om dem.
-* Gjorde du något som du är extra stolt/nöjd över i din app, berätta om det.
-* Var det något som krånglade eller tog extra mycket tid?
+* Vilka fördelar ser du med att göra appar med Cordova om du jämför med rena webbapplikationer?
+* Har du möjligheten att köra dina appar på en fysisk enhet? Vilka testmöjligheter ger detta?
+* Gick det bra att skapa din egna logga och splashscreen?
 * Vilken är din TIL för detta kmom?

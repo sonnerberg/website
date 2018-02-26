@@ -43,8 +43,7 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
-    * Ch 11: CSS3 features in Responsive Web Design
-    * Ch 12: Designing Mobile Applications
+    * Ch 4: HTML5 Web Forms
 
 
 
@@ -65,13 +64,14 @@ Läs följande:
 
 
 
-###Lästips {#lastips}
+<!-- ###Lästips {#lastips}
 
-<!-- * Bekanta dig med [mithril Components](http://mithril.js.org/components.html), som hjälper dig att skapa återanvändbar kod. -->
+<!-- * Bekanta dig med [mithril Components](http://mithril.js.org/components.html), som hjälper dig att skapa återanvändbar kod.
 
 * Hur ser det egentligen ut med JavaScript ramverk 2018. Stack Overflow har publicerad statistik angående ramverk i artikeln [The Brutal Lifecycle of JavaScript Frameworks](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/).
 
-* I forumet finns en tråd om val av JavaScript ramverk och vad man kan tänka på [Hur tänka inför val av JavaScript ramverk?](forum/viewtopic.php?f=11&t=7195).
+* I forumet finns en tråd om val av JavaScript ramverk och vad man kan tänka på [Hur tänka inför val av JavaScript ramverk?](forum/viewtopic.php?f=11&t=7195). -->
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
