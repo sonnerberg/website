@@ -206,7 +206,7 @@ Vi börjar med att normalisera stilen så att grunden blir den samma oavsett vil
 
 ```bash
 # me/redovisa
-wget https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css
+wget https://necolas.github.io/normalize.css/8.0.0/normalize.css -O normalize.min.css
 ```
 
 Vi lägger till `normalize.min.css` filen i `index.html` så den laddas och kan nollställa ursprungsstilen i olika webbläsare. Notera att jag lägger till `normalize.min.css` innan vår än så länge tomma `style.css`.
