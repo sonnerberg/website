@@ -45,7 +45,7 @@ Du har gjort en hel del liknande programmering tidigare. Se denna uppgift delvis
 Krav {#krav}
 -----------------------
 
-1. Inloggningsdetaljer till databasen skall sparas i `config/db/skolan.json`. JObba mot databasen skolan med användare:lösen som tidigare, user:pass.
+1. Inloggningsdetaljer till databasen skall sparas i `config/db/skolan.json`. Jobba mot databasen skolan med användare:lösen som tidigare, user:pass.
 
 1. De SQL-filer som används för att skapa databasen är de som du skapat i guiden Kom igång med SQL i MySQL (Programmera i databasen). Låt dem ligga där de ligger men försäkra dig om att man kan återskapa din databas via `program_ddl.sql` följt av `program_insert.sql`.
 

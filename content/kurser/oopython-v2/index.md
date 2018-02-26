@@ -4,6 +4,7 @@ author:
     - lew
     - mos
 revision:
+    "2018-02-23": (A, aar) Första version V2.
     "2017-12-11": (PA2, lew) Påbyggnad utkasst till V2.
     "2017-11-10": (PA1, mos) Utkast till v2.
 ...
@@ -15,10 +16,6 @@ Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopytho
 Kursen använder sig till stor del av webbaserade teknologier och programmen som skapas publiceras på en webbserver.
 
 <!--more-->
-
-[WARNING]
-**Kursutveckling pågår inför vt18.**
-[/WARNING]
 
 [INFO]
 **Tidigare version av kursen**
@@ -50,6 +47,8 @@ Kursen omfattar följande områden:
 * Objektorienterade programmeringstekniker i Python.
 * Objektorienterad analys och design med UML.
 * Objektorienterade programmeringskonstruktioner.
+* Enhetstestning
+* Datastrukturer och algoritmer
 * Webbaserade teknologier för att bygga webbtjänster med Python.
 * Utvecklingsmiljö och verktyg för programvaruutveckling med Python samt publicera kod på en driftserver och visa resultat via webbsidor
 
