@@ -12,6 +12,7 @@ Ett mobilanpassad formulär
 Vi ska i denna övning titta på hur vi med hjälp av HTML5 input göra våra mobila appar mer användarvänliga och säkra. Vi skapar även formulär komponenter till vårt GUI komponent ramverk. I slutet av övningen tittar vi på hur vi skapar ett formulär i mithril.
 
 
+
 <!--more-->
 
 
@@ -148,7 +149,9 @@ Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots ol
 
 Ett formulär i mithril {#mithril}
 --------------------------------------
-Formuläret nedan gör det möjligt att redigera en dator. Det finns en `Computer` modell som tar hand om data när det skickas från formuläret. När vi skapar formulär i mithril använder vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. Vi använder oss av en livscykel metod `onsubmit` för formuläret för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. För att de ändringar vi gör i formulärfältet ska sparas använder vi oss av livscykel metoden `oninput` och funktionen `m.withAttr` ([Dokumentation](http://mithril.js.org/withAttr.html)). `oninput` och `m.withAttr` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi ändrar i fältet. Livscykel metoden `onclick` används för spara knappen och när vi anropar modellens `save` funktion har vi redan satt värdet på den nuvarande dator och kan helt enkelt bara spara den med hjälp av `m.request` och API:t som ligger i bakgrunden för appen.
+Formuläret nedan gör det möjligt att redigera en dator. Det finns en `Computer` modell som tar hand om data när det skickas från formuläret. När vi skapar formulär i mithril använder vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. För att de ändringar vi gör i formulärfältet ska sparas använder vi oss av livscykel metoden `oninput` och funktionen `m.withAttr` ([Dokumentation](http://mithril.js.org/withAttr.html)). `oninput` och `m.withAttr` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi ändrar i fältet.
+
+Vi använder oss av en livscykel metod `onsubmit` för formuläret för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. Vi anropar dessutom modellens `save` funktion och vi har redan satt värdet på den nuvarande dator och kan helt enkelt bara spara den med hjälp av `m.request` och API:t som ligger i bakgrunden för appen.
 
 ```javascript
 var m = require("mithril")
@@ -160,6 +163,7 @@ module.exports = {
         return m("form", {
                 onsubmit: function(event) {
                     event.preventDefault();
+                    Computer.save();
                 } }, [
             m("label.input-label", "Name"),
             m("input.input[type=text][placeholder=Name]", {
@@ -171,10 +175,40 @@ module.exports = {
                 oninput: m.withAttr("value", function(value) { Computer.current.year = value }),
                 value: Computer.current.year
             }),
-            m("button.button", { onclick: Computer.save }, "Save")
+            m("input[type=submit][value=Save].button", "Save")
         ])
     }
 }
+```
+
+Modellen `Computer` som används för att hämta ut den specifika datorn som ska redigeras (`load`) och spara datorn (`save`) ser ut enligt nedan. Först definierar vi `Computer.current`, objektet används för att spara data vi hämtar från vårt låtsas api. När vi sedan ska spara datorn anropar vi en `PUT` route och skickar med `Computer.current` som data objekt.
+
+```javascript
+var m = require("mithril");
+
+var Computer = {
+    current: {},
+    load: function(id) {
+        return m.request({
+            method: "GET",
+            url: "www.api-url.com/load/" + id
+        }).then(function(result) {
+            Computer.current = result;
+            // current = { id: 1, name: 'Mac', year: 2016 }
+        });
+    },
+    save: function() {
+        return m.request({
+            method: "PUT",
+            url: "www.api-url.com/save",
+            data: Computer.current
+        }).then(function() {
+            m.route.set("/computers");
+        });
+    }
+};
+
+module.exports = Computer;
 ```
 
 För ytterligare exempel på formulär hantering i mithril titta i [tutorial](https://mithril.js.org/simple-application.html).
@@ -185,5 +219,7 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Detta var en genomgång av ett antal olika input typer i HTML5, som ger bättre användbarhet speciellt på mobila enheter. Genom att tala om vilken sorts data, som varje formulärfält är gjort för, kan den mobila enhet anpassa tangentbord och användargränssnitt för den specifika användningen.
+
+Vi har även tittat på formulärhantering i mithril både själva formuläret i en vy och hur den bakomliggande modellen för att hämta och spara data ser ut.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7317) om denna artikeln.
