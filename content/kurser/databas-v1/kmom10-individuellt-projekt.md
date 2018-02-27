@@ -3,34 +3,37 @@ author: mos
 revision:
     "2018-02-27": "(A, mos) Första utgåvan."
 ...
-Kmom10: Projekt och examination
+Kmom10: Projekt och examination (individuellt projekt)
 ====================================
-
-[WARNING]
-Kursutveckling pågår inför VT18.
-[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
 
-* Projektet och redovisning (20-80h)
+* Projektet och redovisning
 
-Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
+Totalt omfattar kursmomentet (07/10) i storleksordningen 20*4 studietimmar men då det finns optionella delar kan omfattningen bli mindre, beroende av studentens val.
 
 
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
+När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen.
+
+Inlämningen betygssätts som en projektinlämning enligt [grunderna för bedömning och betygsättning vid projektinlämning](kurser/bedomning-och-betygsattning).
 
 
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-<!--stop-->
+Lös uppgiften individuellt.
+
+[Läs i projektspecen](./../projekt-internetbanken) om projektet och hur du redovisar.
+
+Spara alla filer i katalogen `me/kmom10/proj`.
+
 
 Ni kan lösa uppgiften i grupp om max tre medlemmar.
 
@@ -51,6 +54,45 @@ Fråga i forumet om du känner dig osäker.
 ###Krav 5: (optionellt) {#k5}
 
 ###Krav 6: (optionellt) {#k6}
+
+login?
+
+Additional reports
+
+gui calculate interest
+
+både gui och web, eller enbart web
+
+management reports as gui (default mysql client)
+
+CLI terminal node.js menudriven
+
+webbinterface express
+
+Save the document as `doc/er.pdf`.
+
+Save `sql/ddl.sql` och `sql/insert.sql`.
+
+
+
+
+
+---
+
+###The presentation {#present}
+
+You are to show the following at the presentation:
+
+* Your client applications are performing according to the requirements.
+* Show that your database reports/tasks works without the GUIs.
+* Show the documentation.
+
+
+
+var finns sql-koden för att åerskapa databasen?
+
+
+---
 
 Prestanda index
 Subqueries
