@@ -149,3 +149,5 @@ Avslutningsvis {#avslutning}
 Vi har i denna övning skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](http://typographyhandbook.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7313) om denna artikeln.
+
+Exempelprogrammet från denna övning finns i kursrepot [example/typography](https://github.com/dbwebb-se/webapp/tree/master/example/typography) och i `example/typography`.

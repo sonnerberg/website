@@ -549,3 +549,5 @@ Avslutningsvis {#avslutning}
 Vi har nu skapat en början till en me-app. Vi har fyra olika vyer och navigation för att ta oss mellan vyerna. Vi har sett hur vi kan använda en `EventListener` för att gå mellan de olika vyerna och vi har skapat en lättanvänt meny för mobila enheter. Vi har strukturerat vår kod enligt module pattern och har en bra grund i vår CSS, som blir enkel att bygga vidare på.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7312) om denna artikeln.
+
+Exempelprogrammet från denna övning finns i kursrepot [example/redovisa](https://github.com/dbwebb-se/webapp/tree/master/example/redovisa) och i `example/redovisa`.
