@@ -6,4 +6,4 @@
 
 Bli en *fullstack utvecklare* och bemästra webbtekniker såsom klassisk programmering. Du lär dig frontend och backend tillsammans med databaser, influerat av öppen källkod och Unix.
 
-[Läs mer om programmet »](utbildning/webbprogrammering-180hp-campus)
+[Läs mer om programmet »](utbildning/webbprogrammering-180hp)

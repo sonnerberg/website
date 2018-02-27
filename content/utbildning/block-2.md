@@ -6,4 +6,4 @@
 
 Läs tillsammans med campus-studenterna via distans. När du är klar kan du läsa ett tredje år på campus.
 
-[Läs mer om programmet »](utbildning/webbprogrammering-120hp-distans)
+[Läs mer om programmet »](utbildning/webbprogrammering-120hp)

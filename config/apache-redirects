@@ -14,13 +14,15 @@ Redirect 410 /omvarldsbevakning
 Redirect 410 /utility
 Redirect 410 /v2
 
-
 # Avoid double linking
 Redirect 301 /example	/kod-exempel
 Redirect 301 /examples	/kod-exempel
 Redirect 301 /kod-exempel/dynamic_menu.php  /kod-exempel/dynamic_php_menu
 Redirect 301 /kod-exempel https://arkiv.dbwebb.se/kod-exempel/
 
+# Moved content
+Redirect 301 /utbildning/webbprogrammering-180hp-campus /utbildning/webbprogrammering-180hp
+Redirect 301 /utbildning/webbprogrammering-120hp-distans /utbildning/webbprogrammering-120hp
 
 # Archive
 Redirect 301 /skalle    https://arkiv.dbwebb.se/skalle/

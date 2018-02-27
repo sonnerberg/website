@@ -1,3 +1,3 @@
-####[exjobb](kurser/exjobb)/[grupproj](kurser/grupproj)
+####[exjobb](kurser/exjobb)
 
-Exjobb för distans och litet grupprojekt för campus.
+Examensjobb inom högskoleexamen på distans.

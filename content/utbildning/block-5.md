@@ -1,6 +1,6 @@
 ####Kurspaket webprog 30hp
 
-[FIGURE src="/image/person/dennis-larsson-barn.jpg?h=100&w=c8&cf&aro&a=0,10,65,40" caption="Dennis gick kurspaket."]
+[FIGURE src="image/person/dennis-larsson-barn.jpg?h=100&w=c8&cf&aro&a=0,10,65,40" caption="Dennis gick kurspaket."]
 
 **Kurspaket "Databaser, HTML, CSS, JavaScript och PHP"** (webprog) ger dig kunskaper i webbprogrammering.
 

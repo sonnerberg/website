@@ -57,6 +57,29 @@ Lektionsplaner {#lektionsplan}
 
 
 
+Kurser per antagningsomgång {#kurserantagen}
+--------------------------------------------------------------
+
+Översikt av de kurser som ingår i programmet i en viss antagningsomgång.
+
+
+
+### Webbprogrammering 120hp distans {#kurser120}
+
+* [Antagen HT2018](utbildning/webbprogrammering-120hp/2018/kurser)
+* [Antagen HT2017](utbildning/webbprogrammering-120hp/2017/kurser)
+* [Antagen HT2016](utbildning/webbprogrammering-120hp/2016/kurser)
+
+
+
+### Webbprogrammering 180hp campus {#kurser180}
+
+* [Antagen HT2018](utbildning/webbprogrammering-180hp/2018/kurser)
+* [Antagen HT2017](utbildning/webbprogrammering-180hp/2017/kurser)
+* [Antagen HT2016](utbildning/webbprogrammering-180hp/2016/kurser)
+
+
+
 Eget arbetsmaterial {#egetmaterial}
 --------------------------------------------------------------
 

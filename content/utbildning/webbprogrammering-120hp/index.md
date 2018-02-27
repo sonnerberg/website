@@ -9,11 +9,14 @@ views:
             title: Sitta hemma och studera vid skrivbordet?
 
 ...
-Webbprogrammering 120hp distans
+Webbprogrammering 120hp (distans)
 ========================================
 
 Läs om programmet.
 
 * [BTHs webbplats om Webbprogrammering 120hp distans](http://www.bth.se/distansutbildningar/webbprogrammering)
+
+<!--
 * [Programmet inför antagningsomgång HT16](http://edu.bth.se/utbildning/utb_program.asp?PtKod=PAGWH16h)
 * [Svar på vanliga frågor](t/4964).
+-->
