@@ -2,12 +2,13 @@
 title: databas-v1
 author: mos
 revision:
+    "2018-02-27": "(B, mos) Inkluderad i Webbprogrammering från vt18 lp4."
     "2018-01-11": "(A, mos) Första utgåva inför kursstart VT2018."
 ...
 Kursen databas
 ==================================
 
-Kursen **Databasteknologier för webben**, a.k.a. *databas*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med <s>olika</s> databaser i ett applikationsspråk i webbsammanhang.
+Kursen **Databasteknologier för webben**, a.k.a. *databas*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med databaser i ett applikationsspråk i webbsammanhang.
 
 <!--more-->
 
@@ -215,9 +216,9 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-<!--
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasar1/lasperiod3).
--->
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod4).
+
+<!-- [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod3) -->
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan för kursen som är kopplad till kurspaketet](webprog#studieplan).
 
@@ -278,6 +279,6 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 
 Kursen ges under olika kurskoder till olika målgrupper.
 
-Kursens namn är "Databasteknologier för webben" för programmet Webbprogrammering (från VT19) och kurspaketet webprog (från VT18). Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).
+Kursens namn är "Databasteknologier för webben" för programmet Webbprogrammering och kurspaketet webprog (från VT18). Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).
 
 Kursens namn är "Webbprogrammering och databaser" till programmen Software Engineering och International Software Engieering (från VT17). Du hittar [kursplanen genom att söka på kurskoden PA1444 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1444).
