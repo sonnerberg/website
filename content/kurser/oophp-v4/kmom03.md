@@ -3,10 +3,19 @@ author:
     - mos
     - lew
 revision:
-    "2017-04-07": (A, mos) Första utgåvan.
+    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2017-04-07": "(A, mos) Första utgåvan."
 ...
 Kmom03: PHP PDO och MySQL
 ==================================
+
+[WARNING]
+**Version 4 av oophp.**
+
+En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+
+[/WARNING]
+
 
 Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar och därefter får du på egen hand koda motsvarande funktionalitet in i ramverket Anax lite.
 
@@ -27,6 +36,8 @@ Sedan lägger du in allt i ditt Anax Lite och kanske väljer du att snygga till 
 [FIGURE src=image/oophp/v3/loginexercise.png?w=w2&a=0,29,5,25 caption="En snyggare ruta för att registrera ett konto, bakom döljer sig databaskod."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+<!--stop-->
 
 
 
@@ -92,7 +103,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
@@ -100,3 +111,4 @@ Se till att följande frågor besvaras i texten:
 * Reflektera kring koden du skrev för att lösa uppgifterna, klasser, formulär, integration Anax Lite?
 * Känner du dig hemma i ramverket, dess komponenter och struktur?
 * Hur bedömmer du svårighetsgraden på kursens inledande kursmoment, känner du att du lär dig något/bra saker?
+* Vilken är din TIL för detta kmom?

@@ -49,7 +49,7 @@ Vill man utveckla professionella webbapplikationer så krävs en riktigt god fö
 [INFO]
 **Tidigare version av kursen**
 
-Om du gick kursen tidigare, fram till och med vårterminen 2013, så finns kursmaterialet till [den kursen här](oophp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
+Om du gick kursen tidigare, fram till och med vårterminen 2013, så finns kursmaterialet till [den kursen här](kurser/oophp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
 
 Länken till den tidigare versionen av kursen oophp är alltså:
 

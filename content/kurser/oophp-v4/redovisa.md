@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2017-03-24": "(B, mos) Uppdaterad inför oophp-v3 vt17."
+    "2017-03-24": "(B, mos) Uppdaterad inflr oophp-v3 vt17."
     "2015-10-29": "(A, mos) Ny inför oophp ht15."
 ...
 Resultat och redovisning

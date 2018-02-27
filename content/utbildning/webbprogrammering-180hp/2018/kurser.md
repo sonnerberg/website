@@ -30,7 +30,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/linux-v2/block-kurser-kmom
+                                route: kurser/oopython-v2/block-kurser-kmom
                     column-4:
                         data:
                             meta:
@@ -62,14 +62,13 @@ views:
                         data:
                             meta:
                                 type: content
-                                # ht16 = oopython-v1, ht17 = oopython-v2
-                                route: kurser/oopython-v2/block-kurser-kmom
+                                route: kurser/databas-v1/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
                                 # ht16 oophp-v3, ht17 databas-v1, ht18 oophp-v4
-                                route: kurser/oophp-v3/block-kurser-kmom
+                                route: kurser/oophp-v4/block-kurser-kmom
 
     webbprogrammering21:
         region: columns-above

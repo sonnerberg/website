@@ -3,10 +3,19 @@ author:
     - mos
     - lew
 revision:
-    "2017-03-31": (A, mos, lew) Första versionen.
+    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2017-03-31": "(A, mos, lew) Första versionen."
 ...
 Kmom02: OO-programmering i PHP
 ==================================
+
+[WARNING]
+**Version 4 av oophp.**
+
+En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+
+[/WARNING]
+
 
 Vi fortsätter träna på programmering med klasser och objekt, i och utanför ramverket. Det blir en närmare bekantskap med ramverkets delar och hur du kan tänka när du integrerar din egen kod i ramverket. Du bekantar dig med begrepp som interface och traits.
 
@@ -19,6 +28,9 @@ Kursmomentet har fokus på ett par friare programmeringsövningar så du kan tr�
 [FIGURE src=/image/oophp/v3/calendar1.png?w=w1&q=70 caption="En månadskalender är en av övningarna som finns med i detta kursmoment."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+<!--stop-->
 
 
 
@@ -120,7 +132,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
@@ -129,3 +141,4 @@ Se till att följande frågor besvaras i texten:
 * Berätta om hur du löste integreringen av klassen Session.
 * Berätta om hur du löste uppgiften med Tärningsspelet 100/Månadskalendern, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?
 * Några tankar kring SQL så här långt?
+* Vilken är din TIL för detta kmom?

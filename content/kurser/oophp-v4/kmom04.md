@@ -5,10 +5,19 @@ category:
     - kurs oophp
     - kurs oophp-v3
 revision:
-    "2017-04-18": (A, mos) Första utgåvan.
+    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2017-04-18": "(A, mos) Första utgåvan."
 ...
 Kmom04: Lagra innehåll i databasen
 ==================================
+
+[WARNING]
+**Version 4 av oophp.**
+
+En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+
+[/WARNING]
+
 
 Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
@@ -23,6 +32,10 @@ Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske g�
 [FIGURE src=image/snapvt17/content-textfilter.png?w=w2 caption="Innehållet formatteras och filtreras för att bli HTML."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+<!--stop-->
+
+
 
 
 
@@ -104,7 +117,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
@@ -113,3 +126,4 @@ Se till att följande frågor besvaras i texten:
 * Förklara vilka routes som används för att demonstrera funktionaliteten för webbsidor och blogg (så att en utomstående kan testa).
 * Hur känns det att dokumentera databasen så här i efterhand?
 * Om du är självkritisk till koden du skriver i Anax Lite, ser du förbättringspotential och möjligheter till alternativ struktur av din kod?
+* Vilken är din TIL för detta kmom?

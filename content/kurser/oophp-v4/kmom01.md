@@ -3,11 +3,20 @@ author:
     - mos
     - lew
 revision:
+    "2018-02-26": "(PC1, mos) Arbetsmaterial oophp v4."
     "2017-03-27": "(B, mos) Länkar till phpcs, phpmd, psr-1, psr-2."
     "2017-03-24": "(A, mos, lew) Första versionen släppt."
 ...
 Kmom01: Objektorientering i PHP
 ==================================
+
+[WARNING]
+**Version 4 av oophp.**
+
+En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+
+[/WARNING]
+
 
 Kom igång med klasser i PHP och lär dig samtidigt hur grundstrukturen i ett PHP-ramverk kan se ut. Du bygger en me-sida i ditt egenskapade ramverk och du tränar på att bygga klasser och kod både i och utanför strukturen av ramverket.
 
@@ -18,6 +27,27 @@ Som ett sidoprojekt kommer vi igång med MySQL/MariaDB som databas och lär kän
 [FIGURE src=image/snapshot/sql-ovning-alter-table.jpg?w=w2 caption="Kom igång med databasen MySQL, här via klienten MySQL Workbench."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
+
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
+dbwebb clone oophp
+cd oophp
+dbwebb init
+```
+
+<!--stop-->
 
 
 
@@ -58,12 +88,11 @@ Läs översiktligt in dig på följande verktyg som används i kursen.
 1. Bekanta dig kort med [manualen till phpdoc](https://phpdoc.org/) som beskriver hur docblock-kommentarer skrivs till PHP.
 
 
-
+<!--
 ###Videor {#videor}
 
 Det finns inga videos.
 
-<!--
 Kika på följande videos.
 
 1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 0 och 1.
@@ -89,16 +118,6 @@ Följande lästips är att rekommendera.
 -------------------------------------------
 
 *(ca: 12-16 studietimmar)*
-
-
-
-###Labbmiljö {#labbmiljo}
-
-Installera labbmiljön för kursen.
-
-1. [Installera labbmiljön](kurser/oophp-v3/labbmiljo) som behövs för kursen.
-
-1. Klona kursrepot för kursen.
 
 
 
@@ -141,10 +160,14 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
 * Hur känns det att hoppa rakt in i klasser med PHP, gick det bra?
 * Berätta om dina reflektioner kring ramverk, anax-lite och din me-sida.
 * Gick det bra att komma igång med MySQL, har du liknande erfarenheter sedan tidigare?
+
+TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
+
+* Vilken är din TIL för detta kmom?

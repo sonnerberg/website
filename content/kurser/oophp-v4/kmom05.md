@@ -5,10 +5,19 @@ category:
     - kurs oophp-v3
     - kurs oophp
 revision:
-    "2017-04-21": (A, mos) Släppt i första utgåvan.
+    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2017-04-21": "(A, mos) Släppt i första utgåvan."
 ...
 Kmom05: Programmera i databasen
 ==================================
+
+[WARNING]
+**Version 4 av oophp.**
+
+En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+
+[/WARNING]
+
 
 Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
 
@@ -23,6 +32,10 @@ Du får även bygga en Anax Lite backend i till en webbshop.
 [FIGURE src=image/snapvt17/udf.png caption="Programmera i en databas med egendefinierade funktioner."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+<!--stop-->
+
 
 
 
@@ -112,7 +125,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
@@ -120,3 +133,4 @@ Se till att följande frågor besvaras i texten:
 * Hur är din syn på att programmera på detta viset i databasen?
 * Några reflektioner kring din kod för backenden till webbshopen?
 * Något du vill säga om koden generellt i och kring Anax Lite?
+* Vilken är din TIL för detta kmom?

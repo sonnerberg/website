@@ -5,10 +5,19 @@ category:
     - kurs oophp-v3
     - kurs oophp
 revision:
-    "2017-04-28": (A, mos) Första utgåvan.
+    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2017-04-28": "(A, mos) Första utgåvan."
 ...
 Kmom06: Enhetstestning
 ==================================
+
+[WARNING]
+**Version 4 av oophp.**
+
+En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+
+[/WARNING]
+
 
 Nu börjar vi närma oss slutet och vi finpolerar vårt Anax Lite genom att komplettera med enhetstester och vi förbättrar databasens prestanda med index.
 
@@ -19,6 +28,10 @@ När det gäller enhetstestning så jobbar vi med PHPUnit och vi försöker hitt
 [FIGURE src=image/snapvt17/phpunit.png?w=w2 caption="Enhetstestning med PHPUnit via en Makefile."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+<!--stop-->
+
 
 
 
@@ -109,7 +122,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
@@ -118,3 +131,4 @@ Se till att följande frågor besvaras i texten:
 * Har du tidigare erfarenheter av att skriva kod som testar annan kod?
 * Hur ser du på begreppet enhetstestning och att skriva testbar kod?
 * Hur gick det att hitta testbar kod bland dina klasser i Anax Lite?
+* Vilken är din TIL för detta kmom?

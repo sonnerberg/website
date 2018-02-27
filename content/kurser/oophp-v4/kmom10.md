@@ -2,11 +2,20 @@
 author:
     - mos
 revision:
-    "2017-05-09": (B, mos) Mindre förtydligande.
-    "2017-05-06": (A, mos) Första utgåvan.
+    "2018-02-26": "(PC1, mos) Arbetsmaterial oophp v4."
+    "2017-05-09": "(B, mos) Mindre förtydligande."
+    "2017-05-06": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
 ==================================
+
+[WARNING]
+**Version 4 av oophp.**
+
+En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+
+[/WARNING]
+
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -22,6 +31,10 @@ Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
 När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
+
+
+<!--stop-->
+
 
 
 
@@ -171,7 +184,7 @@ Skriv vad du gjort och skriv även hur många poäng du anser dina utbyggnader v
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din [redovisningssida](kurser/oophp-v3/redovisa), skriv följande:
+1. På din [redovisningssida](./../redovisa), skriv följande:
 
     1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
