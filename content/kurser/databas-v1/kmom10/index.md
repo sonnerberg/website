@@ -1,0 +1,34 @@
+---
+author: mos
+revision:
+    "2018-02-27": "(A, mos) Första utgåvan."
+...
+Kmom10: Projekt och examination
+====================================
+
+Detta kursmoment avslutar och examinerar kursen.
+
+
+
+Examination {#examination}
+--------------------------------------------------------------------
+
+Examinationen ser olika ut beroende på vilken studentgrupp du tillhör och beroende av vilken kurskod du läser enligt.
+
+
+
+Examination för kurspaket webprog med kurskod PA1451 {#kurspaket}
+--------------------------------------------------------------------
+
+De som läser enligt kurskoden PA1451 i [kurspaketet webprog](webprog) gör ett individuellt projekt som examinationsmoment.
+
+[Läs hur examinationen sker](./examination-projekt).
+
+
+
+Examination för ISE/SE med kurskod PA1444 {#se}
+--------------------------------------------------------------------
+
+De som läser enligt kurskoden PA1444 inom programmen International Software Engineering (ISE) och Software Engineering (SE) gör examination genom ett projekt som kan utföras i grupp, samt en individuell examination.
+
+[Läs hur examinationen sker](./examination-projekt-och-individuellt).

@@ -1,25 +1,12 @@
 ---
 author: mos
 revision:
-    "2018-02-27": "(N, mos) Specificerade att det är projektexamination."
-    "2015-10-07": "(M, mos) Lade till stöd för betygsskala U/G/UX."
-    "2015-09-28": "(L, mos) Formulerade om text om extrauppgifter i betyg AB."
-    "2015-08-31": "(K, mos) Tog bort tabell för htmlphp v1."
-    "2013-10-22": "(J, mos) Ändrade bedömningspunkter för projektet till 6 krav för att matcha nya oophp-kursen, samt fokus på A-F betygsskala istället för G/VG."
-    "2012-12-06": "(I, mos) Ändrade TILLRÄCKLIGT till GODKÄNT och TILLFREDSSTÄLLANDE till BRA och BRA TILl BÄTTRE ÄN BRA."
-    "2012-06-27": "(H, mos) Flyttade dokumentet till Lydia och skrev om i markdown."
-    "2012-02-03": "(G, mos) Ändrade Redovisningstexter till Övningar & Redovisningstexter i poängbedömning."
-    "2012-01-18": "(F, mos) Justerade förklarande texten av betygsnivåerna."
-    "2011-10-11": "(E, mos) Justerade förklarande texten av betygsnivåerna."
-    "2011-09-22": "(D, mos, rgi) Justerade bedömningspunkter, skalan för betygsättning och texter. Ett dokument för alla kurser."
-    "2011-03-09": "(C, rgi) Merge på ex/proj."
-    "2010-11-12": "(B, mos, rgi) Uppdaterad med poängbedömning."
-    "2010-05-30": "(A) Första utgåvan"
+    "2018-02-27": "(A, mos) Kopia av projektexamination, uppdaterad för projektexamination plus individuell examination."
 ...
-Bedömning och betygsättning (projekt)
+Bedömning och betygsättning (projekt + individuell)
 ==================================
 
-Denna mall gäller för kurser som har en me-sida och avslutas med ett individuellt projekt.
+Denna mall gäller för kurser som har en me-sida och avslutas med ett projekt som eventuellt kan utföras i grupp samt en individuell examination.
 
 Här är de riktlinjer som används vid betygsättning. Detta dokument är också en mall som blir ett underlag till varje student så att de kan se grunderna för sitt betyg.
 
@@ -75,13 +62,25 @@ Följande tabell används vid bedömning av projektet.
 
 | Bedömningspunkt | Poäng | Din poäng |
 |-----------------|-------|-----------|
+| Krav 1 är implementerat och fungerar felfritt. | 5 | |
+| Krav 2 är implementerat och fungerar felfritt. | 5 | |
+| Krav 3 är implementerat och fungerar felfritt. | 5 | |
+| Krav 4 är implementerat och fungerar felfritt. | 5 | |
+| TOTALT | 20 | |
+
+
+
+### Individuell {#bedomning-individuell}
+
+Följande tabell används vid bedömning av projektet.
+
+| Bedömningspunkt | Poäng | Din poäng |
+|-----------------|-------|-----------|
 | Krav 1 är implementerat och fungerar felfritt. | 10 | |
 | Krav 2 är implementerat och fungerar felfritt. | 10 | |
 | Krav 3 är implementerat och fungerar felfritt. | 10 | |
 | Krav 4 är implementerat och fungerar felfritt. | 10 | |
-| Krav 5 är implementerat och fungerar felfritt. | 10 | |
-| Krav 6 är implementerat och fungerar felfritt. | 10 | |
-| TOTALT | 60 | |
+| TOTALT | 40 | |
 
 
 

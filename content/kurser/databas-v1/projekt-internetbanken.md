@@ -25,9 +25,9 @@ backup av databasen?
 Visa hur projektet testas?
 
 Visa senaste transaktioner (bra testa).
-Visa summan på banken (bra testa).
-Visa antalet konton på banken (test).
 -->
+
+
 
 Pre study {#studie}
 --------------------------------------------------------------------
@@ -194,6 +194,7 @@ Document the database in line with the intentions of "[Kokbok för databasmodell
 Document your applications.
 
 * Describe the intention of each application.
+* Shortly describe how to work with the application.
 * Some screenshot could enhance the documentation.
 
 Make it look nice.
