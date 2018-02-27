@@ -42,11 +42,11 @@ Krav {#krav}
 
 1. Strukturera din CSS kod, så du har olika moduler för dina komponenter, gärna med hjälp av en CSS preprocessor (less eller sass).
 
-1. Skapa en vy där lagerarbetarna ser alla ordrar redo för att packas. Från order-vyn kan man ta sig till plocklista vyn.
+1. Skapa en vy där lagerarbetarna ser alla ordrar redo för att packas, dvs. ordrar med status ny. Från order-vyn kan man ta sig till plocklista vyn.
 
-1. Plocklista vyn visar alla varor i en order och vart dessa finns.
+1. Plocklista vyn visar alla varor i en order, hur många som ska plockas och vart varan finns.
 
-1. När varorna är plockade ska det finnas möjlighet att byta status för ordern med en knapp.
+1. När varorna är plockade ska det finnas möjlighet att byta status för ordern med en knapp. Byt till status Packad.
 
 1. När status för ordern ändras måste även lagersaldot för de packade varorna minskas.
 

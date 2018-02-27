@@ -28,7 +28,7 @@ Du har jobbat igenom artikeln "[Installera verktyget jq för att söka i JSON-fi
 Introduktion {#intro}
 -----------------------
 
-Du skall spara alla dina filer i katalogen `me/kmom03/jq` eller `me/kmom02/jq` för webapp-v2.
+Du skall spara alla dina filer i katalogen `me/kmom03/jq` eller `me/kmom02/jq` för webapp-v2 och webapp-v3.
 
 JSON-filen som du jobbar med heter `tag-dbwebb.json` och kommer från Instagram och du kan kopiera den från exempelmappen.
 
@@ -52,17 +52,17 @@ Kommandot `tee` skriver dels till en fil och dels till terminalen. Du kan nu tes
 
 ```bash
 $ ./solution.bash
-[                                                            
-  "data",                                                    
-  "meta",                                                    
-  "pagination"                                               
-]                                                            
-$ cat a.txt       
-[                                                            
-  "data",                                                    
-  "meta",                                                    
-  "pagination"                                               
-]                                                            
+[
+  "data",
+  "meta",
+  "pagination"
+]
+$ cat a.txt
+[
+  "data",
+  "meta",
+  "pagination"
+]
 ```
 
 Fråga i forumet om du behöver ledtrådar till lösningarna. Du kan också tjuvkika i filen `example/solution/jq.txt`.
