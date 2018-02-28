@@ -45,7 +45,7 @@ Läs följande:
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
     * Ch 11: CSS Features in Responsive Web Design.
     * Ch 12: Designing Mobile Applications.
-    * 
+
 
 
 ###Artiklar {#artiklar}
@@ -63,6 +63,8 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 ###Video  {#video}
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 2.
+
+1. Videospellistan [Introduktion till SASS](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8HZ5mbVhoKM_R1DmlX1iH1) ger en kort introduktion till olika funktioner i SASS.
 
 <!-- 1. Se videon om jQuery Mobile "[Alex Schmitz - jQuery Mobile - What’s New in 1.5 and the Road to 2.0](https://www.youtube.com/watch?v=2qF7kW9SdJQ)". -->
 
