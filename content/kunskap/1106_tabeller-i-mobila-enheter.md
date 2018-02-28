@@ -19,7 +19,7 @@ Tabeller används i stor utsträckning i affärssystem och andra administrations
 
 En tabell att börja med {#tabell}
 --------------------------------------
-Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet. Det finns inte tillräckligt mycket plats för att visa tabellen utan radbrytningar.
+Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet. Det finns inte tillräckligt mycket plats för att visa tabellen utan radbrytningar i cellerna.
 
 <table>
 <thead>
@@ -39,7 +39,7 @@ Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet.
 </tbody>
 </table>
 
-Om vi tittar på tabellen i mobilen ser vi ännu mindre av tabellen. Vi noterar även att det nu går att scrolla i sidled något vi vill försöka undvika på mobiler då det försvårar navigationen på sidan. Så målet för de två designs vi gör är inga radbrytningar och tabellen får inte vara bredare än skärmen på mobila enheter.
+Jag har gjort i ordning en enkel hemsida som endast innehåller samma `main.container`, som vi använd i tidigare kursmoment och tabellen. Om vi tittar på på denna sida i mobilen ser vi ännu mindre av tabellen. Vi noterar även att det nu går att scrolla hela sidan i sidled något vi vill försöka undvika på mobiler då det försvårar navigationen på sidan. Så målet för de två designs vi gör är **inga radbrytningar i celler** och **tabellen får inte vara bredare än skärmen på mobila enheter**.
 
 [FIGURE src=/image/webapp/screenshot-table-no-style.png?w=c7 caption="Tabellen i en mobil enhet."]
 
@@ -47,7 +47,7 @@ Om vi tittar på tabellen i mobilen ser vi ännu mindre av tabellen. Vi noterar 
 
 Metod 1: Scroll i sidled för tabellen {#sidled}
 --------------------------------------
-Vi börjar med radbrytningarna då det är enkelt att åtgärda. Vi definierar klassen `.table` och använder oss av möjligheten för att skriva 'nested' SASS kod, se [dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_rules) för mer information. Vi använder attributet `white-space` med värdet `nowrap`, detta gör att vi inte får radbrytningar.
+Vi börjar med radbrytningarna då det är enkelt att åtgärda. Vi definierar klassen `.table` och använder oss av möjligheten för att skriva 'nested' SASS kod, se [dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_rules) för mer information. Vi använder attributet `white-space` med värdet `nowrap`, detta gör att vi inte får radbrytningar i `th` och `td` elementen.
 
 ```scss
 .table {
@@ -59,7 +59,7 @@ Vi börjar med radbrytningarna då det är enkelt att åtgärda. Vi definierar k
 }
 ```
 
-Då all data inte får plats i sidled vill vi sätta max bredden till 100% och sen vill vi tillåta scroll, men enbart för tabellen. För att få till scrollningen måste vi även sätta `display: block;` så tabellerna blir ett block-element.
+Då all data inte får plats i sidled vill vi sätta max bredden till 100% och sen vill vi tillåta scroll, men enbart för tabellen. För att få till scrollningen måste vi även sätta `display: block;` så tabellerna blir ett block-element istället för ett table-element.
 
 ```scss
 .table {
@@ -125,13 +125,46 @@ För att förbereda för metod bryter vi ut delen som har med scrollningen i sid
 }
 ```
 
+För att se vilken effekt 'nested' SASS kod kan ge är här nedan CSS filen som skapas med kommandot `sass base.css style.css --style expanded`, vilket är den stilen som är mest lik läsbar CSS kod.
+
+```css
+.table {
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+.table th {
+  text-align: left;
+}
+.table td {
+  border-top: 1px solid #ccc;
+}
+.table th,
+.table td {
+  white-space: nowrap;
+  padding: 0.2rem 0.8rem;
+}
+.table .number-cell {
+  text-align: right;
+}
+
+.table-scroll {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+.table-striped tr:nth-of-type(2n) {
+  background-color: #eee;
+}
+```
+
 
 
 Metod 2: Stack {#stack}
 --------------------------------------
-Ett sätt att visa all data är att vända på tabellen och att istället för att visa data i kolumner visa det som rader. Detta fungerar då vi har mycket plats näråt och kan stapla raderna på varandra. Vi definierar en ny klass `.table-stacked`, som får ta hand om att stapla tabellen för små enheter. Vi använder därför ett breakpoint och en media-query för att få till staplingen av rader.
+Ett annat sätt att visa all data är att vända på tabellen och att istället för att visa data i kolumner visa det som rader. Detta fungerar då vi har mycket plats näråt och kan stapla raderna på varandra. Vi definierar en ny klass `.table-stacked`, som får ta hand om att stapla tabellen för små enheter. Vi använder därför ett breakpoint och en media-query för att få till staplingen av rader.
 
-Först sätter vi `display: block;` för `table`, `tr` och `td` elementen, vi vill inte att några av dessa element ska visas som en tabell-element. Vi flyttar även bort kolumnnamnen utanför skärmen, vi använder inte display: none; ur ett tillgänglighetsperspektiv, vi vill fortfarande att personer med skärmläsare (screen readers) kan få uppläst kolumnnamnen.
+Först sätter vi `display: block;` för `table`, `tr` och `td` elementen, vi vill inte att några av dessa element ska visas som tabell-element. Vi flyttar bort kolumnnamnen utanför skärmen med attributet `position: absolute;` och stora negativa värden. Vi använder inte `display: none;` ur ett tillgänglighetsperspektiv, vi vill fortfarande att personer med skärmläsare (screen readers) kan få uppläst kolumnnamnen.
 
 ```scss
 @media only screen and (max-width: 668px) {
@@ -156,7 +189,7 @@ Först sätter vi `display: block;` för `table`, `tr` och `td` elementen, vi vi
 }
 ```
 
-Nästa steg blir att flytta alla `td`-element ut till höger och i och med vi har `display: block;` på dessa hamnar de på var sin rad. Vi definierar även att vi vill kan ha radbrytningar i dessa element.
+Nästa steg blir att flytta alla `td`-element ut till höger och i och med vi har `display: block;` på dessa hamnar de på var sin rad. Vi definierar även att vi vill ha radbrytningar i dessa element med attributet `white-space:normal;`, finns tyvärr inte plats för all data horisontielt.
 
 ```scss
 @media only screen and (max-width: 668px) {
@@ -248,6 +281,8 @@ Bonus {#bonus}
 --------------------------------------
 Istället för att visa all data i tabellen kan du som utvecklare/designare göra ett medvetet val att bara visa en del av datan. Att helt enkelt välja att fokusera på de kolumner som är viktiga för precis denna vy istället för att alltid bara göra en spegling av databasen.
 
+Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagersaldo listan visar vi bara namn och antal. I plocklistan bara namn, antal och plats. Så på med designar hatten (kanske en designer har keps? eller varför inte en '[Blue Beanie](http://bluebeanieday.tumblr.com)') och ta ett medvetet val om vad som behöver visas för att skapa en enkel och lätt använderbar tabell.
+
 
 
 Avslutningsvis {#avslutning}
@@ -255,3 +290,5 @@ Avslutningsvis {#avslutning}
 Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt underlättar när vi gör responsiv design för mobila enheter.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7318) om denna artikeln.
+
+Exempelprogrammet från denna övning finns i kursrepot [example/sass-examples](https://github.com/dbwebb-se/webapp/tree/master/example/sass-examples) och i `example/sass-examples`.
