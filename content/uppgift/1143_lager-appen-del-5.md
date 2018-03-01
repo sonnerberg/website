@@ -6,7 +6,7 @@ revision:
 ...
 Lager appen del 5
 ==================================
-[FIGURE src=image/webapp/money.jpeg?w=c5 class="right"]
+[FIGURE src=image/webapp/hardware.jpg?w=c5 class="right"]
 
 I tidigare kursmoment har vi jobbat med vår lager app i webbläsaren. Nu är det dags att skapa en app på 'riktigt', som går att installera på en mobil-enhet och använda sig av både splashscreen och en riktig ikon.
 
@@ -23,40 +23,33 @@ Du har gjort uppgiften [Lager appen del 4](uppgift/lager-appen-del-4). Du har in
 
 Introduktion {#intro}
 -----------------------
-Börja med att skapa ett Cordova projekt
-
-
-
-kopiera din lager app från kmom04 så har du nått att utgå ifrån.
+Skapa ett Cordova projekt i den befintliga katalogen `me/kmom05/lager5` med kommandot:
 
 ```bash
-# stå i me-katalogen
-cp kmom03/lager3/* kmom04/lager4/
+# stå i me/kmom05/lager5
+cordova create . se.dbwebb.lager Lager
 ```
 
-Använd lager [API:t](https://lager.dbwebb.se) dokumentationen och speciellt sektionen om invoices. Här kan du hämta ut alla invoices och skapa nya.
+Ta först en kopia på de befintliga filerna `www/js/index.js` och `www/index.html`. Kopiera sedan din lager app från kmom04 så har du nått att utgå ifrån.
+
+```bash
+# står i me/kmom05/lager5
+cp www/js/index.js www/js/cordova_index.js
+cp www/index.html www/js/cordova_index.html
+cp -r ../../kmom04/lager4/* www/
+```
+
+Flytta sedan in de delar från `cordova_index.js` och `cordova_index.html` som behövs för att din applikation kan köras med hjälp av Cordova.
 
 
 
 Krav {#krav}
 -----------------------
-1. Skapa ett formulär för att registrera sig som användare i Lager appen.
+1. Skapa en Cordova app som kan köras i webbläsaren med hjälp av kommandot `cordova run browser`.
 
-1. Skapa ett formulär för att logga in i Lager appen med en registrerad användare.
+1. Din app ska även kunna köras på antigen iOS eller Android.
 
-1. Bakom de skyddade delarna ska faktura vyerna ligga.
-
-1. Skapa ett formulär för att göra om en order till en faktura. Ändra orderns status till 'fakturerad' enligt API:t.
-
-1. Det ska inte gå att fakturera en order två gånger.
-
-1. Skapa en tabell med information om befintliga fakturor.
-
-1. Tabellen ska fungera på alla enheter, gör ett medvetet val av design.
-
-1. Från tabellen ska man kunna ta sig till en faktura där all information från fakturan visas.
-
-1. Navigationen ska tydligt visa vilken vy användaren är i.
+1. Din app ska ha en egen splashscreen och en egen ikon.
 
 1. Validera och publicera din kod enligt följande.
 
@@ -72,9 +65,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-* Användaren ska automatisk loggas in efter registrering.
-
-* Om tid och lust finns portera Lager appen del 1 och del 2 till mithril. Så du har en stor Lager app istället för två mindre.
+Det finns inga extrauppgifter.
 
 
 

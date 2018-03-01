@@ -85,7 +85,7 @@ Det finns inga extra lästips.
 
 1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)". Spara dina filer i `me/kmom05/hello`.
 
-1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".  Spara dina filer i `me/kmom05/lager5`.
+1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".  Spara dina filer i `me/kmom05/hello`.
 
 <!-- 1. Gör uppgiften "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)". -->
 
