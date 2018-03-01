@@ -5,6 +5,7 @@ category:
     - pedagogik
     - konferenser
 revision:
+    "2018-03-01": "(G, mos) Konferens ECSEE."
     "2018-02-05": "(F, mos) Mer info från Swednet."
     "2017-12-21": "(E, mos) Swednet skrivinternat och årskonferens."
     "2017-09-01": "(D, mos) ICED 2018 samt Copenhagen."
@@ -23,6 +24,8 @@ Jag gör ett försök att göra en sida med konferenser, seminarier och möjligh
 
 Konferenser, seminarier och workshops {#konferenser}
 -----------------------
+
+[ECSEE](http://www.ecsee.eu/home/) European Conference for Software Engineering Education 14-15 juni i Seeon Monastery, Tyskland.
 
 [NU2018](http://nu2018.se/) går av stapeln 9-11 oktober i Västerås.
 
