@@ -55,8 +55,8 @@ Krav {#krav}
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate lager4
-dbwebb publish lager4
+dbwebb validate lager5
+dbwebb publish lager5
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.

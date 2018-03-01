@@ -2,13 +2,13 @@
 author: efo
 category: javascript
 revision:
-  "2018-02-12": (A, efo) Första utgåvan i samband med kursen webapp v3.
+  "2018-03-01": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ...
 Lager appen del 6
 ==================================
 [FIGURE src=image/webapp/money.jpeg?w=c5 class="right"]
 
-I kursmoment 3 arbetade vi med formulär och JavaScript ramverket mithril. Vi ska i denna uppgift skapa delar av appen som är skyddad med hjälp av JWT. I den skyddade delen ska det vara möjligt att se tidigare fakturor och skicka nya.
+I kursmoment 5 skapade vi en native app baserad på vår webapp med hjälp av Cordova. I denna uppgift ska vi använda mobila enheters styrkor och lägga till funktionalitet för GPS och kartor.
 
 
 
@@ -18,16 +18,16 @@ I kursmoment 3 arbetade vi med formulär och JavaScript ramverket mithril. Vi sk
 
 Förkunskaper {#forkunskaper}
 -----------------------
-Du har gjort uppgiften [Lager appen del 3](uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna [Tabeller i mobila enheter](kunskap/tabeller-mobila-enheter) och [Login med JWT](kunskap/login-med-jwt).
+Du har gjort uppgiften [Lager appen del 5](uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna "[Animationer och övergångar](kunskap/animationer-och-overgangar)" och "[GPS och karta](kunskap/gps-och-karta)".
 
 
 Introduktion {#intro}
 -----------------------
-Börja med att kopiera din lager app från kmom03 så har du nått att utgå ifrån.
+Börja med att kopiera din lager app från kmom05 så har du nått att utgå ifrån.
 
 ```bash
 # stå i me-katalogen
-cp kmom03/lager3/* kmom04/lager4/
+cp kmom05/lager5/* kmom06/lager6/
 ```
 
 Använd lager [API:t](https://lager.dbwebb.se) dokumentationen och speciellt sektionen om invoices. Här kan du hämta ut alla invoices och skapa nya.
@@ -36,30 +36,20 @@ Använd lager [API:t](https://lager.dbwebb.se) dokumentationen och speciellt sek
 
 Krav {#krav}
 -----------------------
-1. Skapa ett formulär för att registrera sig som användare i Lager appen.
+1. Använd animationer och övergånger för att efterlikna native applikationer.
 
-1. Skapa ett formulär för att logga in i Lager appen med en registrerad användare.
+1. Skapa en vy i din app med de ordrar som är redo att skickas. Dvs. ordrar med status större än .
 
-1. Bakom de skyddade delarna ska faktura vyerna ligga.
+1. När man klickar in på ordern får man al information om ordern och en karta där paketet ska levereras.
 
-1. Skapa ett formulär för att göra om en order till en faktura. Ändra orderns status till 'fakturerad' enligt API:t.
-
-1. Det ska inte gå att fakturera en order två gånger.
-
-1. Skapa en tabell med information om befintliga fakturor.
-
-1. Tabellen ska fungera på alla enheter, gör ett medvetet val av design.
-
-1. Från tabellen ska man kunna ta sig till en faktura där all information från fakturan visas.
-
-1. Navigationen ska tydligt visa vilken vy användaren är i.
+1. Använd GPS för att visa nuvarande position på kartan.
 
 1. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate lager4
-dbwebb publish lager4
+dbwebb validate lager6
+dbwebb publish lager6
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
@@ -68,9 +58,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-* Användaren ska automatisk loggas in efter registrering.
-
-* Om tid och lust finns portera Lager appen del 1 och del 2 till mithril. Så du har en stor Lager app istället för två mindre.
+Det finns inga extrauppgifter.
 
 
 

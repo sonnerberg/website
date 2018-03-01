@@ -1,11 +1,14 @@
 ---
-author: mos
+author:
+    - mos
+    - efo
 revision:
+  "2017-04-21": (D, efo) Förberedelser för webapp-v3.
   "2017-04-21": (C, efo) Ändringar inför släpp av kmom.
   "2017-03-17": (B, efo) Förberedelser för webapp-v2.
   "2015-12-11": (A, mos) Första utgåvan för kursen.
 ...
-Kmom06: Gomoku
+Kmom06: Mobila enheters styrkor
 ==================================
 
 [WARNING]
@@ -76,7 +79,7 @@ Det finns inga extra lästips.
 
 1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)". Spara eventuella testfiler i `me/kmom06/animation`.
 
-1. Jobba igenom övningen "[GPS och karta](kunskap/)". Spara eventuella testfiler i `me/kmom06/gps`.
+1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta)". Spara eventuella testfiler i `me/kmom06/gps`.
 
 
 
