@@ -8,6 +8,7 @@ category:
     - kurs oophp
     - kurs databas
 revision:
+    "2018-01-15": "(D, mos) Wrong name drop fulltext index."
     "2018-01-15": "(C, mos) Tillagd i kurs databas."
     "2017-05-02": "(B, mos) Genomgång, inkl främmande nycklar och stödjer oophp."
     "2017-03-28": "(A, mos) Första versionen."
@@ -612,7 +613,7 @@ mysql> SHOW INDEX FROM Course;
 Vill du ta bort ett index så går det bra att droppa det via dess namn.
 
 ```text
-mysql> DROP INDEX fulltext_name ON Course;
+mysql> DROP INDEX full_name ON Course;
 ```
 
 När man väl går in och tittar mer noggrant på tabellernas struktur så vill man gärna se mer och mer detaljer för att förstå vad som händer.
