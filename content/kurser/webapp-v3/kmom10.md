@@ -1,9 +1,10 @@
 ---
-author: 
+author:
 - aar
 - efo
 - mos
 revision:
+  "2018-03-02": (C, efo) Första versionen till webapp-v3.
   "2017-05-05": (B, aar,efo) Första versionen till webapp-v2.
   "2015-12-22": (A, mos) Första versionen till webapp.
 ...
@@ -27,7 +28,7 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du är en engagerad student och funderar på hur du kan nå ut och bidra till en förändring av omvärlden och säkra framtiden. Du känner en pulserande ådra av entreprenörsskap i dig. Du bestämmer dig för att "bygga en webapp" som bidrar till förändring. 
+Du är en engagerad student och funderar på hur du kan nå ut och bidra till en förändring av omvärlden och säkra framtiden. Du känner en pulserande ådra av entreprenörsskap i dig. Du bestämmer dig för att "bygga en webapp" som bidrar till förändring.
 
 Det finns en årlig tävling, ["Hack for Sweden"](http://hackforsweden.se/), där öppen data används för att bygga appar som fokuserar på nytänkande och innovation. I detta projekt kan du använda [en eller flera datakällor som publiceras via tävlingen](http://hackforsweden.se/data/) som källa till din webapp. Vi ser självklart fram emot att du deltar i tävlingen Hack for Sweden med din app.
 
@@ -70,30 +71,32 @@ Redovisningstexten skriver du i `me/redovisa`.
 
 
 
-###Krav 1: Specifikation och datakällor {#k1}
-
+### Krav 1: Specifikation och datakällor {#k1}
 Skapa en egen kortfattad specifikation för din webapp genom att beskriva din tänkta webapp i ett textstycke.
 
 Välj ut de datakällor du skall använda och vilken data du behöver ur varje datakälla. Berätta om ditt val.
 
-Du ska använda minst två API:er. API:erna måste inte vara från Hack for sweden, det är enbart ett tips.
+Du ska använda minst två API:er. API:erna måste inte vara från Hack for Sweden, det är enbart ett tips.
 
 
 
-###Krav 2: Arkitektur, dokumentation och manual {#k2}
-
+### Krav 2: Arkitektur, dokumentation och manual {#k2}
 Beskriv arkitekturen för din lösning. Berätta varför du valde som du gjorde.
 
 Berätta hur du organiserade din kod och filer, så att en annan teknisk person snabbt kan sätta sig in i din webapp.
 
 Skapa en fil `README.md` som kort berättar om webappen, hur man startar den och vilka olika "features" den innehåller.
 
-Din webapp ska göras med Mithril, Cordova, minst stödja Android och webbläsare, samt innehålla ikon och splash screen.
+Din webapp ska använda följande teknologier:
+* Mithril eller vanilla JavaScript
+* Cordova
+* Stödja Android eller iOS samt webbläsare
+* Innehålla en egen ikon och splashscreen.
+
+Beskriv i redovisningstexten vilka teknikval du har gjort och varför.
 
 
-
-###Krav 3: En webapp {#k3}
-
+### Krav 3: En webapp {#k3}
 Bygg en så gott som felfri webapp, i enlighet med din spec.
 
 Fick du göra prioriteringar under arbetets gång eller nådde du din fulla ambitionsnivå med din webapp? Berätta.
@@ -104,36 +107,20 @@ Berätta om någon av de möjligheter som finns för att förbättra din lösnin
 
 
 
-###Krav 4: Offline-läge (optionellt) {#k4}
-
-Använd dina kunskaper från kursmoment 5 och `cordova-plugin-file` för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
+### Krav 4: Offline-läge (optionellt) {#k4}
+Använd dina kunskaper från kursmoment 6 och Cordova pluginen `cordova-plugin-file` för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
 
 När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling.
 
 
 
-###Krav 5, 6: Valbart krav (optionellt) {#k5}
+### Krav 5: Karta och GPS (optionellt) {#k5}
+Använd positionsdata (Koordinater eller adresser) från en av dina valda API:er och visa upp denna data i en karta med hjälp av Google Places API. Du kan inte räkna in Google API:er som en av dina två API:er, dessa ligger utanför.
 
-Om du anser att din insats är värd ett högre betyg så måste du visa det. Det innebär att du formulerar de optionella kraven på egen hand, i samspråk med läraren om det behövs.
 
-Det handlar främst om den nivå du har på din produkt och att vissa "features" kan betraktas omfatta ett eller flera optionella krav.
 
-Vill du vara säker så måste du ha en dialog med läraren. Fråga i forumet så får du svar där, sedan har du det på svart-och-vitt vad som gäller, så gott det går.
-
-Tänk på att även ett *enklare* projekt kan ha features som kan lyftas upp som valbara krav. Lyft upp det som är speciellt med din lösning. Vilka delar tog längst tid? Lyft upp dem.
-
-Här är en icke komplett lista på saker som till exempel kan vara värda att lyfta upp.
-
-* Använd Cordova plugin för Geolocation, Media, Camera, Contacts osv.
-* Optimera din design för mobila enheter och beskriv dina design val.
-* En svår/tuff teknisk implementation.
-* En komplex och omfattande webapp med flera features.
-* Integration med tjänster för social media.
-* Koppla data från flera olika API:er, som samverkar på ett nytänkande sätt.
-
-Alltså, lyft upp det som du anser borde lyftas upp. Beskriv vad du gjort, varför, hur och hur mycket tid det tog. Var tydlig -- bedömning utgår från din beskrivning och därefter tittar vi på din lösning. 
-
-På denna del kan du få totalt 20 poäng (10 + 10).
+### Krav 6: Kamera (optionellt) {#k6}
+Använd kameran och Cordova pluginen `cordova-plugin-camera` som en viktig del av din app. För att spara ner bilderna kan externa bildtjänst API:er användas. Dessa kan inte räknas in som en av dina två API:er.
 
 
 
@@ -148,7 +135,7 @@ Redovisning {#redovisning}
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
 3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/webapp) och berätta att du är klar.
 
