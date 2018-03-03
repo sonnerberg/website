@@ -173,9 +173,11 @@ function showMap() {
 ```
 
 
+
 Användarens position {#gps}
 --------------------------------------
 Då vi använder en mobil enhet med tillgång till GPS har vi möjlighet att rita ut
+
 
 
 Avslutningsvis {#avslutning}
