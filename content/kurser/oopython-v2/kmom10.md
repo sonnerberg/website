@@ -143,6 +143,8 @@ Skapa filen `booking/db/data.json` och spara data i den.
 
 I [example/read_write](https://github.com/dbwebb-se/oopython/tree/master/example/flask/read_write) finns kod som visar hur du kan jobba med att läsa och skriva till fil.
 
+Koden som finns i app.py, som har med Flask att göra, behöver inte vara i en klass.
+
 
 
 Redovisning {#redovisning}
