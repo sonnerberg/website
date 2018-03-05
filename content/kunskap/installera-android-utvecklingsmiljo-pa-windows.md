@@ -22,17 +22,7 @@ Jag kommer att installera endast det nödvändigaste för att få tillgång till
 
 Installera Java {#java}
 --------------------------------------
-Du kan behöva Java JDK, på linux installeras detta lättast genom att använda `apt-get`. Följande kommandon installerar Java JDK 8 på en debian eller ubuntu maskin.
-
-```bash
-sudo apt-get install software-properties-common
-sudo add-apt-repository "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
-sudo apt-get update
-sudo apt-get install oracle-java8-installer
-javac -version
-```
-
-De ska nu se ungefär följande output: `javac 1.8.0_161`. Det viktiga är att det står 1.8 först.
+Ladda ner och installera Java JDK från [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). Ladda ner rätt paket beroende på processorarkitektur: Windows x64 för 64-bits arkitektur eller Windows x86 för 32-bits arkitektur. Kör `.exe` filen som laddas ner och följ instruktionerna i guiden.
 
 
 
@@ -40,19 +30,7 @@ Installera Android Studio {#studio}
 --------------------------------------
 Google har under senaste året ändrat så att man måste installera Android Studio för att kunna använda sig av Android SDK och Android Emulatorn.
 
-För att installera gå till [Android Studio](https://developer.android.com/studio/index.html) och tryck på knappen **DOWNLOAD ANDROID STUDIO**. Spara zip-filen i din hemmakatalog så den är lätt att hitta.
-
-Kör sedan nedanstående kommando för att packa upp zip-filen till katalogen `/usr/local`.
-
-```bash
-sudo unzip [sökväg till zip-filen] -d /usr/local/
-```
-
-För att öppna upp Android Studio kör filen `studio.sh` enligt nedan.
-
-```bash
-/usr/local/android_studio/bin/studio.sh
-```
+För att installera gå till [Android Studio](https://developer.android.com/studio/index.html) och tryck på knappen **DOWNLOAD ANDROID STUDIO**. Kör den nerladdade `.exe` filen och följ instruktionerna öppna Android Studio när installationen är klar.
 
 Android Studio avslutar nu installationen bekräfta de val som kommer upp. Jag har vald mörka temat Dracula, om ni undrar över de mörka färgarna i bilderna nedan. Vi kommer inte använda Android Studio för utveckling, men är tyvärr enda sättet att installera SDK och Emulatorn, samt att kunna bygga apparna. När installationen är klar får du upp nedanstående fönster. Välj Configure > SDK Manager.
 
