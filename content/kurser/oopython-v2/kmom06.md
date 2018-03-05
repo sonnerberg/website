@@ -101,7 +101,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vad gör koden?
 
-* Läste någon av läsanvisningarna? Hade du nytta av dem när du löste uppgiften?
+* Läste du någon av läsanvisningarna? Hade du nytta av dem när du löste uppgiften?
 
 * Vad var din metod för att förstå och förbättra koden?
 
