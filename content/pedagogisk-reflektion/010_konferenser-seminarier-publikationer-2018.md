@@ -5,6 +5,7 @@ category:
     - pedagogik
     - konferenser
 revision:
+    "2018-03-05": "(H, mos) Publication JUTLP."
     "2018-03-01": "(G, mos) Konferens ECSEE."
     "2018-02-05": "(F, mos) Mer info från Swednet."
     "2017-12-21": "(E, mos) Swednet skrivinternat och årskonferens."
@@ -44,6 +45,13 @@ Innovative Teaching and Learning Practices in Higher Education – the 19th Inte
 Institutionen för utbildningsvetenskap vid Lunds universitet, tidskriften Högre utbildning och forskarutbildningsnätverket FonSyd bjuder in till en [forskningskonferens om högre utbildning i Lund den 15-16 maj 2018]( http://konferens.ht.lu.se/forskning-om-hogre-utbildning).
 
 Swednet har en [inspirationsdag i Malmö](http://www.swednetwork.se/valkommen-till-swednets-inspirationsdag/) den 6:e februari.
+
+
+
+Publikationer {#publikationer}
+-----------------------
+
+The [Journal of University Teaching and Learning Practice JUTLP](http://ro.uow.edu.au/jutlp/) is a tri-annual, peer-reviewed journal publishing papers that add significantly to the body of knowledge describing effective and innovative teaching and learning practice in the higher education environment.
 
 
 
