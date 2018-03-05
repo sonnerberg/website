@@ -45,6 +45,8 @@ $ npm install -g cordova
 $ cordova --version
 ```
 
+Du kan behöva köra `npm install` kommandot som administratör/sudo.
+
 
 
 Kolla förutsättningarna är på plats {#check}
