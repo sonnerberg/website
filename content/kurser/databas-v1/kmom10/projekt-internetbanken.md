@@ -58,7 +58,9 @@ The account holder can move money between their own accounts. Each time they mov
 
 ### Swishing the money {#swish}
 
-The account holders can use their accounts through a mobile application where they can swish money to another account. Swishing is done by, using the swish application, inserting the userid and a 4-digit pincode followed by the account number, the amount to swish and the receiving account number. The pincode is private for each account holder.
+<!-- add connection to mobile phone -->
+
+The account holders can use their accounts through a swish-application where they can swish money to another account. Swishing is done by, using the swish application, inserting the userid and a 4-digit pincode followed by the account number, the amount to swish and the receiving account number. The pincode is private for each account holder.
 
 Each time a swish is done, a fee of 2% of the swished amount should be taken and stored in your special and secret account. See this as your insurance for days to come; perhaps a nice lodge in sunny Spain can come out of this.
 
@@ -71,6 +73,8 @@ The calculation of interest is done on a daily basis. It is performed manually b
 The result shall be stored in a separate table with the values of the calculated interest, date for calculation, and account number.
 
 The yearly accumulated interest for a specific account can be calculated by summing all entries, for the specific account.
+
+<!-- en sp för att betala ut den årliga räntan till kontot -->
 
 
 
