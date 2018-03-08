@@ -520,6 +520,22 @@ Här under kan ni se ett exempel på Nobel applikation med navigation.
 
 
 
+Exempelkod {#example}
+--------------------------------------
+Exempelprogrammet från denna övning finns i kursrepot [example/nobel](https://github.com/dbwebb-se/webapp/tree/master/example/nobel) och i `example/nobel`.
+
+I kursrepot finns många mithril exempel program. Följande exempelprogram är relevanta för att lära sig mithril från början.
+
+* `example/meapp-mithril` visar hur man skapar en meapp med mithril.
+
+* `example/nameday` visar hur man kan hämta data från ett API med namnsdagar.
+
+* `example/calendar` använder komponenter för att skapa en kalender med namnsdagar.
+
+* `example/husLeta` användes som i genomgångar 2017 som exempel på de olika delarna av kursen.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna övning skapat en app inför Nobelfesten, som hämtar information från det officiella Nobel-api. Vi har bekantat oss med virtuella noder och hur vi skapar dessa med `m`. Vi har tittat på en router i mithril och hur vi kan använda den för att koppla vyer till specifika router och skicka med parametrar till dessa. Vi har skapat modeller i mithril där vi hämtar data och skickar tillbaka till vyerna.
