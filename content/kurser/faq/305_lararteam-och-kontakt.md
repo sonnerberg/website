@@ -23,7 +23,6 @@ Lärarteamet består av:
 | ![Andreas](image/lararteam/andreas.png?w=100&h=100&cf) | Andreas&nbsp;Arnesson | zeldah   | aar@bth.se, [BTH](https://www.bth.se/?s=aar&searchtype=employee), [GitHub](https://github.com/AndreasArne), [Facebook](https://www.facebook.com/jaghatar.ansiktsbooken), [Linkedin](https://se.linkedin.com/in/andreas-arnesson-87a563b3)  |
 | ![Emil](image/lararteam/emil.jpg?w=100&h=100&cf) | Emil&nbsp;Folino | efobth | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee), [Facebook](https://facebook.com/emil.folino), [Twitter](https://twitter.com/emilfolino) | 
 | ![Pernilla](image/lararteam/pernilla.jpg?w=100&h=100&cf) | Pernilla&nbsp;Silverblood | allinrep   | psl@bth.se, [GitHub](https://github.com/pejg12) |
-| ![Jakob](https://www.gravatar.com/avatar/2a164af5e32410f882d734f0816a4ed5?s=100) | Jakob&nbsp;Sandgren | starmarket | sandgren.jakob@gmail.com |
 | ![Anders](image/lararteam/litemerafrukt.jpg?w=100&h=100&cf) | Anders&nbsp;Nygren | litemerafrukt | litemerafrukt@gmail.com  |
 
 
@@ -68,6 +67,16 @@ För läsåret 2016/2017 är följande lärarassistenter, i olika omfattning.
 | ![Jonas](image/lararteam/palkess.jpg?w=100&h=100&cf) | Jonas&nbsp;Andersson | Palkess | jonas.andersson.web@gmail.com |
 | ![Ara](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Ara&nbsp;Nour&nbsp;Baksh | ara | ara.nourbakhsh@gmail.com |
 | ![olof](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Olof&nbsp;Enström | olof | olof.enstrom@gmail.com |
+
+
+
+###Mer lärarassistenter {ass}
+
+Här är än fler som tidigare jobbat som lärarassistenter. Listan är dock inte i närheten av att vara komplett.
+
+| Bild    | Vem         | Chatt | Kontakt och info |
+|---------|-------------|-------|------------------|
+| ![Jakob](https://www.gravatar.com/avatar/2a164af5e32410f882d734f0816a4ed5?s=100) | Jakob&nbsp;Sandgren | starmarket | sandgren.jakob@gmail.com |
 
 
 
