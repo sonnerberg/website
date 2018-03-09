@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-03-09": (B, mos) Detaljer om lärarteam assistenter 2017/18.
     "2016-08-04": (A, mos) Första versionen.
 ...
 Lärarteam och kontaktuppgifter
@@ -40,15 +41,13 @@ För läsåret 2017/2018 är följande lärarassistenter, i olika omfattning.
 
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
-| ![Ara](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Ara&nbsp;Nour&nbsp;Baksh | ara | ara.nourbakhsh@gmail.com |
-| ![Olof](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Olof&nbsp;Enström | olof | olof.enstrom@gmail.com |
-| ![Niklas](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Niklas&nbsp;Andersson | aurora | nick_9669@hotmail.com |
-| ![André](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | André&nbsp;Johansson |  | andy-greenday@hotmail.com |
+![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nhdandersson@gmail.com - [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/)
 | ![Magnus](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Magnus&nbsp;Greiff |  | mangegreiff@gmail.com |
-| ![Viktoria](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Viktoria&nbsp;Haapaoja |  | viktoria.haa@hotmail.com |
+| ![André](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | André&nbsp;Johansson |  | andy-greenday@hotmail.com |
 | ![David](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson | TBA  | david_andersson96@outlook.com |
 | ![Gustav](image/lararteam/gel.jpg?w=100&h=100&cf) | Gustav&nbsp;Elmgren | gel  | gustavelmgren@gmail.com [LinkedIn](https://www.linkedin.com/in/gustav-elmgren-4035a07a) |
 | ![Dennis](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Dennis&nbsp;Skoko | desk  | dennis.skoko@hotmail.com |
+| ![Jonas](image/lararteam/palkess.jpg?w=100&h=100&cf) | Jonas&nbsp;Andersson | Palkess | jonas.andersson.web@gmail.com |
 
 
 
