@@ -1,7 +1,10 @@
-####Texteditor Atom
+####Andra saker
 
 [FIGURE src="/image/snapht16/vi-fixar-grillen.jpg?w=c8&h=100&cf&sharpen&a=0,0,0,0" caption="TBD"]
 
-Visa hur man installerar och kommer igång med texteditorn Atom.
+* Raspberry Pi som
+    * webbserver
+    * programmera python
+    * operativsystemet Linux/Debian
 
 [Läs mer »](#)
