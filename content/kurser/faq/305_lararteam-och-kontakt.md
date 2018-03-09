@@ -41,7 +41,7 @@ För läsåret 2017/2018 är följande lärarassistenter, i olika omfattning.
 
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
-![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nhdandersson@gmail.com - [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/)
+| ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nhdandersson@gmail.com - [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/)
 | ![Magnus](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Magnus&nbsp;Greiff |  | mangegreiff@gmail.com |
 | ![André](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | André&nbsp;Johansson |  | andy-greenday@hotmail.com |
 | ![David](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson | TBA  | david_andersson96@outlook.com |
