@@ -32,9 +32,31 @@ Vi har i tidigare kurser använd [npm](https://www.npmjs.com/) (Node Package Man
 ```bash
 $ npm init --yes
 $ npm install --save webpack
+$ npm install --save webpack-cli
 ```
 
-Låt oss titta på filen `package.json` skapade
+Låt oss titta på filen `package.json` som skapades av kommandona ovan.
+
+```json
+{
+  "name": "lager2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  }
+}
+```
+
+Vi ser att vi har två moduler som vi är beroende (dependencies) av `webpack` och `webpack-cli`. Förutom de två beroenden är det standard värden och vi ser att vårt paket har fått namnet lager2.
 
 
 
