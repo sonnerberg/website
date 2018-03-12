@@ -41,12 +41,18 @@ För läsåret 2017/2018 är följande lärarassistenter, i olika omfattning.
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
 | ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nhdandersson@gmail.com [GitHub](https://github.com/AuroraBTH) [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) |
-| ![Magnus](https://www.gravatar.com/avatar/f6519749cab15b46f612d0dfe249b5d7?s=100) | Magnus&nbsp;Greiff |  | mangegreiff@gmail.com [GitHub](https://github.com/MagnusGreiff/) [LinkedIn](https://www.linkedin.com/in/magnus-greiff-582907103/) |
-| ![André](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | André&nbsp;Johansson |  | andy-greenday@hotmail.com |
-| ![David](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson | TBA  | david_andersson96@outlook.com |
+| ![Magnus](https://www.gravatar.com/avatar/f6519749cab15b46f612d0dfe249b5d7?s=100) | Magnus&nbsp;Greiff | Munge | mangegreiff@gmail.com [GitHub](https://github.com/MagnusGreiff/) [LinkedIn](https://www.linkedin.com/in/magnus-greiff-582907103/) |
+| ![André](https://www.gravatar.com/avatar/a55a997be7994740f25ea42628d5d407?s=100) | André&nbsp;Johansson |  | me@andremartinjohansson.com [GitHub](https://github.com/andymartinj) [Linkedin](https://www.linkedin.com/in/andremartinjohansson/) |
+| ![David](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson |  | david_andersson96@outlook.com |
 | ![Gustav](image/lararteam/gel.jpg?w=100&h=100&cf) | Gustav&nbsp;Elmgren | gel  | gustavelmgren@gmail.com [LinkedIn](https://www.linkedin.com/in/gustav-elmgren-4035a07a) |
 | ![Dennis](image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Dennis&nbsp;Skoko | desk  | dennis.skoko@hotmail.com |
 | ![Jonas](image/lararteam/palkess.jpg?w=100&h=100&cf) | Jonas&nbsp;Andersson | Palkess | jonas.andersson.web@gmail.com |
+
+
+Ny mail: 
+Gravatar: Kopplad till mail ovan
+
+
 
 
 <!--
