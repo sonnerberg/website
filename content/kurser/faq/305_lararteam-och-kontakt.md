@@ -49,11 +49,6 @@ För läsåret 2017/2018 är följande lärarassistenter, i olika omfattning.
 | ![Jonas](image/lararteam/palkess.jpg?w=100&h=100&cf) | Jonas&nbsp;Andersson | Palkess | jonas.andersson.web@gmail.com |
 
 
-Ny mail: 
-Gravatar: Kopplad till mail ovan
-
-
-
 
 <!--
 ###Lärarassistenter 2016/2017 {ass16}
