@@ -188,10 +188,9 @@ Redirect /kurser/oopython  /kurser/oopython-v2
 # webapp
 Redirect /webapp/repo   /repo/webapp
 Redirect /webapp-v1     /kurser/webapp-v1
-
 Redirect /webapp-v2     /kurser/webapp-v2
-Redirect /webapp        /kurser/webapp-v2
-Redirect /kurser/webapp /kurser/webapp-v2
+Redirect /webapp        /kurser/webapp-v3
+Redirect /kurser/webapp /kurser/webapp-v3
 
 
 # oophp
