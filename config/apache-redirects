@@ -197,13 +197,12 @@ Redirect /kurser/webapp /kurser/webapp-v2
 # oophp
 Redirect /oophp-v1              /kurser/oophp-v1
 Redirect /kurser/oophp-v1       /kurser/arkiv/oophp-v1
-
 Redirect /kurser/oophp-v2/me    https://arkiv.dbwebb.se/oophp/me
 Redirect /oophp-v2              /kurser/oophp-v2
-
 Redirect /oophp-v3              /kurser/oophp-v3
-Redirect /oophp                 /kurser/oophp-v3
-Redirect /kurser/oophp          /kurser/oophp-v3
+
+Redirect /oophp                 /kurser/oophp-v4
+Redirect /kurser/oophp          /kurser/oophp-v4
 
 
 # ramverk1
