@@ -1,6 +1,7 @@
 ---
 title: oopython v2
 author:
+    - aar
     - lew
     - mos
 revision:

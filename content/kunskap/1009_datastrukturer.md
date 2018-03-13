@@ -1,5 +1,7 @@
 ---
-author: lew
+author:
+    - aar
+    - lew
 revision:
     "2017-02-08": (A, lew) First version.
 category:
