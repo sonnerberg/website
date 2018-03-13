@@ -9,7 +9,7 @@ Login med JWT
 
 [FIGURE src=/image/webapp/padlock.png?w=c5 class="right"]
 
-Vi har i tidigare kurser och i andra programmeringsspråk hanterat inloggning med hjälp av sessioner. I denna övning ska vi titta på ett sätt att autensiera våra klienter mot servern utan sessioner. Detta ger oss vissa fördelar som att vi har inbyggd utlöpstider och att det underlättar om vi vill skala upp vårt API, samtidigt som det ger ett säkert sätt att identifiera klienterna på.
+Vi har i tidigare kurser och i andra programmeringsspråk hanterat inloggning med hjälp av sessioner. I denna övning ska vi titta på ett sätt att autentisera våra klienter mot servern utan sessioner. Detta ger oss vissa fördelar som att vi har inbyggd utlöpstider och att det underlättar om vi vill skala upp vårt API, samtidigt som det ger ett säkert sätt att identifiera klienterna på.
 
 I denna övning tittar vi på hur vi med hjälp av Postman registrerar en användare, loggar in som denna användare och får en JSON Web Token (JWT). Sist i övningen tittar vi på hur vi med hjälp av JWT kommer åt funktioner i Lager API:t som ligger skyddade.
 

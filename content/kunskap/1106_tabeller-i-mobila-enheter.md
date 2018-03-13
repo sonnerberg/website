@@ -75,7 +75,7 @@ Då all data inte får plats i sidled vill vi sätta max bredden till 100% och s
 }
 ```
 
-Nu har vi klarat av våra två mål: Vi har inga radbrytningar och tabellen är max 100% bred. Än så länge är det dock ingen vidare snygg tabell och det är svårt att snabbt se vilken rad i tabellen som data tillhör. Så låt oss lägga till avgräsning mellan varje rad i tabellen, öka den inre marginalen och vänsterställa texten i header-raden.
+Nu har vi klarat av våra två mål: Vi har inga radbrytningar och tabellen är max 100% bred. Än så länge är det dock ingen vidare snygg tabell och det är svårt att snabbt se vilken rad i tabellen som data tillhör. Så låt oss lägga till avgränsning mellan varje rad i tabellen, öka den inre marginalen och vänsterställa texten i header-raden.
 
 ```scss
 .table {
@@ -162,7 +162,7 @@ För att se vilken effekt 'nested' SASS kod kan ge är här nedan CSS filen som 
 
 Metod 2: Stack {#stack}
 --------------------------------------
-Ett annat sätt att visa all data är att vända på tabellen och att istället för att visa data i kolumner visa det som rader. Detta fungerar då vi har mycket plats näråt och kan stapla raderna på varandra. Vi definierar en ny klass `.table-stacked`, som får ta hand om att stapla tabellen för små enheter. Vi använder därför ett breakpoint och en media-query för att få till staplingen av rader.
+Ett annat sätt att visa all data är att vända på tabellen och att istället för att visa data i kolumner visa det som rader. Detta fungerar då vi har mycket plats neråt och kan stapla raderna på varandra. Vi definierar en ny klass `.table-stacked`, som får ta hand om att stapla tabellen för små enheter. Vi använder därför ett breakpoint och en media-query för att få till staplingen av rader.
 
 Först sätter vi `display: block;` för `table`, `tr` och `td` elementen, vi vill inte att några av dessa element ska visas som tabell-element. Vi flyttar bort kolumnnamnen utanför skärmen med attributet `position: absolute;` och stora negativa värden. Vi använder inte `display: none;` ur ett tillgänglighetsperspektiv, vi vill fortfarande att personer med skärmläsare (screen readers) kan få uppläst kolumnnamnen.
 
@@ -189,7 +189,7 @@ Först sätter vi `display: block;` för `table`, `tr` och `td` elementen, vi vi
 }
 ```
 
-Nästa steg blir att flytta alla `td`-element ut till höger och i och med vi har `display: block;` på dessa hamnar de på var sin rad. Vi definierar även att vi vill ha radbrytningar i dessa element med attributet `white-space:normal;`, finns tyvärr inte plats för all data horisontielt.
+Nästa steg blir att flytta alla `td`-element ut till höger och i och med vi har `display: block;` på dessa hamnar de på var sin rad. Vi definierar även att vi vill ha radbrytningar i dessa element med attributet `white-space:normal;`, finns tyvärr inte plats för all data horisontellt.
 
 ```scss
 @media only screen and (max-width: 668px) {
@@ -279,9 +279,9 @@ Tabellen `table.table.table-striped.table-stacked` ser nu ut som nedanstående t
 
 Bonus {#bonus}
 --------------------------------------
-Istället för att visa all data i tabellen kan du som utvecklare/designare göra ett medvetet val att bara visa en del av datan. Att helt enkelt välja att fokusera på de kolumner som är viktiga för precis denna vy istället för att alltid bara göra en spegling av databasen.
+Istället för att visa all data i tabellen kan du som utvecklare/designer göra ett medvetet val att bara visa en del av data. Att helt enkelt välja att fokusera på de kolumner som är viktiga för precis denna vy istället för att alltid bara göra en spegling av databasen.
 
-Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagersaldo listan visar vi bara namn och antal. I plocklistan bara namn, antal och plats. Så på med designar hatten (kanske en designer har keps? eller varför inte en '[Blue Beanie](http://bluebeanieday.tumblr.com)') och ta ett medvetet val om vad som behöver visas för att skapa en enkel och lätt använderbar tabell.
+Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagersaldo listan visar vi bara namn och antal. I plocklistan bara namn, antal och plats. Så på med designar hatten (kanske en designer har keps? eller varför inte en '[Blue Beanie](http://bluebeanieday.tumblr.com)') och ta ett medvetet val om vad som behöver visas för att skapa en enkel och lätt användbar tabell.
 
 
 

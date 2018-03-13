@@ -212,22 +212,20 @@ $blue: #0074d9;
 }
 ```
 
-För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I filen `base.scss` importerar vi alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS.
-
-Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
-
-Den resulterande `base.scss` blir en samling `@import`, som exemplet visar nedan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer. I exemplet nedan har jag skapat en fil där jag lägger alla variabler, till exempel vilket typsnitt som ska användas eller vilken färg som är blå. Sedan har jag flyttat CSS koden för navigationen, typografin och knapperna till var sin `.scss`-fil. Koden som definierar grunddesignen finns i `container.scss`.
+För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I filen `base.scss` importerar vi alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den. Som ni ser nedan har jag även flyttat in `normalize.min.css` i style katalogen och utnyttjar att jag kan skriva CSS kod i scss filer. Nu blir `normalize.min.css` en del av den resulterande CSS filen istället för att ligga som ett beroende utanför.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
 
-@import 'normalize.min.css';
+@import 'style/normalize.min.scss';
 @import 'style/variables';
 @import 'style/container';
 @import 'style/navigation';
 @import 'style/typography';
 @import 'style/button';
 ```
+
+Den resulterande `base.scss` blir en samling `@import`, som exemplet visar ovan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer. I exemplet ovan har jag skapat en fil där jag lägger alla variabler, till exempel vilket typsnitt som ska användas eller vilken färg som är blå. Sedan har jag flyttat CSS koden för navigationen, typografin och knapperna till var sin `.scss`-fil. Koden som definierar grunddesignen finns i `container.scss`.
 
 När vi sedan vill kompilera SASS till en CSS-fil används följande kommando på kommandoraden.
 

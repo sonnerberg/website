@@ -95,7 +95,7 @@ I andra skriptet `watch` använder vi flaggan `--watch`, som håller koll på vi
 
 import och export {#importexport}
 --------------------------------------
-Om vi öppnar upp `index.html` i en webbläsare stöter vi på patrull direkt. Öppnar vi upp JavaScript konsollen i webbläsaren ser vi varför.
+Om vi öppnar upp `index.html` i en webbläsare stöter vi på patrull direkt. Öppnar vi upp JavaScript konsolen i webbläsaren ser vi varför.
 
 > ReferenceError: Can't find variable: home
 
@@ -113,7 +113,7 @@ Men för att vi kan importera en modul måste den först exporteras. Så i slute
 export { home };
 ```
 
-Vi laddar om sidan och stora delar av vyn visas nu. Vi får dock fortfarande ett JavaScript fel i konsollen.
+Vi laddar om sidan och stora delar av vyn visas nu. Vi får dock fortfarande ett JavaScript fel i konsolen.
 
 > ReferenceError: Can't find variable: menu
 

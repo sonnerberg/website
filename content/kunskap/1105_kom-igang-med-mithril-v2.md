@@ -11,7 +11,7 @@ Kom igång med ramverket Mithril v2
 
 [FIGURE src=/image/webapp/mithril-logo.png class="right"]
 
-Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Vanilla JavaScript är beteckningen för ren JavaScript där vi inte använder annat är det som är implementerat i weblläsaren. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data, allt har gjorts i samma funktioner och/eller modul. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, dela upp våra vyer och modeller, där vi hämtar data, och använda virtuella noder för att skapa en SPA-applikation.
+Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Vanilla JavaScript är beteckningen för ren JavaScript där vi inte använder annat är det som är implementerat i webbläsaren. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data, allt har gjorts i samma funktioner och/eller modul. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, dela upp våra vyer och modeller, där vi hämtar data, och använda virtuella noder för att skapa en SPA-applikation.
 
 I övningen skapar vi en SPA-applikation inför Nobelfesten där vi hämtar data från det officiella Nobel API:t.
 
@@ -57,6 +57,7 @@ Vi ska nu installerar nu mithril och webpack via npm och gör det med följande 
 ```bash
 $ npm install --save mithril
 $ npm install --save webpack
+$ npm install --save webpack-cli
 ```
 
 Det kan hända att du får varningar när du kör ovanstående kommandon, men dessa kan du ignorera för nu.
@@ -77,23 +78,24 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
   "license": "ISC",
   "dependencies": {
     "mithril": "^1.1.6",
-    "webpack": "^3.10.0"
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
   }
 }
 ```
 
-Vi skapar även en webpack konfigurationsfil `webpack.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `bin/app.js`.
+Vi skapar även en webpack konfigurationsfil `webpack.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `app.js`.
 
 ```javascript
 module.exports = {
     entry: './js/index.js',
     output: {
-        filename: './bin/app.js'
+        filename: './app.js'
     }
 };
 ```
 
-Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` och skapar två nya. Kör vi `npm start` kompileras filerna till `bin/app.js` och kör vi `npm run watch` kompileras filerna automatisk varje gång vi sparar.
+Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` och skapar två nya. Kör vi `npm start` kompileras filerna till `dist/app.js` och kör vi `npm run watch` kompileras filerna automatisk varje gång vi sparar. `webpack-cli` lägger sina kompilerade filer i en katalog `dist` per automatik.
 
 ```json
 "scripts": {
@@ -107,9 +109,9 @@ Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` o
 
 Början till en mithril app {#forsta}
 --------------------------------------
-Tanken med appen är att vi har en lista med knappar från åren 2010 till 2017. När man klickar på knapparna kommer man till en vy med information om det valda årets nobelvinnare.
+Tanken med appen är att vi har en lista med knappar från åren 2010 till 2017. När man klickar på knapparna kommer man till en vy med information om det valda årets Nobelvinnare.
 
-Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`. Vi inkluderar även `bin/app.js` längst ner i `index.html`.
+Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`. Vi inkluderar även `dist/app.js` längst ner i `index.html`.
 
 ```html
 <!doctype html>
@@ -123,7 +125,7 @@ Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från 
 </head>
 <body>
 
-    <script type="text/javascript" src="bin/app.js"></script>
+    <script type="text/javascript" src="dist/app.js"></script>
 </body>
 </html>
 ```
@@ -176,7 +178,7 @@ var list = require("./views/list.js");
 m.mount(document.body, list);
 ```
 
-Nu behöver vi bara kompilera vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definerade tidigare som ett npm script i `package.json`. Öppna upp filen `index.html` i din webbläsare och skåda mästervärket eller iallafall Nobelfesten som en fin rubrik. Vi kan nu köra kommandot `npm run watch` i terminalen för att löpande under utveckling kopilera om filerna när de sparas.
+Nu behöver vi bara kompilera vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definierade tidigare som ett npm script i `package.json`. Öppna upp filen `index.html` i din webbläsare och skåda mästerverket eller iallafall Nobelfesten som en fin rubrik. Vi kan nu köra kommandot `npm run watch` i terminalen för att löpande under utveckling kompilera om filerna när de sparas.
 
 Låt oss använda lite av stylingen från tidigare kursmoment och samtidigt titta på hur vi lägger till flera virtuella noder i samma vy/komponent.
 
@@ -232,7 +234,7 @@ Kolla igenom koden ovan så att du förstår alla delar innan vi går vidare.
 
 En router för flera vyer {#router}
 --------------------------------------
-Med bara en vy har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/year.js` och precis som `list.js` definerar våra nya `year.js` en vy. Än så länge visar vi bara rubriken Year i vyn, vi vill se så att routingens fungerar och kommer sedan bygga ut funktionaliteten.
+Med bara en vy har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/year.js` och precis som `list.js` definierar våra nya `year.js` en vy. Än så länge visar vi bara rubriken Year i vyn, vi vill se så att routingens fungerar och kommer sedan bygga ut funktionaliteten.
 
 ```javascript
 "use strict";
@@ -254,7 +256,7 @@ I vår `index.js` ändrar vi så vi använder funktionen `m.route()` istället f
 
 1. Vår ursprungsroute som är den vy där appen börjar.
 
-1. Ett objekt som definerar alla routes i appen.
+1. Ett objekt som definierar alla routes i appen.
 
 Och vår index.js fil ser nu ut så här:
 
@@ -350,7 +352,7 @@ module.exports = {
 };
 ```
 
-Vi laddar om sidan och öppnar upp konsollen i webbläsaren och ser att vi har skrivit ut ett JSON-objekt. Det vi vill åt för varje objekt i `prizes` arrayen är `category` och både förnamn och efternamn inne i `laureates` arrayen. Först tilldelar vi resultat från API:t till `current` och sedan kan vi använda detta i vyn.
+Vi laddar om sidan och öppnar upp konsolen i webbläsaren och ser att vi har skrivit ut ett JSON-objekt. Det vi vill åt för varje objekt i `prizes` arrayen är `category` och både förnamn och efternamn inne i `laureates` arrayen. Först tilldelar vi resultat från API:t till `current` och sedan kan vi använda detta i vyn.
 
 ```javascript
 // js/models/nobel.js
