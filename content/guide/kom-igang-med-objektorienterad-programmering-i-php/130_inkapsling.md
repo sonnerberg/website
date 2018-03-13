@@ -17,7 +17,7 @@ Inkapsling av medlemsvariabler {#private}
 
 Ta en kopia av `src/Person1.php` och spara som `src/Person2.php`.
 
-Uppdatera så att klassens medlemsvariabler är `private` istället för `public`. Metoden kan fortsätta vara `publik`.
+Uppdatera så att klassens medlemsvariabler är `private` istället för `public`. Metoden kan fortsätta vara publik.
 
 ```php
 class Person2
