@@ -17,15 +17,21 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 [/WARNING]
 
 
-Vi fortsätter träna på programmering med klasser och objekt, i och utanför ramverket. Det blir en närmare bekantskap med ramverkets delar och hur du kan tänka när du integrerar din egen kod i ramverket. Du bekantar dig med begrepp som interface och traits.
+Vi fortsätter träna på programmering med klasser och objekt.
 
-Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner och ramverksprogrammering.
+<!--
+Du bekantar dig med begrepp som interface och traits.
+Inloggning till webbplats?
+Embryo till eshop sql?
+-->
 
-[FIGURE src=/image/oophp/v3/test-session.png?w=w1&q=70 caption="Sessionstest är en av övningarna som finns med i detta kursmoment."]
+Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner.
 
-[FIGURE src=/image/oophp/v3/dice100.png?w=w1&q=70 caption="Tärningsspelet 100 är en av övningarna som finns med i detta kursmoment."]
+[FIGURE src=/image/oophp/v3/test-session.png?w=w3&q=70 caption="Sessionstest är en av övningarna som finns med i detta kursmoment."]
 
-[FIGURE src=/image/oophp/v3/calendar1.png?w=w1&q=70 caption="En månadskalender är en av övningarna som finns med i detta kursmoment."]
+[FIGURE src=/image/oophp/v3/dice100.png?w=w3&q=70 caption="Tärningsspelet 100 är en av övningarna som finns med i detta kursmoment."]
+
+[FIGURE src=/image/oophp/v3/calendar1.png?w=w3&q=70 caption="En månadskalender är en av övningarna som finns med i detta kursmoment."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -85,11 +91,14 @@ När man pratar om objektorienterad programmering så behöver man också ha en 
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
+<!--
 1. Artikeln "[Sessioner och cookies i PHP](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass. Fyll gärna på cookie-klassens metoder med kod. Spara eventuell kod i `me/kmom02/session`.
 
 1. Jobba igenom artikeln "[Att integrera en klass i ramverket Anax Lite](kunskap/att-integrera-en-klass-i-ramverket-anax-lite)" som visar hur du kan integrera en klass eller tjänst in i ramverket Anax Lite. Spara eventuell testkod i `me/anax-lite`.
 
 1. Jobba igenom artikel "[Att jobba med vyer i Anax Lite](kunskap/jobba-med-vyer-i-anax-lite)" för att se hur vilka möjligheter du har till att koda och strukturera dina vyer. Spara eventuell testkod i `me/anax-lite`.
+
+-->
 
 <!--
 (make less)?
@@ -100,30 +109,22 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Gör följande uppgifter.
 
-1. Gör uppgiften [Integrera klassen Session](uppgift/testa-sessionen) in i ramverket och skriv en route som testar och visar innehållet i sessionen. Spara din kod i `me/anax-lite`.
+1. Gör uppgiften "[Månadskalender](uppgift/manadskalender)" och inkludera resultatet i ditt Anax. Spara din kod under `me/anax-lite`.
 
-1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
-
-1. Välj mellan följande uppgifter och gör en av dem.
-    1. Gör uppgiften "[Tärningsspelet 100](uppgift/tarningsspel)" som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
-
-    1. Gör uppgiften "[Månadskalender](uppgift/manadskalender)" och inkludera resultatet i ditt Anax. Spara din kod under `me/anax-lite`.
-
-1. Fortsätt att jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra ytterligare en tredjedel av uppgiften. Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`. Den sista tredjedelen gör du i nästa kursmoment.
+1. Gör uppgiften "[Tärningsspelet 100](uppgift/tarningsspel)" som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
 
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
 <!--
 Rita klass och sekvensdiagram?
+
+Yatsy?
+
+1. Gör uppgiften [Integrera klassen Session](uppgift/testa-sessionen) in i ramverket och skriv en route som testar och visar innehållet i sessionen. Spara din kod i `me/anax-lite`.
+
+1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
+
 -->
-
-
-
-###Extra {#extra}
-
-Gör extrauppgifterna om du har tid, kraft, eller lust.
-
-1. Gör båda uppgifterna om 100-spelet och Månadskalendern.
 
 
 

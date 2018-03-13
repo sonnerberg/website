@@ -25,11 +25,16 @@ Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och f
 
 Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur som klarar både det ena och det andra och även är förberedd för att byggas ut.
 
-[FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
+<!--
+Visa hur markdown formattering, bbcode.
+anax/textfilter
+-->
 
-[FIGURE src=image/snapvt17/content-blog.png?w=w2 caption="En blogglista med alla inlägg med senaste inlägget först."]
+[FIGURE src=image/snapvt17/content-delete-edit.png?w=w3 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
 
-[FIGURE src=image/snapvt17/content-textfilter.png?w=w2 caption="Innehållet formatteras och filtreras för att bli HTML."]
+[FIGURE src=image/snapvt17/content-blog.png?w=w3 caption="En blogglista med alla inlägg med senaste inlägget först."]
+
+[FIGURE src=image/snapvt17/content-textfilter.png?w=w3 caption="Innehållet formatteras och filtreras för att bli HTML."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -46,18 +51,12 @@ Läsanvisningar  {#lasanvisningar}
 
 
 
-###Kurslitteratur  {#kurslitteratur}
-
-Det finns inga specifika lästips i kurslitteraturen.
-
-
-
+<!--
 ###Artiklar {#artiklar}
 
 Läs följande artiklar.
 
-1. Läs översiktligt igenom "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)" som ger dig grundläggande förståelse för hur du kan tänka när du modellerar en databas.
-
+-->
 
 
 ###Lästips {#lastips}
@@ -88,26 +87,23 @@ Gör följande övning, den förbereder dig inför uppgifterna och löser ett pa
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Skapa en klass för textfiltrering och formattering](uppgift/skapa-en-klass-for-textfiltrering-och-formattering)". Den färdiga klassen integrerar du i `me/anax-lite`. Vill du testa och utveckla i en separat katalog så använder du `me/kmom04/textfilter`.
-
-1. Gör uppgift "[Bygg webbsidor från innehåll i databasen](uppgift/bygg-webbsidor-fran-innehall-i-databasen)" och spara filerna i `me/anax-lite`.
-
-1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom04/er1`.
+1. Gör uppgift "[Bygg webbsidor från innehåll i databasen](uppgift/bygg-webbsidor-fran-innehall-i-databasen)" och spara filerna i `me/anax-lite`. <!-- Gör egen WordPress med page, posts -->
 
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
+<!--
+1. Gör uppgiften "[Skapa en klass för textfiltrering och formattering](uppgift/skapa-en-klass-for-textfiltrering-och-formattering)". Den färdiga klassen integrerar du i `me/anax-lite`. Vill du testa och utveckla i en separat katalog så använder du `me/kmom04/textfilter`.
+
+1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom04/er1`.
+-->
 
 
-###Extra {#extra}
-
-Det finns inga extrauppgifter.
 
 <!--
 Gör följande extrauppgifter om du har tid, lust eller ambition.
 
 1. Anax Flat File.
 
-1. Känner du behov av att träna ytterligare på grunderna i SQL, vilket alltid är en god idé, så gör du laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)". Labben är gjord med SQLite. Filerna ligger i `me/kmom04/sql1`.
 -->
 
 

@@ -15,7 +15,7 @@ Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen 
 
 Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
 
-[FIGURE src=/image/snapshot/Uppdatera_innehall___Innehall_i_databasen.jpg?w=w2 caption="Formulär för att editera innehåll i databasen."]
+[FIGURE src=image/snapshot/Uppdatera_innehall___Innehall_i_databasen.jpg?w=w3 caption="Formulär för att editera innehåll i databasen."]
 
 Kursmomentet avslutas med att du kodar ett par moduler till ditt Anax.
 

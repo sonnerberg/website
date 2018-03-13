@@ -35,6 +35,14 @@ Sedan lägger du in allt i ditt Anax Lite och kanske väljer du att snygga till 
 
 [FIGURE src=image/oophp/v3/loginexercise.png?w=w2&a=0,29,5,25 caption="En snyggare ruta för att registrera ett konto, bakom döljer sig databaskod."]
 
+<!--
+Använd anax/database som wrapper, visa hur den används via coachen.
+
+Login som mindre exempel? Hur kryptera lösenordet?
+Eshop som/med användaredelen.
+-->
+
+
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 <!--stop-->
@@ -45,12 +53,6 @@ Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 1-2 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
-
-
-
-###Kurslitteratur  {#kurslitteratur}
-
-Det finns inga läsanvisningar.
 
 
 
@@ -74,7 +76,9 @@ Gör följande övningar, de förbereder dig inför uppgifterna.
 
 1. Jobba igenom guiden "[Kom igång med PHP PDO och MySQL (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)". Spara eventuella exempelprogram i `me/kmom03/pdo`.
 
+<!--
 1. Jobba igenom artikeln "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". Spara eventuella exempelprogram i `me/kmom03/login`. Ett bra tips är att göra ditt egna lilla testprogram för att kolla hur inloggningen kan/skall fungera.
+-->
 
 
 
@@ -82,19 +86,15 @@ Gör följande övningar, de förbereder dig inför uppgifterna.
 
 Gör följande uppgifter.
 
+1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
+
+<!--
+Visa filmer via annan vy än bara tabell.
+
 1. Gör uppgiften "[Inloggning till Anax Lite](uppgift/inloggning-till-anax-lite)". Spara dina filer under `me/anax-lite`.
 
 1. Gör uppgiften ["Admin gränssnitt för hantering av användare och konton"](uppgift/admin-granssnitt-for-hantering-av-anvandare-och-konton). Dina filer skall sparas under `me/anax-lite`.
-
-1. Gör sista tredjedelen och avsluta uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)". Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`.
-
-1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
-
-
-
-###Extra {#extra}
-
-Det finns ingen extra uppgift.
+-->
 
 
 
