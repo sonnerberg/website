@@ -23,7 +23,7 @@ Du har gjort övningarna [Kom igång med ramverket Mithril](kunskap/kom-igang-me
 
 Introduktion {#intro}
 -----------------------
-En inleverans är när lagret får varor levererade och vi ska underlätta för lagerarbetarna att snabbt ta emot varor. I lager [API:t](https://lager.dbwebb.se) finns en datatyp `deliveries` där alla inleveranser ska lagras och dessutom ska du uppdatera lagersaldot för den levererade produkten.
+En inleverans är när lagret får varor levererade och vi ska underlätta för lagerarbetarna att snabbt ta emot varor. I lager [API:t](https://lager.emilfolino.se) finns en datatyp `deliveries` där alla inleveranser ska lagras och dessutom ska du uppdatera lagersaldot för den levererade produkten.
 
 
 
