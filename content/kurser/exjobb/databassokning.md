@@ -7,9 +7,16 @@ revision:
 Databassökning av artiklar
 ==================================
 
-Artikeln tillhandahåller information och tips om hur man söker artiklar ich litteratur i relaterade databaser.
+Artikeln tillhandahåller information och tips om hur man söker artiklar och litteratur i relaterade databaser.
 
 <!--more-->
+Allmänna tips om litteratusökning
+-----------------------------------
+Börja med att konsultera [kurslitteraturens](/exjobb#litteratur) syn på saken. Både boken "Att skriva en bra uppsats" och dokumentet "Rapportskrivning för ingenjörer" tar upp ämnet.
+
+Innan du söker bör du tänka igenom hur du skall söka och var. Var strukturerad och skriv ned de söktermer du använder och de källor du söker i. Notera de avgränsningar du gör i sökvillkoren (datum, etc). Tänk att någon annan skall kunna göra samma litteratursökning som du gjort, de behöver veta förutsättningarna.
+
+Visst kan man fri-googla. Men se till att även använda mer inriktade sökverktyg, likt BTHs bibliotek och Google Scholar. Liknande söktjänster kan ge dig tydligare svar då du söker bland publicerade rapporter.
 
 BTH Summon
 --------------------------
