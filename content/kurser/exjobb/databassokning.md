@@ -19,3 +19,12 @@ Summon är ett sökverktyg som söker igenom olika databaser. Många databaser m
 Biblioteket har bistått med en presentation där BTH Summon förklaras och hur man går tillväga.
 
 Presentationen hittar du [här](/article/summon.pdf)(pdf)
+
+
+
+Google Scholar
+--------------------------
+
+Google scholar är ett annat verktyg där du kan söka efter vetenskapliga artiklar. Funktionaliteten är snarlik BTH Summons då den automatiskt söker igenom en mängd olika databaser. Vissa artiklar kan dock vara "låsta" och inte tillgängliga. Om databasen i fråga har ett samarbete med BTH finns möjligheten att logga in via BTH alternativt beställa artiklen till campus. BTH granskar den och om den inte finns tillgänglig gratis, kommer BTH köpa in artikeln och få den skickad till biblioteket, campus.
+
+Länk till [Google Scholar](http://scholar.google.se)
