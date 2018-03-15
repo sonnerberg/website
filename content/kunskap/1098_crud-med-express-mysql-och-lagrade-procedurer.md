@@ -568,7 +568,7 @@ Det var U i CRUD, Update, i en webbapplikation med formulär.
 
 
 
-R som i Radera ett konto {#radera}
+D som i Deleta ett konto {#radera}
 ---------------------------------------
 
 D:et i CRUD handlar om att göra delete på rader. Säg att vi vill radera ett konto.
