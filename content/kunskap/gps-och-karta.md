@@ -176,7 +176,16 @@ function showMap() {
 
 Användarens position {#gps}
 --------------------------------------
-Då vi använder en mobil enhet med tillgång till GPS har vi möjlighet att rita ut
+Då vi använder en mobil enhet med tillgång till GPS har vi möjlighet att ta reda på användarens nuvarande position och rita ut detta på kartan.
+
+Vi använder oss av pluginen `cordova-plugin-geolocation`.
+
+```bash
+# Stå i me/kmom06/gps
+cordova plugin add cordova-plugin-geolocation
+```
+
+Vi har nu tillgång till objektet `navigator` som har attributet `navigator.geolocation`. Vi använder funktionen `navigator.geolocation.getCurrentPosition()` för att få nuvarande position.
 
 
 

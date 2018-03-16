@@ -72,12 +72,12 @@ Vi börjar med att skapa en konfigurationsfil för webpack där vi pekar ut vilk
 module.exports = {
     entry: './js/main.js',
     output: {
-        filename: './bin/bundle.js'
+        filename: './bundle.js'
     }
 };
 ```
 
-Vi vill alltså börja appen från filen `/js/main.js` och den kompilerade filen ska hamna i `/bin/bundle.js`. Jag har strukturerat upp min kod lite ytterligare från kmom01 och lagt alla JavaScript filer i katalogen `js`.
+Vi vill alltså börja appen från filen `/js/main.js` och den kompilerade filen hamnar i `/dist/bundle.js`, webpack har `/dist` som standard katalog. Jag har strukturerat upp min kod lite ytterligare från kmom01 och lagt alla JavaScript filer i katalogen `js`.
 
 För att kompilera JavaScript koden använder vi oss av kommandot `webpack -d` och då vi har en konfigurationsfil `webpack.config.js` vet webpack redan om vilka filer vi ska utgå ifrån och vart den kompilerade filen ska läggas. Flaggan `-d` står för development och vi kommer köra med `-d` i dessa första kursmoment. För att automatisera detta ytterligare lägger vi till två skript i `package.json` som kör kommandot `webpack -d` varje gång vi sparar filer som ingår i projektet. Du kan nu köra kommandot `npm start` i terminalen och vår applikation kompileras.
 
@@ -89,7 +89,7 @@ För att kompilera JavaScript koden använder vi oss av kommandot `webpack -d` o
 },
 ```
 
-I andra skriptet `watch` använder vi flaggan `--watch`, som håller koll på vilka filer som uppdateras och kompilerar om de som behövs. Genom att köra kommandot `npm run watch` i terminalen kompileras alla filer som används från ingångspunkten, i detta fallet `/js/main.js`, till en fil `/bin/bundle.js`. Vi kan nu lägga till `/bin/bundle.js` längst ner i `index.html` som den enda JavaScript filen vi importerar.
+I andra skriptet `watch` använder vi flaggan `--watch`, som håller koll på vilka filer som uppdateras och kompilerar om de som behövs. Genom att köra kommandot `npm run watch` i terminalen kompileras alla filer som används från ingångspunkten, i detta fallet `/js/main.js`, till en fil `/dist/bundle.js`. Vi kan nu lägga till `/dist/bundle.js` längst ner i `index.html` som den enda JavaScript filen vi importerar.
 
 
 

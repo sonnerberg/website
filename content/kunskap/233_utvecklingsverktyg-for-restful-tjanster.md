@@ -1,7 +1,10 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 category: webbprogrammering
 revision:
+  "2018-03-14": (B, efo) Native Postman istället för Chrome App.
   "2015-10-28": (A, mos) Första utgåvan inför kursen webapp.
 updated: "2015-10-28 08:19:23"
 created: "2015-10-27 16:36:50"
@@ -42,14 +45,9 @@ Detaljer om API:et finns som sagt att läsa om i dokumentet "Teknisk beskrivning
 
 
 
-Postman för Chrome {#postman}
+Postman {#postman}
 -----------------------
-
-Till Chrome finns en applikation som heter [Postman](https://www.getpostman.com/). Jag laddar ned den och installera som en del av Chrome.
-
-Så här ser det ut när den är installerade.
-
-[FIGURE src=/image/snapht15/google-chrome-postman.png?w=w2 caption="Nu kan jag starta postman som en Chrome app."]
+Postman har tidigare varit en Chrome App, men är nu släppt som en native app. [Installera Postman](https://www.getpostman.com/apps) för ditt operativ system, är ett oerhört användbart verktyg för att testa API:er.
 
 Så här kan det se ut när jag gör en request med Postman.
 
