@@ -1,29 +1,29 @@
 ---
-author: lew
+author:
+    - lew
+    - mos
 category:
     - kurs oophp
 revision:
+    "2018-03-19": "(D, mos) Uppdaterad inför vt18."
     "2017-05-12": "(C, mos) Uppdaterade vilka stycken som gäller i oophp20-guiden."
     "2017-03-14": "(B, mos) La till info samt om objekt i sessionen."
     "2017-03-09": "(A, lew) Första utgåvan i samband med kursen oophp v3."
 ...
-Gissa numret
+Gissa numret med PHP och GET, POST och SESSION
 ==================================
+
+[FIGURE src=image/snapvt18/oophp-guess-my-number-post.png?w=c5&a=22,50,35,0&cf class="right"]
 
 Du skall implementera olika varianter av ett spel, där det gäller att gissa vilket tal som slumpats fram. Spelet ska svara om spelarens gissning är högre eller lägre än det korrekta talet. Spelaren har 6 gissningar på sig. 
 
+Du skall skriva all kod som har med spelet att göra inuti en klass och du skall skriva tre stycken klienter (GET, POST, SESSION) som använder sig av en och samma klass för att implementera spelet.
+
+Uppgiften är en övning i att skriva klasser och att skapa ett API som gör det möjligt att koppla flera klienter mot en och samma klass-kod.
 
 <!--more-->
 
-Det skall finnas följande varianter av spelet.  
-
-1. Strukturen hanteras med $\_GET (index-get.php). 
-
-1. Strukturen hanteras med $\_POST (index-post.php). 
-
-1. Strukturen hanteras med $\_SESSION (index-session.php).
-
-1. Strukturen hanteras med objekt i SESSION (index-session-object.php).
+[FIGURE src=image/snapvt18/oophp-guess-my-number-post.png?w=w3 caption="Spela spelet Gissa mitt nummer med PHP."]
 
 
 
@@ -32,29 +32,24 @@ Förkunskaper {#forkunskaper}
 
 Du har goda grundläggande kunskaper i PHP som motsvarar artikeln "[20 steg för att komma igång med PHP (php20)](kunskap/kom-i-gang-med-php-pa-20-steg)".
 
-Du har jobbat igenom guiden "[Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg)".
+Du har jobbat igenom guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" med dess två inledande delar:
+    * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
+    * [Objekt och Klass](guide/kom-igang-med-objektorienterad-programmering-i-php/objekt-och-klass)
 
 
 
-Introduktion {#intro}
+Introduktion och förberedelse {#intro}
 -----------------------
 
+Gör följande för att förbereda dig för uppgiften.
 
+Här är en video som visar hur det kan se ut när du är klar.
 
-###Skapa filer {#filer}
-
-Börja med att ställa dig i rätt mapp i kursrepot. Skapa sedan de olika  index-filerna samt filer för spelklass, sessionsklass och en autoloader samt ett eget exception. Dessutom kan du skapa en fil för generella configs. Skapa även en index.php som blir din framsida för allt där du presenterar länkar till de tre olika varianterna av spelet.
-
-```bash
-# Ställ dig i roten av kursrepot
-cd me/kmom01/guess
-touch index-{get,post,session,session-object}.php
-touch {index,Guess,GuessException,Session,autoload,config}.php 
-```
+[YOUTUBE src=XXX caption="Mikael visar hur spelet och dess olika klienter kan se ut när de är klara."]
 
 
 
-###Spelregler {#regler}
+### Spelregler {#regler}
 
 Spelet "Guess the number" är ett enkelt gissningsspel där någon tänker på ett tal mellan 1-100. I detta fallet är det datorn som tänker på ett tal.
 
@@ -64,124 +59,75 @@ När gissningarna är slut kan man inte gissa mer.
 
 
 
-###Namespace {#namespace}
+### Mall för klass till spelet Gissa mitt nummer {#mallen}
 
-I denna uppgiften kan du kan skapa dina klasser utan namespace.
+Gå till katalogen där du skall jobba. Börja med att kopiera mallen för själva spel-klassen.
 
+```text
+mkdir src
+cp ../../../example/guess/src/Guess.php src
+```
 
+Lägg även dit filer för `autoload.php` och `config.php`.
 
-###Generella regler {#gen}
+Studera klass-filen `Guess.php` och fundera hur du kan implementera spelet i den klasstrukturen som erbjuds.
+
+Du kan välja att implementera klassen annorlunda, om du vill. Du behöver inte slaviskt följa den mallen du fått.
 
 Spelet ska hanteras av klassen `Guess`. Se till att samma klass återanvänds i alla versionerna av spelet.
 
-Klassen Guess skall innehålla metoder för att skapa nytt nummer att gissa på.
+Man skall kunna initiera ett objekt av klassen, genom att *injecta* information såsom det gissade talet och antalet gissningar gjorda. I mall-klassen injectas informationen via konstruktorn.
 
-Klassen skall innehålla information om antalet gjorda gissningar tillsammans med det slumpade numret.
-
-Klassen skall innehålla en metod som gör en gissning.
-
-Det skall finnas metoder för att hämta information om det slumpade talet och antalet gjorda gissningar.
-
-Man skall kunna initiera ett objekt av klassen, genom att *injecta* information såsom det gissade talet och antalet gissningar gjorda.
-
-Klassen får inte läsa direkt från $\_GET, $\_POST eller $\_SESSION. Om information behövs från dessa globala variabler så skall de bifogas in till klassen Guess, informationen skall injectas in i klassen. 
+Klassen **får inte läsa direkt** från $\_GET, $\_POST eller $\_SESSION. Om information behövs från dessa globala variabler så skall de bifogas in till klassen Guess, informationen skall injectas in i klassen från respektive `index_*.php`. 
 
 
 
-###index-get.php {#get}
+###GET klienten index_get.php {#get}
 
-[FIGURE src=image/snapvt17/guess-my-number-get.png?w=w2 caption="Ett exempel på ett spel med GET."]
+Gör en variant där du enbart använder GET gör att spela spelet. Spara koden i `index_get.php`
 
 Gissa numret i ett formulär som postas med GET-metoden.
 
 Minns vilket nummer som är det gissade genom att lagra det i ett hidden fält i formuläret.
 
-Det skall finnas en länk som möjliggör omstart. Talet ska då slumpas om och antalet gissningar ska nollställas.
+Det skall finnas en länk/knapp som möjliggör omstart. Talet ska då slumpas om och antalet gissningar ska nollställas.
+
+Det skall finnas en länk/knapp "Cheat" som skriver ut nuvarande tal, det blir enklare att testa då.
 
 
 
-###index-post.php {#post}
+###POST klienten index_post.php {#post}
 
-[FIGURE src=image/snapvt17/guess-my-number-post.png?w=w2 caption="Ett exempel på ett spel med POST."]
-
-Gissa numret i ett formulär som postas med POST-metoden.
-
-Minns vilket nummer som är det gissade genom att lagra det i ett hidden fält i formuläret.
-
-Det skall finnas en knapp som möjliggör omstart. Talet ska då slumpas om och antalet gissningar ska nollställas.
+Gör samma sak igen, men använd nu endast POST istället för GET. Spara koden i `index_post.php`.
 
 
 
-###index-session.php {#session}
+###SESSION klienten index_session.php {#session}
 
-[FIGURE src=image/snapvt17/guess-my-number-session.png?w=w2 caption="Ett exempel på ett spel med SESSION."]
+Gör samma sak igen, men använd nu SESSION för att minnas spelets ställning. Spara koden i `index_session.php`.
 
-Gör klassen `Session` som hanterar all kommunikation med `$_SESSION` samt startandet `start()` av sessionen. Använd ett sessionsnamn som gör din session unik och sätt det med `setName()`.
+Till formuläret använder du POST.
 
-Klassen Session är en wrapper framför $\_SESSION och läser egentligen bara av variabeln och returnerar värden.
-
-Klassen skall kunna läsa `get($key)` och sätta värden `set($key, $values)` i SESSION.
-
-Klassen skall kunna sätta ett sessionsnamn och starta sessionen.
-
-Spara undan värden för antalet gjorda gissningar och det gissade talet i sessionen. Strukturen är alltså som de två tidigare varianterna, det som tidigare sparades via hidden-fält i GET och POST skall nu samma information lagras undan i SESSION.
-
-Din Guess-klass skall inte använda sig av Session-klassen, kopplingen får göras i index-skriptet.
-
-Det skall finnas både en länk och en knapp för att göra reset av spelet.
-
-Använd redirect med `header()` för att undvika problem vid POST och reload.
-
-```php
-# Redirect to another page
-header("Location: index-session.php");
-exit;
-```
-
-Tips. Skapa en metod `getOnce()` som läser av ett värde i sessionen och sedan raderar det från sessionen. Det blir en form av flash-minne där du kan skicka ett värde till en sida och när det läses av så försvinner det från sessionen. Det kan vara en användbar metod när du bara vill lagra information mellan två sidor.
-
-
-
-###index-session_object.php {#session}
-
-[FIGURE src=image/snapvt17/guess-my-number-session-object.png?w=w2 caption="Nu sparas hela objektet i sessionen."]
-
-Nu skall du lagra hela instansen av ditt Guess-objekt i sessionen. Spara hela objektet i sessionen och återanvänd det vid varje sidladdning.
-
-Ditt objekt skall alltså innehålla all information om spelet.
-
-Om du behöver kan du lagra extra information i sessionen. Det kan vara nödvändigt för att ha koll på om en gissning är gjord eller ej och uppdatera gränssnittet (webbsidan) på rätt sätt.
-
-Det är viktigt att du sätter din autoloader innan du startar sessionen. Annars kan sessionen inte göra unserialize på det objektet som ligger sparat i sessionen.
+Välj om du vill spara hela objektet, eller bara de viktiga delarna, i sessionen.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. De olika varianterna av spelet skall köras från respektive index-fil.
+1. Skapa spelet i klassen `src/Guess.php`.
 
-1. Gör index.php till en framsida, via den kan man nå de olika varianterna av spelet.
+1. Använd filer för `config.php` och `autoload.php` som visats i guiden.
 
-1. Skapa en autoloader som automatiskt laddar klassfilerna när de behövs.
+1. Skapa de olika klienterna `index_get.php`, `index_post.php` och `index_session.php` för att spela spelet.
 
-1. I filen config.php lägger du eventuell allmän konfiguration som behövs, se minst till att lägga till så att felutskrifter syns.
+1. Om man gissar ett tal som är högre än 100 eller lägre än 1 så skall ett exception av typen `GuessException` kastas. Klassfilen för exception skall ligga i `src/GuessException.php`.
 
-1. Du skall ha en egen global exception handler som fångar alla exception och skriver ut information om dem.
-
-1. Om man gissar ett tal som är högre än 100 eller lägre än 1 så skall ett exception av typen `GuessException` kastas.
-
-1. Länka till spelen från din me-sida.
-
-1. Validera och publicera din kod enligt följande.
+1. Validera och publicera din kod.
 
 ```bash
-# Ställ dig i kurskatalogen
-dbwebb validate guess
 dbwebb publish guess
 ```
-
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -190,15 +136,16 @@ Extrauppgift {#extra}
 
 1. Lägg på style för att göra det snyggare.
 
-1. Integrera det sista spelet med ramverket med allt vad det innebär med namespace, vyer och routes.
+<!--
+1. När du använder POST så använd redirect med `header()` för att bli av med varningspopupen vid sidomladdning av postat formulär.
 
+ger implicit behov av flash-message via sessionen.
+-->
 
 
 Tips från coachen {#tips}
 -----------------------
 
 Validera och publicera ofta. Så slipper du en massa validerings- och publiceringsfel i slutet av övningen.
-
-När du gör *publish* så körs även *validate*. Blir det för mycket fel när du kör *publish* så kan det bli enklare att bara göra *validate* till att börja med.
 
 Lycka till och hojta till i forumet om du behöver hjälp!

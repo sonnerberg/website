@@ -7,3 +7,7 @@ Minnesanteckning
 ==================================
 
 Mina egna minnesanteckningar för saker som kan ingå (mer) i guiden. Eller inte. Tankar om att utveckla guiden.
+
+* Namespaces + autoloader using composer
+* Exceptions
+* Magic methods

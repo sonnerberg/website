@@ -27,12 +27,11 @@ Guiden förutsätter att du har grundläggande kunskaper i PHP. Känner du dig o
 -->
 
 
-<!--
 Forumtråd kopplad till guiden {#forum}
 ----------------------------------
 
-Det finns en [tråd i forumet](t/7233) som är kopplad till denna guide. Där kan du se större uppdateringar som är gjorda. Du kan även ställa frågor eller bidra med tips och trix. 
--->
+Det finns en [tråd i forumet](t/XXX) som är kopplad till denna guide. Där kan du se större uppdateringar som är gjorda. Du kan även ställa frågor eller bidra med tips och trix. 
+
 
 
 Tidigare version {#tidigare}

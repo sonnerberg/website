@@ -116,6 +116,8 @@ Gör följande uppgifter.
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
 <!--
+Inkludera kmom01 guess som en del i me-sidan.
+
 Rita klass och sekvensdiagram?
 
 Yatsy?

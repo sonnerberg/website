@@ -13,7 +13,7 @@ Objektorienterad programmering är *en* av många programmeringsparadigmer. Ett 
 Objekt {#objekt}
 ----------------------------------
 
-I objektorientering finns det objekt. Ett objekt har medlemsvariabler (properties) och metoder (jämför med funktioner). Medlemsvariablerna används för att lagra ett *state* av ett objekt, ett visst läge som definieras av värdet på medlemsvariablerna. När man vill ändra ett läge för objektet, eller bara använda objektet för att utföra en uppgift, då använder man dess metoder. Metoderna är en förteckning över vad objektet kan göra.
+I objektorientering finns objekt. Ett objekt har medlemsvariabler (properties) och metoder (funktioner kopplade till ett objekt). Medlemsvariablerna används för att lagra ett *state* av ett objekt, ett visst läge som definieras av värdet på dess medlemsvariabler. När man vill ändra ett läge för objektet, eller bara använda objektet för att utföra en uppgift, då använder man dess metoder. Metoderna är en förteckning över vad objektet kan göra. Vi kan kalla det objektets API.
 
 Ett objekt har all sin förmåga samlad i metoder och properties. Allt som objektet behöver lagra finns i dess medlemsvariabler och allt man kan göra med objektet exponeras via dess metoder. Exakt hur objektet verkställer saker och ting är objektets ansvar. Man kan säga att objektet *kapslar in* detaljerna för implementation och erbjuder endast ett publikt API (gränssnitt) i form av metoderna. Själva implementationen av metoderna är en sak för objektet själv. 
 

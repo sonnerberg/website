@@ -6,7 +6,20 @@ revision:
 Mall för exempelprogram
 ==================================
 
-I denna guiden kommer du att göra en del exempelprogram. Du kan spara dem i en katalog där du gör underkataloger för respektive del av guiden. Låt oss göra exempelprogrammet för den inledande delen tillsammans.
+I denna guiden kommer du att göra en del exempelprogram, spara dem i en egen katalog, de kan vara bra att ha framöver. Låt oss skapa en struktur för exempelprogrammen.
+
+När vi är klara har vi en grundstruktur som ser ut så här.
+
+```text
+$ tree .
+.
+├── config.php
+├── index_error.php
+├── index_exception.php
+└── index_hello.php
+
+0 directories, 4 files
+```
 
 
 
@@ -30,6 +43,30 @@ Bra, det blir enklare om vi kan se felen.
 
 
 
+Egen felhantering av Exceptions {#exceptions}
+----------------------------------
+
+Jag väljer också att skapa en egen hanterare för Exceptions som kastas och inte fångas. Jag bygger ut min `config.php` med följande funktion.
+
+```php
+/**
+ * Default exception handler.
+ */
+set_exception_handler(function ($e) {
+    echo "Uncaught exception: "
+        . get_class($e)
+        . "<p>"
+        . $e->getMessage()
+        . "</p><p>Code: "
+        . $e->getCode()
+        . "</p><pre>"
+        . $e->getTraceAsString()
+        . "</pre>";
+});
+```
+
+
+
 Index-filer för main-programmen {#index}
 ----------------------------------
 
@@ -39,7 +76,7 @@ Vi kan börja skapa en enkel fil, bara för att visa att det fungerar. Filen kan
 
 
 
-### index_hello {#hello}
+### Sidan index_hello {#hello}
 
 Jag börjar med filen `index_hello.php`.
 
@@ -68,7 +105,7 @@ Tänk på att webbläsaren och terminalen hanterar radbrytningar på olika sätt
 
 
 
-### index_error {#error}
+### Sidan index_error {#error}
 
 Sedan gör jag en likadan i `index_error.php`, men jag tvingar fram ett felmeddelande för att se att de visas. Det är lika bra att vara på den säkra sidan.
 
@@ -103,3 +140,25 @@ Call Stack:
 Det är bra om du bekantar dig med att köra PHP öven via terminalen, det gör det enklare för dig när vi senare kommer igång med enhetstester.
 
 Att göra små enkla testprogram, i webbläsaren eller via terminalen, är bra sätt att lära sig hur kodkonstruktioner fungerar och det är bra sätt att felsöka på.
+
+
+
+### Sidan index_exception {#exception}
+
+Vi bygger även en testsida för att visa att exceptionhanteraren fungerar. För att testa det så behöver vi framkalla ett exception.
+
+```php
+<?php
+/**
+ * Provoke an exception to try out the exception handler.
+ */
+include(__DIR__ . "/config.php");
+
+throw new Exception("To try out the default exception handler.");
+```
+
+När du öppnar sidan i webbläsaren kan det se ut så här.
+
+[FIGURE src=image/snapvt18/oophp20-default-exception.png?w=w3 caption="Nu har vi en default hanterare för de exception som inte fångas."]
+
+Om du vill så kan du modifiera utskriften i din default exceptionhanterare, så det blir enkelt att läsa felmeddelandet.

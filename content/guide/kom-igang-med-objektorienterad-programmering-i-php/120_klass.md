@@ -6,16 +6,16 @@ revision:
 Klass
 ==================================
 
-Vi skapar en egen klass och instansierar objekt av klassen.
+Vi skapar en egen klass och instansierar ett objekt av klassen.
 
-Spara koden du skriver i denna övningen i `index_person1.php`.
+Spara koden du skriver i denna övningen i `index_person1.php`. Klassfilen sparar du i `src/Person1.php`.
 
 
 
 En egen klass {#egenklass}
 ----------------------------------
 
-Vi återskapar samma klass vi hade nyss, men nu i en egen klass som du sparar i filen `src/Person1.php`. Vi använder stora bokstäver på filer som innehåller klasser, det är ett val vi gör för att vara tydliga.
+Vi återskapar samma klass vi hade nyss, men nu i en egen klass som du sparar i filen `src/Person1.php`. Vi använder stora bokstäver på filer som innehåller klasser, det är ett val vi gör för att vara tydliga och en kodstandard vi valt att följa.
 
 ```php
 class Person1
@@ -50,46 +50,12 @@ Så här kan det se ut när du kör programmet.
 
 
 
-DocBlock kommentarer {#dockblock}
-----------------------------------
-
-När man skriver kod brukar man använda kommentarsblock för att dokumentera koden. Här ser du samma kod skriven med DocBlocks kommentarer som kan parsas av verktyg som [phpDocumentor](https://docs.phpdoc.org/) för att generera kodokumentation.
-
-```php
-/**
- * Showing off a standard class with methods and properties.
- */
-class Person1
-{
-    /**
-     * @var integer $name   The name of the person.
-     * @var integer $age    The age of the person.
-     */
-    public $name;
-    public $age;
-
-
-    /**
-     * Print out details on the person.
-     *
-     * @returns string with details on person.
-     */
-    public function details() {
-        return "My name is {$this->name} and I am {$this->age} years old.";
-    }
-}
-```
-
-Det är lika bra du börjar skriva dina DocBlocks redan nu. Det gör koden enklare att läsa för utomstående. Det finns en [referensmanual till PHPDocumentor](https://docs.phpdoc.org/references/phpdoc/) som visar hur man skriver DocBlock kommentarer.
-
-
-
-$this, det egna objektet {#this}
+Det egna objektet, $this {#this}
 ----------------------------------
 
 Variabeln `$this` är en referens till nuvarande objekt och används i klassens metoder för att referera det objekt som anropar metoden.
 
-En metod anropas med ett objekt, så här:
+Utanför objektet så kan en metod anropas så här, det är en kombination av objektet och dess metod.
 
 ```php
 $object->details();

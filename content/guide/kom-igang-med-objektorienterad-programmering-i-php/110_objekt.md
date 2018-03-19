@@ -22,14 +22,16 @@ $object = new stdClass();
 var_dump($object);
 ```
 
-Vi säger att vi skapar ett nytt (new) objekt, eller instans, av klassen `stdClass`.
+Vi säger att vi skapar ett nytt `new` objekt, eller instans, av klassen `stdClass`.
 
 
 
 Mutable objekt {#mutable}
 ----------------------------------
 
-Objekten vi skapar är _mutable_ och kan förändra sin struktur över sin levnadstid. Ett objekt som är _immutable_ är motsatsen och där kan man inte lägga till eller ta bort attribut från objektet. 
+Objekten vi skapar är _mutable_ och kan förändra sin struktur över sin levnadstid. Ett objekt som är _immutable_ är motsatsen och där kan man inte lägga till eller ta bort attribut från objektet. Immutable objekt följer en fast mall som klassen erbjuder. Mutable objekt kan förändras och medlemmar kan läggas till eller tas bort.
+
+Vår instans av `stdClass` är mutable och vi kan lägga till två properties.
 
 ```php
 $object = new stdClass();
@@ -52,10 +54,10 @@ Eftersom du troligen känner till andra programmeringsspråk så ville jag visa 
 
 
 
-Piloperatorn -> {#pil}
+Piloperatorn `->` {#pil}
 ----------------------------------
 
-När man accessar ett objekts properties så använder man `->`. Du kunde se hur jag gjorde det i föregående exempel.
+När man accessar ett objekts properties (eller medlemmar) så använder man piloperatorn `->`. Du kunde se hur jag gjorde det i föregående exempel.
 
 
 
