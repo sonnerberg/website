@@ -24,6 +24,10 @@ Kom igång {#kom}
 
 Bekanta dig med BTH's labbmiljö för MySQL. I artikeln "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)" visas hur du använder klienter för att komma åt BTH's installation och studentmiljö.
 
+[INFO]
+Om du kör på BTH's server så har du [inte rättigheter att skapa en ny databas](kunskap/bth-s-labbmiljo-for-databasen-mysql#dbserver) eller lägga till en användare. Du har en befintlig databas och du har fått en användare och lösenord tilldelat. Du kan alltså inte jobba mot BTH's labbmiljö som om du vore databasadministratör med fulla rättigheter.
+[/INFO]
+
 
 
 Fråga i forumet {#forum}
