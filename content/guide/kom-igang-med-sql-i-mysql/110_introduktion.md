@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-20": "(B, mos) Bort med referens till BTHs labbmiljö."
     "2017-12-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Introduktion
@@ -23,7 +24,9 @@ Du behöver ha tillgång till en [databasserver för MySQL](labbmiljo/mysql).
 
 Du behöver tillgång till en klient likt MySQL WorkBench, PHPMyAdmin eller kommandoradsklient. Behöver du hjälp så finns guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)".
 
+<!--
 Du kan jobba [BTH's labbmiljö för MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql).
+-->
 
 Mitt förslag är att du jobbar lokalt mot en egen databasserver och använder terminalklienten `mysql` samt desktopklienten MySQL Workbench.
 
