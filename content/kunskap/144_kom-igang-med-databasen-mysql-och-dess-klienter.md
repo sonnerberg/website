@@ -1,11 +1,16 @@
 ---
 author: mos
 category:
+    - kurs databas
+    - kurs oophp
+    - kurs ramverk1
     - labbmiljo
     - databas
     - mysql
     - mariadb
+    - mysql workbench
 revision:
+    "2018-03-20": (G, mos) Genomgången inför lp4 vt18, mindre justeringar om hur installationen är gjord.
     "2017-12-27": (F, mos) Stycke om förutsättning och länk till installation.
     "2017-03-02": (E, mos) Logga in med användare root.
     "2017-02-23": (D, mos) Bort med MAMP och WAMP, bara kvar med XAMPP samt genomgång.
@@ -13,7 +18,7 @@ revision:
     "2014-11-10": (B, mos) La till info om XAMPP MySQL cli och phpmyadmin.
     "2013-08-16": (A, mos) Första utgåvan som en del av kursen [oophp](oophp).
 ...
-Kom igång med databasen MySQL och dess klienter
+Kom igång med databasen MySQL / MariaDB och dess klienter
 ==================================
 
 [FIGURE src="image/snapvt17/mysql-logo.png" class="right"]
@@ -29,9 +34,11 @@ Låt oss därför kika lite på databasen MySQL och dess olika klienter.
 Förutsättning {#pre}
 ------------------------------
 
-Artiklen förutsätter att du har tillgång till MySQL/MariaDB och har gjort en lokal installation, eller gör det i inledningen av artikeln.
+Artiklen förutsätter att du har tillgång till MySQL/MariaDB och har gjort en lokal installation.
 
-I [labbmiljön för dbwebb](labbmiljo/mysql) finns stöd för hur man kan installera MySQL/MariaDB som en del av XAMPP.
+I [labbmiljön för dbwebb](labbmiljo/mysql) finns olika sätt att installera MySQL / MariaDB och dess olika klienter. Du kan installera MySQL via dess egna installationsprogram eller som en del av XAMPP.
+
+Denna artikel är främst skriven för den som har installerat XAMPP och har tillgång till terminalklienten via XAMPP och webbklienten PHPMyAdmin via XAMPP. Om du har installerat på annat sätt så kan du säkert anpassa dig och starta klienterna i din egen miljö och använda SQL-koden fån artikeln för att testa klienterna.
 
 
 
@@ -50,13 +57,13 @@ MySQL ägdes från början av ett svenskt företag som köptes upp och numer äg
 
 ###Ladda ned och installera {#installera}
 
-Åter till MySQL. Det går att ladda ned en kopia av databasen från [hemsidan](http://dev.mysql.com/downloads/) och installera, eller så kommer den med automatiskt när man installerar LAMP, WAMP, MAMP eller motsvarande som är en samling av Apache, PHP och MySQL.
+Åter till MySQL. Det går att ladda ned ett installationsprogram från [hemsidan](http://dev.mysql.com/downloads/) och installera, eller så kommer databasen med automatiskt när man installerar LAMP, WAMP, MAMP eller motsvarande som är en samling av Apache, PHP och MySQL.
 
 När man väl har installerat och startat igång databasen så ligger den normalt och lyssnar på porten 3306 och det är dit som en klient kopplar upp sig. Databasen körs som en server och det behövs klientprogram för att koppla upp sig och jobba mot databasen. Databasen har ett behörighetssystem där man måste ange användare och lösenord för att koppla upp sig. Det är något man ställer in när man installerar databasen.
 
 Beroende på hur du har installerat MySQL så kan du behöva kontrollera både vilken port, vilken användare och vilket lösenord som gäller som standard vid installationen. 
 
-I detta dokumentet så förutsätter jag att du har en installation av XAMPP. Har du en alternativ miljö så kan du säkert anpassa dig.
+I detta dokumentet så förutsätter jag att du har en installation av XAMPP. Har du en alternativ miljö så kan du säkert anpassa dig och hoppa över de rubriker som börjar med XAMPP.
 
 
 
@@ -75,7 +82,7 @@ Låt oss kika på de olika klienterna.
 MySQL CLU (command line utility) {#clu}
 ------------------------------
 
-Den första klienten vi bekantar oss med är en textbaserad klient, ett "command line interface (cli)" eller "command line utility (clu)".
+Den första klienten vi bekantar oss med är en textbaserad klient, ett "command line interface (CLI)" eller "command line utility (CLU)".
 
 
 
