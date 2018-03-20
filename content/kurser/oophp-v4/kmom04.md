@@ -18,6 +18,12 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 
 [/WARNING]
 
+<!--
+Du bekantar dig med begrepp som interface och traits.
+Inloggning till webbplats?
+Embryo till eshop sql?
+-->
+
 
 Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 

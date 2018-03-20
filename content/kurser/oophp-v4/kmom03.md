@@ -16,6 +16,10 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 
 [/WARNING]
 
+<!--
+Enhetstesta Guess?
+Gör enhetstestning på tärningsspelet?
+-->
 
 Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar och därefter får du på egen hand koda motsvarande funktionalitet in i ramverket Anax lite.
 
