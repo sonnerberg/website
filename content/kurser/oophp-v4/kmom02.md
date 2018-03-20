@@ -36,7 +36,7 @@ Kursmomentet har fokus på ett par friare programmeringsövningar så du kan tr�
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
-<!--stop-->
+<!--sto p-->
 
 
 
@@ -46,12 +46,12 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 0-2 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
 
 
+<!--
 
 ###Kurslitteratur  {#kurslitteratur}
 
 Det finns inga specifika läsanvisningar i kurslitteraturen.
 
-<!--
 Läs följande:
 
 1\. [Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)
@@ -71,11 +71,12 @@ Läs följande artiklar.
 
 
 
+
+<!--
 ###Lästips {#lastips}
 
 Det finns inga lästips.
 
-<!--
 När man pratar om objektorienterad programmering så behöver man också ha en viss bas i objektorienterad modellering, det underlättar. Därför kan du läsa lite om UML, "Unified Modelling Language". En bra start plats är [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
 -->
 

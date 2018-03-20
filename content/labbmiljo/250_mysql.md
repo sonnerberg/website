@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-20": "(C, mos) Ersatt av tre mer specialiserade installationsguider."
     "2018-01-12": "(B, mos) Struktur i stycken samt nytt dok för installation utan XAMPP."
     "2017-12-27": "(A, mos) Uppdaterade dokumentet inför VT18."
 ...
@@ -8,6 +9,19 @@ MySQL / MariaDB
 ==================================
 
 Du behöver installera MariaDB/MySQL lokalt på din egna maskin samt ha tillgång till MariaDB/MySQL på BTH's labbmiljö.
+
+[INFO]
+**Uppdaterade artiklar finns**
+
+Detta dokument är numer (från lp4 ht18) uppdelat i tre dokument för att göra det enklare att länka från olika kurser som delvis har olika kravbild på installationen och användandet av MySQL.
+
+Följande artiklar ersätter denna.
+
+* [MySQL / MariaDB och MySQL Workbench](labbmiljo/mysql-med-workbench) (kurs databas)
+* [MySQL / MariaDB med XAMPP](labbmiljo/mysql-med-xampp) (kurs oophp, ramverk1)
+* [MySQL / MariaDB i BTH's labbmiljö](labbmiljo/mysql-bth-labbmiljo) (kurs oophp, ramverk1)
+
+[/INFO]
 
 Det finns flera sätt att göra en lokal installation, här är två alternativ.
 

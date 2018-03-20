@@ -30,7 +30,7 @@ Förutsättningar {#forutsattning}
 
 Du behöver ett studentkonto på studentservern ssh.student.bth.se.
 
-Du kan själv skaffa dig ett konto på databasservern. Du gör det via Studentportalen -> Mina E-tjänster -> Ändra lösenord.
+Du kan själv skaffa dig ett konto på databasservern. Du gör det via Studentportalen.
 
 Kom nu ihåg att du har två olika användare/lösenord. Ett till studentservern och ett till databassservern. De har samma användare men två olika lösenord.
 

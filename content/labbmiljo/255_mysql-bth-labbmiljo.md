@@ -1,0 +1,32 @@
+---
+author: mos
+revision:
+    "2018-03-20": "(A, mos) Uppdelad från ett större dokument."
+...
+MySQL / MariaDB i BTH's labbmiljö
+==================================
+
+Du behöver ha tillgång till BTH's labbmiljö för MySQL/MariaDB och du behöver kunna använda klienter såsom Workbench, terminalklient och PHPMyAdmin för att jobba mot databasen.
+
+
+
+Skaffa konto {#konto}
+----------------------------------
+
+Den som är kursansvarig gör en beställning till IT helpdesk om vilka kurskoder som skall få tillgång till databasen.
+
+Sedan kan du själv skapa ett konto via studentportalen och [Mina studier > Studie- &amp; systemstöd > Skapa databaslösenord](https://studentportal.bth.se/page/skapa-databaslosenord).
+
+
+
+Kom igång {#kom}
+----------------------------------
+
+Bekanta dig med BTH's labbmiljö för MySQL. I artikeln "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)" visas hur du använder klienter för att komma åt BTH's installation och studentmiljö.
+
+
+
+Fråga i forumet {#forum}
+----------------------------------
+
+Ställ frågor och bidra med tips och trix i forumtråden som är [kopplad till detta dokument](t/6264).

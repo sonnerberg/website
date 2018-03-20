@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-20": (B, mos) XAMPP som extra enbart.
     "2017-12-28": (A, mos) Första utgåvan.
 ...
 Kmom01: Databas
@@ -14,15 +15,13 @@ Till databasen behövs klientprogram som kan användas för att prata med databa
 
 Vi introduceras till databasen MySQL och dess olika klienter samt lär oss använda SQL tillsammans med MySQL. Du får jobba igenom en övning i SQL som introducerar dig i grundläggande konstruktioner för att skapa och uppdatera en databas.
 
-Du får pröva att använda tre olika klienter till MySQL, alla tre har sin plats och användningsområde vid olika tillfällen.
+Du får pröva att använda olika klienter till MySQL, de har alla sin plats och användningsområde vid olika tillfällen.
 
 <!--more-->
 
-[FIGURE src=/image/snapshot/mamp-mysql-clu-test.jpg?w=w1&q=60 caption="SQL i en textbaserad klient."]
+[FIGURE src=/image/snapshot/mamp-mysql-clu-test.jpg?w=w3&q=60 caption="SQL i en textbaserad klient."]
 
-[FIGURE src=/image/snapshot/wamp-phpmyadmin.png?w=w1&sa=jpg&q=60 caption="SQL i en webbaserad klient."]
-
-[FIGURE src=/image/snapshot/sql-ovning-alter-table.jpg?w=w1&q=60 caption="SQL som det ser ut i desktop-klienten MySQL WorkBench."]
+[FIGURE src=/image/snapshot/sql-ovning-alter-table.jpg?w=w2&q=60 caption="SQL som det ser ut i desktop-klienten MySQL WorkBench."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -75,6 +74,14 @@ Kika igenom följande artiklar.
 
 
 
+### Läsvärt {#lastips}
+
+Följande kan du studera om du har tid och kraft över.
+
+1. Vi kommer inte att använda BTH's labbmiljö för MySQL i denna kursen, men om du vill så kan du bekanta dig med den via dokumentet "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)". Se hur du kan använda BTH's databasserver för MySQL och hur du kan använda de olika klienterna för att koppla upp dig. Spara dina eventuella testfiler i `me/kmom01/klient`.
+
+
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
@@ -87,8 +94,6 @@ Kika igenom följande artiklar.
 Följande två dokument gick du eventuellt igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har koll på dem. De ger dig basen för kursens utvecklingsmiljö mot databasen.
 
 1. Jobba igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/klient`.
-
-1. Bekanta dig med "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)". Se hur du kan använda BTH's databasserver för MySQL och hur du kan använda de olika klienterna för att koppla upp dig. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
 
 
@@ -105,6 +110,7 @@ IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad 
 
 1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon.
 -->
+
 
 
 ### Extra {#extra}
