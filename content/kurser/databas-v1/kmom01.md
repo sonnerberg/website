@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2018-03-20": (B, mos) XAMPP som extra enbart.
+    "2018-03-20": (B, mos) Bort med kopplingar till XAMPP och BTHs labbmiljö är enbart extra.
     "2017-12-28": (A, mos) Första utgåvan.
 ...
 Kmom01: Databas
@@ -78,7 +78,7 @@ Kika igenom följande artiklar.
 
 Följande kan du studera om du har tid och kraft över.
 
-1. Vi kommer inte att använda BTH's labbmiljö för MySQL i denna kursen, men om du vill så kan du bekanta dig med den via dokumentet "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)". Se hur du kan använda BTH's databasserver för MySQL och hur du kan använda de olika klienterna för att koppla upp dig. Spara dina eventuella testfiler i `me/kmom01/klient`.
+1. Vi kommer inte att använda BTH's labbmiljö för MySQL i denna kursen, men om du vill så kan du bekanta dig med den via dokumentet "[MySQL / MariaDB i BTH’s labbmiljö](labbmiljo/mysql-bth-labbmiljo)". Se hur du kan använda BTH's databasserver för MySQL och hur du kan använda de olika klienterna för att koppla upp dig inifrån skolans nätverk och utanför skolans nätverk. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
 
 
@@ -91,9 +91,9 @@ Följande kan du studera om du har tid och kraft över.
 
 ###Övningar {#ovningar}
 
-Följande två dokument gick du eventuellt igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har koll på dem. De ger dig basen för kursens utvecklingsmiljö mot databasen.
+Följande dokument gick du igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har översiktlig koll på de olika klienterna.
 
-1. Jobba igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/klient`.
+1. Jobba översiktligt igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa de du har tillgång till och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
 
 
