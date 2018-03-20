@@ -92,6 +92,8 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Gör övningen [Login med JWT](kunskap/login-med-jwt).
 
+1. Gör övningen [Content Security Policy](kunskap/content-security-policy).
+
 <!-- 1. Läs igenom artikeln och gör övningarna i "[Mithril och CRUD](kunskap/mithril-och-crud)". -->
 
 <!-- 1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". -->
