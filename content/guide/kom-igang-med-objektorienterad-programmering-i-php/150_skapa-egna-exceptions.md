@@ -3,10 +3,10 @@ author: mos
 revision:
     "2018-03-19": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
-Skapa egna Exceptions
+Skapa egna exceptions
 ==================================
 
-Du kan skapa egna Exceptions med klasser. Det kan göra din felhantering tydligare.
+Du kan skapa egna exceptions med klasser. Det kan göra din felhantering tydligare.
 
 Spara koden du skriver i denna övningen i `index_exception_own.php`, `src/Person5.php` och i `src/PersonException.php`.
 

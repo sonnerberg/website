@@ -92,9 +92,9 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20 studie
 
 ###Kmom01: Objektorientering i PHP {#kmom01}
 
-Kom igång med klasser i PHP och lär dig samtidigt hur grundstrukturen i ett PHP-ramverk kan se ut. Du bygger en me-sida i ditt egenskapade ramverk och du tränar på att bygga klasser och kod både i och utanför strukturen av ramverket.
+Vi startar med grunderna i objektorienterad PHP, det blir objekt och klasser med inkapsling, konstruktorer och destruktorer, setters och getters, egenskapade exceptions och vi ser hur man kan lagra ett objekt i sessionen.
 
-Som ett sidoprojekt kommer vi igång med MySQL/MariaDB som databas och lär känna dess klienter och grunderna i SQL.
+Vi bygger en me-sida med ramverket Anax och vi programmerar spelet "Gissa vilket tal jag tänker på" med klasser och klienter via GET, POST och SESSION.
 
 Läs [instruktionen till kursmoment 01](./kmom01).
 

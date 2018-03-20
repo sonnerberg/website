@@ -10,7 +10,7 @@ Konstruktorn anropas i samband med att objektet skapas, eller instansieras, till
 
 Destruktorn är det sista som anropas i klassen när den raderas och förstörs. 
 
-Spara koden du skriver i denna övningen i `index_constructor.php` och i `src/Person.php`.
+Spara koden du skriver i denna övningen i `index_constructor.php` och i `src/Person4.php`.
 
 
 
