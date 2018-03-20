@@ -34,4 +34,4 @@ Börja med att gå igenom artikeln "[Kom igång med databasen MySQL och dess kli
 Fråga i forumet {#forum}
 ----------------------------------
 
-Ställ frågor och bidra med tips och trix i forumtråden som är [kopplad till detta dokument](t/XXX).
+Ställ frågor och bidra med tips och trix i forumtråden som är [kopplad till detta dokument](t/7371).

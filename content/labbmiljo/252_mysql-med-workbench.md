@@ -33,4 +33,4 @@ TODO egen artikel som hjälper igång med klienter, utan koppling till XAMPP
 Fråga i forumet {#forum}
 ----------------------------------
 
-Ställ frågor och bidra med tips och trix i forumtråden som är [kopplad till detta dokument](t/XXX).
+Ställ frågor och bidra med tips och trix i forumtråden som är [kopplad till detta dokument](t/7370).
