@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-20": "(B, mos) Indelad i kapitel och varning om safe mode update."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Lägg till rader
@@ -8,7 +9,14 @@ Lägg till rader
 
 Vi lägger till lärare i tabellen.
 
-Lägg SQL-koden, som handlar om att lägga in värden i en tom databas, i filen `dml_insert.sql` och inled filen med en header som berättar vem du är.
+Lägg SQL-koden i filen `dml_insert.sql`.
+
+
+
+En fil för att lägga till rader {#insert}
+----------------------------------
+
+Lägg SQL-koden, som handlar om att lägga in värden i en tom databas, i filen och inled filen med en header som berättar vem du är.
 
 ```sql
 --
@@ -56,11 +64,31 @@ Vi har ännu inte satt lönen för dessa två lärare så vi kan inte ge den ett
 
 Visst, som du kanske ser så kunde vi angivit NULL för kolumnen `lon`, istället för att explicit ange vilka kolumner vi jobbar mot, se det som två olika varianter på hur data kan läggas till, resultatet blir detsamma.
 
+
+
+Säkerställ att tabellen är tom innan INSERT {#del}
+------------------------------------
+
 För att säkerställa att du kan köra alla INSERT-kommandon i en sekvens så väljer du att lägga en DELETE-sats överst, så du alltid vet att tabellen är tom, innan du lägger in värden.
 
 ```sql
 DELETE FROM larare;
 ```
+
+[INFO]
+**MySQL Workbench: Felmeddelande om safe update mode**
+
+Får du felmeddelandet om safe update mode när du försöker radera rader?
+
+> <i>Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column To disable safe mode, toggle the option in Edit -> Preferences -> SQL Editor -- and reconnect.</i>
+
+Gör som det står i felmeddelandet, gå in och klicka bort "Safe updates" under "SQL Editor" i Edit -> Preferences. Reconnecta därefter via "Query" -> "Reconnect to server". Sedan skall det gå. Det är en rimligt säkerhetsinställning som de har satt på i klienten.
+[/INFO]
+
+
+
+Kör alla kommandon i filen i sekvens {#sekvens}
+------------------------------------
 
 Dubbelkolla att allt ligger i din fil och att du kan köra alla kommandon i filen, om och om igen.
 
