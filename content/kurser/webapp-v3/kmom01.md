@@ -10,11 +10,6 @@ revision:
 ...
 Kmom01: Single Page Application
 ==================================
-
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
-
 Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript. Vi ser hur vi kan utnyttja dessa tekniker för att ändra innehållet utan att ladda om applikationen. Som ett första steg så läser vi på om grunderna, bygger en me-sida med fokus på mindre terminaler och börjar så smått med det löpande projektet för alla sex kursmoment.
 
 
