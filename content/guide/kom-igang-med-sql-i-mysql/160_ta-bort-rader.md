@@ -26,7 +26,7 @@ I princip ser det ut så här.
 --
 -- Delete rows from table
 --
-DELETE FROM larare WHERE efternamn = 'Hagrid';
+DELETE FROM larare WHERE fornamn = 'Hagrid';
 ```
 
 Skriv SQL-kod för att utföra följande:
