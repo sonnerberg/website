@@ -17,6 +17,8 @@ Dokumentera PHP med phpdoc och phpDocumentor
 
 Du ska dokumentera ditt projekt med phpdoc och phpDocumenter. Det handlar om att dra nytta av dina docblock kommenterarer när du nu skall automatgenerera din dokumentation.
 
+Du har ett befintligt projekt där din Makefile redan innehåller stöd för att använda phpdoc för att generera dokumentationen.
+
 <!--more-->
 
 
@@ -26,12 +28,16 @@ Förkunskaper {#forkunskaper}
 
 Du har tillgång till ett projekt med en Makefile som stödjer att installera phpdoc och generera dokumentation.
 
+Du är bekant med [phpDocumenter, aka phpdoc](https://www.phpdoc.org/).
+
+Du är medveten om behovet av kommentarer strukturerade som docblock, för att få en bra grund till dokumentationen.
+
 
 
 Introduktion {#intro}
 -----------------------
 
-Låt oss göra det enkelt. Det handlar om att använda [phpDocumenter, aka phpdoc](https://www.phpdoc.org/) för att automatgenerera dokumentation av dina klasser i ditt projekt.
+Låt oss göra det enkelt. Det handlar om att använda phpDocumenter via kommandot `phpdoc` för att automatgenerera dokumentation av dina klasser i ditt projekt.
 
 Förbered dig så här.
 
