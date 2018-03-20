@@ -27,7 +27,7 @@ Se till att koden validerar.
 Inledning {#inledning}
 ---------------------------------------
 
-Du har fått i uppdrag av kunden "Mannsmandel" att bygga en webbplats för enhandel och nöje. Kunden är verksam inom ekologisk jord- och skogsbruk med trädgård.
+Du har fått i uppdrag av kunden "Mannsmandel" att bygga en webbplats för ehandel och nöje. Kunden är verksam inom ekologisk jord- och skogsbruk med trädgård.
 
 
 
