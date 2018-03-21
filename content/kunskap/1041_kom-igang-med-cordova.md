@@ -1,9 +1,12 @@
 ---
-author: aar
+author:
+  - aar
+  - efo
 category:
-    - cordova
-    - kurs webapp
+  - cordova
+  - kurs webapp
 revision:
+    "2017-03-20": (B, efo) Gjort om för webapp-v3.
     "2017-03-08": (A, aar) Första utgåvan inför webapp-v2.
 ...
 Kom igång med Cordova
@@ -11,7 +14,9 @@ Kom igång med Cordova
 
 [FIGURE src=/image/kunskap/cordova_logo.png?w=500&h=300]
 
-Vi ska använda Apache Cordova för att skapa en "hello world" webbapp och testa köra den i en android emulator. Cordova är ett [cross-plattform tool](https://en.wikipedia.org/wiki/Cross-platform) som är gratis och open source. Apparna byggs i HTML, CSS och JavaScript.
+Vi ska använda Apache Cordova och mithril för att skapa en "Hello World"  och testa köra den i en Android Emulator. Cordova är ett [cross-plattform tool](https://en.wikipedia.org/wiki/Cross-platform) som är gratis och open source. Apparna byggs i HTML, CSS och JavaScript och mithril.
+
+
 
 <!--more-->
 
@@ -28,52 +33,56 @@ Introduktion {#introduktion}
 
 Med hjälp av Cordova ska vi skapa en _hybrid app_, alltså en webbsida som exekveras i mobilen som en native app. Detta gör att vi kan utnyttja native funktionaliteter i våran app, t.ex. kamera, GPS och kontakter. Vi kommer åt de här funktionaliteterna med hjälp av ett [JavaScript API som Cordova har utvecklat](https://cordova.apache.org/docs/en/latest/#plugin-apis).
 
-I den här artikeln kommer vi inte testa någon native funktion utan vi fokuserar på att få ihop en "Hello world" app och testa den i en Android emulator.
+I den här artikeln kommer vi inte testa någon native funktion utan vi fokuserar på att få ihop en "Hello World" app och testa den i en Android emulator.
 
-Källkoden för detta exempel finns i `exemple/helloworld` och på "[Github](https://github.com/dbwebb-se/webapp/tree/master/example/helloworld/www)".
 [INFO]
 Exemplen för Cordova i kursen innehåller bara `www`-mappen. För att testa koden behöver du ha/skapa ett Cordova projekt du kan kopiera in www-mappen i. Du behöver även lägga till plattformarna Android och Browser för att testa koden.
 [/INFO]
 
 
-Hello world {#hello_world}
+Hello World {#hello_world}
 --------------------------------------
 
 När vi skapar ett nytt Cordova projekt får vi med kod och filstruktur för en fungerande app så vi testar skapa ett nytt projekt i terminalen.
 
 ```bash
-$ cordova create hello se.dbwebb.helloWorld HelloWorld
+# Stå i me/kmom05/hello
+$ cordova create . se.dbwebb.helloWorld HelloWorld
 ```
 
 `cordova create` kommandot tar tar emot följande argument:
 
-* **directory**: Vad mappen som vårt prjojekt ska ligga i ska heta som. I detta fallet "hello".
+* **directory**: Vad mappen som vårt prjojekt ska ligga i ska heta som. I detta fallet vill vi skapa katalogstrukturen i den befintliga katalogen `me/kmom05/hello`.
 
-* **identifier**: Identifierare för appen, används b.la. för Android appar. Den är skriven i [reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). I detta fallet "se.dbwebb.helloWorld".
+* **identifier**: Identifierare för appen, används bland annat för Android appar. Den är skriven i [reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). I detta fallet "se.dbwebb.helloWorld".
 
-* **title**: Projektets title. I vårt fall "HelloWorld"
+* **title**: Projektets title. I vårt fall "HelloWorld".
 
 Vi tar en titt på vad för mappar och filer som har skapats.
 
 ```bash
-$ tree hello
-hello/
+$ tree hello -L 2
+hello
 ├── config.xml
 ├── hooks
 │   └── README.md
+├── package.json
 ├── platforms
 ├── plugins
+├── res
+│   ├── icon
+│   ├── README.md
+│   └── screen
 └── www
     ├── css
-    │   └── index.css
     ├── img
-    │   └── logo.png
     ├── index.html
     └── js
-        └── index.js
 ```
 
 * **config.xml**: Configurerar appen. I den kan du ändra beteendet av appen och ändra titel, beskrivning och skapare av appen. [Dokumentation](https://cordova.apache.org/docs/en/latest/config_ref/index.html) för de som vill gräva ner sig.
+
+* **package.json**: Är som tidigare paket filen för npm.
 
 * **hook**: Här kan vi lägga in skript som vi vill ska ingå i Cordovas skripts. T.ex. om vi vill lägga till ett skript till `build` kommandot.
 
@@ -169,14 +178,14 @@ Koden som finns där nu döljer `<p>` taggen med innehållet `Connecting to Devi
 
 Cordova har fler events vi kan utnyttja, här kan du läsa om [de olika eventen](https://cordova.apache.org/docs/en/latest/cordova/events/events.html). Det finns bl.a. `pause` som aktiveras när appen läggs i bakgrunden och `resume` som aktiveras när appen plockas fram från bakgrunden.
 
-Då kan det vara dags att kicka på hur appen ser ut. Vi måste lägga till vilka plattformar appen ska fungera på och sen starta en emulator.
+Då kan det vara dags att kicka på hur appen ser ut. Vi måste lägga till vilka plattformar appen ska fungera på och sen starta appen. Vi börjar med att lägga till browser och köra appen i den inbyggda webbservern.
 
 ```bash
-$ cordova platform add android --save
-$ cordova emulate android
+$ cordova platform add --save browser
+$ cordova run browser
 ```
 
-[FIGURE src=/image/kunskap/android-emulator-cordova-app.png?w=200&h=400]
+<!-- [FIGURE src=/image/kunskap/android-emulator-cordova-app.png?w=200&h=400]
 
 `cordova emulate android` startar `cordova build` som bygger en [_apk_-fil](https://sv.wikipedia.org/wiki/APK_(filformat)), som du kan hitta här, `/platforms/android/build/outputs/apk/android-debug.apk`.
 
@@ -185,19 +194,19 @@ För att felsöka appen i webbläsaren behöver vi lägga till `browser` som en 
 ```bash
 $ cordova platform add browser --save
 $ cordova emulate browser
-```
+``` -->
 
-Om du öppnar `index.html` filen i webbläsaren istället för att köra `cordova emulate browser` kommer `cordova.js` att saknas. `cordova.js` läggs till när du exekverar `cordova emulate browser` som startat `cordova build`. Då flyttas även din kod till `/platforms/browser/www/`, det är här emulatorn utgår ifrån.
+Om du öppnar `index.html` filen i webbläsaren istället för att köra `cordova run browser` kommer `cordova.js` att saknas. `cordova.js` läggs till när du exekverar `cordova run browser`. Då flyttas även din kod till `/platforms/browser/www/` och det är här webbservern utgår ifrån.
 
-[INFO]
+<!-- [INFO]
 Att köra emulatorer använder mycket resurser från datorn. Om du inte lyckas stänga ner emulator processerna helt kan det sluta med att du har flera liggandes i bakgrunden vilket får din dator att prestera sämre. Kolla vilka processer du har igång med `ps` kommandot i samma terminal du har startat emulatorerna. Om det finns gamla processer kan du döda dem med `kill -9 <PID>`.
-[/INFO]
+[/INFO] -->
 
 
 Utveckla appen {#utveckla}
 --------------------------------------
 
-När vi utvecklar appar med Cordova är det viktigt att använda [SPA design](https://en.wikipedia.org/wiki/Single-page_application), Single Page Application, då vi behöver vänta på `deviceready` eventet för att kunna använda plugins. Om vi aldrig byter sida behöver vi bara vänta på `deviceready` när applicationen startar annars behöver vi vänta på det eventet varje gång vi laddar om en sida.
+När vi utvecklar appar med Cordova är det viktigt att använda [SPA design](https://en.wikipedia.org/wiki/Single-page_application), Single Page Application, då vi behöver vänta på `deviceready` eventet för att kunna använda plugins. Om vi aldrig byter sida behöver vi bara vänta på `deviceready` när applikationen startar annars behöver vi vänta på det eventet varje gång vi laddar om en sida.
 
 Vi sätter igång och ändrar i koden i `index.html`.
 
