@@ -3,11 +3,11 @@ author:
   - mos
   - efo
 revision:
-  "2018-02-14": (B, aar) Tagit bort JQuery mobile.
+  "2018-02-14": (C, efo) Anpassat för webapp-v3.
   "2017-03-14": (B, aar) Tagit bort JQuery mobile.
   "2015-12-04": (A, mos) Första utgåvan för kursen.
 ...
-Kmom05: Litet kundprojekt
+Kmom05: Native
 ==================================
 
 [WARNING]

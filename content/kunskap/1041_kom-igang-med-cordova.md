@@ -25,7 +25,8 @@ Vi ska använda Apache Cordova och mithril för att skapa en "Hello World"  och 
 Förutsättning {#pre}
 --------------------------------------
 
-Artikeln är en del av kursen webapp och förutsätter att du har gjort motsvarande "[installera Cordova](kunskap/installera-cordova)".
+Artikeln är en del av kursen webapp och förutsätter att du har gjort motsvarande "[installera Cordova](kunskap/installera-cordova)". Du har även möjlighet för att köra din kod antingen genom en [emulator eller på en fysisk enhet](kurser/webapp-v3/labbmiljo/emulator-och-fysisk-enhet).
+
 
 
 Introduktion {#introduktion}
@@ -94,7 +95,7 @@ hello
 
 
 
-###Inspektera koden {#inspektera}
+### Inspektera koden {#inspektera}
 
 Öppna `index.html` så kollar vi vad som finns där. Du kan börja med att läsa igenom kommentarerna och granska koden för att få lite förståelse.
 
@@ -185,179 +186,146 @@ $ cordova platform add --save browser
 $ cordova run browser
 ```
 
-<!-- [FIGURE src=/image/kunskap/android-emulator-cordova-app.png?w=200&h=400]
-
-`cordova emulate android` startar `cordova build` som bygger en [_apk_-fil](https://sv.wikipedia.org/wiki/APK_(filformat)), som du kan hitta här, `/platforms/android/build/outputs/apk/android-debug.apk`.
-
-För att felsöka appen i webbläsaren behöver vi lägga till `browser` som en platform och starta en emulator för browsern.
-
-```bash
-$ cordova platform add browser --save
-$ cordova emulate browser
-``` -->
-
 Om du öppnar `index.html` filen i webbläsaren istället för att köra `cordova run browser` kommer `cordova.js` att saknas. `cordova.js` läggs till när du exekverar `cordova run browser`. Då flyttas även din kod till `/platforms/browser/www/` och det är här webbservern utgår ifrån.
 
-<!-- [INFO]
-Att köra emulatorer använder mycket resurser från datorn. Om du inte lyckas stänga ner emulator processerna helt kan det sluta med att du har flera liggandes i bakgrunden vilket får din dator att prestera sämre. Kolla vilka processer du har igång med `ps` kommandot i samma terminal du har startat emulatorerna. Om det finns gamla processer kan du döda dem med `kill -9 <PID>`.
-[/INFO] -->
 
 
-Utveckla appen {#utveckla}
+Köra appen på en mobil enhet {#mobil}
 --------------------------------------
+Hela anledningen till att vi använder Cordova är att vi vill kunna köra apparna på mobila enheter. Så låt oss titta på hur vi lägger till Android eller iOS som plattform och kör dessa antigen i en emulator eller i en fysisk enhet. Följ instruktionerna nedan för det mobila operativsystem du har installerat.
 
-När vi utvecklar appar med Cordova är det viktigt att använda [SPA design](https://en.wikipedia.org/wiki/Single-page_application), Single Page Application, då vi behöver vänta på `deviceready` eventet för att kunna använda plugins. Om vi aldrig byter sida behöver vi bara vänta på `deviceready` när applikationen startar annars behöver vi vänta på det eventet varje gång vi laddar om en sida.
+### Android
+För att köra Cordova Hello World exemplet på en Android enhet eller emulator börjar vi med att lägga till Android som en plattform.
 
-Vi sätter igång och ändrar i koden i `index.html`.
+```bash
+# stå i me/kmom05/hello
+cordova platform add --save android
+cordova run android
+```
+
+Nu byggs appen för Android, kan ta ett tag när den byggas för första gången. Om du har en mobil enhet i utvecklareläge inkopplat, körs appen på den mobila enheten.
+
+[INFO]
+Att köra emulatorer använder mycket resurser från datorn. Om du inte lyckas stänga ner emulator processerna helt kan det sluta med att du har flera liggandes i bakgrunden vilket får din dator att prestera sämre. Kolla vilka processer du har igång med `ps` kommandot i samma terminal du har startat emulatorerna. Om det finns gamla processer kan du döda dem med `kill -9 <PID>`.
+[/INFO]
+
+
+
+### iOS
+För att köra Cordova Hello World exemplet på en iOS enhet eller emulator börjar vi med att lägga till iOS som en plattform.
+
+```bash
+# stå i me/kmom05/hello
+cordova platform add --save ios
+cordova build ios
+```
+
+Nu byggs appen för iOS, kan ta ett tag att bygga appen. När appen har byggts klar kan du öppna filen `me/kmom05/hello/platforms/ios/HelloWorld.xcworkspace/` i Xcode. Följ instruktionerna från [Cordova appar på iOS](kunskap/cordova-appar-pa-ios) för att köra appen.
+
+
+
+
+Mithril, webpack och Cordova {#mithril}
+--------------------------------------
+Hello World exemplet som följer med när vi skapar appar med `cordova create` kommandot är skriven i vanilla JavaScript. Vi vill dock ta det ett steg vidare och använda mithril och webpack som en del av Cordova appen. Vi börjar med att installera webpack och mithril som tidigare.
+
+```bash
+# Stå i me/kmom05/hello
+npm install --save webpack
+npm install --save webpack-cli
+npm install --save mithril
+```
+
+Vi vill nu konfigurera webpack så den kompilerar JavaScript filerna och lägger den kompilerade filen i `www/dist/app.js`. Vi använder därför `path` i `webpack.config.js` för att definiera en annan sökvägen till den kompilerade filen än standard sökvägen. Skapa först filen `webpack.config.js` och lägg in följande konfiguration.
+
+```js
+var path = require("path");
+
+module.exports = {
+    entry: "./www/js/index.js",
+    output: {
+        path: path.resolve(__dirname, 'www/dist'),
+        filename: "app.js"
+    }
+};
+```
+
+Vi lägger även till vanliga npm skripten i `package.json`.
+
+```json
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "webpack -d",
+  "watch": "webpack -d --watch"
+},
+```
+
+Vi vill nu ladda filen `app.js` istället för `js/index.js` i `index.html`. Och vi passar samtidigt på att rensa ut `index.html` så det enbart är våra två JavaScript filer som laddas i `body`.
 
 ```html
 ...
 <body>
-    <div class="app">
-        <p>App is loading. Hold on!</p>
-        </div>
-
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="dist/app.js"></script>
+</body>
 ...
 ```
-Vi ersätter innehållet i `app`-diven med en placeholder text som endast ska visas innan `deviceready` har aktiverats.
 
-I `index.js` rensar vi också. Lägg till `"use strict";` överst i filen så valideringen blir rätt. Behåll `initialize` och `onDeviceReady` funktionerna, ta bort `receivedEvent` funktionen och ersätt den med en `homePage` funktion.
+I filen `www/js/index.js` som är vår ingångspunkt i appen importerar vi mithril och förenklar genom att ta bort funktionen `receivedEvent`. Vi använder `m.mount` precis som tidigare för att visa upp vyn `js/views/hello.js`, som vi skapar i samma veva som vi rensar ut i `js/index.js`.
 
 ```js
-"use strict";
-...
+// www/js/index.js
 
+var m = require("mithril");
+var hello = require("./views/hello.js")
+
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
     onDeviceReady: function() {
-        this.homePage();
-    },
-
-    homePage: function() {
+        m.mount(document.body, hello);
     }
-
-...
+};
+app.initialize();
 ```
 
-Då ska vi ändra innehållet i vår app. Med SPA tänket väljer vi att ändra innehållet i `<div class="app">` med hjälp av JavaScript för att inte behöva ladda om sidan.
+Nedan syns hello vyn.
 
 ```js
-homePage: function() {
-    var content = document.getElementsByClassName("app")[0];
+// www/js/views/hello.js
 
-    var html = "<h1 class='title'>Hello World</h1>";
-    html += "<div class='main'>Hej och välkommen till min första Cordova app.</div>";
-    content.innerHTML = html;
-}
-```
-Många DOM förändringar har stor inverkan på prestanda, därför väljer vi att skapa en sträng som innehåller all html kod och tilldelar `content.innerHTML` med strängen. Därmed påverkar vi bara DOM en gång istället för två när vi ändrar innehållet.
+var m = require("mithril");
 
-Testa appen och kolla hur det ser ut.
-
-```bash
-$ cordova emulate android
-```
-
-Jag har så klart ändrat i CSS filen. Testa du också att leka med stylen.
-
-[FIGURE src=/image/kunskap/cordova/cordova-intro-v1.png?w=500&h=300]
-
-
-##Touch event {#touch}
-
-För att ändra innehållet i appen lägger vi till en `button` och skapa ett `touchend` event.
-
-```js
-homePage: function() {
-    var content = document.getElementsByClassName("app")[0];
-
-    var html = "<h1 class='title'>Hello World</h1>";
-    html += "<div class='main'>Hej och välkommen till min första Cordova app.";
-    html += "<button class='otherPage'>Nästa sida</button></div>";
-    content.innerHTML = html;
-
-    var button = document.getElementsByClassName("otherPage")[0];
-    button.addEventListener("touchend", this.otherPage);
-},
-
-otherPage: function() {
-    var title = document.getElementsByClassName("title")[0];
-    var content = document.getElementsByClassName("main")[0];
-
-    title.innerHTML = "Other page";
-
-    var html = "Try an alert!<br>";
-    html += "<button class='alertButton'>Alert</button>";
-    content.innerHTML = html;
-
-    var button = document.getElementsByClassName("alertButton")[0];
-    button.addEventListener("touchend", function() {
-        window.alert("Hej");
-    });
-}
-```
-Vi skapar en ny funktion `otherPage` där vi uppdaterar innehållet i appen. På den nya sidan lägger vi till en knapp som skapar ett `alert`.
-Det är viktigt att använda något `touch-event` istället för `click`. `click` har en 300ms fördröjning innan den reagerar på att du har klickat på knappen.
-
-Testa appen igen.
-
-```bash
-$ cordova emulate android
-```
-[FIGURE src=/image/kunskap/cordova/cordova-intro-alert.png?w=500&h=300]
-
-Nu har vi gjort vår första app i Cordova och testat den i Android. Om vi istället testar appen i webbläsaren som en vanlig webbsida kommer inte knapparna funka. Testa appen med `cordova emulate browser` och aktivera inte responsive mode i developer tools. Webbläsare aktiverar bara 'touch' event om man är i responsive mode. Om vi också vill att knapparna ska funka som en vanlig webbsida behöver vi lägga till ett `click` event som gör samma sak som vårt `touch` event.
-
-Jag gör det smidigast genom att skapa en ny funktion som tar emot ett element och en callback funktion. I funktionen skapar vi både ett 'click' och ett 'touchend' event för elementet.
-
-```js
-    homePage: function() {
-        ...
-        var button = document.getElementsByClassName("otherPage")[0];
-        app.addEventListeners(button, this.otherPage);
-    },
-
-    otherPage: function() {
-        ...
-        var button = document.getElementsByClassName("alertButton")[0];
-        app.addEventListeners(button, function() {
-            window.alert("Hej");
-        });
-    },
-
-    addEventListeners: function(element, callback) {
-        element.addEventListener("touchend", callback);
-        element.addEventListener("click", callback);
+module.exports = {
+    view: function() {
+        return m("h1", "Hello World");
     }
+};
 ```
 
-Nu funkar appen både i responsive mode och i en vanlig webbläsare. Om du testade klicka på `alertButton` i responsive mode så märkte du kanske att `alert` visades två gånger, det är för att webbläsaren aktiverar både click och touchend när den är i responsive mode (även emulatorn gör det). När vi använder appen i en mobil/responsive mode i webbläsaren vill vi inte aktivera click utan bara touchend. I och med att touchend aktiveras före click (click har 300ms delay) kan vi lägga till [event.preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) i touchend, det kommer stoppa click från att aktiveras.
 
-```js
-addEventListeners: function(element, callback) {
-    element.addEventListener("touchend", function(event) {
-        event.preventDefault();
-        callback();
-    });
-    element.addEventListener("click", callback);
-}
-```
-
-Nu ska appen fungera som det är tänkt. Testa den i webbläsaren, både med och utan responsive mode. Lek med eventen, preventDefault och console.log om du inte hängde med på hur det fungerar.
 
 Felsöka appar {#felsoka}
 --------------------------------------
+Det finns olika sätt att felsöka en Cordova app. Vi börjar med det lättaste, felsöka den i webbläsaren och som en vanlig webbsida. Vi gör detta med vanliga utvecklareverktygen i webbläsaren genom att köra kommandot `cordova run browser`. När det fungerar kan du gå vidare och kolla om det fungerar i emulatorn och på din fysiska enhet.
 
-Det finns olika sätt att felsöka en Cordova app.
-Vi börjar med det lättaste, felsöka den i webbläsaren och som en vanlig webbsida.
-När det fungerar kan du gå vidare och kolla om det fungerar i emulatorn. När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `console.log()`.
-För att se `console.log` kan vi starta `adb logcat` i terminalen medans vi kör appen. Jag lägger in en `console.log()` i eventet för alert, startar emulatorn och kör sen kommandot `adb logcat`.
+
+
+### Android
+När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `console.log()`. För att se `console.log` kan vi starta `adb logcat` i terminalen medans vi kör appen. Jag lägger in en `console.log()` i `onDeviceReady`, startar emulatorn och kör sen kommandot `adb logcat`.
+
 ```js
-button.addEventListener("touchend", function() {
-    console.log("alert sent");
-    window.alert("Hej");
-});
-```
-[FIGURE src=/image/kunskap/cordova/cordova-intro-logcat.png]
+// www/js/index.js
 
+onDeviceReady: function() {
+    console.log("Ready to take off");
+
+    m.mount(document.body, hello);
+}
+```
+
+[FIGURE src=/image/kunskap/cordova/cordova-intro-logcat.png]
 
 Det är även möjligt att felsöka emulatorn via chrome. Starta emulatorn, öppna en chrome webbläsare och gå till `chrome://inspect/#devices`.
 [FIGURE src=/image/kunskap/cordova/cordova-intro-chrome-dbg.png?w=500&h=300]
@@ -366,10 +334,13 @@ Klicka på inspect så får du upp ett nytt fönster där du kan styra din emula
 
 
 
+### iOS
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Nu har vi skapat en mobil webbapp i Cordova och lärt oss felsöka den.
-Tänk på att påverka DOM så lite som möjligt och använd `touch` event  istället för `click`.
+Nu har vi skapat en mobil webbapp i Cordova och testad den i en emulator och/eller i en fysisk enhet och lärt oss felsöka den.
 
 Har du [tips, förslag eller frågor om artikeln](t/6312) så finns det en specifik forumtråd för det.
