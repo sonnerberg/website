@@ -95,10 +95,10 @@ return [
 
                 "submenu" => [
                     "items" => [
-                        "design" => [
-                            "text"  =>"design",
-                            "url"   => $this->di->get("url")->create("kurser/design"),
-                            "title" => "Kursen design"
+                        "python" => [
+                            "text"  =>"python",
+                            "url"   => $this->di->get("url")->create("kurser/python"),
+                            "title" => "Kursen python"
                         ],
 
                         "htmlphp" => [
@@ -113,10 +113,10 @@ return [
                             "title" => "Kursen javascript1"
                         ],
 
-                        "javascript" => [
-                            "text"  =>"javascript",
-                            "url"   => $this->di->get("url")->create("kurser/javascript"),
-                            "title" => "Kursen javascript"
+                        "design" => [
+                            "text"  =>"design",
+                            "url"   => $this->di->get("url")->create("kurser/design"),
+                            "title" => "Kursen design"
                         ],
 
                         "linux" => [
@@ -125,34 +125,40 @@ return [
                             "title" => "Kursen linux"
                         ],
 
-                        "oophp" => [
-                            "text"  =>"oophp",
-                            "url"   => $this->di->get("url")->create("kurser/oophp"),
-                            "title" => "Kursen oophp"
-                        ],
-
                         "oopython" => [
                             "text"  =>"oopython",
                             "url"   => $this->di->get("url")->create("kurser/oopython"),
                             "title" => "Kursen oopython"
                         ],
 
-                        "phpmvc" => [
-                            "text"  =>"phpmvc",
-                            "url"   => $this->di->get("url")->create("kurser/phpmvc"),
-                            "title" => "Kursen phpmvc"
-                        ],
-
-                        "python" => [
-                            "text"  =>"python",
-                            "url"   => $this->di->get("url")->create("kurser/python"),
-                            "title" => "Kursen python"
-                        ],
-
                         "webapp" => [
                             "text"  =>"webapp",
                             "url"   => $this->di->get("url")->create("kurser/webapp"),
                             "title" => "Kursen webapp"
+                        ],
+
+                        "databas" => [
+                            "text"  =>"databas",
+                            "url"   => $this->di->get("url")->create("kurser/databas"),
+                            "title" => "Kursen databas"
+                        ],
+
+                        "oophp" => [
+                            "text"  =>"oophp",
+                            "url"   => $this->di->get("url")->create("kurser/oophp"),
+                            "title" => "Kursen oophp"
+                        ],
+
+                        "ramverk1" => [
+                            "text"  =>"ramverk1",
+                            "url"   => $this->di->get("url")->create("kurser/ramverk1"),
+                            "title" => "Kursen ramverk1"
+                        ],
+
+                        "ramverk2" => [
+                            "text"  =>"ramverk2",
+                            "url"   => $this->di->get("url")->create("kurser/ramverk2"),
+                            "title" => "Kursen ramverk2"
                         ],
 
                         "webgl" => [
