@@ -28,7 +28,7 @@ Det helt vanliga text input fältet ger ett vanligt tangentbord och ingen klient
 <input type="text">
 ```
 
-[FIGURE src="/image/snapvt17/input-text.png?w=200" caption="Text input"]
+[FIGURE src="/image/webapp/input-screenshot/input-text.png?w=200" caption="Text input"]
 
 
 
@@ -38,7 +38,7 @@ Om man har ett fält där användaren bara ska ange siffror kan man använda sig
 <input type="number">
 ```
 
-[FIGURE src="/image/snapvt17/input-number.png?w=200" caption="Number input"]
+[FIGURE src="/image/webapp/input-screenshot/input-number.png?w=200" caption="Number input"]
 
 
 
@@ -48,7 +48,7 @@ Om användaren skall fylla i sin e-postadress kan det vara bra med et input av t
 <input type="email">
 ```
 
-[FIGURE src="/image/snapvt17/input-email.png?w=200" caption="Email input"]
+[FIGURE src="/image/webapp/input-screenshot/input-email.png?w=200" caption="Email input"]
 
 
 
@@ -58,7 +58,7 @@ Vid ifyllning av telefonnummer kan det vara fördelaktigt att använda input av 
 <input type="tel">
 ```
 
-[FIGURE src="/image/snapvt17/input-tel.png?w=200" caption="Telephone input"]
+[FIGURE src="/image/webapp/input-screenshot/input-tel.png?w=200" caption="Telephone input"]
 
 
 
@@ -68,7 +68,7 @@ När vi har datumfält finns input av typen `date`. Med `date` får användaren 
 <input type="date">
 ```
 
-[FIGURE src="/image/snapvt17/input-tel.png?w=200" caption="Date input"]
+[FIGURE src="/image/webapp/input-screenshot/input-date.png?w=200" caption="Date input"]
 
 
 
@@ -78,7 +78,7 @@ För fält där vi vill skriva in lösenord använder vi naturligtvis `password`
 <input type="password">
 ```
 
-[FIGURE src="/image/snapvt17/input-tel.png?w=200" caption="Password input"]
+[FIGURE src="/image/webapp/input-screenshot/input-password.png?w=200" caption="Password input"]
 
 
 Styling av formulär {#styling}
