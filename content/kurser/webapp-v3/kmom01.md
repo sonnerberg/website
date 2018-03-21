@@ -39,7 +39,7 @@ Labbmiljön  {#labbmiljo}
 
 Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
 
-Vänta med att installera 'Apache Cordova' och 'Emulator och fysisk enhet' till kmom05.
+[Installera labbmiljön](kurser/webapp-v3/labbmiljo) för kursen. Vänta med att installera 'Apache Cordova' och 'Emulator och fysisk enhet' till kmom05.
 
 Uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 

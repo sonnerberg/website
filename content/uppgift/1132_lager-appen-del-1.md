@@ -30,6 +30,14 @@ Ett bra verktyg för att testa sig fram med API:er är Postman. Du kan även ska
 
 I följande videos visar Emil hur du skapar en API-nyckel med hjälp av Postman. I Postman fortsätter vi med att kopiera den befintliga uppsättning produkter och uppdatera produkterna så de blir lite mer intressanta. Vi skapar även helt nya produkter.
 
+[YOUTUBE src=I3tWLEy5B6w width=630 caption="API nyckel"]
+
+[YOUTUBE src=heJbsgBT5VQ width=630 caption="Kopiera produkter"]
+
+[YOUTUBE src=5oGQjpkgfXE width=630 caption="Ändra produkt"]
+
+[YOUTUBE src=eiwtFw7iUww width=630 caption="Skapa produkt"]
+
 
 
 Krav {#krav}
