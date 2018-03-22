@@ -44,7 +44,7 @@ mysql> SELECT akronym, fornamn, kompetens FROM larare;
 | dum     | Albus      |         1 |
 | fil     | Argus      |         1 |
 | gyl     | Gyllenroy  |         1 |
-| hag     | Rubeus     |         1 |
+| hag     | Hagrid     |         1 |
 | hoc     | Madam      |         1 |
 | min     | McGonagall |         1 |
 | sna     | Severus    |         1 |
