@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-22": (C, mos) Bort 404 länk till labbmiljön.
     "2018-03-20": (B, mos) Bort med kopplingar till XAMPP och BTHs labbmiljö är enbart extra.
     "2017-12-28": (A, mos) Första utgåvan.
 ...
@@ -91,7 +92,7 @@ Följande kan du studera om du har tid och kraft över.
 
 ###Övningar {#ovningar}
 
-Följande dokument gick du igenom som en [del av labbmiljön](./../labbmiljo/mysql), när du installerade MySQL. Dubbelkolla så att du har översiktlig koll på de olika klienterna.
+Jobba igenom följande övningar, de förbereder dig inför uppgifterna.
 
 1. Jobba översiktligt igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa de du har tillgång till och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
