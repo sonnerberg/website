@@ -94,7 +94,7 @@ Följande kan du studera om du har tid och kraft över.
 
 Jobba igenom följande övningar, de förbereder dig inför uppgifterna.
 
-1. Jobba översiktligt igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa de du har tillgång till och se till att din lokala utvecklingsmiljö fungerar. Spara dina eventuella testfiler i `me/kmom01/klient`.
+1. Jobba översiktligt igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa de du har tillgång till och se till att din lokala utvecklingsmiljö fungerar. Artikeln bygger egentligen på att man installerat MySQL med XAMPP, men du kan säkert läsa igenom artikeln och få viss behållning av den, annars får du skumläsa den. I artikeln finns till exempel enklare SQL-kommandon du kan använda för att komma igång med dina klienter. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
 
 
