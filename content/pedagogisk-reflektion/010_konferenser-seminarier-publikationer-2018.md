@@ -53,9 +53,15 @@ Publikationer {#publikationer}
 
 The [Journal of University Teaching and Learning Practice JUTLP](http://ro.uow.edu.au/jutlp/) is a tri-annual, peer-reviewed journal publishing papers that add significantly to the body of knowledge describing effective and innovative teaching and learning practice in the higher education environment.
 
+Viktigt att journalen ger en publicering i ISI enligt.
+
+> "...ISI articles ie articles in journals that are indexed in the [ISI Web of Science](http://apps.webofknowledge.com/WOS_GeneralSearch_input.do;jsessionid=5C00A788BD080D3958702123D433ADB9?product=WOS&search_mode=GeneralSearch&SID=Q1frzuhnz5lcg7hUKBy&preferencesSaved=)..."
+
 
 
 Organisationer {#organisationer}
 -----------------------
 
 [Swednet](http://www.swednetwork.se/) är ett svenskt nätverk för pedagogisk utveckling inom högre utbildning. Man kan följa deras nyhetsflöde som innehåller information om konferenser, seminarier och liknande.
+
+[CIGCSE](https://sigcse.org/sigcse/), a global forum for educators to discuss research and practice related to the learning, and teaching of computing, the development, implementation, and evaluation of computing programs, curricula, and courses at all education levels, as well as broad participation, educational technology, instructional spaces, and other elements of teaching and pedagogy related to computing.
