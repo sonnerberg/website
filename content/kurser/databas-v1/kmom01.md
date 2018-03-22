@@ -104,7 +104,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
-1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL (Grunden)](guide/kom-igang-med-sql-i-mysql/grunderna)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/kmom01/skolan1` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
+1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/kmom01/skolan1` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
+    * [Första delen: Grunderna](guide/kom-igang-med-sql-i-mysql/grunderna)
 
 <!--
 IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad guiden går igenom. Använd databasen som finns i guiden.
