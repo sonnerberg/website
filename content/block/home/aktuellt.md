@@ -6,7 +6,7 @@ BTH's utbildningar inom Webbprogrammering finns på campus, distans och kurspake
 
 * [Frågor och svar](t/6968)
 
-Välkommen!
+Välkommen till Blekinge Tekniska Högskola!
 
 
 
