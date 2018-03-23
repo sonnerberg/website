@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-23": "(B, mos) Wrong filename for Exception in second paragraph."
     "2018-03-19": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Skapa egna exceptions
@@ -8,7 +9,7 @@ Skapa egna exceptions
 
 Du kan skapa egna exceptions med klasser. Det kan göra din felhantering tydligare.
 
-Spara koden du skriver i denna övningen i `index_exception_own.php`, `src/Person5.php` och i `src/PersonException.php`.
+Spara koden du skriver i denna övningen i `index_exception_own.php`, `src/Person5.php` och i `src/PersonAgeException.php`.
 
 
 
@@ -29,7 +30,6 @@ Säg vi vill ha ett specifikt exception för klassen Person, säg `PersonAgeExce
 Vi kan utöka basklassen för alla exception, och skapa vårt egna exception, så här.
 
 ```php
-<?php
 /**
  * Exception class for PersonAgeException.
  */
