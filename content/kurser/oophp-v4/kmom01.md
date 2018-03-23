@@ -3,6 +3,7 @@ author:
     - mos
     - lew
 revision:
+    "2018-03-23": "(D, mos) Lade till videoserie för kmom."
     "2018-03-19": "(C, mos) Uppdaterad till oophp v4."
     "2017-03-27": "(B, mos) Länkar till phpcs, phpmd, psr-1, psr-2."
     "2017-03-24": "(A, mos, lew) Första versionen släppt."
@@ -55,12 +56,13 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 
-<!--
-###Kurslitteratur  {#kurslitteratur}
 
-Det finns inga specifika läsanvisningar i kurslitteraturen.
+###Videor {#videor}
 
--->
+Kika på följande videos.
+
+1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 0 och 1. De hälsar dig välkommen och ger dig en introduktion till kursen och till detta kursmoment.
+
 
 
 ###Artiklar {#artiklar}
@@ -92,17 +94,6 @@ Läs översiktligt in dig på följande verktyg som används i kursen.
 1. Bekanta dig kort med [manualen till phpdoc](https://phpdoc.org/) som beskriver hur docblock-kommentarer skrivs till PHP.
 -->
 
-
-
-<!--
-###Videor {#videor}
-
-Det finns inga videos.
-
-Kika på följande videos.
-
-1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 0 och 1.
--->
 
 
 <!--
