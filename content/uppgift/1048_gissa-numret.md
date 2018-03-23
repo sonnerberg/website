@@ -45,7 +45,7 @@ Gör följande för att förbereda dig för uppgiften.
 
 Här är en video som visar hur det kan se ut när du är klar.
 
-[YOUTUBE src=XXX caption="Mikael visar hur spelet och dess olika klienter kan se ut när de är klara."]
+[YOUTUBE src="T_zBswY2fjo" width=700 list="PLKtP9l5q3ce8bxiDqQ8PQwJ6xYbWLYBvw" caption="Mikael visar hur spelet och dess olika klienter kan se ut när de är klara."]
 
 
 
@@ -82,7 +82,7 @@ Klassen **får inte läsa direkt** från $\_GET, $\_POST eller $\_SESSION. Om in
 
 
 
-###GET klienten index_get.php {#get}
+### GET klienten index_get.php {#get}
 
 Gör en variant där du enbart använder GET gör att spela spelet. Spara koden i `index_get.php`
 
@@ -96,13 +96,13 @@ Det skall finnas en länk/knapp "Cheat" som skriver ut nuvarande tal, det blir e
 
 
 
-###POST klienten index_post.php {#post}
+### POST klienten index_post.php {#post}
 
 Gör samma sak igen, men använd nu endast POST istället för GET. Spara koden i `index_post.php`.
 
 
 
-###SESSION klienten index_session.php {#session}
+### SESSION klienten index_session.php {#session}
 
 Gör samma sak igen, men använd nu SESSION för att minnas spelets ställning. Spara koden i `index_session.php`.
 
