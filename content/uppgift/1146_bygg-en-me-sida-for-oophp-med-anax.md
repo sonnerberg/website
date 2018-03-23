@@ -43,6 +43,8 @@ Gör följande steg för att förbereda dig för uppgiften.
 
 Du kan se hur jag jobbar igenom stegen i videoserien "[En me-sida med Anax i kursen oophp](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_RQMga3qbZzvpzvH-gW3gv)".
 
+[YOUTUBE src="p3RlMVjwhmE&t" list="PLKtP9l5q3ce_RQMga3qbZzvpzvH-gW3gv" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i redovisa-sidan."]
+
 
 
 ### Kopiera från example/redovisa {#kopiera}
