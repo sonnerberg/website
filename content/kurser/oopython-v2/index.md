@@ -12,9 +12,12 @@ revision:
 Kursen oopython (v2)
 ===================================================
 
-Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*, lär ut objektorienterad analys och design tillsammans med objektorienterad programmering med Python.
+Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*,  syftar till att lära studenterna  objektorienterade angreppssätt och designprinciper för att utveckla objektorienterade program.
+Modelleringsspråket UML (Unified Modeling Language) används för att beskriva analys- och designmodeller. Programspråket Python används för implementering. Dessutom lär sig studenterna förstå och implementera vanliga datastrukturer och algoritmer.
 
-Kursen använder sig till stor del av webbaserade teknologier och programmen som skapas publiceras på en webbserver.
+Kursen använder sig av webbaserade teknologier och program som skapas publiceras på en webbserver. Förutom detta kommer kursen även ta upp hur man testar sin kod och hur man går tillväga för att refaktorerar kod.
+
+
 
 <!--more-->
 
@@ -36,7 +39,7 @@ Förkunskaper {#forkunskaper}
 Det formella förkunskapskravet är:
 
 > Programmeringskurs i Python 7.5hp.
-
+-
 
 
 
@@ -45,13 +48,13 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Objektorienterade programmeringstekniker i Python.
-* Objektorienterad analys och design med UML.
-* Objektorienterade programmeringskonstruktioner.
-* Enhetstestning
-* Datastrukturer och algoritmer
-* Webbaserade teknologier för att bygga webbtjänster med Python.
-* Utvecklingsmiljö och verktyg för programvaruutveckling med Python samt publicera kod på en driftserver och visa resultat via webbsidor
+- Objektorienterade programmeringstekniker i Python.
+- Datastrukturer och algoritmer.
+- Objektorienterad analys och design med UML.
+- Objektorienterade programmeringskonstruktioner.
+- Introduktion till testning med enhetstester.
+- Webbaserade teknologier för att bygga webbtjänster med Python.
+- Utvecklingsmiljö och verktyg för programvaruutveckling med Python samt publicera kod på en driftserver och visa resultat via webbsidor.
 
 
 
@@ -64,8 +67,8 @@ Mål {#mal}
 
 Efter genomförd kurs skall studenten:
 
-* påvisa grundläggande kunskaper i problemlösning med objektorienterad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* påvisa grundläggande kunskaper i att använda objektorienterade tekniker i webbmiljö genom att tillämpa dem i praktiska övningar och projekt.
+* påvisa grundläggande kunskaper i datastrukturer, algoritmer och problemlösning med objektorienterad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* påvisa grundläggande kunskaper i datastrukturer, algoritmer och att använda objektorienterade tekniker i webbmiljö genom att tillämpa dem i praktiska övningar och projekt.
 
 
 
@@ -73,13 +76,13 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* självständigt, utifrån en specifikation, kunna utveckla en webbaserad objektorienterad lösning i Python samt dokumentera och via text kunna presentera denna lösning.
+* självständigt, utifrån en specifikation, utveckla en webbaserad objektorienterad lösning i Python, analysera och designa lösningen med UML samt via text kunna presentera denna lösning.
 * ha god praktisk förmåga att hantera de verktyg och utvecklingsmiljöer som används vid utveckling och felsökningar med Python i webbmiljö.
 
 
 
 ###Värderingsförmåga och förhållningssätt {#formaga}
-
+<!-- Osäker på vad man ska ha här. -->
 * påvisa god förmåga att välja mellan objektorienterad programmering kontra procedurell programmering vid en given problemställning.
 
 
