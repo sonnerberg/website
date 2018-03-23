@@ -38,8 +38,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Programmeringskurs i Python 7.5hp.
--
+ Programmeringskurs i Python 7.5hp.
 
 
 
