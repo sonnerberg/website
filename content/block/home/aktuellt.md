@@ -1,3 +1,16 @@
+####BTH Webbprogrammering 2018
+
+[FIGURE src=image/snapvt18/bth_logo_platta.jpg]
+
+BTH's utbildningar inom Webbprogrammering finns på campus, distans och kurspaket. Antagning.se är öppen, ansök nu.
+
+* [Frågor och svar](t/6968)
+
+Välkommen!
+
+<br>
+
+
 ####Aktuellt
 
 
