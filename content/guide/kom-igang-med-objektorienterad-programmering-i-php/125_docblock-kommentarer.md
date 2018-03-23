@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-23": "(B, mos) Update type in docblock."
     "2018-03-19": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 DocBlock kommentarer
@@ -19,7 +20,7 @@ Här ser du koden för klassen Person1 skriven med DocBlocks kommentarer att kom
 class Person1
 {
     /**
-     * @var integer $name   The name of the person.
+     * @var string  $name   The name of the person.
      * @var integer $age    The age of the person.
      */
     public $name;
