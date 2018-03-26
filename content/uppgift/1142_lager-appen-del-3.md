@@ -8,7 +8,7 @@ Lager appen del 3
 ==================================
 [FIGURE src=image/webapp/truck.jpg?w=c5 class="right"]
 
-I kursmoment 1 & 2 skapade vi en lagerföringslista och en plocklista för lagerarbetarna. I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskapen från övningarna. Vi skriver appen i mithril och använder vår kunskap om att skapa lättanvända formulär för att snabbt kunna göra inleveranser på produkter.
+I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskapen från övningarna. Vi skriver appen i mithril och använder vår kunskap om att skapa lättanvända formulär för att snabbt kunna göra inleveranser på produkter.
 
 
 
@@ -31,6 +31,10 @@ Krav {#krav}
 -----------------------
 1. Din app ska använda sig av JavaScript ramverket mithril.
 
+1. Lista alla tidigare inleveranser, om det inte finns inleveranser visa upp ett meddelande om detta.
+
+1. Gör en knapp för 'Ny inleverans' i list-vyn denna ska ta användaren till ett formulär.
+
 1. Använd dina kunskapar i att göra ett lättanvänd formulär där man kan göra inleverans av en produkt.
 
 1. Formuläret ska innehålla alla attribut för en inleverans förutom Leverans ID (id) dvs.:
@@ -40,17 +44,17 @@ Krav {#krav}
 * Leveransdatum (delivery_date)
 * Kommentar (comment)
 
-1. Leverans ID ska beräknas automatisk utifrån antal av tidigare inleveranser.
+6. Leverans ID ska beräknas automatisk utifrån antal av tidigare inleveranser.
 
-1. När formuläret skickas ska det skapas en inleverans i API:t.
+7. När formuläret skickas ska det skapas en inleverans i API:t.
 
-1. Lagersaldot för produkten ska ökas med den levererade mängden.
+8. Lagersaldot för produkten ska ökas med den levererade mängden.
 
-1. Använd ett `select`-element för att välja produkten som har levererats. Designa `select`-elementet så det passar in i resten av stilen för formuläret.
+9. Använd ett `select`-element för att välja produkten som har levererats. Designa `select`-elementet så det passar in i resten av stilen för formuläret.
 
-1. Använd ett `textarea`-element för kommentaren. Designa `textarea`-elementet så det passar in i resten av stilen för formuläret. Använd ett lämpligt standard-värde (default) för textarean.
+10. Använd ett `textarea`-element för kommentaren. Designa `textarea`-elementet så det passar in i resten av stilen för formuläret. Använd ett lämpligt standard-värde (default) för textarean.
 
-1. Validera och publicera din kod enligt följande.
+11. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
