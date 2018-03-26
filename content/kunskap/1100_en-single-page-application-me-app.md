@@ -268,9 +268,9 @@ var image = document.createElement("img");
 image.src = "emilfolino.jpg";
 image.alt = "Emil Folino";
 
-window.mainContainer.appendChild(title);
-window.mainContainer.appendChild(greeting);
-window.mainContainer.appendChild(image);
+mainContainer.appendChild(title);
+mainContainer.appendChild(greeting);
+mainContainer.appendChild(image);
 ...
 ```
 
