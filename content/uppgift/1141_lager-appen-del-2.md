@@ -46,7 +46,9 @@ Krav {#krav}
 
 1. Plocklista vyn visar alla varor i en order, hur många som ska plockas och vart varan finns.
 
-1. När varorna är plockade ska det finnas möjlighet att byta status för ordern med en knapp. Byt till status Packad.
+1. Gör en kontroll om det finns tillräckligt många av varan för att den kan packas.
+
+1. Om det finns tillräckligt många produkter ska det finnas en möjlighet att byta status för ordern med en knapp. Byt till status Packad.
 
 1. När status för ordern ändras måste även lagersaldot för de packade varorna minskas.
 
