@@ -46,8 +46,6 @@ cd oophp
 dbwebb init
 ```
 
-<!--st op-->
-
 
 
 Läsanvisningar  {#lasanvisningar}
@@ -76,25 +74,6 @@ Kika igenom följande artiklar.
 1. Bekanta dig översiktligt med dokumentet [PHP The Right Way](http://www.phptherightway.com/). Det är skrivet av PHP communityn och ger en översikt över PHP som språk och de verktyg och processer man normalt arbetar med. Vi kommer att återkomma till dokumentet under kursens gång.
 
 
-<!--
-1. Läs om "[The MicroPHP Manifesto](https://funkatron.com/posts/the-microphp-manifesto.html)" som ger en reaktion på ramverk och termen mikroramverk. ([Alternativ länk till artikeln](https://dbwebb.se/t/6379)).
--->
-
-
-
-<!--
-###Verktyg {#verktyg}
-
-Läs översiktligt in dig på följande verktyg som används i kursen.
-
-1. Vi använder pakethanteraren [Composer](https://getcomposer.org/) för att installera PHP moduler.
-
-1. De PHP-moduler vi använder är publicerade på [Packagist](https://packagist.org/), ett sökbart repository för PHP-moduler.
-
-1. Bekanta dig kort med [manualen till phpdoc](https://phpdoc.org/) som beskriver hur docblock-kommentarer skrivs till PHP.
--->
-
-
 
 <!--
 ###Lästips {#lastips}
@@ -115,18 +94,6 @@ Följande lästips är att rekommendera.
 *(ca: 8-12 studietimmar)*
 
 
-<!--
-###Övningar {#ovningar}
-
-Gör följande övningar, de behövs normalt för att klara uppgifterna.
-
-1. Jobba igenom guiden "[Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg)". Det handlar om grunderna med objektorienterad programmering i PHP. Exempelprogram som du bygger för din egna skull kan du spara i `me/kmom01/oophp20`.
-
-
-1. Jobba igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till ett eget litet ramverk. Delvis känner du igen ramverket från kursen design. Du sparar koden i `me/anax-lite`.
--->
-
-
 
 ###Uppgifter {#uppgifter}
 
@@ -139,11 +106,6 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 1. Gör uppgiften "[Gissa numret med PHP och GET, POST och SESSION](uppgift/gissa-numret)". Uppgiften låter dig värma upp din gamla PHP-kunskaper och samtidigt träna på grunderna med objekt och klasser. Spara din kod i `me/kmom01/guess`.
 
 1. Gör uppgiften "[Bygg en me-sida för oophp med Anax](uppgift/bygg-en-me-sida-for-oophp-med-anax)". Du skall bygga en me-sida som du taggar och publicerat på GitHub. Spara allt under `me/redovisa`.
-
-
-<!--
-1. Gör uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)" som ger dig en struktur för att separera HTML och konfiguration av din navbar. Spara din kod i `me/anax-lite`.
--->
 
 
 
@@ -163,3 +125,13 @@ Se till att följande frågor besvaras i texten:
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
 
 * Vilken är din TIL för detta kmom?
+
+
+
+<!--
+GAMLA SAKER
+
+1. Läs om "[The MicroPHP Manifesto](https://funkatron.com/posts/the-microphp-manifesto.html)" som ger en reaktion på ramverk och termen mikroramverk. ([Alternativ länk till artikeln](https://dbwebb.se/t/6379)).
+
+1. Gör uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)" som ger dig en struktur för att separera HTML och konfiguration av din navbar. Spara din kod i `me/anax-lite`.
+-->

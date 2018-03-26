@@ -6,7 +6,7 @@ revision:
     "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
     "2017-04-07": "(A, mos) Första utgåvan."
 ...
-Kmom03: PHP PDO och MySQL
+Kmom03: Enhetstestning <!-- PHP PDO och MySQL -->
 ==================================
 
 [WARNING]
@@ -19,7 +19,19 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 <!--
 Enhetstesta Guess?
 Gör enhetstestning på tärningsspelet?
+
+Integrera "Gissa mitt nummer" med ramverkets klasser".
+    * redirect
+    * egen Game-klass
+    * ej direkt access till GET, POST, SESSION
+
+Låt stud integrera sitt eget spel med ramverkets klasser.
+
+Inför enhetstestning, visa genom spelet "Gissa mitt nummer" och låt studenten skapa enhetstester till sitt egna spel.
+
 -->
+
+<!--stop-->
 
 Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar och därefter får du på egen hand koda motsvarande funktionalitet in i ramverket Anax lite.
 
@@ -49,7 +61,6 @@ Eshop som/med användaredelen.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
-<!--stop-->
 
 
 

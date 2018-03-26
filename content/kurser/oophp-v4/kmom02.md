@@ -16,66 +16,49 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 
 [/WARNING]
 
+Vi fortsätter träna på programmering med klasser och objekt. Vi jobbar igenom fler grundkonstruktioner i objektorientering och ser hur de implementeras i PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
+
+Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden och där ta hjälp av docblock-kommentarer.
+
+Vi börjar koda inuti ramverket och använder oss av routes, vyer och placerar klasserna inuti ramverket med givna namespaces och använder oss av ramverkets autoloader.
 
 <!--
-Arv komposition, namespace
-UML, modellering.
-Autom dokumentation.
-
-Koda i ramverket med routes och vyer.
--->
-
-Vi fortsätter träna på programmering med klasser och objekt.
-
-Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner.
-
-<!--
-[FIGURE src=/image/oophp/v3/test-session.png?w=w3&q=70 caption="Sessionstest är en av övningarna som finns med i detta kursmoment."]
-
 [FIGURE src=/image/oophp/v3/dice100.png?w=w3&q=70 caption="Tärningsspelet 100 är en av övningarna som finns med i detta kursmoment."]
-
-[FIGURE src=/image/oophp/v3/calendar1.png?w=w3&q=70 caption="En månadskalender är en av övningarna som finns med i detta kursmoment."]
 -->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
-<!--stop-->
+<!--st op-->
 
 
 
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 2-4 studietimmar)*
 
 
-<!--
 
-###Kurslitteratur  {#kurslitteratur}
+###Videor {#videor}
 
-Det finns inga specifika läsanvisningar i kurslitteraturen.
+Kika på följande videos.
 
-Läs följande:
+1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 2. De ger dig en introduktion och översikt till kursmomentet.
 
-1\. [Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)
-
-* Chapter 6: Object-Oriented PHP
-* Chapter 7: Advanced OOP Features
-* Chapter 8: Error and Exception Handling
-* Chapter 12: Date and Time (Läs så mycket så att du klarar uppgiften längre ned)
--->
 
 
 ###Artiklar {#artiklar}
 
 Läs följande artiklar.
 
-1. Gå tillbaka till manualen och bekanta dig återigen med PHP manualen och stycket om [Klasser och Objekt](http://php.net/manual/en/oop5.intro.php). Kika på de sakerna som behandlades i förra kursmomentet, som en repetition.
+1. Gå tillbaka till manualen och bekanta dig återigen översiktligt med PHP manualen och stycket om [Klasser och Objekt](http://php.net/manual/en/oop5.intro.php). Kika på de sakerna som behandlades i förra kursmomentet, som en repetition.
 
 1. Bekanta dig kort med verktyget [phpDocumentor](https://www.phpdoc.org/) som kan automatgenerera dokumentation av din kod, genom att bland annat läsa informationen från dina docblock kommentarer. Läs översiktligt så att de är medveten om vad verktyget kan göra.
 
-1. Kika snabbt och översiktligt igenom [referensen till PHPDoc](https://docs.phpdoc.org/references/phpdoc/), det ger dig en bas för information när du nu börjar skriva dina egna docblock kommentarer.
+    1. Kika snabbt och översiktligt igenom [referensen till PHPDoc](https://docs.phpdoc.org/references/phpdoc/), det ger dig en bas för information när du nu börjar skriva dina egna docblock kommentarer.
+
+1. Kika kort på dokumentet som specificerar autolading enligt PHP-FIG och [PSR-4: Autoloader](https://www.php-fig.org/psr/psr-4/). Dokumentet ger en stadnard till hur autolading enligt PSR-4 skall fungera tillsammans med namespaces.
 
 
 
@@ -94,17 +77,7 @@ Kika igenom följande lästips och ägna tid åt dem om du finner det intressant
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-12 studietimmar)*
-
-
-<!--
-
-###Övningar {#ovningar}
-
-Gör följande övningar, de behövs normalt för att klara uppgifterna.
-
--->
-
+*(ca: 10-14 studietimmar)*
 
 
 ###Uppgifter {#uppgifter}
@@ -112,17 +85,27 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 Gör följande uppgifter.
 
 1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" jobbar du igenom följande del. Spara koden i `me/kmom02/oophp2`.
-    * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
-
-1. Gör uppgiften "[Tärningsspelet 100](uppgift/tarningsspel)" som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/redovisa`.
+    * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
 
 1. Gör uppgiften "[Dokumentera PHP med phpdoc och phpDocumentor](uppgift/dokumentera-php-med-phpdoc-och-phpdocumentor)". Spara uppdateringarna du gör i ditt `me/redovisa`.
 
-1. Pusha och tagga ditt `me/redovisa`, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
+1. Gör uppgiften "[Flytta spelet Gissa mitt nummer till me-sidan](uppgift/flytta-spelet-gissa-mitt-nummer-till-me-sidan)". Du skall kopiera koden för ditt gissa-spel och integrera in det i din me-sida. Koden sparar du i `me/redovisa`. 
+
+1. Gör uppgiften "[Tärningsspel 100](uppgift/tarningsspel-100)" inuti din me-sida. Spara din kod under `me/redovisa`.
+
+1. Gör en avslutande `make doc` och en `make test` på ditt repo `me/redovisa`. Pusha och tagga, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
+
 
 
 <!--
-Inkludera kmom01 guess som en del i me-sidan.
+example/redovisa/.phpdoc.xml
+example/redovisa/.phpcs.xml
+example/redovisa/.phpmd.xml
+example/redovisa/htdocs/index.php
+
+
+
+
 
 Rita klass och sekvensdiagram? Som en del i uppgiften?
 
@@ -143,7 +126,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
+* Hur gick det att överföra spelet "Gissa mitt nummer" in i din me-sida?
 * Berätta om hur du löste uppgiften med Tärningsspelet 100, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?
-* Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde?
+* Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde? Vad tycker du om konceptet `make doc`?
+* Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
 * Vilken är din TIL för detta kmom?

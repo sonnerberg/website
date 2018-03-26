@@ -68,6 +68,8 @@ Krav {#krav}
 
 1. Bygg ditt spel med klasser som samverkar. Du kan själv välja vilka klasser du skapar och hur de samverkar.
 
+1. Skissa på ett UML-diagram för klasserna, ett klassidagram. Rita i ett verktyg (dia, draw.io, etc) eller rita på ett papper (och scanna in/fotografera). Spara ditt diagram i filen `doc/guess/class.pdf`.
+
 1. Se till att du har minimalt med kod i routens hanterare, flytta spelets logik till klasserna.
 
 1. När du är klar så gör du `make doc test` samt `dbwebb publish`.
