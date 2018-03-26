@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-26": "(B, mos) More verbose exception handler from Anax."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Mall för exempelprogram
@@ -53,9 +54,13 @@ Jag väljer också att skapa en egen hanterare för Exceptions som kastas och in
  * Default exception handler.
  */
 set_exception_handler(function ($e) {
-    echo "Uncaught exception: "
+    echo "<p>Anax: Uncaught exception:</p><p>Line "
+        . $e->getLine()
+        . " in file "
+        . $e->getFile()
+        . "</p><p><code>"
         . get_class($e)
-        . "<p>"
+        . "</code></p><p>"
         . $e->getMessage()
         . "</p><p>Code: "
         . $e->getCode()
