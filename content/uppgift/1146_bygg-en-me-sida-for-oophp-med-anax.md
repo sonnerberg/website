@@ -171,7 +171,7 @@ Extrauppgift {#extra}
 
 Lös följande extrauppgifter om du har tid och lust.
 
-1. Snygga till din me-sida lite extra med style. Det är alltid trevliga om det ser snyggt och orndingsamt ut.
+1. Snygga till din me-sida lite extra med style. Det är alltid trevliga om det ser snyggt och ordningsamt ut.
 
 1. Skapa en egen testsida för att leka runt med olika konstruktioner. Det kan vara bra att ha.
 
