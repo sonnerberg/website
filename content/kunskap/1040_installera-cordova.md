@@ -31,8 +31,8 @@ Förutsättning {#pre}
 
 För att installera Cordova behöver du [npm](kunskap/installera-node-och-npm) installerat.
 
-Vi kommer använda Cordova för att skapa Android appar och därför behöver du ha [Android SDK och emulator](kunskap/installera-en-emulator-for-android) installerat. Det innefattar även att du har systemvariabeln `ANDROID_HOME` och underliggande mappar `tools` och `platform-tools` i din `PATH`.
-Du behöver även [Java JDK version 7 eller senare](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+<!-- Vi kommer använda Cordova för att skapa Android appar och därför behöver du ha [Android SDK och emulator](kunskap/installera-en-emulator-for-android) installerat. Det innefattar även att du har systemvariabeln `ANDROID_HOME` och underliggande mappar `tools` och `platform-tools` i din `PATH`.
+Du behöver även [Java JDK version 7 eller senare](http://www.oracle.com/technetwork/java/javase/downloads/index.html). -->
 
 
 Installera Cordova {#cordova}
