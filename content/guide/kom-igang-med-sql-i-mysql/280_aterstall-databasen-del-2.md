@@ -32,8 +32,8 @@ Här är filerna som behövs, och ordningen de körs i. Ordningen är viktig. Ma
 | `ddl.sql`         | Skapa tabellen för lärare. |
 | `dml_insert.sql`  | Lägg till rader i tabellen lärare. | 
 | `ddl_migrate.sql` | Alter table lärare och lägg till kompetensen. |
-| `dml_copy.sql`    | Kopiera till larare_pre innan lönerevisionen. |
 | `dml_update.sql`  | Förbered lönerevisionen, alla lärare har grundlön. |
+| `dml_copy.sql`    | Kopiera till larare_pre innan lönerevisionen. |
 | `dml_update_lonerevision.sql`  | Utför lönerevisionen. |
 | `dml_view.sql`    | Skapa vyerna VNamnAlder och Vlarare. |
 
@@ -70,8 +70,8 @@ mysql -uroot -p skolan < setup.sql > /dev/null
 loadSqlIntoSkolan "ddl.sql"         "Create tables"
 loadSqlIntoSkolan "dml_insert.sql"  "Insert into larare"
 loadSqlIntoSkolan "ddl_migrate.sql" "Alter table larare"
-loadSqlIntoSkolan "ddl_copy.sql"    "Kopiera till larare_pre"
 loadSqlIntoSkolan "dml_update.sql"  "Grundlön larare"
+loadSqlIntoSkolan "ddl_copy.sql"    "Kopiera till larare_pre"
 loadSqlIntoSkolan "dml_update_lonerevision.sql" "Utför lönerevision"
 loadSqlIntoSkolan "dml_view.sql"    "Skapa vyer VNamnAlder och Vlarare"
 
@@ -92,8 +92,8 @@ Enter password:
 >>> Create tables (ddl.sql)
 >>> Insert into larare (dml_insert.sql)
 >>> Alter table larare (ddl_migrate.sql)
->>> Kopiera till larare_pre (ddl_copy.sql)
 >>> Förbered lönerevision, grundlön larare (dml_update.sql)
+>>> Kopiera till larare_pre (ddl_copy.sql)
 >>> Utför lönerevision (dml_update_lonerevision.sql)
 >>> Skapa vyer VNamnAlder och Vlarare (dml_view.sql)
 >>> Check larare_pre: Lönesumman = 305000, Kompetens = 8.

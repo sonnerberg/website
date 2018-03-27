@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-27": "(D, mos) Uppdaterad med dml_update_lonerevision.sql."
     "2018-02-09": "(C, mos) Fixade återställningen och hur man kör alla filerna i sekvens."
     "2018-02-05": "(B, mos) Uppdaterade vilka lönesummor som gäller efter olika steg, fix #63."
     "2017-12-29": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -12,7 +13,7 @@ Vi skall skapa en ny tabell genom att kopiera en befintlig tabell.
 
 Spara den SQL-kod du skriver i filen `ddl_copy.sql`.
 
-När vi gjorde [övningen med UPDATE](./../uppdatera-varden-i-rader) så var det ett par frågor vi inte kunde svara på.
+När vi utförde [lönerevisionen](./../uppdatera-varden-lonerevision) så var det ett par frågor vi inte kunde svara på.
 
 1. Visa de lärare som inte har fått en löneökning om minst 3%.
 1. Gör en rapport som visar hur många % respektive lärare fick i löneöning.
@@ -26,7 +27,7 @@ Låt se om vi kan lösa det nu.
 Återskapa databasen innan lönerevisionen {#pre}
 ----------------------------------
 
-Först behöver vi [återskapa databasen med dess innehåll **innan** vi utför lönerevisionen](./../uppdatera-tabellens-struktur#filer).
+Först behöver vi återskapa databasen med dess innehåll **innan** vi utför lönerevisionen.
 
 Du kan göra det genom att köra följande kommandon.
 
@@ -34,6 +35,7 @@ Du kan göra det genom att köra följande kommandon.
 mysql -uuser -ppass skolan < ddl.sql
 mysql -uuser -ppass skolan < dml_insert.sql
 mysql -uuser -ppass skolan < ddl_migrate.sql
+mysql -uuser -ppass skolan < dml_update.sql
 ```
 
 Du kan dubbelkolla att du har rätt innehåll genom att summera lönesumman och kompetensen med följande kommando.
@@ -49,18 +51,18 @@ $ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens)
 +------------+-----------+
 | Lönesumma  | Kompetens |
 +------------+-----------+
-|     245000 |         8 |
+|     305000 |         8 |
 +------------+-----------+
 ```
 
-Bra, då är vi i läget precis innan lönerevisionen. Det är alltid bra att veta hur man kan återställa en databas till ett önskat läge.
+Bra, då är vi i läget precis innan lönerevisionen där alla lärare har en grundlön. Det är alltid bra att veta hur man kan återställa en databas till ett önskat läge.
 
 
 
 Kopiera tabell {#copy}
 ----------------------------------
 
-Alla uppdateringar i lönerevisionen ligger i filen `dml_update.sql`, men innan vi kör dem så tar vi en kopia, eller backup, av tabellen. Vi vill spara hela tabellen som den är, innan vi utför lönerevisionens ändringar.
+Alla uppdateringar i lönerevisionen ligger i filen `dml_update_lonerevision.sql`, men innan vi kör dem så tar vi en kopia, eller backup, av tabellen. Vi vill spara hela tabellen som den är, innan vi utför lönerevisionens ändringar.
 
 ```sql
 --
@@ -77,19 +79,7 @@ SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare_pre;
 
 Principen är att skapa en ny tabell med den gamla som mall. Sedan kan man lägga till rader i den nya tabellen genom att selecta dem från den gamla tabellen.
 
-Innan vi går vidare så har vi två lärare som ännu inte fått lön. Vi ger dem deras grundlön innan vi går vidare, det var ju en del av förarbetet inför lönerevisionen. Annars blir det jobbigt att jämföra deras nya löner med de gamla lönerna som är NULL-värden, det vill vi undvika.
-
-Uppdateringen gör vi enbart i den kopierade tabellen. 
-
-```sql
-UPDATE larare_pre
-    SET lon = 30000
-    WHERE
-        lon IS NULL
-;
-```
-
-Vi kan dubbelkolla den uppdaterade lönesumman i vår kopierade tabell.
+Vi kan dubbelkolla att lönesumman i vår kopierade tabell är densamma som i orginaltabellen.
 
 ```text
 mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare_pre;"
@@ -107,10 +97,10 @@ Då kan vi göra lönerevision.
 Utför lönerevisionen {#revision}
 ----------------------------------
 
-Då utför vi lönerevisionen genom att köra filen `dml_update.sql`.
+Då utför vi lönerevisionen genom att köra filen `dml_update_lonerevision.sql`.
 
 ```text
-$ mysql -uuser -ppass skolan < dml_update.sql
+mysql -uuser -ppass skolan < dml_update_lonerevision.sql
 ```
 
 Nu har vi tabellen larare med nya löner och tabellen larare_pre med gamla löner. Vi dubbelkollar att det ser okey ut.
@@ -141,8 +131,9 @@ Du kan göra det genom att köra följande kommandon.
 mysql -uuser -ppass skolan < ddl.sql
 mysql -uuser -ppass skolan < dml_insert.sql
 mysql -uuser -ppass skolan < ddl_migrate.sql
-mysql -uuser -ppass skolan < ddl_copy.sql
 mysql -uuser -ppass skolan < dml_update.sql
+mysql -uuser -ppass skolan < ddl_copy.sql
+mysql -uuser -ppass skolan < dml_update_lonerevision.sql
 ```
 
 Vi kan kontrollera att lönesummorna stämmer. Det bör se ut så här.
