@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-27": "(B, mos) Add function to bash reset."
     "2018-02-09": "(A, mos) Tillagd för att fokusera på hur man återställer databasen efter andra delen."
 ...
 Återställ databasen (del 2)
