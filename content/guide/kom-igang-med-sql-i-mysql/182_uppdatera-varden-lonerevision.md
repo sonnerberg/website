@@ -91,7 +91,8 @@ Kontrollera att det blev rätt {#kontroll}
 Se till att du har samma värden på lönerna som jag har, det underlättar i kommande övningar om du får samma svar som jag fått.
 
 ```sql
-mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens FROM larare ORDER BY lon DESC;
+mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
+    -> FROM larare ORDER BY lon DESC;
 +---------+-----------+-----------+------+-------+-----------+
 | akronym | avdelning | fornamn   | kon  | lon   | kompetens |
 +---------+-----------+-----------+------+-------+-----------+

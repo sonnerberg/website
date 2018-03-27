@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-27": "(B, mos) Lade till dml_update_lonerevision.sql."
     "2018-02-09": "(A, mos) Tillagd för att fokusera på hur man återställer databasen."
 ...
 Återställ databasen (del 1)
@@ -29,7 +30,8 @@ Följande är de filer som behöver köras för att återställa databasen.
 | `ddl.sql`         | Skapa tabellen för lärare. |
 | `dml_insert.sql`  | Lägg till rader i tabellen lärare. | 
 | `ddl_migrate.sql` | Alter table lärare och lägg till kompetensen. |
-| `dml_update.sql`  | Utför lönerevisionen. |
+| `dml_update.sql`  | Förbered lönerevisionen, alla lärare har grundlön. |
+| `dml_update_lonerevision.sql`  | Utför lönerevisionen. |
 
 Det kan se ut så här om du kör varje SQL-skript i terminalen (exklusive utskrifter). Notera att setup.sql måste köras som din root-användare och resten körs som användaren user.
 
@@ -39,6 +41,7 @@ mysql -uuser -ppass skolan < ddl.sql
 mysql -uuser -ppass skolan < dml_insert.sql
 mysql -uuser -ppass skolan < ddl_migrate.sql
 mysql -uuser -ppass skolan < dml_update.sql
+mysql -uuser -ppass skolan < dml_update_lonerevision.sql
 ```
 
 När du har kört igenom alla så kan du dubbelkolla att du har den korrekta lönesumman.
@@ -117,7 +120,11 @@ echo ">>> Alter table larare ($file)"
 mysql -uuser -ppass skolan < $file > /dev/null
 
 file="dml_update.sql"
-echo ">>> Lönerevision larare ($file)"
+echo ">>> Förbered lönerevision, grundlön larare ($file)"
+mysql -uuser -ppass skolan < $file > /dev/null
+
+file="dml_update_lonerevision.sql"
+echo ">>> Utför lönerevision ($file)"
 mysql -uuser -ppass skolan < $file > /dev/null
 
 echo ">>> Check Lönesumman = 330242, Kompetens = 19."
@@ -131,14 +138,15 @@ Konstruktionen `> /dev/null` gör så att alla utskrifter inte syns, det enda so
 När jag kör mitt program får jag följande utskrift, du bör få motsvarande.
 
 ```text
-$ bash reset_part1.bash 
+$ bash reset_part1.bash
 >>> Reset skolan to after part 1
 >>> Recreate the database (as root)
-Enter password: 
+Enter password:
 >>> Create tables (ddl.sql)
 >>> Insert into larare (dml_insert.sql)
 >>> Alter table larare (ddl_migrate.sql)
->>> Lönerevision larare (dml_update.sql)
+>>> Förbered lönerevision, grundlön larare (dml_update.sql)
+>>> Utför lönerevision (dml_update_lonerevision.sql)
 >>> Check Lönesumman = 330242, Kompetens = 19.
 +------------+-----------+
 | Lönesumma  | Kompetens |
@@ -147,4 +155,4 @@ Enter password:
 +------------+-----------+
 ```
 
-Du får gärna modifiera och vidarutveckla ditt bash-skript. Men det räcker om det fungerar som jag visar ovan.
+Du får gärna modifiera och vidarutveckla ditt bash-skript. Men det räcker om det fungerar som jag visar ovan och det skall återställa databasen till läget så här långt in i guiden.

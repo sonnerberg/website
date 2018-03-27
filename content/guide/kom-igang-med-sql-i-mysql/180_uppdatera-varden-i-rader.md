@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-03-27": "(D, mos) Sluttabellen skall inte ha NULL i lön, uppdaterad."
     "2018-03-22": "(C, mos) Delade i två delar och flyttade lönerevision till egen del."
     "2018-02-09": "(B, mos) Flyttade bash-återskapa till eget dokument, utskrift av sum kompetens."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -67,19 +68,20 @@ UPDATE larare
 Oavsett vad så har nu alla lärare en lön. Du kan dubbelkolla att du har samma värden som jag genom att summera deras lönesumma.
 
 ```sql
-mysql> SELECT SUM(lon) AS 'Lönesumma' FROM larare;
-+------------+
-| Lönesumma  |
-+------------+
-|     305000 |
-+------------+
+mysql> SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     305000 |         8 |
++------------+-----------+
 1 row in set (0.00 sec)
 ```
 
 Låt oss även kolla vilka löner lärarna har för tillfället. Det är bra inför nästa övning.
 
 ```sql
-mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens FROM larare ORDER BY lon DESC;
+mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
+    -> FROM larare ORDER BY lon DESC;
 +---------+-----------+-----------+------+-------+-----------+
 | akronym | avdelning | fornamn   | kon  | lon   | kompetens |
 +---------+-----------+-----------+------+-------+-----------+
@@ -87,10 +89,10 @@ mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens FROM larare ORDER
 | min     | DIDD      | Minerva   | K    | 40000 |         1 |
 | sna     | DIPT      | Severus   | M    | 40000 |         1 |
 | hoc     | DIDD      | Madam     | K    | 35000 |         1 |
+| ala     | DIPT      | Alastor   | M    | 30000 |         1 |
+| gyl     | DIPT      | Gyllenroy | M    | 30000 |         1 |
 | fil     | ADM       | Argus     | M    | 25000 |         1 |
 | hag     | ADM       | Hagrid    | M    | 25000 |         1 |
-| ala     | DIPT      | Alastor   | M    |  NULL |         1 |
-| gyl     | DIPT      | Gyllenroy | M    |  NULL |         1 |
 +---------+-----------+-----------+------+-------+-----------+
 8 rows in set (0.00 sec)
 ```
