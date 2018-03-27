@@ -102,9 +102,11 @@ Läs [instruktionen till kursmoment 01](./kmom01).
 
 ###Kmom02: OO-programmering i PHP {#kmom02}
 
-Vi fortsätter träna på programmering med klasser och objekt, i och utanför ramverket. Det blir en närmare bekantskap med ramverkets delar och hur du kan tänka när du integrerar din egen kod i ramverket. Du bekantar dig med begrepp som interface och traits.
+Vi fortsätter träna på programmering med klasser och objekt. Vi jobbar igenom fler grundkonstruktioner i objektorientering och ser hur de implementeras i PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
 
-Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner och ramverksprogrammering.
+Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden och där ta hjälp av docblock-kommentarer.
+
+Vi börjar koda inuti ramverket och använder oss av routes, vyer och placerar klasserna inuti ramverket med givna namespaces och använder oss av ramverkets autoloader.
 
 Läs [instruktionen till kursmoment 02](./kmom02).
 

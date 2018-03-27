@@ -3,28 +3,19 @@ author:
     - mos
     - lew
 revision:
-    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2018-03-27": "(B, mos) Uppdaterad oophp v4."
     "2017-03-31": "(A, mos, lew) Första versionen."
 ...
-Kmom02: Arv och komposition
+Kmom02: Arv och Komposition
 ==================================
 
-[WARNING]
-**Version 4 av oophp.**
-
-En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
-
-[/WARNING]
-
-Vi fortsätter träna på programmering med klasser och objekt. Vi jobbar igenom fler grundkonstruktioner i objektorientering och ser hur de implementeras i PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
+Vi fortsätter träna på programmering med klasser och objekt. Vi jobbar igenom ett antal grundkonstruktioner i objektorientering och ser hur de implementeras i PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
 
 Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden och där ta hjälp av docblock-kommentarer.
 
 Vi börjar koda inuti ramverket och använder oss av routes, vyer och placerar klasserna inuti ramverket med givna namespaces och använder oss av ramverkets autoloader.
 
-<!--
-[FIGURE src=/image/oophp/v3/dice100.png?w=w3&q=70 caption="Tärningsspelet 100 är en av övningarna som finns med i detta kursmoment."]
--->
+[FIGURE src=image/snapvt18/dice-graphic-css-sprite.png?w=w3 caption="Ett antal tärningar representerade med olika grafiska metoder."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -53,6 +44,8 @@ Kika på följande videos.
 Läs följande artiklar.
 
 1. Gå tillbaka till manualen och bekanta dig återigen översiktligt med PHP manualen och stycket om [Klasser och Objekt](http://php.net/manual/en/oop5.intro.php). Kika på de sakerna som behandlades i förra kursmomentet, som en repetition.
+
+1. Kika kort i PHP manualen om [begreppet namespace](http://php.net/manual/en/language.namespaces.php). Skaffa dig en översikt vad det handlar om.
 
 1. Bekanta dig kort med verktyget [phpDocumentor](https://www.phpdoc.org/) som kan automatgenerera dokumentation av din kod, genom att bland annat läsa informationen från dina docblock kommentarer. Läs översiktligt så att de är medveten om vad verktyget kan göra.
 
@@ -84,7 +77,7 @@ Kika igenom följande lästips och ägna tid åt dem om du finner det intressant
 
 Gör följande uppgifter.
 
-1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" jobbar du igenom följande del. Spara koden i `me/kmom02/oophp2`.
+1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" jobbar du igenom följande del. Spara koden i `me/kmom02/oophp2`. Kopiera alla filer från `me/kmom01/oophp1`, du jobbar vidare på de filerna.
     * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
 
 1. Gör uppgiften "[Dokumentera PHP med phpdoc och phpDocumentor](uppgift/dokumentera-php-med-phpdoc-och-phpdocumentor)". Spara uppdateringarna du gör i ditt `me/redovisa`.
@@ -98,21 +91,11 @@ Gör följande uppgifter.
 
 
 <!--
-example/redovisa/.phpdoc.xml
-example/redovisa/.phpcs.xml
-example/redovisa/.phpmd.xml
-example/redovisa/htdocs/index.php
-
-
-
-
-
 Rita klass och sekvensdiagram? Som en del i uppgiften?
 
 Yatsy?
 21, blackjack
 Kasta gris (100)
-
 -->
 
 

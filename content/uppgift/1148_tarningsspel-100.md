@@ -32,7 +32,7 @@ Ett tärningsspel i Anax kan se ut så här.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom delen med "Arv och Komposition" i guiden I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)".
+Du har jobbat igenom delen med "Arv och Komposition" i guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)".
 
 
 
@@ -68,7 +68,7 @@ Krav {#krav}
 
 1. Bygg ditt spel med klasser som samverkar. Du kan själv välja vilka klasser du skapar och hur de samverkar.
 
-1. Skissa på ett UML-diagram för klasserna, ett klassidagram. Rita i ett verktyg (dia, draw.io, etc) eller rita på ett papper (och scanna in/fotografera). Spara ditt diagram i filen `doc/guess/class.pdf`.
+1. Skissa på ett UML-diagram för klasserna, ett klassidagram. Rita i ett verktyg (dia, draw.io, etc) eller rita på ett papper (och scanna in/fotografera). Spara ditt diagram i filen `doc/class/dice100.pdf`.
 
 1. Se till att du har minimalt med kod i routens hanterare, flytta spelets logik till klasserna.
 
