@@ -32,7 +32,8 @@ Här är filerna som behövs, och ordningen de körs i. Ordningen är viktig. Ma
 | `dml_insert.sql`  | Lägg till rader i tabellen lärare. | 
 | `ddl_migrate.sql` | Alter table lärare och lägg till kompetensen. |
 | `dml_copy.sql`    | Kopiera till larare_pre innan lönerevisionen. |
-| `dml_update.sql`  | Utför lönerevisionen. |
+| `dml_update.sql`  | Förbered lönerevisionen, alla lärare har grundlön. |
+| `dml_update_lonerevision.sql`  | Utför lönerevisionen. |
 | `dml_view.sql`    | Skapa vyerna VNamnAlder och Vlarare. |
 
 Därefter kan vi testa datamängden, till exempel genom att dubbelkolla lönesumman och kompetensen i tabellerna larare och larare_pre.
@@ -72,7 +73,11 @@ echo ">>> Kopiera till larare_pre ($file)"
 mysql -uuser -ppass skolan < $file > /dev/null
 
 file="dml_update.sql"
-echo ">>> Lönerevision larare ($file)"
+echo ">>> Förbered lönerevision, grundlön larare ($file)"
+mysql -uuser -ppass skolan < $file > /dev/null
+
+file="dml_update_lonerevision.sql"
+echo ">>> Utför lönerevision ($file)"
 mysql -uuser -ppass skolan < $file > /dev/null
 
 file="dml_view.sql"
@@ -89,15 +94,16 @@ mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) A
 När jag kör mitt program får jag följande utskrift, du bör få motsvarande.
 
 ```text
-$ bash reset_part2.bash 
+$ bash reset_part2.bash
 >>> Reset skolan to after part 2
 >>> Recreate the database (as root)
-Enter password: 
+Enter password:
 >>> Create tables (ddl.sql)
 >>> Insert into larare (dml_insert.sql)
 >>> Alter table larare (ddl_migrate.sql)
 >>> Kopiera till larare_pre (ddl_copy.sql)
->>> Lönerevision larare (dml_update.sql)
+>>> Förbered lönerevision, grundlön larare (dml_update.sql)
+>>> Utför lönerevision (dml_update_lonerevision.sql)
 >>> Skapa vyer VNamnAlder och Vlarare (dml_view.sql)
 >>> Check larare_pre: Lönesumman = 305000, Kompetens = 8.
 +------------+-----------+
@@ -106,6 +112,7 @@ Enter password:
 |     305000 |         8 |
 +------------+-----------+
 >>> Check larare: Lönesumman = 330242, Kompetens = 19.
+Warning: Using a password on the command line interface can be
 +------------+-----------+
 | Lönesumma  | Kompetens |
 +------------+-----------+
@@ -113,4 +120,4 @@ Enter password:
 +------------+-----------+
 ```
 
-Du får gärna modifiera och vidarutveckla ditt bash-skript. Men det räcker om det fungerar som jag visar ovan.
+Du får gärna modifiera och vidarutveckla ditt bash-skript. Men det räcker om det fungerar som jag visar ovan och återställer databasen så här långt i guiden.
