@@ -30,9 +30,9 @@ En skola har lärare, skapa en tabell för lärare enligt följande:
 | efternamn       | VARCHAR(20) |
 | kon             | CHAR(1)     |
 | lon             | INT         |
-| fodd            | DATETIME    |
+| fodd            | DATE        |
 
-Jag väljer att inte använda svenska tecken, även om det hade varit en möjlighet. 
+Jag väljer att inte använda svenska tecken, även om det hade varit en möjlighet.
 
 Generellt skriver jag helst kommentarer på engelska och inte svenska, jag känner generellt att engelska ligger närmare programmeringsspråk och känns mer naturligt.
 
@@ -50,9 +50,9 @@ CREATE TABLE larare
     efternamn VARCHAR(20),
     kon CHAR(1),
     lon INT,
-    fodd DATETIME,
+    fodd DATE,
 
-    PRIMARY KEY (akronym) 
+    PRIMARY KEY (akronym)
 );
 ```
 
