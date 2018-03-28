@@ -8,10 +8,9 @@ revision:
 ...
 Kom igång med ramverket Mithril v2
 ==================================
-
 [FIGURE src=/image/webapp/mithril-logo.png class="right"]
 
-Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Vanilla JavaScript är beteckningen för ren JavaScript där vi inte använder annat är det som är implementerat i webbläsaren. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data, allt har gjorts i samma funktioner och/eller modul. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, dela upp våra vyer och modeller, där vi hämtar data, och använda virtuella noder för att skapa en SPA-applikation.
+Vi har tidigare i kursen skrivit våra SPA-applikationer i vanilla JavaScript. Vanilla JavaScript är beteckningen för ren JavaScript där vi inte använder annat än det som är implementerat i webbläsaren. Det finns både fördelar och nackdelar med att använda enbart JavaScript för att skriva applikationer. Vi har i våra SPA-applikationer än så länge inte separerat vyer och hämtning av data, allt har gjorts i samma funktioner och/eller moduler. Vi ska i denna övning titta på hur vi med hjälp av JavaScript ramverket mithril kan skapa bättre struktur i våra SPA-applikationer. Vi ska använda en router, separera vyer och modeller och använda virtuella noder för att skapa en SPA-applikation.
 
 I övningen skapar vi en SPA-applikation inför Nobelfesten där vi hämtar data från det officiella Nobel API:t.
 
@@ -23,15 +22,12 @@ I övningen skapar vi en SPA-applikation inför Nobelfesten där vi hämtar data
 
 Introduktion {#intro}
 --------------------------------------
-
-Du kan läsa mer om [begreppet SPA på Wikipedia](https://en.wikipedia.org/wiki/Single-page_application).
-
 Vi kommer installera och använda [Mithril](http://mithril.js.org/) för att bygga en enkel applikation som använder sig av en router och använder virtuella noder för att visa upp våra vyer.
 
 Låter det magiskt? Lika bra vi ser hur det fungerar i kod, så faller saker nog på plats.
 
 [INFO]
-Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För att testa exempel koden kör kommandot `npm install`, som installerar node modulerna från `package.json`.
+Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För att testa exempelkoden kör kommandot `npm install`, som installerar node modulerna från `package.json`.
 [/INFO]
 
 
@@ -44,7 +40,7 @@ Du har installerat labbmiljön för kursen webapp. Du är bekant med SPA-applika
 
 Installera mithril via npm {#install}
 --------------------------------------
-I tidigare kursmoment installera vi webpack med hjälp av npm. Vi ska nu titta på hur vi installerar och konfigurerar ett mithril projekt med hjälp av npm, `package.json` och webpack. Vi börjar med att initiera en grund `package.json` fil som innehåller konfigurationen för vårt projekt.
+I tidigare kursmoment installerade vi webpack med hjälp av npm. Vi ska nu titta på hur vi installerar och konfigurerar ett mithril projekt med hjälp av npm, `package.json` och webpack. Vi börjar med att initiera en grund `package.json` fil som innehåller konfigurationen för vårt projekt.
 
 ```bash
 # gå till me
@@ -52,7 +48,7 @@ $ cd me/kmom03/nobel
 $ npm init --yes
 ```
 
-Vi ska nu installerar nu mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
+Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
 
 ```bash
 $ npm install --save mithril
@@ -84,7 +80,7 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
 }
 ```
 
-Vi skapar även en webpack konfigurationsfil `webpack.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `app.js`.
+Vi skapar även en webpack konfigurationsfil `webpack.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `app.js`. `webpack-cli` lägger sina kompilerade filer i en katalog `dist` per automatik, så sökvägen till den kompilerade koden blir `dist/app.js`.
 
 ```javascript
 module.exports = {
@@ -95,7 +91,7 @@ module.exports = {
 };
 ```
 
-Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` och skapar två nya. Kör vi `npm start` kompileras filerna till `dist/app.js` och kör vi `npm run watch` kompileras filerna automatisk varje gång vi sparar. `webpack-cli` lägger sina kompilerade filer i en katalog `dist` per automatik.
+Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` och skapar två stycken. Kör vi `npm start` kompileras filerna till `dist/app.js` och kör vi `npm run watch` kompileras filerna automatisk varje gång vi sparar.
 
 ```json
 "scripts": {
@@ -138,13 +134,13 @@ $ mkdir js
 $ touch js/index.js
 ```
 
-Filen `js/index.js` är vår utgångspunkt för appen och i den kommer vi senare i övningen lägga vår router, som pekar ut rätt vy.
+Filen `js/index.js` är vår ingångspunkt för appen och i den kommer vi senare i övningen lägga vår router, som pekar ut rätt vy.
 
 
 
 Vår första vy {#vy}
 --------------------------------------
-En av fördelarna med att använda ett JavaScript ramverk är att vi kan separera vyerna från modeller och därmed hämtningen av data. Vi börjar med att skapa katalogen `js/views` och en vy `js/views/list.js`.
+En av fördelarna med att använda ett JavaScript ramverk är att vi kan separera vyer från modeller och därmed hämtningen av data. Vi börjar med att skapa katalogen `js/views` och en vy `js/views/list.js`.
 
 
 ```bash
@@ -153,7 +149,9 @@ $ mkdir js/views
 $ touch js/views/list.js
 ```
 
-I `js/views/list.js` filen vill vi än så länge bara visa upp för användaren att vi har hamnat i en app för Nobelfesten. Vi börjar med att hämta in modulen mithril och spara den i variablen `m`. Vi exporterar sedan det som inom mithril kallas en komponent, det är ett objekt med en funktion kallat `view`. Det som händer när vi använder komponenten i filen `js/views/list.js` är att funktionen `view` anropas och där returneras den virtuell noden `m("h1", "Nobelfesten")`. Denna virtuella noden kommer sedan i webbläsaren renderas som `<h1>Nobelfesten</h1>`. Det virtuella DOM-trädet som ritas upp av JavaScript genom ramverket mithril består av dessa virtuella noder. För mer information om virtuella noder i kontexten av mithril se denna utmärkta [introduktion](http://mithril.js.org/vnodes.html).
+I `js/views/list.js` filen vill vi än så länge bara visa upp för användaren att vi har hamnat i en app för Nobelfesten. Vi börjar med att hämta in modulen mithril och spara den i variablen `m`.
+
+Vi exporterar sedan det som inom mithril kallas en komponent, det är ett objekt med en funktion kallat `view`. Det som händer när vi använder komponenten i filen `js/views/list.js` är att funktionen `view` anropas och där returneras den virtuell noden `m("h1", "Nobelfesten")`. Denna virtuella noden kommer sedan i webbläsaren renderas som `<h1>Nobelfesten</h1>`. Det virtuella DOM-trädet som ritas upp av JavaScript genom ramverket mithril består av dessa virtuella noder. För mer information om virtuella noder i kontexten av mithril se denna utmärkta [introduktion](http://mithril.js.org/vnodes.html).
 
 ```javascript
 "use strict";
@@ -167,7 +165,7 @@ module.exports = {
 };
 ```
 
-För att appen ska veta om att vi vill visa upp list-vyn måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
+För att appen ska veta om att vi vill visa upp list-vyn måste vi in i appens ingångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`.
 
 ```javascript
 "use strict";
@@ -196,7 +194,7 @@ module.exports = {
 };
 ```
 
-I ovanstående kod skapar vi först en virtuell nod `<main class="container"></main>`. Vi tilldelar barn till denna virtuella nod genom att tilldela en array som värde. Arrayen innehåller två stycken virtuella noder en `<h1>Nobelfesten</h1>` och `<p>Välj ett årtal i listan:</p>`.
+I ovanstående kod skapar vi först en virtuell nod `m("main.container")`, som renderat blir till `<main class="container"></main>`. Vi tilldelar barn till denna virtuella nod genom att tilldela en array som värde. Arrayen innehåller två stycken virtuella noder `<h1>Nobelfesten</h1>` och `<p>Välj ett årtal i listan:</p>`.
 
 Nästa del är att skapa listan med årtal, vi använder en `while`-loop för att iterera från 2010 till och med 2017. För varje år lägger vi till en virtuell nod i arrayen `years`. Vi lägger till den virtuella noden `<a class="button blue-button"></a>`, som har värdet för ett av åren mellan 2010 och 2017. Vi vill även att knappen ska kunna ta oss till en annan sida så vi skickar även med ett objekt med konfiguration: `{ href: "/year/" + startYear, oncreate: m.route.link }`. Vi vill gå till routen `/year` och skickar med året som parameter. Vi använder livscykel-metoden `oncreate` och den inbyggda funktionen `m.route.link` för att koppla länken till routern.
 
@@ -234,7 +232,7 @@ Kolla igenom koden ovan så att du förstår alla delar innan vi går vidare.
 
 En router för flera vyer {#router}
 --------------------------------------
-Med bara en vy har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/year.js` och precis som `list.js` definierar våra nya `year.js` en vy. Än så länge visar vi bara rubriken Year i vyn, vi vill se så att routingens fungerar och kommer sedan bygga ut funktionaliteten.
+Med bara en vy har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/year.js` och precis som `list.js` definierar våra nya `year.js` en vy. Än så länge visar vi bara rubriken Year i vyn, vi vill se så att routern fungerar och kommer sedan bygga ut funktionaliteten.
 
 ```javascript
 "use strict";
@@ -252,7 +250,7 @@ module.exports = {
 
 I vår `index.js` ändrar vi så vi använder funktionen `m.route()` istället för `m.mount()`. `m.route()` tar tre argument:
 
-1. Vilket element som skall fyllas med de virtuella noder.
+1. Vilket element som skall fyllas med virtuella noder.
 
 1. Vår ursprungsroute som är den vy där appen börjar.
 
@@ -294,7 +292,9 @@ Mithrils route funktion är användbar för mer än bara vår huvudrouter. Vi ka
 
 En modell i mithril {#modell}
 --------------------------------------
-Tanken med appen var att visa upp information om Nobelvinnare för ett givet år så låt oss titta på hur vi hämtar JSON-data från Nobel-API:t med hjälp av en modell i mithril. Varenda gång du ska hämta data från ett API gör du det i en modell. Vi ska aldrig hämta data från ett API direkt i en vy.
+Tanken med appen var att visa upp information om Nobelvinnare för ett givet år så låt oss titta på hur vi hämtar JSON-data från Nobel-API:t med hjälp av en modell i mithril.
+
+**Varje gång du ska hämta data från ett API gör du det i en modell. Hämta aldrig data direkt i en vy.**
 
 Vi börjar med att skapa katalogen `js/models` och filen `js/models/nobel.js`.
 
@@ -305,9 +305,11 @@ $ mkdir js/models
 $ touch js/models/nobel.js
 ```
 
-Som alltid när vi hämtar data från ett API är [dokumentationen](https://nobelprize.readme.io) viktigt, så vi tar en titt i den. Vi hittar den endpoint vi vill använda och urlen som hör till `http://api.nobelprize.org/v1/prize.json?year=[YEAR]`. Vi har tidigare i kursen använd `XMLHttpRequest` och `fetch` för att hämta data. När vi hämtar data i mithril gör vi det med funktionen [m.request](https://mithril.js.org/request.html). `m.request` använder sig precis som `fetch` av promises, men vi får direkt tillbaka JSON-data om vi inte angett nått annat.
+Som alltid när vi hämtar data från ett API är [dokumentationen](https://nobelprize.readme.io) viktig, så vi tar en titt i den. Vi hittar den endpoint vi vill använda och urlen som hör till `http://api.nobelprize.org/v1/prize.json?year=[YEAR]`.
 
-Vi börjar med att bara hämta data och skriva ut det med `console.log` så vi ser att det fungerar. Vår model består förutom funktionen `load`, även av attributet `current`. Vi använder objektet `current` för att spara den senaste data vi har hämtat från API:t.
+Vi har tidigare i kursen använd `XMLHttpRequest` och `fetch` för att hämta data. När vi hämtar data i mithril gör vi det med funktionen [m.request](https://mithril.js.org/request.html). `m.request` använder sig precis som `fetch` av promises, men vi får direkt tillbaka JSON-data om vi inte angett nått annat.
+
+Vi börjar med att bara hämta data och skriva ut det med `console.log` så vi ser att det fungerar. Vår model består förutom funktionen `load`, även av attributet `current`. Vi kommer använda objektet `current` för att spara den senaste data vi har hämtat från API:t.
 
 ```javascript
 // js/models/nobel.js
@@ -376,7 +378,7 @@ var nobel = {
 module.exports = nobel;
 ```
 
-Då vi har importerad `nobel` modellen i vår vy kan vi komma åt `current` genom att använda `nobel.current`. Vi använder oss av funktionen [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), för att iterera oss igenom JSON arrayen.
+Då vi har importerat `nobel` modellen i vår vy kan vi komma åt `current` genom att använda `nobel.current`. Vi använder oss av funktionen [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), för att iterera oss igenom JSON arrayen.
 
 ```javascript
 "use strict";
@@ -446,7 +448,7 @@ När vi sedan öppnar applikationen i webbläsaren skrivs namnen på Nobelprista
 
 Layout {#layout}
 --------------------------------------
-En del av den koden vi skriver är samma för våra två vyer. Vi vill kunna återanvända koden och även lägga till navigation längst upp för att ta oss från årsvyerna tillbaka till listningen, precis som vi har gjort i tidigare kursmoment.
+En del av den koden vi skriver är samma för våra två vyer. Vi vill kunna återanvända koden och även lägga till navigation längst upp för att ta oss från årsvyn tillbaka till listningen, precis som vi har gjort i tidigare kursmoment.
 
 I mithril kan vi använda oss av layouts för att återanvända kod i flera vyer. Vi skapar först en ny vy `js/views/layout.js`, som blir vår mall för andra vyer.
 
@@ -489,9 +491,9 @@ m.route(document.body, "/", {
 });
 ```
 
-Vi använder oss utav en [RouteResolver](http://mithril.js.org/route.html#routeresolver) för att rendera layout och skickar med de virtuella noder, i detta fallet vår två vyer, som ska renderas inuti layouten.
+Vi använder oss av en [RouteResolver](http://mithril.js.org/route.html#routeresolver) för att rendera layout och skickar med de virtuella noder, i detta fallet vår två vyer, som ska renderas inuti layouten.
 
-För att vyerna inte ska renderas inne i två stycken `main.container` tar vi bort de från vyerna. Just nu tillför layouten inte mer än att vi har gjort koden lite mera DRY. Vi vill ge användaren en möjlighet för att ta sig tillbaka till listan med år när vi är inne på ett specifikt år. Vi gör detta i `layout` och använder oss av en 'ternary operator' och `m.route.get()`. Vi jämför om första delen av routen är 'year' och är den det skriver vi ut en länk tillbaka till listan annars skriver vi ut ingenting.
+För att vyerna inte ska renderas inne i två stycken `main.container` tar vi bort dessa från vyerna. Just nu tillför layouten inte mer än att vi har gjort koden lite mera DRY. Vi vill ge användaren en möjlighet för att ta sig tillbaka till listan med år när vi är inne på ett specifikt år. Vi gör detta i `layout` och använder oss av en 'ternary operator' och `m.route.get()`. Vi jämför om första delen av routen är 'year' och är den det skriver vi ut en länk tillbaka till listan annars skriver vi ut ingenting.
 
 ```javascript
 "use strict";
@@ -515,7 +517,7 @@ module.exports = {
 };
 ```
 
-Här under kan ni se ett exempel på Nobel applikation med navigation.
+Här under kan ni se ett exempel på Nobel applikationen med navigation.
 
 [FIGURE src="/image/webapp/nobel-app-final-year.png?w=c7" class="right" caption="Screenshot Nobel app år vy"]
 [FIGURE src="/image/webapp/nobel-app-final-list.png?w=c7" caption="Screenshot Nobel app list-vy"]
@@ -526,7 +528,7 @@ Exempelkod {#example}
 --------------------------------------
 Exempelprogrammet från denna övning finns i kursrepot [example/nobel](https://github.com/dbwebb-se/webapp/tree/master/example/nobel) och i `example/nobel`.
 
-I kursrepot finns många mithril exempel program. Följande exempelprogram är relevanta för att lära sig mithril från början.
+I kursrepot finns några mithril exempel program. Följande exempelprogram är relevanta för att lära sig mithril från början.
 
 * `example/meapp-mithril` visar hur man skapar en meapp med mithril.
 
@@ -534,7 +536,7 @@ I kursrepot finns många mithril exempel program. Följande exempelprogram är r
 
 * `example/calendar` använder komponenter för att skapa en kalender med namnsdagar.
 
-* `example/husLeta` användes som i genomgångar 2017 som exempel på de olika delarna av kursen.
+* `example/husLeta` användes i genomgångarna 2017 som exempel på de olika delarna av kursen.
 
 
 

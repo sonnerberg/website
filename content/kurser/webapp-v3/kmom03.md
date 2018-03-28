@@ -9,11 +9,6 @@ revision:
 ...
 Kmom03: Formulär och CRUD
 ==================================
-
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
-
 I detta kursmoment fortsätter vi med att utveckla våra GUI komponenter från tidigare kursmoment. Vi skapar lättanvända formulärfält med hjälp av HTML5 och kopplar ihop fälten i formulär som är lätta att använda på små skärmar där kontext och möjligheten att skriva snabbt och enkelt saknas.
 
 I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort data via formulär. Vi har i tidigare kursmoment arbetat enbart med vanilla JavaScript, men ska i detta kursmoment titta på hur vi kan använda oss av JavaScript ramverket mithril för att underlätta hämtning av data, rendering av HTML-element och de olika vyer.
@@ -22,7 +17,7 @@ I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort
 
 Så här kan det se ut när vi är klara.
 
-[YOUTUBE src=CWI3_dK6PiI width=630 caption="Dashboard i kursmoment 3."]
+[YOUTUBE src=0VfHNLKx5xI width=630 caption="Lager3 i kursmoment 3."]
 
 <!-- [FIGURE src=/image/snapht15/ajax-af-lista.png?w=w2 class="left" caption="Sida som visar antalet lediga jobb samt platsannonser."]
 
