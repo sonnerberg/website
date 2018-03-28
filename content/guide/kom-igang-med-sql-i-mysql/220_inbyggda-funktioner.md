@@ -17,7 +17,7 @@ Spara dina konstruktioner i filen `dml_func.sql`.
 Strängfunktioner {#string}
 ----------------------------------
 
-Leta reda på stycket som hanterar [strängfunktioner](http://dev.mysql.com/doc/refman/5.7/en/string-functions.html). 
+Leta reda på stycket som hanterar [strängfunktioner](http://dev.mysql.com/doc/refman/5.7/en/string-functions.html).
 
 1. Skriv en SELECT-sats som skriver ut förnamn + efternamn + avdelning i samma kolumn enligt följande struktur: `förnamn efternamn (avdelning)`. (Tips: Att slå ihop strängar kallas att konkatenera/concatenate).
 2. Gör om samma sak men skriv ut avdelningens namn med små bokstäver och begränsa utskriften till 3 rader.
@@ -70,7 +70,7 @@ Beräkna ålder {#alder}
 
 Vi vill nu beräkna och visa lärarnas ålder, kan du hitta en inbyggd funktion som hjälper oss med det?
 
-1. Skriv en SELECT-sats som beräknar lärarens ålder, sortera rapporten för att visa vem som är äldst och yngst. 
+1. Skriv en SELECT-sats som beräknar lärarens ålder, sortera rapporten för att visa vem som är äldst och yngst.
 
 Så här kan svaret se ut.
 
@@ -94,7 +94,7 @@ Så här kan svaret se ut.
 Filtrera per del av datum {#manad}
 ----------------------------------
 
-Man kan visa delar av datum, till exempel vilken alla lärare är födda.
+Man kan visa delar av datum, till exempel vilken månad alla lärare är födda.
 
 ```sql
 mysql> SELECT
