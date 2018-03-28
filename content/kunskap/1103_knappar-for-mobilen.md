@@ -76,6 +76,7 @@ För att få de tre grundelement till att vara likadana skapar vi en tunn ram ru
     border: 1px solid #ccc;
     text-decoration: none;
     box-sizing: border-box;
+    display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.4rem;
 }
@@ -90,6 +91,7 @@ För att få mer yta att trycka på i knapparna lägger vi till `padding` och vi
     border: 1px solid #ccc;
     text-decoration: none;
     box-sizing: border-box;
+    display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.4rem;
     padding: 0.4rem 1rem;
@@ -111,13 +113,13 @@ Vi kommer dock fortsätta med vår design då vi vill ha knappar, som ser ut som
     border: 1px solid #ccc;
     text-decoration: none;
     box-sizing: border-box;
+    display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.4rem;
     padding: 0.4rem 1rem;
     text-align: center;
     border-radius: 0.2rem;
     line-height: 1.4;
-
 }
 ```
 
