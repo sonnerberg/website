@@ -52,7 +52,7 @@ Ditt svar kan se ut så här.
 
 Gör ytterligare en rapport.
 
-1. Visa en avrundad snittlönen (`ROUND()`) grupperad per avdelning och per kompetens, sortera enligt avdelning och snittlön. Ditt svar skall se ut så här.
+1. Visa den avrundade snittlönen (`ROUND()`) grupperad per avdelning och per kompetens, sortera enligt avdelning och snittlön. Ditt svar skall se ut så här.
 
 ```sql
 +-----------+-----------+-----------+
