@@ -436,7 +436,7 @@ sql = `
         OR lon = ?
     ORDER BY akronym;
 `;
-res = await db.query(sql, [like, like, like, like, search]);
+res = await db.query(sql, [like, like, like, like, like, search]);
 ```
 
 Vi har alltså en SQL-fråga där `?` kommer att ersättas av sin motsvarighet i arrayen som bifogas till `query()`. Detta är ett bra sätt att bygga upp sin SQL-fråga tillsammans med innehåll från andra variabler.
