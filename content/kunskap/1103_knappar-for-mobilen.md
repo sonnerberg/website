@@ -233,7 +233,7 @@ När vi sedan vill kompilera SASS till en CSS-fil används följande kommando p�
 sass base.scss style.css
 ```
 
-Om man istället vill skapa en komprimerad version av CSS koden kan man använda följande kommando.
+Om man istället vill skapa en komprimerad version av CSS koden kan man använda följande kommando. En rekommendation är att använda nedanstående kommando då man annars kan få valideringsfel för den kompilerade CSS filen.
 
 ```bash
 sass base.scss style.min.css --style compressed
