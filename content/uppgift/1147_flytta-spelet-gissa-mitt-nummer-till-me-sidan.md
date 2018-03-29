@@ -18,7 +18,9 @@ För att lyckas med det behöver du ha koll på begreppet router och vyer. Du be
 
 Så här kan det se ut när du är klar.
 
-[FIGURE src=image/snapvt18/oophp-me.png?w=w3 caption="Spelet Gissa mitt nummer är nu inkluderat i me-sidan."]
+[FIGURE src=image/snapvt18/gissa-oversikt.png?w=w3 caption="Spelet Gissa mitt nummer är nu inkluderat i me-sidan."]
+
+[FIGURE src=image/snapvt18/gissa-get.png?w=w3 caption="Så här kan du spela GET-versionen inuti din me-sida."]
 
 
 
@@ -38,7 +40,7 @@ Gör följande steg för att förbereda dig för att utföra uppgiften.
 
 Du kan se hur jag jobbar igenom stegen i videoserien "[Flytta spelet Gissa mitt nummer till me-sidan](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-53mPL5PV6Z5IIdoh7RfLM)".
 
-[YOUTUBE src="XXX" list="PLKtP9l5q3ce-53mPL5PV6Z5IIdoh7RfLM" width=700 caption="Videoserie som ger dig en stegvis genomgång till hur du kan flytta spelet in i me-sidan."]
+[YOUTUBE src="bvTha71apPo" list="PLKtP9l5q3ce-53mPL5PV6Z5IIdoh7RfLM" width=700 caption="Videoserie som ger dig en stegvis genomgång till hur du kan flytta spelet in i me-sidan."]
 
 
 
@@ -115,7 +117,9 @@ Extrauppgift {#extra}
 
 Lös följande extrauppgifter om du har tid och lust.
 
-1. Integrera alla dina exempelprogram, även versionerna för GET och POST. Kan du skriva vyer och klasser som är återanvändbara.
+1. Integrera alla dina exempelprogram, även versionerna för GET och POST. Se om du kan skriva vyer och klasser som är återanvändbara.
+
+1. Ha en ambition att få så lite kod som möjligt i callbacks för router, låt där bara ligga limmet som fäster spelklasserna mot vyerna.
 
 <!--
 1. Integrera med ramverkets klasser så du inte använder `$_SESSION` och `$_GET`/`$_POST` i din egen kod, bara via ramverkets klasser.
