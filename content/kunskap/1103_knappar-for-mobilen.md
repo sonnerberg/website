@@ -184,7 +184,19 @@ Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i sam
 
 Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil. I CSS-preprocessors finns det inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av moduler.
 
-Vissa har i kursen [design](kurser/design) träffat på LESS och det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS följ instruktionerna på [installationssidan](http://sass-lang.com/install).
+Vissa har i kursen [design](kurser/design) träffat på LESS och det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS kan vi använda oss av `npm`.
+
+```bash
+npm install --save sass
+```
+
+Vi kan då skriva ett npm script i `package.json` för att kompilera en SASS fil till en CSS-fil. Nedanstående script kompilerar SASS filen `base.scss` till filen `style.min.css`. Vi kan med kommandot `npm run style` i terminalen köra scriptet.
+
+```json
+"scripts": {
+  "style": "sass base.scss style.min.css"
+},
+```
 
 Följande är en kort introduktion till import, variabler och färghantering i SASS. För mer avancerade funktioner rekommenderas [SASS dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
@@ -229,16 +241,19 @@ För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I fi
 
 Den resulterande `base.scss` blir en samling `@import`, som exemplet visar ovan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer. I exemplet ovan har jag skapat en fil där jag lägger alla variabler, till exempel vilket typsnitt som ska användas eller vilken färg som är blå. Sedan har jag flyttat CSS koden för navigationen, typografin och knapperna till var sin `.scss`-fil. Koden som definierar grunddesignen finns i `container.scss`.
 
-När vi sedan vill kompilera SASS till en CSS-fil används följande kommando på kommandoraden.
+Vi minns att vi med kommandot `npm run style` kan köra npm skriptet `style`, som i sin tur kör kommandot.
 
 ```bash
-sass base.scss style.css
+sass base.scss style.min.css
 ```
 
-Om man istället vill skapa en komprimerad version av CSS koden kan man använda följande kommando. En rekommendation är att använda nedanstående kommando då man annars kan få valideringsfel för den kompilerade CSS filen.
+Om man istället vill skapa en komprimerad version av CSS koden kan man använda följande scripts. En rekommendation är att använda nedanstående kommandot `npm run style-min` då man annars kan få valideringsfel för den kompilerade CSS filen.
 
-```bash
-sass base.scss style.min.css --style compressed
+```json
+"scripts": {
+  "style": "sass base.scss style.min.css",
+  "style-min": "sass base.scss style.min.css --style compressed"
+},
 ```
 
 
