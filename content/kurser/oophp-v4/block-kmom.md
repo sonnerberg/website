@@ -1,7 +1,7 @@
 ####Kursmoment instruktioner
 
 * [01: Objektorientering i PHP](kurser/oophp-v4/kmom01)
-* [02: OO-programmering i PHP](kurser/oophp-v4/kmom02)
+* [02: Arv och Komposition](kurser/oophp-v4/kmom02)
 * [03: PHP PDO och MySQL](kurser/oophp-v4/kmom03)
 * [04: Lagra innehåll i databasen](kurser/oophp-v4/kmom04)
 * [05: Programmera i databasen](kurser/oophp-v4/kmom05)
