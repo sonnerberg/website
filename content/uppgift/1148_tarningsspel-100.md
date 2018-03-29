@@ -27,6 +27,8 @@ Ett tärningsspel i Anax kan se ut så här.
 [FIGURE src=/image/oophp/v3/dice100.png?w=w1&q=70 caption="Ett tärningsspel i Anax."]
 -->
 
+[YOUTUBE src="q_TewfhHukI" class=700 caption="Mikael visar kort hur du kan göra ett klassdiagram i draw.io och exportera till pdf."]
+
 
 
 Förkunskaper {#forkunskaper}

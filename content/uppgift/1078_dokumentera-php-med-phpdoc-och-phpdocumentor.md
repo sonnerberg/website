@@ -21,6 +21,10 @@ Du har ett befintligt projekt där din Makefile redan innehåller stöd för att
 
 <!--more-->
 
+Så här kan det se ut när du löser uppgiften.
+
+[YOUTUBE src="2E6MriwcI6w" width=700 caption="Mikael jobbar igenom uppgiften och gör make doc."]
+
 
 
 Förkunskaper {#forkunskaper}
