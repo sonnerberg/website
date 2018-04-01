@@ -15,7 +15,7 @@ Du fortsätter att jobba i samma filer som i föregående artikel.
 Refactoring av Dice {#refactoring}
 ---------------------------------
 
-Låt oss säga att refactoring är en variant av att "gör och -- gör rätt". Det är inte helt riktigt, men det handlar i grunden om att strukturera om koden för att möta nya eller förändrade krav.
+Låt oss säga att refactoring är en variant av att "gör om -- gör rätt". Det är inte helt riktigt, men det handlar i grunden om att strukturera om koden för att möta nya eller förändrade krav.
 
 I UML-diagrammet kunde du se att klassen Dice hade fått nya medlemmar.
 

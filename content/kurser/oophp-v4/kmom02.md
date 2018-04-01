@@ -86,7 +86,7 @@ Gör följande uppgifter.
 
 1. Gör uppgiften "[Tärningsspel 100](uppgift/tarningsspel-100)" inuti din me-sida. Spara din kod under `me/redovisa`.
 
-1. Gör en avslutande `make doc` och en `make test` på ditt repo `me/redovisa`. Pusha och tagga, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
+1. Gör en avslutande `make doc` och en `make test` på ditt repo `me/redovisa`. Pusha och tagga, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
 
 
