@@ -63,7 +63,9 @@ Kika igenom följande lästips och ägna tid åt dem om du finner det intressant
 
 1. Ett webbaserat verktyg för UML är [draw.io](draw.io). Det har stöd för både ER-variant och UML. Verktyget är webbaserat och går att integrera med Google Docs.
 
-1. När man pratar om objektorienterad programmering så behöver man också ha en viss bas i objektorienterad modellering, det underlättar. Därför kan du läsa lite om UML, "Unified Modelling Language". En bra plats att starta är [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
+1. När man pratar om objektorienterad programmering så behöver man också ha en viss bas i objektorienterad modellering, det underlättar. Därför kan du läsa lite om UML, "Unified Modelling Language". En bra plats att starta är någon av följande:
+    * Andreas artikel "[Vad är UML?](kunskap/vad-ar-uml)" som är en del av kursen oopython.
+    * [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
 
 
 
