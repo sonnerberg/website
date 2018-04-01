@@ -66,8 +66,8 @@ namespace Mos\Dice;
 class DiceHand
 {
     /**
-     * @var int $dices   Array consisting of dices.
-     * @var int $values  Array consisting of last roll of the dices.
+     * @var int $dices   Integer consisting of dices.
+     * @var int $values  Integer consisting of last roll of the dices.
      */
      private $dices;
      private $values;
