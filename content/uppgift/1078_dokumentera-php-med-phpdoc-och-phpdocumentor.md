@@ -67,13 +67,15 @@ Du behöver en katalog som heter `doc` i ditt projekt, annars genereras inte dok
 
 När kommandot phpdoc körs av Makefilen så används konfigurationsfilen `.phpdoc.xml` och den styr vilka kataloger där källkoden hämtas.
 
+<!--
 Om du saknar en konfigurationsfil så kan du låna en från Anax moduler.
 
 ```text
 cp vendor/anax/request/.phpdoc.xml .
 ```
+-->
 
-Det som händer är att du använder en av funktionerna som redan finns implementerad i Makefilen. Den installerar verktyget phpdoc i `.bin/phpdoc` och kör det och det genereras dokumentation förutsatt att du har en konfigurationsfil samt en katalog `doc` där dokumentationen kan sparas.
+Du använder en av funktionerna som redan finns implementerad i Makefilen. Den installerar verktyget phpdoc i `.bin/phpdoc` och kör det och det genereras dokumentation förutsatt att du har en konfigurationsfil samt en katalog `doc` där dokumentationen kan sparas.
 
 Var nyfiken och kika i konfigurationsfilen `.phpdoc.xml`. Öppna filen så kan du se att det är filer från katalogerna `src` och `vendor/anax/*/src` som läses in och dokumenteras.
 
