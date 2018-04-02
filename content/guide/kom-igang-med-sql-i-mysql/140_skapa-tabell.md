@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-04-02": "(B, mos) Exempel på hur man kör alla kommandon i filen."
     "2017-12-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Skapa tabell
@@ -93,4 +94,10 @@ Slå upp syntaxen för `CREATE TABLE` i refmanualen, skumma igenom den för att 
 
 > *Kom ihåg vem som är din bästa vän -- referensmanualen.*
 
-Innan du avslutar, dubblekolla att du kan köra hela filen `ddl.sql` i en sekvens.
+Innan du avslutar, dubblekolla att du kan köra hela filen `ddl.sql` i en sekvens. Antingen markerar du all kod i Workbench och kör den, eller så kör du hela filen via terminalen.
+
+Så här kan du köra via terminalen.
+
+```text
+mysql -uuser -ppass skolan < ddl.sql
+```
