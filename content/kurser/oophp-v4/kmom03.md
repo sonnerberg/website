@@ -57,7 +57,7 @@ Kika på följande videos.
 
 Läs följande.
 
-1. Läs introduktionen till enhetstester i artikeln "[Kom igång med enhetstestning i PHP med PHPUnit]()".
+1. Läs introduktionen till enhetstester i artikeln "[Enhetstestningens roll i test av mjukvara](kunskap/enhetstestningens-roll-i-test-av-mjukvara)".
 
 1. Gå till hemsidan för [PHPUnit](https://phpunit.de/) och bekanta dig kort och översiktligt med PHPUnits dokumentation. Kika över innehållsförteckningen och skumläs snabbt följande kapitel (för att bekanta dig med manualens struktur och innehåll):
     * 2. Writing Tests for PHPUnit
