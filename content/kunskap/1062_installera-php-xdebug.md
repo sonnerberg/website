@@ -5,6 +5,7 @@ category:
     - labbmiljo
     - php
 revision:
+    "2018-04-03": (B, mos) Uppdatera till PHP 7.0 eller högre.
     "2017-04-28": (A, mos) Första revisionen.
 ...
 Installera PHP Xdebug
@@ -97,9 +98,9 @@ Om du hamnar i trubbel så har XAMPP en egen installationsguide "Activate and Us
 Installera Linux {#linux}
 ------------------------------
 
-Du kan installera paketet via `apt-get php5-xdebug`.
+Du kan installera paketet via `apt-get` eller motsvarande.
 
-Notera att Linux kan ha två olika konfigurationsfiler för PHP, en för CLI `/etc/php5/cli/php.ini` och en för Apache `/etc/php5/apache2/php.ini`. Du vill aktivera Xdebug i båda ini-filerna.
+Notera att Linux kan ha två olika konfigurationsfiler för PHP, en för CLI och en för Apache. Du vill aktivera Xdebug i båda ini-filerna.
 
 
 
