@@ -224,7 +224,7 @@ När en modul är beroende av andra för att fungera så växer komplexiteten av
 
 När man börjar få allt för många mock objekt så blir det alltmer komplex testsituation. Ibland är det så det är. Ibland vill man försöka undvika det läget och hålla testerna enkla och få beroendena. Ibland är det en avvägning och en prioritering om hur man väljer att göra, hur man väljer att se på saken.
  
-Du kan läsa mer på ([Wikipedia om Mock objekt](https://en.wikipedia.org/wiki/Mock_object)).
+Du kan läsa mer på ([Wikipedia om Mock objekt](https://en.wikipedia.org/wiki/Mock_object)). Mockning kan även kallas _stubs_ och [_test doubles_](https://en.wikipedia.org/wiki/Test_double).
 
 
 
