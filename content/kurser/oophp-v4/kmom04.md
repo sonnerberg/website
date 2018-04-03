@@ -8,7 +8,7 @@ revision:
     "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
     "2017-04-18": "(A, mos) Första utgåvan."
 ...
-Kmom04: Lagra innehåll i databasen
+Kmom04: Lagra innehåll i databasen <!-- 03 PHP PDO och MySQL -->
 ==================================
 
 [WARNING]
@@ -22,7 +22,29 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 Du bekantar dig med begrepp som interface och traits.
 Inloggning till webbplats?
 Embryo till eshop sql?
+
+Om testning?
+Funktionstestning?
+Enklare sådan, typ curl?
+Testa mot 100-spelet, inuti ramverket.
+mockup
+prepare testcase, prepare testclass, make mockobject.
+Test a trait?
+
+
+Gör även enhetstestning på tärningsspelet?
+
+Integrera "Gissa mitt nummer" med ramverkets klasser".
+    * redirect
+    * egen Game-klass
+    * ej direkt access till GET, POST, SESSION
+
+Låt stud integrera sitt eget spel med ramverkets klasser.
+
+Inför enhetstestning, visa genom spelet "Gissa mitt nummer" och låt studenten skapa enhetstester till sitt egna spel.
+
 -->
+
 
 
 Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.

@@ -112,11 +112,13 @@ Läs [instruktionen till kursmoment 02](./kmom02).
 
 
 
-###Kmom03: PHP PDO och MySQL {#kmom03}
+###Kmom03: Enhetstestning {#kmom03}
 
-Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar och därefter får du på egen hand koda motsvarande funktionalitet in i ramverket Anax lite.
+Vi jobbar vidare med klasser och objekt och denna gången tittar vi på hur klasser kan enhetstestas med verktyget PHPUnit. PHPUnit är ett av de verktyg som vanligen används inom PHP för att utföra enhetstestning av koden.
 
-Det blir fokus på hur man löser inloggning, konton och administration av dessa. Det blir en hel del formulär, routes och kopplingar mot databasen. Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read) för en webbapplikation mot en databas.
+Vi har tidigare pratat om begreppet inkapsling och att klasserna skall erbjuda ett publikt API, ett gränssnitt för användaren av klassen. Samtidigt vill vi skydda den interna implementationen inuti klassen. Vi vill låta användaren av vår klass ha ett tydligt gränssnitt, men inuti klassen vill vi själva bestämma hur vi implementerar klassens detaljer, utan att påverka det publika gränssnittet.
+
+Samma begrepp använder vi i enhetstestning, vi ser varje klass som en enhet som skall testas och vi testar klassen via dess publika gränssnitt vilket är de metoder vi når som användare av klassen. Vi är medvetna om hur klassen är uppbyggd, vi kallar det _white box testing_ då vi har tillgång till klassens källkod när vi skriver testfallen. Målet är att testa alla varianter av användning mot klassen, även felfall.
 
 Läs [instruktionen till kursmoment 03](./kmom03).
 

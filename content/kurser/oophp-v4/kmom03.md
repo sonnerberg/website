@@ -3,112 +3,101 @@ author:
     - mos
     - lew
 revision:
-    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2018-04-03": "(B, mos) Omarbetad inför oophp v4."
     "2017-04-07": "(A, mos) Första utgåvan."
 ...
-Kmom03: Enhetstestning <!-- PHP PDO och MySQL -->
+Kmom03: Enhetstestning 
 ==================================
 
-[WARNING]
-**Version 4 av oophp.**
+Vi jobbar vidare med klasser och objekt och denna gången tittar vi på hur klasser kan enhetstestas med verktyget PHPUnit. PHPUnit är ett av de verktyg som vanligen används inom PHP för att utföra enhetstestning av koden.
 
-En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
+Vi har tidigare pratat om begreppet inkapsling och att klasserna skall erbjuda ett publikt API, ett gränssnitt för användaren av klassen. Samtidigt vill vi skydda den interna implementationen inuti klassen. Vi vill låta användaren av vår klass ha ett tydligt gränssnitt, men inuti klassen vill vi själva bestämma hur vi implementerar klassens detaljer, utan att påverka det publika gränssnittet.
 
-[/WARNING]
+Samma begrepp använder vi i enhetstestning, vi ser varje klass som en enhet som skall testas och vi testar klassen via dess publika gränssnitt vilket är de metoder vi når som användare av klassen. Vi är medvetna om hur klassen är uppbyggd, vi kallar det _white box testing_ då vi har tillgång till klassens källkod när vi skriver testfallen. Målet är att testa alla varianter av användning mot klassen, även felfall.
 
-<!--
-Enhetstesta Guess?
-Gör enhetstestning på tärningsspelet?
+[FIGURE src=image/snapvt18/phpunit-terminal.png?w=w3 caption="Enhetstestning med PHPUnit via en Makefile."]
 
-Integrera "Gissa mitt nummer" med ramverkets klasser".
-    * redirect
-    * egen Game-klass
-    * ej direkt access till GET, POST, SESSION
+[FIGURE src=image/snapvt18/code-coverage-overview.png?w=w3 caption="Kodtäckning vid enhetstestning, en översikt av enheterna (klasserna)."]
 
-Låt stud integrera sitt eget spel med ramverkets klasser.
+[FIGURE src=image/snapvt18/code-coverage-detail.png?w=w3 caption="Detaljerad kodtäckning rad för rad i en enhet (klass)."]
 
-Inför enhetstestning, visa genom spelet "Gissa mitt nummer" och låt studenten skapa enhetstester till sitt egna spel.
-
--->
-
-<!--stop-->
-
-Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar och därefter får du på egen hand koda motsvarande funktionalitet in i ramverket Anax lite.
-
-Det blir fokus på hur man löser inloggning, konton och administration av dessa. Det blir en hel del formulär, routes och kopplingar mot databasen. Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read) för en webbapplikation mot en databas.
-
-Dessutom blir övningar i hur man kan lösa såna här saker med hjälp av gränssnitt i sin webbplats. Här kan man behöva tänka till hur man vill att det skall se ut för slutanvändaren och de valen kan påverka vilken kod man behöver bygga för att implementera gränssnitten.
-
-Du får träna PDO och MySQL genom att studera hur en filmdatabas kan byggas upp.
-
-[FIGURE src=image/snapvt17/movie-paginate-sort.png?w=w2 caption="Din egen sökbara filmdatabas kan bli ett resultat av detta kursmoment."]
-
-Du får grunden i hur inloggning fungerar och hur man hanterar och skyddar användarens lösenord.
-
-[FIGURE src=image/oophp/v3/login-top.png?w=w2 caption="En enklare inloggningsruta som döljer en del databaskod."]
-
-Sedan lägger du in allt i ditt Anax Lite och kanske väljer du att snygga till det också.
-
-[FIGURE src=image/oophp/v3/loginexercise.png?w=w2&a=0,29,5,25 caption="En snyggare ruta för att registrera ett konto, bakom döljer sig databaskod."]
-
-<!--
-Använd anax/database som wrapper, visa hur den används via coachen.
-
-Login som mindre exempel? Hur kryptera lösenordet?
-Eshop som/med användaredelen.
--->
-
+<!--st op-->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
+
+
+Labbmiljö {#labbmiljo}
+---------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Installera följande som en del av din labbmiljö. Se till att du installerar PHPUnit version 6.0 eller högre, men välj en version som matchar din version av PHP.
+
+1. Installera [PHPUnit](labbmiljo/phpunit) och [Xdebug](labbmiljo/xdebug) för att kunna köra enhetstester med kodtäckning på din lokala maskin.
 
 
 
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 1-2 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 3-6 studietimmar)*
 
 
 
-###Lästips {#lastips}
+###Videor {#videor}
 
-Studera följande lästips.
+Kika på följande videos.
 
-* I övningen får du jobba med PHP PDO så bekanta dig gärna med [PHP PDO i PHP manualen](http://php.net/manual/en/book.pdo.php). Studera vilka metoder som erbjuds av klasserna PDO och PDOStatement samt kika kort på vilka PDO drivers som finns till olika databaser. 
+1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 3. De ger dig en introduktion och översikt till kursmomentet.
+
+
+
+### Artiklar {#artiklar}
+
+Läs följande.
+
+1. Läs introduktionen till enhetstester i artikeln "[Kom igång med enhetstestning i PHP med PHPUnit]()".
+
+1. Gå till hemsidan för [PHPUnit](https://phpunit.de/) och bekanta dig kort och översiktligt med PHPUnits dokumentation. Kika över innehållsförteckningen och skumläs snabbt följande kapitel (för att bekanta dig med manualens struktur och innehåll):
+    * 2. Writing Tests for PHPUnit
+    * 5. Organizing Tests
+    * 10. Code Coverage Analysis
+    * Appendix 1. Assertions
+
+1. Bekanta dig kort och översiktligt med [Xdebug för PHP](https://xdebug.org/) och kika snabbt över vilken dokumentation som finns. Se vilka funktioner Xdebug kan tillföra till din utvecklingsmiljö. Vi kommer enbart använda Xdebug tillsammans med PHPUnit för att generera rapporter över kodtäckning.
+
+
+
+### Lästips {#lastips}
+
+Läs följande om du har tid och energi och vill fördjupa dig i enhetstestning.
+
+1. Dokumentet [PHP The Right Way](http://www.phptherightway.com/) innehåller en sektion som beskriver vertyg och tekniker för allmän testning med i PHP.
+
+1. För att läsa mer generellt om testning så är [Wikipedia Software Testing](https://en.wikipedia.org/wiki/Software_testing) en bra utgångspunkt.
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 14-18 studietimmar)*
-
-
-###Övningar {#ovningar}
-
-Gör följande övningar, de förbereder dig inför uppgifterna.
-
-1. Jobba igenom guiden "[Kom igång med PHP PDO och MySQL (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)". Spara eventuella exempelprogram i `me/kmom03/pdo`.
-
-<!--
-1. Jobba igenom artikeln "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". Spara eventuella exempelprogram i `me/kmom03/login`. Ett bra tips är att göra ditt egna lilla testprogram för att kolla hur inloggningen kan/skall fungera.
--->
+*(ca: 6-10 studietimmar)*
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Gör följande uppgifter.
 
-1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
+1. Lös uppgiften "[Kom igång med PHPUnit](uppgift/kom-igang-med-phpunit)" som guidar dig igenom de första stapplande stegen i enhetstestning. Spara all kod i `me/kmom03/phpunit`.
+
+1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
 
 <!--
-Visa filmer via annan vy än bara tabell.
+Gör även enhetstestning på tärningsspelet, eller enbart tärningsklasserna från guiden?
 
-1. Gör uppgiften "[Inloggning till Anax Lite](uppgift/inloggning-till-anax-lite)". Spara dina filer under `me/anax-lite`.
-
-1. Gör uppgiften ["Admin gränssnitt för hantering av användare och konton"](uppgift/admin-granssnitt-for-hantering-av-anvandare-och-konton). Dina filer skall sparas under `me/anax-lite`.
+Borde guiden ha en viss del i detta kmom? Eller bättre bara fokusera på enhetstestning kanske.
 -->
 
 
@@ -122,8 +111,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur kändes det att jobba med PHP PDO, SQL och MySQL?
-* Reflektera kring koden du skrev för att lösa uppgifterna, klasser, formulär, integration Anax Lite?
-* Känner du dig hemma i ramverket, dess komponenter och struktur?
-* Hur bedömmer du svårighetsgraden på kursens inledande kursmoment, känner du att du lär dig något/bra saker?
+* Har du tidigare erfarenheter av att skriva kod som testar annan kod?
+* Hur ser du på begreppen enhetstestning och att skriva testbar kod?
+* Förklara kort begreppen white/grey/black box testing samt positiva och negativa tester, med dina egna ord.
+* Hur gick det att genomföra uppgifterna med enhetstester, använde du egna klasser som bas för din testning?
 * Vilken är din TIL för detta kmom?
