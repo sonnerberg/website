@@ -76,7 +76,7 @@ Du kan välja att implementera klassen annorlunda, om du vill. Du behöver inte 
 
 Spelet ska hanteras av klassen `Guess`. Se till att samma klass återanvänds i alla versionerna av spelet.
 
-Man skall kunna initiera ett objekt av klassen, genom att *injecta* information såsom det gissade talet och antalet gissningar gjorda. I mall-klassen injectas informationen via konstruktorn.
+Man skall kunna initiera ett objekt av klassen, genom att *injecta* information såsom det hemliga talet och antalet gissningar gjorda. I mall-klassen injectas informationen via konstruktorn.
 
 Klassen **får inte läsa direkt** från $\_GET, $\_POST eller $\_SESSION. Om information behövs från dessa globala variabler så skall de bifogas in till klassen Guess, informationen skall injectas in i klassen från respektive `index_*.php`. 
 
