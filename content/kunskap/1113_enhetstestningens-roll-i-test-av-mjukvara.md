@@ -24,6 +24,7 @@ Fokus är på att introducera enhetstestning i form av dess syfte och de begrepp
 
 <!--
 CRAP-index.
+Relation till validering, statisk kodanalys
 -->
 
 
