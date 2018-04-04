@@ -29,7 +29,8 @@ Enklare sådan, typ curl?
 Testa mot 100-spelet, inuti ramverket.
 mockup
 prepare testcase, prepare testclass, make mockobject.
-Test a trait?
+Test a trait, interface, abstract class?
+Enklare funktionstester.
 
 
 Gör även enhetstestning på tärningsspelet?
@@ -42,6 +43,8 @@ Integrera "Gissa mitt nummer" med ramverkets klasser".
 Låt stud integrera sitt eget spel med ramverkets klasser.
 
 Inför enhetstestning, visa genom spelet "Gissa mitt nummer" och låt studenten skapa enhetstester till sitt egna spel.
+
+Guide abstract methods, classes, final interface, trait
 
 -->
 
