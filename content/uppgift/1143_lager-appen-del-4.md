@@ -36,7 +36,7 @@ Använd lager [API:t](https://lager.emilfolino.se) dokumentationen och speciellt
 
 Krav {#krav}
 -----------------------
-1. Skapa ett formulär för att registrera sig som användare i Lager appen.
+1. Skapa ett formulär för att registrera en användare i Lager appen.
 
 1. Skapa ett formulär för att logga in i Lager appen med en registrerad användare.
 

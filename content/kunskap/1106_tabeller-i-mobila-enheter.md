@@ -115,7 +115,7 @@ Jag har i exemplet ovan lagt till två stycken hjälpklasser `.table-striped` oc
 
 [FIGURE src=/image/webapp/screenshot-table-scroll.png?w=c7 caption="Tabell med scroll i sidled."]
 
-För att förbereda för metod bryter vi ut delen som har med scrollningen i sidled till klassen `.table-scroll`. Detta gör att vi kan återanvända den generella stylingen för tabellerna, men beroende på vilken klass vi ger förutom `.table` ge olika beteenden för små enheter.
+För att förbereda för metod 2 bryter vi ut delen som har med scrollningen i sidled till klassen `.table-scroll`. Detta gör att vi kan återanvända den generella stylingen för tabellerna, men beroende på vilken klass vi ger förutom `.table` ge olika beteenden för små enheter.
 
 ```scss
 .table-scroll {
@@ -189,7 +189,7 @@ Först sätter vi `display: block;` för `table`, `tr` och `td` elementen, vi vi
 }
 ```
 
-Nästa steg blir att flytta alla `td`-element ut till höger och i och med vi har `display: block;` på dessa hamnar de på var sin rad. Vi definierar även att vi vill ha radbrytningar i dessa element med attributet `white-space:normal;`, finns tyvärr inte plats för all data horisontellt.
+Nästa steg blir att flytta alla `td`-element ut till höger och i och med vi har `display: block;` på dessa element hamnar de på var sin rad. Vi definierar även att vi vill ha radbrytningar i dessa element med attributet `white-space:normal;`, finns tyvärr inte plats för all data horisontellt.
 
 ```scss
 @media only screen and (max-width: 668px) {
@@ -223,7 +223,13 @@ Nästa steg blir att flytta alla `td`-element ut till höger och i och med vi ha
 Sista steget är att använda ett data-attribut för att visa kolumnnamnen vänster om värdena. Vi lägger till detta på alla `td`-element i tabellen enligt exemplet nedan. Kom ihåg att byta ut kolumnnamnen så det passar till värdena.
 
 ```html
-<td data-title="Artikelnr">14-RNT</td>
+<tr>
+    <td data-title="Artikelnr">14-RNT</td>
+    <td data-title="Namn">Skruv M14</td>
+    <td data-title="Beskrivning">Skruv M14, värmförsinkad</td>
+    <td data-title="Lagersaldo" class="number-cell">12</td>
+    <td data-title="Lagerplats">A1B4</td>
+</tr>
 ```
 
 Vi använder `position: absolute;` för att placera ut kolumnnamnen och `content: attr(data-title);` för att sätta värdet med hjälp av `data-title`.
@@ -255,14 +261,14 @@ Vi använder `position: absolute;` för att placera ut kolumnnamnen och `content
         }
 
         td:before {
+            /* För att visa tabell rubrik */
             content: attr(data-title);
-            /* Now like a table header */
+            /* Använder top och left för efterlikna padding */
             position: absolute;
-            /* Mimic padding */
-            top: 6px;
-            left: 6px;
+            top: 0.33rem;
+            left: 0.33rem;
             width: 45%;
-            padding-right: 10px;
+            padding-right: 0.55rem;
             white-space: nowrap;
             text-align:left;
             font-weight: bold;
@@ -281,13 +287,13 @@ Bonus {#bonus}
 --------------------------------------
 Istället för att visa all data i tabellen kan du som utvecklare/designer göra ett medvetet val att bara visa en del av data. Att helt enkelt välja att fokusera på de kolumner som är viktiga för precis denna vy istället för att alltid bara göra en spegling av databasen.
 
-Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagersaldo listan visar vi bara namn och antal. I plocklistan bara namn, antal och plats. Så på med designar hatten (kanske en designer har keps? eller varför inte en '[Blue Beanie](http://bluebeanieday.tumblr.com)') och ta ett medvetet val om vad som behöver visas för att skapa en enkel och lätt användbar tabell.
+Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagersaldo listan visar vi bara namn och antal. I plocklistan bara namn, antal och plats. Så på med designar hatten (kanske en designer har keps? eller varför inte en '[Blue Beanie](http://bluebeanieday.tumblr.com)') och gör ett medvetet val om vad som behöver visas för att skapa en enkel och lätt användbar tabell.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt underlättar när vi gör responsiv design för mobila enheter.
+Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt som underlättar när vi gör responsiv design för mobila enheter.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7318) om denna artikeln.
 
