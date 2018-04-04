@@ -30,10 +30,16 @@ Om vi även vill tillåta att vi till exempel kan hämta data från Lager API:t 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://lager.emilfolino.se https://api.github.com;">
 ```
 
-För att göra det möjligt att vi kan ladda CSS och typsnitt från en domän och data från en annan kan vi använda `style-src` och `font-src`. Här definierar vi domäner vi vill hämta CSS kod ifrån och vilka domäner vi vill hämta typsnitt från. Nedan är ett exempel där vi hämtar typsnitt från Google och vår egna CSS. Vi definierar även att vi inte vill tillåta 'inline css'.
+I nedanstående exempel använder vi oss av attributet `'unsafe-eval'` för att göra det möjligt att använda oss av koden som använder funktionen `eval()`. Till exempel koden som webpack genererar använder sig av `eval()`, så lägg till detta attributet i din CSP.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://lager.emilfolino.se; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://lager.emilfolino.se https://api.github.com 'unsafe-eval';">
+```
+
+För att göra det möjligt att vi kan ladda CSS och typsnitt från en domän och data från en annan kan vi använda `style-src` och `font-src`. Här definierar vi domäner vi vill hämta CSS kod ifrån och vilka domäner vi vill hämta typsnitt från. Nedan är ett exempel där vi hämtar typsnitt från Google och vår egna CSS.
+
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://lager.emilfolino.se 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
 ```
 
 I dokumentation för [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) finns flera exempel på hur vi kan använda till exempel `media-src` och `img-src` för media och bilder.

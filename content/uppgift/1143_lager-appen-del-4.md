@@ -54,6 +54,8 @@ Krav {#krav}
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
 
+1. Din app måste innehålla en CSP, som bara tillåter precis det som behövs hämtas för att undvika XSS-attacker och liknande.
+
 1. Validera och publicera din kod enligt följande.
 
 ```bash
