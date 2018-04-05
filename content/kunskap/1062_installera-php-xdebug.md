@@ -1,7 +1,7 @@
 ---
 author:
     - mos
-category: 
+category:
     - labbmiljo
     - php
 revision:
@@ -102,7 +102,21 @@ Du kan installera paketet via `apt-get` eller motsvarande.
 
 Notera att Linux kan ha två olika konfigurationsfiler för PHP, en för CLI och en för Apache. Du vill aktivera Xdebug i båda ini-filerna.
 
+Troubleshooting {#troubleshooting}
+------------------------------
 
+Xdebug erbjuder själva en bra sida som hjälper till vid felsökning: [Xdebug Wizard](https://xdebug.org/wizard.php).
+
+För att använda denna guide så behöver du köra `php -i` i din terminal och klistra in informationen du får ut i fältet på hemsidan. Då kommer du få en steg för steg guide på vad du behöver göra för att få Xdebug att fungera för dig.
+
+[FIGURE src=/image/kunskap/xdebug.png?w=300 class="right" caption="Xdebug Wizard"]
+
+För att dubbelkolla att det fungerade kan du köra
+
+```bash
+$ php -i | grep Xdebug
+    with Xdebug v2.6.0, Copyright (c) 2002-2018, by Derick Rethans
+```
 
 Avslutningsvis {#avslutning}
 ------------------------------
