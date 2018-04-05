@@ -5,9 +5,9 @@ category:
     - labbmiljo
     - php
 revision:
-    "2018-04-05": (C, Aurora) Troubleshooting tillagd.
     "2018-04-03": (B, mos) Uppdatera till PHP 7.0 eller högre.
     "2017-04-28": (A, mos) Första revisionen.
+    "2018-04-05": (C, Aurora) Troubleshooting tillagd.
 ...
 Installera PHP Xdebug
 ==================================
