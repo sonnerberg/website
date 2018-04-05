@@ -10,11 +10,6 @@ revision:
 ...
 Kmom04: Autentisering med JWT
 ==================================
-
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
-
 Vi fortsätter med Lager appen och lägger till en funktion för att skapa fakturor utifrån en order. Alla ska inte kunna skapa fakturor så innan vi skapar faktura funktionen skapar vi inloggning och tittar på JSON Web Tokens för autentisering.
 
 När man skapar en faktura är det bra att ha snygga och responsiva tabeller. Så kursmomentets GUI-komponent är just tabeller och hur vi optimerar dessa för mobila enheter.
@@ -26,7 +21,7 @@ När man skapar en faktura är det bra att ha snygga och responsiva tabeller. S�
 
 Så här kan det se ut när vi är klara.
 
-[YOUTUBE src=_dgxggNKikI width=630 caption="Winecellar i kursmoment 4."]
+[YOUTUBE src=9yrgftTwVDw width=630 caption="Winecellar i kursmoment 4."]
 
 
 
