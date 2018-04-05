@@ -5,6 +5,7 @@ category:
     - labbmiljo
     - php
 revision:
+    "2018-04-05": (C, Aurora) Troubleshooting tillagd.
     "2018-04-03": (B, mos) Uppdatera till PHP 7.0 eller högre.
     "2017-04-28": (A, mos) Första revisionen.
 ...
@@ -107,7 +108,7 @@ Troubleshooting {#troubleshooting}
 
 Xdebug erbjuder själva en bra sida som hjälper till vid felsökning: [Xdebug Wizard](https://xdebug.org/wizard.php).
 
-För att använda denna guide så behöver du köra `php -i` i din terminal och klistra in informationen du får ut i fältet på hemsidan. Då kommer du få en steg för steg guide på vad du behöver göra för att få Xdebug att fungera för dig.
+För att använda denna guide så behöver du köra `php -i` i din terminal och klistra in informationen som skrivs ut i terminalen i fältet på hemsidan. Då kommer du få en steg för steg guide på vad du behöver göra för att få Xdebug att fungera för dig.
 
 [FIGURE src=/image/kunskap/xdebug.png?w=300 class="right" caption="Xdebug Wizard"]
 
