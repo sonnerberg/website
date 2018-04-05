@@ -28,7 +28,7 @@ ERROR_COLOR	= \033[31;01m
 WARN_COLOR	= \033[33;01m
 
 # Which makefile am I in?
-WHERE-AM-I = $(CURDIR)/$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))
+WHERE-AM-I = "$(CURDIR)/$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))"
 THIS_MAKEFILE := $(call WHERE-AM-I)
 
 # Echo some nice helptext based on the target comment
@@ -115,7 +115,7 @@ local-publish:
 	#rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
 
 	@# Enable robots if available
-	[ ! -f $(ROBOTSTXT) ] || cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
+	[ ! -f $(ROBOTSTXT) ] || cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt"
 
 	# Make soma parts writable
 	# https://dbwebb.se/repo/htmlphp/example/pdo-sqlite/
@@ -210,7 +210,7 @@ forum-init:
 # target: submodule-update    - Update all submodules.
 .PHONY: submodule-init submodule-update
 submodule-init:
-	-git submodule update --init --recursive 
+	-git submodule update --init --recursive
 
 submodule-update:
 	-git pull --recurse-submodules && git submodule foreach git pull origin master
@@ -221,7 +221,7 @@ submodule-update:
 .PHONY: server-node-echo
 server-node-echo:
 	@$(call HELPTEXT,$@)
-	cd $(LOCAL_HTDOCS)/htdocs/repo/javascript/example/lekplats/broadcast-server-with-node-js-and-html5-websockets && nodejs websocket_broadcastserver.js 
+	cd $(LOCAL_HTDOCS)/htdocs/repo/javascript/example/lekplats/broadcast-server-with-node-js-and-html5-websockets && nodejs websocket_broadcastserver.js
 
 
 
@@ -230,7 +230,7 @@ server-node-echo:
 backup:
 	@$(call HELPTEXT,$@)
 	install -d backup/$(TODAY)
-	
+
 	# Forum
 	mysqldump -uroot dbw_forum | gzip > backup/$(TODAY)/dbw_forum.gz
 	install -d backup/$(TODAY)/forum/files/
@@ -246,10 +246,10 @@ backup:
 .PHONY: load-latest-backup
 load-latest-backup:
 	@$(call HELPTEXT,$@)
-	
+
 	# Forum
 	zcat backup/latest/dbw_forum.gz | mysql -uroot dbw_forum
-	rsync -a --delete backup/latest/forum/files/ htdocs/forum/files/ 
+	rsync -a --delete backup/latest/forum/files/ htdocs/forum/files/
 
 
 
@@ -258,7 +258,7 @@ load-latest-backup:
 get-latest-backup:
 	@$(call HELPTEXT,$@)
 	install -d backup/$(TODAY)
-	rsync -av --delete -e "ssh -p 2222" mos@$(WWW_SITE):$(GIT_BASE)/backup/latest/ backup/$(TODAY)/ 
+	rsync -av --delete -e "ssh -p 2222" mos@$(WWW_SITE):$(GIT_BASE)/backup/latest/ backup/$(TODAY)/
 
 	# Point to latest successful backup
 	rm -f backup/latest
@@ -270,15 +270,15 @@ get-latest-backup:
 .PHONY: database-create
 database-create:
 	@$(call HELPTEXT,$@)
-	
+
 	# Forum
 	#create database dbw_forum;
 	#grant all on dbw_forum.* to 'dbwebb'@'localhost' identified by 'password';
 
-	#create database Anaxoophp; 
-	#grant all on Anaxoophp.* to acronym@localhost identified by 'password';  
+	#create database Anaxoophp;
+	#grant all on Anaxoophp.* to acronym@localhost identified by 'password';
 
-	#create database Movie; 
+	#create database Movie;
 	#grant all on Movie.* to 'acronym'@'localhost' identified by 'password';
 
 
@@ -287,7 +287,7 @@ database-create:
 .PHONY: forum-no-activation
 forum-no-activation:
 	@$(call HELPTEXT,$@)
-	
+
 	$(ECHO) "UPDATE phpbb_config SET config_value = 3 WHERE config_name = 'require_activation';" | mysql -uroot dbw_forum
 
 
@@ -296,7 +296,7 @@ forum-no-activation:
 #
 .PHONY: prepare-build
 
-prepare-build: 
+prepare-build:
 	rm -rf build
 	install -d build/css build/lint
 
@@ -429,7 +429,7 @@ ServerAdmin $(SERVER_ADMIN)
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-env
 	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
-	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
+	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites
 
 	<Directory />
 
@@ -525,7 +525,7 @@ ServerAdmin $(SERVER_ADMIN)
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-env
 	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
-	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
+	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites
 
 	<Directory />
 
