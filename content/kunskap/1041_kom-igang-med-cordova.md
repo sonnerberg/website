@@ -34,7 +34,7 @@ Introduktion {#introduktion}
 
 Med hjälp av Cordova ska vi skapa en _hybrid app_, alltså en webbsida som exekveras i mobilen som en native app. Detta gör att vi kan utnyttja native funktionaliteter i våran app, t.ex. kamera, GPS och kontakter. Vi kommer åt de här funktionaliteterna med hjälp av ett [JavaScript API som Cordova har utvecklat](https://cordova.apache.org/docs/en/latest/#plugin-apis).
 
-I den här artikeln kommer vi inte testa någon native funktion utan vi fokuserar på att få ihop en "Hello World" app och testa den i en Android emulator.
+I den här artikeln kommer vi inte testa någon native funktion utan vi fokuserar på att få ihop en "Hello World" app och testa den i en emulator eller fysisk enhet.
 
 [INFO]
 Exemplen för Cordova i kursen innehåller bara `www`-mappen. För att testa koden behöver du ha/skapa ett Cordova projekt du kan kopiera in www-mappen i. Du behöver även lägga till plattformarna Android och Browser för att testa koden.
@@ -335,6 +335,7 @@ Klicka på inspect så får du upp ett nytt fönster där du kan styra din emula
 
 
 ### iOS
+För att felsöka iOS appar rekommenderas Apples dokument [Debugging](https://developer.apple.com/support/debugging/).
 
 
 
