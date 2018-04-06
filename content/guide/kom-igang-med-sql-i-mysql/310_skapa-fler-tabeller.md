@@ -23,7 +23,7 @@ Låt oss börja med att skapa tabellen för kurs.
 |-----------|------------------------------|
 | kod       | CHAR(6) PRIMARY KEY NOT NULL |
 | namn      | VARCHAR(40)                  |
-| poang     | INT                          |
+| poang     | FLOAT                        |
 | niva      | CHAR(3)                      |
 
 Skriv SQL-koden för att skapa tabellen.
@@ -223,7 +223,7 @@ Kommandot SHOW TABLE är bra när man inspekterar en databas, när man vill se h
 
 
 
-Kontrollera setup.bash {#setupkontr}
+Kontrollera reset.bash {#setupkontr}
 ----------------------------------
 
 Låt oss nu kontrollera att det går att återskapa databasen med bash-skriptet.
