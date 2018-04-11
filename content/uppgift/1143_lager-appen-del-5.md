@@ -18,7 +18,11 @@ I tidigare kursmoment har vi jobbat med vår lager app i webbläsaren. Nu är de
 
 Förkunskaper {#forkunskaper}
 -----------------------
-Du har gjort uppgiften [Lager appen del 4](uppgift/lager-appen-del-4). Du har installerat sista delen av labbmiljön för webapp-v3. Du har jobbat dig igenom övningarna [Kom igång med Cordova](kunskap/kom-igang-med-cordova) och [Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon).
+Du har gjort uppgiften [Lager appen del 4](uppgift/lager-appen-del-4).
+
+Du har läst artikeln [GUI ramverk](kunskap/gui-ramverk).
+
+Du har installerat sista delen av labbmiljön för webapp-v3 och jobbat dig igenom övningarna [Kom igång med Cordova](kunskap/kom-igang-med-cordova) och [Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon).
 
 
 Introduktion {#intro}
@@ -30,16 +34,7 @@ Skapa ett Cordova projekt i den befintliga katalogen `me/kmom05/lager5` med komm
 cordova create . se.dbwebb.lager Lager
 ```
 
-Ta först en kopia på de befintliga filerna `www/js/index.js` och `www/index.html`. Kopiera sedan din lager app från kmom04 så har du nått att utgå ifrån.
-
-```bash
-# står i me/kmom05/lager5
-cp www/js/index.js www/js/cordova_index.js
-cp www/index.html www/js/cordova_index.html
-cp -r ../../kmom04/lager4/* www/
-```
-
-Flytta sedan in de delar från `cordova_index.js` och `cordova_index.html` som behövs för att din applikation kan köras med hjälp av Cordova.
+Flytta sedan de filer som behövs från `me/kmom04/lager4` till `me/kmom05/lager5` så din app
 
 
 
@@ -50,6 +45,8 @@ Krav {#krav}
 1. Din app ska även kunna köras på antigen iOS eller Android.
 
 1. Din app ska ha en egen splashscreen och en egen ikon.
+
+1. Använd dina kunskaper om design av GUI element för att efterlikna plattformen du bygger din app för.
 
 1. Validera och publicera din kod enligt följande.
 

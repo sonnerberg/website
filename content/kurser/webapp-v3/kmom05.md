@@ -119,5 +119,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka fördelar ser du med att göra appar med Cordova om du jämför med rena webbapplikationer?
 * Har du möjligheten att köra dina appar på en fysisk enhet? Vilka testmöjligheter ger detta?
-* Gick det bra att skapa din egna logga och splashscreen?
+* Gick det bra att skapa en logga och splashscreen?
+* Beskriv designprocessen för att efterlikna den mobila plattformen du bygger din app för?
 * Vilken är din TIL för detta kmom?

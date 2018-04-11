@@ -29,6 +29,12 @@ Ett mer fullfjädrat ramverk är [Ionic](https://ionicframework.com/), som baser
 
 
 
+Design Guidelines {#guides}
+--------------------------------------
+Till mobil operativsystemen [iOS](https://developer.apple.com/design/) och [Android](https://developer.android.com/design/index.html) ger Apple respektive Google ut guidelines för hur man ska designa på de två plattformarna. Detta är ett viktigt verktyg inte minst när vi designar med hjälp av HTML och CSS istället för de inbyggda native elementen.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
-Om du har frågor eller tips så finns det en särskild [tråd i forumet] om denna artikeln. Kom gärna med fler förslag till mobil anpassade GUI ramverk i forumtråden.
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7399) om denna artikeln. Kom gärna med fler förslag till mobil anpassade GUI ramverk i forumtråden.
