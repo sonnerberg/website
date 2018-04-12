@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-04-12": "(B, mos) Uppdaterade dockblock kommentarer för DiceHand."
     "2018-03-27": "(A, mos) Första versionen, uppdelad av större dokument och uppdaterad."
 ...
 Komposition med en tärningshand
@@ -66,8 +67,8 @@ namespace Mos\Dice;
 class DiceHand
 {
     /**
-     * @var int $dices   Integer consisting of dices.
-     * @var int $values  Integer consisting of last roll of the dices.
+     * @var Dice $dices   Array consisting of dices.
+     * @var int  $values  Array consisting of last roll of the dices.
      */
      private $dices;
      private $values;
@@ -75,7 +76,7 @@ class DiceHand
     /**
      * Constructor to initiate the dicehand with a number of dices.
      *
-     * @param int sides Number of dices to create, defaults to five.
+     * @param int $dices Number of dices to create, defaults to five.
      */
     public function __construct(int $dices = 5)
     {
