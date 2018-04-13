@@ -94,7 +94,7 @@ Du skall samla ihop minst 15 poäng. Fråga 1-10 är värd en poäng var. Fråga
 
 10. Visa länken till den första bilden som är av standard_resolution (j.txt).
 
-11. (*Denna och resterande frågor är värda 3 poäng*) Användaren alkifaey har gjort en kommentar. Använd användarnamnet och visa själva kommentare (text) (k.txt).
+11. (*Denna och resterande frågor är värda 3 poäng*) Användaren alkifaey har gjort en kommentar. Använd användarnamnet och visa själva kommentaren (text) (k.txt).
 
 12. Lista länkarna (link) till bilderna som användaren 'tobhed' har kommenterat (l.txt).
 
