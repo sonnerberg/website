@@ -1,16 +1,19 @@
 ---
-author: aar
+author:
+  - aar
+  - efo
 category: javascript
 revision:
+  "2017-03-20": (B, efo) Anpassad för webapp v3.
   "2017-03-20": (A, aar) Första utgåvan inför kursen webapp v2.
 ...
 Lägg till en Splash screen och ändra ikon
 ==================================
-
-Vi ska kolla på hur vi lägger till en splash screen och byter ikon i en app. En splash screen är "laddnings"-bilden som de flesta appar har när den startar.
-För splash screen och ikon ska vi använda "[cordovas plugin](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/index.html)".
+Vi ska kolla på hur vi lägger till en splash screen och byter ikon i en app. En splash screen är "laddnings"-bilden som de flesta appar har när den startar.För splash screen och ikon ska vi använda "[cordovas plugin](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/index.html)".
 
 Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/splashScreen/www) och i `example/splashScreen`.
+
+
 
 <!--more-->
 
@@ -18,8 +21,7 @@ Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/
 
 Introduktion {#introduktion}
 --------------------------------------
-
-Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt som har plattformarna Browser och Android.
+Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt som har plattformarna Browser och Android eller iOS.
 
 Vi börjar med att lägga till plugin:et.
 
@@ -27,10 +29,15 @@ Vi börjar med att lägga till plugin:et.
 cordova plugin add cordova-plugin-splashscreen --save
 ```
 
+
+
+Android {#android}
+--------------------------------------
 Nu behöver vi bilder, många bilder. Om du tittar i mappen `platforms/android/res/` borde det finnas runt 8 mappar som heter "drawable-..." och fyra som heter "mipmap-...". "l-x"-DPI står för olika [skärmstorlekar](https://phonegappro.com/phonegap-tutorial/phonegap-icon-and-splash-screen-sizes/), tanken är att vi ska ha en bild i varje mapp med passande storlek. Mapparna som börjar på "drawable" är för _splash screens_ och mapparna som börjar på "mipmap" är för _ikoner_.
 
-### Bilder {#bilder}
 
+
+### Bilder {#bilder}
 För att skapa ikoner tar jag hjälp av [icons launcher](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html). Här kan du både ladda upp egna bilder och använda dig av Clipart's. När du bestämt dig för hur den ska se ut kan du ladda ner bilden med rätt storlekar.
 Om du väljer att ladda upp en egen bild bör den minst vara av storlek `1024x1024`. Jag har ingen bra bild i den storleken så jag väljer att använda dbwebb's favicon bild.
 
@@ -58,9 +65,7 @@ För att skapa splash bilder finns det också hjälp, googla på "splash screen 
 
 
 
-Konfigurera appen {#config}
---------------------------------------
-
+## Konfigurera appen {#config}
 Då är det dags att bestämma när varje bild ska användas. Det gör vi genom att ändra i `config.xml`. Vi börjar med att fixa det för Android.
 
 Om du inte har en platform-tag med android lägger du till det.
@@ -143,9 +148,17 @@ Det finns [inställningar för splash screen](https://cordova.apache.org/docs/en
 
 
 
+iOS {#ios}
+--------------------------------------
+
+
+För mer information om hur du skapar splashscreens och ikoner på iOS tiita i [Cordovas dokumentation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/#ios-specific-information).
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Nu har vi fixat en ikon och en splash screen. I och med att vi bara använder oss av Android kunde vi ha lagt in bilderna direkt i mapparna i `platforms/android/res/` men nu vet vi hur man gör om vi hade haft flera plattformar.
+Nu har vi fixat en ikon och en splash screen. Och våra apps får direkt känslan av att
 
-Om du har frågor eller tips så finns det en särskild tråd i forumet om [denna artikeln](t/40777).
+Om du har frågor eller tips så finns det en särskild tråd i forumet om [denna artikeln](t/7413).
