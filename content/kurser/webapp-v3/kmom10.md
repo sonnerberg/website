@@ -54,6 +54,10 @@ De tre första kraven är obligatoriska och måste lösas för att få godkänt 
 
 Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
+[INFO]
+Tänker du på att göra några av de optionella kraven läs igenom alla kraven innan du väljer API:er då de optionella kraven kan påverka val av API.
+[/INFO]
+
 
 
 ###Kataloger för redovisning {#var}
