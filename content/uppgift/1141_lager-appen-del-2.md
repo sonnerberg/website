@@ -56,6 +56,8 @@ Krav {#krav}
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
 
+1. Se till att det går att testa din app. Lägg till minst en order med en produkt som går att packa.
+
 1. Validera och publicera din kod enligt följande.
 
 ```bash
