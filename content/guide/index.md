@@ -1,5 +1,7 @@
 ---
 titleBreadcrumb: Guide
+revision:
+    "2018-04-13": "(PA1, mos) Preliminär version tills vi har minst två guider i produktionsläge."
 ...
 Index
 ===============================
@@ -20,3 +22,7 @@ Guider under utveckling till hösten 2018.
 Guider under utveckling till våren 2019.
 
 * [ER-modellering med databaser](guide/er-modellering-med-databaser)
+
+Guider som ligger till sig och eventuellt utvecklas framöver.
+
+* [JavaScript](guide/javascript) (delar av material som använts i kursen javascript, guiden delvis påbörjad, avvaktar eventuell utveckling av kursen javascript1)
