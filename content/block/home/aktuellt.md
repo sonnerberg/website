@@ -12,15 +12,14 @@ Välkommen till Blekinge Tekniska Högskola!
 
 ####Aktuellt
 
+[FIGURE src=https://grillcon.dbwebb.se/image/grill-album/mos_grill.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårens GrillCon närmar sig med stormsteg..."]
 
-
-[FIGURE src=image/fsync-giving-up-on-dirty.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårterminen 2018, vi är redo..."]
-
+* [GrillCon 2018 Vår](https://grillcon.dbwebb.se)
+* [Om 3-veckors uppropet lp4](t/7415)
 * [Uppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
-* [GrillCon 2018 Vår](t/7110)
 * [Omregistrering och restinlämningar](kurser/faq/omregistrering)
 
-Läsperiod 4 börjar den 26:e mars.
+Höstterminen startar 3/9. Introveckan för alla ettor är en vecka tidigare.
 
 <!--
 * [Registrera dig för vårterminens kurser](t/7177)
@@ -30,6 +29,10 @@ Läsperiod 4 börjar den 26:e mars.
 -->
 
 <!--
+[FIGURE src=image/bth-sommar-hav.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlovet, vi närmar oss..."]
+
+[FIGURE src=image/fsync-giving-up-on-dirty.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårterminen 2018, vi är redo..."]
+
 [FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
 [FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
