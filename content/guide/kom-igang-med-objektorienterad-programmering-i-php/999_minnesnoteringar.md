@@ -14,4 +14,9 @@ Minnesnoteringar
 * Abstrakta metoder
 * Final
 * Magiska metoder
-* 
+* Coupling, cohesion.
+* Summera termer som styr OO, inkapsling, etc.
+* Om skillnader mellan trait, composition, inheritance hur variabler syns.
+* Diamond problem multiple inheritance.
+* Code complexity (printHistogram)
+* Test complexity (printHistogram)

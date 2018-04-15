@@ -3,13 +3,15 @@ sectionHeader: true
 linkable: true
 author: mos
 revision:
-    "2018-04-13": "(A, mos) Första versionen."
+    "2018-04-15": "(A, mos) Första versionen."
 ...
 Trait och Interface
 =======================
 
-Vi tittar på hur objekt kan samverka och byggas ihop.
+Vi skall titta på hur objekt kan samverka och sammanfogas med konstruktioner som trait och interface. Det är två tekniker som kompletterar arv och komposition.
 
-Vilka är relationerna mellan objekten? Det finns relationen är-en (is-a) som implementeras som arv och det finns relationen har-en (has-a) som implementeras som en medlemsvariabel vilket också kallas _komposition_.
+En grundtanke när man utvecklar sitt system är att varje sak har sin plats och man vill återanvända koden samt hålla den inkapslad och öppen för interna uppdateringar i koden utan att förändra det publika API:et mellan klasserna.
 
-Vi tittar på de konstruktioner som erbjuds och vi ser ett exempelprogram ta form där klasser samverkar enligt både arv och komposition.
+Lyckas man så får man ett system som välkomnar förändringar men är motståndskraftigt mot att förändringar tar sönder, eller påverkar många delar av systemet.
+
+Låt se hur trait och interface passar in i dessa tankar.

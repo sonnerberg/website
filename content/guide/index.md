@@ -19,6 +19,11 @@ Guider under utveckling till hösten 2018.
 * [Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)
 * [Kom igång med PHP-ramverket Anax](guide/kom-igang-med-php-ramverket-anax)
 
+<!--
+* Desinax tema och dess moduler
+* Unit testing, function testing, CI
+* -->
+
 Guider under utveckling till våren 2019.
 
 * [ER-modellering med databaser](guide/er-modellering-med-databaser)
