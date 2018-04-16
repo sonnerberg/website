@@ -6,9 +6,9 @@ revision:
 ...
 Lager appen del 6
 ==================================
-[FIGURE src=image/webapp/money.jpeg?w=c5 class="right"]
+[FIGURE src=image/webapp/world-map.jpg?w=c5 class="right"]
 
-I kursmoment 5 skapade vi en native app baserad på vår webapp med hjälp av Cordova. I denna uppgift ska vi använda mobila enheters styrkor och lägga till funktionalitet för GPS och kartor.
+I kursmoment 5 skapade vi en native app baserad på vår webapp med hjälp av Cordova. Vi ska i denna uppgiften använda oss av plugins för att komma åt native-funktionalitet i en fysisk enhet. Vi användar en mobil enhets styrka och läggar till funktionalitet för GPS och kartor.
 
 
 
@@ -19,6 +19,7 @@ I kursmoment 5 skapade vi en native app baserad på vår webapp med hjälp av Co
 Förkunskaper {#forkunskaper}
 -----------------------
 Du har gjort uppgiften [Lager appen del 5](uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna "[Animationer och övergångar](kunskap/animationer-och-overgangar)" och "[GPS och karta](kunskap/gps-och-karta)".
+
 
 
 Introduktion {#intro}
@@ -38,11 +39,13 @@ Krav {#krav}
 -----------------------
 1. Använd animationer och övergånger för att efterlikna native applikationer.
 
-1. Skapa en vy i din app med de ordrar som är redo att skickas. Dvs. ordrar med status större än .
+1. Skapa en vy i din app med de ordrar som är redo att skickas. Dvs. ordrar med status Packad (200).
 
 1. När man klickar in på ordern får man al information om ordern och en karta där paketet ska levereras.
 
 1. Använd GPS för att visa nuvarande position på kartan.
+
+1. Gör det enkelt att testa din app. Ha minst en order med status Packad, som har en adress som fungerar och visas upp med Google Geocoder.
 
 1. Validera och publicera din kod enligt följande.
 
