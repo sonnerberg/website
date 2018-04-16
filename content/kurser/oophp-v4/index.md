@@ -133,6 +133,7 @@ Trait och interface är två objektorienterade konstruktioner som kan användas 
 Läs [instruktionen till kursmoment 04](./kmom04).
 
 
+
 ###Kmom05: Programmera i databasen {#kmom05}
 
 Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
