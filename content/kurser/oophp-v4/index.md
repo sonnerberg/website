@@ -124,9 +124,11 @@ Läs [instruktionen till kursmoment 03](./kmom03).
 
 
 
-###Kmom04: Lagra innehåll i databasen {#kmom04}
+###Kmom04: Trait och Interface {#kmom04}
 
-Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
+Vi fortsätter med kodande och testande utanför och inuti ramverket. Fokus är tre saker, trait och interface, mer enhetstestning samt integrera koden ytterligare med ramverket genom att använda ramverkets klasser i störra omfattning.
+
+Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod tillsammans med arv och komposition. Det ger oss två nya verktyg för att tänka och implementera koden på ett objektorienterat sätt.
 
 Läs [instruktionen till kursmoment 04](./kmom04).
 

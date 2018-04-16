@@ -18,5 +18,7 @@ Minnesnoteringar
 * Summera termer som styr OO, inkapsling, etc.
 * Om skillnader mellan trait, composition, inheritance hur variabler syns.
 * Diamond problem multiple inheritance.
+* Single responisbility
 * Code complexity (printHistogram)
 * Test complexity (printHistogram)
+* Elements of OO.
