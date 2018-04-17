@@ -252,10 +252,12 @@ I `showMap` funktionen lägger vi till en ny sorts markör som markerar använda
 ```javascript
 locationMarker = new google.maps.Marker({
     clickable: false,
-    icon: new google.maps.MarkerImage('https://maps.gstatic.com/mapfiles/mobile/mobileimgs2.png',
-                                                    new google.maps.Size(22,22),
-                                                    new google.maps.Point(0,18),
-                                                    new google.maps.Point(11,11)),
+    icon: new google.maps.MarkerImage(
+        'https://maps.gstatic.com/mapfiles/mobile/mobileimgs2.png',
+        new google.maps.Size(22, 22),
+        new google.maps.Point(0, 18),
+        new google.maps.Point(11, 11)
+    ),
     shadow: null,
     zIndex: 999,
     map: map
@@ -271,6 +273,7 @@ function showPosition() {
             position.currentPosition.latitude,
             position.currentPosition.longitude
         );
+
         locationMarker.setPosition(myPosition);
     }
 }
