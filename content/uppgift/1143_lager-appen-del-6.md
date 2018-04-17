@@ -61,7 +61,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-Det finns inga extrauppgifter.
+* Använd ytterligare en Cordova plugin för att till exempel kunna ta bilder, komma åt kontakter eller liknande.
 
 
 

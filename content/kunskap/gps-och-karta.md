@@ -21,7 +21,7 @@ En karta {#karta}
 --------------------------------------
 Vi kommer i detta exemplet använda Google Maps och för att använda Google Maps API behövs en API nyckel. Skaffa en gratis API nyckel på [Google Maps API](https://developers.google.com/maps/web/) och välj GET A KEY. Skapa ett nytt projekt för att koppla nyckeln till det.
 
-Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katalogen har jag en simpel mithril app. I `index.html` har jag lagt till ytterligare en JavaScript fil annars är den som vanligt i en Cordova app.
+Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katalogen har vi en simpel mithril app. I `index.html` har vi lagt till ytterligare en JavaScript fil annars är den som vanligt i en Cordova app.
 
 ```html
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katal
 
 Ersätt [YOUR_API_KEY] med din egna API nyckel.
 
-I filen `js/index.js` som är ingångspunkten för vår app väntar jag in att enheten är redo och sen använder jag `m.mount()` för att ladda den enda vyn i appen `map.js`.
+I filen `js/index.js` som är ingångspunkten för vår app väntar vi in att enheten är redo och sen använder vi `m.mount()` för att ladda den enda vyn i appen `map.js`.
 
 ```javascript
 "use strict";
@@ -61,7 +61,7 @@ var app = {
 app.initialize();
 ```
 
-I vyn `map.js` definieras först `view`-funktionen, jag vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. Viktigt att explicit ge kartan en höjd annars visas den inte. ID't `#map` används av JavaScript för att hämta ut rätt element.
+I vyn `map.js` definieras först `view`-funktionen, vi vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. Viktigt att explicit ge kartan en höjd i pixlar eller rem annars visas den inte. ID't `#map` används av JavaScript för att hämta ut rätt element.
 
 ```javascript
 module.exports = {
@@ -74,7 +74,7 @@ module.exports = {
 };
 ```
 
-Vi använder sedan livscykel funktionen `oncreate` för att anropa en funktion som ritar upp kartan och även ett antal markörer som visar platser baserad på koordinater.
+Vi använder sedan livscykel funktionen `oncreate` för att anropa funktionen som ritar upp kartan och även ett antal markörer som visar platser baserad på koordinater.
 
 ```javascript
 module.exports = {
@@ -185,7 +185,96 @@ Vi använder oss av pluginen `cordova-plugin-geolocation`.
 cordova plugin add cordova-plugin-geolocation
 ```
 
-Vi har nu tillgång till objektet `navigator` som har attributet `navigator.geolocation`. Vi använder funktionen `navigator.geolocation.getCurrentPosition()` för att få nuvarande position.
+För att använda position på iOS enheter lägger vi till följande i `config.xml`.
+
+```xml
+<edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+    <string>I will use your GPS position to show on a map.</string>
+</edit-config>
+```
+
+Vi har nu tillgång till objektet `navigator` som har attributet `navigator.geolocation`. Vi använder funktionen `navigator.geolocation.getCurrentPosition()` för att få nuvarande position. Vi skapar en modell `models/position.js` där vi använder där vi hämtar nuvarande position och sedan ritar om vyn.
+
+```javascript
+// models/position.js
+"use strict";
+
+var m = require("mithril");
+
+var position = {
+    currentPosition: {},
+
+    getPosition: function() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                position.geoSuccess,
+                position.geoError
+            );
+        }
+    },
+
+    geoSuccess: function(pos) {
+        position.currentPosition = pos.coords;
+        m.redraw();
+    },
+
+    geoError: function(error) {
+        console.log('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+};
+
+module.exports = position;
+```
+
+I funktionen `getPosition()` kollar vi först om vi har tillgång till `navigator.geolocation` och anropar sedan `navigator.geolocation.getCurrentPosition()`. Beroende på utfallet av den funktionen anropas antigen `geoSuccess` eller `geoError`. I `geoSuccess` sätter vi den nuvarande position och ritar om vyn.
+
+I vyn använder vi `oninit` livscykel-metoden för att anropa `getPosition` i modellen.
+
+```javascript
+module.exports = {
+    oninit: position.getPosition,
+    oncreate: function() {
+        showMap();
+    },
+    view: function() {
+        showPosition();
+        return [
+            m("h1", "Map"),
+            m("div#map.map", "")
+        ];
+    }
+};
+```
+
+I `showMap` funktionen lägger vi till en ny sorts markör som markerar användarens position.
+
+```javascript
+locationMarker = new google.maps.Marker({
+    clickable: false,
+    icon: new google.maps.MarkerImage('https://maps.gstatic.com/mapfiles/mobile/mobileimgs2.png',
+                                                    new google.maps.Size(22,22),
+                                                    new google.maps.Point(0,18),
+                                                    new google.maps.Point(11,11)),
+    shadow: null,
+    zIndex: 999,
+    map: map
+});
+```
+
+Och vi skapar funktionen `showPosition()` där vi sätter positionen för vår markör `locationMarker`.
+
+```javascript
+function showPosition() {
+    if (position.currentPosition.latitude && position.currentPosition.longitude) {
+        var myPosition = new google.maps.LatLng(
+            position.currentPosition.latitude,
+            position.currentPosition.longitude
+        );
+        locationMarker.setPosition(myPosition);
+    }
+}
+```
 
 
 
