@@ -14,13 +14,6 @@ Kursen **Objektorienterade webbteknologier**, a.k.a. *oophp*, fokuserar på obje
 
 <!--more-->
 
-[WARNING]
-**Version 4 av oophp.**
-
-En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
-
-[/WARNING]
-
 Kursen hanterar objektorienterade programmeringstekniker i PHP med fokus mot webbprogrammering och webbutveckling av webbapplikationer och webbplatser.
 
 Grundläggande programmering i PHP gås igenom och därefter fokuseras på de objektorienterade konstruktionerna. Som databas används MySQL och PHP Data Objects används för att koppla PHP mot databasen.
@@ -134,22 +127,22 @@ Läs [instruktionen till kursmoment 04](./kmom04).
 
 
 
-###Kmom05: Programmera i databasen {#kmom05}
+###Kmom05: PHP PDO och MySQL {#kmom05}
 
-Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
+Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar i ett sammanhang och därefter får du på egen hand koda motsvarande funktionalitet in i din redovisa sida och in i ramverkets struktur.
 
-Du får implementera en större databasmodell och skriva SQL där du använder programmeringskonstruktioner för att skriva koden i SQL.
+Du får en utmaning som innebär att tänka igenom koden som serveras i övningen och hur den kan struktureras när den skall in i ramverket. Går det att göra objekt av allt eller har funktioner fortfarande en plats i kodstrukturen? Du väljer väg. Det blir en övning i refactoring.
 
-Du får även bygga en backend till en webbshop.
+Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read) för en webbapplikation mot en databas, närmare specifikt en filmdatabas.
 
 Läs [instruktionen till kursmoment 05](./kmom05).
 
 
-###Kmom06: Enhetstestning {#kmom06}
+###Kmom06: Lagra innehåll i databasen {#kmom06}
 
-Nu börjar vi närma oss slutet och vi finpolerar vårt Anax Lite genom att komplettera med enhetstester och vi förbättrar databasens prestanda med index.
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
-När det gäller enhetstestning så jobbar vi med PHpUnit och vi försöker hitta klasser som är testbara och vi ser hur bra vi lyckas uppnå kodtäckning.
+Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen och leder till effektiv SQL. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
 
 Läs [instruktionen till kursmoment 06](./kmom06).
 

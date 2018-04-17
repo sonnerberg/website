@@ -51,7 +51,7 @@ include(__DIR__ . "/autoload_namespace.php");
 
 $dice = new DiceGraphic();
 $res = [];
-for ($i = 0; $i < 5; $i++) {
+for ($i = 0; $i < 6; $i++) {
     $res[] = $dice->roll();
 }
 
