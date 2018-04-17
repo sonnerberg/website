@@ -21,9 +21,7 @@ Du kan hitta koden för detta exempel på [Github](https://github.com/dbwebb-se/
 
 Introduktion {#introduktion}
 --------------------------------------
-Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt som har plattformarna Browser och Android eller iOS.
-
-Vi börjar med att lägga till plugin:et.
+Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt som har plattformarna Browser och Android eller iOS. Vi börjar med att lägga till plugin:et `cordova-plugin-splashscreen`.
 
 ```bash
 cordova plugin add cordova-plugin-splashscreen --save
@@ -33,35 +31,51 @@ cordova plugin add cordova-plugin-splashscreen --save
 
 Android {#android}
 --------------------------------------
-Nu behöver vi bilder, många bilder. Om du tittar i mappen `platforms/android/res/` borde det finnas runt 8 mappar som heter "drawable-..." och fyra som heter "mipmap-...". "l-x"-DPI står för olika [skärmstorlekar](https://phonegappro.com/phonegap-tutorial/phonegap-icon-and-splash-screen-sizes/), tanken är att vi ska ha en bild i varje mapp med passande storlek. Mapparna som börjar på "drawable" är för _splash screens_ och mapparna som börjar på "mipmap" är för _ikoner_.
+Nu behöver vi bilder, många bilder. Om du tittar i mappen `res/` finns det två olika kataloger `icon` och `screen` och i dessa finns det en katalog för varje mobil operativsystem. Det är i dessa kataloger vi ska lägga ikoner och splash screens.
 
 
 
 ### Bilder {#bilder}
-För att skapa ikoner tar jag hjälp av [icons launcher](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html). Här kan du både ladda upp egna bilder och använda dig av Clipart's. När du bestämt dig för hur den ska se ut kan du ladda ner bilden med rätt storlekar.
-Om du väljer att ladda upp en egen bild bör den minst vara av storlek `1024x1024`. Jag har ingen bra bild i den storleken så jag väljer att använda dbwebb's favicon bild.
+För att skapa ikoner tar jag hjälp av [icons launcher](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html). Här kan du både ladda upp egna bilder och använda dig av Clipart's. När du bestämt dig för hur den ska se ut kan du ladda ner bilden med rätt storlekar. Om du väljer att ladda upp en egen bild bör den minst vara av storlek `1024x1024`. Jag har ingen bra bild i den storleken så jag väljer att använda dbwebb's favicon bild.
 
 [FIGURE src=/image/kunskap/cordova/create_icon_splash.png?w=700&h=500]
 
-När jag laddar ner filerna får jag en mapp-struktur som ser ut som nedan. Jag lägger den i `www/`.
+När jag laddar ner filerna får jag en mapp-struktur. Jag lägger innehållet i `res/icon/android`, så strukturen ser ut på följande sätt:
 
 ```bash
-res/
-├── android
-│   ├── mipmap-hdpi
-│   │   └── dbwebb_splash_icon.png
-│   ├── mipmap-mdpi
-│   │   └── dbwebb_splash_icon.png
-│   ├── mipmap-xhdpi
-│   │   └── dbwebb_splash_icon.png
-│   ├── mipmap-xxhdpi
-│   │   └── dbwebb_splash_icon.png
-│   └── mipmap-xxxhdpi
-│       └── dbwebb_splash_icon.png
+$ tree res/icon/android/
+res/icon/android/
+├── mipmap-hdpi
+│   └── ic_launcher.png
+├── mipmap-mdpi
+│   └── ic_launcher.png
+├── mipmap-xhdpi
+│   └── ic_launcher.png
+├── mipmap-xxhdpi
+│   └── ic_launcher.png
+├── mipmap-xxxhdpi
+│   └── ic_launcher.png
 └── web_hi_res_512.png
 ```
 
-För att skapa splash bilder finns det också hjälp, googla på "splash screen generator". Då ska bilden du använder dig utav minst vara av storleken `2208x2208`. För att spara tid väljer jag att återanvända ikonerna.
+För att skapa splashscreen bilderna användes [Abiro PhoneGap Image Generator](http://pgicons.abiro.com/), denna kan också användas för att skapa dina ikoner. Strukturen för dessa filer blir på följande sätt. Notera uppdelning i `land` och `port`, landskap och porträtt.
+
+```bash
+$ tree res/screen/android/
+res/screen/android/
+├── splash-land-hdpi.png
+├── splash-land-ldpi.png
+├── splash-land-mdpi.png
+├── splash-land-xhdpi.png
+├── splash-land-xxhdpi.png
+├── splash-land-xxxhdpi.png
+├── splash-port-hdpi.png
+├── splash-port-ldpi.png
+├── splash-port-mdpi.png
+├── splash-port-xhdpi.png
+├── splash-port-xxhdpi.png
+└── splash-port-xxxhdpi.png
+```
 
 
 
@@ -76,36 +90,33 @@ Om du inte har en platform-tag med android lägger du till det.
 </platform>
 ```
 
-Här ska vi länka bilder till vilken mapp de ska flyttas. Bilderna kommer kopieras till mapparna i `platforms/android/res/` när vi bygger appen.
-
 
 
 ### Ikoner {#ikoner}
 
-Vi börjar med ikonerna.
+Vi börjar med ikonerna. Vi har sedan tidigare lagt ikonerna i katalogen `res/icon/android`.
 
 ```xml
 <platform name="android">
     ...
-    <icon density="hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_screen.png" />
-</platfor>
+    <icon density="hdpi" src="res/icon/android/mipmap-hdpi/ic_launcher.png" />
+</platform>
 ```
-När appen byggs med Cordova flyttas bilden, "www/res/mipmap-hdpi/dbwebb_splash_screen.png", till "platforms/android/res/mipmap-hdpi/". Om appen sedan blir installerad på en enhet med "hdpi" skärm kommer vår app använda ikonen som ligger i `www/platforms/android/res/mipmap-hdpi/`.
 
-Vi lägger till för fler skärmstorlekar.
+När appen byggs med Cordova flyttas bilden, "www/res/mipmap-hdpi/ic_launcher.png", till "platforms/android/res/mipmap-hdpi/". Om appen sedan blir installerad på en enhet med "hdpi" skärm kommer vår app använda ikonen som ligger i `res/icon/android/mipmap-hdpi/`.
 
 ```xml
 <platform name="android">
     ...
-    <icon density="hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_screen.png" />
-    <icon density="mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png" />
-    <icon density="xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png" />
-</platfor>
+    <icon density="hdpi" src="res/icon/android/mipmap-hdpi/ic_launcher.png" />
+    <icon density="mdpi" src="res/icon/android/mipmap-mdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="res/icon/android/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="res/icon/android/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="res/icon/android/mipmap-xxxhdpi/ic_launcher.png" />
+</platform>
 ```
 
-Jag väljer att lägga in tre skärmar, om du vill kan du lägga till resterande bilder och storlekar. Du kan använda dig av samma bild till flera storlekar, t.ex. har vi ingen bild för "ldpi" då kan du använda samma som för t.ex. "mdpi".
-
-Då kollar vi hur det ser ut. Kör kommandot `cordova emulate android`. Navigera till dina appar genom att trycka på den lilla pilen ovanför apparna längst ner på skärmen. Här borde du se din app med din nya ikon och dina ikoner borde nu ha flyttats till `platforms/android/res/mipmap-Xdpi`.
+Då kollar vi hur det ser ut. Kör kommandot `cordova emulate android`. Navigera till dina appar genom att trycka på den lilla pilen ovanför apparna längst ner på skärmen. Här borde du se din app med din nya ikon och dina ikoner borde nu ha flyttats till `platforms/android/res/mipmap-xdpi`.
 
 [FIGURE src=/image/kunskap/cordova/icon_on_phone.png?w=600&h=400]
 
@@ -114,19 +125,25 @@ Om du vill kan du testa använda bilder som ser olika ut och köra appen i emula
 
 
 ### Splash screen {#splash_screen}
-
-Som jag skrev ovanför kommer jag återanvända ikon bilderna som splash screen.
-
 Vi ska göra likadant för splash screen som vi gjorde för ikoner. I `config.xml` inom android-taggen lägger vi till följande.
 
 ```xml
-<splash density="port-hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_icon.png" />
-<splash density="port-mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png" />
-<splash density="port-xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png" />
+<platform name="android">
+    ...
+    <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
+    <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
+    <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png" />
+    <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
+    <splash density="port-xxhdpi" src="res/screen/android/splash-port-xxhdpi.png" />
+    <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png" />
 
-<splash density="land-hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_icon.png" />
-<splash density="land-mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png" />
-<splash density="land-xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png" />
+    <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png" />
+    <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png" />
+    <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png" />
+    <splash density="land-xhdpi" src="res/screen/android/splash-land-xhdpi.png" />
+    <splash density="land-xxhdpi" src="res/screen/android/splash-land-xxhdpi.png" />
+    <splash density="land-xxxhdpi" src="res/screen/android/splash-land-xxxhdpi.png" />
+</platform>
 ```
 
 Vi döper taggarna till "splash" iställer för "icon", när vi specificerar vilken skärm varje bild ska kopplas till behöver vi lägga till om skärmen ska vara i "portrait" eller "landscape" läge. Vi testar, starta upp din emulator och kör igång appen så borde din splash screeen visas i någon sekund innan du kommer vidare till appens startsida.
@@ -136,9 +153,13 @@ Vi döper taggarna till "splash" iställer för "icon", när vi specificerar vil
 [FIGURE src=/image/kunskap/cordova/splash_running_land.png?w=400&h=200 caption="Splash screen landscape"]
 </figure>
 
-Vad vackert det blev. Om jag hade använt mig av bilder med korrect storlek hade det blivit mycket bättre så jag hoppas det ser bättre ut hos dig.
+Vad vackert det blev. Testa att köra din app i webbläsaren, det kan hända att du även har en splash screen där. Det är ovanligt att använda splash screen i webbläsaren, du kan få avgöra själv om du vill göra det. Vi går igenom hur du ändrar bilden och hur du kan stänga av den för webbläsaren. I webbläsaren är det alltid samma bild som visas så där behöver vi bara lägga till en bild.
 
-Testa att köra din app i webbläsaren, det kan hända att du även har en splash screen där. Det är ovanligt att använda splash screen i webbläsaren, du kan få avgöra själv om du vill göra det. Vi går igenom hur du ändrar bilden och hur du kan stänga av den för webbläsaren. I webbläsaren är det alltid samma bild som visas så där behöver vi bara lägga till en bild.
+Om du vill ha din splashscreen i kortare eller längre tid kan du använda följande tag.
+
+```xml
+<preference name="SplashScreenDelay" value="5000" />
+```
 
 Om du inte har en `<platform name="browser">` tag lägger du till det.
 För att stänga av splash screen för webbläsaren lägger du till `<preference name="ShowSplashScreen" value="false"/>` innanför browser-taggen. Alternativt ändra `value` till `true` för att aktivera den.
@@ -150,15 +171,41 @@ Det finns [inställningar för splash screen](https://cordova.apache.org/docs/en
 
 iOS {#ios}
 --------------------------------------
+På iOS räcker det med en enda bild för att täcka upp för det som i iOS världen heter en launch screen. Du skapar en stor bild 2732x2732 pixlar och sparar den som `res/screen/ios/Default@2x~universal~anyany.png` och lägger till följande i `config.xml`, under `platform-name='ios'`. Se till att lägga den viktiga delen av din splashscreen i mitten av bilden då den fysiska enheten själv skalar om bilden.
+
+```xml
+<platform name="ios">
+    ...
+    <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
+</platform>
+```
 
 
-För mer information om hur du skapar splashscreens och ikoner på iOS tiita i [Cordovas dokumentation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/#ios-specific-information).
+Om du vill ha din splashscreen i kortare eller längre tid kan du använda följande tag.
+
+```xml
+<preference name="SplashScreenDelay" value="5000" />
+```
+
+För mer information om hur du skapar splashscreens på iOS titta i [Cordovas dokumentation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/#ios-specific-information).
+
+
+
+### Ikoner
+För ikoner har vi även möjligheten att bara använda oss en bild. Vi fixar då till en ikon som är 120x120 pixlar stor. En möjlighet är att exportera en variant av splashscreen bilden som även den var kvadratisk. [Apple rekommenderar](https://developer.apple.com/library/content/qa/qa1686/_index.html) att man exporterar en hel hög med bilder. En stark rekommendation är att ha med även en 180x180 pixlar stor bild, då denna används för nyare iPhones och iPads. Vi importerar ikonen på ungefär samma sätt som för en splashscreeen i `config.xml`.
+
+```xml
+<platform name="ios">
+    ...
+    <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
+    <icon src="res/icon/ios/icon-60@2x.png" width="120" height="120" />
+    <icon src="res/icon/ios/icon-60@3x.png" width="180" height="180" />
+</platform>
+```
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Nu har vi fixat en ikon och en splash screen. Och våra apps får direkt känslan av att
-
-Om du har frågor eller tips så finns det en särskild tråd i forumet om [denna artikeln](t/7413).
+Nu har vi fixat en ikon och en splash screen. Och våra apps andas direkt mer native applikation. Om du har frågor eller tips så finns det en särskild tråd i forumet om [denna artikeln](t/7413).

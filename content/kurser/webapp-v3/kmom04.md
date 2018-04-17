@@ -21,7 +21,7 @@ N채r man skapar en faktura 채r det bra att ha snygga och responsiva tabeller. S�
 
 S책 h채r kan det se ut n채r vi 채r klara.
 
-[YOUTUBE src=9yrgftTwVDw width=630 caption="Winecellar i kursmoment 4."]
+[YOUTUBE src=9yrgftTwVDw width=630 caption="Lager appen i kursmoment 4."]
 
 
 
