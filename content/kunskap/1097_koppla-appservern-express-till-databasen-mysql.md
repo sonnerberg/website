@@ -179,9 +179,9 @@ Låt oss ta det stegvis. Vi behöver följande.
 1. Använd modulen i routes `route/bank.js`.
 1. Generera en HTML-tabell i vyn `views/bank/balance.ejs`.
 
-Det vi slutligen vill se är följande webbsida.
+Det vi slutligen vill se är en webbsida i stil med följande.
 
-[FIGURE src=image/snapvt18/bank-balance-complete.png caption=""]
+[FIGURE src=image/snapvt18/bank-header-footer.png?w=w3 caption="En översikt av konton, presenterade i en tabell och diverse kvarlämnade debug utskrifter."]
 
 Låt oss ta det stegvis.
 
@@ -308,7 +308,7 @@ Så här kan sidan se ut.
 
 [FIGURE src=image/snapvt18/bank-balance-json.png caption="Balansen skrivs ut i form av ul/li och JSON."]
 
-NU har vi egentligen koll på allt. Det sista är mer en programmeringsövning för att skapa en HTML-tabell, men för att bli kompletta kan vi även lägga till den delen i vyn.
+Nu har vi egentligen koll på allt. Det sista är mer en programmeringsövning för att skapa en HTML-tabell, men för att bli kompletta kan vi även lägga till den delen i vyn.
 
 Så här kan det se ut när man visar upp resultatet i en HTML-tabell.
 
@@ -387,7 +387,7 @@ I första anropet skickar vi med värdet på sidans titel.
 
 Om vi lägger till lite style i stylesheeten så kan sidan nu se ut så här.
 
-[FIGURE src=image/snapvt18/bank-header-footer.png caption="Nu har banken en gemensam sidlayout för alla sidor."]
+[FIGURE src=image/snapvt18/bank-header-footer.png?w=w3 caption="Nu har banken en gemensam sidlayout för alla sidor."]
 
 Så kan det alltså se ut när man skapar en gemensam sidlayout med vyer.
 
