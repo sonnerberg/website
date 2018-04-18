@@ -18,7 +18,7 @@ I kursmoment 5 skapade vi en native app baserad på vår webapp med hjälp av Co
 
 Förkunskaper {#forkunskaper}
 -----------------------
-Du har gjort uppgiften [Lager appen del 5](uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna "[Animationer och övergångar](kunskap/animationer-och-overgangar)" och "[GPS och karta](kunskap/gps-och-karta)".
+Du har gjort uppgiften [Lager appen del 5](uppgift/lager-appen-del-5). Du har jobbat dig igenom övningarna "[Animationer och övergångar](kunskap/animationer-och-overgangar)" och "[GPS och karta](kunskap/gps-och-karta)".
 
 
 
