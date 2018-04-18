@@ -5,7 +5,7 @@ category:
     - phpunit
     - kursen oophp
 revision:
-    "2018-04-03": "(A, mos) Första utgåvan i samband med oophp version 2."
+    "2018-04-03": "(A, mos) Första utgåvan i samband med oophp version 4."
 ...
 Kom igång med PHPUnit
 ==================================
@@ -42,9 +42,7 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför samt jobba igenom större delen av uppgiften.
 
-<!--
-[YOUTUBE src="XXX" playlist="PLKtP9l5q3ce-LjAqv50bj_bCyYivKafPW" class=700 caption="Mikael visar hur du jobbar igenom övningen."]
--->
+[YOUTUBE src="0d6t7z9CgLE" playlist="PLKtP9l5q3ce-LjAqv50bj_bCyYivKafPW" width=700 caption="Mikael visar hur du jobbar igenom övningen."]
 
 
 

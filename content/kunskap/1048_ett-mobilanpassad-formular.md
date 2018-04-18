@@ -177,18 +177,31 @@ module.exports = {
                 oninput: m.withAttr("value", function(value) { Computer.current.year = value }),
                 value: Computer.current.year
             }),
+            m("label.input-label", "Operating System"),
+            m("select.input", {
+                onchange: m.withAttr("value", function(value) { Computer.current.os = parseInt(value) })
+            }, Computer.operatingSystems.map(function(os) {
+                return m("option", { value: os.id }, os.name);
+            })),
             m("input[type=submit][value=Save].button", "Save")
         ]);
     }
 };
 ```
 
-Modellen `Computer` som används för att hämta ut den specifika datorn som ska redigeras (`load`) och spara datorn (`save`) ser ut enligt nedan. Först definierar vi `Computer.current`, objektet används för att spara data vi hämtar från vårt låtsas API. När vi sedan ska spara datorn anropar vi en `PUT` route och skickar med `Computer.current` som data objekt.
+Modellen `Computer` som används för att hämta ut den specifika datorn som ska redigeras (`load`) och spara datorn (`save`) ser ut enligt nedan. Först definierar vi `Computer.operatingSystems` och  `Computer.current`. De används för att visa upp operativsystem och `current` används för att spara data vi hämtar från vårt låtsas API. När vi sedan ska spara datorn anropar vi en `PUT` route och skickar med `Computer.current` som data objekt.
 
 ```javascript
 var m = require("mithril");
 
 var Computer = {
+    operatingSystems: [
+        { id: 1, name: "Windows 10" },
+        { id: 2, name: "Windows 7" },
+        { id: 3, name: "MacOS" },
+        { id: 4, name: "Debian" },
+        { id: 4, name: "Ubuntu" }
+    ],
     current: {},
     load: function(id) {
         return m.request({
@@ -196,7 +209,6 @@ var Computer = {
             url: "www.api-url.com/load/" + id
         }).then(function(result) {
             Computer.current = result;
-            // current = { id: 1, name: 'Mac', year: 2016 }
         });
     },
     save: function() {

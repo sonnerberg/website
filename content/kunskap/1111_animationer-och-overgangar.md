@@ -4,12 +4,12 @@ category: javascript
 revision:
   "2018-03-02": (A, efo) Första utgåvan inför kursen webapp v3.
 ...
-Animationer och övergånger
+Animationer och övergångar
 ==================================
 
 [FIGURE src=/image/webapp/moving.jpg?w=c5 class="right"]
 
-Vi har i tidigare kursmoment tittat på hur vi kan designa webapplikationer så de ser ut som native appar. Vi ska i denna övning titta på hur vi med hjälp av animationer och övergånger även får känslan av att det är en native app.
+Vi har i tidigare kursmoment tittat på hur vi kan designa webbapplikationer så de ser ut som native appar. Vi ska i denna övning titta på hur vi med hjälp av animationer och övergångar även får känslan av att det är en native app.
 
 
 
@@ -27,7 +27,7 @@ Vi ser att detalj-vyn kommer in från höger och försvinner ut till höger. Vi 
 
 Grunden i mithril-appen {#mithril}
 --------------------------------------
-Jag har gjort en app med två stycken vyer `js/views/list.js` och `js/views/detail.js`. List-vyn visar två stycken länkar till detalj-vyn som visar upp en siffra. Oerhört enkelt men räcker för det vi vill åstadkomma i övningen och låter oss fokusera på animationer. Nedan syns list-vyn och under det kodexemplet finss detalj-vyn.
+Jag har gjort en app med två stycken vyer `js/views/list.js` och `js/views/detail.js`. List-vyn visar två stycken länkar till detalj-vyn som visar upp en siffra. Oerhört enkelt men räcker för det vi vill åstadkomma i övningen och låter oss fokusera på animationer. Nedan syns list-vyn och under det kodexemplet finns detalj-vyn.
 
 ```javascript
 // js/views/list.js
@@ -68,13 +68,13 @@ module.exports = {
 };
 ```
 
-I `js/index.js` skapar vi bara de två routes som behövs.
+I `js/index.js` skapar vi de två routes som behövs.
 
 
 
 CSS {#css}
 --------------------------------------
-Vi använder `@keyframes` för att göra animation av de olika vyerna. Vi använder `transform: translateX()` för att flytta vy och definerar två stycken `@keyframes`: `moveFromRight` och `moveToRight`.
+Vi använder `@keyframes` för att göra animation av de olika vyerna. Vi använder `transform: translateX()` för att flytta vy och definierar två stycken `@keyframes`: `moveFromRight` och `moveToRight`.
 
 ```css
 @keyframes moveFromRight {
@@ -86,7 +86,7 @@ Vi använder `@keyframes` för att göra animation av de olika vyerna. Vi använ
 }
 ```
 
-I `moveFromRight` flyttar vi den från 100% dvs från höger om skärmen och i `moveToRight` flyttar vi den till precis höger om skärmen.
+I `moveFromRight` flyttar vi den från 100% dvs. från höger om skärmen och i `moveToRight` flyttar vi den till precis höger om skärmen.
 
 Vi definierar först klassen `.slide-in` som använder sig av `moveFromRight` på nedanstående sätt. Detalj-vyerna har alltid klassen `.slide-in`, vilket skarpsynta såg ovan.
 
@@ -121,7 +121,7 @@ module.exports = {
 };
 ```
 
-Klassen `.slide-out` som vi lägger använder sig av `moveToRight`.
+Klassen `.slide-out` som använder sig av `moveToRight` keyframen.
 
 ```css
 .slide-out {
@@ -129,9 +129,9 @@ Klassen `.slide-out` som vi lägger använder sig av `moveToRight`.
 }
 ```
 
-Vår animerade sidövergånger ser nu ut på följande sätt.
+Vår animerade övergångar ser nu ut på följande sätt.
 
-[FIGURE src=/img/webapp/animation-css.gif class="right"]
+<img src="/img/webapp/animation-css.gif" class="right" width="300px" />
 
 
 

@@ -7,6 +7,7 @@ category:
     - mysql
     - kurs oophp
 revision:
+    "2018-04-17": "(G, mos) Genomgången inför oophp-v4 och ett antal mindre uppdateringar i text och kod."
     "2017-04-11": "(F, mos) Uppdaterade koden för återställa."
     "2017-04-07": "(E, mos) Större genomarbetning inför oophp-v3, flera stycken borttagna."
     "2014-03-05": "(D, mos) Gick inte radera, lade till stycke om att radera även Movie2Genre samt återställning på windows."
@@ -19,7 +20,7 @@ Kom igång med PHP PDO och MySQL (v2)
 
 [FIGURE src=image/snapvt17/movie-paginate-sort.png?w=c5 class="right"]
 
-Denna guide hjälper dig att komma i gång med PHP PDO och MySQL genom att bygga upp en enklare webbplats kring en filmdatabas. Stegvis skapar du ett gränssnitt som jobbar mot databasen och ställer de vanliga CRUD-relaterade frågorna för utsökning av objekt, skapa nya objekt, radera objekt och uppdatera informationen om ett objekt. När du är klar kan du applicera koden för din filmdatabas mot en annan databas, förfarandet är detsamma och guiden ger dig grunderna till en databasdriven webbplats, oavsett det är en filmdatabas eller webbshop.
+Denna guide hjälper dig att komma i gång med PHP PDO och MySQL genom att bygga upp en enklare webbplats kring en filmdatabas. Stegvis skapar du ett gränssnitt som jobbar mot databasen och ställer  vanliga CRUD-relaterade frågor för utsökning av objekt, skapa nya objekt, radera objekt och uppdatera informationen om ett objekt. När du är klar kan du applicera koden för din filmdatabas mot en annan databas med annat innehåll, förfarandet är detsamma och guiden ger dig grunderna till en databasdriven webbplats, oavsett det är en filmdatabas eller webbshop.
 
 <!--more-->
 
@@ -31,22 +32,20 @@ Lyssna på de felmeddelande du får. De kommer från PHP eller från MySQL och d
 
 > *Felmeddelandet har alltid rätt.*
 
-När du felsöker PHP mot MySQL så kör du alltid SQL-frågorna i en annan klient (Workbench eller terminalklienten) och testar att de fungerar, innan du lägger in dem i PHP-koden. Två vägar att felsöka och testa koden.
+När du felsöker PHP mot MySQL så kör du alltid SQL-frågorna i en annan klient (Workbench eller terminalklienten) och testar att de fungerar, innan du lägger in dem i PHP-koden. Det hjälper dig att avgränsa i vilket område felet finns.
 
 Så här kan det se ut när du är klar.
 
-[FIGURE src=image/snapvt17/movie-paginate-1.png?w=w2 caption="Första sidan visas med två träffar."]
+[FIGURE src=image/snapvt17/movie-paginate-1.png?w=w3 caption="Första sidan visas med två träffar."]
 
 
 
 Förkunskaper {#forkunskaper}
 -------------------------------------------------------------------------------
 
-Guiden förutsätter att du har kunskaper i PHP och webbutveckling. Känner du dig osäker på PHP så bör du först läsa igenom guiden ["Kom i gång med PHP på 20 steg"](kunskap/kom-i-gang-med-php-pa-20-steg).
+Du behöver ha koll på generell webbutveckling med PHP och det är bra om du kan objektorienterad PHP.
 
-Det är mycket bra om du är van vid objektorienterad PHP-programmering. Behöver du grunderna så kan du jobba igenom guiden ["Kom i gång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
-
-Du behöver vara bekant med MySQL och dess olika klienter. Guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)" hjälper dig att komma i gång med det.
+Du behöver även ha koll på MySQL och det underlättar att vara bekant med PHP PDO och begrepp som CRUD.
 
 Källkoden till artikelns exampel finns i kursrepot (oophp) under [`example/php-pdo-mysql`](https://github.com/dbwebb-se/oophp/tree/master/example/php-pdo-mysql).
 
@@ -100,14 +99,16 @@ Exemplet utgår från filen `index.php` som innehåller en _frontcontroller_ och
 
 Databaskoden som går mot PDO är samlad i klassen `src/Database.php`.
 
-Provkör gärna exempelkoden och studera den i din texteditor. Du kommer dock behöva en databas för att det skall fungera i alla delar, men det löser vi snart.
+Studera gärna koden i din texteditor. Du kommer behöva en databas för att det skall fungera i en webbläsare. Låt oss fixa en databas.
 
 
 
 PHP PDO som gränssnitt mot MySQL {#granssnitt}
 -------------------------------------------------------------------------------
 
-Det finns olika sätt att via PHP koppla sig mot en MySQL-databas. Om du använder äldre webbapplikationer så används kanske gränsnitten [mysql](http://php.net/manual/en/book.mysql.php) eller [mysqli](http://php.net/manual/en/book.mysqli.php). Det är bra att bekanta sig med dem, men för denna övningen har jag valt interfacet [PHP PDO](http://www.php.net/manual/en/book.pdo.php), eller PHP Data Objects som det kallas. PHP PDO är ett nyare gränssnitt, jämfört med mysql och mysqli, och fungerar mot en mängd olika databaser. Det är alltså *ett* gränsnitt som fungerar mot flera olika databaser. Det är en klar fördel att endast behöva lära sig ett gränssnitt, oavsett vilken databas man jobbar emot, det blir lättare att anpassa koden mot andra databaser, man behöver inte lära sig ett nytt gränssnitt för varje databas. Här finns tid att spara.
+Det finns olika sätt att via PHP koppla sig mot en MySQL-databas. Om du använder äldre webbapplikationer så används kanske gränsnitten [mysql](http://php.net/manual/en/book.mysql.php) eller [mysqli](http://php.net/manual/en/book.mysqli.php). Det är bra att vara medveten om dem, men för denna övningen har jag valt interfacet [PHP PDO](http://www.php.net/manual/en/book.pdo.php), eller PHP Data Objects som det kallas.
+
+PHP PDO är ett nyare gränssnitt, jämfört med mysql och mysqli, och fungerar mot en mängd olika databaser. Det är alltså *ett* gränsnitt som fungerar mot flera olika databaser. Det är en klar fördel att endast behöva lära sig ett gränssnitt, oavsett vilken databas man jobbar emot, det blir lättare att anpassa koden mot andra databaser, man behöver inte lära sig ett nytt gränssnitt för varje databas. Här finns tid att spara.
 
 
 
@@ -127,7 +128,7 @@ Först skapar jag databasen via ren SQL kod i godtycklig klient.
 
 
 
-###Skapa databasen {#createdatabase}
+### Skapa databasen {#createdatabase}
 
 Jag behöver en databas för att testa. Kanske borde jag döpa den till Movie. Men, eftersom du troligen läser denna artikel som en del i en kurs, så kan vi skapa en testdatabas som vi kan ha till diverse saker.
 
@@ -164,7 +165,7 @@ Bra, då vet jag att vi alla har liknande grund för det som nu komma skall.
 
 
 
-###Skapa och fyll tabell {#createtable}
+### Skapa och fyll tabell {#createtable}
 
 Då tar vi och skapar en tabell till vår filmdatabas.
 
@@ -178,26 +179,26 @@ SET NAMES utf8;
 DROP TABLE IF EXISTS `movie`;
 CREATE TABLE `movie`
 (
-  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `title` VARCHAR(100) NOT NULL,
-  `director` VARCHAR(100),
-  `length` INT DEFAULT NULL,            -- Length in minutes
-  `year` INT NOT NULL DEFAULT 1900,
-  `plot` TEXT,                          -- Short intro to the movie
-  `image` VARCHAR(100) DEFAULT NULL,    -- Link to an image
-  `subtext` CHAR(3) DEFAULT NULL,       -- swe, fin, en, etc
-  `speech` CHAR(3) DEFAULT NULL,        -- swe, fin, en, etc
-  `quality` CHAR(3) DEFAULT NULL,
-  `format` CHAR(3) DEFAULT NULL         -- mp4, divx, etc
+    `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    `title` VARCHAR(100) NOT NULL,
+    `director` VARCHAR(100),
+    `length` INT DEFAULT NULL,            -- Length in minutes
+    `year` INT NOT NULL DEFAULT 1900,
+    `plot` TEXT,                          -- Short intro to the movie
+    `image` VARCHAR(100) DEFAULT NULL,    -- Link to an image
+    `subtext` CHAR(3) DEFAULT NULL,       -- swe, fin, en, etc
+    `speech` CHAR(3) DEFAULT NULL,        -- swe, fin, en, etc
+    `quality` CHAR(3) DEFAULT NULL,
+    `format` CHAR(3) DEFAULT NULL         -- mp4, divx, etc
 ) ENGINE INNODB CHARACTER SET utf8 COLLATE utf8_swedish_ci;
 
 DELETE FROM `movie`;
 INSERT INTO `movie` (`title`, `year`, `image`) VALUES
-  ('Pulp fiction', 1994, 'img/pulp-fiction.jpg'),
-  ('American Pie', 1999, 'img/american-pie.jpg'),
-  ('Pokémon The Movie 2000', 1999, 'img/pokemon.jpg'),  
-  ('Kopps', 2003, 'img/kopps.jpg'),
-  ('From Dusk Till Dawn', 1996, 'img/from-dusk-till-dawn.jpg')
+    ('Pulp fiction', 1994, 'img/pulp-fiction.jpg'),
+    ('American Pie', 1999, 'img/american-pie.jpg'),
+    ('Pokémon The Movie 2000', 1999, 'img/pokemon.jpg'),  
+    ('Kopps', 2003, 'img/kopps.jpg'),
+    ('From Dusk Till Dawn', 1996, 'img/from-dusk-till-dawn.jpg')
 ;
 
 SELECT * FROM `movie`;
@@ -235,69 +236,121 @@ img
 0 directories, 6 files
 ```
 
-Nu skall jag koppla ett PHP-skript till databasen och börja koda.
+
+
+### Kör applikationen {#movieapp}
+
+Nu när databasen är på plats så kan jag köra min applikation genom att öppna frontkontrollern `index.php` i en webbläsare.
+
+Resultatet kan se ut så här.
+
+[FIGURE src=image/snapvt18/movie-database.png?w=w3 caption="En fullt fungerande filmdatabas."]
+
+Då tittar vi hur applikationen är uppbyggd. Låt mig först visa hur jag kopplar ett PHP-skript till databasen.
 
 
 
 Koppla ett PHP-skript till en MySQL-databas med PDO {#skript}
 -------------------------------------------------------------------------------
 
-Då bygger vi upp ett skript som kopplar sig mot databasen och visar dess innhehåll i en HTML-tabell. Jag tänker skriva enklast möjliga PHP-kod, det är databasen jag vill testa, tillsammans med PHP. En vacker dag kan jag ta och överföra principerna för denna koden till ett annat sammanhang, in i ett ramverk till exempel.
+Vi bygger upp ett skript som kopplar sig mot databasen och visar dess innhehåll i en HTML-tabell. Jag tänker skriva enklast möjliga PHP-kod, det är databasen jag vill testa, tillsammans med PHP.
+
+En vacker dag kan jag ta och överföra principerna för denna koden till ett annat sammanhang, in i ett ramverk till exempel.
 
 
 
-###Detaljer för koppling {#kopplaconfig}
+### Detaljer för koppling {#kopplaconfig}
 
 Först måste jag skapa en koppling mot databasen. För att skapa en koppling så behöver jag detaljer för att logga in på databasservern.
 
-Jag lägger de detaljerna i en array.
+Jag lägger de detaljerna i en array och sparar i filen `src/config.php`.
 
 ```php
-/**
+//**
  * Details for connecting to the database.
  */
 $databaseConfig = [
-    $dsn      = "mysql:host=localhost;dbname=oophp;",
-    $login    = "user",
-    $password = "pass",
-    $options  = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"],
+    "dsn"      => "mysql:host=127.0.0.1;dbname=oophp;",
+    "login"    => "user",
+    "password" => "pass",
+    "options"  => [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"],
 ];
 ```
 
-Jag använder de detaljer som behövs för att koppla upp sig mot databasen, server *host*, databas *dbname*, användare *login* och lösenord *password*. Med hjälp av dem skapar jag ett objekt av klassen [PDO](http://www.php.net/manual/en/class.pdo.php). Kika gärna på [klassens konstruktor](http://www.php.net/manual/en/pdo.construct.php) så ser du hur argumenten kan anges. 
+Jag använder de detaljer som behövs för att koppla upp sig mot databasen, server *host*, databas *dbname*, användare *login* och lösenord *password*.
+
+Med hjälp av detaljerna ovan skapar jag ett objekt av klassen [PDO](http://www.php.net/manual/en/class.pdo.php). Det är objektet som håller kopplingen mot databasen. Kika gärna på [PDO klassens konstruktor](http://www.php.net/manual/en/pdo.construct.php) så ser du hur argumenten kan anges. 
 
 DSN står för *[Data Source Name](http://en.wikipedia.org/wiki/Data_source_name)* och är ett generellt sätt att ange en datakälla på.
 
-Beroende på vilken databas du kopplar upp dig till kan argumenten se lite olika ut. Det finns dokumentation om hur [olika PDO-drivers](http://www.php.net/manual/en/pdo.drivers.php) kan hanteras. En option som jag använder är att skicka med instruktionen för att jag vill använda teckenkodningen UTF8. Det behövs för att bestämma vilken teckenkodning som skall användas på kopplingen mellan PHP och MySQL. Annars fungerar inte UTF8. Du kan läsa mer om [specialinställningar för MySQL](http://www.php.net/manual/en/ref.pdo-mysql.php) i manualen.
+Beroende på vilken databas du kopplar upp dig till kan argumenten se lite olika ut. Det finns dokumentation om hur [olika PDO-drivers](http://www.php.net/manual/en/pdo.drivers.php) kan hanteras.
+
+En option som jag använder är att skicka med instruktionen för att jag vill använda teckenkodningen UTF8. Det behövs för att bestämma vilken teckenkodning som skall användas på kopplingen mellan PHP och MySQL. Annars fungerar inte UTF8. Du kan läsa mer om [specialinställningar för MySQL](http://www.php.net/manual/en/ref.pdo-mysql.php) i manualen.
 
 
 
-###Koppla upp {#kopplaupp}
+### Koppla upp {#kopplaupp}
 
-Då initierar vi själva kopplingen genom att skapa ett objekt av typen PDO.
+Då initierar vi själva kopplingen genom att skapa ett objekt av typen PDO. Koden återfinns i metoden `connect()` i klassen `src/Database.php`.
 
 ```php
-try {
-    $pdo = new PDO(...$databaseconfig);
-} catch (Exception $e) {
-    // Rethrow to hide connection details, through the original
-    // exception to view all connection details.
-    //throw $e;
-    throw new PDOException("Could not connect to database, hiding details.");
+/**
+ * Create a connection to the database.
+ *
+ * @param array $config details on how to connect.
+ *
+ * @return void
+ *
+ * @SuppressWarnings(PHPMD)
+ */
+public function connect($config)
+{
+    try {
+        $this->pdo = new PDO(...array_values($config));
+        $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+    } catch (Exception $e) {
+        // Rethrow to hide connection details, through the original
+        // exception to view all connection details.
+        //throw $e;
+        throw new PDOException("Could not connect to database, hiding details.");
+    }
 }
 ```
 
-Nu finns vår databaskoppling i `$pdo`.
+Nu finns vår databaskoppling i `$this->pdo` inuti vår egen PDO wrapper-klass `Database`.
 
 Om uppkopplingen går fel så kastas ett exception där felet anges. De vanligaste problemen är att man skriver in fel server, databas, användare, lösenord eller att man missat att sätta UTF8 på överföringen.
 
-När exception kastas så visas alla parametrarna i felutskrifter, även inloggningsdetaljerna som användarnamn och lösenord. Därför är det bäst att göra uppkopplingen inom ramen för en try-catch-sats så att man inte oavsiktligt riskerar att visa upp användare och lösenord för hela världen.
+När exception kastas så visas _alla_ parametrarna i felutskrifter, även inloggningsdetaljerna som användarnamn och lösenord. Därför är det bäst att göra uppkopplingen inom ramen för en try-catch-sats så att man inte oavsiktligt riskerar att visa upp användare och lösenord för hela världen.
+
+Om du vill visa all information om felet så kan du kasta den bortkommenterade `throw $e;`.
 
 
 
-###Hämta data från databasen {#select}
+### En wrapper-klass över PDO {#pdowrap}
 
-I PHP PDO använder vi [*prepared statements*](http://www.php.net/manual/en/pdo.prepared-statements.php) när vi jobbar mot databasen. Först tar man en SQL-fråga och förbereder den, sedan exekverar man själva frågan och till slut hämtar man resultatet. Så här kan det se ut.
+I mitt kodexempel har jag valt att implementera ett lager ovan PDO i form av klassen `Database`. Det visar sig att det kan vara en bra struktur. Klassen Database ger en möjlighet att samla bra-att-ha-metoder och göra ett API som är enkelt att använda i applikationens övriga klasser.
+
+Men, tänk gärna kritiskt, varför inte bara använda PDO rätt in i exempelkoden?
+
+Troligen kommer du se att koden blir snyggare, enklare och färre kodrader med en wrapper likt `Database`.
+
+När vi i frontkontrollern `index.php` skapar ett objekt av databasen så ser det ut så här.
+
+```php
+$db = new Database();
+$db->connect($databaseConfig);
+```
+
+Först skapa objektet och sedan göra kopplingen med den givna configurationen.
+
+Vår applikation använder aldrig PDO direkt, all användning av PDO går via klassen Database.
+
+
+
+### Hämta data från databasen {#select}
+
+I PHP PDO använder vi [*prepared statements*](http://www.php.net/manual/en/pdo.prepared-statements.php) när vi jobbar mot databasen. Först tar man en SQL-fråga och förbereder den, sedan exekverar man själva frågan och till slut hämtar man resultatet. Så här kan det se ut när man använder PDO.
 
 ```php
 $sql = "SELECT * FROM movie;";
@@ -307,6 +360,43 @@ $res = $sth->fetchAll();
 ```
 
 Variabeln `$sth` representerar ett objekt av klassen [PDO Statement](http://www.php.net/manual/en/class.pdostatement.php). Man tar alltså en SQL-fråga och skapar ett objekt av klassen PDO Statement utifrån frågan. Sedan exekverar man med metoden `execute()` och resultatet `$res` kommer i form av en 2-dimensionell array.
+
+I vårt exempel gör vi motsvarande i frontkontrollern `index.php` genom att använda klassen Database.
+
+```php
+$sql = "SELECT * FROM movie;";
+$resultset = $db->executeFetchAll($sql);
+```
+
+Vi har alltså gjort en metod `$db->executeFetchAll($sql)` som utför PDO-sekvensen. Vi kan se hur metoden är implementerad i `src/Database.php`.
+
+```php
+/**
+ * Do SELECT with optional parameters and return a resultset.
+ *
+ * @param string $sql   statement to execute
+ * @param array  $param to match ? in statement
+ *
+ * @return array with resultset
+ */
+public function executeFetchAll($sql, $param = [])
+{
+    $sth = $this->execute($sql, $param);
+    $res = $sth->fetchAll();
+    if ($res === false) {
+        $this->statementException($sth, $sql, $param);
+    }
+    return $res;
+}
+```
+
+Det som vi gör i PDO med prepare och execute är dolt i `Database::execute()`, vi kan kika mer på det lite senare.
+
+Vi kan se att vår wrapper Database även lägger ett lager av felhantering kring PDO. Totalt får vi mindre kod att skriva i frontkontrollern. Även om det bara handlar om ett fåtal rader så blir det viktigt i det stora hela.
+
+
+
+### Skriv ut och debugga resultsetet {#outputres}
 
 Du kan nu göra `var_dump()` eller `print_r()` på innehållet i `$res`. Som du kan se är det en array som i sin tur innehåller en array för varje rad i tabellen.
 
@@ -353,9 +443,11 @@ $name = $resultset[0][1];
 $name = $resultset[0]["title"];
 ```
 
+Man kan delvis styra strukturen på innehållet i `$res` genom att ange vilken _fetchstyle_ som skall användas.
 
 
-###Olika fetchstyles {#fetchstyle}
+
+### Olika fetchstyles {#fetchstyle}
 
 Det finns olika sätt att hämta informationen ur databasen, olika *fetch-styles*, du kan läsa om de olika varianterna i manualsidan för metoden [`fetch()`](http://www.php.net/manual/en/pdostatement.fetch.php). 
 
@@ -364,6 +456,8 @@ Jag brukar föredra att få tillbaka resultatet som ett objekt genom att använd
 ```php
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 ```
+
+Du kanske noterade den kodraden tidigare i metoden `Database::connect()`.
 
 Nu ser resultatet istället ut så här, arrayen innehåller ett objekt med properties (vissa element är borttagna för att minska urskriften).
 
@@ -393,7 +487,9 @@ Array
         )
 ```
 
-Nu kan man nå namnet på första filmen så här istället, med objektnotation.
+Arrayen `$res` innehåller nu objekt.
+
+Man kan nu nå namnet på första filmen med objektnotation.
 
 ```php
 $name = $resultset[0]->title;
@@ -409,15 +505,15 @@ foreach ($resultset as $row) {
 
 Nåväl, det finns olika sätt att hämta ut resultsetet. Vilket man använder beror på vad man föredrar och hur resten av koden är skriven. Vi jobbar objektorienterat så objektstilen känns logiskt.
 
-Nu kan jag loopa igenom resultatet och skapa en HTML-tabell för att visa upp resultatet.
+Nu kan jag loopa igenom resultatet och skapa en HTML-tabell för att visa upp resultatet (Show all movies).
 
-[FIGURE src=image/snapvt17/movie-show-all.png?w=w2 caption="Innehållet i databastabellen visas i en webbsida."]
+[FIGURE src=image/snapvt17/movie-show-all.png?w=w3 caption="Innehållet i databastabellen visas i en webbsida."]
 
 Bra, då har vi en start. Innehållet i databastabellen finns nu presenterat och tillgängligt i min webbsida.
 
-Dessutom gjorde jag en testsida som kan vara bra vid debugging, test och lek.
+Dessutom gjorde jag en testsida som kan vara bra vid debugging, test och lek (SELECT \*).
 
-[FIGURE src=image/snapvt17/movie-select-all.png?w=w2 caption="Råa utskrifter av SQL-fråga och resultset."]
+[FIGURE src=image/snapvt17/movie-select-all.png?w=w3 caption="Råa utskrifter av SQL-fråga och resultset."]
 
 Testsidan skriver ut det råa innehållet i ett resultset.
 
@@ -453,13 +549,21 @@ if (isset($_POST["reset"]) || isset($_GET["reset"])) {
 }
 ```
 
-Här exekverar jag ett externt kommando via PHPs funktion `exec()`. Det är ett enkelt sätt att skicka en hög med SQL-frågor till databasen via en fil och kommandoradsklienten.
+Här exekverar jag ett externt kommando via PHPs funktion `exec()`. Det är ett enkelt sätt att skicka en hög med SQL-frågor till databasen via en fil och terminalklienten.
 
-Du behöver kontrollera sökvägen till kommandoradsklienten och ändra den för ditt eget systems förutsättningar. Använd en absolut sökväg då du inte riktigt vet vilken PATH som webbservern har tillgång till. Du behöver också lägga till innehåll i de variabler som anger inloggnings- och databasdetaljer.
+I exempelkoden ligger ovan konstruktion i `view/reset.php`.
+
+Du behöver kontrollera sökvägen till terminalklienten och ändra den för ditt eget systems förutsättningar. Använd en absolut sökväg då du inte riktigt vet vilken PATH som webbservern har tillgång till.
+
+Det är följande rad i `view/reset.php` som anger sökvägen till terminalklienten.
+
+```php
+$mysql  = "/usr/bin/mysql";
+```
 
 Delen med `2>&1` gör så att eventuella felmeddelanden syns på en Unix-maskin. Det är ett sätt att omdirigera stderr till stdout.
 
-[FIGURE src=image/snapvt17/movie-reset.png?w=w2 caption="Återställ databasen till sitt ursprungliga skick."]
+[FIGURE src=image/snapvt17/movie-reset.png?w=w3 caption="Återställ databasen till sitt ursprungliga skick."]
 
 När man testar och leker runt så är det bra att kunna rensa databasen ibland, antingen via terminalen, eller ett skript i Workbench, eller som här, via ett klick i en webbsida.
 
@@ -498,19 +602,19 @@ Grunden för ett sökformulär kan se ut så här.
 </form>
 ```
 
-Ovan formulär är från mitt exempelprogram så det är anpassat till exemplet, men i grunden är det hur ett sökformulär kan se ut.
+Ovan formulär är från mitt exempelprogram `view/search-title.php` så det är anpassat till exemplet, men i grunden är det hur ett sökformulär kan se ut (Search title).
 
-[FIGURE src=image/snapvt17/movie-search-title.png?w=w2 caption="Exempel på sökformulär för filmens titel."]
+[FIGURE src=image/snapvt17/movie-search-title.png?w=w3 caption="Exempel på sökformulär för filmens titel."]
 
 Jag väljer ett GET-formulär, som lägger alla parameterar i querysträngen. Det gör att jag kan dela själva länken till en sökning och visa kompisen exakt samma sökresultat. Det hade inte fungerat om jag använt ett POST formulär.
 
 
 
-###Hantering av sökningen {#hanterasok}
+### Hantering av sökningen {#hanterasok}
 
 Koden som utför själva sökningen handlar om att kontrollera om formuläret är postat och isåfall utföra en databasfråga och visa svaret.
 
-Koden som hanterar min sökning ser ut så här. Notera att koden bygger på strukturen som finns i exempelprogrammet där funktionen `getGet()` läser av inkommande GET-variabler och `$db->executeFetchAll()` utför själva databasfrågan.
+Koden som hanterar min sökning i frontkontrollern `index.php`ser ut så här.
 
 ```php
 case "search-title":
@@ -525,11 +629,17 @@ case "search-title":
     break;
 ```
 
+Notera att koden bygger på strukturen som finns i exempelprogrammet där funktionen `getGet()` läser av inkommande GET-variabler och `$db->executeFetchAll()` utför själva databasfrågan.
+
 Om formuläret är postat så kommer det att köras en SELECT mot databasen och svaret kommer att visas i en tabell som finns i den andra vyn.
 
 Du kan se att jag använder ett `?` och lägger parametern som skall kopplas i en array via `[$searchTitle]`. Om du kikar vidare på koden bakom `$db->executeFetchAll()` och `execute()` så ser du att det är _prepared statements_ som används via `PDO::prepare` och `PDO::execute`. Det gör att jag skyddar mig mot SQL injections.
 
-Låt oss kika snabbt på de två metoder som ligger bakom `executeFetchAll()`.
+
+
+### En koll igen på executeFetchAll {#executefetchall}
+
+Låt oss kika snabbt på `Database` och den hantering som ligger bakom `executeFetchAll()`.
 
 ```php
 /**
@@ -576,17 +686,17 @@ public function execute($sql, $param = [])
 }
 ```
 
-I mitt exempelprogram har jag valt att lägga in databasrelaterad kod i en klass `Database`. Det förenklar min hantering av kod som går mot databasen samt felhanteringen. 
+Här ser vi både `executeFetchAll()` och `execute()`. De två metoderna är ett lager ovan PDO och de tillför en felhantering.
 
-De två metoder som visas ovan är `execute()` som förbereder och exekverar databasfrågan. Den varianten som heter `executeFetchAll()` använder sig av `execute()` och levererar dessutom ett resultset som svar på frågan. Den första metoden lämpar sig för INSERT, UPDATE, DELETE och den andra är tänkt för SELECT.
+Det är metoden `execute()` som förbereder och exekverar (prepare, execute) databasfrågan. Metoden lämpar sig för INSERT, UPDATE, DELETE där ett resultset inte returneras.
 
-Du kan läsa om prepared statements, och fler sätt att koppla ihop parametrar med variabler, i manualen om [prepared statemements](http://www.php.net/manual/en/pdo.prepared-statements.php) eller där [metoden `execute()`](http://www.php.net/manual/en/pdostatement.execute.php) beskrivs.
+Metoden som heter `executeFetchAll()` använder sig av `execute()` och levererar ett resultset som svar på SQL-frågan. Metoden är tänkt för SELECT där ett resultset alltid returneras.
+
+Du kan läsa om prepared statements, och fler sätt att koppla ihop parametrar med variabler, i manualen om [prepared statemements](http://www.php.net/manual/en/pdo.prepared-statements.php) eller där [PDO metoden `execute()`](http://www.php.net/manual/en/pdostatement.execute.php) beskrivs.
 
 Så här blev mitt resultat när jag gör min sökning.
 
-[FIGURE src=image/snapvt17/movie-search-title-res.png?w=w2 caption="Nu kan jag söka på delsträng a titel."]
-
-Bra start, eller?
+[FIGURE src=image/snapvt17/movie-search-title-res.png?w=w3 caption="Nu kan jag söka på delsträng a titel."]
 
 
 
@@ -599,7 +709,7 @@ Det är alltid skoj att kolla om kompisens webbplats har öppningar för XSS, d�
 
 Eller genom att skriva in samma sak direkt i sökfältet? Trixet för att lyckas med ett XSS angrepp är att studera hur sidans källkod genereras tillsammans med det jag skickar in. Förutsatt att det finns en öppning som kodaren har missat att skydda.
 
-[FIGURE src="image/snapvt17/movie-xss.png?w=w2" caption="Ajdå, jag behöver nog se över så att jag skyddar min sida från XSS."]
+[FIGURE src="image/snapvt17/movie-xss.png?w=w3" caption="Ajdå, jag behöver nog se över så att jag skyddar min sida från XSS."]
 
 Kom ihåg att alltid kontrollera och använda [`htmlentities()`](http://php.net/manual/en/function.htmlentities.php) på information som du inte har full kontroll över och som skrivs ut i din webbsida. Detta gäller till exempel inkommande parametrar och strängar som byggs upp av dem.
 
@@ -607,7 +717,7 @@ Skriv aldrig ut något, i webbsidan, som kommer från en extern part. Det gälle
 
 I mitt fall löser jag det med följande kod.
 
-```php
+```html
 <label>Title (use % as wildcard):
     <input type="search" name="searchTitle" value="<?= esc($searchTitle) ?>"/>
 </label>
@@ -620,17 +730,17 @@ Det är delen `esc($searchTitle)` där funktionen `esc()` är min egen wrapper t
 Sök efter året då filmen skapades {#sok-ar}
 -------------------------------------------------------------------------------
 
-Jag vill kunna använda året då filmen skapades som en grund för min sökning. Ibland vill jag se alla filmer som är äldre än 1990 och ibland vill jag se de filmer som skapats under första årtiondet av tvåtusentalet (2000 - 2010). Jag gör en ny testsida för att visa hur det kan se ut.
+Jag vill kunna använda året då filmen skapades som en grund för min sökning. Ibland vill jag se alla filmer som är äldre än 1990 och ibland vill jag se de filmer som skapats under första årtiondet av tvåtusentalet (2000 - 2010). Jag gör en ny testsida (Search year) för att visa hur det kan se ut.
 
 Tanken är något i denna stilen.
 
-[FIGURE src=image/snapvt17/movie-search-year.png?w=w2 caption="Nu kan jag söka på filmer mellan två år."]
+[FIGURE src=image/snapvt17/movie-search-year.png?w=w3 caption="Nu kan jag söka på filmer mellan två år."]
 
 Formuläret ger mig två värden som kan användas för att söka ut filmer som är skapade inom en period av år.
 
 Nu löste jag med formuläret så att man alltid skriver in två år. Så egentligen borde jag kunna räkna med att alltid få två år inskickade till mitt skript.
 
-Men, trots det så valde jag en mer flexibel hantering i skriptet som säger att användaren egentligen kunde valt att skicka in bara det ena eller det andra året. Kanske valde jag att inte lite fullt ut på användaren av min sökmotor.
+Men, trots det så valde jag en mer flexibel hantering i skriptet som säger att användaren egentligen kunde valt att skicka in bara det ena eller det andra året. Kanske valde jag att inte lita fullt ut på användaren av min sökmotor.
 
 Nåväl, hanteringen av sökningen per år ser ut så här.
 
@@ -667,15 +777,15 @@ Först behöver jag på något sätt välja ut vilken film jag vill uppdatera, d
 
 
 
-###Välj film från en lista {#select-list}
+### Välj film från en lista {#select-list}
 
 Det finns flera alternativ när man väljer ut filmen som skall redigeras. Det är lite hur man vill koppla ihop olika sidor och hur formulär och länkar skapas.
 
 Jag funderar lite och väljer att göra ett formulär med en SELECT/OPTION som visar samtliga filmer. Jag måste välja en film för att sedan klicka på "Edit" för att komma vidare till ett formulär som visar filmens detaljer.
 
-Här är första formuläret där jag väljer film.
+Här är första formuläret där jag väljer film (Select).
 
-[FIGURE src=image/snapvt17/movie-select.png?w=w2 caption="Välj film för att redigera dess detaljer."]
+[FIGURE src=image/snapvt17/movie-select.png?w=w3 caption="Välj film för att redigera dess detaljer."]
 
 Koden som hanterar det postade formuläret ser ut så här.
 
@@ -696,9 +806,9 @@ case "movie-select":
 
 Här gör jag en extra försäkring om att inkommande id verkligen är en siffra. Det är för att skydda mig och inte ge någon möjlighet att skicka in godtycklig kod som hamnar i mitt uttryck i `header()`.
 
-Formuläret använder POST och om knappen, som här representeras av `"doEdit"`, är klickad, så skickas användaren vidare till formuläret där filmen kan redigeras. Filmens id skickas med som en GET-variabel.
+Formuläret använder POST och om knappen, som här representeras av `doEdit`, är klickad, så skickas användaren vidare till formuläret där filmen kan redigeras. Filmens id skickas med som en GET-variabel.
 
-Om formuläret inte är postat så hämtas samtliga filmer från databasen och visas upp i formuläret.
+Om formuläret inte är postat så hämtas samtliga filmer från databasen och visas upp i formuläret med en SELECT/OPTION, se filen `view/movie-select.php`.
 
 ```php
 <form method="post">
@@ -728,11 +838,11 @@ Notera ovan konstruktion med `foreach()` som skapar en OPTION för varje film.
 
 
 
-###Uppdatera information om filmen {#update-details}
+### Uppdatera information om filmen {#update-details}
 
 Då tittar vi på formuläret där vi kan uppdatera information om respektive film.
 
-[FIGURE src=image/snapvt17/movie-update.png?w=w2  caption="Ett formulär för att redigera detaljer om en film."]
+[FIGURE src=image/snapvt17/movie-update.png?w=w3  caption="Ett formulär för att redigera detaljer om en film."]
 
 Nu är det bara att fylla i värden och klicka på "Save" för att spara.
 
@@ -742,9 +852,10 @@ Koden som hanterar det postade formuläret ser ut så här.
 case "movie-edit":
     $title = "UPDATE movie";
     $view[] = "view/movie-edit.php";
-    $movieId = getPost("movieId") ?: getGet("movieId");
+
+    $movieId    = getPost("movieId") ?: getGet("movieId");
     $movieTitle = getPost("movieTitle");
-    $movieYear = getPost("movieYear");
+    $movieYear  = getPost("movieYear");
     $movieImage = getPost("movieImage");
 
     if (getPost("doSave")) {
@@ -760,9 +871,11 @@ case "movie-edit":
     break;
 ```
 
-Första gången man kommer till sidan så hämtas filmens id från `getGet("movieId")` och SELECT-satsen i slutet hämtar information om filmen som sedan presenteras i formuläret (via vyn). 
+Första gången sidan visas så hämtas filmens id från `getPost("movieId")`, eller från `getGet("movieId")`. SELECT-satsen i slutet hämtar information om filmen som sedan presenteras i formuläret (via vyn).
 
-I nästa skede är formuläret postat och all information hämtas från `getPost()` och det görs en UPDATE följt av en `header()` tillbaka till samma sida där informationen om filmen visas igen.
+När formuläret är postat hämtas all information från `getPost()` och det görs en SQL UPDATE för att spara värdena. Det följs av en `header()` som redirectar tillbaka till samma sida där informationen om filmen visas igen.
+
+Vi ser ett self submitting formulär framför oss. Samma sida visar formuläret och samma kodstycke hanterar det postade formuläret.
 
 
 
@@ -773,12 +886,14 @@ Låt oss nu se om vi kan vara lite kluriga och skapa en ny film genom att återa
 
 Jag lägger till en knapp för "Add" i vyn där vi kunde välja filmer.
 
-[FIGURE src=image/snapvt17/movie-add.png?w=w2 caption="Nu kan man klicka för att lägga till nya filmer."]
+[FIGURE src=image/snapvt17/movie-add.png?w=w3 caption="Nu kan man klicka för att lägga till nya filmer."]
 
 När man klickar "Add" så händer följande kod.
 
 ```php
 case "movie-select":
+    // more code
+
     if (getPost("doAdd")) {
         $sql = "INSERT INTO movie (title, year, image) VALUES (?, ?, ?);";
         $db->execute($sql, ["A title", 2017, "img/noimage.png"]);
@@ -786,19 +901,21 @@ case "movie-select":
         header("Location: ?route=movie-edit&movieId=$movieId");
         exit;
     }
+
+    // more code
 ```
 
 Det läggs till en ny film med standardvärden. Metoden `$db->lastInsertId()` tar reda på det id (AUTO_INCREMENT) som blev resultatet av den senaste INSERT-satsen och med hjälp av den informationen så skickas användaren vidare till formuläret där filmens detaljer kan redigeras.
 
-Vi lyckas alltså återanvända flera delar och sparar lite tid.
+Vi lyckas alltså återanvända flera befinliga delar, befintliga routes och vyer. Vi sparar lite tid.
 
 Så här ser det ut när man klickar på "Add".
 
-[FIGURE src=image/snapvt17/movie-update-new.png?w=w2 caption="Den nya filmen kan direkt redigeras."]
+[FIGURE src=image/snapvt17/movie-update-new.png?w=w3 caption="Den nya filmen kan direkt redigeras."]
 
 Om man klickar "Save" och sedan visar alla filmer så kan det se ut så här.
 
-[FIGURE src=image/snapvt17/movie-add-view-all.png?w=w2 caption="Den nya filmen visas i översikten."]
+[FIGURE src=image/snapvt17/movie-add-view-all.png?w=w3 caption="Den nya filmen visas i översikten."]
 
 Då är det lika bra vi lär oss radera en film.
 
@@ -809,24 +926,27 @@ Radera en ny film {#del-movie}
 
 Det känns som vi kan fotsätta en del med återanvändningen. Jag väljer att lägga en "Delete" knapp på sidan där filmer kan väljas.
 
-[FIGURE src=image/snapvt17/movie-delete.png?w=w2 caption="Ny knapp för att radera en film."]
+[FIGURE src=image/snapvt17/movie-delete.png?w=w3 caption="Ny knapp för att radera en film."]
 
 När man klickar på knappen händer följande kod.
 
 ```php
 case "movie-select":
     $movieId = getPost("movieId");
+
     if (getPost("doDelete")) {
         $sql = "DELETE FROM movie WHERE id = ?;";
         $db->execute($sql, [$movieId]);
         header("Location: ?route=movie-select");
         exit;
     }
+
+    // more code
 ```
 
 Filmen raderas med en DELETE sats och användaren skickas till samma sida igen.
 
-Nu kan vi visa, lägga till, redigera och radera filmer. Det är CRUD det, Create, Read, Update, Delete.
+Nu kan vi visa, lägga till, redigera och radera filmer. Det är CRUD i form av Create, Read, Update, Delete.
 
 
 
@@ -835,14 +955,28 @@ Sortera filmerna på olika kolumner {#sortera}
 
 När min filmsamling blir större så behöver jag stöd för att sortera tabellen. Jag tänkte sortera per kolumn genom att klicka på kolumnrubriken.
 
-[FIGURE src=image/snapvt17/movie-sortable-menu.png?w=w2 caption="Tabellens header skall vara klickbar för att sorteras."]
+[FIGURE src=image/snapvt17/movie-sortable-menu.png?w=w3 caption="Tabellens header skall vara klickbar för att sorteras."]
 
 Jag behöver skapa en länk för att sortera kolumnen i stigande ordning och en länk för att sortera i sjunkande ordning.
 
 
 
+### Sortera med GET {#sortget}
 
-###Funktion för att skriva ut pilarna {#updown}
+Tanken är att lägga alla parametrar som styr sorteringen i länken så att informationen nås via GET-variablerna.
+
+Själva länken kan se ut så här.
+
+```text
+?route=show-all-sort&orderby=title&order=asc
+route=show-all-sort&orderby=title&order=desc
+```
+
+Det är alltså `orderby` och `order` som styr hur sorteringen sker.
+
+
+
+### Funktion för att skriva ut pilarna {#updown}
 
 Eftersom varje kolumn behöver upp- och ner-pilen så väljer jag att lägga den delen av koden i en funktion.
 
@@ -884,7 +1018,7 @@ $defaultRoute = "?route=show-all-sort&"
 
 Resultatet kan se ut så här.
 
-[FIGURE src=image/snapvt17/movie-sort.png?w=w2 caption="Nu kan man sortera tabellen genom att klicka på pilarna."]
+[FIGURE src=image/snapvt17/movie-sort.png?w=w3 caption="Nu kan man sortera tabellen genom att klicka på pilarna."]
 
 Visar man upp en tabell i en webbsida så är det inte orimligt att användaren kan vilja sortera resultatet i den. Nu har vi löst det i vår filmdatabas.
 
@@ -923,20 +1057,20 @@ case "show-all-sort":
     break;
 ```
 
-I SELECT-satsen gör vi stränkonkatenering av de variabler som säger i vilken ordning som sortering skall ske.
+När vi skapar SQL-satsen för SELECT så gör vi stränkonkatenering av de variabler som säger i vilken ordning som sortering skall ske.
 
 Det är vanskligt, iallafall om vi inte har full koll på vilka värden som ligger i variablerna `$orderBy` och `$order`. Grunden för de variablerna kommer ju från GET. Men, i detta fallet så har jag lagt in arrayer med de värden som jag accepterar, och jag kollar att inkommande verkligen matchar mina accepterade värden. Här har jag mitt på det torra och klarar mig.
 
-Har man bara full koll på vad variablerna kan innehålla så kan man göra som man vill.
+Har man bara full koll på vad variablerna kan innehålla för värden, då kan man hantera dem fritt.
 
 
 
 Dela upp resultatet på flera sidor {#page}
 -------------------------------------------------------------------------------
 
-När filmsamlingen växer så blir det svårt att se alla filmer på en sida, jag behöver dela upp visningen i olika sidor, paginering. Det är relativt lätt att göra detta i SQL med klausulen `LIMIT` och `OFFSET`. 
+När filmsamlingen växer så blir det svårt att se alla filmer på en sida, jag behöver dela upp visningen i olika sidor, paginering. Det är relativt lätt att göra detta i SQL med konstruktionen `LIMIT` och `OFFSET`. 
 
-Här väljer jag att visa två rader (LIMIT) och börja på den tredje raden genom att hoppa över de två första (OFFSET). Detta skulle representera "sidan 2" i ett sökresultat som visar två träffar per sida.
+I SQL-satsen nedan väljer jag att visa två rader (LIMIT 2) och börja på den tredje raden genom att hoppa över de två första träffarna (OFFSET 2). Detta skulle representera "sidan 2" i ett sökresultat som visar två träffar per sida.
 
 ```sql
 SELECT * FROM movie LIMIT 2 OFFSET 2;
@@ -948,7 +1082,7 @@ Det är en del kluriga saker att lösa för en sådan här webbsida. Dels är de
 
 
 
-###Variabler som krävs för paginering {#variabler}
+### Variabler som krävs för paginering {#variabler}
 
 För det första, jag måste ha tillgång till ett par variabler.
 
@@ -958,9 +1092,9 @@ $page // Current page, use to calculate offset value
 $max  // Max pages available: SELECT COUNT(id) AS rows FROM movie
 ```
 
-En länk till att visa sida 2 med 2 rader per sida kan alltså se ut så här.
+En länksekvens till att visa sida 2 med 2 rader per sida kan se ut så här.
 
-> `?page=2&hits=2`
+> `&page=2&hits=2`
 
 Länken bör i sin tur resultera i en SELECT-sats enligt följande.
 
@@ -1014,15 +1148,15 @@ Nu kan jag testa att visa resultatet genom att redigera länken direkt.
 
 Först visar jag första sidan och två träffar per sida.
 
-> `?page=1&hits=2`
+> `&page=1&hits=2`
 
-[FIGURE src=image/snapvt17/movie-paginate-1.png?w=w2 caption="Första sidan visas med två träffar."]
+[FIGURE src=image/snapvt17/movie-paginate-1.png?w=w3 caption="Första sidan visas med två träffar."]
 
 Nu visar jag sista sidan och två träffar per sida, men det fanns bara en träff kvar.
 
-> `?page=3&hits=2`
+> `&page=3&hits=2`
 
-[FIGURE src=image/snapvt17/movie-paginate-2.png?w=w2 caption="Sista sidan visas med och där finns bara en träff."]
+[FIGURE src=image/snapvt17/movie-paginate-2.png?w=w3 caption="Sista sidan visas med och där finns bara en träff."]
 
 Då ska vi se om vi kan lösa själva länkandet, på ett bra sätt, det kan vara lite trixigt men lösningen blir generell.
 
@@ -1043,24 +1177,23 @@ För att lyckas med detta så behöver jag lite funktioner.
 
 Det handlar om att utgå från nuvarande querystring och modifiera värdet i en viss parameter. Säg att den länken som användes för att nå sidan ser ut så här.
 
-> `?page=1&hits=2`
+> `&page=1&hits=2`
 
 Den leder till första sidan och två träffar per sida.
 
-När jag nu skall skapa länkarna som anger hur många träffar per sida man vill ha, så måste jag behålla värdet för page och redigera värdet på hits enligt följande.
+När jag nu skall skapa länkarna som anger hur många träffar per sida man vill ha, så måste jag behålla värdet för page och redigera värdet på hits enligt följande där hits är 2, 4 eller 8 per sida.
 
-* 2 - `?page=1&hits=2`
-* 4 - `?page=1&hits=4`
-* 8 - `?page=1&hits=8`
+* 2 - `&page=1&hits=2`
+* 4 - `&page=1&hits=4`
+* 8 - `&page=1&hits=8`
 
-På motsvarande sätt måste jag ändra värdet på page i de länkar som leder direkt till en sida, men behålla värdet på antalet hits.
+På motsvarande sätt måste jag ändra värdet på page i de länkar som leder direkt till en sida, men behålla värdet på antalet hits. Nedan är page 1, 2 eller 3.
 
-* 1 - `?page=1&hits=2`
-* 2 - `?page=2&hits=2`
-* 3 - `?page=3&hits=2`
+* 1 - `&page=1&hits=2`
+* 2 - `&page=2&hits=2`
+* 3 - `&page=3&hits=2`
 
-För att göra lösningen på ett generellt sätt skapar jag en funktion `getQueryString()`.
-
+För att göra lösningen på ett generellt sätt skapar jag en funktion `mergeQueryString()`. Funktionen utgår från nuvarande länk, querystringen, och modifierar delar av den för att skapa anpassade länkar.
 
 ```php
 /**
@@ -1093,7 +1226,7 @@ I mitt fall är detta en funktion jag behöver för att fortsätta och skapa lä
 
 ###Navigeringsmeny för att välja antalet träffar {#sel-hits}
 
-I vyn skriver jag koden som genererar länkarna genom att använde funktionen `mergeQueryString()`.
+I vyn `view/show-all-paginate.php` skriver jag koden som genererar länkarna genom att använde funktionen `mergeQueryString()`.
 
 ```php
 <?php
@@ -1107,7 +1240,7 @@ $defaultRoute = "?route=show-all-paginate&"
 </p>
 ```
 
-[FIGURE src=image/snapvt17/movie-paginate-change-page.png?w=w2 caption="Menyn för att bestämma hur många träffar som visas per sida."]
+[FIGURE src=image/snapvt17/movie-paginate-change-page.png?w=w3 caption="Menyn för att bestämma hur många träffar som visas per sida."]
 
 Det var första delen, principen är densamma för nästa meny.
 
@@ -1126,7 +1259,7 @@ Det var första delen, principen är densamma för nästa meny.
 </p>
 ```
 
-[FIGURE src=image/snapvt17/movie-paginate-pages.png?w=w2 caption="Menyn för att bestämma vilken sida som skall visas."]
+[FIGURE src=image/snapvt17/movie-paginate-pages.png?w=w3 caption="Menyn för att bestämma vilken sida som skall visas."]
 
 Se där, nu kanske vi till och med kan kombinera detta med sorteringen.
 
@@ -1135,7 +1268,7 @@ Se där, nu kanske vi till och med kan kombinera detta med sorteringen.
 Paginering och sortering {#pagi-sort}
 -----------------------------------------
 
-Här kan vi nu återanvända metoden `mergeQueryString()` för att även hantera länkarna för sorteringen. Först uppdaterar vi vyn.
+Här kan vi nu återanvända metoden `mergeQueryString()` för att även hantera länkarna för sorteringen. Först uppdaterar vi vyn `view/show-all-paginate.php` och förbereder för en ny funktion `orderby2()`.
 
 ```php
 <table>
@@ -1175,9 +1308,9 @@ EOD;
 }
 ```
 
-Den fungerar precis som tidigare, enda skillnaden är att den använde sig av `mergeQueryString()` för att skapa länkarna.
+Den fungerar precis som tidigare, enda skillnaden är att den nu använder sig av `mergeQueryString()` för att skapa länkarna.
 
-[FIGURE src=image/snapvt17/movie-paginate-sort.png?w=w2 caption="Nu kan man även sortera, samtidigt med paginering och antal träffar."]
+[FIGURE src=image/snapvt17/movie-paginate-sort.png?w=w3 caption="Nu kan man även sortera, samtidigt med paginering och antal träffar."]
 
 Det känns som vi kan nöja oss nu, vi hann med en hel del.
 
@@ -1186,7 +1319,9 @@ Det känns som vi kan nöja oss nu, vi hann med en hel del.
 Avslutningsvis {#sum}
 -------------------------------------------------------------------------------
 
-Nu har du grunderna i PHP PDO och MySQL och lite till i hur du kan använda det tillsammans med en CRUD-liknande webbplats och koppla det till webbplatsens gränssnitt.
+Nu har du grunderna i PHP PDO och MySQL och du har sett hur det tillsammans med lite sedvanlig PHP-programmering kan bygga en konstruktion som är vanlig i webbplatser som vill visa upp ett större resultset.
+
+Du såg även hur en administrativ del kan byggas via ett CRUD-liknande gränssnitt.
 
 Detta är grunderna i de flesta databasdrivna webbapplikationer så desto bättre du lär dig att organisera din kod, desto lättare blir det att återanvända och vidareutveckla det du nu gjort.
 

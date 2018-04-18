@@ -18,7 +18,7 @@ I kursmoment 3 arbetade vi med formulär och JavaScript ramverket mithril. Vi sk
 
 Förkunskaper {#forkunskaper}
 -----------------------
-Du har gjort uppgiften [Lager appen del 3](uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna [Tabeller i mobila enheter](kunskap/tabeller-mobila-enheter) och [Login med JWT](kunskap/login-med-jwt).
+Du har gjort uppgiften [Lager appen del 3](uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter) och [Login med JWT](kunskap/login-med-jwt).
 
 
 Introduktion {#intro}

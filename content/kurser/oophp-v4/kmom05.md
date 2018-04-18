@@ -8,7 +8,7 @@ revision:
     "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
     "2017-04-21": "(A, mos) Släppt i första utgåvan."
 ...
-Kmom05: Enhetstestning
+Kmom05: PHP PDO och MySQL
 ==================================
 
 [WARNING]
@@ -18,85 +18,95 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 
 [/WARNING]
 
-När det gäller enhetstestning så jobbar vi med PHPUnit och vi försöker hitta klasser som är testbara och vi ser hur bra vi lyckas uppnå kodtäckning.
+Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar i ett sammanhang och därefter får du på egen hand koda motsvarande funktionalitet in i din redovisa sida och in i ramverkets struktur.
 
-<!--
--->
+Du får en utmaning som innebär att tänka igenom koden som serveras i övningen och hur den kan struktureras när den skall in i ramverket. Går det att göra objekt av allt eller har funktioner fortfarande en plats i kodstrukturen? Du väljer väg. Det blir en övning i refactoring.
 
-<!--
-Introducera enhetstester (om det inte gjorts tidigare).
-Uppgift, skriv enhetstester mot en klass.
+Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read) för en webbapplikation mot en databas, närmare specifikt en filmdatabas.
 
-Introducera backenden till eshopen?
+Det blir dessutom träning i hur man kan hantera ett gränssnitt i sin webbplats. Här kan man behöva tänka till hur man vill att det skall se ut för slutanvändaren och de valen kan påverka vilken kod man behöver bygga för att implementera gränssnitten.
 
-Kundvagn
-Enhetstesta kundvagn
+[FIGURE src=image/snapvt17/movie-paginate-1.png?w=w3 caption="Första sidan visas med två träffar."]
 
-Inloggning
-Enhetstesta inloggning
-
--->
+[FIGURE src=image/snapvt17/movie-paginate-sort.png?w=w3 caption="Nu kan man även sortera, samtidigt med paginering och antal träffar."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
-<!--stop-->
+<!--sto p-->
 
+
+
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Du vill ha en lokal utvecklingsmiljö för databasen MySQL samt att du kan använda BTH's databasserver.
+
+1. Du behöver ha tillgång till BTH's labbmiljö för MySQL. Du skapar själv ett konto på BTHs server för MySQL.
+    * [MySQL / MariaDB i BTH’s labbmiljö](labbmiljo/mysql-bth-labbmiljo)
+
+1. Du vill även ha en lokal utvecklingsmiljö så att du kan köra mot databasen MySQL på din hemmadator.
+    * [MySQL / MariaDB med XAMPP](labbmiljo/mysql-med-xampp)
+
+Det finns alternativa sätt att uppnå en bra utvecklingsmiljö för kursen. Har du en egen altertaniv väg så funkar det säkert.
 
 
 
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 0-6 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 1-2 studietimmar)*
 
 
 
-###Kurslitteratur  {#kurslitteratur}
+###Videor {#videor}
 
-Det finns inga specifika läsanvisningar till detta kursmomentet.
+Kika på följande videos.
+
+1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 5. De ger dig en introduktion och översikt till kursmomentet.
 
 
 
 ###Artiklar {#artiklar}
 
-Det finns inga artiklar.
+Läs följande.
 
-
-
-###Lästips {#lastips}
-
-Kika gärna på följande lästips.
+1. I övningen får du jobba med PHP PDO så bekanta dig gärna med [PHP PDO i PHP manualen](http://php.net/manual/en/book.pdo.php). Studera vilka metoder som erbjuds av klasserna PDO och PDOStatement samt kika kort på vilka PDO drivers som finns till olika databaser. 
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 12-18 studietimmar)*
+*(ca: 10-16 studietimmar)*
 
 
 ###Övningar {#ovningar}
 
 Gör följande övning, den förbereder dig inför uppgifterna.
 
+1. Jobba igenom guiden "[Kom igång med PHP PDO och MySQL (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)" för att få insyn i ett exempel som gör CRUD med PHP PDO och MySQL. Spara eventuella exempelprogram i `me/kmom05/pdo`.
 
+<!-- login? -->
+
+<!--
+Tips om projektet som en eshop?
+
+Lägga till esc() till vyer.
+
+Hur enhetstesta database-kod?
+-->
 
 
 ###Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (5.0.\*) när du är klar med alla uppgifter i kursmomentet.
+1. Gör uppgift "[Bygg CRUD filmdatabas med MySQL](uppgift/bygg-crud-filmdatabas-med-mysql)" och spara filerna i `me/redovisa`.
 
-<!--
-1. Gör uppgift "[Skapa backend till en webbshop](uppgift/skapa-backend-till-en-webbshop)". Spara koden i ditt `me/anax-lite`.
-
-1. Gör uppgiften "[Dokumentera PHP med phpdoc och phpDocumentor](uppgift/dokumentera-php-med-phpdoc-och-phpdocumentor)". Spara uppdateringarna du gör i ditt `me/anax-lite`.
-
-1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom05/er2`. Det är samma sak som du gjorde i förra kmomentent.
-
--->
+1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (5.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
 
 
 
@@ -109,6 +119,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Några reflektioner kring din kod för backenden till webbshopen?
-* Något du vill säga om koden generellt i och kring Anax Lite?
+* Några reflektioner kring koden i övningen för PHP PDO och MySQL?
+* Hur gick det att överföra koden in i ramverket?
+* Berätta om det fokus du valde för slutliga uppgiften, vad sparade du för typ av data och gjorde du något speciellt som du vill berätta om?
 * Vilken är din TIL för detta kmom?

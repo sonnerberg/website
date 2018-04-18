@@ -35,7 +35,16 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 
 <!--stop-->
 
+<!--
+Inloggning. Användarens egen profil.
 
+Admin för användare.
+
+Gör eget WordPress.
+
+Enhetstestning klasser databas.
+
+-->
 
 
 Projektidé och upplägg {#upplagg}

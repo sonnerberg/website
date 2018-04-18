@@ -54,6 +54,10 @@ De tre första kraven är obligatoriska och måste lösas för att få godkänt 
 
 Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
+[INFO]
+Tänker du på att göra några av de optionella kraven läs igenom alla kraven innan du väljer API:er då de optionella kraven kan påverka val av API.
+[/INFO]
+
 
 
 ###Kataloger för redovisning {#var}
@@ -91,7 +95,7 @@ Din webapp ska använda följande teknologier:
 * Mithril eller vanilla JavaScript
 * Cordova
 * Stödja Android eller iOS samt webbläsare
-* Innehålla en egen ikon och splashscreen.
+* Innehålla en egen ikon och splashscreen
 
 Beskriv i redovisningstexten vilka teknikval du har gjort och varför.
 
@@ -107,20 +111,24 @@ Berätta om någon av de möjligheter som finns för att förbättra din lösnin
 
 
 
-### Krav 4: Offline-läge (optionellt) {#k4}
-Använd dina kunskaper från kursmoment 6 och Cordova pluginen `cordova-plugin-file` för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
+### Krav 4: Native design (optionellt) {#k4}
+Välj ut en befintlig app på den plattform du utvecklar mot. Den valda appen ska ha ungefär samma typ av vyer som din app har. Försök att så gott det går matcha designen på din app pixel-för-pixel med den befintliga appen.
 
-När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling.
+Beskriv i ett textstycke om 15-20 meningar designprocessen att efterlikna en befintlig app och vilka verktyg och tekniker du använde. Bifoga tre (3) relevanta skärmdumpar av den befintliga appen.
 
 
 
-### Krav 5: Karta och GPS (optionellt) {#k5}
+### Krav 5: Offline-läge (optionellt) {#k5}
+Använd dina kunskaper om Cordova plugins från kursmoment 6 och pluginen `[cordova-plugin-file](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html)` för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
+
+När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling. Cordova pluginen `[cordova-plugin-network-information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/)` kan användas för att kolla status om internetuppkoppling
+
+Övningen [Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova) och exempel programmet `example/readFile` ([repo](https://github.com/dbwebb-se/webapp/tree/master/example/readFile)) hjälper en bit på vägen med att läsa från fil.
+
+
+
+### Krav 6: Karta och GPS (optionellt) {#k6}
 Använd positionsdata (Koordinater eller adresser) från en av dina valda API:er och visa upp denna data i en karta med hjälp av Google Places API. Du kan inte räkna in Google API:er som en av dina två API:er, dessa ligger utanför.
-
-
-
-### Krav 6: Kamera (optionellt) {#k6}
-Använd kameran och Cordova pluginen `cordova-plugin-camera` som en viktig del av din app. För att spara ner bilderna kan externa bildtjänst API:er användas. Dessa kan inte räknas in som en av dina två API:er.
 
 
 

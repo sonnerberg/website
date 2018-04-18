@@ -25,6 +25,10 @@ Introduktion {#intro}
 -----------------------
 En inleverans är när lagret får varor levererade och vi ska underlätta för lagerarbetarna att snabbt ta emot varor. I lager [API:t](https://lager.emilfolino.se) finns en datatyp `deliveries` där alla inleveranser ska lagras och dessutom ska du uppdatera lagersaldot för den levererade produkten.
 
+[INFO]
+Du behöver inte återskapa funktionaliteten från kmom01 och kmom02 i detta kmom'et. Du byggar alltså en ny app från grunden, som efter kmom03 innehåller inleveranser.
+[/INFO]
+
 
 
 Krav {#krav}

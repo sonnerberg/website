@@ -9,11 +9,6 @@ revision:
 ...
 Kmom05: Native
 ==================================
-
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
-
 Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på riktigt för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
 
 
@@ -25,6 +20,10 @@ Kmom05: Native
 [FIGURE src=/image/snapht15/Strip-dileme-appli-mobile-650-Finalenglish3.jpg caption="Så här kan man ibland känna när man väljer mellan native app och hybrid app." href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/"]
 
 Bilden ovan ger en vy av hur man kan känna när man väljer mellan native app och hybrid webapp. Men om man tänker igenom sitt projekt och målgrupp så kommer nog det ena eller andra alternativet framstå som bästa vägen att gå. För vår del gäller hybrid webapp, vi har redan investerat tid och kraft i HTML, CSS och JavaScript och vår webapp är inte speciellt avancerad eller krävande och dessutom är det väldigt lockande att stödja flera plattformar med en kodbas.
+
+Så här kan det se ut när vi är klara med lager appen i kmom05.
+
+[YOUTUBE src=CElOXw35_WU width=630 caption="Lager appen i kursmoment 5."]
 
 
 
@@ -56,7 +55,7 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Artiklar {#artiklar}
 
-Det finns inga artiklar.
+1. Läs igenom artikeln "[GUI ramverk](kunskap/gui-ramverk)".
 
 
 
@@ -85,7 +84,8 @@ Det finns inga extra lästips.
 
 1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)". Spara dina filer i `me/kmom05/hello`.
 
-1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".  Spara dina filer i `me/kmom05/hello`.
+1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)". Spara dina filer i `me/kmom05/hello`.
+
 
 <!-- 1. Gör uppgiften "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)". -->
 
@@ -118,5 +118,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka fördelar ser du med att göra appar med Cordova om du jämför med rena webbapplikationer?
 * Har du möjligheten att köra dina appar på en fysisk enhet? Vilka testmöjligheter ger detta?
-* Gick det bra att skapa din egna logga och splashscreen?
+* Gick det bra att skapa en logga och splashscreen?
+* Beskriv designprocessen för att efterlikna den mobila plattformen du bygger din app för?
 * Vilken är din TIL för detta kmom?

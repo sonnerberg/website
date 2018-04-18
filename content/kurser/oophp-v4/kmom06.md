@@ -8,7 +8,7 @@ revision:
     "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
     "2017-04-28": "(A, mos) Första utgåvan."
 ...
-Kmom06: Enhetstestning
+Kmom06: Lagra innehåll i databasen
 ==================================
 
 [WARNING]
@@ -18,15 +18,41 @@ En uppdaterad version av kursen är under bearbetning och kursen ges första gå
 
 [/WARNING]
 
-<!--
-Repetition o förbered projektet.
-Komplett databas för eshopen.
-Mer enhetstestning.
-Enhetstestning mot databas?
-(travis o codecoverage, scrutinizer, etc. Kanske)
--->
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
-[FIGURE src=image/snapvt17/phpunit.png?w=w3 caption="Enhetstestning med PHPUnit via en Makefile."]
+Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen och leder till effektiv SQL. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
+
+Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur som klarar både det ena och det andra och även är förberedd för att byggas ut.
+
+[FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
+
+[FIGURE src=image/snapvt17/content-blog.png?w=w2 caption="En blogglista med alla inlägg med senaste inlägget först."]
+
+[FIGURE src=image/snapvt17/content-textfilter.png?w=w2 caption="Innehållet formatteras och filtreras för att bli HTML."]
+
+<!--
+Introducera backenden till eshopen?
+Embryo till eshop sql?
+
+Kundvagn
+Enhetstesta kundvagn
+
+Inloggning
+Enhetstesta inloggning
+
+Guide abstract methods, classes, final interface, trait
+
+Funktionstestning?
+Enklare sådan, typ curl?
+
+mockup
+prepare testcase, prepare testclass, make mockobject.
+
+Test a trait, interface, abstract class?
+Enklare funktionstester.
+
+Enhetstestning mot databas?
+-->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
