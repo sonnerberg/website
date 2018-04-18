@@ -193,7 +193,7 @@ För att använda position på iOS enheter lägger vi till följande i `config.x
 </edit-config>
 ```
 
-Vi har nu tillgång till objektet `navigator` som har attributet `navigator.geolocation`. Vi använder funktionen `navigator.geolocation.getCurrentPosition()` för att få nuvarande position. Vi skapar en modell `models/position.js` där vi använder där vi hämtar nuvarande position och sedan ritar om vyn.
+Vi har nu tillgång till objektet `navigator.geolocation`. Vi använder funktionen `navigator.geolocation.getCurrentPosition()` för att få nuvarande position. För att hämta nuvarande position skapar vi en modell `models/position.js`, när vi har lyckats hämta nuvarande position ritar vi om vyn med hjälp av `m.redraw()`.
 
 ```javascript
 // models/position.js
