@@ -110,7 +110,7 @@ Xdebug erbjuder själva en bra sida som hjälper till vid felsökning: [Xdebug W
 
 För att använda denna guide så behöver du köra `php -i` i din terminal och klistra in informationen som skrivs ut i terminalen i fältet på hemsidan. Då kommer du få en steg för steg guide på vad du behöver göra för att få Xdebug att fungera för dig.
 
-[FIGURE src=/image/kunskap/xdebug.png?w=300 class="right" caption="Xdebug Wizard"]
+[FIGURE src=/image/kunskap/xdebug.png?w=300 caption="Xdebug Wizard"]
 
 För att dubbelkolla att det fungerade kan du köra
 
