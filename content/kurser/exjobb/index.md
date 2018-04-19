@@ -3,6 +3,7 @@ title: exjobb
 author:
     - mos
 revision:
+    "2018-04-19": "(H, mos) Instruktioner för opponering."
     "2018-02-12": "(G, mos) 3v i samband med topic."
     "2017-12-18": "(F, mos) In roller, bort nästan-dbwebb-kurs."
     "2017-12-12": "(E, mos) Enskilt eller 2 och 2. Aktiv i sökande efter kund."
@@ -145,6 +146,8 @@ Varje arbete opponeras på av andra studenter. Kunden har möjlighet att ge feed
 Varje student opponerar på en annan students arbete.
 
 Studenten uppdaterar sitt arbete och lämnar in det slutliga resultatet som slutligen godkänns/underkänns.
+
+Det finns [riktlinjer om hur opponeringen skall ske](https://goo.gl/u3aFxc).
 
 
 
