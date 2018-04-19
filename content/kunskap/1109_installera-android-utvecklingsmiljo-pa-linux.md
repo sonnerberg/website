@@ -52,7 +52,7 @@ sudo unzip [sökväg till zip-filen] -d /usr/local/
 För att öppna upp Android Studio kör filen `studio.sh` enligt nedan.
 
 ```bash
-/usr/local/android_studio/bin/studio.sh
+/usr/local/android-studio/bin/studio.sh
 ```
 
 Android Studio avslutar nu installationen bekräfta de val som kommer upp. Jag har vald mörka temat Dracula, om ni undrar över de mörka färgarna i bilderna nedan. Vi kommer inte använda Android Studio för utveckling, men är tyvärr enda sättet att installera SDK och Emulatorn, samt att kunna bygga apparna. När installationen är klar får du upp nedanstående fönster. Välj Configure > SDK Manager.

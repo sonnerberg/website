@@ -10,16 +10,15 @@ revision:
 ...
 Kmom06: Mobila enheters styrkor
 ==================================
-
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
-
 I detta kursmoment fortsätter vi att utnyttja styrkorna i våra mobila enheter. Vi kopplar in kamera och GPS för att skapa en fulländad applikation, som utnyttjar alla möjligheter vi har på en mobil plattform.
 
 
 
 <!--more-->
+
+Så här kan det se ut när vi är klara med kursmoment 06.
+
+[YOUTUBE src=SXZFj8itb7M width=630 caption="Lager appen i kursmoment 6."]
 
 
 
