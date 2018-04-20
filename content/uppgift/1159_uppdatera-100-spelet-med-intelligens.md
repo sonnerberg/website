@@ -41,23 +41,7 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför uppgiften.
 
-<!--
-[YOUTUBE src="XXX" playlist="PLKtP9l5q3ce9TiwWWXidbhCgrNVCC-lar" width=700 caption="Mikael visar hur du jobbar igenom övningen."]
--->
-
-
-<!--
-Gör även enhetstestning på tärningsspelet?
-
-Integrera "Gissa mitt nummer" med ramverkets klasser".
-    * redirect
-    * egen Game-klass
-    * ej direkt access till GET, POST, SESSION
-
-Låt stud integrera sitt eget spel med ramverkets klasser.
-
-Inför enhetstestning, visa genom spelet "Gissa mitt nummer" och låt studenten skapa enhetstester till sitt egna spel.
--->
+[YOUTUBE src="er0TQwg2AP0" playlist="PLKtP9l5q3ce9TiwWWXidbhCgrNVCC-lar" width=700 caption="Mikael visar hur du jobbar igenom delar avuppgiften."]
 
 
 
