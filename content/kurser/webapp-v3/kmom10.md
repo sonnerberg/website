@@ -87,12 +87,14 @@ Berätta hur du organiserade din kod och filer, så att en annan teknisk person 
 Skapa en fil `README.md` som kort berättar om webappen, hur man startar den och vilka olika "features" den innehåller.
 
 Din webapp ska använda följande teknologier:
+
 * Mithril eller vanilla JavaScript
 * Cordova
 * Stödja Android eller iOS samt webbläsare
 * Innehålla en egen ikon och splashscreen
 
 Beskriv i redovisningstexten vilka teknikval du har gjort och varför.
+
 
 
 ### Krav 3: En webapp {#k3}
