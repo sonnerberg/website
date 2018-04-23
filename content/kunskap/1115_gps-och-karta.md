@@ -17,6 +17,10 @@ Vi ska i denna övning använda Google Places API och Cordova Pluginen geolocati
 
 
 
+Exempelprogrammet från denna övning finns i kursrepot [example/gps](https://github.com/dbwebb-se/webapp/tree/master/example/gps) och i `example/gps`. Använd gärna det tillsammans med övningen för att se hur de olika delarna hänger ihop.
+
+
+
 En karta {#karta}
 --------------------------------------
 Vi kommer i detta exemplet använda Google Maps och för att använda Google Maps API behövs en API nyckel. Skaffa en gratis API nyckel på [Google Maps API](https://developers.google.com/maps/web/) och välj GET A KEY. Skapa ett nytt projekt för att koppla nyckeln till det.
@@ -61,7 +65,7 @@ var app = {
 app.initialize();
 ```
 
-I vyn `map.js` definieras först `view`-funktionen, vi vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. Viktigt att explicit ge kartan en höjd i pixlar eller rem annars visas den inte. ID't `#map` används av JavaScript för att hämta ut rätt element.
+I vyn `map.js` definieras först `view`-funktionen, vi vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. **Viktigt att explicit ge kartan en höjd i pixlar eller rem annars visas den inte**. ID't `#map` används av JavaScript för att hämta ut rätt element.
 
 ```javascript
 module.exports = {
@@ -88,7 +92,7 @@ module.exports = {
 };
 ```
 
-Funktionen `showMap` definierar ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna.
+Funktionen `showMap` definierar ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna. I [Google Maps dokumentationen](https://developers.google.com/maps/documentation/javascript/) finns en beskrivning av de attribut som finns för `google.maps.Map` och `google.maps.Marker`.
 
 ```javascript
 function showMap() {
@@ -247,7 +251,7 @@ module.exports = {
 };
 ```
 
-I `showMap` funktionen lägger vi till en ny sorts markör som markerar användarens position.
+I `showMap` funktionen lägger vi till en ny sorts markör som markerar användarens position. Jag definierar variabeln `locationMarker` som en global variabel så både `showMap()` och nedanstående funktion `showPosition()`.
 
 ```javascript
 locationMarker = new google.maps.Marker({

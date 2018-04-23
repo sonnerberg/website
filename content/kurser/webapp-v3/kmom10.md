@@ -10,11 +10,6 @@ revision:
 ...
 Kmom10: Projekt och examination
 ==================================
-
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -119,9 +114,9 @@ Beskriv i ett textstycke om 15-20 meningar designprocessen att efterlikna en bef
 
 
 ### Krav 5: Offline-läge (optionellt) {#k5}
-Använd dina kunskaper om Cordova plugins från kursmoment 6 och pluginen `[cordova-plugin-file](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html)` för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
+Använd dina kunskaper om Cordova plugins från kursmoment 6 och pluginen [cordova-plugin-file](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html) för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
 
-När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling. Cordova pluginen `[cordova-plugin-network-information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/)` kan användas för att kolla status om internetuppkoppling
+När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling. Cordova pluginen [cordova-plugin-network-information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/) kan användas för att kolla status om internetuppkoppling
 
 Övningen [Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova) och exempel programmet `example/readFile` ([repo](https://github.com/dbwebb-se/webapp/tree/master/example/readFile)) hjälper en bit på vägen med att läsa från fil.
 
