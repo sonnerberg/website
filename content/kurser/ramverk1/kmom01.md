@@ -13,12 +13,6 @@ Vi tittar på ett par seminarier från konferenser och funderar på vad de förs
 
 <!--more-->
 
-<!--
-Läsanvisningar legacy kod, churn, phploc, code complexity
-
-Use phpstan
--->
-
 [FIGURE src=image/snapht17/ramverk1-me.png caption="Kataloger och filer på plats i grunden till en Anax me-sida för kursen ramverk1."]
 
 
