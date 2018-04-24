@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-04-24": "(B, mos) Använd -uroot vid mysqldump."
     "2018-01-09": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Ta backup av databasen
@@ -45,10 +46,10 @@ Då är vi redo.
 Skapa backupfil {#backup}
 ----------------------------------
 
-Låt oss ta en backup på databasen skolan. 
+Låt oss ta en backup på databasen skolan. Använd root-användaren för att ta backupen.
 
 ```text
-mysqldump skolan > skolan.sql
+mysqldump -uroot -p skolan > skolan.sql
 ```
 
 Nu finns alla SQL-kommandon som kan återskapa databasen skolan i filen `skolan.sql`.
