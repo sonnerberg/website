@@ -34,6 +34,8 @@ Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske g�
 Introducera backenden till eshopen?
 Embryo till eshop sql?
 
+(registrera användare, admin av användare)
+
 Kundvagn
 Enhetstesta kundvagn
 

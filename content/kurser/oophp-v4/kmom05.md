@@ -5,18 +5,11 @@ category:
     - kurs oophp-v3
     - kurs oophp
 revision:
-    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2018-04-24": "(B, mos) Publicerat oophp v4."
     "2017-04-21": "(A, mos) Släppt i första utgåvan."
 ...
 Kmom05: PHP PDO och MySQL
 ==================================
-
-[WARNING]
-**Version 4 av oophp.**
-
-En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
-
-[/WARNING]
 
 Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar i ett sammanhang och därefter får du på egen hand koda motsvarande funktionalitet in i din redovisa sida och in i ramverkets struktur.
 
@@ -29,6 +22,8 @@ Det blir dessutom träning i hur man kan hantera ett gränssnitt i sin webbplats
 [FIGURE src=image/snapvt17/movie-paginate-1.png?w=w3 caption="Första sidan visas med två träffar."]
 
 [FIGURE src=image/snapvt17/movie-paginate-sort.png?w=w3 caption="Nu kan man även sortera, samtidigt med paginering och antal träffar."]
+
+[FIGURE src=image/snapvt18/movie-i-redovisa.png?w=w3 caption="Integrera filmdatabasen för att visas inuti din redovisa-sida."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -120,6 +115,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Några reflektioner kring koden i övningen för PHP PDO och MySQL?
-* Hur gick det att överföra koden in i ramverket?
-* Berätta om det fokus du valde för slutliga uppgiften, vad sparade du för typ av data och gjorde du något speciellt som du vill berätta om?
+* Hur gick det att överföra koden in i ramverket, stötte du på några utmaningar?
+* Berätta om din slutprodukt för filmdatabasen, gjorde du endast basfunktionaliteten eller lade du till extra features och hur tänkte du till kring användarvänligheten och din kodstruktur?
 * Vilken är din TIL för detta kmom?

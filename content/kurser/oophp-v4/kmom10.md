@@ -44,6 +44,9 @@ Gör eget WordPress.
 
 Enhetstestning klasser databas.
 
+Snygg admin del för bloggposter, sidor, användare.
+Tabell, sökbar, 
+
 -->
 
 
