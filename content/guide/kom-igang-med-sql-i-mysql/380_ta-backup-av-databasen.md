@@ -87,4 +87,6 @@ Då skapar du en ny databas och gör grant på en user till databasen. Sedan kö
 $ mysql -uuser -ppass skolan1 < skolan.sql
 ```
 
+Får du problem med rättigheter så prövar du användare `-uroot` istället.
+
 Nu har du en kopia av databasen skolan, i skolan1.
