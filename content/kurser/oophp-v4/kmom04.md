@@ -12,7 +12,7 @@ Vi fortsätter med kodande och testande utanför och inuti ramverket. Fokus är 
 
 Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod tillsammans med arv och komposition. Det ger oss två nya verktyg för att tänka och implementera koden på ett objektorienterat sätt.
 
-Erfarenheterna från trait och interface använder vi sedan för att vidarutveckla vårt 100-spel med lite intelligens när vi spelar mot datorn som spelare. Samtidigt beörjar vi mer använda ramverkets klasser för att knyta in vår kod i ramverkets "skydd".
+Erfarenheterna från trait och interface använder vi sedan för att vidarutveckla vårt 100-spel med lite intelligens när vi spelar mot datorn som spelare. Samtidigt börjar vi mer använda ramverkets klasser för att knyta in vår kod i ramverkets "skydd".
 
 När detta är gjort så börjar vi bygga en testsuite för våra klasser och vi börjar att köra `make test` inuti ramverket.
 

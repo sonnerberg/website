@@ -78,8 +78,8 @@ Ramverket erbjuder ett par klasser som är ett lager över PHP's globala variabl
 | Anax klasser | Löser vad? |
 |--------------|------------|
 | [`Anax\Response`](https://github.com/canax/response/blob/master/src/Response/ResponseUtility.php) | Skicka svar tillbaka, eller gör redirect till en annan route. |
-| [`Anax\Request`](https://github.com/canax/request/blob/master/src/Request/Request.php) | Löser tillgång till `$_GET, $_POST, $_SERVER` och innehåller detaljer om requesten. |
-| [`Anax\Session`](https://github.com/canax/session/blob/master/src/Session/Session.php) | Löser tillgång till `$_SESSION`. |
+| [`Anax\Request`](https://github.com/canax/request/blob/master/src/Request/Request.php) [README](https://github.com/canax/request/blob/master/README.md) | Löser tillgång till `$_GET, $_POST, $_SERVER` och innehåller detaljer om requesten. |
+| [`Anax\Session`](https://github.com/canax/session/blob/master/src/Session/Session.php) [README](https://github.com/canax/session/blob/master/README.md) | Löser tillgång till `$_SESSION`. |
 
 Generellt är tanken att ramverket kopplar loss dig från globala variabler och erbjuder bättre möjligheter att testa din kod genom att till exempel från testkoden injecta innehållet till motsvarigheten av `$_GET, $_POST, $_SERVER`.
 
