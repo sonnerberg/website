@@ -148,6 +148,12 @@ Den här kan vi ta bort då vi inte ska använda vår app på en Windows Phone.
 ```
 Sen har vi `viewport` meta tag som ni har introducerats till tidigare. Den ser till så att hela skärmytan på våra mobila enheter används för att visa innehåll.
 
+Ett tips kan vara att lägga till ytterligare en meta-tag för att säkra upp att special tecken visas rätt i alla enheter.
+
+```html
+<meta charset="utf-8" />
+```
+
 Längst ner i `body` inkluderar vi två JavaScript filer. `index.js` filen kommer vara vår start punkt. `cordova.js` ger oss tillgång till Cordovas API för att komma åt native funktionaliteter.
 
 Vi går vidare och inspekterar `index.js`. Jag har tagit bort kommentarerna.
@@ -221,7 +227,6 @@ cordova build ios
 ```
 
 Nu byggs appen för iOS, kan ta ett tag att bygga appen. När appen har byggts klar kan du öppna filen `me/kmom05/hello/platforms/ios/HelloWorld.xcworkspace/` i Xcode. Följ instruktionerna från [Cordova appar på iOS](kunskap/cordova-appar-pa-ios) för att köra appen.
-
 
 
 

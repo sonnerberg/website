@@ -18,6 +18,10 @@ Upplägget är enligt följande:
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
+[INFO]
+Uppdatera gärna kursrepot genom kommandot `dbwebb update` för att få senaste versionen av exempelkod och konfiguration.
+[/INFO]
+
 
 
 Projektidé och upplägg {#upplagg}

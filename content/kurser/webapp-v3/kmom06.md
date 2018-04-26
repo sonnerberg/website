@@ -20,6 +20,10 @@ Så här kan det se ut när vi är klara med kursmoment 06.
 
 [YOUTUBE src=SXZFj8itb7M width=630 caption="Lager appen i kursmoment 6."]
 
+[INFO]
+Uppdatera gärna kursrepot genom kommandot `dbwebb update` för att få senaste versionen av exempelkod och konfiguration.
+[/INFO]
+
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
