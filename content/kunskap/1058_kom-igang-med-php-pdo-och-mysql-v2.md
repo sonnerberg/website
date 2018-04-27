@@ -7,6 +7,7 @@ category:
     - mysql
     - kurs oophp
 revision:
+    "2018-04-27": "(H, mos) lade till en video intro."
     "2018-04-17": "(G, mos) Genomgången inför oophp-v4 och ett antal mindre uppdateringar i text och kod."
     "2017-04-11": "(F, mos) Uppdaterade koden för återställa."
     "2017-04-07": "(E, mos) Större genomarbetning inför oophp-v3, flera stycken borttagna."
@@ -48,6 +49,15 @@ Du behöver ha koll på generell webbutveckling med PHP och det är bra om du ka
 Du behöver även ha koll på MySQL och det underlättar att vara bekant med PHP PDO och begrepp som CRUD.
 
 Källkoden till artikelns exampel finns i kursrepot (oophp) under [`example/php-pdo-mysql`](https://github.com/dbwebb-se/oophp/tree/master/example/php-pdo-mysql).
+
+
+
+Video intro {#vintro}
+---------------------------------------------------------------------------
+
+Det finns en kort videoserie som ger en introduktion och översikt till artikeln. Du kan se den innan du läser vidare.
+
+[YOUTUBE src="N9bTtWHblsE" playlist="PLKtP9l5q3ce8IR_KuONk34FahfWDjaogD" width=700 caption="Mikael ger en översikt till artikeln och en snabb kom igång till exempelprogrammet."]
 
 
 
