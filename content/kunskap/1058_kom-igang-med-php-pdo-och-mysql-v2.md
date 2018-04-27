@@ -7,7 +7,7 @@ category:
     - mysql
     - kurs oophp
 revision:
-    "2018-04-27": "(H, mos) lade till en video intro."
+    "2018-04-27": "(H, mos) Lade till en video intro."
     "2018-04-17": "(G, mos) Genomgången inför oophp-v4 och ett antal mindre uppdateringar i text och kod."
     "2017-04-11": "(F, mos) Uppdaterade koden för återställa."
     "2017-04-07": "(E, mos) Större genomarbetning inför oophp-v3, flera stycken borttagna."
