@@ -42,7 +42,9 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför samt jobba igenom större delen av uppgiften.
 
-[YOUTUBE src="0d6t7z9CgLE" playlist="PLKtP9l5q3ce-LjAqv50bj_bCyYivKafPW" width=700 caption="Mikael visar hur du jobbar igenom övningen."]
+Du kan se hur jag jobbar igenom stegen i videoserien "[Kom igång med enhetstestning med PHPUnit (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-LjAqv50bj_bCyYivKafPW)".
+
+[YOUTUBE src="0d6t7z9CgLE" list="PLKtP9l5q3ce-LjAqv50bj_bCyYivKafPW" width=700 caption="Mikael visar hur du jobbar igenom övningen."]
 
 
 

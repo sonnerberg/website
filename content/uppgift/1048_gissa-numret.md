@@ -43,7 +43,7 @@ Introduktion och förberedelse {#intro}
 
 Gör följande för att förbereda dig för uppgiften.
 
-Här är en video som visar hur det kan se ut när du är klar.
+Det finns en videoserie "[Uppgiften "Gissa mitt nummer" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8bxiDqQ8PQwJ6xYbWLYBvw)" som visar hur det kan se ut när du är klar.
 
 [YOUTUBE src="T_zBswY2fjo" width=700 list="PLKtP9l5q3ce8bxiDqQ8PQwJ6xYbWLYBvw" caption="Mikael visar hur spelet och dess olika klienter kan se ut när de är klara."]
 

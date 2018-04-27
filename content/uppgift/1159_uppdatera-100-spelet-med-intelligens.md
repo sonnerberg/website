@@ -41,7 +41,9 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför uppgiften.
 
-[YOUTUBE src="er0TQwg2AP0" playlist="PLKtP9l5q3ce9TiwWWXidbhCgrNVCC-lar" width=700 caption="Mikael visar hur du jobbar igenom delar avuppgiften."]
+Du kan se hur jag jobbar igenom stegen i videoserien "[Uppgiften "Uppdatera 100-spelet med intelligens" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9TiwWWXidbhCgrNVCC-lar)".
+
+[YOUTUBE src="y97x3kdM-y8" list="PLKtP9l5q3ce9TiwWWXidbhCgrNVCC-lar" width=700 caption="Mikael visar hur du jobbar igenom delar av uppgiften."]
 
 
 

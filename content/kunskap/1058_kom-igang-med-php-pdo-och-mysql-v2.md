@@ -55,9 +55,9 @@ Källkoden till artikelns exampel finns i kursrepot (oophp) under [`example/php-
 Video intro {#vintro}
 ---------------------------------------------------------------------------
 
-Det finns en kort videoserie som ger en introduktion och översikt till artikeln. Du kan se den innan du läser vidare.
+Det finns en videoserie "[Artikel: Gör filmdatabas med PHP PDO och MySQL](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8IR_KuONk34FahfWDjaogD)" som ger en introduktion och översikt till artikeln.
 
-[YOUTUBE src="N9bTtWHblsE" playlist="PLKtP9l5q3ce8IR_KuONk34FahfWDjaogD" width=700 caption="Mikael ger en översikt till artikeln och en snabb kom igång till exempelprogrammet."]
+[YOUTUBE src="N9bTtWHblsE" list="PLKtP9l5q3ce8IR_KuONk34FahfWDjaogD" width=700 caption="Mikael ger en översikt till artikeln och en snabb kom igång till exempelprogrammet."]
 
 
 

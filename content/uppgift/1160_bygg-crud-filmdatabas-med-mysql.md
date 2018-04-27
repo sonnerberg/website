@@ -43,7 +43,9 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför uppgiften.
 
-[YOUTUBE src="16Pr9JIM1ko" playlist="PLKtP9l5q3ce8dXaJytGWt3usKsqpXT9E-" width=700 caption="Mikael visar hur du jobbar igenom vissa steg för att komma igång med uppgiften."]
+Du kan se hur jag jobbar igenom stegen i videoserien "[Uppgiften "Bygg CRUD filmdatabas med MySQL" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8dXaJytGWt3usKsqpXT9E-)".
+
+[YOUTUBE src="16Pr9JIM1ko" list="PLKtP9l5q3ce8dXaJytGWt3usKsqpXT9E-" width=700 caption="Mikael visar hur du jobbar igenom vissa steg för att komma igång med uppgiften."]
 
 
 
