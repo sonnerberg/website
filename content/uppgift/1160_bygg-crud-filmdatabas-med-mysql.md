@@ -5,6 +5,7 @@ category:
     - anax
     - kursen oophp
 revision:
+    "2018-04-27": "(B, mos) Lade till videoserie som komplement."
     "2018-04-23": "(A, mos) Första utgåvan i samband med oophp version 4."
 ...
 Bygg CRUD filmdatabas med MySQL
@@ -42,9 +43,7 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför uppgiften.
 
-<!--
-[YOUTUBE src="XXX" playlist="PLKtP9l5q3ce8dXaJytGWt3usKsqpXT9E-" width=700 caption="Mikael visar hur du jobbar igenom övningen."]
--->
+[YOUTUBE src="16Pr9JIM1ko" playlist="PLKtP9l5q3ce8dXaJytGWt3usKsqpXT9E-" width=700 caption="Mikael visar hur du jobbar igenom vissa steg för att komma igång med uppgiften."]
 
 
 
