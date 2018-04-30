@@ -19,6 +19,8 @@ Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read
 
 Det blir dessutom träning i hur man kan hantera ett gränssnitt i sin webbplats. Här kan man behöva tänka till hur man vill att det skall se ut för slutanvändaren och de valen kan påverka vilken kod man behöver bygga för att implementera gränssnitten.
 
+<!-- more -->
+
 [FIGURE src=image/snapvt17/movie-paginate-1.png?w=w3 caption="Första sidan visas med två träffar."]
 
 [FIGURE src=image/snapvt17/movie-paginate-sort.png?w=w3 caption="Nu kan man även sortera, samtidigt med paginering och antal träffar."]

@@ -19,6 +19,8 @@ Vi bygger små enkla testprogram för att se hur sakerna fungerar.
 
 För att komma igång med programmeringen så bygger vi en variant av spelet "Gissa vilket nummer jag tänker på" och vi implementerar spelet med GET, POST och SESSION. Det blir repetition av PHP och hur HTTP-protokollar, formulär och länkar fungerar tillsammans. Dessutom blir det en introduktion till klasser i PHP och ett exempel där vi bygger en klass för att användas från olika klienter.
 
+<!-- more -->
+
 [FIGURE src=image/snapvt18/oophp-guess-my-number-post.png?w=w3 caption="Spela spelet Gissa mitt nummer med PHP."]
 
 Vi bygger dessutom en me-sida med Anax i en katalogstruktur som i längden kommer att ge oss en insikt i hur ett webbaserat ramverk kan byggas upp.

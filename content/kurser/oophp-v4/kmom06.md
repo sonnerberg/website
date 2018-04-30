@@ -5,81 +5,55 @@ category:
     - kurs oophp-v3
     - kurs oophp
 revision:
-    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2018-04-30": "(B, mos) Uppdaterad inför oophp v4 och bytte kmom nummer."
     "2017-04-28": "(A, mos) Första utgåvan."
 ...
 Kmom06: Lagra innehåll i databasen
 ==================================
 
-[WARNING]
-**Version 4 av oophp.**
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras (CRUD) av användaren. Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
-En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
-
-[/WARNING]
-
-Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
+Det vi bygger är egentligen grunden i ett enkelt Content Mangement System (CMS) där användaren kan redigera webbplatsens innehåll via ett webbaserat gränssnitt.
 
 Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen och leder till effektiv SQL. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
 
 Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur som klarar både det ena och det andra och även är förberedd för att byggas ut.
 
-[FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
+<!-- more -->
 
-[FIGURE src=image/snapvt17/content-blog.png?w=w2 caption="En blogglista med alla inlägg med senaste inlägget först."]
+[FIGURE src=image/snapvt17/content-delete-edit.png?w=w3 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
 
-[FIGURE src=image/snapvt17/content-textfilter.png?w=w2 caption="Innehållet formatteras och filtreras för att bli HTML."]
+[FIGURE src=image/snapvt17/content-blog.png?w=w3 caption="En blogglista med alla inlägg med senaste inlägget först."]
 
-<!--
-Introducera backenden till eshopen?
-Embryo till eshop sql?
-
-(registrera användare, admin av användare)
-
-Kundvagn
-Enhetstesta kundvagn
-
-Inloggning
-Enhetstesta inloggning
-
-Guide abstract methods, classes, final interface, trait
-
-Funktionstestning?
-Enklare sådan, typ curl?
-
-mockup
-prepare testcase, prepare testclass, make mockobject.
-
-Test a trait, interface, abstract class?
-Enklare funktionstester.
-
-Enhetstestning mot databas?
--->
+[FIGURE src=image/snapvt17/content-textfilter.png?w=w3 caption="Innehållet formatteras och filtreras för att bli HTML."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-<!--stop-->
-
 
 
 
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 1-2 studietimmar)*
 
 
 
-###Artiklar {#artiklar}
+###Videor {#videor}
 
-Läs följande.
+Kika på följande videos.
 
-1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
+1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 6. De ger dig en introduktion och översikt till kursmomentet.
 
-1. Bekanta dig kort och översiktligt med [PHPUnits dokumentation](https://phpunit.de/manual/current/en/). Kika över innehållsförteckningen och skumläs kapitel 2 och 3 som ger dig en grov introduktion till hur du jobber med phpunit.
 
-1. Bekanta dig kort och översiktligt med [Xdebug för PHP](https://xdebug.org/) och kika snabbt över vilken dokumentation som finns. Se vilka funktioner Xdebug kan tillföra till din utvecklingsmiljö. Vi kommer enbart använda Xdebug för att PHPUnit behöver det för att generera kodtäckning.
+
+###Lästips {#lastips}
+
+Följande tips från coachen används i övningen och uppgiften.
+
+1. "[Gör en läsbar url med slugify()](coachen/gor-en-lasbar-url-med-slugify)"
+1. ["Reguljära uttryck i PHP ger BBCode formattering"](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)
+1. ["Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar"](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar)
+1. ["Skriv för webben med Markdown och formattera till HTML med PHP (v2)"](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)
 
 
 
@@ -93,12 +67,10 @@ Läs följande.
 
 Gör följande övning, den förbereder dig inför uppgifterna.
 
-1. Installera [PHPUnit](labbmiljo/phpunit) och [Xdebug](labbmiljo/xdebug) för att kunna köra enhetstester med kodtäckning på din lokala maskin.
-
-1. Jobba igenom exemplet `example/phpunit/README.md` (i kursrepot) som visar dig grunderna i enhetstester med phpunit och kodtäckning. Kopiera och spara filerna till `me/kmom06/phpunit` så du kan testa skriva ett eget testfall.
+1. 1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter (v2)"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter-v2). Spara dina exempelprogram under `me/kmom06/content`.
 
 <!--
-Artikel om hur man skriver bra SQL frågor på ett optimerat sätt.
+esc() wrapper, e(), eller modulen från Zend
 -->
 
 
@@ -107,13 +79,11 @@ Artikel om hur man skriver bra SQL frågor på ett optimerat sätt.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Skapa enhetstester till Anax Lite](uppgift/skapa-enhetstester-till-anax)". Spara uppdateringarna du gör i ditt `me/anax-lite` och del-uppgiften för `Guess` utför du i `me/kmom06/phpunit`.
+1. Gör uppgiften "[Skapa en klass för textfiltrering och formattering](uppgift/skapa-en-klass-for-textfiltrering-och-formattering)". Den färdiga klassen integrerar du i `me/anax-lite`. Vill du testa och utveckla i en separat katalog så använder du `me/kmom04/textfilter`.
+
+1. Gör uppgift "[Bygg webbsidor från innehåll i databasen](uppgift/bygg-webbsidor-fran-innehall-i-databasen)" och spara filerna i `me/redovisa`.
 
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (6.0.\*) när du är klar med alla uppgifter i kursmomentet.
-
-<!--
-1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom06/er3`. Det är samma sak som du gjort i föregående kmomentent, det handlar om att få med de uppdateringar du nyss gjort.
--->
 
 
 
@@ -126,7 +96,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Har du tidigare erfarenheter av att skriva kod som testar annan kod?
-* Hur ser du på begreppet enhetstestning och att skriva testbar kod?
-* Hur gick det att hitta testbar kod bland dina klasser i Anax Lite?
+* Finns något att säga kring din klass för texfilter, eller rent allmänt om formattering och filtrering av text som sparas i databasen av användaren?
+* Berätta hur du tänkte när du strukturerade klasserna och databasen för webbsidor och bloggposter?
+* Alternativ struktur av din kod?
 * Vilken är din TIL för detta kmom?
