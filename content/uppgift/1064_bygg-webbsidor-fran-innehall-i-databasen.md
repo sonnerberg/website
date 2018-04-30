@@ -38,8 +38,6 @@ Du skall bygga in hantering för innehåll i din redovisa sida. Det skall funger
 
 Du har full frihet hur du väljer att integrera det i ditt ramverk.
 
-Se till att din databas innehåller en användare doe med lösenord doe och en admin med lösenord admin, förutsatt att du har en annan behörighet för admin. Det är för att rättaren skall kunna komma åt och logga in.
-
 Tips. Förslagsvis bygger du en generell Content-klass och specifika klasser för Page och Blog, men du väljer strukturen helt själv. Försök att få lite kod i dina routes och lägg huvuddelen av koden i klasser som eventuellt går att återanvända utanför ramverket.
 
 
@@ -72,15 +70,15 @@ Det finns många små saker man kan jobba med när det gäller innehåll som spa
 
 1. Om du lägger inloggning så se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin.
 
-1. Skapa en ytterligare typ av innehåll som `block`. Tanken är att denna typen av innehåll kan finnas som en del i en sida, till exempel i en sidebar, en flash, en triptych eller en footer.
+1. Skapa en ytterligare typ av innehåll som `block`. Tanken är att denna typen av innehåll kan finnas som en del i en sida, till exempel i en sidebar, en flash, en triptych, navbar, header eller en footer.
 
 1. Skapa en möjlighet att se de sidor som ännu inte är publicerade samt de som är raderade. Denna möjlighet kan kräva inloggning (eller inte).
 
+1. Skapa en funktion för att återställa det content som är raderat.
+
 1. Skapa funktioner så att endast ingressen (första delen av bloggposten) visas i översikten samt lägg till en länk för "Läs mer »".
 
-1. Hämta från en konfigfil om antal bloggposter som visas på första sidan och om hela eller bara ingressen skall visas.
-
-1. Använd ett _flash-minne_ i sessionen för att skriva ut information till användaren när innehåll raderas, skapas, sparas. Det är för att göra gränssnittet tydligare för användaren.
+1. Använd ett _flash-minne_ i sessionen för att skriva ut information och återkoppla till användaren när innehåll raderas, skapas, sparas. Det är för att göra gränssnittet tydligare för användaren.
 
 1. Lägg till paginering och sortering på ditt admin interface av innehållet.
 
