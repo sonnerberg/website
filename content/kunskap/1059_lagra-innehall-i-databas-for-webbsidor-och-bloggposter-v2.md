@@ -8,6 +8,7 @@ category:
     - mysql
     - php pdo
 revision:
+    "2018-04-30": "(E, mos) Genomgången inför oophp-v4."
     "2017-04-18": "(D, mos) Uppdaterad till nya version inför oophp-v3."
     "2014-10-20": "(C, mos) Bytte koden till doFilter(), innehöll fel."
     "2013-12-03": "(B, mos) Smärre justeringar inför campus-kursen."
@@ -26,7 +27,7 @@ När du är klar har du byggt både webbsidor och en blogg från innehåll som d
 
 Så här kan det se ut när du jobbar i exempelprogrammet som medföljer artikeln.
 
-[FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
+[FIGURE src=image/snapvt17/content-delete-edit.png?w=w3 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
 
 
 
@@ -35,7 +36,7 @@ Förutsättningar {#pre}
 
 Du är bekant med PHP PDO och MySQL och/eller du har jobbat igenom artikeln "[Kom igång med PHP PDO och MySQL (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)".
 
-Exempelkoden finns i kursrepot (oophp) under [`example/content`](https://github.com/dbwebb-se/oophp/tree/master/example/content).
+Exempelkoden finns i kursrepot (oophp) under [`example/content`](https://github.com/dbwebb-se/oophp/tree/master/example/content). Du behöver skapa databasen och tabellen innan du kan köra exempelprogrammet.
 
 
 
@@ -81,24 +82,25 @@ SET NAMES utf8;
 DROP TABLE IF EXISTS `content`;
 CREATE TABLE `content`
 (
-  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `path` CHAR(120) UNIQUE,
-  `slug` CHAR(120) UNIQUE,
+    `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    `path` CHAR(120) UNIQUE,
+    `slug` CHAR(120) UNIQUE,
 
-  `title` VARCHAR(120),
-  `data` TEXT,
-  `type` CHAR(20),
-  `filter` VARCHAR(80) DEFAULT NULL,
+    `title` VARCHAR(120),
+    `data` TEXT,
+    `type` CHAR(20),
+    `filter` VARCHAR(80) DEFAULT NULL,
 
-  -- MySQL version 5.6 and higher
-  -- `published` DATETIME DEFAULT CURRENT_TIMESTAMP,
-  -- `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
-  -- `updated` DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
- 
-  -- MySQL version 5.5 and lower
-  `published` DATETIME DEFAULT NULL,
-  `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `updated` DATETIME DEFAULT NULL, --  ON UPDATE CURRENT_TIMESTAMP,
+    -- MySQL version 5.6 and higher
+    `published` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `updated` DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+   
+    -- MySQL version 5.5 and lower
+    -- `published` DATETIME DEFAULT NULL,
+    -- `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    -- `updated` DATETIME DEFAULT NULL, --  ON UPDATE CURRENT_TIMESTAMP,
+
   `deleted` DATETIME DEFAULT NULL
 
 ) ENGINE INNODB CHARACTER SET utf8 COLLATE utf8_swedish_ci;
@@ -108,13 +110,13 @@ Tabellens struktur matchar de grundkrav som jag tänkt mig. Att ha både `path` 
 
 Hur man kan jobba med tidsstämplar via DATETIME och TIMESTAMP samt ge dem default-värden och att använda konstruktionen ON UPDATE CURRENT_TIMESTAMP, har ändrats mellan versioner.
 
-Från och med MySQL 5.6 så kan du använda den mer flexibla och enklare varianten som är bortkommenterad ovan. Men jobbar du mot en äldre version (likt oss när vi använder blu-ray) så kan du behöva använda ett mer "primitivt" sätt att hantera tidsstämplarna. Jag väljer att inte använda det senaste sättet eftersom vår egen driftsserver kör MySQL 5.5.
-
 <!--
+Från och med MySQL 5.6 så kan du använda den mer flexibla och enklare varianten för tidsstämplar. Men jobbar du mot en äldre version (likt oss när vi använder blu-ray) så kan du behöva använda ett mer "primitivt" sätt att hantera tidsstämplarna. Jag väljer att inte använda det senaste sättet eftersom vår egen driftsserver kör MySQL 5.5.
+-->
+
 Jag använder default värden på tidsstämplarna `published` och `created` för att förenkla för mig.
 
-Jag väljer att använda en inbyggd konstruktion för `updated` som heter `ON UPDATE CURRENT_TIMESTAMP` vilket gör att den tidsstämpeln ändras varje gång jag gör en update på tabellen. Man kan fundera på om det är bra eller ej, jag väljer här att bygga in mig i MySQL och släppa på kompabiliteten med andra databaser. Det fungerar i min _domän_ som är detta exemplet och här tänker jag inte vara kompatibel mellan databaser.
--->
+Jag väljer att använda en inbyggd konstruktion för `updated` som heter `ON UPDATE CURRENT_TIMESTAMP` vilket gör att den tidsstämpeln ändras varje gång jag gör en update på tabellen. Man kan fundera på om det är bra eller ej, jag väljer här att bygga in mig i MySQL och släppa på kompabiliteten med andra databaser. Det fungerar i min _domän_ som är detta exemplet och här tänker jag inte försöka att vara kompatibel mellan databaser.
 
 
 
@@ -133,17 +135,16 @@ INSERT INTO `content` (`path`, `slug`, `type`, `title`, `data`, `filter`) VALUES
 SELECT `id`, `path`, `slug`, `type`, `title`, `created` FROM `content`;
 ```
 
-Jag lägger endast in värden i ett par av kolumnerna, det räcker som en start.
+Jag lägger endast in värden i ett par av kolumnerna, det räcker som en start. Det handlar om två "page" som skall visas som egna sidor och tre "post" som blir till innehåll i min blogg. 
 
 
 
 ###Läs in innehållet till databasen {#contentread}
 
-Så här gör jag för att läsa in innehållet till min databas `oophp`.
+Så här gör jag för att skapa tabellen och läsa in innehållet till min databas. SQL-filen ligger tillsammans med exemplet.
 
 ```bash
 $ mysql -uuser -ppass oophp < sql/setup.sql
-Warning: Using a password on the command line interface can be insecure.
 id  path       slug                     type  title                      created
 1   hem        NULL                     page  Hem                        2017-04-18 09:20:28
 2   om         NULL                     page  Om                         2017-04-18 09:20:28
@@ -165,7 +166,7 @@ Låt oss titta på hur jag har tänkt.
 
 
 
-###Typer page och post {#tva-typer}
+### Typer page och post {#tva-typer}
 
 Jag tänker mig två typer av innehåll, `page` och `post`.
 
@@ -177,15 +178,15 @@ Två typer och två tänkta hanteringar av innehållet.
 
 
 
-###Innehållet {#innehall}
+### Innehållet {#innehall}
 
-Själva innehållet är kolumnerna `title` och `data`, det är det som ger sidans innehåll. Det blir bra som en `<h1>` följt av text. Dessutom kan `title` bli en del av sidans `<title>` element.
+Själva innehållet är kolumnerna `title` och `data`, det är det som ger sidans innehåll. Det blir bra som en `<h1>` följt av text. Dessutom kan kolumnen `title` bli en del av sidans HTMLelement `<title>`.
 
 Jag tänker också använda mig av `title` för att skapa innehållets `slug`.
 
 
 
-###Att komma åt innehållet {#id}
+### Att komma åt innehållet {#id}
 
 Det finns (minst) tre olika sätt att komma åt ett specifikt innehåll, dels via `id` som kan användas när användaren skall editera eller radera en sida.
 
@@ -201,7 +202,7 @@ Vi har alltså tre olika sätt att peka ut det innehåll som skall hanteras. Det
 
 
 
-###Filter {#filter1}
+### Filter {#filter1}
 
 Tanken är att innehållet skall processas via olika filter innan det visas upp. Detta ger möjligheten att använda olika strategier när man skriver sitt innehåll. Exempel på olika filter kan vara BBCode eller Markdown.
 
@@ -213,11 +214,11 @@ Vill du få ett smakprov på ett filter som översätter BBCode till HTML så ki
 
 
 
-###Tidsstämplar {#tid}
+### Tidsstämplar {#tid}
 
 Jag sätter fyra olika tidsstämplar. När innehållet skapas så sätts `created`, varje gång som innehållet uppdateras så uppdateras `updated`. När innehållet raderas så sätts `deleted`. 
 
-Tanken med `deleted` är att markera innehållet som raderat, utan att fysiskt ta bort det. Kanske vill man återskapa det, eller införa en hantering som liknar en *papperskorg*. Ett dokument som slängs i papperskorgen kan man ta upp (eller kasta bort på riktigt).
+Tanken med `deleted` är att markera innehållet som raderat, utan att fysiskt ta bort det. Kanske vill man återskapa det, eller införa en hantering som liknar en *papperskorg*. Ett dokument som slängs i papperskorgen kan man ta upp (eller kasta bort på riktigt). En sådan hantering kan även kallas _soft delete_. 
 
 Den fjärde tidsstämpeln är `published` som sätter en tidpunkt för när innehållet är publicerat. Detta ger möjligheten att sätta ett datum i framtiden för att publicera innehållet vid en bestämd tidpunkt. Vill man inte att innehållet skall visas så kan man nollställa `published` till `null` alternativt sätta ett datum långt fram i tiden.
 
@@ -230,7 +231,7 @@ Nu finns det en lagringsstruktur och några exempel på innehåll i tabellen. L�
 
 Det kan se ut så här.
 
-[FIGURE src=image/snapvt17/content-all-take1.png?w=w2 caption="En första ansats att visa vilket innehåll som finns i databasen."]
+[FIGURE src=image/snapvt17/content-all-take1.png?w=w3 caption="En första ansats att visa vilket innehåll som finns i databasen."]
 
 Det som behövs för att skapa ovan sida är en route motsvarande den som vi använda i film-databasen. Jag kunde nästan återanvända all min kod från det exemplet.
 
@@ -296,13 +297,13 @@ Nu behövs ett gränssnitt till användaren så innehållet kan uppdateras via w
 
 Jag börjar med en enklare variant av vyn `show-all` som visar detaljer om innehållet tillsammans med en edit-knapp från FontAwesome.
 
-[FIGURE src=image/snapvt17/content-edit.png?w=w2 caption="Ett admin-gränssnitt för att hantera innehållet."]
+[FIGURE src=image/snapvt17/content-edit.png?w=w3 caption="Ett admin-gränssnitt för att hantera innehållet."]
 
-Routen till edit-formuläret blir `?route=edit&id=1`.
+Routen till edit-formuläret för översta raden blir här `?route=edit&id=1`.
 
 Nu behöver jag ett edit-formulär. Det kan se ut så här.
 
-[FIGURE src=image/snapvt17/content-do-edit.png?w=w2 caption="Innehållet kan nu redigeras i ett formulär."]
+[FIGURE src=image/snapvt17/content-do-edit.png?w=w3 caption="Innehållet kan nu redigeras i ett formulär."]
 
 Vi kan kika kort på routen som hanterar och förbereder för edit-formuläret.
 
@@ -468,7 +469,7 @@ Det blir både automatik så att slugen automatgenereras och det ger användaren
 
 Men vad händer om det blir två likadana slugs?
 
-[FIGURE src=image/snapvt17/content-duplicate-slug.png?w=w2 caption="Det kan inte finnas två likadana slugs."]
+[FIGURE src=image/snapvt17/content-duplicate-slug.png?w=w3 caption="Det kan inte finnas två likadana slugs."]
 
 Här får man bygga in någon form av felhantering om man vill lösa detta bättre. Det lämnar vi som en övning till läsaren.
 
@@ -512,7 +513,7 @@ Jag väljer att lägga till en länk "Create" i menyn som leder till ett enkelt 
 
 Tittar man på användargränssnittet så kan det se ut så här.
 
-[FIGURE src=image/snapvt17/content-create.png?w=w2 caption="Ett minimalt formulär för att skapa en ny artikel."]
+[FIGURE src=image/snapvt17/content-create.png?w=w3 caption="Ett minimalt formulär för att skapa en ny artikel."]
 
 När användaren klickar "Create" så skapas innehållet i databasen. Följande route tar hand om det.
 
@@ -535,7 +536,7 @@ case "create":
 
 Varken routen eller vyn innehåller särskilt mycket kod och jag är nöjd att kunna återanvända routen "edit" för att vidare redigera innehållet.
 
-[FIGURE src=image/snapvt17/content-create-edit.png?w=w2 caption="Det nyskapade innehållet finns nu i databasen och jag kan fylla på och spara dess värden."]
+[FIGURE src=image/snapvt17/content-create-edit.png?w=w3 caption="Det nyskapade innehållet finns nu i databasen och jag kan fylla på och spara dess värden."]
 
 Som du ser så är en nyskapad artikel redan publicerad. I mitt exempel är det bra eftersom jag slipper skriva in ett publiceringsdatum i formuläret. Men egentligen vill jag troligen inte att helt nyskapade artiklar skall vara publicerade. Det handlar om hur man väljer att sätta, eller inte sätta, defaultvärde på `published`.
 
@@ -578,19 +579,19 @@ Då ska vi se vilket användargränssnitt detta flöde kan få.
 
 Först en ny knapp, nu med ikoner, i edit-formuläret.
 
-[FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Nu kan man radera ett innehåll från edit-formuläret."]
+[FIGURE src=image/snapvt17/content-delete-edit.png?w=w3 caption="Nu kan man radera ett innehåll från edit-formuläret."]
 
 Sedan en radera-ikon på översikten.
 
-[FIGURE src=image/snapvt17/content-delete-admin.png?w=w2 caption="Det går även radera ett innehåll direkt från admin-vyn."]
+[FIGURE src=image/snapvt17/content-delete-admin.png?w=w3 caption="Det går även radera ett innehåll direkt från admin-vyn."]
 
 I båda fallen leder länken till en vy där man verkligen kan utföra raderingen. Allt för att undvika misstag.
 
-[FIGURE src=image/snapvt17/content-delete-true.png?w=w2 caption="Nu kan vi verkligen radera innehållet."]
+[FIGURE src=image/snapvt17/content-delete-true.png?w=w3 caption="Nu kan vi verkligen radera innehållet."]
 
-Vyerna och formulärens förändringar är enkla. Det som kan vara lite klurigt är hur man vill att flödet i applikationen skall fungera. Var kan kan radera och hur skall det gå till?
+Vyerna och formulärens förändringar är realtivt enkla för att skapa din readera-sida. Det som kan vara lite klurigt är hur man vill att flödet i applikationen skall fungera. Var kan kan radera och hur skall det gå till?
 
-Vi kan ta en titt på routen som utför själva raderingen av innehållet.
+Vi tar en titt på routen som utför själva raderingen av innehållet.
 
 ```php
 case "delete":
@@ -650,9 +651,9 @@ Det man kan nämna är att innehållets id ligger i formuläret som postas för 
 
 När ett innehåll är raderat så markeras det som raderat och det syns i admin-vyn.
 
-[FIGURE src=image/snapvt17/content-delete-bydate.png?w=w2 caption="Artikeln som raderades är märkt som raderad, men inte fysiskt borttagen."]
+[FIGURE src=image/snapvt17/content-delete-bydate.png?w=w3 caption="Artikeln som raderades är märkt som raderad, men inte fysiskt borttagen."]
 
-Nu hade vi kunnat lägga till en funktion som tar bort tidsstämpeln som anger när innehållet raderades. Då hade innehållet _kommit tillbaka_ igen, som inget hade hänt.
+Nu hade vi kunnat lägga till en funktion som tar bort tidsstämpeln som anger när innehållet raderades. Då hade innehållet _kommit tillbaka_ igen, som inget hade hänt. Det hade varit en form av papperskorg där vi kunde återhämtat innehåll vi raderat. 
 
 Nu är vi nöjda med CRUD-delen, det administrativa gränssnittet för att jobba med innehållet. Då fortsätter vi att se hur innehållet kan presenteras för användaren.
 
@@ -684,7 +685,7 @@ default:
     }
 ```
 
-Det blev två olika varianter för default-hanteringen. Sen tillkommer att visa en översikt av blogginläggen på en egen sida, men det får bli en egen route.
+Det blev två olika varianter för default-hanteringen. Sen tillkommer att visa en översikt av blogginläggen på en egen sida (`?route=blog`), men det får bli en egen route.
 
 
 
@@ -698,7 +699,7 @@ Snart kommer min variant, men först valde jag att bygga en översikt över de s
 
 Så här blev min översikt.
 
-[FIGURE src=image/snapvt17/content-view-pages.png?w=w2 caption="Här är en översikt av de webbsidor som är av typen `page`."]
+[FIGURE src=image/snapvt17/content-view-pages.png?w=w3 caption="Här är en översikt av de webbsidor som är av typen `page`."]
 
 Du kan se att det visas vilken status sidan har, om den är publicerad eller inte och om den är raderad eller ej.
 
@@ -729,7 +730,7 @@ Själva routen följer samma struktur som tidigare, där hittar vi inget speciel
 
 Om jag nu klickar på länken till `home` så kan det se ut så här.
 
-[FIGURE src=image/snapvt17/content-home.png?w=w2 caption="Sidan för `home` visas."]
+[FIGURE src=image/snapvt17/content-home.png?w=w3 caption="Sidan för `home` visas."]
 
 Ännu finns ingen formattering av texten, men innehållet visas som det ska.
 
@@ -786,7 +787,7 @@ I WHERE-delen så säkerställs att sidans path matchar, att det är rätt type 
 
 Om SQL-frågan ger ett tomt svar tillbaka så visas en 404-sida.
 
-[FIGURE src=image/snapvt17/content-404.png?w=w2 caption="404 för att sidan kunde inte visas."]
+[FIGURE src=image/snapvt17/content-404.png?w=w3 caption="404 för att sidan kunde inte visas."]
 
 Ovan visas en sida som inte kunde visas för att den antingen inte fanns, den var raderad, eller var den ännu inte publicerad.
 
@@ -799,7 +800,7 @@ Då ger vi oss på att visa innehåll för bloggen vilket är allt innehåll av 
 
 Lite så här.
 
-[FIGURE src=image/snapvt17/content-blog.png?w=w2 caption="En blogglista med alla inlägg med senaste inlägget först."]
+[FIGURE src=image/snapvt17/content-blog.png?w=w3 caption="En blogglista med alla inlägg med senaste inlägget först."]
 
 Routen som förbereder visningen ser ut ungefär som visningen av sidorna (typen page). När man gjort grunderna så handlar det ibland bara om nyanser i skillnader i koden och utmaningen ligger i att skriva kod där man inte upprepar sig och koddelar kan återanvändas.
 
@@ -850,7 +851,7 @@ if (!$resultset) {
 
 Klickar man på länken till bloggposten så skall den visas på en egen sida. Det blir i stort sett samma hantering som för innehåll av typen `page`.
 
-[FIGURE src=image/snapvt17/content-blogpost.png?w=w2 caption="En bloggpost visas nästan på samma sätt som en page."]
+[FIGURE src=image/snapvt17/content-blogpost.png?w=w3 caption="En bloggpost visas nästan på samma sätt som en page."]
 
 Routen delar grundstrukturen med den delen som visar typen page via dess path. Skillnaden ligger i SQL-frågan där slug används istället för path.
 
@@ -899,7 +900,7 @@ Tanken är nu att ge användaren ökad kontroll över hur innehållet formattera
 
 
 
-###Olika type av filter {#filtertyper}
+###Olika typer av filter {#filtertyper}
 
 I mitt exempel har jag tänkt mig fyra olika textfilter som kan formattera texten enligt olika regler.
 
@@ -974,7 +975,7 @@ Den formatterade/filtrerade texten `$textOrig` skulle du kunna se ut så här.
 
 Eller om man bygger ett exempel och gör ett litet testprogram av det, då kan resultatet bli så här.
 
-[FIGURE src=image/snapvt17/content-textfilter.png?w=w2 caption="Innehållet formatteras och filtreras för att bli HTML."]
+[FIGURE src=image/snapvt17/content-textfilter.png?w=w3 caption="Innehållet formatteras och filtreras för att bli HTML."]
 
 Bilden ovan visar hur exemplet tar innehållets råa källa och formatterar det till HTML, först visas den råa formatterade HTML-koden och seda skrivs den ut så att webbläsaren får visa upp resultatet av HTML-koden.
 
