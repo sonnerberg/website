@@ -27,7 +27,8 @@ Så här kan en funktion se ut som använder sig av ett reguljärt uttryck för 
  *
  * @returns string the formatted text.
  */
-function bbcode2html($text) {
+function bbcode2html($text)
+{
     $search = [
         '/\[b\](.*?)\[\/b\]/is',
         '/\[i\](.*?)\[\/i\]/is',

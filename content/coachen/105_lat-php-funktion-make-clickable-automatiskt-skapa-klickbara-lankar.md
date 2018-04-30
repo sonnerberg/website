@@ -37,7 +37,8 @@ Så här ser källkoden ut för funktionen.
  *
  * @return string the formatted text.
  */
-function makeClickable($text) {
+function makeClickable($text)
+{
     return preg_replace_callback(
         '#\b(?<![href|src]=[\'"])https?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#',
         function ($matches) {
