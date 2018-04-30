@@ -4,6 +4,7 @@ author:
 category:
     - php
     - markdown
+    - textfilter
 revision:
     "2018-04-30": "(C, mos) Uppdaterat testprogram i kursrepot för oophp."
     "2017-04-18": "(B, mos) Uppdaterad med installation via composer."
@@ -47,7 +48,7 @@ function markdown($text)
 
 Om du vill testa så har jag en [text i Markdown](https://github.com/dbwebb-se/oophp/tree/master/example/textfilter/text/sample.md) som du kan låna.
 
-Det finns egentligen ett helt exempel som du kan testa i kursrepot för [oophp under example/textfilter](https://github.com/dbwebb-se/oophp/tree/master/example/textfilter/text/sample.md). Du behöver göra en `composer install` och sedan kan du öppna din webbläsare mot filen `htdoc/markdown.php`.
+Det finns egentligen ett helt exempel som du kan testa i kursrepot för [oophp under example/textfilter](https://github.com/dbwebb-se/oophp/tree/master/example/textfilter). Du behöver göra en `composer install` och sedan kan du öppna din webbläsare mot filen `htdocs/markdown.php`.
 
 Resultatet kan se ut så här.
 

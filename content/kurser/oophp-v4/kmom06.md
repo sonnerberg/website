@@ -51,9 +51,9 @@ Kika på följande videos.
 Följande tips från coachen används i övningen och uppgiften.
 
 1. "[Gör en läsbar url med slugify()](coachen/gor-en-lasbar-url-med-slugify)"
-1. ["Reguljära uttryck i PHP ger BBCode formattering"](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)
-1. ["Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar"](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar)
-1. ["Skriv för webben med Markdown och formattera till HTML med PHP (v2)"](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)
+1. "[Reguljära uttryck i PHP ger BBCode formattering](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)"
+1. "[Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar)"
+1. "[Skriv för webben med Markdown och formattera till HTML med PHP (v2)](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)"
 
 
 
@@ -71,6 +71,10 @@ Gör följande övning, den förbereder dig inför uppgifterna.
 
 <!--
 esc() wrapper, e(), eller modulen från Zend
+
+Lägg Textfilter som övning, inte enbart som uppgift.
+
+purify
 -->
 
 
@@ -79,7 +83,7 @@ esc() wrapper, e(), eller modulen från Zend
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Skapa en klass för textfiltrering och formattering](uppgift/skapa-en-klass-for-textfiltrering-och-formattering)". Den färdiga klassen integrerar du i `me/anax-lite`. Vill du testa och utveckla i en separat katalog så använder du `me/kmom04/textfilter`.
+1. Gör uppgiften "[Skapa en klass för textfiltrering och formattering (v2)](uppgift/skapa-en-klass-for-textfiltrering-och-formattering-v2)". Den färdiga klassen integrerar du i `me/redovisa`. Vill du testa och utveckla i en separat katalog så använder du `me/kmom06/textfilter`.
 
 1. Gör uppgift "[Bygg webbsidor från innehåll i databasen](uppgift/bygg-webbsidor-fran-innehall-i-databasen)" och spara filerna i `me/redovisa`.
 
@@ -96,7 +100,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Finns något att säga kring din klass för texfilter, eller rent allmänt om formattering och filtrering av text som sparas i databasen av användaren?
-* Berätta hur du tänkte när du strukturerade klasserna och databasen för webbsidor och bloggposter?
-* Alternativ struktur av din kod?
+* Hur gick det att jobba med klassen för filtrering och formatting av texten?
+* Berätta om din klasstruktur och kodstruktur för din lösning av webbsidor med innehåll i databasen.
+* HUr känner du rent allmänt för den koden du skrivit i din me/redovisa, vad är bra och mindre bra? Ser du potential till refactoring av din kod och/eller behov av stöd från ramverket?
 * Vilken är din TIL för detta kmom?

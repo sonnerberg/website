@@ -1,8 +1,12 @@
 ---
-author: mos
-category: php
-updated: "2013-04-29 14:26:08"
-created: "2013-04-29 14:11:12"
+author:
+    - mos
+category:
+    - php
+    - textfilter
+revision:
+    "2018-04-30": "(B, mos) Uppdaterat testprogram i kursrepot för oophp."
+    "2013-04-29": "(A, mos) Första versionen."
 ...
 Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar
 ==================================
@@ -30,20 +34,24 @@ Så här ser källkoden ut för funktionen.
  * Make clickable links from URLs in text.
  *
  * @param string $text the text that should be formatted.
- * @return string with formatted anchors.
+ *
+ * @return string the formatted text.
  */
-function make_clickable($text) {
-  return preg_replace_callback(
-    '#\b(?<![href|src]=[\'"])https?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#',
-    create_function(
-      '$matches',
-      'return "<a href=\'{$matches[0]}\'>{$matches[0]}</a>";'
-    ),
-    $text
-  );
+function makeClickable($text) {
+    return preg_replace_callback(
+        '#\b(?<![href|src]=[\'"])https?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#',
+        function ($matches) {
+            return "<a href=\'{$matches[0]}\'>{$matches[0]}</a>";
+        },
+        $text
+    );
 }
 ```
 
-Du kan [testa funktionen via ett exempelprogram](kod-exempel/function_to_make_links_clickable/) och du kan ställa frågor om funktionen i  [forumtråden där flera bidrog till funktionen `make_clickable()`](t/254) genom att modifiera det reguljära uttrycket som från början hämtades från källkoden i Wordpress.
+Det finns ett exempel som du kan testa i kursrepot för [oophp under example/textfilter](https://github.com/dbwebb-se/oophp/tree/master/example/textfilter). Öppna din webbläsare mot filen `htdocs/clickable.php`.
 
-Funktionen `make_clickable()` använder sig av [anonyma funktioner](http://php.net/manual/en/functions.anonymous.php) för callbacken, så du behöver minst version 5.3 av PHP.
+Det ser ut så här.
+
+[FIGURE src=image/snapvt18/clickable-formatter.png?w=w3 caption="Kodexempel som visar hur funktionen makeClickable fungerar."]
+
+Du kan ställa frågor om funktionen i  [forumtråden där flera bidrog till funktionen `make_clickable()`](t/254) genom att modifiera det reguljära uttrycket som från början hämtades från källkoden i Wordpress.
