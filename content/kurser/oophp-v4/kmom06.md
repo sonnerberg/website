@@ -75,6 +75,8 @@ esc() wrapper, e(), eller modulen från Zend
 Lägg Textfilter som övning, inte enbart som uppgift.
 
 purify
+
+användare, lösenord
 -->
 
 

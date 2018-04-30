@@ -47,6 +47,9 @@ Enhetstestning klasser databas.
 Snygg admin del för bloggposter, sidor, användare.
 Tabell, sökbar, 
 
+Om block som innehållsdel.
+
+Läs mer alt --more--.
 -->
 
 

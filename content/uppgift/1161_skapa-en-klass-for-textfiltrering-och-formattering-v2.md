@@ -244,7 +244,7 @@ Krav {#krav}
 
 1. Din klass skall innehålla en metod `parse()` som tar text och filter som inparametrar, bearbetar texten enligt angivna filter i sagd ordning och slutligen returnerar den modifierade texten.
 
-1. Gör en (eller flera) test routes under `textfilter`, i din redovisa sida, som visar hur du formatterar innehåll på de sätt som skall stödjas. Lägg en länk i navbaren så man kan nå din testsida.
+1. Gör en (eller flera) test routes på din redovosa sida som visar hur du formatterar innehåll på de sätt som skall stödjas. Lägg en länk i navbaren så man kan nå din testsida.
 
 1. Validera och publicera din kod.
 

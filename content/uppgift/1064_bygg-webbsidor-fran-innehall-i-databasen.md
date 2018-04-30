@@ -7,13 +7,17 @@ category:
     - anax-lite
     - sql
 revision:
+    "2018-04-30": "(B, mos) Genomgången inför oophp-v4."
     "2017-04-18": "(A, mos) Första utgåvan."
 ...
 Bygg webbsidor från innehåll i databasen
 ==================================
 
-Du skall bygga tabell(er) i en databas tillsammans med klasser i Anax Lite för att implementera stöd för sidor och bloggposter som sparas i databasen och kan redigeras av en användare.
+Du skall bygga tabell(er) i en databas tillsammans med klasser i din redovisa-sida för att implementera stöd för sidor och bloggposter som sparas i databasen och kan redigeras av en användare.
 
+Texten som du lagrar i databasen kör du igenom ett antal filter som formatterar din text innan den visas.
+
+Det är egentliget ett litet CMS (Content Management System) du skapar. 
 <!--more-->
 
 
@@ -23,29 +27,29 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom artikeln "[Lagra innehåll i databas för webbsidor och bloggposter (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)".
 
-Du har löst uppgiften "[Skapa en klass för textfiltrering och formattering](uppgift/skapa-en-klass-for-textfiltrering-och-formattering)".
+Du har löst uppgiften "[Skapa en klass för textfiltrering och formattering (v2)](uppgift/skapa-en-klass-for-textfiltrering-och-formattering-v2)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Du skall bygga in hantering för innehåll i ditt Anax Lite. Det skall fungera (ungefär) på motsvarande sätt som det gjorde i artikeln. Men du har full frihet hur du väljer att integrera det i ditt Anax Lite.
+Du skall bygga in hantering för innehåll i din redovisa sida. Det skall fungera (ungefär) på motsvarande sätt som det gjorde i artikeln om sidor och bloggposter.
+
+Du har full frihet hur du väljer att integrera det i ditt ramverk.
 
 Se till att din databas innehåller en användare doe med lösenord doe och en admin med lösenord admin, förutsatt att du har en annan behörighet för admin. Det är för att rättaren skall kunna komma åt och logga in.
 
-Tips. Förslagsvis bygger du en generell Content-klass och specifika klasser för Page och Blog, men du väljer strukturen helt själv.
+Tips. Förslagsvis bygger du en generell Content-klass och specifika klasser för Page och Blog, men du väljer strukturen helt själv. Försök att få lite kod i dina routes och lägg huvuddelen av koden i klasser som eventuellt går att återanvända utanför ramverket.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Spara din SQL-kod som sätter upp tabell och initialt innehåll i `anax-lite/sql/setup-content.sql`.
+1. Spara din SQL-kod som sätter upp tabell och initialt innehåll i `sql/content/setup.sql`.
 
-1. Det skall finnas en administrativ del som skyddas av inloggning. Där kan den inloggade användaren (eller administratören) skapa, uppdatera och radera innehåll (CRUD).
-
-1. Se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin (om du har en admin-behörighet).
+1. Det skall finnas en administrativ del där användaren kan skapa, uppdatera och radera innehåll (CRUD) i webbplatsen.
 
 1. I din översikt av innehållet visar du minst innehållets id, titeln, published, created, updated, deleted, path och slug.
 
@@ -53,11 +57,9 @@ Krav {#krav}
 
 1. Det skall finnas felhantering så att man kan ha tomma path.
 
-1. Skapa en ytterligare typ av innehåll som `block`. Tanken är att denna typen av innehåll kan finnas som en del i en sida, till exempel i en sidebar, en flash, en triptych eller en footer.
+1. Användaren skall kunna fylla i vilka textfilter som skall användas och du skall filtrera/formattera texten med din klass motsvarande `TextFilter`.
 
-1. Användaren skall kunna fylla i vilka textfilter som skall användas och du skall filtrera/formattera texten med din klass motsvarande `Textfilter`.
-
-1. Skapa routes för att visa att dina `page`, `post` och `block` fungerar.
+1. Skapa routes för att visa att dina `page` och `post` fungerar. Gör en egen landningssida på din redovisa-sida, så att det är enkelt att testa och se att både sidor, bloggposter och en översikt av bloggposterna syns.
 
 1. Validera och publicera din kod.
 
@@ -65,6 +67,12 @@ Krav {#krav}
 
 Extrauppgift {#extra}
 -----------------------
+
+Det finns många små saker man kan jobba med när det gäller innehåll som sparas i databasen. Se om något av dem faller dig i smaken. JObba på om du har tid och lust.
+
+1. Om du lägger inloggning så se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin.
+
+1. Skapa en ytterligare typ av innehåll som `block`. Tanken är att denna typen av innehåll kan finnas som en del i en sida, till exempel i en sidebar, en flash, en triptych eller en footer.
 
 1. Skapa en möjlighet att se de sidor som ännu inte är publicerade samt de som är raderade. Denna möjlighet kan kräva inloggning (eller inte).
 
@@ -76,7 +84,7 @@ Extrauppgift {#extra}
 
 1. Lägg till paginering och sortering på ditt admin interface av innehållet.
 
-1. Lägg till så att ett innehåll är kopplat till en viss användare som blir dess författare.
+1. Lägg till så att ett innehåll är kopplat till en viss användare som blir dess författare (kräver databastabeller för användaren och inloggning).
 
 
 
