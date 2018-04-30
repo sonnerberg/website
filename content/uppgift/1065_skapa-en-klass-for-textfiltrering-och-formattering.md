@@ -33,7 +33,7 @@ Du har kikat igenom följande artiklar om textfiltrering och formattering.
 Introduktion {#intro}
 -----------------------
 
-Samla koden för textfiltrering och formattering i en egen klass som du kan använda i ditt Anax Lite för att filtrera/formattera innehåll från databasen.
+Samla koden för textfiltrering och formattering i en egen klass som du kan använda i din webbplats för att filtrera/formattera innehåll från databasen.
 
 Du kan välja att lösa uppgiften med din egen kod och klass, eller så återanvänder du modulen [`mos/ctextfilter`](https://packagist.org/packages/mos/ctextfilter) och integrerar den så att den löser uppgiften åt dig. Skriv egen kod eller återanvänd en befintlig modul, välj väg.
 
