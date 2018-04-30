@@ -16,6 +16,35 @@ Vi tittar på ett par seminarier från konferenser och funderar på vad de förs
 [FIGURE src=image/snapht17/ramverk1-me.png caption="Kataloger och filer på plats i grunden till en Anax me-sida för kursen ramverk1."]
 
 
+<!--
+Kommentarer från oophp-v4 
+
+Introducera backenden till eshopen?
+Embryo till eshop sql?
+
+(registrera användare, admin av användare)
+
+Kundvagn
+Enhetstesta kundvagn
+
+Inloggning
+Enhetstesta inloggning
+
+Guide abstract methods, classes, final interface, trait
+
+Funktionstestning?
+Enklare sådan, typ curl?
+
+mockup
+prepare testcase, prepare testclass, make mockobject.
+
+Test a trait, interface, abstract class?
+Enklare funktionstester.
+
+Enhetstestning mot databas?
+-->
+
+
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
