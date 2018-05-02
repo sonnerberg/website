@@ -21,7 +21,19 @@ Du kommer även jobba med JavaScript och Node.js för att se hur du kan koppla d
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Installera följande.
+
+1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](labbmiljo/node-och-npm)".
+
+
+
+
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 6-8 studietimmar)*
@@ -59,7 +71,7 @@ Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går u
 
 
 
-###MDN dokumentation {#mdn}
+### MDN dokumentation {#mdn}
 
 I kursen används [Mozilla Developers Network (MDN)](https://developer.mozilla.org/) som en resurs generellt för webbresurser och specifikt för referensmanual till programmeringsspråket JavaScript.
 
@@ -72,7 +84,7 @@ Vill du hamna på rätt manualsida så lägger du alltid till "mdn" till din goo
 
 
 
-###Node.js dokumentation {#nodejs}
+### Node.js dokumentation {#nodejs}
 
 [Node.js](https://nodejs.org/) låter dig köra JavaScript utan en webbläsare. Via webbplatsen för Node.js finner du referensdokumentationen med de delar och moduler som är specifika för JavaScript i sammanhanget Node.js. Node.js innehåller ett API som bland annat ger dig tillgång till operativsystemets resurser och låter dig skriva terminalprogram.
 
@@ -80,7 +92,7 @@ Vill du hamna på rätt manualsida så lägger du alltid till "mdn" till din goo
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Läs följande:
 
@@ -95,15 +107,7 @@ Läs följande:
 
 
 
-###Labbmiljö
-
-Installera följande.
-
-1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](labbmiljo/node-och-npm)".
-
-
-
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -117,7 +121,7 @@ Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någ
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -133,7 +137,7 @@ Enkel SQL laboration som visar att studenten kan göra joins/subquery.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
 Gör följande extrauppgifter om du har tid och lust.
 

@@ -22,13 +22,13 @@ Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulter
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -44,7 +44,7 @@ Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, 
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Läs följande:
 
@@ -66,7 +66,7 @@ Läs följande:
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -85,7 +85,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 

@@ -20,13 +20,13 @@ Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och förho
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -50,13 +50,21 @@ Saker vi inte hanterat:
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Läs följande.
 
 1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
 
 1. Läs igenom foruminlägget om "[Vad välja som primärnyckel till en databastabell](t/6439)?", det ger en orientering i hur man kan tänka när man väljer primärnyckel i en tabell.
+
+
+
+### Extra  {#extra}
+
+Gör följande om du har tid och lust.
+
+1. Kika på foruminlägget "[Exempelkod Node.js, Express, MySQL och login med sessioner](t/7327)" som visar hur du löser login med sessionshantering i Express.
 
 
 
@@ -67,7 +75,7 @@ Läs följande.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -91,7 +99,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 

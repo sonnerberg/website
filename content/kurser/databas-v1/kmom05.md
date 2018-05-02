@@ -24,13 +24,13 @@ Vi ser hur man bygger upp en CRUD-baserad webbklient med HTML-formulär som ger 
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -50,7 +50,7 @@ Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkurs
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -62,7 +62,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 

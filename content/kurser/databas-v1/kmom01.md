@@ -47,13 +47,13 @@ dbwebb init
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -66,7 +66,7 @@ Viss information finns i [bokens webbkurs](http://www.databasteknik.se/webbkurse
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Kika igenom följande artiklar.
 
@@ -90,7 +90,7 @@ Följande kan du studera om du har tid och kraft över.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Jobba igenom följande övningar, de förbereder dig inför uppgifterna.
 
@@ -98,7 +98,7 @@ Jobba igenom följande övningar, de förbereder dig inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 

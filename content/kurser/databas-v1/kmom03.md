@@ -24,7 +24,7 @@ Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
