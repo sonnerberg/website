@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2018-04-07": "(B, mos) Lade till examination för Webbprogrammering."
+    "2018-05-07": "(B, mos) Lade till examination för Webbprogrammering."
     "2018-02-27": "(A, mos) Första utgåvan."
 ...
 Kmom10: Projekt och examination
@@ -27,7 +27,7 @@ De som läser enligt kurskoden PA1451 i [kurspaketet webprog](webprog) gör ett 
 
 
 
-Examination för Webbprogrammering med kurskod PA1451 {#wip}
+Examination för programstudenter på Webbprogrammering med kurskod PA1451 {#wip}
 --------------------------------------------------------------------
 
 De som läser enligt kurskoden PA1451 inom programmet Webbprogrammering gör examination genom ett projekt som kan utföras i grupp, samt en individuell examination.
