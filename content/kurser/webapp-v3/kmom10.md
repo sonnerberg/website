@@ -29,7 +29,7 @@ Projektidé och upplägg {#upplagg}
 
 Du är en engagerad student och funderar på hur du kan nå ut och bidra till en förändring av omvärlden och säkra framtiden. Du känner en pulserande ådra av entreprenörsskap i dig. Du bestämmer dig för att "bygga en webapp" som bidrar till förändring.
 
-Det finns en årlig tävling, ["Hack for Sweden"](http://hackforsweden.se/), där öppen data används för att bygga appar som fokuserar på nytänkande och innovation. I detta projekt kan du använda [en eller flera datakällor som publiceras via tävlingen](http://hackforsweden.se/data/) som källa till din webapp. Vi ser självklart fram emot att du deltar i tävlingen Hack for Sweden med din app.
+Det finns en årlig tävling, ["Hack for Sweden"](http://hackforsweden.se/), där öppen data används för att bygga appar som fokuserar på nytänkande och innovation. I detta projekt kan du använda [en eller flera datakällor som publiceras via tävlingen](https://oppnadata.se) som källa till din webapp. Vi ser självklart fram emot att du deltar i tävlingen Hack for Sweden med din app.
 
 Du funderar och väljer en ansats för din webapp.
 
