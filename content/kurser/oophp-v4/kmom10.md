@@ -2,20 +2,12 @@
 author:
     - mos
 revision:
-    "2018-02-26": "(PC1, mos) Arbetsmaterial oophp v4."
+    "2018-05-08": "(C, mos) Ny inför oophp v4."
     "2017-05-09": "(B, mos) Mindre förtydligande."
     "2017-05-06": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
 ==================================
-
-[WARNING]
-**Version 4 av oophp.**
-
-En uppdaterad version av kursen är under bearbetning och kursen ges första gången vårterminen 2018.
-
-[/WARNING]
-
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -23,7 +15,7 @@ Upplägget är enligt följande:
 
 * Projektet och redovisning (20-80h)
 
-Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
+Totalt omfattar kursmomentet (07/10) i storleksordningen 20-80 studietimmar.
 
 
 
@@ -33,43 +25,34 @@ Bedömning och betygsättning {#bedomning}
 När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
 
 
-<!--stop-->
-
-<!--
-Inloggning. Användarens egen profil.
-
-Admin för användare.
-
-Gör eget WordPress.
-
-Enhetstestning klasser databas.
-
-Snygg admin del för bloggposter, sidor, användare.
-Tabell, sökbar, 
-
-Om block som innehållsdel.
-
-Läs mer alt --more--.
--->
-
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Ryktet har spritt sig att du är en högst kompetent programutvecklare vilket resulterat i att en välkänd investerare, låt oss kalla henne fru BeckSten, har bett dig utveckla nästa generations webbshop.
+Ryktet har spritt sig att du är en högst kompetent programutvecklare vilket resulterat i att en välkänd IT-profil, låt oss kalla honom Matt Mullvägg, har bett dig utveckla nästa generations bloggverktyg.
 
 Du accepterar uppdraget, väl medveten om att du redan har en god grund till lösningen. 
 
-Du tar din grund `me/anax-lite` och skapar ett helt nytt repo i `me/kmom10`. Om du lägger projektet på GitHub/Bitbucket så behöver det vara privat, eftersom detta är projektet och vi vill undvika att någon hittar och lånar dina affärshemligheter.
+Du tar din grund `me/redovisa` och skapar ett helt nytt projekt i `me/kmom10/proj`. Om du väljer att göra ett Git-repo av projektet och väljer att lägga det på GitHub/Bitbucket så behöver det vara privat. Eftersom detta är det avslutande projektet så vill vi undvika att någon hittar och lånar dina affärshemligheter.
 
-Du skall alltså göra en webbshop där användare kan registrera sig och köpa saker, samtidigt skall det finnas en backend för administration av webbplats och produkter. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil webbshopen skall ha och vilka produkter den skall innehålla.
+Du skall alltså göra ett bloggverktyg där användaren kan skapa och publicera webbsidor och bloggposter via ett administrativt gränssnitt. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil du väljer för din webbplats som demonstrerar din lösning.
+
+Du kan bygga din webbplats med följande fokus.
+
+* Marknadsför en/flera (verklig/påhittad) produkt, tjänst, koncept så att hela din webbplats handlar om just denna "produkt" och dess utomordenliga förträfflighet.
+
+Om du vill kan du anpassa upplägget ovan och bygga webbplatsen med alternativt fokus, till exempel enligt följande.
+
+* Personlig webbplats (för dig själv eller en påhittad person) med allmänna reflektioner och betraktelser i vardagen tillsammans med fotografier för att ge känsla.
+
+Specen nedan bygger på att du gör en webbplats som marknadsför en produkt/tjänst/koncept. Men du kan säkert anpassa det till din egen idé.
 
 
 
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv göra en bedömning och välja väg, dokumentera dina val i redovisningstexten.
+Utveckla och leverera projektet enligt följande specifikation. Saknas info i specen så kan du själv göra en bedömning och välja väg, dokumentera dina val i redovisningstexten.
 
 De tre första kraven är obligatoriska. De tre sista kraven är optionella krav,  lös dem för att samla poäng och därmed nå högre betyg.
 
@@ -77,122 +60,108 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 
 
-###Krav 1: Struktur och innehåll {#k1}
+### Krav 1: Webbplats som demo {#k1}
 
-Följande struktur/innehåll skall (minst) finnas på webbplatsen:
+Nedan används "produkt" som ett samlingsnamn för det fokus du valt vilket kan innebära att lyfta fram en produkt, tjänst, koncept, person eller annat. Det du lyfter fram är alltså "produkten".
 
-1. Sida - Produkter, visa upp de produkter som kan säljas.
-1. Sida - Nyheter, blogglista med nyheter om produkter och ditt företag.
-1. Sida - Om företaget, sida med information om företaget, skriv något relevant och trevligt.
-1. Gemensam Header med logo och titel. En navbar med länkar till webbplatsens olika delar.
-1. Gemensam Footer, med text om Copyright med företagsnamnet.
+Bygg stöd för följande sidor på din webbplats.
 
-Webbsidan skyddas av inloggning och när man är inloggad (och har behörighet som "administratör") kan man via ett gränssnitt ändra innehållet på webbplatsen enligt följande.
+* Hem, en förstasida som ger en översikt av webbplatsens innehåll.
+* En produktsida som visar upp dina produkter (jämför uppgiften filmdatabas).
+* En blogg med nyheter om produkter, erbjudande och din verksamhet.
+* En om-sida med information om webbplatsens fokus, dig själv och din verksamhet.
+* Gemensam header med logo och titel, eller din egen personliga variant av header.
+* Gemensam footer, med text om Copyright med företagsnamnet.
+* En navbar med länkar till webbplatsens olika delar.
 
-* Hantera nyhetsbloggen.
-* Administrera produkterna.
-* Administrera innehållet i "om"-sidan och footern.
+På produktsidan ser man en översikt av alla produktvarianter och erbjudande som finns. Du kan välja att visa översikten av produkterna i en tabell, eller visa upp dem mer som en traditionell Eshop kunde gjort (välj själv). Visa upp minst 5 produkter. Man kan klicka på en produkt för att se den i sin helhet på en produktsida med bild(er) och information om produkten.
 
-I nyhetsblogg släpper företaget nyheter om sina produkter, sin verksamhet och erbjudande. I översikten skall det visas inledningen till minst 7 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas. 
+<!--
+Paginering, sökning, Filtrering.
+-->
 
-Ditt projekt innehåller en makefil som kan generera dokumentation med phpdoc och köra enhetstester med phpunit och generera kodtäckning. Det räcker om det finns testfall i samma omfång som i kmom06.
-
-Din databaskod skriver du i `me/kmom10/sql/setup.sql` och hela filen kan köras utan problem, för att skapa/återskapa en databas.
-
-Du skapar ett ER-diagram av din färdiga databas och sparar i `me/kmom10/sql/er.png`.
-
-Ditt system fungerar att köra på studentservern.
+I nyhetsbloggen presenterar du nyheter och allmän information om produkter och erbjudande. I översikten skall det visas inledningen till minst 5 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas i sin helhet. Använd minst en bild till varje blogginlägg. 
 
 
 
-###Krav 2: Skapa kundkonto {#k2}
+### Krav 2: Ordning och reda {#k2}
 
-En kund kan själv skapa ett nytt konto på webbplatsen. En kund kan redigera detaljer om sitt konto (mailadress, mer efter eget sinne, kanske en avatar från Gravatar?).
+Ditt system driftas på studentservern.
 
-En kund har bara behörighet att köpa, hen kan inte redigera andra delar av webbplatsens innehåll.
+Din databaskod sparar du sedvanligt i `sql/setup.sql`, `sql/ddl.sql` och `sql/insert.sql`.
 
-Det skall finnas förskapade användarkonton, minst ett administratörskonto (admin/admin) och ett kundkonto (doe/doe).
+Du skapar ett ER-diagram av din färdiga databas och sparar i `sql/er.png`. Det är okey att automatgenerera en översikt av tabellerna.
 
-Administratören kan se vilka konton som finns skapade (administratörskonton och kundkonton) och kan redigera detaljer om dem.
+Ditt projekt innehåller en makefil som kan köra enhetstester med phpunit och generera kodtäckning via `make test`. Det finns inga speciella krav på kodtäckningen, men ange din ambitionsnivå i redovisningstexten och berätta vilken kodtäckning du nådde.
+
+Ditt projekt kan generera dokumentation med phpdoc via `make doc`. Vid problem med installation av phpdoc så berättar du om problemen i redovisningstexten och sen går du vidare och lägger tiden på annat.
+
+<!--
+UML
+-->
 
 
 
-###Krav 3: Sida - Produkter {#k3}
+### Krav 3: Administrativt gränssnitt {#k3}
 
-Varje produkt tillhör en produktkategori.
+Webbsidan skyddas av inloggning och man kan logga in som användaren admin med lösenordet admin. Användare och lösenord sparas i databasen.
 
-Produkterna visas upp med en bild, ett namn och en beskrivande text samt ett pris och antalet produkter som finns i lagret.
+När man är inloggad (och har behörighet som "administratör") kan man via ett gränssnitt ändra innehållet på webbplatsen enligt följande.
 
-När man visar produkterna skall de kunna sorteras efter namn och pris. Man kan välja hur många produkter som visas och det finns stöd för paginering.
+* Hantera nyhetsbloggen (lägga till, ta bort och redigera inlägg).
+* Administrera produkterna (lägga till, ta bort och redigera informationen).
 
-Man kan söka efter produkter via produkternas namn och beskrivning.
+När du skriver information om produkterna så skriver du den i Markdown.
 
-En användare måste logga in för att köpa. Eventuellt kan man använda varukorgen först och logga in när man gör köpet (välj väg).
- 
-En användare kan köpa produkter genom att lägga dem i en varukorg och sedan checka ut varukorgen. Användaren får då en visuell rapport över sin order och ordern sparas.
-
-Varukorgen är implementerad i databasen (likt kmom05).
-
-En kund kan se sin orderhistorik och se innehållet i varje order.
-
-Lagret skall uppdateras när en order görs. Innehåll i varukorgen behöver inte påverka lagret.
-
-Det skall finnas minst tio produkter, fördelade över minst tre produktkategorier. Samtliga produkter skall finnas i olika mängd i lagret.
+<!--
+Administrera innehållet i "om"-sidan och footern.
+-->
 
 
 
 ###Krav 4: Förstasidan (optionell) {#k4}
 
-Gör en förstasida som (minst) innehåller:
+Lägg extra kraft på förstasidan och gör den fin, välkomnande, stylad, information. Snygg och tilltalande helt enkelt.
 
-De tre senaste inläggen från din nyhetsblogg. Visa inledningen och en länk för att läsa hela blogginlägget.
+Du kan dela in sidan i regioner/block (gör som du vill) och presentera extra information enligt följande.
 
-samt:
-
+* De tre senaste inläggen från din nyhetsblogg. Visa inledningen och en länk för att läsa hela blogginlägget.
+* Ett "featured" blogginlägg, visa titel och inledningen semt en länk till hela blogginlägget.
 * Senaste inkomna produkter
-* Din mest sålda produkt(er)
-* Veckans erbjudande(n)
+* Veckans erbjudande(n) som länk till en produkt eller blogginlägg.
 * Rekommenderad produkt(er)
 
-Den mest sålda produkten och senast inkomna produkter uppdateras automatiskt baserat på databasens innehåll. För de andra kan man justera innehållet om man loggar in som administratör.
+Du kan uppdatera förstasidans innehåll genom att använda information från databasen, eller så kan du uppdatera innehållet för hand via ditt administrativa gränssnitt, eller en kombination.
 
 
 
-###Krav 5: Produktkategorier (optionell) {#k5}
+###Krav 5: Registrera nytt konto (optionell) {#k5}
 
-Du förbättrar flexibiliteten och en produkt kan vara kopplad till många produktkategorier.
+Erbjud en möjlighet för besökaren att registrera ett konto på din webbplats. Man skall kunna registrera ett konto, logga in och där kan man editera sin personliga profilsida.
 
-Uppdatera dina produkter så att de är kopplade till en mix av 1, 2 och 3 produktkategorier.
+I framtiden tänker du att detta kan vara bra när man vill göra en riktig Eshop.
 
-På din förstasida, lägg till en översikt av dina kategorier, formattera kategorinamnen så att de får ett större typsnitt baserat på antalet produkter som är kopplade till just den kategorin.
+Användarna sparas i databasen och du väljer om de loggar in med ett användarnamn och/eller sin epostadress samt ett lösenord.
 
-När man tittar på produktsidan skall man kunna filtrera per kategori (visa vilka produkter som finns i en kategori).
+Lägg till så att användarens profilbild visas med en Gravatar.
 
-Kan man välja att se produkter från flera produktkategorier så är det bonus (men inte nödvändigt).
+I ditt admingränssnitt visar du en översikt av alla användare som finns registrerade.
+
+De användare som lägger till sig själva har inte rättigheter att nå ditt admin gränssnitt, det är bara adminsitratören som kan göra det.
 
 
 
-###Krav 6: Extra (optionell) {#k6}
+###Krav 6: Spel för extra uppmärksamhet (optionell) {#k6}
 
-Välj en utbyggnad som du tycker passar in. Det kan vara något i stil med:
+Bygg in ditt 100-spel in i din webbplats, du kan modifiera det för att passa in.
 
-* Betalning
-* Faktura
-* Tävla för att vinna bonuskod (100-spelet) (och använda bonuskoden)
+Annonsera ut det som en "Tävling!" där deltagaren kan vinna fina presenter från din webbplats, om de lyckas vinna spelet.
 
-Eller visa mer information på förstasidan/alla sidor likt:
+När man vinner får man en bonuskod.
 
-* Lista senaste produkter som användaren tittat på.
-* Lista de produkter som är mest populära (antalet användare som tittat på dem).
-* Lista senast köpta produkter (oavsett vem som köpt dem).
+Bygg en sida där man kan använda bonsukoden för att se vilken hemlig vinst man har fått, eller kan hämta ut, eller som redan är på väg med post till dig.
 
-Eller något som du själv anser är relevant och där du kan argumentera dig fram till några extrapoäng. 70% kodtäckning med enhetstester kanske?
-
-Kanske kan du integrera din kalender för att visa när nya produkter kommer att släppas?
-
-Kanske hämtar du information till dina produkter från ett externt API? Till exempel en affär som säljer DVD-filmer och hämtar information till nya produkter via ett interface från IMDB.
-
-Skriv vad du gjort och skriv även hur många poäng du anser dina utbyggnader vara värda.
+I redovisningstexten berättar du om din implementation om spelet, nämn något om koden bakom spelet.
 
 
 
@@ -207,7 +176,7 @@ Redovisning {#redovisning}
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida med projektet. 
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på ITs/redovisningen. Glöm inte länka till din me-sida med projektet. 
 
 3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oophp) och berätta att du är klar.
 
