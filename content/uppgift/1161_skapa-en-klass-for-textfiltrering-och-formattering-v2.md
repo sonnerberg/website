@@ -6,6 +6,7 @@ category:
     - kurs oophp
     - anax-lite
 revision:
+    "2018-05-09": "(C, mos) Lade till video som intro."
     "2018-04-30": "(B, mos) Genomgången inför oophp-v4."
     "2017-04-18": "(A, mos) Första utgåvan."
 ...
@@ -30,11 +31,9 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför uppgiften.
 
-<!--
-Du kan se hur jag jobbar igenom stegen i videoserien "[Uppgiften "Bygg CRUD filmdatabas med MySQL" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8dXaJytGWt3usKsqpXT9E-)".
+Du kan se hur jag jobbar igenom stegen i videoserien "[Uppgiften "Skapa en klass för textfiltrering och formattering (v2)" kursen oophp](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8Wj4EwRHrmikydfMJRjh-N)".
 
-[YOUTUBE src="16Pr9JIM1ko" list="PLKtP9l5q3ce8dXaJytGWt3usKsqpXT9E-" width=700 caption="Mikael visar hur du jobbar igenom vissa steg för att komma igång med uppgiften."]
--->
+[YOUTUBE src="yWOmV60KMfM" list="PLKtP9l5q3ce8Wj4EwRHrmikydfMJRjh-N" width=700 caption="Mikael visar hur du jobbar igenom vissa steg för att komma igång med uppgiften."]
 
 Tanken är att du skall bygga en klass `TextFilter` som kan filtrera/formattera en textmassa.
 
