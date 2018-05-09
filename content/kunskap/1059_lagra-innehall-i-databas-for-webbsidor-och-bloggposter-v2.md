@@ -8,6 +8,7 @@ category:
     - mysql
     - php pdo
 revision:
+    "2018-05-09": "(F, mos) lade till video intro."
     "2018-04-30": "(E, mos) Genomgången inför oophp-v4."
     "2017-04-18": "(D, mos) Uppdaterad till nya version inför oophp-v3."
     "2014-10-20": "(C, mos) Bytte koden till doFilter(), innehöll fel."
@@ -37,6 +38,15 @@ Förutsättningar {#pre}
 Du är bekant med PHP PDO och MySQL och/eller du har jobbat igenom artikeln "[Kom igång med PHP PDO och MySQL (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)".
 
 Exempelkoden finns i kursrepot (oophp) under [`example/content`](https://github.com/dbwebb-se/oophp/tree/master/example/content). Du behöver skapa databasen och tabellen innan du kan köra exempelprogrammet.
+
+
+
+Video intro {#vintro}
+---------------------------------------------------------------------------
+
+Det finns en videoserie "[Artikel "Lagra innehåll i databas för webbsidor och bloggposter (v2)" kursen oophp](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9KEIqJ3BekpgTSliEsxFyW)" som ger en introduktion och översikt till artikeln.
+
+[YOUTUBE src="VCtS91M62Dc" list="PLKtP9l5q3ce9KEIqJ3BekpgTSliEsxFyW" width=700 caption="Mikael ger en översikt till artikeln och en snabb kom igång till exempelprogrammet."]
 
 
 
