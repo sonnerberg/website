@@ -12,16 +12,17 @@ Välkommen till Blekinge Tekniska Högskola!
 
 ####Aktuellt
 
-[FIGURE src=https://grillcon.dbwebb.se/image/grill-album/mos_grill.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårens GrillCon närmar sig med stormsteg..."]
+[FIGURE src=https://grillcon.dbwebb.se/image/grill-album/mos_grill.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårens GrillCon är nu avklarad, sommaren närmar sig."]
 
-* [GrillCon 2018 Vår](https://grillcon.dbwebb.se)
-* [Om 3-veckors uppropet lp4](t/7415)
-* [Uppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
-* [Omregistrering och restinlämningar](kurser/faq/omregistrering)
+* [Allra, allra sista inlämning för rester i ITs-kurser](t/7484)
 
 Höstterminen startar 3/9. Introveckan för alla ettor är en vecka tidigare.
 
 <!--
+* [Omregistrering och restinlämningar](kurser/faq/omregistrering)
+* [Uppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
+* [Om 3-veckors uppropet lp4](t/7415)
+* [GrillCon 2018 Vår](https://grillcon.dbwebb.se)
 * [Registrera dig för vårterminens kurser](t/7177)
 * [Förkunskaper och förkunskapskontroll (inför VT18)](t/7086)
 * [Förkunskapskontroll våren 2018 för kurspaket](t/7103)
