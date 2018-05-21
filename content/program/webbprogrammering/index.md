@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-05-21": (C, mos) Lade till antagningsomgång 2019 för programmen.
     "2017-04-19": (B, mos) Lade till programöversikt och utbildningsplaner.
     "2016-12-21": (A, mos) Första utgåvan.
 ...
@@ -66,6 +67,7 @@ Kurser per antagningsomgång {#kurserantagen}
 
 ### Webbprogrammering 120hp distans {#kurser120}
 
+* [Antagen HT2019](utbildning/webbprogrammering-120hp/2019/kurser)
 * [Antagen HT2018](utbildning/webbprogrammering-120hp/2018/kurser)
 * [Antagen HT2017](utbildning/webbprogrammering-120hp/2017/kurser)
 * [Antagen HT2016](utbildning/webbprogrammering-120hp/2016/kurser)
@@ -74,6 +76,7 @@ Kurser per antagningsomgång {#kurserantagen}
 
 ### Webbprogrammering 180hp campus {#kurser180}
 
+* [Antagen HT2019](utbildning/webbprogrammering-180hp/2019/kurser)
 * [Antagen HT2018](utbildning/webbprogrammering-180hp/2018/kurser)
 * [Antagen HT2017](utbildning/webbprogrammering-180hp/2017/kurser)
 * [Antagen HT2016](utbildning/webbprogrammering-180hp/2016/kurser)

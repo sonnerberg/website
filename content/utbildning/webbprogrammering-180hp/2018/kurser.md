@@ -10,7 +10,7 @@ views:
         template: default/columns
         sort: 10
         data:
-            title: Läsår 1
+            title: Läsår 1 (2018/2019)
             class: col4
             classes: no-bullet
             meta:
@@ -75,7 +75,7 @@ views:
         template: default/columns
         sort: 20
         data:
-            title: Läsår 2
+            title: Läsår 2 (2019/2020)
             class: col4
             classes: no-bullet
             meta:
@@ -138,7 +138,7 @@ views:
         template: default/columns
         sort: 30
         data:
-            title: Läsår 3
+            title: Läsår 3 (2020/2021)
             class: col4
             classes: no-bullet
             meta:

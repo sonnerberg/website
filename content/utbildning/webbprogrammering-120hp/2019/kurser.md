@@ -2,8 +2,7 @@
 title: Kurser
 author: mos
 revision:
-    "2018-05-21": "(B, mos) Telecom ej valbar i termin 2 läsperiod 3."
-    "2018-02-27": "(A, mos) Första utgåvan i samband vårterminen 2018."
+    "2018-05-21": "(A, mos) Första utgåvan inför antagningen 20019."
 
 views:
     webbprogrammering11:
@@ -11,7 +10,7 @@ views:
         template: default/columns
         sort: 10
         data:
-            title: Läsår 1 (2017/2018)
+            title: Läsår 1 (2019/2020)
             class: col4
             classes: no-bullet
             meta:
@@ -31,7 +30,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/linux-v2/block-kurser-kmom
+                                route: kurser/oopython-v2/block-kurser-kmom
                     column-4:
                         data:
                             meta:
@@ -64,20 +63,20 @@ views:
                             meta:
                                 type: content
                                 # ht16 = oopython-v1, ht17 = oopython-v2
-                                route: kurser/oopython-v2/block-kurser-kmom
+                                route: kurser/databas-v1/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
                                 # ht16 oophp-v3, ht17 databas-v1, ht18 oophp-v4
-                                route: kurser/databas-v1/block-kurser-kmom
+                                route: kurser/oophp-v4/block-kurser-kmom
 
     webbprogrammering21:
         region: columns-above
         template: default/columns
         sort: 20
         data:
-            title: Läsår 2 (2018/2019)
+            title: Läsår 2 (2020/2021)
             class: col4
             classes: no-bullet
             meta:
@@ -87,22 +86,21 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v4/block-kurser-kmom
+                                route: kurser/ramverk1/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk1/block-kurser-kmom
+                                route: kurser/ramverk2/block-kurser-kmom
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk2/block-kurser-kmom
+                                route: kurser/telecom/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
-                                #route: kurser/valbar/block-telecom-eller-sysver
                                 route: kurser/sysver/block-kurser-kmom
 
     webbprogrammering22:
@@ -129,10 +127,10 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/grupproj/block-kurser-kmom
+                                route: kurser/exjobb/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
-                                route: kurser/grupproj/block-kurser-kmom
+                                route: kurser/exjobb/block-kurser-kmom
 ...
