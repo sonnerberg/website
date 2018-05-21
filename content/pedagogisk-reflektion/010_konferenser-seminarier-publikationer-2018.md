@@ -5,6 +5,7 @@ category:
     - pedagogik
     - konferenser
 revision:
+    "2018-05-21": "(I, mos) Div extra konferenser."
     "2018-03-05": "(H, mos) Publication JUTLP."
     "2018-03-01": "(G, mos) Konferens ECSEE."
     "2018-02-05": "(F, mos) Mer info från Swednet."
@@ -26,15 +27,19 @@ Jag gör ett försök att göra en sida med konferenser, seminarier och möjligh
 Konferenser, seminarier och workshops {#konferenser}
 -----------------------
 
-[ECSEE](http://www.ecsee.eu/home/) European Conference for Software Engineering Education 14-15 juni i Seeon Monastery, Tyskland.
-
 [NU2018](http://nu2018.se/) går av stapeln 9-11 oktober i Västerås.
 
 [ISSOTL18](http://www.swednetwork.se/issotl18-kommer-till-norden/) – The international Society for the Scholarship of Teaching and Learnings årliga konferens har i år 15-årsjubileum och äger rum i Bergen, Norge, den 24-27 oktober, 2018. 
 
+The [10th Nordic-Baltic Seminar for Educational Development](http://no-bahigheddev.simplesite.com/) takes place in Odense, Denmark on August 22. 
+
 [Swednets allra första skrivinternat](http://www.swednetwork.se/skrivinternat-i-swednets-regi/) kommer att hållas den 13-15 augusti. Här finns det möjlighet att skriva klart den där artikeln, ansökan eller kanske rent av arbeta på din pedagogiska portfölj. Mer information kommer i januari/februari då även anmälningen öppnar. 
 
-Årskonferensen 2018 för Swednet kommer att hållas vid Göteborgs universitet den 24-25 maj. Mer information kommer efter det nya året när konferensens webbsida lanseras.
+[ECSEE](http://www.ecsee.eu/home/) European Conference for Software Engineering Education 14-15 juni i Seeon Monastery, Tyskland.
+
+[Årskonferensen 2018 för Swednet](https://pil.gu.se/swednetithu2018) kommer att hållas vid Göteborgs universitet den 24-25 maj.
+
+[NERA](http://www.nfpf.net/) (The Nordic Educational Research Association) håller sin årliga konferens den 8-10 mars, 2018 vid University of Oslo. 
 
 Högskolan Väst i Trollhättan har [VILÄR-konferensen](https://www.hv.se/en/vilar) som går av stapeln den 7-8 december, 2017.
 
