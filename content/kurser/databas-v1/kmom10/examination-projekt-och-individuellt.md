@@ -66,9 +66,9 @@ Gör minst en applikation som webbaserad och minst en som CLI-baserad.
 
 Resterande applikationer löses antingen som webb- eller CLI-baserade.
 
-<!--
+<!-- Bort med denna till nästa gång -->
+
 Resterande applikationer kan lösas med enbart lagrade procedurer, men då krävs det att de är tydligt dokumenterade i ER-dokumentationen.
--->
 
 Databasen skall heta `ibank` och användaren user:pass skall ha full tillgång till databasen.
 
