@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-05-23": "(C, mos) Bort krav om tillåta applikationer via lagrade procedurer."
     "2018-05-07": "(B, mos) Lade till examination för Webbprogrammering."
     "2018-02-27": "(A, mos) Första utgåvan."
 ...
@@ -65,7 +66,9 @@ Gör minst en applikation som webbaserad och minst en som CLI-baserad.
 
 Resterande applikationer löses antingen som webb- eller CLI-baserade.
 
+<!--
 Resterande applikationer kan lösas med enbart lagrade procedurer, men då krävs det att de är tydligt dokumenterade i ER-dokumentationen.
+-->
 
 Databasen skall heta `ibank` och användaren user:pass skall ha full tillgång till databasen.
 
