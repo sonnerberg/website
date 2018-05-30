@@ -45,6 +45,8 @@ Kraven är obligatoriska och måste lösas för att få godkänt på uppgiften.
 
 Varje krav ger max 10 poäng, totalt 30 poäng.
 
+<!-- Se över poängsättningen -->
+
 
 
 ###Kataloger för redovisning {#var}
@@ -63,6 +65,8 @@ Svara på följande frågor i din redovisningstext.
 * Vilka källor använde du?
 * Beskriv hur din första ansats till att läsa problemet.
 * Förändrades din ansats under projektets gång? Berätta.
+
+<!-- Skall rubriken verkligen vara "implementation", överväg en variant av IMRAD, eller någon ingenjörsmässig rapport mall -->
 
 
 
