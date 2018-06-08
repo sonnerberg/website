@@ -2,6 +2,7 @@
 title: Kurser
 author: mos
 revision:
+    "2018-06-08": "(B, mos) Nya versioner på kurser."
     "2018-02-27": "(A, mos) Första utgåvan i samband vårterminen 2018."
 
 views:
@@ -20,12 +21,12 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/python/block-kurser-kmom
+                                route: kurser/python-v2/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/javascript1/block-kurser-kmom
+                                route: kurser/javascript1-v1/block-kurser-kmom
                     column-3:
                         data:
                             meta:
@@ -52,12 +53,12 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/htmlphp/block-kurser-kmom
+                                route: kurser/htmlphp-v3/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/design/block-kurser-kmom
+                                route: kurser/design-v2/block-kurser-kmom
                     column-3:
                         data:
                             meta:
@@ -85,12 +86,12 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk1/block-kurser-kmom
+                                route: kurser/ramverk1-v2/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk2/block-kurser-kmom
+                                route: kurser/ramverk2-v2/block-kurser-kmom
                     column-3:
                         data:
                             meta:
