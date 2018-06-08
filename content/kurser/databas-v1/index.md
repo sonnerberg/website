@@ -5,7 +5,7 @@ revision:
     "2018-02-27": "(B, mos) Inkluderad i Webbprogrammering från vt18 lp4."
     "2018-01-11": "(A, mos) Första utgåva inför kursstart VT2018."
 ...
-Kursen databas
+Kursen databas (v1)
 ==================================
 
 Kursen **Databasteknologier för webben**, a.k.a. *databas*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med databaser i ett applikationsspråk i webbsammanhang.

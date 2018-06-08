@@ -1,4 +1,4 @@
-####[databas](kurser/databas-v1)
+####[databas (v1)](kurser/databas-v1)
 
 * [01: Databas](kurser/databas-v1/kmom01)
 * [02: SQL](kurser/databas-v1/kmom02)

@@ -1,4 +1,4 @@
-####[oophp-v3](kurser/oophp-v3)
+####[oophp (v3)](kurser/oophp-v3)
 
 * [01: Objektorientering i PHP](kurser/oophp-v3/kmom01)
 * [02: OO-programmering i PHP](kurser/oophp-v3/kmom02)

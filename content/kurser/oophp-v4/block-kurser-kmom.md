@@ -1,4 +1,4 @@
-####[oophp-v4](kurser/oophp-v4)
+####[oophp (v4)](kurser/oophp-v4)
 
 * [01: Objektorientering i PHP](kurser/oophp-v4/kmom01)
 * [02: Arv och Komposition](kurser/oophp-v4/kmom02)

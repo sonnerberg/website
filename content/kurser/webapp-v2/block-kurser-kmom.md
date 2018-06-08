@@ -1,4 +1,4 @@
-####[webapp-v2](kurser/webapp-v2)
+####[webapp (v2)](kurser/webapp-v2)
 
 * [01: En mobil webapp i mithril](kurser/webapp-v2/kmom01)
 * [02: Bygg ut din mobila webapp](kurser/webapp-v2/kmom02)

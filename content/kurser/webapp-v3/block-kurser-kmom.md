@@ -1,4 +1,4 @@
-####[webapp-v3](kurser/webapp-v3)
+####[webapp (v3)](kurser/webapp-v3)
 
 * [01: Single Page Application](kurser/webapp-v3/kmom01)
 * [02: Mobila enheters begräns...](kurser/webapp-v3/kmom02)

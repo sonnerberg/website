@@ -1,5 +1,5 @@
 ---
-title: oopython v2
+title: oopython-v2
 author:
     - aar
     - lew

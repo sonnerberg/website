@@ -10,7 +10,7 @@ revision:
     "2015-08-03": (B, mos) Klar med texter för kursmomenten.
     "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
 ...
-Kursen "linux" version 2
+Kursen linux (v2)
 ==================================
 
 Kursen **Programmera webbtjänster i Linux**, a.k.a. *linux*, lär ut programmering med JavaScript och Node.js på serversidan i en Linux-miljö tillsammans med grunderna i operativsystemet Linux.

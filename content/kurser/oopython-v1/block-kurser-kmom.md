@@ -1,4 +1,4 @@
-####[oopython](kurser/oopython-v1)
+####[oopython (v1)](kurser/oopython-v1)
 
 * [01: Kom igång med objekt...](kurser/oopython-v1/kmom01)
 * [02: UML och unittest](kurser/oopython-v1/kmom02)

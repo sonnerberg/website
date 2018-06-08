@@ -18,7 +18,7 @@ revision:
     "2009-09-28": (B, mos) Mindre justering av kursmoment 05.
     "2009-08-31": (A, mos) Första utgåvan.
 ...
-Kursen "oophp" version 2
+Kursen oophp (v2)
 ==================================
 
 Kursen **Databaser och objektorienterad programmering i PHP**, a.k.a. *oophp*, fokuserar på objektorienterad programmering med PHP tillsammans med databasen MySQL.

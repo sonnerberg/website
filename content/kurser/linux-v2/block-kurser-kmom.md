@@ -1,4 +1,4 @@
-####[linux-v2](kurser/linux-v2)
+####[linux (v2)](kurser/linux-v2)
 
 * [01: Linux som server](kurser/linux-v2/kmom01)
 * [02: Apache Virtual Hosts](kurser/linux-v2/kmom02)

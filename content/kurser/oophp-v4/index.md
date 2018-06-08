@@ -7,7 +7,7 @@ revision:
     "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
     "2017-03-24": "(A, mos) Info om kmom01-04, [äldre versioner finns](kurser/oophp-v2)."
 ...
-Kursen "oophp" (v4)
+Kursen oophp (v4)
 ==================================
 
 Kursen **Objektorienterade webbteknologier**, a.k.a. *oophp*, fokuserar på objektorienterad programmering med PHP tillsammans med databasen MySQL.

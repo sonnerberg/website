@@ -1,4 +1,4 @@
-####[oophp-v2](kurser/oophp-v2)
+####[oophp (v2)](kurser/oophp-v2)
 
 * [01: Programmering i PHP](kurser/oophp-v2/kmom01)
 * [02: OO-programmering i PHP](kurser/oophp-v2/kmom02)
