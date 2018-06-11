@@ -26,7 +26,8 @@ Kommande tillfällen {#kommande}
 
 Kommande planerade examinationstillfälle.
 
-* 31 maj 2018 (provkör processen dagen innan för att testa hur det fungerar).
+* Fredagen den 31 augusti 2018 kl 9-14 i sal H429 på campus alternativt distans för distansare (provkör processen dagen innan för att testa hur det fungerar).
+* Nästkommande tillfällen sker i samband med kurstillfället som går i lp3 vårterminen 2019.
 
 
 
@@ -35,6 +36,7 @@ Föregående tillfällen {#foregaende}
 
 Föregående examinationstillfälle.
 
+* [Det stora slaget om tårtan, 31 maj 2018](./det-stora-slaget-om-tartan)
 * [Upplevelse, 21 mars 2018](./upplevelse)
 
 

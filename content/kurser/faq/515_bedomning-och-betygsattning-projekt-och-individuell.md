@@ -72,7 +72,7 @@ Följande tabell används vid bedömning av projektet.
 
 ### Individuell {#bedomning-individuell}
 
-Följande tabell används vid bedömning av projektet.
+Följande tabell används vid bedömning av den individuella examinationen.
 
 | Bedömningspunkt | Poäng | Din poäng |
 |-----------------|-------|-----------|
