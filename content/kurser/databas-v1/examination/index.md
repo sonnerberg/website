@@ -26,7 +26,7 @@ Kommande tillfällen {#kommande}
 
 Kommande planerade examinationstillfälle.
 
-* Fredagen den 31 augusti 2018 kl 9-14 i sal H429 på campus alternativt distans för distansare (provkör processen dagen innan för att testa hur det fungerar).
+* Fredagen den 31 augusti 2018 kl 9-14 i sal H429 på campus alternativt distans för distansare under kl 9-24. (Provkör processen dagen innan för att testa hur det fungerar).
 * Nästkommande tillfällen sker i samband med kurstillfället som går i lp3 vårterminen 2019.
 
 
