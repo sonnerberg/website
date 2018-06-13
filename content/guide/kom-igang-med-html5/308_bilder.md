@@ -3,7 +3,7 @@ author: lew
 revision:
     "2018-06-13": "(A, lew) Första versionen."
 ...
-bilder {#bilder}
+Bilder {#bilder}
 ---------------------------------------------------
 
 <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img</a>

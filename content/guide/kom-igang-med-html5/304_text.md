@@ -3,7 +3,7 @@ author: lew
 revision:
     "2018-06-13": "(A, lew) Första versionen."
 ...
-text {#text}
+Text {#text}
 ---------------------------------------------------
 
 <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p</a>
