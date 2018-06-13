@@ -19,6 +19,7 @@ Guider under utveckling till hösten 2018.
 * [Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)
 * [Kom igång med PHP-ramverket Anax](guide/kom-igang-med-php-ramverket-anax)
 * [Design med HTML5 och CSS3](guide/design-med-html5-och-css3)
+* [Kom igång med HTML5](guide/kom-igang-med-html5)
 
 <!--
 * Desinax tema och dess moduler
