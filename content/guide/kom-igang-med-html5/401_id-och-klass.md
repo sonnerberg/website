@@ -3,7 +3,7 @@ author: lew
 revision:
     "2018-06-13": "(A, lew) Första versionen."
 ...
-Id och class {#id-class}
+id och class {#id-class}
 ---------------------------------------------------
 
 ### id {#id}
