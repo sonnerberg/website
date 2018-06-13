@@ -84,9 +84,9 @@ input: "apa"      output: "a-pp-aaa"
 input: "kassler"  output: "k-aa-sss-ssss-lllll-eeeeee-rrrrrrr"
 ```
 
-1. **Menyval 7**: Gör så Marvin kan kolla om ett ord är ett isogram. Ett ord är ett isogram om det inte innehåller några återupprepande bokstäver, både i följd och icke i följd. Det är OK om den är case-sensitive, a != A.
+6. **Menyval 7**: Gör så Marvin kan kolla om ett ord är ett isogram. Ett ord är ett isogram om det inte innehåller några återupprepande bokstäver, både i följd och icke i följd. Det är OK om den är case-sensitive, a != A.
 
-1. Validera och publicera din kod enligt följande.
+7. Validera och publicera din kod enligt följande.
 
 <!-- 1. Menyval: Poäng till betyg. Marvin ska fråga efter maxpoäng samt dina poäng och sedan ska Marvin skriva ut vilket betyg dina poäng motsvarade. Kika på övning 3.3 i boken [Python for Informatics](kunskap/boken-python-for-informatics-exploring-information). -->
 
