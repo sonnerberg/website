@@ -2,7 +2,6 @@
 author: mos
 category: python
 revision:
-  "2018-06-12": (G, aar) Bytt ut vissa menyval och definierat vilka siffror valen är.
   "2017-06-13": (F, efo) Uppdaterade marvin menyval bort betyg och funktioner.
   "2015-08-25": (E, mos) Uppdaterade till dbwebb v2.
   "2015-01-14": (D, mos) Fel länk till förkunskaperna.
@@ -62,31 +61,21 @@ Krav {#krav}
 
 1. Organisera din kod i `if`-satsen inuti `while`-loopen. Samla all kod i filen `marvin.py`.
 
-<!-- 1. **Menyval 2**: Ålder till sekunder. Marvin ska fråga efter din ålder och sedan skriva ut hur många sekunder du minst har levt. -->
+1. Menyval: Ålder till sekunder. Marvin ska fråga efter din ålder och sedan skriva ut hur många sekunder du minst har levt.
 
-<!-- 1. **Menyval 3**: Vikt på månen. Marvin ska fråga efter en vikt i kg och sedan skriva ut hur mycket den vikten skulle vara på månen. -->
+1. Menyval: Vikt på månen. Marvin ska fråga efter en vikt i kg och sedan skriva ut hur mycket den vikten skulle vara på månen.
 
-<!-- 1. **Menyval 4**: Minuter till timmar. Marvin ska fråga efter antal minuter och sedan skriva ut hur många timmar och minuter det motsvarar. -->
+1. Menyval: Minuter till timmar. Marvin ska fråga efter antal minuter och sedan skriva ut hur många timmar och minuter det motsvarar.
 
-<!-- 1. **Menyval 5**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut motsvarande i Farenheit. -->
+1. Menyval: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut motsvarande i Farenheit.
 
-1. **Menyval 2**: Ordmultiplicering. Marvin ska fråga efter ett ord och en siffra och sedan skriva ut det ordet så många gånger.
+1. Menyval: Ordmultiplicering. Marvin ska fråga efter ett ord och en siffra och sedan skriva ut det ordet så många gånger.
 
-1. **Menyval 3**: Slumpmässiga tal. Marvin ska fråga efter min och max och sedan skriva ut 10 slumpmässiga tal mellan min och max. Dessa ska skrivas ut kommaseparerat på samma rad. Till exempel: `29, 34, 45, 43, 22, 34`.
+1. Menyval: Slumpmässiga tal. Marvin ska fråga efter min och max och sedan skriva ut 10 slumpmässiga tal mellan min och max. Dessa ska skrivas ut kommaseparerat på samma rad. Till exempel: `29, 34, 45, 43, 22, 34`.
 
-1. **Menyval 4**: Summa och medel: Marvin ska fråga efter tal tills du anser dig vara klar (t.ex skriver "done") och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal.
+1. Menyval: Summa och medel: Marvin ska fråga efter tal tills du anser dig vara klar (t.ex skriver "done") och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal.
 
-1. **Menyval 5**: Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut om det talet var större, mindre eller samma som det förra talet som skrev in. Tänk på att vid första talet angivet finns inget att jämföra med. Detta ska göras tills användaren skriver att denne är klar (t.ex “done”).
-
-1. **Menyval 6**: Marvin ska fråga efter en sträng och skriva ut en ny sträng där varje karaktär har ökat med +1 och är separerad med "-". Exempel:
-```python
-input: "apa"      output: "a-pp-aaa"
-input: "kassler"  output: "k-aa-sss-ssss-lllll-eeeeee-rrrrrrr"
-```
-
-6. **Menyval 7**: Gör så Marvin kan kolla om ett ord är ett isogram. Ett ord är ett isogram om det inte innehåller några återupprepande bokstäver, både i följd och icke i följd. Det är OK om den är case-sensitive, a != A.
-
-7. Validera och publicera din kod enligt följande.
+1. Validera och publicera din kod enligt följande.
 
 <!-- 1. Menyval: Poäng till betyg. Marvin ska fråga efter maxpoäng samt dina poäng och sedan ska Marvin skriva ut vilket betyg dina poäng motsvarade. Kika på övning 3.3 i boken [Python for Informatics](kunskap/boken-python-for-informatics-exploring-information). -->
 
@@ -104,21 +93,11 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-* **Menyval A1**: Gör ett val där Marvin tar emot två strängar och kollar om alla karaktärer i den andra strängen finns i den första. Exempel:
-```python
-input: "Python", "phno"        output: Match
-input: "Programming", "gram"   output: Match
-input: "kassler", "kusl"       output: No match 
-```
 
-* **Menyval A2**: Balance brackets, gör så Marvin kan utvärdera om olika typer av parenteser, ([{}]), matchar. För att en sekvens ska vara balanserad måste alla parenteser matchas i logisk ordning. Exempel: 
-```python
-input: '([{}])'    output: Match
-input: '[](){}'    output: Match
-input: '([(]{))}'  output: No match
-```
-<!-- * **Menyval A1**: Lägg till så att Marvin kan räkna ut arean på en cirkel, där input från användaren är radien på cirkeln.-->
-<!-- * **Menyval A2**: Lägg till så att Marvin kan räkna ut hypotenusan på en triangel där inputen är de rätvinkliga sidorna.-->
+* Lägg till så att Marvin kan räkna ut arean på en cirkel, där input från användaren är radien på cirkeln.
+* Lägg till så att Marvin kan räkna ut hypotenusan på en triangel där inputen är de rätvinkliga sidorna.
+* Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut om det talet var större, mindre eller samma som det förra talet som skrev in. Tänk på att vid första talet angivet finns inget att jämföra med. Detta ska göras tills användaren skriver att denne är klar (t.ex “done”).
+
 
 
 Tips från coachen {#tips}
