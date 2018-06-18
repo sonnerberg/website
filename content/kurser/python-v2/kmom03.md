@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-06-18": (H, aar) Flyttade moduler till kmom04.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-06-14": (G, efo) Ändrade kursliteratur till funktioner i kmom03, la till övningar.
     "2016-03-15": (F, mos) Tog bort videoserie MonkeyLords och NewBoston.
@@ -21,7 +22,7 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-I detta kursmoment introduceras du till funktioner och hur de kan underlätta för att återanvända koden. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Dessutom introduceras ett sätt för att strukturera koden i flera olika filer. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
+I detta kursmoment introduceras du till funktioner och hur de kan underlätta för att återanvända koden. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
 
 [FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
@@ -94,8 +95,6 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
 
-1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
-
 
 
 ###Uppgifter {#uppgifter}
@@ -124,10 +123,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Har du programmerat med funktioner tidigare?
-* Vad tycker du om sättet att dela upp koden?
-* Vad tycker du om video som läromedel, tycker du att de tillför något utöver litteraturen?
-* Du har gjort din första modul i Python, känns strukturen bra?
+* Hur kan du använda funktioner när du programmerar?
 * Vad tyckte du om de olika uppgifterna? 
 * Hur tänkte du när du utförde dem? 
-* Var de utmanande eller lätta?
+* Vad tycker du om video som läromedel, tycker du att de tillför något utöver litteraturen?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
