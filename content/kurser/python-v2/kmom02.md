@@ -122,7 +122,7 @@ Dictionaries och Tupler
 
 1. Gör uppgiften "[Python med villkor och loopar](uppgift/python-med-villkor-och-loopar)" för att träna på `if`-satser, `for`- och `while`-loopar. Spara alla filer under `me/kmom02/lab2`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)", ditt första lite större Pythonprogram där du lär Marvin att svara på frågor. Spara alla filer under `me/kmom02/marvin1`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1-v2)", ditt första lite större Pythonprogram där du lär Marvin att svara på frågor. Spara alla filer under `me/kmom02/marvin1`.
 
 
 

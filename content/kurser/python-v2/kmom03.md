@@ -104,7 +104,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom03/lab3`.
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom03/marvin2`.
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2-v2)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom03/marvin2`.
 
 
 

@@ -4,12 +4,10 @@ revision:
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-06-14": (J, lew) Uppdatering inför hösten 2017.
     "2016-03-15": (I, mos) Tog bort videoserie MonkeyLords och NewBoston.
-    "2016-02-29": (H, mos) Tog bort material om två dimensionell lista och lade till
-    övning "Kom igång med datatypen lista i Python".
+    "2016-02-29": (H, mos) Tog bort material om två dimensionell lista och lade till övning "Kom igång med datatypen lista i Python".
     "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
     "2015-02-03": (F, mos) Tog bort curses fråga från redovisningsfrågorna.
-    "2015-02-02": (E, mos) Flyttade curses till extra uppgift och lade till ny uppgift
-    med Marvin inventarier.
+    "2015-02-02": (E, mos) Flyttade curses till extra uppgift och lade till ny uppgift med Marvin inventarier.
     "2015-01-08": (D, mos) Bort blå ruta med kursutveckling pågår.
     "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
     "2014-09-19": (B, mos) Tog bort beta status.
@@ -115,7 +113,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom04/lab4`.
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3)". Spara alla filer under `me/kmom04/marvin3`.
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v2)". Spara alla filer under `me/kmom04/marvin3`.
 
 3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom04/marvin3`.
 
