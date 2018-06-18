@@ -1,13 +1,13 @@
 ---
-title: htmlphp-v3
+title: htmlphp (v3)
 author:
     - mos
 revision:
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
-    "2017-06-15": (D, mos) Förbereder genomgång inför ht17.
-    "2016-11-01": (C, mos) Ladokmoment och studieplan omskrivna.
-    "2016-02-22": (B, mos) Bort med not om kursutveckling samt not ny kurskod från ht16.
-    "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
+    "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering v3 av kursen."
+    "2017-06-15": "(D, mos) Förbereder genomgång inför ht17."
+    "2016-11-01": "(C, mos) Ladokmoment och studieplan omskrivna."
+    "2016-02-22": "(B, mos) Bort med not om kursutveckling samt not ny kurskod från ht16."
+    "2015-03-02": "(A, mos) Första revisionen inför kursstart HT2015."
 ...
 Kursen htmlphp (v3)
 ==================================
@@ -18,7 +18,7 @@ Kursen **Webbteknologier**, a.k.a. *htmlphp*, lär ut webbutveckling där teknik
 
 [WARNING]
 
-** Kursutveckling pågår till kurs htmlphp v3 **
+**Kursutveckling pågår till kurs htmlphp v3**
 
 Kursstart hösten 2018.
 
@@ -57,12 +57,15 @@ Kursen omfattar följande områden:
 * Användning, i mindre omfattning, av verktyg och tekniker som lämpar sig för utveckling av webbapplikationer, tex egen webbserver för utveckling och test, UNIX/Linux, installation på extern webbserver för drift, ssh, ftp/sftp
 
 
+
 Mål {#mal}
 ------------------------
 
+Kursens mål är indelade i undergrupper.
 
 
-###Kunskap och förståelse {#kunskap}
+
+### Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:
 
@@ -71,7 +74,7 @@ Efter genomförd kurs skall studenten:
 
 
 
-###Färdighet och förmåga {#fardighet}
+### Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
@@ -84,6 +87,9 @@ Kursmoment {#kursmoment}
 ------------------------
 
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
+
+Kursen avslutas med ett större avslutande moment som examinerar kursen.
+
 
 
 ###Kmom01: Bygg en webbplats. {#kmom01}
@@ -177,22 +183,30 @@ Det finns läsanvisningar i samband med varje kursmoment.
   En svensk bok som ger en god intro för den som är ny i PHP och programmering. Innehåller en del PHP och en del databaser och MySQL.
 
 
+<!--
 
 ###Referenslitteratur {#referenslitteratur}
 
 Det finns ingen referenslitteratur.
 
+-->
+
 
 
 ###Övrig litteratur {#ovriglitteratur}
 
-Följande bok kan vara bra att titta i om du har tillgång till den, se den som ett extra lästips.
+I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
+
+<!--
+
+Bort inför ht18
 
 * **[Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)** -- Gilmore, W  
   En tjockare bok för den som vill ha en mer komplett vy över PHP och MySQL från början. 
+-->
 
 
-
+<!--
 Läsanvisningar {#lasanvisning}
 ------------------------------
 
@@ -210,31 +224,59 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
 
+-->
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod1).
+Kursen har en [rekommenderad studieplan](./studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet webprog](webprog/studieplan).
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](htmlphp/studieplan) kopplad till de kurstillfällen som erbjuds.
-
-Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
-
-Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
-
-Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
-
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
 
 
 
-Lärarstöd och handledning {#handledning}
+Lektionsplan {#lektionsplan}
+---------------------------------------------
+
+Det finns en [lektionsplan](./lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan).
+
+
+
+Handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+
+Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
+
+
+
+Lärarteam {#lararteam}
+----------------------------------------
+
+Vill du lära känna dina lärare så finns det [information om lärarteamet](kurser/faq/lararteam).
+
+
+
+Kursledning {#ledning}
+----------------------------------------
+
+Om du har frågor kring kursen så vänder du dig till den som är kursansvarig för det kurstillfälle du deltar i.
+
+Om du är osäker på vem du skall kontakta så vänder du dig till dbwebb@bth.se.
+
+
+
+Betygsättning {#betyg}
+------------------------
+
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
@@ -252,13 +294,6 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
-
-
-
-Betygsättning {#betyg}
-------------------------
-
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
@@ -287,4 +322,10 @@ Från 2010 till och med vårterminen 2013 hade kursen kurskoden [DV1401](http://
 Versioner av kursen {#versioner}
 -----------------------------------------------------
 
-Om du gick kursen tidigare, fram till och med vårterminen 2015, så [finns kursmaterialet till den kursen här](kurser/htmlphp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
+
+För tillfällen från höstterminen 2018 så [finns kursmaterialet till htmlphp (v3) här](kurser/htmlphp-v3). 
+
+För tillfällen från höstterminen 2015 till och med höstterminen 2017 så [finns kursmaterialet till htmlphp (v2) här](kurser/htmlphp-v2). 
+
+För tillfällen fram till och med vårterminen 2015, så [finns kursmaterialet till den kursen i htmlphp (v1)](kurser/arkiv/htmlphp-v1).

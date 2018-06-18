@@ -1,10 +1,10 @@
 ---
 title: oophp (v4)
-
 author:
     - mos
 revision:
-    "2018-02-26": "(PB1, mos) Arbetsmaterial oophp v4."
+    "2018-06-18": "(C, mos) Uppdatering av grundstruktur inför ht18."
+    "2018-06-01": "(B, mos) Genomgången inför oophp v4."
     "2017-03-24": "(A, mos) Info om kmom01-04, [äldre versioner finns](kurser/oophp-v2)."
 ...
 Kursen oophp (v4)
@@ -31,7 +31,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Avklarad kurs i “Databaser, HTML, CSS och skriptbaserad PHP-programmering” eller avklarade kurser inom webbutveckling och webbprogrammering motsvarande 15hp.
+> För tillträdet till kursen krävs 15hp i programmering varav en kurs i webbteknologier och en kurs i objektorienterad programmering.
 
 
 
@@ -55,9 +55,11 @@ Kursen omfattar följande områden:
 Mål {#mal}
 ------------------------
 
+Kursens mål är indelade i undergrupper.
 
 
-###Kunskap och förståelse {#kunskap}
+
+### Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:
 
@@ -65,7 +67,7 @@ Efter genomförd kurs skall studenten:
 
 
 
-###Färdighet och förmåga {#fardighet}
+### Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
@@ -79,7 +81,9 @@ objektorienterad PHP-programmering och databaser har en central roll.
 Kursmoment {#kursmoment}
 ------------------------
 
-Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20 studietimmar studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida som är din webbplats som innehåller allt du gör under kursen.
+Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
+
+Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 
 
@@ -222,29 +226,33 @@ Här följer en sammanställning av de läsanvisningar som ges i varje kursmomen
 
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod4).
+Kursen har en [rekommenderad studieplan](./studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webprog#studieplan).
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-<!--
-För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](linux/studieplan) kopplad till de kurstillfällen som erbjuds.
--->
-
-En lektionsplanen visar de tillfällena som är schemalagda träffar. Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
-
-Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
-
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
 
 
 
-Lärarstöd och handledning {#handledning}
+Lektionsplan {#lektionsplan}
+---------------------------------------------
+
+Det finns en [lektionsplan](./lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan).
+
+
+
+Handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+
+Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 
 
 
@@ -298,13 +306,15 @@ Fram till och med vårterminen 2013 hade kursen kurskoden [DV1127](http://edu.bt
 
 
 
-Tidigare version av kursen {#tidigare}
+Versioner av kursen {#versioner}
 -----------------------------------------------------
 
-Om du gick kursen tidigare, fram till och med vårterminen 2013, så finns kursmaterialet i [oophp version 1](kurser/oophp-v1).
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
 
-Om du gick kursen från hösten 2014 till och med vårterminen 2016, så finns kursmaterialet i [oophp version 2](kurser/oophp-v2).
+Från och med vårterminen 2018 finns kursmaterialet i [oophp (v4)](kurser/oophp-v4).
 
-Om du gick kursen under vårterminen 2017, så finns kursmaterialet i [oophp version 3](kurser/oophp-v3).
+Om du gick kursen under vårterminen 2017, så finns kursmaterialet i [oophp (v3)](kurser/oophp-v3).
 
-Om du påbörjat en äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
+Om du gick kursen från hösten 2014 till och med vårterminen 2016, så finns kursmaterialet i [oophp (v2)](kurser/oophp-v2).
+
+Om du gick kursen tidigare, fram till och med vårterminen 2013, så finns kursmaterialet i [oophp (v1)](kurser/oophp-v1).

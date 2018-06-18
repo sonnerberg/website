@@ -114,15 +114,27 @@ Redirect /kurser/kursutvardering-och-kursutveckling /kurser/faq/kursutvardering-
 #
 # Lektions och studieplaner
 #
-Redirect /htmlphp/studieplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDc0ZUhoTlA2eWtlLWx2MktwbkhzeEE
-Redirect /htmlphp/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdEVGZXpvSm9DNGUzOUh1RXJ5ckNsakE
+# htmlphp
+Redirect /htmlphp/studieplan /kurser/htmlphp/studieplan
+Redirect /kurser/htmlphp/studieplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDc0ZUhoTlA2eWtlLWx2MktwbkhzeEE
+Redirect /htmlphp/lektionsplan /kurser/htmlphp/lektionsplan
+Redirect /kurser/htmlphp/lektionsplan		https://docs.google.com/spreadsheets/d/1VxuFjmhGakKyE4kwKqpLNr6VGvLRgNnVeU3dyQTvVUI/edit?usp=sharing
+
+# python
+Redirect /python/studieplan /kurser/python/studieplan
+Redirect /kurser/python/studieplan         https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
+Redirect /kurser/python/lektionsplan https://docs.google.com/spreadsheets/d/1zFmphWE90vxLCFEhH60QEZ4I8p8pq3-XKWBLLQguOXM/edit?usp=sharing
+
+# oophp
 Redirect /oophp/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGRKaUVVQ21KZXdwNTIxYkJHZklNSUE
 Redirect /oophp/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHFfa3BHY1pCUGdzd3pEcHE5ZW1PTGc
+
+# phpmvc
 Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGxWWmZwUE9oNGdiRDlFUDdaNzFPN1E
 Redirect /phpmvc/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGZOcW9CVkhZTXNEdzJobGM3dUpmVGc
 Redirect /javascript1/studieplan    https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFpSbGwxZXpfUThvSXZaVDRhZng5WkE&usp=sharing
-Redirect /python/studieplan         https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
 
+# webgl
 Redirect /webgl/lektionsplan    https://goo.gl/3F4Kju
 Redirect /webgl/studieplan      https://goo.gl/Sp5Fhz
 
