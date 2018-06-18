@@ -231,7 +231,7 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Kursen har en [rekommenderad studieplan](./studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
+Kursen har en [rekommenderad studieplan](kurser/htmlphp/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
 I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
@@ -242,7 +242,7 @@ Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studiepla
 Lektionsplan {#lektionsplan}
 ---------------------------------------------
 
-Det finns en [lektionsplan](./lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+Det finns en [lektionsplan](kurser/htmlphp/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
 
 Läs mer om [lektionsplanen](kurser/faq/lektionsplan).
 
