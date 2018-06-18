@@ -2,6 +2,7 @@
 author: efo
 category: python
 revision:
+  "2018-06-18": (B, aar) La till ett simpelt exempel av hur en funktion kan se ut.
   "2017-05-31": (A, efo) Första utgåvan inför kursen python H17.
 ...
 Funktioner, argument och returvärden
@@ -21,9 +22,29 @@ Vi rekommenderar att du kodar med i denna övning så du själv får känna på 
 
 
 
+Introduktion {#introduktion}
+--------------------------------------
+
+Funktioner används för att dela upp och kategorisera delar av vår kod som gör det möjligt att återanvända koden på flera ställen i våra program. Funktioner finns i nästan alla programmeringsspråk och är en av de viktigaste verktygen vi har som programmerare. Låt oss se hur en funktion ser ut.
+
+En funktion är kod som ligger i ett *block*, som i if-satser, for och while loopar, men blocket definieras med nyckelordet *def* och tilldelas ett namn som vi kan anropa funktionen med. När vi anropar funktionen exekveras koden som ligger i funktionens block. Låt oss kolla på ett simpelt exempel där vi skriver ut "Hello" från en funktion.
+```python
+def say_hello():
+    print("Hello")
+
+print("Simon says hello")
+say_hello()
+# Say hello...
+# Hello
+```
+
+Nu har vi skapat vår första egna funktion och anropat den med funktionsnamnet följt av parenteser. Parenteserna är inte en del av namnet utan det är en del av syntaxen för att anropa funktioner. Nedan följer ett större exempel på hur man använder och skapar funktioner.
+
+
+
 Funktioner {#funktioner}
 --------------------------------------
-Funktioner används för att dela upp och kategorisera delar av vår kod som gör det möjligt att återanvända koden på flera ställen i våra program. Funktioner finns i nästan alla programmeringsspråk och är en av de viktigaste verktygen vi har som programmerare. Vi kommer i denna övning utgå ifrån kod utan funktioner och sakta men säkert delar vi upp koden i återanvändbara delar. I exemplen nedan utgår vi från ett verkligt problem och bygger vår kod utifrån det samtidigt som vi delar upp och återanvänder vår kod genom att introducera funktioner.
+Vi kommer i denna övning utgå ifrån kod utan funktioner och sakta men säkert delar vi upp koden i återanvändbara delar. I exemplen nedan utgår vi från ett verkligt problem och bygger vår kod utifrån det samtidigt som vi delar upp och återanvänder vår kod genom att introducera funktioner.
 
 > Två kollegor ska äta lunch tillsammans och har båda med lunchlådor. Dansken Emil har med Rød Pølse och Svensken Andreas har med köttbullar med mos. Emil värmer sin mat i microvågsugnen på 800W i 2,5 minuter och Andreas värmer också sin mat på 800W, men i 3,5 minuter. Hur mycket energi går det åt till att värma varje maträtt? Vad kostar det att värma maten med ett kWh pris på 78.04 öre per kWh?
 
