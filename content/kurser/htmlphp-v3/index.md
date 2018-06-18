@@ -257,22 +257,6 @@ Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 
 
 
-Lärarteam {#lararteam}
-----------------------------------------
-
-Vill du lära känna dina lärare så finns det [information om lärarteamet](kurser/faq/lararteam).
-
-
-
-Kursledning {#ledning}
-----------------------------------------
-
-Om du har frågor kring kursen så vänder du dig till den som är kursansvarig för det kurstillfälle du deltar i.
-
-Om du är osäker på vem du skall kontakta så vänder du dig till dbwebb@bth.se.
-
-
-
 Betygsättning {#betyg}
 ------------------------
 
