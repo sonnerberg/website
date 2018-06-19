@@ -21,7 +21,7 @@ Funkar det inte som det ska? Får du felmeddelande? Bra, då kan du göra något
 Förkunskaper {#forkunskaper}
 -----------------------------------
 
-Guiden förutsätter att du redan har färdig miljö där PHP fungerar. Här kan du få [hjälp att ladda ned och installera PHP](kunskap/installera-en-egen-webbserver-for-utveckling). Du behöver också ha en texteditor. Här får du hjälp att [komma igång med texteditorn jEdit och teckenkodning](kunskap/installera-en-texteditor-jedit).
+Guiden förutsätter att du redan har färdig miljö där PHP fungerar. Här kan du få [hjälp att ladda ned och installera PHP](labbmiljo/webbserver).
 
 
 

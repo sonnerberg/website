@@ -43,21 +43,21 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 2-4 studietimmar)*
 
-Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
 
-Om du vill ha en introduktion till det som händer i steg 2-4 så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
-1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
+dbwebb clone htmlphp
+cd htmlphp
+dbwebb init
+```
 
-1. Fortsätt med sektionen för att [installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
-
-1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
-
-1. Du kan nu [ladda ned (klona) ditt lokala kursrepo `htmlphp`](dbwebb-cli/clone) som innehåller kursmaterial för kursen. Här kommer du att skriva all kod till övningar och uppgifter.
 
 
-
-Läsanvisningar  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-8 studietimmar)*
@@ -70,6 +70,7 @@ Läs följande för att bekanta dig med tekniken.
 1. Läs igenom följande sektion i guiden "[Kom igång med HTML](guide/kom-igang-med-html)".
     * 
 
+<!--
 1. HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
 
 1. [HTML och CSS-boken](kunskap/boken-html-och-css-boken)
@@ -77,7 +78,12 @@ Läs följande för att bekanta dig med tekniken.
     * Kapitel 1 Snabbstart
     * Kapitel 2 Grunderna i HTML
 
+MDN?
+
+Specen?
+
 (referens till html element)
+-->
 
 
 
@@ -88,9 +94,15 @@ Läs följande för att bekanta dig med tekniken.
 1. Läs igenom följande sektion i guiden "[Kom igång med CSS](guide/kom-igang-med-css)".
     * 
 
+<!--
 1. CSS - [Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)
 
+MDN?
+
+Specen?
+
 (referens till css selectorer)
+-->
 
 
 
@@ -174,8 +186,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken utvecklingsmiljö använder du?
-* Är du bekant med HTML, CSS och PHP sedan tidigare?
-* Gick det smärtfritt att installera labbmiljön eller fick du bekymmer?
+* Är du bekant med HTML, CSS och PHP sedan tidigare eller har du kanske jobbat med liknande tekniker?
+* Gick det bra att installera labbmiljön eller var det något som krånglade?
 * Är du bekant med terminalen och Unix-kommandon sedan tidigare?
-* Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
+* Gick det bra att komma i gång med kursmomentet rent allmänt?
+* Vilken är din TIL för detta kmom?
+
+TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.

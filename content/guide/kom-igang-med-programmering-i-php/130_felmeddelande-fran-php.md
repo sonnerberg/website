@@ -6,35 +6,101 @@ revision:
 Felmeddelanden från PHP
 =======================
 
+Låt oss se hur vi sätter på felmeddelanden så att de visas. Vi skapar en mallsida som vi kan använda för våra testprogram.
+
+
+
+En mall för testprogram {#mall}
+-----------------------
+
+Skapa en ny fil som du döper till `template.php` och fyll den med följande innehåll.
+
+```php
+<pre>
+<?php
+
+$sum = 1 + 1;
+
+echo "Hello World\n";
+echo "\n";
+echo "Sum of 1 + 1 is: $sum\n";
+
+?>
+</pre>
+```
+
+Om du kör koden ovan så kan din webbsida se ut så här.
+
+[FIGURE src=image/snapht18/template-php.png?w=w3 caption="En mallsida med ett testprogram."]
+
+Tanken med strukturen ovan är att skriva ut allt inom html-elementet `<pre>` som ger förformatterad text och som tar hänsyn till radbrytningen `\n`. Det gör att vi slipper blanda in allt för mycket html-element i vårt kodande.
+
 
 
 Sätt på felutskrifter {#felutskrift}
 -----------------------
 
-Innan vi skriver mer PHP-kod så är det bäst att sätta på utskriften av felmeddelanden. Utan felmeddelande blir det svårt att koda PHP. Lägg följande kod överst i din sida `mall.php`.
+Det första vi gör är att se till att php visar felmeddelande när vi skriver felaktig kod.
 
-*Kod för att sätta på visning av felmeddelande.*
+Om felmeddelanden skall visas är en inställning i webbserverns konfiguration för php. Vissa delar av den kan vi påverka direkt i vårt skript. På följande sätt kan vi slå på utskrifter av felmeddelanden. Uppdatera din `template.php` så att följande kod finns överst i filen.
 
 ```php
 <?php
 error_reporting(-1);              // Report all type of errors
-ini_set('display_errors', 1);     // Display all errors 
-ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
+ini_set("display_errors", 1);     // Display all errors 
 ?>
 ```
 
-Det första raden är en PHP-funktion som säger att alla typer av felmeddelande skall visas. Slå upp funktionen [`error_reporting()` i manualen](http://php.net/manual/en/function.error-reporting.php). Du kommer ihåg att manualen är din bästa vän? Lär dig hantera den. Alla funktioner beskrivs på samma sätt och när du lärt dig uppbyggnaden så ligger hela språket öppet för dig att lära.
+Det första raden är en php-funktion som anropas för att göra en inställning om att alla typer av felmeddelande skall visas. Du kan slå upp funktionen [`error_reporting()`](http://php.net/manual/en/function.error-reporting.php) i manualen för att se vad den gör.
 
-Den andra raden anropar en funktion som ber PHP att skriva ut felmeddelanden och inte dölja dem. I vissa installationer (MAMP) så är standardinställningen att inte visa felmeddelanden. Det är en bra inställning för system som är i drift, men inte så bra när man utvecklar eller vill lära sig.
+Du kommer ihåg att manualen är din bästa vän? Lär dig hantera den. Alla funktioner beskrivs på samma sätt och när du lärt dig uppbyggnaden så ligger hela språket öppet för dig att lära.
 
-Den tredje raden säger till PHP att inte buffra svaret (lagra informationen och skriva ut senare) utan skriva ut delarna av resultatsidan  så fort som möjligt. En del installationer har buffrad utskrivning som på, det kan undvika ett par problem, men, när du kommer till en server som inte buffrar utskriften så dyker dessa problem upp. Det är bättre att alltid ha koll på felen så att de inte dyker upp när du laddar upp ditt program på en annan server.
+Den andra raden anropar en funktion `ini_set()` som ber PHP att skriva ut felmeddelanden och inte dölja dem. I vissa installationer av webbserver och php så är standardinställningen att inte visa felmeddelanden. Det är en bra inställning för system som är i drift, men inte så bra när man utvecklar eller vill lära sig. I produktionssystem vill vi inte att felmeddelanden skall visas, men när vi utvecklar så behöver vi se dem.
 
-Du kan pröva min uppdaterade [`mall.php` med stöd för felutskrifter](kod-exempel/guiden-php-20/3/mall.php) och se var jag lade koden genom att studera sidans källkod.
+Nu bör felmeddelande visas i all sin tydlighet.
+
+
+
+Provocera fram ett felmeddelande {#provocera}
+-----------------------
+
+Du kan nu tvinga fram ett felmeddelande genom att lägga till en php-rad enligt följande.
+
+```php
+echo $unknown;
+```
+
+Min kompletta testfil `unknown.php` ser ut så här.
+
+```php
+<?php
+error_reporting(-1);              // Report all type of errors
+ini_set("display_errors", 1);     // Display all errors 
+?>
+
+<pre>
+<?php
+echo $unknown;
+?>
+</pre>
+```
+
+Koden ovan försöker alltså skriva ut en variabel som inte är definierad, den finns inte. Det skall ge ett felmeddelande.
+
+Resultatet blir så här när man kör den i webbläsaren.
+
+[FIGURE src=image/snapht18/unknown.png?w=w3 caption="Felmeddelande som visar när man använder en variabel som inte är definierad."]
+
+Exakt hur felmeddelandet skrivs ut kan skilja beroende på hur din webbläsare är konfigurerad.
 
 
 
 Exempelprogram med felutskrifter {#felutskrifter}
 -----------------------
+
+Typer av felmeddelanden, NOTICE, WARNING, ERROR?
+
+
 
 Jag gjorde ett exempelprogram för att visa hur felmeddelanden kan se ut. Pröva [mitt testprogram med felmeddelande](kod-exempel/guiden-php-20/3/error.php).
 

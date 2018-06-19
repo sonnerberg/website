@@ -1,74 +1,100 @@
 ---
 author: mos
 revision:
+    "2018-06-19": "(B, mos) Genomgången och uppdaterad."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 PHP och HTML
 =======================
+
+Låt oss titta på hur PHP och HTML förhåller sig till varandra. Vi gör ett exempel och bygger en vanlig html-sida som vi sedan gör om till en dynamisk php-sida. Det ger oss en känsla av skillnaden mellan dem.
 
 
 
 Först en vanlig html-sida {#html-mall}
 -----------------------
 
-Låt oss göra ett exempel. Vi börjar med en vanlig enkel html-sida och vi gör sedan om den till en dynamisk php-sida. Det ger oss en känsla av skillnaden mellan dem. **Jag visar hur jag gör och du gör likadant på din egen server.**
+Vi börjar med en html-sida som skriver ut ett enkelt meddelande.
 
-*Kod: En enkel mall-sida för testprogram, mall.html*
+Ta koden nedan och lägg i en fil `hello.html`.
 
 ```html
 <!doctype html>
-<html lang="sv"> 
+<html lang="en"> 
 <head>
 <meta charset="utf-8"/>
-<title>php20</title>
+<title>A web page | Hello</title>
 </head>
 <body>
-<h1>Mallsida i HTML</h1>
+<h1>A web page</h1>
 <p>Hello World!</p>
 <hr>
 <a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a>
-<a href="source.php">Källkod</a>
 </body>
 </html>
 ```
 
-Skapa en sida `mall.html` som innehåller koden ovan. Du kan testa min variant av [`mall.html`](kod-exempel/guiden-php-20/2/mall.html). Kolla att den går igenom validatorn.
+Öppna filen i din webbläsare (via din webbserver). Det kan se ut så här.
 
-Klicka sedan på länken källkod och leta reda på sidan `mall.html` och studera dess källkod. Det som du ser är källkoden som den ser ut på server-sidan. Vi kan kalla det för orginal-koden. Här är en [direktlänk till källkoden för `mall.html`](kod-exempel/guiden-php-20/2/source.php?dir=&file=mall.html#file) som den visas med skriptet `source.php`.
+[FIGURE src=image/snapht18/webpage.png?w=w3 caption="En vanlig webbsida i ren HTML."]
 
-[INFO]
-**Visa källkod med `source.php`**
+Kontrollera gärna att din sida validerar i Unicorn (men du behöver publicera den på en publik webbplats först, till exempel via `dbwebb publish`).
 
-Du kan [ladda ned en egen kopia av `source.php`](source). Ta en kopia av koden och lägg i en fil som du döper till `source.php`. Lägg filen i samma katalog som filen `mall.html`.
-[/INFO]
 
-Gå tillbaka och visa sidan `mall.html` i din webbläsare. Ta musen och högerklicka på webbsidan, välj menyvalet "Visa källkod". Nu visas den källkod upp som webbläsaren har laddat. 
 
-[FIGURE src=/image/snapshot/guiden-php-20-kallkod-mall-html.png?w=w1 caption="Högerklicka och visa källkod för att se vad webbläsaren ser."]
+Visa sidans källkod {#view-source}
+-----------------------
 
-Det är detta som är källkoden ur webbläsarens perspektiv. När vi nu börjar jobba med PHP så måste vi skilja på hur källkoden ser ut på serversidan och hur den ser ut i webbläsaren. Det är två skilda saker och vid felsökning så har man nytta av båda varianterna.
+Du har nu din fil `hello.html` som ligger på en plats där din webbserver når den.
 
+När du refererar den filen, via en länk i din webbläsare, till exempel `http://localhost/hello.html`, så hämtas hela filen och läses in i webbläsaren som tolkar html-strukturen och bygger upp en sida som visas i webbläsaren.
+
+Du kan se webbläsarens version av källkoden genom att föra muspekaren till webbläsaren och högerklicka och välja "View Page Source" (visa källkod). Då får du fram den källkod som webbläsaren har hämtat från webbservern.
+
+[FIGURE src=image/snapht18/webpage-source.png?w=w3 caption="Källkoden till webbsidan, så som webbläsaren känner igen den."]
+
+Det är detta som är källkoden ur webbläsarens perspektiv. När vi nu börjar jobba med php så måste vi skilja på hur källkoden ser ut på serversidan och hur den ser ut i webbläsaren. Det är två skilda saker och vid felsökning så har man nytta av båda varianterna.
 
 
 
 Nu en php-sida {#php-mall}
 -----------------------
 
-Bra. Ta nu en kopia av sidan `mall.html` och döp den till `mall.php`, öppna den i din webbläsare och kontrollera att den visar exakt samma resultat som `mall.html`. Det enda jag ändrar så långt är sidans rubrik.
+Ta nu en kopia av filen `hello.html` och döp den till `hello.php`. Ändra i titeln så att du ser att det är din php-sida. Jag lähher till ordet "PHP". Öppna den sedan i din webbläsare, precis som du gjorde innan.
 
-Nu lägger vi till lite PHP-kod i mall-sidan. Vi tar en enkel konstruktion som bara skriver ut "Hello World".
+[FIGURE src=image/snapht18/webpage-php.png?w=w3 caption="Nu hanteras webbsidan som en php-sida och webbservern processar den med hjälp av PHP."]
 
-*Kod för att skriva ut "Hello World from PHP".*
+Skillnaden mellan `hello.html` och `hello.php` är att sidan som slutar på ändelsen `.php` körs genom php's preprocessor. När preprocessorn hittar php-taggar, det vill säga `<?php` (starttag) och `?>` (sluttag), så tolkas detta som php-kod och exekveras. Allt som man då skriver ut i sin php-kod hamnar i den slutliga html-koden och skickas till webbläsaren.
+
+Vår sida `hello.php` är fortfarande statisk och det finns ingen dynamisk php-kod i sidan.
+
+
+
+Lägg till php-kod {#php-kod}
+-----------------------
+
+Vi lägger nu till en php-konstruktion i sidan. Vi tar en konstruktion som skriver ut texten "Hello my PHP-World" inom en html-paragraf.
 
 ```php
-<?php echo "<p>Hello World from PHP.</p>"; ?>
+<p>
+<?php echo "Hello my PHP-World"; ?>
+</p>
 ```
 
-Se hur min [`mall.php`](kod-exempel/guiden-php-20/2/mall.php) ser ut. Studera källkoden för sidan, dels på serversidan och dels i webbläsaren. Kan du se skillnaden mellan dem? Server-sidan innehåller PHP-konstruktionen och när webbläsaren ser sidan så finns det bara HTML-kod. Det är bra att ha koll på dessa två varianter av källkod, dels på serversidan och dels i webbläsaren.
+Resultatet kan se ut så här.
 
-Skillnaden mellan `mall.html` och `mall.php` är att sidan som slutar på ändelsen `.php` körs genom PHP's preprocessor. När preprocessorn hittar PHP-taggar, det vill säga `<?php` (starttag) och `?>` (sluttag), så tolkas detta som PHP-kod och exekveras. Allt som man då skriver ut i sin PHP-kod hamnar i den slutliga HTML-koden och skickas till webbläsaren.
+[FIGURE src=image/snapht18/webpage-php1.png?w=w3 caption="En php-konstruktion skriver ut ett textstycke."]
 
-*PHP starttag och sluttag.*
+Du kan studera sidans källkod i webbläsaren så ser du att php-konstruktionen ovan har ersatts med följande.
+
+```php
+<p>
+Hello my PHP-World</p>
+```
+
+Det som låg inom starttaggen `<?php` och sluttagen `?>` har alltså processats som php-kod och resultatet, textsträngen som skrevs ut, blir kvar som en del av html-sidans källkod.
+
+Här grunden för att omsluta den koden som processas som php-kod.
 
 ```php
 <?php
