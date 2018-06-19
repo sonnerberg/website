@@ -16,7 +16,7 @@ Kmom01: Bygg en webbplats
 
 [WARNING]
 
-** Kursutveckling pågår till kurs htmlphp v3 **
+**Kursutveckling pågår till kurs htmlphp v3**
 
 Kursstart hösten 2018.
 
@@ -32,7 +32,7 @@ Vi bygger webbplatsen tillsammans, steg för steg. Vi försöker bygga en strukt
 
 [FIGURE src=/image/snapvt15/me-done.png?w=w2 caption="En me-sida som den kan se ut när den är klar."]
 
-När vi är klara med dagens övning så har du förhoppningsvis fått lite blodad tand på det som kursen handlar om. Tanken med övningen är att du skall bekanta dig med de tekniker (HTML, CSS, PHP) som kursen omfattar och få möjlighet att se hur de samverkar. I kommande kursmoment tittar vi mer ingående på respektive teknik. Använd tid till att studera kurslitteraturen. Se till att få en översikt av vad de olika böckerna erbjuder.
+När vi är klara med dagens övning så har du förhoppningsvis fått lite blodad tand på det som kursen handlar om. Tanken med övningen är att du skall bekanta dig med de grundtekniker (HTML, CSS, PHP) som kursen omfattar och få möjlighet att se hur de samverkar. I kommande kursmoment tittar vi mer ingående på respektive teknik.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -63,7 +63,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-8 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -88,7 +88,7 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Läs följande:
 
@@ -100,7 +100,7 @@ Läs följande:
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -108,7 +108,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Det finns inga extra lästips i detta kursmoment.
 
@@ -121,7 +121,7 @@ Det finns inga extra lästips i detta kursmoment.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att träna dig och förbereda inför uppgifterna.
 
@@ -129,7 +129,7 @@ Genomför följande övning för att träna dig och förbereda inför uppgiftern
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -139,11 +139,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
+<!--
+### Extra {#extra}
 
 Det finns inga extra uppgifter.
 
-<!--
 1. Ibland behöver du flytta filer mellan din lokala dator och din webbserver (dock inte i denna kursen eftersom vi gör på ett annat sätt). Då kan ett verktyg som Filezilla, en FTP/SFTP-klient vara till hjälp. Kör igenom artikeln "[Flytta filer till driftsmiljön med sftp och Filezilla](kunskap/flytta-filer-till-driftsmiljon-med-sftp-och-filezilla)" för att lära dig hur det fungerar.
 
 1. Läs kort om [statisk kodvalidering av PHP-kod](t/4441).

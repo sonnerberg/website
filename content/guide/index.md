@@ -9,9 +9,6 @@ Index
 Guider i produktionsläge.
 
 * [Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)
-
-Guider under utveckling till våren/sommaren 2018.
-
 * [Kom igång med objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)
 
 Guider under utveckling till hösten 2018.
@@ -33,4 +30,4 @@ Guider under utveckling till våren 2019.
 
 Guider som ligger till sig och eventuellt utvecklas framöver.
 
-* [JavaScript](guide/javascript) (delar av material som använts i kursen javascript, guiden delvis påbörjad, avvaktar eventuell utveckling av kursen javascript1)
+* [Programmering med JavaScript](guide/javascript) (delar av material som använts i kursen javascript, guiden delvis påbörjad, avvaktar eventuell utveckling av kursen javascript1)
