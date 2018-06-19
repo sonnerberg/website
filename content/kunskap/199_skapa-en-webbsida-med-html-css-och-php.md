@@ -1,20 +1,21 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - kurs htmlphp
 revision:
-  "2016-02-03": (B, mos) Blå ruta om status för Unicorn.
-  "2015-04-29": (A, mos) Första utgåvan inför htmlphp version 2.
-updated: "2016-02-03 11:17:37"
-created: "2015-04-20 13:15:25"
+    "2018-06-19": "(C, mos) Uppdaterad inför htmlphp v3, kompletterad med video."
+    "2016-02-03": "(B, mos) Blå ruta om status för Unicorn."
+    "2015-04-29": "(A, mos) Första utgåvan inför htmlphp version 2."
 ...
 Skapa en webbsida med HTML, CSS och PHP
 ==================================
 
-[FIGURE src=/image/snapvt15/me-navbar.png?w=c5 class="right" caption="En enkel webbplats, en me-sida."]
+[FIGURE src=image/snapvt15/me-navbar.png?w=c5 class="right" caption="En enkel webbplats, en me-sida."]
 
-Vill man bli webbprogrammerare så behöver man starta med grunderna. Låt oss därför, steg för steg, skapa en liten webbplats med HTML, CSS och PHP.
+Vill man bli webbprogrammerare så behöver man lära sig flera tekniker och hur de samverkar. Låt oss därför, steg för steg, skapa en liten webbplats med HTML, CSS och PHP.
 
-Webbplats får innehålla ett par sidor med header och footer, lite bilder, länkar och en meny för att navigera mellan sidorna. Det blir en bra start. Dessutom lär vi oss att validera sidorna så att de stämmer med de standarder vi använder.
+Webbplatsen får innehålla ett par sidor med header och footer, några bilder, länkar och en meny för att navigera mellan sidorna. Det blir en bra start. Dessutom lär vi oss att validera sidorna så att de stämmer med de standarder vi använder.
 
 <!--more-->
 
@@ -23,20 +24,31 @@ Webbplats får innehålla ett par sidor med header och footer, lite bilder, län
 Förutsättningar {#pre}
 ---------------------------------
 
-Du har installerat en labbmiljö likt den som beskrivs i dokumentet om [labbmiljö för kursen htmlphp](htmlphp/labbmiljo).
-
-Webbplatsen, katalogen och dess filer, som du skapar i artikeln, behöver ligga så att du kan köra dem via din egen webbserver.
+Du har installerat en labbmiljö likt den som beskrivs i dokumentet om [labbmiljö för kursen htmlphp](kurser/htmlphp/labbmiljo). Det innefattar bland annat en webbserver med stöd för PHP.
 
 Det förutsätts att du har kommandot `dbwebb` samt kursrepot `htmlphp` på plats enligt guiden [dbwebb clone](dbwebb-cli/clone). 
+
+Du kan hitta koden som används i denna artikel, i ditt kursrepo under `example/me`.
+
+
+
+Översikt av artikeln {#video}
+---------------------------------
+
+Det finns en videoserie som visar hur jag själv jobbar igenom artikeln. Du kan titta igenom videoserien samtidigt som du själv jobbar igenom artikeln.
+
+Du hittar spellistan för videoserien under "[Skapa en webbsida med HTML, CSS och PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8WodX3eGvV1CO8wQEuI85C)".
+
+[YOUTUBE src="XXX" list="PLKtP9l5q3ce8WodX3eGvV1CO8wQEuI85C" width=700 caption="Videoserie som ger dig en översikt och genomgång av artikeln."]
 
 
 
 Webbplatsens innehåll {#innehall}
 ---------------------------------
 
-Jag tänkte att vi skapar en liten webbplats med tre sidor eller så. Vi tar enklaste möjliga struktur men försöker ändå täcka in både HTML, CSS och PHP.
+Låt oss skapa en liten webbplats med ett par sidor. Vi tar enklaste möjliga struktur men vi försöker ändå täcka in hur teknikerna HTML, CSS och PHP samverkar för att bygga strukturen till webbplatsen.
 
-De tre sidorna får innehålla en presentation av mig (dig), en sida för redovisningar (bra att ha i kursen) och så en om-sida som berättar om själva webbplatsen.
+Vi skapar tre sidor och sidorna får innehålla en presentation av mig (dig), en sida för redovisningar (bra att ha i kursen) och en om-sida som berättar om själva webbplatsen.
 
 
 
@@ -45,22 +57,24 @@ Katalogstruktur {#struktur}
 
 Vi börjar med en ny katalog, en katalogstruktur, några tomma filer och några bilder som jag hämtar från webben.
 
-Jag skapar strukturen via terminalen och terminalkommandon. Förslagsvis gör du på samma sätt, terminalen är ett bra och i längden oumbärligt verktyg för en webbprogrammerare.
+Jag skapar strukturen via terminalen och terminalkommandon. Förslagsvis gör du på samma sätt, terminalen är ett bra verktyg. I längden är det ett oumbärligt verktyg för en webbprogrammerare.
 
-```bash
-# Gå till rätt kursrep och kursmoment
+```text
+# Gå till ditt kursrepot och nuvarande kursmoment
 cd dbwebb-kurser/htmlphp/me/kmom01
 
 # Skapa kataloger och filer
 mkdir me/img me/css me/incl
 touch me/me.php me/about.php me/report.php me/css/style.css
 touch me/incl/header.php me/incl/footer.php me/incl/byline.php
-wget -O me/img/me-small.jpg http://dbwebb.se/img/mikael-roos/me-happy.jpg
-wget -O me/img/me.jpg http://dbwebb.se/img/mikael-roos/me-2.jpg
-wget -O me/img/favicon.ico http://dbwebb.se/favicon.ico
+wget -O me/img/me-small.jpg https://dbwebb.se/img/mikael-roos/me-happy.jpg
+wget -O me/img/me.jpg https://dbwebb.se/img/mikael-roos/me-2.jpg
+wget -O me/img/favicon.ico https://dbwebb.se/favicon.ico
 ```
 
-Sådär. Du får gärna ta några andra bilder, så klart.
+Kommandot `mkdir` skapar nya kataloger. Kommandot `touch` skapar nya tomma filer och kommandot `wget` laddar hem filer från nätet.
+
+Sådär. Du får gärna ta några andra representativa bilder.
 
 Så här ser strukturen ut på katalogen.
 
@@ -73,7 +87,7 @@ me
 │   ├── favicon.ico
 │   ├── me.jpg
 │   └── me-small.jpg
-├── incl           
+├── incl
 │   ├── byline.php 
 │   ├── footer.php 
 │   └── header.php 
@@ -83,9 +97,9 @@ me
 3 directories, 10 files
 ```
 
-Vi har alltså en bra grundstruktur med bilder, stylesheet och php-sidor att fylla med innehåll.
+Vi har nu en grundstruktur får vår webbplats. Det är tre sidor som är döpta till `about.php`, `me.php` och `report.php`. Bilderna ligger i katalogen `img/` och stylesheeten ligger i katalogen `css/`.
 
-Öppna katalogen `me` med din texteditor. Jag använder Atom som jag kan starta direkt från terminalen.
+Öppna nu katalogen `me` med din texteditor. Jag använder Atom som jag kan starta direkt från terminalen.
 
 ```bash
 atom me
@@ -93,9 +107,9 @@ atom me
 
 Så här ser det ut för mig.
 
-[FIGURE src=/image/snapvt15/me-atom.png?w=w2 caption="Strukturen för min *me* webbplats uppladdat i texteditorn Atom."]
+[FIGURE src=image/snapvt15/me-atom.png?w=w3 caption="Strukturen för min *me* webbplats som den ser ut i texteditorn Atom."]
 
-Vi lämnar detaljerna för tillfället, vad varje del kommer att göra blir tydligt senare i artikeln.
+Vi fortsätter raskt att skapa en första webbsida.
 
 
 
@@ -108,36 +122,56 @@ För att få en smakstart så tar vi filen `me.php` och lägger in en standardst
 <!doctype html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <title>Me-sidan</title>
+    <meta charset="utf-8">
+    <title>Me-sidan</title>
 </head>
 <body>
-  <h1>Om Mig Själv</h1>
-  <p>Här kommer snart min egen fina me-sida.</p>
-  <img src="img/me.jpg" class="me" alt="Bild på Mikael Roos">
-</body>        
+    <h1>Om Mig Själv</h1>
+    <p>Här kommer snart min egen fina me-sida.</p>
+    <img src="img/me.jpg" class="me" alt="Bild på Mikael Roos">
+</body>
 </html>
 ```
 
+Ovan är ren HTML-kod, det finns ännu inga inslag av PHP i koden.
+
 Så här ser det ut när jag öppnar sidan i min webbläsare via min lokala webbserver.
 
-[FIGURE src=/image/snapvt15/me-large.png?w=w2 caption="Första ansatsen med en stor bild."]
+[FIGURE src=image/snapvt15/me-large.png?w=w3 caption="Första ansatsen med en stor bild."]
 
 Min bild är lite väl stor men det får vi fixa senare.
 
 
 
-Validera enligt HTML5 {#validera}
+Källkoden för en webbsida {#kallkod}
 --------------------------------------
 
-För att kontrollera att det verkligen är HTML5 så kör vi den genom [W3C’s HTML validator](http://validator.w3.org/). Välj fliken "Validate by direct input" 
- och kopiera in koden för din webbsida.
- 
-Så här ska det se ut, grönt är bra och säger att webbsidan klarar valideringen.
+När man visar en webbsida i webbläsaren så kan man plocka fram dess källkod. I detta fallet pratar vi om den källkod som webbservern lämnade ifrån sig och den bas som webbläsaren använder för att visa det som vi uppfattar som webbsidan.
 
-[FIGURE src=/image/snapvt15/me-validate-html5.png?w=w2 caption="Min me-sida validerar, en bra start."]
+Vi kan alltid hitta källkoden till webbsidan genom att högerklicka på musen i webbläsarens fönster och välja menyvalet "View Page Source", eller "Visa källkod".
+
+Du får då upp en sida som visar källkoden för sidan.
+
+[FIGURE src=image/snapht18/view-source.png?w=w3 caption="Källkoden för sidan finns alltid tillgänglig."]
+
+I detta fallet är källkoden som ligger i filen `me.php` exakt samma som webbläsaren ser. När vi senare börjar använda PHP så kommer källkoden att skilja sig åt, den filen som ligger på servern ser annorlunda ut än den som webbläsaren ser. Det är alltså en viktig skillnad på källkoden i servern och källkoden i webbläsaren. Denna skillnad vill du bemästra när du senare ska felsöka i dina webbsidor. Men, vi kan ta mer om det senare.
+
+
+
+Validera enligt HTML {#validera-html}
+--------------------------------------
+
+För att kontrollera att det verkligen är korrekt HTML-kod som webbläsaren får så kör vi koden genom [W3C’s Markup Validation Service](http://validator.w3.org/). Välj fliken "Validate by direct input" och kopiera in koden för din webbsida.
+
+Bäst är att kopiera in koden som den kommer i webbläsaren, via högerklicka och "View Page Source".
+ 
+Så här ska det se ut när du validerar, grönt är bra och säger att webbsidan klarar valideringen och därmed uppfyller kraven på strukturen för HTML elementen.
+
+[FIGURE src=image/snapvt15/me-validate-html5.png?w=w3 caption="Min me-sida validerar, en bra start."]
 
 Om du fick fel så försöker du rätta till felen. Läs även vad varningarna betyder. Det är bra att ha lite koll.
+
+Valideringsverktyg är viktiga för den som utvecklar webbplatser.
 
 
 
@@ -146,7 +180,7 @@ Länka till valideringsverktyget {#linkval}
 
 För att förenkla framtida kontroller så lägger vi till en länk till validatorn, direkt i me-sidan. Det gör att vi hela tiden kan validera dokumentet med ett litet klick.
 
-Skapa en footer till me-sidan och lägg där in länken till validatorn. Följande kod löser det i slutet på sidan.
+Skapa en footer till me-sidan och lägg in länken till validatorn. Följande kod löser det i slutet på sidan.
 
 ```html
     <footer id="site-footer">
@@ -159,24 +193,28 @@ Skapa en footer till me-sidan och lägg där in länken till validatorn. Följan
 
 Så här blev det för mig.
 
-[FIGURE src=/image/snapvt15/me-validate-link.png?w=w2 caption="Enkel åtkomst till validatorn via en länk."]
+[FIGURE src=image/snapvt15/me-validate-link.png?w=w3 caption="Enkel åtkomst till validatorn via en länk."]
 
 Klickar man nu på länken så kommer man till validatorn som direkt validerar den sidan som du klickade på.
 
-För att det skall fungera måste din sida ligga på en webbserver som är publikt tillgänglig. Annars kommer validatorn inte åt din sida. Testa genom att ladda upp din me-sida till driftsmiljön.
+För att detta skall fungera måste din sida ligga på en webbserver som är publikt tillgänglig. Annars kommer validatorn inte åt din sida. Du kan alltså inte validera din sida genom att klicka på länken när webbsidan ligger på din lokala datorn.
 
-Gör så här för att ladda upp det du nyss gjort till studentservern.
+För att testa valideringen så laddar vi istället upp din me-sida till driftsmiljön som är en publik webbplats.
+
+Du använder verktyget `dbwebb-cli` för att ladda upp sidan till driftsmiljön, det som vi kallar för studentservern.
 
 ```text
 dbwebb publish kmom01
 ```
+
+Nu kan du testa att länken fungerar och att valideringen sker när du klickar på länken.
 
 
 
 Styla sidan med CSS {#css}
 --------------------------------------
 
-Med CSS kan vi ge sidan färg och form. Vi kan styla HTML-elementen och bestämma var de skall visas på sidan och hur de skall se ut. CSS-koden lägger vi i en separat fil och länkar till den från HTML-koden.
+Med CSS kan vi ge sidan färg och form. Vi kan styla HTML-elementen och bestämma var de skall visas på sidan och hur de skall se ut. CSS-koden lägger vi i en separat fil och länkar till från HTML-koden.
 
 Börja med att öppna filen `css/style.css` och lägg in följande kod för att ge din sidan en bakgrund och en lagom storlek på bilden.
 
@@ -196,9 +234,10 @@ Därefter går du till filen `me.php` och lägger in följande rad så att style
     <link rel="stylesheet" href="css/style.css">
 </head>
 ```
+
 När det är klart så kan du ladda om sidan. Så här blev det för mig.
 
-[FIGURE src=/image/snapvt15/me-style.png?w=w2 caption="En lätt grön bakgrund och en mer anpassad storlek på bilden."]
+[FIGURE src=image/snapvt15/me-style.png?w=w3 caption="En lätt grön bakgrund och en mer anpassad storlek på bilden."]
 
 Om du nu vill att sidan skall vara centrerad och ha en viss storlek, säg 980px bred, så kan du åstakomma det med kod i stylesheeten. Gör så här.
 
@@ -214,7 +253,7 @@ body {
 
 Så här blev det för mig.
 
-[FIGURE src=/image/snapvt15/me-style-center.png?w=w2 caption="Sidan centreras med en fast bredd."]
+[FIGURE src=image/snapvt15/me-style-center.png?w=w3 caption="Sidan centreras med en fast bredd."]
 
 Nu börjar det likna något.
 
@@ -227,22 +266,22 @@ W3C har en [validator för CSS](https://jigsaw.w3.org/css-validator/). Pröva at
 
 Det bör se ut ungefär så här.
 
-[FIGURE src=/image/snapvt15/me-validate-css-direct.png?w=w2 caption="CSS-koden går igenom valideringen."]
+[FIGURE src=image/snapvt15/me-validate-css-direct.png?w=w3 caption="CSS-koden går igenom valideringen."]
 
 Ladda upp din sida på driftsserver och validera den genom att ge validatorn länken till din me-sida. Du tar alltså länken till din egen sida och kopiera in den i validatorn. 
 
 Så här kan det se ut.
 
-[FIGURE src=/image/snapvt15/me-validate-css-link.png?w=w2 caption="Validera sidan via en direktlänk."]
+[FIGURE src=image/snapvt15/me-validate-css-link.png?w=w3 caption="Validera sidan via en direktlänk."]
 
-Valideras din stylesheet? 
+Nu bör din stylesheet valideras på samma sätt som tidigare.
 
 
 
-Validera CSS-kod {#validatecss}
+Validera CSS via länk {#validatecsslink}
 --------------------------------------
 
-För att underlätta validering av sidorna så lägger vi till en direktlänk till CSS-validatorn. På samma sätt som vi gjorde med HTML-validatorn. Lägg till följande länk i din footer.
+För att underlätta validering av sidorna så lägger vi till en direktlänk till CSS-validatorn. Vi gör på liknande sätt som vi gjorde med HTML-validatorn. Lägg till följande länk i din footer.
 
 ```html
 <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
@@ -263,25 +302,34 @@ Länken till Unicorn som passar i din footer ser ut så här.
 <a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a>
 ```
 
-Kom nu ihåg att alltid dubbelkolla att din sida validerar. Hamnar du i trubbel så kollar du alltid först om sidan validerar.
+Så här kan det se ut när du klickar på länken och validerar både HTML och CSS enligt Unicorns validator.
 
-[INFO]
-**Tips.**
+[FIGURE src=image/snapht18/unicorn.png?w=w3 caption="Unicorn validerar HTML, CSS och om sidan innehåller ett _feed_ (vilket sidan inte gör)."]
 
-Varför används `&amp;` istället för tecknet `&` när vi länkar till Unicorn? Testa att ändra din kod och enbart skriva `&`. Validera den sedan i Unicorn. Du får ett felmeddelande som säger:
+Kom nu ihåg att alltid dubbelkolla att din sida validerar. Hamnar du i trubbel så kollar du alltid först om sidan validerar. Det är ofta första steget i felsökningen, kontrollera att HTML och CSS validerar.
+
+
+
+Om HTML-entiteter {#htmlentities}
+--------------------------------------
+
+Varför används `&amp;` istället för tecknet `&` när vi länkar till Unicorn ovan? 
+Du kan testa att ändra din kod och enbart skriva `&`. Validera den sedan i Unicorn. Du får då ett felmeddelande som säger:
 
 > **`&` did not start a character reference. (`&` probably should have been escaped as `&amp;`.)**
 
-`&` är ett tecken som har en speciell betydelse i HTML, därför ersätts den ofta med `&amp;` i HTML-koden. Annars validerar inte koden. Läs mer genom att googla på ["html entities"](https://www.google.com/?q=html+entities) eller kika på en översikt av [olika tecken som kan skrivas som HTML entities](http://dev.w3.org/html5/html-author/charref).
-[/INFO]
+Tecknet `&` har en speciell betydelse i HTML och därför kan det ibland behöva ersättas med sin motsvarande HTML entitet `&amp;`. Annars validerar inte HTML-koden, den är inte helt korrekt.
 
-[INFO]
-**Not om status på Unicorn.**
+I tabellen nedan är ett par tecken som är reserverade i HTML, de har speciell betydelse. Om man vill att respektive tecken skall skrivas ut i text, eller vara en del av en länk, så behöver man byta ut tecknet mot dess _entity_, eller HTML entitet som det också kallas.
 
-Det sägs att validatorn Unicorn är på väg bort och ersätts av de andra validatorerna. Men jag låter Unicorn vara kvar här eftersom den finns med i mina kodexempel i footern.
+| Tecken | Entity   | Kommentar |
+|--------|--------  |-----------|
+| `&`    | `&amp;`  | Början på en entitet eller teckensekvens. |
+| `<`    | `&lt;`   | Start på en HTML-tagg. |
+| `>`    | `&gt;`   | Slut på en HTML-tagg. |
+| `"`    | `&quot;` | Start och slut på ett attributs värde. |
 
-Det finns en [översikt av relevanta W3C validator](http://w3c.github.io/developers/tools/), som du förr eller senare kan komma i kontakt med.
-[/INFO]
+Det finns fler tecken som kan konstrueras med HTML entiter. Du kan till exempel skapa ett copyright-tecken &copy; `&copy;` eller ett euro-tecken &euro; `&euro;` med dem.
 
 
 
@@ -293,7 +341,8 @@ En webbplats innehåller ofta en header med en logo, titel på webbplatsen och k
 Först hämtar jag hem en bild som jag tänker använda som logo, jag sparar bilden i `img`-katalogen.
 
 ```text
-$ wget -O img/logo.jpg "http://dbwebb.se/image/tema/trad/4.jpg?w=200"
+# Stå i katalogen kmom01/me
+wget -O img/logo.jpg "https://dbwebb.se/image/tema/trad/4.jpg?w=200"
 ```
 
 Så här kan det se ut i HTML-koden.
@@ -341,7 +390,7 @@ Det finns ingen direkt regel för hur man komponerar en header som denna, det fi
 
 Så här blir min sida när jag lagt till en header.
 
-[FIGURE src=/image/snapvt15/me-header.png?w=w2 caption="Me-sida, nu med header i form av logo, titel och slogan."]
+[FIGURE src=image/snapvt15/me-header.png?w=w3 caption="Me-sida, nu med header i form av logo, titel och slogan."]
 
 Glöm inte bort att validera din kod, nu räcker det ju att du laddar upp på driftsservern samt klickar på länkarna till validatorn.
 
@@ -361,9 +410,9 @@ Det är något vi kan lägga till i sidas `<head>`-del med följande konstruktio
 
 Sedan laddar du om och kan se ikonen, *faviconen*, i webbläsarens flik.
 
-[FIGURE src=/image/snapvt15/me-favicon.png?w=w2 caption="Me-sida nu med en favicon."]
+[FIGURE src=image/snapvt15/me-favicon.png?w=w3 caption="Me-sida nu med en favicon."]
 
-[Formatet för bilden är ICO](https://sv.wikipedia.org/wiki/ICO_(filformat)), men de flesta webbläsare klarar numer även vanliga PNG-bilder.
+Formatet för en favicon är filformatet ICO, men de flesta webbläsare klarar även vanliga PNG-bilder.
 
 
 
@@ -372,13 +421,13 @@ Skapa en meny - en navbar {#navbar}
 
 Tanken är att webbplatsen skall bestå av tre sidor. Ta nu en kopia av webbsidan `me.php` och spara den i `report.php` och `about.php`. Redigera texten i respektive sida så man vet vilken sida det är. Så här ser det ut för mig.
 
-[FIGURE src=/image/snapvt15/me-report.png?w=c7  class="right" caption="Redovisnings-delen av me-sidan."]
+[FIGURE src=image/snapvt15/me-report.png?w=c8  class="right" caption="Redovisnings-delen av me-sidan."]
 
-[FIGURE src=/image/snapvt15/me-about.png?w=c7 caption="En om-sida på me-sidan."]
+[FIGURE src=image/snapvt15/me-about.png?w=c8 caption="En om-sida på me-sidan."]
 
-Vi har *inte* en bra lösning nu, eftersom vi har kopierat kod och har liknande kod i tre olika filer. Det skall vi snart fixa, men först en meny, men navbar, så att vi kan navigera mellan de olika sidorna.
+Låt oss nu skapa en meny, också kallad navbar, som låter oss navigera mellan de olika sidorna.
 
-Låt oss nu skapa grunden till menyn, navbaren.
+Här är en grund för navbaren som länkar mellan de olika sidorna.
 
 ```html
     <nav class="navbar">
@@ -388,7 +437,7 @@ Låt oss nu skapa grunden till menyn, navbaren.
     </nav>
 ```
 
-Vi lägger på en enkel stil, så att det liknar en navbar.
+Vi lägger på en enkel stil på länkarna, så att det liknar en navbar.
 
 ```css
 .navbar {
@@ -412,20 +461,20 @@ Vi lägger på en enkel stil, så att det liknar en navbar.
 
 Så här ser det ut för mig.
 
-[FIGURE src=/image/snapvt15/me-navbar.png?w=w2 caption="Me-sida, nu med en navbar för navigering mellan de olika sidorna."]
+[FIGURE src=image/snapvt15/me-navbar.png?w=w3 caption="Me-sida, nu med en navbar för navigering mellan de olika sidorna."]
 
-Så ja, kopiera nu koden till de andra sidorna och pröva att navigera på din webbplats. Du bör kunna klicka runt och se de olika sidorna.
+Så ja, kopiera nu koden för navbaren till de andra sidorna och pröva att navigera på din webbplats. Du bör kunna klicka runt och se de olika sidorna.
 
-Nästa steg blir att hitta en bättre organisation av koden.
+Nästa steg blir att hitta en bättre organisation av koden med hjälp av PHP.
 
 
 
 Organisera kod i header.php och footer.php {#organisera}
 --------------------------------------
 
-Om du lutar dig tillbaka och tittar på din kod så ser du att du har samma kod i tre filer. Det är inte optimalt. Låt oss samla koden för header-delen i filen `incl/header.php` och footer-delen i filen `incl/footer.php`. 
+Om du lutar dig tillbaka och tittar på din kod så ser du att du delvis har samma kod i tre filer. Det är inte optimalt. Låt oss samla koden för header-delen i filen `incl/header.php` och footer-delen i filen `incl/footer.php`. 
 
-Det handlar om att strukturera sin kod och återanvända den. En sak skall definieras på en plats. Då blir det mindre kod att titta på, det blirn enklare att vidareutveckla och underhålla koden.
+Det handlar om att strukturera sin kod och återanvända den. En sak skall definieras på en plats. Då blir det mindre kod att titta på, det blir enklare att vidareutveckla och underhålla koden.
 
 I vårt fall handlar det om att lägga följande kod i `incl/header.php`.
 
@@ -452,7 +501,7 @@ I vårt fall handlar det om att lägga följande kod i `incl/header.php`.
     </nav>
 ```
 
-Det är ju samma kod för alla sidor, bättre att samla den koden i en fil. 
+Alla sidor har samma utseende för sidans övre del, sidans logo, titel och navbar. Det är ju samma kod för alla sidor så det blir bättre att samla den koden i en fil. 
 
 På samma sätt hamnar följande kod i `incl/footer.php`.
 
@@ -468,7 +517,7 @@ På samma sätt hamnar följande kod i `incl/footer.php`.
 </html>
 ```
 
-Det som till slut knyter samman delarna i webbsidan blir PHP-kod som inkluderar filerna `incl/header.php` och `incl/footer.php`.
+Det som till slut knyter samman delarna i webbsidan blir PHP-kod som i filen `me.php` inkluderar filerna `incl/header.php` och `incl/footer.php`.
 
 ```html
 <?php include("incl/header.php"); ?>
@@ -480,30 +529,28 @@ Det som till slut knyter samman delarna i webbsidan blir PHP-kod som inkluderar 
 <?php include("incl/footer.php"); ?>
 ```
 
+Uttrycket `<?php include("incl/header.php"); ?>` kommer att ersättas med innehållet från filen `"incl/header.php"`.
+
+På samma sätt ersätts uttrycket `<?php include("incl/footer.php"); ?>` med innehållet från filen `"incl/footer.php"`.
+
 Resultatet som visas i webbläsaren blir samma sak som tidigare. PHP-koden körs på serversidan och levererar till webbläsaren exakt samma HTML-sida som tidigare.
 
-`<?php` är start-tagg för PHP-kod, `?>` är slut-tagg. Allt mellan taggarna betraktas och hanteras som PHP-kod. Det är webbservern som parsar PHP-koden innan den lämnar ifrån sig den resulterande HTML-sidan.
+Dubbelkolla i din webbläsare att sidan validerar och att källkoden för sidan ser korrekt ut (som du förväntar dig).
 
-[INFO]
-**Tips**
+`<?php` är start-tagg för PHP-kod, `?>` är slut-tagg. Allt mellan taggarna betraktas och hanteras som PHP-kod. Det är webbservern som parsar PHP-koden innan den lämnar ifrån sig den resulterande HTML-sidan. Allt som skrivs ut, eller inkluderas, mellan PHP-taggarna blir en del av den slutliga HTML-sidan.
 
-Bekanta dig med PHP-manualen. Det kan bli en av dina bästa vänner. Allt du behöver veta om PHP finns att läsa i manualen. Det gäller bara att bli kompis med manualen.
-
-[Läs lite kort om språket PHP](http://php.net/manual/en/intro-whatis.php) och slå upp [funktionen include()](http://php.net/manual/en/function.include.php) och läs lite om den. Det kan se lite kryptiskt ut vid första anblicken, men lär dig läsa manualen så är mycket vunnet.
-[/INFO]
-
-Gör nu samma sak på de andra sidorna. Nu börjar det likna något.
+Gör nu samma struktur på de andra sidorna `about.php` och `redovisnings.php`.
 
 
 
 Gör din egen byline {#byline}
 --------------------------------------
 
-Om du nu har lite koll på vad vi gått igenom så kan du säkert skapa en innehållet i `incl/byline.php` så att du på varje sida får en byline, en signatur från författaren till sidan.
+Vi jobbar vidare på samma princip med kodstruktur i separata filer. Jobba vidare och skapa din egen byline i filen `incl/byline.php` och inkludera den i varje sida så att du kan visa en och samma signatur från författaren till sidan.
 
-Så här ser min byline ut, som jag ofta använder.
+Så här ser min byline ut.
 
-[FIGURE src=/image/snapvt15/me-byline.png caption="En byline för att presentera dig själv under varje artikel du skriver."]
+[FIGURE src=image/snapvt15/me-byline.png caption="En byline för att presentera dig själv under varje artikel du skriver."]
 
 Kan du lägga in din motsvarighet i din me-sida?
 
@@ -520,7 +567,5 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Nu har du kommit igång och du har grunden till en me-sida. En bra start!
-
-Exempelkoden finns i [kursrepot för htmlphp-kursen](https://github.com/mosbth/htmlphp/tree/master/example/me) och kan provköras på [dbwebb.se/repo/htmlphp/example/me](/repo/htmlphp/example/me).
 
 Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/htmlphp).
