@@ -31,7 +31,7 @@ Det förutsätts att du har kommandot `dbwebb` samt kursrepot `htmlphp` på plat
 Du kan hitta koden som används i denna artikel, i ditt kursrepo under `example/me`.
 
 
-
+<!--
 Översikt av artikeln {#video}
 ---------------------------------
 
@@ -40,6 +40,7 @@ Det finns en videoserie som visar hur jag själv jobbar igenom artikeln. Du kan 
 Du hittar spellistan för videoserien under "[Skapa en webbsida med HTML, CSS och PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8WodX3eGvV1CO8wQEuI85C)".
 
 [YOUTUBE src="XXX" list="PLKtP9l5q3ce8WodX3eGvV1CO8wQEuI85C" width=700 caption="Videoserie som ger dig en översikt och genomgång av artikeln."]
+-->
 
 
 
