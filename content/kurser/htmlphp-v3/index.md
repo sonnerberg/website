@@ -169,15 +169,15 @@ Kurslitteratur {#litteratur}
 
 
 
-###Kurslitteratur {#kurslitteratur}
+### Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
-
-Det finns läsanvisningar i samband med varje kursmoment.
+Kurslitteraturen består av följande bok. Det finns läsanvisningar i samband med varje kursmoment.
 
 
+<!--
 * **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)** -- Rolf Staflin  
   En stabil bok för att komma igång med HTML och CSS.
+-->
 
 * **[Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)** -- Montathar Faraon  
   En svensk bok som ger en god intro för den som är ny i PHP och programmering. Innehåller en del PHP och en del databaser och MySQL.
@@ -193,7 +193,7 @@ Det finns ingen referenslitteratur.
 
 
 
-###Övrig litteratur {#ovriglitteratur}
+### Övrig litteratur {#ovriglitteratur}
 
 I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
 

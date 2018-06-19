@@ -1,17 +1,17 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - kurs htmlphp
 revision:
-  "2015-08-24": (C, mos) Ändrade hur filer flyttas från `me` till `me1`.
-  "2015-08-06": (B, mos) Stycke om validate och publish.
-  "2015-04-29": (A, mos) Första utgåvan i samband med kursen htmlphp v2.
-updated: "2015-08-24 09:56:47"
-created: "2015-01-28 14:43:23"
+  "2015-08-24": "(C, mos) Ändrade hur filer flyttas från `me` till `me1`."
+  "2015-08-06": "(B, mos) Stycke om validate och publish."
+  "2015-04-29": "(A, mos) Första utgåvan i samband med kursen htmlphp v2."
 ...
 Skapa en me-sida i kursen htmlphp
 ==================================
 
-Bygg en enkel webbplats för kursen htmlphp, en me-sida med HTML, CSS och PHP.
+Bygg en enkel webbplats för kursen htmlphp i form av en me-sida med HTML, CSS och PHP.
 
 <!--more-->
 
@@ -120,7 +120,3 @@ Validera och publicera ofta. Så slipper du en massa validerings- och publicerin
 När du gör *publish* så körs även *validate*. Blir det för mycket fel när du kör *publish* så kan det bli enklare att bara göra *validate* till att börja med.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

@@ -63,54 +63,67 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-8 studietimmar)*
 
 
-### Kurslitteratur  {#kurslitteratur}
+### HTML {#html}
 
-Läs följande:
+Läs följande för att bekanta dig med tekniken.
+
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML](guide/kom-igang-med-html)".
+    * 
+
+1. HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
 
 1. [HTML och CSS-boken](kunskap/boken-html-och-css-boken)
     * Inledning
     * Kapitel 1 Snabbstart
     * Kapitel 2 Grunderna i HTML
 
-2. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)
+(referens till html element)
+
+
+
+### CSS {#css}
+
+Läs följande för att bekanta dig med tekniken.
+
+1. Läs igenom följande sektion i guiden "[Kom igång med CSS](guide/kom-igang-med-css)".
+    * 
+
+1. CSS - [Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)
+
+(referens till css selectorer)
+
+
+
+### PHP {#php}
+
+Läs följande för att bekanta dig med tekniken.
+
+1. Läs igenom följande sektion i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
+    * [Introduktion](guide/kom-igang-med-programmering-i-php/introduktion)
+    * [Grunder och struktur](guide/kom-igang-med-programmering-i-php/grunder-och-struktur) 
+
+1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 1 Introduktion
     * Kapitel 2 Variabler (ej vektor, objekt, 2.4 Miljövariabler)
     * Kapitel 4 Operatorer
 
 <!--
-I referenslitteraturen, är följande kapitel relevanta.
+[INFO]
+**Tips**
 
-1. [Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional).
-    * Ch 1: Introducing PHP (läs efter intresse)
-    * Ch 2: Configuring your environment (läs efter intresse)
-    * Ch 3: PHP Basics
+Bekanta dig med PHP-manualen. Det kan bli en av dina bästa vänner. Allt du behöver veta om PHP finns att läsa i manualen. Det gäller bara att bli kompis med manualen.
+
+[Läs lite kort om språket PHP](http://php.net/manual/en/intro-whatis.php) och slå upp [funktionen include()](http://php.net/manual/en/function.include.php) och läs lite om den. Det kan se lite kryptiskt ut vid första anblicken, men lär dig läsa manualen så är mycket vunnet.
+[/INFO]
 -->
 
 
 
-### Artiklar {#artiklar}
-
-Läs följande:
-
+<!--
 1. Del 1-5, 7 av artikeln [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg)
 
-1. HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
-
-1. CSS - [Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)
-
-
-
-### Video  {#video}
-
-Titta på följande:
-
 1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 0 och 1.
-
-
-
-### Lästips {#lastips}
-
-Det finns inga extra lästips i detta kursmoment.
+-->
 
 
 
