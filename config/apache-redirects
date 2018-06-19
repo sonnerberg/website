@@ -126,8 +126,12 @@ Redirect /kurser/python/studieplan         https://docs.google.com/spreadsheet/c
 Redirect /kurser/python/lektionsplan https://docs.google.com/spreadsheets/d/1zFmphWE90vxLCFEhH60QEZ4I8p8pq3-XKWBLLQguOXM/edit?usp=sharing
 
 # oophp
-Redirect /oophp/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGRKaUVVQ21KZXdwNTIxYkJHZklNSUE
-Redirect /oophp/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHFfa3BHY1pCUGdzd3pEcHE5ZW1PTGc
+Redirect /oophp/studieplan /kurser/oophp/studieplan
+Redirect /kurser/oophp/studieplan https://docs.google.com/spreadsheets/d/1Ho29uzFlB6OPCza20FaWT_elE8q-wvm4hg1AM8Vr6io/edit?usp=sharing
+Redirect /oophp/lektionsplan /kurser/oophp/lektionsplan
+Redirect /kurser/oophp/lektionsplan https://docs.google.com/spreadsheets/d/1IrY2LgewCt-zvpGZcO1soTtRKhvyOwb8uAjkMePo59o/edit?usp=sharing
+
+
 
 # phpmvc
 Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGxWWmZwUE9oNGdiRDlFUDdaNzFPN1E
