@@ -18,6 +18,7 @@ Guider under utveckling till hösten 2018.
 * [Design med HTML5 och CSS3](guide/design-med-html5-och-css3)
 * [Kom igång med HTML](guide/kom-igang-med-html)
 * [Kom igång med CSS](guide/kom-igang-med-css)
+* [Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)
 
 <!--
 * Desinax tema och dess moduler

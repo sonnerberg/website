@@ -1,0 +1,59 @@
+---
+author: lew
+revision:
+    "2018-06-13": "(A, lew) Första versionen."
+...
+Innehåll {#innehall}
+=======================
+
+En sida utan innehåll är inte så rolig. Vi undersöker hur vi får fram lite text på sidan.
+
+index.html:
+
+```html
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <title>Stormtrooper Murphy</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Det här är en rubrik i elementet h1</h1>
+    <h2>Det här är en rubrik i elementet h2</h2>
+    <h3>Det här är en rubrik i elementet h3</h3>
+    <h4>Det här är en rubrik i elementet h4</h4>
+    <h5>Det här är en rubrik i elementet h5</h5>
+    <h6>Det här är en rubrik i elementet h6</h6>
+    <p>Den här texten är i en paragraf.</p>
+    <p>Det är en paragraf till. Paragrafer är bra för att dela in text i stycken.</p>
+</body>
+</html>
+```
+Taggarna h1-h6 representerar rubriker i fallande storlek. Både rubriker och paragrafer (&lt;p&gt;) har en default-style kopplad till sig. Man får automatiskt lite luft över och under dem. Bra att ha koll på.
+
+Vi går över till CSS-filen och ger texten lite style:
+
+```css
+h1 {
+    text-align: center;
+    color: red;
+}
+
+p {
+    border: 1px solid brown;
+    color: #00f;
+}
+```
+
+**text-align** ger oss möjligheten att positionera texten till viss del. Ett värde är `center` som konstigt nog placerar texten i mitten av elementet.  
+
+**color** definierar färgen på texten i elementet. Default-värde är svart.
+
+**border** ger elementet en ram. I det här fallet en helfärgad brun ram, med en bredd på 1 pixel.
+
+Hur blir resultatet då? Jo, så här:
+
+[FIGURE src=/image/htmlphp/guide/murphy/steg-1.png?w=w2 caption="Fin, stylad text. En bra start."]
+
+Studera exemplet närmare på [Codepen](https://codepen.io/dbwebb/pen/aKErbo). All kod finner du även i exempelmappen i [kursrepot](https://github.com/dbwebb-se/htmlphp/tree/master/example/murphy/steg1).
