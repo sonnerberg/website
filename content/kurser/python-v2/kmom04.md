@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-06-18": (K, aar) La till moduler och flyttade listor till kmom05.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-06-14": (J, lew) Uppdatering inför hösten 2017.
     "2016-03-15": (I, mos) Tog bort videoserie MonkeyLords och NewBoston.
@@ -24,13 +25,9 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-Lär dig grunderna i datastrukturen listor samt hur man läser och skriver till fil. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lista behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i.
+Vi ska fortsätta med att kolla på sätt vi kan strukturera vår kod, genom att jobba mer med funktioner och dela upp koden i flera filer, kallat moduler. 
 
 Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
-
-Så här kan det se ut när du bekantar dig med listor.
-
-<script type="text/javascript" src="https://asciinema.org/a/11737.js" id="asciicast-11737" async></script>
 
 <!--[FIGURE src=/image/snap/py-marvin.png?w=w2 caption="Marvin i Python."]-->
 
@@ -50,11 +47,11 @@ Läs följande:
 
 1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
     * Ch7 Files
-    * Ch8 Lists
+
 
 <!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Ch10 Lists
-    * Ch14 Files -->
+    * Ch14 Files
 
 
 
@@ -80,7 +77,7 @@ Titta på följande:
 2. De videor som följer med och kompletterar kurslitteraturen.
 
     * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois)
-    * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o)
+    <!-- * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o) -->
 
 
 
@@ -101,7 +98,7 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/list`.
+1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
 
 1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
 
@@ -111,11 +108,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom04/lab4`.
-
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v2)". Spara alla filer under `me/kmom04/marvin3`.
-
-3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom04/marvin3`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v2)". Spara alla filer under `me/kmom04/marvin3`.
 
 
 
@@ -139,8 +132,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Var det svårt att bekanta sig med datastrukturen för listor eller flöt det på bra?
-* Har du jobbat med listor, eller arrayer, i andra programmeringsspråk?
-* Kan du isåfall jämföra Python listor mot andra programmeringsspråk?
-* Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?
+* Du har gjort din första modul i Python, känns strukturen bra?
+* Hur kan du använda moduler?
+* KOM PÅ FRÅGOR!
+* Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
