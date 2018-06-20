@@ -2,14 +2,18 @@
 author: mos
 revision:
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
-    "2017-09-08": (F, mos) Bort blå text.
-    "2017-06-22": (E, aar) Rensade SQLite och args/getopts.
-    "2016-02-22": (D, mos) Lade till videoserien "Lär dig Python".
-    "2015-04-08": (C, mos) Länk till screencast om beautifulsoup.
-    "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
-    "2014-10-17": (A, mos) Första utgåvan för python kursen.
+    "2017-09-08": (J, mos) Bort någon fråga.
+    "2017-06-22": (I, efo) La till nya artiklar och ändrade namn på uppgifter.
+    "2016-03-15": (H, mos) Tog bort videoserie MonkeyLords och NewBoston.
+    "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
+    "2015-02-05": (F, mos) Bort med curses och in med marvin för textanalys och tic-tac-toe.
+    "2015-01-08": (E, mos) Bort blå ruta med kursutveckling pågår.
+    "2014-10-01": (D, mos) Ändrade länken till redovisa-instruktionen.
+    "2014-09-26": (C, mos) Tog bort beta stämpel.
+    "2014-09-15": (B, mos) Flyttade Marvin till extrauppgift.
+    "2014-09-12": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom06: Externa moduler
+Kmom05: Dictionaries och Tupler
 ==================================
 
 [WARNING]
@@ -23,37 +27,10 @@ Kursstart hösten 2018.
 
 
 
-Lär dig att installera och använda externa moduler i Python med `pip`. Momentet är inriktat på en samling av moduler som hjälper dig att koppla upp dig mot webbplatser och hämta information från dem. Det finns även inslag av JSON.
-
-Så här kan det se ut när du testar exempelprogrammet för att hämta hem ett citat från en webbtjänst i JSON-format.
-
-<!-- [ASCIINEMA src=12934] -->
-
-[YOUTUBE src=Wq6cpkPJDaU width=630 caption="Andreas visar hur ett färdigt kmom06 kan se ut."]
+Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler.
 
 
-<!--
-[INFO]
-**Hur ta dig an kursmomentet?**
-
-Om detta är nya tekniker för dig så rekommenderar jag att du fokuserar på övningarna och uppgiften. Lös dem först. Studera läsanvisningarna i andra hand.
-
-Övningen är handfast och rakt på sak och innehåller all kod och struktur som du behöver för att lösa uppgiften.
-
-Läsanvisningarna ger dig bakgrunden. Men risken med att dyka ned i läsanvisningarna först -- är att du tappar bort dig.
-
-Så, tipset från coachen är följande:
-
-* Skumma snabbt läsanvisningarna så du ser vad de handlar om. 
-* Jobba sedan igenom övningarna, i lugn och ro. Stressa inte. Kopiera exempelprogrammen, modifiera dem och gör dem till din egen kod.
-* Lös sedan uppgiften, ta hjälp av det du gjorde i övningarna.
-* Gå därefter tillbaka och kika igenom läsanvisningarna igen och välj att läsa de bitar som intresserar dig mest.
-
-Målet med kursmomentet är att du lär dig hantera och använda interna och externa Python-moduler samt att ge dig en orientering i webb-relaterade användningsområden för Python. 
-
-Målet är inte att du till fullo skall behärska de tekniker som modulerna hanterar. Se detta som ett smakprov på saker du kan lära dig mer om i kommande kurser.
-[/INFO]
--->
+[FIGURE src=/img/wikimedia/English_letter_frequency_(frequency).svg caption="Frekvensen för förekomsten av bokstäver i en engelsk text. [Bild från Wikimedia](https://en.wikipedia.org/wiki/Letter_frequency#mediaviewer/File:English_letter_frequency_(frequency).svg)."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -69,21 +46,22 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
-    * Ch12 Networked programs
-    * Ch13 Using Web Services
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
+    * Ch9 Dictionaries
+    * Ch10 Tuples
+
+<!--
+2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
+    * Ch11 Dictionaries
+    * Ch12 Tuples
+    * Ch13 Case study: data structure selection
+-->
 
 
 
 ###Artiklar {#artiklar}
 
-Läs följande:
-
-1. Läs kort och översiktligt om Python modulerna [`json`](https://docs.python.org/3/library/json.html).
-
-2. Läs kort och översiktligt om den externa [Python-modulen `request`](http://docs.python-requests.org/en/latest/) på deras hemsida.
-
-3. Läs kort och översiktligt om den externa [Python-modulen `BeautifulSoup`](http://www.crummy.com/software/BeautifulSoup/) på deras hemsida.
+Det finns inga artiklar.
 
 
 
@@ -91,23 +69,18 @@ Läs följande:
 
 Titta på följande:
 
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 6.
+1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 
-    * [Python for Informatics: Chapter 12 - Network Programming](https://www.youtube.com/watch?v=Zr8BQiPNaFI)
-    * [12.4 HTML Scraping with BeautifulSoup](http://www-personal.umich.edu/~csev/books/py4inf/media/Py4Inf-ex-12-04.mp4) (ladda ned och spela upp)
-    * Chapter 13 - Using Web Services [part 1](https://www.youtube.com/watch?v=6cwi1NcL0Zc&feature=youtu.be), [part 2](https://www.youtube.com/watch?v=4Rib_ybry2Y&feature=youtu.be), [part 3](https://www.youtube.com/watch?v=_tpyqAlCgoM&feature=youtu.be)
-
-3. Video om JSON: "[Discovering JavaScript Object Notation with Douglas Crockford](https://www.youtube.com/watch?v=kc8BAR7SHJI)".
+    * [Python for Informatics: Chapter 9 - Dictionaries](https://www.youtube.com/watch?v=FS-WZWUlPlM)
+    * [Python for Informatics: Chapter 10 - Tuples](https://www.youtube.com/watch?v=odIMpHInDbA)
 
 
 
 ###Lästips {#lastips}
 
-Följande är relevant extra läsning om du har tid och lust.
-
-1. I boken [Dive Into Python 3](kunskap/boken-dive-into-python-3) handlar kapitel 14 om [HTTP Web Services](http://www.diveintopython3.net/http-web-services.html).
+Det finns inga lästips.
 
 
 
@@ -121,9 +94,9 @@ Följande är relevant extra läsning om du har tid och lust.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. [Installera pakethantering med `pip3` för Python](kunskap/python-pakethantering-med-pip).
+1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/warehouse`.
 
-2. Jobba igenom övningen "[Använd externa moduler i Python för att hämta information på webben](kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben)". När det finns exempelprogram, kopiera dem och gör dem till dina egna. Kör dem. Ändra små saker i dem så du har koll på hur de fungerar. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/external`.
+1. Gör övningen "[Modulen argparse](kunskap/argparse)" där vi skriver ett CLI-program som tar emot options och argument. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/argparse`.
 
 
 
@@ -131,13 +104,21 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Analysera texter från webbsidor](uppgift/din-egen-chattbot-marvin-steg-5)". Spara alla filer under `me/kmom06/analyzer2`.
+1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Spara alla filer under `me/kmom05/lab5`.
+
+1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord)". Spara alla filer under `me/kmom05/analyzer`.
 
 
 
 ###Extra {#extra}
 
-Det finns inga extra uppgifter.
+Om du har tid och lust finns extra uppgifter att utföra.
+
+1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe)". Spara alla filer under `me/kmom05/marvin4`.
+
+1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)". Spara alla filer under `me/kmom05/marvin4`.
+
+<!-- 1. Gör den Curses-baserade uppgiften "[Ett terminal-baserat spel i Python - steg2](uppgift/ett-terminal-baserat-spel-i-python-steg2)". -->
 
 
 
@@ -150,7 +131,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du jobbat med liknande tekniker innan (JSON, HTTP, webbtjänster, scrapa från HTML-formatet), eller var detta helt nytt för dig?
-* Känns det bra att jobba på kommandoraden, ser du ett användningsområde för den typen av Python-program?
+* Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas? 
+* Hur använde du dem i uppgifterna?
+* Har du fått koll på grunderna i modulen argparse?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
