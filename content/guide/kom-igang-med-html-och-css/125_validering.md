@@ -14,4 +14,17 @@ Det finns som sagt även en validator för CSS-koden. Vi gör likadant med den. 
 
 [FIGURE src=/image/htmlphp/guide/murphy/validate-css.png?w=w2 caption="Grönt = bra."]
 
-Vi ska ta upp dessa verktygen lite senare i kursen och validera med hjälp av en länk direkt från vår sida. Nu tjatar Murphy om att vi måste jobba vidare, så det gör vi!
+Nu vet vi att vi följer standarden för hur språken ska struktureras. Vi jobbar vidare med footern och lägger in länkar till validatorerna så vi kan validera sidan med ett klick. Följande kod löser det i slutet av index.html.
+
+```html
+    <footer>
+        <hr>
+        <a href="http://validator.w3.org/check/referer">HTML5</a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+    </footer>
+</body>
+```
+
+Så här blev det för mig:
+
+[FIGURE src=/image/htmlphp/guide/murphy/validatelinks.png?w=w2 caption="Två länkar till validatorerna."]

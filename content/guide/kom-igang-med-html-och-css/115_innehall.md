@@ -54,6 +54,6 @@ p {
 
 Hur blir resultatet då? Jo, så här:
 
-[FIGURE src=/image/htmlphp/guide/murphy/steg-1.png?w=w2 caption="Fin, stylad text. En bra start."]
+[FIGURE src=/image/htmlphp/guide/murphy/grund-1.png?w=w2 caption="Fin, stylad text. En bra start."]
 
-Studera exemplet närmare på [Codepen](https://codepen.io/dbwebb/pen/aKErbo). All kod finner du även i exempelmappen i [kursrepot](https://github.com/dbwebb-se/htmlphp/tree/master/example/murphy/steg1).
+Studera exemplet närmare på [Codepen](https://codepen.io/dbwebb/pen/aKErbo). 
