@@ -1,10 +1,13 @@
 ---
-author: aar
+author:
+    - aar
+    - efo
 category: python
 revision:
-  "2017-06-09": (C, efo,aar) Gemensam genomgång innan publish.
-  "2017-06-05": (B, efo) Genomläsning och korrektion av stavfel.
-  "2017-05-29": (A, aar) Första utgåvan inför kursen python.
+    "2018-06-21": (D, efo) Genomgång inför HT18 med fler exempel
+    "2017-06-09": (C, efo,aar) Gemensam genomgång innan publish.
+    "2017-06-05": (B, efo) Genomläsning och korrektion av stavfel.
+    "2017-05-29": (A, aar) Första utgåvan inför kursen python.
 ...
 Introduktion till variabler och datatyper
 ==================================
@@ -44,28 +47,30 @@ Vi ska börja med att skriva ett program som skriver ut en hälsning och en åld
 Värden och typer {#varden-och-typer}
 --------------------------------------
 
-Inom programmering används värden, t.ex. heltalet 4 (Integer) eller en sträng "Hello world" (String). Värden är av olika typer, vilket ger dem olika egenskaper i koden.
+Inom programmering används värden, t.ex. heltalet 4 (Integer) eller en sträng "Hello world" (String). Värden är av olika typer, vilket ger dem olika egenskaper i koden. Nedan fyra av de vanliga typerna som finns i programmeringsspråk.
+
+
 
 ### Heltal (Integer) {#heltal}
 
-Vi kan använda oss av heltal, även kallat _Integer_ på engelska (förkortas med __int__), för att bland annat göra [matematiska operationer](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex).
+Vi kan använda oss av heltal, även kallat _Integer_ på engelska (förkortas med __int__), för att bland annat att göra [matematiska operationer](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex).
 
-Följande kod är exekverad i Python-interpretatorn, du startar interpretatorn genom att skriva `python3` i din terminal. För att lämna Python-interpretatorn trycker du `ctrl + d` eller skriver `exit()`. När du läser nedanstående kodexempel rekommenderar vi att du själv har en interpretator öppen och kodar med.
+Följande kod är exekverad i Python-interpretatorn, du startar interpretatorn genom att skriva `python3` i din terminal. När du läser nedanstående kodexempel rekommenderar vi att du själv har en interpretator öppen och kodar med. För att lämna Python-interpretatorn trycker du `ctrl + d` eller skriver `exit()`.
 
 ```python
 >>> 4 + 4
 8
 >>> 0 * 8
 0
->>> 5 % 3
-2
+>>> 5 % 2
+1
 >>> 3 + 4 + 4 * 2
 15
 >>> 3 + (4 + 4) * 2
 19
 ```
 
-Vid [operationer](https://sv.wikipedia.org/wiki/Operation_(matematik)) (+ , - , / ...) följer Python den matematiska konventionens prioriteringar:
+Vi ser alltså här att vi som förväntat kan skriva in vanliga heltal och att Python interpretatorn fungerar som en miniräknare där vi med hjälp av matematiska operatorer addera, subtrahera, multiplicera och så vidare. Vid [operationer](https://sv.wikipedia.org/wiki/Operation_(matematik)) (+ , - , / ...) följer Python den matematiska konventionens prioriteringar:
 
 1. Paranteser.
 1. Upphöjning (exponentiering).
@@ -73,13 +78,15 @@ Vid [operationer](https://sv.wikipedia.org/wiki/Operation_(matematik)) (+ , - , 
 1. Addition och subtraktion.
 1. Operatorer med samma prioritering exekveras från vänster till höger.
 
-Notera att den tredje beräkningen i exemplet ovan använder sig av modulusoperatorn `%`. Modulus är resten som är kvar vid heltalsdivision. Vår beräkning av `5 % 3` får resultatet 2, dvs om vi gör en heltalsdivision med 5 och 3 är resten 2. Detta kan till exempel användas om vi vill avgöra om en siffra är jämn eller udda. Då använder vi `% 2` och om resultatet är 0 är siffran jämn, annars är siffran udda.
+Notera att den tredje beräkningen i exemplet ovan använder sig av modulusoperatorn `%`. Modulus är resten som är kvar vid heltalsdivision. Vår beräkning av `5 % 2` får resultatet 1, dvs om vi gör en heltalsdivision med 5 och 2 är resten 1. Detta kan till exempel användas om vi vill avgöra siffran är jämn eller udda. Får vi resultatet 1 vet vi att siffran är udda och är resultatet av uttrycket 0, dvs ingen rest i heltalsdivisionen, är talet ett jämnt tal.
 
 
 
 ### Decimaltal (Float) {#decimaltal}
 
-`3.14` är ett decimaltal, vilket kallas _Float_ på engelska. Decimaltal (Float) precis som heltal (Integer) kan användas för att göra matematiska operationer. Det går även att blanda decimaltal och heltal i aritmetiska operationer, det resulterar i ett nytt decimaltal.
+Ibland räcker inte heltal till. Om vi till exempel vill representera ett pris `19,90 kr`, en vikt på `3,5 kg` eller om vi till exempel vill beräkna arean av en cirkel behövs PI, som vi i detta fallet visar med två decimaler `3,14`. Dessa tal är decimaltal, vilket kallas _Float_ på engelska. Decimaltal (Float) precis som heltal (Integer) kan användas för att göra matematiska operationer. Det går även att blanda decimaltal och heltal i aritmetiska operationer, det resulterar i ett nytt decimaltal.
+
+Då vi programmerar på engelska i Python använder vi oss det engelskspråkiga decimaltecken '.' (punkt) istället för att skriva siffrorna med ',' (komma). Så ska vi skriva de tre siffrorna från ovan i Python skriver vi `19.90`, `3.5` och `3.14`. Vi provar oss fram i interpretatorn:
 
 ```python
 >>> 3.14 + 3.14
@@ -91,7 +98,7 @@ Notera att den tredje beräkningen i exemplet ovan använder sig av modulusopera
 >>>
 ```
 
-Ibland vill vi bara visa några få decimaler genom att avrunda decimaltalen. I Python kan detta göras med hjälp av funktionen `round()`. Vi skickar först in siffran som ska avrundas, och antalet decimaler vi vill ha efter ett kommatecken. Om vi inte skickar in hur många decimaler vi vill ha så avrundas siffran till ett heltal, dvs inga decimaler alls.
+Ibland vill vi bara visa några få decimaler genom att avrunda decimaltalen. I Python kan detta göras med hjälp av funktionen `round()`. Vi skickar först in siffran som ska avrundas och sedan antalet decimaler vi vill ha efter ett kommatecken. Om vi inte skickar in hur många decimaler vi vill ha så avrundas siffran till ett heltal, dvs inga decimaler alls.
 
 ```python
 >>> 3.14 + 3
@@ -106,9 +113,9 @@ Ibland vill vi bara visa några få decimaler genom att avrunda decimaltalen. I 
 
 ### Sträng (String) {#strang}
 
-Textvärden heter [_sträng_](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str) på svenska och _string_ på engelska (förkortas med __str__). En sträng är en sekvens av karaktärer omslutna av enkla (') eller dubbla (") citattecken. Vi vet att `"Hello world"` är en sträng för att den är omsluten av citattecken. En sträng kan inte innehålla samma typ av citattecken som den är omsluten av, en sträng avslutas så fort ett likadant citattecken påträffas i sekvensen.
+Textvärden heter [_sträng_](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str) på svenska och _string_ på engelska (förkortas med __str__). En sträng är en sekvens av karaktärer omslutna av enkla (') eller dubbla (") citattecken. Vi vet att `"Hello world"` är en sträng för att den är omsluten av citattecken. En sträng kan inte innehålla samma typ av citattecken som den är omsluten av ochen sträng avslutas så fort ett likadant citattecken påträffas i sekvensen.
 
-I koden nedan visas vårt första felmeddelande. Felmeddelanden visas när något går fel i vårt program, då avslutas programmet och ett felmeddelande visas. I detta fall får vi ett felmeddelande när vi försöker skriva värdet `"It"s Learning"`, alltså en sträng skapad med `"` och innehåller en `"` som en del av värdet. Kolla på felmeddelandet och se om du förstår vad felet är, jag förklarar felet i texten under koden.
+I koden nedan visas vårt första felmeddelande. Felmeddelanden visas när något går fel i vårt program, då avslutas programmet och ett felmeddelande visas. I detta fall får vi ett felmeddelande när vi försöker skriva värdet `"It"s Learning"`, alltså en sträng skapad med `"` som innehåller en `"` som en del av värdet. Kolla på felmeddelandet och se om du förstår vad felet är, jag förklarar felet i texten under koden.
 
 ```python
 >>> "3.14"
@@ -125,9 +132,9 @@ I koden nedan visas vårt första felmeddelande. Felmeddelanden visas när någo
 SyntaxError: invalid syntax
 ```
 
-Python interpretatorn klarar bara av att exekvera kod som följer dess struktur. När vi skriver `"It"s Learning"` skapar vi en sträng som innehåller karaktärerna `It`. När den andra `"` påträffas i koden avslutas strängen och då blir de efterföljande karaktärerna inte en del av strängen. Python interpretatorn klara inte av att det kommer ett `s` efter en sträng och då stoppas programmet och interpretatorn visar felet som vi ser ovanför, ett så kallat syntaxfel. Syntaxfel betyder att koden inte är korrekt skriven. Vi kan även se att koden är på rad 1 och en "^" som pekar på vart felet är.
+Python interpretatorn klarar bara av att exekvera kod som följer dess struktur. När vi skriver `"It"s Learning"` skapar vi en sträng som innehåller karaktärerna `It`. När den andra `"` påträffas i koden avslutas strängen och då blir de efterföljande karaktärerna inte en del av strängen. Python interpretatorn klarar inte av att det kommer ett `s` efter en sträng och då stoppas programmet och interpretatorn visar felet som vi ser ovanför, ett så kallat syntaxfel. Syntaxfel betyder att koden inte är korrekt skriven. Vi kan även se att koden är på rad 1 och en "^" som pekar på vart felet är.
 
-Det går att lägga ihop strängar (konkatenera) med ett "+" mellan två strängar.
+Om vi har två strängar som vi vill lägga ihop till en lång kan detta med ett "+" mellan två strängar. Detta kallas att konkatenera strängar, den engelska översättningen är 'concatenate'.
 
 ```python
 >>> "Hello" + "World!"
@@ -198,7 +205,7 @@ Vårt program del 1 {#program-del1}
 
 Programmet vi ska skapa har ett syfte: att skriva ut en hälsning. Vilken kod behövs för att uppnå det? Vi behöver en hälsning, alltså ett värde, som måste vara en sträng eftersom hälsningen ska innehålla bokstäver. Sen behöver vi möjligheten att skriva ut värdet i terminalen.
 
-Gå till kurskatalogen i din terminal och skapa en ny fil som heter "greeting.py". Öppna sedan filen med atom eller din favorit texteditor. Vi använder kommandot `touch` för att skapa filen.
+Gå till kurskatalogen i din terminal och skapa en ny fil som heter "greeting.py". Öppna sedan filen med atom. Vi använder kommandot `touch` för att skapa filen.
 
 ```bash
 # Gå till ditt kursrepo python
@@ -257,7 +264,7 @@ Jag börjar med att tilldela heltalet 23 till variabeln `an_integer`. Precis som
 >>> a_float = 3.14
 ```
 </div>
-[FIGURE src=/image/python/variable-memory2.png class="right" caption="Flera variabler refererar vill värden i minnet."]
+[FIGURE src=/image/python/variable-memory2.png class="right" caption="Flera variabler refererar till värden i minnet."]
 
 Nu har jag skapat tre variabler till, en som innehåller en bool, en med en sträng och en som innehåller ett decimaltal. Vi kan byta de värden variablerna har.
 
@@ -270,7 +277,7 @@ False
 'en sträng'
 ```
 
-[FIGURE src=/image/python/variable-memory3.png class="right" caption="Flera variabler refererar vill värden i minnet."]
+[FIGURE src=/image/python/variable-memory3.png class="right" caption="Flera variabler refererar till värden i minnet."]
 
 Först ändrar jag värdet på `a_bool` till False. Sen sätter jag `a_float` till värdet av `a_string`, då får a_float en kopia av `a_string`s värde.
 
@@ -290,9 +297,9 @@ Precis som med värden kan vi med variabler utföra matematiska operationer i oc
 
 ## Namngivning och Keywords {#namngivning_keywords}
 
-När du namnger variabler ska det vara på engelska, beskrivande och dokumentera vad variabeln används till. Variabelnamn kan innehålla både bokstäver, siffror och vissa andra karaktärer men får inte börja på siffror. Om ditt namn ska innehålla flera ord bör du seperera dem med ett "\_", det är inte tillåtet med  mellanrum (" ") i namn.
+När du namnger variabler ska det vara på engelska, beskrivande och dokumentera vad variabeln används till. Variabelnamn kan innehålla både bokstäver, siffror och vissa andra karaktärer men får inte börja på siffror. Om ditt namn ska innehålla flera ord bör du seperera dem med ett "\_" och det är inte tillåtet med mellanrum (" ") i variabelnamn.
 
-Vi kikar på några namn.
+Vi kikar på några variabelnamn.
 
 ```python
 >>> 23_number = 23
@@ -302,7 +309,7 @@ Vi kikar på några namn.
 SyntaxError: invalid syntax
 ```
 
-Variabelnamnet, "23_number", börjar på en siffra och då får vi ett SyntaxError. Det betyder att interpretatorn inte kan läsa din kod, den är skriven på fel sätt.
+Variabelnamnet `23_number` börjar på en siffra och då får vi ett SyntaxError. Det betyder att interpretatorn inte kan läsa din kod, den är skriven på fel sätt.
 
 ```python
 >>> number 23 = 23
@@ -337,7 +344,7 @@ Detta betyder att vi till exempel inte kan döpa en variabel till `and` men ett 
 SyntaxError: invalid syntax
 ```
 
-Jag får ett SyntaxError när jag försöker döpa variabeln till ett keyword, `and`.
+Jag får ett SyntaxError när jag försöker döpa variabeln till keywordet `and`.
 
 <!-- Uttryck {#uttryck}
 --------------------------------------
@@ -369,7 +376,7 @@ print(x)
 
 Sista raden är både ett uttryck och en sats. -->
 
-Ta en 10 min paus innan du fortsätter med nästa del. Tänk igenom vad du har lärt dig, kanske kolla igenom det lite snabbt igen.
+Nu har vi en grundläggande förståelse för vad en variabel är och hur vi kan spara värden med hjälp av variabler. Vi ska i nästa del titta på hur vi kan använda variabler för att förbättra vårt program `greeting.py`.
 
 
 
@@ -378,7 +385,7 @@ Vårt program del 2 {#program-del2}
 
 Vi går tillbaka till vår fil `greeting.py` och fortsätter utvecklingen av vårt program. Nästa steg är att be användaren skriva in ett namn och en ålder och använda det i hälsningen. Vad behöver vi i koden? Vi behöver input från användaren (namn och ålder), spara värdena så vi kan använda dem, bygga hälsningssträngen med värdena och skriva ut hälsningen.
 
-Först ska vi kommentera koden vi redan har så andra utvecklare och du själv vet vad den gör.
+Först ska vi dock kommentera koden vi redan har så andra utvecklare och du själv vet vad den gör.
 
 
 
@@ -427,15 +434,11 @@ input()
 print("Hej Jack Black, du är 48 år gammal.") # Skriver ut ett sträng värde
 ```
 
-Kom ihåg att koden exekveras uppifrån och ner och en rad åt gången. När vi testar programmet kommer programmet börja med att vänta på att användaren ska skriva något i terminalen och klicka "enter". Sen exekveras nästa rad som skriver ut vår hälsning. Testa programmet.
+Kom ihåg att koden exekveras uppifrån och ner och en rad åt gången. När vi testar programmet kommer programmet börja med att vänta på att användaren ska skriva något i terminalen och klicka "enter". Sen exekveras nästa rad som skriver ut vår hälsning. Nedan ser vi hur programmet står och väntar på inmatning från användaren innan hälsningen skrivs ut.
 
-```bash
-$ python3 greeting.py
-skriver något
-Hej Jack Black, du är 48 år gammal.
-```
+[ASCIINEMA src=bQFDflMFeLEnjpwNnDvqwSnyQ]
 
-Om du testade köra koden själv märkte du att du inte får någon utskrift när du ska mata in en sträng, jag skrev "skriver något" som inmatning. I fall du vill få en utskrift när du ska skriva in kan du skicka en sträng som ett argument till "input()" funktionen som skrivs ut när användaren ska skriva in. Låt oss testa.
+Om du testade köra koden själv märkte du att du inte får någon utskrift när du ska mata in en sträng, jag skrev 'hej hej hej' som inmatning. I fall du vill få en utskrift när du ska skriva in kan du skicka en sträng som ett argument till "input()" funktionen som skrivs ut när användaren ska skriva in. Låt oss testa.
 
 ```python
 """
@@ -465,7 +468,13 @@ name = input("Skriv ett namn, klicka sen enter: ")
 print(name) # Skriver ut ett sträng värde
 ```
 
-Nu skapar vi variabeln `name` och tilldelar den värdet av vad `input()` returnerar. Testa exekvera koden.
+Nu skapar vi variabeln `name` och tilldelar den värdet av vad `input()` returnerar.
+
+[FIGURE src=/image/python/variable-memory4.png caption="variabeln 'name' har värdet av det vi matade in till input()."]
+
+
+
+Nedan ser vi hur det kan se ut när vi kör programmet.
 
 ```bash
 $ python3 greeting.py
@@ -473,7 +482,11 @@ Skriv ett namn, klicka sen enter: Jack Black
 Jack Black
 ```
 
-[FIGURE src=/image/python/variable-memory4.png class="right" caption="variabeln 'name' har värdet Jack Black."]
+[ASCIINEMA src=XenEvdFN3uESLCgtokxDXTPMi]
+
+
+
+### Konkatenera inmatningen med en annan sträng
 
 Nu kan vi testa konkatenera (lägga ihop två strängar) namnet och hälsningen.
 
@@ -544,12 +557,12 @@ I vår kod behövs ett heltalsvärde för vilket år det är nu, räkna ut föde
 Jag tar bort kommentarerna på gammal kod för att det ska bli luftigare i koden och lättare för dig att läsa den nya.
 
 ```python
-year = 2017 # Hårdkodat värde för vilket år det är
+year = 2018 # Hårdkodat värde för vilket år det är
 
 name = input("Skriv ett namn, klicka sen enter: ")
 age = input("Skriv en ålder, klicka sen enter: ")
 
-year_born = year - age # Födelseår räknas ut. (2017 - inmatat värde)
+year_born = year - age # Födelseår räknas ut. (2018 - inmatat värde)
 
 greeting = "Hej " + name + ", du är " + age + " år gammal och föddes år " + year_born
 print(greeting)
@@ -563,18 +576,18 @@ Skriv ett namn, klicka sen enter: Bo Burnham
 Skriv en ålder, klicka sen enter: 27
 Traceback (most recent call last):
   File "greeting.py", line 11, in <module>
-    year_born = year - age # Födelseår räknas ut. (2017 - inmatat värde)
+    year_born = year - age # Födelseår räknas ut. (2018 - inmatat värde)
 TypeError: unsupported operand type(s) for -: 'int' and 'str'
 ```
 
-Var du beredd på felet? Jag skrev tidigare att allt `input()` returnerar är av typen sträng och vi har sett att vi inte kan blanda strängar och heltal i operationer. Därför får vi ett TypeError fel på rad 11 i `greeting.py` när vi försöker göra `2017 - "27"`.
+Var du beredd på felet? Jag skrev tidigare att allt `input()` returnerar är av typen sträng och vi har sett att vi inte kan blanda strängar och heltal i operationer. Därför får vi ett TypeError fel på rad 11 i `greeting.py` när vi försöker göra `2018 - "27"`.
 
 ### Typkonvertering {#typkonvertering}
 
 För att kunna använda värdet ålder vi får från `input()` behöver vi ändra dess typ från sträng till heltal. Vi har redan gjort detta med boolean värden. Då använde vi funktionen `bool()`, nu ska vi använda funktionen `int()`. `int()` tar emot ett argument, ett värde, och returnerar det värdet med typen heltal.
 
 ```python
-year = 2017 # Hårdkodat värde för vilket år det är
+year = 2018 # Hårdkodat värde för vilket år det är
 
 name = input("Skriv ett namn, klicka sen enter: ")
 age = input("Skriv en ålder, klicka sen enter: ")
@@ -585,7 +598,7 @@ greeting = "Hej " + name + ", du är " + age + " år gammal och föddes år " + 
 print(greeting)
 ```
 
-Nu räknar vi ut `year_born` med `year` (2017) minus `age` (inmatat värde). Kan du se nästa fel?
+Nu räknar vi ut `year_born` med `year` (2018) minus `age` (inmatat värde). Kan du se nästa fel?
 
 ```bash
 $ python3 greeting.py
@@ -617,7 +630,7 @@ Nedanför förklarar jag de olika sätten. Tänk på operations prioriteringarna
 1. 'Hej Bo Burnham ' konkateneras med ", du är".
 1. 'Hej Bo Burnham, du är ' konkateneras med "27".
 1. 'Hej Bo Burnham, du är 27' konkateneras med ' år gammal och föddes år '.
-1. 'Hej Bo Burnham, du är 27 år gammal och föddes år ' konkateneras med "1990".
+1. 'Hej Bo Burnham, du är 27 år gammal och föddes år ' konkateneras med "1991".
 
 **Version 2**, vi gör om "year_born" till en sträng efter uträkningen.
 
@@ -634,7 +647,7 @@ Nedanför förklarar jag de olika sätten. Tänk på operations prioriteringarna
 Jag väljer att använda version 3 i min kod.
 
 ```python
-year = 2017 # Hårdkodat värde för vilket år det är
+year = 2018 # Hårdkodat värde för vilket år det är
 
 name = input("Skriv ett namn, klicka sen enter: ")
 age = input("Skriv en ålder, klicka sen enter: ")
@@ -651,7 +664,7 @@ Nu borde vi vara färdiga med programmet, det tar namn och ålder som input, rä
 $ python3 greeting.py
 Skriv ett namn, klicka sen enter: Bo Burnham
 Skriv en ålder, klicka sen enter: 27
-Hej Bo Burnham, du är 27 år gammal och föddes år 1990
+Hej Bo Burnham, du är 27 år gammal och föddes år 1991
 ```
 
 [FIGURE src=/image/python/variable-memory7.png caption="Variabler refererar till värden i minnet."]
