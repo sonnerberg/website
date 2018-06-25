@@ -5,4 +5,4 @@ linkable: true
 Mer innehåll {#mer-innehall}
 =======================
 
-Murphy anser att det är dags att lägga till en bild. Det gör vi enklast med `<img>`-taggen.
+Hur kan man strukturera textflöden och annat innehåll? Vi tittar närmare på HTML-elementen `<main>` och `<article>` och övriga konstruktioner som är bra att känna till.

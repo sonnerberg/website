@@ -23,8 +23,10 @@ Elementet `<nav>` definierar en uppsättning navigeringslänkar, vilket passar b
 
 Sedan måste vi ha en sidan det länkas till. Jag väljer att kopiera `index.html` och döper kopian till `about.html`. Den nya filen får en ny title `<title>` och bilden städas undan. Låt oss ladda om webbläsaren och se hur `<nav>` skapar länkarna per default:
 
-[FIGURE src=/image/htmlphp/guide/murphy/navbar-left.png?w=c8  class="left" caption="index.html"]
-[FIGURE src=/image/htmlphp/guide/murphy/navbar-right.png?w=c8  class="right" caption="about.html"]
+[FIGURE src=/image/htmlphp/guide/murphy/navbar-right.png?w=c8 class="right" caption="about.html"]
+[FIGURE src=/image/htmlphp/guide/murphy/navbar-left.png?w=c8 caption="index.html"]
+
+
 
 Fint, det går att navigera mellan sidorna. Det ser dock inte ut som en navigeringsmeny så vi gör ett tappert försök till snyggare style.
 

@@ -6,7 +6,7 @@ revision:
 Footer {#footer}
 =======================
 
-Footern behöver lite justeringar då Murphy ville inte ha den grön. Vi tar bort färgen och lägger till lite luft ovan. Vi ger footern ett klassnamn i index.html och uppdaterar CSS-filen:
+Footern behöver lite justeringar då Murphy inte ville ha den grön. Vi tar bort färgen och lägger till lite luft ovan. Vi ger footern ett klassnamn i index.html och uppdaterar CSS-filen:
 
 index.html:
 
