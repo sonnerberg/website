@@ -2,9 +2,11 @@
 author:
     - mos
     - lew
+    - efo
 category:
     - python
 revision:
+    "2018-06-21": (E, efo) Bytte ordning på asciinema och video.
     "2017-06-09": (D, mos) Genomgången inför ht17, bort med CGI, nya videor.
     "2016-02-22": (C, mos) Genomgången, bort med onödig info och in med videor.
     "2016-01-20": (B, mos) Uppdaterad asciinema som refererade till bin/dbwebb.
@@ -115,13 +117,13 @@ Det kan vara en bra idé att alltid starta editorn på detta sätt, från rooten
 
 Du kan nu redigera exempelprogrammet och lägga till en utskrift av ditt eget namn. Sedan kan du pröva att lägga till lite ASCII art (bilder gjorda med ASCII-tecken) och skriva ut det. Bild-googla "ASCII art" så hittar du exempel på bilder du kan använda.
 
-Det skulle kunna se ut så här när du är klar.
-
-[ASCIINEMA src=122883 caption="Jag döpte min fil till hello-name.py..."]
-
 Så här ser det ut när Kenneth kör igenom övningen från början till slut.
 
 [YOUTUBE src=Qw57psOiLio width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python med sitt namn."]
+
+Det skulle kunna se ut så här när du är klar.
+
+[ASCIINEMA src=122883 caption="Jag döpte min fil till hello-name.py..."]
 
 Du har nu ett fungerande python-program som ligger i en egen fil och som du kan exekvera genom att "köra" filen. Ditt första python-program i denna kursen, det är en bra start.
 

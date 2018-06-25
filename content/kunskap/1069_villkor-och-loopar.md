@@ -17,13 +17,13 @@ Vi har nu bra koll på variabler och datatyper i python. Vi känner till sträng
 
 
 
-Vi rekommenderar att du kodar med i denna övning så du själv får känna på hur det är att skriva pythonkod.
+Vi rekommenderar att du kodar med i denna övning så du själv får känna på hur det är att skriva Python-kod.
 
 
 
 Villkor {#villkor}
 --------------------------------------
-Ofta vill vi ta reda på om våra variabler uppfyller vissa krav. Det kan vara om en heltalsvariabel är större än 10 eller om en strängvariabel är lika med en annan sträng. För att undersöka om våra variabler uppfyller dessa krav kan vi använda oss av en `if`-sats. Låt oss titta på hur en `if`-sats ser ut i python.
+Ofta vill vi ta reda på om våra variabler uppfyller vissa krav. Det kan vara om en heltalsvariabel är större än 10 eller om en strängvariabel är lika med en annan sträng. För att undersöka om våra variabler uppfyller dessa krav kan vi använda oss av en `if`-sats. Låt oss titta på hur en `if`-sats ser ut i Python.
 
 ```python
 number_of_apples = 13
@@ -34,7 +34,25 @@ if number_of_apples > 10:
 # skriver ut: Du har mer än 10 äpplen
 ```
 
-I kodexemplet ovan definierar vi först en variabel `number_of_apples` och sätter den lika med heltalet 13. Vi gör sedan en jämförelse mellan vår variabel `number_of_apples` och heltalet 10. Om vi läsar ut raden, där vi gör jämförelsen, på svenska blir det ungefär "om antalet äpplen är större än 10 skriver vi ut 'Du har mer än 10 äpplen'". I python använder vi indentering, att vi har flyttat in koden ett snäpp, som ett sätt att avgränsa det som hör till `if`-satsen. I kodexemplet ovan händer det ingenting om vi har 10 eller färre äpplen, men det vore ju trevligt om vårt program även skrev ut ett meddelande till de med få äpplen. Så låt oss äta 4 äpplen och titta på nedanstående exempel.
+I kodexemplet ovan definierar vi först en variabel `number_of_apples` och sätter den lika med heltalet 13. Vi gör sedan en jämförelse mellan vår variabel `number_of_apples` och heltalet 10. Om vi läser ut raden, där vi gör jämförelsen, blir det ungefär "om antalet äpplen är större än 10 skriver vi ut 'Du har mer än 10 äpplen'".
+
+Som vi ser ovan är raden som skriver ut 'Du har mer än 10 äpplen' inflyttat ett snäpp. Detta kallas för indentering. I Python används indentering som ett sätt att avgränsa det som hör till `if`-satsen. I exemplet nedan ser vi hur vi kan 'avsluta' if-satsen genom att flytta ut koden längst till vänster.
+
+```python
+number_of_apples = 13
+
+if number_of_apples > 10:
+    print("Du har mer än 10 äpplen")
+
+print("Nu är vi klara med if-satsen")
+
+# skriver ut:
+# Du har mer än 10 äpplen
+# Nu är vi klara med if-satsen
+```
+
+
+I kodexemplet ovan skrivs det inte ut nått från if-satsen om vi har 10 eller färre äpplen, men det vore ju trevligt om vårt program även skrev ut ett meddelande till de med få äpplen. Så låt oss äta 4 äpplen och titta på nedanstående exempel.
 
 ```python
 number_of_apples = 9
@@ -44,7 +62,11 @@ if number_of_apples > 10:
 else:
     print("Du har nog varit hungrig och ätit upp dina äpplen")
 
-# skriver ut: Du har nog varit hungrig och ätit upp dina äpplen
+print("Nu är vi klara med if-satsen")
+
+# skriver ut:
+# Du har nog varit hungrig och ätit upp dina äpplen
+# Nu är vi klara med if-satsen
 ```
 
 Om vi läser upp ovanstående exempel blir det ungefär: "om antalet äpplen är större än 10 skriver vi ut 'Du har mer än 10 äpplen', annars skriver vi ut 'Du har nog varit hungrig och ätit upp dina äpplen'". Om vi istället vill kolla att antalet äpplen ligger inom ett intervall kan vi använda ytterligare ett villkor i vår `if`-sats. Detta gör vi genom att använda konstruktionen `elif`.
@@ -59,7 +81,11 @@ elif number_of_apples <= 10 and number_of_apples > 5:
 else:
     print("Du har nog varit hungrig och ätit upp dina äpplen")
 
-# skriver ut: Du blev snabbt mätt och åt bara upp några av dina äpplen
+print("Nu är vi klara med if-satsen")
+
+# skriver ut:
+# Du blev snabbt mätt och åt bara upp några av dina äpplen
+# Nu är vi klara med if-satsen
 ```
 
 Notera hur vi använder två separata villkor i vårt `elif` villkor. Vi kan bara jämföra med en operator åt gången och kan alltså inte skriva det matematisk korrekta uttrycket `10 >= number_of_apples > 5`.
@@ -76,10 +102,17 @@ if number_of_fruits > 10:
     else:
         print("Du har mer än 10 frukter")
 
-# skriver ut: Du har mer än 10 frukter
+    print("Nu är vi klara med den inre if-satsen")
+
+print("Nu är vi klara med den yttre if-satsen")
+
+# skriver ut:
+# Du har mer än 10 frukter
+# Nu är vi klara med den inre if-satsen
+# Nu är vi klara med den yttre if-satsen
 ```
 
-Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra flödet av data i våra program. Ett sätt att få en överblick över flödet är att rita så kallade flödesdiagram (flow charts). Det enklaste sättet är att rita på ett blankt papper och det ger en bra möjlighet för att tänka över det problem, som vi löser med pythonprogrammet. Ett exempel på flödesdiagram för kodexempel 2 syns nedan.
+Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra flödet av data i våra program. Ett sätt att få en överblick över flödet är att rita så kallade flödesdiagram (flow charts). Det enklaste sättet är att rita på ett blankt papper och det ger en bra möjlighet för att tänka över det problem, som vi löser med Python-kod. Ett exempel på flödesdiagram för kodexempel 2 syns nedan.
 
 [FIGURE src=image/kunskap/python/flow-chart-if.jpg caption="Flödesdiagram för en if-sats."]
 
@@ -87,18 +120,22 @@ Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra f
 
 For-loop {#for}
 --------------------------------------
-Nu har vi tittat på hur vi kan styra flödet av data genom våra program med villkor och programmeringskontruktionen `if`. I detta avsnitt ska vi kolla på hur vi kan upprepa delar av koden med hjälp av konstruktionerna `for`, `range` och `in`. En `for`-loop är en konstruktion för att upprepa en del av koden ett bestämt antal gånger. Så vet vi till exempel att vi vill skriva ut en text 10 gånger är `for`-loopen ett perfekt verktyg istället för att manuellt använda `print()` 10 gånger.
+Nu har vi tittat på hur vi kan styra flödet av data genom våra program med villkor och programmeringskonstruktionen if-satser. I detta avsnitt ska vi kolla på hur vi kan upprepa delar av koden med hjälp av konstruktionerna `for`, `range` och `in`. En `for`-loop är en konstruktion för att upprepa en del av koden ett bestämt antal gånger. Så vet vi till exempel att vi vill skriva ut en text 10 gånger är `for`-loopen ett perfekt verktyg istället för att manuellt använda `print()` 10 gånger.
 
 ```python
 for i in range(10):
     print(i)
 
-# skriver ut: siffrorna 0-9 i följd
+print("Jag är klar med loopen")
+
+# skriver ut:
+# siffrorna 0-9 i följd
+# Jag är klar med loopen
 ```
 
-Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta mer på detta. Vi ser även att vi här använder indentering för att avgränsa det som hör till `for`-loopen precis som vi använde det i vår `if`-sats.
+Vi noterar att vi skriver ut siffrorna 0-9 och kanske inte som väntat 1-10. I Python och många andra programmeringsspråk är talföljder och liknande konstruktioner 0-indexerade. Det viktigaste är att vi vet om det och vi kommer senare under kursens gång titta mer på detta. Vi ser även att vi här, precis som med if-satser, använder indentering för att avgränsa det som hör till `for`-loopen.
 
-Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Om vi anger två siffor till `range()` får vi siffrorna däremellan till svar. Här räknas `number_of_apples`-variablen upp från 3 till 15 och med hjälp av `if`-satsen skriver vi ut olika meddelanden.
+Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen ett bestämt antal gånger. Om vi kombinerar detta med det vi lärde oss om `if`-satser kan vi redan nu skapa avancerade flöden i våra program. Om vi anger två siffror till `range()` får vi siffrorna däremellan till svar. Här räknas `number_of_apples`-variabeln upp från 3 till 15 och med hjälp av `if`-satsen skriver vi ut olika meddelanden.
 
 ```python
 for number_of_apples in range(3, 15):
@@ -114,9 +151,10 @@ Om vi bara vill göra något ett bestämt antal gånger utan att bry oss om inde
 
 ```python
 for _ in range(5):
-    print("python är ett spännande programmeringsspråk")
+    print("Python är ett spännande programmeringsspråk")
 
-# skriver ut: python är ett spännande programmeringsspråk 5 gånger
+# skriver ut:
+# Python är ett spännande programmeringsspråk 5 gånger
 ```
 
 Vi kan även loopa över annat än talföljder och vi kommer senare i kursen lära oss många olika konstruktioner som vi kan loopa över. I nedanstående exempel loopar vi igenom en sträng bokstav för bokstav med hjälp av samma `in` konstruktion som vi använde för talföljderna.
@@ -126,10 +164,13 @@ for letter in "räksmörgås":
     if letter in "åäö":
         print(letter)
 
-#skriver ut: äöå
+#skriver ut:
+# ä
+# ö
+# å
 ```
 
-Notera att vi använder `in` konstruktionen även i en `if`-sats för att kolla om bokstaven finns i en annan sträng. `in` kan alltså användas på många olika sätt tillsammans med både villkor och loopar. Vi kommer under kursens gång tillbaka till `in` flertalet gånger och ser många användningsområden. Så om det känns lite magiskt nu kommer det att sätta sig under kursens gång.
+Notera att vi använder `in` konstruktionen även i en `if`-sats för att kolla om bokstaven finns i en annan sträng. `in` kan alltså användas på olika sätt tillsammans med både villkor och loopar. Vi kommer under kursens gång tillbaka till `in` flertalet gånger och ser många användningsområden. Så om det känns lite magiskt nu kommer det att sätta sig under kursens gång.
 
 
 
@@ -147,11 +188,11 @@ while number < 20:
 # skriver ut: 2 4 8 16
 ```
 
-Det viktiga med en `while`-loop är att vi någon gång avslutar loopen för annars kommer den fortsätta i all oändlighet eller tills datorn stängs av. Vi avslutar loopen genom att ändra så att villkoret är falskt. I exemplet ovan avslutar vi alltså loopen när
-`number` blir 20 eller större.
+Det viktiga med en `while`-loop är att vi någon gång avslutar loopen för annars kommer den fortsätta i all oändlighet eller tills datorn stängs av. Vi avslutar loopen genom att ändra så att villkoret är falskt. I exemplet ovan avslutar vi alltså loopen när `number` blir 20 eller större.
 
+`while`-loopar kan även användas för att ta emot indata från användaren. Om vi vill ta emot indata tills användaren skriver in ett specifikt värde kan vi använda `break` när användaren skriver in detta värde.
 
-`while`-loopar kan även användas för att ta emot indata från användaren. Om vi vill ta emot indata tills användaren skriver in ett specifikt värde kan vi använda `break` när användaren skriver in detta värde. Vi har tidigare sett hur vi använder `input` och hur vi konverterar data från en sträng till ett heltal. I `while`-loopen brytar vi mot regeln ovan att vi skulle ha ett villkor som någongång avslutas. Villkoret `True` avslutas aldrig då detta alltid är sant, men vi använder konstruktionen `break` för att avsluta. Inne i loopen är det första vi gör att kolla om användaren har skrivit in värdet för avslut (q), om användaren har gjort det avslutar vi programmet. Annars skriver vi ut ett meddelande baserat på de `if`-staser vi har sett tidigare.
+Vi har tidigare sett hur vi använder `input` och hur vi konverterar data från en sträng till ett heltal. I `while`-loopen bryter vi mot regeln ovan att vi skulle ha ett villkor som någon gång avslutas. Villkoret `True` blir aldrig falskt och då avslutas while-loopen aldrig, men vi använder konstruktionen `break` för att avsluta. Inne i loopen är det första vi gör att kolla om användaren har skrivit in värdet för avslut (q), om användaren har gjort det avslutar vi programmet. Annars skriver vi ut ett meddelande baserat på de `if`-satser vi har sett tidigare.
 
 ```python
 while True:
@@ -170,7 +211,7 @@ while True:
             print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
-På rad 8 i koden ovan gör vi om variabeln `user_input` från en sträng till ett heltal med hjälp av `int()`. Då datat som finns i variabeln kommer från en användare kan vi inte lita på att variabeln innehåller ett heltal. Om vi skriver in något annat än ett heltal (till exempel bokstaven `g`) får vi följande fel i python.
+På rad 8 i koden ovan gör vi om variabeln `user_input` från en sträng till ett heltal med hjälp av `int()`. Då data som finns i variabeln kommer från en användare kan vi inte lita på att variabeln innehåller ett heltal. Om vi skriver in något annat än ett heltal (till exempel bokstaven 'g') får vi följande fel i python.
 
 ```bash
 Traceback (most recent call last):
@@ -188,7 +229,7 @@ except ValueError:
     print("Oj! Du skrev inte in en siffra.")
 ```
 
-I koden ovan försöker vi omvandla `user_input` till ett heltal, om detta inte går får vi ett `ValueError` som vi såg i felmeddelandet. I `except` skriver vi bara ut att det blev fel och fortsätter. Ett uppdaterat kodexempel med felhantering ses nedan. Notera att vi använder `continue` för att hoppa till nästa upprepning i `while`-loop. Vi har tidigare sett `break` som avslutar hela loopen, `continue` bara den nuvarande upprepning och fortsätter sedan med nästa upprepning.
+I koden ovan försöker vi omvandla `user_input` till ett heltal, om detta inte går får vi ett `ValueError` som vi såg i felmeddelandet. I `except` skriver vi bara ut att det blev fel och fortsätter. Ett uppdaterat kodexempel med felhantering ses nedan. Notera att vi använder `continue` för att hoppa till nästa upprepning i `while`-loopen. Vi har tidigare sett `break` som avslutar hela loopen, `continue` avslutar bara den nuvarande upprepning och fortsätter sedan med nästa upprepning.
 
 ```python
 while True:

@@ -38,7 +38,7 @@ html {
 body {
     background-color: #ddd;
     width: 1000px;
-    margin: 0 auto;
+    margin: 8px auto;
 }
 
 header {
@@ -58,6 +58,6 @@ footer {
 
 **width** sätter en bredd på elementet. Här använder jag `px` (pixlar).  
 
-**margin** talar om hur mycket marginal runt elementet som ska finnas. Värdet `0 auto` är en fix för att få det att hamna i mitten. 0 pixlar uppåt och nedåt samt beräkna vänster och höger automatiskt. Mer om det senare, nu tittar vi hur det ser ut.
+**margin** talar om hur mycket marginal runt elementet som ska finnas. Värdet `8px auto` är en fix för att få det att hamna i mitten. 8 pixlar uppåt och nedåt samt beräkna vänster och höger automatiskt. Mer om det senare, nu tittar vi hur det ser ut.
 
 [FIGURE src=/image/htmlphp/guide/murphy/grund-2.png?w=w2 caption="Röd header och grön footer."]
