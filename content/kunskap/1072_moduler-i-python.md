@@ -1,5 +1,5 @@
 ---
-author: efo
+author: efo, aar
 category: python
 revision:
   "2018-06-19": (B, aar) Utökad inför python-v2.

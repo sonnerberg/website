@@ -68,11 +68,11 @@ Krav {#krav}
 
 <!-- 1. **Menyval 4**: Minuter till timmar. Marvin ska fråga efter antal minuter och sedan skriva ut hur många timmar och minuter det motsvarar. -->
 
-<!-- 1. **Menyval 5**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut motsvarande i Farenheit. -->
+1. **Menyval 2**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut motsvarande i Farenheit.
 
-1. **Menyval 2**: Ordmultiplicering. Marvin ska fråga efter ett ord och en siffra och sedan skriva ut det ordet så många gånger.
+1. **Menyval 3**: Ordmultiplicering. Marvin ska fråga efter ett ord och en siffra och sedan skriva ut det ordet så många gånger.
 
-1. **Menyval 3**: Slumpmässiga tal. Marvin ska fråga efter min och max och sedan skriva ut 10 slumpmässiga tal mellan min och max. Dessa ska skrivas ut kommaseparerat på samma rad. Till exempel: `29, 34, 45, 43, 22, 34`.
+<!-- 1. **Menyval 3**: Slumpmässiga tal. Marvin ska fråga efter min och max och sedan skriva ut 10 slumpmässiga tal mellan min och max. Dessa ska skrivas ut kommaseparerat på samma rad. Till exempel: `29, 34, 45, 43, 22, 34`. -->
 
 1. **Menyval 4**: Summa och medel: Marvin ska fråga efter tal tills du anser dig vara klar (t.ex skriver "done") och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal.
 
@@ -84,7 +84,11 @@ input: "apa"      output: "a-pp-aaa"
 input: "kassler"  output: "k-aa-sss-ssss-lllll-eeeeee-rrrrrrr"
 ```
 
-6. **Menyval 7**: Gör så Marvin kan kolla om ett ord är ett isogram. Ett ord är ett isogram om det inte innehåller några återupprepande bokstäver, både i följd och icke i följd. Det är OK om den är case-sensitive, a != A.
+6. **Menyval 7**: Gör så Marvin kan kolla om ett ord är ett isogram. Ett ord är ett isogram om det inte innehåller några återupprepande bokstäver, både i följd och icke i följd. Det är OK om den är case-sensitive, a != A. Exempel:
+```python
+input: "apa"      output: "No match"
+input: "Dansk"    output: "Match"
+```
 
 7. Validera och publicera din kod enligt följande.
 
