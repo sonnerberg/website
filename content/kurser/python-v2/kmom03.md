@@ -11,7 +11,7 @@ revision:
     "2014-09-08": (B, mos) Första publika releasen.
     "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom03: Funktioner och moduler
+Kmom03: Funktioner
 ==================================
 
 [WARNING]
@@ -124,7 +124,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Har du programmerat med funktioner tidigare?
 * Hur kan du använda funktioner när du programmerar?
-* Vad tyckte du om de olika uppgifterna? 
-* Hur tänkte du när du utförde dem? 
+* Vad tyckte du om de olika uppgifterna?
+* Hur tänkte du när du utförde dem?
 * Vad tycker du om video som läromedel, tycker du att de tillför något utöver litteraturen?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

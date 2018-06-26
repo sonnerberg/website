@@ -55,7 +55,7 @@ För att få betyget E, godkänt, behöver du klara uppgift 1 i den individuella
 * Klarar du uppgift 1 och ytterligare tre uppgifter får du B.
 * Klarar du uppgift 1 och ytterligare fyra uppgifter får du A.
 
-När du vill under hela examination kan du köra kommandot "dbwebb correct exam" för att rätta dina lösningar och se vilket betyg du har uppnått.
+När du vill under hela examinationen kan du köra kommandot "dbwebb correct exam" för att rätta dina lösningar och se vilket betyg du har uppnått.
 
 
 

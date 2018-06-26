@@ -14,7 +14,7 @@ revision:
     "2014-09-19": (B, mos) Tog bort beta status.
     "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom04: Listor och filer
+Kmom04: Moduler och filer
 ==================================
 
 [WARNING]
@@ -25,7 +25,7 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-Vi ska fortsätta med att kolla på sätt vi kan strukturera vår kod, genom att jobba mer med funktioner och dela upp koden i flera filer, kallat moduler. 
+Vi ska fortsätta med att kolla på sätt vi kan strukturera vår kod, genom att jobba mer med funktioner och dela upp koden i flera filer, kallat moduler.
 
 Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
 

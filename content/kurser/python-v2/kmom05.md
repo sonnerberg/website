@@ -14,7 +14,7 @@ revision:
     "2014-09-15": (B, mos) Flyttade Marvin till extrauppgift.
     "2014-09-12": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom04: Listor och filer
+Kmom04: Listor
 ==================================
 
 [WARNING]
