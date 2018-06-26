@@ -30,7 +30,7 @@ Du skall gå igenom ett par exempel på kodning i HTML, CSS och PHP och använda
 
 Vi bygger webbplatsen tillsammans, steg för steg. Vi försöker bygga en struktur som går att återanvända för att bygga fler och större webbplatser.
 
-[FIGURE src=/image/snapvt15/me-done.png?w=w2 caption="En me-sida som den kan se ut när den är klar."]
+[FIGURE src=/image/snapvt15/me-done.png?w=w3 caption="En me-sida som den kan se ut när den är klar."]
 
 När vi är klara med dagens övning så har du förhoppningsvis fått lite blodad tand på det som kursen handlar om. Tanken med övningen är att du skall bekanta dig med de grundtekniker (HTML, CSS, PHP) som kursen omfattar och få möjlighet att se hur de samverkar. I kommande kursmoment tittar vi mer ingående på respektive teknik.
 
@@ -106,7 +106,7 @@ Läs följande för att bekanta dig med tekniken.
     * Kapitel 4 Operatorer
 
 1. Bekanta dig kort med [webbplatsen för PHP](http://php.net/), bara så att du har varit där och ser hur den ser ut. Det som vi framförallt kommer att använda framöver är [manualen för PHP](http://php.net/manual/en/), kika snabbt över dess innehållsförteckning så att du ser ungefär vad det handlar om. Du behöver inte studera något i detalj för tillfället.
-2. 
+
 <!--
 [INFO]
 **Tips**
