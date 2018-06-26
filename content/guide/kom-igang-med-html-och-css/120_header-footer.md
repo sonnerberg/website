@@ -68,9 +68,10 @@ footer {
 
 ##Resultat {#resultat}
 
+Först tittar vi på en skärmdump:
+
 [FIGURE src=/image/htmlphp/guide/murphy/steg2.png?w=w3 caption="Röd header och grön footer."]
 
-<p data-height="265" data-theme-id="0" data-slug-hash="OEQQdw" data-default-tab="css,result" data-user="dbwebb" data-embed-version="2" data-pen-title="steg 2" class="codepen">See the Pen <a href="https://codepen.io/dbwebb/pen/OEQQdw/">steg 2</a> by dbwebb (<a href="https://codepen.io/dbwebb">@dbwebb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+Studera gärna resultatet på CodePen. En direktlänk finns uppe till höger i rutan nedan, "Edit on CodePen".
 
-Länk till [Codepen](https://codepen.io/dbwebb/pen/OEQQdw).
+[CODEPEN src=OEQQdw user="dbwebb" tab="html,css" caption="Steg 2 i CodePen."]

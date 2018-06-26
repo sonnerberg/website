@@ -12,7 +12,7 @@ Elementet `<nav>` definierar en uppsättning navigeringslänkar, vilket passar b
 
 
 
-#index.html {#index}
+##index.html {#index}
 
 Följande kod lägger vi precis under slut-taggen `</header>`:
 
@@ -40,24 +40,47 @@ Länkarna syns och navigeringen fungerar. Det ser dock inte ut som en navigering
 .navbar {
     padding: 1em;
     background-color: #fff;
-    border-top: 1px solid #9c9;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .navbar a {
+    background-color: #eee;
     display: inline-block;
     padding: 0.5em 1em;
     border: 1px solid #999;
     text-decoration: none;
+    color: #000;
 }
 
 .navbar a:hover {
-    background-color: #eee;
-    text-decoration: underline;
+    background-color: #000;
+    color: #fff;
 }
 ```
 
+**.navbar a** väljer ut alla `<a>`-element inuti element med klassnamnet `.navbar`.
+
+**.navbar a:hover** gäller när man *hovrar* över alla `<a>`-element inuti element med klassnamnet `.navbar`.
+
 **text-decoration** möljliggör style av länkar och värdet `none` ser till så länkarna inte har kvar sitt grundutseende. Läs gärna mer om egenskapen [text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration).
+
+**display: inline-block** lägger inte till en radbrytning efter som exempelvis `display: block;` men möjliggör att sätta en höjd och bredd på elementet.
+
+**color** sätter färgen på texten.
+
+**padding** sätter hur mycket utrymme det är inuti elementet innan innehållet tar sin plats. `em` är en, som px, ett mått på storlek. Em beror på fontstorleken som är satt och är ungefär lika bred och hög som bokstaven *x*.
+
+Vi ser även fler möjligheter med till exempel **border** i form av border-top och border-bottom. Fler egenskaper har de möjligheterna, exempelvis margin och padding.
+
+
+
+##Resultat {#resultat}
 
 När vi nu tittar i webbläsaren börjar det se proffsigt ut:
 
-[FIGURE src=/image/htmlphp/guide/murphy/navbar1.png?w=w2 caption="Bra start!"]
+[FIGURE src=/image/htmlphp/guide/murphy/navbar_1.png?w=w3 caption="Bra start!"]
+
+Ta gärna en stund och lek med exemplet i CodePen:
+
+[CODEPEN src=EReoRg user="dbwebb" tab="html,css" caption="Steg 3 i CodePen."]

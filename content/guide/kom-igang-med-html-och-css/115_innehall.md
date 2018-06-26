@@ -73,8 +73,3 @@ Här ser du resultatet i form av en skärmdump och en [CodePen](https://codepen.
 [FIGURE src=/image/htmlphp/guide/murphy/steg1.png?w=w3 caption="Skärmdump av fin, stylad text. En bra start."]
 
 [CODEPEN src=aKErbo user="dbwebb" tab="css,result" caption="Steg 1 i CodePen."]
-
-<p data-height="265" data-theme-id="0" data-slug-hash="aKErbo" data-default-tab="css,result" data-user="dbwebb" data-embed-version="2" data-pen-title="steg 1" class="codepen">See the Pen <a href="https://codepen.io/dbwebb/pen/aKErbo/">steg 1</a> by dbwebb (<a href="https://codepen.io/dbwebb">@dbwebb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-Länk till [Codepen](https://codepen.io/dbwebb/pen/aKErbo).
