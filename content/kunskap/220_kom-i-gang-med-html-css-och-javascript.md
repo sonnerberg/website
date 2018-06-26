@@ -240,8 +240,7 @@ Glöm inte att korta och små fiddlar är enklare att hantera för den som hjäl
 
 [CodePen](http://codepen.io/) är ett liknande verktyg där du kan göra samma sak som i JSFiddle. Här ser du samma exempelkod i en CodePen.
 
-<p data-height="292" data-theme-id="0" data-slug-hash="qOPKyq" data-default-tab="result" data-user="mosbth" class='codepen'>See the Pen <a href='http://codepen.io/mosbth/pen/qOPKyq/'>Hello World</a> by Mikael Roos (<a href='http://codepen.io/mosbth'>@mosbth</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+[CODEPEN src=qOPKyq user="mosbth" tab="js,result" caption="Så här kan du visa upp en Codepen."]
 
 Du kan se [ovan codepen direkt på Codepens webbplats](http://codepen.io/mosbth/pen/qOPKyq).
 

@@ -21,7 +21,7 @@ return [
             "favicon"       => "favicon.ico",
 
             // Style and stylesheets
-            "stylesheets" => ["css/style.min.css?v=2017-04-07-1"],
+            "stylesheets" => ["css/style.min.css?v=2018-06-26-1"],
             "styleInline" => null,
 
             // JavaScript
