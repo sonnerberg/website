@@ -7,7 +7,7 @@ Grunderna {#grunderna}
 
 ###HTML {#html}
 
-HTML står för *Hyper Text Markup Language* och är ett standardspråk när man skapar webbsidor. Man kan säga att man med hjälp av HTML markerar strukturen av en webbsida med hjälp av HTML element. Elementen beskrivs i sin tur av "HTML taggar" (HTML tags), en start tagg `<element>` och en slut tagg `</element>`. Webbläsaren renderar inte taggarna utan använder dem för att strukturera dess innehåll.
+HTML står för *HyperText Markup Language* och är ett standardspråk när man skapar webbsidor. Man kan säga att man med hjälp av HTML markerar strukturen av en webbsida med hjälp av HTML element. Elementen beskrivs i sin tur av "HTML taggar" (HTML tags), en start tagg `<element>` och en slut tagg `</element>`. Webbläsaren renderar inte taggarna utan använder dem för att strukturera dess innehåll.
 
 
 
