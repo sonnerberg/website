@@ -3,12 +3,16 @@ author: lew
 revision:
     "2018-06-13": "(A, lew) Första versionen."
 ...
-Header med logo och slogan {#header-logo-slogan}
+Header {#header}
 =======================
 
-Det hade vart snyggt med en logotyp och en stylad header. En webbplats innehåller ju ofta en header med en logo och kanske en titel på sidan. Murphy instämde och ville ha med en slogan också. Självklart hjälper vi till med det. Först behöver vi någonstans att spara bilderna vi vill använda. Jag skapar en mapp `img` i roten av webbplatsen.  
+Det hade vart snyggt med en logotyp och en stylad header. Murphy instämde och ville ha med en slogan också. Självklart hjälper vi till med det. Först behöver vi någonstans att spara bilderna vi vill använda. Jag skapar en mapp `img` i roten av webbplatsen. Där får alla bilder ligga.
 
-Murphy hittade en selfie som skulle passa bra som logotyp. Vi använder den och skapar stommen i HTML-filen index.html:
+
+
+##index.html {#index}
+
+Murphy hittade en selfie som skulle passa bra som logotyp. Vi använder den och skapar stommen i html-filen index.html:
 
 ```html
 <body>
@@ -31,7 +35,11 @@ Ett attribut som ofta används men inte nämnts är **id**. Id fungerar likadant
 
 Om vi nu tittar på sidan ser vi att den har fått en bild och lite text i headern:
 
-[FIGURE src=/image/htmlphp/guide/murphy/added-logo.png?w=w2 caption="Logo tillagd."]
+[FIGURE src=/image/htmlphp/guide/murphy/added_logo.png?w=w3 caption="Logo tillagd."]
+
+
+
+##style.css {#style}
 
 För att det ska se lite bättre ut behöver vi styla headern och dess element. Följande CSS blir en bra start:
 
@@ -39,7 +47,7 @@ För att det ska se lite bättre ut behöver vi styla headern och dess element. 
 ...
 .site-header {
     background-color: #fff;
-    overflow: auto; /* clear fix to make div span all elements */
+    overflow: auto;
 }
 
 .site-header img {
@@ -80,4 +88,4 @@ Selektorn `.site-header img {...}` stylar alla element av typen `<img>` som finn
 
 När vi lagt till koden och laddar om sidan ser det ut på följande sätt:
 
-[FIGURE src=/image/htmlphp/guide/murphy/styled-header.png?w=w2 caption="Header med lite style."]
+[FIGURE src=/image/htmlphp/guide/murphy/styled_header.png?w=w3 caption="Header med lite style."]

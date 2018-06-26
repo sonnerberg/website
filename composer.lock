@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "0860e68d2add95f984ac302c2f6bc879",
@@ -275,16 +275,16 @@
         },
         {
             "name": "mos/ctextfilter",
-            "version": "v1.2.21",
+            "version": "v1.2.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/ctextfilter.git",
-                "reference": "2a5a24ef9956b85cfcac80dbde8707f1eeb1a4bd"
+                "reference": "724d17d50dba68c0c39542c974d46ee6be066261"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/2a5a24ef9956b85cfcac80dbde8707f1eeb1a4bd",
-                "reference": "2a5a24ef9956b85cfcac80dbde8707f1eeb1a4bd",
+                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/724d17d50dba68c0c39542c974d46ee6be066261",
+                "reference": "724d17d50dba68c0c39542c974d46ee6be066261",
                 "shasum": ""
             },
             "require": {
@@ -334,20 +334,20 @@
                 "markdown",
                 "shortcode"
             ],
-            "time": "2017-10-02T10:22:33+00:00"
+            "time": "2018-06-26T11:27:49+00:00"
         },
         {
             "name": "scrivo/highlight.php",
-            "version": "v9.12.0.2",
+            "version": "v9.12.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scrivo/highlight.php.git",
-                "reference": "186ad7df8c02f0cbe5e8dd13f98a8b2778b2b608"
+                "reference": "959e4524ebbdbdd97913658ff32ef747d212d262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/186ad7df8c02f0cbe5e8dd13f98a8b2778b2b608",
-                "reference": "186ad7df8c02f0cbe5e8dd13f98a8b2778b2b608",
+                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/959e4524ebbdbdd97913658ff32ef747d212d262",
+                "reference": "959e4524ebbdbdd97913658ff32ef747d212d262",
                 "shasum": ""
             },
             "require-dev": {
@@ -389,7 +389,7 @@
                 "highlight.php",
                 "syntax"
             ],
-            "time": "2018-02-19T02:38:14+00:00"
+            "time": "2018-06-18T20:27:07+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -448,7 +448,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.11",
+            "version": "v3.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",

@@ -10,7 +10,7 @@ Jag tänker att vi börjar med en sida och tillhörande CSS-fil, dess stylesheet
 
 ```html
 <!doctype html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Stormtrooper Murphy</title>
@@ -24,6 +24,8 @@ Jag tänker att vi börjar med en sida och tillhörande CSS-fil, dess stylesheet
 **&lt;!doctype html&gt;** är egentligen ingen HTML-tagg, utan en deklarering eller instruktion till webbläsaren att dokumentet innehåller HTML kod.
 
 **&lt;html&gt;** representerar roten av dokumentet och verkar som en behållare för alla andra element som sidan behöver.
+
+**&lt;html lang&gt;** talar om för webbläsaren vilket språk som kommer användas. Innehåller kommer tillslut vara på engelska.
 
 **&lt;head&gt;** visas inte på sidan utan innehåller övrig information som vilken teckenkodning som ska användas eller titel på sidan (Den som syns uppe i fliken i webbläsaren).
 

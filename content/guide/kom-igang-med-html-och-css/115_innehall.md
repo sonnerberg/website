@@ -6,13 +6,15 @@ revision:
 Innehåll {#innehall}
 =======================
 
-En sida utan innehåll är inte så rolig. Vi undersöker hur vi får fram lite text på sidan.
+En sida utan innehåll är inte så rolig. Vi undersöker hur vi får fram lite text på sidan. Vi börjar med att lägga till lite text och ser vad vi kan göra med det.
 
-index.html:
+
+
+##index.html {#index}
 
 ```html
 <!doctype html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Stormtrooper Murphy</title>
@@ -30,11 +32,22 @@ index.html:
 </body>
 </html>
 ```
-Taggarna h1-h6 representerar rubriker i fallande storlek. Både rubriker och paragrafer (&lt;p&gt;) har en default-style kopplad till sig. Man får automatiskt lite luft över och under dem. Bra att ha koll på.
+
+**&lt;h1&gt; - &lt;h6&gt;** representerar rubriker i fallande storlek. Både rubriker och paragrafer (`<p>`) har en default-style kopplad till sig. Man får automatiskt lite luft över och under dem. Bra att ha koll på.
+
+
+
+##style.css {#style}
 
 Vi går över till CSS-filen och ger texten lite style:
 
 ```css
+body {
+    background-color: #ffc;
+    width: 1000px;
+    margin: 0 auto;
+}
+
 h1 {
     text-align: center;
     color: red;
@@ -48,12 +61,20 @@ p {
 
 **text-align** ger oss möjligheten att positionera texten till viss del. Ett värde är `center` som konstigt nog placerar texten i mitten av elementet.  
 
-**color** definierar färgen på texten i elementet. Default-värde är svart.
+**color** definierar färgen på texten i elementet. Om man inte sätter ett värde blir färgen svart.
 
 **border** ger elementet en ram. I det här fallet en helfärgad brun ram, med en bredd på 1 pixel.
 
-Hur blir resultatet då? Jo, så här:
 
-[FIGURE src=/image/htmlphp/guide/murphy/grund-1.png?w=w2 caption="Fin, stylad text. En bra start."]
+##Resultat {#steg1-resultat}
 
-Studera exemplet närmare på [Codepen](https://codepen.io/dbwebb/pen/aKErbo). 
+Här ser du resultatet i form av en skärmdump och en [CodePen](https://codepen.io). CodePen är ett bra verktyg för att visa upp kodsnuttar.
+
+[FIGURE src=/image/htmlphp/guide/murphy/steg1.png?w=w3 caption="Skärmdump av fin, stylad text. En bra start."]
+
+[CODEPEN src=aKErbo user="dbwebb" tab="css,result" caption="Steg 1 i CodePen."]
+
+<p data-height="265" data-theme-id="0" data-slug-hash="aKErbo" data-default-tab="css,result" data-user="dbwebb" data-embed-version="2" data-pen-title="steg 1" class="codepen">See the Pen <a href="https://codepen.io/dbwebb/pen/aKErbo/">steg 1</a> by dbwebb (<a href="https://codepen.io/dbwebb">@dbwebb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+Länk till [Codepen](https://codepen.io/dbwebb/pen/aKErbo).

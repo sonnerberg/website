@@ -6,7 +6,7 @@ revision:
 Footer {#footer}
 =======================
 
-Footern behöver lite justeringar då Murphy inte ville ha den grön. Vi tar bort färgen och lägger till lite luft ovan. Vi ger footern ett klassnamn i index.html och uppdaterar CSS-filen:
+Footern behöver lite justeringar då Murphy inte ville ha den grön. Vi tar bort färgen och lägger till lite luft ovan. Vi ger footern ett klassnamn i index.html och uppdaterar sedan stylen i css-filen:
 
 index.html:
 
@@ -29,6 +29,6 @@ Selektorn **footer** är borttagen och ersatt av elementets klassnamn. Footern h
 
 Vi sparar och laddar om sidan:
 
-[FIGURE src=/image/htmlphp/guide/murphy/styled-footer.png?w=w2 caption="Footer med ytterst lite style."]
+[FIGURE src=/image/htmlphp/guide/murphy/styled_footer.png?w=w3 caption="Footer med ytterst lite style."]
 
 Det ser lite tomt ut i sidans `<body>`. Vi lägger till en bild till på Murphy.

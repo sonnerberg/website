@@ -6,13 +6,13 @@ revision:
 Header och footer {#header-footer}
 =======================
 
-Det finns ett flertal element som kan hjälpa oss med strukturen. Två viktiga element är &lt;header&gt; och &lt;footer&gt;. Tanken med dem är att de ska hantera innehållet högst upp på sidan respektive längst ner. Du får själv lista ut vilket element som hanterar vad. Vi lägger till dem och ger dem varsin bakgrundsfärg. Samtidigt kan vi ta bort rubrikerna och paragraferna.
+Det finns ett flertal element som kan hjälpa oss med strukturen. Två viktiga element är`<header>` och `<footer>`. Tanken med dem är att de ska hantera innehållet högst upp på sidan respektive längst ner. Du får själv lista ut vilket element som hanterar vad. Vi lägger till dem och ger dem varsin bakgrundsfärg. Samtidigt kan vi ta bort rubrikerna och paragraferna.
 
-index.html:
+##index.html {#index}
 
 ```html
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Stormtrooper Murphy</title>
@@ -28,11 +28,15 @@ index.html:
 ```
 Vi lämnar lite text på sidan så länge så se vi vart det hamnar.
 
-För att se våra nya element behöver vi ge dem lite färg och en storlek. Följande lägger jag in i style.css:
+
+
+##style.css {#style}
+
+För att se våra nya element behöver vi ge dem lite färg och en storlek. Jag väljer att flytta den gula färgen till elementet `<html>`, vilket är hela dokumentet. `<body>` får bli grå. Följande lägger jag in i style.css:
 
 ```css
 html {
-    background-color: white;
+    background-color: #ffc;
 }
 
 body {
@@ -54,10 +58,19 @@ footer {
 }
 ```
 
-**background-color** sätter som bekant en bakgrundsfärg på elementet. I `body` använder jag ett *hexadecimalt* värde. En färg kan representeras av en eller två siffror enligt RGB(Red, Green, Blue) eller som tidigare, av färgens namn. Det finns många färger med fördefinierade namn. Läs gärna mer om [color keywords](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).  
+**background-color** sätter som bekant en bakgrundsfärg på elementet. I `body` och `html` använder jag ett *hexadecimalt* värde. En färg kan representeras av en eller två siffror enligt RGB(Red, Green, Blue) eller som tidigare, av färgens namn. Det finns många färger med fördefinierade namn. Läs gärna mer om [color keywords](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).  
 
 **width** sätter en bredd på elementet. Här använder jag `px` (pixlar).  
 
 **margin** talar om hur mycket marginal runt elementet som ska finnas. Värdet `8px auto` är en fix för att få det att hamna i mitten. 8 pixlar uppåt och nedåt samt beräkna vänster och höger automatiskt. Mer om det senare, nu tittar vi hur det ser ut.
 
-[FIGURE src=/image/htmlphp/guide/murphy/grund-2.png?w=w2 caption="Röd header och grön footer."]
+
+
+##Resultat {#resultat}
+
+[FIGURE src=/image/htmlphp/guide/murphy/steg2.png?w=w3 caption="Röd header och grön footer."]
+
+<p data-height="265" data-theme-id="0" data-slug-hash="OEQQdw" data-default-tab="css,result" data-user="dbwebb" data-embed-version="2" data-pen-title="steg 2" class="codepen">See the Pen <a href="https://codepen.io/dbwebb/pen/OEQQdw/">steg 2</a> by dbwebb (<a href="https://codepen.io/dbwebb">@dbwebb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+Länk till [Codepen](https://codepen.io/dbwebb/pen/OEQQdw).

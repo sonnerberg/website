@@ -37,6 +37,8 @@ En första ansats kan se ut så här:
 
 [FIGURE src=/image/htmlphp/guide/murphy/after-article.png?w=w2 caption="Indelning i main, article"]
 
-Vi lägger även in innehåll i about.html och delar in det i `main` och `article`. 
+Vi lägger även in innehåll i about.html och delar in det i `main` och `article`:
+
+
 
 Du kan studera koden på [Codepen](https://codepen.io/dbwebb/pen/VdBMVo).
