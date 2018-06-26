@@ -63,12 +63,19 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 4-8 studietimmar)*
 
 
-### HTML {#html}
+### HTML &amp; CSS {#htmlcss}
 
-Läs följande för att bekanta dig med tekniken.
+Läs följande för att bekanta dig med teknikerna.
 
-1. Läs igenom följande sektion i guiden "[Kom igång med HTML](guide/kom-igang-med-html)".
-    * 
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
+    * [Grunderna](guide/kom-igang-med-html-och-css/grunderna)
+
+1. Webbplatsen MDN innehåller referensdokumentation för HTML och CSS. Bekanta dig med MDN genom att kort och översiktligt kika på följande sidor, bara så du vet vilken information som finns där.
+    * [Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
+    * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
+    * [HTML reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+    * [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
+    * [CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 <!--
 1. HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
@@ -77,31 +84,10 @@ Läs följande för att bekanta dig med tekniken.
     * Inledning
     * Kapitel 1 Snabbstart
     * Kapitel 2 Grunderna i HTML
-
-MDN?
-
-Specen?
-
-(referens till html element)
 -->
-
-
-
-### CSS {#css}
-
-Läs följande för att bekanta dig med tekniken.
-
-1. Läs igenom följande sektion i guiden "[Kom igång med CSS](guide/kom-igang-med-css)".
-    * 
 
 <!--
 1. CSS - [Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)
-
-MDN?
-
-Specen?
-
-(referens till css selectorer)
 -->
 
 
@@ -119,6 +105,8 @@ Läs följande för att bekanta dig med tekniken.
     * Kapitel 2 Variabler (ej vektor, objekt, 2.4 Miljövariabler)
     * Kapitel 4 Operatorer
 
+1. Bekanta dig kort med [webbplatsen för PHP](http://php.net/), bara så att du har varit där och ser hur den ser ut. Det som vi framförallt kommer att använda framöver är [manualen för PHP](http://php.net/manual/en/), kika snabbt över dess innehållsförteckning så att du ser ungefär vad det handlar om. Du behöver inte studera något i detalj för tillfället.
+2. 
 <!--
 [INFO]
 **Tips**

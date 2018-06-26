@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-06-20": "(B, mos) Genomgången och uppdaterad."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Felmeddelanden från PHP
@@ -85,7 +86,9 @@ echo $unknown;
 </pre>
 ```
 
-Koden ovan försöker alltså skriva ut en variabel som inte är definierad, den finns inte. Det skall ge ett felmeddelande.
+Koden ovan försöker alltså skriva ut en variabel som inte är definierad, den finns inte. Det skall ge ett felmeddelande, liknade detta.
+
+> _Notice: Undefined variable: unknown in /home/mos/git/dbwebbse/kurser/htmlphp/example/guide-php/01/unknown.php on line 11_
 
 Resultatet blir så här när man kör den i webbläsaren.
 
@@ -95,32 +98,83 @@ Exakt hur felmeddelandet skrivs ut kan skilja beroende på hur din webbläsare �
 
 
 
-Exempelprogram med felutskrifter {#felutskrifter}
+Olika feltyper {#feltyper}
 -----------------------
 
-Typer av felmeddelanden, NOTICE, WARNING, ERROR?
+Ovan var typen för felmeddelandet en NOTICE. En _notice_ är inte så allvarlig så att exekveringen behöver avbrytas. Exekveringen fortsätter trots felmeddelandet. Det samma gäller för fel av typen WARNING.
+
+Men när felet blir ERROR eller PARSE så blir felet så allvarligt så att exekveringen avbryts.
+
+Det finns också feltyper som DEPRECATED som säger att kodkonstruktioner är obsolete och inte stöds i kommande versioner av språket.
+
+I manulen finns en lista på [olika feltyper](http://php.net/manual/en/errorfunc.constants.php) i språket.
+
+Låt oss titta på ett par exempel av olika fel.
 
 
 
-Jag gjorde ett exempelprogram för att visa hur felmeddelanden kan se ut. Pröva [mitt testprogram med felmeddelande](kod-exempel/guiden-php-20/3/error.php).
+Feltypen WARNING {#warning}
+-----------------------
 
-Så här kan det se ut när du kör det.
+Ett exempel på ett felmeddelande av typen WARNING är när man glömmer att skicka med ett argument till en funktion.
 
-[FIGURE src=/img/snapshot/guiden-php20-felmeddelande.png caption="Vanliga felmeddelande i PHP av typen NOTICE och WARNING."]
+```php
+// Correct
+floor(2,5);
 
-Följande felmeddelande visas, se hur de säger vad felet är och att de hänvisar till raden där felet finns.
+// Wrong, missing the required argument
+floor();
+```
 
- > Notice: Undefined variable: var in /usr/home/mos/htdocs/dbwebb.se/kod-exempel/guiden-php-20/3/error.php on line 18
+Funktionen [`floor()`](http://php.net/manual/en/function.floor.php) kräver ett argument som skall avrundas nedåt till närmaste heltal.
 
-Felet säger att vi har en odefinerad variabel. I detta fallet är det en variabel som jag läser värdet på, men variabeln har inte tilldelats något värde.
+Felmeddelandet säger då följande.
 
- > Notice: Use of undefined constant I_AM_NOT_DEFINED - assumed 'I_AM_NOT_DEFINED' in /usr/home/mos/htdocs/dbwebb.se/kod-exempel/guiden-php-20/3/error.php on line 22
+> _Warning: floor() expects exactly 1 parameter, 0 given in /home/mos/git/dbwebbse/kurser/htmlphp/example/guide-php/01/warning.php on line 11_
 
-Felet säger att vi använder en odefinerad konstant, en konstant som inte har definerats.
+Det kan se ut så här.
 
- > Warning: floor() expects exactly 1 parameter, 0 given in /usr/home/mos/htdocs/dbwebb.se/kod-exempel/guiden-php-20/3/error.php on line 26
+[FIGURE src=image/snapht18/warning.php caption="Ett felmeddelande av typen WARNING."]
 
-Här försöker jag anropa en funktion `floor()` men jag missar att skicka med ett argument, därav varningen.
 
-Öva dig i att läsa felmeddelandena, de innehåller alla ledtrådar du behöver för att rätta till dem, de säger vilken fil och radnummer som du skall börja leta på. Det är en övningssak att rätta felen när de dyker upp, **börja alltid med det översta felet och rätta det först**. Ibland är en del av resterande fel så kallade följdfel, de beror av det första felet och försvinner när du rättat det.
+
+Feltypen PARSE {#parse}
+-----------------------
+
+Feltypen PARSE säger att PHP inte kan parsa koden, det är en fel i syntaxen som ger reglerna för de konstruktioner som är giltiga i språket.
+
+När du får ett PARSE fel så avbryts exekveringen.
+
+Här är två exempel på PARSE fel.
+
+```php
+// Correct
+echo "hej";
+
+// Wrong, missing semicolon
+echo "hej"
+
+// Correct, rounding the value to two decimals
+round(3,1415, 2);
+
+// Wrong, lacking the second argument but has a ending ,
+round(3,1415,  );
+```
+
+I första fallet får vi ett felmeddelande som påpekar att php-parsern förväntade sig ett `,` eller `;`.
+
+> _Parse error: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/mos/git/dbwebbse/kurser/htmlphp/example/guide-php/01/warning.php on line 14_
+
+Parsern jobbar enligt språkets syntax och det regelverket säger hur koden skall skrivas för att vara syntaktiskt korrekt.
+
+
+
+Om att laga fel {#laga}
+-------------------------------
+
+Öva dig i att läsa felmeddelandena, de innehåller alla ledtrådar du behöver för att rätta till dem, de säger vilken fil och radnummer som du skall börja leta på.
+
+Det är en övningssak att rätta felen när de dyker upp. Ibland (ofta) är en del av resterande fel så kallade följdfel, de beror av det första felet och försvinner när du rättat det.
+
+> **Börja alltid med det översta felet och rätta det först.**
   

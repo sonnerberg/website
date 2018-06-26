@@ -53,7 +53,9 @@ Läs följande:
     * Kapitel 5 Villkorssatser
     * Kapitel 6 Iterationer (ej `foreach`)
 
-
+<!--
+visa specen och W3C's arbete.
+-->
 
 ###Artiklar {#artiklar}
 

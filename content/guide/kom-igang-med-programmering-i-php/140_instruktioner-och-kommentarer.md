@@ -1,17 +1,20 @@
 ---
 author: mos
 revision:
+    "2018-06-20": "(B, mos) Bort med kommentarer och lade till uttryck."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
-Instruktioner och kommentarer
+Instruktioner och uttryck
 =======================
+
+Låt oss titta på byggstenarna i språket och hur de hänger ihop. Vi kan kalla det en del av språkets syntax, det regelverk som säger hur man kan skriva koden.
 
 
 
 PHP starttag och sluttag {#php-taggar}
 -----------------------
 
-Man går in i "PHP-läge" med *starttaggen* `<?php`, därefter tolkas allt som PHP-kod. PHP-läget avslutas med en PHP *sluttag* `?>`. Därefter kan man skriva vanlig HTML-kod igen. På detta sätt kan man växla mellan HTML och PHP.
+Man går in i "php-läge" med starttag `<?php`, därefter tolkas allt som php-kod. Man avslutar med en sluttag `?>`. Därefter kan man skriva vanlig html-kod igen. På detta sätt kan man växla mellan html och php, eller ha en fil med enbart php-kod.
 
 ```php
 <?php 
@@ -21,79 +24,107 @@ Man går in i "PHP-läge" med *starttaggen* `<?php`, därefter tolkas allt som P
 ?>
 ```
 
+Om din fil enbart innehåller php-kod, eller om sluttaggen är det sista tecknet i filen, då (kan) skall du exkludera sluttaggen. Anledningen är att sluttaggen i detta fallet är en potentiell felkälla som kan ge upphov till fel som bland annat är kopplade till sessionen.
 
-Instruktioner och semikolon {#instruktioner}
+
+
+Instruktioner (statement) och semikolon {#instruktioner}
 -----------------------
 
-Det som finns mellan PHP-taggarna är *instruktioner*. Man kan ange flera instruktioner och separera dem med semikolon `;`. Ett annat ord för en instruktion är *uttryck* (på engelska blir det *statement*).
+Det som finns mellan starttagg och sluttagg är _instruktioner_. Man kan ange flera instruktioner och separera dem med semikolon `;`. På engelska brukar vi kalla dessa instruktioner för _statement_.
 
-Här är ett exempel på PHP-kod fördelat på instruktioner som skriver ut en textsträng.
+Här är ett exempel på php-kod fördelat på instruktioner som var och en skriver ut en textsträng.
 
 ```php
-<?php 
-echo "<p>Hello World!</p>";
-echo "<p>Hello PHP!</p>";
-echo "<p>My name is Mikael...</p>";
-?>
+echo "Hello World!\n";
+echo "Hello PHP!\n";
+echo "My name is Mikael...\n";
+```
+
+En kodsekvens i php är alltså uppbyggd av en eller flera instruktioner.
+
+En instruktion, ett _statement_, kan vara som här en utskrift med `echo` enligt ovan, men det kan också vara en tilldelning av en variabel, en loop eller en if-sats. Du kan se dessa instruktioner som programmeringsspråkets grundläggande byggstenar.
+
+
+
+Gruppera instruktioner {#group}
+-----------------------
+
+Man kan gruppera instruktioner inom måsvingar `{}`. Allt som ligger inom måsvingarna blir då en egen samlad instruktion som består av flera mindre instruktioner.
+
+```php
+{
+    echo "Hello World!\n";
+    echo "Hello PHP!\n";
+    echo "My name is Mikael...\n";
+}
+```
+
+Ovan konstruktion fungerar, men är inte så vanlig och tillför egentligen inget i den formen den har. Se den bara som ett exempel på en gruppering av instruktioner. Måsvingarna förekommer mest när man jobbar med loopar, villkorssatser, funktioner och klasser. 
+
+Du kan se att koden är intabbad inom måsvingarna, det är en konvention som programmerare följer, att tabba in sin kod för att visa att den ligger i ett sammanhang. Den typen av kodkonventioner gör det enklare att läsa kod som är skriven av olika programmerare.
+
+
+
+Uttryck (expression) {#uttryck}
+-----------------------
+
+I php kan vi sammanfatta ett uttryck som "allt som har ett värde". Uttryck kan till exempel vara en tilldelning av en variabel, en addition av två tal eller en jämförelse.
+
+Låt oss titta på ett par exempel av uttryck.
+
+
+
+### Tilldelning av tal {#tilldela}
+
+Här är ett exempel på där uttryck används.
+
+```php
+// Tilldelning av ett tal till en variabel
+$a = 7;
+```
+
+I exemplet ovan är `7` ett uttryck i sin enklaste form. Resultatet av det uttrycket tilldelas variabeln `$a`. Efter tilldelningen så innehåller variabeln värdet 7.
+
+I exemplet är också `$ = 7` ett uttryck i sig självt, det lämnar kvar resten av uttrycket som i detta fallet är 7. Man kan testa det genom att skriva ut värdet från uttrycket.
+
+```php
+// Ett udda sätt att inspektera och skriva ut resultatet av en tilldelning
+echo ($a = 7);
 ```
 
 
 
-Kommentarer {#kommentarer}
------------------------
+### Anrop av funktion som ger ett värde {#func}
 
-Du kan ange *kommentarer* i din PHP-kod på ett antal olika sätt. Använd kommentarer för att dokumentera och strukturera din kod. Se följande exempel på ett par varianter för att ange kommentarer i PHP.
-
+En konstruktion som också är ett uttryck är anropet av en funktion.
 
 ```php
- <?php
-/* Here is a multi-line comment, just as i CSS or C/C++
-second line of comment.
-third line.
-*/
-echo "<p>Hello World!</p>"; // One line comment, comment to end of line
-echo "<p>Hello PHP!</p>";
-echo "<p>My name is Mikael...</p>"; # Comment as shell-style
+// En funktion definieras
+function theAnswer()
+{
+    return 42;
+}
 
-// Another one liner comment.
-echo "<p>Hello PHP again!</p>";
-
-?>
+// Funktionen anropas och efterlämnar ett resultat som tilldelas variabeln
+$a = theAnswer();
 ```
 
-Det finns alltså olika sätt att kommentera sin kod. PHP har också stöd för en kommentarstyp som kan hjälpa dig att bättre dokumentera din kod, denna kommentarstyp brukar kallas [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc). Det är egentligen en variant av kommentaren `/* *` men mcyket mer kraftfull eftersom informationen i kommentaren går att använda för att skapa dokumentation av koden.
+I exemplet ovan definieras en funktion som returnerar talet 42. När funktionen anropas via `theAnswer()` så är det ett uttryck som ger ett resultat som tilldelas variabeln `$a`.
+
+
+
+### Jämförelse {#jamfor}
+
+En annan konstruktion som är ett uttryck och ger ett värde är en jämförelse mellan två tal, eller två strängar.
 
 ```php
- <?php
-/** 
- * Here is a PHPDoc comment.
- *
- * @author Mikael Roos <me@mikaelroos.se>
- */
-?>
+// Jämför två tal efterlämnar ett värde
+echo ( 42 > 7 );
 ```
 
-Du kan alltså uppnå både struktur av din kod och bättre förståelse för den, genom att kommentera den. Använd kommentarer där det behövs, främst för din egen del. Bra kod är självdokumenterande tillsammans med kommentarerna.
+Ovan skriver vi ut resultatet av en jämförelse. Själva jämförelsen `42 > 7` efterlämnar ett resultat som är sant `true` om jämförelsen är uppfylld, annars efterlämnar den ett falskt `false` värde.
 
+Denna typen av jämförelser använder vi ofta i konstruktioner som villkorssatser och loopar.
 
-
-Felsök med kommentarer {#felsok-kommentar}
------------------------
-
-Ett bra sätt att felsöka är att använda kommentarerna `/* */`. Med dem kan du kommentera bort stora delar av koden medans du felsöker. Säg att du får ett felmeddelande som du inte lyckas rätta, då kan du kommentera bort kod tills felmeddelandet försvinner. När det är borta så aktiverar du koden genom att ta bort kommentarerna. Gör du det stegvis så kan du felsöka och avgränsa felet till precis den rad där det inträffar. Det är en bra felsöknings-metod för fel som du inte lyckas rätta med hjälp av felmeddelandet enbart.
-
-
-
-Testprogram med kommentarer {#test-kommentar}
------------------------
-
-Här är ett [testprogram med kommentarer i](kod-exempel/guiden-php-20/4/comments.php). Kika och se källkoden för programmet (på serversidan), kika sedan på den källkod som genererats, den som du ser när du högerkligar och visar källkod i webbläsaren. Kan de du skillnaden mellan serversidan och det som hamnar i webbläsaren?
-
-
-[INFO]
-**Ta bort sluttaggen `?>`**
-
-När du har en fil med enbart PHP-kod så skall du inte avsluta den med PHP-sluttag. Du kan, och bör, ignorera sluttaggen. Använder man sluttaggen så måste man se till att det inte finns några tomma rader eller tecken efter den, annars får man problem när man använder sessioner.
-
-Det rekommenderas därför, att inte använda sluttaggen i de filer där du enbart har PHP-kod.
-[/INFO]
+Men i dess enkelhet är det här ett exempel på ett uttryck, ett expression.
