@@ -78,7 +78,7 @@ Selektorn `.site-header img {...}` stylar alla element av typen `<img>` som finn
 
 **float: left** kopplar bort elementet från det naturliga flödet och positionerar det så långt till vänster det går i sitt omslutande element. Läs gärna mer om egenskapen [float](https://developer.mozilla.org/en-US/docs/Web/CSS/float).
 
-**overflow: auto** talar om vad som ska hända om ett elements innehåll blir för stort för att få plats. Värdet `auto` ger oss en scrollbar om innehållet blir för stort. Det omslutande elementet kommer behålla sin storlek. Läs gärna mer om egenskapen [overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow).
+**overflow: auto** talar om vad som ska hända om ett elements innehåll blir för stort för att få plats. Värdet `auto` ritar om det omslutande elementet om innehållet blir för stort. Läs gärna mer om egenskapen [overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow).
 
 **display: block** talar om att elementet ska ta upp hela utrymmet det har horisontellt. Kommande element hamnar då på en ny rad. Läs gärna mer om egenskapen [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 

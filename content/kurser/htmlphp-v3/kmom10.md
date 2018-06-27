@@ -25,6 +25,12 @@ Kursstart hösten 2018.
 [/WARNING]
 
 
+<!--
+tryck responsiv design
+tryck kodstruktur php, funktioner, filer
+-->
+
+
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------

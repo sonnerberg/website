@@ -57,13 +57,13 @@ dbwebb init
 
 
 
-Läs &amp; Studera  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-8 studietimmar)*
 
 
-### HTML &amp; CSS {#htmlcss}
+### HTML & CSS {#htmlcss}
 
 Läs följande för att bekanta dig med teknikerna.
 
@@ -96,7 +96,7 @@ Läs följande för att bekanta dig med teknikerna.
 
 Läs följande för att bekanta dig med tekniken.
 
-1. Läs igenom följande sektion i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
+1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
     * [Introduktion](guide/kom-igang-med-programmering-i-php/introduktion)
     * [Grunder och struktur](guide/kom-igang-med-programmering-i-php/grunder-och-struktur) 
 

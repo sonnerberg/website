@@ -2,6 +2,9 @@
 author: mos
 category:
     - webbprogrammering
+    - html
+    - css
+    - php
     - kurs htmlphp
 revision:
     "2018-06-19": "(C, mos) Uppdaterad inför htmlphp v3, kompletterad med video."
@@ -569,4 +572,6 @@ Avslutningsvis {#avslutning}
 
 Nu har du kommit igång och du har grunden till en me-sida. En bra start!
 
-Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/htmlphp).
+Delar av exempelkoden finns i [kursrepot för htmlphp-kursen](https://github.com/mosbth/htmlphp/tree/master/example) och kan provköras på dbwebb.se under [repo/htmlphp/example/me](repo/htmlphp/example/me).
+
+Det finns en [egen forumtråd för denna artikel](t/7517), fråga där om du stöter på bekymmer, eller bidra med dina egna tips och trix rörande det som artikeln behandlar.

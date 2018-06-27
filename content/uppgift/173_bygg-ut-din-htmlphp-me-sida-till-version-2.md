@@ -1,11 +1,15 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - html
+    - css
+    - php
+    - kurs htmlphp
 revision:
-  "2015-09-01": (B, mos) Förtydligade extrauppgifterna.
-  "2015-05-11": (A, mos) Första utgåvan i samband med kursen htmlphp v2.
-updated: "2015-09-01 11:28:35"
-created: "2015-01-28 15:08:17"
+    "2018-06-27": (C, mos) Genomgången inför ht18 och htmlphp v3.
+    "2015-09-01": (B, mos) Förtydligade extrauppgifterna.
+    "2015-05-11": (A, mos) Första utgåvan i samband med kursen htmlphp v2.
 ...
 Bygg ut din htmlphp me-sida till version 2
 ==================================
@@ -53,7 +57,7 @@ Krav {#krav}
 
 4. Använd färger för att färglägga din webbplats. Sparsamt är okey, men använd några färger för att liva upp stämningen.
 
-5. Använd CSS3-konstruktioner, välj minst två av de som visas i artikeln.
+5. Använd CSS-konstruktioner, välj minst två av de som visas i artikeln.
 
 6. Styla dina länkar, enkelt eller avancerat, men styla dem så det syns.
 
@@ -63,7 +67,7 @@ Krav {#krav}
 
 9. Skapa en sidfooter som mäter sidans laddningstid, behov av minne och antal filer som inkluderats.
 
-10. Gör din me-sida responsiv. 
+10. Gör din me-sida responsiv. Det räcker om den innehåller en del som är responsiv.
 
 11. Validera och publicera din kod enligt följande.
 
@@ -82,7 +86,7 @@ Extrauppgift {#extra}
 
 Är du nöjd med resultatet? Om du har extra tid så kan du lägga det till exempel på någon av följande delar.
 
-* Jobba med din style, gör den personlig och ha en tanke bakom din style. Det är okey att leka lite.
+* Jobba med din style, gör den personlig och ha en tanke bakom din style. Det är okey att leka runt och utmana.
 * Jobba med den responsiva delen av webbplatsen, ser den bra ut på alla skärmar eller behöver du anpassa den mer för olika skärmstorlekar?
 
 
@@ -95,7 +99,3 @@ Validera och publicera ofta. Så slipper du en massa validerings- och publicerin
 När du gör *publish* så körs även *validate*. Blir det för mycket fel när du kör *publish* så kan det bli enklare att bara göra *validate* till att börja med.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
