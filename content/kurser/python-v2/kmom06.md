@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+    - mos
+    - efo
 revision:
+    "2018-06-27": (K, efo) Tog bort argparse och anpassade för v2.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-09-08": (J, mos) Bort någon fråga.
     "2017-06-22": (I, efo) La till nya artiklar och ändrade namn på uppgifter.
@@ -13,8 +16,12 @@ revision:
     "2014-09-15": (B, mos) Flyttade Marvin till extrauppgift.
     "2014-09-12": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom05: Dictionaries och Tupler
+Kmom06: Dictionaries och Tupler
 ==================================
+
+Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler. Dictionaries sparar data som ett nyckel-värde par och tupler strukturer vår data i mindre enheter med ett sammanhang. Vi använder våra kunskaper om dictionaries för att bygga ett verktyg för textanalys.
+
+
 
 [WARNING]
 
@@ -24,10 +31,6 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-
-
-
-Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler.
 
 
 [FIGURE src=/img/wikimedia/English_letter_frequency_(frequency).svg caption="Frekvensen för förekomsten av bokstäver i en engelsk text. [Bild från Wikimedia](https://en.wikipedia.org/wiki/Letter_frequency#mediaviewer/File:English_letter_frequency_(frequency).svg)."]
@@ -69,7 +72,7 @@ Det finns inga artiklar.
 
 Titta på följande:
 
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
+1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 6.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 
@@ -94,9 +97,9 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/warehouse`.
+1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/warehouse`.
 
-1. Gör övningen "[Modulen argparse](kunskap/argparse)" där vi skriver ett CLI-program som tar emot options och argument. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/argparse`.
+<!-- 1. Gör övningen "[Modulen argparse](kunskap/argparse)" där vi skriver ett CLI-program som tar emot options och argument. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/argparse`. -->
 
 
 
@@ -104,9 +107,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Spara alla filer under `me/kmom05/lab5`.
+1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Spara alla filer under `me/kmom06/lab6`.
 
-1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord)". Spara alla filer under `me/kmom05/analyzer`.
+1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord-v2)". Spara alla filer under `me/kmom06/analyzer`.
 
 
 
@@ -114,9 +117,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 Om du har tid och lust finns extra uppgifter att utföra.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe)". Spara alla filer under `me/kmom05/marvin4`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe)". Spara alla filer under `me/kmom06/marvin5`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)". Spara alla filer under `me/kmom05/marvin4`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)". Spara alla filer under `me/kmom06/marvin5`.
 
 <!-- 1. Gör den Curses-baserade uppgiften "[Ett terminal-baserat spel i Python - steg2](uppgift/ett-terminal-baserat-spel-i-python-steg2)". -->
 
@@ -131,8 +134,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas? 
+* Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas?
 * Hur använde du dem i uppgifterna?
-* Har du fått koll på grunderna i modulen argparse?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

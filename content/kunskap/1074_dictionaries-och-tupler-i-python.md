@@ -2,6 +2,7 @@
 author: efo
 category: python
 revision:
+  "2018-06-27": (B, efo) Uppdaterad med sortering baserad på value.
   "2017-06-21": (A, efo) Första utgåvan inför kursen python H17.
 ...
 Dictionaries och tupler i Python
@@ -91,6 +92,28 @@ for key in sorted(warehouse.keys()):
 # köttfärs 20
 # röd lök 7
 ```
+
+Om vi istället vill sortera på antal varor så vi ser vilka varor vi har flest av kräver det lite mer. Vi använder en funktion `itemgetter` från den inbyggda modulen `operator`. Och hämtar då ut värdet istället för nyckeln som vi gjorde ovan.
+
+```python
+from operator import itemgetter
+
+for key, value in sorted(warehouse.items(), key=itemgetter(1), reverse=True):
+    print(key, value)
+
+# skriver ut:
+# grädde 80
+# krossade tomater 58
+# gul lök 42
+# köttfärs 20
+# röd lök 7
+```
+
+Vi ser ovan att vi inte importerar hela operator modulen enbart itemgetter delen. Vi använder `itemgetter` för att hämta ut värdet istället för nyckeln. Hade vi angett `key=itemgetter(0)` hade vi fått nyckeln istället. Vi använder `reverse=True` för att sortera i fallande ordning. `reverse=False` sorterar i stigande ordning.
+
+
+
+### Dictionaries i dictionaries
 
 På ett riktigt lager räcker det inte bara med antal varor som är kvar, vi vill även ha en möjlighet att ange priset. Med dictionaries, precis som med listor, har vi möjligheten att skapa dictionaries i dictionaries, så kallade nestlade dictionaries. Detta gör att vi kan ha både antalet och ett pris för varje vara. Vi kan nu skriva ut en sorterad lista med pris på följande sätt.
 
