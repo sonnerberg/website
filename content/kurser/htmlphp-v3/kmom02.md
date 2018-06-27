@@ -15,73 +15,69 @@ Kmom02: Bygg ut din webbplats
 
 [WARNING]
 
-** Kursutveckling pågår till kurs htmlphp v3 **
+**Kursutveckling pågår till kurs htmlphp v3**
 
 Kursstart hösten 2018.
 
 [/WARNING]
 
-Vi fortsätter att bygga ut me-sidan med HTML, CSS och PHP. Detta moment är en vidare genomgång av grunder i HTML och CSS. Efter kursmomentet så har du en me-sida version 2 som innehåller några av de vanligaste konstruktionerna som återfinns i flertalet "riktiga" webbplatser.
+Vi fortsätter att bygga ut me-sidan. Detta moment är en vidare genomgång av grunder i HTML och CSS. Efter kursmomentet så har du en me-sida version 2 som innehåller några av de vanligaste konstruktionerna som återfinns i flertalet "riktiga" webbplatser.
 
-Vi börjar använda lite fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
-
-<!-- Vi gör en första laboration i PHP för att få en känsla för hur det är att koda med PHP. -->
+Vi börjar samtidigt använda lite fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
 
 <!--more-->
 
-[FIGURE src=/image/snapvt15/me2-res.png?w=w2 caption="Mikaels me-sida version 2."]
+[FIGURE src=/image/snapvt15/me2-res.png?w=w3 caption="Mikaels me-sida version 2."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-8 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
+### HTML & CSS {#htmlcss}
 
-1. [HTML och CSS-boken](kunskap/boken-html-och-css-boken)
-    * Kapitel 3 Hyperlänkar
-    * Kapitel 4 Bilder
+Läs följande för att fortsätta bekanta dig med teknikerna.
 
-2. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
+    * [XXX](guide/kom-igang-med-html-och-css/XXX)
+
+
+
+### PHP {#php}
+
+Läs följande för att fortsätta bekanta dig med tekniken.
+
+1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
+    * [Variabler och typer](guide/kom-igang-med-programmering-i-php/variabler-och-typer)
+    * [Kontrollstrukturer](guide/kom-igang-med-programmering-i-php/kontrollstrukturer) 
+
+1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 5 Villkorssatser
     * Kapitel 6 Iterationer (ej `foreach`)
 
-<!--
-visa specen och W3C's arbete.
--->
-
-###Artiklar {#artiklar}
-
-Läs följande:
-
-1. Del 6, 8-9, 11, 13 av artikeln [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg).
 
 
+### W3C {#w3c}
 
-###Video  {#video}
+Bekanta dig kort med det arbetet som [organisationen W3C](https://www.w3.org/) utför när det gäller standardiseringar av HTML och CSS.
 
-Titta på följande:
+Vi pratar mest om HTML och CSS vilket är en del av W3C's arbete inom [Web design and Applications](https://www.w3.org/standards/webdesign/).
+
+De har sammanställt [arbetet inom HTML och CSS](https://www.w3.org/standards/webdesign/htmlcss) och där kan man bland annat se nuvarande status och versioner av de standarder de jobbar med.
+
+Se till att du vet hur standarderna för HTML och CSS ser ut, bara så du vet. Det kan vara viktiga dokument för en professionell webbprogrammerare.
+
+
 
 <!--
-1. [Kom i gång och installera Firebug som utvecklarverktyg]( coachen/kom-i-gang-och-installera-firebug-som-utvecklarverktyg).
--->
-
 1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 2.
-
-
-
-###Lästips {#lastips}
-
-Följande lästips hjälper dig att hitta relevant information.
-
-1. En översikt av grunderna i HTML och de viktigaste baselementen, "[Kom igång med HTML på 20 steg](kunskap/kom-igang-med-html-pa-20-steg)".
+-->
 
 
 
@@ -92,7 +88,7 @@ Följande lästips hjälper dig att hitta relevant information.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övningar.
 
@@ -100,7 +96,7 @@ Genomför följande övningar.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -108,12 +104,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bygg ut din me-sida till version 2](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-2)". Spara alla filerna i katalogen `me/kmom02/me2`.
 
-
-
-
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
 
 
 
@@ -131,3 +121,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur bekant är du med PHP och programmering rent allmänt, hur känns det att utveckla med PHP?
 * Vad tyckte du om PHP-labben, enkel eller utmanande?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
+* Vilken är din TIL för detta kmom?
