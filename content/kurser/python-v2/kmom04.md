@@ -1,5 +1,8 @@
 ---
-author: mos
+author:
+    - mos
+    - aar
+    - efo
 revision:
     "2018-06-18": (K, aar) La till moduler och flyttade listor till kmom05.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
@@ -25,9 +28,7 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-Vi ska fortsätta med att kolla på sätt vi kan strukturera vår kod, genom att jobba mer med funktioner och dela upp koden i flera filer, kallat moduler.
-
-Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
+Vi fortsätter med att titta på hur vi kan använda funktioner för att strukturera vår kod. För att ytterligare strukturera koden introduceras moduler där vi delar koden i olika filer. Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
 
 <!--[FIGURE src=/image/snap/py-marvin.png?w=w2 caption="Marvin i Python."]-->
 

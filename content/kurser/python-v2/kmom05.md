@@ -14,7 +14,7 @@ revision:
     "2014-09-15": (B, mos) Flyttade Marvin till extrauppgift.
     "2014-09-12": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom04: Listor
+Kmom05: Listor
 ==================================
 
 [WARNING]
@@ -25,7 +25,7 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-Lär dig grunderna i datastrukturen listor samt hur man läser. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lista behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i.
+Lär dig grunderna i datastrukturen listor. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lista behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i. Du använder sedan dina kunskaper och praktiska färdigheter för att utöka funktionaliteten i Marvin.
 
 Så här kan det se ut när du bekantar dig med listor.
 
