@@ -76,15 +76,19 @@ Vi kan se att klassnamnen vi skapade i index.html kan användas som selektorer i
 
 Selektorn `.site-header img {...}` stylar alla element av typen `<img>` som finns i element med klassnamnet `.site-header`. Inte så knepigt va?
 
-**float: left** kopplar bort elementet från det naturliga flödet och positionerar det så långt till vänster det går i sitt omslutande element. Läs gärna mer om egenskapen [float](https://developer.mozilla.org/en-US/docs/Web/CSS/float).
+**float: left** kopplar bort elementet från det naturliga flödet och positionerar det så långt till vänster det går i sitt omslutande element.
 
-**overflow: auto** talar om vad som ska hända om ett elements innehåll blir för stort för att få plats. Värdet `auto` ritar om det omslutande elementet om innehållet blir för stort. Läs gärna mer om egenskapen [overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow).
+**overflow: auto** talar om vad som ska hända om ett elements innehåll blir för stort för att få plats. Värdet `auto` ritar om det omslutande elementet om innehållet blir för stort.
 
-**display: block** talar om att elementet ska ta upp hela utrymmet det har horisontellt. Kommande element hamnar då på en ny rad. Läs gärna mer om egenskapen [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+**display: block** talar om att elementet ska ta upp hela utrymmet det har horisontellt. Kommande element hamnar då på en ny rad.
 
-**padding** talar om hur mycket utrymme inåt som ska finnas i elementet innan dess innehåll ritas ut. Läs gärna mer om egenskapen [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding).
+**padding** talar om hur mycket utrymme inåt som ska finnas i elementet innan dess innehåll ritas ut.
 
-**font-style: italic** talar om att texten ska visas som kursiv. Läs gärna mer om egenskapen [font-style](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style).
+**font-style: italic** talar om att texten ska visas som kursiv.
+
+
+
+##Resultat {#resultat}
 
 När vi lagt till koden och laddar om sidan ser det ut på följande sätt:
 

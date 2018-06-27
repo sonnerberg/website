@@ -56,23 +56,3 @@ Som om inte detta räcker finns verktyget *Unicorn* som är ett valideringsverkt
 ```
 
 Nu kan Murphy se att det vi gör är ordentligt och i ordning. Fint.
-
-<!-- ###Om HTML-entiteter {#htmlentities}
-
-Varför används `&amp;` istället för tecknet `&` när vi länkar till Unicorn ovan?
-Du kan testa att ändra din kod och enbart skriva `&`. Validera den sedan i Unicorn. Du får då ett felmeddelande som säger:
-
-> **`&` did not start a character reference. (`&` probably should have been escaped as `&amp;`.)**
-
-Tecknet `&` har en speciell betydelse i HTML och därför kan det ibland behöva ersättas med sin motsvarande HTML entitet `&amp;`. Annars validerar inte HTML-koden, den är inte helt korrekt.
-
-I tabellen nedan är ett par tecken som är reserverade i HTML, de har speciell betydelse. Om man vill att respektive tecken skall skrivas ut i text, eller vara en del av en länk, så behöver man byta ut tecknet mot dess _entity_, eller HTML entitet som det också kallas.
-
-| Tecken | Entity   | Kommentar |
-|--------|--------  |-----------|
-| `&`    | `&amp;`  | Början på en entitet eller teckensekvens. |
-| `<`    | `&lt;`   | Start på en HTML-tagg. |
-| `>`    | `&gt;`   | Slut på en HTML-tagg. |
-| `"`    | `&quot;` | Start och slut på ett attributs värde. |
-
-Det finns fler tecken som kan konstrueras med HTML entiter. Du kan till exempel skapa ett copyright-tecken &copy; `&copy;` eller ett euro-tecken &euro; `&euro;` med dem. -->

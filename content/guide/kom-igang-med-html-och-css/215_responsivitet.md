@@ -29,8 +29,6 @@ Vi kan se att attributet **content** har egenskaper och värden.
 
 **maximum-scale=2.0;** talar om hur mycket användaren får zooma.
 
-Läs gärna mer om [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
-
 
 
 ##style.css {#style}
@@ -55,4 +53,16 @@ I de flesta webbläsare kan man simulera hur en sida ser ut i en uppsättning mo
 
 Så här ser det ut när webbplatsen visas i en iPhone i porträttläge i Firefox.
 
-[FIGURE src=/image/htmlphp/guide/murphy/iphone-portrait1.png?w=w2 caption="index.html visas i porträttläge för iPhone 6s."]
+[FIGURE src=/image/htmlphp/guide/murphy/iphone_portrait1.png?w=w3 caption="index.html visas i porträttläge för iPhone 6s."]
+
+
+
+##Resultat {#resultat}
+
+Vi jobbar mer med vår media-query och ändrar utseendet för mobilt läge. Lite jobb kan få sidan att renderas så här:
+
+[FIGURE src=/image/htmlphp/guide/murphy/iphone_portrait2.png?w=w3 caption="En mer genomjobbad style."]
+
+Testa gärna att ändra stylen för mobilt läge på CodePen. Ändra storlek på fönstret eller använd dev-tools för att se skillnaden.
+
+[CODEPEN src=EReoRg user="dbwebb" tab="html,css" caption="Steg 6 i CodePen."]

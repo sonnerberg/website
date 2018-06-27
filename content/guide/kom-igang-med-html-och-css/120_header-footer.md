@@ -58,9 +58,9 @@ footer {
 }
 ```
 
-**background-color** sätter som bekant en bakgrundsfärg på elementet. I `body` och `html` använder jag ett *hexadecimalt* värde. En färg kan representeras av en eller två siffror enligt RGB(Red, Green, Blue) eller som tidigare, av färgens namn. Det finns många färger med fördefinierade namn. Läs gärna mer om [color keywords](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).  
+**background-color** sätter som bekant en bakgrundsfärg på elementet. I `body` och `html` använder jag ett *hexadecimalt* värde. En färg kan representeras av en eller två siffror enligt RGB(Red, Green, Blue) eller som tidigare, av färgens namn. Det finns många färger med fördefinierade namn.
 
-**width** sätter en bredd på elementet. Här använder jag `px` (pixlar).  
+**width** sätter en bredd på elementet. Här använder jag `px` (pixlar).
 
 **margin** talar om hur mycket marginal runt elementet som ska finnas. Värdet `8px auto` är en fix för att få det att hamna i mitten. 8 pixlar uppåt och nedåt samt beräkna vänster och höger automatiskt. Mer om det senare, nu tittar vi hur det ser ut.
 

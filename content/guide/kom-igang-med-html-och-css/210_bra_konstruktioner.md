@@ -21,7 +21,7 @@ html {
 }
 ```
 
-**overflow-y** styr vad som ska hända med innehållet om det växer sig större än det omslutande elementet vertikalt. Det går även att styra horistontellt med **overflow-x**. Läs gärna mer om egenskaperna [overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow), [overflow-y](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y) och [overflow-x](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x).
+**overflow-y** styr vad som ska hända med innehållet om det växer sig större än det omslutande elementet vertikalt. Det går även att styra horistontellt med **overflow-x**.
 
 
 
@@ -35,7 +35,7 @@ main {
 }
 ```
 
-**min-height** sätter som sagt en minsta höjd på elementet. Det går även att sätta en max-höjd med **max-height**. För att justera bredden kan vi använda motsvarande **min-width** och **max-width**. Läs gärna mer om egenskaperna [min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height), [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height), [min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) och [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width).
+**min-height** sätter som sagt en minsta höjd på elementet. Det går även att sätta en max-höjd med **max-height**. För att justera bredden kan vi använda motsvarande **min-width** och **max-width**.
 
 
 
@@ -50,7 +50,7 @@ html {
 }
 ```
 
-Vi kan se att gradient jobbar på egenskapen **background**. Värdet, eller funktionen **linear-gradient(to bottom right, #000, #ccc);** skapar en bakgrund som startar uppe till vänster och skiftar från svart till gul, jämnt fördelat. Om vi lagt till fler färger blir det fler brytpunkter. Läs gärna mer om vilka typer av [gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient) som finns.
+Vi kan se att gradient jobbar på egenskapen **background**. Värdet, eller funktionen **linear-gradient(to bottom right, #000, #ccc);** skapar en bakgrund som startar uppe till vänster och skiftar från svart till gul, jämnt fördelat. Om vi lagt till fler färger blir det fler brytpunkter.
 
 
 
