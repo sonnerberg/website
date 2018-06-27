@@ -59,17 +59,17 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Du skall skapa funktioner för textanalysering i modulen `analyzer.py`.
 
-1. Modulen `meun.py` skall enbart innehålla kod för att visa menyn.
+1. Modulen `menu.py` skall enbart innehålla kod för att visa menyn.
 
 1. Filen `main.py` skall enbart innehålla kommandoloopen och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften.
 
 1. Använd menyn för att visa upp de olika val en användare har beroende på nuvarande läge.
 
-1. Analysera antal rader (ej tomma), ord och bokstäver med kommandon `lines`, `words` och `letters`. Skriv en funktion för varje kommando.
+1. Analysera antal rader (ej tomma), ord och bokstäver med menyvalen `lines`, `words` och `letters`. Skriv en funktion för varje kommando.
 
-1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd kommandona `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver.
+1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd menyvalen `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver.
 
-1. Ditt program skall klara av kommandot `all` som kör alla analyserings kommandon i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion.
+1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion.
 
 1. Ditt program ska klara av att byta textfil för analys.
 
@@ -93,6 +93,8 @@ Det finns inga extrauppgifter.
 
 Tips från coachen {#tips}
 -----------------------
+
+Försök att återanvända dina funktioner, det underlätta i många fall och skapar bra kodstruktur.
 
 Lär dig felsöka med debuggern, använd den när du får problem. Komplettera med utskrifter av `print()`.
 
