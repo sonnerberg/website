@@ -2,6 +2,9 @@
 author: mos
 category:
     - webbprogrammering
+    - html
+    - css
+    - php
     - kurs htmlphp
 revision:
     "2018-06-19": "(D, mos) Genomgången och finjusterad inför ht18."
