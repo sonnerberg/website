@@ -99,7 +99,7 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
+1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions` då denna uppgiften bygger vidare på kmom03.
 
 1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
 
@@ -108,6 +108,8 @@ Genomför övningarna för att träna inför uppgifterna.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften "[Python med funktioner och moduler](uppgift/python-med-funktioner-moduler)" för att träna på olika typer av funktioner och moduler. Spara alla filer under `me/kmom04/lab4`.
 
 1. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v2)". Spara alla filer under `me/kmom04/marvin3`.
 

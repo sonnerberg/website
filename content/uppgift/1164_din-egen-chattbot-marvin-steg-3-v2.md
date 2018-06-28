@@ -32,7 +32,7 @@ Du kan grunderna i Python och stränghantering och du har byggt [andra delen av 
 Introduktion {#intro}
 -----------------------
 
-Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär att lära Marvin att svara på löpande text istället för siffror. 
+Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär att lära Marvin att svara på löpande text istället för siffror.
 
 Marvin skall kunna svara på frågor som dessa.
 
@@ -49,7 +49,7 @@ Du kan kika lite på hur en liknande lösning hanteras av [IRC-Marvin på github
 
 Vi kommer att lära Marvin att ge oss ett citat, där citaten är lagrade på fil.
 
-Se hur det kan se ut när uppgiften är klar:  
+Se hur det kan se ut när uppgiften är klar:
 
 [ASCIINEMA src=124661]
 
@@ -68,12 +68,12 @@ cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
 cd kmom04/marvin3
 ```
 
-1. Lär Marvin kommandot "citat". Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`.
+1. Skapa en ny fil `marvin.py` och lägg alla menyvalsfunktioner i denna nya Pythonmodul. Importera `marvin.py` i `main.py`.
 
-1. Kommandot ska skrivas direkt till Marvin. Det ska **inte** ligga bakom ett menyval som tidigare.
+1. Lär Marvin kommandot "citat". Skapa en ny fil `quote.py` och lägg hanteringen av kommandot "citat" i denna modul. Importera modulen `quote.py` i `main.py`. Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`. Kommandot "citat" ska skrivas direkt till Marvin. Det ska **inte** ligga bakom ett menyval som tidigare.
 
 1. Menyval: där Marvin i samma sträng skriver ut: dagens datum och nuvarande tid, hur han mår (slumpmässigt humör), ett heltal, samt ett floattal med 3 decimaler. Ge talen ett sammanhang i texten.
-Strängen ska hämtas från en textfil som du själv skapar och formateras med ovanstående variabler. Notera att du i programmet inte ska ändra i filen. Kursrepot innehåller ett [exempel på strängformattering med fil](https://github.com/reechani/python/blob/master/example/marvin/format.py) som du kan använda som grund för denna uppgift.
+Strängen ska hämtas från en textfil som du själv skapar och formateras med ovanstående variabler. Notera att du i programmet inte ska ändra i filen. Kursrepot innehåller ett [exempel på strängformattering med fil](https://github.com/reechani/python/blob/master/example/marvin/format.py) som du kan använda som grund för denna uppgift. Om du tycker det passar in skapa även en egen modul för detta menyval.
 
 1. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
 
@@ -82,7 +82,7 @@ Strängen ska hämtas från en textfil som du själv skapar och formateras med o
 dbwebb validate marvin3
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -103,7 +103,3 @@ Lär dig felsöka med debuggern, använd den när du får problem. Komplettera m
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
