@@ -31,6 +31,7 @@ Redirect 301 /style     https://arkiv.dbwebb.se/style/
 Redirect 301 /forms     https://arkiv.dbwebb.se/forms/
 Redirect 301 /grill     https://arkiv.dbwebb.se/grill/
 Redirect 301 /grilla    https://arkiv.dbwebb.se/grilla/
+Redirect 301 /chatt     /irc
 
 
 
