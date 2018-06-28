@@ -119,18 +119,26 @@ Här är länkar till kursspecifika gitter-kanaler, fördelade i de läsperioder
 
 | lp1 | lp2 | lp3 | lp4 |
 |-----|-----|-----|-----|
-| [python](https://gitter.im/mosbth/python) | [javascript1](https://gitter.im/mosbth/javascript1) | [linux](https://gitter.im/mosbth/linux) | [webapp](https://gitter.im/mosbth/webapp) |
-| [htmlphp](https://gitter.im/mosbth/htmlphp) | [design](https://gitter.im/mosbth/design) | [oopython](https://gitter.im/mosbth/oopython) | [oophp](https://gitter.im/mosbth/oophp) |
-| [ramverk1](https://gitter.im/dbwebb-se/ramverk1) | [ramverk2](https://gitter.im/dbwebb-se/ramverk2) | [dbw](https://gitter.im/dbwebb-se/dbw) | |
-| | [webgl](https://gitter.im/mosbth/webgl) | [dbjs](https://gitter.im/dbwebb-se/dbjs) | |
+| [python](https://gitter.im/mosbth/python) | [javascript1](https://gitter.im/mosbth/javascript1) | [oopython](https://gitter.im/dbwebb-se/oopython) | [webapp](https://gitter.im/mosbth/webapp) |
+| [htmlphp](https://gitter.im/dbwebb-se/htmlphp) | [design](https://gitter.im/mosbth/design) | [databas](https://gitter.im/dbwebb-se/databas) | [oophp](https://gitter.im/mosbth/oophp) |
+| [ramverk1](https://gitter.im/dbwebb-se/ramverk1) | [ramverk2](https://gitter.im/dbwebb-se/ramverk2) | [exjobb](https://gitter.im/dbwebb-se/exjobb) | |
+| | [webgl](https://gitter.im/mosbth/webgl) | [linux](https://gitter.im/mosbth/linux) | |
+| [indproj](https://gitter.im/dbwebb-se/indproj) | [matmod](https://gitter.im/dbwebb-se/matmod) | [telecom](https://gitter.im/dbwebb-se/telecom) | [sysver](https://gitter.im/dbwebb-se/sysver) |
 
 Det finns kanaler för respektive antagningsomgång till program och kurspaket samt generella kanaler oavsett antagningsomgång.
 
-* [Alla](https://gitter.im/dbwebb-se/webbprogrammering) [2017](https://gitter.im/dbwebb-se/webbprogrammering17) [2016](https://gitter.im/mosbth/webbprogrammering)
-* Webbprogrammering 180 [2017](https://gitter.im/dbwebb-se/wip17)
-* Webbprogrammering 120 [2017](https://gitter.im/dbwebb-se/wip17d)
-* [Kurspaket webutv](https://gitter.im/dbwebb-se/webutv) [2017](https://gitter.im/dbwebb-se/webutv17)
-* [Kurspaket webprog](https://gitter.im/dbwebb-se/webprog) [2017](https://gitter.im/dbwebb-se/webprog17)
+* [Alla oavsett årgång](https://gitter.im/dbwebb-se/webbprogrammering) [Antagen 2018](https://gitter.im/dbwebb-se/webbprogrammering18) [Antagen 2017](https://gitter.im/dbwebb-se/webbprogrammering17) [Antagen 2016](https://gitter.im/mosbth/webbprogrammering)
+* Webbprogrammering 180 [2018](https://gitter.im/dbwebb-se/wip18) [2017](https://gitter.im/dbwebb-se/wip17)
+* Webbprogrammering 120 [2018](https://gitter.im/dbwebb-se/wip18d) [2017](https://gitter.im/dbwebb-se/wip17d)
+* Kurspaket webutv [2018](https://gitter.im/dbwebb-se/webutv18) [2017](https://gitter.im/dbwebb-se/webutv17)
+* Kurspaket webprog [2018](https://gitter.im/dbwebb-se/webprog18) [2017](https://gitter.im/dbwebb-se/webprog17)
+
+<!--
+Används inte
+[Kurspaket webutv](https://gitter.im/dbwebb-se/webutv)
+[Kurspaket webprog](https://gitter.im/dbwebb-se/webprog)
+[dbjs](https://gitter.im/dbwebb-se/dbjs)
+-->
 
 
 
