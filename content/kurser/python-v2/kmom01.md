@@ -29,9 +29,18 @@ Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i ku
 
 Vi börjar skriva de första enkla programmen för att komma underfund med hur Python kan användas och hur programmeringsspråket fungerar i grunden.
 
-[FIGURE src=/image/snapht14/python-mos-me-page.png?w=w2 caption="Mikaels me-sida i Python som cgi-skript."]
+<!-- [FIGURE src=/image/snapht14/python-mos-me-page.png?w=w2 caption="Mikaels me-sida i Python som cgi-skript."] -->
+
+Ditt första Python-program.
 
 [ASCIINEMA src=122865 caption="Kör ditt första Python-program."]
+
+
+Så här kan det se ut när du är klar med Plane uppgiften.
+
+[YOUTUBE src=7qifosdyfe8 caption="Så här kan det se ut när du är klar med Plane uppgiften."]
+
+
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -46,7 +55,7 @@ Det första du behöver göra är att installera en labbmiljö för kursen. Om d
 
 Om du vill ha en introduktion till det som händer i steg 2-4 så kikar du på videon "[Mikael installerar dbwebb-cli som en del av labbmiljön](https://www.youtube.com/watch?v=vlZRW2OZamE)".
 
-1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen.
 
 1. Fortsätt med sektionen för att [installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
 
