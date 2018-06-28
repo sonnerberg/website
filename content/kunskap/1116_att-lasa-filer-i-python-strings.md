@@ -22,9 +22,9 @@ Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://
 
 Introduktion {#intro}
 --------------------------------------
-Vi gör ett simpelt program för att skapa en inköpslista. Vi har redan tre saker i filen "items.txt" som behöver inhandlas, i vårt program ska vi kunna lägga till, ta bort och visa upp innehållet i filen.
+Vi gör ett simpelt program för att skapa en inköpslista. Vi har redan tre produkter i filen "items.txt" som behöver inhandlas, i vårt program ska vi kunna lägga till, ta bort och visa upp innehållet i filen. Vi vill inte ha några tomma rader i filen.
 
-I programmet ska vi kunna göra val för om vi vill läsa vad filen innehåller, lägga till en sak i filen, skriva över innehållet i filen och att ta bort en sak från filen. Vi börjar med en klassisk while-loop med meny och input.
+I programmet ska vi kunna göra val för om vi vill läsa vad filen innehåller, lägga till en produkt i filen, skriva över innehållet i filen och att ta bort en produkt från filen. Vi börjar med en klassisk while-loop med meny och input.
 
 ```python
 def menu():
@@ -58,7 +58,7 @@ Vi har en funktion för skriva ut valen som finns och en för kolla vilket val s
 
 Läsa från fil {#lasa}
 --------------------------------------
-Börjar med att öppna filen `items.txt` och kolla på innehållet. Den innehåller tre saker, "cookie", "cake" och "tea", en sak på varje rad. Innehållet i filen är egentligen en sträng, `"cookie\ncake\ntea"`, där din texteditor tolkar "\n" som en ny rad. Vi kommer återkomma till detta senare i övningen.
+Börjar med att öppna filen `items.txt` och kolla på innehållet. Den innehåller tre produkter, "cookie", "cake" och "tea", en produkt på varje rad. Innehållet i filen är egentligen en sträng, `"cookie\ncake\ntea"`, där din texteditor tolkar "\n" som en ny rad. Vi kommer återkomma till detta senare i övningen.
 
 Vidare till koden, vi börjar med val 1, att läsa filens innehåll. När man jobbar med filer behöver man öppna dem, det görs med funktionen `open("filnamn")` där man skickar sökvägen till filen som argument. Funktionen returnerar ett fil objekt som blir kopplingen till filen. Efter man är jobbat färdig med filen behöver man stänga kopplingen. Vi kommer använda oss av nyckelordet `with` för att stänga kopplingen automatisk så vi inte behöver komma ihåg att göra det manuellt.
 Vi kolla på hur koden kan se ut för att läsa en fil.
@@ -87,59 +87,248 @@ cookie
 cake
 tea
 ```
-Så här kan det se ut när man läser en fil i Python, vi går vidare till att skriva data till filen så vi kan lägga till nya saker.
+Så här kan det se ut när man läser en fil i Python, vi går vidare till att skriva data till filen så vi kan lägga till nya produkter.
 
 
 
 Skriva till fil {#skriva}
 --------------------------------------
+När man skriver data till en fil kan man välja på att bifoga i slutet av filen eller att ersätta innehållet med nytt. Vi börjar med att kolla på hur man lägger till data sist i filen.
 
 
 
+### Bifoga data i fil {#append}
 
-
-Vi har nu en lista som innehäller tre element som vi har läst in från filen `items.txt`. Notera `\n` i sista elementet, `\n` är en radbrytning och egentligen inget vi vill ha med i listan. Så vi kan använda funktionen `strip()` för att ta bort såkallat whitespace (mellanrum, radbrytning osv.) från änderna av strängen.
+Att skriva till en fil fungerar ungefär som att läsa, vi behöver bara använda funktionen `write()` istället för `read()`. 
 
 ```python
-# the name of the file
-filename = "items.txt"
-
-# with - as for reading a file automatically closes it after reading is done
-with open(filename) as filehandle:
-    line = filehandle.readline().strip()
-
-# split the line into a list on the comma ","
-items_as_list = line.split(",")
-# print what the list looks like
-print(items_as_list)
+def write_to_file(item):
+    with open(filename, "a") as filehandler:
+        filehandler.write(item)
+    
+...
+    if inp == 2:
+        write_to_file(input("Item to add:"))
+...
 ```
 
-Vi får nu utskriften `['cookie', 'cake', 'tea']` som vi hade förväntat från första början.
+Notera att vi i funktionen `append_to_file(item)` skickar med `"a"` som andra argument till "open()" funktionen. Det värdet bestämmer om "write" funktionen ska lägga till värden på slutet. "write()" tar en sträng som argument och skriver det värdet till filen som "filehandler" är skapad med. I if-satsen för val 2 anropar vi `write_to_file()` och skickar med en sträng som användaren skriver in med "input" anropet. Vi testar köra programmet och ser hur filen innehåll ser ut om vi lägger till något.
 
-Dock ger inläsning från fil än så länge inte mer än vad vi hade fått om vi bara hade skapat listan för hand. Vi ska nu titta på hur vi kan lägga till flera element i listan och hur vi skriver listan till fil.
+```bash
+python3 string-to-file.py
+$1
+cookie
+cake
+tea
+$2
+apple
+$1
+cookie
+cake
+teaapple
+```
+
+"apple" kom inte på en egen rad utan på samma som "tea". Vi måste ha med "\n" i värdet mellan "tea" och "apple" för att få den på ny rad, som jag skrev om i början av övningen. En snabb lösning är att konkatenera input värdet med "\n". Det är dock ingen komplett lösning, lösningen introducerar tomma rader i filen i vissa situation, t.ex. om vi lägger till ett värde när filen är tom. Vi kommer inte gå in på dem men försök gärna hitta en lösning.
+
+```python
+...
+    if inp == 2:
+        write_to_file("\n" + input("Item to add:"))
+...
+```
+Nu kommer det nya värde ligga på en egen rad när vi kör programmet igen.
+
+```bash
+python3 string-to-file.py
+$1
+cookie
+cake
+teaapple
+$2
+pear
+$1
+cookie
+cake
+teaapple
+pear
+```
+
+### Skriv över data i fil {#write}
+
+Vi har ett fel i filen, "teaapple", så låt oss implementera en funktion för att skriva över all data i filen med ny och på så sätt kan vi rätta till innehållet.
+
+När vi vill skriva över hela filen använder vi också "write()" funktionen men vi behöver öppna filen med läge "w" istället för "a". Så vi uppdatera "write_to_file" funktionen så den kan användas för både lägga till och skriva över. För att göra det skickar vi in hur den ska öppnas som ett argument.
+```python
+def write_to_file(content, mode):
+    with open(filename, mode) as filehandle:
+        filehandle.write(content)
+
+...
+    elif inp == 2:
+        write_to_file("\n" + input("Item to add: "), "a")
+...
+```
+
+Vi går vidare till att skapa en ny funktion där användaren kan skriva in alla nya produkter som ska skrivas till filen. I funktionen behöver vi ta input till användaren är klar, while-loop, och sen anropa "write_to_file" funktionen.
+
+```python
+def replace_content():
+    """
+    Replace content of a file with new items
+    """
+    item = ""
+    result = ""
+    while item != "q":
+        result += item
+        item = input("Item to add: ")
+    write_to_file(result, "w")
+
+...
+    elif inp == 3:
+        replace_content()
+...
+```
+
+I funktionen "replace_content" testar jag lösa inputen i en while-loop utan en if-sats för att kolla om användaren skickar in "q". I första iteration är `item` en tom sträng som konkateneras till `result`. Då förblir "result" orörd, sen ber vi om hejinput och nästa iteration börjar. I loopens villkor kollar vi om användaren är klar, om input är "q", annars konkateneras "item" med "result" igen och sen ber vi om input. När användaren är klar skickar vi "result" strängen till "write_to_file" funktionen och skriver den till filen.
+
+```bash
+python3 string-to-file.py
+$1
+cookie
+cake
+teaapple
+pear
+$3
+meat
+potato
+banan
+q
+$1
+meatpotatobanan
+```
+
+Det här blev inte helt rätt, vi behöver få in newlines igen.
+
+```python
+def replace_content():
+    item = ""
+    result = ""
+    while item != "q":
+        result += item + "\n"
+        item = input("Item to add: ")
+    write_to_file(result, "w")
+```
+
+Snabb lösning är att bara lägga till "\n" efter varje ny produkt.
+
+```bash
+python3 string-to-file.py
+$3
+kakor
+godis
+läsk
+q
+$1
+
+kakor
+godis
+läsk
+
+```
+
+Det är fortfarande inte korrekt, nu är där en tom rad först och sist i filen (det är lättare att se om ni öppnar filen än bara kolla på utskriften). För att lösa det kan vi använda "strip()" funktionen för att ta bort alla leading och trailing whitespaces, med andra ord newlines som ligger längst fram och längst bak i strängen.
+
+```python
+def replace_content():
+    item = ""
+    result = ""
+    while item != "q":
+        result += item + "\n"
+        item = input("Item to add: ")
+    write_to_file(result.strip(), "w")
+```
+
+Om ni själva kör programmet igen så bör ni se att filen blir korrekt när ni skriver över innehållet. Nu har vi kvar att ta bort ett föremål åt gången ur filen.
 
 
 
-Skriva till fil {#skriva}
+Radera i fil {#radera}
 --------------------------------------
-Vi vill lägga till ett element i slutet av listan och vet sen tidigare att då använder vi `list` funktionen `append()`. Då vi inte vill skriva listan direkt till fil gör vi om den med motsatsen till `split()` som heter `join()`. Precis som `split()` är `join()` en strängfunktion så vi anger först strängen som vi vill använda som 'lim' och sen anger vi listan som vi vill sätta ihop till en sträng. Precis som när vi läste från fil använder vi `with` när vi vill skriva till en fil. Dock måste vi öppna filen med skrivrättigheter och det gör vi genom att använda flaggan `w`.
+
+Att radera data från en fil är oftast inte helt trivialt då det inte finns någon inbyggd funktion för det. Det vi behöver göra är att läsa upp filens innehåll och manipulera strängen, ta bort det vi inte vill ha med, och sen skriva den till fil igen. Om vi hade vetat att filen bara kommer innehålla ett fåtal produkter hade vi inte behövt radera utan kunde nöjt oss med skriva över funktionen. Användaren får hela tiden skriva om listan när den ska ta bort något. Vi gör dock inte det antagandet nu utan skriver en ny funktion för det.
+
+I den nya funktionen ska vi börja med att använda "readfile()" för att få innehållet, be användaren om input om vad som ska bort, ta bort den produkten från strängen och sist använda "write_to_file()" för att skriva det uppdaterade innehållet.
 
 ```python
-# add item to the list
-items_as_list.append("cup")
-# print what the list looks like after change
-print(items_as_list)
+def remove_item():
+    content = readfile()
+    remove = input("What item should be removed: ")
 
-# join the list into a string with a comma ","" between every item
-list_as_str = ",".join(items_as_list)
-# show what the string looks like after join
-print(list_as_str)
+    if remove in content: # check if item to remove exists
+        modified_content = content.replace(remove, "")
+        write_to_file(modified_content, "w")
 
-# write the line to the file
-with open(filename, "w") as filehandle:
-    filehandle.write(list_as_str)
+...
+    elif inp == 4:
+        remove_item()
+...
 ```
 
+Vi kollar först att det användaren skriver in faktiskt finns i filen och sen används funktionen "replace()" på innehållet för att ersätta produkten med en tom sträng. Vi testar det nya menyvalet.
+
+```bash
+python3 string-to-file.py
+$1
+meatloaf
+meat
+tea
+cake
+$4
+meat
+$1
+loaf
+
+tea
+cake
+```
+
+Två fel uppstod när vi körde programmet, raden med "meat" blev en tom rad och "meatloaf" förlorade blev av med sin substräng "meat". Vi ska lösa den tomma raden men felet med substrängen lämnar jag till er själva att hitta en lösning på. En snabb lösning på den tomma raden är att lägga till "\n" på substrängen som tas bort. 
+
+```python
+def remove_item():
+    ...
+    if remove in content: # check if item to remove exists
+        modified_content = content.replace("\n" + remove, "")
+        write_to_file(modified_content, "w")
+```
+Nu letar "replace" upp vad användaren skriver in plus ett newline tecken framför det och ersätter med inget.
+
+```bash
+python3 string-to-file.py
+$1
+loaf
+
+tea
+cake
+$4
+tea
+$1
+loaf
+
+cake
+$4
+loaf
+$1
+loaf
+
+cake
+```
+
+Upptäckte ni det nya felet? 
+
+Frågor:
+1. hur lösa att tom rad framför när append i tom fil.
+2. hur lösa vid remove om en produkt är en substräng av en annan.
 
 
 Avslutningsvis {#avslutning}
