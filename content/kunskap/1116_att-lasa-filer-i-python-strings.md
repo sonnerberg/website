@@ -324,13 +324,60 @@ loaf
 cake
 ```
 
-Upptäckte ni det nya felet? 
+Upptäckte ni det nya felet? "loaf" är kvar i filen. Koden kollade om "\nloaf" fanns i strängen men i och med att det var första värdet finns ingen newline framför. Därför trodde koden att produkten inte fanns i strängen. Vi behöver uppdatera funktionen med att kolla om produkten som ska bort ligger först i strängen och då inte lägga till "\n" i början vid replace.
 
-Frågor:
-1. hur lösa att tom rad framför när append i tom fil.
-2. hur lösa vid remove om en produkt är en substräng av en annan.
+```python
+def remove_item():
+    ...
+    if remove in content: # check if item to remove exists
+        if content.index(remove) == 0: # if the item is the first line in the file
+            modified_content = content.replace(remove, "")
+        else:
+            modified_content = content.replace("\n" + remove, "")
+        write_to_file(modified_content, "w")
+```
+
+`index()` kollar om produkten finns i content och returnera position i strängen där substrängen, produkten, börjar. Om det är det första i strängen börjar det på position 0.
+
+```bash
+python3 string-to-file.py
+$1
+loaf
+
+cake
+$4
+cake
+$1
+loaf
+
+$4
+loaf
+$1
+
+
+```
+
+Nu har vi bara tomma rader som ligger kvar, dem blir vid av med lätt genom att än en gång använda oss av "strip()" för att bli av med leading och trailing newlines.
+
+```python
+def remove_item():
+    ...
+    if remove in content: # check if item to remove exists
+        if content.index(remove) == 0: # if the item is the first line in the file
+            modified_content = content.replace(remove, "")
+        else:
+            modified_content = content.replace("\n" + remove, "")
+        write_to_file(modified_content.strip(), "w")
+```
+
+Då så, nu har vi ett någorlunda fungerande program för att jobba med filer. I kmom05 kommer vi kolla på det igen men då kommer vi jobba mot filens innehåll med en lista istället för sträng. Vilket kommer förenkla saker åt oss.
+
+Tänk själv hur du hade löst fäljande fel:
+1. Att inte få med en tom rad när man gör append i en tom fil.
+2. När man gör remove och en produkt är substräng till en annan produkt, att bara själva produkten försvinner. T.ex. "meat" och "meatloaf".
+
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har nu sett hur vi kan läsa raderna från en fil via en sträng till en lista, hur vi lägger till element i listan och hur vi skriver den ändrade listan till fil. Filhantering är ett viktigt verktyg för att spara undan data som kan återanvändas vid nästa exekvering av programmet och vi har i denna övning fått en introduktion till hur man gör detta i Python.
+Vi har nu sett hur vi kan läsa raderna från en fil via en sträng, hur vi lägger till data och hur vi skriver den ändrade strängen till fil. Filhantering är ett viktigt verktyg för att spara undan data som kan återanvändas vid nästa exekvering av programmet och vi har i denna övning fått en introduktion till hur man gör detta i Python.
