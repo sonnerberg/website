@@ -61,7 +61,7 @@ Länkarna syns och navigeringen fungerar. Det ser dock inte ut som en navigering
 
 **.navbar a** väljer ut alla `<a>`-element inuti element med klassnamnet `.navbar`.
 
-**.navbar a:hover** gäller när man *hovrar* över alla `<a>`-element inuti element med klassnamnet `.navbar`. Detta kallas för *pseudo-klass* och är ett nyckelord som kan användas i samband med selektorn för att ändra ett elements stadie, till exempel när man flyttar muspekaren över det.
+**.navbar a:hover** träder i kraft när man *hovrar* över alla `<a>`-element inuti element med klassnamnet `.navbar`. Detta kallas för *pseudo-klass* och är ett nyckelord som kan användas i samband med selektorn för att ändra ett elements stadie, till exempel när man flyttar muspekaren över det.
 
 **text-decoration** möljliggör style av länkar och värdet `none` ser till så länkarna inte har kvar sitt grundutseende.
 
