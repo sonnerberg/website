@@ -54,7 +54,7 @@ Läs följande för att fortsätta bekanta dig med teknikerna.
 Läs följande för att fortsätta bekanta dig med tekniken.
 
 1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
-    * [Variabler och typer](guide/kom-igang-med-programmering-i-php/variabler-och-typer)
+    * [Värden, variabler och typer](guide/kom-igang-med-programmering-i-php/varden-variabler-och-typer)
     * [Kontrollstrukturer](guide/kom-igang-med-programmering-i-php/kontrollstrukturer) 
 
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.

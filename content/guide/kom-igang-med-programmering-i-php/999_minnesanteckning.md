@@ -34,10 +34,12 @@ expressions
 
 validering, phpcs, phpmd, phpstan
 
-
+floating point precision.
 
 scope
 
 frontkontroller, vyer.
 
-Sessioner och inloggning
+Sessioner och inloggning (password_hash/verify)
+
+Inbyggda funktioner för att läsa/skriva till fil.

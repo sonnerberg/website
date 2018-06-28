@@ -1,72 +1,91 @@
 ---
 author: mos
 revision:
-    "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
+    "2018-06-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 UTF-8 och multibyte strängar
 =======================
 
-När du jobbar med multibyte-strängar, och teckenkodning enligt UTF-8, så finns en speciell del i manualen som beskriver ["Multibyte String"](http://php.net/manual/en/book.mbstring.php) och de funktioner som finns tillgängliga. Ofta föregås dessa funktioner av `mb_`. Det är numer nästan standard att enbart hantera UTF-8 och multibyte men det finns fortfarande många webbplatser och applikationer som inte hanterar UTF-8. Se till att du har läst översikten av tillgängliga [funktioner för multibyte strängar](http://php.net/manual/en/ref.mbstring.php).
+Låt oss titta på begreppet om teckenkodning, multibyte strängar och UTF-8.
 
-Ett enkelt sätt att visa på skillnaden mellan multibyte strängar och icke multibyte, tex ISO-8859-1, är att räkna hur lång strängen "åäö" är. Om teckenkodningen är IS-O8859-1 så är det enkelt, alla ser att strängen innehåller tre tecken och det är också svaret som funktionen `strlen('åäö')` skulle ge. Här är kod så att du kan testa det själv.
 
-```php
-<!doctype html>
-<html lang="sv"> 
-<head>
-<meta charset="iso-8859-1"/>
-<title>php20</title>
-</head>
-<body>
-<h1>Hur lång är en sträng, strlen('åäö') i ISO-8859-1</h1>
 
-<p>Teckenkodningen på denna filen (1) och på webbsidan (2) är ISO-8859-1.</p>
+Multibyte strängar {#multi}
+------------------------
 
-<p>Längden på strängen 'åäö' är strlen('åäö') = <?=strlen('åäö')?> (skall vara 3).</p>
+När du jobbar med multibyte strängar, och teckenkodning enligt UTF-8, så finns en speciell del i manualen som beskriver "[Multibyte String](http://php.net/manual/en/book.mbstring.php)" och de funktioner som finns tillgängliga. Funktionerna är namngivna med ett prefix `mb_`.
+
+Det är numer nästan standard att enbart hantera teckenkodning enligt UTF-8 och multibyte, men det finns fortfarande webbplatser och applikationer som inte hanterar UTF-8.
+
+
+
+Vad är en multibyte sträng? {#vadmulti}
+------------------------
+
+Teckenkodning handlar om hur en sträng lagras internt i datorn, i en fil eller när data skickas över nätet.
+
+För att göra ett exempel så kan man ta två filer som innehåller data, en fil som är kodad enligt ISO-8859-1 och en fil som är kodad enligt UTF-8. I kursrepot under `example/guide-php/02` ligger filerna `encoding-utf8.txt` och `encoding-iso8859.txt`.
+
+Om man öppnar båda filerna i en texteditor så ser innehållet ut så här.
+
+```text
+abc
+åäö
 ```
 
-Gör en egen fil, se till att den sparas på disk med teckenkodning enligt ISO-8859-1, öppna den sedan i en webbläsare och resultatet skall bli den korrekta stränglängden på `åäö`.
+Om man tittar på hur operativsystemet ser på filerna, via kommandot `file` i terminalen, så ser det ut så här.
 
-[Testa exemplet här](kod-exempel/guiden-php-20/strangar/iso88591.php).
-
-
-Men, när vi pratar UTF-8 och multibyte så blir svaret ett helt annat, `strlen('åäö')` ger svaret 6 när vi använder UTF-8 som teckenkodning. Det är för att det krävs två byten för att lagra dessa tecken. I multibyte strängar så används ett, två eller flera byten för att lagra ett tecken. Därför måste vi använda funktioner som är skräddarsydda till att hantera multibyte strängar. Funktionen `mb_strlen('åäö')` ger oss det förväntade svaret 3. Här är ett exempel som du kan testa och leka med.
-
-```php
-<!doctype html>
-<html lang="sv"> 
-<head>
-<meta charset="utf-8"/>
-<title>php20</title>
-</head>
-<body>
-<h1>Hur lång är en sträng, strlen('åäö') i UTF-8</h1>
-
-<p>Teckenkodningen på denna filen (1) och på webbsidan (2) är UTF-8. Den interna kodningen för PHP-installationen (3) är <?=mb_internal_encoding()?>.</p>
-
-<p>För att vara säker på att PHP betraktar alla strängar som UTF-8 så sätter jag mb_internal_encoding('utf-8').</p>
-
-<?php mb_internal_encoding('utf-8'); ?>
-
-<p>PHP's interna kodning är nu: <?=mb_internal_encoding()?></p>
-
-<p>Längden på strängen 'åäö' är strlen('åäö') = <?=strlen('åäö')?> (skall vara 6).</p>
-
-<p>Längden på strängen 'åäö' är mb_strlen('åäö') = <?=mb_strlen('åäö')?> (skall vara 3).</p>
+```text
+$ file encoding-*
+encoding-iso8859.txt: ISO-8859 text
+encoding-utf8.txt:    UTF-8 Unicode text
 ```
 
-Lägg koden i en egen fil, spara filen med teckenkodning enligt UTF-8, öppna den i en webbläsare och se vad som händer.
+Vi ser att operativsystemet ser skillnaden på filerna. Om vi själva vill ha en visuell skillnad på filerna så behöver vi se vilka tecken som lagras i själva filen. Det kan man inspektera med terminalkommandot `hexdump`.
 
-[Testa min variant av exemplet här](kod-exempel/guiden-php-20/strangar/utf8nobom.php).
+Vi börjar med att titta på filen som är kodad enligt ISO 8859-1.
 
-När det gäller hantering av UTF-8 och multibyte tecken krävs alltså lite mer hantering. Framförallt finns det `mb_` funktioner vi kan använda då det krävs att man tar hänsyn till multibyte-tecken. Men det krävs också att man har koll på vilken default encoding som PHP-installationen har för stränghantering. I exemplet sätter jag den explicit till att vara UTF-8. 
+```text
+$ hexdump -C encoding-iso8859.txt 
+00000000  61 62 63 0a e5 e4 f6 0a                           |abc.....|
+00000008
+```
 
-Teckenkodning kan vara jobbigt i början. Men när man fått ordning på det så är det inte så svårt. Det handlar i grund och botten om att datorprogram kan inte upptäcka vilken encoding man har på en sträng. Det går inte att gissa sig till vilken encoding som skall användas. Därför måste vi som programmerare ha koll, i varje programsekvens, att korrekt teckenkodning används. I vårt fall som webbprogrammerare innebär det följande:
+Vi kan se att ascii-värdet för abc inleder filen, det är 61, 62 respektive 63. Verktyget hexdump känner inte igen tecknet för åäö (e5, e4, f6) och väljer att inte skriva ut dem.
 
-1. Vilket format använder texteditorn för att spara filen?
-2. Vilken teckenkodning säger webbsidan att den är i (`<meta charset/>`)?
-3. Vilken teckenkodning använder PHP-installationen som default?
+Filen innehåller 8 tecken, det är våra abc (3 tecken), åäö (3 tecken) samt två nyradstecken (0a).
 
-När vi kopplar in databaser så kan gäller även teckenkodning för databasen, hur data lagras i kolumnen. Det kan också vara vilken teckenkodning som används på kopplingen mellan PHP och databasmotorn. Det är många delar som kan krångla men tar man dem i ordning så brukar det gå bra. 
+Då gör vi samma sak med filen som är kodad enligt UTF-8.
 
-Övning ger färdighet. Börja med att få dessa båda exempel att fungera ovan, då har du kommit ett steg in i den underbara världen av teckenkodning.
+```text
+$ hexdump -C encoding-utf8.txt 
+00000000  61 62 63 0a c3 a5 c3 a4  c3 b6 0a                 |abc........|
+0000000b
+```
+
+Inledningen i filen är densamma, men när vi ser på bokstäverna åäö så ser vi att varje bokstav representeras av två tecken. Bokstaven å representeras av c3a5, bokstaven ä av c3a4 och bokstaven ö av c3b6. I UTF-8 kan 1 till 4 tecken/siffror användas för att representera en bokstav eller tecken.
+
+Filen innehåller totalt 11 tecken (abc: 3, ååö: 6 samt två nyradstecken).
+
+Ett annat exempel på UTF-8 är tecknet för copyright, ©. Det är ett tecken som också kan representeras i UTF-8 via två tecken och sekvensen c2a9.
+
+
+
+Multibyte och PHP {#php}
+-----------------------
+
+När man använder strängar i php så kan man alltså behöva ta hänsyn till den teckenkodning som används. 
+
+Följande kodsekvens ger olika svar beroende på vilken teckenkodning som används.
+
+```php
+// Show difference in length of string
+strlen("åäö");    // UTF-8: 6, ISO8859-1: 3
+mb_strlen("åäö"); // UTF-8: 3, ISO8859-1: 1
+```
+
+I exemplet ovan ger funktionen `mb_strlen()` rätt svar när teckenkodningen är i UTF-8 som är ett multibyte format. Funktionen `strlen()` ger rätt resultat när teckenkodningen är ISO-8859-1.
+
+Det som är mest rätt för framtida kod är att använda UTF-8 som teckenkodning och att använda funktioner för multibyte strängar när det behövs.
+
+Du kan se en översikt av tillgängliga [funktioner för multibyte strängar](http://php.net/manual/en/ref.mbstring.php).

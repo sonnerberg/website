@@ -1,61 +1,123 @@
 ---
 author: mos
 revision:
-    "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
+    "2018-06-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Strängar och stränghantering
 =======================
 
+Vi tittar på hur strängar kan hanteras och vad som skiljer på strängar med enkelfnutt och dubbelfnutt. Vi tittar på begreppen strängkonkatenering, interpolation och vilka inbyggda funktioner som finns för stränghantering.
 
 
-Enkelfnuttar, dubbelfnuttar och heredoc {#fnuttar}
+
+Dubbelfnutt {#dubbelfnutt}
 -----------------------
 
-I PHP blir det en del hantering av [strängar](http://php.net/manual/en/language.types.string.php). Strängar omsluts av [enkelfnuttar](http://php.net/manual/en/language.types.string.php#language.types.string.syntax.single) och [dubbelfnuttar](http://php.net/manual/en/language.types.string.php#language.types.string.syntax.double). Skillnaden mellan de två varianterna är att variabler expanderar när de står inom dubbelfnuttar men *inte* när de finns inom enkelfnuttar. Behöver du escapa ett specialtecken så sätter du en backslash framför tecknet. Du kan ha en sträng som sträcker sig över flera rader och det finns en specialkonstruktion för strängar som kallas [heredoc](http://php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc) där allt betraktas som en sträng tills ett avslutande token. Låt oss se på ett par olika sätt att hantera strängar och skriva ut dem.
-  
+En sträng är det som står inom dubbelfnutten, till exempel `"Jag vill ha en moped."`.
+
+Man kan skriva ut en sträng direkt eller så kan man lägga den i en variabel. Man kan också kombinera utskriften av variabler och strängar.
 
 ```php
-<?php
-$tal = 1337;
-
-// Enkel fnutt
-$str01 = '<p>En enkel sträng inom "enkelfnuttar" med en variabel som INTE expanderas till sitt värde $tal.</p>';
-$str02 = '<p>En
-sträng inom 
-enkelfnuttar (\') som sträcker sig över flera rader.
-Men variabler såsom \$tal ($tal) expanderas inte till sitt värde.
-</p>';
-
-// Dubbel fnutt
-$str11 = "<p>En enkel sträng inom 'dubbelfnuttar' med en variabel som expanderas till sitt värde $tal.</p>";
-$str12 = "<p>En
-sträng inom 
-dubbelfnuttar (\") som sträcker sig över flera rader.
-Här expanderas variabler såsom \$tal ($tal) till sitt värde.
-</p>";
-
-$str21 = <<<EOD
-<p>Här kan man skriva text tills slutmarkören EOD dyker upp. Men det är oerhört viktigt att slutmarkören står ensam på raden och att den inte finns tomma tecken, som mellanslag eller tabbar, varken före eller efter slutmarkören. <b>Kom ihåg det!</b> Slutmarkör och tomma tecken ger dig problem.
-
-<p>Variabler expanderar till sitt rätta värde och \$tal = $tal.
-EOD;
-
-// Ouput
-echo <<<EOD
-$str01
-$str11
-<hr>
-<pre>$str02</pre>
-$str02
-<hr>
-<pre>$str12</pre>
-$str12
-<hr>
-<pre>$str21</pre>
-$str21;
-EOD;
+// Print out "My name is Mikael."
+$name = "Mikael";
+echo "My name is ", $name, ".\n";
 ```
 
-[Testa exemplet här](kod-exempel/guiden-php-20/strangar/strangar.php).
 
-Det finns en mängd [funktioner för att jobba med strängar](http://php.net/manual/en/ref.strings.php). Det är bra att ha en god översikt över dem, så du vet var de finns när du behöver dem. Tidigare i denna guiden såg du ett par [exempel på hur man använder strängfunktioner](#strang-funk).
+
+Konkatenera strängar {#konkat}
+-----------------------
+
+Man kan slå samman strängar, konkatenera dem. I php finns en operator punkt `.` som är konkateneringsoperator för strängar.
+
+```php
+// Print out "My name is Mikael."
+$name = "Mikael";
+$message = "My name is " . $name . ".\n";
+echo $message;
+```
+
+I exemplet ovan så konkateneras delsträngar, slås ihop, och den samlade strängen finns i `$message` som skrivs ut.
+
+
+
+Interpolation med strängar {#interpolation}
+-----------------------
+
+Man kan kombinera variabler inuti strängar, php-parsern kommer att ersätta variablernas värde inuti strängen. Detta kallas _string interpolation_ eller _variable interpolation_.
+
+```php
+// Print out "My name is Mikael."
+$name = "Mikael";
+$message = "My name is $name.\n";
+echo $message;
+```
+
+Det finns alltså olika sätt att hantera strängar och man använder det man känner bäst för. Kanske anser du att sättet ovan med interpolation är det som är mest läsbart?
+
+Om man har komplexa strängar eller variabler så kan man behöva omringa variabeln med måsvingar `{}`. Det gör man då variabeln riskerar att krocka med texten.
+
+```php
+// Print out "This is Mikael's rubber duck."
+$name = "Mikael";
+$message = "This is ${name}'s rubber duck.\n";
+echo $message;
+```
+
+Måsvingarna gör att parsern kan tolka och enklare skilja vad som är sträng och variabel. Det kan också göra koden mer läsbar för programmeraren.
+
+
+Enkelfnutt {#enkelfnutt}
+-----------------------
+
+Enkelfnutten skiljer sig från dubbelfnutten i hur specialtecken och interpolation fungerar.
+
+När strängen omges med enkelfnuttar så sker ingen interpolation och specialtecken skrivs inte ut, istället skrivs dess motsvarande tecken ut.
+
+Låt oss ta ett exempel.
+
+```php
+// Print out "This is Mikael's rubber duck."
+$name = "Mikael";
+$message = "This is ${name}'s rubber duck.\n";
+echo $message;
+
+// See the difference when using ''
+$message = 'This is ${name}\'s rubber duck.\n';
+echo $message;
+```
+
+När jag vill skriva ut en enkelfnutt, inuti en sträng som omges med enkelfnuttar, så behöver jag escapa det tecknet med en _backslash_ `\'`. Samma gäller om jag vill skriva ut en dubbelfnutt inom en sträng som omges av dubbelfnuttar.
+
+Så här kan du se skillnaden.
+
+[FIGURE src=image/snapht18/enkelfnutt.png?w=w3 caption="Se skillnanden mellan enkelfnutt och dubbelfnutt."]
+
+Du kan se att det inte sker någon interpolation i enkelfnuttsträngen och att även tecknet för radbrytning `\n` skrivs ut och ersätts inte med en radbrytning. Detta är skillnaden hur enkel- och dubbelfnuttar fungerar.
+
+
+
+Inbyggda funktioner för strängar {#inbyggd}
+-----------------------
+
+Det finns en stor mängd [inbyggda funktioner för att jobba med strängar](http://php.net/manual/en/ref.strings.php). Med dessa funktioner kan du räkna ut längden på strängar, plocka ut delsträngar och jämföra strängar och mycket mycket mer.
+
+Här är ett par exempel på hur du kan använda inbyggda funktioner för strängar.
+
+```php
+// Trim a string and remove all whitespace
+$var = trim("  this is content  ");
+
+// Count the length (3) of the string
+$var = strlen("123");
+
+// Get a substring "am" from a string
+$var = substr("I am happy", 2, 2);
+
+// Compare two strings and ignore case
+$var = strcasecmp("moped", "MOPED");
+```
+
+Genom att lära sig vilka inbyggda funktioner som finns så kan man spara en hel del kodrader, det finns funktioner som löser de vanligaste fallen för stränghantering.
+
+Referensmanualen för php är din guide till att veta mer om inbyggda funktioner för stränghantering.
