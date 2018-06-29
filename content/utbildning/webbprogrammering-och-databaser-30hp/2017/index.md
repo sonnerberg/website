@@ -2,6 +2,7 @@
 title: Antagen 2017
 author: mos
 revision:
+    "2018-06-29": "(I, mos) Bytte kursnamn dbw till databas."
     "2017-06-08": "(H, mos) Ny strukur med antagningsomgångar."
     "2016-03-14": "(G, mos) Info om paus i kurspaketet."
     "2015-12-18": "(F, mos) Information om studietakter."
@@ -92,7 +93,7 @@ Kurspaketet består av fyra kurser, varje kurs är på 7.5hp och examineras sepa
 |------|----------|-------|
 | Webbteknologier                     | htmlphp | 7.5hp |
 | Teknisk webbdesign och användbarhet | design  | 7.5hp |
-| Databasteknologier för webben       | dbw     | 7.5hp |
+| Databasteknologier för webben       | databas | 7.5hp |
 | Objektorienterade Webbteknologier   | oophp   | 7.5hp |
 
 Du går kurserna efter varandra, i den ordning som visas ovan. När du är klar med den första kursen så hoppar du på nästa.
@@ -113,7 +114,7 @@ Det finns lektionsplaner för varje kurs som visar när det finns bokade tillfä
 
 * [Lektionsplan htmlphp (kurs 1)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs1)
 * [Lektionsplan design (kurs 2)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs2)
-* [Lektionsplan dbw (kurs 3)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs3)
+* [Lektionsplan databas (kurs 3)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs3)
 * [Lektionsplan oophp (kurs 4)](utbildning/webbprogrammering-och-databaser-30hp/lektionsplan/kurs4)
 
 

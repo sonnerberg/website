@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-06-29": "(F, mos) Inför HT18."
     "2017-06-08": "(E, mos) Ny strukur med antagningsomgångar."
     "2016-07-04": "(D mos) Genomgången inför ht16."
     "2016-03-11": "(C, mos) Bort med länk till kursutvärdering eftersom den kräver inloggning i forumet."
@@ -28,7 +29,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/python-v1/block-kurser-kmom
+                                route: kurser/python-v2/block-kurser-kmom
                     column-2:
                         data:
                             meta:
@@ -106,19 +107,14 @@ Du går kurserna efter varandra, i den ordning som visas ovan. När du är klar 
 Rekommenderad studieplan {#studieplan}
 -----------------------------------------------------------
 
-Det finns [rekommenderade studieplaner](webutv/studieplan/50) som ger dig en grund för planeringen av kurserna. I den rekommenderade studieplanen finns deadlines som gäller för respektive kurs.
+Varje kurs har en rekommenderad studieplan som ger dig en grund för planeringen av kursen. Du får tillgång till den när kursen startar.
 
 
 
 Lektionsplan {#lektionsplan}
 -----------------------------------------------------------
 
-Det finns lektionsplaner för varje kurs som visar när det finns bokade tillfällen för undervisning och handledning.
-
-* [Lektionsplan python (kurs 1)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs1)
-* [Lektionsplan javascript1 (kurs 2)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs2)
-* [Lektionsplan linux (kurs 3)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs3)
-* [Lektionsplan webapp (kurs 4)](utbildning/webbutveckling-och-programmering-30hp/lektionsplan/kurs4)
+Det finns lektionsplaner för varje kurs som visar när det finns bokade tillfällen för undervisning och handledning. Här kan du se i detalj, vecka för vecka, när undervisning och handledning sker.
 
 
 
@@ -156,4 +152,6 @@ Läs vad [Pernilla](blogg/pernilla-gick-ut-kurspaket-med-ett-plus-i-kanten), [Ga
 Kontakt {#fraga}
 -----------------------------------------------------------
 
-Det finns en [gitter-kanal som är generell för alla studenter som gått eller går kurspaketet](https://gitter.im/dbwebb-se/webutv), där kan du ställa frågor till kurspaketets lärare eller de studenter som går/gått paketet.
+Du kommer i kontakt med lärarna via kurspaketets gitter-chatt, forumet, eller via de gitter-chatter som finns för varje kurs.
+
+Du kan också maila ansvarig för kurspaketet på webbprogrammering@bth.se. Om du redan är student och har administrativa frågor kring kurserna så kan du även maila dbwebb@bth.se.

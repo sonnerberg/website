@@ -1,15 +1,13 @@
 ---
+title: Antagen 2018
 author: mos
 revision:
-    "2018-06-29": "(I, mos) Inför HT18."
-    "2017-06-08": "(H, mos) Ny strukur med antagningsomgångar."
-    "2016-03-14": "(G, mos) Info om paus i kurspaketet."
-    "2015-12-18": "(F, mos) Information om studietakter."
-    "2015-01-07": "(E, mos) Uppdateringar när det blev två kurspaket."
-    "2014-08-07": "(D, mos) Uppdateringar inför hösten 2014, bort med flexibel studietakt och in med nya studieplaner."
-    "2013-09-26": "(C, mos) Mindre uppdateringar i samband med ny info om 3-veckors upprop."
-    "2013-09-12": "(B, mos) Tog bort referens till kurskoder som byts till och från, smärre justeringar."
-    "2013-01-08": "(A, mos) Första utgåvan inför vårterminen 2013."
+    "2018-06-29": "(F, mos) Inför HT18."
+    "2017-06-08": "(E, mos) Ny strukur med antagningsomgångar."
+    "2016-07-04": "(D mos) Genomgången inför ht16."
+    "2016-03-11": "(C, mos) Bort med länk till kursutvärdering eftersom den kräver inloggning i forumet."
+    "2015-12-18": "(B, mos) Om studietakter."
+    "2015-01-08": "(A, mos) Första utgåvan inför vårterminen 2015."
 
 views:
     flash:
@@ -32,29 +30,29 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/htmlphp-v3/block-kurser-kmom
+                                route: kurser/python-v2/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/design-v2/block-kurser-kmom
+                                route: kurser/javascript1-v1/block-kurser-kmom
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: kurser/databas-v1/block-kurser-kmom
+                                route: kurser/linux-v2/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v4/block-kurser-kmom
+                                route: kurser/webapp-v3/block-kurser-kmom
 ...
-Webbprogrammering och Databaser, 30hp (webprog)
+Webbutveckling och Programmering, 30hp (webutv)
 ==================================
 
-Kurspaketet "Webbprogrammering och Databaser", också kallad **webprog**, består av fyra kurser som hjälper dig att utvecklas till webbprogrammerare.
+Kurspaketet "Webbutveckling och Programmering", också kallad **webutv**, består av fyra kurser som hjälper dig att komma igång med programmering och webbutveckling.
 
-Lär dig använda den senaste tekniken för att utveckla databasdrivna webbplatser och webbapplikationer. Kurspaketet riktar sig till dig som vill få en gedigen förståelse för hur man bygger webbapplikationer med senaste versionerna av teknikerna och fokus på HTML, CSS, PHP och databaser med SQL i en Unix-baserad miljö.
+Lär dig grunderna i webbutveckling och programmering. Kurspaketet erbjuder fyra kurser som ger dig en bred bas och en stabil grund att stå på inför fortsatta studier inom området webbutveckling och webbprogrammering.
 
 <!--more-->
 
@@ -63,18 +61,22 @@ Lär dig använda den senaste tekniken för att utveckla databasdrivna webbplats
 Förkunskapskrav {#forkunskapskrav}
 -----------------------------------------------------------
 
-Den första kursen, Webbteknologier (htmlphp), kräver grundläggande behörighet. Övriga kursers förkunskapskrav förutsätter att man genomgått föregående kurs.
+Den första kursen, Programmering och Problemlösning med Python (python), kräver grundläggande behörighet. Övriga kursers förkunskapskrav förutsätter att man genomgått föregående kurs.
 
 
 
 Innehåll {#innehall}
 -----------------------------------------------------------
 
-Du börjar med en grundlig översikt av de senaste versionerna av HTML och CSS och använder det till att bygga en webbplats som delvis lagrar sitt innehåll i databasen SQLite. Du jobbar vidare med design och användbarhetsaspekter, men ur ett praktiskt och programmeringsinriktat perspektiv. Därefter blir det mer databaser och objektorienterad utvecklingstekniker. Du fortsätter med ett objektorienterat synsätt på programmeringsspråket PHP och använder ett objektorienterat gränssnitt mot databasen MySQL. Alla kurser är praktiskt inriktade och varje kurs examineras med ett projekt.
+Du börjar med en grundkurs i programmering i Python för att komma i gång med tänket. Kursen har vissa inslag av webbutveckling men fokuserar på traditionell programmering. Därefter fortsätter du med programmering i JavaScript i en webbmiljö där du introduceras även i HTML och CSS samt webben som utvecklingsmiljö.
 
-Kurspaketet ger dig breda och grundläggande kunskaper inom flera av de tekniker som webbprogrammerare förväntas behärska.
+Sedan breddar du dina kunskaper genom att studera operativsystemet Linux och dess olika delar och som sista kurs blir det utveckling av webbapplikationer till mobila enheter och läsplattor.
 
-Du kan fortsätta att fördjupa dig inom området via [kurspaketet Webbutveckling och Programmering, 30 hp](webutv). Du kan studera på de båda kurspaketen parallellt. Kurserna inom kurspaketet kan du tillgodoräkna dig om du fortsätter studera på programmet Webbprogrammering.
+Alla kurser är praktiskt inriktade och varje kurs examineras med ett projekt.
+
+Efter kurspaketet har du breda och grundläggande kunskaper inom webbutveckling och programmering och du kan fortsätta att fördjupa dig inom området webbutvecklare och webbprogrammerare.
+
+Du kan komplettera dina studier på detta kurspaket med fortsatta studier på kurspaketet "[Webbprogrammering och Databaser, 30hp](webprog)". Du kan även studera på de båda kurspaketen parallellt.
 
 All undervisning och examination är distansbaserad. Det finns inga obligatoriska campus-träffar.
 
@@ -94,10 +96,10 @@ Kurspaketet består av fyra kurser, varje kurs är på 7.5hp och examineras sepa
 
 | Namn | Smeknamn | Poäng |
 |------|----------|-------|
-| Webbteknologier                     | htmlphp | 7.5hp |
-| Teknisk webbdesign och användbarhet | design  | 7.5hp |
-| Databasteknologier för webben       | databas | 7.5hp |
-| Objektorienterade Webbteknologier   | oophp   | 7.5hp |
+| Programmering och Problemlösning med Python | python      | 7.5hp |
+| Programmering med JavaScript                | javascript1 | 7.5hp |
+| Programmera webbtjänster i Linux            | linux       | 7.5hp |
+| Webbapplikationer för mobila enheter        | webapp      | 7.5hp |
 
 Du går kurserna efter varandra, i den ordning som visas ovan. När du är klar med den första kursen så hoppar du på nästa.
 

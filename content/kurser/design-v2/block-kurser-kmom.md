@@ -1,7 +1,7 @@
 ####[design (v2)](kurser/design-v2)
 
 * [01: Ramverk och innehåll](kurser/design-v2/kmom01)
-* [02: LESS och responsiv kurser/design-v2](kurser/design-v2/kmom02)
+* [02: LESS och responsiv design](kurser/design-v2/kmom02)
 * [03: Grid, layout och typografi](kurser/design-v2/kmom03)
 * [04: Färg](kurser/design-v2/kmom04)
 * [05: Bild](kurser/design-v2/kmom05)
