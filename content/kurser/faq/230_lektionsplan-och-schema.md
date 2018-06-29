@@ -10,7 +10,7 @@ revision:
     "2013-09-26": (B, mos) Genomgången och uppdaterad.
     "2012-08-28": (A, mos) Första versionen, samlat info från andra platser.
 ...
-Schema och Lektionsplan
+Lektionsplan och schema
 ==================================
 
 Här kan du läsa om den planering som finns för kurser när du deltar i undervisningen vid ett program (campus & distans) eller kurspaket.

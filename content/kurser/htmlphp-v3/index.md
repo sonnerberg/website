@@ -244,7 +244,7 @@ Lektionsplan {#lektionsplan}
 
 Det finns en [lektionsplan](kurser/htmlphp/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
 
-Läs mer om [lektionsplanen](kurser/faq/lektionsplan).
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
