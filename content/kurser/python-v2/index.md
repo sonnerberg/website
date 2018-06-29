@@ -5,6 +5,7 @@ author:
     - efo
     - aar
 revision:
+    "2018-06-20": (G, aar) Uppdatering av vilka kapitels som ska läsas när.
     "2018-06-20": (F, efo) Uppdatering av kmom beskrivningar inför v2 HT18.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-05-29": (E, mos) Genomgång och mindre uppdatering kursplan, justering kurslitteratur.
@@ -203,9 +204,9 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom01     | Ch 1, 2                |
 | Kmom02     | Ch 3, 5                |
 | Kmom03     | Ch 4                   |
-| Kmom04     | Ch 7, 8                |
-| Kmom05     | Ch 9, 10               |
-| Kmom06     | Ch 12, 13, 15          |
+| Kmom04     | Ch 7                   |
+| Kmom05     | Ch 8                   |
+| Kmom06     | Ch 9, 10               |
 | Kmom10     |                        |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
