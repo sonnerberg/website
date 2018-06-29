@@ -136,6 +136,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas?
+* Vad skiljer de tre datastrukturerna från varandra?
 * Hur använde du dem i uppgifterna?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

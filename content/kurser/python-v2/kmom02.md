@@ -144,6 +144,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns syntaxen i Python?
 * Är det enkelt att se programmets struktur och vad det gör?
 * Har du fått en förståelse för hur loopar och villkor fungerar?
+* Vad är skillnaden på en while-loop och en for-loop?
 * Hur går det med valideringen av uppgifterna? 
 * Är du överens med pylint om eventuella felmeddelanden vid valideringen?
 * Hur gick det att utföra uppgifterna, var de enkla eller svåra?

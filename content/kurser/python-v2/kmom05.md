@@ -135,5 +135,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Var det svårt att bekanta sig med datastrukturen för listor eller flöt det på bra?
 * Har du jobbat med listor, eller arrayer, i andra programmeringsspråk?
 * Kan du isåfall jämföra Python listor mot andra programmeringsspråk?
+* Hur skilde det sig att jobba mot filers innehåll med lista istället för sträng?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

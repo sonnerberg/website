@@ -138,6 +138,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Du har gjort din första modul i Python, känns strukturen bra?
 * Hur kan du använda moduler?
+* Hur jobbar man med filer i Python?
 * Vilka fördelar ger det att kunna läsa från fil?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

@@ -165,6 +165,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
+* Vad är en variabel?
 * Vilken utvecklingsmiljö använder du?
 * Är du bekant med programmering och problemlösning och/eller Python sedan tidigare?
 * Är du bekant med terminalen och Unix-kommandon sedan tidigare?
