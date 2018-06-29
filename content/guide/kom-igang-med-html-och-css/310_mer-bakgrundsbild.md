@@ -58,7 +58,7 @@ html::after{
 }
 ```
 
-Med **opacity** kan man ställa in ett elements genomskinlighet, dess transparens. Värdena sträcker sig från 0.0 (genomskinlig) till 1.0 (ingen genomskinlighet).
+Med **opacity** kan man ställa in ett elements genomskinlighet, dess transparens. Värdena sträcker sig från 0.0 (genomskinlig) till 1.0 (ingen genomskinlighet). Viktigt att komma ihåg är att egenskapen opacity sätter transparens på sig själv och alla element som finns däri.
 
 Vi tittar igen och ser efter hur det blev:
 
