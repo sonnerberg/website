@@ -35,13 +35,22 @@ Upplägg {#upplagg}
 
 Den individuella examinationen genomförs den 2018-XX-XX. Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar.
 
-`dbwebb create exam` skapar din individuella examination.
+`dbwebb exam create exam` skapar din individuella examination.
+
+Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/exam` enligt följande.
+
+| Fil                | Innehåll                                                              |
+|--------------------|-----------------------------------------------------------------------|
+| `assignments.md` | Beskrivning av examinationen och de uppgifter som skall göras, öppna och läs via en texteditor.               |
+| `exam.py`        | Här skall du skriva din kod för att lösa respektive uppgift i examinationen. Du kan köra programmet genom kommandot `python3 exam.py` |
+
+
+
+`dbwebb exam correct exam` rättar din individuella examination och visar hur många uppgifter du har klarat och ditt betyg.
 
 `dbwebb validate exam` validerar din individuella examination.
 
-`dbwebb correct exam` rättar din individuella examination och visar hur många uppgifter du har klarat och ditt betyg.
-
-`dbwebb publish exam` lämnar in din individuella examination.
+`dbwebb exam seal exam` lämnar in din individuella examination.
 
 
 
@@ -55,11 +64,21 @@ För att få betyget E, godkänt, behöver du klara uppgift 1 i den individuella
 * Klarar du uppgift 1 och ytterligare tre uppgifter får du B.
 * Klarar du uppgift 1 och ytterligare fyra uppgifter får du A.
 
-När du vill under hela examinationen kan du köra kommandot "dbwebb correct exam" för att rätta dina lösningar och se vilket betyg du har uppnått.
+När du vill under hela examinationen kan du köra kommandot `dbwebb exam correct exam` för att rätta dina lösningar och se vilket betyg du har uppnått.
 
 
 
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-Nått om campus vs distans/KP?
+Efter din individuella examination lämna in en redovisningstext via Canvas uppgiften 'Individuell examination'. I redovisningstexten skriv följande:
+
+1. För varje uppgift du implementerade, dvs 1-5, skriver du ett textstycke om ca 3-5 meningar där du beskriver vad du gjort och hur du tänkt.
+
+1.  Skriv ett allmänt stycke om hur den individuella examinationen gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var den individuella examinationen lätt eller svårt? Vad var svårt och vad gick lätt? Var den individuella examinationen en bra och rimlig examination av denna kursen?
+
+1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+
+1. Distansprogram- och Kurspaket studenter kompletterar redovisningstexten med att spela in en kort video där de berättar om de tekniska implementationerna de gjorde i den individuella examinationen.
+
+1. Ta en kopia av texten från din inlämning i Canvas och gör ett inlägg i kursforumet och berätta att du är klar.
