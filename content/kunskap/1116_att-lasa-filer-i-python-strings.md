@@ -1,8 +1,8 @@
 ---
-author: efo, aar
+author: aar,efo
 category: python
 revision:
-  "2017-06-21": (B, aar) Utökad inför python-v2.
+  "2017-06-21": (B, aar) Skrev om inför python-v2.
   "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
 ...
 Att läsa filer i Python
@@ -17,7 +17,7 @@ Vi ska i denna övning läsa data från filer, lägga till data och ta bort data
 
 
 
-Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/file/string) och här på [dbwebb](repo/python/example/file/string). Ni kan ignorera "list-to-file.py" och kolla i "string-to-file.py" istället, det är den vi kommer jobba efter. Där finns även filen vi läsar data från, "items.txt".
+Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/file/string) och här på [dbwebb](repo/python/example/file/string).
 
 
 Introduktion {#intro}
@@ -60,7 +60,7 @@ Läsa från fil {#lasa}
 --------------------------------------
 Börjar med att öppna filen `items.txt` och kolla på innehållet. Den innehåller tre produkter, "cookie", "cake" och "tea", en produkt på varje rad. Innehållet i filen är egentligen en sträng, `"cookie\ncake\ntea"`, där din texteditor tolkar "\n" som en ny rad. Vi kommer återkomma till detta senare i övningen.
 
-Vidare till koden, vi börjar med val 1, att läsa filens innehåll. När man jobbar med filer behöver man öppna dem, det görs med funktionen `open("filnamn")` där man skickar sökvägen till filen som argument. Funktionen returnerar ett fil objekt som blir kopplingen till filen. Efter man är jobbat färdig med filen behöver man stänga kopplingen. Vi kommer använda oss av nyckelordet `with` för att stänga kopplingen automatisk så vi inte behöver komma ihåg att göra det manuellt.
+Vidare till koden, vi börjar med val 1, att läsa filens innehåll. När man jobbar med filer behöver man öppna dem, det görs med funktionen `open("filnamn")` där man skickar sökvägen till filen som argument. Funktionen returnerar ett fil objekt som blir kopplingen till filen. Efter man har jobbat färdig med filen behöver man stänga kopplingen. Vi kommer använda oss av nyckelordet `with` för att stänga kopplingen automatisk så vi inte behöver komma ihåg att göra det manuellt.
 Vi kolla på hur koden kan se ut för att läsa en fil.
 
 ```python
@@ -76,7 +76,7 @@ def readfile():
         print(readfile())
 ...
 ```
-Jag hårdkodar vad filen heter som en global variable i början. I funktionen "readfile()" använder vi "with" för att skapa ett block, vi lägger koden som använder filen inom det blocket. `open(filename) as filehandle` är i princip samma sak som att skriva `filehandle = open(filename)`, med andra ord kommer vi åt kopplingen till filen via variabeln `filehandler`. I blocket skriver vi koden för att jobba med filen och det är inte mycket som krävs för att läsa en fil. `filehandler.read()` läser filens innehåll och returnerar det som en sträng. När all kod som ligger inom blocket har exekverat stängs kopplingen automatiskt. Om vi inte hade använt "with" hade vi behövt lägg till en rad ovanför `return content` där vi stänger kopplingen. I if-satsen för de olika valen uppdaterar vi val 1 till att anropa `readfile()` och skriva ut vad den returnerar. 
+Vi hårdkodar vad filen heter som en global variable i början. I funktionen `readfile()` använder vi "with" för att skapa ett block, vi lägger koden som använder filen inom det blocket. `open(filename) as filehandle` är i princip samma sak som att skriva `filehandle = open(filename)`, med andra ord kommer vi åt kopplingen till filen via variabeln `filehandler`. I blocket skriver vi koden för att jobba med filen och det är inte mycket som krävs för att läsa en fil. `filehandler.read()` läser filens innehåll och returnerar det som en sträng. När all kod som ligger inom blocket har exekverat stängs kopplingen automatiskt. Om vi inte hade använt "with" hade vi behövt lägg till en rad ovanför `return content` där vi stänger kopplingen. I if-satsen för de olika valen uppdaterar vi val 1 till att anropa `readfile()` och skriva ut vad den returnerar. 
 
 Testa kör programmet, jag visar vilket val jag gör med `$x` i exemplet nedanför.
 
@@ -112,7 +112,7 @@ def write_to_file(item):
 ...
 ```
 
-Notera att vi i funktionen `append_to_file(item)` skickar med `"a"` som andra argument till "open()" funktionen. Det värdet bestämmer om "write" funktionen ska lägga till värden på slutet. "write()" tar en sträng som argument och skriver det värdet till filen som "filehandler" är skapad med. I if-satsen för val 2 anropar vi `write_to_file()` och skickar med en sträng som användaren skriver in med "input" anropet. Vi testar köra programmet och ser hur filen innehåll ser ut om vi lägger till något.
+Notera att vi i funktionen `append_to_file(item)` skickar med `"a"` som andra argument till "open()" funktionen. Det värdet bestämmer att "write" funktionen ska lägga till värden på slutet. "write()" tar en sträng som argument och skriver det värdet till filen som "filehandler" är skapad med. I if-satsen för val 2 anropar vi `write_to_file()` och skickar med en sträng som användaren skriver in med "input" anropet. Vi testar köra programmet och ser hur filen innehåll ser ut om vi lägger till något.
 
 ```bash
 python3 string-to-file.py
@@ -128,7 +128,7 @@ cake
 teaapple
 ```
 
-"apple" kom inte på en egen rad utan på samma som "tea". Vi måste ha med "\n" i värdet mellan "tea" och "apple" för att få den på ny rad, som jag skrev om i början av övningen. En snabb lösning är att konkatenera input värdet med "\n". Det är dock ingen komplett lösning, lösningen introducerar tomma rader i filen i vissa situation, t.ex. om vi lägger till ett värde när filen är tom. Vi kommer inte gå in på dem men försök gärna hitta en lösning.
+"apple" kom inte på en egen rad utan på samma som "tea". Vi måste ha med "\n" i strängen mellan "tea" och "apple" för att få den på ny rad, som vi skrev om i början av övningen. En snabb lösning är att konkatenera input värdet med "\n". Det är dock ingen komplett lösning, lösningen introducerar tomma rader i filen i vissa situation, t.ex. om vi lägger till ett värde när filen är tom. Vi kommer inte lösa dem här men försök gärna tänk fram en egen lösning.
 
 ```python
 ...
@@ -157,7 +157,7 @@ pear
 
 Vi har ett fel i filen, "teaapple", så låt oss implementera en funktion för att skriva över all data i filen med ny och på så sätt kan vi rätta till innehållet.
 
-När vi vill skriva över hela filen använder vi också "write()" funktionen men vi behöver öppna filen med läge "w" istället för "a". Så vi uppdatera "write_to_file" funktionen så den kan användas för både lägga till och skriva över. För att göra det skickar vi in hur den ska öppnas som ett argument.
+När vi vill skriva över hela filen använder vi också "write()" funktionen men vi behöver öppna filen med argumentet "w" istället för "a". Så vi uppdatera "write_to_file" funktionen så den kan användas för både lägga till och skriva över. För att göra det skickar vi in hur den ska öppnas som ett argument.
 ```python
 def write_to_file(content, mode):
     with open(filename, mode) as filehandle:
@@ -169,13 +169,10 @@ def write_to_file(content, mode):
 ...
 ```
 
-Vi går vidare till att skapa en ny funktion där användaren kan skriva in alla nya produkter som ska skrivas till filen. I funktionen behöver vi ta input till användaren är klar, while-loop, och sen anropa "write_to_file" funktionen.
+Vi går vidare till att skapa en ny funktion där användaren kan skriva in alla nya produkter som ska skrivas till filen. I funktionen behöver vi ta input fram till att användaren skickar in "q" för att markera att den är klar, while-loop, och sen anropa "write_to_file" funktionen.
 
 ```python
 def replace_content():
-    """
-    Replace content of a file with new items
-    """
     item = ""
     result = ""
     while item != "q":
@@ -189,7 +186,7 @@ def replace_content():
 ...
 ```
 
-I funktionen "replace_content" testar jag lösa inputen i en while-loop utan en if-sats för att kolla om användaren skickar in "q". I första iteration är `item` en tom sträng som konkateneras till `result`. Då förblir "result" orörd, sen ber vi om hejinput och nästa iteration börjar. I loopens villkor kollar vi om användaren är klar, om input är "q", annars konkateneras "item" med "result" igen och sen ber vi om input. När användaren är klar skickar vi "result" strängen till "write_to_file" funktionen och skriver den till filen.
+I funktionen "replace_content" testar vi be om input i en while-loop utan en if-sats för att kolla om användaren skickar in "q". I första iteration är `item` en tom sträng som konkateneras till `result`. Då förblir "result" orörd, sen ber vi om input och nästa iteration börjar. I loopens villkor kollar vi om användaren är klar, om input är "q", annars konkateneras "item" med "result" igen och sen ber vi om input. När användaren är klar skickar vi "result" strängen till "write_to_file" funktionen och skriver den till filen.
 
 ```bash
 python3 string-to-file.py
@@ -248,7 +245,7 @@ def replace_content():
     write_to_file(result.strip(), "w")
 ```
 
-Om ni själva kör programmet igen så bör ni se att filen blir korrekt när ni skriver över innehållet. Nu har vi kvar att ta bort ett föremål åt gången ur filen.
+Om ni själva kör programmet igen så bör ni se att filen blir korrekt när ni skriver över innehållet. Nästa steg är att ta bort ett föremål åt gången ur filen.
 
 
 
@@ -274,7 +271,7 @@ def remove_item():
 ...
 ```
 
-Vi kollar först att det användaren skriver in faktiskt finns i filen och sen används funktionen "replace()" på innehållet för att ersätta produkten med en tom sträng. Vi testar det nya menyvalet.
+Vi kollar först att det användaren skriver in faktiskt finns i strängen från filen och sen används funktionen "replace()" på innehållet för att ersätta produkten med en tom sträng. Vi testar det nya menyvalet.
 
 ```bash
 python3 string-to-file.py
@@ -292,7 +289,7 @@ tea
 cake
 ```
 
-Två fel uppstod när vi körde programmet, raden med "meat" blev en tom rad och "meatloaf" förlorade blev av med sin substräng "meat". Vi ska lösa den tomma raden men felet med substrängen lämnar jag till er själva att hitta en lösning på. En snabb lösning på den tomma raden är att lägga till "\n" på substrängen som tas bort. 
+Två fel uppstod när vi körde programmet, raden med "meat" blev en tom rad och "meatloaf" förlorade sin substräng "meat". Vi ska lösa den tomma raden men felet med substrängen lämnar jag till er själva att hitta en lösning på. En snabb lösning på den tomma raden är att lägga till "\n" på substrängen som tas bort. 
 
 ```python
 def remove_item():
@@ -337,7 +334,7 @@ def remove_item():
         write_to_file(modified_content, "w")
 ```
 
-`index()` kollar om produkten finns i content och returnera position i strängen där substrängen, produkten, börjar. Om det är det första i strängen börjar det på position 0.
+`index()` kollar om produkten finns i content och returnera positionen i strängen där substrängen, produkten, börjar. Om produkten är det första i strängen börjar dess på substräng på position 0.
 
 ```bash
 python3 string-to-file.py
@@ -373,6 +370,7 @@ def remove_item():
 Då så, nu har vi ett någorlunda fungerande program för att jobba med filer. I kmom05 kommer vi kolla på det igen men då kommer vi jobba mot filens innehåll med en lista istället för sträng. Vilket kommer förenkla saker åt oss.
 
 Tänk själv hur du hade löst fäljande fel:
+
 1. Att inte få med en tom rad när man gör append i en tom fil.
 2. När man gör remove och en produkt är substräng till en annan produkt, att bara själva produkten försvinner. T.ex. "meat" och "meatloaf".
 
