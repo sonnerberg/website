@@ -2,6 +2,7 @@
 author: sylvanas
 category: python
 revision:
+  "2018-06-29": (H, aar) Uppdaterade mappstruktur mot kursrepo.
   "2017-06-14": (G, lew) Uppdaterade med en asciinema och ett krav. Förtydligande av uppgift.
   "2015-10-12": (F, mos) Förtydligade (lade till) krav om att spara på fil.
   "2015-09-03": (E, mos) Ändrade max antal till 4 istället för 7 samt tog bort grundkrav
@@ -65,7 +66,8 @@ Bygg vidare på din Marvin 3.
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me/kmom04/marvin3
+cp -ri me/kmom04/marvin3/*.py
+cd me/kmom05/marvin4
 ```
 
 1. Uppgradera din Marvin så att han kan hantera en *ryggsäck*, eller ett *inventory*, där han kan bära saker.
@@ -92,7 +94,7 @@ Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad so
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate marvin3
+dbwebb validate marvin4
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 

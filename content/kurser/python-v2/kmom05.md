@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-08": (K, aar) La till listor, flyttade dict/tuple till nästa och tog bort argparse.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-09-08": (J, mos) Bort någon fråga.
@@ -109,7 +110,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom05/lab4`.
+1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom05/lab5`.
 
 3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom05/marvin4`.
 

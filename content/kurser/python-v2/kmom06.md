@@ -3,6 +3,7 @@ author:
     - mos
     - efo
 revision:
+    "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-27": (K, efo) Tog bort argparse och anpassade för v2.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-09-08": (J, mos) Bort någon fråga.
@@ -117,9 +118,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 Om du har tid och lust finns extra uppgifter att utföra.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe)". Spara alla filer under `me/kmom06/marvin5`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe)". Spara alla filer under `me/kmom05/marvin4`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)". Spara alla filer under `me/kmom06/marvin5`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)". Spara alla filer under `me/kmom05/marvin4`.
 
 <!-- 1. Gör den Curses-baserade uppgiften "[Ett terminal-baserat spel i Python - steg2](uppgift/ett-terminal-baserat-spel-i-python-steg2)". -->
 

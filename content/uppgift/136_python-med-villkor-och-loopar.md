@@ -5,6 +5,7 @@ category:
     - python
     - lab
 revision:
+    "2018-06-29": (G, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-08-28": (F, mos) Bort med stycke om extrauppgifter.
     "2015-08-25": (E, efo) Uppdaterade till ny kursstruktur utan funktioner i kmom02.
     "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
@@ -39,7 +40,7 @@ Gå till din kurskatalog i terminalen.
 dbwebb create lab2
 ```
 
-Materialet till labben ligger nu i din kurskatalog i `me/kmom02/lab2` enligt följande.
+Materialet skapas nu och läggs i en underkatalog till din katalog `me`.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|

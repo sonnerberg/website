@@ -2,6 +2,7 @@
 author: efo
 category: python
 revision:
+    "2018-06-29": (B, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-06-21": (A, efo) Första utgåvan i samband med uppdatering av kmom05 i kursen python.
 ...
 Analysera text och ord
@@ -49,7 +50,7 @@ Börja med att kopiera text-filen `phil.txt`.
 
 ```bash
 # Ställ dig i kursmoment katalogen
-cp -ri ../../example/text/phil.txt analyzer/
+cp -i ../../example/text/phil.txt analyzer/
 cd analyzer
 ```
 

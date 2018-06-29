@@ -2,8 +2,9 @@
 author: aar,efo
 category: python
 revision:
-  "2017-06-21": (B, aar) Skrev om inför python-v2.
-  "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
+    "2018-06-29": (C, aar) Uppdaterade mappstruktur mot kursrepo.
+    "2017-06-21": (B, aar) Skrev om inför python-v2.
+    "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
 ...
 Att läsa filer i Python
 ==================================
@@ -22,7 +23,16 @@ Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://
 
 Introduktion {#intro}
 --------------------------------------
-Vi gör ett simpelt program för att skapa en inköpslista. Vi har redan tre produkter i filen "items.txt" som behöver inhandlas, i vårt program ska vi kunna lägga till, ta bort och visa upp innehållet i filen. Vi vill inte ha några tomma rader i filen.
+Vi gör ett simpelt program för att skapa en inköpslista. Vi har redan tre produkter i filen "items.txt" i exempel mappen som behöver inhandlas, i vårt program ska vi kunna lägga till, ta bort och visa upp innehållet i filen. Vi vill inte ha några tomma rader i filen.
+
+Kopiera "items.txt" från exempel mappen.
+
+```bash
+# Ställ dig i kurskatalogen
+cd me
+cp -i example/file/string/items.txt kmom04/file
+cd kmom04/file
+```
 
 I programmet ska vi kunna göra val för om vi vill läsa vad filen innehåller, lägga till en produkt i filen, skriva över innehållet i filen och att ta bort en produkt från filen. Vi börjar med en klassisk while-loop med meny och input.
 

@@ -36,10 +36,9 @@ Gå till din kurskatalog i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab5
+dbwebb create lab6
 ```
-
-Materialet till labben ligger nu i din kurskatalog i `me/kmom05/lab5` enligt följande.
+Materialet skapas nu och läggs i en underkatalog till din katalog `me`.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -79,7 +78,7 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab5
+dbwebb validate lab6
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

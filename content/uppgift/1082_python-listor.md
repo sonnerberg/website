@@ -5,6 +5,7 @@ category:
     - python
     - lab
 revision:
+    "2018-06-29": (G, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-08-28": (F, mos) Bort med stycke om extrauppgifter.
     "2017-06-12": (E, mos) Uppdatering inför ht17 och v2 av labben.
     "2015-08-25": (D, mos) Uppdaterade till dbwebb v2.
@@ -36,7 +37,7 @@ Gå till din kurskatalog i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab4
+dbwebb create lab5
 ```
 
 Materialet skapas nu och läggs i en underkatalog till din katalog `me`.
@@ -79,7 +80,7 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab4
+dbwebb validate lab5
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

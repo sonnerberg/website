@@ -2,7 +2,8 @@
 author: efo
 category: python
 revision:
-  "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
+    "2018-06-29": (B, aar) Uppdaterade mappstruktur mot kursrepo.
+    "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
 ...
 Att läsa filer i Python
 ==================================
@@ -22,6 +23,16 @@ Kodexempel från denna övningen finns i kursrepot för [python-kursen](https://
 
 Läsa från fil {#lasa}
 --------------------------------------
+
+Kopiera "items.txt" från exempel mappen.
+
+```bash
+# Ställ dig i kurskatalogen
+cd me
+cp -i example/file/string/items.txt kmom05/file
+cd kmom05/file
+```
+
 Vi börjar med att öppna filen `items.txt` med hjälp av konstruktionen `with`, där definerar vi variabeln `filehandle` som innehåller kopplingen till filen. Med `filehandle` kan vi läsa hela filen genom att använda `read()`, men vi väljer att bara läsa en rad med hjälp av funktionen `readline()`.
 
 ```python

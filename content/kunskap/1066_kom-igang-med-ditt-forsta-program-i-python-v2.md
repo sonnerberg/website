@@ -6,6 +6,7 @@ author:
 category:
     - python
 revision:
+    "2018-06-29": (F, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-21": (E, efo) Bytte ordning på asciinema och video.
     "2017-06-09": (D, mos) Genomgången inför ht17, bort med CGI, nya videor.
     "2016-02-22": (C, mos) Genomgången, bort med onödig info och in med videor.
@@ -85,7 +86,7 @@ Först ställer vi oss i rooten av kursrepot. Sedan kopierar vi filen `example/h
 
 ```bash
 # Gå till ditt kursrepo python
-$ cp example/hello/hello.py me/kmom01/hello
+$ cp -i example/hello/hello.py me/kmom01/hello
 ```
 
 Tanken är att dina egna filer som du jobbar med under kursen samlas under katalogen `me`. Du kan nu gå in i din katalog `me/kmom01/hello` och köra filen igen.

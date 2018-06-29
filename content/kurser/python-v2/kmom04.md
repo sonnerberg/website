@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-18": (K, aar) La till moduler och flyttade listor till kmom05.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-06-14": (J, lew) Uppdatering inför hösten 2017.
@@ -99,9 +100,9 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions` då denna uppgiften bygger vidare på kmom03.
+1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/modules` då denna uppgiften bygger vidare på kmom03.
 
-1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
+1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python-strings)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
 
 
 
