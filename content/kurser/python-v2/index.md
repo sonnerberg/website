@@ -211,7 +211,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 
-
+<!--
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
@@ -228,6 +228,26 @@ Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningssch
 Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
 
 Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+-->
+
+
+Rekommenderad studieplan {#studieplan}
+---------------------------------------------
+
+Kursen har en [rekommenderad studieplan](kurser/python/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
+
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
+
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
+
+
+
+Lektionsplan {#lektionsplan}
+---------------------------------------------
+
+Det finns en [lektionsplan](kurser/python/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
