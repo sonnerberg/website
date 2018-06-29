@@ -1,24 +1,29 @@
-####BTH Webbprogrammering 2018
+#### Aktuellt
 
-[FIGURE src=image/snapvt18/bth_logo_platta.jpg]
+[FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
 
-BTH's utbildningar inom Webbprogrammering finns på campus, distans och kurspaket. Antagning.se är öppen, ansök nu.
-
-* [Frågor och svar](t/6968)
-
-Välkommen till Blekinge Tekniska Högskola!
-
-
-
-####Aktuellt
-
-[FIGURE src=https://grillcon.dbwebb.se/image/grill-album/mos_grill.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårens GrillCon är nu avklarad, sommaren närmar sig."]
-
+* [Jag ska börja studera i höst 2018 (frågor/svar)](t/7488)
 * [Allra, allra sista inlämning för rester i ITs-kurser](t/7484)
 
 Höstterminen startar 3/9. Introveckan för alla ettor är en vecka tidigare.
 
+
 <!--
+#### BTH Webbprogrammering 2018
+
+[FIGURE src=image/snapvt18/bth_logo_platta.jpg]
+
+BTH's utbildningar inom Webbprogrammering finns på campus, distans och kurspaket.
+
+Välkommen till Blekinge Tekniska Högskola!
+-->
+
+
+<!--
+[FIGURE src=https://grillcon.dbwebb.se/image/grill-album/mos_grill.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårens GrillCon är nu avklarad, sommaren närmar sig."]
+
+
+
 * [Omregistrering och restinlämningar](kurser/faq/omregistrering)
 * [Uppsamlingsheat rättningar inlämning senast april 1, 2018](t/7101)
 * [Om 3-veckors uppropet lp4](t/7415)
