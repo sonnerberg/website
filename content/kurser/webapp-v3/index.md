@@ -18,11 +18,11 @@ Kursen webapp (v3)
 
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med HTML, CSS och JavaScript.
 
+
+
 <!--more-->
 
-[WARNING]
-**Kursutveckling pågår.**
-[/WARNING]
+
 
 Kursen syftar till att lära ut utveckling av webbapplikationer med HTML, CSS och JavaScript och fokuserar på mobila enheter och läsplattor.
 
