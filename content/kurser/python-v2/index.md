@@ -5,8 +5,9 @@ author:
     - efo
     - aar
 revision:
+    "2018-08-06": (H, efo) Uppdatering från projekt till individuell examination.
     "2018-06-20": (G, aar) Uppdatering av vilka kapitels som ska läsas när.
-    "2018-06-20": (F, efo) Uppdatering av kmom beskrivningar inför v2 HT18.
+    "2018-06-19": (F, efo) Uppdatering av kmom beskrivningar inför v2 HT18.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-05-29": (E, mos) Genomgång och mindre uppdatering kursplan, justering kurslitteratur.
     "2016-11-01": (D, mos) Ladokmoment och studieplan omskrivna.
@@ -35,7 +36,7 @@ Detta är en grundkurs i programmering vilket innebär att vi startar med att sk
 
 Programmeringsspråket Python är ett högnivåspråk med stöd för olika programmeringsparadigmer som objektorientering och funktionell programmering. Du använder Python för att bekanta dig med dessa olika sätt att skriva din kod. Du får pröva på att använda Pythons inbyggda standardbibliotek med funktioner för stränghantering, filhantering och datastrukturer.
 
-Via litteraturstudier och praktiska övningar får du möjlighet att via programmeringsspråket Python, lära dig grunderna i strukturerad programmering och problemlösning. I slutet av kursen får du visa dina färdigheter i ett praktiskt programmeringsprojekt.
+Via litteraturstudier och praktiska övningar får du möjlighet att via programmeringsspråket Python, lära dig grunderna i strukturerad programmering och problemlösning. I slutet av kursen får du visa dina färdigheter i en praktisk individuell examination.
 
 
 
@@ -70,7 +71,7 @@ Mål {#mal}
 
 Efter genomförd kurs skall studenten:
 
-* kunna visa grundläggande kunskaper i problemlösning med strukturerad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* kunna visa grundläggande kunskaper i problemlösning med strukturerad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och individuell examination.
 * kunna visa grundläggande kunskaper i att lösa definierade problem via programmering i Python.
 
 
@@ -108,7 +109,7 @@ Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i ku
 
 ###Kmom02: Villkor och loopar {#kmom02}
 
-Kom i gång med grunderna i Python och öva hur du skriver kod med if-satser, loopar och hur du använder de inbyggda funktionerna. Därefter är det dags att skriva ditt första lite större program där Marvin skall få lite intelligens så han kan svara på frågor.
+Kom i gång med grunderna i Python och öva hur du skriver kod med if-satser, loopar och hur du använder de inbyggda funktionerna. Därefter är det dags att skriva ditt första lite större program där Marvin skall få lite intelligens så hen kan svara på frågor.
 
 [Instruktion till kursmoment 02](kurser/python-v2/kmom02).
 
@@ -146,9 +147,9 @@ Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupl
 
 
 
-###Kmom07/10: Projekt och examination {#kmom10}
+###Kmom07/10: Individuell examination {#kmom10}
 
-Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
+Avslutningsvis gör du en individuell examination enligt en specifikation. Den individuella examinationen är det sista du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
 [Instruktion till kursmoment 10](kurser/python-v2/kmom10).
 
@@ -207,9 +208,9 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom04     | Ch 7                   |
 | Kmom05     | Ch 8                   |
 | Kmom06     | Ch 9, 10               |
-| Kmom10     |                        |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
+
 
 
 <!--
