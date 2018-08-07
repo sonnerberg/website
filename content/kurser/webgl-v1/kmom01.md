@@ -109,7 +109,7 @@ Föreläsningsmaterial finner du i kursrepot under [`slide/01.*`](webgl/repo/sli
 
 Följande källor är relevanta och ger dig en orientering i WebGL och det som krävs för att jobba med WebGL.
 
-1. Webbplatsen [WebGL Fundamentals](http://webglfundamentals.org/) innehåller en samling artiklar som riktar sig till den som precis börjat koda WebGL. Det kan vara bra att använda sig av de artiklarna som komplement till boken. 
+1. Webbplatsen [WebGL Fundamentals](http://webglfundamentals.org/) innehåller en samling artiklar som riktar sig till den som precis börjat koda WebGL. Det kan vara bra att använda sig av de artiklarna som komplement till boken.
 
 1. Webbplatsen [Learning WebGL](http://learningwebgl.com/blog/?page_id=1217) innehåller ett antal lektioner om hur man kommer igång med WebGL. De kan komplettera boken.
 
@@ -140,7 +140,7 @@ Följande källor är relevanta och ger dig en orientering i WebGL och det som k
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
+1. Gör uppgiften "[Skapa en portfölj för kursen webgl](uppgift/skapa-en-portfolj-for-kursen-webgl)". Spara resultatet i `me/portfolio`.
 
 1. Gör labben "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)"  Labben genereras i `me/kmom01/lab1`.
 
