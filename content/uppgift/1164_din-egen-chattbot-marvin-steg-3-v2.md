@@ -68,11 +68,11 @@ cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
 cd kmom04/marvin3
 ```
 
-1. Skapa en ny fil `marvin.py` och lägg alla menyvalsfunktioner i denna nya Pythonmodul. Importera `marvin.py` i `main.py`.
+1. Skapa en ny fil `main.py` och lägg alla menyvalsfunktioner i denna nya Pythonmodul. Importera `marvin.py` i `main.py`.
 
 1. Lär Marvin kommandot "citat". Skapa en ny fil `quote.py` och lägg hanteringen av kommandot "citat" i denna modul. Importera modulen `quote.py` i `main.py`. Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`. Kommandot "citat" ska skrivas direkt till Marvin. Det ska **inte** ligga bakom ett menyval som tidigare.
 
-1. Menyval: där Marvin i samma sträng skriver ut: dagens datum och nuvarande tid, hur han mår (slumpmässigt humör), ett heltal, samt ett floattal med 3 decimaler. Ge talen ett sammanhang i texten.
+1. **Menyval 12**: där Marvin i samma sträng skriver ut: dagens datum och nuvarande tid, hur han mår (slumpmässigt humör), ett heltal, samt ett floattal med 3 decimaler. Ge talen ett sammanhang i texten.
 Strängen ska hämtas från en textfil som du själv skapar och formateras med ovanstående variabler. Notera att du i programmet inte ska ändra i filen. Kursrepot innehåller ett [exempel på strängformattering med fil](https://github.com/reechani/python/blob/master/example/marvin/format.py) som du kan använda som grund för denna uppgift. Om du tycker det passar in skapa även en egen modul för detta menyval.
 
 1. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
