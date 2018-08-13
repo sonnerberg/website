@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-08-13": (M, aar) Flyttade hit extrauppgifter från kmom06.
     "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-08": (K, aar) La till listor, flyttade dict/tuple till nästa och tog bort argparse.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
@@ -118,8 +119,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-Det finns inga extrauppgifter.
+Om du har tid och lust finns extra uppgifter att utföra.
 
+1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe-v2)". Spara alla filer under `me/kmom05/marvin4`.
+
+1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-krypt)". Spara alla filer under `me/kmom05/marvin4`.
 
 
 
