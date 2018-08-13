@@ -280,7 +280,7 @@ Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-individuell).
 
 
 
