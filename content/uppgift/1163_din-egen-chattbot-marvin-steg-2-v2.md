@@ -72,7 +72,7 @@ input: "BRöderna Ivarsson Osby"             output: "BRIO"
 input: "Ingvar Kamprad Elmtaryd Agunnaryd"  output: "IKEA"
 ```
 
-6. **Menyval 11**: Sträng maskering. Skapa ett nytt val där Marvin ber om en sträng och ersätter alla utom de fyra sista karaktärerna med "#". Återanvänd er av funktionen ni skapade för Menyval 2, Ordmultiplicering, för att skapa strängen med "#"s och lägg sen på de fyra sista karaktärerna. Det kan vara så att ni kan behöva göra om Menyval 2 funktionen för att det ska fungera, beroende på hur ni implementerade den. Exempel:
+6. **Menyval 11**: Sträng maskering. Skapa ett nytt val där Marvin ber om en sträng och ersätter alla utom de fyra sista karaktärerna med "#". Bryt ut funktionaliteten som multiplicerar en sträng från menyval 3 till en egen funktion. Den nya funktionen ska användas av både detta menyvalet och menyval 3. Använd den för att skapa strängen med "#"s och lägg sen på de fyra sista karaktärerna. Exempel:
 ```python
 input: "4556364607935616"     output: "############5616"
 input: "64607935616"          output: "#######5616"
