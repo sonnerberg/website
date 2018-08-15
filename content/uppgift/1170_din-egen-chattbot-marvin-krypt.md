@@ -47,11 +47,11 @@ Utgå från din kod i katalogen `me/kmom05/marvin4` och bygg vidare där.
 cd me/kmom05/marvin4
 ```
 
-2. **Menyval E2**: Lär Marvin koda om en sträng med ROT13.
+2. **Menyval D2**: Lär Marvin koda om en sträng med ROT13.
 
-3. **Menyval E3**: Lär Marvin koda Ceasarchiffer med valbart antal teckens justering.
+3. **Menyval D3**: Lär Marvin koda Ceasarchiffer med valbart antal teckens justering.
 
-4. **Menyval E4**: Lär Marvin knäcka ett Ceasarchiffer den hårda vägen genom att visa upp alla alternativ och låta användaren bestämma vilket som är rätt antal teckens justering. Du knäcker ett Ceasarchiffer genom att ta en krypterad sträng och "kryptera baklänges", det vill säga att du shiftar -1, -2, -3 och så vidare med alla möjliga justeringar.
+4. **Menyval D4**: Lär Marvin knäcka ett Ceasarchiffer den hårda vägen genom att visa upp alla alternativ och låta användaren bestämma vilket som är rätt antal teckens justering. Du knäcker ett Ceasarchiffer genom att ta en krypterad sträng och "kryptera baklänges", det vill säga att du shiftar -1, -2, -3 och så vidare med alla möjliga justeringar.
 
 5. Validera Marvin genom att göra följande kommando i kurskatalogen i terminalen.
 
@@ -68,7 +68,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. **Menyval E5**: Använd följande rader och lär Marvin att automatiskt dekryptera dem. Använd ordlistor och din kunskap om *letter frequency* för att göra Marvin smartare. 
+1. **Menyval D5**: Använd följande rader och lär Marvin att automatiskt dekryptera dem. Använd ordlistor och din kunskap om *letter frequency* för att göra Marvin smartare. 
 
 ```text
 R UXEN VH TRCCH,

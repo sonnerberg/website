@@ -80,7 +80,7 @@ cd me/kmom05/marvin4
 
 1. Lär Marvin spela TicTacToe enligt introduktionen. Använd datastrukturen lista med listor.
 
-1. **Menyval E1**: Skapa ett nytt menyval som startar en match TicTacToe.
+1. **Menyval D1**: Skapa ett nytt menyval som startar en match TicTacToe.
 
 3. Lär Marvin spara en omgång till fil samt att initiera en omgång genom att läsa ställningen från en fil.
 
