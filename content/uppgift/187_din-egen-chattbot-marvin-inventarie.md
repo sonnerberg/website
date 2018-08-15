@@ -66,7 +66,7 @@ Bygg vidare på din Marvin 3.
 
 ```bash
 # Ställ dig i kurskatalogen
-cp -ri me/kmom04/marvin3/*.py me/kmom05/marvin4
+cp -ri me/kmom04/marvin3/* me/kmom05/marvin4
 cd me/kmom05/marvin4
 ```
 
@@ -80,7 +80,7 @@ cd me/kmom05/marvin4
 
 1. När du ger inventory-kommandon till Marvin så skall det ske i klartext. Genom att prata med Marvin, via kommandon, så ska han kunna visa och förändra innehållet i sitt *inventory*.
 
-Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad som helst. Nedan visas `flower` enbart som exempel.
+Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad som helst. Nedan visas `flower` **enbart som exempel**.
 
 | Kommando        | Vad händer                       |
 |-----------------|----------------------------------|
