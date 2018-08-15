@@ -66,7 +66,7 @@ Bygg vidare på din Marvin 3.
 
 ```bash
 # Ställ dig i kurskatalogen
-cp -ri me/kmom04/marvin3/*.py
+cp -ri me/kmom04/marvin3/*.py me/kmom05/marvin4
 cd me/kmom05/marvin4
 ```
 
