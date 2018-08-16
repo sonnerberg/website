@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2018-08-16": (D, mos) Bort redovisning i forum samt bytte ITs mot Canvas.
     "2017-06-15": (C, mos) Nytt stycke om feedback.
     "2015-08-06": (B, mos) Var man sparar redovisningstexter i kursrepot.
     "2015-03-17": (A, mos) Första utgåvan för htmlphp kursen.
@@ -58,17 +59,19 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt.
 
 
 
+<!--
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
 Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/htmlphp). Bifoga länken till din me-sida.
+-->
 
 
 
 Kopiera redovisningstexten till Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [Canvas](bth#canvas) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen i Canvas tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 

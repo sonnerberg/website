@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-08-16": "(D, mos) Bort redovisning i forum samt bytte ITs mot Canvas."
     "2018-03-19": "(C, mos) Uppdaterad inför oophp-v4 vt18."
     "2017-03-24": "(B, mos) Uppdaterad inför oophp-v3 vt17."
     "2015-10-29": "(A, mos) Ny inför oophp ht15."
@@ -62,17 +63,18 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
+<!--
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
 Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/oophp). Bifoga länken till din me-sida.
+-->
 
 
-
-Kopiera redovisningstexten till ITs {#its}
+Kopiera redovisningstexten till Canvas {#lms}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen i Canvas tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
 
