@@ -28,3 +28,4 @@ Minnesnoteringar
 * Elements of OO.
 * Reflection
 * Annotations
+* Typhintning

@@ -130,10 +130,10 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/grupproj/block-kurser-kmom
+                                route: kurser/exjobb/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
-                                route: kurser/grupproj/block-kurser-kmom
+                                route: kurser/exjobb/block-kurser-kmom
 ...

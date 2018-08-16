@@ -1,5 +1,5 @@
-####Jobba med kurserna
+#### Läsår 2018/2019
 
-[FIGURE src="/image/snapvt16/bth-kvall.jpg?sc=banner2"]
+[FIGURE src="/image/snapvt16/bth-kvall.jpg?w=c8&h=100&cf"]
 
-Här kan du som redan är student jobba med kurserna på dbwebb. Här finns genvägar till kursmaterial och annat bra att ha för dina studier.
+Jobba med kurserna -- här finner du genvägar till kurs och kursmoment.
