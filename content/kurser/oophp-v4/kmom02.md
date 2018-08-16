@@ -3,6 +3,7 @@ author:
     - mos
     - lew
 revision:
+    "2018-08-16": "(prel, mos) Varning inför uppdatering inför hösten."
     "2018-03-27": "(B, mos) Uppdaterad oophp v4."
     "2017-03-31": "(A, mos, lew) Första versionen."
 ...

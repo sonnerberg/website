@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-08-16": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-08-28": (G, mos) Bort referens till Firebug.
     "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
