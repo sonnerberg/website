@@ -10,6 +10,8 @@ Minnesnoteringar
 **Arbete pågår**
 [/WARNING]
 
+* Controllers
+
 * Abstrakta basklasser (djur, hund)
 * Abstrakta metoder
 * Final
@@ -24,3 +26,5 @@ Minnesnoteringar
 * Code complexity (printHistogram)
 * Test complexity (printHistogram)
 * Elements of OO.
+* Reflection
+* Annotations
