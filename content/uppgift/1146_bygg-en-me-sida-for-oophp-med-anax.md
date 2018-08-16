@@ -4,6 +4,7 @@ category:
     - kurs oophp
     - anax
 revision:
+    "2018-08-16": "(B, mos) Genomgången inför ht18, bytt bas för redovisa/."
     "2018-03-19": "(A, mos) Första utgåvan."
 ...
 Bygg en me-sida för oophp med Anax
@@ -28,11 +29,11 @@ Så här kan det se ut när det du har koll på mallen för me-sidan.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har tidigare (i design-kursen) sett den övergripande katalogstrukturen för ramverket Anax.
-
 Du kan grunderna i Git och GitHub.
 
 Du har PHP i din path och du har installerat composer.
+
+Om du är bekant med ramverk sedan tidigare (design-kursen, databas-kursen) så kommer du att känna igen katalogstruktur och koncept som används i det ramverk (Anax) som används för att bygga din me-sida.
 
 
 
@@ -49,13 +50,19 @@ Du kan se hur jag jobbar igenom stegen i videoserien "[En me-sida med Anax i kur
 
 ### Kopiera från example/redovisa {#kopiera}
 
-Det finns en installation av Anax som är specifik för oophp-kursen och dess redovisningssida. Kopiera den och installera det som behövs med composer.
+Det finns en installation av Anax som är specifik för oophp-kursen och dess redovisningssida. Kopiera den och installera det som behövs med composer (exklusive utvecklingsverktygen).
 
 ```text
 # Stå i rooten av kursrepot
 rsync -av example/redovisa me
 cd me/redovisa
-composer install
+composer install --no-dev
+```
+
+När du är klar så kan du se vilka moduler som installerades av composer.
+
+```text
+composer show
 ```
 
 Nu kan du öppna en webbläsare och peka mot katalogen `redovisa/htdocs`.
@@ -86,7 +93,7 @@ Du kan nu testa vilka verktyg som finns installerade via följande kommando.
 make check
 ```
 
-Du kan testköra testsuiten som finns.
+Du kan testköra testsviten som finns, om det nu finns några tester att köra.
 
 ```text
 make test
@@ -129,7 +136,7 @@ dbwebb publish redovisa
 
 Du behöver ändra sökvägarna i `htdocs/.htaccess`, annars får du 404 på länkar och 500 på bilderna. Det är samma struktur som fanns i design-kursen.
 
-Glöm inte att det finns `dbwebb publishfast` och `dbwebb publishpure` som låter dig publicera snabbt och utan minifiering (nödvändigt vid felsökning). 
+Glöm inte att det finns `dbwebb publishfast` och `dbwebb publishpure` som låter dig publicera snabbt och utan minifiering (nödvändigt vid felsökning så att radnummer blir rätt vid felmeddelanden). 
 
 
 
