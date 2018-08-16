@@ -9,6 +9,12 @@ revision:
 Kmom02: Arv och Komposition
 ==================================
 
+[WARNING]
+
+**Kursmomentet är under uppdatering inför ht18.**
+
+[/WARNING]
+
 Vi fortsätter träna på programmering med klasser och objekt. Vi jobbar igenom ett antal grundkonstruktioner i objektorientering och ser hur de implementeras i PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
 
 Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden och där ta hjälp av docblock-kommentarer.
