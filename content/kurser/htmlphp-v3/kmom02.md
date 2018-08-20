@@ -45,7 +45,7 @@ Läs & Studera  {#lasanvisningar}
 Läs följande för att fortsätta bekanta dig med teknikerna.
 
 1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
-    * [XXX](guide/kom-igang-med-html-och-css/XXX)
+    * [mer innehåll](guide/kom-igang-med-html-och-css/mer-innehall)
 
 
 
@@ -55,7 +55,7 @@ Läs följande för att fortsätta bekanta dig med tekniken.
 
 1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
     * [Värden, variabler och typer](guide/kom-igang-med-programmering-i-php/varden-variabler-och-typer)
-    * [Kontrollstrukturer](guide/kom-igang-med-programmering-i-php/kontrollstrukturer) 
+    * [Kontrollstrukturer](guide/kom-igang-med-programmering-i-php/kontrollstrukturer)
 
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 5 Villkorssatser
