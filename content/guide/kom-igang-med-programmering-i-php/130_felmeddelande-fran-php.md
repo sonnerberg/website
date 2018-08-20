@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-08-20": "(C, mos) Rätt länk till warning.png."
     "2018-06-20": "(B, mos) Genomgången och uppdaterad."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -134,7 +135,7 @@ Felmeddelandet säger då följande.
 
 Det kan se ut så här.
 
-[FIGURE src=image/snapht18/warning.php caption="Ett felmeddelande av typen WARNING."]
+[FIGURE src=image/snapht18/warning.png caption="Ett felmeddelande av typen WARNING."]
 
 
 
