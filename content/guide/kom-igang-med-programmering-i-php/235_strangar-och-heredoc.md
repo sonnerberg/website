@@ -46,7 +46,7 @@ Det man får är en mer tydlig och sammanhängande sträng där man fritt kan an
 Felmeddelande med heredoc {#fel}
 -----------------------
 
-Det är viktigt att den avslutande konstruktionen `EOD;` alltid står längst in till vänster och att den inte följs av tomma tecken som mellanslag eller tabbar. Parsern letar efter det som avslutar heredoc-strängen och om det inte hittas får man ett felmeddelande som säger "pars error", något i stil med följande.
+Det är viktigt att den avslutande konstruktionen `EOD;` alltid står längst in till vänster och att den inte följs av tomma tecken som mellanslag eller tabbar. Parsern letar efter det som avslutar heredoc-strängen och om det inte hittas får man ett felmeddelande som säger "parse error", något i stil med följande.
 
 > _"Parse error: syntax error, unexpected end of file in /home/mos/htmlphp/example/guide-php/02/types.php on line 56"_
 
