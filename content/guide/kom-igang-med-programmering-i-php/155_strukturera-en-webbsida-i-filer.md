@@ -46,7 +46,7 @@ Vi skapar filen `footer.php`, sidans gemensamma footer.
 </pre>
 ```
 
-Vi kan nu inkludera dessa bitar till en enhet, en webbisda, via en ny fil `page.php`.
+Vi kan nu inkludera dessa bitar till en enhet, en webbsida, via en ny fil `page.php`.
 
 ```php
 <?php
