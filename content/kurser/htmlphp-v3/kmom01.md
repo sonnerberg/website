@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-08-20": "(H, mos) Uppdaterat htmlphp v3 ht2018."
     "2017-09-01": (G, mos) Video till installation av dbwebb-cli.
     "2017-06-15": (F, mos) Ny struktur labbmiljö.
     "2016-08-31": (E, mos) Lade till rätt videoserie från youtube.
@@ -13,14 +13,6 @@ revision:
 ...
 Kmom01: Bygg en webbplats
 ==================================
-
-[WARNING]
-
-**Kursutveckling pågår till kurs htmlphp v3**
-
-Kursstart hösten 2018.
-
-[/WARNING]
 
 Kursmomentet visar hur du kommer igång med labbmiljön, dels via en installation på din egen dator och dels genom att publicera resultatet på driftsservern. Du kommer att utveckla din kod lokalt och därefter kopiera över resultatet till en driftsserver.
 
