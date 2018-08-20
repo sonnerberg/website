@@ -44,6 +44,16 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-8 studietimmar)*
 
 
+
+### HTML & CSS {#htmlcss}
+
+Läs följande för att fortsätta bekanta dig med teknikerna.
+
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
+    * [bakgrund](guide/kom-igang-med-html-och-css/bakgrund)
+
+
+
 ###Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
@@ -129,11 +139,11 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Beskriv hur väl du kan PHP (nybörjare, erfaren). 
-* Har du programmerat tidigare, i vilka språk? 
+* Beskriv hur väl du kan PHP (nybörjare, erfaren).
+* Har du programmerat tidigare, i vilka språk?
 * Känner du igen dig i PHP-koden?
-* Vad tycker du om PHP så här långt in i kursen? 
-* Fick du hjälp av guiden php20? 
+* Vad tycker du om PHP så här långt in i kursen?
+* Fick du hjälp av guiden php20?
 * Vad tyckte du om videoserien från YouTube och Codecourse?
 * Vad tycker du om PHP-boken som är kurslitteratur?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
