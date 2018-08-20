@@ -1,54 +1,52 @@
 ---
 author: mos
 revision:
+    "2018-08-20": "(B, mos) Uppdaterad med nya exempelprogram."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Villkorssatser med switch-case
 =======================
 
-Villkorssatsen [`switch-case`](http://php.net/manual/en/control-structures.switch.php) kan jämföras med en serie av if-satser. När det blir **många tester på ett och samma villkor** så är detta en konstruktion att föredra framför upprepade satser av `if`, `else if`. Koden blir mer läsbar och det är bra. Låt oss studera ett exempel.
-  
+Villkorssatsen [`switch-case`](http://php.net/manual/en/control-structures.switch.php) kan jämföras med en serie av if-satser. När det blir **många tester på ett och samma villkor** så är detta en konstruktion att föredra framför upprepade satser av `if`, `elseif`. Koden kan bli mer läsbar och det är bra.
+
+Låt oss studera ett exempel.
+
+
+
+switch {#switch}
+------------------------
+
+Låt oss säga att en boll har en färg och beroende på dess färg så vill vi skriva ut en liknelse om bollen. Ungefär så här.
+
+> "Bollen är gul och lyser likt solen."
+
+Ja, för att ta ett exempel alltså...
+
+För att göra samma sak mot flera färger så kan vi skriva en if-sats.
+
 ```php
-<?php
-//$a = 42;
-//$a = 1337;
-$a = "Hello World";
-
-// As if-statements
-echo "<p>As if.</p>";
-if($a == 42) {
-  echo '<p>$a is equal to 42</p>';
-} 
-else if ($a == 1337) {
-  echo '<p>$a is equal to 42</p>';
-} 
-else if ($a == "Hello World") {
-  echo '<p>$a is equal to 42</p>';
-} 
-else {
-  echo '<p>$a is NOT an known value.</p>';
-}
-
-// As switch/case
-echo "<p>As switch.</p>";
-switch($a) {
-  case 42:
-    echo '<p>$a is equal to 42</p>';
-    break;
-  
-  case 1337:
-    echo '<p>$a is equal to 42</p>';
-    break;
-    
-  case "Hello World":
-    echo '<p>$a is equal to 42</p>';
-    break;
-    
-  default:
-    echo '<p>$a is NOT an known value.</p>';
+if ($color === "yellow") {
+    echo "The ball is yellow and shines like the sun.\n";
+} elseif ($color === "red") {
+    echo "It is a red ball, like the planet Mars.\n";
+} else {
+    echo "The ball has some unknown color.\n";
 }
 ```
 
-[Testa mitt exempel här](kod-exempel/guiden-php-20/villkor/switch.php).
+Men, när vi i detta fallet gör flera tester mot samma variabel så kan vi istället konstruera en switch-sats som gör samma sak, men på ett mer passande sätt i sammanhanget.
+  
+```php
+switch ($color) {
+    case "yellow":
+        echo "The ball is yellow and shines like the sun.\n";
+        break;
+    case "red":
+        echo "It is a red ball, like the planet Mars.\n";
+        break;
+    default:
+        echo "The ball has some unknown color.\n";
+}
+```
 
-Du är inte begränsad till en rad i varje `case:`, du kan skriva flera rader av kod i varje `case:`. Du kan använda måsvingar för att omsluta kodraderna i varje `case:`, men det är inget krav.
+En switch-sats lämpar sig alltså när man gör flera tester mot ett och samma villkor, eller variabel.
