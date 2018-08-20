@@ -9,7 +9,7 @@ GPS och karta
 
 [FIGURE src=/image/webapp/gps.png?w=c5 class="right"]
 
-Vi ska i denna övning använda Google Places API och Cordova Pluginen geolocation för att visa positionsdata på en karta. Vi ska titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
+Vi ska i denna övning använda leaflet.js tillsammans med OpenStreetMap och Cordova Pluginen geolocation för att visa positionsdata på en karta. Vi ska titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
 
 
 
@@ -23,9 +23,14 @@ Exempelprogrammet från denna övning finns i kursrepot [example/gps](https://gi
 
 En karta {#karta}
 --------------------------------------
-Vi kommer i detta exemplet använda Google Maps och för att använda Google Maps API behövs en API nyckel. Skaffa en gratis API nyckel på [Google Maps API](https://developers.google.com/maps/web/) och välj GET A KEY. Skapa ett nytt projekt för att koppla nyckeln till det.
+Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår mobila enhet och för att rita ut markörer på denna karta.
 
-Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katalogen har vi en simpel mithril app. I `index.html` har vi lagt till ytterligare en JavaScript fil annars är den som vanligt i en Cordova app.
+Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katalogen har vi en simpel mithril app. Vi lägger nu till leaflet.js genom att använda kommandot `npm install leaflet`. Vi kopierar in `leaflet.css` och `images/` från leaflet paketet i `node_modules/` med följande kommando och nedan har vi lagt till `leaflet.css` i `index.html`.
+
+```bash
+# Stå i me/kmom06/gps
+cp -r node_modules/leaflet/dist/leaflet.css node_modules/leaflet/dist/images/ www/css/
+```
 
 ```html
 <!DOCTYPE html>
@@ -33,17 +38,15 @@ Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katal
     <head>
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/leaflet.css">
         <title>Maps and GPS</title>
     </head>
     <body>
-        <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR_API_KEY]"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="dist/app.js"></script>
     </body>
 </html>
 ```
-
-Ersätt [YOUR_API_KEY] med din egna API nyckel.
 
 I filen `js/index.js` som är ingångspunkten för vår app väntar vi in att enheten är redo och sen använder vi `m.mount()` för att ladda den enda vyn i appen `map.js`.
 
@@ -65,9 +68,14 @@ var app = {
 app.initialize();
 ```
 
-I vyn `map.js` definieras först `view`-funktionen, vi vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. **Viktigt att explicit ge kartan en höjd i pixlar eller rem annars visas den inte**. ID't `#map` används av JavaScript för att hämta ut rätt element.
+I vyn `map.js` importerar vi `leaflet.js`, sedan definieras `view`-funktionen, vi vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. **Viktigt att explicit ge kartan en höjd i pixlar eller rem annars visas den inte**. ID't `#map` används av JavaScript för att hämta ut rätt element.
 
 ```javascript
+"use strict";
+
+var m = require("mithril");
+var L = require("leaflet");
+
 module.exports = {
     view: function() {
         return [
@@ -92,35 +100,26 @@ module.exports = {
 };
 ```
 
-Funktionen `showMap` definierar ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna. I [Google Maps dokumentationen](https://developers.google.com/maps/documentation/javascript/) finns en beskrivning av de attribut som finns för `google.maps.Map` och `google.maps.Marker`.
+Funktionen `showMap` definierar ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna.
 
 ```javascript
 function showMap() {
     var places = {
-        "BTH": { lat: 56.181932, lng: 15.590525 },
-        "Stortorget": { lat: 56.160817, lng: 15.586703 },
-        "Hoglands Park": { lat: 56.164077, lng: 15.585887 },
-        "Rödebybacken": { lat: 56.261121, lng: 15.628609 }
+        "BTH": [56.181932, 15.590525],
+        "Stortorget": [56.160817, 15.586703],
+        "Hoglands Park": [56.164077, 15.585887],
+        "Rödebybacken": [56.261121, 15.628609]
     };
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: places["BTH"]
-    });
+    map = L.map('map').setView(places["BTH"], 13);
 
-    for (var place in places) {
-        if (places.hasOwnProperty(place)) {
-            new google.maps.Marker({
-                position: places[place],
-                map: map,
-                title: place
-            });
-        }
-    }
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 }
 ```
 
-Vi skapar en karta (`map`) där vi definierar vilken punkt vi vill ha som centrum och även hur långt vi har zoomat in. Vi skapar sedan markörer för varje plats vi definierat i `places` objektet.
+Vi skapar en karta (`map`) där vi definierar vilken punkt vi vill ha som centrum och även hur långt vi har zoomat in. Vi lägger sedan till vilka bilder vi vill använda som **tiles** i kartan. Jag väljer att använda OpenStreetMaps tiles, men det finns en uppsjö av andra man kan använda.
 
 
 
