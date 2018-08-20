@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-08-20": "(B, mos) Rätt länk till forumet."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Introduktion
@@ -28,7 +29,7 @@ Guiden förutsätter att du redan har färdig miljö där PHP fungerar. Här kan
 Forumtråd kopplad till guiden {#forum}
 ----------------------------------
 
-Det finns en [tråd i forumet](t/7233) som är kopplad till denna guide. Där kan du se större uppdateringar som är gjorda. Du kan även ställa frågor eller bidra med tips och trix. 
+Det finns en [tråd i forumet](t/7539) som är kopplad till denna guide. Där kan du se större uppdateringar som är gjorda. Du kan även ställa frågor eller bidra med tips och trix. 
 
 
 
