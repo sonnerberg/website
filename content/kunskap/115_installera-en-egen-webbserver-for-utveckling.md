@@ -2,6 +2,7 @@
 author: mos
 category: labbmiljo
 revision:
+    "2018-08-21": (F, mos) Information om Mac och inte VM.
     "2015-08-17": (E, mos) La till info om symboliska länkar.
     "2015-04-10": (D, mos) Tog bort referens till jEdit.
     "2015-01-21": (C, mos) Ändrade hur man byter port på Apache i Windows.
@@ -24,7 +25,9 @@ Webbserver Apache httpd med PHP och databas {#webbserver}
 
 Det finns ett antal sätt att installera Apache och PHP. Välj ett som du känner dig bekväm med. 
 
-Som rekommenderad miljö på Windows och Mac OS används [XAMPP](https://www.apachefriends.org/index.html). 
+Som rekommenderad miljö på Windows och Mac OS används [XAMPP](https://www.apachefriends.org/index.html).
+
+När du väljer miljö på Mac så välj den som inte heter VM i namnet. Det står för virtual machine och den vill vi undvika. Du kan läsa [mer om detta i forumet](https://dbwebb.se/t/6648).
 
 Jag har valt att använda XAMPP eftersom den är open source och fungerar bra. XAMPP är lätt att installera och komma igång med och den har ett trevligt och enkelt gränssnitt. Dessutom finns den både till Windows, Mac OS och Linux.
 
