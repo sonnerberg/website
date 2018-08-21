@@ -7,7 +7,7 @@ revision:
 Villkorssatser med switch-case
 =======================
 
-Villkorssatsen [`switch-case`](http://php.net/manual/en/control-structures.switch.php) kan jämföras med en serie av if-satser. När det blir **många tester på ett och samma villkor** så är detta en konstruktion att föredra framför upprepade satser av `if`, `elseif`. Koden kan bli mer läsbar och det är bra.
+Villkorssatsen [`switch-case`](http://php.net/manual/en/control-structures.switch.php) kan jämföras med en serie av if-satser. När det blir många tester på ett och samma villkor så är detta en konstruktion att föredra framför upprepade satser av if och elseif. Koden kan bli mer läsbar och det är bra.
 
 Låt oss studera ett exempel.
 
@@ -49,4 +49,6 @@ switch ($color) {
 }
 ```
 
-En switch-sats lämpar sig alltså när man gör flera tester mot ett och samma villkor, eller variabel.
+En switch-sats lämpar sig alltså när man gör flera tester mot ett och samma villkor/variabel.
+
+I programmeringssammanhang finns det ofta flera sätt att lösa ett problem, man får välja det sätt som man anser passar bäst. När man är nybörjare så får huvudsaken vara att "lösa uppgiften", efterhand som man lär sig allt mer så kan man se att olika lösningar ger olika kodstrukturer och man kan välja den kodstruktur man föredrar i det specifika fallet. Man lär sig efter hand.

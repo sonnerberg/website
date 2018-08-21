@@ -3,10 +3,10 @@ author: mos
 revision:
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
-Struktur med sidkontroller, vyer och tempaltefiler
+Struktur med sidkontroller, vyer och templatefiler
 =======================
 
-Låt oss göra en uppdaterad struktur för vårt exempelprogram, en struktur som försöker ta ett första steg att separera olika typer av kod i olika filer.
+Låt oss göra en uppdaterad struktur för vårt exempelprogram, en struktur som tar ett steg till att separera olika typer av kod i olika filer.
 
 
 
@@ -81,9 +81,7 @@ Det första som händer i sidkontrollern är att filen `config.php` inkluderas.
 include(__DIR__ . "/config.php");
 ```
 
-När filen config.php läses in så sätter den grunden för sidan, ofta sätter man vilken typ av felhantering som skall ske, i utvecklingssammanhang så vill man visa alla felmedelanden och om det är en produktionssite så vill man inte visa eventuella felmeddelanden för användaren.
-
-Detta är det första som sker i varje sidkontroller.
+När filen config.php läses in så sätter den grunden för sidan, ofta sätter man vilken typ av felhantering som skall ske, i utvecklingssammanhang så vill man visa alla felmedelanden och om webbplatsen är i produktion och körs live, så vill man inte visa eventuella felmeddelanden för användaren då det kan innebära säkerhetsrisker och mindre bra användbarhet i allmänhet.
 
 Om man använder en databas så kan man lägga information om hur man kopplar sig till databasen i denna filen.
 
@@ -139,7 +137,7 @@ Innehållet i filen `view/header.php` är tänkt att generera webbsidans överst
 
 Så här ser min enkla templatefil ut för `view/header.php`.
 
-```php
+```html
 <!doctype html>
 <html lang="en">
 <title><?= $title ?></title>
@@ -189,14 +187,14 @@ include(__DIR__ . "/view/footer.php");
 
 När man inkluderar en templatefil på det viset, eller vilken fil som helst, så blir alla variabler som är definierade, synliga i den filen. Man kan alltså definiera variabler i sidkontrollern och samma variabler blir sedan synliga och kan användas i templatefilen som renderar vyn.
 
-I tempaltefilen `view/footer.php` händer inte så mycket mer än att ett par html element stängs.
+I templatefilen `view/footer.php` händer inte så mycket mer än att ett par html-element stängs.
 
-```php
+```html
 
 </pre>
 
 </html>
-``` 
+```
 
 
 
@@ -205,6 +203,6 @@ Avslutningsvis om sidkontroller {#sid}
 
 Syftet med att strukturera sin kod i en sidkontroller är att den har full kontroll över hur den resulterande webbsidan renderas. Allt utgår från sidkontrollern och alla filer som inkluderas är synliga i själva sidkontrollern som blir en översta nivå för all kod.
 
-Att prata om templatefiler som renderar vyer som delar av den slutliga webbsidan är en terminologi som är vanlig i webbsammanhang. Det handlar egentligen bara om olika php-filer som inkluderas, det är vi själva som ger en struktur som säger att alla template-filer ligger i katalogen `view/`. Det gör det enklare att separera kod och påvisa att olika kod och filer har olika syften och roller att fylla när webbsidan genereras.
+Att prata om templatefiler som renderar vyer som delar av den slutliga webbsidan är en terminologi som är vanlig i webbsammanhang. Det handlar egentligen bara om olika php-filer som inkluderas, det är vi själva som ger en struktur som säger att alla templatefiler ligger i katalogen `view/`. Det gör det enklare att separera kod och påvisa att olika kod och filer har olika syften och roller att fylla när webbsidan genereras.
 
-Sakta medn säkert försöker vi bygga upp ett synsätt på vikten av struktur och en terminologi som gör det enklare att samtala kring kodandet.
+Sakta och säkert försöker vi bygga upp ett synsätt på vikten av struktur och en terminologi som gör det enklare att samtala kring kodandet.

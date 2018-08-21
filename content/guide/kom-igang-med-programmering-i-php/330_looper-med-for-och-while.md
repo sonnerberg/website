@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-08-20": "(B, mos) Omskriven med nya exempel."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Loopar med for och while
@@ -32,7 +33,7 @@ while ($number <= 10) {
 echo "The number now has the value: '$number'.\n";
 ```
 
-En while loop är bra då man har ett villkor som bestämmer hur länge loopen skall utföras. Tänk på att villkoret måste vara uppfyllt för att första iterationen skall utföras, annas "kommer man inte in" i loopen.
+En while loop är bra då man har ett villkor som bestämmer hur länge loopen skall utföras. Tänk på att villkoret måste vara uppfyllt för att första iterationen skall utföras, annars "kommer man inte in" i loopen.
 
 
 
@@ -66,7 +67,7 @@ for {#for}
 En for-loop har ett litet annat sätt att skriva sitt villkor, man kan se på det som en uppräknande loop där man kan sätta en variabel, ett villkor och en stegning av variabelns värde.
 
 ```php
-for (initiering av variabler; villkor; uppräkning av variabler) {
+for (initiering av variabler; villkor; uppräkning/nedräkning av variabler) {
 ```
 
 Så här ser en for loop ut som räknar från ett till 10.

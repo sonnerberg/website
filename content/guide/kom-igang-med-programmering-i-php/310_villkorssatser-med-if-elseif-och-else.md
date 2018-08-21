@@ -59,7 +59,7 @@ elseif-sats {#elseif-sats}
 
 Man kan kombinera en if-sats med en elseif. Då testas första villkoret, och sen det andra, och så vidare tills det första villkoret blir uppfyllt.
 
-I vårt exempel ovan skriver vi ut att talet 90 är "större än 50" och att det är "större än 70", men säg att vi bara vill skriva ut en av de egenskaperna, inte båda.
+I vårt exempel ovan skriver vi ut att talet 90 är "större än 50" och att det är "större än 70", men säg nu att vi enbart vill skriva ut en av egenskaperna, inte båda.
 
 Då kan vi konstruera en if-sats så här.
 
@@ -82,7 +82,7 @@ Så, tänk igenom att du lägger dina if-satser i rätt ordning.
 else-sats {#else-sats}
 -----------------------
 
-I stycket ovan hade vi en if-sats om värdet var jämnt och en if-sats om värdet var udda. Rent logiskt kan endast ett av villkoren vara uppfyllda.
+I det inledande stycket ovan, hade vi en if-sats om värdet var jämnt och en if-sats om värdet var udda. Rent logiskt kan endast ett av villkoren vara uppfyllda och endast en av if-satserna kommer att skriva ut sitt meddelande.
 
 Det såg ut så här.
 
@@ -96,7 +96,7 @@ if ($number % 2 !== 0) {
 }
 ```
 
-Eftersom bara ett av villkorenkan vara uppfyllda så kan vi skriva om koden till en if-else sats, så här.
+Eftersom bara ett av villkoren kan vara uppfyllda så kan vi skriva om koden till en if-else sats, så här.
 
 ```php
 if ($number % 2 === 0) {
@@ -113,7 +113,7 @@ I en if-else sats så testas första villkoret, om det inte är uppfyllt så utf
 Flera villkor med AND och OR {#and-or}
 -----------------------
 
-Säg att vi vill skriva ut en mer komplex egenskap som att talet är större än 50 och mindre än 60 samt ett jämnt tal. Då kan vi konstruera en if-sats på detta viset.
+Säg att vi vill skriva ut en mer komplex egenskap som visar att talet är större än 50 och mindre än 80 samt ett jämnt tal. Då kan vi konstruera en if-sats på detta viset.
 
 ```php
 if ($number > 50 && $number < 80 && $number % 2 === 0) {
@@ -146,6 +146,8 @@ if (($number > 50 && $number < 80 && $number % 2 === 0)
     echo "OR it could be less than 40 and an odd number...\n";
 }
 ```
+
+Här behöver jag omringa delar av uttrycket med paranteser för att det skall bli "rätt svar", det svaret som jag tänkte mig.
 
 Ett sätt att hantera komplexa villkor är att beräkna dem utanför if-satsen och spara i variabler. Så här.
 

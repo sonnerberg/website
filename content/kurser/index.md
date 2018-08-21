@@ -1,5 +1,5 @@
 ---
-title: Kurser (läsår 2018/2019)
+title: Kurser
 author: mos
 revision:
     "2018-06-16": "(A, mos) Flyttade innehåll från .meta.md och nytt inför ht18."

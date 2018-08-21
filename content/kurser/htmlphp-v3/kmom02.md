@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2018-08-16": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-08-21": (H, mos) Uppdaterad inför ht18.
     "2017-08-28": (G, mos) Bort referens till Firebug.
     "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
@@ -13,17 +13,11 @@ revision:
 Kmom02: Bygg ut din webbplats
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår till kurs htmlphp v3**
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 Vi fortsätter att bygga ut me-sidan. Detta moment är en vidare genomgång av grunder i HTML och CSS. Efter kursmomentet så har du en me-sida version 2 som innehåller några av de vanligaste konstruktionerna som återfinns i flertalet "riktiga" webbplatser.
 
-Vi börjar samtidigt använda lite fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
+Vi börjar samtidigt använda fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
+
+Vi börjar också prata om hur vi bör strukturera vår kod i filer, kataloger och vi börjar bygga en terminologi för olika typer av kod.
 
 <!--more-->
 
@@ -45,7 +39,7 @@ Läs & Studera  {#lasanvisningar}
 Läs följande för att fortsätta bekanta dig med teknikerna.
 
 1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
-    * [mer innehåll](guide/kom-igang-med-html-och-css/mer-innehall)
+    * [Mer innehåll](guide/kom-igang-med-html-och-css/mer-innehall)
 
 
 
@@ -120,5 +114,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Me-sidan börjar bli en liten webbplats, vad tycker du om dess struktur av filer och kataloger, känns det okey eller ovant?
 * Hur bekant är du med PHP och programmering rent allmänt, hur känns det att utveckla med PHP?
 * Vad tyckte du om PHP-labben, enkel eller utmanande?
-* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
 * Vilken är din TIL för detta kmom?
