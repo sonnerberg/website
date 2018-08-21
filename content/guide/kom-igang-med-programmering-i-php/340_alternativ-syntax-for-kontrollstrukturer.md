@@ -6,54 +6,97 @@ revision:
 Alternativ syntax för kontrollstrukturer
 =======================
 
-I ovanstående exempel med villkorssatser och loopar så används den normala syntaxen för kontrollstrukturer där blocken omsluts med måsvingar `{}`. Det är samma syntax som en C eller C++ programmerare är van vid. Det finns också en [alternativ syntax](http://php.net/manual/en/control-structures.alternative-syntax.php) som kan användas. Den alternativa syntaxen kan bibehålla läsbarheten i koden, även när man blandar PHP och HTML. Skriver man ren PHP-kod så finns det ingen anledning att använda den alternativa syntaxen.
+Det finns en alternativ syntax för hur man skriver kontrollstrukturer. Den variant vi sett hittills är lämpad för när man skriver PHP som ett vanligt programmeringsspråk. Men när man blandar HTML-kod och PHP-kod, vilket händer när man skriver kod i vyer, template-filer, så kan den alternativa syntaxen vara att föredra, den passar bättre ihop med HTML.
 
-**Exempel på alternativ syntax för `if`.**
+
+
+Varför alternativ struktur? {#varfor}
+------------------------
+
+När PHP skapades så var tanken att vara ett skriptspråk för att ge dynamik till HTML och webbsidor. Tanken var att blanda PHP-kod med HTML-kod. Numer är PHP ett vanligt traditionellt programmeringsspråk som också används som skript/templatespråk för HTML och webbsidor.
+
+Någonstans i den logiken finns anledningen till att det kan vara bra att ha två olika sätt att skriva koden på.
+
+Låt oss se hur vi kan använda den alternativa strukturen i våre vyer, i våra template-filer, där vi mixar HTML och PHP.
+
+Bara en not innan vi fortsätter, man vill helst inte mixa kod av olika syften, man vill dela upp saker så att "var sak har sin plats" och inte blandas ihop. När man blandar kod av olika typer blir det lätt rörigt. Speciellt i webbsammanhang där vi utan problem kan skriva både HTML, CSS, PHP och JavaScript i en och samma fil. Det blir lätt rörigt det.
+
+
+
+Vad är en vy, en template fil? {#templatefil}
+------------------------
+
+En fil som likt `header.php` och `footer.php` har till syfte att generera den resulterande webbsidan, kan vi också kalla templatefiler. Det kan hjälpa oss att tydliggöra deras syften.
+
+En god filstruktur kan vara att spara den typen av filer i en underkatalog `view/`. Det är lite med tanke på framtiden, när vi senare programmerar i störra ramverk så kommer denna typen av filer att namnges som template-filer och ofta lagras i kataloger som döps till `view/`.
+
+Men, innan vi går vidare så kan vi se hur de alternativa strukturerna ser ut.
+
+
+
+Short echo tag {#short-echo-tag}
+------------------------
+
+Vi börjar med en variant som egentligen inte är en kontrollstruktur, det är bara en variant av hur man kan kan skriva ut ett värde i en template fil.
+
+I exemplet använder vi filen `header.php` och vi skiver ut variabeln `$title` som sidans titel.
+
+Först skriver vi ut variabeln som en vanlig php-konstruktion.
 
 ```php
-<?php
-$a = 42;
-//$a = 1337;
-?>
+<!doctype html>
+<html lang="en">
+<title><?php echo $title ?></title>
+```
 
-<?php if($a == 42): ?>
-  <p>Jag har svaret på frågan om allting.</p>
-<?php elseif($a == 1337): ?>
-  <p>Jag är ett pro!</p>
+Det är alltså konstruktionen `<?php echo $title ?>` som skriver ut sidans titel inom html elementet `<title>`.
+
+Med en short echo tag kan vi få ned koden lite genom att skriva `<?= $echo ?>` som ett alternativ till `<?php echo $title ?>`.
+
+Koden i templatefilen `header.php` ser alltså ut så här.
+
+```php
+<!doctype html>
+<html lang="en">
+<title><?= $title ?></title>
+```
+
+Man kan tycka att det är små saker, men när kodbasen växer så är det små saker som kan göra att koden blir lättläst.
+
+
+
+Alternativa kontrollstrukturer {#altstruktur}
+------------------------
+
+Det finns alternativa kontrollstrukturer för if, switch, while, do while och for. De ser ut så här.
+
+Först en if-sats som skriver ut sidans titel, förutsatt att `$title` har ett värde.
+
+```php
+<title>
+<?php if ($title) : ?>
+    <?= $title ?>
+<?php else : ?>
+    No title was defined.
 <?php endif; ?>
+</title>
 ```
 
-Som du kan se så byts måsvingarna ut mot ett kolon `:`. Det är en liten ändring men när man är i en fil som i huvudsak är HTML-kod och vill blanda upp den med lite PHP-sekvenser, då är faktiskt denna alternativa syntax att föredra.
+Den alternativa strukturen ger alltså en möjlighet att blanda html och php på ett någorlunda läsbart sätt.
 
-**Exempel på alternativ syntax med `foreach`.**
+Om vi skriver en while loop med den alternativa syntaxen så kan det se ut så här.
 
 ```php
-<?php
-$b = array(
-  'Namn' => 'Mumitrollet',
-  'Bor'  => 'Mumindalen',
-);
-?>
-
-<p>Nedan tabell visar namn och adressdetaljer.</p>
-<table>
-
-<?php foreach($b as $key => $val): ?>
-  <tr>
-    <th><?=$key?></th>
-    <td><?=$val?></td>
-  </tr>
-<?php endforeach; ?>
-
-</table>
+<?php while ($number <= 10) : ?>
+    <p><?= $number++ ?></p>
+<?php endwhile; ?>
 ```
 
-[Testa mitt exempel här](kod-exempel/guiden-php-20/alternative/alternative.php). Studera min källkod för exemplet och se vad du anser om kodens struktur och om den alternativa syntaxen gör HTML-delen av koden mer läsbar.
+Ovan loop räknar till 10 och skriver ut varje siffra inom ett html element.
 
-Det är god programmeringssed att försöka separera HTML och PHP så mycket det går. En fil som innehåller en blandning av traditionell PHP-kod, uppblandad med HTML, blir snabbt oöverskådlig. Jag försöker följa ett par enkla regler när jag skriver min kod.
 
-1. Är det bara PHP-kod så skriver jag PHP-kod som vilket programmeringsspråk som helst. I en sådan fil undviker jag HTML-kod och HTML-sekvenser.
-2. Är det blandat HTML och PHP så utgår jag från HTML som struktur och använder shorttags och alternativ struktur för att minimera PHP-inslagen. Filen skall vara läsbar som en HTML-kod och innehålla utskrifter av variabler och loopar.
-3. Krävs det ett inslag av PHP-kod i den blandade HTML/PHP-filen så lägger jag det stycket överst i filen och lagrar undan information i variabler som sedan skrivs ut längst ned i filen.
 
-På dessa sätt får jag en god grundstruktur som fungerar för mig och som ger läsbar kod.
+Mer {#mer}
+------------------------
+
+Kika gärna i manualen om [alternativ syntax för kontrollstrukturer](http://php.net/manual/en/control-structures.alternative-syntax.php).
