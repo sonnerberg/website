@@ -17,14 +17,6 @@ revision:
 Kmom01: Kom i gång med Python
 ==================================
 
-[WARNING]
-
-** Kursutveckling pågår till kurs python v2 **
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Python fungerar på många miljöer och i olika varianter.
 
 Vi börjar skriva de första enkla programmen för att komma underfund med hur Python kan användas och hur programmeringsspråket fungerar i grunden.

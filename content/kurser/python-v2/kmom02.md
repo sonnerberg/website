@@ -15,14 +15,6 @@ revision:
 Kmom02: Villkor och loopar
 ==================================
 
-[WARNING]
-
-** Kursutveckling pågår till kurs python v2 **
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 Vi har bekantat oss med värden, datatyper och variabler och det är nu dags för en introduktion till hur vi kan styra flödet av data i våra program. Först tittar vi på booleska operatorer och hur vi kan använda sant eller falsk för att exekverera olika delar av koden. Efter det introduceras loopar som kan användas för upprepa delar av koden. Till slut är det dags att skriva ditt första lite större program där Marvin skall få lite intelligens när han svarar på frågor.
 
 [FIGURE src=/image/python/py-marvin.png?w=w2 caption="Marvin i Python."]

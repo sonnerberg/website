@@ -14,14 +14,6 @@ revision:
 Kmom03: Funktioner
 ==================================
 
-[WARNING]
-
-** Kursutveckling pågår till kurs python v2 **
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 I detta kursmoment introduceras du till funktioner och hur de kan underlätta för att återanvända koden. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
 
