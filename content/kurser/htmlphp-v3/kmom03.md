@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-06-22": (G, mos) Genomarbetad inför ht18.
     "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2016-08-31": (E, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (D, mos) Bort med not om kursutveckling och länk till version 1.
@@ -13,23 +13,15 @@ revision:
 Kmom03: Bygg multisida i PHP
 ==================================
 
-[WARNING]
+Vi tittar på den i PHP inbyggda datatypen för arrayer och ser hur vi kan lagra och hantera värden i både numeriska arrayer och strängindexerade arrayer. Vi tittar på vilka inbyggda funktioner som finns för att jobba med arrayer och vi tittar på två av de fördefinierade arrayerna $\_GET och $\_SERVER som hjälper att att bygga webbsidor.
 
-**Kursutveckling pågår till kurs htmlphp v3**
+Som vanligt behöver vi skriva ett antal testprogram för att verkligen förstå hur saker hänger ihop.
 
-Kursstart hösten 2018.
+Sedan bygger vi en uppdaterad sidkontroller som har stöd för multisidor med egen navigering till undersidor. Vi lär oss begreppet multisida och samtidigt får vi en övning i hur kod kan struktureras i kataloger och filer efter kodens olika syften.
 
-[/WARNING]
-
-I kursmomentet gås igenom de inbyggda arrayerna i PHP. Vi tittar på `$_GET`, och `$_SERVER` samt hur de kan användas som arrayer. Med hjälp av dessa arrayer, och lite mer PHP-kunskaper, gör vi ett par små testprogram för att klura ut hur saker och ting fungerar i PHP-världen.
-
-Vi skapar en sida, som har sin egen meny, vi kallar den multisida och löser både den och lite andra småsaker med PHP-kod.
-
-Till slut knyter vi ihop det genom att integrera multisidan i din me-webbplats. Resultatet blir me-sida version 3.0.
+Till slut knyter vi ihop det genom att integrera multisidan i din me-sida. Resultatet blir me-sida version 3.0.
 
 <!--more-->
-
-Det blir en hel del PHP i detta kursmomentet.
 
 [FIGURE src=image/snapht18/multipage.png?w=w3 caption="En multisida i PHP, navigeringsmeny i vänsterkanten och färgad i pastellfärger."]
 
@@ -98,14 +90,6 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Bygg en multisida och testa arrayer (v2)](uppgift/bygg-en-multisida-och-testa-arrayer-v2)". Spara filerna i katalogen `me/kmom03/multi`.
 
 1. Gör uppgiften "[Bygg ut din me-sida till version 3 (v2)](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3-v2)". Spara filerna i katalogen `me/kmom03/me3`.
-
-
-
-<!--
-###Extra {#extra}
-
-En bra extrauppgift vore att bygga en ny multisida till din me-sida. En multisida där du kan göra egna små testprogram för att testa hur PHP, HTML och CSS fungerar. Du kan sedan fylla på den multisidan under resten av kursen. Det är en bra taktik att skriva små exempelprogram för att se hur något fungerar och i en multisida kan du enkelt fylla på med nya exempelprogram.
--->
 
 
 

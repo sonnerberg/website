@@ -6,7 +6,7 @@ revision:
 Minnesanteckning
 ==================================
 
-Mina egna minnesanteckningar för saker som kan ingå (mer) i guiden. Eller inte. Tankar om att utveckla guiden.
+Mina egna slarviga minnesanteckningar för saker som kan ingå (mer) i guiden. Eller inte. Tankar om att utveckla guiden.
 
 Att lägga till:
  
@@ -48,3 +48,9 @@ fail fast, fail hard. Testa inkommande variabler och avbryt om fel.
 Allmänt om hur man kan validera en variabel och kolla om den har ett visst värde eller typ. (Delar finns i Bygg en multisida med PHP (v2))
 
 Säker programmering med PHP (delar finns i Bygg en multisida med PHP (v2))
+htmlentities, htmlspecialchars, esc
+
+bodyClass();
+funktion för att visa nuvarande valda menyval.
+serialize array
+json encode/decode

@@ -406,7 +406,9 @@ Här är ett exempel på när man har skyddat sig via funktionen htmlentities.
 
 [FIGURE src=image/snapht18/xss-no.png?w=w3 caption="Här skrivs koden ut direkt i webbsidan, utan bekymmer, med hjälp av funktionen htmlentities."]
 
-Man kan titta på webbsidans källkod så ser man hur den "farliga strängen" har konverterats till html-entiteter där `<` ersatts med `&lt;`, `>` har erstts med `&lt;` och så vidare.
+Man kan titta på webbsidans källkod så ser man hur den "farliga strängen" har konverterats till html-entiteter. Det är tecknet `<` som ersatts med `&lt;`, tecknet `>` har erstts med `&lt;` och så vidare för de tecken som kan användas till "farliga" saker.
+
+Så här ser källkoden ut.
 
 ```html
 <p>You have selected a page reference '&lt;script&gt;alert(&quot;You got XSS:ed. Got ya.&quot;);&lt;/script&gt;' that does not map to an actual page.</p>
