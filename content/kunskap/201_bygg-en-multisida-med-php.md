@@ -18,6 +18,12 @@ Begreppet multisida är mitt eget, kanske är det en variant av *frontcontroller
 
 <!--more-->
 
+[WARNING]
+
+Detta dokument är ersatt av en nyare utgåva "[Bygg en multisida med PHP (v2)](kunskap/bygg-en-multisida-med-php-v2)" som gäller från och med hösten 2018.
+
+[/WARNING]
+
 
 
 Förutsättningar {#pre}

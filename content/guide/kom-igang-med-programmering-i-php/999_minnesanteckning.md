@@ -43,3 +43,8 @@ frontkontroller, vyer.
 Sessioner och inloggning (password_hash/verify)
 
 Inbyggda funktioner för att läsa/skriva till fil.
+
+fail fast, fail hard. Testa inkommande variabler och avbryt om fel. 
+Allmänt om hur man kan validera en variabel och kolla om den har ett visst värde eller typ. (Delar finns i Bygg en multisida med PHP (v2))
+
+Säker programmering med PHP (delar finns i Bygg en multisida med PHP (v2))

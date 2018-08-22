@@ -69,19 +69,6 @@ Läs följande för att bekanta dig med teknikerna.
     * [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
     * [CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
-<!--
-1. HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
-
-1. [HTML och CSS-boken](kunskap/boken-html-och-css-boken)
-    * Inledning
-    * Kapitel 1 Snabbstart
-    * Kapitel 2 Grunderna i HTML
--->
-
-<!--
-1. CSS - [Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)
--->
-
 
 
 ### PHP {#php}
@@ -99,23 +86,11 @@ Läs följande för att bekanta dig med tekniken.
 
 1. Bekanta dig kort med [webbplatsen för PHP](http://php.net/), bara så att du har varit där och ser hur den ser ut. Det som vi framförallt kommer att använda framöver är [manualen för PHP](http://php.net/manual/en/), kika snabbt över dess innehållsförteckning så att du ser ungefär vad det handlar om. Du behöver inte studera något i detalj för tillfället.
 
-<!--
-[INFO]
-**Tips**
-
-Bekanta dig med PHP-manualen. Det kan bli en av dina bästa vänner. Allt du behöver veta om PHP finns att läsa i manualen. Det gäller bara att bli kompis med manualen.
-
-[Läs lite kort om språket PHP](http://php.net/manual/en/intro-whatis.php) och slå upp [funktionen include()](http://php.net/manual/en/function.include.php) och läs lite om den. Det kan se lite kryptiskt ut vid första anblicken, men lär dig läsa manualen så är mycket vunnet.
-[/INFO]
--->
 
 
+### Videor {#videor}
 
-<!--
-1. Del 1-5, 7 av artikeln [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg)
-
-1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 0 och 1.
--->
+Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
 
 
 

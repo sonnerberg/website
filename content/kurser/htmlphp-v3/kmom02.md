@@ -69,9 +69,9 @@ Se till att du vet hur standarderna för HTML och CSS ser ut, bara så du vet. D
 
 
 
-<!--
-1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 2.
--->
+### Videor {#videor}
+
+Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
 
 
 

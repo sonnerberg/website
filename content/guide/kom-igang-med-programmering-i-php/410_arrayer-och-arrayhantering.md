@@ -9,6 +9,23 @@ Arrayer och arrayhantering
 Arrayer är en kraftfull och användbar PHP-konstruktion. En array är en lista av värden. Varje värde kan ha en nyckel kopplad till sig.
 
 
+bodyClass();
+
+
+Valid pages in array, map to filename.
+
+array i array.
+
+foreach 
+
+??
+
+htmlentities
+
+GET, querysträng
+SERVER
+
+
 
 Skapa, skriv ut och läs en array {#array-skrivut}
 -----------------------
