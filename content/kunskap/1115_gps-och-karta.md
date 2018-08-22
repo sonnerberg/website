@@ -9,7 +9,7 @@ GPS och karta
 
 [FIGURE src=/image/webapp/gps.png?w=c5 class="right"]
 
-Vi ska i denna övning använda leaflet.js tillsammans med OpenStreetMap och Cordova Pluginen geolocation för att visa positionsdata på en karta. Vi ska titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
+Vi ska i denna övning använda [leaflet.js](https://leafletjs.com) tillsammans med [OpenStreetMap](https://www.openstreetmap.org) och Cordova Pluginen geolocation för att visa positionsdata på en karta. Vi ska titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
 
 
 
@@ -17,7 +17,7 @@ Vi ska i denna övning använda leaflet.js tillsammans med OpenStreetMap och Cor
 
 
 
-Exempelprogrammet från denna övning finns i kursrepot [example/gps](https://github.com/dbwebb-se/webapp/tree/master/example/gps) och i `example/gps`. Använd gärna det tillsammans med övningen för att se hur de olika delarna hänger ihop.
+Exempelprogrammet från denna övning finns i kursrepot [example/gps](https://github.com/dbwebb-se/webapp/tree/master/example/gps) och i `example/gps`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln.
 
 
 
@@ -25,11 +25,12 @@ En karta {#karta}
 --------------------------------------
 Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår mobila enhet och för att rita ut markörer på denna karta.
 
-Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katalogen har vi en simpel mithril app. Vi lägger nu till leaflet.js genom att använda kommandot `npm install leaflet`. Vi kopierar in `leaflet.css` och `images/` från leaflet paketet i `node_modules/` med följande kommando och nedan har vi lagt till `leaflet.css` i `index.html`.
+Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katalogen har vi en simpel mithril app. Vi lägger nu till leaflet.js genom att använda kommandot `npm install leaflet --save`. Vi kopierar in `leaflet.css` och `images/` från leaflet paketet i `node_modules/` med följande kommando och nedan har vi lagt till `leaflet.css` i `index.html`.
 
 ```bash
 # Stå i me/kmom06/gps
-cp -r node_modules/leaflet/dist/leaflet.css node_modules/leaflet/dist/images/ www/css/
+cp node_modules/leaflet/dist/leaflet.css www/css/leaflet.min.css
+cp -r node_modules/leaflet/dist/images/ www/css/
 ```
 
 ```html
@@ -38,7 +39,7 @@ cp -r node_modules/leaflet/dist/leaflet.css node_modules/leaflet/dist/images/ ww
     <head>
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/leaflet.css">
+        <link rel="stylesheet" type="text/css" href="css/leaflet.min.css">
         <title>Maps and GPS</title>
     </head>
     <body>
@@ -100,7 +101,7 @@ module.exports = {
 };
 ```
 
-Funktionen `showMap` definierar ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna.
+Funktionen `showMap` definierar ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna. Jag har vald att definiera variabeln `map` som en global variabel, då den används i flera olika funktioner, se exempelprogrammet.
 
 ```javascript
 function showMap() {
@@ -113,9 +114,17 @@ function showMap() {
 
     map = L.map('map').setView(places["BTH"], 13);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',    {
+        attribution: `&copy;
+        <a href="https://www.openstreetmap.org/copyright">
+        OpenStreetMap</a> contributors`
     }).addTo(map);
+
+    for (var place in places) {
+        if (places.hasOwnProperty(place)) {
+            L.marker(places[place]).addTo(map).bindPopup(place);
+        }
+    }
 }
 ```
 
@@ -125,53 +134,30 @@ Vi skapar en karta (`map`) där vi definierar vilken punkt vi vill ha som centru
 
 Använda adress istället för koordinater {#address}
 --------------------------------------
-Vi har inte alltid tillgång till koordinater för de platser vi vill visa upp på kartan. Och då är det bra om vi istället kan använda adressen. Google har även för det ett API kallat [Geocoding](https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple).
+Vi har inte alltid tillgång till koordinater för de platser vi vill visa upp på kartan. Och då är det bra om vi istället kan använda adressen. Vi vill därför göra om adresser till koordinater och för det använder vi npm modulen `leaflet-geosearch`, som installeras med kommandot `npm install leaflet-geosearch --save`.
 
-Vi börjar med att skapa ett Geocoder objekt och även ett objekt med adresser istället för positioner. Vi använder sedan vår `geocoder` för att göra om en adress till koordinater och ritar ut en markör på rätt plats. Om `geocoder` inte lyckas koda om adressen får vi upp ett felmeddelande.
+Vi börjar med att skapa ett `OpenStreetMapProvider` objekt `geocoder` och även ett objekt med adresser istället för positioner. Vi använder sedan vår `geocoder` för att göra om en adress till koordinater och ritar ut en markör på rätt plats. Om `geocoder` inte lyckas koda om adressen ritas inte ut en plats. Bäst resultat får man om man inte har allt för specifika adresser, man kan till exempel utelämna post nummer.
 
 ```javascript
 function showMap() {
-    var places = {
-        "BTH": { lat: 56.181932, lng: 15.590525 },
-        "Stortorget": { lat: 56.160817, lng: 15.586703 },
-        "Hoglands Park": { lat: 56.164077, lng: 15.585887 },
-        "Rödebybacken": { lat: 56.261121, lng: 15.628609 }
-    };
+    ...
+
+    var geocoder = new geosearch.OpenStreetMapProvider();
 
     var addresses = [
-        "Bastionsgatan 14, 371 32 Karlskrona, Sweden",
-        "Krutholmskajen 1, 371 38 Karlskrona, Sweden"
+        "Bastionsgatan 1, Karlskrona",
+        "Kärleksstigen 1, Karlskrona"
     ];
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: places["BTH"]
-    });
-
-    var geocoder = new google.maps.Geocoder();
-
-    for (var place in places) {
-        if (places.hasOwnProperty(place)) {
-            new google.maps.Marker({
-                position: places[place],
-                map: map,
-                title: place
+    for (var i = 0; i < addresses.length; i++) {
+        geocoder
+            .search({ query: addresses[i] })
+            .then(function(result) {
+                if (result.length > 0) {
+                    L.marker([result[0].y, result[0].x]).addTo(map).bindPopup(result[0].label);
+                }
             });
-        }
     }
-
-    addresses.map(function(address) {
-        geocoder.geocode({'address': address}, function(results, status) {
-            if (status === 'OK') {
-                new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location
-                });
-            } else {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
-        });
-    });
 }
 ```
 
@@ -250,34 +236,36 @@ module.exports = {
 };
 ```
 
-I `showMap` funktionen lägger vi till en ny sorts markör som markerar användarens position. Jag definierar variabeln `locationMarker` som en global variabel så både `showMap()` och nedanstående funktion `showPosition()`.
+I `showMap` funktionen lägger vi till en ny sorts markör som markerar användarens position. Jag har skapat en ikon för att visa användarens position. Du kan kopiera ikonen med följande kommando. Du kan naturligtvis använda en egen ikon också.
+
+```bash
+# Stå i kursrepot
+cp example/gps/www/location.png me/kmom06/gps/www
+```
+
+Vi skapar nu leaflet ikonen `locationMarker`.
+
 
 ```javascript
-locationMarker = new google.maps.Marker({
-    clickable: false,
-    icon: new google.maps.MarkerImage(
-        'https://maps.gstatic.com/mapfiles/mobile/mobileimgs2.png',
-        new google.maps.Size(22, 22),
-        new google.maps.Point(0, 18),
-        new google.maps.Point(11, 11)
-    ),
-    shadow: null,
-    zIndex: 999,
-    map: map
+var locationMarker = L.icon({
+    iconUrl: 'location.png',
+
+    iconSize:     [24, 24],
+    iconAnchor:   [12, 12],
+    popupAnchor:  [0, 0]
 });
 ```
+
 
 Och vi skapar funktionen `showPosition()` där vi sätter positionen för vår markör `locationMarker`.
 
 ```javascript
 function showPosition() {
     if (position.currentPosition.latitude && position.currentPosition.longitude) {
-        var myPosition = new google.maps.LatLng(
-            position.currentPosition.latitude,
-            position.currentPosition.longitude
-        );
-
-        locationMarker.setPosition(myPosition);
+        L.marker(
+            [position.currentPosition.latitude, position.currentPosition.longitude],
+            {icon: locationMarker}
+        ).addTo(map).bindPopup("Din plats");
     }
 }
 ```
@@ -286,7 +274,7 @@ function showPosition() {
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna artikel använd oss av Google Maps API för att placera ut markörer på en karta på specifika platser. Vi har även tittat på hur vi kan använda `cordova-plugin-geolocation` för att rita ut användarens position på kartan.
+Vi har i denna artikel använd oss av OpenStreetMap och leaflet.js för att placera ut markörer på en karta på specifika platser. Vi har även tittat på hur vi kan använda `cordova-plugin-geolocation` för att rita ut användarens position på kartan.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7350) om denna artikeln.
 
