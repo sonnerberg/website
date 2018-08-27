@@ -76,7 +76,7 @@ Här är den övergripande planeringen för introveckan.
 | 10:00-11:00| Välkommen distansstudent (ds) | Kursstart python/htmlphp (s) | Introduktion till terminalen (s) | htmlphp labbmiljö (s) | Hjälp i labbsal (s) |
 | 11:00-12:00| BTH hälsar välkommen (c) | Generell labbmiljö (s) | dbwebb-cli (s) | Skapa webbsida (s) | Hjälp i labbsal (s) |
 | 13:00-14:00| Välkommen campusstudent (c) | Information biblioteket (c) | Stödfunktioner information (c) | Studievägledare presentation (c) | Studentkåren (c) |
-| 14:00-15:00| Frågestund (s) | python labbmiljo (s) | Utmaning (s) | Publisera webbsida (s) | Studentkåren (c) |
+| 14:00-15:00| Frågestund (c) | python labbmiljo (s) | Utmaning (s) | Publisera webbsida (s) | Studentkåren (c) |
 
 * (s) = Streamas
 * (c) = Endast campusaktivitet
@@ -106,7 +106,7 @@ Kolackan 11 samlas alla nya campus-studenter nere vid bryggan för välkomsttal 
 
 Klockan 13-14 hälsar lärarteamet campus-studenterna välkommen i labbsalen och visar upp programmens och kurspaketens upplägg och struktur.
 
-Lärarteamet finns sedan i labbsalen och streamar en frågestund mellan kl 14-15, för dig som har frågor och funderingar.
+Lärarteamet finns sedan i labbsalen och vid behov så fortsätter eftermiddagen med en frågestund mellan kl 14-15, för dig som har frågor och funderingar.
 
 
 
