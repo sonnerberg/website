@@ -56,10 +56,10 @@ Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redo
 
 
 
-Kopiera redovisningstexten till ITs {#its}
+Kopiera redovisningstexten till Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen [Canvas](https://www.bth.se/canvas/) tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
 
