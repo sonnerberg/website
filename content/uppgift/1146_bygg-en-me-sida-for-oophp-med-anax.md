@@ -4,6 +4,7 @@ category:
     - kurs oophp
     - anax
 revision:
+    "2018-08-28": "(C, mos) Gör cache/cimage skrivbar."
     "2018-08-16": "(B, mos) Genomgången inför ht18, bytt bas för redovisa/."
     "2018-03-19": "(A, mos) Första utgåvan."
 ...
@@ -63,6 +64,12 @@ När du är klar så kan du se vilka moduler som installerades av composer.
 
 ```text
 composer show
+```
+
+Se till att cache-katalogen för cimage är skrivbar.
+
+```text
+chmod 777 cache/cimage
 ```
 
 Nu kan du öppna en webbläsare och peka mot katalogen `redovisa/htdocs`.
