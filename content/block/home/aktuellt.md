@@ -1,9 +1,11 @@
 #### Aktuellt
 
-[FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
+[FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2018, vi är redo..."]
 
+* [Var finns alla videor och streams?](t/7561)
+* [Hjälp mig igång (sen ankomst?)](t/7557)
 * [Jag ska börja studera i höst 2018 (frågor/svar)](t/7488)
-* [Allra, allra sista inlämning för rester i ITs-kurser](t/7484)
+* [Allra, allra sista inlämning för rester i ITs-kurser 31/8](t/7484)
 
 Höstterminen startar 3/9. Introveckan för alla ettor är en vecka tidigare.
 
@@ -42,6 +44,9 @@ Välkommen till Blekinge Tekniska Högskola!
 [FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
 [FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
+
+[FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
+
 
 
 * [Förberedelser inför höstterminen 2017](blogg/forberedelser-infor-terminen-2017)
