@@ -3,18 +3,12 @@ author:
     - mos
     - lew
 revision:
-    "2018-08-16": "(prel, mos) Varning inför uppdatering inför hösten."
+    "2018-09-03": "(C, mos) Ingen ändring gjord inför hösten."
     "2018-03-27": "(B, mos) Uppdaterad oophp v4."
     "2017-03-31": "(A, mos, lew) Första versionen."
 ...
 Kmom02: Arv och Komposition
 ==================================
-
-[WARNING]
-
-**Kursmomentet är under uppdatering inför ht18.**
-
-[/WARNING]
 
 Vi fortsätter träna på programmering med klasser och objekt. Vi jobbar igenom ett antal grundkonstruktioner i objektorientering och ser hur de implementeras i PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
 
