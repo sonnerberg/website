@@ -21,14 +21,6 @@ revision:
 Kmom04: Moduler och filer
 ==================================
 
-[WARNING]
-
-** Kursutveckling pågår till kurs python v2 **
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 Vi fortsätter med att titta på hur vi kan använda funktioner för att strukturera vår kod. För att ytterligare strukturera koden introduceras moduler där vi delar koden i olika filer. Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
 
 <!--[FIGURE src=/image/snap/py-marvin.png?w=w2 caption="Marvin i Python."]-->
