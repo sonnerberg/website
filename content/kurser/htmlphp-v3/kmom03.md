@@ -60,7 +60,7 @@ Läs följande för att fortsätta bekanta dig med tekniken.
 
 
 
-### Videor {#videor}
+### Videor {#video}
 
 Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
 
@@ -75,7 +75,7 @@ Det finns en samling videor som används i olika omfattning under kursens gång,
 
 ### Övningar {#ovningar}
 
-Genomför följande övningar.
+Genomför följande övningar, det hjälper dig inför uppgifterna.
 
 1. Jobba igenom övningen "[Bygg en multisida med PHP (v2)](kunskap/bygg-en-multisida-med-php-v2)". Spara filerna i katalogen `me/kmom03/multi`, så kan du använda dem i den kommande uppgiften.
 

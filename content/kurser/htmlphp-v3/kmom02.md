@@ -69,7 +69,7 @@ Se till att du vet hur standarderna för HTML och CSS ser ut, bara så du vet. D
 
 
 
-### Videor {#videor}
+### Videor {#video}
 
 Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
 
