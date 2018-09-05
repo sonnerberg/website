@@ -6,7 +6,7 @@ revision:
 Objektorienterad programmering
 ==================================
 
-Objektorienterad programmering är *en* av många programmeringsparadigmer. Ett programmeringsspråk sorteras vanligen in i en programmeringsparadigm för att beskriva hur man kan koda i det. Många språk stödjer flera programmeringsparadigmer, man kan alltså välja hur man skriver sin kod, enligt en eller flera paradigmer. Ett vanligt sätt att lära sig programmera är "[procedural programmering]((https://en.wikipedia.org/wiki/Procedural_programming))". Det är det sättet du använder i guiden "[Kom igång med programmering i PHP](kunskap/kom-i-gang-med-php-pa-20-steg)". Men nu handlar det alltså om den [objektorienterade programmeringsparadigmen](https://en.wikipedia.org/wiki/Object-oriented_programming).
+Objektorienterad programmering är *en* av många programmeringsparadigmer. Ett programmeringsspråk sorteras vanligen in i en programmeringsparadigm för att beskriva hur man kan koda i det. Många språk stödjer flera programmeringsparadigmer, man kan alltså välja hur man skriver sin kod, enligt en eller flera paradigmer. Ett vanligt sätt att lära sig programmera är "[procedural programmering](https://en.wikipedia.org/wiki/Procedural_programming)". Det är det sättet du använder i guiden "[Kom igång med programmering i PHP](kunskap/kom-i-gang-med-php-pa-20-steg)". Men nu handlar det alltså om den [objektorienterade programmeringsparadigmen](https://en.wikipedia.org/wiki/Object-oriented_programming).
 
 
 
