@@ -30,52 +30,48 @@ Dessutom gör du en labb för att komma igång med funktioner i PHP. Allt efters
 
 [YOUTUBE src=kSlrZk9RoNk width=630 caption="En styleväljare på Mikaels me-sida."]
 
-Här kan du testa exemplet som ligger till grund för resultatet, du hittar det i [kursrepot på dbwebb](/repo/htmlphp/example/stylechooser).
+Här kan du testa exemplet som ligger till grund för resultatet, du hittar det i [kursrepot på dbwebb](repo/htmlphp/example/stylechooser).
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-6 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
+### HTML & CSS {#htmlcss}
 
-1. [HTML och CSS-boken](kunskap/boken-html-och-css-boken)
-    * Kapitel 9 Formulär
-    * Kapitel 10 Avancerad CSS
+Läs följande för att fortsätta bekanta dig med teknikerna.
 
-2. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
+    * [Formular](guide/kom-igang-med-html-och-css/formular)
+
+1. Läs igenom artikeln "[Vanliga CSS-konstruktioner som är bra att kunna](kunskap/vanliga-css-konstruktioner-som-ar-bra-att-kunna)" och prova konstruktionerna på egen hand.
+
+1. Se en [översikt av olika formulärelement](forms), det räcker att du bekantar dig med hur de ser ut. Du kan även testa dem hur de fungerar.
+
+
+
+### PHP {#php}
+
+Läs följande för att fortsätta bekanta dig med tekniken.
+
+1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
+    * [Egenskapade funktioner](guide/kom-igang-med-programmering-i-php/egenskapade-funktioner)
+    * [HTML formulär](guide/kom-igang-med-programmering-i-php/html-formular)
+
+1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 7 Funktioner
 
 
 
-###Artiklar {#artiklar}
+### Video  {#video}
 
-Läs följande:
-
-1. Del 16-19 av [Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg)
-
-
-
-###Video  {#video}
-
-Titta på följande:
-
-1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
-
-
-
-###Lästips {#lastips}
-
-Följande lästips hjälper dig att hitta relevant information.
-
-1. Se en [översikt av olika formulärelement](forms/).
+Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
 
 
 
@@ -86,22 +82,19 @@ Följande lästips hjälper dig att hitta relevant information.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
-Genomför följande övningar.
-
-1. Jobba igenom övningen "[Vanliga CSS-konstruktioner som är bra att kunna](kunskap/vanliga-css-konstruktioner-som-ar-bra-att-kunna)".
+Genomför följande övningar, det hjälper dig inför uppgifterna.
 
 1. Jobba igenom övningen "[Att bygga en styleväljare till sin webbplats](kunskap/att-bygga-en-stylevaljare-till-sin-webbplats)".
 
 <!--
-TODO
-* Artikel om funktioner, scope? Använd labben för att träna.
+https://arkiv.dbwebb.se/kod-exempel/business-card-generator/
 -->
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -110,12 +103,6 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Bygg en styleväljare till din webbplats](uppgift/bygg-en-stylevaljare-till-din-webbplats)". Spara filerna i `me/kmom04/stylechooser`.
 
 1. Gör uppgiften "[Bygg ut din me-sida till version 4](uppgift/bygg-ut-din-me-sida-till-version-4)". Spara filerna i katalogen `me/kmom04/me4`.
-
-
-
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
 
 
 
@@ -134,4 +121,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Det var ju både formulär, sessioner, POST, GET och lite till, hur kändes det? 
 * Hur tänkte du när du gjorde din extra stylesheet och vad tycker du om resultatet?
 * Hur går det med ditt PHP:ande, börjar det bli mycket/svår kod, eller går det finfint?
-* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
+* Vilken är din TIL för detta kmom?
