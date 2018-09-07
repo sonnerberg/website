@@ -82,9 +82,14 @@ Krav {#krav}
 ```bash
 # Flytta till kurskatalogen
 dbwebb validate lab1
+dbwebb publish lab1
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
+
+[INFO]
+Dina uppladdade python filer syns inte på studentservern. Vill du dubbelkolla att dina filer finns på studentservern kan du använda kommandot: `dbwebb inspect kmom01`. Med kommandot `dbwebb inspect kmom01` ser du dina inlämningar på samma sätt som de som rättar.
+[/INFO]
 
 
 
