@@ -66,6 +66,8 @@ Hamnar du i bekymmer så finns det ledtrådar som du kan få. Du aktiverar ledtr
 
 Du behöver göra ett visst antal uppgifter för att bli godkänd på labben. Sedan finns extra uppgifter du kan utföra om du så väljer. [Varför skall jag göra extrauppgiftena](kurser/faq/varfor-gora-extra-uppgifter)?
 
+I uppgift 1.3 skapas en funktion som ska returnera antalet vokaler i en given text sträng. Med vokaler menas svenska vokaler minus 'å ä ö' dvs.: 'a e i o u y'.
+
 
 
 Krav {#krav}

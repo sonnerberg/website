@@ -24,7 +24,7 @@ Programmering och problemlösning i Python. Strukturera koden i en egen fil och 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och stränghantering och du har byggt [första delen](uppgift/din-egen-chattbot-marvin-steg-1) av Marvin.
+Du kan grunderna i Python och stränghantering och du har byggt [första delen](uppgift/din-egen-chattbot-marvin-steg-1-v2) av Marvin.
 
 
 
