@@ -5,6 +5,7 @@ category:
     - kurs htmlphp
     - php
 revision:
+    "2018-09-07": "(B, mos) Uppdaterat struktur på multisidan så titel fungerar."
     "2018-08-22": "(A, mos) Omskriven och genomarbetad i en ny version 2."
 ...
 Bygg en multisida med PHP (v2)
@@ -184,7 +185,100 @@ $page = $pages[$pageReference] ?? null;
 require __DIR__ . "/view/multipage.php";
 ```
 
-Låt oss gå igenom logikens olika delar för att förklara dess olika syften.
+Det var i grova drag det som behövs för en multisida. Låt oss finslipa lite.
+
+
+
+Bygg upp innehåll, rendera i slutet {#renderaslut}
+--------------------------------------
+
+I slutet av detta stycket kan du se den slutliga strukturen på multisidan.
+
+Jag vill göra en ändring till i strukturen i multisidan, jag vill göra sidans rendering i slutet av sidkontrollern. Sidans rendering är när jag inkluderar vyerna som _renderar_, skriver ut den slutliga webbsidans innehåll.
+
+Det är dessa tre delar som jag vill skall ske i slutet av sidan.
+
+```php
+// Include the page header through the view template file
+require __DIR__ . "/view/header.php";
+
+// Include the main multipage content through the view template file
+require __DIR__ . "/view/multipage.php";
+
+// Include the page footer through the view template file
+require __DIR__ . "/view/footer.php";
+```
+
+Dessa tre vyer har till ansvar att rendera hela webbsidan med dess innehåll. Det som sker innan de kan börja jobba handlar om att skapa variabler som vyerna kan jobba på.
+
+Förenklat kan man säga att vårt skript, vår sidkontroller, numer multisidkontroller, har följande arbetssätt.
+
+1. Samla värden i variabler.
+2. Gör variablerna tillgängliga för vyerna.
+3. Rendera vyerna.
+
+Jag flyttar tunt koden i multisidan och slutresultatet blir så här.
+
+```php
+<?php
+/**
+ * This is a page controller for a multipage. You should name this file
+ * as the name of the pagecontroller for this multipage. You should then
+ * add a directory with the same name, excluding the file suffix of ".php".
+ * You then then have several multipages within the same directory, like this.
+ *
+ * multipage.php
+ * multipage/
+ *
+ * some-test-page.php
+ * some-test-page/
+ */
+ // Include the configuration file
+ require __DIR__ . "/config.php";
+
+ // Include essential functions
+ require __DIR__ . "/src/functions.php";
+
+// Get what subpage to show, defaults to index
+$pageReference = $_GET["page"] ?? "index";
+
+// Get the filename of this multipage, exkluding the file suffix of .php
+$base = basename(__FILE__, ".php");
+
+// Create the collection of valid sub pages.
+$pages = [
+    "index" => [
+        "title" => "Intro to this multipage.",
+        "file" => __DIR__ . "/$base/index.php",
+    ],
+    "print-get" => [
+        "title" => "Print the content of \$_GET variable.",
+        "file" => __DIR__ . "/$base/print-get.php",
+    ],
+    "get-samples" => [
+        "title" => "Try various links using GET queryparams.",
+        "file" => __DIR__ . "/$base/get-samples.php",
+    ],
+    "print-server" => [
+        "title" => "Print the content of \$_SERVER variable.",
+        "file" => __DIR__ . "/$base/print-server.php",
+    ],
+];
+
+// Get the current page from the $pages collection, if it matches
+$page = $pages[$pageReference] ?? null;
+
+// Base title for all pages and add title from selected multipage
+$title = $page["title"] ?? "404";
+$title .= " | Test multipage";
+
+// Render the page
+require __DIR__ . "/view/header.php";
+require __DIR__ . "/view/multipage.php";
+require __DIR__ . "/view/footer.php";
+```
+
+Låt oss gå igenom multisidans olika delar för att förklara dess syften.
 
 
 
