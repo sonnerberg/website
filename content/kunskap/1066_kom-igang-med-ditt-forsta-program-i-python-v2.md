@@ -122,6 +122,15 @@ Så här ser det ut när Kenneth kör igenom övningen från början till slut.
 
 [YOUTUBE src=Qw57psOiLio width=630 caption="Kenneth kör igenom det första exempelprogrammet med Python med sitt namn."]
 
+Observera kommentaren längst upp i filen `hello.py`. Detta kallas en `module docstring`. Du skapar en `module docstring ` genom att lägga en kommentar inkapslat i `"""` längst upp i din fil. Nedan syns ett exempel på en `module docstring`.
+
+```python
+"""
+This program prints Hello World
+"""
+print("Hello World")
+```
+
 Det skulle kunna se ut så här när du är klar.
 
 [ASCIINEMA src=122883 caption="Jag döpte min fil till hello-name.py..."]
