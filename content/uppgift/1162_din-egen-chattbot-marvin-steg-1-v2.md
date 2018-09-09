@@ -112,15 +112,15 @@ Extrauppgift {#extra}
 ```python
 input: "Python", "phno"        output: Match
 input: "Programming", "gram"   output: Match
-input: "kassler", "kusl"       output: No match 
+input: "kassler", "kusl"       output: No match
 ```
 
 * **Menyval A2**: Balance brackets, gör så Marvin kan utvärdera om olika typer av parenteser, ([{}]), matchar. För att en sekvens ska vara balanserad får bara en typ av parentes vara "öppen" åt gången. Exempel:
 ```python
 input: '([{}])'    output: Match
 input: '[](){}'    output: Match
-input: '[{[]}]'    output: No match
-input: '{(([]))}'  output: No match
+input: '[([]}]'    output: No match
+input: '{(([)])}'  output: No match
 input: '[]([])'    output: Match
 ```
 <!-- * **Menyval A1**: Lägg till så att Marvin kan räkna ut arean på en cirkel, där input från användaren är radien på cirkeln.-->
