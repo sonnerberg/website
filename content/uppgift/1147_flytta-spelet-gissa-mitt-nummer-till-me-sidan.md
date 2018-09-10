@@ -4,6 +4,7 @@ category:
     - kurs oophp
     - anax
 revision:
+    "2018-09-10": "(B, mos) Lade till extrauppgift om refaktoring till klasser."
     "2018-03-26": "(A, mos) Första utgåvan."
 ...
 Flytta spelet Gissa mitt nummer till me-sidan
@@ -116,6 +117,8 @@ Extrauppgift {#extra}
 -----------------------
 
 Lös följande extrauppgifter om du har tid och lust.
+
+1. Ger refaktoring på din kod och bygg upp den med klasser.
 
 1. Integrera alla dina exempelprogram, även versionerna för GET och POST. Se om du kan skriva vyer och klasser som är återanvändbara.
 
