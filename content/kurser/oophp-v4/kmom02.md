@@ -3,6 +3,7 @@ author:
     - mos
     - lew
 revision:
+    "2018-09-10": "(D, mos) Flyttade tärningsspelet till kmom03."
     "2018-09-03": "(C, mos) Ingen ändring gjord inför hösten."
     "2018-03-27": "(B, mos) Uppdaterad oophp v4."
     "2017-03-31": "(A, mos, lew) Första versionen."
@@ -89,8 +90,6 @@ Gör följande uppgifter.
 
 1. Gör uppgiften "[Flytta spelet Gissa mitt nummer till me-sidan](uppgift/flytta-spelet-gissa-mitt-nummer-till-me-sidan)". Du skall kopiera koden för ditt gissa-spel och integrera in det i din me-sida. Koden sparar du i `me/redovisa`. 
 
-1. Gör uppgiften "[Tärningsspel 100](uppgift/tarningsspel-100)" inuti din me-sida. Spara din kod under `me/redovisa`.
-
 1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
 
 
@@ -114,7 +113,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Hur gick det att överföra spelet "Gissa mitt nummer" in i din me-sida?
-* Berätta om hur du löste uppgiften med Tärningsspelet 100, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?
 * Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde? Vad tycker du om konceptet `make doc`?
 * Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
 * Vilken är din TIL för detta kmom?
