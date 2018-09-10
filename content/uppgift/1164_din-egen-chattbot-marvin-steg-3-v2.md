@@ -68,7 +68,7 @@ cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
 cd kmom04/marvin3
 ```
 
-1. Skapa en ny fil `main.py` och lägg alla menyvalsfunktioner i denna nya Pythonmodul. Importera `marvin.py` i `main.py`.
+1. Skapa en ny fil `main.py`, den ska innehålla koden för while-loopen och vilket val som görs. `marvin.py` ska innehålla all kod som körs när ett val är gjort, alltså varje enskilt vals kod. Importera `marvin.py` i `main.py`.
 
 1. Lär Marvin kommandot "citat". Skapa en ny fil `quote.py` och lägg hanteringen av kommandot "citat" i denna modul. Importera modulen `quote.py` i `main.py`. Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`. Kommandot "citat" ska skrivas direkt till Marvin. Det ska **inte** ligga bakom ett menyval som tidigare.
 
