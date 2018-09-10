@@ -3,6 +3,7 @@ author: mos
 category:
     - php
 revision:
+    "2018-09-10": "(F, mos) Nytt krav om att göra enhetstester."
     "2018-03-26": "(E, mos) Uppdaterad inför oophp-v4."
     "2017-03-17": "(D, lew) Ny version för oophp-v3."
     "2014-03-19": "(C, mos) Förtydligande om lite kod i sidkontrollern."
@@ -73,6 +74,8 @@ Krav {#krav}
 1. Skissa på ett UML-diagram för klasserna, ett klassidagram. Rita i ett verktyg (dia, draw.io, etc) eller rita på ett papper (och scanna in/fotografera). Spara ditt diagram i filen `doc/class/dice100.pdf`.
 
 1. Se till att du har minimalt med kod i routens hanterare, flytta spelets logik till klasserna.
+
+1. Gör minst 5 testfall mot dina klasser och se hur mycket kodtäckning du kan lyckas få.
 
 1. När du är klar så gör du `make doc test` samt `dbwebb publish`.
 
