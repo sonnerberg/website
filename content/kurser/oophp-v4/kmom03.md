@@ -3,6 +3,7 @@ author:
     - mos
     - lew
 revision:
+    "2018-09-10": "(C, mos) Flyttad tärningsspel från kmom02."
     "2018-04-03": "(B, mos) Omarbetad inför oophp v4."
     "2017-04-07": "(A, mos) Första utgåvan."
 ...
@@ -94,6 +95,8 @@ Gör följande uppgifter.
 
 1. Lös uppgiften "[Kom igång med PHPUnit](uppgift/kom-igang-med-phpunit)" som guidar dig igenom de första stapplande stegen i enhetstestning. Spara all kod i `me/kmom03/phpunit`.
 
+1. Gör uppgiften "[Tärningsspel 100](uppgift/tarningsspel-100)" inuti din me-sida. Spara din kod under `me/redovisa`.
+
 1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
 
 <!--
@@ -116,5 +119,6 @@ Se till att följande frågor besvaras i texten:
 * Har du tidigare erfarenheter av att skriva kod som testar annan kod?
 * Hur ser du på begreppen enhetstestning och att skriva testbar kod?
 * Förklara kort begreppen white/grey/black box testing samt positiva och negativa tester, med dina egna ord.
-* Hur gick det att genomföra uppgifterna med enhetstester, använde du egna klasser som bas för din testning?
+* Berätta om hur du löste uppgiften med Tärningsspelet 100, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?
+* Hur väl lyckades du testa tärningsspelet 100?
 * Vilken är din TIL för detta kmom?
