@@ -29,9 +29,8 @@ Kopiera "items.txt" från exempel mappen.
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -i example/file/string/items.txt kmom04/file
-cd kmom04/file
+cp -i example/file/string/items.txt me/kmom04/file
+cd me/kmom04/file
 ```
 
 I programmet ska vi kunna göra val för om vi vill läsa vad filen innehåller, lägga till en produkt i filen, skriva över innehållet i filen och att ta bort en produkt från filen. Vi börjar med en klassisk while-loop med meny och input.
@@ -122,7 +121,7 @@ def write_to_file(item):
 ...
 ```
 
-Notera att vi i funktionen `append_to_file(item)` skickar med `"a"` som andra argument till "open()" funktionen. Det värdet bestämmer att "write" funktionen ska lägga till värden på slutet. "write()" tar en sträng som argument och skriver det värdet till filen som "filehandler" är skapad med. I if-satsen för val 2 anropar vi `write_to_file()` och skickar med en sträng som användaren skriver in med "input" anropet. Vi testar köra programmet och ser hur filen innehåll ser ut om vi lägger till något.
+Notera att vi i funktionen `write_to_file(item, mode)` skickar med `"a"` som andra argument till `open()` funktionen. Det värdet bestämmer att `write` funktionen ska lägga till värden på slutet av innehållet i filen. `write()` tar en sträng som argument och skriver det värdet till filen som `filehandler` är skapad med. I if-satsen för val 2 anropar vi `write_to_file()` och skickar med en sträng som användaren skriver in med "input" anropet. Vi testar köra programmet och ser hur filen innehåll ser ut om vi lägger till något.
 
 ```bash
 python3 string-to-file.py
