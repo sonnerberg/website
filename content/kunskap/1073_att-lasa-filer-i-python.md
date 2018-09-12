@@ -29,7 +29,7 @@ Kopiera "items.txt" från exempel mappen.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -i example/file/string/items.txt kmom05/file
+cp -i example/file/list/items.txt kmom05/file
 cd kmom05/file
 ```
 
