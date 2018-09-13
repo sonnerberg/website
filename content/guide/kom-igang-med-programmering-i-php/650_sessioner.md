@@ -3,7 +3,7 @@ sectionHeader: true
 linkable: true
 author: mos
 revision:
-    "2018-09-07": "(A, mos) Första versionen, kort introduktion."
+    "2018-09-12": "(A, mos) Första versionen, kort introduktion."
 ...
 Sessioner
 =======================
