@@ -9,7 +9,7 @@ revision:
     "2015-08-25": (B, mos) Genomgången och första versionen släppt.
     "2015-06-03": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
-Kmom04: CSS och en styleväljare
+Kmom04: CSS, formulär, sessioner
 ==================================
 
 [WARNING]
@@ -20,17 +20,17 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-Vi tillägnar detta kursmoment åt att gå igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
+I detta kursmoment går vi igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
 
-Avslutningsvis gör vi en programmeringsövning där vi skapar en stylesheetväljare med PHP. Med den kan vi dynamiskt ändra vilken stylesheet som används till webbplatsen. I samband med det så tittar vi på lite fler PHP-konstruktioner som sessioner och postade formulär.
+I PHP får du lära dig att skapa egna funktioner och se hur du jobbar med HTML formulär och sessioner i PHP. Du kommer bekanta dig med de inbyggda globala arrayerna `$_GET`, `$_POST` och `$_SESSION` och se hur de relaterar till formulär och sessioner.
 
-Dessutom gör du en labb för att komma igång med funktioner i PHP. Allt eftersom koden växer så ökar behovet av att strukturera koden och funktioner är en viktig del för att strukturera kod.
+Du gör en labb med funktioner och du får välja en programmeringsövning som omfattar både formulär och sessioner.
 
 <!--more-->
 
-[YOUTUBE src=kSlrZk9RoNk width=630 caption="En styleväljare på Mikaels me-sida."]
+<!-- bilder från exempel på login, flash och styleväljare -->
 
-Här kan du testa exemplet som ligger till grund för resultatet, du hittar det i [kursrepot på dbwebb](repo/htmlphp/example/stylechooser).
+[YOUTUBE src=kSlrZk9RoNk width=630 caption="En styleväljare på Mikaels me-sida."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -39,7 +39,7 @@ Här kan du testa exemplet som ligger till grund för resultatet, du hittar det 
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar)*
+*(ca: 6-10 studietimmar)*
 
 
 
@@ -63,6 +63,7 @@ Läs följande för att fortsätta bekanta dig med tekniken.
 1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
     * [Egenskapade funktioner](guide/kom-igang-med-programmering-i-php/egenskapade-funktioner)
     * [HTML formulär](guide/kom-igang-med-programmering-i-php/html-formular)
+    * [Sessioner](guide/kom-igang-med-programmering-i-php/sessioner)
 
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 7 Funktioner
@@ -78,17 +79,17 @@ Det finns en samling videor som används i olika omfattning under kursens gång,
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-12 studietimmar)*
+*(ca: 6-8 studietimmar)*
 
 
 
 ### Övningar {#ovningar}
 
-Genomför följande övningar, det hjälper dig inför uppgifterna.
-
-1. Jobba igenom övningen "[Att bygga en styleväljare till sin webbplats](kunskap/att-bygga-en-stylevaljare-till-sin-webbplats)".
+Det finns inga speciella övningar till detta kursmomentet. Men de delar som ligger i guiderna ger dig grunden för det som behövs för att lösa uppgifterna.
 
 <!--
+1. Jobba igenom övningen "[Att bygga en styleväljare till sin webbplats](kunskap/att-bygga-en-stylevaljare-till-sin-webbplats)".
+
 https://arkiv.dbwebb.se/kod-exempel/business-card-generator/
 -->
 
@@ -100,9 +101,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[PHP lab 4: skapa egna funktioner](uppgift/php-lab4-skapa-egna-funktioner)". Spara alla filerna i katalogen `me/kmom04/lab4`.
 
-1. Gör uppgiften "[Bygg en styleväljare till din webbplats](uppgift/bygg-en-stylevaljare-till-din-webbplats)". Spara filerna i `me/kmom04/stylechooser`.
+1. Gör uppgiften "[Bygg ut din me-sida till version 4 (v2)](uppgift/bygg-ut-din-me-sida-till-version-4-v2)". Spara filerna i katalogen `me/kmom04/me4`.
 
-1. Gör uppgiften "[Bygg ut din me-sida till version 4](uppgift/bygg-ut-din-me-sida-till-version-4)". Spara filerna i katalogen `me/kmom04/me4`.
+<!--
+1. Gör uppgiften "[Bygg en styleväljare till din webbplats](uppgift/bygg-en-stylevaljare-till-din-webbplats)". Spara filerna i `me/kmom04/stylechooser`.
+-->
 
 
 
@@ -117,8 +120,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Börjar du känna att du bemästrar CSS? Beskriv hur väl du kan CSS (nybörjare, erfaren).
 * Vad tycker du om CSS så här långt in i kursen?
-* Hur lyckades du med din styleväljare, var det svårt? 
-* Det var ju både formulär, sessioner, POST, GET och lite till, hur kändes det? 
-* Hur tänkte du när du gjorde din extra stylesheet och vad tycker du om resultatet?
-* Hur går det med ditt PHP:ande, börjar det bli mycket/svår kod, eller går det finfint?
+* Känns det som du greppar konceptet med php och funktioner?
+* Gick det bra med html formulär, GET, POST och processingsidor i php?
+* Lyckade du får ordning på hur php och sessioner fungerar?
 * Vilken är din TIL för detta kmom?
