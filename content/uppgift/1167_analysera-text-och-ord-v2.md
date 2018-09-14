@@ -62,7 +62,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Modulen `menu.py` skall enbart innehålla kod för att visa menyn.
 
-1. Filen `main.py` skall enbart innehålla kommandoloopen och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften.
+1. Filen `main.py` skall enbart innehålla kommandoloopen, tänk while-loopen i marvin, och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften.
 
 1. Använd menyn för att visa upp de olika val en användare har beroende på nuvarande läge.
 
