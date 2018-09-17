@@ -86,6 +86,8 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
+* Bygg ut ditt flashmeddelande så att det ser olika ut beroende på typen av meddelande. Använd css för att visualisera om det är en notis, lyckad operation, varning eller felmeddelande.
+
 * Gör en styleväljare (som en undersida, eller inkludera i din webbplats header) och lägg till en eller två stylesheets som användaren kan välja mellan.
 
 * Gör inloggning till din webbplats. Se till att användaren doe:doe och admin:admin kan logga in (user:password). Skapa som ny multisida och/eller integrera i din webbplats.
