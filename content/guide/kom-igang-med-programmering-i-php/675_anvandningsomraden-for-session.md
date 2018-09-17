@@ -99,7 +99,8 @@ Här väljer jag att lägga all koden för stylechoosern i en egen vy `view/styl
  * to implement a stylechooser.
  * <link rel="stylesheet" type="text/css" href="css/style.css">
  */
-$style = $_SESSION["style"] ?? "default";
+// Get the style from session, or set a default style
+$style = $_SESSION["style"] ?? null;
 
 $styles = [
     "default" => "css/stylesheet.css",

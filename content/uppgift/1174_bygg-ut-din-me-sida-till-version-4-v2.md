@@ -4,6 +4,7 @@ category:
     - kurs htmlphp
     - webbprogrammering
 revision:
+    "2018-09-17": (D, mos) Mindre justeringar i kraven, publicerad fr htmlphp v3.
     "2018-09-14": (C, mos) Uppdaterad och ny struktur med fler uppgifter i htmlphp v3.
     "2015-08-26": (B, mos) Förtydligade delar av kraven.
     "2015-06-03": (A, mos) Första utgåvan i samband med kursen htmlphp v2.
@@ -59,7 +60,7 @@ Krav {#krav}
 
 1. Se till att du har en fil `config.php`, inkludera den överst i alla sidor. Sessionen skall startas överst `config.php`.
 
-1. Se till att du har en fil `src/functions.php` som inkluderas i alla sidor. Där lägger du funktioner som du själv skapar.
+1. Se till att du har en fil `src/functions.php` som inkluderas i alla sidor. Där lägger du funktioner som du själv skapar. Skapa en funktion för att förstöra sessionen.
  
 1. Skapa en ny multisida och lägg till i din navbar, döp den till "Session".
 
@@ -67,7 +68,9 @@ Krav {#krav}
 
 1. Skapa en undersida som kan förstöra sessionen.
 
-1. Skapa en undersida med ett ett POST-formulär som använder en processingsida  (undersida) och redirectar till en resultatsida (ny undersida).
+1. Skapa en undersida som lagrar en siffra i sessionen och dubblerar dess värde varje gång som sidan laddas.
+
+1. Skapa en undersida med ett ett POST-formulär som använder en processingsida  (undersida) och redirectar till en resultatsida (ny undersida). Du kan göra ett vlafritt formulär.
 
 1. Gör ytterligare undersida med ett POST formulär där du har ett formulärfält (textarea) där användaren kan skriva ett eget meddelande. Detta meddelande skall du hantera i processingsidan, spara i sessionen, och slutligen visa i resultatsidan (tänk _read once flash message_).
 

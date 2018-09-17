@@ -2,35 +2,31 @@
 author:
     - mos
 revision:
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-09-17": (F, mos) Uppdaterad för v3, mer exempelprogram.
     "2017-06-15": (E, mos) Uppdaterad labbserie.
     "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
     "2015-08-25": (B, mos) Genomgången och första versionen släppt.
     "2015-06-03": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
-Kmom04: CSS, formulär, sessioner
+Kmom04: Formulär och sessioner
 ==================================
-
-[WARNING]
-
-** Kursutveckling pågår till kurs htmlphp v3 **
-
-Kursstart hösten 2018.
-
-[/WARNING]
 
 I detta kursmoment går vi igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
 
 I PHP får du lära dig att skapa egna funktioner och se hur du jobbar med HTML formulär och sessioner i PHP. Du kommer bekanta dig med de inbyggda globala arrayerna `$_GET`, `$_POST` och `$_SESSION` och se hur de relaterar till formulär och sessioner.
 
-Du gör en labb med funktioner och du får välja en programmeringsövning som omfattar både formulär och sessioner.
+Du jobbar med ett flöde där formulär postar till en procesingsida som skickar vidare till en resultatsida. Det flödet är ett vanligt sätt att strukturera sina webbapplikationer när man uppdaterar data i webbplatsen.
+
+Du gör en labb med funktioner och du implementerar en multisida i din me-sida där du använder både formulär och sessioner.
 
 <!--more-->
 
-<!-- bilder från exempel på login, flash och styleväljare -->
+[FIGURE src=image/snapht18/login.png?w=w3 caption="Funktionalitet för att logga in på en webbplats löses med formulär, processingsidor och sessioner."]
 
-[YOUTUBE src=kSlrZk9RoNk width=630 caption="En styleväljare på Mikaels me-sida."]
+[FIGURE src=image/snapht18/stylechooser.png?w=w3 caption="En styleväljare implementerad med formulär, processingsida och sessioner."]
+
+[FIGURE src=image/snapht18/flashmessage.png?w=w3 caption="Flashmeddelanden som lagras temporärt i sessionen kan ge användaren återkoppling på om saker gick bra eller ej."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
