@@ -28,12 +28,12 @@ Du kan grunderna i Python och stränghantering och du har byggt [första delen](
 
 
 
-Introduktion {#intro}
+<!-- Introduktion {#intro}
 -----------------------
 
 Spelet "Guess the number" är ett enkelt gissningsspel där någon tänker på ett tal mellan 1-100. Man har 6 gissningar på sig att gissa rätt tal. Vid varje gissning så får man svar om talet är "för lågt", "för högt" eller "rätt gissat".
 
-Kapitel 4 i boken [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) beskriver hur spelet "Guess the number" kan implementeras.
+Kapitel 4 i boken [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) beskriver hur spelet "Guess the number" kan implementeras. -->
 
 
 
