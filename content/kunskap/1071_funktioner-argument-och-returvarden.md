@@ -27,14 +27,14 @@ Introduktion {#introduktion}
 
 Funktioner används för att dela upp och kategorisera delar av vår kod som gör det möjligt att återanvända koden på flera ställen i våra program. Funktioner finns i nästan alla programmeringsspråk och är en av de viktigaste verktygen vi har som programmerare. Låt oss se hur en funktion ser ut.
 
-En funktion är kod som ligger i ett *block*, som i if-satser, for och while loopar, men blocket definieras med nyckelordet *def* och tilldelas ett namn som vi kan anropa funktionen med. När vi anropar funktionen exekveras koden som ligger i funktionens block. Låt oss kolla på ett simpelt exempel där vi skriver ut "Hello" från en funktion.
+En funktion är kod som ligger i ett *block*. Vi har tidigare sätt block som i `if`-satser, `for` och `while`-loopar. Ett funktionsblock definieras med nyckelordet *def* och tilldelas ett namn som vi kan anropa funktionen med. När vi anropar funktionen exekveras koden som ligger i funktionens block. Låt oss kolla på ett simpelt exempel där vi skriver ut "Hello" från en funktion.
 ```python
 def say_hello():
     print("Hello")
 
 print("Simon says hello")
 say_hello()
-# Say hello...
+# Simon says hello
 # Hello
 ```
 
@@ -50,13 +50,13 @@ Vi kommer i denna övning utgå ifrån kod utan funktioner och sakta men säkert
 
 Vilken data får vi i uppgiften?
 
-Emil värmer i 2,5 minuter på 800W.  
-Andreas värmer i 3,5 minuter på 800W.  
-kWh pris för el på 78,04 öre per kWh.  
+Emil värmer i 2,5 minuter på 800W.
+Andreas värmer i 3,5 minuter på 800W.
+kWh pris för el på 78,04 öre per kWh.
 
 Vi kan även formeln för att beräkna energiåtgången i kWh om vi kan tiden och effekten:
 
-energi = effekt * tiden i timmar / 1000
+> energi = effekt * tiden i timmar / 1000
 
 Låt oss se hur vi översätter detta till pythonkod.
 
