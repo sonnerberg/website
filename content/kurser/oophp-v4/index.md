@@ -3,6 +3,7 @@ title: oophp (v4)
 author:
     - mos
 revision:
+    "2018-09-20": "(D, mos) Justerat syfte, innehåll, mål, förkunskaper inför ny kurskod."
     "2018-06-18": "(C, mos) Uppdatering av grundstruktur inför ht18."
     "2018-06-01": "(B, mos) Genomgången inför oophp v4."
     "2017-03-24": "(A, mos) Info om kmom01-04, [äldre versioner finns](kurser/oophp-v2)."
@@ -10,12 +11,11 @@ revision:
 Kursen oophp (v4)
 ==================================
 
-Kursen **Objektorienterade webbteknologier**, a.k.a. *oophp*, fokuserar på objektorienterad programmering med PHP tillsammans med databasen MySQL.
+Kursen **Objektorienterade webbteknologier**, a.k.a. *oophp*, fokuserar på objektorienterade programmeringstekniker i programmeringsspråket PHP. Klassiska objektorienterade konstruktioner hanteras tillsammans med objektorienterad programmering i webbaserat ramverk tillsammans med databaser samt enhetstestning. 
 
 <!--more-->
 
-Kursen hanterar objektorienterade programmeringstekniker i PHP med fokus mot webbprogrammering och webbutveckling av webbapplikationer och webbplatser.
-
+<!--
 Grundläggande programmering i PHP gås igenom och därefter fokuseras på de objektorienterade konstruktionerna. Som databas används MySQL och PHP Data Objects används för att koppla PHP mot databasen.
 
 Skriptspråket PHP och databaser med SQL är grundtekniker för att tillsammans med HTML och CSS bygga databasdrivna webbapplikationer.
@@ -23,6 +23,7 @@ Skriptspråket PHP och databaser med SQL är grundtekniker för att tillsammans 
 Kursen är praktiskt upplagd och via övningar byggs webbapplikationer med objektorienterad PHP. Mot slutet genomförs ett projekt där de olika övningarna formar en mer avancerad helhet i form av en webbapplikation. All programmering sker i en webbaserad miljö med en Unix-baserad webbserver (Apache), webbutveckling med HTML5 och CSS3 samt en databasserver (SQL och MySQL).
 
 Vill man utveckla professionella webbapplikationer så krävs en riktigt god förståelse för programmering och databaskopplingar på server-sidan. Denna kurs ger dig en bra start via förståelse för användning av objektorienterad PHP tillsammans med SQL (och HTML och CSS).
+-->
 
 
 
@@ -31,7 +32,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> För tillträdet till kursen krävs 15hp i programmering varav en kurs i webbteknologier och en kurs i objektorienterad programmering.
+> Genomgångna kurser motsvarande 15hp programmering och/eller webbteknologier.
 
 
 
@@ -40,13 +41,13 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* PHP-programmering i webbmiljö, syntax, semantik, koppling mot databaser, funktionsorienterad programmering, datastrukturer, algoritmer och inbyggda funktioner.
+* Programmering i webbmiljö, syntax, semantik, koppling mot databaser, datastrukturer och inbyggda funktioner.
 
-* Objektorienterad PHP-programmering med språkkonstruktioner och begrepp. Objektorientering som sätt att strukturera och återanvända kod. Enkla designmönster. 
+* Objektorienterad programmering i PHP med språkkonstruktioner och begrepp. Objektorientering som sätt att strukturera och återanvända kod. Enkla designmönster. 
 
-* SQL och databasen MySQL tillsammans med PHP Data Objects. 
+* SQL med en databas tillsammans med PHP Data Objects. 
 
-* Webbapplikationer, utveckling av webbapplikationer där tekniker såsom webbserver (Apache), PHP, HTML, CSS, och SQL integreras. 
+* Utveckling av webbapplikationer i ett ramverk där tekniker såsom webbserver (Apache), PHP, HTML, CSS, och SQL integreras tillsammans med ett webbaserat ramverk. 
 
 * Användning av verktyg och tekniker som lämpar sig för utveckling av webbapplikationer, tex UNIX/Linux, installation på extern webbserver, ssh, ftp/sftp, databasklienter såsom PHPMyAdmin, MySQL Workbench och kommandoklienter.
 
@@ -55,7 +56,7 @@ Kursen omfattar följande områden:
 Mål {#mal}
 ------------------------
 
-Kursens mål är indelade i undergrupper.
+Följande är kursens mål, indelat i undergrupper.
 
 
 
@@ -63,7 +64,7 @@ Kursens mål är indelade i undergrupper.
 
 Efter genomförd kurs skall studenten:
 
-* kunna redogöra för utveckling med objektorienterad PHP-programmering och databaser i webbmiljö, genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* kunna redogöra för utveckling med objektorienterad programmering och databaser i webbmiljö, genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
 
 
 
@@ -72,9 +73,16 @@ Efter genomförd kurs skall studenten:
 Efter genomförd kurs skall studenten:
 
 * kunna tillämpa de objektorienterade programmeringsparadigmen genom praktiska övningar och projekt.
-* självständigt, utefter en specifikation, kunna utveckla och driftsätta en webbapplikation där
-objektorienterad PHP-programmering och databaser har en central roll.
-* kunna hantera de verktyg och miljöer som används vid utveckling av databasdrivna webbapplikationer.
+* självständigt, utefter en specifikation, kunna utveckla och driftsätta en webbapplikation där objektorienterad programmering i ramverk tillsammans med databaser har en central roll.
+* kunna hantera de verktyg och miljöer som används vid utveckling av databasdrivna webbapplikationer i ett ramverk för webbutveckling.
+
+
+
+### Värderingsförmåga och förhållningssätt {#vardera}
+
+Efter genomförd kurs skall studenten:
+
+* översiktligt förstå, kunna förklara samt argumentera kring objektorienterad programmering i ett webbaserat ramverk.
 
 
 
@@ -297,6 +305,10 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 Kursen heter numer "Objektorienterade webbteknologier".
 
 Du hittar [kursplanen genom att söka på kurskoden PA1440 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1440).
+
+Från och med våren 2019 kommer kursen byta kurskod då förkunskaperna uppdateras.
+
+Mellan 2017 och 2018 hade kursen kurskoden [PA1440](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1440).
 
 Tidigare hette kursen "Databaser och objektorienterad programmering i PHP".
 

@@ -2,6 +2,7 @@
 
 [FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2018, vi är redo..."]
 
+* [WM i Uptime 2018/2019](https://dbwebb.se/forum/viewtopic.php?f=25&t=7680)
 * [Om 3-veckors uppropet](t/7593)
 * [Vi söker student-mentorer till distansstudenter](t/7592)
 * [Var finns alla videor och streams?](t/7561)

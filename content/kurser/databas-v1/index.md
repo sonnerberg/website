@@ -2,17 +2,18 @@
 title: databas-v1
 author: mos
 revision:
+    "2018-09-20": "(C, mos) Förbereder inför ny kurskod till vt19."
     "2018-02-27": "(B, mos) Inkluderad i Webbprogrammering från vt18 lp4."
     "2018-01-11": "(A, mos) Första utgåva inför kursstart VT2018."
 ...
 Kursen databas (v1)
 ==================================
 
-Kursen **Databasteknologier för webben**, a.k.a. *databas*. Syftet med kursen är att ge studenten generella kunskaper inom området databaser och webb samt specifika kunskaper i att arbete med databaser i ett applikationsspråk i webbsammanhang.
+Kursen **Databasteknologier för webben**, a.k.a. *databas*, och syftet är att studenten ska förstå och lära sig modellera och implementera en databas samt utveckla en webbapplikation som använder databasen. Som applikationsspråk används serverbaserad JavaScript i webbmiljö.
+
+Kursen erbjuds även under namnet "Webbprogrammering och databaser" med en annan kurskod.
 
 <!--more-->
-
-Kursen erbjuds även under namnet "Webbprogrammering och databaser".
 
 
 
@@ -21,11 +22,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Genomgångna kurser i "Webbteknologier" och "Teknisk webbdesign och Användbarhet".
-
-Alternativt för "Webbprogrammering och databaser":
-
-> För tillträde till kursen krävs att den studerande har genomgått 15 högskolepoäng i programmering.
+> Genomgångna kurser motsvarande 15hp programmering och/eller webbteknologier.
 
 
 
@@ -35,46 +32,49 @@ Innehåll {#innehall}
 Kursen omfattar följande områden:
 
 * Databasteknik
-* Relationsmodellen och alternativa modeller
+* Relationsmodellen och alternativa modeller.
 * Databasmodellering
 * SQL
-* Applikationsprogrammering med databaser
-* Verktyg och tekniker för utveckling och test
+* SQL med lagrade procedurer, funktioner och triggers.
+* SQL med index. 
+* Applikationsprogrammering med databaser.
+* Applikationsprogrammering i webbmiljö med programmeringsspråket JavaScript på serversidan med Node.js med inslag av HTMl och CSS.
+* Verktyg och tekniker för utveckling och test.
 
 
 
 Mål {#mal}
 ------------------------
 
-
-
-###Kunskap och förståelse {#kunskap}
-
-Efter genomförd kurs skall studenten:
-
-* vara väl bevandrad i relationsdatabaser och ha en övergripande förståelse för dess användning och dess fördelar och nackdelar.
+Följande är kursens mål, indelat i undergrupper.
 
 
 
-###Färdighet och förmåga {#fardighet}
+### Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:
 
-<!-- se över dessa -->
+* vara väl bevandrad i relationsdatabaser och ha en övergripande förståelse för dess användning, fördelar och nackdelar.
 
-* ha en grundlig, både teoretisk och praktisk, förmåga att använda relationsdatabaser
-* i detalj förstå och applicera processen att utveckla en databas från en problemställning till färdig klientapplikation
+
+
+### Färdighet och förmåga {#fardighet}
+
+Efter genomförd kurs skall studenten:
+
+* ha en grundlig, både teoretisk och praktisk, förmåga att förstå och använda relationsdatabaser
+* i detalj förstå och applicera processen att utveckla en databas från en problemställning till färdig klientapplikation i webbmiljö
 * strukturerat och i detalj modellera och dokumentera en databas i form av en ER modell
 * utifrån en befintlig modell, praktiskt skapa och förändra samt använda en databas med SQL
-* designa och implementera en väl fungerande databasapplikation med tillhörande (client/server) klientapplikation
+* designa och implementera en väl fungerande databasapplikation i webbmiljö
 
 
 
-###Värderingsförmåga och förhållningssätt {#vardera}
+### Värderingsförmåga och förhållningssätt {#vardera}
 
 Efter genomförd kurs skall studenten:
 
-* översiktligt förstå, kunna förklara samt argumentera kring databaser och databashanteringssystem i allmänhet.
+* översiktligt förstå, kunna förklara samt allmänt kunna argumentera kring databaser, databashanteringssystem och hur dessa implementeras i en webbaserad miljö.
 
 
 
@@ -84,7 +84,7 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: Databas {#kmom01}
+### Kmom01: Databas {#kmom01}
 
 Vi introduceras till databasen MySQL och dess olika klienter samt lär oss använda SQL tillsammans med MySQL. Du får jobba igenom en övning i SQL som introducerar dig i grundläggande konstruktioner för att skapa och uppdatera en databas.
 
@@ -94,7 +94,7 @@ Du får pröva att använda tre olika klienter till MySQL, alla tre har sin plat
 
 
 
-###Kmom02: SQL {#kmom02}
+### Kmom02: SQL {#kmom02}
 
 Vi jobbar vidare med SQL och tränar mer på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
@@ -104,7 +104,7 @@ Du kommer även jobba med JavaScript och Node.js för att se hur du kan koppla d
 
 
 
-###Kmom03: ER-modellering {#kmom03}
+### Kmom03: ER-modellering {#kmom03}
 
 Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering.
 
@@ -116,7 +116,7 @@ Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en
 
 
 
-###Kmom04: Transaktioner {#kmom04}
+### Kmom04: Transaktioner {#kmom04}
 
 Kursmomenten hanterar begreppet transaktioner i en databas.
 
@@ -128,7 +128,7 @@ Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulter
 
 
 
-###Kmom05: Procedur och trigger {#kmom05}
+### Kmom05: Procedur och trigger {#kmom05}
 
 Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
 
@@ -140,7 +140,7 @@ Vi ser hur man bygger upp en CRUD-baserad webbklient med HTML-formulär som ger 
 
 
 
-###Kmom06: Prestanda {#kmom06}
+### Kmom06: Prestanda {#kmom06}
 
 Vi fortsätter med programmering i databasen, denna gången med egendefinierade funktioner som har en liknande struktur som lagrade procedurer och triggers.
 
@@ -152,7 +152,7 @@ Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och förho
 
 
 
-###Kmom07/10: Projekt och examination {#kmom10}
+### Kmom07/10: Projekt och examination {#kmom10}
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
@@ -167,7 +167,7 @@ Kurslitteratur {#litteratur}
 
 
 
-###Kurslitteratur {#kurslitteratur}
+### Kurslitteratur {#kurslitteratur}
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
@@ -181,14 +181,14 @@ Det finns läsanvisningar i samband med varje kursmoment.
     En bok om ES6 som bygger vidare på att man kan ES5.
 
 
-
-###Referenslitteratur {#referenslitteratur}
+<!--
+### Referenslitteratur {#referenslitteratur}
 
 Referensdokumentationen är främst olika online-resurser i form av manualer.
+-->
 
 
-
-###Övrig litteratur {#ovriglitteratur}
+### Övrig litteratur {#ovriglitteratur}
 
 I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
 
@@ -278,6 +278,10 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Kursen ges under olika kurskoder till olika målgrupper.
+
+Från våren 2019 får kurserna nya kurskoder.
+
+Följande gällde till och med 2018.
 
 Kursens namn är "Databasteknologier för webben" för programmet Webbprogrammering och kurspaketet webprog (från VT18). Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).
 

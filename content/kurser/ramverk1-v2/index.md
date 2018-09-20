@@ -10,29 +10,26 @@ revision:
 Kursen ramverk1 (v2)
 ==================================
 
-Kursen **Webbaserade ramverk 1**, a.k.a. *ramverk1*, lär ut programmering och kodstrukturer med ramverk, designmönster och återanvändbara moduler samt tekniker för automatiserad testning och continuous integration.</strike>i en fullstack webbmiljö.</strike>
+Kursen **Webbaserade ramverk 1**, a.k.a. *ramverk1*, lär ut programmering och objektorienterade kodstrukturer med designmönster och modultänkande kring återanvändbara moduler i webbaserade ramverk samt tekniker för automatiserad testning, byggsystem och flöde för kontinuerlig integration av programvaran.
 
 <!--more-->
 
 [WARNING]
 
-** Kursutveckling pågår till kurs ramverk v2 **
+**Kursutveckling pågår till kurs ramverk v2**
 
 Kursstart hösten 2018.
 
 [/WARNING]
 
 
-
-Genom att använda ramverk för webbutveckling tillsammans med tekniker HTML, CSS, <strike>JavaScript,</strike> PHP och databas tränas studenten i att hantera en större kodmassa som behöver organiseras i god kodstruktur med stöd av ramverk, designmönster och återanvändning av befintliga moduler för att effektivisera utvecklingsprocessen.
-
-<strike>Frontend är HTML, CSS och JavaScript med delvis Ajax-baserade anrop till en backend som byggs med PHP-baserade ramverk och moduler samt databaskoppling.</strike>
+<!--
+Genom att använda ramverk för webbutveckling tillsammans med tekniker HTML, CSS, PHP och databas tränas studenten i att hantera en större kodmassa som behöver organiseras i god kodstruktur med stöd av ramverk, designmönster och återanvändning av befintliga moduler för att effektivisera utvecklingsprocessen.
 
 Kursens fokus är främst kodstruktur och ramverk på backend men fullstack-perspektivet är viktigt. Kursen introducerar utvecklingsmetoder för testdriven utveckling och continuous integration.
 
 Via litteraturstudier, praktiska övningar och ett större avslutningsprojekt ges möjlighet att skapa sig en egen bild av vad koncepten kan innebära för ett webbutvecklingsprojekt.
-
-_JavaScript och Ajax är flyttat till ramverk2_.
+-->
 
 
 
@@ -41,7 +38,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Avklarade kurser inom programmering, databaser och webbprogrammering motsvarande 30hp varav minst 7,5 i objektorienterade webbteknologier.
+> För tillträde till kursen krävs 22,5 högskolepoäng programmering, webbteknologier, databaser samt genomgången kurs Objektorienterade webbteknologier 7,5hp.
 
 
 
@@ -50,10 +47,10 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* <strike>JavaScript med AJAX.</strike>
-* PHP med objektorienterade teknologier.
-* PHP med befintligt ramverk.
-* PHP med återanvändbara moduler.
+* Webbaserad programmering i ramverk med designmönster implementerade främst i programmeringsspråket PHP.
+* Objektorienterade teknologier.
+* Utveckling av webbapplikation i ramverk.
+* Återanvändbara moduler, paketering och distribution.
 * Designmönster för ramverk.
 * Testdriven utveckling och tekniker för enhetstestning.
 * Automatiserad testning och byggning.
@@ -64,9 +61,11 @@ Kursen omfattar följande områden:
 Mål {#mal}
 ------------------------
 
+Följande är kursens mål, indelat i undergrupper.
 
 
-###Kunskap och förståelse {#kunskap}
+
+### Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:
 
@@ -75,7 +74,7 @@ Efter genomförd kurs skall studenten:
 
 
 
-###Färdighet och förmåga {#fardighet}
+### Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
@@ -84,11 +83,11 @@ Efter genomförd kurs skall studenten:
 
 
 
-###Värderingsförmåga och förhållningssätt {#vardera}
+### Värderingsförmåga och förhållningssätt {#vardera}
 
 Efter genomförd kurs skall studenten:
 
-* via redovisningstexter kunna visa god förmåga att reflektera över kodstruktur i ramverk<strike> och perspektivet fullstack</strike>.
+* via redovisningstexter kunna visa god förmåga att reflektera och argumentera över kodstruktur i ramverk med sammanhang i designmönster och återanvändbara moduler.
 
 
 
@@ -284,6 +283,8 @@ Kursplan {#kursplan}
 -----------------------------------------------------
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
+
+Från och med hösten 2019 är kursens namn "Webbaserade ramverk och designmönster" och kursen får en ny kursplan.
 
 Kursens namn är "Webbaserade ramverk 1". Du hittar [kursplanen genom att söka på kurskoden PA1441 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1441).
 
