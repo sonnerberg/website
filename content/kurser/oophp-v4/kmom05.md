@@ -51,7 +51,7 @@ Det finns alternativa sätt att uppnå en bra utvecklingsmiljö för kursen. Har
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 1-2 studietimmar)*

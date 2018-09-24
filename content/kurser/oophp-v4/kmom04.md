@@ -2,38 +2,35 @@
 author:
     - mos
 revision:
+    "2018-09-24": "(C, mos) Mindre genomgång."
     "2018-04-16": "(B, mos) Uppdaterad till oophp v4."
     "2017-04-18": "(A, mos) Första utgåvan."
 ...
 Kmom04: Trait och Interface
 ==================================
 
-Vi fortsätter med kodande och testande utanför och inuti ramverket. Fokus är tre saker, trait och interface, mer enhetstestning samt integrera koden ytterligare med ramverket genom att använda ramverkets klasser i störra omfattning.
+Vi fortsätter med kodande och testande utanför och inuti ramverket. Fokus är följande, klasskonstruktioner som trait och interface, mer enhetstestning samt integrera koden ytterligare med ramverket genom att använda ramverkets klasser i störra omfattning.
 
-Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod tillsammans med arv och komposition. Det ger oss två nya verktyg för att tänka och implementera koden på ett objektorienterat sätt.
+Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod i klasser. Det ger oss två nya verktyg för att tänka och implementera koden på ett objektorienterat sätt.
 
-Erfarenheterna från trait och interface använder vi sedan för att vidarutveckla vårt 100-spel med lite intelligens när vi spelar mot datorn som spelare. Samtidigt börjar vi mer använda ramverkets klasser för att knyta in vår kod i ramverkets "skydd".
+Erfarenheterna från trait och interface använder vi sedan för att vidareutveckla vårt 100-spel med lite intelligens när vi spelar mot datorn som spelare. Samtidigt börjar vi mer använda ramverkets klasser för att knyta in vår kod i ramverkets "skydd".
 
-När detta är gjort så börjar vi bygga en testsuite för våra klasser och vi börjar att köra `make test` inuti ramverket.
+När detta är gjort så börjar vi bygga en testsuite för våra klasser och vi gör `make test` inuti ramverket.
 
 <!-- more -->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
-<!--st op-->
 
 
-
-
-
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 2-4 studietimmar)*
 
 
 
-###Videor {#videor}
+### Videor {#videor}
 
 Kika på följande videos.
 
@@ -58,7 +55,7 @@ Läs följande.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 

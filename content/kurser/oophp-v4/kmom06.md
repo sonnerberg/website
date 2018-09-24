@@ -31,7 +31,7 @@ Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske g�
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 1-2 studietimmar)*

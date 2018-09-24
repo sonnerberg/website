@@ -93,27 +93,21 @@ När man skriver sin ramverkskod så vill man normalt undvika direkt tillgång t
 
 ### Enhetstester inuti ramverket {#enhetstest}
 
-Skapa en testsvit som testar dina egna klasser inuti ramverket. Du börjar med att skapa en katalog för testklasserna tillsammans med dess konfigfil.
+Skapa en testsvit som testar dina egna klasser inuti ramverket. <s>Du börjar med att skapa en katalog för testklasserna tillsammans med dess konfigfil.</s> Du har redan en grund i katalogen `me/redovisa/test`. Där finns ett exempel på en testklass och en konfigurationsfil.
 
-```text
-# Stå i me/redovisa
-mkdir test
-cp ../../example/phpunit/test/config.php test/
-```
+Konfigurationsfilen är främst för att inkludera autoloadern när PHPUnit körs.
 
-Konfigurationsfilen ovan är främst för att inkludera autoloadern när PHPUnit körs.
+Du har redan en konfigurationsfil för PHPUnit i `.phpunit.xml`. Den bestämmer vilka kataloger som skall testas. I ursprungsläget är det katalogen `src/`. 
 
-Du har redan en konfigurationsfil för PHPUnit i `.phpunit.xml`.
-
-Nu kan du exekvera din testsvit som för tillfället inte innehåller några testfall.
+Nu kan du exekvera din testsvit som för tillfället inte innehåller speciellt många testfall.
 
 ```text
 make phpunit
 ```
 
-Eller komplett med övriga verktyg via `make test`.
+Eller så kör du en komplett testsuite med samtliga test och valideringsverktyg via `make test`.
 
-Nu börjar du bygga upp din testsvit som du lärt dig.
+Nu kan du börja bygga upp din testsvit för din `me/redovisa`.
 
 
 

@@ -41,7 +41,7 @@ Installera följande som en del av din labbmiljö. Se till att du installerar PH
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 3-6 studietimmar)*

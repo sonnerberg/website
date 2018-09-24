@@ -50,7 +50,7 @@ dbwebb init
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-6 studietimmar)*

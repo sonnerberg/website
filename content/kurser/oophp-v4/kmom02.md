@@ -28,7 +28,7 @@ Vi börjar koda inuti ramverket och använder oss av routes, vyer och placerar k
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 2-4 studietimmar)*
