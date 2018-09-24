@@ -60,7 +60,7 @@ textarea {
 
 **box-sizing** talar om att border och padding ska inkluderas i den totala bredden och höjden. Annars kan input-fältet sticka ut för långt i sidan.
 
-Det går även att forma elementen en del via dess attribut. Till exempel
+<!-- Det går även att forma elementen en del via dess attribut. Till exempel -->
 
 I övrigt var det inte nya konstruktioner.
 
