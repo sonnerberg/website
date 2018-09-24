@@ -16,6 +16,14 @@ En guide för att stegvis komma igång med databasen SQLite och SQL. Guiden hant
 
 <!--more-->
 
+[WARNING]
+
+**Nyare utgåva av artikeln finns.**
+
+Denna artikel bygger på en Firefox plugin SQLite Manager som numer inte är så enkel att integrera i Firefox (2018). Det finns en uppdaterad artikel som använder en annan desktop klient för SQLite, läs gärna den på "[Kom igång med databasen SQLite med DB Browser för SQLite](kunskap/kom-igang-med-databasen-sqlite-med-db-browser-for-sqlite)".
+
+[/WARNING]
+
 Bästa sättet att gå igenom guiden är att genomföra varje övning på egen hand. Gör precis som jag gjort, fast på egen hand. Kopiera eller skriv om kodexemplen, det viktiga är att du återskapar koden i din egna miljö. Läsa är bra men man måste göra själv, "kan själv", för att lära sig.
 
 
