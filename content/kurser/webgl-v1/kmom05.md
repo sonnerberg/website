@@ -19,7 +19,7 @@ Totalt omfattar kursmomentet (04/05) ca 20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Projekt går ut på att programmera 3D [Metaballs](https://en.wikipedia.org/wiki/Metaballs) i WebGL och visa upp resultatet i en webbläsare.
+Projekt går ut på att programmera **3D [Metaballs](https://en.wikipedia.org/wiki/Metaballs)** i WebGL och visa upp resultatet i en webbläsare.
 
 *"Lös det".*
 
@@ -30,9 +30,9 @@ Fråga i forumet om du känner dig osäker.
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om de generella [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
+När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om de generella [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning-g-u).
 
-Detta projektet betygssätts enligt betygsskalan U, Fx, G. Du kan få maximalt 70 (40 texter + 30 projekt) poäng och du behöver minst 55 poäng för att klara G.
+Projektet och kursen som helhet betygssätts enligt betygsskalan U, Ux, G. Du kan få maximalt 60 (30 kmom01 - kmom03 + 30 projekt) poäng och du behöver minst 50 poäng för att klara G.
 
 
 
@@ -103,7 +103,7 @@ Redovisning {#redovisning}
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-1. Ta en kopia av texten på din redovisningssida och kopiera in den på ITs/redovisningen. Glöm inte länka till din me-sida och projektet. 
+1. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
 
 1. Se till att samtliga kursmoment validerar. Om något inte validerar, berätta om varför.
 
