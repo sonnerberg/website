@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-09-24": "(E, efo) Rensade ut i litteratur och flyttade portfölj längst ner i listan."
     "2017-12-27": "(D, mos) Enhetlig mall för me-sida."
     "2017-11-01": "(C, mos) Länk till rätt uppgift om me-sidan (v2)."
     "2017-10-17": (B, mos) Uppdaterad inför ht17.
@@ -63,7 +66,7 @@ Gör följande:
 
 1. Bekanta dig kort med översikten på [MDN: Web technology for developers](https://developer.mozilla.org/en-US/docs/Web). Där ser du generellt material om webbteknologier.
 
-1. Bekanta dig specifikt med det som finns under rubriken "JavaScript". Använd minst 10 minuter av din tid för att kika runt och läsa någon av de inledande artiklarna om JavaScript.
+<!-- 1. Bekanta dig specifikt med det som finns under rubriken "JavaScript". Använd minst 10 minuter av din tid för att kika runt och läsa någon av de inledande artiklarna om JavaScript. -->
 
 1. För en snabb introduktion till konstruktionerna i språket JavaScript kan jag rekommendera dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" och de inledande kapitlen som kompletterar det du läst i kurslitteraturen.
     * Introduction
@@ -113,9 +116,9 @@ Följande källor är relevanta och ger dig en orientering i WebGL och det som k
 
 1. Webbplatsen [Learning WebGL](http://learningwebgl.com/blog/?page_id=1217) innehåller ett antal lektioner om hur man kommer igång med WebGL. De kan komplettera boken.
 
-1. [Khronos Group](https://www.khronos.org/) driver standardisering och utveckling inom OpenGL och WebGL. Vänd dig till deras webbplats för referensmaterial.
+<!-- 1. [Khronos Group](https://www.khronos.org/) driver standardisering och utveckling inom OpenGL och WebGL. Vänd dig till deras webbplats för referensmaterial.
 
-1. Du bör redan vara mycket väl insatt i vektorer, matriser och hur de relaterar till 3D-grafik. Vill du fräscha upp minnet så finns det bra resurser i artikelserien om "[Vector Math for 3D Computer Graphics](http://www.dickbaldwin.com/KjellTutorial/KjellVectorTutorialIndex.htm)".
+1. Du bör redan vara mycket väl insatt i vektorer, matriser och hur de relaterar till 3D-grafik. Vill du fräscha upp minnet så finns det bra resurser i artikelserien om "[Vector Math for 3D Computer Graphics](http://www.dickbaldwin.com/KjellTutorial/KjellVectorTutorialIndex.htm)". -->
 
 
 
@@ -140,13 +143,13 @@ Följande källor är relevanta och ger dig en orientering i WebGL och det som k
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa en portfölj för kursen webgl](uppgift/skapa-en-portfolj-for-kursen-webgl)". Spara resultatet i `me/portfolio`.
-
 1. Gör labben "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)"  Labben genereras i `me/kmom01/lab1`.
 
 1. Gör laborationen "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)". Spara arbetet i `me/kmom01/lab2`.
 
 1. Gör uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)". Ditt resultat sparar du delvis i `me/kmom01/sandbox2` och delvis i `me/kmom01/point`.
+
+1. Gör uppgiften "[Skapa en portfölj för kursen webgl](uppgift/skapa-en-portfolj-for-kursen-webgl)". Spara resultatet i `me/portfolio`.
 
 
 

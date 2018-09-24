@@ -4,6 +4,7 @@ category:
     - webbprogrammering
     - kursen webgl
 revision:
+    "2018-09-24": (B, efo) Rensade ut i kraven och la till krav om kmom01.
     "2018-08-07": (A, efo) Kopierad från generella, omarbetad till webgl portfölj.
 ...
 Skapa en portfölj för kursen webgl
@@ -22,6 +23,8 @@ Förkunskaper {#forkunskaper}
 
 Du har installerat kursens labbmiljö samt installerat kommandot `dbwebb` och du har clonat kursrepot för kursen.
 
+Du har gjort uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)".
+
 
 
 Introduktion {#intro}
@@ -32,6 +35,8 @@ I din me-sida skall du samla dina redovisningstexter och du visar upp de uppgift
 Redovisningstexterna är en del av underlaget till [bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning) i kursen.
 
 Du kan testa hur me-sidan bör fungera, genom att öppna din exempel-katalog i kursrepot under `example/portfolio`.
+
+I nedanstående videos visar Emil hur man kan göra sin portfolio till sin egen.
 
 
 
@@ -51,13 +56,15 @@ cp -ri example/portfolio me
 
 1. I sidan `redovisning.html` skall du skriva dina redovisningstexter för varje kursmoment.
 
-1. I sidan `om.html` lägger du till en godtycklig bild som du finner representativ för kursen.
+<!-- 1. I sidan `om.html` lägger du till en godtycklig bild som du finner representativ för kursen.
 
 1. Leta reda på kursrepot på GitHub och länka till det från din `om.html`.
 
-1. I din `om.html`, länka även till kurssidan på dbwebb.se.
+1. I din `om.html`, länka även till kurssidan på dbwebb.se. -->
 
-1. Du kan uppdatera stylesheet och eventuellt JavaScript i katalogerna `portfolio/style` och `portfolio/js`. Det är inte nödvändigt, gör det om du vill och känner att du har tid. Du kan även göra om din me-sida till en webbplats baserad på PHP.
+<!-- 1. Du kan uppdatera stylesheet och eventuellt JavaScript i katalogerna `portfolio/style` och `portfolio/js`. Det är inte nödvändigt, gör det om du vill och känner att du har tid. Du kan även göra om din me-sida till en webbplats baserad på PHP. -->
+
+1. Skapa filen `kmom01.html`. Här lägger du resultatet av uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)".
 
 1. Gör en dbwebb publish för att kolla att allt validerar och fungerar.
 

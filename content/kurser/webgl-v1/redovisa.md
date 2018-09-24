@@ -82,6 +82,10 @@ Du kan själv provköra och se samma resultat som läraren ser. Det är en mycke
 Klart! {#klar}
 ---------------------------------------
 
+[INFO]
+I videon nedan lämnar Andreas in på Its, du ska göra din inlämning i Canvas.
+[/INFO]
+
 [YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
 
 Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
