@@ -91,6 +91,8 @@ Läs följande:
 
 Kika på följande videor.
 
+1. Videoserien [Kursen Spelteknik för webben](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_JgJqI31cZeBMnjH1JUUoU) ger en kort introduktion till kursen och hjälper till med att bygga din portfölj. Titta på de videor som börjar på 0 och 1.
+
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
 1. Videon "[The Future of WebGL and Gaming](https://www.youtube.com/watch?v=6lnEmAYVziA)" ger dig en inblick i en möjlig framtid för 3D-spel på webben.
