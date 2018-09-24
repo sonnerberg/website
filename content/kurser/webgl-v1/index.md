@@ -118,12 +118,12 @@ Boken är central i kursen och övningarna förutsätter att du har läst de kap
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har vi valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
+Som kurslitteratur har vi valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet.
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[WebGL Programming Guide](kunskap/boken-webgl-programming-guide)** -- Kouichi Matsuda, Rodger Lea  
+* **[WebGL Programming Guide](kunskap/boken-webgl-programming-guide)** -- Kouichi Matsuda, Rodger Lea
   Boken går igenom programmering med WebGL, från de första stapplande stegen till mer avancerade konstruktioner.
 
 
@@ -132,18 +132,18 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
-* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer
     En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
-* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
+* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan
   En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
 
-* **[WebGL: Up and Running](kunskap/boken-webgl-up-and-running)** -- Tony Parisi  
+* **[WebGL: Up and Running](kunskap/boken-webgl-up-and-running)** -- Tony Parisi
     Visar hur du kommer igång med 3D-programmering och WebGL via 3D-bibliotek. För dig som hellre använder 3D bibliotek än skriver din egen kod direkt i WebGL.
 
 <!--
 Boken utgått.
-* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin  
+* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin
   En stabil bok för att komma igång med HTML och CSS.
 -->
 
@@ -158,10 +158,10 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 |------------|-------------------------------------------------------------|
 | Kmom01     | 1, 2                                                        |
 | Kmom02     | 3, 4                                                        |
-| Kmom03     | 5, (6), 7                                                   | 
-| Kmom05     |                                                             | 
+| Kmom03     | 5, (6), 7                                                   |
+| Kmom05     |                                                             |
 
-Dessutom kan varje kursmoment ha ytterligare läsanvisningar i form av artiklar och video. 
+Dessutom kan varje kursmoment ha ytterligare läsanvisningar i form av artiklar och video.
 
 
 
@@ -199,7 +199,7 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-g-u).
 
 
 
