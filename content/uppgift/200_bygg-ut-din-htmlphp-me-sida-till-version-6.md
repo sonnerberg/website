@@ -1,10 +1,13 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - databas
+    - sqlite
+    - php pdo
 revision:
-  "2015-08-27": (A, mos) Första utgåvan i samband med kursen htmlphp v2.
-updated: "2015-08-27 13:58:27"
-created: "2015-08-27 13:56:41"
+    "2019-09-24": "(B, mos) Genomgången i samband med htmlphp v3."
+    "2015-08-27": "(A, mos) Första utgåvan i samband med kursen htmlphp v2."
 ...
 Bygg ut din htmlphp me-sida till version 6
 ==================================
@@ -31,7 +34,7 @@ Du skall lägga till en del, en multisida, till din mesida, där du kan jobba mo
 
 
 
-###Börja med att kopiera me-sidan {#copyme}
+### Börja med att kopiera me-sidan {#copyme}
 
 Börja med att ta en kopia från föregående uppgift `me5`, och bygg vidare på den.
 
@@ -62,9 +65,9 @@ Krav {#krav}
 
 1. Skapa en undersida "read" som visar samtliga dinosaurier i databasen.
 
-1. Försäkra dig om att din befintliga sida `search.php` nu hittar alla dinosaurier i din databas.
+1. Skapa en undersida "init" som återskapar din databas från början med helt nytt innehåll.
 
-1. Dubbelkolla att alla tidigare länkar och funktioner fungerar i din me-sida.
+1. Försäkra dig om att din befintliga sida `search.php` nu hittar alla dinosaurier i din databas.
 
 1. Validera och publicera din kod enligt följande.
 
@@ -81,19 +84,11 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-1. Länka mellan dina olika undersidor. Till exempel, när du visar innehållet i databasen så visar du även länkar till att göra "update" och "delete" för respektive rad.
-
-1. Lägg extra kraft på stylen, nu är din mesida i stort sett klar och lite extra kraft på CSS kan göra underverk.
+1. Länka mellan dina olika undersidor. Till exempel, när du visar innehållet i databasen så visar du även länkar till att göra "update" och "delete" för respektive rad och en länk till "create" för att lägga till en ny rad. 
 
 
 
 Tips från coachen {#tips}
 -----------------------
 
-
-
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

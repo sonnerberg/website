@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-09-24": (F, mos) Nytt dokument inför v3.
     "2017-06-15": (E, mos) Uppdaterad labbserie.
     "2016-11-04": (D, mos) Lade till extrauppgift om login.
     "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
@@ -11,14 +11,6 @@ revision:
 ...
 Kmom06: PHP, PDO och SQL
 ==================================
-
-[WARNING]
-
-** Kursutveckling pågår till kurs htmlphp v3 **
-
-Kursstart hösten 2018.
-
-[/WARNING]
 
 Detta moment handlar om att bygga en databasdriven webbplats med hjälp av databasen SQLite och och PHP. Du skall skapa en enklare webbplats där du har en databas som grund för att spara information. Via webbplatsen kan du lägga till saker till databasen, du kan redigera dem och du kan ta bort dem samt visa dem.
 
@@ -29,51 +21,46 @@ Momentet bygger vidare på det du gjorde i föregående kursmoment.
 
 <!--more-->
 
-[FIGURE src=/image/snapht15/htmlphp-kmom05-search.png?w=w2 caption="Bygg vidare på din sökmotor för dinosaurier (eller vad du nu valde)."]
+[FIGURE src=/image/snapht15/htmlphp-kmom05-search.png?w=w3 caption="Bygg vidare på din sökmotor för dinosaurier (eller vad du nu valde)."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-10 studietimmar)*
+*(ca: 0-2 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### HTML & CSS {#htmlcss}
 
-Det finns inga läsanvisningar i kurslitteraturen.
-
-
-
-###Artiklar {#artiklar}
-
-Det finns inga artiklar.
+Det finns inga läsanvisningar.
 
 
 
-###Video  {#video}
+### PHP {#php}
 
-Det finns inga videoförslag.
+Läs följande för att bekanta dig med teknikerna.
+
+1. I PHP-manualen finns ett stycke om [PHP Data Objects (PDO)](http://php.net/manual/en/intro.pdo.php). Kika översiktligt på det.
 
 
 
-###Lästips {#lastips}
+### Video  {#video}
 
-1. Kika igenom de olika [formulärelementen som finns för HTML](forms). 
-
+Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 6-10 studietimmar)*
+*(ca: 12-16 studietimmar)*
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övningar.
 
@@ -81,7 +68,7 @@ Genomför följande övningar.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -91,11 +78,13 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
 Gör följande extrauppgifter om du har tid och lust.
 
-1. Lägg till en inloggning på din mesida och styr så att man måste vara inloggad för att kunna redigera (lägga till, uppdatera, radera) i databasen. Kursrepot innehåller ett exempel [`example/login`](repo/htmlphp/example/login/login.php) som du kan utgå ifrån.
+1. Lägg till en inloggning på din mesida och styr så att man måste vara inloggad för att kunna redigera (lägga till, uppdatera, radera) i databasen. Kursrepot innehåller ett exempel på login i `example/login` som du kan utgå ifrån. Använd doe:doe och admin:admin som användare och lösenord.
+
+1. Flytta användare och lösenord från din `config.php` och lägg in dem i en ny tabell i databasen.
 
 
 
@@ -108,8 +97,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur kändes denna uppgiften att göra, lite friare än de andra, eller samma? Blev det mer eller mindre utmanande? 
-* Fick du hjälp av SQLite-artikeln och dess kod, eller skrev du mycket kod själv?
-* Var det något som var extra utmanande i kursmomentet?
+* Fick du hjälp av PHP PDO-artikeln och dess kod, eller skrev du mycket kod själv?
+* Var det något som var extra svårt eller utmanande i kursmomentet?
 * Nu när kursen närmar sig slutet, känns det som du har kommit in i HTML, CSS, PHP och SQL?
-* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
+* Berätta kort om din syn på din me-sida, är du nöjd med den, eller ser du förbättringspotential?
+* Gjorde du något extra, utöver det vanliga, i ditt arbete? Berätta gärna om det.
+* Vilken är din TIL för detta kmom?

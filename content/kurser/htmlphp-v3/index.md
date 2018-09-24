@@ -219,7 +219,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom03     | 5, 7                   | 2.4, 3                              | 
 | Kmom04     | 9, 10                  | 7                                   |
 | Kmom05     | 9 (repetera)           | 8                                   | 
-| Kmom06     |                        |                                     | 
+| Kmom06     |                        | 8                                   | 
 | Kmom10     |                        |                                     |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 

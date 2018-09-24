@@ -1,11 +1,14 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - databas
+    - sqlite
+    - php pdo
 revision:
-  "2015-08-26": (B, mos) La till krav om att integrera multisidan från `jetty.php`.
-  "2015-06-15": (A, mos) Första utgåvan i samband med kursen htmlphp v2.
-updated: "2015-08-26 11:45:21"
-created: "2015-01-28 15:12:36"
+    "2018-09-24": "(C, mos) Genomgång i samband med uppdatering av databasen för jetty."
+    "2015-08-26": "(B, mos) La till krav om att integrera multisidan från `jetty.php`."
+    "2015-06-15": "(A, mos) Första utgåvan i samband med kursen htmlphp v2."
 ...
 Bygg ut din htmlphp me-sida till version 5
 ==================================
@@ -32,7 +35,7 @@ Du skall uppdatera din me-sida och samtidigt integrera den med kod för att sök
 
 
 
-###Börja med att kopiera me-sidan {#copyme}
+### Börja med att kopiera me-sidan {#copyme}
 
 Börja med att ta en kopia från föregående uppgift `me4`, och bygg vidare på den.
 
@@ -46,9 +49,9 @@ Nu har du din bas du kan utgå ifrån. Din resulterande sida skall finnas i kata
 
 Skapa katalogen `me/kmom05/me5/db` och lägg databasen i den.
 
-Ett tips är att kopiera kod från uppgiften *jetty*. Där finns funktioner som du kan modifiera och använda i denna uppgiften. 
+Ett tips är att kopiera kod från uppgiften *kmom05/jetty*. Där finns funktioner som du kan modifiera och använda i denna uppgiften. 
 
-De funktioner du skapar kan du lägga i filen `config.php`, så blir de tillgängliga för alla sidor.
+De funktioner du skapar kan du lägga i filen `src/functions.php`, så blir de tillgängliga för alla sidor.
 
 Så här kan det se ut när du är klar.
 
@@ -59,19 +62,19 @@ Så här kan det se ut när du är klar.
 Krav {#krav}
 -----------------------
 
-1. Börja med att integegrera multisidan `jetty.php` från föregående övning, in i din me-sida och skapa ett menyval för sidan.
+1. Börja med att integegrera (kopiera) multisidan `jetty.php` från föregående övning, in i din me-sida och skapa ett menyval för sidan.
 
-1. Skapa en egen SQLite databas med minst tre rader där varje rad har minst tre kolumner. Om du inte kommer på nåt eget så gör du en databas för dinosaurier.
+1. Skapa en ny SQLite databas med minst tre rader där varje rad har minst tre kolumner. Om du inte kommer på nåt eget så gör du en databas för dinosaurier.
 
-1. Skapa en ny sida, `search.php`. Lägg den som en del av navbaren.
+1. Skapa en ny sida, `search.php`. Lägg den som en del av navbaren och döp till "Sök".
 
 1. I din sida `search.php`, skapa ett formulär som gör att du kan söka i din databas.
 
-1. Spara din DSN till databasen i en variabel, eller [`define()`](http://php.net/manual/en/function.define.php), i din fil `config.php`.
+1. Spara din DSN till databasen i din fil `config.php`.
 
-1. Använd egna funktioner för att koppla dig till databasen och för att visa resultatet. Spara funktionerna i filen `config.php`.
+1. Använd egna funktioner för att koppla dig till databasen och för att visa resultatet. Spara funktionerna i filen `src/functions.php`.
 
-1. Ge användaren en länk som kan visa allt innehåll i databastabellen i en HTML-tabell.
+1. I sidan, presentera en länk som användaren kan klicka på för att se allt innehåll i databastabellen, presenterat i en HTML-tabell.
 
 1. Validera och publicera din kod enligt följande.
 
@@ -96,7 +99,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
