@@ -39,7 +39,7 @@ Googla "online word counter" eller "online letter counter" så hittar du verktyg
 
 Du ska i uppgiften göra ett program som analyserar en text från en fil. Det kan se ut på detta sättet när vi kör programmet:
 
-[ASCIINEMA src=0YABLhWlohl3nxnpyXXBqWrJd]
+[ASCIINEMA src=dvk4qt4Tfd00U0kFAcFTJdPh5]
 
 
 
