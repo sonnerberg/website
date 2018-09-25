@@ -56,6 +56,11 @@ cp -ri example/portfolio me
 
 1. I sidan `redovisning.html` skall du skriva dina redovisningstexter för varje kursmoment.
 
+1. Öppna filen `kmom01.html` och integrera resultatet av uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)" i denna sida och som en del av din portfölj.
+
+1. Gör en dbwebb publish för att kolla att allt validerar och fungerar.
+
+
 <!-- 1. I sidan `om.html` lägger du till en godtycklig bild som du finner representativ för kursen.
 
 1. Leta reda på kursrepot på GitHub och länka till det från din `om.html`.
@@ -63,10 +68,6 @@ cp -ri example/portfolio me
 1. I din `om.html`, länka även till kurssidan på dbwebb.se. -->
 
 <!-- 1. Du kan uppdatera stylesheet och eventuellt JavaScript i katalogerna `portfolio/style` och `portfolio/js`. Det är inte nödvändigt, gör det om du vill och känner att du har tid. Du kan även göra om din me-sida till en webbplats baserad på PHP. -->
-
-1. Öppna filen `kmom01.html` och integrera resultatet av uppgiften "[Rita punkter med WebGL](uppgift/rita-punkter-med-webgl)" i denna sida och som en del av din portfölj.
-
-1. Gör en dbwebb publish för att kolla att allt validerar och fungerar.
 
 ```text
 dbwebb publish redovisa
