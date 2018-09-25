@@ -68,8 +68,10 @@ Titta på följande:
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 
-    * [Python for Informatics: Chapter 9 - Dictionaries](https://www.youtube.com/watch?v=FS-WZWUlPlM)
-    * [Python for Informatics: Chapter 10 - Tuples](https://www.youtube.com/watch?v=odIMpHInDbA)
+    * [Python for Informatics: Chapter 9 - Dictionaries part 1](https://youtu.be/yDDRMb-1cxI?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 9 - Dictionaries part 1](https://youtu.be/LRSIuH94XM4?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 10 - Tuples part 1](https://youtu.be/CaVhM65wD6g?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 10 - Tuples part 2](https://youtu.be/FdUdA6o0Ij0?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
 
 
 

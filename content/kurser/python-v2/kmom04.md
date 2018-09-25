@@ -70,7 +70,8 @@ Titta på följande:
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 
-    * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois)
+    * [Python for Informatics: Chapter 7 - Files part 1](https://youtu.be/9KJ-XeQ6ZlI?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 7 - Files part 1](https://youtu.be/0t4rvnySKR4?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
     <!-- * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o) -->
 
 

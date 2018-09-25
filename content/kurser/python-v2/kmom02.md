@@ -66,9 +66,15 @@ Titta på följande:
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 
-    * [Python for Informatics: Chapter 3 - Conditional execution](https://www.youtube.com/watch?v=VXyRfgnzL2o)
+    * [Python for Informatics: Chapter 3 - Conditional execution part 1](https://youtu.be/2aA3VBdcl6A?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 3 - Conditional execution part 2](https://youtu.be/OczkNrHPBps?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
     <!-- * [Python for Informatics: Chapter 4 - Functions](https://www.youtube.com/watch?v=Wdi6lhcrtBU) -->
-    * [Python for Informatics: Chapter 5 - Iteration](https://www.youtube.com/watch?v=6KgArgGi6Mk)
+    * [Python for Informatics: Chapter 5 - Iteration part 1](https://youtu.be/FzpurxjwmsM?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 5 - Iteration part 2](https://youtu.be/5QDrj5ogPYc?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 5 - Iteration part 3](https://youtu.be/xsavQp8hd78?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 5 - Iteration part 4](https://youtu.be/yjlMMwf9Y5I?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 6 - Strings part 1](https://youtu.be/dr98iM4app8?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 6 - Strings part 2](https://youtu.be/bIFpJ-qZ3Cc?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
 
 
 

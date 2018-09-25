@@ -63,7 +63,8 @@ Titta på följande:
 1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 3.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
-    * [Python for Informatics: Chapter 4 - Functions](https://www.youtube.com/watch?v=Wdi6lhcrtBU)
+    * [Python for Informatics: Chapter 4 - Functions part 1](https://youtu.be/5Kzw-0-DQAk?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 4 - Functions part 2](https://youtu.be/AJVNYRqn8kM?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
     <!-- * [Python for Informatics: Chapter 6 - Strings](https://www.youtube.com/watch?v=L2IUSArpG98)
     * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois) -->
 

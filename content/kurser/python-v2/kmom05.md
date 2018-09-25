@@ -71,7 +71,9 @@ Titta på följande:
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 
-    * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o)
+    * [Python for Informatics: Chapter 8 - Lists part 1](https://youtu.be/ljExWqnWQvo?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 8 - Lists part 2](https://youtu.be/bV1FQUBIApM?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 8 - Lists part 3](https://youtu.be/GxADdpo6EP4?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
 
 
 
