@@ -47,12 +47,24 @@ Examination sker på valfri plats, det går att ladda ner examination från kl 8
 Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom dessa fem timmar.
 
 
-Hämta examination {#hamta}
+
+Hämta examinationstillfälle 2018-10-30 (try1) {#hamta}
 ----------------------------------------------------------------------
 
-`dbwebb exam create exam` skapar din individuella examination.
+I [Om examination med dbwebb exam](kurser/python-v2/kmom10/om) finns mer information om `dbwebb exam`-verktyget.
 
-Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/exam` enligt följande.
+Innan du kör kommandon nedan uppdatera `dbwebb` och kursrepot samt skapa kataloger i din me katalog med följande kommandon.
+
+```bash
+# stå i kursrepot dbwebb-kurser/python
+dbwebb selfupdate # eventuellt behövs sudo eller admin rättigheter
+dbwebb update
+dbwebb init
+```
+
+`dbwebb exam create try1` skapar din individuella examination.
+
+Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try1` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -61,11 +73,11 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 
 
-`dbwebb exam correct exam` rättar din individuella examination och visar hur många uppgifter du har klarat och dina poäng.
+`dbwebb exam correct try1` rättar din individuella examination och visar hur många uppgifter du har klarat och dina poäng.
 
-`dbwebb validate exam` validerar din individuella examination.
+`dbwebb validate try1` validerar din individuella examination.
 
-`dbwebb exam seal exam` lämnar in din individuella examination. 
+`dbwebb exam seal try1` lämnar in din individuella examination.
 
 
 
@@ -74,7 +86,7 @@ Bedömning och betygsättning {#bedomning}
 
 Det finns ett särskilt dokument som beskriver hur [bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-individuell).
 
-Under hela examinationen kan du köra kommandot `dbwebb exam correct exam` för att rätta dina lösningar och se hur många poäng du har uppnått.
+Under hela examinationen kan du köra kommandot `dbwebb exam correct try1` för att rätta dina lösningar och se hur många poäng du har uppnått.
 
 
 
@@ -101,10 +113,10 @@ Förberedelse {#forberedelse}
 Du har innan examinationen möjlighet att förbereda dig genom att göra en test examination. Test examinationen fungerar på liknande sätt. Du kan hämta hem den med följande kommando:
 
 ```bash
-dbwebb exam create prepare
+dbwebb exam create prep
 ```
 
-Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/prepare` enligt följande.
+Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/prep` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -113,11 +125,11 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 
 
-`dbwebb exam correct prepare` rättar din individuella examination och visar hur många uppgifter du har klarat och dina poäng.
+`dbwebb exam correct prep` rättar din individuella examination och visar hur många uppgifter du har klarat och dina poäng.
 
-`dbwebb validate prepare` validerar din individuella examination.
+`dbwebb validate prep` validerar din individuella examination.
 
-`dbwebb exam seal prepare` lämnar in din individuella examination. 
+`dbwebb exam seal prep` lämnar in din individuella examination.
 
 
 
@@ -126,4 +138,6 @@ Omexamination {#omexamination}
 Som student har du rätt till tre examinationstillfällen med andra ord om du inte klarar första har du två försök till på dig.
 Följande tillfällen erbjuds efter 2018-10-30:
 
-Efter jul i LP 2 och efter sommaren i augusti. Exakta datum meddelas längre fram.
+Omexaminationstillfälle torsdagen den 2019-01-10.
+
+Restexaminationstillfälle måndagen den 2019-06-10.
