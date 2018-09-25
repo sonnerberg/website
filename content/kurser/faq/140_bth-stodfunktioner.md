@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-    "2017-06-12": (H, mos) Bytte intitution och länk till utbildningsförening.
+    "2018-09-25": (I, efo) Bytte från ITs till Canvas.
+    "2017-06-12": (H, mos) Bytte institution och länk till utbildningsförening.
     "2016-08-04": (G, mos) Justerade länkar.
     "2016-04-22": (F, mos) Uppdatering i samband med ny webbplats.
     "2015-01-09": (E, mos) Ny organisation.
@@ -13,7 +14,7 @@ revision:
 BTH stödfunktioner
 ==================================
 
-Här finns en översikt av de instanser på Blekinge Tekniska Högskola (BTH) som kan hjälpa dig med olika saker som rör dina studier. Denna sammanställning är till för att hjälpa dig att få en snabb översikt av de som kan underlätta dina studier vid BTH. 
+Här finns en översikt av de instanser på Blekinge Tekniska Högskola (BTH) som kan hjälpa dig med olika saker som rör dina studier. Denna sammanställning är till för att hjälpa dig att få en snabb översikt av de som kan underlätta dina studier vid BTH.
 
 
 
@@ -35,12 +36,14 @@ Det kan röra sig om intyg, omregistreringar och de kan svara på allmänna frå
 
 
 
-Läroplattformen ITs {#its}
+Läroplattformen Canvas {#its}
 --------------------------------------------------------------------
 
-[It's Learning heter BTH's läroplattform](http://www.bth.se/lms) som används i undervisningen. Där finns dina kurstillfällen med kursmaterial och här kan du se när dina inlämningar är rättade eller när ditt betyg är satt.
+[Canvas heter BTH's läroplattform](https://www.bth.se/canvas/) som används i undervisningen. Där finns dina kurstillfällen med kursmaterial och här kan du se när dina inlämningar är rättade eller när ditt betyg är satt.
 
-När du har registrerad dig på kursen så får du automatisk tillgång till dina kurstillfällen på ITs. Vill du inte vänta så får du själv leta upp kurstillfället på ITs och anmäla dig till det.
+När du har registrerad dig på kursen så får du automatisk tillgång till dina kurstillfällen på Canvas.
+
+<!-- Vill du inte vänta så får du själv leta upp kurstillfället på Canvas och anmäla dig till det. -->
 
 
 

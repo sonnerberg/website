@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-09-25": (I, efo) Bytte från ITs till Canvas.
     "2017-10-18": (B, mos) Översyn inför ht17.
     "2015-10-07": (A, mos) Första utgåvan för kursen.
 ...
@@ -44,10 +45,10 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
-Kopiera redovisningstexten till ITs {#its}
+Kopiera redovisningstexten till Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen [Canvas](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
 
