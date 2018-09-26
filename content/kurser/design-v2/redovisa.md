@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-09-25": "(C, mos) Genomgången inför ht18."
     "2017-10-19": "(B, mos) Uppdaterad inför ht17."
     "2016-10-07": "(A, mos) Första utgåvan."
 ...
@@ -60,20 +61,21 @@ Den länken som visas i utskriften av kommandot, är länken till din me-sida. D
 Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
-
+<!--
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
 Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/design). Bifoga länken till din me-sida.
+-->
 
 
 
-Kopiera redovisningstexten till ITs {#its}
+Kopiera redovisningstexten till Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen i Canvas tillsammans med en länk till din me-sida.
 
-Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
+Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 
 
 

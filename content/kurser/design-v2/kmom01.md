@@ -11,7 +11,7 @@ Kmom01: Ramverk och innehåll
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -59,19 +59,19 @@ dbwebb init
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa mer i samband med nästa kmom.
 
 
 
-###Tekniker för att skriva för webben {#skriva}
+### Tekniker för att skriva för webben {#skriva}
 
 1. Det är viktigt att ha koll på hur vi skall tänka när vi skriver för webben. Under kursen skall vi läsa igenom guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)". Du kan börja kort med följande kapitel, bara för att bekanta dig med materialet.
 
@@ -82,7 +82,7 @@ Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boke
 
 
 
-###Webbdesign och användbarhet {#webbdesign}
+### Webbdesign och användbarhet {#webbdesign}
 
 Läs följande artiklar.
 
@@ -92,7 +92,7 @@ Läs följande artiklar.
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -100,7 +100,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Kika på följande om du är intresserad och finner det värt tiden.
 
@@ -119,7 +119,7 @@ Kika på följande om du är intresserad och finner det värt tiden.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -128,7 +128,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -150,3 +150,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur kändes det att jobba med Anax Flat och bygga din me-sida?
 * Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarhet för webben?
 * Det fanns videor som kompletterade artiklarna, hjälpte de dig att förstå materialet bättre?
+* Vilken är din TIL för detta kmom?
+
+TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.

@@ -126,11 +126,11 @@ Till slut knyter vi ihop det genom att integrera multisidan i din me-webbplats. 
 
 
 
-###Kmom04: CSS och en styleväljare. {#kmom04}
+###Kmom04: Formulär och sessioner. {#kmom04}
 
-Vi tillägnar detta kursmoment åt att gå igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
+I detta kursmoment går vi igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
 
-Avslutningsvis gör vi en programmeringsövning där vi skapar en stylesheetväljare med PHP. Med den kan vi dynamiskt ändra vilken stylesheet som används till webbplatsen. I samband med det så tittar vi på lite fler PHP-konstruktioner som sessioner och postade formulär.
+I PHP får du lära dig att skapa egna funktioner och se hur du jobbar med HTML formulär och sessioner i PHP. Du kommer bekanta dig med de inbyggda globala arrayerna `$_GET`, `$_POST` och `$_SESSION` och se hur de relaterar till formulär och sessioner.
 
 [Instruktion till kursmoment 04](./kmom04).
 
