@@ -281,6 +281,10 @@ Kursen ges under olika kurskoder till olika målgrupper.
 
 Från våren 2019 får kurserna nya kurskoder.
 
+<!-- DV1606, Databasteknologier för webben, 7,5 hp (ersätter PA1451) -->
+
+<!-- PA1444 bytt till DV1605 -->
+
 Följande gällde till och med 2018.
 
 Kursens namn är "Databasteknologier för webben" för programmet Webbprogrammering och kurspaketet webprog (från VT18). Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).

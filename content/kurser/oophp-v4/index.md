@@ -323,6 +323,8 @@ Versioner av kursen {#versioner}
 
 Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
 
+<!-- DV1608, Objektorienterade webbteknologier, 7,5 hp (ersätter PA1440) -->
+
 Från och med vårterminen 2018 finns kursmaterialet i [oophp (v4)](kurser/oophp-v4).
 
 Om du gick kursen under vårterminen 2017, så finns kursmaterialet i [oophp (v3)](kurser/oophp-v3).

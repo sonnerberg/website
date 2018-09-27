@@ -286,6 +286,9 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 
 Från och med hösten 2019 är kursens namn "Webbaserade ramverk och designmönster" och kursen får en ny kursplan.
 
+<!-- DV1610, Webbaserade ramverk och designmönster, 7,5 hp (ersätter PA1441) -->
+
+
 Kursens namn är "Webbaserade ramverk 1". Du hittar [kursplanen genom att söka på kurskoden PA1441 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1441).
 
 Kursen är en fristående vidarutveckling av kursen DV1486 "Databasdrivna webbapplikationer med PHP och MVC-ramverk", aka phpmvc.
