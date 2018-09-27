@@ -66,7 +66,7 @@ dbwebb init
 För att skapa din individuella examination skriv in följande kommando.
 
 ```
-dbwebb exam create try1
+dbwebb exam checkout try1
 ```
 
 Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try1` enligt följande.
@@ -116,7 +116,7 @@ Förberedelse {#forberedelse}
 Du har innan examinationen möjlighet att förbereda dig genom att göra en test examination. Test examinationen fungerar på liknande sätt. Du kan hämta hem den med följande kommando:
 
 ```bash
-dbwebb exam create prep
+dbwebb exam checkout prep
 ```
 
 Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/prep` enligt följande.
