@@ -62,7 +62,12 @@ dbwebb update
 dbwebb init
 ```
 
-`dbwebb exam create try1` skapar din individuella examination.
+
+För att skapa din individuella examination skriv in följande kommando.
+
+```
+dbwebb exam create try1
+```
 
 Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try1` enligt följande.
 
@@ -70,8 +75,6 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 |--------------------|-----------------------------------------------------------------------|
 | `assignments.md` | Beskrivning av examinationen och de uppgifter som skall göras, öppna och läs via en texteditor.               |
 | `exam.py`        | Här skall du skriva din kod för att lösa respektive uppgift i examinationen. Du kan köra programmet genom kommandot `python3 exam.py` |
-
-
 
 `dbwebb exam correct try1` rättar din individuella examination och visar hur många uppgifter du har klarat och dina poäng.
 
@@ -97,7 +100,7 @@ Efter din individuella examination lämna in en redovisningstext på din me-sida
 
 1. För varje uppgift du implementerade, dvs 1-5, skriver du ett textstycke om minst 5 meningar där du beskriver den tekniska implementationen.
 
-1.  Skriv ett allmänt stycke om hur den individuella examinationen gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var den individuella examinationen lätt eller svårt? Vad var svårt och vad gick lätt? Var den individuella examinationen en bra och rimlig examination av denna kursen?
+1.  Skriv ett allmänt stycke om hur den individuella examinationen gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var den individuella examinationen lätt eller svår? Vad var svårt och vad gick lätt? Var den individuella examinationen en bra och rimlig examination av denna kursen?
 
 1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
