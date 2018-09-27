@@ -3,7 +3,7 @@ author: efo
 revision:
     "2018-05-25": "(A, efo) Första versionen."
 ...
-Typografi
+Enheter
 =======================
 
-Typografi och typsnitt
+Pixlar, em, rem
