@@ -20,14 +20,6 @@ Kmom10: Individuell examination
 
 Detta kursmoment avslutar och examinerar kursen.
 
-[WARNING]
-
-** Kursutveckling pågår till kurs python v2 **
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 
 
 Upplägg {#upplagg}
@@ -45,6 +37,8 @@ Examination sker på valfri plats, det går att ladda ner examination från kl 8
 
 
 Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom dessa fem timmar.
+
+För båda studentgrupper är detta en **individuell** examination och uppgifterna ska lösas på egen hand.
 
 
 
@@ -76,11 +70,46 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 | `assignments.md` | Beskrivning av examinationen och de uppgifter som skall göras, öppna och läs via en texteditor.               |
 | `exam.py`        | Här skall du skriva din kod för att lösa respektive uppgift i examinationen. Du kan köra programmet genom kommandot `python3 exam.py` |
 
-`dbwebb exam correct try1` rättar din individuella examination och visar hur många uppgifter du har klarat och dina poäng.
 
-`dbwebb validate try1` validerar din individuella examination.
 
-`dbwebb exam seal try1` lämnar in din individuella examination.
+Rätta din examination (try1) {#ratta}
+----------------------------------------------------------------------
+
+För att rätta din individuella examination och visa hur många uppgifter du har klarat och dina poäng använd följande kommando.
+
+```bash
+dbwebb exam correct try1
+```
+
+Längst upp i utskriften finns en sammanfattning av vilka uppgifter du har löst och hur många poäng du har.
+
+Under sammanfattningen finns en utskrift från testprogrammet som körs när examinationen rättas. I denna utskrift kan du få hinter om vad som är fel med din inlämning enligt testprogrammet.
+
+
+
+Validera din examination (try1) {#validera}
+----------------------------------------------------------------------
+
+Precis som tidigare inlämningar i kursen ska koden validera. `dbwebb validate try1` validerar din individuella examination och visar vilka valideringsfel du har i koden. Din individuella examination skall validera när den lämnas in inom tidsramen för den individuella examinationen.
+
+
+
+Lämna in din examination (try1) {#lamna}
+----------------------------------------------------------------------
+
+För att  lämna in din individuella examination använd följande kommando.
+
+```bash
+dbwebb exam seal try1
+```
+
+Kommandot publicerar hela din me-katalog till studentservern.
+
+Du kan när som hämta ett kvitto på din pågående examination och se detaljer om den, till exempel hur länge du hållit på.
+
+```bash
+dbwebb exam receipt try1
+```
 
 
 
@@ -128,11 +157,14 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 
 
-`dbwebb exam correct prep` rättar din individuella examination och visar hur många uppgifter du har klarat och dina poäng.
+Rätta förberedelse uppgiften {#rattningfor}
+----------------------------------------------------------------------
 
-`dbwebb validate prep` validerar din individuella examination.
+`dbwebb exam correct prep` rättar din förberedelse uppgift och visar hur många uppgifter du har klarat och dina poäng.
 
-`dbwebb exam seal prep` lämnar in din individuella examination.
+`dbwebb validate prep` validerar din förberedelse uppgift.
+
+`dbwebb exam seal prep` lämnar in din förberedelse uppgift.
 
 
 
