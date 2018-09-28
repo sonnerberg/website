@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2018-09-28": (j, efo, aar) Översyn och släpp inför python-v2 try1.
     "2018-06-26": (I, efo) Ändrade till individuell examination.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-09-27": (H, aar) Uppdaterade krav 6, tog bort curses.
@@ -20,7 +21,7 @@ Kmom10: Individuell examination
 
 Detta kursmoment avslutar och examinerar kursen.
 
-
+<!-- ctr+d efter "try1" och "2018-10-30" för ny examination -->
 
 Upplägg {#upplagg}
 --------------------------------------------------------------------
@@ -40,6 +41,7 @@ Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom d
 
 För båda studentgrupper är detta en **individuell** examination och uppgifterna ska lösas på egen hand.
 
+Lärarteamet finns tillgängliga i gitter och forum för hjälp med tekniska problem samt frågor och förtydliganden. 
 
 
 Hämta examinationstillfälle 2018-10-30 (try1) {#hamta}
@@ -84,7 +86,7 @@ dbwebb exam correct try1
 Längst upp i utskriften finns en sammanfattning av vilka uppgifter du har löst och hur många poäng du har.
 
 Under sammanfattningen finns en utskrift från testprogrammet som körs när examinationen rättas. I denna utskrift kan du få hinter om vad som är fel med din inlämning enligt testprogrammet.
-
+Du kan ignorera fel från uppgifter du inte utfört.
 
 
 Validera din examination (try1) {#validera}
@@ -105,7 +107,7 @@ dbwebb exam seal try1
 
 Kommandot publicerar hela din me-katalog till studentservern.
 
-Du kan när som hämta ett kvitto på din pågående examination och se detaljer om den, till exempel hur länge du hållit på.
+Du kan när som helst hämta ett kvitto på din pågående examination och se detaljer om den, till exempel hur länge du hållit på.
 
 ```bash
 dbwebb exam receipt try1
