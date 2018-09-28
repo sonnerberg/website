@@ -13,7 +13,7 @@ Kmom03: Grid, layout och typografi
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -46,7 +46,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -57,7 +57,7 @@ Läs följande:
 
 
 
-###Tekniker för att skriva för webben {#skriva}
+### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
@@ -78,7 +78,7 @@ Läs följande artiklar.
 -->
 
 
-###Vad handlar grid-baserad layout om? {#grid}
+### Vad handlar grid-baserad layout om? {#grid}
 
 1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layout handlar om.
 
@@ -88,7 +88,7 @@ Läs följande artiklar.
 
 
 
-###Typografisk webb {#type}
+### Typografisk webb {#type}
 
 Tänk dig en typografisk webbplats där all styling har lagts på de typografiska elementen. Hur kan det se ut? Kika på följande webbplatser och inhämta inspiration.
 
@@ -98,7 +98,7 @@ Tänk dig en typografisk webbplats där all styling har lagts på de typografisk
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -108,7 +108,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Se följande som extra men relevanta läsövningar. Det är närbesläktade koncept till kursmomentets innehåll.
 
@@ -125,7 +125,7 @@ Se följande som extra men relevanta läsövningar. Det är närbesläktade konc
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -135,7 +135,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -158,3 +158,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du jobbat med liknande layouttekniker sedan tidigare?
 * Du börjar se hur man kan jobba med LESS, kommentarer på det?
 * Hur uppfattade du nivån på detta kmom? Svårt, lagom, många nya begrepp?
+* Vilken är din TIL för detta kmom?

@@ -11,7 +11,7 @@ Kmom06: Design
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -37,13 +37,13 @@ Tanken är _inte_ att vi skall bli webbdesigners. Tanken är att vi skall studer
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 6-8 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -54,7 +54,7 @@ Läs följande:
 
 
 
-###Tekniker för att skriva för webben {#skriva}
+### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
@@ -65,7 +65,7 @@ Läs följande:
 
 
 
-###Webbdesign och användbarhet asd {#webbdesign}
+### Webbdesign och användbarhet asd {#webbdesign}
 
 Gå igenom följande material om designelement och designprinciper.
 
@@ -105,7 +105,7 @@ Det finns inga extra lästips.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Det finns ingen övning. Förbered dig inför uppgifterna genom att studera begreppen om olika designelement och designprinciper.
 
@@ -115,7 +115,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -152,3 +152,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du en klar uppfattning om hur designelement och designprinciper samverkar för att skapa en design?
 * Har du en uppfattning om "the final touch" och vad det kan vara i sammanhanget webbdesign?
 * Har du under kursen skapat dig en känsla för begreppen god design, vad det innebär och vad som är subjektiv och objektivt inom området?
+* Vilken är din TIL för detta kmom?

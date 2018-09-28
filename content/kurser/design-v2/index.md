@@ -17,7 +17,7 @@ Kursen syftar till en orientering inom områden design och användbarhet, specif
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -55,7 +55,11 @@ Kursen omfattar följande områden:
 Mål {#mal}
 ------------------------
 
-###Kunskap och förståelse {#kunskap}
+Kursens mål är indelade i undergrupper.
+
+
+
+### Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:
 
@@ -64,7 +68,7 @@ Efter genomförd kurs skall studenten:
 
 
 
-###Färdighet och förmåga {#fardighet}
+### Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
@@ -79,63 +83,63 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: Ramverk och innehåll {#kmom01}
+### Kmom01: Ramverk och innehåll {#kmom01}
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
-[Instruktion till kursmoment 01](kurser/design-v1/kmom01).
+[Instruktion till kursmoment 01](./kmom01).
 
 
 
-###Kmom02: LESS och responsiv design {#kmom02}
+### Kmom02: LESS och responsiv design {#kmom02}
 
 Då är det dags att vi skapar vårt eget tema till webbplatsen. Låt oss fylla vår me-sida med style med hjälp av LESS ooch en god och modulariserad kodstruktur.
 
 Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
 
-[Instruktion till kursmoment 02](kurser/design-v1/kmom02).
+[Instruktion till kursmoment 02](./kmom02).
 
 
 
-###Kmom03: Grid, layout och typografi {#kmom03}
+### Kmom03: Grid, layout och typografi {#kmom03}
 
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor. Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner och vi skall undersöka ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*.
 
-[Instruktion till kursmoment 03](kurser/design-v1/kmom03).
+[Instruktion till kursmoment 03](./kmom03).
 
 
 
-###Kmom04: Färg  {#kmom04}
+### Kmom04: Färg  {#kmom04}
 
 Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi.
 
-[Instruktion till kursmoment 04](kurser/design-v1/kmom04).
+[Instruktion till kursmoment 04](./kmom04).
 
 
 
-###Kmom05: Bilder {#kmom05}
+### Kmom05: Bilder {#kmom05}
 
 Kursmomentet har ett fokus på att hantera och presentera bilder i olika storlekar i webbplatsen.
 
-[Instruktion till kursmoment 05](kurser/design-v1/kmom05).
+[Instruktion till kursmoment 05](./kmom05).
 
 
 
-###Kmom06: Design {#kmom06}
+### Kmom06: Design {#kmom06}
 
 Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
 Vi tittar på "the final touch" i form av design element och designprinciper.
 
-[Instruktion till kursmoment 06](kurser/design-v1/kmom06).
+[Instruktion till kursmoment 06](./kmom06).
 
 
 
-###Kmom07/10: Projekt och examination {#kmom10}
+### Kmom07/10: Projekt och examination {#kmom10}
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](kurser/design-v1/kmom10).
+[Instruktion till kursmoment 10](./kmom10).
 
 
 
@@ -146,7 +150,7 @@ Kurslitteratur {#litteratur}
 
 
 
-###Kurslitteratur {#kurslitteratur}
+### Kurslitteratur {#kurslitteratur}
 
 Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
 
@@ -155,12 +159,20 @@ Det finns läsanvisningar i samband med varje kursmoment.
 * **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**  
 
 
-
-###Referenslitteratur {#referenslitteratur}
+<!--
+### Referenslitteratur {#referenslitteratur}
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
 * **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)**  
+
+-->
+
+
+
+### Övrig litteratur {#ovriglitteratur}
+
+I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
 
 
 
@@ -181,29 +193,32 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1).
+Kursen har en [rekommenderad studieplan](kurser/design/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](kurser/design-v1/studieplan) kopplad till de kurstillfällen som erbjuds.
-
-Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
-
-Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
-
-Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
-
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
 
 
 
-Lärarstöd och handledning {#handledning}
+Lektionsplan {#lektionsplan}
+---------------------------------------------
+
+Det finns en [lektionsplan](kurser/design/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+
+
+
+Handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+
+Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 
 
 
@@ -225,6 +240,8 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
+Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
+
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
 
@@ -244,3 +261,14 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Du hittar [kursplanen genom att söka på kurskoden PA1436 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1436).
+
+
+
+Versioner av kursen {#versioner}
+-----------------------------------------------------
+
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
+
+För tillfällen från höstterminen 2018 så [finns kursmaterialet till design (v2) här](kurser/design-v2). 
+
+För tillfällen fram till och med höstterminen 2017, så [finns kursmaterialet till den kursen i design (v1)](kurser/design-v1).

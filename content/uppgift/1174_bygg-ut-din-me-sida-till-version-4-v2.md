@@ -70,7 +70,7 @@ Krav {#krav}
 
 1. Skapa en undersida som lagrar en siffra i sessionen och dubblerar dess värde varje gång som sidan laddas.
 
-1. Skapa en undersida med ett ett POST-formulär som använder en processingsida  (undersida) och redirectar till en resultatsida (ny undersida). Du kan göra ett vlafritt formulär.
+1. Skapa en undersida med ett ett POST-formulär som använder en processingsida  (undersida) och redirectar till en resultatsida (ny undersida). Du kan göra ett valfritt formulär eller ett "kontakta mig" formulär.
 
 1. Gör ytterligare undersida med ett POST formulär där du har ett formulärfält (textarea) där användaren kan skriva ett eget meddelande. Detta meddelande skall du hantera i processingsidan, spara i sessionen, och slutligen visa i resultatsidan (tänk _read once flash message_).
 

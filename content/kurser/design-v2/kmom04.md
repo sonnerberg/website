@@ -11,7 +11,7 @@ Kmom04: Färg
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -38,13 +38,13 @@ De designkoncept vi först väljer att fokusera på är färglära och typografi
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -55,7 +55,7 @@ Läs följande:
 
 
 
-###Tekniker för att skriva för webben {#skriva}
+### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
@@ -63,7 +63,7 @@ Läs följande:
 
 
 
-###Webbdesign och användbarhet {#webbdesign}
+### Webbdesign och användbarhet {#webbdesign}
 
 Lös följande artiklar.
 
@@ -92,7 +92,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Följande tips hjälper dig igenom kursmomentet.
 
@@ -111,7 +111,7 @@ Följande tips hjälper dig igenom kursmomentet.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -122,7 +122,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -146,3 +146,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns din LESS-struktur så här långt?
 * Hur valde du att göra med ditt eget `default` tema?
 * Var det något särskilt som du uppfattade som utmanande i detta kmom?
+* Vilken är din TIL för detta kmom?

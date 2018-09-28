@@ -12,7 +12,7 @@ Kmom02: LESS och responsiv design
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -45,13 +45,13 @@ I nästa kmom bygger vi vidare på temat med grid-baserad layout. Så det kommer
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -61,7 +61,7 @@ Läs följande:
 
 
 
-###Tekniker för att skriva för webben {#skriva}
+### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
@@ -69,7 +69,7 @@ Läs följande:
 
 
 
-###Webbdesign och användbarhet {#webbdesign}
+### Webbdesign och användbarhet {#webbdesign}
 
 Läs följande artiklar.
 
@@ -79,7 +79,7 @@ Läs följande artiklar.
 
 
 
-###Kom igång med LESS {#less}
+### Kom igång med LESS {#less}
 
 1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)". Artikeln behandlar skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor är och gör.
 
@@ -89,7 +89,7 @@ Läs följande artiklar.
 
 
 
-###Responsiv webbdesign {#responsiv}
+### Responsiv webbdesign {#responsiv}
 
 1. Läs översiktligt artikeln som definierade begreppet "[Responsive Web Design](http://alistapart.com/article/responsive-web-design/)".
 
@@ -99,7 +99,7 @@ Läs följande artiklar.
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -110,7 +110,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Kika igenom följande styleguides till CSS för att få en känsla av hur du bör/kan skriva din CSS-kod.
 
@@ -129,7 +129,7 @@ Kika igenom följande styleguides till CSS för att få en känsla av hur du bö
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -137,7 +137,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -158,3 +158,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
 * Har du varit bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Hur uppfattar du make så här långt?
 * Fann du nytta i de videor som var kopplade till detta kursmoment?
+* Vilken är din TIL för detta kmom?

@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2017-10-16": (A, mos) Första utgåvan.
+    "2017-10-16": "(A, mos) Första utgåvan."
 ...
 Installera kursens labbmiljö
 ==================================

@@ -11,7 +11,7 @@ Kmom05: Bild
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -53,13 +53,13 @@ Vi har många frågeställningar om bilder, men låt se om vi kan bringa klarhet
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -69,7 +69,7 @@ Läs följande:
 
 
 
-###Tekniker för att skriva för webben {#skriva}
+### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
@@ -77,7 +77,7 @@ Läs följande:
 
 
 
-###Webbdesign och användbarhet {#webbdesign}
+### Webbdesign och användbarhet {#webbdesign}
 
 1. Läs översiktligt igenom artikeln "[Moz om Page Speed](https://moz.com/learn/seo/page-speed)". Den förbereder dig för en av uppgifterna.
 
@@ -85,7 +85,7 @@ Läs följande:
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Kika på följande video.
 
@@ -103,7 +103,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Kika igenom följande tips.
 
@@ -124,7 +124,7 @@ Kika igenom följande tips.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
@@ -160,7 +160,7 @@ kvalitet
 -->
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -172,7 +172,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
 Följande extrauppgifter finns.
 
@@ -195,3 +195,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du några funderingar kring Cimage och dess nytta och features?
 * Lyckades du uppnå ett bra sätt och en LESS-struktur för att jobba med dina bilder i webbplatsen?
 * Om du gjorde extrauppgiften med `picture`, `srcset` och `sizes`, fick du någon känsla för för- och nackdelar med konceptet?
+* Vilken är din TIL för detta kmom?
