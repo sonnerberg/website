@@ -264,4 +264,6 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
+<!-- JavaScript-baserade webbramverk, 7,5 hp (ska ersätta PA1442) -->
+
 Kursens namn är "Webbaserade ramverk 2". Du hittar [kursplanen genom att söka på kurskoden PA1442 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1442).
