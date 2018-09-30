@@ -5,4 +5,4 @@ linkable: true
 Skapa innehåll
 =======================
 
-Hur lägger du till innehåll i Anax?
+Vi ser hur vi kan lägga till och redigera innehåll i Anax via Markdown-filer i katalogen `content/`.

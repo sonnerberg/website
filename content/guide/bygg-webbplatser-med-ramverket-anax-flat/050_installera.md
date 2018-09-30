@@ -5,4 +5,4 @@ linkable: true
 Installation
 =======================
 
-Visa hur man installerar och kommer igång med ramverket.
+Vi ser hur man installerar och kommer igång med ramverket som är grunden till me-sidan.
