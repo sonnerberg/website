@@ -2,9 +2,8 @@
 author: mos
 category: sql
 revision:
-  "2015-06-05": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
-updated: "2015-06-05 13:40:03"
-created: "2015-06-05 13:03:25"
+    "2018-09-30": (B, mos) Changed name of sqlite frile from jetty to boatclub.
+    "2015-06-05": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 En kommandoradsklient för SQLite
 ==================================
@@ -59,16 +58,16 @@ Koppla upp sig mot en databas {#koppla}
 Nja, koppla upp sig blir lite fel. SQLite är en filbaserad databas så man anger den filen som databasen finns i. För att testa kan du använde en exempeldatabas. Hämta den så här.
 
 ```text
-wget -O jetty.sqlite https://github.com/mosbth/htmlphp/blob/master/example/sqlite/jetty.sqlite?raw=true
+wget -O boatclub.sqlite https://github.com/mosbth/htmlphp/blob/master/example/sqlite/boatclub.sqlite?raw=true
 
-ls -l jetty.sqlite                       
--rw-r--r-- 1 mos mos 7.0K Jun  5 15:27 jetty.sqlite
+$ ls -l boatclub.sqlite 
+-rw-r--r-- 1 mos mos 16K Sep 30 23:48 boatclub.sqlite
 ```
 
 Nu kan du öppna databasen och se vad den innehåller.
 
 ```text
-sqlite3 jetty.sqlite 
+sqlite3 boatclub.sqlite 
 ```
 
 
@@ -87,7 +86,7 @@ Pröva följande kommandon för att bekanta dig med hanteringen.
 Nu kan du ställa en SQL-fråga mot tabellen `Jetty`.
 
 ```sql
-SELECT * from Jetty;
+SELECT * from jetty;
 ```
 
 Så här kan det se ut när du jobbar med `sqlite3`.
@@ -102,7 +101,3 @@ Avslutningsvis {#avslutning}
 Det var ett par korta steg för att komma igång med kommandoradsklienten för SQLite. Ibland kan det vara det snabbaste sättet att tillgå och prata med en SQLite-databas.
 
 Ställ gärna frågor om [SQLite och kommandoradsklienten i forumet](t/4308).
-
-
-
-
