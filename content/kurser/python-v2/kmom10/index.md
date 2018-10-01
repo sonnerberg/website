@@ -41,7 +41,7 @@ Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom d
 
 För båda studentgrupper är detta en **individuell** examination och uppgifterna ska lösas på egen hand.
 
-Lärarteamet finns tillgängliga i gitter och forum för hjälp med tekniska problem samt frågor och förtydliganden. 
+Lärarteamet finns tillgängliga i gitter och forum för hjälp med tekniska problem samt frågor och förtydliganden.
 
 
 Hämta examinationstillfälle 2018-10-30 (try1) {#hamta}
@@ -144,7 +144,18 @@ Efter din individuella examination lämna in en redovisningstext på din me-sida
 Förberedelse {#forberedelse}
 ----------------------------------------------------------------------
 
-Du har innan examinationen möjlighet att förbereda dig genom att göra en test examination. Test examinationen fungerar på liknande sätt. Du kan hämta hem den med följande kommando:
+Du har innan examinationen möjlighet att förbereda dig genom att göra en test examination.
+
+Innan du kör kommandon nedan uppdatera `dbwebb` och kursrepot samt skapa kataloger i din me katalog med följande kommandon.
+
+```bash
+# stå i kursrepot dbwebb-kurser/python
+dbwebb selfupdate # eventuellt behövs sudo eller admin rättigheter
+dbwebb update
+dbwebb init
+```
+
+Test examinationen fungerar på liknande sätt som den riktiga individuella examinationen. Du kan hämta hem den med följande kommando:
 
 ```bash
 dbwebb exam checkout prep
