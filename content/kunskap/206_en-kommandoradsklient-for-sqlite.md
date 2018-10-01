@@ -2,6 +2,7 @@
 author: mos
 category: sql
 revision:
+    "2018-10-01": "(C, mos) HUr man avslutar programmet med ctrl-d."
     "2018-09-30": (B, mos) Changed name of sqlite frile from jetty to boatclub.
     "2015-06-05": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
@@ -88,6 +89,8 @@ Nu kan du ställa en SQL-fråga mot tabellen `Jetty`.
 ```sql
 SELECT * from jetty;
 ```
+
+Avsluta applikationen genom att trycka `ctrl-d`.
 
 Så här kan det se ut när du jobbar med `sqlite3`.
 
