@@ -1,12 +1,13 @@
 ---
 author: mos
 revision:
+    "2018-10-01": "(B, mos) Rätt länk till variabler deklareras."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Värden och skalära typer
 =======================
 
-Vi har sett grunden för hur [variabler deklareras och tilldelas ett värde](./variabler). låt oss nu fortsätta med de olika typer som finns i php och hur typerna fungerar och kan avläsas. 
+Vi har sett grunden för hur [variabler deklareras och tilldelas ett värde](guide/kom-igang-med-programmering-i-php/variabler). låt oss nu fortsätta med de olika typer som finns i php och hur typerna fungerar och kan avläsas. 
 
 Manualen för php ger dig en översikt av [vilka typer som finns](http://php.net/manual/en/language.types.intro.php), läs den som referens och om du vill veta mer.
 
