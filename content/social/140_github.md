@@ -3,7 +3,7 @@ author: mos
 updated: "2016-07-04"
 created: "2013-03-22 11:36:09"
 ...
-<i class="fa fa-github-square" aria-hidden="true"></i> GitHub
+<i class="fab fa-github-square" aria-hidden="true"></i> GitHub
 ====================================
 
 Till stor del finns all källkod på GitHub, både för kurser, exempelprogram och för den infrastruktur som finns runt dbwebb-kurserna.

@@ -3,7 +3,7 @@ author: mos
 updated: "2016-07-04"
 created: "2013-05-23 11:45:20"
 ...
-<i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+<i class="fab fa-instagram" aria-hidden="true"></i> Instagram
 ==================================
 
 Vi är aktiva på Instagram i form av hashtaggen `#dbwebb`. Tagga ditt instagram som `#dbwebb` och den dyker upp i vår [Instagram-mapp på vår Facebook-sida](http://www.facebook.com/dbwebb.se/app_168188869963563).

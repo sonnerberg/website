@@ -5,6 +5,7 @@ category:
     - anax
     - kursen oophp
 revision:
+    "2018-10-01": "(C, mos) Uppdaterade anax/database till v2.0.0."
     "2018-04-27": "(B, mos) Lade till videoserie som komplement."
     "2018-04-23": "(A, mos) Första utgåvan i samband med oophp version 4."
 ...
@@ -94,7 +95,9 @@ Vi behöver en uppsättning av konfigurationsfiler, vi lånar dem från modulen.
 rsync -av vendor/anax/database/config/ config/
 ```
 
-Kika i konfigurationsfilen `config/database.php` och uppdatera den så du kan koppla upp dig mot din lokala databas.
+Kika i konfigurationsfilen `config/database.php` och uppdatera den så du kan koppla upp dig mot din lokala databas. Det finns en exempelfil som ligger i `config/database-sample.php` som fungerar i kursens sammanhang.
+
+Databasen är nu en del av `$app` som `$app->db`.
 
 
 
@@ -111,19 +114,19 @@ Lägg till följande route.
  * Show all movies.
  */
 $app->router->get("movie", function () use ($app) {
-    $data = [
-        "title"  => "Movie database | oophp",
-    ];
+    $title = "Movie database | oophp";
 
     $app->db->connect();
-
     $sql = "SELECT * FROM movie;";
     $res = $app->db->executeFetchAll($sql);
 
-    $data["res"] = $res;
+    $app->page->add("movie/index", [
+        "res" => $res,
+    ]);
 
-    $app->view->add("movie/index", $data);
-    $app->page->render($data);
+    return $app->page->render([
+        "title" => $title,
+    ]);
 });
 ```
 
@@ -165,7 +168,7 @@ När du är klar såkan du göra en `dbwebb publish` och allt bör fungera att k
 
 ### Att committa lösenord {#pwd}
 
-I din konfigurationsfil `config/database.php` ligger nu din användare och lösenord. Den typen av information vill man inte lägga till i sitt repo. Normalt lägger man en `config/database_sample.php` som en mall som också kan vara en del av repot. Man kopierar sedan den filen och lägger till lösenorden, dck checkar man inte in filen. Man kan via `.gitignore` ignorera filen i repot.
+I din konfigurationsfil `config/database.php` ligger nu din användare och lösenord. Den typen av information vill man inte lägga till i sitt repo. Normalt lägger man en `config/database_sample.php` som en mall som också kan vara en del av repot. Man kopierar sedan den filen och lägger till lösenorden, dock checkar man inte in filen. Man kan via `.gitignore` ignorera filen i repot.
 
 Det kan även finnas andra taktiker för att hantera risken att committa känslig information.
 

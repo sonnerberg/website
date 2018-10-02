@@ -3,7 +3,7 @@ author: mos
 updated: "2016-07-04"
 created: "2013-03-26 13:37:10"
 ...
-<i class="fa fa-google-plus-square" aria-hidden="true"></i> Google+
+<i class="fab fa-google-plus-square" aria-hidden="true"></i> Google+
 ==================================
 
 Vi finns på Google+, som en Google+ sida, där publicerar vi notiser, kul saker, intressant läsning och lite som händer här på dbwebb. Om du går in och följer vår Google+-sida så kommer våra nyheter att visas i ditt flöde och du kan +1 och kommentera dem.

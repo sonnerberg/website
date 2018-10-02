@@ -47,7 +47,7 @@ Du vill ha en lokal utvecklingsmiljö för databasen MySQL samt att du kan anvä
 1. Du vill även ha en lokal utvecklingsmiljö så att du kan köra mot databasen MySQL på din hemmadator.
     * [MySQL / MariaDB med XAMPP](labbmiljo/mysql-med-xampp)
 
-Det finns alternativa sätt att uppnå en bra utvecklingsmiljö för kursen. Har du en egen altertaniv väg så funkar det säkert.
+Det finns alternativa sätt att uppnå en bra utvecklingsmiljö för kursen. Har du en egen alternativ väg så funkar det säkert.
 
 
 

@@ -3,7 +3,7 @@ author: mos
 updated: "2016-07-04"
 created: "2013-03-22 10:50:22"
 ...
-<i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+<i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
 ==================================
 
 Vi har skapat ett par grupper på LinkedIn som hjälper dig att hålla kvar kontakten med dina studiekompisar. Följande grupper kan vara aktuella för dig som dbwebbare.
