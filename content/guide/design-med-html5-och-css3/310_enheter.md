@@ -12,4 +12,6 @@ Vi har i CSS ett antal olika möjligheter för att ange storlek på element i v�
 1. EM, skrivs som `em` i CSS.
 1. Root EM, skrivs som `rem` i CSS.
 
-Pixlar anger storleken för våra typsnitt
+Pixlar anger storleken för våra typsnitt i en fast enhet och användaren har inte möjlighet att påverka det med inställningar i webbläsaren. Fasta storlekar kan vara bra när vi designar våra gränssnitt, men ur ett användbarhetssynpunkt är det bättre att använda `em` eller `rem`.
+
+`1 em` är lika med
