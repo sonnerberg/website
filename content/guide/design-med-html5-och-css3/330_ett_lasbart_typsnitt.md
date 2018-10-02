@@ -14,4 +14,4 @@ Vad kännetecknar då ett läsbart typsnitt? Läsbarhet definieras som hur enkel
 
 Ett aspekt av läsbarhet är hur stora de vita utrymmen i bokstäver som 'o', 'e', 'c'. Det gör det lättare för läsaren att differentiera mellan till exempel 'o' och 'c'.
 
-Exempel på typsnitt med bra läsbarhet är Inter UI, Source Sans, Baskerville och Garamond.
+Exempel på typsnitt med bra läsbarhet är [Inter UI](https://rsms.me/inter/), [Source Sans](https://fonts.google.com/specimen/Source+Sans+Pro), [Baskerville](https://en.wikipedia.org/wiki/Baskerville) och [Garamond](https://en.wikipedia.org/wiki/Garamond). Självklart finns det många fler typsnitt och det är upp till dig som designer att välja ett typsnitt som har bra läsbarhet samtidigt som det ger din hemsida den känsla du vill ha.
