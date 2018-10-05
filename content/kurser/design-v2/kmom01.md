@@ -111,6 +111,54 @@ Kika på följande om du är intresserad och finner det värt tiden.
 1. Anax Flat, en variant av Anax som vi kommer använda i denna kursen, kan sägas vara ett flat-file framework. Bekanta dig kort med ett annat sådant ramverk som heter [Grav](https://getgrav.org/) och är byggt med PHP. Du kan kika på vilka features det har och kika översiktligt på dess dokumentation.
 
 
+<!--
+Filosofi dry, yagni, kiss
+
+
+Artiklar att läsa:
+
+http://lesscss.org/ olika delar beroende av läget.
+
+https://abookapart.com/
+
+http://simplebits.com/   ?
+
+https://addyosmani.com/first/
+
+https://www.berndtgroup.net/thinking/blog/development/modularizing-your-front-end-code-for-long-term-maintainability-and-sanity
+
+https://blog.usejournal.com/should-you-build-a-reusable-component-library-4e7df72413d7
+
+https://glenmaddern.com/articles/css-modules
+
+https://medium.com/front-end-developers/css-modules-solving-the-challenges-of-css-at-scale-85789980b04f
+
+https://css-tricks.com/methods-organize-css/
+
+http://www.developerdrive.com/2017/11/6-ways-to-organize-your-css/
+
+https://medium.com/@Intelygenz/how-to-organize-your-css-with-oocss-bem-smacss-a2317fa083a7
+
+https://medium.com/openmindonline/how-i-organize-css-in-large-projects-using-ufocss-part-1-9d04417f39f3
+
+https://www.keycdn.com/blog/oocss
+
+https://github.com/stubbornella/oocss/wiki
+
+http://oocss.org/
+
+https://smacss.com/
+
+https://en.bem.info/
+
+https://medium.com/@afrench53198/reusable-maintainable-and-modular-css-b0ffedf1c208
+
+
+-->
+
+
+
+
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
