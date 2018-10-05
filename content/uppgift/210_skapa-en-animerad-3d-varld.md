@@ -1,10 +1,11 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 category: javascript
 revision:
+  "2018-10-05": (B, efo) Uppdaterade kravspec från feedback ht17.
   "2015-11-29": (A, mos) Första utgåvan i samband med kursen webgl.
-updated: "2015-11-29 17:11:16"
-created: "2015-11-29 16:10:04"
 ...
 Skapa en animerad 3D-värld
 ==================================
@@ -62,7 +63,7 @@ Krav {#krav}
 
 1. Använd en HUD för att visualisera prestandan.
 
-1. Använd tangentbordet och/eller musen/touch-event för att navigera i scenen. man skall kunna navigera i x, y och z-led (minst).
+1. Använd tangentbordet och/eller musen/touch-event för att navigera i scenen med hjälp av en kamera.
 
 11. Validera och publicera din kod enligt följande.
 
@@ -72,7 +73,7 @@ dbwebb validate world
 dbwebb publish world
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
