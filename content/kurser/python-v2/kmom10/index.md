@@ -69,7 +69,7 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
-| `assignments.md` | Beskrivning av examinationen och de uppgifter som skall göras, öppna och läs via en texteditor.               |
+| `assignments.md` | Beskrivning av examinationen och de uppgifter som skall göras, öppna och läs via en texteditor. I Atom kan du använda kortkommandot `Ctrl-Shift-m` för att se markdown preview.              |
 | `exam.py`        | Här skall du skriva din kod för att lösa respektive uppgift i examinationen. Du kan köra programmet genom kommandot `python3 exam.py` |
 
 
@@ -165,7 +165,7 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
-| `assignments.md` | Beskrivning av examinationen och de uppgifter som skall göras, öppna och läs via en texteditor.               |
+| `assignments.md` | Beskrivning av examinationen och de uppgifter som skall göras, öppna och läs via en texteditor. I Atom kan du använda kortkommandot `Ctrl-Shift-m` för att se markdown preview.              |
 | `exam.py`        | Här skall du skriva din kod för att lösa respektive uppgift i examinationen. Du kan köra programmet genom kommandot `python3 exam.py` |
 
 
