@@ -101,7 +101,7 @@ Skicka variabler till vertex shader {#var}
 
 I bokens följande exempel så visar man hur man skickar variabler till vertex shader och man fortsätter rita sin punkt, men nu kan man ändra storlek och position på punkten via JavaScript. Exemplet finns i kursrepot under [`example/webgl/theBook/Chapter2/ex4`](https://github.com/mosbth/webgl/blob/master/example/webgl/theBook/Chapter2/ex4/main.js) och du kan själv [testa det](webgl/repo/example/webgl/theBook/Chapter2/ex4/).
 
-Ta nu koden från det exemplet och testa det i din egen sandbox så att det fungerar. Försök nu justera JavaScript-koden så att punkten placeras ut på en annan position och med en annan storlek. 
+Ta nu koden från det exemplet och testa det i din egen sandbox så att det fungerar. Försök nu justera JavaScript-koden så att punkten placeras ut på en annan position och med en annan storlek.
 
 [FIGURE src=/image/snapht15/webgl-sandbox2-point-moved.png?w=w2 caption="Nu kan vi påverka punktens position och utseende via JavaScript-kod och variabler som skickas till vertex shader."]
 
@@ -139,7 +139,3 @@ Avslutningsvis {#avslutning}
 Detta var en genomgång av de exempelprogrammen som finns i kapitel 2 i boken och du har nu en grund att stå på för att skriva ditt egna första enkla program i WebGL där du kan klicka och rita ut punkter.
 
 Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/webgl).
-
-
-
-

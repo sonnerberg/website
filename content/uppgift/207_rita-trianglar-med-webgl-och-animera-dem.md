@@ -1,10 +1,11 @@
 ---
-author: lew
+author:
+  - lew
+  - efo
 category: javascript
 revision:
-  "2015-10-13": (A, lew+mos) Första utgåvan i samband med kursen webgl.
-updated: "2015-11-13 16:03:27"
-created: "2015-10-11 16:18:29"
+  "2018-10-05": (B, efo) Ändrade så libs filer inte skrivs över.
+  "2015-10-13": (A, lew, mos) Första utgåvan i samband med kursen webgl.
 ...
 Rita trianglar med WebGL och animera dem
 ==================================
@@ -42,7 +43,6 @@ cp -i kmom01/sandbox2/* kmom02/sandbox3/
 Nu har du grunden för att göra din uppdaterade sandbox.
 
 
-
 Krav {#krav}
 -----------------------
 
@@ -54,9 +54,21 @@ Krav {#krav}
 
 1. Studera koden i de exempelprogram som heter `example/sandboxWebGL3*/` samt `example/sandboxWebGL4*/`. Observera att exempel filerna använder `example/lib/webgl-utils.js`, så kopiera den filen till din katalog.
 
-1. Gå igenom din egen kodstruktur och uppdatera den så du blir nöjd.
+Kopiera dessa till `me/lib/` katalogen med kommandot.
 
-11. Validera och publicera din kod enligt följande.
+```bash
+cp -i example/lib/webgl-utils.js me/lib/
+```
+
+Du kan nu inkludera filen `webgl-utils.js` med följande rad HTML.
+
+```html
+<script type="text/javascript" src="../../lib/webgl-utils.js"></script>
+```
+
+3. Gå igenom din egen kodstruktur och uppdatera den så du blir nöjd.
+
+4. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -70,19 +82,24 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 ###Del 2 Rita trianglar och animera dem {#tri}
 
-1. Kopiera alla filerna i din uppdaterade sandbox3 och lägg dem i katalogen `me/kmom02/tri`.
+1. Kopiera alla filerna i din uppdaterade sandbox3 och lägg dem i katalogen `me/kmom02/tri`. Du kan göra det med kommandot.
 
-1. Utgå ifrån exemplen i boken kapitel 4 samt exempelprogrammen `example/sandboxWebGL3*/` och `example/sandboxWebGL4*/`. Observera att exempel filerna använder `example/lib/webgl-utils.js`, så kopiera den filen till din katalog.
+```bash
+# stå i kursrepot
+cp -ri me/kmom02/sandbox3/* me/kmom02/tri/
+```
 
-1. Gör en kontrollpanel med knappar som kan lägga till godtyckligt antal trianglar.
+2. Utgå ifrån exemplen i boken kapitel 4 samt exempelprogrammen `example/sandboxWebGL3*/` och `example/sandboxWebGL4*/`. Observera att exempel filerna använder `example/lib/webgl-utils.js`, så kopiera den filen till din katalog.
 
-1. Animationen skall kunna startas och stoppas samt ändras hastigheten.
+3. Gör en kontrollpanel med knappar som kan lägga till godtyckligt antal trianglar.
 
-1. De trianglar som läggs till skall hanteras individuellt med färg, hastighet, rotering, skala och translate.
+4. Animationen skall kunna startas och stoppas samt ändras hastigheten.
 
-1. Lägg till en FPS-mätare. [Titta på exemplet](https://github.com/mosbth/webgl/blob/master/tutorial/fps.md) och/eller i bokens appendix.
+5. De trianglar som läggs till skall hanteras individuellt med färg, hastighet, rotering, skala och translate.
 
-11. Validera och publicera din kod enligt följande.
+6. Lägg till en FPS-mätare. [Titta på exemplet](https://github.com/mosbth/webgl/blob/master/tutorial/fps.md) och/eller i bokens appendix.
+
+7. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
