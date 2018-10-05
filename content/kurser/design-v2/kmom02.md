@@ -45,6 +45,15 @@ I nästa kmom bygger vi vidare på temat med grid-baserad layout. Så det kommer
 
 
 
+Labbmiljön  {#labbmiljo}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+Node & npm?
+
+
+
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
