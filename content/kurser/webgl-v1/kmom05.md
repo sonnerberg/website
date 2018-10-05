@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+  "2018-10-05": (B, efo) Uppdaterad och specificerad med bakgrund i feedback från VT17.
   "2015-12-08": (A, mos) Första versionen.
 ...
 Kmom05: Projekt och examination
@@ -20,6 +23,10 @@ Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
 Projekt går ut på att programmera **3D [Metaballs](https://en.wikipedia.org/wiki/Metaballs)** i WebGL och visa upp resultatet i en webbläsare.
+
+Tanken med projektet är att du som student ska visa upp din ingenjörsmässighet och lösa ett problem enligt _analysera, designa, implementera och utvärdera_.
+
+För att uppfylla kravet **3D Metaballs** ska det vara möjligt att använda tangentbordet och/eller musen/touch-event för att navigera i scenen med hjälp av en kamera. Bollarna ska röra sig i alla riktningar och effekterna när bollarna går i varandra ska ha inslag av **3D effekt**.
 
 *"Lös det".*
 
@@ -62,7 +69,7 @@ Redovisningstexten skriver du som vanligt i `me/redovisa`.
 Svara på följande frågor i din redovisningstext.
 
 * Beskriv hur du ingenjörsmässigt gick tillväga för att inledningsvis undersöka problemställningen.
-* Vilka källor använde du?
+* Vilka källor använde du? Värdera och specificera dina referenser och källor på ett akademiskt sätt.
 * Beskriv hur din första ansats till att läsa problemet.
 * Förändrades din ansats under projektets gång? Berätta.
 
@@ -76,9 +83,9 @@ Beskriv din tekniska lösning så att en ingenjörskollega kan lösa problemet p
 
 Kritisera din tekniska lösning och framhäv dess brister.
 
-Berätta om någon av de möjligheter som finns för att förbättra din lösning. Tänk att det finns begränsade resurser av tid, så förhåll dig till det och ta bara de möjligheter som kan utföras med begränsad insats av tid och/eller extra kunskap.
+Övervägde du alternativa lösningar? Varför förkastades dessa?
 
-Övervägde du alternativa lösningar? Berätta.
+Berätta om någon av de möjligheter som finns för att förbättra din lösning. Tänk att det finns begränsade resurser av tid, så förhåll dig till det och ta bara de möjligheter som kan utföras med begränsad insats av tid och/eller extra kunskap.
 
 
 
@@ -95,9 +102,9 @@ Fick du göra prioriteringar eller nådde du din fulla ambitionsnivå med den vi
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din redovisningssida, skriv följande:
+1. Förutom de texter du har skrivit för varje krav ovan skriv följande på din redovisningssida:
 
-    1. För varje krav du implementerat, dvs 1-3, skriver du ett textstycke där du beskriver vad du gjort, hur du tänkt och besvara samtliga frågor. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+    <!-- 1. För varje krav du implementerat, dvs 1-3, skriver du ett textstycke där du beskriver vad du gjort, hur du tänkt och besvara samtliga frågor. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg. -->
 
     1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
