@@ -262,6 +262,42 @@ views:
                                 type: content
                                 route: kurser/oophp-v4/block-kurser-kmom
 
+
+
+    ovrigt:
+        region: columns-above
+        template: default/columns
+        sort: 91
+        data:
+            title: Fler kurser
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: block/empty
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/webgl/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: block/empty
+                    column-4:
+                        data:
+                            meta:
+                                type: content
+                                route: block/empty
+
+
+
     columnsXtra:
         region: columns-above
         template: default/columns
