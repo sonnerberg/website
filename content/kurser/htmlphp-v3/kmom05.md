@@ -21,7 +21,7 @@ I en databas, en relationsdatabas som SQLite, så pratar vi SQL med databasen. V
 
 <!--more-->
 
-[FIGURE src=/image/sqlite20/create-table.png?w=w3 caption="En databas har tabeller med kolumner och rader."]
+[FIGURE src=image/snapht18/jetty-select-where-andor.png?w=w3 caption="Med SQL kan man ställa frågor mot databasen och visa urval av dess innehåll."]
 
 När vi väl bekantat oss med SQLite, dess klienter och SQL så tar vi ett första steg in i att koppla ihop PHP-kod med databasen.
 
