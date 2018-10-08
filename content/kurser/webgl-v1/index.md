@@ -1,7 +1,10 @@
 ---
 title: webgl
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-10-08": (E, efo) Uppdaterad inför ht18.
     "2016-10-19": (D, mos) Lade till rekommenderad studieplan.
     "2015-11-29": (C, mos) Justerade namnen på kursmomenten.
     "2015-10-11": (B, mos) Uppdateringar om respektive kursmoment.
@@ -206,9 +209,9 @@ Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättnin
 Kursutvärdering och kursutveckling {#kursutvardering}
 -----------------------------------------------------
 
-Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
+Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för oss att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
+Läs om hur vi [jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
 
 
 
