@@ -43,6 +43,7 @@ För läsåret är följande lärarassistenter, i olika omfattning.
 | ![Magnus](https://www.gravatar.com/avatar/f6519749cab15b46f612d0dfe249b5d7?s=100) | Magnus&nbsp;Greiff | Munge | mangegreiff@gmail.com [GitHub](https://github.com/MagnusGreiff/) [LinkedIn](https://www.linkedin.com/in/magnus-greiff-582907103/) |
 | ![André](https://www.gravatar.com/avatar/a55a997be7994740f25ea42628d5d407?s=100) | André&nbsp;Johansson |  | me@andremartinjohansson.com [GitHub](https://github.com/andymartinj) [Linkedin](https://www.linkedin.com/in/andremartinjohansson/) |
 | ![Matilda](image/lararteam/matilda.jpeg?w=100&h=100&cf) | Matilda&nbsp;Olsson |  | matildaytc@gmail.com [GitHub](https://github.com/Maoo17) [Linkedin](https://www.linkedin.com/in/matilda-olsson-726593159/) |
+| ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png) | Martin&nbsp;Borg |  | martin.d@live.se [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) |
 
 
 
