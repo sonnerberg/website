@@ -38,7 +38,7 @@ Kursen omfattar följande områden:
 * SQL med lagrade procedurer, funktioner och triggers.
 * SQL med index. 
 * Applikationsprogrammering med databaser.
-* Applikationsprogrammering i webbmiljö med programmeringsspråket JavaScript på serversidan med Node.js med inslag av HTMl och CSS.
+* Applikationsprogrammering i webbmiljö med programmeringsspråket JavaScript på serversidan med Node.js med inslag av HTML och CSS.
 * Verktyg och tekniker för utveckling och test.
 
 

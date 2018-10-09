@@ -59,7 +59,7 @@ Krav {#krav}
 
 1. Skapa en undersida där man kan söka efter båtar.
 
-1.. Skapa en funktion `printJettyResultsetToHTMLTable()` i `src/functions.php`. Funktionen skall ta *resultsetet*, `$res`, som en inparameter och skriva ut innehållet i `$res` till en HTML-tabell. Resultatet blir en funktion, som du kan använda för att lösa de två föregående kraven. Strukturera om dem så att de använder funktionen. 
+1. Skapa en funktion `printJettyResultsetToHTMLTable()` i `src/functions.php`. Funktionen skall ta *resultsetet*, `$res`, som en inparameter och skriva ut innehållet i `$res` till en HTML-tabell. Resultatet blir en funktion, som du kan använda för att lösa de två föregående kraven. Strukturera om dem så att de använder funktionen. 
 
 1. Validera och publicera din kod enligt följande.
 
