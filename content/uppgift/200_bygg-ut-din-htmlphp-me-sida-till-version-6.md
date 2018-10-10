@@ -6,13 +6,14 @@ category:
     - sqlite
     - php pdo
 revision:
-    "2019-09-24": "(B, mos) Genomgången i samband med htmlphp v3."
+    "2018-10-10": "(C, mos) Multisida inte ett krav, rekommenderad lösning med sidkontroller."
+    "2018-09-24": "(B, mos) Genomgången i samband med htmlphp v3."
     "2015-08-27": "(A, mos) Första utgåvan i samband med kursen htmlphp v2."
 ...
 Bygg ut din htmlphp me-sida till version 6
 ==================================
 
-Bygg in en databasdriven multisida, in din me-sida, som löser CRUD så att man kan lägga till, uppdatera, radera och visa innehåll i databasen.
+Bygg in funktioner in din me-sida, som löser CRUD, så att man kan lägga till, uppdatera, radera och visa innehåll i databasen.
 
 <!--more-->
 
@@ -30,7 +31,7 @@ Du har jobbat igenom artikeln "[Kom igång med SQLite och PHP PDO](kunskap/kom-i
 Introduktion {#intro}
 -----------------------
 
-Du skall lägga till en del, en multisida, till din mesida, där du kan jobba mot innehållet i en databas. Du skall kunna skapa nya rader i databasen, uppdatera informationen i befintliga, ta bort rader och visa samtliga rader.
+Du skall lägga till en del till din mesida, där du kan jobba mot innehållet i en databas. Du skall kunna skapa nya rader i databasen, uppdatera informationen i befintliga, ta bort rader och visa samtliga rader.
 
 
 
@@ -48,26 +49,28 @@ Nu har du din bas du kan utgå ifrån. Din resulterande sida skall finnas i kata
 
 Du kan jobba vidare på den databasen du använde i föregående kursmoment tillsammans med `search.php`. Databasen innehöll dinosaurier, eller om du hittade på något eget.
 
+Uppgiften är skriven för att implementeras med vanlig sidkontroller (rekommenderas), men du kan välja att implementera uppgiften i en multisida om du så väljer.
+
 
 
 Krav {#krav}
 -----------------------
 
-1. Se till att skriva DRY kod. Strukturera i funktioner och filer, så som du lärt dig under kursens gång.
+1. Skapa en ny sida/sidkontroller och döp den till `admin.php` (A). Lägg till ett menyval i navbaren för sidan.
 
-1. Skapa en ny multisida och döp den till `admin.php`. Lägg till ett menyval i navbaren för sidan.
+1. Sidan (A) skall visa en översikt av alla "dinosaurier" i en HTML tabell.
 
-1. Skapa en undersida till `admin.php`, vi kallar den för "create". Sidan skall innehålla ett formulär där du kan fylla i detaljer om en dinosaurie (eller vad du nu valt) och en knapp för att lägga till en ny dinosaurie till din databas.
+1. Sidan (A) skall länka till en ny sida för "create". Sidan skall innehålla ett formulär där du kan fylla i detaljer om en dinosaurie (eller vad du nu valt) och en knapp för att lägga till en ny dinosaurie till din databas.
 
-1. Skapa en ny sida "update". Via denna sidan skall man kunna uppdatera detaljer om en dinosarie och välja att spara dem.
+1. Via sidan (A) skall man kunna nå en sida "update" där man kan redigera detaljer om en dinosaurie och spara.
 
-1. Skapa en undersida "delete" med vilken man kan radera en dinosaurie.
+1. Via sidan (A) skall man nå en sida "delete" med vilken man kan radera en dinosaurie.
 
-1. Skapa en undersida "read" som visar samtliga dinosaurier i databasen.
-
-1. Skapa en undersida "init" som återskapar din databas från början med helt nytt innehåll.
+1. Via sidan (A) skall man nå en sida "init" som återskapar din databas från början med helt nytt innehåll i tabellen.
 
 1. Försäkra dig om att din befintliga sida `search.php` nu hittar alla dinosaurier i din databas.
+
+1. Lägg tid på att testa ditt flöde så att man enkelt kan klicka sig vidare mellan sidorna. Tänk att någon skall sitta och underhålla din databas via detta administrativa gränssnitt.
 
 1. Validera och publicera din kod enligt följande.
 
@@ -78,13 +81,6 @@ dbwebb publish me6
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
-
-
-
-Extrauppgift {#extra}
------------------------
-
-1. Länka mellan dina olika undersidor. Till exempel, när du visar innehållet i databasen så visar du även länkar till att göra "update" och "delete" för respektive rad och en länk till "create" för att lägga till en ny rad. 
 
 
 
