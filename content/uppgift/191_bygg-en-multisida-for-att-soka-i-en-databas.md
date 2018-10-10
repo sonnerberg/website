@@ -6,7 +6,8 @@ category:
     - sqlite
     - php pdo
 revision:
-    "2019-09-24": "(B, mos) Genomgången i samband med htmlphp v3."
+    "2018-10-10": "(C, mos) Strukturerade om kraven, lade till undersida som visar en båt och tog bort undersida för sökning."
+    "2018-09-24": "(B, mos) Genomgången i samband med htmlphp v3."
     "2015-06-15": "(A, mos) Första utgåvan i samband med kursen htmlphp v2."
 ...
 Bygg en multisida för att söka i en databas
@@ -38,9 +39,9 @@ I kursrepot finns exempelprogram som du kan utgå ifrån. Dels finns det i [`exa
 
 Spara din multisida i ditt kursrepo under katalogen `me/kmom05/jetty`.
 
-Dina SQLite-filer lägger du i katalogen `me/kmom05/jetty/db`. 
+Dina databas-filer lägger du i katalogen `me/kmom05/jetty/db`. 
 
-Börja med att kopiera databasfilen boatclub.sqlite, så har du en databas som du kan använda i uppgiften.
+Börja med att kopiera databasfilen `boatclub.sqlite`, så har du en databas som du kan använda i uppgiften.
 
 
 
@@ -49,17 +50,17 @@ Krav {#krav}
 
 1. Skapa grunden för en multisida, fristående från din me-sida, döp själva multisidan till `jetty.php`.
 
-1. Skapa en undersida som kopplar sig till databasen. Om det gick bra så visas ett meddelande som säger "Ok".
+1. Lägg koden som kopplar sig till databasen i en funktion `connectToDatabase($dsn)`. Databasens `$dsn` skall skickas som en parameter till funktionen. Funktionen skall returnera databasobjektet `$db`. Funktionen skall ligga i en fil, `src/functions.php`, skapa den filen.
 
-1. Lägg koden som kopplar sig till databasen i en funktion `connectToDatabase()`. Sökvägen till databasen skall skickas som en parameter till funktionen. Funktionen skall returnera databasobjektet `$db`. Funktionen skall ligga i en fil, `src/functions.php`, skapa den filen.
+1. Skapa en undersida som kopplar sig till databasen. Om det gick bra så visas ett meddelande som säger "Ok, du är nu uppkopplad till databasen!".
 
-1. Skriv om koden för de två första kraven ovan, så att du använder funktionen `connectToDatabase()`.
+1. Skapa en undersida (A) som skriver ut innehållet i tabellen `jetty` i en HTML tabell.
 
-1. Skapa en undersida som skriver ut innehållet i tabellen `jetty` i en HTML tabell.
+1. Skapa en funktion `printJettyResultsetToHTMLTable()` i `src/functions.php`. Funktionen skall ta *resultsetet*, `$res`, som en inparameter och skriva ut innehållet i `$res` till en HTML-tabell. Resultatet blir en funktion, som du kan använda för att lösa föregående krav. Strukturera om så att funktionen används.
 
-1. Skapa en undersida där man kan söka efter båtar.
+1. Skapa en undersida (B) som skriver ut detaljer om en båt. Man väljer vilken båt som skall skrivas ut genom att skicka med parametern `?position=2` vilket gör att båten som ligger på positionen 2 skrivs ut.
 
-1. Skapa en funktion `printJettyResultsetToHTMLTable()` i `src/functions.php`. Funktionen skall ta *resultsetet*, `$res`, som en inparameter och skriva ut innehållet i `$res` till en HTML-tabell. Resultatet blir en funktion, som du kan använda för att lösa de två föregående kraven. Strukturera om dem så att de använder funktionen. 
+1. Uppdatera den undersidan (A) som skriver ut alla båtar så att man kan klicka på respektive båt och länken leder till undersidan (B) som skriver detaljer om enbart den båten.
 
 1. Validera och publicera din kod enligt följande.
 
