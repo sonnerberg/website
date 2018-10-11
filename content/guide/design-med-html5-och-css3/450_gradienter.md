@@ -1,7 +1,7 @@
 ---
 author: efo
 revision:
-    "2018-10-02": "(A, efo) Första versionen."
+    "2018-10-11": "(A, efo) Första versionen."
 ...
-Vita utrymmen
+Gradienter
 =======================
