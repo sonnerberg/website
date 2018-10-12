@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-  "2015-10-11": (A, mos) Första omarbetade versionen till htmlphp v2.
+    "2018-10-12": (B, mos) Flyttade tips från coachen till eget dokument.
+    "2015-10-11": (A, mos) Första omarbetade versionen till htmlphp v2.
 ...
 Kmom10: Appendix 1 Projekt BMO 
 ==================================
@@ -17,15 +18,15 @@ Du kommer få läsa mer om kunden, Ronny Holm, för att förstå vad han vill ha
 Översikt {#oversikt}
 --------------------------------------------------------------------
 
+Rent allmänt gäller följande.
+
 Det finns en projektspecifikation som beskriver vad du skall göra och vad din leverans skall innnehålla. 
 
 Det finns tankar om webbplatsens style och layout. 
 
-Det finns innehåll som du skall använda i din webbplats. Innehållet består av bilder, artiklar och objekt. Allt innehåll är förpackat i kursrepot i en exempelmapp.
+Det finns innehåll som du skall använda i din webbplats. Innehållet består av bilder, artiklar och objekt. Allt innehåll är förpackat i kursrepot i en exempelmapp i kursrepot.
 
 Utmaningen är att bygga en webbplats med innehåll och funktioner som specificerats samt att göra en styling som matchar webbplatsens profil. Använd det du hittills lärt dig i kursen så kommer det att gå utmärkt.
-
-Vill du ha "Tips från Coachen" så kommer de i slutet av denna artikel.
 
 **Lycka till och kämpa väl!**
 
@@ -41,9 +42,9 @@ Nu i dessa tider då "Google profilen" blir en allt mer viktig del i ens bakgrun
 
 
 
-####Ronny Holm vid SKKF {#skkf}
+#### Ronny Holm vid SKKF {#skkf}
 
-[FIGURE src="/img/bmo/ronny_holm_200.jpg" caption="Ronny Holm, vår kund" class="right"]
+[FIGURE src="img/bmo/ronny_holm_200.jpg" caption="Ronny Holm, vår kund" class="right"]
 
 Ronny Holm jobbar som [organisationschef på SKKF](http://www.skkf.se/node/129), 
 Sveriges Kyrkogårds- och Krematorieförbund. SKKF är Branschförbundet för 
@@ -58,7 +59,7 @@ Följande finns att läsa [om SKKF och deras verksamhet och inriktning](http://w
 > *SKKF främjar med sin uttalade position som en politisk och religiöst obunden organisation en god begravningsverksamhet och en positiv utveckling av olika gravskick från olika etiska, etniska, religiösa, ekologiska och ekonomiska utgångspunkter.*
 
 
-###Ronny Holm och utbildning {#utbildning}
+### Ronny Holm och utbildning {#utbildning}
 
 Vid SKKF är utbildning en viktig fråga. Ta en titt i [årets utbildningskatalog](http://www.skkf.se/utbildning) för att få en insyn i vad ett förbund likt SKKF arbetar med.
 
@@ -68,7 +69,7 @@ Kurser om Gravvårdens Symboler och Kyrkogårdskulter: Att Vårda Ett Kulturarv,
 
 
 
-###Ronny Holm och Begravningsmuseet i Ljungby {#museum}
+### Ronny Holm och Begravningsmuseet i Ljungby {#museum}
 
 I början av 1970-talet började Ronny Holm, att samla de första sakerna, som nu finns i Begravningsmuseet i Ljungby. Det var ting som funnits i kyrkor, på kyrkogården, från privatpersoner m fl. Under årens lopp har Ronny Holm handlat i second handbutiker, varit på loppmarknader och besökt auktioner.
 
@@ -76,15 +77,17 @@ Vid denna tiden var Ronny chef för kyrkogårdsförvalitningen i Ljungby. I samb
 
 Redan efter ett par veckor hade man haft över 2000 besökare och intresset var mycket stort från både allmänhet, grupper av alla de slag och inte minst massmedia. Museet visar seder och bruk vid död och begravning under 1800 och 1900-talen. Här visas hela förloppet vid ett dödsfall, från tillkännagivandet via klockringning till gravsättningen och gravölet. Många av föremålen är skänkta eller utlånade av privatpersoner, institutioner etc.
 
-Det finns att lära på om Ronny Holm och Begravningsmuseet i Ljungby, här är ett par artiklar.
-
-* [Döden går på museum (Sydsvenskan)](http://www.sydsvenskan.se/sverige/article96211/Doden-gar-pa-museum.html)
+Det finns att lära på om Ronny Holm och Begravningsmuseet i Ljungby, här finns en artikel att läsa.
 
 * [Döden byter form (Svd)](http://www.svd.se/kulturnoje/nyheter/doden-byter-form_412397.svd)
 
+<!--
+* [Döden går på museum (Sydsvenskan)](http://www.sydsvenskan.se/sverige/article96211/Doden-gar-pa-museum.html)
+-->
 
 
-###Ett Begravningsmuseum Online {#online}
+
+### Ett Begravningsmuseum Online {#online}
 
 En sommar för några år sedan, träffade jag Ronny över en kopp kaffe och lite kladdkaka. Jag föreslog att utveckla en webbplats för att göra en webb-baserad utställning av Ronnys samling, ett begravningsmuseum online. Tanken var att spara ett kulturarv för framtida generationer, för den goda sakens skull. Här är webben ett utmärkt redskap och jag berättade för Ronny att jag kände ett stort antal duktiga webbutvecklare.
 
@@ -117,6 +120,8 @@ I katalogen finns följande.
 | `img/[80x80,250x250,550x550]` | Objekt-bilder skalade till upplösningar max bredd/höjd 80x80px, 250x250px och 550x550px. |
 | `img/maggy`        | Bilder till Maggys artikel om Begravningsseder och Bruk. |
 | `db/bmo.sqlite`    | Databasfil som innehåller artiklar (inklusive text till om-sidan) och objekt. |
+| `db/bmo2.sqlite`   | Uppdaterad databasfil med rätt sökvägar till bilder. |
+| `db/bildtexter.md` | Extra information om bildtexter till bilder. |
 
 
 
@@ -141,58 +146,3 @@ Dessutom har nu kunden bett oss om vår egen privata syn på stylen. Det innebä
 Så, gör en personlig style på Begravningsmuseum Online. Det är kundens önskemål. Den kan vara utmanande, stilig eller urflippad. Den kan representera sorg, frihet, saklighet, kulturell eller andra känslor. Den kan vara vit, blå, svart, röd eller grön, välj själv. Gör efter bästa förmåga.
 
 Det handlar om att vårda ett kulturarv genom att skapa intresse. För att skapa intresse måste man ibland sticka ut näsan och riskera att bli bränd. Ta en risk. Gör det.
-
-
-
-Tips från Coachen {#tips}
---------------------------------------------------------------------
-
-Jag hade gjort så här.
-
-Första reaktionen: *"Attans vad text, måste jag läsa allt... hmmm, jag försöker klura ut det viktigaste..."*
-
-Sen hade jag börjat jobba.
-
-* Läs igenom alla dokument som finns. Fundera över vad det handlar om. Läs igenom dokumenten igen.
-
-* Sov på saken och fundera på hur ska detta angripas.
-
-* Kika i exempelmappen. Titta på de bilderna som finns. Strukturen på img-katalogen. 
-
-* Öppna databasen i SQLite Manager, kolla strukturen och vad som ligger i tabellerna. 
-
-* Ta en kopia av me-sidan, rensa ut onödiga saker, gör ett tomt skal att utgå ifrån.
-
-* Skapa en navbar meny och lägg till Info-sidan. Bara för att visa att du kan själv!
-
-* Nu finns ett tomt skal till BMO, inklusive material till innehållet.
-
-* Sov på saken.
-
-* Gör en enkel header, footer och stylesheet. Enkel. Gör en tom förstasida. Både style och förstasidan kan du justera efterhand.
-
-* Skapa en sida som visar alla/ett objekt.
-
-* Skapa en sida som visar alla/en artikel.
-
-* Nu har du basen, nästan det som krävs för godkänt. Nu kan du välja hur mycket kraft du lägger på de optionella delarna.
-
-* Luta dig tillbaka och se om du har något som ser bra ut. Lägg extra kraft på att snygga till saker som förhöjer intrycket. 
-
-* Ladda upp och testa webbplatsen så att allt fungerar.
-
-* Sov på saken.
-
-* Gör siten bättre. Det finns alltid småsaker som kan förbättras.
-
-* Se över stylen.
-
-* Sov på saken.
-
-* Leverera och skriv av dig.
-
-* *High five*. Klart. Känn dig stolt.
-
-
-
-
