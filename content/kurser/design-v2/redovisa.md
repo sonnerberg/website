@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-10-15": "(D, mos) Mindre justeringar inför ht18."
     "2018-09-25": "(C, mos) Genomgången inför ht18."
     "2017-10-19": "(B, mos) Uppdaterad inför ht17."
     "2016-10-07": "(A, mos) Första utgåvan."
@@ -23,18 +24,20 @@ Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Skriv ett stycke om 15-30 meningar.
+Kan du koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare?
+
+Skriv ett stycke om 15-30 meningar, försök väva in frågorna i löpande text.
 
 
 
 Tagga ny version {#tag}
 ---------------------------------------
 
-Se till att du har taggat en ny version så att dina senaste ändringar finns med i respektive repo och tag. Versionen ger en historik över dina ändringar enligt följande.
+Se till att du alltid taggar en ny version på ditt redovisa-repo i slutet av kmomet. Versionen du taggar ger en historik över dina ändringar enligt följande.
 
 | Version      | Kmom   |
 |--------------|--------|
-| 1.0.*, 1.1.* | kmom01 | 
+| 1.0.*        | kmom01 | 
 | 2.0.*        | kmom02 | 
 | 3.0.*        | kmom03 | 
 | 4.0.*        | kmom04 | 
@@ -43,6 +46,8 @@ Se till att du har taggat en ny version så att dina senaste ändringar finns me
 | 10.0.*       | kmom10 | 
 
 Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du historik och du kan få problem med inlämningarna.
+
+Glöm inte att ladda upp ditt repo till GitHub.
 
 
 

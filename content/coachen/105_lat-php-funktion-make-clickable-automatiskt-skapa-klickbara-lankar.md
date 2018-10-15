@@ -5,6 +5,7 @@ category:
     - php
     - textfilter
 revision:
+    "2018-10-15": "(C, mos) Ändrade return-satsen som gav fel HTMl-kod."
     "2018-04-30": "(B, mos) Uppdaterat testprogram i kursrepot för oophp."
     "2013-04-29": "(A, mos) Första versionen."
 ...
@@ -42,7 +43,7 @@ function makeClickable($text)
     return preg_replace_callback(
         '#\b(?<![href|src]=[\'"])https?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#',
         function ($matches) {
-            return "<a href=\'{$matches[0]}\'>{$matches[0]}</a>";
+            return "<a href=\"{$matches[0]}\">{$matches[0]}</a>";
         },
         $text
     );

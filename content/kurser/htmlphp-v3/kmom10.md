@@ -126,7 +126,7 @@ Om-sidan skall även innehålla ett generellt textstycke om webbplatsen och dess
 
 
 
-### Validera och kompabilitet {#validera}
+#### Validera och kompabilitet {#validera}
 
 Webbplatsen skall validera för HTML5 och CSS3. Extensions specifika för en webbläsare är tillåtna (-moz, -webkit, etc).
 

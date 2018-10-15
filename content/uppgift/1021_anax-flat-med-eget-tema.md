@@ -8,7 +8,7 @@ revision:
     "2016-11-01": (B, mos) Nytt krav om att länka till temat på github.
     "2016-10-26": (A, mos) Första utgåvan.
 ...
-Bygg en ut ditt Anax Flat med eget LESS tema
+Bygg ut ditt Anax Flat med eget LESS tema
 ===================================
 
 Du skall bygga ut ditt Anax Flat med ett eget tema som bygger på LESS. 

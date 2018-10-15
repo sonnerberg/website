@@ -3,7 +3,7 @@ title: htmlphp (v3)
 author:
     - mos
 revision:
-    "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering v3 av kursen."
+    "2018-10-15": "(E, mos) Nytt dokument inför uppdatering v3 av kursen."
     "2017-06-15": "(D, mos) Förbereder genomgång inför ht17."
     "2016-11-01": "(C, mos) Ladokmoment och studieplan omskrivna."
     "2016-02-22": "(B, mos) Bort med not om kursutveckling samt not ny kurskod från ht16."
@@ -15,14 +15,6 @@ Kursen htmlphp (v3)
 Kursen **Webbteknologier**, a.k.a. *htmlphp*, lär ut webbutveckling där teknikerna  HTML, CSS, PHP och SQL används för att tillsammans bygga en databasdriven webbplats.
 
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs htmlphp v3**
-
-Kursstart hösten 2018.
-
-[/WARNING]
 
 HTML och CSS ger grundförutsättningarna för hur en webbapplikation kan byggas. Genom att använda server-side skriptprogrammering med PHP så kan webbapplikationen bli mer dynamisk och lagra information i databaser. Dessutom kan webbapplikationen byggas upp med en programmeringsmässig struktur, en struktur som underlättar utveckling och underhåll av webbplatsen.
 

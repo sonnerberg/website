@@ -74,11 +74,11 @@ chmod 777 cache/cimage
 
 Nu kan du öppna en webbläsare och peka mot katalogen `redovisa/htdocs`.
 
+<!-- Lägg publicera studentservern som nästa steg, likt design-kursen. -->
+
 
 
 ### Make {#make}
-
-Om du får problem med detta stycket så kan du hoppa över det, men gör ett foruminlägg så att det som "är sönder" kan lagas, du behöver det senare i kursen. Det kan finnas saker i Makefilen som skiljer sig mellan olika plattformar.
 
 Dubbelkolla att du har Make installerat och att det fungerar.
 

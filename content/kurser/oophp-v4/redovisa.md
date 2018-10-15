@@ -20,11 +20,13 @@ Skriv redovisningstext {#text}
 
 I din me-sida har du en dedikerad plats för dina redovisningstexter. Där skall du [redovisa dina reflektioner](kurser/faq/att-skriva-en-bra-redovisningstext) från varje kursmoment.
 
+Besvara de specifika frågor som finns för varje kursmoment.
+
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Besvara även de specifika frågor som finns för varje kursmoment.
+Kan du koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare?
 
-Skriv ett stycke om 15-30 meningar.
+Skriv ett stycke om 15-30 meningar, försök väva in frågorna i löpande text.
 
 
 

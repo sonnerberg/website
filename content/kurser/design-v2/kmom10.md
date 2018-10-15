@@ -19,7 +19,7 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 [WARNING]
 
-** Kursutveckling pågår till kurs design v2 **
+**Kursutveckling pågår till kurs design v2**
 
 Kursstart hösten 2018.
 
@@ -28,6 +28,9 @@ Kursstart hösten 2018.
 
 <!--
 * Vilka krav skall dokumenteras i projektredovisningen?
+
+* Artikel om usability på egen hand? Material från kmom01 + studie av webbplatser?
+ 
 -->
 
 

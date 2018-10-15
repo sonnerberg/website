@@ -25,7 +25,9 @@ Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Skriv ett stycke om 15-30 meningar.
+Kan du koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare?
+
+Skriv ett stycke om 15-30 meningar, försök väva in frågorna i löpande text.
 
 Spara redovisningstexten enligt följande.
 

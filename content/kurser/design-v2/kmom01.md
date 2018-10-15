@@ -18,21 +18,23 @@ Kursstart hösten 2018.
 [/WARNING]
 
 
-Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
+Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material. Även om vi tittar på de mjuka aspekterna så är tanken att vi lära oss "hårda" tekniker för att jobba med de mjuka. Låt se vad det kan innebära i praktiken.
 
-Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Hur kan vi som programmerare rent tekniskt kan förbereda webbplatserna för design och användbarhet? Vi vill vara förberedda när det kommer en webbdesigner, eller designer inom användbarhet, och berättar hur webbplatsen skall se ut. Då vill vi med enkla (rimliga) medel uppfylla deras visioner.
+Vi ställer oss frågan hur vi bygger våra webbplatser för att underlätta för design och användbarhet? Hur kan vi som programmerare rent tekniskt förbereda webbplatserna för design och användbarhet? Vi vill vara förberedda när det kommer en webbdesigner, eller designer inom användbarhet, och berättar hur webbplatsen skall se ut. Då vill vi med enkla (rimliga) medel uppfylla deras visioner.
 
 <!--more-->
 
-För att komma igång med en grundstruktur så använder vi ett PHP-baserat ramverk (Anax) för att bygga en me-sida som vi fyller med innehåll genom att skriva texter i Markdown. Vi börjar med grundstrukturen och vi avvaktar med style och utseende till nästa kursmoment.
+Denna kurs är främst en möjlighet att dyka in i CSS-kodande och att via  CSS-preprocessorer använda möjligheten att strukturera och optimera vår CSS-kod. Det är också en möjlighet att få insyn i vad som är grundstenarna för "god design". Genom kursen försöker vi finna tekniska sätt, för en programmerare, att jobba och implementera "god design" i en webbplats. Vi studerar också vissa aspekter av begreppet användbarhet som påverkar användarens upplevelse av webbplatsen.
 
-Öppna ditt sinne och låt oss börja.
+För att komma igång snabbt så använder vi en befintlig webbplats som grund till vår me- och redovisa-sida. Webbplatsen bygger på ett PHP-ramverk som heter Anax. Den variant vi använder är en flat-file version där allt innehåll i webbplatsen skrivs i Markdown-filer.
 
-[FIGURE src=/image/snapht17/anax-flat-start.png?w=w2 caption="En me-sida med PHP-ramverket Anax Flat."]
+Öppna ditt sinne och låt oss börja. I detta första kmom inleder vi med att installera en labbmiljö, läsa lite litteratur samt att skapa redovisa-sidan och ge den style via CSS. Vi väljer att göra redovisa-sidan i ett Git-repo och lägga upp den på GitHub.
+
+[FIGURE src=/image/snapht17/anax-flat-start.png?w=w3 caption="En me-sida med PHP-ramverket Anax Flat."]
 
 Under kursens gång så kommer du att introduceras till ett par tekniker som är bra att ha för en webbprogrammerare. En av de är versionshantering med Git och GitHub.
 
-[FIGURE src=/image/snapvt16/anax-flat-me-github.png?w=w2 caption="Ditt material skall paketeras som ett git-repo och publiceras på GitHub."]
+[FIGURE src=/image/snapvt16/anax-flat-me-github.png?w=w3 caption="Ditt material skall paketeras som ett git-repo och publiceras på GitHub."]
 
 
 
@@ -65,23 +67,60 @@ Läs & Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+
 ### Kurslitteratur  {#kurslitteratur}
 
-Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa mer i samband med nästa kmom.
+Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa i samband med nästa kmom, men det skadar inte att ligga ett kapitel före.
 
 
 
+<!--
 ### Tekniker för att skriva för webben {#skriva}
 
 1. Det är viktigt att ha koll på hur vi skall tänka när vi skriver för webben. Under kursen skall vi läsa igenom guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)". Du kan börja kort med följande kapitel, bara för att bekanta dig med materialet.
 
     * 1. Innehållsförteckning
     * 2. Förord
+-->
+
+
+
+### Markdown {#markdown}
+
+Läs följande för att lära dig grunderna i textformatet Markdown. Markdown är ett populärt format för att låta användaren skriva text som är läsbar för ögat men ändå enkel att konvertera till HTML med en parser. I kursen kommer du att skriva dina webbsidor med Markdown.
 
 1. Kika på vad Markdown innebär genom att läsa [John Grubers introduktion till Markdown](https://daringfireball.net/projects/markdown/basics). För att testa själv så öppnar du en [Gist](https://gist.github.com/) och skriver i Markdown, det gör att du kan testa olika konstruktioner under tiden som du läser om dem.
 
+1. I kursen använder vi en Markdown-parser som heter [PHP Markdown](https://packagist.org/packages/michelf/php-markdown). Du kan läsa om dess extra bidrag till Markdown-syntaxen i [referensdokumentationen](https://michelf.ca/projects/php-markdown/reference/).
+    * [The Syntax: Concepts](https://michelf.ca/projects/php-markdown/concepts/)
+    * [The Syntax: PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)
 
 
+
+### Git & GitHub {#git}
+
+I kursen introduceras Git och GitHub. Git är ett versionshanteringssystem för kod och GitHub är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster. 
+
+1. Bekanta dig kort med [dokumentation på Gits hemsida](https://git-scm.com/doc). Där finner du referensinformation, en onlinebok om Git och ett antal korta videor som ger dig grunderna till vad Git och versionshantering handlar om.
+
+1. Skaffa dig ett konto på [GitHub](https://github.com/). Du behöver det för att ladda upp och publicera ditt Git-repo. Det är gratis med konto och att ladda upp publika repon.
+
+1. Ägna en stund åt att bekanta dig med webbplatser för GitHub. Du kan även kort och översiktligt kika på de guider och videor som finns för GitHub. Notera att de täcker så mycket mer än vad vi kommer jobba med i kursen så det kan räcka att du endast noterar att det existerar [guider för hur man jobbar med GitHub](https://guides.github.com/).
+
+
+
+### CSS {#css}
+
+I detta kursmomentet jobbar vi med CSS. Läs följande.
+
+1. I online boken "[SMACSS Scalable and Modular Architecture for CSS](https://smacss.com/book/)" läser du följande korta kapitel för inspiration av en variant till hur man kan tänka när man skriver CSS i större sammanhang.
+    * Introduction
+    * Categorizing CSS Rules
+    * Base Rules
+    * Layout Rules
+
+
+<!--
 ### Webbdesign och användbarhet {#webbdesign}
 
 Läs följande artiklar.
@@ -90,15 +129,22 @@ Läs följande artiklar.
 
 1. Läs artikeln som ger en kort introduktion till användbarhet, "[Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability/)" skriven av Jakob Nielsen.
 
+-->
+<!-- Eventuellt skriva artikel om usability, kanske i projektet? -->
 
 
+
+<!--
 ### Video  {#video}
 
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 0 och 1. Videorna som börjar på 110* är kopplade till en av de artiklar du skall jobba igenom under övningarna nedan. Titta på dem samtidigt som du jobbar igenom artikeln.
 
+-->
 
+
+<!--
 
 ### Lästips {#lastips}
 
@@ -109,6 +155,8 @@ Kika på följande om du är intresserad och finner det värt tiden.
 1. Ramverket du använder i kursen är Anax. Bekanta dig gärna med [Anax dokumentationen](anax).
 
 1. Anax Flat, en variant av Anax som vi kommer använda i denna kursen, kan sägas vara ett flat-file framework. Bekanta dig kort med ett annat sådant ramverk som heter [Grav](https://getgrav.org/) och är byggt med PHP. Du kan kika på vilka features det har och kika översiktligt på dess dokumentation.
+
+-->
 
 
 <!--
@@ -166,21 +214,23 @@ https://medium.com/@afrench53198/reusable-maintainable-and-modular-css-b0ffedf1c
 *(ca: 8-10 studietimmar)*
 
 
-
+<!--
 ### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Lär känna ramverket Anax Flat genom att bygga webbplats. Jobba igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
-
+-->
 
 
 
 ### Uppgifter {#uppgifter}
 
-Dessa uppgifter skall utföras och redovisas.
+Följande uppgift skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg en me-sida med Anax Flat](uppgift/me-sida-med-anax-flat)".
+1. Lös uppgiften "[Bygg en redovisa-sida till kursen design](uppgift/bygg-en-redovisa-sida-till-kursen-design)". Du skall bygga en redovisa-sida som du taggar och publicerar på GitHub. Spara allt under `me/redovisa`.
+
+1. Försäkra dig om att du har gjort `dbwebb publish` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
 
@@ -193,11 +243,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser? Om ja, vilka ramverk/språk har du jobbat med?
-* Det blev en del nya verktyg i labbmiljön, var de nya för dig eller kände du igen dem?
-* Hur kändes det att jobba med Anax Flat och bygga din me-sida?
+* Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser?
+* Det blev en del nya verktyg och tekniker i labbmiljön och för att jobba med redovisa sidan, är du bekant med några av dem sedan tidigare?
 * Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarhet för webben?
-* Det fanns videor som kompletterade artiklarna, hjälpte de dig att förstå materialet bättre?
 * Vilken är din TIL för detta kmom?
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
