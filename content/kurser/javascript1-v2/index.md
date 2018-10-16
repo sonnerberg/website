@@ -1,5 +1,5 @@
 ---
-title: javascript1 (v1)
+title: javascript1 (v2)
 author: mos
 revision:
     "2017-10-31": (I, mos) Referens till bok om ES6.
@@ -12,12 +12,19 @@ revision:
     "2014-11-02": (B, mos) Samtliga kursmoment klara (förutom projektet).
     "2014-06-18": (A, mos) Första revisionen inför kursstart HT2014.
 ...
-Kursen javascript1 (v1)
+Kursen javascript1 (v2)
 ==================================
 
 Kursen **Programmering med JavaScript**, a.k.a. *javascript1*, lär ut programmering och problemlösning med programmeringsspråket JavaScript tillsammans med HTML och CSS i en webbmiljö.
 
 <!--more-->
+[WARNING]
+
+**Kursutveckling pågår**
+
+Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+
+[/WARNING]
 
 Vi startar med att skapa rutiner för problemlösning och felsökning via enkla grundkonstruktioner i språket. Vi bygger upp en utvecklingsmiljö med relevanta verktyg i en webbmiljö. Vi använder JavaScript tillsammans med HTML och CSS för att skapa klientbaserade webbapplikationer. Du får se hur dessa tekniker samverkar.
 
