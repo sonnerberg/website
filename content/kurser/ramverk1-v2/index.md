@@ -97,7 +97,7 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: Ramverk {#kmom01}
+### Kmom01: Ramverk {#kmom01}
 
 Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att anamma ett PHP modul-tänkande. 
 
@@ -105,7 +105,7 @@ Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-
 
 
 
-###Kmom02: MVC {#kmom02}
+### Kmom02: MVC {#kmom02}
 
 Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket.
 
@@ -115,7 +115,7 @@ Vi bekantar oss även med begreppet SOLID som är en akronym för designmönster
 
 
 
-###Kmom03: DI {#kmom03}
+### Kmom03: DI {#kmom03}
 
 Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" och moduler in i ramverket. Hittills har vi använt `$app` som en kontainer för alla tjänster som finns i ramverket. Nu skall vi introducera `$di`.
 
@@ -125,7 +125,7 @@ Vi skall titta på begreppet Dependency Injection och några begrepp som är nä
 
 
 
-###Kmom04: Databasdrivna modeller {#kmom04}
+### Kmom04: Databasdrivna modeller {#kmom04}
 
 Vi skall titta på klasser i modell-lagret och utöka vår struktur med formulärhantering och databasdrivna modell-klasser.
 
@@ -137,7 +137,7 @@ I arbetet skapar vi basklasser i modellagret som underlättar då vi implementer
 
 
 
-###Kmom05: Modul {#kmom05}
+### Kmom05: Modul {#kmom05}
 
 Du skall skapa en fristående modul av ditt kommentarssystem och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din me-sida och placera allt som modulen behöver i ett eget repo.
 
@@ -149,7 +149,7 @@ Du börjar införa enhetstestning på din modul.
 
 
 
-###Kmom06: CI {#kmom06}
+### Kmom06: CI {#kmom06}
 
 Tanken är att ge en bild av hur automatiserad testning och continuous integration (CI) fungerar mot en PHP modul som ligger publicerad på GitHub och Packagist.
 
@@ -161,7 +161,7 @@ Vi bekantar oss med ett antal olika externa verktyg och försöker förstå vad 
 
 
 
-###Kmom07/10: Projekt och examination {#kmom10}
+### Kmom07/10: Projekt och examination {#kmom10}
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
@@ -174,7 +174,7 @@ Kurslitteratur {#litteratur}
 
 
 
-###Kurslitteratur {#kurslitteratur}
+### Kurslitteratur {#kurslitteratur}
 
 Kurslitteraturen består av egenskrivna och länkade online-resurser såsom artiklar och guider.
 
@@ -182,13 +182,13 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 
 
-###Referenslitteratur {#referenslitteratur}
+### Referenslitteratur {#referenslitteratur}
 
 Referensdokumentationen är främst olika online-resurser i form av manualer.
 
 
 
-###Övrig litteratur {#ovriglitteratur}
+### Övrig litteratur {#ovriglitteratur}
 
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
 
@@ -228,21 +228,39 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin3) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasar2/lasperiod1).
+Kursen har en [rekommenderad studieplan](kurser/ramverk1/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-Studieplan och lektionsplan finns tillgängligt via kurstillfället på ITs.
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
 
 
 
-Lärarstöd och handledning {#handledning}
+Lektionsplan {#lektionsplan}
+---------------------------------------------
+
+Det finns en [lektionsplan](kurser/ramverk1/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+
+
+
+Handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+
+Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
+
+
+
+Betygsättning {#betyg}
+------------------------
+
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
@@ -260,13 +278,6 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
-
-
-
-Betygsättning {#betyg}
-------------------------
-
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
@@ -294,3 +305,16 @@ Kursens namn är "Webbaserade ramverk 1". Du hittar [kursplanen genom att söka 
 Kursen är en fristående vidarutveckling av kursen DV1486 "Databasdrivna webbapplikationer med PHP och MVC-ramverk", aka phpmvc.
 
 Se [kursplan för DV486](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486).
+
+
+
+Versioner av kursen {#versioner}
+-----------------------------------------------------
+
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
+
+För tillfällen från höstterminen 2018 så [finns kursmaterialet till ramverk1 (v2) här](kurser/ramverk1-v2). 
+
+För tillfället under höstterminen 2017, så [finns kursmaterialet till den kursen ramverk1 (v1)](kurser/ramverk1-v1).
+
+Tidigare utgåvor av närbesläktade kurser, innan hösten 2017, finns under [kursen phpmvc](kurser/phpmvc).

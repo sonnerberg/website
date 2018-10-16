@@ -84,7 +84,7 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 
 
-###Kmom01: Bygg en webbplats. {#kmom01}
+### Kmom01: Bygg en webbplats. {#kmom01}
 
 Kursmomentet visar hur du kommer igång med labbmiljön, dels via en installation på din egen dator och dels genom att publicera resultatet på driftsservern. Du kommer att utveckla din kod lokalt och därefter kopiera över resultatet till en driftsserver.
 
@@ -94,7 +94,7 @@ Du skall gå igenom ett par exempel på kodning i HTML, CSS och PHP och använda
 
 
 
-###Kmom02: Bygg ut din webbplats. {#kmom02}
+### Kmom02: Bygg ut din webbplats. {#kmom02}
 
 Vi fortsätter att bygga ut me-sidan med HTML, CSS och PHP. Detta moment är en vidare genomgång av grunder i HTML och CSS. Efter kursmomentet så har du en me-sida version 2 som innehåller några av de vanligaste konstruktionerna som återfinns i flertalet “riktiga” webbplatser.
 
@@ -106,7 +106,7 @@ Vi gör en första laboration i PHP för att få en känsla för hur det är att
 
 
 
-###Kmom03: Bygg multisida i PHP. {#kmom03}
+### Kmom03: Bygg multisida i PHP. {#kmom03}
 
 I kursmomentet gås igenom de inbyggda arrayerna i PHP. Vi tittar på `$_GET`, och `$_SERVER` samt hur de kan användas som arrayer. Med hjälp av dessa arrayer, och lite mer PHP-kunskaper, gör vi ett par små testprogram för att klura ut hur saker och ting fungerar.
 
@@ -118,7 +118,7 @@ Till slut knyter vi ihop det genom att integrera multisidan i din me-webbplats. 
 
 
 
-###Kmom04: Formulär och sessioner. {#kmom04}
+### Kmom04: Formulär och sessioner. {#kmom04}
 
 I detta kursmoment går vi igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
 
@@ -128,7 +128,7 @@ I PHP får du lära dig att skapa egna funktioner och se hur du jobbar med HTML 
 
 
 
-###Kmom05: SQL och SQLite. {#kmom05}
+### Kmom05: SQL och SQLite. {#kmom05}
 
 Låt oss börja med databaser. Jag har valt att introducera databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
 
@@ -138,7 +138,7 @@ Till databasen SQLite behövs klientprogram som kan användas för att prata med
 
 
 
-###Kmom06: PHP, PDO och SQL. {#kmom06}
+### Kmom06: PHP, PDO och SQL. {#kmom06}
 
 Vi fortsätter jobba med databasen SQLite och integrerar databasen med en PHP applikation. Vi använder PHP PDO för att koppla oss till databasen.
 
@@ -146,7 +146,7 @@ Vi fortsätter jobba med databasen SQLite och integrerar databasen med en PHP ap
 
 
 
-###Kmom07/10: Projekt och examination {#kmom10}
+### Kmom07/10: Projekt och examination {#kmom10}
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 

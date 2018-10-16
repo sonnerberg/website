@@ -188,6 +188,9 @@ Redirect /javascript1               /kurser/javascript1
 
 # design
 Redirect /design            /kurser/design
+Redirect /kurser/design/studieplan  https://docs.google.com/spreadsheets/d/1Oew0Q2YC4X3zRcrdGgLEHjpbmB3hZl9odjVUApidBZo/edit?usp=sharing
+Redirect /kurser/design/lektionsplan    https://docs.google.com/spreadsheets/d/1Y1kmgY4DgzBthJYbhwsmRS4VLmS7AJO6hFnf8pt1iro/edit?usp=sharing
+
 
 
 # linux
@@ -224,9 +227,12 @@ Redirect /kurser/oophp          /kurser/oophp-v4
 # ramverk1
 Redirect /ramverk1                  /kurser/ramverk1
 Redirect /forum/utbildning/ramverk1 /forum/viewforum.php?f=59
+Redirect /kurser/ramverk1/studieplan    https://docs.google.com/spreadsheets/d/1FdymclxYzehF-xzxqQP2Oth6tWcUIdOOqQCXFv2wlIw/edit?usp=sharing
+Redirect /kurser/ramverk1/lektionsplan    https://docs.google.com/spreadsheets/d/1RsrdcQv-Xa3s8B96z4Dp_gOtzV0QQU5NITRx0o7suvQ/edit?usp=sharing
 
 
-#ramverk2
+
+# ramverk2
 Redirect /ramverk2                  /kurser/ramverk2
 Redirect /forum/utbildning/ramverk2 /forum/viewforum.php?f=60
 
