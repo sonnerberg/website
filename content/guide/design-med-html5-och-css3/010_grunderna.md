@@ -2,7 +2,7 @@
 sectionHeader: true
 linkable: true
 ...
-Intro till guiden
+Grunderna
 =======================
 
 I denna guide använder vi HTML5 och CSS3 för att skapa en strukturerad design av användargränssnitt. Vi tittar på hur HTML5 och CSS3 samspelar för att skapa en helhet i vår design. Dessutom tittar vi på hur vi gör användarvänliga gränssnitt.
