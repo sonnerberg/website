@@ -10,6 +10,14 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -23,7 +31,7 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du har blivit kontaktad av ett företag som mäter intelligens, de vill ha din hjälp att skapa ett testverktyg för att räkna ut hur intelligent en person är. Det handlar om att en testperson skall utföra ett antal övningar och det sammanlagda resultatet från övningarna blir intelligensen hos testpersonen. 
+Du har blivit kontaktad av ett företag som mäter intelligens, de vill ha din hjälp att skapa ett testverktyg för att räkna ut hur intelligent en person är. Det handlar om att en testperson skall utföra ett antal övningar och det sammanlagda resultatet från övningarna blir intelligensen hos testpersonen.
 
 Du är tveksam till deras affärsidé, men du accepterar uppdraget som innebär att du skall bygga ett par mindre program som du sätter samman till ett större test-program. Det handlar om JavaScript (HTML, CSS), och det är ju din grej. Du tänker efter och det känns som du har en hel del kod som du kan återanvända.
 
@@ -118,7 +126,7 @@ Startvärdet för FizzBuzz-sekvensens skall slumpas fram så det inte är samma 
 
 Detta är ett litet minnes-test som kollar hur bra bildminne man har.
 
-Testpersonen kommer till testet och får en förklarande text. Därefter klickar man på en länk för att starta testet. 
+Testpersonen kommer till testet och får en förklarande text. Därefter klickar man på en länk för att starta testet.
 
 Testet börjar med att 9 flaggor visas under 5 sekunder. Därefter döljs de. Du visar nu upp en numrerad lista men namnen på de nio flaggorna. Testpersonen skall nu klicka på rätt ruta där motsvarande flagga ligger, i rätt ordning. När testpersonen gissar så skall flaggan vändas upp.
 
@@ -134,7 +142,7 @@ Efter avklarat test kan testpersonen klicka på en länk för att gå vidare til
 
 ###Deltest 4: Visuell förmåga och läsförståelse {#visu}
 
-Detta testet kombinerar läsförståelse med visuell förmåga. 
+Detta testet kombinerar läsförståelse med visuell förmåga.
 
 Testet börjar med en text som förklarar vad det går ut på. Sedan klickar testpersonen på en länk för att starta testet.
 
@@ -144,7 +152,7 @@ Testet innebär att du skall rita ut 10 unika objekt. Objekt kan vara en kvadrat
 2. Den vita trekanten.
 3. Den svarta cirkeln.
 
-Testpersonen måste klicka på rätt objekt i rätt ordning. Om hen klickar fel så fortsätter testet med nästa alternativ på listan. 
+Testpersonen måste klicka på rätt objekt i rätt ordning. Om hen klickar fel så fortsätter testet med nästa alternativ på listan.
 
 Rätt klick ger ett poäng och fel ger 0 poäng.
 
@@ -172,10 +180,10 @@ När testet är klart så visas resultatet tillsammans med en länk till nästa 
 
 ###Formel för att beräkna intelligensen {#formel}
 
-Den är så hemlig så att du inte får se den. Kunden har bett dig att göra en egen formel så länge, du väljer att göra så här. 
+Den är så hemlig så att du inte får se den. Kunden har bett dig att göra en egen formel så länge, du väljer att göra så här.
 
-* Varje fråga/övning ger poäng. 
-* Total max intelligens är x (du väljer själv) poäng. 
+* Varje fråga/övning ger poäng.
+* Total max intelligens är x (du väljer själv) poäng.
 
 Specen innehåller grova förslag till poängsättningen, men du kan justera den precis som du vill.
 
@@ -199,7 +207,7 @@ Redovisning {#redovisning}
 
 1.3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
+2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
 3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/javascript1) och berätta att du är klar.
 

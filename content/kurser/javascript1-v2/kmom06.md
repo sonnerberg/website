@@ -9,6 +9,14 @@ revision:
 Kmom06: Modul och closure
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+
+[/WARNING]
+
 När kodbasen växer blir det mer och mer viktigt att ha en bra struktur på den, annars blir det svårare och svårare att vidareutveckla och underhålla koden. När man dessutom skall använda olika moduler av kod från olika tillverkare så är det viktigt att de olika delarna av koden inte krockar. Genom att använda en konstruktion som kallas *module pattern* hittar vi ett sätt att bättre strukturera vår kod.
 
 <!--more-->

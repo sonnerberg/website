@@ -15,6 +15,14 @@ revision:
 Kmom04: Arrayer och objekt
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+
+[/WARNING]
+
 I JavaScript finns strukturer för arrayer och objekt tillsammans med en del inbyggda funktioner. För att skriva bra och effektiva program är det en förutsättning att man förstår hur dessa är uppbyggda och vilket stöd som erbjuds i form av inbyggda funktioner som hjälper oss att arbete mot arrayer och objekt.
 
 

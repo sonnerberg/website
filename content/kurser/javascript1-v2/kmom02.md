@@ -13,6 +13,14 @@ revision:
 Kmom02: Villkor och loopar
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+
+[/WARNING]
+
 Vi skall nu komma i gång med att koda JavaScript. Vi bekantar oss med grundkonstruktionerna i språket och använder strängar, siffror, variabler och loopar tillsammans med en del inbyggda funktioner för strängar, matematiska operationer och datum.
 
 Samtidigt gör vi ett par enklare program som övar oss i hur HTML, CSS och JavaScript kan samarbeta för att bygga upp en webbsida.

@@ -12,8 +12,17 @@ revision:
     "2014-08-19": (B, mos) Felaktig länk till uppgift för me-sidan.
     "2014-08-11": (A, mos) Första utgåvan för javascript1 kursen.
 ...
+
 Kmom01: Utvecklingsmiljö
 ==================================
+
+[WARNING]
+
+**Kursutveckling pågår**
+
+Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+
+[/WARNING]
 
 Låt oss komma i gång med en labbmiljö, och en miljö för kursen, tillsammans med en introduktion i HTML, CSS och JavaScript.
 

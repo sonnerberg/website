@@ -9,6 +9,14 @@ revision:
 Kmom05: DOM och events
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+
+[/WARNING]
+
 När vi använder JavaScript i webbläsaren handlar det mycket om att modifiera HTML-sidan och tillföra effekter. För att göra det manipulerar HTML-sidans DOM träd via JavaScript. Det handlar om att modifiera elementen på sidan och förändra deras style för att uppnå önskat beteende.
 
 <!--more-->
@@ -31,7 +39,7 @@ Det finns inga läsanvisningar till kurslitteraturen.
 <!--
 Läs följande:
 
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming) 
+1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
     * [Ch12 JavaScript and the Browser](http://eloquentjavascript.net/12_browser.html)
     * [Ch13 The Document Object Model](http://eloquentjavascript.net/13_dom.html)
     * [Ch14 Handling Events](http://eloquentjavascript.net/14_event.html)
