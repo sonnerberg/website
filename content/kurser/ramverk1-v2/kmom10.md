@@ -18,7 +18,7 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 [WARNING]
 
-** Kursutveckling pågår till kurs ramverk v2 **
+**Kursutveckling pågår till kurs ramverk v2**
 
 Kursstart hösten 2018.
 

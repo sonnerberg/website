@@ -10,7 +10,7 @@ Kmom05: Modul på Packagist
 
 [WARNING]
 
-** Kursutveckling pågår till kurs ramverk v2 **
+**Kursutveckling pågår till kurs ramverk v2**
 
 Kursstart hösten 2018.
 
