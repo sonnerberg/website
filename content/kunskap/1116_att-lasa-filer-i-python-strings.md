@@ -85,7 +85,7 @@ def readfile():
         print(readfile())
 ...
 ```
-Vi hårdkodar vad filen heter som en global variable i början. I funktionen `readfile()` använder vi "with" för att skapa ett block, vi lägger koden som använder filen inom det blocket. `open(filename) as filehandle` är i princip samma sak som att skriva `filehandle = open(filename)`, med andra ord kommer vi åt kopplingen till filen via variabeln `filehandler`. I blocket skriver vi koden för att jobba med filen och det är inte mycket som krävs för att läsa en fil. `filehandler.read()` läser filens innehåll och returnerar det som en sträng. När all kod som ligger inom blocket har exekverat stängs kopplingen automatiskt. Om vi inte hade använt "with" hade vi behövt lägg till en rad ovanför `return content` där vi stänger kopplingen. I if-satsen för de olika valen uppdaterar vi val 1 till att anropa `readfile()` och skriva ut vad den returnerar. 
+Vi hårdkodar vad filen heter som en global variable i början. I funktionen `readfile()` använder vi "with" för att skapa ett block, vi lägger koden som använder filen inom det blocket. `open(filename) as filehandle` är i princip samma sak som att skriva `filehandle = open(filename)`, med andra ord kommer vi åt kopplingen till filen via variabeln `filehandle`. I blocket skriver vi koden för att jobba med filen och det är inte mycket som krävs för att läsa en fil. `filehandle.read()` läser filens innehåll och returnerar det som en sträng. När all kod som ligger inom blocket har exekverat stängs kopplingen automatiskt. Om vi inte hade använt "with" hade vi behövt lägg till en rad ovanför `return content` där vi stänger kopplingen. I if-satsen för de olika valen uppdaterar vi val 1 till att anropa `readfile()` och skriva ut vad den returnerar. 
 
 Testa kör programmet, jag visar vilket val jag gör med `$x` i exemplet nedanför.
 
@@ -112,8 +112,8 @@ Att skriva till en fil fungerar ungefär som att läsa, vi behöver bara använd
 
 ```python
 def write_to_file(item):
-    with open(filename, "a") as filehandler:
-        filehandler.write(item)
+    with open(filename, "a") as filehandle:
+        filehandle.write(item)
     
 ...
     if inp == 2:
@@ -121,7 +121,7 @@ def write_to_file(item):
 ...
 ```
 
-Notera att vi i funktionen `write_to_file(item, mode)` skickar med `"a"` som andra argument till `open()` funktionen. Det värdet bestämmer att `write` funktionen ska lägga till värden på slutet av innehållet i filen. `write()` tar en sträng som argument och skriver det värdet till filen som `filehandler` är skapad med. I if-satsen för val 2 anropar vi `write_to_file()` och skickar med en sträng som användaren skriver in med "input" anropet. Vi testar köra programmet och ser hur filen innehåll ser ut om vi lägger till något.
+Notera att vi i funktionen `write_to_file(item, mode)` skickar med `"a"` som andra argument till `open()` funktionen. Det värdet bestämmer att `write` funktionen ska lägga till värden på slutet av innehållet i filen. `write()` tar en sträng som argument och skriver det värdet till filen som `filehandle` är skapad med. I if-satsen för val 2 anropar vi `write_to_file()` och skickar med en sträng som användaren skriver in med "input" anropet. Vi testar köra programmet och ser hur filen innehåll ser ut om vi lägger till något.
 
 ```bash
 python3 string-to-file.py
