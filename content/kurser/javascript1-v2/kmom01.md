@@ -68,21 +68,6 @@ Läs följande:
 1. Bekanta dig med kurslitteraturen [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att läsa igenom det första kapitlet [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode") som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript.
 
 
-<!--
-    * [Ch7 Syntax](http://speakingjs.com/es5/ch07.html)
-    * [Ch8 Values](http://speakingjs.com/es5/ch08.html)
-    * [Ch9 Operators](http://speakingjs.com/es5/ch09.html)
-    * [Ch10 Booleans](http://speakingjs.com/es5/ch10.html)
-    * [Ch11 Numbers](http://speakingjs.com/es5/ch11.html)
-    * [Ch12 Strings](http://speakingjs.com/es5/ch12.html)
--->
-
-<!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
-    * [Ch0 Introduction](http://eloquentjavascript.net/00_intro.html)
-    * [Ch1 Values, Types, and Operators](http://http://eloquentjavascript.net/01_values.html)
-    * [Ch12 JavaScript and the browser](http://eloquentjavascript.net/12_browser.html) -->
-
-
 
 ###MDN {#mdn}
 
@@ -154,11 +139,16 @@ Jobba igenom följande.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)". Spara resultatet i `me/kmom01/sandbox`.
+1. Gör laborationen "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)". Labben genereras i `me/kmom01/lab1`.
+
+1. Gör uppgiften "[Sandbox steg 1](uppgift/sandbox-steg-1)". Spara resultatet i `me/kmom01/sandbox`.
 
 1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
 
-1. Gör laborationen "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)". Labben genereras i `me/kmom01/lab1`.
+
+<!-- 1. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)". Har du gjort övningen är du nästan klar. Spara resultatet i `me/kmom01/sandbox`. -->
+
+
 
 
 
@@ -172,6 +162,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken utvecklingsmiljö använder du (berätta om något förändrats sen sist, om du svarat på frågan i tidigare kurser)?
-* Är du bekant med HTML, CSS och JavaScript sedan tidigare?
+* Är du bekant med HTML och CSS tillsammans med JavaScript sedan tidigare?
 * Gick det bra med JSFiddle/CodePen, några funderingar kring verktygen?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort, något som var svårt eller saknades?
+* Vilken är din TIL för detta kmom?
