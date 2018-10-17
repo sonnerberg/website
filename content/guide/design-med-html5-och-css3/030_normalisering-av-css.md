@@ -6,7 +6,7 @@ revision:
 Normalisering av CSS
 =======================
 
-Vi tittar på hur vi har möjlighet för att normalisera och nollställa webbläsarnas grund stilar. Vi utgår från grundstrukturen från [En grund i HTML](guide/design-med-html5-och-css3/en-grund-i-html) och tittar nu på hur det kan se ut i olika webbläsare.
+I denna del av guiden tittar vi på hur vi har möjlighet för att normalisera och nollställa webbläsarnas grund stilar. Vi utgår från grundstrukturen från [En grund i HTML](guide/design-med-html5-och-css3/en-grund-i-html) och tittar nu på hur det kan se ut i olika webbläsare.
 
 [FIGURE src=image/design-guide/grund-firefox-chrome.png caption="Grundstrukturen i webbläsaren Firefox och Chrome."]
 
@@ -27,6 +27,7 @@ Vi inkluderar `normalize.min.css` i vår HTML-grundstruktur så vi nollställer 
     <title>Design med HTML5 och CSS3</title>
 
     <link rel="stylesheet" href="normalize.min.css" />
+    <link rel="stylesheet" href="style.min.css" />
 </head>
 ```
 
