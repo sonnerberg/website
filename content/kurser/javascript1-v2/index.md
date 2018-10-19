@@ -2,9 +2,9 @@
 title: javascript1 (v2)
 author: mos
 revision:
-    "2018-10-17": (J, lew) Revidering inför HT18."
-    "2017-10-31": (I, mos) Referens till bok om ES6."
-    "2017-06-07": (H, mos) Uppdatering av kursplan med ny kurskod.
+    "2018-10-17": "(J, lew) Revidering inför HT18."
+    "2017-10-31": "(I, mos) Referens till bok om ES6."
+    "2017-06-07": "(H, mos) Uppdatering av kursplan med ny kurskod."
     "2016-11-01": (G, mos) Ladok moment och skrev om lektionsplan/studieplan.
     "2016-03-04": (F, mos) Notis om nytt namn och ny kurskod.
     "2015-03-02": (E, mos) Uppdatering av referenslitteratur till Staflins bok om HTML & CSS.
@@ -196,7 +196,7 @@ Det finns närliggande litteratur som är intressant för den som vill fördjupa
 Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Kursen har en [rekommenderad studieplan](program/webbprogrammering/studieplan/termin1) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
+Kursen har en [rekommenderad studieplan](kurser/javascript1/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
 I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
@@ -207,7 +207,7 @@ Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studiepla
 Lektionsplan {#lektionsplan}
 ---------------------------------------------
 
-Det finns en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod2) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+Det finns en [lektionsplan](kurser/javascript1/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
 
 Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
