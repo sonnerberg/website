@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-10-19": (D, efo) Uppdatering med design guide.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-10-19": (C, mos) Genomläst, labbmiljön justerad.
     "2016-10-26": (B, mos) Omstrukturerad efter feedback.
@@ -74,6 +77,14 @@ Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boke
 
 
 
+### Design med HTML5 och CSS3  {#guide}
+
+1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
+    * [Grunderna](guide/design-med-html5-och-css3/grunderna)
+
+I guiden tittar vi på hur vi kan använda CSS tillsammans med HTML för att implementera designprinciper. I sektionen [Grunderna](guide/design-med-html5-och-css3/grunderna) tittar vi på grundläggande struktur för HTML och på vilka sätt vi kan applicera styling med CSS.
+
+
 <!--
 ### Tekniker för att skriva för webben {#skriva}
 
@@ -99,7 +110,7 @@ Läs följande för att lära dig grunderna i textformatet Markdown. Markdown ä
 
 ### Git & GitHub {#git}
 
-I kursen introduceras Git och GitHub. Git är ett versionshanteringssystem för kod och GitHub är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster. 
+I kursen introduceras Git och GitHub. Git är ett versionshanteringssystem för kod och GitHub är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster.
 
 1. Bekanta dig kort med [dokumentation på Gits hemsida](https://git-scm.com/doc). Där finner du referensinformation, en onlinebok om Git och ett antal korta videor som ger dig grunderna till vad Git och versionshantering handlar om.
 

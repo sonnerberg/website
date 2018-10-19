@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-10-19": (F, efo) Uppdatering med design guide.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-11-03": (E, mos) Genomgång inför ht17.
     "2016-12-02": (D, mos) Lade till videoserie om vgrid.
@@ -54,6 +57,15 @@ Läs följande:
 
     * Kap 1: Layout and Composition (repetera)
     * Kap 4: Typography
+
+
+
+### Design med HTML5 och CSS3  {#guide}
+
+1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
+    * [Grid och typografi](guide/design-med-html5-och-css3/grid-och-typografi)
+
+I sektionen [Grid och typografi](guide/design-med-html5-och-css3/grid-och-typografi) tittar vi främst på hur typografi kan skapa lättläst och anpassat typografi på en webbplats. Sektionen avslutas med ett kort exempel på CSS Grid Layout en modern teknik för att skapa grid layouter.
 
 
 

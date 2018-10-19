@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-10-19": (D, efo) Uppdatering med design guide.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-12-01": (C, mos) Genomgång inför ht17, endast mindre justeringar i text.
     "2016-12-02": (B, mos) Mer material inkl videoserie.
@@ -51,6 +54,15 @@ Läs följande:
 
     * Kap 3 Texture
     * Kap 1 Layout and Composition (repetera kapitlet, främst delarna med Balance, Unity, Emphasis)
+
+
+
+### Design med HTML5 och CSS3  {#guide}
+
+1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
+    * [Design](guide/design-med-html5-och-css3/design)
+
+I sektionen [Design](guide/design-med-html5-och-css3/design) tittar vi tillbaka på tidigare sektioner och använder vår kunskap för att skapa en helhet med ett stort fokus på detaljen.
 
 
 

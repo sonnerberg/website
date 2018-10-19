@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-10-19": (D, efo) Uppdatering med design guide.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-11-27": (C, mos) Genomgången inför ht17.
     "2016-11-28": (B, mos) La till manualen om CImage som läsresurs.
@@ -69,6 +72,15 @@ Läs följande:
 
 
 
+### Design med HTML5 och CSS3  {#guide}
+
+1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
+    * [Bilder](guide/design-med-html5-och-css3/bilder)
+
+I sektionen [Bilder](guide/design-med-html5-och-css3/bilder) använder vi olika tekniker för att skapa responsiva bilder och bilder som fungerar bra på högupplösta skärmar.
+
+
+
 ### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
@@ -113,7 +125,7 @@ Kika igenom följande tips.
 
 1. Snapshot-verktyg vill du integrera i din verktygslåda, du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation. Det är smidigt om det är kopplat ett ritverktyg till ditt snapshot-verktyg, då kan du snabbt och enkelt förtydliga din snapshot. Ett tips är att aldrig skala om bilder som bygger på snapshots, du får bäst kvalitet om du tar en snapshot i den storleken den skall vara och visas. På Linux använder jag ett verktyg som heter Shutter.
 
-1. Verktyg som hjälper dig att analysera bild-filer och göra enkla och mer svåra konverteringar av bildfilerna, eller batcher av bild-filer, är [ImageMagick](imagemagick.org/) med kommandoradsverktygen convert/identify. Dessa går att installera på både Windows, Mac OS och Linux. 
+1. Verktyg som hjälper dig att analysera bild-filer och göra enkla och mer svåra konverteringar av bildfilerna, eller batcher av bild-filer, är [ImageMagick](imagemagick.org/) med kommandoradsverktygen convert/identify. Dessa går att installera på både Windows, Mac OS och Linux.
 
 
 

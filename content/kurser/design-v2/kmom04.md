@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-10-19": (D, efo) Uppdatering med design guide.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-11-17": (C, mos) Genomläst ingör ht17, förtydliganden.
     "2016-10-26": (B, mos) Bytte plats från kmom03 till kmom04.
@@ -52,6 +55,15 @@ Läs följande:
 
     * Kap 2: Color
     * Kap 4: Typography (repetera)
+
+
+
+### Design med HTML5 och CSS3  {#guide}
+
+1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
+    * [Färg](guide/design-med-html5-och-css3/farg)
+
+I sektionen [Färg](guide/design-med-html5-och-css3/farg) tittar vi på hur vi kan använda färg för att skapa en specifik känsla på en webbplats. Vi börjar med en kort introduktion till färgteori för att gå vidare till hur vi kan välja vilka färgar som fungerar tillsammans.
 
 
 

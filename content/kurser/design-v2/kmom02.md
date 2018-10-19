@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+  - mos
+  - efo
 revision:
+    "2018-10-19": (E, efo) Uppdatering med design guide.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-10-27": (D, mos) Genomgången inför ht17.
     "2016-10-26": (C, mos) Flyttad från kmom01 till 02 efter feedback.
@@ -19,7 +22,7 @@ Kursstart hösten 2018.
 [/WARNING]
 
 
-Vi har nu en bas av en webbplats och vi vet hur vi lägger till innehåll i webbplatsen. Låt oss då skapa ett eget tema till webbplatsen. 
+Vi har nu en bas av en webbplats och vi vet hur vi lägger till innehåll i webbplatsen. Låt oss då skapa ett eget tema till webbplatsen.
 
 Temat, eller stylen, skapar vi med LESS, en preprocessor till CSS. Vi försöker bygga en modulär struktur av LESS-filer som är indelade i LESS-moduler som blir enkla att återanvända i andra sammanhang.
 
@@ -30,7 +33,7 @@ Vi behöver också fortsätta att bekanta oss generellt med begreppen webbdesign
 
 Vi börjar försiktigt för att se hur LESS fungerar tillsammans med Anax Flat och hur vi kan jobba med ett tema via moduler i LESS.
 
-I nästa kmom bygger vi vidare på temat med grid-baserad layout. Så det kommer mera och det gör inget om du tar det lite lugnt med stylen i detta kmom. 
+I nästa kmom bygger vi vidare på temat med grid-baserad layout. Så det kommer mera och det gör inget om du tar det lite lugnt med stylen i detta kmom.
 -->
 
 
@@ -76,6 +79,13 @@ Läs följande:
     * Kap 1: Layout and Composition
 
 
+
+### Design med HTML5 och CSS3  {#guide}
+
+1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
+    * [Responsivitet](guide/design-med-html5-och-css3/responsivitet)
+
+I sektionen [Responsivitet](guide/design-med-html5-och-css3/responsivitet) tittar vi på hur vi med hjälp av media queries kan anpassa en webbplats för både stora och små enheter.
 <!--
 ### Tekniker för att skriva för webben {#skriva}
 
@@ -136,7 +146,7 @@ Visa hur man gör i LESS i me/redovisa?
 
 1. Bläddra snabbt igenom artikeln "[Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514)" som definierar ett antal design mönster inom responsiv design.
 
-1. Kika snabbt på materialet då Google Developers visar hur man kommer igång med [grunderna i responsiv layout](https://developers.google.com/web/fundamentals/design-and-ui/responsive/). 
+1. Kika snabbt på materialet då Google Developers visar hur man kommer igång med [grunderna i responsiv layout](https://developers.google.com/web/fundamentals/design-and-ui/responsive/).
 -->
 
 
