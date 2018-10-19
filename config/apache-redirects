@@ -137,7 +137,6 @@ Redirect /kurser/oophp/lektionsplan https://docs.google.com/spreadsheets/d/1IrY2
 # phpmvc
 Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGxWWmZwUE9oNGdiRDlFUDdaNzFPN1E
 Redirect /phpmvc/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGZOcW9CVkhZTXNEdzJobGM3dUpmVGc
-Redirect /javascript1/studieplan    https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFpSbGwxZXpfUThvSXZaVDRhZng5WkE&usp=sharing
 
 # webgl
 Redirect /webgl/lektionsplan    https://goo.gl/3F4Kju
@@ -184,6 +183,8 @@ Redirect /htmlphp               /kurser/htmlphp
 # javascript1
 Redirect /kurser/javascript1/repo   /repo/javascript1
 Redirect /javascript1               /kurser/javascript1
+Redirect /kurser/javascript1/studieplan    https://docs.google.com/spreadsheets/d/1C4Bwa2onfrR_5Y5Rbs1GOMZf1KeA5ZlNrnRvCkiYSI0/edit?usp=sharing
+Redirect /kurser/javascript1/lektionsplan    https://docs.google.com/spreadsheets/d/1rVN3OmNtFw_IcDXbpZMB6skYsZmHWrGK3zWXjQNfoak/edit?usp=sharing
 
 
 # design
