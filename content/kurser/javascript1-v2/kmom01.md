@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-10-22": "(K, lew) Uppdatering inför ht18."
     "2017-12-27": "(J, mos) Enhetlig mall för me-sida."
     "2017-10-09": "(I, mos) Genomgång inför ht17, ny struktur labbmiljö, redovisa, uppgradering dbwebb-cli v2."
     "2017-09-27": (H, lew) Ny kurslitteratur.
