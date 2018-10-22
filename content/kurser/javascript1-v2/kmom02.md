@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-10-17": (I, lew) Genomgång inför ht18.
     "2017-10-10": (H, mos) Genomgång inför ht17.
     "2017-09-27": (G, lew) Ny kurslitteratur.
     "2016-03-15": (F, lew) korrigerade labben.
@@ -21,7 +22,7 @@ Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
 
 [/WARNING]
 
-Vi skall nu komma i gång med att koda JavaScript. Vi bekantar oss med grundkonstruktionerna i språket och använder strängar, siffror, variabler och loopar tillsammans med en del inbyggda funktioner för strängar, matematiska operationer och datum.
+Vi skall nu koda mer JavaScript. Vi bekantar oss med fler konstruktioner i språket och använder variabler och loopar tillsammans med en del inbyggda funktioner.
 
 Samtidigt gör vi ett par enklare program som övar oss i hur HTML, CSS och JavaScript kan samarbeta för att bygga upp en webbsida.
 
@@ -121,9 +122,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör laborationen "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)". Spara arbetet i `me/kmom02/lab2`.
 
-2. Gör uppgiften "[Rita flaggor med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css)". Spara resultatet i `me/kmom02/flag1`.
+1. Gör uppgiften "[Rita flaggor med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css)". Spara resultatet i `me/kmom02/flag1`.
 
-3. Gör uppgiften ["Flytta runt Baddie på webbsidan"](uppgift/flytta-runt-en-baddie-pa-webbsidan). Spara resultatet i `me/kmom02/baddie1`.
+1. Gör uppgiften "[Sandbox steg 2](uppgift/sandbox-steg-2)". Spara resultatet i `me/kmom02/sandbox2`.
+
+<!-- 3. Gör uppgiften ["Flytta runt Baddie på webbsidan"](uppgift/flytta-runt-en-baddie-pa-webbsidan). Spara resultatet i `me/kmom02/baddie1`. -->
 
 
 
