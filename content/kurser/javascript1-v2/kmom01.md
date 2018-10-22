@@ -133,6 +133,11 @@ Jobba igenom följande.
 
 1. Jobba igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)" som visar dig hur du gör ditt första program i JavaScript och ger dig en grundstruktur för kursens övningar.
 
+1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 1 gäller delarna:
+    * [Inledning](guide/javascript1/section_break_1)
+    * [Språkkonstruktioner](guide/javascript1/section_break_2)
+    * [Inbyggda typer - steg 1](guide/javascript1/section_break_3)
+
 
 
 ###Uppgifter {#uppgifter}
