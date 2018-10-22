@@ -104,12 +104,11 @@ Det finns inga lästips.
 *(ca: 12-16 studietimmar)*
 
 
-<!--
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
-Det finns inga övningar.
--->
-
+1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 2 gäller delarna:
+    * [Hantera DOM](guide/javascript1/section_break_4)
+    * [Eventlyssnare](guide/javascript1/section_break_5)
 <!--
 1. Läs igenom artiklen "[Programmering med grunderna i JavaScript](kunskap/programmering-med-grunderna-i-javascript)". Om du gör exempelprogrammen så kan du spara dem i kursrepot under me/kmom02/core.
 -->
@@ -142,3 +141,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du programmerat i JavaScript tidigare, eller kan du relatera till andra språk du har programmerat i?
 * Vad tycker du är det svåraste, mest utmanande i utveckling med HTML, CSS och JavaScript - så här långt?
 * Hur gick det att utföra respektive uppgift, vilken tog mest tid och vilken var mest lärorik?
+* Vilken är din TIL för det här kursmomentet?

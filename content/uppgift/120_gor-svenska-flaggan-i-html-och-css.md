@@ -1,6 +1,6 @@
 ---
 author: mos
-category: 
+category:
     - webbprogrammering
     - kursen javascript1
 revision:
@@ -24,9 +24,9 @@ Förkunskaper {#forkunskaper}
 
 Denna uppgift ingår i kursen [javascript1](kurser/javascript1).
 
-Du kan grunderna i [HTML](coachen/gor-din-forsta-sida-med-html5) och [CSS](coachen/styla-din-sida-med-css-och-en-extern-stylesheet). 
+Du kan grunderna i [HTML](coachen/gor-din-forsta-sida-med-html5) och [CSS](coachen/styla-din-sida-med-css-och-en-extern-stylesheet).
 
-Du har även skapat din egen [sandbox för exempelprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram) .
+Du har även skapat din egen [sandbox för exempelprogram](uppgift/sandbox-steg-1) .
 
 
 
@@ -35,7 +35,7 @@ Introduktion {#intro}
 
 För att lyckas med uppgiften behöver du ha koll på vad en `div` är och hur du kan styla den med CSS. Du behöver använda måttenheten pixels och en kombination av absolut och relativ positionering och kanske en dos av z-index.
 
-Använd Wikipedia, eller motsvarande, för att hitta information om hur flaggorna skall komponeras, så att du får rätt mått och färger. Här är en lista över [världens alla flaggor](http://sv.wikipedia.org/wiki/Lista_%C3%B6ver_flaggor). 
+Använd Wikipedia, eller motsvarande, för att hitta information om hur flaggorna skall komponeras, så att du får rätt mått och färger. Här är en lista över [världens alla flaggor](http://sv.wikipedia.org/wiki/Lista_%C3%B6ver_flaggor).
 
 Leta reda på en "colorpicker", det finns som addon till Firefox. Med en "colorpicker" kan du ta reda på vilken färgkod en färg har på en webbsida.
 
