@@ -33,7 +33,7 @@ cd me
 cp -ri example/sandbox/* me/kmom01/sandbox
 ```
 
-1. Använd JavaScript för att presentera dagens datum och den nuvarande tiden med hjälp av `Date()`.
+1. Använd JavaScript för att presentera dagens datum och den nuvarande tiden med hjälp av `Date()`. Det spelar ingen roll hur det är formaterat, utan det viktiga är att du får ut informationen på html-sidan.
 
 1. Modifiera filerna så att de fungerar för dig som din egen personliga miljö för alla dina kommande exempelprogram i kursen.
 

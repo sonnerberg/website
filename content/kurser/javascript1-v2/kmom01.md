@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-10-22": "(K, lew) Uppdatering inför ht18."
     "2017-12-27": "(J, mos) Enhetlig mall för me-sida."
     "2017-10-09": "(I, mos) Genomgång inför ht17, ny struktur labbmiljö, redovisa, uppgradering dbwebb-cli v2."
     "2017-09-27": (H, lew) Ny kurslitteratur.
@@ -132,6 +133,11 @@ Jobba igenom följande.
 1. Du behöver ha grundläggande koll på HTML och CSS. Som en uppfräschning av dina kunskaper, eller som en kort intro, så jobbar du igenom materialet i tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)". Jobba igenom materialet grundligt eller översiktligt, beroende på ditt eget behov.
 
 1. Jobba igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)" som visar dig hur du gör ditt första program i JavaScript och ger dig en grundstruktur för kursens övningar.
+
+1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 1 gäller delarna:
+    * [Inledning](guide/javascript1/section_break_1)
+    * [Språkkonstruktioner](guide/javascript1/section_break_2)
+    * [Inbyggda typer - steg 1](guide/javascript1/section_break_3)
 
 
 
