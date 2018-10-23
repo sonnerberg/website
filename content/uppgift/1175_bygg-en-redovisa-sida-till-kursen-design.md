@@ -78,6 +78,14 @@ Du behöver ändra sökvägarna i `htdocs/.htaccess`, annars får du 404 på lä
 
 Publicera till studentservern för att se att allt fungerar.
 
+Första gången kan du publicera hela me-katalogen.
+
+```text
+dbwebb publishpure me
+```
+
+Sedan räcker det att enbart publicera redovisa-katalogen.
+
 ```text
 dbwebb publishpure redovisa
 ```

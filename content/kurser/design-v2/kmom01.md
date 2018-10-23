@@ -9,7 +9,7 @@ revision:
     "2016-10-26": (B, mos) Omstrukturerad efter feedback.
     "2016-10-07": (A, mos) Första release.
 ...
-Kmom01: Ramverk och innehåll
+Kmom01: Ramverk, innehåll, style
 ====================================
 
 [WARNING]
@@ -20,6 +20,7 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
+[FIGURE src=image/snapht18/design-kmom01-me.png?w=c8 class="right"]
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material. Även om vi tittar på de mjuka aspekterna så är tanken att vi lära oss "hårda" tekniker för att jobba med de mjuka. Låt se vad det kan innebära i praktiken.
 
@@ -27,17 +28,19 @@ Vi ställer oss frågan hur vi bygger våra webbplatser för att underlätta fö
 
 <!--more-->
 
+[FIGURE src=image/snapht18/design-kmom01-om.png?w=w3 caption="En omsida med en högerkolumn med två block."]
+
 Denna kurs är främst en möjlighet att dyka in i CSS-kodande och att via  CSS-preprocessorer använda möjligheten att strukturera och optimera vår CSS-kod. Det är också en möjlighet att få insyn i vad som är grundstenarna för "god design". Genom kursen försöker vi finna tekniska sätt, för en programmerare, att jobba och implementera "god design" i en webbplats. Vi studerar också vissa aspekter av begreppet användbarhet som påverkar användarens upplevelse av webbplatsen.
 
 För att komma igång snabbt så använder vi en befintlig webbplats som grund till vår me- och redovisa-sida. Webbplatsen bygger på ett PHP-ramverk som heter Anax. Den variant vi använder är en flat-file version där allt innehåll i webbplatsen skrivs i Markdown-filer.
 
+[FIGURE src=image/snapht18/design-kmom01-redovisa.png?w=w3 caption="Du skriver dina redovisningstexter i Markdown i en färdig struktur."]
+
 Öppna ditt sinne och låt oss börja. I detta första kmom inleder vi med att installera en labbmiljö, läsa lite litteratur samt att skapa redovisa-sidan och ge den style via CSS. Vi väljer att göra redovisa-sidan i ett Git-repo och lägga upp den på GitHub.
 
-[FIGURE src=/image/snapht17/anax-flat-start.png?w=w3 caption="En me-sida med PHP-ramverket Anax Flat."]
+[FIGURE src=image/snapht18/design-kmom01-no-style.png?w=w3 caption="Din uppgift är att lägga till style kmom01.css till sidan så den blir användbar, det blir din första stylesheet i denna kursen."]
 
 Under kursens gång så kommer du att introduceras till ett par tekniker som är bra att ha för en webbprogrammerare. En av de är versionshantering med Git och GitHub.
-
-[FIGURE src=/image/snapvt16/anax-flat-me-github.png?w=w3 caption="Ditt material skall paketeras som ett git-repo och publiceras på GitHub."]
 
 
 
@@ -257,6 +260,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser?
 * Det blev en del nya verktyg och tekniker i labbmiljön och för att jobba med redovisa sidan, är du bekant med några av dem sedan tidigare?
 * Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarhet för webben?
+* Hur kändes det att styla webbplatsen med CSS? Gick det bra?
 * Vilken är din TIL för detta kmom?
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.

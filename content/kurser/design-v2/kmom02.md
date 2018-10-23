@@ -22,11 +22,25 @@ Kursstart hösten 2018.
 [/WARNING]
 
 
-Vi har nu en bas av en webbplats och vi vet hur vi lägger till innehåll i webbplatsen. Låt oss då skapa ett eget tema till webbplatsen.
+[FIGURE src=image/snapht18/design-kmom02-responsive.png?w=c7  class="right" caption="Hur responsiv kan vår webbplats bli?"]
 
-Temat, eller stylen, skapar vi med LESS, en preprocessor till CSS. Vi försöker bygga en modulär struktur av LESS-filer som är indelade i LESS-moduler som blir enkla att återanvända i andra sammanhang.
+Vi har nu en bas av en webbplats. Vi vet hur vi lägger till innehåll i webbplatsen och vi kan styla den. Låt oss då gå vidare och skapa en bas för ett (flera) teman till webbplatsen.
 
-Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser behöver fungera lika bra på desktop liksom på läsplatta och mobil.
+Temat, eller stylen, skapar vi med LESS, en preprocessor till CSS. Vi lär oss grunderna i LESS och hur vi bygger CSS-filer från LESS-konstruktioner.
+
+Vi försöker bygga en modulär struktur av LESS-filer som vi delar in i LESS-moduler. Det skapar en grund av style-kod som blir enkla att återanvända i andra sammanhang, eller längre fram när vi gör fler teman och anpassar våra teman.
+
+<!--more-->
+
+Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser behöver fungera lika bra på desktop liksom på läsplatta och mobil så låt oss träna på vad det kan innebära.
+
+Vi testar att överföra vårt tema från kmom01 till LESS. Därefter startar vi på nytt med ett tomt tema och börjar bygga upp stylen igen med LESS och samtidigt fördelar vi koden i LESS moduler.
+
+[FIGURE src=image/snapht18/design-kmom02.png?w=w3 caption="Ett tomt tema, någonstans skall vi börja att bygga vårt tema."]
+
+Vi vet sedan kmom01 att sidan består av flera regioner som vi kan styla. HUr dessa regioner ser ut kan nu vara intressant med tanke på att de skall bli responsiva.
+
+[FIGURE src=image/snapht18/design-kmom02-regioner.png?w=w3 caption="Vår layout har många regioner som kan behöva styling."]
 
 <!--
 Vi behöver också fortsätta att bekanta oss generellt med begreppen webbdesign och användbarhet på webben. Det viktigt med förståelse för vissa grundkoncept inom området.
@@ -38,11 +52,8 @@ I nästa kmom bygger vi vidare på temat med grid-baserad layout. Så det kommer
 
 
 
-<!--more-->
 
-[FIGURE src=/image/kurs/design/anax-flat-no-theme.png?w=w3 caption="Ett tomt tema, någonstans skall vi börja."]
 
-[FIGURE src=/image/kurs/design/anax-flat-regions.png?w=w3 caption="Vi jobbar med regioner som vi göra responsiva."]
 
 
 
@@ -86,6 +97,7 @@ Läs följande:
     * [Responsivitet](guide/design-med-html5-och-css3/responsivitet)
 
 I sektionen [Responsivitet](guide/design-med-html5-och-css3/responsivitet) tittar vi på hur vi med hjälp av media queries kan anpassa en webbplats för både stora och små enheter.
+
 <!--
 ### Tekniker för att skriva för webben {#skriva}
 
@@ -118,6 +130,8 @@ Kom igång med LESS genom att läsa runt och eventuellt skriva något enklare te
 
 1. Det finns en videoserie "[Lär dig LESS](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-kTE6oaXLUNqII3cgTheEi)" som visar hur du kommer igång och jobbar med LESS. Spellistan visar grundkonstruktioner i LESS. Kika på de första 2-3 videorna för att få ett hum om hur LESS fungerar. Kika på fler videor som överkurs.
 
+1. Du kan testa och leka med LESS-konstruktioner på "[Less-To-CSS Playground](http://lesscss.org/less-preview/)". Se det som en del av din utvecklings och testmiljö, för att lära dig hur LESS blir till CSS.
+
 
 
 ### LESS moduler {#lessmodul}
@@ -130,9 +144,15 @@ Följande moduler kommer du att använda när du bygger ditt tema i den kommande
 
 
 
+<!--
 ### LESS organisation {#lessorg}
 
 Finns läsanvisning som förklarar skillnade med base och layout-styles.
+
+NE, det känns lite överkurs, låt oss nörja smått.
+
+-->
+
 
 <!--
 ### Responsiv webbdesign {#responsiv}
@@ -196,7 +216,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Lös uppgiften "[Bygg ett LESS-tema till kursen design](uppgift/bygg-ett-less-tema-till-kursen-design)".
 
-1. Försäkra dig om att du har gjort `dbwebb publish` och taggat din inlämning med version 2.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 2.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
 
@@ -212,5 +232,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad tycker du om LESS och det sättet vi jobbar med LESS-moduler?
 * Är du bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad anser du om det?
 * Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
-* Kommentera ditt tema, hur kan man beskriva dess design och hade du några planer på design när du byggde ditt tema?
+* Kommentera ditt tema, hur kan man beskriva dess design och hade du några planer på "design" när du byggde ditt tema?
 * Vilken är din TIL för detta kmom?
