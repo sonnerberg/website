@@ -53,7 +53,7 @@ Det finns en förberedd installation som är specifik för kursen design och des
 # Stå i rooten av kursrepot
 rsync -av example/redovisa me
 cd me/redovisa
-composer install --no-dev
+composer install
 ```
 
 När du är klar så kan du se vilka moduler som installerades av composer. Det är ren kuriosa och det är en lista av de PHP-moduler som används för att hantera din webbplats.
@@ -79,10 +79,10 @@ Du behöver ändra sökvägarna i `htdocs/.htaccess`, annars får du 404 på lä
 Publicera till studentservern för att se att allt fungerar.
 
 ```text
-dbwebb publish redovisa
+dbwebb publishpure redovisa
 ```
 
-Glöm inte att det finns `dbwebb publishfast` och `dbwebb publishpure` som låter dig publicera snabbt och utan minifiering (nödvändigt vid felsökning så att radnummer blir rätt vid felmeddelanden). 
+I denna kursen är det enklast att publicera med `publishpure` eftersom vi inte bryr oss om valideringen eller minifieringen.
 
 
 
@@ -194,15 +194,38 @@ Bekanta dig med strukturen för din redovisa-katalog och se vad som där finns.
 Du kan ta hjälp av videoserien för att till exempel kolla in följande.
 
 * Modifiera en befintlig sida.
-* Modifiera innehållet i ett block (footer, flash).
+* Modifiera innehållet i ett block (footer, aside).
 * Redigera flash-bild för en specifik sida (flash).
+* Lägg till ett nytt block till ett befintligt sida och styla den (byline).
 * Var skriver jag redovisningstexten?
-* Lägg till en ny sida.
+* Lägg till en ny sida och infoga i navbaren.
 * Byt stil med styleväljaren.
 * Lägg till en egen stylesheet.
-* Aktivera en stylesheet som default style.
-* Lägg till ett nytt block till ett befintligt sida och styla den (byline).
-* Hur man taggar och pushar en tagg till GitHub.
+* Aktivera en stylesheet som default style i `config/page.php`.
+* Hur man taggar sitt Git repo och pushar en tagg till GitHub.
+
+
+
+### Git tag {#gittag}
+
+När du är klar med alla uppdateringar så kan du committa alla ändringar i ditt git repo. Du kan också lägga till en tagg för att markera nuvarande status i git repot som väl fungerande.
+
+En samling taggar ger en historik av koden och gör det enklare att gå tillbaka till ett visst läge i koden.
+
+Se till att du lagt till alla filer och committat alla ändringar innan du taggar.
+
+Du taggar med kommandot `git tag`.
+
+```text
+git tag -a v1.0.0 -m "Ett meddelande för denna taggen"
+```
+
+När du är klar kan du ladda upp git repot och dess taggar till GitHub.
+
+```text
+git push
+git push --tags
+```
 
 
 
@@ -215,15 +238,17 @@ Krav {#krav}
 
 1. På about-sidan lägger du in valfri text om kursen tillsammans med en godtycklig bild som du anser kompletterar sidans innehåll.
 
+1. På din about-sida skall du lägga en länk till kursens GitHub-repo.
+
 1. På din about-sida skall du lägga en länk till GitHub-repot för din me-sida.
 
-1. Byt ut den bilden som nu finns med som *flash-bild* på alla sidorna. Lägg dit en egen bild som du tycker passar. Du kan ha olika bilder på olika sidor, om du vill.
+1. Byt ut den bilden som nu finns med som *flash-bild* på alla sidorna. Lägg dit en egen bild som du tycker passar. Du kan ha olika bilder på olika sidor, om du vill och alla sidor behöver inte ha en flash-bild.
 
 1. Fyll i *ett utkast* till din redovisningstext för detta kursmomentet på rätt plats i sidan för redovisningar. Skriv färdigt redovisningstexten när du är helt klar.
 
-1. Skapa en testsida för att leka runt med olika konstruktioner av Markdown så du kan testa och se hur Markdown samverkar med HTML när du skriver innehåll. Lägg sidan i din navbar så den är enkel att nå.
+1. Skapa en testsida `content/test.md` för att leka runt med olika konstruktioner av Markdown så du kan testa och se hur Markdown samverkar med HTML när du skriver innehåll. Lägg sidan i din navbar så den är enkel att nå.
 
-1. Lägg till en stylesheet `htdocs/css/kmom01.css` med begränsat/minimalt med style och CSS. Du får utrymme att jobba vidare med stylen i nästa kmom.
+1. Lägg till style i filen `htdocs/css/kmom01.css` så att din webbplats blir användbar. Det räcker om du lägger till begränsat med style. Du får jobba vidare med stylen i nästa kmom.
 
 1. Aktivera din `kmom01.css` som default stylesheet i styleväljaren.
 
