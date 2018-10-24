@@ -62,6 +62,7 @@ Läs & Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+
 ### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
@@ -81,22 +82,28 @@ I sektionen [Bilder](guide/design-med-html5-och-css3/bilder) använder vi olika 
 
 
 
+<!--
 ### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
     * 6. Skriva texter för webben
 
+-->
 
 
-### Webbdesign och användbarhet {#webbdesign}
 
-1. Läs översiktligt igenom artikeln "[Moz om Page Speed](https://moz.com/learn/seo/page-speed)". Den förbereder dig för en av uppgifterna.
+### Webbplatsers laddningstid {#artikel}
+
+Studera följande för att förbereda dig för uppgiften där du skall analysera webbplatsers laddningstid.
+
+1. Läs översiktligt igenom artikeln "[Moz om Page Speed](https://moz.com/learn/seo/page-speed)".
 
 1. Kika snabbt på Googles "[PageSpeed Insights Rules](https://developers.google.com/speed/docs/insights/rules)" för att snabba upp sidor.
 
 
 
+<!--
 ### Video  {#video}
 
 Kika på följande video.
@@ -106,6 +113,7 @@ Kika på följande video.
     * [Guider om Foto](https://www.youtube.com/playlist?list=PL7jFK1saS1_Aexc_tx2wWClpQOShZkD2_)
     * [Inspiration för fotografer](https://www.youtube.com/playlist?list=PL7jFK1saS1_DGvKLYHOBb9HlCd_6id-vS)
     * [Bilder och upphovsrätt för designers](https://www.youtube.com/playlist?list=PL7jFK1saS1_DYHuwI_r5U7vVeY6RhZlIM)
+-->
 
 <!--
 Titta på följande:
@@ -115,17 +123,17 @@ Titta på följande:
 
 
 
-### Lästips {#lastips}
+### Lästips verktyg {#lastips}
 
-Kika igenom följande tips.
+Följande tips på verktyg är bra att ha för en webbprogrammerare. Verktygen handlar alla om att hantera bilder i olika form.
 
-1. [GIMP](https://www.gimp.org/) är en fri variant till bildbehandlingsprogram. Det kan vara ett bra verktyg att ha installerat, även om man är webbprogrammerare.
+1. [GIMP](https://www.gimp.org/) är en fri variant till bildbehandlingsprogram.
 
-1. [Inkscape](https://inkscape.org/en/) är ett fritt program för att rita och hantera bilder i vektorgrafik såsom SVG. Ett typiskt bra verktyg att ha i sin verktygslåda som webbprogrammerare.
+1. [Inkscape](https://inkscape.org/en/) är ett fritt program för att rita och hantera bilder i vektorgrafik såsom SVG.
 
-1. Snapshot-verktyg vill du integrera i din verktygslåda, du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation. Det är smidigt om det är kopplat ett ritverktyg till ditt snapshot-verktyg, då kan du snabbt och enkelt förtydliga din snapshot. Ett tips är att aldrig skala om bilder som bygger på snapshots, du får bäst kvalitet om du tar en snapshot i den storleken den skall vara och visas. På Linux använder jag ett verktyg som heter Shutter.
+1. Snapshot-verktyg vill du integrera i din verktygslåda, du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation. Det är smidigt om det är kopplat ett ritverktyg till ditt snapshot-verktyg, då kan du snabbt och enkelt förtydliga din snapshot. På Linux använder jag ett verktyg som heter [Shutter](http://shutter-project.org/).
 
-1. Verktyg som hjälper dig att analysera bild-filer och göra enkla och mer svåra konverteringar av bildfilerna, eller batcher av bild-filer, är [ImageMagick](imagemagick.org/) med kommandoradsverktygen convert/identify. Dessa går att installera på både Windows, Mac OS och Linux.
+1. [ImageMagick](imagemagick.org/) är ett verktyg som hjälper dig att analysera och konvertera bildfiler på kommandoraden. Verktygen går att installera på både Windows, Mac OS och Linux.
 
 
 
@@ -178,9 +186,13 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet)".
 
-1. Integrera din webbplats så den drar nytta av [CImage](anax/cimage-for-bildskalning) och [snygga länkar](anax/snygga-lankar). Du behöver därefter inte ladda onödigt stora bilder i din webbplats. Använd shortcoden för FIGURE så blir din Markdown-kod snyggare och enklare att läsa.
-
 1. Gör uppgiften "[Bygg ut ditt Anax Flat tema med stöd för bilder](uppgift/anax-flat-tema-med-bilder)". Du skall bygga en blogg som är full av bilder och på det sättet visa upp att du behärskar bildhanteringen med Cimage, FIGURE och LESS-modulen som stylar figure-elementet.
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 5.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+<!--
+1. Integrera din webbplats så den drar nytta av [CImage](anax/cimage-for-bildskalning) och [snygga länkar](anax/snygga-lankar). Du behöver därefter inte ladda onödigt stora bilder i din webbplats. Använd shortcoden för FIGURE så blir din Markdown-kod snyggare och enklare att läsa.
+-->
 
 
 

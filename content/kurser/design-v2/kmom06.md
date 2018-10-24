@@ -66,6 +66,7 @@ I sektionen [Design](guide/design-med-html5-och-css3/design) tittar vi tillbaka 
 
 
 
+<!--
 ### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
@@ -75,11 +76,11 @@ I sektionen [Design](guide/design-med-html5-och-css3/design) tittar vi tillbaka 
 
 * I artikeln "[Multi-Device Content](https://developers.google.com/web/fundamentals/design-and-ui/responsive/content?hl=en)" ges en mängd specifika tips till vad man bör tänka på när man skapar innehåll för webbens olika enheter (mobil, desktop).
 
+-->
 
+### Designelement och designprinciper  {#design}
 
-### Webbdesign och användbarhet asd {#webbdesign}
-
-Gå igenom följande material om designelement och designprinciper.
+Gå igenom följande material om designelement och designprinciper, det ger dig en grund i vad designlement och designprinicper är. Du behöver veta det för att utföra uppgiften.
 
 1. Börja på Wikipedia om [Visual design elements och principles](https://en.wikipedia.org/wiki/Visual_design_elements_and_principles). Ambitionen är att sortera vad är ett design element och vad är en designprincip.
 
@@ -117,16 +118,6 @@ Det finns inga extra lästips.
 
 
 
-### Övningar {#ovningar}
-
-Det finns ingen övning. Förbered dig inför uppgifterna genom att studera begreppen om olika designelement och designprinciper.
-
-<!--
-Genomför följande övning för att förbereda inför uppgifterna.
--->
-
-
-
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
@@ -137,17 +128,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa teman enligt designprinciper](uppgift/anax-flat-tema-enligt-designprinciper)". Du får träna på att använda alla tekniker du kan för att lyfta fram din design via olika designprinciper.
 
-
-
-<!--
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
--->
-
-<!--
-Visa undermenyerna på menyn.
--->
+1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 6.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
 

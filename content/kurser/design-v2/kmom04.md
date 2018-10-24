@@ -28,6 +28,10 @@ Låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt 
 De designkoncept vi först väljer att fokusera på är färglära och typografi. Vi tittar på hur man väljer färger och vi prövar olika typografiska val och vi utvärderar hur dessa val påverkar vår design.
 
 
+<!--
+et med ett medvetet val av typografi.
+-->
+
 
 <!--more-->
 
@@ -66,12 +70,13 @@ Läs följande:
 I sektionen [Färg](guide/design-med-html5-och-css3/farg) tittar vi på hur vi kan använda färg för att skapa en specifik känsla på en webbplats. Vi börjar med en kort introduktion till färgteori för att gå vidare till hur vi kan välja vilka färgar som fungerar tillsammans.
 
 
-
+<!--
 ### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
     * 5. Rubriker som ger resultat
+-->
 
 
 
@@ -104,6 +109,7 @@ Titta på följande:
 
 
 
+<!--
 ### Lästips {#lastips}
 
 Följande tips hjälper dig igenom kursmomentet.
@@ -113,6 +119,7 @@ Följande tips hjälper dig igenom kursmomentet.
 1. Läs på om grunderna om färgteori och om hur man kan blanda dem förutsatt olika färgscheman.
 
 1. Ta reda på vad en färgpalett (color palette) innebär för en webbplats och studera exempel på färgpaletter.
+-->
 
 
 
@@ -122,7 +129,7 @@ Följande tips hjälper dig igenom kursmomentet.
 *(ca: 8-10 studietimmar)*
 
 
-
+<!--
 ### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
@@ -130,7 +137,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 1. I uppgiften används en temaväljare som finns i ditt Anax Flat. [Läs om temaväljaren](anax/jobba-med-temavaljaren) och se hur du kan konfigurera den och använda olika LESS-filer som grund till ett tema och din kommande familj av teman.
 
 1. Läs igenom artikeln "[Skapa en familj av teman till Anax Flat](kunskap/skapa-en-familj-av-teman-till-anax-flat)". Artikeln ger dig viss orientering i hur man kan tänka kring familjer av teman och visst underlag i konstruktioner som är bra att ha.
-
+-->
 
 
 
@@ -141,6 +148,8 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
 
 1. Utför uppgiften "[Bygg en bas och en familj av teman](uppgift/en-bas-och-en-familj-av-teman)".
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 4.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
 
@@ -156,6 +165,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känner du inför färger och webbplatser? Föredrar du något särskilt ljust, mörkt, färgglatt?
 * Har du funderat på hur webbplatsers färgskala och färgsättning påverkar besökarens känsla av webbplatsen? Bidrar val av typsnitt till den känslan?
 * Hur känns din LESS-struktur så här långt?
-* Hur valde du att göra med ditt eget `default` tema?
+* Hur valde du att göra med ditt eget standard tema, vilken typ av "design" valde du?
 * Var det något särskilt som du uppfattade som utmanande i detta kmom?
 * Vilken är din TIL för detta kmom?

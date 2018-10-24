@@ -7,10 +7,12 @@ category:
 revision:
     "2018-10-15": "(A, mos) Kopia från 'Bygg en ut ditt Anax Flat med eget LESS tema' och omskriven."
 ...
-Bygg ett LESS-tema till kursen design
+Bygg ett tema med vertikalt och horisontellt grid
 ===================================
 
-Du skall bygga ett tema till din redovisa-sida och du bygger temats stylesheet med hjälp av LESS.
+Du skall bygga ett tema och implementera stöd för ett vertikalt grid och för ett horisontellt grid.
+
+Du bygger temat så att det är responsivt baserat på ditt vertikala grid.
 
 <!--more-->
 
@@ -27,9 +29,11 @@ Dokumentet är under bearbetning inför kursstarten höstn 2018.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har sedan tidigare en version av din redovisa-sida som är ett eget repo på GitHub och det är taggat i minst version 1.0.0.
+Du har jobbat igenom kmom02 i design-kursen.
 
-Du har en labbmiljö som motsvarar [labbmiljön för kursen design och kmom02](kurser/design-v2/kmom02#labbmiljo).
+Du har läst läsanvisningar och har viss förståelse för vad ett vertikalt grid är.
+
+Du har läst läsanvisningar och har viss förståelse för vad ett horisontellt grid är. Andra ord för samma sak är typografiskt grid, baseline grid och vertikal rytm.
 
 
 
@@ -38,9 +42,9 @@ Introduktion och förberedelse {#intro}
 
 Gör följande steg för att förbereda dig för uppgiften.
 
-Du kan se hur jag jobbar igenom stegen i videoserien "[Bygg ett LESS-tema till kursen design](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-HCkrXAcedUGv14A68Sv57)".
+Du kan se hur jag jobbar igenom stegen i videoserien "[Bygg ett tema med vertikalt och horisontellt grid](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9QJnBXk-hLEBZH035xObxS)".
 
-[YOUTUBE src="XXX" list="PLKtP9l5q3ce-HCkrXAcedUGv14A68Sv57" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
+[YOUTUBE src="XXX" list="PLKtP9l5q3ce9QJnBXk-hLEBZH035xObxS" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
 
 
 

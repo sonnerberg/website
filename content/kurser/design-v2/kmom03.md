@@ -69,6 +69,7 @@ I sektionen [Grid och typografi](guide/design-med-html5-och-css3/grid-och-typogr
 
 
 
+<!--
 ### Tekniker för att skriva för webben {#skriva}
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
@@ -76,6 +77,7 @@ I sektionen [Grid och typografi](guide/design-med-html5-och-css3/grid-och-typogr
     * Kap 4. Målgrupper - vem vill du nå?
 
 1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur Markdown-texten i Anax Flat formatteras till HTML.
+-->
 
 
 
@@ -90,14 +92,15 @@ Läs följande artiklar.
 -->
 
 
-### Vad handlar grid-baserad layout om? {#grid}
+### Grid-baserad layout {#grid}
 
 1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layout handlar om.
 
 1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Denna artikel hanterar samma teknik som tas upp i övningen och uppgiften så se det som en bakgrundsartikel.
 
+<!--
 1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/archive/layout/) och [typografi](http://primercss.io/archive/type/). Se det som ett exempel på hur ett ramverk för grid och typografi kan se ut. (_note 2017: Google håller på och uppdaterar sitt ramverk_).
-
+-->
 
 
 ### Typografisk webb {#type}
@@ -110,6 +113,7 @@ Tänk dig en typografisk webbplats där all styling har lagts på de typografisk
 
 
 
+<!--
 ### Video  {#video}
 
 Titta på följande:
@@ -117,9 +121,10 @@ Titta på följande:
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 3.
 
 1. Det finns en videoserie "[Lär dig LESS](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-kTE6oaXLUNqII3cgTheEi)" som visar hur du kommer igång och jobbar med LESS. Spellistan visar grundkonstruktioner i LESS.
+-->
 
 
-
+<!--
 ### Lästips {#lastips}
 
 Se följande som extra men relevanta läsövningar. Det är närbesläktade koncept till kursmomentets innehåll.
@@ -127,6 +132,7 @@ Se följande som extra men relevanta läsövningar. Det är närbesläktade konc
 1. [CSS Flexible Box](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) är en layoutmodell som försöker hantera olika skärmstorlekar och erbjuda en fleibel modell för webbutvecklaren att göra layout. I kursmaterialet används huvudsakligen layoutmodellen float, men flexbox nämns och exempel visas.
 
 1. [CSS Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) är en standard (på gång) som kan erbjuda ett gridbaserat system med ren och standardiserad CSS.
+-->
 
 
 
@@ -137,6 +143,7 @@ Se följande som extra men relevanta läsövningar. Det är närbesläktade konc
 
 
 
+<!--
 ### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
@@ -144,6 +151,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 1. Jobba igenom artikeln "[Använd ett vertikalt grid med Anax Flat](kunskap/anvand-vertikalt-grid-med-anax-flat)" som visar dig grunden i att implementera ett grid i CSS och LESS.
 
 1. Jobba igenom artikeln "[Skapa ett horisontellt grid för typografi](kunskap/skapa-ett-horisontellt-grid-for-typografi)" som visar hur du skapar en vertikal rytm i din webbplats.
+-->
 
 
 
@@ -151,7 +159,9 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/me-sida-med-grid)".
+1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/bygg-ett-tema-med-vertikalt-och-horisontellt-grid)".
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 3.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
 
@@ -168,6 +178,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns det att jobba med ett typografiskt horisontellt/baseline grid, ser du någon poäng med det?
 * Berätta om hur du valde typsnitt till din webbplats.
 * Har du jobbat med liknande layouttekniker sedan tidigare?
-* Du börjar se hur man kan jobba med LESS, kommentarer på det?
-* Hur uppfattade du nivån på detta kmom? Svårt, lagom, många nya begrepp?
 * Vilken är din TIL för detta kmom?
