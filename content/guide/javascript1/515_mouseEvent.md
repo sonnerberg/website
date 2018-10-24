@@ -50,7 +50,7 @@ Först och främst hämtar vi lådorna via klassnamnet. Vi loopar igenom lådorn
 
 Vi kör koden och om jag klickar på varannan låda blir det på följande sätt:
 
-[FIGURE src=/image/javascript/guide/click1.png?w=w3 caption="Ett KeyBoardEvent i consolen"]
+[FIGURE src=/image/javascript/guide/click1.png?w=w3 caption="MouseEvent som byter bakgrundsfärg."]
 
 
 
