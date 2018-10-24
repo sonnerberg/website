@@ -136,6 +136,13 @@ Följande tips på verktyg är bra att ha för en webbprogrammerare. Verktygen h
 1. [ImageMagick](imagemagick.org/) är ett verktyg som hjälper dig att analysera och konvertera bildfiler på kommandoraden. Verktygen går att installera på både Windows, Mac OS och Linux.
 
 
+Om responsiva bilder:
+https://developers.google.com/web/fundamentals/design-and-ux/responsive/images
+
+Mer om responsivitet:
+https://developers.google.com/web/fundamentals/design-and-ux/responsive/content
+
+
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------

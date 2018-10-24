@@ -92,7 +92,27 @@ Läs följande artiklar.
 -->
 
 
+
+### Varianter på responsivitet {#responsivitet}
+
+Läs följande om responsivitet.
+
+1. Läs artikeln "[Responsive Web Design Patterns](https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns)" som ger dig en insyn i olika mönster för hur man kan tänka när man stylar olika regioner för att uppnå responsivitet.
+
+
+
+### LESS moduler för grid {#desinax}
+
+I uppgiften kommer du att integrera ditt tema med ett vertikalt grid och ett typgrafiskt grid. För att göra det kommer du att använda följande LESS-moduler. Börja med att snabbt läsa igenom deras README-filer och titta på exemplen för att bekanta dig med dem.
+
+1. Vertikalt grid med [desinax/vertical-grid](https://github.com/desinax/vertical-grid/).
+1. Typgrafiskt grid med [desinax/typografic-grid](https://github.com/desinax/typografic-grid/).
+
+
+
 ### Grid-baserad layout {#grid}
+
+Läs följande för att fördjupa dig i gridbaserad layout och ett vertikalt grid.
 
 1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layout handlar om.
 
