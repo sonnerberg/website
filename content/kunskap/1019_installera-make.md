@@ -1,10 +1,11 @@
 ---
 author: mos
-revision:
-    2016-10-14: (A, mos) Första utgåvan.
 category:
     - labbmiljo
     - make
+revision:
+    "2018-10-25": "(B, mos) Genomgång, mindre justering."
+    "2016-10-14": "(A, mos) Första utgåvan."
 ...
 Installera Make
 ===================================
@@ -42,14 +43,14 @@ Installera på Windows Cygwin {#windows}
 
 Installera i Cygwin genom att installera make med pakethanteraren apt-cyg.
 
-```bash
-$ apt-cyg install make
+```text
+apt-cyg install make
 ```
 
 Testa att make fungerar.
 
-```bash
-$ make --version
+```text
+make --version
 ```
 
 Det finns mer tester längre ned i artikeln.
@@ -63,27 +64,27 @@ Kommandot make är redan installerat på din Mac.
 
 Testa att make fungerar.
 
-```bash
-$ make --version
+```text
+make --version
 ```
 
 Det finns mer tester längre ned i artikeln.
 
 
 
-Installera på Linux {#linux}
+Installera på Linux och Windows 10 Bash {#linux}
 -------------------------------
 
 Installera med apt-get eller motsvarande pakethanterare.
 
-```bash
-$ sudo apt-get install make
+```text
+sudo apt-get install make
 ```
 
 Testa att make fungerar.
 
-```bash
-$ make --version
+```text
+make --version
 ```
 
 Det finns mer tester längre ned i artikeln.
@@ -122,10 +123,10 @@ Nu kan du köra kommandot `make` i samma katalog som du sparade filen `Makefile`
 
 Pröva följande kommandon.
 
-```bash
-$ make
-$ make help
-$ make hello
+```text
+make
+make help
+make hello
 ```
 
 Kommandot make utför alltså de targets som finns i en makefil. Tanken är att använda makefilen för att samla upp de vanliga sekvenser av kod som vi vill göra. Det är så vi tänker använda make.
