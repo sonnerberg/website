@@ -67,30 +67,6 @@ I sektionen [Grid och typografi](guide/design-med-html5-och-css3/grid-och-typogr
 
 
 
-<!--
-### Tekniker för att skriva för webben {#skriva}
-
-1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
-
-    * Kap 4. Målgrupper - vem vill du nå?
-
-1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur Markdown-texten i Anax Flat formatteras till HTML.
--->
-
-
-
-<!--
-###Webbdesign och användbarhet {#webbdesign}
-
-Det finns inga artiklar.
-
-Läs följande artiklar.
-
-* Nilesen gridlayout
--->
-
-
-
 ### Grid-baserad layout {#grid}
 
 Läs för att få en introduktion och översikt till gridbaserad layout och bakgrunden för ett vertikalt grid.
@@ -99,9 +75,6 @@ Läs för att få en introduktion och översikt till gridbaserad layout och bakg
 
 1. Läs översiktligt artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Denna artikel hanterar samma teknik som tas upp i uppgiften så se det som en bakgrundsartikel.
 
-<!--
-1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/archive/layout/) och [typografi](http://primercss.io/archive/type/). Se det som ett exempel på hur ett ramverk för grid och typografi kan se ut. (_note 2017: Google håller på och uppdaterar sitt ramverk_).
--->
 
 
 ### Typografisk webb {#type}
@@ -133,6 +106,69 @@ Läs följande om responsivitet.
 
 
 
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 8-10 studietimmar)*
+
+
+
+### Uppgifter {#uppgifter}
+
+Dessa uppgifter skall utföras och redovisas.
+
+1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/bygg-ett-tema-med-vertikalt-och-horisontellt-grid)".
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 3.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Se till att följande frågor besvaras i redovisningstexten.
+
+* Hur känns det att vara styrd till ett vertikalt grid, hämmande eller stödjande?
+* Hur känns det att jobba med ett typografiskt horisontellt/baseline grid, ser du någon poäng med det?
+* Berätta om hur du valde typsnitt till din webbplats.
+* Har du jobbat med liknande gridbaserade layouttekniker sedan tidigare?
+* Hur känns det att jobba med LESS och moduler? Lyckas du återanvända moduler mellan teman för kmom02 och kmom03?
+* Vilken är din TIL för detta kmom?
+
+
+
+
+<!--
+### Tekniker för att skriva för webben {#skriva}
+
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+
+    * Kap 4. Målgrupper - vem vill du nå?
+
+1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur Markdown-texten i Anax Flat formatteras till HTML.
+-->
+
+
+
+<!--
+###Webbdesign och användbarhet {#webbdesign}
+
+Det finns inga artiklar.
+
+Läs följande artiklar.
+
+* Nilesen gridlayout
+-->
+
+
+<!--
+1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/archive/layout/) och [typografi](http://primercss.io/archive/type/). Se det som ett exempel på hur ett ramverk för grid och typografi kan se ut. (_note 2017: Google håller på och uppdaterar sitt ramverk_).
+-->
+
 <!--
 ### Video  {#video}
 
@@ -153,50 +189,3 @@ Se följande som extra men relevanta läsövningar. Det är närbesläktade konc
 
 1. [CSS Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) är en standard (på gång) som kan erbjuda ett gridbaserat system med ren och standardiserad CSS.
 -->
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-10 studietimmar)*
-
-
-
-<!--
-### Övningar {#ovningar}
-
-Genomför följande övning för att förbereda inför uppgifterna.
-
-1. Jobba igenom artikeln "[Använd ett vertikalt grid med Anax Flat](kunskap/anvand-vertikalt-grid-med-anax-flat)" som visar dig grunden i att implementera ett grid i CSS och LESS.
-
-1. Jobba igenom artikeln "[Skapa ett horisontellt grid för typografi](kunskap/skapa-ett-horisontellt-grid-for-typografi)" som visar hur du skapar en vertikal rytm i din webbplats.
--->
-
-
-
-### Uppgifter {#uppgifter}
-
-Dessa uppgifter skall utföras och redovisas.
-
-1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/bygg-ett-tema-med-vertikalt-och-horisontellt-grid)".
-
-1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 3.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
-
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Hur känns det att vara styrd till ett vertikalt grid, hämmande eller stödjande?
-* Hur känns det att jobba med ett typografiskt horisontellt/baseline grid, ser du någon poäng med det?
-* Berätta om hur du valde typsnitt till din webbplats.
-* Har du jobbat med liknande gridbaserade layouttekniker sedan tidigare?
-* Hur känns det att jobba med LESS och moduler? Lyckas du återanvända moduler mellan teman för kmom02 och kmom03?
-* Vilken är din TIL för detta kmom?

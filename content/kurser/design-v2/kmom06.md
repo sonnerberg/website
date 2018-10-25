@@ -66,18 +66,6 @@ I sektionen [Design](guide/design-med-html5-och-css3/design) tittar vi tillbaka 
 
 
 
-<!--
-### Tekniker för att skriva för webben {#skriva}
-
-1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
-
-    * 7. Skriv kort, men inte för kort
-    * 8. Källor
-
-* I artikeln "[Multi-Device Content](https://developers.google.com/web/fundamentals/design-and-ui/responsive/content?hl=en)" ges en mängd specifika tips till vad man bör tänka på när man skapar innehåll för webbens olika enheter (mobil, desktop).
-
--->
-
 ### Designelement och designprinciper  {#design}
 
 Gå igenom följande material om designelement och designprinciper, det ger dig en grund i vad designlement och designprinicper är. Du behöver veta det för att utföra uppgiften.
@@ -94,20 +82,11 @@ Gå igenom följande material om designelement och designprinciper, det ger dig 
 
 
 
-<!--
-###Video  {#video}
+### Om responsivitet {#responsivitet}
 
-Titta på följande:
+Läs följande om responsivitet.
 
-1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 6.
--->
-
-<!--
-
-###Lästips {#lastips}
-
-Det finns inga extra lästips.
--->
+1. Läs artikeln "[Multi-Device Content](https://developers.google.com/web/fundamentals/design-and-ux/responsive/content)" som ger dig en insyn i hur man kan tänka kring innehåll, text och artiklar när det kommer till responsivitet.
 
 
 
@@ -122,13 +101,13 @@ Det finns inga extra lästips.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Utvärdera designprinciper som webbplatser använder sig av](uppgift/utvardera-webbplatsers-designprinciper)".
+1. Gör uppgiften "[Utvärdera designprinciper som webbplatser använder sig av](uppgift/utvardera-webbplatsers-designprinciper)". Du skall skriva en rapport, ensilt eller i grupp.
 
 1. Gör uppgiften "[Skapa teman med designelement till ditt Anax Flat](uppgift/anax-flat-tema-med-designelement)". Du får träna på att använda olika designelement för att lyfta fram din design.
 
 1. Gör uppgiften "[Skapa teman enligt designprinciper](uppgift/anax-flat-tema-enligt-designprinciper)". Du får träna på att använda alla tekniker du kan för att lyfta fram din design via olika designprinciper.
 
-1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 6.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 6.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
 
@@ -146,3 +125,28 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du en uppfattning om "the final touch" och vad det kan vara i sammanhanget webbdesign?
 * Har du under kursen skapat dig en känsla för begreppen god design, vad det innebär och vad som är subjektiv och objektivt inom området?
 * Vilken är din TIL för detta kmom?
+
+
+
+
+<!--
+### Tekniker för att skriva för webben {#skriva}
+
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+
+    * 7. Skriv kort, men inte för kort
+    * 8. Källor
+
+* I artikeln "[Multi-Device Content](https://developers.google.com/web/fundamentals/design-and-ui/responsive/content?hl=en)" ges en mängd specifika tips till vad man bör tänka på när man skapar innehåll för webbens olika enheter (mobil, desktop).
+
+-->
+
+
+
+<!--
+###Video  {#video}
+
+Titta på följande:
+
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 6.
+-->

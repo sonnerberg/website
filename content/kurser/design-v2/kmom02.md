@@ -42,19 +42,6 @@ Vi vet sedan kmom01 att sidan består av flera regioner som vi kan styla. HUr de
 
 [FIGURE src=image/snapht18/design-kmom02-regioner.png?w=w3 caption="Vår layout har många regioner som kan behöva styling."]
 
-<!--
-Vi behöver också fortsätta att bekanta oss generellt med begreppen webbdesign och användbarhet på webben. Det viktigt med förståelse för vissa grundkoncept inom området.
-
-Vi börjar försiktigt för att se hur LESS fungerar tillsammans med Anax Flat och hur vi kan jobba med ett tema via moduler i LESS.
-
-I nästa kmom bygger vi vidare på temat med grid-baserad layout. Så det kommer mera och det gör inget om du tar det lite lugnt med stylen i detta kmom.
--->
-
-
-
-
-
-
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -98,26 +85,6 @@ Läs följande:
 
 I sektionen [Responsivitet](guide/design-med-html5-och-css3/responsivitet) tittar vi på hur vi med hjälp av media queries kan anpassa en webbplats för både stora och små enheter.
 
-<!--
-### Tekniker för att skriva för webben {#skriva}
-
-1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
-
-    * 3. Hur vi läser på webben
--->
-
-
-<!--
-### Webbdesign och användbarhet {#webbdesign}
-
-Läs följande artiklar.
-
-1. Läs artikeln "[The Fold Manifesto: Why the Page Fold Still Matters](https://www.nngroup.com/articles/page-fold-manifesto/)".
-
-1. Läs artikeln "[Menu Design: Checklist of 15 UX Guidelines to Help Users](https://www.nngroup.com/articles/menu-design/)".
--->
-<!-- Eventuellt skriva artikel om usability, kanske i projektet? -->
-
 
 
 ### LESS {#less}
@@ -141,6 +108,70 @@ Följande moduler kommer du att använda när du bygger ditt tema i den kommande
 1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
 
 1. Titta snabbt och översiktligt på [Font Awesome](https://fontawesome.com/) och se vilka ikoner man kan skapa med dess hjälp. Leta reda på webbsidan som visar hur man installerar Font Awesome och se om du kan hitta hur man installerar det som en LESS-modul med hjälp av pakethanteraren npm. Vi kommer att göra detta senare i uppgiften.
+
+
+
+### Om responsivitet {#responsivitet}
+
+Läs följande om responsivitet.
+
+1. Läs artikeln "[Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)" som ger dig en introduktion i tekniker kring ämnet.
+
+
+
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 8-10 studietimmar)*
+
+
+
+### Uppgifter {#uppgifter}
+
+Dessa uppgifter skall utföras och redovisas.
+
+1. Lös uppgiften "[Bygg ett LESS-tema till kursen design](uppgift/bygg-ett-less-tema-till-kursen-design)".
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 2.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Se till att följande frågor besvaras i redovisningstexten.
+
+* Vad tycker du om LESS och det sättet vi jobbar med LESS-moduler?
+* Är du bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad anser du om det?
+* Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
+* Kommentera ditt tema, hur kan man beskriva dess design och hade du några planer på "design" när du byggde ditt tema?
+* Vilken är din TIL för detta kmom?
+
+
+
+<!--
+### Tekniker för att skriva för webben {#skriva}
+
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+
+    * 3. Hur vi läser på webben
+-->
+
+
+<!--
+### Webbdesign och användbarhet {#webbdesign}
+
+Läs följande artiklar.
+
+1. Läs artikeln "[The Fold Manifesto: Why the Page Fold Still Matters](https://www.nngroup.com/articles/page-fold-manifesto/)".
+
+1. Läs artikeln "[Menu Design: Checklist of 15 UX Guidelines to Help Users](https://www.nngroup.com/articles/menu-design/)".
+-->
+<!-- Eventuellt skriva artikel om usability, kanske i projektet? -->
 
 
 
@@ -191,46 +222,3 @@ Kika igenom följande styleguides till CSS för att få en känsla av hur du bö
 1. De valideringsregler som gäller för CSS-kod i dbwebb-kurser är samlade i repot [`desinax/css-styleguide`](desinax/css-styleguide). Repot finns även som ett npm-paket [css-styleguide](https://www.npmjs.com/package/css-styleguide). Du kan [diskutera stylen i forumet](https://dbwebb.se/forum/viewtopic.php?f=9&t=6822).
 -->
 <!-- 1. Kika snabbt igenom [kod-guidelines för GitHubs Primer](http://primercss.io/guidelines/). -->
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-10 studietimmar)*
-
-
-<!--
-### Övningar {#ovningar}
-
-Genomför följande övning för att förbereda inför uppgifterna.
-
-1. Kom igång med LESS och skapa en struktur av LESS-filer, eller LESS-moduler. Det blir ett modulärt sätt att bygga upp sitt *tema* till webbplatsen. Gör detta genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
--->
-
-
-
-### Uppgifter {#uppgifter}
-
-Dessa uppgifter skall utföras och redovisas.
-
-1. Lös uppgiften "[Bygg ett LESS-tema till kursen design](uppgift/bygg-ett-less-tema-till-kursen-design)".
-
-1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 2.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
-
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Vad tycker du om LESS och det sättet vi jobbar med LESS-moduler?
-* Är du bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad anser du om det?
-* Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
-* Kommentera ditt tema, hur kan man beskriva dess design och hade du några planer på "design" när du byggde ditt tema?
-* Vilken är din TIL för detta kmom?

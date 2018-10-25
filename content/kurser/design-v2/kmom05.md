@@ -82,14 +82,13 @@ I sektionen [Bilder](guide/design-med-html5-och-css3/bilder) använder vi olika 
 
 
 
-<!--
-### Tekniker för att skriva för webben {#skriva}
+### Om responsivitet {#responsivitet}
 
-1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+Läs följande om responsivitet.
 
-    * 6. Skriva texter för webben
+1. Läs artikeln "[Responsive images](https://developers.google.com/web/fundamentals/design-and-ux/responsive/images)" som ger dig en insyn i ämnet bilder och responsiva webbplatser.
 
--->
+1. Som extra läsning kring responsiva bilder rekommenderas [AlistApart: Using Responsive Images (Now) (2015)](http://alistapart.com/article/using-responsive-images-now) som ger en ytterligare översyn av tekniker som kan användas.
 
 
 
@@ -100,6 +99,81 @@ Studera följande för att förbereda dig för uppgiften där du skall analysera
 1. Läs översiktligt igenom artikeln "[Moz om Page Speed](https://moz.com/learn/seo/page-speed)".
 
 1. Kika snabbt på Googles "[PageSpeed Insights Rules](https://developers.google.com/speed/docs/insights/rules)" för att snabba upp sidor.
+
+
+
+### Lästips verktyg {#lastips}
+
+Följande tips på verktyg är bra att ha för en webbprogrammerare. Verktygen handlar om att hantera bilder i olika form och på olika sätt.
+
+1. [GIMP](https://www.gimp.org/) är en fri variant till bildbehandlingsprogram likt Photoshop.
+
+1. [Inkscape](https://inkscape.org/en/) är ett fritt program för att rita och hantera bilder i vektorgrafik såsom SVG.
+
+1. Ett bra snapshot-verktyg för skärmdumpar vill du integrera i din verktygslåda. Du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation eller på innehållet i en webbsida. Det är smidigt om det är kopplat till ett enklare ritverktyg vilket gör det enkelt att rita på din snap. På Linux använder jag ett verktyg som heter [Shutter](http://shutter-project.org/).
+
+1. [ImageMagick](imagemagick.org/) är ett verktyg som hjälper dig att analysera och konvertera bildfiler på kommandoraden. Verktygen går att installera på både Windows, Mac OS och Linux.
+
+1. Gå översiktligt igenom [manualen för Cimage](https://cimage.se/) som är ett php-skript som beskär dina bilder utan behov av ett bildhanteringsverktyg. Cimage finns redan installerad i ditt ramverk. Manualen ger dig en insyn i hur du kan använda verktyget i den kommande uppgiften. Manualen ger också en översikt av olika begrepp och hantering kring bilder, bildformat, beskärning av bilder, optimering av filstorlekar och kvalitetsaspekter så se den som rent utbildningsmaterial kring bildhantering.
+
+
+
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 8-10 studietimmar)*
+
+
+
+### Uppgifter {#uppgifter}
+
+Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet)". Du skall skriva en rapport, ensilt eller i grupp.
+
+1. Gör uppgiften "[Bygg ut ditt Anax Flat tema med stöd för bilder](uppgift/anax-flat-tema-med-bilder)". Du skall bygga en blogg som är full av bilder och på det sättet visa upp att du behärskar bildhanteringen med Cimage, FIGURE och LESS-modulen som stylar figure-elementet.
+
+<!--
+1. I kursrepot `example/figure` finns två exempel som visar hur man kan jobba med `<figure>` och uppnå responsiva bilder. Studera och undersök exemplet och försök förstå hur det fungerar och hur det är uppbyggt. Där hittar du LESS-kod du kan låna till uppgiften.
+    * [Figure and figcaption](repo/design/example/figure/figure.html)
+    * [Figure and figcaption med media queries](repo/design/example/figure/figure-responsive.html)
+
+1. Pröva att bygga en enkel blogg i Anax Flat genom att studera exempel på [hur man gör en blogg i Anax Flat](anax/gor-en-blogg) i Anax läs igenom hur du kan använda [shortcodes i Markdown](anax/shortcodes).
+-->
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 5.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Se till att följande frågor besvaras i redovisningstexten.
+
+* Berätta kort om erfarenheterna med din undersökning av webbplatsers laddningstid.
+* Har du några funderingar kring Cimage och dess nytta och features?
+* Lyckades du uppnå ett bra sätt och en LESS-struktur för att jobba med dina bilder i webbplatsen?
+* Vad är din egen uppfattning kring bilder för webben, nedladdningstid och möjligheter med responsiva bilder samt allmänt kring bildbehandling för webben?
+* Vilken är din TIL för detta kmom?
+
+
+
+
+
+
+<!--
+### Tekniker för att skriva för webben {#skriva}
+
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+
+    * 6. Skriva texter för webben
+
+-->
+
 
 
 
@@ -122,46 +196,6 @@ Titta på följande:
 -->
 
 
-
-### Lästips verktyg {#lastips}
-
-Följande tips på verktyg är bra att ha för en webbprogrammerare. Verktygen handlar alla om att hantera bilder i olika form.
-
-1. [GIMP](https://www.gimp.org/) är en fri variant till bildbehandlingsprogram.
-
-1. [Inkscape](https://inkscape.org/en/) är ett fritt program för att rita och hantera bilder i vektorgrafik såsom SVG.
-
-1. Snapshot-verktyg vill du integrera i din verktygslåda, du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation. Det är smidigt om det är kopplat ett ritverktyg till ditt snapshot-verktyg, då kan du snabbt och enkelt förtydliga din snapshot. På Linux använder jag ett verktyg som heter [Shutter](http://shutter-project.org/).
-
-1. [ImageMagick](imagemagick.org/) är ett verktyg som hjälper dig att analysera och konvertera bildfiler på kommandoraden. Verktygen går att installera på både Windows, Mac OS och Linux.
-
-
-Om responsiva bilder:
-https://developers.google.com/web/fundamentals/design-and-ux/responsive/images
-
-Mer om responsivitet:
-https://developers.google.com/web/fundamentals/design-and-ux/responsive/content
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-10 studietimmar)*
-
-
-
-### Övningar {#ovningar}
-
-Genomför följande övning för att förbereda inför uppgifterna.
-
-1. Gå översiktligt igenom [manualen för Cimage](https://cimage.se/), för att få en uppfattning om koncepten kring bildhantering. Cimage är ett PHP-skript som kan beskära och hantera bilder för webbruk. Via dess manual kan du få insyn i olika bildformat och hur bilder rent generellt kan hanteras för webbruk. Cimage är redan en del av din installation av Anax Flat.
-
-1. I kursrepot `example/figure` finns två exempel som visar hur man kan jobba med `<figure>` och uppnå responsiva bilder. Studera och undersök exemplet och försök förstå hur det fungerar och hur det är uppbyggt. Där hittar du LESS-kod du kan låna till uppgiften.
-    * [Figure and figcaption](repo/design/example/figure/figure.html)
-    * [Figure and figcaption med media queries](repo/design/example/figure/figure-responsive.html)
-
-1. Pröva att bygga en enkel blogg i Anax Flat genom att studera exempel på [hur man gör en blogg i Anax Flat](anax/gor-en-blogg) i Anax läs igenom hur du kan använda [shortcodes i Markdown](anax/shortcodes).
 
 
 <!--
@@ -186,44 +220,6 @@ kvalitet
 
 -->
 
-
-### Uppgifter {#uppgifter}
-
-Dessa uppgifter skall utföras och redovisas.
-
-1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet)".
-
-1. Gör uppgiften "[Bygg ut ditt Anax Flat tema med stöd för bilder](uppgift/anax-flat-tema-med-bilder)". Du skall bygga en blogg som är full av bilder och på det sättet visa upp att du behärskar bildhanteringen med Cimage, FIGURE och LESS-modulen som stylar figure-elementet.
-
-1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 5.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
-
 <!--
 1. Integrera din webbplats så den drar nytta av [CImage](anax/cimage-for-bildskalning) och [snygga länkar](anax/snygga-lankar). Du behöver därefter inte ladda onödigt stora bilder i din webbplats. Använd shortcoden för FIGURE så blir din Markdown-kod snyggare och enklare att läsa.
 -->
-
-
-
-### Extra {#extra}
-
-Följande extrauppgifter finns.
-
-1. Läs om begreppet responsive images i följande två artiklar som visar hur man kan använda `picture`, `srcset` och `sizes` för att jobba responsivt med att ladda bilder av olika storlekar till olika skärmstorlekar. Fundera på om det kan vara något för din me-sida.
-    * [AlistApart: Responsive Images in Practice (2014)](http://alistapart.com/article/responsive-images-in-practice)
-    * [AlistApart: Using Responsive Images (Now) (2015)](http://alistapart.com/article/using-responsive-images-now)
-
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Berätta kort om erfarenheterna med din undersökning av webbplatsers laddningstid.
-* Har du några funderingar kring Cimage och dess nytta och features?
-* Lyckades du uppnå ett bra sätt och en LESS-struktur för att jobba med dina bilder i webbplatsen?
-* Om du gjorde extrauppgiften med `picture`, `srcset` och `sizes`, fick du någon känsla för för- och nackdelar med konceptet?
-* Vilken är din TIL för detta kmom?

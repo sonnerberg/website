@@ -28,10 +28,6 @@ Låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt 
 De designkoncept vi först väljer att fokusera på är färglära och typografi. Vi tittar på hur man väljer färger och vi prövar olika typografiska val och vi utvärderar hur dessa val påverkar vår design.
 
 
-<!--
-et med ett medvetet val av typografi.
--->
-
 
 <!--more-->
 
@@ -70,17 +66,8 @@ Läs följande:
 I sektionen [Färg](guide/design-med-html5-och-css3/farg) tittar vi på hur vi kan använda färg för att skapa en specifik känsla på en webbplats. Vi börjar med en kort introduktion till färgteori för att gå vidare till hur vi kan välja vilka färgar som fungerar tillsammans.
 
 
-<!--
-### Tekniker för att skriva för webben {#skriva}
 
-1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
-
-    * 5. Rubriker som ger resultat
--->
-
-
-
-### Webbdesign och användbarhet {#webbdesign}
+### Färg {#color}
 
 Lös följande artiklar.
 
@@ -90,16 +77,51 @@ Lös följande artiklar.
 
 1. Läs [kapitel 13 i boken Web Design - The Complete Reference](http://www.webdesignref.com/chapters/13/ch13-16.htm). Det handlar om "Color and Usability" och "The Hidden Meaning of Colors" och ger en kort introduktion till färger och webbdesign.
 
+
+
+### Om responsivitet {#responsivitet}
+
+Läs följande om responsivitet.
+
 1. Kika snabbt igenom artikeln "[A More Modern Scale for Web Typography](http://typecast.com/blog/a-more-modern-scale-for-web-typography)". Poängen med artikeln är att hantera typsnitt på ett responsivt sätt. Fundera igenom om detta konceptet är något för dig.
 
-1. Gå tillbaka till boken [En praktisk guide till typografi på webben](http://webtypography.net/) och se om du hitta något kapitel i den som kan inspirera dig till typografiska mästerverk i dina teman.
 
 
-<!--
-###Video  {#video}
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
 
-Det finns inga videor.
--->
+*(ca: 8-10 studietimmar)*
+
+
+
+### Uppgifter {#uppgifter}
+
+Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)". Du skall skriva en rapport, ensilt eller i grupp.
+
+1. Utför uppgiften "[Bygg en bas och en familj av teman](uppgift/en-bas-och-en-familj-av-teman)".
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 4.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Se till att följande frågor besvaras i redovisningstexten.
+
+* Hur känner du inför färger och webbplatser? Föredrar du något särskilt ljust, mörkt, färgglatt?
+* Har du funderat på hur webbplatsers färgskala och färgsättning påverkar besökarens känsla av webbplatsen? Bidrar val av typsnitt till den känslan?
+* Hur känns din LESS-struktur så här långt?
+* Hur valde du att göra med ditt eget standard tema, vilken typ av "design" valde du?
+* Vilken är din TIL för detta kmom?
+
+
 
 <!--
 Titta på följande:
@@ -122,13 +144,6 @@ Följande tips hjälper dig igenom kursmomentet.
 -->
 
 
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-10 studietimmar)*
-
-
 <!--
 ### Övningar {#ovningar}
 
@@ -141,30 +156,11 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 
-### Uppgifter {#uppgifter}
 
-Dessa uppgifter skall utföras och redovisas.
+<!--
+### Tekniker för att skriva för webben {#skriva}
 
-1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
-1. Utför uppgiften "[Bygg en bas och en familj av teman](uppgift/en-bas-och-en-familj-av-teman)".
-
-1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 4.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
-
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Hur känner du inför färger och webbplatser? Föredrar du något särskilt ljust, mörkt, färgglatt?
-* Har du funderat på hur webbplatsers färgskala och färgsättning påverkar besökarens känsla av webbplatsen? Bidrar val av typsnitt till den känslan?
-* Hur känns din LESS-struktur så här långt?
-* Hur valde du att göra med ditt eget standard tema, vilken typ av "design" valde du?
-* Var det något särskilt som du uppfattade som utmanande i detta kmom?
-* Vilken är din TIL för detta kmom?
+    * 5. Rubriker som ger resultat
+-->
