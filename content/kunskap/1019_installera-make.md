@@ -1,10 +1,11 @@
 ---
 author: mos
-revision:
-    2016-10-14: (A, mos) Första utgåvan.
 category:
     - labbmiljo
     - make
+revision:
+    "2018-10-25": "(B, mos) Genomgång, mindre justering."
+    "2016-10-14": "(A, mos) Första utgåvan."
 ...
 Installera Make
 ===================================
@@ -43,13 +44,13 @@ Installera på Windows Cygwin {#windows}
 Installera i Cygwin genom att installera make med pakethanteraren apt-cyg.
 
 ```bash
-$ apt-cyg install make
+apt-cyg install make
 ```
 
 Testa att make fungerar.
 
 ```bash
-$ make --version
+make --version
 ```
 
 Det finns mer tester längre ned i artikeln.
@@ -64,26 +65,26 @@ Kommandot make är redan installerat på din Mac.
 Testa att make fungerar.
 
 ```bash
-$ make --version
+make --version
 ```
 
 Det finns mer tester längre ned i artikeln.
 
 
 
-Installera på Linux {#linux}
+Installera på Linux och Windows 10 Bash {#linux}
 -------------------------------
 
 Installera med apt-get eller motsvarande pakethanterare.
 
 ```bash
-$ sudo apt-get install make
+sudo apt-get install make
 ```
 
 Testa att make fungerar.
 
 ```bash
-$ make --version
+make --version
 ```
 
 Det finns mer tester längre ned i artikeln.
