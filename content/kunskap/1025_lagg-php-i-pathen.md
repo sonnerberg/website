@@ -32,7 +32,9 @@ Din PHP-installation är av version 7.2 eller senare.
 Fungerar det? {#kolla}
 -------------------------------
 
-Börja med att kontrollera om du redan har php i din sökväg så att du kan exekvera kommandot. Du kan se vilken versino som är installerad genom att skriva `php --version`. Tecknet `$` är prompten, då den är inte ett del av kommandot.
+Börja med att kontrollera om du redan har php i din sökväg så att du kan exekvera kommandot. Du kan se vilken version som är installerad genom att skriva `php --version`.
+
+Tecknet `$` i exemplet nedan är prompten, den är inte ett del av kommandot som du skall skriva.
 
 ```text
 $ php --version
@@ -94,7 +96,7 @@ Hamnar du i problem kan du behöva [felsöka](#felsok) och när du är klar så 
 
 
 
-Installera på Linux och Windows10 Bash {#linux}
+Installera på Linux och Windows 10 Bash {#linux}
 -------------------------------
 
 Här visas hur man kan göra på Linux (debian) och Windows 10 Bash.
@@ -103,7 +105,7 @@ Du kan söka ut vilka versioner som är tillgängliga med `apt-cache search php7
 
 Pröva en `apt-get update` om du inte ser rätt version. Du kan behöva uppdatera informationen om möjliga paket.
 
-Du installerar med `apt-get` och den exekverbara hamnar i `usr/bin` vilket redan ligger i min path. Allt klart.
+Du installerar med `apt-get` och den exekverbara hamnar i `usr/bin` vilket redan ligger i din path. Allt klart.
 
 ```text
 apt-get install php7.2
@@ -111,7 +113,7 @@ apt-get install php7.2
 
 Eventuellt behöver du senare installera fler moduler till php, du gör det på samma sätt.
 
-På samma sätt fungerar det alltså om du använder Windows 10 och Bash. Här använder vi inte den versionen av php som är installerad i Windows utan vi installerar en separat variant i Bash.
+Ovan procedure fungerar på samma sätt om du använder Windows 10 och Bash. Vi använder inte den versionen av php som är installerad i Windows utan vi installerar en ny separat variant i Bash.
 
 Hamnar du i problem kan du behöva [felsöka](#felsok) och när du är klar så kan du kort lära dig om hur man [använder php i terminalen](#anvand).
 
@@ -154,6 +156,8 @@ total 32
 lrwxr-xr-x  1 mikaelroos  staff  27 Oct 11 12:22 php -> /Applications/XAMPP/bin/php
 ```
 
+Nu är det klart och du kan testa att använda php i din terminal.
+
 Hamnar du i problem kan du behöva [felsöka](#felsok) och när du är klar så kan du kort lära dig om hur man [använder php i terminalen](#anvand).
 
 
@@ -161,7 +165,7 @@ Hamnar du i problem kan du behöva [felsöka](#felsok) och när du är klar så 
 Använd php vid terminalen {#anvand}
 -------------------------------
 
-Du behöver php i din sökväg för att kunna köra andra program som bygger på php, till exempel pakethanteraren composer, analysprogrammen phpcs och phpmd eller testverktyget phpunit. En utvecklingsmiljö behöver alltså normalt ha php i sin PATH.
+Du behöver php i din sökväg för att kunna köra andra program som bygger på php, till exempel pakethanteraren composer, analysprogrammen phpcs och phpmd eller testverktyget phpunit.
 
 För att bekanta sig med php i terminalen så kan man köra hjälpkommandot samt se vilken version man har.
 
