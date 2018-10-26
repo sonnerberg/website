@@ -26,7 +26,7 @@ Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
 I JavaScript finns strukturer för arrayer och objekt tillsammans med en del inbyggda funktioner. För att skriva bra och effektiva program är det en förutsättning att man förstår hur dessa är uppbyggda och vilket stöd som erbjuds i form av inbyggda funktioner som hjälper oss att arbete mot arrayer och objekt.
 
 
-[FIGURE src=/image/snapht14/js1-boulder-dash.png caption="Öva arrayer med en Boulderdash klon."]
+<!-- [FIGURE src=/image/snapht14/js1-boulder-dash.png caption="Öva arrayer med en Boulderdash klon."] -->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -119,7 +119,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 3. Gör uppgiften "[Rita flaggor med JavaScript och objekt](uppgift/gor-svenska-flaggan-med-javascript-och-objekt)". Spara koden i `me/kmom04/flag3`.
 
-4. Gör uppgiften ["Flytta runt Baddie på webbsidan #3"](uppgift/flytta-baddie-pa-webbsida-3). Spara koden i `me/kmom04/baddie3`.
+<!-- 4. Gör uppgiften ["Flytta runt Baddie på webbsidan #3"](uppgift/flytta-baddie-pa-webbsida-3). Spara koden i `me/kmom04/baddie3`. -->
 
 
 

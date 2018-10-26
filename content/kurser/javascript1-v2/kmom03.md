@@ -103,7 +103,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 2. Gör uppgiften "[Rita flaggor med JavaScript och funktioner](uppgift/gor-svenska-flaggan-med-javascript-html-och-css)". Spara koden i `me/kmom03/flag2`.
 
-3. Gör uppgiften ["Flytta runt Baddie på webbsidan #2"](uppgift/flytta-baddie-pa-webbsida-2). Spara koden i `me/kmom03/baddie2`.
+<!-- 3. Gör uppgiften ["Flytta runt Baddie på webbsidan #2"](uppgift/flytta-baddie-pa-webbsida-2). Spara koden i `me/kmom03/baddie2`. -->
 
 
 
