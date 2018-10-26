@@ -1,6 +1,6 @@
 ---
 ...
-Funktioner - intro
+Allmänt
 ==================================
 
 Funktioner är ett spännande kapitel i JavaScript. Även om allt är objekt så är JavaScript ett funktionsorienterat språk, men mer om det senare. Först tar vi grunderna.
