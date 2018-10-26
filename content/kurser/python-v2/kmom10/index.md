@@ -26,7 +26,7 @@ Detta kursmoment avslutar och examinerar kursen.
 Upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Den individuella examinationen genomförs den 2018-10-30. Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar.
+Den individuella examinationen genomförs den 2018-10-30. Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Notera att inlämningen på Canvas är satt till den 31:e oktober. Det är för att ni ska få en dag på er att göra er redovisning.
 
 Nedanför beskriver vi upplägget för de olika studentgrupperna:
 
