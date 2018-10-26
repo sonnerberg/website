@@ -86,13 +86,13 @@ Det finns inga lästips.
 
 *(ca: 12-16 studietimmar)*
 
-<!--
+
 ###Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
 Det finns inga övningar.
--->
+
 
 
 ###Uppgifter {#uppgifter}
@@ -101,7 +101,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör laborationen "[JavaScript med funktioner](uppgift/javascript-med-funktioner)". Spara resultatet i `me/kmom03/lab3`.
 
-2. Gör uppgiften "[Rita flaggor med JavaScript och funktioner](uppgift/gor-svenska-flaggan-med-javascript-html-och-css)". Spara koden i `me/kmom03/flag2`.
+1. Gör uppgiften "[sandbox steg 3](uppgift/sandbox-steg-3)". Spara resultatet i `me/kmom03/sandbox3`.
+
+1. Gör uppgiften "[Rita flaggor med JavaScript och funktioner](uppgift/gor-svenska-flaggan-med-javascript-html-och-css)". Spara koden i `me/kmom03/flag2`.
 
 <!-- 3. Gör uppgiften ["Flytta runt Baddie på webbsidan #2"](uppgift/flytta-baddie-pa-webbsida-2). Spara koden i `me/kmom03/baddie2`. -->
 
