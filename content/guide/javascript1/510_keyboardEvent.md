@@ -44,6 +44,10 @@ document.addEventListener("keydown", function(event) {
 });
 ```
 
+Vill du se mer kan du titta på videon som visar onkeydown:
+
+[YOUTUBE src=pLt5tWcMt-s width=630 caption="Kenneth visar onkeydown."]
+
 
 
 ### Övriga keyboard-events {#ovriga}

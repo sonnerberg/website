@@ -3,7 +3,7 @@
 Function declaration
 ==================================
 
-En *function declaration* definierar en namngiven funktionsvariabel. Man kan likna det vid att deklarera en vanlig varibel. Istället för `var` använder vi `function`:
+En *function declaration* eller *function statement* definierar en namngiven funktionsvariabel. Man kan likna det vid att deklarera en vanlig varibel. Istället för `var` använder vi `function`:
 
 ```javascript
 function taxes() {
@@ -26,3 +26,7 @@ function taxes(declared) {
 
 taxes(true); // Prints "Taxes are declared." in the console
 ```
+
+Kika gärna på videon om declarations:
+
+[YOUTUBE src=_cps7e9sbio width=630 caption="Kenneth visar function declaration."]

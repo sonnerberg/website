@@ -9,7 +9,7 @@ revision:
 Sandbox steg 3
 ==================================
 
-Vi ska göra ett tärningsprogram, där en eller flera tärningar kastas, snittvärdet beräknas och visas tillsammans med slagserien.
+Vi ska göra ett tärningsprogram, där en eller flera tärningar kastas, snittvärdet beräknas och visas tillsammans med slagserien. Till vår hjälp ska vi använda funktioner.
 
 <!--more-->
 
@@ -36,11 +36,11 @@ cp -ri me/kmom01/sandbox/* me/kmom03/sandbox3
 
 1. Användaren ska kunna mata in antal tärningar och antal sidor på tärningarna.
 
-1. En eventlyssnare ska trigga tärningskasten vid ett knapptryck.
+1. En eventlyssnare ska trigga tärningskastet vid ett knapptryck.
 
 1. Eventlyssnaren ska använda en egendefinierad funktion.
 
-1. Presentera medelvärdet och utfallet av kasten i din sandbox.
+1. Presentera **medelvärdet** och **resultatet** av kasten i din sandbox.
 
 1. Testa din JavaScript kod så att den validerar i onlineverktyget för JSHint.
 
@@ -55,7 +55,7 @@ dbwebb publish me
 Extrauppgift {#extra}
 -----------------------
 
-1. Se om du kan ha med bilder som representerar tärningarna.
+1. Se om du kan ha med bilder som representerar tärningssidorna.
 
 
 

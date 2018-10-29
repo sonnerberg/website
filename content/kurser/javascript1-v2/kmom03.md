@@ -91,7 +91,8 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-Det finns inga övningar.
+1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 3 gäller delen:
+    * [Funktioner](guide/javascript1/section_break_6)
 
 
 
@@ -128,3 +129,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur känner du för funktioner i JavaScript, kan du relatera liknande konstruktioner i något annat programspråk?
 * Vad tyckte du om de olika uppgifterna? Hur tänkte du när du utförde dem? Var de svåra eller lätta?
+* Vad är din TIL för det här kursmomentet?
