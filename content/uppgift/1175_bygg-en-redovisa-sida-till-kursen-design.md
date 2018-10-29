@@ -4,7 +4,7 @@ category:
     - kursen design
     - anax-flat
 revision:
-    "2018-10-15": "(Prel A, mos) Första utgåvan för design v2, omarbetad version av artikeln 'Bygg en me-sida med Anax Flat'."
+    "2018-10-29": "(A, mos) Första utgåvan för design v2, omarbetad version av artikeln 'Bygg en me-sida med Anax Flat'."
 ...
 Bygg en redovisa-sida till kursen design
 ===================================
@@ -16,14 +16,6 @@ De behöver installera din redovisa-sida, fylla den med innehåll och sedan läg
 Du skall skapa ett Git-repo av din redovisa-sida och ladda upp den på GitHub.
 
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Dokumentet är under bearbetning inför kursstarten höstn 2018.
-
-[/WARNING]
 
 
 
@@ -41,7 +33,7 @@ Gör följande steg för att förbereda dig för uppgiften.
 
 Du kan se hur jag jobbar igenom stegen i videoserien "[En redovisa-sida i kursen design](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-y0_ymHyufjEL42IBQjP3m)".
 
-[YOUTUBE src="XXX" list="PLKtP9l5q3ce-y0_ymHyufjEL42IBQjP3m" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
+[YOUTUBE src="B-x_2D8yReI" list="PLKtP9l5q3ce-y0_ymHyufjEL42IBQjP3m" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
 
 
 
@@ -162,7 +154,7 @@ Kör följande två kommandon i din terminal.
 
 ```text
 git config --global alias.hist 'log --all --decorate --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
-git config --global alias.tree 'log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all'
+git config --global alias.tree "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
 ```
 
 Du har nu två alias som du kan använda för att visa din commit-historik.
@@ -176,7 +168,7 @@ Du får fram en lista av dina commits, den senaste visas överst.
 
 
 
-### GitHub {#git}
+### GitHub {#github}
 
 Gå till GitHub och skapa ett nytt repository dit du kan ladda upp git-repot.
 
@@ -192,25 +184,6 @@ Använd SSH-nycklar för att identifiera dig, det blir så mycket enklare att sl
 Får du problem med SSH-nycklarna så pröva igen. Som plan B kan du använda http som metod att publicera på GitHub och försöka med SSH-nycklarna en annan dag.
 
 Nu har du publicerat din me-sida på GitHub.
-
-
-
-### Bekanta dig {#bekanta}
-
-Bekanta dig med strukturen för din redovisa-katalog och se vad som där finns.
-
-Du kan ta hjälp av videoserien för att till exempel kolla in följande.
-
-* Modifiera en befintlig sida.
-* Modifiera innehållet i ett block (footer, aside).
-* Redigera flash-bild för en specifik sida (flash).
-* Lägg till ett nytt block till ett befintligt sida och styla den (byline).
-* Var skriver jag redovisningstexten?
-* Lägg till en ny sida och infoga i navbaren.
-* Byt stil med styleväljaren.
-* Lägg till en egen stylesheet.
-* Aktivera en stylesheet som default style i `config/page.php`.
-* Hur man taggar sitt Git repo och pushar en tagg till GitHub.
 
 
 
@@ -237,6 +210,26 @@ git push --tags
 
 
 
+### Bekanta dig {#bekanta}
+
+Bekanta dig med strukturen för din redovisa-katalog och se vad som där finns.
+
+Du kan ta hjälp av videoserien för att till exempel kolla in följande.
+
+* Modifiera en befintlig sida.
+* Modifiera innehållet i ett block (aside).
+* Lägga till ett nytt block (aside).
+* Modifiera innehållet i ett footer-block.
+* Redigera flash-bild för en specifik sida (flash).
+* Lägg till ett nytt block till ett befintligt sida och styla den (byline).
+* Var skriver jag redovisningstexten?
+* Lägg till en ny sida och infoga i navbaren.
+* Byt stil med styleväljaren.
+* Lägg till en egen stylesheet.
+* Aktivera en stylesheet som default style i `config/page.php`.
+
+
+
 Krav {#krav}
 -----------------------
 
@@ -251,6 +244,8 @@ Krav {#krav}
 1. På din about-sida skall du lägga en länk till GitHub-repot för din me-sida.
 
 1. Byt ut den bilden som nu finns med som *flash-bild* på alla sidorna. Lägg dit en egen bild som du tycker passar. Du kan ha olika bilder på olika sidor, om du vill och alla sidor behöver inte ha en flash-bild.
+
+1. Lägg till en egen byline på din förstasida.
 
 1. Fyll i *ett utkast* till din redovisningstext för detta kursmomentet på rätt plats i sidan för redovisningar. Skriv färdigt redovisningstexten när du är helt klar.
 
