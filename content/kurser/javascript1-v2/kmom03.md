@@ -12,13 +12,15 @@ revision:
 Kmom03: Funktioner
 ==================================
 
-[WARNING]
+[INFO]
 
-**Kursutveckling pågår**
+**Öppen för "early adopters"**
 
-Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+Kursmomentet är nu klart att påbörjas. Så länge det är blåmarkerat tillkommer det inte nya uppgifter, vilket innebär att en inlämning som följer kraven kommer bedömmas och rättas.
 
-[/WARNING]
+All form av feedback är välkommet i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=42&t=7881&p=62801#p62726).
+
+[/INFO]
 
 I JavaScript handlar det mycket om funktioner och språket är delvis ett funktionsorienterat programmeringsspråk. Låt oss nu träna på funktioner i alla dess varianter för att komma i gång med hur de fungerar, är uppbyggda och strukturerade. Att organisera sin kod i funktioner är första steget mot att skriva större och väl organiserade program.
 
