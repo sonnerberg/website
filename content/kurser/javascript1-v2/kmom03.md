@@ -12,13 +12,15 @@ revision:
 Kmom03: Funktioner
 ==================================
 
-[WARNING]
+[INFO]
 
-**Kursutveckling pågår**
+**Öppen för "early adopters"**
 
-Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
+Kursmomentet är nu klart att påbörjas. Så länge det är blåmarkerat tillkommer det inte nya uppgifter, vilket innebär att en inlämning som följer kraven kommer bedömmas och rättas.
 
-[/WARNING]
+All form av feedback är välkommet i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=42&t=7881&p=62801#p62726).
+
+[/INFO]
 
 I JavaScript handlar det mycket om funktioner och språket är delvis ett funktionsorienterat programmeringsspråk. Låt oss nu träna på funktioner i alla dess varianter för att komma i gång med hur de fungerar, är uppbyggda och strukturerade. Att organisera sin kod i funktioner är första steget mot att skriva större och väl organiserade program.
 
@@ -86,13 +88,14 @@ Det finns inga lästips.
 
 *(ca: 12-16 studietimmar)*
 
-<!--
+
 ###Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
-Det finns inga övningar.
--->
+1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 3 gäller delen:
+    * [Funktioner](guide/javascript1/section_break_6)
+
 
 
 ###Uppgifter {#uppgifter}
@@ -101,9 +104,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör laborationen "[JavaScript med funktioner](uppgift/javascript-med-funktioner)". Spara resultatet i `me/kmom03/lab3`.
 
-2. Gör uppgiften "[Rita flaggor med JavaScript och funktioner](uppgift/gor-svenska-flaggan-med-javascript-html-och-css)". Spara koden i `me/kmom03/flag2`.
+1. Gör uppgiften "[sandbox steg 3](uppgift/sandbox-steg-3)". Spara resultatet i `me/kmom03/sandbox3`.
 
-3. Gör uppgiften ["Flytta runt Baddie på webbsidan #2"](uppgift/flytta-baddie-pa-webbsida-2). Spara koden i `me/kmom03/baddie2`.
+1. Gör uppgiften "[Rita flaggor med JavaScript och funktioner](uppgift/gor-svenska-flaggan-med-javascript-html-och-css)". Spara koden i `me/kmom03/flag2`.
+
+<!-- 3. Gör uppgiften ["Flytta runt Baddie på webbsidan #2"](uppgift/flytta-baddie-pa-webbsida-2). Spara koden i `me/kmom03/baddie2`. -->
 
 
 
@@ -126,3 +131,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur känner du för funktioner i JavaScript, kan du relatera liknande konstruktioner i något annat programspråk?
 * Vad tyckte du om de olika uppgifterna? Hur tänkte du när du utförde dem? Var de svåra eller lätta?
+* Vad är din TIL för det här kursmomentet?

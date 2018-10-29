@@ -1,6 +1,6 @@
 ---
 ...
-Funktioner
+Allmänt
 ==================================
 
 Funktioner är ett spännande kapitel i JavaScript. Även om allt är objekt så är JavaScript ett funktionsorienterat språk, men mer om det senare. Först tar vi grunderna.
@@ -8,23 +8,23 @@ Funktioner är ett spännande kapitel i JavaScript. Även om allt är objekt så
 Funktioner kan skapas på olika sätt, jämför följande sätt att använda och skapa en funktion.
 
 ```javascript
-function square (x) {           // Traditionellt sätt, 
+function square (x) {           // Traditionellt sätt,
   return x*x;                   // att jämföra med C/C++, PHP.  
 }
 val = square(x);
 
-var square = function (x) {     // Funktions literal / Funktion expression, 
+var square = function (x) {     // Funktions literal / Funktion expression,
   return x*x;                   // funktionen tilldelas en variabel
 }
 val = square(x);
 
-element.onclick = function () {  // Namnlös funktion som används 
+element.onclick = function () {  // Namnlös funktion som används
   alert('Hello');                // som eventhanterare.
 }
 
 element.addEventListener("click", function () {
   alert('Hello');                // Variant på namnlös funktion som
-});                              // eventhanterare som skickas som 
+});                              // eventhanterare som skickas som
                                  // parameter i en funktion.
 ```
 
@@ -58,11 +58,11 @@ Man kan även hantera en variabel argument-lista med identifieraren `arguments` 
 ```javascript
 function sum() {
   var i, sum = 0;
-  
+
   for(i = 0; i < arguments.length; i++) {
     sum += arguments[i];
   }
-  
+
   return sum;
 }
 
@@ -74,7 +74,7 @@ Den inbyggda variabeln `arguments` är en array som innehåller samtliga argumen
 
 
 
-###Övning tärning med funktioner {#uppgift-tarning}
+<!-- ###Övning tärning med funktioner {#ovning-tarning}
 
 Gör ett tärningsprogram, där en tärning kastas, snittvärdet beräknas och visas tillsammans med slagserien. Gör så här:
 
@@ -85,4 +85,4 @@ Så här kan det se ut när du kör ditt program.
 
 [FIGURE src=/image/snapht15/js-dice.png caption="Tärningar uppbyggt av funktioner."]
 
-Så här blev mitt [testprogram för tärningen](javascript/core/throwing-dice-using-functions/).
+Så här blev mitt [testprogram för tärningen](javascript/core/throwing-dice-using-functions/). -->

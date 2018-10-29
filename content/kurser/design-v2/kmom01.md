@@ -88,16 +88,6 @@ Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boke
 I guiden tittar vi på hur vi kan använda CSS tillsammans med HTML för att implementera designprinciper. I sektionen [Grunderna](guide/design-med-html5-och-css3/grunderna) tittar vi på grundläggande struktur för HTML och på vilka sätt vi kan applicera styling med CSS.
 
 
-<!--
-### Tekniker för att skriva för webben {#skriva}
-
-1. Det är viktigt att ha koll på hur vi skall tänka när vi skriver för webben. Under kursen skall vi läsa igenom guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)". Du kan börja kort med följande kapitel, bara för att bekanta dig med materialet.
-
-    * 1. Innehållsförteckning
-    * 2. Förord
--->
-
-
 
 ### Markdown {#markdown}
 
@@ -132,6 +122,44 @@ I detta kursmomentet jobbar vi med CSS. Läs följande.
     * Categorizing CSS Rules
     * Base Rules
     * Layout Rules
+
+
+
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 8-10 studietimmar)*
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgift skall utföras och redovisas.
+
+1. Lös uppgiften "[Bygg en redovisa-sida till kursen design](uppgift/bygg-en-redovisa-sida-till-kursen-design)". Du skall bygga en redovisa-sida som du taggar och publicerar på GitHub. Spara allt under `me/redovisa`.
+
+1. Försäkra dig om att du har gjort `dbwebb publish redovisa` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Se till att följande frågor besvaras i redovisningstexten.
+
+* Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser?
+* Det blev en del nya verktyg och tekniker i labbmiljön och för att jobba med redovisa sidan, är du bekant med några av dem sedan tidigare?
+* Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarhet för webben?
+* Hur kändes det att styla webbplatsen med CSS? Gick det bra?
+* Vilken är din TIL för detta kmom?
+
+TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
+
+
 
 
 <!--
@@ -218,49 +246,11 @@ https://medium.com/@afrench53198/reusable-maintainable-and-modular-css-b0ffedf1c
 
 -->
 
-
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-10 studietimmar)*
-
-
 <!--
-### Övningar {#ovningar}
+### Tekniker för att skriva för webben {#skriva}
 
-Genomför följande övning för att förbereda inför uppgifterna.
+1. Det är viktigt att ha koll på hur vi skall tänka när vi skriver för webben. Under kursen skall vi läsa igenom guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)". Du kan börja kort med följande kapitel, bara för att bekanta dig med materialet.
 
-1. Lär känna ramverket Anax Flat genom att bygga webbplats. Jobba igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
+    * 1. Innehållsförteckning
+    * 2. Förord
 -->
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgift skall utföras och redovisas.
-
-1. Lös uppgiften "[Bygg en redovisa-sida till kursen design](uppgift/bygg-en-redovisa-sida-till-kursen-design)". Du skall bygga en redovisa-sida som du taggar och publicerar på GitHub. Spara allt under `me/redovisa`.
-
-1. Försäkra dig om att du har gjort `dbwebb publish` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
-
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser?
-* Det blev en del nya verktyg och tekniker i labbmiljön och för att jobba med redovisa sidan, är du bekant med några av dem sedan tidigare?
-* Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarhet för webben?
-* Hur kändes det att styla webbplatsen med CSS? Gick det bra?
-* Vilken är din TIL för detta kmom?
-
-TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.

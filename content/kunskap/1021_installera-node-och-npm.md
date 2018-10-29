@@ -6,6 +6,7 @@ category:
     - nodejs
     - npm
 revision:
+    "2018-10-25": (D, mos) Lyft fram Windows 10 Bash.
     "2018-01-18": (C, mos) Uppdatera linux och pakethanterare installationen.
     "2016-11-01": (B, mos) Bytte ut nodejs mode node i verifiering.
     "2016-10-14": (A, mos) Första utgåvan.
@@ -41,7 +42,7 @@ Du har installerat de [grundverktyg](labbmiljo) som ligger till grund för samtl
 
 
 
-Installera på Windows {#windows}
+Installera på Windows och Cygwin {#windows}
 -------------------------------
 
 Gå till [nedladdningssidan för Node](https://nodejs.org/en/download/). Ladda ned installationsprogrammet och installera.
@@ -50,11 +51,11 @@ Programmen node och npm läggs till i din PATH automatiskt.
 
 Du kan nu starta programmen från Cygwin (och från `cmd.exe`). Men starta om din terminal så att den får del av den uppdaterade pathen.
 
-```bash
-$ which node
-$ node --version
-$ which npm
-$ npm --version
+```text
+which node
+node --version
+which npm
+npm --version
 ```
 
 
@@ -66,27 +67,27 @@ Gå till [nedladdningssidan för Node](https://nodejs.org/en/download/). Ladda n
 
 Du kan nu starta programmen från din terminal.
 
-```bash
-$ which node
-$ node --version
-$ which npm
-$ npm --version
+```text
+which node
+node --version
+which npm
+npm --version
 ```
 
 
 
-Installera på Linux {#linux}
+Installera på Linux och Windows 10 Bash {#linux}
 -------------------------------
 
-Olika linux-varianter har olika sätt att installera node och npm. Följ instruktionerna på [nedladdningssidan för olika pakethanterare](https://nodejs.org/en/download/package-manager/). Det kan finnas vissa förberedelser som behövs för att du skall kunna installera den senaste versionen, det handlar om vilket repo som apt-get använder för att hämta installationsfilern från. Kolla nedladndingssidan för att vara säker.
+Olika linux-varianter har olika sätt att installera node och npm. Följ instruktionerna på [nedladdningssidan för olika pakethanterare](https://nodejs.org/en/download/package-manager/). Det kan finnas vissa förberedelser som behövs för att du skall kunna installera den senaste versionen, det handlar om vilket repo som apt-get använder för att hämta installationsfilern från. Kolla nedladdningssidan för att vara säker.
 
 Du kan nu starta programmen från din terminal.  
 
 ```bash
-$ which node
-$ node --version
-$ which npm
-$ npm --version
+which node
+node --version
+which npm
+npm --version
 ```
 
 <!--
@@ -104,7 +105,7 @@ Verifiera att Node.js fungerar {#test}
 
 Du kan nu köra JavaScript med node. Pröva följande.
 
-```bash
+```text
 $ node --help
 $ node --eval "console.log('Hello World');"
 Hello World
@@ -112,7 +113,7 @@ Hello World
 
 Du kan också köra node interaktivt och evaluera JavaScript rad för rad. Programmet visar att den är redo för inmatning med prompten `>`.
 
-```bash
+```text
 $ node
 > console.log("Hej")
 Hej
@@ -127,7 +128,7 @@ Så här kan det se ut.
 
 Du kan också låta nodejs köra JavaScript-program som finns i filer.
 
-```bash
+```text
 $ echo "console.log('Hello')" > hello.js
 $ node hello.js
 Hello
@@ -144,7 +145,7 @@ Verifiera att npm fungerar {#test1}
 
 Se vad du kan göra med npm.
 
-```bash
+```text
 $ npm --help
 ```
 
@@ -155,4 +156,6 @@ Avslutningsvis {#avslutning}
 
 Det finns en [forumtråd om node och npm](t/5801). Ställ frågor där och dela med dig av dina tips och trix.
 
+<!--
 Det finns också en artikel som visar hur man [installerar node, npm och babel på debian](kunskap/kom-igang-med-node-js-pa-debian).
+-->

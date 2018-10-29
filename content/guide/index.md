@@ -11,6 +11,7 @@ Guider i produktionsläge.
 * [Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)
 * [Kom igång med objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)
 * [Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)
+* [Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)
 
 Guider under utveckling till hösten 2018.
 
@@ -18,7 +19,7 @@ Guider under utveckling till hösten 2018.
 * [Design med HTML5 och CSS3](guide/design-med-html5-och-css3)
 <!-- * [Kom igång med HTML](guide/kom-igang-med-html)
 * [Kom igång med CSS](guide/kom-igang-med-css) -->
-* [Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)
+* [Programmering med JavaScript](guide/javascript1)
 
 <!--
 * Desinax tema och dess moduler
@@ -32,4 +33,4 @@ Guider under utveckling till våren 2019.
 
 Guider som ligger till sig och eventuellt utvecklas framöver.
 
-* [Programmering med JavaScript](guide/javascript) (delar av material som använts i kursen javascript, guiden delvis påbörjad, avvaktar eventuell utveckling av kursen javascript1)
+<!-- * [Programmering med JavaScript](guide/javascript) (delar av material som använts i kursen javascript, guiden delvis påbörjad, avvaktar eventuell utveckling av kursen javascript1) -->

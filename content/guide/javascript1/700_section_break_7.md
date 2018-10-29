@@ -2,7 +2,7 @@
 sectionHeader: true
 linkable: true
 ...
-Objekt
+Arrayer
 =======================
 
-Lite om objekt
+Lite om arrayer

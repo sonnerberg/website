@@ -27,11 +27,9 @@ Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar u
 
 Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*.
 
-Sedan tittar på på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen. Vårt horisontella grid skall inte bara gälla de typografiska elementen utan samtliga element som placeras ut på webbsidan.
+Vi tittar sedan vidare på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen. Vårt horisontella grid skall inte bara gälla de typografiska elementen utan samtliga element som placeras ut på webbsidan. Du kommer få lära dig innebörden av det magiska talet.
 
-Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt grid. Samtidigt förbereder vi temat för att bli enkelt att styla med olika typsnitt.
-
-
+Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt grid. Vi jobbar vidare med responsiviteten, nu är utmaningen att göra gridet responsivt. Vi förbereder temat för att bli enkelt att styla med olika typsnitt.
 
 <!--more-->
 
@@ -69,6 +67,81 @@ I sektionen [Grid och typografi](guide/design-med-html5-och-css3/grid-och-typogr
 
 
 
+### Grid-baserad layout {#grid}
+
+Läs för att få en introduktion och översikt till gridbaserad layout och bakgrunden för ett vertikalt grid.
+
+1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layout handlar om.
+
+1. Läs översiktligt artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Denna artikel hanterar samma teknik som tas upp i uppgiften så se det som en bakgrundsartikel.
+
+
+
+### Typografisk webb {#type}
+
+Tänk dig en typografisk webbplats där all styling har lagts på de typografiska elementen. Hur kan det se ut? Läs och kika på följande resurser för att få en kort introduktion i ämnet.
+
+1. Det finns en delvis skriven onlinebook "[En praktisk guide till typografi på webben](http://webtypography.net/)" som kan inspirerad dig när det gäller typografiska tekniker på webben. Läs följande kapitel i boken.
+    * [Introduction](http://webtypography.net/intro/)
+    * [2.2 Vertical Motion](http://webtypography.net/toc#2.2)
+
+1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik som används till webbplatsen dbwebb när det handlar om att generera typografiska element.
+
+
+
+### LESS moduler för grid {#desinax}
+
+I uppgiften kommer du att integrera ditt tema med ett vertikalt grid och ett typgrafiskt grid. För att göra det kommer du att använda följande LESS-moduler. Börja med att snabbt läsa igenom deras README-filer och titta på exemplen för att bekanta dig med dem.
+
+1. Vertikalt grid med [desinax/vertical-grid](https://github.com/desinax/vertical-grid/).
+1. Typgrafiskt grid med [desinax/typografic-grid](https://github.com/desinax/typografic-grid/).
+
+
+
+### Om responsivitet {#responsivitet}
+
+Läs följande om responsivitet.
+
+1. Läs artikeln "[Responsive Web Design Patterns](https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns)" som ger dig en insyn i olika mönster för hur man kan tänka när man stylar olika regioner för att uppnå responsivitet.
+
+
+
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 8-10 studietimmar)*
+
+
+
+### Uppgifter {#uppgifter}
+
+Dessa uppgifter skall utföras och redovisas.
+
+1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/bygg-ett-tema-med-vertikalt-och-horisontellt-grid)".
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 3.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Se till att följande frågor besvaras i redovisningstexten.
+
+* Hur känns det att vara styrd till ett vertikalt grid, hämmande eller stödjande?
+* Hur känns det att jobba med ett typografiskt horisontellt/baseline grid, ser du någon poäng med det?
+* Berätta om hur du valde typsnitt till din webbplats.
+* Har du jobbat med liknande gridbaserade layouttekniker sedan tidigare?
+* Hur känns det att jobba med LESS och moduler? Lyckas du återanvända moduler mellan teman för kmom02 och kmom03?
+* Vilken är din TIL för detta kmom?
+
+
+
+
 <!--
 ### Tekniker för att skriva för webben {#skriva}
 
@@ -92,46 +165,9 @@ Läs följande artiklar.
 -->
 
 
-
-### Varianter på responsivitet {#responsivitet}
-
-Läs följande om responsivitet.
-
-1. Läs artikeln "[Responsive Web Design Patterns](https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns)" som ger dig en insyn i olika mönster för hur man kan tänka när man stylar olika regioner för att uppnå responsivitet.
-
-
-
-### LESS moduler för grid {#desinax}
-
-I uppgiften kommer du att integrera ditt tema med ett vertikalt grid och ett typgrafiskt grid. För att göra det kommer du att använda följande LESS-moduler. Börja med att snabbt läsa igenom deras README-filer och titta på exemplen för att bekanta dig med dem.
-
-1. Vertikalt grid med [desinax/vertical-grid](https://github.com/desinax/vertical-grid/).
-1. Typgrafiskt grid med [desinax/typografic-grid](https://github.com/desinax/typografic-grid/).
-
-
-
-### Grid-baserad layout {#grid}
-
-Läs följande för att fördjupa dig i gridbaserad layout och ett vertikalt grid.
-
-1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layout handlar om.
-
-1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Denna artikel hanterar samma teknik som tas upp i övningen och uppgiften så se det som en bakgrundsartikel.
-
 <!--
 1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/archive/layout/) och [typografi](http://primercss.io/archive/type/). Se det som ett exempel på hur ett ramverk för grid och typografi kan se ut. (_note 2017: Google håller på och uppdaterar sitt ramverk_).
 -->
-
-
-### Typografisk webb {#type}
-
-Tänk dig en typografisk webbplats där all styling har lagts på de typografiska elementen. Hur kan det se ut? Kika på följande webbplatser och inhämta inspiration.
-
-1. [En praktisk guide till typografi på webben](http://webtypography.net/), en högst läsbar bok och samtidigt ett stilexempel på hur en typografiskt stilad webbplats kan se ut. Läs Introduktionen och kapitlet 2.2 Vertical Motion. Övrigt kan du se online-boken som en resurs in i typografins värld.
-
-1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik som används till webbplatsen dbwebb när det handlar om typografiska element.
-
-
 
 <!--
 ### Video  {#video}
@@ -153,49 +189,3 @@ Se följande som extra men relevanta läsövningar. Det är närbesläktade konc
 
 1. [CSS Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) är en standard (på gång) som kan erbjuda ett gridbaserat system med ren och standardiserad CSS.
 -->
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-10 studietimmar)*
-
-
-
-<!--
-### Övningar {#ovningar}
-
-Genomför följande övning för att förbereda inför uppgifterna.
-
-1. Jobba igenom artikeln "[Använd ett vertikalt grid med Anax Flat](kunskap/anvand-vertikalt-grid-med-anax-flat)" som visar dig grunden i att implementera ett grid i CSS och LESS.
-
-1. Jobba igenom artikeln "[Skapa ett horisontellt grid för typografi](kunskap/skapa-ett-horisontellt-grid-for-typografi)" som visar hur du skapar en vertikal rytm i din webbplats.
--->
-
-
-
-### Uppgifter {#uppgifter}
-
-Dessa uppgifter skall utföras och redovisas.
-
-1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/bygg-ett-tema-med-vertikalt-och-horisontellt-grid)".
-
-1. Försäkra dig om att du har gjort `dbwebb publishpure` och taggat din inlämning med version 3.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
-
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Hur känns det att vara styrd till ett vertikalt grid, hämmande eller stödjande?
-* Hur känns det att jobba med ett typografiskt horisontellt/baseline grid, ser du någon poäng med det?
-* Berätta om hur du valde typsnitt till din webbplats.
-* Har du jobbat med liknande layouttekniker sedan tidigare?
-* Vilken är din TIL för detta kmom?
