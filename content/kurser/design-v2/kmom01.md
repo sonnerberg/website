@@ -3,22 +3,14 @@ author:
   - mos
   - efo
 revision:
+    "2018-10-29": (E, mos) Nytt dokument inför uppdatering av kursen.
     "2018-10-19": (D, efo) Uppdatering med design guide.
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-10-19": (C, mos) Genomläst, labbmiljön justerad.
     "2016-10-26": (B, mos) Omstrukturerad efter feedback.
     "2016-10-07": (A, mos) Första release.
 ...
 Kmom01: Ramverk, innehåll, style
 ====================================
-
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
 
 [FIGURE src=image/snapht18/design-kmom01-me.png?w=c8 class="right"]
 
@@ -45,6 +37,15 @@ Under kursens gång så kommer du att introduceras till ett par tekniker som är
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Introduktion {#intro}
+-----------------------
+
+I videoserien "[Kursen design (v2)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip)" kan du kika på de videor som börjar på 0* och 1*. De ger dig en kort intro till kursen och kmom01.
+
+[YOUTUBE src="OIbV-0OPJxM" list="PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip" width=700 caption="Säg hej till kursen design."]
 
 
 
