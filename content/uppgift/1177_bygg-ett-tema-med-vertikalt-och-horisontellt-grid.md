@@ -60,9 +60,7 @@ Innan du börjar med detta så blir det enklast om du nollställer alla widths, 
 
 Du skall använda dig av ett vertikalt grid i form av modulen [desinax/vertical-grid](https://github.com/desinax/vertical-grid/). I README-filen står det hur du integrerar gridet i ditt eget tema.
 
-Modulen finns redan installerad i ditt repo under `theme/src/@desinax/vertical-grid` så du beheöver inte installera det.
-
-När du börjar integrera så använd de standardinställningar som finns.
+Modulen finns redan installerad i ditt repo under `theme/src/@desinax/vertical-grid` så du behöver inte installera något.
 
 Se till att man kan göra showgrid på ditt grid genom att lägga till `?vgrid` på länken till godtycklig sida. Ramverket har stöd för att lägga till klassen `.vgrid` i elementet `<html>`, men du behöver implementera så att gridet verkligen visas.
 
@@ -70,7 +68,13 @@ Se till att man kan göra showgrid på ditt grid genom att lägga till `?vgrid` 
 
 ### Implementera ett horisontellt grid {#hgrid}
 
+Innan du börjar med detta så blir det enklast om du nollställer all typografi som du lagt till. Börja med "ren" och ostylad typografi, så gått du kan. Du kan lägga till style på typografin när du är klar med att integrera gridet.
 
+Du skall använda dig av ett horisontellt grid i form av modulen [desinax/typographic-grid](https://github.com/desinax/typographic-grid/). I README-filen står det hur du integrerar gridet i ditt eget tema.
+
+Modulen finns redan installerad i ditt repo under `theme/src/@desinax/typographic-grid` så du behöver inte installera något.
+
+Se till att man kan göra showgrid på ditt grid genom att lägga till `?hgrid` på länken till godtycklig sida. Ramverket har stöd för att lägga till klassen `.hgrid` i elementet `<html>`, men du behöver implementera så att gridet verkligen visas.
 
 
 
@@ -79,20 +83,28 @@ Se till att man kan göra showgrid på ditt grid genom att lägga till `?vgrid` 
 Du kan ta hjälp av videoserien för att kolla in hur man gör ovanstående och hur det kan se ut.
 
 * Hur styla med det vertikala gridet för att få en responsiv webbplats.
-* HUr fungerar `?vgrid` och `?hgrid`?
+* Hur fungerar `?vgrid` och `?hgrid`?
+* Styla footer med gridet.
+* Styla header och navbar med gridet.
+* Styla 1, 2 och 3 kolumners layout med gridet.
+* Anpassa din typografi.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Lägg till en stylesheet `theme/src/kmom03.less` (tema för kmom03), återanvänd de moduler du utvecklat i samband med kmom02, eller gör nya.
+1. Lägg till en stylesheet `theme/src/kmom03.less` (tema för kmom03), återanvänd de less-moduler du utvecklat i samband med kmom02, eller gör nya.
 
-1. I temat för kmom03, lägg till det vertikala gridet och styla regionerna i din webbplats enbart med gridet. Använd `@desinax/vertical-grid`.
+1. I temat för kmom03, lägg till det vertikala gridet och styla regionerna i din webbplats _enbart_ med gridet. Använd `@desinax/vertical-grid`.
 
-1. I temat för kmom03, lägg till det horisontella gridet. Gör ett medvetet val av typsnitt och eventuellt så stylar du din typgrafi. Använd `@desinax/typografic-grid`.
+1. I temat för kmom03, lägg till det horisontella gridet. Gör ett medvetet val av typsnitt och eventuellt så stylar du din typgrafi lite extra. Använd `@desinax/typografic-grid`.
 
-1. Gör din webbplats responsiv med hjälp av ditt vertikala grid. 
+1. Gör din webbplats responsiv med hjälp av ditt vertikala grid.
+
+1. Din header och footer skall fungera väl när det gäller responsiviteten.
+
+1. Kolumnlayout för en, två och/eller tre kolumners layout skall fungera flexibelt samt ha en responsivitet.
 
 1. Man skall kunna visa ditt grid med `?vgrid` och `?hgrid` på godtycklig sida.
 

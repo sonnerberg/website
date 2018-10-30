@@ -23,9 +23,11 @@ Kursstart hösten 2018.
 [/WARNING]
 
 
+[FIGURE src=image/snapht18/hgrid_showgrid.png?crop=250,150,left,top&a=10,0,0,0  class="right" caption="Vad är ett magiskt tal?"]
+
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
 
-Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*.
+Vi skall titta på ett **vertikalt grid** som ger oss kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*. Här kan vi placera våra regioner i rader.
 
 Vi tittar sedan vidare på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen. Vårt horisontella grid skall inte bara gälla de typografiska elementen utan samtliga element som placeras ut på webbsidan. Du kommer få lära dig innebörden av det magiska talet.
 
@@ -33,11 +35,24 @@ Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt g
 
 <!--more-->
 
-[FIGURE src=/image/snapvt16/grid-displayed.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
+Ett vertikalt grid ger kolumner med mellanrum där webbsidans regioner skall platsa in.
 
-[FIGURE src=/image/snapvt16/typografiskt-grid.png?w=w2 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]
+[FIGURE src=image/snapht18/vgrid_showgrid.png?w=w3 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
+
+Vi jobbar med ett typografiskt grid och försöker få alla typografiska element att luta mot en linje.
+
+[FIGURE src=image/snapht18/hgrid_showgrid.png?w=w3 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Introduktion {#intro}
+-----------------------
+
+I videoserien "[Kursen design (v2)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip)" kan du kika på de videor som börjar på 3*. De ger dig en kort introduktion till detta kmom.
+
+[YOUTUBE src="XXX" list="PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip" width=700 caption="Intro till kmom03."]
 
 
 
@@ -94,7 +109,7 @@ Tänk dig en typografisk webbplats där all styling har lagts på de typografisk
 I uppgiften kommer du att integrera ditt tema med ett vertikalt grid och ett typgrafiskt grid. För att göra det kommer du att använda följande LESS-moduler. Börja med att snabbt läsa igenom deras README-filer och titta på exemplen för att bekanta dig med dem.
 
 1. Vertikalt grid med [desinax/vertical-grid](https://github.com/desinax/vertical-grid/).
-1. Typgrafiskt grid med [desinax/typografic-grid](https://github.com/desinax/typografic-grid/).
+1. Typgrafiskt grid med [desinax/typografic-grid](https://github.com/desinax/typographic-grid/).
 
 
 
