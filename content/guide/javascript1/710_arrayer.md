@@ -1,6 +1,6 @@
 ---
 ...
-Array
+Allmänt om arrayer
 ==================================
 
 En [`array`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array) är en numrerad lista med värden. En array har en längd. Det finns ett antal metoder som hjälper dig att jobba med arrayer.
@@ -30,19 +30,11 @@ console.log(course[9]);      // undefined
 
 Du kan utöka arrayen dynamiskt genom att tilldela den fler element i slutet av arrayen eller på en viss position. En position som inte fått ett värde tilldelat har värdet `undefined`. När du sätter längden på en array kan du trunkera den, som i exemplet ovan där det finns ett element på position 9 som försvinner när vi sätter arrayens längd till 4.
 
-Att loopa genom en array kan man göra med for-loopen.
-
-```javascript
-for(i = 0; i < course.length; i++) {
-    console.log(course[i]);
-}
-```
-
 Objektet [Array](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array) innehåller en hel del metoder som du kan ha nytta av när du jobbar med arrayer. Kika på manualsidan och se om du känner igen några av metoderna.
 
 
 
-###Övning Boulder Dash {#uppgift-boulder}
+<!-- ###Övning Boulder Dash {#uppgift-boulder}
 
 Låt oss använda arrayer för att göra ett spel influerat av [Boulder Dash](http://sv.wikipedia.org/wiki/Boulder_Dash), eller ja, en spelplan iallafall. Tanken är att testa hur en array kan användas.
 
@@ -58,4 +50,4 @@ Så här blev det för mig.
 
 Så här blev koden för [exempelprogrammet för mig](javascript/core/boulder-dash-with-arrays/).
 
-Du kan även titta på detta utökade exempel där min [baddie går runt](javascript/lekplats/boulder-dash-with-arrays/) på spelplanen.
+Du kan även titta på detta utökade exempel där min [baddie går runt](javascript/lekplats/boulder-dash-with-arrays/) på spelplanen. -->

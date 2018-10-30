@@ -109,6 +109,7 @@ Det finns inga lästips.
 ### Övningar {#ovningar}
 
 1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 2 gäller delarna:
+    * [Loopar och villkor](guide/javascript1/section_break_3-5)
     * [Hantera DOM](guide/javascript1/section_break_4)
     * [Eventlyssnare](guide/javascript1/section_break_5)
 <!--
