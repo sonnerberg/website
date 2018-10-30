@@ -3,24 +3,15 @@ author:
   - mos
   - efo
 revision:
+    "2018-10-30": (F, mos) Nytt dokument inför uppdatering av kursen.
     "2018-10-19": (E, efo) Uppdatering med design guide.
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-10-27": (D, mos) Genomgången inför ht17.
     "2016-10-26": (C, mos) Flyttad från kmom01 till 02 efter feedback.
     "2016-10-15": (B, mos) Testad och genomgången.
     "2016-06-22": (A, mos) Första utgåvan.
 ...
-Kmom02: LESS och responsiv design
+Kmom02: LESS och responsivitet
 ====================================
-
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 
 [FIGURE src=image/snapht18/design-kmom02-responsive.png?w=c7  class="right" caption="Hur responsiv kan vår webbplats bli?"]
 
@@ -48,6 +39,17 @@ Vi vet sedan kmom01 att sidan består av flera regioner som vi kan styla. HUr de
 
 
 
+Introduktion {#intro}
+-----------------------
+
+I videoserien "[Kursen design (v2)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip)" kan du kika på de videor som börjar på 2*. De ger dig en kort introduktion till detta kmom.
+
+[YOUTUBE src="IW26JHQTc8I" list="PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip" width=700 caption="Intro till kmom02."]
+
+Missa inte videon som visar hur exempelprogrammet `example/less` fungerar.
+
+
+
 Labbmiljön  {#labbmiljo}
 ---------------------------------
 
@@ -56,8 +58,6 @@ Labbmiljön  {#labbmiljo}
 Installera följande.
 
 1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](labbmiljo/node-och-npm)".
-
-1. _@TODO Videorna förutsätter att kompilatorn för LESS, `lessc`, är installerad enligt `npm install less -g`. Skriv installationsdel och eventuellt example/less för att komma igång. Utgå från Andreas videoexempel 1._
 
 
 

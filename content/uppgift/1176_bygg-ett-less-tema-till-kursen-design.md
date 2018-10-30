@@ -5,6 +5,7 @@ category:
     - anax flat
     - less
 revision:
+    "2018-10-30": "(B, mos) Publicerad för design v2."
     "2018-10-15": "(A, mos) Kopia från 'Bygg en ut ditt Anax Flat med eget LESS tema' och omskriven."
 ...
 Bygg ett LESS-tema till kursen design
@@ -12,15 +13,11 @@ Bygg ett LESS-tema till kursen design
 
 Du skall bygga ett tema till din redovisa-sida och du bygger temats stylesheet med hjälp av LESS.
 
+Du börjar strukturera din tema-kod i separata filer som vi kallar less-moduler.
+
+Du lägger till externa moduler och du bygger in responsivitet i ditt tema.
+
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Dokumentet är under bearbetning inför kursstarten höstn 2018.
-
-[/WARNING]
 
 
 
@@ -40,7 +37,7 @@ Gör följande steg för att förbereda dig för uppgiften.
 
 Du kan se hur jag jobbar igenom stegen i videoserien "[Bygg ett LESS-tema till kursen design](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-HCkrXAcedUGv14A68Sv57)".
 
-[YOUTUBE src="XXX" list="PLKtP9l5q3ce-HCkrXAcedUGv14A68Sv57" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
+[YOUTUBE src="8S2K7qAeD5Q" list="PLKtP9l5q3ce-HCkrXAcedUGv14A68Sv57" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
 
 
 
@@ -50,7 +47,7 @@ Det finns en katalog som är förberedd för att jobba med ett LESS-tema till di
 
 ```text
 # Stå i rooten av kursrepot
-rsync -av example/tema/ me/redovisa/theme/
+rsync -av example/theme/ me/redovisa/theme/
 cd me/redovisa
 ```
 
@@ -68,7 +65,7 @@ Kommandot make ser till att installera det som behövs i form av utvecklingsmilj
 
 
 
-### Bygg ditt första LESS-tema {#makeless}
+### Grunden till ditt första LESS-tema {#makeless}
 
 Du har sedan tidigare ett tema `kmom01.css`. Ta nu en kopia av det och placera som en LESS-modul. Följande kommando hjälper dig.
 
@@ -92,30 +89,26 @@ Dina teman ligger i `theme/src/*.less` och de kommer att kompileras till stylesh
 
 Bort med kommentaren. Du kan nu pröva att kompilera dit tema `kmom01_v2`.
 
+<!--
 ```text
 # Stå i me/redovisa/theme
 make build
 ```
 
 Make kommer att kompilera, eller bygga, ditt tema och utgå från instruktionerna i tema-filen. I katalogen `build` sparas temporära byggfiler och när bygget lyckas så uppdateras temat (stylesheetfilen) i katalogen `htdocs/css`.
-
+-->
 
 
 ### Bygg temat direkt i me/redovisa {meredovisa}
 
-För att göra det enklare att bygga och uppdatera tema-filerna i din `me/redovisa` så kan du bygga filerna direkt i den katalogen via `make theme`. När bygget lyckas så kommer alla teman (stylesheets) att kopieras till `me/redovisa/htdocs/css`.
+För att göra det enkelt att bygga och uppdatera tema-filerna i din `me/redovisa` så kan du bygga filerna direkt i den katalogen via `make theme`. När bygget lyckas så kommer alla teman (stylesheets) att kopieras till `me/redovisa/htdocs/css`.
 
 ```text
 # Stå i me/redovisa
 make theme
 ```
 
-Du kan nu öppna din stilväljare och välja den nya stilen `kmom01_v2` som nu är byggd med LESS-moduler. Inte så många moduler ännu, men det är en start.
-
-
-Att göra kmom01.css till ett LESS-tema för kmom02.less och visa `make less` och berätta vilka filer som kopieras vart.
-
-Bygg även ett `test.less` som är helt tomt, men går bra att använda för att testa LESS konstruktioner.
+Du kan nu öppna din stilväljare och välja den nya stilen `kmom01_v2` som nu är byggd med LESS-moduler. Det är inte så många moduler ännu, men det är en start.
 
 
 
@@ -226,7 +219,7 @@ Prova att kompilera om ditt tema, bara så du inte får några felmeddelanden. A
 
 ### Responsiv meny {#respmeny}
 
-När man jobbar med responsiva webbpaltser kan man behöva alternativa menyar, navigeringsmöjligheter. Små enheter lämpar sig för menyer som man kan öppna och stänga medans större enheter kan ha traditionella navbars, med eller utan kompletterande öppen/stäng menyalternativ.
+När man jobbar med responsiva webbplatser kan man behöva alternativa menyar, navigeringsmöjligheter. Små enheter lämpar sig för menyer som man kan öppna och stänga medans större enheter kan ha traditionella navbars, med eller utan kompletterande öppen/stäng menyalternativ.
 
 Låt oss lägga till stöd för en responsiv meny. Modulen `@desinax/responsive-menu` ligger redan i tema-katalogen under `src/@desinax/responsive-menu`.
 
@@ -248,10 +241,9 @@ Bygg ditt tema och välj det i styleväljaren så kan du se hur den responsiva m
 
 Du kan ta hjälp av videoserien för att kolla in hur man gör ovanstående och hur det kan se ut.
 
-* Vad är skillnaden mellan temats `src/kmom02.less` och modulerna `src/base/kmom02.less` och `src/layout/kmom02.less`?
-* Hur kan man styla innehållskolumnerna för 1, 2 eller 3-kolumners layout?
-* Hur stylar man responsivt?
+* Hur gör man en bild responsiv?
 * Hur kan man styla navbaren och/eller headern på ett responsivt sätt?
+* Hur kan man styla innehållskolumnerna för 1, 2 eller 3-kolumners layout?
 
 
 
@@ -278,7 +270,7 @@ Krav {#krav}
 
 1. Menyn/navbaren skall vara väl fungerande och hyffsat responsiv. Använd de två menyer som finns med och växla mellan dem som du anser rimligt.
 
-1. Innehållsdelen och eventuella sidokolumner skall se bra och och fungera responsivt.
+1. Innehållsdelen och eventuella sidokolumner skall se bra ut i en, två och tre kolumners layout samt fungera hyffsat responsivt.
 
 1. Aktivera din style `kmom02` som default stylesheet i styleväljaren.
 

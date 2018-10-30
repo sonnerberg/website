@@ -11,7 +11,7 @@ revision:
     "2016-10-15": (B, mos) Testad och genomgången.
     "2016-06-22": (A, mos) Första utgåvan.
 ...
-Kmom03: Grid, layout och typografi
+Kmom03: Grid, layout, typografi
 ====================================
 
 [WARNING]
