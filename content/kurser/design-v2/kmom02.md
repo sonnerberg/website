@@ -29,7 +29,7 @@ Vi testar att överföra vårt tema från kmom01 till LESS. Därefter startar vi
 
 [FIGURE src=image/snapht18/design-kmom02.png?w=w3 caption="Ett tomt tema, någonstans skall vi börja att bygga vårt tema."]
 
-Vi vet sedan kmom01 att sidan består av flera regioner som vi kan styla. HUr dessa regioner ser ut kan nu vara intressant med tanke på att de skall bli responsiva.
+Vi vet sedan kmom01 att sidan består av flera regioner som vi kan styla. Hur dessa regioner ser ut kan nu vara intressant med tanke på att de skall bli responsiva.
 
 [FIGURE src=image/snapht18/design-kmom02-regioner.png?w=w3 caption="Vår layout har många regioner som kan behöva styling."]
 
