@@ -111,6 +111,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bygg en redovisa-sida till ramverk1 (v2)](uppgift/bygg-en-me-sida-till-ramverk1-v2)". Du behöver en me-sida, en redovisa-sida och vi använder ramverket Anax för att bygga den. Spara allt under `me/redovisa`.
 
+1. Bygg en kontroller.
+
 <!--
 1. Gör uppgiften "[Förbered för att bygga ett kommentarssystem](uppgift/forbered-for-att-bygga-ett-kommentarssystem)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara eventuell kod under `me/anax`.
 -->
