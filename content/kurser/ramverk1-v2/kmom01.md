@@ -16,56 +16,16 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att anamma ett PHP modul-tänkande. 
+Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att börja anamma ett modultänkande kring PHP och ramverk. 
 
 Vi tittar på ett par seminarier från konferenser och funderar på vad de försöker säga oss om aktuella tekniker och trender. Kanske kan det hjälpa oss när vi nu skall försöka skapa oss en egen bild av ramverksläget i PHP och om allmänna interna strukturer och designmänster i ramverk.
 
 <!--more-->
 
-[FIGURE src=image/snapht17/ramverk1-me.png caption="Kataloger och filer på plats i grunden till en Anax me-sida för kursen ramverk1."]
-
-
-<!--
-Kommentarer från oophp-v4 
-
-Introducera backenden till eshopen?
-Embryo till eshop sql?
-
-(registrera användare, admin av användare)
-
-Kundvagn
-Enhetstesta kundvagn
-
-Inloggning
-Enhetstesta inloggning
-
-Guide abstract methods, classes, final interface, trait
-
-Funktionstestning?
-Enklare sådan, typ curl?
-
-mockup
-prepare testcase, prepare testclass, make mockobject.
-
-Test a trait, interface, abstract class?
-Enklare funktionstester.
-
-Enhetstestning mot databas?
--->
+[FIGURE src=image/snapht18/ramverk1-me.png?w=w3 caption="Vi startar med en me-sida som bygger på ett ramverk med en modulär struktur."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-
-Förkunskaper {#forkunskaper}
----------------------------------
-
-Denna kurs bygger vidare på det du lärt dig under första året på programmet Webbprogrammering och de kurserna du tagit. Även om du har några kurser/kmom släpande efter dig så bör du dock kunna komma igång med kursen då inledningen är av karaktären läs, se och reflektera.
-
-Teknikmässigt bygger kursen främst vidare på strukturen du känner igen från kurserna design och oophp. Vi kodar vidare i Anax som får en uppgraderad struktur av designmönster och modularitet.
-
-Det förekommer skrivuppgifter som man med fördel kan göra i grupp, så skaffa dig en studiekompis eller två, för att hitta någon att diskutera med och för att hjälpas åt med skrivandet.
 
 
 
@@ -74,13 +34,17 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 2-4 studietimmar)*
 
-Det första du behöver göra är att installera en labbmiljö för kursen. Se till att du har gott om tid när du gör detta.
+Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras.
 
-1. Du kan börja med att [installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
-1. [Uppdatera kommandot `dbwebb`](dbwebb-cli/selfupdate).
-
-1. Du kan nu [ladda ned (klona) ditt lokala kursrepo `ramverk1`](dbwebb-cli/clone) som innehåller kursmaterial för kursen.
+```text
+# Gå till din katalog för dbwebb-kurser
+dbwebb selfupdate
+dbwebb clone ramverk1
+cd ramverk1
+dbwebb init
+```
 
 
 
@@ -90,7 +54,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Kika igenom följande artiklar.
 
@@ -100,9 +64,25 @@ Kika igenom följande artiklar.
 
 
 
-###Videor {#videor}
+### Ramverk referenser {#referenser}
 
-Kika på följande videos.
+Under kursen skall vi lära oss om ramverk och de moduler och designmönster som bygger upp dagens ramverk. En plats att lära sig om detta är ramverkens manualer. Här följer ett par av de mer använda ramverken och via dess manualer får man en god insikt i hur ett ramverk ser ut och fungerar idag.
+
+Det du främst bör titta på så här inledningsvis, är generell setup, routern, kontroller-klasser och vad ramverken innehåller för standardkomponenter.
+
+* [Dokumentationen för Symfony](https://symfony.com/doc/current/), ett ledande ramverk inom PHP. 
+
+* [Dokumentationen för Laravel](https://laravel.com/docs/5.7), Laravel bygger på Symfony men bidrar med ett eget anpassat sätt hur man jobbar i ett ramverk, ett skal ovan Symfony.
+
+<!--
+
+-->
+
+
+
+### Videor {#videor}
+
+Kika på följande videos och kommentera dem i redovisningstexten.
 
 1. Titta på videon "[PHP UK Conference 2017 - Eli White - State of the PHP Community](https://www.youtube.com/watch?v=1vFycFnVhaw)". Den ger dig en känsla av hur en community kring ett språk (PHP) kan fungera, på gott och ont. Fundera över utmaningar som ligger i att hålla en community levande och om det finns någon nytta med en commity.
 
@@ -116,24 +96,26 @@ Kika på följande videos.
 *(ca: 6-10 studietimmar)*
 
 
-
+<!--
 ###Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Bygg ett ramverkslöst ramverk](kunskap/bygg-ett-ramverkslost-ramverk)" som ger dig grunden till en webbplats baserad på komponenter. Du känner igenom koden från oophp och design. Du sparar koden i `me/anax`.
+-->
 
 
+### Uppgifter {#uppgifter}
 
-###Uppgifter {#uppgifter}
+Dessa uppgifter skall utföras och redovisas.
 
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+1. Gör uppgiften "[Bygg en redovisa-sida till ramverk1 (v2)](uppgift/bygg-en-me-sida-till-ramverk1-v2)". Du behöver en me-sida, en redovisa-sida och vi använder ramverket Anax för att bygga den. Spara allt under `me/redovisa`.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk1](uppgift/bygg-en-me-sida-till-ramverk1)". Det handlar om att bygga din me-sida med Anax och publicera på Github. Spara allt under `me/anax`.
-
+<!--
 1. Gör uppgiften "[Förbered för att bygga ett kommentarssystem](uppgift/forbered-for-att-bygga-ett-kommentarssystem)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara eventuell kod under `me/anax`.
+-->
 
-1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (1.0.\*) när du är klar med kursmomentet.
+1. Pusha och tagga din redovisa, allt eftersom och sätt en avslutande tagg (1.0.\*) när du är klar med kursmomentet.
 
 
 
@@ -148,13 +130,16 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Gör din egen kunskapsinventering baserat på PHP The Right Way, berätta om dina styrkor och svagheter som du vill förstärka under det kommande året.
+* Gör din egen kunskapsinventering baserat på PHP The Right Way, berätta om dina styrkor och svagheter som du vill förstärka under kursen och det kommande året.
 * Vilket blev resultatet från din mini-undersökning om vilka ramverk som för närvarande är mest populära inom PHP (ange källa var du fann informationen)?
 * Berätta om din syn/erfarenhet generellt kring communities och specifikt communities inom opensource och programmeringsdomänen.
 * Vad tror du om begreppet "en ramverkslös värld" som framfördes i videon?
-* Hur gick dina förberedelser inför kommentarssystemet?
+* Hur gick det att komma igång med din redovisa-sida?
 
-Har du frågor eller funderingar så ställer du dem i forumet.
+* Vilken är din TIL för detta kmom?
+
+TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
+
 
 
 <!--stop-->
