@@ -51,14 +51,14 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/javascript1). Bifoga länken till din me-sida.
+Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](https://dbwebb.se/forum/viewtopic.php?f=42&t=7870). Bifoga länken till din me-sida.
 
 
 
-Kopiera redovisningstexten till ITs {#its}
+Kopiera redovisningstexten till Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på Canvas tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
 
@@ -84,7 +84,7 @@ dbwebb inspect kmom01
 
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
-Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
+Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel. I videon nedan byter du själv ut htmlphp mot javascript1.
 
 [YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
 
@@ -93,7 +93,7 @@ Du kan själv provköra och se samma resultat som läraren ser. Det är en mycke
 Klart! {#klar}
 ---------------------------------------
 
-[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
+<!-- [YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."] -->
 
 Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
 

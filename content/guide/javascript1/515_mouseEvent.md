@@ -12,11 +12,11 @@ Det finns en uppsjö events kopplade till musen med. Vi tar några av de vanliga
 Istället för att lägga klick-eventet på `document` kan vi lägga det så det triggas om vi klickar på ett speciellt ställe. Vi skapar några lådor att leka med.
 
 ```html
-<div id="box"></div>
-<div id="box"></div>
-<div id="box"></div>
-<div id="box"></div>
-<div id="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
 ```
 
 Lite css på den skapar fina, fyrkantiga lådor.

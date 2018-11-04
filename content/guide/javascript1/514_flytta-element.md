@@ -47,6 +47,8 @@ Vårt utgångsläge så här långt ser ut som följer:
 Nu till det roliga. Vi vet hur vi fångar upp elementet att vi bland annat kan påverka dess css.
 
 ```javascript
+var box = document.getElementsByClassName("box")[0];
+
 document.addEventListener("keydown", function(event) {
     var key = event.key;
     var left = box.offsetLeft;
