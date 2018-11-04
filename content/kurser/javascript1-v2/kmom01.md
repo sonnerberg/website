@@ -17,16 +17,6 @@ revision:
 Kmom01: Utvecklingsmiljö
 ==================================
 
-[INFO]
-
-**Öppen för "early adopters"**
-
-Kursmomentet är nu klart att påbörjas. Så länge det är blåmarkerat tillkommer det inte nya uppgifter, vilket innebär att en inlämning som följer kraven kommer bedömmas och rättas.
-
-All form av feedback är välkommet i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=42&t=7881&p=62801#p62726).
-
-[/INFO]
-
 Låt oss komma i gång med en labbmiljö, och en miljö för kursen, tillsammans med en introduktion i HTML, CSS och JavaScript.
 
 Detta kursmoment ger dig basen för resten av kursen, det hanterar grunderna som behövs så att vi i kommande kursmoment kan dyka ned mer i programmering i JavaScript.
