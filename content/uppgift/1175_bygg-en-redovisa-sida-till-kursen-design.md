@@ -4,6 +4,7 @@ category:
     - kursen design
     - anax-flat
 revision:
+    "2018-11-05": "(B, mos) Förtydliga var du står när du skapar git-repot."
     "2018-10-29": "(A, mos) Första utgåvan för design v2, omarbetad version av artikeln 'Bygg en me-sida med Anax Flat'."
 ...
 Bygg en redovisa-sida till kursen design
@@ -107,6 +108,7 @@ Du kommer i senare kmom att använda kommandot make för att bygga dina styleshe
 Gör ett git-repo av alla filer i katalogen.
 
 ```text
+# Stå i me/redovisa
 git init
 git add .
 ```
