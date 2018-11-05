@@ -108,7 +108,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten är anongen mer omfattande än normalt.
+Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer omfattande än normalt.
 
 Se till att följande frågor besvaras i texten:
 

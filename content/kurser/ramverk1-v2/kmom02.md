@@ -2,36 +2,26 @@
 author:
     - mos
 revision:
-    "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
+    "2018-11-06": "(C, mos) Uppdaterad inför v2."
     "2017-09-04": "(B, mos) Minskade omfattningen genom att ta bort skrivuppgiften om MVC."
     "2017-08-08": "(A, mos) Första utgåvan."
 ...
 Kmom02: MVC
 ==================================
 
-[WARNING]
+Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket. Vi har tidigare sett både vyer (V) och kontroller (C) så nu är det dags att väva in M:et som står för model, modell-klasser och/eller modell-lagret.
 
-**Kursutveckling pågår till kurs ramverk v2**
+Vi bekantar oss även med begreppet SOLID som är en akronym för en samling designmönster som är aktuella i sammhanget kring ramverk och allmän objektorienterad utveckling.
 
-Kursstart hösten 2018.
-
-[/WARNING]
-
-Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket.
-
-Vi bekantar oss även med begreppet SOLID som är en akronym för designmönster som är aktuella i sammhanget kring ramverk och objektorienterad utveckling.
-
-Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar enligt MVC.
-
-Under arbetets gång funderar vi på hur man bäst organiserar sin kod i moduler för att göra dem återanvändbara, testbara och lätta att underhålla och vidareutveckla.
+Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar enligt MVC. Under arbetets gång funderar vi på hur man bäst organiserar sin kod för att göra den återanvändbar, testbara samt lätta att underhålla och vidareutveckla.
 
 <!--more-->
 
 Som exempelkod används en REM-server som är byggd enligt MVC med fokus på delarna Model och Kontroller.
 
-[FIGURE src=image/snapht17/remserver-docs.png?w=w2 caption="Manualen för REM servern som också visar att REM servern är installerad och fungerar."]
+[FIGURE src=image/snapht17/remserver-docs.png?w=w3 caption="Manualen för REM servern som också visar att REM servern är installerad och fungerar."]
 
-[FIGURE src=image/snapht17/remserver-rest-client.png?w=w2 caption="En REST fråga till REM servern."]
+[FIGURE src=image/snapht17/remserver-rest-client.png?w=w3 caption="En REST fråga till REM servern."]
 
 
 
@@ -56,21 +46,23 @@ Kika igenom följande artiklar.
 
 1. Bekanta dig med begreppet SOLID genom att översiktligt titta på Wikipedia. Titta på både den [svenska](https://sv.wikipedia.org/wiki/SOLID) och den [engelska](https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29) varianten.
 
+1. Läs översiktligt Wikipedia artikeln om "[Software design pattern](https://en.wikipedia.org/wiki/Software_design_pattern)" för att bekanta dig med begreppet. Kika på de designmönster som finns på sidan och se om du kan lägga en handfull av dem på minnet, lite ytligt iallfall. Du vill ha ett hum om vad designmönster innebär och dess terminologi.
+
 
 
 ### Ramverk referenser {#referenser}
 
 Under kursen skall vi lära oss om ramverk och de moduler och designmönster som bygger upp dagens ramverk. En plats att lära sig om detta är ramverkens manualer. Här följer ett par av de mer använda ramverken och via dess manualer får man en god insikt i hur ett ramverk ser ut och fungerar idag.
 
-Det du främst bör titta på så här inledningsvis, är generell setup, routern, kontroller-klasser och vad ramverken innehåller för standardkomponenter.
+Det du kan studera nu är främst att se hur ramverkets router fungerar med en kontrolleroch om ramverkets manual har något särskilt stycke om MVC. Det räcker att du kikar i en av manualerna. Läs fler vid intresse.
 
-* [Dokumentationen för Symfony](https://symfony.com/doc/current/), ett ledande ramverk inom PHP. 
+* [Dokumentationen för Symfony](https://symfony.com/doc/current/), ett ledande ramverk inom PHP. Grundaren är Fabien Potencier och en stark profil inom branschen. Företaget Sensiolabs ligger bakom och stödjer utvecklingen.
 
-* [Dokumentationen för Laravel](https://laravel.com/docs/5.7), Laravel bygger på Symfony men bidrar med ett eget anpassat sätt hur man jobbar i ett ramverk, ett skal ovan Symfony.
+* [Dokumentationen för Laravel](https://laravel.com/docs/5.7), Laravel bygger på Symfony men bidrar med ett eget anpassat sätt hur man jobbar i ett ramverk, ett skal ovan Symfony. Bakom Laravel ligger Taylor Otwell som en stark profil.
 
-<!--
+* [Dokumentationen för Phalcon](https://docs.phalconphp.com/en/). Phalcon är ett PHP-ramverk som är byggt i C/C++ och de bar en bra manual med en egen sektion om MVC. Ramverket skapades av Andres Gutierrez (med flera).
 
--->
+* [Dokumentationen för Yii](https://www.yiiframework.com/doc/guide/2.0/en). Yii underhålls för närvarande av ett team av utvecklare där flera är från Ryssland och Ukraina. Namnet Yii har kinesisk betydelse och ramverkets grundare heter Qiang Xue.
 
 
 
@@ -79,6 +71,14 @@ Det du främst bör titta på så här inledningsvis, är generell setup, router
 Kika på följande videos.
 
 1. Titta på seminariet "[PHP UK Conference 2017 - Gareth Ellis - Introduction to SOLID](https://www.youtube.com/watch?v=86Tt2pW9pv4)" som ger dig en introduktion till de designmönster som ligger bakom bokstäverna i SOLID och är en grund i ramverkstänkande. Om du tycker videon är "svår/tung" så kan du själv leta reda på motsvarande innehåll som ger dig en intro till begreppet SOLID. YouTube innehåller många små korta videor på ämnet.
+
+
+
+### Referensmaterial {#referens}
+
+Följande används som referensmaterial i kursmomentet.
+
+1. En REM-server implementerad i PHP används som exempel för att se hur 100% kodtäckning kan uppnås av kod separerad i kontroller och modell. Det finns [källkod för modulen REM-server](https://github.com/canax/remserver) (med kontroller och modell) och det finns en [färdig installation av REM servern](https://github.com/canax/remserver-website). Det finns också en [live version av REM servern](https://rem.dbwebb.se/). Du kan även starta din egen REM server med Docker.
 
 
 
@@ -103,17 +103,18 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
+1. Gör uppgiften "[En webbtjänst för att geotagga ip-adresser](uppgift/en-webbtjanst-for-att-geotagga-ip-adresser)". Spara koden under `me/redovisa`.
+
+
+<!--
 1. Refactoring av din me-sida. Integrera REM servern i din me-sida i `me/anax`. Gör en "framsida" till din REM server och berätta vilka länkar du har till REM servern. Denna "framsida" skall vara en del av din me-sida. Har du kod som borde vara strukturerad enligt kontroller/modell? Överväg isåfall att skriva om den.
+-->
 
 <!--
 1. Gör uppgiften "[Bygg en prototyp till ett kommentarssystem](uppgift/bygg-en-prototyp-till-ett-kommentarssystem)". Du kommer igång och skriver ett enkelt kommentarssystem, det blir en prototyp för att lära sig domänen och skapa en kodbas. Spara koden under `me/anax`.
 -->
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
-
-<!--
-1. Skriv gruppvis en artikel om ["Model, View, Controller (MVC)"](uppgift/skriv-artikel-om-mvc). Spara artikeln i din me-sida.
--->
 
 
 
@@ -124,10 +125,12 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i texten:
+Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer omfattande än normalt.
 
 * Vilka tidigare erfarenheter har du av MVC? Använde du någon speciell källa för att läsa på om MVC? Kan du med egna ord förklara någon fördel med kontroller/modell-begreppet, så som du ser på det?
 * Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader med dina egna ord?
+* Har du någon erfarenhet av designmönster och kan du nämna och kort förklara några designmönster du hört talas om?
+* Vilket ramverk valde du att studera manualen för och fann du något intreesant?
 * Vilken är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

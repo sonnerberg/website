@@ -44,7 +44,7 @@ Gör följande steg för att förbereda dig för uppgiften.
 
 Du kan se hur jag jobbar igenom stegen i videoserien "[Bygg ett tema med vertikalt och horisontellt grid](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9QJnBXk-hLEBZH035xObxS)".
 
-[YOUTUBE src="XXX" list="PLKtP9l5q3ce9QJnBXk-hLEBZH035xObxS" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
+[YOUTUBE src="JkIc26sHqgY" list="PLKtP9l5q3ce9QJnBXk-hLEBZH035xObxS" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i att lösa uppgiften."]
 
 
 
@@ -82,11 +82,10 @@ Se till att man kan göra showgrid på ditt grid genom att lägga till `?hgrid` 
 
 Du kan ta hjälp av videoserien för att kolla in hur man gör ovanstående och hur det kan se ut.
 
-* Hur styla med det vertikala gridet för att få en responsiv webbplats.
 * Hur fungerar `?vgrid` och `?hgrid`?
-* Styla footer med gridet.
-* Styla header och navbar med gridet.
 * Styla 1, 2 och 3 kolumners layout med gridet.
+* Hur styla med det vertikala gridet för att få en responsiv webbplats.
+* Påminnn att wrappers, rader, kolumner inte får stylas med margin-left/right och förslagsvis ej heller padding.
 * Anpassa din typografi.
 
 
