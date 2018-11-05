@@ -2,23 +2,19 @@
 author:
     - mos
 revision:
-    "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
+    "2018-11-05": "(B, mos) Uppdaterad inför v2, nya uppgifter."
     "2017-08-08": "(A, mos) Första utgåvan."
 ...
 Kmom01: Ramverk
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår till kurs ramverk v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att börja anamma ett modultänkande kring PHP och ramverk. 
 
 Vi tittar på ett par seminarier från konferenser och funderar på vad de försöker säga oss om aktuella tekniker och trender. Kanske kan det hjälpa oss när vi nu skall försöka skapa oss en egen bild av ramverksläget i PHP och om allmänna interna strukturer och designmänster i ramverk.
+
+Vi skapar en sedvanlig me- och redovisa-sida med ramverket vilket kräver att vi sätter oss in i ramverkets grundstruktur.
+
+För att komma igång med programmeringen i ramverket så bygger vi en mindre kontroller som fungerar som en webbsida och som en REST-server. Vi skapar enhetstester för kontrollern och når 100% kodtäckning.
 
 <!--more-->
 
@@ -64,22 +60,6 @@ Kika igenom följande artiklar.
 
 
 
-### Ramverk referenser {#referenser}
-
-Under kursen skall vi lära oss om ramverk och de moduler och designmönster som bygger upp dagens ramverk. En plats att lära sig om detta är ramverkens manualer. Här följer ett par av de mer använda ramverken och via dess manualer får man en god insikt i hur ett ramverk ser ut och fungerar idag.
-
-Det du främst bör titta på så här inledningsvis, är generell setup, routern, kontroller-klasser och vad ramverken innehåller för standardkomponenter.
-
-* [Dokumentationen för Symfony](https://symfony.com/doc/current/), ett ledande ramverk inom PHP. 
-
-* [Dokumentationen för Laravel](https://laravel.com/docs/5.7), Laravel bygger på Symfony men bidrar med ett eget anpassat sätt hur man jobbar i ett ramverk, ett skal ovan Symfony.
-
-<!--
-
--->
-
-
-
 ### Videor {#videor}
 
 Kika på följande videos och kommentera dem i redovisningstexten.
@@ -109,9 +89,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Bygg en redovisa-sida till ramverk1 (v2)](uppgift/bygg-en-me-sida-till-ramverk1-v2)". Du behöver en me-sida, en redovisa-sida och vi använder ramverket Anax för att bygga den. Spara allt under `me/redovisa`.
+1. Gör uppgiften "[Bygg en redovisa-sida till ramverk1 (v2)](uppgift/bygg-en-me-sida-till-ramverk1-v2)". Du behöver en me/redovisa-sida och vi använder ramverket Anax för att bygga den. Spara allt under `me/redovisa`.
 
-1. Bygg en kontroller.
+1. Gör uppgiften "[En kontroller för att validera ip-adresser](uppgift/en-kontroller-for-att-validera-ip-adresser)". Spara koden under `me/redovisa`.
 
 <!--
 1. Gör uppgiften "[Förbered för att bygga ett kommentarssystem](uppgift/forbered-for-att-bygga-ett-kommentarssystem)". Detta är introduktion till en uppgift som följer med dig genom kursen, ta tillfället i akt och fundera över din kodstruktur. Spara eventuell kod under `me/anax`.
@@ -128,7 +108,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten är mer omfattande än du är van vid.
+Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten är anongen mer omfattande än normalt.
 
 Se till att följande frågor besvaras i texten:
 
@@ -137,7 +117,7 @@ Se till att följande frågor besvaras i texten:
 * Berätta om din syn/erfarenhet generellt kring communities och specifikt communities inom opensource och programmeringsdomänen.
 * Vad tror du om begreppet "en ramverkslös värld" som framfördes i videon?
 * Hur gick det att komma igång med din redovisa-sida?
-
+* Några funderingar kring arbetet med din kontroller?
 * Vilken är din TIL för detta kmom?
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.

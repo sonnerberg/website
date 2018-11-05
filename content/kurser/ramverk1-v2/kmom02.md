@@ -46,7 +46,7 @@ Läsanvisningar  {#lasanvisningar}
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Kika igenom följande artiklar.
 
@@ -58,7 +58,23 @@ Kika igenom följande artiklar.
 
 
 
-###Videor {#videor}
+### Ramverk referenser {#referenser}
+
+Under kursen skall vi lära oss om ramverk och de moduler och designmönster som bygger upp dagens ramverk. En plats att lära sig om detta är ramverkens manualer. Här följer ett par av de mer använda ramverken och via dess manualer får man en god insikt i hur ett ramverk ser ut och fungerar idag.
+
+Det du främst bör titta på så här inledningsvis, är generell setup, routern, kontroller-klasser och vad ramverken innehåller för standardkomponenter.
+
+* [Dokumentationen för Symfony](https://symfony.com/doc/current/), ett ledande ramverk inom PHP. 
+
+* [Dokumentationen för Laravel](https://laravel.com/docs/5.7), Laravel bygger på Symfony men bidrar med ett eget anpassat sätt hur man jobbar i ett ramverk, ett skal ovan Symfony.
+
+<!--
+
+-->
+
+
+
+### Videor {#videor}
 
 Kika på följande videos.
 
@@ -72,22 +88,26 @@ Kika på följande videos.
 *(ca: 6-10 studietimmar)*
 
 
-
-###Övningar {#ovningar}
+<!--
+### Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[En REM Server som Kontroller och Modell](kunskap/en-rem-server-som-kontroller-och-modell)" som ger dig ett exempel hur du skriver kod i form av en kontroller och en modell. REM servern lägger du i `kmom02/remserver`. När du är klar så placerar du den färdiga koden i `me/anax` och integrerar i din me-sida.
 
+-->
 
 
-###Uppgifter {#uppgifter}
+
+### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Refactoring av din me-sida. Integrera REM servern i din me-sida i `me/anax`. Gör en "framsida" till din REM server och berätta vilka länkar du har till REM servern. Denna "framsida" skall vara en del av din me-sida. Har du kod som borde vara strukturerad enligt kontroller/modell? Överväg isåfall att skriva om den.
 
+<!--
 1. Gör uppgiften "[Bygg en prototyp till ett kommentarssystem](uppgift/bygg-en-prototyp-till-ett-kommentarssystem)". Du kommer igång och skriver ett enkelt kommentarssystem, det blir en prototyp för att lära sig domänen och skapa en kodbas. Spara koden under `me/anax`.
+-->
 
 1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
@@ -108,7 +128,6 @@ Se till att följande frågor besvaras i texten:
 
 * Vilka tidigare erfarenheter har du av MVC? Använde du någon speciell källa för att läsa på om MVC? Kan du med egna ord förklara någon fördel med kontroller/modell-begreppet, så som du ser på det?
 * Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader med dina egna ord?
-* Gick arbetet med REM servern bra och du lyckades integrera den i din me-sida?
-* Berätta om arbetet med din kommentarsmodul, hur långt har du kommit och hur tänker du?
+* Vilken är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

@@ -6,26 +6,17 @@ category:
     - anax
     - kurs ramverk1
 revision:
-    "2018-11-02": "(PA1, mos) Kopierad från tidigare utgåva."
+    "2018-11-05": "(B, mos) Publicerad."
+    "2018-11-02": "(A, mos) Kopierad från tidigare utgåva."
 ...
 Bygg en me-sida till ramverk1 (v2)
 ===================================
 
-Du skall sätta samman en me-sida, en redovisa-sida, för kursen.
+Du skall sätta samman en me/redovisa-sida för kursen.
 
 Du lägger allt i ett repo och när du är klar så publicerar du och taggar ditt repo på GitHub.
 
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs ramverk v2**
-
-Kursstart hösten 2018.
-
-Arbete pågår.
-
-[/WARNING]
 
 
 
@@ -39,55 +30,54 @@ Du har en labbmiljö motsvarande [kursen ramverk1](kurser/ramverk1-v2/kmom01#lab
 Introduktion och förberedelse {#intro}
 -----------------------
 
-Det ligger en exempelkatalog under `example/redovisa`. Kopiera den till `me/redovisa`.
+Följande steg hjälper dig att komma igång med uppgiften.
 
-Installera modulerna med `composer install`.
 
-Peka webbläsaren till `me/redovisa/htdocs`.
+
+### Utgå från example/redovisa {#redovisa}
+
+Det ligger en exempelkatalog under `example/redovisa`. Använd den för att komma igång.
+
+```php
+# Stå i kursrepot
+rsync -a example/redovisa me/
+cd me/redovisa
+composer install
+chmod 777 cache/*
+```
+
+Peka webbläsaren till `me/redovisa/htdocs` för att se resultatet.
 
 Glöm inte redigera `htdocs/.htaccess` när du publicerar till studentservern.
+
+
+
+### Information om ramverket {#info}
+
+När du öppnat redovisa-sidan så finns ett menyval "Verktyg". Under det finns en guide med artiklar som du bör läsa igenom. Det är information som hjälper dig att hantera och navigera ramverkets installation.
+
+
+
+<!--
+* Förklara hur mycket man måste göra med temat, vad är kravet?
+-->
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Anpassa din installation av `me/redovisa`.
+1. Anpassa din installation av `me/redovisa` så att din förstasida handlar om dig och om-sidan handlar om kursen och ditt repo.
 
-1. Skapa en första sida, en om-sida och förbered din redovisa-sida.
-
-1. Välj hur du vill jobba med temat, din style. Det finns en katalog `theme/` men du kan välja en annan väg.
-
-1. Skapa en about-sida där du skriver en rad om denna kursen samt länkar till ditt repo på GitHub. Lägg även till en godtycklig bild som du anser kompletterar sidans innehåll.
-
-1. Skapa en report-sida som du förbereder för att innehålla alla dina redovisningstexter för kursen.
-
-1. Skapa en navbar så att man kan navigera mellan dina sidor.
-
-1. Lägg till en header och footer som syns på alla relevanta sidor.
-
-1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS, återanvänd kunskaper från design-kursen eller använd ramverk liknande Bootstrap, välj själv.
+1. Välj hur du vill jobba med temat, din style, modifiera den så att den "blir din egen style". Jobba med `theme/` (less) som följer med eller gör din helt egen stylesheet (css, sass, less, bootstrap, annat), eller hårdkoda css-kod direkt in i nuvarande stylesheet och modifiera befintlig style via nya regler.
 
 1. Kör `make install test` för att kolla att du inte har några valideringsfel.
 
-1. Gör en `dbwebb publish redovisa` för att kolla att allt validerar och fungerar.
+1. Gör en `dbwebb publish redovisa` för att kolla att det fungerar.
 
 1. Committa alla filer och lägg till en tagg (1.0.\*).
 
 1. Pusha upp repot till GitHub, inklusive taggarna.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Det finns inga extra uppgifter.
-
-<!--
-Lös följande extrauppgifter om du har tid och lust.
-
-1. Lägg till så att du kan logga in på webbplatsen och hantera användare. Du har troligen kod från tidigare kurser som kan återanvändas.
--->
 
 
 
