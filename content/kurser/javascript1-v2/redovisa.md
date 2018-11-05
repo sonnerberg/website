@@ -51,7 +51,7 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](https://dbwebb.se/forum/viewtopic.php?f=42&t=7870). Bifoga länken till din me-sida.
+Visa upp vad du gjort och berätta att du är klar genom att göra ett inlägg i [kursforumet](https://dbwebb.se/forum/viewtopic.php?f=42&t=7870). Bifoga länken till din me-sida.
 
 
 
