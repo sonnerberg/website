@@ -29,7 +29,7 @@ Som exempelkod används en REM-server som är byggd enligt MVC med fokus på del
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-8 studietimmar)*

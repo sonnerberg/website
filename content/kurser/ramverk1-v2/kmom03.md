@@ -34,7 +34,7 @@ När vi lärt oss grunden i begreppen så använder vi dem för att bygga vår k
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-8 studietimmar)*
