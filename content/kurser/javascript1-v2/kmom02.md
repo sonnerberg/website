@@ -14,16 +14,6 @@ revision:
 Kmom02: Villkor och loopar
 ==================================
 
-[INFO]
-
-**Öppen för "early adopters"**
-
-Kursmomentet är nu klart att påbörjas. Så länge det är blåmarkerat tillkommer det inte nya uppgifter, vilket innebär att en inlämning som följer kraven kommer bedömmas och rättas.
-
-All form av feedback är välkommet i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=42&t=7881&p=62801#p62726).
-
-[/INFO]
-
 Vi skall nu koda mer JavaScript. Vi bekantar oss med fler konstruktioner i språket och använder variabler och loopar tillsammans med en del inbyggda funktioner.
 
 Samtidigt gör vi ett par enklare program som övar oss i hur HTML, CSS och JavaScript kan samarbeta för att bygga upp en webbsida.
