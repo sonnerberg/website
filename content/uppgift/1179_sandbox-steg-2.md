@@ -35,7 +35,7 @@ cd me
 cp -ri me/kmom01/sandbox/* me/kmom02/sandbox2
 ```
 
-1. Skapa en figur som ska kunna flyttas runt på skärmen. Figuren kan vara en bild eller en liten fyrkant, välj själv.
+1. Skapa en figur som ska kunna flyttas runt på skärmen. Tips finns i guiden. Figuren kan vara en bild eller en liten fyrkant, välj själv.
 
 1. Se till att filerna validerar som HTML och CSS.
 
