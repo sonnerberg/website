@@ -47,6 +47,12 @@ console.log("Try writing: value");
 </script>
 ```
 
+[INFO]
+Nedan hänvisas det till "Firebug". Firebug används inte längre, utan vi använder det inbyggda developer tools.
+
+Det kan skilja lite i utseende, men det viktiga är att du år fliken "console".
+[/INFO]
+
 Ta en texteditor och spara koden i en fil som du döper till `hello-js.html` och öppna den i din webbläsare. Det ser ut så här.
 
 [FIGURE src=/image/snap/js1-hello-world.png?w=w2 caption="Så här ser sidan ut för mig när Firebug är öppnat via F12."]
@@ -72,7 +78,3 @@ Vår vän Bucky på The New Boston har även gjort en [serie om JavaScript](http
 Det var allt som behövs för att du skall få grunderna i JavaScript.
 
 Ställ dina frågor och ge tips i [tipsets forumtråd](t/2458).
-
-
-
-
