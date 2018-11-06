@@ -34,13 +34,13 @@ cd me
 cp -ri me/kmom01/sandbox/* me/kmom03/sandbox3
 ```
 
-1. Användaren ska kunna mata in antal tärningar och antal sidor på tärningarna.
+1. Användaren ska kunna mata in antal tärningar och antal sidor på tärningarna. Tips på hur man kan hantera inmatningen: text/inputfält, select box etc.
 
 1. En eventlyssnare ska trigga tärningskastet vid ett knapptryck.
 
 1. Eventlyssnaren ska använda en egendefinierad funktion.
 
-1. Presentera **medelvärdet** och **resultatet** av kasten i din sandbox.
+1. Presentera **medelvärdet** och **resultatet** av kasten i din sandbox. Skriv gärna ut varje tärnings värde i konsolen.
 
 1. Testa din JavaScript kod så att den validerar i onlineverktyget för JSHint.
 
