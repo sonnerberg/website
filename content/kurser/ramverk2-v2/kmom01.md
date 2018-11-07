@@ -1,11 +1,13 @@
 ---
 author:
     - mos
+    - efo
 revision:
+    "2018-11-07": "(B, efo) Anpassat för nya strukturen för ramverk-v2."
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-10-16": "(A, mos) Första utgåvan."
 ...
-Kmom01: Express
+Kmom01: Backend
 ==================================
 
 [WARNING]
@@ -16,15 +18,9 @@ Kursstart våren 2019.
 
 [/WARNING]
 
-Vi skall bygga grunden till en applikations/webbplats med hjälp av ramverket Express. Express bygger på Node.js. Webbplatsen får bli vår me-sida och det blir en grund att jobba vidare på i kursen.
+Först ser vi till att skaffa oss en server där vi under kursens gång ska driftsätta ett antal olika micro-services och klienter. Vi installerar en webbserver och skapar ett första utkast till en service för redovisningstexter.
 
-Me-sidan får bli ett eget repo på GitHub som vi kopplar ihop med externa tjänster för automatiskt builds och kodkvalitet som blir basen i ett CI-flöde (Continuous integration).
-
-<!--more-->
-
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js med webb- och applikationsservern Express."]
-
-Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Du har valt Express och nu behöver du sätta dig in i det så du kan coacha ditt team. Tänk så, det blir en bra attityd inför kursmomentet.
+Vi utvärderar ett antal JavaScript-ramverk för att bygga REST API:er och väljer det som passar vår kravspecifikation.
 
 
 
@@ -35,9 +31,9 @@ Tänk dig in i rollen som systemarkitekt på ett företag där du är den som g�
 Förkunskaper {#forkunskaper}
 ---------------------------------
 
-Denna kurs bygger vidare på det du lärt dig under första året på programmet Webbprogrammering och de kurserna du tagit fram tills nu, inklusive ramverk1. Även om du har några kurser/kmom släpande efter dig så bör du kunna genomföra kursen. Möjligen kan du uppfatta kursen som krävande, men det finns vägval där du själv kan bestämma nivån på komplexitet och användandet av nya tekniker. 
+Denna kurs bygger vidare på det du lärt dig under första året på programmet Webbprogrammering och de kurserna du tagit fram tills nu, inklusive ramverk1. Även om du har några kurser/kmom släpande efter dig så bör du kunna genomföra kursen. Möjligen kan du uppfatta kursen som krävande, men det finns vägval där du själv kan bestämma nivån på komplexitet och användandet av nya tekniker.
 
-Kursens fokus är att utvärdera, välja och använda tekniker för att sammanfoga dem i ett större sammanhang där servrar samverkar. Grunden för kursen är programmeringspråket JavaScript.
+Kursens fokus är att utvärdera, välja och använda tekniker för att sammanfoga dem i ett större sammanhang där servrar samverkar. Grunden för kursen är programmeringsspråket JavaScript.
 
 
 
@@ -157,7 +153,7 @@ eget webbplats för trafik och reklam?
 
 06: Systemtest och optimering
 ---------------------------------
-debug och profiling 
+debug och profiling
 prestandatestning
 prestandamätningar, analyser
 Systemtest
