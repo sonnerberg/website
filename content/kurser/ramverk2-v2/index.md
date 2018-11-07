@@ -96,25 +96,29 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: Express {#kmom01}
+###Kmom01: Backend {#kmom01}
 
-Vi skall bygga grunden till en applikations/webbplats med hjälp av ramverket Express. Express bygger på Node.js. Webbplatsen får bli vår me-sida och det blir en grund att jobba vidare på i kursen.
-
-Me-sidan får bli ett eget repo på GitHub som vi kopplar ihop med externa tjänster för automatiskt builds och kodkvalitet som blir basen i ett CI-flöde (Continuous integration).
+Först ser vi till att skaffa oss en server där vi under kursens gång ska driftsätta ett antal olika micro-services och klienter. Vi installerar en webbserver och skapar ett första utkast till en service för redovisningstexter.
 
 [Instruktion till kursmoment 01](./kmom01).
 
 
 
-###Kmom02: Docker {#kmom02}
+###Kmom02: Frontend {#kmom02}
 
-Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
+Vi tittar på hur vi kan använda JavaScript ramverk på klientsidan för att skapa en Single Page Applikation (SPA) som pratar med servicen från kmom01.
+
+Vi utvärderar vilka möjligheter vi har vid val av ramverk och väljer det ramverk, som efter noggrant studerande står som vinnare.
 
 [Instruktion till kursmoment 02](./kmom02).
 
+###Kmom03: Docker {#kmom03}
 
 
-###Kmom03: Test {#kmom03}
+Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
+
+
+###Kmom04: Test {#kmom04}
 
 Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi upp grunden i en testmiljö för JavaScript. Det handlar främst om enhetstestning och kodtäckning samt basen för en CI-kedja (Continuous integration).
 
@@ -124,7 +128,7 @@ Det blir också en introduktion i hur vi kan använda Docker för att köra vår
 
 
 
-###Kmom04: Realtid {#kmom04}
+###Kmom05: Realtid {#kmom05}
 
 Vi skall studera realdtisprogrammering i webbsammanhang med webscokets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
 
@@ -136,7 +140,7 @@ Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån
 
 
 
-###Kmom05: Databas {#kmom05}
+###Kmom06: Dokumentorienterad Databas {#kmom06}
 
 Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databas som klassas i NoSQL-gruppen av databaser. För att koppla oss till databasen använder vi klienter i terminalen och kod i Node.js, med och utan Express.
 
@@ -146,13 +150,13 @@ Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en ko
 
 
 
-###Kmom06: Egen modul {#kmom06}
+<!-- ###Kmom06: Egen modul {#kmom06}
 
 Som en del i infrastrukturen kring JavaScript finns pakethanteraren npm som erbjuder en hantering av återanvändbara moduler och färdiga program. Från början var npm utvecklat i samband med att Node.js växte fram. Numer ser vi både färdiga program, klient- och server-moduler som distribueras via npm.
 
 Vi dedikerar detta kursmoment till att forma en egen modul som publiceras på npm och som sedan återanvänds i projektet.
 
-[Instruktion till kursmoment 06](./kmom06).
+[Instruktion till kursmoment 06](./kmom06). -->
 
 
 
@@ -192,17 +196,17 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming | 
+| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming |
 |------------|-----------------------------------------------------------|
 | Kmom01     | Ch 1, 12                                                  |
 | Kmom02     | Ch 2                                                      |
-| Kmom03     | Ch 3,                                                     | 
+| Kmom03     | Ch 3,                                                     |
 | Kmom04     | Ch 4, 6                                                   |
-| Kmom05     | Ch 12, 13, 14                                             | 
-| Kmom06     |                                                           | 
+| Kmom05     | Ch 12, 13, 14                                             |
+| Kmom06     |                                                           |
 | Kmom10     |                                                           |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 -->
 
@@ -246,7 +250,7 @@ Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
