@@ -4,6 +4,7 @@ category:
     - kursen design
     - anax-flat
 revision:
+    "2018-11-07": "(C, mos) Tog bort dublett av kravet byline."
     "2018-11-05": "(B, mos) Förtydliga var du står när du skapar git-repot."
     "2018-10-29": "(A, mos) Första utgåvan för design v2, omarbetad version av artikeln 'Bygg en me-sida med Anax Flat'."
 ...
@@ -246,8 +247,6 @@ Krav {#krav}
 1. På din about-sida skall du lägga en länk till GitHub-repot för din me-sida.
 
 1. Byt ut den bilden som nu finns med som *flash-bild* på alla sidorna. Lägg dit en egen bild som du tycker passar. Du kan ha olika bilder på olika sidor, om du vill och alla sidor behöver inte ha en flash-bild.
-
-1. Lägg till en egen byline på din förstasida.
 
 1. Fyll i *ett utkast* till din redovisningstext för detta kursmomentet på rätt plats i sidan för redovisningar. Skriv färdigt redovisningstexten när du är helt klar.
 
