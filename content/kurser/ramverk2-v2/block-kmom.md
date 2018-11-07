@@ -5,5 +5,5 @@
 * [03: Docker](kurser/ramverk2-v2/kmom03)
 * [04: Test](kurser/ramverk2-v2/kmom04)
 * [05: Realtid](kurser/ramverk2-v2/kmom05)
-* [06: Dokumentorienterad Databas](kurser/ramverk2-v2/kmom06)
+* [06: Dokumentorienterad databas](kurser/ramverk2-v2/kmom06)
 * [07/10: Projekt och examination](kurser/ramverk2-v2/kmom10)

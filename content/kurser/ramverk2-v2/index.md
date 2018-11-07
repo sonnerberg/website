@@ -112,41 +112,47 @@ Vi utvärderar vilka möjligheter vi har vid val av ramverk och väljer det ramv
 
 [Instruktion till kursmoment 02](./kmom02).
 
-###Kmom03: Docker {#kmom03}
 
+
+###Kmom03: Docker {#kmom03}
 
 Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
 
-
-###Kmom04: Test {#kmom04}
-
-Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi upp grunden i en testmiljö för JavaScript. Det handlar främst om enhetstestning och kodtäckning samt basen för en CI-kedja (Continuous integration).
-
-Det blir också en introduktion i hur vi kan använda Docker för att köra våra enhetstester mot olika versioner av en målmiljö och vi får möjligheten att skapa våra egna anpassade Docker-images.
+Vi börjar dessutom utvecklande av en klient/server applikation, som kommer ligga som ett spår genom resten av kursen.
 
 [Instruktion till kursmoment 03](./kmom03).
 
 
 
-###Kmom05: Realtid {#kmom05}
+###Kmom04: Test {#kmom04}
 
-Vi skall studera realdtisprogrammering i webbsammanhang med webscokets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
+Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi upp grunden i en testmiljö för JavaScript. Det handlar främst om enhetstestning och funktionstestning, samt kodtäckning och basen för en CI-kedja (Continuous integration).
 
-Sedan bygger du vidare på din klient/server applikation i JavaScript och integrerar chatten och utvecklar ytterligare realtidsfunktioner.
-
-Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare.
+Det blir också en introduktion i hur vi kan använda Docker för att köra våra enhetstester mot olika versioner av en målmiljö och vi får möjligheten att skapa våra egna anpassade Docker-images.
 
 [Instruktion till kursmoment 04](./kmom04).
 
 
 
-###Kmom06: Dokumentorienterad Databas {#kmom06}
+###Kmom05: Realtid {#kmom05}
+
+Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
+
+Sedan bygger du vidare på din klient/server applikation i JavaScript där vi använder realtidsprogrammering för de delar av applikationen där det kan tillämpas.
+
+Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare.
+
+[Instruktion till kursmoment 05](./kmom05).
+
+
+
+###Kmom06: Dokumentorienterad databas {#kmom06}
 
 Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databas som klassas i NoSQL-gruppen av databaser. För att koppla oss till databasen använder vi klienter i terminalen och kod i Node.js, med och utan Express.
 
 Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en kontainer och vi kör Express i en egen kontainer och låter de båda kontainrarna kommunicera, samtidigt som vi kan kommunicera direkt med varje kontainer från terminalen.
 
-[Instruktion till kursmoment 05](./kmom05).
+[Instruktion till kursmoment 06](./kmom06).
 
 
 
