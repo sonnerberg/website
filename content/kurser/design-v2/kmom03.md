@@ -143,6 +143,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Berätta om hur du valde typsnitt till din webbplats.
 * Har du jobbat med liknande gridbaserade layouttekniker sedan tidigare?
 * Hur känns det att jobba med LESS och moduler? Lyckas du återanvända moduler mellan teman för kmom02 och kmom03?
+* Hur gick det med din responsivitet för webbplatsen?
 * Vilken är din TIL för detta kmom?
 
 

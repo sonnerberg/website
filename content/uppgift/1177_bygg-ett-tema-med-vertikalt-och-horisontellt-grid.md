@@ -49,6 +49,10 @@ Börja med att skapa ett nytt tema för detta kursmomentet, döp det till `kmom0
 
 ### Implementera ett vertikalt grid {#vgrid}
 
+Så här kan det se ut när du jobbar med gridet.
+
+[FIGURE src=image/snapht18/vgrid_showgrid.png?w=w3 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
+
 Innan du börjar med detta så blir det enklast om du nollställer alla widths, padding, border och positioneringssätt på dina regioner. Allra enklast är troligen att använda en ny tom `layout/layout_vgrid.less` och implementera integrationen av gridet där. 
 
 Du skall använda dig av ett vertikalt grid i form av modulen [desinax/vertical-grid](https://github.com/desinax/vertical-grid/). I README-filen står det hur du integrerar gridet i ditt eget tema.
@@ -60,6 +64,10 @@ Se till att man kan göra showgrid på ditt grid genom att lägga till `?vgrid` 
 
 
 ### Implementera ett horisontellt grid {#hgrid}
+
+Så här kan det se ut när du jobbar med gridet.
+
+[FIGURE src=image/snapht18/hgrid_showgrid.png?w=w3 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]
 
 Innan du börjar med detta så blir det enklast om du nollställer all typografi som du lagt till. Börja med "ren" och ostylad typografi, så gått du kan. Du kan lägga till style på typografin när du är klar med att integrera gridet.
 

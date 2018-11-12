@@ -83,27 +83,29 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-### Kmom01: Ramverk och innehåll {#kmom01}
+### Kmom01: Ramverk, innehåll, style {#kmom01}
 
-Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
+Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material. Även om vi tittar på de mjuka aspekterna så är tanken att vi lära oss "hårda" tekniker för att jobba med de mjuka. Låt se vad det kan innebära i praktiken. Vi bygger vår första style med CSS.
 
 [Instruktion till kursmoment 01](./kmom01).
 
 
 
-### Kmom02: LESS och responsiv design {#kmom02}
+### Kmom02: LESS och responsivitet {#kmom02}
 
-Då är det dags att vi skapar vårt eget tema till webbplatsen. Låt oss fylla vår me-sida med style med hjälp av LESS ooch en god och modulariserad kodstruktur.
+Temat, eller stylen, skapar vi med LESS, en preprocessor till CSS. Vi lär oss grunderna i LESS och hur vi bygger CSS-filer från LESS-konstruktioner.
 
-Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
+Vi försöker bygga en modulär struktur av LESS-filer som vi delar in i LESS-moduler. Det skapar en grund av style-kod som blir enkla att återanvända i andra sammanhang, eller längre fram när vi gör fler teman och anpassar våra teman.
 
 [Instruktion till kursmoment 02](./kmom02).
 
 
 
-### Kmom03: Grid, layout och typografi {#kmom03}
+### Kmom03: Grid, layout, typografi {#kmom03}
 
-Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor. Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner och vi skall undersöka ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*.
+Vi skall titta på ett **vertikalt grid** som ger oss kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*. Här kan vi placera våra regioner i rader.
+
+Vi tittar sedan vidare på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen.
 
 [Instruktion till kursmoment 03](./kmom03).
 
