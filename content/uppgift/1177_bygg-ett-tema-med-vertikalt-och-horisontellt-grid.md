@@ -5,6 +5,7 @@ category:
     - anax flat
     - less
 revision:
+    "2018-11-12": "(B, mos) Först utgåvan."
     "2018-10-15": "(A, mos) Kopia från 'Bygg en ut ditt Anax Flat med eget LESS tema' och omskriven."
 ...
 Bygg ett tema med vertikalt och horisontellt grid
@@ -15,14 +16,6 @@ Du skall bygga ett tema och implementera stöd för ett vertikalt grid och för 
 Du bygger temat så att det är responsivt baserat på ditt vertikala grid.
 
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Dokumentet är under bearbetning inför kursstarten höstn 2018.
-
-[/WARNING]
 
 
 
@@ -82,11 +75,11 @@ Se till att man kan göra showgrid på ditt grid genom att lägga till `?hgrid` 
 
 Du kan ta hjälp av videoserien för att kolla in hur man gör ovanstående och hur det kan se ut.
 
+* Anpassa din typografi.
 * Hur fungerar `?vgrid` och `?hgrid`?
 * Styla 1, 2 och 3 kolumners layout med gridet.
 * Hur styla med det vertikala gridet för att få en responsiv webbplats.
-* Påminnn att wrappers, rader, kolumner inte får stylas med margin-left/right och förslagsvis ej heller padding.
-* Anpassa din typografi.
+* Påminn att wrappers, rader, kolumner inte får stylas med margin-left/right och förslagsvis ej heller padding-left/right.
 
 
 
@@ -95,15 +88,17 @@ Krav {#krav}
 
 1. Lägg till en stylesheet `theme/src/kmom03.less` (tema för kmom03), återanvänd de less-moduler du utvecklat i samband med kmom02, eller gör nya.
 
-1. I temat för kmom03, lägg till det vertikala gridet och styla regionerna i din webbplats _enbart_ med gridet. Använd `@desinax/vertical-grid`.
+1. I temat för kmom03, lägg till det vertikala gridet och styla regionerna i din webbplats med gridet. Alla regionder som används skall stylas med gridet. Använd `@desinax/vertical-grid`.
 
 1. I temat för kmom03, lägg till det horisontella gridet. Gör ett medvetet val av typsnitt och eventuellt så stylar du din typgrafi lite extra. Använd `@desinax/typografic-grid`.
 
+1. Jobba med det magiska numret så att alla regioner har en margin-bottom som matchar en multipel av det magiska numret.
+
 1. Gör din webbplats responsiv med hjälp av ditt vertikala grid.
 
-1. Din header och footer skall fungera väl när det gäller responsiviteten.
+1. Kolumnlayout för en, två och/eller tre kolumners layout skall fungera flexibelt enligt gridet.
 
-1. Kolumnlayout för en, två och/eller tre kolumners layout skall fungera flexibelt samt ha en responsivitet.
+1. Regionerna i din webbplats skall fungera väl när det gäller responsiviteten.
 
 1. Man skall kunna visa ditt grid med `?vgrid` och `?hgrid` på godtycklig sida.
 
