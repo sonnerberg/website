@@ -65,6 +65,8 @@ Krav {#krav}
 
 1. Använd tangentbordet och/eller musen/touch-event för att navigera i scenen med hjälp av en kamera.
 
+1. Integrera din canvas med din animerade 3D-värld från denna uppgiften i din portfölj.
+
 11. Validera och publicera din kod enligt följande.
 
 ```bash

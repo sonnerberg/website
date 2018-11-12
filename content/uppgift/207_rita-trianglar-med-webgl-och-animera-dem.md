@@ -111,6 +111,12 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 
 
+###Del 3 Integrera i din portfölj {#portfolio}
+
+1. Integrera din canvas med animerade triangler från denna uppgiften i din portfölj.
+
+
+
 Extrauppgift {#extra}
 -----------------------
 
