@@ -3,8 +3,8 @@ author:
   - mos
   - efo
 revision:
+    "2018-11-12": (G, mos) Publicerat inför ht18 och design v2.
     "2018-10-19": (F, efo) Uppdatering med design guide.
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-11-03": (E, mos) Genomgång inför ht17.
     "2016-12-02": (D, mos) Lade till videoserie om vgrid.
     "2016-10-26": (C, mos) Flyttad från 02 till 03 efter feedback.
@@ -13,15 +13,6 @@ revision:
 ...
 Kmom03: Grid, layout, typografi
 ====================================
-
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
 
 [FIGURE src=image/snapht18/hgrid_showgrid.png?crop=250,150,left,top&a=10,0,0,0  class="right" caption="Vad är ett magiskt tal?"]
 
@@ -52,7 +43,7 @@ Introduktion {#intro}
 
 I videoserien "[Kursen design (v2)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip)" kan du kika på de videor som börjar på 3*. De ger dig en kort introduktion till detta kmom.
 
-[YOUTUBE src="XXX" list="PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip" width=700 caption="Intro till kmom03."]
+[YOUTUBE src="Q3GhH4-bVMU" list="PLKtP9l5q3ce9mDpkLxSwyWh5sUPfq-Hip" width=700 caption="Intro till kmom03."]
 
 
 
