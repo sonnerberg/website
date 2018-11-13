@@ -12,16 +12,6 @@ revision:
 Kmom03: Funktioner
 ==================================
 
-[INFO]
-
-**Öppen för "early adopters"**
-
-Kursmomentet är nu klart att påbörjas. Så länge det är blåmarkerat tillkommer det inte nya uppgifter, vilket innebär att en inlämning som följer kraven kommer bedömmas och rättas.
-
-All form av feedback är välkommet i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=42&t=7881&p=62801#p62726).
-
-[/INFO]
-
 I JavaScript handlar det mycket om funktioner och språket är delvis ett funktionsorienterat programmeringsspråk. Låt oss nu träna på funktioner i alla dess varianter för att komma i gång med hur de fungerar, är uppbyggda och strukturerade. Att organisera sin kod i funktioner är första steget mot att skriva större och väl organiserade program.
 
 [FIGURE src=/image/snapht14/js1-megasandbox2.png?w=w2 caption="En flagga med HTML CSS och JavaScript."]
