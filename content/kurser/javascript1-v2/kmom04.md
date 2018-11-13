@@ -145,3 +145,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kan du relatera till andra programmeringsspråk för arrayer och objekt?
 * Hur kändes omfattningen på detta kursmoment jämfört med övriga kmom?
 * Är det någon av uppgifterna, eller materialet i allmänhet, som du vill lyfta upp som extra lärorik?
+* Vad är din TIL för det här kursmomentet?

@@ -121,3 +121,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kan du jämföra "module pattern" med någon annan liknande datastruktur?
 * Känns "module pattern" som en bra kodstruktur?
 * Var boken "Learning JavaScript Design Patterns" lättläst eller utmanande?
+* Vad är din TIL för det här kursmomentet?
