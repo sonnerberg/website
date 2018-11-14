@@ -18,6 +18,6 @@ img, embed, object, video {
 
 Här ser vi till att alltid sätta den maximala bredden för bland annat bilder (`img`) till 100% av förälder elementet.
 
-I exempel-mappen i katalogen `example/responsiva-bilder` finns exempel för hur man kan använda relativa enheter tillsammans med bilder och på följande delar i guiden.
+I exempel-mappen i katalogen `example/responsiva-bilder` finns exempel på hur man kan använda relativa enheter tillsammans med bilder och på kommande delar i guiden.
 
 Ytterligare exempel finns i exempel-katalogen under `example/figure` och där främst i filen `example/figure/figure-responsive.html`.
