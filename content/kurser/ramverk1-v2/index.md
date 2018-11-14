@@ -99,7 +99,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ### Kmom01: Ramverk {#kmom01}
 
-Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att anamma ett PHP modul-tänkande. 
+Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att börja anamma ett modultänkande kring PHP och ramverk. 
 
 [Instruktion till kursmoment 01](./kmom01).
 
@@ -107,9 +107,9 @@ Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-
 
 ### Kmom02: MVC {#kmom02}
 
-Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket.
+Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket. Vi har tidigare sett både vyer (V) och kontroller (C) så nu är det dags att väva in M:et som står för model, modell-klasser och/eller modell-lagret.
 
-Vi bekantar oss även med begreppet SOLID som är en akronym för designmönster som är aktuella i sammhanget kring ramverk och objektorienterad utveckling.
+Vi bekantar oss även med begreppet SOLID som är en akronym för en samling designmönster som är aktuella i sammhanget kring ramverk och allmän objektorienterad utveckling.
 
 [Instruktion till kursmoment 02](./kmom02).
 
@@ -117,9 +117,9 @@ Vi bekantar oss även med begreppet SOLID som är en akronym för designmönster
 
 ### Kmom03: DI {#kmom03}
 
-Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" och moduler in i ramverket. Hittills har vi använt `$app` som en kontainer för alla tjänster som finns i ramverket. Nu skall vi introducera `$di`.
+Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" i ramverket. Det handlar om `$di`.
 
-Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, begrepp såsom service locator, service container och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som betraktas som god programmeringssed.
+Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, begrepp såsom service locator, service container och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som kan betraktas som god programmeringssed.
 
 [Instruktion till kursmoment 03](./kmom03).
 

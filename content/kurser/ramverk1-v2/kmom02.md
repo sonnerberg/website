@@ -32,7 +32,7 @@ Som exempelkod används en REM-server som är byggd enligt MVC med fokus på del
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-8 studietimmar)*
+*(ca: 6-10 studietimmar)*
 
 
 
@@ -85,7 +85,7 @@ Följande används som referensmaterial i kursmomentet.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 6-10 studietimmar)*
+*(ca: 4-8 studietimmar)*
 
 
 <!--
