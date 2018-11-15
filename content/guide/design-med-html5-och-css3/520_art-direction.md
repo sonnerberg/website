@@ -20,4 +20,4 @@ Detta kan vi göra med hjälp av `picture` som i det följande exemplet.
 
 I ovanstående exempel visar vi 4 olika bilder beroende på bredden på användarens enhet och pixeldensitet. Som utgångspunkt visar vi bilden `sheep-small-portrait.jpg`. Har enheten en minimumsbredd på 376px använder vi bilden `sheep-small-landscape.jpg`. Har enheten en minimumsbredd på 668px använder vi antigen `sheep.jpg` eller `sheep@2x.jpg` beroende på pixeldensiteten.
 
-I exempel-mappen i katalogen `example/responsiva-bilder` finns exempel på hur man kan använda picture för att leverera olika bilder beroende på enhetens storlek.
+I exempel-mappen i katalogen `example/responsiva-bilder` finns exempel på hur man kan använda `picture` för att leverera olika bilder beroende på enhetens storlek.
