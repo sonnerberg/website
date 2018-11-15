@@ -45,7 +45,7 @@ Låt oss gå igenom de steg som krävs för att komma igång med MongDB tillsamm
 Installera databasen MongoDB {#installmongodb}
 --------------------------------------------------------------------
 
-Vi kan installera databasen på vårt eget system som man normalt gör. Men jag tänkte använda Docker och den [officiella imagen mongo](https://store.docker.com/images/mongo). 
+Vi kan installera databasen på vårt eget system som man normalt gör. Men jag tänkte använda Docker och den [officiella imagen mongo](https://store.docker.com/images/mongo).
 
 Så här blir min `docker-compose.yml` för att starta upp servern. Du hittar den i kursrepot i katalogen `example/db/mongodb`.
 
@@ -89,7 +89,7 @@ $ docker-compose run mongodb mongo mongodb://mongodb/
 MongoDB shell version v3.4.10
 connecting to: mongodb://mongodb/
 Welcome to the MongoDB shell.
-> 
+>
 ```
 
 Det blev många _mongo_ på den raden. Se till att du har koll på vad som är applikationen, service namnet och protokolldelen (`mongodb://`).
@@ -108,7 +108,7 @@ Vi kan alltså installera klienten via vår pakethanterare till vår lokala dato
 
 Använd den inbyggda hjälpen via `mongo --help` eller läs i [referensmanualen för kommandot mongo](https://docs.mongodb.com/manual/reference/program/mongo/).
 
-När du väl har startat en koppling så man du skriva `help` för att se vilka möjligheter som finns. 
+När du väl har startat en koppling så man du skriva `help` för att se vilka möjligheter som finns.
 
 ```text
 > help
@@ -157,11 +157,11 @@ Först skapar vi databasen.
 Den är tom och innehåller inga collections ännu. Vi skapar en collection genom att lägga ett dokument i den.
 
 ```text
-> db.crowd.insertOne( { name: "Mumintrollet" } )           
-{                                                          
-        "acknowledged" : true,                             
+> db.crowd.insertOne( { name: "Mumintrollet" } )
+{
+        "acknowledged" : true,
         "insertedId" : ObjectId("5a13069000b2ff0b912aeeb6")
-}                                                          
+}
 > show collections
 crowd
 ```
@@ -169,40 +169,40 @@ crowd
 Om jag fyller på ytterligare några dokument så kan det se ut så här när vi frågar efter innehållet i en collection.
 
 ```text
-> db.crowd.find()                                                        
+> db.crowd.find()
 { "_id" : ObjectId("5a13069000b2ff0b912aeeb6"), "name" : "Mumintrollet" }
-{ "_id" : ObjectId("5a13079100b2ff0b912aeeb7"), "name" : "Sniff" }       
+{ "_id" : ObjectId("5a13079100b2ff0b912aeeb7"), "name" : "Sniff" }
 { "_id" : ObjectId("5a13079b00b2ff0b912aeeb8"), "name" : "Snusmumriken" }
-{ "_id" : ObjectId("5a1307a900b2ff0b912aeeb9"), "name" : "Snorkfröken" } 
+{ "_id" : ObjectId("5a1307a900b2ff0b912aeeb9"), "name" : "Snorkfröken" }
 ```
 
 Vi kan uppdatera samtliga dokument/objekt i vår collection.
 
 ```text
 > db.crowd.updateMany({}, {$set: { bor: "Mumindalen" }})
-{ "acknowledged" : true, "matchedCount" : 4, "modifiedCount" : 4 } 
-> db.crowd.find().pretty()                           
-{                                                    
+{ "acknowledged" : true, "matchedCount" : 4, "modifiedCount" : 4 }
+> db.crowd.find().pretty()
+{
         "_id" : ObjectId("5a13069000b2ff0b912aeeb6"),
-        "name" : "Mumintrollet",                     
-        "bor" : "Mumindalen"                         
-}                                                    
-{                                                    
+        "name" : "Mumintrollet",
+        "bor" : "Mumindalen"
+}
+{
         "_id" : ObjectId("5a13079100b2ff0b912aeeb7"),
-        "name" : "Sniff",                            
-        "bor" : "Mumindalen"                         
-}                                                    
-{                                                    
+        "name" : "Sniff",
+        "bor" : "Mumindalen"
+}
+{
         "_id" : ObjectId("5a13079b00b2ff0b912aeeb8"),
-        "name" : "Snusmumriken",                     
-        "bor" : "Mumindalen"                         
-}                                                    
-{                                                    
+        "name" : "Snusmumriken",
+        "bor" : "Mumindalen"
+}
+{
         "_id" : ObjectId("5a1307a900b2ff0b912aeeb9"),
-        "name" : "Snorkfröken",                      
-        "bor" : "Mumindalen"                         
-}                                                    
->                                                    
+        "name" : "Snorkfröken",
+        "bor" : "Mumindalen"
+}
+>
 ```
 
 Det finns alltså ett antal vanliga CRUD-operationer vi kan göra för att jobba med datat i databasen. Du kan läsa mer om dessa [CRUD-operationer i manualen](https://docs.mongodb.com/manual/crud/).
@@ -286,11 +286,12 @@ Först har vi en funktion som kopplar sig mot databasen och en colletion samt ut
  * @return {Promise<array>} The resultset as an array.
  */
 async function findInCollection(dsn, colName, criteria, projection, limit) {
-    const db  = await mongo.connect(dsn);
+    const client  = await mongo.connect(dsn);
+    const db = await client.db();
     const col = await db.collection(colName);
     const res = await col.find(criteria, projection).limit(limit).toArray();
 
-    await db.close();
+    await client.close();
 
     return res;
 }
@@ -386,28 +387,28 @@ Via en webbläsare eller curl kan vi nu komma åt routen och med kommadnot jq f�
 
 ```text
 $ curl -s http://localhost:1337/list | jq
-[                                     
-  {      
+[
+  {
     "_id": "5a13efb54dbe18550bce601b",
-    "namn": "Mumintrollet",           
-    "bor": "Mumindalen"               
-  },     
-  {      
+    "namn": "Mumintrollet",
+    "bor": "Mumindalen"
+  },
+  {
     "_id": "5a13efb54dbe18550bce601c",
-    "namn": "Sniff",                  
-    "bor": "Mumindalen"               
-  },     
-  {      
+    "namn": "Sniff",
+    "bor": "Mumindalen"
+  },
+  {
     "_id": "5a13efb54dbe18550bce601d",
-    "namn": "Snusmumriken",           
-    "bor": "Mumindalen"               
-  },     
-  {      
+    "namn": "Snusmumriken",
+    "bor": "Mumindalen"
+  },
+  {
     "_id": "5a13efb54dbe18550bce601e",
-    "namn": "Snorkfröken",            
-    "bor": "Mumindalen"               
-  }      
-]        
+    "namn": "Snorkfröken",
+    "bor": "Mumindalen"
+  }
+]
 ```
 
 Som vi kunde ana var det inget större bekymmer att flytta in vår kod i en route i express som stödjer async funktioner som callbacks till en route.
@@ -486,7 +487,7 @@ Det kan se ut så här.
 $ curl -s http://localhost:1337/list | jq
 {
   "name": "MongoError",
-  "message": "failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]" 
+  "message": "failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]"
 }
 ```
 
