@@ -204,7 +204,7 @@ Vi har även länken i navbaren:
 <a href="{{ url_for('main') }}">
 ```
 
-Här hämtas sökvägen till routen `main`. Jämför det med `<a href="index.html">` i detta fallet.
+Här hämtas sökvägen till routen `main`, `def main():` från `app.py`. Jämför det med `<a href="index.html">` i detta fallet.
 
 
 
@@ -272,6 +272,8 @@ def main():
     return render_template("index.html")
 ```
 
+`render_template()` letar automatiskt efter filer i mappen `templates/` och därför behöver vi inte specifiera någon sökväg.
+
 Underbart! Testa nu att kicka igång servern med `python3 app.py` och öppna `localhost:5000` i din webbläsare.  
 
 [FIGURE src=/image/oopython/kmom01/app1.png?w=w2 caption="En fungerande applikation."]
@@ -298,7 +300,7 @@ Vi lägger till en sida, `about.html`. Vi utgår ifrån att den nya filen har sa
 $ cp templates/index.html templates/about.html
 ```
 
-
+Öppna filen och ändra texten i den så du kan se när vi byter vilken som ska visas.
 
 ###Lägg till ett menyval {#lagg-till-ett-menyval}
 
@@ -308,14 +310,14 @@ Om vi kikar i header.html så ser vi raden:
 <li class="active"><a href="{{ url_for('main') }}">Hem</a></li>
 ```
 
-Här behöver vi lägga till ett nytt \<li\> element för den nya sidan:
+Notera `class="active"`, den css klassen avgör vilket menyval i navbaren som ska visas som aktiv, alltså vilken sida vi är på. Nu har vi hårdkodat att "Hem" menyvalet alltid är aktivt men nu när vi ska lägga till ett nytt menyval behöver båda kunna vara aktiva och bara en av dem ska vara det åtgången. Vi behöver lägga till ett nytt \<li\> element för den nya sidan:
 
 ```html
 <li class="active"><a href="{{ url_for('main') }}">Hem</a></li>
 <li><a href="{{ url_for('about') }}">Om</a></li>
 ```
 
-Innan vi går vidare till routen kan vi ordna så att det aktiva menyvalet får klassen .active.
+Innan vi går vidare till routen ordnar vi så att bara det aktiva menyvalet får klassen ".active".
 
 ```html
 <ul class="nav navbar-nav">
@@ -324,13 +326,13 @@ Innan vi går vidare till routen kan vi ordna så att det aktiva menyvalet får 
 </ul>
 ```
 
-Vi använder Jinja2 och modulen "request" som importeras i app.py. En if-sats kollar pathen och lägger till klassen `active` om den matchar. Studera koden ovan så du är med på vad som händer.
+Med modulen Jinja2 kan vi använda if-satser i vår html template kod, även for-loopar, och med modulen request kan vi få ut vilken path vi är på. Vi kombinerar det för att kolla om vi är på pathen "/" eller "/about" och sätter klassen "active" på rätt menyval. På detta sätta kan vi dynamiskt sätta "activ" på korrekt menyal. Studera koden ovan så du är med på vad som händer.
 
 
 
 ###Lägg till en route {#lagg-till-en-route}
 
-Vi öppnar filen `app.py` igen och tittar på routen. Lägg till följande kod under den första routen:
+Vi öppnar filen `app.py` igen och lägger till en route för "about". Lägg till följande kod efter den första routen:
 
 ```python
 @app.route("/about")
@@ -344,9 +346,9 @@ def about():
 Skicka med parametrar {#skicka-med-parametrar}
 ------------------------------
 
-För att göra vår app lite mer användbar kan vi skicka med parametrar vid routingen i app.py. Det gör att vi kan använda ren python-kod och sedan presentera det i html-koden.  
+För att göra vår app lite mer användbar kan vi skicka med data vid routingen i app.py till template filerna. Det gör att vi kan skicka med data från vår python kod till html koden och presentera den.
 
-Vi kikar på hur det går till i app.py. Innan `@app.route()` lägger vi till några variabler:  
+Vi kikar på hur det går till i app.py. Vi lägger till ett par variabler i det globala scopet:
 
 ```python
 my_name = "Kenneth Lewenhagen"
@@ -363,7 +365,7 @@ def about():
     return render_template("about.html", name=my_name, course=my_course)
 ```
 
-Nu fattas det bara att använda variablerna i about.html. Vi lägger till placeholders med hjälp av `{{ }}`.
+Nu fattas det bara att använda variablerna i about.html. Vi lägger till placeholders med hjälp av `{{ }}`. Det är modulen Jinja2 som låter oss använda `{{}}` och köra "kod" i dem.
 
 ```html
 <p>Jag heter {{ name }} och det här är kursen {{ course }}.</p>
