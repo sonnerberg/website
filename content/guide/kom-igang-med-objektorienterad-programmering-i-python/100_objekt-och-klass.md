@@ -5,4 +5,4 @@ linkable: true
 Objekt och Klass
 =======================
 
-Vi tittar på några av de grundkonstruktioner som finns i objektorienterad PHP.
+Allt i Python är på ett eller annat sätt ett objekt. Strängar, integers, listor, moduler - ja, allt. Vi ska titta på är hur man skapar egna klasser och objekt och hur man hanterar dem.
