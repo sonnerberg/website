@@ -48,9 +48,9 @@ Innehåll {#innehall}
 Kursen omfattar följande områden:
 
 * Virtualisering med Docker för utveckling, test och driftsättning.
-* Ramverksbaserade serverlösning, backend med JavaScript/PHP.
-* Frontendlösningar med web, SPA (single page application) och desktop.
-* Kopplingar mot databaser.
+* Ramverksbaserade serverlösning, backend med JavaScript.
+* Ramverksbaserad frontend.
+* Kopplingar mot databaser av SQL och NoSQL.
 * Testdriven utveckling och tekniker för enhetstestning.
 * Automatiserad testning och byggning.
 * Driftsättning och innebörden av devops.
@@ -86,7 +86,7 @@ Efter genomförd kurs skall studenten:
 Efter genomförd kurs skall studenten:
 
 * via redovisningstexter kunna visa god förmåga att reflektera över kodstruktur i ramverk och perspektivet fullstack.
-* via redovisningar och utförda övningar påvisa god kunskap i rollen som devop.
+* via redovisningar och utförda övningar påvisa god kunskap i rollen som devops.
 
 
 
@@ -223,7 +223,7 @@ Lektionsplan och rekommenderad studieplan {#schema}
 
 Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin3) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasar2/lasperiod2).
 
-Studieplan och lektionsplan finns tillgängligt via kurstillfället på ITs.
+Studieplan och lektionsplan finns tillgängligt via kurstillfället på Canvas.
 
 Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
@@ -260,12 +260,12 @@ Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättnin
 
 
 
-Kursutvärdering och kursutveckling {#kursutvardering}
+Kursvärdering och kursutveckling {#kursutvardering}
 -----------------------------------------------------
 
-Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
+Det finns ett särskilt dokument som beskriver hur arbetet med kursvärderingar och kursutveckling sker. Det är oerhört viktigt att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
+Läs om hur [vi jobbar med kursvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
 
 
 

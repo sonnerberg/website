@@ -33,13 +33,13 @@ Se till att du har taggat en ny version på ditt repo, så att dina senaste änd
 
 | Version | Kmom   |
 |---------|--------|
-| 1.0.*   | kmom01 | 
-| 2.0.*   | kmom02 | 
-| 3.0.*   | kmom03 | 
-| 4.0.*   | kmom04 | 
-| 5.0.*   | kmom05 | 
-| 6.0.*   | kmom06 | 
-| 10.0.*  | kmom10 | 
+| 1.0.*   | kmom01 |
+| 2.0.*   | kmom02 |
+| 3.0.*   | kmom03 |
+| 4.0.*   | kmom04 |
+| 5.0.*   | kmom05 |
+| 6.0.*   | kmom06 |
+| 10.0.*  | kmom10 |
 
 Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du historik och du kan få problem med inlämningarna.
 
@@ -61,17 +61,17 @@ Den länken som dyker upp längst ned är länken till din me-sida. Där kan du 
 
 
 
-Kopiera redovisningstexten till forumet {#forum}
+<!-- Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/ramverk2). Bifoga länken till din me-sida.
+Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/ramverk2). Bifoga länken till din me-sida. -->
 
 
 
-Kopiera redovisningstexten till ITs {#its}
+Kopiera redovisningstexten till Canvas {#its}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen [Canvas](kurser/faq/bth-stodfunktioner#its) tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 
