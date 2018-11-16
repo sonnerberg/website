@@ -103,7 +103,7 @@ except Exception as e:
 
 Skapa skriptet och lägg båda filerna i en katalog som är tillgänglig via en webbserver som har konfigurerat att CGI fungerar och Flask finns installerat.
 
-Öppna din webbläsare mot skriptet för att testa det, se till att lägga till en avslutande `/` så länken avslutas med `app.cgi/`, annars blir det 404.
+Öppna din webbläsare mot skriptet för att testa det, se till att lägga till **en avslutande `/`** så länken avslutas med `app.cgi/`, annars blir det 404.
 
 Hela anropet är samlat under exceptionhantering för att visa tydliga felmeddelanden om något går snett. Om du kör detta i produktionsmiljö så vill du troligen inte vara så tydlig i att visa felmeddelanden.
 
@@ -133,7 +133,7 @@ Du kan se [källkoden till exemplet i kursrepot för oopython](https://github.co
 Lägg till CGI i Apache webbserver {#apache}
 -----------------------------------
 
-Här är en kort-kort generell variant av hur du sätter upp CGI på din Apache webbserver.
+Här är en kort-kort generell variant av hur du sätter upp CGI på din egna Apache webbserver. Detta behövs inte för att köra på studentservern.
 
 Om du inte har konfigurerat din Apache webbserver för att köra CGI skript så är följande de steg som behövs utföras (på en Linux-maskin).
 
