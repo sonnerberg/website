@@ -5,4 +5,4 @@ linkable: true
 Arrayer
 =======================
 
-Lite om arrayer
+Array-literalen `[]` är en välkänd konstruktion. I Python kallas det *list* och i vissa språk *vector*. VI tittar närmare på arrayer i JavaScript.
