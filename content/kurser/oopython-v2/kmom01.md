@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2018-11-16": (B, aar) Uppdaterat länkar och redv. frågor.
     "2017-11-10": (PB1, mos) Utkast till v2.
     "2017-01-06": (A, mos) Lade till CGI på studentservern.
 ...
@@ -61,11 +62,9 @@ Läs följande:
 
 Läs följande:
 
-1. Fräscha upp minnet med [dokumentationen som finns på Pythons webbplats](https://www.python.org/doc/). Kika runt lite och orientera dig.
+1. Fräscha upp minnet med [Python 3.x Doc](https://docs.python.org/3/). Kika runt lite och orientera dig.
 
-1. Se översikten av dokumentationen för [Python 3.x Doc](https://docs.python.org/3/).
-
-1. Titta på [Flasks hemsida](http://flask.pocoo.org/). Där hittar du även installationsanvisningar och exempel.
+1. Titta på [Flasks hemsida](http://flask.pocoo.org/). Försök få en snabb överblick av vad Flask är.
 
 Följande artiklar är korta och bra att läsa:  
 1. [Motivation for obejct-oriented](https://atomicobject.com/resources/oo-programming/introduction-motivation-for-oo).
@@ -93,7 +92,7 @@ Titta på följande:
 
 1. Titta på de första 7-minuterna av [Object-oriented programming](https://www.youtube.com/watch?v=lbXsrHGhBAU).  
 
-
+1. Tips på en bra video från en tidigare student [What is object-oriented programming?](https://www.youtube.com/watch?v=xoL6WvCARJY).
 
 ###Lästips {#lastips}
 
@@ -133,7 +132,7 @@ Genomför följande övning för att träna dig.
 
 1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
 
-1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`. Detta behöver bara fungera på studentservern, alltså inte lokalt.
+1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`. Detta behöver bara fungera på studentservern, **alltså inte lokalt**.
 
 1. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
 
@@ -167,6 +166,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vilken utvecklingsmiljö använder du?
 * Var det några problem med att installera Flask?
 * Är du bekant med objekt och klasser sedan tidigare?
+* Vad är en klass/objekt?
 * Har du någon erfarenhet av Bootstrap sedan tidigare?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
