@@ -29,6 +29,7 @@ Guider under utveckling till hösten 2018.
 
 Guider under utveckling till våren 2019.
 
+* [Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)
 * [ER-modellering med databaser](guide/er-modellering-med-databaser)
 
 Guider som ligger till sig och eventuellt utvecklas framöver.
