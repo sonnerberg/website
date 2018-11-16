@@ -31,9 +31,11 @@ Terminologi {#terminologi}
 
 * **Klassattribut**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. Ett klassattribut kallas även _statiskt attribut.
 
-* **Instansattribut**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
+* **Instansattribut**: En variabel som är definierad inuti en klass. Den tillhör enbart den instansen av klassen.
 
-* **Instans**: Ett individuellt objekt av en speciell klass.
+* **Instans**: Ett individuellt objekt av en klass.
+
+* **Objekt**: En instans av en klass.
 
 * **Metod**: En funktion som är definierad inuti en klass.
 
@@ -47,16 +49,16 @@ Objekt kommer väl till pass när ens kod börjar kräva beteenden. Är det ren 
 
 
 
-Skapa ett objekt {#skapa-ett-objekt}
+Skapa en klass {#skapa-en-klass}
 ------------------------------
 
-Låt oss gå igenom hur man skapar ett bil-objekt, "Car". För enkelhetens skull hoppar jag över [docstrings](https://en.wikipedia.org/wiki/Docstring) i artikeln. Ett klass-objekt skapas med:  
+Låt oss gå igenom hur man skapar en bil klass, "Car". För enkelhetens skull hoppar jag över [docstrings](https://en.wikipedia.org/wiki/Docstring) i artikeln. En klass skapas med:  
 
 ```python
 class Car():
 ```
 
-Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser kommer ha. Vi lägger också till en räknare som har koll på hur många bilar vi har, två så kallade _statiska attributen_ eller _klassattribut_:
+Något som "alla" bilar har gemensamt är att de har 4 hjul, så vi skapar ett _statiskt attribut_ som innehåller hur många hjul alla bilar har. Vi lägger även till ett statiskt attribut som vi använder som en räknare för att hålla koll på hur många objekt vi har skapat av klassen. _statiska attribut_ innehåller värden som är gemensamma för alla objekt av klassen till skillnad från _instans attribut_ som är individuella för varje objekt av klassen.
 
 ```python
 class Car():
@@ -64,7 +66,7 @@ class Car():
     car_count = 0
 ```
 
-Sådär ja, vad fint det blev. De statiska attributen som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Konstruktormetoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
+Sådär ja, vad fint det blev. Vi går vidare till att lägga till instans attribut som ska innehålla data som vi vill ska vara personlig för varje objekt. De statiska attributen som ligger här ägs av bas-klassen Car. Instans attribut skapar vi i _konstruktorn_; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig mellan objekten. Konstruktormetoden heter `__init__` och den måste ha parametern `self`. "self" används för att referera till objektet som konstruktorn ska skapa. Vi fyller på med instans attribut för modell och pris. I och med att `__init__`-metoden används för att skapa nya objekt av vår klass är det ett bra ställe att öka `car_counter` med 1. Då kommer `car_counter` öka med 1 varje gång vi skapar ett nytt Car objekt:
 
 ```python
 class Car():
@@ -78,7 +80,8 @@ class Car():
         Car.car_count += 1
 ```
 
-Som du ser så används argumentet *self* i klassen. Den behöver man inte skicka med som argument, utan det gör Python åt dig. Alla metoder måste dock börja med "self" i parameterlistan. Det som händer är att med den magiska första parametern vet metoden vilken instans som äger anropet.
+För att vi ska kunna initiera objekten med individuella värden har vi parametrar för instans attributen och tilldelar de argumenten som skickas med till våra instans attribut. `self.model = model`  
+Alla metoder måste dock börja med "self" i parameterlistan. Det som händer är att med den magiska första parametern vet metoden vilken instans som äger anropet.
 
 Nu kan vi skapa en ny instans med:
 
