@@ -1,7 +1,9 @@
 ---
 author:
     - mos
+    - efo
 revision:
+    "2018-11-16": "(C, efo) Omarbetad som vision inför VT19 och jsramverk"
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-12-21": "(B, mos) Kommentar om alternativ för krav 5."
     "2017-12-11": "(A, mos) Första utgåvan."
@@ -42,20 +44,20 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du jobbar som teknisk arkitekt och teamledare och du skall nu visa vägen för ditt team till nya tekniker som ni kan komma att använda i ert nästa högprofil projekt som är kritiskt för ert företags överlevnad.
+Du jobbar som teknisk arkitekt och teamledare i en framstormande startup där du har [Carte Blanche](https://en.wikipedia.org/wiki/Carte_blanche) att välja teknik inför ett nytt spännande projekt, som är tänkt skaka om trading-branchen. Du har stor påtryckning från eran investor [a12o](https://a12.emilfolino.se) att detta projekt måste lyckas för att de ska kunna glida resten av livet.
 
-Du har valt att bygga ihop en väl fungerande applikation som påvisar alla de tekniker du tror på.
+Du har valt att bygga ihop en väl fungerande applikation som påvisar alla de tekniker du tror på. När du är klar så är tanken att du presenterar projektet och teknikerna för dina medlemmar i teamet och din applikation fungerar som utvärderings- och utbildningsmaterial för ditt team.
 
-När du är klar så är tanken att du presenterar projektet och teknikerna för dina medlemmar i teamet och din applikation fungerar som utvärderings- och utbildningsmaterial för ditt team.
-
-Tänk på att ditt team är kritiska mot nya tekniker, du behöver göra ett gott jobb för att imponera på dem. Annars är risken att de sågar dina nya idéer.
+Tänk på att ditt team till största del består av PHP-utvecklare kritiska mot nya tekniker och du behöver göra ett gott jobb för att imponera på dem. Annars är risken att de sågar dina nya idéer.
 
 
 
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
+Du ska utveckla och driftsätta en trading plattform baserad på följande kravspecifikation. Du ska själv välja objekt att sälja exempel på objekt kan vara råvaror, värdepapper, antikviteter eller varför inte kakor & tårtor?
+
+Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
 De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös optionella kraven för att samla poäng och nå högre betyg.
 
@@ -65,41 +67,31 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 
 
-### Krav 1, 2, 3: Grunden {#k1}
-
-
-
 #### Repon på GitHub {#r1}
-  
+
 Skapa ett/flera repon för projektet, eller återanvänd det du redan gjort i kursen, spara resultatet i `me/kmom10`.
 
-När du är klar, committa, tagga, pusha till GitHub samt gör `dbwebb upload` till studentservern.
+När du är klar, committa, tagga, pusha till GitHub.
 
 
 
-#### Applikationen och teknikval {#r2}
+### Krav 1: Backend {#k1}
 
-Du bygger en väl fungerande och komplett klient/server-applikation med JavaScript och de ramverk du väljer att använda. Utgångsläget är att använda de tekniker som presenterats i kursen, eller de tekniker som du själv valt utifrån kursens fokus och diskussioner i forumet.
-
-I din README skriver du ett stycke om din kravbild för applikationen. Det skall vara tydligt för läsaren vilka krav/features du inkluderar och vilka du medvetet exkluderar. Du skriver vilka bastekniker och ramverk du valt att använda tillsammans med korta argument om dina val samt en kort utvärdering av hur väl du anser dina val har fungerat i sammanhanget.
+Skapa ett API för trading av dina valda objekt. Användare av din tradingplattform ska kunna registrera och autentisera sig mot plattformen från en klient. Som autentiserad användare ska det gå att köpa och sälja valda objekt som hamnar i ett depå kopplat till användaren.
 
 
 
-#### Installation {#r7}
+### Krav 2: Frontend {#k2}
 
-I din README beskriver du kort hur man installerar och startar upp din applikation. Du satsar på att allt går att installera med `npm install` och starta lokalt med `npm start` (eventuellt `npm stop`).
+Skapa en klient som är publikt tillgänglig. Gör ett medvetet val av teknik och berätta utförligt i din README om vilka teknikval du har gjort och varför. Klienten ska vara designat för att användas på enheter av olika storlekar.
 
-Du visar hur man startar igång servern i en (samling av) Docker-kontainers via `npm run start-docker` och de kan stoppas med `npm run stop-docker`.
-
-Normalt fungerar en installation utan övriga inställningar. Men, dokumentera de möjligheter som eventuellt finns i form av `DBWEBB_PORT`, `DBWEBB_DSN` och liknande.
-
-Var tydlig och kortfattad i din README om hur installationsfasen ser ut.
+I klienten ska det vara möjligt att autentisera sig mot API:t implementerad i [Krav 1](#k1). När klienten är autentiserad kan användaren se tillgängliga medel och objekt i depån samt handla med objekt. Gör det även möjligt för att användaren att sätta in medel på depån, som användaren sedan kan handla för.
 
 
 
-#### Testning {#r3}
+### Krav 3: Tester {#k3}
 
-Du har god kodtäckning i enhetstesterna, sträva efter 70% där det är rimligt, men se det som en riktlinje och inte ett hårt krav.
+Du har god kodtäckning i enhetstester och funktionstester på både backend och frontend. Sträva efter 70% där det är rimligt, men se det som en riktlinje och inte ett hårt krav.
 
 I din README skriver du ett stycke om vilka verktyg du använt för din testsuite och om det är delar av applikationen som inte täcks av tester. Du reflekterar kort över hur dina teknikval fungerat för dig. Du reflekterar också över hur lätt/svårt det är att få kodtäckning på din applikation.
 
@@ -107,11 +99,7 @@ Man kan köra hela din testsuite lokalt via `npm test`.
 
 I README visar du hur man kan se kodtäckningen lokalt i webbläsaren.
 
-Du kan köra testerna i tre olika versioner av Node via Docker och du kör dessa tester via `npm run test-docker`, `npm run test-docker1` samt `npm run test-docker2`. 
-
-
-
-#### Kedja för Continuous integration {#r4}
+Du kan köra testerna i tre olika versioner av Node via Docker och du kör dessa tester via `npm run test-docker`, `npm run test-docker1` samt `npm run test-docker2`.
 
 Dina repon har en CI-kedja och automatiserade tester med tillhörande badges för byggtjänst, kodtäckning och tjänst för kodkvalitet.
 
@@ -121,43 +109,25 @@ Berätta om du är nöjd eller inte med de betyg som tjänsten för kodkvalitet 
 
 
 
-#### Realtid {#r5}
+### Krav 4: Realtid (optionell) {#k4}
+
+Skapa en realtids micro-service som hanterar priserna för dina säljobjekt. I din frontend ska denna micro-service användas för att grafisk representera priserna i realtid.
 
 I din README beskriver du i ett eget stycke om hur realtidsaspekten fungerar i din applikation. Du skriver också om vilken teknik/verktyg du valt för din implementation samt en kort reflektion av hur du tycker tekniken fungerar.
 
 
 
-#### Databas {#r6}
-
-Du har valt en icke-SQL baserad databas i din applikation. I din README beskriver du vilken du valde och du reflekterar över hur databasen har fungerat i sammanhanget.
-
-Du gör även en kortare utvikning om hur du tror att traditionella relationsdatabaser hör hemma i dina framtida projekt.
-
-
-
-#### Egen modul på npm {#r8}
-
-Du har gjort en (eller flera) egna moduler som du använder i ditt projekt. Du skriver ett eget stycke i din README om dessa moduler och hur du ser på NPM som paketverktyg. Glöm inte att länka till modulernas sida på npm.
-
-
-
-###Krav 4: README (optionell) {#k4}
-
-Din dokumentation och reflektion i README är bättre än bra, välskriven och tydlig. Ditt utvecklingsteam har sällan sett en så välskriven README.
-
-
-
-###Krav 5: Docker (optionell) {#k5}
+### Krav 5: Docker (optionell) {#k5}
 
 Du har skapat en egen image som du publicerat på Docker store och återanvänder i projektet. Länka till din image på Docker store. Basen för din image finns i ett GitHub repo som du länkar till.
 
 Du skriver ett eget stycke om detta i din README och reflekterar över för- och nackdelar i att jobba med Docker.
 
-Det finns variationer i hur du kan uppfylla detta kravet. Se föreläsningen som innehåll en intro till projejektet då detta kravet diskuterades.
+Det finns variationer i hur du kan uppfylla detta kravet. Se föreläsningen som innehåll en intro till projektet då detta kravet diskuterades.
 
 
 
-###Krav 6: Teknik, arbetssätt, verkyg, ramverk (optionell) {#k6}
+### Krav 6: Teknik, arbetssätt, verkyg, ramverk (optionell) {#k6}
 
 Du väljer en eller ett par av de teknikerna/arbetssätten/verktygen/ramverken du använt i ditt projekt och tar på dig rollen som evangelist och försöker aktivt sälja in och argumentera för teknikerna genom att skriva ihop en "A4" i form av ett foruminlägg (eller motsvarande).
 
@@ -182,6 +152,4 @@ Redovisning {#redovisning}
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida med projektet. 
-
-3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/ramverk2) och berätta att du är klar.
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida med projektet.
