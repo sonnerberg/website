@@ -1,9 +1,9 @@
 ---
-author: mos
+author: aar
 revision:
-    "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
+    "2018-11-16": "(A, aar) Första versionen, uppdelad av större dokument."
 ...
-Klass
+Klasser och objekt
 ==================================
 
 Vi skapar en egen klass med statiska- och instansattribut och instansierar två objekt av klassen.
@@ -51,15 +51,15 @@ class Car():
         Car.car_count += 1
 ```
 
-För att vi ska kunna initiera objekten med individuella värden har vi en parameter för varje instansattribut och tilldelar de argumenten som skickas med till våra instansattribut. I början av konstruktorn kan vi se `self` som ett nytt tomt objekt, det innehåller bara en koppling till att det tillhör klassen Car. Inne i `__init__` konstruerar vi vad objektet ska innehålla och vilken data som ska finns i objektet. Raden `self.model = model` gör att objektet (self) får ett attribut som heter "model" och det attributet tilldelas ett värde som har skickats med, parametern model. Raden under gör samma sak fast med ett attribut som heter "price" istället. Sist i konstruktorn ökar vi det statiska attributet `car_count` som ligger i klass Car med 1. 
+För att vi ska kunna initiera objekten med individuella värden har vi en parameter för varje instansattribut och tilldelar de argumenten som skickas med till våra instansattribut. I början av konstruktorn kan vi se `self` som ett nytt tomt objekt, det innehåller bara en koppling till att det tillhör klassen Car. Inne i `__init__` konstruerar vi vad objektet ska innehålla och vilken data som ska finns i objektet. Raden `self.model = model` gör att objektet (self) får ett attribut som heter "model" och det attributet tilldelas ett värde som har skickats med, parametern model. Raden under gör samma sak fast med ett attribut som heter "price". Sist i konstruktorn ökar vi det statiska attributet `car_count` som ligger i klass Car med 1. 
 
-Nu har vi ett objekt/en instans av Car klassen som innehåller två attribut med specifika värden. Vi kollar hur det ser ut när vi anropar konstruktorn, skapar objektet och skriver ut dess innehåll.
+Nu har vi en klass som innehåller ett statisk attribut och två instansattribut. Vi kollar hur det ser ut när vi anropar konstruktorn och skapar vårt första objekt.
 
 ```python
 >>> bmw = Car("BMW", 100000)
 ```
 
-Nu har vi skapat en instans av klassen Car med 4 hjul, märket BMW och med ett pris på 100.000. Förhoppningsvis la du märke till att vi aldrig anropade `__init__()` och vi skickade bara med två argument medan konstruktorn har 3 parametrar. `__init__()` är en så kallad magisk funktion, vi kommer gå igenom dem mer i nästa kmom. Kort sagt ska vi inte anropa den själva utan Python gör det automatiskt när vi anropar klassen, `Car()`. Vidare till argumenten, vi ska inte själva skicka med något argument för första parametern i konstruktorn, `self`, utan det gör Python automatiskt. Vi behöver bara skicka med värden för de resterande två parametrarna.
+Nu har vi skapat en instans av klassen Car med 4 hjul, märket BMW och med ett pris på 100.000. Förhoppningsvis la du märke till att vi aldrig anropade `__init__()` och vi skickade bara med två argument medan konstruktorn har 3 parametrar. `__init__()` är en så kallad magisk funktion, vi kommer gå igenom dem mer i längre fram i guiden. Kort sagt ska vi inte anropa den själva utan Python gör det automatiskt när vi anropar klassen, `Car()`. Vidare till argumenten, vi ska inte själva skicka med något argument för första parametern i konstruktorn, `self`, utan det gör Python automatiskt. Vi behöver bara skicka med värden för de resterande två parametrarna.
 
 Vi skapar ytterligare en instans av Car klassen:
 
