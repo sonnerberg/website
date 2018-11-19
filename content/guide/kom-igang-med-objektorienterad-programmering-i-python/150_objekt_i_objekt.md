@@ -115,6 +115,38 @@ Om vi inte hade använt list comprehension hade vi gjort på följande sätt:
     ...
 ```
 
+Vi testar lägga till en till tycker jag. Metoden `present_car()` borde också visa vad för utrustning bilen har. Så jag lägger till en ny metod i `Equipment` som returnerar en formaterad sträng och så skriver vi ut den för alla instanserna i `present_car()`.
+
+```python
+class Equipment():
+
+    def __init__(self, name, type, price):
+        self.type = type
+        self.price = price
+        self.name = name
+
+        ...
+        
+        def get_info(self):
+            return "Name: {}, Type: {}, Price: {}".format(self.name, self.type, self.price)
+
+
+class Car():
+    ...
+    
+    def present_car(self):
+        equipment_info = "\n".join([eqp.get_info() for eqp in self.equipment])
+        info = "Model: {m}, Price: {p}\nEquipment:\n{e}".format(m=self.model, p=self.price, e=equipment_info) 
+        print(info)
+
+>>>volvo.present_car()
+Model: Volvo, Price: 150000
+Equipment:
+Name: Bluetooth, Type: Entertainment, Price: 2000
+Name: 7 inch display, Type: Entertainment, Price: 10000
+```
+
+I detta exemplet anropar vi `get_info()` på varje element i `self.equipment` och strängen som returneras blir ett element i den nya listan
 
 
 All kod {#all_kod}
@@ -139,6 +171,9 @@ class Equipment():
     def get_type(self):
         return self.type
 
+    def get_info(self):
+        return "Name: {}, Type: {}, Price: {}".format(self.name, self.type, self.price)
+
 
 
 class Car():
@@ -153,7 +188,9 @@ class Car():
         Car.car_count += 1
 
     def present_car(self):
-        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+        equipment_info = "\n".join([eqp.get_info() for eqp in self.equipment])
+        info = "Model: {m}, Price: {p}\nEquipment:\n{e}".format(m=self.model, p=self.price, e=equipment_info) 
+        print(info)
 
     @staticmethod
     def calculate_price_reduction(aPrice):
@@ -174,3 +211,5 @@ class Car():
         self.price += other.get_price()
         return self
 ```
+
+Testa koden, lek runt med den så du förstår vad som sker och hur man kommer åt attribut och anropar metoder.

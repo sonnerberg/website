@@ -134,7 +134,7 @@ Genomför följande övning för att träna dig.
 
 1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`. Detta behöver bara fungera på studentservern, **alltså inte lokalt**.
 
-1. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
+1. Läs igenom första delen av guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".  
 
 
 
@@ -163,10 +163,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilken utvecklingsmiljö använder du?
 * Var det några problem med att installera Flask?
 * Är du bekant med objekt och klasser sedan tidigare?
 * Vad är en klass/objekt?
+* Vad är skillnaden på instans- och statiska attribut/metoder?
 * Har du någon erfarenhet av Bootstrap sedan tidigare?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
