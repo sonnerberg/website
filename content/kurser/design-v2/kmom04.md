@@ -3,8 +3,9 @@ author:
   - mos
   - efo
 revision:
+    "2018-11-19": (E, mos) Publicerat för design v2.
     "2018-10-19": (D, efo) Uppdatering med design guide.
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-06-08": (C1, mos) Nytt dokument inför uppdatering av kursen.
     "2017-11-17": (C, mos) Genomläst ingör ht17, förtydliganden.
     "2016-10-26": (B, mos) Bytte plats från kmom03 till kmom04.
     "2016-10-21": (A, mos) Första utgåvan.
@@ -12,30 +13,56 @@ revision:
 Kmom04: Färg
 ====================================
 
-[WARNING]
+Vi tittar på färger, färghjulet och olika tekniker för att kombinera färger i ett sammanhang, så kallade färgscheman.
 
-**Kursutveckling pågår till kurs design v2**
+Ett akromatiskt färgschema med vitt, svart och nyanser av grått.
 
-Kursstart hösten 2018.
+<table style="border-spacing: 4px; border-collapse: separate">
+<tr>
+<td style="height: 50px; width: 50px; background-color: #000">
+<td style="height: 50px; width: 50px; background-color: #333">
+<td style="height: 50px; width: 50px; background-color: #666">
+<td style="height: 50px; width: 50px; background-color: #999">
+<td style="height: 50px; width: 50px; background-color: #ccc">
+<td style="height: 50px; width: 50px; background-color: #eee">
+</tr>
+</table>
 
-[/WARNING]
+Ett monokromatiskt färgschema med en basfärg och olika nyanser av den.
 
+<table style="border-spacing: 4px; border-collapse: separate">
+<tr>
+<td style="height: 50px; width: 50px; background-color: #500">
+<td style="height: 50px; width: 50px; background-color: #a44">
+<td style="height: 50px; width: 50px; background-color: #d46a6a">
+<td style="height: 50px; width: 50px; background-color: #faa">
+</tr>
+</table>
 
-Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Det blir flera teman. Finns det något bra sätt att organisera sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända delar av ett tematemats bas-kod?
+Ett _complementary_ färgschema med en röd basfärg och två komplementfärger (blå/grön) på motsvarande sida av färghjulet, som kan användas som försiktigt som accentfärger eller för att kraftfullt färglägga webbplatsen.
 
-Låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt lära oss grunderna i vissa designkoncept.
+<table style="border-spacing: 4px; border-collapse: separate">
+<tr>
+<td style="height: 50px; width: 50px; background-color: #500">
+<td style="height: 50px; width: 50px; background-color: #aa3939">
+<td style="height: 50px; width: 50px; background-color: #d46a6a">
+<td style="height: 50px; width: 50px; background-color: #a44">
+<td style="height: 50px; width: 50px; background-color: #246c60">
+<td style="height: 50px; width: 50px; background-color: #43877b">
+<td style="height: 50px; width: 50px; background-color: #729c34">
+<td style="height: 50px; width: 50px; background-color: #9bc362">
+</tr>
+</table>
 
-De designkoncept vi först väljer att fokusera på är färglära och typografi. Vi tittar på hur man väljer färger och vi prövar olika typografiska val och vi utvärderar hur dessa val påverkar vår design.
+Vi jobbar med tekniker kring hur en webbplats kan färgläggas. Men innan det funderar vi igenom om de vanligaste webbplatsern är färgglada eller inte? Det kan vara så att många webbplatser har ett begränsat användande av färger. Om det stämmer, hur kan det komma sig?
+
+Vi skapar en knapp handfull teman för att jobba med färger och typografi och samtidigt träna oss i att organisera LESS-koden så att den blir återanvändbar mellan olika teman. Att använda LESS-variabler (och moduler) gör att vi kan återanvända ett bastema och anpassa det för olika sammanhang.
+
+Vi gör även ett en studie om webbplatsers val av färger och typografi där vi skriver en rapport som vi publicerar i vår redovisa-sida. Rapporten kan man välja att lösa i grupp eller enskilt.
 
 
 
 <!--more-->
-
-[FIGURE src=/image/snapht16/theme-base.png?w=w2 caption="Detta är mitt bastema i exemplet."]
-
-[FIGURE src=/image/snapht16/theme-custom.png?w=w2 caption="Detta är mitt anpassade `custom` tema."]
-
-[FIGURE src=/image/snapht16/theme-variables.png?w=w2 caption="Nu har jag ytterligare anpassat genom att ändra värden för variabler."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -69,11 +96,11 @@ I sektionen [Färg](guide/design-med-html5-och-css3/farg) tittar vi på hur vi k
 
 ### Färg {#color}
 
-Lös följande artiklar.
+Lös följande artiklar för att få en bakgrund i allmän layout kopplad till färger och färgscheman.
 
-1. Läs artikeln "[The Characteristics of Minimalism in Web Design](https://www.nngroup.com/articles/characteristics-minimalism/)".
+1. Läs artikeln "[The Characteristics of Minimalism in Web Design](https://www.nngroup.com/articles/characteristics-minimalism/)". Artikeln sammanställer ett antal webbplatsers karaktäristik och diskuterar kring valet av stil och färgval. Fokuset är på minimalism, att "hålla det enkelt".
 
-1. Läs artikeln "[An Introduction to Color Theory for Web Designers](https://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)" som ger insyn i hur man väljer färger för en webbplats.
+1. Läs artikeln "[An Introduction to Color Theory for Web Designers](https://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)" som ger insyn i hur man väljer färger och färgshema för en webbplats.
 
 1. Läs [kapitel 13 i boken Web Design - The Complete Reference](http://www.webdesignref.com/chapters/13/ch13-16.htm). Det handlar om "Color and Usability" och "The Hidden Meaning of Colors" och ger en kort introduktion till färger och webbdesign.
 
@@ -98,9 +125,9 @@ Läs följande om responsivitet.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)". Du skall skriva en rapport, ensilt eller i grupp.
+1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)". Du skall göra en analys av webbplatser och skriva en kort rapport. jobba enskilt eller i grupp. Spara allt i `me/redovisa`. 
 
-1. Utför uppgiften "[Bygg en bas och en familj av teman](uppgift/en-bas-och-en-familj-av-teman)".
+1. Utför uppgiften "[Teman med färger och typografi](uppgift/teman-med-färger-och-typografi)". Spara allt i `me/redovisa`.
 
 1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 4.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
@@ -115,10 +142,12 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känner du inför färger och webbplatser? Föredrar du något särskilt ljust, mörkt, färgglatt?
-* Har du funderat på hur webbplatsers färgskala och färgsättning påverkar besökarens känsla av webbplatsen? Bidrar val av typsnitt till den känslan?
-* Hur känns din LESS-struktur så här långt?
-* Hur valde du att göra med ditt eget standard tema, vilken typ av "design" valde du?
+* Kommentera kort om skrivuppgiften, någon som är värt att nämna från arbetet med den?
+* Berätta kort om din tanke bakom respektive teman, hur tolkade du "minimalistisk", "colorful" och "dark".
+* Vilket färgschema valde du till respektive tema och hur valde du att använda färgerna (mer eller mindre eller lika mycket av alla färger)?
+* Valde du att jobba med accentfärg och isåfall hur?
+* Hur tänkte du kring valet av typografi?
+* Berätta om din kodstruktur av teman, jobbade du med bastema och hur löste du anpassningarna till de olika temana?
 * Vilken är din TIL för detta kmom?
 
 

@@ -47,7 +47,7 @@ I videoserien "[Kursen design (v2)](https://www.youtube.com/playlist?list=PLKtP9
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*

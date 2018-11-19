@@ -16,9 +16,9 @@ Utvärdera webbplatsers färgval och känslan de signalerar
 
 Du skall välja ut ett antal olika webbplatser och dokumentera deras färgpalett och beskriva känslan du får från respektive webbplats. Du skall argumentera kring känslan som webbplatsens design ger, via färgvalen, och om den känns relevant för webbplatsens profil.
 
-<!--more-->
-
 Du kan jobba enskilt eller i grupp (2-4 personer) för att lösa denna uppiften.
+
+<!--more-->
 
 
 
@@ -40,7 +40,7 @@ Jobba igenom denna introduktion för att förberda inför uppgiften.
 
 ### Skapa rapportfilen {#create}
 
-Skapa en struktur för din rapport, din analys, det kommer fler sådana här uppgifter. Du kan kopiera samma grundläggande struktur som du har i din `content/redovisning`. 
+Skapa en struktur för din rapport, det kommer fler sådana här uppgifter. Du kan kopiera samma grundläggande struktur som du har i din `content/redovisning`. 
 
 ```bash
 # Gå till kursrepot
@@ -54,7 +54,7 @@ Lägg till så sidan "rapport" syns i din navbar.
 
 Skapa din första rapport i filen `content/rapport/04_fargschema.md`. Det är här du skriver dokumentationen för denna uppgiften.
 
-Även om ni jobbar i grupp så skall var och en av er lägga in varsin analys i sin egen redovisa-sida.
+Även om ni jobbar i grupp så skall var och en av er lägga in varsin egen kopia rapporten i sin egen redovisa-sida.
 
 
 
@@ -82,6 +82,8 @@ Du kan skriva ovan HTML-kod rakt in i ett markdown-dokument och följande kommer
 </tr>
 </table>
 
+Du kan förenkla koden om du lägger in visst stöd i form av klasser i din stylesheet.
+
 
 
 ### Rapportstruktur {#struct}
@@ -104,15 +106,20 @@ Metod
 
 Berätta kort om din "metod", hur du gör för att utföra undersökningen. Berätta om du använder något speciellt verktyg.
 
-Metod
+Resultat
 -----------------------
 
-Dokumentera dina resultat från din studie. 
+Dokumentera dina resultat från din studie. Berätta vad du kom fram till, vilka resultat du hittade och observerade.
 
 Analys
 -----------------------
 
-Diskutera dina resultat.
+Diskutera och analysera de resultaten du fann.
+
+Referenser
+-----------------------
+
+Ange de eventuella referenser du använder dig av, om några.
 
 Övrigt
 -----------------------
@@ -120,20 +127,26 @@ Diskutera dina resultat.
 Skriv ditt eget namn samt vilka gruppmedlemmar som deltog i att författa rapporten.
 ```
 
+Strukturen är inte absolut nödvändig, se den som en möjlighet att träna på god struktur av rapportskrivning.
+
 
 
 Krav {#krav}
 -----------------------
 
-1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet. Berätta även om du använda något särskilt verktyg för att göra färganalysen.
+1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet (urval). Tänk att ditt urval påverkar vad du kan komma fram till i din rapport. Gör ditt urval fråen en kategori av webbplatser, eller välj helt olika kategorier för att jämföra. 
 
-1. För varje webbplats, gör följande:
+1. Berätta om du använda något särskilt verktyg för att göra färganalysen (metod).
+
+1. För varje webbplats, gör följande (resultat):
     1. Ta en snapshot (bild) på webbplats.
     1. Dokumentera och visualisera färgpaletten som används.
     1. Notera vilken typ av färgschema som använts.
     1. Notera om och vilken accentfärg som använts.
     1. Notera val av typsnitt för H1-H3 samt brödtext, kommentera om det är serif eller sans-serif.
-    1. Diskutera och skriv två meningar om hur webbplatsens färgval och typografi gynnar/ogynnar den profil ni uppfattar att webbplatsen vill ha.
+    1. Notera i en mening om du anser att webbplatsens färgval och typografi motsvarar den profil du tror att webbplatsen vill ha.
+
+1. Skriv ett stycke om dina samlade intryck från resultatet, finns det något värt att nämna, diskutera, att analysera (analys), fick du fram något bra med din studie?
 
 1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
 
