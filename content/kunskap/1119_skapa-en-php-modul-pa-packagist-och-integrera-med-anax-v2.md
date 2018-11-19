@@ -29,6 +29,62 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
+<!--stop-->
+
+
+
+
+
+Scaffold {#scaffold}
+--------------------------------------
+
+anax create a ramverk1-me-v2
+
+
+
+Hämta källan från dev-master {#dev-master}
+--------------------------------------
+
+https://getcomposer.org/doc/05-repositories.md#loading-a-package-from-a-vcs-repository
+
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/igorw/monolog"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "dev-bugfix"
+    }
+}
+
+
+Eller, om paketet redan ligger på Packagist.
+
+"minimum-stability": "dev",
+"prefer-stable": true,
+"require": {
+    "anax/remserver": "dev-master"
+
+
+
+Skript för installation {#postprocessing}
+--------------------------------------
+
+bash vendor/anax/remserver/.anax/scaffold/postprocess.d/700_remserver.bash
+
+Visa htdocs/dev/router
+
+
+
+Symlänk {#symlink}
+--------------------------------------
+
+Symlänka till loaklt repo.
+
+
+
 
 
 Förutsättning {#pre}
