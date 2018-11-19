@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2018-11-19": "(E, mos) Lade till läsanvisning med Martin Fowler."
     "2018-11-14": "(D, mos) Nytt dokument inför uppdatering av kursen."
     "2017-09-11": "(C, mos) Eget dokument till uppgiften och förtydligade att man kan påbörja funderingarna kring en databas."
     "2017-09-04": "(B, mos) Bort med skrivuppgift och flytta User CRUD till kmom04."
@@ -44,6 +45,10 @@ Kika igenom följande artiklar.
 1. Bekanta dig med begreppet Lazy Loading genom att översiktligt titta på [Wikipedia om Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading).
 
 1. Kika kort och översiktligt på rekommendationen [PSR-11: Container Interface på PHP-FIG](http://www.php-fig.org/psr/psr-11/). Den erbjuder en rekommendation om vilket interface en DI kontainer skall implementera. Tanken är att låta programmeraren själv välja implementation för DI kontainer i sitt ramverk.
+
+1. Om du verkligen är intresserad av koncepten i kursmomentet så läser du artikeln "[Inversion of Control Containers and the Dependency Injection pattern](https://martinfowler.com/articles/injection.html)", skriven av Martin Fowler 2004. Han diskuterar begreppen och försöker sortera ut vad som är vad.
+
+1. Martin har även en kortare artikeln om "[Inversion of control](https://martinfowler.com/bliki/InversionOfControl.html)" där hans exempel är ett ramverk. Artikeln ger en tydlig förklaring till begreppet som det kan tolkas i vårt sammanhang.
 
 
 
