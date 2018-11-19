@@ -3,9 +3,9 @@ author:
     - mos
 revision:
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
-    "2017-09-11": "(A, mos) Preliminär release, artikel saknas."
+    "2017-10-02": "(A, mos) Första utgåvan."
 ...
-Kmom05: Modul på Packagist
+Kmom05: CI
 ==================================
 
 [WARNING]
@@ -16,57 +16,43 @@ Kursstart hösten 2018.
 
 [/WARNING]
 
-Du skall skapa en fristående modul av ditt kommentarssystem och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din me-sida och placera allt som modulen behöver i ett eget repo.
+Tanken är att ge en bild av hur automatiserad testning och continuous integration (CI) fungerar mot en PHP modul som ligger publicerad på GitHub och Packagist.
 
-Du skall sedan publicera repot som en PHP modul på Packagist. När det är klart kan du åter installera modulen i din me-sida med hjälp av kommandot composer.
+Vi fortsätter jobba mot modulen vi publicerade på GitHub och Packagist i föregående kursmoment. Vi använder de tester som körs via `make install test` för att låta externa verktyg checka ut vår kod och exekvera testerna och analysera koden ur olika aspekter.
 
-Du börjar införa enhetstestning på din modul.
-
-När du är klar så har du alltså samma kodbas som från början. Men du har brutit loss en självständig del från din me-sida och gjort den till en egen fristående modul. Vi vinner förhoppningsvis en bättre kodstruktur som gör det enklare att jobba med vidareutveckling, underhåll och test.
+Vi bekantar oss med ett antal olika externa verktyg och försöker förstå vad de kan tillföra till en utvecklares vardag.
 
 <!--more-->
 
+[FIGURE src=image/snapht17/travis.png?w=w2 caption="Travis har koll på hur modulerna i Anax klarar sina automatiserade tester."]
 
-Så här ser det ut när vi submittar paketet till Packagist.
+[FIGURE src=image/snapht17/circleci.png?w=w2 caption="CircleCI är en byggmiljö likt Travis."]
 
-[FIGURE src=image/snapht17/packagist-submit.png?w=w2 caption="Submitta ett paket till Packagist genom att ange dess url till GitHub."]
-
-[FIGURE src=image/snapht17/packagist-submitted.png?w=w2 caption="Nu är paketet på plats på Packagist."]
-
+[FIGURE src=image/snapht17/scrutinizer.png?w=w2 caption="Via Scrutinizer kan du få mer detaljerad information om din kod via statiskt kodanalys."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 2-4 studietimmar)*
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Kika igenom följande artiklar.
 
-1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Dependency Management](http://www.phptherightway.com/#dependency_management)", läs igenom det som en introduktion.
+1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Testing](http://www.phptherightway.com/#testing)", läs igenom det som en introduktion.
 
-1. Läs om begreppet "[Sematic versioning](http://semver.org/)" som berättar hur du bör hantera versionsnummer på dina programvara.
+1. Bekanta dig med begreppet [Automatiserad testning via Wikipedia](https://en.wikipedia.org/wiki/Test_automation). Läs översiktligt och få ett grepp om de olika termer som används.
 
-1. Bekanta dig med webbplatsen "[Packagist](https://packagist.org/about)" och skaffa dig ett konto på webbplatsen.
+1. Bekanta dig med begreppet [Continuous integration (CI) via Wikipedia](https://en.wikipedia.org/wiki/Continuous_integration). Läs igenom så du får en känsla över vilka delar som begreppet handlar om.
 
-1. Det skadar inte att färska upp minnet om "[dokumentationen för composer](https://getcomposer.org/doc/)" vilket kan komma till användning när du skall publicera din modul till Packagist.
-
-
-
-<!--
-###Videor {#videor}
-
-Kika på följande videos.
-
-1. Titta på seminariet?
--->
+1. Dokumentet "[Awesome PHP](https://github.com/ziadoz/awesome-php/blob/master/README.md)" innehåller en sektion för [Continuous integration](https://github.com/ziadoz/awesome-php/blob/master/README.md#continuous-integration) och en sektion för [Code analysis](https://github.com/ziadoz/awesome-php/blob/master/README.md#code-analysis). Kika snabbt på dem och fortsätt studera om något av verktygen faller dig i smaken. Det finns fler verktyg där ute, än de vi valt att använda.
 
 
 
@@ -77,31 +63,25 @@ Kika på följande videos.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Skapa en PHP-modul på Packagist och integrera med Anax](kunskap/skapa-en-php-modul-pa-packagist-och-integrera-med-anax)" som visar dig hur du skapar en egen PHP-modul som du kan installera med kommandot `composer`. Du sparar koden i `me/kmom05/anax5`.
+1. Jobba igenom artikeln "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" som visar dig hur du använder använder `make test` för att bygga grunden till automatiserade tester och ett CI-flöde med externa verktyg. Du kan jobba mot din egna modul för kommentarshanteringen och spara koden i `me/comment`.
 
 <!--
-1. Jobba igenom artikeln "[Validera och enhetstesta din modul](kunskap/XXX)" som visar hur du kan införa lokala tester i din modul. 
+1. Artikel om BDD, Behat, Mink samt phpunit mink.
 -->
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Utför uppgiften "[Skapa en PHP-modul och publicera på GitHub och Packagist](uppgift/skapa-en-php-modul-och-publicera-pa-github-och-packagist)". Du kan spara källkoden till din modul i `me/comment`.
+1. Utför uppgiften "[Integrera din modul med externa byggtjänster](uppgift/integrera-din-modul-med-externa-byggtjanster)". Jobba mot din modul i `me/comment` och när du är klar så gör du `composer update` i din `me/anax`.
 
-1. Gör uppgiften "[Integrera me-sidan med egen kommentarsmodul från Packagist](uppgift/integrera-me-sidan-med-egen-kommentarsmodul-fran-packagist)". Du får använda den modulen som du nyligen publicerat på Packagist och installera den med composer i din me-sida. Koden uppdaterar du i `me/anax`.
-
-1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (5.0.\*) när du är klar med alla uppgifter i kursmomentet.
-
-<!--
-1. Skriv gruppvis en artikel om ["Testdriven development (TDD)"](uppgift/skriv-artikel-om-tdd). Spara artikeln i din me-sida.
--->
+1. Pusha och tagga din redovisa, allt eftersom och sätt en avslutande tagg (5.0.\*) när du är klar med kursmomentet.
 
 
 
@@ -112,12 +92,13 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i texten:
+Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer omfattande än normalt.
 
-* Hur gick arbetet med att lyfta ut koden ur me-sidan och placera i en egen modul?
-* Flöt det på bra med GitHub och kopplingen till Packagist?
-* Hur gick det att åter installera modulen i din me-sida med composer, kunde du följa du din installationsmanual?
-* Hur väl lyckas du enhetstesta din modul och hur mycket kodtäckning fick du med?
-* Några reflektioner över skillnaden med och utan modul?
+* Har du någon erfarenhet av automatiserade testar och CI sedan tidigare?
+* Hur ser du på begreppen, bra, onödigt, nödvändigt, tidskrävande?
+* HUr stor kodtäckning lyckades du uppnå i din modul?
+* Berätta hur det gick att integrera mot de olika externa tjänsterna?
+* Vilken extern tjänst uppskattade du mest, eller har du förslag på ytterligare externa tjänster att använda?
+* Vilken är din TIL för detta kmom?
 
-Har du frågor eller funderingar så ställer du dem i forumet.
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.

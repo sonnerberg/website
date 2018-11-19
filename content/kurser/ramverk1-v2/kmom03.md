@@ -58,7 +58,7 @@ Kika över modulen `anax/di` som är implementationen bakom `$di` i ramverket f�
 
 ### Ramverk referenser {#referenser}
 
-Titta i (minst) en av manualerna för att se vad den beskriver om hur ramverket använder  (eller inte) en service kontainer likt `$di`.
+Titta i (minst) en av manualerna för att se vad den beskriver om hur ramverket använder (eller inte) en service kontainer likt `$di`.
 
 * [Dokumentationen för Symfony](https://symfony.com/doc/current/).
 * [Dokumentationen för Laravel](https://laravel.com/docs/5.7).
@@ -88,7 +88,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgiften "[En webbtjänst för att visa väderprognos och historiskt väder](uppgift/en-webbtjanst-for-att-visa-vaderprognos-och-historiskt-vader)". Spara koden under `me/redovisa`.
 
-1. Pusha och tagga ditt Anax, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
+1. Pusha och tagga din redovisa, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med kursmomentet.
 
 
 
@@ -108,4 +108,4 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 * Har du någon reflektion kring hur det är att jobba med externa tjänster (ipvalidering, kartor, väder)?
 * Vilken är din TIL för detta kmom?
 
-Har du frågor eller funderingar så ställer du dem i forumet.
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.

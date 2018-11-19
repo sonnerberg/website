@@ -113,7 +113,9 @@ Vi tittar sedan vidare på ett **horisontellt grid** som vi även kan kalla ett 
 
 ### Kmom04: Färg  {#kmom04}
 
-Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi.
+Vi tittar på färger, färghjulet och olika tekniker för att kombinera färger i ett sammanhang, så kallade färgscheman.
+
+Vi jobbar med tekniker kring hur en webbplats kan färgläggas. Men innan det funderar vi igenom om de vanligaste webbplatsern är färgglada eller inte? Det kan vara så att många webbplatser har ett begränsat användande av färger. Om det stämmer, hur kan det komma sig?
 
 [Instruktion till kursmoment 04](./kmom04).
 

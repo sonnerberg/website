@@ -125,19 +125,7 @@ Vi skall titta på begreppet Dependency Injection och några begrepp som är nä
 
 
 
-### Kmom04: Databasdrivna modeller {#kmom04}
-
-Vi skall titta på klasser i modell-lagret och utöka vår struktur med formulärhantering och databasdrivna modell-klasser.
-
-Vi skall använda en extern modul för HTML-formulär och vi skall använda en extern modul för databashanteringen.
-
-I arbetet skapar vi basklasser i modellagret som underlättar då vi implementerar applikationsspecifik kod. Vi kan se det som vi bygger upp modellklasser som kan scaffoldas fram, en form av återanvändning och ett försök att effektivisera vårt kodande.
-
-[Instruktion till kursmoment 04](./kmom04).
-
-
-
-### Kmom05: Modul {#kmom05}
+### Kmom04: Modul {#kmom04}
 
 Du skall skapa en fristående modul av ditt kommentarssystem och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din me-sida och placera allt som modulen behöver i ett eget repo.
 
@@ -145,17 +133,29 @@ Du skall sedan publicera repot som en PHP modul på Packagist. När det är klar
 
 Du börjar införa enhetstestning på din modul.
 
-[Instruktion till kursmoment 05](./kmom05).
+[Instruktion till kursmoment 04](./kmom04).
 
 
 
-### Kmom06: CI {#kmom06}
+### Kmom05: CI {#kmom05}
 
 Tanken är att ge en bild av hur automatiserad testning och continuous integration (CI) fungerar mot en PHP modul som ligger publicerad på GitHub och Packagist.
 
 Vi fortsätter jobba mot modulen vi publicerade på GitHub och Packagist i föregående kursmoment. Vi använder de tester som körs via `make install test` för att låta externa verktyg checka ut vår kod och exekvera testerna och analysera koden ur olika aspekter.
 
 Vi bekantar oss med ett antal olika externa verktyg och försöker förstå vad de kan tillföra till en utvecklares vardag.
+
+[Instruktion till kursmoment 05](./kmom05).
+
+
+
+### Kmom06: Databasdrivna modeller {#kmom06}
+
+Vi skall titta på klasser i modell-lagret och utöka vår struktur med formulärhantering och databasdrivna modell-klasser.
+
+Vi skall använda en extern modul för HTML-formulär och vi skall använda en extern modul för databashanteringen.
+
+I arbetet skapar vi basklasser i modellagret som underlättar då vi implementerar applikationsspecifik kod. Vi kan se det som vi bygger upp modellklasser som kan scaffoldas fram, en form av återanvändning och ett försök att effektivisera vårt kodande.
 
 [Instruktion till kursmoment 06](./kmom06).
 
