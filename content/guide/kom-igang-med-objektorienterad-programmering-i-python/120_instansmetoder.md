@@ -12,7 +12,10 @@ En metod är en funktion som är definierad inuti en klass. Det finns tre typer:
 
 Instansmetoder {#instansmetoder}
 ----------------------------------
-Tidigare använde vi dot-notation för att komma åt attributen i ett objekt. Men vanligvis brukar man inom objektoerienterad programmering inte använda det utanför instansen. Utan då använda man sig at get- och set metoder som man har skapat för varje attribut. Vi börjar med att skapa get metoder för våra attribut.
+
+Instansmetoder identifieras på att den första parametern heter `self`, oftast. I instansmetoder använder man sig av instansattributen, om man vill ha en metod i en klass där man inte behöver använda instansattributen skapar men en statisk metod istället.
+
+Tidigare använde vi dot-notation för att komma åt attributen i ett objekt. Men vanligtvis brukar man inom objektorienterad programmering inte använda det utanför instansen. Utan då använda man sig av get- och set metoder som man har skapat för varje attribut. Vi börjar med att skapa get metoder för våra attribut.
 
 
 
@@ -92,12 +95,6 @@ BMW X2
 >>> print(bmw.get_price())
 500000
 ```
-
-
-
-### Instansmetod
-
-Get och set metoderna vi har skapat nu är exempel på instansmetoder. Instansmetoder identifieras på att den första parametern är `self`. I instansmetoder använder man sig av instansattributen, om man vill ha en metod i en klass där man inte behöver använda instansattributen skapar men en statisk metod istället. Vi kommer kolla på det längre fram i guiden.
 
 Vi skapar en till instansmetod, en för att skriva ut information om bilen:
 

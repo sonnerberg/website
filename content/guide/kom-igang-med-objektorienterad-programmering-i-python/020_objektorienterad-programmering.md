@@ -32,5 +32,3 @@ Manualen {#manualen}
 Vår bästa vän är som vanligt manualen som har beskrivningar över [objekt och klasser](https://docs.python.org/3/tutorial/classes.html).
 
 > *Referensmanualen är din bästa vän.*
-
-Låt oss skriva en klass.

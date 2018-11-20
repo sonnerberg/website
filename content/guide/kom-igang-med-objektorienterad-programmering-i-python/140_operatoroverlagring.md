@@ -6,25 +6,25 @@ revision:
 Operatoröverlagring
 ==================================
 
-Operatorer inom programmering (`+, -, *, /, <, >` med flera), har ett förutbestämt syfte och vi är vana vi att vi kan använda dem fungerar på våra värden. Men när vi skapar egna klasser gömmer vi datan i objekt och då kan vi bara addera eller subtrahera två objekt och förväta oss att det ska fungera. Vidare har ofta våra objekt flera attribut med olika värden. Hur ska Python veta vilka av attributen som ska användas vid uträkningrna?
+Operatorer inom programmering (`+, -, *, /, <, >` med flera), har ett förutbestämt syfte och vi är vana vi att vi kan använda dem på våra värden. Men när vi skapar egna klasser gömmer vi datan i objekt och då kan vi inte bara addera eller subtrahera två objekt och förväta oss att det ska fungera. Vidare har våra objekt ofta flera attribut med olika värden. Hur ska Python veta vilka av attributen som ska användas vid uträkningrna?
 
-Här kommer **operatoröverlagring** in i bilden. När vi använder en operator, "+, -, /, \*", så är det en hemlig metod som anropas och exekverar, som med `__init__()`. I våra egenskapade klasser kan vi skriva över dessa metoderna och på så sätt bestämma vad som ska ske när man använder en operatorn.
+Här kommer **operatoröverlagring** in i bilden. När vi använder en operator är det en hemlig metod som anropas och exekverar, som med `__init__()`. I våra egenskapade klasser kan vi skriva över dessa metoderna och på så sätt bestämma vad som ska ske när man använder en operatorn.
 
 
 
 Addition {#add}
 ----------------------------------
 
- Låt säga att vi vill kunna addera våra bil-objekt och få reda på det sammanlagda priset. Först testar vi rakt av:
+ Låt säga att vi vill kunna addera två bil objekt och få reda på det sammanlagda priset. Först testar vi rakt av:
 
 ```python
 >>> bmw = Car("BMW", 100000)
->>> volov = Car("Volvo", 150000)
+>>> volvo = Car("Volvo", 150000)
 >>> print( bmw + volvo )
 TypeError: unsupported operand type(s) for +: 'Car' and 'Car'
 ```
 
-Det gick inte så bra. `+`-operatorn vill ju ha siffror och inte objekt. Metoden som anropas vid `+` operatorn heter `__add__()`, Vi lägger till en metod som överlagrar operatorn i klassen:
+Det gick inte så bra. `+`-operatorn fungerar inte med två instanser av klassen Car, för att den innehåller inte den magiska metoden. Metoden som anropas vid `+` operatorn heter `__add__()`. Vi lägger till en metod som heter `__add__()` i klassen, detta kallas att överlagrar en operatorn, eller operatoröverlagring:
 
 ```python
 class Car():
@@ -37,22 +37,13 @@ class Car():
 
         Car.car_count += 1
 
-    def present_car(self):
-        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
-
-    @staticmethod
-    def calculate_price_reduction(aPrice):
-        return int(aPrice * 0.66)
-
-    def reduce_price(self):
-        self.price = self.calculate_price_reduction(self.price)
-        return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
+    ...
 
     def __add__(self, other):
         return self.price + other.get_price()
 ```
 
-Vi använder `__` före och efter metoden, `__<method>__`, och lägger till parametern `other`. När vi skriver `bmw + volvo` utgår vi från objektet till vänster om `+`. Så `self` innehåller "bmw" instansen och `other` innehåller "volvo". Vi testar köra det igen med vår nya metod:
+Det är en instansmetod så första parametern är `self`, vi lägger även till parametern `other`. När vi skriver `bmw + volvo` utgår vi från objektet till vänster om `+`. Så `self` innehåller "bmw" instansen och `other` innehåller "volvo". Vi testar köra det igen med vår nya metod:
 
 ```python
 >>> print( bmw + volvo )
@@ -62,14 +53,16 @@ Vi använder `__` före och efter metoden, `__<method>__`, och lägger till para
 250000
 ```
 
-Nu har vi överlagrat vår första operator. Det är ett programmerat beteende i Python att leta efter en `__add__()` metod och anropa den när man använder `+` operatorn och det finns en specifik metod för varje operator. Även för jämförelse operatorerna som `==, <, > <= >=` m.m, med de metoderna kan vi programmera hur två objekt av klassen Car avgör t.ex. vilket objekt som är störst eller minst. Vid subtraktion heter den metoden t.ex. `__sub__()` och vid `==` heter den `__eq__()`. Alla går att hitta i [Pythons dokumentation](https://docs.python.org/3/library/operator.html). 
+Nu har vi överlagrat vår första operator. Det är ett programmerat beteende i Python att leta efter en `__add__()` metod och anropa den när man använder `+` operatorn och det finns en specifik metod för varje operator. Även för jämförelse operatorerna som `==, <, > <= >=` m.m, med de metoderna kan vi programmera hur två objekt av klassen Car jämförs t.ex. vilket objekt som räknas som störst eller minst. Vid subtraktion heter den metoden t.ex. `__sub__()` och vid `==` heter den `__eq__()`. Alla går att hitta i [Pythons dokumentation](https://docs.python.org/3/library/operator.html). 
 
 Med operatorer som `+=` och `-=` behöver man tänka efter på ett annat sätt så vi kollar på hur det ser ut när man överlagrar `+=`. 
 
 Additions tilldelning {#iadd}
 ----------------------------------
 
-Även kallat _additions tilldelnings operatorn_, metoden som vi behöver överlagra heter `__iadd__()`. Innan vi börjar koda den ska vi tänka efter vad det är operatorn betyder och vad den ska göra. `x += y` är samma sak som att skriva `x = x + y`. Så vår metod behöver göra en vanlig addition, uppdatera det det vänstra objektet med det nya värdet och returnera self instansen. Vi får inte glömma att det är en metod som anropas vilket kommer att returnera ett värde som kommer tilldelas till variabeln till vänster. Om vi inte returnerar något kommer variabeln få `None` som värde efter man gör operationen. För vårt exempel med priset på bilar betyder det att den ska addera priset på två bilar, sätta priset på det vänstra objektet till summan och returnera instansen. 
+För `+=`, även kallat _additions tilldelnings operatorn_, heter den magiska metoden vi behöver överlagra `__iadd__()`. Innan vi börjar koda den ska vi tänka efter vad det är operatorn betyder och vad den gör.
+
+`x += y` är samma sak som att skriva `x = x + y`. Vår metod behöver göra en vanlig addition och returnera det nya värdet som vi vill ska tilldelas till variabeln `x`. Om vi gör det med variabler som innehåller heltal är det inte så svårt. Då är det bara att addera och returnera summa. Så tilldelas det nya talet till `x`. Om vi däremot använder oss av två variabler som innehåller instanser av en klass vill vi att `x` efter additions tilldelningen fortfarande ska vara ett objekt men objektet ska ha uppdaterat något värde. Det vi returnerar i `__iadd__()` är vad variabeln `x` tilldelas. Om vi inte returnerar något kommer variabeln få `None` som värde efter operationen. För vårt exempel med priset på bilar betyder det att `__iadd__()` ska addera priset på två bilar, uppdatera priset i det vänstra objektet till summan och sist returnera instansen så `x` fortsätter referera till samma objekt den gjorde innan operationen. 
 
 Vi lägger till koden för det, men försök gärna själv först. Skapa en ny instansmetod som heter `__iadd__(self, other)` som uppdaterar `price` i `self` med summan av deras priser och returnerar `self`.
 
@@ -84,16 +77,7 @@ class Car():
 
         Car.car_count += 1
 
-    def present_car(self):
-        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
-
-    @staticmethod
-    def calculate_price_reduction(aPrice):
-        return int(aPrice * 0.66)
-
-    def reduce_price(self):
-        self.price = self.calculate_price_reduction(self.price)
-        return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
+    ...
 
     def __add__(self, other):
         return self.price + other.get_price()

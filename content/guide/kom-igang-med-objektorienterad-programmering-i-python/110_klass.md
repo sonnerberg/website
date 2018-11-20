@@ -6,18 +6,23 @@ revision:
 Klasser och objekt
 ==================================
 
-Vi skapar en egen klass med statiska- och instansattribut och instansierar två objekt av klassen.
+
+Allt i Python är på ett eller annat sätt ett objekt. Strängar, integers, listor, moduler - ja, allt. Vi ska titta på är hur man skapar egna klasser och objekt och hur man hanterar dem.
+
+Vi testar skapa en egen klass med statiska- och instansattribut och instansierar två objekt av klassen.
 
 
 
 Skapa en klass {#skapa-en-klass}
 ------------------------------
 
-Låt oss gå igenom hur man skapar en bil klass, "Car". För enkelhetens skull hoppar jag över [docstrings](https://en.wikipedia.org/wiki/Docstring) i artikeln. En klass skapas med:  
+Låt oss gå igenom hur man skapar en bil klass, "Car". För enkelhetens skull hoppar jag över [docstrings](https://en.wikipedia.org/wiki/Docstring) i artikeln. En klass startar med:  
 
 ```python
 class Car():
 ```
+
+En klass behöver även attribut som kan hålla dess state/värden så vi börjar med att lägga till statiska attribut.
 
 
 
@@ -31,13 +36,15 @@ class Car():
     car_count = 0
 ```
 
-Sådär ja, vad fint det blev. Vi går vidare till att lägga till instansattribut som ska innehålla data som vi vill ska vara personlig för varje objekt. De statiska attributen som ligger här ägs av bas-klassen Car.
+Sådär ja, vad fint det blev. Vi går vidare till att lägga till instansattribut som ska innehålla data som vi vill ska vara personlig för varje objekt.
 
 
 
 ### Instansattribut
 
-Instans attribut skapar vi i _konstruktorn_; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig mellan objekten. Konstruktormetoden heter `__init__` och den måste ha parametern `self` först i parameterlistan. "self" används för att referera till objektet som konstruktorn ska skapa. Vi fyller på med instansattribut för modell och pris. I och med att `__init__`-metoden används för att skapa nya objekt av vår klass är det ett bra ställe att öka `car_counter` med 1. Då kommer `car_counter` öka med 1 varje gång vi skapar ett nytt Car objekt:
+Instans attribut skapar vi i _konstruktorn_; metoden som körs för att skapa en ny instans. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig mellan objekten. Konstruktormetoden heter `__init__` och den måste ha parametern `self` först i parameterlistan. "self" används för att referera till objektet som konstruktorn ska skapa.
+
+Vi fyller på med instansattribut för modell och pris. I och med att `__init__`-metoden används för att skapa nya objekt av vår klass är det ett bra ställe att öka `car_counter` med 1. Då kommer `car_counter` öka med 1 varje gång vi skapar ett nytt Car objekt:
 
 ```python
 class Car():
@@ -51,7 +58,7 @@ class Car():
         Car.car_count += 1
 ```
 
-För att vi ska kunna initiera objekten med individuella värden har vi en parameter för varje instansattribut och tilldelar de argumenten som skickas med till våra instansattribut. I början av konstruktorn kan vi se `self` som ett nytt tomt objekt, det innehåller bara en koppling till att det tillhör klassen Car. Inne i `__init__` konstruerar vi vad objektet ska innehålla och vilken data som ska finns i objektet. Raden `self.model = model` gör att objektet (self) får ett attribut som heter "model" och det attributet tilldelas ett värde som har skickats med, parametern model. Raden under gör samma sak fast med ett attribut som heter "price". Sist i konstruktorn ökar vi det statiska attributet `car_count` som ligger i klass Car med 1. 
+För att vi ska kunna initiera objekten med individuella värden har vi en parameter för varje instansattribut och tilldelar de argumenten som skickas med till våra instansattribut. I början av konstruktorn kan vi se `self` som ett nytt tomt objekt, det innehåller bara en koppling till att det tillhör klassen Car. Inne i `__init__` konstruerar vi vad objektet ska innehålla och vilken data som ska finns i objektet. Raden `self.model = model` gör att objektet (self) får ett attribut som heter "model" och det attributet tilldelas ett värde som har skickats med, parametern model. Raden under gör samma sak fast med ett attribut som heter "price". Sist i konstruktorn ökar vi det statiska attributet `car_count` med 1. 
 
 Nu har vi en klass som innehåller ett statisk attribut och två instansattribut. Vi kollar hur det ser ut när vi anropar konstruktorn och skapar vårt första objekt.
 
@@ -59,7 +66,7 @@ Nu har vi en klass som innehåller ett statisk attribut och två instansattribut
 >>> bmw = Car("BMW", 100000)
 ```
 
-Nu har vi skapat en instans av klassen Car med 4 hjul, märket BMW och med ett pris på 100.000. Förhoppningsvis la du märke till att vi aldrig anropade `__init__()` och vi skickade bara med två argument medan konstruktorn har 3 parametrar. `__init__()` är en så kallad magisk funktion, vi kommer gå igenom dem mer i längre fram i guiden. Kort sagt ska vi inte anropa den själva utan Python gör det automatiskt när vi anropar klassen, `Car()`. Vidare till argumenten, vi ska inte själva skicka med något argument för första parametern i konstruktorn, `self`, utan det gör Python automatiskt. Vi behöver bara skicka med värden för de resterande två parametrarna.
+Nu har vi skapat en instans av klassen Car med 4 hjul, märket BMW och med ett pris på 100.000. Förhoppningsvis la du märke till att vi aldrig anropade `__init__()` och vi skickade bara med två argument medan konstruktorn har 3 parametrar. `__init__()` är en så kallad magisk funktion, vi kommer gå igenom dem mer i längre fram i guiden. Kort sagt ska vi inte anropa den själva utan Python gör det automatiskt när vi anropar klassen, `Car()`. Vidare till argumenten, vi ska inte själva skicka med något argument för första parametern i konstruktorn, `self`, utan det gör Python automatiskt. Python skickar alltid med ett argument till den första parametern i alla metoder i en klass om man inte specificerar att den inte ska göra det. Vi behöver bara skicka med värden för de resterande två parametrarna.
 
 Vi skapar ytterligare en instans av Car klassen:
 
@@ -87,19 +94,29 @@ Det ser ju bra ut. Två instanser av "Car" som inte refererar till samma minnesp
 För att komma åt attributen kan vi använda så kallad dot-notation, vi tittar på hur det kan se ut.
 
 ```python
->>> print(bmw.wheels)
- 4
-
 >>> print(bmw.model)
 BMW
 
 >>> print(volvo.model)
 Volvo
+
+>>> print(bmw.wheels)
+ 4
+
+>>> print(volvo.wheels)
+4
+
+>>> print(Car.model)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: type object 'Car' has no attribute 'model'
 ```
-instansattribut
+
 Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i nästa sektion visar vi hur man jobbar med attributen via metoder istället.
 
-"bmw" är en instans av Car, så om vi ändrar attributet `wheels` i efterhand, så ändras den för alla objekt skapade från klassen:
+Vidare kan vi se att vi kommer åt det statiska attributet, `wheels`, från klassen, `Car.wheels`, och objekten `bmw.wheels` och `volo.wheels`, men vi kommer inte åt instansattributen från klassen, `Car.model`, då kraschar det och står att "Car" inte har något attribut "model". Det är för att Car är inte ett objekt som har instansierats med konstruktorn och har då inte fått något attribut som heter `model`. 
+
+Om vi ändrar på värdet i `wheels` ändras den för alla objekt som är skapade från klassen:
 
 ```python
 >>> print(Car.wheels)
@@ -128,4 +145,4 @@ Vi ska dock inte använda oss av dot-notation utanför klasserna i kursen utan i
 1
 ```
 
-Om du var uppmärksam hängde du med på att i sista utskrifterna hade bmw inte samma värde som volvo och Car. Man kan inte tilldela värden till statiska attribut via objekt, `bmw.wheels`. Då lägger man till ett nytt instansattribut i bara det objektet med det nya värdet. Medan klassen, Car, och alla andra instanser, volvo, har kvar det statiska attributet och det värdet. Därför hade inte `bmw` samma utskrift på slutet.
+Om du var uppmärksam hängde du med på att i sista utskrifterna hade bmw inte samma värde som volvo och Car. Man kan inte tilldela värden till statiska attribut via instanser, `bmw.wheels`. Då lägger man till ett nytt instansattribut i bara det objektet med det nya värdet. Medan klassen, Car, och alla andra instanser, volvo, har kvar det statiska attributet och det värdet. Man kan dynamisk under runtime lägga till nya instans metoder och attribut på objekt utanför `__init__()`. Därför hade inte `bmw` samma utskrift på slutet.

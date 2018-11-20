@@ -6,7 +6,7 @@ revision:
 Objekt i objekt
 ==================================
 
-Vi går ett steg längre och skapar en till klass vars objekt vi lägger i objekt av en annan klass. Vi ska gå in på det mer i senare delar av guiden men vi börjar med det lite smått här. Det är egentligen inget speciellt, vi har redan gjort det, t.ex. för instans attributet `model`. Strängar är också objekt det är bara det att vi inte skapat klassen för dem själva. Utan klassen finns redan i Python och det skapas ett nytt objekt av den klassen när vi skriver t.ex. `"Jag skapar nu ett nytt str objekt"`, sträng klassen heter `str` i Python. SÅ egentligen är det inget speciellt vi kollar på nu, det är bara att vi har skapat klassen själva.
+Vi går ett steg längre och skapar en till klass vars objekt vi lägger i objekt av en annan klass. Vi ska gå in på det mer i senare delar av guiden men vi börjar med det lite smått här. Det är egentligen inget speciellt, vi har redan gjort det, t.ex. för instans attributet `model`. Strängar är också objekt det är bara det att vi inte skapat klassen för dem själva. Utan klassen finns redan i Python och det skapas ett nytt objekt av den klassen när vi skriver t.ex. `"Jag skapar nu ett nytt str objekt"`, sträng klassen heter `str` i Python. Så egentligen är det inget speciellt vi kollar på nu, det är bara att vi har skapat klassen själva.
 
 Vi kollar även lite snabbt på något som heter List comprehension i slutet.
 
@@ -15,7 +15,7 @@ Vi kollar även lite snabbt på något som heter List comprehension i slutet.
 Ny klass {#ny_klass}
 ----------------------------------
 
-Vi skapar en ny klass som vi tänker ska innehålla information om all extra utrustning en bil kan ha. Vi döper den till `Equipment` och get den instansattributen `price`, `type`, och `name`.
+Vi skapar en ny klass för extrautrustning i bilarna så vi kan ha koll på vad bilarna har för extra utrustning. Vi döper den till `Equipment` och ger den instansattributen `price`, `type`, och `name`. Tanken är att 
 
 ```python
 class Equipment():
@@ -35,7 +35,7 @@ class Equipment():
         return self.type
 ```
 
-Nu har vi grunder för en full utrustad bil, men vi behöver koppla Equipment objekten vi kommer skapa vill Car objekten. Tanken är att en Car ska kunna innehålla X antal Equipment objekt så vi lägger till ett nytt instansattribut i Car som innehåller en tom lista. Vi skapar även en ny instansmetod i Car som lägger till nya Equipment objekt i listan.
+Nu har vi grunder för en fullutrustad bil, men vi behöver koppla Equipment objekt till Car objekt. Tanken är att ett Car objekt ska kunna innehålla X antal Equipment objekt så vi lägger till ett nytt instansattribut i Car som innehåller en tom lista. Vi skapar även en ny instansmetod i Car där vi skapar och lägger till nya Equipment objekt i listan.
 
 ```python
 class Car():
@@ -56,7 +56,7 @@ class Car():
     ...
 ```
 
-Så ja nu testar vi lägga till lite utrustning i en bil.
+Så ja nu testar vi köra koden och lägger till lite utrustning i en bil.
 
 ```python
 >>> volvo = Car("Volvo", 150000)
@@ -69,7 +69,7 @@ Bluetooth
 2000
 ```
 
-Vi lägger också till en funktion som räknar ut totalvärdet av ett Car objekt, inkludera priset för utrustningen. För att göra detta på ett snabbt Pythonic sätt ska vi använda oss av List comprehension.
+Vi går vidare med att lägga till en funktion som räknar ut totalvärdet av ett Car objekt, inkludera priset för utrustningen. För att göra detta på ett snabbt och Pythonic sätt ska vi använda oss av List comprehension.
 
 
 
@@ -98,7 +98,7 @@ class Car():
 >>>volvo.get_total_value()
 162000
 ```
-`[eqp.price for eqp in self.equipment]` är vår list comprehension, det består av hakparenteser och innehåller ett uttryck efterföljt av en for-loop definition, sen 0 eller flera if-satser. Man kan alltså få in if-satser också men vi har inte det i vårt exempel. List comprehension returnerar alltid en lista. `eqp.price` är vårt uttryck som ska uttföras på varje element i den gamla listan och värdet som uttrycket producerar vill vi ska ligga i den nya listan som returneras. `for eqp in self.equipment` är for-loopen, vi itererar över varje element i listan `self.equipment` och lägger i variabeln `eqp`. 
+`[eqp.price for eqp in self.equipment]` är vår list comprehension, det består av hakparenteser och innehåller ett uttryck efterföljt av en for-loop definition, sen kan den innehålla 0 eller flera if-satser. Man kan alltså få in if-satser också men vi har inte det i vårt exempel. List comprehension returnerar alltid en lista. `eqp.price` är vårt uttryck som ska uttföras på varje element i den gamla listan och värdet som uttrycket producerar vill vi ska läggas till i den nya listan som returneras. `for eqp in self.equipment` är for-loopen, vi itererar över varje element i listan `self.equipment` och lägger i variabeln `eqp`. 
 
 Om vi inte hade använt list comprehension hade vi gjort på följande sätt:
 
@@ -115,7 +115,7 @@ Om vi inte hade använt list comprehension hade vi gjort på följande sätt:
     ...
 ```
 
-Vi testar lägga till en till tycker jag. Metoden `present_car()` borde också visa vad för utrustning bilen har. Så jag lägger till en ny metod i `Equipment` som returnerar en formaterad sträng och så skriver vi ut den för alla instanserna i `present_car()`.
+List comprehension är ett snabbt sätt att få ner tre rader till en. Vi testar lägga till en till tycker jag. Metoden `present_car()` borde också visa vad för utrustning bilen har. Så jag lägger till en ny metod i `Equipment` klassen som returnerar en formaterad sträng och sen lägger jag till den i utskriften i metoden `present_car()` för alla instanser av Equipment.
 
 ```python
 class Equipment():
@@ -146,7 +146,8 @@ Name: Bluetooth, Type: Entertainment, Price: 2000
 Name: 7 inch display, Type: Entertainment, Price: 10000
 ```
 
-I detta exemplet anropar vi `get_info()` på varje element i `self.equipment` och strängen som returneras blir ett element i den nya listan
+I detta exemplet anropar vi `get_info()` på varje element i `self.equipment`, detta läggs i en lista som vi gör om till en sträng med `"\n".join()`.
+
 
 
 All kod {#all_kod}
