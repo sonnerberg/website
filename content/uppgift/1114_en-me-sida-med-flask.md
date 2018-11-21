@@ -30,7 +30,7 @@ Har du gjort övningarna har du nästan kommit i mål med uppgiften.
 Introduktion {#intro}
 -----------------------
 
-Vi ska skapa en me-sida som vi senare kommer bygga vidare på genom kursen. Utgå ifrån övningen.
+Vi ska skapa en me-sida som vi senare kommer bygga vidare på genom kursen. Utgå ifrån övningen. Glöm inte att aktivera `venv` innan du startar Flask servern, detta behövs bara lokalt!
 
 
 

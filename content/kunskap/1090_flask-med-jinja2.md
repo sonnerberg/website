@@ -81,10 +81,10 @@ Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat 
 
 Routen / är roten, start eller index om man så vill. En route kan ses som en trafikpolis som dirigerar om trafiken. Om vi har en route `@app.route('/telefon')` kan vi nå den via `http://example.com/telefon`. Funktionen som definieras under behöver inte ha samma namn som routen. Det underlättar dock då Flask bland annat använder funktionsnamnet för att hänvisa till dess sökväg. Flask kan använda till exempel `url_for('main')`, och hade i detta fallet hänvisat till routen `/` (roten). Men mer om det senare, nu går vi vidare.
 
-Starta applikationen med:
+Starta applikationen med (Glöm inte att venv måste vara aktiverat för att starta servern):
 
 ```bash
-$ python3 app.py
+(.venv) $ python3 app.py
 ```
 
 Om allt är ok ser du: ` * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)`  
