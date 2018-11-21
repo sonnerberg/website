@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2018-11-21": (B, aar) La till att installera moduler i venv.
     "2017-11-10": (A, lew) Updated version for VT18.
 category:
     - oopython
@@ -31,18 +32,13 @@ Du är medveten om strukturen och uppbyggnaden av en webbsida.
 Installation {#installation}
 ------------------------------
 
-Både Flask och Jinja2 kan installeras med pakethanteraren `pip`. Har du inte pip installerat, kika på [instruktionerna för pip](kunskap/python-pakethantering-med-pip#installera). Kör du Windows, starta en terminal som administratör och skippa `sudo`.
+Installera Flask och Jinja2 i en virtuell miljö med pakethanteraren `pip`. Läsa om [virtuell miljö i Python](kunskap/python-virtuel-miljo) och om du inte har pip installerat, kika på [instruktionerna för pip](kunskap/python-pakethantering-med-pip#installera).
 
-Sparka igång en terminal och installera Flask:
+Sparka igång en terminal och installera modulerna, GLÖM INTE att aktivera venv.
 
 ```bash
-$ sudo pip3 install Flask
-```
-
-Paketet Jinja2 ingår i Flask. Skulle det inte finnas installerat så installerar du det på följande vis:
-
-```python
-$ sudo pip3 install Jinja2
+$ dbwebb venv activate
+(.venv) $ pip3 install -r .requirements.txt
 ```
 
 Allt klart? Bra, nu är det bara att köra igång.

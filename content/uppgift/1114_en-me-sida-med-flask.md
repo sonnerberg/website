@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2018-11-21": (B, aar) La till krav om venv inför VT19.
     "2017-11-10": (A, lew) Updated version for VT18.
 category:
     - oopython
@@ -37,6 +38,8 @@ Krav {#krav}
 -----------------------
 
 Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar via `app.cgi`. `app.cgi` behöver bara fungera på studentservern.
+
+1. Du har installerat modulerna Flask och Jinja2 i en [virtuell miljö](kunskap/python-virtuel-miljo).
 
 1. Applikationen ska använda Bootstrap.
 

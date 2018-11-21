@@ -163,7 +163,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Var det några problem med att installera Flask?
+* Var det några problem med att venv och installera Flask?
 * Är du bekant med objekt och klasser sedan tidigare?
 * Vad är en klass/objekt?
 * Vad är skillnaden på instans- och statiska attribut/metoder?
