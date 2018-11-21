@@ -40,7 +40,7 @@ cp -ri me/kmom01/sandbox/* me/kmom03/sandbox3
 
 1. Eventlyssnaren ska använda en egendefinierad funktion.
 
-1. Presentera **medelvärdet** och **resultatet** av kasten i din sandbox. Skriv gärna ut varje tärnings värde i konsolen.
+1. Presentera **medelvärdet** och **summan** av kasten i din sandbox. Skriv gärna ut varje tärnings värde i konsolen.
 
 1. Testa din JavaScript kod så att den validerar i onlineverktyget för JSHint.
 
@@ -62,7 +62,7 @@ Extrauppgift {#extra}
 Tips från coachen {#tips}
 -----------------------
 
-1. Skapa en funktion `random(min, max)` som returnerar ett slumptal mellan `min` och `max`.
+1. Skapa en funktion `random(max)` som returnerar ett slumptal mellan (förslagsvis) 1 och `max`.
 
 1. Skapa en funktion `rollDice(times)` som kastar tärningen `times` gånger samt beräknar medelvärdet av kasten.
 
