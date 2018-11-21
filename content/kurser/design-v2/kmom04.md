@@ -127,7 +127,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)". Du skall göra en analys av webbplatser och skriva en kort rapport. jobba enskilt eller i grupp. Spara allt i `me/redovisa`. 
 
-1. Utför uppgiften "[Teman med färger och typografi](uppgift/teman-med-färger-och-typografi)". Spara allt i `me/redovisa`.
+1. Utför uppgiften "[Teman med färger och typografi](uppgift/teman-med-farger-och-typografi)". Spara allt i `me/redovisa`.
 
 1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 4.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
