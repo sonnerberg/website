@@ -109,42 +109,6 @@ pip3 show requests
 
 
 
-Virtual environment {#venv}
---------------------------------------
-
-När man använder pip som vi gjort ovanför installeras paket globalt vilket bl.a. innebär att om vi har flera olika Python projekt på datorn måste alla dem använda samma version av ett paket. Proj1 kan inte använda requests 1.3 medan proj2 använder requests 2.3 utan requests kan bara installeras en gång och då används den överallt.
-
-Lösningen på detta är [Virtual environment](https://docs.python.org/3/tutorial/venv.html) även kallat **venv**. Venv är ett sätt att isolera paket från övriga paket installerade på resten av ett system. Detta gör att vi kan installera paket för specifika projekt utan att det krockar med globala installationer eller andra projekts installationer.
-
-Jag använder paketen från kursen OOPython som exempel. Vi har lagt in kommandon i dbwebb-cli för att förenkla arbetet med venv i kurserna, jag kommer visa hur man gör både med dbwebb-cli och utan.
-
-
-
-###Skapa virtuell miljö{#venv_install}
-
-För att skapa en virtuell mijljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt. Sen använder vi modulen `venv` som ska följa med när man installerar Python3.
-
-```bash
-# Stå i roten av ditt projekt
-python3 -m venv .venv
-```
-
-Om man inte har `venv` installerat på Linux kan man få upp följande meddelande:
-```bash
-The virtual environment was not created successfully because ensurepip is not
-available.  On Debian/Ubuntu systems, you need to install the python3-venv
-package using the following command.
-
-    apt-get install python3-venv
-```
-Och gör man som det står och installerar det sen kör man kommandot igen.
-
-Nu har vi skapat en ny mapp som heter `.venv` och det har lagts till en mängd filer och mappar i den.
-
-[FIGURE src=/image/oopython/venv_dir.png caption="Mapp struktur i .venv."]
-
-
-
 Avslutningsvis {#avslutning}
 --------------------------------------
 
