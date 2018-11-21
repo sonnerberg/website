@@ -28,7 +28,7 @@ Jag använder paketen från kursen OOPython som exempel. Vi har lagt in kommando
 
 ###Skapa virtuell miljö {#venv_install}
 
-För att skapa en virtuell mijljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt. Sen använder vi modulen `venv` för att skapa den virtuella miljön. Modulen ska följa med när man installerar Python3.
+För att skapa en virtuell miljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt. Sen använder vi modulen `venv` för att skapa den virtuella miljön. Modulen ska följa med när man installerar Python3.
 
 ```bash
 # Stå i roten av ditt projekt
@@ -50,7 +50,7 @@ package using the following command.
 
     apt-get install python3-venv
 ```
-Gör det som står och installerar `venv` och kör sen kommandot igen.
+Gör som står och installerar `venv` och kör sen kommandot igen.
 
 Om man använder dbwebb-cli kommandot behöver man inte stå roten för projektet utan man kan stå i undermappar. Använder man det "riktiga" måste man stå i roten.
 
@@ -62,7 +62,7 @@ Nu har det skapats en ny mapp som heter `.venv` i roten och det har lagts till e
 
 ###Aktivera den virtuella miljön {#venv_activate}
 
-När vi har en virtuell miljö skapad behöver vi aktivera den för att använda den. Att aktivera den virtuella miljön innebär att när vi använder pip/python3 kommer det jobba mot filerna som ligger i `.venv` mappen. När vi t.ex. installerar paket med pip läggs de i en undermapp till `.venv`. 
+När vi har en virtuell miljö skapad behöver vi aktivera den för att använda den. Att aktivera den virtuella miljön innebär att när vi använder pip/python3 kommer det jobba mot filerna som ligger i `.venv` mappen. När vi t.ex. installerar paket med pip läggs det i en undermapp till `.venv`. 
 
 Om man använder dbwebb-cli kommandot behöver man inte stå roten för projektet utan man kan stå i undermappar. Använder man det "riktiga" måste du stå i roten.
 
@@ -92,7 +92,7 @@ $ dbwebb venv activate
 /home/aar/dbwebb-kurser/oopython/.venv/bin/pip3
 ```
 
-Notera att innan jag aktiverade venv står det att `python3` ligger i `/usr/bin/python3`. Efter aktivering står det att python3 ligger i den virtuella miljön istället. Notera även att efter jag har aktiverat venv står det `(.venv)` i början av min kommandorad, det så du vet att du använder den virtuella miljön. 
+Notera att innan jag aktiverade venv står det att `python3` ligger i `/usr/bin/python3`. Efter aktivering står det att python3 ligger i den virtuella miljön istället. Notera även att efter jag har aktiverat venv står det `(.venv)` i början av min kommandorad, det är så du vet att den virtuella miljön är aktiverad. 
 
 
 
@@ -122,14 +122,14 @@ Både det riktiga och dbwebb-cli kommandot för deaktivering kan köras från vi
 
 ###Pip med requirements file {#requirements_file}
 
-Nu när vi har en virtuell miljö vi kan installera paket i, tar vi pip installationerna ett steg längre och använder oss av en "[Requirements file](https://pip.pypa.io/en/stable/user_guide/#requirements-files)". Det är ett sätt för att enkelt kunna specificera vilka externa paket, med version, som behövs för ett projekt. Vi har en i OOPython kursen, filen heter `.requirements.txt`, och innehåller följande:
+Nu när vi har en virtuell miljö vi kan installera paket i, tar vi pip installationerna ett steg längre och använder oss av en "[Requirements file](https://pip.pypa.io/en/stable/user_guide/#requirements-files)". Det är ett sätt att enkelt kunna specificera vilka externa paket, med version, som behövs för ett projekt. Vi har en i [OOPython kursen](https://github.com/dbwebb-se/oopython/blob/master/.requirements.txt), filen heter `.requirements.txt`, och innehåller följande:
 
 ```
 Flask ~= 1.0.2
 Jinja2 ~= 2.10
 ```
 
-Det betyder att modulen Flask med en version som är kompatibel med 1.0.2 och modulen Jinja2 med version kompatibel med 2.10 behövs. Vi enkelt installera de både paketen genom att skriva:
+Det betyder att modulen Flask med en version som är kompatibel med 1.0.2 och modulen Jinja2 med version kompatibel med 2.10 behövs. Vi installera enkelt de både paketen genom att skriva:
     
 ```bash
 (.venv) $ pip3 install -r .requirements.txt
