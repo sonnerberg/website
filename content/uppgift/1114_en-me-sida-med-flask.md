@@ -30,7 +30,7 @@ Har du gjort övningarna har du nästan kommit i mål med uppgiften.
 Introduktion {#intro}
 -----------------------
 
-Vi ska skapa en me-sida som vi senare kommer bygga vidare på genom kursen. Utgå ifrån övningen. Glöm inte att aktivera `venv` innan du startar Flask servern, detta behövs bara lokalt!
+Vi ska skapa en me-sida med hjälp av ett microramverk i Python. Utgå ifrån övningen. Glöm inte att aktivera `venv` innan du startar Flask servern, detta behövs bara lokalt!
 
 
 
