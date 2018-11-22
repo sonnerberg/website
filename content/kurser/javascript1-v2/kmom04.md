@@ -91,13 +91,15 @@ Det finns inga lästips.
 
 *(ca: 12-16 studietimmar)*
 
-<!--
+
 ###Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
-Det finns inga övningar.
--->
+1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 4 gäller delarna:
+    * [Arrayer](guide/javascript1/section_break_7)
+    * [Objekt](guide/javascript1/section_break_8)
+
 
 
 

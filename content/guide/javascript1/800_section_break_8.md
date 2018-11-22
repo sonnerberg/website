@@ -5,4 +5,4 @@ linkable: true
 Objekt
 =======================
 
-Lite om objekt
+Följande steg går igenom olika sätt att arbeta med objekt i JavaScript.
