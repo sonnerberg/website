@@ -2,25 +2,12 @@
 author:
     - mos
 revision:
-    "2018-11-19": "(PB1, mos) Tidigare kmom06, nu kmom04 i ramverk1 v2. Övnings saknas."
+    "2018-11-22": "(C, mos) Övning nu klar."
+    "2018-11-19": "(B, mos) Tidigare kmom06, nu kmom04 i ramverk1 v2. Övnings saknas."
     "2017-09-11": "(A, mos) Preliminär release, artikel saknas."
 ...
 Kmom04: Modul på Packagist
 ==================================
-
-[INFO]
-
-**Welcome early adopters!**
-
-Kursmomentet går att genomföra, dock är övningen inte klar/komplett. Övningen ger viss vägledning i hur man kan jobba med en modul mot GitHub och Packagist under stadiet då man bryter ut den modulspecifika koden.
-
-REM servern som ligger till grund för artikeln är heller inte komplett för den version av Anax som vi jobbar med. Den är på gång att snyggas till. Du kan dock utföra uppgiften även utan en komplett REM server som enbart fungerar som exempel på hur en modul kan organiseras och installeras i en Anax installation.
-
-Om du har koll på hur du kan jobba med GitHib och Packagist så klarar du troligen kursmomentet även utan övningen.
-
-Är du osäker så avvaktar du tills denna blåa ruta tagits bort.
-
-[/INFO]
 
 Du har hittills jobbat med egen kod inuti en installation av ramverket. Du skall nu skapa en fristående modul av din kod och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din redovisa-sida och placera allt som modulen behöver i ett eget repo som du publicerar på GitHub.
 
@@ -58,7 +45,7 @@ Kika igenom följande artiklar.
 
 1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Dependency Management](http://www.phptherightway.com/#dependency_management)", läs igenom det som en introduktion.
 
-1. Läs om begreppet "[Sematic versioning](http://semver.org/)" som berättar hur du bör hantera versionsnummer på din modul.
+1. Läs om begreppet "[Semantic versioning](http://semver.org/)" som berättar hur du bör hantera versionsnummer på din modul.
 
 1. Bekanta dig med webbplatsen "[Packagist](https://packagist.org/about)" och skaffa dig ett konto så att du kan publicera din modul. Packagist kommunicerar med GitHub och reagerar så fort du uppdaterar kodbasen på GitHub.
 

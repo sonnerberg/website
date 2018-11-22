@@ -6,7 +6,7 @@ category:
     - php
     - kursen ramverk1
 revision:
-    "2018-11-19": "(A, mos) Ny utgåva av artikeln."
+    "2018-11-22": "(A, mos) Ny utgåva av artikeln till ramverk1 v2."
 ...
 Skapa en PHP-modul på Packagist och integrera med Anax (v2)
 ==================================
@@ -17,348 +17,216 @@ Vi skall se hur vi kan lyfta ut en kodbas som är integrerad i en Anax installat
 
 Därefter kan vi åter installera samma kodbas, nu med verktyget composer, in i en installation av Anax.
 
-För att ha en kodbas att jobba på så använder jag mig av REM-servern och skapar en fristående modul som blir enkel att integrera i en godtycklig Anax installation.
+För att ha en kodbas att jobba på så använder jag mig av remservern och visar hur man skapar en fristående modul som blir enkel att integrera i en godtycklig Anax installation.
 
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs ramverk v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
-
-<!--stop-->
-
-
-
-
-
-Scaffold {#scaffold}
---------------------------------------
-
-anax create a ramverk1-me-v2
-
-
-
-Hämta källan från dev-master {#dev-master}
---------------------------------------
-
-https://getcomposer.org/doc/05-repositories.md#loading-a-package-from-a-vcs-repository
-
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/igorw/monolog"
-        }
-    ],
-    "require": {
-        "monolog/monolog": "dev-bugfix"
-    }
-}
-
-
-Eller, om paketet redan ligger på Packagist.
-
-"minimum-stability": "dev",
-"prefer-stable": true,
-"require": {
-    "anax/remserver": "dev-master"
-
-
-
-Skript för installation {#postprocessing}
---------------------------------------
-
-bash vendor/anax/remserver/.anax/scaffold/postprocess.d/700_remserver.bash
-
-Visa htdocs/dev/router
-
-
-
-Symlänk {#symlink}
---------------------------------------
-
-Symlänka till loaklt repo.
-
-
 
 
 
 Förutsättning {#pre}
 --------------------------------------
 
-Du har god kunskap i REM servern som används i tidigare artiklar som exempelkod. Senaste artikeln som berörde REM servern var "[Att konfigurera routern i Anax](kunskap/att-konfigurera-routern-i-anax)".
+Du har en väl fungerande kodbas i din sida `me/redovisa`. Kodbasen omfattas av enhetstester.
 
 
 
-En fungerande REM server {#remserver}
+Förberedelse {#forbered}
 --------------------------------------
 
-Dubbelkolla att du har en fungerande REM server i `kmom02/remserver`. Jag kommer att utgå från branchen `route` när jag nu skall skapa ett eget repo för koden.
-
-Nåväl, REM servern ligger redan i ett eget repo. Men där finns också mer saker som gör att det repot egentligen är en helt egen installation av Anax. På samma sätt som din me-sida är en installation av Anax med tillhörande moduler. Jag vill nu lyfta ut enbart de sakerna som är relevanta för en REM server och placera dem i en egen modul. Tanken är att man installerar Anax och sedan lägger till REM servern som en fristående modul med hjälp av composer. Precis som man gör med alla andra Anax-moduler.
-
-Skillnaden är att vi får en mer fristående modul för REM servern som kan bli enklare att återanvända när man har behovet av en REM server i en godtycklig Anax installation, vare sig det är en me-sida som kräver en REM server eller en installation av en fungerande REM server.
-
-Förhoppningen är också att en fristående modul blir enklare att utveckla, testa och underhålla.
-
-Man kan tycka att det är nästan samma sak som det vi redan har i dag. Men det är det inte riktigt. Det är inte enkelt att använda composer för att idag installera REM servern som en del i en me-sida, en installation av Anax. Men det skall vi lösa nu.
-
-I vilket fall som så behöver jag ett kodexempel nu när jag skall visa hur du kan jobba med Packagist och REM servern passar bra till det.
+Du kommer att röra runt en del i koden i `me/redovisa`. Det är bra om du gör en tagg innan du påbörjar arbetet, då har du alltid en möjlighet att backa tillbaka till en stabil nivå av koden.
 
 
 
-Skapa repo på GitHub {#github-repo}
+Exempel på modul {#exempel}
 --------------------------------------
 
-Det första jag behöver är ett repo på GitHub. Alla Anax-moduler ligger under organisationen CAnax på GitHub och där tänker jag även lägga REM servern, närmare bestämt under [canax/remserver](https://github.com/canax/remserver).
+När du läser igenom detta dokumentet så kan du använda modulen remserver som en exempelmodul som har den struktur du vill sätta på din egen modul.
+
+Du kan se hur remserver ligger på [GitHub](https://github.com/canax/remserver) och på [Packagist](https://packagist.org/packages/anax/remserver).
+
+Förslagsvis så tar du och installerar remserver-modulen in i din egen installation `me/redovisa`, så får du en övning i hur din egen modul skall fungera installationsmässigt, när den är klar.
+
+Läs remserver-modulens README, så får du instruktioner i hur du gör installationen.
 
 
 
-Scaffolda ett repo för moduler {#scaffold-repo}
+Eget repo för modulen {#repo}
 --------------------------------------
 
-Eftersom det händer att jag skapar moduler till Anax med jämna mellanrum så tröttnade jag på att göra copy&paste och gjorde det möjligt att scaffolda fram en bas för en modul.
+Första steget i arbetet med att skapa modulen är att lyfta ut kodbasen till ett eget repo som publiceras på GitHub. Kodbasen är de kodstycken som är specifika för modulen. Det kan till exempel innebära delar av koden i `src/`, `view/` och `config/`.
 
-```bash
-# Gå till katalogen där du vill skapa din modul
-anax create remserver ramverk1-module
-```
+När det är klart så lägger du till de byggfiler som är relaterade till repots utvecklingsmiljö. Det är konfigurationsfiler som är relaterad till `make install` och `make test`.
 
-Mallen "[ramverk1-module](https://github.com/canax/scaffold/tree/master/scaffold/ramverk1-module)" ger dig en bas för din modul.
+Du behöver också skapa en egen `composer.json` för din modul. Det är den filen som composer kommer använda för att installera din modul.
+ 
+När du är klar så har du ett eget repo med modulens kod på GitHub och du har plockat bort modulens kod från din `me/redovisa`.
 
-Så här kan det se ut.
 
-[ASCIINEMA src=139461]
 
-Då har vi en basstruktur med vanliga filer som används tillsammans med en godtycklig Anax modul.
+Scaffold {#scaffold}
+--------------------------------------
+
+För att lyckas med detta stycket så behöver du ha installerat [skriptet `anax-cli`](https://github.com/canax/anax-cli). Gör det.
+
+Nu vill vi integrera och testa att modulen fungerar i en tänkt installation. Modulen är svår att utveckla i sin ensamhet, man behöver testa att den fungerar tillsammans med en godtycklig installation av Anax.
+
+Så, vi tar och scaffoldar fram en version av Anax som motsvarar den installationen vi redan har av `me/redovisa`.
 
 ```text
-$ tree -a .
-.
-├── .gitignore
-├── .phpcs.xml
-├── .phpdoc.xml
-├── .phpmd.xml
-├── .phpunit.xml
-├── .scaffold
-│   └── ramverk1-module
-├── .scrutinizer.yml
-├── .travis.yml
-├── LICENSE.txt
-├── Makefile
-├── README.md
-├── REVISION.md
-├── circle.yml
-├── composer.json
-├── composer.lock
-├── config
-│   └── remserver.php
-├── src
-└── test
-    └── config.php
-
-4 directories, 17 files
+# Stå (förslagsvis) i din moduls katalog
+anax create a ramverk1-me-v2
 ```
 
-Där är vår grund för modulen. Vi är redo för vår första commit och att pusha upp repot till GitHub.
+Du har nu en katalog `a/` som innehåller en fungerande installation som motsvarar din `me/redovisa`. Pröva att öppna din webbläsare mot `a/htdocs`.
 
-```bash
-git init
-git add .
-git commit -m "first commit from scaffolding"
-git remote add origin git@github.com:canax/remserver.git
-git push -u origin master
-```
-
-Om du följer övningen och gör som jag gör, ta då en extra titt på de filerna som scaffoldats fram, bara så du bekantar dig med dem och kikar snabbt på vad de innehåller. Kanske finns det saker som inte scaffoldats fram på rätt sätt. Scaffolding är ingen ursäkt för att inte ha full koll på sina filer.
-
-Här ser du [repot `canax/remserver` efter första commit](https://github.com/canax/remserver/tree/9208a91d59a57d0cb5bbd522d4db584b4e00551a).
+Då försöker vi att integrera din modul in i Anax installationen `a/`.
 
 
 
-Lägg till filerna till repot {#files}
+Hämta källan från dev-master {#dev-master}
 --------------------------------------
 
-Nu kan jag lägga till alla filer som hör till REM servern. Här är de stegen jag tog.
+Vi uppdaterar `composer.json` så att den installerar din modul. Modul är ännu inte publicerad på pakettjänsten Packagist, så vi hämtar källkoden direkt från GitHub genom att sätta [VCS som källa i composer.json](https://getcomposer.org/doc/05-repositories.md#vcs).
 
-1. Kopiera källkoden i `src/RemServer`.
-1. Kopiera konfigurationsfilerna i `config/remserver*`.
-1. Skapa en bas för `$di` i `config/di.php`.
-1. Skapa en bas för routern via `config/{route.php,route/remserver.php}`
-1. Kopiera manualsidan i `content/`.
-1. Uppdatera `composer.json` med beroenden som är nödvändiga.
-
-När det är klart och filerna är uppdaterade så gör jag en commit och pushar repot. Du kan se [läget på repot efter min commit](https://github.com/canax/remserver/tree/13f14c870ca15e0bee0b2d207f562352391fbf13).
-
-
-
-En installation av Anax för utveckling {#develop}
---------------------------------------
-
-Jag är nu redo att börja använda min modul i en installation av Anax. För att modulen skall fungera behövs en fullt fungerande installation av Anax med request, response, router, session och de andra grundläggande delarna.
-
-Jag tar och scaffoldar fram en installation av Anax som lämpar sig för utveckling.
-
-```bash
-anax create dev ramverk1-site-develop
-cd dev
-```
-
-Öppna din webbläsare och kontrollera att routes `""`, `"about"` och `"debug/info"` fungerar som du är van vid. Det du har är alltså en enkel installation av Anax som lämpar sig för utveckling.
-
-
-
-Composer för modul under utveckling {#composer-develop}
---------------------------------------
-
-Då skall jag installera min modul `anax/remserver` med composer. Men, ännu har jag inte publicerat mitt paket till Packagist så jag behöver en teknik att installera en utvecklingsversion av modulen.
-
-I manualen för composer kan man läsa om hur man [laddar ett godtyckligt repository](https://getcomposer.org/doc/05-repositories.md#vcs) från till exempel GitHub.
-
-Jag kan använde den versionen av koden som ligger på GitHub, genom att lägga till följande konfiguration i `composer.json`.
+När jag jobbar med remservern som exempel så uppdaterar jag compser.json med följande.
 
 ```json
-{
-    "require": {
-        "anax/remserver": "dev-master"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/canax/remserver.git"
-        }
-    ]
-}
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/canax/remserver"
+    }
+],
+"require": {
+    "anax/anax-ramverk1-me": "^1.0.0",
+    "anax/remserver": "dev-master"
+},
 ```
 
-Jag jobbar alltså mot "dev-master" som innehåller de senaste ändringarna som pushats mot GitHub.
+Därefter kan jag installera modulen med `composer update` och resultatet kan se ut så här, när jag dubbelkollar om modulen är installerad.
 
-Så här kan det se ut när jag uppdaterar min installation med ovanstående och uppdaterar med composer update.
-
-[ASCIINEMA src=139431]
-
-Detta innebär att jag kan uppdatera koden på GitHub och sedan göra composer update och min lokala installation blir uppdaterad genom att senaste koden hämtas från repot på GitHub.
-
-Verktyget composer jobbar nu direkt mot senaste versionen som ligger på GitHub.
-
-
-
-###Jobba lokalt med länkar {#link}
-
-När jag själv sitter och jobbar med modulerna så brukar jag undvika att göra commit och push efter varje liten ändring jag gör. Min variant är att jag ersätter `vendor/anax/remserver` med en symbolisk länk till min utvecklingsversion av repot som i mitt fall ligger under `~/git/remserver`.
-
-Så här.
-
-```bash
-# Jag står i dev
-cd vendor/anax
-rm -rf remserver
-ln -s ~/git/remserver
+```text
+$ composer show | grep anax/remserver
+anax/remserver   dev-master c631b6f Anax remserver module.
 ```
 
-Det innebär att alla ändringar jag gör lokalt i repot `~/git/remserver` slår direkt igenom i min installation och testmiljö. Jag slipper göra uppdateringar som skall committas och pushas till GitHub och sedan hämtas hem med composer.
-
-När jag sedan är klar, jag har pushat allt till GitHub, så kan jag göra en `composer update` och composer tar då bort länken och ersätter den med en ny katalog med innehållet från Github.
-
-Det blir enkelt att utveckla på det viset.
+Nu har jag en direktkoppling mellan min installation i `a/` och modulen `anax/remserver` på GitHub. Jag behöver alltså inte publicera modulen till Packagist för att jobba mot den. På detta viset har man viss flexibilitet att byta ut ett paket mot ett annat, vilket är bra vid utveckling eller när man vill göra buggfixar eller smärre justeringar av vissa paket.
 
 
 
-Integrera REM server med Anax {#integrera}
+Installera modulen {#postinstall}
 --------------------------------------
 
-Då är modulen på plats i min installation av Anax. Modulen ligger i sitt eget repo och jag kan börja att integrera den. Följande är stegen jag behöver göra för att integrera modulen.
+När modulen ligger på plats så behöver den kopplas in i din installation `a/` så att den används. Det kan handla om att lägga till en route och konfigurationsfiler och kanske lägga till den som en di-tjänst. Det är de sakerna som kopplar modulen, som gör att modulen används.
 
-1. Kopiera konfigurationsfilerna för REM servern.
-1. Kopiera API dokumentationen.
-1. Kopiera och konfigurera router-filerna.
-1. Konfigurera tjänsterna `$di`.
+Det kan också handla om att lägga till innehåll i `content/` och kanske även i `views/`.
 
-Du kan läsa om [installationen steg för steg i README-filen](https://github.com/canax/remserver/blob/master/README.md), men hoppa över biten med "composer require anax/remserver", den biten är redan löst genom att vi hämtar repot från GitHub (eller via länken till det lokala repot).
+Instruktioner för det som krävs, bör finnas att läsa överst i modulens `README.md`. För att installera remserver så handlar det om att utföra följande kommandon.
 
-Nu kan jag integrera, testa och rätta eventuella fel.
+```text
+# Copy the configuration files
+rsync -av vendor/anax/remserver/config ./
 
-Ett av felen som uppträdde rörde sessionen som startas i `$di` och i min remserver. Jag valde att låta sessionen startas i `$di`.
-
-I övrigt gick integrationen väl. Jag har nu ett modul-repo som fungerar tillsammans med Anax. Då tar jag och taggar repot i en första godkänd version v1.0.0.
-
-```bash
-git tag -a v1.0.0
-git push && git push --tags
+# Copy the documentation
+rsync -av vendor/anax/remserver/content/index.md ./content/remserver-api.md
 ```
 
-Nu är jag redo att publicera repot på Packagist så att jag slutligen kan göra en komplett installation med `composer require anax/remserver`.
+Titta en extra gång på vilka filer som verkligen kopieras när du utför ovan kommandon. Då får du en inblick i vilka filer som modulen behöver knyta till Anax installationen.
+
+
+
+Skript för installation {#postprocessing}
+--------------------------------------
+
+När man jobbar med utveckling av moduler och när man vill underlätta installation och scaffolding, så lägger man installationskommandona i en egen fil. Då blir det enklelt att köra dem om och om igen.
+
+I Anax finns en generell hantering av scaffolding och dessa filer ligger under katalogstrukturen `.anax/scaffolding`.
+
+I fallet med remservern så ligger filen enligt nedan och att köra den filen ger en standard installation av modulen.
+
+```text
+bash vendor/anax/remserver/.anax/scaffold/postprocess.d/700_remserver.bash
+```
+
+När man scaffoldar ihop en Anax installation, likt `ramverk1-redovisa-v2` som nu finns i `a/`, så är det modulernas postprocessingskript som utför delar av installationen.
+
+
+
+Symlänk till lokalt repo {#symlink}
+--------------------------------------
+
+När man jobbar mot en modul och utför många ändringar, så kommer man i ett läge där man inte vill pusha varje ändring till GitHub. Jag väljer därför att göra en symbolisk länk till en lokal installation av modulens repo. Det ger mig en lokal utvecklingsmiljö, utan externa beroenden.
+
+Här följer de steg jag gör.
+
+```text
+# Jag står i installationen a/
+$ cd vendor/anax/
+$ rm -rf remserver/
+$ ln -s ~/git/canax/remserver
+```
+
+Så, principen är att ersätta modulens installation i `vendor/anax/remserver` med en lokal kopia av repot där jag kan utföra ändringar, utan behovet av att pusha dessa ändringar till GitHub. Att använda en symbolisk länk är ett sätt att göra detta på.
+
+Nu har jag en lokal utvecklingsmiljö och kan kontinuerligt testa och göra små ändringar i mon moduls kod.
+
+Om jag även har ett postprocessingskript så blir det enkelt att köra det och vid behov kopiera över ny konfiguration till min installation i `a/`.
+
+Man vill att ens utvecklingsmiljö skall vara smidig. Det skall vara enkelt att jobba.
 
 
 
 Publicera repot på Packagist {#publicera}
 --------------------------------------
 
-Jag loggar in på Packagist och submittar ett paket kopplat till mitt repo.
+När du känner dig helt klar med din modul så committar du, taggar och pushar till GitHub.
 
-[FIGURE src=image/snapht17/packagist-submit.png?w=w2 caption="Submitta ett paket till Packagist genom att ange dess url till GitHub."]
+Logga in på Packagist och lägg till din modul.
 
-När paketet är submittat ser det ut så här.
+[FIGURE src=image/snapht17/packagist-submit.png?w=w3 caption="Submitta ett paket till Packagist genom att ange dess url till GitHub."]
 
-[FIGURE src=image/snapht17/packagist-submitted.png?w=w2 caption="Nu är paketet på plats på Packagist."]
+När paketet är submittat kan det se ut så här.
 
-Du kan se att Packagist ser att paketet är i version v1.0.0. Kom ihåg att Packagist normalt alltid ger dig senaste taggade versionen när du installerar via composer.
+[FIGURE src=image/snapht17/packagist-submitted.png?w=w3 caption="Nu är paketet på plats på Packagist."]
 
-Då var det nästan klart.
+Du kan se att Packagist ser att paketet är i version v1.0.0 (eller hur du nu valt att sätta versionen). Kom ihåg att Packagist normalt alltid ger dig senaste taggade versionen när du installerar via composer.
 
+Se till att Packagist uppdateras per automatik, varje gång du gör en ny commit till GitHub.
 
-
-###Uppdatera automatiskt {#update}
-
-Vi behöver konfigurera en GitHub service hook så att Packagist kan ta del av uppdateringarna som pushas till GitHub. Annars måste vi klicka på knappen "Update" varje gång vi pushar till GitHub.
-
-[FIGURE src=image/snapht17/packagist-service-hook.png?w=w2 caption="Vi behöver koppla ihop Packagist och GitHub."]
-
-Jag gör som det står i manualen "GitHub Service Hook" som det länkas till i meddelandet. Den snabba versionen är "GitHub repot -> Settings -> Integrations and Services -> Add service -> Packagist". 
-
-Sedan skriver jag in min User och mitt Token, Domain lämnar jag tom. Mitt token finns i min profil på Packagist.
-
-[FIGURE src=image/snapht17/github-connect-packagist.png?w=w2 caption="Koppla ihop Packagist med GitHub."]
-
-Nästa gång jag pushar till GitHub kommer Packagist att automatiskt uppdatera sig och info-rutan med varningstexten om automatisk uppdatering kommer att försvinna från Packagist.
-
-Kom ihåg att Packagist och Composer främst jobbar mot dina taggar och inte mot koden som ligger i din master-branch ("dev-master").
-
-När jag själv jobbar med moduler så jobbar jag lokalt tills jag är klar för att tagga modulen. Det brukar sedan ta fem minuter innan Packagist har uppdaterat sig och därefter kan jag pröva att ta hem senaste versionen med composer update.
+När du gör en uppdatering till GitHub, aom automatiskt uppdateras på Packagist, kan det ta ett par minuter innan hela flödet är uppdaterat. Vill du testa att använda den senaste taggen från Packagist så kan det vara läge att ta en kopp kaffe medans du väntar.
 
 
 
-###Composer.json gå mot Packagist {#compospack}
+Composer.json gå mot Packagist {#compospack}
+--------------------------------------
 
-Då kan jag uppdatera min `composer.json` i min Anax installation så att den hämtar paketet `anax/remserver` från Packagist istället från GitHub repot. Jag tar bort denna delen i `composer.json`.
+Då kan jag uppdatera min `composer.json` i min Anax installation `a/` så att den hämtar paketet `anax/remserver` från Packagist istället för GitHub repot. 
+
+Jag tar bort delen med repositories.
 
 ```json
-{
-    "require": {
-        "anax/remserver": "dev-master"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/canax/remserver.git"
-        }
-    ],
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/canax/remserver"
+    }
+],
+```
+
+Sedan uppdaterar jag så att rätt version hämtas, istället för `dev-master`. Den senaste aktuella versionen är `^2.0.0`.
+
+```json
+"require": {
+    "anax/anax-ramverk1-me": "^1.0.0",
+    "anax/remserver": "^2.0.0"
 },
 ```
 
-Sedan gör jag en `composer require anax/remserver`.
+Sedan gör jag en `composer update`.
 
-```bash
-composer require anax/remserver
-```
+Jag bör se att den nya versionen hämtas hem och ersätter min dev-master.
 
-Jag bör se att den nya versionen hämtas hem och ersätter min "dev-master".
-
-Vi är klara och har modulariserat REM servern som nu har en struktur som gör den enklare att vidareutveckla och underhålla samt samexistera med en installation av Anax.
+Vi är klara och har modulariserat remservern som nu har en struktur som gör den enkel att vidareutveckla och underhålla samt samexistera med en installation av Anax.
 
 
 
