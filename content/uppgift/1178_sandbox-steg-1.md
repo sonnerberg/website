@@ -25,7 +25,7 @@ Du har jobbat igenom lab1 i kursen javascript1
 Krav {#krav}
 -----------------------
 
-I din kurskatalog (repot) för kursen, skall du ta en kopia av din personliga sandbox `me/kmom01/sandbox` och lägga innehållet i `me/kmom01/sandbox1`.
+I din kurskatalog (repot) för kursen, skall du ta en kopia av din personliga sandbox `me/kmom01/sandbox` och lägga innehållet i `me/kmom01/sandbox`.
 
 ```bash
 # Gå till kurskatalogen
