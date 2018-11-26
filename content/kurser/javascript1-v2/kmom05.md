@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-11-26": (E, lew) Moved memory to extra.
     "2017-10-10": (D, mos) Genomgång inför ht17.
     "2016-03-15": (C, mos) Lade till videoserie med "Lär dig JavaScript".
     "2015-01-19": (B, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
@@ -8,14 +9,6 @@ revision:
 ...
 Kmom05: DOM och events
 ==================================
-
-[WARNING]
-
-**Kursutveckling pågår**
-
-Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
-
-[/WARNING]
 
 När vi använder JavaScript i webbläsaren handlar det mycket om att modifiera HTML-sidan och tillföra effekter. För att göra det manipulerar HTML-sidans DOM träd via JavaScript. Det handlar om att modifiera elementen på sidan och förändra deras style för att uppnå önskat beteende.
 
@@ -97,14 +90,12 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[JavaScript, DOM och Events](uppgift/javascript-dom-och-events)". Spara koden i `me/kmom05/dom`.
 
-2. Gör uppgiften "[Memory - rita flaggor med JavaScript vid DOM](uppgift/memory-rita-flaggor-med-javascript-och-dom)". Spara koden i `me/kmom05/flag4`.
 
 
-<!--
 ###Extra {#extra}
 
-Det finns inga extra uppgifter.
--->
+Gör uppgiften "[Memory - rita flaggor med JavaScript vid DOM](uppgift/memory-rita-flaggor-med-javascript-och-dom)". Spara koden i `me/kmom05/flag4`.
+
 
 <!--
 Lös följande extrauppgifter om du har tid.
