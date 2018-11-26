@@ -68,7 +68,7 @@ Undersök hur (minst) ett av ramverken jobbar med paketering, moduler och versio
 
 Följande används som referensmaterial i kursmomentet.
 
-1. Du kan se hur REm-servern är uppbyggd som modul och hur den kopplar till Packagist.
+1. Du kan se hur REM-servern är uppbyggd som modul och hur den kopplar till Packagist.
     * [REM servern på GitHub](https://github.com/canax/remserver)
     * [REM servern på Packagist](https://packagist.org/packages/anax/remserver)
 
@@ -91,7 +91,7 @@ Gör följande övning, de förbereder dig inför uppgiften.
 
 ### Uppgifter {#uppgifter}
 
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bryt ut din kod till en modul och publicera på Packagist](uppgift/bryt-ut-din-kod-till-en-modul-och-publicera-pa-packagist)". Alla ändringar sparar du i Koden uppdaterar du i `me/redovisa`.
 
@@ -108,9 +108,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer omfattande än normalt.
 
-* Hur gick arbetet med att lyfta ut koden ur redovisa-sidan och placera i en egen modul, några svårigheter?
+* Hur gick arbetet med att lyfta ut koden ur redovisa-sidan och placera i en egen modul, några svårigheter, utmaningar eller annat värt att nämna?
 * Gick det bra att publicera på Packagist och ta emot uppdateringar från GitHub?
-* Fungerade det smidigt att åter installera modulen i din redovisa-sida med composer, kunde du följa du din installationsmanual?
+* Fungerade det smidigt att åter installera modulen i din redovisa-sida med composer, kunde du följa din egen installationsmanual?
 * Hur väl lyckas du enhetstesta din modul och hur mycket kodtäckning fick du med?
 * Några reflektioner över skillnaden med och utan modul?
 * Vilket ramverk undersökte du och hur hanterar det ramverket paketering, moduler och versionshantering?

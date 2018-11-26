@@ -139,9 +139,9 @@ Du börjar införa enhetstestning på din modul.
 
 ### Kmom05: CI {#kmom05}
 
-Tanken är att ge en bild av hur automatiserad testning och continuous integration (CI) fungerar mot en PHP modul som ligger publicerad på GitHub och Packagist.
+Tanken är att ge en bild av hur automatiserad testning och continuous integration (CI) kan fungera med en PHP modul som ligger publicerad på GitHub och Packagist.
 
-Vi fortsätter jobba mot modulen vi publicerade på GitHub och Packagist i föregående kursmoment. Vi använder de tester som körs via `make install test` för att låta externa verktyg checka ut vår kod och exekvera testerna och analysera koden ur olika aspekter.
+Vi fortsätter jobba med modulen vi publicerade på GitHub och Packagist i föregående kursmoment. Vi låter externa verktyg checka ut vår kod från GitHub och köra testsuiten via `make install test`. De externa verktygen kan samtidigt analysera koden ur olika kvalitetsaspekter.
 
 Vi bekantar oss med ett antal olika externa verktyg och försöker förstå vad de kan tillföra till en utvecklares vardag.
 

@@ -91,7 +91,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 ### Uppgifter {#uppgifter}
 
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+Dessa uppgifter skall utföras och redovisas.
 
 1. Se över grunden till din me-sida och överväg om något av de nya begreppen bör introduceras i din generella me-sida. Eventuella ändringar gör du under `me/anax`.
 

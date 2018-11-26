@@ -89,7 +89,7 @@ Kika på följande videos.
 
 ### Uppgifter {#uppgifter}
 
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[En webbtjänst för att visa väderprognos och historiskt väder](uppgift/en-webbtjanst-for-att-visa-vaderprognos-och-historiskt-vader)". Spara koden under `me/redovisa`.
 

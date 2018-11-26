@@ -101,7 +101,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 ### Uppgifter {#uppgifter}
 
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[En webbtjänst för att geotagga ip-adresser](uppgift/en-webbtjanst-for-att-geotagga-ip-adresser)". Spara koden under `me/redovisa`.
 
