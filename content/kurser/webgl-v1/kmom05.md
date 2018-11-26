@@ -37,7 +37,7 @@ Fråga i forumet om du känner dig osäker.
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om de generella [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning-g-u).
+När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om de generella [grunderna för bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning-g-u).
 
 Projektet och kursen som helhet betygssätts enligt betygsskalan U, Ux, G. Du kan få maximalt 60 (30 kmom01 - kmom03 + 30 projekt) poäng och du behöver minst 50 poäng för att klara G.
 
