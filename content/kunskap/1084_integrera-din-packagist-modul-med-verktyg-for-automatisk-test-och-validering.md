@@ -6,6 +6,7 @@ category:
     - php
     - kursen ramverk1
 revision:
+    "2018-11-26": "(C, mos) Genomläst inför ht18, valde dock att inte ändra dokumentet."
     "2017-10-03": "(B, mos) Stycke om CodeClimate och om jämförelse mellan tjänsterna."
     "2017-10-02": "(A, mos) Första utgåvan."
 ...
@@ -87,7 +88,7 @@ Vi börjar med att integrera mot tjänsten [Travis](https://travis-ci.org/). bek
 
 Du kan sedan studera [Travis statusen för GitHub organisationen CAnax](https://travis-ci.org/canax) och alla dess moduler som omfattas av automatiserade tester. Klicka dig in på en av modulerna för att se status på dess senaste bygge. 
 
-[FIGURE src=image/snapht17/travis.png?w=w2 caption="Travis har koll på hur modulerna i Anax klarar sina automatiserade tester."]
+[FIGURE src=image/snapht17/travis.png?w=w3 caption="Travis har koll på hur modulerna i Anax klarar sina automatiserade tester."]
 
 I min modul finns redan en konfigurationsfil `.travis.yml` för Travis och det gör det enkelt för mig att lägga till min nya modul till Travis.
 
@@ -110,7 +111,7 @@ Likt Travis det en byggtjänst som kan köra automatiserade tester genom att che
 
 Via CircleCI kan du se status för de [senaste byggena för modulen `anax/di`](https://circleci.com/gh/canax/remserver).
 
-[FIGURE src=image/snapht17/circleci.png?w=w2 caption="CircleCI är en byggmiljö likt Travis."]
+[FIGURE src=image/snapht17/circleci.png?w=w3 caption="CircleCI är en byggmiljö likt Travis."]
 
 I mitt modul-repo finns en konfigurationsfil `circle.yml` och med den kan jag lägga upp mitt repo så att CircleCI checkar ut det och kör mina tester.
 
@@ -133,7 +134,7 @@ Du kan se hur detaljer om [modulen `anax/di` presenteras](https://scrutinizer-ci
 
 Ett verktyg likt Scrutinizer kan ge dig indikationer på kodens kvalitet.
 
-[FIGURE src=image/snapht17/scrutinizer.png?w=w2 caption="Via Scrutinizer kan du få mer detaljerad information om din kod via statiskt kodanalys."]
+[FIGURE src=image/snapht17/scrutinizer.png?w=w3 caption="Via Scrutinizer kan du få mer detaljerad information om din kod via statiskt kodanalys."]
 
 I mitt repo finns en konfigurationsfil `.scrutinizer.yml` och med den kan jag integrera mitt repo med Scrutinizer.
 
@@ -175,7 +176,7 @@ Tjänsten [CodeClimate](https://codeclimate.com/) är ytterligare ett exempel p�
 
 Här kan du se rapporten för [CodeClimate och anax/remserver](https://codeclimate.com/github/canax/remserver).
 
-[FIGURE src=image/snapht17/codeclimate.png?w=w2 caption="Via CodeClimate kan du få detaljerad information om din kod via statiskt kodanalys."]
+[FIGURE src=image/snapht17/codeclimate.png?w=w3 caption="Via CodeClimate kan du få detaljerad information om din kod via statiskt kodanalys."]
 
 När du integrerar mot CodeClimate får du två eller tre badges.
 
