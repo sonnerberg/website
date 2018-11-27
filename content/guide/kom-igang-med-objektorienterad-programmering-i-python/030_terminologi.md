@@ -19,3 +19,7 @@ Objektorienterad terminologi
 * **Metod**: En funktion som är definierad inuti en klass.
 
 * **Statisk metod**: En metod i klassen som fungerar oberoende av klassen och _self_.
+
+* **Operatoröverlagring**: När en klass har implementerat en metod för en operator. "Operator overloading" på engelska.
+
+* **Överskugga**: När en subklass har en metod med samma namn och antal parametrar som en metod i basklassen. "Override" på engelska. 
