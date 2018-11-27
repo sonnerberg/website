@@ -15,7 +15,9 @@ Instansmetoder {#instansmetoder}
 
 Instansmetoder identifieras på att den första parametern heter `self`, oftast. I instansmetoder använder man sig av instansattributen, om man vill ha en metod i en klass där man inte behöver använda instansattributen skapar men en statisk metod istället.
 
-Tidigare använde vi dot-notation för att komma åt attributen i ett objekt. Men vanligtvis brukar man inom objektorienterad programmering inte använda det utanför instansen. Utan då använda man sig av get- och set metoder som man har skapat för varje attribut. Vi börjar med att skapa get metoder för våra attribut.
+Tidigare använde vi dot-notation för att komma åt attributen i ett objekt. Men vanligtvis brukar man inom objektorienterad programmering inte använda det utanför instansen. Utan då använda man sig av get- och set metoder som man har skapat för varje attribut. Detta kallas data inkapsling, vilket är när vi bundlar data med metoderna som använder datan.
+
+Vi börjar med att skapa get metoder för våra attribut.
 
 
 

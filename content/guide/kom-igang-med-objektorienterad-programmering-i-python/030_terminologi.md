@@ -20,6 +20,12 @@ Objektorienterad terminologi
 
 * **Statisk metod**: En metod i klassen som fungerar oberoende av klassen och _self_.
 
+* **Data inkapsling**: Att bundla data med metoderna som använder datan.
+
 * **Operatoröverlagring**: När en klass har implementerat en metod för en operator. "Operator overloading" på engelska.
 
 * **Överskugga**: När en subklass har en metod med samma namn och antal parametrar som en metod i basklassen. "Override" på engelska. 
+
+* **Information hiding**: Att man gömmer intern data, så att den inte kan användas på fel sätt. Hittar ingen bra översättning till svenska.
+
+* **Data abstraktion**: Om både data inkapsling och information hiding används är det data abstraktion. Data abstraction på engelska.
