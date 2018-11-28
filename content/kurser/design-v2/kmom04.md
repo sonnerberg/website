@@ -3,6 +3,7 @@ author:
   - mos
   - efo
 revision:
+    "2018-11-28": (F, mos) Läsanvisning om färgteori.
     "2018-11-19": (E, mos) Publicerat för design v2.
     "2018-10-19": (D, efo) Uppdatering med design guide.
     "2018-06-08": (C1, mos) Nytt dokument inför uppdatering av kursen.
@@ -103,6 +104,14 @@ Lös följande artiklar för att få en bakgrund i allmän layout kopplad till f
 1. Läs artikeln "[An Introduction to Color Theory for Web Designers](https://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)" som ger insyn i hur man väljer färger och färgshema för en webbplats.
 
 1. Läs [kapitel 13 i boken Web Design - The Complete Reference](http://www.webdesignref.com/chapters/13/ch13-16.htm). Det handlar om "Color and Usability" och "The Hidden Meaning of Colors" och ger en kort introduktion till färger och webbdesign.
+
+
+
+### Om färgteori {#farg}
+
+Läs följande artikel "Traditional and Modern colour theory", om du finner den intressant. Det handlar om färgteori, varainter av färghjul och hur färgteori lärs ut kontra dess historik.
+    * [Part 1: Modern colour theory](http://www.huevaluechroma.com/001.php)
+    * [Part 1: Traditional colour theory strikes back](http://www.huevaluechroma.com/002.php)
 
 
 
