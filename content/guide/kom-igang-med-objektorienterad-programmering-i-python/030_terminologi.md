@@ -29,3 +29,11 @@ Objektorienterad terminologi
 * **Information hiding**: Att man gömmer intern data, så att den inte kan användas på fel sätt. Hittar ingen bra översättning till svenska.
 
 * **Data abstraktion**: Om både data inkapsling och information hiding används är det data abstraktion. Data abstraction på engelska.
+
+### Information hiding
+
+| Implementation | Typ     | Syfte                                                                                 |
+|----------------|---------|---------------------------------------------------------------------------------------|
+| name           | publik  | Kan användas hur som helst, var som helst och av vem som helst.                       |
+| _name          | skyddad | Använd inte om du inte vet vad du gör. Använd på egen risk                            |
+| __name         | manglad | Hindra subklasser från att överskugga metoder och attribut.                           |
