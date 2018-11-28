@@ -4,6 +4,7 @@ author:
     - mos
     - efo
 revision:
+    "2018-11-28": (I, mos) Ny kurskod från vt19 samt nya förkunskapskrav.
     "2018-01-04": (H, efo) Ändring av kmom namn och innehåll.
     "2018-01-03": (G, mos) Förberedelser inför webapp-v3.
     "2017-03-17": (F, efo) Förberedelser inför webapp-v2.
@@ -53,7 +54,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Kunskaper som omfattar avklarade kurser motsvarande minst 15hp i programmering med JavaScript för både klientsidan och serversidan samt HTML och CSS.
+> För tillträde till kursen krävs genomgångna kurser motsvarande 15 hp i programmering och webbteknologier varav 6 hp ska vara programmering med JavaScript.
 
 
 
@@ -297,4 +298,6 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 
 <!-- DV1609, Webbapplikationer för mobila enheter, 7,5 hp (ersätter DV1546) -->
 
-Du hittar [kursplanen genom att söka på kurskoden DV1546 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1546).
+Från och med våren 2019 hittar du [kursplanen genom att söka på kurskoden DV1609 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1609).
+
+Fram till våren 2018 så gavs kursen under [kurskoden DV1546](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1546).
