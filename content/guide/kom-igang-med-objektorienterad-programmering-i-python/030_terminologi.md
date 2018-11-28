@@ -30,6 +30,14 @@ Objektorienterad terminologi
 
 * **Data abstraktion**: Om både data inkapsling och information hiding används är det data abstraktion. Data abstraction på engelska.
 
+* **Arv**: _is-a_ relation mellan två klasser. En `Square` is a `Shape`, Square är en subklass till Shape och ärver metoder och attribut.
+
+* **Aggregation**: _has-a_ relation mellan två klasser med svag koppling. Ett objekt från en klass äger ett objekt av en annan klass. Ett `Pond` has a  `Duck`. Ett Duck objekt kan existera utanför ett Pond objekt.
+
+* **Komposition**: _has-a_ relation mellan två klasser med stark koppling, en typ av aggregation. Ett objekt från en klass äger ett objekt av en annan klass och styr livscykeln för det ägda objektet. Ett `House` has a  `Room`. Ett Room objekt kan inte existera utanför ett House objekt.
+
+
+
 ### Information hiding
 
 | Implementation | Typ     | Syfte                                                                                 |
