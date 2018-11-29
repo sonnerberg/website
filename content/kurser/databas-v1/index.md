@@ -2,6 +2,7 @@
 title: databas-v1
 author: mos
 revision:
+    "2018-11-29": "(D, mos) Uppdaterad med nya kurskoder till vt19."
     "2018-09-20": "(C, mos) Förbereder inför ny kurskod till vt19."
     "2018-02-27": "(B, mos) Inkluderad i Webbprogrammering från vt18 lp4."
     "2018-01-11": "(A, mos) Första utgåva inför kursstart VT2018."
@@ -279,11 +280,19 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 
 Kursen ges under olika kurskoder till olika målgrupper.
 
-Från våren 2019 får kurserna nya kurskoder.
 
-<!-- DV1606, Databasteknologier för webben, 7,5 hp (ersätter PA1451) -->
 
-<!-- PA1444 bytt till DV1605 -->
+### Aktuella kursnamn och kurskoder {#kurskod}
+
+Från våren 2019 får kurserna nya kurskoder och uppdaterade kursplaner.
+
+Kurspaket och programmet Webbprogrammering läser kursen under namnet "Databasteknologier för webben" och kurskoden DV1606. Du hittar [kursplanen genom att söka på kurskoden DV1606 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1606).
+
+För programmet Software Engineering heter kursen "Webbprogrammering och databaser" och kurskoden är DV1605. Du hittar [kursplanen genom att söka på kurskoden DV1605 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1605).
+
+
+
+### Tidigare utgåvor av kursen {#tidkurskod}
 
 Följande gällde till och med 2018.
 
