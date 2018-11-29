@@ -5,6 +5,7 @@ author:
     - lew
     - mos
 revision:
+    "2018-11-29": (B, aar) Gulmarkerat inför VT19.
     "2018-02-23": (A, aar) Första version V2.
     "2017-12-11": (PA2, lew) Påbyggnad utkasst till V2.
     "2017-11-10": (PA1, mos) Utkast till v2.
