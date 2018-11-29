@@ -80,7 +80,7 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln som handlar om "[GET, POST i Flask](kunskap/flask-get-post)".
 
-1. Läs igenom artikeln om "[Klass relationer](kunskap/klass-relationer)" i Python.
+1. Läs igenom "Klass relationer" i guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".  
 
 
 
