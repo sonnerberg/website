@@ -21,15 +21,19 @@ Kursen använder sig av webbaserade teknologier och program som skapas publicera
 
 <!--more-->
 
-[INFO]
+[WARNING]
+
+** Kursutveckling pågår**
+
+Kursstart våren 2019.
+
 **Tidigare version av kursen**
 
 Om du gick kursen under vårterminen 2017, så finns kursmaterialet i [oopython version 1](kurser/oopython-v1).
 
-Version 2 går första gången vårterminen 2018.
-
 Om du påbörjat en äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
-[/INFO]
+
+[/WARNING]
 
 
 
