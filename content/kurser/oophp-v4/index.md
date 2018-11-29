@@ -302,11 +302,11 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Kursen heter numer "Objektorienterade webbteknologier".
+Kursen heter "Objektorienterade webbteknologier".
 
-Du hittar [kursplanen genom att söka på kurskoden PA1440 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1440).
+Från och med våren 2019 gäller följande.
 
-Från och med våren 2019 kommer kursen byta kurskod då förkunskaperna uppdateras.
+Du hittar [kursplanen genom att söka på kurskoden DV1608 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1608).
 
 Mellan 2017 och 2018 hade kursen kurskoden [PA1440](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1440).
 
@@ -322,8 +322,6 @@ Versioner av kursen {#versioner}
 -----------------------------------------------------
 
 Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
-
-<!-- DV1608, Objektorienterade webbteknologier, 7,5 hp (ersätter PA1440) -->
 
 Från och med vårterminen 2018 finns kursmaterialet i [oophp (v4)](kurser/oophp-v4).
 

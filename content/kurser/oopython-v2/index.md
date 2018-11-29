@@ -268,4 +268,8 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Du hittar [kursplanen genom att söka på kurskoden PA1437 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1437).
+Från vårterminen 2020 så heter kursen kursen "Algoritmer och datastrukturer med objektorienterad Python" med [kurskoden (ej bestämt))](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1437).
+
+Tidigare hette kursen "Objektorienterad design och programmering med Python".
+
+Fram till våren 2019 så gavs kursen under [kurskoden PA1437](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1437).

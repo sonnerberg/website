@@ -274,8 +274,8 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Kursens namn är "Webbaserade ramverk 1". Du hittar [kursplanen genom att söka på kurskoden PA1441 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1441).
+Från och med hösten 2019 heter kursen "Webbaserade ramverk med designmönster". Du hittar [kursplanen genom att söka på kurskoden DV1610 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1610).
 
-Kursen är en fristående vidarutveckling av kursen DV1486 "Databasdrivna webbapplikationer med PHP och MVC-ramverk", aka phpmvc.
+Fram till och med hösten 2018 hette kursen "Webbaserade ramverk 1". Du hittar [kursplanen genom att söka på kurskoden PA1441 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1441).
 
-Se [kursplan för DV486](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486).
+Kursen är en fristående vidarutveckling av kursen DV1486 "Databasdrivna webbapplikationer med PHP och MVC-ramverk", aka phpmvc. Se [kursplan för DV486](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486).
