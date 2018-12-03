@@ -5,7 +5,7 @@ category:
     - tema
     - less
 revision:
-    "2018-11-19": (PA1, mos) Kopierade från 'Bygg en bas och en familj av teman' samt omskriven för design v2.
+    "2018-11-19": (A, mos) Kopierade från 'Bygg en bas och en familj av teman' samt omskriven för design v2.
 ...
 Teman med färger och typografi
 ===================================

@@ -21,7 +21,7 @@ return [
             "favicon"       => "favicon.ico",
 
             // Style and stylesheets
-            "stylesheets" => ["css/style.min.css?v=2018-10-08-1"],
+            "stylesheets" => ["css/style.min.css?v=2018-12-03-1"],
             "styleInline" => null,
 
             // JavaScript
@@ -42,7 +42,7 @@ return [
             "data" => [
                 "homeLink"      => "",
                 "siteLogoText"  => "dbwebb",
-                "siteLogoTextIcon" => "image/tema/trad/blad_40x38.png",
+                "siteLogoTextIcon" => "image/theme/leaf_40x40.png",
                 "siteLogoTextIconAlt" => "Liten logo",
                 "siteLogo"      => null, //"img/anax.png",
                 "siteLogoAlt"   => null, //"Anax Logo",
@@ -56,7 +56,7 @@ return [
             "template" => "default/image",
             "data" => [
                 "class" => "logo-1",
-                "src" => "/image/tema/trad/blad.jpg",
+                "src" => "image/theme/leaf_256x256.png",
                 "alt" => "Logo",
             ],
             "sort" => -1
