@@ -124,7 +124,7 @@ Läs följande om responsivitet och bilder.
 
 ### Bildhantering med Cimage {#bildhantering}
 
-[FIGURE src="https://cimage.se/img/favicon/favicon_128x128.png" class="right" caption="Cimage"]
+[FIGURE src="https://cimage.se/img/favicon/favicon_128x128.png" class="right w25" caption="Cimage"]
 
 Lär dig mer om Cimage för att använda det i uppgiften som kommer.
 
