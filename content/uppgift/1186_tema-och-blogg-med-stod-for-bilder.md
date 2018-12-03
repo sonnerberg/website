@@ -4,7 +4,7 @@ category:
     - kurs/design
     - tema
     - less
-    - @desinax/figure
+    - desinax/figure
 revision:
     "2018-12-03": "(A, mos) Vidare utveckling av uppgiften 'Bygg ut ditt Anax Flat tema med stöd för bilder'."
 ...

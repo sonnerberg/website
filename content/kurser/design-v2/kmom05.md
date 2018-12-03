@@ -19,16 +19,6 @@ revision:
 Kmom05: Bild
 ====================================
 
-<!--
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
--->
-
 [FIGURE src="image/snapht18/kabbe.jpg" caption="Kabbe på vandring en sen höstdag i Blekinges skärgård på Yttre Stekön. Fundera på om bilden innehåller något som gör den mer eller mindre intressant."]
 
 Låt oss ägna ett kursmoment åt att testa runt med bilder, bildverktyg och bildformat samt hur vi publicerar bilderna på en webbplats, inklusive responsivitet.
