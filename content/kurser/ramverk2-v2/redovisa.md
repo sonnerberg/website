@@ -45,7 +45,7 @@ Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du hist
 
 
 
-Ladda upp och publicera din kurskatalog {#repo}
+<!-- Ladda upp och publicera din kurskatalog {#repo}
 ---------------------------------------
 
 Ladda upp ditt kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
@@ -57,7 +57,7 @@ dbwebb validate me
 
 Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt.
 
-Den länken som dyker upp längst ned är länken till din me-sida. Där kan du se ditt publicerade resultat.
+Den länken som dyker upp längst ned är länken till din me-sida. Där kan du se ditt publicerade resultat. -->
 
 
 
@@ -86,7 +86,7 @@ Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor 
 
 
 
-Testa din kurskatalog {#test}
+<!-- Testa din kurskatalog {#test}
 ---------------------------------------
 
 Den som rättar och kontrollerar din inlämning utgår från följande kommando.
@@ -97,7 +97,7 @@ dbwebb inspect kmom01
 
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
-Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
+Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel. -->
 
 
 
