@@ -123,7 +123,9 @@ Vi jobbar med tekniker kring hur en webbplats kan färgläggas. Men innan det fu
 
 ### Kmom05: Bilder {#kmom05}
 
-Kursmomentet har ett fokus på att hantera och presentera bilder i olika storlekar i webbplatsen.
+Låt oss ägna ett kursmoment åt att testa runt med bilder, bildverktyg och bildformat samt hur vi publicerar bilderna på en webbplats, inklusive responsivitet.
+
+Vi skall se hur vi kan använda bilder för att skapa "bildtunga" teman, här är bilderna en viktig ingrediens i webbplatsens tema.
 
 [Instruktion till kursmoment 05](./kmom05).
 
