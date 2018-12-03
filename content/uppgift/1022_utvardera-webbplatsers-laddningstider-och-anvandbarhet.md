@@ -4,6 +4,7 @@ category:
     - kurs/design
     - tema
 revision:
+    "2018-12-03": (G, mos) Mindre justeringar i kravtexten.
     "2018-10-25": (F, mos) Genomarbetad inför ht18.
     "2017-11-27": (E, mos) Genomgången inför ht17, justerade antal webbplatser.
     "2016-12-04": (D, mos) Ta en snapshot på webbplatsen och rangordna dem.
@@ -34,11 +35,9 @@ Introduktion {#intro}
 
 Även om ni jobbar i grupp så skall var och en av er lägga in varsin analys i sin egen redovisa-sida.
 
-Bekanta dig med verktyget [Google Pagespeed](https://developers.google.com/speed/pagespeed/). Du skall använda det verktyget för att mäta och jämföra laddningstid och användbarhet.
+Förbered dig inför uppgiften genom att jobba igenom kursmomentets läsanvisningar under "[Webbplatsers laddningstid](kurser/design-v2/kmom05#artikel)".
 
-Dubbelkolla att du kan använda webbläsarens devtools och fliken "Network" för att se vilka resurser som laddas med webbsidan och den absoluta laddningstiden samt storleken på dem.
-
-När du mäter laddningstid så använd shift-ctrl-r så att webbläsaren inte använder sina cachade objekt.
+När du mäter laddningstid via devtools och filken "Network" så använd shift-ctrl-r så att webbläsaren inte använder sina cachade objekt.
 
 
 
@@ -54,16 +53,16 @@ Krav {#krav}
 1. Skapa ett excelark, till exempel Google Kalkylark, för att spara dina mätningar i. För allt du nu skall mäta, dokumentera det i excelarket. Länka till ditt excelark så man ser rådatan.
 
 1. För varje webbplats, gör följande:
-    1. Ta en snapshot på webbplatsen.
+    1. Ta en snapshot (bild) på webbplatsen.
     1. Välj ut tre sidor (bifoga länkarna) som skall mätas med Google Pagespeed. Mät på både Mobile och Desktop. Notera de betyg som ges.
     1. För varje sida, mät med devtools flik networks och notera sidans laddningstid tillsammans med antalet resurser som laddas samt sidans totala storlek. För varje sida gör mätningen tre gånger och ta snittet av mätvärdena.
-    1. Diskutera och skriv två meningar om hur webbplatsen kan förbättra sig.
+    1. Diskutera och skriv en mening om hur webbplatsen kan förbättra sig.
 
 1. Sammanfatta ditt resultat i en analys och skriv om vilka de vanligaste förbättringsåtgärderna verkar vara för ditt urval av webbplatser.
 
-1. Rangordna dina webbplatser baserat på deras mätvärden och kommentera resultatet.
+1. Rangordna dina webbplatser baserat på deras mätvärden och utse en vinnare i testet och kommentera resultatet.
 
-1. Bestäm en gräns för absolut laddningstid som du själv uppfattar som snabb eller långsam webbplats. Skriv ett stycke om hur ditt urval av webbplatser klarar ditt gränsvärde och hur du upplever webbplatsernas snabbhet.
+1. Bestäm en gräns för absolut laddningstid som du själv uppfattar som snabb eller långsam webbplats. Skriv en mening om hur ditt urval av webbplatser klarar ditt gränsvärde och hur du upplever webbplatsernas snabbhet, rent generellt, i ditt urval.
 
 1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
 
