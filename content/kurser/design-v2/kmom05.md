@@ -9,7 +9,7 @@ views:
         data:
             src: "image/snapht18/kabbe.jpg?w=1100&h=360&cf&f=pixelate,8,2&a=0,0,05,0"
 revision:
-    "2018-12-02": (E, mos) Uppdaterat inför ht18 med design v2.
+    "2018-12-03": (E, mos) Uppdaterat inför ht18 med design v2.
     "2018-10-19": (D, efo) Uppdatering med design guide.
     "2018-06-08": (C1, mos) Nytt dokument inför uppdatering av kursen.
     "2017-11-27": (C, mos) Genomgången inför ht17.
