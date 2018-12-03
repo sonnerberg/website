@@ -75,21 +75,17 @@ När du är klar, committa, tagga, pusha till GitHub.
 
 
 
-### Krav 1: Backend {#k1}
+### Krav 1: Backend & Frontend {#k1}
 
 Skapa ett API för trading av dina valda objekt. Användare av din tradingplattform ska kunna registrera och autentisera sig mot plattformen från en klient. Som autentiserad användare ska det gå att köpa och sälja valda objekt som hamnar i ett depå kopplat till användaren.
 
-
-
-### Krav 2: Frontend {#k2}
-
 Skapa en klient som är publikt tillgänglig. Gör ett medvetet val av teknik och berätta utförligt i din README om vilka teknikval du har gjort och varför. Klienten ska vara designat för att användas på enheter av olika storlekar.
 
-I klienten ska det vara möjligt att autentisera sig mot API:t implementerad i [Krav 1](#k1). När klienten är autentiserad kan användaren se tillgängliga medel och objekt i depån samt handla med objekt. Gör det även möjligt för att användaren att sätta in medel på depån, som användaren sedan kan handla för.
+I klienten ska det vara möjligt att autentisera sig mot API:t. När klienten är autentiserad kan användaren se tillgängliga medel och objekt i depån samt handla med objekt. Gör det även möjligt för att användaren att sätta in medel på depån, som användaren sedan kan handla för.
 
 
 
-### Krav 3: Tester {#k3}
+### Krav 2: Tester {#k3}
 
 Du har god kodtäckning i enhetstester och funktionstester på både backend och frontend. Sträva efter 70% där det är rimligt, men se det som en riktlinje och inte ett hårt krav.
 
@@ -109,7 +105,7 @@ Berätta om du är nöjd eller inte med de betyg som tjänsten för kodkvalitet 
 
 
 
-### Krav 4: Realtid (optionell) {#k4}
+### Krav 3: Realtid {#k3}
 
 Skapa en realtids micro-service som hanterar priserna för dina säljobjekt. I din frontend ska denna micro-service användas för att grafisk representera priserna i realtid.
 
@@ -127,7 +123,7 @@ Det finns variationer i hur du kan uppfylla detta kravet. Se föreläsningen som
 
 
 
-### Krav 6: Teknik, arbetssätt, verkyg, ramverk (optionell) {#k6}
+### Krav 6: Teknik, arbetssätt, verktyg, ramverk (optionell) {#k6}
 
 Du väljer en eller ett par av de teknikerna/arbetssätten/verktygen/ramverken du använt i ditt projekt och tar på dig rollen som evangelist och försöker aktivt sälja in och argumentera för teknikerna genom att skriva ihop en "A4" i form av ett foruminlägg (eller motsvarande).
 

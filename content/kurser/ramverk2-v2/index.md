@@ -96,7 +96,7 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: Backend {#kmom01}
+### Kmom01: Backend {#kmom01}
 
 Först ser vi till att skaffa oss en server där vi under kursens gång ska driftsätta ett antal olika micro-services och klienter. Vi installerar en webbserver och skapar ett första utkast till en service för redovisningstexter.
 
@@ -104,7 +104,7 @@ Först ser vi till att skaffa oss en server där vi under kursens gång ska drif
 
 
 
-###Kmom02: Frontend {#kmom02}
+### Kmom02: Frontend {#kmom02}
 
 Vi tittar på hur vi kan använda JavaScript ramverk på klientsidan för att skapa en Single Page Applikation (SPA) som pratar med servicen från kmom01.
 
@@ -114,7 +114,7 @@ Vi utvärderar vilka möjligheter vi har vid val av ramverk och väljer det ramv
 
 
 
-###Kmom03: Docker {#kmom03}
+### Kmom03: Docker {#kmom03}
 
 Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
 
@@ -124,7 +124,7 @@ Vi börjar dessutom utvecklande av en klient/server applikation, som kommer ligg
 
 
 
-###Kmom04: Test {#kmom04}
+### Kmom04: Funktions- och systemtest {#kmom04}
 
 Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi upp grunden i en testmiljö för JavaScript. Det handlar främst om enhetstestning och funktionstestning, samt kodtäckning och basen för en CI-kedja (Continuous integration).
 
@@ -134,7 +134,7 @@ Det blir också en introduktion i hur vi kan använda Docker för att köra vår
 
 
 
-###Kmom05: Realtid {#kmom05}
+### Kmom05: Realtid {#kmom05}
 
 Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
 
@@ -146,7 +146,7 @@ Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån
 
 
 
-###Kmom06: Dokumentorienterad databas {#kmom06}
+### Kmom06: Dokumentorienterad databas {#kmom06}
 
 Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databas som klassas i NoSQL-gruppen av databaser. För att koppla oss till databasen använder vi klienter i terminalen och kod i Node.js, med och utan Express.
 
@@ -166,7 +166,7 @@ Vi dedikerar detta kursmoment till att forma en egen modul som publiceras på np
 
 
 
-###Kmom07/10: Projekt och examination {#kmom10}
+### Kmom07/10: Projekt och examination {#kmom10}
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
