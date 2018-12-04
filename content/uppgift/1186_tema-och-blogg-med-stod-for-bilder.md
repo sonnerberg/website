@@ -67,7 +67,7 @@ Skapa en blogg genom att kopiera en mall för bloggen från exempel-katalogen. B
 
 ```text
 # Stå i kursrepot
-rsync -av example/blogg me/redovisa/blogg
+rsync -av example/blogg me/redovisa/content
 ```
 
 Du kan öppna bloggen via webbläsaren och länken `htdocs/blogg`.
