@@ -9,14 +9,6 @@ revision:
 Kmom06: Modul och closure
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
-
-[/WARNING]
-
 När kodbasen växer blir det mer och mer viktigt att ha en bra struktur på den, annars blir det svårare och svårare att vidareutveckla och underhålla koden. När man dessutom skall använda olika moduler av kod från olika tillverkare så är det viktigt att de olika delarna av koden inte krockar. Genom att använda en konstruktion som kallas *module pattern* hittar vi ett sätt att bättre strukturera vår kod.
 
 <!--more-->
@@ -88,6 +80,8 @@ Det finns inga lästips.
 Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom övningen om "[Funktioner, scope, closures och moduler med JavaScript](kunskap/funktioner-scope-closures-och-moduler-med-javascript)". Det är ingen kod du måste skriva, men du borde provköra varje exempel i din egen miljö. Det hjälper dig att öva in begreppen och du kan själv modifiera testprogrammen för att test hur de fungerar.
+2. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 6 gäller delen:
+    * [Module pattern](guide/javascript1/section_break_9)
 
 
 
