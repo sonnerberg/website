@@ -38,6 +38,32 @@ I kursrepots exempel katalog finns tre olika exempel program skrivna med hjälp 
 
 
 
+#### Rader skriven kod i exempelprogrammen {#loc}
+
+I nedanstående tabell listas de rader kod som utvecklaren har skrivit för att implementera exempelprogrammen. De rader som är räknade är enbart de rader som innehåller källkod, så rader med kommentarer och tomma rader är borttagna.
+
+|  | Angular | Mithril | React | Vue | Vanilla JS |
+|-----|--------|--------|--------|---------|--------|
+| calculator  |  | 103 |  | 98 | 118 (94 i DOM varianten) |
+| multipage   |  |  46 |  |  |  59 |
+| quote       |  |  47 |  70 |  |  24 |
+| tic-tac-toe |  | 136 | 146 |  | 126 |
+
+
+
+#### Storlek produktionsfil(er) {#filesize}
+
+I nedanstående tabell listas storleken på produktionsfilerna som skapas av antingen bygg verktyget i ramverket, webpack eller uglify. Filstorlekar är utskrivna med hjälp av kommandot `ls -lh` i ett bash-skal.
+
+|  | Angular | Mithril | React | Vue | Vanilla JS |
+|-----|--------|--------|--------|---------|--------|
+| calculator  |  | 30K |  |  | 2.6K (1.6K i DOM variant) |
+| multipage   |  | 28K |  |  | 1.1K |
+| quote       |  | 28K |  |  | 777B |
+| tic-tac-toe |  | 29K |  |  | 2.8K |
+
+
+
 RealWorld {#realworld}
 --------------------------------------
 
