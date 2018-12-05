@@ -4,6 +4,7 @@ category:
     - kurs/design
     - tema
 revision:
+    "2018-12-05": (G, mos) Justerat syfte, bort med egen känsla.
     "2018-10-25": (F, mos) Genomarbetad inför ht18.
     "2017-11-17": (E, mos) Genomläst inför ht17.
     "2016-12-04": (D, mos) Berätta om verktyg användes.
@@ -14,7 +15,9 @@ revision:
 Utvärdera webbplatsers färgval och känslan de signalerar
 ===================================
 
-Du skall välja ut ett antal olika webbplatser och dokumentera deras färgpalett och beskriva känslan du får från respektive webbplats. Du skall argumentera kring känslan som webbplatsens design ger, via färgvalen, och om den känns relevant för webbplatsens profil.
+Du skall välja ut ett antal olika webbplatser och dokumentera deras färgpalett och typografi samt argumentera kring valet av färg kontra den känsla du tror webbplatsen eventuellt vill signalera med sitt färgval.
+
+Du skriver rapporten i ett format som kan benämnas "akademiskt format". Det är för att träna på strukturen inför kommande större skrivuppgifter såsom examensjobb.
 
 Du kan jobba enskilt eller i grupp (2-4 personer) för att lösa denna uppiften.
 
