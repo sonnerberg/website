@@ -5,7 +5,7 @@ author:
     - lew
     - mos
 revision:
-    "2018-12-21": (G, mos) Inför skapandet av linux v3, nytt namn och kurskod.
+    "2018-12-21": (G, mos) Inför skapandet av linux v3, nytt namn, syfte, förkunskaper och kurskod.
     "2017-12-21": (F, mos) Genomgången inför vt18.
     "2017-12-18": (E, mos) Bort varningstext.
     "2016-12-16": (D, mos) Förberedelse inför linux-v2.
@@ -16,7 +16,7 @@ revision:
 Kursen linux (v3)
 ==================================
 
-Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *linux*, lär ut programmering med JavaScript och Node.js på serversidan i en Linux-miljö tillsammans med grunderna i operativsystemet Linux.
+Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *linux*, och syftet med kursen är att studenten ska lära sig operativsystemet Linux och dess beståndsdelar såsom processer, filsystemet och terminalen. Kursens fokusområden ligger även i operativsystemets uppbyggnad, programhantering och serverhantering samt att programmera i språket bash. Studenten ska även lära sig skapa virtualiseringstekniker såsom VirtualBox och Docker.
 
 <!--more-->
 
@@ -54,7 +54,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Avklarad kurs i Programmering med JavaScript 7.5hp samt ytterligare en avklarad programmeringskurs i godtyckligt programmeringsspråk om 7.5hp. 
+> För tillträde till kursen krävs 22,5hp programmering, webbteknologier och databaser.
 
 
 
