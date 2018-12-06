@@ -6,6 +6,7 @@ category:
     - less
     - desinax/figure
 revision:
+    "2018-12-06": "(B, mos) Lägg till composer update för senaste versionen av Anax moduler."
     "2018-12-03": "(A, mos) Vidare utveckling av uppgiften 'Bygg ut ditt Anax Flat tema med stöd för bilder'."
 ...
 Tema och blogg med stöd för bilder
@@ -73,6 +74,15 @@ rsync -av example/blogg me/redovisa/content
 Du kan öppna bloggen via webbläsaren och länken `htdocs/blogg`.
 
 Kontrollera vilka filer som nu ligger i `me/redovisa/content/blogg` och uppdatera dem med texter så att de matchar kraven nedan.
+
+Du behöver också se till att du har en uppdaterad installation av ramverket Anax och dess moduler. Gör så här.
+
+```text
+# Gå till me/redovisa
+composer update
+```
+
+Nu har du senaste versionen av Anax moduler.
 
 
 
