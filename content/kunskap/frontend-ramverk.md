@@ -71,6 +71,13 @@ För att ytterligare utvärdera våra valda ramverk tar vi en titt i GitHub repo
 
 
 
+John Papa's Heroes {#heroes}
+--------------------------------------
+
+Uder dotJS konferensen pratade John Papa om att välja ett frontend ramverk. Som förberedelse för presentationen hade han skapat samma app i "The Big Three" och de tre apparna ligger som open source kod på GitHub. [heroes-angular](https://github.com/johnpapa/heroes-angular), [heroes-react](https://github.com/johnpapa/heroes-react) och [heroes-vue](https://github.com/johnpapa/heroes-vue) är de tre repon som innehåller koden och det finns länkar till en publik driftsatt version från GitHub.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
