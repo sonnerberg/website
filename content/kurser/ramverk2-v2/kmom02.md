@@ -16,21 +16,21 @@ Kursstart våren 2019.
 
 [/WARNING]
 
-Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
+Vi tittar på hur vi kan använda JavaScript ramverk på klientsidan för att skapa en Single Page Applikation (SPA) som pratar med servicen från kmom01.
+
+Vi utvärderar vilka möjligheter vi har vid val av ramverk och väljer det ramverk, som efter noggrant studerande står som vinnare.
+
+
 
 <!--more-->
 
-[FIGURE src=image/snapht17/cimage-php56.png?w=w2 caption="Tre flikar mot tre olika installationer och versioner av PHP, samtidigt."]
 
-[ASCIINEMA src=143344 caption="Starta och stoppa flera kontainrar samtidigt med docker-compose."]
 
-Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet. Tänk att kursmomentetn går ut på att du skall utvärdera och introducera en helt ny teknik till ditt utvecklingsteam. Är tekniken bra och värdefull? Var kritisk och utvärdera.
+Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet. Tänk att kursmomenten går ut på att du skall utvärdera och introducera en helt ny teknik till ditt utvecklingsteam. Är tekniken bra och värdefull? Var kritisk och utvärdera.
 
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
 
 
 
@@ -47,12 +47,17 @@ Titta på följande video där John Papa pratar om att välja ett frontend ramve
 
 
 
-<!--
-###Material {#material}
+### Material {#material}
 
 Kika igenom följande material.
 
-1. [Webbplatsen för Docker](https://www.docker.com/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom samt instruktioner till hur du installerar verktyget. -->
+1. [Angular](https://angular.io/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom.
+
+1. [Mithril](https://mithril.js.org/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom.
+
+1. [React](https://reactjs.org/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom.
+
+1. [Vue](https://vuejs.org/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom.
 
 
 
@@ -67,7 +72,7 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Kom igång med Docker som utvecklingsmiljö](kunskap/kom-igang-med-docker-som-utvecklingsmiljo)" för att komma igång och installera Docker och dess verktyg. Spara din exempelkod i `me/kmom02/docker`.
+1. Jobba igenom artikeln "[Frontend ramverk](kunskap/frontend-ramverk)" för att bekanta dig ytterligare med frontend ramverk och fyra stycken exempelprogram.
 
 
 
@@ -75,7 +80,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Integrera docker-compose med Express](uppgift/integrera-docker-compose-med-express)". Det handlar om lägga till stöd för att testköra din Express-applikation under Docker i flera versioner av Node.
+1. Gör uppgiften "[Me-sida i ditt valda ramverk](uppgift/me-sida-i-ditt-valda-ramverk)". Där du bygger en frontend till API:t du skapade i föregående kursmoment.
 
 
 
@@ -90,9 +95,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Har du jobbat med Docker eller andra virtualiseringstekniker innan?
-* Hur ser du på möjligheterna att använda dig av Docker för att jobba med tester av ditt repo?
+* Vilket JavaScript-ramverk valde du och varför?
+* Hur gick det att sedan implementera din me-sida i ramverket?
 * Gick allt smidigt eller stötte du på problem?
-* Skapade du din egen image, berätta om den?
+* Vilka fördelar ser du med ett JavaScript framför vanilla JavaScript?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
