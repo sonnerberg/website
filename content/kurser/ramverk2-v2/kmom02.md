@@ -43,7 +43,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Titta på följande video där John Papa pratar om att välja ett frontend ramverk.
 
-[YOUTUBE src=_P2fGeg9I5o caption="Choosing Your JavaScript Framework - John Papa - dotJS"]
+[YOUTUBE src=dHptnyroFNA caption="Choosing Your JavaScript Framework - John Papa - dotJS"]
 
 
 
@@ -98,6 +98,6 @@ Se till att följande frågor besvaras i texten:
 * Vilket JavaScript-ramverk valde du och varför?
 * Hur gick det att sedan implementera din me-sida i ramverket?
 * Gick allt smidigt eller stötte du på problem?
-* Vilka fördelar ser du med ett JavaScript framför vanilla JavaScript?
+* Vilka fördelar ser du med ett JavaScript ramverk jämfört med vanilla JavaScript?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
