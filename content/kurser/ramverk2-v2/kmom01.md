@@ -3,6 +3,7 @@ author:
     - mos
     - efo
 revision:
+    "2018-12-07": "(C, efo) Ändrade till nya övningar och uppgifter."
     "2018-11-07": "(B, efo) Anpassat för nya strukturen för ramverk-v2."
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-10-16": "(A, mos) Första utgåvan."
@@ -63,7 +64,7 @@ Läsanvisningar  {#lasanvisningar}
 
 
 
-###Material {#material}
+### Material {#material}
 
 Kika igenom följande material.
 
@@ -78,7 +79,7 @@ Kika igenom följande material.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
@@ -94,11 +95,11 @@ Ev 5p i projektet om man använder MySQL och/eller SQLite.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida till ramverk2](uppgift/bygg-en-me-sida-till-ramverk2)". Det handlar om att bygga din me-sida med Express och publicera på Github. Spara allt under `me/redovisa`.
+1. Gör uppgiften "[Bygg ett me API till ramverk2](uppgift/bygg-ett-me-api-till-ramverk2)". Det handlar om att bygga ditt me API med ett nodejs baserad backend ramverk och publicera på Github. Spara allt under `me/redovisa`.
 
 
 

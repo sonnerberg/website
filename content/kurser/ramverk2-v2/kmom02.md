@@ -68,7 +68,7 @@ Kika igenom följande material.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
@@ -76,7 +76,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
