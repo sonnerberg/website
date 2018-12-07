@@ -63,23 +63,23 @@ cp -i example/hangman/hangman.js me/kmom06/hangman/js/hangman.js
 
 Nu bör du ha ett fungerande exempel att utgå ifrån. Se till så du har rätt sökväg till filen main.js.
 
-<!-- 3\. Du skall skapa ett spel som fungerar likt PHP-exempel-spelet. Om du är osäker bör du hålla dig till det. Om du vill pröva mer avancerade saker så går det bra. Pröva på. -->
+3\. Du skall skapa ett spel som fungerar likt PHP-exempel-spelet. Om du är osäker bör du hålla dig till det. Om du vill pröva mer avancerade saker så går det bra. Pröva på.
 
-3\. Skapa bokstäverna som du kan klicka på, du kan bara klicka på en bokstav en gång. Då skall den ändra style och inte gå att klicka på.
+4\. Skapa bokstäverna som du kan klicka på, du kan bara klicka på en bokstav en gång. Då skall den ändra style och inte gå att klicka på.
 
-4\. Skapa en ordlista (minst fem ord) som en del av din Hangman-modul. Skapa en funktion `Hangman.wordlist()` som kan anropas från consolen och skriver ut hela ordlistan i consolen.
+5\. Skapa en ordlista (minst fem ord) som en del av din Hangman-modul. Skapa en funktion `Hangman.wordlist()` som kan anropas från consolen och skriver ut hela ordlistan i consolen.
 
-5\. Skapa en funktion som slumpar fram ett ord från ordlistan. Detta blir det aktiva ordet. Skapa en funktion `Hangman.peek()` som du kan anropa från consolen, det skall skriva ut det aktiva ordet. Det ger en möjlighet för spelaren att fuska.
+6\. Skapa en funktion som slumpar fram ett ord från ordlistan. Detta blir det aktiva ordet. Skapa en funktion `Hangman.peek()` som du kan anropa från consolen, det skall skriva ut det aktiva ordet. Det ger en möjlighet för spelaren att fuska.
 
-6\. När spelaren klickar på en bokstav så kontrollerar du om bokstaven finns i ordet. Om bokstaven inte finns så ritar du ut en del av bilden. Rita ut ordet med en kombination av `_` för icke gissade bokstäver och de gissade bokstäverna på sina rätta platser (precis som PHP-exempel-spelet gör).
+7\. När spelaren klickar på en bokstav så kontrollerar du om bokstaven finns i ordet. Om bokstaven inte finns så ritar du ut en del av bilden. Rita ut ordet med en kombination av `_` för icke gissade bokstäver och de gissade bokstäverna på sina rätta platser (precis som PHP-exempel-spelet gör).
 
-7\. När (om) alla delar är utritade så visar du ett meddelande om "Game Over" på spelplanen, eller motsvarande. Det går nu inte att göra några fler gissningar.
+8\. När (om) alla delar är utritade så visar du ett meddelande om "Game Over" på spelplanen, eller motsvarande. Det går nu inte att göra några fler gissningar.
 
-8\. När (om) spelaren har gissat alla bokstäver i ordet så skriver du ut "You Won The Game!" på spelplanen, eller motsvarande. Det går nu inte att göra några fler gissningar.
+9\. När (om) spelaren har gissat alla bokstäver i ordet så skriver du ut "You Won The Game!" på spelplanen, eller motsvarande. Det går nu inte att göra några fler gissningar.
 
-9\. Ladda om sidan för att köra ett nytt spel.
+10\. Ladda om sidan för att köra ett nytt spel.
 
-10\. När du är klar skall du validera och publicera ditt resultat enligt följande:
+11\. När du är klar skall du validera och publicera ditt resultat enligt följande:
 
 ```bash
 # Ställ dig i kurskatalogen
