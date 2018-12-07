@@ -5,7 +5,7 @@ revision:
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-10-20": "(A, mos) Första utgåvan."
 ...
-Kmom02: Docker
+Kmom02: Frontend
 ==================================
 
 [WARNING]
@@ -32,18 +32,27 @@ Tänk dig in i rollen som systemarkitekt på ett företag där du är den som g�
 
 
 
+
+
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-6 studietimmar)*
 
+### Video  {#video}
+
+Titta på följande video där John Papa pratar om att välja ett frontend ramverk.
+
+[YOUTUBE src=_P2fGeg9I5o caption="Choosing Your JavaScript Framework - John Papa - dotJS"]
 
 
+
+<!--
 ###Material {#material}
 
 Kika igenom följande material.
 
-1. [Webbplatsen för Docker](https://www.docker.com/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom samt instruktioner till hur du installerar verktyget.
+1. [Webbplatsen för Docker](https://www.docker.com/) ger dig en översikt och där hittar du dokumentationen som du vill läsa igenom samt instruktioner till hur du installerar verktyget. -->
 
 
 
