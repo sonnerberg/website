@@ -68,7 +68,9 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen.
+1. Webbplatsen [nodeframework.com](http://nodeframework.com/) där nodejs backend ramverk är listade för att skapa dig en överblick över vilka ramverk som finns. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter.
+
+<!-- 1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen. -->
 
 
 
@@ -114,10 +116,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
+* Berätta utförligt om din syn på nodejs backend ramverk och berätta vilket ramverk du valde och varför.
 * Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
-* Använde du någon form av scaffolding som Express erbjuder?
-* Jobbar du med Markdown för innehållet, eller annat liknande?
+* Använde du någon form av scaffolding som ditt valda ramverk erbjuder?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
 

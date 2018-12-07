@@ -11,7 +11,7 @@ revision:
 Bygg ett me API till ramverk2
 ===================================
 
-Du skall sätta samman ett me API baserat på ett nodejs baserat backend ramverk, till exempel Express..
+Du skall sätta samman ett me API baserat på ett nodejs baserat backend ramverk, till exempel Express.
 
 Du skall lägga all kod i ett repo på GitHub. När du är klar så publicerar du och taggar ditt repo på GitHub. Du skall även publicera ditt API publikt och länka till det i din redovisningstext.
 
@@ -58,9 +58,9 @@ Krav {#krav}
 
 1. Se till att det finns en `package.json` i katalogen. Filen skall innehålla alla beroenden som krävs.
 
-1. Skapa routen `/me` där du ger en presentation av dig själv.
+1. Skapa routen `/` där du ger en presentation av dig själv.
 
-1. Skapa routen `/kmom01` där du ger din redovisningstext för kmom01.
+1. Skapa routen `/report/kmom01` där du ger din redovisningstext för kmom01.
 
 1. Committa alla filer och lägg till en tagg (1.0.0) med hjälp av `npm version 1.0.0`. Det skapas automatiskt en motsvarande tagg i ditt GitHub repo. Lägg till fler taggar efterhand som det behövs. Var noga med din committ-historik.
 
