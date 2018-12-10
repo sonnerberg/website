@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2018-12-10": (j, efo, aar) Översyn och släpp inför python-v2 try2.
     "2018-09-28": (j, efo, aar) Översyn och släpp inför python-v2 try1.
     "2018-06-26": (I, efo) Ändrade till individuell examination.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
@@ -26,7 +27,7 @@ Detta kursmoment avslutar och examinerar kursen.
 Upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Den individuella examinationen genomförs den 2018-10-30. Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Notera att inlämningen på Canvas är satt till den 31:e oktober. Det är för att ni ska få en dag på er att göra er redovisning.
+Den individuella examinationen genomfördes den 2018-10-30. Omexamination genomförs 2019-01-10. Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Redovining kan lämnas in dagen efter examinationen, det vill säga 2019-01-11. Det är för att ni ska få en dag på er att göra er redovisning.
 
 Nedanför beskriver vi upplägget för de olika studentgrupperna:
 
@@ -44,7 +45,8 @@ För båda studentgrupper är detta en **individuell** examination och uppgifter
 Lärarteamet finns tillgängliga i gitter och forum för hjälp med tekniska problem samt frågor och förtydliganden.
 
 
-Hämta examinationstillfälle 2018-10-30 (try1) {#hamta}
+
+Hämta examinationstillfälle 2019-01-10 (try2) {#hamta}
 ----------------------------------------------------------------------
 
 I [Om examination med dbwebb exam](kurser/python-v2/kmom10/om) finns mer information om `dbwebb exam`-verktyget.
@@ -62,10 +64,10 @@ dbwebb init
 För att skapa din individuella examination skriv in följande kommando.
 
 ```
-dbwebb exam checkout try1
+dbwebb exam checkout try2
 ```
 
-Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try1` enligt följande.
+Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try2` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -74,13 +76,13 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 
 
-Rätta din examination (try1) {#ratta}
+Rätta din examination (try2) {#ratta}
 ----------------------------------------------------------------------
 
 För att rätta din individuella examination och visa hur många uppgifter du har klarat och dina poäng använd följande kommando.
 
 ```bash
-dbwebb exam correct try1
+dbwebb exam correct try2
 ```
 
 Längst upp i utskriften finns en sammanfattning av vilka uppgifter du har löst och hur många poäng du har.
@@ -89,20 +91,20 @@ Under sammanfattningen finns en utskrift från testprogrammet som körs när exa
 Du kan ignorera fel från uppgifter du inte utfört.
 
 
-Validera din examination (try1) {#validera}
+Validera din examination (try2) {#validera}
 ----------------------------------------------------------------------
 
-Precis som tidigare inlämningar i kursen ska koden validera. `dbwebb validate try1` validerar din individuella examination och visar vilka valideringsfel du har i koden. Din individuella examination skall validera när den lämnas in inom tidsramen för den individuella examinationen.
+Precis som tidigare inlämningar i kursen ska koden validera. `dbwebb validate try2` validerar din individuella examination och visar vilka valideringsfel du har i koden. Din individuella examination skall validera när den lämnas in inom tidsramen för den individuella examinationen.
 
 
 
-Lämna in din examination (try1) {#lamna}
+Lämna in din examination (try2) {#lamna}
 ----------------------------------------------------------------------
 
 För att  lämna in din individuella examination använd följande kommando.
 
 ```bash
-dbwebb exam seal try1
+dbwebb exam seal try2
 ```
 
 Kommandot publicerar hela din me-katalog till studentservern.
@@ -110,7 +112,7 @@ Kommandot publicerar hela din me-katalog till studentservern.
 Du kan när som helst hämta ett kvitto på din pågående examination och se detaljer om den, till exempel hur länge du hållit på.
 
 ```bash
-dbwebb exam receipt try1
+dbwebb exam receipt try2
 ```
 
 
@@ -120,7 +122,7 @@ Bedömning och betygsättning {#bedomning}
 
 Det finns ett särskilt dokument som beskriver hur [bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-individuell).
 
-Under hela examinationen kan du köra kommandot `dbwebb exam correct try1` för att rätta dina lösningar och se hur många poäng du har uppnått.
+Under hela examinationen kan du köra kommandot `dbwebb exam correct try2` för att rätta dina lösningar och se hur många poäng du har uppnått.
 
 
 
@@ -131,13 +133,13 @@ Efter din individuella examination lämna in en redovisningstext på din me-sida
 
 1. För varje uppgift du implementerade, dvs 1-5, skriver du ett textstycke om minst 5 meningar där du beskriver den tekniska implementationen.
 
-1.  Skriv ett allmänt stycke om hur den individuella examinationen gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var den individuella examinationen lätt eller svår? Vad var svårt och vad gick lätt? Var den individuella examinationen en bra och rimlig examination av denna kursen?
+2.  Skriv ett allmänt stycke om hur den individuella examinationen gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var den individuella examinationen lätt eller svår? Vad var svårt och vad gick lätt? Var den individuella examinationen en bra och rimlig examination av denna kursen?
 
-1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-1. Ta en kopia av texten från din inlämning i Canvas och gör ett inlägg i kursforumet och berätta att du är klar.
+4. Ta en kopia av texten från din inlämning i Canvas och gör ett inlägg i kursforumet och berätta att du är klar.
 
-1. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
+5. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
 
 
 
@@ -178,6 +180,13 @@ Rätta förberedelse uppgiften {#rattningfor}
 `dbwebb validate prep` validerar din förberedelse uppgift.
 
 `dbwebb exam seal prep` lämnar in din förberedelse uppgift.
+
+
+
+Tidigare examinationer {#tidigare}
+----------------------------------------------------------------------
+
+`try1` genomfördes 2018-10-30, uppgifter och lösningsförslag finns tillgängligt i exempel-mappen, `example/old_exams/lp1-2018`.
 
 
 
