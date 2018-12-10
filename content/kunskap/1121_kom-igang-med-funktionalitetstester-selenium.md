@@ -61,7 +61,7 @@ Vi behöver en kodbas att testa, jag har klippt och klistrat ihop två av exempe
 Selenium i JavaScript {#seleniumJs}
 --------------------------------------------------------------------
 
-Jag gjorde ett testprogram i `example/test/unittest-mocha` för att se hur det fungerade.
+Jag gjorde ett testprogram i `example/test/functiontest-selenium` för att se hur det fungerade.
 
 ```text
 example/test/functiontest-selenium$ tree .
@@ -78,9 +78,9 @@ example/test/functiontest-selenium$ tree .
         └── simple_test.js
 ```
 
-Min källkod finns i `src/multipage` och mina enhetstester ligger i `test/multipage`. `simple_test.js` innehåller ett kort exempel för att starta Selenium, hämta en sidas titel och skriva ut den i terminalen. `mocha_test.js` innehåller testerna och använder sig av både Selenium och Mocha.
+Min källkod finns i `src/multipage` och mina selenium tester ligger i `test/multipage`. `simple_test.js` innehåller ett kort exempel för att starta Selenium, hämta en sidas titel och skriva ut den i terminalen. `mocha_test.js` innehåller testerna och använder sig av både Selenium och Mocha.
 
-Om ni kollar i `package.json` ser ni att vi behöver använder paketen mocha, selenium-webdriver och http-server. Mocha och selenium-webdriver är självförklarande, http-server använder vi bara för att använda koden i `src` som om det låg på en server och URL:erna i testerna ser likadana ut föralla. Börja med att installera filerna.
+Om ni kollar i `package.json` ser ni att vi använder paketen mocha, selenium-webdriver och http-server. Mocha och selenium-webdriver är självförklarande, http-server använder vi bara för att köra koden i `src` som om det låg på en server och URL:erna i testerna ser likadana ut för alla. Börja med att installera paketen.
 
 ```bash
 $ npm install
@@ -92,10 +92,10 @@ $ npm install
 $ npm start
 ```
 
-[FIGURE src=image/ramverk2/multipage.png class="right"]
+[FIGURE src=image/ramverk2/multipage.png class="right" caption="Multipage exempel i Javascript."]
 
-Om du redan kör en annan tjänst på port 8082 kan du ändra vilken som ska användas i `package.json`.  
-Det är en väldigt simpel sida vi ska testa, det enda lite avancerat är kalkylatorn. När vi skriver tester nu vill vi testa användarnas upplevelse. T.ex. att knappar och länkar fungerar och saker har rätt färg m.m.
+Om du redan kör en annan tjänst på port 8082 kan du ändra vilken port som ska användas i `package.json`.  
+Det är en väldigt simpel sida vi ska testa, det enda som är lite avancerat är kalkylatorn. När vi skriver tester nu vill vi testa användarnas upplevelse. T.ex. att knappar och länkar fungerar och saker har rätt färg m.m.
 
 
 
@@ -111,7 +111,7 @@ var browser = new webdriver.Builder().
 browser.get("http://localhost:8082/multipage/#!/");
 ```
 
-Vi börjar med att bygga en driver (`browser`), det är den som skäter vår interaktion med webbsidan. Det finns en mängd inställningar man kan sätta med [Capabilities](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Capabilities.html) men jag sätter bara vilken webbläsare som ska användas. De tillgängliga webbläsarna finns i slutet i Capabilities länken. Sist sätter vi vilken URL weblläsaren ska gå till när man startar testet.
+Vi börjar med att bygga en driver (`browser`), det är den som sköter vår interaktion med webbsidan. Det finns en mängd inställningar man kan sätta med [Capabilities](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Capabilities.html) men jag sätter bara vilken webbläsare som ska användas. De tillgängliga webbläsarna finns i slutet i Capabilities länken. Sist sätter vi vilken URL weblläsaren ska gå till när man startar testet.
 
 Nu kan vi börja jobba mot webbsidan, vi börjar simpelt med att hämta titeln på sidan med `browser.getTitle()` och skriver ut den.
 
@@ -130,7 +130,7 @@ browser.getTitle().then(function( title ) {
 });
 ```
 
-`.getTitle()` returner ett promise som bli klart innan vi kan kan skriva ut värdet. Ovanför kan ni se två vanliga sätt som man jobbar med promises och .then. Välj det sättet ni föredrar och håll er till det, jag kommer använda den nedre av de två.
+`.getTitle()` returner ett promise som bli klart innan vi kan kan skriva ut värdet. Ovanför kan ni se två vanliga sätt som man jobbar med promises och ".then". Välj det sättet ni föredrar och håll er till det, jag kommer använda den nedre av de två.
 
 Nu har vi lite koll på vad som sker i koden, vi testar köra det.
 
@@ -159,7 +159,7 @@ const By = require("selenium-webdriver").By;
 let browser;
 ```
 
-Vi "importerar" lite fler moduler, `selenium-webdriver/testing` wrappar Mocha vilket gör att vi inte behöver importera Mocha utan behöver bara köra testerna med mocha kommandot i terminalen och `assert` borde ni känna igen. När vi ska navigera på webbsidan via koden och få tag på element fungerar det som när vi kodar vanlig JS och hämtar element med t.ex. `document.getElementById()`, men vi behöver använda Seleniums funktioner. [webdriver.findElement()](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/ie_exports_Driver.html#findElement) eller [webdriver.findElements()](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/ie_exports_Driver.html#findElements) och [By modulen](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/by_exports_By.html).
+Vi importerar lite fler moduler, `selenium-webdriver/testing` wrappar Mocha vilket gör att vi inte behöver importera Mocha utan behöver bara köra testerna med mocha kommandot i terminalen och `assert` borde ni känna igen. När vi ska navigera på webbsidan via koden och få tag på element fungerar det nästan som när vi kodar vanlig JS och hämtar element med t.ex. `document.getElementById()`, men vi behöver använda Seleniums funktioner. [webdriver.findElement()](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/ie_exports_Driver.html#findElement) eller [webdriver.findElements()](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/ie_exports_Driver.html#findElements) och [By modulen](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/by_exports_By.html).
 
 Vi fortsätter med att bygga den vanliga Mocha strukturen i vår kod för att få Test Suite och Cases.
 
@@ -183,12 +183,22 @@ test.describe("Multipage", function() {
 
     // Test case
     test.it("Test index", function(done) {
+        // Check correct title
         browser.getTitle().then(function(title) {
             assert.equal(title, "Multipage");
         });
 
-        assertH1("Home");
-        matchUrl("#!/");
+        // Check correct heading
+        browser.findElement(By.css("h1")).then(function(element) {
+            element.getText().then(function(text) {
+                assert.equal(text, "Home");
+            });
+        });
+        
+        // Check correct URL ending
+        browser.getCurrentUrl().then(function(url) {
+            assert.ok(url.endsWith("multipage/#!/"));
+        });
 
         done();
     });
@@ -196,38 +206,75 @@ test.describe("Multipage", function() {
 
 
     test.it("Test go to Home", function(done) {
-        // try use nav link
-        goToNavLink("Home");
+        // Use nav link to go to home page
+        browser.findElement(By.linkText("Home")).then(function(element) {
+            element.click();
+        });
 
-        assertH1("Home");
-        matchUrl("#!/" );
+        // Check correct heading
+        browser.findElement(By.css("h1")).then(function(element) {
+            element.getText().then(function(text) {
+                assert.equal(text, "Home");
+            });
+        });
+        
+        // Check correct URL ending
+        browser.getCurrentUrl().then(function(url) {
+            assert.ok(url.endsWith("multipage/#!/"));
+        });
 
         done();
     });
 });
 ```
 
+Vi börjar med att lägga in en beforeEach, där vi bygger vår Firefox webdriver och går till sidan vi vill testa. Med `this.timeout(20000);` ökar vi mängden tid som drivern väntar på att något ska ske i webbläsaren. Att starta webbläsaren och gåt till URL:en tog för lång tid på min datorn så jag behöver öka timeout längen. I afterEach stänger vi ner webbläsaren, detta är för att vi inte vill att val i ett test ska påverka nästa test. Om vi hade haft en mer avancerad sida med cookies och session hade vi behövt göra ytterligare steg för att rensa dem mellan testerna. I och med att Selenium är asynkront behöver vi använda [done()](https://mochajs.org/#asynchronous-code) för meddela Mocha när en funktion är klar. Gäller bara de Mocha specifika funktionerna som "it", "afterEach" och "beforeEach".
+
+Sen har vi två test cases där vi kollar att startsidan har rätt title, rubrik och url. Nästa test cases har vi lagt till att kolla så länken till startsidan fungerar och att det fortfarande är rätt värden. Vi hittar rätt länk med [By.linktext()](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/by_exports_By.html#By.linkText), ett av flera sätt för att hitta element. Vi anropar `.click()` på elementet för att emulera att vi själva hade klickat med musen i webbläsaren, jätte smidigt. Vi ser redan nu att vi har duplikation i koden och vi kommer få mer för de andra undersidorna så därför har jag i exempel koden skapat hjälpfunktioner för de vanliga repeterade handlingarna.
+
+I testfallen för kalkylatorn kan ni se mer exempel på att klicka på element och läsa av CSS värden. För att köra alla tester kan ni använda kommandot `npm test`. Det kör alla "*.js" filer som ligger under mappne "test".
+
+En lyckad körning borde se ut som följer:
+
+```bash
+$ npm test
+
+> multipage-test@1.0.0 test .../ramverk2/example/test/functiontest-selenium
+> mocha test/**/*.js
+
+Multipage
+Multipage
+Multipage
+    ✓ Test index
+    ✓ Test go to Home (320ms)
+    ✓ Test go to About (47ms)
+    ✓ Test go to Calculator (78ms)
+    ✓ Test color on Calculator (77ms)
+    ✓ Test an addition calculation (984ms)
+
+
+  6 passing (22s)
+
+```
+
+
+Mer Selenium funktionalitet {#mer_selenium}
+-------------------------------------------------------------------
+
+Något som inte finns i exempelkoden men som man kan göra är att emulera tangentbordstryck med funktionen  [sendKeys](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebElement.html#sendKeys) och skicka formulär med [submit](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebElement.html#submit).
+
+Ni borde ha testat köra testerna några gånger nu och har märkt att det går snabbt när testerna körs och man hinner inte se allt som sker. För att komma runt detta kan man använda [takeScreenshot()](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebElement.html#takeScreenshot). Om ni googlar lite kan ni även hitta olika program för att spela in en video av testerna.
+
+
+
 Kodtäckning med Selenium {#covselenium}
 --------------------------------------------------------------------
 
-När man kör enhetstester är man i princip beroende av ett verktyg som kan visa kodtäckningen för testfallen. Här väljer jag verktygen [Istanbul](https://istanbul.js.org/). I katalogen `example/test/unittest-mocha-istanbul` har jag utökat mitt exempel med att använda Istanbul tillsammans med Mocha.
-
-För att kunna köra testerna med kodtäckning behöver du först installera kommandoradsklienten [`nyc`](https://github.com/istanbuljs/nyc) via `npm install nyc` eller bara `npm install`. Sedan kan du köra testerna igen, nu med kodtäckning inkluderat.
-
-```text
-npm install
-npm test
-```
-
-I filen `package.json` körs nu kommandot `nyc --reporter=html --reporter=text mocha 'test/**/*.js'` där `nyc` sköter kodtäckningen för alla testfall som `mocha` exekverar. Vi får en rapport i ren text och i katalogen `cover` genereras en HTML-rapport.
-
-[FIGURE src=image/snapht17/mocha-nyc-codecoverage.png?w=w2 caption="Kodtäckningen är på 100% i vårt exempel."]
-
-Med en HTML-rapport är det enkelt att klicka sig fram och se vilka delar av koden som täcks av testfallen. Kodtäckning är ett viktigt verktyg när man gör enhetstester.
+Det ska gå att få kodtäckning av Selenium tester med hjälp av [Istanbul](https://github.com/gotwarlost/istanbul/issues/132). Det krävs lite eget arbete och vi vet inte om det funkar, om någon är intresserad är det fritt fram att försöka. Gör gärna ett forum inlägg om det lyckas.
 
 
 
 Avslutningvis {#avslutning}
 --------------------------------------------------------------------
 
-Lägg till om code coverage, screenshot, sendkeypress
+Vi har kommit en bit längre bland testfaserna och lärt oss hur man kan skapa funktionalitetstester och GUI tester med hjälp av Selenium och Mocha.
