@@ -46,7 +46,7 @@ I nedanstående tabell listas de rader kod som utvecklaren har skrivit för att 
 |-----|--------|--------|--------|---------|--------|
 | calculator  |  | 103 |  | 98 | 118 (94 i DOM varianten) |
 | multipage   |  |  46 |  |  |  59 |
-| quote       |  |  47 |  70 |  |  24 |
+| quote       |  |  47 |  69 |  |  24 |
 | tic-tac-toe |  | 136 | 146 |  | 126 |
 
 
