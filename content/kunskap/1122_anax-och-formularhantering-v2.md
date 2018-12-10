@@ -235,7 +235,7 @@ anax create src/User ramverk1-controller-v2
 
 Vi scaffoldar en kontroller-klass i katalogen `src/User` genom att använda mallen `ramverk1-controller-v2`. Du ombedas att skriva in namespace för klassen och klassens namn. Därefter automatgenereras klassen, den _scaffoldas_ fram.
 
-Mitt namespace blev `Mos\User` och klassens namn blev `UserController`.
+Mitt namespace blev `Mos\User` och klassens namn blev `UserController`. Jag skriver in mitt namespace med dubbla backslash, jag behöver escapa backsalsh-tecknet.
  
 Så här kan det se ut.
 

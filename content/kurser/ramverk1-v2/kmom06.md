@@ -79,13 +79,13 @@ Kika på följande videor.
 
 ### Övningar {#ovningar}
 
-Gör följande övningar, de behövs normalt för att klara uppgifterna.
+Gör följande övningar, de behövs för att klara uppgifterna som bygger på övningarna.
 
 1. Jobba igenom artikeln "[Anax och formulärhantering-v2](kunskap/anax-och-formularhantering-v2)" som visar hur du använder en extern modul för formulärhatering och hur du integrerar den i Anax. Du sparar koden i en underkatalog under `me/kmom06`.
 
 1. Jobba igenom artikeln "[Anax och databasdrivna modeller (v2)](kunskap/anax-och-databasdrivna-modeller-v2)" som visar hur du använder en extern modul för databashantering för att använda dig av designmönstret Active Record för att jobba med formulär och databaser. Du jobbar vidare med samma kodbas som i artikeln ovan.
 
-1. Fortsätt fördjupa dig i databasdrivna modeller med ett exempel genom att jobba igenom artikeln "[Anax med databasdrivna modeller enligt Active Record, ett exempel](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel)". Då får se hur koden hänger samman i ett CRUD-exempel som använder den databasdrivna modellen tillsammans med designmönstret Active Record. Du sparar koden i `me/kmom04/anax4`.
+1. Fortsätt fördjupa dig i databasdrivna modeller med ett exempel genom att jobba igenom artikeln "[Anax med databasdrivna modeller enligt Active Record, ett exempel (v2)](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel-v2)". Du får jobba igenom ett exempel med CRUD som länkar samman formulär med active records. Du får en basstruktur för databasdrivna modellklasser som bygger på formulär. Du jobbar vidare med samma kodbas som i artikeln ovan.
 
 
 
@@ -93,15 +93,13 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Se över grunden till din me-sida och överväg om något av de nya begreppen bör introduceras i din generella me-sida. Eventuella ändringar gör du under `me/anax`.
+1. Gör uppgiften "[Integrera Bok-exemplet i din me-sida](uppgift/integrera-bok-exempel-i-din-me-sida)". Uppgiften bygger på de övningsartiklar du jobbat igenom. Ändringar gör du under `me/redovisa`.
 
-1. Gör uppgiften "[Integrera Bok-exemplet i din me-sida](uppgift/integrera-bok-exempel-i-din-me-sida)". Ändringar gör du under `me/redovisa`.
+1. Pusha och tagga din redovisa, allt eftersom och sätt en avslutande tagg (6.0.\*) när du är klar med kursmomentet.
 
 <!--
 1. Gör uppgiften "[Kommentarssystem med användare](uppgift/kommentarssystem-med-anvandare)". Bygg vidare på ditt kommentarssystem och se till att integrera med användare. Spara koden under `me/anax`.
 -->
-
-1. Pusha och tagga din redovisa, allt eftersom och sätt en avslutande tagg (6.0.\*) när du är klar med kursmomentet.
 
 <!--
 1. Skriv gruppvis en artikel om ["Active record"](uppgift/skriv-artikel-om-active-record) (eller ORM, bra eller dåligt). Spara artikeln i din me-sida.
@@ -123,6 +121,7 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 * Utveckla din syn på koden du nu har i ramverket och din kommentars- och användarkod. Hur känns det?
 * Om du vill, och har kunskap om, kan du även berätta om din syn på ORM och designmönstret Data Mapper som är närbesläktade med Active Record. Du kanske har erfarenhet av likande upplägg i andra sammanhang?
 * Vad tror du om begreppet scaffolding, kan det vara något att kika mer på?
+* Hur kan man jobba med enhetstestning när man scaffoldat fram en CRUD likt Book, har du några tankar kring det?
 * Vilken är din TIL för detta kmom?
 
 Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.
