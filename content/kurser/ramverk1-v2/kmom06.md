@@ -81,7 +81,7 @@ Kika på följande videor.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Anax och formulärhantering](kunskap/anax-och-formularhantering)" som visar hur du använder en extern modul för formulärhatering och hur du integrerar den i Anax. Du sparar koden i `me/kmom04/anax4`.
+1. Jobba igenom artikeln "[Anax och formulärhantering-v2](kunskap/anax-och-formularhantering-v2)" som visar hur du använder en extern modul för formulärhatering och hur du integrerar den i Anax. Du sparar koden i en underkatalog under `me/kmom06`.
 
 1. Jobba igenom artikeln "[Anax och databasdrivna modeller](kunskap/anax-och-databasdrivna-modeller)" som visar hur du använder en extern modul för databashantering och hur du integrerar den i Anax samt hur du kan jobba med den tillsammans med formulär. Du sparar koden i `me/kmom04/anax4`.
 
