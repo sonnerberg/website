@@ -2,7 +2,7 @@
 title: ramverk1-v2
 author: mos
 revision:
-    "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
+    "2018-12-10": "(D, mos) Uppdaterad till ramverk1 v2."
     "2017-10-02": "(C, mos) Info om samtliga kmom."
     "2017-08-03": "(B, mos) JavaScript flyttas till ramverk2."
     "2017-06-07": "(A, mos) Första revisionen inför kursstart HT2017, bygger på phpmvc-kursen."
@@ -13,14 +13,6 @@ Kursen ramverk1 (v2)
 Kursen **Webbaserade ramverk 1**, a.k.a. *ramverk1*, lär ut programmering och objektorienterade kodstrukturer med designmönster och modultänkande kring återanvändbara moduler i webbaserade ramverk samt tekniker för automatiserad testning, byggsystem och flöde för kontinuerlig integration av programvaran.
 
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs ramverk v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
 
 
 <!--
@@ -151,11 +143,9 @@ Vi bekantar oss med ett antal olika externa verktyg och försöker förstå vad 
 
 ### Kmom06: Databasdrivna modeller {#kmom06}
 
-Vi skall titta på klasser i modell-lagret och utöka vår struktur med formulärhantering och databasdrivna modell-klasser.
+Vi skall titta på klasser i modelllagret och utöka vår ramverksstruktur med formulärhantering via klasser och metoder samt databasdrivna modellklasser där vi använder oss av designmänstret Active Record.
 
-Vi skall använda en extern modul för HTML-formulär och vi skall använda en extern modul för databashanteringen.
-
-I arbetet skapar vi basklasser i modellagret som underlättar då vi implementerar applikationsspecifik kod. Vi kan se det som vi bygger upp modellklasser som kan scaffoldas fram, en form av återanvändning och ett försök att effektivisera vårt kodande.
+Vi skall använda en extern modul för htmlformulär och vi skall använda en extern modul för databashanteringen.
 
 [Instruktion till kursmoment 06](./kmom06).
 
