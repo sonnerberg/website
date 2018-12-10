@@ -83,7 +83,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Anax och formulärhantering-v2](kunskap/anax-och-formularhantering-v2)" som visar hur du använder en extern modul för formulärhatering och hur du integrerar den i Anax. Du sparar koden i en underkatalog under `me/kmom06`.
 
-1. Jobba igenom artikeln "[Anax och databasdrivna modeller](kunskap/anax-och-databasdrivna-modeller)" som visar hur du använder en extern modul för databashantering och hur du integrerar den i Anax samt hur du kan jobba med den tillsammans med formulär. Du sparar koden i `me/kmom04/anax4`.
+1. Jobba igenom artikeln "[Anax och databasdrivna modeller (v2)](kunskap/anax-och-databasdrivna-modeller-v2)" som visar hur du använder en extern modul för databashantering för att använda dig av designmönstret Active Record för att jobba med formulär och databaser. Du jobbar vidare med samma kodbas som i artikeln ovan.
 
 1. Fortsätt fördjupa dig i databasdrivna modeller med ett exempel genom att jobba igenom artikeln "[Anax med databasdrivna modeller enligt Active Record, ett exempel](kunskap/anax-med-databasdrivna-modeller-enligt-active-record-ett-exempel)". Då får se hur koden hänger samman i ett CRUD-exempel som använder den databasdrivna modellen tillsammans med designmönstret Active Record. Du sparar koden i `me/kmom04/anax4`.
 
@@ -95,9 +95,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Se över grunden till din me-sida och överväg om något av de nya begreppen bör introduceras i din generella me-sida. Eventuella ändringar gör du under `me/anax`.
 
-1. Gör uppgiften "[Integrera Bok-exemplet i din me-sida](uppgift/integrera-bok-exempel-i-din-me-sida)". Ändringar gör du under `me/anax`.
+1. Gör uppgiften "[Integrera Bok-exemplet i din me-sida](uppgift/integrera-bok-exempel-i-din-me-sida)". Ändringar gör du under `me/redovisa`.
 
+<!--
 1. Gör uppgiften "[Kommentarssystem med användare](uppgift/kommentarssystem-med-anvandare)". Bygg vidare på ditt kommentarssystem och se till att integrera med användare. Spara koden under `me/anax`.
+-->
 
 1. Pusha och tagga din redovisa, allt eftersom och sätt en avslutande tagg (6.0.\*) när du är klar med kursmomentet.
 
