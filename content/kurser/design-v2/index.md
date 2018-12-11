@@ -1,8 +1,15 @@
 ---
 title: design-v2
 author: mos
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/snapht16/design-van-gogh.jpg?w=1100&h=360&cf&s=10&s=8&smooth&sharpen&f3=mean_removal&emboss&convolve=lighten:emboss-alt:motion"
 revision:
-    "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
+    "2018-12-11": (D, mos) Alla kmom (utom projektet) uppdaterade till design v2.
+    "2018-06-08": (B1, mos) Utkast till kursuppdatering.
     "2016-11-01": (B, mos) Skrev om lektionsplan/studieplan.
     "2016-10-26": (A, mos) Strukturen omarbetad och 4 kmom publicerade.
 ...
@@ -14,14 +21,6 @@ Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *design*, lär webbprogr
 Kursen syftar till en orientering inom områden design och användbarhet, specifikt för tillämpningsområdet webb. Kursen har tekniken som utgångspunkt, där olika tekniker introduceras och används för att underlätta webbdesign och användbarhet för webbplatsen med syftet att skapa en korrekt och användarvänlig webbplats.
 
 <!--more-->
-
-[WARNING]
-
-**Kursutveckling pågår till kurs design v2**
-
-Kursstart hösten 2018.
-
-[/WARNING]
 
 
 
@@ -133,9 +132,9 @@ Vi skall se hur vi kan använda bilder för att skapa "bildtunga" teman, här ä
 
 ### Kmom06: Design {#kmom06}
 
-Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
+Det finns ett begrepp "the final touch" som är bra att vara medveten om i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
-Vi tittar på "the final touch" i form av design element och designprinciper.
+Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Vi pratar om webbplatsens design och känslan den ger när man tittar på den. Det kan vara de små sakerna som gör det, *the final touch*.
 
 [Instruktion till kursmoment 06](./kmom06).
 
