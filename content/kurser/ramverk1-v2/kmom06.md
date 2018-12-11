@@ -68,6 +68,7 @@ Kika kort på följande designmönster som hanterar varianter av hur man kan map
 
 * [Active Record](https://www.martinfowler.com/eaaCatalog/activeRecord.html)
 * [Data Mapper](https://martinfowler.com/eaaCatalog/dataMapper.html)
+* [Repository](https://martinfowler.com/eaaCatalog/repository.html)
 * [Table Data Gateway](https://martinfowler.com/eaaCatalog/tableDataGateway.html)
 * [Row Data Gateway](https://martinfowler.com/eaaCatalog/rowDataGateway.html)
 * [Query Object](https://martinfowler.com/eaaCatalog/queryObject.html)
