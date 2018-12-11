@@ -7,7 +7,7 @@ views:
         region: flash
         template: default/image
         data:
-            src: "image/snapht18/kabbe.jpg?w=1100&h=360&cf&f=pixelate,8,2&a=0,0,05,0"
+            src: "image/snapht18/kabbe.jpg?w=1100&h=360&cf&f=pixelate,8,2&a=0,0,5,0"
 revision:
     "2018-12-03": (E, mos) Uppdaterat inför ht18 med design v2.
     "2018-10-19": (D, efo) Uppdatering med design guide.

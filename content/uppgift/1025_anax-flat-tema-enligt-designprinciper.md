@@ -3,15 +3,16 @@ author: mos
 category:
     - kurs/design
 revision:
+    "2018-12-11": (C, mos) Det räcker med ett tema, gör två som extrauppgift.
     "2017-12-01": (B, mos) Lade till tema som extrauppgift, två istället för tre teman.
     "2016-11-29": (A, mos) Första utgåvan.
 ...
-Skapa teman enligt designprinciper
+Skapa tema enligt designprinciper
 ===================================
 
-Du skall skapa fler teman till ditt Anax Flat genom att tänka i design principer.
+Du skall skapa ett tema till din me/redovisa som använder sig av tydliga designprinciper.
 
-Du lägger till dina teman via tema väljaren.
+Du gör själv ett urval av de designprinciper du vill jobba med och hur du vill implementera dem i ditt tema.
 
 <!--more-->
 
@@ -20,20 +21,18 @@ Du lägger till dina teman via tema väljaren.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat med [teman i temaväljaren](uppgift/en-bas-och-en-familj-av-teman) så du vet hur det fungerar.
+Du har gjort uppgiften "[Skapa tema med designelement](uppgift/anax-flat-tema-med-designelement)" och har grundläggande kunskap om hur du kan jobba med olika designelement.
 
-Du har grundläggande kunskaper om vad principer för design innebär.
-
-Du har gjort uppgiften "[Skapa teman med designelement till ditt Anax Flat](uppgift/anax-flat-tema-med-designelement)" och har grundläggande kunskap om hur du kan jobba med olika designelement.
+Du har grundläggande kunskaper om vad designprinciper och designelement innebär för en design.
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Det finns olika designprinciper som en tränad designer kan använda sig av. Du skall försöka att använda några av dem och skapa nya teman.
+Det finns olika designprinciper som kan ge liv och rörelse till en design. Du skall försöka att använda några av dem och skapa ett nytt tema till din webbplats.
 
-Design principer som kan vara intressanta är till exempel följande:
+Designprinciper som kan vara intressanta är till exempel följande:
 
 * Balans
 * Perspektiv
@@ -42,37 +41,37 @@ Design principer som kan vara intressanta är till exempel följande:
 * Rörelse
 * Variation
 
-Du uppnår principerna genom att medvetet jobba med designlement.
+Det kan finnas fler variationer på designprinciper, det går bra att använda dem så känn dig inte bunden till listan ovan.
 
-Du kan utgå från något av dina befintliga teman och utifrån det skapa nya teman som enbart påvisar, förhöjer några av ovan designprinciper.
+Du uppnår designprinciperna genom att medvetet jobba med designlement.
 
 Om temat som sådant är perfekt eller inte spelar mindre roll, du tränar designprinciper så vi har fokus på dem. Lyft fram dem så det blir tydligt, det gör inget om det blir övertydligt.
-
-Gör det tydligt i temaväljaren vilka teman som löser uppgiften.
-
-När du anger en källa till dina valda designprinciper så räcker det med en länk till en webbsida eller en notering om vald bok som förklarar/exemplifierar principen.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Bygg en testsida `content/design-principle.md` där du kort beskriver varje tema som du nu skall skapa. Lägg sidan i menyn. På sidan länkar du till temaväljaren.
+1. Skapa ett nytt dokument, en rapport, i `content/rapport/08_designprinciper.md`. Det finns inga krav på vilka rubriker du använder.
 
-1. Gör två nya teman som var och ett åskådliggör minst två designprinciper.
+1. Gör ett tema som du döper till "kmom06-designprinciper" och lägger i din temaväljare. Gör så att detta tema upplevs helt annorlunda än temat "kmom06-designelement".
 
-1. För varje tema beskriver du de designprinciper du valt. Ange även källan för dina design principer.
+1. Eventuellt kan du skapa nya sidor där du skapar underhåll som är specifikt för ditt tema, det kan tex vara bilder i regioner eller andra saker som kräver innehåll i webbsidan, innehåll som inte kan skapas enbart med style/css.
 
-1. Du committar och taggar relevanta repona som version 6.0.0 (eller högre).
+1. I din rapport berättar du om designen av ditt tema och vilka designprinciper du valt att jobba med och på vilket sätt du gör det. Ange eventuella källor som förklarar innebörden av respektive designprincip.
 
-1. Publicera med `dbwebb publish me`.
+1. Gör en `dbwebb publishpure redovisa` och kontrollera att allt fungerar på studentservern.
+
+1. Committa alla filer, inklusive temats filer och lägg till en (ny) tagg (6.0.\*).
+
+1. Pusha repot till GitHub, inklusive taggarna.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-Gör ytterligare ett tema där du gör allt för att krocka olika designprinciper, gör en design som står ut där man känner att den designen fungerar verkligen inte. Lek och busa.
+Gör ytterligare ett tema "kmom06-designprinciper-fun" där du gör allt för att krocka olika designprinciper, gör en design som står ut där man känner att den designen fungerar verkligen inte. Lek och busa.
 
 
 

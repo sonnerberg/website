@@ -38,7 +38,7 @@ Varje gruppmedlem skall ha sin egen kopia av rapporten i sin egen redovisa-sida.
 
 Du har sedan tidigare bekantat dig med några av de designprinciper som finns. Designprinciper som kan vara intressanta är till exempel balans, perspektiv, harmoni, unity, rörelse, variation men du väljer själv vilka du vill jobba med.
 
-Luta dig tillbaka och inse att du faktiskt kan vara kritiker av en design för en webbplats. Även om du själv kanske inte vore kapabel att göra en god design, så kan du identifiera om en design är god eller ej och du kan identifiera vissa tongivande delar av designen. Du kan luta dig mot eget tycke och smak och fundera på hur du  subjektivt upplever designen. Men tänk också att bortom ett subjektivt tyckande så finns det objektiva fastlagda principer för vad som kännetecknar och bygger upp en design. Uppgiften går ut på att träna din blick för detta.
+Luta dig tillbaka och inse att du faktiskt kan vara kritiker av en design för en webbplats. Även om du själv kanske inte vore kapabel att göra en god design, så kan du identifiera om en design är god eller ej och du kan identifiera vissa tongivande delar av designen. Du kan luta dig mot eget tycke och smak och fundera på hur du  subjektivt upplever designen. Men tänk också att bortom ett subjektivt tyckande så finns det fastlagda principer för vad som kännetecknar och bygger upp en design. Det handlar om designprinciper och designelement. Uppgiften går ut på att träna din blick för detta.
 
 
 
@@ -49,13 +49,13 @@ Krav {#krav}
 
 1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet.
 
-1. Berätta om du använde något speciellt bakgrundsmaterial som definierade designprinciper. Det blir stöd för din bakomliggande metod för att utföra din studie. 
+1. Berätta om du använde något speciellt bakgrundsmaterial som definierade designprinciper (och designelement). Det blir stöd för din bakomliggande metod för att utföra din studie. 
 
 1. För varje webbplats, gör följande (skriv kortfattat, 1-2 meningar om varje):
     1. Kommentera webbplatsens mål och syfte. Varför finns webbplatsen till?
     1. Kommentera webbplatsens design och vad som kännetecknar den rent allmänt.
     1. Kommentera om du själv anser att designen gynnar webbplatsens mål och syfte, och/eller vilken känsla som designen ger.
-    1. Lyft fram den eller de designprinciper du anser kännetecknar webbplatsens design och exemplifiera.
+    1. Lyft fram den eller de designprinciper du anser kännetecknar webbplatsens design och exemplifiera. Notera gärna vilka designelement som använts.
     1. Kika om designprinciperna som används är lika/olika för framsidan och undersidorna och kommentera.
 
 1. Sammanfatta ditt resultat i en analys och skriv generellt om din studie, kom du fram till något speciellt rörande hur webbplatser använder designprinciper?

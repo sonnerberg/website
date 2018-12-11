@@ -3,14 +3,15 @@ author: mos
 category:
     - kurs/design
 revision:
+    "2018-12-11": (B, mos) Det räcker med ett tema, gör två som extrauppgift.
     "2016-11-29": (A, mos) Första utgåvan.
 ...
-Skapa teman med designelement till ditt Anax Flat
+Skapa tema med designelement
 ===================================
 
-Du skall skapa ett antal teman till ditt Anax Flat som uppfyller vissa krav och använder vissa tongivande designelement.
+Du skall skapa ett tema till din me/redovisa som använder sig av en samling tongivande designelement.
 
-Du lägger till dina teman via tema väljaren.
+Du gör själv ett urval av de designelement som du vill att ditt tema skall bygga på.
 
 <!--more-->
 
@@ -19,7 +20,9 @@ Du lägger till dina teman via tema väljaren.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat med [teman i temaväljaren](uppgift/en-bas-och-en-familj-av-teman) så du vet hur det fungerar.
+Du har tidigare löst uppgiften "[Tema och blogg med stöd för bilder](uppgift/tema-och-blogg-med-stod-for-bilder)" så du vet hur det fungerar med teman i din me/redovisa.
+
+Du har grundläggande kunskaper om vad designelement är och hur de kan utformas i temat för en webbplats.
 
 
 
@@ -28,7 +31,7 @@ Introduktion {#intro}
 
 Låt oss använda grafiska element som ett bidrag till att skapa god design.
 
-Följande är exempel på tekniker som du kan jobba med för dina designelement:
+Följande är exempel på tekniker som du kan jobba med för dina designelement.
 
 * Punkter
 * Streck
@@ -38,12 +41,10 @@ Följande är exempel på tekniker som du kan jobba med för dina designelement:
 * Gradients
 * Kontrast
 * Typografi
-* Space (förhållandet mellan element)
+* Rymd/Space (förhållandet mellan element)
 * Bilder
 
-Om temat som sådant är perfekt eller inte spelar mindre roll, du tränar att jobba med olika designelement, så vi har fokus på dem.
-
-Gör det tydligt i temaväljaren vilka teman som löser uppgiften.
+Om temat som sådant är perfekt eller inte spelar mindre roll, du tränar att jobba med olika designelement, så vi har fokus på att använda dem och observera den effekt de ger till designen.
 
 Kanske har du tidigare teman som delvis löser uppgifterna. Du kan då ta **en kopia** av dem och jobba vidare med dem för att lösa kraven i uppgiften.
 
@@ -52,36 +53,28 @@ Kanske har du tidigare teman som delvis löser uppgifterna. Du kan då ta **en k
 Krav {#krav}
 -----------------------
 
-1. Bygg en testsida `content/design-element.md` där du kort beskriver varje tema som du nu skall skapa. Lägg sidan i menyn. På sidan länkar du till temaväljaren.
+1. Skapa ett nytt dokument, en rapport, i `content/rapport/07_designelement.md`. Det finns inga krav på vilka rubriker du använder.
 
-1. Gör tre olika teman som gemensamt uppfyller samtliga nedanstående krav. Du väljer själv hur du komponerar varje tema.
+1. Gör ett tema som du döper till "kmom06-designelement" och lägger i din temaväljare.
 
-1. Ett tema skall ha en bakgrundsbild som är ett foto, gärna återkommande i flera regioner.
+1. Välj ut fem eller fler tekniker för att jobba med designelement och applicera dem på ditt tema.
 
-1. Ett tema skall ha en textur, eller bild som upplevs som strukturell, som bakgrund. Gärna återkommande i flera regioner.
+1. Eventuellt kan du skapa nya sidor där du skapar underhåll som är specifikt för ditt tema, det kan tex vara bilder i regioner eller andra saker som kräver innehåll i webbsidan, innehåll som inte kan skapas enbart med style/css.
 
-1. Ett tema skall bygga på bakgrundsfärger med gradients i flera av sidans regioner.
+1. I din rapport berättar du om designen av ditt tema och vilka designelement du valt att jobba med och på vilket sätt du gör det. Ange eventuella källor som förklarar begreppet designelement.
 
-1. Använd genomskinliga element, *opacity*, så att bakgrunden, vid behov, lyser igenom (lagom mycket).
+1. Gör en `dbwebb publishpure redovisa` och kontrollera att allt fungerar på studentservern.
 
-1. Ett tema skall tydligt använder sig av streck (variationer av *borders*) för att lyfta fram designen.
+1. Committa alla filer, inklusive temats filer och lägg till en (ny) tagg (6.0.\*).
 
-1. Ett tema skall låta innehållet sträcka sig över hela webbläsarens bredd.
-
-1. Ett tema skall låta innehållet vara centrerat i mitten.
-
-1. Ett tema skall använda ett par bilder som placerats ut som designelement på sidan (i bakgrunden).
-
-1. Du committar och taggar relevanta repona som version 6.0.0 (eller högre).
-
-1. Publicera med `dbwebb publish me`.
+1. Pusha repot till GitHub, inklusive taggarna.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-Gör ytterligare ett tema där du gör allt för att krocka olika designelement, gör en design som står ut där man känner att den designen fungerar verkligen inte. Lek och busa.
+Gör ytterligare ett tema "kmom06-designelement-fun" där du gör allt för att krocka olika designelement, gör en design som står ut där man känner att den designen fungerar verkligen inte. Lek och busa.
 
 
 
