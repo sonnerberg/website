@@ -19,6 +19,8 @@ revision:
 Kmom06: Design
 ====================================
 
+[FIGURE src=image/snapht16/design-van-gogh.jpg?a=5,0,70,80 class="right" caption="Rörelse."]
+
 Det finns ett begrepp "the final touch" som är bra att vara medveten om i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
 Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Vi pratar om webbplatsens design och känslan den ger när man tittar på den. Det kan vara de små sakerna som gör det, *the final touch*.
