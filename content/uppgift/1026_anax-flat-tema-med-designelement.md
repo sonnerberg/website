@@ -44,6 +44,8 @@ Följande är exempel på tekniker som du kan jobba med för dina designelement.
 * Rymd/Space (förhållandet mellan element)
 * Bilder
 
+Det kan finnas fler variationer på designelement, det går bra att använda dem så känn dig inte bunden till listan ovan.
+
 Om temat som sådant är perfekt eller inte spelar mindre roll, du tränar att jobba med olika designelement, så vi har fokus på att använda dem och observera den effekt de ger till designen.
 
 Kanske har du tidigare teman som delvis löser uppgifterna. Du kan då ta **en kopia** av dem och jobba vidare med dem för att lösa kraven i uppgiften.
