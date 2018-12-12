@@ -10,14 +10,6 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Uppdatering av kursmaterialet pågår, kursen startar i lp2 hösten 2018.
-
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -79,7 +71,7 @@ dbwebb publish intelligence
 
 ###Krav 4, 5, 6: Optionellt {#k4}
 
-Välj att göra ett eller två ytterligare del-testar. Välj de som du ännu inte gjort av deltest 3, 4 och 5.
+Välj att göra ett eller två ytterligare del-tester. Välj de som du ännu inte gjort av deltest 3, 4 och 5.
 
 Varje deltest är här värt 15 poäng styck.
 
