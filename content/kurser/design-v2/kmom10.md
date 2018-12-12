@@ -1,5 +1,11 @@
 ---
 author: mos
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/snapht16/design-van-gogh.jpg?w=1100&h=360&cf&s=10&s=8&smooth&sharpen&f3=mean_removal&emboss&convolve=lighten:emboss-alt:motion"
 revision:
     "2018-12-12": (C, mos) Genomgången inför design v2.
     "2018-06-08": (B1, mos) Nytt dokument inför uppdatering av kursen.
