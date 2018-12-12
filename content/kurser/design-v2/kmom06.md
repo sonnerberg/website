@@ -83,6 +83,17 @@ Gå igenom följande material om designelement och designprinciper, det ger dig 
 1. Hämta inspiration till designeffekter och designelement via exempel från CodePen. Här är en [CodePen sökning på "effects"](http://codepen.io/search/pens?q=effects) som ger en god start in bland exempel.
 
 
+<!--
+
+CSS animeringar
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+
+CSS Transforms
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms
+
+-->
+
+
 
 ### Om responsivitet {#responsivitet}
 
