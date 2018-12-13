@@ -1,6 +1,10 @@
 ---
-author: lew
+author: 
+    - aar
+    - lew
 revision:
+    "2018-12-12": (C, aar) La till session.
+    "2018-11-26": (B, aar) Skrev om handler koden till en klass.
     "2017-12-01": (A, lew) First version for v2.
 category:
     - oopython
@@ -10,7 +14,7 @@ Flask, POST och GET
 
 [FIGURE src=/image/oopython/kmom02/topimage-art1.png?w=c5 class="right"]
 
-Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Målet är att vi ska med hjälp av ett formulär, en tabell, GET och POST, presentera innehåll i vår Flask-applikation.  
+Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Målet är att vi ska med hjälp av ett formulär, en tabell, GET och POST, presentera innehåll i vår Flask-applikation. Vi behöver även blanda in Session för att spara data mellan requests på studentservern.
 
 <!--more-->  
 
@@ -40,18 +44,50 @@ Du har läst artikeln om "[Flask med Jinja2](kunskap/flask-med-jinja2)".
 Struktur {#struktur}
 -------------------------------
 
-Innan vi kommer igång med koden kan det vara bra att tänka igenom vad det är man vill åstadkomma. Det minskar risken att hamna snett och behöva kasta kod och göra om. Målet är en sida som kan lägga till en person, en *employee*, i en lista, som i sin tur visas upp i en tabell. Tabellen ska uppdateras automatiskt och vi blandar inte in någon databas, utan vi lämnar koden med några personer hårdkodade. Till detta skapar vi en klass, `Employee`. Vi ska hantera GET och POST i routen och agera korrekt beroende hur vi skickar en request till routen. När vi klickar på länken i navbaren görs ett GET-request och när vi postar formuläret kan vi använda POST. Vi kan med fördel i detta fallet använda samma route, kallad "company" i artikeln. Vi vill även undvika lösa funktioner i app.py så vi skapar en fil, *handler*, som får sköta mappningen mellan app.py och klassen.
+Innan vi kommer igång med koden kan det vara bra att tänka igenom vad det är man vill åstadkomma. Det minskar risken att hamna snett och behöva kasta kod och göra om. Målet är en sida som kan lägga till en person, en *employee*, i en lista, som i sin tur visas upp i en tabell. Tabellen ska uppdateras automatiskt och vi blandar inte in någon databas, utan vi lämnar koden med några personer hårdkodade. Till detta skapar vi en klass, `Employee`. Vi ska hantera GET och POST i routen och agera korrekt beroende på hur vi skickar en request till routen. När vi klickar på länken i navbaren görs ett GET-request och när vi postar formuläret kan vi använda POST. Vi kan med fördel i detta fallet använda samma route, kallad "company" i artikeln. Vi vill även undvika lösa funktioner i app.py så vi skapar en klass, *Handler*, som får sköta mappningen mellan app.py och Employee objekten.
 
 En vattentät plan är på plats så vi börjar kika på koden.
 
 
 
-Filerna {#filerna}
+Visa anställda {#show}
 -------------------------------
+
+VI börjar med att snabbt gå igenom app.py som påminner om hur den såg ut i förra kmom:et. Om Något fortfarande är oklart gå tillbaka och läs "[Flask med Jinja2](kunskap/flask-med-jinja2)".
+
+```python
+#!/usr/bin/env python3
+from flask import Flask, render_template, request, session
+
+app = Flask(__name__)
+
+@app.route("/")
+def main():
+    """ Main route """
+    return render_template("index.html")
+
+```
+Vi kikar lite snappt på `index.html` också. Kolla i "[Flask med Jinja2](kunskap/flask-med-jinja2)" för innehållet i header.html, footer.html och style.css.
+
+```
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="page-header">
+        <h1>Visa anställda.</h1>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+```
+
+Okej, nu har vi grunden och går vidare med att skapa Employee klassen.
+
+
 
 ###employee.py {#emplyee-py}
 
-Nu tar vi en titt på hur klassen Employee ser ut.
+Vi skapar en simple klass för att hålla data om anställda.
 
 ```python
 #!/usr/bin/env python3
@@ -93,32 +129,160 @@ class Employee():
         return self.firstname + " " + self.lastname
 ```
 
+Nästa steg blir att skapa Handler klassen så vi kan använda Employee i på hemsidan 
 
 
-###company.html {#company.html}
 
-Börja med att lägga till ett menyval i navbaren för `company.html`, samt en route som returnerar rätt sida. Vi ska utnyttja Jinja2's funktionalitet för att hantera mallar och skapa mallar, *templates*, för tabellen och formuläret. Som du såg i början av artikeln så har vi mapparna templates/forms och templates/tables. Kika sedan på company.html:
+###handler.py {#handler-py}
 
-```html
+Handler klassen ska vara bryggan mellan app.py och Employee objekten. Vi börjar med en lista som innehåller alla skapade objekt och en metod som skapar några hårdkodade Employee objekt. 
+
+```python
+#!/usr/bin/env python3
+"""
+Handler file
+"""
+
+from employee import Employee
+
+class Handler():
+    def __init__(self):
+        self.people = []
+        self.add_predefined_employees()
+
+    def get_people(self):
+        return self.people
+
+    def add_predefined_employees(self):
+        emil = Employee("Emil", "Folino", 30000)
+        mikael = Employee("Mikael", "Roos", 31000)
+        kenneth = Employee("Kenneth", "Lewenhagen", 75000)
+        andreas = Employee("Andreas", "Arnesson", 12000)
+
+        self.people.append(emil)
+        self.people.append(mikael)
+        self.people.append(kenneth)
+        self.people.append(andreas)
+```
+
+Nu har vi två klasser som vi kan skapa objekt av för att spara data och jobba med den. Innan vi bygger ihop det i app.py skapar vi html koden för att visa upp de anställda.
+
+
+
+###templates/tables {#templates-tables}
+
+Vi ska utnyttja Jinja2's funktionalitet för att hantera mallar och skapa mallar, *templates*, för tabellen och formuläret. Som du såg i början av artikeln så har vi mapparna templates/forms och templates/tables.
+
+Vi hoppar in i mappen templates/tables/ och tittar på `show_employees.html`.
+
+Vi skapar en tabell och använder Jinja för att skapa en loop och lägga till varje employee i tabellen.
+Här skapar vi en tabell och i `<tbody>` där magin händer, använder vi en [for-loop](http://jinja.pocoo.org/docs/2.10/templates/#for) med hjälp av Jinja som går igenom den en lista med Employee objekt och lägger till dem i tabellen. Detta betyder att vi i app.py måste skicka med en lista med Employee objekt till `render_template()` metoden.
+
+```
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+<tbody>
+    {% for person in people %}
+    <tr>
+        <td>{{ person.get_name() }}</td>
+        <td>{{ person.get_id() }}</td>
+        <td>{{ person.get_salary() }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+```
+
+Vi passar även på att inkludera tabellen i index.html 
+
+```
 {% include 'header.html' %}
+
 <div class="container">
     <div class="page-header">
-        <h1>Awesome Company staff</h1>
+        <h1>Visa anställda</h1>
     </div>
     <div class="row">
-        <div class="col-md-3 col-md-offset-1">
-            <h3>Add employee</h3>
-            {% include 'forms/add_employee.html' %}
-        </div>
         <div class="col-md-3 col-md-offset-1">
             <h3>Employed</h3>
             {% include 'tables/show_employees.html' %}
         </div>
     </div>
 </div>
+
+{% include 'footer.html' %}
+
+```
+
+När vi kallar på `{% include ... %}` letar Jinja2 automatiskt i mappen templates/. Vi kan på detta sättet separera koden och inkludera formulär, tabeller och övrig html-kod. För att få en snygg layout använder vi Bootstrap's färdiga klasser. Klassen `row` gör sitt bästa för att innehållet ska hamna på en rad. Klassen `col-md-3` tar upp 3 kolumner av 12. Klassen `col-md-offset-1` puttar elementet 1 kolumn åt höger.
+
+Sista steget blir att importera Handler i app.py och skicka med alla Employee objekt till `render_template()`.
+
+```python
+# app.py
+...
+
+@app.route("/")
+def main():
+    """ Main route """
+    return render_template("index.html", people=handler.get_people())
+
+...
+```
+
+Kolla att det fungerar, starta servern och gå till `http://localhost:5000` i webbläsaren.
+
+[FIGURE src=/image/oopython/kmom02/show_employees.png caption="Visa alla anställda."]
+
+
+
+Lägg till nya anställda {#add}
+-------------------------------
+
+Nästa steg är att kunna lägga till fler anställda. Vi gör det med ett formulär som skickar ett POST request. Börja med att lägga till ett menyval i navbaren för `company.html` i `header.html`, samt en route som returnerar i app.py som returnerar rätt sida.
+
+```python
+# app.py
+...
+
+@app.route("/company")
+def company():
+    """ Company route """
+
+    return render_template("company.html")
+
+...
+```
+
+Vi går vidare med att lägga till kod i company.html.
+
+
+
+###company.html {#company.html}
+
+Vi bygger upp company.html påliknande sätt som index.html. Vi skapar en egen mall för formuläret och bara importera det i company.html. Då blir index.html och company.html väldigt lika varandra.
+
+```html
+{% include 'header.html' %}
+<div class="container">
+    <div class="page-header">
+        <h1>Lägg till anställda</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+            <h3>Add employee</h3>
+            {% include 'forms/add_employee.html' %}
+        </div>
+    </div>
+</div>
 {% include 'footer.html' %}
 ```
-När vi kallar på `{% include ... %}` letar Jinja2 automatiskt i mappen templates/. Vi kan på detta sättet separera koden och inkludera formulär, tabeller och övrig html-kod. För att få en snygg layout använder vi Bootstrap's färdiga klasser. Klassen `row` gör sitt bästa för att innehållet ska hamna på en rad. Klassen `col-md-3` tar upp 3 kolumner av 12. Klassen `col-md-offset-1` puttar elementet 1 kolumn åt höger. Forumläret och tabellen kommer hamna brevid varandra på samma rad, och vara lika breda.
 
 
 
@@ -164,14 +328,14 @@ def company():
     if request.method == "POST":
         handler.add_employee(request.form)
 
-    return render_template("company.html", persons=handler.get_persons())
+    return render_template("company.html", people=handler.get_people())
 ```
 
 Här talar vi om att det är helt i sin ordning att ta sig hit via både POST och GET. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. Här ser vi att routen använder filen *handler*. Den importeras högst upp i app.py och tanken är att den ska vara en form av controller, eller hanterare, mellan klassen och app.py. Sist så skickar vi med listan till company.html och låter tabellen ta hand om den för utskrift.
 
-
-
 ###handler.py {#handler-py}
+
+Handler klassen ska vara bryggan mellan app.py och Employee objekten. Vi börjar med en lista som innehåller alla skapade objekt och en metod som skapar några hårdkodade Employee objekt. 
 
 ```python
 #!/usr/bin/env python3
@@ -181,55 +345,33 @@ Handler file
 
 from employee import Employee
 
-persons = []
+class Handler():
+    def __init__(self):
+        self.people = []
+        self.add_predefined_employees()
 
-emil = Employee("Pelle", "Scriptsson", 30000)
-mikael = Employee("Mikael", "Roos", 31000)
-kenneth = Employee("Kenneth", "Lewenhagen", 75000)
-andreas = Employee("Andreas", "Arnesson", 12000)
+    def add_employee(self, form):
+        self.people.append(
+            Employee(
+                form["firstname"],
+                form["lastname"],
+                form["salary"]
+        ))
 
-persons.append(emil)
-persons.append(mikael)
-persons.append(kenneth)
-persons.append(andreas)
+    def get_people(self):
+        return self.people
 
-def add_employee(form):
-    persons.append(Employee(form["firstname"], form["lastname"], form["salary"]))
+    def add_predefined_employees(self):
+        emil = Employee("Pelle", "Scriptsson", 30000)
+        mikael = Employee("Mikael", "Roos", 31000)
+        kenneth = Employee("Kenneth", "Lewenhagen", 75000)
+        andreas = Employee("Andreas", "Arnesson", 12000)
 
-def get_persons():
-    return persons
+        self.people.append(emil)
+        self.people.append(mikael)
+        self.people.append(kenneth)
+        self.people.append(andreas)
 ```
-
-Tidigare nämndes att det är formulärets attribut `name` som används och det når vi via request.form["attribut"]. Vi skickade med formulärets data och tar emot det i funktionen `add_employee()` som *form*. Sedan skapar vi en instans av klassen och lägger i listan `persons` som kan hämtas med funktionen `get_persons()`.
-
-
-
-###templates/tables {#templates-tables}
-
-Vi hoppar in i mappen templates/tables/ och tittar på `show_employees.html`.
-
-```html
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Id</th>
-            <th>Salary</th>
-        </tr>
-    </thead>
-<tbody>
-    {% for person in persons %}
-    <tr>
-        <td>{{ person.get_name() }}</td>
-        <td>{{ person.get_id() }}</td>
-        <td>{{ person.get_salary() }}</td>
-    </tr>
-    {% endfor %}
-</tbody>
-</table>
-```
-
-Här skapar vi tabellen och i `<tbody>` där magin händer, använder vi en for-loop som går igenom den inskickade listan och objektens respektive metoder.
 
 
 
