@@ -29,14 +29,19 @@ Du har din student e-postadress nära till hands då den behövs för att få ti
 GitHub Education Pack {#gep}
 --------------------------------------
 
-För att få tillgång till rabatter och rabattkoder som erbjuds i [GitHub Education Pack](https://education.github.com/pack) behöver du GitHub veta att du är student. Gå till den länkade sidan och tryck på den blåa knappen "Get your Pack".
+För att få tillgång till rabatter och rabattkoder som erbjuds i [GitHub Education Pack](https://education.github.com/pack) behöver du GitHub veta att du är student. Gå till den länkade sidan och tryck på den blåa knappen "Get your Pack". Viktigt att du använder din student mail när du registrerar dig då mailen måste vara kopplat till en undervisningsinstitution.
 
 
 
 Digital Ocean {#do}
 --------------------------------------
 
-När du är verifierad via GitHub får du tillgång till en rabattkod för Digital Ocean. Efter det går du till [Digital Ocean](https://www.digitalocean.com) och skapar ett konto.
+När du är verifierad via GitHub får du tillgång till en rabattkod för Digital Ocean. Efter det går du till [Digital Ocean Sign Up](https://cloud.digitalocean.com/registrations/new) och skapar ett konto. Du behöver ange ett kreditkort, men vi kommer sedan använda rabattkoden så det kommer inte kosta något.
+
+När du har skapat kontot gå till Account längst upp till höger under din användare logga. Gå sedan till Billing fliken och scrolla ner till Promo Code. Här lägger du in rabattkoden du fick från Github Education Pack när du tryckte på länken 'request your offer code'.
+
+Gå sedan till första sidan och tryck 'New Droplet'. Instruktioner i kommande stycken och resten av kursen kommer utgå från en Debian Stretch droplet, så en stark rekommendation är att välja en sån droplet. Jag rekommenderar att ni kör en 10$/månad droplet, då man får bra prestanda och samtidigt inte använder hela rabatten under kursens gång. Välj Frankfurt eller London som region och lägg till din `id_rsa.pub` SSH nyckel så du kan logga in på servern.
+
 
 
 Första 10 minuter på en server {#first10}
@@ -84,11 +89,21 @@ Vi passar på att i samma veva ställa in vilken förvald terminal vår nya anv�
 usermod -s /bin/bash deploy
 ```
 
+
+
 ### Stänga av inloggning med lösenord
 
 Lösenord kan knäckas.
 
-Därför använder vi istället SSH nycklar för att autentisera oss mot servern. 
+Därför använder vi istället SSH nycklar för att autentisera oss mot servern.
+
+
+
+Ett domän till din server {#domain}
+--------------------------------------
+
+Som en del av Github Education Pack får du som student även ett domän-namn på top-domänen .me gratis under ett år.
+
 
 
 Avslutningsvis {#avslutning}
