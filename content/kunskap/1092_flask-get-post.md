@@ -245,7 +245,7 @@ Kolla att det fungerar, starta servern och gå till `http://localhost:5000` i we
 Lägg till nya anställda {#add}
 -------------------------------
 
-Nästa steg är att kunna lägga till fler anställda. Vi gör det med ett formulär som skickar ett POST request. Börja med att lägga till ett menyval i navbaren för `company.html` i `header.html`, samt en route som returnerar i app.py som returnerar rätt sida.
+Nästa steg är att kunna lägga till fler anställda. Vi gör det med ett formulär som skickar ett POST request. Börja med att lägga till ett menyval i navbaren för `company.html` i `header.html`, samt en route i app.py som returnerar `company.html`.
 
 ```python
 # app.py
@@ -266,7 +266,7 @@ Vi går vidare med att lägga till kod i company.html.
 
 ###company.html {#company.html}
 
-Vi bygger upp company.html påliknande sätt som index.html. Vi skapar en egen mall för formuläret och bara importera det i company.html. Då blir index.html och company.html väldigt lika varandra.
+Vi bygger upp company.html på liknande sätt som index.html.
 
 ```html
 {% include 'header.html' %}
@@ -283,6 +283,8 @@ Vi bygger upp company.html påliknande sätt som index.html. Vi skapar en egen m
 </div>
 {% include 'footer.html' %}
 ```
+
+Nedanför skapar vi en mall för formuläret som vi importerar ovanför.
 
 
 
@@ -308,13 +310,24 @@ Mallen för formuläret, templates/forms/add_employee.html, ser ut på följande
 </form>
 ```
 
-Vi sätter metoden till POST och action till den sökvägen vi vill skicka formuläret när vi gör submit. Attributet `name` är även här namnet vi når formulärets data med när vi tar hand om det.
+Bootstrap gör att vi får lite mer rader än vad som egentligen behövs. De viktiga raderna är:
+
+```
+<form role="form" method="POST" action="{{ url_for('company') }}">
+...
+        <input type="text" name="firstname" class="form-control" />
+...
+    <button type="submit" class="btn btn-default">Lägg till</button>
+```
+
+Vi sätter metoden till POST och action till sökvägen för `company.html`. Attributet `name` är nyckeln vi når formulärets data med i Python koden.
 
 
 
 ###app.py {#app-py}
 
-Vi behöver modulen `request` så vi importerar den överst i filen:  
+Vi behöver modulen `request` från Flask för att få ut vilken typ av request det är och komma åt formulärs datan i en route:
+
 ```
 from flask import Flask, render_template, request
 ```
@@ -328,50 +341,40 @@ def company():
     if request.method == "POST":
         handler.add_employee(request.form)
 
-    return render_template("company.html", people=handler.get_people())
+    return render_template("company.html")
 ```
 
-Här talar vi om att det är helt i sin ordning att ta sig hit via både POST och GET. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. Här ser vi att routen använder filen *handler*. Den importeras högst upp i app.py och tanken är att den ska vara en form av controller, eller hanterare, mellan klassen och app.py. Sist så skickar vi med listan till company.html och låter tabellen ta hand om den för utskrift.
-
-###handler.py {#handler-py}
-
-Handler klassen ska vara bryggan mellan app.py och Employee objekten. Vi börjar med en lista som innehåller alla skapade objekt och en metod som skapar några hårdkodade Employee objekt. 
+`methods=["POST", "GET"]` talar om att det är helt i sin ordning att ta sig hit via både POST och GET, om man inte har med det kan man bara ta sig till dne routen med GET requests. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. Vi behöver skapa `add_employee()` metoden i Handler.
 
 ```python
-#!/usr/bin/env python3
-"""
-Handler file
-"""
-
-from employee import Employee
-
 class Handler():
-    def __init__(self):
-        self.people = []
-        self.add_predefined_employees()
+    ...
 
     def add_employee(self, form):
-        self.people.append(
-            Employee(
-                form["firstname"],
-                form["lastname"],
-                form["salary"]
-        ))
+        empl = Employee(
+            form["firstname"],
+            form["lastname"],
+            form["salary"]
+        )
+        self.people.append(empl)
 
-    def get_people(self):
-        return self.people
-
-    def add_predefined_employees(self):
-        emil = Employee("Pelle", "Scriptsson", 30000)
-        mikael = Employee("Mikael", "Roos", 31000)
-        kenneth = Employee("Kenneth", "Lewenhagen", 75000)
-        andreas = Employee("Andreas", "Arnesson", 12000)
-
-        self.people.append(emil)
-        self.people.append(mikael)
-        self.people.append(kenneth)
-        self.people.append(andreas)
+    ...
 ```
+
+Om ni startar upp servern borde ni kunna gå till company.html och lägga till en employee. Sen kan ni gå tillbaka till index.html och se den i tabellen med alla personal.
+
+
+
+Flask i produktion {#produktion}
+-------------------------------
+
+Det vi har gjort än så länge fungerar bra lokalt men om vi publiserar sidan till studentservern och lägger till en anställd och går till index.html för att kolla på alla fina anställda kommer vi bara se de som är hårdkodade. När ni testar publisera glöm inte `app.cgi` filen. 
+
+När vi kör sidan lokalt med Flasks inbyggda server är vårt program i app.py igång hela tiden och vi använder dens minne för att komma ihåg alla anställda vi lägger till i formuläret vid varje request. Men Flask själva skriver att deras webbserver inte säker nog för att användas i produktion, den ska bara användas för utveckling. På studentservern kör vi istället en Apache webbserver som inte fungerar med Flask naturligt. Detta är varför vi behöver ha `app.cgi` filen, den gör att Apache kan startar vårt app.py program varje gång någon gör ett request. I och med detta stängs vårt program av när ett request är färdigt och när vi får ett nytt request, och programmet startas igen, har programmet inget minne av vad vi gjort tidigare. Vid varje request, när vi byter från index.html till company.html eller när vi submit:ar ett formulär, utgår vi bara från det som finns hårdkodat i koden. I bilden nedanför är "Gateway program" app.py och "Web server" Apache på studentservern.
+
+[FIGURE src=/image/oopython/kmom02/cgi.png caption="Hur CGI fungerar på en webbserver."]
+
+Vi behöver ett externt minne som vårt program kan använda för att spara data mellan requests. 
 
 
 
