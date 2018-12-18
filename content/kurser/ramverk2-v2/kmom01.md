@@ -87,7 +87,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[GitHub Education Pack och en server på Digital Ocean](kunskap/github-education-pack-och-en-server-pa-digital-ocean)" där vi använder Github Education Pack för att skaffa en egen Virtuell Server med ett eget domännamn.
 
-1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom01/express`.
+1. Jobba igenom artikeln "[Node.js API med Express](kunskap/nodejs-api-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js.
 
 <!--
 1. Jobba igenom artikeln "[Databas appserver med Express och MySQL](kunskap/databas-appserver-med-express-och-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express. Spara dina exempelprogram i `me/kmom05/express-mysql`.

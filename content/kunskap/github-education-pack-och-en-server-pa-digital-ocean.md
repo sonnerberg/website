@@ -234,6 +234,13 @@ Du öppnar en tmux session genom att skriva `tmux` i terminalen. I sitt grundutf
 
 
 
+Installera git {#git}
+--------------------------------------
+
+För att lättare kunna driftsätta våra git-repon installerar vi även git med kommandot `sudo apt-get install git`.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 

@@ -47,7 +47,7 @@ Tips. Det kan vara klokt att kika på Express app generator som scaffoldar fram 
 
 ### Exempel {#exempel}
 
-Jag fixade ett exempel, bara för att kolla att alla delarna fungerar tillsammans som tänkt. Du kan se mitt exempel på [`emilfolino/ramverk2-me`](https://github.com/emilfolino/ramverk2-me) och det finns live på [me-api.emilfolino.se](https://me-api.emilfolino.se).
+Jag fixade ett exempel, bara för att kolla att alla delarna fungerar tillsammans som tänkt. Du kan se mitt exempel på [`emilfolino/ramverk2-me`](https://github.com/emilfolino/ramverk2-me) och det finns live på [me-api.jsramverk.me](https://me-api.jsramverk.me).
 
 
 
