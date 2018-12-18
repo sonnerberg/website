@@ -1,4 +1,4 @@
-####Läs BTH Webbprogrammering!
+#### Studera Webbprogrammering vid BTH!
 
 <!-- <img src="/image/grill.jpeg?w=c7" alt="">
 Den traditionella höstgrillen för nya, befintliga och utgångna studenter på programmen WIP, SE, ISE, DSV går snart av stapeln igen.
@@ -12,12 +12,13 @@ Den traditionella höstgrillen för nya, befintliga och utgångna studenter på 
 
 Studera på utbildningsprogram och kurspaket i Webbprogrammering på campus & distans vid Blekinge Tekniska Högskola i Karlskrona.
 
-Hösten 2018 har vi följande utbud:
+Inför hösten 2019 har vi följande utbud:
 
 * Webbprogrammering 180hp (campus)
 * Webbprogrammering 120hp (distans)
-* Webbutveckling och programmering 30hp (distans)
 * Webbprogrammering och databaser 30hp (distans)
+
+Kurspaketet "Webbutveckling och programmering 30hp (distans)" har en paus under 2019/20 och återkommer till 2020/21.
 
 <!--
 Samma utbud gäller inför hösten 2018.
@@ -35,6 +36,8 @@ Finn mer information i forumet:
 Välkommen med din ansökan så syns vi här!
 
 [Läs om våra utbildningar »](utbildning)
+
+[FIGURE src=image/snapvt18/bth_logo_platta.jpg?w=c4 class="center"]
 
 
 <!--
