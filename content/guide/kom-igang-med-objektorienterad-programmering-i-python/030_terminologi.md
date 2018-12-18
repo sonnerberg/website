@@ -20,6 +20,8 @@ Objektorienterad terminologi
 
 * **Statisk metod**: En metod i klassen som fungerar oberoende av klassen och _self_.
 
+* **Klassmetod**: En metod i klassen som är kopplad till klassen istället för en instans.
+
 * **Data inkapsling**: Att bundla data med metoderna som använder datan.
 
 * **Operatoröverlagring**: När en klass har implementerat en metod för en operator. "Operator overloading" på engelska.
