@@ -1,9 +1,6 @@
 ---
 sectionHeader: true
 linkable: true
-author: aar
-revision:
-    "2018-11-26": "(A, aar) Första versionen, uppdelad av större dokument och uppdaterad."
 ...
 Klass relationer
 =======================

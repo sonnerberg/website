@@ -1,17 +1,23 @@
 #### Aktuellt
 
-[FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2018, vi är redo..."]
+[FIGURE src=image/fsync-giving-up-on-dirty.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Vårterminen 2019, snart är vi redo..."]
 
+* [Planera in GrillCon 2019 Vår](https://dbwebb.se/forum/viewtopic.php?f=25&t=7784)
+* [Gunvor fick stipendie!](https://dbwebb.se/forum/viewtopic.php?f=32&t=8060)
 * [WM i Uptime 2018/2019](https://dbwebb.se/forum/viewtopic.php?f=25&t=7680)
+
+Vårterminen 2019 startar 21/1.
+
+Snart är det sommarlov.
+
+<!--
 * [Om 3-veckors uppropet](t/7593)
 * [Vi söker student-mentorer till distansstudenter](t/7592)
 * [Var finns alla videor och streams?](t/7561)
 * [Hjälp mig igång (sen ankomst?)](t/7557)
 * [Jag ska börja studera i höst 2018 (frågor/svar)](t/7488)
 * [Allra, allra sista inlämning för rester i ITs-kurser 31/8](t/7484)
-
-Höstterminen startar 3/9. Introveckan för alla ettor är en vecka tidigare.
-
+-->
 
 <!--
 #### BTH Webbprogrammering 2018
@@ -47,6 +53,8 @@ Välkommen till Blekinge Tekniska Högskola!
 [FIGURE src=image/person/magnus-bellstrand-1.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi jobbar på..."]
 
 [FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2017, vi är redo..."]
+
+[FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen 2018, vi är redo..."]
 
 [FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
 
