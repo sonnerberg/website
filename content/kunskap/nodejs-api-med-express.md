@@ -9,7 +9,7 @@ category:
     - kursen dbjs
     - kursen ramverk2
 revision:
-    "2018-12-18": (D, mos) Kopierade och gjorde om för v2.
+    "2018-12-18": (D, efo) Kopierade och gjorde om för v2.
     "2017-10-16": (C, mos) Uppdatering inför kursen ramverk2, mer om pug.
     "2017-03-22": (B, mos) Flytta npm pug till toppen.
     "2017-03-20": (A, mos) Första utgåvan i kursen dbjs.
@@ -69,15 +69,13 @@ Verifiera att Express fungerar {#verifiera}
 
 Låt oss starta upp en server för att se att installationen gick bra.
 
-Jag börjar med kod som startar upp servern tillsammans med en route för `/` och sparar i `index.js`.
+Jag börjar med kod som startar upp servern tillsammans med en route för `/` och sparar i en fil du själv skapar `app.js`.
 
 ```javascript
-#!/usr/bin/env node
-"use strict";
+const express = require("express");
+const app = express();
 
-// Create the app objekt
-var express = require("express");
-var app = express();
+const port = 1337;
 
 // Add a route
 app.get("/", (req, res) => {
@@ -85,15 +83,14 @@ app.get("/", (req, res) => {
 });
 
 // Start up server
-console.log("Express is ready.");
-app.listen(1337);
+app.listen(port, () => console.log(`Example API listening on port ${port}!`));
 ```
 
 Sedan startar jag servern.
 
 ```bash
-$ node index.js
-Express is ready.
+$ node app.js
+Example API listening on port 1337!
 ```
 
 Nu kan jag skicka requester till servern via curl.
@@ -140,7 +137,7 @@ I filen `package.json` kan du lägga in skript och köra dem via `npm`. Du kan t
 ```json
 {
     "scripts": {
-        "start": "node index.js"
+        "start": "node app.js"
     }
 }
 ```
@@ -158,64 +155,38 @@ Låt oss komma igång med grunderna i Express och hur man sätter upp en applika
 
 
 
-Statiska resurser {#static}
+Svara med JSON {#json}
 --------------------------------------
 
-En sak som är vanlig i en webbplats är statiska resurser såsom bilder, stylesheets och JavaScript-filer. Kanske även rena HTML-filer som inte kräver någon extra processing.
-
-I Express kan vi montera en (eller flera) kataloger och använda den som en statisk resurs.
+I de allra flesta fall vill vi att vårt API svarar med ett JSON svar. För det använder vi `response` objektets inbyggda funktion `json` istället för `send` som vi såg ovan.
 
 ```javascript
-const path = require("path");
+const express = require("express");
+const app = express();
 
-// Serve static files
-var staticFiles = path.join(__dirname, "public");
-app.use(express.static(staticFiles));
+const port = 1337;
+
+// Add a route
+app.get("/", (req, res) => {
+    const data = {
+        data: {
+            msg: "Hello World"
+        }
+    };
+
+    res.json(data);
+});
+
+// Start up server
+app.listen(port, () => console.log(`Example API listening on port ${port}!`));
 ```
 
-Ovan kod lägger jag i min `index.js`.
-
-Säg att katalogen public nu har följande struktur och innehåll (se exempelprogrammet).
+I exemplet ovan skickar vi ett JSON objekt när vi skickar en förfrågan till `/`. Vi startar om servern och vi får följande svar om vi testar med curl i terminalen.
 
 ```bash
-$ tree public/
-public/
-├── css
-│   └── style.css
-├── img
-│   └── mos.jpg
-├── index.html
-└── js
-    └── move.js
-
-3 directories, 4 files
+$ curl localhost:1337
+{"data":{"msg":"Hello World"}}
 ```
-
-Filen `public/index.html` innehåller följande kod som i sin tur inkluderar bild, stylesheet och javascript.
-
-```html
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<title>Try out Express</title>
-
-<body>
-<h1>Trying out Express</h1>
-<p>Hover on the image and it should move around.</p>
-<img id="image" src="img/mos.jpg">
-<script src="js/move.js"></script>
-</body>
-```
-
-Om man nu startar om Express-servern och accessar routen `localhost:1337/index.html` med webbläsaren, så bör man se följande.
-
-[FIGURE src=image/snapvt17/express-static.png?w=w2 caption="En webbsida med enbart statiska resurser i Express."]
-
-Klicka på bilden, om den flyttar sig så fungerar även JavaScriptet. Tänk på att du kan titta i devtools för att se vilka resurser som sidan laddar.
-
-[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Networks-fliken visar vilka resurser som sidan laddar."]
-
-Det var de statiska resurserna det. Bra, bra.
 
 
 
@@ -229,25 +200,41 @@ Här är fyra routes som har samma url, men skiftar i requestens metod.
 ```javascript
 // Testing routes with method
 app.get("/user", (req, res) => {
-    res.send("Got a GET request at " + req.originalUrl);
+    res.json({
+        data: {
+            msg: "Got a GET request"
+        }
+    });
 });
 
 app.post("/user", (req, res) => {
-    res.send("Got a POST request at " + req.originalUrl);
+    res.json({
+        data: {
+            msg: "Got a POST request");
+        }
+    });
 });
 
 app.put("/user", (req, res) => {
-    res.send("Got a PUT request at " + req.originalUrl);
+    res.json({
+        data: {
+            msg: "Got a PUT request");
+        }
+    });
 });
 
 app.delete("/user", (req, res) => {
-    res.send("Got a DELETE request at " + req.originalUrl);
+    res.json({
+        data: {
+            msg: "Got a DELETE request");
+        }
+    });
 });
 ```
 
 Om du testar med din webbläsare så blir det en GET request.
 
-För att testa de andra metoderna så använder jag en plugin till Firefox som heter RESTClient. Med den kan jag välja om jag skall skicka en GET, POST, PUT, DELETE eller någon annan av de HTTP-metoder som finns. En sådan REST-klient är ett värdefullt utvecklingsverktyg.
+För att testa de andra metoderna så använder jag verktygen Postman eller RESTClient som är ett plugin in till Firefox. Med de verktygen kan jag välja om jag skall skicka en GET, POST, PUT, DELETE eller någon annan av de HTTP-metoder som finns. En sådan REST-klient är ett värdefullt utvecklingsverktyg.
 
 Så här ser det ut när jag skickar en request med en annan metod än GET.
 
@@ -255,34 +242,38 @@ Så här ser det ut när jag skickar en request med en annan metod än GET.
 
 Det var routes och stöd för olika metoder det. Se till att du installerar en klient motsvarande RESTClient och testa din egen server.
 
-
-
-Middleware {#middleware}
---------------------------------------
-
-I express finns termen "middleware" som benämning på callbacks som anropas innan själva routens hanterare anropas. En middleware kan också vara en hanterare som alltid anropas för alla routes.
-
-Låt oss skapa en sådan middleware, som alltid anropas, oavsett route. Den skall skriva ut vilken route som accessades och med vilken metod.
-
-Vi lägger till middleware via metoden `app.use()`. Vi kan lägga till dem för en specifik route, eller för alla routes.
+Man vill ofta skicka en annan statuskod än 200 när man gör andra typer av requests än GET. Det kan vi göra med `response` objektets inbyggda funktion `status`.
 
 ```javascript
-// This is middleware called for all routes.
-// Middleware takes three parameters.
-app.use((req, res, next) => {
-    console.log(req.method);
-    console.log(req.path);
-    next();
+// Testing routes with method
+app.get("/user", (req, res) => {
+    res.json({
+        data: {
+            msg: "Got a GET request, sending back default 200"
+        }
+    });
+});
+
+app.post("/user", (req, res) => {
+    res.status(201).json({
+        data: {
+            msg: "Got a POST request, sending back 201 Created");
+        }
+    });
+});
+
+app.put("/user", (req, res) => {
+    // PUT requests should return 204 No Content
+    res.status(204).send();
+});
+
+app.delete("/user", (req, res) => {
+    // DELETE requests should return 204 No Content
+    res.status(204).send();
 });
 ```
 
-Middleware anropas i den ordningen de är definierade, när de matchar en route. Använd ett anrop till `next()` när du är klar och vill skicka vidare kontrollen till nästa middleware och slutligen till routens hanterare.
-
-Om du vill att denna middleware alltid skall anropas så behöver du lägga den högst upp i din kod.
-
-På serversidan ser du nu delar av innehållet i request-objektet som visar metoden och pathen som anropats, samt eventuellt inkommande parametrar.
-
-Liknande utskrifter är bra att ha för att förstå vilken data som routen jobbar med.
+Vi skickar alltså tillbaka statusen 201 när vi skapar objekt med POST anrop och 204 när vi uppdaterar eller tar bort. Det är enkelt gjort med `status` funktion. För se innebörden av alla HTTP status koder finns [följande lista](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
 
 
@@ -292,21 +283,40 @@ Route med dynamiskt innehåll {#dynamiskt}
 Vi skapar nya routes för att se hur routern hanterar dynamiskt innehåll i form av parametrar.
 
 ```javascript
-// Add a saying hello
-app.get("/hello", (req, res) => {
-    res.send("Hello World");
+const express = require("express");
+const app = express();
+
+const port = 1337;
+
+// Add a route
+app.get("/", (req, res) => {
+    const data = {
+        data: {
+            msg: "Hello World"
+        }
+    };
+
+    res.json(data);
 });
 
-// Route with dynamic content save in a parameter
-app.get("/hello/:message", (req, res) => {
-    res.send(req.params.message);
+app.get("/hello/:msg", (req, res) => {
+    const data = {
+        data: {
+            msg: req.params.msg
+        }
+    };
+
+    res.json(data);
 });
+
+// Start up server
+app.listen(port, () => console.log(`Example API listening on port ${port}!`));
 ```
 
 Vi kan nu använda följande routes och se vad som händer.
 
 ```text
-/hello
+/
 /hello/Hello-World
 /hello/Hello World
 /hello/Jag kan svenska ÅÄÖ
@@ -316,7 +326,7 @@ Vi ser att parametern hanteras och kan nås i routen via `req.params`. Vi ser oc
 
 I webbsidan ser det ut som det ska.
 
-[FIGURE src=image/snapht17/express-encodeuri.png?w=w2 caption="I webbsidan ser det bra ut, ungefär som man tänkte."]
+[FIGURE src=image/ramverk2/dynamic-routing.png?w=w3 caption="I webbläsaren ser det bra ut, ungefär som man tänkte."]
 
 I terminalen där servern kör ser det ut så här.
 
@@ -341,6 +351,87 @@ $ node
 ```
 
 Det är bra att veta om att det finns en hantering av udda tecken som sker i bakgrunden.
+
+Om man vill använda sig av parametrar tillsammans med HTTP metoderna POST, PUT och DELETE används `body-parser`. Vi importerar modulen längst upp i `app.js`. Och lägger sen till att vi vill göra en parse på bodyn genom följande rader kod.
+
+```javascript
+const bodyParser = require("body-parser");
+
+...
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+```
+
+
+
+Middleware - CORS och loggning {#middleware}
+--------------------------------------
+
+I express finns termen "middleware" som benämning på callbacks som anropas innan själva routens hanterare anropas. En middleware kan också vara en hanterare som alltid anropas för alla routes.
+
+Låt oss skapa en sådan middleware, som alltid anropas, oavsett route. Den skall skriva ut vilken route som accessades och med vilken metod.
+
+Vi lägger till middleware via metoden `app.use()`. Vi kan lägga till dem för en specifik route, eller för alla routes.
+
+```javascript
+// This is middleware called for all routes.
+// Middleware takes three parameters.
+app.use((req, res, next) => {
+    console.log(req.method);
+    console.log(req.path);
+    next();
+});
+```
+
+Middleware anropas i den ordningen de är definierade, när de matchar en route. Använd ett anrop till `next()` när du är klar och vill skicka vidare kontrollen till nästa middleware och slutligen till routens hanterare.
+
+Om du vill att denna middleware alltid skall anropas så behöver du lägga den högst upp i din kod.
+
+På serversidan ser du nu delar av innehållet i request-objektet som visar metoden och pathen som anropats, samt eventuellt inkommande parametrar.
+
+
+
+### Loggning med tredjepartsmodul
+
+Vi väljer i vårt API att använda en tredje parts modul `morgan` för loggning. Vi har redan installerad `morgan` som en del av `node_modules` och vi lägger till modulen i `app.js` enligt nedan och använder den inbyggda middleware för att skriva ut loggen. Vi lägger in anropet till `morgan` innan vi anropar några routes då vi vill att loggningen sker för alla routes.
+
+```javascript
+const express = require('express');
+const morgan = require('morgan');
+
+const app = express();
+const port = 1337;
+
+// don't show the log when it is test
+if (process.env.NODE_ENV !== 'test') {
+    // use morgan to log at command line
+    app.use(morgan('combined')); // 'combined' outputs the Apache style LOGs
+}
+```
+
+
+
+### Cross-Origin Resource Sharing (CORS) {#cors}
+
+Då vi vill att vårt API ska kunna konsumeras av många olika klienter vill vi tillåta att klienter från andra domäner kan hämta information från vårt API. Vi gör även detta med en tredjepartsmodul `cors`, som vi installerade i början av artikeln. På samma sätt som för `morgan` använder vi den inbyggda middleware och använder funktionen `use`.
+
+```javascript
+const express = require('express');
+const cors = require('cors');
+const morgan = require('morgan');
+
+const app = express();
+const port = 1337;
+
+app.use(cors());
+
+// don't show the log when it is test
+if (process.env.NODE_ENV !== 'test') {
+    // use morgan to log at command line
+    app.use(morgan('combined')); // 'combined' outputs the Apache style LOGs
+}
+```
 
 
 
@@ -373,375 +464,113 @@ Det finns alltså en inbyggd felhanterare som visar upp information om felet, ti
 När node startar upp Express så är det default i utvecklingsläge. Du kan testa att starta upp i produktionsläge, det ger mindre information i felmeddelandena.
 
 ```bash
-$ NODE_ENV="production" node index.js
+$ NODE_ENV="production" node app.js
 ```
 
 Nu försvann stacktracen från klienten, men den syns fortfarande i terminalen där servern körs.
 
 [FIGURE src=image/snapvt17/express-error-handling-production.png?w=w2 caption="I produktion så visas inte stacktrace för klienten."]
 
-När vi utvecklar så blir det enklast att köra development läge (standard). Men när man sätter en server i produktion så får man se till att det också är produktionsläge för felmeddelandena, vilket innebär att visa så lite information som möjligt.
+Vi ser till att även skapa ett npm skript för att köra i produktion som vi sedan kan använda på servern. Vi kan då köra `npm run production` för att starta i i produktion.
 
-
-
-Vyer {#vyer}
---------------------------------------
-
-Låt oss kika på hur vi kan rendera svar som är en kombination av HTML och utskrift av JavaScript variabler.
-
-Vi använder [Pug](https://www.npmjs.com/package/pug) som templatemotor. [Manualen till Pug](https://pugjs.org/api/getting-started.html) finner vi på deras hemsida. Den är bra att ha tillhanda nu när vi skall börja använda Pug för att skapa dynamiska HTML-sidor.
-
-
-
-###Pug med Express {#pgexpr}
-
-Vi behöver säga till Express att vi vill använda Pug som template-motor.
-
-```javascript
-// Use app as template engine
-app.set('view engine', 'pug');
-```
-
-
-
-###En vy-fil {#viewfile}
-
-Vi behöver även skapa vy-filer, eller template-filer som de också kan kallas. Jag kallar dem vy-filer i denna artikeln.
-
-Express förutsätter att vy-filerna finns i katalogen `views/` och namnges med filändelsen `.pug`.
-
-Vi skapar `views/page.pug` som en exempel-vy.
-
-```bash
-$ mkdir views
-$ touch views/page.pug
-```
-
-Spara följande kod i `views/page.pug`.
-
-```text
-doctype html
-html
-    head
-        title= title
-        link(rel="stylesheet", href="/css/style.css")
-    body
-        h1= message
-        p This is a plain paragraph with a url. Here comes <a href="/test/page">the actual link</a>.
-        p Here is a image <img id="image" src="/img/mos.jpg">.
-
-        script(src="/js/move.js")
-```
-
-Med Pug kan man skriva enligt deras egen variant av förenklad HTML och kombinera den med vanlig HTML, samtidigt kan man skriva ut innehållet från de medskickade JavaScript-variablerna inuti HTML-koden.
-
-En templatemotor kopplar samman JavaScript-variabler med statisk HTML-kod och låter oss generera sidor med dynamiskt innehåll, innehåll som vi till exempel kan hämta från en databas eller annan källa.
-
-
-
-###En route som renderar en vy {#rendera}
-
-Nu behöver vi en route som kan rendera vyn.
-
-```javascript
-app.get("/test/page", (req, res) => {
-    res.render("page", {
-        title: "Hey",
-        message: "Hello there!"
-    });
-});
-```
-
-När allt fungerar ihop så kan vi testa routen och få fram följande sida.
-
-[FIGURE src=image/snapvt17/express-pug-page.png?w=w2 caption="En HTML-sida genererad via en Pug-vy inklusive dynamisk information från JavaScript."]
-
-Om du kan klicka på bilden så att den flyttar sig så fungerar även det inkluderade JavaScriptet och stylesheeten.
-
-
-
-###Dubbelkolla vilken HTML som genereras {#pretty}
-
-När Pug genererar HTML-koden så är den minifierad. Det kan vara svårt att utveckla och debugga sina vy-filer med minifierad HTML kod.
-
-När vi är i utvecklingsläge kan det därför vara bättre att generera HTML-koden så den blir snyggt formatterad. Lägg till följande kod så kommer Pug att generera snyggt formatterad HTML-kod.
-
-```javascript
-if (app.get('env') === 'development') {
-    app.locals.pretty = true;
+```json
+{
+    "scripts": {
+        "start": "node app.js",
+        "production": "NODE_ENV='production' node app.js"
+    }
 }
 ```
 
-Du kan dubbelkolla vilken HTML-kod som genereras genom att högerklicka och visa källkoden i webbläsaren.
-
-
-
-###Mer dynamiskt innehåll {#routepara}
-
-Vi kan få innehållet i sidan att ändra sig beroende på hur routen ser ut. Om vi parametriserar routens delar så kan vi skriva så här.
-
-```javascript
-app.get("/test/:title/:message", (req, res) => {
-    res.render("page", {
-        title: req.params.title,
-        message: req.params.message
-    });
-});
-```
-
-Det är ett sätt att fånga en route som heter `/test/some-title/some-message` eller routen `/test/My Title/No particular message`.
-
-Delen av routen som anges som `:title` hamnar i `req.params.title` och motsvarande sker för `:message`.
-
-Resultatet kan se ut så här.
-
-[FIGURE src=image/snapvt17/express-route-params.png?w=w2 caption="Innehållet i HTML-sidan kommer från routens innehåll."]
-
-En udda sida måhända, men den får demonstrera hur man kan jobba med dynamisk information och parametriserade routes.
-
-
-
-Layout för vyer {#layout}
---------------------------------
-
-Du kan bygga upp en vy-struktur där du skapar en sidlayout som du sedan anpassar, med innehåll, när sidresultatet skall genereras. Detta är ett bra sätt att lägga en gemensam struktur för alla sidor på en webbplats.
-
-Låt oss göra en ny testroute `/test/home` som renderar en sida via vy-filen `views/home.pug` som i sin tur använder layoutfilen `views/layout.pug`.
-
-Först skapar vi routens hanterare.
-
-```javascript
-app.get("/test/home", (req, res) => {
-    res.render("home", {
-        title: "Home"
-    });
-});
-```
-
-Vi skapar så en layoutfil `views/layout.pug` som ger webbplatsen en standardlayout.
-
-```text
-doctype html
-html
-    head
-        meta(charset="utf-8")
-        title= title
-        block style
-            link(rel="stylesheet", href="/css/style.css")
-    body
-        block header
-            div(class="site-header") Site header
-        block navbar
-            div(class="site-navbar") Site navbar
-        block main
-            main(class="main") Mainblock
-        block footer
-            div(class="site-footer")
-                p Copyright (c) by MegaMic
-        block script
-            script(src="/js/move.js")
-```
-
-Kika igenom koden och se om den kan ge en grundstruktur som en webbpalts vill ha.
-
-Sedan skapar vi vy-filen `views/home.pug` som skall använda sig av `views/layout.pug` för att rendera en sida.
-
-```text
-extend layout.pug
-
-block main
-    h1 My home page
-    p This is a plain paragraph with a url. Here comes <a href="/test/page">the actual link</a>.
-    p Here is a image <img id="image" src="/img/mos.jpg">.
-```
-
-Vi extendar, utökar, `views/layout.pug` och när vi gör det kan vi skriva om innehållet för de block vi väljer.
-
-Nu har du en struktur där varje sida kan ha sitt specifika innehåll och samtidigt bygga på en och samma (eller flera) sidlayouter.
-
-[FIGURE src=image/snapht17/express-layout.png?w=w2 caption="En sida med en vy-fil som extendar en annan."]
-
-
-
-
-Loopa och skriv ut i vyer {#loop}
---------------------------------------
-
-Vi tar ett exempel på hur vi kan loopa igenom data från routen och skriva ut det i vyn i en loop. Vi simulerar en bloggsida.
-
-Först lägger vi till routen för `/test/blog` som skickar en titel och en array med bloggposter till vyn.
-
-```javascript
-app.get("/test/blog", (req, res) => {
-    res.render("blog", {
-        title: "Blog",
-        posts: [
-            {
-                title: "Blog post 1",
-                content: "Content 1."
-            },
-            {
-                title: "Blog post 2",
-                content: "Content 2."
-            },
-            {
-                title: "Blog post 3",
-                content: "Content 3."
-            },
-        ]
-    });
-});
-```
-
-Sedan skapar vi vyn `views/blog.pug` som loopar genom arrayen och skriver ut varje bloggpost för sig.
-
-```text
-extend layout.pug
-
-block main
-    each value, index in posts
-        section
-            h1= value.title
-            p= value.content
-            p= index
-```
-
-Så här kan det se ut.
-
-[FIGURE src=image/snapht17/express-blog.png?w=w2 caption="En blogg-sida som bygger på en loop-konstruktion."]
-
-Loopkonstruktionen är inbyggd i Pug.
-
-
-
-Hantera Markdown i Pug {#markdown}
---------------------------------------
-
-Man kan hantera innehåll i Markdown direkt i en Pug template. Featuren i Pug heter filter och ett av de filter som stöds är `markdown-it`.
-
-Först behöver du installera npm-paketet [`jstransformer-markdown-it`](https://www.npmjs.com/package/jstransformer-markdown-it).
-
-```bash
-npm install jstransformer-markdown-it --save
-```
-
-
-
-###Skriva Markdown direkt i vy-filen {#mdvy}
-
-Vi gör en ny route för att testa hur det fungerar.
-
-```javascript
-app.get("/test/markdown", (req, res) => {
-    res.render("markdown", {
-        title: "Markdown"
-    });
-});
-```
-
-Jag skapar då vy-filen `views/markdown.pug` och lägger in text skriven i Markdown som konverteras till HTML när vyn renderas.
-
-```text
-extend layout.pug
-
-block main
-    main
-        :markdown-it(linkify langPrefix='highlight-')
-            # Markdown
-
-            ## Another headline
-
-            Markdown document with http://links.com and codeblocks.
-
-            Another paragraph.
-```
-
-Så här kan det se ut.
-
-[FIGURE src=image/snapht17/express-markdown.png?w=w2 caption="En sida med Markdown direkt från vy-filen via filter."]
-
-
-
-###Inkludera fil skriven i Markdown {#mdinclude}
-
-Du kan också inkludera en extern Markdown-fil och använda filtret `:markdown-it` för att rendera innehållet till HTML.
-
-Låt oss testa med en ny route.
-
-```javascript
-app.get("/test/markdown-include", (req, res) => {
-    res.render("markdown-include", {
-        title: "Markdown include"
-    });
-});
-```
-
-Vår vy-fil `views/markdown-include.pug` inkluderar nu en extern Markdown-fil som passerar filtret `:markdown-it`.
-
-```text
-extend layout.pug
-
-block main
-    main
-        include:markdown-it ../content/article.md
-```
-
-Så här kan det se ut.
-
-[FIGURE src=image/snapht17/express-markdown-include.png?w=w2 caption="En sida med Markdown där innehållet inkluderats från en extern fil."]
-
-Det går alltså att separera vy-filer från dess innehåll, vilket är en bra sak.
-
-Ett alternativ till att göra detta i vy-filerna är att låta routens hanterare läsa och kompilera markdown-filen, och hantera cachning.
+När vi utvecklar så blir det enklast att köra development läge (standard). Men när man sätter en server i produktion så får man se till att det också är produktionsläge för felmeddelandena, vilket innebär att visa så lite information som möjligt.
 
 
 
 En egen hanterare för felutskrift {#errorHandler}
 --------------------------------------
 
-Vi kan skapa vår egen felhanterare och rendera innehållet i en vy.
+Vi kan skapa vår egen felhanterare och skicka felmeddelandet som JSON.
 
-En egen felhanterare i Express kan se ut så här.
+En egen felhanterare i Express kan se ut som det `app.use` funktionsanrop längst ner. Vi kombinerar det med vår hanterare för 404 felmeddelande och använder `next(err);` för att skicka vidare felmeddelandet till vår egen hanterare.
 
 ```javascript
-// Note the error handler takes four arguments
+app.use((req, res, next) => {
+    var err = new Error("Not Found");
+    err.status = 404;
+    next(err);
+});
+
 app.use((err, req, res, next) => {
     if (res.headersSent) {
         return next(err);
     }
-    err.status = err.status || 500;
-    res.status(err.status);
-    res.render("error", {
-        error: err
+
+    res.status(err.status || 500).json({
+        "errors": [
+            {
+                "status": err.status,
+                "title":  err.message,
+                "detail": err.message
+            }
+        ]
     });
 });
 ```
 
 Kom ihåg att en sådan här felhanterare är som all annan middleware och det är viktigt i vilken ordning de ligger. De kan anropas i den ordningen som de definieras.
 
-Vi behöver en vy-fil `error.pug` för att rendera svaret i.
 
-```text
-extend layout.pug
 
-block main
-    main
-        h1= error.message
-        h2= error.status
-        pre #{error.stack}
+Uppdelning av routes {#splitroutes}
+--------------------------------------
+
+Med tanke på de få routes vi kommer ha tillgängliga i våra API:er hade det inte varit helt orimligt att ha al hantering i `app.js`, men vi väljer ändå att dela upp våra routes då vi gillar bra struktur inför framtida uppskalningar.
+
+Vi skapar katalogen `routes` och i den katalogen skapar vi två stycken filer `index.js` och `hello.js`. Här skapar vi och returnerar ett objekt av typen `express.Router()`.
+
+```javascript
+var express = require('express');
+var router = express.Router();
+
+router.get('/', function(req, res, next) {
+    const data = {
+        data: {
+            msg: "Hello World"
+        }
+    };
+
+    res.json(data);
+});
+
+module.exports = router;
 ```
 
-Om vi nu tar en route som inte finns så kommer svaret att renderas i vår egen vy.
+Vi importerar sedan dessa filer i `app.js` och använder de som routehanterare med ett funktionsanrop till `use`.
 
-[FIGURE src=image/snapht17/express-view-404.png?w=w2 caption="Vår egen felhanterare som nu renderas i vår egen vy."]
+```javascript
+...
+
+const index = require('./routes/index');
+const hello = require('./routes/hello');
+
+...
+
+app.use('/', index);
+app.use('/hello', hello);
+```
+
+På det sättet håller vi `app.js` liten i storlek och var sak har sin plats.
+
+
+
+Driftsättning {#deployment}
+--------------------------------------
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Detta var en introduktion i webb- och applikationsservern Express tillsammans med grundläggande begrepp såsom router, request, response, vyer och templatemotor.
+Detta var en introduktion i webb- och applikationsservern Express tillsammans med grundläggande begrepp såsom router, request, response och hur vi svarar med ett JSON svar. Du har nu grunderna för att skriva ditt eget API.
 
-Du har nu grunderna för att skriva din egen webb/applikationsserver.
-
-Denna artikel har en [egen forumtråd](t/6329) som du kan ställa frågor i, eller ge tips.
+För fullständiga kodexempel titta gärna ytterligare i exempelprogrammet [`emilfolino/ramverk2-me`](https://github.com/emilfolino/ramverk2-me) och live på [me-api.jsramverk.me](https://me-api.jsramverk.me).

@@ -22,14 +22,14 @@ Du skall lägga all kod i ett repo på GitHub. När du är klar så publicerar d
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)".
+Du har jobbat igenom artikeln "[Node.js API med Express](kunskap/nodejs-api-med-express)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Du ska bygga ett API som skickar ett JSON objekt för varje redovisningstext samt en kort introduktion av dig själv. Du ska välja ett backend ramverk för att skapa ditt API och sedan implementera ett litet API med i första skedet två router: `/me` och `/kmom01`.
+Du ska bygga ett API som skickar ett JSON objekt för varje redovisningstext samt en kort introduktion av dig själv. Du ska välja ett backend ramverk för att skapa ditt API och sedan implementera ett litet API med i första skedet två router: `/` och `/reports/kmom01`.
 
 
 
@@ -60,7 +60,7 @@ Krav {#krav}
 
 1. Skapa routen `/` där du ger en presentation av dig själv.
 
-1. Skapa routen `/report/kmom01` där du ger din redovisningstext för kmom01.
+1. Skapa routen `/reports/kmom01` där du ger din redovisningstext för kmom01.
 
 1. Committa alla filer och lägg till en tagg (1.0.0) med hjälp av `npm version 1.0.0`. Det skapas automatiskt en motsvarande tagg i ditt GitHub repo. Lägg till fler taggar efterhand som det behövs. Var noga med din committ-historik.
 
