@@ -5,13 +5,8 @@ author:
     - lew
     - mos
 revision:
-    "2018-12-21": (G, mos) Inför skapandet av linux v3, nytt namn, syfte, förkunskaper och kurskod.
-    "2017-12-21": (F, mos) Genomgången inför vt18.
-    "2017-12-18": (E, mos) Bort varningstext.
-    "2016-12-16": (D, mos) Förberedelse inför linux-v2.
-    "2016-09-09": (C, mos) Bytte till rätt kursnamn.
-    "2015-08-03": (B, mos) Klar med texter för kursmomenten.
-    "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
+    "2018-12-21": (B, lew) ...
+    "2018-12-21": (A, mos) Inför skapandet av linux v3, nytt namn, syfte, förkunskaper och kurskod.
 ...
 Kursen linux (v3)
 ==================================
@@ -63,15 +58,15 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Installation av Linux och Linux som server. Paket och pakethantering 
+* Installation av Linux och Linux som server. Paket och pakethantering
 * Installation av servrar likt webbserver, databas, PHP, sshd.
 * Linux med terminal (bash), ssh, vim, och systemkommandon.
 * Operativsystemets olika delar såsom filsystemet, processer och processhantering.
 * Skriptprogrammering i bash
-* JavaScript och Node.js.
+<!-- * JavaScript och Node.js.
 * Programmering i Linux-nära miljö med JavaScript och Node.js - filsystem och processer.
 * Felsökning och tekniker att debugga sitt program.
-* Utvecklingsmiljö och verktyg för utveckling med JavaScript, Node.js i en Linux-miljö.
+* Utvecklingsmiljö och verktyg för utveckling med JavaScript, Node.js i en Linux-miljö. -->
 
 
 
@@ -85,7 +80,7 @@ Mål {#mal}
 Efter genomförd kurs skall studenten:
 
 * påvisa grundläggande förståelse för operativsystemet Linux genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* påvisa goda kunskaper i att använda JavaScript på serversidan tillsammans med Node.js och Linux genom att tillämpa dessa tekniker i praktiska övningar och projekt.
+* påvisa grundläggande förståelse för att använda virtualiseringstekniker i Linux genom att tillämpa dessa tekniker i praktiska övningar och projekt.
 
 
 
@@ -179,7 +174,7 @@ Kurslitteratur {#litteratur}
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
+Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet.
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
@@ -226,13 +221,13 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 |------------|--------------------|-----------------|-------------------|
 | Kmom01     | 1, 2, 3, 4         | 1, 4            |                   |
 | Kmom02     | Repetera 1-4       | 6, 7            |                   |
-| Kmom03     | 6, 24              |                 |                   | 
+| Kmom03     | 6, 24              |                 |                   |
 | Kmom04     |                    |                 | 1, 2              |
-| Kmom05     |                    |                 |                   | 
-| Kmom06     |                    |                 |                   | 
+| Kmom05     |                    |                 |                   |
+| Kmom06     |                    |                 |                   |
 | Kmom10     |                    |                 |                   |
 
-Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion för kursmomentet. 
+Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion för kursmomentet.
 
 
 
@@ -284,7 +279,7 @@ Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
