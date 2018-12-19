@@ -34,6 +34,8 @@ Förutsättning {#pre}
 
 Du kan grunderna i Node.js och JavaScript på serversidan.
 
+Du har genomgått artikeln "[GitHub Education Pack och en server på Digital Ocean](kunskap/github-education-pack-och-en-server-pa-digital-ocean)" och har en server på Digital Ocean samt ett domännamn.
+
 Exempelprogram från tidigare version av kursen finns i ditt kursrepo under `example/express` (ramverk2).
 
 Jag fixade ett exempel, bara för att kolla att alla delarna fungerar tillsammans som tänkt. Du kan se mitt exempel på [`emilfolino/ramverk2-me`](https://github.com/emilfolino/ramverk2-me) och det finns live på [me-api.jsramverk.me](https://me-api.jsramverk.me).
@@ -566,11 +568,94 @@ På det sättet håller vi `app.js` liten i storlek och var sak har sin plats.
 Driftsättning {#deployment}
 --------------------------------------
 
+För att våra klienter ska komma åt API:t ser vi till att driftsätta det på vår server. Vi ska använda oss av det som kallas en nginx reverse proxy för att trafiken utifrån på port 80 eller 443 (vanliga portarna för HTTP och HTTPS) ska skickas till vårt API som ligger och lyssnar på en annan port.
+
+När vi installerade nginx fick vi med oss ett antal olika kataloger och konfigurationsfiler. I katalogen `/var/www` kommer vi skapa kataloger för de webbplatser vi vill skapa på vår server. Vi börjar med att logga in på servern som `deploy` och skapar en katalog för vårt API.
+
+Jag kommer i följande exempel utgå ifrån min konfiguration på servern [jsramverk.me](https://jsramverk.me) där mitt API ligger på subdomänen [me-api.jsramverk.me](https://me-api.jsramverk.me).
+
+Jag skapar alltså katalogen `/var/www/me-api.jsramverk.me/html` enklast med kommandot `sudo mkdir -p /var/www/me-api.jsramverk.me/html`. Denna katalog kommer inte användas för filer, men vi kommer använda den i ett senare skede när vi vill spara ett certifikat för HTTPS trafik till vårt API.
+
+Jag har satt i gång API:t med kommandot `npm run production` och API:t ligger och lyssnar på port 8333. Den reverse proxy som vi skapar i följande stycke lyssnar i första skedet på port 80 och skickar vidare förfrågningarna till 8333.
+
+I katalogen `/etc/nginx/sites-available` skapar vi en konfigurationsfil `me-api.jsramverk.me` genom att kopiera standard konfiguration från filen `default` och öppna upp filen i text editorn nano. Vi gör det med följande kommandon.
+
+```bash
+cd /etc/nginx/sites-available
+sudo cp default me-api.jsramverk.me
+sudo nano me-api.jsramverk.me
+```
+
+I filen klistrar vi in följande konfiguration. Först skapar vi en server med namnet me-api.jsramverk.me. Vi skapar därefter två stycken `location`. Det är routes där vi vill att nått speciellt ska hända. Den första är för en fil relaterad till det certifikat vi ska installera om ett ögonblick för att fixa HTTPS till vår server. Den andra `location /` är alla andra routes som ska skickas till `http://localhost:8333` där vårt API ligger och lyssnar. Detta kallas en reverse proxy och användas i många sammanhang för att kopplat förfrågningar på port 80 till en annan port. En reverse proxy används då man inte vill öppna portarna utåt, men vill låta nginx ta hand om detta.
+
+```bash
+server {
+    server_name me-api.jsramverk.me;
+
+    location /.well-known {
+        alias /var/www/me-api.jsramverk.me/html/.well-known;
+    }
+
+    location / {
+        proxy_pass http://localhost:8333;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    listen 80;
+}
+```
+
+Vi sparar filen genom att trycka `Ctrl-X` och skriva in ett y + Enter. Vi skapar sedan en symbolisk länk i katalogen `/etc/nginx/sites-enabled` till vår konfigurations fil för att sidan blir tillgänglig.
+
+```bash
+cd /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/me-api.jsramverk.me
+```
+
+Vi vill sedan testa om konfigurationen är korrekt och sedan starta om nginx och det gör vi med följande kommandon.
+
+```bash
+sudo nginx -t
+sudo service nginx restart
+```
+
+För att internet ska veta att vi har en server som ligger här och vill svara på förfrågningar skapa vi en subdomän i Digital Ocean gränssnittet. Gå till Networking och välj din domän skriv sedan in din subdomän välj din droplet och skapa din subdomän.
+
+[FIGURE src=image/ramverk2/do-subdomain.png?w=w3 caption="Digital Ocean subdomän"]
+
+Det ska nu gå att se ett JSON svar från API:t om vi går till vår subdomän.
+
+
+
+HTTPS {#https}
+--------------------------------------
+
+Då vi är medvetna om våra användares privatliv vill vi att alla anslutningar till våra tjänster och services sker över HTTPS, som krypterar den data som skickas. Vi behöver därför installera ett certifikat. Vi väljer att använda ett certifikat från [Let's Encrypt](https://letsencrypt.org/) och vi installerar det med tjänsten [Certbot](https://certbot.eff.org/) då vi har tillgång till serverns CLI.
+
+Vi behöver först öppna upp så vi kan installera paket från det som heter APT backports. Vi öppnar upp filen `/etc/apt/sources.list` och letar reda på följande två rader som vi avkommenterar. Raderne brukar finnas längst ner i filen.
+
+```bash
+deb http://mirrors.digitalocean.com/debian stretch-backports main contrib non-free
+deb-src http://mirrors.digitalocean.com/debian stretch-backports main contrib non-free
+```
+
+Vi kan nu installera verktyget certbot med kommandot `sudo apt-get install python-certbot-nginx -t stretch-backports`.
+
+Vi startar verktyget genom att köra kommandot `sudo certbot --nginx`. Vi får då välja för vilka domäner och subdomäner vi vill installera certifikat. Efter att vi har vald domänerna får vi frågan om vi vill omdirigera all trafik till HTTPS istället för HTTP och det svarar vi ja till (i certbot gränssnittet motsvarar det en tvåa).
+
+Vi ska nu se en hänglås i adressfältet om vi uppdaterar i webbläsaren.
+
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
 Detta var en introduktion i webb- och applikationsservern Express tillsammans med grundläggande begrepp såsom router, request, response och hur vi svarar med ett JSON svar. Du har nu grunderna för att skriva ditt eget API.
+
+Vi har även driftsatt API:t på vår server och skaffat ett certifikat för HTTPS.
 
 För fullständiga kodexempel titta gärna ytterligare i exempelprogrammet [`emilfolino/ramverk2-me`](https://github.com/emilfolino/ramverk2-me) och live på [me-api.jsramverk.me](https://me-api.jsramverk.me).
