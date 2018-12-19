@@ -188,11 +188,11 @@ Vi kan nu köra kommandot `npm run deploy` och applikationen byggas för produkt
 
 
 
-
-
-
-
 Avslutningsvis {#avslutning}
 --------------------------------------
 
 Vi har i denna artikel skrapat ytan på JavaScript ramverken Angular, Mithril, React och Vue, samt jämfört ramverken med vanilla JavaScript. Vi har även tittat på hur vi kan driftsätta en applikation skapat i det valda ramverket på vår cloud-server.
+
+Vi avslutar denna artikel med en video där den tidigare BDFL för [django](https://www.djangoproject.com/) pratar om hur vi inte alltid behöver ett JavaScript ramverk.
+
+[YOUTUBE src=k7n2xnOiWI8 caption="A Framework Author's Case Against Frameworks - Adrian Holovaty - dotJS"]
