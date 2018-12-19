@@ -200,50 +200,53 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Databasteknik          | Javascript ES5   | JavaScript ES6   |
-|------------|------------------------|------------------|------------------|
-| Kmom01     | 1, 7, 28               |                  |                  |
-| Kmom02     | 8, 20 (10)             | 1, 13            | 4                |
-| Kmom03     | 2, 4, 5, 6 (3, 11)     |                  |                  | 
-| Kmom04     | 23 (24)                |                  |                  |
-| Kmom05     | 12, 14, 15             |                  |                  | 
-| Kmom06     | 9, 21 (22)             |                  |                  | 
-| Kmom10     |                        |                  |                  |
+| Kursmoment | Databasteknik      | Javascript ES5 | JavaScript ES6 |
+|------------|--------------------|----------------|----------------|
+| Kmom01     | 1, 7, 28           |                |                |
+| Kmom02     | 8, 20 (10)         | 1, 13          | 4              |
+| Kmom03     | 2, 4, 5, 6 (3, 11) |                |                |
+| Kmom04     | 23 (24)            |                |                |
+| Kmom05     | 12, 14, 15         |                |                |
+| Kmom06     | 9, 21 (22)         |                |                |
+| Kmom10     |                    |                |                |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Varje kursmoment kan ha ytterligare läsanvisningar i artiklar, video och annat studiematerial. 
 
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod4).
+Kursen har en [rekommenderad studieplan](kurser/databas/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-<!-- [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod3) -->
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan för kursen som är kopplad till kurspaketet](webprog#studieplan).
-
-Läser du kursen som en del av programmet Software Engineering eller International Software Engineering, så finns en [studieplan för kurskurstillfället som är kopplad till ditt program](kurser/databas/studieplan). Det finns också en [lektionsplan](kurser/databas/lektionsplan) kopplad till kurstillfället.
-
-En lektionsplanen visar de tillfällena som är schemalagda träffar. Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
-
-Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
-
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
 
 
 
-Lärarstöd och handledning {#handledning}
+Lektionsplan {#lektionsplan}
+---------------------------------------------
+
+Det finns en [lektionsplan](kurser/databas/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+
+
+
+Handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+
+Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 
 
 
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning). 
 
 
 
@@ -252,13 +255,15 @@ Ladok {#ladok}
 
 Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
 
-| Kursens moment  | Ladok moment enligt kursplan  | Betyg |
-|-----------------|-------------------------------|-------|
-| Kmom01 + kmom02 | Inlämningsuppgift 1 á 2.5hp   | G-U   |
-| Kmom03 + kmom04 | Inlämningsuppgift 2 á 2.5hp   | G-U   |
-| Kmom05 - kmom10 | Inlämningsuppgift 3 á 2.5hp   | A-F   |
+| Kursens moment  | Ladok moment enligt kursplan      | Betyg |
+|-----------------|-----------------------------------|-------|
+| Kmom01 + kmom02 | Inlämningsuppgift 1 á 2.5hp (3hp) | G-U   |
+| Kmom03 + kmom04 | Inlämningsuppgift 2 á 2.5hp (3hp) | G-U   |
+| Kmom05 - kmom10 | Inlämningsuppgift 3 á 2.5hp (4hp) | A-F   |
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
+
+Poängen inom parantes gäller kurskoden DV1605 för SE-programmet som läser kursen som en 10hp kurs då de inte har några förkunskaper i webbområdet. 
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
