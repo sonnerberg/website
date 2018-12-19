@@ -1,10 +1,19 @@
 ---
 author: mos
 revision:
+    "2018-12-19": (A1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok.
     "2018-01-02": (A, mos) Första utgåvan.
 ...
 Kmom02: SQL
 ====================================
+
+[WARNING]
+
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Vi jobbar vidare med SQL och tränar mer på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
@@ -49,14 +58,14 @@ Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik) om mer SQL.
     * Kap 8: Mer om SQL: Aggregatfunktioner, null-värden, yttre join
-    * Kap 20: SQL inuti ett program
+    * Kap 21: SQL inuti ett program
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går utanför kursens ram men läs vid intresse.
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 10: Relationsalgebra
+    * Kap 11: Relationsalgebra
 
 
 

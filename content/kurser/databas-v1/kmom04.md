@@ -1,10 +1,19 @@
 ---
 author: mos
 revision:
-    "2018-01-09": (A, mos) Första utgåvan.
+    "2018-12-19": "(A1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
+    "2018-01-09": "(A, mos) Första utgåvan."
 ...
 Kmom04: Transaktioner
 ====================================
+
+[WARNING]
+
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Kursmomenten hanterar begreppet transaktioner i en databas.
 
@@ -33,14 +42,14 @@ Läs &amp; Studera  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 23: Transaktioner
+    * Kap 24: Transaktioner
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, det går utanför kursens ram men läs vid intresse.
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 24: Hur transaktioner hanteras inuti databashanteraren
+    * Kap 25: Hur transaktioner hanteras inuti databashanteraren
 
 
 

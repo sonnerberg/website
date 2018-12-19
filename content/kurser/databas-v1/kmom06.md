@@ -1,10 +1,19 @@
 ---
 author: mos
 revision:
-    "2018-02-20": (A, mos) Första utgåvan.
+    "2018-12-19": "(B1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
+    "2018-02-20": "(A, mos) Första utgåvan."
 ...
 Kmom06: Prestanda
 ====================================
+
+[WARNING]
+
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Vi fortsätter med programmering i databasen, denna gången med egendefinierade funktioner som har en liknande struktur som lagrade procedurer och triggers.
 
@@ -32,14 +41,14 @@ Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 9: Sammanfattning av SQL-kommandon
-    * Kap 21: Index och prestanda
+    * Kap 22: Index och prestanda
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 Det finns ytterligare ett kapitel i boken som är relaterat till prestanda, det går utanför kursens ram men läs vid intresse.
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 22: Fysiska lagringsstrukturer i databaser
+    * Kap 23: Fysiska lagringsstrukturer i databaser
 
 
 <!--

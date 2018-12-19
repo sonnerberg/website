@@ -2,6 +2,7 @@
 title: databas-v1
 author: mos
 revision:
+    "2018-12-19": "(E, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-11-29": "(D, mos) Uppdaterad med nya kurskoder till vt19."
     "2018-09-20": "(C, mos) Förbereder inför ny kurskod till vt19."
     "2018-02-27": "(B, mos) Inkluderad i Webbprogrammering från vt18 lp4."
@@ -12,7 +13,7 @@ Kursen databas (v1)
 
 Kursen **Databasteknologier för webben**, a.k.a. *databas*, och syftet är att studenten ska förstå och lära sig modellera och implementera en databas samt utveckla en webbapplikation som använder databasen. Som applikationsspråk används serverbaserad JavaScript i webbmiljö.
 
-Kursen erbjuds även under namnet "Webbprogrammering och databaser" med en annan kurskod.
+Kursen erbjuds även under namnet "Webbprogrammering och databaser" med en alternativ kurskod.
 
 <!--more-->
 
@@ -202,12 +203,12 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 
 | Kursmoment | Databasteknik      | Javascript ES5 | JavaScript ES6 |
 |------------|--------------------|----------------|----------------|
-| Kmom01     | 1, 7, 28           |                |                |
-| Kmom02     | 8, 20 (10)         | 1, 13          | 4              |
-| Kmom03     | 2, 4, 5, 6 (3, 11) |                |                |
-| Kmom04     | 23 (24)            |                |                |
-| Kmom05     | 12, 14, 15         |                |                |
-| Kmom06     | 9, 21 (22)         |                |                |
+| Kmom01     | 1, 7, 29           |                |                |
+| Kmom02     | 8, 21 (11)         | 1, 13          | 4              |
+| Kmom03     | 2, 4, 5, 6 (3, 12) |                |                |
+| Kmom04     | 24 (25)            |                |                |
+| Kmom05     | 13, 15, 16         |                |                |
+| Kmom06     | 9, 22 (23)         |                |                |
 | Kmom10     |                    |                |                |
 
 Varje kursmoment kan ha ytterligare läsanvisningar i artiklar, video och annat studiematerial. 

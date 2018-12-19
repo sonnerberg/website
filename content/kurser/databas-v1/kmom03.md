@@ -1,10 +1,19 @@
 ---
 author: mos
 revision:
+    "2018-12-19": "(A1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-05": (A, mos) Första utgåvan.
 ...
 Kmom03: ER-modellering
 ====================================
+
+[WARNING]
+
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering.
 
@@ -47,7 +56,7 @@ Det finns ytterligare kapitel i boken som är relaterat till modellering. De gå
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 3: Mer om datamodellering
-    * Kap 11: Normalformer och normalisering
+    * Kap 12: Normalformer och normalisering
 
 
 

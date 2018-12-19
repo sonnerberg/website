@@ -1,11 +1,21 @@
 ---
 author: mos
 revision:
-    "2018-02-13": (B, mos) Ny uppgift, skapa grunden till eshop, flyttad från kmom04.
-    "2018-01-11": (A, mos) Första utgåvan.
+    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2018-12-19": "(C, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
+    "2018-02-13": "(B, mos) Ny uppgift, skapa grunden till eshop, flyttad från kmom04."
+    "2018-01-11": "(A, mos) Första utgåvan."
 ...
 Kmom05: Procedur och trigger
 ====================================
+
+[WARNING]
+
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
 
@@ -35,9 +45,9 @@ Läs &amp; Studera  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 12. Integritetsvillkor
-    * Kap 14: Lagrade procedurer
-    * Kap 15: Aktiva databaser och triggers
+    * Kap 13. Integritetsvillkor
+    * Kap 15: Lagrade procedurer
+    * Kap 16: Aktiva databaser och triggers
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 

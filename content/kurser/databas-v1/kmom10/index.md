@@ -1,11 +1,20 @@
 ---
 author: mos
 revision:
+    "2018-12-19": "(B1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-05-07": "(B, mos) Lade till examination för Webbprogrammering."
     "2018-02-27": "(A, mos) Första utgåvan."
 ...
 Kmom10: Projekt och examination
 ====================================
+
+[WARNING]
+
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 

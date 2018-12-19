@@ -1,12 +1,21 @@
 ---
 author: mos
 revision:
+    "2018-12-19": (C1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok.
     "2018-03-22": (C, mos) Bort 404 länk till labbmiljön.
     "2018-03-20": (B, mos) Bort med kopplingar till XAMPP och BTHs labbmiljö är enbart extra.
     "2017-12-28": (A, mos) Första utgåvan.
 ...
 Kmom01: Databas
 ====================================
+
+[WARNING]
+
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Då dyker vi in i relationsdatabaser tillsammans med SQL och modellering av databaser.
 
@@ -60,7 +69,7 @@ Läs följande:
 1. [Databasteknik](kunskap/boken-databasteknik) om MySQL.
     * Kap 1: Databaser och databashanterare
     * Kap 7: Introduktion till frågespråket SQL
-    * Kap 28: Introduktion till MySQL
+    * Kap 29: Introduktion till MySQL
 
 Viss information finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1 och 3.
 
