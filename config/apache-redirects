@@ -261,8 +261,8 @@ Redirect /forum/utbildning/dbjs     /forum/viewforum.php?f=64
 
 # databas (dataweb (dbw) + dbjs v2)
 Redirect /databas                      /kurser/databas
-Redirect /kurser/databas/lektionsplan  https://goo.gl/gYcKGk
-Redirect /kurser/databas/studieplan    https://goo.gl/oP1wIE
+Redirect /kurser/databas/lektionsplan  https://docs.google.com/spreadsheets/d/1Hd1DVPTqonOsPR6bwoSiuyT5_0pZLG95p0RNqeW5olM/edit?usp=sharing
+Redirect /kurser/databas/studieplan    https://docs.google.com/spreadsheets/d/1Gflek2AYBWOYZ3asKtcReJeWtpWiFZZpeMutjbGzGq8/edit?usp=sharing
 Redirect /kurser/databas               /kurser/databas-v1
 Redirect /forum/utbildning/databas     /forum/viewforum.php?f=73
 

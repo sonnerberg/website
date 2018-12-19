@@ -1,10 +1,11 @@
 ---
 author: mos
 revision:
-    "2018-12-19": (C1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok.
-    "2018-03-22": (C, mos) Bort 404 länk till labbmiljön.
-    "2018-03-20": (B, mos) Bort med kopplingar till XAMPP och BTHs labbmiljö är enbart extra.
-    "2017-12-28": (A, mos) Första utgåvan.
+    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2018-12-19": "(D, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
+    "2018-03-22": "(C, mos) Bort 404 länk till labbmiljön."
+    "2018-03-20": "(B, mos) Bort med kopplingar till XAMPP och BTHs labbmiljö är enbart extra."
+    "2017-12-28": "(A, mos) Första utgåvan."
 ...
 Kmom01: Databas
 ====================================

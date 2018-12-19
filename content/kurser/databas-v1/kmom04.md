@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-    "2018-12-19": "(A1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
+    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-09": "(A, mos) Första utgåvan."
 ...
 Kmom04: Transaktioner

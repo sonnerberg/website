@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-    "2018-12-19": "(B1, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
+    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-02-20": "(A, mos) Första utgåvan."
 ...
 Kmom06: Prestanda
