@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2018-12-19": (C, aar) Bytte från It Learning till Canvas och gjorde forumet valfritt.
     "2017-01-20": (B, aar) Uppdaterade vilken fil som skrivs i och ändrade från python till oopython.
     "2016-04-12": (A, lew) Första versionen.
 ...
@@ -40,7 +41,7 @@ Den länken som dyker upp längst ned är länken till din me-sida. Där kan du 
 
 
 
-Kopiera redovisningstexten till forumet {#forum}
+Kopiera redovisningstexten till forumet, Valfri {#forum}
 ---------------------------------------
 
 Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/oopython).
@@ -49,10 +50,10 @@ Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-s
 
 
 
-Kopiera redovisningstexten till ITs {#its}
+Kopiera redovisningstexten till Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) tillsammans med en länk till din me-sida.
+Kopiera redovisningstexten och lämna in den på redovisningen [Canvas](bth#canvas) tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 

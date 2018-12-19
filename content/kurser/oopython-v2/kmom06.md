@@ -7,7 +7,13 @@ revision:
 ...
 Kmom06: Analysera och Förbättra kod
 ====================================
+[WARNING]
 
+**Översikt pågår**
+
+Kursmomentet är under översyn inför vårterminen 2019.
+
+[/WARNING]
 
 Vi ska öva på att läsa och förstå kod. Hur förstår vi koden på bästa sätt? Vad är det som tar tid i koden? Kan vi förbättra koden?
 
