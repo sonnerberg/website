@@ -4,6 +4,7 @@ category:
     - ramverk2
     - verktyg
 revision:
+    "2018-12-19": "(A, efo) La till information om installation av verktygen nginx, node, tmux och git."
     "2018-11-07": "(A, efo) Första utgåvan för ramverk2 version 2 av kursen."
 ...
 GitHub Education Pack och en server på Digital Ocean
