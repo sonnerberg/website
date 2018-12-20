@@ -47,9 +47,8 @@ I nedanstående tabell listas de rader kod som utvecklaren har skrivit för att 
 |  | Angular | Mithril | React | Vue | Vanilla JS |
 |-----|--------|--------|--------|---------|--------|
 | calculator  |  | 103 |  | 98 | 118 (94 i DOM varianten) |
-| multipage   |  |  46 |  |  |  59 |
-| quote       |  |  47 |  69 |  |  24 |
-| tic-tac-toe |  | 136 | 146 |  | 126 |
+| me   | 166 | 107 | 117 | 134 | 92 |
+| tic-tac-toe |  | 136 | 146 | 136 | 126 |
 
 
 
@@ -59,10 +58,9 @@ I nedanstående tabell listas storleken på produktionsfilerna som skapas av ant
 
 |  | Angular | Mithril | React | Vue | Vanilla JS |
 |-----|--------|--------|--------|---------|--------|
-| calculator  |  | 30K |  |  | 2.6K (1.6K i DOM variant) |
-| multipage   |  | 28K |  |  | 1.1K |
-| quote       |  | 28K |  |  | 777B |
-| tic-tac-toe |  | 29K |  |  | 2.8K |
+| calculator  |  | 30K |  | 83K | 2.6K (1.6K i DOM variant) |
+| me   | 329K | 29K | 134K | 106K | 2.2K |
+| tic-tac-toe |  | 29K | 37K | 87K | 2.8K |
 
 
 
@@ -84,6 +82,16 @@ Driftsättning {#deploy}
 --------------------------------------
 
 I denna del av artikeln ska vi titta på hur vi driftsätter appar vi har skapat med hjälp av dessa ramverk på vår server.
+
+
+
+### Domän {#deploy-domain}
+
+Vi vill i de flesta fall lägga våra alster på en domän eller subdomän. Vi har redan pekat al trafik från registratorn namecheap till vårt Cloud i Digital Ocean. Vi behöver därför bara skapa en subdomän i Digital Ocean. Vi gör det på samma sätt som i "[Node.js API med Express](kunskap/nodejs-api-med-express)". Gå till Networking och välj din domän skriv sedan in din subdomän välj din droplet och skapa subdomänen.
+
+[FIGURE src=image/ramverk2/do-subdomain.png?w=w3 caption="Digital Ocean subdomän"]
+
+Ibland kan det ta en liten stund innan subdomäner kommer på plats, så avvakta lite grann om det inte syns direkt.
 
 
 
@@ -136,6 +144,66 @@ Jag väljer att använda möjligheten för att skapa npm-scripts i `package.json
 ```
 
 Vi kan nu köra kommandot `npm run deploy` och applikationen byggas för produktion samt överföras till rätt katalog på servern.
+
+
+
+### Mithril {#mithril}
+
+
+
+
+### React {#react}
+
+För att driftsätta en React app krävs att vi har en statisk fil webbserver (static file web server) till exempel nginx. Om appen är skapat med hjälp av `create.react-app` kan vi skapa produktionsfilerna med hjälp av kommandot `npm run build`. Vi har då en `build/` katalog som är de filerna som ska användas när vi vill driftsätta.
+
+Vi skapar en site i nginx med följande konfiguration, där du byter ut `[SERVER_NAME]` med det server namn du vill använda. Vi skapar även root katalogen `/var/www/[SERVER_NAME]/html` med kommandot `sudo mkdir -p /var/www/[SERVER_NAME]/html`.
+
+```bash
+server {
+
+        root /var/www/[SERVER_NAME]/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name [SERVER_NAME];
+
+        charset utf-8;
+
+        error_page 404 /index.html;
+
+        location / {
+        }
+}
+```
+
+Skapa en symbolisk länk från `/etc/nginx/sites-enabled` katalogen till din konfigurations-fil i `sites-available`. Kör sedan kommandot `sudo nginx -t` för att testa konfigurationen och `sudo service nginx restart` för att starta om nginx.
+
+Då jag inte vill installera och bygga applikationer på servern väljer jag att använda `rsync` för att överföra filer till servern. Först behöver dock `deploy`-användaren äga och få skriva till katalogen `/var/www/[SERVER_NAME]/html`. Det gör vi med följande kommandon.
+
+```bash
+sudo chown deploy:deploy /var/www/[SERVER_NAME]/html
+sudo chmod 775 /var/www/[SERVER_NAME]/html
+```
+
+Jag väljer att använda möjligheten för att skapa npm-scripts i `package.json` och skapar ett deploy script på följande sätt. I nedanstående är `[SERVER]` din domän och `[SERVER_NAME]` samma som tidigare.
+
+```json
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "deploy": "npm run build && rsync -av build/* deploy@[SERVER]:/var/www/[SERVER_NAME]/html/"
+},
+```
+
+Vi kan nu köra kommandot `npm run deploy` och applikationen byggas för produktion samt överföras till rätt katalog på servern.
+
+
+
+### Vanilla JavaScript {#vanilla}
+
 
 
 

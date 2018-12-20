@@ -623,11 +623,11 @@ sudo nginx -t
 sudo service nginx restart
 ```
 
-För att internet ska veta att vi har en server som ligger här och vill svara på förfrågningar skapa vi en subdomän i Digital Ocean gränssnittet. Gå till Networking och välj din domän skriv sedan in din subdomän välj din droplet och skapa din subdomän.
+För att internet ska veta att vi har en server som ligger här och vill svara på förfrågningar skapar vi en subdomän i Digital Ocean gränssnittet. Gå till Networking och välj din domän skriv sedan in din subdomän välj din droplet och skapa subdomänen.
 
 [FIGURE src=image/ramverk2/do-subdomain.png?w=w3 caption="Digital Ocean subdomän"]
 
-Det ska nu gå att se ett JSON svar från API:t om vi går till vår subdomän.
+Det ska nu gå att se ett JSON svar från API:t om vi går till vår subdomän. Ibland kan det ta en liten stund innan subdomäner kommer på plats, så avvakta lite grann om det inte syns direkt.
 
 
 
