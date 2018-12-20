@@ -291,8 +291,8 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-<!-- DV1611, Operativsystemet Linux och virtualiseringstekniker, 7,5 hp (ersätter DV1547) -->
+Från och med hösten 2019 ersätts kursen med en omarbetad utgåva under namnet "Operativsystemet Linux och virtualiseringstekniker" med kurskoden DV1611 ([kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=Dv1611)).
 
-<!-- DV1607, Programmera webbplatser i Linux, 7,5 hp (ersätter DV1547) -->
-
-Du hittar [kursplanen genom att söka på kurskoden DV1547 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1547).
+Under våren 2019 gavs kursen under kurskoden DV1607 ([kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1607)).
+ 
+Fram till och med våren 2018 gavs kursen under kurskoden DV1547 ([kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1547)).
