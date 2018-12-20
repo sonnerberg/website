@@ -1,14 +1,14 @@
 ---
-author: lew
+author: aar
 revision:
     "2018-11-29": (A, aar) First version.
 category:
     - oopython
 ...
-Skapa former
+Frågesport med Flask
 ===================================
 
-[FIGURE src=/image/oopython/kmom02/skapa-former.png?w=c5 class="right"]
+[FIGURE src=/image/oopython/kmom02/fragesport.png?w=c5 class="right"]
 
 Uppgiften går ut på att med hjälp av klasser, Flask, jinja2 och CSS, skapa en webbsida för att ställa frågor med tre olika typer av svarsalternativ.
 
@@ -29,7 +29,13 @@ Introduktion {#intro}
 
 Du jobbar vid sidan om dina studier och din kund vill att du gör klart en webbsida som redan är påbörjad. Gränssnittet och routes är redan klart, du ska bara skapa klasserna för backend:en till webbsidan. Dina klasser behöver uppfylla abstraktionskraven som finns utspridd i koden. Med det menas att dina klasser behöver ha vissa metoder och attribut med rätt namn, annars kommer inte frontend fungera med din backend. I klassdiagrammet nedanför kan du se vilket gränssnitt din klasser måste uppfylla.
 
+[YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."]
+
 Du ska implementera klasserna för de olika frågetyperna och handlern som app.py jobbar mot som i sin tur använder fråge-klasserna. Samma struktur som i övningen. I den färdiga koden som du får finns redan anrop till objekt av de klasser som du ska implementera, det betyder att dina klasser måste uppfylla de beroenden.
+
+[FIGURE src=/image/oopython/kmom02/fragesport_uml.png caption="Klassdiagram för uppgiften."]
+
+Attributen och metoderna som är **bold** markerad används av den färdiga kod ni får och måste därför implementeras och med de namnen. Övriga är bara exempel på vad man kan ha med. `QuestionType2` och `QuestionType3` innehåller bara ett statisk attribut som ett måste men du kommer också behöva överlagra några av metoderna från `Question` för att det ska bli bra. Vilka metoder beror på vilken klass du väljer som basklass.
 
 
 
@@ -40,8 +46,8 @@ Börja med att kopiera frontend:en till ditt uppgift.
 
 ```bash
 # Ställ dig i kurskatalogen
-cp -ri example/flask/questions me/kmom02/flask
-cd me/kmom02/flask
+cp -ri example/flask/questions me/kmom02/questions
+cd me/kmom02/questions
 ```
 
 1. Bekanta dig med koden, kolla igeom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa för att få en bild av vilka metod som behövs och vad de används till.
@@ -56,8 +62,8 @@ cd me/kmom02/flask
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate flask
-dbwebb publish flask
+dbwebb validate questions
+dbwebb publish questions
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
@@ -67,7 +73,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-Det finns inga extrauppgifter.
+1. För de frågor med checkboxes ge poäng för varje rätt alternativ. Om det är två alternativ som är rätt på frågan ska den vara värd två poäng.
 
 
 
