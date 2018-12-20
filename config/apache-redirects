@@ -204,8 +204,8 @@ Redirect /kurser/linux      /kurser/linux-v2
 # oopython
 Redirect /oopython         /kurser/oopython-v2
 Redirect /kurser/oopython  /kurser/oopython-v2
-Redirect /kurser/oopython/studieplan  https://docs.google.com/spreadsheets/d/1Oew0Q2YC4X3zRcrdGgLEHjpbmB3hZl9odjVUApidBZo/edit?usp=sharing
-Redirect /kurser/oopython/lektionsplan    https://docs.google.com/spreadsheets/d/1Y1kmgY4DgzBthJYbhwsmRS4VLmS7AJO6hFnf8pt1iro/edit?usp=sharing
+Redirect /kurser/oopython/studieplan  https://docs.google.com/spreadsheets/d/139dBR4xTojUwM_gD8RniO-RZJmXFP1-adM3CJljg3_8/edit?usp=sharing
+Redirect /kurser/oopython/lektionsplan    https://docs.google.com/spreadsheets/d/1l4Dxpz_PZYNBnwMZegR8uS6tRpm_qkecefAfU2wBKMQ/edit?usp=sharing
 
 
 # webapp

@@ -5,6 +5,7 @@ author:
     - lew
     - mos
 revision:
+    "2018-12-20": (C, aar) Ändrade layout för studie- och lektionsplan.
     "2018-11-29": (B, aar) Gulmarkerat inför VT19.
     "2018-02-23": (A, aar) Första version V2.
     "2017-12-11": (PA2, lew) Påbyggnad utkasst till V2.
@@ -204,24 +205,23 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2).
+Kursen har en [rekommenderad studieplan](kurser/oopython/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-<!--
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](python/studieplan) kopplad till de kurstillfällen som erbjuds.
--->
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
 
-Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
 
-Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
 
-Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
+Lektionsplan {#lektionsplan}
+---------------------------------------------
 
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Det finns en [lektionsplan](kurser/oopython/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
