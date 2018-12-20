@@ -27,27 +27,27 @@ Examinationen ser olika ut beroende på vilken studentgrupp du tillhör och bero
 
 
 
-Examination för kurspaket webprog med kurskod PA1451 {#kurspaket}
+Examination för kurspaket webprog med kurskod DV1606 {#kurspaket}
 --------------------------------------------------------------------
 
-De som läser enligt kurskoden PA1451 i [kurspaketet webprog](webprog) gör ett individuellt projekt som examinationsmoment.
+De som läser enligt kurskoden DV1606/PA1451 i [kurspaketet webprog](webprog) gör ett individuellt projekt som examinationsmoment.
 
 [Läs hur examinationen sker](./examination-projekt).
 
 
 
-Examination för programstudenter på Webbprogrammering med kurskod PA1451 {#wip}
+Examination för programstudenter på Webbprogrammering med kurskod DV1605 {#wip}
 --------------------------------------------------------------------
 
-De som läser enligt kurskoden PA1451 inom programmet Webbprogrammering gör examination genom ett projekt som kan utföras i grupp, samt en individuell examination.
+De som läser enligt kurskoden DV1606/PA1451 inom programmet Webbprogrammering gör examination genom ett projekt som kan utföras i grupp, samt en individuell examination.
 
 [Läs hur examinationen sker](./examination-projekt-och-individuellt).
 
 
 
-Examination för ISE/SE med kurskod PA1444 {#se}
+Examination för ISE/SE med kurskod DV1605 {#se}
 --------------------------------------------------------------------
 
-De som läser enligt kurskoden PA1444 inom programmen International Software Engineering (ISE) och Software Engineering (SE) gör examination genom ett projekt som kan utföras i grupp, samt en individuell examination.
+De som läser enligt kurskoden DV1605/PA1444 inom programmet Software Engineering (SE) (samt International Software Engineering (ISE)) gör examination genom ett projekt som kan utföras i grupp, samt en individuell examination.
 
 [Läs hur examinationen sker](./examination-projekt-och-individuellt).
