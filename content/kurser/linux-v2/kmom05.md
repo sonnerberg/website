@@ -8,6 +8,14 @@ revision:
 Kmom05: Webbtjänst med RESTful API
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Kursen uppdateras. Kursmomenten kan komma att ändras innan läsperiod 3 startar. Information kan hittas i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=46&t=8124).
+
+[/WARNING]
+
 Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i bash och vi kan bygga servrar med Node.js. Låt oss fortsätta titta på serverprogrammering i Node.js och se hur en mer renodlad webbtjänst kan se ut och fungera.
 
 Du kommer få en färdig server, skriven i Node.js, och ett RESTful API till servern. Servern implementerar en [*maze*](https://en.wikipedia.org/wiki/Maze). Servern är färdig och du kan testköra den via kommandot curl.

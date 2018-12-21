@@ -8,6 +8,14 @@ revision:
 Kmom02: Apache Virtual Hosts
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Kursen uppdateras. Kursmomenten kan komma att ändras innan läsperiod 3 startar. Information kan hittas i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=46&t=8124).
+
+[/WARNING]
+
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 
 Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med.

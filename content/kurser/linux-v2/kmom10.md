@@ -8,6 +8,14 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Kursen uppdateras. Kursmomenten kan komma att ändras innan läsperiod 3 startar. Information kan hittas i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=46&t=8124).
+
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:

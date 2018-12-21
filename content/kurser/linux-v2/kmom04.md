@@ -13,6 +13,14 @@ revision:
 Kmom04: Server med Node.js
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+Kursen uppdateras. Kursmomenten kan komma att ändras innan läsperiod 3 startar. Information kan hittas i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=46&t=8124).
+
+[/WARNING]
+
 Nu har vi en Linux-server, en webbserver och vi kan grunderna i att bygga skript i bash. Låt oss nu kika på en annan sak, hur man bygger egna servrar i Linux med Node.js.
 
 Jag har valt att vi jobbar med JavaScript och Node.js. Dels är tekniker med serverprogrammering med JavaScript en växande teknik, men det är också en intressant programmeringmodell med asynkron och eventbaserad hantering och det finns flertalet API när vi vill jobba med operativsystemets delar.
