@@ -43,7 +43,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Avklarad kurs i Programmering med JavaScript 7.5hp samt ytterligare en avklarad programmeringskurs i godtyckligt programmeringsspråk om 7.5hp. 
+> Avklarad kurs i Programmering med JavaScript 7.5hp samt ytterligare en avklarad programmeringskurs i godtyckligt programmeringsspråk om 7.5hp.
 
 
 
@@ -52,7 +52,7 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Installation av Linux och Linux som server. Paket och pakethantering 
+* Installation av Linux och Linux som server. Paket och pakethantering
 * Installation av servrar likt webbserver, databas, PHP, sshd.
 * Linux med terminal (bash), ssh, vim, och systemkommandon.
 * Operativsystemets olika delar såsom filsystemet, processer och processhantering.
@@ -168,7 +168,7 @@ Kurslitteratur {#litteratur}
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
+Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet.
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
@@ -205,51 +205,39 @@ Det finns närliggande litteratur som är intressant för den som vill fördjupa
     En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
 
 
-
-Läsanvisningar {#lasanvisning}
-------------------------------
-
-Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
-
-| Kursmoment | Linux Command Line | Debian Handbook | Exploring ES6     |
-|------------|--------------------|-----------------|-------------------|
-| Kmom01     | 1, 2, 3, 4         | 1, 4            |                   |
-| Kmom02     | Repetera 1-4       | 6, 7            |                   |
-| Kmom03     | 6, 24              |                 |                   | 
-| Kmom04     |                    |                 | 1, 2              |
-| Kmom05     |                    |                 |                   | 
-| Kmom06     |                    |                 |                   | 
-| Kmom10     |                    |                 |                   |
-
-Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion för kursmomentet. 
-
-
-
-Lektionsplan och rekommenderad studieplan {#schema}
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod3).
+Kursen har en [rekommenderad studieplan](kurser/linux/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-<!--
-För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](linux/studieplan) kopplad till de kurstillfällen som erbjuds.
--->
-
-Vissa av kurstillfällena kan ha en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
-
-Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
-
-Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
-
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
 
 
 
-Lärarstöd och handledning {#handledning}
+Lektionsplan {#lektionsplan}
+---------------------------------------------
+
+Det finns en [lektionsplan](kurser/linux/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+
+
+
+Handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+
+Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
+
+
+
+Betygsättning {#betyg}
+------------------------
+
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
@@ -258,22 +246,15 @@ Ladok {#ladok}
 
 Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
 
-| Kursens moment  | Ladok moment enligt kursplan  | Betyg |
-|-----------------|-------------------------------|-------|
-| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             | G-U   |
-| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             | G-U   |
-| Kmom05 - kmom10 | Projekt á 2.5hp               | A-F   |
+| Kursens moment  | Ladok moment enligt kursplan  |
+|-----------------|-------------------------------|
+| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
+| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
+| Kmom05 - kmom10 | Projekt á 2.5hp               |
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
-
-
-
-Betygsättning {#betyg}
-------------------------
-
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
@@ -294,5 +275,16 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 Från och med hösten 2019 ersätts kursen med en omarbetad utgåva under namnet "Operativsystemet Linux och virtualiseringstekniker" med kurskoden DV1611 ([kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=Dv1611)).
 
 Under våren 2019 gavs kursen under kurskoden DV1607 ([kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1607)).
- 
+
 Fram till och med våren 2018 gavs kursen under kurskoden DV1547 ([kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1547)).
+
+
+
+Versioner av kursen {#versioner}
+-----------------------------------------------------
+
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
+
+För tillfällen från vårterminen 2018 så [finns kursmaterialet till linux (v2) här](kurser/linux-v2).
+
+För tillfällen fram till och med vårterminen 2018, så [finns kursmaterialet till den kursen i linux (v1)](kurser/arkiv/linux-v1).
