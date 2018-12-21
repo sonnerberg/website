@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "0860e68d2add95f984ac302c2f6bc879",
@@ -161,16 +161,16 @@
         },
         {
             "name": "mos/anax",
-            "version": "v2.5.29",
+            "version": "v2.5.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/anax.git",
-                "reference": "db573fa96922f866cc10632e84235894fc68ad89"
+                "reference": "378e66a0c22f34bbca912a4169b624f2b0a4aa51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/anax/zipball/db573fa96922f866cc10632e84235894fc68ad89",
-                "reference": "db573fa96922f866cc10632e84235894fc68ad89",
+                "url": "https://api.github.com/repos/mosbth/anax/zipball/378e66a0c22f34bbca912a4169b624f2b0a4aa51",
+                "reference": "378e66a0c22f34bbca912a4169b624f2b0a4aa51",
                 "shasum": ""
             },
             "require": {
@@ -211,7 +211,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2017-12-04T10:35:44+00:00"
+            "time": "2018-10-19T16:53:55+00:00"
         },
         {
             "name": "mos/cimage",
@@ -338,17 +338,21 @@
         },
         {
             "name": "scrivo/highlight.php",
-            "version": "v9.12.0.5",
+            "version": "v9.13.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scrivo/highlight.php.git",
-                "reference": "0db45267df6b3bbae224ff86445d6407629e8b96"
+                "reference": "e453ed4bb1a7602efb334c07579be885a4ee8abb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/0db45267df6b3bbae224ff86445d6407629e8b96",
-                "reference": "0db45267df6b3bbae224ff86445d6407629e8b96",
+                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/e453ed4bb1a7602efb334c07579be885a4ee8abb",
+                "reference": "e453ed4bb1a7602efb334c07579be885a4ee8abb",
                 "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8",
@@ -381,7 +385,7 @@
                     "role": "Contributor"
                 }
             ],
-            "description": "Server side syntax highlighter that supports 176 languages. It's a PHP port of highlight.js",
+            "description": "Server side syntax highlighter that supports 185 languages. It's a PHP port of highlight.js",
             "keywords": [
                 "code",
                 "highlight",
@@ -389,11 +393,11 @@
                 "highlight.php",
                 "syntax"
             ],
-            "time": "2018-08-24T15:45:27+00:00"
+            "time": "2018-11-23T02:08:01+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -451,16 +455,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.15",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "c2f4812ead9f847cb69e90917ca7502e6892d6b8"
+                "reference": "291e13d808bec481eab83f301f7bff3e699ef603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/c2f4812ead9f847cb69e90917ca7502e6892d6b8",
-                "reference": "c2f4812ead9f847cb69e90917ca7502e6892d6b8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/291e13d808bec481eab83f301f7bff3e699ef603",
+                "reference": "291e13d808bec481eab83f301f7bff3e699ef603",
                 "shasum": ""
             },
             "require": {
@@ -506,7 +510,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-10T07:34:36+00:00"
+            "time": "2018-11-11T19:48:54+00:00"
         }
     ],
     "packages-dev": [],

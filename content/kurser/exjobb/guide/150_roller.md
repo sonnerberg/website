@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2018-12-21": "(B, mos) Flyttat från egen artikel till guide."
     "2017-12-18": "(A, mos) Första utgåva, kopierat från introföreläsningen."
 ...
 Roller
@@ -12,16 +13,17 @@ Följande dokument är en översikt av de roller som finns i exjobbet.
 <!--more-->
 
 * Student
-* Kursansvarig
-* Företagskontakt
 * Handledare
+* Kontaktperson, företag
+* Kursansvarig
+* Opponent
 * Examinator
 
 Rollerna presenteras för studenten i [introföreläsningen](kurser/exjobb#intro) och presenteras även här för tydlighet och för att förenkla för de som innehar de olika rollerna.
 
 
 
-Studenten
+Student
 ----------------------------------
 
 * Arbetet är självständigt. Det förutsätts således att studenten har det huvudsakliga initiativet och är den som är drivande.
@@ -63,11 +65,11 @@ Kontaktperson, företag
 * Vägleder dig och ger dig råd med utgångspunkt från företagets behov
     * Att säkra rätt fokus med de frågor som skall besvaras av arbetet
     * Vara tydlig med vad scopet (omfånget) är och inte är
-* Måste ha förståelse för högskolans krav ur kurssynpunkt. Detta skall inte ses som en konflikt, utan som en utvecklande möjlighet
+* Behöverörståelse för högskolans krav ur kurssynpunkt. Detta skall inte ses som en konflikt, utan som en utvecklande möjlighet
     * Generaliseringsaspekter och eventuellt affärsvärde
     * Konkreta frågeställningar och krav på rapport
 * Kontaktar handledare och eventuellt kursansvarig vid behov/frågor
-* Kontaktpersonen ansvarar för input, en A4, som beskriver problemområdet och vad företaget vill ha ut av arbetet.
+* Kontaktpersonen bidrar input, en A4, som beskriver problemområdet och vad företaget vill ha ut av arbetet.
 
 
 
@@ -84,7 +86,14 @@ Kursansvarig
 
 
 
-Examinator
+Opponent
+----------------------------------
+
+Den som läser ditt slutliga arbete och försöker finna svagheter och otydligheter i arbetet. Opponenten dokumenterar sitt arbete i en opponentrapport. Studenten får sedan möjlighet att förbättra sitt examensjobb genom att ta hänsyn till återkopplingen från opponenten.
+
+
+
+Kvalitetsansvarig/Examinator
 ----------------------------------
 
 * Godkänner topic.

@@ -29,6 +29,61 @@ Studenten utför arbetet individuellt, eller i grupp om två.
 
 
 
+Förkunskaper {#forkunskaper}
+------------------------
+
+Det formella förkunskapskravet är:
+
+> 60 hp avklarade på programmet Webbprogrammering.
+
+
+
+Innehåll {#innehall}
+-----------------------------------------------------
+
+Kursen utgör ett självständigt arbete inom området Webbprogrammering. Studenten skall identifiera en relevant frågeställning, självständigt planera projektets genomförande, arbeta med den valda problemställningen samt rapportera resultatet
+skriftligt och i vissa fall muntligt. Arbetet utförs företrädesvis vid ett företag, organisation eller myndighet.
+
+
+
+Mål {#mal}
+------------------------
+
+Kursens mål är indelade i undergrupper.
+
+
+
+### Kunskap och förståelse {#kunskap}
+
+Efter genomförd kurs skall studenten:
+
+* visa kunskap och förståelse inom området Webbprogrammering (huvudområde
+Programvaruteknik), inbegripet kännedom om områdets vetenskapliga grund.
+
+
+
+### Färdighet och förmåga {#fardighet}
+
+Efter genomförd kurs skall studenten:
+
+* visa förmåga att söka, samla och kritiskt tolka relevant information för att formulera svar på väldefinierade frågeställningar inom området Webbprogrammering (huvudområde Programvaruteknik)
+* visa förmåga att redogöra för och diskutera sitt kunnande
+* visa sådan färdighet som fordras för att självständigt arbeta med uppgifter inom området Webbprogrammering (huvudområde Programvaruteknik).
+
+
+
+### Värderingsförmåga och förhållningssätt {#vardering}
+
+Efter genomförd kurs skall studenten:
+
+* kunna utforma en projektplan inkluderande arbetsmetod och tidsplanering
+* visa förmåga att tillämpa förvärvade kunskaper och färdigheter för att lösa problemställningar inom ramen för projektet
+* självständigt inhämta de kunskaper som krävs för arbetets genomförande
+* diskutera resultaten i relation till projektets krav
+* dokumentera arbetet i form av en rapport.
+
+
+
 Litteratur {#litteratur}
 -----------------------------------------------------
 
@@ -36,141 +91,31 @@ En central del i kursen handlar om att skriva en rapport utifrån arbetet man g�
 
 * **Att skriva en bra uppsats**, Lotta Rienecker, Peter Stray Jörgensen. Förlag: Liber. Utgiven: 2014, antal sidor: 349. ISBN: 9789147111510.
 
-En resurs som finns online där man kan läsa generellt om rapportskrivning är "[Rapportskrivning för ingenjörer](https://goo.gl/bHSMH1)" och webbplatsen "[Skrivguiden](http://skrivguiden.se/)".
+Som komplement rekommenderas "[Rapportskrivning för ingenjörer](https://goo.gl/bHSMH1)" och webbplatsen "[Skrivguiden](http://skrivguiden.se/)" vilka hjälper dig att förstå rapportens olika delar.
+
+Som referenslitteratur och alternativ kursbok på engelska, finns följande.
+
+* **Projects in Computing and Information Systems**, Christian Dawson. Förlag: Pearson Edu Ltd. Utgiven: 2009, antal sidor: 304. ISBN-10: 0273721313. ISBN 13: 978-0273721.
 
 
 
 Kursmaterial {#kursmaterial}
 -----------------------------------------------------
 
-Följande generella kursmaterial finns till kursen.
+Som ytterligare komplement till litteraturen så finns en [guide](./guide) som visar dig de olika moment som kursen omfattar samt tips och trix som hjälper dig fram.
 
-
-
-### Kursrepo {#kursrepo}
-
-Det finns ett [kursrepo exjobb](https://github.com/dbwebb-se/exjobb) till kursen.
-
-Du kan clona en kopia av kursrepot med [dbwebb-cli](dbwebb-cli).
-
-```text
-dbwebb clone exjobb
-```
-
-
-
-### Forum och chatt {#chatt}
-
-Det finns ett [forum](forum/utbildning/exjobb) och en [gitter-kanal](https://gitter.im/dbwebb-se/exjobb) till kursen.
-
-
-
-### Video {#video}
-
-De videor som finns ligger på dbwebb-kanalen under spellistan "[Kursen exjobb](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8ZNqNxnWc0cd2ZtlwTWye7)".
-
-
-
-### Introduktionsföreläsning {#intro}
-
-Det finns en introföreläsning där grunderna för kursen presenteras.
-
-Det finns [slides till presentationen](https://goo.gl/TvxGzT).
-
-[YOUTUBE src=pdUspBHTIJI list="PLKtP9l5q3ce8ZNqNxnWc0cd2ZtlwTWye7" caption="Video för introduktionsföreläsningen som hålls av Conny."]
-
-
-
-Roller {#roller}
------------------------------------------------------
-
-Det finns följande viktiga roller i kursen.
-
-* Student
-* Kursansvarig
-* Företagskontakt
-* Handledare
-* Examinator
-
-Se [introföreläsningen](#intro) för en presentation av rollerna. Du kan även läsa en [översikt av rollerna och deras syften](./roller).
-
-
-
-Arbetsgång {#arbete}
------------------------------------------------------
-
-Följande är stegen i kursen, grovt sett. Introduktionsföreläsningen ger detaljer om de olika stegen.
-
-
-
-### Kund och input till arbetet {#input}
-
-Studenten söker upp och etablerar kontakt med en kund som har ett problem och är villig att låta studenten lösa problemet inom ramen för exjobbet.
-
-Kunden skriver ihop en enkel A4 om problemställningen de har. Om studenten är pådrivande så kan studenten och kunden gemensamt skapa dokumentet om problemställningen. Ytterst är det kunden som är ansvarig/samtycker för att inputen är relevant för arbetet.
-
-Detta arbete sker förslagsvis innan julen, inför och innan kursen officiellt har startat. Se det som en del i kursen att vara aktiv och själv söka upp företag och tillsammans med kunden aktivt medverka i formulering av input till arbetet.
-
-
-
-### Student och topic {#topic}
-
-Studenten tar kundens problemställning och formulerar ett topic i ett dokument. 
-
-Topicet formulerar en grov ram för arbetet.
-
-Topicet lämnas in och utvärderas och godkänns av examinatorn. Kursansvarig deltar i utvärderingen av topic. När topic är godkänt så tilldelas (kursansvarig) en handledare.
-
-Kunden bör samtycka till topicet. Studenter sköter detta efter bästa förmåga.
-
-
-
-### Student, handledare och proposal {#proposal}
-
-När handledaren är tilldelad så jobbar studenten vidare med sitt topic i formen av ett proposal som formas i samråd med handledaren.
-
-Ett proposal skall lämnas in in senast sex veckor in i kursen.
-
-Ett proposal godkänns av handledaren, eventuellt i samråd med kursansvarig och examinatorn. Kunden bör samtycka till proposalet.
-
-
-
-### Genomförande, självständigt arbete {#arbete}
-
-När proposal är godkänt så genomför studenten det självständiga arbetet och aktivt samråder löpande med handledare och kund.
-
-I slutet av kursen lämnas rapporten in, tillsammans med en inspelad presentation av arbetet. Inför inlämningen så avger kunden en rekommendation om arbetet uppfyller förväntningarna. Likaså gör handledaren som också gör en bedömning om rapporten motsvarar kursens krav om form, innehåll och kvalitet.
-
-Varje arbete opponeras på av andra studenter. Kunden har möjlighet att ge feedback på arbetet.
-
-Varje student opponerar på en annan students arbete.
-
-Studenten uppdaterar sitt arbete och lämnar in det slutliga resultatet som slutligen godkänns/underkänns.
-
-Det finns [riktlinjer om hur opponeringen skall ske](https://goo.gl/u3aFxc).
-
-
-
-Publicera i DiVA {#diva}
------------------------------------------------------
-
-När du är klar skall du [publicera din rapport i DiVA](https://www.bth.se/bibliotek/publicera/).
+För generellt stöd och diskussioner finns ett [kursforum](forum/utbildning/exjobb) och en [kurschatt](https://gitter.im/dbwebb-se/exjobb).
 
 
 
 Rekommenderad studieplan {#studieplan}
 -----------------------------------------------------
 
-Det finns en rekommenderad studieplan för kursen som ligger i studieplanen för [Webbprogrammering termin 4](program/webbprogrammering/studieplan/termin4).
+Kursen har en [rekommenderad studieplan](kurser/exjobb/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
-För att klara 3-veckorsuppropet så måste man lämna in topic enligt tidplanen.
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-
-
-Plagieringskontroll {#plagiering}
------------------------------------------------------
-
-Alla inlämnade dokument körs per automatik genom en plagieringskontroll.
+För att klara 3-veckorsuppropet så måste man lämna in topic enligt den rekommenderade studieplanen.
 
 
 
@@ -191,4 +136,4 @@ Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtli
 Kursplan {#kursplan}
 -----------------------------------------------------
 
-Kursens namn är "Självständigt arbete i Webbprogrammering". Du hittar [kursplanen genom att söka på kurskoden pa1438 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=pa1438).
+Kursens namn är "Självständigt arbete i Webbprogrammering" med kurskod PA1438 ([kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1438)).
