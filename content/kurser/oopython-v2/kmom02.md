@@ -97,7 +97,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med klass relationer](uppgift/python-med-klass-relationer)" (lab 2)
 
-1. Gör uppgiften "[Skapa former](uppgift/skapa-former)". Spara koden i mappen `me/flask/`.
+1. Gör uppgiften "[Frågesport med Flask](uppgift/fragesport_med_flask)". Spara koden i mappen `me/kmom02/questions/`.
 
 <!-- 1. Gör uppgiften "[Skapa former](uppgift/skapa-former)". Spara koden i mappen `me/flask/`. -->
 

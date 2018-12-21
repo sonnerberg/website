@@ -46,7 +46,7 @@ Börja med att kopiera frontend:en till ditt uppgift.
 
 ```bash
 # Ställ dig i kurskatalogen
-cp -ri example/flask/questions me/kmom02/questions
+cp -ri example/flask/questions me/kmom02/
 cd me/kmom02/questions
 ```
 
