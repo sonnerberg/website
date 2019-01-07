@@ -47,9 +47,9 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Virtualisering med Docker för utveckling, test och driftsättning.
 * Ramverksbaserade serverlösning, backend med JavaScript.
 * Ramverksbaserad frontend.
+* * Virtualisering med Docker för utveckling, test och driftsättning.
 * Kopplingar mot databaser av SQL och NoSQL.
 * Testdriven utveckling och tekniker för enhetstestning.
 * Automatiserad testning och byggning.
@@ -218,21 +218,23 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+Rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin3) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasar2/lasperiod2).
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin3).
 
-Studieplan och lektionsplan finns tillgängligt via kurstillfället på Canvas.
+Studieplanen finns tillgängligt via kurstillfället på Canvas.
 
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
+
+Då kursen enbart går på distans finns inga schemalagda lektioner, men video material samt forum och chatt används som undervisningsmetoder.
 
 
 
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Video material, forum och chatt är de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
 
 
 
