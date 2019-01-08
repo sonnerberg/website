@@ -6,11 +6,11 @@ category:
     - windows
     - bash
 revision:
-    "2019-01-08": (C, mos) Notis om nyare artikel.
+    "2019-01-08": (C, mos) Notis om nyare artikel för v1803.
     "2017-09-09": (B, mos) Start Windows features by run.
     "2017-05-29": (A, mos) Första revisionen.
 ...
-Installera Bash i Windows 10 (creators update)
+Installera Bash i Windows 10 (v 1703)
 ==================================
 
 [FIGURE src=image/snapvt17/win10-bash-cowsay.png?w=c5&a=0,70,60,0 class="right"]
@@ -27,7 +27,7 @@ Installationsprocessen förutsätter att du har creators update (1703) installer
 
 Denna artikel skrevs 2017 och var då -- Windows 10, 64bitar och Creators update (1703) -- rätt sätt att installera bash på Windows.
 
-Per januari 2019 finns en uppdaterad artikel som visar hur man gör samma installation med en uppdaterad version av Windows 10.
+Per januari 2019 finns en uppdaterad artikel "[Installera Bash i Windows 10 (v 1803)](kunskap/installera-bash-i-windows-10-v2)" som visar hur man gör samma installation med en uppdaterad version av Windows 10.
 
 [/INFO]
 
