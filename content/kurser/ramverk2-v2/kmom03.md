@@ -99,5 +99,6 @@ Se till att följande frågor besvaras i texten:
 * Reflektera över hur det gick att integrera enhetstesterna i olika Docker-kontainerns och om du ser någon nytta med detta.
 * Hur väl lyckades du utvärdera TDD-konceptet och vilka är dina reflektioner?
 * Berätta om tankarna kring din klient/server applikation och nämn de tekniker du använder.
+* Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

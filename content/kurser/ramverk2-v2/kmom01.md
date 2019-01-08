@@ -127,6 +127,7 @@ Se till att följande frågor besvaras i texten:
 * Berätta utförligt om din syn på nodejs backend ramverk och berätta vilket ramverk du valde och varför.
 * Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
 * Använde du någon form av scaffolding som ditt valda ramverk erbjuder?
+* Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
 

@@ -101,5 +101,6 @@ Se till att följande frågor besvaras i texten:
 * Hur gick det att sedan implementera din me-sida i ramverket?
 * Gick allt smidigt eller stötte du på problem?
 * Vilka fördelar ser du med ett JavaScript ramverk jämfört med vanilla JavaScript?
+* Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

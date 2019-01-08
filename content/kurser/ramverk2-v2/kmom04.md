@@ -100,5 +100,6 @@ Se till att följande frågor besvaras i texten:
 * Hur gick det att jobba med konceptet realtidsprogrammering i webben, några reflektioner?
 * Berätta om din chatt som du integrerade i redovisa-sidan.
 * Berätta om den realtidsfunktionalitet du väljer att integrera i din klient/server applikation.
+* Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

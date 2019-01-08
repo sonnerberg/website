@@ -36,7 +36,9 @@ Anledningen till att ovanstående tekniker har valts ut är att Angular, React o
 Exempelprogram {#example}
 --------------------------------------
 
-I kursrepots exempel katalog finns tre olika exempel program skrivna med hjälp av de fem ovannämnda teknikerna. I `example/quote` finns ett simpelt program där dagens citat hämtas från ett API. I `example/tic-tac-toe` finns ett luffarschack implementerad med möjlighet att hoppa tillbaka i spelets historik. I `example/calculator` är en simpel miniräknare implementerad.
+I kursrepots exempel katalog finns två olika exempel program skrivna med hjälp av de fem ovannämnda teknikerna. I `example/tic-tac-toe` finns ett luffarschack implementerad med möjlighet att hoppa tillbaka i spelets historik. I `example/calculator` är en simpel miniräknare implementerad.
+
+Dessutom finns det samma Me-sida som konsumerar me-api:t från tidigare kursmoment implementerad i de 5 olika teknikerna. [GitHub repon](https://github.com/emilfolino?utf8=%E2%9C%93&tab=repositories&q=me-&type=&language=) för dessa 5 Me-sidor samt me-api:t finns tillgängligt. Dessa är även driftsatta på `me-{angular,mithril,react,vanilla,vue}.jsramverk.me`.
 
 
 

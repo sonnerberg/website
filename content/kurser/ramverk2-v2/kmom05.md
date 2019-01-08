@@ -98,5 +98,6 @@ Se till att följande frågor besvaras i texten:
 * Reflektera över skillnader och likheter mellan relationsdatabaser och databaser inom NoSQL.
 * Vilka är dina tankar om asynkron programmering med JavaScript?
 * Hur känner du för Docker och det sättet vi jobbar med tjänster i kontainrar?
+* Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

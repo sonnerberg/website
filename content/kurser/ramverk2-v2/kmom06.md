@@ -86,5 +86,6 @@ Se till att följande frågor besvaras i texten:
 * Vill du ge dig på att förklara att just npm är den tjänsten som växt snabbast av de modulerkataloger som presenteras på webbplatsen "Module Counts"?
 * Reflektera över hur arbetet gick att välja, separera, publisera och sedan åter integrera module i din applikation.
 * Sista uppgiften om att dokumentera och färdigställa redovisa-sidan, tog det mycket tid eller hade du allt klart?
+* Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
