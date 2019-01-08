@@ -29,6 +29,12 @@ Upplägg {#upplagg}
 
 Den individuella examinationen genomfördes den 2018-10-30. Omexamination genomförs 2019-01-10. Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Redovining kan lämnas in dagen efter examinationen, det vill säga 2019-01-11. Det är för att ni ska få en dag på er att göra er redovisning.
 
+Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom dessa fem timmar.
+
+För båda studentgrupper är detta en **individuell** examination och uppgifterna ska lösas på egen hand.
+
+Lärarteamet finns tillgängliga i gitter och forum för hjälp med tekniska problem samt frågor och förtydliganden.
+
 Nedanför beskriver vi upplägget för de olika studentgrupperna:
 
 ### Campus studenter {#campus}
@@ -36,13 +42,6 @@ Examination sker i sal H429 och H430 mellan 8:00 och 13:00.
 
 ### Distansprogram och kurspakets studenter {#distans}
 Examination sker på valfri plats, det går att ladda ner examination från kl 8:00 till 23:59. När du har hämtat hem examinationen har du fem timmar på dig att göra klart den och lämna in.
-
-
-Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom dessa fem timmar.
-
-För båda studentgrupper är detta en **individuell** examination och uppgifterna ska lösas på egen hand.
-
-Lärarteamet finns tillgängliga i gitter och forum för hjälp med tekniska problem samt frågor och förtydliganden.
 
 
 
