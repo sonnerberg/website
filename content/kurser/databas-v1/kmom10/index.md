@@ -20,6 +20,15 @@ Detta kursmoment avslutar och examinerar kursen.
 
 
 
+<!--
+
+Styr upp så redovsiningstexten är separat för projektet och för examinationen samt slutrapporten för hela kursen. Eller hur det nu skall vara. Man måste i texten se hur många poäng som de fick för projektet.
+
+Egentligen borde det finnas ytterligare ett ladokmoment för projektet (kanske).
+
+-->
+
+
 Examination {#examination}
 --------------------------------------------------------------------
 
@@ -36,7 +45,7 @@ De som läser enligt kurskoden DV1606/PA1451 i [kurspaketet webprog](webprog) g�
 
 
 
-Examination för programstudenter på Webbprogrammering med kurskod DV1605 {#wip}
+Examination för programstudenter på Webbprogrammering med kurskod DV1606 {#wip}
 --------------------------------------------------------------------
 
 De som läser enligt kurskoden DV1606/PA1451 inom programmet Webbprogrammering gör examination genom ett projekt som kan utföras i grupp, samt en individuell examination.
