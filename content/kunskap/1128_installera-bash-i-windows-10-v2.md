@@ -208,6 +208,6 @@ sudo apt update && sudo apt upgrade
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det finns en [forumtråd](t/6515) där du kan ställa frågor, eller ge tips och trix, om denna artikel. Kika där om du får problem. Tråden ligger i subforumet [Windows för Webbprogrammerare](forum/viewforum.php?f=55).
+Det finns en [forumtråd](t/8161) där du kan ställa frågor, eller ge tips och trix, om denna artikel. Kika där om du får problem. Tråden ligger i subforumet [Windows för Webbprogrammerare](forum/viewforum.php?f=55).
 
 Vill du ställa specifika frågor om Unix/Linux, bash eller terminalen så passar subforumet [Unix och Linux](forum/viewforum.php?f=49)
