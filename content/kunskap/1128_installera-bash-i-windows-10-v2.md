@@ -27,7 +27,6 @@ Installationsprocessen förutsätter att du har ett uppdaterat system av Windows
 
 
 
-
 Förutsättning {#pre}
 -------------------------------
 
