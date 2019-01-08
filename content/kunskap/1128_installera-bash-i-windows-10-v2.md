@@ -14,12 +14,12 @@ category:
 revision:
     "2019-01-08": "(A, mos) Uppdaterad installationsprocess för 1803."
 ...
-Installera Bash i Windows 10 (v 1803)
+Installera Debian/Bash i Windows 10 (v 1803)
 ==================================
 
 [FIGURE src=image/snapvt19/windows-cowsay.png?w=c5&a=0,70,60,0 class="right"]
 
-Så här gör du för att installera Bash i Windows 10 samt installera det som behövs för att komma igång med kurserna.
+Så här gör du för att installera Debian/Bash i Windows 10 samt installera det som behövs för att komma igång med kurserna.
 
 Installationsprocessen förutsätter att du har ett uppdaterat system av Windows 10 64bitar system med version 1803.
 

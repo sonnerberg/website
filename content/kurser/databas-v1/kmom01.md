@@ -18,15 +18,9 @@ Kursmomentet är under översyn inför vårterminen 2019.
 
 [/WARNING]
 
-Då dyker vi in i relationsdatabaser tillsammans med SQL och modellering av databaser.
+Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi kommer jobba med relationsdatabaser och där har vi valt MySQL/MariaDB. Som klienter så använder vi både terminalbaserade klienter och en fönsterbaserad grafisk klient MySQL WorkBench. Klienterna har båda sin plats och användningsområde vid olika tillfällen.
 
-I en relationsdatabas pratar vi SQL med databasen. Vi skriver SQL för att skapa tabeller och för att lägga till, uppdatera, visa och radera data från databasen.
-
-Till databasen behövs klientprogram som kan användas för att prata med databasen.
-
-Vi introduceras till databasen MySQL och dess olika klienter samt lär oss använda SQL tillsammans med MySQL. Du får jobba igenom en övning i SQL som introducerar dig i grundläggande konstruktioner för att skapa och uppdatera en databas.
-
-Du får pröva att använda olika klienter till MySQL, de har alla sin plats och användningsområde vid olika tillfällen.
+I en relationsdatabas pratar vi SQL med databasen. Vi skriver SQL för att skapa tabeller och för att lägga till, uppdatera, visa och radera data från databasen. Låt oss börja med att kika på grundkonstruktioner för SQL.
 
 <!--more-->
 
@@ -72,7 +66,7 @@ Läs följande:
     * Kap 7: Introduktion till frågespråket SQL
     * Kap 29: Introduktion till MySQL
 
-Viss information finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1 och 3.
+Viss information finns även i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1 och 3.
 
 
 
@@ -80,14 +74,28 @@ Viss information finns i [bokens webbkurs](http://www.databasteknik.se/webbkurse
 
 Kika igenom följande artiklar.
 
-1. Kika igenom referensmanualen för MySQL, bara kort och översiktligt, men se till att du kan hitta till den delen som visar hur SQL skall skrivas i MySQL.
+1. Kika igenom referensmanualen för MySQL, kort och översiktligt. Se till att du kan hitta till den delen som visar hur SQL skall skrivas i MySQL.
     * [SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html)
+
+1. Under kursen kommer vi att ponera vikten av att hålla sig till en kodstil för SQL-koden. Det kommer inte vara absolut strikt, men det är en rimlig rekommendation att följa en kodstil. För kursen har vi valt "[SQL Style Guide by Simon Holywell](https://www.sqlstyle.guide/)". Ha detta i bakhuvudet när du funderar på hur man skriver sin SQL-kod. Om du har funderingar kring kodstilen så kan du läsa "[SQL style guide misconceptions](https://www.simonholywell.com/post/2016/12/sql-style-guide-misconceptions/)".
+
+
+
+### Video {#video}
+
+Kika igenom följande videor för att få grepp om grunderna i Databaser och SQL.
+
+1. För att få en snabb översikt om databaser och SQL så kikar du igenom videon "[What is Database & SQL?](https://www.youtube.com/watch?v=FR4QIeZaPeM)". Videon ger dig en snabb översikt av termer med förklaringar.
+
+1. Videon "[Learn Basic SQL in 10 Minutes](https://www.youtube.com/watch?v=bEtnYWuo2Bw)" ger dig en snabb förklaring till grunderna i SQL. Videon hanterar även översikt av mer avancerade begrepp som JOIN, UNION och GROUP. Dessa kommer senare i kursen.
+
+1. Kursen innehåller föreläsningar som streamas och därefter läggs i en spellista. Du kan nå spellistan på "[databas streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8JaLBnz0TszCXc_eCVpmOh)".
 
 
 
 ### Läsvärt {#lastips}
 
-Följande kan du studera om du har tid och kraft över.
+Följande kan du studera om du har tid, intresse och kraft över.
 
 1. Vi kommer inte att använda BTH's labbmiljö för MySQL i denna kursen, men om du vill så kan du bekanta dig med den via dokumentet "[MySQL / MariaDB i BTH’s labbmiljö](labbmiljo/mysql-bth-labbmiljo)". Se hur du kan använda BTH's databasserver för MySQL och hur du kan använda de olika klienterna för att koppla upp dig inifrån skolans nätverk och utanför skolans nätverk. Spara dina eventuella testfiler i `me/kmom01/klient`.
 
