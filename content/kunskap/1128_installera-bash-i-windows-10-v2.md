@@ -177,6 +177,37 @@ Vill du kopiera från ett annat fönster till terminalen så markerar du texten 
 
 
 
+### Var finns Windows hemma-katalog? {#winhome}
+
+Du kör Linux i ett eget system där du har speciella Linux-användare och ett filsystem för Linux. Din installation fungerar som ett eget system, ett subsystem inuti Windows. Därav namnet "Windows Subsystem for Linux (WSL)".
+
+Du kan komma åt ditt vanliga filsystem, din "vanliga" `C:` och på det sättet dela filer mellan Linux och Windows. Du hittar dina Windows-kataloger under `/mnt`.
+
+Du kan använda kommandot `ls` för att lista de kataloger som ligger under katalogen `/mnt`. I mitt fall ligger där katalogen `c` som innehåller alla filerna på min `C:`.
+
+```text
+$ ls -l /mnt
+total 0
+drwxrwxrwx 1 mos mos 512 Jan  8 02:27 c
+```
+
+Sökvägen till min hemmakatalog i Windows blir då `/mnt/c/Users/mos/` där min Windowsanvändare heter "mos".
+
+För att göra det enkelt att nå filerna i din Windows hemma-katalog så kan du skapa en symbolisk länk i din hemmakatalog.
+
+```text
+$ cd && ln -s /mnt/c/Users/mos/ winhome
+$ ls -l
+total 0
+lrwxrwxrwx 1 mos mos 17 Jan  8 03:53 winhome -> /mnt/c/Users/mos/
+```
+
+Nu kan jag enkelt nå mina filer som ligger hos min Windows-användare.
+
+Det rekommenderas att du sparar dina egna filer under din Windows-användare. Det gör det enklast att nå dem både via WSL och via vanliga Windows-applikationer.
+
+
+
 ### Vilken version av Linux {#version}
 
 Du kan kontrollera vilken version av Bash du har med kommandot `lsb_release`. Installera kommandot om det inte finns.
