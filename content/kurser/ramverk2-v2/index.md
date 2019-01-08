@@ -114,7 +114,7 @@ Vi utvärderar vilka möjligheter vi har vid val av ramverk och väljer det ramv
 
 
 
-### Kmom03: Docker {#kmom03}
+### Kmom03: Docker & test {#kmom03}
 
 Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
 
@@ -126,9 +126,9 @@ Vi börjar dessutom utvecklande av en klient/server applikation, som kommer ligg
 
 ### Kmom04: Funktions- och systemtest {#kmom04}
 
-Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi upp grunden i en testmiljö för JavaScript. Det handlar främst om enhetstestning och funktionstestning, samt kodtäckning och basen för en CI-kedja (Continuous integration).
+Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi vidare på en testmiljö för JavaScript. Det handlar främst om enhetstestning och funktionstestning, samt kodtäckning och basen för en CI-kedja (Continuous integration).
 
-Det blir också en introduktion i hur vi kan använda Docker för att köra våra enhetstester mot olika versioner av en målmiljö och vi får möjligheten att skapa våra egna anpassade Docker-images.
+Det blir också en introduktion i hur vi kan använda Selenium för att testa våra klienter på ett automatiserad sätt.
 
 [Instruktion till kursmoment 04](./kmom04).
 
@@ -139,8 +139,6 @@ Det blir också en introduktion i hur vi kan använda Docker för att köra vår
 Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
 
 Sedan bygger du vidare på din klient/server applikation i JavaScript där vi använder realtidsprogrammering för de delar av applikationen där det kan tillämpas.
-
-Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare.
 
 [Instruktion till kursmoment 05](./kmom05).
 

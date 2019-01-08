@@ -45,6 +45,8 @@ Titta på följande video där John Papa pratar om att välja ett frontend ramve
 
 [YOUTUBE src=dHptnyroFNA caption="Choosing Your JavaScript Framework - John Papa - dotJS"]
 
+Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce--Z6iuqvY-UfAN6vWhHpmZ) kopplat till kursen, titta på videos som börjar på 2. Videoserien uppdateras varje måndag och innehåller material för att utvärdera tekniker och ge tips & trix för att lösa kursmomenten.
+
 
 
 ### Material {#material}

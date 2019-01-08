@@ -5,7 +5,7 @@ revision:
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-11-23": "(A, mos) Första utgåvan."
 ...
-Kmom05: Databas
+Kmom05: Realtid
 ==================================
 
 [WARNING]
@@ -16,17 +16,14 @@ Kursstart våren 2019.
 
 [/WARNING]
 
-Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databas som klassas i NoSQL-gruppen av databaser. För att koppla oss till databasen använder vi klienter i terminalen och kod i Node.js, med och utan Express.
+Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
 
-Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en kontainer och vi kör Express i en egen kontainer och låter de båda kontainrarna kommunicera, samtidigt som vi kan kommunicera direkt med varje kontainer från terminalen.
+Sedan bygger du vidare på din klient/server applikation i JavaScript där vi använder realtidsprogrammering för de delar av applikationen där det kan tillämpas.
+
 
 <!--more-->
 
-[FIGURE src=image/snapht17/kmom05-summary.png?w=w3 caption="Databasen MongoDB tillsammans med klient, express och samlad i Docker."]
 
-I följande asciinema kan du se flödet hur man jobbar med Docker i olika kontainerar för Express och MongoDB och hur man på olika sätt kan koppla sig mot dem.
-
-[ASCIINEMA src=149154 caption="Ett flöde hur man kan jobba i terminalen i kmom05."]
 
 Tänk dig som vanligt in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet. Undersök och testa, var nyfiken.
 
@@ -47,7 +44,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Bekanta dig översiktligt med [organisationen kring databasen MongoDB](https://www.mongodb.com/). Övningen (längre ned) kommer vidare utgå från informationen på denna webbplatsen. 
+1. Bekanta dig översiktligt med [organisationen kring databasen MongoDB](https://www.mongodb.com/). Övningen (längre ned) kommer vidare utgå från informationen på denna webbplatsen.
 
 1. Läs översiktligt igenom [Wikipedia om NoSQL](https://en.wikipedia.org/wiki/NoSQL) för en introduktion till konceptet NoSQL samt en översikt av de olika typer av databaser som ligger under samlingsnamnet. Du kan se att MongoDB är en dokumentorienterad databas.
 
@@ -55,7 +52,7 @@ Kika igenom följande material.
 
 1. Bekanta dig översiktligt med dokumentationen för "[MongoDB Node.js driver](http://mongodb.github.io/node-mongodb-native/)" vilken är den driver vi kommer använda för att koppla JavaScript i Node.js till MongoDB. Det handlar både om referens-dokumentationen och API-dokumentationen.
 
-1. Läs igenom inledande tutorials för MongoDB Node.js driver som du hittar i Referensmanualen. Titta främst i "Connect to MongoDB", "Collections", "CRUD Operations" och "Projections". De ger dig snabbt en känsla av hur man jobbar med datan. 
+1. Läs igenom inledande tutorials för MongoDB Node.js driver som du hittar i Referensmanualen. Titta främst i "Connect to MongoDB", "Collections", "CRUD Operations" och "Projections". De ger dig snabbt en känsla av hur man jobbar med datan.
 
 
 

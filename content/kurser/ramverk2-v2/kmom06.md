@@ -16,17 +16,13 @@ Kursstart våren 2019.
 
 [/WARNING]
 
-Som en del i infrastrukturen kring JavaScript finns pakethanteraren npm som erbjuder en hantering av återanvändbara moduler och färdiga program. Från början var npm utvecklat i samband med att Node.js växte fram. Numer ser vi både färdiga program, klient- och server-moduler som distribueras via npm.
+Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databas som klassas i NoSQL-gruppen av databaser. För att koppla oss till databasen använder vi klienter i terminalen och kod i Node.js, med och utan Express.
 
-Vi dedikerar detta kursmoment till att forma en egen modul som publiceras på npm och som sedan återanvänds i din applikation.
+Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en kontainer och vi kör Express i en egen kontainer och låter de båda kontainrarna kommunicera, samtidigt som vi kan kommunicera direkt med varje kontainer från terminalen.
 
 <!--more-->
 
-Du väljer själv en mindre del av din applikation som skall formas som en egen modul med eget Git-repo på GitHub med enhetstester och CI-kedja samt publicering på npm. Därefter kan du åter installera och använda modulen som en fristående modul i din applikation.
 
-[FIGURE src=image/snapht17/modulecounts.png?w=w3 caption="Jämförelse mellan antal paket på tre olika modulbibliotek för JavaScript, Python och PHP. Bild från [Module counts](http://www.modulecounts.com/)."]
-
-I bilden ovan ser vi den exponentiella tillväxten av paket som publicerats på npm sedan starten.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 

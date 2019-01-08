@@ -5,7 +5,7 @@ revision:
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-11-13": "(A, mos) Första utgåvan."
 ...
-Kmom04: Realtid
+Kmom04: Funktions- och systemtest
 ==================================
 
 [WARNING]
@@ -16,41 +16,14 @@ Kursstart våren 2019.
 
 [/WARNING]
 
-Vi skall studera realtidsprogrammering i webbsammanhang med WebSocket. Vi tittar på grunderna i websockets och ser hur klienter och servrar byggs upp med. Vi tittar på en echo-server och en broadcast-server och vi avslutar med att bygge en enkel chatt för att göra vårt eget applikationsprotokoll ovanpå websockets. Chatten integrerar vi i vår redovisa sida.
+Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi vidare på en testmiljö för JavaScript. Det handlar främst om enhetstestning och funktionstestning, samt kodtäckning och basen för en CI-kedja (Continuous integration).
 
-När koncepten om websockets är utredda så har du grunden för att bygga vidare på din klient/server applikation i JavaScript. Syftet är att lägga till den realtidsfunktionalitet som du anser lämpligt i din applikation.
+Det blir också en introduktion i hur vi kan använda Selenium för att testa våra klienter på ett automatiserad sätt.
 
-<!-- Avslutningsvis lägger du till stöd för funktionstester som exekveras utifrån en webbläsare. -->
 
 <!--more-->
 
-[FIGURE src=image/snapht17/websocket-upgrade-firefox.png?w=w2 caption="En uppkoppling av websocket etableras."]
 
-[FIGURE src=image/snapht17/websocket-subprotocols.png?w=w2 caption="En klient där man kan välja subprotokoll."]
-
-<!--
-Input till kurs Realtidsprogrammering för webben
-
-Fler än en server. Delad information mellan servrar.
-Uppstart och nedstart av servrar.
-(containers, docker)
-(databaser)
-Subscripter/publisher patterns
-IOT
-Desktop klient för övervakning
-Servrar med JSON API
-Prestanda
-Systemtest
-wss
-Security
-Redis
-(massive multiplayer game)
-(gameloop)
-realtime prediction estimation
-web workers
-performace evaluation/optimization webclient (devtools)
-Nätverk av många chattservrar, hur synkronisera att flera servrar samverkar för att klara belastningen av ett chattnätverk.
--->
 
 Även i detta kursmoment kommer du att göra teknikval inför implementationen av din applikation. Tänk dig in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet.
 
@@ -123,7 +96,7 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Är du ny på realtidsprogrammering eller har du gjort liknande tidigare? 
+* Är du ny på realtidsprogrammering eller har du gjort liknande tidigare?
 * Hur gick det att jobba med konceptet realtidsprogrammering i webben, några reflektioner?
 * Berätta om din chatt som du integrerade i redovisa-sidan.
 * Berätta om den realtidsfunktionalitet du väljer att integrera i din klient/server applikation.

@@ -60,7 +60,7 @@ dbwebb init
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar)*
+*(ca: 2-3 studietimmar)*
 
 
 
@@ -71,6 +71,12 @@ Kika igenom följande material.
 1. Webbplatsen [nodeframework.com](http://nodeframework.com/) där nodejs backend ramverk är listade för att skapa dig en överblick över vilka ramverk som finns. Med din erfarenhet av andra ramverk så har du god koll på vad du vill leta efter.
 
 <!-- 1. Webbplatsen för [ramverket Express](https://expressjs.com/) ger dig det du behöver för att komma igång. Använd webbplatsen och dess dokumentation som källan och kör på senaste versionen. -->
+
+
+
+### Video  {#video}
+
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce--Z6iuqvY-UfAN6vWhHpmZ) kopplat till kursen, titta på videos som börjar på 0 och 1. Videoserien uppdateras varje måndag och innehåller material för att utvärdera tekniker och ge tips & trix för att lösa kursmomenten.
 
 
 
