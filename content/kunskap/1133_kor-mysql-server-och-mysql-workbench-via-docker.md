@@ -209,4 +209,4 @@ Avslutningsvis {#avslutning}
 
 Detta var några exempel på hur du kan köra MySQL Server med hjälp av Docker och hur du kan koppla dig med klienten mot databasservern.
 
-Denna artikel har en [egen forumtråd](t/8171) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/8173) som du kan ställa frågor i, eller ge tips.
