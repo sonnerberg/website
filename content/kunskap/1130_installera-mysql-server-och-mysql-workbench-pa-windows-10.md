@@ -11,7 +11,7 @@ revision:
 Installera MySQL Server och MySQL WorkBench på Windows 10
 ==================================
 
-[FIGURE src=image/snapvt18/mysql-workbench-local.png?w=c5&a=0,0,0,0&cf class="right"]
+[FIGURE src=image/snapvt19/win-workbench.show-databases.png?w=c5 class="right"]
 
 Vi skapar en egen lokal utvecklingsmiljö för databasen MySQL tillsammans med desktopklienten MySQL Workbench på Windows 10.
 
@@ -66,13 +66,13 @@ MySQL är beroende av paketet "Microsoft Visual C++ Redistributable Package" och
 
 För övriga inställningar väljer jag de som är förinställda i installationsprogrammet.
 
-Jag väljer ett lösenord för root-användaren när jag ombeds göra det av installationsprogrammet.
+Jag väljer ett lösenord för databasens root-användaren när jag ombeds göra det av installationsprogrammet.
 
 Jag väljer att starta servern direkt efter installationen, Databasen MySQL installeras som en _service_  Windows och kan stoppas och startas via Window Services. Normalt startar MySQL server när du bootar om din dator.
 
 Jag väljer att starta workbench direkt efter installationen. Via workbench kan jag koppla mig mot databasen och testa att det fungerar. Jag behöver ange lösenordet för root-användaren.
 
-[FIGURE src=image/snapvt19/mysql-workbench-installed-windows.png?w3 caption="Du kan nu koppla dig direkt mot databasen, via Workbench."]
+[FIGURE src=image/snapvt19/mysql-workbench-installed-windows.png?w=w3 caption="Du kan nu koppla dig direkt mot databasen, via Workbench."]
 
 Jag kan nu utföra kommandot för att visa vilka databaser som finns.
 
@@ -84,7 +84,7 @@ Så här ser det ut i workbench.
 
 [FIGURE src=image/snapvt19/win-workbench.show-databases.png?w=w3 caption="Nu fungerar både Workbench och MySQL databasserver."]
 
-Vi har nu installerat MySQL Community Server tillsammans med MySQL Workbench.
+Vi har nu installerat MySQL Community Server tillsammans med MySQL Workbench och kopplingen mellan dem fungerar.
 
 
 
@@ -121,7 +121,7 @@ Då vet vi att terminalklienten fungerar som den ska.
 
 
 
-### Terminalklienten till PATH {#winpath}
+### Terminalklienten till PATH {#path}
 
 Du kan lägga till alla terminalkommandon för MySQL till din PATH. Då blir det enklare att starta programmet, oavsett vilken katalog du står i.
 
@@ -305,11 +305,18 @@ Nu skall det fungera. Denna konfigurationsfilen är bra att ha och jobbar man my
 
 
 
+Alternativ till installation {#alternativ}
+--------------------------------------
+
+Du kan använda [MariaDB](https://mariadb.org/download/) som ett alternativ till MySQL.
+
+Du kan använda den versionen av MySQL/MariaDB som följer med XAMPP.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
 Detta var de steg som krävs för att installera databasen MySQL, dess terminalklienter i PATH och desktopklienten MySQL Workbench på Windows 10.
-
-Du kan använda [MariaDB](https://mariadb.org/download/) som ett alternativ till MySQL Community Server.
 
 Denna artikel har en [egen forumtråd](t/8165) som du kan ställa frågor i, eller ge tips.

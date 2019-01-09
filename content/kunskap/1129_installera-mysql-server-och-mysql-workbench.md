@@ -23,6 +23,8 @@ Vi använder också terminalklienten mysql samt lägger in sökvägen till termi
 Det finns uppdaterade artiklar som är nyare och ersätter denna artikel.
 
 * [Installera MySQL Server och MySQL WorkBench på Windows 10](kunskap/installera-mysql-server-och-mysql-workbench-pa-windows-10)
+* [Installera MySQL Server och MySQL WorkBench på macOS](kunskap/installera-mysql-server-och-mysql-workbench-pa-macos)
+* [Installera MySQL Server och MySQL WorkBench på Linux](kunskap/installera-mysql-server-och-mysql-workbench-pa-linux)
 
 [/INFO]
 -->
