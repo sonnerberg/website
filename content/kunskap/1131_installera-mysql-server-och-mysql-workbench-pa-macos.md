@@ -43,7 +43,7 @@ MySQL Workbench är en desktopklient du kan använda för att jobba mot databass
 
 
 
-Installera MySQL Server på macOS {#macos}
+Installera MySQL Server {#server}
 --------------------------------------
 
 Jag hämtar hem "MySQL Community Server" via nedladdningssidan, jag väljer DMG-varianten.
@@ -60,7 +60,7 @@ Se till att databasservern är startad.
 
 
 
-Installera MySQL WorkBench på macOS {#macos}
+Installera MySQL WorkBench {#wb}
 --------------------------------------
 
 Jag hämtar hem "MySQL Workbench" via nedladdningssidan och installerar via installationsprogrammet.
@@ -198,4 +198,4 @@ Avslutningsvis {#avslutning}
 
 Detta var de steg som krävs för att installera databasen MySQL, dess terminalklienter i PATH och desktopklienten MySQL Workbench i macOS.
 
-Denna artikel har en [egen forumtråd](t/7236) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/8170) som du kan ställa frågor i, eller ge tips.

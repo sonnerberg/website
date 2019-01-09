@@ -45,7 +45,7 @@ För Windows finns paketet "MySQL on Windows" som är en paketering som innehål
 
 
 
-Installera MySQL på Windows 10 {#win10}
+Installera MySQL på Windows 10 {#server-wb}
 --------------------------------------
 
 För Windows finns en [speciell nedladdningssida med MySQL produkter](https://dev.mysql.com/downloads/windows/). Jag väljer "MySQL Installer" som är en paketering av alla produkter för MySQL.

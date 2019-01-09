@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2019-01-08": "(A1, mos) Förbereder länkar till olika installationsdokument beroende på operativsystem."
+    "2019-01-09": "(B, mos) Delade in artikeln i delar, beroende på operativsystem."
     "2018-03-20": "(A, mos) Uppdelad från ett större dokument."
 ...
 MySQL / MariaDB och MySQL Workbench
@@ -14,16 +14,12 @@ Du vill enbart installera databasen MySQL, alternativt MariaDB, tillsammans med 
 Installation {#installation}
 ----------------------------------
 
-<!--
 Välj rätt artikel beroende på vilket operativsystem du använder.
 
 * [Installera MySQL Server och MySQL WorkBench på Windows 10](kunskap/installera-mysql-server-och-mysql-workbench-pa-windows-10)
 * [Installera MySQL Server och MySQL WorkBench på macOS](kunskap/installera-mysql-server-och-mysql-workbench-pa-macos)
 * [Installera MySQL Server och MySQL WorkBench på Linux](kunskap/installera-mysql-server-och-mysql-workbench-pa-linux)
 
--->
-
- Du får hjälp att installera i artikeln "[Installera MySQL Server och MySQL WorkBench](kunskap/installera-mysql-server-och-mysql-workbench)". I artikeln kommer du även igång med terminalklienten.
 
 
 <!--
