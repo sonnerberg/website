@@ -40,6 +40,8 @@ I kursrepots exempel katalog finns två olika exempel program skrivna med hjälp
 
 Dessutom finns det samma Me-sida som konsumerar me-api:t från tidigare kursmoment implementerad i de 5 olika teknikerna. [GitHub repon](https://github.com/emilfolino?utf8=%E2%9C%93&tab=repositories&q=me-&type=&language=) för dessa 5 Me-sidor samt me-api:t finns tillgängligt. Dessa är även driftsatta på `me-{angular,mithril,react,vanilla,vue}.jsramverk.me`.
 
+Först tar vi en titt på antal rader som utvecklaren behöver skriva i dessa små exempelprogram och hur stora produktionsfilerna för dessa exempelprogram är.
+
 
 
 #### Rader skriven kod i exempelprogrammen {#loc}
@@ -48,7 +50,7 @@ I nedanstående tabell listas de rader kod som utvecklaren har skrivit för att 
 
 |  | Angular | Mithril | React | Vue | Vanilla JS |
 |-----|--------|--------|--------|---------|--------|
-| calculator  |  | 103 |  | 98 | 118 (94 i DOM varianten) |
+| calculator  | 112 | 103 | 133 | 98 | 118 |
 | me   | 166 | 107 | 117 | 134 | 92 |
 | tic-tac-toe |  | 136 | 146 | 136 | 126 |
 
@@ -60,10 +62,44 @@ I nedanstående tabell listas storleken på produktionsfilerna som skapas av ant
 
 |  | Angular | Mithril | React | Vue | Vanilla JS |
 |-----|--------|--------|--------|---------|--------|
-| calculator  |  | 30K |  | 83K | 2.6K (1.6K i DOM variant) |
+| calculator  | 217K | 30K | 115K | 83K | 2.6K |
 | me   | 329K | 29K | 134K | 106K | 2.2K |
 | tic-tac-toe |  | 29K | 37K | 87K | 2.8K |
 
+
+
+Tekniska koncept {#concepts}
+--------------------------------------
+
+Vi tittar i denna del av artikeln på några tekniska koncept som används i de olika ramverken. Vi tittar på hur man har vald att implementera dessa koncept i de olika ramverken och utvärderar vilka fördelar och nackdelar som finns med att göra på det viset.
+
+
+### Komponenter {#komponenter}
+
+
+
+
+### Länkning av data {#linking}
+
+Vi vill i många applikationer och speciellt i applikationer där data uppdateras ofta länka data i våra modeller till representationen i en vy. I vanilla JavaScript hade vi gjort det genom att varje gång data uppdateras sätta ett nytt värde för ett specifikt element i DOM'en.
+
+```javascript
+var data = 42;
+
+document.getElementById("element").textContent = data;
+```
+
+I många ramverk är detta nått man försöker förenkla genom att uppdatera vyn direkt varje gång data ändras. Detta är en av de magiska sakerna med JavaScript ramverk och vi ska nedan se exempel på hur detta kan göras.
+
+
+
+### Routing {#routing}
+
+### Eventhantering {#event}
+
+### HTTP-anrop {#http}
+
+### Arkitektur {#architecture}
 
 
 RealWorld {#realworld}
