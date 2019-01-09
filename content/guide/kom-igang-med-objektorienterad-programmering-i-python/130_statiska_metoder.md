@@ -39,6 +39,8 @@ class Car():
         return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 ```
 
+[FIGURE src=/image/oopython/guide/car_statik_meth.png caption="Klassdiagram över Car med statisk metod."]
+
 Du kan troligen gissa vilken av det två nya metoderna som är den statiska. För att skapa en statisk metod behöver man skriva `@staticmethod` på raden ovanför metod definitionen. `@staticmethod` kallas för en **decorator**, det är något som dynamiskt ändrar funktionaliteten på en funktion. I detta fallet gör den så att Python inte skickar med den egna instansen som det första argumentet till metoden. Alltså så att vi inte behöver ha med parametern `self` i parameterlistan. 
 Det kan tyckas konstigt att vi sen även skapat en instansmetod som bara anropar den statiska. Men att vi gör så ger oss en slags abrstraktion, vi kan använda den statiska metoden utan att vi behvöver ha ett Car objekt för att dra av 1/3 av en summa men oftast kommer vi vilja använda metoden i samband med ett Car objekt. Därför skapar vi även instansmetoden för att spara några rader kod och göra den mer DRY. 
 

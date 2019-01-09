@@ -78,6 +78,8 @@ Isle of Dogs is 101 minute(s) long
 
 Utskriften blev inte så snygg för Movie instansen, det är för att vi gör en print i båda utan att formatera det på ett snyggt sätt. Vi snyggar till det genom att flytta skapandet av strängen till en egen metod, en klassisk `to_string()` metod.
 
+[FIGURE src=/image/oopython/guide/vid_mov_overl_meth.png class="right" caption="Klassdiagram över Video och Movie med överskuggning."]
+
 ```python
 class Video():
 

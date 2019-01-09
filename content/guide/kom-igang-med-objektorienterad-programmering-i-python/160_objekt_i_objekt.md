@@ -17,6 +17,8 @@ Ny klass {#ny_klass}
 
 Vi skapar en ny klass för extrautrustning i bilarna så vi kan ha koll på vad bilarna har för extra utrustning. Vi döper den till `Equipment` och ger den instansattributen `price`, `type`, och `name`. Tanken är att 
 
+[FIGURE src=/image/oopython/guide/eqp_class.png class="right" caption="Klassdiagram över klassen Equipment."]
+
 ```python
 class Equipment():
 
@@ -36,6 +38,8 @@ class Equipment():
 ```
 
 Nu har vi grunder för en fullutrustad bil, men vi behöver koppla Equipment objekt till Car objekt. Tanken är att ett Car objekt ska kunna innehålla X antal Equipment objekt så vi lägger till ett nytt instansattribut i Car som innehåller en tom lista. Vi skapar även en ny instansmetod i Car där vi skapar och lägger till nya Equipment objekt i listan.
+
+[FIGURE src=/image/oopython/guide/car_eqp.png class="right" caption="Klassdiagram över klassen Car med Equpment."]
 
 ```python
 class Car():
@@ -155,6 +159,8 @@ All kod {#all_kod}
 
 Jag visar upp hela koden vi har producerat här.
 
+[FIGURE src=/image/oopython/guide/eqp_complete.png class="right" caption="Klassdiagram över klassen Equipment."]
+
 ```python
 class Equipment():
 
@@ -175,8 +181,9 @@ class Equipment():
     def get_info(self):
         return "Name: {}, Type: {}, Price: {}".format(self.name, self.type, self.price)
 
+```
 
-
+```python
 class Car():
     wheels = 4
     car_count = 0
@@ -212,5 +219,8 @@ class Car():
         self.price += other.get_price()
         return self
 ```
+
+[FIGURE src=/image/oopython/guide/car_complete.png caption="Klassdiagram över klassen Car."]
+
 
 Testa koden, lek runt med den så du förstår vad som sker och hur man kommer åt attribut och anropar metoder.

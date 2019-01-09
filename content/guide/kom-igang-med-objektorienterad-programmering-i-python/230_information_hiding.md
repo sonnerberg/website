@@ -27,6 +27,8 @@ Om du var uppmärksam så är du med på att _privat_ inte finns som typ i Pytho
 
  Hur mycker pegnar något tjänar brukar vara lite känsligt så vi skapar ett skyddat/privat attribut för det i Video klassen:
 
+[FIGURE src=/image/oopython/guide/vid_mov_priv_attr.png class="right" caption="Klassdiagram över Video och Movie med privat attribut."]
+
 ```python
 class Video():
 
@@ -99,6 +101,7 @@ New revenue is: 17000
 Som ni ser kan vi komma åt `__draw_tax()` genom metoden `add_revenue()` i instansen med `self.__draw_tax()`.  
 Vi testar att överskugga metoden i Movie för att säkna skatten:
 
+[FIGURE src=/image/oopython/guide/vid_mov_name_mangl.png class="right" caption="Klassdiagram över Video och Movie med name mangling."]
 
 ```python
 class Video():

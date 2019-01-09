@@ -66,6 +66,8 @@ För `+=`, även kallat _additions tilldelnings operatorn_, heter den magiska me
 
 Vi lägger till koden för det, men försök gärna själv först. Skapa en ny instansmetod som heter `__iadd__(self, other)` som uppdaterar `price` i `self` med summan av deras priser och returnerar `self`.
 
+[FIGURE src=/image/oopython/guide/car_operat_meth.png class="right" caption="Klassdiagram över Car med operatoröverlagrings metod."]
+
 ```python
 class Car():
     wheels = 4

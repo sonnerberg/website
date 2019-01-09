@@ -30,6 +30,9 @@ En klass behöver även attribut som kan hålla dess state/värden så vi börja
 
 Något som "alla" bilar har gemensamt är att de har 4 hjul, så vi skapar ett _statiskt attribut_ som innehåller hur många hjul alla bilar har. Vi lägger även till ett statiskt attribut som vi använder som en räknare för att hålla koll på hur många objekt vi har skapat av klassen. _statiska attribut_ innehåller värden som är gemensamma för alla objekt av klassen till skillnad från _instansattribut_ som är individuella för varje objekt av klassen. Statiska attribut kallas även _klass attribut_.
 
+[FIGURE src=/image/oopython/guide/car_statisk_attr.png? class="right" caption="Klassdiagram över Car med statiska attribut."]
+
+
 ```python
 class Car():
     wheels = 4
@@ -45,6 +48,8 @@ Sådär ja, vad fint det blev. Vi går vidare till att lägga till instansattrib
 Instans attribut skapar vi i _konstruktorn_; metoden som körs för att skapa en ny instans. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig mellan objekten. Konstruktormetoden heter `__init__` och den måste ha parametern `self` först i parameterlistan. "self" används för att referera till objektet som konstruktorn ska skapa.
 
 Vi fyller på med instansattribut för modell och pris. I och med att `__init__`-metoden används för att skapa nya objekt av vår klass är det ett bra ställe att öka `car_counter` med 1. Då kommer `car_counter` öka med 1 varje gång vi skapar ett nytt Car objekt:
+
+[FIGURE src=/image/oopython/guide/car_instans_attr.png? class="right" caption="Klassdiagram över Car med statiska- och instans-attribut."]
 
 ```python
 class Car():

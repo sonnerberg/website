@@ -25,6 +25,8 @@ Vi börjar med att skapa get metoder för våra attribut.
 
 En "get" metod för ett attribut brukar oftast enbart returnerar attributets värde. 
 
+[FIGURE src=/image/oopython/guide/car_get_meth.png? class="right" caption="Klassdiagram över Car med get-metoder av typen instansmetod."]
+
 ```python
 class Car():
     wheels = 4
@@ -61,6 +63,7 @@ BMW
 
 Då tittar vi på "set" och precis som ni gissar så används oftasts "set" metoder för att ändra värdet på attribut. En "set" metod brukar enbart tilldela ett argument till ett attribut.
 
+[FIGURE src=/image/oopython/guide/car_set_meth.png? class="right" caption="Klassdiagram över Car med instansmetoder."]
 
 ```python
 class Car():
@@ -99,6 +102,8 @@ BMW X2
 ```
 
 Vi skapar en till instansmetod, en för att skriva ut information om bilen:
+
+[FIGURE src=/image/oopython/guide/car_instans_meth.png? class="right" caption="Klassdiagram över Car med instansmetoder."]
 
 ```python
 class Car():

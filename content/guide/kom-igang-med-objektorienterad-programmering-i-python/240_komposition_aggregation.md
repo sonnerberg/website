@@ -45,17 +45,19 @@ class Person:
         return "My name is {name} and my date of birth is {date}".format(name=self.name, date=self.date_of_birth)
 
 
->>> person1 = Person("Andreas", 1993, 5, 7)
+>>> person1 = Person("James", 1993, 5, 14)
 >>> print(person1)
-My name is Andreas and my date of birth is 1993-5-7
+My name is James and my date of birth is 1993-5-14
 >>> print(person1.date_of_birth)
-1993-5-7
->>> person2 = Person("Inez", 2017, 2, 14)
+1993-5-14
+>>> person2 = Person("Klara", 2010, 3, 15)
 >>> print(person2)
-My name is Inez and my date of birth is 2015-5-17
+My name is Klara and my date of birth is 2010-3-15
 >>> print(person2.date_of_birth)
-2015-5-17
+2010-3-14
 ```
+
+[FIGURE src=/image/oopython/guide/pers_date_comp.png caption="Klassdiagram över Person och Date med komposition."]
 
 Vilken typ av relation har vi här? Aggregation eller komposition? Tipsen från ovanför var om objektet skapas i konstruktorn eller skickas som argument och om man gör delete på Person objektet kommer Date objektet finnas kvar. I koden ovanför skapas Date objekten i konstruktorn vilket tyder på att det är en kompositions relation mellan Person och Date. Vidare har Date objekten bara en reference i koden och den ligger i Person objekten. Vilket betyder att om person objektet raderas kommer även Date objektet göra det. Date objekten uppfyller ingen funktionalitet utanför ett Person objekt. Av dessa tre anledningarna så är det komposition och inte aggregation.
 
