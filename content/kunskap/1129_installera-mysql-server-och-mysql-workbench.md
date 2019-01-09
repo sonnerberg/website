@@ -4,7 +4,8 @@ category:
     - databas
     - mysql
 revision:
-    "2018-01-12": (A, mos) Första utgåvan.
+    "2019-01-09": "(B, mos) Artikeln är utgången och ersatt med tre nya artiklar."
+    "2018-01-12": "(A, mos) Första utgåvan."
 ...
 Installera MySQL Server och MySQL WorkBench
 ==================================
@@ -17,7 +18,6 @@ Vi använder också terminalklienten mysql samt lägger in sökvägen till termi
 
 <!--more-->
 
-<!--
 [INFO]
 
 Det finns uppdaterade artiklar som är nyare och ersätter denna artikel.
@@ -27,7 +27,6 @@ Det finns uppdaterade artiklar som är nyare och ersätter denna artikel.
 * [Installera MySQL Server och MySQL WorkBench på Linux](kunskap/installera-mysql-server-och-mysql-workbench-pa-linux)
 
 [/INFO]
--->
 
 
 
