@@ -2,7 +2,7 @@
 author: mos
 revision:
     "2019-01-09": "(C, mos) Lade till Docker."
-    "2019-01-09": "(B, mos) Delade in artikeln i delar, beroende på operativsystem."
+    "2019-01-08": "(B, mos) Delade in artikeln i delar, beroende på operativsystem."
     "2018-03-20": "(A, mos) Uppdelad från ett större dokument."
 ...
 MySQL / MariaDB och MySQL Workbench
