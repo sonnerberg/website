@@ -174,29 +174,29 @@ class Video():
 
     ...
 
-    def mustOverride(self):
+    def must_override(self):
         raise NotImplementedError("Subclasses must implement this!")
 
 
->>> charlie.mustOverride()
+>>> charlie.must_override()
 NotImplementedError: Subclasses must implement this!
 
->>> dogs.mustOverride()
+>>> dogs.must_override()
 NotImplementedError: Subclasses must implement this!
 ```
 
-Precis som vi förväntade oss får vi `runtimeException` både från charlie och dogs. För att fixa detta behöver vi överskugga `mustOverride()` i Movie.
-Nackdelen med "NotImplementedError" är att vi inte kan lägga någon funktionalitet i `mustOverride()` metoden i Video. Den kommer alltid bara slänga `NotImplementedError`. Men det är också tanken, `NotImplementedError` ska bara användas när metoden inte ska implementeras i basklassen.
+Precis som vi förväntade oss får vi `runtimeException` både från charlie och dogs. För att fixa detta behöver vi överskugga `must_override()` i Movie.
+Nackdelen med "NotImplementedError" är att vi inte kan lägga någon funktionalitet i `must_override()` metoden i Video. Den kommer alltid bara slänga `NotImplementedError`. Men det är också tanken, `NotImplementedError` ska bara användas när metoden inte ska implementeras i basklassen.
 
 ```python
 class Movie(Video):
     ...
-    def mustOverride(self):
+    def must_override(self):
         print("Abstract method is overridden")
 
->>> charlie.mustOverride()
+>>> charlie.must_override()
 NotImplementedError: Subclasses must implement this!
 
->>> dogs.mustOverride()
+>>> dogs.must_override()
 Abstract method is overridden
 ```
