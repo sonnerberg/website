@@ -133,14 +133,6 @@ IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad 
 
 
 
-### Extra {#extra}
-
-Gör följande extrauppgifter om du har tid och lust.
-
-1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Du kan redan nu tjuvkika på guidens kommande delar.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
