@@ -18,7 +18,7 @@ Kursstart våren 2019.
 
 Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
 
-Sedan bygger du vidare på din klient/server applikation i JavaScript där vi använder realtidsprogrammering för de delar av applikationen där det kan tillämpas.
+Sedan tar vi en titt på hur vi kan använda grafer som grafiska element för att visualisera realtidsdata.
 
 
 <!--more-->

@@ -16,7 +16,7 @@ Kursstart våren 2019.
 
 [/WARNING]
 
-Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi vidare på en testmiljö för JavaScript. Det handlar främst om enhetstestning och funktionstestning, samt kodtäckning och basen för en CI-kedja (Continuous integration).
+Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi vidare på en testmiljö för JavaScript. Det handlar främst om funktionstestning och hur vi testar fullständiga router i vårt API.
 
 Det blir också en introduktion i hur vi kan använda Selenium för att testa våra klienter på ett automatiserad sätt.
 

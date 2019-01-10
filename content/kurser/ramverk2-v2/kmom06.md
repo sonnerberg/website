@@ -5,7 +5,7 @@ revision:
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-12-05": "(A, mos) Första utgåvan."
 ...
-Kmom06: Egen modul
+Kmom06: Dokumentorienterad databas
 ==================================
 
 [WARNING]
