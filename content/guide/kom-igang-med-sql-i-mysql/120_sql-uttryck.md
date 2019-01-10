@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-10": "(B, mos) Lade till referensmanual för MariaDB."
     "2017-12-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 SQL uttryck
@@ -71,4 +72,6 @@ De första övningarna är enkla för att sedan bli svårare och svårare. Ju l�
 Referensmanualen {#ref}
 ----------------------------------
 
-I referensmanualen för MySQL finns ett stycke som beskriver syntax för de grundläggande SQL-uttrycken, [SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html). Det är en riktigt god idé att bekanta sig med den delen av referensmanualen.
+I referensmanualen för MySQL finns ett stycke som beskriver syntax för de grundläggande SQL-uttrycken, "[SQL Statement Syntax](https://dev.mysql.com/doc/refman/8.0/en/sql-syntax.html)". Det är en riktigt god idé att bekanta sig med den delen av referensmanualen.
+
+Motsvarande referensmanual för MariaDB finns under "[SQL Statements & Structure](https://mariadb.com/kb/en/library/sql-statements-structure/)".
