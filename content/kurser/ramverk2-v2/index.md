@@ -118,7 +118,7 @@ Vi utvärderar vilka möjligheter vi har vid val av ramverk och väljer det ramv
 
 Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
 
-Vi börjar dessutom utvecklande av en klient/server applikation, som kommer ligga som ett spår genom resten av kursen.
+Vi tittar på hur vi kan använda enhetstestning för att säkerställa att de minsta beståndsdelar i vår kod gör som det är tänkt.
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -126,7 +126,7 @@ Vi börjar dessutom utvecklande av en klient/server applikation, som kommer ligg
 
 ### Kmom04: Funktions- och systemtest {#kmom04}
 
-Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi vidare på en testmiljö för JavaScript. Det handlar främst om enhetstestning och funktionstestning, samt kodtäckning och basen för en CI-kedja (Continuous integration).
+Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi vidare på en testmiljö för JavaScript. Det handlar främst om funktionstestning och hur vi testar fullständiga router i vårt API.
 
 Det blir också en introduktion i hur vi kan använda Selenium för att testa våra klienter på ett automatiserad sätt.
 
@@ -138,7 +138,7 @@ Det blir också en introduktion i hur vi kan använda Selenium för att testa v�
 
 Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
 
-Sedan bygger du vidare på din klient/server applikation i JavaScript där vi använder realtidsprogrammering för de delar av applikationen där det kan tillämpas.
+Sedan tar vi en titt på hur vi kan använda grafer som grafiska element för att visualisera realtidsdata.
 
 [Instruktion till kursmoment 05](./kmom05).
 
@@ -151,16 +151,6 @@ Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databa
 Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en kontainer och vi kör Express i en egen kontainer och låter de båda kontainrarna kommunicera, samtidigt som vi kan kommunicera direkt med varje kontainer från terminalen.
 
 [Instruktion till kursmoment 06](./kmom06).
-
-
-
-<!-- ###Kmom06: Egen modul {#kmom06}
-
-Som en del i infrastrukturen kring JavaScript finns pakethanteraren npm som erbjuder en hantering av återanvändbara moduler och färdiga program. Från början var npm utvecklat i samband med att Node.js växte fram. Numer ser vi både färdiga program, klient- och server-moduler som distribueras via npm.
-
-Vi dedikerar detta kursmoment till att forma en egen modul som publiceras på npm och som sedan återanvänds i projektet.
-
-[Instruktion till kursmoment 06](./kmom06). -->
 
 
 
@@ -188,31 +178,6 @@ Det finns läsanvisningar i samband med varje kursmoment.
 ###Referenslitteratur {#referenslitteratur}
 
 Referensdokumentationen är främst olika online-resurser i form av manualer.
-
-
-
-<!--
-
-Kursbok saknas så inga speciella läsanvisningar syns här.
-
-Läsanvisningar {#lasanvisning}
-------------------------------
-
-Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
-
-| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming |
-|------------|-----------------------------------------------------------|
-| Kmom01     | Ch 1, 12                                                  |
-| Kmom02     | Ch 2                                                      |
-| Kmom03     | Ch 3,                                                     |
-| Kmom04     | Ch 4, 6                                                   |
-| Kmom05     | Ch 12, 13, 14                                             |
-| Kmom06     |                                                           |
-| Kmom10     |                                                           |
-
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
-
--->
 
 
 
