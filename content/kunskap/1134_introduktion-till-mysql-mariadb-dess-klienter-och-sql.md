@@ -632,4 +632,4 @@ Avslutningsvis {#avslutning}
 
 Du har nu fått en översyn av olika klienter till MySQL/MariaDB och via en komplett databas som vi skapat med SQL-kommandon så har du fått en insyn i hur det är att jobba med databaser, med SQL, via olika klienter.
 
-Frågor och kommentarer tar vi i forumet där det finns en [specifik tråd för MySQL och dess klienter](t/6263).
+Frågor och kommentarer tar vi i forumet där det finns en [specifik tråd för MySQL och dess klienter](t/8179).
