@@ -52,7 +52,7 @@ I nedanstående tabell listas de rader kod som utvecklaren har skrivit för att 
 |-----|--------|--------|--------|---------|--------|
 | calculator  | 112 | 103 | 133 | 98 | 118 |
 | me   | 166 | 107 | 117 | 134 | 92 |
-| tic-tac-toe |  | 136 | 146 | 136 | 126 |
+| tic-tac-toe |  | 136 | 146 | 141 | 126 |
 
 
 
