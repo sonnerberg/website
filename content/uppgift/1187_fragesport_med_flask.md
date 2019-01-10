@@ -35,7 +35,7 @@ Du ska implementera klasserna för de tre frågetyperna och handlern som app.py 
 
 [FIGURE src=/image/oopython/kmom02/fragesport_uml.png caption="Klassdiagram för uppgiften."]
 
-Attributen och metoderna som är **bold** markerad används av den färdiga kod ni får och måste därför implementeras och med de namnen. Övriga är bara exempel på vad man kan ha med. `QuestionType2` och `QuestionType3` innehåller bara ett statisk attribut som ett måste men du kommer också behöva överlagra några av metoderna från `Question` för att det ska bli bra. Vilka metoder beror på vilken klass du väljer som basklass. Jag hade även bytt namn på Question klasserna så det inte bara är type2 eller 3. Förhoppningen är att metodnamnen är beskrivande nog över vad de ska göra men om du är osäker är det bara att fråga.
+Attributen och metoderna som är **bold**-markerad används av den färdiga koden ni får och måste därför implementeras av er med de namnen. Övriga är bara exempel på vad man kan ha med. `QuestionType2` och `QuestionType3` innehåller bara ett statisk attribut som ett måste men du kommer också behöva överlagra några av metoderna från `Question` för att det ska bli bra. Vilka metoder beror på vilken klass du väljer som basklass. Jag hade även bytt namn på Question klasserna så det inte bara är type2 eller 3. Förhoppningen är att metodnamnen är beskrivande nog över vad de ska göra men om du är osäker är det bara att fråga.
 
 
 
@@ -54,7 +54,7 @@ cd me/kmom02/questions
 
 1. Bekanta dig med koden, kolla igeom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metod som behövs och vad de används till.
 
-1. Implementera klasserna som behövs i filerna `handler.py` och `questions.py`, en handler klass som heter `QuesionManager` och tre klasser för frågorna. Typerna av frågor är fritext svar, flervalsfrågor med flera rätt (checkboxes) och flervalsfrågor med ett rätt svar (radiobuttons). Välj ut en av dem som basklass och låt de andra två ärva från basklassen. I mappen `templates/answer_types` finns en html template för varje frågetyp.
+1. Implementera klasserna som behövs i filerna `handler.py` och `questions.py`, en handler klass som heter `QuesionManager` och tre klasser för frågorna. Typerna av frågor är fritext svar, flervalsfrågor med flera rätt (checkboxes) och flervalsfrågor med ett rätt svar (radiobuttons). Välj ut en av dem som basklass och låt de andra två ärva från basklassen. I mappen `templates/answer_types` finns en html template för varje frågetyp (du ska inte behöva ändra i dem).
 
 1. Frågeklasserna behöver innehålla en fråga, svaret och svarslternativen, om det finns några. De behöver ha metoder för att hämta värdena och en metod för att kolla om användarens svar är rätt. 
 
