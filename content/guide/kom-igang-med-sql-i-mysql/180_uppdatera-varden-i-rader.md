@@ -92,7 +92,8 @@ Så här kan det se ut.
 
 ```sql
 mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
-    -> FROM larare ORDER BY lon DESC;
+    -> FROM larare
+    -> ORDER BY lon DESC;
 +---------+-----------+-----------+------+-------+-----------+
 | akronym | avdelning | fornamn   | kon  | lon   | kompetens |
 +---------+-----------+-----------+------+-------+-----------+

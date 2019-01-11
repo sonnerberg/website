@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-11": "(D, mos) Uppdaterade om återställning av databasen."
     "2018-03-22": "(C, mos) Delade i två delar och flyttade lönerevision till egen del."
     "2018-02-09": "(B, mos) Flyttade bash-återskapa till eget dokument, utskrift av sum kompetens."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -19,16 +20,51 @@ Vi skall göra en lönerevision för lärarna och höja deras löner.
 Återställ databasen {#aterstall}
 ----------------------------------
 
-Glöm inte att du i en tidigare artikel lärde dig hur du [återställer databasen till sitt ursprungliga läge](./../uppdatera-tabellens-struktur#filer). Det är bra om det kör ihop sig med dina kommande UPDATE-satser. Att börja om är alltid en god idé.
+Innan vi gör denna övningen så prövar vi att återställa databasen genom att köra skriptfilerna. Vi kör filerna i samma ordning som vi jobbat med dem i guiden.
 
-Du behöver också köra filen `dml_update.sql` som ger grundlönerna till de lärare som hade NULL i lön.
+```text
+mysql -uuser -ppass skolan < ddl.sql
+mysql -uuser -ppass skolan < dml_insert.sql
+mysql -uuser -ppass skolan < ddl_migrate.sql
+mysql -uuser -ppass skolan < dml_update.sql
+```
+
+Att börja om från början är alltid en god idé, så det är bra att veta hur man återställer sin data.
+
+Du kan kontrollera att du har samma innehåll i databasen som jag har, med följande SELECT.
+
+```sql
+SELECT
+    SUM(lon) AS Lönesumma,
+    SUM(kompetens) AS Kompetens 
+FROM larare
+;
+```
+
+Det kan se ut så här.
+
+```text
+mysql> SELECT
+    ->     SUM(lon) AS Lönesumma,
+    ->     SUM(kompetens) AS Kompetens 
+    -> FROM larare
+    -> ;
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     305000 |         8 |
++------------+-----------+
+1 row in set (0.00 sec)
+```
+
+Bra, då gör vi en lönerevision.
 
 
 
 Årlig lönerevision {#revision}
 ----------------------------------
 
-Det har skett en årlig lönerevision för lärarna, det har varit ett bra år på skolan och lärarna som länge varit underbetalda har fått en lönepott om totalt 6.4% som skall fördelas över samtliga lärare.
+Det har skett en årlig lönerevision för lärarna, det har varit ett bra år på skolan och lärarna som länge varit underbetalda, enligt deras egen uppfattning, har fått en lönepott om totalt 6.4% som skall fördelas över samtliga lärare.
 
 Ingen lärare skall få lägre löneökning än 3%.
 
@@ -49,25 +85,28 @@ Kontrollera nu den nya lönesumman och hur mycket % som lönesumman har ökat ge
 
 1. Vilken är numer den totala lönesumman?
 1. Hur många % har lönesumman ökat från föregående lönesumma?
+1. Vilken är numer den totala kompetensen?
 
 Så här ser det ut för mig och du skall ha samma resultat.
 
-```sql
-mysql> SELECT SUM(lon) AS 'Lönesumma' FROM larare;
+```text
 +------------+
 | Lönesumma  |
 +------------+
 |     330242 |
 +------------+
-1 row in set (0.00 sec)
 
-mysql> SELECT SUM(lon)/305000*100-100 AS 'Lönesumma ökning %' FROM larare;
 +--------------------+
 | Lönesumma ökning % |
 +--------------------+
 |             8.2761 |
 +--------------------+
-1 row in set (0.00 sec)
+
++-----------+
+| Kompetens |
++-----------+
+|        19 |
++-----------+
 ```
 
 Nåväl, det blev lite högre löneökning än planerat, men så må det vara, vi bokför det som löneglidning.
@@ -91,8 +130,19 @@ Kontrollera att det blev rätt {#kontroll}
 Se till att du har samma värden på lönerna som jag har, det underlättar i kommande övningar om du får samma svar som jag fått.
 
 ```sql
+SELECT akronym, avdelning, fornamn, kon, lon, kompetens
+FROM larare
+ORDER BY lon DESC
+;
+```
+
+Det skall se ut så här.
+
+```text
 mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
-    -> FROM larare ORDER BY lon DESC;
+    -> FROM larare
+    -> ORDER BY lon DESC
+    -> ;
 +---------+-----------+-----------+------+-------+-----------+
 | akronym | avdelning | fornamn   | kon  | lon   | kompetens |
 +---------+-----------+-----------+------+-------+-----------+
@@ -111,7 +161,21 @@ mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
 Du kan även summera lönesumman och kompetensen för att få en snabb överblick att det blivit rätt.
 
 ```sql
-mysql> SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
+SELECT
+    SUM(lon) AS Lönesumma,
+    SUM(kompetens) AS Kompetens 
+FROM larare
+;
+```
+
+Det skall se ut så här.
+
+```text
+mysql> SELECT
+    ->     SUM(lon) AS Lönesumma,
+    ->     SUM(kompetens) AS Kompetens 
+    -> FROM larare
+    -> ;
 +------------+-----------+
 | Lönesumma  | Kompetens |
 +------------+-----------+
@@ -119,3 +183,61 @@ mysql> SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
 +------------+-----------+
 1 row in set (0.00 sec)
 ```
+
+
+
+Återställ databasen efter lönerevision {#aterstall-igen}
+----------------------------------
+
+Jag vet att jag tjatar om att återställa databasen med dina skriptfiler. Men det är en viktig självkontroll som du kan göra. Om du kan köra ala dina skript i sekvens, och få samma resultat som jag, så visar det att du har "rätt" så här långt i övningen. En självkontroll som visar att man är på rätt väg.
+
+Här är de skript du nu behöver köra för att återställa databasen. Du kan markera allihop och kopiera till din terminal, de körs automatiskt efter varandra.
+
+```text
+mysql -uuser -ppass skolan < ddl.sql
+mysql -uuser -ppass skolan < dml_insert.sql
+mysql -uuser -ppass skolan < ddl_migrate.sql
+mysql -uuser -ppass skolan < dml_update.sql
+mysql -uuser -ppass skolan < dml_update_lonerevision.sql
+```
+
+Sen dubbelkollar du att du fortfarande har rätt summa på löner och kompetens, som en koll av läget.
+
+```sql
+SELECT
+    SUM(lon) AS Lönesumma,
+    SUM(kompetens) AS Kompetens 
+FROM larare
+;
+```
+
+Det skall se ut så här.
+
+```text
+mysql> SELECT
+    ->     SUM(lon) AS Lönesumma,
+    ->     SUM(kompetens) AS Kompetens 
+    -> FROM larare
+    -> ;
++------------+-----------+
+| Lönesumma  | Kompetens |
++------------+-----------+
+|     330242 |        19 |
++------------+-----------+
+1 row in set (0.00 sec)
+```
+
+Om vi skall förenkla lite för oss så lägger vi alltihop, inklusive sista kollen, som kommandon vi kan köra vid terminalen.
+
+```text
+mysql -uuser -ppass skolan < ddl.sql
+mysql -uuser -ppass skolan < dml_insert.sql
+mysql -uuser -ppass skolan < ddl_migrate.sql
+mysql -uuser -ppass skolan < dml_update.sql
+mysql -uuser -ppass skolan < dml_update_lonerevision.sql
+mysql -uuser -ppass skolan -e "SELECT SUM(lon) AS Lönesumma, SUM(kompetens) AS Kompetens FROM larare;"
+```
+
+Så här kan det se ut när allt körs på en gång via terminalen, utskrifter blinkar förbi men sista kommandot visar att vi har rätt data.
+
+[ASCIINEMA src=220818 caption="Databasen är återställd efter lönerevisionen."]
