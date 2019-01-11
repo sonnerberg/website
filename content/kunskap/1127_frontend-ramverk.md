@@ -52,7 +52,7 @@ I nedanstående tabell listas de rader kod som utvecklaren har skrivit för att 
 |-----|--------|--------|--------|---------|--------|
 | calculator  | 112 | 103 | 133 | 98 | 118 |
 | me   | 166 | 107 | 117 | 134 | 92 |
-| tic-tac-toe |  | 136 | 146 | 141 | 126 |
+| tic-tac-toe | 196 | 136 | 146 | 172 | 126 |
 
 
 
@@ -64,7 +64,7 @@ I nedanstående tabell listas storleken på produktionsfilerna som skapas av ant
 |-----|--------|--------|--------|---------|--------|
 | calculator  | 217K | 30K | 115K | 83K | 2.6K |
 | me   | 329K | 29K | 134K | 106K | 2.2K |
-| tic-tac-toe |  | 29K | 37K | 87K | 2.8K |
+| tic-tac-toe | 222K | 29K | 37K | 87K | 2.8K |
 
 
 
@@ -76,6 +76,9 @@ Vi tittar i denna del av artikeln på några tekniska koncept som används i de 
 
 ### Komponenter {#komponenter}
 
+De fyra ramverk som har valts ut i denna artikel är alla byggda runt komponenter. Komponenter är återanvändbara delar av koden, som i bästa fall inte har några externa beroenden.
+
+I mithril och React är allt JavaScript och komponenterna definieras i JavaScript filer. I mithril är enda kravet att det ska finnas en `view` funktion som returnerar noder. I React heter funktionen `render` och funktionen returnerar JSX. I Vue finns varje komponent i en fil men är uppdelade i tre delar `template`, `script` och `style`, som motsvarar de tre lagren vi känner till från tidigare med struktur (HTML), stil (CSS) och dynamik (JavaScript). I angular har man tagit det ett steg längre med tre olika filer för dessa tre lager.
 
 
 
@@ -89,17 +92,39 @@ var data = 42;
 document.getElementById("element").textContent = data;
 ```
 
-I många ramverk är detta nått man försöker förenkla genom att uppdatera vyn direkt varje gång data ändras. Detta är en av de magiska sakerna med JavaScript ramverk och vi ska nedan se exempel på hur detta kan göras.
+I många ramverk är detta nått man försöker förenkla genom att uppdatera vyn direkt varje gång data ändras. Detta är en av de magiska sakerna med JavaScript ramverk och vi ska nedan se exempel på hur detta kan göras. I de flesta ramverken definierar vi medlemsvariabler i komponenter och vi kan sedan använda dessa medlemsvariabler i templates. I nedanstående exempel ser vi hur vi använder medlemsvariabler i Vue.
+
+```
+<template>
+    <div class="calculator">
+        <div class="display">{{ current || 0 }}</div>
+        ...
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            current: 0,
+        }
+    },
+    ...
+```
+
+Om medlemsvariabeln `current` får ett nytt värde ändras den direkt i den kopplade template. I vanilla JavaScript gör vi en explicit koppling och uppdatering av data och i de ramverk som har valts ut är det en implicit koppling och uppdatering.
 
 
 
 ### Routing {#routing}
 
-### Eventhantering {#event}
+### Eventhantering och delegering {#event}
 
 ### HTTP-anrop {#http}
 
 ### Arkitektur {#architecture}
+
+
 
 
 RealWorld {#realworld}
@@ -187,6 +212,23 @@ Vi kan nu köra kommandot `npm run deploy` och applikationen byggas för produkt
 
 ### Mithril {#mithril}
 
+Då vi i mithril använder webpack för att bygga våra JavaScript fil skapar vi ytterligare ett npm script för att göra en produktionsfil.
+
+```json
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "webpack -d",
+  "production": "webpack -p"
+},
+```
+
+Vi kan nu köra kommandot med `npm run production` och då skapas en ny `bundle.js` fil, som är redo för produktion. På samma sätt som för vanilla JavaScript appen använder vi rsync för att föra över de tre filerna till servern. Jag utgår från fil och katalog strukturen som finns exempel katalogen.
+
+```bash
+rsync -av index.html ../style.css dist/bundle.js deploy@[SERVER]:/var/www/[SERVER_NAME]/html/
+```
+
+På servern skapar vi en likadan nginx konfigurationsfil, som för ramverken.
 
 
 
@@ -242,6 +284,14 @@ Vi kan nu köra kommandot `npm run deploy` och applikationen byggas för produkt
 
 ### Vanilla JavaScript {#vanilla}
 
+För att driftsätta vanilla JavaScript applikationen använde jag uglifyjs för att minifiera koden. Sedan är det ett liknande `rsync` kommando som för de andra apparna. Jag utgår från fil och katalog strukturen som finns exempel katalogen.
+
+```bash
+uglifyjs main.js -o bundle.min.js
+rsync -av index.html ../style.css bundle.min.js deploy@[SERVER]:/var/www/[SERVER_NAME]/html/
+```
+
+På servern skapar vi en likadan nginx konfigurationsfil, som för ramverken.
 
 
 
