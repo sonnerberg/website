@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-11": "(C, mos) Lade till asciinema."
     "2018-03-20": "(B, mos) Indelad i kapitel och varning om safe mode update."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -16,19 +17,19 @@ Lägg SQL-koden i filen `dml_insert.sql`.
 En fil för att lägga till rader {#insert}
 ----------------------------------
 
-Lägg SQL-koden, som handlar om att lägga in värden i en tom databas, i filen och inled filen med en header som berättar vem du är.
+Lägg SQL-koden, som handlar om att lägga in rader i tabellen, i filen och inled filen med en header som berättar vem du är.
 
 ```sql
 --
--- Insert values into database skolan.
--- By mos for course "XXX".
+-- Insert values into table larare.
+-- By mos for course databas.
 -- 2017-12-27
 --
 ```
 
 Vi skall skapa 10 lärare och lägg in dem i tabellen med `INSERT`. Du kan använda `SELECT * FROM Larare` för att se  och kontrollera vad tabellen innehåller.
 
-Först lägger vi in ett par lärare med varsin INSERT sats.
+Först lägger vi in ett par lärare med varsin INSERT sats. Vi omringar strängar med enkelfnutt. Även datum hanterar vi här som en sträng, databasen kan översätta strängen till rätt datum.
 
 ```sql
 --
@@ -112,3 +113,7 @@ mysql> SELECT akronym, avdelning, fornamn, efternamn, kon, lon, fodd FROM larare
 ```
 
 Du behöver ha samma innehåll i din databas som jag har, då kommer du att få samma resultat i kommande uppgifter och du får ett facit att kontrollera mot.
+
+Så här ser det ut när jag kör skriptet via terminalklienten.
+
+[ASCIINEMA src=220808 caption="Det är smidigt att köra ett SQL-skript via terminalen."]
