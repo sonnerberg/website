@@ -1,8 +1,11 @@
 ---
 author: mos
-category: bok
+category:
+    - bok
+    - javascript
+    - node
 revision:
-    "2019-01-11": (A, mos) Första revisionen.
+    "2019-01-11": "(A, mos) Första revisionen."
 ...
 Boken: JavaScript for impatient programmers
 ==================================
@@ -26,7 +29,7 @@ Boken finns som [fri bok online via författarens webbplats](http://exploringjs.
 Om Boken {#om-boken}
 --------------------
 
-[FIGURE src=image/bok/javascript-for-impatient-programmers.jpg?w=w3 caption="Bokens omslag."]
+[FIGURE src=image/bok/javascript-for-impatient-programmers.jpg caption="Bokens omslag."]
 
 <table>
 <tr><th>Titel:</th><td>JavaScript for impatient programmers<td></tr>
@@ -48,4 +51,4 @@ Boken finns som [fri bok online via författarens webbplats](http://exploringjs.
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en [forumtråd](t/XXX) där du kan fråga eller berätta vad du tyckte om boken.
+Det finns en [forumtråd](t/8184) där du kan fråga eller berätta vad du tyckte om boken.
