@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/snapvt18/guide-skolan-select.png?w=1100&h=300&cf&a=0,0,55,0&f=grayscale"
 author: mos
 revision:
     "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
@@ -16,15 +22,15 @@ Kursmomentet är under översyn inför vårterminen 2019.
 
 [/WARNING]
 
-Vi jobbar vidare med SQL och tränar mer på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
+Vi jobbar vidare med SQL och tränar på enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
 Du kommer även jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Det innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm.
 
 <!--more-->
 
-[FIGURE src=/image/snapvt18/guide-skolan-select.png?w=w3 caption="Guiden hjälper oss med mer avancerade konstruktioner i SQL."]
+[FIGURE src=image/snapvt18/guide-skolan-select.png?w=w3 caption="Guiden hjälper oss med mer avancerade konstruktioner i SQL."]
 
-[FIGURE src=/image/snapvt18/nodejs-mysql-search.png?w=w3 caption="Med JavaScript och Node.js bygger du ett skript som kopplar sig till din databas."]
+[FIGURE src=image/snapvt18/nodejs-mysql-search.png?w=w3 caption="Med JavaScript och Node.js bygger du ett skript som kopplar sig till din databas."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
