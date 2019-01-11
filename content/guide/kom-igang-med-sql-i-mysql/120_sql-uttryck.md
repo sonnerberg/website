@@ -59,9 +59,11 @@ Använd SQL-kommentarer (2 minustecken följt av ett mellanslag eller ny rad) f�
 
 ```sql
 --
--- Detta är en kommentar i SQL
+-- This is an comment in SQL.
 --
 ```
+
+Skriv kommentarerna på engelska om din databasmodell har engelska namn. Om din databasmodell har svenska namn så kan du skriva kommentarerna på svenska.
 
 Du skall se till att du kan köra samtliga SQL-kommandon från filen på en gång. Då vet du att du har en god grundstruktur i filen.
 
