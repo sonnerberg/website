@@ -7,7 +7,7 @@ views:
             src: "image/snapvt19/client-mysql-copy.png?w=1100&h=300&cf&a=0,0,66,0"
 author: mos
 revision:
-    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2019-01-11": "(E, mos) Uppdaterat inför vt19."
     "2018-12-19": "(D, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-03-22": "(C, mos) Bort 404 länk till labbmiljön."
     "2018-03-20": "(B, mos) Bort med kopplingar till XAMPP och BTHs labbmiljö är enbart extra."
@@ -15,14 +15,6 @@ revision:
 ...
 Kmom01: Databas
 ====================================
-
-[WARNING]
-
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
 
 Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi kommer jobba med relationsdatabaser och där har vi valt MySQL/MariaDB. Som klienter så använder vi både terminalbaserade klienter och en fönsterbaserad grafisk klient MySQL WorkBench. Klienterna har båda sin plats och användningsområde vid olika tillfällen.
 
