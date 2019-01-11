@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-11": "(E, mos) Lade till asciinema och körning av skriptet."
     "2018-03-27": "(D, mos) Sluttabellen skall inte ha NULL i lön, uppdaterad."
     "2018-03-22": "(C, mos) Delade i två delar och flyttade lönerevision till egen del."
     "2018-02-09": "(B, mos) Flyttade bash-återskapa till eget dokument, utskrift av sum kompetens."
@@ -77,7 +78,17 @@ mysql> SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
 1 row in set (0.00 sec)
 ```
 
-Låt oss även kolla vilka löner lärarna har för tillfället. Det är bra inför nästa övning.
+Låt oss även kolla vilka löner lärarna har för tillfället. Det är bra inför nästa övning. Det blir en avstämning på att du har samma värden som jag.
+
+Vi använder följande SELECT.
+
+```sql
+SELECT akronym, avdelning, fornamn, kon, lon, kompetens
+FROM larare
+ORDER BY lon DESC;
+```
+
+Så här kan det se ut.
 
 ```sql
 mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
@@ -96,5 +107,15 @@ mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
 +---------+-----------+-----------+------+-------+-----------+
 8 rows in set (0.00 sec)
 ```
+
+Dubbelkolla att du kan köra skriptet med samtliga SQL-kommandon.
+
+```text
+mysql -uuser -p skolan < dml_update.sql
+```
+
+Så här kan det se ut.
+
+[ASCIINEMA src=220811 caption="Alla SQL-kommandon för att uppdatera är samlade i filen."]
 
 Då är vi redo för en övning.
