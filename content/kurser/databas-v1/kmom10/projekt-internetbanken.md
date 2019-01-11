@@ -26,6 +26,8 @@ backup av databasen?
 Visa hur projektet testas?
 
 Visa senaste transaktioner (bra testa).
+
+Hur se på sessionen i webben och i cli-en, hur hantera inloggning/authenticering i clienten?
 -->
 
 
