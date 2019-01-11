@@ -55,13 +55,10 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 6-8 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
+### Databasteknik {#dbteknik}
 
-
-
-#### Databasteknik {#dbteknik}
+Läs följande som är relaterat till databaser och SQL.
 
 1. [Databasteknik](kunskap/boken-databasteknik) om mer SQL.
     * Kap 8: Mer om SQL: Aggregatfunktioner, null-värden, yttre join
@@ -76,7 +73,9 @@ Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går u
 
 
 
-#### JavaScript {#javascript}
+### JavaScript {#javascript}
+
+Läs följande som är relaterat till programmeringsspråket JavaScript och Node.js.
 
 1. Bekanta dig med boken [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att översiktligt läsa igenom följande kapitel som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript.
     * [Ch 1: Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode")
