@@ -4,7 +4,7 @@ views:
         region: flash
         template: default/image
         data:
-            src: "image/snapvt18/guide-skolan-select.png?w=1100&h=300&cf&a=0,0,55,0&f=grayscale"
+            src: "image/snapvt18/nodejs-mysql-search.png?w=1100&h=300&cf&a=0,0,55,0&f=grayscale"
 author: mos
 revision:
     "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
@@ -77,33 +77,14 @@ Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går u
 
 Läs följande som är relaterat till programmeringsspråket JavaScript och Node.js.
 
-1. Bekanta dig med boken [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att översiktligt läsa igenom följande kapitel som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript.
-    * [Ch 1: Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode")
-    * [Ch 13: Statements](http://speakingjs.com/es5/ch13.html)
+1. Bekanta dig med boken "[Boken: JavaScript for impatient programmers](https://dbwebb.se/kunskap/boken-javascript-for-impatient-programmers)" och se den som en resurs och uppslagsverk för programmeringsspråket JavaScript. Använd dina kunskaper om programmeringsspråk i allmänhet och se hur det relaterar till programmeringsspråket JavaScript.
 
-1. Bekanta dig med boken [Exploring ES6](kunskap/boken-exploring-es6). Skumläs ett av de inledande kapitlen för att få en grov känsla av ES6 kontra ES5.
-    * [Ch 4: Core ES6 features](http://exploringjs.com/es6/ch_core-features.html)
-
-
-
-### MDN dokumentation {#mdn}
-
-I kursen används [Mozilla Developers Network (MDN)](https://developer.mozilla.org/) som en resurs generellt för webbresurser och specifikt för referensmanual till programmeringsspråket JavaScript.
-
-Vill du hamna på rätt manualsida så lägger du alltid till "mdn" till din googling. Det finns många versioner av JavaScript och du behöver ofta gå tillbaka till källan i referensmanualen för att veta vad som är rätt (eller fel).
-
-1. För en snabb introduktion till konstruktionerna i språket JavaScript kan jag rekommendera dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" och de inledande kapitlen som kompletterar det du läst i kurslitteraturen.
+1. Webbplatsen "Mozilla Developers Network (MDN)" är en allmän resurs för webbutveckling och där finns en referensmanual för språket JavaScript. För en snabb introduktion till konstruktionerna i språket JavaScript kan jag rekommendera dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" och följande inledande kapitel.
     * Introduction
     * Grammar and types
     * Expressions and operators
 
-
-
-### Node.js dokumentation {#nodejs}
-
-[Node.js](https://nodejs.org/) låter dig köra JavaScript utan en webbläsare. Via webbplatsen för Node.js finner du referensdokumentationen med de delar och moduler som är specifika för JavaScript i sammanhanget Node.js. Node.js innehåller ett API som bland annat ger dig tillgång till operativsystemets resurser och låter dig skriva terminalprogram.
-
-1. Bekanta dig med [dokumentationen till Node.js](https://nodejs.org/en/docs/). Kika översiktligt på API dokumentationen för den senaste LTS-versionen (Long Time Support).
+1. Node.js låter dig köra JavaScript utan en webbläsare. Via webbplatsen för Node.js finner du [referensdokumentationen](https://nodejs.org/en/docs/) till de delar och moduler som är specifika för Node.js/JavaScript. Node.js innehåller ett API som bland annat ger dig tillgång till operativsystemets resurser och låter dig skriva terminalprogram.
 
 
 
@@ -140,7 +121,7 @@ Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någ
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Spara all SQL-kod i filer i katalogen `me/kmom02/skolan2`. Du behöver kopiera alla skript du redan sparat i `me/kmom01/skolan1` och utgå från dem och bygga vidare.
+1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Spara all SQL-kod i filer i katalogen `me/kmom02/skolan2`.
 
 1. Lös uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)". Spara alla filer i `me/kmom02/terminal1`.
 
@@ -155,8 +136,6 @@ Enkel SQL laboration som visar att studenten kan göra joins/subquery.
 ### Extra {#extra}
 
 Gör följande extrauppgifter om du har tid och lust.
-
-1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Du kan redan nu tjuvkika på guidens kommande delar.
 
 1. Jobba igenom guiden "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)" för att lära dig hur du jobbar mer effektivt i terminalen med tmux. Tmux ger dig möjlighet att dela in din terminal i olika flikar och varje flik i olika delar.
 
