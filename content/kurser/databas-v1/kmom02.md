@@ -121,7 +121,7 @@ Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någ
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Spara all SQL-kod i filer i katalogen `me/kmom02/skolan2`.
+1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Fortsätt spara all SQL-kod i filer i katalogen `me/skolan`.
 
 1. Lös uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)". Spara alla filer i `me/kmom02/terminal1`.
 

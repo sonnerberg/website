@@ -123,7 +123,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Jobba igenom artikeln "[Introduktion till databasen MySQL/MariaDB, dess klienter och SQL](kunskap/introduktion-till-mysql-mariadb-dess-klienter-och-sql)". I artikeln får du träna på att använda klienterna och du får träna på ett arbetssätt som du kan ha under kursen. Det finn SQL-kod som du skall köra för att konfigurera upp din databas med en användare. Spara de filerna du använder i katalogen `me/kmom01/klient`, filerna är bra att ha om du senare behöver återskapa databasen.
 
-1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/kmom01/skolan1` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
+1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/skolan` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
     * [Första delen: Grunderna](guide/kom-igang-med-sql-i-mysql/grunderna)
 
 <!--
