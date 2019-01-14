@@ -193,7 +193,7 @@ Du kan öppna texteditorn Atom inuti WSL, i godtycklig katalog, med kommandot `a
 atom .
 ```
 
-Får du problem kan du se om lösningen finns i forumtråden "[Vanliga problem med Atom i Windows](t/XXX)".
+Får du problem kan du se om lösningen finns i forumtråden "[Vanliga problem med Atom i Windows](t/8194)".
 
 
 
