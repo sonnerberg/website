@@ -118,8 +118,19 @@ Det tar en liten stund att uppgradera.
 Vi skall installera ett par paket som gör din vardag enklare. Det är paket som används i kurserna och vi vill försäkra oss om att de är installerade.
 
 ```text
-sudo apt-get install wget curl ssh rsync git
+sudo apt-get install wget curl ssh rsync git vim
 ```
+
+Här är en kort förklaring till de olika kommandona.
+
+| Kommando | Förklaring |
+|----------|------------|
+| wget     | Ladda ned resurser från nätet/webben. |
+| curl     | Alternativ till wget. |
+| ssh      | SSH klient och server, används för att koppla upp mot externa servrar. |
+| rsync    | Kopiera/synka innehåll i kataloger, lokalt och mellan servrar. |
+| git      | Klient till versionshanteringssystemet git. |
+| vim      | Texteditor för terminalen, alternativ till vi. |
 
 
 
@@ -166,6 +177,23 @@ cowsay "Hej alla webbprogrammerare!"
 [FIGURE src=image/snapvt19/windows-cowsay.png?w=w3 caption="Nu är du redo för Linux med en bash-terminal på Windows."]
 
 Vill du vet mer om programmet så öppnar du dess manualsida.
+
+
+
+Öppna Atom {#atom}
+------------------------------
+
+Om du har installerat texteditorn Atom i Windows så kan du nu öppna den i WSL. WSL är byggt för att du skall kunna öppna applikationer som du installerat i Windows.
+
+Du kan öppna texteditorn Atom inuti WSL, i godtycklig katalog, med kommandot `atom .`. Punkten står för nuvarande katalog och det är den katalogen som öppnas i Atom.
+
+Öppna atom i med nuvarande katalog som bas.
+
+```text
+atom .
+```
+
+Får du problem kan du se om lösningen finns i forumtråden "[Vanliga problem med Atom i Windows](t/XXX)".
 
 
 
