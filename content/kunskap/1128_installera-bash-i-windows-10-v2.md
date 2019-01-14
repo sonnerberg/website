@@ -12,6 +12,7 @@ category:
     - windows
     - bash
 revision:
+    "2019-01-13": "(B, mos) Lade till installation av nödvändiga paket."
     "2019-01-08": "(A, mos) Uppdaterad installationsprocess för 1803."
 ...
 Installera Debian/Bash i Windows 10 (v 1803)
@@ -98,17 +99,59 @@ Pakethantering {#paket}
 
 För att installera program så använder du en pakethanterare som heter `apt-get`. Med den kan du installera paket, tjänster och programvaror i din terminal.
 
-De grundläggande paket som du behöver för kurserna finns redan installerade.
 
-För att testa pakethanteraren kan du installera paketet `cowsay` som är ett litet skoj-paket.
 
-Vi börjar med att uppdatera installationen med senaste informationen om de paket som finns.
+### Uppdatera och uppgradera {#update}
+
+Vi börjar med att uppdatera installationen med senaste informationen om de paket som finns och vi uppgraderar systemet till att använda senaste versionen av paketen.
 
 ```text
-sudo apt-get update
+sudo apt-get update && sudo apt-get -y upgrade
 ```
 
-Nu kan vi installera paketet `cowsay`.
+Det tar en liten stund att uppgradera.
+
+
+
+### Installera nödvändiga paket {#nodvandig}
+
+Vi skall installera ett par paket som gör din vardag enklare. Det är paket som används i kurserna och vi vill försäkra oss om att de är installerade.
+
+```text
+sudo apt-get install wget curl ssh rsync git
+```
+
+
+
+### Manualsidor och man man {#man}
+
+Manualsidor är källan till kunskap i en linux terminal.
+
+```text
+man curl
+```
+
+Om programmet `man` inte finns installerat så installerar du det.
+
+```text
+sudo apt-get install man
+```
+
+Man kan söka efter de programpaket som går att installera.
+
+```text
+sudo apt-cache search curl
+```
+
+Vänd dig till manualsidan för att veta hur du använder ett kommando.
+
+Du kan också använda optionen `--help` alternativt `-h`, många kommandon stödjer den switchen för att visa hur man använder kommandot.
+
+
+
+### Installera cowsay {#cowsay}
+
+För att testa pakethanteraren kan du installera paketet `cowsay` som är ett litet skoj-paket.
 
 ```text
 sudo apt-get install cowsay
@@ -122,25 +165,7 @@ cowsay "Hej alla webbprogrammerare!"
 
 [FIGURE src=image/snapvt19/windows-cowsay.png?w=w3 caption="Nu är du redo för Linux med en bash-terminal på Windows."]
 
-Vill du vet mer om programmet så öppnar du dess manualsida. Manualsidor är källan till kunskap i en linux terminal.
-
-```text
-man cowsay
-```
-
-Om programmet `man` inte finns installerat så installerar du det.
-
-```text
-sudo apt-get install main
-```
-
-Man kan söka efter de programpaket som går att installera.
-
-```text
-sudo apt-cache search cowsay
-```
-
-Det var grunderna i pakethantering och installation av paket i Linux och terminalen.
+Vill du vet mer om programmet så öppnar du dess manualsida.
 
 
 
