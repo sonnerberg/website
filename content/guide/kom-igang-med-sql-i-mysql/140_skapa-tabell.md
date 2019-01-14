@@ -1,23 +1,28 @@
 ---
 author: mos
 revision:
+    "2019-01-11": "(C, mos) Mer om kodstandard."
     "2018-04-02": "(B, mos) Exempel på hur man kör alla kommandon i filen."
     "2017-12-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Skapa tabell
 ==================================
 
-Vi börjar nu att skapa tabeller.
+Vi skall skapa ett antal tabeller i databasen.
 
 Lägg SQL-koden i filen `ddl.sql` och inled filen med en header som berättar vem du är.
 
 ```sql
 --
 -- Create scheme for database skolan.
--- By mos for course "XXX".
+-- By mos for course databas.
 -- 2017-12-27
 --
 ```
+
+Skall man skriva kommentarer på engelska eller svenska? I programmeringssammanhang föredrar vi att kommentarer skrivs på engelska. Det är utgångsläget. Men i databassammanhang kan databasens schema, dess tabeller och kolumnnamn även vara på svenska, då kan vi tänka oss att även kommentarerna är på svenska. I detta exempelt har vi en svensk databas, med svenska namn på tabeller och kolumner, här kan du välja om du vill skriva kommentarerna på svenska eller engelska.
+
+Dö börjar vi.
 
 En skola har lärare, skapa en tabell för lärare enligt följande:
 
@@ -33,7 +38,9 @@ En skola har lärare, skapa en tabell för lärare enligt följande:
 | lon             | INT         |
 | fodd            | DATE        |
 
-Jag väljer att inte använda svenska tecken, även om det hade varit en möjlighet.
+Jag väljer att inte använda svenska tecken som åäö, även om det hade varit en möjlighet.
+
+Jan använder små bokstäver till tabellnamn och kolumnnamn, om ordet består av två ord så använder jag en `_` underscore för att binda dem samman, om det behövs. Vi undviker stora bokstäver då de tolkas olika på olika operativsystem. Operativsystemen macOS och Linux gör skillnad på små och stora bokstäver medan Windows inte gör skillnad på dem. Det blir enklare, rent kompabilitetsmässigt, om vi undviker den risken som stora bokstäver medför.
 
 Generellt skriver jag helst kommentarer på engelska och inte svenska, jag känner generellt att engelska ligger närmare programmeringsspråk och känns mer naturligt.
 

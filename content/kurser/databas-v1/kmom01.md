@@ -1,7 +1,13 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/snapvt19/client-mysql-copy.png?w=1100&h=300&cf&a=0,0,66,0"
 author: mos
 revision:
-    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2019-01-11": "(E, mos) Uppdaterat inför vt19."
     "2018-12-19": "(D, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-03-22": "(C, mos) Bort 404 länk till labbmiljön."
     "2018-03-20": "(B, mos) Bort med kopplingar till XAMPP och BTHs labbmiljö är enbart extra."
@@ -9,14 +15,6 @@ revision:
 ...
 Kmom01: Databas
 ====================================
-
-[WARNING]
-
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
 
 Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi kommer jobba med relationsdatabaser och där har vi valt MySQL/MariaDB. Som klienter så använder vi både terminalbaserade klienter och en fönsterbaserad grafisk klient MySQL WorkBench. Klienterna har båda sin plats och användningsområde vid olika tillfällen.
 
@@ -107,12 +105,13 @@ Följande kan du studera om du har tid, intresse och kraft över.
 *(ca: 8-10 studietimmar)*
 
 
-
+<!--
 ### Övningar {#ovningar}
 
 Jobba igenom följande övningar, de förbereder dig inför uppgifterna.
 
 1. Jobba översiktligt igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som databasutvecklare är det bra att du ha koll på olika varianter av klienter, testa de du har tillgång till och se till att din lokala utvecklingsmiljö fungerar. Artikeln bygger egentligen på att man installerat MySQL med XAMPP, men du kan säkert läsa igenom artikeln och få viss behållning av den, annars får du skumläsa den. I artikeln finns till exempel enklare SQL-kommandon du kan använda för att komma igång med dina klienter. Spara dina eventuella testfiler i `me/kmom01/klient`.
+-->
 
 
 
@@ -121,6 +120,8 @@ Jobba igenom följande övningar, de förbereder dig inför uppgifterna.
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
+
+1. Jobba igenom artikeln "[Introduktion till databasen MySQL/MariaDB, dess klienter och SQL](kunskap/introduktion-till-mysql-mariadb-dess-klienter-och-sql)". I artikeln får du träna på att använda klienterna och du får träna på ett arbetssätt som du kan ha under kursen. Det finn SQL-kod som du skall köra för att konfigurera upp din databas med en användare. Spara de filerna du använder i katalogen `me/kmom01/klient`, filerna är bra att ha om du senare behöver återskapa databasen.
 
 1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/kmom01/skolan1` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
     * [Första delen: Grunderna](guide/kom-igang-med-sql-i-mysql/grunderna)
@@ -133,14 +134,6 @@ IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad 
 
 
 
-### Extra {#extra}
-
-Gör följande extrauppgifter om du har tid och lust.
-
-1. I nästa kmom kommer du att göra nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". Du kan redan nu tjuvkika på guidens kommande delar.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -150,9 +143,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känns det att komma igång med MySQL och dess klienter?
+* Berätta kort om den utvecklingsmiljö du sitter i och vilka databaser/klienter du installerat och vilka versioner de har.
+* Hur känns det att komma igång med databaser, klienter och SQL?
 * Har du jobbat med databaser eller liknande tidigare?
-* Hur gick det att jobba med SQL?
+* Hur gick det att jobba med SQL i guiden?
 * Jämför SQL med andra sätt att programmera.
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.

@@ -7,6 +7,7 @@ category:
     - debian/linux
     - docker
 revision:
+    "2019-01-10": "(B, mos) Lade till hänvisning till komplett exempel."
     "2019-01-09": "(A, mos) Första utgåvan."
 ...
 Kör MySQL Server och MySQL WorkBench via Docker
@@ -80,7 +81,7 @@ Kör MySQL server via docker-compose {#docker-compose}
 
 Låt oss använda `docker-compose` och skapa en konfiguration som använder volymer så att databasen kan vara persistent.
 
-Börja med att skapa filen `docker-composer.yaml`. Vi gör en konfiguration med en databasserver "mysql" och en klient "mysql-client". Databasservern använder en volym för att lagra datan persistent.
+Börja med att skapa filen `docker-compose.yaml`. Vi gör en konfiguration med en databasserver "mysql" och en klient "mysql-client". Databasservern använder en volym för att lagra datan persistent.
 
 <!--
 #container_name: mysql
@@ -162,10 +163,10 @@ version: "3"
 services:
     mysql:
         volumes:
-            - ./sql:/docker-entrypoint-initdb.d
+            - ./sql.d:/docker-entrypoint-initdb.d
 ```
 
-För att testa så skapar vi en fil `sql/init.sql` som skapar en databas, en användare och en tabell med innehåll.
+För att testa så skapar vi en fil `sql.d/init.sql` som skapar en databas, en användare och en tabell med innehåll.
 
 ```sql
 CREATE USER 'doe'@'%' IDENTIFIED BY 'pass';
@@ -201,6 +202,17 @@ SELECT * FROM doe;
 Det kan se ut så här.
 
 [FIGURE src=image/snapvt19/docker-compose-db-initiated.png?w=w3 caption="Databasen kan initieras med innehåll."]
+
+
+
+Komplett exempel {#exempel}
+--------------------------------------
+
+I kursrepot för kursen databas finns en katalog med ett komplett exempel som är anpassat till MySQL och delvis förberett för MariaDB. Exemplet innehåller en `docker-compose.yaml` för både MySQL och MariaDB, server och klienter. Det finns en katalog `sql.d/` där man lägger startupfiler och exemplet är konfigurerat så att man kan koppla upp sig med externa klienter.
+
+Du hittar exempelkoden i [example/docker](https://github.com/dbwebb-se/databas/tree/master/example/docker) och det finne en README som beskriver hur du kan jobba med exempelkoden.
+
+Förslagsvis kan du utgå från det exemplet om du vill komma igång och jobba mer aktivt med databasservern körandes i en docker-kontainer.
 
 
 

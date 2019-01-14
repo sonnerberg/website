@@ -53,7 +53,7 @@ Först skriver vi ut variabeln som en vanlig php-konstruktion.
 
 Det är alltså konstruktionen `<?php echo $title ?>` som skriver ut sidans titel inom html elementet `<title>`.
 
-Med en short echo tag kan vi få ned kodmängden genom att skriva `<?= $echo ?>` som ett alternativ till `<?php echo $title ?>`.
+Med en short echo tag kan vi få ned kodmängden genom att skriva `<?= $title ?>` som ett alternativ till `<?php echo $title ?>`.
 
 Koden i den uppdaterade templatefilen `header.php` ser alltså ut så här.
 

@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-10": "(C, mos) Flyttade delar till Inledning samt nya länkar till installation och kom igång med klienter."
     "2018-03-20": "(B, mos) Bort med referens till BTHs labbmiljö."
     "2017-12-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -9,9 +10,11 @@ Introduktion
 
 Denna guide/övning/laboration handlar om att komma igång med SQL mot databasen MySQL/MariaDB. Den består av övningar där du får börja skapa tabeller, fylla dem med innehåll och därefter ställa SQL-frågor för att söka ut och bearbeta innehållet. Övningen tar dig igenom de vanliga förekommande konstruktionerna som du behöver känna till. Lär dig dem och du kommer att ha en god grund för att behärska databaser. De första övningarna är enkla och övningarna mot slutet lite mer utmanande.
 
-Övningen är utvecklad för MySQL och visar både på standard SQL och på databasspecifika frågar av mer databasadministrativ karaktär.
+Övningen är utvecklad för MySQL och kompatibel med MariaDB och visar både på standard SQL och på databasspecifika frågar av mer databasadministrativ karaktär.
 
-När det finns hänvisningar till referensmanualen så avses [referensmanualen för MySQL](http://dev.mysql.com/doc/refman/5.7/en/). Välj senaste GA versionen av manualen.
+När det finns hänvisningar till referensmanualen så avses [referensmanualen för MySQL](http://dev.mysql.com/doc/refman/8.0/en/).
+
+Om du använder [MariaDB så har de en motsvarande referensmanual](https://mariadb.com/kb/en/library/documentation/).
 
 Du kan välja att göra övningen i valfri klient. Jag har gjort övningen i MySQL Workbench och kommandoradsklienten.
 
@@ -20,28 +23,8 @@ Du kan välja att göra övningen i valfri klient. Jag har gjort övningen i MyS
 Förkunskaper {#forkunskaper}
 ----------------------------------
 
-Du behöver ha tillgång till en [databasserver för MySQL](labbmiljo/mysql).
+Du behöver ha tillgång till en [databasserver för MySQL och klienter som Workbench och terminalklienten](labbmiljo/mysql-med-workbench).
 
-Du behöver tillgång till en klient likt MySQL WorkBench, PHPMyAdmin eller kommandoradsklient. Behöver du hjälp så finns guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)".
+Du behöver ha grundläggande kunskap om hur du använder terminalerna och hur du kopplar dig till databasen. Behöver du hjälp så jobbar du igenom artikeln "[Introduktion till databasen MySQL/MariaDB, dess klienter och SQL](kunskap/introduktion-till-mysql-mariadb-dess-klienter-och-sql)".
 
-<!--
-Du kan jobba [BTH's labbmiljö för MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql).
--->
-
-Mitt förslag är att du jobbar lokalt mot en egen databasserver och använder terminalklienten `mysql` samt desktopklienten MySQL Workbench.
-
-
-
-Forumtråd kopplad till guiden {#forum}
-----------------------------------
-
-Det finns en [tråd i forumet](t/7233) som är kopplad till denna guide. Där kan du se större uppdateringar som är gjorda. Du kan även ställa frågor eller bidra med tips och trix. 
-
-
-
-Tidigare version {#tidigare}
-----------------------------------
-
-Denna guide bygger på, och vidarutvecklar, dokumentet "[Kom igång med SQL](uppgift/kom-igang-med-sql)" som kom ut första gången 2008.
-
-I samband med att denna guide skapades (årsskiftet 2017/2018) så gicks dokumentet igenom och testades och alla bilder byttes ut mot utskrifter från terminalkommandot och kompletterades med asciinemas. Det lades till en del administrativa kommandon för att inspektera databasens schema.
+Mitt förslag är att du jobbar lokalt mot en egen databasserver och använder terminalklienten `mysql` samt desktopklienten MySQL Workbench. Glöm inte att spara allt du gör i filer.

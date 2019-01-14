@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-10": "(B, mos) Bort med inlämning i forumet."
     "2017-12-27": "(A, mos) Första utgåvan."
 ...
 Resultat och redovisning
@@ -40,13 +41,6 @@ dbwebb publish me
 Den länken som visas i utskriften av kommandot, är länken till din me-sida. Där kan du se ditt publicerade resultat.
 
 Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
-
-
-
-Kopiera redovisningstexten till forumet {#forum}
----------------------------------------
-
-Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/databas). Bifoga länken till din me-sida.
 
 
 

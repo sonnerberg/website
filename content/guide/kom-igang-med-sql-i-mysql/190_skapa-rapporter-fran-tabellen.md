@@ -6,13 +6,18 @@ revision:
 Skapa rapporter från tabellen
 ==================================
 
-Vi vill välja ut och presentera innehållet i tabellen via SELECT konstruktionen.
+Vi vill välja ut och presentera innehållet i tabellen via konstruktionen SELECT.
 
 Spara dina konstruktioner i filen `dml_select.sql`.
 
+
+
+Startläget {#start}
+----------------------------------
+
 Innehållet i din tabell bör se ut på följande vis.
 
-```sql
+```text
 mysql> SELECT * FROM larare;
 +---------+-----------+-----------+------------+------+-------+------------+-----------+
 | akronym | avdelning | fornamn   | efternamn  | kon  | lon   | fodd       | kompetens |

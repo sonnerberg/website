@@ -115,6 +115,10 @@ mysql -uroot -p
 
 Om du skriver in ett felaktigt kommando så kan du lägga till ett `;` så avslutas inmatningen av kommandot.
 
+Du kan använda piltangenter tillbaka/fram för att redigera det du skriver in och du kan nå föregående kommando med pil upp/ned.
+
+Du rensar skärmen med `ctrl-l`.
+
 Du kan avsluta genom att skriva `exit`.
 
 Då vet vi att terminalklienten fungerar som den ska.
