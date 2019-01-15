@@ -84,9 +84,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Me-sida i ditt valda ramverk](uppgift/me-sida-i-ditt-valda-ramverk)". Där du bygger en frontend till API:t du skapade i föregående kursmoment.
-
 1. Gör uppgiften "[Autentisering med JWT och bcrypt](uppgift/autentisering-med-jwt-och-bcrypt)" för att bekanta dig med tekniker för autentisering och möjlighet till att skapa redovisningstexter med hjälp av API anrop.
+
+1. Gör uppgiften "[Me-sida i ditt valda ramverk](uppgift/me-sida-i-ditt-valda-ramverk)". Där du bygger en frontend till API:t du skapade i detta och föregående kursmoment.
 
 
 
