@@ -24,7 +24,7 @@ Kursmomentet är under översyn inför vårterminen 2019.
 
 Vi jobbar vidare med SQL och tränar på enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
-Du kommer även jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Det innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm.
+Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Det innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm samt att du kommer igång med grunderna i programmeringsspråket JavaScript och specifikt hur JavaScript används tillsammans med Node.js.
 
 <!--more-->
 
@@ -121,9 +121,12 @@ Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någ
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Fortsätt spara all SQL-kod i filer i katalogen `me/skolan`.
+Båda uppgifterna bygger på att du klarat av första delen av SQL-guiden från kmom01. Du kan välja i vilken ordning du gör uppgifterna, de är inte beroende av varandra.
 
 1. Lös uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)". Spara alla filer i `me/kmom02/terminal1`.
+
+1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Fortsätt spara all SQL-kod i filer i katalogen `me/skolan`.
+
 
 <!--
 Enkel SQL laboration som visar att studenten kan göra joins/subquery.
@@ -150,7 +153,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Du har nu repeterat SQL ett par gånger, börjar det sätta sig, är det något du finner extra utmanande?
-* Är detta den första bekantskap med JavaScript på serversidan och Node.js, hur känns det?
-* Gick det smärtfritt att koppla ihop JavaScript, Node.js med MySQL?
+* Du har nu använt både UNION och JOIN för att slå samman tabeller i SQL, vilken är din uppfattning om databaser och SQL så här långt?
+* Är detta den första bekantskap med JavaScript på serversidan och Node.js, hur känns det och vilken uppfattning, eller förutfattade meningar, har du om språket?
+* Hur gick det att koppla ihop JavaScript, Node.js med SQL och databasen?
 * Vilken är din TIL för detta kmom?
