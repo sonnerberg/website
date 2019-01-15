@@ -82,6 +82,12 @@ SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare_pre;
 
 Principen är att skapa en ny tabell med den gamla som mall. Sedan kan man lägga till rader i den nya tabellen genom att selecta dem från den gamla tabellen.
 
+Följande kopierar värden från ena tabellen till den andra.
+
+```sql
+INSERT INTO larare_pre SELECT * FROM larare;
+```
+
 Vi kan dubbelkolla att lönesumman i vår kopierade tabell är densamma som i orginaltabellen.
 
 ```text
