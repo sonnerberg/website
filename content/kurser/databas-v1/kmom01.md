@@ -126,6 +126,8 @@ Dessa uppgifter skall utföras och redovisas.
 1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/skolan` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
     * [Första delen: Grunderna](guide/kom-igang-med-sql-i-mysql/grunderna)
 
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+
 <!--
 IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad guiden går igenom. Använd databasen som finns i guiden.
 
