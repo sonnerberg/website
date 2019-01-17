@@ -113,6 +113,8 @@ Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någ
 1. Gör laborationen "[Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs)" för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
 -->
 
+1. Jobba igenom artikeln "[JavaScript och Node.js](kunskap/javascript-och-nodejs)" som visar hur du kommer igång med programmeringsspråket JavaScript i miljön Node.js. Spara dina exempelprogram under `me/kmom02/js`.
+
 1. Jobba igenom artikeln "[MySQL och Node.js (v2)](kunskap/mysql-och-nodejs-v2)" som visar hur du kommer igång med programmeringsspråket JavaScript i miljön Node.js och hur du kopplar ett program till databasen MySQL. Spara dina exempelprogram under `me/kmom02/search`.
 
 

@@ -10,7 +10,7 @@ revision:
 JavaScript och Node.js
 ==================================
 
-[FIGURE src=image/snapvt19/js-class-dice.png?w=c5 class="right"]
+[FIGURE src=image/snapvt19/js-class-dice.png?a=10,60,55,07&w=c5 class="right"]
 
 Vi skall ta de första stegen för att bygga ett program med JavaScript som vi kan köra med Node.js. Vi börjar med den interaktiva interpretatorn för att sedan lägga koden i en fil och exekvera med programmet node.
 
