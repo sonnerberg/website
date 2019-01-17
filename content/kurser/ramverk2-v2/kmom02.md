@@ -1,20 +1,14 @@
 ---
 author:
     - mos
+    - efo
 revision:
+    "2019-01-17": "(B, efo) Uppdaterad inför v2 VT19."
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-10-20": "(A, mos) Första utgåvan."
 ...
 Kmom02: Frontend
 ==================================
-
-[WARNING]
-
-** Kursutveckling pågår till kurs ramverk2 v2 **
-
-Kursstart våren 2019.
-
-[/WARNING]
 
 Vi tittar på hur vi kan använda JavaScript ramverk på klientsidan för att skapa en Single Page Applikation (SPA) som pratar med servicen från kmom01.
 
@@ -103,8 +97,8 @@ Se till att följande frågor besvaras i texten:
 
 * Vilket JavaScript-ramverk valde du och varför?
 * Hur gick det att sedan implementera din me-sida i ramverket?
-* Gick allt smidigt eller stötte du på problem?
 * Vilka fördelar ser du med ett JavaScript ramverk jämfört med vanilla JavaScript?
+* Vilka lärdomar gjorde du dig när du implementerade autentisering med JWT på servern?
 * Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.

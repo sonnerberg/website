@@ -118,19 +118,71 @@ Om medlemsvariabeln `current` får ett nytt värde ändras den direkt i den kopp
 
 ### Routing {#routing}
 
+I de flesta applikationer vi vill kunna gå mellan olika sidor och då är en router ett bra sätt att delegera och strukturera detta förfarande. I många fall av klient-sida routing använder man hashbang (#!) routing där de två tecknen #! används för att markera att detta är en route. Me-applikationer som har redovisats ovan använder alla någon form av routing.
+
+I angular och mithril finns det inbyggda routers, i Angular importerar man ett paket och i mithril används funktionen `m.route()`. I react och vue installeras ytterligare paket `react-router-dom` och `vue-router`.
+
+I angular (`app.module.ts`), mithril (`index.js`) och vue (`router/index.js`) definieras alla router i en JavaScript kontext och man använder sedan ett element för att visa de olika komponenter kopplat till routen. Filerna inom parentes är de filer där routerna är difinierat i Me-applikationerna. I react anges router och vad som ska visas på de olika router i filen `App.js` med hjälp av JSX.
+
+Ett exempel på en enkel router i vanilla JavaScript kan ses i me-vanilla exemplet där funktioner används för att skriva ut de enskilda vyerna.
+
+
+
 ### Eventhantering och delegering {#event}
+
+JavaScript tillför det dynamiska lagret till webben och en stor del av detta är att hantera användarens klick, skrivande osv. I vanilla JavaScript sköter vi detta med EventListeners till exempel.
+
+```javascript
+document.getElementById("my-btn").addEventListener("click", function (event) {
+    // do the thing needed when a button is clicked.
+});
+```
+
+Ramverken försöker förenkla detta förfarandet genom att förkorta ner syntaxen för EventListeners. tic-tac-toc exempelprogrammen är bra exempel både på Eventhantering och delegering och vi kan titta på hur detta lösas i de olika ramverk.
+
+```
+// angular
+<div class="square" (click)="click()">
+  {{ squareValue }}
+</div>
+
+// mithril
+return m("div.square",
+    {
+        onclick: function () {
+            game.handleClick(index);
+        }
+    },
+    game.history[game.stepNumber].squares[index]
+);
+
+// react
+<button className="square" onClick={props.onClick}>
+{props.value}
+</button>
+
+// vue
+<div class="square" @click="onClick(index)">
+  {{ current }}
+</div>
+```
+
+I react och vue har vi skickat med en click-callback funktion från en annan komponent och när den sen klickas anropas den ursprungliga funktionen. I mithril används en funktion i modellen `game` som får hantera click-callbacken. I angular använder vi oss istället av en `EventEmitter`, som i sin tur skickar eventet upp i trädet av komponenter istället för att man som i react och vue skickar med en funktion ner i trädet.
+
+
 
 ### HTTP-anrop {#http}
 
-### Arkitektur {#architecture}
+För att vi ska kunna prata med en backend behöver vi kunna kommunicera över HTTP. Jag har valt att i react, vanilla och vue exemplen använda [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), som vi känner igen från tidigare. I mithril används den inbyggda funktionen `m.request()`, som introducerades tillsammans med mithril i webapp.
 
+I angular använder vi oss av den inbyggda modulen HttpClient och en så kallad service. Exempel på detta kan ses i me-angular applikationen i katalogerna `src/app/report` och `src/app/me`.
 
 
 
 RealWorld {#realworld}
 --------------------------------------
 
-För att ytterligare utvärdera våra valda ramverk tar vi en titt i GitHub repot [RealWorld Example](https://github.com/gothinkster/realworld).
+För att ytterligare utvärdera våra valda ramverk tar vi en titt i GitHub repot [RealWorld Example](https://github.com/gothinkster/realworld). RealWorld Example repon är både backend och frontend som uppfyller vissa specifikationer och därför kan sättas ihop villkorligt. Använd dessa repon för att skapa dig en uppfattning om hur frontend ramverken samspelar med backends.
 
 
 
@@ -138,6 +190,8 @@ John Papa's Heroes {#heroes}
 --------------------------------------
 
 Under dotJS konferensen pratade John Papa om att välja ett frontend ramverk. Som förberedelse för presentationen hade han skapat samma app i "The Big Three" och de tre apparna ligger som open source kod på GitHub. [heroes-angular](https://github.com/johnpapa/heroes-angular), [heroes-react](https://github.com/johnpapa/heroes-react) och [heroes-vue](https://github.com/johnpapa/heroes-vue) är de tre repon som innehåller koden och det finns länkar till en publik driftsatt version från GitHub.
+
+Titta igenom repon och se hur John Papa har strukturerat apparna i de olika ramverken.
 
 
 
