@@ -5,28 +5,18 @@ category:
     - javascript
     - kursen databas
 revision:
-    "2019-01-15": "(PA1, mos) Första utgåvan."
+    "2019-01-17": "(A, mos) Första utgåvan."
 ...
 JavaScript och Node.js
 ==================================
 
-[FIGURE src=/image/snapvt17/npm-mysql.png?w=c5 class="right"]
+[FIGURE src=image/snapvt19/js-class-dice.png?w=c5 class="right"]
 
 Vi skall ta de första stegen för att bygga ett program med JavaScript som vi kan köra med Node.js. Vi börjar med den interaktiva interpretatorn för att sedan lägga koden i en fil och exekvera med programmet node.
 
 Vi ser även hur vi kan lägga funktioner och klasser i separata moduler som inkluderas till vårt main-program.
 
-Vi ser också hur den asynknrona programmeringsmodellen fungerar då vi försöker läsa en data från användaren. Vi använder async/await för att hantera den asynkrona programmeringsmodellen.
-
 <!--more-->
-
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Artikeln håller på att skrivas.
-
-[/WARNING]
 
 När vi är klara har vi byggt ett litet skript, vårt första "Hello World" med JavaScript och Node.js och förhoppningsvis har vi fått en grundstruktur i där vi kan skriva våra program.
 
@@ -45,7 +35,8 @@ Du har läst på om grunderna i programmeringsspråket JavaScript och du vet att
 
 Du vet att Node.js har en egen dokumentation för det API som Node.js bidrar med.
 
-De filer som används i exemplet kan du finna under kursrepot databas i  [`example/nodejs/javascript`](https://github.com/dbwebb-se/databas/tree/master/example/nodejs/javascript).
+De filer som används i exemplet kan du finna under kursrepot databas i  [`example/nodejs/javascript`](https://github.com/dbwebb-se/databas/tree/master/example/nodejs/javascript). Du kan tjuvkika på källkoden där, eller så skriver du din egen kod medans du jobbar igenom artikeln.
+
 
 
 
@@ -317,7 +308,9 @@ Skapa en modul av funktioner {#modulfil}
 
 Låt oss skapa en modul av funktionen ovan, en modul som exporterar funktionen `stringRange()` så att den kan användas av `main()`.
 
-Jag placerar dessa ändringar i en kopia av filen `stringRange.js` som jag döper till `stringRange1.js`. Jag behöver kommentera ut mina testanrop, så de inte ligger kvar när jag gör en modul som skall importeras.
+Jag placerar dessa ändringar i en kopia av filen `stringRange.js` som jag döper till `stringRange1.js`.
+
+Jag behöver kommentera ut mina testanrop, så de inte ligger kvar när jag nu gör en modul som skall importeras av andra filer.
 
 Det första är att definiera vad modulen exporterar. Jag inleder nu filen så här.
 
@@ -343,13 +336,13 @@ Vill jag exportera fler funktioner från samma fil så fyller jag på vad som ex
 ```javascript
 module.exports = {
     "stringRange": stringRange,
-    "AnothyerFunctionExportedWithALongName": anotherFunction
+    "exportedAsName": anotherFunction
 };
 ```
 
 Jag skapar nu en ny fil för mitt main-program som jag döper till `import.js`.
 
-Denna gången skriver jag koden på modul nivå och låter bli att använda en main-funktion, det går bra det också. Koden blir scopad på modulnivå, det vill säga filens scope, så det blir inga problem med att vi skräpar ned i ett globalt scope, sånt vill vi ju annars undvika.
+Denna gången skriver jag koden på modul-nivå och låter bli att använda en main-funktion, det går bra det också. Koden blir scopad på modulnivå, det vill säga filens scope, så det blir inga problem med att vi skräpar ned i ett globalt scope, sånt vill vi ju annars undvika.
 
 ```javascript
 /**
@@ -368,52 +361,147 @@ console.info(res);
 res = utils.stringRange(1, 10, "-");
 console.info(res);
 
-console.log("What does the imported 'utils' consists of?");
+console.log("\nWhat does the imported 'utils' consists of?");
 console.log(utils);
 ```
 
-När jag nu kör programmet så 
+När jag nu kör programmet så ser det ut så här.
 
+```text
+$ node import.js
+1, 2, 3, 4, 5, 6, 7, 8, 9
+1-2-3-4-5-6-7-8-9
 
-[WARNING]
+What does the imported 'utils' consists of?
+{ stringRange: [Function: stringRange] }
+```
 
-**ARBETE PÅGÅR**
+Den sista delen är utskiften av det objekt `utils` som innehåller den importerade funktionen. Ibland, vid felsökning, kan det vara bra att veta om att även sådana komplexa objekt går att skriva ut.
 
-Artikeln håller på att skrivas.
+Så, vi har nu alltså delat upp vår kod i filer och vi har visat hur dessa filer, eller moduler, kan importeras in till vårt main-program.
 
-[/WARNING]
-
+Det är en bra plan att hantera all kod, förutom main-programmet, som moduler som ligger i egna filer.
 
 
 
 Skapa klasser i filer {#klassfil}
 --------------------------------------
 
+I JavaScript finns möjligheten att skapa klasser som innehåller metoder och medlemsvariabler.
 
+Klasserna kan man organisera i moduler där en modul är en klass. Man kan sedan inkludera klasserna i sitt main-program, på samma sätt som vi nyss gjorde med funktioner.
 
+När man sedan har klassen så kan man skapa ett objekt med klassen som mall. Man skapar en instans av klassen.
 
-Asynkron programmering i Node.js {#async}
---------------------------------------
+Så här ser en klassfil ut, med ett par metoder och en medlemsvariabel. Klassen är förberedd att vara en modul. Jag döper filen till `dice.js`.
 
-En sak som skiljer JavaScript i Node.js, från andra traditionella programmeringsspråk, är dess asynkrona och icke blockande natur. Du har sett ett par exempel på dessa i artikeln då vi använder async/await för att serialisera de metoder som stödjer Promise.
+```javascript
+/**
+ * A module for game Guess the number I'm thinking of.
+ */
+"use strict";
 
-Vi såg även ett exempel på en callback-hantering i `rl.question()` där en metod anropas när frågan besvarats.
+class Dice {
+    /**
+     * @constructor
+     */
+    constructor() {
+        this.dice = null;
+    }
 
-En viktig ingrediens för att bemästra JavaScript i Node.js är att förstå de olika delarna i dess asynkrona hantering. Tidiga versioner av JavaScript, pre ES2015 (ES6) löser hanteringen med callbacks. När ES2015 (ES6) kom så introducerades Promise och när ES2017 (ES8) kom så fick vi möjligheten att använda async/await.
+    /**
+     * Roll the dice and remember tha value of the rolled dice.
+     *
+     * @param {integer} faces The number of faces of the dice, defaults to 6.
+     *
+     * @returns {integer} The value of the rolled dice min=1 and max=faces.
+     */
+    roll(faces=6) {
+        this.dice = Math.round(Math.random() * faces + 1);
+        return this.dice;
+    }
 
-När man tittar på moduler till JavaScript och Node.js så får man vara vaksam på dokumentationen och se vilka möjligheter som erbjuds då de kan ha valt olika strategier för att hantera asynkrona bitar.
+    /**
+     * Get the value of the last rolled dice.
+     *
+     * @returns {integer} The value of the last rolled dice.
+     */
+    lastRoll() {
+        return this.dice;
+    }
 
-I artikeln försöker jag undvika att gå in på detaljer om detta, om du är nybörjare på JavaScript i Node.js så kan det vara bra att vara medveten om denna frågeställning som delvis kan upplevas frustrerande när man försöker bemästra området.
+    /**
+     * When someone is printing this object, what should it look like?
+     *
+     * @returns {string} The value of the last rolled dice.
+     */
+    toString() {
+        return this.dice;
+    }
+}
 
-För den som vill fördjupa sig i ämnet så rekommenderas de böcker som [Axel Rauschmayer skrivit om olika versioner av JavaScript](http://exploringjs.com/).
+module.exports = Dice;
+```
+
+Klassen representerar en tärning där man kan rulla tärningen och optionellt ange hur många sidor som tärningen har. Klassen minns sista tärningsslaget och man kan hämta det igen.
+
+Jag gör ett nytt main-program i filen `yatzy.js` där jag skapar fem tärningar som jag kastar och skriver ut deras värde.
+
+```javascript
+/**
+ * A simple test program importing a class Dice.
+ *
+ * @author Mitt Namn
+ */
+"use strict";
+
+let Dice = require("./dice.js");
+
+// Prepare a dice hand to hold the dices (its an array)
+let hand = [];
+
+// Add the dices to the dice hand and roll them once
+for (let i=0; i<5; i++) {
+    hand[i] = new Dice();
+    hand[i].roll();
+}
+
+console.info("Here is the dices you have rolled.");
+
+// Print out the whole datastructure
+console.info(hand);
+
+// Join the elements and print out as a string.
+// This construct is using the builtin class method toString.
+console.info(hand.join());
+```
+
+När jag kör programmet så får jag en utskrift som ser ut så här.
+
+```text
+$ node yatzy.js
+Here is the dices you have rolled.
+[ Dice { dice: 4 },
+  Dice { dice: 6 },
+  Dice { dice: 3 },
+  Dice { dice: 2 },
+  Dice { dice: 4 } ]
+4,6,3,2,4
+```
+
+Första utskriften skriver ut hela datastrukturen för min tärningshand, det är en array som innehåller fem objekt och varje objekt har en medlemsvariabel 'dice'.
+
+Den sista raden är en sträng som skapats genom att joina array-elementen och använder den inbyggda funktionen `toString()` som jag definierat i klassen. Det ger en egendefinierad strängrepresentation av ett objekt och metoden kan anpassas efter ens behov.
+
+Det var en klass, som en modul. Försök att organisera din kod i funktioner och klasser och dela in funktioner och klasser i filer och moduler.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Du har nu fått en genomgång i hur JavaScript fungerar med Node.js och du har fått en grundstruktur i hur du kan organisera ditt program.
+Du har nu fått en genomgång i hur JavaScript fungerar med Node.js och du har fått en grundstruktur i hur du kan organisera ditt program tillsammans med main-program, funktioner, klasser och filer med moduler.
 
-Grundstrukturen kan du förhoppningsvis bygga vidare på, även med begränsade kunskaper i JavaScript och Node.js.
+Grundstrukturen kan du förhoppningsvis bygga vidare på, även med begränsade kunskaper i JavaScript och Node.js. Det är alltid bra att ha en god grundstruktur att bygga på.
 
-Denna artikel har en [egen forumtråd](t/XXX) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/8212) som du kan ställa frågor i, eller ge tips.
