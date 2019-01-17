@@ -109,13 +109,9 @@ Läs följande:
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-<!--
-Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någon som redan kan programmera. Kanske labbverktyget, kombinera labbarna i js1 och node, enkla till någon som kan programmera men inte kan js?
-
-1. Gör laborationen "[Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs)" för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
--->
-
 1. Jobba igenom artikeln "[JavaScript och Node.js](kunskap/javascript-och-nodejs)" som visar hur du kommer igång med programmeringsspråket JavaScript i miljön Node.js. Spara dina exempelprogram under `me/kmom02/js`.
+
+1. Jobba igenom artikeln "[JavaScript och Node.js med async och await](kunskap/javascript-och-nodejs-med-async-och-await)" som presenterar begrepp kring den asynkrona programmeringsmodell som är grunden i Node.js. Spara dina exempelprogram under `me/kmom02/js`.
 
 1. Jobba igenom artikeln "[MySQL och Node.js (v2)](kunskap/mysql-och-nodejs-v2)" som visar hur du kommer igång med programmeringsspråket JavaScript i miljön Node.js och hur du kopplar ett program till databasen MySQL. Spara dina exempelprogram under `me/kmom02/search`.
 
@@ -136,6 +132,9 @@ Båda uppgifterna bygger på att du klarat av första delen av SQL-guiden från 
 Enkel SQL laboration som visar att studenten kan göra joins/subquery.
 
 1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
+
+1. Gör laborationen "[Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs)" för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
+
 -->
 
 
