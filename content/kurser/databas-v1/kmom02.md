@@ -86,6 +86,8 @@ Läs följande som är relaterat till programmeringsspråket JavaScript och Node
 
 1. Node.js låter dig köra JavaScript utan en webbläsare. Via webbplatsen för Node.js finner du [referensdokumentationen](https://nodejs.org/en/docs/) till de delar och moduler som är specifika för Node.js/JavaScript. Node.js innehåller ett API som bland annat ger dig tillgång till operativsystemets resurser och låter dig skriva terminalprogram.
 
+1. Som ett alternativ kan du kika på guiden "[Programmering med grunderna i JavaScript](https://dbwebb.se/guide/javascript1/introduktion)". Guiden är på svenska och främst skriven för JavaScript i webbläsaren, men den kan ge dig viss grundläggande kunskap i språket JavaScript som hjälper dig att komma igång med språkets byggstenar.
+
 
 
 ### Artiklar {#artiklar}
