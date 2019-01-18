@@ -167,6 +167,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du bekant med objekt och klasser sedan tidigare?
 * Vad är en klass/objekt?
 * Vad är skillnaden på instans- och statiska attribut/metoder?
+* Vilka programmeringsparadigmer känner du till?
 * Har du någon erfarenhet av Bootstrap sedan tidigare?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
