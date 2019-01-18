@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2019-01-19": (C, aar) clarified rules and requirements.
     "2018-02-05": (B, aar) clarified two requirements.
     "2017-12-15": (A, lew) First version for v2.
 category:
@@ -11,7 +12,7 @@ Kortspelet War
 
 [FIGURE src=/image/oopython/kmom03/cards-top.jpg?w=c5 class="right"]
 
-Vi ska skapa ett kortspel som används från terminalen. Kortspelet kallas *War*, eller *Svälta räv* på svenska. Vi ska använda klasser med arv. Efter implementationen skapar vi några enhetstester för en av klasserna. För spelreglerna kan du kika på [här](https://en.wikipedia.org/wiki/War_(card_game)) för engelska eller [här](https://sv.wikipedia.org/wiki/Sv%C3%A4lta_r%C3%A4v) för svenska.
+Vi ska skapa ett kortspel som används från terminalen. Kortspelet kallas *War*, eller *Svälta räv* på svenska. Efter implementationen skapar vi några enhetstester och klassdiagram.
 
 <!--more-->
 
@@ -44,15 +45,21 @@ Arbeta i mappen war/.
 $ cd me/kmom03/war
 ```
 
-1. Spelet ska startas med kommandot `python3 main.py`.
+1. Spelet ska använda klasserna `Deck`, `Hand`, `War` och `Card`. Spara koden för varje klass i en egen fil, deck.py, hand.py, card.py och war.py.
 
-1. Spelet ska använda klasserna `Deck`, `Hand` och `Card`. `Deck` ska bestå av 52 stycken `Card`. `Hand` kan ärva från `Deck`.
+1. `Deck` ska innehålla 52 stycken unika `Card` objekt, som en riktigt kortlek. Det ska finnas en metod för att blanda korten.
 
-1. Spelfunktionaliteten ska hanteras via klassen `War`.
+1. `Card` ska innehålla valör och färg. `__repr__` ska överskuggas och returnera en sträng med objekts tillstånd (värden).
 
-1. Skapa en fil, `test.py`, som ska bestå av enhetstester för klassen `Hand`. Alla instansattribut och metoder ska testas. Spara den i mappen `war`.
+1.`Hand` ska representera en spelare. Vid start av spelet ska två Hand objekt skapas och hälften av Card objekten från Deck ska delas ut till vardera Hand objekt.
 
-1. Skapa klassdiagram över två valfria klasser. Döp filen till `uml.png` och spara den i mappen `war`.
+1. Spelfunktionaliteten, spel loopen, ska hanteras i klassen `War`. Spelet ska starta med `python3 war.py`.
+
+1. Övriga metoder som behövs får ni bedömma själva. t.ex. ta och ge kort mellan Hand/Deck. Det ska inte finnas några funktioner, med andra ord allt ska ligga i klasser. 
+
+1. Skapa en fil, `test.py`, som ska bestå av enhetstester. Välj ut 5-10 metoder, som inte bara gör `return self.x`, att testa. Gör gärna flera testfall för metoderna och inte bara testfall där allt fungerar, försök få saker att gå sönder och testa förväntat resultat. 
+
+1. Skapa klassdiagram över två valfria klasser. Gör det till en bild och döp filen till `uml.png`.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -67,8 +74,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-<!-- 1. Lägg till fler former, tex en [cylinder](https://sv.wikipedia.org/wiki/Cylinder) eller [hyptagon](https://sv.wikipedia.org/wiki/Heptagon). -->
-
+Det finns inga extrauppgifter.
 
 
 Tips från coachen {#tips}
