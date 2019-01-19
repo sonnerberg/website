@@ -37,7 +37,7 @@ Installera Flask och Jinja2 i en virtuell miljö med pakethanteraren `pip`. Läs
 Sparka igång en terminal och installera modulerna, GLÖM INTE att aktivera venv.
 
 ```bash
-$ dbwebb venv activate
+$ source .venv/bin/activate
 (.venv) $ pip3 install -r .requirements.txt
 ```
 
