@@ -171,7 +171,7 @@ Här är hur du skapar användaren `dbwebb` och användaren `user` samt dubbelko
 # Stå i rooten av ditt kursrepo
 mysql -uroot -p < example/sql/create-user-dbwebb.sql
 mysql -uroot -p < example/sql/create-user-user.sql
-mysql -uroot -p < example/sql/check-users.sql
+mysql -t -uroot -p < example/sql/check-users.sql
 ```
 
 Du kan titta i de skripten och använda informationen för att skapa ditt egna skript.
