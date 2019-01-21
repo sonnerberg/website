@@ -7,24 +7,20 @@ views:
             src: "image/snapvt18/nodejs-mysql-search.png?w=1100&h=300&cf&a=0,0,55,0&f=grayscale"
 author: mos
 revision:
-    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2019-01-21": "(C, mos) Genomgången och uppdaterad, ny kodstruktur på js-programmen."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-02": "(A, mos) Första utgåvan."
 ...
 Kmom02: SQL
 ====================================
 
-[WARNING]
-
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
-
 Vi jobbar vidare med SQL och tränar på enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
-Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Det innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm samt att du kommer igång med grunderna i programmeringsspråket JavaScript och specifikt hur JavaScript används tillsammans med Node.js.
+Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Detta innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm samt att du kommer igång med grunderna i programmeringsspråket JavaScript och specifikt hur JavaScript används tillsammans med Node.js.
+
+I samband med detta får du träna på den asynkrona programmeringsmodellen som gäller i Node.js och JavaScript. Vi kommer använda konstruktioner likt async och await.
+
+Därefter får du använda ett externt programpaket, som du installerar via npm, för att via JavaScript koppla dig mot databasen och skapa textbaserade rapporter.
 
 <!--more-->
 
