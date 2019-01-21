@@ -174,7 +174,7 @@ Innan vi går vidare så skapar vi en ny användare i databasen, denna användar
 
 Detta är en lösning på problemet som inträffar när äldre klienter kopplar sig mot nyare databaser (från och med version 8.0.4). Felmeddelandet som visas är ofta följande.
 
-> "ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/lib/x86_64-linux-gnu/mariadb18/plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory"
+> "ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded: /.../plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory"
 
 Du kan läsa om problematiken på StackOverflow och "[Authentication plugin 'caching_sha2_password'](https://stackoverflow.com/questions/49963383/authentication-plugin-caching-sha2-password)".
 
@@ -204,7 +204,9 @@ WITH GRANT OPTION;
 ;
 ```
 
-Kommandot [`GRANT` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/8.0/en/grant.html). Den sista delen med `WITH GRANT OPTION` gör så att användaren kan göra GRANT för andra användare.
+Den sista delen med `WITH GRANT OPTION` gör så att användaren kan göra GRANT för andra användare.
+
+Kommandot [`GRANT` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/8.0/en/grant.html).
 
 Du kan se skriptet som skapar ovan användare, i sin helhet, i kursrepot databas under [`example/sql/create-user-dbwebb.sql`](https://github.com/dbwebb-se/databas/blob/master/example/sql/create-user-dbwebb.sql).
 
