@@ -14,37 +14,56 @@ MySQL och Node.js (v2)
 
 [FIGURE src=/image/snapvt17/npm-mysql.png?w=c5 class="right"]
 
-Vi skall se hur vi kan koppla oss med JavaScript och Node.js mot en MySQL databas med hjälp av paket vi installerar med npm.
+Vi skall använda JavaScript och Node.js för att koppla oss mot en MySQL databas, med hjälp av externa paket vi installerar med npm.
 
-Vi använder en befintlig databas och kopplar upp oss mot den med ett par enkla JavaScript-filer och gör en rapport via SELECT och en sökfunktion där vi filterar resultatet.
+Vi använder en befintlig databas och kopplar upp oss mot den med ett par JavaScript-filer och gör en rapport via SELECT och en sökfunktion där vi filterar resultatet.
 
 Vi använder async/await för att hantera den asynkrona beteendet och vi gör en enkel inmatning från tangentbordet.
 
 <!--more-->
 
-När vi är klara har vi byggt ett litet skript som söker i databasen via JavaScript och Node.js.
+När vi är klara har vi byggt ett litet skript som söker i databasen via JavaScript och Node.js och presenterar resultatet i en textbaserad rapport med tabell layout.
 
-[FIGURE src=/image/snapvt18/nodejs-mysql-search.png?w=w3 caption="Med JavaScript och Node.js bygger du ett skript som kopplar sig till din databas."]
-
-
-
-Tidigare versioner av artikeln {#early}
---------------------------------------
-
-Denna version av artikeln är en uppdaterad variant av "[MySQL och Node.js](kunskap/mysql-och-nodejs)" och bygger på att användaren redan har tillgång till en befintlig databas och bygger på async/await konstruktionen från ES2017 (ES8).
+[FIGURE src=image/snapvt18/nodejs-mysql-search.png?w=w3 caption="Med JavaScript och Node.js bygger du ett skript som kopplar sig till din databas."]
 
 
 
 Förutsättning {#pre}
 --------------------------------------
 
-Du har redan koll på databasen MySQL och du kan grunderna i Node.js och JavaScript på serversidan.
+Du har redan koll på databasen MySQL, dess klienter och du kan grunderna i Node.js och JavaScript på serversidan.
 
-Du har installerat npm och du har Node.js version 8 eller senare.
+Du har installerat npm och du har Node.js version 10 eller senare.
 
-Exempelprogram finns i ditt kursrepo (dbjs, databas) under `example/nodejs/mysql`.
+Exempelprogrammen i artikeln finns i kursrepot databas under [`example/nodejs/mysql`](https://github.com/dbwebb-se/databas/tree/master/example/nodejs/mysql).
 
-Du är bekant med guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)" och har tillgång till datasen "skolan" som är fylld med visst innehåll.
+Du är bekant med guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)" och har tillgång till datasen "skolan" som är fylld med innehåll.
+
+
+
+Förberedelser {#forbered}
+--------------------------------------
+
+Vi skall snart installera ett par moduler som hjälper oss att koppla JavaScript med Node.js mot MySQL. Vi installerar dessa moduler med pakethanteraren npm och vi behöver bestämma en katalog där vi gör installationen.
+
+Eftersom vi troligen jobbar i ett kursrepo så väljer jag katalogen `me/` som installationskatalog.
+
+Vi behöver då förbereda katalogen så att vi senare kan göra installationen.
+
+Gör så här.
+
+```text
+# Gå till kursrepot och katalogen me/
+npm init
+```
+
+När du får frågor från `npm init` så kan du trycka enter och använda standardsvaren. När du är klar har filen `package.json` skapats. Den filen kommer att innehålla de paket du senare väljer att installera.
+
+Om du av någon anledning vill göra om initieringen så kan du enkelt radera de filerna som skapades med följande kommando.
+
+```text
+rm package.json
+```
 
 
 
@@ -55,14 +74,22 @@ Vi behöver ett API som låter oss prata med databasen via JavaScript och Node.j
 
 Jag vill använda programmeringsstilen med async/await för att hantera asynkrona anrop. För det syftet väljer jag [paketet promise-mysql](https://www.npmjs.com/package/promise-mysql) som är en wrapper kring paketet mysql.
 
-Jag går till kursrepot och installerar modulerna med npm. Jag installerar i rooten av kursrepot så kan alla exempelprogram i kursrepot använda samma installation.
+Jag går till kursrepot under katalogen `me/` och installerar modulerna med npm. Jag installerar direkt i `me/` så kan alla mina program kan använda samma installation.
 
-```bash
-# Ställ dig i rooten av ditt kursrepo.
-$ npm install mysql promise-mysql
+```text
+# Ställ dig i kursrepot under katalogen `me/`.
+npm install mysql promise-mysql
 ```
 
-Klart. Då testar vi om installationen gick bra.
+Då var det klart. Om du dubbelkollar innehållet i filen `package.json` så ser du två rader med ovan paketnamn, följt av de versionsnummer som installerats.
+
+Om du av någon anledning vill göra om installationen från början så kan du enkelt radera de filerna som skapades med följande kommando.
+
+```text
+rm -rf package-lock.json node_modules/
+```
+
+Då testar vi om installationen gick bra.
 
 
 
@@ -71,7 +98,7 @@ Koppla mot MySQL {#connect}
 
 Jag gör ett kort exempelprogram för att verifiera att min installation fungerar. Tanken är att göra en koppling mot databasen, utföra en SELECT och sedan avsluta. Det ger mig ett test på att installationen har gått bra.
 
-Jag sparar koden i en fil `connect.js`.
+Jag sparar koden i en fil `connect.js` inuti en main-funktion.
 
 ```javascript
 /**
@@ -99,7 +126,26 @@ Jag sparar koden i en fil `connect.js`.
 })();
 ```
 
-Jag lägger hela programmet i en funktion, ett eget mainprogram som körs direkt. Jag använder async/await för att hantera att vissa av anropen är ansynkrona och jag vill förenkla och behöver ett (traditionellt) synkront flöde där varje funktion är klar innan nästa utförs.
+Jag lägger hela programmet i en funktion, ett eget mainprogram som körs direkt.
+
+Jag använder en variant av main-funktionen som är en självexekverande funktion, det är en funktion som exekverar direkt, jag slipper anropa den. I JavaScript kallas den konstruktionen för "self invoking anonymous function".
+
+```javascript
+// An ordinary async main function.
+async function main() {
+    
+}
+main();
+
+// A self invoking async main function.
+(async function() {
+
+})();
+```
+
+Konstruktionerna ovan är alltså likvärdiga.
+
+Jag använder async/await för att hantera att vissa av anropen är ansynkrona och jag vill förenkla och behöver ett (traditionellt) synkront flöde där varje funktion är klar innan nästa utförs. Jag måste vänta på att databasfrågan blir klar, innan jag kan hantera dess resultat.
 
 Så här ser det ut när jag testkör programmet.
 
