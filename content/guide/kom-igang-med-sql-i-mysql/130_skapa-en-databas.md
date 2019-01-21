@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-21": "(C, mos) Förtydligande om hur användaren skapas med kompabilitet."
     "2019-01-11": "(B, mos) Genomgången MySQL 8.0 och uppdaterade asciinemas."
     "2017-12-27": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -64,15 +65,7 @@ Det finns ett behörighetssystem som kan koppla en användare med lösenord till
 
 Exakt hur man skapar en användare och hur dess lösenord krypteras kan skilja aningen mellan olika DBMS.
 
-Här är ett vanligt sätt som fungerar de flesta sammanhang. Konstruktionen skapar användaren "user" med lösenordet "pass" och användaren kan logga in från godtycklig host "@'%'"
-
-```sql
--- Skapa en användare user med lösenorder pass och ge tillgång oavsett
--- hostnamn. 
-CREATE USER IF NOT EXISTS 'user'@'%'
-    IDENTIFIED BY 'pass'
-;
-```
+Här är ett vanligt sätt som fungerar de flesta sammanhang.
 
 Du kan ta bort en användare med DROP.
 
@@ -82,6 +75,17 @@ DROP USER 'user'@'%';
 DROP USER IF EXISTS 'user'@'%';
 ```
 
+Konstruktionen nedan skapar användaren "user" med lösenordet "pass" och användaren kan logga in från godtycklig host "@'%'"
+
+```sql
+-- Skapa en användare user med lösenorder pass och ge tillgång oavsett
+-- hostnamn. 
+CREATE USER IF NOT EXISTS 'user'@'%'
+IDENTIFIED
+BY 'pass'
+;
+```
+
 Att lägga till IF EXISTS ger dig en felkontroll så att kommandot enbart körs om användaren finns. Det första kommandot ger felmeddelande om det körs när användaren inte finns.
 
 Om du får problem att koppla dig med godtycklig klient mot databasen MySQL 8.0.4 eller högre så kan det bero på implementationsdetaljer som rör hur lösenordet krypteras. Du kan då behöva skapa användaren på följande sätt.
@@ -89,12 +93,15 @@ Om du får problem att koppla dig med godtycklig klient mot databasen MySQL 8.0.
 ```sql
 -- Skapa användaren med en bakåtkompatibel lösenordsalgoritm.
 CREATE USER IF NOT EXISTS 'user'@'%'
-    IDENTIFIED WITH mysql_native_password
-    BY 'pass'
+IDENTIFIED
+WITH mysql_native_password -- MySQL with version > 8.0.4
+BY 'pass'
 ;
 ```
 
 Det finns en forumtråd, "[Kompabilitet mellan MySQL och MariaDB, CREATE USER](t/8177)", som förklarar i mer detalj.
+
+Utgångsläget är att du skapar användaren med `WITH mysql_native_password`.
 
 När du väl har skapat användaren behöver du ge den behörigheter. Vi väljer att ge användaren fulla behörigheter till databasen "skolan".
 
@@ -116,7 +123,7 @@ SHOW GRANTS FOR 'user'@'%';
 SHOW GRANTS FOR CURRENT_USER;
 ```
 
-Det kan se ut så här.
+Det kan se ut så här (Debian/Linux).
 
 ```sql
 mysql> SHOW GRANTS FOR 'user'@'%';
@@ -128,6 +135,8 @@ mysql> SHOW GRANTS FOR 'user'@'%';
 +--------------------------------------------------+
 2 rows in set (0.00 sec)
 ```
+
+Om du får en annorlunda utskrift i din klient så kan du bara låta det vara.
 
 Du kan nu använda din klient för att logga in med den nya användaren och kontrollera att den kommer åt databasen.
 
