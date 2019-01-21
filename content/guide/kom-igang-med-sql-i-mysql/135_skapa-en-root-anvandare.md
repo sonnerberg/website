@@ -104,7 +104,7 @@ Ibland är det bra att ha koll på vilken version man kör.
 Kontrollera status på användare {#version}
 --------------------------------------
 
-Du kan kontroller att du nu har de användare som krävs. Kör följande sql-uttryck för att se viss information om dina användare.
+Du kan kontrolla att du nu har de användare som krävs för att jobba vidare i guiden. Kör följande sql-uttryck för att se viss information om dina användare.
 
 ```sql
 --
@@ -148,3 +148,28 @@ MySQL [(none)]> SELECT
 Det viktiga är att du har tre användare och att hosten är `%` för dbwebb och user-användaren samt att dessa två användare har plugin `mysql_native_password`.
 
 Oavsett vad så skall du nu ha en alternativ root-användare i `dbwebb` som du kan använda för att koppla dig med godtycklig klient, även äldre klienter.
+
+
+
+Kontrollera ditt skript {#skript}
+--------------------------------------
+
+Se till att du kan köra alla instruktionern ditt skript i en sekvens. Det är viktigt om du senare behöver återställa din databas.
+
+
+
+Problem och facit? {#problem}
+--------------------------------------
+
+Om du får problem så finns det ett par skript som du kan köra för att skapa rätt användare.
+
+Här är hur du skapar användaren `dbwebb` och användaren `user` samt dubbelkollar status på användarna root, dbwebb och user.
+
+```text
+# Stå i rooten av ditt kursrepo
+mysql -uroot -p < example/sql/create-user-dbwebb.sql
+mysql -uroot -p < example/sql/create-user-user.sql
+mysql -uroot -p < example/sql/check-users.sql
+```
+
+Du kan titta i de skripten och använda informationen för att skapa ditt egna skript.
