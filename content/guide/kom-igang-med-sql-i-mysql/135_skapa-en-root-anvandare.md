@@ -163,6 +163,8 @@ Problem och facit? {#problem}
 
 Om du får problem så finns det ett par skript som du kan köra för att skapa rätt användare.
 
+Se till att du kör nedan skript i en klient som kan logga in med användaren root.
+
 Här är hur du skapar användaren `dbwebb` och användaren `user` samt dubbelkollar status på användarna root, dbwebb och user.
 
 ```text
