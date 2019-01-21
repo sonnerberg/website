@@ -639,7 +639,7 @@ Tanken är att vi skickar med ersättare till dessa frågetecken, när vi utför
 res = await db.query(sql, [like, like, like, like, search]);
 ```
 
-Förutom sql-satsen så skickar vi med en array där respektive värde kommer att ersätta sitt motsvarande frågetecken, i ordning.
+Förutom sql-satsen så skickar vi med en array där respektive värde kommer att ersätta sitt motsvarande frågetecken, i ordning. Man måste vara noggrann med att antalet frågetecken motsvaras av antalet värden i arrayen. Annars får man ett felmeddelande om att sql-satsen är felaktig.
 
 Du kan läsa i manualen om [npm mysql och hur placeholders fungerar](https://www.npmjs.com/package/mysql#performing-queries). Fördelen är att argumenten _escapas_ för att undvika skadliga injektioner i din SQL-kod.
 
