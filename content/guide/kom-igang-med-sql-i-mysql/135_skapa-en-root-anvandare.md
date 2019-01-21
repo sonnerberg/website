@@ -147,7 +147,7 @@ MySQL [(none)]> SELECT
 
 Det viktiga är att du har tre användare och att hosten är `%` för dbwebb och user-användaren samt att dessa två användare har plugin `mysql_native_password`.
 
-Oavsett vad så skall du nu ha en alternativ root-användare i `dbwebb` som du kan använda för att koppla dig med godtycklig klient, även äldre klienter.
+Oavsett vad så skall du nu ha en alternativ root-användare i `dbwebb`, med `Grant_priv -> Y`, som du kan använda för att koppla dig med godtycklig klient, även äldre klienter.
 
 
 
