@@ -7,7 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2019-01-18": "(B, mos) Genomgången och uppdaterad inför vt19."
+    "2019-01-21": "(B, mos) Genomgången och uppdaterad inför vt19, aningen nya uppgifter."
     "2018-01-02": "(A, mos) Uppdaterad version från tidigare dokument."
 ...
 Node.js terminalprogram mot MySQL (v2)
@@ -36,24 +36,70 @@ Du skall skriva ett par skript med JavaScript i Node.js. Skripten söker i datab
 
 Du har i guiden "Kom igång med SQL i MySQL" skapat SQL-satser som du nu skall återanvända och lägga in i din egna "terminalklient" som du bygger med JavaScript och Node.js.
 
+När du är klar så har du en samling program som ger en textbaserad utskrift liknande denna.
+
+```text
+$ node teacher.js
++---------+---------------------+------+-------+------+------------+
+| Akronym | Namn                | Avd  |  Lön  | Komp | Född       |
+|---------|---------------------|------|-------|------+------------+
+| ala     | Alastor Moody       | DIPT | 27594 |    1 | 1943-04-02 |
+| dum     | Albus Dumbledore    | ADM  | 85000 |    7 | 1941-03-31 |
+| fil     | Argus Filch         | ADM  | 27594 |    3 | 1946-04-05 |
+| gyl     | Gyllenroy Lockman   | DIPT | 27594 |    1 | 1952-05-01 |
+| hag     | Hagrid Rubeus       | ADM  | 30000 |    2 | 1956-05-05 |
+| hoc     | Madam Hooch         | DIDD | 37580 |    1 | 1948-04-07 |
+| min     | Minerva McGonagall  | DIDD | 49880 |    2 | 1955-05-04 |
+| sna     | Severus Snape       | DIPT | 45000 |    2 | 1951-04-30 |
+|---------|---------------------|------|-------|------+------------+
+```
+
+Och denna.
+
+```text
+$ node search.js
+What to search for? 7
+Searching for: 7
++---------+---------------------+------+-------+------+------------+
+| Akronym | Namn                | Avd  |  Lön  | Komp | Född       |
+|---------|---------------------|------|-------|------+------------+
+| dum     | Albus Dumbledore    | ADM  | 85000 |    7 | 1941-03-31 |
+|---------|---------------------|------|-------|------+------------+
+```
+
+Liksom denna.
+
+```text
+$ node between.js
+Enter minimum value? 30000
+Enter maximum value? 40000
+Searching for values between 30000 - 40000
++---------+---------------------+------+-------+------+------------+
+| Akronym | Namn                | Avd  |  Lön  | Komp | Född       |
+|---------|---------------------|------|-------|------+------------+
+| hag     | Hagrid Rubeus       | ADM  | 30000 |    2 | 1956-05-05 |
+| hoc     | Madam Hooch         | DIDD | 37580 |    1 | 1948-04-07 |
+|---------|---------------------|------|-------|------+------------+
+```
+
 
 
 Krav {#krav}
 -----------------------
 
-1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av respektive fil.
+1. Varje fil du skapar skall innehålla ett filhuvud med ett kommentarsstycke där du anger dig själv som författare.
 
 1. Du får inte använda någon extra extern npm-modul för att lösa uppgiften, förutom de moduler som krävs för databasen MySQL.
 
-1. Förslagsvis så strukturerar du din kod i moduler med funktioner och klasser, där det är lämpligt.
+1. Du skall strukturera din kod i egna moduler och använda funktioner och/eller klasser. Main-filen skall vara så liten som möjligt och göra anrop till klasser/funktioner som i sin tur anropar databasen och skapar rapporterna. Du måste ha minst en modul.
 
-1. Skapa filen `larare.js` som skall visa all information om lärare, inklusive deras ålder. Man skall kunna läsa en en söksträng från användare och sedan söka/filtrera alla fält så att endast de rader som matchar söksträngen skall visas.
+1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av respektive fil/main-program.
 
-<!--
-1. Skapa filen `lonerevision.js` och gör det möjligt att höja/sänka samtliga lärares lön med en procentsiffra som matas infrån tangentbordet. När programmet körs skall det avslutas med att visa en rapport över lärarnas uppdaterade lön.
--->
+1. Skapa filen `teacher.js` som skall visa information om lärare, inklusive akronym, namn, avdelning, lön, kompetens och födelsedatum (YYY-MM-DD).
 
-1. Skapa filen `lonerevision.js` och gör det möjligt att höja/sänka samtliga lärares lön med en procentsiffra som matas infrån tangentbordet. När programmet körs skall det avslutas med att visa en rapport över lärarnas uppdaterade lön.
+1. Skapa filen `search.js` som visar samma information som `teacher.js`, men man kan söka/filtrera i alla fält (utom nödvändigtvis datumfältet) på en söksträng som matas in från tangentbordet.
+
+1. Skapa filen `between.js` som visar samma information som `search.js`, men man kan söka/filtrera och visa alla värden mellan två värden. Man låter användaren mata in `min` och `max` och visar sedan alla löner och kompetenser som är mellan dessa två värden.
 
 1. Validera din kod.
 
@@ -62,20 +108,24 @@ Krav {#krav}
 dbwebb validate terminal1
 ```
 
-Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-Gör följande om du har tid och ro.
+Gör följande om du har tid och lust.
 
-1. Studera koden i dina filer, finns det delar av koden som du kan lyfta ut i externa filer/moduler och dela mellan programmen?
+1. Kan du göra en mer flexibel utskrift av textabellen, så att man kan skriva ut godtyckligt antal kolumner och där kolumner har olika bredd? Det hade gjort att din tabellutskrift kan användas i andra sammanhang.
 
 
 
 Tips från coachen {#tips}
 -----------------------
+
+[Hur formatterar man ett datum i JavaScript?](t/8220)
+
+[Formattera datum i (My)SQL](t/8222)
 
 Lycka till och hojta till i forumet om du behöver hjälp!
