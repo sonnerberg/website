@@ -210,7 +210,7 @@ Kommandot [`GRANT` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/
 
 Du kan se skriptet som skapar ovan användare, i sin helhet, i kursrepot databas under [`example/sql/create-user-dbwebb.sql`](https://github.com/dbwebb-se/databas/blob/master/example/sql/create-user-dbwebb.sql).
 
-Bra, då har vi en användare som har samma rättigheter som root-användaren. En anledning till att vi gör detta nu är att det finns olika kryptering på lösenorden och denna användare vi nu skapade är mer kompatibel mellan versioner, mer kompatibel än den root-användare som skapades.
+Bra, då har vi en användare som har samma rättigheter som root-användaren. En anledning till att vi gör detta nu är att det finns olika hashning på lösenorden och denna användare vi nu skapade är mer kompatibel mellan versioner, mer kompatibel än den root-användare som skapades.
 
 Då kan vi gå vidare och eventuellt installera klienten `mysql` i andra terminaler.
 
