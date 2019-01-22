@@ -32,7 +32,7 @@ Jag använder paketen från kursen OOPython som exempel.
 För att skapa en virtuell miljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt. Sen använder vi modulen `venv` för att skapa den virtuella miljön. Modulen ska följa med när man installerar Python3.
 
 ```bash
-# Stå i roten av ditt projekt
+# Stå i roten av kursrepot
 $ python3 -m venv .venv
 ```
 
