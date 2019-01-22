@@ -5,6 +5,7 @@ category:
     - mysql
     - windows
 revision:
+    "2019-01-22": "(E, mos) Bort med stray ; with grant option."
     "2019-01-21": "(D, mos) Uppdaterad hur extra rootanvändare skapas."
     "2019-01-15": "(C, mos) Förtydliga hur man skapar my.cnf på WSL."
     "2019-01-08": "(B, mos) Nu enbart för Windows."
@@ -200,7 +201,7 @@ Vi ger nu denna användare fullständiga rättigheter på alla databaser `*.*`, 
 GRANT ALL PRIVILEGES
 ON *.*
 TO 'dbwebb'@'%'
-WITH GRANT OPTION;
+WITH GRANT OPTION
 ;
 ```
 
