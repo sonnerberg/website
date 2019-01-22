@@ -81,7 +81,46 @@ Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat 
 
 Routen / är roten, start eller index om man så vill. En route kan ses som en trafikpolis som dirigerar om trafiken. Om vi har en route `@app.route('/telefon')` kan vi nå den via `http://example.com/telefon`. Funktionen som definieras under behöver inte ha samma namn som routen. Det underlättar dock då Flask bland annat använder funktionsnamnet för att hänvisa till dess sökväg. Flask kan använda till exempel `url_for('main')`, och hade i detta fallet hänvisat till routen `/` (roten). Men mer om det senare, nu går vi vidare.
 
-Starta applikationen med (Glöm inte att venv måste vara aktiverat för att starta servern):
+Vi lägger också in två "routes" för felhantering, det behövs för att felmeddelanden ska skriva ut på studentservern.
+
+```python
+#!/usr/bin/env python3
+"""
+My first Flask app
+"""
+# Importera relevanta moduler
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def main():
+    """ Main route """
+    return "Välkommen!"
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Handler for page not found 404
+    """
+    #pylint: disable=unused-argument
+    return "Flask 404 here, but not the page you requested."
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    """
+    Handler for internal server error 500
+    """
+    #pylint: disable=unused-argument
+    import traceback
+    return "<p>Flask 500<pre>" + traceback.format_exc()
+
+if __name__ == "__main__":
+    app.run()
+```
+
+Starta applikationen (glöm inte att venv måste vara aktiverat för att starta servern):
 
 ```bash
 (.venv) $ python3 app.py
