@@ -5,6 +5,7 @@ category:
     - mysql
     - windows
 revision:
+    "2019-01-23": "(F, mos) Alternativ användare heter dbwebb, inte mos."
     "2019-01-22": "(E, mos) Bort med stray ; with grant option."
     "2019-01-21": "(D, mos) Uppdaterad hur extra rootanvändare skapas."
     "2019-01-15": "(C, mos) Förtydliga hur man skapar my.cnf på WSL."
@@ -250,10 +251,10 @@ Om du får problem med 'caching_sha2_password' så använder du din alternativa 
 
 > "ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/lib/x86_64-linux-gnu/mariadb18/plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory"
 
-Min alternativa användare hette "mos".
+Min alternativa användare hette "dbwebb".
 
 ```text
-mysql -umos -p -h127.0.0.1
+mysql -udbwebb -p -h127.0.0.1
 ```
 
 Det kan se ut så här.
