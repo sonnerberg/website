@@ -7,44 +7,70 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2017-12-29": (A, mos) Uppdaterad version av tidigare artikel.
+    "2019-01-21": "(B, mos) Genomgången och uppdaterad med mer förklaringar och ny kodstruktur på exempelprogrammen."
+    "2017-12-29": "(A, mos) Uppdaterad version av tidigare artikel."
 ...
 MySQL och Node.js (v2)
 ==================================
 
 [FIGURE src=/image/snapvt17/npm-mysql.png?w=c5 class="right"]
 
-Vi skall se hur vi kan koppla oss med JavaScript och Node.js mot en MySQL databas med hjälp av paket vi installerar med npm.
+Vi skall använda JavaScript och Node.js för att koppla oss mot en MySQL databas, med hjälp av externa paket vi installerar med pakethanteraren npm.
 
-Vi använder en befintlig databas och kopplar upp oss mot den med ett par enkla JavaScript-filer och gör en rapport via SELECT och en sökfunktion där vi filterar resultatet.
+Vi använder en befintlig databas och kopplar upp oss med ett par JavaScript-filer och gör en rapport via SELECT och en sökfunktion där vi filterar resultatet.
 
-Vi använder async/await för att hantera den asynkrona beteendet och vi gör en enkel inmatning från tangentbordet.
+Vi använder async/await för att hantera det asynkrona beteendet och vi gör en enkel inmatning från tangentbordet.
 
 <!--more-->
 
-När vi är klara har vi byggt ett litet skript som söker i databasen via JavaScript och Node.js.
+När vi är klara har vi byggt ett litet skript som söker i databasen via JavaScript och Node.js och presenterar resultatet i en textbaserad rapport med tabell layout.
 
-[FIGURE src=/image/snapvt18/nodejs-mysql-search.png?w=w3 caption="Med JavaScript och Node.js bygger du ett skript som kopplar sig till din databas."]
-
-
-
-Tidigare versioner av artikeln {#early}
---------------------------------------
-
-Denna version av artikeln är en uppdaterad variant av "[MySQL och Node.js](kunskap/mysql-och-nodejs)" och bygger på att användaren redan har tillgång till en befintlig databas och bygger på async/await konstruktionen från ES2017 (ES8).
+[FIGURE src=image/snapvt18/nodejs-mysql-search.png?w=w3 caption="Med JavaScript och Node.js bygger du ett skript som kopplar sig till din databas."]
 
 
 
 Förutsättning {#pre}
 --------------------------------------
 
-Du har redan koll på databasen MySQL och du kan grunderna i Node.js och JavaScript på serversidan.
+Du har redan koll på databasen MySQL, dess klienter och du kan grunderna i Node.js och JavaScript på serversidan.
 
-Du har installerat npm och du har Node.js version 8 eller senare.
+Du har installerat npm och du har Node.js version 10 eller senare.
 
-Exempelprogram finns i ditt kursrepo (dbjs, databas) under `example/nodejs/mysql`.
+Exempelprogrammen i artikeln finns i kursrepot databas under [`example/nodejs/mysql`](https://github.com/dbwebb-se/databas/tree/master/example/nodejs/mysql).
 
-Du är bekant med guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)" och har tillgång till datasen "skolan" som är fylld med visst innehåll.
+Du är bekant med guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)" och har tillgång till datasen "skolan" som är fylld med innehåll.
+
+
+
+Förberedelser {#forbered}
+--------------------------------------
+
+Vi skall snart installera ett par moduler som hjälper oss att koppla JavaScript med Node.js mot MySQL. Vi installerar dessa moduler med pakethanteraren npm och vi behöver först bestämma en katalog där vi gör installationen.
+
+Eftersom vi troligen jobbar i ett kursrepo, kursrepot databas, så väljer jag katalogen `me/` som installationskatalog.
+
+Vi behöver då förbereda katalogen så att vi senare kan göra installationen.
+
+Gör så här för att initiera katalogen.
+
+```text
+# Gå till kursrepot och katalogen me/
+npm init
+```
+
+När du får frågor från `npm init` så kan du trycka enter och använda standardsvaren. När du är klar har filen `package.json` skapats. Den filen kommer att innehålla de paket du senare väljer att installera.
+
+Du kan se vad filen `package.json` innehåller.
+
+```text
+cat package.json
+```
+
+Om du av någon anledning vill göra om initieringen så kan du enkelt radera de filerna som skapades med följande kommando.
+
+```text
+rm package.json
+```
 
 
 
@@ -55,14 +81,28 @@ Vi behöver ett API som låter oss prata med databasen via JavaScript och Node.j
 
 Jag vill använda programmeringsstilen med async/await för att hantera asynkrona anrop. För det syftet väljer jag [paketet promise-mysql](https://www.npmjs.com/package/promise-mysql) som är en wrapper kring paketet mysql.
 
-Jag går till kursrepot och installerar modulerna med npm. Jag installerar i rooten av kursrepot så kan alla exempelprogram i kursrepot använda samma installation.
+Jag går till kursrepot under katalogen `me/` och installerar modulerna med npm. Jag installerar direkt i `me/` så kan alla mina program kan använda samma installation.
 
-```bash
-# Ställ dig i rooten av ditt kursrepo.
-$ npm install mysql promise-mysql
+```text
+# Ställ dig i kursrepot under katalogen `me/`.
+npm install mysql promise-mysql
 ```
 
-Klart. Då testar vi om installationen gick bra.
+Då var det klart.
+
+Om du dubbelkollar innehållet i filen `package.json` så ser du två rader med ovan paketnamn, följt av de versionsnummer som installerats.
+
+```text
+cat package.json
+```
+
+Om du av någon anledning vill göra om installationen från början så kan du enkelt radera de filerna som skapades med följande kommando.
+
+```text
+rm -rf package-lock.json node_modules/
+```
+
+Då testar vi om installationen gick bra.
 
 
 
@@ -71,7 +111,7 @@ Koppla mot MySQL {#connect}
 
 Jag gör ett kort exempelprogram för att verifiera att min installation fungerar. Tanken är att göra en koppling mot databasen, utföra en SELECT och sedan avsluta. Det ger mig ett test på att installationen har gått bra.
 
-Jag sparar koden i en fil `connect.js`.
+Jag sparar koden i en fil `connect.js` inuti en main-funktion.
 
 ```javascript
 /**
@@ -79,16 +119,24 @@ Jag sparar koden i en fil `connect.js`.
  * Create a connection to the database and execute
  * a query without actually using the database.
  */
+"use strict";
+
+const mysql = require("promise-mysql");
+
+/**
+ * Main function.
+ * @async
+ * @returns void
+ */
 (async function() {
-    const mysql = require("promise-mysql");
-    const db    = await mysql.createConnection({
+    let sql;
+    let res;
+    const db = await mysql.createConnection({
         "host":     "localhost",
         "user":     "user",
         "password": "pass",
         "database": "skolan"
     });
-    let sql;
-    let res;
 
     sql = "SELECT 1+1 AS Sum";
     res = await db.query(sql);
@@ -99,7 +147,28 @@ Jag sparar koden i en fil `connect.js`.
 })();
 ```
 
-Jag lägger hela programmet i en funktion, ett eget mainprogram som körs direkt. Jag använder async/await för att hantera att vissa av anropen är ansynkrona och jag vill förenkla och behöver ett (traditionellt) synkront flöde där varje funktion är klar innan nästa utförs.
+Jag lägger hela programmet i en funktion, ett eget mainprogram som körs direkt.
+
+Jag använder en variant av main-funktionen som är en självexekverande funktion, det är en funktion som exekverar direkt, jag slipper anropa den. I JavaScript kallas den konstruktionen för "[IIFE (Immediately Invoked Function Expression)](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)".
+
+Följande två konstruktioner är alltså likvärdiga.
+
+```javascript
+// An ordinary async main function.
+async function main() {
+    
+}
+main();
+
+// A immediately invoked async main function.
+(async function() {
+
+})();
+```
+
+Konstruktionerna ovan är alltså likvärdiga.
+
+Jag använder async/await för att hantera att vissa av anropen är ansynkrona och jag vill förenkla och behöver ett (traditionellt) synkront flöde där varje funktion är klar innan nästa utförs. Jag måste vänta på att databasfrågan blir klar, innan jag kan hantera dess resultat.
 
 Så här ser det ut när jag testkör programmet.
 
@@ -109,6 +178,33 @@ $ node connect.js
 ```
 
 Svaret jag förväntade mig är `Sum: 2` och det får jag inuti en datastruktur. En bra start och paketen jag installerat fungerar enligt plan.
+
+
+
+Om det går fel... {#felmeddelande}
+---------------------------------------------
+
+När exekveringen av programmet går fel så får du ett felmeddelande tillsammans med en stacktrace som visar var felet inträffade.
+
+Pröva att ändra detaljerna som kopplar dig till databasen, använd ett felaktigt lösenord. Kör programmet och du kan få ett felmeddelande som börjar med något som liknar detta.
+
+```text
+$ node connect.js
+(node:19881) UnhandledPromiseRejectionWarning: Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'user'@'localhost'
+ (using password: YES)
+```
+
+Om man letar i felmeddelandet i stacktracen så kan man se på vilken rad (och kolumn) som felmeddelandet genererades.
+
+> "at /home/mos/git/dbwebbse/kurser/databas/example/nodejs/mysql/connect.js:15:31"
+
+I mitt exempel är det raden som börjar med databasens uppkoppling.
+
+```text
+const db    = await mysql.createConnection({
+```
+
+På det sättet kan man felsöka och se vilket felmeddelande som gäller (överst) och vilken rad som genererar det (leta efter skriptets namn och radnummer).
 
 
 
@@ -131,10 +227,16 @@ Jag skapar en JSON-fil med de detaljer som behövs för att koppla sig mot datab
 Jag tar en kopia av `connect.js` och sparar som `connect_config.js` och uppdaterar enligt följande.
 
 ```javascript
+// code before
+const config = require("./config.json");
+
+/**
+ * Main function.
+ * @async
+ * @returns void
+ */
 (async function() {
-    const mysql  = require("promise-mysql");
-    const config = require("./config.json");
-    const db     = await mysql.createConnection(config);
+    const db = await mysql.createConnection(config);
 
     // rest of code
 })();
@@ -142,7 +244,7 @@ Jag tar en kopia av `connect.js` och sparar som `connect_config.js` och uppdater
 
 Nu använder jag konstruktionen `require` för att läsa in konfigurationsfilen till ett objekt `config` som jag sedan använder för att skapa databasens uppkoppling.
 
-Det blev några färre kodrader vilket oftast blir enklare att hantera och leder till mer lättläst kod. Den stora fördelen är att jag nu kan dela konfigurationen mellan flera filer.
+Det blev några färre kodrader vilket oftast blir enklare att hantera och leder till mer lättläst kod. Den stora fördelen är att jag nu kan dela konfigurationen mellan flera filer och olika main-program.
 
 
 
@@ -164,9 +266,7 @@ Jag tar en kopia av `connect_config.js` och sparar som `teachers.js` och uppdate
  * Show teachers and their departments.
  */
 (async function() {
-    const mysql  = require("promise-mysql");
-    const config = require("./config.json");
-    const db     = await mysql.createConnection(config);
+    const db = await mysql.createConnection(config);
     let sql;
     let res;
 
@@ -189,7 +289,7 @@ Jag tar en kopia av `connect_config.js` och sparar som `teachers.js` och uppdate
 
 Jag väljer att skriva SQL-satsen på flera rader, som en [template sträng](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) med backticks, jag tycker det blir tydligare på det viset.
 
-När jag kör skriptet kommer resultsetet skrivas ut, det är en array och varje matchande rad (lärare) är ett objekt. Det ser ut så här.
+När jag kör skriptet kommer resultsetet skrivas ut, det är en array `[]` och varje matchande rad (lärare) är ett objekt `{}` med properties som har ett värde. Det ser ut så här.
 
 ```text
 $ node teachers.js
@@ -242,7 +342,9 @@ När vi kör programmet får vi nu istället en utskrift i form av formatterad J
 }
 ```
 
-Det är ofta enkelt att konvertera mellan JavaScripts datastrukturer och JSON-formatet.
+Du ser här en array `[]` av objekt `{}` där varje objekt har namngivna properties (`akronym`, `fornamn`) med värden (`"ala"`, `"Alastor"`).
+
+Det är ofta enkelt att konvertera mellan JavaScripts datastrukturer och JSON-formatet. Ibland är det enklare att felsöka och debugga om man skriver ut komplexa datastrukturer med formatterad JSON.
 
 
 
@@ -259,7 +361,7 @@ for (const row of res) {
 }
 ```
 
-Vi vill formattera utskriften som en tabell och då kan det se ut så här med lite strängformattering.
+Vi vill formattera utskriften som en tabell och då kan det se ut så här med lite strängformattering. Jag bygger upp en sträng med en header och jag lägger till rad för rad och till slut skriver jag ut strängen.
 
 ```javascript
 // Output as formatted text in table
@@ -305,99 +407,60 @@ Nu känns det som vi har kontroll över hur vi kan ställa frågor mot databasen
 
 
 
-Söka i databasen {#search}
+Strukturera i funktioner {#struktur}
 ---------------------------------------------
 
-Säg att vi vill reducera antalet rader i tabellen och bara skriva ut de som matchar en söksträng, hur kan man göra det?
+Jag vill förbereda mig för att skriva mer kod så jag väljer att strukturera upp min nuvarande kod i funktioner. Jag tar en kopia av filen `teachers.js` och sparar som `teachers_func.js` och börjar strukturera.
 
-Jag tar en kopia av `teachers.js` och skapar `search.js`. Men eftersom koden växer så väljer jag att dela ut koden i funktioner så att min main-funktion blir så liten som möjligt.
+Inledningen ser ut som tidigare, jag väljer att göra require på modulnivå.
 
-Jag flyttar koden som skriver ut resultsetet i tabellformat till en egen funktion och jag flyttar själva SQL-frågan till en funktion. I main-funktionen tänker jag hantera tangentbordsinmatningen.
+```javascript
+/**
+ * Show teachers and their departments.
+ */
+"use strict";
 
-Efter att ha flyttat runt koden till funktioner så ser min main-funktion ut så här.
+const mysql  = require("promise-mysql");
+const config = require("./config.json");
+```
+
+Sedan kommer min main-funktion som nu anropar en funktion `viewTeachers()` som utför arbetet. Jag väljer att låta funktionen returnera en sträng, med rapporten, som jag kan skriva ut.
 
 ```javascript
 /**
  * Main function.
+ *
  * @async
  * @returns void
  */
 (async function() {
-    const mysql  = require("promise-mysql");
-    const config = require("./config.json");
-    const db     = await mysql.createConnection(config);
+    const db = await mysql.createConnection(config);
     let str;
-    let search;
 
-    str = await searchTeachers(db, search);
+    str = await viewTeachers(db);
     console.info(str);
 
     db.end();
 })();
 ```
 
-Allt som tidigare gjordes i main-funktionen är nu inuti funktionen `searchTeachers()` som returnerar resultatet i form av en sträng med tabellen som går att skriva ut.
+Funktionen `viewTeachers()` är definierad som async, så jag använder await för att invänta dess resultat.
 
-
-
-### Läsa in från tangentbord {#read}
-
-Vi kan använda [Node.js modulen readline](https://nodejs.org/api/readline.html) för att läsa in söksträngen via tangentbordet.
-
-I vår main-funktion gör vi require på modulen och initierar den.
-
-```javascript
-// Read from commandline
-const readline = require('readline');
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-```
-
-Sedan ställer vi en fråga och när användaren skriver in svaret så anropas vår callback där vi anropar databasen och skriver ut svaret.
-
-```javascript
-// Ask question and handle answer in async arrow function callback.
-rl.question("What to search for? ", async (search) => {
-    let str;
-
-    str = await searchTeachers(db, search);
-    console.info(str);
-
-    rl.close();
-    db.end();
-});
-```
-
-Likt referensmanualen använder vi en [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) för att definiera callbacken som tar ett argument `search` som är det som matas in från tangentbordet. Eftersom vi vill använda `await` inuti callbacken så måste den defineras som `async`.
-
-Vi behöver stänga databasen och `rl` inuti callbacken, efter att allt är klart och utskrivet.
-
-
-
-### Argument till SELECT {#argsel}
-
-Nu har vi en söksträng att söka efter, då skall vi konstruera SELECT-frågan med hjälp av argumentet `search`. Här tar vi hjälp av modulen mysql och möjligheten att lägga till `?` som ersättare för ett argument i frågan. Fördelen är att argumenten _escapas_ för att undvika skadliga injektioner i din SQL-kod.
-
-Vår nuvarande SELECT ser ut så här i sitt sammanhang, ännu utan att ta hänsyn till argumentet `search`.
+Vi kan titta på funktionen och se att den utför samma SQL-sats som tidigare. Funktionen tar databaskopplingen som ett argument och använder det för att utföra sql-frågan.
 
 ```javascript
 /**
- * Output resultset as formatted table with details on a teacher.
+ * Get a report with teacher details, formatted as a text table.
  *
  * @async
- * @param {connection} db     Database connection.
- * @param {string}     search String to search for.
+ * @param {connection} db Database connection.
  *
  * @returns {string} Formatted table to print out.
  */
-async function searchTeachers(db, search) {
+async function viewTeachers(db) {
     let sql;
     let res;
     let str;
-
-    console.info(`Searching for: ${search}`);
 
     sql = `
         SELECT
@@ -415,37 +478,263 @@ async function searchTeachers(db, search) {
 }
 ```
 
-Vi skriver om SELECT-satsen så att den tar hänsyn till vår söksträng.
+Du kan se att jag valde att göra ytterligare en funktion `teacherAsTable()` för själva utskriften av rapporten. Den funktionen är inte definierad som async så här behövs inte någon await.
 
 ```javascript
-let like = `%${search}%`;
+/**
+ * Output resultset as formatted table with details on teachers.
+ *
+ * @param {Array} res Resultset with details on from database query.
+ *
+ * @returns {string} Formatted table to print out.
+ */
+function teacherAsTable(res) {
+    let str;
 
+    str  = "+-----------+---------------------+-----------+----------+\n";
+    str += "| Akronym   | Namn                | Avdelning |   Lön    |\n";
+    str += "|-----------|---------------------|-----------|----------|\n";
+    for (const row of res) {
+        str += "| ";
+        str += row.akronym.padEnd(10);
+        str += "| ";
+        str += (row.fornamn + " " + row.efternamn).padEnd(20);
+        str += "| ";
+        str += row.avdelning.padEnd(10);
+        str += "| ";
+        str += row.lon.toString().padStart(8);
+        str += " |\n";
+    }
+    str += "+-----------+---------------------+-----------+----------+\n";
+
+    return str;
+}
+```
+
+Funktionen bearbetar resultsetet och skapar en sträng som sedan kan skrivas ut som en rapport.
+
+Själva utskriften ser ut precis som tidigare.
+
+```text
+$ node teachers_func.js
++-----------+---------------------+-----------+----------+
+| Akronym   | Namn                | Avdelning |   Lön    |
+|-----------|---------------------|-----------|----------|
+| ala       | Alastor Moody       | DIPT      |    27594 |
+| dum       | Albus Dumbledore    | ADM       |    85000 |
+| fil       | Argus Filch         | ADM       |    27594 |
+| gyl       | Gyllenroy Lockman   | DIPT      |    27594 |
+| hag       | Hagrid Rubeus       | ADM       |    30000 |
+| hoc       | Madam Hooch         | DIDD      |    37580 |
+| min       | Minerva McGonagall  | DIDD      |    49880 |
+| sna       | Severus Snape       | DIPT      |    45000 |
++-----------+---------------------+-----------+----------+
+```
+
+Då skall vi se hur vi kan begränsa antalet rader som visas, med någon form av sökning, eller filtrering.
+
+
+
+Söka i databasen {#search}
+---------------------------------------------
+
+Säg att vi vill reducera antalet rader i tabellen och bara skriva ut de som matchar en söksträng, hur kan man göra det?
+
+Jag tar en kopia av `teachers_func.js` och skapar `search_al.js`.
+
+
+
+### Main-funktion till search {#mainsearch}
+
+Mitt main-program ser ut så här, det är samma som tidigare, bortsett från att jag nu anropar funktion `searchTeachers()` med en parameter.
+
+```javascript
+/**
+ * Main function.
+ *
+ * @async
+ * @returns void
+ */
+(async function() {
+    const db = await mysql.createConnection(config);
+    let str;
+    let search;
+
+    search = "al";
+    str = await searchTeachers(db, search);
+    console.info(str);
+
+    db.end();
+})();
+```
+
+Jag söker efter lärare som ar en delsträng `al` i sig. Just nu är detta hårdkodat.
+
+
+
+### Funktionen searchTeachers {#searchteach}
+
+Vi tittar på funktionen `searchTeachers()`, den ser ut så här.
+
+```javascript
+/**
+ * Output resultset as formatted table with details on a teacher.
+ *
+ * @async
+ * @param {connection} db     Database connection.
+ * @param {string}     search String to search for.
+ *
+ * @returns {string} Formatted table to print out.
+ */
+async function searchTeachers(db, search) {
+    let sql;
+    let res;
+    let str;
+    let like = `%${search}%`;
+
+    console.info(`Searching for: ${search}`);
+
+    sql = `
+        SELECT
+            akronym,
+            fornamn,
+            efternamn,
+            avdelning,
+            lon
+        FROM larare
+        WHERE
+            akronym LIKE ?
+            OR fornamn LIKE ?
+            OR efternamn LIKE ?
+            OR avdelning LIKE ?
+            OR lon = ?
+        ORDER BY akronym;
+    `;
+    res = await db.query(sql, [like, like, like, like, search]);
+    str = teacherAsTable(res);
+    return str;
+}
+```
+
+Funktionen är uppbyggd på samma sätt som `viewTeachers()`, med den skillnaden att här har vi en WHERE-del. Låt oss titta på den.
+
+WHERE-delen är skapad med _place holders_ i form av `?`.
+
+```javascript
 sql = `
-    SELECT
-        akronym,
-        fornamn,
-        efternamn,
-        avdelning,
-        lon
-    FROM larare
+    // sql code...
     WHERE
         akronym LIKE ?
         OR fornamn LIKE ?
         OR efternamn LIKE ?
         OR avdelning LIKE ?
         OR lon = ?
-    ORDER BY akronym;
+    // more sql code...
 `;
-res = await db.query(sql, [like, like, like, like, like, search]);
 ```
 
-Vi har alltså en SQL-fråga där `?` kommer att ersättas av sin motsvarighet i arrayen som bifogas till `query()`. Detta är ett bra sätt att bygga upp sin SQL-fråga tillsammans med innehåll från andra variabler.
+Tanken är att vi skickar med ersättare till dessa frågetecken, när vi utför själva frågan. Vi kan se hur det sker i slutet av funktionen.
+
+```javascript
+res = await db.query(sql, [like, like, like, like, search]);
+```
+
+Förutom sql-satsen så skickar vi med en array där respektive värde kommer att ersätta sitt motsvarande frågetecken, i ordning. Man måste vara noggrann med att antalet frågetecken motsvaras av antalet värden i arrayen. Annars får man ett felmeddelande om att sql-satsen är felaktig.
+
+Du kan läsa i manualen om [npm mysql och hur placeholders fungerar](https://www.npmjs.com/package/mysql#performing-queries). Fördelen är att argumenten _escapas_ för att undvika skadliga injektioner i din SQL-kod.
+
+I koden ovan väljer jag att formattera alla strängar till `%search%` så att det jag söker efter är en substräng. Det är därför jag använder variabeln `like`. När jag söker efter lönen så använder jag dock det rena värdet från `search`.
 
 
 
 ### Testa search.js {#testsearch}
 
-Vi kan nu testa skriptet, det kan se ut så här när man söker ut de lärare som jobbar på en viss avdelning.
+Vi kan nu testa skriptet, det kan se ut så här när man söker ut de lärare som har delsträngen `al` i någon del.
+
+```text
+$ node search_al.js
+Searching for: al
++-----------+---------------------+-----------+----------+
+| Akronym   | Namn                | Avdelning |   Lön    |
+|-----------|---------------------|-----------|----------|
+| ala       | Alastor Moody       | DIPT      |    27594 |
+| dum       | Albus Dumbledore    | ADM       |    85000 |
+| min       | Minerva McGonagall  | DIDD      |    49880 |
++-----------+---------------------+-----------+----------+
+```
+
+Hur kan vi göra så att användaren själv kan mata in söksträngen?
+
+
+
+Läsa in från tangentbord {#read}
+--------------------------------
+
+Vi kan använda [Node.js modulen readline](https://nodejs.org/api/readline.html) för att läsa in söksträngen via tangentbordet.
+
+Vi bygger ett testprogram `search.js` genom att ta en kopia av filen `search_al.js`.
+
+Överst i filen så inkluderar jag nu modulen readline och initierar den mot stdin och stdout.
+
+```javascript
+// Read from commandline
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+```
+
+Sedan bygger jag om flödet i mitt main-program och läser in söksträngen från användaren, med hjälp av funtionen `rl.question()`. Jag hanterar svaret i en callback så jag behöver flytta in all logik från main-programmet, in i callbacken.
+
+
+```javascript
+/**
+ * Main function.
+ *
+ * @async
+ * @returns void
+ */
+(async function() {
+    const db = await mysql.createConnection(config);
+    let str;
+
+    // Ask question and handle answer in async arrow function callback.
+    rl.question("What to search for? ", async (search) => {
+        str = await searchTeachers(db, search);
+        console.info(str);
+
+        rl.close();
+        db.end();
+    });
+})();
+```
+
+Vi kan bryta ned vad som händer.
+
+Först grundstrukturen som tar en sträng som skrivs ut, följt av en callback som anropas när användaren har matat in sin söksträng.
+
+```javascript
+rl.question("What to search for? ", // a callback function
+    //
+});
+```
+
+Callbacken skriver vi som en anonym [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Callbacken måste anges som `async` eftersom den använder `await` inuti sin funktionsbody. Funktionen tar en parameter `(search)` som är det som användaren matat in.
+
+```javascript
+async (search) => {
+    str = await searchTeachers(db, search);
+    console.info(str);
+
+    rl.close();
+    db.end();
+}
+```
+
+All kod ligger nu inuti callbacken, på gott och ont. Vi kan ju inte stänga ned databasen, eller `rl`, innan frågan är klar, så vi kan inte ha den delen utanför callbacken.
+
+När jag provkör programmet ser det ut så här.
 
 ```text
 $ node search.js
@@ -459,35 +748,83 @@ Searching for: DIDD
 +-----------+---------------------+-----------+----------+
 ```
 
-Kör programmet igen om du vill söka efter något annat.
-
-Du har skapat en enkel rapporthantering/sökning från din databas.
+Provkör ditt egna program och pröva söka efter fler delsträngar.
 
 
 
-Asynkron programmering i Node.js {#async}
+Readline med async och await {#rlawait}
 --------------------------------------
 
-En sak som skiljer JavaScript i Node.js, från andra traditionella programmeringsspråk, är dess asynkrona och icke blockande natur. Du har sett ett par exempel på dessa i artikeln då vi använder async/await för att serialisera de metoder som stödjer Promise.
+Som du kanske såg så använde vi en klassisk callback för att hantera inmatningen från tangentbordet med `rl.question()`. Det finns dock en möjlighet att promisifiera denna funktionen, så att den går att använda tillsammans med await. Det är lite pilligt, men låt oss trots det kika kort på hur en sådan variant kan se ut. Jag skapar filen `search_await.js` som en kopia av `search.js`.
 
-Vi såg även ett exempel på en callback-hantering i `rl.question()` där en metod anropas när frågan besvarats.
+Det som är pilligt är just promisifieringen av funktionen. Den ser ut så här och kan ske överst i filen, på modulnivå.
 
-En viktig ingrediens för att bemästra JavaScript i Node.js är att förstå de olika delarna i dess asynkrona hantering. Tidiga versioner av JavaScript, pre ES2015 (ES6) löser hanteringen med callbacks. När ES2015 (ES6) kom så introducerades Promise och när ES2017 (ES8) kom så fick vi möjligheten att använda async/await.
+```javascript
+// Promisify rl.question to question
+const util = require("util");
 
-När man tittar på moduler till JavaScript och Node.js så får man vara vaksam på dokumentationen och se vilka möjligheter som erbjuds då de kan ha valt olika strategier för att hantera asynkrona bitar.
+rl.question[util.promisify.custom] = (arg) => {
+    return new Promise((resolve) => {
+        rl.question(arg, resolve);
+    });
+};
+const question = util.promisify(rl.question);
+```
 
-I artikeln försöker jag undvika att gå in på detaljer om detta, om du är nybörjare på JavaScript i Node.js så kan det vara bra att vara medveten om denna frågeställning som delvis kan upplevas frustrerande när man försöker bemästra området.
+Vi fördjupar oss inte i konstruktionen som finns beskriven i [Node.js manualen för promisify och custom promisified functions](https://nodejs.org/api/util.html#util_util_promisify_original). 
 
-För den som vill fördjupa sig i ämnet så rekommenderas de böcker som [Axel Rauschmayer skrivit om olika versioner av JavaScript](http://exploringjs.com/).
+Huvudsaken är att vi nu har en funktion `question()` som returnerar det som användaren skriver in och vi kan använda tillsammans med await.
+
+Flödet i main-funktionen blir då så här.
+
+```javascript
+/**
+ * Main function.
+ *
+ * @async
+ * @returns void
+ */
+(async function() {
+    const db = await mysql.createConnection(config);
+    let str;
+    let search;
+
+    search = await question("What to search for? ");
+    str = await searchTeachers(db, search);
+    console.info(str);
+
+    rl.close();
+    db.end();
+})();
+```
+
+Utskriften ser ut som tidigare.
+
+```text
+$ node search_await.js
+What to search for? adm
+Searching for: adm
++-----------+---------------------+-----------+----------+
+| Akronym   | Namn                | Avdelning |   Lön    |
+|-----------|---------------------|-----------|----------|
+| dum       | Albus Dumbledore    | ADM       |    85000 |
+| fil       | Argus Filch         | ADM       |    27594 |
+| hag       | Hagrid Rubeus       | ADM       |    30000 |
++-----------+---------------------+-----------+----------+
+```
+
+Du kan välja om du använder callback-varianten eller await. Men för min egen del så kör jag vidare med await-varianten, nu när jag ändå har den så att den fungerar.
+
+Jag kan tycka att programflödet blir aningen enklare att förstå, när man är nybörjare på Node.js.
 
 
 
 Dokumentation {#docs}
 --------------------------------------
 
-Som du märker i artikeln så är kärnan i JavaScript dokumenterad på MDNs webbplats, när det gäller moduler specifika för Node.js så finns referensmanualen på deras webbplats och när det gäller paket vi installerar med npm så är vi hänvisade till dess README och bakomliggande GitHub repo.
+Som du märker i artikeln så är kärnan i JavaScript dokumenterad på MDNs webbplats. När det gäller moduler specifika för Node.js så finns referensmanualen på deras webbplats. När det gäller paket vi installerar med npm så är vi hänvisade till dess README och bakomliggande GitHub repo.
 
-Det gäller att skaffa sig kontroll över vilken referensdokumentation som är den "rätta". Refmanualen är alltid din bästa vän.
+Det gäller att skaffa sig kontroll över vilken referensdokumentation som är den "rätta". Refmanualen är alltid din bästa vän, se till att bli kompis med den, det sparar tid och frustration.
 
 
 
@@ -496,6 +833,8 @@ Avslutningsvis {#avslutning}
 
 Du har nu fått en genomgång i hur MySQL kan fungera tillsammans med Node.js och du har fått en grundstruktur i hur du kan organisera ditt program.
 
-Grundstrukturen kan du förhoppningsvis bygga vidare på, även med begränsade kunskaper i javaScript och Node.js.
+Du har även fått en genomgång i hur man matar in text från användaren.
+
+Grundstrukturen i programmen kan du förhoppningsvis bygga vidare på när du bygger allt större program med databasen.
 
 Denna artikel har en [egen forumtråd](t/6270) som du kan ställa frågor i, eller ge tips.

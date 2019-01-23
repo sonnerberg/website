@@ -74,7 +74,8 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 0 och 1.
+Det finns inga videor till kursmomentet.
+<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 0 och 1. -->
 
 
 

@@ -70,7 +70,7 @@ Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar 
 
 ```bash
 # Ställ dig i kurskatalogen
-#dbwebb validate flask
+dbwebb validate flask
 dbwebb publish flask
 ```
 

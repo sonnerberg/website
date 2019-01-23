@@ -7,24 +7,20 @@ views:
             src: "image/snapvt18/nodejs-mysql-search.png?w=1100&h=300&cf&a=0,0,55,0&f=grayscale"
 author: mos
 revision:
-    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2019-01-21": "(C, mos) Genomgången och uppdaterad, ny kodstruktur på js-programmen."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-02": "(A, mos) Första utgåvan."
 ...
 Kmom02: SQL
 ====================================
 
-[WARNING]
-
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
-
 Vi jobbar vidare med SQL och tränar på enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
-Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Det innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm samt att du kommer igång med grunderna i programmeringsspråket JavaScript och specifikt hur JavaScript används tillsammans med Node.js.
+Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Detta innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm samt att du kommer igång med grunderna i programmeringsspråket JavaScript och specifikt hur JavaScript används tillsammans med Node.js.
+
+I samband med detta får du träna på den asynkrona programmeringsmodellen som gäller i Node.js och JavaScript. Vi kommer använda konstruktioner likt async och await.
+
+Därefter får du använda ett externt programpaket, som du installerar via npm, för att via JavaScript koppla dig mot databasen och skapa textbaserade rapporter.
 
 <!--more-->
 
@@ -86,6 +82,8 @@ Läs följande som är relaterat till programmeringsspråket JavaScript och Node
 
 1. Node.js låter dig köra JavaScript utan en webbläsare. Via webbplatsen för Node.js finner du [referensdokumentationen](https://nodejs.org/en/docs/) till de delar och moduler som är specifika för Node.js/JavaScript. Node.js innehåller ett API som bland annat ger dig tillgång till operativsystemets resurser och låter dig skriva terminalprogram.
 
+1. Som ett alternativ kan du kika på guiden "[Programmering med grunderna i JavaScript](https://dbwebb.se/guide/javascript1/introduktion)". Guiden är på svenska och främst skriven för JavaScript i webbläsaren, men den kan ge dig viss grundläggande kunskap i språket JavaScript som hjälper dig att komma igång med språkets byggstenar.
+
 
 
 ### Artiklar {#artiklar}
@@ -107,11 +105,9 @@ Läs följande:
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-<!--
-Någon övning som ger grunderna i Node.js och JavaScript på servern? Till någon som redan kan programmera. Kanske labbverktyget, kombinera labbarna i js1 och node, enkla till någon som kan programmera men inte kan js?
+1. Jobba igenom artikeln "[JavaScript och Node.js](kunskap/javascript-och-nodejs)" som visar hur du kommer igång med programmeringsspråket JavaScript i miljön Node.js. Spara dina exempelprogram under `me/kmom02/js`.
 
-1. Gör laborationen "[Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs)" för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
--->
+1. Jobba igenom artikeln "[JavaScript och Node.js med async och await](kunskap/javascript-och-nodejs-med-async-och-await)" som presenterar begrepp kring den asynkrona programmeringsmodell som är grunden i Node.js. Spara dina exempelprogram under `me/kmom02/js`.
 
 1. Jobba igenom artikeln "[MySQL och Node.js (v2)](kunskap/mysql-och-nodejs-v2)" som visar hur du kommer igång med programmeringsspråket JavaScript i miljön Node.js och hur du kopplar ett program till databasen MySQL. Spara dina exempelprogram under `me/kmom02/search`.
 
@@ -132,6 +128,9 @@ Båda uppgifterna bygger på att du klarat av första delen av SQL-guiden från 
 Enkel SQL laboration som visar att studenten kan göra joins/subquery.
 
 1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
+
+1. Gör laborationen "[Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs)" för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
+
 -->
 
 
@@ -154,6 +153,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Du har nu använt både UNION och JOIN för att slå samman tabeller i SQL, vilken är din uppfattning om databaser och SQL så här långt?
-* Är detta den första bekantskap med JavaScript på serversidan och Node.js, hur känns det och vilken uppfattning, eller förutfattade meningar, har du om språket?
+* Är detta den första bekantskap med JavaScript på serversidan och Node.js, hur känns det och vilken uppfattning, eller förutfattade meningar, har du om detta?
+* Hur kändes konceptet med async och await och asynkron programmering?
 * Hur gick det att koppla ihop JavaScript, Node.js med SQL och databasen?
 * Vilken är din TIL för detta kmom?

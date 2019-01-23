@@ -5,6 +5,8 @@ category:
     - mysql
     - windows
 revision:
+    "2019-01-22": "(E, mos) Bort med stray ; with grant option."
+    "2019-01-21": "(D, mos) Uppdaterad hur extra rootanvändare skapas."
     "2019-01-15": "(C, mos) Förtydliga hur man skapar my.cnf på WSL."
     "2019-01-08": "(B, mos) Nu enbart för Windows."
     "2018-01-12": "(A, mos) Första utgåvan för Windows, macOS och Linux."
@@ -169,14 +171,26 @@ Nu har du en fungerande terminalklient `mysql`.
 Skapa en ny användare i databasen {#createuser}
 --------------------------------------
 
-Innan vi går vidare så skapar vi en ny användare i databasen, denna användare kan ha fulla rättigheter till alla databaser.
+Innan vi går vidare så skapar vi en ny användare i databasen, denna användare skall ha fulla rättigheter till alla databaser.
 
-Vi öppnar terminalklienten och skriver följande SQL-kod för att skapa en användare. Jag döper min användare till "mos", du väljer ditt egna användarnamn och ditt egna lösenord.
+Detta är en lösning på problemet som inträffar när äldre klienter kopplar sig mot nyare databaser (från och med version 8.0.4). Felmeddelandet som visas är ofta följande.
+
+> "ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded: /.../plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory"
+
+Du kan läsa om problematiken på StackOverflow och "[Authentication plugin 'caching_sha2_password'](https://stackoverflow.com/questions/49963383/authentication-plugin-caching-sha2-password)".
+
+Då skapar vi alltså en ny root-användare som är kompatibel med äldre klienter.
+
+Vi öppnar terminalklienten (i cmd), som root, och skriver följande SQL-kod för att skapa en användare. Jag väljer att döpa användaren till "dbwebb".
 
 ```text
-CREATE USER 'mos'@'localhost'
-IDENTIFIED WITH mysql_native_password
-BY 'password';
+DROP USER IF EXISTS 'dbwebb'@'%';
+
+CREATE USER 'dbwebb'@'%'
+IDENTIFIED
+WITH mysql_native_password -- Only MySQL > 8.0.4
+BY 'password'
+;
 ```
 
 Kommandot [`CREATE USER` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/8.0/en/create-user.html).
@@ -184,18 +198,20 @@ Kommandot [`CREATE USER` finns beskrivet i manualen](https://dev.mysql.com/doc/r
 Vi ger nu denna användare fullständiga rättigheter på alla databaser `*.*`, det blir i princip samma rättigheter som root-användaren.
 
 ```text
-GRANT ALL PRIVILEGES ON *.* TO 'mos'@'localhost';
+GRANT ALL PRIVILEGES
+ON *.*
+TO 'dbwebb'@'%'
+WITH GRANT OPTION
+;
 ```
+
+Den sista delen med `WITH GRANT OPTION` gör så att användaren kan göra GRANT för andra användare.
 
 Kommandot [`GRANT` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/8.0/en/grant.html).
 
-Bra, då har vi en användare som har samma rättigheter som root-användaren. En anledning till att vi gör detta nu är att det finns olika kryptering på lösenorden och denna användare vi nu skapade är mer kompatibel mellan versioner, mer kompatibel än den root-användare som skapades.
+Du kan se skriptet som skapar ovan användare, i sin helhet, i kursrepot databas under [`example/sql/create-user-dbwebb.sql`](https://github.com/dbwebb-se/databas/blob/master/example/sql/create-user-dbwebb.sql).
 
-Detta är en lösning på problemet som inträffar när äldre klienter kopplar sig mot nyare databaser (från och med version 8.0.4). Felmeddelandet som visas är ofta följande.
-
-> "ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/lib/x86_64-linux-gnu/mariadb18/plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory"
-
-Du kan läsa om problematiken på StackOverflow och "[Authentication plugin 'caching_sha2_password'](https://stackoverflow.com/questions/49963383/authentication-plugin-caching-sha2-password)".
+Bra, då har vi en användare som har samma rättigheter som root-användaren. En anledning till att vi gör detta nu är att det finns olika hashning på lösenorden och denna användare vi nu skapade är mer kompatibel mellan versioner, mer kompatibel än den root-användare som skapades.
 
 Då kan vi gå vidare och eventuellt installera klienten `mysql` i andra terminaler.
 

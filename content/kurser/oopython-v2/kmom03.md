@@ -3,6 +3,7 @@ author: lew
 category:
     - oopython
 revision:
+    "2019-01-19": (B, aar) Tog bort uppgifter om sekvensdiagram.
     "2017-12-13": (A, lew) New version for v2.
 ...
 Kmom03: UML och unittest
@@ -63,11 +64,9 @@ Läs följande:
 
 Titta på följande video:  
 
-1. Video om sequence diagrams: [UML Behavioral Diagrams: Sequence - Georgia Tech - Software Development Process](https://www.youtube.com/watch?v=XIQKt5Bs7II).  
+1. Videos 12-22 i spellistan [Software Development Process: Part 2 of 3](https://www.youtube.com/watch?v=pZ9-ujSP_48&index=12&list=PLAwxTw4SYaPm8PAGH7ov2Bj-nG4sXgCtJ)  om class diagrams.
 
-2. Videos 12-22 i spellistan [Software Development Process: Part 2 of 3](https://www.youtube.com/watch?v=pZ9-ujSP_48&index=12&list=PLAwxTw4SYaPm8PAGH7ov2Bj-nG4sXgCtJ)  om class diagrams.
-
-3. Video om unittester: [Python Functions 2: Unit Testing](https://www.youtube.com/watch?v=F7a0iUH6kVA)
+1. Video om unittester: [Python Functions 2: Unit Testing](https://www.youtube.com/watch?v=F7a0iUH6kVA)
 
 
 
@@ -109,7 +108,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Kortspelet War](uppgift/kortspelet-war)". Utför uppgiften i mappen `war`.  
 
-1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram2)". Utför uppgiften i mappen `uml`.  
+<!-- 1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram2)". Utför uppgiften i mappen `uml`.   -->
 
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
@@ -143,6 +142,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kan du se nyttan med UML och tester inom ramen för ett projekt?
 * Vad tycker du om objektorienterad programmering än så länge?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Överskuggade du någon metod i "Kortspelet War"?
-* Hur gick det med sekvensdiagrammet?
+<!-- * Överskuggade du någon metod i "Kortspelet War"? -->
+<!-- * Hur gick det med sekvensdiagrammet? -->
 <!-- * Gjorde du extrauppgiften? -->
