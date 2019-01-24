@@ -35,5 +35,6 @@ Guider under utveckling till våren 2019.
 Guider som ligger till sig och eventuellt utvecklas framöver.
 
 * [Kom igång med terminalen och Unix](guide/kom-igang-med-terminalen-och-unix)
+* [Kom igång med Bash](guide/kom-igang-med-bash)
 
 <!-- * [Programmering med JavaScript](guide/javascript) (delar av material som använts i kursen javascript, guiden delvis påbörjad, avvaktar eventuell utveckling av kursen javascript1) -->

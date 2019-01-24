@@ -167,7 +167,7 @@ router.post("/reports",
 function checkToken(req, res, next) {
     const token = req.headers['x-access-token'];
 
-    jwt.verify(token, config.secret, function(err, decoded) {
+    jwt.verify(token, process.env.JWT_SECRET, function(err, decoded) {
         if (err) {
             // send error response
         }
