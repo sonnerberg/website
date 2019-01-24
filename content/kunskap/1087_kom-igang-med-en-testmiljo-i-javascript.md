@@ -171,14 +171,14 @@ Det första testverktyget jag valde är för enhetstester. De verktygen jag vald
 
 ```text
 example/test/unittest-mocha$ tree .
-.          
-├── package.json     
-├── src             
-│   └── card        
-│       └── card.js 
-└── test           
-    └── card 
-        ├── card.js   
+.
+├── package.json
+├── src
+│   └── card
+│       └── card.js
+└── test
+    └── card
+        ├── card.js
         └── cardParameterized.js
 ```
 
@@ -351,7 +351,7 @@ De images som slutar på `alpine` innehåller bara `sh` medans du kan använda `
 
 Alpine är en minimal [bas-image alpine](https://store.docker.com/images/alpine) vars storlek är väldigt liten jämfört med en image baserad på debian eller ubuntu.
 
-Här kan du se storleken på de images som bygger på alpine och de andra som bygger på debian. 
+Här kan du se storleken på de images som bygger på alpine och de andra som bygger på debian.
 
 ```text
 $ docker image ls
@@ -374,22 +374,22 @@ Om du vill dubbelkolla vilken version av Node som körs i en kontainer, bara fö
 
 ```text
 $ docker-compose run node_alpine node
-> process.version       
-'v8.8.1'                
-> process.versions      
-{ http_parser: '2.7.0', 
-  node: '8.8.1',        
-  v8: '6.1.534.42',     
-  uv: '1.15.0',         
-  zlib: '1.2.11',       
-  ares: '1.10.1-DEV',   
-  modules: '57',        
-  nghttp2: '1.25.0',    
-  openssl: '1.0.2l',    
-  icu: '59.1',          
-  unicode: '9.0',       
-  cldr: '31.0.1',       
-  tz: '2017b' }         
+> process.version
+'v8.8.1'
+> process.versions
+{ http_parser: '2.7.0',
+  node: '8.8.1',
+  v8: '6.1.534.42',
+  uv: '1.15.0',
+  zlib: '1.2.11',
+  ares: '1.10.1-DEV',
+  modules: '57',
+  nghttp2: '1.25.0',
+  openssl: '1.0.2l',
+  icu: '59.1',
+  unicode: '9.0',
+  cldr: '31.0.1',
+  tz: '2017b' }
 ```
 
 
@@ -428,12 +428,6 @@ Vill du köra validatorn som en del av din `npm test` så kan du lägga till fö
 }
 ```
 
-Om du hellre vill jobba med kommandot make och en Makefile så finns det i exempelkatalogen. Förutsatt att du har installerat även mocha och nyc (`npm install`) kan du köra samtliga tester via `make test`. Makefilen är föreberedd för att köra både validering och enhetstester.
-
-```text
-make test
-```
-
 När enhetstester körs så genereras kodtäckningen till katalogen `build/`. Det är för att undvika att skräpa ned i katalogen och samla bygg-relaterade filer i en katalog som är enkel att ta bort vid behov. Du kan se detaljer för hur `nyc` konfigureras i dess konfigfil `.nycrc`.
 
 
@@ -441,14 +435,14 @@ När enhetstester körs så genereras kodtäckningen till katalogen `build/`. De
 Continuous integration (CI) {#cichain}
 --------------------------------------------------------------------
 
-Nu när vi har en makefil på plats, alternativt motsvarigheten i npm skript, kan vi fortsätta och sätta igång en CI-kedja för att automatisera våra tester.
+Nu när vi har en `package.json` på plats kan vi fortsätta och sätta igång en CI-kedja för att automatisera våra tester.
 
-Det som sammanhåller alla tester är nu sekvensen `make install check test` som installerar det som behövs via `package.json` och sen kör testerna.
+Det som sammanhåller alla tester är nu sekvensen `npm install check test` som installerar det som behövs via `package.json` och sen kör testerna.
 
 ```text
-make install   # Installerar allt som finns i package.json
-make check     # Kollar och visar versioner på installerade verktyg
-make test      # Exekvera validatorer och testfall
+npm install   # Installerar allt som finns i package.json
+npm check     # Kollar och visar versioner på installerade verktyg
+npm test      # Exekvera validatorer och testfall
 ```
 
 Då bygger vi en CI kedja. Det finns exempelkod i kursrepot under `example/test/ci` och jag använder ett repo [janaxs/blackjack](https://github.com/janaxs/blackjack) för att demonstrera hur det ser ut.
@@ -461,7 +455,7 @@ Först tar vi ett byggsystem, eller två. Jag väljer [Travis](https://travis-ci
 
 Jag lägger till mitt repo till Travis och CircleCI.
 
-I katalogen `example/test/ci` ligger en konfigurationsfil `.travis.yml` och en `.circleci/config.yml` som är exempel på konfigurationsfiler för Travis respektive CircleCI (v2). Om du kikar i filerna ser du referenser till `make install` och `make test`.
+I katalogen `example/test/ci` ligger en konfigurationsfil `.travis.yml` och en `.circleci/config.yml` som är exempel på konfigurationsfiler för Travis respektive CircleCI (v2). Om du kikar i filerna ser du referenser till `npm install` och `npm test`.
 
 
 
