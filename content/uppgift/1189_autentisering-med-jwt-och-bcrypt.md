@@ -184,6 +184,13 @@ Vi såg i artikeln [Login med JWT](kunskap/login-med-jwt) kursen webapp hur man 
 
 
 
+Exempel {#example}
+-----------------------
+
+Om ni vill titta på ett fullständigt exempelprogram som använder dessa tekniker är [Lager API:t](https://github.com/emilfolino/order_api) från webapp kursen ett bra exempel.
+
+
+
 Krav {#krav}
 -----------------------
 
