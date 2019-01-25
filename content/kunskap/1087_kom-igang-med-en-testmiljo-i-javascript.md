@@ -186,7 +186,7 @@ Min källkod finns i `src/card` och mina enhetstester ligger i `test/card`. De b
 
 Koden som testas är en klass `Card` som skall fungera som ett kort i en vanlig kortlek.
 
-Innan vi kan köra testerna så behöver vi installera Mocha. Det går att installera med `npm install mocha` eller bara `npm install` eftersom filen `package.json` redan innehåller en referens till Mocha. När installationen är klar kan du köra testfallen med `npm test` eftersom `package.json` redan är konfigurerad för att köra Mocha med enhetstesterna.
+Innan vi kan köra testerna så behöver vi installera Mocha. Det går att installera med `npm install mocha --save-dev` eller bara `npm install` eftersom filen `package.json` redan innehåller en referens till Mocha. När installationen är klar kan du köra testfallen med `npm test` eftersom `package.json` redan är konfigurerad för att köra Mocha med enhetstesterna.
 
 ```text
 npm install
@@ -202,7 +202,7 @@ Kodtäckning vid enhetstestning {#covjs}
 
 När man kör enhetstester är man i princip beroende av ett verktyg som kan visa kodtäckningen för testfallen. Här väljer jag verktygen [Istanbul](https://istanbul.js.org/). I katalogen `example/test/unittest-mocha-istanbul` har jag utökat mitt exempel med att använda Istanbul tillsammans med Mocha.
 
-För att kunna köra testerna med kodtäckning behöver du först installera kommandoradsklienten [`nyc`](https://github.com/istanbuljs/nyc) via `npm install nyc` eller bara `npm install`. Sedan kan du köra testerna igen, nu med kodtäckning inkluderat.
+För att kunna köra testerna med kodtäckning behöver du först installera kommandoradsklienten [`nyc`](https://github.com/istanbuljs/nyc) via `npm install nyc --save-dev` eller bara `npm install`. Sedan kan du köra testerna igen, nu med kodtäckning inkluderat.
 
 ```text
 npm install
@@ -214,6 +214,9 @@ I filen `package.json` körs nu kommandot `nyc --reporter=html --reporter=text m
 [FIGURE src=image/snapht17/mocha-nyc-codecoverage.png?w=w2 caption="Kodtäckningen är på 100% i vårt exempel."]
 
 Med en HTML-rapport är det enkelt att klicka sig fram och se vilka delar av koden som täcks av testfallen. Kodtäckning är ett viktigt verktyg när man gör enhetstester.
+
+Dessa verktyg skapar en del filer och kataloger, som vi inte är intresserade av att ha versionshanterad. Därför lägger vi till en ny `.gitignore` som gör att vi inte får kataloger genererad av testverktygen. Vi tar den officiella [Node.gitignore
+](https://github.com/github/gitignore/blob/master/Node.gitignore) och kopierar in i vår `.gitignore`.
 
 
 
@@ -232,7 +235,7 @@ Du kan köra testerna mot en specifik kontainer på något av följande sätt.
 
 ```text
 docker-compose run node_alpine npm test
-npm run docker-alpine
+npm run docker-latest
 ```
 
 Du kan sedan köra testerna mot en äldre version av Node på följande sätt.
@@ -437,11 +440,10 @@ Continuous integration (CI) {#cichain}
 
 Nu när vi har en `package.json` på plats kan vi fortsätta och sätta igång en CI-kedja för att automatisera våra tester.
 
-Det som sammanhåller alla tester är nu sekvensen `npm install check test` som installerar det som behövs via `package.json` och sen kör testerna.
+Det som sammanhåller alla tester är nu sekvensen `npm install test` som installerar det som behövs via `package.json` och sen kör testerna.
 
 ```text
 npm install   # Installerar allt som finns i package.json
-npm check     # Kollar och visar versioner på installerade verktyg
 npm test      # Exekvera validatorer och testfall
 ```
 
@@ -487,6 +489,8 @@ after_success:
     - npm run report-coveralls
     - npm run report-codecov
 ```
+
+Om du vill friska upp minnet om ovan- och nedanstående testverktyg förklarar Mikael hur man integrerar de olika testverktygen med github repot i artikeln [Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering).
 
 
 
