@@ -1,6 +1,7 @@
 ---
 author:
     - mos
+    - efo
 revision:
     "2019-01-09": "(C, efo) Uppdaterade till version 2."
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
@@ -9,14 +10,6 @@ revision:
 ...
 Kmom03: Docker & test
 ==================================
-
-[WARNING]
-
-** Kursutveckling pågår till kurs ramverk2 v2 **
-
-Kursstart våren 2019.
-
-[/WARNING]
 
 Vi installerar Docker och gör det till en integrerad del av vårt repo och testmiljö. Det handlar om att använda virtualisering för att köra flera versioner av ett målsystem och använda för att testa koden i ditt repo.
 
