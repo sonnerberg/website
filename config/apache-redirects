@@ -42,6 +42,7 @@ Redirect 301 /chatt     /irc
 Redirect /cal /kalender
 
 Redirect /stream http://www.youtube.com/c/DbwebbSe/live
+Redirect /budord /image/budord.jpg
 
 
 
