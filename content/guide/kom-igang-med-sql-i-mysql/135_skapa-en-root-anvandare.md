@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-24": "(B, mos) Bort med överflödigt ;."
     "2019-01-21": "(A, mos) Första versionen."
 ...
 Skapa en root användare
@@ -56,7 +57,7 @@ Vi ger nu denna användare fullständiga rättigheter på alla databaser `*.*`, 
 GRANT ALL PRIVILEGES
 ON *.*
 TO 'dbwebb'@'%'
-WITH GRANT OPTION;
+WITH GRANT OPTION
 ;
 ```
 

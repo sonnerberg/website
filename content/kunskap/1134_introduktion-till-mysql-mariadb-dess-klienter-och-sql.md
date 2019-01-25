@@ -8,6 +8,7 @@ category:
     - mariadb
     - mysql workbench
 revision:
+    "2019-01-24": "(C, mos) Bort med prompten mysql>."
     "2019-01-15": "(B, mos) Fixa #länkarna till styckena."
     "2019-01-10": "(A, mos) Ersätter tidigare variant av artikel, installationen flyttad till egna dokument."
 ...
@@ -390,6 +391,8 @@ Jag tänker jobba i kursrepot för kursen databas och de SQL-filer som visats ov
 
 Jag öppnar terminalen, går till mitt kursrepo och börjar med att kopiera de filerna till katalogen `me/kmom01/klient`. Sedan flyttar jag till den katalogen och fortsätter jobba i där.
 
+Om du redan har skapat filerna ovan, så behöver du inte göra kommandot `rsync` nedan. Det kommandot kopierar standardfiler, från katalogen `example/intro/` som du kan jobba med.
+
 ```text
 # Stå i rooten av kursrepot
 rsync -av example/intro/ me/kmom01/klient/
@@ -452,13 +455,13 @@ Vi kan nu skapa tabellerna. De SQL-kommandon vi behöver ligger i filen `02_ddl.
 Vi skriver följande.
 
 ```text
-mysql> source 02_ddl.sql
+source 02_ddl.sql
 ```
 
 Vi kan dubbelkolla att tabellerna finns på plats.
 
 ```text
-mysql> SHOW TABLES;
+SHOW TABLES;
 ```
 
 Det kan se ut så här.
@@ -474,15 +477,15 @@ Då gör vi på samma sätt med filen som innehåller SQL för att fylla tabelle
 Vi skriver följande.
 
 ```text
-mysql> source 03_dml.sql
+source 03_dml.sql
 ```
 
 Vi kan dubbelkolla att det finns innehåll i tabellerna.
 
 ```text
-mysql> SELECT * FROM student;
-mysql> SELECT * FROM course;
-mysql> SELECT * FROM student2course;
+SELECT * FROM student;
+SELECT * FROM course;
+SELECT * FROM student2course;
 ```
 
 Det kan se ut så här.
@@ -498,7 +501,7 @@ Nu kan vi jobba med databasen och visa dess innehåll eller plocka fram rapporte
 Vi skriver följande.
 
 ```text
-mysql> source 04_report.sql
+source 04_report.sql
 ```
 
 Svaret på rapporten kommer fram.
