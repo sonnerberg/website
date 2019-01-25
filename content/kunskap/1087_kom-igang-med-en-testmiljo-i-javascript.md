@@ -1,11 +1,13 @@
 ---
 author:
     - mos
+    - efo
 category:
     - labbmiljo
     - kursen ramverk2
     - test
 revision:
+    "2019-01-25": (C, efo) Uppdaterade inför v2.
     "2017-11-20": (B, mos) Uppdaterar docker image för test så node_modules hanteras korrekt.
     "2017-11-03": (A, mos) Första versionen.
 ...
