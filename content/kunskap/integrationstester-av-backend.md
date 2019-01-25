@@ -7,7 +7,7 @@ category:
 revision:
     "2019-01-24": "(A, efo) Första utgåvan."
 ...
-Funktionstester av backend
+Integrationstester av backend
 ==================================
 
 [FIGURE src=image/ramverk2/chai.jpg?w=c5 class="right"]
@@ -40,9 +40,28 @@ I keynoten visar dhh ett citat av Seth Godin.
 
 > Just because you can measure it, doesn't mean it's important.
 
+Vi ändrar det i vår värld till.
 
+> Just because you can **test** it, doesn't mean it's important.
+
+Med det vill jag inte argumentera för att vi inte ska skriva tester, men vi vill skriva tester som testar det som användaren ska använda. Ett sätt att göra det för API:er är att testa routerna precis som de anrops av klienter.
+
+
+
+Integrationstester {#integrationtesting}
+--------------------------------------
+
+dökjfölkjdflkjf
+
+
+Exempel {#exempel}
+--------------------------------------
+
+I [repot för Lager API:t](https://github.com/emilfolino/order_api/tree/master/test) som användes i kursen webapp finns det integrations tester med `chai` och `chai-http`. Ta en titt på detta för att se hur det kan se ut med fler testfall.
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
+
+Vi har i denna artikel titta på hur vi kan använda integrationstester för att öka vårt förtroende till att den kod vi skriver gör det den ska.

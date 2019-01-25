@@ -44,15 +44,10 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Kika på [websocket modulen ws](https://github.com/websockets/ws) för en websocket server som använder rena (_native_) WebSockets.
 
-1. Titta över [MDN WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) som ger dig material för klientsidan samt bakomliggande information om hur man bygger en server från grunden.
 
-1. Kika på webbplatsen för [socket.io](https://socket.io/) för att få en introduktion till en modul som implementerar websockets (och närliggande tekniker) för realtid i klient och server.
 
-<!--
 1. Bekanta dig översiktligt med [Selenium WebDriver](http://www.seleniumhq.org/) på dess webbplats. Det är programvara som ger oss möjlighet att skriva funktionstester och exekvera dem via en webbläsare.
--->
 
 
 
@@ -67,11 +62,9 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)" för att komma igång med konceptet websockets. Spara dina exempelprogram i `me/kmom04/websocket`.
+1. Jobba igenom övningen [Integrationstester av backend](kunskap/integrationstester-av-backend) för att utöka mängden av testverktyg och testmetoder.
 
-<!--
-1. Jobba igenom artikeln "[Kom igång med funktionstester i JavaScript](kunskap/kom-igang-med-funktionstester-i-javascript)" för att komma igång med konceptet websockets. Spara dina exempelprogram i `me/kmom04/functest`.
--->
+1. Jobba igenom övningen [Kom igång med en funktionalitetstester i JavaScript med Selenium](kunskap/kom-igang-med-funktionalitetstester-selenium) för att bekanta dig med funktionstestsverktyget Selenium.
 
 
 
@@ -79,9 +72,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en chatt med WebSocket](uppgift/bygg-en-chatt-med-websocket)". Du bygger ut din redovisa-sida med en chatt. Spara koden i repot `me/redovisa`.
-
-1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript  (realtid)](uppgift/bygg-en-klient-server-applikation-i-javascript-realtid)". Du skall lägga till realtidsfunktionalitet i din applikation. Du sparar koden under `me/app`.
+1. Gör uppgiften [Test av backend och frontend](uppgift/test-av-backend-och-frontend).
 
 
 
@@ -96,10 +87,8 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Är du ny på realtidsprogrammering eller har du gjort liknande tidigare?
-* Hur gick det att jobba med konceptet realtidsprogrammering i webben, några reflektioner?
-* Berätta om din chatt som du integrerade i redovisa-sidan.
-* Berätta om den realtidsfunktionalitet du väljer att integrera i din klient/server applikation.
+* Vad tillför testmetoden integrationstester?
+* Ökade ditt förtroende till din kodbas genom att testa med integrationstester och Selenium?
 * Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
