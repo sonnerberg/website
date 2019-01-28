@@ -1,7 +1,9 @@
 ---
 author:
     - mos
+    - efo
 revision:
+    "2019-01-28": "(B, efo) Gjorde redo för att släppa kmom04."
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-11-13": "(A, mos) Första utgåvan."
 ...
@@ -88,7 +90,8 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 Se till att följande frågor besvaras i texten:
 
 * Vad tillför testmetoden integrationstester?
-* Ökade ditt förtroende till din kodbas genom att testa med integrationstester och Selenium?
+* Vilken nivå på kodtäckning räckte för att du känner att du har förtroende till din kod i backend?
+* Hur kändes det att beskriva use-cases och sedan skapa tester i frontend?
 * Vad är din TIL för detta kmom?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
