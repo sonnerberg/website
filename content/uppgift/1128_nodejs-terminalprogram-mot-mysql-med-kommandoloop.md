@@ -7,16 +7,17 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-05": (A, mos) Första utgåvan.
+    "2019-01-28": "(B, mos) Uppdaterad inför vt19."
+    "2018-01-05": "(A, mos) Första utgåvan."
 ...
 Node.js terminalprogram mot MySQL med kommandoloop
 ==================================
 
-Du skall bygga ett terminalprogram med JavaScript i Node.js som jobbar mot en MySQL databas.
+Du skall bygga ett menydrivet terminalprogram med JavaScript i Node.js som jobbar mot en MySQL databas.
 
-Du jobbar mot en databas du har sedan tidigare och skapar både rapporter och uppdaterar data i databasen.
+Du jobbar mot en databas du har sedan tidigare och ditt program skapar rapporter från databasen och kan uppdatera data i tabellerna.
 
-Terminalklienten bygger du som ett program som har en inbyggd meny där användaren kan välja vilka operatotioner som skall utföras mot databasen.
+Terminalklienten bygger du som ett program som har en inbyggd meny där användaren kan välja vilka operationer som skall utföras mot databasen.
 
 <!--more-->
 
@@ -25,41 +26,49 @@ Terminalklienten bygger du som ett program som har en inbyggd meny där använda
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql/grunderna)".
-
 Du har tidigare löst uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)" där du har kod som jobbar mot databasen. Du kan jobba vidare på den koden nu.
 
 Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js (v2)](kunskap/gor-en-kommandoradsklient-i-node-js-v2)" vilken gav dig upplägget om hur du gör ett menysystem i terminalklienten tillsammans med en oändlig loop som läser in kommandon från terminalen.
+
+Du har jobbat igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Du skall skriva terminalprogram som jobbar mot databasen "skolan". Ditt program skall kunna presenterar rapporter från databasens innehåll. Programmet skall också kunna uppdatera tabellerna i databasen.
+Du skall skriva terminalprogram som jobbar mot databasen "skolan". Ditt program skall kunna presenterar rapporter från databasens innehåll. Programmet skall också kunna uppdatera data i tabellerna i databasen.
 
-Försök att skapa en god kodstruktur, använd filer, moduler, funktioner. Försök separera kod som är relaterad till databasen från kod som är relaterad till Node.js terminalprogram. Försök så gott det går.
+Försök att skapa en god kodstruktur, använd filer, moduler, funktioner. Försök separera kod som är relaterad till databasen från kod som är relaterad till Node.js terminalprogram.
+
+Försök, så gott det går, se till att använda moduler som du importerar till ditt main-program. Strukturera ditt main-program, main-modulen, så att du delar in koden i funktioner.
+
+Det är nu tillåtet att använda externa moduler för att skriva ut texttabeller, till exempel [`console.table`](https://www.npmjs.com/package/console.table) eller liknande moduler.
+
+Om du använder externa moduler så måste de finnas i `me/package.json`, annars går det inte testköra ditt program.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Skapa din main-funktion för programmet i filen `index.js`.
+1. Skapa din main-funktion för programmet i filen `index.js`. Dela in koden i funktioner så att main-funktionen inte innehåller all kod.
 
 1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av programmet.
 
-1. Ditt program skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas.
+1. Om du använder externa moduler för att skriva ut texttabeller så måste modulen finnas i din `me/package.json`.
 
-1. Skapa kommandot `larare` som visar all information om lärare, inklusive deras ålder. 
+1. Ditt program skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas. Du skall använda readline.prompt med callbackhanterare.
+
+1. I din meny, skapa kommandot `larare` som visar all information om lärare, inklusive deras ålder. Minns att du har en vy för detta.
 
 1. Skapa kommandot `kompetens` som visar en rapport hur kompetensen ändrats i senaste lönerevisionen ([se rapporten](guide/kom-igang-med-sql-i-mysql/joina-tabell#proc)).
  
 1. Skapa kommandot `lon` som visar en rapport hur lönen ändrats i senaste lönerevisionen ([se rapporten](guide/kom-igang-med-sql-i-mysql/joina-tabell#proc)).
 
-1. Skapa kommandot `lonerevision <procent>` som tar ett argument som anger hur mycket lönen skall uppdateras för samtliga lärare.
+1. Skapa kommandot `sok <sokstrang>` som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
 
-1. Skapa kommandot `pension` som visar en rapport över de kurser där de kursansvariga närmar sig pensionen ([se rapporten](guide/kom-igang-med-sql-i-mysql/joina-tabeller#age)).
+1. Skapa kommandot `nylon <akronym> <lon>` som tar argumenten för lärarens akronym samt den nya lönen och uppdaterar lärarens lön.
 
 1. Validera din kod.
 
@@ -69,19 +78,6 @@ dbwebb validate terminal2
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Gör följande om du har tid och ro.
-
-1. Lägg till kommandot `search <table> <where>` där man kan söka/filtrera och visa innehållet i en tabell.
-
-1. Lägg till kommandot `lonerevision <procent> <where>` som även tar ett argument som anger villkoret för vilka lärare som skall få lönejusteringen.
-
-1. Studera koden i dina filer, finns det delar av koden som du kan lyfta ut i externa filer/moduler och dela på liknande sätt som `config.json` delas mellan programmen?
 
 
 
