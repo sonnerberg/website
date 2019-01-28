@@ -12,7 +12,7 @@ Spara den SQL-kod du skriver i filen `ddl_all.sql`. Du kommer även skapa filern
 
 
 
-Kontrollera reset.bash {#setupkontr}
+Kontrollera reset av databasen {#setupkontr}
 ----------------------------------
 
 Låt oss nu kontrollera att det går att återskapa databasen med din senaste variant av bash-skriptet `reset_part2.bash`.
