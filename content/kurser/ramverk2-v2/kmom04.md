@@ -10,14 +10,6 @@ revision:
 Kmom04: Funktions- och systemtest
 ==================================
 
-[WARNING]
-
-** Kursutveckling pågår till kurs ramverk2 v2 **
-
-Kursstart våren 2019.
-
-[/WARNING]
-
 Vi orienterar oss kring olika tekniker och termer inom test och samtidigt bygger vi vidare på en testmiljö för JavaScript. Det handlar främst om funktionstestning och hur vi testar fullständiga router i vårt API.
 
 Det blir också en introduktion i hur vi kan använda Selenium för att testa våra klienter på ett automatiserad sätt.
