@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-28": "(B, mos) Genomgången inför vt19."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Entity Relationship (ER) modell
@@ -32,7 +33,7 @@ Vi prövar med databasen skolan och letar reda på menyvalet "Database -> Revers
 
 Man kan behöva flytta runt tabellerna så man får en överskådlig struktur. Så här blir det för mig när jag fokuserar på de tre huvudtabellerna.
 
-[FIGURE src=image/snapvt18/er-skolan.png?w=w3 caption="Reversed ER-diagram över databasen skolan."]
+[FIGURE src=image/snapvt18/er-skolan.png?w=w3 caption="Reversed ER-diagram över databasen skolan med de centrala delarna."]
 
 Ur diagrammet ovan kan vi utläsa att "kurser har ett eller flera kurstillfällen" och att "lärare kan vara ansvariga för ett eller flera kurstillfällen". Båda dessa modelleras enligt kardinalitet `1..N`. Kardinalitet ger ett extra värde på relationen och anger hur många instanser som är berörda.
 
