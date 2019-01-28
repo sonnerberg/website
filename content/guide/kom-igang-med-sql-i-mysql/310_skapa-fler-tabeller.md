@@ -1,12 +1,15 @@
 ---
 author: mos
 revision:
+    "2019-01-28": "(B, mos) Uppdaterad och flyttade reset till nästa artikel."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Skapa fler tabeller
 ==================================
 
-En skola har kurser som ges vid olika kurstillfällen. På varje kurstillfälle finns det en lärare som är kursansvarig.
+Låt oss bygga vidare på vår databas. Följande är önskemålen för vår databas.
+
+> En skola har kurser som ges vid olika kurstillfällen. På varje kurstillfälle finns det en lärare som är kursansvarig.
 
 Låt oss skapa tabellerna för kurs och kurstillfalle.
 
@@ -18,6 +21,8 @@ Tabell för kurs {#kurs}
 ----------------------------------
 
 Låt oss börja med att skapa tabellen för kurs.
+
+> En kurs har en kod som är unik för varje kurs. Kursen har ett namn och poäng som visar hur lång/stor kursen är. Kurser delas in i en nivå som motsvarar dess svårighetsgrad.
 
 | Kolumn    | Datatyp                      |
 |-----------|------------------------------|
@@ -35,6 +40,8 @@ Tabell för kurstillfalle {#kurstillfalle}
 
 Vi fortsätter att skapa tabellen kurstillfalle.
 
+> Varje kurs ges vid ett kurstillfälle. Ett kurstillfälle har en kursansvarig lärare och kursen ges i en viss läsperiod.
+
 | Kolumn                      | Datatyp                                 |
 |-----------------------------|-----------------------------------------|
 | id                          | INT AUTO_INCREMENT PRIMARY KEY NOT NULL |
@@ -42,20 +49,37 @@ Vi fortsätter att skapa tabellen kurstillfalle.
 | kursansvarig                | CHAR(3) NOT NULL                        |
 | lasperiod                   | INT NOT NULL                            |
 
-Skapa ovanstående tabeller med SQL. Leta i refmanualen om något är oklart, till exempel så vill du kanske slå upp `AUTO_INCREMENT` som ger en automatgenererad nyckel.
+Skriv SQL-koden för att skapa tabellen.
+
+Kör ditt skript och skapa ovanstående tabeller. Lägg till eventuella DROP och IF EXISTS där det behövs.
+
+Leta i refmanualen om något är oklart, till exempel så vill du kanske slå upp `AUTO_INCREMENT` som ger en automatgenererad nyckel.
+
+
+
+Primärnyckel {#primar}
+----------------------------------
+
+En primärnyckel är den kolumn, eller en kombination av två eller fler kolumner, så gör varje rad unik.
+
+Man börjar med att använda de kolumner som finns i tabellen, ibland räcker de inte och man kan då skapa en surrogatnyckel som man använder till primärnyckel.
+
+I tabellen kurstillfalle finns kolumnen "id", det är en kolumn som egentligen inte behövs enligt vår databasmodell eller beskrivningen som finns för tabellen, men den är bra att ha och kan förenkla hanteringen och låter oss få en enkel primärnyckel till tabellen.
 
 
 
 Främmande nycklar {#frammande}
 ----------------------------------
 
-En främmande nyckel är ett sätt att länka samman tabellerna. I vårt fall är kursansvarig en främmande nyckel i tabellen kurstillfälle som kan länka ett kurstillfälle till detaljerna om den kursansvarige läraren.
+En främmande nyckel är ett sätt att länka samman tabellerna. I vårt fall är kursansvarig en främmande nyckel i tabellen kurstillfälle som därmed kan länka ett kurstillfälle till detaljerna om den kursansvarige läraren. Det är ju bra att ha den länken om man vill skapa en rapport för alla kurstillfällen och även visa information om den som är kursansvarig.
 
-På samma sätt är kurskod i kurstillfälle en främmande nyckel som länkar kurstillfället till en specifik kurs.
+På samma sätt är kurskod i kurstillfälle, en främmande nyckel som länkar kurstillfället till en specifik kurs.
 
-Det är bra att ange främmande nycklar i tabellerna. Det förtydligar att det finns en *constraint*, en begränsning eller integritet, i din databas.
+Det är inte strikt nödvndigt att ange främmande nycklar i tabellerna. Men det förtydligar att det finns en *constraint*, en begränsning eller integritet, i din databas.
 
-Den SQL-kod som behövs kan se ut ungefär så här:
+Vi anger alltid främmande nycklar när det finns.
+
+Den SQL-kod som behövs för att ange de nycklarna kan se ut ungefär så här:
 
 ```sql
 --
@@ -85,7 +109,7 @@ Du får troligen ett sådant här meddelande.
 
 > "Error Code: 1217. Cannot delete or update a parent row: a foreign key constraint fails"
 
-Det säger att du inte kan droppa tabellen kurs eftersom tabellen kurstillfalle är beroende av den via ett foreign key constraint.
+Det säger att du inte kan droppa tabellen kurs eftersom tabellen kurstillfalle är beroende av den, via ett foreign key constraint.
 
 Om du vill droppa samtliga tabeller så behöver du göra det i rätt ordning. Ofta är det bra att lägga dessa DROP i inledningen av den fil som skapar/droppar tabellerna.
 
@@ -108,11 +132,11 @@ I MySQL finns det olika lagringssätt för tabeller, så kallade "storage engine
 
 MyISAM tar inte hänsyn till den integritetskoll som 'FOREIGN KEY' antyder. Det gör dock InnoDB.
 
-Man anger vilket lagringssätt som skall användas när man skapar tabellen, om man inte anger det så används det som är standard för databasen eller för installationen av databasmotorn. Vilken lagringsmotor som är standard kan skilja mellan installation så det är alltid bäst att ange den för att vara säker. Läs kort om [MySQL och Storage Engines](http://dev.mysql.com/doc/refman/5.7/en/storage-engines.html).
+Man anger vilket lagringssätt som skall användas när man skapar tabellen, om man inte anger det så används det som är standard för databasen, eller standard för installationen av databasmotorn. Vilken lagringsmotor som är standard kan skilja mellan installation så det är alltid bäst att ange den för att vara säker. Vid intresse kan du läsa kort om [MySQL och Storage Engines](http://dev.mysql.com/doc/refman/8.0/en/storage-engines.html).
 
 ```sql
 --
--- Ange vilket sätt som tabellerna skall lagras på
+-- Ange vilket sätt som tabeller skall lagras på
 --
 CREATE TABLE t1 (i INT) ENGINE MYISAM;
 CREATE TABLE t2 (i INT) ENGINE INNODB;
@@ -145,7 +169,7 @@ COLLATE utf8_swedish_ci
 ;
 ```
 
-Lägg även denna konstruktion överst i filen.
+Lägg även denna konstruktion överst i filen, så vet vi att kopplingen mella klient och databas sker med UTF-8 som teckenkodning.
 
 ```sql
 SET NAMES 'utf8';
@@ -220,19 +244,6 @@ Create Table: CREATE TABLE `kurstillfalle` (
 ```
 
 Kommandot SHOW TABLE är bra när man inspekterar en databas, när man vill se hur tabellerna är uppbyggda.
-
-
-
-Kontrollera reset.bash {#setupkontr}
-----------------------------------
-
-Låt oss nu kontrollera att det går att återskapa databasen med bash-skriptet.
-
-Det är dock troligt att du råkar på följande fel i filen `ddl.sql`.
-
-> "ERROR 1217 (23000) at line 10: Cannot delete or update a parent row: a foreign key constraint fails"
-
-Det handlar om i vilken ordning som tabellerna droppas. Du löser det genom att droppa alla tabeller överst i `ddl.sql`.
 
 
 
