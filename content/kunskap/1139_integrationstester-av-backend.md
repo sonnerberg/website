@@ -145,6 +145,31 @@ Vi kör testarna på samma sätt som tidigare med `npm test` och får på samma 
 
 
 
+Testdatabas {#testdatabas}
+--------------------------------------
+
+Om vi har tester som påverkar databasen vill inte att dessa ska påverka varken utvecklingsdatabasen och definitivt inte produktionsdatabasen. Därför är det starkt rekommenderat att du skapar en testdatabas. Ett enkelt sätt att returnera korrekt databas beroende på `NODE_ENV` är att skapa en fil `db/database.js`, som gör precis detta. Ett exempel syns nedan där rätt databas returneras beroende på `NODE_ENV`.
+
+```javascript
+var sqlite3 = require('sqlite3').verbose();
+
+module.exports = (function () {
+    if (process.env.NODE_ENV === 'test') {
+        return new sqlite3.Database('./db/test.sqlite');
+    }
+
+    return new sqlite3.Database('./db/texts.sqlite');
+}());
+```
+
+Vi kan sedan hämta korrekt databas genom att anropa `database.js`.
+
+```javascript
+const db = require("../db/database.js");
+```
+
+
+
 Exempel {#exempel}
 --------------------------------------
 
