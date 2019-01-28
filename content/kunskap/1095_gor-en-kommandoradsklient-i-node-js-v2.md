@@ -56,7 +56,7 @@ För att få en god kodstruktur så delar vi upp programmet i moduler som sparas
 
 Rent användarmässigt kan det se ut så här när vi är klara.
 
-[ASCIINEMA src=155539 caption="Vilken tal tänker jag på?"]
+[ASCIINEMA src=223879 caption="Vilken tal tänker jag på?"]
 
 Låt då se hur vi bygger upp spelet, del för del.
 
