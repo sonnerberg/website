@@ -28,7 +28,13 @@ Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en
 
 [FIGURE src=image/kunskap/kokbok-databasmodellering/image00.jpg?w=w3 caption="Databasmodellering fortsätter och närmar sig strukturen av tabeller."]
 
-[FIGURE src=image/snapvt18/guess-my-number-terminal.png?w=w3 caption="En terminalklient som visar hur man skapar en kommandoloop med JavaScript i Node.js."]
+Vi bygger vidare på vårat terminalprogram och skapar en menydriven terminalklient.
+
+[ASCIINEMA src=223879 caption="En menydriven terminalklient som visar hur man skapar en kommandoloop med JavaScript i Node.js."]
+
+När vi är klara har vi även byggt en menydriven terminalklient som pratar med databasen.
+
+
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -40,7 +46,7 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Databasteknik {#dbteknik}
 
 Läs följande:
 
@@ -61,7 +67,7 @@ Det finns ytterligare kapitel i boken som är relaterat till modellering. De gå
 
 
 
-###Artiklar {#artiklar}
+### ER-modellering {#ermodellering}
 
 Läs igenom följande artiklar.
 
@@ -71,11 +77,21 @@ Läs igenom följande artiklar.
 
 
 
+### JavaScript {#javascript}
+
+Det finns inga specifika läsanvisningar för JavaScript. Men du kommer att fortsätta skriva program för JavaScript i Node.js tillsammans med async/await och callbacks.
+
+Läs vidare på egen hand, i den mån du vill förkovra dig i JavaScript som programmeringsspråk.
+
+
+
+<!--
 ###Lästips {#tips}
 
 Följande kan du använda för att fördjupa dig i ER-modellering, läs som överkurs vid intresse.
 
 1. [IBM Entity Relationship Modeling with UML](http://www.ibm.com/developerworks/rational/library/319.html).
+-->
 
 <!--
 Modelleringsövningsuppgifter 
@@ -112,9 +128,9 @@ Svårt göra övning per distans.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Jobba igenom delen "Koppla tabeller" av guiden "[Kom igång med SQL i MySQL (Koppla tabeller)](guide/kom-igang-med-sql-i-mysql/koppla-tabeller)". Fortsätt spara all SQL-kod i filer i katalogen `me/skolan`.
-
 1. Gör uppgiften "[Node.js terminalprogram mot MySQL med kommandoloop](uppgift/nodejs-terminalprogram-mot-mysql-med-kommandoloop)". Spara alla filer i `me/kmom03/terminal2`.
+
+1. Jobba igenom delen "Koppla tabeller" av guiden "[Kom igång med SQL i MySQL (Koppla tabeller)](guide/kom-igang-med-sql-i-mysql/koppla-tabeller)". Fortsätt spara all SQL-kod i filer i katalogen `me/skolan`.
 
 1. Gör uppgiften "[Skapa ER-modell för en databas (konceptuell)](uppgift/skapa-er-modell-for-en-databas-konceptuell)". Visa att du kan jobba enligt en metod för att skapa en databasmodell och redovisa i ett dokument. Detta är första delen av uppgiften som slutförs i kommande kursmoment. Spara allt du gör i `me/kmom03/er1`.
 
@@ -138,8 +154,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Några generella reflektioner på att skriva och jobba med terminalprogram i JavaScript och Node.js?
-* Lyckas du få till bra kodstruktur i ditt terminalprogram mot databasen?
+* Några generella reflektioner på att skriva och jobba med menydrivna terminalprogram i JavaScript och Node.js?
+* Berätta om din kodstruktur i ditt terminalprogram mot databasen, är du nöjd eller ser du förbättringspotential?
+* Något att nämna kring det aktuella stycket i guiden skolan? 
 * Hur gick det att jobba med ER-modelleringen, några reflektioner?
-* Fanns det några extra svårigheter du kämpade med i kursmomentet?
+* Fanns det några extra svårigheter/utmaningar du kämpade med i kursmomentet?
 * Vilken är din TIL för detta kmom?
