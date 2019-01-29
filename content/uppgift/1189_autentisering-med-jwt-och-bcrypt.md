@@ -178,6 +178,15 @@ function checkToken(req, res, next) {
 }
 ```
 
+Vi ser i kodexemplet ovan att vi använder `req.body` när vi tar emot en POST request från en klient och skickar med det in till modulen/modellen vi använder för att skapa rapporten. För att kunna använda `req.body` har vi dessa två rader längst upp i vår `app.js`. Vi har även sett detta i artikeln [Node.js API med Express](kunskap/nodejs-api-med-express#dynamiskt).
+
+```javascript
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+```
+
+I Postman väljer vi att fylla i body fliken istället för params fliken.
+
 Vi såg i artikeln [Login med JWT](kunskap/login-med-jwt) kursen webapp hur man kan skicka lösenord med [postman](https://www.getpostman.com/). postman är ett utmärkt verktyg för att manuellt testa ett API. I postman kan man även sätta headers under headers fliken för varje request.
 
 [FIGURE src=/image/ramverk2/postman-headers.png?w=c18]
