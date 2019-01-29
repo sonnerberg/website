@@ -2,5 +2,5 @@
 sectionHeader: true
 linkable: true
 ...
-Inledning
+Värden, variabler och typer
 =======================
