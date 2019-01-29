@@ -7,6 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2019-01-29": "(C, mos) Förtydliga modulkravet."
     "2019-01-21": "(B, mos) Genomgången och uppdaterad inför vt19, aningen nya uppgifter."
     "2018-01-02": "(A, mos) Uppdaterad version från tidigare dokument."
 ...
@@ -35,6 +36,10 @@ Introduktion {#intro}
 Du skall skriva ett par skript med JavaScript i Node.js. Skripten söker i databasen "skolan" och presenterar rapporter från dess innehåll.
 
 Du har i guiden "Kom igång med SQL i MySQL" skapat SQL-satser som du nu skall återanvända och lägga in i din egna "terminalklient" som du bygger med JavaScript och Node.js.
+
+
+
+### Resultatet {#res}
 
 När du är klar så har du en samling program som ger en textbaserad utskrift liknande denna.
 
@@ -81,6 +86,15 @@ Searching for values between 30000 - 40000
 | hoc     | Madam Hooch         | DIDD | 37580 |    1 | 1948-04-07 |
 |---------|---------------------|------|-------|------+------------+
 ```
+
+
+### Strukturera i modul {#modul}
+
+I uppgiften finns det ett krav om att du skall strukturera din kod i minst en modul. Tanken är att lägga funktioner i externa moduler och göra require på dem in i main-modulen.
+
+Vi vill ha små main-moduler och lyfta ut de funktioner som är möjliga. De är potentiellt kandidater till att dela mellan olika main-moduler.
+
+Du lärde dig om hur man skapar moduler i stycket "[Skapa funktioner i filer i artikeln JavaScript och Node.js](https://dbwebb.se/kunskap/javascript-och-nodejs#funcfil)". Gå tillbaka dit och läs om du behöver stöd för att skapa dina moduler.
 
 
 
