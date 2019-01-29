@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-29": "(B, mos) Uppdaterad med felhantering och hur man fixar det."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Importera från Excel till Tabell
@@ -25,7 +26,7 @@ Det finns ett Excel-ark du kan använda för att hämta innehållet till tabelle
 
 Första fliken innehåller två länkar via vilka du kan ladda ned respektive fliks innehåll som en CSV-fil. CSV står för Comma Separated Value och är ett vanligt format när man exporterar från  och/eller importerar till Excel.
 
-Du kan ladda ned respektive CSV-fil och spara som `kurs.csv` och `kurstillfalle.csv`. Du kan också finna de båda filerna i ditt kursrepo under `example/skolan`.
+Ladda ned respektive CSV-fil och spara som `kurs.csv` och `kurstillfalle.csv`. Du kan också finna de båda filerna i ditt kursrepo under `example/skolan`.
 
 Innehållet i filerna är rader som avslutas med `\n` och fält som är komma-separerade och omsluts med ett `"` tecken.
 
@@ -46,7 +47,7 @@ Filen `kurs.csv` kan se ut så här om du öppnar den i din texteditor.
 "MUG101","Mugglarstudier","6","G1F"
 ```
 
-Den översta raden är bara för information, det är resterande rader som vi vill föra in i databastabellen, rad för rad, kolumn för kolumn (fält).
+Den översta raden är bara för information, det är resterande rader som vi vill föra in i databastabellen, rad för rad, kolumn för kolumn.
 
 
 
@@ -59,7 +60,7 @@ Kommandot LOAD DATA INFILE kommer då att läsa rad för rad från filen och gö
 
 I koden nedan används en relativ sökväg till filen `kurs.csv`, det fungerar om du startar din terminalklient i samma katalog där filen ligger.
 
-Låt oss studera koden innan vi kör den.
+Låt oss studera koden _innan vi kör den_.
 
 ```sql
 --
@@ -90,11 +91,65 @@ Då kan vi köra koden.
 Exekvera LOAD DATA INFILE {#into}
 ----------------------------------
 
+Det kan vara lite klurigt att få LOAD DATA INFILE att fungera, det är normalt avstängt 
 
+Eventuellt får du nu ett felmeddelande.
 
+> "ERROR 1148 (42000): The used command is not allowed with this MySQL version"
 
+Det kan bero på att du inte startade klienten mysql med optionen `--local-infile`.
 
-Man får vara uppmärksam på eventuella varningar man kan få när filens innehåll och fält inte kan mappas in i tabellen. Men det bör gå bra för dig. Får du problem så kollar du hur du skapade tabellen kurs och ser om innehållet i CSV-filen mappar mot den strukturen.
+```text
+$ mysql -uuser -ppass --local-infile skolan 
+```
+
+Du kan lägga till en inställning i din `$HOME/.my.cnf` som alltid tillåter dig använda LOAD DATA INFILE.
+
+```text
+loose-local-infile = 1
+```
+
+Felet 1148 kan också bero på att LOAD LOCAL INFILE är avstängt på databasservern och vi behöver sätta på det.
+
+Vi använder följande kommando för att kolla om LOCAL INFILE är på eller av.
+
+```sql
+SHOW VARIABLES LIKE 'local_infile';
+```
+
+Hos mig var den "Off".
+
+```text
+mysql> SHOW VARIABLES LIKE 'local_infile';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| local_infile  | OFF   |
++---------------+-------+
+1 row in set (0.00 sec)
+```
+
+Då sätter jag på den.
+
+```sql
+SET GLOBAL local_infile = 1;
+```
+
+Nu bör den vara "On".
+
+```text
+mysql> SHOW VARIABLES LIKE 'local_infile';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| local_infile  | ON    |
++---------------+-------+
+1 row in set (0.00 sec)
+```
+
+Nu kan jag köra mitt kommando med LOAD DATA INFILE.
+
+Man får vara uppmärksam på eventuella varningar man kan få när filens innehåll och fält inte kan mappas in i tabellen. Men det bör gå bra för dig. Får du problem så kollar du hur du skapade tabellen kurs och ser om innehållet i CSV-filen mappar mot den strukturen, dubbelkolla till exempel längden på kolumnen och längden på texten i csv-filen.
 
 
 
