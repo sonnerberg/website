@@ -88,7 +88,7 @@ Då kan vi köra koden.
 
 
 
-Exekvera LOAD DATA INFILE {#into}
+Exekvera LOAD DATA INFILE {#execinto}
 ----------------------------------
 
 Det kan vara lite klurigt att få LOAD DATA INFILE att fungera, det är normalt avstängt 

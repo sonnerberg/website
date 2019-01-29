@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-29": "(B, mos) Genomgången och bytte namn på vyn."
     "2018-01-03": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Joina tabeller
@@ -15,7 +16,9 @@ Spara den SQL-kod du skriver i filen `dml_join2.sql`.
 Joina med WHERE {#where}
 ----------------------------------
 
-Säg att du vill se alla kurstillfällen tillsammans med kursens namn. För att lyckas med det så måste du joina informationen från tabellerna kurs och kurstillfälle.
+Säg att du vill se alla kurstillfällen tillsammans med kursens namn.
+
+För att lyckas med det så måste du joina informationen från tabellerna kurs och kurstillfälle.
 
 Gör en SELECT där du anger både kurs och kurstillfalle. Pröva med följande kommando. Vad blir resultatet?
 
@@ -26,11 +29,13 @@ Gör en SELECT där du anger både kurs och kurstillfalle. Pröva med följande 
 SELECT * FROM kurs, kurstillfalle; 
 ```
 
-Du får väldigt många rader. Lika många rader som du har rader i Kurs (11 stycken) multiplicerat med antalet rader i Kurstillfälle (10 stycken). Totalt blir det 110 rader, kopplade på ett ej logiskt sätt.
+Du får väldigt många rader. Lika många rader som du har rader i Kurs (11 stycken) multiplicerat med antalet rader i Kurstillfälle (10 stycken). Totalt blir det 110 rader, varje rad i kurs matchas mot alla rader i kurstillfalle.
 
 Du har gjort en join, en cross join vilken säger "för varje rad i ena tabellen, matcha mot samliga rader i den andra tabellen".
 
-När man joinar så  brukar man vilka koppla ihop raderna på dett bättre sätt. Vad är det som länkar ihop dessa två tabeller? Kurskoden. Prova med att lägga till en WHERE-sats för att göra länkningen. Så här:
+När man joinar så brukar man vilja koppla ihop raderna på ett bättre sätt.
+
+Vad är det som länkar ihop dessa två tabeller? Kurskoden. Prova med att lägga till en WHERE-sats för att göra länkningen. Så här:
 
 ```sql
 --
@@ -73,7 +78,7 @@ Det vi ser är alltså samtliga kurstillfällen tillsammans med all data om kurs
 Joina med JOIN..ON {#joinon}
 ----------------------------------
 
-Det finns ett annat sätt att skriva samma join, men via konstruktionen JOIN..ON. Det ser ut så här.
+Det finns ett annat sätt att skriva samma join, ett tydligare sätt, via konstruktionen JOIN..ON. Det ser ut så här.
 
 ```sql
 --
@@ -188,7 +193,7 @@ Nu har ledningen fått hjälp i sin planering inför nyrekrytering av lärare.
 Vy för att förenkla {#vy}
 ----------------------------------
 
-Det verkar som rapportunderlaget vi använder är bra, låt oss skapa en vy av grundrapporten. Den kanske kan komma tillhanda lite senare. Döp vyn till `Vplanering`.
+Det verkar som rapportunderlaget vi använder är bra, låt oss skapa en vy av grundrapporten. Den kanske kan komma tillhanda lite senare. Döp vyn till `v_planering`.
 
 
 
