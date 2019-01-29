@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-30": "(B, mos) Genomgång och mindre förtydliganden."
     "2018-01-03": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Outer join, rader som inte matchar
@@ -11,7 +12,7 @@ Vi har joinat tabeller och visat de rader som kan matchas mellan tabellerna. Men
 Spara den SQL-kod du skriver i filen `dml_outer_join.sql`.
 
 [INFO]
-En `JOIN`, eller `INNER JOIN` som den också kallas, visar de rader som kan matchas mellan tabellerna. Finns det ingen matchning så visas inte raden.
+En `JOIN`, eller `INNER JOIN` som den också kallas, visar de rader som kan matchas mellan tabellerna, där ON-villkoret kan uppfyllas. Finns det ingen matchning så visas inte raden.
 [/INFO]
 
 
@@ -19,7 +20,9 @@ En `JOIN`, eller `INNER JOIN` som den också kallas, visar de rader som kan matc
 Lärare som inte undervisar {#undervisa}
 ----------------------------------
 
-Vi vet att det finns lärare som inte undervisar. Men hur kan vi visa dem? Vi vänder på frågan då vi kan ta reda på de lärare som undervisar.
+Vi vet att det finns lärare som inte undervisar. Men hur kan vi visa dem?
+
+Vi börjar med att vända på frågan så att vi tar reda på de lärare som undervisar.
 
 Vi tittar vilka lärare som ansvarar för minst ett kurstillfälle.
 
@@ -27,7 +30,7 @@ Vi tittar vilka lärare som ansvarar för minst ett kurstillfälle.
 mysql> SELECT DISTINCT
     ->     akronym AS Akronym,
     ->     CONCAT(fornamn, " ", efternamn) AS Namn
-    -> FROM Vplanering
+    -> FROM v_planering
     -> ORDER BY akronym
     -> ;
 +---------+--------------------+
@@ -58,13 +61,15 @@ Som ett komplement till JOIN (som är samma sak som INNER JOIN), finns en OUTER 
 `OUTER JOIN` visar resultat för alla rader i en tabell, även om det inte finns en matchande rad i den andra tabellen.
 [/INFO]
 
-Tillsammans med OUTER JOIN så anger man LEFT eller RIGHT. Det handlar bara om vilken tabell man utgår ifrån, den vänstra eller den högra. Vid OUTER JOIN så utgår uttrycket i någon av tabellerna och kör enligt "för alla rader i LEFT/RIGHT tabell A, visa dem oavsett om de matchar någon rad i tabell B".
+Tillsammans med OUTER JOIN så anger man LEFT eller RIGHT. Det handlar om vilken tabell man utgår ifrån, den vänstra eller den högra.
 
-Så här kan vi ta reda på vilka lärare som inte undervisar, det är de som inte har en matchade rad i tabellen kurstillfälle.
+Vid OUTER JOIN så utgår uttrycket i någon av tabellerna, den vänstra eller den högra, och kör enligt "för alla rader i tabell A, visa dem oavsett om de matchar någon rad i tabell B".
+
+Så här kan vi ta reda på vilka lärare som inte undervisar, det är de lärare som inte har en matchade rad i tabellen kurstillfälle.
 
 ```sql
 --
--- Outer join, lärare utan undervisning
+-- Outer join, inkludera lärare utan undervisning
 --
 SELECT DISTINCT
 	l.akronym AS Akronym,
@@ -140,14 +145,14 @@ mysql> SELECT DISTINCT
 
 Som sagt, alla lärare finns så alla rader kan matchas. Det blir alltså viktigt om man väljer LEFT eller RIGHT i sin OUTER JOIN, det är två skilda saker.
 
-Vid en INNER JOIN blir det samma resultat oavsett vilken ordning du lägger tabellerna i.
+Vid en INNER JOIN blir det samma resultat oavsett vilken ordning du lägger tabellerna i, här kan du inte använda LEFT/RIGHT.
 
 
 
 Kurser utan kurstillfällen {#kurser}
 ----------------------------------
 
-Kan vi då göra samma sak men nu visa vilka kurser som inte har kurstillfällen?
+Kan vi då göra samma sak för kurser och visa vilka kurser som inte har kurstillfällen?
 
 Gör på egen hand som i föregående exempel och visa enbart de kurser som inte har kurstillfällen.
 
