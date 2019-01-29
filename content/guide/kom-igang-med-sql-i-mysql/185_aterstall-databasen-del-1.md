@@ -174,7 +174,7 @@ Troligen får du en irriterande varning av att inte ange lösenord i klartext. V
 Du kan bli av med den om du lägger in användaren user med lösenorder pass i din konfigurationsfil `~/.my.cnf`. Följande konstruktion i den filen anger ett defaultlösenord för en användare.
 
 ```text
-[mysql]
+[client]
 user=user
 password=pass
 ```
@@ -184,7 +184,7 @@ Detta är ju ingen exemplarisk lösning, men det fungerar i sammanhanget. Man vi
 Här följer en kodrad som du kan exekvera i terminalen för att skapa, eller lägga till, informationen i konfigurationsfilen `.my.cnf`. Markera koden och kör den i din terminal som ett kommando.
 
 ```text
-echo -e "[mysql]\nuser=user\npassword=pass\n" >> ~/.my.cnf \
+echo -e "[client]\nuser=user\npassword=pass\n" >> ~/.my.cnf \
     && chmod 600 ~/.my.cnf \
     && cat ~/.my.cnf
 ```

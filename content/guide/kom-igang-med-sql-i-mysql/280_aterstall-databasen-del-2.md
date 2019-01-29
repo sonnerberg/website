@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-29": "(D, mos) Rättade valideringsfel i reset_part2.bash."
     "2019-01-15": "(C, mos) Genomgången och uppdaterad med felutskrifter och saknad v_lon."
     "2018-03-27": "(B, mos) Add function to bash reset."
     "2018-02-09": "(A, mos) Tillagd för att fokusera på hur man återställer databasen efter andra delen."
@@ -60,6 +61,7 @@ Följande bash-skript innehåller allt som återställer databasen till och med 
 
 ```text
 #!/usr/bin/env bash
+# shellcheck disable=SC2181
 
 #
 # Load a SQL file into skolan
@@ -67,7 +69,7 @@ Följande bash-skript innehåller allt som återställer databasen till och med 
 function loadSqlIntoSkolan
 {
     echo ">>> $4 ($3)"
-    mysql -u$1 -p$2 skolan < $3 > /dev/null
+    mysql "-u$1" "-p$2" skolan < "$3" > /dev/null
     if [ $? -ne 0 ]; then
         echo "The command failed, you may have issues with your SQL code."
         echo "Verify that all SQL commands can be exeucted in sequence in the file:"
