@@ -6,13 +6,13 @@ revision:
 Importera från Excel till Tabell
 ==================================
 
-Ibland sitter man i Excel och har en lång lista på saker som man vill föra in i en databastabell. Hur gör man det på ett snabbt och enkelt sätt?
+Ibland sitter man i Excel (eller liknande verktyg) och har en lång lista på saker som man vill föra in i en databastabell. Hur gör man det på ett snabbt och enkelt sätt?
 
 Låt oss fylla tabellerna för kurs och kurstillfalle med innehåll genom att hämta det från ett format som Excel kan exportera.
 
 Spara den SQL-kod du skriver i filen `dml_insert_csv.sql`.
 
-Tjuvkika på refmanualen [LOAD DATA INFILE](https://dev.mysql.com/doc/refman/5.7/en/load-data.html).
+Tjuvkika på refmanualen [LOAD DATA INFILE](https://dev.mysql.com/doc/refman/8.0/en/load-data.html) så kan du se vad det är vi skall göra.
 
 
 
@@ -29,7 +29,7 @@ Du kan ladda ned respektive CSV-fil och spara som `kurs.csv` och `kurstillfalle.
 
 Innehållet i filerna är rader som avslutas med `\n` och fält som är komma-separerade och omsluts med ett `"` tecken.
 
-Filen `kurs.csv` kan se ut så här.
+Filen `kurs.csv` kan se ut så här om du öppnar den i din texteditor.
 
 ```text
 "Kod","Namn","Poäng","Nivå"
@@ -55,7 +55,11 @@ LOAD DATA INFILE {#into}
 
 När vi vet formatet på filen så kan vi översätta detta till instruktioner till LOAD DATA INFILE och berätta hur filens innehåll skall tolkas och läsas in.
 
-Resultatet blir så här.
+Kommandot LOAD DATA INFILE kommer då att läsa rad för rad från filen och göra om det till INSERT satser.
+
+I koden nedan används en relativ sökväg till filen `kurs.csv`, det fungerar om du startar din terminalklient i samma katalog där filen ligger.
+
+Låt oss studera koden innan vi kör den.
 
 ```sql
 --
@@ -63,7 +67,7 @@ Resultatet blir så här.
 --
 DELETE FROM kurs;
 
-LOAD DATA LOCAL INFILE '/home/mos/dbwebb-kurser/databas/example/skolan/kurs.csv'
+LOAD DATA LOCAL INFILE 'kurs.csv'
 INTO TABLE kurs
 CHARSET utf8
 FIELDS
@@ -77,9 +81,20 @@ IGNORE 1 LINES
 SELECT * FROM kurs;
 ```
 
-Vi anger den absoluta sökvägen till filen och berättar att teckenkodningen är UTF-8. Fälten i filen är separerade med `,` och omslutna med `"`. Varje rad separeras med `\n` och den första raden som innehåller namnen på kolumnerna väljer vi att ignorera.
+Vi anger sökvägen till filen och berättar att teckenkodningen är UTF-8. Fälten i filen är separerade med `,` och omslutna med `"`. Varje rad separeras med `\n` och den första raden som innehåller namnen på kolumnerna väljer vi att ignorera.
 
-Man får vara uppmärksam på eventuella varningar man kan få när filens innehåll och fält inte kan mappas in i tabellen. Men det bör gå bra för dig. Får du problem så kollar du hur du skapade tabellen kurs och ser om innehållet i CSV-filen mappar mot den strukturen. 
+Då kan vi köra koden.
+
+
+
+Exekvera LOAD DATA INFILE {#into}
+----------------------------------
+
+
+
+
+
+Man får vara uppmärksam på eventuella varningar man kan få när filens innehåll och fält inte kan mappas in i tabellen. Men det bör gå bra för dig. Får du problem så kollar du hur du skapade tabellen kurs och ser om innehållet i CSV-filen mappar mot den strukturen.
 
 
 
