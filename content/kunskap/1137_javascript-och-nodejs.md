@@ -53,7 +53,7 @@ Alla webbläsare har en sådan inbyggd interpretator, det är webbläsarens devt
 
 Men, nu skall vi använda Node.js istället.
 
-Vi kan starta den interpretatorn direkt i terminalen via kommandot `node`. Sedan kan vi skriva in likande kommandon som jag använde ovan. Här har du några kommandon du kan leka med.
+Vi kan starta den interpretatorn direkt i terminalen via kommandot `node`. Sedan kan vi skriva in liknande kommandon som jag använde ovan. Här har du några kommandon du kan leka med.
 
 ```javascript
 console.log("Hello World");
@@ -75,7 +75,7 @@ $ node
 > console.log("Hello World");
 Hello World
 undefined
-> 
+>
 > for (let i=0; i < 9; i++) {
 ...     console.log(i);
 ... }
@@ -89,16 +89,16 @@ undefined
 7
 8
 undefined
-> 
+>
 > let a = 1;
 undefined
 > let b = a + 1;
 undefined
-> 
+>
 > console.log(a, b);
 1 2
 undefined
-> 
+>
 ```
 
 Du kan avbryta interpretatorn genom att trycka `ctrl-d` som ofta innebär "slut på inmatning".
@@ -115,7 +115,7 @@ Vi tar de kommandon jag hade ovan och sparar dem i en fil `interpretator.js`.
 Nu kan vi köra alla kommandon i filen med kommandot `node`, det kan se ut så här.
 
 ```text
-$ node interpretator.js 
+$ node interpretator.js
 Hello World
 0
 1
@@ -162,7 +162,7 @@ function main() {
 main();
 ```
 
-Om vi nu kör programmet med `node hello.js` så får vi samma utskrift som tidigare. Skillnanden är att vi nu har en funktion som vi döpt till `main()` och att den anropas i slutet av skriptet.
+Om vi nu kör programmet med `node hello.js` så får vi samma utskrift som tidigare. Skillnaden är att vi nu har en funktion som vi döpt till `main()` och att den anropas i slutet av skriptet.
 
 Nu har vi en startpunkt för våra program.
 
@@ -171,9 +171,9 @@ Nu har vi en startpunkt för våra program.
 Strukturera koden i main {#mainstruktur}
 ---------------------------------------------
 
-Låt oss kika lite på koden vi nyss krev och strukturera om den lite. Vi har här ett scope som är block-scope inuti funktionen och vi kan skapa variablerna i början av funktionen, det blir tydligare så.
+Låt oss kika lite på koden vi nyss skrev och strukturera om den lite. Vi har här ett scope som är block-scope inuti funktionen och vi kan skapa variablerna i början av funktionen, det blir tydligare så.
 
-Funktionen `console.log()` är egentligen för debugutskrifter och det finns en motsvarighet om `console.info()` som är till för riktiga utskrifter. De fungerar på samma sätt så det är mer en semantisk skillnad.
+Funktionen `console.log()` är egentligen för debug-utskrifter och det finns en motsvarighet om `console.info()` som är till för riktiga utskrifter. De fungerar på samma sätt så det är mer en semantisk skillnad.
 
 För att pilla lite i koden så uppdaterar jag for-loopen och sparar siffer-sekvensen i en variabel som jag sedan skriver ut, exklusive sista komma-tecknet, med en inbyggd funktion [`substring()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
 
@@ -210,7 +210,7 @@ JavaScript har en del inbyggda objekt som erbjuder en del inbyggda metoder att a
 
 
 
-Strict more {#strict}
+Strict mode {#strict}
 ---------------------------------------------
 
 I JavaScript finns något som heter "strict mode" som är en striktare hantering av vad som kan ske i koden. Koden blir lite mer brutal och säger ifrån när du skriver tvivelaktig kod.
@@ -222,7 +222,7 @@ Jag uppdaterar mitt program och lägger in kommentar överst i filen och sedan f
 ```javascript
 /**
  * A simple test program.
- * 
+ *
  * @author Mitt Namn
  */
 "use strict";
@@ -294,7 +294,7 @@ Jag kan nu köra filen med `node`. Det blir ett enkelt sätt att testa filen fö
 Så här ser utskriften ut.
 
 ```text
-$ node stringRange.js 
+$ node stringRange.js
 1, 2, 3, 4, 5, 6, 7, 8, 9
 1-2-3-4-5-6-7-8-9
 ```
