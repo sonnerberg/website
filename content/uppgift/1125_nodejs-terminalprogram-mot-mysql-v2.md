@@ -7,7 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2019-01-29": "(C, mos) Förtydliga modulkravet."
+    "2019-01-29": "(C, mos) Förtydliga modulkravet samt tydligare om förväntade utskrifter."
     "2019-01-21": "(B, mos) Genomgången och uppdaterad inför vt19, aningen nya uppgifter."
     "2018-01-02": "(A, mos) Uppdaterad version från tidigare dokument."
 ...
@@ -59,7 +59,7 @@ $ node teacher.js
 |---------|---------------------|------|-------|------+------------+
 ```
 
-Och denna.
+Och dessa sökningar.
 
 ```text
 $ node search.js
@@ -72,7 +72,20 @@ Searching for: 7
 |---------|---------------------|------|-------|------+------------+
 ```
 
-Liksom denna.
+```text
+$ node search.js
+What to search for? al
+Searching for: al
++-----------+---------------------+-----------+----------+------+------------+ 
+| Akronym   | Namn                | Avdelning |   Lön    | Komp | Född       | 
+|-----------|---------------------|-----------|----------|------+------------+ 
+| ala       | Alastor Moody       | DIPT      |     27594|     1| 1943-04-03 | 
+| dum       | Albus Dumbledore    | ADM       |     85000|     7| 1941-04-01 | 
+| min       | Minerva McGonagall  | DIDD      |     49880|     2| 1955-05-05 | 
++-----------+---------------------+-----------+----------+------+------------+ 
+```
+
+Liksom dessa jämförelser.
 
 ```text
 $ node between.js
@@ -87,6 +100,18 @@ Searching for values between 30000 - 40000
 |---------|---------------------|------|-------|------+------------+
 ```
 
+```text
+$ node between.js
+Enter minimum value? 3
+Enter maximum value? 7
+Searching for values between 3 - 7
++-----------+---------------------+-----------+----------+------+------------+
+| Akronym   | Namn                | Avdelning |   Lön    | Komp | Född       |
+|-----------|---------------------|-----------|----------|------+------------+
+| dum       | Albus Dumbledore    | ADM       |     85000|     7| 1941-04-01 |
+| fil       | Argus Filch         | ADM       |     27594|     3| 1946-04-06 |
++-----------+---------------------+-----------+----------+------+------------+
+```
 
 ### Strukturera i modul {#modul}
 
