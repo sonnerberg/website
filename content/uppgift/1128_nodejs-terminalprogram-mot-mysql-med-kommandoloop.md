@@ -84,4 +84,6 @@ Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut s
 Tips från coachen {#tips}
 -----------------------
 
+<!-- Tips om hur lösa sok <sokstrang> -->
+
 Lycka till och hojta till i forumet om du behöver hjälp!
