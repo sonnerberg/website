@@ -114,7 +114,7 @@ Dubbelkolla att du kan köra alla kommandon, om och om igen, i filen `insert.sql
 
 
 
-Kontroller att det blev rätt {#reset}
+Kontrollera att det blev rätt {#reset}
 ----------------------------------
 
 Vi har så återställa hela databasen genom att köra följande filer.
