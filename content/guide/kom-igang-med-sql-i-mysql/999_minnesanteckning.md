@@ -13,3 +13,4 @@ Mina egna minnesanteckningar för saker som kan ingå (mer) i guiden. Eller inte
 * Om memorytabell (index/prestanda)
 * Mer övningar på join, union, outer jon, subqueries.
 * Om group_concat.
+* Hur spara datum, tid och hantera tidzoner.
