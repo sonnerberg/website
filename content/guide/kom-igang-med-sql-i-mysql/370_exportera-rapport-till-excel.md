@@ -12,7 +12,7 @@ Att använda formatet CSV är ett sätt. Vi gör helt enkelt en SELECT som skriv
 
 Spara den SQL-kod du skriver i filen `dml_export_csv.sql`. Du skall exportera till en CSV-filer som du döper till `kurs_export.csv`.
 
-I manualen kan vi läsa om detta i [SELECT..INTO](https://dev.mysql.com/doc/refman/5.7/en/select-into.html). Vi använder varianten SELECT..INTO OUTFILE för att skriva resultatet till en fil.
+I manualen kan vi läsa om detta i [SELECT..INTO](https://dev.mysql.com/doc/refman/8-0/en/select-into.html). Vi använder varianten SELECT..INTO OUTFILE för att skriva resultatet till en fil.
 
 
 
