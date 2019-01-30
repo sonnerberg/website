@@ -136,9 +136,7 @@ Det blir också en introduktion i hur vi kan använda Selenium för att testa v�
 
 ### Kmom05: Realtid {#kmom05}
 
-Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
-
-Sedan tar vi en titt på hur vi kan använda grafer som grafiska element för att visualisera realtidsdata.
+Vi skall studera realtidsprogrammering i webbsammanhang med WebSocket. Vi tittar på grunderna i websockets och ser hur klienter och servrar byggs upp med. Vi tittar på en echo-server och en broadcast-server och vi avslutar med att bygge en enkel chatt för att göra vårt eget applikationsprotokoll ovanpå websockets. Chatten integrerar vi i vår redovisa sida.
 
 [Instruktion till kursmoment 05](./kmom05).
 

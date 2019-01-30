@@ -1,11 +1,13 @@
 ---
 author:
     - mos
+    - efo
 category:
     - labbmiljo
     - kursen ramverk2
     - test
 revision:
+    "2019-01-30": (B, efo) Tillägg om socket.io och simulate-prices.
     "2017-11-13": (A, mos) Första utgåvan.
 ...
 Kom igång med realtidsprogrammering i JavaScript
@@ -246,16 +248,6 @@ npm install ws
 I exempelkatalogen finns en `package.json` så du kan installera allt som behövs till exemplet via `npm install`.
 
 Du startar en server med `npm start` eller valfri server genom att ange dess fil med till exempel `node server.js` för standardservern.
-
-
-
-### En not om Socket.io {#socketio}
-
-Ett populärt bibliotek för websockets och relaterade tekniker är [socket.io](https://socket.io/). Det erbjuder en wrapper för realtidskommunikation på webben. Websockets är ett av de protokoll som kan användas. Om webbläsaren inte stödjer websockets så används andra protokoll som ersättare.
-
-Fördelen är att Socket.io erbjuder lösning på kompabilitetsproblem. Men det kräver att kan använder en specifik modulkod i klienten och det stödjer inte native WebSocket.
-
-I mitt exempel så vill jag använda native WebSocket och därför använder jag inte Socket.io. I andra sammanhang kan Socket.io vara en värdig kandidat att utvärdera.
 
 
 
@@ -636,14 +628,31 @@ Modulen ws kan anropa en specifik callback `verifyClient`, om vi så vill, och i
 
 
 
-<!--
-Cross site scripting (XSS)
-How to detect and close broken connections?
--->
+En not om Socket.io {#socketio}
+--------------------------------------------------------------------
+
+Ett populärt bibliotek för websockets och relaterade tekniker är [socket.io](https://socket.io/). Det erbjuder en wrapper för realtidskommunikation på webben. Websockets är ett av de protokoll som kan användas. Om webbläsaren inte stödjer websockets så används andra protokoll som ersättare.
+
+Fördelen är att Socket.io erbjuder lösning på kompabilitetsproblem. Men det kräver att kan använder en specifik modulkod i klienten och det stödjer inte native WebSocket.
+
+I mitt exempel så vill jag använda native WebSocket och därför använder jag inte Socket.io. I andra sammanhang kan Socket.io vara en värdig kandidat att utvärdera.
 
 
 
-Avslutningvis {#avslutning}
+Exempelprogram med socket.io {#stock-prices}
+--------------------------------------------------------------------
+
+I kursrepot finns ett exempel `example/simulate-prices` som använder sig av `socket.io` för att visualisera simulerade priser på kakor. Detta är ett annat exempel på hur man kan använda realtidsprogrammering för annat än det klassiska chatt exemplet.
+
+I exempelprogrammet skapar vi både en server och en klient för att kommunicera över websockets. Servern broadcaster sedan priserna för de olika kakorna var 5:e sekund och klienterna kan sedan fånga upp priserna. I filen `stock.js` används en [Wiener-process](https://en.wikipedia.org/wiki/Wiener_process) för att simulera priserna på kakorna. En Wiener-process är det närmaste vi kommer att kunna simulera aktiekurser matematisk.
+
+För att visualisera priserna används en graf modul kallad `Rickshaw`. Graferna visar realtidsdata med hjälp att rita ut en SVG bild.
+
+Titta igenom exemplet och se hur `socket.io` används för att underlätta vissa aspekt av realtidsprogrammering med websockets.
+
+
+
+Avslutningsvis {#avslutning}
 --------------------------------------------------------------------
 
 Vi har gått igenom grunderna för WebSockets och sett hur modulen ws kan användas på serversidan tillsammans native WebSockets i klienten, med eller utan subprotkoll och i ett sammanhang av echo- samt broadcast-server.

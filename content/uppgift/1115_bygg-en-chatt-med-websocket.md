@@ -1,16 +1,19 @@
 ---
-author: mos
+author:
+    - mos
+    - efo
 category:
     - javascript
     - websocket
     - kurs ramverk2
 revision:
+    "2019-01-30": (B, efo) Anpassad för ramverk2 v2.
     "2017-11-13": (A, mos) Första utgåvan.
 ...
 Bygg en chatt med WebSocket
 ==================================
 
-Du skall bygga en chatt med WebSocket och lägga till i din redovisa sida. När du bygger chatten så bygger du ditt eget applikationsspecifika protokoll.
+Du skall bygga en chatt med WebSocket och lägga till i din me-applikation. När du bygger chatten så bygger du ditt eget applikationsspecifika protokoll.
 
 <!--more-->
 
@@ -36,24 +39,24 @@ Du kan välja godtyckligt teknikval för uppgiften, välj teknik som användes i
 
 Om du tänker återanvända chatten i din applikation så vill du kanske redan nu organisera koden i ett eget repo?
 
-Det finns ett kommande kursmoment som handlar om att göra en npm-modul av godtycklig kod. Kanske är denna chatt ett alternativ till lösning.
+När du driftsätter din chatt server ska den ligga som en del av ditt me-api eller kan den ligga som en egen service vi kan koppla upp oss mot från många olia klienter. Blir detta din första micro-service?
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Skapa en klient och en server för chatt. Välj en teknik som grundar sig på websockets. Visa att chatten fungerar genom att integrera den i din redovisa-sida.
+1. Skapa en klient och en server för chatt. Välj en teknik som grundar sig på websockets. Visa att klienten fungerar genom att integrera den i din me-applikation.
 
 1. Bygg ett eget applikationsprotokoll ovanpå websockets. Förslagsvis använder du JSON (eller annat du väljer).
 
-1. Använd subprotkoll i din lösning, på så vis är du förberedd om du behöver göra en ny version av ditt applikationsprotokoll.
+1. Använd subprotokoll i din lösning, på så vis är du förberedd om du behöver göra en ny version av ditt applikationsprotokoll.
 
 1. När man kopplar upp sig så identifierar man sig med ett nick, ett smeknamn.
 
 1. Flera klienter kan koppla sig till chatten. När någon skriver något ser alla andra det. Man ser nicket tillsammans med meddelandet.
 
-1. Committa, tagga (v4.x.x) och pusha relevanta repon samt ladda upp på studentservern.
+1. Committa, tagga och pusha relevanta repon samt driftsätta på din server.
 
 
 

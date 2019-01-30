@@ -1,31 +1,34 @@
 ---
 author:
     - mos
+    - efo
 revision:
+    "2019-01-20": "(B, efo) Uppdaterad för ramverk2 v2."
     "2018-06-08": "(prel, mos) Nytt dokument inför uppdatering av kursen."
     "2017-11-23": "(A, mos) Första utgåvan."
 ...
 Kmom05: Realtid
 ==================================
 
-[WARNING]
+[INFO]
 
-** Kursutveckling pågår till kurs ramverk2 v2 **
+Exempelprogrammen har uppdaterats inför detta kursmoment.
 
-Kursstart våren 2019.
+Gör därför en `dbwebb update` innan du börjar på kursmomentet.
 
-[/WARNING]
+[/INFO]
 
-Vi skall studera realtidsprogrammering i webbsammanhang med websockets. Vi bygger en enkel chatt för att se hur grunderna fungerar.
+Vi skall studera realtidsprogrammering i webbsammanhang med WebSocket. Vi tittar på grunderna i websockets och ser hur klienter och servrar byggs upp med. Vi tittar på en echo-server och en broadcast-server och vi avslutar med att bygge en enkel chatt för att göra vårt eget applikationsprotokoll ovanpå websockets. Chatten integrerar vi i vår redovisa sida.
 
-Sedan tar vi en titt på hur vi kan använda grafer som grafiska element för att visualisera realtidsdata.
 
 
 <!--more-->
 
 
 
-Tänk dig som vanligt in i rollen som systemarkitekt på ett företag där du är den som gör teknikvalen till nästa projekt. Du skall göra teknikval som hela ditt utvecklargäng sedan skall använda. Tänk så, det blir en bra attityd inför kursmomentet. Undersök och testa, var nyfiken.
+[FIGURE src=image/snapht17/websocket-upgrade-firefox.png?w=w2 caption="En uppkoppling av websocket etableras."]
+
+[FIGURE src=image/snapht17/websocket-subprotocols.png?w=w2 caption="En klient där man kan välja subprotokoll."]
 
 
 
@@ -44,15 +47,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Kika igenom följande material.
 
-1. Bekanta dig översiktligt med [organisationen kring databasen MongoDB](https://www.mongodb.com/). Övningen (längre ned) kommer vidare utgå från informationen på denna webbplatsen.
+1. Kika på [websocket modulen ws](https://github.com/websockets/ws) för en websocket server som använder rena (_native_) WebSockets.
 
-1. Läs översiktligt igenom [Wikipedia om NoSQL](https://en.wikipedia.org/wiki/NoSQL) för en introduktion till konceptet NoSQL samt en översikt av de olika typer av databaser som ligger under samlingsnamnet. Du kan se att MongoDB är en dokumentorienterad databas.
+1. Titta över [MDN WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) som ger dig material för klientsidan samt bakomliggande information om hur man bygger en server från grunden.
 
-1. Läs igenom [kapitel 5 Async functions](http://exploringjs.com/es2016-es2017/ch_async-functions.html) i boken "[Exploring ES2016 and ES2017](http://exploringjs.com/es2016-es2017/)". Du behöver förståelse för dessa koncept om asynkron programmering, kommande exempelkod bygger på dessa koncept. Jag kan inte nog poängtera vikten av att förstå grunderna i det som kapitlet hanterar.
-
-1. Bekanta dig översiktligt med dokumentationen för "[MongoDB Node.js driver](http://mongodb.github.io/node-mongodb-native/)" vilken är den driver vi kommer använda för att koppla JavaScript i Node.js till MongoDB. Det handlar både om referens-dokumentationen och API-dokumentationen.
-
-1. Läs igenom inledande tutorials för MongoDB Node.js driver som du hittar i Referensmanualen. Titta främst i "Connect to MongoDB", "Collections", "CRUD Operations" och "Projections". De ger dig snabbt en känsla av hur man jobbar med datan.
+1. Kika på webbplatsen för [socket.io](https://socket.io/) för att få en introduktion till en modul som implementerar websockets (och närliggande tekniker) för realtid i klient och server.
 
 
 
@@ -67,18 +66,15 @@ Kika igenom följande material.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Jobba igenom artikeln "[Kom igång med MongoDB i Nodejs](kunskap/kom-igang-med-mongodb-i-nodejs)" för att komma igång med databasen MongoDB tillsammans med Express, Node.js och Docker. Spara dina exempelprogram i `me/kmom05/db`.
-
+1. Jobba igenom artikeln "[Kom igång med realtidsprogrammering i JavaScript](kunskap/kom-igang-med-realtidsprogrammering-i-javascript)" för att komma igång med konceptet websockets. Spara dina exempelprogram i `me/kmom04/websocket`.
 
 
 
 ###Uppgifter {#uppgifter}
 
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+Följande uppgifter skall utföras och resultatet skall redovisas via me-applikationen.
 
-1. Gör uppgiften "[Skapa en CRUD med MongoDB till din redovisa-sida](uppgift/skapa-en-crud-med-mongodb-till-din-redovisa-sida)". Du skall lägga till databasfunktionalitet i din applikation. Du sparar koden under `me/redovisa`.
-
-1. Gör uppgiften "[Bygg en klient/server applikation i JavaScript (databas)](uppgift/bygg-en-klient-server-applikation-i-javascript-databas)". Du bygger ut din applikation med stöd för databasen. Spara koden i repot `me/app`.
+1. Gör uppgiften "[Bygg en chatt med WebSocket](uppgift/bygg-en-chatt-med-websocket)". Du bygger ut din me-applikation med en chatt. Spara koden i repot.
 
 
 
@@ -93,11 +89,9 @@ Lägg extra tid på skrivandet i detta inledande momentet då redovisningstexten
 
 Se till att följande frågor besvaras i texten:
 
-* Hur gick det att komma igång med databasen MongoDB?
-* Vilken syn har du på databaser inom konceptet NoSQL?
-* Reflektera över skillnader och likheter mellan relationsdatabaser och databaser inom NoSQL.
-* Vilka är dina tankar om asynkron programmering med JavaScript?
-* Hur känner du för Docker och det sättet vi jobbar med tjänster i kontainrar?
-* Vad är din TIL för detta kmom?
+* Är du ny på realtidsprogrammering eller har du gjort liknande tidigare?
+* Hur gick det att jobba med konceptet realtidsprogrammering i webben, några reflektioner?
+* Berätta om din chatt som du integrerade i me-applikationen.
+* Vilka möjligheter ser du för att utnyttja realtidsprogrammering i webben?
 
 Har du frågor eller funderingar så ställer du dem i forumet.
