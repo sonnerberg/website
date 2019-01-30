@@ -11,7 +11,5 @@ Mina egna minnesanteckningar för saker som kan ingå (mer) i guiden. Eller inte
 * Mer om datatyper?
 * Mer konstruktioner för where?
 * Om memorytabell (index/prestanda)
-
-* Att exportera till CSV från webbtjänst, öppna i lokal Excel.
-
+* Mer övningar på join, union, outer jon, subqueries.
 * Om group_concat.

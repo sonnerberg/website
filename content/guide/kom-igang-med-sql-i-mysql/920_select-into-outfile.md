@@ -1,10 +1,10 @@
 ---
 author: mos
 revision:
-    "2019-01-30": "(B, mos) Bortplockad från del 3, för krångligt, ersat tmed enklare variant."
+    "2019-01-30": "(B, mos) Bortplockad från del 3, för krångligt, ersatt med enklare variant samt länk till forumtrådar."
     "2018-01-15": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
-Exportera rapport till Excel
+Select into outfile
 ==================================
 
 Hur kan vi exportera resultatet från en SELECT och få in det i ett externt verktyg likt Excel?
@@ -153,3 +153,14 @@ Kontrollera filen {#filen}
 ----------------------------------
 
 Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser, i en och samma sekvens, i filen du jobbar i. Ta bort din genererade CSV-fil och testa.
+
+
+
+Diskussion i forum {#forum}
+----------------------------------
+
+Det finns i forumet ett par trådar som är relevanta att kika i.
+
+* "[SELECT INTO OUTFILE Access denied for user](t/7404)"
+* "[SELECT INTO OUTFILE --secure-file-priv option](t/7405)"
+* "[SELECT INTO OUTFILE den enklare varianten](t/7407)"

@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-30": "(B, mos) Ny enklare artikel, ersätter SELECT INTO OUTFILE."
     "2018-01-15": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Exportera rapport till Excel
@@ -8,147 +9,106 @@ Exportera rapport till Excel
 
 Hur kan vi exportera resultatet från en SELECT och få in det i ett externt verktyg likt Excel?
 
-Att använda formatet CSV är ett sätt. Vi gör helt enkelt en SELECT som skriver sitt resultat till en output fil i CSV-format och filen kan vi sedan importera i Excel, eller i en annan databas.
+Låt oss se på ett par alternativ och samtidigt skriva kod så att vi exporterar innehållet från en rapport och visar upp i ett excel-ark.
 
-Spara den SQL-kod du skriver i filen `dml_export_csv.sql`. Du skall exportera till en CSV-filer som du döper till `kurs_export.csv`.
-
-I manualen kan vi läsa om detta i [SELECT..INTO](https://dev.mysql.com/doc/refman/8-0/en/select-into.html). Vi använder varianten SELECT..INTO OUTFILE för att skriva resultatet till en fil.
+Spara den SQL-kod du skriver, och eventuella kommentarer, i filen `dml_export.sql`. Du skall exportera data till en fil som du döper till `report.xls`.
 
 
 
-Rättigheter att exportera {#rattigheter}
+Exportera till CSV fil {#selectinto}
 ----------------------------------
 
-Vi behöver extra rättigheter för att exportera data till en fil. Rättigheten heter FILE och är inte en del av de rättigheter vi hittills givit användaren.
+Vi kan göra en SELECT som skriver sitt resultat till en output fil i CSV-format (Comma Separated Values). Filen kan vi sedan importera i Excel, eller i en annan databas.
 
-Du behöver logga in som root-antvändaren, för att uppdatera de rättigheter som user-användaren har.
+I manualen kan vi läsa om detta i [SELECT..INTO](https://dev.mysql.com/doc/refman/8.0/en/select-into.html), man använder varianten SELECT..INTO OUTFILE för att skriva resultatet till en fil.
 
-Vi kan se vilka rättigheter som vi har på användaren.
+Att göra på detta sättet kräver dock en del konfiguration och rättigheter samt vetskap om att filen genereras i filsystemet på den server där databasservern kör, det är alltså inte nödvändigtvis din lokala dator.
 
-```sql
-mysql> SHOW GRANTS FOR user@localhost;
-+-------------------------------------------------------------------------------------------------------------+
-| Grants for user@localhost                                                                                   |
-+-------------------------------------------------------------------------------------------------------------+
-| GRANT USAGE ON *.* TO 'user'@'localhost' IDENTIFIED BY PASSWORD '*196BDEDE2AE4F84CA44C47D54D78478C7E2BD7B7' |
-| GRANT ALL PRIVILEGES ON `skolan`.* TO 'user'@'localhost'                                                    |
-+-------------------------------------------------------------------------------------------------------------+
-2 rows in set (0.01 sec)
-```
+Om du är intresserad av hur den biten fungerar så kan du, som extra läsning, se hur man gör i artikeln "[Select into outfile](./../select-into-outfile)".
 
-Nu lägger vi till rättigheten FILE på alla databaser via `*.*`. Vi kan inte lägga den rättigheten enbart på en databas. Så funkar det, även om det kan kännas udda.
-
-```sql
-GRANT FILE ON *.* TO user@localhost;
-```
-
-Så här blev det för mig.
-
-```sql
-mysql> GRANT FILE ON *.* TO user@localhost;
-Query OK, 0 rows affected (0.00 sec)
-
-mysql> SHOW GRANTS FOR user@localhost;
-+------------------------------------------------------------------------------------------------------------+
-| Grants for user@localhost                                                                                  |
-+------------------------------------------------------------------------------------------------------------+
-| GRANT FILE ON *.* TO 'user'@'localhost' IDENTIFIED BY PASSWORD '*196BDEDE2AE4F84CA44C47D54D78478C7E2BD7B7' |
-| GRANT ALL PRIVILEGES ON `skolan`.* TO 'user'@'localhost'                                                   |
-+------------------------------------------------------------------------------------------------------------+
-2 rows in set (0.00 sec)
-```
-
-Nu ser vi att vår GRANT är uppdaterat till FILE. Då kan vi använda denna användare till att exportera data till en fil.
+Men vi går raskt vidare till ett "enklare" sätt.
 
 
 
-Exportera tabellen kurs {#exportkurs}
+Använd terminalklienten {#tklient}
 ----------------------------------
 
-Vi kan pröva att spara innehållet i en tabell till en fil. När vi importerade data från CSV så använde vi tabellen kurs. Låt oss nu ta och exportera den till en ny fil `kurs_export.csv` och sedan kan vi jämföra innehållet i filen med orginalet i `kurs.csv`.
+Vi kan använda terminalklienten och formattera dess utskrift och spara i en fil, så att det blir förberett att öppna upp i Excel eller liknande verktyg. Denna lösningen är enbart baserad på terminalklienten och du behöver inte göra någon inställning på din server.
 
-SQL-koden för att importera filen såg ut ungefär så här.
+Låt se hur det fungerar.
 
-```sql
-LOAD DATA LOCAL INFILE '/home/mos/skolan/kurs.csv'
-INTO TABLE kurs
-CHARSET utf8
-FIELDS
-	TERMINATED BY ','
-    ENCLOSED BY '"'
-LINES
-	TERMINATED BY '\n'
-IGNORE 1 LINES
-;
+Se följande som skriver ut en rapport från databasen med terminalklienten.
+
+```text
+mysql -uuser -ppass skolan -e "SELECT * FROM larare LIMIT 3;"
 ```
 
-Låt oss använda samma struktur på filen som vi nu genererar. Du behöver ange en absolut sökväg till filen och filen får inte finnas sedan tidigare, då blir det felmeddelande.
+Det kan se ut så här.
 
-```sql
-SELECT
-	*
-	INTO OUTFILE '/home/mos/skolan/kurs_export.csv'
-		CHARSET utf8
-		FIELDS
-			TERMINATED BY ','
-			ENCLOSED BY '"'
-		LINES
-		TERMINATED BY '\n'
-	FROM kurs
-;
+```text
+$ mysql -uuser -ppass skolan -e "SELECT * FROM larare LIMIT 3;"
++---------+-----------+---------+------------+------+-------+------------+-----------+
+| akronym | avdelning | fornamn | efternamn  | kon  | lon   | fodd       | kompetens |
++---------+-----------+---------+------------+------+-------+------------+-----------+
+| ala     | DIPT      | Alastor | Moody      | M    | 27594 | 1943-04-03 |         1 |
+| dum     | ADM       | Albus   | Dumbledore | M    | 85000 | 1941-04-01 |         7 |
+| fil     | ADM       | Argus   | Filch      | M    | 27594 | 1946-04-06 |         3 |
++---------+-----------+---------+------------+------+-------+------------+-----------+
 ```
 
-Nu har vi en fil som kan importeras in i ett Excelark.
+Det finns en option `--batch` till terminalklienten som skriver ut samma sak men tab-separerad, varje fält är separerat av en tabb `\t`.
 
-Notera att du enbart kan exportera om filen inte redan finns. Du behöver alltså manuellt radera filen om du vill göra en ny export av datat till filen.
+Du använder den så här.
 
-Om vi vill sortera och filtrera resultatet så kan vi göra det. Vi kan även välja ut vilka kolumner vi vill exportera, eller joina med andra tabeller för att få ut anpassade rapporter.
-
-
-
-Exportera rapport med kolumner som rubrik {#rubrik}
-----------------------------------
-
-Om du jämför filerna `kurs_export.csv` och `kurs.csv` så ser du att första raden med rubriker saknas i den exporterade filen. Om man vill importera data till Excel så kan det se trevligt ut att även ange rubrikerna för respektive kolumn.
-
-Det enklaste sättet är att hårdkoda namnen på kolumnerna till första raden. Sedan kan man slå ihop resultatet från de två SELECT via en UNION, och skriva ut den resulterande rapporten till fil.
-
-```sql
-SELECT 'Kod', 'Namn', 'Poäng', 'Nivå'
-UNION ALL
-SELECT
-	*
-	INTO OUTFILE '/home/mos/git/dbwebbse/kurser/databas/.solution/sql/skolan/kurs_export.csv'
-		CHARSET utf8
-		FIELDS
-			TERMINATED BY ','
-			ENCLOSED BY '"'
-		LINES
-		TERMINATED BY '\n'
-	FROM kurs
-;
+```text
+mysql -uuser -ppass skolan -e "SELECT * FROM larare LIMIT 3;" --batch
 ```
 
-Se till att du kan generera en fil som har en rubrikrad.
+Det kan se ut så här när du kör kommandot.
 
+```text
+$ mysql -uuser -ppass skolan -e "SELECT * FROM larare LIMIT 3;" --batch
+akronym avdelning       fornamn efternamn       kon     lon     fodd    kompetens
+ala     DIPT    Alastor Moody   M       27594   1943-04-03      1
+dum     ADM     Albus   Dumbledore      M       85000   1941-04-01      7
+fil     ADM     Argus   Filch   M       27594   1946-04-06      3
+```
 
+Du har nu ett tabb-separerat format på utskriften, varje fält är separerat av tecknet `\t`, tecknet är osynligt så du ser bara mellanrummet.
 
-Importera till Excel {#impexc}
-----------------------------------
+Du kan nu göra redirect till en fil, till exempel `report.xls` vilken sedan kan öppnas i Excel utan några extra formatteringar.
 
-När du öppnar Excel, eller som här, Google Sheets, så får du först upp en import-ruta där du kan hjälpa Excel att förstå ditt format. I mitt exempel väljer jag att låta Excel klura ut formatet själv.
+Pröva så här.
 
-[FIGURE src=image/snapvt18/import-google-sheet.png caption="Jag låter Excel klura ut formatet på filen."]
+```text
+mysql -uuser -ppass skolan -e "SELECT * FROM larare LIMIT 3;" --batch > report.xls
+```
 
-Sedan importerar jag datat och det ser ut som jag förväntar mig.
+Så här ser det ut när jag öppnar filen i LibreOffice Calc som är en fri version motsvarande Excel.
 
-[FIGURE src=image/snapvt18/import-google-sheet-2.png caption="Datat är nu importerar, hela vägen från databasen, via CSV, till Excel."]
+[FIGURE src=image/snapvt19/databas-export-excel.png?w=w3 caption="En import-ruta öppnas där jag kan göra inställningar, men jag väljer de som visas per default."]
 
-Det är bra att kunna exportera rapporter på detta viset, vissa användare vill se anpassade och formatterade rapporter, alla är inte som du, en expert på databaser.
+Så här ser det ut när datat ligger i Excel-arket.
+
+[FIGURE src=image/snapvt19/databas-report-in-excel.png?w=w3 caption="Nu finns datat från SQL-rapporten i Excel och kan vidare bearbetas, eller användas för att skapa grafer med mera."]
+
+Om du har dina SQL-kommandon i en fil, till exempel `dml_export.sql`, så kan du läsa dem från filen, så här.
+
+```text
+mysql -uuser -ppass skolan --batch < dml_export.sql > report.xls
+```
+
+Kommandot tar sin input från fil via `< dml_export.sql` och skriver resultatet till en ny fil via `> report.xls`. I Unix-termer kallas denna hantering för _input/output redirections_.
+
+Nu har du ett enkelt sätt att exportera innehåll från tabeller som direkt kan öppnas i Excel och liknande applikationer som kan läsa tab-separerade format.
+
+Det är möjligen mer korrekt att spara filen med filändelsen `.txt` istället för `.xls`, men Excel verkar vara duktig på att tolka innehållet och ändå visa upp det direkt. Pröva båda om du får problem.
 
 
 
 Kontrollera filen {#filen}
 ----------------------------------
 
-Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser, i en och samma sekvens, i filen du jobbar i. Ta bort din genererade CSV-fil och testa.
+Innan du är helt klar så kontrollerar du att du kan köra SQL-satserna i din fil och att du kan generera rapportfilen.
+
+Se till att du har en fil `report.xls` som går att öppna i Excel (Libreoffice Calc, Google Sheet, eller motsvarande), innan du fortsätter.
