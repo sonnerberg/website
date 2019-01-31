@@ -84,6 +84,8 @@ Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut s
 Tips från coachen {#tips}
 -----------------------
 
+I forumet kan du se hur man kan [dela in en sträng i delar](t/8263) och göra varje del till en variabel, det kan vara en lösning på att hantera kommando som `nylon <akronym> <lon>`.
+
 <!-- Tips om hur lösa sok <sokstrang> -->
 
 Lycka till och hojta till i forumet om du behöver hjälp!
