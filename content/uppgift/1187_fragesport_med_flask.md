@@ -37,6 +37,9 @@ Du ska implementera klasserna för de tre frågetyperna och handlern som app.py 
 
 Attributen och metoderna som är **bold**-markerad används av den färdiga koden ni får och måste därför implementeras av er med de namnen. Övriga är bara exempel på vad man kan ha med. `QuestionType2` och `QuestionType3` innehåller bara ett statisk attribut som ett måste men du kommer också behöva överlagra några av metoderna från `Question` för att det ska bli bra. Vilka metoder beror på vilken klass du väljer som basklass. Jag hade även bytt namn på Question klasserna så det inte bara är type2 eller 3. Förhoppningen är att metodnamnen är beskrivande nog över vad de ska göra men om du är osäker är det bara att fråga.
 
+[YOUTUBE src=AuUrQW9mNeY width=630 caption="Andreas förklarar klassdiagrammet och koden som ska skrivas."]
+
+
 
 
 Krav {#krav}
