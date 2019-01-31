@@ -1,26 +1,24 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/kunskap/kokbok-databasmodellering/image02.jpg?w=1100&h=300&cf&a=0,0,16,0&f=grayscale"
 author: mos
 revision:
-    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2019-01-31": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-05": "(A, mos) Första utgåvan."
 ...
 Kmom03: ER-modellering
 ====================================
 
-[WARNING]
-
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
-
-Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering.
+Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering. Vi börjar med att fokusera på den konceptuella delen av modelleringen.
 
 Vi jobbar vidare med SQL och tränar mer på utmanande saker som subqueries, JOIN och LEFT/RIGHT OUTER JOIN.
 
-Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en mer potent klient som kan utföra olika saker mot databasen.
+Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en menydriven klient som kan utföra olika saker mot databasen.
 
 <!--more-->
 
@@ -73,7 +71,7 @@ Läs igenom följande artiklar.
 
 1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig en metod för att modellera databaser i olika faser. Du kommer jobba enligt denna modellen i uppgiften.
 
-1. Som ett komplement till kokboken kan du titta på [föreläsningen om ER-modellering och implementation av en E-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en E-shop.
+1. Som ett komplement till kokboken kan du titta på [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
 
 
 
@@ -81,7 +79,7 @@ Läs igenom följande artiklar.
 
 Det finns inga specifika läsanvisningar för JavaScript. Men du kommer att fortsätta skriva program för JavaScript i Node.js tillsammans med async/await och callbacks.
 
-Läs vidare på egen hand, i den mån du vill förkovra dig i JavaScript som programmeringsspråk.
+Läs gärna vidare på egen hand, i "[Boken: JavaScript for impatient programmers](https://dbwebb.se/kunskap/boken-javascript-for-impatient-programmers)", i den mån du vill förkovra dig i JavaScript som programmeringsspråk. 
 
 
 
@@ -109,7 +107,7 @@ Gjort modelleringsövning i sal med draw.io: https://goo.gl/vNRvKt
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande för att förbereda inför uppgifter.
 
@@ -124,7 +122,7 @@ Svårt göra övning per distans.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -156,7 +154,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Några generella reflektioner på att skriva och jobba med menydrivna terminalprogram i JavaScript och Node.js?
 * Berätta om din kodstruktur i ditt terminalprogram mot databasen, är du nöjd eller ser du förbättringspotential?
-* Något att nämna kring det aktuella stycket i guiden skolan? 
+* Något att nämna kring det aktuella stycket i guiden skolan med till exempel outer joins och subqueries? 
 * Hur gick det att jobba med ER-modelleringen, några reflektioner?
 * Fanns det några extra svårigheter/utmaningar du kämpade med i kursmomentet?
 * Vilken är din TIL för detta kmom?

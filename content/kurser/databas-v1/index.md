@@ -108,11 +108,11 @@ Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan k
 
 ### Kmom03: ER-modellering {#kmom03}
 
-Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering.
+Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering. Vi börjar med att fokusera på den konceptuella delen av modelleringen.
 
 Vi jobbar vidare med SQL och tränar mer på utmanande saker som subqueries, JOIN och LEFT/RIGHT OUTER JOIN.
 
-Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en mer potent klient som kan utföra olika saker mot databasen.
+Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en menydriven klient som kan utföra olika saker mot databasen.
 
 [Instruktion till kursmoment 03](./kmom03).
 
