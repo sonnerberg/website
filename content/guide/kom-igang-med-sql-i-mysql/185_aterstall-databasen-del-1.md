@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-01-31": "(D, mos) Kommentar om unix radslut."
     "2019-01-11": "(C, mos) Stycke om hur man blir av med varningen."
     "2018-03-27": "(B, mos) Lade till dml_update_lonerevision.sql."
     "2018-02-09": "(A, mos) Tillagd för att fokusera på hur man återställer databasen."
@@ -95,6 +96,8 @@ $ bash reset_part1.bash
 |     330242 |        19 |
 +------------+-----------+
 ```
+
+Det är viktigt att din fil har Unix style radslut, de kallas ofta NL eller `\n`. Du kan använda din [texteditor för att sätta radslutet](kunskap/installera-texteditorn-atom#lineending).
 
 Bra, då lägger vi in resten av kommandona, för att återställa databasen, i skriptet.
 
