@@ -85,7 +85,7 @@ $ file skolan.sql
 skolan.sql: UTF-8 Unicode text, with very long lines
 ```
 
-Så här kan det se ut när du har Windows radbrytningar.
+Så här kan det se ut när du har Windows radbrytningar, det är inte önskvärt i vårt sammanhang.
 
 ```text
 $ file skolan.sql
