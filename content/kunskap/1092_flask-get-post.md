@@ -32,7 +32,7 @@ Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans me
 
 ```bash
 mkdir static templates static/styles templates/forms templates/tables
-touch app.py employee.py handler.py static/styles/style.css templates/{about.html,company.html,footer.html,header.html,index.html,forms/add_employee.html,tables/show_employees.html
+touch app.py employee.py handler.py static/styles/style.css templates/{about.html,company.html,footer.html,header.html,index.html,forms/add_employee.html,tables/show_employees.html}
 ```
 
 Ett frädigt exempel finns i [example/flask/session](https://github.com/dbwebb-se/oopython/tree/master/example/flask/session).
