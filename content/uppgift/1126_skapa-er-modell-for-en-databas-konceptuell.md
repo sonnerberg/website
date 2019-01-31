@@ -6,7 +6,8 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-05": (A, mos) Första utgåvan.
+    "2019-01-31": "(B, mos) Genomgång, mindre justeringar i formuleringar."
+    "2018-01-05": "(A, mos) Första utgåvan."
 ...
 Skapa ER-modell för en databas (konceptuell)
 ==================================
@@ -31,9 +32,9 @@ Du har jobbat igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-f
 Genomgång {#genomgang}
 -----------------------
 
-Det finns en inspelad föreläsning (från en systerkurs) som går igenom vissa aspekter av denna uppgift. Föreläsningen pratar om databasmodellering och visar sedan ett exempel på en E-shop implementerad med SQL och föreläsningen avslutas med att göra reverse engineering på databasen och skapa en komplett ER-modell.
+Det finns en inspelad föreläsning (från en systerkurs) som går igenom vissa aspekter av denna uppgift. Föreläsningen pratar om databasmodellering och visar sedan ett exempel på en e-shop implementerad med SQL och föreläsningen avslutas med att göra reverse engineering på databasen och skapa en komplett ER-modell.
 
-[Titta på föreläsningen om ER-modellering och implementation av en E-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter).
+[Titta på föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter).
 
 Flera av begreppen som du skall lösa i uppgiften, hanteras i föreläsningen, men lite ur andra vinklar.
 
@@ -44,11 +45,9 @@ Introduktion {#intro}
 
 Du skall jobba igenom de olika faserna enligt den metod som beskrivs i kokboken.
 
-I denna uppgift skall du utföra den konceptuella modelleringsfasen.
+I denna specifika uppgift skall du utföra den konceptuella modelleringsfasen. I kommande uppgift, "[Skapa ER-modell för en databas (logisk/fysisk)](uppgift/skapa-er-modell-for-en-databas-logisk-fysisk)", skall du utföra den logiska och den fysiska modelleringsfasen.
 
-I kommande uppgift, "[Skapa ER-modell för en databas (logisk/fysisk)](uppgift/skapa-er-modell-for-en-databas-logisk-fysisk)", skall du utföra den logiska och den fysiska modelleringsfasen.
-
-Varje steg du gör (enligt kokboken) skall du dokumentera i ett dokument som du lämnar in som pdf. När du är klar finns samtliga delsteg dokumenterade i ditt dokument.
+Varje steg du gör (enligt kokbokens steg) skall du dokumentera i ett dokument som du lämnar in som pdf. När du är klar finns samtliga delsteg dokumenterade i ditt dokument.
 
 
 
@@ -77,7 +76,7 @@ Ett annat verktyg som är användbart för olika typer av diagram, inklusive UML
 Välj bas för din modellering {#valj}
 -----------------------
 
-Du kan välja bland en av följande upplägg och göra databasmodelleringen utifrån den. Samtliga baseras på grundtanken om en E-shop och det är samma typ av tabeller som krävs, oavsett vilket fokus du väljer.
+Du kan välja bland en av följande upplägg och göra databasmodelleringen utifrån den. Samtliga baseras på grundtanken om en e-shop och det är samma typ av tabeller som krävs, oavsett vilket fokus du väljer.
 
 Den databasmodell du nu skapar skall du senare använda för att koppla till ett webbinterface och till ett terminalinterface.
 
@@ -85,9 +84,9 @@ Den databasmodell du nu skapar skall du senare använda för att koppla till ett
 
 ### Generellt krav på databasen {#generellt}
 
-Databasen behöver hantera ett kundregister (vilka kunder finns och deras kontaktdetaljer), ett produktregister (vilka produkter finns med produktkod, namn, kort beskrivning och pris) där varje produkt finns i en eller flera produktkategorier.
+Databasen behöver hantera ett kundregister (kunder med kontaktdetaljer), ett produktregister (produkter med produktkod, namn, kort beskrivning och pris) där varje produkt finns i en eller flera produktkategorier.
 
-Databasen behöver också innehålla ett lager där man ser hur många av varje produkt som finns i lagret och en notering om var produkten ligger i lagret (vilken hylla). En produkt normalt kan vara utspridd över olika hyllor i lagret. Men det är okey att nöja sig med att samma produkt alltid ligger på samma lagerhylla. Lagerhyllorna är flexibla i vår värld. 
+Databasen behöver också innehålla ett lager där man ser hur många av varje produkt som finns i lagret och en notering om var produkten ligger i lagret (vilken hylla). En och samma produkt kan vara utspridd över olika hyllor i lagret.
 
 När kunden beställer en produkt så skapas en order som innehåller kundens detaljer tillsammans med vilka produkter som beställts och dess beställda antal.
 
@@ -113,7 +112,7 @@ Företaget ser en nygammal marknad växa fram och tänker sälja CD/DVD och äld
 
 ### Fokus: Egen idé {#egen}
 
-Du har ditt eget upplägg och idé. Kör på, se till att de generalla kraven på databasen blir uppfyllda av din databasmodell.
+Du har ditt eget upplägg och idé. Kör på, se till att de ovanstående generalla kraven på databasen blir uppfyllda av din databasmodell.
 
 
 
@@ -124,11 +123,11 @@ Krav {#krav}
 
 1. Skapa en innehållsförteckning som sida 2.
 
-1. Skapa en ny sida med rubrik "Konceptuell modell" och utför och dokumentera alla delsteg för den konceptuella modelleringsfasen.
+1. Skapa en ny sida med rubrik "Konceptuell modell" och utför och dokumentera alla delsteg för den konceptuella modelleringsfasen, enligt kokbokens steg.
 
-1. Försäkra dig själv om att din databasmodell kommer att klara av att hantera ordrar och fakturer. Se det som ditt eget sätt att verifiera att din modell fungerar.
+1. Försäkra dig själv om att din databasmodell kommer att klara av att hantera ordrar och fakturer. Tänk igenom hur man lägger en order och hur fakturan skapas, fundera på om din databas kommer "hålla". Se det som ditt eget sätt att verifiera att din modell fungerar.
 
-1. Spara ditt orginal dokument i katalogen du jobbar. Generera en PDF-fil `er.pdf` av dokumentet.
+1. Generera en PDF-fil `er.pdf` av dokumentet.
 
 1. När du är klar så publicerar du ditt kursrepo.
 
@@ -136,16 +135,6 @@ Krav {#krav}
 # Ställ dig i kurskatalogen
 dbwebb publish me
 ```
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Lös följande om du har tid över.
-
-1. Den avslutande delen av denna modelleringsuppgift finner du i "[Skapa ER-modell för en databas (logisk/fysisk)](uppgift/skapa-er-modell-for-en-databas-logisk-fysisk)". Kika i den om du vill fortsätta redan nu.
-
 
 
 
