@@ -91,6 +91,38 @@ mysql> SELECT
 
 Nu ser vi medelkompetensen per avdelning och kan till exempel se vilken avdelning där vi främst behöver höja kompetensen.
 
+Man kan också gruppera per flera kolumner, till exempel per avdelning och per kompetens. Vi kan se hur lönen ser ut om vi grupperar både per avdelning och per kompetens.
+
+```sql
+SELECT avdelning, kompetens, SUM(lon) as Summa
+FROM larare
+GROUP BY avdelning, kompetens
+ORDER BY Summa DESC
+;
+```
+
+Det ser ut så här när vi kör det.
+
+```text
+MySQL [skolan]> SELECT avdelning, kompetens, SUM(lon) as Summa
+    -> FROM larare
+    -> GROUP BY avdelning, kompetens
+    -> ORDER BY Summa DESC
+    -> ;
++-----------+-----------+-------+
+| avdelning | kompetens | Summa |
++-----------+-----------+-------+
+| ADM       |         7 | 85000 |
+| DIPT      |         1 | 55188 |
+| DIDD      |         2 | 49880 |
+| DIPT      |         2 | 45000 |
+| DIDD      |         1 | 37580 |
+| ADM       |         2 | 30000 |
+| ADM       |         3 | 27594 |
++-----------+-----------+-------+
+7 rows in set (0.00 sec)
+```
+
 
 
 Uppgifter GROUP BY {#groupby}
@@ -98,7 +130,7 @@ Uppgifter GROUP BY {#groupby}
 
 Använd de inbyggda aggregerande funktionerna `SUM()`, `COUNT()`, och `AVG()` tillsammans med `GROUP BY`, för att räkna ut  följande:
 
-1. Hur många lärare jobbar på de olika avdelningarna?
+1. Hur många lärare jobbar på de respektive avdelning?
 2. Hur mycket betalar respektive avdelning ut i lön varje månad?
 3. Hur mycket är medellönen för de olika avdelningarna?
 3. Hur mycket är medellönen för kvinnor kontra män?
@@ -123,22 +155,24 @@ Ditt svar kan se ut så här.
 
 Gör ytterligare en rapport.
 
-1. Visa den avrundade snittlönen (`ROUND()`) grupperad per avdelning och per kompetens, sortera enligt avdelning och snittlön. Ditt svar skall se ut så här.
+1. Visa den avrundade snittlönen (`ROUND()`) grupperad per avdelning och per kompetens, sortera enligt avdelning och snittlön. Visa även hur många som matchar i respektive gruppering. Ditt svar skall se ut så här.
 
 ```sql
-+-----------+-----------+-----------+
-| avdelning | kompetens | Snittlön  |
-+-----------+-----------+-----------+
-| ADM       |         7 |     85000 |
-| ADM       |         2 |     30000 |
-| ADM       |         3 |     27594 |
-| DIDD      |         2 |     49880 |
-| DIDD      |         1 |     37580 |
-| DIPT      |         2 |     45000 |
-| DIPT      |         1 |     27594 |
-+-----------+-----------+-----------+
++-----------+-----------+-----------------+----------+
+| avdelning | kompetens | ROUND(AVG(lon)) | Snittlon |
++-----------+-----------+-----------------+----------+
+| ADM       |         3 |           27594 |        1 |
+| ADM       |         2 |           30000 |        1 |
+| ADM       |         7 |           85000 |        1 |
+| DIDD      |         1 |           37580 |        1 |
+| DIDD      |         2 |           49880 |        1 |
+| DIPT      |         1 |           27594 |        2 |
+| DIPT      |         2 |           45000 |        1 |
++-----------+-----------+-----------------+----------+
 7 rows in set (0.00 sec)
 ```
+
+Enligt utskriften ovan är det bara raden DIPT kompetens 1 som har fler än en lärare. I alla andra grupperingar finns endast en lärare.
 
 
 
