@@ -5,6 +5,7 @@ category:
     - javascript
     - kursen databas
 revision:
+    "2019-02-01": "(B, mos) Rätta hur tärningen slumpas fram."
     "2019-01-17": "(A, mos) Första utgåvan."
 ...
 JavaScript och Node.js
@@ -417,7 +418,7 @@ class Dice {
      * @returns {integer} The value of the rolled dice min=1 and max=faces.
      */
     roll(faces=6) {
-        this.dice = Math.round(Math.random() * faces + 1);
+        this.dice = Math.floor(Math.random() * faces + 1);
         return this.dice;
     }
 
