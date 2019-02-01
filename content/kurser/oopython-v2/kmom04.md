@@ -7,13 +7,7 @@ category:
 ...
 Kmom04: Datastrukturer
 ====================================
-[WARNING]
 
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
 [FIGURE src=/image/oopython/kmom04/index_list.png?w=c8 class="right"]
 
 I det här kursmomentet övar vi oss på datastrukturer och felhantering med exceptions. En datastruktur är en struktur för organisering av datan.
