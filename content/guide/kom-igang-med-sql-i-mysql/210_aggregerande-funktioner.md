@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-01": "(C, mos) Genomgången efter feedback från studenter."
     "2019-01-15": "(B, mos) Uppdelad i två delar då HAVING fick mer material."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
