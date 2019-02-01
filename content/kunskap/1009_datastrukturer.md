@@ -3,6 +3,7 @@ author:
     - aar
     - lew
 revision:
+    "2019-01-31": (C, aar) Tog bort sektionen om Heap.
     "2019-01-25": (B, aar) Bytte ut bilder och lite text.
     "2017-02-08": (A, lew) First version.
 category:
@@ -376,7 +377,7 @@ Steg 2, tilldela `current_node.next` till `new_node.next`. Så båda pekar på s
 
 Tilldela `new_node` till `current_node.next` så vi har en komplett lista igen. Om vi gör det i den här ordningen behöver vi inte vara oroliga för att tappa några noder. Fundera på vad som hade hänt om vi hade skippat steg 2 och istället direkt tilldelade den nya noden till `current_node.next`.
 
-
+<!--
 
 Heap {#heap}
 ------------------------------
@@ -433,7 +434,7 @@ Ett barn är mindre så vi skiftar plats:
 
 [FIGURE src=/image/oopython/kmom05/heap7.png]
 
-Nu håller trädet måttet för att kallas en max-heap. Om vi skulle haft en min-heap istället hade det varit det minsta värdet i roten.  
+Nu håller trädet måttet för att kallas en max-heap. Om vi skulle haft en min-heap istället hade det varit det minsta värdet i roten.   -->
 
 
 
