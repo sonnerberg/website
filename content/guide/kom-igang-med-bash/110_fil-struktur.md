@@ -12,7 +12,7 @@ Det finns många olika sätt att strukturera filer, inte bara inom bash-programm
 
 ### Filändelse {#filandelse}
 
-Då Bash är skrivet utifrån sh kan vi välja vilken filändelse vi vill använda, script.bash eller script.sh. Egentligen behöver vi inte ha någon filändelse men det är nog självförklarande varför vi använder det ändå. I guiden och kursen använder vi filändelsen `.bash`.
+Då Bash är skrivet utifrån sh kan vi välja vilken filändelse vi vill använda, script.bash eller script.sh. Egentligen behöver vi inte ha någon filändelse alls men det är nog självförklarande varför vi använder det ändå. I guiden och kursen använder vi filändelsen `.bash`.
 
 
 
@@ -28,3 +28,21 @@ Vi har alltid shebangen överst i filen:
 
 
 ```
+
+
+
+### Gör filen exekverbar {#exekverbar}
+
+För att kunna köra filen behöver vi göra den exekverbar. När vi ändå ska hålla oss vid terminalen gör vi det med hjälp av kommandot `chmod`. Vi tar för vana redan nu att ta en titt i manualen:
+
+`man chmod`
+
+> chmod -- change file modes or Access Control Lists
+
+Scrollar vi ner där så kan vi hitta att:
+
+> x       The execute/search bits.
+
+Det handlar om rättighetsbitarna och vi kan använda det med: `chmod +x filnamn` för att göra en fil exekverbar. Hade vi använt `-x` så hade vi tagit bort rättigheterna att exekvera filen.
+
+<!-- Var tar vi upp rättigheter och manualen?? -->
