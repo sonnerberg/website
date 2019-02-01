@@ -58,7 +58,7 @@ cd me/kmom02/questions
 
 1. Bekanta dig med koden, kolla igeom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metod som behövs och vad de används till.
 
-1. Implementera klasserna som behövs i filerna `handler.py` och `questions.py`, en handler klass som heter `QuesionManager` och tre klasser för frågorna. Typerna av frågor är fritext svar, flervalsfrågor med flera rätt (checkboxes) och flervalsfrågor med ett rätt svar (radiobuttons). Välj ut en av dem som basklass och låt de andra två ärva från basklassen. I mappen `templates/answer_types` finns en html template för varje frågetyp (du ska inte behöva ändra i dem).
+1. Implementera klasserna som behövs i filerna `handler.py` och `questions.py`, en handler klass som heter `QuestionManager` och tre klasser för frågorna. Typerna av frågor är fritext svar, flervalsfrågor med flera rätt (checkboxes) och flervalsfrågor med ett rätt svar (radiobuttons). Välj ut en av dem som basklass och låt de andra två ärva från basklassen. I mappen `templates/answer_types` finns en html template för varje frågetyp (du ska inte behöva ändra i dem).
 
 1. Frågeklasserna behöver innehålla en fråga, svaret och svarslternativen, om det finns några. De behöver ha metoder för att hämta värdena och en metod för att kolla om användarens svar är rätt. 
 
