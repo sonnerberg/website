@@ -39,6 +39,7 @@ Attributen och metoderna som är **bold**-markerad används av den färdiga kode
 
 [YOUTUBE src=AuUrQW9mNeY width=630 caption="Andreas förklarar klassdiagrammet och koden som ska skrivas."]
 
+I session behöver vi spara den dynamiska data, som applikationen inte kommer ihåg mellan request:en, vilket är hur många poäng spelaren har och vilken fråga spelaren är på. I write_session skriv den datan till session och i read_session hämta den datan från session.
 
 
 
@@ -65,7 +66,7 @@ cd me/kmom02/questions
 
 1. Använd dig av `print()` i metoderna du skapar, kolla klassdiagrammet och kolla där anrop görs för att ta reda på vad som skickas som argument till dina metoder.
 
-1. Session ska användas för att hålla kolla på hur många poäng spelaren har och vilken fråga spelaren är på.
+1. Session ska användas för att hålla kolla på hur många poäng spelaren har och vilken fråga spelaren är på. Ni behöver inte spara fråge objekten i session.
 
 1. Du ska inte behöva ändra i några av de andra filerna, förutom style.css, men om du känner att du vill/behöver det skriv varför i din redovisningstext.
 
