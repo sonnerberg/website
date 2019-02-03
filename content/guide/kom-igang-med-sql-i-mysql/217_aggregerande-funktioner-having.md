@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-03": "(D, mos) Två rader bör bli svaret på 2)."
     "2019-02-01": "(C, mos) Omskriven för att bli tydligare."
     "2019-01-15": "(B, mos) Uppdelad i två delar då HAVING fick mer material."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -121,7 +122,7 @@ MySQL [skolan]> SELECT
 2 rows in set (0.00 sec)
 ```
 
-Nu får du lösa 2). Du bör få en enda rad som svar, den med avdelningen ADM.
+Nu får du lösa 2). Du bör få två rader som svar.
 
 
 
