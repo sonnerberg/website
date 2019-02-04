@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2019-02-04": "(B, mos) Länk till metoden snowball sampling."
     "2019-02-01": "(A, mos) Första utgåvan."
 ...
 Hitta referenser med metoden Snowball
@@ -16,3 +17,5 @@ När man hittar någon artikel som verkar intressant så dyker man in i den och 
 Det är ett enkelt sätt att söak referenser och intressanta artiklar och det bygger på att man hittar en eller få artiklar och sedan bygger vidare på deras arbete.
 
 Pröva gärna snowball metoden om du behöver finna referenser.
+
+Den engelska termen för metoden är [Snowball sampling](https://en.wikipedia.org/wiki/Snowball_sampling).
