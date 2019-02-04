@@ -2,6 +2,7 @@
 title: ramverk1-v2
 author: mos
 revision:
+    "2019-02-04": "(E, mos) Uppdaterad med information från kursplan dv1610."
     "2018-12-10": "(D, mos) Uppdaterad till ramverk1 v2."
     "2017-10-02": "(C, mos) Info om samtliga kmom."
     "2017-08-03": "(B, mos) JavaScript flyttas till ramverk2."
@@ -30,7 +31,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> För tillträde till kursen krävs 22,5 högskolepoäng programmering, webbteknologier, databaser samt genomgången kurs Objektorienterade webbteknologier 7,5hp.
+> För tillträde till kursen krävs avklarade kurser eller moment från kurser i programmering och webbteknologier omfattande totalt 22,5 hp. Därutöver krävs genomgången kurs Objektorienterade webbteknologier, 7,5 hp.
 
 
 
@@ -39,8 +40,8 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Webbaserad programmering i ramverk med designmönster implementerade främst i programmeringsspråket PHP.
-* Objektorienterade teknologier.
+* Webbaserad programmering i ramverk med designmönster implementerade i programmeringsspråket PHP.
+* Objektorienterade konstruktioner.
 * Utveckling av webbapplikation i ramverk.
 * Återanvändbara moduler, paketering och distribution.
 * Designmönster för ramverk.
@@ -261,9 +262,9 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 
 | Kursens moment  | Ladok moment enligt kursplan  | Betyg |
 |-----------------|-------------------------------|-------|
-| Kmom01 + kmom02 | Inlämning 1 á 2.5hp           | G-U   |
-| Kmom03 + kmom04 | Inlämning 2 á 2.5hp           | G-U   |
-| Kmom05 - kmom10 | Inlämning 3 á 2.5hp           | A-F   |
+| Kmom01 + kmom02 | Inlämningsuppgift 1 á 2.5hp   | G-U   |
+| Kmom03 + kmom04 | Inlämningsuppgift 2 á 2.5hp   | G-U   |
+| Kmom05 - kmom10 | Inlämningsuppgift 3 á 2.5hp   | A-F   |
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
@@ -285,16 +286,11 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Från och med hösten 2019 är kursens namn "Webbaserade ramverk och designmönster" och kursen får en ny kursplan.
+Från och med hösten 2019 är kursens namn "Webbaserade ramverk och designmönster" med kurskod DV1610 ([se kursplanen](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1610)).
 
-<!-- DV1610, Webbaserade ramverk och designmönster, 7,5 hp (ersätter PA1441) -->
+Tidigare var kursens namn "Webbaserade ramverk 1" med kurskod PA1441 ([se kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1441)).
 
-
-Kursens namn är "Webbaserade ramverk 1". Du hittar [kursplanen genom att söka på kurskoden PA1441 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1441).
-
-Kursen är en fristående vidarutveckling av kursen DV1486 "Databasdrivna webbapplikationer med PHP och MVC-ramverk", aka phpmvc.
-
-Se [kursplan för DV486](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486).
+Kursen är en fristående vidarutveckling av kursen DV1486 "Databasdrivna webbapplikationer med PHP och MVC-ramverk", aka phpmvc ([se kursplan](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486)).
 
 
 

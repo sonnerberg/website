@@ -2,6 +2,7 @@
 title: itsec-v1
 author: mos
 revision:
+    "2019-02-04": "(B, mos) Uppdaterad med information från kursplan."
     "2018-12-04": "(A, mos) Kursen inrättas med namn och syfte."
 ...
 Kursen itsec (v1)
@@ -37,16 +38,14 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-<!--
-* Webbaserad programmering i ramverk med designmönster implementerade främst i programmeringsspråket PHP.
-* Objektorienterade teknologier.
-* Utveckling av webbapplikation i ramverk.
-* Återanvändbara moduler, paketering och distribution.
-* Designmönster för ramverk.
-* Testdriven utveckling och tekniker för enhetstestning.
-* Automatiserad testning och byggning.
-* Relaterade verktyg och tekniker.
--->
+* Översiktlig orientering i området informationssäkerhet, kategorisering av området samt terminologi, specifikt fokus säkerhetsområden som är relevanta att applicera på området webb.
+* Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
+* Privacy, databaser och dataläckage.
+* Risk och sårbarhetsanalys
+* Introduktion till existerande webbsäkerhetsprojekt.
+* Säkerhetsrelaterade attacker.
+* Säkerhetstestning (test-driven security)
+* Relaterade verktyg, tekniker, processer och metoder.
 
 
 
@@ -61,10 +60,8 @@ Följande är kursens mål, indelat i undergrupper.
 
 Efter genomförd kurs skall studenten:
 
-<!--
-* ingående redogöra för webbutveckling baserat på de tekniker som omfattas genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* kunna visa goda kunskaper i att använda valda tekniker genom att tillämpa dessa tekniker i praktiska övningar och projekt.
--->
+* ingående redogöra för informationssäkerhet med webbtillämpningar baserat på de tekniker som omfattas genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* kunna visa goda kunskaper i att hantera relevant information, tekniker och metoder genom att tillämpa dessa tekniker i praktiska övningar och projekt.
 
 
 
@@ -72,10 +69,8 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-<!--
-* självständigt utifrån en specifikation kunna utveckla, dokumentera och presentera ett projekt baserat på ramverksbaserad kodning och återanvändning av moduler.
-* ha god praktisk förmåga att hantera de verktyg och utvecklingsmiljöer som används vid utveckling och felsökning vid ramverksprogrammering.
--->
+* självständigt kunna bedömma, dokumentera och presentera relevanta säkerhetsrelaterade riskområden för en webbaserad applikation.
+* ha god praktisk förmåga att hantera verktyg och miljöer som används vid testning ach undersökning rörande säkerhetsrelaterade attacker.
 
 
 
@@ -83,9 +78,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-<!--
-* via redovisningstexter kunna visa god förmåga att reflektera och argumentera över kodstruktur i ramverk med sammanhang i designmönster och återanvändbara moduler.
--->
+* via redovisningstexter kunna visa god förmåga att reflektera och argumentera över säkerhet, risker, sårbarhet och attacker mot webbaserade applikation.
 
 
 
@@ -97,7 +90,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ### Kmom01: TBD {#kmom01}
 
-TBD.
+Översiktlig orientering i området informationssäkerhet, kategorisering av området samt terminologi, specifikt fokus säkerhetsområden som är relevanta att applicera på området webb.
 
 [Instruktion till kursmoment 01](./kmom01).
 
@@ -105,7 +98,7 @@ TBD.
 
 ### Kmom02: TBD {#kmom02}
 
-TBD.
+Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
 
 [Instruktion till kursmoment 02](./kmom02).
 
@@ -113,7 +106,7 @@ TBD.
 
 ### Kmom03: TBD {#kmom03}
 
-TBD.
+Privacy, databaser och dataläckage. (POST vs GET, SQL injection och datahantering, url dataläckage, spara lösenord). Exempel på stora kända incidenter och dess orsaker. 
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -121,7 +114,12 @@ TBD.
 
 ### Kmom04: TBD {#kmom04}
 
-TBD.
+Risk och sårbarhetsanalys
+
+* Introduktion till existerande webbsäkerhetsprojekt,  till exempel Open Web
+* Application Security Project (OWASP).
+* attackträd, etc
+* swat?
 
 [Instruktion till kursmoment 04](./kmom04).
 
@@ -129,7 +127,7 @@ TBD.
 
 ### Kmom05: TBD {#kmom05}
 
-TBD.
+Olika attacker: XSS, session hijacking, redirect problem, directory traversal, etc…
 
 [Instruktion till kursmoment 05](./kmom05).
 
@@ -137,7 +135,10 @@ TBD.
 
 ### Kmom06: TBD {#kmom06}
 
-TBD.
+Säkerhetstestning (test-driven security)
+
+* koppla till OWASP, t.ex. Web Application Security Testing Cheat Sheet
+* incident response management
 
 [Instruktion till kursmoment 06](./kmom06).
 
@@ -254,9 +255,9 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 
 | Kursens moment  | Ladok moment enligt kursplan  | Betyg |
 |-----------------|-------------------------------|-------|
-| Kmom01 + kmom02 | Inlämning 1 á 2.5hp           | G-U   |
-| Kmom03 + kmom04 | Inlämning 2 á 2.5hp           | G-U   |
-| Kmom05 - kmom10 | Inlämning 3 á 2.5hp           | A-F   |
+| Kmom01 + kmom02 | Inlämningsuppgift 1 á 2.5hp   | G-U   |
+| Kmom03 + kmom04 | Inlämningsuppgift 2 á 2.5hp   | G-U   |
+| Kmom05 - kmom10 | Inlämningsuppgift 3 á 2.5hp   | A-F   |
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
