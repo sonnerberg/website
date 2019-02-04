@@ -62,6 +62,8 @@ Titta på följande video:
 
 1. Video om unittester: [Python Functions 2: Unit Testing](https://www.youtube.com/watch?v=F7a0iUH6kVA)
 
+1. Längre video om testning i Python: [Testing is Fun in Python!](https://www.youtube.com/watch?v=Sb2tz9Hlbp8)
+
 
 
 ###Lästips {#lastips}
