@@ -127,6 +127,8 @@ Risk och sårbarhetsanalys
 
 ### Kmom05: TBD {#kmom05}
 
+Säkerhetsrelaterade attacker.
+
 Olika attacker: XSS, session hijacking, redirect problem, directory traversal, etc…
 
 [Instruktion till kursmoment 05](./kmom05).

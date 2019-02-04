@@ -4,7 +4,7 @@ author:
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom02: TBD
+Kmom02: Skydda data
 ==================================
 
 [WARNING]
@@ -14,6 +14,8 @@ Kmom02: TBD
 Kursen planeras ge hösten 2019.
 
 [/WARNING]
+
+Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
 
 <!--stop-->
 

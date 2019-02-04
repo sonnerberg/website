@@ -4,7 +4,7 @@ author:
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom06: TBD
+Kmom06: Säkerhetstestning
 ==================================
 
 [WARNING]
@@ -14,6 +14,11 @@ Kmom06: TBD
 Kursen planeras ge hösten 2019.
 
 [/WARNING]
+
+Säkerhetstestning (test-driven security)
+
+* koppla till OWASP, t.ex. Web Application Security Testing Cheat Sheet
+* incident response management
 
 <!--stop-->
 

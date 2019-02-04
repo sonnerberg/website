@@ -4,7 +4,7 @@ author:
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom05: TBD
+Kmom05: Attacker
 ==================================
 
 [WARNING]
@@ -14,6 +14,10 @@ Kmom05: TBD
 Kursen planeras ge hösten 2019.
 
 [/WARNING]
+
+Säkerhetsrelaterade attacker.
+
+Olika attacker: XSS, session hijacking, redirect problem, directory traversal, etc…
 
 <!--stop-->
 

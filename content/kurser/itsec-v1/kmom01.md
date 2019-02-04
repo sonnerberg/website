@@ -4,7 +4,7 @@ author:
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom01: TBD
+Kmom01: Orientering
 ==================================
 
 [WARNING]
@@ -14,6 +14,8 @@ Kmom01: TBD
 Kursen planeras ge hösten 2019.
 
 [/WARNING]
+
+Översiktlig orientering i området informationssäkerhet, kategorisering av området samt terminologi, specifikt fokus säkerhetsområden som är relevanta att applicera på området webb.
 
 <!--stop-->
 

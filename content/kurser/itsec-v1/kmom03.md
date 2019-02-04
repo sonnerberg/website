@@ -4,7 +4,7 @@ author:
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom03: TBD
+Kmom03: Privacy
 ==================================
 
 [WARNING]
@@ -14,6 +14,8 @@ Kmom03: TBD
 Kursen planeras ge hösten 2019.
 
 [/WARNING]
+
+Privacy, databaser och dataläckage. (POST vs GET, SQL injection och datahantering, url dataläckage, spara lösenord). Exempel på stora kända incidenter och dess orsaker. 
 
 <!--stop-->
 

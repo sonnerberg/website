@@ -4,7 +4,7 @@ author:
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom04: TBD
+Kmom04: Sårbarhet
 ==================================
 
 [WARNING]
@@ -14,6 +14,13 @@ Kmom04: TBD
 Kursen planeras ge hösten 2019.
 
 [/WARNING]
+
+Risk och sårbarhetsanalys
+
+* Introduktion till existerande webbsäkerhetsprojekt,  till exempel Open Web
+* Application Security Project (OWASP).
+* attackträd, etc
+* swat?
 
 <!--stop-->
 
