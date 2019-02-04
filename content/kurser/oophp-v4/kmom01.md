@@ -56,6 +56,11 @@ Läs & Studera  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 
+<!--
+https://phpapprentice.com/
+-->
+
+
 
 ###Videor {#videor}
 
