@@ -106,6 +106,7 @@ $ mysql -uuser -ppass --local-infile skolan
 Du kan lägga till en inställning i din `$HOME/.my.cnf` som alltid tillåter dig använda LOAD DATA INFILE.
 
 ```text
+[mysql]
 loose-local-infile = 1
 ```
 
