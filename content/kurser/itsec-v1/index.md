@@ -88,7 +88,7 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-### Kmom01: TBD {#kmom01}
+### Kmom01: Orientering {#kmom01}
 
 Översiktlig orientering i området informationssäkerhet, kategorisering av området samt terminologi, specifikt fokus säkerhetsområden som är relevanta att applicera på området webb.
 
@@ -96,7 +96,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 
 
-### Kmom02: TBD {#kmom02}
+### Kmom02: Skydda data {#kmom02}
 
 Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
 
@@ -104,7 +104,7 @@ Skyddad data via hashning, kryptering samt identifiering och autentisering inklu
 
 
 
-### Kmom03: TBD {#kmom03}
+### Kmom03: Privacy {#kmom03}
 
 Privacy, databaser och dataläckage. (POST vs GET, SQL injection och datahantering, url dataläckage, spara lösenord). Exempel på stora kända incidenter och dess orsaker. 
 
@@ -112,7 +112,7 @@ Privacy, databaser och dataläckage. (POST vs GET, SQL injection och datahanteri
 
 
 
-### Kmom04: TBD {#kmom04}
+### Kmom04: Sårbarhet {#kmom04}
 
 Risk och sårbarhetsanalys
 
@@ -125,7 +125,7 @@ Risk och sårbarhetsanalys
 
 
 
-### Kmom05: TBD {#kmom05}
+### Kmom05: Attacker {#kmom05}
 
 Säkerhetsrelaterade attacker.
 
@@ -135,7 +135,7 @@ Olika attacker: XSS, session hijacking, redirect problem, directory traversal, e
 
 
 
-### Kmom06: TBD {#kmom06}
+### Kmom06: Säkerhetstestning {#kmom06}
 
 Säkerhetstestning (test-driven security)
 
