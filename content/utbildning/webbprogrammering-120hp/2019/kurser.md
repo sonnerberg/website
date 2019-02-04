@@ -2,6 +2,7 @@
 title: Kurser
 author: mos
 revision:
+    "2019-02-04": "(C, mos) Nytt upplägg för hösten termin 3."
     "2018-06-08": "(B, mos) Nya versioner på kurser."
     "2018-05-21": "(A, mos) Första utgåvan inför antagningen 20019."
 
@@ -87,12 +88,12 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk1-v2/block-kurser-kmom
+                                route: kurser/vlinux-v1/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk2-v2/block-kurser-kmom
+                                route: kurser/ramverk1-v2/block-kurser-kmom
                     column-3:
                         data:
                             meta:
@@ -118,7 +119,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/indproj/block-kurser-kmom
+                                route: kurser/jsramverk-v1/block-kurser-kmom
                     column-2:
                         data:
                             meta:
