@@ -5,10 +5,10 @@ author:
     - lew
     - mos
 revision:
-    "2018-12-21": (B, lew) ...
+    "2018-12-21": (B, lew) 
     "2018-12-21": (A, mos) Inför skapandet av linux v3, nytt namn, syfte, förkunskaper och kurskod.
 ...
-Kursen linux (v3)
+Kursen vlinux (v1)
 ==================================
 
 Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *linux*, och syftet med kursen är att studenten ska lära sig operativsystemet Linux och dess beståndsdelar såsom processer, filsystemet och terminalen. Kursens fokusområden ligger även i operativsystemets uppbyggnad, programhantering och serverhantering samt att programmera i språket bash. Studenten ska även lära sig skapa virtualiseringstekniker såsom VirtualBox och Docker.

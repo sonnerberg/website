@@ -25,7 +25,7 @@ Det finns övergripande planering i Google kalender som riktar sig till de som g
 Kurser per antagningsomgång {#kurserantagen}
 --------------------------------------------------------------
 
-Översikt av de kurser som ingår i programmet i en viss antagningsomgång, via dbwebbs kursöversikt.
+Översikt av de kurser som ingår i programmet i en viss antagningsomgång, via dbwebbs kursöversikt inklusive versioner av kurserna.
 
 
 

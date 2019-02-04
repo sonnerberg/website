@@ -1,4 +1,4 @@
-#### [linux (v3)](kurser/vlinux-v1)
+#### [vlinux (v1)](kurser/vlinux-v1)
 
 * [01: Linux som server](kurser/vlinux-v1/kmom01)
 * [02: Apache Virtual Hosts](kurser/vlinux-v1/kmom02)
