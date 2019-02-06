@@ -64,7 +64,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-# 1. Skapa ett sekvensdiagram över flödet som sker vid en valfri input från användaren. Spara det som "sekvens.png" i "queue" mappen.
+<!-- 1. Skapa ett sekvensdiagram över flödet som sker vid en valfri input från användaren. Spara det som "sekvens.png" i "queue" mappen. -->
 
 1. Skapa ett klassdiagram över Queue klassen. Spara det som "klass.png" i "queue" mappen.
 
