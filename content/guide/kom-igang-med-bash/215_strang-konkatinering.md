@@ -6,6 +6,8 @@ revision:
 Strängkonkatinering
 =======================
 
+Att bygga ihop strängar kallas som bekant *strängkonkatinering*. I Bash är det relativt rakt på sak. Vi använder dubbla citationstecken runt utskriften och placerar bara variablerna där vi vill ha dem. Tack vare de dubbla citationstecknen går det bra.
+
 ```bash
 #!/usr/bin/env bash
 #

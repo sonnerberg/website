@@ -17,8 +17,15 @@ Guiden förutsätter att du redan har en terminal. Här kan du få [hjälp att i
 
 
 
+<!-- Standard {#standard}
+------------------------------------
+
+Det finns en standard att följa, [POSIX](http://pubs.opengroup.org/onlinepubs/9699919799/). Man behöver något att hålla sig i när vinden viner och vi tar då ett stadigt tag om  -->
+
+
+
 Tips {#tips}
 -----------------------------------
 
 För terminalkommandon finns alltid manualen, till exempel `$ man ls` för kommandot ls.  
-För språkkonstruktioner m.m. finns bland annat [ss64](https://ss64.com/bash/).
+För språkkonstruktioner m.m. finns bland annat [ss64](https://ss64.com/bash/) och [Cheatsheet](https://devhints.io/bash).

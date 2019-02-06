@@ -3,10 +3,10 @@ author: lew
 revision:
     "": "(A, lew) Första versionen."
 ...
-Variabler
+Introduktion till variabler
 =======================
 
-Varabler i Bash kan innehålla vilket värde som helst, det är ett så kallat *otypat* språk. Vi tilldelar med `=` utan mellanslag mellan referensen och värdet. När vi vill använda variabeln använder vi ett dollartecken framför:
+Varabler i Bash kan innehålla vilket värde som helst, det är ett så kallat *otypat* språk. Vi tilldelar med `=` utan mellanslag mellan referensen och värdet. När vi vill referera till variabeln använder vi ett dollartecken framför.
 
 
 

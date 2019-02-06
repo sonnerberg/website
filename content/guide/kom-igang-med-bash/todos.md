@@ -14,7 +14,7 @@ rättigheter? -->
 #### variabler
 local variables
 declare
-CONSTANTS
+<!-- CONSTANTS -->
 -p
 
 

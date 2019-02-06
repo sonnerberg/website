@@ -7,5 +7,3 @@ revision:
 ...
 Grunder och struktur
 =======================
-
-Lite om variabler
