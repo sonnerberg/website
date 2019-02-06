@@ -14,3 +14,16 @@ Mina egna minnesanteckningar för saker som kan ingå (mer) i guiden. Eller inte
 * Mer övningar på join, union, outer jon, subqueries.
 * Om group_concat.
 * Hur spara datum, tid och hantera tidzoner.
+* Vilken ordning sker multijoin på?
+* 
+<!--
+
+ER
+
+* Hur välja primärnyckel
+* Foreign key
+* identifying relationship, non-identifying relationship
+    * https://stackoverflow.com/questions/762937/whats-the-difference-between-identifying-and-non-identifying-relationships
+* 
+
+-->
