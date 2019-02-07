@@ -1,11 +1,13 @@
 ---
 author:
     - mos
+    - efo
 category:
     - labbmiljo
     - kursen ramverk2
     - mongodb
 revision:
+    "2019-02-06": (C, efo) Uppdaterad med del om driftsättning.
     "2017-12-07": (B, mos) Docker-compose uppgradering MongoDB 3.6.
     "2017-11-21": (A, mos) Första utgåvan.
 ...
@@ -564,6 +566,25 @@ Så här kan det se ut när du kör igenom allt i en terminal.
 I följande asciinema kan du se flödet hur man jobbar med Docker i olika kontainerar för Express och MongoDB och hur man på olika sätt kan koppla sig mot dem.
 
 [ASCIINEMA src=149154 caption="Ett flöde hur man kan jobba i terminalen i kmom05."]
+
+
+
+Driftsättning på servern {#driftsatta}
+--------------------------------------------------------------------
+
+Vi använder Docker främst för att testa och snabbt få möjlighet för att jobba med olika services och databaser. På servern vill vi dock köra MongoDB som en databas på riktigt utanför Docker.
+
+Vi börjar med att installera `dirmngr`, för att kunna ta hand gpg nycklar, med kommandot `sudo apt-get install dirmngr`. Vi följer sedan de rekommenderade [installationsinstruktionerna hos MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/#using-deb-packages-recommended).
+
+Vi startar mongodb servicen med kommandot `sudo service mongod start` och kollar sedan i log filen att allt har gått bra, vi använder kommandot nedan.
+
+```bash
+sudo cat /var/log/mongodb/mongod.log | grep 27017
+```
+
+I utskriften ser vi (förhoppningsvis) längst ner: `I NETWORK  [initandlisten] waiting for connections on port 27017`.
+
+Nu kan vi köra kommandot `mongo` och använda mongodb databasen och mongodb skalet precis som tidigare, när mongodb låg i Docker.
 
 
 
