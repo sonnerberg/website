@@ -10,7 +10,7 @@ Rekursion
 
 [FIGURE src=/image/oopython/kmom05/recursion_top.png?w=c5 class="right"]
 
-Med rekursion menas en funktion som refererar till sig själv. Antingen direkt eller via en annan funktion. Det handlar om ett annat tankesätt än vad vi är vana vid, till exempel for-loopar och andra iterativa och linjära tankesätt.
+Med rekursion menas en funktion som anropar sig själv. Antingen direkt eller via en annan funktion. Det handlar om ett annat tankesätt än vad vi är vana vid, till exempel for-loopar och andra iterativa och linjära tankesätt.
 
 <!--more-->
 
@@ -28,33 +28,42 @@ The Three Laws of Recursion {#the-three-laws-of-recursion}
 
 Rekursion har tre lagar (The Three Laws of Recursion):  
 
-1. En rekursiv algoritm måste ha ett basfall
+1. En rekursiv funktion måste ha ett basfall, något som kontrollerar hur många gånger den upprepas. 
 
-2. En rekursiv algoritm måste ändra sitt tillstånd och arbeta sig mot basfallet
+2. En rekursiv funktion måste ändra sitt tillstånd och arbeta sig mot basfallet
 
-3. En rekursiv algoritm måste kalla på sig själv, rekursivt.
+3. En rekursiv funktion måste kalla på sig själv, rekursivt.
 
 En viktig sak att tänka på är att det är lätt att hamna i ett "infinite" läge. Tänk dig följande kod som är tänkt att summera alla heltal från 1 till n:  
 
 ```python
-def recursive_sum(n):
+def recursive_sum(times):
     # Här kallar vi på funktionen rekursivt
-    return n + recursive_sum(n-1)
+    return n + recursive_sum(times-1)
 
 ```
 
 Den kommer aldrig sluta snurra, då vi inte har ett basfall. Vi behöver en tröskel där det tar stopp och rekursionen avslutas:
 ```python
-def recursive_sum(n):
-    # Här är basfallet. När n kommer till 1 så returneras bara värdet.
-    if n <= 1:
-        return n
+def recursive_sum(times):
+    # Här är basfallet. När times kommer till 1 så returneras bara värdet.
+    if times <= 1:
+        return times
     else:
         # Vi ändrar tillståndet och jobbar oss mot basfallet
-        return n + recursive_sum(n-1)
+        sum_so_far = times + recursive_sum(times-1)
+        print(sum_so_far)
+        return sum_so_far
+>>> recursive_sum(5)
+3
+6
+10
+15
 ```
+Nu har vi ett basfall, `if n <= 1: `, som stoppar de rekursiva anropen, vi har ett tillstånd, `times`, som ändras mot basfallet,`times-1`, och vi har ett rekursivt anrop, `sum_so_far = times + recursive_sum(times-1)`.
 
 Nu uppfyller vi alla 3 kraven. Ett tips är att alltid börja implementera basfallet för att förhindra ett infinite-läge.
+Antalet gånger en rekursiv funktion anropar sig själv kallas för *the depth of recursion*. Funktionen ovanför med argumentet 5 har djupet fem. När funktionen anropas den femte gången har `times` värdet 0 och då inträffar basfallet.
 
 
 

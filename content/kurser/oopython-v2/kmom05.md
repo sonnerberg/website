@@ -15,7 +15,7 @@ Kursmomentet är under översyn inför vårterminen 2019.
 [/WARNING]
 
 
-Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Inbyggda sorteringsfunktioner baseras på en eller flera av de klassiska algoritmerna.  
+Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Samtidigt ska vi lära oss hur man skriver rekursiva funktioner.
 
 <!--more-->
 
@@ -29,14 +29,14 @@ Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och f
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)*
+1. [Sorting algorithms and big-O](https://brilliant.org/wiki/sorting-algorithms/). Visar inte kod men men visualiserar och förklarar bra hur sorterings algoritmerna fungerar.
+
 
 
 ###Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
-Det finns inget kapitel för det här kursmomentet.
 
 
 
@@ -44,9 +44,7 @@ Det finns inget kapitel för det här kursmomentet.
 
 Läs följande:
 
-1. [Sorting algorithms and big-O](https://brilliant.org/wiki/sorting-algorithms/). Visar inte kod men är tydlig med bilder och förklarar hur de fungerar.
-
-1. [visualgo](https://visualgo.net/en/sorting). Interaktiv sida som visualiserar hur tal sorteras och hur koden exekveras med olika algoritmer.
+1. [visualgo](https://visualgo.net/en/sorting). Interaktiv sida som visualiserar hur tal sorteras och även pseudo kod för olika algoritmer.
 
 
 
