@@ -85,7 +85,7 @@ Du behöver nu dubbelkolla att Atom har ett antal nödvändiga inställningar.
 
 
 
-###Använd UTF-8 NOBOM {#utf8}
+### Använd UTF-8 NOBOM {#utf8}
 
 Kika under "Core" och leta reda på "File Encoding".
 
@@ -95,7 +95,7 @@ Standardinställningen är att filerna sparas i formatet UTF-8 utan byte order m
 
 
 
-###Använd soft tabs, tab-längd 4 {#softtabs}
+### Använd soft tabs, tab-längd 4 {#softtabs}
 
 Leta under fliken "Editor" och finn "Soft Tabs". Standardinställningen är att *soft tabs* används. Låt det vara på det viset.
 
@@ -111,7 +111,7 @@ Olika kodstandarder kan ha olika rekommendationer om storleken på en soft tab. 
 
 
 
-###Radslut enligt Unix-style {#lineending}
+### Radslut enligt Unix-style {#lineending}
 
 Vi vill använda radslut enligt Unix-style (`\n`), också kallad LF. Det blir enklast så, för en webbprogrammerare.
 
