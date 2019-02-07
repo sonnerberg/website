@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-07": "(D, mos) Uppdaterade rubriker för sista uppgiften."
     "2019-02-01": "(C, mos) Genomgången efter feedback från studenter."
     "2019-01-15": "(B, mos) Uppdelad i två delar då HAVING fick mer material."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -159,16 +160,16 @@ Gör ytterligare en rapport.
 1. Visa den avrundade snittlönen (`ROUND()`) grupperad per avdelning och per kompetens, sortera enligt avdelning och snittlön. Visa även hur många som matchar i respektive gruppering. Ditt svar skall se ut så här.
 
 ```sql
-+-----------+-----------+-----------------+----------+
-| avdelning | kompetens | ROUND(AVG(lon)) | Snittlon |
-+-----------+-----------+-----------------+----------+
-| ADM       |         3 |           27594 |        1 |
-| ADM       |         2 |           30000 |        1 |
-| ADM       |         7 |           85000 |        1 |
-| DIDD      |         1 |           37580 |        1 |
-| DIDD      |         2 |           49880 |        1 |
-| DIPT      |         1 |           27594 |        2 |
-| DIPT      |         2 |           45000 |        1 |
++-----------+-----------+----------+----------+
+| Avdelning | Kompetens | Snittlon | Antal    |
++-----------+-----------+----------+----------+
+| ADM       |         3 |    27594 |        1 |
+| ADM       |         2 |    30000 |        1 |
+| ADM       |         7 |    85000 |        1 |
+| DIDD      |         1 |    37580 |        1 |
+| DIDD      |         2 |    49880 |        1 |
+| DIPT      |         1 |    27594 |        2 |
+| DIPT      |         2 |    45000 |        1 |
 +-----------+-----------+-----------------+----------+
 7 rows in set (0.00 sec)
 ```
