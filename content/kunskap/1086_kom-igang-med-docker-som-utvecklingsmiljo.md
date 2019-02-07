@@ -33,7 +33,7 @@ Docker {#docker}
 
 Information om Docker hittar du på [docker.com](https://www.docker.com). Låt oss hålla det enkelt och jämföra Docker med virtualiseringsmiljön VirtualBox. Vi kan använda det för att köra andra operativsystem på vår egen dator, eller operativsystem paketerade tillsammans med programvaror. Docker kallar en sådan samling av operativsystem och programvara för en _image_ som körs i en _kontainer_. Vi kan till exempel starta upp en kontainer som bygger på en image med Linux, Apache, PHP och MySQL, och vi kan använda det utan att behöva installera dessa programvaror på vår egen dator.
 
-Vi börjar med att installera Docker för att se hur det fungerar. 
+Vi börjar med att installera Docker för att se hur det fungerar.
 
 
 
@@ -42,11 +42,22 @@ Installera Docker {#installera}
 
 Webbplatsen för Docker innehåller en del där du kan ladda hem och installera Docker. Det finns en Community Edition (CE) versioner för Windows, Mac och Linux. Kör igenom installationen enligt anvisningarna.
 
-Docker är en virtualiseringsmiljö så den kräver att din datorn är kapabel att köra vissa virtualiseringstekniker. 
+Docker är en virtualiseringsmiljö så den kräver att din datorn är kapabel att köra vissa virtualiseringstekniker.
 
 Du behöver bekanta dig med [dokumentationen för Docker](https://docs.docker.com/). Det är din vägledare för att komma igång med Docker.
 
 Du kan välja att skapa ett konto på Docker. Det kan vara en bra idé om du vill pröva på att göra egna kontainrar. Gör så.
+
+
+
+Windows, Docker och bcrypt {#dockerbcrypt}
+--------------------------------------------------------------------
+
+Ibland kan kombinationen av Windows, Docker och npm modulen bcrypt ställa till med stora problem. Ett tips hämtat från [installationsmanualen för bcrypt](https://github.com/kelektiv/node.bcrypt.js/wiki/Installation-Instructions#microsoft-windows) är att installare npm paketet `windows-build-tools` med kommandot nedan. Installera det i kommandotolken (cmd) eller Powershell så Windows har tillgång till det.
+
+```bash
+npm install --global --production windows-build-tools
+```
 
 
 
@@ -242,7 +253,7 @@ docker-compose up
 docker-compose up -d
 ```
 
-Vi kan se att de kör med kommandot `docker ps` eller `docker container`. 
+Vi kan se att de kör med kommandot `docker ps` eller `docker container`.
 
 ```bash
 docker ps
