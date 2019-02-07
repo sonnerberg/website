@@ -48,7 +48,7 @@ mysql> SELECT DISTINCT
 
 Vi kan titta i tabellen lärare och se att vi har 8 lärare totalt och 2 saknas alltså. Vi kan snabbt klura ut att det är Dumbeldore och Filch som inte undervisar.
 
-Men hur kan vi skriva en SELECT-fråga som visar det?
+Men hur kan vi skriva en SELECT-fråga som visar det? Låt oss kika på OUTER JOIN.
 
 
 
