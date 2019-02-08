@@ -83,6 +83,12 @@ Dessa uppgifter skall utföras och redovisas.
 
     * Lös uppgiften "[Bygg orderhantering till en Eshop](uppgift/bygg-orderhantering-till-en-eshop)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för orderhantering.
 
+<!--
+från kmom04, borttagen
+
+1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`. (En liknande uppgift kommer i nästa kursmoment).
+-->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
