@@ -122,6 +122,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vad är rekursion?  
 * Känner du att du har förståelse för hur sorteringsalgoritmerna fungerar?  
+* Vad tycker du om [VisuAlgo](https://visualgo.net/en/sorting)]?
 * Vad är big-O?
 * Gjorde du någon av extrauppgift?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
