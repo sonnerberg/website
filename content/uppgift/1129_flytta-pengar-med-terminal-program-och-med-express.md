@@ -5,10 +5,10 @@ category:
     - nodejs
     - mysql
     - express
-    - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-09": (A, mos) Första utgåvan.
+    "2019-02-08": "(B, mos) Genomgången fokus mot kursen databas."
+    "2018-01-09": "(A, mos) Första utgåvan."
 ...
 Flytta pengar med terminalprogram och med Express
 ==================================
@@ -30,7 +30,7 @@ Du har jobbat igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)
 
 Du har jobba igenom artikeln "[Koppla appservern Express till databasen MySQL](kunskap/koppla-appservern-express-till-databasen-mysql)" och du har en kodbas från artikeln som ger dig en webbklient.
 
-Du har löst uppgiften "[Node.js terminalprogram mot MySQL med kommandoloop](uppgift/nodejs-terminalprogram-mot-mysql-med-kommandoloop)" och har därmed ett terminalprogram att utgå ifrån.
+Du har tidigare löst uppgiften "[Node.js terminalprogram mot MySQL med kommandoloop](uppgift/nodejs-terminalprogram-mot-mysql-med-kommandoloop)" och har därmed ett terminalprogram att utgå ifrån.
 
 
 
@@ -47,7 +47,7 @@ I båda klienterna så hårdkodar vi att 1.5 pengar flyttas från ena kontot til
 
 I nästa kmom gör vi flytten mer flexibel så man kan bestämma konto och antal pengar.
 
-Utseendet på webbklienten kan vara så här.
+Utseendet på webbklienten kan vara så här. Varje gång du laddar om sidan så flyttas mer pengar.
 
 [FIGURE src=image/snapvt18/bank-move-to-adam.png caption="Adam har precis fått 1.5 pengar."]
 
@@ -80,17 +80,23 @@ Krav {#krav}
 
 1. Inloggningsdetaljer till databasen skall sparas i `config/db/bank.json` och delas mellan webbklient och terminalklient.
 
-1. Flytten av pengar skall utföras inom ramen för en transaktion.
+1. Flytten av pengar skall alltid utföras inom ramen för en transaktion.
 
-1. Bygg vidare på din webbklient och lägg till en sida `bank/move-to-adam`. Varje gång man går in på den sidan skall det flyttas 1.5 pengar till Adam från Eva. Sidan visar bara ett tackmeddelande från Adam som tackar för pengarna.
+1. Din webbklient har en sida `bank/index` som hälsar välkommen till banken och visar en meny över de saker man kan göra.
 
-1. Sidlayouten skall vara gemensam och innehålla en navigeringsmöjlighet mellan de sidor som är relaterade till banken.
+1. Din webbklient har en sida `bank/balance` som visar en kontoöversikt.
 
-1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Eventuell övrig kod lägger du i moduler under katalogen `src/`. Terminalprogrammet skall startas med `node cli.js`.
+1. Bygg vidare på din webbklient och lägg till en sida `bank/move-to-adam`. Varje gång man går in på den sidan skall det flyttas 1.5 pengar från Eva till Adam. Sidan visar bara ett tackmeddelande från Adam som tackar för pengarna.
+
+1. Sidlayouten skall vara gemensam header och footer för samtliga sidor.
+
+1. Det skall finnas en meny i header som ger en navigeringsmöjlighet mellan de sidor som är relaterade till banken.
+
+1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Övrig kod lägger du i moduler under katalogen `src/`. Terminalprogrammet skall startas med `node cli.js`.
 
 1. Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas.
 
-1. I terminalprogrammet, skapa kommandot `move` som flyttar 1.5 pengar från Adam till Eva.
+1. I terminalprogrammet, skapa kommandot `move` som flyttar 1.5 pengar från Adam till Eva. TIPS: se första extrauppgiften nedan, det kan förenkla din implementation.
 
 1. Validera din kod.
 
@@ -108,9 +114,13 @@ Extrauppgift {#extra}
 
 Gör följande om du har tid och ro.
 
+1. Se till att skriva en funktion som flyttar pengarna och dela den mellan webbklienten och terminalklienten. Funkttionen kan ta parametrar för `fromAccount`, `toAccount` och `amount`. Då får du en god kodstruktur.
+
 1. Lägg till kommandot `balance` i terminalen så att du kan se balansen på konton, på liknande sett man gör i webbklienten.
 
-1. Jobba på din kodstruktur så att du bli nöjd. Se till att du kan återanvända databaskoden mellan de båda klienterna. Strukturera koden i funktioner och moduler.
+1. Lägg till kommandot `move <amount>` i din terminalklient.
+
+1. Snygga till din webklient med CSS och se över så att navigeringen är smidig mellan sidorna.
 
 
 
