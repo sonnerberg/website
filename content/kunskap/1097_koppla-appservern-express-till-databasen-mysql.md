@@ -4,10 +4,10 @@ category:
     - nodejs
     - javascript
     - express
-    - kursen dbjs
     - kursen databas
 revision:
-    "2018-01-09": (A, mos) Första utgåvan.
+    "2019-02-08": "(B, mos) Genomgången fokus mot kursen databas."
+    "2018-01-09": "(A, mos) Första utgåvan."
 ...
 Koppla appservern Express till databasen MySQL
 ==================================
@@ -33,7 +33,7 @@ Du har jobbat igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)
 
 Du har sedan tidigare kopplat samman Node.js, JavaScript med MySQL via terminalprogram.
 
-De exempelprogram som används i artikeln finns i ditt kursrepo (dbjs, databas) under `example/express-mysql` och `example/express`.
+De exempelprogram som används i artikeln finns i ditt kursrepo databas under `example/express-mysql` och `example/express`.
 
 
 
