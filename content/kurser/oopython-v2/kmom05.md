@@ -46,6 +46,7 @@ Läs följande:
 
 1. [visualgo](https://visualgo.net/en/sorting). Interaktiv sida som visualiserar hur tal sorteras och även pseudo kod för olika algoritmer.
 
+1. [Python thinking recursively](https://realpython.com/python-thinking-recursively/). Intressant artikel som pratar om hur rekursion fungerar i Python.
 
 
 ###Video  {#video}
