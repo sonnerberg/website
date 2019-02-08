@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-09": "(C, mos) Förtydligade felsökning av load local infile."
     "2019-01-29": "(B, mos) Uppdaterad med felhantering och hur man fixar det."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -97,18 +98,38 @@ Eventuellt får du nu ett felmeddelande.
 
 > "ERROR 1148 (42000): The used command is not allowed with this MySQL version"
 
-Det kan bero på att du inte startade klienten mysql med optionen `--local-infile`.
+Det kan bero både på terminalklienten och på din databasserver. Låt oss lösa båda dessa potentiella problem.
+
+
+
+### Terminalklienten {#fixterminal}
+
+Felet kan bero på att du inte startade klienten mysql med optionen `--local-infile=1`.
 
 ```text
-$ mysql -uuser -ppass --local-infile skolan 
+$ mysql -uuser -ppass --local-infile=1 skolan 
 ```
 
-Du kan lägga till en inställning i din `$HOME/.my.cnf` som alltid tillåter dig använda LOAD DATA INFILE.
+Du kan också lägga till denna inställning i din `$HOME/.my.cnf` som alltid tillåter dig använda LOAD DATA INFILE.
 
 ```text
 [mysql]
 loose-local-infile = 1
 ```
+
+Du kan verifiera att din fil `.my.cnf` ger rätt default inställningar till terminalklienten.
+
+```text
+$ mysql --print-defaults
+mysql would have been started with the following arguments:
+--loose-local-infile=1
+```
+
+Det är flera inställningar som skrivs ut, de kommer från din `.my.cnf`. Det är specifikt inställningen för `--loose-local-infile=1` som vi vill se.
+
+
+
+### Databasservern {#fixserver}
 
 Felet 1148 kan också bero på att LOAD LOCAL INFILE är avstängt på databasservern och vi behöver sätta på det.
 
