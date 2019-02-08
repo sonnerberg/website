@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-08": "(D, mos) Länk till forumtråd för mer tips om join med kurser och ålder."
     "2019-02-07": "(C, mos) Förtydligande om uppgift med kurser och ålder."
     "2019-01-29": "(B, mos) Genomgången och bytte namn på vyn."
     "2018-01-03": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -252,6 +253,8 @@ Det bör se ut så här när du svarar, gör en exakt likadan rapport.
 ```
 
 Nu har ledningen fått hjälp i sin planering inför nyrekrytering av lärare. De kan nu se exakt vilka kurser och kompetensområden som behövs ersättas.
+
+Vill du ha tips och ledning så finns i forumet tråden "[Uppdatering Joina tabeller - Lärares ålder](t/8293)".
 
 
 
