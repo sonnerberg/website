@@ -1,32 +1,33 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
-    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2019-02-08": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-09": "(A, mos) Första utgåvan."
 ...
 Kmom04: Transaktioner
 ====================================
 
-[WARNING]
+Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Vi skapar SQL-kod som kan skapa databasens schema.
 
-**Översikt pågår**
+Kursmomenten introducerar begreppet transaktioner i en databas och vi tränar påp SQL-kod för att hantera COMMIT och ROLLBACK i transaktioner.
 
-Kursmomentet är under översyn inför vårterminen 2019.
+I kursmomentet får vi också möta en webbserver för Node.js i form av Express.js. Du kommer igång med Express och ser hur du kan bygga upp grunderna i en webbtjänst och hur du kan skriva din applikationskod för att komma åt en databas och visa rapporter från den och uppdatera databasens innehåll via webbplatsen.
 
-[/WARNING]
-
-Kursmomenten hanterar begreppet transaktioner i en databas.
-
-I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp grunderna i en webbtjänst och hur du kan skriva din applikationskod för att komma åt en databas, visa rapporter och uppdatera innehåll.
-
-Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Den resulterande databasen implementeras och vi använder Express för att skapa ett webbaserat gränssnitt. Vi bygger en terminalklient för att skapa ett textbaserat gränssnitt mot databasen.
 
 <!--more-->
 
-[FIGURE src=image/snapvt18/bank-header-footer.png caption="En bank i Express som kopplar sig till MySQL, redo för transaktioner."]
+[FIGURE src=image/snapvt18/bank-header-footer.png?w=w3 caption="En bank i Express som kopplar sig till MySQL, redo för transaktioner."]
 
-[FIGURE src=image/snapvt18/bank-terminal-move.png caption="Via terminalklienten kan du flytta pengar mellan två konton, i skydd av en transaktion."]
+[FIGURE src=image/snapvt18/bank-terminal-move.png?w=w3 caption="Via terminalklienten kan du flytta pengar mellan två konton, i skydd av en transaktion."]
+
+[FIGURE src=image/kunskap/kokbok-databasmodellering/image00.jpg?w=w3 caption="Vi översätter vår ER-modell till relationsmodellen och skapar SQL-kod."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -38,14 +39,14 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-### Kurslitteratur  {#kurslitteratur}
+### Databasteknik: Transaktioner {#databasteknik-trans}
 
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 24: Transaktioner
 
-Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
+Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2. Det finns ett kapitel om transaktioner.
 
 Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, det går utanför kursens ram men läs vid intresse.
 
@@ -54,13 +55,39 @@ Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, 
 
 
 
-### Artiklar {#artiklar}
+### Node.js och Express.js {#express}
+
+Läs följande som är relaterat till att bygga en webbserver i Node.js med applikationsservern Express.js.
+
+1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kolla runt i dokumentationen och bekanta dig med begrepp och exempelkod.
+
+
+
+### Databasteknik: ER-modellering {#databasteknik-er}
 
 Läs följande:
 
-1. Om du känner behov av att träna upp dig i, eller repetera, tekniker för klientsidan (webbläsaren) med HTML, CSS och JavaScript så kan du utgå från tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)" som ger dig en snabb insyn i de tre teknikerna och hur de samverkar i webbläsaren.
+1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 5: Relationsmodellen
+    * Kap 6: Översättning från ER-modellen till relationsmodellen
 
-1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kolla runt i dokumentationen och bekanta dig med begrepp och exempelkod.
+En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa om ER-modellering och hur du översätter ER-modellen till relationsmodellen.
+
+Det finns ytterligare kapitel i boken som är relaterat till modellering. De går utanför kursens ram men läs vid intresse.
+
+1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 3: Mer om datamodellering
+    * Kap 12: Normalformer och normalisering
+
+
+
+### ER-modellering {#ermodellering}
+
+Följande är samma resurser som används i kmom03. Fortsätt läsa och repetera vid behov. Det ger dig stöd för uppgiften om Er-modellering.
+
+1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig processen du skall följa.
+
+1. Reptera videon, vid behov, [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
 
 
 
@@ -68,11 +95,6 @@ Läs följande:
 -------------------------------------------
 
 *(ca: 8-10 studietimmar)*
-
-
-<!--
-1. Du behöver ha grundläggande koll på HTML och CSS. Som en uppfräschning av dina kunskaper, eller som en kort intro, så jobbar du igenom materialet i tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)". Jobba igenom materialet grundligt eller översiktligt, beroende på ditt eget behov.
--->
 
 
 
@@ -105,16 +127,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-<!--
-Fix i 2018 lp3, ta bort.
-###Extra {#extra}
-
-Dessa uppgifter är extrauppgifter och görs om du har tid och kraft över.
-
-1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`. (En liknande uppgift kommer i nästa kursmoment).
--->
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -125,8 +137,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur gick det att förstå konceptet transaktioner i databas?
-* Gick det bra att komma igång med Express och MySQL?
-* Lyckas du med god kodstruktur för terminal och webbklient?
-* Gick det bra att sluföra uppgiften om ER modellering samt implementera databasen och de båda klienterna?
-* Känns det som du har koll på teknikerna och hur de samverkar eller känner du saknad av något?
+* Gick det bra att komma igång med Express.js, Node, EJS och MySQL?
+* Lyckas du med god kodstruktur för terminal och webbklient, du såg att man kunde göra en enda funktion som löste flytten av pengar åt båda hållen?
+* Gick det bra att sluföra uppgiften om ER modellering samt skapa SQL-kod för databasen?
+* Hur känner du allmänt inför kursen så här långt?
 * Vilken är din TIL för detta kmom?
