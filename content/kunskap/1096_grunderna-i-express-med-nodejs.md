@@ -4,22 +4,22 @@ category:
     - nodejs
     - javascript
     - express
-    - kursen dbjs
     - kursen databas
 revision:
-    "2018-02-13": (B, mos) Uppdaterad routeIndex istället för index.
-    "2018-01-08": (A, mos) Uppdaterad utgåva, omskriven från annan artikel, att användas till dbjs och databas.
+    "2019-02-08": "(C, mos) Genomgången fokus mot kursen databas."
+    "2018-02-13": "(B, mos) Uppdaterad routeIndex istället för index."
+    "2018-01-08": "(A, mos) Uppdaterad utgåva, omskriven från annan artikel, att användas till dbjs och databas."
 ...
-Grunderna i Express med Node.js 
+Grunderna i Express.js med Node.js 
 ==================================
 
 [FIGURE src=image/snapvt17/npm-express.png?w=c5&a=0,30,20,0&cf class="right"]
 
-Vi skall bygga en applikations- och webbserver med hjälp av Node.js och modulen Express.
+Vi skall bygga en applikations- och webbserver med hjälp av Node.js och modulen Express.js.
 
-Servern skall servera statiska filer som bilder, CSS och JavaScript (klientsidan) tillsammans med dynamiska routes som hanteras av JavaScript på serversidan med Express och Node.js.
+Servern skall servera statiska filer som bilder, CSS och JavaScript (klientsidan) tillsammans med dynamiska routes som hanteras av JavaScript på serversidan tillsammans med Express.js och Node.js.
 
-Som templatemotor använder vi EJS, den hjälper oss att rendera HTML-sidor med dynamisk information från JavaScript. Med en templatemotor kan vi generera delar av HTML-koden och skriva ut innehåll från variabler i JavaScript, så att sidornas innehåll blir dynamiskt.
+Som templatemotor använder vi Embedded JavaScript templating (EJS) vilken hjälper oss att rendera HTML-sidor med dynamisk information från JavaScript. Med en templatemotor kan vi generera delar av HTML-koden och skriva ut innehåll från variabler i JavaScript, så att sidornas innehåll blir dynamiskt.
 
 <!--more-->
 
@@ -32,14 +32,16 @@ Du kan grunderna i Node.js och JavaScript på serversidan.
 
 Det är bra om du har grundläggande kunskap i HTML och CSS (samt JavaScript på klientsidan). Dessa tekniker används i artikeln men gås inte igenom i detalj. 
 
-De exempelprogram som används i artikeln finns i ditt kursrepo (dbjs, databas) under `example/express`.
+De exempelprogram som används i artikeln finns i ditt kursrepo databas under `example/express`.
 
 
 
 Om Express och MEAN {#om}
 --------------------------------------
 
-[Express](https://expressjs.com/) är en webb- och applikationsserver för Node.js. Express är en del av konceptet [MEAN](http://mean.io/) som är en samling moduler för att bygga webbapplikationer med Node.js. I denna artikeln kommer vi att använda Express (E) och Node.js (N) i MEAN.
+[Express](https://expressjs.com/) är en webb- och applikationsserver för Node.js. Express är en del av konceptet [MEAN](http://mean.io/) som är en samling moduler för att bygga webbapplikationer med Node.js. I denna artikeln kommer vi att använda Express.js (E) och Node.js (N) i MEAN.
+
+M:et står för MongoDB som är en databas och A:et står för Angular som är ett JavaScript-ramverk för att bygga webbplatser. Dessa två delar kommer vi inte att beröra.
 
 När MEAN introducerades växte konceptet inledningsvis som en motsvarighet till LAMP/WAMP/MAMP/XAMPP som används för webbutveckling enligt Linux/Windows/MacOS, Apache, MariaDB/MySQL och PHP. Numer är själva konceptet MEAN inte så starkt, men dess delar är högst relevanta.
 
@@ -59,15 +61,17 @@ npm init
 
 Du kan bara trycka enter efter varje fråga, det är inget vi behöver ändra.
 
-Nu kan vi installera paketen vi skall använda. Det är [`express`](https://www.npmjs.com/package/express) och [`ejs`](https://www.npmjs.com/package/ejs). Vi väljer att spara dem i vår `package.json`.
+Nu har du en fil `package.json` i din katalog.
+
+Nu kan vi installera paketen vi skall använda. Det är [`express`](https://www.npmjs.com/package/express) och [`ejs`](https://www.npmjs.com/package/ejs).
 
 ```bash
-npm install express ejs --save
+npm install express ejs
 ```
 
 De moduler som installeras sparas i filen `package.json` med en rad om vilken version som installerades. Du kan öppna filen i din texteditor och se vad den innehåller.
 
-Klart. Då testar vi om installationen gick bra.
+Klart. Då testar vi om installationen gick bra genom att bygga en server i Express.
 
 
 
@@ -125,7 +129,7 @@ app.listen(port, () => {
 });
 ```
 
-Koden (som finns i `example/express/index1.js`) förbereder Express-servern i variabeln `app` och lägger till två routes för _patherna_ `/` och `/about`. De kommer ge olika svar när vi når dem via webbläsaren. Vi lägger även till en middleware som anropas oavsett path, den skriver ut detaljer om inkommande request, bra för debugging. I slutet av koden startar vi servern på vald port och skriver ut detaljer i terminalen om servern som startats.
+Koden (som finns i ditt kursrepo under `example/express/index1.js`) förbereder Express-servern i variabeln `app` och lägger till två routes för _patherna_ `/` och `/about`. De kommer ge var sitt svar när vi når dem via deras path i webbläsaren. Vi lägger även till en middleware som anropas oavsett path, den skriver ut detaljer om inkommande request, bra för debugging. I slutet av koden startar vi servern på vald port och skriver ut detaljer i terminalen om servern som startats.
 
 Så här startar jag via Node.js.
 
@@ -261,6 +265,8 @@ app.use(middleware.logIncomingToConsole);
 ```
 
 Det blir allt mindre kod i `index2.js` och mer överskådligt. Det är bra när kodbasen växer.
+
+Begreppet middleware är vanligt i ett sådant här sammanhang, det är kod som är tänkt att köra innan en eller flera route callbacks anropas. Det kan till exempel innebära loggning eller at tverifiera att en användare är inloggad och har rätt att uföra den callback som anropas.
 
 
 
@@ -473,7 +479,7 @@ Vyer och templatemotor {#vyer}
 
 Låt oss kika på hur vi kan rendera svar som är en kombination av HTML och JavaScript variabler, vi kallar det dynamiska sidor eftersom de ändrar utseende beroende på variablernas innehåll.
 
-Vi använder [EJS](http://ejs.co/) som templatemotor, deras hemsida stöttar oss med dokumentationen. Den är bra att ha tillhanda nu när vi skall börja använda Pug för att skapa dynamiska HTML-sidor.
+Vi använder [EJS](http://ejs.co/) som templatemotor, deras hemsida stöttar oss med dokumentationen. Den är bra att ha tillhanda nu när vi skall börja använda templatemotorn för att skapa dynamiska HTML-sidor.
 
 Jag kopierar `index3.js` och sparar som `index4.js` och gär där mina ändringar.
 
@@ -481,7 +487,7 @@ Låt oss skapa minsta möjliga setup för att ladda en vy-fil som skriver ut dag
 
 
 
-###EJS med Express {#ejsexp}
+### EJS med Express {#ejsexp}
 
 Vi behöver säga till Express att vi vill använda EJS som templatemotor. Express har stöd för många olika templatemotorer.
 
