@@ -6,14 +6,6 @@ revision:
 ...
 Kmom05: Sorteringsalgoritmer och datastrukturer
 ====================================
-[WARNING]
-
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
-
 
 Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Samtidigt ska vi lära oss hur man skriver rekursiva funktioner.
 
