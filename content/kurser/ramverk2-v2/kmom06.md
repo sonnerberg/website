@@ -10,14 +10,6 @@ revision:
 Kmom06: Dokumentorienterad databas
 ==================================
 
-[WARNING]
-
-** Kursutveckling pågår till kurs ramverk2 v2 **
-
-Kursstart våren 2019.
-
-[/WARNING]
-
 Vi skall se hur vi kan jobba med databasen MongoDB, en dokumentorienterad databas som klassas i NoSQL-gruppen av databaser. För att koppla oss till databasen använder vi klienter i terminalen och kod i Node.js, med och utan Express.
 
 Vi knyter samman alla delar med hjälp av Docker. Vi installerar MongoDB i en kontainer och vi kör Express i en egen kontainer och låter de båda kontainrarna kommunicera, samtidigt som vi kan kommunicera direkt med varje kontainer från terminalen.
