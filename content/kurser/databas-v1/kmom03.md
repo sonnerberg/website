@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image02.jpg?w=1100&h=300&cf&a=0,0,16,0&f=grayscale"
 author: mos
 revision:
+    "2019-02-08": "(D, mos) Flyttade vissa läsanvisningar om ER modellering till kmom04."
     "2019-01-31": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-05": "(A, mos) Första utgåvan."
@@ -52,16 +53,8 @@ Läs följande:
     * Kap 8: (repetera) Mer om SQL: Aggregatfunktioner, null-värden, yttre join
     * Kap 2: ER-modellering
     * Kap 4: Designpocessen
-    * Kap 5: Relationsmodellen
-    * Kap 6: Översättning från ER-modellen till relationsmodellen
 
-En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1.
-
-Det finns ytterligare kapitel i boken som är relaterat till modellering. De går utanför kursens ram men läs vid intresse.
-
-1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 3: Mer om datamodellering
-    * Kap 12: Normalformer och normalisering
+En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa mer om ER-modellering i webbkursen.
 
 
 
