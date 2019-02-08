@@ -8,6 +8,7 @@ category:
     - kurs oophp
     - kurs databas
 revision:
+    "2019-02-08": "(D, mos) Genomgången och fokus mot kursen databas."
     "2018-01-05": "(C, mos) Genomgången och nu även i kursen databas."
     "2017-04-25": "(B, mos) Nu även i kursen oophp."
     "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
@@ -17,9 +18,9 @@ Transaktioner i databas
 
 [FIGURE src=/image/snapvt17/sqlite-transaction.png?w=c5&a=0,50,50,0 class="right"]
 
-En transaktion i en databas omsluter flera händelser och gör dem atomära, antingen utförs samtliga händelser eller ingen.
+En transaktion i en databas omsluter flera händelser och gör dem atomära -- antingen utförs samtliga händelser, eller ingen.
 
-Säg till exempel att man vill flytta pengar från en ägare till en annan och informationen om detta finns i en databas. Först plockar man bort pengen från den ena och sedan lägger man till pengen till den andre. Flytten som består av två SQL-satser måste utföras i sin helhet, eller inte alls. Här kommer en transaktion till hjälp.
+För att ta ett exempel där man vill flytta pengar från en ägare till en annan och informationen om detta finns i en databas. Först plockar man bort pengen från den ena och sedan lägger man till pengen till den andre. Flytten som består av två SQL-satser måste utföras i sin helhet, eller inte alls. Här kommer en transaktion till hjälp. Transaktionen kan garantera att båda SQL-satserna utförs i sin helhet, eller ingen alls.
 
 <!--more-->
 
@@ -34,14 +35,14 @@ Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/
 
 Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.org/transactional.html).
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/databas/blob/master/example/sql/transaction.sql) finner du på GitHub eller i ditt kursrepo (databas, dbjs, oophp) under `example/sql/transaction.sql`.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/databas/blob/master/example/sql/transaction.sql) finner du på GitHub eller i ditt kursrepo databas under `example/sql/transaction.sql`.
 
 
 
 ACID {#acid}
 --------------------------------------
 
-ACID är en samling properties för databastransaktioner. De beskriver hur en transaktion måste betee sig. 
+ACID är en samling properties för databastransaktioner. De beskriver hur en transaktion måste bete sig. 
 
 | Property        | Beskrivning |
 |-----------------|-------------|
@@ -52,34 +53,16 @@ ACID är en samling properties för databastransaktioner. De beskriver hur en tr
 
 En transaktion skall alltså vara atomär (A), bevara konsistensen (C) i databasen, vara isolerad (I) från övriga transaktioner och vara beständig (D) när den är committad. Därav ACID.
 
+En transaktion innebär att en eller flera SQL-satser utförs i sin helhet, eller inte alls.
+
 
 
 En testdatabas {#dbexempel}
 --------------------------------------
 
-Om du inte har tillgång till en databas där du kan testa exempelkoden så föreslår jag att du skapar en ny databas som du kan använda för denna (och kommande) artikel.
+Artikeln förutsätter att du har en testdatabas `dbwebb` som du kan använda och att du kan logga in med användaren `user` med lösenordet `pass`.
 
-Här är SQL-koden som hjälper dig att skapa databasen `dbwebb` med användaren `user` som har lösenordet `pass`. Koden ligger i ditt kursrepo under `example/sql/setup.sql`.
-
-```sql
---
--- Create a sample database useful for testing.
---
-CREATE DATABASE IF NOT EXISTS dbwebb;
-GRANT ALL ON dbwebb.* TO user@localhost IDENTIFIED BY 'pass';
-
-USE dbwebb;
-SHOW DATABASES LIKE 'dbwebb';
-SHOW TABLES;
-```
-
-Du behöver köra SQL-koden som en användare som har rättigheter att skapa databas och göra grants på användare. Kör det med din root-användare så här.
-
-```text
-mysql -uroot -p < example/sql/setup.sql
-```
-
-Fint, då har du en databas att leka med.
+Rent krasst kan du dock köra koden nedan mot godtycklig databas.
 
 
 
@@ -90,7 +73,7 @@ Låt oss ta en bitcoin bank där Adam och Eva skall flytta en mängd bitcoins me
 
 
 
-###En tabell {#tabell}
+### En tabell {#tabell}
 
 Först skapar vi en tabell med innehåll.
 
@@ -101,14 +84,15 @@ Först skapar vi en tabell med innehåll.
 DROP TABLE IF EXISTS account;
 CREATE TABLE account
 (
-	`id` CHAR(4) PRIMARY KEY,
+    `id` CHAR(4) PRIMARY KEY,
     `name` VARCHAR(8),
     `balance` DECIMAL(4, 2)
 );
 
+-- DELETE FROM account;
 INSERT INTO account
 VALUES
-	("1111", "Adam", 10.0),
+    ("1111", "Adam", 10.0),
     ("2222", "Eva", 7.0)
 ;
 
@@ -117,9 +101,21 @@ SELECT * FROM account;
 
 Bra, då har vi en tabell att ugå ifrån. Adam har 10 bitcoins och Eva har 7.
 
+Det kan se ut så här.
+
+```text
++------+------+---------+
+| id   | name | balance |
++------+------+---------+
+| 1111 | Adam |   10.00 |
+| 2222 | Eva  |    7.00 |
++------+------+---------+
+2 rows in set (0.00 sec)
+```
 
 
-###Flytta pengar {#flytta}
+
+### Flytta pengar {#flytta}
 
 Låt oss säga att Adam och Eva har slagit vad i Melodifestivalen och Adam förlorade och skall skicka 1.5 bitcoins till Eva.
 
@@ -131,16 +127,16 @@ SQL-koden för den flytten ser ut så här.
 --
 UPDATE account 
 SET
-	balance = balance + 1.5
+    balance = balance + 1.5
 WHERE
-	id = "2222";
+    id = "2222";
 
 UPDATE account 
 SET
-	balance = balance - 1.5
+    balance = balance - 1.5
 WHERE
-	id = "1111";
-    
+    id = "1111";
+
 SELECT * FROM account;
 ```
 
@@ -148,15 +144,17 @@ I den första satsen lägger vi till pengen till Evas konto, i den andra satsen 
 
 I mellanläget innehåller databasen mer pengar än det egentligen finns. Det är när pengarna fyllts på Evas konto men ännu inte dragits från Adams konto. I detta läget är databasen inte konsistent.
 
-Det hjälper inte om vi byer ordning på satserna och skapar ett underskott istället. Databasen är lika mycket ur balans och ej konsistent i båda fallen.
+Det hjälper inte om vi byter ordning på satserna och skapar ett underskott istället. Databasen är lika mycket ur balans och ej konsistent i båda fallen.
 
 Till vår hjälp kommer transaktionen.
 
 
 
-###Flytta med transaktion {#flyttrans}
+### Flytta med transaktion {#flyttrans}
 
 Vi lägger flytten av pengarna inom ramen för en transaktion, så att flytten av pengar blir atomär och databasen behåller sin konsistens oavsett vad som händer.
+
+En transaktion inleds med `START TRANSACTION` och avslutas med `COMMIT`. Om man av någon anledning vill avbryta en transaktion så gör man `ROLLBACK` istället för `COMMIT`.
 
 ```sql
 --
@@ -166,16 +164,16 @@ START TRANSACTION;
 
 UPDATE account 
 SET
-	balance = balance + 1.5
+    balance = balance + 1.5
 WHERE
-	id = "2222";
+    id = "2222";
 
 UPDATE account 
 SET
-	balance = balance - 1.5
+    balance = balance - 1.5
 WHERE
-	id = "1111";
-    
+    id = "1111";
+
 COMMIT;
 
 SELECT * FROM account;
@@ -208,8 +206,6 @@ Du kan se syntaxen för [transaktioner i SQLite manualen](https://www.sqlite.org
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Detta var grunderna i databastransaktioner. Så fort du gör flera satser som behöver samtliga, eller inte alls, så kan transaktioner vara verktyget.
-
-Vill du se hur du kan kontrollera att det finns pengar på kontot, innan du gör överföringen, så läser du vidare i artikeln "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)". Det är ju rimligt att man kontrollerar att det finns pengar att flytta, innan man gör flytten. Men det tar vi alltså i en annan artikel.
+Detta var grunderna i databastransaktioner. Så fort du gör flera satser där samtliga satser behöver utföras för att bevara konsistensen i databasen så kan transaktioner vara verktyget.
 
 Har du [tips, förslag eller frågor om artikeln](t/6291) så finns det en specifik forumtråd för det.
