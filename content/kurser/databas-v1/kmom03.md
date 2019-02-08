@@ -62,7 +62,7 @@ En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik
 
 Läs igenom följande artiklar.
 
-1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig en metod för att modellera databaser i olika faser. Du kommer jobba enligt denna modellen i uppgiften.
+1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig en metod för att modellera databaser i olika faser. Du kommer jobba enligt denna modellen i uppgiften. I detta kmom läser du först och främst delen om "Konceptuell modellering".
 
 1. Som ett komplement till kokboken kan du titta på [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
 
