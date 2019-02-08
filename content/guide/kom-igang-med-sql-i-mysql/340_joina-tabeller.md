@@ -217,7 +217,7 @@ Skriv SELECT för att lösa följande.
 
 Skolan är orolig för att lärarna börjar närma sig pensionen och behöver "bytas ut". Skolans ansvariga vill se en rapport över de kurser där den ansvarige läraren är nära pensionen. Skolan begränsar sig till att hantera de tre äldsta lärarna.
 
-Förslagsvis så börjar du att ta reda på vilka lärare som har högst ålder, bara för att kontrollera vilka lärare det handlar om.
+Förslagsvis så börjar du att ta reda på vilka lärare som har högst ålder, bara för att kontrollera vilka lärare det skulle kunna handla om.
 
 Kanske ser ditt resultat ut så här. Du vill bara se de äldsta lärarna.
 
@@ -232,7 +232,11 @@ Kanske ser ditt resultat ut så här. Du vill bara se de äldsta lärarna.
 3 rows in set (0.00 sec)
 ```
 
-Så. Där har du lärarens ålder. Du har deras planering där du ser vilka kurser de är ansvariga för. Du vill se kurserna från de tre ansvariga lärare som har högst ålder.
+Så. Där har du lärarens ålder. Men det hjälper dig inte så mycket, egentligen.
+
+**Du behöver de tre äldsta lärarna som också undervisar på kurser.**
+
+Du har deras planering där du ser vilka kurser de är ansvariga för. Du vet hur gammal lärarna är. Slå samman informationen och finn _de kurser där som har de tre äldsta lärarna som ansvariga_.
 
 Kan du nu joina, sortera och på något sätt begränsa så att du kan få fram följande rapport?
 
