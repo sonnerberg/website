@@ -26,6 +26,7 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 De vanligaste sorteringsalgoritmerna {#de-vanligaste-sorteringsalgoritmerna}
 ------------------------------
 
+Använd er av [Visualgo](https://visualgo.net/en/sorting) medan ni läser om algoritmerna för att visualisera hur de fungerar. 
 
 ###Bubble sort {#bubble-sort}  
 

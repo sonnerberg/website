@@ -27,41 +27,15 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 De vanligaste sorteringsalgoritmerna {#de-vanligaste-sorteringsalgoritmerna}
 ------------------------------
 
-###Quicksort {#quick-sort}
-
-Quick sort använder sig utav ett [pivot-värde](https://en.wikipedia.org/wiki/Quicksort#Choice_of_pivot). Efter valet av pivot är gjort så delar man upp listan i två delar. Den ena delen hanterar värdena som är mindre än pivot och den andra delen hanterar värdena som är större än pivot. Quick sort arbetar med fördel rekursivt där varje anrop till funktionen hanterar ett nytt pivot-värde baserat på den nya listan som skickats in. Bas-fallet är när listans längd har nått 1. Till slut så slår man samman de tre delarna.  
-
-```python
-def quick_sort(items):
-    """ Quicksort """
-    if len(items) > 1:
-        pivot_index = len(items) // 2
-        smaller_items = []
-        larger_items = []
-
-        for i, val in enumerate(items):
-            if i != pivot_index:
-                if val < items[pivot_index]:
-                    smaller_items.append(val)
-                else:
-                    larger_items.append(val)
-
-        quick_sort(smaller_items)
-        quick_sort(larger_items)
-        items[:] = smaller_items + [items[pivot_index]] + larger_items
-
-    return items
-```
-
-Här används `//` för att returnera en integer. (Enkel division `/` kan returnera en float). Vi ser även "enumerate()" som skapar tupler av elementen i listan och möjliggör indexering till exempel (i, val).  
-
-[Quick sort dance](https://www.youtube.com/watch?v=3San3uKKHgg)
+Använd er av [VisuAlgo](https://visualgo.net/en/sorting?slide=1) för att visualisera er hur algoritmerna fungerar och se pseudo kod.
 
 
 
 ###Bubble sort {#bubble-sort}  
 
 Bubble sort är en av de enklaste sorteringsalgoritmerna, både att implementera och att förstå. Det största (eller minsta) värdet "bubblas" upp i listan följt av det näst största värdet. Varje "bubbla" går igenom hela listan en gång.
+
+[VisuAlgo bubbelsort](https://visualgo.net/en/sorting?slide=6)
 
 [FIGURE src=https://upload.wikimedia.org/wikipedia/commons/0/06/Bubble-sort.gif]
 
@@ -79,6 +53,8 @@ Bubble sort går att implementera utan rekursion. Oftast används istället en n
 ###Insertion sort {#insertion-sort}  
 
 Insertion sort använder en osorterad lista och en sorterad lista. Värdet från den osorterade listan sätts in i den sorterade listan på rätt plats. Värdena i den sorterade listan flyttas baserat på det nya värdet som ska placeras på rätt plats. Då båda listorna är lika stora så samma lista representera båda fallen:  
+
+[VisuAlgo Insertion sort](https://visualgo.net/en/sorting?slide=8)
 
 ```python
 def insertion_sort(items):
@@ -99,6 +75,8 @@ def insertion_sort(items):
 ###Merge sort {#merge-sort}  
 
 Merge sort fungerar snarlikt quick sort. Den använder också ["divide and conquer"-metoden](https://en.wikipedia.org/wiki/Divide_and_conquer_algorithms) med att dela upp listan till fler och sortera del-listorna separat, baserat på ett pivotvärde. Merge sort använder rekursion för att sortera del-listorna och när listan är nere på en längd av 1 ses den som klar.
+
+[VisuAlgo Merge sort](https://visualgo.net/en/sorting?slide=10)
 
 ```python
 def merge_sort(items):
@@ -129,6 +107,40 @@ def merge_sort(items):
 ```
 
 [Merge sort dance](https://www.youtube.com/watch?v=XaqR3G_NVoo)
+
+
+
+###Quick sort {#quick-sort}
+
+Quick sort använder sig utav ett [pivot-värde](https://en.wikipedia.org/wiki/Quicksort#Choice_of_pivot). Efter valet av pivot är gjort så delar man upp listan i två delar. Den ena delen hanterar värdena som är mindre än pivot och den andra delen hanterar värdena som är större än pivot. Quick sort arbetar med fördel rekursivt där varje anrop till funktionen hanterar ett nytt pivot-värde baserat på den nya listan som skickats in. Bas-fallet är när listans längd har nått 1. Till slut så slår man samman de tre delarna.  
+
+[VisuAlgo Quick sort](https://visualgo.net/en/sorting?slide=11)
+
+```python
+def quick_sort(items):
+    """ Quicksort """
+    if len(items) > 1:
+        pivot_index = len(items) // 2
+        smaller_items = []
+        larger_items = []
+
+        for i, val in enumerate(items):
+            if i != pivot_index:
+                if val < items[pivot_index]:
+                    smaller_items.append(val)
+                else:
+                    larger_items.append(val)
+
+        quick_sort(smaller_items)
+        quick_sort(larger_items)
+        items[:] = smaller_items + [items[pivot_index]] + larger_items
+
+    return items
+```
+
+Här används `//` för att returnera en integer. (Enkel division `/` kan returnera en float). Vi ser även "enumerate()" som skapar tupler av elementen i listan och möjliggör indexering till exempel (i, val).  
+
+[Quick sort dance](https://www.youtube.com/watch?v=3San3uKKHgg)
 
 
 

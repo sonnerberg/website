@@ -104,6 +104,7 @@ False
 0
 ```
 
+[VisuAlgo Stack](https://visualgo.net/en/list?slide=4)
 
 
 Queue {#queue}
@@ -169,6 +170,9 @@ False
 'Lion'
 ```
 
+[VisuAlgo Stack](https://visualgo.net/en/list?slide=5)
+
+
 
 Länkad lista {#lankad_lista}
 ------------------------------
@@ -194,6 +198,8 @@ En annan vanlig typ är Cirkulär länkad lista. I en Cirkulär länkad lista ä
 [FIGURE src=/image/oopython/kmom04/circl-list.png caption="Cirkulär Enkellänkad lista"]
 
 Sen finns det så klart också Cirkulär dubbellänkad lista och de kan vara sorted eller unsorted. En sorted lista sorterar automatiskt lista. När man lägger in ny data i listan letas hela listan igenom för att hitta rätt plats i ordningen. En unsorted lista lägger enbart till värdet, oftast sist i listan.
+
+[VisuAlgo Stack](https://visualgo.net/en/list?slide=3)
 
 ## Nod klassen {#nod}
 
@@ -377,6 +383,8 @@ Steg 2, tilldela `current_node.next` till `new_node.next`. Så båda pekar på s
 
 Tilldela `new_node` till `current_node.next` så vi har en komplett lista igen. Om vi gör det i den här ordningen behöver vi inte vara oroliga för att tappa några noder. Fundera på vad som hade hänt om vi hade skippat steg 2 och istället direkt tilldelade den nya noden till `current_node.next`.
 
+
+
 <!--
 
 Heap {#heap}
@@ -434,7 +442,8 @@ Ett barn är mindre så vi skiftar plats:
 
 [FIGURE src=/image/oopython/kmom05/heap7.png]
 
-Nu håller trädet måttet för att kallas en max-heap. Om vi skulle haft en min-heap istället hade det varit det minsta värdet i roten.   -->
+Nu håller trädet måttet för att kallas en max-heap. Om vi skulle haft en min-heap istället hade det varit det minsta värdet i roten.
+-->
 
 
 
