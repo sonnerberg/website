@@ -62,7 +62,11 @@ def recursive_sum(times):
 ```
 Nu har vi ett basfall, `if n <= 1: `, som stoppar de rekursiva anropen, vi har ett tillstånd, `times`, som ändras mot basfallet,`times-1`, och vi har ett rekursivt anrop, `sum_so_far = times + recursive_sum(times-1)`.
 
-Nu uppfyller vi alla 3 kraven. Ett tips är att alltid börja implementera basfallet för att förhindra ett infinite-läge.
+[FIGURE src=/image/oopython/kmom05/recursion_flow.png? caption="Värdet av times och retur värdet för varje funktionsanrop."]
+
+Bilden visar varför en rekursiv algorithm måste reducera ett problem för varje rekursiva anrop. Rekursionen måste stanna för att lösningen ska ärknas ut.
+
+Funktionen uppfyller alla 3 krav. Ett tips är att alltid börja implementera basfallet för att förhindra ett infinite-läge.
 Antalet gånger en rekursiv funktion anropar sig själv kallas för *the depth of recursion*. Funktionen ovanför med argumentet 5 har djupet fem. När funktionen anropas den femte gången har `times` värdet 0 och då inträffar basfallet.
 
 
