@@ -1,15 +1,27 @@
 ---
 author:
-- aar
-- efo
-- mos
+    - aar
+    - efo
+    - mos
 revision:
-  "2018-03-02": (C, efo) Första versionen till webapp-v3.
-  "2017-05-05": (B, aar,efo) Första versionen till webapp-v2.
-  "2015-12-22": (A, mos) Första versionen till webapp.
+    "2019-02-11": (prel, efo) Inför 2019 LP4.
+    "2018-03-02": (C, efo) Första versionen till webapp-v3.
+    "2017-05-05": (B, aar,efo) Första versionen till webapp-v2.
+    "2015-12-22": (A, mos) Första versionen till webapp.
 ...
 Kmom10: Projekt och examination
 ==================================
+
+[WARNING]
+
+** Kursutveckling pågår till kurs webapp **
+
+Kursstart våren 2019 LP4.
+
+[/WARNING]
+
+
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
