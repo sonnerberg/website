@@ -52,8 +52,7 @@ Vi ska nu installera mithril och webpack via npm och gör det med följande komm
 
 ```bash
 $ npm install --save mithril
-$ npm install --save webpack
-$ npm install --save webpack-cli
+$ npm install --save-dev webpack webpack-cli
 ```
 
 Det kan hända att du får varningar när du kör ovanstående kommandon, men dessa kan du ignorera för nu.
@@ -73,7 +72,9 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mithril": "^1.1.6",
+    "mithril": "^1.1.6"
+  },
+  "devDependencies": {
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11"
   }

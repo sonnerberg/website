@@ -236,8 +236,7 @@ Hello World exemplet som följer med när vi skapar appar med `cordova create` k
 
 ```bash
 # Stå i me/kmom05/hello
-npm install --save webpack
-npm install --save webpack-cli
+npm install --save-dev webpack webpack-cli
 npm install --save mithril
 ```
 
