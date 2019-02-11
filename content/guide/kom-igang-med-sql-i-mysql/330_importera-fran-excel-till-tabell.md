@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-11": "(D, mos) Bort med full path vid matcha kolumner."
     "2019-02-09": "(C, mos) Förtydligade felsökning av load local infile."
     "2019-01-29": "(B, mos) Uppdaterad med felhantering och hur man fixar det."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -185,7 +186,7 @@ När du läser in innehållet till tabellen kurstillfälle som märker du att de
 Refmanualen visar hur man gör. Du kan göra det i slutet LOAD DATA, så här.
 
 ```sql
-LOAD DATA LOCAL INFILE '/home/mos/dbwebb-kurser/databas/skolan/kurstillfalle.csv'
+LOAD DATA LOCAL INFILE 'kurstillfalle.csv'
 -- resten av uttrycket
 IGNORE 1 LINES
 (kurskod, kursansvarig, lasperiod)
