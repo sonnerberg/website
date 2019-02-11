@@ -552,7 +552,7 @@ Svaret blir en lista med alla de procedurer som finns och till vilken databas de
 Vill du sedan titta på koden som ligger bakom den lagrade proceduren så frågar du efter den.
 
 ```sql
-SHOW CREATE PROCEDURE moveMoney;
+SHOW CREATE PROCEDURE move_money;
 ```
 
 Fram kommer källkoden för proceduren.
