@@ -541,21 +541,21 @@ Det kan vara bra att ha koll på detta, det är en felkälla och ett bra verktyg
 SHOW PROCEDURE {#show}
 --------------------------------------
 
-När man vill se vilka procedurer som finns i databasen så kan man visa dem.
+När man vill se vilka procedurer som finns i databasen så kan man visa dem. Här visar jag de procedurer som slutar på delsträngen `%money`.
 
 ```sql
-SHOW PROCEDURE STATUS;
+SHOW PROCEDURE STATUS LIKE '%money';
 ```
 
-Svaret blir en lista med alla de procedurer som finns och till vilken databas de är kopplade.
+Svaret blir en lista med alla de procedurer som finns och till vilken databas de är kopplade samt vilken användare som skapade dem.
 
 Vill du sedan titta på koden som ligger bakom den lagrade proceduren så frågar du efter den.
 
 ```sql
-SHOW CREATE PROCEDURE move_money;
+SHOW CREATE PROCEDURE move_money \G;
 ```
 
-Fram kommer källkoden för proceduren.
+Fram kommer källkoden för proceduren och man kan kontrollera/felsöka att det är "rätt version" som man använder.
 
 Tänk på att du kan använda `ALTER PROCEDURE`, som ett alternativ till `DROP/CREATE`. Det kan vara smidigt, till exempel när man utvecklar och hela tiden skapar om proceduren och testar små ändringar.
 
