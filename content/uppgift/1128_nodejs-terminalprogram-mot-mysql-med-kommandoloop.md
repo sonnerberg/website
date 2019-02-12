@@ -59,6 +59,12 @@ Var därför noggran att gör en databasdump med den allra senaste versionen av 
 
 Tänk på att stora och små bokstäver hanteras olika på Windows, Mac och Linux. Det är av den anledningen som vi följer en SQL-kodstandard som enbart använder sig av små bokstäver på tabeller och kolumner.
 
+Du kan själv verifiera att det fungerar, genom att läsa in din databasdump.
+
+```text
+mysql -udbwebb skolan < me/skolan/skolan.sql
+```
+
 
 
 Krav {#krav}
