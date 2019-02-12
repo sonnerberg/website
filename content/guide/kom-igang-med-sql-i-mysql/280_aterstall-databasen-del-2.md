@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-12": "(E, mos) Felstavad ddl_copy.sql."
     "2019-01-29": "(D, mos) Rättade valideringsfel i reset_part2.bash."
     "2019-01-15": "(C, mos) Genomgången och uppdaterad med felutskrifter och saknad v_lon."
     "2018-03-27": "(B, mos) Add function to bash reset."
@@ -37,7 +38,7 @@ Här är filerna som behövs, och ordningen de körs i. Ordningen är viktig. Ma
 | `dml_insert.sql`  | Lägg till rader i tabellen lärare. | 
 | `ddl_migrate.sql` | Alter table lärare och lägg till kompetensen. |
 | `dml_update.sql`  | Förbered lönerevisionen, alla lärare har grundlön. |
-| `dml_copy.sql`    | Kopiera till larare_pre innan lönerevisionen. |
+| `ddl_copy.sql`    | Kopiera till larare_pre innan lönerevisionen. |
 | `dml_update_lonerevision.sql`  | Utför lönerevisionen. |
 | `dml_view.sql`    | Skapa vyerna v_namn_alder och v_larare. |
 | `dml_join.sql`    | Skapa vyn v_lonerevision. |
