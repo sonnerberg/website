@@ -7,6 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2019-02-12": "(C, mos) Förtydliga vilken databas som används för testkörning."
     "2019-01-28": "(B, mos) Uppdaterad inför vt19."
     "2018-01-05": "(A, mos) Första utgåvan."
 ...
@@ -47,6 +48,8 @@ Det är nu tillåtet att använda externa moduler för att skriva ut texttabelle
 
 Om du använder externa moduler så måste de finnas i `me/package.json`, annars går det inte testköra ditt program.
 
+Ditt program testkörs mot din egen databas som återskapas via ditt skript `me/skolan/skolan.sql`.
+
 
 
 Krav {#krav}
@@ -69,6 +72,8 @@ Krav {#krav}
 1. Skapa kommandot `sok <sokstrang>` som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
 
 1. Skapa kommandot `nylon <akronym> <lon>` som tar argumenten för lärarens akronym samt den nya lönen och uppdaterar lärarens lön.
+
+1. Skapa en aktuell dump av din databas som du sparar i `me/skolan/skolan.sql`, det är den som kommer användas för att provköra ditt program.
 
 1. Validera din kod.
 

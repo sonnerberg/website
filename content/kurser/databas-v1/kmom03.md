@@ -107,6 +107,14 @@ Genomför följande för att förbereda inför uppgifter.
 1. Jobba igenom artikeln "[Gör en kommandoradsklient i Node.js (v2)](kunskap/gor-en-kommandoradsklient-i-node-js-v2)". Spara alla filer du gör i `me/kmom03/cli`.
 
 <!--
+
+Till 2020, gör ny övning som går igenom hur man kapslar in all databashantering i en modul (löser delar av kmom04).
+
+Se till att det står tydligt i uppgiften att man skall ha en sådan modul.
+
+-->
+
+<!--
 1. ER-modellering. Gör några extra övningar från övningsfilen (skall redovisas isåfall uppgift).
 Svårt göra övning per distans.
 
