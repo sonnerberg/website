@@ -7,6 +7,7 @@ category:
     - express
     - kursen databas
 revision:
+    "2019-02-12": "(C, mos) Förtydliga hur konfigurationsfilen uppdateras."
     "2019-02-08": "(B, mos) Genomgången fokus mot kursen databas."
     "2018-01-09": "(A, mos) Första utgåvan."
 ...
@@ -66,13 +67,26 @@ I [npm-modulen mysql](https://www.npmjs.com/package/mysql) finns möjligheten at
 
 I länken ovan visas hur du enablar multiquery i modulen, det är avstängt från början. Sätter du inte på det så får du ett felmeddelande på andra SQL-satsen.
 
-Du sätter enkelt på funktionen genom att lägga till följande i din `config/db/bank.json`.
+Du sätter på funktionen genom att lägga till följande inställning i din konfiguration i `config/db/bank.json`.
 
 ```json
 {
     "multipleStatements": true
 }
 ```
+
+Din konfigurationsfil kan alltså se ut så här.
+
+```json
+{
+    "host":     "localhost",
+    "user":     "user",
+    "password": "pass",
+    "database": "dbwebb",
+    "multipleStatements": true
+}
+```
+
 
 
 Krav {#krav}
