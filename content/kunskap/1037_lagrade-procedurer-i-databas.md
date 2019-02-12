@@ -4,8 +4,6 @@ author:
 category:
     - databas
     - sql
-    - kurs dbjs
-    - kurs oophp
     - kurs databas
 revision:
     "2019-02-11": "(E, mos) Genomgången, fler exempel och ny kodstandard."
