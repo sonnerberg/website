@@ -4,8 +4,6 @@ author:
 category:
     - databas
     - sql
-    - kurs dbjs
-    - kurs oophp
     - kurs databas
 revision:
     "2018-01-09": "(C, mos) Genomgången inför kursen databas."

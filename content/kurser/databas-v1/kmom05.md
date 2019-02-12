@@ -40,7 +40,7 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-### Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur {#kurslitteratur}
 
 Läs följande:
 
