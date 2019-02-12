@@ -70,8 +70,8 @@ CREATE TABLE account
 
 INSERT INTO account
 VALUES
-    ("1111", "Adam", 10.0),
-    ("2222", "Eva", 7.0)
+    ('1111', 'Adam', 10.0),
+    ('2222', 'Eva', 7.0)
 ;
 
 SELECT * FROM account;
@@ -103,13 +103,13 @@ UPDATE account
 SET
     balance = balance + 1.5
 WHERE
-    id = "2222";
+    id = '2222';
 
 UPDATE account 
 SET
     balance = balance - 1.5
 WHERE
-    id = "1111";
+    id = '1111';
     
 COMMIT;
 
@@ -200,7 +200,7 @@ Procedurens body är nu på plats, inom ramen av `BEGIN` och `END`. I detta fall
 Då anropar vi proceduren.
 
 ```sql
-CALL move_money("1111", "2222", 1.5);
+CALL move_money('1111', '2222', 1.5);
 ```
 
 Så här kan det se ut i terminalen.
@@ -260,7 +260,7 @@ Ovan SQL-kod flyttar pengar från ett konto till ett annat, inom ramen för en t
 Nu kan jag anropa proceduren, om och om igen. Om jag kör den tillräckligt många gånger så kommer Eva att bli riktigt rik och Adam motsvarande fattig.
 
 ```sql
-CALL move_money("1111", "2222", 1.5);
+CALL move_money('1111', '2222', 1.5);
 ```
 
 Att jag väljer att skriva ut behållningen i slutet med SELECT-satsen är (för tillfället) bara för att det skall vara enklare att utveckla, det blir lite som en `console.log()` eller `echo`. Det är alltså en variant av hur man kan debugga sin lagrade procedur.
@@ -312,7 +312,7 @@ BEGIN
 
     IF current_balance - amount < 0 THEN
         ROLLBACK;
-        SELECT "Amount on the account is not enough to make transaction.";
+        SELECT 'Amount on the account is not enough to make transaction.' AS message;
     ELSE
         UPDATE account 
             SET
@@ -462,7 +462,7 @@ I SELECT-satsen hämtas ett värde från databasen och lagras i variabeln `total
 Så här kan det se ut när vi anropar proceduren och bifogar en variabel att spara totalen i.
 
 ```sql
-CALL get_money("1111", @sum);
+CALL get_money('1111', @sum);
 SELECT @sum;
 ```
 
@@ -471,7 +471,7 @@ När anropet sker med CALL så bifogas en variabel som efter anropet kan läsas 
 Det kan se ut så här när vi kör anropen ovan.
 
 ```text
-mysql> CALL get_money("1111", @sum);
+mysql> CALL get_money('1111', @sum);
 Query OK, 1 row affected (0.00 sec)
 
 mysql> SELECT @sum;
@@ -516,7 +516,7 @@ SHOW WARNINGS {#warnings}
 Ibland kan man se att man får en varning av ett anrop till en lagrad procedur. I följande exempel anger jag ett värde på en variabeln som är utanför variabelens range.
 
 ```sql
-mysql> CALL edit_account("1337", "Mega", 4200000);
+mysql> CALL edit_account('1337', 'Mega', 4200000);
 Query OK, 1 row affected, 1 warning (0.00 sec)
 ```
 
