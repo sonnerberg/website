@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-12": "(E, mos) Länk till forumet om bugg workbench."
     "2019-02-11": "(D, mos) Bort med full path vid matcha kolumner."
     "2019-02-09": "(C, mos) Förtydligade felsökning av load local infile."
     "2019-01-29": "(B, mos) Uppdaterad med felhantering och hur man fixar det."
@@ -130,6 +131,14 @@ Det är flera inställningar som skrivs ut, de kommer från din `.my.cnf`. Det �
 
 
 
+### Workbench {#fixworkbench}
+
+Man kan göra LOAD DATA LOCAL INFILE i Workbench, men det verkar finnas någon form av [bugg som gör det aningen svårare i Workbench version 8.0](f/64484), tidigare versioner av Worbench fungerar dock bra.
+
+Förslagsvis gör du alltså detta i terminalklienten, eller, om du känner att du har tid, så använder du den workaround som föreslås i foruminlägget, den gör en LOAD DATA INFILE istället för en LOAD DATA _LOCAL_ INFILE.
+ 
+
+
 ### Databasservern {#fixserver}
 
 Felet 1148 kan också bero på att LOAD LOCAL INFILE är avstängt på databasservern och vi behöver sätta på det.
@@ -194,6 +203,8 @@ IGNORE 1 LINES
 ```
 
 Dubbelkolla att du inte får varningar när du läser in datan och kika med SELECT att innehållet i tabellerna motsvarar det som finns i CSV-filerna.
+
+Om du får varningar så kan du visa dem med `SHOW WARNINGS`.
 
 
 
