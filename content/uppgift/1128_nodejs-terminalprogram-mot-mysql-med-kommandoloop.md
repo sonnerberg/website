@@ -48,7 +48,16 @@ Det är nu tillåtet att använda externa moduler för att skriva ut texttabelle
 
 Om du använder externa moduler så måste de finnas i `me/package.json`, annars går det inte testköra ditt program.
 
+
+
+Provkörning {#prov}
+-----------------------
+
 Ditt program testkörs mot din egen databas som återskapas via ditt skript `me/skolan/skolan.sql`.
+
+Var därför noggran att gör en databasdump med den allra senaste versionen av din databas, innan du lämnar in uppgiften.
+
+Tänk på att stora och små bokstäver hanteras olika på Windows, Mac och Linux. Det är av den anledningen som vi följer en SQL-kodstandard som enbart använder sig av små bokstäver på tabeller och kolumner.
 
 
 
