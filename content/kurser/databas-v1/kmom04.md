@@ -16,7 +16,7 @@ Kmom04: Transaktioner
 
 Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Vi skapar SQL-kod som kan skapa databasens schema.
 
-Kursmomenten introducerar begreppet transaktioner i en databas och vi tränar påp SQL-kod för att hantera COMMIT och ROLLBACK i transaktioner.
+Kursmomenten introducerar begreppet transaktioner i en databas och vi tränar på SQL-kod för att hantera COMMIT och ROLLBACK i transaktioner.
 
 I kursmomentet får vi också möta en webbserver för Node.js i form av Express.js. Du kommer igång med Express och ser hur du kan bygga upp grunderna i en webbtjänst och hur du kan skriva din applikationskod för att komma åt en databas och visa rapporter från den och uppdatera databasens innehåll via webbplatsen.
 
