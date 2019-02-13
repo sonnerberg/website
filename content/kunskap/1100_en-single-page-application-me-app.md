@@ -19,6 +19,8 @@ Vi ska i denna övning skapa en me-app i HTML5, CSS3 och JavaScript. Vi gör ett
 
 Vi rekommenderar att du kodar med i denna övning så du själv får känna på hur det är att skriva en Single Page Application (SPA). Du kan spara din kod i katalogen `me/redovisa`, där du sedan kan bygga vidare på din me-app.
 
+Exempelprogrammet från denna övning finns i kursrepot [example/redovisa](https://github.com/dbwebb-se/webapp/tree/master/example/redovisa) och i `example/redovisa`.
+
 
 
 Grunden i HTML {#html}
@@ -49,6 +51,7 @@ Vårt tränade öga ser direkt att vi behöver två filer `style.css` för vår 
 
 ```bash
 # stå i me/redovisa
+
 touch style.css
 touch main.js
 ```
@@ -63,6 +66,7 @@ Då vi inte har några element på HTML sidan än så länge, förutom vårt rot
 
 ```javascript
 // main.js
+
 "use strict";
 
 (function () {
@@ -75,6 +79,7 @@ För att vi ska kunna lägga till fler element börjar vi med att hämta ut rot-
 
 ```javascript
 // main.js
+
 "use strict";
 
 (function () {
@@ -104,6 +109,7 @@ Just nu kanske det känns onödigt, men när vi i slutet av övningen har fyra o
 
 ```javascript
 // main.js
+
 "use strict";
 
 (function () {
@@ -231,6 +237,7 @@ Vi börjar med att placera menyn längst ner på skärmen och samtidigt fylla ut
 
 ```css
 /* style.css */
+
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -242,6 +249,8 @@ Vi börjar med att placera menyn längst ner på skärmen och samtidigt fylla ut
 Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på skärmen med `bottom: 0;`. Vi använder `overflow: hidden;` för att inte få problem med scrolling där vi inte vill ha det. För att fördela länkarna jämt i menyn använder vi [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox). Flexbox är en förhållandevis ny teknik för att skapa 1-endimensionella layouter på ett enkelt sätt. I detta tillfälle använder vi följande attribut.
 
 ```css
+/* style.css */
+
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -249,19 +258,21 @@ Vi sätter positionen med värdet `fixed` och att vi vill ha den längst ner på
     width: 100%;
     display: flex;
     flex-flow: row | nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 ```
 
-Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Attributet `flex-flow: row | nowrap;` är kort notation för  `flex-direction: row;` och `flex-wrap: nowrap;` och vi vill här att länkarna ska lägga sig på en rad och med attributet `justify-content: space-evenly;` fördelar vi ut länkarna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen. Vi kommer använda flexbox under kursens gång så oroa dig inte om du inte känner att du har fullt koll på flexbox, vi kommer bygga på det vidare i kursen.
+Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex;`. Attributet `flex-flow: row | nowrap;` är kort notation för  `flex-direction: row;` och `flex-wrap: nowrap;` och vi vill här att länkarna ska lägga sig på en rad och med attributet `justify-content: space-around;` fördelar vi ut länkarna jämt i menyn. I exemplet nedan ser vi hur det kan se när man har lagt sin menyn längst ner på skärmen. Vi kommer använda flexbox under kursens gång så oroa dig inte om du inte känner att du har fullt koll på flexbox, vi kommer bygga vidare på flexbox i kursen.
 
 [FIGURE src=image/webapp/screenshot-styled-menu.png?w=c8  caption="Menyn är nu på plats längst ner."]
 
 Jag har i exemplet lagt till ikoner i menyn med hjälp av [Material icons](http://materializecss.com/icons.html) och lagt till lite mellanrum uppe och nere. Dessutom har jag vald ett annat typsnitt än standard vilket gör att min mobila-app redan ser mycket trevligare ut.
 
-En me-app är ingen riktigt me-app utan en bild, så vi lägger till några rader kod för att få till den sista lilla detaljen. Och i `style.css` lägger vi till att bilden ska fylla ut hela bredden av `.container` så den varken är större eller mindre beroende på bildstorlek.
+En me-app är ingen riktig me-app utan en bild, så vi lägger till några rader kod för att få till den sista lilla detaljen. Och i `style.css` lägger vi till att bilden ska fylla ut hela bredden av `.container` så den varken är större eller mindre beroende på bildstorlek.
 
 ```javascript
+// main.js
+
 ...
 var image = document.createElement("img");
 
@@ -275,6 +286,8 @@ mainContainer.appendChild(image);
 ```
 
 ```css
+/* style.css */
+
 .container img {
     width: 100%;
 }
@@ -288,6 +301,7 @@ Vi är nu klar med Me-sidan och kan fokusera på resten av vyerna.
 
 Navigation mellan vyerna {#navigation}
 --------------------------------------
+
 Nu har vi en fin meny, men än så länge är det, det enda den är. För att underlätta när vi ska navigera mellan de olika vyerna och för att ta ett första steg i att strukturera vår kod bryter vi ut renderingen av menyn och renderingen av Me-vyn till var sin funktion. Det sista vi gör i `main.js` är att anropa funktionen `showHome()`, som i sin tur anropar `showMenu()` för att visa menyn. Jag har även flyttat ut skapandet av grund HTML-elementen utanför funktionerna.
 
 ```javascript
@@ -372,13 +386,15 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
 })();
 ```
 
-I början av varje funktion som ritar upp en vy eller en del av en vy rensar jag elementet som vyn ska ritas i med hjälp av attributet `innerHTML`. Denna funktion kommer även vara användbar när vi ska skapa redovisningssidan där vi ska lägga stora mängder formaterat text. Vi hade tidigare definierat våra länkar i menyn `var navElements = ["Me", "Om", "Github", "Redovisning"];` som en array med bara namnen. Denna array har jag i detta exempel bytt ut till en array av objekt. Dels för att lägga till ikoner med en specifik class, men objekten innehåller även funktionen som anropas när man klickar på länken i menyn. När länken sedan skapas läggs det till en `EventListener` för varje länk och funktionen som renderar vyn skickas med som argument. Detta är ett sätt att få till navigationen och leka gärna runt med koden för att få till det på exakt det sättet du vill ha. Vyerna Me, Om och Redovisning är oerhört lika och borde inte innebära några problem att skapa. I nästa del av övningen ska vi titta på hur vi hämtar data från Githubs API för att visa upp repon på Github sidan i me-appen.
+I början av varje funktion som ritar upp en vy eller en del av en vy rensar jag elementet som vyn ska ritas i med hjälp av attributet `innerHTML`. Denna funktion kommer även vara användbar när vi ska skapa redovisningssidan där vi ska lägga stora mängder formaterat text.
+
+Vi hade tidigare definierat våra länkar i menyn `var navElements = ["Me", "Om", "Github", "Redovisning"];` som en array med bara namnen. Denna array har jag i detta exempel bytt ut till en array av objekt. Dels för att lägga till ikoner med en specifik class, men objekten innehåller även funktionen som anropas när man klickar på länken i menyn. När länken sedan skapas läggs det till en `EventListener` för varje länk och funktionen som renderar vyn skickas med som argument. Detta är ett sätt att få till navigationen. Leka gärna runt med koden för att få till det på exakt det sättet du vill ha. Vyerna Me, Om och Redovisning är oerhört lika och borde inte innebära några problem att skapa. I nästa del av övningen ska vi titta på hur vi hämtar data från GitHubs API för att visa upp repon på GitHub sidan i me-appen.
 
 
 
 Hämta data från ett API {#api}
 --------------------------------------
-Än så länge har all data i vår me-app varit statisk och hårdkodat in av oss själva. Vi ska i denna del av övningen titta på hur vi kan hämta JSON data från ett API och hur vi sedan renderar data i en vy. Vi börjar med att använda [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) för att sedan går över till det förenklade och modernare [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). Vi vill hämta data från Github och som alltid när du använder ett API är [dokumentationen](https://developer.github.com/v3/) din bästa vän.
+Än så länge har all data i vår me-app varit statisk och hårdkodat. Vi ska i denna del av övningen titta på hur vi kan hämta JSON data från ett API och hur vi sedan renderar data i en vy. Vi börjar med att använda [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) för att sedan går över till det förenklade och modernare [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). Vi vill hämta data från Github och som alltid när du använder ett API är [dokumentationen](https://developer.github.com/v3/) din bästa vän.
 
 Funktionen `showGithub()` börjar som de andra vy funktionen med att vi rensar `mainContainer` och skapar ett titel element. Vi skapar därefter en `XMLHttpRequest` genom följande fyra rader kod.
 
@@ -540,7 +556,7 @@ För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`.
 </body>
 ```
 
-För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] [annat_variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade .
+De statiska kodvalideringen som körs med kommandot `dbwebb validate` tittar bara på en fil i taget. Därför känner validatorn inte till de andra filerna som vi importerade i `ìndex.html`. För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] [annat_variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade .
 
 
 

@@ -17,7 +17,7 @@ Integrera din packagist modul med verktyg för automatisk test och validering
 
 Vi utgår från den modul vi tidigare publicerade på GitHub och Packagist. Modulen innehåller rutiner för enhetstester och kodvalidering. Vi skall nu integrera modulen med externa tjänster som utför dessa tester varje gång vi committar ändringar eller gör pull requests mot repot.
 
-Vi integrerar med en handfull tjänster såsom Travis, CircleCI, Scrutinizer och SensioLab samt knyter in några av dem till en Gitter-kanal för utvecklare av modulen. Vi får ett flöde för automatiserade tester som skapar grunden för begreppet CI, _Continuous Integration_. Varje commit kickar igång ett flöde där vår modul integreras och testas mot beroenden i ett antal miljöer och system. 
+Vi integrerar med en handfull tjänster såsom Travis, CircleCI, Scrutinizer och SensioLab samt knyter in några av dem till en Gitter-kanal för utvecklare av modulen. Vi får ett flöde för automatiserade tester som skapar grunden för begreppet CI, _Continuous Integration_. Varje commit kickar igång ett flöde där vår modul integreras och testas mot beroenden i ett antal miljöer och system.
 
 <!--more-->
 
@@ -57,7 +57,7 @@ Du kommer behöva skaffa konton på respektive tjänst. Men på de flesta kan du
 Automatisera tester {#maketest}
 --------------------------------------
 
-Vi pratar om autmatiserade tester och det förutsätter att jag har (någon form av) enhetstester och validering på mitt repo. 
+Vi pratar om autmatiserade tester och det förutsätter att jag har (någon form av) enhetstester och validering på mitt repo.
 
 Det fungerar nu på följande sätt i mitt repo för modulen.
 
@@ -67,7 +67,7 @@ make check
 make test
 ```
 
-Vid `make install` installeras en lokal utvecklingsmiljö i repot. Du kan se vilken exekverbar som används, var den är installerad och dess version via `make check`. Testerna körs sedan när du gör `make test` och de körs bara om det finns underlag, eller tillgängliga konfigurationsfiler. 
+Vid `make install` installeras en lokal utvecklingsmiljö i repot. Du kan se vilken exekverbar som används, var den är installerad och dess version via `make check`. Testerna körs sedan när du gör `make test` och de körs bara om det finns underlag, eller tillgängliga konfigurationsfiler.
 
 Som det är nu så är det bara phpunit som kan göra att `make test` misslyckas. Verktygen phpcs och phpmd körs men även om de hittar fel så avbryts inte testerna. Det är så makefilen är konfigurerad i sitt utgångsläge. Vill man vara hårdare och avbryta testerna när phpcs/phpmd misslyckas så kan man konfigurera om makefilen. I grunden handlar det om att makefilen tolka exit-värdet för en process och om den inte är 0 så säger makefilen att testet gick fel och avbryter vidare exekvering.
 
@@ -86,7 +86,7 @@ Travis {#travis}
 
 Vi börjar med att integrera mot tjänsten [Travis](https://travis-ci.org/). bekanta dig med webbplatsen och kika kort i dess dokumentation.
 
-Du kan sedan studera [Travis statusen för GitHub organisationen CAnax](https://travis-ci.org/canax) och alla dess moduler som omfattas av automatiserade tester. Klicka dig in på en av modulerna för att se status på dess senaste bygge. 
+Du kan sedan studera [Travis statusen för GitHub organisationen CAnax](https://travis-ci.org/canax) och alla dess moduler som omfattas av automatiserade tester. Klicka dig in på en av modulerna för att se status på dess senaste bygge.
 
 [FIGURE src=image/snapht17/travis.png?w=w3 caption="Travis har koll på hur modulerna i Anax klarar sina automatiserade tester."]
 
@@ -157,7 +157,7 @@ Tjänsten [SensioLabsInsight](https://insight.sensiolabs.com/) är kopplad till 
 
 Tjänsten fokuserar på kodens kvalitet och lyfter fram de saker du kan behöva jobba med för att göra koden bättre.
 
-Du kan se status för [senaste bygget för `anax/di`](https://insight.sensiolabs.com/projects/850a0607-ad17-4dcc-924c-ad0bb6ae8d63). 
+Du kan se status för [senaste bygget för `anax/di`](https://insight.sensiolabs.com/projects/850a0607-ad17-4dcc-924c-ad0bb6ae8d63).
 
 Så här kan det se ut när jag lägger till SensioLabs.
 
@@ -237,6 +237,6 @@ Avslutningsvis {#avslutning}
 
 Vi har gått igenom hur man integrerar en fristående modul med externa tjänster och via automatiserade tester skapar man ett flöde om continuous integration, en viktig del i produktion och underhåll av programvara.
 
-Det finns flera andra tjänster du kan integrera mot, eller verktyg för statisk kodanalys som du kan bygga in i din makefil. Men detta är en start. 
+Det finns flera andra tjänster du kan integrera mot, eller verktyg för statisk kodanalys som du kan bygga in i din makefil. Men detta är en start.
 
 Denna artikel har en [egen forumtråd](t/6882) som du kan ställa frågor i, eller bidra med tips och trix.
