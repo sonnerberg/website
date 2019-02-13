@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
+    "2019-02-13": "(D, mos) lade till läsanvisning om EJS."
     "2019-02-08": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-09": "(A, mos) Första utgåvan."
@@ -60,6 +61,8 @@ Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, 
 Läs följande som är relaterat till att bygga en webbserver i Node.js med applikationsservern Express.js.
 
 1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kolla runt i dokumentationen och bekanta dig med begrepp och exempelkod.
+
+1. Bekanta dig snabbt med templatemotorn "[Embedded JavaScript templating (EJS)](https://ejs.co/)" som hjälper dig skapa dynamiska webbsidor.
 
 
 
