@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2019-02-13": (D, aar) Uppdaterade klassdiagram och metod förklaringar.
     "2019-01-25": (C, aar) Formulerade om test kravet.
     "2018-01-26": (B, aar) Added requirements.
     "2018-01-25": (A, lew) First version.
@@ -34,17 +35,17 @@ Vi ska skapa en egen datastruktur, en "Unordered list", som en klass. Unordered 
 
 Nedanför ser vi ett klassdiagram för en UnorderedList klass. Under diagrammet beskrivs varje metod. Diagrammet ska uppfyllas av er implementation.
 
-[FIGURE src=/image/oopython/kmom04/UnorderedList_klass.png caption="klassdiagram för UnorderedList"]  
+[FIGURE src=/image/oopython/kmom04/UnorderedList_klass_v2.png caption="klassdiagram för UnorderedList"]
 
 * `is_empty`: Returnera True/False för om listan är tom eller inte.
 * `add`: Lägg till nytt element/nod sist i listan.
-* `insert`: Lägg till nytt element/nod på specifikt index.
-* `set`: Skriv över element med ny data som finns på index.
+* `insert`: Lägg till nytt element/nod på specifikt index. Om index inte finns lyft exception.
+* `set`: Skriv över element med ny data som finns på index. Om index inte finns lyft exception.
 * `size`: Returnera antaler element i listan.
-* `get`: Returnera värde på index.
-* `index_of`: Om data finns i listan returnera dess index.
+* `get`: Returnera värde på index. Om index inte finns lyft exception.
+* `index_of`: Om data finns i listan returnera dess index. Om nod med data inte finns lyft exception.
 * `print_list`: Skriv ut listans innehåll.
-* `remove`: Ta bort nod med samma data.
+* `remove`: Ta bort nod med samma data. Om nod med data inte finns lyft exception.
 
 
 
