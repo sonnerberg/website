@@ -54,7 +54,7 @@ Läs följande:
     * Kap 2: ER-modellering
     * Kap 4: Designpocessen
 
-En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa mer om ER-modellering i webbkursen.
+En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa mer om [ER-modellering i webbkursen](http://www.databasteknik.se/webbkursen/er/).
 
 
 
