@@ -219,15 +219,17 @@ class TestPhone(unittest.TestCase):
         self.assertEqual(self.phone.get_contact("Andreas"),
                          ("Andreas", "079-244 07 80"))
 
-    def test_get_contact_not_exist(self):
+    def test_get_contact_fail(self):
         """
         Test that correct value is returned
-        when getting contact that does not exist
+        when getting contact that does not exist or is empty
         """
-        self.assertFalse(self.phone.get_contact("Kenneth"))
+        with self.assertRaises(ValueError) as cm:
+            self.phone.get_contact("Nothing")
 
         self.phone.add_contact("Andreas", "079-244 07 80")
-        self.assertFalse(self.phone.get_contact("Emil"))
+        with self.assertRaises(ValueError) as cm:
+            self.phone.get_contact("Zeldah")
 
 
 
@@ -245,10 +247,10 @@ def get_contact(self, name):
     for person in self.phonebook:
         if person[0] == name:
             return person
-    return False
+    raise ValueError("No contact with name {}".format(name))
 ```
 
-Vad kan påverka resultatet av den metoden? Den innehållet en for-loop vilket kan bete sig olika beroende på om listan är tom eller inte och if-satsen kan vara True eller False. För att testa metoden skapar vi två test metoder, en som testar att allt går bra och en där det går dåligt. Först ett test när listan är tom och ett när listan har innehåll men vi skriver fel namn. 
+Vad kan påverka resultatet av den metoden? Den innehållet en for-loop vilket kan bete sig olika beroende på om listan är tom eller inte och if-satsen kan vara True eller False. För att testa metoden skapar vi två test metoder, en som testar att allt går bra och en där det går dåligt. Först ett test när listan är tom och ett när listan har innehåll men vi skriver fel namn. Dessutom lyfts ett `ValueError` i `get_contacts()` metoden när en kontakt inte finns, vilket vi behöver hantera och kolla så det lyfts i vårt test.
 
 ```python
     def test_get_contact(self):
@@ -257,18 +259,26 @@ Vad kan påverka resultatet av den metoden? Den innehållet en for-loop vilket k
         self.assertEqual(self.phone.get_contact("Andreas"),
                          ("Andreas", "079-244 07 80"))
 
-    def test_get_contact_not_exist(self):
+    def test_get_contact_fail(self):
         """
         Test that correct value is returned
-        when getting contact that does not exist
+        when getting contact that does not exist or is empty
         """
-        self.assertFalse(self.phone.get_contact("Kenneth"))
+        with self.assertRaises(ValueError) as cm:
+            self.phone.get_contact("Nothing")
 
         self.phone.add_contact("Andreas", "079-244 07 80")
-        self.assertFalse(self.phone.get_contact("Emil"))
+        with self.assertRaises(ValueError) as cm:
+            self.phone.get_contact("Zeldah")
+```
+Med `with` skapar vi ett scope/block där vi kan anropa metoden som lyfter felet som fångas av `cm`, Context Manage. Om metoden `get_contacts()` inte lyfter något `ValueError` kommer testet fallera. T.ex. om de mot förmodan finns en kontakt som heter Zeldah eller koden är fel så ValueError inte lyfts när det ska får vi följande fel:
+```
+  File "test.py", line 79, in test_get_contact_fail
+    self.phone.get_contact("Zeldah")
+AssertionError: ValueError not raised
 ```
 
-Om vi kör alla tester i testfilen får vi resultatet:
+Men nu är vår kod vara rätt och om vi kör alla tester i testfilen får vi resultatet:
 
 ```bash
 >>> python3 test.py -v
@@ -281,7 +291,7 @@ test_empty_phonebook (__main__.TestPhone)
 Test that contacts are empty ... ok
 test_get_contact (__main__.TestPhone)
 Test that can get added contact ... ok
-test_get_contact_empty (__main__.TestPhone) ... ok
+test_get_contact_fail (__main__.TestPhone) ... ok
 test_set_owner (__main__.TestPhone)
 Test changing owner of a Phone ... ok
 test_validate_non_valid_numbers (__main__.TestPhone)
