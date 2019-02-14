@@ -2,7 +2,8 @@
 author: efo
 category: javascript
 revision:
-  "2018-01-09": (A, efo) Första utgåvan inför kursen webapp-v3 V18.
+    "2019-02-14": (B, efo) Genomarbetad inför VT19.
+    "2018-01-09": (A, efo) Första utgåvan inför kursen webapp-v3 V18.
 ...
 Typografi för mobila enheter
 ==================================
@@ -20,6 +21,8 @@ I denna artikel går vi igenom hur vi anpassar typsnitt och typografin för vår
 En grund i HTML {#html}
 --------------------------------------
 Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen `style.css`, vi nollställar även webbläsarens grundstil med `normalize.min.css`. Vi laddar ner `normalize.min.css` med kommandot `wget https://necolas.github.io/normalize.css/8.0.0/normalize.css -O normalize.min.css`.
+
+Jag har skrivit ihop en redovisningssida för kmom01 i HTML dokumentet nedan. En redovisningssida är ett typiskt exempel på en textintensiv webbplats.
 
 ```html
 <!-- index.html -->
@@ -62,57 +65,71 @@ Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen 
 
 Vitt utrymme {#whitespace}
 --------------------------------------
-Vi börjar med den del av designen som inte har med typsnittet att göra. Vi vill skapa en sammanhang mellan de element som är besläktade, så vi börjar med att skapa sammanhang mellan frågan och svaret. Vi minskar helt enkelt marginalen under våra frågor och öker den över frågorna. Då det finns marginal även på paragrafen som innehåller svaret minskar vi marginalen där med. Vi flytter även kursmoment rubriken närmare första frågan.
+
+Vi börjar med den del av designen som inte har med typsnittet att göra. Vi vill skapa en sammanhang mellan de element som är besläktade och samtidigt skapa en vertikal rytm. Vi börjar med bestämma oss för ett bra radavstånd och en bra typsnittsstorlek för texten.
+
+Vi använder "best-practice" från [Typography Handbook](http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av den relativa enheterna `rem` för att sätta storleken på typsnittet för paragrafer och rubriker. Anledningen till att vi sätter textstorleken till 100% är att användarens förinställda textstorlek då används och det är viktigt för individer med svagt syn.
+
+
+I Typography Handbook är även rekommendationen att använda sig at en radhöjd/avstånd på mellan 1,2 och 1,5. Ofta vill man ha lite större radavstånd på breda kolumner och lite mindre på smala. Vi sätter storleken `1rem` för brödtexten och använder oss av `1.4` i radavstånd. Inom typografin pratar man om ett magic number som är `radavstånd * typsnittsstorlek` i vårt fall blir magic number alltså `1.4rem`. Vi använder sedan magic number och multiplar av magic number för att sätta marginaler i höjdled vilket skapar vertikal rytm.
 
 ```css
-h2 {
-    margin-bottom: 0.6rem;
-}
-
-h4 {
-    margin-bottom: 0.2rem;
-    margin-top: 1.8rem;
-}
-
-h4:first-of-type {
-    margin-top: 0.6rem;
+html {
+    font-size: 100%;
 }
 
 p {
-    margin-top: 0.2rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1.4rem; /* 1rem * 1.4 */
 }
 ```
 
-Nu har vi skapat en sammanhang mellan frågor och svar, men ser fortfarande ihopklumpat ut. Lått oss skapa lite yta runt om texten och öka upp radavståndet för bättre läsbarhet och se om det hjälper. En bra tumregel är att ligga mellan 1,25 och 1,5 i radavstånd för längre textstycken.
+[FIGURE src=image/webapp/screenshot-typo-whitespace-v2.png?w=c7 class=right caption="Redovisningstext med vitt urymme i stycken"]
+[FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+
+Vi vill skapa ett sammanhang mellan frågor och svar för att underlätta för läsaren. Vi vill göra detta men samtidigt bevara den vertikala rytmen. Vi gör detta genom att sätta radavståndet för alla element genom att flytta detta till `body`-elementet.
+
+Sedan definierar vi `margin-bottom` för `h1` och `h2` till en multipel av vårt magic number.
 
 ```css
-main {
-    padding: 0.6rem;
+html {
+    font-size: 100%;
+}
+
+body {
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h4 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 2.8rem;
 }
 
 h2 {
-    margin-bottom: 0.6rem;
+    font-size: 2.0rem;
+    margin-bottom: 1.4rem;
 }
 
 h4 {
-    margin-bottom: 0.2rem;
-    margin-top: 1.8rem;
-    line-height: 1.4;
-}
-
-h4:first-of-type {
-    margin-top: 0.6rem;
+    font-size: 1.4rem;
+    margin-bottom: 0;
 }
 
 p {
-    margin-top: 0.2rem;
-    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
 }
 ```
 
-Vi har redan fått till en bättre sammanhang mellan frågor och svar. Vi har även skapat luft runt texten genom att använda vitt utrymme runt texten. Vi jämför ursprungssidan med som det ser ut nu och ser hur stor skillnad vitt utrymme kan göra.
-
-[FIGURE src=image/webapp/screenshot-typo-whitespace.png?w=c7 class=right caption="Redovisningstext med vitt urymme"]
+[FIGURE src=image/webapp/screenshot-typo-vertical-rhythm.png?w=c7 class=right caption="Redovisningstext med vitt urymme överallt"]
 [FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
 
 
