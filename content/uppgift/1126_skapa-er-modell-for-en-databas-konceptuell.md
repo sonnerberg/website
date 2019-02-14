@@ -6,6 +6,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2019-02-14": "(C, mos) Fix brusten länk till draw.io."
     "2019-01-31": "(B, mos) Genomgång, mindre justeringar i formuleringar."
     "2018-01-05": "(A, mos) Första utgåvan."
 ...
@@ -56,7 +57,7 @@ Ritverktyg {#ritverktyg}
 
 När du ritar dina ER-diagram kan du använda ett godtyckligt ritverktyg som har stöd för någon notation som är relevant i ER-sammanhang.
 
-Ett enkelt ritverktyg du kan använda är [draw.io](draw.io). Det har stöd för både ER-variant och UML. Verktyget är webbaserat och går att integrera med Google Docs. Man kan vara flera som jobbar i dokumentet samtidigt och det går att exportera modellerna i flera olika format som går att importera i till exempel Google Docs.
+Ett enkelt ritverktyg du kan använda är [draw.io](https://www.draw.io/). Det har stöd för både ER-variant och UML. Verktyget är webbaserat och går att integrera med Google Docs. Man kan vara flera som jobbar i dokumentet samtidigt och det går att exportera modellerna i flera olika format som går att importera i till exempel Google Docs.
 
 Här är ett [exempel på en konceptuell modell](https://goo.gl/ADnsva) som är ritad i verktyget. Klicka på länken och öppna den med draw.io.
 
