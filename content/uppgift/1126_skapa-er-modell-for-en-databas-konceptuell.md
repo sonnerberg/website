@@ -6,7 +6,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
-    "2019-02-14": "(C, mos) Fix brusten länk till draw.io."
+    "2019-02-14": "(C, mos) Fix brusten länk till draw.io. Mindre justering i text om loggtabellen."
     "2019-01-31": "(B, mos) Genomgång, mindre justeringar i formuleringar."
     "2018-01-05": "(A, mos) Första utgåvan."
 ...
@@ -95,8 +95,7 @@ Utifrån ordern skapas en plocklista som kan skickas till lagret för leverans. 
 
 När leveransen är packad så bifogas en faktura som har samma innehåll som ordern men nu med priset per produktrad och det summerade priset.
 
-Det skall finnas en logg där man kan se viktiga händelser i systemet, till exempel när en order skapas, raderas, eller när det läggs till/tas bort en orderrad (en produkt) i ordern.
-
+Det skall finnas en logg där man kan se viktiga händelser i systemet, vad hände, när hände det. Det kan till exempel vara när order/faktura skapades eller raderades.
 
 
 ### Fokus: BuckStar online shopping {#buckstar}
