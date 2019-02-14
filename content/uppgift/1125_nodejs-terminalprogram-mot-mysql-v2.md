@@ -4,9 +4,9 @@ category:
     - javascript
     - nodejs
     - mysql
-    - kursen dbjs
     - kursen databas
 revision:
+    "2019-02-14": "(D, mos) Mindre förtydligande om att det är flera main-program."
     "2019-01-29": "(C, mos) Förtydliga modulkravet samt tydligare om förväntade utskrifter."
     "2019-01-21": "(B, mos) Genomgången och uppdaterad inför vt19, aningen nya uppgifter."
     "2018-01-02": "(A, mos) Uppdaterad version från tidigare dokument."
@@ -130,7 +130,7 @@ Krav {#krav}
 
 1. Du får inte använda någon extra extern npm-modul för att lösa uppgiften, förutom de moduler som krävs för databasen MySQL.
 
-1. Du skall strukturera din kod i egna moduler och använda funktioner och/eller klasser. Main-filen skall vara så liten som möjligt och göra anrop till klasser/funktioner som i sin tur anropar databasen och skapar rapporterna. Du måste ha minst en modul.
+1. Du skall strukturera din kod i egna moduler och använda funktioner och/eller klasser. Main-filerna skall vara så små som möjligt och göra anrop till klasser/funktioner som i sin tur anropar databasen och skapar rapporterna. Du måste ha minst en modul som du inkluderar och använder i respektive main-program.
 
 1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av respektive fil/main-program.
 
