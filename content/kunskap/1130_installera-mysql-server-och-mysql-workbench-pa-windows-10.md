@@ -263,6 +263,16 @@ Det kan se ut så här.
 
 Bra, då kan vi använda Debian/Bash för att köra terminalklienten, och koppla oss mot databasservern som är installerad i Windows.
 
+<!--
+
+* Eventuellt ändra ordningen på bash/cygin, 
+* Tydlig att samma fel händer på både bash och cygwin, skriv om stycken, orgnisaera användningen i ett stycke och installationen i ett stycke.
+* Visa att -p och -ppassword kan fungera både två (även i cmd)
+
+* Dubbelkolla hur my.cnf fungerar, eventuellt visa om radbrytning, felsökning av my.cnf, tex --print-defaults
+* 
+-->
+
 
 
 Installera terminalklienten i Cygwin {#win10cygwin}
@@ -291,7 +301,7 @@ Vi kan undvika att skriva in hostens namn och istället lägga till den i en kon
 
 Du skapar en konfigurationsfil `.my.cnf` och lägger i din hemmakatalog.
 
-På Bash och Cygwin kan du skapa filen så här.
+I terminalen kan du skapa filen så här.
 
 ```text
 touch $HOME/.my.cnf && chmod 600 $HOME/.my.cnf
