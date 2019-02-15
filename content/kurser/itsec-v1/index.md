@@ -40,7 +40,7 @@ Kursen omfattar följande områden:
 
 * Översiktlig orientering i området informationssäkerhet, kategorisering av området samt terminologi, specifikt fokus säkerhetsområden som är relevanta att applicera på området webb.
 * Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
-* Privacy, databaser och dataläckage.
+* Databaser, dataläckage och privacy.
 * Risk och sårbarhetsanalys
 * Introduktion till existerande webbsäkerhetsprojekt.
 * Säkerhetsrelaterade attacker.
@@ -60,8 +60,8 @@ Följande är kursens mål, indelat i undergrupper.
 
 Efter genomförd kurs skall studenten:
 
-* ingående redogöra för informationssäkerhet med webbtillämpningar baserat på de tekniker som omfattas genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* kunna visa goda kunskaper i att hantera relevant information, tekniker och metoder genom att tillämpa dessa tekniker i praktiska övningar och projekt.
+* ingående redogöra för informationssäkerhet med webbtillämpningar baserat på de tekniker som omfattas genom att beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* kunna visa goda kunskaper i att använda relevanta tekniker och metoder genom att tillämpa dessa tekniker i praktiska övningar och projekt.
 
 
 
@@ -69,8 +69,8 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* självständigt kunna bedömma, dokumentera och presentera relevanta säkerhetsrelaterade riskområden för en webbaserad applikation.
-* ha god praktisk förmåga att hantera verktyg och miljöer som används vid testning ach undersökning rörande säkerhetsrelaterade attacker.
+* självständigt kunna bedöma, dokumentera och presentera relevanta säkerhetsrelaterade riskområden för en webbaserad applikation.
+* ha god praktisk förmåga att hantera verktyg och miljöer som används vid testning och undersökning rörande säkerhetsrelaterade attacker.
 
 
 
@@ -78,7 +78,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* via redovisningstexter kunna visa god förmåga att reflektera och argumentera över säkerhet, risker, sårbarhet och attacker mot webbaserade applikation.
+* via redovisningarna kunna visa god förmåga att reflektera och argumentera över säkerhet, risker, sårbarhet och attacker mot webbaserade applikationer.
 
 
 

@@ -22,6 +22,7 @@ Risk och sårbarhetsanalys
 * attackträd, etc
 * swat?
 
+_Ansvarig: Anton_
 
 <!--more-->
 
