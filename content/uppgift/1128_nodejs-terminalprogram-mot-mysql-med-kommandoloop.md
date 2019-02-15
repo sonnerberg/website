@@ -7,6 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2019-02-15": "(D, mos) länk till tips om vad UPDATE returnerar."
     "2019-02-12": "(C, mos) Förtydliga vilken databas som används för testkörning."
     "2019-01-28": "(B, mos) Uppdaterad inför vt19."
     "2018-01-05": "(A, mos) Första utgåvan."
@@ -106,6 +107,6 @@ Tips från coachen {#tips}
 
 I forumet kan du se hur man kan [dela in en sträng i delar](t/8263) och göra varje del till en variabel, det kan vara en lösning på att hantera kommando som `nylon <akronym> <lon>`.
 
-<!-- Tips om hur lösa sok <sokstrang> -->
+En UPDATE-sats returnerar inte ett resultset likt SELECT, lär om vad som returneras i tipset "[Vad returnerar en SQL UPDATE i Node.js och MySQL/MariaDB?](coachen/vad-returnerar-en-sql-update-i-node-js-och-mysql)".
 
 Lycka till och hojta till i forumet om du behöver hjälp!
