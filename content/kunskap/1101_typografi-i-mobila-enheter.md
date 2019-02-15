@@ -70,8 +70,7 @@ Vi börjar med den del av designen som inte har med typsnittet att göra. Vi vil
 
 Vi använder "best-practice" från [Typography Handbook](http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av den relativa enheterna `rem` för att sätta storleken på typsnittet för paragrafer och rubriker. Anledningen till att vi sätter textstorleken till 100% är att användarens förinställda textstorlek då används och det är viktigt för individer med svagt syn.
 
-
-I Typography Handbook är även rekommendationen att använda sig at en radhöjd/avstånd på mellan 1,2 och 1,5. Ofta vill man ha lite större radavstånd på breda kolumner och lite mindre på smala. Vi sätter storleken `1rem` för brödtexten och använder oss av `1.4` i radavstånd. Inom typografin pratar man om ett magic number som är `radavstånd * typsnittsstorlek` i vårt fall blir magic number alltså `1.4rem`. Vi använder sedan magic number och multiplar av magic number för att sätta marginaler i höjdled vilket skapar vertikal rytm.
+I Typography Handbook är även rekommendationen att använda sig av en radhöjd/avstånd på mellan 1,2 och 1,5. Ofta vill man ha lite större radavstånd på breda kolumner och lite mindre på smala. Vi sätter storleken `1rem` för brödtexten och använder oss av `1.4` i radavstånd. Inom typografin pratar man om ett magic number som är `radavstånd * typsnittsstorlek` i vårt fall blir magic number alltså `1.4rem`. Vi använder sedan magic number och multiplar av magic number för att sätta marginaler i höjdled vilket skapar vertikal rytm.
 
 ```css
 html {
@@ -90,7 +89,7 @@ p {
 
 Vi vill skapa ett sammanhang mellan frågor och svar för att underlätta för läsaren. Vi vill göra detta men samtidigt bevara den vertikala rytmen. Vi gör detta genom att sätta radavståndet för alla element genom att flytta detta till `body`-elementet.
 
-Sedan definierar vi `margin-bottom` för `h1` och `h2` till en multipel av vårt magic number.
+Sedan definierar vi `margin-bottom` för `h1` och `h2` till en multipel av vårt magic number. För att frågan och svaret ska hänga ihop sätter vi marginalen till 0 för `h4` elementen.
 
 ```css
 html {
@@ -129,35 +128,56 @@ p {
 }
 ```
 
+Vi ser i jämförelsen nedan hur våra val skapar ett bättre sammanhang mellan frågor och svar.
+
 [FIGURE src=image/webapp/screenshot-typo-vertical-rhythm.png?w=c7 class=right caption="Redovisningstext med vitt urymme överallt"]
 [FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+
+Dock går texten fortfarande helt ut till kanten av skärmen vilket gör texten svårläst och vi får ingen inramning av texten. Vi använder oss av magic number för att sätta marginalen uppe och nere och sen väljer vi ett godtyckligt värde som vi med våra designer ögon tycker blir bra. Jag valde `0.6rem`.
+
+```css
+main {
+    padding: 1.4rem 0.6rem;
+}
+```
+
+[FIGURE src=image/webapp/screenshot-typo-space-around.png?w=c7 class=right caption="Redovisningstext med vitt urymme på sidorna"]
+[FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+
 
 
 
 Typsnitt {#font}
 --------------------------------------
-Nu är det dags för det som faktiskt syns på sidan och det nog enklaste sättet att förändra känslan av en hemsida. Jag har vald ut två stycken [Google Fonts](https://fonts.google.com/). Ett serif typsnitt Merriweather för brödtexten och sans-serif typsnitt Source Sans Pro för rubriker. Båda typsnitten har stora och tydliga vita områden i bokstäver som 'o', 'e' och 'c', som ger bra läsbarhet. Merriweather har små men ändå tydliga [seriffer](https://en.wikipedia.org/wiki/Serif), som skapar linjer i texten och förankrar typsnittet.
-
-En annan viktig del av utseendet på en hemsida är storleken på typsnittet. Detta är oerhört viktigt ur ett tillgänglighetsperspektiv då rätt hantering underlättar för de som har svårigheter med synen. Vi använder "best-practice" från [Typography Handbook](http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av den relativa enheterna `rem` för att sätta storleken på typsnittet för paragrafer och rubriker.
+Nu är det dags för det som faktiskt syns på sidan och det nog enklaste sättet att förändra känslan av en hemsida. Jag har vald ut två stycken [Google Fonts](https://fonts.google.com/). Ett serif typsnitt Merriweather för brödtexten och sans-serif typsnitt Source Sans Pro för rubriker. Båda typsnitten har stora och tydliga vita områden i bokstäver som 'o', 'e' och 'c', som ger bra läsbarhet. Merriweather har små men ändå tydliga [seriffer](https://en.wikipedia.org/wiki/Serif), som skapar linjer i texten och förankrar typsnittet. Vi importerar typsnitten från Google Fonts och tilldelar dessa där vi vill att de ska användas.
 
 ```css
-html { font-size: 100% }
-p { font-size: 1rem }
-h1 { font-size: 2.4rem }
-h2 { font-size: 2.0rem }
-h4 { font-size: 1.4rem }
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
 
-@media (min-width: 64em) {
-  html {
-    font-size: 112.5%;
-  }
+---
+
+h1,
+h2,
+h4 {
+    margin-top: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+---
+
+p {
+    margin-top: 0;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
 }
 ```
 
+
 Vi jämför skillnaden mellan den nollställda stilen innan våra ändringar och hur den slutliga redovisningssidan ser ut på en mobil enhet. En större sammanhang mellan frågor och svar och typsnitt som är läsbara och som följer användarens inställningar för textstorlek i webbläsaren.
 
-[FIGURE src=image/webapp/screenshot-typo-font.png?w=c7 class=right caption="Redovisningstext slutlig stil"]
-[FIGURE src=image/webapp/screenshot-typo-phone-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+[FIGURE src=image/webapp/screenshot-typo-fonts.png?w=c7 class=right caption="Redovisningstext med typsnitt"]
+[FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
 
 
 
