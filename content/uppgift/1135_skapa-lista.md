@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2019-02-15": (E, aar) Ändrade test kravet, ska testa insert istället för add.
     "2019-02-13": (D, aar) Uppdaterade klassdiagram och metod förklaringar.
     "2019-01-25": (C, aar) Formulerade om test kravet.
     "2018-01-26": (B, aar) Added requirements.
@@ -73,7 +74,7 @@ cd me/kmom04/list
 
 1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i UnorderedList klassen.
 
-1. Skapa en fil med namnet `test.py` i "list" mappen. Skriv enhetstester för metoderna i UnorderedList klassen. Det ska finnas tester för metoderna, add, set, get, index_of och remove. Kolla på [Testa exceptions](https://youtu.be/ePkZEOHhk-s) för att se hur man fångar exceptions i ett test.
+1. Skapa en fil med namnet `test.py` i "list" mappen. Skriv enhetstester för metoderna i UnorderedList klassen. Det ska finnas tester för metoderna, insert, set, get, index_of och remove. Kolla på [Testa exceptions](https://youtu.be/ePkZEOHhk-s) för att se hur man fångar exceptions i ett test.
 
 
 
