@@ -15,13 +15,11 @@ Kursen planeras ge hösten 2019.
 
 [/WARNING]
 
-<!--stop-->
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
 
-* Projektet och redovisning (20-80h)
+* _Projektet och redovisning (20-80h)_
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
@@ -36,6 +34,11 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
+
+To Be Done.
+
+<!--stop-->
+
 
 Under kursen har du byggt upp en kodbas för ett kommentarshanteringssystem. Nu skall du använda din(a) moduler och kod för att bygga en webbplats som liknar webbplatsen Stack Overflow i sin uppbyggnad.
 

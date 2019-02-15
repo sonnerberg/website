@@ -96,23 +96,15 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 
 
-### Kmom02: Skydda data {#kmom02}
+### Kmom02: Privacy {#kmom02}
 
-Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
+Privacy, databaser och dataläckage. (POST vs GET, SQL injection och datahantering, url dataläckage, spara lösenord). Exempel på stora kända incidenter och dess orsaker. 
 
 [Instruktion till kursmoment 02](./kmom02).
 
 
 
-### Kmom03: Privacy {#kmom03}
-
-Privacy, databaser och dataläckage. (POST vs GET, SQL injection och datahantering, url dataläckage, spara lösenord). Exempel på stora kända incidenter och dess orsaker. 
-
-[Instruktion till kursmoment 03](./kmom03).
-
-
-
-### Kmom04: Sårbarhet {#kmom04}
+### Kmom03: Sårbarhet {#kmom03}
 
 Risk och sårbarhetsanalys
 
@@ -120,6 +112,14 @@ Risk och sårbarhetsanalys
 * Application Security Project (OWASP).
 * attackträd, etc
 * swat?
+
+[Instruktion till kursmoment 03](./kmom03).
+
+
+
+### Kmom04: Skydda data {#kmom04}
+
+Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
 
 [Instruktion till kursmoment 04](./kmom04).
 
