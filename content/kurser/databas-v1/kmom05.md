@@ -1,7 +1,13 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,5,0&f=grayscale&f1=pixelate,4,1"
 author: mos
 revision:
-    "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
+    "2019-02-18": "(D, mos) Uppdaterat och ny uppgift inför vt19."
     "2018-12-19": "(C, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-02-13": "(B, mos) Ny uppgift, skapa grunden till eshop, flyttad från kmom04."
     "2018-01-11": "(A, mos) Första utgåvan."
@@ -9,25 +15,19 @@ revision:
 Kmom05: Procedur och trigger
 ====================================
 
-[WARNING]
+Vi går vidare och nu handlar det om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod i mer avancerade programmeringskonstruktioner och automatiserande hantering av datat i databasen.
 
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
-
-Det handlar om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod. Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen.
-
-Vi bygger vidare på vår databasdrivna applikationsserver och utvecklar terminalklienten parallellt med webbklienten.
+Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen. Detta gör att databaskoden och dess interna representation kan skyddas från klienterna som enbart jobbar mot databasen via ett API bestående av lagrade procedurer.
 
 Vi ser hur man bygger upp en CRUD-baserad webbklient med HTML-formulär som ger användaren möjlighet att skapa nya rader i databasen, ta bort dem, redigera dem och visa dem. CRUD står för Create, Read, Update, Delete.
 
+Avslutningsvis så påbörjar du implementationen av din Eshop genom att skapa databasen och påbörja byggandet av en webbklient och en terminalklient.
+
 <!--more-->
 
-[FIGURE src=image/snapvt18/bank2-account-actions.png caption="Nu förberedd med ikoner för att göra edit och delete."]
+[FIGURE src=image/snapvt18/bank2-account-actions.png?w=w3 caption="Nu förberedd med ikoner för att göra edit och delete."]
 
-[FIGURE src=image/snapvt18/bank2-edit-account-details.png caption="Nu kan jag uppdatera detaljer om kontot."]
+[FIGURE src=image/snapvt18/bank2-edit-account-details.png?w=w3 caption="Nu kan jag uppdatera detaljer om kontot."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -76,18 +76,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa grunden till en Eshop](uppgift/skapa-grunden-till-en-eshop)" som låter dig implementera din ER-modell och skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom05/eshop2`.
-
-1. Lös (minst) en av följande uppgifter (den första är troligen aningen enklare):
-    * Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för tabellerna kund och produkt.
-
-    * Lös uppgiften "[Bygg orderhantering till en Eshop](uppgift/bygg-orderhantering-till-en-eshop)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för orderhantering.
-
-<!--
-från kmom04, borttagen
-
-1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`. (En liknande uppgift kommer i nästa kursmoment).
--->
+1. Gör uppgiften "[Bygg databasen till en Eshop (del 1)](uppgift/bygg-databasen-till-en-eshop-del-1)" som låter dig implementera din ER-modell och skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom05/eshop1`.
 
 
 
@@ -101,9 +90,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Gick det bra att komma igång med lagrade procedurer och triggers?
-* Skriv ett kort stycke (3-5 meningar) om lagrade procedurer och om triggers där du förklarar begreppen (fördel, nackdel, användningsområde) för en som inte är insatt.
-* Hur är din syn på att "programmera" på detta viset i databasen, jämför med traditionell SQL som exponeras i JavaScript-koden?
-* Hur gick det att utföra uppgiften med din Eshop, vilken/vilka gjorde du? 
+* Hur är din syn på att "programmera" på detta viset i databasen, jämför med traditionell SQL som exponeras i klienten?
+* Skriv ett kort stycke (2-5 meningar) om lagrade procedurer och om triggers där du förklarar begreppen (fördel, nackdel, användningsområde) för en som inte är insatt.
+* Något att kommentera kring arbetet med att komma igång och implementera CRUD i webbklienten?
+* Berätta om hur det gick att utföra uppgiften med din Eshop?
 * Vilken är din TIL för detta kmom?
 
 <!--

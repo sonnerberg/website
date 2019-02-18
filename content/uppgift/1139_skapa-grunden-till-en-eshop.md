@@ -15,7 +15,7 @@ revision:
 Skapa grunden till en Eshop
 ==================================
 
-Du har utfört en ER-modellering av en databas för en Eshop och nu skall du implementera den.
+Du har utfört en ER-modellering av en databas för en Eshop och nu skall du börja implementera den.
 
 Du skall delvis fylla databasen med data och du skall skapa två klienter, en terminalbaserad och en webbaserad. De båda klienterna skall visa information från din databas.
 

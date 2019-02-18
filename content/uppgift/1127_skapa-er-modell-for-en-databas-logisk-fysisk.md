@@ -41,7 +41,7 @@ Du skall nu utföra den logiska modelleringsfasen och den fysiska modelleringsfa
 
 Du kan friska upp minnet om vad det stod om [ritverktyg i föregående uppgift](uppgift/skapa-er-modell-for-en-databas-konceptuell#ritverktyg). MySQL Workbench kan vara ett bra alternativ för denna uppgift. Speciellt eftersom du då får stöd i generering av SQL DDL.
 
-Se till att spara SQL DDL i en separat `setup.sql` fil så att du kan skapa tabeller i ett senare skede.
+Se till att spara SQL DDL i en separat fil så att du kan skapa tabeller i ett senare skede.
 
 I ditt slutliga modelleringsdokument kan du lägga till SQL DDL-koden som appendix, men se isåfall till att formattera koden med rimligt typsnitt.
 

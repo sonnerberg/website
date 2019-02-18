@@ -113,9 +113,30 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
+1. Gör uppgiften "[Bygg databasen till en Eshop (del 2)](uppgift/bygg-databasen-till-en-eshop-del-2)" där du slutför implementationen av din databas. Spara all kod under `me/kmom06/eshop2`.
+
+
+<!--
 1. Jobba igenom följande del i guiden "[Kom igång med SQL i MySQL (Programmera i databasen)](guide/kom-igang-med-sql-i-mysql/programmera-i-databasen)". Fortsätt spara SQL-koden i filer i katalogen `me/skolan`.
 
 1. Lös uppgiften "[Bygg kursbeställningsverktyg till skolan](uppgift/bygg-bestallningsverktyg-till-skolan)". Spara all kod i katalogen `me/kmom06/bestall`.
+
+-->
+
+
+
+<!--
+1. Lös (minst) en av följande uppgifter (den första är troligen aningen enklare):
+    * Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för tabellerna kund och produkt.
+
+    * Lös uppgiften "[Bygg orderhantering till en Eshop](uppgift/bygg-orderhantering-till-en-eshop)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för orderhantering.
+-->
+
+<!--
+från kmom04, borttagen
+
+1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`. (En liknande uppgift kommer i nästa kursmoment).
+-->
 
 
 

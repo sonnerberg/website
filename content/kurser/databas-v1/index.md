@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=grayscale&f1=smooth,-8&f2=pixelate,4,1"
 title: databas-v1
 author: mos
 revision:

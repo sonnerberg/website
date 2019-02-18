@@ -30,6 +30,15 @@ Använd HAVING i examinationsuppgiften, samt union.
 
 -->
 
+<!--
+
+Eventuellt krav till projektet.
+
+Jobba med kategorierna i webbklienten, lägg till kategorier, koppla produkt till kategorier 
+
+-->
+
+
 
 Examination {#examination}
 --------------------------------------------------------------------
