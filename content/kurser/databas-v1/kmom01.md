@@ -4,7 +4,7 @@ views:
         region: flash
         template: default/image
         data:
-            src: "image/snapvt19/client-mysql-copy.png?w=1100&h=300&cf&a=0,0,66,0&f=grayscale"
+            src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
     "2019-01-16": "(F, mos) Bort referens BTH labbmiljö."

@@ -4,7 +4,7 @@ views:
         region: flash
         template: default/image
         data:
-            src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,5,0&f=grayscale&f1=pixelate,4,1"
+            src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,5,0&f=grayscale&f1=pixelate,3,1"
 author: mos
 revision:
     "2019-02-18": "(D, mos) Uppdaterat och ny uppgift inför vt19."
