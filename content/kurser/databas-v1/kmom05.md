@@ -53,6 +53,17 @@ Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkurs
 
 
 
+### MySQL dokumentation {#mysqldoc}
+
+Bekanta dig med följande:
+
+1. I manualen för MySQL kan du läsa om lagrade procedurer (stored procedures) och triggers, det är främst följande kapitel som är relevanta, bekanta dig med dem, du kommer att träna på begreppen i kommande övningar.
+    * [24.1 Defining Stored Programs](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)
+    * [24.2 Using Stored Routines (Procedures and Functions)](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
+    * [24.3 Using Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html)
+
+
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
