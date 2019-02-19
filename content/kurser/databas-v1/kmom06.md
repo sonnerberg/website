@@ -56,7 +56,17 @@ Det finns ytterligare ett kapitel i boken som är relaterat till prestanda, det 
 Saker vi inte hanterat:
 
 * Kap 13: Säkerhet i databaser
+* Normalisering
+* 
 -->
+
+
+### MySQL dokumentation {#mysqldoc}
+
+Bekanta dig med följande:
+
+1. I manualen för MySQL kan du läsa om optimering och i vilka olina nivåer och lager som optimering kan utföras. Kika på nedanstående kapitel för att skaffa dig en översikt om möjligheter för optimering.
+    * [Chapter 8 Optimization](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
 
 
 
@@ -64,15 +74,13 @@ Saker vi inte hanterat:
 
 Läs följande.
 
-1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
-
-1. Läs igenom foruminlägget om "[Vad välja som primärnyckel till en databastabell](t/6439)?", det ger en orientering i hur man kan tänka när man väljer primärnyckel i en tabell.
+1. Läs igenom foruminlägget om "[Vad välja som primärnyckel till en databastabell](t/6439)?", det ger en snabb orientering i hur man kan tänka när man väljer primärnyckel i en tabell.
 
 
 
 ### Extra  {#extra}
 
-Gör följande om du har tid och lust.
+Gör följande som ren överkurs, om du har tid, energi och lust.
 
 1. Kika på foruminlägget "[Exempelkod Node.js, Express, MySQL och login med sessioner](t/7327)" som visar hur du löser login med sessionshantering i Express.
 
@@ -149,8 +157,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Förklara begreppet index i databas, och varför det är viktigt, på ett par rader.
-* Hur ser du på att programmera i databasen på det viset vi gör, fördelar och nackdelar, bra eller dåligt?
-* Se tillbaka på de kmom du gjort, känner du att du har koll på databas nu, eller känner du att något saknas eller behövs tränas ytterligare?
-* Nu när kursen närmar sig slutet, hur är din relation till JavaScript, Node och Express?
+* Förklara begreppet index i databas för en nybörjare, berätta varför index är viktigt. Skriv ett kort stycke (3-7 rader).
+* Berätta vilka extra index du tillförde i din eshop.
+* Berätta kort (2-4 rader) hur du ser på nyttan med egendefinierade funktioner.
+* Berätta vilken/vilka egendefinierade funktioner du gjorde i eshopen.
+* Kommentera arbetet med din eshop, är du nöjd och hur tycker du svårighetsgraden har varit på uppgiften eshop som helhet?
 * Vilken är din TIL för detta kmom?

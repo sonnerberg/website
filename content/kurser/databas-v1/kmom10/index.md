@@ -34,7 +34,25 @@ Använd HAVING i examinationsuppgiften, samt union.
 
 Eventuellt krav till projektet.
 
-Jobba med kategorierna i webbklienten, lägg till kategorier, koppla produkt till kategorier 
+* Jobba med kategorierna i webbklienten, lägg till kategorier, koppla produkt till kategorier
+
+* Lös restnoteringar i lagret.
+* Snygg samlad utskrift av order, plocklista, faktura
+* Skapa fakturor
+* Tänk streckkod där lagerpersonal läser av att en produkt flyttas från leverans inkommande till lager och från lager till kundorder för leverans utgående.
+
+-->
+
+
+<!--
+
+Svara på följande frågor i redovisningstexten.
+Man kan skriva redovisningstexten innan man utför tentan.
+
+* Nu när kursen närmar sig slutet, hur är din relation till:
+    * SQL, ER, MySQL/MariaDB
+    * JavaScript, Node och Express?
+* Se tillbaka på de kmom du gjort, känner du att du har koll på databas nu, eller känner du att något saknas eller finns något du vill lära dig mer om?
 
 -->
 

@@ -151,4 +151,8 @@ Gör följande om du har tid och energi.
 Tips från coachen {#tips}
 -----------------------
 
+<!--
+Tips om GROUP_CONCAT i forumet.
+-->
+
 Lycka till och hojta till i forumet om du behöver hjälp!

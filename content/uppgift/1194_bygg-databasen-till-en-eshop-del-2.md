@@ -66,46 +66,48 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 ### Generella krav {#gen}
 
-Att göra.
+1. Du behöver uppfylla de krav du hade i del 1 av uppgiften.
 
-<!--
-1. Inloggningsdetaljer till databasen skall sparas i `config/db/eshop.json`.
+1. En order skall ha kolumner med tidsstämplar för när ordern skapades (1), när ordern uppdaterades (2), när ordern beställdes (3).
+  
+1. Skapa en egendefinierad funktion som tar ett argument av en tidsstämpel för när ordern beställdes. Om tidsstämpeln är NULL skall returneras "Pågående", annars returneras "Beställd".
 
-1. SQL-filer lägger du i `sql/eshop`. Skapa filen `setup.sql` för att skapa databasen och användaren. Låt din databas heta `eshop` och skapa användaren `user:pass` som tidigare.
-
-1. Skapa filen `ddl.sql` där du samlar all kod som skapar tabeller och vyer.
-
-1. Skapa filen `insert.sql` med SQL-kod för att lägga in 5 produkter, 2 produktkategorier och 3 kunder.
--->
+1. Databasen skall innehålla INDEX på minst tre platser, förutom primärnycklar.  
 
 
 
 ### Webbklient {#webb}
 
-Att göra.
+1. Du behöver uppfylla de krav du hade i del 1 av uppgiften.
 
-<!--
-1. Skapa en webbklient med Express. Servern startas via `node index.js`.
+1. Skapa en sida `/eshop/customer` som visar en översikt av de kunder som finns. Visa (minst) kundens id, namn, adress, telefon.
 
-1. I webbklienten, skapa routen `/eshop/index` som visar en välkomstssida med header, footer och navigering mellan sidorna. Alla sidor skall ha samma sidlayout och det skall gå att klicka sig fram mellan sidorna, via navigeringen.
+1. Bygg stöd för att en kund kan skapa en order.
 
-1. I webbklienten, skapa en sida `/eshop/products` som visar en tabell över de produkter som finns.
--->
+1. Bygg stöd för att en kund kan lägga till produkter och antal (orderrader) till en order.
+
+1. En order har status som kan vara "pågående" eller "beställd". När kunden beställt alla delar i ordern så kan kunden ändra status på ordern till "beställd". (TIPS TIMESTAMP)
+
+1. Skapa en sida `/eshop/order` som visar en översikt av de ordrar som finns. Visa (minst) order id, order datum, kundens id, totalt antal orderrader den innehåller, dess status ("pågående"/"beställd").
+
+1. Om man klickar på en order kan man se en översikt av dess orderrader.
 
 
 
 ### Terminalklient {#term}
 
-Att göra.
+1. Du behöver uppfylla de krav du hade i del 1 av uppgiften.
 
-<!--
-1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Eventuell övrig kod lägger du i moduler under katalogen `src/`. Terminalprogrammet skall startas med `node cli.js`.
+1. Skapa kommandot `order <search>`. Om man enbart skriver `order` så visas samtliga ordrar (order id, order datum, kund id, antal orderrader, status). Om man skriver `order search` så filtreras resultatet och enbart visar de ordrar som matchar `search` på order id eller kund id.
 
-1. Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas.
+1. En plocklista kopplar orderrader till en lagerhylla. Tanken är att lagerpersonalen tar en plocklista, åker runt i lagret och packar ihop ditt paket med samtliga produkter.
 
-1. I terminalprogrammet, skapa kommandot `products` som visar en tabell över de produkter som finns.
+1. Skapa kommandot `picklist <orderid>` som fungerar på följande sätt.
 
--->
+    1. `picklist` visar en översikt av alla plocklistor.
+    1. `picklist orderid` visar detaljerna för den plocklista som tillhör ordern med orderid.
+    1. Om det inte finns en plocklista till vald order, så skapas en plocklista automatiskt, och visas.
+    1. Vårt lager hanterar inte restnoteringar när produkten saknas på lagret, du behöver alltså inte ta hänsyn till om det blir minus på en produkt på en lagerhylla, det löser vi i "nästa version".
 
 
 
@@ -124,17 +126,24 @@ Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut s
 
 
 
-<!--
 Extrauppgift {#extra}
 -----------------------
 
-Gör följande om du har tid och ro.
+Gör följande om du har tid, energi och ro.
 
--->
+1. I webbklienten, gör en snygg sida som visar all information om ordern och samtliga orderrader, precis som det brukar se ut i godtycklig webshop på nätet.
 
 
 
 Tips från coachen {#tips}
 -----------------------
+
+<!--
+Tips i forum om tidsstämplar för created, updated, deleted, status, och sof delete.
+
+Tips i forum om formulär SELECT/DROPDOWN.
+
+Tips om loop i lagrad procedur och hantera rad för rad.
+-->
 
 Lycka till och hojta till i forumet om du behöver hjälp!
