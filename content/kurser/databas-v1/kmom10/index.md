@@ -56,6 +56,12 @@ Man kan skriva redovisningstexten innan man utför tentan.
 
 -->
 
+<!--
+
+Gör megavalidering som avslutning, påverka betyget.
+
+-->
+
 
 
 Examination {#examination}

@@ -144,6 +144,8 @@ Tips i forum om tidsstämplar för created, updated, deleted, status, och sof de
 Tips i forum om formulär SELECT/DROPDOWN.
 
 Tips om loop i lagrad procedur och hantera rad för rad.
+
+Anropa procedur i procedur
 -->
 
 Lycka till och hojta till i forumet om du behöver hjälp!

@@ -112,6 +112,10 @@ Krav {#krav}
 
 1. I terminalprogrammet, skapa kommandot `move` som flyttar 1.5 pengar från Adam till Eva. TIPS: se första extrauppgiften nedan, det kan förenkla din implementation.
 
+<!--
+1. I terminalprogrammet, skapa kommandot `balance` som visar en översikt av de konton som finns och kontobehållningen. (UPPDATERA TILL 2020)
+-->
+
 1. Validera din kod.
 
 ```bash
