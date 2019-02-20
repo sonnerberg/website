@@ -18,14 +18,14 @@ Inom programmering är en 'datastruktur' en struktur för att organisera data. V
 
 <!--more-->
 
-Det finns många olika datastrukturer i olika kategorier. Vi har "Linjära datastrukturer" (Lista, Stack, Kö, etc.). En annan struktur-kategori som har en stor plats inom programmering är "Träd". De är lite mer komplexa än till exempel en Stack. Vi ska gå igenom en typ av träd, en så kallad "Max Heap".  
+Det finns många olika datastrukturer i olika kategorier. Vi har "Linjära datastrukturer" (Lista, Stack, Kö, etc.). En annan struktur-kategori som har en stor plats inom programmering är "Träd". De är lite mer komplexa än till exempel en Stack.
 
 Många datastrukturer finns redan inbyggda i programmeringsspråken (tex lista i Python) och det finns färdiga moduler och bibliotek som har strukturen implementerad och klar. Det är dock viktigt att ha en insikt i hur de fungerar "på insidan".
 
 I artikeln kommer det tas upp tre olika datastrukturer.  
 * Stack (Linjär datastruktur)  
 * Kö (Linjär datastruktur)  
-* Max Heap (Träd)
+* Länkad lista (Linjär datastruktur)
 
 
 
@@ -382,68 +382,6 @@ Steg 2, tilldela `current_node.next` till `new_node.next`. Så båda pekar på s
 [FIGURE src=/image/oopython/kmom04/add_node_part3.png caption="Sätt current_node.next till new_node."]
 
 Tilldela `new_node` till `current_node.next` så vi har en komplett lista igen. Om vi gör det i den här ordningen behöver vi inte vara oroliga för att tappa några noder. Fundera på vad som hade hänt om vi hade skippat steg 2 och istället direkt tilldelade den nya noden till `current_node.next`.
-
-
-
-<!--
-
-Heap {#heap}
-------------------------------
-
-Heap ingår inte direkt i kursmaterialet och återkommer inte i någon uppgift eller övning. Det är dock nyttigt att bekanta sig övergripligt med hur den fungerar. Python har en egen modul för bland annat [heap](https://docs.python.org/3.0/library/heapq.html) och [max-heap](https://pypi.python.org/pypi/heapq_max/0.21).
-
-Heap tillhör struktur-kategorin "Träd". Tänk dig en trädliknande struktur:  
-
-[FIGURE src=/image/oopython/kmom05/heap1.png caption="Max heap."]
-
-Varje cirkel representeras av en nod (Node) som har koll på sina föräldrar. Noden "30" vet exempelvis att föräldern "75" är större osv. Lägger man till ett nytt värde hamnar det längst ner i det vänstra benet. Där jämförs det med sin förälder. Är det nya värdet mindre så blir det ett barn till den föräldern. Är det nya värdet större kommer barnet ta förälderns plats och en ny jämförelse sker på nästa förälder. På så sätt kommer alltid det största värdet vara i toppen, i "roten". Man fyller på med nya värden på den första lediga platsen. Man jobbar för att hålla trädet med så få nivåer som möjligt. Det hänger såklart på vilka värden man stoppar in och när.
-
-###Lägga till {#lagga-till}  
-
-Stegen som tas för att lägga till värden är:  
-1. Lägg till element i den lägsta nivån.  
-2. Jämför värdet med föräldern. Är föräldern större, stanna.  
-3. Annars byt plats på dem och upprepa steg 2.
-
-Vi lägger till värdet "80":  
-
-[FIGURE src=/image/oopython/kmom05/heap2.png]
-
-80 är större än sin förälder, 30. De ska då byta plats:  
-
-[FIGURE src=/image/oopython/kmom05/heap3.png]  
-
-Samma gäller för nästa förälder. 80 är större än 75, så de ska byta plats:  
-
-[FIGURE src=/image/oopython/kmom05/heap4.png]  
-
-Såja. Nu ligger det nya värdet på rätt plats. Lägger vi till ett nytt värde nu så hamnar det till vänster under noden "10". Det har skett en så kallad "inplace"-sortering.
-
-
-
-###Ta bort värde {#ta-bort-varde}  
-
-När man extraherar ett värde från heapen tar man alltid roten, i detta fallet det största då det är en max-heap.  
-
-Stegen som tas för att ta bort ett värde är:  
-1. Byt ut roten mot sista elementet på den sista nivån.  
-2. Jämför den nya roten med sina barn. Är barnen mindre, stanna.  
-3. Annars byt plats med det största barnet och upprepa steg 2. (Byt med minsta barnet i en min-heap)  
-
-Vi tittar på hur det kan se ut:  
-
-[FIGURE src=/image/oopython/kmom05/heap5.png]  
-
-30 är mindre än båda sina barn så vi byter plats med det största barnet:  
-
-[FIGURE src=/image/oopython/kmom05/heap6.png]  
-
-Ett barn är mindre så vi skiftar plats:  
-
-[FIGURE src=/image/oopython/kmom05/heap7.png]
-
-Nu håller trädet måttet för att kallas en max-heap. Om vi skulle haft en min-heap istället hade det varit det minsta värdet i roten.
--->
 
 
 
