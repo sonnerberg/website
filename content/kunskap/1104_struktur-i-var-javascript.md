@@ -98,17 +98,62 @@ Om vi öppnar upp `index.html` i en webbläsare stöter vi på patrull direkt. �
 
 > ReferenceError: Can't find variable: home
 
-I och med att vi inte laddar JavaScript filerna implicit längre då vi bara har en JavaScript fil i `index.html` måste vi importera modulerna explicit. `import` och `export` är två nyckelord som vi kan använda för detta. För mer information om `import` och `export` se [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) och [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) dokumentationen.
+I och med att vi inte laddar JavaScript filerna implicit längre då vi bara har en  JavaScript fil `/dist/bundle.js` i `index.html` måste vi importera modulerna explicit. `import` och `export` är två nyckelord som vi kan använda för detta. För mer information om `import` och `export` se [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) och [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) dokumentationen.
 
-Vi vill importera home-objektet från filen `/js/home.js` och det gör vi med följande kodrad längst upp i `main.js`:
+Vi vill importera home-objektet från filen `/js/home.js` och det gör vi med följande kodrad längst upp i `main.js` och vår fil ser nu ut på följande sett.
 
 ```javascript
-import { home } from './home.js';
+// js/main.js
+
+"use strict";
+
+import { home } from "./home.js";
+
+(function () {
+    window.rootElement = document.getElementById("root");
+
+    window.mainContainer = document.createElement("main");
+    window.mainContainer.className = "container";
+
+    window.navigation = document.createElement("nav");
+    window.navigation.className = "bottom-nav";
+
+    home.showHome();
+})();
 ```
 
-Men för att vi kan importera en modul måste den först exporteras. Så i slutet av filen `/js/home.js` lägger vi följande.
+Men för att vi kan importera en modul måste den först exporteras. Så i slutet av filen `/js/home.js` lägger vi in `export { home };`. Vi passar även på att ta bort en del av koden som användes för module pattern och i filen `js/home.js` har vi nu bara ett objekt med två attribut och en funktion. Notera hur attributen anropas från funktionen med hjälp av `home.titleText` och `home.description`.
 
 ```javascript
+// js/home.js
+
+"use strict";
+
+var home = {
+    titleText: "Infinity Warehouses",
+    description: "Where products goes to disappear",
+
+    showHome: function () {
+        window.mainContainer.innerHTML = "";
+
+        var title = document.createElement("h1");
+
+        title.className = "title";
+        title.textContent = home.titleText;
+
+        var greeting = document.createElement("p");
+
+        greeting.textContent = home.description;
+
+        window.mainContainer.appendChild(title);
+        window.mainContainer.appendChild(greeting);
+
+        window.rootElement.appendChild(window.mainContainer);
+
+        menu.showMenu("home");
+    }
+};
+
 export { home };
 ```
 
@@ -116,7 +161,53 @@ Vi laddar om sidan och stora delar av vyn visas nu. Vi får dock fortfarande ett
 
 > ReferenceError: Can't find variable: menu
 
-På samma sätt som vi importerade och exporterade `/js/home.js` måste vi nu göra med `/js/menu.js` och de resterande filerna.
+På samma sätt som vi importerade och exporterade `/js/home.js` måste vi nu göra med `/js/menu.js` och resterande filer i lager appen. I `/js/home.js` lägger vi till `import { home } from "./home.js";` längst upp i filen. Vi ser samtidigt till att exportera `menu` i filen `/js/menu.js` som nu ser ut som följer. Notera hur de olika modulerna importeras längst upp i filen för att kunna anropa de olika modulerna för att visa sidorna.
+
+```javascript
+"use strict";
+
+import { home } from "./home.js";
+import { product } from "./product.js";
+
+var menu = {
+    showMenu: function (selected) {
+        window.navigation.innerHTML = "";
+
+        var navElements = [
+            { name: "Home", class: "home", nav: home.showHome },
+            { name: "Products", class: "meeting_room", nav: product.showProducts },
+        ];
+
+        navElements.forEach(function (element) {
+            var navElement = document.createElement("a");
+
+            if (selected === element.class) {
+                navElement.className = "active";
+            }
+
+            navElement.addEventListener("click", element.nav);
+
+            var icon = document.createElement("i");
+
+            icon.className = "material-icons";
+            icon.textContent = element.class;
+            navElement.appendChild(icon);
+
+            var text = document.createElement("span");
+
+            text.className = "icon-text";
+            text.textContent = element.name;
+            navElement.appendChild(text);
+
+            window.navigation.appendChild(navElement);
+        });
+
+        window.rootElement.appendChild(navigation);
+    }
+};
+
+export { menu };
+```
 
 
 
