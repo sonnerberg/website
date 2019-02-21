@@ -110,11 +110,11 @@ Nu håller trädet måttet för att kallas en max-heap. Om vi skulle haft en min
 Binary Search Tree {#bst}
 ------------------------------
 
-Eller Binära sök träd (bst), är en effektiv datastruktur som passar sig för att spara data med nycklar, som en dictionary, associative array, tabel eller map. Bst sparar nycklarna i sorterad ordning, de är sorterade så att det vänstra barnet alltid är lägre och det högra barnet alltid är högre än den egna noden. Till skillnad från en Heap så så utgår man från roten när man jobbar med trädet. Sorteringen av trädet gör att man oftast kan skippa halva trädet. Detta gör att operationer som get, insert och delete tar tid proportionerligt av logaritmen av antalet noder i trädet, `O(log n)`. Detta är bättre än t.ex. länkad lista som tar linjärt med tid men det är långsamare än arrayer och [Hash tables](https://en.wikipedia.org/wiki/Hash_table).
+[FIGURE src=/image/oopython/kmom06/bst.svg?w=c5 class="right" caption="Binary search tree med storleken 9, djupet 3 och roten 8."]
+Eller Binära sök träd (bst), är en effektiv datastruktur som passar för att spara data med nycklar, som en dictionary, associative array, tabel eller map. Bst sparar nycklarna i sorterad ordning, de är sorterade så att det vänstra barnet alltid är lägre och det högra barnet alltid är högre än den egna noden. Till skillnad från en Heap så så utgår man från roten när man jobbar med trädet. Sorteringen av trädet gör att man oftast kan skippa halva trädet. Detta gör att operationer som get, insert och delete tar tid proportionerligt av logaritmen av antalet noder i trädet, `O(log n)`. Detta är bättre än t.ex. länkad lista som tar linjärt med tid men det är långsamare än arrayer och [Hash tables](https://en.wikipedia.org/wiki/Hash_table).
 
-[FIGURE src=/image/oopython/kmom06/bst.svg?w=c5 class="left" caption="Binary search tree med storleken 9, djupet 3 och roten 8."]
 
-Ordningen på norderna i trädet beror på i vilken ordning de lägga in, t.ex. första värdet man lägger in i bst kommer vara root värder fram till att man gör remove på det. Detta gör att trädet kan bli skevt och dess operationer får sämre predstanda och kan i värsta fall få tids komplexiten `O(n)` istället för `O(log n)`. Bilden nedanför får man med följande kod:
+Ordningen på norderna i trädet beror på i vilken ordning de lägga in dem, t.ex. första värdet man lägger in i trädet kommer vara root värdet fram till att man gör remove på det. Detta gör att trädet kan bli skevt och dess operationer får sämre prestanda och kan då i värsta fall få tids komplexiten `O(n)` istället för `O(log n)`. Bilden nedanför visar hur ett skevt träd kan se ut. Följande kod genererar det trädet:
 
 ```python
 bst = BinarySearchTree()
@@ -125,7 +125,7 @@ bst.insert(40, "fyrtio")
 bst.insert(50, "femtio")
 ```
 
-Vi lägger bara in högre nycklar och får då inga noder till vänster. Trädet blir då samma sak som en länkad lista.
+Vi lägger bara in högre nycklar och får då inga noder till vänster. Trädet blir då likadant som en länkad lista.
 
 [FIGURE src=/image/oopython/kmom06/skewed-bst.png?w=c5 caption="Höger skevt bst."]
 
@@ -139,3 +139,6 @@ Avslutningsvis {#avslutning}
 ------------------------------
 
 Nu har vi kollat på ytterligare en sort av datastrukturer, träd, mer specifikt Heap och Binary Search Tree. Det finns en till vanlig typ som vi inte hinner ta upp i kursen och det är [Hash tables](https://en.wikipedia.org/wiki/Hash_table), vilket är den snabbaste datastrukturen för key/value data.
+
+https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/
+https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
