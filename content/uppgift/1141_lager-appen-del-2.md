@@ -38,9 +38,9 @@ Använd lager [API:t](https://lager.emilfolino.se) dokumentationen och speciellt
 
 Krav {#krav}
 -----------------------
-1. Strukturera dina JavaScript filer med webpack, så bara en fil inkluderas i `index.html`.
+1. Strukturera dina JavaScript filer med webpack, så bara en JavaScript fil inkluderas i `index.html`.
 
-1. Strukturera din CSS kod, så du har olika moduler för dina komponenter, gärna med hjälp av en CSS preprocessor (less eller sass).
+1. Strukturera din CSS kod, så du har olika moduler för dina komponenter med hjälp av en CSS preprocessor (less eller sass).
 
 1. Skapa en vy där lagerarbetarna ser alla ordrar redo för att packas, dvs. ordrar med status ny. Från order-vyn kan man ta sig till plocklista vyn.
 
