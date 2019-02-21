@@ -157,13 +157,15 @@ Vi exporterar sedan det som inom mithril kallas en komponent, det är ett objekt
 ```javascript
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-module.exports = {
+let list = {
     view: function() {
         return m("h1", "Nobelfesten");
     }
 };
+
+export { list };
 ```
 
 För att appen ska veta om att vi vill visa upp list-vyn måste vi in i appens ingångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`.
@@ -171,8 +173,8 @@ För att appen ska veta om att vi vill visa upp list-vyn måste vi in i appens i
 ```javascript
 "use strict";
 
-var m = require("mithril");
-var list = require("./views/list.js");
+import m from 'mithril';
+import { list } from './views/list.js';
 
 m.mount(document.body, list);
 ```
@@ -183,9 +185,9 @@ Låt oss använda lite av stylingen från tidigare kursmoment och samtidigt titt
 
 ```javascript
 "use strict";
-var m = require("mithril");
+import m from 'mithril';
 
-module.exports = {
+let list = {
     view: function() {
         return m("main.container", [
             m("h1", "Nobelfesten"),
@@ -193,17 +195,23 @@ module.exports = {
         ]);
     }
 };
+
+export { list };
 ```
 
 I ovanstående kod skapar vi först en virtuell nod `m("main.container")`, som renderat blir till `<main class="container"></main>`. Vi tilldelar barn till denna virtuella nod genom att tilldela en array som värde. Arrayen innehåller två stycken virtuella noder `<h1>Nobelfesten</h1>` och `<p>Välj ett årtal i listan:</p>`.
 
-Nästa del är att skapa listan med årtal, vi använder en `while`-loop för att iterera från 2010 till och med 2017. För varje år lägger vi till en virtuell nod i arrayen `years`. Vi lägger till den virtuella noden `<a class="button blue-button"></a>`, som har värdet för ett av åren mellan 2010 och 2017. Vi vill även att knappen ska kunna ta oss till en annan sida så vi skickar även med ett objekt med konfiguration: `{ href: "/year/" + startYear, oncreate: m.route.link }`. Vi vill gå till routen `/year` och skickar med året som parameter. Vi använder livscykel-metoden `oncreate` och den inbyggda funktionen `m.route.link` för att koppla länken till routern.
+Nästa del är att skapa listan med årtal, vi använder en `while`-loop för att iterera från 2010 till och med 2017. För varje år lägger vi till en virtuell nod i arrayen `years`. Vi lägger till den virtuella noden `<a class="button blue-button"></a>`, som har värdet för ett av åren mellan 2010 och 2017.
+
+Vi vill även att knappen ska kunna ta oss till en annan sida så vi skickar även med ett objekt med konfiguration: `{ href: "/year/" + startYear, oncreate: m.route.link }`. Objektet består av två attribut: `href` och `oncreate`. `href` känner vi igen från HTML som hyperlink reference dvs länkadressen vi vill gå till. I detta fallet blir det '/year' följd av årtalen 2010 till 2017. Vi ska senare i guiden titta på hur vi kan fånga upp specifika årtalet i vår router.
+
+Det andra attributet i objektet är `oncreate` och är en av [mithrils inbyggda livscykel metoder](https://mithril.js.org/lifecycle-methods.html). Livscykel metoder är funktioner som anropas när en händelse inträffar. Livscykel metoder kan liknas med EventListeners, som vi känner igen från JavaScript. I detta fallet använder vi livscykel metoden `oncreate` som anropas när ett element har skapats. Vi skickar med den inbyggda funktionen `m.route.link` ([Dokumentation](https://mithril.js.org/api.html#mroutelink---)) som kopplar länken till routern vi kommer skapa i `js/index.js`.
 
 ```javascript
 "use strict";
-var m = require("mithril");
+import m from 'mithril';
 
-module.exports = {
+let list = {
     view: function() {
         var startYear = 2010;
         var endYear = 2017;
@@ -225,6 +233,8 @@ module.exports = {
         ]);
     }
 };
+
+export { list };
 ```
 
 Kolla igenom koden ovan så att du förstår alla delar innan vi går vidare.
@@ -238,15 +248,17 @@ Med bara en vy har vi inte kommit långt. Så låt oss titta på hur vi lägger 
 ```javascript
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-module.exports = {
+let year = {
     view: function() {
         return m("main.container", [
             m("h1", "Year")
         ]);
     }
 };
+
+export { year };
 ```
 
 I vår `index.js` ändrar vi så vi använder funktionen `m.route()` istället för `m.mount()`. `m.route()` tar tre argument:
@@ -257,13 +269,15 @@ I vår `index.js` ändrar vi så vi använder funktionen `m.route()` istället f
 
 1. Ett objekt som definierar alla routes i appen.
 
-Och vår index.js fil ser nu ut så här:
+Och vår `js/index.js` fil ser nu ut så här:
 
 ```javascript
 "use strict";
-var m = require("mithril");
-var list = require("./views/list");
-var year = require("./views/year");
+
+import m from 'mithril';
+
+import { list } from "./views/list";
+import { year } from "./views/year";
 
 m.route(document.body, "/", {
     "/": list,
@@ -276,15 +290,17 @@ Vi kan nu klicka på våra knappar och kommer till year-vyn. I routern har vi la
 ```javascript
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-module.exports = {
+let year = {
     view: function(vnode) {
         return m("main.container", [
             m("h1", vnode.attrs.year)
         ]);
     }
 };
+
+export { year };
 ```
 
 Mithrils route funktion är användbar för mer än bara vår huvudrouter. Vi kan till exempel göra omdirigeringar, hämta nuvarande route och mycket annat. [Dokumentationen för `m.route()`](http://mithril.js.org/route.html).
@@ -316,9 +332,9 @@ Vi börjar med att bara hämta data och skriva ut det med `console.log` så vi s
 // js/models/nobel.js
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-var nobel = {
+let nobel = {
     current: {},
     load: function(year) {
         return m.request({
@@ -331,7 +347,7 @@ var nobel = {
     }
 };
 
-module.exports = nobel;
+export { nobel };
 ```
 
 Vi måste anropa funktionen för att den kan köras och detta gör vi från vyn. Vi använder oss av livscykel metoden `oninit`, funktionen anropas 1 gång när vyn initieras och innan nått ritas upp. I de flesta fall när vi hämtar data som ska visas upp i vyn använder vi `oninit`, då denna bara anropas en gång. Vi använder oss utav `vnode.attrs.year` på samma sätt som när vi skrev ut årtalet och skickar med årtalet till modellen.
@@ -340,10 +356,11 @@ Vi måste anropa funktionen för att den kan köras och detta gör vi från vyn.
 // js/views/year.js
 "use strict";
 
-var m = require("mithril");
-var nobel = require("../models/nobel.js")
+import m from 'mithril';
 
-module.exports = {
+import { nobel } from "../models/nobel.js";
+
+let year = {
     oninit: function(vnode) {
         nobel.load(vnode.attrs.year);
     },
@@ -353,6 +370,8 @@ module.exports = {
         ]);
     }
 };
+
+export { year };
 ```
 
 Vi laddar om sidan och öppnar upp konsolen i webbläsaren och ser att vi har skrivit ut ett JSON-objekt. Det vi vill åt för varje objekt i `prizes` arrayen är `category` och både förnamn och efternamn inne i `laureates` arrayen. Först tilldelar vi resultat från API:t till `current` och sedan kan vi använda detta i vyn.
@@ -361,9 +380,9 @@ Vi laddar om sidan och öppnar upp konsolen i webbläsaren och ser att vi har sk
 // js/models/nobel.js
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-var nobel = {
+let nobel = {
     current: {},
     load: function(year) {
         return m.request({
@@ -376,7 +395,7 @@ var nobel = {
     }
 };
 
-module.exports = nobel;
+export { nobel };
 ```
 
 Då vi har importerat `nobel` modellen i vår vy kan vi komma åt `current` genom att använda `nobel.current`. Vi använder oss av funktionen [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), för att iterera oss igenom JSON arrayen.
@@ -384,10 +403,10 @@ Då vi har importerat `nobel` modellen i vår vy kan vi komma åt `current` geno
 ```javascript
 "use strict";
 
-var m = require("mithril");
-var nobel = require("../models/nobel.js")
+import m from 'mithril';
+import { nobel } from "../models/nobel.js";
 
-module.exports = {
+let year = {
     oninit: function(vnode) {
         nobel.load(vnode.attrs.year);
     },
@@ -405,6 +424,8 @@ module.exports = {
         ]);
     }
 };
+
+export { year };
 ```
 
 Om vi laddar om sidan i webbläsaren får vi ett JavaScript fel `Uncaught TypeError: Cannot read property 'map' of undefined`. Detta beror på mithrils sätt att rendera på och det asynkrona `m.request` anrop till API:t. Ordningen för rendering i mithril är följande:
@@ -425,9 +446,9 @@ För att kunna använda oss av koden i vyn `year` definierar vi `nobel.current` 
 // js/models/nobel.js
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-var nobel = {
+let nobel = {
     current: { prizes: [] },
     load: function(year) {
         return m.request({
@@ -440,7 +461,7 @@ var nobel = {
     }
 };
 
-module.exports = nobel;
+export { nobel };
 ```
 
 När vi sedan öppnar applikationen i webbläsaren skrivs namnen på Nobelpristagarna ut som väntat. Kolla gärna igenom koden ovan så du förstår alla delar. Ta även en titt på renderingsordningen för att förstå hur de virtuella noderna ritas upp av mithril.
@@ -456,9 +477,9 @@ I mithril kan vi använda oss av layouts för att återanvända kod i flera vyer
 ```javascript
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-module.exports = {
+let layout = {
     view: function(vnode) {
         return [
             m("nav.top-nav", "Nobel"),
@@ -466,6 +487,8 @@ module.exports = {
         ];
     }
 };
+
+export { layout };
 ```
 
 I ovanstående kodexempel skapar vi `.top-nav` som vi känner igen från tidigare kursmoment. Vi skapar även en `main.container` där vi skickar med de virtuella noderna (`vnode.children`) som vi vill ska renderas i den. I detta fallet är det list-vyn och års-vyn vi skickar med. För att använda oss av layouten gör vi som nedan. För varje route visar vi layouten och skickar med vyn vi vill visa i layouten.
@@ -473,10 +496,10 @@ I ovanstående kodexempel skapar vi `.top-nav` som vi känner igen från tidigar
 ```javascript
 "use strict";
 
-var m = require("mithril");
-var layout = require("./views/layout");
-var list = require("./views/list");
-var year = require("./views/year");
+import m from "mithril";
+import { layout } from "./views/layout";
+import { list } from "./views/list";
+import { year } from "./views/year";
 
 m.route(document.body, "/", {
     "/": {
@@ -499,9 +522,9 @@ För att vyerna inte ska renderas inne i två stycken `main.container` tar vi bo
 ```javascript
 "use strict";
 
-var m = require("mithril");
+import m from 'mithril';
 
-module.exports = {
+let layout = {
     view: function(vnode) {
         return [
             m("nav.top-nav",
@@ -516,6 +539,8 @@ module.exports = {
         ];
     }
 };
+
+export { layout };
 ```
 
 Här under kan ni se ett exempel på Nobel applikationen med navigation.

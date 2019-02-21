@@ -74,6 +74,8 @@ m.request({
 });
 ```
 
+I [mithrils dokumentation](https://mithril.js.org/route.html#authentication) ges ett exempel på hur man kan hantera om en användare är inloggad eller ej och visa olika beroende på status.
+
 
 
 Avslutningsvis {#avslutning}
