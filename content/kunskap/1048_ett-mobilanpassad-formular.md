@@ -154,47 +154,49 @@ Formuläret nedan gör det möjligt att redigera en dator. Det finns en `Compute
 Vi använder oss av en livscykel metod `onsubmit` för formuläret för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. Vi anropar dessutom modellens `save` funktion och då vi har redan satt värdet på den nuvarande dator kan vi helt enkelt bara spara den med hjälp av `m.request` och API:t som ligger i bakgrunden för appen.
 
 ```javascript
-var m = require("mithril")
-var Computer = require("../models/computer")
+import m from 'mithril';
+import computer from "../models/computer";
 
-module.exports = {
+let computerForm = {
     oninit: function(vnode) {
-        Computer.load(vnode.attrs.id);
+        computer.load(vnode.attrs.id);
     },
     view: function() {
         return m("form", {
                 onsubmit: function(event) {
                     event.preventDefault();
-                    Computer.save();
+                    computer.save();
                 } }, [
             m("label.input-label", "Name"),
             m("input.input[type=text][placeholder=Name]", {
-                oninput: m.withAttr("value", function(value) { Computer.current.name = value }),
-                value: Computer.current.name
+                oninput: m.withAttr("value", function(value) { computer.current.name = value }),
+                value: computer.current.name
             }),
             m("label.input-label", "Year"),
             m("input.input[type=number][placeholder=Year]", {
-                oninput: m.withAttr("value", function(value) { Computer.current.year = value }),
-                value: Computer.current.year
+                oninput: m.withAttr("value", function(value) { computer.current.year = value }),
+                value: computer.current.year
             }),
             m("label.input-label", "Operating System"),
             m("select.input", {
-                onchange: m.withAttr("value", function(value) { Computer.current.os = parseInt(value) })
-            }, Computer.operatingSystems.map(function(os) {
+                onchange: m.withAttr("value", function(value) { computer.current.os = parseInt(value) })
+            }, computer.operatingSystems.map(function(os) {
                 return m("option", { value: os.id }, os.name);
             })),
             m("input[type=submit][value=Save].button", "Save")
         ]);
     }
 };
+
+export { computerForm };
 ```
 
-Modellen `Computer` som används för att hämta ut den specifika datorn som ska redigeras (`load`) och spara datorn (`save`) ser ut enligt nedan. Först definierar vi `Computer.operatingSystems` och  `Computer.current`. De används för att visa upp operativsystem och `current` används för att spara data vi hämtar från vårt låtsas API. När vi sedan ska spara datorn anropar vi en `PUT` route och skickar med `Computer.current` som data objekt.
+Modellen `computer` som används för att hämta ut den specifika datorn som ska redigeras (`load`) och spara datorn (`save`) ser ut enligt nedan. Först definierar vi `computer.operatingSystems` och  `computer.current`. De används för att visa upp operativsystem och `current` används för att spara data vi hämtar från vårt låtsas API. När vi sedan ska spara datorn anropar vi en `PUT` route och skickar med `computer.current` som data objekt.
 
 ```javascript
 var m = require("mithril");
 
-var Computer = {
+var computer = {
     operatingSystems: [
         { id: 1, name: "Windows 10" },
         { id: 2, name: "Windows 7" },
@@ -208,21 +210,21 @@ var Computer = {
             method: "GET",
             url: "www.api-url.com/load/" + id
         }).then(function(result) {
-            Computer.current = result;
+            computer.current = result;
         });
     },
     save: function() {
         return m.request({
             method: "PUT",
             url: "www.api-url.com/save",
-            data: Computer.current
+            data: computer.current
         }).then(function() {
             m.route.set("/computers");
         });
     }
 };
 
-module.exports = Computer;
+export { computer };
 ```
 
 För ytterligare exempel på formulär hantering i mithril titta i [tutorial](https://mithril.js.org/simple-application.html).
