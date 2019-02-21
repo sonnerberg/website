@@ -39,7 +39,7 @@ Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet.
 </tbody>
 </table>
 
-Jag har gjort i ordning en enkel hemsida som endast innehåller samma `main.container`, som vi använd i tidigare kursmoment och tabellen. Om vi tittar på på denna sida i mobilen ser vi ännu mindre av tabellen. Vi noterar även att det nu går att scrolla hela sidan i sidled något vi vill försöka undvika på mobiler då det försvårar navigationen på sidan. Så målet för de två designs vi gör är **inga radbrytningar i celler** och **tabellen får inte vara bredare än skärmen på mobila enheter**.
+Jag har gjort i ordning en enkel hemsida som endast innehåller samma `main.container`, som vi använder i tidigare kursmoment och tabellen. Om vi tittar på denna sida i mobilen ser vi ännu mindre av tabellen. Vi noterar även att det nu går att scrolla hela sidan i sidled något vi vill försöka undvika på mobiler då det försvårar navigation. Så målet för de två designs vi gör är **inga radbrytningar i celler** och **tabellen får inte vara bredare än skärmen på mobila enheter**.
 
 [FIGURE src=/image/webapp/screenshot-table-no-style.png?w=c7 caption="Tabellen i en mobil enhet."]
 
