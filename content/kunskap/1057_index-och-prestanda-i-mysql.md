@@ -7,7 +7,7 @@ category:
     - sql index
     - kurs databas
 revision:
-    "2019-02-25": "(E, mos) Genomgången inför våren 2019."
+    "2019-02-25": "(E, mos) Genomgången inför våren 2019, mindre justeringar i text."
     "2018-01-15": "(D, mos) Wrong name drop fulltext index."
     "2018-01-15": "(C, mos) Tillagd i kurs databas."
     "2017-05-02": "(B, mos) Genomgång, inkl främmande nycklar och stödjer oophp."
@@ -297,12 +297,12 @@ Det var vårt första index och vi förändrade en table scan till att bara ber�
 
 
 
-###Nytt index med Unique {#unique}
+### Nytt index med Unique {#unique}
 
 Vi vill nu ställa en ny fråga på kursens smeknamn och finna en matchande rad.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM course WHERE nick = "dbjs";
+mysql> EXPLAIN SELECT * FROM course WHERE nick = 'dbjs';
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
@@ -326,7 +326,7 @@ Records: 0  Duplicates: 0  Warnings: 0
 Nu prövar vi med EXPLAIN igen och denna gången ser vi att endast en rad behöver besökas.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM course WHERE nick = "dbjs";
+mysql> EXPLAIN SELECT * FROM course WHERE nick = 'dbjs';
 +----+-------------+--------+-------+---------------+-------------+---------+-------+------+-------+
 | id | select_type | table  | type  | possible_keys | key         | key_len | ref   | rows | Extra |
 +----+-------------+--------+-------+---------------+-------------+---------+-------+------+-------+
@@ -358,7 +358,7 @@ Nåväl, man måste alltid sätta saker i perspektiv, om vi bara har 9 rader och
 
 
 
-###Visa och ta bort index {#dropindex}
+### Visa och ta bort index {#dropindex}
 
 Låt oss kika vilka index som nu finns på tabellen (SHOW) och hur vi kan ta bort ett av dem (DROP) för att sedan återskapa det (CREATE).
 
@@ -397,7 +397,7 @@ Du kan nu verifiera (SHOW/EXPLAIN) att indexet är tillbaka.
 
 
 
-###Skapa index vid CREATE TABLE {#crtabindex}
+### Skapa index vid CREATE TABLE {#crtabindex}
 
 Normalt skapar du dina index tillsammans med din CREATE TABLE. Det ger oss ytterligare en syntax för att skapa våra index. Om vi använder SHOW CREATE TABLE så får vi en ledtråd till hur tabellen kan skapas.
 
@@ -438,14 +438,14 @@ Resultatet i form av tabellstruktur och index blir exakt det samma som vi har se
 
 
 
-###Index för delsökning av sträng {#strinindex}
+### Index för delsökning av sträng {#strinindex}
 
 Då tar vi nästa fråga och nu vill vi göra delsökningar på kursens namn.
 
-Först en fråga med `name LIKE "Webb%"`.
+Först en fråga med `name LIKE 'Webb%'`.
 
 ```sql
-mysql> SELECT * FROM course WHERE name LIKE "Webb%";
+mysql> SELECT * FROM course WHERE name LIKE 'Webb%';
 +--------+---------+--------+---------------------------------------+
 | code   | nick    | points | name                                  |
 +--------+---------+--------+---------------------------------------+
@@ -459,7 +459,7 @@ mysql> SELECT * FROM course WHERE name LIKE "Webb%";
 Tre rader som träffade men man undrar hur många rader som behöver besökas. EXPLAIN ger oss svaret.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "Webb%";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE 'Webb%';
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
@@ -468,7 +468,7 @@ mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "Webb%";
 1 row in set (0.00 sec)
 ```
 
-Det finns tre träffar på `LIKE "Webb%"` men det krävs en full table scan för att hitta dem. Låt se hur bra ett index kan lösa detta.
+Det finns tre träffar på `LIKE 'Webb%'` men det krävs en full table scan för att hitta dem. Låt se hur bra ett index kan lösa detta.
 
 ```sql
 mysql> CREATE INDEX index_name ON course(name);
@@ -481,7 +481,7 @@ Vi skapar ett vanligt index som databasen kan använda för att indexera värden
 Sedan låter vi EXPLAIN visa om det indexet kan göra någon skillnad.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "Webb%";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE 'Webb%';
 +----+-------------+--------+-------+---------------+------------+---------+------+------+-----------------------+
 | id | select_type | table  | type  | possible_keys | key        | key_len | ref  | rows | Extra                 |
 +----+-------------+--------+-------+---------------+------------+---------+------+------+-----------------------+
@@ -509,13 +509,13 @@ mysql> EXPLAIN course;
 
 Jag tackar och tar emot när EXPLAIN visar att det nu är tre rader som behöver finnas, kunde inte varit bättre ju. Ett index på en varchar-kolumn som används i sökningar verkar vara en bra sak. Vi ser också att tabellen har fått en `MUL` nyckel på kolumnen name.
 
-Man undrar om det även löser frågor likt `LIKE "%prog%"` eller `LIKE "%Python"`? Följande tester säger dock nej.
+Man undrar om det även löser frågor likt `LIKE '%prog%'` eller `LIKE '%Python'`? Följande tester säger dock nej.
 
-Först kollar vi `LIKE "%prog%"`.
+Först kollar vi `LIKE '%prog%'`.
 
 
 ```sql
-mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "%prog%";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE '%prog%';
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
@@ -524,10 +524,10 @@ mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "%prog%";
 1 row in set (0.00 sec)
 ```
 
-Det blev en table scan. Då kollar vi `LIKE "%Python"`.
+Det blev en table scan. Då kollar vi `LIKE '%Python'`.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "%Python";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE '%Python';
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
@@ -542,7 +542,7 @@ Nåväl det finns andra typer av index om jag nu vill envisas att utföra sökni
 
 
 
-###Full text index {#fulltext}
+### Full text index {#fulltext}
 
 Detta är egentligen ett sidospår från optimeringen, men det handlar trots allt om ett index.
 
@@ -563,7 +563,7 @@ Records: 0  Duplicates: 0  Warnings: 0
 Sedan kör vi en fråga med MATCH och AGAINST. Svaret `score` visar hur bra söksträngarna matchade.
 
 ```sql
-mysql> SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC;
+mysql> SELECT name, MATCH(name) AGAINST ('Program* web*' IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC;
 +-------------------------------------------+----------------------+
 | name                                      | score                |
 +-------------------------------------------+----------------------+
@@ -584,7 +584,7 @@ Som sagt, detta handlar inte om optimering, det handlar mer om möjligheten att 
 
 
 
-###Index för numeriska värden {#larger}
+### Index för numeriska värden {#larger}
 
 Låt oss pröva en variant av SELECT och index där jag vill ha fram alla rader som är större än ettt numeriskt värde, säg `points > 7.5` för alla kurser som är större än 7.5hp.
 
@@ -739,7 +739,11 @@ Dock, innan man väljer index så bör man tänka igenom vilka frågor som komme
 Index och främmande nycklar {#foreign}
 ------------------------------
 
-Det vi behöver veta är att en FOREIGN KEY inte är ett index. Däremot försöker MySQL att skapa ett index för varje FOREIGN KEY som vi lägger till. MySQL har bestämt sig för att vi troligen kommer vilja joina tabeller på en främmande nyckel och därför väljer den att automatiskt försöka lägga till ett matchande index.
+Det vi behöver veta är att en FOREIGN KEY inte är ett index, det är ett constraint, ett villkor som databasen lovar att upprätthålla.
+
+Däremot försöker MySQL att skapa ett index för varje FOREIGN KEY som vi lägger till. MySQL har bestämt sig för att vi troligen kommer vilja joina tabeller på en främmande nyckel och därför väljer den att automatiskt försöka lägga till ett matchande index.
+
+Detta kan dock skifta mellan versioner och databashanterare, så räkna inte med att dina främmande nycklar alltid blir ett index per automatik.
 
 Principen är att en join behöver göras på en kolumn som har ett index, annars kan man få en full table scan på sin join och det vill man undvika.
 
@@ -762,7 +766,7 @@ $ mysql -uuser -ppass anyDatabase < index_fk.sql
 Storage Engine MEMORY {#memory}
 ------------------------------
 
-Valet av storage engine kan påverka prestandan. Den vanligaste storage enginen är numer InnoDB som har ersatt MyISAM. De olika lagringsmotorerna har olika karaktäristik som gör att de passar bättre och sämre under olika förhållanden. Man bör således bekanta sig med deras för- och nackdelar och välja noga.
+Valet av storage engine (lagringsmotor) kan påverka prestandan. Den vanligaste lagringsmotorn är numer InnoDB som har ersatt MyISAM. De olika lagringsmotorerna har olika karaktäristik som gör att de passar bättre och sämre under olika förhållanden. Man bör således bekanta sig med deras för- och nackdelar och välja noga då det kan påverka prestanda liksom andra aspekter.
 
 Ibland kan man dra nytta av att lagra tabeller i minnet, till det finns lagringsmotorn MEMORY. Har man möjligheten att samla en viss datamängd som man avser ställa många frågor mot, så kan det vara gynnsamt att först samla datamängden i en MEMORY-tabell och därefter ställa frågorna mot den.
 
@@ -777,9 +781,9 @@ När man väl kör en databas i drift så kan man be den att logga långsamma oc
 
 En databas är ett levande ting och beteer sig olika över tiden, så det är bra att ha koll på denna möjligheten.
 
-Man kan också sätta på loggning i en session man jobbar med, man kan utföra ett antal frågor och sedan visa hur lång tid de tog och hur mycker resurser de använde. Detta styr man med `SHOW PROFILE` [^3].
+Man kan också sätta på loggning i en session man jobbar med, man kan utföra ett antal frågor och sedan visa hur lång tid de tog och hur mycker resurser de använde. Detta styr man med [`SHOW PROFILE`](https://dev.mysql.com/doc/refman/8.0/en/show-profile.html).
 
-Här är ett exempel i ett flöde där jag sätter på profileringen, ställer ett par frågor och visar status för de frågor som gjorts.
+Här är ett exempel i ett flöde där jag sätter på profileringen, ställer ett par frågor och därefter visar status för de frågor som gjorts.
 
 Först sätter vi på loggning för profiliering.
 
@@ -791,7 +795,7 @@ Query OK, 0 rows affected, 1 warning (0.00 sec)
 Vi ställer en enkel fråga.
 
 ```sql
-mysql> SELECT * FROM course WHERE nick = "dbjs";
+mysql> SELECT * FROM course WHERE nick = 'dbjs';
 +--------+------+--------+---------------------------------+
 | code   | nick | points | name                            |
 +--------+------+--------+---------------------------------+
@@ -804,7 +808,7 @@ Vi ställer ytterligare en enkel fråga.
 
 
 ```sql
-mysql> SELECT * FROM course WHERE name LIKE "Webb%";
+mysql> SELECT * FROM course WHERE name LIKE 'Webb%';
 +--------+---------+--------+---------------------------------------+
 | code   | nick    | points | name                                  |
 +--------+---------+--------+---------------------------------------+
@@ -818,7 +822,7 @@ mysql> SELECT * FROM course WHERE name LIKE "Webb%";
 Vi ställer en fråga som är aningen mer komplex.
 
 ```sql
-mysql> SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC;
+mysql> SELECT name, MATCH(name) AGAINST ('Program* web*' IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC;
 +-------------------------------------------+----------------------+
 | name                                      | score                |
 +-------------------------------------------+----------------------+
@@ -842,9 +846,9 @@ mysql> SHOW PROFILES;
 +----------+------------+-------------------------------------------------------------------------------------------------------------+
 | Query_ID | Duration   | Query                                                                                                       |
 +----------+------------+-------------------------------------------------------------------------------------------------------------+
-|        1 | 0.00014100 | SELECT * FROM course WHERE nick = "dbjs"                                                                    |
-|        2 | 0.00016350 | SELECT * FROM course WHERE name LIKE "Webb%"                                                                |
-|        3 | 0.00028875 | SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC |
+|        1 | 0.00014100 | SELECT * FROM course WHERE nick = 'dbjs'                                                                    |
+|        2 | 0.00016350 | SELECT * FROM course WHERE name LIKE 'Webb%'                                                                |
+|        3 | 0.00028875 | SELECT name, MATCH(name) AGAINST ('Program* web*' IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC |
 +----------+------------+-------------------------------------------------------------------------------------------------------------+
 5 rows in set, 1 warning (0.00 sec)
 ```
@@ -920,11 +924,3 @@ Avslutningsvis {#avslutning}
 Du har nu fått en allmän genomgång av aspekter som kan påverka prestandan av din databas och fokus har varit på index. Vill du läsa mer så är manualen för MySQL och den delen som handlar om Optimization, en god punkt att fortsätta.
 
 Artikeln har en [egen forumtråd](t/6375) där du kan ställa frågor eller bidra med tips och trix.
-
-
-
-[^1]: [Wikipedia om Full table scan](https://en.wikipedia.org/wiki/Full_table_scan).
-
-[^2]: [MySQL documentation för EXPLAIN](https://dev.mysql.com/doc/refman/8.0/en/explain.html).
-
-[^3]: [MySQL documentation för SHOW PROFILE](https://dev.mysql.com/doc/refman/8.0/en/show-profile.html).
