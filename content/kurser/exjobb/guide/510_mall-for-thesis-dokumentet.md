@@ -1,13 +1,14 @@
 ---
 author: mos
 revision:
+    "2019-02-25": "(C, mos) Länk till V3 av Conny mall 2019."
     "2019-02-22": "(B, mos) Ny mall för 2019."
     "2018-12-21": "(A, mos) Från forumet."
 ...
 Mall för thesis dokumentet
 =======================
 
-Conny har en [ny uppdaterad mall för 2019](https://drive.google.com/open?id=0ByJ-Zb8R9RVmaWhGcjJoNlZYYk9XZzlZT1JFNzBnMlVaWmNv). Han säger att det enbart är mindre ändringar, jämfört med 2018.
+Conny har en [ny uppdaterad mall för 2019 (v3)](https://drive.google.com/open?id=0ByJ-Zb8R9RVmeVV5REdnSEc1X1g2WUJTS1RvTjdhVkxFRWhn). Han säger att det enbart är mindre ändringar, jämfört med 2018.
 
 Under 2018 hade vi en allmän diskussion om mallen i forumet i tråden  [Rapportmall för exjobbet](t/7321).
 
