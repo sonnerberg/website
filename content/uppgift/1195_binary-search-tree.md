@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2018-02-25": (B, aar) La till krav om rekursion.
     "2018-02-22": (A, aar) First version.
 category:
     - oopython
@@ -72,6 +73,8 @@ cd kmom06/tree
 1. Döp klasser, metoder och attribut som i klassdiagrammet ovanför. Ni får lägga till andra attribut och metoder.
 
 1. Implementera BinarySearchTree med noder för att bygga ett träd med metoderna som förklaras ovanför.
+
+1. Metoderna för Insert/Get/Print/Remove ska jobba rekursivt för att traversera noderna. De metoderna som anropas för det operationerna måste inte jobba rekursivt men då ska de anropa andra metoder som jobbar rekursivt. Kolla på genomgången för exempel.
 
 1. Kör test filen `test.py` för att se att ditt BST är korrekt implementerat innan du gör publish
 

@@ -17,8 +17,8 @@ Vi ska jobba med sorteringsalgoritmer. Ni uppdatera koden för Insertion sort s�
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har gjort uppgiften "[Skapa lista](uppgift/skapa-lista)".
-Du har läst artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".  
+Du har gjort uppgiften "[Skapa lista](uppgift/skapa-lista)".  
+Du har läst artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer-v2)".  
 Du har läst artikeln "[Datastrukturer](kunskap/datastrukturer)".  
 
 
