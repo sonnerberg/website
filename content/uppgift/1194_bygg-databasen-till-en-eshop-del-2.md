@@ -8,7 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
-    "2019-02-18": "(prel, mos) Första utgåvan, sammanslagen av tre andra uppgifter och vidarutvecklad."
+    "2019-02-25": "(prel, mos) Första utgåvan, sammanslagen av tre andra uppgifter och vidarutvecklad."
 ...
 Bygg databasen till en Eshop (del 2)
 ==================================
@@ -92,6 +92,8 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 1. Om man klickar på en order kan man se en översikt av dess orderrader.
 
+1. Skapa en om-sida på `eshop/about` som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften.
+
 
 
 ### Terminalklient {#term}
@@ -109,11 +111,13 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
     1. Om det inte finns en plocklista till vald order, så skapas en plocklista automatiskt, och visas.
     1. Vårt lager hanterar inte restnoteringar när produkten saknas på lagret, du behöver alltså inte ta hänsyn till om det blir minus på en produkt på en lagerhylla, det löser vi i "nästa version".
 
+1. Skapa kommandot `about` som visar namnen på de som jobbat (i grupp) för att lösa uppgiften.
+
 
 
 ### Lämna in {#lamnain}
 
-1. När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i `sql/eshop/backup.sql`. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system.
+1. När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i `sql/eshop/backup.sql`. Använd optionen `--routines` så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system.
 
 1. Validera din kod.
 

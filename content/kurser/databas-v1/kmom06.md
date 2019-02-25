@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/snapvt17/mysql-optimize.png?c=350,100,10,11&w=1100&h=300&cf&f=grayscale"
 author: mos
 revision:
     "2018-12-19": "(prel, mos) Gulmarkerat inför vt18."
@@ -16,15 +22,17 @@ Kursmomentet är under översyn inför vårterminen 2019.
 
 [/WARNING]
 
-Vi fortsätter med programmering i databasen, denna gången med egendefinierade funktioner som har en liknande struktur som lagrade procedurer och triggers.
+Vi fortsätter med programmering i databasen, denna gången med "funktioner" som har en liknande struktur som lagrade procedurer och triggers.
 
-Sedan studerar vi hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du kan använda index för att optimera din databas.
+Vi studerar hur databasen jobbar internt för att optimera SQL-frågor och hur index kan användas för att optimera databasen.
 
-Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och förhoppningsvis har vi fått en allt bättre koll på JavaScript-koden.
+Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och fortsätter att implementera vår eshop.
 
 <!--more-->
 
-[FIGURE src=image/snapvt17/mysql-optimize.png?w=w3 caption="Optimering av en databas sker på många olika nivåer."]
+[FIGURE src=image/snapvt17/mysql-optimize.png?w=w3&a=0,50,0,0 caption="Optimering av en databas sker på många olika nivåer."]
+
+[FIGURE src=image/snapvt17/udf.png caption="En egendefinierad funktion som kan underlätta när man gör rapporter med SQL." class="center"]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -65,16 +73,25 @@ Saker vi inte hanterat:
 
 Bekanta dig med följande:
 
-1. I manualen för MySQL kan du läsa om optimering och i vilka olina nivåer och lager som optimering kan utföras. Kika på nedanstående kapitel för att skaffa dig en översikt om möjligheter för optimering.
+1. I manualen för MySQL kan du läsa om optimering och i vilka olika nivåer som optimering kan utföras. Kika på nedanstående kapitel för att skaffa dig en översikt om möjligheter för optimering.
     * [Chapter 8 Optimization](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
 
 
+1. Du har tidigare läst i MySQL manualen om lagrade procedurer (stored procedures), triggers och compound statements. Komplettera det med att nu läsa (i samma kapitel) om "funktioner" som skapas med CREATE FUNCTION. Läs översiktligt följande i manualen.
+    * [24.1 Defining Stored Programs](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)
+    * [24.2 Using Stored Routines (Procedures and Functions)](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
 
-### Artiklar {#artiklar}
+
+
+### Modellering {#model}
 
 Läs följande.
 
-1. Läs igenom foruminlägget om "[Vad välja som primärnyckel till en databastabell](t/6439)?", det ger en snabb orientering i hur man kan tänka när man väljer primärnyckel i en tabell.
+1. Läs igenom foruminlägget om "[Vad välja som primärnyckel till en databastabell](t/6439)?", det ger en snabb orientering i hur man kan tänka när man väljer primärnyckel i en tabell (eventuellt har du redan läst om detta i kmom05).
+
+<!--
+Ta bort till 2020, artikeln är flyttad till kmom05.
+-->
 
 
 
@@ -82,7 +99,7 @@ Läs följande.
 
 Gör följande som ren överkurs, om du har tid, energi och lust.
 
-1. Kika på foruminlägget "[Exempelkod Node.js, Express, MySQL och login med sessioner](t/7327)" som visar hur du löser login med sessionshantering i Express.
+1. Kika på foruminlägget "[Exempelkod Node.js, Express, MySQL och login med sessioner](t/7327)" som visar hur du löser login med sessionshantering i Express. Detta är dock inget vi kommer använda i kursen.
 
 
 
@@ -159,7 +176,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Förklara begreppet index i databas för en nybörjare, berätta varför index är viktigt. Skriv ett kort stycke (3-7 rader).
 * Berätta vilka extra index du tillförde i din eshop.
-* Berätta kort (2-4 rader) hur du ser på nyttan med egendefinierade funktioner.
-* Berätta vilken/vilka egendefinierade funktioner du gjorde i eshopen.
-* Kommentera arbetet med din eshop, är du nöjd och hur tycker du svårighetsgraden har varit på uppgiften eshop som helhet?
+* Berätta kort hur du ser på nyttan med funktioner.
+* Berätta vilken/vilka funktioner du gjorde i eshopen.
+* Kommentera arbetet med din eshop, är du nöjd eller finns förbättringspotential och hur tycker du svårighetsgraden har varit på uppgiften eshop som helhet?
 * Vilken är din TIL för detta kmom?
