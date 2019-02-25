@@ -4,10 +4,10 @@ author:
 category:
     - mysql
     - sql
-    - kurs dbjs
-    - kurs oophp
+    - sql index
     - kurs databas
 revision:
+    "2019-02-25": "(E, mos) Genomgången inför våren 2019."
     "2018-01-15": "(D, mos) Wrong name drop fulltext index."
     "2018-01-15": "(C, mos) Tillagd i kurs databas."
     "2017-05-02": "(B, mos) Genomgång, inkl främmande nycklar och stödjer oophp."
@@ -16,9 +16,9 @@ revision:
 Index och prestanda i MySQL
 ===================================
 
-[FIGURE src=/image/snapvt17/mysql-show-profile.png?w=c5 class="right"]
+[FIGURE src=/image/snapvt17/mysql-show-profile.png?w=c5&a=0,60,60,0 class="right"]
 
-Vi skall titta på index och hur de hjälper dig att optimera din databas. Vi ser hur olika index påverkar antalet rader som måste besökas och vi lär oss innebörden av frågeoptimerarens jobb och vad termen _full table scan_ innebär.
+Vi skall titta på index och hur de hjälper dig att optimera din databas. Vi ser hur olika index påverkar antalet rader som måste besökas för att producera resultatet och vi lär oss innebörden av frågeoptimerarens jobb och vad termen _full table scan_ innebär.
 
 
 <!--more-->
@@ -30,9 +30,9 @@ Förutsättning {#pre}
 
 Du har goda kunskaper i SQL och i MySQL.
 
-En del av underlaget till denna artikel har utgått från [delen Optimization i manualen för MySQL](https://dev.mysql.com/doc/refman/5.7/en/optimization.html).
+En del av underlaget till denna artikel har utgått från [delen Optimization i manualen för MySQL](https://dev.mysql.com/doc/refman/8.0/en/optimization.html).
 
-I ditt kursrepo (databas, dbjs, oophp) under `example/sql/index.sql` finns grunden till de exempel som används i artikeln.
+I ditt kursrepo för databas under `example/sql/index.sql` finns grunden till de exempel som används i artikeln.
 
 
 
@@ -45,11 +45,58 @@ Gör så här för att skapa en egen tabell i din testdatabas, men dubbelkolla f
 mysql --table -uuser -ppass dbwebb < example/sql/index.sql
 ```
 
+Koden ser ut ungefär så här.
+
+```sql
+DROP TABLE IF EXISTS `course`;
+CREATE TABLE `course`
+(
+    `code` CHAR(6),
+    `nick` CHAR(12),
+    `points` DECIMAL(3, 1),
+    `name` VARCHAR(60)
+);
+
+DELETE FROM course;
+INSERT INTO course
+VALUES
+    ('DV1531', 'python',     7.5, 'Programmering och Problemlösning med Python'),
+    ('PA1439', 'htmlphp',    7.5, 'Webbteknologier'),
+    ('DV1561', 'javascript', 7.5, 'Programmering med JavaScript'),
+    ('PA1436', 'design',     7.5, 'Teknisk webbdesign och användbarhet'),
+    ('DV1547', 'linux',      7.5, 'Programmera webbtjänster i Linux'),
+    ('PA1437', 'oopython',   7.5, 'Objektorienterad design och programmering med Python'),
+    ('DV1546', 'webapp',     7.5, 'Webbapplikationer för mobila enheter'),
+    ('DV1506', 'webgl',      7.5, 'Spelteknik för webben'),
+    ('PA1444', 'dbjs',      10.0, 'Webbprogrammering och databaser')
+;
+```
+
+Tabellen ser ut så här.
+
+```text
+mysql> SELECT * FROM course;
++--------+------------+--------+------------------------------------------------------+
+| code   | nick       | points | name                                                 |
++--------+------------+--------+------------------------------------------------------+
+| DV1531 | python     |    7.5 | Programmering och Problemlösning med Python          |
+| PA1439 | htmlphp    |    7.5 | Webbteknologier                                      |
+| DV1561 | javascript |    7.5 | Programmering med JavaScript                         |
+| PA1436 | design     |    7.5 | Teknisk webbdesign och användbarhet                  |
+| DV1547 | linux      |    7.5 | Programmera webbtjänster i Linux                     |
+| PA1437 | oopython   |    7.5 | Objektorienterad design och programmering med Python |
+| DV1546 | webapp     |    7.5 | Webbapplikationer för mobila enheter                 |
+| DV1506 | webgl      |    7.5 | Spelteknik för webben                                |
+| PA1444 | dbjs       |   10.0 | Webbprogrammering och databaser                      |
++--------+------------+--------+------------------------------------------------------+
+9 rows in set (0.00 sec)
+```
+
 Du kan även köra allt i Workbench. 
 
 För att du på bästa sätt skall lära dig de delar som artikeln behandlar, så bör du köra dem själv och på egen hand. Nu har du möjlighet till det.
 
-Ett bra tips är att du sparar undan all kod du skriver och lägger kommentarer kring den, du kan ha nytta av sådana kodexempel framöver.
+Ett bra tips är att du sparar undan all kod du skriver och lägger kommentarer kring den, du kan ha nytta av sådana kodexempel framöver när du behöver skapa egna index till dina tabeller.
 
 
 
@@ -64,7 +111,9 @@ Låt oss undvika delen med hårdvaran och hur MySQL är installerad och konfigur
 
 Här handlar det om grundläggande saker som om databasen har en hälsosam struktur där tabeller och kolumner matchar den typen av applikation man vill ha. De frågor man ställer mot databasen bör vara optimerade och endast hämta/använda de resurser som krävs.
 
-Använd inte mer resurser än du behöver och krångla inte till det.
+Vår generella regel är enkel och lyder enligt följande.
+
+> "Använd inte mer resurser än du behöver och krångla inte till det."
 
 Låt oss se vilka tips vi kan föreslå, för att jobba med optimering av databasen på databas- och SQL-nivå.
 
@@ -86,30 +135,30 @@ Ingen vill vänta extra sekunder, timmar, dagar på ett resultat, iallafall inte
 Använd index {#index}
 ------------------------------
 
-Den enklaste regeln må vara att alla dina sökningar i databasen skall göras på kolumner som har ett index kopplat till sig. Låt se vad det innebär i praktiken och hur vi kan försäkra oss om att så sker.
+Den enklaste regeln, för att underlätta för frågeoptimeraren, må vara att alla dina sökningar i databasen skall göras på kolumner som har ett index kopplat till sig. Låt se vad det innebär i praktiken och hur vi kan försäkra oss om att så sker.
 
 
 
-###Full table scan {#tablescan}
+### Full table scan {#tablescan}
 
-Det vi vill undvika är en full table scan [^1]. En full table scan är när frågeoptimeraren måste gå igenom samtliga rader i tabellen för att finna det vi söker efter.
+Det vi vill undvika är en [full table scan](https://en.wikipedia.org/wiki/Full_table_scan). En full table scan är när frågeoptimeraren måste gå igenom samtliga rader i tabellen för att finna det vi söker efter.
 
 Utan index så har frågeoptimeraren ingen möjlighet att finna genvägar till svaret, genvägar som gör att endast en delmängd av tabellens rader behöver besökas.
 
-När vi tittar på en fråga så bör vi alltså minimera möjligheten att det görs en full table scan, vi kan göra det genom att tillföra index på relevanta kolumner. Relevenata kolumner är de som testas, till exempel i WHERE-villkoret.
+När vi tittar på en fråga så bör vi alltså minimera möjligheten att det sker en full table scan, vi kan göra det genom att tillföra index på relevanta kolumner. Relevenata kolumner är de som testas, till exempel i WHERE-villkoret.
 
-Att ha för många onödiga index är en kostnad i sig då det tar upp plats på hårddisken och det tar tid för frågeoptimeraren att välja vilket/vilka index den skall använda. Det är alltså ingen hållbar lösning att lägga till index på samtliga kolumner. Man lägger rätt index där de behövs.
+Att ha för många onödiga index är en kostnad i sig då det tar upp plats på hårddisken och det tar tid för frågeoptimeraren att upprätthålla strukturen för index och välja vilket/vilka index den skall använda. Det är alltså ingen hållbar lösning att lägga till index på samtliga kolumner. Man lägger rätt index där de behövs.
 
 
 
-###Tabellens grundstruktur {#grunden}
+### Tabellens grundstruktur {#grunden}
 
 Det bästa sättet att optimera en SELECT-fråga är att de kolumner som _testas_ i frågan, är indexerade.
 
 Låt säga att vi har en tabell enligt följande.
 
 ```sql
-CREATE TABLE `Course`
+CREATE TABLE `course`
 (
 	`code` CHAR(6),
 	`nick` CHAR(12),
@@ -123,7 +172,7 @@ Det finns ännu inget index i tabellen. Vi fyller tabellen med rader och gör en
 Så här blir resultatet, table scan eller ej.
 
 ```sql
-mysql> SELECT * FROM Course;
+mysql> SELECT * FROM course;
 +--------+----------+--------+-------------------------------------------+
 | code   | nick     | points | name                                      |
 +--------+----------+--------+-------------------------------------------+
@@ -140,10 +189,10 @@ mysql> SELECT * FROM Course;
 9 rows in set (0.00 sec)
 ```
 
-Vi kan använda EXPLAIN [^2] mot tabellen, för att se hur tabellen är strukturerad. Utskriften ger oss tabellens struktur och information om datatyper, NULL, nycklar med mera. 
+Vi kan använda [EXPLAIN](https://dev.mysql.com/doc/refman/8.0/en/explain.html) mot tabellen, för att se hur tabellen är strukturerad. Utskriften ger oss tabellens struktur och information om datatyper, NULL, nycklar med mera. 
 
 ```sql
-mysql> EXPLAIN Course;
+mysql> EXPLAIN course;
 +--------+--------------+------+-----+---------+-------+
 | Field  | Type         | Null | Key | Default | Extra |
 +--------+--------------+------+-----+---------+-------+
@@ -160,11 +209,11 @@ Det vi ser är alltså tabellens grundstruktur och hur kolumnerna är definierad
 Vi kan även använda EXPLAIN mot frågor som SELECT, UPDATE, INSERT eller DELETE. Det ger oss information om hur frågeoptimeraren tolkar frågan och vilken exekveringsplan vi kan förvänta oss.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course;
+mysql> EXPLAIN SELECT * FROM course;
 +----+-------------+--------+------+---------------+------+---------+------+------+-------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------+
-|  1 | SIMPLE      | Course | ALL  | NULL          | NULL | NULL    | NULL |    9 | NULL  |
+|  1 | SIMPLE      | course | ALL  | NULL          | NULL | NULL    | NULL |    9 | NULL  |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------+
 1 row in set (0.00 sec)
 ```
@@ -175,12 +224,12 @@ Vår SELECT-fråga berör bara en tabell (`SIMPLE`), det finns ingen join eller 
 
 
 
-###Skapa index via primärnyckel {#primary}
+### Skapa index via primärnyckel {#primary}
 
 Låt oss pröva en ny fråga där vi endast letar efter en rad.
 
 ```sql
-mysql> SELECT * FROM Course WHERE code = "PA1444";
+mysql> SELECT * FROM course WHERE code = 'PA1444';
 +--------+------+--------+---------------------------------+
 | code   | nick | points | name                            |
 +--------+------+--------+---------------------------------+
@@ -189,14 +238,14 @@ mysql> SELECT * FROM Course WHERE code = "PA1444";
 1 row in set (0.00 sec)
 ```
 
-Sökningen sker på kolumnern `code` som är en kandidatnyckel (potentiell primärnyckel) i tabellen. Vi vet att det bara finns en rad som kan matcha frågan.
+Sökningen sker på kolumnen `code` som är en kandidatnyckel (potentiell primärnyckel) i tabellen. Vi vet att det bara finns en rad som kan matcha frågan.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE code = "PA1444";
+mysql> EXPLAIN SELECT * FROM course WHERE code = 'PA1444';
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
-|  1 | SIMPLE      | Course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
+|  1 | SIMPLE      | course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 1 row in set (0.00 sec)
 ```
@@ -208,7 +257,7 @@ I detta fallet har vi ännu ingen primärnyckel och eftersom kolumnen `code` är
 Här väljer jag att lägga till primärnyckeln på den befintliga tabellen via ALTER TABLE.
 
 ```sql
-mysql> ALTER TABLE Course ADD PRIMARY KEY(code);
+mysql> ALTER TABLE course ADD PRIMARY KEY(code);
 Query OK, 9 rows affected (0.10 sec)
 Records: 9  Duplicates: 0  Warnings: 0
 ```
@@ -216,11 +265,11 @@ Records: 9  Duplicates: 0  Warnings: 0
 Nu kan jag se hur EXPLAIN tolkar resultatet, nu med primärnyckel som ger ett index.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE code = "PA1444";
+mysql> EXPLAIN SELECT * FROM course WHERE code = "PA1444";
 +----+-------------+--------+-------+---------------+---------+---------+-------+------+-------+
 | id | select_type | table  | type  | possible_keys | key     | key_len | ref   | rows | Extra |
 +----+-------------+--------+-------+---------------+---------+---------+-------+------+-------+
-|  1 | SIMPLE      | Course | const | PRIMARY       | PRIMARY | 6       | const |    1 | NULL  |
+|  1 | SIMPLE      | course | const | PRIMARY       | PRIMARY | 6       | const |    1 | NULL  |
 +----+-------------+--------+-------+---------------+---------+---------+-------+------+-------+
 1 row in set (0.00 sec)
 ```
@@ -232,7 +281,7 @@ Hur kan jag veta var `const` betyder i `type`? Jag läser dokumentationen för M
 När vi gör EXPLAIN på tabellen så ser vi nu att det finns en primärnyckel (`PRI`) för kolumnen `code`.
 
 ```sql
-mysql> EXPLAIN Course;
+mysql> EXPLAIN course;
 +--------+--------------+------+-----+---------+-------+
 | Field  | Type         | Null | Key | Default | Extra |
 +--------+--------------+------+-----+---------+-------+
@@ -253,11 +302,11 @@ Det var vårt första index och vi förändrade en table scan till att bara ber�
 Vi vill nu ställa en ny fråga på kursens smeknamn och finna en matchande rad.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE nick = "dbjs";
+mysql> EXPLAIN SELECT * FROM course WHERE nick = "dbjs";
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
-|  1 | SIMPLE      | Course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
+|  1 | SIMPLE      | course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 1 row in set (0.00 sec)
 ```
@@ -269,7 +318,7 @@ Det löser vi med att sätta kolumnen som UNIQUE vilket innebär att varje värd
 Först lägger vi till indexet via ALTER TABLE.
 
 ```sql
-mysql> ALTER TABLE Course ADD CONSTRAINT nick_unique UNIQUE (nick);
+mysql> ALTER TABLE course ADD CONSTRAINT nick_unique UNIQUE (nick);
 Query OK, 0 rows affected (0.04 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
@@ -277,11 +326,11 @@ Records: 0  Duplicates: 0  Warnings: 0
 Nu prövar vi med EXPLAIN igen och denna gången ser vi att endast en rad behöver besökas.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE nick = "dbjs";
+mysql> EXPLAIN SELECT * FROM course WHERE nick = "dbjs";
 +----+-------------+--------+-------+---------------+-------------+---------+-------+------+-------+
 | id | select_type | table  | type  | possible_keys | key         | key_len | ref   | rows | Extra |
 +----+-------------+--------+-------+---------------+-------------+---------+-------+------+-------+
-|  1 | SIMPLE      | Course | const | nick_unique   | nick_unique | 9       | const |    1 | NULL  |
+|  1 | SIMPLE      | course | const | nick_unique   | nick_unique | 9       | const |    1 | NULL  |
 +----+-------------+--------+-------+---------------+-------------+---------+-------+------+-------+
 1 row in set (0.00 sec)
 ```
@@ -289,7 +338,7 @@ mysql> EXPLAIN SELECT * FROM Course WHERE nick = "dbjs";
 Vi kan köra EXPLAIN på tabellen och ser nu att indexet `UNI` finns på plats.
 
 ```sql
-mysql> EXPLAIN Course;
+mysql> EXPLAIN course;
 +--------+--------------+------+-----+---------+-------+
 | Field  | Type         | Null | Key | Default | Extra |
 +--------+--------------+------+-----+---------+-------+
@@ -316,12 +365,12 @@ Låt oss kika vilka index som nu finns på tabellen (SHOW) och hur vi kan ta bor
 SHOW INDEX visar vilka index som finns.
 
 ```sql
-mysql> SHOW INDEX FROM Course;
+mysql> SHOW INDEX FROM course;
 +--------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 | Table  | Non_unique | Key_name    | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
 +--------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
-| Course |          0 | PRIMARY     |            1 | code        | A         |           9 |     NULL | NULL   |      | BTREE      |         |               |
-| Course |          0 | nick_unique |            1 | nick        | A         |           9 |     NULL | NULL   | YES  | BTREE      |         |               |
+| course |          0 | PRIMARY     |            1 | code        | A         |           9 |     NULL | NULL   |      | BTREE      |         |               |
+| course |          0 | nick_unique |            1 | nick        | A         |           9 |     NULL | NULL   | YES  | BTREE      |         |               |
 +--------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 2 rows in set (0.00 sec)
 ```
@@ -329,7 +378,7 @@ mysql> SHOW INDEX FROM Course;
 Här får vi en lista med detaljer om de index som finns på tabellen. Vill vi ta bort ett index kan vi göra det med DROP INDEX via dess namn.
 
 ```sql
-mysql> DROP INDEX nick_unique ON Course;
+mysql> DROP INDEX nick_unique ON course;
 Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
@@ -339,7 +388,7 @@ Nu är vårt index borta, du kan verifiera med SHOW eller EXPLAIN.
 Det finns andra sätt än ALTER TABLE att skapa ett index, du kan skapa nya index med CREATE INDEX.
 
 ```sql
-mysql> CREATE UNIQUE INDEX nick_unique ON Course (nick);
+mysql> CREATE UNIQUE INDEX nick_unique ON course (nick);
 Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
@@ -353,10 +402,10 @@ Du kan nu verifiera (SHOW/EXPLAIN) att indexet är tillbaka.
 Normalt skapar du dina index tillsammans med din CREATE TABLE. Det ger oss ytterligare en syntax för att skapa våra index. Om vi använder SHOW CREATE TABLE så får vi en ledtråd till hur tabellen kan skapas.
 
 ```sql
-mysql> SHOW CREATE TABLE Course\G
+mysql> SHOW CREATE TABLE course\G
 *************************** 1. row ***************************
-       Table: Course
-Create Table: CREATE TABLE `Course` (
+       Table: course
+Create Table: CREATE TABLE `course` (
   `code` char(6) NOT NULL DEFAULT '',
   `nick` char(12) DEFAULT NULL,
   `points` decimal(3,1) DEFAULT NULL,
@@ -372,8 +421,8 @@ Varianten med `\G` ger oss en radvis utskrift istället för kolumnvis.
 Om vi återskapar vår egen tabell, nu med index från början, skulle koden kunna se ut så här.
 
 ```sql
-DROP TABLE IF EXISTS `Course`;
-CREATE TABLE `Course`
+DROP TABLE IF EXISTS `course`;
+CREATE TABLE `course`
 (
 	`code` CHAR(6),
 	`nick` CHAR(12),
@@ -396,7 +445,7 @@ Då tar vi nästa fråga och nu vill vi göra delsökningar på kursens namn.
 Först en fråga med `name LIKE "Webb%"`.
 
 ```sql
-mysql> SELECT * FROM Course WHERE name LIKE "Webb%";
+mysql> SELECT * FROM course WHERE name LIKE "Webb%";
 +--------+---------+--------+---------------------------------------+
 | code   | nick    | points | name                                  |
 +--------+---------+--------+---------------------------------------+
@@ -410,11 +459,11 @@ mysql> SELECT * FROM Course WHERE name LIKE "Webb%";
 Tre rader som träffade men man undrar hur många rader som behöver besökas. EXPLAIN ger oss svaret.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE name LIKE "Webb%";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "Webb%";
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
-|  1 | SIMPLE      | Course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
+|  1 | SIMPLE      | course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 1 row in set (0.00 sec)
 ```
@@ -422,7 +471,7 @@ mysql> EXPLAIN SELECT * FROM Course WHERE name LIKE "Webb%";
 Det finns tre träffar på `LIKE "Webb%"` men det krävs en full table scan för att hitta dem. Låt se hur bra ett index kan lösa detta.
 
 ```sql
-mysql> CREATE INDEX index_name ON Course(name);
+mysql> CREATE INDEX index_name ON course(name);
 Query OK, 0 rows affected (0.04 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
@@ -432,11 +481,11 @@ Vi skapar ett vanligt index som databasen kan använda för att indexera värden
 Sedan låter vi EXPLAIN visa om det indexet kan göra någon skillnad.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE name LIKE "Webb%";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "Webb%";
 +----+-------------+--------+-------+---------------+------------+---------+------+------+-----------------------+
 | id | select_type | table  | type  | possible_keys | key        | key_len | ref  | rows | Extra                 |
 +----+-------------+--------+-------+---------------+------------+---------+------+------+-----------------------+
-|  1 | SIMPLE      | Course | range | index_name    | index_name | 43      | NULL |    3 | Using index condition |
+|  1 | SIMPLE      | course | range | index_name    | index_name | 43      | NULL |    3 | Using index condition |
 +----+-------------+--------+-------+---------------+------------+---------+------+------+-----------------------+
 1 row in set (0.00 sec)
 ```
@@ -446,7 +495,7 @@ Det kunde det. Det blev till och med så bra att enbart 3 rader behövde besöka
 Vi kan se hur tabellen ser ut, med EXPLAIN.
 
 ```sql
-mysql> EXPLAIN Course;
+mysql> EXPLAIN course;
 +--------+--------------+------+-----+---------+-------+
 | Field  | Type         | Null | Key | Default | Extra |
 +--------+--------------+------+-----+---------+-------+
@@ -466,11 +515,11 @@ Först kollar vi `LIKE "%prog%"`.
 
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE name LIKE "%prog%";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "%prog%";
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
-|  1 | SIMPLE      | Course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
+|  1 | SIMPLE      | course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 1 row in set (0.00 sec)
 ```
@@ -478,11 +527,11 @@ mysql> EXPLAIN SELECT * FROM Course WHERE name LIKE "%prog%";
 Det blev en table scan. Då kollar vi `LIKE "%Python"`.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE name LIKE "%Python";
+mysql> EXPLAIN SELECT * FROM course WHERE name LIKE "%Python";
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
-|  1 | SIMPLE      | Course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
+|  1 | SIMPLE      | course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 1 row in set (0.00 sec)
 ```
@@ -506,7 +555,7 @@ Vi skapar ett FULLTEXT index och använder sedan MATCH och AGAINST för att utf�
 Först skapar vi indexet.
 
 ```sql
-mysql> CREATE FULLTEXT INDEX full_name ON Course(name);
+mysql> CREATE FULLTEXT INDEX full_name ON course(name);
 Query OK, 0 rows affected (0.19 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
@@ -514,7 +563,7 @@ Records: 0  Duplicates: 0  Warnings: 0
 Sedan kör vi en fråga med MATCH och AGAINST. Svaret `score` visar hur bra söksträngarna matchade.
 
 ```sql
-mysql> SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM Course ORDER BY score DESC;
+mysql> SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC;
 +-------------------------------------------+----------------------+
 | name                                      | score                |
 +-------------------------------------------+----------------------+
@@ -542,7 +591,7 @@ Låt oss pröva en variant av SELECT och index där jag vill ha fram alla rader 
 Förs kontrollerar vi frågan utan index.
 
 ```sql
-mysql> SELECT * FROM Course WHERE points > 7.5;
+mysql> SELECT * FROM course WHERE points > 7.5;
 +--------+------+--------+---------------------------------+
 | code   | nick | points | name                            |
 +--------+------+--------+---------------------------------+
@@ -554,11 +603,11 @@ mysql> SELECT * FROM Course WHERE points > 7.5;
 Det blir en träff. Låt se hur EXPLAIN ser på det.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE points > 7.5;
+mysql> EXPLAIN SELECT * FROM course WHERE points > 7.5;
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
-|  1 | SIMPLE      | Course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
+|  1 | SIMPLE      | course | ALL  | NULL          | NULL | NULL    | NULL |    9 | Using where |
 +----+-------------+--------+------+---------------+------+---------+------+------+-------------+
 1 row in set (0.00 sec)
 ```
@@ -566,7 +615,7 @@ mysql> EXPLAIN SELECT * FROM Course WHERE points > 7.5;
 Det blev en table scan. Vi prövar att optimera med ett vanligt index.
 
 ```sql
-mysql> CREATE INDEX index_points ON Course(points);
+mysql> CREATE INDEX index_points ON course(points);
 Query OK, 0 rows affected (0.04 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
@@ -574,11 +623,11 @@ Records: 0  Duplicates: 0  Warnings: 0
 Indexet är på plats, låt se om EXPLAIN kan dra nytta av det.
 
 ```sql
-mysql> EXPLAIN SELECT * FROM Course WHERE points > 7.5;
+mysql> EXPLAIN SELECT * FROM course WHERE points > 7.5;
 +----+-------------+--------+-------+---------------+--------------+---------+------+------+-----------------------+
 | id | select_type | table  | type  | possible_keys | key          | key_len | ref  | rows | Extra                 |
 +----+-------------+--------+-------+---------------+--------------+---------+------+------+-----------------------+
-|  1 | SIMPLE      | Course | range | index_points  | index_points | 3       | NULL |    1 | Using index condition |
+|  1 | SIMPLE      | course | range | index_points  | index_points | 3       | NULL |    1 | Using index condition |
 +----+-------------+--------+-------+---------------+--------------+---------+------+------+-----------------------+
 1 row in set (0.00 sec)
 ```
@@ -597,15 +646,15 @@ Vi tittade på detta tidigare, men låt oss se nu igen när alla index är på p
 Du kan visa alla index som finns på en tabell med `SHOW INDEX`. Då kan du även se vilket namn ett index har.
 
 ```sql
-mysql> SHOW INDEX FROM Course;
+mysql> SHOW INDEX FROM course;
 +--------+------------+--------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 | Table  | Non_unique | Key_name     | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
 +--------+------------+--------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
-| Course |          0 | PRIMARY      |            1 | code        | A         |           9 |     NULL | NULL   |      | BTREE      |         |               |
-| Course |          0 | nick_unique  |            1 | nick        | A         |           9 |     NULL | NULL   | YES  | BTREE      |         |               |
-| Course |          1 | index_name   |            1 | name        | A         |           9 |     NULL | NULL   | YES  | BTREE      |         |               |
-| Course |          1 | index_points |            1 | points      | A         |           4 |     NULL | NULL   | YES  | BTREE      |         |               |
-| Course |          1 | full_name    |            1 | name        | NULL      |           9 |     NULL | NULL   | YES  | FULLTEXT   |         |               |
+| course |          0 | PRIMARY      |            1 | code        | A         |           9 |     NULL | NULL   |      | BTREE      |         |               |
+| course |          0 | nick_unique  |            1 | nick        | A         |           9 |     NULL | NULL   | YES  | BTREE      |         |               |
+| course |          1 | index_name   |            1 | name        | A         |           9 |     NULL | NULL   | YES  | BTREE      |         |               |
+| course |          1 | index_points |            1 | points      | A         |           4 |     NULL | NULL   | YES  | BTREE      |         |               |
+| course |          1 | full_name    |            1 | name        | NULL      |           9 |     NULL | NULL   | YES  | FULLTEXT   |         |               |
 +--------+------------+--------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 5 rows in set (0.00 sec)
 ```
@@ -613,7 +662,7 @@ mysql> SHOW INDEX FROM Course;
 Vill du ta bort ett index så går det bra att droppa det via dess namn.
 
 ```text
-mysql> DROP INDEX full_name ON Course;
+mysql> DROP INDEX full_name ON course;
 ```
 
 När man väl går in och tittar mer noggrant på tabellernas struktur så vill man gärna se mer och mer detaljer för att förstå vad som händer.
@@ -621,7 +670,7 @@ När man väl går in och tittar mer noggrant på tabellernas struktur så vill 
 Vill du ha en enkel översikt över en tabells olika index så kan du också använda EXPLAIN.
 
 ```sql
-mysql> EXPLAIN Course;
+mysql> EXPLAIN course;
 +--------+--------------+------+-----+---------+-------+
 | Field  | Type         | Null | Key | Default | Extra |
 +--------+--------------+------+-----+---------+-------+
@@ -640,15 +689,15 @@ Nu börjar vi få koll på hur vi kan hantera index.
 Visa CREATE TABLE {#createtable}
 ------------------------------
 
-Vi har nu lagt till ett antal nycklar och index till tabellen och det hade varit trevligt att se SQL-koden för att göra `CREATE TABLE Course`.
+Vi har nu lagt till ett antal nycklar och index till tabellen och det hade varit trevligt att se SQL-koden för att göra `CREATE TABLE course`.
 
-Vi löser detta med kommandot `SHOW CREATE TABLE Course;`.
+Vi löser detta med kommandot `SHOW CREATE TABLE course;`.
 
 ```sql
-mysql> SHOW CREATE TABLE Course\G
+mysql> SHOW CREATE TABLE course\G
 *************************** 1. row ***************************
-       Table: Course
-Create Table: CREATE TABLE `Course` (
+       Table: course
+Create Table: CREATE TABLE `course` (
   `code` char(6) NOT NULL DEFAULT '',
   `nick` char(12) DEFAULT NULL,
   `points` decimal(3,1) DEFAULT NULL,
@@ -665,7 +714,7 @@ Create Table: CREATE TABLE `Course` (
 Resultatet vi får fram kan användas för att uppdatera din SQL som skapar tabellen. Det kan se ut så här.
 
 ```sql
-CREATE TABLE `Course` (
+CREATE TABLE `course` (
     `code` char(6) NOT NULL DEFAULT '',
     `nick` char(12) DEFAULT NULL,
     `points` decimal(3,1) DEFAULT NULL,
@@ -742,7 +791,7 @@ Query OK, 0 rows affected, 1 warning (0.00 sec)
 Vi ställer en enkel fråga.
 
 ```sql
-mysql> SELECT * FROM Course WHERE nick = "dbjs";
+mysql> SELECT * FROM course WHERE nick = "dbjs";
 +--------+------+--------+---------------------------------+
 | code   | nick | points | name                            |
 +--------+------+--------+---------------------------------+
@@ -755,7 +804,7 @@ Vi ställer ytterligare en enkel fråga.
 
 
 ```sql
-mysql> SELECT * FROM Course WHERE name LIKE "Webb%";
+mysql> SELECT * FROM course WHERE name LIKE "Webb%";
 +--------+---------+--------+---------------------------------------+
 | code   | nick    | points | name                                  |
 +--------+---------+--------+---------------------------------------+
@@ -769,7 +818,7 @@ mysql> SELECT * FROM Course WHERE name LIKE "Webb%";
 Vi ställer en fråga som är aningen mer komplex.
 
 ```sql
-mysql> SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM Course ORDER BY score DESC;
+mysql> SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC;
 +-------------------------------------------+----------------------+
 | name                                      | score                |
 +-------------------------------------------+----------------------+
@@ -793,9 +842,9 @@ mysql> SHOW PROFILES;
 +----------+------------+-------------------------------------------------------------------------------------------------------------+
 | Query_ID | Duration   | Query                                                                                                       |
 +----------+------------+-------------------------------------------------------------------------------------------------------------+
-|        1 | 0.00014100 | SELECT * FROM Course WHERE nick = "dbjs"                                                                    |
-|        2 | 0.00016350 | SELECT * FROM Course WHERE name LIKE "Webb%"                                                                |
-|        3 | 0.00028875 | SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM Course ORDER BY score DESC |
+|        1 | 0.00014100 | SELECT * FROM course WHERE nick = "dbjs"                                                                    |
+|        2 | 0.00016350 | SELECT * FROM course WHERE name LIKE "Webb%"                                                                |
+|        3 | 0.00028875 | SELECT name, MATCH(name) AGAINST ("Program* web*" IN BOOLEAN MODE) AS score FROM course ORDER BY score DESC |
 +----------+------------+-------------------------------------------------------------------------------------------------------------+
 5 rows in set, 1 warning (0.00 sec)
 ```
@@ -844,9 +893,9 @@ Läs mer {#lasmer}
 
 Om du har fått blodad tand på optimering så kan jag rekommendera följande ingångar in i manualen.
 
-* [Optimizing SQL Statements](https://dev.mysql.com/doc/refman/5.7/en/statement-optimization.html)
-* [Optimization and Indexes](https://dev.mysql.com/doc/refman/5.7/en/optimization-indexes.html)
-* [Understanding the Query Execution Plan](https://dev.mysql.com/doc/refman/5.7/en/execution-plan-information.html)
+* [Optimizing SQL Statements](https://dev.mysql.com/doc/refman/8.0/en/statement-optimization.html)
+* [Optimization and Indexes](https://dev.mysql.com/doc/refman/8.0/en/optimization-indexes.html)
+* [Understanding the Query Execution Plan](https://dev.mysql.com/doc/refman/8.0/en/execution-plan-information.html)
 
 Läs på och samla på dig små tips och trix till hur sakerna fungerar.
 
@@ -876,6 +925,6 @@ Artikeln har en [egen forumtråd](t/6375) där du kan ställa frågor eller bidr
 
 [^1]: [Wikipedia om Full table scan](https://en.wikipedia.org/wiki/Full_table_scan).
 
-[^2]: [MySQL documentation för EXPLAIN](https://dev.mysql.com/doc/refman/5.7/en/explain.html).
+[^2]: [MySQL documentation för EXPLAIN](https://dev.mysql.com/doc/refman/8.0/en/explain.html).
 
-[^3]: [MySQL documentation för SHOW PROFILE](https://dev.mysql.com/doc/refman/5.7/en/show-profile.html).
+[^3]: [MySQL documentation för SHOW PROFILE](https://dev.mysql.com/doc/refman/8.0/en/show-profile.html).
