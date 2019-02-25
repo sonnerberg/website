@@ -431,7 +431,7 @@ SHOW CREATE FUNCTION grade \G
 
 Fram kommer källkoden för funktionen.
 
-```textbaserat
+```text
 mysql> SHOW CREATE FUNCTION grade \G
 *************************** 1. row ***************************
             Function: grade
