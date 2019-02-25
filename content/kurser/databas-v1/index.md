@@ -152,9 +152,9 @@ Vi ser hur man bygger upp en CRUD-baserad webbklient med HTML-formulär som ger 
 
 Vi fortsätter med programmering i databasen, denna gången med egendefinierade funktioner som har en liknande struktur som lagrade procedurer och triggers.
 
-Sedan studerar vi hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du kan använda index för att optimera din databas.
+Vi studerar hur databasen jobbar internt för att optimera SQL-frågor och hur index kan användas för att optimera databasen.
 
-Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och förhoppningsvis har vi fått en allt bättre koll på JavaScript-koden.
+Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och fortsätter att implementera vår eshop.
 
 [Instruktion till kursmoment 06](./kmom06).
 
@@ -162,7 +162,7 @@ Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och förho
 
 ### Kmom07/10: Projekt och examination {#kmom10}
 
-Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
+Avslutningsvis gör du en projektinlämning enligt en specifikation tillsammans med en individuell tidsbegränsad examination. Inlämningen är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
 [Instruktion till kursmoment 10](./kmom10).
 
