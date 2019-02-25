@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2019-02-25": "(B, mos) Tips om GROUP_CONCAT och dump av procedurer."
     "2019-02-18": "(A, mos) Första utgåvan, sammanslagen av tre andra uppgifter och vidarutvecklad."
 ...
 Bygg databasen till en Eshop (del 1)
@@ -98,6 +99,10 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 1. Se till att det är smidigt att navigera i din produkt CRUD, via länkar och/eller formulär, man skall kunna klicka sig fram till det man vill göra.
 
+<!--
+1. Skapa en om-sida på `eshop/about` som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften.
+* -->
+
 
 
 ### Terminalklient {#term}
@@ -120,11 +125,15 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 1. Skapa kommandot `invdel <productid> <shelf> <number>` som plockar bort ett visst antal produkter från en viss lagerhylla.
 
+<!--
+1. Skapa kommandot `about` som visar namnen på de som jobbat (i grupp) för att lösa uppgiften.
+* -->
+
 
 
 ### Lämna in {#lamnain}
 
-1. När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i `sql/eshop/backup.sql`. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system.
+1. När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i `sql/eshop/backup.sql`. Använd optionen `--routines` så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system.
 
 1. Validera din kod.
 
@@ -151,8 +160,17 @@ Gör följande om du har tid och energi.
 Tips från coachen {#tips}
 -----------------------
 
-<!--
-Tips om GROUP_CONCAT i forumet.
--->
+Läs gärna på om GROUP_CONCAT som kan vara smidigt att använda när man vill göra en rapport som till exempel visar vilka kategorier som en produkt tillhör. Det finns ett [tips i forumet om GROUP_CONCAT](t/8366). 
+
+Du kan med GROUP_CONCAT skapa följande rapport, se kategorierna.
+
+```
++----+-------+-------+-------------+
+| id | name  | price | category    |
++----+-------+-------+-------------+
+| p1 | Apple |  42.0 | fruit,red   |
+| p2 | Pear  |  39.0 | fruit,green |
++----+-------+-------+-------------+
+```
 
 Lycka till och hojta till i forumet om du behöver hjälp!
