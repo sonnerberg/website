@@ -13,7 +13,7 @@ Kmom06: Datastrukturen träd
 Gör `dbwebb update` och `dbwebb init` innan du startar med kursmomentet.
 [/INFO]
 
-Vi jobbar vidare med datastrukturer och algoritmer och kollar på träd strukturen. Mer specifikt ska vi lära oss skapa ett Binärt sökträd och skapa algoritmer som kan traversera trädet. 
+Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla på träd strukturer. Mer specifikt ska vi lära oss skapa ett Binärt sökträd och skapa algoritmer som kan traversera trädet rekursivt. 
 
 <!--more-->
 
@@ -47,15 +47,16 @@ Inget att läsa.
 
 Titta på följande:
 
-Inget att titta på.
+1. Kolla på de video som börjar med [kmom06 i spellistan](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_PJCiQrnRxGtrfSFRBLvap).
 
 
 ###Lästips {#lastips}
 
+1. [Förra årets föreläsning](https://youtu.be/9NMhvR3jY6w?t=1951). Pratar allmänt om programmering, bl.a. att plugga programmering VS. jobba med programmering.
+
 1. [How to use the Python debugger](https://www.digitalocean.com/community/tutorials/how-to-use-the-python-debugger). Lär er använda Pythons debugger för att stega igenom koden.
 
 1. [Python debugger i atom](https://atom.io/packages/python-debugger). Installera Pythons debugger i atom så du kan stega igenom koden i atom istället för i terminalen. (Har inte testat den än. Om du testar skriv i redovisningstexten om den funkade bra).
-
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -102,5 +103,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad är ett Binärt sökträd?
 * Hur gick det att skriva de rekursiva funktionerna?
 * Vad är Inorder, Preorder och Postorder när man pratar om traversera träd? 
+* Vad är en Hash table?
 * Kan du jämföra och resonera kring de olika datastrukturerna vi gått igenom i kursen? Vilken passar till vad?
 * Gick det bra att utföra kursmomentet?
