@@ -127,6 +127,8 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 <!--
 1. Skapa kommandot `about` som visar namnen på de som jobbat (i grupp) för att lösa uppgiften.
+
+Ändra `inventory` till `inv`.
 * -->
 
 
