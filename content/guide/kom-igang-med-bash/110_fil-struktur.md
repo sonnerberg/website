@@ -12,7 +12,7 @@ Det finns många olika sätt att strukturera filer, inte bara inom bash-programm
 
 ### Filändelse {#filandelse}
 
-Ett bashscript behöver inte ha någon filändelse, utan det är enbart för användarens skull. I guiden och kursen använder vi filändelsen `.bash`.
+Ett bashscript behöver inte ha någon filändelse, utan det är enbart för användarens skull. De två vanligaste man ser är `.sh` eller `.bash`. I guiden och kursen använder vi filändelsen `.bash`.
 
 
 
@@ -38,7 +38,7 @@ För att kunna köra filen behöver vi göra den exekverbar. När vi ändå ska 
 
 > chmod -- change file modes or Access Control Lists
 
-Scrollar vi ner där så kan vi hitta att:
+Scrollar vi ner där så kan vi hitta:
 
 > x       The execute/search bits.
 
