@@ -40,7 +40,7 @@ cp example/dictionary/*.txt me/kmom10/spellchecker
 cd me/kmom10/SpellChecker
 ```
 
-Det finns fyra filer i dictionary mappen, alla filerna har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade engelska ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. De andra två filerna är för krav 5.
+Du kopierade fyra filer i precis, alla filerna har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade engelska ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. De andra två filerna är för krav 5.
 
 Innan du börjar med programmeringen ska du göra en analys av programmet du ska bygga och dokumentera det med klassdiagram.
 
@@ -70,33 +70,26 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 Skriv din kod i katalogen `me/kmom10/spellchecker`. Filen som startar programmet skall heta `spellchecker.py` och ska innehålla klassen SpellChecker.
 
-Implementera en Trie datastruktur, i filen `trie.py`, som består av noder, `node.py`. Varje nod behöver innehålla vilken bokstav noden representerar, en dictionary eller lista som ska hålla barn noderna och en boolean för att markera om det är en slut nod. Om du gör krav fyra ska du använda dictionary, annars kan du välja själv.
+Implementera en Trie datastruktur, i filen `trie.py`, som använder Node objekt, `node.py`. Varje Node objekt behöver innehålla vilken bokstav noden representerar, en dictionary eller lista som ska hålla barn noderna och en boolean för att markera om det är en slut nod. Om du gör krav fyra ska du använda dictionary, annars kan du välja själv.
 I Trie:en ska det gå att lägga till nya ord, kolla om ett ord finns i datastrukturen och få ut alla ord baserat på ett prefix.
 
 När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser in en fil med rättstavade engelska ord (välj själv vilken fil som ska läsas upp vid start). Lägg in alla orden i ett Trie objekt. Starta sen ett klassiskt while-loop terminal program (Marvin meny). Följande menyval ska finnas:
 
-1. Ta ett ord som input och kolla om det är rättstavat med hjälp av Trie objektet.
+1. Ta ett ord som input och kolla om det finns i ordlistan (Trie objektet).
 
 1. En prefix sökning, användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. Du kan begränsa utskriften av ord till max 10 åt gången. Se video ovan för exempel.
 
-1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från filen.
+1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från den nya filen.
 
 1. Skriv ut alla ord som finns i ordlistan.
 
 1. Exit
 
-
-
-###Krav 2: Testning {#k2}
-
-Skriv enhetstester för dina klasser. Spara testerna i filen `test.py`.
-
-Minst tre tester för varje klass. Testa inte bara positiva utfall, testa även när saker går fel.
-I dina enhetstester ska du ha en TestCase klass för varje klass du testar. Alltså lägg inte alla tester i en och samma TestCase klass.
+I SpellChecker klassen, lägg inte all kod i while-loopen, dela upp koden i metoder. T.ex. en metod/menyval åtminstonde.
 
 
 
-###Krav 3: Klassdiagram {#k3}
+###Krav 2: Klassdiagram {#k2}
 
 **Innan du börjar programmera** ska du analyser och planera vad du ska koda. Dokumentera  med klassdiagram vilka klasser, attribut, metoder och relationer som du tror att du kommer skapa när du utvecklar programmet.
 
@@ -109,6 +102,15 @@ Det gör inget om koden skiljer sig från diagrammen när du är klar med projek
 När du har kodat klart projektet, jämför hur din kod faktiskt blev med hur du tänkte dig att det skulle fungera. I redovisningstexten skriver du hur din kod förhåller sig till diagrammet.
 
 Spara som `classdiagrams.png`. Ladda upp filen på Canvas inlämningsuppgiften.
+
+
+
+###Krav 3: Testning {#k3}
+
+Skriv enhetstester för dina klasser. Spara testerna i filen `test.py`.
+
+Minst tre tester för varje klass. Testa inte bara positiva utfall, testa även när saker går fel.
+I dina enhetstester ska du ha en TestCase klass för varje klass du testar. Alltså lägg inte alla tester i en och samma TestCase klass.
 
 
 
@@ -131,9 +133,9 @@ Om du gör detta kravet ska du använda en dictionary för att hålla barn noder
 
 ###Krav 5: Baser utskrift för menyval 2 på word frequency {#k5}
 
-I detta kravet ska du använda filerna `frequency.txt` och `tiny_frequency.txt` för ordlistan. De filerna innehåller rättstavade engelska ord och hur vanliga de är. Varje rad innehåller ett ord och hur vanligt ordet är (ett float tal), separat med space. Ju högre siffra desto vanligare är ordet. Bygg ut din Node klass så varje nod också har ett attribut för frequency. I din metod för att lägga till ord, när du markera en slut nod behöver du också lägga in frekvensen för ordet som noden marker.
+I detta kravet ska du använda filerna `frequency.txt` och `tiny_frequency.txt` för ordlistan. De filerna innehåller rättstavade engelska ord och hur vanliga de är. Varje rad innehåller ett ord och hur vanligt ordet är (ett float tal), separat med space. Ju högre siffra desto vanligare är ordet. Bygg ut din Node klass med ett attribut för frequency. I din metod för att lägga till ord, när du markera en slut nod behöver du också lägga in frekvensen för ordet som noden marker.
 
-Nu för menyval 2, när programmet skriver ut 10 ord som finns baserat på prefixet ska programmet sortera alla orden baserat på frekvens och skriva ut de 10 med högst frekvens.
+Nu för menyval 2, när programmet skriver ut 10 ord som finns baserat på prefixet ska programmet sortera alla orden baserat på frekvens och begränsa utskriften till att max skriva ut de 10 med högst frekvens.
 
 
 
