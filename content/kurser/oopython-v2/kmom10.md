@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2019-02-29": (B, aar) Bytt projekt för att passa till algoritmer och datastrukturer. Förra projektet finns under [kmom10-2018](oopython-v2/kmom10-2018).
     "2018-02-21": (A, aar) Först utgåva till V2.
 ...
 Kmom10: Projekt och examination
@@ -30,13 +31,21 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du frilansar som python-utvecklare och har precis tackat ja till ett uppdrag att utveckla ett bokningssytem för restauranger.
+Du ska utveckla ett rättstavningsprogram till terminalen som använder en [Trie](https://www.youtube.com/watch?v=-urNrIAQnNo) för att lagra en ordlista.
 
-Utveckla ett objektorienterat system där det går att skapa användare och boka bord på restauranger. Du har möjligheten att själv välja om man ska använda systemet via terminalen eller om du vill ha en webbsida.
+Börja med att kopiera filer med engelska rättstavade ord från exempel mappen.
+```bash
+# Stå i kursrepo mappen
+cp example/dictionary/*.txt me/kmom10/spellchecker
+cd me/kmom10/SpellChecker
+```
 
-Innan du börjar med programmeringen ska du göra en analys över systemet du vill bygga och dokumentera det med klassdiagram.
+Det finns fyra filer i dictionary mappen, alla filerna har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade engelska ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. De andra två filerna är för krav 5.
+
+Innan du börjar med programmeringen ska du göra en analys av programmet du ska bygga och dokumentera det med klassdiagram.
 
 Fråga i forumet om du känner dig osäker.
+
 
 
 Bedömning och betygsättning {#bedomning}
@@ -49,7 +58,7 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikation. Saknas info i specen kan du själv välja väg, dokumentera dina val i redovisningstexten.
+Utveckla och leverera programmet enligt följande specifikation. Saknas info i specen kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
 De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
 
@@ -59,36 +68,22 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 ###Krav 1: Grunden {#k1}
 
-Placera din kod i katalogen `me/kmom10/booking`. Filen som startar programmet skall heta `main.py`.
+Skriv din kod i katalogen `me/kmom10/spellchecker`. Filen som startar programmet skall heta `spellchecker.py` och ska innehålla klassen SpellChecker.
 
+Implementera en Trie datastruktur, i filen `trie.py`, som består av noder, `node.py`. Varje nod behöver innehålla vilken bokstav noden representerar, en dictionary eller lista som ska hålla barn noderna och en boolean för att markera om det är en slut nod. Om du gör krav fyra ska du använda dictionary, annars kan du välja själv.
+I Trie:en ska det gå att lägga till nya ord, kolla om ett ord finns i datastrukturen och få ut alla ord baserat på ett prefix.
 
-Gör ett program där en användare kan boka bord på olika restauranger. Tänk onlinepizza fast för att boka bord istället. Programmet ska användas via terminalen, som ni gjorde i kmom04 och 05.
+När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser in en fil med rättstavade engelska ord (välj själv vilken fil som ska läsas upp vid start). Lägg in alla orden i ett Trie objekt. Starta sen ett klassiskt while-loop terminal program (Marvin meny). Följande menyval ska finnas:
 
-####Kravspec:
-Ska finnas:
+1. Ta ett ord som input och kolla om det är rättstavat med hjälp av Trie objektet.
 
-* En restaurang ska ha ett namn, address och X antal bord.
-* Ett bord ska ha X antal sittplatser. Borden ska kunna ha olika antal platser var.
-* En användare ska ha ett namn och historik över vilka bord på vilka restauranger den har bokat.
+1. En prefix sökning, användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. Du kan begränsa utskriften av ord till max 10 åt gången. Se video ovan för exempel.
 
-Funktionalitet:
+1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från filen.
 
-* Det ska gå att lägga till nya restauranger och bord till restaurangen.
-* Det ska gå att lägga till/ta bort bord på existerande restauranger.
-* Det ska gå att lägga till nya användare.
-* En användare ska kunna boka ett eller flera bord på en restaurang.
-* Det ska gå att välja en användare och se vilka bord och på vilken restaurang den har bokat.
-* Det ska gå att se alla restauranger som finns.
-* Det ska gå att se alla bord som finns på en restaurang.
-    * Ska även kunna välja att bara se obokade eller bokade bord.
-    * Det ska gå att se vem som har bokat borden.
-* Det ska gå att söka efter en specifik restaurang.
-* En användare ska kunna avboka bord.
+1. Skriv ut alla ord som finns i ordlistan.
 
-
-Skapa minst två egna exceptions och använd i din kod. Beskriv dem i din redovisningstext.
-
-Det ska inte finnas några "lösa" funktioner i din kod. Allt ska vara i klasser.
+1. Exit
 
 
 
@@ -103,11 +98,9 @@ I dina enhetstester ska du ha en TestCase klass för varje klass du testar. Allt
 
 ###Krav 3: Klassdiagram {#k3}
 
-**Innan du börjar programmera** ska du analyser och planera vad du ska koda. Tänkt ut vilka klasser du behöver och vilka attribut och metoder de ska.
+**Innan du börjar programmera** ska du analyser och planera vad du ska koda. Dokumentera  med klassdiagram vilka klasser, attribut, metoder och relationer som du tror att du kommer skapa när du utvecklar programmet.
 
-Skapa klassdiagram för alla klasser du tänker att du behöver. Klassdiagrammen ska innehålla attribut, metoder och relationer mellan klasserna.
-
-Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämmning på It's Learning för klassdiagrammet. **Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.**
+Klassdiagrammet ska lämnas in före du börjar koda projektet. Det finns en separat inlämning på Canvas för klassdiagrammet. **Du behöver inte vänta på att få godkänt innan du fortsätter med att programmera, det viktiga är att du har lämnat in det före.**
 
 Så gör ett klassdiagram, lämna in det och sen börjar du koda projektet.
 
@@ -115,8 +108,8 @@ Det gör inget om koden skiljer sig från diagrammen när du är klar med projek
 
 När du har kodat klart projektet, jämför hur din kod faktiskt blev med hur du tänkte dig att det skulle fungera. I redovisningstexten skriver du hur din kod förhåller sig till diagrammet.
 
+Spara som `classdiagrams.png`. Ladda upp filen på Canvas inlämningsuppgiften.
 
-Spara som `classdiagrams.png`. Ladda upp filen på It's inlämningsuppgiften.
 
 
 Se till att din kod validerar.
@@ -128,26 +121,29 @@ dbwebb publish kmom10
 
 
 
-###Krav 4: Binary search (optionell) {#k4}
+###Krav 4: Sortera utskriften {#k4}
 
-Implementera en Binary search algoritm och använd den när man ska söka efter en restaurang i programmet.
+För menyval 4 sortera alla orden innan de skrivs ut. Implementera en [Merge Sort](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm) algoritm som metod i SpellChecker klassen. Hämta ut alla ord från Trie objektet, lägg dem i en lista, sortera listan med Merge sort och skriv ut listan.
 
-Kolla in [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search) för en förklaring av hur algoritmen fungerar.
+Om du gör detta kravet ska du använda en dictionary för att hålla barn noderna i Node klassen.
 
 
 
-###Krav 5 och 6: Grafiskt gränssnitt på webben (optionell) {#k5}
+###Krav 5: Baser utskrift för menyval 2 på word frequency {#k5}
 
-Skapa en webbsida i Flask för ditt program. Om du gör detta kravet behöver ditt program inte fungera i terminalen. Du gör antingen webbsidan eller terminalen. Webbsidan ska uppfylla kravspecen från Krav 1.
+I detta kravet ska du använda filerna `frequency.txt` och `tiny_frequency.txt` för ordlistan. De filerna innehåller rättstavade engelska ord och hur vanliga de är. Varje rad innehåller ett ord och hur vanligt ordet är (ett float tal), separat med space. Ju högre siffra desto vanligare är ordet. Bygg ut din Node klass så varje nod också har ett attribut för frequency. I din metod för att lägga till ord, när du markera en slut nod behöver du också lägga in frekvensen för ordet som noden marker.
 
-Webbsidan ska även fungera på studentservern!  
-Problemet vi har med studentservern och Flask är att CGI startar upp ditt program vid varje request och stänger ner det igen när  requestet är behandlat. Det gör att all data försvinner från minnet, ex alla värden du har sparat i listor och variabler, mellan requesten CGI skickar. Det gör att listorna och variablerna återställs till default vid varje request. Så när du har ändrat eller lagt till någon data, tex en ny restaurang eller gjort en bokning, måste du spara det till fil som du sedan läser upp vid varje request.
+Nu för menyval 2, när programmet skriver ut 10 ord som finns baserat på prefixet ska programmet sortera alla orden baserat på frekvens och skriva ut de 10 med högst frekvens.
 
-Kortfattat: Vid varje request läser du upp data från fil och när du ändrat eller lagt till/tagit bort data sparar du till filen.
 
-Skapa filen `booking/db/data.json` och spara data i den.
 
-I [example/read_write](https://github.com/dbwebb-se/oopython/tree/master/example/flask/read_write) finns kod som visar hur du kan jobba med att läsa och skriva till fil.
+###Krav 6: Grafiskt gränssnitt på webben (optionell) {#k6}
+
+Gör ett grafiskt gränssnitt för att kolla om ett ord är rättstavat. Skapa en webbsida med Flask som innehåller två undersidor, en sida för att kolla om ett ord finns i ordlistan och en sida som skriver ut alla orden som finns i ordlistan.
+<!--
+För framtiden? Undersida för att byta fil och menyval 2?
+-->
+Webbsidan ska även fungera på studentservern!
 
 Koden som finns i app.py, som har med Flask att göra, behöver inte vara i en klass.
 
@@ -156,7 +152,7 @@ Koden som finns i app.py, som har med Flask att göra, behöver inte vara i en k
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din [redovisningssida](oopython-v2/redovisa), skriv följande:
+1. På din [redovisningssida](oopython/redovisa), skriv följande:
 
     1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
@@ -164,11 +160,9 @@ Redovisning {#redovisning}
 
     3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
+2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oopython) och berätta att du är klar.
-
-4\. Se till att samtliga kursmoment validerar.
+3\. Se till att samtliga kursmoment validerar.
 
 ```bash
 # Ställ dig i kurskatalogen
