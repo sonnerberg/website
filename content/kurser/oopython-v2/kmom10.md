@@ -33,7 +33,7 @@ cp example/dictionary/*.txt me/kmom10/spellchecker
 cd me/kmom10/SpellChecker
 ```
 
-Du kopierade fyra filer i precis, alla filerna har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade engelska ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. De andra två filerna är för krav 5.
+Du kopierade fyra filer precis, alla har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade engelska ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. De andra två filerna är för krav 5.
 
 Innan du börjar med programmeringen ska du göra en analys av programmet du ska bygga och dokumentera det med klassdiagram.
 
