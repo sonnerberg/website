@@ -119,7 +119,7 @@ dbwebb publish kmom10
 
 
 
-###Krav 4: Sortera utskriften {#k4}
+###Krav 4: Sortera utskriften (optionell) {#k4}
 
 För menyval 4 sortera alla orden innan de skrivs ut. Implementera en [Merge Sort](kunskap/sorteringsalgoritmer-v2#merge-sort) algoritm som metod i SpellChecker klassen. Hämta ut alla ord från Trie objektet, lägg dem i en lista, sortera listan med Merge sort och skriv ut listan.
 <!-- (https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)-->
@@ -127,7 +127,7 @@ Om du gör detta kravet ska du använda en dictionary för att hålla barn noder
 
 
 
-###Krav 5: Baser utskrift för menyval 2 på word frequency {#k5}
+###Krav 5: Baser utskrift för menyval 2 på word frequency (optionell) {#k5}
 
 I detta kravet ska du använda filerna `frequency.txt` och `tiny_frequency.txt` för ordlistan. De filerna innehåller rättstavade engelska ord och hur vanliga de är. Varje rad innehåller ett ord och hur vanligt ordet är (ett float tal), separat med space. Ju högre siffra desto vanligare är ordet. Bygg ut din Node klass med ett attribut för frequency. I din metod för att lägga till ord, när du markera en slut nod behöver du också lägga in frekvensen för ordet som noden marker.
 
