@@ -90,6 +90,15 @@ Genomför följande övning för att förbereda inför uppgifterna.
 1. Jobba igenom "[CRUD med Express, MySQL och lagrade procedurer](kunskap/crud-med-express-mysql-och-lagrade-procedurer)" som visar hur ett webbgränssnitt kan se ut där du kan lägga till, uppdatera och ta bort rader i en tabell. Spara de exempelprogram du gör i `me/kmom05/crud`.
 
 
+<!--
+* Loop i compound statement
+* Sp anropa annan Sp.
+* Hantera SP med INOUT/OUT variabler i JS
+* Hantera SQL variabler in till JS
+* Hantera SP med flera resultsets
+-->
+
+
 
 ### Uppgifter {#uppgifter}
 
