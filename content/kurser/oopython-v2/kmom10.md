@@ -121,8 +121,8 @@ dbwebb publish kmom10
 
 ###Krav 4: Sortera utskriften {#k4}
 
-För menyval 4 sortera alla orden innan de skrivs ut. Implementera en [Merge Sort](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm) algoritm som metod i SpellChecker klassen. Hämta ut alla ord från Trie objektet, lägg dem i en lista, sortera listan med Merge sort och skriv ut listan.
-
+För menyval 4 sortera alla orden innan de skrivs ut. Implementera en [Merge Sort](kunskap/sorteringsalgoritmer-v2#merge-sort) algoritm som metod i SpellChecker klassen. Hämta ut alla ord från Trie objektet, lägg dem i en lista, sortera listan med Merge sort och skriv ut listan.
+<!-- (https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)-->
 Om du gör detta kravet ska du använda en dictionary för att hålla barn noderna i Node klassen.
 
 

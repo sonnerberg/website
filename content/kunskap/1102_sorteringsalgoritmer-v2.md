@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2019-03-01": (C, aar) Tog bort merge sort kod.
     "2018-02-01": (B, aar) Updated for v2.
     "2017-02-08": (A, lew) First version.
 category:
@@ -78,6 +79,7 @@ Merge sort fungerar snarlikt quick sort. Den använder också ["divide and conqu
 
 [VisuAlgo Merge sort](https://visualgo.net/en/sorting?slide=10)
 
+<!--
 ```python
 def merge_sort(items):
     """ Merge sort """
@@ -105,7 +107,7 @@ def merge_sort(items):
 
     return items
 ```
-
+-->
 [Merge sort dance](https://www.youtube.com/watch?v=XaqR3G_NVoo)
 
 

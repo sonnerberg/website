@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2019-03-01": (B, aar) Tog bort merge sort kod.
     "2017-02-08": (A, lew) First version.
 category:
     - oopython
@@ -105,6 +106,7 @@ Här används `//` för att returnera en integer. (Enkel division `/` kan return
 
 Merge sort fungerar snarlikt quick sort. Den använder också ["divide and conquer"-metoden](https://en.wikipedia.org/wiki/Divide_and_conquer_algorithms) med att dela upp listan till fler och sortera del-listorna separat, baserat på ett pivotvärde. Merge sort använder rekursion för att sortera del-listorna och när listan är nere på en längd av 1 ses den som klar.
 
+<!--
 ```python
 def merge_sort(items):
     """ Merge sort """
@@ -132,7 +134,7 @@ def merge_sort(items):
 
     return items
 ```
-
+-->
 [Merge sort dance](https://www.youtube.com/watch?v=XaqR3G_NVoo)
 
 
