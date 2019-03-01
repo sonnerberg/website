@@ -16,12 +16,14 @@ Vi har nu bra struktur på vår CSS/SASS kod och tiden har nu kommit för att ta
 
 
 
-Du kan med fördel strukturera upp koden från uppgiften [Lager appen del 1](uppgift/lager-appen-del-1). Smidigast är isåfall att kopiera koden från kmom01 till kmom02.
+Du kan med fördel strukturera upp koden från uppgiften [Lager appen del 1](uppgift/lager-appen-del-1) i den första delen av artikeln. Smidigast är isåfall att kopiera koden från kmom01 till kmom02.
 
 ```bash
 # stå i me-katalogen
 cp kmom01/lager1/* kmom02/lager2/
 ```
+
+I den andra delen av artikeln från och med [Återanvända data](#caching) tittar vi ytterligare på hur vi kan strukturera vår kod. Vi delar upp hämtningen av data och renderingen av element i webbläsaren, så vi får kod som är lättare att återanvända.
 
 
 
@@ -208,6 +210,130 @@ var menu = {
 
 export { menu };
 ```
+
+
+
+Återanvända data {#caching}
+--------------------------------------
+
+Vid en del tillfällen är data tillgången för mobila enheter dålig, bristfällig eller till med helt saknad. Därför vill vi ibland försöka minska mängden förfrågningar till en backend och istället försöka återanvända den data vi redan har tillgänglig. Som ett exempel kan vi ta produktlistningen från uppgiften [Lager appen del 1](uppgift/lager-appen-del-1). Där hämtar vi alla produkter för listningen och den data kan vi återanvända sedan i produktvyn.
+
+Det finns ett exempelprogram i kursrepot i katalogen `example/lager_caching` och på [GitHub](https://github.com/dbwebb-se/webapp/tree/master/example/lager_caching). Följ gärna med i exempelprogrammet i följande stycken.
+
+Jag har strukturerat koden i olika moduler med hjälp av webpack enligt ovan och har delat upp strukturen ytterligare för att ge ett exempel på hur man kan strukturera sin kod på ytterligare sätt.
+
+Vi börjar i den modul som hanterar att vi hämtar data om produkterna från API:t. Vi hämtar data från API:t i funktionen `getAllProducts` och sparar det i variabeln `allProducts` i samma modul. Nu kan vi alltså från andra JavaScript moduler anropa funktionen och sedan fylls variabeln `allProducts` med alla produkterna.
+
+```javascript
+var products = {
+    allProducts: [],
+
+    getAllProducts: function() {
+        fetch("https://lager.emilfolino.se/v2/products?api_key=[API_KEY]")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                products.allProducts = result.data;
+            });
+    }
+};
+
+export { products };
+```
+
+Ett problem vi får är att då hämtningen av data från API:t är asynkront vet inte den andra modulen om när hämtningen av data är klar och när modulen kan rita upp de elementen som hämtas från API:t. Vi tar en titt på hur vi kan lösa detta med hjälp av funktioner i JavaScript. I vår modul `product_list.js`, som ska rendera elementen anropar vi först `products` modulen och funktionen `getAllProducts` som hämtar data. Vi skickar med en funktion som argument till `getAllProducts` som vi sedan anropar när data är hämtad.
+
+```javascript
+import { products } from "./products.js";
+import { productDetails } from "./product_details.js";
+
+let productList = {
+    show: function() {
+        products.getAllProducts(productList.renderProducts);
+    },
+
+    renderProducts: function() {
+        let root = document.getElementById("root");
+
+        root.innerHTML = "<h2>Produkter</h2>";
+
+        products.allProducts.map(function (product) {
+            let productElement = document.createElement("p");
+
+            productElement.textContent = product.name;
+
+            productElement.addEventListener("click", function() {
+                productDetails.showProduct(product.id);
+            });
+
+            root.appendChild(productElement);
+        });
+    }
+};
+
+export { productList };
+```
+
+Funktionen `show` ovan anropas från en `index.js` fil som är ingångspunkten för vårt webpack projekt. I `show` anropar vi funktionen `getAllProducts` och vi skickar med callback-funktionen `renderProducts`, som sen i sin tur kommer rendera produkt-elementen. För att iterera över de hämtade produkterna används funktionen `Array.prototype.map` ([Dokumentation för map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) på raden `products.allProducts.map(function (product) {`. `Array.prototype.map` är en 'higher-order function' som tar en funktion som argument. Att använda `map` och andra 'higher-order functions' är en del av programmeringsparadigmen funktionell programmering. Vi kommer i kursen ha inslag av funktionell programmering och detta var en första liten introduktion.
+
+Vi måste göra en liten ändring i `getAllProducts` för att callback-funktionen anropas och den funktionen ser nu ut som nedan.
+
+```javascript
+var products = {
+    allProducts: [],
+
+    getAllProducts: function(callback) {
+        fetch("https://lager.emilfolino.se/v2/products?api_key=[API_KEY]")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                products.allProducts = result.data;
+
+                return callback();
+            });
+    }
+};
+
+export { products };
+```
+
+Än så länge har vi inte cachad någon data men med en liten ändring kan vi återanvända data istället för att hämta data varje gång. Nedan lägger vi till en `if`-sats, som kollar om det finns produkter i `allProducts`-arrayen. Om det finns anropar vi `callback()`. Anledningen till att vi har `return` innan funktions anropet är att vi vill avsluta exekveringen av `getAllProducts`-funktionen.
+
+```javascript
+var products = {
+    allProducts: [],
+
+    getAllProducts: function(callback) {
+        if (products.allProducts.length > 0) {
+            return callback();
+        }
+
+        fetch("https://lager.emilfolino.se/v2/products?api_key=[API_KEY]")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                products.allProducts = result.data;
+
+                return callback();
+            });
+    },
+
+    getProduct: function(productId) {
+        return products.allProducts.filter(function(product) {
+            return product.id == productId;
+        })[0];
+    }
+};
+
+export { products };
+```
+
+I kodexemplet ovan finns även en funktion `getProduct` för att hämta en enskild produkt från `allProducts`-arrayen. Här använder vi ytterligare en 'higher-order function' `Array.prototype.filter` ([Dokumentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)), den gör som väntad en filtrering av en array baserad på de element som returneras inuti funktionen som skickas med som argument. I detta fallet jämför vi produkternas id'n och returnerar om de matchar. Funktionen `getProduct` använder vi från modulen `productDetails`, som den uppmärksamma redan har upptäckt innehåller den funktionen som anropas när man klickar på en produkt.
+
+Vi kommer längre fram i kursen titta ytterligare på cachning av data och till och med hur vi kan bygga ett offline-läge i våra appar.
 
 
 
