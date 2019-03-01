@@ -6,13 +6,6 @@ revision:
 ...
 Kmom10: Projekt och examination
 ==================================
-[WARNING]
-
-**Översikt pågår**
-
-Kursmomentet är under översyn inför vårterminen 2019.
-
-[/WARNING]
 
 [INFO]
 **Gör `dbwebb selfupdate` och `dbwebb update` innan du börjar med projektet.**
@@ -45,6 +38,9 @@ Du kopierade fyra filer i precis, alla filerna har ett ord per rad. `dictionary.
 Innan du börjar med programmeringen ska du göra en analys av programmet du ska bygga och dokumentera det med klassdiagram.
 
 Fråga i forumet om du känner dig osäker.
+
+[YOUTUBE src=17SULXiU6hM width=700 caption="Andreas visar hur SpellChecker kan se ut när det är klart."]
+
 
 
 
