@@ -8,7 +8,7 @@ Kmom10: Projekt och examination
 ==================================
 
 [INFO]
-**Gör `dbwebb selfupdate` och `dbwebb update` innan du börjar med projektet.**
+**Gör `dbwebb update` och `dbwebb init` innan du börjar med projektet.**
 [/INFO]
 
 Detta kursmoment avslutar och examinerar kursen.
