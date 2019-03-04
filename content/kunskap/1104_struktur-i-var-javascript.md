@@ -331,7 +331,73 @@ var products = {
 export { products };
 ```
 
-I kodexemplet ovan finns även en funktion `getProduct` för att hämta en enskild produkt från `allProducts`-arrayen. Här använder vi ytterligare en 'higher-order function' `Array.prototype.filter` ([Dokumentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)), den gör som väntad en filtrering av en array baserad på de element som returneras inuti funktionen som skickas med som argument. I detta fallet jämför vi produkternas id'n och returnerar om de matchar. Funktionen `getProduct` använder vi från modulen `productDetails`, som den uppmärksamma redan har upptäckt innehåller den funktionen som anropas när man klickar på en produkt.
+I kodexemplet ovan finns även en funktion `getProduct` för att hämta en enskild produkt från `allProducts`-arrayen. Här använder vi ytterligare en 'higher-order function' `Array.prototype.filter` ([Dokumentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)), den gör som väntad en filtrering av en array. Filtreringen görs baserad på de element som returneras inuti funktionen som skickas med som argument. I detta fallet jämför vi produkternas id'n och returnerar om de matchar. Funktionen `getProduct` använder vi från modulen `productDetails`, som den uppmärksamma redan har upptäckt innehåller den funktionen som anropas när man klickar på en produkt.
+
+```javascript
+import { products } from "./products.js";
+import { productList } from "./product_list.js";
+
+import utils from "./utils.js";
+
+let productDetails = {
+    showProduct: function (productId) {
+        let product = products.getProduct(productId);
+
+        utils.removeNodes("root");
+
+        root.appendChild(utils.createElement({
+            type: "a",
+            textContent: "<- Tillbaka",
+            href: "#",
+            onclick: productList.show
+        }));
+
+        root.appendChild(utils.createElement({
+            type: "h2",
+            textContent: product.name
+        }));
+
+        root.appendChild(utils.createElement({
+            type: "p",
+            textContent: product.description
+        }));
+    }
+};
+
+export { productDetails };
+```
+
+I ovanstående kodexempel ser vi ytterligare exempel på strukturen i koden och att vi nu återanvänder både `products` och `productList` modulerna som vi har tittat på tidigare. Vi anropar först funktionen `getProduct` för att hämta den cachade data om just denna produkten och sedan ritar vi upp vyn med hjälp av ytterligare modul `utils.js` som hjälper till med att rensa bort element och att skapa nya. Ofta upprepas dessa två saker oerhört ofta och därför flyttade jag de två funktioner till en egen modul. I kommande kursmoment ska vi titta på hur vi kan använda ett ramverk för att underlätta vissa av dessa saker. Modulen `utils.js` är ett exempel på ett mikro-ramverk / bibliotek och hur ett sådant kan underlätta vid utveckling. I nedanstående kodexempel finns koden för `utils.js`.
+
+```javascript
+const utils = {
+    createElement: function(options) {
+        let element = document.createElement(options.type || "div");
+
+        for (let property in options) {
+            if (options.hasOwnProperty(property)) {
+                element[property] = options[property];
+            }
+        }
+
+        return element;
+    },
+
+    removeNodes: function(id) {
+        let element = document.getElementById(id);
+
+        if (element) {
+            while (element.firstChild) {
+                element.removeChild(element.firstChild);
+            }
+        }
+    }
+};
+
+export default utils;
+```
+
+Titta gärna igenom exempelprogrammet i kursrepot under `example/lager_caching` för att se alla ingående delar som samverkar. Fundera gärna över hur du hade valt att strukturera ditt program från tidigare uppgifter med hjälp av webpack.
 
 Vi kommer längre fram i kursen titta ytterligare på cachning av data och till och med hur vi kan bygga ett offline-läge i våra appar.
 
