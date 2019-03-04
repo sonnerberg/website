@@ -8,14 +8,6 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen uppdateras. Kursmomenten kan komma att ändras innan läsperiod 3 startar. Information kan hittas i [forumtråden](https://dbwebb.se/forum/viewtopic.php?f=46&t=8124).
-
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -235,11 +227,9 @@ Redovisning {#redovisning}
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas/redovisningen. Glöm inte länka till din me-sida och projektet.
 
-3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/linux) och berätta att du är klar.
-
-4. Se till att samtliga kursmoment validerar.
+3. Se till att samtliga kursmoment validerar.
 
 ```bash
 # Ställ dig i kursrepot
