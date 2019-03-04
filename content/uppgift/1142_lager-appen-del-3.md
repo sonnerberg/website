@@ -2,6 +2,7 @@
 author: efo
 category: javascript
 revision:
+  "2019-03-04": (B, efo) Uppdaterade uppgiften för att passa API v2.
   "2018-01-17": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ...
 Lager appen del 3
@@ -47,8 +48,6 @@ Krav {#krav}
 * Antal (amount)
 * Leveransdatum (delivery_date)
 * Kommentar (comment)
-
-6. Leverans ID ska beräknas automatisk utifrån antal av tidigare inleveranser.
 
 7. När formuläret skickas ska det skapas en inleverans i API:t.
 
