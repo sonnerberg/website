@@ -24,7 +24,7 @@ Introduktion {#intro}
 --------------------------------------
 Vi kommer installera och använda [Mithril](http://mithril.js.org/) för att bygga en enkel applikation som använder sig av en router och använder virtuella noder för att visa upp våra vyer.
 
-Låter det magiskt? Lika bra vi ser hur det fungerar i kod, så faller saker nog på plats.
+Låter det magiskt? Lika bra vi ser hur det fungerar i kod, så faller saker nog på plats. Följ gärna med i exempelkoden i kursrepots `example/nobel`.
 
 [INFO]
 Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För att testa exempelkoden kör kommandot `npm install`, som installerar node modulerna från `package.json`.
