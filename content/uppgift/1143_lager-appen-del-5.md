@@ -34,7 +34,7 @@ Skapa ett Cordova projekt i den befintliga katalogen `me/kmom05/lager5` med komm
 cordova create . se.dbwebb.lager Lager
 ```
 
-Flytta sedan de filer som behövs från `me/kmom04/lager4` till `me/kmom05/lager5` så din app
+Flytta sedan de filer som behövs från `me/kmom04/lager4` till `me/kmom05/lager5` så din app fungerar som tidigare, men nu i ett Cordova skal. JavaScript, CSS och HTML filerna ska hamna i `www` och en rekommendation är att webpack konfigurationen hamnar i `me/kmom05/lager5` och att du ändrar den så den passar den nya katalogstrukturen.
 
 
 
@@ -62,7 +62,8 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-Det finns inga extrauppgifter.
+
+Det finns ingen extrauppgift.
 
 
 

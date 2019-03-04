@@ -86,8 +86,7 @@ Det finns inga extra lästips.
 
 1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)". Spara dina filer i `me/kmom05/hello`.
 
-
-<!-- 1. Gör uppgiften "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)". -->
+1. Läs igenom artikeln "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)" för att bekanta dig med ytterligare en Cordova plugin.
 
 
 
@@ -103,7 +102,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-Det finns ingen extrauppgift.
+* Skapa ett offline-läge för din app med hjälp artikeln "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)".
 
 
 
