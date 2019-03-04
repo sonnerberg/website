@@ -6,5 +6,4 @@ linkable: true
 Arrayer
 =======================
 
-declare -a
-declare -A (assoc)
+Arrayer i Bash är indexerade från 0 och har ingen maximal storlek. Vi skrapar lite på ytan och ser hur vi kan skapa och hantera indexerade arrayer och associativa arrayer i Bash.
