@@ -61,7 +61,6 @@ $ cordova create . com.example.hello HelloWorld
 Nu har du skapat ett hello world exempel. Du kan gå in i `www` mappen och kolla på koden. För att testa appen måste vi lägga till plattformar. Vi börjar med att lägga till plattformen `browser` för att testa att Cordova fungerar.
 
 ```bash
-$ cd hello
 $ cordova platform add browser --save
 ```
 
