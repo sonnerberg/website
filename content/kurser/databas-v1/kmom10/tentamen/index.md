@@ -122,3 +122,10 @@ Du anger ditt namn och epost när du förseglar.
 Blir något fel så kan du försegla och lämna in igen, det är din sista inlämning som räknas. Om du förseglar flera gånger så måste du försegla sista gången max 15 minuter efter din första försegling.
 
 Vi förseglingen laddas ditt kursrepo upp till studentservern och det skickas ett meddelande till läraren som får veta att du har lämnat in.
+
+
+
+"Lämna in" på Canvas
+--------------------------------
+
+När du är klar med tentamen, gå till inlämningen på Canvas för "Kmom10 Tentamen" och visa att du är klar genom att "lämna in uppgiften" genom att skriva "Klar!" tillsammans med din studentakronym (eller länken till din redovisa-sida).
