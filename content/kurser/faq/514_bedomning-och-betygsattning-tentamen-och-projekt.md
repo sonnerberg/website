@@ -22,7 +22,7 @@ Följande använder vi som övergripande underlag och generella riktlinjer när 
 
 ### Betyg A eller B (VG) {#vg}
 
-Samtliga uppgifter i Programmeringstentan är utomordentligt väl genomförda och nästan inga brister kan noteras.
+Samtliga uppgifter i tentamen är utomordentligt väl genomförda och nästan inga brister kan noteras.
 
 Projektet fungerar i stort sett felfritt med så gott som all funktionalitet implementerad.
 
@@ -34,7 +34,7 @@ Redovisningstexterna är kompletta, väl strukturerade och insiktsfulla. Via red
 
 ### Betyg C, D eller E (G) {#g}
 
-Programmeringstentan är genomförd och majoriteten av uppgifterna är lösta med gott resultat och få brister.
+Tentamen är genomförd, godkänd och majoriteten av uppgifterna är lösta med gott resultat och få brister.
 
 Projektet, om det är utfört, fungerar väl med viss funktionalitet implementerad.
 
@@ -57,7 +57,7 @@ Följande tabell används vid bedömning av examinationen med programmeringstent
 
 | Bedömningspunkt | Poäng | Din poäng |
 |-----------------|-------|-----------|
-| Programmeringstentan är utförd och alla uppgifter är felfritt implementerade. | 30 | |
+| Tentamens samtliga uppgifter är felfritt implementerade. | 30 | |
 | TOTALT | 30 | |
 
 Tentamen anses normalt som godkänd då minst 60% av totalen är uppnådd. Om man inte uppnår godkänd på tentamen så måste man göra om den vid senare tillfälle.
@@ -74,6 +74,8 @@ Följande tabell används vid bedömning av projektet.
 | Krav 2 är implementerat och fungerar felfritt. | 10 | |
 | Krav 3 är implementerat och fungerar felfritt. | 10 | |
 | TOTALT | 30 | |
+
+Man kan få slutbetyg i kursen, även om man inte utför projektet.
 
 
 

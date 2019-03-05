@@ -8,6 +8,7 @@ views:
 title: databas-v1
 author: mos
 revision:
+    "2019-03-05": "(F, mos) Uppdaterat kmom10 för våren 2019."
     "2018-12-19": "(E, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-11-29": "(D, mos) Uppdaterad med nya kurskoder till vt19."
     "2018-09-20": "(C, mos) Förbereder inför ny kurskod till vt19."
@@ -160,9 +161,9 @@ Vi jobbar vidare med terminal- och webbaserade klienter mot databasen och forts�
 
 
 
-### Kmom07/10: Projekt och examination {#kmom10}
+### Kmom07/10: Examination och redovisning {#kmom10}
 
-Avslutningsvis gör du en projektinlämning enligt en specifikation tillsammans med en individuell tidsbegränsad examination. Inlämningen är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
+Avslutningsvis gör du en individuell och sjävständig examination via ett obligatorisk tentamen och ett optionellt projekt tillsammans med en redovisning. Inlämningen är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
 [Instruktion till kursmoment 10](./kmom10).
 
@@ -253,7 +254,7 @@ Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning). 
+Läs om hur betyget sätts i [grunder för bedömning och betygsättning (tentamen + projekt)](kurser/faq/bedomning-och-betygsattning-tentamen-och-projekt).
 
 
 

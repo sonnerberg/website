@@ -9,3 +9,7 @@ Läs alltid igenom det du skrivit och låt det vila minst en natt + en extra oml
 Lästips: "Svenska skrivregler" och liknande böcker ger dig stöd i skrivandet.
 
 Boktips: "Thesis Projects" av M.Berndtsson (lew)
+
+Om ni vill ha ett riktigt alternativ till markdown, så föreslår jag org-mode i emacs.
+
+Skrivregler. För oss Anglo-snobbar så finns ju bara "Oxford Guide to Style". Lite tyst kan jag viska för mig själv att en snabb googling ger vid handen att någon copyrightpirat (på goetheindia.files.wordpress.com) har lagt ut hela boken som en PDF-fil. Vilken jävel.

@@ -6,4 +6,4 @@
 * [04: Transaktioner](kurser/databas-v1/kmom04)
 * [05: Procedur och trigger](kurser/databas-v1/kmom05)
 * [06: Prestanda](kurser/databas-v1/kmom06)
-* [07/10: Projekt och examination](kurser/databas-v1/kmom10)
+* [07/10: Examination och redovisning](kurser/databas-v1/kmom10)
