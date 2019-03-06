@@ -200,7 +200,7 @@ När du är klar med allt du avser lämna in, skriv då redovisningstexten enlig
 
     1. För varje projektkrav du implementerat, dvs 1-3, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
-    1. Du kan välja (optionellt) att spela in en redovisningsvideo för att komplettera din redovisningstext och underlätta rättningen av ditt projekt.
+    1. Du kan välja (optionellt) att spela in en redovisningsvideo som ett komplement till din redovisningstext och därmed underlätta rättningen av ditt projekt. I videon visar du tydligt vilka krav du löst och hur du löst dem.
 
     1. Skriv ett stycke om hur projektet gick att genomföra. Berätta om problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt som avslutning på kursen?
 
