@@ -99,7 +99,7 @@ New revenue is: 17000
 ```
 
 Som ni ser kan vi komma åt `__draw_tax()` genom metoden `add_revenue()` i instansen med `self.__draw_tax()`.  
-Vi testar att överskugga metoden i Movie för att säkna skatten:
+Vi testar att överskugga metoden i Movie för att sänka skatten:
 
 [FIGURE src=/image/oopython/guide/vid_mov_name_mangl.png class="right" caption="Klassdiagram över Video och Movie med name mangling."]
 
