@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=grayscale&f1=smooth,-8&f2=pixelate,4,1&f3=edgedetect"
 author: mos
 revision:
+    "2019-03-06": "(D, mos) Fixade felaktig länk till lucifer."
     "2019-03-06": "(C, mos) Ny struktur inför vt19."
     "2018-05-07": "(B, mos) Lade till examination för Webbprogrammering."
     "2018-02-27": "(A, mos) Första utgåvan."
@@ -81,7 +82,7 @@ Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest re
 * [En japansk smakresa, 31 augusti 2018](./tentamen/en-japansk-smakresa)
 * [Det stora slaget om tårtan, 31 maj 2018](./tentamen/det-stora-slaget-om-tartan)
 * [Upplevelse, 21 mars 2018](./tentamen/upplevelse)
-* [Lucifer Morningstar, 24 november 2017](kurser/dbjs-v1/examination/mannsmandel)
+* [Lucifer Morningstar, 24 november 2017](kurser/dbjs-v1/examination/lucifer)
 * [Hotel Paradise, 5 maj 2017](kurser/dbjs-v1/examination/paradise)
 * [Mannsmandel, 12 april 2017](kurser/dbjs-v1/examination/mannsmandel)
 
