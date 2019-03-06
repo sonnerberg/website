@@ -35,7 +35,7 @@ BinarySearchTree:
 * `insert`: Skapar en ny nod med key och value,. ägger till en noden på rätt plats i trädet, baserat på key.
 * `inorder_traversal_print`: Skriver ut en noderna i trädet i rätt ordning, lågt till högt.
 * `get`: Returnera value från noden med nyckeln key. Om key inte finns i trädet lyft ett KeyError exception (det inbyggda).
-* `remove`: Ta bort nod med samma key. Om nod med key inte finns lyft KeyError exception (det inbyggda).
+* `remove`: Ta bort nod med samma key, returnera värdet från noden. Om nod med key inte finns lyft KeyError exception (det inbyggda).
 
 Node:
 
