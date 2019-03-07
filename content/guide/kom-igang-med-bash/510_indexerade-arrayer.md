@@ -104,9 +104,11 @@ echo "First 2 characters from third element: ${rocky_planets[2]:0:2}"
 [INFO]
 Notera att det i vissa fall används `*` istället för `@`. Det fungerar i stort sett likadant, dock så kan man få valideringsfelet:
 
-> *Argument mixes string and array. Use * or separate argument.*.
+> *Argument mixes string and array. Use * or separate argument.*
 
-Det handlar om att `@` returnerar alla element separat och `*` returnerar dem som ett argument. Bygger vi på en sträng kan det bli tokigt med `@`. Vi tittar närmare på det när vi kommer till **argument**.
+Det handlar om att `@` lagrar alla element separat och `*` lagrar dem som ett argument. Bygger vi på en sträng kan det bli tokigt med `@`.
+
+Vi tittar närmare på det när vi kommer till **funktioner och argument**.
 [/INFO]
 
 

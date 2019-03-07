@@ -6,7 +6,7 @@ revision:
 Introduktion till variabler
 =======================
 
-Varabler i Bash kan innehålla vilket värde som helst, det är ett så kallat *otypat* språk. Vi tilldelar med `=` utan mellanslag mellan referensen och värdet. När vi vill referera till variabeln använder vi ett dollartecken framför.
+Variabler i Bash kan innehålla vilket värde som helst, man kan se det som ett så kallat *otypat* språk. Vi tilldelar med `=` utan mellanslag mellan referensen och värdet. När vi vill referera till variabeln använder vi ett dollartecken som prefix: `$variablename`. Vi kan med nyckelordet *declare* skapa variabler som ska behandlas som tex en integer.
 
 
 
@@ -67,4 +67,18 @@ readonly MY_NAME="Deep Thought"
 MY_NUMBER=5 # Ger felmeddelandet "MY_NUMBER: readonly variable"
 
 echo "My name is $MY_NAME and the answer is: $MY_NUMBER"
+```
+
+
+
+#Integer {#integer}
+
+Vill vi att scriptet ska behandla en variabel som en integer använder vi `-i`:
+
+```bash
+#!/usr/bin/env bash
+#
+# An example script for the linux course
+
+declare -i value=42
 ```

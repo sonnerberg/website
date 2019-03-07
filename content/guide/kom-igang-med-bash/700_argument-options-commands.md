@@ -3,8 +3,16 @@ sectionHeader: true
 linkable: true
 ...
 
-Parametrar
+Argument, options och commands
 =======================
+
+Vad är egentligen *arguments*, *options* och *commands*? Vi försöker få rätt på vad som är vad. Till vår hjälp tar vi ett script vi känner till, dbwebb-cli.
+
+Om vi tittar på hjälp-delen av dbwebb: `$ dbwebb -h` så kan vi nästan överst hitta:
+
+`> Usage: dbwebb [options] <command> [arguments]`
+
+
 
 <!-- $#	Stores the number of command-line arguments that were passed to the shell program.
 $?	Stores the exit value of the last command that was executed.
