@@ -145,7 +145,7 @@ Det vi vill undvika är en [full table scan](https://en.wikipedia.org/wiki/Full_
 
 Utan index så har frågeoptimeraren ingen möjlighet att finna genvägar till svaret, genvägar som gör att endast en delmängd av tabellens rader behöver besökas.
 
-När vi tittar på en fråga så bör vi alltså minimera möjligheten att det sker en full table scan, vi kan göra det genom att tillföra index på relevanta kolumner. Relevenata kolumner är de som testas, till exempel i WHERE-villkoret.
+När vi tittar på en fråga så bör vi alltså minimera möjligheten att det sker en full table scan, vi kan göra det genom att tillföra index på relevanta kolumner. Relevanta kolumner är de som testas och används, till exempel i WHERE-villkoret.
 
 Att ha för många onödiga index är en kostnad i sig då det tar upp plats på hårddisken och det tar tid för frågeoptimeraren att upprätthålla strukturen för index och välja vilket/vilka index den skall använda. Det är alltså ingen hållbar lösning att lägga till index på samtliga kolumner. Man lägger rätt index där de behövs.
 
