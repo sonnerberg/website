@@ -19,4 +19,4 @@ För Linux användare rekommenderas en Android enhet i förstahand och Android E
 ### Mac
 [iOS](https://developer.apple.com/ios/) är ett mobilt operativsystem som drivs av Apple. Utvecklingsmiljön för iOS appar heter Xcode och är gratis för Mac användare. I Xcode  finns en simulator, men vi kan även köra apparna på en fysisk enhet. I [Kör Cordova appar på iOS](kunskap/cordova-appar-pa-ios) installerar vi Xcode och tittar på hur vi kan köra våra appar i iOS simulatorn och på en fysisk enhet.
 
-Om du har en Mac och en Android enhet och vill köra dina appar på den rekommenderas [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html).
+Om du har en Mac och en Android enhet och vill köra dina appar på android telefonen kan du följa installations beskrivningarna för Windows ([Installera Android utvecklingsmiljö på Windows](kunskap/installera-android-utvecklingsmiljo-pa-windows)) och Cordovas [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html).
