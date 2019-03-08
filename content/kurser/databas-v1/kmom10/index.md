@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=grayscale&f1=smooth,-8&f2=pixelate,4,1&f3=edgedetect"
 author: mos
 revision:
+    "2019-03-08": "(E, mos) Krav till eshop3."
     "2019-03-06": "(D, mos) Fixade felaktig länk till lucifer."
     "2019-03-06": "(C, mos) Ny struktur inför vt19."
     "2018-05-07": "(B, mos) Lade till examination för Webbprogrammering."
@@ -115,35 +116,99 @@ Varje krav är värt maximalt 10 poäng om kravet är löst till fullo utan bris
 
 Spara alla filer i `me/kmom10/eshop3`.
 
+Du måste lösa krav 1 innan du kan lösa krav2 eller 3.
+
 
 
 ### Krav 1 {#k1}
 
-[WARNING]
+Följande krav måste vara uppfylla
+Ditt eshop3 skall uppfylla de krav som finns för ehop1 och eshop2.
 
-Material förbereds till våren 2019.
+Du har följande filer med relevant innehåll:
 
-[/WARNING]
+* `package.json`
+* `config/db/eshop.json`
+* `sql/eshop/{backup,setup,ddl,insert}.sql`
+* `{index,cli}.js`
+
+Webbklienten innehåller en sida `eshop/about` som visar namnen på de som jobbat på projektet i eshop1 och eshop2 samt vem som utfört uppgiften i eshop3. Terminalklienten har kommandot `about` som visar samma information.
+
+I webbklienten skall `eshop/log` visa de 20 senaste händelserna i loggtabellen. Det skall finnas ett formulärelement där användaren kan skriva in en söksträng som filtrerar vilka rader som visas i utskriften.
+
+I terminalklienten skall kommandot `logsearch <str>` ge samma svar som ovan.
+
+I webbklienten, gör så att man kan klicka på en kategori och sedan visas de produkter som finns i kategorin.
+
+I webbklienten, gör så att man kan koppla en produkt till en eller flera produktkategorier.
+
+
+
+#### Självtest krav 1 {k1test}
+
+Följande är förslag till hur du själv kan testa delar av kravet.
+
+Lägg till och hantera en produkt i webbklienten.
+
+1. Lägg till, redigera en produkt.
+2. Lägg produkt i flera kategorier.
+3. Se produktöversikten och produkten skall synas med sina kategorier.
+4. Visa kategorier, klicka på en kategori, produkterna skall synas.
+
+I terminalklienten.
+
+1. Lägg till produkten på ett par hyllor i lagret.
+2. Se att produkten finns i lagret på rätt hyllor med rätt antal.
+3. Plocka bort ett visst antal av produkten från någon av lagerhyllorna.
 
 
 
 ### Krav 2 {#k2}
 
-[WARNING]
+I webbklienten kan man hantera sin order och dess orderrader och "beställa" sin order.
 
-Material förbereds till våren 2019.
+Det skall finnas en webbsida som visar en komplett order, inklusive orderstatus, kunddetaljer och orderrader.
 
-[/WARNING]
+I terminalklienten kan man skapa en plocklistan som visar att respektive beställd produkt finns i lagret.
+
+Gör en webbsida som visar plocklistan för ordern. Visa tydligt om det finns tillräckligt med produkter på lagret och vilka hyllor de finns på.
+
+I terminalklienten kan man skicka en order, ange att den är skickad. När ordern skeppas iväg så minskas innehållet i lagret med de produkter som skickas till kund.
+
+
+
+#### Självtest krav 2 {k2test}
+
+Följande är förslag till hur du själv kan testa delar av kravet.
+
+1. Skapa en order, lägg till orderrader (med din nya produkt, och befintliga produkter).
+2. Visa översyn av order inklusive information om orderstatus, orderrader och kunddetaljer på en webbsida.
+3. Visa/skapa en plocklista i terminalklienten.
+4. Visa samma plocklista i webbklienten och se tydligt om det finns tillräckligt med produkter i lagret, för varje orderrad.
+5. Ändra status på ordern till skickad, via terminalklienten.
+6. Dubbelkolla att lagret har minskat med motsvarande antal produkter.
 
 
 
 ### Krav 3 {#k3}
 
-[WARNING]
+När en leverans skickas, så genereras automatiskt en faktura som innehåller pris per orderrad och ett totalpris på ordern.
 
-Material förbereds till våren 2019.
+I webbklienten kan man få se alla detaljer om fakturan, dess fakturarader, priset per fakturarad och det summerade priset samt datum då ordern skickades. Man kan också se status på fakturan, om den är betald eller ej.
 
-[/WARNING]
+I terminalklienten finns ett kommando `payed <invoiceid> <date>` där man kan ange en faktura som betald.
+
+
+
+#### Självtest krav 3 {k3test}
+
+Följande är förslag till hur du själv kan testa delar av kravet.
+
+1. Skapa och skeppa en order.
+2. I webbklienten, kontrollera att fakturan innehåller samma saker som ordern inklusive prisdetaljer och fakturastatus.
+3. I terminalklienten, ange fakturan som betald.
+4. I webbklienten, visa att fakturans status är uppdaterad till "betald".
+
 
 
 
