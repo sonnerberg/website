@@ -5,13 +5,13 @@ author:
     - lew
     - mos
 revision:
-    "2018-12-21": (B, lew) 
+    "2018-12-21": (B, lew)
     "2018-12-21": (A, mos) Inför skapandet av linux v3, nytt namn, syfte, förkunskaper och kurskod.
 ...
 Kursen vlinux (v1)
 ==================================
 
-Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *linux*, och syftet med kursen är att studenten ska lära sig operativsystemet Linux och dess beståndsdelar såsom processer, filsystemet och terminalen. Kursens fokusområden ligger även i operativsystemets uppbyggnad, programhantering och serverhantering samt att programmera i språket bash. Studenten ska även lära sig skapa virtualiseringstekniker såsom VirtualBox och Docker.
+Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *vlinux*, och syftet med kursen är att studenten ska lära sig operativsystemet Linux och dess beståndsdelar såsom processer, filsystemet och terminalen. Kursens fokusområden ligger även i operativsystemets uppbyggnad, programhantering och serverhantering samt att programmera i språket Bash. Studenten ska även lära sig virtualiseringstekniker såsom VirtualBox och Docker.
 
 <!--more-->
 
@@ -60,9 +60,9 @@ Kursen omfattar följande områden:
 
 * Installation av Linux och Linux som server. Paket och pakethantering
 * Installation av servrar likt webbserver, databas, PHP, sshd.
-* Linux med terminal (bash), ssh, vim, och systemkommandon.
+* Linux med terminal (Bash), ssh, nano, och systemkommandon.
 * Operativsystemets olika delar såsom filsystemet, processer och processhantering.
-* Skriptprogrammering i bash
+* Skriptprogrammering i Bash
 <!-- * JavaScript och Node.js.
 * Programmering i Linux-nära miljö med JavaScript och Node.js - filsystem och processer.
 * Felsökning och tekniker att debugga sitt program.
@@ -123,35 +123,31 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 ###Kmom03: Skript med Bash. {#kmom03}
 
-Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
+Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash.
 
 [Instruktion till kursmoment 03](kurser/linux-v3/kmom03).
 
 
 
-###Kmom04: Server med Node.js. {#kmom04}
+###Kmom04: Introduktion till Docker. {#kmom04}
 
-Nu har vi en Linux-server, en webbserver och vi kan grunderna i att bygga skript i bash. Låt oss nu kika på en annan sak, hur man bygger egna servrar i Linux med Node.js.
-
-Så, vi behöver starta med att installera Node.js på servern och komma igång med hur Node.js fungerar. Vi kör på med några övningar och sedan ser vi hur man byggger upp en enkel webbserver, eller webbtjänst, med Node.js. Vi närmar oss ett gränsland där webbservern blir till en webbtjänst. Det blir tydligt i hur vi använder Node.js för att skapa kod som både hanterar webbservern som sådan och lägger till tjänster som utförs av javaScript-funktioner.
+Vi lämnar VirtualBox och tittar närmare på virtualisering med Docker. Vi går även vidare med programmeringen i Bash.
 
 [Instruktion till kursmoment 04](kurser/linux-v3/kmom04).
 
 
 
-###Kmom05: Webbtjänst med RESTful API. {#kmom05}
+###Kmom05: Docker och docker-compose. {#kmom05}
 
-Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i bash och vi kan bygga servrar med Node.js. Låt oss fortsätta titta på serverprogrammering i Node.js och se hur en mer renodlad webbtjänst kan se ut och fungera.
-
-Du kommer få en färdig server och ett RESTful API till servern. Din uppgift är att bygga en klient till servern, enligt en kravspecifikation. Så är upplägget. Låt se hur bra vingarna bär.
+Nu när vi vet hur Docker fungerar kan vi ta det ett steg längre med docker-compose.
 
 [Instruktion till kursmoment 05](kurser/linux-v3/kmom05).
 
 
 
-###Kmom06: Klient och server. {#kmom06}
+###Kmom06: Mera Docker. {#kmom06}
 
-Du bygger vidare på dina kunskaper om webbtjänster och programmerar nu båden en klient och en server och ser hur koden fördelar sig mellan klient och server.
+Vi tittar på hur det kan bli när vi hanterar mer än en docker container.
 
 [Instruktion till kursmoment 06](kurser/linux-v3/kmom06).
 
