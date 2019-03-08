@@ -23,11 +23,11 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-Kursen har två fokus, dels att lära ut grunder och beståndsdelar i operativsystemet Linux och dels att lära ut programmering med JavaScript och Node.js i en Linux-miljö. Kursen är för de som skall jobba med webbprogrammering.
+Kursen har tre fokus. Det ena är att lära ut grunder och beståndsdelar i operativsystemet Linux. Det andra är att lära ut programmeringsspråket Bash och dess funktionalitet. Det tredje är att introducera virtualiseringsmiljöer och visa på hur man kan använda dem. Kursen är för de som skall jobba med webbprogrammering.
 
-Kursen börjar med att du installerar en egen version av Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Du skriver skript-program i programspråket BASH och via praktiska övningar lär du dig mer om grunderna i Linux.
+Kursen börjar med att du installerar en egen version av Linux i virtualiseringsmiljön VirtualBox. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker tillsammans med Linux som operativsystem.
 
-Samtidigt bygger du upp en utvecklingsmiljö för JavaScript och Node.js. Du utforskar Node.js API och via praktiska övningar programmerar du JavaScript-servrar och tjänster som sedan körs i din Linux-miljö.
+Samtidigt skriver du skript-program i programspråket Bash.
 
 I slutet av kursen får du visa dina färdigheter i ett praktiskt programmeringsprojekt.
 
@@ -36,9 +36,7 @@ I slutet av kursen får du visa dina färdigheter i ett praktiskt programmerings
 Krav på labbmiljö {#labb}
 ------------------------
 
-I kursen installerar du en operativsystemet Linux på din egna maskin med virtualiseringssystemet VirtualBox. Du behöver ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
-
-Du kan också genomföra installationen på en annan dator, en äldre laptop till exempel. Eller så kan du använda dig av virtuella servrar som du installerar på egen hand.
+I kursen installerar du en operativsystemet Linux på din egna maskin med virtualiseringssystemet VirtualBox och Docker. Du behöver ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
 
 Kort och gott, du skall installera en linux-server och du behöver ha en tillräckligt bra miljö för att det skall fungera utan bekymmer.
 
@@ -58,15 +56,12 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Installation av Linux och Linux som server. Paket och pakethantering
-* Installation av servrar likt webbserver, databas, PHP, sshd.
+* Installation av Linux och Linux som server. Paket och pakethantering.
+* Installation av webbserver.
 * Linux med terminal (Bash), ssh, nano, och systemkommandon.
 * Operativsystemets olika delar såsom filsystemet, processer och processhantering.
-* Skriptprogrammering i Bash
-<!-- * JavaScript och Node.js.
-* Programmering i Linux-nära miljö med JavaScript och Node.js - filsystem och processer.
-* Felsökning och tekniker att debugga sitt program.
-* Utvecklingsmiljö och verktyg för utveckling med JavaScript, Node.js i en Linux-miljö. -->
+* Skriptprogrammering i Bash.
+* Virtualiseringmiljöer med VirtualBox och Docker.
 
 
 
@@ -79,8 +74,9 @@ Mål {#mal}
 
 Efter genomförd kurs skall studenten:
 
-* påvisa grundläggande förståelse för operativsystemet Linux genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
-* påvisa grundläggande förståelse för att använda virtualiseringstekniker i Linux genom att tillämpa dessa tekniker i praktiska övningar och projekt.
+* visa grundläggande förståelse för operativsystemet Linux genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* visa goda kunskaper i att använda och kontrollera en webbserver i Linuxmiljö genom att tillämpa tekniker i praktiska övningar och projekt.
+* visa goda kunskaper i att använda och kontrollera virtualiseringsmiljöerna VirtualBox och Docker genom att tillämpa dessa tekniker i praktiska övningar och projekt.
 
 
 
@@ -88,8 +84,18 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* självständigt utveckla, dokumentera och presentera ett projekt baserat på programmering med JavaScript, Node.js i en Linux-miljö.
-* ha god praktisk förmåga att hantera de verktyg och miljöer som används vid utveckling och felsökning för JavaScript, Node.js i en Linux-miljö.
+* kunna självständigt utveckla, dokumentera och presentera ett projekt baserat på programmering med Bash och Docker i en Linux-miljö.
+* ha god praktisk förmåga att hantera de verktyg och miljöer som används vid utveckling och felsökning för Bash-script och webbservrar i en Linux-miljö.
+
+
+
+###Värderingsförmåga och förhållnigssätt {#vardering}
+
+Efter genomförd kurs ska studenten:
+
+* via redovisningstexter kunna visa god förmåga att reflektera över kodstruktur i språket Bash och hanteringen av en webbserver.
+* via redovisningstexter kunna visa god förmåga att reflektera över användandet av en virtualiseringsmiljö.
+* via redovisningar och utförda övningar påvisa god kunskap om serverhantering, terminalhantering, språket Bash, webbserver och en virtualiseringsmiljö.
 
 
 
