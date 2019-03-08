@@ -17,11 +17,9 @@ I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort
 
 Så här kan det se ut när vi är klara.
 
-[YOUTUBE src=0VfHNLKx5xI width=630 caption="Lager3 i kursmoment 3."]
+<!-- [YOUTUBE src=0VfHNLKx5xI width=630 caption="Lager3 i kursmoment 3."] -->
 
-<!-- [FIGURE src=/image/snapht15/ajax-af-lista.png?w=w2 class="left" caption="Sida som visar antalet lediga jobb samt platsannonser."]
 
-[FIGURE src=/image/snapht15/ajax-af-undersida.png?w=w2 class="left" caption="Undersida som visar lediga jobb och antal platsannonser i Blekinge."] -->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -50,22 +48,25 @@ Läs följande:
 
 1. Skumma igenom "[Googles artikel shadow DOM-v1](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom?hl=en)". -->
 
-1. Bekanta dig med dokumentationen för javascript ramverket [mithril](http://mithril.js.org/api.html) och genomgången av en enkel app i deras [tutorial](http://mithril.js.org/simple-application.html).
+1. Bekanta dig med dokumentationen för JavaScript ramverket [mithril](http://mithril.js.org/api.html) och genomgången av en enkel app i deras [tutorial](http://mithril.js.org/simple-application.html).
+
 
 
 ###Video  {#video}
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 3.
 
+I spellistan finns 6 stycken videos som börjar med 'Extra: 30*' dessa är från en tidigare version av mithril (1.1.6) som användes i kursen 2018. De videos är till 90% fortfarande relevanta och vill man förkovra sig i ytterligare ett mithril exempel kan de vara sevärda.
 
 
-<!-- ###Lästips {#lastips}
+
+###Lästips {#lastips}
 
 <!-- * Bekanta dig med [mithril Components](http://mithril.js.org/components.html), som hjälper dig att skapa återanvändbar kod.
 
-* Hur ser det egentligen ut med JavaScript ramverk 2018. Stack Overflow har publicerad statistik angående ramverk i artikeln [The Brutal Lifecycle of JavaScript Frameworks](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/).
+* Hur ser det egentligen ut med JavaScript ramverk 2018. Stack Overflow har publicerad statistik angående ramverk i artikeln [The Brutal Lifecycle of JavaScript Frameworks](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/).-->
 
-* I forumet finns en tråd om val av JavaScript ramverk och vad man kan tänka på [Hur tänka inför val av JavaScript ramverk?](forum/viewtopic.php?f=11&t=7195). -->
+* I forumet finns en tråd om val av JavaScript ramverk och vad man kan tänka på [Hur tänka inför val av JavaScript ramverk?](forum/viewtopic.php?f=11&t=7195).
 
 
 
