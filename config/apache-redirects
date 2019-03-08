@@ -148,6 +148,16 @@ Redirect /javascript/lektionsplan	https://docs.google.com/spreadsheet/ccc?key=0A
 
 
 
+# webapp
+
+Redirect /webapp/studieplan /kurser/webapp/studieplan
+Redirect /kurser/webapp/studieplan         https://docs.google.com/spreadsheets/d/1F6zSLaDAXLmPgHxrmsiygJxOXbPhZuB69pd0WXhZsUQ/edit?usp=sharing
+
+Redirect /webapp/lektionsplan /kurser/webapp/lektionsplan
+Redirect /kurser/webapp/lektionsplan https://docs.google.com/spreadsheets/d/1imZXLGYFsyFP6Bd9OP55cTikqz9HzoJgemxtwbfeYNU/edit?usp=sharing
+
+
+
 #
 #javascript
 #
