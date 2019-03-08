@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "": "(A, lew) Första versionen."
+    "2019-03-08": "(A, lew) Första versionen."
 ...
 Command substitution
 =======================

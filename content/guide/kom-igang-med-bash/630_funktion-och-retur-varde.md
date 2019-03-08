@@ -1,13 +1,13 @@
 ---
 author: lew
 revision:
-    "": "(A, lew) Första versionen."
+    "2019-03-08": "(A, lew) Första versionen."
 ...
 
 Funktioner och returvärde
 =======================
 
-I Bash kan en funktion inte returnera något värde. Vi kan hatera det på olika sätt, antingen sätter vi ett värde till en global variabel:
+I Bash kan en funktion inte returnera något värde. Vi kan hantera det på olika sätt. Ett alternativ är att vi sätter vi ett värde till en global variabel:
 
 ```bash
 #!/usr/bin/env bash

@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "": "(A, lew) Första versionen."
+    "2019-03-08": "(A, lew) Första versionen."
 ...
 Kodvalidering
 =======================
@@ -14,9 +14,11 @@ Att använda shellcheck är inte svårare än att köra ett script:
 
 
 
-### Installera
+### Installera {#installera}
 
 För att installera shellcheck direkt i terminalen:
+
+
 
 Debian  
 `$ sudo apt-get install shellcheck`
