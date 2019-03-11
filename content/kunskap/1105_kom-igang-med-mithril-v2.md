@@ -48,10 +48,12 @@ $ cd me/kmom03/nobel
 $ npm init --yes
 ```
 
-Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
+Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi installerar den senaste versionen av mithril vilket vill säga `2.0.0-rc.4`.
+
+Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
 
 ```bash
-$ npm install --save mithril
+$ npm install --save mithril@2.0.0-rc.4
 $ npm install --save-dev webpack webpack-cli
 ```
 
@@ -72,11 +74,11 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mithril": "^1.1.6"
+    "mithril": "^2.0.0-rc.4"
   },
   "devDependencies": {
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11"
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
   }
 }
 ```
@@ -558,11 +560,9 @@ I kursrepot finns några mithril exempel program. Följande exempelprogram är r
 
 * `example/meapp-mithril` visar hur man skapar en meapp med mithril.
 
-* `example/nameday` visar hur man kan hämta data från ett API med namnsdagar.
+* `example/namnsdag` visar hur man kan hämta data från ett API med namnsdagar.
 
 * `example/calendar` använder komponenter för att skapa en kalender med namnsdagar.
-
-* `example/husLeta` användes i genomgångarna 2017 som exempel på de olika delarna av kursen.
 
 
 
