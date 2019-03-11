@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2019-03-11": "(C, mos) Förtydligande och hjälptext om kodstandard, backup och tips till hur testa."
     "2019-02-25": "(B, mos) Tips om GROUP_CONCAT och dump av procedurer."
     "2019-02-18": "(A, mos) Första utgåvan, sammanslagen av tre andra uppgifter och vidarutvecklad."
 ...
@@ -45,6 +46,41 @@ Du skall bygga en webbklient och en terminalklient. Du har tidigare kod som du k
 Börja med att kopiera din fil `ddl.sql` från modelleringsuppgiften, till nuvarande katalog och utgå från den. Var redo på att du kan behöva modifiera tabellstrukturen för din databas, så att du kan lösa uppgiften.
 
 När du fyller databasen med innehåll så kan du utgå från följande Excelark, "[Databasen eshop, del 1, innehåll till tabeller](https://docs.google.com/spreadsheets/d/1yz0-C1SFYvNw_mN5CrZd9QrjKUXqKv3OhSlGUci8Mls/edit?usp=sharing)". Ta en egen kopia av arket och därefter kan du fritt modifiera innehållet i tabellerna och vilka kolumner som finns.
+
+
+
+### Kodstandard små bokstäver {#sma}
+
+Kom ihåg att vi använder en kodstandard som säger små bokstäver på tabeller, vyer, procedurer, triggers och kolumnnamn.
+
+Du kan läsa om "[Kodstandard i SQL, små bokstäver och underscore _](t/8379)" i forumet.
+
+
+
+### Backup med lagrade procedurer {#backproc}
+
+När du tar din backup måste du ange `--routetines` så att dina lagrade procedurer följer med.
+
+Du kan läsa mer i forumet på "[Backup av databasen inklusive lagrade procedurer](t/8371)".
+
+
+
+### Testa dig själv {#test}
+
+När du är helt klar med uppgiften så är det ett par saker som du kan göra för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
+
+I webbklienten:
+
+1. Lägg till en ny produkt.
+1. Redigera den nya produkten.
+1. Visa produkten i översikten.
+
+I terminalklienten.
+
+1. Visa hyllor på lagret.
+1. Visa vilka produkter som finns på hyllorna.
+1. Lägg till den nya produkten på en godtycklig lagerhylla.
+1. Se att produkten finns på lagret med rätt antal på rätt hylla.
 
 
 
