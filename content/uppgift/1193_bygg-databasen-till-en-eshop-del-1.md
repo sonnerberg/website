@@ -59,18 +59,19 @@ Du kan läsa om "[Kodstandard i SQL, små bokstäver och underscore _](t/8379)" 
 
 ### Backup med lagrade procedurer {#backproc}
 
-När du tar din backup måste du ange `--routetines` så att dina lagrade procedurer följer med.
+När du tar din backup måste du ange `--routines` så att dina lagrade procedurer följer med. Om du har sätter CHARSET/COLLATION på databasen så behöver du även se till att den informationen kommer med i backupfilen.
 
 Du kan läsa mer i forumet på "[Backup av databasen inklusive lagrade procedurer](t/8371)".
 
 
 
-### Testa dig själv {#test}
+### Testa din lösning {#test}
 
 När du är helt klar med uppgiften så är det ett par saker som du kan göra för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
 
 I webbklienten:
 
+1. Kolla översikt av kategorier.
 1. Lägg till en ny produkt.
 1. Redigera den nya produkten.
 1. Visa produkten i översikten.

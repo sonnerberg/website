@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2019-03-12": "(C, mos) Lade till video som visar studexempel."
     "2019-03-04": "(B, mos) Status är Skickad, inte Levererad."
     "2019-02-25": "(A, mos) Första utgåvan, sammanslagen av tre andra uppgifter och vidarutvecklad."
 ...
@@ -39,6 +40,58 @@ Introduktion {#intro}
 -----------------------
 
 Du bygger vidare på det du gjorde i del 1 av uppgiften. Ta en kopia av din gamla katalog och fortsätt utveckla.
+
+
+
+### Exempel på studentinlämning {#exempel}
+
+Här kan du se ett exempel på en studentinlämning.
+
+[YOUTUBE src=PnQgc7sc3JU width=730 caption="Mikael rättar en studentinlämning för uppgiften eshop2 i kmom06."]
+
+
+
+### Kodstandard små bokstäver {#sma}
+
+Kom ihåg att vi använder en kodstandard som säger små bokstäver på tabeller, vyer, procedurer, triggers och kolumnnamn.
+
+Du kan läsa om "[Kodstandard i SQL, små bokstäver och underscore _](t/8379)" i forumet.
+
+
+
+### Backup med lagrade procedurer {#backproc}
+
+När du tar din backup måste du ange `--routines` så att dina lagrade procedurer följer med. Om du har sätter CHARSET/COLLATION på databasen så behöver du även se till att den informationen kommer med i backupfilen.
+
+Du kan läsa mer i forumet på "[Backup av databasen inklusive lagrade procedurer](t/8371)".
+
+
+
+### Testa din lösning {#test}
+
+När du är helt klar med uppgiften så är det ett par saker som du kan göra för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
+
+1. Dubbelkolla att du har en aktuell databasdump.
+
+I webbklienten:
+
+1. Kolla översikt av kunder.
+1. Skapa en order till en kund.
+1. Beställ ett par befintliga/nyskapade produkter.
+1. Beställ fler än det finns i lagret, av någon produkt.
+1. Beställ ordern.
+1. Kolla orderns status.
+1. Se en översikt av alla ordrar.
+1. Klicka på ordern och se detaljer om den.
+
+I terminalklienten.
+
+1. Sök efter ordern du nyss skapade.
+1. Kolla orderns status.
+1. Skapa en plocklista till ordern.
+1. Det skall gå att se om beställt antal matchar mot antal i lager.
+1. Skeppa/skicka iväg ordern.
+1. Kolla orderns status.
 
 
 
