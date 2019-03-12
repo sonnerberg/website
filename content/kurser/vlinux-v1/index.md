@@ -11,7 +11,7 @@ revision:
 Kursen vlinux (v1)
 ==================================
 
-Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *vlinux*, och syftet med kursen är att studenten ska lära sig operativsystemet Linux och dess beståndsdelar såsom processer, filsystemet och terminalen. Kursens fokusområden ligger även i operativsystemets uppbyggnad, programhantering och serverhantering samt att programmera i språket Bash. Studenten ska även lära sig virtualiseringstekniker såsom VirtualBox och Docker.
+Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *vlinux*, och syftet med kursen är att studenten ska lära sig operativsystemet Linux och dess beståndsdelar såsom processer, filsystemet och terminalen. Kursens fokusområden ligger även i operativsystemets uppbyggnad, programhantering och serverhantering samt att programmera i språket Bash. Studenten ska även lära sig hantera virtualiseringstekniken Docker.
 
 <!--more-->
 
@@ -25,7 +25,7 @@ Kursen ges hösten 2019 läsperiod 1.
 
 Kursen har tre fokus. Det ena är att lära ut grunder och beståndsdelar i operativsystemet Linux. Det andra är att lära ut programmeringsspråket Bash och dess funktionalitet. Det tredje är att introducera virtualiseringsmiljöer och visa på hur man kan använda dem. Kursen är för de som skall jobba med webbprogrammering.
 
-Kursen börjar med att du installerar en egen version av Linux i virtualiseringsmiljön VirtualBox. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker tillsammans med Linux som operativsystem.
+Kursen börjar med att du installerar virtualiseringsmiljön Docker med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar flera Docker-containrar som kommunicerar med varandra.
 
 Samtidigt skriver du skript-program i programspråket Bash.
 
@@ -36,7 +36,7 @@ I slutet av kursen får du visa dina färdigheter i ett praktiskt programmerings
 Krav på labbmiljö {#labb}
 ------------------------
 
-I kursen installerar du en operativsystemet Linux på din egna maskin med virtualiseringssystemet VirtualBox och Docker. Du behöver ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
+I kursen installerar du virtualiseringssystemet Docker. Du behöver ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
 
 Kort och gott, du skall installera en linux-server och du behöver ha en tillräckligt bra miljö för att det skall fungera utan bekymmer.
 
@@ -61,7 +61,7 @@ Kursen omfattar följande områden:
 * Linux med terminal (Bash), ssh, nano, och systemkommandon.
 * Operativsystemets olika delar såsom filsystemet, processer och processhantering.
 * Skriptprogrammering i Bash.
-* Virtualiseringmiljöer med VirtualBox och Docker.
+* Virtualiseringmiljön Docker.
 
 
 
@@ -137,7 +137,7 @@ Mycket handlar om att förenkla vardagen som programmerare genom att automatiser
 
 ###Kmom04: Introduktion till Docker. {#kmom04}
 
-Vi lämnar VirtualBox och tittar närmare på virtualisering med Docker. Vi går även vidare med programmeringen i Bash.
+Vi lämnar VirtualBox och tittar närmare på virtualisering med Docker. Vi går även vidare med programmeringen i Bash och utforskar fler konstruktioner och verktyg.
 
 [Instruktion till kursmoment 04](kurser/linux-v3/kmom04).
 
@@ -145,7 +145,9 @@ Vi lämnar VirtualBox och tittar närmare på virtualisering med Docker. Vi går
 
 ###Kmom05: Docker och docker-compose. {#kmom05}
 
-Nu när vi vet hur Docker fungerar kan vi ta det ett steg längre med docker-compose.
+Nu när vi har Docker på plats kan vi ta det ett steg längre. Vi lär oss docker-compose, för att framöver kunna hantera flera "services" från en och samma fil.
+
+Vi traskar även vidare med vår programmring i Bash och diverse verktyg.
 
 [Instruktion till kursmoment 05](kurser/linux-v3/kmom05).
 
@@ -153,7 +155,9 @@ Nu när vi vet hur Docker fungerar kan vi ta det ett steg längre med docker-com
 
 ###Kmom06: Mera Docker. {#kmom06}
 
-Vi tittar på hur det kan bli när vi hanterar mer än en docker container.
+Vi lär oss hantera flera services som kommunicerar med varandra i Docker. Vi tittar även på hur det kan bli när vi hanterar mer än en docker container.
+
+Samtidigt jobbar vi vidare med Bash-programmeringen.
 
 [Instruktion till kursmoment 06](kurser/linux-v3/kmom06).
 
@@ -184,9 +188,6 @@ Det finns läsanvisningar i samband med varje kursmoment.
 * **[The Linux Command Line](kunskap/boken-the-linux-command-line)** -- William Shotts  
     En lättläst och trevlig bok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Linux, systemkommandon och terminalen.
 
-* **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
-    En bok om ES6 som förutsätter att man kan ES5.
-
 
 
 ###Referenslitteratur {#referenslitteratur}
@@ -203,33 +204,35 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
 
 
-* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+<!-- * **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
     En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
 * **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford  
     En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
 
 * **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
-    En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
+    En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript. -->
 
 
 
 Läsanvisningar {#lasanvisning}
 ------------------------------
 
-Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
+TBD
 
-| Kursmoment | Linux Command Line | Debian Handbook | Exploring ES6     |
-|------------|--------------------|-----------------|-------------------|
-| Kmom01     | 1, 2, 3, 4         | 1, 4            |                   |
-| Kmom02     | Repetera 1-4       | 6, 7            |                   |
-| Kmom03     | 6, 24              |                 |                   |
-| Kmom04     |                    |                 | 1, 2              |
-| Kmom05     |                    |                 |                   |
-| Kmom06     |                    |                 |                   |
-| Kmom10     |                    |                 |                   |
+<!-- Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion för kursmomentet.
+| Kursmoment | Linux Command Line | Debian Handbook |
+|------------|--------------------|-----------------|
+| Kmom01     | 1, 2, 3, 4         | 1, 4            |
+| Kmom02     | Repetera 1-4       | 6, 7            |
+| Kmom03     | 6, 24              |                 |
+| Kmom04     |                    |                 |
+| Kmom05     |                    |                 |
+| Kmom06     |                    |                 |
+| Kmom10     |                    |                 |
+
+Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion för kursmomentet. -->
 
 
 
