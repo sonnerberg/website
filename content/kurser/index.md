@@ -69,7 +69,8 @@ views:
                             meta:
                                 type: content
                                 # ht16 oophp-v3, ht17 databas-v1, ht18 oophp-v4
-                                route: kurser/oophp-v4/block-kurser-kmom
+                                # vt19 oophp-v5
+                                route: kurser/oophp-v5/block-kurser-kmom
 
     webbprogrammering-termin3:
         region: columns-above
@@ -260,7 +261,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v4/block-kurser-kmom
+                                route: kurser/oophp-v5/block-kurser-kmom
 
 
 

@@ -48,7 +48,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v4/block-kurser-kmom
+                                route: kurser/oophp-v5/block-kurser-kmom
 ...
 Webbprogrammering och Databaser, 30hp (webprog)
 ==================================

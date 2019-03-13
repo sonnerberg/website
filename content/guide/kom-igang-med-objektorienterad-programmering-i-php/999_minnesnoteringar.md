@@ -29,3 +29,10 @@ Minnesnoteringar
 * Reflection
 * Annotations
 * Typhintning
+
+Från kursfeedback ht18.
+
+* Magic functions
+* Static class member/method
+* Abstract class/method
+* Mer om trait och mer om interface samt exempel på när de kan användas.

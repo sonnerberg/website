@@ -1,11 +1,13 @@
 ---
 author: mos
 revision:
-    "2019-01-10": "(B, mos) Bort med inlämning i forumet."
-    "2017-12-27": "(A, mos) Första utgåvan."
+    "2018-08-16": "(D, mos) Bort redovisning i forum samt bytte ITs mot Canvas."
+    "2018-03-19": "(C, mos) Uppdaterad inför oophp-v4 vt18."
+    "2017-03-24": "(B, mos) Uppdaterad inför oophp-v3 vt17."
+    "2015-10-29": "(A, mos) Ny inför oophp ht15."
 ...
 Resultat och redovisning
-====================================
+==================================
 
 Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 
@@ -16,25 +18,44 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-Skriv en redovisningstext och [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från kursmomentet.
+I din me-sida har du en dedikerad plats för dina redovisningstexter. Där skall du [redovisa dina reflektioner](kurser/faq/att-skriva-en-bra-redovisningstext) från varje kursmoment.
 
 Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Skriv ett stycke om 15-30 meningar under respektive kursmoment i filen `me/redovisa/redovisning.html`.
+Kan du koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare?
 
-När du är klar innehåller filen `me/redovisa/redovisning.html` redovisningstexter från samtliga kursmoment.
+Skriv ett stycke om 15-30 meningar, försök väva in frågorna i löpande text.
+
+
+
+Tagga ny version {#tag}
+---------------------------------------
+
+Se till att du har taggat en ny version på din me-sida, så att dina senaste ändringar finns med i taggen och är pushade till GitHub. Versionen ger en historik över dina ändringar enligt följande.
+
+| Version | Kmom   |
+|---------|--------|
+| 1.0.*   | kmom01 |
+| 2.0.*   | kmom02 |
+| 3.0.*   | kmom03 |
+| 4.0.*   | kmom04 |
+| 5.0.*   | kmom05 |
+| 6.0.*   | kmom06 |
+| 10.0.*  | kmom10 |
+
+Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du historik och du kan få problem med inlämningarna.
 
 
 
 Ladda upp och publicera din kurskatalog {#repo}
 ---------------------------------------
 
-Ladda upp din kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
+Ladda upp ditt kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
 
 ```bash
-# Gå till din kurskatalog
+# Ställ dig i kurskatalogen
 dbwebb publish me
 ```
 
@@ -44,7 +65,7 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
-Kopiera redovisningstexten till Canvas {#canvas}
+Kopiera redovisningstexten till Canvas {#lms}
 ---------------------------------------
 
 Kopiera redovisningstexten och lämna in den på redovisningen i Canvas tillsammans med en länk till din me-sida.
