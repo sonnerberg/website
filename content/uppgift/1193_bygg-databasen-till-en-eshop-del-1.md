@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2019-03-13": "(D, mos) Tips om optionella argument."
     "2019-03-11": "(C, mos) Förtydligande och hjälptext om kodstandard, backup och tips till hur testa."
     "2019-02-25": "(B, mos) Tips om GROUP_CONCAT och dump av procedurer."
     "2019-02-18": "(A, mos) Första utgåvan, sammanslagen av tre andra uppgifter och vidarutvecklad."
@@ -199,7 +200,7 @@ Gör följande om du har tid och energi.
 Tips från coachen {#tips}
 -----------------------
 
-Läs gärna på om GROUP_CONCAT som kan vara smidigt att använda när man vill göra en rapport som till exempel visar vilka kategorier som en produkt tillhör. Det finns ett [tips i forumet om GROUP_CONCAT](t/8366). 
+Läs gärna på om **GROUP_CONCAT** som kan vara smidigt att använda när man vill göra en rapport som till exempel visar vilka kategorier som en produkt tillhör. Det finns ett [tips i forumet om GROUP_CONCAT](t/8366). 
 
 Du kan med GROUP_CONCAT skapa följande rapport, se kategorierna.
 
@@ -211,5 +212,7 @@ Du kan med GROUP_CONCAT skapa följande rapport, se kategorierna.
 | p2 | Pear  |  39.0 | fruit,green |
 +----+-------+-------+-------------+
 ```
+
+I forumet finns ett tips om hur du kan hantera **optionella argument** i terminalklienten, se "[Kommando med optionella argument (eshop1/2)](t/8431)".
 
 Lycka till och hojta till i forumet om du behöver hjälp!
