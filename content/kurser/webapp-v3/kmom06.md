@@ -20,10 +20,6 @@ Så här kan det se ut när vi är klara med kursmoment 06.
 
 [YOUTUBE src=SXZFj8itb7M width=630 caption="Lager appen i kursmoment 6."]
 
-[INFO]
-Uppdatera gärna kursrepot genom kommandot `dbwebb update` för att få senaste versionen av exempelkod och konfiguration.
-[/INFO]
-
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -36,14 +32,14 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 2 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
     * Ch 10: CSS3: Transforms, Transitions, and Animations.
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Det finns inga artiklar.
 <!-- 1. Läs artikeln [Can We Please Stop Fighting The Native vs. Web App Wars?](http://readwrite.com/2015/02/27/native-vs-web-apps-ceasefire). -->
@@ -51,7 +47,7 @@ Det finns inga artiklar.
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande video.
 
@@ -62,10 +58,10 @@ Titta på följande video.
 1. Video om [Lisa DeLuca - Arduino, Bluetooth, and Apache Cordova](https://www.youtube.com/watch?v=bDTeQIQEzmI&list=PL-0yjdC10QYpmXI3l-PGK1od4kTWOjm_A&index=2). Videon är från konferensen jQuery Chicago 2014. -->
 
 
+<!--
+### Lästips {#lastips}
 
-###Lästips {#lastips}
-
-Det finns inga extra lästips.
+Det finns inga extra lästips. -->
 
 
 
@@ -78,7 +74,7 @@ Det finns inga extra lästips.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)". Spara eventuella testfiler i `me/kmom06/animation`.
 
@@ -86,7 +82,7 @@ Det finns inga extra lästips.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -94,9 +90,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
-Det finns ingen extrauppgift.
+Med hjälp av övningen "[GPS och kamera i samarbete](kunskap/gps-och-kamera-i-samarbete)" skapa möjlighet för att den som levererar paketet kan ta en geolokaliserad bild som sparas till telefonen för bevis att paketet har lämnats på rätt plats.
 
 
 
@@ -112,4 +108,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vilka fördelar ger Cordova plugins?
 * Fick du till ett bra gränssnitt med kartan?
 * Vilka effekter gav animationer och övergångar?
+* Gjorde du extrauppgiften? Beskriv isåfall arbetet med extrauppgiften.
 * Vilken är din TIL för detta kmom?

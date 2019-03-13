@@ -58,6 +58,7 @@ Vi rensar ut i `www/index.html` och har kvar nedanstående, notera att jag har t
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href="css/index.css" rel="stylesheet">
         <title>GPS</title>
     </head>
     <body>
@@ -73,15 +74,15 @@ I filen `js/index.js` som är ingångspunkten för vår app väntar vi in att en
 ```javascript
 "use strict";
 
-var m = require("mithril");
-var map = require("./views/map.js");
+import m from "mithril";
+import mapView from "./views/map.js";
 
-var app = {
+const app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
     onDeviceReady: function() {
-        m.mount(document.body, map);
+        m.mount(document.body, mapView);
     },
 };
 
@@ -99,8 +100,8 @@ I vyn `map.js` importerar vi `leaflet.js`, sedan definieras `view`-funktionen, v
 ```javascript
 "use strict";
 
-var m = require("mithril");
-var L = require("leaflet");
+import m from "mithril";
+import L from "leaflet";
 
 module.exports = {
     view: function() {
@@ -115,6 +116,11 @@ module.exports = {
 Vi använder sedan livscykel funktionen `oncreate` för att anropa funktionen `showMap` som ritar upp kartan och även ett antal markörer som visar platser baserad på koordinater. Funktionen `oncreate` anropas efter att vyn har renderats och vi använder `oncreate` då `div#map.map` måste finnas tillgänglig när vi börjar använda `leaflet`.
 
 ```javascript
+"use strict";
+
+import m from "mithril";
+import L from "leaflet";
+
 module.exports = {
     oncreate: showMap,
     view: function() {
@@ -155,10 +161,75 @@ function showMap() {
 
 Vi skapar en karta (`map`) där vi definierar vilken punkt vi vill ha som centrum och även hur långt vi har zoomat in. Vi lägger sedan till vilka bilder vi vill använda som **tiles** i kartan. Jag väljer att använda OpenStreetMaps tiles, men det finns en uppsjö av andra man kan använda, se [Dokumentationen](https://leafletjs.com/plugins.html#basemap-providers) för fler tiles.
 
+Vi lägger nu till plattformen browser i vårt Cordova projekt, vi kompilerar mithril appen och kör igång appen med följande kommandon, som vi känner igen från förra kursmomentet.
 
+```bash
+# stå i me/kmom06/gps
+cordova platform add browser --save
+npm start
+cordova run browser
+```
+
+Vi ser att vi direkt får problem med CSP då vi inte kan ladda bilderna som ska bygga upp  och åtgärder det genom att lägga till `https://*.tile.openstreetmap.org` efter `'self'` i img-src delen av CSP. Nu kan vi ladda bilderna men ser att bilderna som används som markörer saknas och bilderna hamnar lite konstigt då vi inte har laddat leaflet CSS filerna. Vi laddar dessa genom att importera i vår JavaScript med hjälp av webpack. Längst upp i `js/views/map.js` ändrar vi till följande.
+
+```javascript
+"use strict";
+
+import m from "mithril";
+import L from "leaflet";
+
+import "leaflet/dist/leaflet.css";
+import "leaflet/dist/images/marker-icon-2x.png";
+import "leaflet/dist/images/marker-shadow.png";
+
+var map;
+```
+
+Vi testar att bygga koden med kommandot `npm start` och får då en hel del fel relaterat till att webpack inte kan hitta en `appropriate loader to handle this file type`. Låt oss installera tre olika loaders som kan hantera dessa filer och sedan konfigurera så att filerna tas hand om av de olika loaders.
+
+```bash
+# stå i me/kmom06/gps
 npm install --save-dev style-loader css-loader
-
 npm install --save-dev file-loader
+```
+
+`style-loader` och `css-loader` är loaders som tar hand om CSS och `file-loader` kommer hantera bilderna. I vår `webpack.config.js` fil lägger vi till två objekt i en arrayen `module.rules` vår webpack konfiguration.
+
+```javascript
+const path = require("path");
+
+module.exports = {
+    entry: './www/js/index.js',
+    output: {
+        path: path.resolve(__dirname, 'www'),
+        filename: 'app.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                        },
+                    },
+                ]
+            }
+        ]
+    }
+};
+```
+
+De två regler vi lägger till säger helt enkelt: matcher filtypen en av följande använd denna loader för att ladda filen. Vi kan nu köra `npm start` igen och denna gången ser vi att bygget går bra och att en ett antal olika filer skapas. Vi kan nu köra `cordova run browser` och nu börjar det likna nått.
 
 
 
@@ -218,9 +289,9 @@ Vi har nu tillgång till objektet `navigator.geolocation`. Vi använder funktion
 // models/position.js
 "use strict";
 
-var m = require("mithril");
+import m from "mithril";
 
-var position = {
+const position = {
     currentPosition: {},
 
     getPosition: function() {
@@ -243,7 +314,7 @@ var position = {
     }
 };
 
-module.exports = position;
+export default position;
 ```
 
 I funktionen `getPosition()` kollar vi först om vi har tillgång till `navigator.geolocation` och anropar sedan `navigator.geolocation.getCurrentPosition()`. Beroende på utfallet av den funktionen anropas antigen `geoSuccess` eller `geoError`. I `geoSuccess` sätter vi den nuvarande position och ritar om vyn.
@@ -251,7 +322,7 @@ I funktionen `getPosition()` kollar vi först om vi har tillgång till `navigato
 I vyn använder vi `oninit` livscykel-metoden för att anropa `getPosition` i modellen.
 
 ```javascript
-module.exports = {
+const mapView = {
     oninit: position.getPosition,
     oncreate: function() {
         showMap();
@@ -264,6 +335,8 @@ module.exports = {
         ];
     }
 };
+
+export default mapView;
 ```
 
 I `showMap` funktionen lägger vi till en ny sorts markör som markerar användarens position. Jag har skapat en ikon för att visa användarens position. Du kan kopiera ikonen med följande kommando. Du kan naturligtvis använda en egen ikon också.
