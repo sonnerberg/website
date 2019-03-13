@@ -9,7 +9,7 @@ GPS och karta
 
 [FIGURE src=/image/webapp/gps.png?w=c5 class="right"]
 
-Vi ska i denna övning använda [leaflet.js](https://leafletjs.com) tillsammans med [OpenStreetMap](https://www.openstreetmap.org) och Cordova Pluginen geolocation för att visa positionsdata på en karta. Vi ska titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
+Vi ska i denna övning använda [leaflet.js](https://leafletjs.com) tillsammans med [OpenStreetMap](https://www.openstreetmap.org) och Cordova Pluginen geolocation för att visa positionsdata på en karta. Vi ska alltså titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
 
 
 
@@ -17,34 +17,53 @@ Vi ska i denna övning använda [leaflet.js](https://leafletjs.com) tillsammans 
 
 
 
+Vi kommer dessutom titta på hur vi kan använda webpack till mer än bara att bygga våra JavaScript filer. Vi kommer importera både CSS och bild filer i JavaScript och filerna blir en del av vår byggda filer.
+
 Exempelprogrammet från denna övning finns i kursrepot [example/gps](https://github.com/dbwebb-se/webapp/tree/master/example/gps) och i `example/gps`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln.
 
 
 
 En karta {#karta}
 --------------------------------------
-Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår mobila enhet och för att rita ut markörer på denna karta.
-
-Jag har skapat en Cordova app precis som vi har gjort tidigare och i `www` katalogen har vi en simpel mithril app. Vi lägger nu till leaflet.js genom att använda kommandot `npm install leaflet --save`. Vi kopierar in `leaflet.css` och `images/` från leaflet paketet i `node_modules/` med följande kommando och nedan har vi lagt till `leaflet.css` i `index.html`.
+Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår mobila enhet och för att rita ut markörer på denna karta. Vi skapar en Cordova app i katalogen `me/kmom06/gps` precis som vi har gjort tidigare kursmoment. Vi installerar mithril och webpack och skapar en mithril app i `www` katalogen.
 
 ```bash
-# Stå i me/kmom06/gps
-cp node_modules/leaflet/dist/leaflet.css www/css/leaflet.min.css
-cp -r node_modules/leaflet/dist/images/ www/css/
+# stå i me/kmom06/gps
+cordova create . se.dbwebb.gps GPS
+npm install --save mithril@2.0.0-rc.4
+npm install --save-dev webpack webpack-cli
+touch webpack.config.js
 ```
+
+I `webpack.config.js` är vår konfiguration ungefär som vanligt, men vi kommer se senare varför vi inte har med `/dist` katalogen som vanligt.
+
+```javascript
+var path = require("path");
+
+module.exports = {
+    entry: "./www/js/index.js",
+    output: {
+        path: path.resolve(__dirname, 'www'),
+        filename: "app.js"
+    }
+};
+```
+
+Vi rensar ut i `www/index.html` och har kvar nedanstående, notera att jag har tagit bort CSS filen i head och rensat ut Cordovas Hello World exempelkod.
 
 ```html
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/leaflet.min.css">
-        <title>Maps and GPS</title>
+        <title>GPS</title>
     </head>
     <body>
+
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="dist/app.js"></script>
+        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>
 ```
@@ -69,7 +88,13 @@ var app = {
 app.initialize();
 ```
 
-I vyn `map.js` importerar vi `leaflet.js`, sedan definieras `view`-funktionen, vi vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. **Viktigt att explicit ge kartan en höjd i pixlar eller rem annars visas den inte**. ID't `#map` används av JavaScript för att hämta ut rätt element.
+Vi installerar nu leaflet med hjälp av npm.
+
+```bash
+npm install --save leaflet
+```
+
+I vyn `map.js` importerar vi `leaflet.js`, sedan definieras `view`-funktionen, vi vill här ha en rubrik och en `div` där kartan ska visas. Klassen `.map` används för att ge kartan en bredd och en höjd. **Viktigt att explicit ge kartan en höjd i pixlar eller rem i din CSS fil annars visas den inte**. ID't `#map` används av JavaScript för att hämta ut rätt element.
 
 ```javascript
 "use strict";
@@ -87,7 +112,7 @@ module.exports = {
 };
 ```
 
-Vi använder sedan livscykel funktionen `oncreate` för att anropa funktionen som ritar upp kartan och även ett antal markörer som visar platser baserad på koordinater.
+Vi använder sedan livscykel funktionen `oncreate` för att anropa funktionen `showMap` som ritar upp kartan och även ett antal markörer som visar platser baserad på koordinater. Funktionen `oncreate` anropas efter att vyn har renderats och vi använder `oncreate` då `div#map.map` måste finnas tillgänglig när vi börjar använda `leaflet`.
 
 ```javascript
 module.exports = {
@@ -101,7 +126,7 @@ module.exports = {
 };
 ```
 
-Funktionen `showMap` definierar ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna. Jag har vald att definiera variabeln `map` som en global variabel, då den används i flera olika funktioner, se exempelprogrammet.
+Funktionen `showMap` ligger som en vanlig JavaScript funktion och inte som en del av det vi exporterar i mithril kontext. Detta är en av de stora fördelarna med mithril att allt "bara" är vanlig JavaScript och att vi därför kan varva mithril med vanliga JavaScript funktioner. I `showMap` funktionen definieras ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna. Jag har valt att definiera variabeln `map` som en global variabel i filen `js/views/map.js`, då den används i flera olika funktioner, se exempelprogrammet.
 
 ```javascript
 function showMap() {
@@ -128,7 +153,12 @@ function showMap() {
 }
 ```
 
-Vi skapar en karta (`map`) där vi definierar vilken punkt vi vill ha som centrum och även hur långt vi har zoomat in. Vi lägger sedan till vilka bilder vi vill använda som **tiles** i kartan. Jag väljer att använda OpenStreetMaps tiles, men det finns en uppsjö av andra man kan använda.
+Vi skapar en karta (`map`) där vi definierar vilken punkt vi vill ha som centrum och även hur långt vi har zoomat in. Vi lägger sedan till vilka bilder vi vill använda som **tiles** i kartan. Jag väljer att använda OpenStreetMaps tiles, men det finns en uppsjö av andra man kan använda, se [Dokumentationen](https://leafletjs.com/plugins.html#basemap-providers) för fler tiles.
+
+
+npm install --save-dev style-loader css-loader
+
+npm install --save-dev file-loader
 
 
 
@@ -272,9 +302,65 @@ function showPosition() {
 
 
 
+Produktionsfiler från webpack {#prod}
+--------------------------------------
+
+Vi har än så länge i kursen använt `webpack -d` när vi har kompilerat vår modulariserade kod. I detta stycke ska vi titta på hur vi kan skapa optimerade produktionsfiler meed hjälp av webpack. Vi skapar först en kopia av filen `webpack.config.js` och döper kopian till `webpack.prod.js`. Vi ändrar sedan namnet på output filen till `bundle.min.js` och lägger till attributet `mode: production` för att berätta för webpack att vi vill skapa produktionsfiler. `webpack.prod.js` ser alltså nu ut på följande sätt.
+
+```javascript
+const path = require("path");
+
+module.exports = {
+    mode: 'production',
+    entry: './www/js/index.js',
+    output: {
+        path: path.resolve(__dirname, 'www'),
+        filename: 'bundle.min.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                        },
+                    },
+                ]
+            }
+        ]
+    }
+};
+```
+
+Vi skapar sedan ett nytt npm-script i `package.json` där vi sedan kan köra webpack med den nya konfigurationsfilen.
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -d",
+    "build": "webpack --config webpack.prod.js"
+},
+```
+
+Vi kan nu skapa produktionsfilen `bundle.min.js` genom att köra kommandot `npm run build`. Om vi jämför filstorlekarna från utvecklingsfilerna och produktionsfilerna ser vi att de har minskat från ungefär 1,6MB till ungefär 200KB så en ganska så drastisk ändring i filstorlek.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna artikel använd oss av OpenStreetMap och leaflet.js för att placera ut markörer på en karta på specifika platser. Vi har även tittat på hur vi kan använda `cordova-plugin-geolocation` för att rita ut användarens position på kartan.
+
+Vi har även tittat lite ytterligare på hur webpack kan hjälpa oss med att bygga våra appar.
 
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7350) om denna artikeln.
 
