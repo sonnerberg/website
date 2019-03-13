@@ -127,14 +127,6 @@ Redirect /python/studieplan /kurser/python/studieplan
 Redirect /kurser/python/studieplan         https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
 Redirect /kurser/python/lektionsplan https://docs.google.com/spreadsheets/d/1zFmphWE90vxLCFEhH60QEZ4I8p8pq3-XKWBLLQguOXM/edit?usp=sharing
 
-# oophp
-Redirect /oophp/studieplan /kurser/oophp/studieplan
-Redirect /kurser/oophp/studieplan https://docs.google.com/spreadsheets/d/1Ho29uzFlB6OPCza20FaWT_elE8q-wvm4hg1AM8Vr6io/edit?usp=sharing
-Redirect /oophp/lektionsplan /kurser/oophp/lektionsplan
-Redirect /kurser/oophp/lektionsplan https://docs.google.com/spreadsheets/d/1IrY2LgewCt-zvpGZcO1soTtRKhvyOwb8uAjkMePo59o/edit?usp=sharing
-
-
-
 # phpmvc
 Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGxWWmZwUE9oNGdiRDlFUDdaNzFPN1E
 Redirect /phpmvc/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGZOcW9CVkhZTXNEdzJobGM3dUpmVGc
@@ -231,15 +223,20 @@ Redirect /webapp        /kurser/webapp-v3
 Redirect /kurser/webapp /kurser/webapp-v3
 
 
-# oophp
+# oophp (older)
 Redirect /oophp-v1              /kurser/oophp-v1
 Redirect /kurser/oophp-v1       /kurser/arkiv/oophp-v1
 Redirect /kurser/oophp-v2/me    https://arkiv.dbwebb.se/oophp/me
 Redirect /oophp-v2              /kurser/oophp-v2
 Redirect /oophp-v3              /kurser/oophp-v3
 
-Redirect /oophp                 /kurser/oophp-v4
-Redirect /kurser/oophp          /kurser/oophp-v4
+# oophp
+Redirect /oophp                     /kurser/oophp
+Redirect /kurser/oophp/lektionsplan  https://docs.google.com/spreadsheets/d/1IrY2LgewCt-zvpGZcO1soTtRKhvyOwb8uAjkMePo59o
+Redirect /kurser/oophp/studieplan    https://docs.google.com/spreadsheets/d/1Ho29uzFlB6OPCza20FaWT_elE8q-wvm4hg1AM8Vr6io
+Redirect /kurser/oophp/forum        /forum/utbildning/oophp
+Redirect /kurser/oophp              /kurser/oophp-v5
+Redirect /forum/utbildning/oophp    /forum/viewforum.php?f=37
 
 
 # ramverk1
