@@ -111,7 +111,7 @@ Det första kursmomentet går ut på att installera Debian/Linux i Virtualiserin
 
 För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
 
-[Instruktion till kursmoment 01](kurser/linux-v3/kmom01).
+[Instruktion till kursmoment 01](kurser/vlinux-v1/kmom01).
 
 
 
@@ -123,7 +123,7 @@ Ett bra sätt att installera många webbplatser på en och samma maskin är Apac
 
 Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hemma i terminalen, SSH och att jobba med Linux som en server.
 
-[Instruktion till kursmoment 02](kurser/linux-v3/kmom02).
+[Instruktion till kursmoment 02](kurser/vlinux-v1/kmom02).
 
 
 
@@ -131,7 +131,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker.
 
-[Instruktion till kursmoment 03](kurser/linux-v3/kmom03).
+[Instruktion till kursmoment 03](kurser/vlinux-v1/kmom03).
 
 
 
@@ -139,7 +139,7 @@ Mycket handlar om att förenkla vardagen som programmerare genom att automatiser
 
  Vi kikar på hur vi kan installera och använda Apache som webbserver i Docker och går även vidare med programmeringen i Bash och utforskar fler konstruktioner och verktyg.
 
-[Instruktion till kursmoment 04](kurser/linux-v3/kmom04).
+[Instruktion till kursmoment 04](kurser/vlinux-v1/kmom04).
 
 
 
@@ -149,7 +149,7 @@ Vi lär oss skapa fler kontainrar och kommunicera mellan dem med ett privat nät
 
 Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
-[Instruktion till kursmoment 05](kurser/linux-v3/kmom05).
+[Instruktion till kursmoment 05](kurser/vlinux-v1/kmom05).
 
 
 
@@ -157,7 +157,7 @@ Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
 Vi bygger vidare på föregående kursmoment och använder docker-compose för att hantera våra services.
 
-[Instruktion till kursmoment 06](kurser/linux-v3/kmom06).
+[Instruktion till kursmoment 06](kurser/vlinux-v1/kmom06).
 
 
 
@@ -165,7 +165,7 @@ Vi bygger vidare på föregående kursmoment och använder docker-compose för a
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](kurser/linux-v3/kmom10).
+[Instruktion till kursmoment 10](kurser/vlinux-v1/kmom10).
 
 
 
