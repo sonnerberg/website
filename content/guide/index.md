@@ -32,9 +32,14 @@ Guider under utveckling till våren 2019.
 * [Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)
 * [ER-modellering med databaser](guide/er-modellering-med-databaser)
 
+Guider under utveckling till hösten 2020.
+
+* [Kom igång med Bash](guide/kom-igang-med-bash)
+* [Docker](guide/docker)
+* [VirtualBox](guide/virtualbox)
+
 Guider som ligger till sig och eventuellt utvecklas framöver.
 
 * [Kom igång med terminalen och Unix](guide/kom-igang-med-terminalen-och-unix)
-* [Kom igång med Bash](guide/kom-igang-med-bash)
 
 <!-- * [Programmering med JavaScript](guide/javascript) (delar av material som använts i kursen javascript, guiden delvis påbörjad, avvaktar eventuell utveckling av kursen javascript1) -->
