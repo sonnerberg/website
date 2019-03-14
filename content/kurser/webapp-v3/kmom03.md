@@ -48,7 +48,7 @@ Läs följande:
 
 1. Skumma igenom "[Googles artikel shadow DOM-v1](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom?hl=en)". -->
 
-1. Bekanta dig med dokumentationen för JavaScript ramverket [mithril](http://mithril.js.org/api.html) och genomgången av en enkel app i deras [tutorial](http://mithril.js.org/simple-application.html).
+1. Bekanta dig med dokumentationen för JavaScript ramverket [mithril](http://mithril.js.org/api.html). Genomgången av en enkel app i en [tutorial](http://mithril.js.org/simple-application.html) är ytterst relevant för det vi gör i detta kursmoment.
 
 
 

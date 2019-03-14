@@ -149,7 +149,7 @@ Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots ol
 
 Ett formulär i mithril {#mithril}
 --------------------------------------
-Formuläret nedan gör det möjligt att redigera en dator. Det finns en `Computer` modell som tar hand om data när det skickas från formuläret. När vi skapar formulär i mithril använder vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. För att de ändringar vi gör i formulärfältet ska sparas använder vi oss av livscykel metoden `oninput` och funktionen `m.withAttr` ([Dokumentation](http://mithril.js.org/withAttr.html)). `oninput` och `m.withAttr` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi ändrar i fältet.
+Formuläret nedan gör det möjligt att redigera en dator. Det finns en `Computer` modell som tar hand om data när det skickas från formuläret. När vi skapar formulär i mithril använder vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. För att de ändringar vi gör i formulärfältet ska sparas använder vi oss av livscykel metoderna `oninput` och `onchange`. `oninput` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi får input i fältet.
 
 Vi använder oss av en livscykel metod `onsubmit` för formuläret för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. Vi anropar dessutom modellens `save` funktion och då vi har redan satt värdet på den nuvarande dator kan vi helt enkelt bara spara den med hjälp av `m.request` och API:t som ligger i bakgrunden för appen.
 
@@ -169,17 +169,23 @@ let computerForm = {
                 } }, [
             m("label.input-label", "Name"),
             m("input.input[type=text][placeholder=Name]", {
-                oninput: m.withAttr("value", function(value) { computer.current.name = value }),
+                oninput: function (e) {
+                    computer.current.name = e.target.value;
+                },
                 value: computer.current.name
             }),
             m("label.input-label", "Year"),
             m("input.input[type=number][placeholder=Year]", {
-                oninput: m.withAttr("value", function(value) { computer.current.year = value }),
+                oninput: function (e) {
+                    computer.current.year = e.target.value;
+                },
                 value: computer.current.year
             }),
             m("label.input-label", "Operating System"),
             m("select.input", {
-                onchange: m.withAttr("value", function(value) { computer.current.os = parseInt(value) })
+                onchange: function (e) {
+                    computer.current.os = parseInt(e.target.value);
+                }
             }, computer.operatingSystems.map(function(os) {
                 return m("option", { value: os.id }, os.name);
             })),
