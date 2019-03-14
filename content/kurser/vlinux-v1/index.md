@@ -25,7 +25,7 @@ Kursen ges hösten 2019 läsperiod 1.
 
 Kursen har tre fokus. Det ena är att lära ut grunder och beståndsdelar i operativsystemet Linux. Det andra är att lära ut programmeringsspråket Bash och dess funktionalitet. Det tredje är att introducera virtualiseringsmiljöer och visa på hur man kan använda dem. Kursen är för de som skall jobba med webbprogrammering.
 
-Kursen börjar med att du installerar virtualiseringsmiljön Docker med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar flera Docker-containrar som kommunicerar med varandra.
+Kursen börjar med att du installerar virtualiseringsmiljön VirtualBox med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker samt hur vi jobbar med flera Docker-kontainrar som kommunicerar med varandra.
 
 Samtidigt skriver du skript-program i programspråket Bash.
 
@@ -36,7 +36,7 @@ I slutet av kursen får du visa dina färdigheter i ett praktiskt programmerings
 Krav på labbmiljö {#labb}
 ------------------------
 
-I kursen installerar du virtualiseringssystemet Docker. Du behöver ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
+I kursen installerar du virtualiseringssystemen VirtualBox och Docker. Du behöver ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
 
 Kort och gott, du skall installera en linux-server och du behöver ha en tillräckligt bra miljö för att det skall fungera utan bekymmer.
 
@@ -57,11 +57,11 @@ Innehåll {#innehall}
 Kursen omfattar följande områden:
 
 * Installation av Linux och Linux som server. Paket och pakethantering.
-* Installation av webbserver.
+* Installation av webbservern Apache.
 * Linux med terminal (Bash), ssh, nano, och systemkommandon.
 * Operativsystemets olika delar såsom filsystemet, processer och processhantering.
 * Skriptprogrammering i Bash.
-* Virtualiseringmiljön Docker.
+* Virtualiseringmiljöerna VirtualBox och Docker.
 
 
 
@@ -76,7 +76,7 @@ Efter genomförd kurs skall studenten:
 
 * visa grundläggande förståelse för operativsystemet Linux genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
 * visa goda kunskaper i att använda och kontrollera en webbserver i Linuxmiljö genom att tillämpa tekniker i praktiska övningar och projekt.
-* visa goda kunskaper i att använda och kontrollera virtualiseringsmiljön Docker genom att tillämpa tekniken i praktiska övningar och projekt.
+* visa goda kunskaper i att använda och kontrollera virtualiseringsmiljer genom att tillämpa teknikerna i praktiska övningar och projekt.
 
 
 
@@ -107,7 +107,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ###Kmom01: Linux som server. {#kmom01}
 
-Det första kursmomentet går ut på att installera Debian/Linux och logga in på maskinen som en server, via SSH.
+Det första kursmomentet går ut på att installera Debian/Linux i Virtualiseringsmilön VirtualBox och logga in på maskinen som en server, via SSH.
 
 För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
 
@@ -127,37 +127,35 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 
 
-###Kmom03: Skript med Bash. {#kmom03}
+###Kmom03: Introduktion till Docker och skript med Bash. {#kmom03}
 
-Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash.
+Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker.
 
 [Instruktion till kursmoment 03](kurser/linux-v3/kmom03).
 
 
 
-###Kmom04: Introduktion till Docker. {#kmom04}
+###Kmom04: Webbserver och Docker. {#kmom04}
 
-Vi lämnar VirtualBox och tittar närmare på virtualisering med Docker. Vi går även vidare med programmeringen i Bash och utforskar fler konstruktioner och verktyg.
+ Vi kikar på hur vi kan installera och använda Apache som webbserver i Docker och går även vidare med programmeringen i Bash och utforskar fler konstruktioner och verktyg.
 
 [Instruktion till kursmoment 04](kurser/linux-v3/kmom04).
 
 
 
-###Kmom05: Docker och docker-compose. {#kmom05}
+###Kmom05: Flera docker kontainrar. {#kmom05}
 
-Nu när vi har Docker på plats kan vi ta det ett steg längre. Vi lär oss docker-compose, för att framöver kunna hantera flera "services" från en och samma fil.
+Vi lär oss skapa fler kontainrar och kommunicera mellan dem med ett privat nätverk. Flera services ska kommunicera med varandra i Docker.
 
-Vi traskar även vidare med vår programmring i Bash och diverse verktyg.
+Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
 [Instruktion till kursmoment 05](kurser/linux-v3/kmom05).
 
 
 
-###Kmom06: Mera Docker. {#kmom06}
+###Kmom06: Docker-compose. {#kmom06}
 
-Vi lär oss hantera flera services som kommunicerar med varandra i Docker. Vi tittar även på hur det kan bli när vi hanterar mer än en docker container.
-
-Samtidigt jobbar vi vidare med Bash-programmeringen.
+Vi bygger vidare på föregående kursmoment och använder docker-compose för att hantera våra services.
 
 [Instruktion till kursmoment 06](kurser/linux-v3/kmom06).
 
