@@ -76,7 +76,7 @@ Efter genomförd kurs skall studenten:
 
 * visa grundläggande förståelse för operativsystemet Linux genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
 * visa goda kunskaper i att använda och kontrollera en webbserver i Linuxmiljö genom att tillämpa tekniker i praktiska övningar och projekt.
-* visa goda kunskaper i att använda och kontrollera virtualiseringsmiljöerna VirtualBox och Docker genom att tillämpa dessa tekniker i praktiska övningar och projekt.
+* visa goda kunskaper i att använda och kontrollera virtualiseringsmiljön Docker genom att tillämpa tekniken i praktiska övningar och projekt.
 
 
 
