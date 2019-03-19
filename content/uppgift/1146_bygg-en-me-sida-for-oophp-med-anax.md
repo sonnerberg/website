@@ -10,7 +10,7 @@ revision:
     "2018-08-16": "(B, mos) Genomgången inför ht18, bytt bas för redovisa/."
     "2018-03-19": "(A, mos) Första utgåvan."
 ...
-Bygg en me-sida för oophp med Anax
+Bygg en me-sida för oophp med ramverket Anax
 ===================================
 
 Du skall skapa en me-sida för kursen oophp. Du får en mall, baserat på ramverket Anax. Mallen ska du använda för att skapa din me-sida (redovisa-sida) och du skall sedan gå in och redigera sidorna så att de passar dig i kursen.
@@ -25,7 +25,7 @@ Inledningsvis finns inga krav på att du behöver bemästra katalogstrukturen i 
 
 Så här kan det se ut när det du har koll på mallen för me-sidan.
 
-[FIGURE src=image/snapvt18/oophp-me.png?w=w3 caption="Mallen för me-sidan i oophp."]
+[FIGURE src=image/snapvt19/oophp-me.png?w=w3 caption="Mallen för me-sidan i oophp."]
 
 
 

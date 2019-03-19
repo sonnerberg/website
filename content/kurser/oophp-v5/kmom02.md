@@ -99,6 +99,10 @@ Gör följande uppgifter.
 
 1. Gör uppgiften "[Flytta spelet Gissa mitt nummer till me-sidan](uppgift/flytta-spelet-gissa-mitt-nummer-till-me-sidan)". Du skall kopiera koden för ditt gissa-spel och integrera in det i din me-sida. Koden sparar du i `me/redovisa`. 
 
+<!--
+Dice med kontroller.
+-->
+
 1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
 
 

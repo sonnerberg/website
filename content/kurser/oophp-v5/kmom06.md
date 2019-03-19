@@ -46,7 +46,7 @@ Läs & Studera  {#lasanvisningar}
 
 
 
-###Videor {#videor}
+### Videor {#videor}
 
 Kika på följande videos.
 
@@ -54,7 +54,7 @@ Kika på följande videos.
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Följande tips från coachen används i övningen och uppgiften.
 
@@ -78,6 +78,7 @@ Gör följande övning, den förbereder dig inför uppgifterna.
 1. 1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter (v2)"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter-v2). Spara dina exempelprogram under `me/kmom06/content`.
 
 <!--
+Använd gärna extern modul i varje kmom.
 esc() wrapper, e(), eller modulen från Zend
 
 Lägg Textfilter som övning, inte enbart som uppgift.
@@ -85,6 +86,9 @@ Lägg Textfilter som övning, inte enbart som uppgift.
 purify
 
 användare, lösenord
+
+Travis med enhetstester.
+
 -->
 
 
