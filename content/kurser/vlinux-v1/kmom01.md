@@ -3,6 +3,7 @@ author:
     - lew
     - mos
 revision:
+    "2019-03-19": (E, lew) Inför HT19.
     "2017-12-21": (D, mos) Eget dok labbmiljö, genomgången.
     "2017-01-16": (C, mos) Länk till videoserie.
     "2017-01-04": (B, mos) Förberedelse inför linux-v2.
@@ -19,7 +20,7 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!--stop-->
+<!-- more -->
 
 Det första vi behöver är en Linux-server. På något sätt.
 
@@ -51,8 +52,8 @@ Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo)
 ```text
 # Gå till din katalog för dbwebb-kurser
 dbwebb selfupdate
-dbwebb clone linux
-cd linux
+dbwebb clone vlinux
+cd vlinux
 dbwebb init
 ```
 
@@ -117,7 +118,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-* Skaffa ett konto på Digital Ocean och installera Debian på en virtuell maskin. Koppla en domänadress till maskinen. Via GitHub kan du få rabattkod som ger dig gratis månader hos Digital Ocean (gällde 2015, 2016, 2017).
+Det finns inga extrauppgifter.
+
+<!-- Skaffa ett konto på Digital Ocean och installera Debian på en virtuell maskin. Koppla en domänadress till maskinen. Via GitHub kan du få rabattkod som ger dig gratis månader hos Digital Ocean (gällde 2015, 2016, 2017). -->
 
 
 
@@ -133,5 +136,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du sedan tidigare bekant med Unix, Linux, Debian och/eller terminalen?
 * Hur känns det med Unix-kommandon på terminalen, är det udda eller bekvämt?
 * Valde du att köra standard med VirtualBox och Debian eller hur gjorde du?
-* Om du kör VirtualBox, hur kändes det att jobba med det verktyget och ser du fördelar med det arbetssättet?
+* Hur kändes det att jobba med VirtualBox och ser du fördelar med det arbetssättet?
 * Var det något som krånglade eller tog extra mycket tid?

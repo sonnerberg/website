@@ -3,25 +3,9 @@ author: lew
 revision:
     "2019-03-14": "(A, lew) Första versionen."
 ...
-Om Bash
+Vad är Docker?
 =======================
 
-[FIGURE src=img/linux/bashlogo.png alt="Bash logotyp" class="right top"]
+Information om Docker hittar du på [docker.com](https://www.docker.com). Låt oss hålla det enkelt och jämföra Docker med virtualiseringsmiljön VirtualBox. Vi kan använda det för att köra andra operativsystem på vår egen dator, eller operativsystem paketerade tillsammans med programvaror. Docker kallar en sådan samling av operativsystem och programvara för en _image_ som körs i en _kontainer_. Vi kan till exempel starta upp en kontainer som bygger på en image med Linux, Apache, PHP och MySQL, och vi kan använda det utan att behöva installera dessa programvaror på vår egen dator.
 
-Bash är egentligen *shellet*, ett *command-line interface* (CLI) och kan ta kommandon från tangentbordet och skicka vidare instruktionerna till operativsystemet. Allt detta sker i en *terminal emulator* (terminal). Bash står för Bourne-Again SHell, skrivet av Brian Fox för [the GNU Project](https://www.gnu.org/gnu/thegnuproject.html) och är en uppgraderad version av det ursprungliga shellet *sh*, av Steve Bourne. Om vi tittar i manualen, `man bash` så ser vi att det även är följande:
-
-> Bash is an sh-compatible command language interpreter that executes commands read from the standard
-       input or from a file.
-
-
-
-På studentservern används i skrivande stund ett annat shell, *tcsh*. Vi kan se vilket shell som används med kommandot `echo $0`:
-
-```bash
-klwstud@sweet: echo $0
--tcsh
-```
-
-*Övriga shell är bland annat: ksh och zsh.*
-
-Allt du kan göra på kommandoraden i terminalen kan du även utföra i ett Bash-script och tvärtom. Vi kan med andra ord samla en uppsättning kommandon i en fil och köra den så exekveras kommandona som om vi skrivit dem direkt i terminalen. Mycket smidigt.
+Några fördelar med kontainrar är att de numera är relativt små och lättviktiga, speciellt med tanke på att vi inte har så stora problem med lite diskutrymme längre. En kontainer har även samma beteende, oberoende på vilken övrig miljö vi använder.  

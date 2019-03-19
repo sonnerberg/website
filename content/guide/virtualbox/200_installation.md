@@ -5,7 +5,7 @@ author: lew
 revision:
     "2019-03-08": "(A, lew) Första versionen."
 ...
-Installera VirtualBox
+Installation
 =======================
 
 När jag gör installationen nedan så kör jag i Windows 10. VirtualBox är beroende av din hårdvara så vissa saker kan skilja, men i stort sett är det samma process om du är på en Mac- eller Linux-maskin.

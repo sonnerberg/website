@@ -3,11 +3,11 @@
 Debian som server
 ==================================
 
-I kursen har vi senaste stabila versionen av Debian Linux som referenssystem och vi använder det som en server. 
+I kursen har vi senaste stabila versionen av Debian Linux som referenssystem och vi använder det som en server.
 
-Här är guiden hur du "[Installera Debian (på VirtualBox)](kunskap/installera-debian-pa-virtualbox)".
+Här är guiden hur du "[Installerar Debian (på VirtualBox)](guide/virtualbox/installera-os)".
 
-Du kan också välja att installera Debian på annat vis. Vi kommer använda Debian som en server och du behöver installera ett antal saker på den. Det måste vara en separat maskin, så det kan inte vara samma maskin som din desktopmiljö. 
+Du kan också välja att installera Debian på annat vis. Vi kommer använda Debian som en server och du behöver installera ett antal saker på den. Det måste vara en separat maskin, så det kan inte vara samma maskin som din desktopmiljö.
 
 Alternativa sätt att köra kursen på är bland annat.
 

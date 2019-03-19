@@ -18,7 +18,7 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!--stop-->
+<!--more-->
 
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 

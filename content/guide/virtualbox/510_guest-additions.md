@@ -1,9 +1,7 @@
 ---
-sectionHeader: true
-linkable: true
 author: lew
 revision:
-    "2019-03-08": "(A, lew) Första versionen."
+    "2019-03-14": "(A, lew) Första versionen."
 ...
 Guest Additions
 =======================
