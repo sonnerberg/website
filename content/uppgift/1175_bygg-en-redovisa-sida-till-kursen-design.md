@@ -68,7 +68,9 @@ Nu kan du öppna en webbläsare och peka mot katalogen `redovisa/htdocs`. Får d
 
 ### Publicera studentservern {#publicera}
 
-Du behöver ändra sökvägarna i `htdocs/.htaccess`, annars får du 404 på länkar och 500 på bilderna. Läs kommentaren överst i filen och gör som det står där.
+Du kan nu publicera till studentservern.
+
+Innan du gör det så behöver du ändra sökvägarna i `htdocs/.htaccess`, annars får du 404 på länkar och 500 på bilderna. Läs kommentaren överst i filen och gör som det står där.
 
 Publicera till studentservern för att se att allt fungerar.
 

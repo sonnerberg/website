@@ -3,7 +3,9 @@ author: mos
 category:
     - kurs oophp
     - anax
+    - me-sida
 revision:
+    "2019-03-19": "(D, mos) Uppdaterad inför vt19, ny bas för redovisa/."
     "2018-08-28": "(C, mos) Gör cache/cimage skrivbar."
     "2018-08-16": "(B, mos) Genomgången inför ht18, bytt bas för redovisa/."
     "2018-03-19": "(A, mos) Första utgåvan."
@@ -11,11 +13,11 @@ revision:
 Bygg en me-sida för oophp med Anax
 ===================================
 
-Du skall skapa en me-sida för kursen oophp. Du får en mall, baserat på Anax, som du kan använda och du skall sedan gå in och redigera sidorna så att de passar dig i kursen.
+Du skall skapa en me-sida för kursen oophp. Du får en mall, baserat på ramverket Anax. Mallen ska du använda för att skapa din me-sida (redovisa-sida) och du skall sedan gå in och redigera sidorna så att de passar dig i kursen.
 
 Du skall göra ett Git-repo av din me-sida. När du är klar så publicerar du och taggar ditt repo på GitHub.
 
-Allt eftersom kursen går så kommer du att fylla på innehåll i din me-sida.
+Allt eftersom kursen går så kommer du att fylla på innehåll och kodkonstruktioner i din me-sida.
 
 Inledningsvis finns inga krav på att du behöver bemästra katalogstrukturen i Anax. Du kommer steg för steg att introduceras i strukturen som används. 
 
@@ -43,6 +45,12 @@ Introduktion och förberedelse {#intro}
 
 Gör följande steg för att förbereda dig för uppgiften.
 
+[WARNING]
+
+**Videoserien är "outdated", en uppdatering är på gång.**
+
+[/WARNING]
+
 Du kan se hur jag jobbar igenom stegen i videoserien "[En me-sida med Anax i kursen oophp](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_RQMga3qbZzvpzvH-gW3gv)".
 
 [YOUTUBE src="p3RlMVjwhmE&t" list="PLKtP9l5q3ce_RQMga3qbZzvpzvH-gW3gv" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i redovisa-sidan."]
@@ -58,6 +66,7 @@ Det finns en installation av Anax som är specifik för oophp-kursen och dess re
 rsync -av example/redovisa me
 cd me/redovisa
 composer install --no-dev
+chmod 777 cache/*
 ```
 
 När du är klar så kan du se vilka moduler som installerades av composer.
@@ -66,15 +75,37 @@ När du är klar så kan du se vilka moduler som installerades av composer.
 composer show
 ```
 
-Se till att cache-katalogen för cimage är skrivbar.
-
-```text
-chmod 777 cache/cimage
-```
+Du har nu kopierat din redovisa-sida och installerat dess beroenden med composer samt förberett så att katalogen cache är skrivbar för cimage och anax.
 
 Nu kan du öppna en webbläsare och peka mot katalogen `redovisa/htdocs`.
 
-<!-- Lägg publicera studentservern som nästa steg, likt design-kursen. -->
+
+
+### Publicera studentservern {#publicera}
+
+Du kan nu publicera till studentservern.
+
+Innan du gör det så behöver du ändra sökvägarna i `htdocs/.htaccess`, annars får du 404 på länkar och 500 på bilderna. Läs kommentaren överst i filen och gör som det står där.
+
+Publicera sedan till studentservern för att se att allt fungerar.
+
+Första gången kan du publicera hela me-katalogen.
+
+```text
+dbwebb publish me
+```
+
+Sedan räcker det att enbart publicera redovisa-katalogen.
+
+```text
+dbwebb publish redovisa
+```
+
+Kom ihåg att du kan publicera snabba ändringar och frågå validering och minifiering med `publishpure`.
+
+```text
+dbwebb publishpure redovisa
+```
 
 
 
@@ -110,7 +141,7 @@ Du kommer använda kommandot make för att jobba med dina enhetstester, längre 
 
 
 
-### Git & GitHub {#git}
+### Git {#git}
 
 Gör ett git-repo av katalogen.
 
@@ -120,12 +151,30 @@ git add .
 git commit -m "First commit"
 ```
 
-Gå till GitHub och skapa ett nytt repository dit du kan ladda upp git-repot.
+Du har nu ett git-repo av din redovisa sida.
 
-Ladda upp ditt git-repo till GitHub (byt ut git@github.com:mosbth/oophpv4.git mot länken till ditt eget repo). Använd SSH-nycklar för att identifiera dig, det blir så mycket enklare att slippa skriva lösenord varje gång man laddar upp repot.
+Här är ett par vanliga git-kommandon som är bra att minnas.
 
 ```text
-git remote add origin git@github.com:mosbth/oophpv4.git
+git status
+git commit
+git tag
+git push
+```
+
+
+
+### GitHub {#github}
+
+
+Gå till GitHub och skapa ett nytt repository dit du kan ladda upp git-repot.
+
+Ladda upp ditt git-repo till GitHub. Använd SSH-nycklar för att identifiera dig, det blir så mycket enklare att slippa skriva lösenord varje gång man laddar upp repot.
+
+Det ser ut ungefär så här.
+
+```text
+git remote add origin <länken till ditt github repo>
 git push -u origin master
 ```
 
@@ -133,25 +182,13 @@ Nu har du publicerat din me-sida på GitHub.
 
 
 
-### Publicera studentservern {#publicera}
-
-Publicera till studentservern för att se att allt fungerar.
-
-```text
-dbwebb publish redovisa
-```
-
-Du behöver ändra sökvägarna i `htdocs/.htaccess`, annars får du 404 på länkar och 500 på bilderna. Det är samma struktur som fanns i design-kursen.
-
-Glöm inte att det finns `dbwebb publishfast` och `dbwebb publishpure` som låter dig publicera snabbt och utan minifiering (nödvändigt vid felsökning så att radnummer blir rätt vid felmeddelanden). 
-
-
-
 ### Bekanta dig {#bekanta}
 
-Bekanta dig med strukturen och vad som finns i ramverket.
+Bekanta dig med katalogstrukturen och de filer som ligger i det ramverk som bygger din redovisa-sida.
 
-Kolla in videoserien för en guidning i ramverkets struktur och filer.
+Kolla in videoserien för en guidning i hur du kommer igång och löser denna uppgift samt en guidning i ramverkets struktur och filer.
+
+Glöm inte att det kan finnas viktig information under din redovisa-sida och länken "Docs" som leder till dokumentation som är relevant för varje kursmoment.
 
 
 
@@ -164,13 +201,13 @@ Krav {#krav}
 
 1. Uppdatera redovisningssidan så att den blir som du vill, här samlas dina redovisningstexter för kursen.
 
-1. Håll din navbar uppdaterad så man kan navigera mellan sidorna.
+1. Håll din navbar uppdaterad så man kan navigera mellan sidorna, du kan uppdatera och strukturera den som du vill.
 
 1. Uppdatera header och footer så de passar din personliga me-sida.
 
-1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS, återanvänd kunskaper från design-kursen eller använd något ramverk liknande Bootstrap, välj själv.
+1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS, återanvänd kunskaper från design-kursen, uppdatera det befintliga temat eller använd något ramverk liknande Bootstrap, välj själv.
 
-1. När du är klar, kör `make test` för att köra en testsuite på ditt repo. Det gör inget om du får fel, men fråga gärna i forumet för att få rätt på eventuella problem. När man kör `make test` så bör det passera utan problem, men det är inget krav i nuläget.
+1. När du är klar, kör `make test` för att köra alla testerna mot ditt repo. När man kör `make test` så bör det passera utan allvarliga felmeddelanden.
 
 1. Gör en `dbwebb publish redovisa` för att kolla att allt validerar och fungerar på studentservern.
 
@@ -187,7 +224,7 @@ Lös följande extrauppgifter om du har tid och lust.
 
 1. Snygga till din me-sida lite extra med style. Det är alltid trevliga om det ser snyggt och ordningsamt ut.
 
-1. Skapa en egen testsida för att leka runt med olika konstruktioner. Det kan vara bra att ha.
+1. Skapa egna testsidor för att leka runt med olika konstruktioner. Det kan vara bra att ha.
 
 
 
@@ -196,6 +233,6 @@ Tips från coachen {#tips}
 
 Gör små commits och committa ofta, när du väl har din bas. Använd tydliga committ-meddelanden så att historiken ser bra ut.
 
-Var försiktig att använda stora bilder, de tar mycket quota (begränsning av lagringsutrymme) från ditt konto på studentservern.
+Var försiktig att använda stora bilder, de tar mycket quota (begränsning av lagringsutrymme) från ditt konto på studentservern. Beskär bilderna till en största standardstorlek, innan du lägger dem i repot.
 
 Lycka till och hojta till i forumet om du behöver hjälp!

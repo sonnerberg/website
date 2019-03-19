@@ -38,7 +38,7 @@ Följande steg hjälper dig att komma igång med uppgiften.
 
 Det ligger en exempelkatalog under `example/redovisa`. Använd den för att komma igång.
 
-```php
+```text
 # Stå i kursrepot
 rsync -a example/redovisa me/
 cd me/redovisa
