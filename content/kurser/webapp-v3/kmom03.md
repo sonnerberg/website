@@ -17,7 +17,7 @@ I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort
 
 Så här kan det se ut när vi är klara.
 
-<!-- [YOUTUBE src=0VfHNLKx5xI width=630 caption="Lager3 i kursmoment 3."] -->
+[YOUTUBE src=iewE2qHR5FM width=630 caption="Lager3 i kursmoment 3."]
 
 
 
