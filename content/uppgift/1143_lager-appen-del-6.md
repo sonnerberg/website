@@ -31,7 +31,7 @@ Börja med att kopiera din lager app från kmom05 så har du nått att utgå ifr
 cp kmom05/lager5/* kmom06/lager6/
 ```
 
-Använd lager [API:t](https://lager.emilfolino.se) dokumentationen och speciellt sektionen om invoices. Här kan du hämta ut alla invoices och skapa nya.
+Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om invoices. Här kan du hämta ut alla invoices och skapa nya.
 
 
 
