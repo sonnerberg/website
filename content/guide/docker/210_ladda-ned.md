@@ -12,4 +12,8 @@ Docker är en virtualiseringsmiljö så den kräver att din datorn är kapabel a
 
 Du behöver bekanta dig med [dokumentationen för Docker](https://docs.docker.com/). Det är din vägledare för att komma igång med Docker.
 
-Börja med att följa länken ovan och klicka på "Get Docker" följt av "Docker CE". Där kan du välja vilket operativsystem du vill installera för.
+
+
+### Eehh...jag hittar inte? {#eeh}
+
+Börja med att följa [den här länken](https://docs.docker.com/) och klicka på "Get Docker" följt av "Docker CE". Där kan du välja vilket operativsystem du vill installera för.

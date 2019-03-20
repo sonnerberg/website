@@ -5,23 +5,10 @@ author: lew
 revision:
     "2019-03-14": "(A, lew) Första versionen."
 ...
-Dockerhub
+Dockerfile
 =======================
 
-
-
-### Skapa konto {#verify}
-
 TBD
 
-
-
-### ???
-
-TBD
-
-
-
-### ???
-
-TBD
+Glöm ej - Prune dangling images:
+`docker rmi $(docker images -f "dangling=true" -q)`

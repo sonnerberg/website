@@ -7,21 +7,3 @@ revision:
 ...
 Kom igång
 =======================
-
-
-
-### Verifiera {#verify}
-
-`$ docker run hello-world`
-
-
-
-### ???
-
-TBD
-
-
-
-### ???
-
-TBD
