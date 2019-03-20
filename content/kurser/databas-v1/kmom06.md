@@ -7,6 +7,7 @@ views:
             src: "image/snapvt17/mysql-optimize.png?c=350,100,10,11&w=1100&h=300&cf&f=grayscale"
 author: mos
 revision:
+    "2019-03-20": "(D, mos) Övning om TIMESTAMP."
     "2019-02-25": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-02-20": "(A, mos) Första utgåvan."
@@ -105,6 +106,8 @@ Gör följande som ren överkurs, om du har tid, energi och lust.
 ### Övningar {#ovningar}
 
 Genomför följande övning för att förbereda inför uppgifterna.
+
+1. Läs (och jobba) igenom artikeln "[Använd TIMESTAMP för status i databastabellen](https://dbwebb.se/coachen/anvand-timestamp-for-status-i-databastabellen)" som visar hur du kan använda tidsstämplar för att ge olika status till rader i en databastabell. Du behöver inte spara de exempelprogram du gör.
 
 1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom06/func`.
 
