@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2019-03-20": "(E, mos) Tips om TIMESTAMPS går nu till artikel."
     "2019-03-12": "(D, mos) Stycke om karaktäristik på funktioner."
     "2019-03-12": "(C, mos) Lade till video som visar studexempel."
     "2019-03-04": "(B, mos) Status är Skickad, inte Levererad."
@@ -197,7 +198,7 @@ Gör följande om du har tid, energi och ro.
 Tips från coachen {#tips}
 -----------------------
 
-1. Det finns en forumtråd som hanterar tips om [SQL för tidsstämplar för created, updated och deleted](t/8368).
+1. Det finns en artikel som hanterar tips om [Använd TIMESTAMP för status i databastabellen](coachen/anvand-timestamp-for-status-i-databastabellen).
 
 <!--
 Tips i forum om formulär SELECT/DROPDOWN.
