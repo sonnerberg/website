@@ -316,4 +316,6 @@ Avslutningsvis {#avslutning}
 
 Du har fått ett exempel på hur man kan använda tidsstämplar i en databastabell för att införa status på raderna i tabellen. Baserat på tidsstämpeln kan man betrakta raden som att den har olika "status" som påverkar hur raden används i andra sammanhang i applikationerna.
 
+Källkoden till detta exempel ligger i kursrepot databas under [`example/sql/user_timestamp.sql`](https://github.com/dbwebb-se/databas/blob/master/example/sql/user_timestamp.sql).
+
 Har du frågor eller funderingar, eller vill bidra med tips, så finns en [forumtråd för detta tips](t/8448).

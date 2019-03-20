@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2019-03-20": "(F, mos) Tips om order_status via foruminlägg."
     "2019-03-20": "(E, mos) Tips om TIMESTAMPS går nu till artikel."
     "2019-03-12": "(D, mos) Stycke om karaktäristik på funktioner."
     "2019-03-12": "(C, mos) Lade till video som visar studexempel."
@@ -199,6 +200,8 @@ Tips från coachen {#tips}
 -----------------------
 
 1. Det finns en artikel som hanterar tips om [Använd TIMESTAMP för status i databastabellen](coachen/anvand-timestamp-for-status-i-databastabellen).
+
+1. Det finns ett tips i forumet om "[Hur tänka kring funktionen order_status?](t/8449)".
 
 <!--
 Tips i forum om formulär SELECT/DROPDOWN.
