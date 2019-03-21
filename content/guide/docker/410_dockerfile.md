@@ -6,17 +6,23 @@ revision:
 Vad är en Dockerfile?
 =======================
 
-TBD
+Filen `Dockerfile` används för att strukturera hur en image ska byggas. Det är en enkel textfil (utan filändelse). När vi har strukturen på plats kan vi bygga vår image med `$ docker build .`, där `.` refererar till den aktuella mappen. Det är Dockerfilens så kallade *context*. Vi kan inte nå resurser utanför mappen där Dockerfile ligger. Vi kan dock bygga den från ett annat ställe på datorn med hjälp av flaggan `-f`.
 
 
 
-### Kontext {#context}
+### Enklast möjliga Dockerfile {#simple}
 
-TBD
+Vi börjar med att titta på en väldigt enkel Dockerfile. Den kan skapas med `$ touch Dockerfile`.
+
+```
+FROM debian:stretch-slim
 
 
 
+```
 
-### Något annat {#nagat-annat}
+Det var det...Om vi skulle bygga den här imagen kommer den att utgå ifrån imagen `debian:stretch-slim`. och skapa en ny image åt oss. Vi vill ju gärna ge vår egna image ett namn. Vi lägger på flaggan `-t` (tag):
 
-TBD
+```bash
+$ docker build -t username/myfirst:version1 .
+```
