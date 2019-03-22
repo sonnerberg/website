@@ -59,7 +59,7 @@ Preptentan `prep` är alltid tillgänglig så att du kan testa förfarandet i lu
 
 
 
-Påbörja tentamen
+Påbörja tentamen {#borja}
 --------------------------------
 
 Du påbörjar tentamen genom att checka ut den (checkout/start).
@@ -84,7 +84,7 @@ Det som checkas ut är instruktionerna för tentamen, när du gör det så notif
 
 
 
-Under pågående tentamen
+Under pågående tentamen {#paga}
 --------------------------------
 
 Du kan löpande validera med `dbwebb validate` som vanligt. Undvik att spara all validering till slutet, det sparar dig en del stress vid inlämningen.
@@ -105,7 +105,7 @@ Du kan hämta kvittot hur många gånger du vill.
 
 
 
-Avsluta tentamen
+Avsluta tentamen {#avsluta}
 --------------------------------
 
 Innan du avslutar så bör du validera och rätta alla valideringsfel.
@@ -125,7 +125,7 @@ Vi förseglingen laddas ditt kursrepo upp till studentservern och det skickas et
 
 
 
-"Lämna in" på Canvas
+"Lämna in" på Canvas {#canvas}
 --------------------------------
 
 När du är klar med tentamen, gå till inlämningen på Canvas för "Kmom10 Tentamen" och visa att du är klar genom att "lämna in uppgiften" genom att skriva "Klar!" tillsammans med din studentakronym (eller länken till din redovisa-sida).
