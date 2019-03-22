@@ -154,7 +154,24 @@ $ make update-all
 
 
 
+Recreate all symbolic links using -r
+--------------------------------
+
+This might be useful on Windows when using WSL bash and storing the files in the Windows filesystem and using docker with mounted volumes. The script recreates all symbolic links using the `-r` flag.
+
+```
+# Go to the root of the repo
+for f in $( find content -type l ); do
+    l=$( readlink -f "$f" )
+    unlink "$f"
+    ln -srf "$l" "$f"
+    echo "$f -> $l"
+done
+```
+
+
+
 ```                                                            
  .                                                             
-..:  Copyright (c) 2012 - 2017 Mikael Roos, mos@dbwebb.se   
+..:  Copyright (c) 2012 - 2019 Mikael Roos, mos@dbwebb.se   
 ```                                                            
