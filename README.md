@@ -16,6 +16,8 @@ Prepare to run in docker and update all local files.
 make update-docker
 ```
 
+If this gives error try running `composer install` in the folder `/app` inside the container after you have started the container with the command below. To enter container run `docker exec -it <container_name> bash`.
+
 Start up the webserver using `docker-compose`.
 
 ```
