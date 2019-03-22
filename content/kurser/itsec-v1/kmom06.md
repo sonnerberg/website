@@ -1,11 +1,16 @@
 ---
 author:
+    - atb
+    - mbo
     - mos
+    - lew
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
 Kmom06: Säkerhetstestning
 ==================================
+
+Mjukvarutest ökar kvaliteten i den mjukvara som skrivs, men hur fungerar det med säkerhetstest. I detta kursmomentet, som bygger på sårbarhetsanalyser, går vi igenom vad säkerhetstester innebär och vad man behöver tänka på.
 
 [WARNING]
 
@@ -15,12 +20,7 @@ Kursen planeras ge hösten 2019.
 
 [/WARNING]
 
-Säkerhetstestning (test-driven security)
 
-* koppla till OWASP, t.ex. Web Application Security Testing Cheat Sheet
-* incident response management
-
-_Ansvarig: Anton + Martin_
 
 <!--more-->
 
@@ -33,7 +33,7 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 2-4 studietimmar)*
 
-Behövs någon särskild labbmiljö för detta kmom?
+LabbMiljö: DBWebb testmiljöer?
 
 
 
@@ -42,7 +42,10 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
-Vilka läsanvisningar finns till dett kmom?
+Föreläsningar:
+	- ?
+
+Läsanvisningar: Ja. Bifogat finns läsmaterial för riskanalys.
 
 
 
@@ -52,9 +55,11 @@ Vilka läsanvisningar finns till dett kmom?
 *(ca: 8-10 studietimmar)*
 
 
+
+
 ### Övningar {#ovningar}
 
-Finns det övningar som studenten gör för att förbereda sig inför uppgifterna?
+Övningar: Ja. Bygg ett antal test fall för existerande kod.
 
 
 

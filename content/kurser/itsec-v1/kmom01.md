@@ -1,11 +1,16 @@
 ---
 author:
+    - atb
+    - mbo
     - mos
+    - lew
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
 Kmom01: Orientering
 ==================================
+
+Kursmomentet ger en översiktlig orientering i området informationssäkerhet vilket involverar dels en kategorisering av området samt genomgång av central terminologi. Fokus ligger på de säkerhetskoncept som har relevans inom webbutveckling. Dessutom involverar den översiktliga orienteringen att ge studenterna en förståelse för säkerhetskonceptens möjligheter och begränsningar inom området webbutveckling.
 
 [WARNING]
 
@@ -15,9 +20,7 @@ Kursen planeras ge hösten 2019.
 
 [/WARNING]
 
-Översiktlig orientering i området informationssäkerhet, kategorisering av området samt terminologi, specifikt fokus säkerhetsområden som är relevanta att applicera på området webb.
 
-_Ansvarig: Anton_
 
 <!--more-->
 
@@ -39,7 +42,20 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
-Vilka läsanvisningar finns till dett kmom?
+
+Förslag på föreläsningar:
+
+* Introduktion till informationssäkerhet
+    * Definitioner av säkerhet
+    * System, angripare, angrepp, 
+    * Mjukvarusårbarheter, fault/failure
+    * People, detection, response
+* Nätverkssäkerhet
+    * Olika typer av attacker, t.ex. man-in-the-middle, DoS
+    * Skyddsmekanismer
+* Etik och moral i ett informationssäkerhetssammanhang
+
+Vilka läsanvisningar, video finns till dett kmom?
 
 
 
@@ -49,15 +65,20 @@ Vilka läsanvisningar finns till dett kmom?
 *(ca: 8-10 studietimmar)*
 
 
+
 ### Övningar {#ovningar}
 
-Finns det övningar som studenten gör för att förbereda sig inför uppgifterna?
+Nej?
 
 
 
 ### Uppgifter {#uppgifter}
 
-Finns det uppgifter som skall utföras och redovisas?
+Nej?
+
+Vad sägs om en me-sida som innehåller en hel del säkerhetshål/felaktigheter som behöver lagas?
+
+Vill vi ha en me-sida och redovisningstexter och rapporter?
 
 
 

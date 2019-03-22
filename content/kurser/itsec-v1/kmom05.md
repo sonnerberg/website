@@ -1,11 +1,16 @@
 ---
 author:
+    - atb
+    - mbo
     - mos
+    - lew
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
 Kmom05: Attacker
 ==================================
+
+Det finns ett antal attacker som kan räknas som vanliga när man pratar om webbsäkerhet. I detta kursmomentet går vi igenom vanliga attacker och hur man kan skydda sig mot dem: XSS, session hijacking, redirect problem, directory traversal, etc.
 
 [WARNING]
 
@@ -15,11 +20,7 @@ Kursen planeras ge hösten 2019.
 
 [/WARNING]
 
-Säkerhetsrelaterade attacker.
 
-Olika attacker: XSS, session hijacking, redirect problem, directory traversal, etc…
-
-_Ansvarig: ?_
 
 <!--more-->
 
@@ -34,6 +35,8 @@ Labbmiljön  {#labbmiljo}
 
 Behövs någon särskild labbmiljö för detta kmom?
 
+LabbMiljö: osäkra servrar i virtuella miljöer, där man ska ta flaggor (dvs utföra attacken och hitta info)
+
 
 
 Läs &amp; Studera  {#lasanvisningar}
@@ -44,6 +47,15 @@ Läs &amp; Studera  {#lasanvisningar}
 Vilka läsanvisningar finns till dett kmom?
 
 
+Föreläsningar:
+
+* Attacker
+
+Läsanvisningar: Ja. Bifogat finns läsmaterial för riskanalys.
+
+Videor?
+
+
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
@@ -51,15 +63,16 @@ Vilka läsanvisningar finns till dett kmom?
 *(ca: 8-10 studietimmar)*
 
 
+
 ### Övningar {#ovningar}
 
-Finns det övningar som studenten gör för att förbereda sig inför uppgifterna?
+Övningar: Ja.
 
 
 
 ### Uppgifter {#uppgifter}
 
-Finns det uppgifter som skall utföras och redovisas?
+Ja, osäker kod/config presenteras och ska patchas av studenterna.
 
 
 

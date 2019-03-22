@@ -1,6 +1,10 @@
 ---
 title: itsec-v1
-author: mos
+author:
+    - atb
+    - mbo
+    - mos
+    - lew
 revision:
     "2019-02-04": "(B, mos) Uppdaterad med information från kursplan."
     "2018-12-04": "(A, mos) Kursen inrättas med namn och syfte."
@@ -90,7 +94,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ### Kmom01: Orientering {#kmom01}
 
-Översiktlig orientering i området informationssäkerhet, kategorisering av området samt terminologi, specifikt fokus säkerhetsområden som är relevanta att applicera på området webb.
+Kursmomentet ger en översiktlig orientering i området informationssäkerhet vilket involverar dels en kategorisering av området samt genomgång av central terminologi. Fokus ligger på de säkerhetskoncept som har relevans inom webbutveckling. Dessutom involverar den översiktliga orienteringen att ge studenterna en förståelse för säkerhetskonceptens möjligheter och begränsningar inom området webbutveckling.
 
 [Instruktion till kursmoment 01](./kmom01).
 
@@ -98,20 +102,15 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ### Kmom02: Privacy {#kmom02}
 
-Privacy, databaser och dataläckage. (POST vs GET, SQL injection och datahantering, url dataläckage, spara lösenord). Exempel på stora kända incidenter och dess orsaker. 
+Kursmomentet ger en introduktion till konceptet privacy genom att förklara centrala definitioner. Särskilt belyses avvägningen mellan privacy och att som slutanvändare dela med sig av sin information för att möjliggöra diverse IT-baserade tjänster. Därutöver kommer exempel på vanliga privacy-förbättrande tekniker förklaras. Slutligen ges exempel på omfattande attacker som påverkat slutanvändarnas privacy negativt samt förslag på relevanta mekanismer för att försvåra dessa attacker.
 
 [Instruktion till kursmoment 02](./kmom02).
 
 
 
-### Kmom03: Sårbarhet {#kmom03}
+### Kmom03: Sårbarhetsanalys {#kmom03}
 
-Risk och sårbarhetsanalys
-
-* Introduktion till existerande webbsäkerhetsprojekt,  till exempel Open Web
-* Application Security Project (OWASP).
-* attackträd, etc
-* swat?
+Risk- och sårbarhetsanalysmomentet omfattar en introduktion till olika metoder för att modellera applikationers beteende, metoder för att genomföra sårbarhetsanalyser och attackscenarier. Vidare introduceras även riskanalys och riskhantering för att sätta sårbarheter i kontext. 
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -119,7 +118,7 @@ Risk och sårbarhetsanalys
 
 ### Kmom04: Skydda data {#kmom04}
 
-Skyddad data via hashning, kryptering samt identifiering och autentisering inklusive nyckelhantering och certifikat.
+Kursmomentet ger en övergripande introduktion till både symmetriska och asymmetriska krypteringsmetoder genom att på ett övergripande sätt förklara hur de fungerar. Vidare visas hur sådana krypteringsmetoder kan användas för att både skydda konfidentialiteten i data såväl som dess integritet. Dessutom kommer kryptografiska certifikat förklaras och hur de kan använda för att styrka identiteter i webbtjänster.
 
 [Instruktion till kursmoment 04](./kmom04).
 
@@ -127,9 +126,7 @@ Skyddad data via hashning, kryptering samt identifiering och autentisering inklu
 
 ### Kmom05: Attacker {#kmom05}
 
-Säkerhetsrelaterade attacker.
-
-Olika attacker: XSS, session hijacking, redirect problem, directory traversal, etc…
+Det finns ett antal attacker som kan räknas som vanliga när man pratar om webbsäkerhet. I detta kursmomentet går vi igenom vanliga attacker och hur man kan skydda sig mot dem: XSS, session hijacking, redirect problem, directory traversal, etc.
 
 [Instruktion till kursmoment 05](./kmom05).
 
@@ -137,10 +134,7 @@ Olika attacker: XSS, session hijacking, redirect problem, directory traversal, e
 
 ### Kmom06: Säkerhetstestning {#kmom06}
 
-Säkerhetstestning (test-driven security)
-
-* koppla till OWASP, t.ex. Web Application Security Testing Cheat Sheet
-* incident response management
+Mjukvarutest ökar kvaliteten i den mjukvara som skrivs, men hur fungerar det med säkerhetstest. I detta kursmomentet, som bygger på sårbarhetsanalyser, går vi igenom vad säkerhetstester innebär och vad man behöver tänka på.
 
 [Instruktion till kursmoment 06](./kmom06).
 

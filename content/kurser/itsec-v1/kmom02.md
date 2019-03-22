@@ -1,11 +1,16 @@
 ---
 author:
+    - atb
+    - mbo
     - mos
+    - lew
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom02: Sårbarhet
+Kmom02: Privacy
 ==================================
+
+Kursmomentet ger en introduktion till konceptet privacy genom att förklara centrala definitioner. Särskilt belyses avvägningen mellan privacy och att som slutanvändare dela med sig av sin information för att möjliggöra diverse IT-baserade tjänster. Därutöver kommer exempel på vanliga privacy-förbättrande tekniker förklaras. Slutligen ges exempel på omfattande attacker som påverkat slutanvändarnas privacy negativt samt förslag på relevanta mekanismer för att försvåra dessa attacker.
 
 [WARNING]
 
@@ -15,14 +20,7 @@ Kursen planeras ge hösten 2019.
 
 [/WARNING]
 
-Risk och sårbarhetsanalys
 
-* Introduktion till existerande webbsäkerhetsprojekt,  till exempel Open Web
-* Application Security Project (OWASP).
-* attackträd, etc
-* swat?
-
-_Ansvarig: Anton_
 
 <!--more-->
 
@@ -44,7 +42,10 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
-Vilka läsanvisningar finns till dett kmom?
+Föreläsningar:
+- Introduktion till privacy samt exempel på skyddstekniker
+
+Läsanvisningar, video?
 
 
 
@@ -52,6 +53,14 @@ Vilka läsanvisningar finns till dett kmom?
 -------------------------------------------
 
 *(ca: 8-10 studietimmar)*
+
+Exempel på uppslag för labbar:
+
+* POST vs GET
+* SQL-injection och datahantering
+* url dataläckage
+* spara lösenord.
+
 
 
 ### Övningar {#ovningar}

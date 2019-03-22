@@ -1,6 +1,9 @@
 ---
 author:
+    - atb
+    - mbo
     - mos
+    - lew
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...

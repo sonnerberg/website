@@ -1,5 +1,5 @@
 ---
-author: aar
+author: mbo
 views:
     byline:
         region: main
@@ -10,5 +10,5 @@ views:
                 type: author
 
 ...
-Andreas Arnesson
+Martin Boldt
 ========================================
