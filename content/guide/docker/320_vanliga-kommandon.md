@@ -39,4 +39,8 @@ CONTAINER ID    IMAGE                COMMAND   CREATED        STATUS          PO
 4802628e331d    debian:stretch-slim  "bash"    5 seconds ago  Up 4 seconds                    distracted_mclean
 ```
 
-Här får vi fram id, image, givet kommando och vilka namn kontainrarna har. På ovan kontainer kan då köra tex: `$ docker stop distracted_mclean` för att stoppa den.
+Här får vi fram id, image, givet kommando och vilka namn kontainrarna har. På ovan kontainer kan då köra tex:
+
+```
+$ docker stop distracted_mclean
+```

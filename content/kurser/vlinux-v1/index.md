@@ -105,7 +105,8 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: Linux som server. {#kmom01}
+
+###Kmom01: Linux som server {#kmom01}
 
 Det första kursmomentet går ut på att installera Debian/Linux i Virtualiseringsmilön VirtualBox och logga in på maskinen som en server, via SSH.
 
@@ -115,7 +116,7 @@ För att lyckas med det så behöver du bekanta dig med grunderna i terminalen o
 
 
 
-###Kmom02: Apache Virtual Hosts. {#kmom02}
+###Kmom02: Apache Virtual Hosts {#kmom02}
 
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 
@@ -127,7 +128,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 
 
-###Kmom03: Introduktion till Docker och skript med Bash. {#kmom03}
+###Kmom03: Introduktion till Docker {#kmom03}
 
 Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker.
 
@@ -135,17 +136,17 @@ Mycket handlar om att förenkla vardagen som programmerare genom att automatiser
 
 
 
-###Kmom04: Webbserver och Docker. {#kmom04}
+###Kmom04: Docker och Apache {#kmom04}
 
- Vi kikar på hur vi kan installera och använda Apache som webbserver i Docker och går även vidare med programmeringen i Bash och utforskar fler konstruktioner och verktyg.
+Vi installerar och använder Apache som webbserver i Docker och går även vidare med programmeringen i Bash och utforskar fler konstruktioner och verktyg.
 
 [Instruktion till kursmoment 04](kurser/vlinux-v1/kmom04).
 
 
 
-###Kmom05: Flera docker kontainrar. {#kmom05}
+###Kmom05: Docker network {#kmom05}
 
-Vi lär oss skapa fler kontainrar och kommunicera mellan dem med ett privat nätverk. Flera services ska kommunicera med varandra i Docker.
+Vi lär oss skapa fler kontainrar och kommunicera mellan dem med hjälp av ett privat nätverk. Flera services ska kommunicera med varandra i Docker.
 
 Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
@@ -153,9 +154,9 @@ Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
 
 
-###Kmom06: Docker-compose. {#kmom06}
+###Kmom06: Docker Compose {#kmom06}
 
-Vi bygger vidare på föregående kursmoment och använder docker-compose för att hantera våra services.
+Vi bygger vidare på föregående kursmoment och använder docker-compose för att hantera våra services i det privata nätverket.
 
 [Instruktion till kursmoment 06](kurser/vlinux-v1/kmom06).
 

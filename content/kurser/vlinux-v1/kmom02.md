@@ -69,7 +69,9 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 2.
+TBD
+
+<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 2. -->
 
 
 
@@ -84,7 +86,8 @@ Titta på följande:
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden "[Kom igång med SSH-nycklar](kunskap/kom-igang-med-ssh-nycklar)".
+<!-- 1. Jobba igenom guiden "[Kom igång med SSH-nycklar](kunskap/kom-igang-med-ssh-nycklar)". -->
+1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/virtualbox/ssh)".
 
 1. Jobba igenom guiden "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)".
 

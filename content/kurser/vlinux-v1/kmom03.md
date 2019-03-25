@@ -3,12 +3,7 @@ author:
     - lew
     - mos
 revision:
-    "2017-12-21": (F, mos) Genomgången inför vt18.
-    "2017-02-09": (E, mos) Ändrade frågor för redovisningen.
-    "2017-01-24": (D, mos) Publicerat.
-    "2016-12-21": (C, efo) Ändring av länk till ny bash lab och extrauppgiften gjordes om till en del av kursmomentet
-    "2016-12-16": (B, mos) Förberedelse inför linux-v2.
-    "2015-08-05": (A, mos) Första utgåvan för kursen.
+    "2019-03-25": (A, lew) Ny inför HT19.
 ...
 Kmom03: Skript med Bash
 ==================================

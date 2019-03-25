@@ -17,12 +17,15 @@ Vi börjar med att titta på en väldigt enkel Dockerfile. Den kan skapas med `$
 ```
 FROM debian:stretch-slim
 
-
-
 ```
 
-Det var det...Om vi skulle bygga den här imagen kommer den att utgå ifrån imagen `debian:stretch-slim`. och skapa en ny image åt oss. Vi vill ju gärna ge vår egna image ett namn. Vi lägger på flaggan `-t` (tag):
+Det var det...Om vi skulle bygga den här imagen kommer den att utgå ifrån imagen *debian:stretch-slim*. och skapa en ny image åt oss. Vi vill ju gärna ge vår egna image ett namn. Vi lägger på flaggan `-t` (tag):
+
 
 ```bash
-$ docker build -t username/myfirst:version1 .
+$ docker build -t myfirst:version1 .
 ```
+
+Kikar vi i [dokumentationen](https://docs.docker.com/engine/reference/commandline/build/) eller `$ docker build -h` kan vi se:
+
+> -t, --tag list       Name and optionally a tag in the 'name:tag' format
