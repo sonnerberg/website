@@ -48,9 +48,7 @@ I filmen nedan pratar Emil om hur man kan tänka vid val av datakällor och reko
 
 <!-- Om du upplever problem med Cross-Origin Access kan en API-proxy vara lösningen på problemet. I GitHub repot [api-proxy](https://github.com/emilfolino/api-proxy) finns källkod och instruktioner för hur man kan använda sig av en API-proxy på studentservern. -->
 
-Du funderar och väljer en ansats för din webapp och vi ser självklart fram emot att du deltar i tävlingen Hack for Sweden med din app.
-
-Fråga i forumet om du känner dig osäker.
+Du funderar och väljer en ansats för din webapp, fråga i forumet om du känner dig osäker.
 
 
 
@@ -70,7 +68,7 @@ De två första kraven är obligatoriska och de fyra sista kraven är optionella
 
 Varje krav ger maximalt 10 poäng, totalt är det 60 poäng.
 
-Se till att läsa igenom alla kraven innan du bestämmer dig för datakällor då de optionella kraven kan påverka val av API.
+**Se till att läsa igenom alla kraven innan du bestämmer dig för datakällor då de optionella kraven kan påverka val av API.**
 
 
 
@@ -78,7 +76,7 @@ Se till att läsa igenom alla kraven innan du bestämmer dig för datakällor d�
 
 Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10/proj`.
 
-Skapa ditt cordova projekt med följande kommando:
+Skapa ditt Cordova projekt med följande kommando:
 
 ```bash
 # stå i me/kmom10/proj
@@ -132,13 +130,15 @@ Beskriv i ett textstycke om 15-20 meningar designprocessen att efterlikna en bef
 
 ### Krav 4: Autentisering av användaren (optionellt) {#k4}
 
-Utnyttja autentiseringstjänsten [auth.emilfolino.se](https://auth.emilfolino.se) för att ge möjlighet för att användare av din app kan autentisera sig med hjälp JSON Web Tokens. En autentiserad användare får sedan tillgång till delar av appen, som annars är stängda.
+Utnyttja autentiseringstjänsten [auth.emilfolino.se](https://auth.emilfolino.se) för att ge möjlighet för att användare av din app kan autentisera sig med hjälp JSON Web Tokens. En autentiserad användare får sedan tillgång till delar av appen, som annars är stängda. Du kan även använda autentiseringstjänsten för att spara data för de inloggade användarna.
+
+Du kan inte räkna autentiseringstjänsten som en av dina två API:er.
 
 
 
 ### Krav 5: Offline-läge (optionellt) {#k5}
 
-Använd dina kunskaper om Cordova plugins från kursmoment 6 och pluginen [cordova-plugin-file](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html) för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
+Använd dina kunskaper om Cordova plugins från kursmoment 5 & 6 och pluginen [cordova-plugin-file](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html) för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
 
 När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling. Cordova pluginen [cordova-plugin-network-information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/) kan användas för att kolla status om internetuppkoppling
 
