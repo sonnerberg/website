@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-03-25": "(B, mos) Genomgången inför vt19."
     "2018-03-23": "(B, mos) Wrong filename for Exception in second paragraph."
     "2018-03-19": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -27,7 +28,7 @@ Ett anpassat exception PersonAgeException {#personex}
 
 Säg vi vill ha ett specifikt exception för klassen Person, säg `PersonAgeException` som kastas när personen har en icke giltig ålder av negativa integer.
 
-Vi kan utöka basklassen för alla exception, och skapa vårt egna exception, så här.
+Vi kan utöka basklassen för alla exception, och skapa vårt eget exception, så här.
 
 ```php
 /**
@@ -121,3 +122,10 @@ Fördel med egna exception {#fordel}
 När man utvecklar moduler som andra skall återanvända, eller större programvara som består av ett större antal moduler, så kan det vara fördelaktigt att använda modulespecifika exceptions. Det kan ge tydlighet och läsbarhet vid felhanteringen.
 
 Men glöm inte bort att det finns ett gäng inbyggda exceptions, de går också bra att använda.
+
+
+
+Om exception i PHP {#omexception}
+---------------------------------
+
+Du kan läsa på i manualen om hur [PHP hanterar exceptions](https://www.php.net/manual/en/language.exceptions.php), det handlar om grundkonstruktioner som `try`, `catch` och `throw`.

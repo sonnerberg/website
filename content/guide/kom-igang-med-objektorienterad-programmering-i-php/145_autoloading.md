@@ -1,12 +1,13 @@
 ---
 author: mos
 revision:
+    "2019-03-25": "(B, mos) Genomgången inför vt19."
     "2018-03-19": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Autoloading
 ==================================
 
-Vi bygger en autoloader så att vi slipper göra include och require på klassfilerna.
+En autoloader sköter så att klassfilerna laddas in automatiskt, när de behövs. Det är en inbyggd konstruktion i PHP. Vi bygger en autoloader så att vi slipper göra include och require på klassfilerna.
 
 Spara koden du skriver i denna övningen i `index_autoload.php` och autoloadern lägger du i `autoload.php`.
 
@@ -51,3 +52,10 @@ var_dump($object);
 ```
 
 Fördelen med en autoloader är att du inte behöver inkludera klassfilerna, det sköts automatiskt, allt eftersom klassfilerna behövs.
+
+
+
+Läs mer om autoloader {#lasmer}
+----------------------------------
+
+Du kan läsa mer om [autoloading i PHP-manualen](https://www.php.net/manual/en/language.oop5.autoload.php).

@@ -1,13 +1,16 @@
 ---
 author: mos
 revision:
+    "2019-03-25": "(C, mos) Genomgången inför vt19."
     "2018-03-26": "(B, mos) More verbose exception handler from Anax."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Mall för exempelprogram
 ==================================
 
-I denna guiden kommer du att göra en del exempelprogram, spara dem i en egen katalog, de kan vara bra att ha framöver. Låt oss skapa en struktur för exempelprogrammen.
+I denna guiden kommer du att göra en del exempelprogram. Du skall spara dem i en egen katalog och tanken är att dessa små exempelprogram kan vara bra att ha framöver.
+
+Låt oss skapa en struktur för exempelprogrammen.
 
 När vi är klara har vi en grundstruktur som ser ut så här.
 
@@ -75,7 +78,7 @@ set_exception_handler(function ($e) {
 Index-filer för main-programmen {#index}
 ----------------------------------
 
-För varje program som skall vara körbart så skapar jag en `index.php`.
+För varje program som skall vara körbart så skapar jag en `index_.php`.
 
 Vi kan börja skapa en enkel fil, bara för att visa att det fungerar. Filen kan du köra i din webbläsare, eller direkt i terminalen.
 
@@ -167,3 +170,10 @@ När du öppnar sidan i webbläsaren kan det se ut så här.
 [FIGURE src=image/snapvt18/oophp20-default-exception.png?w=w3 caption="Nu har vi en default hanterare för de exception som inte fångas."]
 
 Om du vill så kan du modifiera utskriften i din default exceptionhanterare, så det blir enkelt att läsa felmeddelandet.
+
+
+
+Mallen klar {#mallklar}
+---------------------------------
+
+Du har nu en fungerande mall för dina testprogram, felmeddelanden visas och du har en inbyggd hantering för att visa de exceptions som kastas.

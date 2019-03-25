@@ -8,7 +8,7 @@ Inkapsling (private)
 
 Vi ser hur begreppet inkapsling kan begränsa användandet av objektet och ge möjlighet att uppdatera klassens implementation, utan att störa main-programmet. Vi får ett API till vår klass.
 
-Spara koden du skriver i denna övningen i `index_person2.php` och i `src/Person2.php`.
+Spara koden du skriver i denna övningen i `index_person2.php` och klassfilen i `src/Person2.php`.
 
 
 
@@ -33,7 +33,7 @@ class Person2
 
 Ta nu och kopiera `index_person1.php` till `index_person2.php` och uppdatera så att klassen `Person2`används.
 
-Kör programmet, vad händer? Kan du gissa?
+Kör programmet, vad händer? Kan du gissa hur `private` kommer att påverka din kod?
 
 [FIGURE src=image/snapvt18/oophp-person2.png?w=w3 caption="Medlemsvariablerna är nu privata och kan inte nås från main-programmet utifrån klassen."]
 

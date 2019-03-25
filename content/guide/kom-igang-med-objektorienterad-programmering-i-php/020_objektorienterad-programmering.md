@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-03-25": "(B, mos) Genomgången inför vt19."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Objektorienterad programmering
@@ -13,18 +14,26 @@ Objektorienterad programmering är *en* av många programmeringsparadigmer. Ett 
 Objekt {#objekt}
 ----------------------------------
 
-I objektorientering finns objekt. Ett objekt har medlemsvariabler (properties) och metoder (funktioner kopplade till ett objekt). Medlemsvariablerna används för att lagra ett *state* av ett objekt, ett visst läge som definieras av värdet på dess medlemsvariabler. När man vill ändra ett läge för objektet, eller bara använda objektet för att utföra en uppgift, då använder man dess metoder. Metoderna är en förteckning över vad objektet kan göra. Vi kan kalla det objektets API.
+I objektorientering finns objekt. Ett objekt har medlemsvariabler (properties) och metoder (funktioner kopplade till ett objekt).
 
-Ett objekt har all sin förmåga samlad i metoder och properties. Allt som objektet behöver lagra finns i dess medlemsvariabler och allt man kan göra med objektet exponeras via dess metoder. Exakt hur objektet verkställer saker och ting är objektets ansvar. Man kan säga att objektet *kapslar in* detaljerna för implementation och erbjuder endast ett publikt API (gränssnitt) i form av metoderna. Själva implementationen av metoderna är en sak för objektet själv. 
+Medlemsvariablerna används för att lagra ett *state* av ett objekt, ett visst läge som definieras av värdet på dess medlemsvariabler. När man vill ändra ett läge för objektet, eller bara använda objektet för att utföra en uppgift, då använder man dess metoder. Metoderna är en förteckning över vad objektet kan göra. Vi kan kalla det objektets API.
+
+Ett objekt har all sin förmåga samlad i metoder och properties. Allt som objektet behöver lagra finns i dess medlemsvariabler och allt man kan göra med objektet exponeras via dess metoder.
+
+Exakt hur objektet verkställer saker och ting är objektets ansvar. Man kan säga att objektet *kapslar in* detaljerna för implementation och erbjuder endast ett publikt API (gränssnitt) i form av metoderna. Själva implementationen av metoderna är en sak för objektet själv. 
 
 
 
 Klass {#klass}
 ----------------------------------
 
-Ett objekt skapas utifrån en klass. En klass är en mall utifrån vilken man kan skapa nya objekt. När man skapat ett objekt kallas det en instans av klassen. Att skapa ett objekt kan kallas att [instansiera](http://en.wikipedia.org/wiki/Instance_(computer_science)) klassen till ett objekt, eller att instansiera ett objekt av klassen.
+Ett objekt skapas utifrån en klass. En klass är en mall utifrån vilken man kan skapa nya objekt.
 
-PHP stödjer objektorientering via klasser, objekt och de vanliga objektorienterade konstruktionerna som normalt förekommer i objektorienterade programmeringsspråk. Objektmodellen i PHP kom i version 5 av språket, i tidigare versioner fanns en förenklad implementation av objektorientering. 
+När man skapat ett objekt kallas det en "instans av klassen". Att skapa ett objekt kallas även att [instansiera](http://en.wikipedia.org/wiki/Instance_(computer_science)) klassen till ett objekt, eller att instansiera ett objekt av klassen.
+
+PHP stödjer objektorientering via klasser, objekt och vanliga objektorienterade konstruktionerna som normalt förekommer i objektorienterade programmeringsspråk.
+
+Objektmodellen i PHP kom i version 5 av språket, i tidigare versioner fanns en förenklad implementation av objektorientering. 
 
 
 

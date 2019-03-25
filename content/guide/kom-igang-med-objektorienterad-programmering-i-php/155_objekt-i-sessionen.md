@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-03-25": "(B, mos) Genomgången inför vt19."
     "2018-03-19": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Objekt i sessionen
@@ -21,6 +22,8 @@ Vi börjar med testprogrammet `index_session.php` och där startar vi en namngiv
 session_name("mosstud");
 session_start();
 ```
+
+Om du känner att du behöver en mer grundlig genomgång av sessioner så kan du läsa stycket "[Sessioner i guiden Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php/sessioner)".
 
 
 
@@ -93,10 +96,12 @@ Bra att veta {#bra}
 
 När objektet lagras i sessionen så görs `serialize()` på objektet. När nästa sidomladdning kommer och objektet hämtas från sessionens lagringsplats, så sker en `unserialize()` på objektet.
 
-En förutsättning för att `unserialize()` skall fungera är att objektets klassbeskrivning finns tillgänglig. Nu använder vi autoloadern som sköter om det. Men det betyder att autoloadern måste vara inkluderad, innan sessionen startas. 
+En förutsättning för att `unserialize()` skall fungera är att objektets klassbeskrivning finns tillgänglig. Nu använder vi autoloadern som sköter om det så det bör fungera per automatik för oss. Men det betyder att autoloadern **måste** vara inkluderad, innan sessionen startas. 
 
 Annars får man ett felmeddelande som kan se ut så här.
 
 > Fatal error: main(): The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;Person5&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide an autoloader to load the class definition in /home/dbwebb/oophp-guide/index_session_failure.php on line 17
 
 [FIGURE src=image/snapvt18/oophp-load-before-unserialize.png?w=w3 caption="Ett vanligt fel när man missat att inkludera klassfilen eller autoloadern, innan sessionen startas."]
+
+Vid sådana fel så dubbelkollar du om klassfilen, eller autoloadern, verkligen är inkluderad, innan du startar sessionen.

@@ -10,6 +10,7 @@ Minnesnoteringar
 **Arbete pågår**
 [/WARNING]
 
+* Grunden i kodstandard?
 * Controllers
 
 * Abstrakta basklasser (djur, hund)
@@ -18,7 +19,7 @@ Minnesnoteringar
 * Statiska klasser, metoder (singleton, utility methods, "global methods")
 * Magiska metoder
 * Coupling, cohesion.
-* Inbyggt PHP stdlib med färdiga klasser
+* Inbyggt PHP stdlib med färdiga klasser, SPL
 * Summera termer som styr OO, inkapsling, etc.
 * Om skillnader mellan trait, composition, inheritance hur variabler syns.
 * Diamond problem multiple inheritance.

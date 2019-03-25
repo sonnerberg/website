@@ -9,7 +9,7 @@ DocBlock kommentarer
 
 När man skriver kod brukar man använda kommentarsblock för att dokumentera koden.
 
-Uppdatera din befintliga kod i `index_person1.php` så att den använder docblock kommentarer.
+Uppdatera din befintliga kod i `src/Person1.php` så att den använder docblock kommentarer.
 
 Här ser du koden för klassen Person1 skriven med DocBlocks kommentarer att kommentera koden.
 

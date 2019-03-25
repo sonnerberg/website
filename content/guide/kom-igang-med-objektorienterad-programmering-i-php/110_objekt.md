@@ -1,12 +1,13 @@
 ---
 author: mos
 revision:
+    "2019-03-25": "(B, mos) Genomgången inför vt19."
     "2018-03-13": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Objekt
 ==================================
 
-Vi ser hur vi kan använda ett objekt i PHP, utan att ha en klass som mall för objektet.
+Vi inleder med att se hur vi kan använda ett objekt i PHP, _utan_ att ha en klass som mall för objektet.
 
 Spara koden du skriver i denna övningen i `index_stdclass.php`.
 
@@ -46,6 +47,8 @@ var_dump($object);
 
 I koden lägger jag till en property `age` till objektet. Jag lägger även till en _closure_ som kan anropas som en funktion via propertyn `details`.
 
+Konstruktionen `($object->details)()` är lite speciell i sammanhanget, men låt det bara vara så, det är inget vi fördjupar oss i just nu.
+
 Så här kan det se ut när koden körs.
 
 [FIGURE src=image/snapvt18/oophp20-stdobject.png?w=w3 caption="Detaljer om det mutable objektet skrivs ut."]
@@ -67,3 +70,5 @@ Allt publikt {#publikt}
 Så som mitt `$object` fungerar så är all information publik och nåbar för den som använder objektet.
 
 När vi pratar objektorientering brukar vi prata om inkapsling och att användaren av objektet bara har tillgång till viss information, men till det behövs en mer anpassad klass.
+
+Låt oss då gå över till klasser.

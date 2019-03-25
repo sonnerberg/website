@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-03-25": "(B, mos) Genomgången inför vt19."
     "2018-03-19": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Konstruktor och Destruktor
@@ -18,6 +19,8 @@ Skapa en konstruktor {#constructor}
 ----------------------------------
 
 Vi tar en kopia av klassen `src/Person3.php` och sparar den som `src/Person4.php`.
+
+Lägg till en konstruktor till din klass.
 
 Konstruktorn är en metod `__construct()` som anropas när ett objekt skapas. Den kan se ut så här.
 
@@ -83,9 +86,9 @@ När man kör ett sådant exempelprogram så kan det se ut så här.
 Konstruktor versus setters {#kons-setter}
 ----------------------------------
 
-En konstruktor kan allstå sätta värden i ett objekt när det instansieras. Men setters kan man åstakomma liknande, men där skapar man först objektet och sedan sätter man dess värden.
+En konstruktor kan alltså sätta värden i ett objekt när det instansieras. Med setters kan man åstakomma liknande, men där skapar man först objektet och sedan sätter man dess värden.
 
-En konstruktor och setters kan komplettera varandra och vilken väg man väljer kan skifta, lite beroende av omständigheter och vilken kod man vill se.
+En konstruktor och setters kan komplettera varandra och vilken väg man väljer kan skifta, lite beroende av omständigheter och vilken kod man vill ha.
 
 
 
@@ -94,7 +97,7 @@ Destructor {#destructor}
 
 När ett objekt förstörs så anropas dess destruktor, om den finns. I PHP är det inte nödvändigt med en destruktor till ett objekt, om det inte finns allokerade delar som behöver förstöras för hand. PHP's automatiska _garbage_ hantering tar hand om och förstör det minnet som är kopplat till objektet.
 
-För att testa så skapar vi en destruktor till vår klass och vi skriver ut en textsträng när destruktorn anropas.
+För att testa så skapar vi en destruktor till vår klass och vi skriver ut en textsträng när destruktorn anropas. Referensen `__METHOD__` är en inbyggd variabel i PHP som berättar namnet på den metod som nu exekveras.
 
 ```php
 /**
@@ -113,6 +116,8 @@ Så här ser det ut för mig.
 [FIGURE src=image/snapvt18/oophp-destructor.png caption="Destruktorn anropas varje gång jag skriver över min variabel."]
 
 Utskriften kan se lite udda ut, men det klarnar när man tittar på mitt program och man ser att jag återanvänder variabeln `$object`.
+
+Kan du se när i koden som destruktorn anropas?
 
 ```php
 $object = new Person4("MegaMic", 42);
