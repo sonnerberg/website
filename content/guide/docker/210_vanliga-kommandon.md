@@ -6,7 +6,13 @@ revision:
 Några vanliga kommandon
 =======================
 
-Vi har provat att starta en kontainer som laddades ned från Docker Hub. Vad Docker Hub är tar vi lite senare i guiden. Hur kan vi se vilka kontainrar som är startade? Vilka images har vi? Docker sparar all information i mappen `/var/lib/docker/` på Linux. Har du Mac så ligger all information i en fil: `~/Library/Containers/com.docker.docker/Data/vms/0/Docker.raw` och på Windows finns informationen i `C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\MobyLinuxVM.vhdx`. Vi ska inte gå in i mapparna/filerna och pilla utan vi använder Dockers CLI och hanterar det därifrån.
+Vi har provat att starta en kontainer som laddades ned från Docker Hub. Vad Docker Hub är tar vi lite senare i guiden. Hur kan vi se vilka kontainrar som är startade? Vilka images har vi? Docker sparar all information på olika platser beroende på operativsystem.
+
+* Linux: */var/lib/docker/*
+* Mac: *~/Library/Containers/com.docker.docker/Data/vms/0/Docker.raw*
+* Windows: *C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\MobyLinuxVM.vhdx*
+
+Vi ska inte gå in i mapparna/filerna och pilla utan vi använder Dockers CLI och hanterar det därifrån.
 
 
 

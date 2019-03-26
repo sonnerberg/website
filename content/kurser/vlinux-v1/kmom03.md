@@ -15,8 +15,6 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!--stop-->
-
 Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med skriptprogrammering i Bash.
 
 Mycket handlar om att förenkla vardagen, som programmerare, genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
@@ -88,7 +86,7 @@ TBD
 
 Genomför följande övningar.
 
-1. Installera Docker med hjälp av kapitlet [Installation](guide/docker/installation) i guiden.
+1. Installera Docker som en del av [labbmiljön](kunskap/installera-virtualiseringsmiljon-docker).
 
 1. Jobba igenom hur du med Bash kan skapa ett mer avancerat kommandoradsprogram som tar argument. Artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) ger dig en struktur till hur du kan skapa mer avancerade och större Bash-skript.
 
