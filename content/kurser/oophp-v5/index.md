@@ -88,9 +88,13 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 ### Kmom01: Objektorientering i PHP {#kmom01}
 
-Vi startar med grunderna i objektorienterad PHP, det blir objekt och klasser med inkapsling, konstruktorer och destruktorer, setters och getters, egenskapade exceptions och vi ser hur man kan lagra ett objekt i sessionen.
+Vi börjar med grunderna i objektorienterad PHP, det blir objekt och klasser med inkapsling, konstruktorer och destruktorer, setters och getters, egenskapade exceptions och vi ser hur man kan lagra ett objekt i sessionen.
 
-Vi bygger en me-sida med ramverket Anax och vi programmerar spelet "Gissa vilket tal jag tänker på" med klasser och klienter via GET, POST och SESSION.
+Vi jobbar i en guide och bygger små grundläggande testprogram för att testa och se hur objektorienterade konstruktionerna fungerar i PHP.
+
+För att repetera våra PHP-kunskaper och samtidigt komma igång med klasser och objekt så bygger vi en variant av spelet "Gissa vilket nummer jag tänker på".
+
+Vi bygger en me-sida (redovisa-sida) med PHP-ramverket Anax. Det ger oss möjligheten att bekanta oss med en färdig webbplats i eet PHP-ramverk. Senare i kursen kommer vi att flytta in spelet "Gissa mitt nummer" in i ramverkets struktur.
 
 Läs [instruktionen till kursmoment 01](./kmom01).
 

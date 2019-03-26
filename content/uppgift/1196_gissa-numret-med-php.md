@@ -4,6 +4,7 @@ author:
 category:
     - kurs oophp
 revision:
+    "2019-03-25": "(F, mos) Ny videoserie."
     "2019-03-19": "(E, mos) Ny version och nu enbart en klient istället för tre klienter."
     "2018-03-19": "(D, mos) Uppdaterad inför vt18."
     "2017-05-12": "(C, mos) Uppdaterade vilka stycken som gäller i oophp20-guiden."
@@ -43,15 +44,9 @@ Introduktion och förberedelse {#intro}
 
 Gör följande för att förbereda dig för uppgiften.
 
-[WARNING]
+Det finns en videoserie "[Uppgiften "Gissa mitt nummer" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8eNcmm82QawNWPeDwYVbCu)" som visar hur det kan se ut när du är klar.
 
-**Videoserien är _outdated_ och kommer uppdateras.**
-
-[/WARNING]
-
-Det finns en videoserie "[Uppgiften "Gissa mitt nummer" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8bxiDqQ8PQwJ6xYbWLYBvw)" som visar hur det kan se ut när du är klar.
-
-[YOUTUBE src="T_zBswY2fjo" width=700 list="PLKtP9l5q3ce8bxiDqQ8PQwJ6xYbWLYBvw" caption="Mikael visar hur spelet och dess olika klienter kan se ut när de är klara."]
+[YOUTUBE src="A-45RLZ5Q0k" width=700 list="PLKtP9l5q3ce8eNcmm82QawNWPeDwYVbCu" caption="Mikael visar hur spelet och dess olika klienter kan se ut när de är klara."]
 
 
 
@@ -104,6 +99,8 @@ För att starta om spelet, vilket ändrar status, så bör du använda POST, men
 
 När du behöver fuska och se det gissade talet, så går det bra med GET eller vanliga länkar. De läser bara av nuvarande status, de ändrar inget.
 
+Du kan använda [redirect för att undvika problem](guide/kom-igang-med-programmering-i-php/processingsida-och-vidare-dirigering) när ett POST-formulär laddas om.
+
 
 
 ### Spara i sessionen {#session}
@@ -115,11 +112,23 @@ Välj om du vill spara hela objektet, eller bara de viktiga delarna, i sessionen
 Krav {#krav}
 -----------------------
 
-1. Skapa spelet i klassen `src/Guess.php`.
-
 1. Använd filer för `config.php` och `autoload.php` som visats i guiden.
 
 1. Skapa webbklienten `index.php` för att spela spelet. Där skriver du koden som använder klassen.
+
+1. Skapa spelet i klassen `src/Guess.php`.
+
+1. Formuläret skall använda POST.
+
+1. Använd sessionen för att spara spelets status. Du kan lagra variabler, eller hela klassen, i sessionen. Välj det som verkar vettigast.
+
+1. Du får endast läsa av POST i `index.php`. Klassen skall inte ha direkt tillgång till `$_POST`, de värden måste isåfall injectas in i klassen.
+
+1. All spellogik skall ligga i klassen, ingen (minimalt) logik får ligga i `index.php`.
+
+1. Separera PHP-koden från HTML-koden och spara dina template-filer i katalogen `view/`.
+
+1. Det skall vara tydligt när man vinner och det skall inte gå att göra fler gissningar när man har slut på gissningar.
 
 1. Om man gissar ett tal som är högre än 100 eller lägre än 1 så skall ett exception av typen `GuessException` kastas. Klassfilen för exception skall ligga i `src/GuessException.php`.
 
@@ -135,6 +144,8 @@ Extrauppgift {#extra}
 -----------------------
 
 1. Gör spelet riktigt lättanvänt, fokusera på användarvänligheten och flödet för spelaren.
+
+1. Använd redirect (`header()`) för att undvika problem vid sidomladdning när ett postat formulär laddas om.
 
 1. Lägg på style för att göra det snyggare.
 

@@ -5,6 +5,7 @@ category:
     - anax
     - me-sida
 revision:
+    "2019-03-26": "(E, mos) Länk till GitHub i textfil."
     "2019-03-19": "(D, mos) Uppdaterad inför vt19, ny bas för redovisa/."
     "2018-08-28": "(C, mos) Gör cache/cimage skrivbar."
     "2018-08-16": "(B, mos) Genomgången inför ht18, bytt bas för redovisa/."
@@ -180,6 +181,9 @@ git push -u origin master
 
 Nu har du publicerat din me-sida på GitHub.
 
+Som en sista åtgärd lägger du http-länken till ditt GitHub i filen `github.txt`, det underlättar för rättaren.
+
+
 
 
 ### Bekanta dig {#bekanta}
@@ -206,6 +210,8 @@ Krav {#krav}
 1. Uppdatera header och footer så de passar din personliga me-sida.
 
 1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS, återanvänd kunskaper från design-kursen, uppdatera det befintliga temat eller använd något ramverk liknande Bootstrap, välj själv.
+
+1. Lägg http-länken till ditt GitHub i filen `github.txt` (rättaren behöver den).
 
 1. När du är klar, kör `make test` för att köra alla testerna mot ditt repo. När man kör `make test` så bör det passera utan allvarliga felmeddelanden.
 

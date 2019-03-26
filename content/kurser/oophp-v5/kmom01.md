@@ -9,7 +9,7 @@ author:
     - mos
     - lew
 revision:
-    "2019-03-13": "(prel, mos) Påbörjat arbete till v5."
+    "2019-03-13": "(E, mos) Uppdaterad till v5."
     "2018-03-23": "(D, mos) Lade till videoserie för kmom."
     "2018-03-19": "(C, mos) Uppdaterad till oophp v4."
     "2017-03-27": "(B, mos) Länkar till phpcs, phpmd, psr-1, psr-2."
@@ -17,14 +17,6 @@ revision:
 ...
 Kmom01: Objektorientering i PHP
 ==================================
-
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen är under översyn till våren 2019. Större ändringar kommer troligen att ske.
-
-[/WARNING]
 
 Vi har mycket att göra så det är bäst vi sätter igång. Innan kursen är slut skall vi hantera objektorienterad PHP, enhetstestning, grunder i PHP-baserade ramverk och databaser med ramverk.
 
@@ -35,6 +27,8 @@ Vi jobbar i en guide och bygger små grundläggande testprogram för att testa o
 För att repetera våra PHP-kunskaper och samtidigt komma igång med klasser och objekt så bygger vi en variant av spelet "Gissa vilket nummer jag tänker på".
 
 Vi bygger en me-sida (redovisa-sida) med PHP-ramverket Anax. Det ger oss möjligheten att bekanta oss med en färdig webbplats i eet PHP-ramverk. Senare i kursen kommer vi att flytta in spelet "Gissa mitt nummer" in i ramverkets struktur.
+
+
 
 <!-- more -->
 
