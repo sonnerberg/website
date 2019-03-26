@@ -1,12 +1,10 @@
 ---
 author:
     - lew
-    - mos
 revision:
-    "2017-02-09": (B, efo) Tog bort labben.
-    "2015-09-11": (A, mos) Första utgåvan för kursen.
+    "2019-03-26": (A, lew) Ny inför HT19.
 ...
-Kmom06: Klient och server
+Kmom06: Docker Compose
 ==================================
 
 [WARNING]

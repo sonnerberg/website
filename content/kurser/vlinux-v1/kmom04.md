@@ -1,18 +1,10 @@
 ---
 author:
     - lew
-    - mos
 revision:
-    "2018-01-18": (H, mos) Bort med Babel.
-    "2017-02-06": (G, mos) Tydligare läsanvisning om ES6.
-    "2017-02-02": (F, mos) In med lokal installation av node, npm och babel, åter in med debian node artikeln.
-    "2017-01-27": (E, efo,mos) Bort installation debian node.
-    "2016-12-21": (D, efo) Ändring av länk till ny nodejs lab.
-    "2016-12-16": (C, mos) Förberedelse inför linux-v2.
-    "2015-10-16": (B, mos) La till artikel om environemnt variabler i Bash och Node.js samt artikel om process id till fil.
-    "2015-08-13": (A, mos) Första utgåvan för kursen.
+    "2019-03-26": (A, lew) Ny inför HT19.
 ...
-Kmom04: Server med Node.js
+Kmom04: Docker och Apache
 ==================================
 
 [WARNING]

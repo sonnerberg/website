@@ -1,13 +1,10 @@
 ---
 author:
     - lew
-    - mos
 revision:
-    "2016-12-21": (C, efo) Från asynkronprogrammering till nodejs api.
-    "2016-12-21": (B, efo) Länk till ny lab.
-    "2015-09-02": (A, mos) Första utgåvan för kursen.
+    "2019-03-26": (A, lew) Ny inför HT19.
 ...
-Kmom05: Webbtjänst med RESTful API
+Kmom05: Docker network
 ==================================
 
 [WARNING]

@@ -3,6 +3,7 @@ author:
     - lew
     - mos
 revision:
+    "2017-12-21": (D, lew) Genomgången inför HT19.
     "2017-12-21": (C, mos) Genomgången inför vt17.
     "2017-01-16": (B, efo/mos) Genomgången och ändring av länk till ny bash lab.
     "2015-07-03": (A, mos) Första utgåvan för kursen.

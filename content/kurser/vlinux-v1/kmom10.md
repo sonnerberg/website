@@ -1,11 +1,8 @@
 ---
 author:
     - lew
-    - mos
 revision:
-    "2017-02-28": (C, mos) Testscript stöd LINUX_SERVER och LINUX_PORT.
-    "2017-02-23": (B, mos) Ändrade `--debug` till `--develop`.
-    "2015-10-13": (A, mos) Första versionen till linux.
+    "2019-03-26": (A, lew) Ny inför HT19.
 ...
 Kmom10: Projekt och examination
 ==================================

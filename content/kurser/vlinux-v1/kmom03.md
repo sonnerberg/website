@@ -1,11 +1,10 @@
 ---
 author:
     - lew
-    - mos
 revision:
     "2019-03-25": (A, lew) Ny inför HT19.
 ...
-Kmom03: Skript med Bash
+Kmom03: Introduktion till Docker
 ==================================
 
 [WARNING]
@@ -59,7 +58,9 @@ Läs följande:
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 3.
+TBD
+
+<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 3. -->
 
 1. Kris Occhipinti har en serie om [skriptprogrammering med Bash på YouTube](https://www.youtube.com/playlist?list=PLcUid3OP_4OXOUqYTDGjq-iEwtBf-3l2E). Det är många avsnitt och du kan välja vilka du vill titta på. Videorna ger dig bra bas-kunskaper i Bash.
 
@@ -67,11 +68,12 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-1. Det finns en [referensmanual till Bash](http://www.gnu.org/software/bash/manual/bashref.html). Kika gärna i den.
+TBD
+<!-- 1. Det finns en [referensmanual till Bash](http://www.gnu.org/software/bash/manual/bashref.html). Kika gärna i den.
 
 1. Det finns en populär guide för att [komma igång med Bash och programmering i Bash](http://mywiki.wooledge.org/BashGuide). Samma webbplats har en [FAQ om Bash](http://mywiki.wooledge.org/BashFAQ).
 
-1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om.
+1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om. -->
 
 
 
@@ -86,7 +88,10 @@ Titta på följande:
 
 Genomför följande övningar.
 
+1. Installera Docker med hjälp av kapitlet [Installation](guide/docker/installation) i guiden.
+
 1. Jobba igenom hur du med Bash kan skapa ett mer avancerat kommandoradsprogram som tar argument. Artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) ger dig en struktur till hur du kan skapa mer avancerade och större Bash-skript.
+
 
 
 
@@ -99,6 +104,8 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)".
 
 1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)".
+
+1. Docker uppgift! avsluta med att publicera något till dockerhub - bashscripten + docker run ...
 
 <!--
 1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
