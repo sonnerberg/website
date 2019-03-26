@@ -5,7 +5,7 @@ category:
     - anax
     - me-sida
 revision:
-    "2019-03-26": "(E, mos) Länk till GitHub i textfil."
+    "2019-03-26": "(E, mos) Länk till GitHub i textfil samt ny videoserie."
     "2019-03-19": "(D, mos) Uppdaterad inför vt19, ny bas för redovisa/."
     "2018-08-28": "(C, mos) Gör cache/cimage skrivbar."
     "2018-08-16": "(B, mos) Genomgången inför ht18, bytt bas för redovisa/."
@@ -46,15 +46,9 @@ Introduktion och förberedelse {#intro}
 
 Gör följande steg för att förbereda dig för uppgiften.
 
-[WARNING]
+Du kan se hur jag jobbar igenom stegen i videoserien "[En me-sida med Anax i kursen oophp](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_4u0EI25nYia3yESJwMQVV)".
 
-**Videoserien är "outdated", en uppdatering är på gång.**
-
-[/WARNING]
-
-Du kan se hur jag jobbar igenom stegen i videoserien "[En me-sida med Anax i kursen oophp](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_RQMga3qbZzvpzvH-gW3gv)".
-
-[YOUTUBE src="p3RlMVjwhmE&t" list="PLKtP9l5q3ce_RQMga3qbZzvpzvH-gW3gv" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i redovisa-sidan."]
+[YOUTUBE src="lfJAYnIrN-E&t" list="PLKtP9l5q3ce_4u0EI25nYia3yESJwMQVV" width=700 caption="Videoserie som ger dig en introduktion till de olika delarna i redovisa-sidan."]
 
 
 
@@ -212,6 +206,8 @@ Krav {#krav}
 1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS, återanvänd kunskaper från design-kursen, uppdatera det befintliga temat eller använd något ramverk liknande Bootstrap, välj själv.
 
 1. Lägg http-länken till ditt GitHub i filen `github.txt` (rättaren behöver den).
+
+1. Lägg till en README.md till ditt repo och skriv något kort i den.
 
 1. När du är klar, kör `make test` för att köra alla testerna mot ditt repo. När man kör `make test` så bör det passera utan allvarliga felmeddelanden.
 
