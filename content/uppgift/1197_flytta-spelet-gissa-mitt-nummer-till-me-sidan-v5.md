@@ -7,15 +7,21 @@ revision:
     "2018-09-10": "(B, mos) Lade till extrauppgift om refaktoring till klasser."
     "2018-03-26": "(A, mos) Första utgåvan."
 ...
-Flytta spelet Gissa mitt nummer till me-sidan
+Flytta spelet Gissa mitt nummer till me-sidan (v5)
 ===================================
 
-Du har din me-sida med Anax, i strukturen av ett ramverk. Du har skapat ett fristående spel "Gissa mitt nummer" i olika varianter. Du skall nu integrera ditt fristående spel in i din me-sida, in i ramverkets struktur.
+Du har din me-sida med ramverket Anaxoch du har skapat ett fristående spel "Gissa mitt nummer" i olika varianter. Du skall nu integrera ditt fristående spel in i din me-sida, in i ramverkets struktur.
 
-För att lyckas med det behöver du ha koll på begreppet router och vyer. Du behöver också se var du skall lägga koden i ramverkets struktur.
+För att lyckas med det behöver du ha koll på begreppet router och vyer. Du behöver också klura ut var du skall lägga koden i ramverkets struktur.
 
 
 <!--more-->
+
+[WARNING]
+
+**Arbete pågår**
+
+[/WARNING]
 
 Så här kan det se ut när du är klar.
 
@@ -30,7 +36,7 @@ Förkunskaper {#forkunskaper}
 
 Du har gjort uppgiften "[Bygg en me-sida för oophp med Anax](uppgift/bygg-en-me-sida-for-oophp-med-anax)" och är därmed bekant med den övergripande katalogstrukturen för din me-sida.
 
-Du har löst uppgiften "[Gissa numret med PHP och GET, POST och SESSION](uppgift/gissa-numret)" och du har implementerat spelet.
+Du har löst uppgiften "[Gissa numret med PHP](uppgift/gissa-numret-med-php)" och du har en implementation av spelet.
 
 
 
@@ -47,7 +53,7 @@ Du kan se hur jag jobbar igenom stegen i videoserien "[Flytta spelet Gissa mitt 
 
 ### Börja med en kopia {#kopiera}
 
-För att göra det enkelt att stegvis inkludera spelet så kan du börja med att göra en kopia och kpoiera in hela spelet in i htdocs-mappen för me-sidan.
+För att göra det enkelt att stegvis inkludera spelet så kan du börja med att göra en kopia och kopiera in hela spelet in i htdocs-mappen för me-sidan.
 
 ```text
 # Stå i rooten av kursrepot
@@ -99,7 +105,7 @@ När du gör uppgiften kan du välja väg, använd ramverkets klasser för att n
 Krav {#krav}
 -----------------------
 
-1. Kopiera SESSION-varianten av ditt spel "Giss mitt nummer" och integrera det i din me-sida under routen `gissa/`. Använd en landningssida att du kan länka till flera versioner av spelet.
+1. Kopiera ditt spela "Gissa mitt nummer" och integrera det i din me-sida under routen `gissa/`. Använd en landningssida att du kan länka till flera versioner av spelet.
 
 1. Uppdatera din navbar så man kommer åt spelet via den.
 

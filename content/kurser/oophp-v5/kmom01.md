@@ -94,24 +94,6 @@ Kika igenom följande artiklar.
 
 
 
-### Video {#video}
-
-Det finns generellt kursmaterial i video form.
-
-1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
-
-1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
-
-<!--
-Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 0 och 1. De hälsar dig välkommen och ger dig en introduktion till kursen och till detta kursmoment.
--->
-
-<!--
-Allmän video om oophp?
--->
-
-
-
 ### Ramverk Anax {#anax}
 
 Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort och översiktligt.
@@ -121,6 +103,16 @@ Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort
 1. Vi skriver PHP enligt kodstandarden [PSR-1: Basic Coding Standard](http://www.php-fig.org/psr/psr-1/) och [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/). Dessa är standardiserade av PHP communityn och standardiseringen hanteras av organisationen [PHP-FIG](https://www.php-fig.org/) vars syfte är att standardisera komponenter så att de går att använda mellan olika ramverk.
 
 1. Vi använder valideringsverktygen [phpcs](https://github.com/squizlabs/PHP_CodeSniffer/wiki) och [phpmd](https://phpmd.org/). Det går att installera dem som linters i Atom och se valideringsfelen direkt i texteditorn.
+
+
+
+### Video {#video}
+
+Det finns generellt kursmaterial i video form.
+
+1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
+
+1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
 
 
 

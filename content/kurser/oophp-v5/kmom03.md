@@ -112,6 +112,25 @@ Gör följande uppgifter.
 Gör även enhetstestning på tärningsspelet, eller enbart tärningsklasserna från guiden?
 
 Borde guiden ha en viss del i detta kmom? Eller bättre bara fokusera på enhetstestning kanske.
+
+Dice med kontroller.
+
+Gör tärningsspelet i en kontroller?
+Guide visa vad kontroller är?
+
+-->
+
+<!--
+
+Flytta till kmom03
+
+### Använda GET, POST, SESSION eller ramverkets variant? {#inbyggd}
+
+Ett ramverk har ofta klasser som gränssnitt mot de publika och globala variablerna GET, POST och SESSION. Det är för att lägga ett kontrollerat lager mellan globala variabler och ramverkets struktur. Man kapslar in de globala variablerna, via en ramverksklass.
+
+Ofta kan koden bli enklare att testa när man som utvecklare använder ramverkets klasser istället för att gå direkt mot `$_SESSION` och `$_GET`/`$_POST`. Testbar kod är något att eftersträva. 
+
+När du gör uppgiften kan du välja väg, använd ramverkets klasser för att nå SESSION/POST/GET eller gå direkt mot de globala variablerna.
 -->
 
 
