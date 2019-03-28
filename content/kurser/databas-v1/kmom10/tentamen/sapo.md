@@ -5,6 +5,7 @@ category:
     - kurs databas
     - examination
 revision:
+    "2019-03-28": "(B, mos) Uppgift 3 löses med terminalen."
     "2019-03-28": "(A, mos) Examinationen 28 mars 2019."
 ...
 Examination 28 mars 2019
@@ -193,6 +194,8 @@ Studera utskriften nedan extra noggrant, skriv sedan SQL-kod som löser EXAKT sa
 | Jane Doe (jadoe)           |     0 | NULL                                              |
 +----------------------------+-------+---------------------------------------------------+
 ```
+
+1. I terminalklienten, skapa kommandot `person` som visar ovan rapport.
 
 
 
