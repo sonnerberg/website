@@ -12,7 +12,7 @@ Tentamen "programmeringstenta" och dbwebb exam
 =========================
 
 <!--
-[Du kan läsa detta dokumentet via dbwebb.se](https://dbwebb.se/kurser/databas/kmom10/tentamen).
+[Du kan läsa detta dokumentet via dbwebb.se](https://dbwebb.se/kurser/databas-v1/kmom10/tentamen).
 -->
 
 Här presenteras en beskrivning hur du checkar ut och lämnar in en tentamen via verktyget `dbwebb exam`.
