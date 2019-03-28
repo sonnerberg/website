@@ -205,6 +205,9 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 * **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford
   En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
 
+* **[You Don't Know JS](kunskap/boken-you-dont-know-javascript)** -- K. Simpson (@getify)
+  Om du vill förstå JavaScript på djupet och därigenom bli kung på JavaScript, men samtidigt en bättre programmerare rekommenderas You Don't Know JS starkt.
+
 
 
 ###Övrig litteratur {#ovriglitteratur}

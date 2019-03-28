@@ -103,7 +103,7 @@ I vyn `map.js` importerar vi `leaflet.js`, sedan definieras `view`-funktionen, v
 import m from "mithril";
 import L from "leaflet";
 
-module.exports = {
+const mapView = {
     view: function() {
         return [
             m("h1", "Map"),
@@ -111,6 +111,8 @@ module.exports = {
         ];
     }
 };
+
+export default mapView;
 ```
 
 Vi använder sedan livscykel funktionen `oncreate` för att anropa funktionen `showMap` som ritar upp kartan och även ett antal markörer som visar platser baserad på koordinater. Funktionen `oncreate` anropas efter att vyn har renderats och vi använder `oncreate` då `div#map.map` måste finnas tillgänglig när vi börjar använda `leaflet`.
@@ -121,7 +123,7 @@ Vi använder sedan livscykel funktionen `oncreate` för att anropa funktionen `s
 import m from "mithril";
 import L from "leaflet";
 
-module.exports = {
+const mapView = {
     oncreate: showMap,
     view: function() {
         return [
@@ -130,6 +132,8 @@ module.exports = {
         ];
     }
 };
+
+export default mapView;
 ```
 
 Funktionen `showMap` ligger som en vanlig JavaScript funktion och inte som en del av det vi exporterar i mithril kontext. Detta är en av de stora fördelarna med mithril att allt "bara" är vanlig JavaScript och att vi därför kan varva mithril med vanliga JavaScript funktioner. I `showMap` funktionen definieras ett objekt med platser i Karlskrona som sedan används för att rita ut markörerna och centrera kartan runt en av platserna. Jag har valt att definiera variabeln `map` som en global variabel i filen `js/views/map.js`, då den används i flera olika funktioner, se exempelprogrammet.
