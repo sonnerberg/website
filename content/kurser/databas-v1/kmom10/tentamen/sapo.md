@@ -5,7 +5,7 @@ category:
     - kurs databas
     - examination
 revision:
-    "2019-03-28": "(B, mos) Uppgift 3 löses med terminalen."
+    "2019-03-28": "(B, mos) Uppgift 3 löses med terminalen, samt förtydligande om tabellutskrift."
     "2019-03-28": "(A, mos) Examinationen 28 mars 2019."
 ...
 Examination 28 mars 2019
@@ -182,7 +182,9 @@ Chefen är stressad och precis innan mötet börjar så kommer han till dig och 
 
 Det handlar om att visa alla personer och visa antalet händelser de eventuellt varit inblandade i och vilka organisationer de varit kopplade till.
 
-Studera utskriften nedan extra noggrant, skriv sedan SQL-kod som löser EXAKT samma rapport med EXAKT samma utskrift.
+Studera utskriften nedan extra noggrant, skriv sedan SQL-kod som löser EXAKT samma rapport med EXAKT samma innehåll (samma rubriker, samma rader, samma ordning på raderna, samma innehåll i respektive kolumn).
+
+Det är rapportens innehåll som är viktigt, inte hur du skriver ut det i tabellformatet, det är som vanligt godtyckligt tabellformat.
 
 ```text
 +----------------------------+-------+---------------------------------------------------+
