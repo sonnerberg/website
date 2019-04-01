@@ -37,6 +37,7 @@ Guider under utveckling till hösten 2020.
 * [Kom igång med Bash](guide/kom-igang-med-bash)
 * [Docker](guide/docker)
 * [VirtualBox](guide/virtualbox)
+* [SSH-nycklar](guide/kom-igang-med-ssh)
 
 Guider som ligger till sig och eventuellt utvecklas framöver.
 

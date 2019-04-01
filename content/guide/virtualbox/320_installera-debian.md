@@ -39,3 +39,5 @@ Det som du behöver göra är i princip att:
 * Välj en desktopmiljö
 
 När du är klar kan du logga in på din nya Debian server med antingen root-användaren eller den användaren som du skapade i installationsprocessen. Normalt vill du inte logga in som root-användaren så välj den användare som du skapade. I slutet av videon gör jag en "snapshot" av min installation. Det är som ett bokmärke så skulle något gå sönder kan jag alltid välja att starta Debian i det sparade läget.
+
+Ett bra tips är att gå vidare till att [installera ssh](guide/kom-igang-med-ssh/ssh)
