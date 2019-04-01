@@ -2,7 +2,8 @@
 author: mos
 category: unix
 revision:
-  "2015-07-01": (A, mos) Första utgåvan.
+    "2019-04-01": (B, lew) Tog bort mos configfil.
+    "2015-07-01": (A, mos) Första utgåvan.
 updated: "2015-07-01 14:41:44"
 created: "2015-06-29 12:00:34"
 ...
@@ -74,7 +75,7 @@ man tmux
 
 
 
-En konfigurationsfil för tmux {#config}
+<!-- En konfigurationsfil för tmux {#config}
 -------------------------------------------
 
 Det första vi vill ha är en konfigurationsfil för tmux. Låt oss utgå från en som jag själv använder. Du kan kika på [konfigurationsfilen `.tmux.conf`](https://github.com/mosbth/env/blob/master/.tmux.conf), den ligger på GitHub.
@@ -91,7 +92,7 @@ Kontrollera att den ligger på rätt plats.
 more $HOME/.tmux.conf
 ```
 
-När man skickar kommandon till tmux så används ett prefix som normalt är `ctrl b`, men jag har valt att ändra det till `ctrl a`. Om du tittar i konfigfilen så är det de första raderna som löser det. Det är helt enkelt enklare att klicka `ctrl a` än `ctrl b`. 
+När man skickar kommandon till tmux så används ett prefix som normalt är `ctrl b`, men jag har valt att ändra det till `ctrl a`. Om du tittar i konfigfilen så är det de första raderna som löser det. Det är helt enkelt enklare att klicka `ctrl a` än `ctrl b`.
 
 De första raderna i filen `$HOME/.tmux.conf` ändrar prefix för kommandon i tmux.
 
@@ -102,7 +103,7 @@ unbind-key C-b
 bind-key C-a send-prefix
 ```
 
-Du måste alltid trycka prefixet innan tmux svarar. Det är prefixet som gör att tmux lyssnar på dig.
+Du måste alltid trycka prefixet innan tmux svarar. Det är prefixet som gör att tmux lyssnar på dig. -->
 
 
 
@@ -162,7 +163,7 @@ tmux attach -t basic
 Om du listar dina sessioner så ser du namnet på de sessioner som är namngivna, istället för det id som visas för de icke-namngivna sessionerna.
 
 ```bash
-$ tmux ls 
+$ tmux ls
 1: 1 windows (created Tue Jun 30 13:18:04 2015) [196x58] (attached)    
 2: 1 windows (created Tue Jun 30 16:41:07 2015) [80x23]                
 basic: 4 windows (created Tue Jun 30 13:15:35 2015) [239x68] (attached)

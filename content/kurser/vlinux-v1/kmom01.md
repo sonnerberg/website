@@ -102,9 +102,7 @@ TBD
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
-
-Som en del av labbmiljön har du redan installerat Debian i en VirtualBox. Det är den stora biten i detta kursmomentet.
+Som en del av labbmiljön har du redan installerat Debian i en VirtualBox. Det är den stora biten i detta kursmomentet. Glöm inte att [installera ssh](guide/kom-igang-med-ssh/ssh). SSH-nycklar tar vi nästa kursmoment så gör bara första delen "Kom igång med SSH".
 
 
 

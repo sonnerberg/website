@@ -88,7 +88,8 @@ TBD
 Genomför följande övningar.
 
 <!-- 1. Jobba igenom guiden "[Kom igång med SSH-nycklar](kunskap/kom-igang-med-ssh-nycklar)". -->
-1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/virtualbox/kom-igang-med-ssh-nycklar)".
+
+1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/kom-igang-med-ssh/kom-igang-med-ssh-nycklar)".
 
 1. Jobba igenom artikeln "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)".
 
