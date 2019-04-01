@@ -9,7 +9,7 @@ author:
     - mos
     - lew
 revision:
-    "2019-03-13": "(prel, mos) Påbörjat arbete till v5."
+    "2019-04-01": "(prel, mos) Påbörjat arbete till v5."
     "2018-09-10": "(D, mos) Flyttade tärningsspelet till kmom03."
     "2018-09-03": "(C, mos) Ingen ändring gjord inför hösten."
     "2018-03-27": "(B, mos) Uppdaterad oophp v4."
@@ -26,11 +26,11 @@ Kursen är under översyn till våren 2019. Större ändringar kommer troligen a
 
 [/WARNING]
 
-Vi fortsätter träna på programmering med klasser och objekt. Vi fortsätter med fler grundkonstruktioner i objektorientering och PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
+Vi jobbar vidare med programmering av klasser och objekt. Vi tar fler grundkonstruktioner i objektorientering och PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
 
-Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden och där ta hjälp av docblock-kommentarer.
+Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden via docblock-kommentarer.
 
-Vi börjar koda inuti ramverket och använder oss av routes, vyer och placerar klasserna inuti ramverket med givna namespaces och använder oss av ramverkets autoloader. Som övnings tar vi och flyttar vårt spel "Gissa mitt nummer" in i ramverket.
+Vi börjar koda inuti ramverket och använder oss av konstruktioner som routes, vyer och placerar klasserna inuti ramverket med givna namespaces och använder oss av ramverkets autoloader. Som övning tar vi och flyttar vårt spel "Gissa mitt nummer" in i ramverket.
 
 <!-- more -->
 
@@ -66,7 +66,7 @@ Läs följande för att skaffa dig bakgrundskunskap i PHP och objektorientering.
 
 En viktig del i detta kmom är begreppen namespace och autoloader. Här är en samling av läsvärt material som ger dig grundkunskapen.
 
-1. Läs igenom, men hoppa över detaljer, i PHP manualen om [begreppet namespace](http://php.net/manual/en/language.namespaces.php). Skaffa dig en översikt vad det handlar om och hur man definierar och använder namespace.
+1. Läs igenom, men hoppa över detaljer, det stycke i PHP manualen som handlar om [begreppet namespace](http://php.net/manual/en/language.namespaces.php). Skaffa dig en översikt vad det handlar om och hur man definierar och använder namespace.
 
 1. När det gäller namespace så använder vi oss av [PHP-FIG](https://www.php-fig.org/) och standarden [PSR-4: Autoloader](https://www.php-fig.org/psr/psr-4/).
 
@@ -82,7 +82,7 @@ Kika igenom följande lästips om UML och modellering, ägna tid åt dem om du f
     * [Dia](https://wiki.gnome.org/Apps/Dia/) (desktop)
     * [draw.io](draw.io) (webbaserat)
 
-1. När man pratar om objektorienterad programmering så underlättar det om man har en viss bas i objektorienterad modellering. Därför kan du läsa lite om UML, "Unified Modelling Language". En bra plats att starta är någon av följande:
+1. När man pratar om objektorienterad programmering så underlättar det om man har en viss bas i objektorienterad modellering. Därför kan du läsa kort om UML, "Unified Modelling Language". En bra plats att starta är någon av följande:
     * Andreas artikel "[Vad är UML?](kunskap/vad-ar-uml)" som är en del av kursen oopython.
     * [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
 
@@ -103,7 +103,16 @@ Följande handlar om att automatgenerera dokumentation baserad på kommentarer i
 Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort och översiktligt.
 
 1. Följande Anax moduler är extra relevanta i detta kmom, läs deras README för en översyn av hur de fungerar.
-    * [anax/router](https://github.com/canax/router) (sätt i v2.0.0?).
+    * [anax/request](https://github.com/canax/request)
+    * [anax/response](https://github.com/canax/response)
+    * [anax/router](https://github.com/canax/router)
+    * [anax/view](https://github.com/canax/view)
+
+<!--
+SKRIV README OVAN
+
+Länka i vy.
+-->
 
 
 
@@ -130,11 +139,11 @@ Gör följande uppgifter.
 1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" jobbar du igenom följande del. Spara koden i `me/guide`.
     * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
 
-1. Gör uppgiften "[Flytta spelet Gissa mitt nummer till me-sidan (v5)](uppgift/flytta-spelet-gissa-mitt-nummer-till-me-sidan-v5)". Du skall kopiera koden för ditt gissa-spel och integrera in det i din me-sida. Koden sparar du i `me/redovisa`. 
+1. Gör uppgiften "[Flytta spelet Gissa mitt nummer till me-sidan (v5)](uppgift/flytta-spelet-gissa-mitt-nummer-till-me-sidan-v5)". Du skall kopiera koden för ditt gissa-spel och integrera in det i din me-sida och använda ramverkets struktur. Koden sparar du i `me/redovisa`. 
 
 1. Gör uppgiften "[Dokumentera PHP med phpdoc och phpDocumentor](uppgift/dokumentera-php-med-phpdoc-och-phpdocumentor)". Spara uppdateringarna du gör i ditt `me/redovisa`.
 
-1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
+1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make test` som en sista avstämning, innan du sätter sista taggen.
 
 <!--
 Dice med kontroller.
@@ -152,7 +161,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur gick det att överföra spelet "Gissa mitt nummer" in i din me-sida?
 * Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde? Vad tycker du om konceptet `make doc`?
+* Hur gick det att överföra spelet "Gissa mitt nummer" in i din me-sida, hade du en bra grundstruktur du kunde behålla eller fick du skriva om mycket av koden?
 * Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
 * Vilken är din TIL för detta kmom?

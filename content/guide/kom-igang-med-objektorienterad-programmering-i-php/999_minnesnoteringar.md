@@ -37,3 +37,10 @@ Från kursfeedback ht18.
 * Static class member/method
 * Abstract class/method
 * Mer om trait och mer om interface samt exempel på när de kan användas.
+
+
+Del II
+
+* typehint parametrar
+* typehint returvärde
+* namespace, vendorname, PSR-4, sökvägar 

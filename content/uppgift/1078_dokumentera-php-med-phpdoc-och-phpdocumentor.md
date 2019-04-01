@@ -13,7 +13,7 @@ revision:
 Dokumentera PHP med phpdoc och phpDocumentor
 ==================================
 
-[FIGURE src=image/snapvt18/phpdocumentor.png?w=c5 class=right]
+[FIGURE src=image/snapvt18/phpdocumentor.png?w=c4 class=right]
 
 Du ska dokumentera ditt projekt med phpdoc och phpDocumenter. Det handlar om att dra nytta av dina docblock kommenterarer när du nu skall automatgenerera din dokumentation.
 
@@ -21,9 +21,9 @@ Du har ett befintligt projekt där din Makefile redan innehåller stöd för att
 
 <!--more-->
 
-Så här kan det se ut när du löser uppgiften.
+Så här kan det se ut när du löst uppgiften.
 
-[YOUTUBE src="2E6MriwcI6w" width=700 caption="Mikael jobbar igenom uppgiften och gör make doc."]
+[FIGURE src=image/snapvt19/phpdoc.png?w=w3 caption="Automatgenererad dokumentation med phpdoc."]
 
 
 

@@ -91,6 +91,31 @@ Läs följande om du har tid och energi och vill fördjupa dig i enhetstestning.
 
 
 
+### Ramverk Anax {#anax}
+
+Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort och översiktligt.
+
+1. Följande Anax moduler är extra relevanta i detta kmom, läs deras README för en översyn av hur de fungerar.
+    * Controller
+    * Använd inte \_GET, \_POST, \_SESSION
+<!--
+[anax/router](https://github.com/canax/router) (sätt i v2.0.0?).
+https://github.com/canax/request
+https://github.com/canax/response
+https://github.com/canax/view
+-->
+
+
+### Video {#video}
+
+Det finns generellt kursmaterial i video form.
+
+1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
+
+1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
+
+
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
@@ -106,7 +131,7 @@ Gör följande uppgifter.
 
 1. Gör uppgiften "[Tärningsspel 100](uppgift/tarningsspel-100)" inuti din me-sida. Spara din kod under `me/redovisa`.
 
-1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
+1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make test` som en sista avstämning, innan du sätter sista taggen.
 
 <!--
 Gör även enhetstestning på tärningsspelet, eller enbart tärningsklasserna från guiden?

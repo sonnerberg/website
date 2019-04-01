@@ -73,7 +73,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgift "[Uppdatera 100-spelet med intelligens](uppgift/uppdatera-100-spelet-med-intelligens)" och spara filerna i `me/redovisa`.
 
-1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make doc` och en `make test` som en sista avstämning, innan du sätter sista taggen.
+1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make test` som en sista avstämning, innan du sätter sista taggen.
 
 
 
