@@ -4,9 +4,9 @@ author:
 category:
     - php
     - kurs oophp
-    - anax-lite
     - anax
 revision:
+    "2019-04-01": "(C, mos) Uppdaterad inför vt19 med video och kapitelstruktur."
     "2018-03-20": "(B, mos) Avidentifiera anax-lite."
     "2017-04-21": "(A, mos) Första utgåvan."
 ...
@@ -41,9 +41,21 @@ Du är medveten om behovet av kommentarer strukturerade som docblock, för att f
 Introduktion {#intro}
 -----------------------
 
-Låt oss göra det enkelt. Det handlar om att använda phpDocumenter via kommandot `phpdoc` för att automatgenerera dokumentation av dina klasser i ditt projekt.
+Det handlar om att använda phpDocumenter via kommandot `phpdoc` för att automatgenerera dokumentation av dina klasser i ditt projekt. Du kommer använda makefilen som i sin tur installerar `make install` och använder sig av phpdoc för att skapa dokumentationen `make doc`.
 
-Förbered dig så här.
+Du kan se hur jag jobbar igenom stegen i följande video.
+
+[YOUTUBE src="eopAZqNwoL4" width=700 caption="Visar hur man kan automatgenerera dokumentation tillsammans med din me/redovisa sida."]
+
+Här är stegen du behöver jobba igenom.
+
+
+
+### Installera utvecklingsmiljön {#installera}
+
+Du kan installera verktyget phpdoc som en del av ditt repo för me/redovisa.
+
+Följande är de make target som du behöver. 
 
 ```bash
 # Gå till ditt projekt
@@ -54,30 +66,53 @@ doc                - Generate documentation.
 ...
 ```
 
-Du behöver nu installera verktygen och sedan kan du automatgenerera dokumentationen.
+Du behöver nu installera verktygen.
 
 ```text
 make install
+```
+
+
+
+### Generera dokumentationen {#generera}
+
+Nu kan du automatgenerera dokumentationen.
+
+```text
 mkdir doc
 make doc
-firefox doc
 ```
 
 Du behöver en katalog som heter `doc` i ditt projekt, annars genereras inte dokumentationen.
 
-När kommandot phpdoc körs av Makefilen så används konfigurationsfilen `.phpdoc.xml` och den styr vilka kataloger där källkoden hämtas.
-
-<!--
-Om du saknar en konfigurationsfil så kan du låna en från Anax moduler.
+Nu kan du öppna dokumentationen i din webbläsare.
 
 ```text
-cp vendor/anax/request/.phpdoc.xml .
+firefox doc
 ```
--->
 
-Du använder en av funktionerna som redan finns implementerad i Makefilen. Den installerar verktyget phpdoc i `.bin/phpdoc` och kör det och det genereras dokumentation förutsatt att du har en konfigurationsfil samt en katalog `doc` där dokumentationen kan sparas.
 
-Var nyfiken och kika i konfigurationsfilen `.phpdoc.xml`. Öppna filen så kan du se att det är filer från katalogerna `src` och `vendor/anax/*/src` som läses in och dokumenteras.
+
+### Konfigurera vad som dokumenteras {#konfigurera}
+
+När kommandot phpdoc körs av Makefilen så används konfigurationsfilen `.phpdoc.xml` och den styr vilka kataloger som används som bas för dokumentationen.
+
+Titta i filen och justera vilka kataloger som används som bas, så kan du skapa egen dokumentation för de klasser som installeras via composer.
+
+Du kan till exempel uppdatera din konfigurationsfil så att den även dokumenterar klasserna i Anax, men ignorerar alla klasser som finns under katalogen `test/`.
+
+```text
+<files>
+    <directory>src</directory>
+    <directory>vendor/anax</directory>
+    <ignore>test/*</ignore>
+</files>
+```
+
+
+### Om makefilen {#makefilen}
+
+Du använder en av funktionerna som redan finns implementerad i Makefilen. Den installerar verktyget phpdoc i `.bin/phpdoc` via `make install`. Sedan kan du generera dokumentationen via `make doc`, förutsatt att du har en konfigurationsfil samt en katalog `doc` där dokumentationen kan sparas.
 
 
 
@@ -86,9 +121,11 @@ Krav {#krav}
 
 1. Använd phpdoc, via `make doc` för att skapa dokumentation till ditt projekt.
 
-1. Checka in och committa dokumentationen som en del av ditt repo.
+1. Redigera konfigurationsfilen så att du även kan generera dokumentation för Anax moduler.
 
-1. Validera och publicera.
+1. Uppdatera din `.gitignore` så att du inte checkar in katalogen `doc/` in i ditt repo.
+
+1. Bekanta dig med det som genereras av phpdoc och se om du kan finna det användbart.
 
 
 
