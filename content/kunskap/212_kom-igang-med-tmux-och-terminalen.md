@@ -4,7 +4,7 @@ category: unix
 revision:
     "2019-04-01": (B, lew) Tog bort mos configfil.
     "2015-07-01": (A, mos) Första utgåvan.
-updated: "2015-07-01 14:41:44"
+updated: "2019-03-01 11:44:02"
 created: "2015-06-29 12:00:34"
 ...
 Kom igång med tmux och terminalen
