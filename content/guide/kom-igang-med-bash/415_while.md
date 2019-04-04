@@ -7,7 +7,7 @@ revision:
 while-loop
 =======================
 
-En while loop i Bash behöver också ha ett slutmål att jobba sig mot.
+Även i Bash behöver en while loop ha ett slutmål att jobba sig mot.
 
 ```bash
 #!/usr/bin/env bash
