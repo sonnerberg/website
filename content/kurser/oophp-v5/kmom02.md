@@ -9,7 +9,7 @@ author:
     - mos
     - lew
 revision:
-    "2019-04-01": "(prel, mos) Påbörjat arbete till v5."
+    "2019-04-05": "(E, mos) Publicerat till v5."
     "2018-09-10": "(D, mos) Flyttade tärningsspelet till kmom03."
     "2018-09-03": "(C, mos) Ingen ändring gjord inför hösten."
     "2018-03-27": "(B, mos) Uppdaterad oophp v4."
@@ -17,14 +17,6 @@ revision:
 ...
 Kmom02: Arv och Komposition
 ==================================
-
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen är under översyn till våren 2019. Större ändringar kommer troligen att ske.
-
-[/WARNING]
 
 Vi jobbar vidare med programmering av klasser och objekt. Vi tar fler grundkonstruktioner i objektorientering och PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4. 
 
@@ -107,12 +99,6 @@ Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort
     * [anax/response](https://github.com/canax/response)
     * [anax/router](https://github.com/canax/router)
     * [anax/view](https://github.com/canax/view)
-
-<!--
-SKRIV README OVAN
-
-Länka i vy.
--->
 
 
 
