@@ -40,7 +40,7 @@ Låt oss titta på filen `package.json` som skapades av kommandona ovan.
 
 ```json
 {
-  "name": "webpack-intro",
+  "name": "lager2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -57,7 +57,7 @@ Låt oss titta på filen `package.json` som skapades av kommandona ovan.
 }
 ```
 
-Vi ser att vi har två moduler som vi är beroende (devDependencies) av `webpack` och `webpack-cli`. Förutom de två beroenden är det standard värden och vi ser att vårt paket har fått namnet lager2.
+Vi ser att vi har två moduler som vi är beroende (devDependencies) av `webpack` och `webpack-cli`. Förutom de två beroenden är det standard värden och vi ser att vårt paket har fått namnet lager2. Om du inte får exakt samma versionsnummer spelar det inte någon större roll.
 
 
 
