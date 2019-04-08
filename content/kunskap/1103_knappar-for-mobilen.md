@@ -20,6 +20,8 @@ Knappar är en viktig del av de flesta CSS ramverk och kanske en av de mera omdi
 
 En annan utmaning när man designar för små mobila enheter är att man inte har samma precision när man använder händerna, som med en gammal hederlig dator mus. Därför är det viktigt att designa knappar och andra komponenter så de är lätta att interagera med trots avsaknaden av precision.
 
+Exempelprogrammet från denna övning finns i kursrepot [example/sass-examples](https://github.com/dbwebb-se/webapp/tree/master/example/sass-examples) och i `example/sass-examples`.
+
 
 
 En knapp {#intro}
@@ -187,16 +189,22 @@ Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocess
 Vissa har i kursen [design](kurser/design) träffat på LESS och det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS kan vi använda oss av `npm`.
 
 ```bash
+# Stå i me/kmom02/buttons
+npm init --yes
 npm install --save sass
 ```
 
-Vi kan då skriva ett npm script i `package.json` för att kompilera en SASS fil till en CSS-fil. Nedanstående script kompilerar SASS filen `base.scss` till filen `style.min.css`. Vi kan med kommandot `npm run style` i terminalen köra scriptet.
+Kommandot `npm init --yes` skapar en fil `package.json` som är en konfigurationsfil för projekt som använder sig av npm.
+
+I `package.json` kan vi skriva ett såkallat npm-script för att kompilera en SASS fil till en CSS-fil. Nedanstående script kompilerar SASS filen `base.scss` till filen `style.min.css`. Vi kan med kommandot `npm run style` i terminalen köra scriptet.
 
 ```json
 "scripts": {
   "style": "sass base.scss style.min.css"
 },
 ```
+
+Vi skapar därför filen `base.scss` i `me/kmom02/buttons` i kodexemplet i kursrepot har jag även skapat en katalog `style`, där jag ligger de olika SASS moduler.
 
 Följande är en kort introduktion till import, variabler och färghantering i SASS. För mer avancerade funktioner rekommenderas [SASS dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
@@ -226,7 +234,7 @@ $blue: #0074d9;
 }
 ```
 
-För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I filen `base.scss` importerar vi alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den. Som ni ser nedan har jag även flyttat in `normalize.min.css` i style katalogen och utnyttjar att jag kan skriva CSS kod i scss filer. Nu blir `normalize.min.css` en del av den resulterande CSS filen istället för att ligga som ett beroende utanför.
+För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I filen `base.scss` importerar vi alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den. Som ni ser nedan har jag även flyttat in `normalize.min.css` i style katalogen och utnyttjar att jag kan skriva CSS kod i scss filer. Vi döper om `normalize.min.css` till `style/normalize.min.scss` og filen blir en del av den resulterande CSS filen istället för att ligga som ett beroende utanför.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
