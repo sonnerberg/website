@@ -4,6 +4,7 @@ author:
     - efo
     - mos
 revision:
+    "2019-04-09": (E, efo) Uppdaterade med proxy och video. Släppte.
     "2019-02-11": (D, efo) En första version inför 2019 LP4.
     "2019-02-11": (prel, efo) Inför 2019 LP4.
     "2018-03-02": (C, efo) Första versionen till webapp-v3.
@@ -12,16 +13,6 @@ revision:
 ...
 Kmom10: Projekt och examination
 ==================================
-
-[WARNING]
-
-** Kursutveckling pågår till kurs webapp **
-
-Kursstart våren 2019 LP4.
-
-[/WARNING]
-
-
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -46,7 +37,7 @@ I filmen nedan pratar Emil om hur man kan tänka vid val av datakällor och reko
 
 <!-- https://github.com/Hypergene/kolada -->
 
-<!-- Om du upplever problem med Cross-Origin Access kan en API-proxy vara lösningen på problemet. I GitHub repot [api-proxy](https://github.com/emilfolino/api-proxy) finns källkod och instruktioner för hur man kan använda sig av en API-proxy på studentservern. -->
+Om du upplever problem med Cross-Origin Access kan en API-proxy vara lösningen på problemet. I GitHub repot [emilfolino/api-proxy](https://github.com/emilfolino/api-proxy) finns källkod och instruktioner för hur man kan använda sig av en API-proxy på studentservern.
 
 Du funderar och väljer en ansats för din webapp, fråga i forumet om du känner dig osäker.
 
