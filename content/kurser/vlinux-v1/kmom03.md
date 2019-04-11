@@ -88,8 +88,10 @@ Genomför följande övningar.
 
 1. Installera Docker som en del av [labbmiljön](kunskap/installera-virtualiseringsmiljon-docker).
 
-1. Jobba igenom hur du med Bash kan skapa ett mer avancerat kommandoradsprogram som tar argument. Artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) ger dig en struktur till hur du kan skapa mer avancerade och större Bash-skript.
+1. Jobba igenom artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-skript.
 
+*Tips:*
+1. Du kan luta dig mot [guiden](guide/kom-igang-med-bash) där du hittar beskrivningar om de vanligaste konstruktionerna.
 
 
 
@@ -99,15 +101,14 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) för att öva på kommandon som underlättar vid sökning i logg-filar.
 
-1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)".
+1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)". Spara arbetet i mappen `script`.
 
-1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)".
-
-1. Docker uppgift! avsluta med att publicera något till dockerhub - bashscripten + docker run ...
+1. Gör uppgiften "[Skapa Docker image](uppgift/skapa-docker-image)". Du fortsätter arbeta i mappen `script`.
 
 <!--
 1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
 -->
+<!-- 1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)". -->
 
 
 
@@ -130,4 +131,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Berätta om din uppfattning om Bash som programmeringsmiljö, relatera till andra programspråk du kan.
 * Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?
 * Var det något som var extra svårt eller utmanande i uppgifterna?
-* Tittade du på videoserien? Vad tyckte du om den?
+* Har du arbetat med Docker innan?
+* Anser du att det är någon fördel/nackdel med Docker om du jämför med VirtualBox?

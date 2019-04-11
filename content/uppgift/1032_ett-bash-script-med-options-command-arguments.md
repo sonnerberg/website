@@ -1,15 +1,12 @@
 ---
-author: efo
+author: lew
 revision:
-    2016-12-21: (A, efo) Första utgåvan.
-category:
-    - linux
-    - bash
+    2019-04-11: (A, lew) Första utgåvan inför HT19.
 ...
 Ett bash script med options, command och argument
 ===================================
 
-Du skall skapa ett bash script som tar emot options.
+Du skall skapa ett bash script som tar emot options och argument.
 
 <!--more-->
 
@@ -18,24 +15,22 @@ Du skall skapa ett bash script som tar emot options.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Skapa Bash-skript med options, command och arguments](kunskap/skapa-bash-skript-med-options-command-och-arguments)".
+Du har jobbat igenom övningen "[Skapa Bash-skript med options, command och arguments](kunskap/skapa-bash-skript-med-options-command-och-arguments)".
 
-Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash. Du har gjort uppgifterna "[Lab2](uppgift/linux-lab-2-sok-i-en-logg-fil)" och "[Mina första Bash-script](uppgift/mina-forsta-bash-script)".
+Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash. Du har gjort uppgifterna "[Lab2](uppgift/linux-lab-2-sok-i-en-logg-fil)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Du ska skapa ditt eget `commands` script som tar emot options och arguments. Scriptet kan använda inbyggda bash funktioner.
+Du ska skapa ditt eget `commands.bash` script som tar emot options och arguments. Scriptet kan använda inbyggda bash funktioner.
 
 
 [INFO]
 **TIPS.**
-
-Läs igenom hela artikeln "[Skapa Bash-skript med options, command och arguments](kunskap/skapa-bash-skript-med-options-command-och-arguments)" innan du börjar med uppgiften.
-
-Det finns många inbyggda funktioner i bash, som kan underlätta vid lösning av nedanstående uppgifter, så utforska gärna kommandot `man` för olika kommandon för att få hjälp.
+Använd [guiden](guide/kom-igang-med-bash) om du kör fast.
+Lär dig använda manualen `man`.
 [/INFO]
 
 
@@ -43,31 +38,42 @@ Det finns många inbyggda funktioner i bash, som kan underlätta vid lösning av
 Krav {#krav}
 -----------------------
 
-1. Skapa ett bash-script `commands` som kan ta emot options och argument. Anropas ditt script utan options eller arguments, skall scriptet skriva ut att man kan få hjälp genom att använda `--help, -h`.
+1. Skapa ett bash-script `script/commands.bash` som kan ta emot options och argument. Anropas ditt script utan options eller argument, skall scriptet skriva ut att man kan få hjälp genom att använda `--help, -h`.
 
-1. Ändra rättigheter för scriptet genom kommandot `chmod 755 commands`
+1. Ändra rättigheter för scriptet genom kommandot `chmod 755 script/commands.bash`
 
 1. Ditt script skall avslutas med korrekt exit värde.
 
-1. Ditt script skall ta emot option `--help, -h` och skriva ut alla kommandon som du implementerar.
+1. Använd en main-funktion för att starta programmet.
 
-1. Ditt script skall ta emot option `--version, -v` och skriva ut nuvarande version av ditt script.
+1. Strukturera koden i olika funktioner.
 
-1. Ditt script skall ta emot argumentet reverse plus en mening som ska reverseras dvs. returnera strängen i omvänd ordning. Scriptet skall kunna anropas `./commands reverse Obi-Wan Kenobi` och scriptet returnerar: iboneK naW-ibO
+1. Följande *options* ska fungera:
 
-1. Ditt script ska ta emot argumentet factors plus ett godtyckligt antal siffror, för varje siffra ska scriptet returnera talet, kolon och talets primtals faktorer, dvs. de primtal som ursprungs siffran kan delas med, på var sin rad. Exempel `./commands factors 5 6 16` returnerar:
+| Option                | Vad skall hända |
+|-----------------------|-----------------|
+| `-h, --help`          | Skriv ut en hjälptext om hur programmet används. |
+| `-v, --version`       | Visar nuvarande version av programmet. |
 
-```bash
-5: 5
-6: 2 3
-16: 2 2 2 2
-```
+1. Följande *argument* ska fungera:
 
-Validera ditt `commands` script genom att göra följande kommandon i kurskatalogen i terminalen.
+| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Vad skall hända |
+|-----------------------|-----------------|
+| `cal`          | Skriv ut en kalender. |
+| `greet`       | Skriv ut en hälsningsfras till den nuvarande användaren.|
+| `loop <min> <max>`| Skriv ut siffrorna mellan &lt;min&gt; och &lt;max&gt; med hjälp av en forloop. |
+| `lower <n n n...>`| Skriv ut alla siffror som är mindre än 42. Antalet inskickade tal ska inte spela någon roll.|
+| `reverse <random sentence>`| Skriv ut meningen baklänges (ecnetnes modnar).|
+| `all`| Kör samtliga funktioner i följd. Värdena väljer du själv. Jobba gärna på att få till en trevlig presentation.|
+
+
+
+
+Validera ditt `commands.bash` script genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate commands
+dbwebb validate script
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  

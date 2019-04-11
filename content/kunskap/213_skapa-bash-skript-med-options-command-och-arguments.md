@@ -68,12 +68,12 @@ Det var allt som programmet klarade av, låt oss nu ser hur koden bakom ser ut.
 En mall för ett kommandoradsprogram {#mall}
 --------------------------------------
 
-Vi kikar på koden i `bash-cli`, uppifrån och ned.
+Vi kikar på koden i `bash-cli.bash`, uppifrån och ned.
 
 De första raderna är en [*shebang*](https://en.wikipedia.org/wiki/Shebang_(Unix)) följt av några kommentarer som berättar vad skriptet handlar om.
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # A template for creating command line scripts taking options, commands
 # and arguments.
@@ -184,6 +184,7 @@ echo "$SCRIPT version $VERSION"
 ```
 
 När vi nu fortsätter så hoppar vi till sista delen av programmet.
+
 
 
 Kontrollera alla argument {#argument}
