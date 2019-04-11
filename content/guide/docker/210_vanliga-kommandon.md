@@ -31,7 +31,7 @@ Vi ska inte gå in i mapparna/filerna och pilla utan vi använder Dockers CLI oc
 | docker pull &lt;image&gt;   | laddar ner en image utan att köra den |
 | docker run &lt;image&gt;    | Starta en kontainer från en image     |
 
-Istället för ett id kan vi använda namnet på kontainern. Om vi inte har satt det själva autogenereras ett namn. Hur kan man se den informaitonen då? Först behöver vi en startad kontainer:
+Istället för ett id kan vi använda namnet på kontainern. Om vi inte har satt det själva autogenereras ett namn. Hur kan man se den informationen då? Först behöver vi en startad kontainer:
 
 `$ docker run -it debian:stretch:slim`
 

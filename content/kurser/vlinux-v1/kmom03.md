@@ -91,7 +91,7 @@ Genomför följande övningar.
 1. Jobba igenom artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-skript.
 
 *Tips:*
-1. Du kan luta dig mot [guiden](guide/kom-igang-med-bash) där du hittar beskrivningar om de vanligaste konstruktionerna.
+Du kan luta dig mot [guiden](guide/kom-igang-med-bash) där du hittar beskrivningar om de vanligaste konstruktionerna.
 
 
 
