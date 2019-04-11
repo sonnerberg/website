@@ -2,9 +2,10 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2016-02-18": (B, mos) Förtydliga att configfilen skall sparas i kursrepot.
-  "2015-06-29": (A, mos) Första utgåvan i samband med kursen linux.
-updated: "2015-06-29 10:03:52"
+    "2019-04-05": (C, lew) Uppdatering inför HT19.
+    "2016-02-18": (B, mos) Förtydliga att configfilen skall sparas i kursrepot.
+    "2015-06-29": (A, mos) Första utgåvan i samband med kursen linux.
+updated: "2019-04-05 10:03:52"
 created: "2015-06-29 10:03:34"
 ...
 Skapa en webbplats på en Apache Virtual Host
@@ -19,7 +20,7 @@ Fixa iordning en webbplats med en Apache Virtual Host. Du får dels konfigurera 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom guiden "[Installera webbplatser med Apache Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)" och guiden "[Kom igång med SSH-nycklar](kunskap/kom-igang-med-ssh-nycklar)".
+Du har jobbat igenom guiden "[Installera webbplatser med Apache Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)" och guiden "[Kom igång med SSH-nycklar](guide/kom-igang-med-ssh/kom-igang-med-ssh-nycklar)".
 
 
 
@@ -28,7 +29,7 @@ Introduktion {#intro}
 
 De filer du skapar och använder i denna uppgiften skall du spara i ditt kursrepo i katalogen `me/kmom02/vhost`. De används för att redovisa uppgiften.
 
-Skapa en fil, `log.txt`, och lägg den i katalogen ovan. 
+Skapa en fil, `log.txt`, och lägg den i katalogen ovan.
 
 I vissa uppgifter förutsätts att du genomför arbetet på din lokala arbetsstation och använder rsync över ssh för att föra över filerna till servern.
 
@@ -41,7 +42,7 @@ Krav {#krav}
 
 1. Använd rsync över ssh för att kopiera din me-sida från `me/redovisa` och lägg den i den virtuella hostens webroot. Skriv kommandot för rsync i din loggfil.
 
-1. Öppna en terminal, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen. 
+1. Öppna en terminal, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen.
 
 1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`. Spara bilden i formatet PNG och använd små bokstäver i filnamnet.
 
@@ -52,7 +53,7 @@ Krav {#krav}
 dbwebb publish vhost
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 

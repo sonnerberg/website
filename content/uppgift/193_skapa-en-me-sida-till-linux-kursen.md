@@ -4,6 +4,7 @@ category:
     - webbprogrammering
     - kursen linux
 revision:
+    "2019-04-05": (C, lew) Uppdatering inför HT19
     "2017-12-21": (B, mos) Kopierade upplägget från javascript1.
     "2015-06-24": (A, mos) Första utgåvan i samband med kursen linux.
 ...
@@ -31,6 +32,8 @@ I din me-sida skall du samla redovisningstexter och du länka till de uppgifter 
 Du kan testa hur me-sidan bör fungera, genom att öppna din exempel-katalog i kursrepot under `example/redovisa`.
 
 Du kan bygga en mer avancerad me-sida om du vill, det går bra. Mallen finns med för de som vill ha en enkel me-sida.
+
+Senare i kursen är det valfritt hur man vill göra sin me-sida. Då är det fritt fram att byta språk men för stunden kör vi en enkel html-sida.
 
 
 
