@@ -5,6 +5,7 @@ category:
     - phpunit
     - kursen oophp
 revision:
+    "2019-04-12": "(B, mos) Bort referenser till andra kodbaser."
     "2018-04-03": "(A, mos) Första utgåvan i samband med oophp version 4."
 ...
 Kom igång med PHPUnit
@@ -92,7 +93,7 @@ I katalogen finns en [README.md](https://github.com/dbwebb-se/oophp/tree/master/
 
 De enheter du testar är de klasser som finns i din src-katalog. I vårt fall är alltså enheten lika med klassen. Enhetstestning blir testning av våra klasser.
 
-Tänk på att det finns en hel del kod som (normalt) inte omfattas av enhetstester. Det kan vara kod du skriver i frontkontroller, sidkontrollers, konfigurationsfiler och templatefiler för vyer. I en perfekt värld vill man testa all kod, men enhetstestning löser inte allt. 
+Tänk på att det finns en hel del kod som (normalt) inte omfattas av enhetstester. Det kan vara kod du skriver i frontkontroller, sidkontrollers, konfigurationsfiler och templatefiler för vyer. I en perfekt värld vill man testa all kod, men enhetstestning löser inte allt.
 
 
 
@@ -124,38 +125,14 @@ När du gör negativa tester och framkallar exceptions, lägg dem i egna testkla
 
 
 
-### Använd dina egna klasser {#egna}
-
-Du kan lösa uppgiften genom att använda den koden som bifogas. Det är en tillräcklig utmaning. Men du får gärna ta din egen kod från Guess och använda den som testobjekt istället.
-
-Jag gissar att dina egna versioner av spelet (GET, POST, SESSION) delar koden för klasserna, det vill säga att spelkärnan finns i samma klasser som delas mellan index-filerna för GET, POST och SESSION. Oavsett vad, se om du kan göra alla dina klasser testbara. Förhoppningsvis innehåller inte dina klasser några spår av de globala variablerna `$_GET, $_POST, $_SESSION`, det gör dem svårare att testa. Den koden bör du lägga i index-filerna.
-
-Om du vill ha mer kod att öva att skriva testfall mot så kan du använda de klasserna som rör tärningen, antingen från guiden eller från uppgiften om 100-spelet.
-
-Skriv om koden för att göra den mer testbar? Om du stöter på saker i din egna kod som inte är testbara så kan du överväga att göra refaktorering på de delarna i din klass, eller iallafall allvarligt fundera över varför de delarna inte är testbara.
-
-
-
-
 Krav {#krav}
 -----------------------
 
 1. Skriv testfall så att du når 100% kodtäckning, exklusive de kodrader som kastar exception.
 
-1. Gör en ny testklass `test/Guess/GuessExceptionTest.php` för att testa att exception kastas. När du är klar bör du ha 100% kodtäckning på alla filer i src-katalogen.
+1. Gör en ny testklass, till exempel `test/Guess/GuessExceptionTest.php`, för att testa att exception kastas. När du är klar bör du ha 100% kodtäckning på alla filer i src-katalogen.
 
-1. När du är klar så gör du `make test` för att kontrollera att din test suite fungerar och sedan gör du en `dbwebb publish`.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Gör följande extrauppgifter om du har tid och lust.
-
-1. Använd din egen Guess-kod som bas för uppgiften.
-
-1. Kopiera in klasserna för `Dice*` och skriv testfall för dem.
+1. När du är klar så gör du `make test` för att kontrollera att din test suite fungerar och sedan gör du en `dbwebb validate`.
 
 
 
