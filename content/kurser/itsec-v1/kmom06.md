@@ -61,6 +61,8 @@ Läsanvisningar: Ja. Bifogat finns läsmaterial för riskanalys.
 
 Övningar: Ja. Bygg ett antal test fall för existerande kod.
 
+https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+
 
 
 ### Uppgifter {#uppgifter}
