@@ -22,9 +22,7 @@ Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Skriv ett stycke om 15-30 meningar under respektive kursmoment i din me-app under länken `#report` enligt följande.
-
-Lägg din redovisningstext i din me-app, dvs. i katalogen `me/redovisa`. I din me-app ska det finnas en mithril vy Report där du skriver dina redovisningstexter. Du fyller på med redovisningstexter löpande för varje kursmoment.
+Lägg din redovisningstext i din me-app, dvs. i katalogen `me/redovisa`. I din me-app ska det finnas en vy för redovisning där du skriver dina redovisningstexter. Du fyller på med redovisningstexter löpande för varje kursmoment.
 
 
 
