@@ -56,5 +56,5 @@ $ docker push username/imagename:mytag
 När du sedan går in på [https://hub.docker.com/](https://hub.docker.com/) kommer du se din image uppladdad och taggad. För att använda den på tex en annan dator kan du köra:
 
 ```
-$ docker run username/imagename:mytag
+$ docker run -it username/imagename:mytag
 ```

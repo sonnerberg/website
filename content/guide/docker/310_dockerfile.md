@@ -19,7 +19,7 @@ FROM debian:stretch-slim
 
 ```
 
-Det var det...Om vi skulle bygga den här imagen kommer den att utgå ifrån imagen *debian:stretch-slim*. och skapa en ny image åt oss. Vi vill ju gärna ge vår egna image ett namn. Vi lägger på flaggan `-t` (tag):
+Det var det...Om vi skulle bygga den här imagen kommer den att utgå ifrån imagen *debian:stretch-slim*, tack vare nyckelordet `FROM`, och skapa en ny image åt oss. Vi vill ju gärna ge vår egna image ett namn. Vi använder build-kommandot och lägger på flaggan `-t`:
 
 
 ```bash

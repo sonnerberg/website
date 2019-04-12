@@ -2,8 +2,9 @@
 author: mos
 category: unix
 revision:
-  "2015-08-04": (A, mos) Första utgåvan för linux kursen.
-updated: "2015-08-04 10:01:10"
+    "2019-04-08": (B, lew) Uppdatering inför HT19.
+    "2015-08-04": (A, mos) Första utgåvan för linux kursen.
+updated: "2019-04-08 10:10:10"
 created: "2015-08-04 10:00:44"
 ...
 Skapa Bash-skript med options, command och arguments
@@ -13,7 +14,7 @@ Skapa Bash-skript med options, command och arguments
 
 För att effektivisera sitt arbetsflöde som programmerare, i en server eller Linux-miljö, så är det bra att kunna de kommandon som finns tillgängliga. När man vill göra flera kommandon på rad så samlar man dem i ett skript.  
 
-För att gå ytterligare ett steg längre så kan man bygga upp skriptet som ett program som kan ta *options*, kommandon (*commands*) och argument till dessa kommandon. 
+För att gå ytterligare ett steg längre så kan man bygga upp skriptet som ett program som kan ta *options*, kommandon (*commands*) och argument till dessa kommandon.
 
 <!--more-->
 
@@ -28,20 +29,12 @@ Ett kommandoradsprogram i Bash {#intro}
 
 ###Ladda ned {#down}
 
-I [GitHub-repot för linux-kursen](https://github.com/mosbth/linux) finns ett exempelprogram som heter [`bash-cli`](https://github.com/mosbth/linux/blob/master/example/bash/cli-with-options/bash-cli). Programmet visar en grundläggande struktur som kan användas för att skapa kommandoradsprogram med Bash. 
+I [GitHub-repot för vlinux-kursen](https://github.com/dbwebb-se/vlinux/) finns ett exempelprogram som heter [`bash-cli`](https://github.com/dbwebb-se/vlinux/blob/master/example/bash/cli-with-options/bash-cli.bash). Programmet visar en grundläggande struktur som kan användas för att skapa kommandoradsprogram med Bash.
 
 Om du redan har klonat kursrepot så finner du exempelprogrammet i följande katalog.
 
 ```bash
-$ cd linux/example/bash/cli-with-options/
-```
-
-Om du vill ladda ned skriptet, utan att klona repot, kan du göra så här.
-
-```bash
-$ wget https://raw.githubusercontent.com/mosbth/linux/master/example/bash/cli-with-options/bash-cli
-$ chmod 755 bash-cli
-$ ./bash-cli
+$ cd vlinux/example/bash/cli-with-options/
 ```
 
 
@@ -50,7 +43,8 @@ $ ./bash-cli
 
 Låt oss se hur skriptet fungerar och hur dess kod ser ut. Vi börjar med ett visuellt exempel när vi provkör kommandot.
 
-[ASCIINEMA src="24463"]
+<!-- [ASCIINEMA src="24463"] -->
+[ASCIINEMA src="239519"]
 
 
 
@@ -74,12 +68,12 @@ Det var allt som programmet klarade av, låt oss nu ser hur koden bakom ser ut.
 En mall för ett kommandoradsprogram {#mall}
 --------------------------------------
 
-Vi kikar på koden i `bash-cli`, uppifrån och ned.
+Vi kikar på koden i `bash-cli.bash`, uppifrån och ned.
 
 De första raderna är en [*shebang*](https://en.wikipedia.org/wiki/Shebang_(Unix)) följt av några kommentarer som berättar vad skriptet handlar om.
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # A template for creating command line scripts taking options, commands
 # and arguments.
@@ -102,7 +96,7 @@ VERSION="1.0.0"
 
 Dels är det namnet på skriptet och dels dess version.
 
-Härefter följer ett par funktioner som används för att skriva ut hjälptext och information om versionen. 
+Härefter följer ett par funktioner som används för att skriva ut hjälptext och information om versionen.
 
 Först funktionen som skriver ut hjälptexten.
 
@@ -125,7 +119,7 @@ function usage
 "  --help, -h     Print help."
 "  --version, -v  Print version."
     )
-    
+
     printf "%s\n" "${txt[@]}"
 }
 ```
@@ -145,7 +139,7 @@ function badUsage
 "For an overview of the command, execute:"
 "$SCRIPT --help"
     )
-    
+
     [[ $message ]] && printf "$message\n"
 
     printf "%s\n" "${txt[@]}"
@@ -177,7 +171,7 @@ function version
 }
 ```
 
-Här kan det tyckas vara lite överkurs med en array för texten som bara är en rad lång. Det blev så för att göra denna funktionen på samma sätt som de andra funktionerna. 
+Här kan det tyckas vara lite överkurs med en array för texten som bara är en rad lång. Det blev så för att göra denna funktionen på samma sätt som de andra funktionerna.
 
 Funktionens body hade kunnats skrivas enklare, ungefär så här.
 
@@ -190,6 +184,7 @@ echo "$SCRIPT version $VERSION"
 ```
 
 När vi nu fortsätter så hoppar vi till sista delen av programmet.
+
 
 
 Kontrollera alla argument {#argument}
@@ -223,13 +218,13 @@ do
 done
 ```
 
-Den inbyggda variabeln `$#` berättar antalet argument och i varje loop testas det första argumentet `$1` i listan av argument. 
+Den inbyggda variabeln `$#` berättar antalet argument och i varje loop testas det första argumentet `$1` i listan av argument.
 
-I case-satsen kollas om argumentet är känt. I första delen kontrolleras om argumentet till mitt skript är ett *option* som matchar `--help`, `-h`, `--version` eller `-v`. 
+I case-satsen kollas om argumentet är känt. I första delen kontrolleras om argumentet till mitt skript är ett *option* som matchar `--help`, `-h`, `--version` eller `-v`.
 
 Det är alltså mitt skript så tar in argumenten. Sedan tolkas de argumenten och skriptet bestämmer om de är `options`, `commands` eller `arguments`. De som börjar med ett minus-tecken kallar jag options. (Du kan läsa kort om [varför det finns två typer av options](http://superuser.com/questions/174564/why-are-there-short-and-long-alternatives-for-command-line-options), med ett eller två minus-tecken.)
 
-Om det blir en träff så anropas en funktion som antingen skriver ut versionnumret eller hjälptexten, sedan avbryts programmet med en positiv exit-kod som är 0. 
+Om det blir en träff så anropas en funktion som antingen skriver ut versionnumret eller hjälptexten, sedan avbryts programmet med en positiv exit-kod som är 0.
 
 Om man skickar in ett argument som inte känns igen så skrivs ett felmeddelande ut med hjälp av funktionen `badUsage` och exit-koden blir 1 som i Bash-sammanhang betraktas som en felkod.
 
@@ -242,12 +237,12 @@ do
     case "$1" in
 
 # more code...
-        
+
         *)
             badUsage "Option/command not recognized."
             exit 1
         ;;
-        
+
     esac
 done
 
@@ -275,7 +270,7 @@ do
             app-$command $*
             exit 0
         ;;
-        
+
 # more code...
 
     esac
@@ -284,7 +279,7 @@ done
 
 Här väljer jag en variant att tolka alla möjliga kommandon på en del av case-satsen. Om det är en träff, till exempel på kommandot `calendar`, så anropas funktionen `app-calendar` och eventuella kvarvarande argument `$*` bifogas till den funktionen.
 
-Jag har valt detta sättet att namnge funktionen, med ett prefix av `app-`, för att göra min egen kod tydlig och organisera den. 
+Jag har valt detta sättet att namnge funktionen, med ett prefix av `app-`, för att göra min egen kod tydlig och organisera den.
 
 För varje kommando skriver jag alltså en funktion som anropas och hanterar varje kommando. Så här ser funktionen `app-calendar` ut.
 
@@ -296,10 +291,10 @@ För varje kommando skriver jag alltså en funktion som anropas och hanterar var
 function app-calendar
 {
     local events="$1"
-    
+
     echo "This is output from command3, showing the current calender."
     cal
-    
+
     if [ "$events" = "events" ]; then
         echo
         calendar
@@ -314,7 +309,7 @@ Funktionen skriver ut calendern via det externa kommandot `cal` och en lista på
 Stöd för fler kommandon {#fler}
 --------------------------------------
 
-Allteftersom skriptet blir större och större så blir det enkelt att fylla på med nya kommandon. Det som behövs är en funktion `app-commandx` samt en rad i case-satsen som motsvarar `commandx`. 
+Allteftersom skriptet blir större och större så blir det enkelt att fylla på med nya kommandon. Det som behövs är en funktion `app-commandx` samt en rad i case-satsen som motsvarar `commandx`.
 
 Sen får man inte glömma uppdatera funktionen `usage` också, så kommandot dokumenteras. Det ör alltid lätt att glömma bort vad man gjort så lika bra att dokumentera vad man gjort och hur man tänkte att det skulle användas.
 
@@ -328,7 +323,3 @@ Sammantaget blir skriptet `bash-cli` en mall och struktur för kommandoradsprogr
 Ibland är det kanske inte uppenbart vad som bör vara just *options*, *commands* och *arguments*. Men låt logiken styra och pröva dig fram. Lär dig hur andra program är uppbyggda så kommer du att se en struktur som är vanligt använd bland liknande program. Det är bra att följa en liknande struktur, då känner användaren igen sig.
 
 Har du frågor kring skriptet så finns det en särskild [forumtråd kopplad till denna artikeln](t/4349).
-
-
-
-

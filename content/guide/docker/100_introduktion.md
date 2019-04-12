@@ -14,7 +14,7 @@ Syftet med denna guide är att ge en introduktion till virtualiseringstekniken D
 
 Vi skall komma igång med virtualiseringsmiljön Docker och se hur den kan användas som stöd för utveckling och test av programvara.
 
-Du kommer se hur du kan jobba med images och kontainrar samt se hur du kan skapa egna images och underhålla dem i ett Git-repo.
+Du kommer se hur du kan jobba med images och kontainrar samt se hur du kan skapa egna images och underhålla dem.
 
 <!--more-->
 
@@ -23,4 +23,4 @@ Du kommer se hur du kan jobba med images och kontainrar samt se hur du kan skapa
 Förkunskaper {#forkunskaper}
 -----------------------------------
 
-Guiden förutsätter att du ...
+Guiden förutsätter att du har [installerat Docker](kunskap/installera-virtualiseringsmiljon-docker) och att du verifierat installationen.

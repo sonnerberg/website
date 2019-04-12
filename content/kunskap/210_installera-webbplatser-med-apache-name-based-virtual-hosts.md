@@ -2,8 +2,9 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2015-07-03": (A, mos) Första utgåvan.
-updated: "2015-07-03 13:37:11"
+    "2019-04-05": (B, lew) Uppdatering inför HT19.
+    "2015-07-03": (A, mos) Första utgåvan.
+updated: "2019-04-05 10:39:25"
 created: "2015-06-29 11:55:30"
 ...
 Installera webbplatser med Apache Name-based Virtual Hosts
@@ -24,14 +25,14 @@ Förutsättningar {#pre}
 
 Det förutsätts att du gör installationen på en Debian/Linux-maskin.
 
-Det förutsätts också att du kör din [Debian/Linux i VirtualBox med port forwarding](kunskap/installera-debian-pa-virtualbox#pf). Men principen är densamma, oavsett var din server ligger någonstans.
+Det förutsätts också att du kör din [Debian/Linux i VirtualBox med port forwarding](guide/kom-igang-med-ssh/logga-in-med-ssh#pf). Men principen är densamma, oavsett var din server ligger någonstans.
 
 
 
 Om Apache Virtual Hosts {#om}
 -------------------------------------------
 
-Apache Virtual Hosts innebär att man kan köra många webbplatser på en och samma installation av Apache. Det finns en variant som heter Apache Name-based Virtual Hosts som innebär att samma installation av Apache kan husera två webbplatser med helt olika domännamn.
+Apache Virtual Hosts innebär att man kan köra många webbplatser på en och samma installation av Apache. Det finns en variant som heter Apache Name-based Virtual Hosts som innebär att samma installation av Apache kan husera två (eller fler) webbplatser med helt olika domännamn.
 
 Du kan kika kort på [Apaches dokumentation av Virtual Host](http://httpd.apache.org/docs/current/vhosts/) och på den [delen som handlar om Name-based Virtual Hosts](http://httpd.apache.org/docs/current/vhosts/name-based.html).
 
@@ -85,14 +86,14 @@ Låt oss nu skapa en Apache Name-based Virtual Host. Ponera att vi har en kund o
 
 Det finns en katalog `/etc/apache2/sites-available` där man lägger konfigfilerna för de virtuella hostar man har. Sedan *enablar* man de virtuella hostar som Apache skall använda. Då länkas filerna i katalogen `sites-enabled`.
 
-I katalogen `sites-available` ligger en konfigfil som man kan utgå ifrån. 
+I katalogen `sites-available` ligger en konfigfil som man kan utgå ifrån.
 
-Följ dessa steg för att enabla en virtuell namnbaserad host för `linux.dbwebb.se`. Jag använder vim som editor, men du kan använda nano om du tycker det är enklare.
+Följ dessa steg för att enabla en virtuell namnbaserad host för `linux.dbwebb.se`. Jag använder nano som editor.
 
 ```bash
 cd /etc/apache2/sites-available
 sudo cp 000-default.conf linux.dbwebb.se.conf
-sudo vim linux.dbwebb.se.conf
+sudo nano linux.dbwebb.se.conf
 ```
 
 Den färdiga filen `linux.dbwebb.se.conf` kan se ut så här för min egen användare mos. Du kan behöva ändra sökvägarna så de passar till din användare.
@@ -178,7 +179,7 @@ En variant av konfigfilen skulle kunna se ut så här, om man väljer att använ
 <VirtualHost *:80>
     Define site linux.dbwebb.se
     Define path /home/mos/vhosts
-    
+
     ServerAdmin mos@dbwebb.se
 
     ServerName ${site}
@@ -215,7 +216,7 @@ Men nu har vi en utvecklingsmiljö med en server i VirtualBox som använder port
 I mitt fall, så kommer jag åt webbservern, på min server, via adressen `http://localhost:8080`. Jag kan nu lägga till ett entry i min egen fil för datornamn. Filen heter `/etc/hosts`, på min Debian/Linux desktop dator, och jag lägger till ett nytt lokalt datornamn i filen så här.
 
 ```text
-sudo vim /etc/hosts
+sudo nano /etc/hosts
 ```
 
 Följande rad lägger du till i filen.
