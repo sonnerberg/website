@@ -38,6 +38,29 @@ Läs & Studera  {#lasanvisningar}
 *(ca: 2-4 studietimmar)*
 
 
+<!--
+
+* Static keyword
+* (late static binding)
+* Class abstraction
+* Interface
+* Trait
+
+* Comparing objects
+* Object cloning
+* Objects and references
+* Objects and serialization
+
+* type hinteing with classes
+* Klass hierarki med exceptions
+
+* Kontroller
+* Enhetstestning av kontroller
+
+
+-->
+
+
 
 ### Videor {#videor}
 

@@ -84,6 +84,9 @@ Kika igenom följande lästips om UML och modellering, ägna tid åt dem om du f
 
 Följande handlar om att automatgenerera dokumentation baserad på kommentarer i koden. Det är bakgrundsinformation till en av uppgifterna nedan.
 
+1. I dokumentet [PHP The Right Way](http://www.phptherightway.com/), finns en sektion som berör dokumentering av koden.
+    * [PHP The Right Way: Documenting your Code](https://phptherightway.com/#documenting)
+
 1. Bekanta dig kort med verktyget [phpDocumentor](https://www.phpdoc.org/) som kan automatgenerera dokumentation av din kod, genom att bland annat läsa informationen från dina docblock kommentarer. Läs översiktligt så att de är medveten om vad verktyget kan göra.
 
 1. Kika snabbt och översiktligt igenom [referensen till PHPDoc](https://docs.phpdoc.org/references/phpdoc/), det ger dig en bas för information om hur du skriver dina egna docblock kommentarer.
