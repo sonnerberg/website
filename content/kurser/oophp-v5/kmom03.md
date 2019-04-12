@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "img/snapvt19/oophp-kmom03-flash.svg"
 author:
     - mos
     - lew
