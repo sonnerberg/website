@@ -1,0 +1,79 @@
+---
+author: lew
+revision:
+    "2019-03-14": "(A, lew) Första versionen."
+...
+Apache2
+=======================
+
+Vi har redan sett hur vi installerar Apache i Debian. För att få igång det i Docker gör vi i stort sett likadant, fast med hjälp av kommandot `RUN`.
+
+
+
+### Installera Apache2 {#install-apache2}
+
+Vi börjar med att kika på hur vi installerar Apache.
+
+```
+FROM debian:buster-slim
+
+RUN apt-get update && \
+    apt-get -y apache2
+
+CMD apachectl -D FOREGROUND
+```
+
+Med nyckelordet `CMD` talar vi om vilket kommando som ska köras vid uppstart. I detta fallet vill vi starta servern.
+
+Vi kan i `docker run`-kommandot specificera vilken port vi vill mappa mot Apache:
+
+`$ docker run -it -p 8080:80 username/imagename:tag`
+
+Här talar vi om att vi vill mappa den lokala porten 8080 till konatinerns port 80, vilket är default för webbservern. Om det enbart hade varit en annan Docker-kontainer som behövt access till servern hade vi kunnat skippa flaggan -p i `docker run`-kommandot och använt `EXPOSE 80` i Docker-filen istället. Men vi vill u kunna nå den via webbläsaren och behöver då använda flaggan.
+
+Vi har dock inga filer att visa eller tillgång till några. Vi tittar på hur vi kan skicka in våra egna filer på olika sätt.
+
+
+
+### Apache's default mapp {#apache-default-mapp}
+
+Som bekant servar Apache filerna från `/var/www/html/`. Om vi inte vill ändra i konfigurationsfilen kan vi enbart lägga vår kod i den mappen, förutsatt att vi har mappen `example-site` lokalt:
+
+```
+FROM debian:buster-slim
+
+RUN apt-get update && \
+    apt-get -y install nano \
+    apache2
+
+COPY example-site/ /var/www/html/
+
+CMD apachectl -D FOREGROUND
+```
+
+Nu når vi sidan i webbläsaren med `localhost:8080`.
+
+
+
+### Config-fil {#config-file}
+
+I början av kursen jobbade vi med Apache's konfigurationsfil. Ett alternativ är att ha den lokalt och sedan byta ut den mot den vi utgick från när vi gjorde detta i VirtualBox, `000-default.conf`. Ibland räcker inte Apache's egna fil, utan vi vill såklart ha kontroll över den själva.
+
+I exempelmappen finns en mall för en [konfigurationsfil](https://github.com/dbwebb-se/vlinux/blob/master/example/apache/config-template.conf). Det förutsätts även att du har en lokal mapp med samma namn som den definierade `site`-variabeln, där någon index.html-fil finns.
+
+
+Dockerfile:
+
+```
+FROM debian:buster-slim
+
+RUN apt-get update && \
+    apt-get -y apache2
+
+COPY example-site/ /var/www/html/
+COPY ./example-site.conf /etc/apache2/sites-enabled/000-default.conf
+
+CMD apachectl -D FOREGROUND
+```
+
+Här kopierar vi först in vår kod och lägger den i default-mappen (`/` tar innehållet i mappen), där Apache automatiskt servar sina filer. Sedan kopierar vi in vår egna konfigfil och byter ut default-sidan som visas.

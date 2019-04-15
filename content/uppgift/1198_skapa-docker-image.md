@@ -30,8 +30,8 @@ Du ska skapa en Docker image där det ska gå att köra scriptet som ligger i ma
 
 
 [INFO]
-**TIPS.**
-Använd [guiden för Docker](guide/docker). Du bör klara dig med informationen fram till och med [Docker Hub](guide/docker/docker-hub).
+**TIPS:**
+ Använd [guiden för Docker](guide/docker). Du bör klara dig med informationen fram till och med [Docker Hub](guide/docker/docker-hub).
 [/INFO]
 
 
@@ -51,7 +51,8 @@ Krav {#krav}
 
 1. Publicera imagen till Docker Hub.
 
-1. Skapa ett script i `script/kmom03.bash` som kör din kontainer.
+1. Skapa ett script `script/kmom03.bash` som kör din kontainer med rätt namn och tagg.
+
 
 ```bash
 # Flytta till kurskatalogen
