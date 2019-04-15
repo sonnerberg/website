@@ -55,15 +55,15 @@ Krav {#krav}
 | `-h, --help`          | Skriv ut en hjälptext om hur programmet används. |
 | `-v, --version`       | Visar nuvarande version av programmet. |
 
-1. Följande *argument* ska fungera:
+7. Följande *argument* ska fungera:
 
-| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Vad skall hända |
+| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Vad skall hända |
 |-----------------------|-----------------|
 | `cal`          | Skriv ut en kalender. |
 | `greet`       | Skriv ut en hälsningsfras till den nuvarande användaren.|
 | `loop <min> <max>`| Skriv ut siffrorna mellan &lt;min&gt; och &lt;max&gt; med hjälp av en forloop. |
 | `lower <n n n...>`| Skriv ut alla siffror som är mindre än 42. Antalet inskickade tal ska inte spela någon roll.|
-| `reverse <random sentence>`| Skriv ut meningen baklänges (ecnetnes modnar).|
+| `reverse <random sentence>`| Skriv ut en mening baklänges (ecnetnes modnar).|
 | `all`| Kör samtliga funktioner i följd. Värdena väljer du själv. Jobba gärna på att få till en trevlig presentation.|
 
 

@@ -1,0 +1,34 @@
+---
+author: lew
+revision:
+    "2019-04-12": "(A, lew) Första versionen."
+...
+Volymer
+=======================
+
+Istället för att kopiera in datan och bygga om imagen varje gång vi ändrar något kan vi använda volymer. En lokal mapp kan då mappas mot en virtuell mapp inuti kontainern. Vi kikar på hur det ser ut med en enkel sida.
+
+
+### Installera php7.3 {#installera-php}
+
+Vi installerar php7.3 och testar om det fungerar.
+
+```
+FROM debian:buster-slim
+
+RUN apt-get update && \
+    apt-get -y install apache2 \
+    php7.3 \
+    libapache2-mod-php7.3
+
+RUN a2enmod php7.3
+
+RUN mv /var/www/html/index.html /var/www/html/index.php && \
+    echo "<?php phpinfo();" > /var/www/html/index.php
+
+CMD apachectl -D FOREGROUND
+```
+
+Först installerar vi php7.3 och lägger till det till "enabled modules".
+
+Det sista `RUN`-kommandot byter filändelse på default-filen och sedan fyller jag på filen med `phpinfo()` som visar php-miljön på servern. Kika via `localhost:8080` i webbläsaren.
