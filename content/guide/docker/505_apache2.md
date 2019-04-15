@@ -25,11 +25,13 @@ CMD apachectl -D FOREGROUND
 
 Med nyckelordet `CMD` talar vi om vilket kommando som ska köras vid uppstart. I detta fallet vill vi starta servern.
 
+Vi bygger imagen med `$ docker build -t username/imagename:tag .`.
+
 Vi kan i `docker run`-kommandot specificera vilken port vi vill mappa mot Apache:
 
 `$ docker run -it -p 8080:80 username/imagename:tag`
 
-Här talar vi om att vi vill mappa den lokala porten 8080 till konatinerns port 80, vilket är default för webbservern. Om det enbart hade varit en annan Docker-kontainer som behövt access till servern hade vi kunnat skippa flaggan -p i `docker run`-kommandot och använt `EXPOSE 80` i Docker-filen istället. Men vi vill u kunna nå den via webbläsaren och behöver då använda flaggan.
+Här talar vi om att vi vill mappa den lokala porten 8080 till kontainerns port 80, vilket är default för webbservern. Om det enbart hade varit en annan Docker-kontainer som behövt access till servern hade vi kunnat skippa flaggan -p i `docker run`-kommandot och använt `EXPOSE 80` i Docker-filen istället. Men vi vill ju kunna nå den via webbläsaren och behöver då använda flaggan.
 
 Vi har dock inga filer att visa eller tillgång till några. Vi tittar på hur vi kan skicka in våra egna filer på olika sätt.
 
@@ -43,8 +45,7 @@ Som bekant servar Apache filerna från `/var/www/html/`. Om vi inte vill ändra 
 FROM debian:buster-slim
 
 RUN apt-get update && \
-    apt-get -y install nano \
-    apache2
+    apt-get -y apache2
 
 COPY example-site/ /var/www/html/
 
@@ -76,4 +77,4 @@ COPY ./example-site.conf /etc/apache2/sites-enabled/000-default.conf
 CMD apachectl -D FOREGROUND
 ```
 
-Här kopierar vi först in vår kod och lägger den i default-mappen (`/` tar innehållet i mappen), där Apache automatiskt servar sina filer. Sedan kopierar vi in vår egna konfigfil och byter ut default-sidan som visas.
+Här kopierar vi först in vår kod och lägger den i default-mappen, där Apache automatiskt servar sina filer. Sedan kopierar vi in vår egna konfigfil och byter ut konfigurationsfilen som Apache skapat, rakt in i `sites-enabled/`.

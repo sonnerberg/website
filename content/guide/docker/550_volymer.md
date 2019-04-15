@@ -9,26 +9,35 @@ Volymer
 Istället för att kopiera in datan och bygga om imagen varje gång vi ändrar något kan vi använda volymer. En lokal mapp kan då mappas mot en virtuell mapp inuti kontainern. Vi kikar på hur det ser ut med en enkel sida.
 
 
-### Installera php7.3 {#installera-php}
+### Utgångsläge {#utgangslage}
 
-Vi installerar php7.3 och testar om det fungerar.
+Utgångsläget är att vi har en mapp med filerna som ska servas, `example-site/`. I den har vi en index-fil. Mappen `example-site/` ska mappas mot `/var/www/html/` i servern.
+
+
+
+### Dockerfile {#dockefile}
+
+Dockerfilen kan se ut "som vanligt". Vi sköter volymen när vi kör kontainern.
+
+Dockerfile:
 
 ```
 FROM debian:buster-slim
 
 RUN apt-get update && \
-    apt-get -y install apache2 \
-    php7.3 \
-    libapache2-mod-php7.3
-
-RUN a2enmod php7.3
-
-RUN mv /var/www/html/index.html /var/www/html/index.php && \
-    echo "<?php phpinfo();" > /var/www/html/index.php
+    apt-get -y apache2
 
 CMD apachectl -D FOREGROUND
 ```
 
-Först installerar vi php7.3 och lägger till det till "enabled modules".
+Vi bygger imagen...
+```
+$ docker build -t username/imagename:tag .
+```
 
-Det sista `RUN`-kommandot byter filändelse på default-filen och sedan fyller jag på filen med `phpinfo()` som visar php-miljön på servern. Kika via `localhost:8080` i webbläsaren.
+... och kör den med:
+```
+$ docker run -p 8083:80 -v $(pwd)/example-site/:/var/www/html/ username/imagename:tag
+```
+
+`$(pwd)` returnerar sökvägen till den mappen vi står i. Använder du Windows (cmd) kan du istället använda `%cd%` för att få fram sökvägen. Vi pekar sedan mappen `example-site/` mot den interna `/var/www/html/`. 
