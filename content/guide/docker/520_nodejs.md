@@ -112,6 +112,6 @@ Nu har vi allt på plats för att bygga vår image...
 
 ...och köra den:
 
-`$ docker run -it -p 1337:1337 express-test:v1`
+`$ docker run -p 1337:1337 express-test:v1`
 
 Nu kan vi återigen peka webbläsaren mot `localhost:1337`.
