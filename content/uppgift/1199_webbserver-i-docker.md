@@ -7,6 +7,7 @@ En webbserver i Docker
 ===================================
 
 Du skall skapa en Docker image och publicera den till Docker Hub.
+Imagen ska vara en webbserver som ska kunna svara på en uppsättning routes och returnera JSON.
 
 <!--more-->
 
@@ -15,9 +16,7 @@ Du skall skapa en Docker image och publicera den till Docker Hub.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har [installerat Docker](kunskap/installera-virtualiseringsmiljon-docker) som en del av labbmiljön. Du har även skapat ett konto på Docker Hub.
-
-Du har gjort uppgifterna "[Lab2](uppgift/linux-lab-2-sok-i-en-logg-fil)" och [Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments).
+Du har läst igenom guiden [Hantera applikationer](guide/docker/hantera-applikationer) och valt ett språk du vill använda.
 
 Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash.
 
@@ -26,13 +25,7 @@ Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash.
 Introduktion {#intro}
 -----------------------
 
-Du ska skapa en Docker image där det ska gå att köra scriptet som ligger i mappen `script`. Imagen ska sedan publiceras på Docker Hub.
-
-
-[INFO]
-**TIPS:**
- Använd [guiden för Docker](guide/docker). Du bör klara dig med informationen fram till och med [Docker Hub](guide/docker/docker-hub).
-[/INFO]
+I exempelmappen finns en [JSON-fil](https://github.com/dbwebb-se/vlinux/tree/master/example/json) som ska servas med hjälp av en router, byggd i språket du valt. Du väljer själv hur du vill sköta "routingen". Om du vill köra med PHP, finns en [minimal router](https://github.com/dbwebb-se/vlinux/tree/master/example/php-router) i exempelmappen du kan utgå ifrån. Tips finns i README.md-filen
 
 
 
