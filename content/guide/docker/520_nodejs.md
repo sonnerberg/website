@@ -108,10 +108,10 @@ Vi bryter ned händelseförloppet.
 
 Nu har vi allt på plats för att bygga vår image...
 
-`$ docker build -t express-test:v1 .`
+`$ docker build -t username/imagename:tag .`
 
 ...och köra den:
 
-`$ docker run --rm -p 1337:1337 express-test:v1`
+`$ docker run --rm -p 1337:1337 username/imagename:tag`
 
 Nu kan vi återigen peka webbläsaren mot `localhost:1337`.

@@ -33,9 +33,10 @@ Vi ska inte gå in i mapparna/filerna och pilla utan vi använder Dockers CLI oc
 
 Istället för ett id kan vi använda namnet på kontainern. Om vi inte har satt det själva autogenereras ett namn. Hur kan man se den informationen då? Först behöver vi en startad kontainer:
 
-`$ docker run -it debian:stretch:slim`
+`$ docker run --rm -it debian:stretch:slim`
 
-Flaggan `-it` gör att vi får ett interaktivt shell att jobba med. (Se `docker run --help`).
+Flaggan `-it` gör att vi får ett interaktivt shell att jobba med. (Se `docker run --help`).  
+Flaggan `--rm` rensar automatiskt upp efter oss när vi stänger kontainern.
 
 Öppna sedan en ny terminal och kör `$ docker ps`:
 

@@ -25,13 +25,13 @@ CMD apachectl -D FOREGROUND
 
 Med nyckelordet `CMD` talar vi om vilket kommando som ska köras vid uppstart. I detta fallet vill vi starta servern.
 
-Vi bygger imagen med `$ docker build -t imagename:tag .`.
+Vi bygger imagen med `$ docker build -t username/imagename:tag .`.
 
 Vi kan i `docker run`-kommandot specificera vilken port vi vill mappa mot Apache:
 
-`$ docker run --rm -it -p 8080:80 imagename:tag`
+`$ docker run --rm -it -p 8080:80 username/imagename:tag`
 
-Här talar vi om att vi vill mappa den lokala porten 8080 till kontainerns port 80, vilket är default för webbservern. Om det enbart hade varit en annan Docker-kontainer som behövt access till servern hade vi kunnat skippa flaggan -p i `docker run`-kommandot och använt `EXPOSE 80` i Docker-filen istället. Men vi vill ju kunna nå den via webbläsaren och behöver då använda flaggan. Flaggan `--rm` rensar upp lite efter oss när vi tar bort kontainern.
+Här talar vi om att vi vill mappa den lokala porten 8080 till kontainerns port 80, vilket är default för webbservern. Om det enbart hade varit en annan Docker-kontainer som behövt access till servern hade vi kunnat skippa flaggan -p i `docker run`-kommandot och använt `EXPOSE 80` i Docker-filen istället. Men vi vill ju kunna nå den via webbläsaren och behöver då använda flaggan.
 
 Vi har dock inga filer att visa eller tillgång till några. Vi tittar på hur vi kan skicka in våra egna filer på olika sätt.
 
@@ -85,10 +85,10 @@ Här kopierar vi först in vår kod och lägger den i default-mappen, där Apach
 
 Nu har vi allt på plats för att bygga vår image...
 
-`$ docker build -t apache-test:v1 .`
+`$ docker build -t username/imagename:tag .`
 
 ...och köra den:
 
-`$ docker run --rm -p 8080:80 apache-test:v1`
+`$ docker run --rm -p 8080:80 username/imagename:tag`
 
 Nu kan vi peka webbläsaren mot `localhost:8080`.

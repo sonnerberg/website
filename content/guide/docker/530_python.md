@@ -70,10 +70,10 @@ CMD ["app.py"]
 
 Nu har vi allt på plats för att bygga vår image...
 
-`$ docker build -t python-flask-test:v1 .`
+`$ docker build -t username/imagename:tag .`
 
 ...och köra den:
 
-`$ docker run --rm -p 5000:5000 python-flask-test:v1`
+`$ docker run --rm -p 5000:5000 username/imagename:tag`
 
 Nu kan vi peka webbläsaren mot `localhost:5000`.
