@@ -99,7 +99,7 @@ Vi bryter ned händelseförloppet.
 **WORKDIR /server** talar om att vi vill använda en mapp *server/* som startläge i kontainern. Allt vi gör efter utgår från den mappen.  
 **COPY package*.json ./** kopierar in alla filer vars namn börjar med *package* och slutar med *.json* och lägger dem i arbetsmappen.  
 **RUN npm install** kör kommandot som använder package.json och installerar det som behövs, i detta fallet Express.  
-**COPY server/ .** kopierar in innehållet i mappen server/ till arbetsmappen.  
+**COPY server/ .** kopierar in innehållet i mappen *server/* till arbetsmappen.  
 **CMD [ "npm", "start" ]** kör kommandot som startar servern när kontainern bootas upp.
 
 
@@ -112,6 +112,6 @@ Nu har vi allt på plats för att bygga vår image...
 
 ...och köra den:
 
-`$ docker run -p 1337:1337 express-test:v1`
+`$ docker run --rm -p 1337:1337 express-test:v1`
 
 Nu kan vi återigen peka webbläsaren mot `localhost:1337`.

@@ -30,14 +30,21 @@ RUN apt-get update && \
 CMD apachectl -D FOREGROUND
 ```
 
-Vi bygger imagen...
+
+
+### Bygga och köra {#build-n-run}
+
+Nu har vi allt på plats för att bygga vår image...
+
 ```
 $ docker build -t username/imagename:tag .
 ```
 
 ... och kör den med:
+
 ```
 $ docker run -p 8083:80 -v $(pwd)/example-site/:/var/www/html/ username/imagename:tag
 ```
 
-`$(pwd)` returnerar sökvägen till den mappen vi står i. Använder du Windows (cmd) kan du istället använda `%cd%` för att få fram sökvägen. Vi pekar sedan mappen `example-site/` mot den interna `/var/www/html/`. 
+Flaggan -v talar om att vi vill använda volymer. Det sätts i formatet `källa:mål`.  
+`$(pwd)` returnerar sökvägen till den mappen vi står i. Använder du Windows (cmd) kan du istället använda *%cd%* för att få fram sökvägen. Vi pekar sedan mappen `example-site/` mot den interna `/var/www/html/`.

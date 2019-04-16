@@ -17,7 +17,7 @@ Kursen ges hösten 2019 läsperiod 1.
 
 <!--more-->
 
-Nu vet vi hur vi bygger en egen image med hjälp av Docker. Vi har också gått igenom hur vi kan strukturera ett Bash-script som även exekveras inuti en kontainer. Vi tar ett steg till och tittar på hur vi kör en webbserver inuti Docker. I det här kursmomentet får du välja om du vill leka med Apache/php, Python eller JavaScript. Huvudsaken är att du får igång en server med en router som kan serva en JSON-fil.
+Nu vet vi hur vi bygger en egen image med hjälp av Docker. Vi har också gått igenom hur vi kan strukturera ett Bash-script som även exekveras inuti en kontainer. Vi tar ett steg till och tittar på hur vi kör en webbserver inuti Docker. I det här kursmomentet får du välja om du vill leka med Apache/php, Flask/Python eller Nodejs/JavaScript. Huvudsaken är att du får igång en server med en router som kan serva en JSON-fil. Vi jobbar även vidare med Bash - såklart.
 
 <!-- Vi tar ett steg till och tittar på *volymer* i Docker. Än så länge har vi kopierat in datan och då gjort den statisk. När vi utvecklar med hjälp av Docker kan det vara bra att inte behöva bygga om imagen efter vi gjort ändringar. Det kan även vara så att applikationen som utvecklas förlitar sig på en lokal mapp som ska användas, oberoende av var kontainern körs. Till vår hjälp har vi då så kallade volymer. Kortfattat så "mountar" vi en mapp lokalt och delar den delen av filsystemet med kontainern. Vi ska också lära oss att -->
 
