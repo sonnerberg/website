@@ -73,7 +73,7 @@ Validera ditt `commands.bash` script genom att göra följande kommandon i kursk
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate script
+$ dbwebb validate script
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  

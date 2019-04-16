@@ -56,8 +56,8 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate kmom03
-dbwebb publish kmom03
+$ dbwebb validate kmom03
+$ dbwebb publish kmom03
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  

@@ -3,7 +3,7 @@ author: lew
 revision:
     2019-04-11: (A, lew) Första utgåvan inför HT19.
 ...
-En webbserver i Docker
+Bash-script som testar serverns routes
 ===================================
 
 Du skall skapa en Docker image och publicera den till Docker Hub.

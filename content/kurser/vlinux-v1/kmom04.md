@@ -86,14 +86,12 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[sed-labb?](uppgift/something)".
+1. Gör uppgiften "[Webbserver i Docker](uppgift/webbserver-i-docker)". Spara arbetet i mappen `server/`.
 
-1. Gör uppgiften "[Välj ett språk php/js och serva en json fil](uppgift/something)".  
-ska fungera via webbläsaren.
-Motivera valet?
+1. Gör uppgiften "[Bash-script som testar serverns routes](uppgift/curl-docker-server)". Spara arbetet i mappen `/script`.  
 
-1. Gör uppgiften "[Bash-script som curlar serverns routes](uppgift/something)".  
-spara till fil
+<!-- 1. Gör uppgiften "[sed-labb?](uppgift/something)". -->
+
 
 
 
