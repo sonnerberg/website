@@ -67,9 +67,9 @@ Titta på följande:
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden/artikeln "[sed, awk](guide-artikel/sed)".
+1. Läs igenom guiden "[Hantera applikationer](guide/docker/hantera-applikationer)". Välj sedan ett språk du vill använda.
 
-1. Jobba igenom guiden/artikeln "[en router](guide/php-eller-js-eller-python?)".
+1. Läs igenom guiden "[sed, awk](guide-artikel/sed)".
 
 1. Jobba igenom guiden/artikeln "[volymer](guide/volymer-delen)".
 
