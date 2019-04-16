@@ -31,7 +31,7 @@ Login Succeeded
 
 
 
-### Publicera image {#publish-image}
+### Tagga och publicera image {#publish-image}
 
 Vi kan även publicera en image till Docker Hub. Vi kan med fördel då även tagga den, för att kunna separera olika versioner av imagen. Först behöver vi få tag på den aktuella imagens id:
 
@@ -47,7 +47,7 @@ Låt säga att jag vill ha den här versionen på Docker Hub. Jag kan då tagga 
 $ docker tag b805107aed7b username/imagename:mytag
 ```
 
-*username*, *imagename* och *mytag* byter du ut mot dina egna uppgifter. Sedan kan vi pusha den:
+*b805107aed7b*, *username*, *imagename* och *mytag* byter du ut mot dina egna uppgifter. Sedan kan vi pusha den:
 
 ```
 $ docker push username/imagename:mytag
