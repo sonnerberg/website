@@ -51,3 +51,10 @@ Här får vi fram id, image, givet kommando och vilka namn kontainrarna har. På
 ```
 $ docker stop distracted_mclean
 ```
+
+Om vi kör `$ docker images` och ser:
+```
+<none>     <none>     cb3e76fda019     2 weeks ago     87.3MB
+```
+
+så har vi lyckats skapa images som inte är kopplade till någon taggad version (vi kommer till taggning senare). Vi kan rensa lite emellanåt med `docker rmi $(docker images -f "dangling=true" -q)`. Det kallas *Prune dangling images*. Vill vi istället rensa helt kör vi `$ docker system prune -a`. **Vi får då bygga om de images som inte har blivit pushade**. 

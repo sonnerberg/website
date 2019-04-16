@@ -7,8 +7,3 @@ revision:
 ...
 Dockerfile
 =======================
-
-TBD
-
-Glöm ej - Prune dangling images:
-`docker rmi $(docker images -f "dangling=true" -q)`
