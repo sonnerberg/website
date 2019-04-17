@@ -108,7 +108,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vad valde du för språk till servern?
+* Vilken väg valde du för servern?
 * Hur kommer det sig att du valde det?
 * Hänger du med på koncepten kring klient och server?
 * Strukturerade du Bash-scriptet annorlunda jämfört med förra kursmomentet?

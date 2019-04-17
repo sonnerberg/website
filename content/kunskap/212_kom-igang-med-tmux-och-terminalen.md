@@ -51,7 +51,7 @@ Om du har en Mac så använder du Brew.
 brew install tmux
 ```
 
-Om du använder Windows/CyGwin så installerar du med `apt-cyg`.
+Om du använder Windows/Cygwin så installerar du med `apt-cyg`.
 
 ```bash
 apt-cyg install tmux
@@ -75,7 +75,7 @@ man tmux
 
 
 
-<!-- En konfigurationsfil för tmux {#config}
+En konfigurationsfil för tmux {#config}
 -------------------------------------------
 
 Det första vi vill ha är en konfigurationsfil för tmux. Låt oss utgå från en som jag själv använder. Du kan kika på [konfigurationsfilen `.tmux.conf`](https://github.com/mosbth/env/blob/master/.tmux.conf), den ligger på GitHub.
@@ -103,7 +103,7 @@ unbind-key C-b
 bind-key C-a send-prefix
 ```
 
-Du måste alltid trycka prefixet innan tmux svarar. Det är prefixet som gör att tmux lyssnar på dig. -->
+Du måste alltid trycka prefixet innan tmux svarar. Det är prefixet som gör att tmux lyssnar på dig.
 
 
 
@@ -176,7 +176,7 @@ alias tbs='tmux new -s basic'
 alias tb='tmux attach -t basic'
 ```
 
-Varje gång jag loggar in på en maskin för första gången så startar jag en tmux session med `tbs`. Näst agång jag loggar in, kanske från en annan maskin, så återkopplar jag till samma session med `tb`. Enkelt och smidigt. Ett kraftfullt arbetsverktyg.
+Varje gång jag loggar in på en maskin för första gången så startar jag en tmux session med `tbs`. Nästa gång jag loggar in, kanske från en annan maskin, så återkopplar jag till samma session med `tb`. Enkelt och smidigt. Ett kraftfullt arbetsverktyg.
 
 
 
