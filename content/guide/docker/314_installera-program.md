@@ -6,13 +6,15 @@ revision:
 Installera program
 =======================
 
-Vi vet att vi kan execkvera kommandon via nyckelordet `RUN`. Vi använder det för att köra ytterligare kommandon i kontainern. Låt säga att vi vill installera texteditorn *nano*.
+Vi vet att vi kan exekvera kommandon via nyckelordet `RUN`. Vi använder det för att köra ytterligare kommandon i kontainern. Låt säga att vi vill installera *nano*, *cowsay* och *fortune*.
 
 ```
 FROM debian:buster-slim
 
 RUN apt-get update && \
-    apt-get -y install nano
+    apt-get -y install nano \
+    cowsay \
+    fortune
 
 WORKDIR scripts
 

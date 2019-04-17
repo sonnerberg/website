@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    2019-04-11: (A, lew) Första utgåvan inför HT19.
+    "2019-04-11": (A, lew) Första utgåvan inför HT19.
 ...
 Skapa en Docker image
 ===================================

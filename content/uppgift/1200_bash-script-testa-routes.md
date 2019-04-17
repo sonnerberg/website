@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    2019-04-16: (A, lew) Första utgåvan inför HT19.
+    "2019-04-16": (A, lew) Första utgåvan inför HT19.
 ...
 Bash-script som testar serverns routes
 ===================================
