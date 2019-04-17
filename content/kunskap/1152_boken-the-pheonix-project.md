@@ -24,7 +24,7 @@ Boken används som referenslitteratur i kursen [devops](/devops).
 Om Boken {#om-boken}
 --------------------
 
-[FIGURE src=/img/bok/webbutveckling-med-php-och-sql-rev2.jpg caption="Bokens omslag."]
+[FIGURE src=/img/bok/the-pheonix-project.jpg caption="Bokens omslag."]
 
 <table>
 <tr><th>Titel:</th><td>The Phoenix Project<td></tr>
@@ -41,4 +41,4 @@ Om Boken {#om-boken}
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en [forumtråd](f/5352) där du kan fråga eller berätta vad du tyckte om boken:
+Det finns en [forumtråd](f/65240) där du kan fråga eller berätta vad du tyckte om boken:
