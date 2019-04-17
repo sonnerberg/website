@@ -107,6 +107,7 @@ Modulerna i ramvekret Anax omfattas av enhetstestning i olika omfattning. Här k
     * [![Code Coverage](https://scrutinizer-ci.com/g/canax/request/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/request/?branch=master) [anax/request](https://github.com/canax/request)
     * [![Code Coverage](https://scrutinizer-ci.com/g/canax/response/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/response/?branch=master) [anax/response](https://github.com/canax/response)
     * [![Code Coverage](https://scrutinizer-ci.com/g/canax/router/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [anax/router](https://github.com/canax/router)
+    * [![Code Coverage](https://scrutinizer-ci.com/g/canax/session/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/session/?branch=master) [anax/session](https://github.com/canax/session)
     * [![Code Coverage](https://scrutinizer-ci.com/g/canax/view/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/view/?branch=master) [anax/view](https://github.com/canax/view)
 
 Klickar du på "kodtäckningsbadgen" så kommer du till Scrutinizer som är ett automatiserat byggverktyg som checkar ut och utför enhetstesterna för modulen, varje gång som modulen uppdateras på GitHub.
