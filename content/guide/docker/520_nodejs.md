@@ -114,4 +114,4 @@ Nu har vi allt på plats för att bygga vår image...
 
 `$ docker run --rm -p 1337:1337 username/imagename:tag`
 
-Nu kan vi återigen peka webbläsaren mot `localhost:1337`.
+Nu kan vi peka webbläsaren mot `localhost:1337`.

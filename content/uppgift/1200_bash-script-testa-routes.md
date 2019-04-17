@@ -56,14 +56,14 @@ Krav {#krav}
 
 | Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Vad skall hända |
 |---------------------------|-----------------|
-| `all`                     | anropa `/all`. |
-| `names`                   | anropa `/names`.|
-| `color <color>`           | anropa `color/<color>`. |
-| `test <url>`        | Skriv ut information om serverns status, om den är nåbar eller ej. Om &lt;url&gt; är satt ska den anropas, annars localhost:port |
+| `all`                     | anropa din route `/all`. |
+| `names`                   | anropa din route `/names`.|
+| `color <color>`           | anropa din route `color/<color>`. |
+| `test <url>`        | Använd curl för att skriva ut serverns header om det gick bra, annars ett felmeddelnade. Om &lt;url&gt; är satt ska den anropas, annars localhost:port. |
 
 
 
-Validera ditt `client.bash` script genom att göra följande kommandon i kurskatalogen i terminalen.
+Validera `client.bash` genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
