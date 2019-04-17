@@ -71,8 +71,6 @@ Genomför följande övningar.
 
 1. Läs igenom guiden "[sed, awk](guide-artikel/sed)".
 
-1. Jobba igenom guiden/artikeln "[volymer](guide/volymer-delen)".
-
 
 <!-- 1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
 
@@ -88,7 +86,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Webbserver i Docker](uppgift/webbserver-i-docker)". Spara arbetet i mappen `server/`.
 
-1. Gör uppgiften "[Bash-script som testar serverns routes](uppgift/curl-docker-server)". Spara arbetet i mappen `/script`.  
+1. Gör uppgiften "[Bash-script som testar serverns routes](uppgift/bash-script-testa-routes)". Spara arbetet i mappen `client/`.  
 
 <!-- 1. Gör uppgiften "[sed-labb?](uppgift/something)". -->
 
@@ -110,7 +108,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-<!-- * Är detta din första bekantskap med JavaScript på servern eller har du testat det tidigare?
-* Vad tänker du om ECMA6, dess nya funktioner jämfört med ES5?
-* Hur gick det att förstå koncepten kring klient och server?
-* Är du bekant med begreppet funktionell programmering och har du några tankar kring det? -->
+* Vad valde du för språk till servern?
+* Hur kommer det sig att du valde det?
+* Hänger du med på koncepten kring klient och server?
+* Strukturerade du Bash-scriptet annorlunda jämfört med förra kursmomentet?

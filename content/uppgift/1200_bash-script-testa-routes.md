@@ -1,13 +1,12 @@
 ---
 author: lew
 revision:
-    2019-04-11: (A, lew) Första utgåvan inför HT19.
+    2019-04-16: (A, lew) Första utgåvan inför HT19.
 ...
 Bash-script som testar serverns routes
 ===================================
 
-Du skall skapa en Docker image och publicera den till Docker Hub.
-Imagen ska vara en webbserver som ska kunna svara på en uppsättning routes och returnera JSON.
+Du skall skapa ett Bash-script som testar de olika routesen hos din server. Som hjälp använder vi programmet [curl](https://curl.haxx.se/) i scriptet. Du kan säkert redan ha det installerat, annars är det bara att installera det med pakethanteraren.
 
 <!--more-->
 
@@ -16,7 +15,9 @@ Imagen ska vara en webbserver som ska kunna svara på en uppsättning routes och
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har läst igenom guiden [Hantera applikationer](guide/docker/hantera-applikationer) och valt ett språk du vill använda. Kika gärna på alla, då det kan göras på olika sätt.
+Du har genomfört uppgiften "[Webbserver i Docker](uppgift/webbserver-i-docker)".
+
+Du har genomfört uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)" från kursmoment 03.
 
 Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash.
 
@@ -25,43 +26,49 @@ Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash.
 Introduktion {#intro}
 -----------------------
 
-I exempelmappen finns en [JSON-fil](https://github.com/dbwebb-se/vlinux/tree/master/example/json) som ska servas med hjälp av en router, byggd i språket du valt. Du väljer själv hur du vill sköta "routingen". Om du vill köra med PHP, finns en [minimal router](https://github.com/dbwebb-se/vlinux/tree/master/example/php-router) i exempelmappen du kan utgå ifrån. Tips finns i tillhörande README.md-fil.
+Du ska skapa, likt förra kursmomentet, ett Bash script som med argument kan ge svar från din server. Du kan med andra ord återanvända en hel del från kursmoment 03.
 
-Routes som ska stödas är:
 
-| Route                 | Vad skall returneras                            |
-|-----------------------|-------------------------------------------------|
-| `/`                   | En presentation av de olika routesen.           |
-| `/all`                | Hela JSON-filen.                                |
-| `/names`              | Namnen på alla växterna.                        |
-| `/color/<color>`      | Alla växter som kan ha &lt;color&gt; som färg   |
-
-JSON-filen kopierar du från exempelmappen:
-
-```bash
-# Ställ dig i kursroten
-$ cp -r example/json/items.json me/kmom04/server/data/
-```
 
 Krav {#krav}
 -----------------------
 
-1. Bygg en router som kan svara på "routsen" ovan. Alla svar ska vara JSON.
+1. Skapa ett bash-script `client/client.bash` som kan ta emot options och argument. Anropas ditt script utan options eller argument, skall scriptet skriva ut att man kan få hjälp genom att använda `--help, -h`.
 
-1. Skapa en Dockerfile `server/Dockerfile` och lägg till din server. Mappen med JSON-filen ska läggas till som en volym.
+1. Ändra rättigheter för scriptet genom kommandot `chmod 755 client/client.bash`
 
-1. Bygg din image med namnet *username/vlinux:kmom04* där du använder ditt egna användarnamn.
+1. Ditt script skall avslutas med korrekt exit värde.
 
-1. Publicera imagen till Docker Hub.
+1. Använd en main-funktion för att starta programmet.
 
-1. Skapa ett exekverbart script `script/kmom04.bash` som kör din kontainer med rätt namn och tagg. Tänk på att lägga till volymen här. Servern ska vara nåbar via webbläsaren på porten `8080`.
+1. Strukturera koden i olika funktioner.
+
+1. Följande *options* ska fungera:
+
+| Option                | Vad skall hända |
+|-----------------------|-----------------|
+| `-h, --help`          | Skriv ut en hjälptext om hur programmet används. |
+| `-v, --version`       | Visar nuvarande version av programmet. |
+| `-s, --save`          | Spara den returnerade datan till fil. Det ska fungera för alla argument.|
 
 
+7. Följande *argument* ska fungera:
+
+| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Vad skall hända |
+|---------------------------|-----------------|
+| `all`                     | anropa `/all`. |
+| `names`                   | anropa `/names`.|
+| `color <color>`           | anropa `color/<color>`. |
+| `test <url>`        | Skriv ut information om serverns status, om den är nåbar eller ej. Om &lt;url&gt; är satt ska den anropas, annars localhost:port |
+
+
+
+Validera ditt `client.bash` script genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb validate script
-$ dbwebb publish script
+$ dbwebb validate client
+$ dbwebb publish client
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  
