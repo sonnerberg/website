@@ -136,9 +136,9 @@ Mycket handlar om att förenkla vardagen som programmerare genom att automatiser
 
 
 
-###Kmom04: Docker och Apache {#kmom04}
+###Kmom04: En webbserver i Docker {#kmom04}
 
-Vi installerar och använder Apache som webbserver i Docker och går även vidare med programmeringen i Bash och utforskar fler konstruktioner och verktyg.
+Vi går vidare med Docker och lär oss hur vi får igång en webbserver som körs inuti kontainern. Vi tittar även på volymer och hur vi kan anropa servern utifrån. Till detta skapar vi också ett Bashscript som kan testa de olika routesen.
 
 [Instruktion till kursmoment 04](kurser/vlinux-v1/kmom04).
 
@@ -184,7 +184,7 @@ Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artikla
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[The Linux Command Line](kunskap/boken-the-linux-command-line)** -- William Shotts  
+* **[The Linux Command Line](kunskap/boken-the-linux-command-line)** -- William Shotts
     En lättläst och trevlig bok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Linux, systemkommandon och terminalen.
 
 
@@ -193,7 +193,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
-* **[The Debian Administrator's Handbook, Debian Wheezy from Discovery to Mastery](kunskap/boken-the-debian-administrator-s-handbook)** -- Raphaël Hertzog, Roland Mas  
+* **[The Debian Administrator's Handbook, Debian Wheezy from Discovery to Mastery](kunskap/boken-the-debian-administrator-s-handbook)** -- Raphaël Hertzog, Roland Mas
     En gedigen referensmanual för den som är allvarlig med att lära sig Linux.
 
 
@@ -203,13 +203,13 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
 
 
-<!-- * **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+<!-- * **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer
     En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
-* **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford  
+* **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford
     En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
 
-* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
+* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan
     En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript. -->
 
 
