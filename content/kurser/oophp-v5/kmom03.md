@@ -57,7 +57,7 @@ Läs & Studera  {#lasanvisningar}
 
 ### Artiklar {#artiklar}
 
-Läs och reföljande.
+Läs följande.
 
 1. Låt oss se över vilka delar som vi hittills har gått igenom i PHP-manualen om "[Klasser och Objekt](http://php.net/manual/en/oop5.intro.php)". Kika så att du har hyffsad koll på dem. Gör en kort repetition, dessa omfattar den viktiga grunden av objektorienterade konstruktioner i PHP.
     * [Introduction](https://www.php.net/manual/en/oop5.intro.php)
@@ -101,7 +101,7 @@ Läs följande.
 
 ### Ramverk Anax {#anax}
 
-Modulerna i ramvekret Anax omfattas av enhetstestning i olika omfattning. Här kan du se de moduler du tidigare använt tillsammans med en _badge_ som berättar hur mycket av modulens kod som är täckt av ett eller flera enhetstester.
+Modulerna i ramverket Anax omfattas av enhetstestning i olika omfattning. Här kan du se de moduler du tidigare använt tillsammans med en _badge_ som berättar hur mycket av modulens kod som är täckt av ett eller flera enhetstester.
 
 1. Ett par Anax moduler och omfattningen av enhetstester (kodtäckning) för respektive modul.
     * [![Code Coverage](https://scrutinizer-ci.com/g/canax/request/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/request/?branch=master) [anax/request](https://github.com/canax/request)
@@ -142,31 +142,6 @@ Gör följande uppgifter.
 1. Gör uppgiften "[Tärningsspel 100](uppgift/tarningsspel-100)" inuti din me-sida. Spara din kod under `me/redovisa`.
 
 1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make test` som en sista avstämning, innan du sätter sista taggen.
-
-<!--
-Gör även enhetstestning på tärningsspelet, eller enbart tärningsklasserna från guiden?
-
-Borde guiden ha en viss del i detta kmom? Eller bättre bara fokusera på enhetstestning kanske.
-
-Dice med kontroller.
-
-Gör tärningsspelet i en kontroller?
-Guide visa vad kontroller är?
-
--->
-
-<!--
-
-Flytta till kmom03
-
-### Använda GET, POST, SESSION eller ramverkets variant? {#inbyggd}
-
-Ett ramverk har ofta klasser som gränssnitt mot de publika och globala variablerna GET, POST och SESSION. Det är för att lägga ett kontrollerat lager mellan globala variabler och ramverkets struktur. Man kapslar in de globala variablerna, via en ramverksklass.
-
-Ofta kan koden bli enklare att testa när man som utvecklare använder ramverkets klasser istället för att gå direkt mot `$_SESSION` och `$_GET`/`$_POST`. Testbar kod är något att eftersträva. 
-
-När du gör uppgiften kan du välja väg, använd ramverkets klasser för att nå SESSION/POST/GET eller gå direkt mot de globala variablerna.
--->
 
 
 

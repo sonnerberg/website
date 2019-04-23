@@ -64,6 +64,20 @@ Läs & Studera  {#lasanvisningar}
 
 *(ca: 1-2 studietimmar)*
 
+<!--
+PHP manualen
+
+Overloading https://www.php.net/manual/en/language.oop5.overloading.php
+Magic Methods https://www.php.net/manual/en/language.oop5.magic.php
+Final Keyword https://www.php.net/manual/en/language.oop5.final.php
+
+Object Cloning https://www.php.net/manual/en/language.oop5.cloning.php
+Comparing Objects https://www.php.net/manual/en/language.oop5.object-comparison.php
+Objects and references https://www.php.net/manual/en/language.oop5.references.php
+Object Serialization https://www.php.net/manual/en/language.oop5.serialization.php
+
+-->
+
 
 
 ###Videor {#videor}

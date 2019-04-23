@@ -118,7 +118,7 @@ Krav {#krav}
 
 1. Tips. Tänk på att skriva kod och klasser som är testbara med enhetstester. Små klasser, små metoder.
 
-1. Tips. Det kan underlätta att undvika att använda $_GET, $_POST, $_SESSION inuti klasserna, lägg dem istället som ett lager i routen, läs av dem och bifoga värdena vid behov in i klassen via argument i metoderna.
+1. Tips. Det kan underlätta att undvika att använda $\_GET, $\_POST, $\_SESSION inuti klasserna, lägg dem istället som ett lager i routen, läs av dem och bifoga värdena vid behov in i klassen via argument i metoderna.
 
 1. Skriv enhetstester för alla dina egna klasser i spelet. Varje klass skall täckas av minst tre testfall. Försök nå så hög kodtäckning som möjligt.
 

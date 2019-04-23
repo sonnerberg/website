@@ -10,6 +10,10 @@ Slutligen kommer vi till den grafiska representationen av tärningen och vi öve
 
 Du fortsätter att jobba i samma filer som i föregående artikel och du skapar även `style.css` och `dice-faces.jpg`.
 
+<!--
+Borde spara i css/ respektive img/
+-->
+
 
 
 HTML för tärningar {#html}
