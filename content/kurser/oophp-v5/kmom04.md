@@ -55,7 +55,6 @@ Läs följande.
     * [Object Interfaces](https://www.php.net/manual/en/language.oop5.interfaces.php)
     * [Traits](https://www.php.net/manual/en/language.oop5.traits.php)
     * [Anonymous classes](https://www.php.net/manual/en/language.oop5.anonymous.php#language.oop5.anonymous)
-    * [Anonymous classes](https://www.php.net/manual/en/language.oop5.anonymous.php#language.oop5.anonymous)
 
 
 

@@ -5,7 +5,7 @@ category:
     - anax
     - kursen oophp
 revision:
-    "2019-04-23": "(PC1, mos) Ny version av artikel, nu inklusive kontroller."
+    "2019-04-24": "(PC2, mos) Ny version av artikel, nu inklusive kontroller."
     "2018-04-16": "(B, mos) Uppdaterade stycket om enhetstester."
     "2018-04-16": "(A, mos) Första utgåvan i samband med oophp version 4."
 ...
@@ -25,14 +25,6 @@ När du ändå inför stödet för datorn så låter du användaren också se sa
 Du lär dig begreppet "kontroller" och flyttar din kod från dina routes till en kontroller-klass.
 
 När du är klar ser du till att införa en testsvit som har testmetoder som täcker alla dina klasser i en rimlig kodtäckning, givet tiden du har.
-
-[WARNING]
-
-**Uppgiften är under översyn och håller på att kompletteras med krav om att koden skall flyttas från routes till kontroller-klass (23/4-19).**
-
-I övrigt är det i stort samma uppgift som förra året.
-
-[/WARNING]
 
 
 
@@ -86,22 +78,20 @@ I all enkelhet kan det räcka med en ekvation som beräknar om datorn skall stan
 
 Du skall flytta den koden du nu har i routes till en kontroller-klass.
 
-[WARNING]
+Börja med att uppdatera så du har de senaste versionerna av Anax moduler.
 
-**Här saknas ännu viss information som behövs för att lösa uppgiften (23/4-19).**
+```text
+# Gå till me/redovisa
+composer update
+```
 
-[/WARNING]
+Studera hur en controller fungerar genom att läsa dokumentationen av modulen [`anax/controller`](https://github.com/canax/controller).
 
-_Notes from the teacher..._
+Kopiera källkoden för kontroller klassen [`Anax\Controller\SampleAppController`](https://github.com/canax/controller/blob/master/src/Controller/SampleAppController.php) och spara i din egen me/redovisa katalog under `src/`. Välj ditt eget namespace på klassen, du kan välja vad du vill. 
 
-Exempelkoden för app-kontroller-klassen.
-Hur montera den.
-Hur skriva en kontroller-metod.
-Hur kontrollera att kontroller-klassen är laddad i routern.
+Montera kontroller klassen i din router genom att skapa en konfigurationsfil under me/redovisa `config/router/100_game.php`. Du kan döpa konfigurationsfilen till vad du vill. Som mall kan du använda någon av de konfigurationsfiler som finns i katalogen [`config/router`](https://github.com/canax/controller/tree/master/config/router) i modulen anax/controller. De visar hur en kontroller monteras på en monteringspunkt i routern.
 
-README i router
-README i controller
-HOWTO?
+Du kan använda routen `dev/` för att kontrollera om routen känner igen din kontroller klass och var i flödet den monterades.
 
 
 
@@ -128,7 +118,7 @@ Det handlar delvis om att göra koden mer testbar och det handlar om hyffs och v
 
 Uppdatera och bygg vidare på din test suite av enhetstester.
 
-Inkludera tester för kontroller-klassen.
+Inkludera tester för kontroller-klassen, det finns ett exempel på hur du kan skapa enhetstester till en kontroller klass i anax/controller under dess [`test/`](https://github.com/canax/controller/tree/master/test) katalog. Du kan också läsa i modulens README om tankar kring enhetstestning av kontrollern.
 
 Kan du maximera din kodtäckning?
 
