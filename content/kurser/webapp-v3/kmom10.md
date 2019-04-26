@@ -33,9 +33,9 @@ Det finns en årlig tävling, ["Hack for Sweden"](http://hackforsweden.se/), dä
 
 Om du inte hittar ett API via Öppna Data kan detta [public-apis](https://github.com/toddmotto/public-apis) GitHub repo kanske ge inspiration till din app.
 
-<!-- I filmen nedan pratar Emil om hur man kan tänka vid val av datakällor och rekommenderar ett antal olika API:er. -->
+I filmen nedan pratar Emil om hur man kan tänka vid val av datakällor och rekommenderar ett antal olika API:er.
 
-<!-- https://github.com/Hypergene/kolada -->
+[YOUTUBE src="-wAzJgyHlR4" caption="Emil pratar om projektet"]
 
 Om du upplever problem med Cross-Origin Access kan en API-proxy vara lösningen på problemet. I GitHub repot [emilfolino/api-proxy](https://github.com/emilfolino/api-proxy) finns källkod och instruktioner för hur man kan använda sig av en API-proxy på studentservern.
 
