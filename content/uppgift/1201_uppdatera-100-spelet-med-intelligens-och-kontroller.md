@@ -5,7 +5,7 @@ category:
     - anax
     - kursen oophp
 revision:
-    "2019-04-24": "(PC2, mos) Ny version av artikel, nu inklusive kontroller."
+    "2019-04-26": "(C, mos) Ny version av artikel, nu inklusive kontroller och video."
     "2018-04-16": "(B, mos) Uppdaterade stycket om enhetstester."
     "2018-04-16": "(A, mos) Första utgåvan i samband med oophp version 4."
 ...
@@ -42,11 +42,11 @@ Introduktion och förberedelse {#intro}
 
 Gå igenom följande steg för att förbereda dig inför uppgiften.
 
-<!--
-Du kan se hur jag jobbar igenom stegen i videoserien "[Uppgiften "Uppdatera 100-spelet med intelligens" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9TiwWWXidbhCgrNVCC-lar)".
+Du kan se hur jag jobbar delar av stegen i videoserien "[Uppgiften "Uppdatera 100-spelet med intelligens och kontroller" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-xsJ0T0s24cNkWNg5FRpV4)". Jag fokuserar främst på de bitar som handlar om kontrollerklassen.
 
-[YOUTUBE src="y97x3kdM-y8" list="PLKtP9l5q3ce9TiwWWXidbhCgrNVCC-lar" width=700 caption="Mikael visar hur du jobbar igenom delar av uppgiften."]
--->
+[YOUTUBE src="SbiwOdsoud8" list="PLKtP9l5q3ce-xsJ0T0s24cNkWNg5FRpV4" width=700 caption="Mikael visar hur du jobbar igenom delar av uppgiften."]
+
+
 
 
 
