@@ -86,8 +86,6 @@ Det finns inga extra lästips.
 
 1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)". Spara dina filer i `me/kmom05/hello`.
 
-1. Läs igenom artikeln "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)" för att bekanta dig med ytterligare en Cordova plugin.
-
 
 
 ###Uppgifter {#uppgifter}
