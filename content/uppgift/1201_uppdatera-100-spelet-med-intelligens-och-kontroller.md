@@ -5,6 +5,7 @@ category:
     - anax
     - kursen oophp
 revision:
+    "2019-04-29": "(D, mos) Optionellt att skriva enhetstester till kontrollerklassen."
     "2019-04-26": "(C, mos) Ny version av artikel, nu inklusive kontroller och video."
     "2018-04-16": "(B, mos) Uppdaterade stycket om enhetstester."
     "2018-04-16": "(A, mos) Första utgåvan i samband med oophp version 4."
@@ -45,8 +46,6 @@ Gå igenom följande steg för att förbereda dig inför uppgiften.
 Du kan se hur jag jobbar delar av stegen i videoserien "[Uppgiften "Uppdatera 100-spelet med intelligens och kontroller" (kursen oophp)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-xsJ0T0s24cNkWNg5FRpV4)". Jag fokuserar främst på de bitar som handlar om kontrollerklassen.
 
 [YOUTUBE src="SbiwOdsoud8" list="PLKtP9l5q3ce-xsJ0T0s24cNkWNg5FRpV4" width=700 caption="Mikael visar hur du jobbar igenom delar av uppgiften."]
-
-
 
 
 
@@ -118,9 +117,9 @@ Det handlar delvis om att göra koden mer testbar och det handlar om hyffs och v
 
 Uppdatera och bygg vidare på din test suite av enhetstester.
 
-Inkludera tester för kontroller-klassen, det finns ett exempel på hur du kan skapa enhetstester till en kontroller klass i anax/controller under dess [`test/`](https://github.com/canax/controller/tree/master/test) katalog. Du kan också läsa i modulens README om tankar kring enhetstestning av kontrollern.
+Se om du kan inkludera tester för kontroller-klassen, det finns ett exempel på hur du kan skapa enhetstester till en kontroller klass i anax/controller under dess [`test/`](https://github.com/canax/controller/tree/master/test) katalog. Du kan också läsa i modulens README om tankar kring enhetstestning av kontrollern.
 
-Kan du maximera din kodtäckning?
+Kan du maximera din kodtäckning, med eller utan kontrollerklassen?
 
 
 
@@ -135,7 +134,9 @@ Krav {#krav}
 
 1. Koppla loss din kod från `$_GET, $_POST, $_SERVER och $_SESSION` och använd ramverkets lager av `Anax\Request` och `Anax\Session`. Syftet är att göra din kod "mer ramverkskorrekt" och "mer testbar".
 
-1. Skriv enhetstester för alla dina egna klasser i spelet, inklusive kontroller-klassen. Varje klass skall täckas av rimligt antal testfall. Försök nå så hög kodtäckning som möjligt. Rimligt antal testfall per klass behöver du själv bestämma, överväg din tillgång av tid mot din ambition och förmåga.
+1. Skriv enhetstester för alla dina egna klasser i spelet, exklusive kontroller-klassen. Varje klass skall täckas av rimligt antal testfall. Försök nå så hög kodtäckning som möjligt. Rimligt antal testfall per klass behöver du själv bestämma, överväg din tillgång av tid mot din ambition och förmåga.
+
+1. Överväg att skriva enhetstester för din kontrollerklass (optionellt).
 
 1. Ta en skärmdump på översikten av din code coverage och spara som `doc/class/codecoverage2.png` (bara små bokstäver). Låt din ambition bestämma hur många testfall du gör för varje klass och vilken kodtäckning du lyckas nå.
 
