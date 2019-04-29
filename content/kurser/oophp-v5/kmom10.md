@@ -27,6 +27,17 @@ Upplägget är enligt följande:
 Totalt omfattar kursmomentet (07/10) i storleksordningen 20-80 studietimmar.
 
 
+<!--
+
+user/login
+user/register
+user/create
+user/profile
+admin/user/view
+
+-->
+
+
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------

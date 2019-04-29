@@ -126,9 +126,13 @@ Läs [instruktionen till kursmoment 03](./kmom03).
 
 ### Kmom04: Trait och Interface {#kmom04}
 
-Vi fortsätter med kodande och testande utanför och inuti ramverket. Fokus är tre saker, trait och interface, mer enhetstestning samt integrera koden ytterligare med ramverket genom att använda ramverkets klasser i störra omfattning.
+Med hjälp av ramverkets struktur flyttar vi vårt 100-spel in i en kontroller-klass som bildar ett gränssnitt mellan ramverkets kärna (klienten) och applikationens kod (100-spelet).
 
-Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod tillsammans med arv och komposition. Det ger oss två nya verktyg för att tänka och implementera koden på ett objektorienterat sätt.
+Med en kontroller-klass vinner vi en bättre struktur av våra routes och dessutom hamnar de i en klass som är enklare att testa än de routes med callbacks vi haft tidigare.
+
+Vi jobbar mer och mer att integrera oss i de möjligheter som ramverket ger. Vi använder ramverkets klasser för att få tillgång till GET, POST och SESSION. Tanken är att vi inte skall ha tillgång till dessa globala variabler på ett godtyckligt sätt i varje klass, istället knyter vi accessen till dessa globala PHP systemvariabler via ramverkets klasser. En tanke är att göra det enklare att testa koden genom att mocka värden i dessa globala variabler.
+
+Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod på ett objektorienterat sätt. Det ger oss två nya verktyg för att tänka när vi implementerar koden. När vi tittar på hur kontroller-klassen är specificerad så ser vi hur ramverket använder sig av dessa konstruktioner.
 
 Läs [instruktionen till kursmoment 04](./kmom04).
 

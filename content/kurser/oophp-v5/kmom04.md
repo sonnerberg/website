@@ -41,7 +41,7 @@ När detta är gjort så bygger vi vidare på testsuiten för våra klasser, ink
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 3-6 studietimmar)*
 
 
 

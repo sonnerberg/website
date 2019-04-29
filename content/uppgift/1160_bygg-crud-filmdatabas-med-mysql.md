@@ -5,6 +5,7 @@ category:
     - anax
     - kursen oophp
 revision:
+    "2019-04-29": "(D, mos) lade till stycke om kodstruktur och ."
     "2018-10-01": "(C, mos) Uppdaterade anax/database till v2.0.0."
     "2018-04-27": "(B, mos) Lade till videoserie som komplement."
     "2018-04-23": "(A, mos) Första utgåvan i samband med oophp version 4."
@@ -81,11 +82,12 @@ När detta är klart så bör du kunna köra exemplet som tidigare.
 
 Vi skall använda en Anax modul för databasen. Den ser ut ungefär som i övningen men innehåller lite mer kod.
 
-Du kan läsa om modulen på [GitHub `Anax\Database`](https://github.com/canax/database).
+Du kan läsa om modulen på [anax/database](https://github.com/canax/database).
 
 Först installerar vi modulen via composer.
 
 ```text
+# Stå i rooten av din me/redovisa
 composer require anax/database
 ```
 
@@ -95,9 +97,9 @@ Vi behöver en uppsättning av konfigurationsfiler, vi lånar dem från modulen.
 rsync -av vendor/anax/database/config/ config/
 ```
 
-Kika i konfigurationsfilen `config/database.php` och uppdatera den så du kan koppla upp dig mot din lokala databas. Det finns en exempelfil som ligger i `config/database-sample.php` som fungerar i kursens sammanhang.
+Kika i konfigurationsfilen `config/database.php` och uppdatera den så du kan koppla upp dig mot din lokala databas. Det finns en exempelfil som ligger i `config/database-sample.php`, använd den som bas för att skapa en konfigfil som fungerar i kursens sammanhang, både lokalt och på studentservern.
 
-Databasen är nu en del av `$app` som `$app->db`.
+Databasen är nu en del av `$app` som `$app->db`. I din me/redovisa kan du nu, via länken `dev/di`, kontrollera att `db` är en tjänst som finns i ramverkets tjänstekontainer.
 
 
 
@@ -233,6 +235,22 @@ Nu är funktionerna tillgängliga i din kod, du kan använda dem till exempel i 
 
 
 
+### Kontroller och klasser {#kontroller}
+
+Det är en sak (A) att lösa uppgiften genom att använda befintlig kod och överföra till route callbacks och återanvända kod med funktioner. Det är tillräckligt för att lösa uppgiften.
+
+Det är en annan sak (B) att lösa uppgiften genom att använda en kontroller använda interna metoder i kontrollern för att lösa det som funktionerna gör.
+
+Det är ytterligare en sak (C) att bygga en tunn kontroller och flytta mycket av koden till klasser som används av kontrollern.
+
+Det är ännu en aspekt att bygga generella klasser som inte är specifika för "Movie"-övningen och kan återanvändas i andra sammanhang för att visa liknande innehåll, från andra databastabeller, och genom att återanvända samma struktur av kontroller och klasser.
+
+Svårigheten ökar med A -> B -> C -> D, välj den vägen som du själv känner är rimlig, baserad på tid du har att tillgå och din ambitionsnivå med uppgiften.
+
+Rekommendationen är att sikta på B eller C. Det lönar sig troligen bäst inför projektet om man jämför "pris/prestanda" på det som krävs.
+
+
+
 Krav {#krav}
 -----------------------
 
@@ -248,6 +266,8 @@ Krav {#krav}
 
 1. Gör stöd för CRUD så man kan lägga till, ta bort och redigera filmer. Tänk till så du får ett bra flöde för användaren.
 
+1. Det är inte ett krav att lägga till enhetstester som berör databasen. Men om du har kod som inte omfattas av databasen så är det relevant att fortsätta bygga på din testsuite.
+
 1. När du är klar så gör du `make test` för att kontrollera att din testsvit fungerar och sedan gör du en `dbwebb publish`.
 
 
@@ -257,19 +277,19 @@ Extrauppgift {#extra}
 
 Gör följande extrauppgifter om du har tid och lust.
 
-1. Bygg stöd för att återskapa tabellens innehåll.
+1. Bygg stöd för att återskapa tabellens innehåll, det är bra att ha om någon till exempel skulle förstöra din ditt databasinnehåll på studentservern.
 
 1. Lägg till så man kan sortera per kolumn när filmerna presenteras.
 
 1. Lägg till paginering.
 
-1. Kan du göra en flexibel struktur och arrangera din kod i routes, klasser och vyer som är återanvändbara i andra sammanhang än filmdatabasen? Fundera kring vad som är möjligt.
+1. Hade du kunnat göra en flexibel struktur och arrangera din kod i kontroller/routes, klasser och vyer som är återanvändbara i andra sammanhang än filmdatabasen? Fundera kring vad som är möjligt och vad som hade krävts av din kod.
 
-1. Använda Cimage gör att bättre skala om bilderna, eller välj någon annan taktik för att undvika CSS-skalning av bilderna.
+1. Använd Cimage för att bättre skala om bilderna, eller välj någon annan taktik för att undvika CSS-skalning av bilderna.
 
 1. Gör en enkel inloggning, se till att man kan logga in med doe:doe och admin:admin.
 
-1. Fundera på vilka kodbas du nu har och vilka delar av den som kräver tillgång till databasen för att enhetstestas. Hur hade du gjort för att enhetstesta den koden?
+1. Fundera på vilka kodbas du nu har och vilka delar av den som kräver tillgång till databasen för att enhetstestas. Hur hade du gjort för att enhetstesta koden som är beroende av databasen?
 
 
 
