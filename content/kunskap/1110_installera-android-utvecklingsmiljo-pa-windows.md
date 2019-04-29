@@ -24,6 +24,8 @@ Installera Java {#java}
 --------------------------------------
 Ladda ner och installera Java JDK från [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). Ladda ner rätt paket beroende på processorarkitektur: Windows x64 för 64-bits arkitektur eller Windows x86 för 32-bits arkitektur. Kör `.exe` filen som laddas ner och följ instruktionerna i guiden.
 
+Du kan behöva registrera och logga in för att få ladda ner Java 8 då Oracle har ändrat sina rättigheter för gamla JDK.
+
 
 
 Installera Android Studio {#studio}
