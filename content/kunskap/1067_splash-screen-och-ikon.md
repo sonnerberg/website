@@ -31,11 +31,12 @@ cordova plugin add cordova-plugin-splashscreen --save
 
 Android {#android}
 --------------------------------------
-Nu behöver vi bilder, många bilder. Om du tittar i mappen `res/` finns det två olika kataloger `icon` och `screen` och i dessa finns det en katalog för varje mobil operativsystem. Det är i dessa kataloger vi ska lägga ikoner och splash screens.
+Nu behöver vi bilder, många bilder. Skapa en katalog `res/` i roten av ditt Cordova projekt. Sedan är en rekommendation att man delar upp denna `res/` katalog i ett antal underkataloger till exempel för de olika sorters bilder man har `icon` och `screen` för loggan och splashscreen. Sedan är en rekommendation att man har underkataloger för dessa med de olika plattformarna man vill bygga för till exempel `res/icon/ios/` eller `res/screen/android`.
 
 
 
 ### Bilder {#bilder}
+
 För att skapa ikoner tar jag hjälp av [icons launcher](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html). Här kan du både ladda upp egna bilder och använda dig av Clipart's. När du bestämt dig för hur den ska se ut kan du ladda ner bilden med rätt storlekar. Om du väljer att ladda upp en egen bild bör den minst vara av storlek `1024x1024`. Jag har ingen bra bild i den storleken så jag väljer att använda dbwebb's favicon bild.
 
 [FIGURE src=/image/kunskap/cordova/create_icon_splash.png?w=700&h=500]
@@ -192,6 +193,7 @@ För mer information om hur du skapar splashscreens på iOS titta i [Cordovas do
 
 
 ### Ikoner
+
 För ikoner har vi även möjligheten att bara använda oss en bild. Vi fixar då till en ikon som är 120x120 pixlar stor. En möjlighet är att exportera en variant av splashscreen bilden som även den var kvadratisk. [Apple rekommenderar](https://developer.apple.com/library/content/qa/qa1686/_index.html) att man exporterar en hel hög med bilder. En stark rekommendation är att ha med även en 180x180 pixlar stor bild, då denna används för nyare iPhones och iPads. Vi importerar ikonen på ungefär samma sätt som för en splashscreeen i `config.xml`.
 
 ```xml
