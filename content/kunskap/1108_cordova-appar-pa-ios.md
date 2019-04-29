@@ -27,7 +27,17 @@ Kör sedan kommandot `xcode-select --install` i terminalen för att installera '
 
 Cordova {#cordova}
 ---------------------------------
-För att kunna köra apparna i antigen en simulator eller på en mobil enhet installerar vi 'ios-deploy' med hjälp av kommandot `npm install -g ios-deploy`.
+För att kunna köra apparna i antigen en simulator eller på en mobil enhet installerar vi 'ios-deploy' med hjälp av kommandot.
+
+```bash
+npm install -g ios-deploy
+```
+
+Om du använder OS X 10.11 El Capitan eller senare kan du behöva köra kommandot som `sudo` och med två extra flaggor.
+
+```bash
+sudo npm install -g ios-deploy --unsafe-perm=true --allow-root 
+```
 
 För att lägga till iOS som plattform i Cordova projekt kör vi följande kommando. Jag kör det i HelloWorld exemplet i `me/kmom05/hello`.
 
