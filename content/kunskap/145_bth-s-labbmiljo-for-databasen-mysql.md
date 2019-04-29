@@ -6,6 +6,7 @@ category:
     - mysql
     - mariadb
 revision:
+    "2019-04-29": "(G, mos) Not om att man inte kan skapa användare samt att databasen är numer MariaDB."
     "2017-02-24": "(F, mos) Länkade till artikel om ssh och klienter."
     "2014-11-10": "(E, mos) Länkade till artikel om ssh och klienter."
     "2014-11-05": "(D, mos) Inforuta om SSH KeepAlive med Workbench."
@@ -41,17 +42,23 @@ Du är bekant med databasen MySQL och dess olika klienter, annars läser du för
 Databasservern {#dbserver}
 ------------------------------
 
-Databasservern heter `blu-ray.student.bth.se` och kör en MySQL server. Du kan inte logga in direkt på servern, men du kommer åt databasen via olika klienter.
+Databasservern heter `blu-ray.student.bth.se` och kör en MariaDB (MySQL) server. Du kan inte logga in direkt på servern, men du kommer åt databasen via olika klienter.
 
 
 
-###Du har 1 databas {#en}
+### Du har 1 databas {#end}
 
 På servern har du *en (1) databas*, du har *inte* rättigheter att skapa fler databaser så du får samla alla dina tabeller i en databas. 
 
 Databasen heter samma sak som din studentakronym.
 
 I sådana sammanhang brukar man lägga till ett prefix framför tabellnamnet för att ha lite bättre koll på tabellerna, till exempel `labb1_skolan` och `labb2_student` där `labb1_` och `labb2_` skapar en form av *namespace*, en namnrymd, för dina tabeller. På det viset undviker du krockar om tabellerna blir många.
+
+
+
+### Du har 1 användare {#ena}
+
+Du har en fördefinierad användare och du kan inte skapa nya användare i databasen.
 
 
 
