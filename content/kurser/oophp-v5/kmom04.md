@@ -152,5 +152,5 @@ Se till att följande frågor besvaras i texten:
 * Är du sedan tidigare bekant med begreppet kontroller eller är det nytt och oavsett vad, hur känner du inför begreppet?
 * Hur gick det att skapa intelligensen och taktiken till tärningsspelet, hur gjorde du?
 * Några reflektioner från att integrera hårdare in i ramverkets klasser och struktur?
-* Berätta hur väl du lyckades med `make test` inuti ramverket och hur väl du lyckades att testa din kod med enhetstester och vilken kodtäckning du fick.
+* Berätta hur väl du lyckades med `make test` inuti ramverket och hur väl du lyckades att testa din kod med enhetstester (med eller utan kontrollerklassen) och vilken kodtäckning du fick.
 * Vilken är din TIL för detta kmom?
