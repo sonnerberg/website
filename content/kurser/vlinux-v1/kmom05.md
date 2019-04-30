@@ -17,7 +17,11 @@ Kursen ges hösten 2019 läsperiod 1.
 
 <!--more-->
 
-Nu har vi kontroll på hur vi kan hantera en webbserver i Docker. Tanken är nu att vi ska skapa en webbplats som använder den server som skapades i föregående kursmoment. Webbplatsen ska köras i en egen kontainer. Vi ska se hur vi kan lösa det med hjälp av "Docker network", där vi låter Docker skapa ett eget nätverk.
+Nu har vi kontroll på hur vi kan hantera en webbserver i Docker. Vi tar ett steg till in i Bashprogrammeringen och bygger ett script som kan prata med en server.
+
+Du kommer få en färdig server, skriven i Node.js, och ett RESTful API till servern. Servern implementerar en [*maze*](https://en.wikipedia.org/wiki/Maze). Servern är färdig och du kan testköra den via kommandot curl.
+
+Din uppgift är att bygga en bash-klient till servern, enligt en kravspecifikation. Din klient skall använda servern för att lösa mazen. Vi lägger in klienten och servern i Docker-kontainrar och låter de prata med varandra med hjälp av "Docker network", där vi låter Docker skapa ett eget nätverk.
 
 Så är upplägget. Låt se hur bra vingarna bär. Upplägget på detta kursmomentet är "lite friare", så vi går nästan rakt på själva uppgiften.
 
@@ -91,9 +95,10 @@ TBD
 
 Dessa uppgifter skall utföras och redovisas.
 
-<!-- 1. Gör uppgiften [node2](uppgift/linux-lab4-asynkron-programmering) för att träna på nodejs api funktioner.
+1. Gör uppgiften "[Lös mazen med din mazerunner i bash](uppgift/mazerunner-i-bash)".
 
-1. Gör uppgiften "[Lös mazen med din mazerunner i bash](uppgift/los-mazen-med-din-mazerunner-i-bash)". -->
+<!-- 1. Gör uppgiften [node2](uppgift/linux-lab4-asynkron-programmering) för att träna på nodejs api funktioner. -->
+
 
 <!--
 VT18 ÄNDRA TILL GENERELL LAB MED NODE

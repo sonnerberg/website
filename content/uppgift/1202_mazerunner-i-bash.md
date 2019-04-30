@@ -2,6 +2,7 @@
 author: mos
 category: unix
 revision:
+    "2017-02-21": (E, lew) Uppdatering inför HT19.
     "2017-02-21": (D, mos) Exempelprogram till node, LINUX_PORT på server och PID till fil samt måste flytta maze till egen katalog, förbered för vt18.
     "2016-06-04": (C, mos) Lade till krav på servern om LINUX_PORT + LINUX_SERVER
     "2015-10-16": (B, mos) Stycke om att kopiera routern, bytte namn på mazerunner.sh till mazerunner.bash.
@@ -22,7 +23,7 @@ Din uppgift är att bygga en bash-klient till servern, enligt en kravspecifikati
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har kunskaper motsvarande de som hanteras i uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
+TBD
 
 
 
@@ -42,7 +43,7 @@ Så kan det alltså se ut.
 
 ###Om servern maze {#om}
 
-Servern [maze finns i kursrepot](https://github.com/mosbth/linux/tree/master/example/nodejs/maze). Där finns all källkod och en specifikation över [serverns API](https://github.com/mosbth/linux/blob/master/example/nodejs/maze/api.md).
+Servern [maze finns i kursrepot](https://github.com/dbwebb-se/vlinux/tree/master/example/maze). Där finns all källkod och en specifikation över [serverns API](https://github.com/dbwebb-se/vlinux/blob/master/example/maze/api.md).
 
 Börja med att översiktligt bekanta dig med serverns API.
 
@@ -64,25 +65,11 @@ Studera gärna källkoden till maze-servern. Hade du kunnat skriva den själv?
 
 ###Ta en kopia av Maze {#copy}
 
-Börja med att ta en kopia av koden i `example/nodejs/maze`. Spara alla dina filer i katalogen `me/kmom05/maze`. 
+Börja med att ta en kopia av koden i `example/maze`. Spara alla dina filer i katalogen `me/kmom05/maze`.
 
 ```bash
 # Gå till kursrepot
-cp -ri example/nodejs/maze/{api.md,index.js,maze.js,maps} me/kmom05/maze
-```
-
-Kopiera sedan den router som maze-servern använder sig av.
-
-```bash
-# Gå till kursrepot
-cp -i example/nodejs/router/router.js me/kmom05/maze
-```
-
-Ändra sedan sökvägen för var router-modulen hittas, gör ändringen i `maze.js`.
-
-```javascript
-//const Router = require("../router/router");
-const Router = require("./router");
+cp -ri example/maze/{api.md,index.js,maze.js,maps,router.js} me/kmom05/maze
 ```
 
 Nu är du redo att starta din egen variant av maze-servern.
@@ -91,7 +78,7 @@ Nu är du redo att starta din egen variant av maze-servern.
 
 ###Att spara spelets id till fil {#fil}
 
-Din klient behöver komma ihåg spelets id och vilket rum du står i. Du sparar den informationen enklast i fil. För att du skall slippa hantera JSON med bash, så har servern en möjlighet att leverera svaren som en komma-separerad sträng. 
+Din klient behöver komma ihåg spelets id och vilket rum du står i. Du sparar den informationen enklast i fil. För att du skall slippa hantera JSON med bash, så har servern en möjlighet att leverera svaren som en komma-separerad sträng.
 
 Testa att köra följande kommandon mot servern så ser du skillnaden.
 
@@ -179,7 +166,7 @@ Validera och publicera din kod enligt följande.
 dbwebb validate maze
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
