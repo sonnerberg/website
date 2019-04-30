@@ -90,17 +90,18 @@ Lär mer på Wikipedia om "[Data access layer (DAL)](https://en.wikipedia.org/wi
 
 Läs som referensmaterial och fördjupning, ämnet återkommer i [kursen ramverk1](kurser/ramverk1).
 
-När det gäller databasmoduler i ramverk så finns de ofta förpackade i egna moduler. Som referensmaterial vill jag här visa hur tre populära ramverk (Symfony, Laravel, Yii) förhåller sig till "sina" databasmoduler. Läs efter intresse.
+När det gäller databasmoduler i ramverk så finns de ofta förpackade i egna moduler. Som referensmaterial vill jag här visa hur tre populära ramverk (Symfony, Laravel, Yii) förhåller sig till "sina" databasmoduler samt Propel som är en fristående databasmodul. Läs efter intresse.
 
 * [Symfony med Doctrine ORM](https://symfony.com/doc/current/doctrine.html)
 * [Laravel med fluent query builder alternativt Eloquent ORM](https://laravel.com/docs/database)
 * [Yii med Database Access Object och Active Record](https://www.yiiframework.com/doc/guide/2.0/en/start-databases)
+* [Propel ORM](http://propelorm.org/)
 
-Här är ett par korta förklaringar till vad de databasrelaterade benämningarna innebär, i sammnhanget PHP och ramverk.
+Här är ett par korta förklaringar till vad de databasrelaterade benämningarna innebär, i sammanhanget PHP och ramverk.
 
 | Benämning | Förklaring |
 |-----------|------------|
-| Data(base) Access Object (DAO) | Ett generellt gränssnitt för att accessa persistent lagrad data, utan att man specifikt behöver veta hur datan är lagrad. I PHP bygger vanligen en implementation av DAO på PDO. |
+| Data(base)&nbsp;Access Object (DAO) | Ett generellt gränssnitt för att accessa persistent lagrad data, utan att man specifikt behöver veta hur datan är lagrad. I PHP bygger vanligen en implementation av DAO på PDO. |
 | Query builder | Ett objektorienterat sätt att ställa frågor mot databasen som ett alternativ till SQL-frågor. Man använder metoder för att bygga SQL-frågorna och den verkliga SQL-koden byggs upp i bakgrunden. Kan även lösa DBAL. |
 | Active Record | Ett designmönster där man bygger en klass för att mappa en tabell i databasen.  Klassen erbjuder metoder som find, save och delete samt har publika medlemsvariabler där innehållet kan läsas och skrivas. |
 | Object-relational mapping (ORM) | En programmeringsteknik för att konvertera data i tabeller från relationsdatabaser till objekt i objektorienterade strukturer. Vanligt när man vill jobba på ett objektorienterat sätt mot en databas men vill undvika SQL. |
