@@ -2,7 +2,7 @@
 author: mos
 category: unix
 revision:
-    "2017-02-21": (E, lew) Uppdatering inför HT19.
+    "2019-05-02": (E, lew) Uppdatering inför HT19.
     "2017-02-21": (D, mos) Exempelprogram till node, LINUX_PORT på server och PID till fil samt måste flytta maze till egen katalog, förbered för vt18.
     "2016-06-04": (C, mos) Lade till krav på servern om LINUX_PORT + LINUX_SERVER
     "2015-10-16": (B, mos) Stycke om att kopiera routern, bytte namn på mazerunner.sh till mazerunner.bash.
@@ -19,14 +19,14 @@ Din uppgift är att bygga en bash-klient till servern, enligt en kravspecifikati
 
 
 
-
 Förkunskaper {#forkunskaper}
 -----------------------
 
 Du har gått igenom delen i guiden som handlar om [Docker network](guide/docker/docker-network).
 
-Du har bekantat dig med programmet [curl](https://curl.haxx.se/).
+Du har koll på [Bash-guiden](guide/kom-igang-med-bash).
 
+Du har bekantat dig med programmet [curl](https://curl.haxx.se/).
 
 
 
@@ -43,7 +43,7 @@ Så kan det alltså se ut.
 
 
 
-###Om servern maze {#om}
+### Om servern maze {#om}
 
 Servern [maze finns i kursrepot](https://github.com/dbwebb-se/vlinux/tree/master/example/maze). Där finns all källkod och en specifikation över [serverns API](https://github.com/dbwebb-se/vlinux/blob/master/example/maze/api.md).
 
@@ -67,7 +67,7 @@ Studera gärna källkoden till maze-servern. Hade du kunnat skriva den själv?
 
 ### Ta en kopia av Maze {#copy}
 
-Börja med att ta en kopia av koden i `example/maze`. Spara alla dina filer i katalogen `me/kmom05/maze/server/`.
+Börja med att ta en kopia av koden i `example/maze/`. Spara alla dina filer i katalogen `me/kmom05/maze/server/`.
 
 ```bash
 # Gå till kursrepot
@@ -98,70 +98,55 @@ Det är alltså `?type=csv` som kan underlätta för din bash-klient som kommer 
 Krav {#krav}
 -----------------------
 
-<!--
-###Uppdatera maze servern {#userv}
-
-1. Uppdatera din maze-server så att den kan starta upp och lyssna på porten `LINUX_PORT`, om variabeln är definierad. Defaultport kan annars vara 1337.
-
-1. Din maze-server skall skriva sitt PID till filen `pid` så att man kan avsluta processen med kommandot `kill $( cat pid )` (eller motsvarande på Cygwin).
-
-1. Lägg till en route `/:gameid/info` som skriver ut innehållet för just ditt game. Som en route bra för debug och testning. Det som skall skrivas ut är innehållet i `game[gameid]`.
--->
+Kraven består av två delar. Först skapar vi ett Bash-skript som körs mot servern. Sedan bygger vi in både servern och klienten i varsin kontainer som pratar med varandra via ett eget nätverk.
 
 
-### Bashscript för att lösa maze {#del1}
 
-1. Skapa ett skript `mazerunner.bash` i mappen `maze/client/`. Sätt rättigheter på skriptet till 755. Skapa en symbolisk länk `mazerunner` som pekar på filen `mazerunner.bash`.
+### Bashscript för att lösa maze (del 1) {#del1}
+
+1. Skapa ett skript `mazerunner.bash` i mappen `maze/client/`. Sätt rättigheter på skriptet till 755.
 
 1. Använd API:et för att lägga till följande funktioner i skriptet. Skriptet skall alltid skriva ut ett meddelande om det gick bra eller inte.
-
-<!-- 1. Skriptet skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
-
-1. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost. -->
 
 
 | Kommando                | Vad skall hända |
 |-------------------------|-----------------|
-| `./mazerunner init`     | Initiera ett spel och spara ned spelets id i en fil. |
-| `./mazerunner maps`     | Visa vilka maps som finns att välja bland. |
-| `./mazerunner select <map>` | Välj en viss karta. |
-| `./mazerunner enter`    | Gå in i första rummet. |
-| `./mazerunner info`     | Visa information om rummet. |
-| `./mazerunner go north` | Gå till ett nytt rum, om riktningen stödjs. |
-| `./mazerunner go south` | Gå till ett nytt rum, om riktningen stödjs. |
-| `./mazerunner go east`  | Gå till ett nytt rum, om riktningen stödjs. |
-| `./mazerunner go west`  | Gå till ett nytt rum, om riktningen stödjs. |
+| `./mazerunner.bash init`     | Initiera ett spel och spara ned spelets id i en fil. |
+| `./mazerunner.bash maps`     | Visa vilka maps som finns att välja bland. |
+| `./mazerunner.bash select <map>` | Välj en viss karta. |
+| `./mazerunner.bash enter`    | Gå in i första rummet. |
+| `./mazerunner.bash info`     | Visa information om rummet. |
+| `./mazerunner.bash go north` | Gå till ett nytt rum, om riktningen stödjs. |
+| `./mazerunner.bash go south` | Gå till ett nytt rum, om riktningen stödjs. |
+| `./mazerunner.bash go east`  | Gå till ett nytt rum, om riktningen stödjs. |
+| `./mazerunner.bash go west`  | Gå till ett nytt rum, om riktningen stödjs. |
 
 Så här kan det se ut när du är klar.
 
 [ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
 
 
-<!-- ###Bashscript i loop {#del2}
 
-1. Utöka funktionaliteten i `mazerunner.bash` så att allt sker i en loop när man startar programmet med `./mazerunner loop`. Skriptet skall börja med att initiera ett nytt spel och visa vilka kartor som finns. Spelaren kan då välja en karta varpå spelaren träder in i första rummet. Därefter fortsätter loopen och väntar på att spelaren skriver in riktningen north, south, east, west, eller help för en hjälptext eller quit för att avsluta.
+### Mazerunner i docker (del 2) {#del2}
 
-Så här kan det se ut, ungefär.
+Tanken är här att vi ska flytta in vår Mazerunner i Docker och de ska prata med varandra via ett eget nätverk. Allt ska starta via ett Bash-skript.
 
-[ASCIINEMA src=23368] -->
+1. Skapa en Dockerfile i mappen `maze/server/` där du kopierar in din server i en kontainer. Servern ska startas när kontainern startas. Bygg imagen och publicera den på Docker hub med namnet `username/vlinux-mazeserver:latest`. Byt ut *username* mot ditt egna användarnamn.
 
+1. Skapa en Dockerfile i mappen `maze/client/` där du kopierar in din Bash-klient. Bygg imagen och publicera den på Docker hub med namnet `username/vlinux-mazeclient:latest`. Byt ut *username* mot ditt egna användarnamn.
 
-<!--
-###Lös mazen {#solution}
-
-1. Utöka funktionaliteten i `mazerunner.bash` så att den automatiskt går igenom mazen på ett effektivt sätt som leder till sista rummet. Du startar detta genom att ange `./mazerunner solve`.
-
-
-
-###Buggfix {#bugg}
-
-1. Det finns en felrapport på maze-servern, [issue 8](https://github.com/dbwebb-se/linux/issues/8), som behöver lagas. Gör först ett testfall `issue.bash` som återskapar och påvisar felet. Laga sedan felet i din maze server.
-
--->
+1. Skapa ett exekverbart Bash-skript, `maze/kmom05.bash`. Skriptet ska göra följande:
+    * Skapa ett nätverk med namet `dbwebb`.
+    * Starta upp båda kontainrarna med rätt options.
+    * Servern ska även kunna nås via webbläsaren.
+    * Båda kontainrarna ska ha egna namn.
+    * Server-kontainern ska köras i bakgrunden.
+    * Klienten ska använda serverns namn. Du behöver då byta ut "localhost" i skriptet mot namnet du ger servern.
+    * Klient-kontainern ska starta i Bash och i den arbetsmappen du har skriptet i.
 
 
 
-###Validera och publicera {#publish}
+### Validera och publicera {#publish}
 
 Validera och publicera din kod enligt följande.
 

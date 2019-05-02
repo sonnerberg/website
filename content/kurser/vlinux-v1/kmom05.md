@@ -37,7 +37,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 2-4 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Det finns ingen läsanvisning i kurslitteraturen.
 
@@ -47,7 +47,7 @@ http://exploringjs.com/es6/index.html
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 TBD
 
@@ -55,7 +55,7 @@ TBD
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -67,7 +67,7 @@ TBD
 
 1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify. -->
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 TBD
 
@@ -84,34 +84,23 @@ TBD
 
 
 
-###Övningar {#ovningar}
-
-<!-- Det finns inga övningar. -->
+### Övningar {#ovningar}
 
 1. Läs om [Docker network](guide/docker/docker-network) i guiden.
 
+1. Luta dig mot guiden [kom igång med Bash](guide/kom-igang-med-bash).
 
 
-###Uppgifter {#uppgifter}
+
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete i mapparna `kmom05/maze/client` och `kmom05/maze/server`.
-
-1. Gör uppgiften "[Mazerunner i Docker](uppgift/mazerunner-i-docker)". Du arbetar i mapparna `kmom05/maze/client` och `kmom05/maze/server`.
-
-
-<!-- 1. Gör uppgiften [node2](uppgift/linux-lab4-asynkron-programmering) för att träna på nodejs api funktioner. -->
-
-
-<!--
-VT18 ÄNDRA TILL GENERELL LAB MED NODE
-Gör laborationen [Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler) för att träna på inbyggda moduler i Node.js.
--->
+1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete under mappen `kmom05/maze/`.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
 Det finns inga extra uppgifter.
 
@@ -127,8 +116,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 TBD
-<!-- * Hur kändes det att bekanta sig med inbyggda nodejs moduler?
-* Är du bekant med JSON API sedan tidigare?
-* Hur kändes det att skriva ett litet större bash-skript? Var det något som var mer eller mindre utmanande och tidskrävande?
+<!-- * Hur kändes det att skriva ett litet större bash-skript? Var det något som var mer eller mindre utmanande och tidskrävande?
 * Kikade du på källkoden till maze-servern? Har du några reflektioner kring den?
-* Är du nöjd med din mazerunner? Gjorde du nåt speciellt som du vill lyfta fram? -->
+* Gjorde du nåt speciellt i din mazerunner som du vill lyfta fram?
+* Något om network -->

@@ -69,6 +69,8 @@ Genomför följande övningar.
 
 1. Läs igenom guiden "[Hantera applikationer](guide/docker/hantera-applikationer)". Välj sedan ett språk du vill använda.
 
+1. Luta dig mot guiden [kom igång med Bash](guide/kom-igang-med-bash).
+
 <!-- 1. Läs igenom guiden "[sed, awk](guide-artikel/sed)". -->
 
 

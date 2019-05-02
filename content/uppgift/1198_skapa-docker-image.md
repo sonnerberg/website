@@ -47,7 +47,7 @@ Krav {#krav}
 
 1. Vid uppstart ska kommandot `commands.bash all` köras.
 
-1. Bygg din image med namnet *username/vlinux:kmom03* där du använder ditt egna användarnamn.
+1. Bygg din image med namnet *username/vlinux-commands:latest* där du använder ditt egna användarnamn.
 
 1. Publicera imagen till Docker Hub.
 

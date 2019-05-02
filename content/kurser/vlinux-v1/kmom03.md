@@ -66,12 +66,11 @@ TBD
 
 ###Lästips {#lastips}
 
-TBD
-<!-- 1. Det finns en [referensmanual till Bash](http://www.gnu.org/software/bash/manual/bashref.html). Kika gärna i den.
+1. Det finns en [referensmanual till Bash](http://www.gnu.org/software/bash/manual/bashref.html). Kika gärna i den.
 
 1. Det finns en populär guide för att [komma igång med Bash och programmering i Bash](http://mywiki.wooledge.org/BashGuide). Samma webbplats har en [FAQ om Bash](http://mywiki.wooledge.org/BashFAQ).
 
-1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om. -->
+1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om.
 
 
 
@@ -90,8 +89,9 @@ Genomför följande övningar.
 
 1. Jobba igenom artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-skript.
 
-*Tips:*
-Du kan luta dig mot [guiden](guide/kom-igang-med-bash) där du hittar beskrivningar om de vanligaste konstruktionerna.
+1. Luta dig mot guiden [kom igång med Bash](guide/kom-igang-med-bash), där du hittar beskrivningar om de vanligaste konstruktionerna.
+
+1. Det finns även en [guide för Docker](guide/docker).
 
 
 

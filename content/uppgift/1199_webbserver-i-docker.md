@@ -50,7 +50,7 @@ Krav {#krav}
 
 1. Skapa en Dockerfile `server/Dockerfile` och lägg till din server. Mappen med JSON-filen ska läggas till som en volym.
 
-1. Bygg din image med namnet *username/vlinux:kmom04* där du använder ditt egna användarnamn.
+1. Bygg din image med namnet *username/vlinux-server:latest* där du använder ditt egna användarnamn.
 
 1. Publicera imagen till Docker Hub.
 

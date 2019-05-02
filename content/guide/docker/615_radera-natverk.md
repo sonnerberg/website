@@ -8,7 +8,7 @@ Radera nätverket
 
 När vi vill radera nätverket behöver vi först stoppa kontainrarna som använder det. Kommandot `$ docker ps` visar vilka aktiva kontainrar vi har. Använd `$ docker stop <id>` för att stoppa dem.
 
-Vi kan ta bort nätverket med:
+Vi kan sedan ta bort nätverket med:
 
 ```
 $ docker network rm dbwebb

@@ -36,7 +36,7 @@ Istället för ett id kan vi använda namnet på kontainern. Om vi inte har satt
 `$ docker run --rm -it debian:stretch:slim`
 
 Flaggan `-it` gör att vi får ett interaktivt shell att jobba med. (Se `docker run --help`).  
-Flaggan `--rm` rensar automatiskt upp efter oss när vi stänger kontainern.
+Flaggan `--rm` rensar automatiskt upp efter oss när vi stänger kontainern. Om vi vill att kontainern ska köras i bakgrunden, kan vi lägga till flaggan `-d` (detach).
 
 Öppna sedan en ny terminal och kör `$ docker ps`:
 
@@ -57,4 +57,4 @@ Om vi kör `$ docker images` och ser:
 <none>     <none>     cb3e76fda019     2 weeks ago     87.3MB
 ```
 
-så har vi lyckats skapa images som inte är kopplade till någon taggad version (vi kommer till taggning senare). Vi kan rensa lite emellanåt med `docker rmi $(docker images -f "dangling=true" -q)`. Det kallas *Prune dangling images*. Vill vi istället rensa helt kör vi `$ docker system prune -a`. **Vi får då bygga om de images som inte har blivit pushade**. 
+så har vi lyckats skapa images som inte är kopplade till någon taggad version (vi kommer till taggning senare). Vi kan rensa lite emellanåt med `docker rmi $(docker images -f "dangling=true" -q)`. Det kallas *Prune dangling images*. Vill vi istället rensa helt kör vi `$ docker system prune -a`. **Vi får då bygga om de images som inte har blivit pushade**.
