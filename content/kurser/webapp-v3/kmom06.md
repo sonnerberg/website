@@ -92,7 +92,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 ### Extra {#extra}
 
-Med hjälp av övningen "[GPS och kamera i samarbete](kunskap/gps-och-kamera-i-samarbete)" skapa möjlighet för att den som levererar paketet kan ta en geolokaliserad bild som sparas till telefonen för bevis att paketet har lämnats på rätt plats.
+Det finns inga extrauppgifter.
+
+<!-- Med hjälp av övningen "[GPS och kamera i samarbete](kunskap/gps-och-kamera-i-samarbete)" skapa möjlighet för att den som levererar paketet kan ta en geolokaliserad bild som sparas till telefonen för bevis att paketet har lämnats på rätt plats. -->
 
 
 
