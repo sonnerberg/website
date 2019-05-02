@@ -23,7 +23,7 @@ ebda8a98b757        host                host                local
 5c613021151a        none                null                local
 ```
 
-Det skapas automatiskt några default-nätverk men vi ser även vårt egna *dbwebb* i listan. Vi kör en inspect med:
+Det skapas automatiskt några default-nätverk men vi ser även vårt egna *dbwebb* i listan. Vi kör en inspect:
 
 ```
 $ docker network inspect dbwebb

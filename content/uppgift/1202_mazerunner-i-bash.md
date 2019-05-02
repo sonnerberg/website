@@ -23,7 +23,9 @@ Din uppgift är att bygga en bash-klient till servern, enligt en kravspecifikati
 Förkunskaper {#forkunskaper}
 -----------------------
 
-TBD
+Du har gått igenom delen i guiden som handlar om [Docker network](guide/docker/docker-network).
+
+Du har bekantat dig med programmet [curl](https://curl.haxx.se/).
 
 
 
@@ -51,32 +53,34 @@ Så här kan du starta servern.
 
 ```bash
 # Gå till kursrepot
-cd example/nodejs/maze
+cd example/maze
 node index.js
 ```
 
 Du kan testa maze-servern med curl. Så här.
 
-[ASCIINEMA src=25853]
+[ASCIINEMA src=243851]
 
 Studera gärna källkoden till maze-servern. Hade du kunnat skriva den själv?
 
 
 
-###Ta en kopia av Maze {#copy}
+### Ta en kopia av Maze {#copy}
 
-Börja med att ta en kopia av koden i `example/maze`. Spara alla dina filer i katalogen `me/kmom05/maze`.
+Börja med att ta en kopia av koden i `example/maze`. Spara alla dina filer i katalogen `me/kmom05/maze/server/`.
 
 ```bash
 # Gå till kursrepot
-cp -ri example/maze/{api.md,index.js,maze.js,maps,router.js} me/kmom05/maze
+cp -ri example/maze/{api.md,index.js,maze.js,maps,router.js} me/kmom05/maze/server/
 ```
 
 Nu är du redo att starta din egen variant av maze-servern.
 
+Du startar servern med `$ node index.js`.
 
 
-###Att spara spelets id till fil {#fil}
+
+### Att spara spelets id till fil {#fil}
 
 Din klient behöver komma ihåg spelets id och vilket rum du står i. Du sparar den informationen enklast i fil. För att du skall slippa hantera JSON med bash, så har servern en möjlighet att leverera svaren som en komma-separerad sträng.
 
@@ -105,15 +109,16 @@ Krav {#krav}
 -->
 
 
-###Bashscript för att lösa maze {#del1}
+### Bashscript för att lösa maze {#del1}
 
-1. Skapa ett skript `mazerunner.bash`. Sätt rättigheter på skriptet till 755. Skapa en symbolisk länk `mazerunner` som pekar på filen `mazerunner.bash`.
-
-1. Skriptet skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
-
-1. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost.
+1. Skapa ett skript `mazerunner.bash` i mappen `maze/client/`. Sätt rättigheter på skriptet till 755. Skapa en symbolisk länk `mazerunner` som pekar på filen `mazerunner.bash`.
 
 1. Använd API:et för att lägga till följande funktioner i skriptet. Skriptet skall alltid skriva ut ett meddelande om det gick bra eller inte.
+
+<!-- 1. Skriptet skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
+
+1. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost. -->
+
 
 | Kommando                | Vad skall hända |
 |-------------------------|-----------------|
@@ -132,14 +137,13 @@ Så här kan det se ut när du är klar.
 [ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
 
 
-
-###Bashscript i loop {#del2}
+<!-- ###Bashscript i loop {#del2}
 
 1. Utöka funktionaliteten i `mazerunner.bash` så att allt sker i en loop när man startar programmet med `./mazerunner loop`. Skriptet skall börja med att initiera ett nytt spel och visa vilka kartor som finns. Spelaren kan då välja en karta varpå spelaren träder in i första rummet. Därefter fortsätter loopen och väntar på att spelaren skriver in riktningen north, south, east, west, eller help för en hjälptext eller quit för att avsluta.
 
 Så här kan det se ut, ungefär.
 
-[ASCIINEMA src=23368]
+[ASCIINEMA src=23368] -->
 
 
 <!--

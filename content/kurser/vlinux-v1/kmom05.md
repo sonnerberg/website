@@ -91,11 +91,15 @@ TBD
 1. Läs om [Docker network](guide/docker/docker-network) i guiden.
 
 
+
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lös mazen med din mazerunner i bash](uppgift/mazerunner-i-bash)".
+1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete i mapparna `kmom05/maze/client` och `kmom05/maze/server`.
+
+1. Gör uppgiften "[Mazerunner i Docker](uppgift/mazerunner-i-docker)". Du arbetar i mapparna `kmom05/maze/client` och `kmom05/maze/server`.
+
 
 <!-- 1. Gör uppgiften [node2](uppgift/linux-lab4-asynkron-programmering) för att träna på nodejs api funktioner. -->
 
