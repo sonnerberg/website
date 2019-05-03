@@ -5,6 +5,7 @@ category:
     - anax
     - kursen oophp
 revision:
+    "2019-05-03": "(E, mos) Förtydliga vad spelrunda innebär."
     "2019-04-29": "(D, mos) Optionellt att skriva enhetstester till kontrollerklassen."
     "2019-04-26": "(C, mos) Ny version av artikel, nu inklusive kontroller och video."
     "2018-04-16": "(B, mos) Uppdaterade stycket om enhetstester."
@@ -128,7 +129,7 @@ Krav {#krav}
 
 1. Flytta din kod från dina routes och lägg dessa istället i en kontroller-klass.
 
-1. Använd dig av trait och interface för att visa ett histogram över de tärningskast som görs under en spelrunda. Lägg in så att histogrammet visas under spelrundan.
+1. Använd dig av trait och interface för att visa ett histogram över de tärningskast som görs under en spelrunda. En spelrunda är samtliga tärningsslag som spelaren och datorn slår under hela spelet, tills spelet startas om från början. Lägg in så att histogrammet visas.
 
 1. Gör så att datorspelaren blir "intelligent" och har en medveten taktik när den spelar spelet. Det finns ingen speciell nivå av taktik som du måste nå, men någon form av tydliga beslut baserade på spelets nuvarande ställning och/eller tärningens historik är rimliga att förvänta sig.
 
