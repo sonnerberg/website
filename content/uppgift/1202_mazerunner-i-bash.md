@@ -22,10 +22,8 @@ Din uppgift är att bygga en bash-klient till servern, enligt en kravspecifikati
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har gått igenom delen i guiden som handlar om [Docker network](guide/docker/docker-network).
-
-Du har koll på [Bash-guiden](guide/kom-igang-med-bash).
-
+Du har gått igenom delen i guiden som handlar om [Docker network](guide/docker/docker-network).  
+Du har koll på [Bash-guiden](guide/kom-igang-med-bash).  
 Du har bekantat dig med programmet [curl](https://curl.haxx.se/).
 
 
