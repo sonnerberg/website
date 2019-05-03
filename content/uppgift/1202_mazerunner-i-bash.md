@@ -31,13 +31,13 @@ Du har bekantat dig med programmet [curl](https://curl.haxx.se/).
 Introduktion {#intro}
 -----------------------
 
-Läs kort på Wikipedia om vad en [*maze*](https://en.wikipedia.org/wiki/Maze) kan vara.
+Läs kort på Wikipedia om vad en [*maze*](https://en.wikipedia.org/wiki/Maze) kan vara. Möjligen kan det vara inspirerat av boken/filmen med samma namn, [The Maze Runner](https://sv.wikipedia.org/wiki/The_Maze_Runner).
+<!--
+Så här kan det se ut när du löser mazen med ditt skript.
 
-Så här kan det se ut när du löser mazen med ditt skript, skriptet som i detta fallet heter *mazerunner.sh*. Möjligen kan det vara inspirerat av boken/filmen med samma namn, [The Maze Runner](https://sv.wikipedia.org/wiki/The_Maze_Runner).
+[ASCIINEMA src=244037]
 
-[ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
-
-Så kan det alltså se ut.
+Så kan det alltså se ut. -->
 
 
 
@@ -121,7 +121,7 @@ Kraven består av två delar. Först skapar vi ett Bash-skript som körs mot ser
 
 Så här kan det se ut när du är klar.
 
-[ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
+[ASCIINEMA src=244037]
 
 
 
@@ -141,6 +141,7 @@ Tanken är här att vi ska flytta in vår Mazerunner i Docker och de ska prata m
     * Server-kontainern ska köras i bakgrunden.
     * Klienten ska använda serverns namn. Du behöver då byta ut "localhost" i skriptet mot namnet du ger servern.
     * Klient-kontainern ska starta i Bash och i den arbetsmappen du har skriptet i.
+    * Stoppa den/de kontainrar som är igång och ta bort nätverket.
 
 
 
