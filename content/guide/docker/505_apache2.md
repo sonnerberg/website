@@ -18,7 +18,7 @@ Vi börjar med att kika på hur vi installerar Apache.
 FROM debian:buster-slim
 
 RUN apt-get update && \
-    apt-get -y apache2
+    apt-get -y install apache2
 
 CMD apachectl -D FOREGROUND
 ```
