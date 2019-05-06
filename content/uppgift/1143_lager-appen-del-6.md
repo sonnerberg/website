@@ -8,7 +8,7 @@ Lager appen del 6
 ==================================
 [FIGURE src=image/webapp/world-map.jpg?w=c5 class="right"]
 
-I kursmoment 5 skapade vi en native app baserad på vår webapp med hjälp av Cordova. Vi ska i denna uppgiften använda oss av plugins för att komma åt native-funktionalitet i en fysisk enhet. Vi användar en mobil enhets styrka och läggar till funktionalitet för GPS och kartor.
+I kursmoment 5 skapade vi en native app baserad på vår webapp med hjälp av Cordova. Vi ska i denna uppgiften använda oss av plugins för att komma åt native-funktionalitet i en fysisk enhet. Vi använder en mobil enhets styrka och läggar till funktionalitet för GPS och kartor.
 
 
 
@@ -31,13 +31,13 @@ Börja med att kopiera din lager app från kmom05 så har du nått att utgå ifr
 cp kmom05/lager5/* kmom06/lager6/
 ```
 
-Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om invoices. Här kan du hämta ut alla invoices och skapa nya.
+Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om ordrar. Här kan du hämta ut alla ordrar.
 
 
 
 Krav {#krav}
 -----------------------
-1. Använd animationer och övergånger för att efterlikna native applikationer.
+1. Använd animationer och övergångar för att efterlikna native applikationer.
 
 1. Skapa en vy i din app med de ordrar som är redo att skickas. Dvs. ordrar med status Packad (200).
 
