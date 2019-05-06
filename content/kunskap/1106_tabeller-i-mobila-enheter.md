@@ -182,6 +182,10 @@ Först sätter vi `display: block;` för `table`, `tr` och `td` elementen, vi vi
             left: -9999px;
         }
 
+        tbody {
+            display: block;
+        }
+
         td {
             display: block;
         }
