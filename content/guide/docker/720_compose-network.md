@@ -6,7 +6,7 @@ revision:
 Compose och nätverk via ip-adress
 =======================
 
-Vi fortsätter med föregående exempel. Vi vill nu ha en kontainer till som kan köra skript och använda curl för att nå servern via dess ip-adress. Vi kan själva bestämma ett subnät och tilldela ip-adresser. Vi börjar från slutet med filen docker-compose.yml. Fil strukturen ser nu ut så här:
+Vi fortsätter med föregående exempel. Vi vill nu ha en kontainer till som kan köra skript och använda curl för att nå servern via dess ip-adress. Vi kan själva bestämma ett subnät och tilldela ip-adresser. Det skapas automatiskt ett nätverk melan de services som vi start samtidigt med kommandot `$ docker-compose up`, men för att vi ska se hur det går till, specificerar vi det själva. Vi börjar från slutet med filen docker-compose.yml. Fil strukturen ser nu ut så här:
 
 ```
 .
@@ -57,6 +57,8 @@ services:
         container_name: "simple-client"
         networks:
             dbwebb:
+        depends_on:
+            - server
 ```
 
 Först skapar vi nätverket *dbwebb*. Till det väljer vi default-drivern (bridge) och sätter ett subnät (subnet) där vi kan dela ut adresser.
