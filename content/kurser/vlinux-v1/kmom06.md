@@ -15,26 +15,16 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!--stop-->
-
-Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i bash, vi kan bygga servrar med Node.js och kan bygga klienter som kommunicerar med webbtjänster via RESTful API:er. Visst låter det som en hel del?
-
-Låt oss nu ta ytterligare ett steg in i klient och serverprogrammering med Node.js. Vi skall koda i Node.js, både på klient och serversidan. Tanken är att vi får en känsla för hur vi kan dela upp koden och en övning i klient och server med RESTful API.
-
-**mazerunner!!!**
-
+Nu har vi koll på hur vi kan strukturera lite större Bash-script. Vi ska gå vidare med Docker och kika på *Docker Compose*. Det underlättar för oss när Docker konstruktionerna växer. Vi ska ta vår Mazerunner från förra kursmomentet och använda oss utav Docker Compose för att köra igång kontainrarna och nätverket. VI ska även lägga till lite funktionalitet till Mazerunner.
 
 <!--more-->
 
-Du kommer göra ett kommandoradsprogram i Node.js med argument och options samt en mainloop och kommandotolk. Det kan se ut så här.
+Du kommer skapa en spel-loop till din Mazerunner, likt nedan:
 
-[ASCIINEMA src=26103]
+[ASCIINEMA src=244597]
 
-Sedan skall du jobba med klienter och servrar i form av Gomoku, luffarshack.
+Så kan det se alltså ut när ena delen är klar.
 
-[ASCIINEMA src=26240]
-
-När du är klar har du fått en orientering i hur klienter och servrar kan struktureras med JavaScript i Node.js. Dessutom får du nog en hel del kod som du kan återanvända i senare projekt.
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -71,15 +61,15 @@ Det finns inga artiklar.
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 6.
+<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 6. -->
 
-1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify.
+<!-- 1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify. -->
 
 
 
 ###Lästips {#lastips}
 
-1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet.
+<!-- 1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet. -->
 
 
 
@@ -91,21 +81,23 @@ Titta på följande:
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övningar.
 
-1. Läs igenom övningen "[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)".
+1. Gå igenom delen i guiden som handlar om "[Docker Compose](guide/docker/docker-compose)".
 
-1. Läs igenom övningen "[Spela luffarschack med klient och server i Node.js](kunskap/spela-luffarschack-med-klient-och-server-i-node-js)".
+<!-- 1. Läs igenom övningen "[Spela luffarschack med klient och server i Node.js](kunskap/spela-luffarschack-med-klient-och-server-i-node-js)". -->
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa klienter och servrar som spelar luffarschack i Node.js](uppgift/skapa-klienter-och-servrar-som-spelar-luffarschack-i-node-js)".
+1. Gör uppgiften [Spel loop i Mazerunner](uppgift/mazerunner-loop). Du arbetar i mappen `maze2/`.
+
+<!-- 1. Gör uppgiften "[Skapa klienter och servrar som spelar luffarschack i Node.js](uppgift/skapa-klienter-och-servrar-som-spelar-luffarschack-i-node-js)". -->
 
 <!-- 1. Gör uppgiften [Lab 5](uppgift/linux-lab5-fortsattning-asynkron-programmering) för att träna ytterligare på asynkron programmering. -->
 
@@ -113,7 +105,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-1. Förbered din kod för Gomocup.
+<!-- 1. Förbered din kod för Gomocup. -->
 
 
 
@@ -127,7 +119,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur väl har du fått ordning på begreppen kring klient och server?
-* Hur känns det att utveckla i Node.js och den asynkrona programmeringsmodellen?
-* Gick det bra med dina CLI-program i Node.js, några reflektioner kring dem?
-* Gjorde du något extra i uppgiften, eller förändrade grundkoden i Gomoku-spelet?
-* Känner du dig sugen, och redo, på att skriva en deltagare till Gomocup?
+* Känner du dig bekväm med Docker överlag?
+* Kommer du använda Docker utanför kursens ramar?
+* Gjorde du någon uppdatering av Mazerunnerns struktur?

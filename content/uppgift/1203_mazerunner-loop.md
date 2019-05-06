@@ -1,8 +1,12 @@
 ---
 author: lew
-category: unix
+category:
+    - Bash
+    - Docker
+    - Docker Compose
+    - linux
 revision:
-    "2019-05-02": (A, lew) Ny inför HT19.
+    "2019-05-06": (A, lew) Ny inför HT19.
 
 ...
 Uppdatera mazen med en loop
@@ -26,39 +30,51 @@ Du har koll på [Bash-guiden](guide/kom-igang-med-bash).
 Introduktion {#intro}
 -----------------------
 
-TBD
+Som introduktion kan vi kika på exemplet igen. Ta gärna en fundering på hur programmet struktureras och hur man kan lösa uppgiften med så få rader som möjligt. Om man har en god struktur på koden från föregående kursmoment så behövs inte mycket handpåläggning för att skapa en spel-loop.
+
+[ASCIINEMA src=244597]
 
 
 
 Krav {#krav}
 -----------------------
 
-Kraven består av två delar. Först skapar vi ett Bash-skript som körs mot servern. Sedan bygger vi in både servern och klienten i varsin kontainer som pratar med varandra via ett eget nätverk.
+Kraven består av två delar. Först jobbar vi med Mazerunnern från kursmoment 5. Den här gången kan vi utgå ifrån samma Dockerfile och i slutändan ger vi den uppdaterade imagen en ny tagg `:loop`. Servern kan vi återanvända (om du inte väljer att ändra i den). Den andra delen handlar om att skapa en *docker-compose.yml* som sköter uppstarten av både servern och klienten samt skapar nätverket de ska använda sig utav.
+
+Börja med att ta en kopia av mazerunnern:
+
+```
+# Ställ dig i kursrepot
+$ cp -ri me/kmom05/maze/ me/kmom06/maze2/
+```
+
+
+### Mazerunner med loop (del 1) {#del1}
+
+1. Utöka funktionaliteten i `client/mazerunner.bash` så att allt sker i en loop när man startar programmet med `./mazerunner.bash loop`. Skriptet skall börja med att initiera ett nytt spel och visa vilka kartor som finns. Spelaren kan då välja en karta varpå spelaren träder in i första rummet. Därefter fortsätter loopen och väntar på att spelaren skriver in riktningen north, south, east, west, eller help för en hjälptext eller quit för att avsluta.
+
+1. Bygg om din image och tagga den med `:loop` (*username/vlinux-mazeclient:loop*). Publicera den på Docker Hub.
 
 
 
+### Docker Compose (del 2) {#del2}
 
-### Bashscript i loop {#bash-loop}
+Skapa filen `docker-compose.yml` i mappen `maze2/`.
 
-1. Utöka funktionaliteten i `mazerunner.bash` så att allt sker i en loop när man startar programmet med `./mazerunner loop`. Skriptet skall börja med att initiera ett nytt spel och visa vilka kartor som finns. Spelaren kan då välja en karta varpå spelaren träder in i första rummet. Därefter fortsätter loopen och väntar på att spelaren skriver in riktningen north, south, east, west, eller help för en hjälptext eller quit för att avsluta.
+1. Skapa ett nätverk (bridge).
 
-Så här kan det se ut, ungefär.
+1. Det ska finnas två services, *server* och *client*, som hanterar respektive kontainer.
 
-[ASCIINEMA src=23368]
+1. Klienten ska nå servern via ett eget namn.
 
+1. Servern ska läggas till som en volym.
 
-<!--
-###Lös mazen {#solution}
+1. Testa kommandona:
+    * `$ docker-compose up -d server`
+    * `$ docker-compose up client`
+    * `$ docker-compose down`
 
-1. Utöka funktionaliteten i `mazerunner.bash` så att den automatiskt går igenom mazen på ett effektivt sätt som leder till sista rummet. Du startar detta genom att ange `./mazerunner solve`.
-
-
-
-###Buggfix {#bugg}
-
-1. Det finns en felrapport på maze-servern, [issue 8](https://github.com/dbwebb-se/linux/issues/8), som behöver lagas. Gör först ett testfall `issue.bash` som återskapar och påvisar felet. Laga sedan felet i din maze server.
-
--->
+Om allt startar och stängs ned som det ska är du färdig.
 
 
 
@@ -68,7 +84,12 @@ Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate maze
+$ dbwebb validate maze2
+```
+
+```bash
+# Ställ dig i kurskatalogen
+$ dbwebb publish maze2
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
