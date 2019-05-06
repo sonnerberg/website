@@ -3,6 +3,7 @@ title: oophp (v5)
 author:
     - mos
 revision:
+    "2019-05-06": "(F, mos) Texter till samtliga kmom i v5 klara."
     "2019-03-13": "(E, mos) Kopia till v5."
     "2018-09-20": "(D, mos) Justerat syfte, innehåll, mål, förkunskaper inför ny kurskod."
     "2018-06-18": "(C, mos) Uppdatering av grundstruktur inför ht18."
@@ -151,9 +152,11 @@ Läs [instruktionen till kursmoment 05](./kmom05).
 
 ### Kmom06: Lagra innehåll i databasen {#kmom06}
 
+Detta kursmoment har ett liknande upplägg som föregående och vi fortsätter att jobba med databasen där vi nu fokuserar på att hantera "innehåll" i databasen. Innehåll kan till exempel vara texten till de sidor som bygger upp en webbplats eller innehållet i bloggsidor.
+
 Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras (CRUD) av användaren. Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
-Det vi bygger är egentligen grunden i ett enkelt Content Mangement System (CMS) där användaren kan redigera webbplatsens innehåll via ett webbaserat gränssnitt.
+Det vi bygger är i grunden ett enkelt Content Mangement System (CMS) där användaren kan redigera webbplatsens innehåll och texter via ett webbaserat gränssnitt.
 
 Läs [instruktionen till kursmoment 06](./kmom06).
 
