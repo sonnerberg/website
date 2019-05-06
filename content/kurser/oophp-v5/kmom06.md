@@ -10,20 +10,12 @@ author:
 category:
     - kurs oophp
 revision:
-    "2019-03-13": "(prel, mos) Påbörjat arbete till v5."
+    "2019-03-13": "(C, mos) Genomgången inför v5."
     "2018-04-30": "(B, mos) Uppdaterad inför oophp v4 och bytte kmom nummer."
     "2017-04-28": "(A, mos) Första utgåvan."
 ...
 Kmom06: Lagra innehåll i databasen
 ==================================
-
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen är under översyn till våren 2019. Större ändringar kommer troligen att ske.
-
-[/WARNING]
 
 Detta kursmoment har ett liknande upplägg som föregående och vi fortsätter att jobba med databasen där vi nu fokuserar på att hantera "innehåll" i databasen. Innehåll kan till exempel vara texten till de sidor som bygger upp en webbplats eller innehållet i bloggsidor.
 
@@ -90,7 +82,7 @@ Här finns ett antal lästips som visar hur du kan hantera text i databasen ur e
 * "[Skriv för webben med Markdown och formattera till HTML med PHP (v2)](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)"
 
 
-### Överkurs filtrering {#content-ok}
+### Referens textfiltrering (överkurs) {#content-ok}
 
 Finner du detta ämne intressant så kan du även läsa följande tips från coachen.
 
