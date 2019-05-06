@@ -138,13 +138,13 @@ Mycket handlar om att förenkla vardagen som programmerare genom att automatiser
 
 ###Kmom04: En webbserver i Docker {#kmom04}
 
-Vi går vidare med Docker och lär oss hur vi får igång en webbserver som körs inuti kontainern. Vi tittar även på volymer och hur vi kan anropa servern utifrån. Till detta skapar vi också ett Bashscript som kan testa de olika routesen.
+Vi går vidare med Docker och lär oss hur vi får igång en webbserver som körs inuti kontainern. Vi tittar även på volymer och hur vi kan anropa servern utifrån. Till detta skapar vi också ett Bashscript som kan testa en egen router.
 
 [Instruktion till kursmoment 04](kurser/vlinux-v1/kmom04).
 
 
 
-###Kmom05: Docker network {#kmom05}
+###Kmom05: Ett nätverk i Docker {#kmom05}
 
 Vi lär oss skapa fler kontainrar och kommunicera mellan dem med hjälp av ett privat nätverk. Flera services ska kommunicera med varandra i Docker.
 
@@ -156,7 +156,7 @@ Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
 ###Kmom06: Docker Compose {#kmom06}
 
-Vi bygger vidare på föregående kursmoment och använder docker-compose för att hantera våra services i det privata nätverket.
+Vi bygger vidare på föregående kursmoment och använder docker-compose för att hantera våra services i det privata nätverket. Vi jobbar även vidare med Bash-script.
 
 [Instruktion till kursmoment 06](kurser/vlinux-v1/kmom06).
 
