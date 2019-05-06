@@ -45,7 +45,7 @@ Krav {#krav}
 
 1. Använd GPS för att visa nuvarande position på kartan.
 
-1. Gör det enkelt att testa din app. Ha minst en order med status Packad, som har en adress som fungerar och visas upp med Google Geocoder.
+1. Gör det enkelt att testa din app. Ha minst en order med status Packad, som har en adress som fungerar och visas upp med en Geocoder.
 
 1. Validera och publicera din kod enligt följande.
 
