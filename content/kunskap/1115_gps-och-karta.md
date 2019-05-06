@@ -184,6 +184,7 @@ import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/images/marker-icon-2x.png";
+import "leaflet/dist/images/marker-icon.png";
 import "leaflet/dist/images/marker-shadow.png";
 
 var map;
@@ -197,7 +198,7 @@ npm install --save-dev style-loader css-loader
 npm install --save-dev file-loader
 ```
 
-`style-loader` och `css-loader` är loaders som tar hand om CSS och `file-loader` kommer hantera bilderna. I vår `webpack.config.js` fil lägger vi till två objekt i en arrayen `module.rules` vår webpack konfiguration.
+`style-loader` och `css-loader` är loaders som tar hand om CSS och `file-loader` kommer hantera bilderna. I vår `webpack.config.js` fil lägger vi till två objekt i en arrayen `module.rules` vår webpack konfiguration. Vi ser även till att ändra output katalogen så att bilderna kan laddas utan att ändra laddningskatalog i leaflet. Vi behöver därför ändra i `index.html` att filen `app.js` laddas istället för `dist/app.js`.
 
 ```javascript
 const path = require("path");
@@ -241,9 +242,15 @@ Använda adress istället för koordinater {#address}
 --------------------------------------
 Vi har inte alltid tillgång till koordinater för de platser vi vill visa upp på kartan. Och då är det bra om vi istället kan använda adressen. Vi vill därför göra om adresser till koordinater och för det använder vi npm modulen `leaflet-geosearch`, som installeras med kommandot `npm install leaflet-geosearch --save`.
 
-Vi börjar med att skapa ett `OpenStreetMapProvider` objekt `geocoder` och även ett objekt med adresser istället för positioner. Vi använder sedan vår `geocoder` för att göra om en adress till koordinater och ritar ut en markör på rätt plats. Om `geocoder` inte lyckas koda om adressen ritas inte ut en plats. Bäst resultat får man om man inte har allt för specifika adresser, man kan till exempel utelämna post nummer.
+Vi börjar med att importera och skapa ett `OpenStreetMapProvider` objekt `geocoder` och även ett objekt med adresser istället för positioner. Vi använder sedan vår `geocoder` för att göra om en adress till koordinater och ritar ut en markör på rätt plats. Om `geocoder` inte lyckas koda om adressen ritas inte ut en plats. Bäst resultat får man om man inte har allt för specifika adresser, man kan till exempel utelämna post nummer.
 
 ```javascript
+...
+
+import { OpenStreetMapProvider } from "leaflet-geosearch";
+
+...
+
 function showMap() {
     ...
 
@@ -265,6 +272,8 @@ function showMap() {
     }
 }
 ```
+
+Vi behöver även lägga till `https://nominatim.openstreetmap.org` under default-src i vår CSP i `index.html` för att vi ska kunna hämta hem resultat från `leaflet-geosearch`.
 
 
 
