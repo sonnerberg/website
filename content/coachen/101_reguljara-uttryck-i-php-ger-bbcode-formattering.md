@@ -11,11 +11,11 @@ revision:
 Reguljära uttryck i PHP ger BBCode formattering
 ==================================
 
-[BBCode](http://sv.wikipedia.org/wiki/BBCode) är ett vanligt sätt att låta användaren formattera inlägg och kommentarer. Det ger en bättre säkerhet än om användaren kan använda HTML direkt. Du kan skriva en enkel BBCode formatterare som en PHP-funktion, ett kort reguljärt utryck hjälper dig att ersätta BBCode toknen mot dess HTML ekvivalenter.
+BBCode är ett vanligt sätt att låta användaren formattera inlägg och kommentarer. Det ger en bättre säkerhet än om användaren kan använda HTML direkt. Du kan skriva en enkel BBCode formatterare som en PHP-funktion, ett kort reguljärt utryck hjälper dig att ersätta BBCode toknen mot dess HTML ekvivalenter.
 
-Du kan återfinna BBCode i forum eller kommentarssystem.
+<!--more-->
 
-<!-- more -->
+Du kan återfinna BBCode i forum eller kommentarssystem. Läs mer om [BBCode på Wikipedia](http://sv.wikipedia.org/wiki/BBCode).
 
 Så här kan en funktion se ut som använder sig av ett reguljärt uttryck för att formattera text enligt BBCode till HTML.
 

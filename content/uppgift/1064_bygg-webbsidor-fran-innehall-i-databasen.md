@@ -17,7 +17,8 @@ Du skall bygga tabell(er) i en databas tillsammans med klasser i din redovisa-si
 
 Texten som du lagrar i databasen kör du igenom ett antal filter som formatterar din text innan den visas.
 
-Det är egentliget ett litet CMS (Content Management System) du skapar. 
+Det du skapar är egentligen ett litet CMS (Content Management System).
+
 <!--more-->
 
 
@@ -53,7 +54,7 @@ Krav {#krav}
 
 1. Det skall finnas (någon enkel form av) felhantering om det finns två likadana slugs.
 
-1. Det skall finnas felhantering så att man kan ha tomma path.
+1. Det skall finnas felhantering så att man kan ha en tom path.
 
 1. Användaren skall kunna fylla i vilka textfilter som skall användas och du skall filtrera/formattera texten med din klass motsvarande `TextFilter`.
 
@@ -66,7 +67,7 @@ Krav {#krav}
 Extrauppgift {#extra}
 -----------------------
 
-Det finns många små saker man kan jobba med när det gäller innehåll som sparas i databasen. Se om något av dem faller dig i smaken. JObba på om du har tid och lust.
+Det finns många små saker man kan jobba med när det gäller innehåll som sparas i databasen. Se om något av dem faller dig i smaken. Jobba på om du har tid och lust.
 
 1. Om du lägger inloggning så se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin.
 
@@ -80,7 +81,7 @@ Det finns många små saker man kan jobba med när det gäller innehåll som spa
 
 1. Använd ett _flash-minne_ i sessionen för att skriva ut information och återkoppla till användaren när innehåll raderas, skapas, sparas. Det är för att göra gränssnittet tydligare för användaren.
 
-1. Lägg till paginering och sortering på ditt admin interface av innehållet.
+1. Lägg till paginering och sortering på ditt administrativa gränssnitt för innehållet.
 
 1. Lägg till så att ett innehåll är kopplat till en viss användare som blir dess författare (kräver databastabeller för användaren och inloggning).
 

@@ -4,8 +4,9 @@ author:
 category:
     - php
     - kurs oophp
-    - anax-lite
+    - anax
 revision:
+    "2019-05-06": "(D, mos) Länkar i tips från coachen som hjälp."
     "2018-05-09": "(C, mos) Lade till video som intro."
     "2018-04-30": "(B, mos) Genomgången inför oophp-v4."
     "2017-04-18": "(A, mos) Första utgåvan."
@@ -13,7 +14,7 @@ revision:
 Skapa en klass för textfiltrering och formattering (v2)
 ==================================
 
-Samla koden för textfiltrering och formattering i en egen klass som du kan använda i din webbplats för att filtrera/formattera innehåll från databasen.
+Samla koden för textfiltrering och formattering i en egen klass som du kan använda i din webbplats för att filtrera/formattera textbaserat innehåll från databasen.
 
 <!--more-->
 
@@ -45,15 +46,16 @@ Du kan alltså ta en text som du till exempel har sparat i databasen och låta k
 
 Här är en översikt av hur din klass kan se ut, se även kursrepot `example/textfilter`.
 
-```php
-<?php
+Döp din klass till `MyTextFilter` eller något annat, annars riskerar den att krocka med den befintliga klassen `Anax\TextFilter\TextFilter` eftersom autoloadern inte kan skilja dem åt då både vendor Mos och Anax är mappade mot katalogen `src/`.
 
+
+```php
 namespace Mos\TextFilter;
 
 /**
  * Filter and format text content.
  */
-class TextFilter
+class MyTextFilter
 {
     /**
      * @var array $filters Supported filters with method names of 
@@ -129,7 +131,7 @@ Det var en översikt av hur du kan skapa klassen och dess metoder. Tanken är at
 Själva användningen kan se ut så här.
 
 ```php
-$filter = new \Mos\TextFilter();
+$filter = new \Mos\TextFilter\MyTextFilter();
 $text = "En [b]fet[/b] moped.";
 $html = $filter->parse($text, ["bbcode"]);
 ```
@@ -243,7 +245,7 @@ Krav {#krav}
 
 1. Din klass skall innehålla en metod `parse()` som tar text och filter som inparametrar, bearbetar texten enligt angivna filter i sagd ordning och slutligen returnerar den modifierade texten.
 
-1. Gör en (eller flera) test routes på din redovosa sida som visar hur du formatterar innehåll på de sätt som skall stödjas. Lägg en länk i navbaren så man kan nå din testsida.
+1. Gör en (eller flera) test routes på din redovisa sida som visar hur du formatterar innehåll på de sätt som skall stödjas. Lägg en länk i navbaren så man kan nå din testsida.
 
 1. Validera och publicera din kod.
 
@@ -251,6 +253,8 @@ Krav {#krav}
 
 Extrauppgift {#extra}
 -----------------------
+
+Om du har tid, lust och energi så kan du bygga vidare på din textfilter-klass, här är ett par förslag.
 
 1. Din klass kan stödja ett filter `strip` som gör `strip_tags()` på texten.
 
@@ -264,5 +268,9 @@ Tips från coachen {#tips}
 -----------------------
 
 Om du vill kika på en Anax modul som gör ungefär liknande som du gör i denna uppgiften, så kan du titta på [`anax/textfilter`](https://github.com/canax/textfilter).
+
+Se till att du har bytt namn på klassen TextFilter så att den inte krockar med den befintliga klassen `Anax\TextFilter\TextFilter`, se även [forumtråd](t/7792).
+
+Det finns ett foruminlägg som visar hur du löser felmeddelandet "[Avoid using static access to class `\Michelf\MarkdownExtra`](t/7829)".
 
 Lycka till och hojta till i forumet om du behöver hjälp!

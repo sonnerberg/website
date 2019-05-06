@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "img/snapvt19/oophp-kmom06-flash.svg"
 author:
     - mos
 category:
@@ -19,15 +25,17 @@ Kursen är under översyn till våren 2019. Större ändringar kommer troligen a
 
 [/WARNING]
 
+Detta kursmoment har ett liknande upplägg som föregående och vi fortsätter att jobba med databasen där vi nu fokuserar på att hantera "innehåll" i databasen. Innehåll kan till exempel vara texten till de sidor som bygger upp en webbplats eller innehållet i bloggsidor.
+
 Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras (CRUD) av användaren. Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
-Det vi bygger är egentligen grunden i ett enkelt Content Mangement System (CMS) där användaren kan redigera webbplatsens innehåll via ett webbaserat gränssnitt.
+Det vi bygger är i grunden ett enkelt Content Mangement System (CMS) där användaren kan redigera webbplatsens innehåll och texter via ett webbaserat gränssnitt.
 
 Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen och leder till effektiv SQL. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
 
-Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur som klarar både det ena och det andra och även är förberedd för att byggas ut.
+Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur som klarar både det ena och det andra, när det gäller texter och innehåll i databasen.
 
-<!-- more -->
+<!--more-->
 
 [FIGURE src=image/snapvt17/content-delete-edit.png?w=w3 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
 
@@ -45,7 +53,10 @@ Läs & Studera  {#lasanvisningar}
 *(ca: 1-2 studietimmar)*
 
 
+
 <!--
+Detta hanteras inte, men borde kanske hanteras tidigare i kursen.
+
 PHP manualen
 
 Overloading https://www.php.net/manual/en/language.oop5.overloading.php
@@ -61,22 +72,70 @@ Object Serialization https://www.php.net/manual/en/language.oop5.serialization.p
 
 
 
-### Videor {#videor}
+### Repetera {#repetera}
 
-Kika på följande videos.
+I föregående kmom fanns läsanvisningar om PHP PDO, eventuellt vill du gå tillbaka till dem och göra en kort repetition.
 
-1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 6. De ger dig en introduktion och översikt till kursmomentet.
+I förra kmomet läste du om "Databaser i ramverk" som referensmaterial och fördjupning. Har du tid över så är det bra att gå tillbaka till det stycket och läsa ytterligare lite mer.
 
 
 
-### Lästips {#lastips}
+### Hantera innehåll i webb och databas {#content}
 
-Följande tips från coachen används i övningen och uppgiften.
+Här finns ett antal lästips som visar hur du kan hantera text i databasen ur ett par olika aspekter. Artiklarna används i övningen och uppgiften som du skall genomföra. Läs igenom artiklarna för att förbereda dig och för att få en känsla för hur innehåll kan hanteras.
 
-1. "[Gör en läsbar url med slugify()](coachen/gor-en-lasbar-url-med-slugify)"
-1. "[Reguljära uttryck i PHP ger BBCode formattering](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)"
-1. "[Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar)"
-1. "[Skriv för webben med Markdown och formattera till HTML med PHP (v2)](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)"
+* "[Gör en läsbar url med slugify()](coachen/gor-en-lasbar-url-med-slugify)"
+* "[Reguljära uttryck i PHP ger BBCode formattering](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)"
+* "[Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar)"
+* "[Skriv för webben med Markdown och formattera till HTML med PHP (v2)](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)"
+
+
+### Överkurs filtrering {#content-ok}
+
+Finner du detta ämne intressant så kan du även läsa följande tips från coachen.
+
+* [Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)
+
+Vi arbetar inte med det i uppgiften men det kan vara intressant att veta om filtret HTML Purifier som kan filtrera innehåll och struktur på din HTML-kod som genereras från din webbplats.
+
+* [HTML Purifier](http://htmlpurifier.org/)
+
+Även hanteringen av frontmatter är en sak som hanteras med ett textfilter. Här handlar det mest om en YAML parser som konverterar frontmattern till en PHP array. Här kan du läsa om olika YAML parsers inklusive den modulen som vi använder i Anax vilken är symfony/yaml.
+
+* [PHP YAML Parsers](https://stackoverflow.com/a/3691710/341137)
+* [The state of YAML in PHP](http://fabien.potencier.org/the-state-of-yaml-in-php.html)
+* [symfony/yaml: The Yaml Component](https://symfony.com/doc/current/components/yaml.html)
+
+
+
+### Ramverk Anax {#anax}
+
+Den modulen som berörs i detta kursmoment är `anax/textfilter` men du kommer inte att använda den då du du istället kommer att göra din egen motsvarighet. Men om du har intresse att studera modulens uppbyggnad och kod så kan du som överkurs studera dess README och källkod.
+
+* [anax/textfilter](https://github.com/canax/textfilter)
+
+Modulen används (främst) för att hantera frontmatter och översätta text från markdown till HTML, lösa innehållsförteckningar och revisionshistorik samt sköta länkningen inom ramverket för flatfile content, de filer som ligger i `content/` katalogen. 
+
+Du har sedan tidigare kännedom om följande moduler.
+
+* [anax/commons](https://github.com/canax/commons)
+* [anax/controller](https://github.com/canax/controller)
+* [anax/database](https://github.com/canax/database)
+* [anax/request](https://github.com/canax/request)
+* [anax/response](https://github.com/canax/response)
+* [anax/router](https://github.com/canax/router)
+* [anax/session](https://github.com/canax/session)
+* [anax/view](https://github.com/canax/view)
+
+
+
+### Video {#video}
+
+Det finns generellt kursmaterial i video form.
+
+* Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
+
+1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
 
 
 
@@ -86,29 +145,26 @@ Följande tips från coachen används i övningen och uppgiften.
 *(ca: 12-16 studietimmar)*
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Gör följande övning, den förbereder dig inför uppgifterna.
 
-1. 1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter (v2)"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter-v2). Spara dina exempelprogram under `me/kmom06/content`.
+1. 1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter (v2)"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter-v2). Spara dina eventuella exempelprogram under `me/kmom06/content`.
 
 <!--
 Använd gärna extern modul i varje kmom.
 esc() wrapper, e(), eller modulen från Zend
 
 Lägg Textfilter som övning, inte enbart som uppgift.
+* Kanske lägga till testfall till klassen så man måste koda klassen så att den klarar vissa testfall?
 
 purify
-
-användare, lösenord
-
-Travis med enhetstester.
 
 -->
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
@@ -131,5 +187,6 @@ Se till att följande frågor besvaras i texten:
 
 * Hur gick det att jobba med klassen för filtrering och formatting av texten?
 * Berätta om din klasstruktur och kodstruktur för din lösning av webbsidor med innehåll i databasen.
-* HUr känner du rent allmänt för den koden du skrivit i din me/redovisa, vad är bra och mindre bra? Ser du potential till refactoring av din kod och/eller behov av stöd från ramverket?
+* HUr känner du rent allmänt för den koden du skrivit i din me/redovisa, vad är bra och mindre bra?
+* Ser du potential till refactoring av din kod och/eller behov av stöd från ramverket?
 * Vilken är din TIL för detta kmom?
