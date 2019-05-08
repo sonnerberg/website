@@ -46,7 +46,8 @@ För att installera gå till [Android Studio](https://developer.android.com/stud
 Kör sedan nedanstående kommando för att packa upp zip-filen till katalogen `/usr/local`.
 
 ```bash
-sudo unzip [sökväg till zip-filen] -d /usr/local/
+tar -xzf [sökväg till zip-filen]
+sudo mv android-studio /usr/local/
 ```
 
 För att öppna upp Android Studio kör filen `studio.sh` enligt nedan.
