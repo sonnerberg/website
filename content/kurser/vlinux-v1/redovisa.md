@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-05-08": (D, lew) Tog bort video för Its.
     "2017-12-21": (C, mos) Mindre justeringar inför vt18.
     "2016-02-10": (B, mos) Redovisningsfilen heter `index.html`.
     "2015-06-23": (A, mos) Första utgåvan för linux kursen.
@@ -87,9 +88,9 @@ Du kan själv provköra och se samma resultat som läraren ser. Det är en mycke
 
 Klart! {#klar}
 ---------------------------------------
-
+<!--
 [YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
 
-Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
+Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet. -->
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
