@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2019-03-13": "(prel, mos) Påbörjat arbete till v5."
+    "2019-05-10": "(D, mos) Uppdaterad till v5, optionella uppdaterade till flexibelt admin-interface och regga användare."
     "2018-05-08": "(C, mos) Ny inför oophp v4."
     "2017-05-09": "(B, mos) Mindre förtydligande."
     "2017-05-06": "(A, mos) Första utgåvan."
@@ -10,32 +10,16 @@ revision:
 Kmom07/10: Projekt och examination
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen är under översyn till våren 2019. Större ändringar kommer troligen att ske.
-
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
+
+Alla delar i detta kursmoment skall utföras individuellt och självständigt.
 
 Upplägget är enligt följande:
 
-* Projektet och redovisning (20-80h)
+* Projektet
+* Redovisning
 
-Totalt omfattar kursmomentet (07/10) i storleksordningen 20-80 studietimmar.
-
-
-<!--
-
-user/login
-user/register
-user/create
-user/profile
-admin/user/view
-
--->
+Totalt omfattar kursmoment 07/10 i storleksordningen 20--40 studietimmar.
 
 
 
@@ -59,11 +43,11 @@ Du skall alltså göra ett bloggverktyg där användaren kan skapa och publicera
 
 Du kan bygga din webbplats med följande fokus.
 
-* Marknadsför en/flera (verklig/påhittad) produkt, tjänst, koncept så att hela din webbplats handlar om just denna "produkt" och dess utomordenliga förträfflighet.
+* Marknadsför en/flera (verklig/påhittad) produkt, tjänst, koncept, idé så att hela din webbplats handlar om just denna "grej" och dess utomordentliga förträfflighet. Det kan vara tydlig försäljning "köp denna produkten" eller någon variant av influencer där säljandet vävs in i webbplatsen.
 
 Om du vill kan du anpassa upplägget ovan och bygga webbplatsen med alternativt fokus, till exempel enligt följande.
 
-* Personlig webbplats (för dig själv eller en påhittad person) med allmänna reflektioner och betraktelser i vardagen tillsammans med fotografier för att ge känsla.
+* Personlig webbplats (för dig själv eller en påhittad person) med allmänna reflektioner och betraktelser i vardagen tillsammans med fotografier för att ge känsla, kanske kan det bli en variant av din egen webbplats där du marknadsför dig själv.
 
 Specen nedan bygger på att du gör en webbplats som marknadsför en produkt/tjänst/koncept. Men du kan säkert anpassa det till din egen idé.
 
@@ -96,52 +80,47 @@ Bygg stöd för följande sidor på din webbplats.
 
 På produktsidan ser man en översikt av alla produktvarianter och erbjudande som finns. Du kan välja att visa översikten av produkterna i en tabell, eller visa upp dem mer som en traditionell Eshop kunde gjort (välj själv). Visa upp minst 5 produkter. Man kan klicka på en produkt för att se den i sin helhet på en produktsida med bild(er) och information om produkten.
 
-<!--
-Paginering, sökning, Filtrering.
--->
-
 I nyhetsbloggen presenterar du nyheter och allmän information om produkter och erbjudande. I översikten skall det visas inledningen till minst 5 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas i sin helhet. Använd minst en bild till varje blogginlägg. 
+
+Fyll din webbplats med relevanta bilder och texter.
+
+Ditt system driftas på studentservern.
 
 
 
 ### Krav 2: Ordning och reda {#k2}
 
-Ditt system driftas på studentservern.
+Du vill dokumentera ditt system så att en likasinnad programmerare kan förstå vad du gjort.
 
-Din databaskod sparar du sedvanligt i `sql/setup.sql`, `sql/ddl.sql` och `sql/insert.sql`.
+Lägg till ytterligare en sida på webbplatsen som heter "doc" där du förklarar den kodstruktur som du har i din lösning. Vilka klasser är centrala, vilka kontroller har du och vilka route-pather finns det. Var kortfattad och tänk att du förklarar din kod för en likasinnad programmerare. Skriv ett stycke om 15 rader eller så. Lägg till sidan i navbaren.
 
-Du skapar ett ER-diagram av din färdiga databas och sparar i `sql/er.png`. Det är okey att automatgenerera en översikt av tabellerna.
+Du skapar ett ER-diagram av din färdiga databas och sparar i `htdocs/img/er.png`. Det är okey att automatgenerera en översikt av tabellerna. Länka gärna till er-dokumentet i din "doc" och nämn något om dina tabeller med en rad eller två.
 
-Ditt projekt innehåller en makefil som kan köra enhetstester med phpunit och generera kodtäckning via `make test`. Det finns inga speciella krav på kodtäckningen, men ange din ambitionsnivå i redovisningstexten och berätta vilken kodtäckning du nådde.
+Ditt projekt innehåller en makefil som kan köra enhetstester med phpunit och generera kodtäckning via `make phpunit`. Det finns inga speciella krav på kodtäckningen, men ange i korthet din ambitionsnivå i sidan "doc" och berätta vilken kodtäckning du nådde.
 
-Ditt projekt kan generera dokumentation med phpdoc via `make doc`. Vid problem med installation av phpdoc så berättar du om problemen i redovisningstexten och sen går du vidare och lägger tiden på annat.
+Du kan även köra `make test` och validera koden i ditt projekt, försök städa bort så mycket valideringsfel du kan och kommentera övriga i sidan "doc". 
 
-<!--
-UML
--->
+Ditt projekt kan generera dokumentation med phpdoc via `make doc`. Vid problem med installation av phpdoc så berättar du om problemen i sidan "doc" och sen går du vidare och lägger tiden på annat.
 
 
 
 ### Krav 3: Administrativt gränssnitt {#k3}
 
-Webbsidan skyddas av inloggning och man kan logga in som användaren admin med lösenordet admin. Användare och lösenord sparas i databasen.
+Webbsidan skyddas av inloggning och man kan logga in som användaren admin med lösenordet admin, man får då behörigheten "administratör". Användare och lösenord sparas i databasen.
 
 När man är inloggad (och har behörighet som "administratör") kan man via ett gränssnitt ändra innehållet på webbplatsen enligt följande.
 
 * Hantera nyhetsbloggen (lägga till, ta bort och redigera inlägg).
 * Administrera produkterna (lägga till, ta bort och redigera informationen).
+* Administrera innehållet i "om"-sidan och footern.
 
-När du skriver information om produkterna så skriver du den i Markdown.
-
-<!--
-Administrera innehållet i "om"-sidan och footern.
--->
+När du skriver texten till sidorna så skriver du den i Markdown och använder en textfilter-klass för att formattera den.
 
 
 
-###Krav 4: Förstasidan (optionell) {#k4}
+### Krav 4: Förstasidan (optionell) {#k4}
 
-Lägg extra kraft på förstasidan och gör den fin, välkomnande, stylad, information. Snygg och tilltalande helt enkelt.
+Lägg extra kraft på förstasidan och gör den fin, välkomnande, stylad och full av information. Snygg och tilltalande helt enkelt.
 
 Du kan dela in sidan i regioner/block (gör som du vill) och presentera extra information enligt följande.
 
@@ -155,33 +134,34 @@ Du kan uppdatera förstasidans innehåll genom att använda information från da
 
 
 
-###Krav 5: Registrera nytt konto (optionell) {#k5}
+### Krav 5: Registrera nytt konto (optionell) {#k5}
 
-Erbjud en möjlighet för besökaren att registrera ett konto på din webbplats. Man skall kunna registrera ett konto, logga in och där kan man editera sin personliga profilsida.
-
-I framtiden tänker du att detta kan vara bra när man vill göra en riktig Eshop.
+Erbjud en möjlighet för besökaren att registrera ett konto på din webbplats. Man skall kunna registrera ett konto, logga in och där kan man editera sin personliga profilsida där man har sitt namn och epostadress.
 
 Användarna sparas i databasen och du väljer om de loggar in med ett användarnamn och/eller sin epostadress samt ett lösenord.
 
-Lägg till så att användarens profilbild visas med en Gravatar.
+Lägg till så att användarens profilbild visas med en Gravatar (eller motsvarande), se gravatar.org för detaljer.
 
 I ditt admingränssnitt visar du en översikt av alla användare som finns registrerade.
 
-De användare som lägger till sig själva har inte rättigheter att nå ditt admin gränssnitt, det är bara adminsitratören som kan göra det.
+De användare som lägger till sig själva har inte rättigheter att nå ditt admin gränssnitt, det är bara administratören som kan göra det. Du behöver alltså ha två olika typer av användare, administratörer och vanliga användare.
 
 
 
-###Krav 6: Spel för extra uppmärksamhet (optionell) {#k6}
+### Krav 6: Ett flexibelt admingränssnitt (optionell) {#k6}
 
-Bygg in ditt 100-spel in i din webbplats, du kan modifiera det för att passa in.
+I admingränssnittet visar du innehållet (pages, posts) och användarna i tabellform.
 
-Annonsera ut det som en "Tävling!" där deltagaren kan vinna fina presenter från din webbplats, om de lyckas vinna spelet.
+Du har möjlighet till CRUD för dem.
 
-När man vinner får man en bonuskod.
+Du har också möjlighet till paginering, sökning/filtrering och sortering av det resultat som visas i tabellerna (jämför kmom05 movie).
 
-Bygg en sida där man kan använda bonsukoden för att se vilken hemlig vinst man har fått, eller kan hämta ut, eller som redan är på väg med post till dig.
+Det skall alltså finnas stöd för följande.
 
-I redovisningstexten berättar du om din implementation om spelet, nämn något om koden bakom spelet.
+* CRUD av innehåll och användare.
+* Tabellen skall pagineras och man kan välja hur många träffar som visas på varje sida.
+* Man skall kunna filtrera resultatet i tabellen och endast visa de träffar som matchar en viss söksträng.
+* Man kan klicka på rubrikerna i tabellen och få tabellen sorterad per den kolumnen i stigande eller sjunkande ordning.
 
 
 
@@ -197,8 +177,6 @@ Redovisning {#redovisning}
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
 2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida med projektet. 
-
-3. Se till att samtliga kursmoment validerar.
 
 ```bash
 # Ställ dig i kursrepot

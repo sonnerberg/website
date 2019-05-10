@@ -27,7 +27,7 @@ Upplägget är enligt följande:
 * [Projekt "eshop3" (optionell)](#projekt)
 * [Redovisning (obligatorisk)](#redovisning)
 
-Totalt omfattar kursmomentet (07/10) i storleksordningen 20--40 studietimmar.
+Totalt omfattar kursmoment 07/10 i storleksordningen 20--40 studietimmar.
 
 
 
