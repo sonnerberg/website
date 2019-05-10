@@ -103,6 +103,8 @@ Följande tentamen är planerade ([se den rekommenderade studieplanen](./../#stu
 * Omtenta (kmom10/try2): Fredagen den 31:e maj, 2019.
 * Resttenta (kmom10/try3): Fredagen den 30:e augusti, 2019.
 
+Lokal är H430/H429.
+
 Nästkommande tillfällen sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2020.
 
 Du kan även se planeringen för dessa tentamen via `dbwebb exam ls`.
