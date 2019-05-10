@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2019-05-10": "(F, mos) Inför omtenta och länk till övningstenta säpo."
     "2019-03-08": "(E, mos) Krav till eshop3."
     "2019-03-06": "(D, mos) Fixade felaktig länk till lucifer."
     "2019-03-06": "(C, mos) Ny struktur inför vt19."
@@ -54,6 +55,22 @@ Med en godkänd tentamen kan du nå ett slutbetyg om E-C.
 
 
 
+### Planerade tentamen {#planerade}
+
+Följande tentamen är planerade ([se även den rekommenderade studieplanen](./../#studieplan)).
+
+* Tenta (kmom10/try1): Torsdagen den 28:e mars, 2019.
+* Omtenta (kmom10/try2): Fredagen den 31:e maj, 2019.
+* Resttenta (kmom10/try3): Fredagen den 30:e augusti, 2019.
+
+För campus mellan 9-14 i sal H430/H429. För distans 9-24. Ingen anmälan krävs.
+
+Nästkommande tillfällen sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2020.
+
+Du kan även se planeringen för dessa tentamen via `dbwebb exam ls`.
+
+
+
 ### Genomförande {#genomfor}
 
 Tentamen sker vid ett bokat tillfälle under en dag. Campusstudenter har en bokad sal på campus 9-14. Distansstudenter har en hemtentamen som skall utföras någon gång med start mellan 9-24.
@@ -92,22 +109,6 @@ Här följer en del äldre tentor, men dock relevanta som övningstentor. Observ
 * [Mannsmandel, 12 april 2017](kurser/dbjs-v1/examination/mannsmandel)
 
 Du kan checka ut ett par av ovan tentamen via `dbwebb exam checkout prep`, de sparas då i katalogen `me/kmom10/prep` och du kan använda `dbwebb exam` som vid en vanlig tentamen. Läsa om [hur du checkar ut och lämnar in din tentamen med `dbwebb exam`](./tentamen).
-
-
-
-### Planerade tentamen {#planerade}
-
-Följande tentamen är planerade ([se den rekommenderade studieplanen](./../#studieplan)).
-
-* Tenta (kmom10/try1): Torsdagen den 28:e mars, 2019.
-* Omtenta (kmom10/try2): Fredagen den 31:e maj, 2019.
-* Resttenta (kmom10/try3): Fredagen den 30:e augusti, 2019.
-
-Lokal är H430/H429.
-
-Nästkommande tillfällen sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2020.
-
-Du kan även se planeringen för dessa tentamen via `dbwebb exam ls`.
 
 
 
