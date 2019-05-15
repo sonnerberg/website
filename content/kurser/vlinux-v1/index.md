@@ -130,7 +130,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 ###Kmom03: Introduktion till Docker {#kmom03}
 
-Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker.
+Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker. En del kanske stannar i VirtualBox och installerar Docker däri.
 
 [Instruktion till kursmoment 03](kurser/vlinux-v1/kmom03).
 

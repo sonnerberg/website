@@ -91,7 +91,7 @@ Genomför följande övningar.
 
 1. Luta dig mot guiden [kom igång med Bash](guide/kom-igang-med-bash), där du hittar beskrivningar om de vanligaste konstruktionerna.
 
-1. Det finns även en [guide för Docker](guide/docker).
+1. Det finns även en [guide för Docker](guide/docker). Luta dig mot den när det är installerat.
 
 
 
