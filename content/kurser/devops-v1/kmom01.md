@@ -66,6 +66,22 @@ Det finns generellt kursmaterial i video form.
 *(ca: 8-12 studietimmar)*
 
 
+### Övningarr {#ovningar}
+
+Gör följande övningar, de behövs normalt för att klara uppgifterna..
+
+1. Om du inte redan har en virtuell server och domännamn jobba igenom artikeln ["GitHub Education Pack och en server på Digital Ocean"](kunskap/github-education-pack-och-en-server-pa-digital-ocean) där vi använder Github Education Pack för att skaffa en egen Virtuell Server med ett eget domännamn. Du kan skippa steget "Installera nodejs och npm".
+
+
+2. Gå igenom projektet?
+
+3. Installera projekt miljön
+
+4. Circle Ci it up!
+
+5. Skriv egna tests/fixa bugg? 
+
+
 
 ### Uppgifter {#uppgifter}
 

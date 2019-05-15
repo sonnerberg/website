@@ -102,9 +102,8 @@ I kmom01 ska vi börja med bekanta oss med konceptet DevOps och börja på ett p
 Skriv enhetstester från början, tips att testa på TDD. Jag rekomenderar boken Clean Architecture för en intro till TDD och annat bra.
 Gör ett GitHub repo och lägg till Travis/Circle CI som kör testerna och validerar kod.
 
-Loggin från start?
+Logging från start?
 
-Lämna in vad ni planerar för projekt och länk till github repot.
 
 Läs [instruktionen till kursmoment 01](./kmom01).
 
