@@ -87,7 +87,7 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 Titta på följande:
 
-TBD
+Inga videor i detta kursmoment.
 
 <!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 0 och 1. -->
 
@@ -102,7 +102,7 @@ TBD
 
 ###Övningar {#ovningar}
 
-Som en del av labbmiljön har du redan installerat Debian i en VirtualBox. Det är den stora biten i detta kursmomentet. Glöm inte att [installera ssh](guide/kom-igang-med-ssh/ssh). SSH-nycklar tar vi nästa kursmoment så gör bara första delen "Kom igång med SSH".
+Som en del av labbmiljön har du redan installerat Debian i en VirtualBox. Det är den stora biten i detta kursmomentet. Glöm inte att [installera ssh](guide/kom-igang-med-ssh/ssh). SSH-nycklar tar vi nästa kursmoment så gör bara första delen "Kom igång med SSH". Försök gärna installera [Guest Additions](guide/virtualbox/guest-additions). Det kommer underlätta arbetet framöver.
 
 
 

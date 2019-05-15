@@ -29,6 +29,7 @@ var i = 0;
 
 while(i < 100) {
     console.log(i); // print 0...99 in the console
+    i++;
 }
 ```
 
