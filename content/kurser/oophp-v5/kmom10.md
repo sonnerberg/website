@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2019-05-17": "(E, mos) Bort med del i krav 3 om redigera footer."
     "2019-05-10": "(D, mos) Uppdaterad till v5, optionella uppdaterade till flexibelt admin-interface och regga användare."
     "2018-05-08": "(C, mos) Ny inför oophp v4."
     "2017-05-09": "(B, mos) Mindre förtydligande."
@@ -112,7 +113,10 @@ När man är inloggad (och har behörighet som "administratör") kan man via ett
 
 * Hantera nyhetsbloggen (lägga till, ta bort och redigera inlägg).
 * Administrera produkterna (lägga till, ta bort och redigera informationen).
+
+<!--
 * Administrera innehållet i "om"-sidan och footern.
+-->
 
 När du skriver texten till sidorna så skriver du den i Markdown och använder en textfilter-klass för att formattera den.
 
