@@ -280,8 +280,8 @@ I filen `www/js/index.js` som är vår ingångspunkt i appen importerar vi mithr
 ```js
 // www/js/index.js
 
-var m = require("mithril");
-var hello = require("./views/hello.js")
+import m from "mithril";
+import hello from "./views/hello.js";
 
 var app = {
     initialize: function() {
@@ -291,6 +291,7 @@ var app = {
         m.mount(document.body, hello);
     }
 };
+
 app.initialize();
 ```
 
@@ -299,13 +300,15 @@ Nedan syns hello vyn.
 ```js
 // www/js/views/hello.js
 
-var m = require("mithril");
+import m from "mithril";
 
-module.exports = {
+var hello = {
     view: function() {
         return m("h1", "Hello World");
     }
 };
+
+export default hello;
 ```
 
 
