@@ -65,7 +65,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -83,11 +83,11 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
-Inga videor i detta kursmoment.
+Det finns videos kopplade till installationsanvisningarna.
 
 <!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 0 och 1. -->
 
@@ -100,7 +100,7 @@ Inga videor i detta kursmoment.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 1. Som en del av labbmiljön har du redan [installerat Debian](guide/virtualbox/installera-os) i en VirtualBox. Det, tillsammans med installationen av VirtualBox är den stora biten i detta kursmomentet.
 
@@ -110,7 +110,7 @@ Inga videor i detta kursmoment.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -118,9 +118,12 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en me-sida till linux-kursen](uppgift/skapa-en-me-sida-till-linux-kursen)".
 
+Dubbelkolla med [videon](https://youtu.be/6a_q5YojE0s) så du fått med alla delar.
+<!-- [YOUTUBE src=6a_q5YojE0s width=639 caption="Har du fått med alla delar?"] -->
 
 
-###Extra {#extra}
+
+### Extra {#extra}
 
 Det finns inga extrauppgifter.
 

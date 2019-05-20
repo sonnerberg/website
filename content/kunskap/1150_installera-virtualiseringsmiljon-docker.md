@@ -10,6 +10,10 @@ Installera virtualiseringsmiljön Docker
 
 Vi lutar oss mot Dockers egna dokumentation för installationsanvisningar, [https://docs.docker.com/](https://docs.docker.com/). Fortsätt läsa för att se hur du går vidare.
 
+[INFO]
+Ett tips för Windowsanvändare är att installera Docker för Linux i din VirtualBox. Det kommer underlätta framöver och vi håller oss kvar i Linuxmiljön.
+[/INFO]
+
 <!--more-->
 
 
@@ -25,16 +29,10 @@ Du behöver bekanta dig med [dokumentationen för Docker](https://docs.docker.co
 
 
 
-### Eehh...jag hittar inte? {#eeh}
-
-Börja med att följa [den här länken](https://docs.docker.com/) och klicka på "Get Docker" följt av "Docker CE". Där kan du välja vilket operativsystem du vill installera för.
-
-
-
 Tips vid installation
 ---------------------------------
 
-Nu har du förhoppningsvis installerat Docker CE. Det kan såklart krångla med installationen så här samlar vi lite tips och trix når något går snett.
+Nu har du förhoppningsvis installerat Docker CE. Det kan såklart krångla med installationen så här samlar vi lite tips och trix når något går snett. Om du inte väljer att installera Docker för Linux kan det vara bra att tänka på följande.
 
 
 
@@ -59,7 +57,7 @@ npm install --global --production windows-build-tools
 
 
 
-Verifiera installationen
+Verifiera installationen {#verify}
 ---------------------------------
 
 Nu är Docker (förhoppningsvis) installerat. Det är lika bra att dubbelkolla...

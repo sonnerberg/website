@@ -4,9 +4,10 @@ category:
     - bash
     - lab
 revision:
+    "2019-05-15": (B, lew) Ny video inför HT19.
     "2016-12-20": (A, efo) Första utgåvan av lab1 i linux.
 ...
-Linux lab 1, introduktion till bash
+VLinux lab 1, introduktion till bash
 ==================================
 
 Laboration för att träna grunderna i bash. Du kommer jobba med apache konfigurations mappen från en linux server.
@@ -18,7 +19,7 @@ Laboration för att träna grunderna i bash. Du kommer jobba med apache konfigur
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat labbmiljön för kursen [labbmiljön för kursen linux](kurser/linux-v2/labbmiljo).
+Du har installerat labbmiljön för kursen [labbmiljön för kursen vlinux](kurser/vlinux-v1/labbmiljo).
 
 Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-kursen.
 
@@ -27,7 +28,7 @@ Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-
 Videoserie {#video}
 -----------------------
 
-Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ) som hjälper dig med denna labben, titta på videor som börjar på 2.
+Det finns en [video](https://youtu.be/gm8vnMdL02o) i spellistan som hjälper dig komma igång med labben.
 
 
 
