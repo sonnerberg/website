@@ -103,7 +103,7 @@ Ladda ned och installera [ett skript](https://gist.github.com/mosbth/ae5437cfe01
 ```bash
 wget -Ophpunit https://gist.githubusercontent.com/mosbth/ae5437cfe01d14b9707c/raw/63b299639ba95fa19c87198d1a8b007525286baf/composer
 install -m 0755 phpunit /usr/local/bin
-``` 
+```
 
 Dubbelkolla att det gick bra och rätt version av phpunit används.
 
