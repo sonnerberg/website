@@ -70,9 +70,7 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 Titta på följande:
 
-TBD
-
-<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 2. -->
+1. Till kursen finns en videoserie, "[VLinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 02.
 
 
 
