@@ -14,10 +14,7 @@ revision:
 Kursen oopython (v2)
 ===================================================
 
-Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*,  syftar till att lära studenterna  objektorienterade angreppssätt och designprinciper för att utveckla objektorienterade program.
-Modelleringsspråket UML (Unified Modeling Language) används för att beskriva analys- och designmodeller. Programspråket Python används för implementering. Dessutom lär sig studenterna förstå och implementera vanliga datastrukturer och algoritmer.
-
-Kursen använder sig av webbaserade teknologier och program som skapas publiceras på en webbserver. Förutom detta kommer kursen även ta upp hur man testar sin kod och hur man går tillväga för att refaktorerar kod.
+Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*, syftar till att lära studenterna objektorienterade angreppssätt och designprinciper för att utveckla objektorienterade program. Utöver detta ska studenterna lära sig såväl teoretiska aspekter som implementationsaspekter av algoritmer och datastrukturer. Programspråket Python används för implementering.
 
 
 
