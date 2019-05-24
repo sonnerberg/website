@@ -32,9 +32,10 @@ Guider under utveckling till våren 2019.
 * [Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)
 * [ER-modellering med databaser](guide/er-modellering-med-databaser)
 
-Guider under utveckling till hösten 2020.
+Guider under utveckling till hösten 2019.
 
 * [Kom igång med Bash](guide/kom-igang-med-bash)
+* [Kom igång med Regex](guide/kom-igang-med-regex)
 * [Docker](guide/docker)
 * [VirtualBox](guide/virtualbox)
 * [Kom igång med SSH](guide/kom-igang-med-ssh)
