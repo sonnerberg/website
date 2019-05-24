@@ -28,6 +28,8 @@ Introduktion {#intro}
 
 Du ska skapa, likt förra kursmomentet, ett Bash script som med argument kan ge svar från din server. Du kan med andra ord återanvända en hel del från kursmoment 03.
 
+Vi kan använda Curl för att hämta resultatet av ett sidanrop. För mer info kan du kika i manualen `$ man curl` eller Curl's hjälptext `$ curl --help`. Du kommer behöva ett fåtal options för att komma i mål med kursmomentet.
+
 
 
 Krav {#krav}
