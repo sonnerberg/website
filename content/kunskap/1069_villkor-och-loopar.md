@@ -168,6 +168,13 @@ for number_of_apples in range(3, 15):
         print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
 
+
+<iframe width="727" height="500" frameborder="1" src="http://pythontutor.com/iframe-embed.html#code=for%20number_of_apples%20in%20range%283,%2015%29%3A%0A%20%20%20%20if%20number_of_apples%20%3E%2010%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20har%20mer%20%C3%A4n%2010%20%C3%A4pplen%22%29%0A%20%20%20%20elif%20number_of_apples%20%3C%3D%2010%20and%20number_of_apples%20%3E%205%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20blev%20snabbt%20m%C3%A4tt%20och%20%C3%A5t%20bara%20upp%20n%C3%A5gra%20av%20dina%20%C3%A4pplen%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20har%20nog%20varit%20hungrig%20och%20%C3%A4tit%20upp%20dina%20%C3%A4pplen%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+<a href="http://www.pythontutor.com/visualize.html#code=for%20number_of_apples%20in%20range%283,%2015%29%3A%0A%20%20%20%20if%20number_of_apples%20%3E%2010%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20har%20mer%20%C3%A4n%2010%20%C3%A4pplen%22%29%0A%20%20%20%20elif%20number_of_apples%20%3C%3D%2010%20and%20number_of_apples%20%3E%205%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20blev%20snabbt%20m%C3%A4tt%20och%20%C3%A5t%20bara%20upp%20n%C3%A5gra%20av%20dina%20%C3%A4pplen%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20har%20nog%20varit%20hungrig%20och%20%C3%A4tit%20upp%20dina%20%C3%A4pplen%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Exemplet i fullskärm</a>.
+
+
+
 Om vi bara vill göra något ett bestämt antal gånger utan att bry oss om index `i` kan vi använda oss av `_` istället för `i` enligt nedan. Detta gör att vi inte behöver skapa en variabel som tar plats i minnet på datorn och som förvirrar personer som läser koden.
 
 ```python
@@ -273,6 +280,12 @@ while True:
         else:
             print("Du har nog varit hungrig och ätit upp dina äpplen")
 ```
+
+
+<iframe width="727" height="510" frameborder="1" src="http://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20user_input%20%3D%20input%28%22Skriv%20in%20antal%20%C3%A4pplen%20%28eller%20q%20f%C3%B6r%20avslut%29%3A%20%22%29%0A%20%20%20%20if%20user_input%20%3D%3D%20%22q%22%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20%C3%A4r%20nu%20klar%20med%20att%20%C3%A4ta%20%C3%A4pplen.%22%29%0A%20%20%20%20%20%20%20%20print%28%22Hej%20d%C3%A5!%22%29%0A%20%20%20%20%20%20%20%20break%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20number_of_apples%20%3D%20int%28user_input%29%0A%20%20%20%20%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Oj!%20Du%20skrev%20inte%20in%20en%20siffra.%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20continue%0A%0A%20%20%20%20%20%20%20%20if%20number_of_apples%20%3E%2010%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Du%20har%20mer%20%C3%A4n%2010%20%C3%A4pplen%22%29%0A%20%20%20%20%20%20%20%20elif%20number_of_apples%20%3C%3D%2010%20and%20number_of_apples%20%3E%205%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Du%20blev%20snabbt%20m%C3%A4tt%20och%20%C3%A5t%20bara%20upp%20n%C3%A5gra%20av%20dina%20%C3%A4pplen%22%29%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Du%20har%20nog%20varit%20hungrig%20och%20%C3%A4tit%20upp%20dina%20%C3%A4pplen%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+<a href="http://www.pythontutor.com/visualize.html#code=while%20True%3A%0A%20%20%20%20user_input%20%3D%20input%28%22Skriv%20in%20antal%20%C3%A4pplen%20%28eller%20q%20f%C3%B6r%20avslut%29%3A%20%22%29%0A%20%20%20%20if%20user_input%20%3D%3D%20%22q%22%3A%0A%20%20%20%20%20%20%20%20print%28%22Du%20%C3%A4r%20nu%20klar%20med%20att%20%C3%A4ta%20%C3%A4pplen.%22%29%0A%20%20%20%20%20%20%20%20print%28%22Hej%20d%C3%A5!%22%29%0A%20%20%20%20%20%20%20%20break%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20number_of_apples%20%3D%20int%28user_input%29%0A%20%20%20%20%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Oj!%20Du%20skrev%20inte%20in%20en%20siffra.%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20continue%0A%0A%20%20%20%20%20%20%20%20if%20number_of_apples%20%3E%2010%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Du%20har%20mer%20%C3%A4n%2010%20%C3%A4pplen%22%29%0A%20%20%20%20%20%20%20%20elif%20number_of_apples%20%3C%3D%2010%20and%20number_of_apples%20%3E%205%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Du%20blev%20snabbt%20m%C3%A4tt%20och%20%C3%A5t%20bara%20upp%20n%C3%A5gra%20av%20dina%20%C3%A4pplen%22%29%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Du%20har%20nog%20varit%20hungrig%20och%20%C3%A4tit%20upp%20dina%20%C3%A4pplen%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Exemplet i fullskärm</a>.
+
 
 
 
