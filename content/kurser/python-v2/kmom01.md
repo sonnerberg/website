@@ -1,7 +1,10 @@
 ---
 author:
     - mos
+    - efo
+    - aar
 revision:
+    "2019-05-24": (K, efo, aar) Uppdaterade med video inför HT19.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-09-01": (J, mos) Video till installation av dbwebb-cli.
     "2017-06-15": (I, mos) Omarbetning inför ht17.
@@ -63,7 +66,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -81,7 +84,7 @@ Kursens huvudbok ger förståelse och bakgrunden till att klara övningar och up
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Efterhand som du lär dig Python kommer du att märka att du referensmanualen är en bra källa till kunskap. Bekanta dig därför med strukturen som finns på Pythons webbplats och gå igenom följande.
 
@@ -93,7 +96,7 @@ Efterhand som du lär dig Python kommer du att märka att du referensmanualen ä
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -108,12 +111,18 @@ Titta på följande:
     * [Python for Informatics: Chapter 2 - Introduction part 2](https://youtu.be/kefrGMAglGs?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
 
 
+Som en generell introduktion till programming och vissa av de tekniker och konstruktioner vi går igenom under kursen rekommenderas följande video. Föreläsningen är från Harvard kursen CS50 som ges som världens största [MOOC](https://en.wikipedia.org/wiki/Massive_open_online_course).
 
+[YOUTUBE src=qDbsiVWA2Ag caption="David J. Malan introducerar programmering och teknikerna bakom."]
+
+
+
+<!--
 ###Lästips {#lastips}
 
 Det finns inga extra lästips.
 
-<!-- Om du känner att du har tid och lust. -->
+Om du känner att du har tid och lust. -->
 
 
 
@@ -124,7 +133,7 @@ Det finns inga extra lästips.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övning för att träna dig och förbereda inför uppgifterna.
 
@@ -134,7 +143,7 @@ Genomför följande övning för att träna dig och förbereda inför uppgiftern
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -146,7 +155,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
 Det finns inga extra uppgifter.
 

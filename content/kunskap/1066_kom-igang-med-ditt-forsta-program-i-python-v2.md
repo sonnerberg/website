@@ -6,6 +6,7 @@ author:
 category:
     - python
 revision:
+    "2019-05-24": (G, efo) La till visualiseringsverktyg.
     "2018-06-29": (F, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-21": (E, efo) Bytte ordning på asciinema och video.
     "2017-06-09": (D, mos) Genomgången inför ht17, bort med CGI, nya videor.
@@ -26,7 +27,6 @@ Artikeln visar även hur du kan jobba med exempelfiler från kursrepot för pyth
 
 
 
-
 Förutsättning {#pre}
 -------------------------------
 
@@ -34,7 +34,7 @@ Artikeln är en del av kursen python och förutsätter att du har en labbmiljö 
 
 
 
-###Kursmaterial från GitHub {#material}
+### Kursmaterial från GitHub {#material}
 
 I denna kursen jobbar du med exempelprogram och övningar som finns samlade i ett kursrepo, en kurskatalog. Du bör alltså ha ditt kursrepo framför dig nu. Du har det troligen i en katalog som du döpt till `dbwebb-kurser/python`.
 
@@ -69,6 +69,8 @@ Så här kan det se ut när du kör programmet.
 [ASCIINEMA src=122865]
 
 Så här kan du alltså köra ett Python-program via terminalen.
+
+Under kursen gång kommer vi introducera olika verktyg för att visualisera hur koden exekveras, med andra ord körs. I detta första kursmoment introduceras <a href="http://www.pythontutor.com/visualize.html#mode=edit" target="_blank">ett enkelt webbgränssnitt</a>. Testa att kopiera in koden från filen `hello.py` i webbgränssnittet och tryck på knappen "Visualize Execution".
 
 
 

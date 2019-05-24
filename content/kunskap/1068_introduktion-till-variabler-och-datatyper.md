@@ -4,8 +4,9 @@ author:
     - efo
 category: python
 revision:
-    "2018-06-21": (D, efo) Genomgång inför HT18 med fler exempel
-    "2017-06-09": (C, efo,aar) Gemensam genomgång innan publish.
+    "2019-05-24": (E, efo, aar) La till stycke om isinstance.
+    "2018-06-21": (D, efo) Genomgång inför HT18 med fler exempel.
+    "2017-06-09": (C, efo, aar) Gemensam genomgång innan publish.
     "2017-06-05": (B, efo) Genomläsning och korrektion av stavfel.
     "2017-05-29": (A, aar) Första utgåvan inför kursen python.
 ...
@@ -195,6 +196,27 @@ För att kolla vilken typ ett värde har kan vi använda den inbyggda funktionen
 
 >>> type(False)
 <class 'bool'>
+```
+
+
+
+### Jämföra värde och datatyp {#equal}
+
+Om vi istället vill jämföra ett värde och en datatyp använder vi funktionen `isinstance()`. `isinstance()` tar emot ett värde och en datatyp och jämför sedan dessa och svarar med sant eller falskt.
+
+```python
+>>> isinstance("hej hopp", str)
+True
+>>> isinstance("hej hopp", int)
+False
+>>> isinstance(42, int)
+True
+>>> isinstance(42.42, int)
+False
+>>> isinstance(42.42, float)
+True
+>>> isinstance(False, bool)
+True
 ```
 
 
