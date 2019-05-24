@@ -29,7 +29,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-8 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -52,13 +52,13 @@ Det räcker om du läser ovanstående, men vill du ha lite till och samtidigt li
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Det finns inga artiklar.
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -78,9 +78,9 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+<!-- ### Lästips {#lastips}
 
-Det finns inga lästips.
+Det finns inga lästips. -->
 
 <!--
 1. Bekanta dig kort med verktyget [Pylint](http://www.pylint.org/).
@@ -143,7 +143,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är det enkelt att se programmets struktur och vad det gör?
 * Har du fått en förståelse för hur loopar och villkor fungerar?
 * Vad är skillnaden på en while-loop och en for-loop?
-* Hur går det med valideringen av uppgifterna? 
+* Hur går det med valideringen av uppgifterna?
 * Är du överens med pylint om eventuella felmeddelanden vid valideringen?
 * Hur gick det att utföra uppgifterna, var de enkla eller svåra?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.

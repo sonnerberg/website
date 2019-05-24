@@ -112,9 +112,30 @@ print("Nu är vi klara med den yttre if-satsen")
 # Nu är vi klara med den yttre if-satsen
 ```
 
-Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra flödet av data i våra program. Ett sätt att få en överblick över flödet är att rita så kallade flödesdiagram (flow charts). Det enklaste sättet är att rita på ett blankt papper och det ger en bra möjlighet för att tänka över det problem, som vi löser med Python-kod. Ett exempel på flödesdiagram för kodexempel 2 syns nedan.
+Vi har nu tittat på hur en `if`-sats kan se ut i python och hur det kan styra flödet av data i våra program. Ett sätt att få en överblick över flödet är att rita så kallade flödesdiagram (flow charts). Det enklaste sättet är att rita på ett blankt papper och det ger en bra möjlighet för att tänka över det problem, som vi löser med Python-kod. Ett exempel på flödesdiagram för ett kodexempel syns nedan.
 
-[FIGURE src=image/kunskap/python/flow-chart-if.jpg caption="Flödesdiagram för en if-sats."]
+```python
+number_of_apples = 9
+
+if number_of_apples > 10:
+    print("Du har mer än 10 äpplen")
+else:
+    print("Du har nog varit hungrig och ätit upp dina äpplen")
+
+print("Nu är vi klara med if-satsen")
+
+# skriver ut:
+# Du har nog varit hungrig och ätit upp dina äpplen
+# Nu är vi klara med if-satsen
+```
+
+[FIGURE src=image/python/flow-if.png caption="Flödesdiagram för en if-sats."]
+
+Ytterligare ett bra sätt att förstå hur en if-sats exekveras är att använda vi rekommenderade i kmom01. Nedan finns exemplet i visualiseringsverktyget.
+
+<iframe width="727" height="500" frameborder="1" src="http://pythontutor.com/iframe-embed.html#code=number_of_apples%20%3D%209%0A%0Aif%20number_of_apples%20%3E%2010%3A%0A%20%20%20%20print%28%22Du%20har%20mer%20%C3%A4n%2010%20%C3%A4pplen%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Du%20har%20nog%20varit%20hungrig%20och%20%C3%A4tit%20upp%20dina%20%C3%A4pplen%22%29%0A%0Aprint%28%22Nu%20%C3%A4r%20vi%20klara%20med%20if-satsen%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+<a href="http://www.pythontutor.com/visualize.html#code=number_of_apples%20%3D%209%0A%0Aif%20number_of_apples%20%3E%2010%3A%0A%20%20%20%20print%28%22Du%20har%20mer%20%C3%A4n%2010%20%C3%A4pplen%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Du%20har%20nog%20varit%20hungrig%20och%20%C3%A4tit%20upp%20dina%20%C3%A4pplen%22%29%0A%0Aprint%28%22Nu%20%C3%A4r%20vi%20klara%20med%20if-satsen%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Exemplet i fullskärm</a>.
 
 
 
