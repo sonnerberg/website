@@ -35,6 +35,7 @@ Läs följande:
 
 1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
     * Ch4 Functions
+    * Ch6 Strings
 
 <!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist).
     * Ch8 Strings
