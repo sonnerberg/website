@@ -72,7 +72,7 @@ input: "BRöderna Ivarsson Osby"             output: "BRIO"
 input: "Ingvar Kamprad Elmtaryd Agunnaryd"  output: "IKEA"
 ```
 
-6. **Menyval 11**: Sträng maskering. Skapa ett nytt val där Marvin ber om en sträng och ersätter alla utom de fyra sista karaktärerna med "#". Bryt ut funktionaliteten som multiplicerar en sträng från menyval 3 till en egen funktion. Den nya funktionen ska användas av både detta menyvalet och menyval 3. Använd den för att skapa strängen med "#"s och lägg sen på de fyra sista karaktärerna. Exempel:
+6. **Menyval 11**: Sträng maskering. Skapa ett nytt val där Marvin ber om en sträng och ersätter alla utom de fyra sista karaktärerna med "#".  Exempel:
 ```python
 input: "4556364607935616"     output: "############5616"
 input: "64607935616"          output: "#######5616"
@@ -92,10 +92,6 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 Extrauppgift {#extra}
 -----------------------
-<!-- * Kasta om bokstäver: Ha en fil med ett ord per rad och plocka fram ett av orden. Kasta om det och låt användaren gissa vilket det faktiska ordet är. -->
-
-<!-- * Menyval: där Marvin i samma sträng skriver ut: dagens datum och nuvarande tid, hur han mår (slumpmässigt humör), ett heltal, samt ett floattal med 3 decimaler. Ge talen ett sammanhang i texten.
-Strängen ska hämtas från en textfil som du själv skapar och formateras med ovanstående variabler. Notera att du i programmet inte ska ändra i filen. Kursrepot innehåller ett [exempel på strängformattering med fil](https://github.com/reechani/python/blob/master/example/marvin/format.py) som du kan använda som grund för denna uppgift. -->
 
 * **Menyval B1**: Poäng till betyg, Marvin ska fråga efter maxpoäng samt dina poäng och sedan ska Marvin skriva ut vilket betyg dina poäng motsvarade. Kika på övning 3.3 i boken [Python for Informatics](kunskap/boken-python-for-informatics-exploring-information).
 
