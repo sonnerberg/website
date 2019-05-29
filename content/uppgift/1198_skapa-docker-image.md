@@ -43,7 +43,7 @@ Krav {#krav}
 
 1. Kopiera in ditt egna `commands.bash` in i kontainern, till arbetsmappen `kmom03`.
 
-1. Gör scriptet körbart inuti kontainern.
+1. Dubbelkolla så scriptet är körbart inuti kontainern.
 
 1. Vid uppstart ska kommandot `commands.bash all` köras.
 
@@ -51,7 +51,9 @@ Krav {#krav}
 
 1. Publicera imagen till Docker Hub.
 
-1. Skapa ett script `script/kmom03.bash` som kör din kontainer med rätt namn och tagg.
+1. Skapa en fil `script/dockerhub.txt` som innehåller *username/imagename:tag*.
+
+<!-- 1. Skapa ett script `script/kmom03.bash` som kör din kontainer med rätt namn och tagg. -->
 
 
 ```bash

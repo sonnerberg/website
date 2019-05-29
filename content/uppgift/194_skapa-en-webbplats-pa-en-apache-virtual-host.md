@@ -44,7 +44,7 @@ Krav {#krav}
 
 1. Öppna en terminal, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen.
 
-1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`. Spara bilden i formatet PNG och använd små bokstäver i filnamnet.
+1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`. Spara bilden i formatet .png och använd små bokstäver i filnamnet.
 
 1. Publicera dina svar enligt följande.
 
