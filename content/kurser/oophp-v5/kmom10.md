@@ -154,7 +154,7 @@ De användare som lägger till sig själva har inte rättigheter att nå ditt ad
 
 ### Krav 6: Ett flexibelt admingränssnitt (optionell) {#k6}
 
-I admingränssnittet visar du innehållet (pages, posts) och användarna i tabellform.
+I admingränssnittet visar du innehållet (pages, posts eller motsvarande) och användarna i tabellform.
 
 Du har möjlighet till CRUD för dem.
 
