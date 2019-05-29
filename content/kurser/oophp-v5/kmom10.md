@@ -95,7 +95,7 @@ Du vill dokumentera ditt system så att en likasinnad programmerare kan förstå
 
 Lägg till ytterligare en sida på webbplatsen som heter "doc" där du förklarar den kodstruktur som du har i din lösning. Vilka klasser är centrala, vilka kontroller har du och vilka route-pather finns det. Var kortfattad och tänk att du förklarar din kod för en likasinnad programmerare. Skriv ett stycke om 15 rader eller så. Lägg till sidan i navbaren.
 
-Du skapar ett ER-diagram av din färdiga databas och sparar i `htdocs/img/er.png`. Det är okey att automatgenerera en översikt av tabellerna. Länka gärna till er-dokumentet i din "doc" och nämn något om dina tabeller med en rad eller två.
+Du skapar ett ER-diagram av din färdiga databas och sparar i `htdocs/img/er.png`. Det är okey att automatgenerera en översikt av tabellerna. Länka gärna till ER-diagrammet i din "doc" och nämn något om dina tabeller med en rad eller två.
 
 Ditt projekt innehåller en makefil som kan köra enhetstester med phpunit och generera kodtäckning via `make phpunit`. Det finns inga speciella krav på kodtäckningen, men ange i korthet din ambitionsnivå i sidan "doc" och berätta vilken kodtäckning du nådde.
 
