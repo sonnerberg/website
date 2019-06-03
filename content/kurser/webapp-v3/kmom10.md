@@ -158,6 +158,10 @@ Redovisning {#redovisning}
 
 3. Se till att samtliga kursmoment validerar.
 
+[INFO]
+Se till att göra en `dbwebb update` innan `dbwebb publish me` så du får senaste versionen av kursrepot och konfiguration för kursrepot.
+[/INFO]
+
 ```bash
 # Ställ dig i kursrepot
 dbwebb publish me
