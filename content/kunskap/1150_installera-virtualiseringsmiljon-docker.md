@@ -11,7 +11,7 @@ Installera virtualiseringsmiljön Docker
 Vi lutar oss mot Dockers egna dokumentation för installationsanvisningar, [https://docs.docker.com/](https://docs.docker.com/). Fortsätt läsa för att se hur du går vidare.
 
 [INFO]
-Ett tips för Windowsanvändare är att installera Docker för Linux i din VirtualBox. Det kommer underlätta framöver och vi håller oss kvar i Linuxmiljön.
+Ett tips för Windows 10 Home är att installera Docker för Linux i din VirtualBox. Det kommer underlätta framöver och vi håller oss kvar i Linuxmiljön. I dagsläget finns det inget stöd för Hyper-V i Windows Home 10.
 [/INFO]
 
 <!--more-->
@@ -22,6 +22,14 @@ Hämta installationsprogrammet {#download}
 ---------------------------------
 
 Webbplatsen för Docker innehåller en del där du kan ladda hem och installera Docker. Det finns en Community Edition (CE) versioner för Windows, Mac och Linux. Kör igenom installationen enligt anvisningarna.
+
+* [Windows](https://docs.docker.com/docker-for-windows/install/)
+
+* [MacOs](https://docs.docker.com/docker-for-mac/install/)
+
+* [Linux (Debian)](https://docs.docker.com/install/linux/docker-ce/debian/)
+
+* [Linux (Ubuntu)](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 Docker är en virtualiseringsmiljö så den kräver att din datorn är kapabel att köra vissa virtualiseringstekniker.
 

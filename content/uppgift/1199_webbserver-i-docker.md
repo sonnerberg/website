@@ -54,14 +54,20 @@ Krav {#krav}
 
 1. Publicera imagen till Docker Hub.
 
-1. Skapa ett exekverbart script `script/kmom04.bash` som kör din kontainer med rätt namn och tagg. Tänk på att lägga till volymen här. Servern ska vara nåbar via webbläsaren på porten `8080`.
+1. Skapa en fil `server/dockerhub.txt` som innehåller två rader.  
+```
+Porten servern lyssnar på
+username/imagename:tag
+```
+
+<!-- 1. Skapa ett exekverbart script `script/kmom04.bash` som kör din kontainer med rätt namn och tagg. Tänk på att lägga till volymen här. Servern ska vara nåbar via webbläsaren på porten `8080`. -->
 
 
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb validate script
-$ dbwebb publish script
+$ dbwebb validate server
+$ dbwebb publish server
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  

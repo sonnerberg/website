@@ -51,7 +51,7 @@ Krav {#krav}
 |-----------------------|-----------------|
 | `-h, --help`          | Skriv ut en hjälptext om hur programmet används. |
 | `-v, --version`       | Visar nuvarande version av programmet. |
-| `-s, --save`          | Spara den returnerade datan till fil. Det ska fungera för alla argument.|
+| `-s, --save`          | Spara den returnerade datan till `client/saved.data`. Det ska fungera för alla argument.|
 
 
 7. Följande *argument* ska fungera:
@@ -61,7 +61,7 @@ Krav {#krav}
 | `all`                     | anropa din route `/all`. |
 | `names`                   | anropa din route `/names`.|
 | `color <color>`           | anropa din route `color/<color>`. |
-| `test <url>`        | Använd curl för att skriva ut serverns header om det gick bra, annars ett felmeddelnade. Om &lt;url&gt; är satt ska den anropas, annars localhost:port. |
+| `test <url>`        | Använd curl för att skriva ut ett meddelande om servern är igång eller ej. Om &lt;url&gt; är satt ska den anropas, annars localhost:port. |
 
 
 
