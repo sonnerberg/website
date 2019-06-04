@@ -110,7 +110,7 @@ Kraven består av två delar. Först skapar vi ett Bash-skript som körs mot ser
 | Kommando                | Vad skall hända |
 |-------------------------|-----------------|
 | `./mazerunner.bash init`     | Initiera ett spel och spara ned spelets id i en fil. |
-| `./mazerunner.bash maps`     | Visa vilka maps som finns att välja bland. |
+| `./mazerunner.bash maps`     | Visa vilka kartor som finns att välja bland. |
 | `./mazerunner.bash select <#map>` | Välj en viss karta via siffra. |
 | `./mazerunner.bash enter`    | Gå in i första rummet. |
 | `./mazerunner.bash info`     | Visa information om rummet. |
