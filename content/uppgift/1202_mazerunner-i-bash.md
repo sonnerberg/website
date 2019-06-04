@@ -102,7 +102,7 @@ Kraven består av två delar. Först skapar vi ett Bash-skript som körs mot ser
 
 ### Bashscript för att lösa maze (del 1) {#del1}
 
-1. Skapa ett skript `mazerunner.bash` i mappen `maze/client/`. Sätt rättigheter på skriptet till 755.
+1. Skapa ett skript `mazerunner.bash` i mappen `maze/client/`. Gör scriptet exekverbart.
 
 1. Använd API:et för att lägga till följande funktioner i skriptet. Skriptet skall alltid skriva ut ett meddelande om det gick bra eller inte.
 
