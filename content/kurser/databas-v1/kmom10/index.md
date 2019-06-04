@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2019-06-04": "(G, mos) Lade till övningstenta bibliotek."
     "2019-05-10": "(F, mos) Inför omtenta och länk till övningstenta säpo."
     "2019-03-08": "(E, mos) Krav till eshop3."
     "2019-03-06": "(D, mos) Fixade felaktig länk till lucifer."
@@ -97,6 +98,7 @@ Det finns ingen garanti för att nya tentamen kommer att följa exakt samma uppl
 
 Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
 
+* [Bibliotek](./tentamen/bibliotek)
 * [Säkerhetspolisens (SÄPO)](./tentamen/sapo)
 
 Här följer en del äldre tentor, men dock relevanta som övningstentor. Observera att poängfördelningen är olika för nedan tentor.
