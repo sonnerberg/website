@@ -102,6 +102,8 @@ Det finns inga lästips. -->
 
 1. Jobba igenom artikeln/övningen "[Villkor och loopar](kunskap/villkor-och-loopar)" för att öva in hur vi kan styra flödet i våra program. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
 
+1. Läs igenom och kolla på videorna för del 1 till 3 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern.
+
 
 
 ###Uppgifter {#uppgifter}

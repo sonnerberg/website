@@ -89,6 +89,8 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
 
+1. Fortsätt med del 4 och 5 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern.
+
 
 
 ###Uppgifter {#uppgifter}
