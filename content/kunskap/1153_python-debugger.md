@@ -18,6 +18,8 @@ En debugger är ett program som låter oss undersöka ett programs tillstånd me
 
 Debugger program finns till nästan alla programmeringsspråk och fungerar oftast likadant, därför är det jättebra att veta hur man använder en debugger. Att du som kodare använder debuggern på din kod innan du frågar efter hjälp anses som grundläggande.
 
+I slutet av artikeln kan ni hitta en lista med debug [kommandon](#kommandon).
+
 
 
 Hur använder vi debugger? {#hur}
@@ -58,6 +60,14 @@ I denna videon stegar vi igenom ett lite längre program och lär oss lite mer o
 I nästa video kollar vi på breakpoints och hur man kan använda debuggern för att felsöka ett program. Nya kommandon för denna videon är `b(break)`, `c(ontinue)`, `cl(ear)` och `ctrl+d`.
 
 [YOUTUBE src=OL4vFCxuEHg caption="Andreas introducerar breakpoints"]
+
+
+
+### Debugger i editorn VSCode {#vscode}
+
+För er som använder editorn VSCode kan det vara intressant att använda debuggern som finns i editorn. Det är lättare att hänga med i koden jämfört med terminalen och är mer visuellt. I videon nedanför visar Andreas hur du kan komma igång med debuggern.
+
+[YOUTUBE src=v0Ix37uWj1Q caption="Andreas visar debuggern i VSCode."]
 
 
 
