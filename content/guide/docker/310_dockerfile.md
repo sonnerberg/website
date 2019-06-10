@@ -26,6 +26,8 @@ Det var det...Om vi skulle bygga den här imagen kommer den att utgå ifrån ima
 $ docker build -t myfirst:version1 .
 ```
 
+Om vi enbart skulle använda en färdig image, är det såklart bättre att köra den direkt. Vi kan på det här sättet återanvända och ändra på befintliga images.
+
 Kikar vi i [dokumentationen](https://docs.docker.com/engine/reference/commandline/build/) eller `$ docker build -h` kan vi se:
 
 > -t, --tag list       Name and optionally a tag in the 'name:tag' format
