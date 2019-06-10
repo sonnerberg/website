@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2019-06-10": (I, aar) Förlängde kursmomentet till 40h.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
     "2017-06-14": (H, efo) Rensade i kurslitteratur och länkade in nytt material.
     "2016-03-15": (G, mos) Tog bort videoserie MonkeyLords och NewBoston.
@@ -19,7 +20,7 @@ Vi har bekantat oss med värden, datatyper och variabler och det är nu dags fö
 
 [FIGURE src=/image/python/py-marvin.png?w=w2 caption="Marvin i Python."]
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
