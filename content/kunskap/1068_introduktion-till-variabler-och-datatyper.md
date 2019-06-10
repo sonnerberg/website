@@ -458,7 +458,7 @@ print("Hej Jack Black, du är 48 år gammal.") # Skriver ut ett sträng värde
 
 Kom ihåg att koden exekveras uppifrån och ner och en rad åt gången. När vi testar programmet kommer programmet börja med att vänta på att användaren ska skriva något i terminalen och klicka "enter". Sen exekveras nästa rad som skriver ut vår hälsning. Nedan ser vi hur programmet står och väntar på inmatning från användaren innan hälsningen skrivs ut.
 
-[ASCIINEMA src=bQFDflMFeLEnjpwNnDvqwSnyQ]
+[ASCIINEMA src=250775]
 
 Om du testade köra koden själv märkte du att du inte får någon utskrift när du ska mata in en sträng, jag skrev 'hej hej hej' som inmatning. I fall du vill få en utskrift när du ska skriva in kan du skicka en sträng som ett argument till "input()" funktionen som skrivs ut när användaren ska skriva in. Låt oss testa.
 
@@ -504,7 +504,7 @@ Skriv ett namn, klicka sen enter: Jack Black
 Jack Black
 ```
 
-[ASCIINEMA src=XenEvdFN3uESLCgtokxDXTPMi]
+[ASCIINEMA src=250774]
 
 
 
