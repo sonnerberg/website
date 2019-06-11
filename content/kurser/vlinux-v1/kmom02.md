@@ -103,6 +103,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en webbplats på en Apache Virtual Host](uppgift/skapa-en-webbplats-pa-en-apache-virtual-host)".
 
+1. Lägg till redovisningstexten i din me-sida.
+
 <!--
 1. Gör uppgiften "[Strukturera filer, kataloger och rättigheter i en webbplats](uppgift/strukturera-filer-kataloger-och-rattigheter-i-en-webbplats)".
 -->

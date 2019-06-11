@@ -70,8 +70,8 @@ Skapa filen `docker-compose.yml` i mappen `maze2/`.
 
 1. För att starta ett spel ska följande kommandon exekveras:
     * `$ docker-compose up -d server`
-    * `$ docker-compose run client` (kör kontainern och scriptet)
-    * `$ docker-compose down` (stänger ned severn och klienten)
+    * `$ docker-compose run client` (kör kontainern och scriptet med kommandot *loop*)
+    * `$ docker-compose down` (stänger ned servern och klienten)
 
 Om allt startar och stängs ned som det ska är du färdig.
 

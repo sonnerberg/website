@@ -103,6 +103,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa Docker image](uppgift/skapa-docker-image)". Du fortsätter arbeta i mappen `script`.
 
+1. Lägg till redovisningstexten i din me-sida.
+
 <!--
 1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
 -->

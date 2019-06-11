@@ -116,7 +116,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Installera Debian som server](uppgift/installera-debian-som-server)".
 
-1. Gör uppgiften "[Skapa en me-sida till linux-kursen](uppgift/skapa-en-me-sida-till-linux-kursen)".
+1. Gör uppgiften "[Skapa en me-sida till linux-kursen](uppgift/skapa-en-me-sida-till-linux-kursen)". Här fyller du på din redovisningstext efter varje kursmoment.
 
 Dubbelkolla med [videon](https://youtu.be/6a_q5YojE0s) så du fått med alla delar.
 <!-- [YOUTUBE src=6a_q5YojE0s width=639 caption="Har du fått med alla delar?"] -->

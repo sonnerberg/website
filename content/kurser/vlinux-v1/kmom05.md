@@ -98,6 +98,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete under mappen `kmom05/maze/`.
 
+1. Lägg till redovisningstexten i din me-sida.
+
 
 
 ### Extra {#extra}

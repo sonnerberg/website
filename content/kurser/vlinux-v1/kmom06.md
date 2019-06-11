@@ -99,6 +99,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften [Spel loop i Mazerunner](uppgift/mazerunner-loop). Du arbetar i mappen `maze2/`.
 
+1. Lägg till redovisningstexten i din me-sida.
+
 <!-- 1. Gör uppgiften "[Skapa klienter och servrar som spelar luffarschack i Node.js](uppgift/skapa-klienter-och-servrar-som-spelar-luffarschack-i-node-js)". -->
 
 <!-- 1. Gör uppgiften [Lab 5](uppgift/linux-lab5-fortsattning-asynkron-programmering) för att träna ytterligare på asynkron programmering. -->

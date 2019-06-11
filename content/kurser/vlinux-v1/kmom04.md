@@ -90,6 +90,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bash-script som testar serverns routes](uppgift/bash-script-testa-routes)". Spara arbetet i mappen `client/`.
 
+1. Lägg till redovisningstexten i din me-sida.
+
 <!-- 1. Gör uppgiften "[sed-labb?](uppgift/something)". -->
 
 

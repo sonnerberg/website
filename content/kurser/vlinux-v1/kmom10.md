@@ -15,7 +15,7 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!--stop-->
+
 
 Detta kursmoment avslutar och examinerar kursen.
 
