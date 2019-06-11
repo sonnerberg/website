@@ -31,7 +31,7 @@ Vi bryter ned händelserna:
 **/OOPython/** mathar all text som är exakt *OOPython*.  
 **p** är en flagga (kommando) som talar om att vi vill skriva ut resultatet.
 
-Sed skriver automatiskt ut alla processerade rader. Vi provar lägga till flaggan `-n`, som stänger av det beteendet:
+Sed jobbar rad för rad och skriver automatiskt ut alla processerade rader. Vi provar lägga till flaggan `-n`, som stänger av det beteendet:
 
 ```
 $ sed -n '/OOPython/p' < courses.txt
@@ -61,7 +61,9 @@ $ sed -n '/OOP[a-z]\+/p' < courses.txt
 Andreas Arnesson is the teacher in the course OOPython (DV1437).
 ```
 
-Snyggt! Notera att vi behövde escapa +-tecknet. För att slippa det kan vi använda ett option, -E:
+*Tips: Kopiera gärna in texten och uttrycket i [https://regex101.com/](https://regex101.com/) så ser du hur det fungerar.*
+
+Snyggt! Notera att vi behövde escapa +-tecknet. För att slippa det kan vi använda ett option, -E vilket slår på *extended regular expressions*:
 
 ```
 $ sed -E -n '/OOP[a-z]+/p' < courses.txt

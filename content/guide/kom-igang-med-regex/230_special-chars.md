@@ -6,7 +6,7 @@ revision:
 Special karaktärer {#special_karakterer}
 =======================
 
-I regex är har vissa karaktärer en speciell betydelse, det är detta som gör att vi kan matcha mönster dynamiskt och inte enbart fasta strängar.
+I regex har vissa karaktärer en speciell betydelse, det är detta som gör att vi kan matcha mönster dynamiskt och inte enbart fasta strängar.
 
 [INFO]Vi kan använda ett option, -E, för att slippa escapa backslashes och vissa andra speciella karaktärer.[/INFO]
 

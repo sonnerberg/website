@@ -16,4 +16,10 @@ Emil Folino is the teacher in the course Webapp (not available).
 Mikael Roos is the teacher in the course OOPHP (not available).
 ```
 
-Vi matchar enbart kurskoden och byter ut den mot "not available". Än mer kraftfullt blir det om vi blandar in grupper i mixen.
+Vi matchar enbart kurskoden och byter ut den mot "not available".
+
+**s/** talar om att vi vill använda *substitution*.  
+**/not available/** är den andra delen av uttrycket, kallat *replacement*. Vi byter ut matchningen mot detta.
+
+
+Än mer kraftfullt blir det om vi blandar in grupper i mixen.

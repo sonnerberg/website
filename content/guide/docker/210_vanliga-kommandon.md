@@ -6,7 +6,7 @@ revision:
 Några vanliga kommandon
 =======================
 
-Vi har provat att starta en kontainer som laddades ned från Docker Hub. Vad Docker Hub är tar vi lite senare i guiden. Hur kan vi se vilka kontainrar som är startade? Vilka images har vi? Docker sparar all information på olika platser beroende på operativsystem.
+Vi ska prova att starta en kontainer som laddades ned från Docker Hub. Vad Docker Hub är tar vi lite senare i guiden. Hur kan vi se vilka kontainrar som är startade? Vilka images har vi? Docker sparar all information på olika platser beroende på operativsystem.
 
 * Linux: */var/lib/docker/*
 * Mac: *~/Library/Containers/com.docker.docker/Data/vms/0/Docker.raw*
@@ -31,9 +31,9 @@ Vi ska inte gå in i mapparna/filerna och pilla utan vi använder Dockers CLI oc
 | docker pull &lt;image&gt;   | laddar ner en image utan att köra den |
 | docker run &lt;image&gt;    | Starta en kontainer från en image     |
 
-Istället för ett id kan vi använda namnet på kontainern. Om vi inte har satt det själva autogenereras ett namn. Hur kan man se den informationen då? Först behöver vi en startad kontainer:
+Istället för ett id kan vi använda namnet på kontainern. Om vi inte har satt det själva autogenereras ett namn. Hur kan man se den informationen då? Först behöver vi en startad kontainer! Debian har ett eget repository där de huserar ett antal images vi kan använda. Då vi inte behöver ett helt operativsystem kan vi ta en nedbantad version av distributionen Stretch, kallad *stretch-slim*. När vi kör kommandot `run <username/imagename>` letar docker först lokalt och om det inte återfinns där letas det på Docker Hub där den laddas ner om den hittas.
 
-`$ docker run --rm -it debian:stretch:slim`
+`$ docker run --rm -it debian:stretch-slim`
 
 Flaggan `-it` gör att vi får ett interaktivt shell att jobba med. (Se `docker run --help`).  
 Flaggan `--rm` rensar automatiskt upp efter oss när vi stänger kontainern. Om vi vill att kontainern ska köras i bakgrunden, kan vi lägga till flaggan `-d` (detach).

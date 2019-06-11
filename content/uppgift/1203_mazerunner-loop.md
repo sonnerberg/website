@@ -32,7 +32,7 @@ Introduktion {#intro}
 
 Som introduktion kan vi kika på exemplet igen. Ta gärna en fundering på hur programmet struktureras och hur man kan lösa uppgiften med så få rader som möjligt. Om man har en god struktur på koden från föregående kursmoment så behövs inte mycket handpåläggning för att skapa en spel-loop.
 
-[ASCIINEMA src=244597]
+[ASCIINEMA src=250794]
 
 
 
@@ -67,16 +67,16 @@ Skapa filen `docker-compose.yml` i mappen `maze2/`.
 
 1. Klienten ska nå servern via ett eget namn.
 
-1. Servern ska läggas till som en volym.
 
-1. Testa kommandona:
+1. För att starta ett spel ska följande kommandon exekveras:
     * `$ docker-compose up -d server`
-    * `$ docker-compose up client`
-    * `$ docker-compose down`
+    * `$ docker-compose run client` (kör kontainern och scriptet)
+    * `$ docker-compose down` (stänger ned severn och klienten)
 
 Om allt startar och stängs ned som det ska är du färdig.
 
 
+<!-- 1. Servern ska läggas till som en volym. -->
 
 ### Validera och publicera {#publish}
 
