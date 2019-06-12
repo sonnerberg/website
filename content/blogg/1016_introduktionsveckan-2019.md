@@ -83,7 +83,7 @@ Här är den övergripande planeringen för introveckan och samtliga aktiviteter
 | 10:00-11:00| Välkommen distansstudent (ds) | Kursstart python/htmlphp (sh) | Introduktion till terminalen (sh) | htmlphp labbmiljö (sh) | Hjälp i labbsal (m) |
 | 11:00-12:00| BTH hälsar välkommen (c) | Generell labbmiljö (sh) | dbwebb-cli (sh) | Skapa webbsida (sh) | Hjälp i labbsal (m) |
 | 13:00-14:00| Välkommen campusstudent (ch) | Information biblioteket (c) | Stödfunktioner information (c) | Studievägledare presentation (c) | Studentkåren (c) |
-| 14:00-15:00| Frågestund (ch) | python labbmiljo (sh) | Utmaning (sh) | Publisera webbsida (sh) | Studentkåren (c) |
+| 14:00-15:00| Frågestund (ch) | Utmaning 1 (sh) | Utmaning 2 (sh) | Publisera webbsida (sh) | Studentkåren (c) |
 
 * (s) = Streamas
 * (h) = Sal H430/H429
@@ -107,7 +107,7 @@ Mellan 10-11 så streamas en välkomsthälsning för distansstudenterna på prog
 
 Klockan 11 samlas alla nya campus-studenter nere vid bryggan för välkomsttal och information. Därefter grillar studentkåren korv som blir vår lunch.
 
-Klockan 13-14 hälsar lärarteamet campus-studenterna välkommen i labbsalen och visar upp utbildningens upplägg och struktur.
+Klockan 13-14 hälsar lärarteamet campus-studenterna välkomna i labbsalen, genomför ett upprop och visar upp utbildningens upplägg och struktur.
 
 Lärarteamet finns sedan i labbsalen och vid behov så fortsätter eftermiddagen med en frågestund mellan kl 14-15, för dig som har frågor och funderingar.
 
@@ -123,7 +123,7 @@ Vi börjar med den generella labbmiljön som gäller oavsett kurs och fortsätte
 
 Klockan 13:00-13:30 är campus på genomgång med biblioteket.
 
-14:00 - 15:00 finns lärarteamet i multisalen (stream) för att fortsätta jobba med labbmiljön i python-kursen.
+14-15 har vi en programmeringsutmaning i labbsalen (streamas).
 
 
 
@@ -135,7 +135,7 @@ Lärarteamet är i multisalen 10-12 (streamas). Vi fortsätter med labbmiljön f
 
 Klockan 13-14 är campus på genomgång med BTH stödfunktioner.
 
-14-15 har vi en programmeringsutmaning i labbsalen (streamas).  I utmaningen ska vi öva på att jobba i terminalen. Hur man orientera sig och hitta filer m.m. Om du inte är klar med labbmiljön finns möjlighet till extra hjälp.
+14-15 har vi en programmeringsutmaning i labbsalen (streamas). I utmaningen ska vi öva på att jobba i terminalen. Hur man orientera sig och hitta filer m.m. Om du inte är klar med labbmiljön finns möjlighet till extra hjälp.
 
 
 

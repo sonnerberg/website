@@ -2,7 +2,12 @@
 
 [FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
 
+Tänker du läsa vid BTH till hösten?
+
+* [Introduktionsveckan Webbprogrammering 2019](blogg/introduktionsveckan-2019)
 * [Jag ska börja studera Webbprogrammering höst 2019 (FAQ)](t/7488)
+* [Antagning till Webbprogrammering hösten 2019](t/8628)
+* [Anmälan till hösten 2019 öppen 15/3 - 15/4](t/8408)
 
 Introveckan för nya studenter startar den 26/8.
 

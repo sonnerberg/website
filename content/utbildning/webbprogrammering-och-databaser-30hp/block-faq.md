@@ -1,4 +1,4 @@
-####Lärarstöd
+#### Lärarstöd
 
 Handledning och lärarstöd sker främst via [vår community](community) i forum och diverse chatter.
 
