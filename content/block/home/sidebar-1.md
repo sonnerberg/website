@@ -18,7 +18,7 @@ Inför hösten 2019 har vi följande utbud:
 * Webbprogrammering 120hp (distans)
 * Webbprogrammering och databaser 30hp (distans)
 
-Kurspaketet "Webbutveckling och programmering 30hp (distans)" har en paus under 2019/20 och återkommer till 2020/21.
+Kurspaketet "Webbutveckling och programmering 30hp (distans)" har en paus under 2019/20 och planeras återkomma till 2020/21.
 
 <!--
 Samma utbud gäller inför hösten 2018.
