@@ -71,7 +71,7 @@ app.get('/', (req, res) => res.send('Hello from inside Docker!'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 ```
 
-Nu kan vi testa servern lokalt med `$ node start` och peka webbläsaren på `localhost:1337`.
+Nu kan vi testa servern lokalt med `$ npm start` och peka webbläsaren på `localhost:1337`.
 
 
 
