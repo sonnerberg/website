@@ -15,7 +15,7 @@ Programmering och problemlösning i Python. Lär Marvin lite mer, denna gången 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och listor och du har byggt [fjärde delen av Marvin](uppgift/din-egen-chattbot-marvin-inventarie).
+Du kan grunderna i Python och listor och du har byggt [fjärde delen av Marvin](uppgift/din-egen-chattbot-marvin-citat).
 
 
 
@@ -111,7 +111,7 @@ Extrauppgift {#extra}
 Tips från coachen {#tips}
 -----------------------
 
-Lär dig felsöka med debuggern, använd den när du får problem. Komplettera med utskrifter av `print()`.
+Använd debuggern för att felsöka.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
