@@ -20,7 +20,7 @@ Vi har i Marvin byggt ett program bestående av två moduler och ett antal funkt
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har en bra förståelse för `dictionary` och har jobbat igenom "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Du har även jobbat med inmatning med hjälp av `input()` i [Marvin](uppgift/din-egen-chattbot-marvin-inventarie-v2).
+Du har en bra förståelse för `dictionary` och har jobbat igenom "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)".
 
 
 
