@@ -108,7 +108,7 @@ Det finns inga extra uppgifter.
 Tips från coachen {#tips}
 -----------------------
 
-Lär dig felsöka med debuggern, använd den när du får problem. Komplettera med utskrifter av `print()`.
+Felsöka med debuggern, använd den när du får problem. Komplettera med utskrifter av `print()`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 

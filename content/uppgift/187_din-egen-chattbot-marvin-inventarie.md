@@ -4,6 +4,7 @@ author:
     - aar
 category: python
 revision:
+  "2019-06-14": (I, aar, efo) uppdaterat för ligga i kmom04.
   "2018-06-29": (H, aar) Uppdaterade mappstruktur mot kursrepo.
   "2017-06-14": (G, lew) Uppdaterade med en asciinema och ett krav. Förtydligande av uppgift.
   "2015-10-12": (F, mos) Förtydligade (lade till) krav om att spara på fil.
@@ -117,7 +118,7 @@ Extrauppgift {#extra}
 2\. Marvin ska inte kunna bära mer än 4 saker. Om du ber honom att plocka upp något när han har fullt så ska han svara att han inte kan plocka upp det.
 
 
-3\. Spara Marvins inventory som JSON istället. Tips: [python/example/json/](https://github.com/mosbth/python/tree/master/example/json) samt [introduktion till JSON](kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben#json).
+<!-- 3\. Spara Marvins inventory som JSON istället. Tips: [python/example/json/](https://github.com/mosbth/python/tree/master/example/json) samt [introduktion till JSON](kunskap/anvand-externa-moduler-i-python-for-att-hamta-information-pa-webben#json). -->
 
 
 
