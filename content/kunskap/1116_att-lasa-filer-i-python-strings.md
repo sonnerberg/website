@@ -6,7 +6,7 @@ revision:
     "2017-06-21": (B, aar) Skrev om inför python-v2.
     "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
 ...
-Att läsa filer i Python
+Att läsa filer som strängar i Python
 ==================================
 Fram tills nu har vi bara jobbat med data som ligger i RAM-minnet, vilket betyder att när vi stänger ner programmet försvinner all data vi har skapat i programmet. Ett sätt att kunna spara den data så att den finns tillgänglig när vi startar upp programmet igen senare är att spara datan till en fil. Att kunna jobba med filer gör att vi kan spara data permanent och även inspektera den när programmet är avstängt.
 

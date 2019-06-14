@@ -5,7 +5,7 @@ revision:
     "2018-06-29": (B, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
 ...
-Att läsa filer i Python
+Att läsa filer som listor i Python
 ==================================
 För att kunna spara data mellan två exekveringar av våra program kan filer användas.
 
