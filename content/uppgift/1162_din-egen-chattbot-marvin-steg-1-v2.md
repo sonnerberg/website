@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+  "2019-06-14": (I, aar) La till 4 extrauppgifter.
   "2019-05-27": (H, aar) Tog bort brackets extrauppgift.
   "2018-06-12": (G, aar) Bytt ut vissa menyval och definierat vilka siffror valen är.
   "2017-06-13": (F, efo) Uppdaterade marvin menyval bort betyg och funktioner.
@@ -116,22 +117,39 @@ input: "Programming", "gram"   output: Match
 input: "kassler", "kusl"       output: No match
 ```
 
-<!-- * **Menyval A2**: Balance brackets, gör så Marvin kan utvärdera om olika typer av parenteser, ([{}]), matchar. För att en sekvens ska vara balanserad får bara en typ av parentes vara "öppen" åt gången. Exempel:
+* **Menyval A2**: Dubblera tills innehåller alla siffror, gör ett menyval där Marvin räknar ut hur många gånger ett tal behöver multipliceras med två för att talet ska innehålla alla siffror mellan 0 och 9 minst en gång. Menyvalet ska ta två inputs, ett som är talet som ska multipliceras och ett input som är hur många gånger den ska försöka multiplicera innan den ger upp. Om den inte lyckas innan den ska ge upp returnera -1. Exempel:
 ```python
-input: '([{}])'    output: Match
-input: '[](){}'    output: Match
-input: '[([]}]'    output: No match
-input: '{(([)])}'  output: No match
-input: '[]([])'    output: Match
-``` -->
-<!-- * **Menyval A1**: Lägg till så att Marvin kan räkna ut arean på en cirkel, där input från användaren är radien på cirkeln.-->
-<!-- * **Menyval A2**: Lägg till så att Marvin kan räkna ut hypotenusan på en triangel där inputen är de rätvinkliga sidorna.-->
+input: 1, 1000              output: 68  (295147905179352825856)
+input: 1234567890, 1000     output: 0
+input: 555, 10              output: -1
+```
+
+* **Menyval A3**: Ersätt tab med mellanslag, gör ett menyval där Marvin tar emot en sträng som innehåller minst en tab, ersätt varje tab med 3 mellanslag. En tab representeras av `\t`, det räknas som en karaktär, `if letter == \t`. När du skriver in input strängen till programmet använd tab tangenten, skriv inte `\t`. Skriv ut den nya strängen med mellanslag istället för tabbar. Exempel:
+```python
+input: "Hello\t\tworld" output: "Hello     world"
+input: "The \tWheel of\tTime\tturns" output: "The    Wheel of   Time   turns"
+```
+
+* **Menyval A4**: Slå ihop namn, gör ett menyval där Marvin tar emot två namn, du kan räkna med att båda namnen bara innehåller små bokstäver. Slå ihop namnen till ett, ex. "brad" och "angelina" blir "brangelina". I det första namnet hitta ska du hitta första vokalen och spara alla konsonanter framför den, ex. "brad" blir "br" och "ben" blir "b". I det andra namnet ta bort alla konsonanter från början till första vokalen, ex. "brad" blir "ad", "angelina blir "angelina" och "sheldon" blir "eldon". Konkatenera sen den sparade delen från det första namnet med den sparade delen från det andra namnet. Vokalerna är `"a e i o u y"`, vi räknar inte med `"å ä ö"`. Exempel:
+```python
+input: "brad", "angelina"   output: "brangelina"
+input: "sheldon", "amy"     output: "shamy"
+input: "ross", "rachel"     output: "rachel"
+input: "britain", "exit"    output: "brexit"
+```
+
+* **Menyval A5**: Räkna poäng, gör ett menyval där Marvin tar emot en input som ska vara en lång sträng med där varannan karaktär är en bokstav och varannan är en siffra, ex `"a2b4A5s3B1"`. En bokstav representerar en spelare och efterföljande siffra är dess poäng. Om bokstaven är liten, får spelaren poäng, om det är en stor bokstav förlorar spelaren poäng. Räkna ut och skriv ut varje spelares totala poäng. Exempel:
+```python
+input: "a2b4A5s3B1"   output: "a -3, b 3, s 3"
+input: "g3l1H5l2G3l1"   output: "g 0, l 4, h -5"
+```
+Tip, nästla två for-loopar.
 
 
 Tips från coachen {#tips}
 -----------------------
 
-Debugga och felsök genom att skriva ut variablernas olika innehåll med `print()`.
+Debugga och felsök med `pdb`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
