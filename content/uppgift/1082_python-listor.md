@@ -90,7 +90,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Tips från coachen {#tips}
 -----------------------
 
-Debugga och felsök genom att skriva ut variablernas olika innehåll med `print()`.
+Debugga och felsök med `pdb` och `breakpoints`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
