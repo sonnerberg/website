@@ -106,7 +106,7 @@ input: "Palindrom", "par", "ind", "rom"     output: "No match"
 Tips från coachen {#tips}
 -----------------------
 
-Lär dig felsöka med debuggern, använd den när du får problem. komplettera med utskrifter av `print()`.
+Felsöka med debuggern och komplettera med utskrifter av `print()`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 

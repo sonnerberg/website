@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2019-06-14": (G, aar) Tog bort krav om forum.
     "2017-06-14": (F, mos) Ny struktur i me/redovisa.
     "2015-08-25": (E, mos) Bytte bin/dbwebb mot dbwebb.
     "2014-09-26": (D, mos) Tog bort kravet på att hålla me.py och redovisning.py uppdaterade.
@@ -49,13 +50,6 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
-Kopiera redovisningstexten till forumet {#forum}
----------------------------------------
-
-Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/python). Bifoga länken till din me-sida.
-
-
-
 Kopiera redovisningstexten till Canvas {#canvas}
 ---------------------------------------
 
@@ -96,6 +90,5 @@ Klart! {#klar}
 [INFO]OBS! i videon nedan görs inlämningen till It's Learning men den används inte längre utan nu ska ni lämna in på [Canvas](https://www.bth.se/canvas/) istället![/INFO]
 [YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
 
-Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
