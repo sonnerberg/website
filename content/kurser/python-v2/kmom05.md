@@ -1,6 +1,10 @@
 ---
-author: mos
+author:
+    - aar
+    - efo
+    - mos
 revision:
+    "2019-06-14": (N, efo) Bytte på 04 och 05.
     "2018-08-13": (M, aar) Flyttade hit extrauppgifter från kmom06.
     "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-08": (K, aar) La till listor, flyttade dict/tuple till nästa och tog bort argparse.
@@ -96,7 +100,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/list`.
 
-1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/file`.
+1. Jobba igenom artikeln/övningen "[Att läsa filer till en lista i Python](kunskap/att-lasa-filer-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/file`.
 
 
 
@@ -107,7 +111,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom05/lab5`.
 
-3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom05/marvin4`.
+3. Gör uppgiften "[Din egen chattbot - Marvin - citat](uppgift/din-egen-chattbot-marvin-citat)". Spara alla filer under `me/kmom05/marvin4`.
 
 
 

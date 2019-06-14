@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2019-06-14": (M, efo) Ändrade så kmom05 blir 04.
     "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-18": (K, aar) La till moduler och flyttade listor till kmom05.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
@@ -76,7 +77,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Det finns inga lästips.
 
@@ -89,27 +90,27 @@ Det finns inga lästips.
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/modules` då denna uppgiften bygger vidare på kmom03.
 
-1. Jobba igenom artikeln/övningen "[Att läsa filer i Python](kunskap/att-lasa-filer-i-python-strings)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
+1. Jobba igenom artikeln/övningen "[Att läsa filer som strängar i Python](kunskap/att-lasa-filer-i-python-strings)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med funktioner och moduler](uppgift/python-med-funktioner-moduler)" för att träna på olika typer av funktioner och moduler. Spara alla filer under `me/kmom04/lab4`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v2)". Spara alla filer under `me/kmom04/marvin3`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - inventarie](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom04/marvin3`.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
 Det finns inga extrauppgifter.
 

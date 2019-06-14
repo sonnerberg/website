@@ -1,7 +1,11 @@
 ---
-author: mos
+author:
+    - aar
+    - efo
+    - mos
 category: python
 revision:
+  "2019-06-14": (J, efo) Flyttade till kmom05 istället för kmom04.
   "2019-05-24": (I, efo) Uppdaterade med förtydligande av menyval 12.
   "2017-06-14": (H, lew) Uppdaterade med en asciinema och ett krav.
   "2016-02-29": (G, mos) Uppdaterade länk till IRC-marvin.
@@ -15,18 +19,21 @@ revision:
 updated: "2016-02-29 13:52:19"
 created: "2014-07-03 07:52:13"
 ...
-Din egen chattbot - Marvin - steg 3
+Din egen chattbot - Marvin - Citat
 ==================================
 
-Programmering och problemlösning i Python. Lär Marvin att prata lite mer slumpmässigt via listor med standardsvar.
+Lär Marvin att prata lite mer slumpmässigt via listor med standardsvar.
+
+
 
 <!--more-->
+
 
 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och stränghantering och du har byggt [andra delen av Marvin](uppgift/din-egen-chattbot-marvin-steg-2).
+Du kan grunderna i Python och stränghantering och du har byggt [Marvin inventarie](uppgift/din-egen-chattbot-marvin-inventarie).
 
 
 
@@ -64,16 +71,18 @@ Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopi
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom03/marvin2/*.py kmom04/marvin3/
-cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
-cd kmom04/marvin3
+cp -ri kmom04/marvin3/*.py kmom05/marvin4/
+cp -i ../example/marvin/quotes_lgtg.txt kmom05/marvin4/quotes.txt
+cd kmom05/marvin4
 ```
-
-1. Skapa en ny fil `main.py`, den ska innehålla koden för while-loopen och vilket val som görs. `marvin.py` ska innehålla all kod som körs när ett val är gjort, alltså varje enskilt vals kod. Importera `marvin.py` i `main.py`.
 
 1. Lär Marvin kommandot "citat". Skapa en ny fil `quote.py` och lägg hanteringen av kommandot "citat" i denna modul. Importera modulen `quote.py` i `main.py`. Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`. Kommandot "citat" ska skrivas direkt till Marvin. Det ska **inte** ligga bakom ett menyval som tidigare.
 
-Förutom att Marvin kan svara med citat lägger vi även till ett menyval:
+1. Lär Marvin svara på meningar som innehåller orden "hej" och "lunch". Svaren skall slumpas fram och kombineras från de [standardsvar som IRC-Marvin använder på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L179-L193). Skapa ytterligare moduler om du tycker att det behövs.
+
+[ASCIINEMA src=139383]
+
+Förutom att Marvin kan svara med "citat", "hej" och "lunch" lägger vi även till ett menyval:
 
 3. **Menyval 12**: där Marvin i samma sträng skriver ut: dagens datum och nuvarande tid, hur han mår (slumpmässigt humör), ett heltal, samt ett floattal med 3 decimaler. Ge talen ett sammanhang i texten.
 Strängen ska hämtas från en textfil som du själv skapar och formateras med ovanstående variabler. Notera att du i programmet inte ska ändra i filen. Kursrepot innehåller ett [exempel på strängformattering med fil](https://github.com/reechani/python/blob/master/example/marvin/format.py) som du kan använda som grund för denna uppgift. Om du tycker det passar in skapa även en egen modul för detta menyval.
@@ -82,7 +91,7 @@ Strängen ska hämtas från en textfil som du själv skapar och formateras med o
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate marvin3
+dbwebb validate marvin4
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
@@ -92,9 +101,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. Lär Marvin svara på meningar som innehåller orden "hej" och "lunch". Svaren skall slumpas fram och kombineras från de [standardsvar som IRC-Marvin använder på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L179-L193).
-
-[ASCIINEMA src=139383]
+Det finns inga extra uppgifter.
 
 
 
