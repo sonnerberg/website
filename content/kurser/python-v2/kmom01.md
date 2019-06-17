@@ -117,12 +117,12 @@ Som en generell introduktion till programming och vissa av de tekniker och konst
 
 
 
-<!--
+
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
 
-Om du känner att du har tid och lust. -->
+Om du känner att du har tid och lust.
 
 
 

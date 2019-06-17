@@ -79,9 +79,10 @@ Titta på följande:
 
 
 
-<!-- ### Lästips {#lastips}
+ ### Lästips {#lastips}
 
-Det finns inga lästips. -->
+Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
+
 
 <!--
 1. Bekanta dig kort med verktyget [Pylint](http://www.pylint.org/).
