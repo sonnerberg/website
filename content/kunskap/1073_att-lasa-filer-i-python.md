@@ -2,6 +2,7 @@
 author: efo
 category: python
 revision:
+    "2019-06-17": (C, aar) La till del om readlines.
     "2018-06-29": (B, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-06-14": (A, efo) Första utgåvan inför kursen python H17.
 ...
@@ -60,7 +61,7 @@ print(items_as_list)
 # skriver ut: ['cookie', 'cake', 'tea\n']
 ```
 
-Vi har nu en lista som innehäller tre element som vi har läst in från filen `items.txt`. Notera `\n` i sista elementet, `\n` är en radbrytning och egentligen inget vi vill ha med i listan. Så vi kan använda funktionen `strip()` för att ta bort såkallat whitespace (mellanrum, radbrytning osv.) från änderna av strängen.
+Vi har nu en lista som innehåller tre element som vi har läst in från filen `items.txt`. Notera `\n` i sista elementet, `\n` är en radbrytning och egentligen inget vi vill ha med i listan. Så vi kan använda funktionen `strip()` för att ta bort så kallat whitespace (mellanrum, radbrytning osv.) från änderna av strängen.
 
 ```python
 # the name of the file
@@ -78,7 +79,27 @@ print(items_as_list)
 
 Vi får nu utskriften `['cookie', 'cake', 'tea']` som vi hade förväntat från första början.
 
-Dock ger inläsning från fil än så länge inte mer än vad vi hade fått om vi bara hade skapat listan för hand. Vi ska nu titta på hur vi kan lägga till flera element i listan och hur vi skriver listan till fil.
+
+
+#### readlines() {#readlines}
+
+Istället för att själva dela upp strängen och ta bort sista tomma raden kan vi använda den inbyggda funktionen `readlines()` istället. Som läser upp hela filens innehåll och returnerar den som en lista där alla rader blir ett eget element. 
+
+```python
+# the name of the file
+filename = "items.txt"
+
+# with - as for reading a file automatically closes it after reading is done
+with open(filename) as filehandle:
+    line = filehandle.readlines()
+
+# print what the list looks like
+print(items_as_list)
+```
+
+Vi får igen utskriften `['cookie', 'cake', 'tea']` med färre rader kod.
+
+Vi ska nu titta på hur vi kan lägga till flera element i listan och hur vi skriver listan till fil.
 
 
 
