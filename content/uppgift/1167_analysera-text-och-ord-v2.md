@@ -39,7 +39,7 @@ Googla "online word counter" eller "online letter counter" så hittar du verktyg
 
 Du ska i uppgiften göra ett program som analyserar en text från en fil. Det kan se ut på detta sättet när vi kör programmet:
 
-[ASCIINEMA src=dvk4qt4Tfd00U0kFAcFTJdPh5]
+[ASCIINEMA src=252098]
 
 
 
@@ -83,6 +83,33 @@ dbwebb validate analyzer
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
+Följande är korrekt resultat för de olika kommando:
+
+```
+lines: 17
+
+words: 199
+
+letters: 907
+
+word_frequency: 
+    "the": 12 | 6.0%
+    "to": 8 | 4.0%
+    "and": 7 | 3.5%
+    "of": 6 | 3.0%
+    "he": 5 | 2.5%
+    "him": 5 | 2.5%
+    "street": 5 | 2.5%
+
+letter_frequency: 
+    "e": 108 | 11.9%
+    "t": 91 | 10.0%
+    "o": 77 | 8.5%
+    "h": 67 | 7.4%
+    "n": 66 | 7.3%
+    "a": 64 | 7.1%
+    "i": 64 | 7.1%
+```
 
 
 Extrauppgift {#extra}
