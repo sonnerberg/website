@@ -1,6 +1,18 @@
+---
+author: aar
+category: devops
+revision:
+  "2019-06-13": (A, aar) Första utgåvan inför kursen devops.
+...
+
+Verktyg för lyckad Devops
+==================================
+
 Software development tools hjälper till med programmering, dokumentering, testing och bug fixing i applikationer och services.
 
 (s. 177 framåt)
+
+<!--more-->
 
 # Lokal utvecklings miljö {#locale}
 
@@ -127,7 +139,30 @@ Många event alert och monitoring system har inbyggt sätt att automatiskt hante
 
 
 
-# Sammanfattning {#sammanfattning}
+Missuppfattningar gällande verktyg och Devops {#missuppfattningar}
+------------------------------
+
+Text
+
+# De använder X medan vi använder Y, vi måste byta {#xy}
+
+Att kopiera en annan organisations verktyg stack behöver inte leda till succé, det är viktigare att hitta vad som fungera för ens egna organisation.
+
+
+
+# Att använda verktyg X innebär att vi kör Devops {#verktyg-inte-devops}
+
+Devops är en kultur och verktygen är en viktig del av den men det är inte allt. Det är viktigt att förstå varför vi använder verktygen, t.ex. infrastruktur automation gör att utvecklare kan göra ändringar på ett mer effektivt och pålitligt sätt samtidigt som det minskar riskerna med att göra ändringar.
+
+
+
+# 
+
+
+
+
+Avslutningsvis {#avslutning}
+-------------------------------
 
 Automatisering, continuous delivery och deployment gör att anställda kan fokusera på det som är viktigt. Korta feedback loopar med automatiska byggen och testning ökar förtroendet och kunskapen om systemen.
 
