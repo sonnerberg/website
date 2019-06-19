@@ -37,15 +37,15 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du är nyanställd på webbfirman AB Konsult Mobila Webappar. De är osäkra på dina kunskaper och ger dig ett projekt som blivit liggande. De säger "Kan du fixa ihop en RESTful server med Node.js som vi kan använda för att testa BTH's mobila app?".
+Du är nyanställd på firman BTH Server & Nätverk AB. De är osäkra på dina kunskaper och ger dig ett projekt som blivit liggande. De säger "Vi har en logg-fil från vår server, men den innehåller massa konstig information...Kan du hjälpa oss att plocka ut ip- och webbadresserna samt låta oss kunna filtrera dem?".
 
 Du säger "Självklart. Finns det något att utgå ifrån?"
 
-Du får en länk till en [katalog på en projektserver](https://github.com/mosbth/linux/tree/master/example/proj). Sedan lämnar de dig åt ditt öde.
+Du får en länk till en [katalog på en projektserver](https://github.com/dbwebb-se/vlinux/tree/master/example/proj). Sedan lämnar de dig åt ditt öde.
 
-Du hittar alltså filer som är relaterade till projektet i ditt kursrepo under `example/proj`.
+Du hittar alltså filen som är relaterad till projektet i ditt kursrepo under `example/proj`.
 
-Du kikar snabbt i katalogen och väljer att fokusera på en server som söker bland salarna. Det låter lagom stort. Det blir ditt bidrag till *bthappen*.
+Du kikar snabbt i katalogen och väljer att fokusera på en server som söker i loggen. Det låter lagom stort. Då du inte vet vilken miljö de använder väljer du att bygga in applikationen i Docker.
 
 Fråga i forumet om du känner dig osäker.
 
@@ -56,162 +56,190 @@ Projektspecifikation {#projspec}
 
 Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
-De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
+De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De två sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
 
-Varje krav ger max 10 poäng, totalt är det 60 poäng.
+Krav 1-3 (Grundkraven) ger max 10 poäng styck, totalt är det 30 poäng.
+Krav 4 (Optionellt) ger max 10 poäng.
+Krav 5 (Optionellt) ger max 20 poäng.
 
 
 
-###Kataloger för redovisning {#var}
+### Kataloger för redovisning {#var}
 
-Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10/bthappen`.
+Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10/bthloggen`.
 
 Redovisningstexten skriver du som vanligt i `me/redovisa`.
 
 
 
-###Krav 1 Bash för att konvertera XLS till JSON {#k1}
+### Krav 1 Regex för att konvertera loggfil till JSON {#k1}
 
-Administrationen har fixat ett excelark som visar samtliga salar på BTH i Karlshamn och i Karlskrona. Du behöver omvandla innehållet i excelarket till en JSON-fil.
+Administrationen har fixat ett utdrag ur loggen. Du behöver plocka ut ip- och webbadresserna till en JSON-fil.
 
-Du hittar excelarket i ditt kursrepo under `example/proj/resources`. Information i excelarket ser ut ungefär så här.
+Du hittar logg-filen i ditt kursrepo under `example/proj/`. Informationen i filen ser ut ungefär så här:
 
 ```text
-H430	Unixlabb			Karlskrona	H-huset	4	Labrationssal
-A303	Monsunen			Karlskrona	A-huset	3	Konferensrum	18
+31.200.12.141 - - [17/Aug/2016:14:16:44 +0200] "GET /forum/viewforum.php?f=9 HTTP/1.0" 200 43595 "https://dbwebb.se/viewforum.php?f=9" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36"
+1.208.61.234 - - [17/Aug/2016:13:56:33 +0200] "GET /community HTTP/1.1" 200 7763 "https://dbwebb.se/kurser" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0"
+31.254.32.6 - - [17/Aug/2016:14:04:28 +0200] "GET /kurser/lektionsplan-och-rekommenderad-studieplan HTTP/1.0" 302 650 "-" "Mozilla/5.0 (compatible; MJ12bot/v1.4.5; http://www.majestic12.co.uk/bot.php?+)"
+...
 ```
 
-Det skall omformas till JSON-fil enligt följande.
+Du behöver bara ta hänsyn till de rader som har både ip- och webbadress. Det skall omformas till JSON-fil enligt följande:
 
-```javascript
-{
-    "salar": [
-        {
-            "Salsnr": "A303",
-            "Salsnamn": "Monsunen",
-            "Lat": null,
-            "Long": null,
-            "Ort": "Karlskrona",
-            "Hus": "A-huset",
-            "Våning": "3",
-            "Typ": "Konferensrum",
-            "Storlek": "18"
-        },
-        {
-            "Salsnr": "H430",
-            "Salsnamn": "Unixlabb",
-            "Lat": null,
-            "Long": null,
-            "Ort": "Karlskrona",
-            "Hus": "H-huset",
-            "Våning": "4",
-            "Typ": "Labrationssal",
-            "Storlek": null
-        }
-    ]
-}
+```text
+[
+    {
+        "ip": "31.200.12.141",
+        "url": "https://dbwebb.se"
+    },
+    {
+        "ip": "1.208.61.234",
+        "url": "https://dbwebb.se"
+    },
+    {
+        "ip": "31.254.32.6",
+        "url": "http://www.majestic12.co.uk"
+    }
+]
 ```
 
-Skapa ett Bash-script som automatiskt skapar en JSON-fil utifrån innehållet i excelarket. Du får förbereda datan genom att spara excelarket i valfritt format, förslagsvis `.csv`, så att ditt Bash-skript kan läsa dess innehåll.
+Börja med att kopiera logg-filen. Ställ dig i kursroten:
 
-Döp ditt Bash-script till `bthappen/salar2json.bash`. När skriptet körs så skall det skapas en fil `bthappen/salar.json` som innehåller samtliga salar enligt strukturen ovan.
+```
+$ cp example/proj/access-50k.log me/kmom10/
+```
 
-Använd ett onlineverktyg för att kontrollera att du producerat JSON som validerar.
+Skapa ett Bash-script som automatiskt skapar en JSON-fil utifrån innehållet i logg-filen med hjälp av regex.
+
+Döp ditt Bash-script till `bthloggen/log2json.bash`. När skriptet körs så skall det skapas en fil `bthloggen/data/log.json` som innehåller samtliga rader enligt strukturen ovan.
+
+Använd ett onlineverktyg, tex [jsonlint](https://jsonlint.com/), för att kontrollera att du producerat JSON som validerar.
 
 
 
-###Krav 2 Server för att visa och söka bland salar {#k2}
+### Krav 2 Server för att servera loggen {#k2}
 
-Skapa en server i Node.js (ES6) som kan visa och söka bland salar via följande routes. Alla svar skall vara i JSON. Servern skall använda sig av routern (som användes i kmom05/06).
+Här jobbar du i mappen `bthloggen/server/`.
+
+Skapa en server i valfritt språk som kan visa och filtrera bland salar via följande routes. Alla svar skall vara i JSON.
 
 | Route                     | Resultat |
 |---------------------------|----------|
 | `/`                       | Visa en lista av de routes som stöds. |
-| `/room/list`              | Visa samtliga salar. |
-| `/room/view/id/:number`   | Visa detaljer om salen med valt salsnummer. |
-| `/room/view/house/:house` | Visa samtliga salar som finns i ett visst hus. |
-| `/room/search/:search`    | Visa de salar som matchar söksträngen. Sökning skall ske på delsträng i samtliga fält. |
+| `/data/`                  | Visa samtliga rader. |
+| `/data?ip=<ip>`   | Visa raderna som innehåller &lt;ip&gt;. |
+| `/data?url=<url>`   | Visa raderna som innehåller &lt;url&gt;. |
 
-Spara koden för servern, och det som servern behöver, i en underkatalog `bthappen/server`. Servern skall startas på följande sätt där man kan ange vilken port som servern skall använda.
+Spara koden för servern, och det som servern behöver, i en underkatalog `bthloggen/server`. Servern skall byggas in i en Dockerkontainer som publiceras med *username/vlinux-kmom10:server*.
 
-```text
-bthappen/server/index.js --port <number>
-```
+Skapa en fil, `docker-compose.yml`, i mappen `bthloggen/` som kan starta servicen *server*.
 
-Servern skall även stödja options för `-h` och `-v` för att visa en hjälptext samt versionen på programmet.
-
-Servern skall skriva ut en loggtext som visar vilken route den tar emot, från vilken klient (hostnamnet/ip-adressen).
+Mappen `data/`, som innehåller logg-filen ska läggas till som en volym i docker-compose.
 
 
 
-###Krav 3 Klient i Node.js för att testköra mot servern {#k3}
+### Krav 3 Bashscript för att testa servern {#k3}
 
-Skapa en klient i Node.js (ES6) som du använder för att testa servern. Din klient skall vara byggd likt den klient du gjorde i kmom06. Den skall använda en egen prompt med modulen readline samt innehålla ett menysystem som ser ut så här.
+Här jobbar du i mappen `bthloggen/client/`.
+
+Skapa en klient i Bash som kan köras mot servern. Börja med att skapa filen `bthloggen/client/bthloggen.bash` och gör den exekverbar. Följande kommandon ska fungera:
 
 ```text
 Commands available:
 
- exit            Leave this program.
- menu            Print this menu.
- url             Get url to view the server in browser.
- list            List all rooms.
- view <id>       View the room with the selected id.
- house <house>   View the names of all rooms in this building (house).
- search <string> View the details of all matching rooms (one per row).
+url             Get url to view the server in browser.
+view            List all entries.
+view url <url>      View all entries containing <url>.
+view ip <ip>       View all entries containing <ip>.
+use <server>    Set the servername (localhost or service name).
 ```
 
-Spara koden för klienten, och det som klienten behöver, i en underkatalog `bthappen/client`. Klienten skall startas på följande sätt där man kan ange vilken server och port som klienten skall använda för att koppla upp sig.
+Klienten skall stödja följande options:
 
 ```text
-bthappen/client/index.js --server <server> --port <number>
+Options available:
+
+-h, --help      Display the menu
+-v, --version   Display the current version
+-c, --count     Display the number of rows returned
 ```
 
-Klienten skall stödja options för `-h` och `-v` för att visa en hjälptext samt versionen på programmet.
+Ett exempel på `-c` kan vara:
+
+```
+root@ef2d7f6842c0:/client# ./bthloggen.bash -c view url dbwebb
+27108
+```
+
+Klienten skall byggas in i en Dockerkontainer som publiceras med *username/vlinux-kmom10:client*.
+
+Lägg till uppstarten av klienten i Docker Compose, där man ska hamna i Bash med `$ docker-compose run client`.
+
+Nedan ser du ett exempel på hur krav 1-3 kan fungera.
+
+[ASCIINEMA src=252509 caption="Exempel på krav 1-3"]
 
 
 
-###Krav 4: Bättre sökalgoritm (optionell) {#k4}
+### Krav 4: Webbklient (optionell) {#k4}
 
-Förbättra sökalgoritmen genom att införa prioritering och skapa en ny route (server och klient) som söker med prioritering.
+Här jobbar du i mappen `bthloggen/webbclient/`.
 
-| Route                     | Resultat |
+Skapa en webbsida som presenterar serverns funktionalitet. Man ska till exempel kunna söka information via ett sökfält eller välja det via en lista och få det presenterat på ett trevligt sätt. Utmana dig själv. Gör en snygg design på sidan så du inte bara visar upp JSON svaren. Här är det fritt att välja språk. Kraven är att:
+
+* Sidan ska byggas in i en Dockerkontainer som publiceras med taggen *username/vlinux-kmom10:webbclient*.
+* Kontainern ska vara nåbar via port `1338`.
+* Kontainern ska kunna startas som en service (webbclient) i Docker Composefilen.
+* Kontainern ska ligga på samma nätverk som de tidigare kontainrarna (krav 2 och 3).
+
+
+
+### Krav 5: Mer data (optionell) {#k5}
+
+Utöka ditt skript `log2json.bash` så man får ut även datumet och klockslaget för varje rad. Lägg till dem i JSON-filen och se till så servern stöder filtrering på dem. Uppdatera även klient(erna). Glöm heller inte lägga till det i hjälptexten i `bthloggen.bash`.
+
+| Route&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   | Resultat |
 |---------------------------|----------|
-| `/room/searchp/:search`   | Sök med prioritering. |
-
-
-Du väljer själv den algoritm du implementerar. Tänk på följande.
-
-1. Vissa fält är mer viktiga än andra. De har högre prioritet och en träff i dem är viktigare än en träff i andra fält.
-
-1. Om söksträngen matchar ett helt fält, inte bara en delsträng av fältet, så har det hög prioritet.
-
-1. Om söksträngen matchar början av strängen så har det högre prioritet än en matchning av delsträng inuti. Det är alltså bättre om söksträngen `abc` matchar `abcdef` än `defabc`.
-
-Skapa din egen sökalgoritm som väger in prioritering och graderar varje sökträff till en siffra mellan 0 och 1. Sortera svaret som servern skickar baserat på prioritering. Värdet på prioriteringen skall skickas med svaret.
+| `/data?month=<month>`   | Visa raderna från månaden &lt;month&gt; (tex `?month=Aug`). |
+| `/data?day=<day>`   | Visa raderna från dagen &lt;day&gt;. |
+| `/data?time=<time>`   | Visa raderna från tiden &lt;time&gt; (tex `?time=14`) visar alla rader inkomna 14:00 och fram till 14:59. `?time=13:28` visar alla rader inkomna 13:28. |
+| `/data?day=<day>&time=<time>`   | Visa raderna från tiden &lt;time&gt; på dagen &lt;day&gt;. |
+| `/data?month=<month>&day=<day>&time=<time>`   | Visa raderna från tiden &lt;time&gt; på dagen &lt;day&gt; och månaden &lt;month&gt;.|
 
 
 
-###Krav 5: Filtrera antalet träffar (optionell) {#k5}
+Ett exempel är alltså `/data?month=Aug&day=17&time=14:36` som kan ge resultatet:
 
-Lägg till så man kan filtrera det resultatet man får så man bara får max ett visst antal träffar.
+```
+[
+    {
+        "ip": "3.46.13.143",
+        "day": "17",
+        "month": "Aug",
+        "time": "14:36:04",
+        "url": "http://www.bing.com"
+    },
+    {
+        "ip": "3.55.39.16",
+        "day": "17",
+        "month": "Aug",
+        "time": "14:36:17",
+        "url": "http://www.bing.com"
+    },
+    {
+        "ip": "3.227.89.252",
+        "day": "17",
+        "month": "Aug",
+        "time": "14:36:29",
+        "url": "https://dbwebb.se"
+    }
+]
+```
 
-| Route                     | Resultat |
-|---------------------------|----------|
-| `max=number`              | Svaret skall innehålla max *number* träffar. |
-
-Följande routes skall stödja filtreringen.
-
-| Route                     | Resultat |
-|---------------------------|----------|
-| `/room/list`              | Visa samtliga salar. |
-| `/room/view/house/:house` | Visa samtliga salar som finns i ett visst hus. |
-| `/room/search/:search`    | Visa de salar som matchar söksträngen. |
-
-Ett exempel är alltså `/room/search/karlskrona?max=5` som ger ett svar med max 5 salar.
 
 
-
-###Krav 6: Bättre testmöjligheter (optionell) {#k6}
+<!-- ### Krav 6: Bättre testmöjligheter (optionell) {#k6}
 
 Bygg ut ditt system med bättre möjligheter för tester.
 
@@ -221,7 +249,7 @@ I klienten, lägg till en option av `--develop` som innebär utskrift av urlen s
 
 Skapa ett bash-skript `bthappen/test.bash` som använder curl för att testa samtliga router (minst 15 testfall). Bash-skriptet skall skriva ut urlen som testas följt av den response kod som kommer från servern. Skriptet skall stödja LINUX_SERVER och LINUX_PORT.
 
-Bash-skriptet skall ha en option `--verbose` som innebär att den skriver ut innehållet i det svaret som kommer från servern.
+Bash-skriptet skall ha en option `--verbose` som innebär att den skriver ut innehållet i det svaret som kommer från servern. -->
 
 
 
@@ -230,17 +258,15 @@ Redovisning {#redovisning}
 
 1. På din [redovisningssida](./../redovisa), skriv följande:
 
-    1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+    1. För varje krav du implementerat, dvs 1-5, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
     1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas/redovisningen. Glöm inte länka till din me-sida och projektet.
 
-3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/linux) och berätta att du är klar.
-
-4. Se till att samtliga kursmoment validerar.
+3. Se till att samtliga kursmoment validerar.
 
 ```bash
 # Ställ dig i kursrepot
