@@ -156,7 +156,9 @@ Devops är en kultur och verktygen är en viktig del av den men det är inte all
 
 
 
-# 
+# Det går att köpa Devops paket eller Devops-as-a-service {#buy-devops}
+
+Devops snabbar popularitet har lett till att många företag lägger till Devops buzzwords i sin marknadsföring för att haka på trenden och sälja mer. Det kan vara svårt att veta vad som är marknadsföring från verkligheten. Fundera på hur/om företagen marknadsför mer än bara verktyg, handlar det också om samarbete, samhörighet och skalning inom organisationer? 
 
 
 
