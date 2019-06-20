@@ -56,7 +56,7 @@ Kika igenom följande artiklar.
 
 Det finns generellt kursmaterial i video form.
 
-1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
+1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[Devops streams]()".
 
 
 
@@ -70,22 +70,22 @@ Det finns generellt kursmaterial i video form.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna..
 
-1. Om du inte redan har en virtuell server och domännamn jobba igenom artikeln ["GitHub Education Pack och en server på Digital Ocean"](kunskap/github-education-pack-och-en-server-pa-digital-ocean) där vi använder Github Education Pack för att skaffa en egen Virtuell Server med ett eget domännamn. Du kan skippa steget "Installera nodejs och npm".
+1. Om du inte redan har en virtuell server och domännamn jobba igenom artikeln ["GitHub Education Pack och en server på Digital Ocean"](kunskap/github-education-pack-och-en-server-pa-digital-ocean) där vi använder Github Education Pack för att skaffa en egen Virtuell Server med ett eget domännamn. Du kan skippa steget "Installera nodejs och npm". Om du behöver sätta upp servern på nytt men inte vill göra allt manuellt finns det skripts i [iac/10-first-minutes](github.com/dbwebb-se/devops-proj/infrastructure-as-code/10-first-minutes).
 
+1. Sätt upp Continuous integration med CircleCi ["Continuous Integration With Python: An Introduction"](https://realpython.com/python-continuous-integration/#overview-of-continuous-integration-services)
 
-2. Gå igenom projektet?
-
-3. Installera projekt miljön
-
-4. Circle Ci it up!
-
-5. Skriv egna tests/fixa bugg? 
+# Använd exemplet från ovanför?
+1. Driftsätta ett Python Flask projekt ["Driftsätt en Flask app"](kunskap/dirftsätt-en-flask-flask-app). 
 
 
 
 ### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+
+1. Forka och bekanta dig med koden i projektet, CI och driftsätt [Ett proj](uppgift/).
+
+1. Skriv egna tests/fixa bugg och driftsätt nya versionen [Uppdatera och driftsätt manuellt](uppgift/uppdatera-och-driftsätt-manuellt) 
 
 1. Försäkra dig om att du har gjort `dbwebb publish redovisa` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
