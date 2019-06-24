@@ -11,7 +11,7 @@ Installera virtualiseringsmiljön Docker
 Vi lutar oss mot Dockers egna dokumentation för installationsanvisningar, [https://docs.docker.com/](https://docs.docker.com/). Fortsätt läsa för att se hur du går vidare.
 
 [INFO]
-Ett tips för Windows 10 Home är att installera Docker för Linux i din VirtualBox. Det kommer underlätta framöver och vi håller oss kvar i Linuxmiljön. I dagsläget finns det inget stöd för Hyper-V i Windows Home 10.
+Ett tips för Windows 10 Home är att installera Docker för Linux i din VirtualBox. Det kommer underlätta framöver och vi håller oss kvar i Linuxmiljön. I dagsläget finns det inget stöd för Hyper-V i Windows Home 10 (2019-03-08).
 [/INFO]
 
 <!--more-->
@@ -51,6 +51,10 @@ Att tänka på är att Docker till Windows använder *Hyper-V* för virtualiseri
 Ett annat alternativ är att installera Docker i din VM från tidigare kursmoment. Du installerar då Docker för Linux. Om VirtualBox fungerar fint bör det inte vara några problem. Det kommer att kräva en port forward till i kommande kursmoment, men det ger sig nog.
 
 I skrivande stund är Docker i VirtualBox testat på Windows 10 Pro med 8GB RAM.
+
+[INFO]
+Ha koll på: [Docker, Win10/WSL och Hyper-V](https://engineering.docker.com/2019/06/docker-hearts-wsl-2/)
+[/INFO]
 
 
 
