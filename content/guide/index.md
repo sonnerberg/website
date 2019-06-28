@@ -12,6 +12,11 @@ Guider i produktionsläge.
 * [Kom igång med objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)
 * [Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)
 * [Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)
+* [Kom igång med Bash](guide/kom-igang-med-bash)
+* [Kom igång med Regex](guide/kom-igang-med-regex)
+* [Docker](guide/docker)
+* [VirtualBox](guide/virtualbox)
+* [Kom igång med SSH](guide/kom-igang-med-ssh)
 
 Guider under utveckling till hösten 2018.
 
@@ -34,11 +39,7 @@ Guider under utveckling till våren 2019.
 
 Guider under utveckling till hösten 2019.
 
-* [Kom igång med Bash](guide/kom-igang-med-bash)
-* [Kom igång med Regex](guide/kom-igang-med-regex)
-* [Docker](guide/docker)
-* [VirtualBox](guide/virtualbox)
-* [Kom igång med SSH](guide/kom-igang-med-ssh)
+
 
 Guider som ligger till sig och eventuellt utvecklas framöver.
 
