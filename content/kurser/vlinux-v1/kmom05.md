@@ -41,16 +41,6 @@ Det finns ingen läsanvisning i kurslitteraturen.
 
 
 
-
-<!--
-### Artiklar {#artiklar}
-
-TBD -->
-
-<!-- 1. Läs igenom hur du med Bash kan skapa ett mer avancerat kommandoradsprogram som tar argument. Artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) ger dig en struktur till hur du kan skapa mer avancerade och större Bash-skript. -->
-
-
-
 ### Video  {#video}
 
 Titta på följande:

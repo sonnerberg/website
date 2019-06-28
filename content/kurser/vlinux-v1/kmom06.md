@@ -41,11 +41,6 @@ Läsanvisningar  {#lasanvisningar}
 
 Det finns ingen läsanvisning kopplad till kursmomentet.
 
-<!--
-###Artiklar {#artiklar}
-
-Det finns inga artiklar. -->
-
 
 
 ###Video  {#video}
