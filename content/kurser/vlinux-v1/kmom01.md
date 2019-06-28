@@ -20,8 +20,6 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!-- more -->
-
 Det första vi behöver är en Linux-server. På något sätt.
 
 Jag kommer visa hur du installerar Linux i VirtualBox, en virtualiseringsmiljö. Du kan välja att göra som jag gör eller så installerar du på en annan server. Kanske har du en gammal dator till övers, eller är du bekväm med virtuella servrar, eller investerar du i en Raspberry Pi för ett par hundralappar.
@@ -89,7 +87,7 @@ Titta på följande:
 
 Det finns videos kopplade till installationsanvisningarna.
 
-<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 0 och 1. -->
+1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 01.
 
 
 
@@ -126,8 +124,6 @@ Dubbelkolla med [videon](https://youtu.be/6a_q5YojE0s) så du fått med alla del
 ### Extra {#extra}
 
 Det finns inga extrauppgifter.
-
-<!-- Skaffa ett konto på Digital Ocean och installera Debian på en virtuell maskin. Koppla en domänadress till maskinen. Via GitHub kan du få rabattkod som ger dig gratis månader hos Digital Ocean (gällde 2015, 2016, 2017). -->
 
 
 

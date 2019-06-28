@@ -58,8 +58,8 @@ Utveckla och leverera projektet enligt följande specifikationen. Saknas info i 
 
 De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De två sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
 
-Krav 1-3 (Grundkraven) ger max 10 poäng styck, totalt är det 30 poäng.
-Krav 4 (Optionellt) ger max 10 poäng.
+Krav 1-3 (Grundkraven) ger max 10 poäng styck, totalt är det 30 poäng.  
+Krav 4 (Optionellt) ger max 10 poäng.  
 Krav 5 (Optionellt) ger max 20 poäng.
 
 
@@ -236,20 +236,6 @@ Ett exempel är alltså `/data?month=Aug&day=17&time=14:36` som kan ge resultate
     }
 ]
 ```
-
-
-
-<!-- ### Krav 6: Bättre testmöjligheter (optionell) {#k6}
-
-Bygg ut ditt system med bättre möjligheter för tester.
-
-I servern, lägg till en option av `--develop` som innebär utskrift av svaret som skickas till klienten. På det viset kan man på serversidan se exakt vilket svar som skickas på en viss request.
-
-I klienten, lägg till en option av `--develop` som innebär utskrift av urlen som skickas till servern.
-
-Skapa ett bash-skript `bthappen/test.bash` som använder curl för att testa samtliga router (minst 15 testfall). Bash-skriptet skall skriva ut urlen som testas följt av den response kod som kommer från servern. Skriptet skall stödja LINUX_SERVER och LINUX_PORT.
-
-Bash-skriptet skall ha en option `--verbose` som innebär att den skriver ut innehållet i det svaret som kommer från servern. -->
 
 
 

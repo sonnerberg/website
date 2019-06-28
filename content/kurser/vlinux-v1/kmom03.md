@@ -56,7 +56,7 @@ Läs följande:
 
 Titta på följande:
 
-<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 3. -->
+1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 03.
 
 1. Kris Occhipinti har en serie om [skriptprogrammering med Bash på YouTube](https://www.youtube.com/playlist?list=PLcUid3OP_4OXOUqYTDGjq-iEwtBf-3l2E). Det är många avsnitt och du kan välja vilka du vill titta på. Videorna ger dig bra bas-kunskaper i Bash.
 
@@ -68,7 +68,9 @@ Titta på följande:
 
 1. Det finns en populär guide för att [komma igång med Bash och programmering i Bash](http://mywiki.wooledge.org/BashGuide). Samma webbplats har en [FAQ om Bash](http://mywiki.wooledge.org/BashFAQ).
 
-<!-- 1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om. -->
+1. Bekanta dig med dokumentationen [för Docker](https://docs.docker.com/).
+
+1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om.
 
 
 
@@ -112,7 +114,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-###Extra {#extra}
+### Extra {#extra}
 
 Det finns inga extra uppgifter.
 

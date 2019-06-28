@@ -39,21 +39,12 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Det finns ingen läsanvisning.
+Det finns ingen läsanvisning kopplad till kursmomentet.
+
 <!--
-INFÖR VT18
-Läs följande.
-
-1. [Exploring ES6](kunskap/boken-exploring-es6) om Promise.
-    * Ch 24: Asynchronous programming (background)
-    * Ch 25: Promises for asynchronous programming
--->
-
-
-
 ###Artiklar {#artiklar}
 
-Det finns inga artiklar.
+Det finns inga artiklar. -->
 
 
 
@@ -61,16 +52,13 @@ Det finns inga artiklar.
 
 Titta på följande:
 
-<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 6. -->
-
-<!-- 1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify. -->
+Det finns inga videos kopplade till kursmomentet.
 
 
 
 ###Lästips {#lastips}
 
-<!-- 1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet. -->
-
+Läs i dokumentationen om [Docker Compose](https://docs.docker.com/compose/).
 
 
 
@@ -87,7 +75,7 @@ Genomför följande övningar.
 
 1. Gå igenom delen i guiden som handlar om "[Docker Compose](guide/docker/docker-compose)".
 
-<!-- 1. Läs igenom övningen "[Spela luffarschack med klient och server i Node.js](kunskap/spela-luffarschack-med-klient-och-server-i-node-js)". -->
+1. Läs i guiden om "[Regulära uttryck](guide/kom-igang-med-regex)".
 
 
 
@@ -101,15 +89,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Lägg till redovisningstexten i din me-sida.
 
-<!-- 1. Gör uppgiften "[Skapa klienter och servrar som spelar luffarschack i Node.js](uppgift/skapa-klienter-och-servrar-som-spelar-luffarschack-i-node-js)". -->
-
-<!-- 1. Gör uppgiften [Lab 5](uppgift/linux-lab5-fortsattning-asynkron-programmering) för att träna ytterligare på asynkron programmering. -->
-
 
 
 ###Extra {#extra}
 
-<!-- 1. Förbered din kod för Gomocup. -->
+Det finns inga extrauppgifter.
 
 
 
@@ -126,3 +110,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Känner du dig bekväm med Docker överlag?
 * Kommer du använda Docker utanför kursens ramar?
 * Gjorde du någon uppdatering av Mazerunnerns struktur?
+* Vad tycker du om regex så här långt?

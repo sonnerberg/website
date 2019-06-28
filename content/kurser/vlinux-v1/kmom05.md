@@ -15,8 +15,6 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!--more-->
-
 Nu har vi kontroll på hur vi kan hantera en webbserver i Docker. Vi tar ett steg till in i Bashprogrammeringen och bygger ett script som kan prata med en server.
 
 Du kommer få en färdig server, skriven i Node.js, och ett RESTful API till servern. Servern implementerar en [*maze*](https://en.wikipedia.org/wiki/Maze). Servern är färdig och du kan testköra den via kommandot curl.
@@ -34,22 +32,20 @@ Så är upplägget. Låt se hur bra vingarna bär. Upplägget på detta kursmome
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 0 studietimmar)*
 
 
 ### Kurslitteratur  {#kurslitteratur}
 
 Det finns ingen läsanvisning i kurslitteraturen.
 
+
+
+
 <!--
-http://exploringjs.com/es6/index.html
--->
-
-
-
 ### Artiklar {#artiklar}
 
-TBD
+TBD -->
 
 <!-- 1. Läs igenom hur du med Bash kan skapa ett mer avancerat kommandoradsprogram som tar argument. Artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) ger dig en struktur till hur du kan skapa mer avancerade och större Bash-skript. -->
 
@@ -59,23 +55,17 @@ TBD
 
 Titta på följande:
 
-TBD
+Det finns inga videos kopplade till kursmomentet.
 
-<!-- 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 5.
+<!-- 1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 05. -->
 
-1. Se videon om "[REST API concepts and examples](https://www.youtube.com/watch?v=7YcW25PHnAA)". Den visar exempel på grunderna i REST API och hur det förhåller sig till en webb URL.
 
-1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify. -->
 
 ### Lästips {#lastips}
 
-TBD
+Läs lite om [Docker network](https://docs.docker.com/network/).
 
-<!-- 1. Det finns en webbplats som föreslår en [JSON API specifikation](http://jsonapi.org/). Du kan titta översiktligt på den, börja med stycket om "Fetching Data". Specifikationen ger oss en guide, eller ledtrådar och tips, till hur man kan skriva ett JSON API för en server.
 
-1. nodejs har ett [api](https://nodejs.org/api/) där de inbyggda funktionerna är dokumenterade, läs igenom översiktligt och använd som referens när du programmerar.
-
-1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet. -->
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
@@ -117,8 +107,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-TBD
-<!-- * Hur kändes det att skriva ett litet större bash-skript? Var det något som var mer eller mindre utmanande och tidskrävande?
+
+* Hur kändes det att skriva ett litet större bash-skript? Var det något som var mer eller mindre utmanande och tidskrävande?
 * Kikade du på källkoden till maze-servern? Har du några reflektioner kring den?
 * Gjorde du nåt speciellt i din mazerunner som du vill lyfta fram?
-* Något om network -->

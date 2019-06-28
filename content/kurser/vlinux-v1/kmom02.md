@@ -19,8 +19,6 @@ Kursen ges hösten 2019 läsperiod 1.
 
 [/WARNING]
 
-<!--more-->
-
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 
 Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med.
@@ -70,7 +68,7 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[VLinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 02.
+1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 02.
 
 
 
@@ -84,8 +82,6 @@ Titta på följande:
 ###Övningar {#ovningar}
 
 Genomför följande övningar.
-
-<!-- 1. Jobba igenom guiden "[Kom igång med SSH-nycklar](kunskap/kom-igang-med-ssh-nycklar)". -->
 
 1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/kom-igang-med-ssh/kom-igang-med-ssh-nycklar)".
 
