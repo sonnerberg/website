@@ -103,6 +103,7 @@ Skriv enhetstester från början, tips att testa på TDD. Jag rekomenderar boken
 Gör ett GitHub repo och lägg till Travis/Circle CI som kör testerna och validerar kod.
 
 Logging från start?
+Skaffa cloud miljö, City networks/DO, och Domän.
 
 
 Läs [instruktionen till kursmoment 01](./kmom01).
@@ -113,7 +114,6 @@ Läs [instruktionen till kursmoment 01](./kmom01).
 
 Lära oss Docker, docker-compose och skapa en image för ert projekt.
 Kör docker i CI miljön.
-Skaffa cloud miljö, City networks/DO, och Domän.
 Simple CD miljö till molnet?
 
 Läs [instruktionen till kursmoment 02](./kmom02).
