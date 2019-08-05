@@ -86,7 +86,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 !!!! De lägga till pagination??? !!!!
 1. Skriv egna tests/fixa bugg och driftsätt nya versionen [Uppdatera och driftsätt manuellt](uppgift/uppdatera-och-driftsätt-manuellt) 
 
-1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0, om du pushar kmom01 flera gånger kan du öka siffrona efter 1:an.
+1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0, om du pushar kmom01 flera gånger kan du öka siffrorna efter 1:an.
 
 
 

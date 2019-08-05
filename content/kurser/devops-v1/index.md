@@ -99,8 +99,11 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 ### Kmom01: Introduktion till DevOps {#kmom01}
 
 I kmom01 ska vi börja med bekanta oss med konceptet DevOps och börja på ett projekt.
-Skriv enhetstester från början, tips att testa på TDD. Jag rekomenderar boken Clean Architecture för en intro till TDD och annat bra.
-Gör ett GitHub repo och lägg till Travis/Circle CI som kör testerna och validerar kod.
+Introduktion till DevOps och bekanta med koden. Köra tester osv...
+Skaffa DO.
+Manuellt sätt upp projektet att fungera?
+<!-- Skriv enhetstester från början, tips att testa på TDD. Jag rekomenderar boken Clean Architecture för en intro till TDD och annat bra.
+Gör ett GitHub repo och lägg till Travis/Circle CI som kör testerna och validerar kod. -->
 
 Logging från start?
 Skaffa cloud miljö, City networks/DO, och Domän.
@@ -125,7 +128,6 @@ Läs [instruktionen till kursmoment 02](./kmom02).
 Vi går vidare med Continues Deployment och fixar så vi automatisk kan bygga miljön vi deployar koden i.
 Packer/Terraform/Ansible?
 Ni ska även fixa HTTPS till er domän.
-Proxy? 
 
 Läs [instruktionen till kursmoment 03](./kmom03).
 
