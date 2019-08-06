@@ -9,6 +9,8 @@ Debugger i Python
 
 Vi ska lära oss hur man använder Pythons debugger, det är ett jättebra verktyg för att felsöka sin kod men även bara för att förstå hur ens kod fungerar.
 
+<!--more-->
+
 
 
 Vad är en debugger? {#vad}
