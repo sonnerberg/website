@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-08-07": "(I, mos) Genomgången inför ht19."
     "2017-06-12": (H, mos) Genomgången inför ht17.
     "2015-12-22": (F, mos) Länk välkomstbrev inför VT16.
     "2015-08-13": (E, mos) Mindre justeringar inför hösten 2015.
