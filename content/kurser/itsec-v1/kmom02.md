@@ -4,6 +4,7 @@ author:
     - mbo
     - mos
     - lew
+    - nik
 revision:
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
@@ -71,8 +72,9 @@ Finns det övningar som studenten gör för att förbereda sig inför uppgiftern
 
 ### Uppgifter {#uppgifter}
 
-Finns det uppgifter som skall utföras och redovisas?
+<!-- Finns det uppgifter som skall utföras och redovisas? -->
 
+1. Gör uppgiften "[Vad är privat egentligen?](uppgift/vad_ar_privat_egentligen)". Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
 
 
 Resultat & Redovisning  {#resultat_redovisning}
