@@ -24,6 +24,7 @@ Lärarteamet består av:
 | ![Kenneth](image/lararteam/kenneth.jpg?w=100&h=100&cf) | Kenneth&nbsp;Lewenhagen | lew   | klw@bth.se, [BTH](https://www.bth.se/?s=klw&searchtype=employee), [GitHub](https://github.com/lewenhagen), [Facebook](http://www.facebook.com/kenneth.lewenhagen), [Linkedin](http://www.linkedin.com/in/kennethlewenhagen) |
 | ![Andreas](image/lararteam/andreas.png?w=100&h=100&cf) | Andreas&nbsp;Arnesson | zeldah   | aar@bth.se, [BTH](https://www.bth.se/?s=aar&searchtype=employee), [GitHub](https://github.com/AndreasArne), [Facebook](https://www.facebook.com/jaghatar.ansiktsbooken), [Linkedin](https://se.linkedin.com/in/andreas-arnesson-87a563b3)  |
 | ![Emil](image/lararteam/emil.jpg?w=100&h=100&cf) | Emil&nbsp;Folino | efobth | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee), [Facebook](https://facebook.com/emil.folino), [Twitter](https://twitter.com/emilfolino) |
+| ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | nik/Aurora | nik@bth.se [GitHub](https://github.com/AuroraBTH) [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) |
 
 
 
@@ -40,7 +41,6 @@ För läsåret är följande lärarassistenter, i olika omfattning.
 
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
-| ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nhdandersson@gmail.com [GitHub](https://github.com/AuroraBTH) [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) |
 | ![Matilda](image/lararteam/matilda.jpeg?w=100&h=100&cf) | Matilda&nbsp;Olsson |  | matildaytc@gmail.com [GitHub](https://github.com/Maoo17) [Linkedin](https://www.linkedin.com/in/matilda-olsson-726593159/) |
 | ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png) | Martin&nbsp;Borg |  | martin.d@live.se [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) |
 
