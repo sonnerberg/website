@@ -13,6 +13,12 @@ revision:
 Kmom02: Bygg ut din webbplats
 ==================================
 
+[WARNING]
+
+**Kursmomentet är under översyn, vissa smärre delar kan komma att uppdateras men i stort är strukturen som den här visas.**
+
+[/WARNING]
+
 Vi fortsätter att bygga ut me-sidan. Detta moment är en vidare genomgång av grunder i HTML och CSS. Efter kursmomentet så har du en me-sida version 2 som innehåller några av de vanligaste konstruktionerna som återfinns i flertalet "riktiga" webbplatser.
 
 Vi börjar samtidigt använda fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
