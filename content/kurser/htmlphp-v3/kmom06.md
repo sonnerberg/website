@@ -12,6 +12,12 @@ revision:
 Kmom06: PHP, PDO och SQL
 ==================================
 
+[WARNING]
+
+**Kursmomentet är under översyn, vissa smärre delar kan komma att uppdateras men i stort är strukturen som den här visas.**
+
+[/WARNING]
+
 Detta moment handlar om att bygga en databasdriven webbplats med hjälp av databasen SQLite och och PHP. Du skall skapa en enklare webbplats där du har en databas som grund för att spara information. Via webbplatsen kan du lägga till saker till databasen, du kan redigera dem och du kan ta bort dem samt visa dem.
 
 Det är de vanliga funktionerna för create, read, update, delete och kallas även CRUD.

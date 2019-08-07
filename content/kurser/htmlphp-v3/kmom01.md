@@ -14,6 +14,12 @@ revision:
 Kmom01: Bygg en webbplats
 ==================================
 
+[WARNING]
+
+**Kursmomentet är under översyn, vissa smärre delar kan komma att uppdateras men i stort är strukturen som den här visas.**
+
+[/WARNING]
+
 Kursmomentet visar hur du kommer igång med labbmiljön, dels via en installation på din egen dator och dels genom att publicera resultatet på driftsservern. Du kommer att utveckla din kod lokalt och därefter kopiera över resultatet till en driftsserver.
 
 Du skall gå igenom ett par exempel på kodning i HTML, CSS och PHP och använda lärdomarna för att bygga en me-sida. Me-sidan är en enkel webbplats som innehåller en presentation av dig själv tillsammans med redovisningstexterna för kursmomenten.
