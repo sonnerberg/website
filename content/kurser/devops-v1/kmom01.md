@@ -54,6 +54,8 @@ Det finns generellt kursmaterial i video form.
 
 1. Visar projekt struktur och lite kod.
 
+1. Kolla på [AWS in 10 minutes](https://www.youtube.com/watch?v=r4YIdn2eTm4).
+
 1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[Devops streams]()".
 
 
@@ -64,9 +66,11 @@ Det finns generellt kursmaterial i video form.
 *(ca: 8-12 studietimmar)*
 
 
-### Övningarr {#ovningar}
+### Övningar {#ovningar}
 
-Gör följande övningar, de behövs normalt för att klara uppgifterna..
+Gör följande övningar, de behövs normalt för att klara uppgifterna.
+
+1. Skapa ett [AWS Educate starter account](https://www.instructables.com/id/Guide-to-AWS-Educate-Starter-Account/). Om du redan har ett AWS konto kan du få kredit på det, [gör sida 4 och 5](http://holowczak.com/creating-an-aws-account-for-student-use-with-aws-educate/4/).
 
 1. Om du inte redan har en virtuell server och domännamn jobba igenom artikeln ["GitHub Education Pack och en server på Digital Ocean"](kunskap/github-education-pack-och-en-server-pa-digital-ocean) där vi använder Github Education Pack för att skaffa en egen Virtuell Server med ett eget domännamn. Du kan skippa steget "Installera nodejs och npm". Om du behöver sätta upp servern på nytt men inte vill göra allt manuellt finns det skripts i [iac/10-first-minutes](https://github.com/dbwebb-se/devops-proj/infrastructure-as-code/10-first-minutes).
 
