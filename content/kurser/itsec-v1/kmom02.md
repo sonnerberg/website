@@ -86,7 +86,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Fråga relaterad till kursmaterialet.
-* ...
-* ...
+<!-- * Fråga relaterad till kursmaterialet. -->
+
+* Skriv ett stycke där du reflekterar över vad ni diskuterat i gruppen. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
+* Är privacy något du kommer tänka på/argumentera för när du kommer ut i arbetslivet? Varför/varför inte?
 * Vilken är din TIL för detta kmom?

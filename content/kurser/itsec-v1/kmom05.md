@@ -85,7 +85,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Fråga relaterad till kursmaterialet.
-* ...
-* ...
+<!-- * Fråga relaterad till kursmaterialet. -->
+* Vad tycker du om CTF som upplägg för labbar, tumme upp eller ner?
+* Har du tidigare erfarenhet av de typer av attacker som nämns i kursmomentet? Både som utvecklare och användare.
 * Vilken är din TIL för detta kmom?
