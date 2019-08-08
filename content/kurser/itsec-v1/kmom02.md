@@ -74,7 +74,7 @@ Finns det övningar som studenten gör för att förbereda sig inför uppgiftern
 
 <!-- Finns det uppgifter som skall utföras och redovisas? -->
 
-1. Gör uppgiften "[Vad är privat egentligen?](uppgift/vad_ar_privat_egentligen)". Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
+1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)". Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
 
 
 Resultat & Redovisning  {#resultat_redovisning}
