@@ -101,6 +101,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 <!-- * Fråga relaterad till kursmaterialet. -->
+
 * Har du jobbat med någon av dessa tekniker/verktyg innan?
 * Är teknikerna som nämnts något du kommer använda i framtida projekt?
 * Vilken är din TIL för detta kmom?
