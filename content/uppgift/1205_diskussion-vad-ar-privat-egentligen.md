@@ -31,12 +31,14 @@ Förkunskaper {#forkunskaper}
 
 Du har din redovisa-sida där du skall skriva din artikel.
 
+Du har tillgång till kommandot `dbwebb` och har möjlighet att publicera rapporten tillsammans med din me-sida på studentservern.
+
 Introduktion {#intro}
 -----------------------
 
 Jobba igenom denna introduktion för att förbereda inför uppgiften.
 
-### Skapa rapportfilen {#create}
+<!-- ### Skapa rapportfilen {#create}
 
 Även om ni jobbar i grupp så skall var och en av er lägga in varsin egen kopia av rapporten i sin egen redovisa-sida.
 
@@ -83,20 +85,22 @@ Skriv ditt eget namn samt vilka gruppmedlemmar som deltog i att författa rappor
 
 Strukturen är inte absolut nödvändig, se den som en möjlighet att träna på god struktur av rapportskrivning.
 
+-->
+
 Krav {#krav}
 -----------------------
 
-1. Diskutera och anteckna följande frågor:
-    1. Vilken typ av information är privat?
+* Diskutera och anteckna följande frågor:
+    * Vilken typ av information är privat?
         * Har du/ni samma uppfattning i gruppen?
         * Hur skiljer sig eran uppfattning mot verkligheten?
-    1. Vad för information kan du/ni hitta om varandra/dig/närstående på internet?
-    1. Går det att hitta eventuellt läckta lösenord kopplade till deras mail?
-    1. Är informationen frivilligt given eller inte?
+    * Vad för information kan du/ni hitta om varandra/dig/närstående på internet?
+    * Går det att hitta eventuellt läckta lösenord kopplade till deras mail?
+    * Är informationen frivilligt given eller inte?
 
-1. Skriv ett eget stycke där du reflekterar över vad ni diskuterat i gruppen. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
+<!-- 1. Skriv ett eget stycke där du reflekterar över vad ni diskuterat i gruppen. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data. -->
 
-1. I slutet av rapporten skriver du ett stycke med namnen på dina gruppmedlemmar.
+* I slutet av rapporten skriver du ett stycke med namnen på dina gruppmedlemmar.
 
 Tips från coachen {#tips}
 -----------------------
