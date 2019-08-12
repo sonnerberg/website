@@ -16,7 +16,7 @@ $ touch app.py Dockerfile requirements.txt
 
 ### requirements.txt {#requirements}
 
-Vi kan använda filen *requirements.txt* för att specificera vad vi vill installera i kontainern. Nu är det bara Flask så den blir väldigt liten:
+Vi kan använda filen *requirements.txt* för att specificera vad vi vill installera i containern. Nu är det bara Flask så den blir väldigt liten:
 
 ```
 Flask

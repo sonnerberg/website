@@ -20,4 +20,4 @@ Det är med klienten som vi kommunicerar med Docker. När vi skriver kommandon s
 
 ### Docker daemon {#docker-daemon}
 
-Docker daemon är en service som hanterar objekt såsom images, kontainrar, nätverk och volymer. Vad de delarna är tar vi strax. Det är som sagt med API:et som andra delar kan prata med Docker daemon för att hantera objekten.
+Docker daemon är en service som hanterar objekt såsom images, containrar, nätverk och volymer. Vad de delarna är tar vi strax. Det är som sagt med API:et som andra delar kan prata med Docker daemon för att hantera objekten.

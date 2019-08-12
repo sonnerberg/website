@@ -6,7 +6,7 @@ revision:
 Kopiera in filer
 =======================
 
-Vi kan kopiera in egna filer och mappar till en Docker kontainer. Om vi har ett program vi vill kunna köra i kontainern behöver de kunna nås inifrån kontainern. Ett sätt är att använda `COPY` kommandot i Dockerfile.
+Vi kan kopiera in egna filer och mappar till en Docker container. Om vi har ett program vi vill kunna köra i containern behöver de kunna nås inifrån containern. Ett sätt är att använda `COPY` kommandot i Dockerfile.
 
 ```
 FROM debian:buster-slim

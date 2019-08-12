@@ -25,7 +25,7 @@ Kursen ges hösten 2019 läsperiod 1.
 
 Kursen har tre fokus. Det ena är att lära ut grunder och beståndsdelar i operativsystemet Linux. Det andra är att lära ut programmeringsspråket Bash och dess funktionalitet. Det tredje är att introducera virtualiseringsmiljöer och visa på hur man kan använda dem. Kursen är för de som skall jobba med webbprogrammering.
 
-Kursen börjar med att du installerar virtualiseringsmiljön VirtualBox med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker samt hur vi jobbar med flera Docker-kontainrar som kommunicerar med varandra.
+Kursen börjar med att du installerar virtualiseringsmiljön VirtualBox med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker samt hur vi jobbar med flera Docker-containrar som kommunicerar med varandra.
 
 Samtidigt skriver du skript-program i programspråket Bash.
 
@@ -106,7 +106,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 
 
-###Kmom01: Linux som server {#kmom01}
+### Kmom01: Linux som server {#kmom01}
 
 Det första kursmomentet går ut på att installera Debian/Linux i Virtualiseringsmilön VirtualBox och logga in på maskinen som en server, via SSH.
 
@@ -116,7 +116,7 @@ För att lyckas med det så behöver du bekanta dig med grunderna i terminalen o
 
 
 
-###Kmom02: Apache Virtual Hosts {#kmom02}
+### Kmom02: Apache Virtual Hosts {#kmom02}
 
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 
@@ -128,7 +128,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 
 
-###Kmom03: Introduktion till Docker {#kmom03}
+### Kmom03: Introduktion till Docker {#kmom03}
 
 Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker. En del kanske stannar i VirtualBox och installerar Docker däri.
 
@@ -136,17 +136,17 @@ Mycket handlar om att förenkla vardagen som programmerare genom att automatiser
 
 
 
-###Kmom04: En webbserver i Docker {#kmom04}
+### Kmom04: En webbserver i Docker {#kmom04}
 
-Vi går vidare med Docker och lär oss hur vi får igång en webbserver som körs inuti kontainern. Vi tittar även på volymer och hur vi kan anropa servern utifrån. Till detta skapar vi också ett Bashscript som kan testa en egen router.
+Vi går vidare med Docker och lär oss hur vi får igång en webbserver som körs inuti containern. Vi tittar även på volymer och hur vi kan anropa servern utifrån. Till detta skapar vi också ett Bashscript som kan testa en egen router.
 
 [Instruktion till kursmoment 04](kurser/vlinux-v1/kmom04).
 
 
 
-###Kmom05: Ett nätverk i Docker {#kmom05}
+### Kmom05: Ett nätverk i Docker {#kmom05}
 
-Vi lär oss skapa fler kontainrar och kommunicera mellan dem med hjälp av ett privat nätverk. Flera services ska kommunicera med varandra i Docker.
+Vi lär oss skapa fler containrar och kommunicera mellan dem med hjälp av ett privat nätverk. Flera services ska kommunicera med varandra i Docker.
 
 Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
@@ -154,7 +154,7 @@ Vi traskar även vidare med vår programmering i Bash och diverse verktyg.
 
 
 
-###Kmom06: Docker Compose {#kmom06}
+### Kmom06: Docker Compose {#kmom06}
 
 Vi bygger vidare på föregående kursmoment och använder docker-compose för att hantera våra services i det privata nätverket. Vi jobbar även vidare med Bash-script.
 
@@ -162,7 +162,7 @@ Vi bygger vidare på föregående kursmoment och använder docker-compose för a
 
 
 
-###Kmom07/10: Projekt och examination {#kmom10}
+### Kmom07/10: Projekt och examination {#kmom10}
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 

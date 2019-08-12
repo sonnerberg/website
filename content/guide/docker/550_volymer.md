@@ -6,7 +6,7 @@ revision:
 Volymer
 =======================
 
-Istället för att kopiera in datan och bygga om imagen varje gång vi ändrar något kan vi använda volymer. En lokal mapp kan då mappas mot en virtuell mapp inuti kontainern. Vi kikar på hur det ser ut med en enkel sida.
+Istället för att kopiera in datan och bygga om imagen varje gång vi ändrar något kan vi använda volymer. En lokal mapp kan då mappas mot en virtuell mapp inuti containern. Vi kikar på hur det ser ut med en enkel sida.
 
 
 ### Utgångsläge {#utgangslage}
@@ -17,7 +17,7 @@ Utgångsläget är att vi har en mapp med filerna som ska servas, `example-site/
 
 ### Dockerfile {#dockefile}
 
-Dockerfilen kan se ut "som vanligt". Vi sköter volymen när vi kör kontainern.
+Dockerfilen kan se ut "som vanligt". Vi sköter volymen när vi kör containern.
 
 Dockerfile:
 

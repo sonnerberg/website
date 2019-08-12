@@ -6,7 +6,7 @@ revision:
 Compose och nätverk via ip-adress
 =======================
 
-Vi fortsätter med föregående exempel. Vi vill nu ha en kontainer till som kan köra skript och använda curl för att nå servern via dess ip-adress. Vi kan själva bestämma ett subnät och tilldela ip-adresser. Det skapas automatiskt ett nätverk melan de services som vi start samtidigt med kommandot `$ docker-compose up`, men för att vi ska se hur det går till, specificerar vi det själva. Vi börjar från slutet med filen docker-compose.yml. Fil strukturen ser nu ut så här:
+Vi fortsätter med föregående exempel. Vi vill nu ha en container till som kan köra skript och använda curl för att nå servern via dess ip-adress. Vi kan själva bestämma ett subnät och tilldela ip-adresser. Det skapas automatiskt ett nätverk melan de services som vi start samtidigt med kommandot `$ docker-compose up`, men för att vi ska se hur det går till, specificerar vi det själva. Vi börjar från slutet med filen docker-compose.yml. Fil strukturen ser nu ut så här:
 
 ```
 .
@@ -63,7 +63,7 @@ services:
 
 Först skapar vi nätverket *dbwebb*. Till det väljer vi default-drivern (bridge) och sätter ett subnät (subnet) där vi kan dela ut adresser.
 
-Efter det kommer de olika *services* som ska köras. Servern har vi redan kikat på. Det som är ändrat är sökvägen till mappen `html/`, då vi utgår från en mapp högre upp. Vi kan göra inställningar för kontainern i nätverket under:
+Efter det kommer de olika *services* som ska köras. Servern har vi redan kikat på. Det som är ändrat är sökvägen till mappen `html/`, då vi utgår från en mapp högre upp. Vi kan göra inställningar för containern i nätverket under:
 ```
 networks:
     dbwebb:
@@ -109,7 +109,7 @@ När vi har byggt våra images kan vi hoppa till docker-compose.yml. Det finns n
 
 * `$ docker-compose up` startar alla services som är definierade.
 * `$ docker-compose up <service>` startar upp den angivna services.
-* `$ docker-compose down` stänger ner alla services. Först stängs kontainrarna ned, sedan tas de bort och till sist tas nätverket bort. Mycket stiligt.
+* `$ docker-compose down` stänger ner alla services. Först stängs containrarna ned, sedan tas de bort och till sist tas nätverket bort. Mycket stiligt.
 * `$ docker-compose up -d <service>` startar services i bakgrunden.
 * `$ docker-compose up -d` startar alla services i bakgrunden.
 

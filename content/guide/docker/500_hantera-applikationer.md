@@ -8,6 +8,6 @@ revision:
 Hantera applikationer
 =======================
 
-Nu vet vi hur vi bygger en Docker image och hur vi kör kommandon i kontainern. Men hur är det med utvecklade applikationer? Hur får vi dem att fungera inuti kontainern på ett bra sätt?
+Nu vet vi hur vi bygger en Docker image och hur vi kör kommandon i containern. Men hur är det med utvecklade applikationer? Hur får vi dem att fungera inuti containern på ett bra sätt?
 
-Gå vidare i guiden för att se hur vi kan jobba med att flytta in kod in i kontainern och låta en webbserver servera filerna.
+Gå vidare i guiden för att se hur vi kan jobba med att flytta in kod in i containern och låta en webbserver servera filerna.

@@ -21,7 +21,7 @@ $ cd server
 $ npm init
 ```
 
-Det dyker upp några frågor, där det bara är att trycka ENTER för defaultvärdena. Nu har du en fil, `package.json`. Den behöver vi ha koll på då den ska med in i kontainern.
+Det dyker upp några frågor, där det bara är att trycka ENTER för defaultvärdena. Nu har du en fil, `package.json`. Den behöver vi ha koll på då den ska med in i containern.
 
 
 
@@ -96,11 +96,11 @@ CMD [ "npm", "start" ]
 Vi bryter ned händelseförloppet.
 
 **FROM node:8** talar om att vi vill använda imagen node med taggen 8. Den laddas ned automatiskt om den inte finns.  
-**WORKDIR /server** talar om att vi vill använda mappen server/ som startläge i kontainern. Allt vi gör efter utgår från den mappen.  
+**WORKDIR /server** talar om att vi vill använda mappen server/ som startläge i containern. Allt vi gör efter utgår från den mappen.  
 **COPY package*.json ./** kopierar in alla filer vars namn börjar med package och slutar med .json och lägger dem i arbetsmappen.  
 **RUN npm install** kör kommandot som använder package.json och installerar det som behövs, i detta fallet Express.  
 **COPY server/ .** kopierar in innehållet i mappen server/ till arbetsmappen.  
-**CMD [ "npm", "start" ]** kör kommandot som startar servern när kontainern bootas upp.
+**CMD [ "npm", "start" ]** kör kommandot som startar servern när containern bootas upp.
 
 
 

@@ -6,7 +6,7 @@ revision:
 Några vanliga kommandon
 =======================
 
-Vi ska prova att starta en kontainer som laddades ned från Docker Hub. Vad Docker Hub är tar vi lite senare i guiden. Hur kan vi se vilka kontainrar som är startade? Vilka images har vi? Docker sparar all information på olika platser beroende på operativsystem.
+Vi ska prova att starta en container som laddades ned från Docker Hub. Vad Docker Hub är tar vi lite senare i guiden. Hur kan vi se vilka containrar som är startade? Vilka images har vi? Docker sparar all information på olika platser beroende på operativsystem.
 
 * Linux: */var/lib/docker/*
 * Mac: *~/Library/Containers/com.docker.docker/Data/vms/0/Docker.raw*
@@ -23,20 +23,20 @@ Vi ska inte gå in i mapparna/filerna och pilla utan vi använder Dockers CLI oc
 | docker --help               | Hjälp om docker                       |
 | docker images               | Listar alla nedladdade images         |
 | docker search &lt;image&gt; | Söker efter en image på Docker Hub    |
-| docker ps                   | Listar alla kontainrar                |
-| docker rm &lt;id&gt;        | Tar bort en eller flera kontainer     |
+| docker ps                   | Listar alla containrar                |
+| docker rm &lt;id&gt;        | Tar bort en eller flera container     |
 | docker rmi &lt;id&gt;       | Tar bort en eller flera images        |
-| docker start &lt;id&gt;     | Startar en eller flera kontainrar     |
-| docker stop &lt;id&gt;      | Stoppar en eller flera kontainrar     |
+| docker start &lt;id&gt;     | Startar en eller flera containrar     |
+| docker stop &lt;id&gt;      | Stoppar en eller flera containrar     |
 | docker pull &lt;image&gt;   | laddar ner en image utan att köra den |
-| docker run &lt;image&gt;    | Starta en kontainer från en image     |
+| docker run &lt;image&gt;    | Starta en container från en image     |
 
-Istället för ett id kan vi använda namnet på kontainern. Om vi inte har satt det själva autogenereras ett namn. Hur kan man se den informationen då? Först behöver vi en startad kontainer! Debian har ett eget repository där de huserar ett antal images vi kan använda. Då vi inte behöver ett helt operativsystem kan vi ta en nedbantad version av distributionen Stretch, kallad *stretch-slim*. När vi kör kommandot `run <username/imagename>` letar docker först lokalt och om det inte återfinns där letas det på Docker Hub där den laddas ner om den hittas.
+Istället för ett id kan vi använda namnet på containern. Om vi inte har satt det själva autogenereras ett namn. Hur kan man se den informationen då? Först behöver vi en startad container! Debian har ett eget repository där de huserar ett antal images vi kan använda. Då vi inte behöver ett helt operativsystem kan vi ta en nedbantad version av distributionen Stretch, kallad *stretch-slim*. När vi kör kommandot `run <username/imagename>` letar docker först lokalt och om det inte återfinns där letas det på Docker Hub där den laddas ner om den hittas.
 
 `$ docker run --rm -it debian:stretch-slim`
 
 Flaggan `-it` gör att vi får ett interaktivt shell att jobba med. (Se `docker run --help`).  
-Flaggan `--rm` rensar automatiskt upp efter oss när vi stänger kontainern. Om vi vill att kontainern ska köras i bakgrunden, kan vi lägga till flaggan `-d` (detach).
+Flaggan `--rm` rensar automatiskt upp efter oss när vi stänger containern. Om vi vill att containern ska köras i bakgrunden, kan vi lägga till flaggan `-d` (detach).
 
 Öppna sedan en ny terminal och kör `$ docker ps`:
 
@@ -46,7 +46,7 @@ CONTAINER ID    IMAGE                COMMAND   CREATED        STATUS          PO
 4802628e331d    debian:stretch-slim  "bash"    5 seconds ago  Up 4 seconds                    distracted_mclean
 ```
 
-Här får vi fram id, image, givet kommando och vilka namn kontainrarna har. På ovan kontainer kan då köra tex:
+Här får vi fram id, image, givet kommando och vilka namn containrarna har. På ovan container kan då köra tex:
 
 ```
 $ docker stop distracted_mclean

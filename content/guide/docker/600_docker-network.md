@@ -29,4 +29,4 @@ Commands:
 Run 'docker network COMMAND --help' for more information on a command.
 ```
 
-Vi kan se att vi här kan ansluta en kontainer till ett nätverk men vi gör det i *run*-steget.
+Vi kan se att vi här kan ansluta en container till ett nätverk men vi gör det i *run*-steget.

@@ -12,7 +12,7 @@ Vi kan använda kommandona `$ docker-compose up ...` eller `$ docker-compose run
 
 ### docker-compose up {#up}
 
-Oftast vill man köra *docker-compose up <service>*. Det skapar en ny kontainer utifrån specifikationerna i docker-compose.yml och startar den.
+Oftast vill man köra *docker-compose up <service>*. Det skapar en ny container utifrån specifikationerna i docker-compose.yml och startar den.
 
 
 
@@ -24,4 +24,4 @@ Vill man starta en service för ett specifikt ändamål eller köra ett kommando
 
 ### docker-compose start/stop {#start-stop}
 
-Om vi har en startad kontainer kan vi stoppa den med `stop`. Vill vi sedan starta den igen använder vi märkligt nog `start`.
+Om vi har en startad container kan vi stoppa den med `stop`. Vill vi sedan starta den igen använder vi märkligt nog `start`.
