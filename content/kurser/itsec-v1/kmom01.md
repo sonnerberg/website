@@ -74,13 +74,17 @@ Nej?
 
 ### Uppgifter {#uppgifter}
 
+1. Gör uppgiften "[Skapa en me-sida till itsec-kursen](uppgift/skapa-en-me-sida-till-itsec-kursen)".
+
+<!--
+
 Nej?
 
 Vad sägs om en me-sida som innehåller en hel del säkerhetshål/felaktigheter som behöver lagas?
 
 Vill vi ha en me-sida och redovisningstexter och rapporter?
 
-
+-->
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
