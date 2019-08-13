@@ -1,7 +1,10 @@
 ---
-author: efo
+author:
+    - efo
+    - aar
 category: python
 revision:
+    "2019-08-13": (C, aar, efo) Uppdaterade enligt enhetstester för analyzer.
     "2018-06-29": (B, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-06-21": (A, efo) Första utgåvan i samband med uppdatering av kmom05 i kursen python.
 ...
@@ -39,7 +42,7 @@ Googla "online word counter" eller "online letter counter" så hittar du verktyg
 
 Du ska i uppgiften göra ett program som analyserar en text från en fil. Det kan se ut på detta sättet när vi kör programmet:
 
-[ASCIINEMA src=252098]
+[ASCIINEMA src=262104]
 
 
 
@@ -49,9 +52,9 @@ Krav {#krav}
 Börja med att kopiera text-filen `phil.txt`.
 
 ```bash
-# Ställ dig i kursmoment katalogen
-cp -i ../../example/text/phil.txt analyzer/
-cd analyzer
+# Ställ dig i kursrepo katalogen
+cp -ri example/text/. me/kmom06/analyzer/
+cd me/kmom06/analyzer
 ```
 
 Se till att din katalog `analyzer` innehåller filen `phil.txt`.
@@ -64,15 +67,17 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Filen `main.py` skall enbart innehålla kommandoloopen, tänk while-loopen i marvin, och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften.
 
-1. Använd menyn för att visa upp de olika val en användare har beroende på nuvarande läge.
+1. Menyvalet `menu` ska skriva ut menyn och vilka val man kan göra.
 
 1. Analysera antal rader (ej tomma), ord och bokstäver med menyvalen `lines`, `words` och `letters`. Skriv en funktion för varje kommando.
 
-1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd menyvalen `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver.
+1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd menyvalen `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver. Avrunda till en (1) decimal.
 
 1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion.
 
 1. Ditt program ska klara av att byta textfil för analys.
+
+1. Se till att inte göra fler `input` eller `print` än vad som krävs för att lösa uppgiften. Se asciinema ovan för exempel.
 
 1. Validera ditt program genom att göra följande kommando i kurskatalogen i terminalen.
 
@@ -83,6 +88,14 @@ dbwebb validate analyzer
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
+12. Rätta ditt program med hjälp av `dbwebb inspect`, genom att köra kommandot:
+
+```bash
+dbwebb inspect kmom06
+```
+
+När `dbwebb inspect` rättar dina filer körs enhetstester på din kod. Detta är samma sätt som används på den individuella examinationen.
+
 Följande är korrekt resultat för de olika kommando:
 
 ```
@@ -92,7 +105,7 @@ words: 199
 
 letters: 907
 
-word_frequency: 
+word_frequency:
     "the": 12 | 6.0%
     "to": 8 | 4.0%
     "and": 7 | 3.5%
@@ -101,7 +114,7 @@ word_frequency:
     "him": 5 | 2.5%
     "street": 5 | 2.5%
 
-letter_frequency: 
+letter_frequency:
     "e": 108 | 11.9%
     "t": 91 | 10.0%
     "o": 77 | 8.5%
@@ -110,6 +123,7 @@ letter_frequency:
     "a": 64 | 7.1%
     "i": 64 | 7.1%
 ```
+
 
 
 Extrauppgift {#extra}
