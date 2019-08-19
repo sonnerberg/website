@@ -108,9 +108,11 @@ The course is divided into several assignments.
 
 ### Assignment 1: Virtual Hosts {#kmom01}
 
-Det första kursmomentet går ut på att installera Debian/Linux och logga in på maskinen som en server, via SSH.
+[INFO]
+Only DV1466 should do Assignment 1: Virtual Hosts.
+[/INFO]
 
-För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
+The first assignment is about using your newly installed Debian server as a web server to host a small web page.
 
 [Instructions](kurser/unix-v1/kmom01).
 
@@ -118,11 +120,7 @@ För att lyckas med det så behöver du bekanta dig med grunderna i terminalen o
 
 ### Assignment 2: Bash {#kmom02}
 
-Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
-
-Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med.
-
-Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hemma i terminalen, SSH och att jobba med Linux som en server.
+In this assignment we will take a look at the Bash programming language by completing a series of exercises.
 
 [Instructions](kurser/unix-v1/kmom02).
 
@@ -130,7 +128,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 ### Assignment 3: Regular expressions {#kmom03}
 
-Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
+The third assignment uses the built-in Linux program `sed` and regular expressions to filter large amounts of data.
 
 [Instructions](kurser/unix-v1/kmom03).
 
@@ -138,9 +136,7 @@ Mycket handlar om att förenkla vardagen som programmerare genom att automatiser
 
 ### Assignment 4: Mazerunner {#kmom04}
 
-Nu har vi en Linux-server, en webbserver och vi kan grunderna i att bygga skript i bash. Låt oss nu kika på en annan sak, hur man bygger egna servrar i Linux med Node.js.
-
-Så, vi behöver starta med att installera Node.js på servern och komma igång med hur Node.js fungerar. Vi kör på med några övningar och sedan ser vi hur man byggger upp en enkel webbserver, eller webbtjänst, med Node.js. Vi närmar oss ett gränsland där webbservern blir till en webbtjänst. Det blir tydligt i hur vi använder Node.js för att skapa kod som både hanterar webbservern som sådan och lägger till tjänster som utförs av javaScript-funktioner.
+In this assignment you will work with server-client communication by writing a Bash program that can take you through a maze like MazeRunner.
 
 [Instructions](kurser/unix-v1/kmom04).
 
@@ -159,12 +155,12 @@ Ladok {#ladok}
 
 According to the syllabus, there are a number of ladok moments and they are linked to the course parts as follows.
 
-| Assignments     | Ladok credits in course plan        |
-|-----------------|-------------------------------------|
-| Assignment 1    | Written assignment 1 - 1.5 hp - A-F |
-| Assignment 2    | Written assignment 2 - 2.0 hp - A-F |
-| Assignment 3    | Written assignment 3 - 2.0 hp - A-F |
-| Assignment 4    | Written assignment 4 - 2.0 hp - A-F |
+| Assignments     | Ladok credits in course plan        | DV1466 | DV1563 |
+|-----------------|-------------------------------------|--------|--------|
+| Assignment 1    | Written assignment 1 - 1.5 hp - A-F | X      |        |
+| Assignment 2    | Written assignment 2 - 2.0 hp - A-F | X      | X      |
+| Assignment 3    | Written assignment 3 - 2.0 hp - A-F | X      | X      |
+| Assignment 4    | Written assignment 4 - 2.0 hp - A-F | X      | X      |
 
 
 
