@@ -90,6 +90,17 @@ solve problems.
 
 
 
+Assignment prerequisites {#aprerequisites}
+------------------------
+
+Complete all steps of the [VirtualBox guide](guide/virtualbox_en).
+
+All assignments and the following installation guide should be completed inside the installed virtual environment.
+
+Install the lab environment by completing the steps in the [`dbwebb` installation guide](kurser/unix-v1/installera-labbmiljo).
+
+
+
 Assignments {#assignments}
 ------------------------
 
