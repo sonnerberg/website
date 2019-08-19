@@ -44,7 +44,7 @@ Read the following:
 
 ### Övningar {#ovningar}
 
-1. Work through the guide "[Installera webbplatser med Apache Name-based Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)" to practice for the assignment below.
+1. Work through the guide "[Install web pages with Apache Name-based Virtual Hosts](kunskap/install-web-pages-with-apache-virtual-hosts)" to practice for the assignment below.
 
 
 
@@ -56,17 +56,21 @@ These assignments are to be completed and handed in.
 
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Hand In {#resultat_redovisning}
 -----------------------------------------------
 
 *(ca: 2 study hours)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+When you have completed all assignments above do the following command to publish all code to the student server.
 
-Se till att följande frågor besvaras i redovisningstexten.
+```bash
+dbwebb publish me
+```
 
-* Hur känns konceptet med Apache name-based Virtual Hosts? Känner du igen det sedan tidigare?
-* Det blir allt fler kommandon i terminalen, hur känns det med terminalen och dess kommandon?
-* Gick det bra med ssh-nycklar och rsync över ssh?
-* Hur kändes det att jobba med tmux?
-* Reflektera över hur du känner inför Unix som operativsystem så här långt?
+Then on the education platform Canvas do a hand in for assignment 1 with a text containing reflective answers to the questions below.
+
+* How does the concept of Apache name-based Virtual Hosts work? Do you recognize the concept?
+
+* We have used a lot of different commands in the terminal. How does it feel to work in a command based operating system?
+
+* Reflect on how you feel about the Linux operating system so far?

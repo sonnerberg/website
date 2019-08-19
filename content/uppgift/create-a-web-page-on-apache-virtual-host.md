@@ -9,62 +9,42 @@ revision:
 Create a web page on Apache Virtual Host
 ==================================
 
-Fixa iordning en webbplats med en Apache Virtual Host. Du får dels konfigurera upp en Named Apache Virtual Host och dels får du använda rsync över ssh för att flytta över filer från din lokala arbetsstation till servern som kör webbplatsen.
+Fix a site with an Apache Virtual Host. You get to configure a Named Apache Virtual Host and make a small web page that will be hosted by your own web server.
 
 <!--more-->
 
 
 
-Förkunskaper {#forkunskaper}
+Prerequisites {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom guiden "[Installera webbplatser med Apache Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)" och guiden "[Kom igång med SSH-nycklar](guide/kom-igang-med-ssh/kom-igang-med-ssh-nycklar)".
+Du har jobbat igenom guiden "[Install web pages with Apache Name-based Virtual Hosts](kunskap/install-web-pages-with-apache-virtual-hosts)".
 
 
 
-Introduktion {#intro}
+Introduction {#intro}
 -----------------------
 
-De filer du skapar och använder i denna uppgiften skall du spara i ditt kursrepo i katalogen `me/kmom02/vhost`. De används för att redovisa uppgiften.
+The files you create and use in this task should be saved in your course repo in the directory `me/kmom01/vhost`. They are used to report the task.
 
-Skapa en fil, `log.txt`, och lägg den i katalogen ovan.
-
-I vissa uppgifter förutsätts att du genomför arbetet på din lokala arbetsstation och använder rsync över ssh för att föra över filerna till servern.
+Create a file, `log.txt`, and place it in the directory above.
 
 
 
-Krav {#krav}
+Requirements {#krav}
 -----------------------
 
-1. Skapa en Apache Virtual Host `me.linux.se`. Spara en kopia av config-filen `me.linux.se.conf` i ditt kursrepo. Kontrollera att du kommer åt webbplatsen med din webbläsare.
+1. Create an Apache Virtual Host `me.linux.se`. Save a copy of the config file `me.linux.se.conf` in your course repo. Make sure you can access the site with your browser on your local development computer.
 
-1. Använd rsync över ssh för att kopiera din me-sida från `me/redovisa` och lägg den i den virtuella hostens webroot. Skriv kommandot för rsync i din loggfil.
+1. Open a terminal, use `lynx` to open your newly created website. Enter the command you use in the log (`log.txt`).
 
-1. Öppna en terminal, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen.
+1. Take a screenshot of the terminal that shows when using `lynx` to access the site. Save it as `dump.png`. Save the image in .png format and use lower case letters in the file name.
 
-1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`. Spara bilden i formatet .png och använd små bokstäver i filnamnet.
-
-1. Publicera dina svar enligt följande.
+1. Publish your answers as follows.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish vhost
+dbwebb publish kmom01
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Det finns ingen extrauppgift.
-
-
-
-Tips från coachen {#tips}
------------------------
-
-Stressa inte. Kör det ihop sig så är det en bra taktik att börja om från början och göra om. Det går snabbare andra gången, och ännu snabbare tredje gången.
-
-Lycka till och hojta till i forumet om du behöver hjälp!
+Correct any errors that pop up and publish again. When it looks green you are done.
