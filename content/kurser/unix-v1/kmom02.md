@@ -29,7 +29,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-10 studietimmar)*
+*(ca: 10 study hours)*
 
 
 ###Kurslitteratur  {#kurslitteratur}
@@ -37,27 +37,12 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [The Linux Command Line](kunskap/boken-the-linux-command-line)
-    * Kapitel 1-4, repetera grundläggande kommandon
-
-I referenslitteraturen, är följande kapitel relevanta.
-
-1. [The Debian Administrator's Handbook](kunskap/boken-the-debian-administrator-s-handbook).
-    * Ch 6: Maintenance and Updates: The APT Tools (speciellt om `apt-get`, annars översiktligt)
-    * Ch 7: Solving Problems and Finding Relevant Information (översiktligt)
-
-
-
-###Artiklar {#artiklar}
-
-1. Boken "The Linux Command Line" har en webbplats där det finns [ett stycke med fokus på att lära sig terminalen](http://linuxcommand.org/lc3_learning_the_shell.php). Ta det som ett lättläst komplement till boken.
-
-
-
-###Video  {#video}
-
-Titta på följande:
-
-1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 2.
+    * Ch1 What Is The Shell?
+    * Ch2 Navigation
+    * Ch3 Exploring The System
+    * Ch4 Manipulating Files And Directories
+    * Ch6 Redirection
+    * Ch24 Writing Your First Script
 
 
 

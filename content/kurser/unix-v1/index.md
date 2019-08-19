@@ -106,10 +106,10 @@ Assignments {#assignments}
 
 The course is divided into several assignments.
 
-### Assignment 1: Virtual Hosts {#kmom01}
+### Assignment 1: Apache Virtual Hosts {#kmom01}
 
 [INFO]
-Only DV1466 should do Assignment 1: Virtual Hosts.
+Only DV1466 should do Assignment 1: Apache Virtual Hosts.
 [/INFO]
 
 The first assignment is about using your newly installed Debian server as a web server to host a small web page.
