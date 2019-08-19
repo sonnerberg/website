@@ -15,10 +15,10 @@ Innan vi går vidare går vi igenom något som kallas *command substitution*. I 
 #
 # An example script for the linux course
 
-path="$(pwd)" # Sparar resultatet av kommandot "pwd" i en variabel (command substitution)
-result=$(ls -al "$path") # Här används $path (command substitution)
+path="$(pwd)" # Saves the result of the command "pwd" in a variable (command substitution)
+result=$(ls -al "$path") # Here we use $path (command substitution)
 
-echo "$result" # Skicka vidare resultatet där det kan användas
+echo "$result" # Prints the result
 ```
 
 Resultatet av kommandot `ls -al pwd` kommer hamna i variabeln `result`. Kommandot `pwd` ger den nuvarande mappens sökväg. Vi har alltså använt *command substitution*. Bra då har vi koll på det.
