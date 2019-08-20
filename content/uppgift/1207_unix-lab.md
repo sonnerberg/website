@@ -55,7 +55,7 @@ $ ./answer.bash
 
 
 
-# Hand in the lab {#handin}
+### Hand in the lab {#handin}
 
 To hand in the lab, execute the following command:
 

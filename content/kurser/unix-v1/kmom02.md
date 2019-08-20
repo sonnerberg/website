@@ -5,7 +5,7 @@ author:
 revision:
     "2019-08-20": (A, lew, efo) First edition.
 ...
-Assignment 2: Scripting with Bash
+Assignment 2: Bash
 ==================================
 
 Now let's get acquainted with script programming in Bash.
@@ -16,10 +16,10 @@ You also need to have a pretty good look at common commands in the Linux termina
 
 <!--more-->
 
-[FIGURE src=/image/snapht15/vim-solutions.png caption="Låt oss komma igång med skriptprogrammering i Bash."]
+[FIGURE src=/image/snapht15/vim-solutions.png caption="Let's get started with script programming in Bash."]
 
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+<!-- <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small> -->
 
 
 
@@ -63,7 +63,7 @@ Exercises & Assignments {#ovningar_uppgifter}
 
 ### Exercises {#ovningar}
 
-1. Work through how you can use Bash to create a more advanced command line program that takes arguments. The article ["Create Bash-script with options, commands and arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) gives you a structure on how to create more advanced and larger Bash scripts.
+1. Work through how you can use Bash to create a more advanced command line program that takes arguments. The article ["Create Bash-script with options, commands and arguments"](kunskap/create-bash-script-with-options-commands-and-arguments) gives you a structure on how to create more advanced and larger Bash scripts.
 
 
 
@@ -71,13 +71,11 @@ Exercises & Assignments {#ovningar_uppgifter}
 
 These assignments are to be completed and handed in.
 
-1. Do [Lab 1](uppgift/linux-lab-1-introduktion-till-bash) to train basic bash skills and file system management.
+1. Read the [instructions](uppgift/unix-lab) and do the labs `bash1` and `bash2`.
 
-1. Do [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) to practice commands that make it easier to search log files.
+1. Do "[My first Bash script](uppgift/my-first-bash-script)".
 
-1. Do "[My first Bash script](uppgift/mina-forsta-bash-script)".
-
-1. Do "[Bash script with arguments and options](uppgift/ett-bash-script-med-options-command-arguments)".
+1. Do "[Bash script with arguments and options](uppgift/bash-options-command-arguments)".
 
 
 
