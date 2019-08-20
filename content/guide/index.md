@@ -18,6 +18,11 @@ Guider i produktionsläge.
 * [VirtualBox](guide/virtualbox)
 * [Kom igång med SSH](guide/kom-igang-med-ssh)
 
+Guides in English.
+
+* [VirtualBox](guide/virtualbox_en)
+* [Get started with Bash](guide/get-started-with-bash)
+
 Guider under utveckling till hösten 2018.
 
 * [Bygg webbplatser med ramverket Anax Flat](guide/bygg-webbplatser-med-ramverket-anax-flat)
