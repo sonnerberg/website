@@ -22,6 +22,7 @@ Guides in English.
 
 * [VirtualBox](guide/virtualbox_en)
 * [Get started with Bash](guide/get-started-with-bash)
+* [Get started with Regex](guide/get-started-with-regex)
 
 Guider under utveckling till hösten 2018.
 
