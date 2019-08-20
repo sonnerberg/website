@@ -1,81 +1,83 @@
 ---
-author: mos
+author:
+    - lew
+    - efo
 revision:
-    "2017-12-21": (C, mos) Genomgången inför vt17.
-    "2017-01-16": (B, efo/mos) Genomgången och ändring av länk till ny bash lab.
-    "2015-07-03": (A, mos) Första utgåvan för kursen.
+    "2019-08-20": (A, lew, efo) First edition.
 ...
-Kmom02: Apache Virtual Hosts
+Assignment 2: Scripting with Bash
 ==================================
 
-Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
+Now let's get acquainted with script programming in Bash.
 
-Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med.
+Much is about simplifying everyday life, as a programmer, by automating the processes and routines you perform. A lot of what we do can be automated through scripts, such as Bash scripts with commands. But to do that, we need to keep track of how to create scripts and how to program in Bash.
 
-Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hemma i terminalen, SSH och att jobba med Linux som en server.
-
+You also need to have a pretty good look at common commands in the Linux terminal. There are commands that are powerful and if we only learn a couple of these commands they can save a lot of time for us.
 
 <!--more-->
 
-[FIGURE src=/image/snapht15/tmux-create-windows.png caption="Jobba med fönster i terminalen med tmux."]
-
-[FIGURE src=/image/snapht15/vhosts.png caption="Låt oss skapa en webbplats som en Apache Name-based Virtual Host."]
+[FIGURE src=/image/snapht15/vim-solutions.png caption="Låt oss komma igång med skriptprogrammering i Bash."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Reading  {#reading}
 ---------------------------------
 
 *(ca: 10 study hours)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Course literature  {#kurslitteratur}
 
-Läs följande:
+Read the following:
 
 1. [The Linux Command Line](kunskap/boken-the-linux-command-line)
-    * Ch1 What Is The Shell?
-    * Ch2 Navigation
-    * Ch3 Exploring The System
-    * Ch4 Manipulating Files And Directories
-    * Ch6 Redirection
-    * Ch24 Writing Your First Script
+    * Chapter 6 Redirection
+    * Chapter 24 Writing Your First Script
 
 
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 6-10 studietimmar)*
-
-
-
-###Övningar {#ovningar}
-
-Genomför följande övningar.
-
-1. Jobba igenom guiden "[Kom igång med SSH-nycklar](kunskap/kom-igang-med-ssh-nycklar)".
-
-1. Jobba igenom guiden "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)".
-
-1. Jobba igenom guiden "[Installera webbplatser med Apache Name-based Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)".
-
-
-
-###Uppgifter {#uppgifter}
-
-Dessa uppgifter skall utföras och redovisas.
-
-1. Gör uppgiften [Lab 1](uppgift/linux-lab-1-introduktion-till-bash) för att träna upp grundläggande färdigheter i bash och hantering av filsystem.
-
-1. Gör uppgiften "[Skapa en webbplats på en Apache Virtual Host](uppgift/skapa-en-webbplats-pa-en-apache-virtual-host)".
 
 <!--
-1. Gör uppgiften "[Strukturera filer, kataloger och rättigheter i en webbplats](uppgift/strukturera-filer-kataloger-och-rattigheter-i-en-webbplats)".
--->
+### Video  {#video}
+
+Titta på följande:
+
+1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 3. -->
+
+
+
+### Reading tip {#lastips}
+
+1. There is a [reference guide for Bash](http://www.gnu.org/software/bash/manual/bashref.html). Have it in mind.
+
+
+
+Exercises & Assignments {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 10 study hours)*
+
+
+
+### Exercises {#ovningar}
+
+1. Work through how you can use Bash to create a more advanced command line program that takes arguments. The article ["Create Bash-script with options, commands and arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) gives you a structure on how to create more advanced and larger Bash scripts.
+
+
+
+### Assignments {#assignments}
+
+These assignments are to be completed and handed in.
+
+1. Do [Lab 1](uppgift/linux-lab-1-introduktion-till-bash) to train basic bash skills and file system management.
+
+1. Do [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) to practice commands that make it easier to search log files.
+
+1. Do "[My first Bash script](uppgift/mina-forsta-bash-script)".
+
+1. Do "[Bash script with arguments and options](uppgift/ett-bash-script-med-options-command-arguments)".
 
 
 
@@ -88,8 +90,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känns konceptet med Apache name-based Virtual Hosts? Känner du igen det sedan tidigare?
-* Det blir allt fler kommandon i terminalen, hur känns det med terminalen och dess kommandon?
-* Gick det bra med ssh-nycklar och rsync över ssh?
-* Hur kändes det att jobba med tmux?
-* Reflektera över hur du känner inför Unix som operativsystem så här långt?
+* Är detta din första bekantskap med skriptprogrammering i Bash?
+* Berätta om din uppfattning om Bash som programmeringsmiljö, relatera till andra programspråk du kan.
+* Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?
+* Var det något som var extra svårt eller utmanande i uppgifterna?
+* Tittade du på videoserien? Vad tyckte du om den?
