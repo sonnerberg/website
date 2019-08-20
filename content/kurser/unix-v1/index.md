@@ -11,6 +11,10 @@ UNIX
 
 **UNIX and Linux, an overview and introduction** aka _unix_ introduces students to the command prompt, basic tools and commands, their areas of application, and ways to combine them into larger workflows.
 
+This is course material for the two courses **DV1466** and **DV1563**. **DV1466** completes four assignments, **DV1563** completes the last 3 out of the four assignments.
+
+
+
 <!--more-->
 
 
@@ -161,6 +165,37 @@ According to the syllabus, there are a number of ladok moments and they are link
 | Assignment 2    | Written assignment 2 - 2.0 hp - A-F | X      | X      |
 | Assignment 3    | Written assignment 3 - 2.0 hp - A-F | X      | X      |
 | Assignment 4    | Written assignment 4 - 2.0 hp - A-F | X      | X      |
+
+
+
+Grading {#grade}
+------------------------
+
+The final grade in the course is given based on points obtained during the course. To get a final grade all assignments in your particular course need to be passed.
+
+### Grading in DV1466
+
+| Points    | Grade        |
+|-----------|--------------|
+| 80        | A            |
+| 70+       | B            |
+| 60+       | C            |
+| 50+       | D            |
+| 40+       | E            |
+| -40       | F            |
+
+
+
+### Grading in DV1563
+
+| Points    | Grade        |
+|-----------|--------------|
+| 60        | A            |
+| 50+       | B            |
+| 40+       | C            |
+| 35+       | D            |
+| 30+       | E            |
+| -30       | F            |
 
 
 

@@ -25,7 +25,7 @@ Reading  {#lasanvisningar}
 *(ca: 10 study hours)*
 
 
-### Kurslitteratur  {#kurslitteratur}
+### Course literature  {#kurslitteratur}
 
 Read the following:
 
@@ -37,18 +37,18 @@ Read the following:
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Exercises & Assignments {#ovningar_uppgifter}
 -------------------------------------------
 
 *(ca: 10 study hours)*
 
-### Övningar {#ovningar}
+### Exercises {#ovningar}
 
 1. Work through the guide "[Install web pages with Apache Name-based Virtual Hosts](kunskap/install-web-pages-with-apache-virtual-hosts)" to practice for the assignment below.
 
 
 
-### Uppgifter {#uppgifter}
+### Assignments {#uppgifter}
 
 These assignments are to be completed and handed in.
 
@@ -74,3 +74,14 @@ Then on the education platform Canvas do a hand in for assignment 1 with a text 
 * We have used a lot of different commands in the terminal. How does it feel to work in a command based operating system?
 
 * Reflect on how you feel about the Linux operating system so far?
+
+Your grade on this assignment and points towards the final grade is given based on the following criteria:
+
+| Grade | Final grade points | Assignments | Reflective answers | Adapted Me-page  |
+|-------|----------|------|------ |------|
+| A     | 20       | X    | X     | X
+| C     | 15       | X    | X  OR | X
+| E     | 10       | X    |       |
+| F     | 0        |      |       |
+
+As a last text describe what you have done in this assignment and make an argument for the grade you deserve. The grading of your assignment will use this text as the starting point.
