@@ -79,17 +79,20 @@ These assignments are to be completed and handed in.
 
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Hand In {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 2 study hours)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+When you have completed all assignments above do the following command to publish all code to the student server.
 
-Se till att följande frågor besvaras i redovisningstexten.
+```bash
+dbwebb publish me
+```
 
-* Är detta din första bekantskap med skriptprogrammering i Bash?
-* Berätta om din uppfattning om Bash som programmeringsmiljö, relatera till andra programspråk du kan.
-* Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?
-* Var det något som var extra svårt eller utmanande i uppgifterna?
-* Tittade du på videoserien? Vad tyckte du om den?
+Then on the education platform Canvas do a hand in for assignment 2 with a text containing reflective answers to the questions below.
+
+* Is this your first acquaintance with script programming in Bash?
+* Tell us about your perception of Bash as a programming environment, relate to other programming languages ​​you know.
+* What opportunities/challenges do you see with this type of script programming?
+* Was it something that was extra difficult or challenging in the tasks?
