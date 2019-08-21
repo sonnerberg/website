@@ -31,11 +31,25 @@ Reading  {#reading}
 
 ### Course literature  {#kurslitteratur}
 
-Read the following:
+DV1563 Read the following:
 
 1. [The Linux Command Line](kunskap/boken-the-linux-command-line)
-    * Chapter 6 Redirection
-    * Chapter 24 Writing Your First Script
+    * Ch1 What Is The Shell?
+    * Ch2 Navigation
+    * Ch3 Exploring The System
+    * Ch4 Manipulating Files And Directories
+    * Ch6 Redirection
+    * Ch24 Writing Your First Script
+
+DV1466 Read the following:
+
+1. A Practical Guide to Ubuntu Linux (3rd edition)
+    * Part 3 Digging into Ubuntu Linux
+        * Ch8 Linux GUI
+        * Ch9 Bourne Again Shell
+
+
+
 
 
 

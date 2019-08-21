@@ -27,7 +27,7 @@ Reading  {#lasanvisningar}
 
 ### Course literature  {#kurslitteratur}
 
-Read the following:
+DV1563 Read the following:
 
 1. [The Linux Command Line](kunskap/boken-the-linux-command-line)
     * Ch1 What Is The Shell?
@@ -35,6 +35,13 @@ Read the following:
     * Ch3 Exploring The System
     * Ch4 Manipulating Files And Directories
 
+DV1466 Read the following:
+
+1. A Practical Guide to Ubuntu Linux (3rd edition)
+    * Part 1 Installing Ubuntu Linux
+    * Part 2 Getting Started with Ubuntu Linux
+    * Part 5 Using Clients and Setting up Servers
+        * Ch26 Apache: Setting up a Web Server
 
 
 Exercises & Assignments {#ovningar_uppgifter}

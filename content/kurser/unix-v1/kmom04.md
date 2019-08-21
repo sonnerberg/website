@@ -1,12 +1,22 @@
 ---
-author: mos
+author:
+    - efo
+    - lew
 revision:
-    "2016-12-21": (C, efo) Från asynkronprogrammering till nodejs api.
-    "2016-12-21": (B, efo) Länk till ny lab.
-    "2015-09-02": (A, mos) Första utgåvan för kursen.
+    "2019-08-21": (A, efo, lew) First edition.
 ...
-Kmom05: Webbtjänst med RESTful API
+Assignment 4: Mazerunner
 ==================================
+
+[WARNING]
+
+**Course development in progress**
+
+The course is given in study period 1 in the fall of 2019.
+
+[/WARNING]
+
+<!--stop-->
 
 Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i bash och vi kan bygga servrar med Node.js. Låt oss fortsätta titta på serverprogrammering i Node.js och se hur en mer renodlad webbtjänst kan se ut och fungera.
 
