@@ -29,20 +29,24 @@ The files you create and use in this task should be saved in your course repo in
 
 Create a file, `log.txt`, and place it in the directory above.
 
+For introductions to HTML and CSS look at Mozilla Developer Networks introductions for [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML) and [Learn to style HTML using CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS).
+
 
 
 Requirements {#krav}
 -----------------------
 
+1. Copy all files from the `example/report` folder to `me/report`. Enter the command you use in the log (`log.txt`).
+
+1. If you want to earn extra credits adapt `me.html` and `about.html` with both additional HTML and CSS.
+
 1. Create an Apache Virtual Host `me.linux.se`. Save a copy of the config file `me.linux.se.conf` in your course repo.
 
-1. Copy all files and directories from `example/redovisa` to the `/var/www/html/me.linux.se` folder that you created when you created the virtual host. Enter the command you use in the log (`log.txt`).
+1. Copy all files and directories from `me/report` to the `/var/www/html/me.linux.se` folder that you created when you created the virtual host. Enter the command you use in the log (`log.txt`).
 
-1. Adapt the web page so it is about you.
+1. Make sure you can access the site with your browser on your local development computer through port forwarding.
 
-1. Make sure you can access the site with your browser on your local development computer.
-
-1. Open a terminal, use `lynx` to open your newly created website. Enter the command you use in the log (`log.txt`).
+1. Open a terminal in your VirtualBox, use `lynx` to open your newly created website. Enter the command you use in the log (`log.txt`).
 
 1. Take a screenshot of the terminal that shows when using `lynx` to access the site. Save it as `dump.png`. Save the image in .png format and use lower case letters in the file name.
 
