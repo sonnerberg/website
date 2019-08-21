@@ -80,10 +80,10 @@ Här är den övergripande planeringen för introveckan och samtliga aktiviteter
 
 | Tid | Måndag | Tisdag | Onsdag | Torsdag | Fredag |
 |-----|--------|--------|--------|---------|--------|
-| 10:00-11:00| Välkommen distansstudent (ds) | Kursstart python/htmlphp (sh) | Introduktion till terminalen (sh) | htmlphp labbmiljö (sh) | Hjälp i labbsal (m) |
+| 10:00-11:00| Välkommen distansstudent (ds) | Kursstart python/htmlphp (sh) | Introduktion till terminalen (sh) | htmlphp labbmiljö (sh) | Introduktion till datateknik (ms) |
 | 11:00-12:00| BTH hälsar välkommen (c) | Generell labbmiljö (sh) | dbwebb-cli (sh) | Skapa webbsida (sh) | Hjälp i labbsal (m) |
 | 13:00-14:00| Välkommen campusstudent (ch) | Information biblioteket (c) | Stödfunktioner information (c) | Studievägledare presentation (c) | Studentkåren (c) |
-| 14:00-15:00| Frågestund (ch) | Utmaning 1 (sh) | Utmaning 2 (sh) | Publisera webbsida (sh) | Studentkåren (c) |
+| 14:00-15:00| Frågestund (ch) | python labbmiljö (sh) | Utmaning (sh) | Publicera webbsida (sh) | Studentkåren (c) |
 
 * (s) = Streamas
 * (h) = Sal H430/H429
