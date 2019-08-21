@@ -110,3 +110,14 @@ Then on the education platform Canvas do a hand in for assignment 2 with a text 
 * Tell us about your perception of Bash as a programming environment, relate to other programming languages ​​you know.
 * What opportunities/challenges do you see with this type of script programming?
 * Was it something that was extra difficult or challenging in the tasks?
+
+Your grade on this assignment and points towards the final grade is given based on the following criteria:
+
+| Grade | Final grade points | Assignments | Reflective answers | Extra assignments in labs |
+|-------|----------|------|------ |------|
+| A     | 20       | X    | X     | X
+| C     | 15       | X    | X  OR | X
+| E     | 10       | X    |       |
+| F     | 0        |      |       |
+
+As a last text describe what you have done in this assignment and make an argument for the grade you deserve. The grading of your assignment will use this text as the starting point.
