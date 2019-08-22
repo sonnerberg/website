@@ -129,7 +129,7 @@ Vi kör alltid på LF för att undvika problem när vi flyttar filer mellan olik
 
 
 
-###Radslut nya filer enligt LF {#linendstd}
+### Radslut nya filer enligt LF {#linendstd}
 
 För att underlätta att alla nya filer du skapar verkligen har LF som radslut så kan du konfigurera ett förinstallerat paket till Atom som heter "line-ending-selector".
 
@@ -208,12 +208,25 @@ Så här har jag uppdaterat min `.atom/keymap.cson` för att den skall passa hur
 -->
 
 
+Öppna Atom via Utforskaren (Windows) {#utforskaren}
+--------------------------------------
+
+I början kan det vara lite mycket att lära sig. Då är det bra att även kunna öppna Atom smidigt via Utforskaren, genom att högerklicka och välja "Öppna med Atom..."
+
+Under fliken "System" hittar du två inställningar, "Show in file context menus" och "Show in folder context menus".
+
+[FIGURE src=/image/atom/atom-file-folder-context.png?w=500 caption="Bocka i båda så kan man öppna både filer och mappar ifrån Utforskaren."]
+
+När de är aktiverade så får du möjligheten att högerklicka i valfri mapp eller på valfri fil och välja "Open with Atom".
+
+[FIGURE src=/image/atom/atom-open-with-atom.png?w=250 caption="Så här kan det se ut när du nu högerklickar i Utforskaren."]
 
 Alternativ till Atom {#alternativ}
 --------------------------------------
 
 Här är ett par alternativ till texteditorn Atom.
 
+* Visual Studio Code (flera plattformar)
 * TextWrangler (Mac OS)
 * Notepad++ (Windows)
 * SublimeText, jEdit (flera plattformar)
