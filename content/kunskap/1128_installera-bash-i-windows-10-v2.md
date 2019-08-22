@@ -12,18 +12,19 @@ category:
     - windows
     - bash
 revision:
-    "2019-01-16": "(C, mos) Förydligande om var filer bör sparas och hur atom startas, bort med stycket om atom."
+    "2019-08-22": "(D, aurora) Översedd inför HT19 och Windows 10 v1903."
+    "2019-01-16": "(C, mos) Förtydligande om var filer bör sparas och hur atom startas, bort med stycket om atom."
     "2019-01-13": "(B, mos) Lade till installation av nödvändiga paket."
     "2019-01-08": "(A, mos) Uppdaterad installationsprocess för 1803."
 ...
-Installera Debian/Bash i Windows 10 (v 1803)
+Installera Debian/Bash i Windows 10 (v 1903)
 ==================================
 
 [FIGURE src=image/snapvt19/windows-cowsay.png?w=c5&a=0,70,60,0 class="right"]
 
 Så här gör du för att installera Debian/Bash i Windows 10 samt installera det som behövs för att komma igång med kurserna.
 
-Installationsprocessen förutsätter att du har ett uppdaterat system av Windows 10 64bitar system med version 1803.
+Installationsprocessen förutsätter att du har ett uppdaterat system av Windows 10 64-bitar system med version 1903.
 
 <!--more-->
 
@@ -34,9 +35,15 @@ Förutsättning {#pre}
 
 Du har minst en 64-bitars version (x64) av Windows 10.
 
-Dubbelkolla att ditt versionsnummer startar på minst 1803 och att du har en Windows build 16215, eller senare, genom att trycka `Windows key + R` och köra programmet `winver`. 
+[INFO]
 
-[FIGURE src=image/snapvt19/win10-winver.png caption="Version 1803 eller högre behöver vara installerad."]
+**Bash for Windows, WSL, är tillgängligt från version 1607 av Windows 10. Guiden är testad på 1803 och uppdaterade för 1903, men bör fungera som riktlinje på samtliga versioner. Uppdatera gärna ert operativsystem till den nyaste versionen innan ni påbörjar guiden.**
+
+[/INFO]
+
+Dubbelkolla att ditt versionsnummer startar på minst 1903 och att du har en Windows build 18362, eller senare, genom att trycka `Windows key + R` och köra programmet `winver`.
+
+[FIGURE src=image/snapht19/win10-winver.png?w=500 caption="Version 1903 eller högre behöver vara installerad."]
 
 Installationsstegen nedan bygger på information från artikeln "[Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)".
 
@@ -278,7 +285,11 @@ Vill du kopiera från ett annat fönster till terminalen så markerar du texten 
 
 ### Vilken version av Linux {#version}
 
-Du kan kontrollera vilken version av Bash du har med kommandot `lsb_release`. Installera kommandot om det inte finns.
+Du kan kontrollera vilken version av Bash du har med kommandot `lsb_release`. Om kommandot inte finns kan du installera det genom att köra.
+
+```bash
+sudo apt-get install lsb-release
+```
 
 Tecknet `$` är en del av prompten och ingår inte i kommandot du skall skriva in.
 

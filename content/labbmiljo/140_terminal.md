@@ -21,7 +21,7 @@ Här är guider för hur du kommer igång med terminalen och installation av lab
 I Windows har du två alternativ till terminal, välj den som passar din installation.
 
 * Windows (alla): [Installera Unix-terminalen Cygwin på Windows](kunskap/installera-unix-terminalen-cygwin-pa-windows) (standardval)
-* Windows 10: [Installera Bash i Windows 10 (v 1803)](kunskap/installera-bash-i-windows-10-v2) (alternativ, standardval från och med hösten 2019)
+* Windows 10: [Installera Bash i Windows 10 (v 1903)](kunskap/installera-bash-i-windows-10-v2) (alternativ)
 * Mac OS: [Terminalen och pakethantering med Brew på Mac OS](kunskap/terminalen-och-pakethantering-med-brew-pa-mac-os)
 * Unix/Linux: [Terminalen och pakethantering i Unix/Linux](kunskap/terminalen-och-pakethantering-i-unix-linux)
 
