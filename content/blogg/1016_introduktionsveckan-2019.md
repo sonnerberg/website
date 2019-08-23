@@ -4,7 +4,8 @@ category:
     - utbildning
     - kursnyheter
 revision:
-    "2019-06-11": (A, mos) Första versionen.
+    "2019-08-23": "(B, mos) Mindre justeringar i schemat."
+    "2019-06-11": "(A, mos) Första versionen."
 ...
 Introduktionsveckan Webbprogrammering 2019
 ==================================
@@ -123,13 +124,13 @@ Vi börjar med den generella labbmiljön som gäller oavsett kurs och fortsätte
 
 Klockan 13:00-13:30 är campus på genomgång med biblioteket.
 
-14-15 har vi en programmeringsutmaning i labbsalen (streamas).
+14-15 fortsätter vi installationen av labbmiljön genom att installera programmeringsspråket Python på datorn (streamas).
 
 
 
 ### Onsdag {#onsdag}
 
-Lärarteamet är i multisalen 10-12 (streamas). Vi fortsätter med labbmiljön för python-kursen fram till 11:00 och det handlar främst om att bekanta sig med terminalen.
+Lärarteamet är i multisalen 10-12 (streamas). Vi fortsätter med labbmiljön och tittar lite extra på terminalen fram till 11:00.
 
 11:00 börjar vi installera dbwebb-cli, ett program för att jobba med kurserna (streamas).
 
@@ -151,7 +152,7 @@ Klockan 13-14 är campus på genomgång med BTH studievägledare.
 
 ### Fredag {#fredag}
 
-Lärarteamet är i multisalen 10-12. Det blir extra hjälp för dig som ännu inte kommit igång med labbmiljön samt möjlighet till frågor för dig som vill veta mer om allt och inget.
+Lärarteamet är i multisalen 10-12. Det inleds med en genomgång generellt om datateknik och därefter blir det extra hjälp för dig som ännu inte kommit igång med labbmiljön samt möjlighet till frågor för dig som vill veta mer om allt och inget.
 
 På eftermiddagen har kåren aktiviteter på campus.
 
