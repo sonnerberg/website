@@ -1,4 +1,4 @@
-#### Läsår 2018/2019
+#### Läsår 2019/2020
 
 [FIGURE src="/image/snapvt16/bth-kvall.jpg?w=c10&h=100&cf"]
 

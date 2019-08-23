@@ -2,6 +2,7 @@
 title: Kurser
 author: mos
 revision:
+    "2019-08-23": "(B, mos) Läsår 2019/20."
     "2018-06-16": "(A, mos) Flyttade innehåll från .meta.md och nytt inför ht18."
 
 views:
@@ -87,7 +88,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v4/block-kurser-kmom
+                                route: kurser/vlinux-v1/block-kurser-kmom
                     column-2:
                         data:
                             meta:
@@ -150,7 +151,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v4/block-kurser-kmom
+                                route: kurser/vlinux-v1/block-kurser-kmom
                     column-2:
                         data:
                             meta:
@@ -160,12 +161,11 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk2-v2/block-kurser-kmom
+                                route: kurser/telecom/block-kurser-kmom
                     column-4:
                         data:
                             meta:
                                 type: content
-                                #route: kurser/valbar/block-telecom-eller-sysver
                                 route: kurser/sysver/block-kurser-kmom
 
     webbprogrammering-termin4-distans:
@@ -182,7 +182,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/indproj/block-kurser-kmom
+                                route: kurser/jsramverk-v1/block-kurser-kmom
                     column-2:
                         data:
                             meta:
@@ -198,38 +198,6 @@ views:
                             meta:
                                 type: content
                                 route: kurser/exjobb/block-kurser-kmom
-
-    webutv:
-        region: columns-above
-        template: default/columns
-        sort: 20
-        data:
-            title: Kurspaket webutv
-            class: col4
-            classes: no-bullet
-            meta:
-                type: columns
-                columns:
-                    column-1:
-                        data:
-                            meta:
-                                type: content
-                                route: kurser/python-v2/block-kurser-kmom
-                    column-2:
-                        data:
-                            meta:
-                                type: content
-                                route: kurser/javascript1-v2/block-kurser-kmom
-                    column-3:
-                        data:
-                            meta:
-                                type: content
-                                route: kurser/linux-v2/block-kurser-kmom
-                    column-4:
-                        data:
-                            meta:
-                                type: content
-                                route: kurser/webapp-v3/block-kurser-kmom
 
     webprog:
         region: columns-above
@@ -263,6 +231,69 @@ views:
                                 type: content
                                 route: kurser/oophp-v5/block-kurser-kmom
 
+
+    webbprogrammering31campus:
+        region: columns-above
+        template: default/columns
+        sort: 40
+        data:
+            title: Webbprogrammering läsår 3 (campus)
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/webtopic-v2/block-kurser-kmom
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/devops-v1/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/stortproj/block-kurser-kmom
+                    column-4:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/stortproj/block-kurser-kmom
+
+    webbprogrammering32campus:
+        region: columns-above
+        template: default/columns
+        sort: 41
+        data:
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/jsramverk-v1/block-kurser-kmom
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/itsec-v1/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/exjobb-kandidat/block-kurser-kmom
+                    column-4:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/exjobb-kandidat/block-kurser-kmom
 
 
     ovrigt:
