@@ -1,6 +1,8 @@
 #### Aktuellt
 
-[FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
+<!-- [FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."] -->
+
+[FIGURE src=image/person/jane-strandberg-2.jpg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen startar, vi är redo..."]
 
 Tänker du läsa vid BTH till hösten?
 
