@@ -112,6 +112,8 @@ Klockan 13-14 hälsar lärarteamet campus-studenterna välkomna i labbsalen, gen
 
 Lärarteamet finns sedan i labbsalen och vid behov så fortsätter eftermiddagen med en frågestund mellan kl 14-15, för dig som har frågor och funderingar.
 
+Innan du går hem så bör du ha fixat nätverkskoppling (wifi) till din dator. Annars blir det stressigt på tisdagen (campus).
+
 
 
 ### Tisdag {#tisdag}
@@ -126,6 +128,8 @@ Klockan 13:00-13:30 är campus på genomgång med biblioteket.
 
 14-15 fortsätter vi installationen av labbmiljön genom att installera programmeringsspråket Python på datorn (streamas).
 
+Innan du går hem vore det bra om du har skrivit din första kod i python i en texteditor och kört programmet i en terminal.
+
 
 
 ### Onsdag {#onsdag}
@@ -138,6 +142,8 @@ Klockan 13-14 är campus på genomgång med BTH stödfunktioner.
 
 14-15 har vi en programmeringsutmaning i labbsalen (streamas). I utmaningen ska vi öva på att jobba i terminalen. Hur man orientera sig och hitta filer m.m. Om du inte är klar med labbmiljön finns möjlighet till extra hjälp.
 
+Innan du går hem så är det bra om du har klonat kursrepon för kurserna python och htmlphp samt har en fungerande terminal som du kan navigera i med några få Unix-kommandon.
+
 
 
 ### Torsdag {#torsdag}
@@ -148,6 +154,8 @@ Klockan 13-14 är campus på genomgång med BTH studievägledare.
 
 14-15 tar vi vår lokala webbplats och publicerar på studentservern (streamas). Behöver du mer hjälp så är det bara att fråga.
 
+Innan du går hem så har du lyckats publicera information på studentservern och nått den via studentserverns webbplats.
+
 
 
 ### Fredag {#fredag}
@@ -155,6 +163,8 @@ Klockan 13-14 är campus på genomgång med BTH studievägledare.
 Lärarteamet är i multisalen 10-12. Det inleds med en genomgång generellt om datateknik och därefter blir det extra hjälp för dig som ännu inte kommit igång med labbmiljön samt möjlighet till frågor för dig som vill veta mer om allt och inget.
 
 På eftermiddagen har kåren aktiviteter på campus.
+
+Innan du tar helg så bör du vara helt klar med labbmiljön för kurserna python och htmlphp.
 
 
 
