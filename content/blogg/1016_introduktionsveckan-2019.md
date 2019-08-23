@@ -112,7 +112,7 @@ Klockan 13-14 hälsar lärarteamet campus-studenterna välkomna i labbsalen, gen
 
 Lärarteamet finns sedan i labbsalen och vid behov så fortsätter eftermiddagen med en frågestund mellan kl 14-15, för dig som har frågor och funderingar.
 
-Innan du går hem så bör du ha fixat nätverkskoppling (wifi) till din dator. Annars blir det stressigt på tisdagen (campus).
+Innan du går hem så bör du ha fixat nätverkskoppling (wifi EDUROAM) till din dator. Annars blir det stressigt på tisdagen (campus).
 
 
 
