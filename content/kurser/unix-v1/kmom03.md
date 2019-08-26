@@ -6,14 +6,6 @@ revision:
 Assignment 3: Regular expressions
 ==================================
 
-[WARNING]
-
-**Course development in progress**
-
-The course is given in study period 1 in the fall of 2019.
-
-[/WARNING]
-
 Regex is an abbreviation of Regular Expression, a well-known tool for matching text patterns. It is usually used to extract information from code, log files and other texts. In regex, a pattern is defined by characters that regex then tries to find/match in a string or text.
 
 <!--more-->
@@ -85,7 +77,7 @@ Then on the education platform Canvas do a hand in for assignment 3 with a text 
 * Can you think of any use cases for regular expressions?
 * Do you feel more comfortable using the terminal, compared to when you started the course?
 * Did you try the extra assignments in the lab?
-* Describe your problem solving during the assignment. 
+* Describe your problem solving during the assignment.
 
 Your grade on this assignment and points towards the final grade is given based on the following criteria:
 
