@@ -84,4 +84,16 @@ Then on the education platform Canvas do a hand in for assignment 3 with a text 
 
 * Can you think of any use cases for regular expressions?
 * Do you feel more comfortable using the terminal, compared to when you started the course?
-*
+* Did you try the extra assignments in the lab?
+* Describe your problem solving during the assignment. 
+
+Your grade on this assignment and points towards the final grade is given based on the following criteria:
+
+| Grade | Final grade points | Assignments | Reflective answers | Extra assignments in labs |
+|-------|----------|------|------ |------|
+| A     | 20       | X    | X     | X
+| C     | 15       | X    | X  OR | X
+| E     | 10       | X    |       |
+| F     | 0        |      |       |
+
+As a last text describe what you have done in this assignment and make an argument for the grade you deserve. The grading of your assignment will use this text as the starting point.
