@@ -7,7 +7,7 @@ revision:
 My first Bash script
 ==================================
 
-You will create a number of scripts in Bash that perform certain things.
+You will create a number of scripts in Bash that perform certain predefined tasks.
 
 <!--more-->
 

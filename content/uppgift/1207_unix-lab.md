@@ -11,7 +11,7 @@ Unix lab introduction
 
 During the course you will perform a set of laborations where you practice your skills in different areas.
 
-<!-- more -->
+<!--more-->
 
 
 
