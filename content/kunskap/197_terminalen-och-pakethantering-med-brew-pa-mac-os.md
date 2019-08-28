@@ -57,9 +57,11 @@ När du väl installerat Homebrew så kan du testa att installera wget. Det är 
 brew install wget
 ```
 
+<!--
 Så här kan det se ut.
 
 [ASCIINEMA src=18598]
+-->
 
 Att lära sig jobba med pakethantering, att installera och avinstallera program, är en bra sak att kunna för varje utvecklare. Det finns många små program som kan underlätta ens vardag.
 
