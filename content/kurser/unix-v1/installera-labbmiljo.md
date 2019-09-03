@@ -56,9 +56,6 @@ The entire flow looks like this.
 [ASCIINEMA src=24613]
 
 
-1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
-
-
 
 Clone and initialize the course material {#clone}
 ----------------------------------
