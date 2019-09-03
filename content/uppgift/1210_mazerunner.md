@@ -16,180 +16,126 @@ Your task is to build a bash client for the server, according to a requirements 
 
 
 
-Förkunskaper {#forkunskaper}
+Prerequisites {#pre}
 -----------------------
 
-Du har kunskaper motsvarande de som hanteras i uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
+* You have read the [guide](guide/get-started-with-bash) on programming with Bash.
+* You have completed the assignment [Bash script with arguments and options](uppgift/bash-options-command-arguments).
 
 
 
-
-Introduktion {#intro}
+Introduction {#intro}
 -----------------------
 
-Läs kort på Wikipedia om vad en [*maze*](https://en.wikipedia.org/wiki/Maze) kan vara.
+Read briefly on Wikipedia about what a [*maze*] (https://en.wikipedia.org/wiki/Maze) can be.
 
-Så här kan det se ut när du löser mazen med ditt skript, skriptet som i detta fallet heter *mazerunner.sh*. Möjligen kan det vara inspirerat av boken/filmen med samma namn, [The Maze Runner](https://sv.wikipedia.org/wiki/The_Maze_Runner).
+This is what it may look like when you solve the maze with your script:
+
+[INFO]Note that the file extension should be **mazerunner.bash**.[/INFO]
 
 [ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
 
-Så kan det alltså se ut.
 
 
+### About the server maze {#about}
 
-###Om servern maze {#om}
+The server [maze is in the course repot](https://github.com/dbwebb-se/unix/tree/master/example/maze). There is all the source code and a specification of the [server's API](https://github.com/dbwebb-se/unix/blob/master/example/maze/api.md).
 
-Servern [maze finns i kursrepot](https://github.com/mosbth/linux/tree/master/example/nodejs/maze). Där finns all källkod och en specifikation över [serverns API](https://github.com/mosbth/linux/blob/master/example/nodejs/maze/api.md).
+Start by getting acquainted with the server's API.
 
-Börja med att översiktligt bekanta dig med serverns API.
-
-Så här kan du starta servern.
+Here's how to start the server.
 
 ```bash
-# Gå till kursrepot
-cd example/nodejs/maze
+# Go to the course repo
+cd example/maze
 node index.js
 ```
 
-Du kan testa maze-servern med curl. Så här.
+You can test the maze server with curl. Like this.
 
 [ASCIINEMA src=25853]
 
-Studera gärna källkoden till maze-servern. Hade du kunnat skriva den själv?
+Please study the source code of the maze server. Had you been able to write it yourself?
 
 
 
-###Ta en kopia av Maze {#copy}
+### Make a copy of Maze {#copy}
 
-Börja med att ta en kopia av koden i `example/nodejs/maze`. Spara alla dina filer i katalogen `me/kmom05/maze`.
-
-```bash
-# Gå till kursrepot
-cp -ri example/nodejs/maze/{api.md,index.js,maze.js,maps} me/kmom05/maze
-```
-
-Kopiera sedan den router som maze-servern använder sig av.
+First, make a copy of the code in `example/maze/`. Save all your files in the directory `me/kmom04/maze`.
 
 ```bash
-# Gå till kursrepot
-cp -i example/nodejs/router/router.js me/kmom05/maze
+# Go to the course repo
+cp -ri example/maze/{api.md,index.js,maze.js,maps,router.js} me/kmom04/maze/
 ```
 
-Ändra sedan sökvägen för var router-modulen hittas, gör ändringen i `maze.js`.
+Now you are ready to start your own variant of the maze server.
 
-```javascript
-//const Router = require("../router/router");
-const Router = require("./router");
-```
-
-Nu är du redo att starta din egen variant av maze-servern.
+You start the server with `$ node index.js`.
 
 
 
-###Att spara spelets id till fil {#fil}
+### To save the game ID to file {#id}
 
-Din klient behöver komma ihåg spelets id och vilket rum du står i. Du sparar den informationen enklast i fil. För att du skall slippa hantera JSON med bash, så har servern en möjlighet att leverera svaren som en komma-separerad sträng.
+Your client needs to remember the game ID and which room you are in. You save that information easiest in a file. To avoid having to handle JSON with bash, the server has the opportunity to deliver the responses as a comma-separated string.
 
-Testa att köra följande kommandon mot servern så ser du skillnaden.
+Try running the following commands against the server and you will see the difference.
 
 ```bash
 curl localhost:1337/map
 curl localhost:1337/map?type=csv
 ```
 
-Det är alltså `?type=csv` som kan underlätta för din bash-klient som kommer att behöva parsa innehållet.
+It is therefore `?type=csv` that can make it easier for your bash client who will need to parse the content.
 
 
 
-Krav {#krav}
+Requirements {#req}
 -----------------------
 
-<!--
-###Uppdatera maze servern {#userv}
-
-1. Uppdatera din maze-server så att den kan starta upp och lyssna på porten `LINUX_PORT`, om variabeln är definierad. Defaultport kan annars vara 1337.
-
-1. Din maze-server skall skriva sitt PID till filen `pid` så att man kan avsluta processen med kommandot `kill $( cat pid )` (eller motsvarande på Cygwin).
-
-1. Lägg till en route `/:gameid/info` som skriver ut innehållet för just ditt game. Som en route bra för debug och testning. Det som skall skrivas ut är innehållet i `game[gameid]`.
--->
+The requirements are two-parted. The first set is mandatory to pass the assignment. The second part is an optional assignment if you want to challenge yourself.
 
 
-###Bashscript för att lösa maze {#del1}
 
-1. Skapa ett skript `mazerunner.bash`. Sätt rättigheter på skriptet till 755. Skapa en symbolisk länk `mazerunner` som pekar på filen `mazerunner.bash`.
+### Bash script for solving the maze (part 1) {#part1}
 
-1. Skriptet skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
+1. Create a script called `mazerunner.bash` in the folder `maze/`. Make the script executable.
 
-1. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost.
+1. Use the API to add the following features to the script. The script should always return a response if all went well or not.
 
-1. Använd API:et för att lägga till följande funktioner i skriptet. Skriptet skall alltid skriva ut ett meddelande om det gick bra eller inte.
-
-| Kommando                | Vad skall hända |
+| Command                | What should happen? |
 |-------------------------|-----------------|
-| `./mazerunner init`     | Initiera ett spel och spara ned spelets id i en fil. |
-| `./mazerunner maps`     | Visa vilka maps som finns att välja bland. |
-| `./mazerunner select <map>` | Välj en viss karta. |
-| `./mazerunner enter`    | Gå in i första rummet. |
-| `./mazerunner info`     | Visa information om rummet. |
-| `./mazerunner go north` | Gå till ett nytt rum, om riktningen stödjs. |
-| `./mazerunner go south` | Gå till ett nytt rum, om riktningen stödjs. |
-| `./mazerunner go east`  | Gå till ett nytt rum, om riktningen stödjs. |
-| `./mazerunner go west`  | Gå till ett nytt rum, om riktningen stödjs. |
+| `./mazerunner.bash init`     | Initiate a game and save the game ID in a file. |
+| `./mazerunner.bash maps`     | Show which maps are available to choose from. |
+| `./mazerunner.bash select <#map>` | Select a specific map by number. |
+| `./mazerunner.bash enter`    | Enter the first room. |
+| `./mazerunner.bash info`     | Show information about the room. |
+| `./mazerunner.bash go north` | Go to a new room, if the direction is supported. |
+| `./mazerunner.bash go south` | Go to a new room, if the direction is supported. |
+| `./mazerunner.bash go east`  | Go to a new room, if the direction is supported. |
+| `./mazerunner.bash go west`  | Go to a new room, if the direction is supported. |
 
-Så här kan det se ut när du är klar.
+Here is how it may look when you are done.
 
-[ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
+[ASCIINEMA src=244037]
 
 
 
-###Bashscript i loop {#del2}
+### Bashscript in loop (part 2 - optional) {#part2}
 
-1. Utöka funktionaliteten i `mazerunner.bash` så att allt sker i en loop när man startar programmet med `./mazerunner loop`. Skriptet skall börja med att initiera ett nytt spel och visa vilka kartor som finns. Spelaren kan då välja en karta varpå spelaren träder in i första rummet. Därefter fortsätter loopen och väntar på att spelaren skriver in riktningen north, south, east, west, eller help för en hjälptext eller quit för att avsluta.
+1. Extend the functionality of `mazerunner.bash` so that everything happens in a loop when you start the program with `./mazerunner.bash loop`. The script should start by initiating a new game and showing what maps are available. The player can then select a map and the player enters the first room. Then the loop continues and waits for the player to enter the direction north, south, east, west, or help for a help text or quit to finish.
 
-Så här kan det se ut, ungefär.
+This is what it might look like.
 
 [ASCIINEMA src=23368]
 
 
-<!--
-###Lös mazen {#solution}
-
-1. Utöka funktionaliteten i `mazerunner.bash` så att den automatiskt går igenom mazen på ett effektivt sätt som leder till sista rummet. Du startar detta genom att ange `./mazerunner solve`.
 
 
-
-###Buggfix {#bugg}
-
-1. Det finns en felrapport på maze-servern, [issue 8](https://github.com/dbwebb-se/linux/issues/8), som behöver lagas. Gör först ett testfall `issue.bash` som återskapar och påvisar felet. Laga sedan felet i din maze server.
-
--->
-
-
-
-###Validera och publicera {#publish}
-
-Validera och publicera din kod enligt följande.
+Validate your `mazerunner.bash` script by doing the following commands in the course directory in the terminal.
 
 ```bash
-# Ställ dig i kurskatalogen
-dbwebb validate maze
+# Go to the course repo
+$ dbwebb validate maze
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Det finns ingen extrauppgift.
-
-
-
-Tips från coachen {#tips}
------------------------
-
-Strukturera din kod med funktioner i bash. Då får du en bra struktur i första delen och i andra delen så kan du återanvända funktionerna.
-
-Lycka till och hojta till i forumet om du behöver hjälp!
+Correct any errors that pop up and publish again. When it looks green you are done.  
