@@ -13,12 +13,6 @@ revision:
 Kmom03: Bygg multisida i PHP
 ==================================
 
-[WARNING]
-
-**Kursmomentet är under översyn, vissa smärre delar kan komma att uppdateras men i stort är strukturen som den här visas.**
-
-[/WARNING]
-
 Vi tittar på den i PHP inbyggda datatypen för arrayer och ser hur vi kan lagra och hantera värden i både numeriska arrayer och strängindexerade arrayer. Vi tittar på vilka inbyggda funktioner som finns för att jobba med arrayer och vi tittar på två av de fördefinierade arrayerna $\_GET och $\_SERVER som hjälper att att bygga webbsidor.
 
 Som vanligt behöver vi skriva ett antal testprogram för att verkligen förstå hur saker hänger ihop.

@@ -79,6 +79,9 @@ Läs följande för att bekanta dig med tekniken.
     * [Introduktion](guide/kom-igang-med-programmering-i-php/introduktion)
     * [Grunder och struktur](guide/kom-igang-med-programmering-i-php/grunder-och-struktur) 
 
+1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden.
+    * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1) 
+
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 1 Introduktion
     * Kapitel 2 Variabler (ej vektor, objekt, 2.4 Miljövariabler)
