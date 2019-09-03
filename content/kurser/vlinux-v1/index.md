@@ -15,14 +15,6 @@ Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *vlinux*, 
 
 <!--more-->
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen ges hösten 2019 läsperiod 1.
-
-[/WARNING]
-
 Kursen har tre fokus. Det ena är att lära ut grunder och beståndsdelar i operativsystemet Linux. Det andra är att lära ut programmeringsspråket Bash och dess funktionalitet. Det tredje är att introducera virtualiseringsmiljöer och visa på hur man kan använda dem. Kursen är för de som skall jobba med webbprogrammering.
 
 Kursen börjar med att du installerar virtualiseringsmiljön VirtualBox med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker samt hur vi jobbar med flera Docker-containrar som kommunicerar med varandra.
