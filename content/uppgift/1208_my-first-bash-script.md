@@ -23,7 +23,7 @@ You have the knowledge corresponding to Chapter 24 "Writing Your First Script" i
 Introduction {#intro}
 -----------------------
 
-The files you create and use in this task should be saved in your course repo in the directory `me/kmom03/script`. They are used to report the task.
+The files you create and use in this task should be saved in your course repo in the directory `me/kmom02/script`. They are used to report the task.
 
 All scripts should be executable, so be sure to set the permissions on the scripts to be executable.
 
