@@ -15,7 +15,7 @@ You will in this guide install the `dbwebb` **C**ommand **L**ine **I**nterface (
 First we will start by installing Git version control, curl, wget, rsync and ssh other programs which will be used in the background to fetch course material and example code. Open the Terminal program in Debian in VirtualBox and run the following command.
 
 ```bash
-$ sudo apt-get install curl rsync wget git openssh
+$ sudo apt-get install curl rsync wget git openssh-server
 ```
 
 Do not copy the `$` it indicates a terminal prompt and that the command should be run inside a terminal.
