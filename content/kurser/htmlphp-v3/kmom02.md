@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2019-09-06": (I, mos) Ny videoserie tillsammans med guiden.
     "2018-08-21": (H, mos) Uppdaterad inför ht18.
     "2017-08-28": (G, mos) Bort referens till Firebug.
     "2017-06-15": (F, mos) Uppdaterad labbserie.
@@ -50,6 +51,10 @@ Läs följande för att fortsätta bekanta dig med tekniken.
 1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
     * [Värden, variabler och typer](guide/kom-igang-med-programmering-i-php/varden-variabler-och-typer)
     * [Kontrollstrukturer](guide/kom-igang-med-programmering-i-php/kontrollstrukturer)
+    * [Sidkontroller](guide/kom-igang-med-programmering-i-php/sidkontroller)
+
+1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden. Kika på de videor som är markerade "[Typer]" och "[Kontrollstrukturer]".
+    * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1) 
 
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 5 Villkorssatser
