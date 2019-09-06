@@ -230,7 +230,7 @@ Varje kursmoment kan ha fler läsanvisningar som nämns i respektive instruktion
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2) samt en [lektionsplan](program/webbprogrammering/lektionsplan/lasperiod3).
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](kurser/vlinux-v1/studieplan) samt en [lektionsplan](kurser/vlinux-v1/lektionsplan).
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
