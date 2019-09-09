@@ -15,6 +15,8 @@ node    Node.js is a JavaScript-based platform for s… 7253    [OK]
 
 Innan vi börjar behöver vi även något att utgå ifrån.
 
+*Se till att skapa en arbetsmapp lokalt så du inte är i tex roten. Vi kommer kopiera filer med `.` vilket tar alla filer i nuvarande mapp.*
+
 ```
 $ mkdir server
 $ cd server

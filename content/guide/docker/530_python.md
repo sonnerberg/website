@@ -8,6 +8,8 @@ Python
 
 Vi går igenom hur vi kan installera Flask och jobba med en server i Python.
 
+*Se till att skapa en arbetsmapp lokalt så du inte är i tex roten. Vi kommer kopiera filer med `.` vilket tar alla filer i nuvarande mapp.*
+
 Även här behöver vi lite struktur innan vi kör igång:
 
 ```

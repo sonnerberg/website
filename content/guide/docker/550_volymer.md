@@ -25,7 +25,7 @@ Dockerfile:
 FROM debian:buster-slim
 
 RUN apt-get update && \
-    apt-get -y apache2
+    apt-get install -y apache2
 
 CMD apachectl -D FOREGROUND
 ```
