@@ -29,8 +29,8 @@ Reading  {#read}
 
 *(ca: 10 study hours)*
 
-DV1466 and DV1563:  
-    1. Use the [guide](/guide/get-started-with-bash) and online references.  
+DV1466 and DV1563:
+    1. Use the [guide](/guide/get-started-with-bash) and online references.
     2. Use the article ["Create Bash-script with options, commands and arguments"](kunskap/create-bash-script-with-options-commands-and-arguments).
 
 
@@ -76,7 +76,7 @@ Then on the education platform Canvas do a hand in for assignment 4 with a text 
 
 Your grade on this assignment and points towards the final grade is given based on the following criteria:
 
-| Grade | Final grade points | Assignments | Reflective answers | Extra assignments in labs |
+| Grade | Final grade points | Assignments | Reflective answers | Optional assignment in Mazerunner |
 |-------|----------|------|------ |------|
 | A     | 20       | X    | X     | X
 | C     | 15       | X    | X  OR | X
