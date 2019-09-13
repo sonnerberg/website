@@ -78,7 +78,7 @@ Creating a Name-based Virtual Host {#namn}
 Now let's create an Apache Name-based Virtual Host. Suppose we have a customer and we will create their website linux.dbwebb.se. But, we first want to test it in our own development environment, by running the same domain through a name-based virtual host in Apache.
 
 
-### Skapa en konfigfil för den virtuella hosten {#config}
+### Create a config file for the virtual host {#config}
 
 There is a directory `/etc/apache2/sites-available` where you put the config files for the virtual hosts you have. Then *you enable* the virtual hosts that Apache will use. Then the files are linked in the directory `sites-enabled`.
 
