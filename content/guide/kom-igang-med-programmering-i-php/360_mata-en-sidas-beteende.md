@@ -78,7 +78,7 @@ echo "Current: $memoryCurrent\n";
 echo "Limit: $memoryLimit\n";
 ```
 
-Man får läsa sig till i manualen för att se vad returvärdena representerar. De två första funktionerna returnerar antalet byte (B) och vill man istället skriva ut KB så dividerar man värdet med 1024 och vill man skriva ut MB så dividerar man med 1024x20124.
+Man får läsa sig till i manualen för att se vad returvärdena representerar. De två första funktionerna returnerar antalet byte (B) och vill man istället skriva ut KB så dividerar man värdet med 1024 och vill man skriva ut MB så dividerar man med 1024x124.
 
 
 
