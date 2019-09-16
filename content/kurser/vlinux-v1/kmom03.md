@@ -7,14 +7,6 @@ revision:
 Kmom03: Introduktion till Docker
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen ges hösten 2019 läsperiod 1.
-
-[/WARNING]
-
 Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med en annan teknik för virtualisering: Docker. Vi kommer även bekanta oss med skriptprogrammering i Bash.
 
 Mycket handlar om att förenkla vardagen, som programmerare, genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
