@@ -45,7 +45,7 @@ Som bekant servar Apache filerna från `/var/www/html/`. Om vi inte vill ändra 
 FROM debian:buster-slim
 
 RUN apt-get update && \
-    apt-get -y apache2
+    apt-get -y install apache2
 
 COPY example-site/ /var/www/html/
 
@@ -69,7 +69,7 @@ Dockerfile:
 FROM debian:buster-slim
 
 RUN apt-get update && \
-    apt-get -y apache2
+    apt-get -y install apache2
 
 COPY example-site/ /var/www/html/
 COPY ./example-site.conf /etc/apache2/sites-enabled/000-default.conf
