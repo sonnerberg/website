@@ -25,7 +25,7 @@ Nu vet vi hur vi bygger en egen image med hjälp av Docker. Vi har också gått 
 
 
 
-Läsanvisningar  {#lasanvisningar}
+<!-- Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 0 studietimmar)*
@@ -42,7 +42,7 @@ Det finns inga läsanvisningar kopplade till kursmomentet.
 
 Titta på följande:
 
-Det finns inga videor kopplade till kursmomentet.
+Det finns inga videor kopplade till kursmomentet. -->
 
 <!-- 1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 04. -->
 
@@ -51,7 +51,7 @@ Det finns inga videor kopplade till kursmomentet.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-12 studietimmar)*
+<!-- *(ca: 15-20 studietimmar)* -->
 
 ### Övningar {#ovningar}
 
