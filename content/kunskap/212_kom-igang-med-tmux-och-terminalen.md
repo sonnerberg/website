@@ -116,7 +116,7 @@ Starta tmux för första gången, du får då en ny tmux-session.
 tmux
 ```
 
-Du är nu i en tmux-session. Du kan koppla bort dig från sessionen, *detacha*, via kommandot prefix + `d`. Det betyder i vårt fall kommandosekvensen `ctrl-a d`. Tryck ned ctrl-tangenten tillsammans med `a`. Släpp ctrl-tangenten och tryck `d`.
+Du är nu i en tmux-session. Du kan koppla bort dig från sessionen, *detacha*, via kommandot prefix + `d`. Det betyder i vårt fall kommandosekvensen `ctrl-a d`. Tryck ned ctrl-tangenten tillsammans med `a`. Släpp ctrl och a tangenterna och tryck `d`.
 
 Du är nu tillbaka vid terminalens prompt och du kan lista de sessioner som är aktiva.
 
@@ -164,8 +164,8 @@ Om du listar dina sessioner så ser du namnet på de sessioner som är namngivna
 
 ```bash
 $ tmux ls
-1: 1 windows (created Tue Jun 30 13:18:04 2015) [196x58] (attached)    
-2: 1 windows (created Tue Jun 30 16:41:07 2015) [80x23]                
+1: 1 windows (created Tue Jun 30 13:18:04 2015) [196x58] (attached)
+2: 1 windows (created Tue Jun 30 16:41:07 2015) [80x23]
 basic: 4 windows (created Tue Jun 30 13:15:35 2015) [239x68] (attached)
 ```
 
