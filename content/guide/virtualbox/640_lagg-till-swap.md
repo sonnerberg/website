@@ -24,6 +24,8 @@ När det är klart så högerklickar du på den nya partitionen och väljer "Inf
 
 Starta terminalen och kör som root: `$ nano /etc/fstab`.
 
-Byt ut UUID:t under "swap" mot det du kopierade. Spara filen och starta om VM.
+Byt ut UUID:t under "swap" mot det du kopierade. Spara filen.
+
+Det sista du behöver göra är att aktivera den nya partitionen inifrån GParted. Högerklicka på partitionen och välj "swapon". Starta sedan om din VM.
 
 Klart.
