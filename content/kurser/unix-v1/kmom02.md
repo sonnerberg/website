@@ -50,6 +50,9 @@ DV1466 Read the following:
 
 
 
+### Bash Guide {#guide}
+
+Kenneth has created a [Bash guide](guide/get-started-with-bash) showing common commands and structures in the Bash programming language and how to use the commands and structures.
 
 
 
