@@ -7,14 +7,6 @@ revision:
 Kmom05: Docker network
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen ges hösten 2019 läsperiod 1.
-
-[/WARNING]
-
 Nu har vi kontroll på hur vi kan hantera en webbserver i Docker. Vi tar ett steg till in i Bashprogrammeringen och bygger ett script som kan prata med en server.
 
 Du kommer få en färdig server, skriven i Node.js, och ett RESTful API till servern. Servern implementerar en [*maze*](https://en.wikipedia.org/wiki/Maze). Servern är färdig och du kan testköra den via kommandot curl.
@@ -26,26 +18,6 @@ Så är upplägget. Låt se hur bra vingarna bär. Upplägget på detta kursmome
 <!--more-->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-
-Läsanvisningar  {#lasanvisningar}
----------------------------------
-
-*(ca: 0 studietimmar)*
-
-
-### Kurslitteratur  {#kurslitteratur}
-
-Det finns ingen läsanvisning i kurslitteraturen.
-
-
-
-### Video  {#video}
-
-Titta på följande:
-
-Det finns inga videos kopplade till kursmomentet.
 
 <!-- 1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce__96JmUrXLdfgGiXy_OQ_m)", kika på de videor som börjar på 05. -->
 
@@ -79,12 +51,6 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete under mappen `kmom05/maze/`.
 
 1. Lägg till redovisningstexten i din me-sida.
-
-
-
-### Extra {#extra}
-
-Det finns inga extra uppgifter.
 
 
 
