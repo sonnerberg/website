@@ -47,6 +47,8 @@ Kika igenom följande artiklar.
 
 1. https://12factor.net/logs
 
+1. http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/
+
 
 ### Video {#video}
 
@@ -56,7 +58,7 @@ Det finns generellt kursmaterial i video form.
 
 1. Kolla på [AWS in 10 minutes](https://www.youtube.com/watch?v=r4YIdn2eTm4).
 
-1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[Devops streams]()".
+1. Kursen innehåller genomgångar och föreläsningar som spelas in och därefter läggs i en spellista. Du kan nå spellistan på "[Devops streams]()".
 
 
 

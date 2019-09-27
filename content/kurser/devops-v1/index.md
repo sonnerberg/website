@@ -98,16 +98,7 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 ### Kmom01: Introduktion till DevOps {#kmom01}
 
-I kmom01 ska vi börja med bekanta oss med konceptet DevOps och börja på ett projekt.
-Introduktion till DevOps och bekanta med koden. Köra tester osv...
-Skaffa DO.
-Manuellt sätt upp projektet att fungera?
-<!-- Skriv enhetstester från början, tips att testa på TDD. Jag rekomenderar boken Clean Architecture för en intro till TDD och annat bra.
-Gör ett GitHub repo och lägg till Travis/Circle CI som kör testerna och validerar kod. -->
-
-Logging från start?
-Skaffa cloud miljö, City networks/DO, och Domän.
-
+Vi startar kmom01 med att bekanta oss med koden för ett redan påbörjat projekt. Vi behöver servrar för att driftsätta projektet och ska därför skaffa oss konto på [Amazon Web Services](https://aws.amazon.com/). Dessutom börjar vi titta på innebörden av DevOps.
 
 Läs [instruktionen till kursmoment 01](./kmom01).
 

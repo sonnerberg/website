@@ -63,6 +63,8 @@ Det finns generellt kursmaterial i video form.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna..
 
+ansible linter
+
 1. [Configuration Management med Ansible]()
 
 1. [Continuous Delivery med Circle CI och Github]()
@@ -74,13 +76,15 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna..
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Utöka projektet med Ansible och CD. (Gör om skripten till ansible kod med 3 servrar istället för 1)
-
+Om jobbar tillsammans ska de ha varsin användare. https://dev.iachieved.it/iachievedit/ansible-and-aws-part-5/
 1. Skriv skript som kollar om service är uppe, om inte kör ansible för att sätta upp annars bara uppdatera. (En deployer node?)
 
-1. Lägg till något i koden.
+<!-- 1. Lägg till något i koden. -->
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v2.0.0, om du pushar kmom02 flera gånger kan du öka siffrorna efter 2:an.
 
+
+extra: fixa vpc för servrarna
 
 
 Resultat & Redovisning  {#resultat_redovisning}
