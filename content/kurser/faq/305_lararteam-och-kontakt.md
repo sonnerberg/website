@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-10-01": (E, mos) Bort med gemensam mailadress dbwebb@bth.se.
     "2019-06-12": (D, mos) Städning inför hösten 2019.
     "2018-06-19": (C, mos) Städning inför hösten 2018.
     "2017-03-09": (B, mos) Detaljer om lärarteam assistenter 2017/18.
@@ -48,9 +49,12 @@ För läsåret är följande lärarassistenter, i olika omfattning.
 | ![Magnus](https://www.gravatar.com/avatar/f6519749cab15b46f612d0dfe249b5d7?s=100) | Magnus&nbsp;Greiff | Munge | mangegreiff@gmail.com [GitHub](https://github.com/MagnusGreiff/) [LinkedIn](https://www.linkedin.com/in/magnus-greiff-582907103/) |
 -->
 
+<!--
 
 
 Kursadministrativt {#mail}
 --------------------------------------
 
 Du kan alltid maila till vår gemensamma mail dbwebb@bth.se. Där får du hjälp med allt som rör kurserna.
+
+-->
