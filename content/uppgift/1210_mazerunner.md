@@ -39,6 +39,20 @@ This is what it may look like when you solve the maze with your script:
 
 ### About the server maze {#about}
 
+Start by installing node and npm in debian on your virtual machine with the following commands. Node is JavaScript on the server and is used to run the maze server.
+
+```shell
+$ sudo apt update
+$ sudo apt install curl
+$ cd ~
+$ curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+$ sudo bash nodesource_setup.sh
+$ sudo apt install nodejs
+$ nodejs -v
+```
+
+You should see a version number starting on 10 after the last command.
+
 The server [maze is in the course repot](https://github.com/dbwebb-se/unix/tree/master/example/maze). There is all the source code and a specification of the [server's API](https://github.com/dbwebb-se/unix/blob/master/example/maze/api.md).
 
 Start by getting acquainted with the server's API.
@@ -138,4 +152,4 @@ Validate your `mazerunner.bash` script by doing the following commands in the co
 $ dbwebb validate maze
 ```
 
-Correct any errors that pop up and publish again. When it looks green you are done.  
+Correct any errors that pop up and publish again. When it looks green you are done.
