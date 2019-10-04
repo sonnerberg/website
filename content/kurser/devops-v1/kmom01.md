@@ -14,7 +14,7 @@ Det är en fullspäckat kurs där vi ska lära oss många ny verktyg och koncept
 
 
 
-## Vad är devops {#devops}
+## Vad är devops? {#devops}
 
 Kolla på följande video för att få en introduktion till ämnet devops. Devops är ett brett ämne med många olika defenitioner, här försöker skaparen av CM verktyget [Chef](https://www.chef.io) beskriva konceptet och komma fram till en rimlig definition.
 
@@ -50,6 +50,9 @@ För att få en introduktion till vad AWS är kan ni kolla in "AWS in 10 minutes
 
 Sen behöver du skaffa ett konto på AWS, som student kan man skapa ett gratiskonto och få 100$ i kredit gör till och med steg 10 i [AWS Educate starter account](https://www.instructables.com/id/Guide-to-AWS-Educate-Starter-Account/). Om du redan har ett konto på AWS kan du få 75$ i kredit på det. Gör då sida 4 och 5 i [Creating an aws account for students...](http://holowczak.com/creating-an-aws-account-for-student-use-with-aws-educate/4/).
 
+Skapa en server på AWS.
+
+[YOUTUBE src="DVSixRYUQtw" caption="101 Skapa server på AWS."]
 
 
 #### Domännamn {#domain}
@@ -58,14 +61,29 @@ Det underlättar dessutom om vi har ett domännamn som vi kan länka till en ser
 
 <!-- Möjlig alternativ till namecheap, http://www.dot.tk/en/index.html?lang=en -->
 
-Nu när vi har tillgång till servrar och ett domännamn ska vi sätta upp en server och koppla domännamnet till den. Spana in videorna 100-110...
-LÄGG IN LÄNG TILL SPELLISTA MED VIDEOS. En video kommer bl.a. gå igenom [Första 10 minuter på en server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#first10), där kan ni hitta samma sak fast skriftligt.
+Koppla ditt domän namn till servern.
+
+[YOUTUBE src="diuYaLN1ius" caption="102 Koppla domän till AWS."]
+
+
+
+#### 10 första minuterna {#10first}
+
+Gör sen [Första 10 minuter på en server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#first10) delen. Tänk på att logga in som `admin` istället för `root` och du kan skippa följande kommandon:
+```bash
+apt-get remove --purge unscd
+userdel -r debian
+```
+Brandväggsdelen är frivillig i och med att vi kommer använda oss av security groups i AWS för att kontrollera kopplingar till servern. Om du inte litar på sercurity groups kan du installera `ufw` och använda det istället.
 
 
 
 ### Appen {#appen}
 
 Nästa steg är att bekanta oss med appen som du ska jobba på i kursen. Läs igenom och följ [Devops appen](...).
+
+1. Forka och bekanta dig med koden i projektet, CI och driftsätt [Ett proj](uppgift/).
+
 
 1. [SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/) introducerar SQLAlchemy och visar upp grundliga exempel.
 
@@ -118,7 +136,6 @@ När du pushar din kod ska CircleCi köra alla unittester, integrationtester och
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Forka och bekanta dig med koden i projektet, CI och driftsätt [Ett proj](uppgift/).
 
 !!!! Om logga in med fel användarnamn får man bara ett error, borde vara att det inte finns, om databasen inte är skapad (flask db upgrade)!!!!
 !!!! De lägga till pagination??? !!!!
