@@ -44,16 +44,7 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
-Vilka läsanvisningar finns till dett kmom?
-
-
-Föreläsningar:
-
-* Attacker
-
-Läsanvisningar: Ja. Bifogat finns läsmaterial för riskanalys.
-
-Videor?
+* [OWASP Top 10 Application Security Risks - 2017](https://www.owasp.org/index.php/Top_10-2017_Top_10)
 
 
 
