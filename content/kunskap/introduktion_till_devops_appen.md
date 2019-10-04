@@ -12,9 +12,12 @@ Introduktion till Devops appen
 Introduktion till projektet vi ska jobba med i hela kursen. Vi ska titta på lite kod, strukturen och de olika verktygen som används för appen.
 <!--more-->
 
+Vi behöver ett projekt/en app att jobba med när vi ska lära oss devops. Jag har redan skapat en blog som du ska använda och jobba vidare med i kursen. Bloggen baseras på [The Flask mega tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world). I den tutorialen visar Miguel hur man skapar en blog i Flask från grunden till att driftsätta den. Jag har redan kodat ihop appen men du kan använda dig av hans tutorial för att förstå vad saker gör och hur den fungerar.
 
 
-## en titel {#titel}
+
+## Appen {#appen}
+
 
 
 
