@@ -7,14 +7,6 @@ revision:
 Kmom06: Docker Compose
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen ges hösten 2019 läsperiod 1.
-
-[/WARNING]
-
 Nu har vi koll på hur vi kan strukturera lite större Bash-script. Vi ska gå vidare med Docker och kika på *Docker Compose*. Det underlättar för oss när Docker konstruktionerna växer. Vi ska ta vår Mazerunner från förra kursmomentet och använda oss utav Docker Compose för att köra igång kontainrarna och nätverket. Vi ska även lägga till lite funktionalitet till Mazerunner. Utöver Bash och Docker Compose ska vi titta på vad reguljära uttryck är och hur vi kan arbeta med dem.
 
 <!--more-->
@@ -33,23 +25,6 @@ Så kan det se alltså ut när ena delen är klar.
 
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
-
-*(ca: 0 studietimmar)*
-
-
-###Kurslitteratur  {#kurslitteratur}
-
-Det finns ingen läsanvisning kopplad till kursmomentet.
-
-
-
-###Video  {#video}
-
-Titta på följande:
-
-Det finns inga videos kopplade till kursmomentet.
-
-
 
 ###Lästips {#lastips}
 
@@ -83,12 +58,6 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften [Spel loop i Mazerunner](uppgift/mazerunner-loop). Du arbetar i mappen `maze2/`.
 
 1. Lägg till redovisningstexten i din me-sida.
-
-
-
-###Extra {#extra}
-
-Det finns inga extrauppgifter.
 
 
 
