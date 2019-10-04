@@ -52,7 +52,7 @@ Sen behöver du skaffa ett konto på AWS, som student kan man skapa ett gratisko
 
 Skapa en server på AWS.
 
-[YOUTUBE src="DVSixRYUQtw" caption="101 Skapa server på AWS."]
+[YOUTUBE src="fA_4k8vJp7I" caption="101 Skapa server på AWS."]
 
 
 #### Domännamn {#domain}
