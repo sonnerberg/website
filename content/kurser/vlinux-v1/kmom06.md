@@ -70,6 +70,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
+* Kan du se fördelar/nackdelar med Compose?
 * Hur väl har du fått ordning på begreppen kring klient och server?
 * Känner du dig bekväm med Docker överlag?
 * Kommer du använda Docker utanför kursens ramar?
