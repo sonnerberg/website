@@ -71,7 +71,7 @@ Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopi
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom04/marvin3/*.py kmom05/marvin4/
+cp -ri kmom04/marvin3/* kmom05/marvin4/
 cp -i ../example/marvin/quotes_lgtg.txt kmom05/marvin4/quotes.txt
 cd kmom05/marvin4
 ```
