@@ -7,16 +7,6 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen ges hösten 2019 läsperiod 1.
-
-[/WARNING]
-
-
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -56,7 +46,7 @@ Projektspecifikation {#projspec}
 
 Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
-De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De två sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
+De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De två sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg. Om grundkraven inte når 30 poäng får man komplettera din inlämning och kan då max få 30 poäng.
 
 Krav 1-3 (Grundkraven) ger max 10 poäng styck, totalt är det 30 poäng.  
 Krav 4 (Optionellt) ger max 10 poäng.  
