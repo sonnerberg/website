@@ -72,6 +72,12 @@ dbwebb publish jetty
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
 
+<!--
+
+Extrauppgift om söksida som leder till undersida. Extra trixigt med querysträngen.
+
+-->
+
 
 
 Tips från coachen {#tips}
