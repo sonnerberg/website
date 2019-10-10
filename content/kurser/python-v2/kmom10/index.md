@@ -28,27 +28,27 @@ Detta kursmoment avslutar och examinerar kursen.
 Upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Den individuella examinationen genomfördes den 2018-10-30. Omexamination genomfördes 2019-01-10. **Restexamination genomförs den 2019-06-10**.
+<!-- Den individuella examinationen genomfördes den 2019-10-28. Omexamination genomfördes 2019-01-10. **Restexamination genomförs den 2019-06-10**. -->
 
-Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Redovining kan lämnas in dagen efter examinationen, det vill säga 2019-06-11. Det är för att ni ska få en dag på er att göra er redovisning.
+Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Redovisning kan lämnas in dagen efter examinationen, det vill säga 2019-10-29. Det är för att ni ska få en dag på er att göra er redovisning.
 
 Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom dessa fem timmar.
 
 För båda studentgrupper är detta en **individuell** examination och uppgifterna ska lösas på egen hand.
 
-Lärarteamet finns tillgängliga i gitter och forum för hjälp med tekniska problem samt frågor och förtydliganden.
+Lärarteamet finns tillgängliga i gitter för hjälp med tekniska problem samt frågor och förtydliganden.
 
 Nedanför beskriver vi upplägget för de olika studentgrupperna:
 
 ### Campus studenter {#campus}
-Examination sker i sal H429 och H430 mellan 8:00 och 13:00.
+Examination sker i sal H429, H430 och G404 mellan 8:00 och 13:00.
 
 ### Distansprogram och kurspakets studenter {#distans}
 Examination sker på valfri plats, det går att ladda ner examination från kl 8:00 till 23:59. När du har hämtat hem examinationen har du fem timmar på dig att göra klart den och lämna in.
 
 
 
-Hämta examinationstillfälle 2019-06-10 (try3) {#hamta}
+Hämta examinationstillfälle 2019-10-28 (try1) {#hamta}
 ----------------------------------------------------------------------
 
 I [Om examination med dbwebb exam](kurser/python-v2/kmom10/om) finns mer information om `dbwebb exam`-verktyget.
@@ -66,10 +66,10 @@ dbwebb init
 För att skapa din individuella examination skriv in följande kommando.
 
 ```
-dbwebb exam checkout try3
+dbwebb exam checkout try1
 ```
 
-Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try3` enligt följande.
+Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try1` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -78,13 +78,13 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 
 
-Rätta din examination (try3) {#ratta}
+Rätta din examination (try1) {#ratta}
 ----------------------------------------------------------------------
 
 För att rätta din individuella examination och visa hur många uppgifter du har klarat och dina poäng använd följande kommando.
 
 ```bash
-dbwebb exam correct try3
+dbwebb exam correct try1
 ```
 
 Längst upp i utskriften finns en sammanfattning av vilka uppgifter du har löst och hur många poäng du har.
@@ -93,20 +93,20 @@ Under sammanfattningen finns en utskrift från testprogrammet som körs när exa
 Du kan ignorera fel från uppgifter du inte utfört.
 
 
-Validera din examination (try3) {#validera}
+Validera din examination (try1) {#validera}
 ----------------------------------------------------------------------
 
-Precis som tidigare inlämningar i kursen ska koden validera. `dbwebb validate try3` validerar din individuella examination och visar vilka valideringsfel du har i koden. Din individuella examination skall validera när den lämnas in inom tidsramen för den individuella examinationen.
+Precis som tidigare inlämningar i kursen ska koden validera. `dbwebb validate try1` validerar din individuella examination och visar vilka valideringsfel du har i koden. Din individuella examination skall validera när den lämnas in inom tidsramen för den individuella examinationen.
 
 
 
-Lämna in din examination (try3) {#lamna}
+Lämna in din examination (try1) {#lamna}
 ----------------------------------------------------------------------
 
 För att  lämna in din individuella examination använd följande kommando.
 
 ```bash
-dbwebb exam seal try3
+dbwebb exam seal try1
 ```
 
 Kommandot publicerar hela din me-katalog till studentservern.
@@ -114,7 +114,7 @@ Kommandot publicerar hela din me-katalog till studentservern.
 Du kan när som helst hämta ett kvitto på din pågående examination och se detaljer om den, till exempel hur länge du hållit på.
 
 ```bash
-dbwebb exam receipt try3
+dbwebb exam receipt try1
 ```
 
 
@@ -124,7 +124,7 @@ Bedömning och betygsättning {#bedomning}
 
 Det finns ett särskilt dokument som beskriver hur [bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-individuell).
 
-Under hela examinationen kan du köra kommandot `dbwebb exam correct try3` för att rätta dina lösningar och se hur många poäng du har uppnått.
+Under hela examinationen kan du köra kommandot `dbwebb exam correct try1` för att rätta dina lösningar och se hur många poäng du har uppnått.
 
 
 
@@ -186,16 +186,20 @@ Rätta förberedelse uppgiften {#rattningfor}
 Tidigare examinationer {#tidigare}
 ----------------------------------------------------------------------
 
-`try1` genomfördes 2018-10-30, uppgifter och lösningsförslag finns tillgängligt i exempel-mappen, `example/old_exams/lp1-2018`.
+Inga genomförda än för HT19.
+<!-- `try1` genomfördes 2018-10-30, uppgifter och lösningsförslag finns tillgängligt i exempel-mappen, `example/old_exams/lp1-2018`.
 
 `try2` genomfördes 2019-01-10.
+
+`try3` genomfördes 2019-06-10. -->
+
 
 
 Omexamination {#omexamination}
 ----------------------------------------------------------------------
 Som student har du rätt till tre examinationstillfällen med andra ord om du inte klarar första har du två försök till på dig.
-Följande tillfällen erbjuds efter 2018-10-30:
+Följande tillfällen erbjuds efter 2019-10-28:
 
-Omexaminationstillfälle torsdagen den 2019-01-10.
+Omexaminationstillfälle torsdagen den 2020-01-10.
 
-Restexaminationstillfälle måndagen den 2019-06-10.
+Restexaminationstillfälle måndagen den 2020-06-10.
