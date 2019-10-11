@@ -29,16 +29,18 @@ Kursen planeras ge hösten 2019.
 
 
 
-Labbmiljön  {#labbmiljo}
+Föreläsningar  {#forelasningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 2 studietimmar)*
 
-Behövs någon särskild labbmiljö för detta kmom?
+Du ska medverka på föreläsningen:
+
+* 10:00 (2019-11-11)
 
 
 
-Läs &amp; Studera  {#lasanvisningar}
+<!-- Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
@@ -46,24 +48,20 @@ Läs &amp; Studera  {#lasanvisningar}
 Föreläsningar:
 - Introduktion till privacy samt exempel på skyddstekniker
 
-Läsanvisningar, video?
+Läsanvisningar, video? -->
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 10-14 studietimmar)*
 
-Exempel på uppslag för labbar:
+1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal. Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
 
-* POST vs GET
-* SQL-injection och datahantering
-* url dataläckage
-* spara lösenord.
+1. Fyll på med redovisningstexten i din me-sida.
 
-
-
+<!--
 ### Övningar {#ovningar}
 
 Finns det övningar som studenten gör för att förbereda sig inför uppgifterna?
@@ -72,9 +70,7 @@ Finns det övningar som studenten gör för att förbereda sig inför uppgiftern
 
 ### Uppgifter {#uppgifter}
 
-<!-- Finns det uppgifter som skall utföras och redovisas? -->
-
-1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)". Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
+1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)". Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa. -->
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -86,8 +82,5 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-<!-- * Fråga relaterad till kursmaterialet. -->
-
-* Skriv ett stycke där du reflekterar över vad ni diskuterat i gruppen. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
 * Är privacy något du kommer tänka på/argumentera för när du kommer ut i arbetslivet? Varför/varför inte?
 * Vilken är din TIL för detta kmom?
