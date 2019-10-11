@@ -64,7 +64,7 @@ Det finns generellt kursmaterial i video form.
 Gör följande övningar, de behövs normalt för att klara uppgifterna..
 
 ansible linter
-
+https://ryaneschinger.com/blog/securing-a-server-with-ansible/
 1. [Configuration Management med Ansible]()
 
 1. [Continuous Delivery med Circle CI och Github]()
