@@ -80,12 +80,7 @@ Brandväggsdelen är frivillig i och med att vi kommer använda oss av security 
 
 ### Appen {#appen}
 
-Nästa steg är att bekanta oss med appen som du ska jobba på i kursen. Läs igenom och följ [Devops appen](...).
-
-1. Forka och bekanta dig med koden i projektet, CI och driftsätt [Ett proj](uppgift/).
-
-
-1. [SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/) introducerar SQLAlchemy och visar upp grundliga exempel.
+Nästa steg är att bekanta oss med appen som du ska jobba på i kursen. Läs igenom och följ [Introduktion till Devops appen](kunskap/introduktion_till_devops_appen).
 
 
 
@@ -97,7 +92,7 @@ Vi har en server och vi har en app, då måste vi lära oss ["Driftsätta en Fla
 
 ### Continues Integration {#ci}
 
-Vi vill har en CI-kedja till repot för appen så att tester automatiskt körs när du gör push. I kursen har jag valt att använda [CircleCi](https://circleci.com/). Läs igenom ["Continuous Integration With Python: An Introduction"](https://realpython.com/python-continuous-integration/) för att se hur man kan sätta upp CircleCi för ett Python projekt och gör sen det för ditt forkade repo.  
+Vi vill ha en CI-kedja till repot så att testerna automatiskt körs när du gör push. I kursen har jag valt att använda [CircleCi](https://circleci.com/). Läs igenom ["Continuous Integration With Python: An Introduction"](https://realpython.com/python-continuous-integration/) för att se hur man kan sätta upp CircleCi för ett Python projekt och gör det sen för ditt forkade repo.  
 När du pushar din kod ska CircleCi köra alla unittester, integrationtester och validera koden.
 
 
@@ -106,40 +101,24 @@ När du pushar din kod ska CircleCi köra alla unittester, integrationtester och
 
 ### Video {#video}
 
-1. Kursen innehåller genomgångar och föreläsningar som spelas in och därefter läggs i en spellista. Du kan nå spellistan på "[Devops streams]()".
+1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[Devops streams]()".
+
+1. I "[kursen devops]()" hittar du alla videor som är kopplade till kursmomentet, de börjar på 1xx i namnet.
 
 
 
 ### Lästips {#lastips}
 
-1. [The 12 Factor App](https://12factor.net/) är en populär "standard" för att bygga Software-as-a-service och är används mycket i devops sammanhang.
+1. [The 12 Factor App](https://12factor.net/) är en populär "standard" för att bygga Software-as-a-service och  används mycket i devops sammanhang.
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Uppgifter  {#uppgifter}
 -------------------------------------------
-
-*(ca: 8-12 studietimmar)*
-
-
-### Övningar {#ovningar}
-
-
-
-1. Driftsätta ett Python Flask projekt . 
-
-1. Sätt upp Continuous integration med CircleCi 
-
-
-
-### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-
-!!!! Om logga in med fel användarnamn får man bara ett error, borde vara att det inte finns, om databasen inte är skapad (flask db upgrade)!!!!
-!!!! De lägga till pagination??? !!!!
-1. Skriv egna tests/fixa bugg och driftsätt nya versionen [Uppdatera och driftsätt manuellt](uppgift/uppdatera-och-driftsätt-manuellt) 
+1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Miguels guide för att följa andra](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers). Se till att de nya testerna går igenom och driftsätt den nya versionen på din server.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0. Om du pushar kmom01 flera gånger kan du öka siffrorna efter 1:an.
 
@@ -149,8 +128,6 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
-
-*(ca: 1 studietimmar)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
