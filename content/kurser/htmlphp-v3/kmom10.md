@@ -1,18 +1,13 @@
 ---
 author: mos
 revision:
-    "2018-10-12": (C, mos) Uppdatering och nytt alternativt projekt NVM.
-    "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
-    "2015-10-11": (A, mos) Första versionen till htmlphp v2.
+    "2019-10-14": "(D, mos) Trycker på Ux, responsivitet och kodstruktur."
+    "2018-10-12": "(C, mos) Uppdatering och nytt alternativt projekt NVM."
+    "2016-02-22": "(B, mos) Bort med not om kursutveckling och länk till version 1."
+    "2015-10-11": "(A, mos) Första versionen till htmlphp v2."
 ...
 Kmom10: Projekt och examination
 ==================================
-
-[WARNING]
-
-**Kursmomentet är under översyn, vissa smärre delar kan komma att uppdateras men i stort är strukturen som den här visas.**
-
-[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -21,11 +16,6 @@ Upplägget är enligt följande:
 * Projektet och redovisning (20-80h)
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar. Du kan själv styra din arbetsinsats genom att välja vilka optionella delar du utför.
-
-<!--
-tryck responsiv design
-tryck kodstruktur php, funktioner, filer
--->
 
 
 
@@ -103,6 +93,7 @@ Det finns många bilder i `img`-katalogen. Använd dem när du presenterar objek
 Objekten är i detta fallet de objekt som museet främst avser visa upp. Det finns även extra artiklar och information i underlaget. 
 
 
+
 #### Hem {#hem}
 
 Webbplatsen skall ha en välkomnande förstasida som visar på webbplatsens syfte och innehåll. En trevlig förstasida kan göra en lyckad webbplats.
@@ -134,7 +125,7 @@ Om-sidan skall även innehålla ett generellt textstycke om webbplatsen och dess
 
 #### Validera och kompabilitet {#validera}
 
-Webbplatsen skall validera för HTML5 och CSS3. Extensions specifika för en webbläsare är tillåtna (-moz, -webkit, etc).
+Webbplatsen skall validera för HTML5 och CSS3. Extensions specifika för en webbläsare är tillåtna (-moz, -webkit, etc) samt viss användning av nya CSS-konstruktioner som validatorn inte klarar av.
 
 Webbplatsen skall minst fungera i Firefox och Google Chrome.
 
@@ -148,11 +139,33 @@ Med andra ord, det skall vara en bra webbplats och fungera som man förväntar s
 
 
 
+#### Responsiv webbplats {#responsiv}
+
+Din webbplats skall ha viss responsivitet för att stödja att visas på små/stora enheter. 
+
+Det är okey om responsiviteten inte är helt komplett. Men det måste finnas element av responsivitet som är implementerade i webbplatsen.
+
+
+
+#### Kodstruktur och dokumentation {#kodstruktur}
+
+Gör ytterligare en sida till din webbplats, denna sida skall innehålla dokumentation av din webbplats. Du behöver inte lägga denna sidan i navbaren, men det måste finnas en länk till dokumentationssidan från din om-sida.
+
+I sidan skriver du om följande.
+
+1. Berätta om din kodstruktur som ligger bakom din webbplats. Du kan tex berätta om katalogstrukturen, konfigfilen, funktioner, vyer, sidkontroller respektive multisidkontroller och så vidare.
+1. Berätta hur väl din sida fungerar responsivt.
+1. Ge förslag på ett par förbättringar du ser att man skulle kunna göra på din webbplats, i ett fiktivt vidareutvecklingsprojekt. 
+
+
+
 ### Krav 4: Presentera innehåll på alternativa sätt (optionell) {#k4}
 
 Var uppfinningsrik i hur du väljer att presentera objekten och artiklarna. Välj flera varianter på hur du presenterar dem och gör informationen lätt tillgänglig för slutanvändaren.
 
 Gör minst 2 av följande (och fyll gärna på med något egen variant du anser gynnar webbplatsen).
+
+Låt användarens upplevelse, User Experience (UX), styra dig i dina val. Enkelt sagt, gör en bra webbplats som har bra innehåll och äv enkel att använda och navigera på. 
 
 1. Gör en sökfunktion där man kan söka bland objekt och artiklar.
 
@@ -164,13 +177,13 @@ Gör minst 2 av följande (och fyll gärna på med något egen variant du anser 
 
 ### Krav 5: Galleri av bilder (optionell) {#k5}
 
-Skapa ett galleri som visar bilderna som är kopplade till objekten.
+Skapa en egen sida med ett galleri som visar bilderna som är kopplade till objekten.
 
-Använd inte JavaScript. Det ger ingen bonus. Gör en lösning baserad på PHP.
+Använd inte JavaScript. Det ger ingen bonus. Gör en lösning baserad på serversidan och PHP.
 
 Visa mindre bilder (thumbnails) på alla bilder. Välj att visa 4 bilder (välj själv antal) på en sida. Det skall finnas en länk "Nästa >" för att visa nästa 4 bilder, och föregående "< Föregående" 4 bilder. Användaren kan klicka runt och med enkelhet se alla bilder i arkivet, sida för sida.
 
-Om man klickar på en bild så leder den länken till att enbart bilden visas, antingen i en webbsida, eller bara som ren bild.
+Om man klickar på en bild så leder den länken till att enbart bilden visas, antingen i en webbsida, eller bara som ren bild direkt i webbläsaren.
 
 
 
@@ -197,7 +210,7 @@ Redovisning {#redovisning}
 
 2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet. 
 
-3. Se till att samtliga kursmoment validerar.
+3. Se till att samtliga kursmoment validerar i "dbwebb validate/publish".
 
 ```bash
 # Ställ dig i kursrepot
