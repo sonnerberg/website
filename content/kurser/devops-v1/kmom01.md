@@ -101,15 +101,17 @@ När du pushar din kod ska CircleCi köra alla unittester, integrationtester och
 
 ### Video {#video}
 
-1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[Devops streams]()".
+1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[Devops streams](https://www.youtube.com/playlist?list=PLKtP9l5q3ce90068cUPVMcPguKtFAqnvi)".
 
-1. I "[kursen devops]()" hittar du alla videor som är kopplade till kursmomentet, de börjar på 1xx i namnet.
+1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 1xx i namnet.
 
 
 
 ### Lästips {#lastips}
 
 1. [The 12 Factor App](https://12factor.net/) är en populär "standard" för att bygga Software-as-a-service och  används mycket i devops sammanhang.
+
+1. [DevOps Roadmap](https://roadmap.sh/devops) Visar upp vanligaste verktygen man behöver kunna för att jobba med de tekniska delarna av devops.
 
 
 
