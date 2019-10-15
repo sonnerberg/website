@@ -124,7 +124,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0. Om du pushar kmom01 flera gånger kan du öka siffrorna efter 1:an.
 
-1. Inkludera en länk till ditt GitHub repo i din inlämning på Canvas 
+1. Inkludera en länk till ditt GitHub repo och din webbsida (domännamn) i din inlämning på Canvas.
 
 
 
@@ -135,7 +135,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-1. Vad innebar devops för dig för en vecka sen?
+1. Vad var din uppfattning av devops för en vecka sen?
 
-1. Har det ändrats under denna veckan?
-...
+1. Har det ändrats efter denna veckan?
+
+1. Finns det något speciellt du vill lära dig i denna kursen?
+
+1. Vad tycker du om kmom01's upplägg och storlek?
