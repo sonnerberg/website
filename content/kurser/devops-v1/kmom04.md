@@ -2,12 +2,13 @@
 author:
     - aar
 revision:
-    "2019-07-29": "(A, aar) Första versionen."
+    "2019-10-15": "(A, aar) Första versionen."
 ...
-Kmom02: Configuration Management och Continuous Deployment
+Kmom04: Monitoring och logging
 ==================================
 
-Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss Ansible för Configuration Management (CM).
+Nu när vi har ett system upper och rullande behöver vi veta när något går fel, vi ska börja övervaka systemet.
+Vi kollar även på hur vi kan hantera att samla ihop loggar från flera olika källor.
 
 
 
@@ -47,16 +48,16 @@ Kolla in följande.
 
 Kika igenom följande artiklar.
 
-1. CD vs CD
 
 
 ### Video {#video}
 
 Det finns generellt kursmaterial i video form.
 
+
 1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[Devops streams](https://www.youtube.com/playlist?list=PLKtP9l5q3ce90068cUPVMcPguKtFAqnvi)".
 
-1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 2xx i namnet.
+1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 4xx i namnet.
 
 
 
@@ -70,25 +71,14 @@ Det finns generellt kursmaterial i video form.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna..
 
-ansible linter
-https://ryaneschinger.com/blog/securing-a-server-with-ansible/
-1. [Configuration Management med Ansible]()
-
-1. [Continuous Delivery med Circle CI och Github]()
-
 
 
 ### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Utöka projektet med Ansible och CD. (Gör om skripten till ansible kod med 3 servrar istället för 1)
-Om jobbar tillsammans ska de ha varsin användare. https://dev.iachieved.it/iachievedit/ansible-and-aws-part-5/
-1. Skriv skript som kollar om service är uppe, om inte kör ansible för att sätta upp annars bara uppdatera. (En deployer node?)
 
-<!-- 1. Lägg till något i koden. -->
-
-1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v2.0.0, om du pushar kmom02 flera gånger kan du öka siffrorna efter 2:an.
+1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v4.0.0.
 
 
 

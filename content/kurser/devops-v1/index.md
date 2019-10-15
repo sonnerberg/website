@@ -104,21 +104,17 @@ Läs [instruktionen till kursmoment 01](./kmom01).
 
 
 
-### Kmom02: Docker {#kmom02}
+### Kmom02: Configuration Management {#kmom02}
 
-Lära oss Docker, docker-compose och skapa en image för ert projekt.
-Kör docker i CI miljön.
-Simple CD miljö till molnet?
+Vi lär oss CM verktyget Ansible och använder det för att enkelt kunna skapa nya servrar och driftsätta vår kod.
 
 Läs [instruktionen till kursmoment 02](./kmom02).
 
 
 
-### Kmom03: IaC/CM {#kmom03}
+### Kmom03: Docker och Continuous Deployment {#kmom03}
 
-Vi går vidare med Continues Deployment och fixar så vi automatisk kan bygga miljön vi deployar koden i.
-Packer/Terraform/Ansible?
-Ni ska även fixa HTTPS till er domän.
+Vi packar in vårt kod i en Docker container och lär oss används docker-compose. Dessutom kollar vi på att automatisera driftsättning av vår container.
 
 Läs [instruktionen till kursmoment 03](./kmom03).
 
@@ -126,9 +122,8 @@ Läs [instruktionen till kursmoment 03](./kmom03).
 
 ### Kmom04: Monitoring och logging {#kmom04}
 
-Nu när vi har ett system upper och rullande behöver vi veta när något går fel, vi ska börja övervaka systemet och sätta upp notification när något går fel.
-Vi kollar även på hur vi kan hantera att samla ihop loggar från flera olika VMs.
-Litet kmom?
+Nu när vi har ett system upper och rullande behöver vi veta när något går fel, vi ska börja övervaka systemet.
+Vi kollar även på hur vi kan hantera att samla ihop loggar från flera olika källor.
 
 Läs [instruktionen till kursmoment 04](./kmom04).
 
@@ -136,18 +131,15 @@ Läs [instruktionen till kursmoment 04](./kmom04).
 
 ### Kmom05: Container orchestration {#kmom05}
 
-Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbörndan mellan dem.
-Swarm/Kubernets?
-
-Caching och load balancing, flytta något till kmom04/06?
+Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbördan mellan dem.
 
 Läs [instruktionen till kursmoment 05](./kmom05).
 
 
 
-### Kmom06:  {#kmom06}
+### Kmom06: Säkerhet {#kmom06}
 
-Vi dyker ner i säkerhet kring Docker och lär oss sätta upp en staging miljö.
+Hur säkrar vi upp vår docker miljö och våra ddevops flöden?
 
 Läs [instruktionen till kursmoment 06](./kmom06).
 
@@ -155,7 +147,7 @@ Läs [instruktionen till kursmoment 06](./kmom06).
 
 ### Kmom07/10: Uppsats {#kmom10}
 
-Avslutningsvis skriver du en uppsats. Uppsatsen är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
+Avslutningsvis skriver du en uppsats. Uppsatsen är det sista som du gör och tillsammans med alla redovisningar används detta som underlag för att examinera dig från kursen.
 
 Läs [instruktionen till kursmoment 07/10](./kmom10).
 
