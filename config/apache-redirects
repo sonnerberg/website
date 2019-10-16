@@ -298,6 +298,15 @@ Redirect /forum/utbildning/vlinux     /forum/viewforum.php?f=82
 
 
 
+# devops
+Redirect /devops         /kurser/devops
+Redirect /kurser/devops/studieplan  https://docs.google.com/spreadsheets/d/10YDcG5WMkEMGCWlv0qpHTcMXyXCQBQPtrwXYlz2JIuA/edit?usp=sharing
+Redirect /kurser/devops/lektionsplan    https://docs.google.com/spreadsheets/d/19OpBoi52bBRanF0TOeFTUqOfaEaVlKbBXksOKDFZe0w/edit?usp=sharing
+Redirect /kurser/devops  /kurser/devops-v1
+Redirect /forum/utbildning/devops     /forum/viewforum.php?f=57
+
+
+
 # javascript
 Redirect /javascript        /kurser/javascript
 
