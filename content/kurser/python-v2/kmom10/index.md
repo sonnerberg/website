@@ -30,7 +30,7 @@ Upplägg {#upplagg}
 
 <!-- Den individuella examinationen genomfördes den 2019-10-28. Omexamination genomfördes 2019-01-10. **Restexamination genomförs den 2019-06-10**. -->
 
-Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Redovisning kan lämnas in dagen efter examinationen, det vill säga 2019-10-29. Det är för att ni ska få en dag på er att göra er redovisning.
+Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Redovisning kan lämnas in dagen efter examinationen. Det är för att ni ska få en dag på er att göra er redovisning.
 
 Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom dessa fem timmar.
 
