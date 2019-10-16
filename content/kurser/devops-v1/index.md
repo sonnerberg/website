@@ -178,6 +178,12 @@ Som kurslitteratur har jag valt följande böcker. Det är en god idé att läsa
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter. Välj och vraka och ta ett eget beslut om de böcker du vill använda.
 
 
+* **[Effective DevOps](http://tinyurl.com/y6jy5x8u)** -- Jennifer Davis, Ryn Daniels  
+  Building a Culture of Collaboration, Affinity, and Tooling at Scale.
+
+* **[Securing DevOps](http://tinyurl.com/y659zjwc)** -- Julien Vehent 
+  Explores how the techniques of DevOps and security should be applied together to make cloud services safer.
+
 * **[The Pheonix Project](kunskap/boken-the-pheonix-project)** -- Gene Kim, Kevin Behr, George Spafford  
   En roman om en IT chef som går över till DevOps.
 
@@ -186,29 +192,6 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 ### Övrig litteratur {#ovriglitteratur}
 
 I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
-
-
-<!--
-Läsanvisningar {#lasanvisning}
-------------------------------
-
-Det finns inga specifika läsanvisningar till kurslitteraturen.
-
-
-Här följer en sammanställning av de läsanvisningar som ges i varje kursmoment. Skaffa gärna böckerna i förväg och börja läsa dem innan kursen.
-
-| Kursmoment | Beginning PHP and MySQL   | Webbutveckling med PHP och MySQL | Databasteknik       |
-|------------|---------------------------|----------------------------------|---------------------|
-| Kmom01     | Ch 1, 2, 3, 4, 5          | Kap 1, 2, 3, 4, 5, 6, 7          | Kap 1               |
-| Kmom02     | Ch 6, 7, 8, 12            |                                  |                     |
-| Kmom03     | Ch 25, 26, 27             | Kap 8 Databaser                  | Kap 7, 8, 9, 28     |
-| Kmom04     | Ch 30, 31                 |                                  | Kap 18              |
-| Kmom05     |                           |                                  |                     |
-| Kmom06     |                           |                                  |                     |
-| Kmom07/10  ||||
-
--->
-
 
 
 
