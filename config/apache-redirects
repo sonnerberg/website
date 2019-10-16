@@ -186,8 +186,8 @@ Redirect /htmlphp               /kurser/htmlphp
 # javascript1
 Redirect /kurser/javascript1/repo   /repo/javascript1
 Redirect /javascript1               /kurser/javascript1
-Redirect /kurser/javascript1/studieplan    https://docs.google.com/spreadsheets/d/1C4Bwa2onfrR_5Y5Rbs1GOMZf1KeA5ZlNrnRvCkiYSI0/edit?usp=sharing
-Redirect /kurser/javascript1/lektionsplan    https://docs.google.com/spreadsheets/d/1rVN3OmNtFw_IcDXbpZMB6skYsZmHWrGK3zWXjQNfoak/edit?usp=sharing
+Redirect /kurser/javascript1/studieplan    https://docs.google.com/spreadsheets/d/1e1YHhdBPYqSZMG2g7xQE_7gu4ejobCre9F53F43KGDo/edit?usp=sharing
+Redirect /kurser/javascript1/lektionsplan    https://docs.google.com/spreadsheets/d/1m87jwckTiSHc9ty57laBa7rKiMGq9EXJ-xa4mjSEs3E/edit#gid=2146491912
 
 
 # design
