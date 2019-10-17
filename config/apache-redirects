@@ -314,6 +314,9 @@ Redirect /javascript        /kurser/javascript
 
 # itsec
 Redirect /itsec        /kurser/itsec
+Redirect /kurser/itsec/studieplan        https://docs.google.com/spreadsheets/d/1b31dCK3uPPPYFKdyqOsiyYOKpd5axJA7anzj8D3rgFY/edit?usp=sharing
+Redirect /kurser/itsec/lektionsplan        https://docs.google.com/spreadsheets/d/1TwhRzF3Rc8bL6gKC3Fb8AY9gNGaF6ygriyB-of6ckc8/edit?usp=sharing
+
 
 
 # webtopic
