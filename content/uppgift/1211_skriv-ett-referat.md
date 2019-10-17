@@ -19,7 +19,7 @@ Du ska skriva ett referat baserat på texten ????.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har deltagit i föreläsningarna ? som tillhör kursmomentet.
+Du har deltagit i föreläsningarna som tillhör kursmomentet.
 
 
 
