@@ -8,7 +8,7 @@ revision:
 Assignment 4: Mazerunner
 ==================================
 
-You will get a finished server, written in Node.js, and a RESTful API to the server. The server implements a [*maze*] (https://en.wikipedia.org/wiki/Maze). The server is ready and you can test run it via the curl command.
+You will get a finished server, written in Node.js, and a RESTful API to the server. The server implements a [*maze*](https://en.wikipedia.org/wiki/Maze). The server is ready and you can test run it via the curl command.
 
 Your task is to build a bash client for the server, according to a requirements specification. Your client should use the server to resolve the maze.
 
@@ -20,7 +20,7 @@ So is the arrangement. Let's see how well the wings carry. The structure of this
 
 This is what it may look like when you solve the maze with your script. Note that the script in this case is called *mazerunner.sh*. You should use the file extension **.bash**. The assignment may be inspired by the book / movie of the same name, [The Maze Runner](https://sv.wikipedia.org/wiki/The_Maze_Runner).
 
-[ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
+[ASCIINEMA src=244037]
 
 
 

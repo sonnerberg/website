@@ -27,13 +27,13 @@ Prerequisites {#pre}
 Introduction {#intro}
 -----------------------
 
-Read briefly on Wikipedia about what a [*maze*] (https://en.wikipedia.org/wiki/Maze) can be.
+Read briefly on Wikipedia about what a [*maze*](https://en.wikipedia.org/wiki/Maze) can be.
 
-This is what it may look like when you solve the maze with your script:
+<!-- This is what it may look like when you solve the maze with your script:
 
 [INFO]Note that the file extension should be **mazerunner.bash**.[/INFO]
 
-[ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
+[ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb] -->
 
 
 
@@ -67,7 +67,7 @@ node index.js
 
 You can test the maze server with curl. Like this.
 
-[ASCIINEMA src=25853]
+[ASCIINEMA src=243851]
 
 Please study the source code of the maze server. Had you been able to write it yourself?
 
