@@ -50,25 +50,15 @@ Du ska medverka på föreläsningarna:
 * 10:00 (2019-11-08) i H430
 
 
-<!-- Läs &amp; Studera  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)* -->
+*(ca: 8-10 studietimmar)*
 
-
-<!-- Förslag på föreläsningar:
-
-* Introduktion till informationssäkerhet
-    * Definitioner av säkerhet
-    * System, angripare, angrepp,
-    * Mjukvarusårbarheter, fault/failure
-    * People, detection, response
-* Nätverkssäkerhet
-    * Olika typer av attacker, t.ex. man-in-the-middle, DoS
-    * Skyddsmekanismer
-* Etik och moral i ett informationssäkerhetssammanhang
-
-Vilka läsanvisningar, video finns till detta kmom? -->
+* Boken [Computer Security](/kunskap/boken-computer-security)
+    * Kapitel 1-3
+* Boken [Beyond Fear](/kunskap/boken-beyond-fear)
+    * Boken ska vara läst inom ramen för kursen.
 
 
 
@@ -105,4 +95,3 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken är din TIL för detta kmom?
-* Mer ??????????????

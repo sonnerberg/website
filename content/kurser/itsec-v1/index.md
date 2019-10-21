@@ -110,7 +110,7 @@ Kursmomentet ger en introduktion till konceptet privacy genom att förklara cent
 
 ### Kmom03: Sårbarhetsanalys {#kmom03}
 
-Risk- och sårbarhetsanalysmomentet omfattar en introduktion till olika metoder för att modellera applikationers beteende, metoder för att genomföra sårbarhetsanalyser och attackscenarier. Vidare introduceras även riskanalys och riskhantering för att sätta sårbarheter i kontext. 
+Risk- och sårbarhetsanalysmomentet omfattar en introduktion till olika metoder för att modellera applikationers beteende, metoder för att genomföra sårbarhetsanalyser och attackscenarier. Vidare introduceras även riskanalys och riskhantering för att sätta sårbarheter i kontext.
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -155,7 +155,10 @@ Kurslitteratur {#litteratur}
 
 ### Kurslitteratur {#kurslitteratur}
 
-Kurslitteraturen består av egenskrivna och länkade online-resurser såsom artiklar och guider.
+Kurslitteraturen består av framförallt två böcker:
+
+* Computer Security
+* Beyond Fear
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
@@ -192,17 +195,17 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming | 
+| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming |
 |------------|-----------------------------------------------------------|
 | Kmom01     | Ch 1, 12                                                  |
 | Kmom02     | Ch 2                                                      |
-| Kmom03     | Ch 3,                                                     | 
+| Kmom03     | Ch 3,                                                     |
 | Kmom04     | Ch 4, 6                                                   |
-| Kmom05     | Ch 12, 13, 14                                             | 
-| Kmom06     |                                                           | 
+| Kmom05     | Ch 12, 13, 14                                             |
+| Kmom06     |                                                           |
 | Kmom10     |                                                           |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 -->
 
@@ -240,7 +243,7 @@ Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
