@@ -6,7 +6,7 @@ author:
     - lew
     - nik
 revision:
-    "2018-12-04": "(PA1, mos) Arbetskopia."
+    "2019-10-21": "(A, lew) First edition for HT19."
 ...
 Kmom02: Privacy
 ==================================
@@ -36,19 +36,16 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10:00 (2019-11-11)
+* 10:00 (2019-11-11) i H430
 
 
 
-<!-- Läs &amp; Studera  {#lasanvisningar}
+Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
-Föreläsningar:
-- Introduktion till privacy samt exempel på skyddstekniker
-
-Läsanvisningar, video? -->
+Läs i boken ????
 
 
 

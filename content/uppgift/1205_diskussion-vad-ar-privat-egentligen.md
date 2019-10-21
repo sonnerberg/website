@@ -63,8 +63,6 @@ Struktur på reflektion???????????????????????????????????
 
 <!-- 1. I din egna text, reflektera över om privacy är något du kommer tänka på/argumentera för när du kommer ut i arbetslivet? Varför/varför inte? -->
 
-1. Vilken är din TIL för detta kmom?
-
 1. I slutet av reflektionen skriver du ett stycke med namnen på dina gruppmedlemmar.
 
 1. Spara din reflektion som `me/kmom02/reflektion.pdf`.

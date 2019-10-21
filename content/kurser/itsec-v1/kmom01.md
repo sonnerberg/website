@@ -55,9 +55,9 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
-* Boken [Computer Security](/kunskap/boken-computer-security)
+* Läs i boken [Computer Security](/kunskap/boken-computer-security)
     * Kapitel 1-3
-* Boken [Beyond Fear](/kunskap/boken-beyond-fear)
+* Läs i boken [Beyond Fear](/kunskap/boken-beyond-fear)
     * Boken ska vara läst inom ramen för kursen.
 
 
