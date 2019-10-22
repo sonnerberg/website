@@ -21,6 +21,13 @@ Avslutningsvis skriver du en uppsats. Uppsatsen är det sista som du gör och ti
 
 [/WARNING]
 
+<!-- 
+- Vad är DevOps
+- Forskningsläget?
+- Framtiden
+- Devops historia 
+ -->
+
 
 
 ### Video {#video}
