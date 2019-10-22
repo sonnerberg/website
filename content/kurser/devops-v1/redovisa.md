@@ -54,7 +54,7 @@ Feedback och frågor {#feedback}
 
 [Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
 
-Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
+Ställ dina frågor och funderingar i "Diskussioner" på Canvas. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en diskussion på Canvas om du funderar på något.
 
 
 

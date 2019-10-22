@@ -218,7 +218,7 @@ Läs mer om [lektionsplanen](kurser/faq/lektionsplan).
 Handledning {#handledning}
 ----------------------------------------
 
-Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i Diskussioner på Canvas. Chatten lämpar sig för korta enkla frågor och Diskussioner för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i Diskussioner.
 
 Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 
@@ -253,7 +253,7 @@ Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 Kursutvärdering och kursutveckling {#kursutvardering}
 -----------------------------------------------------
 
-Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
+Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både Diskussioner, chatt eller mail.
 
 Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
 
