@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2019-10-22": "(B, aar) Bytte från klara första uppgift till 20 poäng för godkänt."
     "2018-08-13": "(A, aar) Kopia av projektexamination och individuell, uppdaterad för examination minus projekt."
 ...
 Bedömning och betygsättning (individuell)
@@ -31,7 +32,7 @@ Redovisningstexterna är kompletta, väl strukturerade och insiktsfulla. Via red
 
 ### Betyg C, D eller E (G) {#g}
 
-Den individuella examinationen fungerar enligt specifikation och minst första uppgiften är löst.
+Den individuella examinationen fungerar enligt specifikation och du har minst 20 poäng.
 
 Kursmomenten är utförda och redovisade enligt instruktionerna. Inget är undermåligt utfört.
 
