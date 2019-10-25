@@ -104,17 +104,18 @@ Läs [instruktionen till kursmoment 01](./kmom01).
 
 
 
-### Kmom02: Configuration Management {#kmom02}
+### Kmom02: Docker {#kmom02}
 
-Vi lär oss CM verktyget Ansible och använder det för att enkelt kunna skapa nya servrar och driftsätta vår kod.
+Vi packar in vårt kod i en Docker container och lär oss används docker-compose. Samtidigt ser vi till att fixa en Docker container för utvecklingsmiljön och en för produktionsmiljön.
 
 Läs [instruktionen till kursmoment 02](./kmom02).
 
 
 
-### Kmom03: Docker och Continuous Deployment {#kmom03}
+### Kmom03: Configuration Management och Continuous Deployment {#kmom03}
 
-Vi packar in vårt kod i en Docker container och lär oss används docker-compose. Dessutom kollar vi på att automatisera driftsättning av vår container.
+Vi lär oss CM verktyget Ansible och använder det för att enkelt kunna skapa nya servrar och driftsätta vår kod.
+
 
 Läs [instruktionen till kursmoment 03](./kmom03).
 
