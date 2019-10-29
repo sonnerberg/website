@@ -7,10 +7,11 @@ revision:
 Kmom02: Docker
 ==================================
 
-Vi packar in vårt kod i en Docker container och lär oss används docker-compose.
-
+Vi packar in vår kod i en Docker container för att underlätta automatisering av processer i framtiden och bli av problem som uppstår när man försöker köra projektet i olika miljöer.
 
 <!-- more -->
+[FIGURE src="https://pics.me.me/it-works-on-my-machine-then-well-ship-your-machine-62072263.png" caption="Varför docker uppfanns."]
+
 [WARNING]	
 
  **Kursutveckling pågår**	
@@ -25,8 +26,8 @@ Vi packar in vårt kod i en Docker container och lär oss används docker-compos
 Labbmiljön  {#labbmiljo}
 ---------------------------------
 
-Docker
-
+https://dbwebb.se/kunskap/installera-virtualiseringsmiljon-docker
+https://dbwebb.se/guide/docker
 
 
 Läs & Studera  {#lasanvisningar}
@@ -72,7 +73,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna..
 
 1. [Continuous Delivery med Circle CI och Github]()
 
-
+https://dbwebb.se/uppgift/skapa-docker-image
 
 ### Uppgifter {#uppgifter}
 
