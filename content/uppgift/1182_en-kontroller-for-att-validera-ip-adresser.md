@@ -6,6 +6,7 @@ category:
     - anax
     - kurs ramverk1
 revision:
+    "2019-10-29": "(B, mos) Förtydliga kraven till uppgiften om sidans innehåll."
     "2018-11-05": "(A, mos) Första utgåvan."
 ...
 En kontroller för att validera ip-adresser
@@ -63,6 +64,8 @@ När du växlar mellan att köra Anax i webbservern och via CLI så blir det oli
 make clean-cache
 ```
 
+<!-- Denna del skall vara borttagen i samband med ht19, make test har en egen cache-katalog, se även https://dbwebb.se/forum/viewtopic.php?f=59&t=8829 -->
+
 
 
 Krav {#krav}
@@ -76,7 +79,11 @@ Krav {#krav}
 
 1. Skapa en ny kontroller som erbjuder ett REST API för att validera en ip-adress. Man kan posta en ip-adress till din validator och svaret blir en JSON-struktur med samma innehåll och resultat som ovan.
 
-1. Bygg ut din sida så att du förklarar hur man jobbar med ditt JSON API och lägg till så det finns testroutes man kan klicka på.
+1. Bygg ut din sida så att du förklarar hur man jobbar med ditt JSON API. 
+
+1. Lägg till så det finns testroutes som man kan klicka på för att testa att det fungerar, det går bra med hårdkodade testroutes.
+
+1. Lägg till ett formulär där man kan posta en godtycklig ip-adress som valideras, svaret kan presenteras direkt i json-formatet.
 
 1. Lägg till enhetstester för din kod. 100% är en rimlig nivå på kodtäckning.
 
