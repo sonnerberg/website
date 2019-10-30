@@ -26,6 +26,7 @@ Avslutningsvis skriver du en uppsats. Uppsatsen är det sista som du gör och ti
 - Forskningsläget?
 - Framtiden
 - Devops historia 
+http://www.informationweek.com/strategic-cio/enterprise-agility/6-steps-to-survive-a-devops-transformation/a/d-id/1319704
  -->
 
 
