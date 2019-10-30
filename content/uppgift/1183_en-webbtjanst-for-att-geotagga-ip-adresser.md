@@ -11,7 +11,7 @@ revision:
 En webbtjänst för att geotagga ip-adresser
 ===================================
 
-Du skall bygga en webbtjänst som letar fram den geografiska positionen för en ip-adress, inklusive ortsnamn. DU använder dig av ett externt API för att göra uppslagningen av ip-adressen.
+Du skall bygga en webbtjänst som letar fram den geografiska positionen för en ip-adress, inklusive ortsnamn. Du använder dig av ett externt API för att göra uppslagningen av ip-adressen.
 
 Innan du gör uppslaget så validerar du ip-adressen så att den är korrekt.
 
@@ -41,7 +41,7 @@ Följande steg hjälper dig att komma igång med uppgiften.
 
 Innan du startar så fundera igenom uppgiften och skissa på vilka kontroller-klasser och modell-klasser du tror dig behöva.
 
-Skissa på ett papper med penna.När du är klar med uppgiften, gå tillbaka till din skiss och fundera på hur duktig du var på att skissa den slutliga formen för kodlösningen.
+Skissa på ett papper med penna. När du är klar med uppgiften, gå tillbaka till din skiss och fundera på hur duktig du var på att skissa den slutliga formen för kodlösningen.
 
 
 

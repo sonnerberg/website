@@ -88,7 +88,7 @@ Krav {#krav}
 
 1. Skapa en sida där du kan mata in en platsangivelse och få tillbaka en rapport för kommande väder eller om föregående väder (föregående 30 dagar).
 
-1. Platsangivelsen kan vara en ip-adress eller en geografisk position. Den geografiska positionen anges på det/de format som du bestämer. Optionellt löser du så man även kan mata in ett ortsnamn.
+1. Platsangivelsen kan vara en ip-adress eller en geografisk position. Den geografiska positionen anges på det/de format som du bestämmer. Optionellt löser du så man även kan mata in ett ortsnamn.
 
 1. När du anropar vädertjänsten så skall du kunna skicka flera requester samtidigt (parallellt, inte seriellt).
 
