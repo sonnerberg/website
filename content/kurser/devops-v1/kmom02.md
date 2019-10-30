@@ -7,7 +7,7 @@ revision:
 Kmom02: Docker
 ==================================
 
-Vi packar in vår kod i en Docker container för att underlätta automatisering av processer i framtiden och bli av problem som uppstår när man försöker köra projektet i olika miljöer.
+Vi packar in vår kod i en Docker container för att underlätta utveckling, driftsättning och körning av vår applikation.
 
 <!-- more -->
 [FIGURE src="https://pics.me.me/it-works-on-my-machine-then-well-ship-your-machine-62072263.png" caption="Varför docker uppfanns."]
@@ -21,6 +21,27 @@ Vi packar in vår kod i en Docker container för att underlätta automatisering 
 [/WARNING]
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
+
+
+## Vad är Docker? {#docker}
+
+En snabb översikten av vad Docker är kan vi hitta på [Dockers egna webbsida](https://www.docker.com/resources/what-container). Docker är en container teknologi som liknar en avskalad virtuelle maskin. Vad tillför det till oss som utvecklare?
+
+Docker låter utvecklare att utveckla och driftsätta applikationer i virtuella container miljöer. Detta ska göra att en applikation kan köras på exakt samma sätt utan kompabilitets problem oberoende av vilken dator/server den körs på, så länge Docker är installerat. Att applikationen kan köras oberoende av systemet gör att applikationen blir lättare att använda, utveckla och underhålla och driftsätta.
+
+
+
+### Docker terminologi {#terminologi}
+
+- Image: En image är typ ett exekverbart paket som innehåller allt som behövs för att köra applikationen, det inkluderar konfigurationsfiler, miljö variabler och bibliotek.
+- Dockerfile: Fil som innehåller instruktionerna för att bygga en Docker image.
+- Build: Skapa en image snapshot från Dockerfile.
+- Tag: Version av en image. Varje image har ett tag namn.
+- Container: Ett lättviktig program paket skapat från en specifik image version. 
+- DockerHub: Image repository där vi kan hitta images. Typ GitHub för images.
+- Docker Daemon: Körs på host systemet. Användare kan inte jobba direkt mot Docker daemon utan gör det via Docker klienter.
+- Docker Engine: Skapar och kör Containers.
+- Docker Client: Huvud interfacet för Docker.
 
 
 Labbmiljön  {#labbmiljo}
@@ -83,6 +104,12 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v2.0.0.
 
 
+
+## Lästips {#lastips}
+
+https://docs.docker.com/develop/develop-images/multistage-build/
+
+https://www.wintellect.com/security-best-practices-for-docker-images/
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
