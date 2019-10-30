@@ -44,17 +44,34 @@ Docker låter utvecklare att utveckla och driftsätta applikationer i virtuella 
 - Docker Client: Huvud interfacet för Docker.
 
 
-Labbmiljön  {#labbmiljo}
----------------------------------
 
-https://dbwebb.se/kunskap/installera-virtualiseringsmiljon-docker
-https://dbwebb.se/guide/docker
+### Installera Docker {#installera}
+
+För att få en bättre förståelse för Docker behöver vi använda det och då måste vi installera det. Läs igenom [Installera virtualiseringsmiljön Docker](kunskap/installera-virtualiseringsmiljon-docker). Notera att det kan vara lite svårt med Docker i Windows 10 Home b.la., om ni har en annan miljö ni kan jobba på så rekommenderas det. Lösningen för tillfället är att köra Docker i VirtualBox.
 
 
-Läs & Studera  {#lasanvisningar}
----------------------------------
 
-*(ca: 4-6 studietimmar)*
+### Öva på Docker {#ova}
+
+Kolla på följande video för en kort introduktion till Docker och hur vi kan använda det.
+
+[YOUTUBE src="6aBsjT5HoGY" caption="Docker Concepts Introduction"]
+
+Gör sen guiden [Docker](https://dbwebb.se/guide/docker/introduktion) för att lära er skapa egna images och containrar. 
+
+Om ni har tid och känner att ni vill öva lite mer på Docker kan ni testa [Docker på Catacoda](https://katacoda.com/courses/docker).
+
+
+
+### Docker i devops {#devops}
+
+Docker är väldigt populärt inom devops världen av många anledningar och ni kan läsa om varför i Dockers bloggserie **Docker and the Three Ways of DevOps**.
+
+- [Part 1: The First Way – Systems Thinking](https://www.docker.com/blog/docker-three-ways-devops/)
+
+- [Part 2: The Second Way – Amplify Feedback Loops](https://www.docker.com/blog/docker-three-ways-devops-2/)
+
+- [Part 3: The Third Way – Culture of Continuous Experimentation and Learning](https://www.docker.com/blog/docker-three-ways-devops-3/)
 
 
 
@@ -66,7 +83,6 @@ Kolla in följande.
 
 ### Artiklar {#artiklar}
 
-Kika igenom följande artiklar.
 
 Docker development vs production.
 
@@ -92,9 +108,7 @@ Det finns generellt kursmaterial i video form.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna..
 
-1. [Continuous Delivery med Circle CI och Github]()
-
-https://dbwebb.se/uppgift/skapa-docker-image
+Om CircleCi: då bygger de hela tiden och då blir det Continuous Delivery men inte deployment.
 
 ### Uppgifter {#uppgifter}
 
@@ -110,6 +124,8 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 https://docs.docker.com/develop/develop-images/multistage-build/
 
 https://www.wintellect.com/security-best-practices-for-docker-images/
+
+https://dockercon2018.hubs.vidyard.com/watch/k3Cv676wmxAwYDxbvcgcgC video
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
