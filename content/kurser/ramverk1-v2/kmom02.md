@@ -13,7 +13,7 @@ Vi tittar på designmönstret Model, View, Controller (MVC) och använder det f�
 
 Vi bekantar oss även med begreppet SOLID som är en akronym för en samling designmönster som är aktuella i sammhanget kring ramverk och allmän objektorienterad utveckling.
 
-Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar enligt MVC. Under arbetets gång funderar vi på hur man bäst organiserar sin kod för att göra den återanvändbar, testbara samt lätta att underhålla och vidareutveckla.
+Med dessa begrepp i ryggen så skriver vi kod i ramverket som vi strukturerar enligt MVC. Under arbetets gång funderar vi på hur man bäst organiserar sin kod för att göra den återanvändbar, testbar samt lätt att underhålla och vidareutveckla.
 
 <!--more-->
 
