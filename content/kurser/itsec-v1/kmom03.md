@@ -24,9 +24,21 @@ Kursen planeras ge hösten 2019.
 
 
 
-<!--stop-->
+<!--more-->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+
+Föreläsningar  {#forelasningar}
+---------------------------------
+
+*(ca: 2 studietimmar)*
+
+Du ska medverka på föreläsningen:
+
+* 10:00 (2019-11-18) i H430
 
 
 
@@ -35,30 +47,23 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
-Föreläsningar:
-	- Risker och riskanalys
-	- Sårbarheter och sårbarhetsanalys.
 
-Läsanvisningar: Ja. Bifogat finns läsmaterial för riskanalys.
+TBD
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
-
-
-
-### Övningar {#ovningar}
-
-Det finns inga övningar till detta kmom.
+*(ca: 10-14 studietimmar)*
 
 
 
 ### Uppgifter {#uppgifter}
 
-Uppgifter: Ja, (men har inte i huvudet just nu)
+* Gör uppgiften [Sårbarhetsanalys](/uppgift/sarbarhetsanalys)
+
+<!-- Uppgifter: Ja, (men har inte i huvudet just nu) -->
 
 
 
@@ -71,7 +76,4 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Fråga relaterad till kursmaterialet.
-* ...
-* ...
 * Vilken är din TIL för detta kmom?
