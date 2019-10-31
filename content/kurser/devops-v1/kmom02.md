@@ -81,19 +81,37 @@ Nu när vi har lite kött på ben och vet vad Docker och hur det fungerar ska ni
 
 Efter att ni skapat er Dockerfile kan läsa vsupalov's review av [Docker Usage in 'The Flask Mega-Tutorial'](https://vsupalov.com/flask-megatutorial-review/). När vi ändå är inne och läser på vsupalov kan ni även läsa [Should Built Docker Images Be Used in a Development Environment? Should Dockerfiles Be Used in a Production Environment?](https://vsupalov.com/dockerfile-in-production-docker-image-in-dev/).
 
-I Miguels guide fick vi även koden för en continer som kör MySQL. Att köra sin databas har länge varit debatterat, många är emot men fler och fler börjar gå mot att det är OK. Ni kan läsa lite om diskussionen [Should You Run Your Database in Docker?](https://vsupalov.com/database-in-docker/). Jag är för att köra databasen in Docker så länge man lägger data mappen som en volym så att datan inte skrivs över när vi startar om containern. MySQL sparar sin data i mappen `/var/lib/mysql` så när ni kör er databas container i produktion gör den mappen till en volym på host systemet.
+
+
+### Databas i Docker {#db_docker}
+
+I Miguels guide fick vi även koden för en continer som kör MySQL. Att köra sin databas har länge varit debatterat, många är emot men fler och fler börjar tycka att det är OK. Ni kan läsa lite om argumenten i [Should You Run Your Database in Docker?](https://vsupalov.com/database-in-docker/). Jag är för att köra databasen in Docker så länge man lägger data mappen som en volym så att datan inte skrivs över när vi startar om containern.
+
+MySQL sparar sin data i mappen `/var/lib/mysql` så när ni kör er databas container i produktion gör den mappen till en volym på host systemet.
 
 
 
 ## Skapa en Docker image för testning {#file_test}
 
-Nästa steg är att skapa en till Dockerfile fast en som bara ska användas för testning. Till skillnad från när vi använder Docker för produktion så vill vi inte att containern ska vara igång för evigt när vi kör tester. Istället vill vi bara starta upp en container som kör alla tester och sedan stängs ner. Skapa en Dockerfile, döp den till `Dockerfile_test` och lägg den i mappen `docker`. Om ni vill kan ni ändra så integrationstesterna körs mot MySQL i docker container istället för SQLite i minnet. Testerna kommer troligen köras långsammare men testerna blir mer värdefull då de körs mot likadant system som körs i produktion. När man kör databasen i en container för testerna brukar man inte göra data mappen till en volym, i och med att vi inte bryr oss om persistent data.
+Nästa steg är att skapa en till Dockerfile fast en som bara ska användas för testning. Till skillnad från när vi använder Docker för produktion så vill vi inte att containern ska vara igång för evigt. Istället vill vi bara starta upp en container som kör alla tester och sedan stänger ner. Skapa en Dockerfile, döp den till `Dockerfile_test` och lägg den i mappen `docker`.
+
+Om ni vill kan ni ändra så integrationstesterna körs mot MySQL i docker container istället för SQLite i minnet. Testerna kommer troligen köras långsammare men testerna blir mer värdefulla då de körs mot likadant system som körs i produktion. När man kör databasen i en container för testerna brukar man inte göra data mappen till en volym, i och med att vi inte bryr oss om persistent data för tester.
 
 
 
 ## Spara konfiguration som kod {#konfig_kod}
 
-compose/bash
+En viktigt del av det praktiska inom devops är att spara konfiguration som kod och versionshantera den. Detta är för att undvika att tillfällen uppstår där det bara är specifika personer som vet hur man startar/kör/konfigurerar något. Allt ska finnas som kod och versionshanterat så alla kan göra det.
+
+En typisk sån sak är att bygga/köra Docker images. Att bygga/starta en image behöver ofta någon slags konfiguration t.ex. vad ska vara volymer, miljövariabler eller vilken port som ska öppnas. Om detta inte finns som kod blir det svårt för någon annan än för den som skrev koden att göra det. För Docker använder vi docker-compose i detta syftet. 
+
+Skapa filen `docker-compose.yml` i root mappen av repot. I den lägg till services för att köra test imagen och prod imagen mot MySQL.
+
+`docker-compose up test` ska starta test containern och köra alla tester.
+
+`docker-compose up prod` ska starta en MySQL container och er prod container.
+
+Updater `make test` så den kör testerna i Docker.
 
 
 
@@ -101,33 +119,27 @@ compose/bash
 
 Continuous Delivery är förmågan att snabbt, säkert och när som helst kunna göra driftsättning av en applikation. Ni kan läsa en mer detaljerad förklaring av [Martin Fowler](https://martinfowler.com/bliki/ContinuousDelivery.html), ett av de stora namnen inom Microservices, Software Development och Continuous Integration/Delivery/Deployment.
 <!-- https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff -->
-Vi ska inte uppnå "riktigt" CD då vi inte har en staging miljö och vi borde testa koden på fler sätt. Men vi jobbar med det vi har. Så för att vi ska få till CD ska vi testa vår kod på CircleCi, om testerna går igenom bygg en Docker image och publicera den på DockerHub. I nästa kursmoment ska vi ta det ett steg längre och uppnå Continuous Deployment, vilket är när lägger till att automatisk driftsätta applikationen efter vi testat och byggt den.
+Vi ska inte uppnå "riktigt" CD då vi inte har en staging miljö och vi borde testa koden på fler sätt. Men vi jobbar med det vi har. För att vi ska få till CD ska vi testa vår kod på CircleCi, om testerna går igenom bygg en Docker image och publicera den på DockerHub. I nästa kursmoment ska vi ta det ett steg längre och uppnå Continuous Deployment, vilket är när lägger till att automatisk driftsätta applikationen efter vi testat och byggt den.
 
-Länk om köra testerna i Docker på CircleCi.
+Läsa om att köra Docker containrar på CircleCi i deras [dokumentation](https://circleci.com/docs/2.0/building-docker-images/) för att se hur ni kan köra era .
 
-Följ [Using CircleCI workflows to replicate Docker Hub automated builds](https://circleci.com/blog/using-circleci-workflows-to-replicate-docker-hub-automated-builds/) för att se hur ni kan skriva er CircleCi config för att bygga och publicera er image till DockerHub. Tänk på att ni bara vill göra detta om alla tester går igenom.
+Skapa först ett konto på [DockerHub](https://hub.docker.com/) och sen ett nytt repo där ni kan ladda upp er prod image. Testa att ladda upp er image. 
 
-Hur få exit kod? https://docs.docker.com/compose/reference/up/ --exit code from service, behövs den?
+Nu vill vi att byggandet och pushandet av nya images ska ske automatiskt när vi uppdaterar koden. Vi gör så att detta sker i CircleCi. Följ [Using CircleCI workflows to replicate Docker Hub automated builds](https://circleci.com/blog/using-circleci-workflows-to-replicate-docker-hub-automated-builds/) för att se hur ni kan skriva er CircleCi config för att bygga och publicera er image till DockerHub. Tänk på att ni vill bara bygga och publisera en ny image om alla tester går igenom.
 
-https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-container för lösenord.
+Gör ett aktivt val mellan att bara publicera ny image för varje ny release eller om det ska ske vid varje commit.
+
+Vi vill inte spara lösenord eller annan känslig information i kod så att det pushas till GitHub. Samtidigt behöver vi använda oss av t.ex. lösenord när vi kör saker i CircleCi. Det kan vi spara som [miljövariabler i CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-container) och sen använda i konfigurationen för CircleCI.
+
+<!-- Hur få exit kod? https://docs.docker.com/compose/reference/up/ --exit code from service, behövs den? -->
 
 
 ## Kör i produktion {#docker_prod}
 
+Sista steget är att köra er prod image på produktionsservern på AWS. Installera Docker på servern och starta prod med mysql container med docker-compose. Bygg inte containerna på servern utan använd de som byggts på CircleCi och laddas upp till DockerHub.
 
+Docker har skrivit lite om att använda [compose i produktion](https://docs.docker.com/compose/production/). Om ni vill/har tid uppdatera skripten för att deploya appen till att använda Docker istället.
 
-
-
-### Bok {#bok}
-
-Kolla in följande.
-
-
-
-### Artiklar {#artiklar}
-
-
-Docker development vs production.
 
 
 ### Video {#video}
@@ -141,30 +153,19 @@ Det finns generellt kursmaterial i video form.
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-12 studietimmar)*
-
-
-### Övningarr {#ovningar}
-
-Gör följande övningar, de behövs normalt för att klara uppgifterna..
-
-Om CircleCi: då bygger de hela tiden och då blir det Continuous Delivery men inte deployment.
-
-### Uppgifter {#uppgifter}
+Uppgifter {#uppgifter}
+-----------------------------------------------
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 <!-- nginx i docker med https https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71 -->
 
 1. Två Dockerfile's i mappen `docker`, en för produktion som heter `Dockerfile_prod` och en som heter `Dockerfile_test`.
 
-1. docker-compose eller bash skript för att starta container.
+1. docker-compose file för att kör test och prod.
 
-1. Container för Nginx eller Databas.
+1. `make test` kör testerna i Docker.
 
-1. CircleCi testar med docker och bygger produktion image och pushar till DockerHub. Bara bygg för nya tagger?
+1. CircleCi testar med docker och bygger produktion image och pushar till DockerHub.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v2.0.0.
 
@@ -180,6 +181,8 @@ https://vsupalov.com/docker-latest-tag/
 
 https://dockercon2018.hubs.vidyard.com/watch/k3Cv676wmxAwYDxbvcgcgC video
 
+
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -189,5 +192,12 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-Databas i docker eller ej?
-...
+1. Har du använt Docker förut? Gick det bra att använda det nu?
+
+1. Valde du att bygga ny Docker image vid varje commit eller relase? Varför?
+
+1. Vad är Continuous Delivery?
+
+1. Hur var storleken på kursmomentet? Vad tycker du om upplägget på kursmomentet?
+
+1. Veckans TIL?
