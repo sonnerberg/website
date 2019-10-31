@@ -29,7 +29,6 @@ I din kurskatalog (repot) för kursen, skall du ta en kopia av din personliga sa
 
 ```bash
 # Gå till kurskatalogen
-cd me
 cp -ri example/sandbox/* me/kmom01/sandbox
 ```
 
