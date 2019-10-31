@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-10-31": "(L, lew) Uppdatering inför ht19."
     "2018-10-22": "(K, lew) Uppdatering inför ht18."
     "2017-12-27": "(J, mos) Enhetlig mall för me-sida."
     "2017-10-09": "(I, mos) Genomgång inför ht17, ny struktur labbmiljö, redovisa, uppgradering dbwebb-cli v2."
@@ -73,19 +74,19 @@ Gör följande:
 1. Bekanta dig kort med översikten på [MDN: Web technology for developers](https://developer.mozilla.org/en-US/docs/Web). Där ser du generellt material om webbteknologier.
 
 1. Bekanta dig specifikt med det som finns under rubriken "JavaScript". Använd minst 10 minuter av din tid för att kika runt och läsa någon av de inledande artiklarna om JavaScript.
-
+<!--
 1. För en snabb introduktion till konstruktionerna i språket JavaScript kan jag rekommendera dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" och de inledande kapitlen som kompletterar det du läst i kurslitteraturen.
     * Introduction
     * Grammar and types
-    * Expressions and operators
+    * Expressions and operators -->
 
 
-
+<!--
 ###Artiklar {#artiklar}
 
 Läs följande:
 
-1. I kursen används validatorer och en kodstandard för att testa att du skriver kod på ett, enligt kodstandarden, acceptabelt sätt. Du kan läsa om dbwebb-kodstandarden på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
+1. I kursen används validatorer och en kodstandard för att testa att du skriver kod på ett, enligt kodstandarden, acceptabelt sätt. Du kan läsa om dbwebb-kodstandarden på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327). -->
 
 <!--
 1. CSS style guide.
@@ -99,15 +100,15 @@ Titta på följande:
 
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
-1. Se JavaScript-gurun Douglas Crockford i en historisk bakgrund om programmeringsspråk och en introduktion till JavaScript: "[Crockford on JavaScript - Volume 1: The Early Years](https://www.youtube.com/watch?v=JxAXlJEmNMg)".
+<!-- 1. Se JavaScript-gurun Douglas Crockford i en historisk bakgrund om programmeringsspråk och en introduktion till JavaScript: "[Crockford on JavaScript - Volume 1: The Early Years](https://www.youtube.com/watch?v=JxAXlJEmNMg)". -->
 
 
 
-###Lästips {#lastips}
+<!-- ###Lästips {#lastips}
 
 Följande kan vara intressant att ha koll på.
 
-1. Lär dig mer om historian om datorer, eller som de säger, "[The mother of All Demos](http://en.wikipedia.org/wiki/The_Mother_of_All_Demos)", när Douglas Engelbart, för första gången demonstrerar det som numer är vardagsmat för oss alla. [Se hela presentationen](https://www.youtube.com/watch?v=VScVgXM7lQQ&list=PL76DBC8D6718B8FD3).
+1. Lär dig mer om historian om datorer, eller som de säger, "[The mother of All Demos](http://en.wikipedia.org/wiki/The_Mother_of_All_Demos)", när Douglas Engelbart, för första gången demonstrerar det som numer är vardagsmat för oss alla. [Se hela presentationen](https://www.youtube.com/watch?v=VScVgXM7lQQ&list=PL76DBC8D6718B8FD3). -->
 
 
 
