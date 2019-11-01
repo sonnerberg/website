@@ -275,16 +275,16 @@
         },
         {
             "name": "mos/ctextfilter",
-            "version": "v1.2.22",
+            "version": "v1.2.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/ctextfilter.git",
-                "reference": "724d17d50dba68c0c39542c974d46ee6be066261"
+                "reference": "9bafcc95bf6f3b32c20cc2dbea7c67e902c3675c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/724d17d50dba68c0c39542c974d46ee6be066261",
-                "reference": "724d17d50dba68c0c39542c974d46ee6be066261",
+                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/9bafcc95bf6f3b32c20cc2dbea7c67e902c3675c",
+                "reference": "9bafcc95bf6f3b32c20cc2dbea7c67e902c3675c",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +334,7 @@
                 "markdown",
                 "shortcode"
             ],
-            "time": "2018-06-26T11:27:49+00:00"
+            "time": "2019-10-30T15:33:28+00:00"
         },
         {
             "name": "scrivo/highlight.php",
