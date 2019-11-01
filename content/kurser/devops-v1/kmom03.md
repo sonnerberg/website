@@ -7,11 +7,15 @@ revision:
 Kmom03: Configuration Management och Continuous Deployment
 ==================================
 
-Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss Ansible för Configuration Management (CM) och använder det på CircleCi för att få till Continuous Deployment (CD).
+Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss Ansible för Configuration Management (CM) och även för Infrastructure as Code. Tillsammans med Ansible och CircleCI ska vi också utveckla vår Continuous Delivery till Continuous deployment (också CD).
 
 
 
 <!-- more -->
+
+[FIGURE src="https://www.gocd.org/assets/images/blog/continous-delivery-vs-deployment-infographic/continuous-delivery-vs-continuous-deployment-infographic-305dd620.png"]
+
+
 [WARNING]	
 
  **Kursutveckling pågår**	
@@ -23,17 +27,34 @@ Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss
 
 
 
-Labbmiljön  {#labbmiljo}
----------------------------------
-
-Ingen labbmiljö än så länge!
+## Infrastructure as Code och Configuration Management {#iasc-cm}
 
 
 
-Läs & Studera  {#lasanvisningar}
----------------------------------
+## Ansible {#ansible}
 
-*(ca: 4-6 studietimmar)*
+
+
+### Hur fungerar Ansible? {#funkar-ansible}
+
+
+
+### Göra
+
+10-första minuter https://ryaneschinger.com/blog/securing-a-server-with-ansible/
+
+3 servrar
+
+nginx role
+
+app role (docker)
+
+databas role (docker)
+
+
+
+### Ansible på CircleCi för CD {#cd}
+
 
 
 
@@ -49,6 +70,8 @@ Kika igenom följande artiklar.
 
 1. CD vs CD
 
+1. https://blog.theodo.com/2016/05/straight-to-production-with-docker-ansible-and-circleci/
+
 ### Lästips {#lastips}
 
 1. Hantera användare på produktionsservern https://www.cogini.com/blog/managing-user-accounts-with-ansible/.
@@ -63,22 +86,6 @@ Det finns generellt kursmaterial i video form.
 1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 3xx i namnet.
 
 
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-12 studietimmar)*
-
-
-### Övningarr {#ovningar}
-
-Gör följande övningar, de behövs normalt för att klara uppgifterna..
-
-ansible linter
-https://ryaneschinger.com/blog/securing-a-server-with-ansible/
-1. [Configuration Management med Ansible]()
-
-1. [Continuous Delivery med Circle CI och Github]()
 
 
 
@@ -99,8 +106,6 @@ Om jobbar tillsammans ska de ha varsin användare. https://dev.iachieved.it/iach
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
-    
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
