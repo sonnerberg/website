@@ -2,6 +2,12 @@
 author:
   - mos
   - efo
+# views:
+#     flash:
+#         region: flash
+#         template: default/image
+#         data:
+#             src: "image/snapht18/design-kmom01-me.png?w=1100&h=360&a=12,10,40,2&f1=pixelate,8,2&cf&nc&f2=colorize,0,30,0,0"
 revision:
     "2018-10-29": (E, mos) Nytt dokument inför uppdatering av kursen.
     "2018-10-19": (D, efo) Uppdatering med design guide.

@@ -11,7 +11,7 @@ revision:
 Bygg en redovisa-sida till kursen design
 ===================================
 
-Du skall sätta samman en redovisa-sida, en me-sida, till kursen design. För att göra det skall du använda en förberedd kopia av ramvekret Anax (Anax Flat) med innehåll som är anpassat till kursen design.
+Du skall sätta samman en redovisa-sida, en me-sida, till kursen design. För att göra det skall du använda en förberedd kopia av ramverket Anax (Anax Flat) med innehåll som är anpassat till kursen design.
 
 De behöver installera din redovisa-sida, fylla den med innehåll och sedan lägga till style med CSS.
 
@@ -238,7 +238,7 @@ Du kan ta hjälp av videoserien för att till exempel kolla in följande.
 Krav {#krav}
 -----------------------
 
-1. Förstasidan `content/index.md` skall innehålla en hälsning/presentation av/om dig tillsammans med minst en bild.
+1. Förstasidan `content/index.md` skall innehålla en hälsning/presentation av/om dig tillsammans med minst en bild som representerar dig.
 
 1. Lägg till en byline (bild och text om dig) till förstasidan. Du kan ha samma byline på fler sidor om du vill.
 
