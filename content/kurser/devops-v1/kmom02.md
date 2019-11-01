@@ -10,7 +10,7 @@ Kmom02: Docker
 Vi packar in vår kod i en Docker container för att underlätta utveckling, driftsättning och körning av vår applikation.
 
 <!-- more -->
-[FIGURE src="https://pics.me.me/it-works-on-my-machine-then-well-ship-your-machine-62072263.png" caption="Varför docker uppfanns."]
+[FIGURE src="https://pics.me.me/it-works-on-my-machine-then-well-ship-your-machine-62072263.png"]
 
 [WARNING]	
 
@@ -167,26 +167,26 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. CircleCi testar med docker och bygger produktion image och pushar till DockerHub.
 
-1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v2.0.0.
+1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v2.0.0. Om du pushar kmom02 flera gånger kan du öka siffrorna efter 2:an.
+
+1. Inkludera en länk till ditt GitHub repo och din webbsida (domännamn) i din inlämning på Canvas.
 
 
 
 ## Lästips {#lastips}
 
-https://docs.docker.com/develop/develop-images/multistage-build/
+[Multistage builds](https://docs.docker.com/develop/develop-images/multistage-build/), för vår app är detta kanske inte nödvändigt men det är väldigt bra att känna till.
 
-https://www.wintellect.com/security-best-practices-for-docker-images/
+[Best practices](https://www.wintellect.com/security-best-practices-for-docker-images/) för Docker 
 
-https://vsupalov.com/docker-latest-tag/
+[Docker latest tag](https://vsupalov.com/docker-latest-tag/), ett annat hett ämne inom Docker är om man ska använda `latest` taggen för att köra images eller ej.
 
-https://dockercon2018.hubs.vidyard.com/watch/k3Cv676wmxAwYDxbvcgcgC video
+[Building Your Production Tech Stack for Docker Container Platform](https://dockercon2018.hubs.vidyard.com/watch/k3Cv676wmxAwYDxbvcgcgC), video från DockerCon 2018.
 
 
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
-
-*(ca: 1-2 studietimmar)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
