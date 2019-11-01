@@ -19,7 +19,7 @@ revision:
 Kmom05: Bild
 ====================================
 
-[FIGURE src="image/snapht18/kabbe.jpg?w=3" caption="Kabbe på vandring en sen höstdag i Blekinges skärgård på Yttre Stekön. Fundera på om bilden innehåller något som gör den mer eller mindre intressant."]
+[FIGURE src="image/snapht18/kabbe.jpg?w=w3" caption="Kabbe på vandring en sen höstdag i Blekinges skärgård på Yttre Stekön. Fundera på om bilden innehåller något som gör den mer eller mindre intressant."]
 
 Låt oss ägna ett kursmoment åt att testa runt med bilder, bildverktyg och bildformat samt hur vi publicerar bilderna på en webbplats, inklusive responsivitet.
 
