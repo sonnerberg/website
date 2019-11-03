@@ -13,6 +13,9 @@ Vi packar in vår kod i en Docker container för att underlätta utveckling, dri
 [FIGURE src="https://pics.me.me/it-works-on-my-machine-then-well-ship-your-machine-62072263.png"]
 
 
+[INFO]
+Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat med originalet, [Syncing a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
+[/INFO]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -191,7 +194,7 @@ Se till att följande frågor besvaras i texten:
 
 1. Har du använt Docker förut? Gick det bra att använda det nu?
 
-1. Valde du att bygga ny Docker image vid varje commit eller relase? Varför?
+1. Valde du att bygga ny Docker image vid varje commit eller release? Varför?
 
 1. Vad är Continuous Delivery?
 
