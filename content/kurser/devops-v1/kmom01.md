@@ -139,6 +139,8 @@ Se till att följande frågor besvaras i texten:
 
 1. Har det ändrats efter denna veckan?
 
+1. Hur skulle du definiera devops?
+
 1. Finns det något speciellt du vill lära dig i denna kursen?
 
 1. Vad tycker du om kmom01's upplägg och storlek?
