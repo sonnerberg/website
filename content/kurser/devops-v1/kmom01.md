@@ -74,7 +74,7 @@ Gör sen [Första 10 minuter på en server](kunskap/github-education-pack-och-en
 apt-get remove --purge unscd
 userdel -r debian
 ```
-Brandväggsdelen är frivillig i och med att vi kommer använda oss av security groups i AWS för att kontrollera kopplingar till servern. Om du inte litar på sercurity groups kan du installera `ufw` och använda det istället.
+Brandväggsdelen är frivillig i och med att vi kommer använda oss av security groups i AWS för att kontrollera kopplingar till servern.
 
 
 
