@@ -7,7 +7,7 @@ revision:
 Kmom03: Configuration Management och Continuous Deployment
 ==================================
 
-Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss Ansible för Configuration Management (CM) och även för Infrastructure as Code (IaC). Tillsammans med Ansible och CircleCI ska vi också utveckla vår Continuous Delivery till Continuous deployment (också CD).
+Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss Ansible för Configuration Management (CM) och Infrastructure as Code (IaC). Tillsammans med Ansible och CircleCI ska vi också utveckla vår Continuous Delivery till Continuous Deployment (också CD).
 
 
 
@@ -17,17 +17,9 @@ Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss
 
 
 
-Nästa steg i vår miljö är att utöka antalet servrar från en till tre. Vi ska bygga en klassisk webbapp struktur, en server för databasen, en för appen och en som load balancer (Nginx, var proxy innan). Med systemet vi har nu, att kopiera bash filer till servern och exekvera manuellt är inte hållbart inom devops. Vi ska utnyttja kraften av Configuration Management Verktyget Ansible för att uppnå denna strukturen på att hållbart sätt. Vi flyttar över funktionaliteten från bash skripten till Ansible som kan utföra samma sak på flera servrar samtidigt. Vi ska skapa och stänga ner servrar med ett kommando, installera och konfigurera dem och tillslut ha ett kommando för att sätta upp hela produktionsmiljön, från zero to hero!
+Nästa steg i vår miljö är att utöka antalet servrar från en till tre. Vi ska bygga en klassisk webbapp struktur, en server för databasen, en för appen och en som load balancer (Nginx, var proxy innan). Med systemet vi har nu, att kopiera bash filer till servern och exekvera manuellt är inte hållbart inom devops. Vi ska utnyttja kraften av Configuration Management verktyget Ansible för att uppnå denna strukturen på att hållbart sätt. Vi flyttar över funktionaliteten från bash skripten till Ansible, som kan utföra samma sak på flera servrar samtidigt. Vi ska skapa och stänga ner servrar med ett kommando, installera och konfigurera dem och tillslut ha ett kommando för att sätta upp hela produktionsmiljön, från zero to hero!
 
 
-
-[WARNING]	
-
- **Kursutveckling pågår**	
-
- Kursen ges hösten 2019 läsperiod 2.
-
-[/WARNING]
 
 [INFO]
 Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat med originalet, [Syncing a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
@@ -39,11 +31,11 @@ Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat
 
 ## Infrastructure as Code och Configuration Management {#iac-cm}
 
-Infrastructure as Code innebär att behandla sin infrastruktur (servrar) som software, de ska vara definierade i kod och versionshanterat, för ett längre mer djupgående utlägg läs [why use IaC](https://medium.com/cloudnativeinfra/why-use-infrastructure-as-code-881ccd6c4290).
+Infrastructure as Code innebär att behandla sin infrastruktur (servrar) som software, det ska vara definierat i kod och versionshanterat, för ett längre mer djupgående utlägg läs [why use IaC](https://medium.com/cloudnativeinfra/why-use-infrastructure-as-code-881ccd6c4290).
 
 För att få en översikt av vad CM är har Digital Ocean gjort en [bra sammanfattning](https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management).
 
-När ni fått läite bättre kolla på IaC och CM kan ni läsa om olika verktyg som finns och var de passar in [inom IaC och CM](https://dzone.com/articles/when-to-use-which-infrastructure-as-code-tool).
+När ni fått lite bättre koll på IaC och CM kan ni läsa om olika verktyg som finns och var de passar in [inom IaC och CM](https://dzone.com/articles/when-to-use-which-infrastructure-as-code-tool).
 
 
 
@@ -59,15 +51,15 @@ Ansible är ett verktyg för att automatisera server konfiguration. Läs om [Ans
 
 Börja med att kolla på videorna med [30x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) för att bekanta er med vad som finns i `ansible` mappen. Jag rekommenderar även att läsa `ansible/README.md` filen efteråt.
 
-Nästa steg är att skapa er egna playbook, kolla på videorna med [31x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) och skapa en playbook för 10-first-minutes skriptet.
+Nästa steg är att skapa er egna playbook, kolla på videorna med [31x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) och skapa en playbook för 10-first-minutes skripten.
 
 
 
 ### Playbooks för app strukturen {#app_structure}
 
-Nu har vi en grund att utgå från, vi har tre servrar som är konfigurerade och installerade som en grund server. Nästa steg är att konfigurerar var server för sig. 
+Nu har vi en grund att utgå från, vi har tre servrar som är konfigurerade och installerade som en grund server. Nästa steg är att konfigurerar varje server för sig. 
 
-Ni ska nu skapa en playbook för att sätta upp databasen på en server, applikationen på en och en load balancer på den sista. När vi bara hade en server använde vi Nginx som en reverse proxy för att skicka vidare requests till Flask appen. Nu ska vi använda Nginx som en load balancer istället. Med Nginx som en load balancer istället för en reverse proxy kan vi lätta utöka antalet applikations servrar när vår hemsida blir populär och besök antalet ökar. 
+Ni ska nu skapa en playbook för att sätta upp databasen på en server, applikationen på en och en load balancer på den sista. När vi bara hade en server använde vi Nginx som en reverse proxy för att skicka vidare requests till Flask appen. Nu ska vi använda Nginx som en load balancer istället. Med Nginx som en load balancer istället för en reverse proxy kan vi lätta utöka antalet applikations servrar när vår hemsida blir populär och besöks antalet ökar. 
 
 
 
@@ -85,11 +77,13 @@ Skapa en playbook som startar en Docker container med den senaste Microblog imag
 
 #### Load balancer playbook {#lb_pb}
 
-Skapa en playbook som installerar Nginx och konfigurerar det som en load balancer och skickar requests till applikations servern. Gör det på servern med host namnet `loadBalancer`. Vi har bara en applikations server än så länge så en load balancer tillför inte direkt något, men det är bra att känn till hur man gör en load balancer.
+Skapa en playbook som installerar Nginx och konfigurerar det som en load balancer och skickar requests till applikations servern. Gör det på servern med host namnet `loadBalancer`. Vi har bara en applikations server än så länge så en load balancer tillför inte direkt något, men det är bra att känna till hur man gör en load balancer.
 
 Läs Nginxs dokumentation om att köra en [load balancer](https://nginx.org/en/docs/http/load_balancing.html). Vad de inte skriver är att vi inte han lägga ett `http` block i ett annat `http` block. Vilket vi gör om vi bara skapar en ny host i `/etc/nginx/sites-available`. Så vi måste ändra på config filen `/etc/nginx/nginx.conf`. Ni kan hitta två config filer för Nginx som load balancer på [Gist](https://gist.github.com/AndreasArne/58374253123a31bb7c32e2b551fe8492).
 
-Använd [template](https://docs.ansible.com/ansible/latest/modules/template_module.html) modulen i Ansible för att flytta `nginx.conf.j2` till `/etc/nginx/nginx.conf` och `load-balancer.conf.j2` till `/etc/nginx/sites-available/load-balancer.conf`. Notera variablerna i `load-balancer.conf.j2` som ni behöver ha värden till i Ansible. Ni kan använda [file module](https://docs.ansible.com/ansible/latest/modules/file_module.html?highlight=file) för att länka `load-balancer.conf` till `sites-enabled`.
+Använd [template](https://docs.ansible.com/ansible/latest/modules/template_module.html) modulen i Ansible för att flytta `nginx.conf.j2` till `/etc/nginx/nginx.conf` och `load-balancer.conf.j2` till `/etc/nginx/sites-available/load-balancer.conf`. Notera variablerna i `load-balancer.conf.j2` som ni behöver ha värden till i Ansible.
+
+Ni kan använda [file module](https://docs.ansible.com/ansible/latest/modules/file_module.html?highlight=file) för att länka `load-balancer.conf` till `sites-enabled` mappen.
 
 
 
@@ -122,10 +116,10 @@ Lägg till ett sista steg i er CircleCi config som kör er playbook för att dri
 <!-- https://blog.theodo.com/2016/05/straight-to-production-with-docker-ansible-and-circleci/ -->
 
 
-
+<!-- 
 ### Bok {#bok}
 
-Devops ska vara mer än bara automation och verktyg, det är en arbetskultur och arbetssätt. Men samtidigt är verktygen en viktigt del av det. Ni kan läsa om hur verktyg passar in i devops i kapitel 11-13 i [Effective Devops](http://tinyurl.com/yyuw7a9w).
+Devops ska vara mer än bara automation och verktyg, det är en arbetskultur och arbetssätt. Men samtidigt är verktygen en viktigt del av det. Ni kan läsa om hur verktyg passar in i devops i kapitel 11-13 i [Effective Devops](http://tinyurl.com/yyuw7a9w). -->
 
 
 
@@ -143,14 +137,13 @@ Det finns generellt kursmaterial i video form.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Använd Ansible för att skapa och konfigurera tre servrar. Använd en för database, en till microblogen och en som load-balancer.
+1. Använd Ansible för att skapa och konfigurera tre servrar. En som databas, en till microblogen och en som load-balancer.
 
-1. Utöka CircleCi så att om testerna går igenom och en ny Docker image byggs ska den driftsättas på servern. Med andra ord lägg till Continuous Deployment.
+1. Utöka CircleCi så att om testerna går igenom och en ny Docker image byggs ska den driftsättas på servern. Med andra ord sätt upp Continuous Deployment.
+
+1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v3.0.0, om du pushar kmom03 flera gånger kan du öka siffrorna efter 3:an.
 
 <!-- 1. Skriv skript som kollar om service är uppe, om inte kör ansible för att sätta upp annars bara uppdatera. (En deployer node?) -->
-
-1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v3.0.0, om du pushar kmom02 flera gånger kan du öka siffrorna efter 3:an.
-
 
 
 ### Lästips {#lastips}
