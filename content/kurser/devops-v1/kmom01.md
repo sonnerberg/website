@@ -86,7 +86,7 @@ Nästa steg är att bekanta oss med appen som du ska jobba på i kursen. Läs ig
 
 #### Driftsätt appen {#driftsatt}
 
-Vi har en server och vi har en app, då måste vi lära oss ["Driftsätta en Flask app"](kunskap/driftsatta-en-flask-app). Om något blir fel och du inte riktigt vet hur du ska ångra det, skapa om servern i AWS och använd dig av [skripten i repot](länk till mappen i repot) för att snabbt göra de 10 första minuterna på en server och börja om med driftsättningen.
+Vi har en server och vi har en app, då måste vi lära oss ["Driftsätta en Flask app"](kunskap/driftsatta-en-flask-app). Om något blir fel och du inte riktigt vet hur du ska ångra det, skapa om servern i AWS och använd dig av [skripten i repot](https://github.com/dbwebb-se/microblog/tree/master/scripts) för att snabbt göra de 10 första minuterna på en server och börja om med driftsättningen.
 
 
 
