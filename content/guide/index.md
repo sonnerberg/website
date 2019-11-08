@@ -17,6 +17,7 @@ Guider i produktionsläge.
 * [Docker](guide/docker)
 * [VirtualBox](guide/virtualbox)
 * [Kom igång med SSH](guide/kom-igang-med-ssh)
+* [Programmering med JavaScript](guide/javascript1)
 
 Guides in English.
 
@@ -30,7 +31,6 @@ Guider under utveckling till hösten 2018.
 * [Design med HTML5 och CSS3](guide/design-med-html5-och-css3)
 <!-- * [Kom igång med HTML](guide/kom-igang-med-html)
 * [Kom igång med CSS](guide/kom-igang-med-css) -->
-* [Programmering med JavaScript](guide/javascript1)
 
 <!--
 * Desinax tema och dess moduler
