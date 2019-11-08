@@ -24,6 +24,30 @@ Vi kollar även på hur vi kan hantera att samla ihop loggar från flera olika k
 
 
 
+
+<!-- https://old.reddit.com/r/devops/comments/afqye3/whats_your_monitoring_and_alerting_stack_look_like/
+https://itnext.io/deploy-elk-stack-in-docker-to-monitor-containers-c647d7e2bfcd
+ -->
+ 
+<!-- Elastic stack
+https://logz.io/blog/10-elasticsearch-concepts/
+https://github.com/nickjj/ansible-docker
+https://www.guru99.com/elk-stack-tutorial.html
+    Ny instance med t2.small
+    Ny SG
+    RP i LB nod för ELK
+    Installera Beats på övriga instancer
+    +1 app instance?
+    Om de kör provision igen för att bara få upp ELK kommer det även starta upp en till av varje annan!!
+    load balancer - https://galaxy.ansible.com/entercloudsuite/filebeat
+        https -> http
+    galaxy https://blog.ktz.me/getting-started-with-ansible-galaxy/
+ -->
+
+Använder https://github.com/deviantony/docker-elk för ELK docker installation (saknar beats). 
+Transformera in den i Ansible.
+Lägg till beats
+
 Labbmiljön  {#labbmiljo}
 ---------------------------------
 
