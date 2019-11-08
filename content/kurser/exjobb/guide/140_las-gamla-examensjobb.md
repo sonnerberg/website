@@ -8,9 +8,10 @@ Läs gamla examensjobb
 
 Ett sätt att bekanta sig med examensjobb är att läsa ett par från gamla studenter. Då får du en uppfattning om varianter på format, upplägg, och formuleringar för forskningsfrågor och metoder.
 
-Du kan se ett urval av examensarbeten från tidigare årgångar. 
+Du kan se ett urval av examensarbeten från tidigare årgångar.
 
 * [2018](./../../arbeten/a2018)
+* [2019](./../../arbeten/a2019)
 
 Du kan även söka efter andra examensjobb i [bibliotekets söktjänst](https://www.bth.se/bibliotek/), välj fliken DIVA.
 
