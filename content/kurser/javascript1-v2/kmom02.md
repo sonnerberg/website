@@ -75,7 +75,7 @@ Titta på följande:
 
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
-1. Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Chapter 2: And Then There Was JavaScript](https://www.youtube.com/watch?v=RO1Wnu-xKoY)".
+<!-- 1. Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Chapter 2: And Then There Was JavaScript](https://www.youtube.com/watch?v=RO1Wnu-xKoY)". -->
 
 
 <!--
