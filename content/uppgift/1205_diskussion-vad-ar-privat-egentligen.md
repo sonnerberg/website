@@ -14,14 +14,6 @@ Du skall fundera och diskutera kring vilken information som klassas som privat s
 
 Du ska jobba i grupp (2-4 personer) för att lösa denna uppgiften.
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen planeras ge hösten 2019.
-
-[/WARNING]
-
 <!--more-->
 
 <!-- Förkunskaper {#forkunskaper}
@@ -59,12 +51,11 @@ Krav {#krav}
 
 1. Skriv ett eget stycke på ca 1-2 sidor där du reflekterar över vad ni diskuterat i gruppen. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
 
-<!-- 1. I din egna text, reflektera över om privacy är något du kommer tänka på/argumentera för när du kommer ut i arbetslivet? Varför/varför inte? -->
-
 1. I slutet av reflektionen skriver du ett stycke med namnen på dina gruppmedlemmar.
 
 1. Spara din reflektion som `me/kmom02/reflektion.pdf`.
 
+<!-- 1. I din egna text, reflektera över om privacy är något du kommer tänka på/argumentera för när du kommer ut i arbetslivet? Varför/varför inte? -->
 
 
 ```bash
