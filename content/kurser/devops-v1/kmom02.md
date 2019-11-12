@@ -141,6 +141,8 @@ Vi vill inte spara lösenord eller annan känslig information i kod så att det 
 
 Sista steget är att köra er prod image på produktionsservern på AWS. Installera Docker på servern och starta prod med mysql container med docker-compose. Bygg inte containerna på servern utan använd den som byggts på CircleCi och laddas upp till DockerHub.
 
+Ni ska inte använda supervisor längre. Vi använde supervisor för att se till att det hela tiden finns en Gunicorn process igång men det ansvaret flyttas över till Docker. När man startar en Container skickar man med `restart: always`.
+
 Docker har skrivit lite om att använda [compose i produktion](https://docs.docker.com/compose/production/).
 
 Om ni vill/har tid uppdatera skripten för att deploya appen till att använda Docker istället.
