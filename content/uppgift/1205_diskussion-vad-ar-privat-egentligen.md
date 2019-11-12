@@ -34,22 +34,31 @@ Jobba igenom denna introduktion för att förbereda inför uppgiften. -->
 
 
 
-### Diskussion (grupp) {#disk}
+Diskussion (grupp) {#disk}
+-----------------------
 
-1. Diskutera och anteckna följande frågor:
-    * Vilken typ av information är privat?
-        * Har du/ni samma uppfattning i gruppen?
-        * Hur skiljer sig eran uppfattning mot verkligheten?
-    * Vad för information kan du/ni hitta om varandra/dig/närstående på internet?
-    * Går det att hitta eventuellt läckta lösenord kopplade till deras mail?
+Vi kommer i sal att dela upp oss i grupper där ni ska diskutera kring följande frågor:
+
+* Vilken typ av information är privat?
+    * Har du/ni samma uppfattning i gruppen?
+    * Hur skiljer sig eran uppfattning mot verkligheten?
+* Vad för information kan du/ni hitta om varandra/dig/närstående på internet?
     * Är informationen frivilligt given eller inte?
+    * Går det att hitta eventuellt läckta lösenord kopplade till deras mail?
+* Litar ni på att företag håller er data "säker"? Finns det företag ni litar mer/mindre på?
+* Den 1 oktober 2019 trädde den nya reviderade datalagringslagen i kraft ([Sweclockers](https://www.sweclockers.com/nyhet/28415-regeringen-presenterar-forsta-steg-mot-utokad-dataavlasning)). Är detta rätt eller fel sätt att bekämpa brottslighet? Eller är det inte så enkelt som rätt eller fel?
 
+För varje fråga, skrev ner lite minnesanteckningar som hjälper dig att skriva reflektionen för kursmomentet.
 
 
 Krav {#krav}
 -----------------------
 
-1. Skriv ett eget stycke på ca 1-2 sidor där du reflekterar över vad ni diskuterat i gruppen. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
+1. Skriv en egen reflektion där du tänker igenom över vad ni diskuterat i gruppen och vad du själv tycker/tänker. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
+    - Reflektionen ska ha ett försättsblad med titel (Vad är privat egentligen?), datum och namn/studentakronym.
+    - Reflektionen ska vara ca 1-2 sidor (exklusive försättsbladet).
+    - Texten kan skrivas som punktform, men uppmuntras att skrivas som en sammanhängande text.
+    - Om diskussionen har fått er att fundera kring hur ni hanterar er data (både privat och som utvecklare), lyft gärna detta.
 
 1. I slutet av reflektionen skriver du ett stycke med namnen på dina gruppmedlemmar.
 
