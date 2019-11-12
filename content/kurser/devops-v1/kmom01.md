@@ -122,7 +122,7 @@ Uppgifter  {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Miguels guide för att följa andra](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers). Se till att de nya testerna går igenom och driftsätt den nya versionen på din server. OBS! Ni kan ignorera saker som rör `translate`, `compile` och `mail`. De används inte i vår microblog. Var uppmärksamma på `boot.sh` filen där ni kan ta bort raden som kör `translate` och `compile`.
+1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Miguels guide för att följa andra](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers). Se till att de nya testerna går igenom och driftsätt den nya versionen på din server.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0. Om du pushar kmom01 flera gånger kan du öka siffrorna efter 1:an.
 
