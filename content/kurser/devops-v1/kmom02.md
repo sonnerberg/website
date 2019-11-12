@@ -75,7 +75,10 @@ Docker är väldigt populärt inom devops världen av många anledningar och ni 
 
 ## Skapa egen Docker image för produktion {#file_prod}
 
-Nu när vi har lite kött på benen och vet vad Docker är och hur det fungerar ska ni skapa en egen Dockerfile för microblogen. De som var uppmärksamma förra veckan och kollade i Miguels guide såg kanske att det finns ett kapitel om att skapa en Dockerfile för projektet. Jobba igenom [Deployment on Docker containers](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xix-deployment-on-docker-containers) för att skapa dig en Dockerfile för produktion. Skippa avsnittet som heter `Adding a Elasticsearch Container`. Ni kan också ignorera saker som rör `translate`, `compile` och `mail`. De används inte i vår microblog. Var uppmärksamma på `boot.sh` filen där ni kan ta bort raden som kör `translate` och `compile`.
+Nu när vi har lite kött på benen och vet vad Docker är och hur det fungerar ska ni skapa en egen Dockerfile för microblogen. De som var uppmärksamma förra veckan och kollade i Miguels guide såg kanske att det finns ett kapitel om att skapa en Dockerfile för projektet. Jobba igenom [Deployment on Docker containers](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xix-deployment-on-docker-containers) för att skapa dig en Dockerfile för produktion.  
+Skippa avsnittet som heter `Adding a Elasticsearch Container`.  
+Ni kan också ignorera saker som rör `translate`, `compile` och `mail`. De används inte i vår microblog. Var uppmärksamma på `boot.sh` filen där ni kan ta bort raden som kör `translate` och `compile`.  
+Ni behöver inte heller kopiera `config.py` i Dockerfile, den ligger redan i `app.py` mappen, så vi behöver inte kopiera den.
 
 Döp din Dockerfile till `Dockerfile_prod` och lägg den i mappen `docker`.
 
