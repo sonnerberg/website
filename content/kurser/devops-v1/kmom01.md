@@ -69,7 +69,7 @@ Koppla ditt domän namn till servern.
 
 #### 10 första minuterna {#10first}
 
-Gör sen [Första 10 minuter på en server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#first10) delen. Tänk på att logga in som `admin` istället för `root` och du kan skippa följande kommandon:
+Gör sen [Första 10 minuter på en server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#first10) delen. Tänk på att logga in med användaren `admin` istället för `root`. När du har loggat in vill du däremot byta till root användaren innan du fortsätter, gör det med `sudo su`. Du kan skippa följande kommandon:
 ```bash
 apt-get remove --purge unscd
 userdel -r debian
