@@ -45,7 +45,9 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
-Läs i boken ????
+Läs vidare i boken [Beyond Fear](/kunskap/boken-beyond-fear).
+
+Läs mer om [Privacy Enhancing Technologies (PET)](https://www.priv.gc.ca/en/opc-actions-and-decisions/research/explore-privacy-research/2017/pet_201711/).
 
 
 
