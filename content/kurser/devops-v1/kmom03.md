@@ -139,7 +139,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Använd Ansible för att skapa och konfigurera tre servrar. En som databas, en till microblogen och en som load-balancer.
 
-1. Utöka CircleCi så att om testerna går igenom och en ny Docker image byggs ska den driftsättas på servern. Med andra ord sätt upp Continuous Deployment.
+1. Utöka CircleCi så att om testerna går igenom och en ny Docker image byggs ska den driftsättas på `appServer`. Med andra ord sätt upp Continuous Deployment.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v3.0.0, om du pushar kmom03 flera gånger kan du öka siffrorna efter 3:an.
 
