@@ -4,11 +4,10 @@ author:
 revision:
     "2019-10-15": "(A, aar) Första versionen."
 ...
-Kmom04: Monitoring och logging
+Kmom04: Monitoring
 ==================================
 
-Nu när vi har ett system upper och rullande behöver vi veta när något går fel, vi ska börja övervaka systemet.
-Vi kollar även på hur vi kan hantera att samla ihop loggar från flera olika källor.
+Nu när vi har ett system upper och rullande behöver vi veta när något går fel, vi ska börja övervaka systemet och kolla olika sätta/saker man brukar övervaka.
 
 
 
@@ -40,27 +39,36 @@ https://www.guru99.com/elk-stack-tutorial.html
     +1 app instance?
     Om de kör provision igen för att bara få upp ELK kommer det även starta upp en till av varje annan!!
     load balancer - https://galaxy.ansible.com/entercloudsuite/filebeat
-        https -> http
+        https -> http, enabled -> started?
     galaxy https://blog.ktz.me/getting-started-with-ansible-galaxy/
  -->
 
-Använder https://github.com/deviantony/docker-elk för ELK docker installation (saknar beats). 
-Transformera in den i Ansible.
-Lägg till beats
 
-Labbmiljön  {#labbmiljo}
----------------------------------
+### Monitoring
 
-Ingen labbmiljö än så länge!
+https://docs.microsoft.com/en-us/azure/devops/learn/what-is-monitoring
+https://pandorafms.com/blog/why-you-need-a-monitoring-system/
+https://queue.acm.org/detail.cfm?id=3178371
+
+### Log management
+
+#### ELK?
+
+### Application monitoring
+
+### Observability
+
+https://medium.com/@copyconstruct/monitoring-and-observability-8417d1952e1c
+
+1. Kolla på [What Does the Future Hold for Observability?](https://www.youtube.com/watch?v=MkSdvPdS1oA).
+
+### Prometheus
+
+https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/
+https://prometheus.io/docs/introduction/overview/
 
 
-
-Läs & Studera  {#lasanvisningar}
----------------------------------
-
-*(ca: 4-6 studietimmar)*
-
-
+### Grafana?
 
 ### Bok {#bok}
 
@@ -82,6 +90,10 @@ Det finns generellt kursmaterial i video form.
 1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[Devops streams](https://www.youtube.com/playlist?list=PLKtP9l5q3ce90068cUPVMcPguKtFAqnvi)".
 
 1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 4xx i namnet.
+
+### Lästips {#lastips}
+
+
 
 
 

@@ -124,7 +124,6 @@ Läs [instruktionen till kursmoment 03](./kmom03).
 ### Kmom04: Monitoring och logging {#kmom04}
 
 Nu när vi har ett system upper och rullande behöver vi veta när något går fel, vi ska börja övervaka systemet.
-Vi kollar även på hur vi kan hantera att samla ihop loggar från flera olika källor.
 
 Läs [instruktionen till kursmoment 04](./kmom04).
 
