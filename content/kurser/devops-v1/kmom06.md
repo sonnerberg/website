@@ -26,6 +26,8 @@ Hur säkrar vi upp vår docker miljö och våra ddevops flöden?
 
 <!-- https://kryptera.se/t/elk-stack/ ossec 
 https://logz.io/blog/container-security-best-practices/
+
+Text om virtualisering och olika tekniker, hur det fungerar?
 -->
 
 
