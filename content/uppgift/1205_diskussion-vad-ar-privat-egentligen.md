@@ -3,16 +3,17 @@ author: nik
 category:
     - kurs/itsec
 revision:
+    "2019-11-13": (A, aurora) Fler frågor, tydligare struktur på reflektion.
     "2019-08-07": (A, aurora) Första utgåvan.
 ...
 Vad är privat egentligen?
 ===================================
 
-Du skall fundera och diskutera kring vilken information som klassas som privat samt argumentera varför just den informationen borde vara privat. Som utmaning, ställ dig gärna i företagens skor och fundera på varför de *"behöver"* den informationen de frågar efter.
+Ni skall fundera och diskutera kring vilken information som klassas som privat samt argumentera varför just den informationen borde vara privat. Som utmaning, ställ er gärna i företagens skor och fundera på varför de *"behöver"* den informationen de frågar efter.
 
 <!-- Du skriver reflektionen i ett format som kan benämnas "akademiskt format". Det är för att träna på strukturen inför kommande större skrivuppgifter såsom examensjobb. -->
 
-Du ska jobba i grupp (2-4 personer) för att lösa denna uppgiften.
+Ni ska jobba i grupp (2-4 personer) när ni löser diskussionsuppgiften. Reflektionen är självständig.
 
 <!--more-->
 
@@ -51,7 +52,7 @@ Vi kommer i sal att dela upp oss i grupper där ni ska diskutera kring följande
 För varje fråga, skrev ner lite minnesanteckningar som hjälper dig att skriva reflektionen för kursmomentet.
 
 
-Krav {#krav}
+Reflektion (självständig) {#reflektion}
 -----------------------
 
 1. Skriv en egen reflektion där du tänker igenom över vad ni diskuterat i gruppen och vad du själv tycker/tänker. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
