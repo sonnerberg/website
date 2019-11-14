@@ -73,7 +73,7 @@ Skapa en playbook som startar en Docker container med MySQL på servern som har 
 
 #### Applikations playbook {#app_pb}
 
-Skapa en playbook som startar en Docker container med den senaste Microblog imagen på servern som har host namnet `appServer`. Tänk på att supervisor inte behövs längre, nu låter vi Docker se till att en applikation alltid finns körandes.
+Skapa en playbook som startar en Docker container med den senaste Microblog imagen på servern som har host namnet `appServer`. När ni ska koppla Flask appen till databasen behöver ni dens IP address, ni kan inte längre använda er av Dockers länkning för att de körs på två olika maskiner. I ansible kan ni använda `{{ groups.database[0] }}` för att få ut IP för databas hosten. Tänk också på att supervisor inte behövs längre, nu låter vi Docker se till att en applikation alltid finns körandes.
 
 
 
