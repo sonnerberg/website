@@ -108,6 +108,11 @@ Vi vill ju också ha https på vår server, det finns lite olika sätt att göra
 -   name: Generate new certificate if one doesn't exist.
     shell: "certbot certonly --standalone --noninteractive --expand --agree-tos --email {{ admin_email }} -d {{ domain_name }} -d www.{{ domain_name }}"
     when: not letsencrypt_cert.stat.exists
+
+-   name: Remove default conf
+    file:
+        state: absent
+        path: /etc/nginx/sites-enabled/default
 ```
 
 
