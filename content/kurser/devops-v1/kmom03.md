@@ -83,37 +83,11 @@ Skapa en playbook som installerar Nginx och konfigurerar det som en load balance
 
 Läs Nginxs dokumentation om att köra en [load balancer](https://nginx.org/en/docs/http/load_balancing.html). Vad de inte skriver är att vi inte han lägga ett `http` block i ett annat `http` block. Vilket vi gör om vi bara skapar en ny host i `/etc/nginx/sites-available`. Så vi måste ändra på config filen `/etc/nginx/nginx.conf`. Ni kan hitta två config filer för Nginx som load balancer på [Gist](https://gist.github.com/AndreasArne/58374253123a31bb7c32e2b551fe8492).
 
+Det finns flera metoder för att få till HTTPS, vissa svårare än andra. Ni kan se hur jag gör på [Gist](https://gist.github.com/AndreasArne/6b627f15aabeecd435abd1e8e11f96c8). Om ni använder er av den koden se till att det ligger överst i er `main.yml` annars kan det blir problem med config filerna.
+
 Använd [template](https://docs.ansible.com/ansible/latest/modules/template_module.html) modulen i Ansible för att flytta `nginx.conf.j2` till `/etc/nginx/nginx.conf` och `load-balancer.conf.j2` till `/etc/nginx/sites-available/load-balancer.conf`. Notera variablerna i `load-balancer.conf.j2` som ni behöver ha värden till i Ansible.
 
 Ni kan använda [file module](https://docs.ansible.com/ansible/latest/modules/file_module.html?highlight=file) för att länka `load-balancer.conf` till `sites-enabled` mappen.
-
-
-
-##### Https med Ansible {#https}
-
-Vi vill ju också ha https på vår server, det finns lite olika sätt att göra detta på, vissa svårare än andra. Jag gör det med följande tasks:
-
-```
--   name: Check if certificate already exists.
-    stat:
-        path: /etc/letsencrypt/live/{{ domain_name }}/cert.pem
-    register: letsencrypt_cert
-
--   debug: msg="{{ letsencrypt_cert.stat.exists }}"
-
--   name: Stop services to allow certbot to generate a cert.
-    command: service nginx stop
-    when: not letsencrypt_cert.stat.exists
-
--   name: Generate new certificate if one doesn't exist.
-    shell: "certbot certonly --standalone --noninteractive --expand --agree-tos --email {{ admin_email }} -d {{ domain_name }} -d www.{{ domain_name }}"
-    when: not letsencrypt_cert.stat.exists
-
--   name: Remove default conf
-    file:
-        state: absent
-        path: /etc/nginx/sites-enabled/default
-```
 
 
 
