@@ -47,6 +47,8 @@ Ansible är ett verktyg för att automatisera server konfiguration. Läs om [Ans
 
 ### 10 first minutes on a server i Ansible
 
+[INFO]Om du i kmom01 genererade en `.pem` fil som ssh nyckel via AWS behöver du göra om den till en `.pub` fil. Använd [Convert AWS pen to pub](https://gist.github.com/zircote/1243501). När du sen ska använda en ssh-nyckel i Ansible använd `.pub` filen.[/INFO]
+
 Än så länge har vi kopierat skript från `scripts` mappen över till servern och exekverat för att konfigurera servern. Nu ska vi uppgradera oss och göra detta i Ansible istället.
 
 Börja med att kolla på videorna med [30x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) för att bekanta er med vad som finns i `ansible` mappen. Jag rekommenderar även att läsa `ansible/README.md` filen efteråt.
