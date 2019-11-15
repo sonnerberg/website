@@ -50,9 +50,11 @@ https://www.guru99.com/elk-stack-tutorial.html
 
 ### Monitoring {#monitoring}
 
-https://docs.microsoft.com/en-us/azure/devops/learn/what-is-monitoring
-https://pandorafms.com/blog/why-you-need-a-monitoring-system/
-https://queue.acm.org/detail.cfm?id=3178371
+När system ligger utspridda på virtuelle servrar jorden runt är det inte lätt att hålla koll på att alla servrar och system hela tiden är igång. Här kommer infrastruktur monitoring in i bilden men vi kan också ha application monitoring där vi övervakar metrics från system. T.ex. hur många request varje server har fått eller hur många 404 requests.
+
+Läs Microsofts förklaring av [Monitoring](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-monitoring).
+
+Läs sen [Monitoring in a DevOps world](Monitoring in a DevOps World).
 
 
 
@@ -149,7 +151,7 @@ Följ sen [Create the MySQL dashboard with Grafana](https://devconnected.com/com
 
 
 
-#### Nginx {#nginx }
+#### Nginx {#nginx}
 
 Det finns en officiel exporter för [Nginx](https://github.com/nginxinc/nginx-prometheus-exporter) som använder sig utav [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) för att samla data. Tyvärr behöver man ha Nginx Plus för att få ut mer intressant data som hur många 4xx/5xx request man får in. Nu har vi inte Plus versionen och får nöja oss med att kunna se att servern är igång och hur många requests servern har fått.
 
@@ -169,17 +171,12 @@ Glöm inte att öppna portar i AWS.
 
 
 
-### Docker {#docker}
+#### Docker {#docker}
 
 
 
+#### Alerting {#alert}
 
-
-Finns det färdiga dashboards för dessa?
-
-Alerting
-
-Om finns tid, kolla hur skriva om ansible skript utan elastic ip!
 
 
 
