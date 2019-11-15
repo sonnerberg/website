@@ -48,7 +48,7 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-TBD
+Läs artikeln om riskanalys, [Texten hittar du här](/kursmaterial/itsec/doc/riskanalys.pdf).  
 
 
 
