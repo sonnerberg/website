@@ -86,19 +86,95 @@ Börja med att läsa [Prometheus Monitoring : The Definitive Guide in 2019](http
 
 När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem. Först behöver ni någonstans att kör verktygen, kolla på följande video för att uppdatera Ansible skripten för att skapa servrar på AWS:
 
-[YOUTUBE video med skapa en till small server]
+[YOUTUBE src=xpY0Z956MZE caption="Skapa en Monitoring instance på AWS med Ansible"]
 
 Följ nu guiden [Complete Node Exporter Mastery with Prometheus](https://devconnected.com/complete-node-exporter-mastery-with-prometheus/) som visar hur ni kan övervaka resurserna på AWS instansen som ni installerar Prometheus på. OBS! När ni sätter `scrape_interval` sätta inte mindre än 30 sekunder, era AWS instanser har begränsat med resurser, vi kan inte gå helt Crazy!  
 Ni ska senare göra en Ansible playbook för att sätta upp Prometheus och Grafana, då kan ni installera det hur ni vill. Men börja med att följa guiden för att lära er verktygen först. 
 
 
-Nginx
 
-Docker
+### MySQL {#mysql}
 
-Gunicorn
+Vi vill också ha lite koll på vad som händer med databasen och det finns så klart en exporter för MySQL också. Jag sätter upp min exporter som en Docker container, om ni inte vill göra det kan ni följa [Complete mysql daschboard with Grafan and Prometheus](https://devconnected.com/complete-mysql-dashboard-with-grafana-prometheus).
 
-MySQL
+Börja med att logga in på er databas instans. Sen behöver vi ha root lösenordet till er MySQL instans, om du inte sätter något root lösenord när du starta mysql containern kan vi hitta det i Dockers loggar för containern.
+
+```
+docker logs <mysql_container> 2>&1 | grep GENERATED
+```
+
+Sen kan vi logga in i databasen och skapa en ny användare för exporter att koppla upp som. Men vi måste först ändra root lösenordet innan MySQL låter oss skapa nya användare.
+```
+docker exec -it <container> mysql -uroot -p
+
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '<password>'; # skippa detta steget om du sätter root lösenord när du skapar containern.
+
+mysql> CREATE USER 'exporter'@'%' IDENTIFIED BY '<password>' WITH MAX_USER_CONNECTIONS 3;
+mysql> GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'%';
+mysql> GRANT SELECT ON performance_schema.* TO 'exporter'@'%';
+```
+
+Nu kan vi starta upp en `mysqld-exporter` container och koppla till databasen.
+
+```
+docker pull prom/mysqld-exporter
+
+docker run -d \
+  -p 9104:9104 \
+  --network host \
+  -e DATA_SOURCE_NAME="exporter:<password>@(localhost:3306)/" \
+  --restart always\
+  prom/mysqld-exporter:latest \
+  --collect.auto_increment.columns \
+  --collect.binlog_size \
+  --collect.engine_innodb_status \
+  --collect.engine_tokudb_status \
+  --collect.global_status
+```
+
+Testa så det fungera i terminalen `wget localhost:9104/metrics` om ni får ner en fil med data så fungerar det. Då behöver ni öppna upp porten på AWS så Prometheus kommer åt den.
+
+Nu kan ni konfigurera Prometheus att hämta datan,lägg till följande i er Prometheus konfiguration:
+
+```
+scrape_configs:
+  - job_name: 'mysql'
+    static_configs:
+            - targets: ['<database_host_ip>:9104']
+```
+
+Starta om Prometheus och gå sen in på GUI:ts webbsida och testa hämta datan `mysql_exporter_scrapes_total` för att kolla att kopplingen fungerar.
+
+Följ sen [Create the MySQL dashboard with Grafana](https://devconnected.com/complete-mysql-dashboard-with-grafana-prometheus/#IV_Create_the_MySQL_dashboard_with_Grafana) för att skapa en MySQL Overview dashboard kopplad till datan.
+
+
+
+#### Nginx {#nginx }
+
+Det finns en officiel exporter för [Nginx](https://github.com/nginxinc/nginx-prometheus-exporter) som använder sig utav [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) för att samla data. Tyvärr behöver man ha Nginx Plus för att få ut mer intressant data som hur många 4xx/5xx request man får in. Nu har vi inte Plus versionen och får nöja oss med att kunna se att servern är igång och hur många requests servern har fått.
+
+Ni behöver ha status_module aktiverad i Nginx, ni kan kolla det med kommandot `nginx -V 2>&1 | grep -o with-http_stub_status_module`, om ni får utskrift med `with-http_stub_status_module` så är ni good to go! För mig vad den aktiverad i den vanliga Nginx man installerar med apt-get.
+
+När modulen är aktiverad kan ni följa [Monitoring nginx with Prometheus and Grafana](https://dimitr.im/monitoring-nginx-with-prometheus-and-grafana), den installerar exportern med Docker, om ni inte vill det kan ni installera den [som en binary](https://github.com/nginxinc/nginx-prometheus-exporter#running-the-exporter-binary).
+
+Glöm inte att öppna portar i AWS.
+
+
+
+#### Gunicorn {#gunicorn}
+
+I Gunicorn kan vi få ut mer intressant data, vi kan bl.a. se request duration och hur många av de olika request typerna vi får. Jobba igenom [Monitoring Gunicorn with Prometheus](https://medium.com/@damianmyerscough/monitoring-gunicorn-with-prometheus-789954150069) för att sätta upp flödet. I slutet av artikeln finns en gömd länk som visar kod för en [Grafana Gunicorn Dashboard](https://gist.github.com/dmyerscough/59896aa752ba48794d2aef4c7a0fdd6e).
+
+Glöm inte att öppna portar i AWS.
+
+
+
+### Docker {#docker}
+
+
+
+
+
 Finns det färdiga dashboards för dessa?
 
 Alerting
