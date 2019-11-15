@@ -95,7 +95,7 @@ Ni kan använda [file module](https://docs.ansible.com/ansible/latest/modules/fi
 
 Lägg till ett sista steg i er CircleCi config som kör er playbook för att driftsätta appen. Tips. om ni har krypterat någon fil med ansible-vault, lägg till lösenordet som en miljövariabel i CircleCi. Ni behöver ha AWS credentials som ligger i `aws_keys.yml` i CircleCi för att köra playbooken för `gather_aws_instances`. Ni kan lösa det på två sätt antingen genom att ta bort filen från `.gitignore` och lägga till ert Ansible-vault lösenord som miljövariabel i CircleCI. Det andra sättet är att lägga till alla nycklarna från `aws_keys.yml` som separat miljövariabler i CircleCi, då slipper ni ha det liggandes publikt på GitHub.
 <!-- https://blog.theodo.com/2016/05/straight-to-production-with-docker-ansible-and-circleci/ -->
-
+<!-- https://www.dvlv.co.uk/how-we-use-circleci-and-ansible-to-automate-deploying-flask-applications.html -->
 
 <!-- 
 ### Bok {#bok}
