@@ -7,7 +7,7 @@ revision:
 Kmom04: Monitoring
 ==================================
 
-Nu när vi har ett system upper och rullande behöver vi veta när något går fel, vi ska övervaka hela produktionsmiljön och alla dess delar.
+Nu när vi har ett system uppe och rullande behöver vi veta när något går fel, vi ska övervaka hela produktionsmiljön och alla dess delar.
 
 
 
@@ -16,14 +16,7 @@ Nu när vi har ett system upper och rullande behöver vi veta när något går f
 [FIGURE src="https://upload.wikimedia.org/wikipedia/commons/d/d2/IoT_environmental_monitoring_system_solution_-_Overview.jpg" caption="Överblick av olika delar som kan ingå i ett system med övervakning."]
 
 
-[WARNING]	
-
- **Kursutveckling pågår**	
-
- Kursen ges hösten 2019 läsperiod 2.
-
-[/WARNING]
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -54,15 +47,15 @@ När system ligger utspridda på virtuelle servrar jorden runt är det inte lät
 
 Läs Microsofts förklaring av [Monitoring](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-monitoring).
 
-Läs sen [Monitoring in a DevOps world](Monitoring in a DevOps World).
+Läs sen [Monitoring in a DevOps world](https://queue.acm.org/detail.cfm?id=3178371).
 
 
 
 ### Log management {#log}
 
-Log management är processen av att samla in, lagra, hantera och analysera loggar från infrastruktur, system och applikation. Det är ett väldigt brett ämne då typ allt genererar loggar av något slag och systemet för att sköta log hantering är väldigt avancerade. Läs [What is log management](https://www.tripwire.com/state-of-security/security-data-protection/security-controls/what-is-log-management/) för att få en överblick av delarna som ingår i log management. Läs sen om vilken användning olika roller har av log management i [Why is log management important](https://www.graylog.org/post/why-is-log-management-important).
+Log management är processen av att samla in, lagra, hantera och analysera loggar från infrastruktur, system och applikation. Det är ett väldigt brett ämne då typ allt genererar loggar av något slag och system för att sköta log hantering är väldigt avancerade. Läs [What is log management](https://www.tripwire.com/state-of-security/security-data-protection/security-controls/what-is-log-management/) för att få en överblick av delarna som ingår i log management. Läs sen om vilken användning olika roller har av log management i [Why is log management important](https://www.graylog.org/post/why-is-log-management-important).
 
-Läs igenom [ELK stack tutorial](https://www.guru99.com/elk-stack-tutorial.html)för en överblick av ett av de mest populära systemen för Log management.
+Läs också [ELK stack tutorial](https://www.guru99.com/elk-stack-tutorial.html) för en överblick av ett av de mest populära systemen för Log management.
 
 
 
@@ -76,17 +69,17 @@ APM kan även kallas Application Performance Management (också APM), enligt vis
 
 På senare år har det även börjat talas mycket om Observability vilket hänger ihop med monitoring. Vi kan se monitoring som att ha kolla på hälsan av våra system medan observability är att ha djup insikt i hur våra system beter sig. Observability ska hjälpa oss hitta fel och problem. Läs [Observability sv. Monitoring](https://dzone.com/articles/observability-vs-monitoring).
 
-Om ni vill kan ni även kolla på [What Does the Future Hold for Observability?](https://www.youtube.com/watch?v=MkSdvPdS1oA).
+Om ni vill kan ni även kolla på [What Does the Future Hold for Observability?](https://www.youtube.com/watch?v=MkSdvPdS1oA)
 
 
 
 ### Prometheus och Grafana {#prometheus}
 
-Vi ska använda oss av [Prometheus](https://prometheus.io/), ett väldigt populärt verktyg för att lagra tidsserie data, visualisera data samt att sätta upp larm/notifikation vid events. Prometheus har inbyggt att visa simpla grafer för data men det är vanligt att använda sig utav verktyget [Grafana](https://grafana.com/) för att bygga dashboards med grafer och diagram över data.
+Vi ska använda oss av [Prometheus](https://prometheus.io/), ett väldigt populärt verktyg för att lagra tidsserie data och visualisera data. Prometheus har inbyggt stöd för att visa simpla grafer för data men oftast använder man det tillsammans med externa visualiseringsverktyg. Vi ska använda [Grafana](https://grafana.com/) för att bygga dashboards med grafer och diagram över datan från Prometheus.
 
 Börja med att läsa [Prometheus Monitoring : The Definitive Guide in 2019](https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/) för en överblick av vad Prometheus är och vad det innehåller.
 
-När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem. Först behöver ni någonstans att kör verktygen, kolla på följande video för att uppdatera Ansible skripten för att skapa servrar på AWS:
+När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem. Men först behöver ni någonstans att kör verktygen, kolla på följande video för att uppdatera Ansible skripten för att skapa servrar på AWS:
 
 [YOUTUBE src=xpY0Z956MZE caption="Skapa en Monitoring instance på AWS med Ansible"]
 
@@ -97,7 +90,7 @@ Ni ska senare göra en Ansible playbook för att sätta upp Prometheus och Grafa
 
 ### MySQL {#mysql}
 
-Vi vill också ha lite koll på vad som händer med databasen och det finns så klart en exporter för MySQL också. Jag sätter upp min exporter som en Docker container, om ni inte vill göra det kan ni följa [Complete mysql daschboard with Grafan and Prometheus](https://devconnected.com/complete-mysql-dashboard-with-grafana-prometheus).
+Vi vill ha lite koll på vad som händer med databasen och det finns så klart en exporter för MySQL också. Jag sätter upp min exporter som en Docker container, om ni inte vill göra det kan ni följa [Complete mysql daschboard with Grafan and Prometheus](https://devconnected.com/complete-mysql-dashboard-with-grafana-prometheus).
 
 Börja med att logga in på er databas instans. Sen behöver vi ha root lösenordet till er MySQL instans, om du inte sätter något root lösenord när du starta mysql containern kan vi hitta det i Dockers loggar för containern.
 
@@ -105,7 +98,7 @@ Börja med att logga in på er databas instans. Sen behöver vi ha root lösenor
 docker logs <mysql_container> 2>&1 | grep GENERATED
 ```
 
-Sen kan vi logga in i databasen och skapa en ny användare för exporter att koppla upp som. Men vi måste först ändra root lösenordet innan MySQL låter oss skapa nya användare.
+Sen kan vi logga in i databasen och skapa en ny användare för mysql_exporter att logga in som. Men vi måste först ändra root lösenordet innan MySQL låter oss skapa nya användare.
 ```
 docker exec -it <container> mysql -uroot -p
 
@@ -134,9 +127,11 @@ docker run -d \
   --collect.global_status
 ```
 
-Testa så det fungera i terminalen `wget localhost:9104/metrics` om ni får ner en fil med data så fungerar det. Då behöver ni öppna upp porten på AWS så Prometheus kommer åt den.
+`--collect...` är flaggor för vilken data som exportern ska samla in. Det finns väldigt många fler och ni kan läsa om dem på [GitHub](https://github.com/prometheus/mysqld_exporter#collector-flags).
 
-Nu kan ni konfigurera Prometheus att hämta datan,lägg till följande i er Prometheus konfiguration:
+Testa så det fungera i terminalen med `wget localhost:9104/metrics` om ni får ner en fil med data så fungerar det. Då behöver ni öppna upp porten på AWS så Prometheus kommer åt den.
+
+Nu kan ni konfigurera Prometheus att hämta datan, lägg till följande i er Prometheus konfiguration:
 
 ```
 scrape_configs:
@@ -149,13 +144,16 @@ Starta om Prometheus och gå sen in på GUI:ts webbsida och testa hämta datan `
 
 Följ sen [Create the MySQL dashboard with Grafana](https://devconnected.com/complete-mysql-dashboard-with-grafana-prometheus/#IV_Create_the_MySQL_dashboard_with_Grafana) för att skapa en MySQL Overview dashboard kopplad till datan.
 
+Glöm inte att öppna portar i AWS så Prometheus kommer åt mysql_exporter.
+
+
 
 
 #### Nginx {#nginx}
 
 Det finns en officiel exporter för [Nginx](https://github.com/nginxinc/nginx-prometheus-exporter) som använder sig utav [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) för att samla data. Tyvärr behöver man ha Nginx Plus för att få ut mer intressant data som hur många 4xx/5xx request man får in. Nu har vi inte Plus versionen och får nöja oss med att kunna se att servern är igång och hur många requests servern har fått.
 
-Ni behöver ha status_module aktiverad i Nginx, ni kan kolla det med kommandot `nginx -V 2>&1 | grep -o with-http_stub_status_module`, om ni får utskrift med `with-http_stub_status_module` så är ni good to go! För mig vad den aktiverad i den vanliga Nginx man installerar med apt-get.
+För att exportern ska fungera behvöer ni ha `status_module` aktiverad i Nginx. Ni kan kolla det är aktiverat med kommandot `nginx -V 2>&1 | grep -o with-http_stub_status_module`, om ni får utskrift med `with-http_stub_status_module` så är ni good to go! För mig vad den aktiverad i den vanliga Nginx man installerar med apt-get.
 
 När modulen är aktiverad kan ni följa [Monitoring nginx with Prometheus and Grafana](https://dimitr.im/monitoring-nginx-with-prometheus-and-grafana), den installerar exportern med Docker, om ni inte vill det kan ni installera den [som en binary](https://github.com/nginxinc/nginx-prometheus-exporter#running-the-exporter-binary).
 
@@ -171,12 +169,9 @@ Glöm inte att öppna portar i AWS.
 
 
 
-#### Docker {#docker}
+#### Ansible {#ansible}
 
-
-
-#### Alerting {#alert}
-
+Skapa en ny playbook för att sätta upp Prometheus och Grafana och lägg till alla exporters i respektive playbook. I er Prometheus config behöver ni koppla alla exporters till ip addresser, ni kan använda `{{ groups['<hostname>'][0] }}` för att få ut en ip i Ansible.
 
 
 
@@ -194,12 +189,14 @@ Det finns generellt kursmaterial i video form.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Ni har lagt till en till instans i er AWS infrastruktur och den nya instansen kör Prometheus. Lägg till en Reverse Proxy i er Nginx konfiguration som leder till Prometheus interfacet, om ni även kör Grafan lägg till en reverse proxy till den också. Länka dem i er redovisningstext.
+1. Ni har en till instans i er AWS infrastruktur som kör Prometheus och Grafana. Lägg till två Reverse Proxy i er Nginx konfiguration, en till Prometheus interfacet och en till Grafana. Länka till dem i er redovisningstext.
 
-1. Prometheus ska övervaka Nginx, MySQL databasen, Docker containrarna för microblog och databasen och AWS instanserna. För instanserna är det intressant att se hur mycket minne som är kvar på hårddisken, CPU och RAM användning. Skapa en dashboard för varje ..... Om ni använder Grafana gör era dashboards där istället för i Prometheus.
+1. Ha en Dashboard för varje exporter vi gått igenom, Nginx, Mysql, Node_exporter och Gunicorn.
 
-1. Skapa larm i Prometheus som varnar om någon Docker container, Nginx eller instans inte längre är igång. Skapa även ett larm som varnar om minnet på hårddisken på Prometheus instansen har mindre än 5G kvar.
-Hitta ett sätt som kan användas för att temporärt tar plats på hårddisken så larmet kan testas.
+1. Lägg till en Ansible playbook för Prometheus och Grafana. Lägg till att installera och starta alla olika exporters i respektive playbook.
+
+<!-- 1. Skapa larm i Prometheus som varnar om någon Docker container, Nginx eller instans inte längre är igång. Skapa även ett larm som varnar om minnet på hårddisken på Prometheus instansen har mindre än 5G kvar. -->
+<!-- Hitta ett sätt som kan användas för att temporärt tar plats på hårddisken så larmet kan testas. -->
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v4.0.0.
 
@@ -218,4 +215,6 @@ Se till att följande frågor besvaras i texten:
 
 1. Beskriv APM vad det används till.
 
-1. Beskriv Observability och vad det används till.
+1. Beskriv Observability och försök koppla det till ovanstående frågor.
+
+1. Hur var storleken på detta kmom? Finns det tid att göra mer?
