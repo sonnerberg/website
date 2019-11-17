@@ -129,17 +129,18 @@ Läs [instruktionen till kursmoment 04](./kmom04).
 
 
 
-### Kmom05: Container orchestration {#kmom05}
+### Kmom05: Säkerhet {#kmom05}
 
-Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbördan mellan dem.
+Hur säkrar vi upp vår docker miljö och våra devops flöden?
+
 
 Läs [instruktionen till kursmoment 05](./kmom05).
 
 
 
-### Kmom06: Säkerhet {#kmom06}
+### Kmom06: Container orchestration {#kmom06}
 
-Hur säkrar vi upp vår docker miljö och våra ddevops flöden?
+Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbördan mellan dem.
 
 Läs [instruktionen till kursmoment 06](./kmom06).
 

@@ -4,13 +4,13 @@ author:
 revision:
     "2019-10-15": "(A, aar) Första versionen."
 ...
-Kmom06: Säkerhet
+Kmom06: Container orchestration
 ==================================
 
-Hur säkrar vi upp vår docker miljö och våra ddevops flöden?
+Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbördan mellan dem.
 
-
-
+<!-- https://www.guru99.com/kubernetes-tutorial.html
+ -->
 
 <!-- more -->
 [WARNING]	
@@ -20,15 +20,7 @@ Hur säkrar vi upp vår docker miljö och våra ddevops flöden?
  Kursen ges hösten 2019 läsperiod 2.
 
 [/WARNING]
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-
-<!-- https://kryptera.se/t/elk-stack/ ossec 
-https://logz.io/blog/container-security-best-practices/
-
-Text om virtualisering och olika tekniker, hur det fungerar?
--->
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
