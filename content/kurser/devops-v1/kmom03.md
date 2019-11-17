@@ -47,7 +47,10 @@ Ansible är ett verktyg för att automatisera server konfiguration. Läs om [Ans
 
 ### 10 first minutes on a server i Ansible
 
-[INFO]Om du i kmom01 genererade en `.pem` fil som ssh nyckel via AWS behöver du göra om den till en `.pub` fil. Använd [Convert AWS pen to pub](https://gist.github.com/zircote/1243501). När du sen ska använda en ssh-nyckel i Ansible använd `.pub` filen.[/INFO]
+[INFO]Om du använder en ssh-nyckel med lösenord behöver du skapa en ny, i slutet av kursmomentet ska ni använda Ansible från CircleCi och CircleCi kan bara använda ssh-nycklar utan lösenord. Ni kan använda [Githubs guide](https://help.github.com/en/enterprise/2.16/user/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) för att skapa en ny nyckel. När ni skapat den, glöm inte att byta ut den på AWS.
+
+Om ni inte skapade en ny nyckel och ni genererade en ssh-nyckel med `.pem` i kmom01 via AWS behöver du göra om den ssh-nyckeln till en `.pub` fil. Använd [Convert AWS pen to pub](https://gist.github.com/zircote/1243501). När du sen ska använda en ssh-nyckel i Ansible använd `.pub` filen.
+[/INFO]
 
 Än så länge har vi kopierat skript från `scripts` mappen över till servern och exekverat för att konfigurera servern. Nu ska vi uppgradera oss och göra detta i Ansible istället.
 
@@ -57,6 +60,12 @@ Sen jag filmade videorna har jag uppdaterat hur `provision.yml` fungerar så att
 
 Innan ni fortsätter kan ni stänga ner er gamla server och ta bort den Elastic IP som ni har. Ändra inte i route53.
 
+[WARNING]
+Jag har ändrat med sen jag gjorde videorna. Vi använder inte längre filen `aws_keys.yml` för att lagra AWS credential, istället sparar vi dem som environment variabler. I videon körs `insert_aws_keys_in_config.sh` som ett skript, det gör vi inte längre använda `. insert_aws_keys_in_config.sh` istället. Det är samma som att skriva `source insert_aws_keys_in_config.sh`. Detta gör vi för att underlätta arbetet på CircleCi.
+
+Ni behöver inte längre lägga in sökvägen till er ssh nyckel i `ansible.cfg`. Gör det istället i `Makefile`, i target `add-ssh`. Då kan ni använda `make add-ssh` efter att ni har aktiverat `venv` för att lägga till er ssh-nyckel i ssh-agent. Detta gör att ni inte behöver ha med sökvägen till er ssh-nyckel när ni ska ssh:a till era servrar.
+[/WARNING]
+
 Börja med att kolla på videorna med [30x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) för att bekanta er med vad som finns i `ansible` mappen. Jag rekommenderar även att läsa `ansible/README.md` filen efteråt.
 
 Nästa steg är att skapa er egna playbook, kolla på videorna med [31x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) och skapa en playbook för 10-first-minutes skripten.
@@ -65,7 +74,7 @@ Nästa steg är att skapa er egna playbook, kolla på videorna med [31x i namnet
 
 ### Playbooks för app strukturen {#app_structure}
 
-Nu har vi en grund att utgå från, vi har tre servrar som är konfigurerade och installerade som en grund server. Nästa steg är att konfigurerar varje server för sig. 
+Nu har vi en grund att utgå från, vi har tre servrar som är konfigurerade och installerade som en grund server. Nästa steg är att konf-igurerar varje server för sig. 
 
 Ni ska nu skapa en playbook för att sätta upp databasen på en server, applikationen på en och en load balancer på den sista. När vi bara hade en server använde vi Nginx som en reverse proxy för att skicka vidare requests till Flask appen. Nu ska vi använda Nginx som en load balancer istället. Med Nginx som en load balancer istället för en reverse proxy kan vi lätta utöka antalet applikations servrar när vår hemsida blir populär och besöks antalet ökar. 
 
@@ -99,20 +108,24 @@ Ni kan använda [file module](https://docs.ansible.com/ansible/latest/modules/fi
 
 ### Ansible på CircleCi för CD {#cd}
 
-Lägg till ett sista steg i er CircleCi config som kör er playbook för att driftsätta appen. Ni behöver kunna ssh:a från CircleCi till AWS instansen
+Lägg till ett sista steg i er CircleCi config som kör er playbook för att driftsätta appen.
 
+För att göra detta behöver ni kunna ssh:a från CircleCi till AWS instansen. För det behöver ni lägga till er SSH nyckel på CircleCI. På CircleCi gå till settings för ert projekt, klicka `SSH permissions` och `Add SSH key`. Låt `Hostname` vara tomt och klistra in er SSH nyckel (inte `.pub` filen).
 
-Tips. om ni har krypterat någon fil med ansible-vault, lägg till lösenordet som en miljövariabel i CircleCi. Ni behöver ha AWS credentials som ligger i `aws_keys.yml` i CircleCi för att köra playbooken för `gather_aws_instances`. Ni kan lösa det på två sätt antingen genom att ta bort filen från `.gitignore` och lägga till ert Ansible-vault lösenord som miljövariabel i CircleCI. Det andra sättet är att lägga till alla nycklarna från `aws_keys.yml` som separat miljövariabler i CircleCi, då slipper ni ha det liggandes publikt på GitHub.
+För att slippa behöva aktivera venv i varje gång ni ska köra ett nytt kommando kan ni lägga till `- run: echo "source /path/to/virtualenv/bin/activate" >> $BASH_ENV` som ett steg efter att ni skapat `venv` mappen. Då kommer CircleCi automatiskt aktivera venv i varje steg.
 
-ssh key on ansible https://circleci.com/docs/2.0/add-ssh-key/
-kör venv för alla steps https://discuss.circleci.com/t/activate-python-virtualenv-for-whole-job/14434
+Ni behöver också ha tillgång till era AWS nycklar. Tanken var att de skulle ligga krypterat i `aws_keys.yml` och att ni skulle pusha den till repot. Men jag (eller någon anna vad jag vet) har inte lyckats få Ansible-vault att fungera på CircleCI, problemet är att läsa lösenordet från CircleCi's miljövariabler inte verkar fungera som det ska. Istället behöver ni lägga till AWS nycklarna som miljövariabler i CircleCI. Gå till settings för projektet och sen `Environment Variables`. Lägg nu till en variabel för varje nyckel och döp dem till följande (Viktigt med stora bokstäver).
+
+- `aws_access_key_id` -> `AWS_ACCESS_KEY`
+- `aws_secret_access_key` -> `AWS_SECRET_KEY`
+- `aws_session_token` -> `AWS_SECURITY_TOKEN`
+
+Det går tyvärr inte att ändra på variablerna efter att man skapat dem, så ni kommer behöva radera dem och lägga till nya när AWS nycklarna har gått ut.
+
+Nu borde ni vara redo att lägga till stegen i er CircleCi konfiguration för att driftsätta den senaste Docker imagen för Microblogen.
+
 <!-- https://blog.theodo.com/2016/05/straight-to-production-with-docker-ansible-and-circleci/ -->
 <!-- https://www.dvlv.co.uk/how-we-use-circleci-and-ansible-to-automate-deploying-flask-applications.html -->
-
-<!-- 
-### Bok {#bok}
-
-Devops ska vara mer än bara automation och verktyg, det är en arbetskultur och arbetssätt. Men samtidigt är verktygen en viktigt del av det. Ni kan läsa om hur verktyg passar in i devops i kapitel 11-13 i [Effective Devops](http://tinyurl.com/yyuw7a9w). -->
 
 
 
