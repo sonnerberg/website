@@ -51,6 +51,12 @@ Ansible är ett verktyg för att automatisera server konfiguration. Läs om [Ans
 
 Än så länge har vi kopierat skript från `scripts` mappen över till servern och exekverat för att konfigurera servern. Nu ska vi uppgradera oss och göra detta i Ansible istället.
 
+Sen jag filmade videorna har jag uppdaterat hur `provision.yml` fungerar så att det ska bli billigare att använda AWS, vi använder inte längre ElasticIP. Öppna `provision.yml` och ersätt `<subnet-id>` med ett subnet id. På bilden nedanför kan ni se vart ni kan hitta subnet id:t som redan används.
+
+[FIGURE src="img/devops/subnet-id.png" caption="Hitta subnet-id"]
+
+Innan ni fortsätter kan ni stänga ner er gamla server och ta bort den Elastic IP som ni har. Ändra inte i route53.
+
 Börja med att kolla på videorna med [30x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) för att bekanta er med vad som finns i `ansible` mappen. Jag rekommenderar även att läsa `ansible/README.md` filen efteråt.
 
 Nästa steg är att skapa er egna playbook, kolla på videorna med [31x i namnet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78) och skapa en playbook för 10-first-minutes skripten.
@@ -93,7 +99,13 @@ Ni kan använda [file module](https://docs.ansible.com/ansible/latest/modules/fi
 
 ### Ansible på CircleCi för CD {#cd}
 
-Lägg till ett sista steg i er CircleCi config som kör er playbook för att driftsätta appen. Tips. om ni har krypterat någon fil med ansible-vault, lägg till lösenordet som en miljövariabel i CircleCi. Ni behöver ha AWS credentials som ligger i `aws_keys.yml` i CircleCi för att köra playbooken för `gather_aws_instances`. Ni kan lösa det på två sätt antingen genom att ta bort filen från `.gitignore` och lägga till ert Ansible-vault lösenord som miljövariabel i CircleCI. Det andra sättet är att lägga till alla nycklarna från `aws_keys.yml` som separat miljövariabler i CircleCi, då slipper ni ha det liggandes publikt på GitHub.
+Lägg till ett sista steg i er CircleCi config som kör er playbook för att driftsätta appen. Ni behöver kunna ssh:a från CircleCi till AWS instansen
+
+
+Tips. om ni har krypterat någon fil med ansible-vault, lägg till lösenordet som en miljövariabel i CircleCi. Ni behöver ha AWS credentials som ligger i `aws_keys.yml` i CircleCi för att köra playbooken för `gather_aws_instances`. Ni kan lösa det på två sätt antingen genom att ta bort filen från `.gitignore` och lägga till ert Ansible-vault lösenord som miljövariabel i CircleCI. Det andra sättet är att lägga till alla nycklarna från `aws_keys.yml` som separat miljövariabler i CircleCi, då slipper ni ha det liggandes publikt på GitHub.
+
+ssh key on ansible https://circleci.com/docs/2.0/add-ssh-key/
+kör venv för alla steps https://discuss.circleci.com/t/activate-python-virtualenv-for-whole-job/14434
 <!-- https://blog.theodo.com/2016/05/straight-to-production-with-docker-ansible-and-circleci/ -->
 <!-- https://www.dvlv.co.uk/how-we-use-circleci-and-ansible-to-automate-deploying-flask-applications.html -->
 
