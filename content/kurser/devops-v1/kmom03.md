@@ -61,7 +61,7 @@ Sen jag filmade videorna har jag uppdaterat hur `provision.yml` fungerar så att
 Innan ni fortsätter kan ni stänga ner er gamla server och ta bort den Elastic IP som ni har. Ändra inte i route53.
 
 [WARNING]
-Jag har ändrat med sen jag gjorde videorna. Vi använder inte längre filen `aws_keys.yml` för att lagra AWS credential, istället sparar vi dem som environment variabler. I videon körs `insert_aws_keys_in_config.sh` som ett skript, det gör vi inte längre använda `. insert_aws_keys_in_config.sh` istället. Det är samma som att skriva `source insert_aws_keys_in_config.sh`. Detta gör vi för att underlätta arbetet på CircleCi.
+Jag har ändrat mer sen jag gjorde videorna. Vi använder inte längre filen `aws_keys.yml` för att lagra AWS credential, istället sparar vi dem som environment variabler. I videon körs `insert_aws_keys_in_config.sh` som ett skript, det gör vi inte längre använda `. insert_aws_keys_in_config.sh` istället. Det är samma som att skriva `source insert_aws_keys_in_config.sh`. Detta gör vi för att underlätta arbetet på CircleCi.
 
 Ni behöver inte längre lägga in sökvägen till er ssh nyckel i `ansible.cfg`. Gör det istället i `Makefile`, i target `add-ssh`. Då kan ni använda `make add-ssh` efter att ni har aktiverat `venv` för att lägga till er ssh-nyckel i ssh-agent. Detta gör att ni inte behöver ha med sökvägen till er ssh-nyckel när ni ska ssh:a till era servrar.
 [/WARNING]
