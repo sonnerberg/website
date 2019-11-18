@@ -82,7 +82,7 @@ Ni ska nu skapa en playbook för att sätta upp databasen på en server, applika
 
 #### Database playbook {#database_pb}
 
-Skapa en playbook som startar en Docker container med MySQL på servern som har host namnet `database`.
+Skapa en playbook som startar en Docker container med MySQL på servern som har host namnet `database`. När ni startar containern skicka med `- MYSQL_ROOT_PASSWORD=<password>` som environment variabel, ni kommer använda det i kmom04.
 
 
 
