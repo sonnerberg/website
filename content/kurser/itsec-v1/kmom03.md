@@ -38,7 +38,7 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10:00 (2019-11-18) i H430
+* 13:00 (2019-11-19) i H430
 
 
 
@@ -48,7 +48,9 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-Läs artikeln om riskanalys, [Texten hittar du här](/kursmaterial/itsec/doc/riskanalys.pdf).  
+* Läs artikeln om riskanalys, [Texten hittar du här](/kursmaterial/itsec/doc/riskanalys.pdf).
+* [OWASP - Application Threat Modeling](https://www.owasp.org/index.php/Application_Threat_Modeling)
+* Material kring Penetration Studies finns tillgängligt på Canvas [här](https://bth.instructure.com/files/201805)
 
 
 
@@ -62,8 +64,6 @@ Uppgifter  {#uppgifter}
 ### Uppgifter {#uppgifter}
 
 * Gör uppgiften [Sårbarhetsanalys](/uppgift/sarbarhetsanalys)
-
-<!-- Uppgifter: Ja, (men har inte i huvudet just nu) -->
 
 
 

@@ -20,8 +20,6 @@ Förkunskaper {#forkunskaper}
 -----------------------
 
 Du har deltagit i föreläsningarna som tillhör kursmomentet.  
-Du har läst de angivna kapitlen i kurslitteraturen.
-
 
 
 Krav {#krav}
@@ -31,12 +29,12 @@ Börja med att kopiera in mappen med applikationen till er me-katalog:
 
 ```bash
 # Flytta till kurskatalogen
-$ cp example/kmom03/* me/kmom03/app/
+$ rsync -ravd example/kmom03-app/ me/kmom03/app/
 ```
 
 Starta applikationen med `docker-compose up -d`.
 
-1. Analysera applikationen efter sårbarheter enligt ?????.
+1. Analysera applikationen efter sårbarheter enligt de metoder som nämndes under föreläsningen ([se här](https://bth.instructure.com/files/201806)).
 
 1. Döp analysen till `me/kmom03/analys.pdf`.
 
