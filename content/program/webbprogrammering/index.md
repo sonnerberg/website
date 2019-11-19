@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-11-19": "(E, mos) Länk till kurs-excel för 2020."
     "2019-02-04": (D, mos) Länk till utbildningsplan för 2018, 2019 samt uppföljning av status och tog bort äldre studieplaner.
     "2018-05-21": (C, mos) Lade till antagningsomgång 2019 för programmen.
     "2017-04-19": (B, mos) Lade till programöversikt och utbildningsplaner.
@@ -56,6 +57,7 @@ Få en översikt av de kurser som ingår i din antagningsomgång till programmet
 
 ### Webbprogrammering 120hp distans {#followup120}
 
+* [Antagen 2020](https://docs.google.com/spreadsheets/d/1mIseONfKc2mM0u__o2-bOXY5zEnvcAtk5KjXPWqxLj4/edit?usp=sharing)
 * [Antagen 2019](https://docs.google.com/spreadsheets/d/1N4zZNRkPcaOH7a4Eco_kUpXymJF3s9Z6C3TFbbufajE/edit?usp=sharing)
 * [Antagen 2018](https://docs.google.com/spreadsheets/d/1CMt1SIhO8CaB5R5k2RbEfsbL0daqZhjPpbQJri3k5QM/edit?usp=sharing)
 * [Antagen 2017](https://docs.google.com/spreadsheets/d/1a_qFW8QfP1tGPI87bW-NJvXeCu99aQEC48jLx7h2gGs/edit?usp=sharing) 
@@ -65,6 +67,7 @@ Få en översikt av de kurser som ingår i din antagningsomgång till programmet
 
 ### Webbprogrammering 180hp campus {#followup180}
 
+* [Antagen 2020](https://docs.google.com/spreadsheets/d/1-j2Tg90kRGwCN97wqljachAyZDsN6ct-9l6an1D2ehg/edit?usp=sharing)
 * [Antagen 2019](https://docs.google.com/spreadsheets/d/1Q9hQuoQ2J6cfZ0JGiGUU-mDr9iHZXgIN3qG5mRcNGxo/edit?usp=sharing)
 * [Antagen 2018](https://docs.google.com/spreadsheets/d/1uISBfMsOfx2fXWd8XSj3VIKbU4lmghRVKBjNyZ1OmJY/edit?usp=sharing)
 * [Antagen 2017](https://docs.google.com/spreadsheets/d/15wU6btyWTsK9F3I2TJINgduu_IfmCRbf2Wy46ayR9_0/edit?usp=sharing)
