@@ -15,6 +15,8 @@ Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på d
 
 [FIGURE src="img/devops/devops-security.png" caption="Hur det inte ska se ut när man kör devops."]
 
+Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stängt av ssh inloggning som root användare, vi har en ny användare i database bara för microbloggen, vi pushar inte AWS nycklarna till GitHub och vi sparar känslig information som behövs till CircleCi som hemlig miljövariabler.
+
 [WARNING]	
 
  **Kursutveckling pågår**	
@@ -57,6 +59,24 @@ https://techbeacon.com/security/6-devsecops-best-practices-automate-early-often
 https://techbeacon.com/security/10-top-open-source-tools-docker-security
 https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html#rule-9---use-static-analysis-tools
 
+
+https://www.denimgroup.com/resources/blog/2019/09/getting-started-questions/
+https://www.owasp.org/index.php/OWASP_Testing_Project
+https://www.owasp.org/index.php/ZAPpingTheTop10
+https://circleci.com/blog/adding-application-and-image-scanning-to-your-cicd-pipeline/
+https://app.snyk.io/org/andreasarne/manage/billing
+https://www.contrastsecurity.com/community-edition-lp-website
+https://www.aquasec.com/use-cases/devsecops-automation/
+https://vaddy.net/
+https://github.com/aquasecurity/trivy#comparison-with-other-scanners
+https://www.qualys.com/community-edition/
+https://github.com/hadolint/hadolint
+https://github.com/ottomatica/opunit
+https://www.owasp.org/index.php/OWASP_O2_Platform
+https://sonarcloud.io/dashboard?id=AndreasArne_redovisnings-sida
+https://github.com/docker/docker-bench-security
+https://github.com/OWASP/Container-Security-Verification-Standard
+https://github.com/Grunny/zap-cli
 -->
 
 
