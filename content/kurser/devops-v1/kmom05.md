@@ -7,8 +7,7 @@ revision:
 Kmom05: Säkerhet
 ==================================
 
-Hur säkrar vi upp vår docker miljö och våra ddevops flöden?
-
+Vi har redan funderat lite på säkerhet, vi pushar inte AWS nycklar till GitHub utan istället har vi dem som miljövariabler. Nu ska vi kolla på mer saker vi kan göra för att öka säkerheten och dyka ner i vad vissa kallar DevSecOps.
 
 
 
@@ -24,13 +23,42 @@ Hur säkrar vi upp vår docker miljö och våra ddevops flöden?
 
 
 
+Säkra Docker
+
+Säkra CI/CD flödet
+static code analasys
+dynamic --||--
+dependency scanning
+Security tests (typ enhetstester som testar säkerhet)
+User management (heter det helm? vault tjänst som kan hämta ssh nycklar och annan information från)
+splunk?
+
+
+https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html
+Docker Linux Security Module (seccomp, AppArmor, or SELinux)?
+docker analysis https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html#rule-9---use-static-analysis-tools
+
+Säkra AWS miljön, vpc och access node
+
+Läs [Container security best practices](https://logz.io/blog/container-security-best-practices/) för en kort översikt av några saker att tänkta på när man jobbar med containrar i produktion. De pratar om Immutable deployment, alltså att bygga ny instance vid varje deploy och ta bort den gamla. Vår infrastructure är inte mogen nog för det. Vår monitoring är för simpel och vi har inte satt upp någon logging monitoring som kan analysera för säkerhetsintrång.
+
+https://github.com/freach/docker-image-policy-plugin whitelist docker images för pull
+
+Fail2Ban
+
+Om vi inte hade haft AWS student konton hade vi använt oss av Identity and Access Management (IAM). Med det kan vi kontrollera vem som har rättigheter att skapa/ändra/radera resurser på AWS. Vi kan t.ex. skapa en ny användare som används av `gather_aws_instances.yml` playbooken och den användaren har bara rättigheter att läsa data från AWS. Då hade vi inte varit lika sårbara om vi hade råkat läcka AWS nycklarna.
+
 <!-- https://kryptera.se/t/elk-stack/ ossec 
-https://logz.io/blog/container-security-best-practices/
+https://www.redhat.com/en/topics/devops/what-is-devsecops
+https://techbeacon.com/security/6-devsecops-best-practices-automate-early-often
+https://techbeacon.com/security/10-top-open-source-tools-docker-security
+https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html#rule-9---use-static-analysis-tools
 
 Text om virtualisering och olika tekniker, hur det fungerar?
 -->
 
 
+Staging miljö? Vad för tester då?
 
 Labbmiljön  {#labbmiljo}
 ---------------------------------
