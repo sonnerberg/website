@@ -54,7 +54,7 @@ Om ni inte skapade en ny nyckel och ni genererade en ssh-nyckel med `.pem` i kmo
 
 Än så länge har vi kopierat skript från `scripts` mappen över till servern och exekverat för att konfigurera servern. Nu ska vi uppgradera oss och göra detta i Ansible istället.
 
-Sen jag filmade videorna har jag uppdaterat hur `provision.yml` fungerar så att det ska bli billigare att använda AWS, vi använder inte längre ElasticIP. Öppna `provision.yml` och ersätt `<subnet-id>` med ett subnet id. På bilden nedanför kan ni se vart ni kan hitta subnet id:t som redan används.
+Sen jag filmade videorna har jag uppdaterat hur `provision.yml` fungerar så att det ska bli billigare att använda AWS, vi använder inte längre ElasticIP. Öppna `roles/provision/tasks/main.yml` och ersätt `<subnet-id>` med ett subnet id. På bilden nedanför kan ni se vart ni kan hitta subnet id:t som redan används.
 
 [FIGURE src="img/devops/subnet-id.png" caption="Hitta subnet-id"]
 

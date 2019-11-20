@@ -153,9 +153,9 @@ Glöm inte att öppna portar i AWS så Prometheus kommer åt mysql_exporter.
 
 Det finns en officiel exporter för [Nginx](https://github.com/nginxinc/nginx-prometheus-exporter) som använder sig utav [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) för att samla data. Tyvärr behöver man ha Nginx Plus för att få ut mer intressant data som hur många 4xx/5xx request man får in. Nu har vi inte Plus versionen och får nöja oss med att kunna se att servern är igång och hur många requests servern har fått.
 
-För att exportern ska fungera behvöer ni ha `status_module` aktiverad i Nginx. Ni kan kolla det är aktiverat med kommandot `nginx -V 2>&1 | grep -o with-http_stub_status_module`, om ni får utskrift med `with-http_stub_status_module` så är ni good to go! För mig vad den aktiverad i den vanliga Nginx man installerar med apt-get.
+För att exportern ska fungera behvöer ni ha `status_module` aktiverad i Nginx. Ni kan kolla det är aktiverat med kommandot `sudo nginx -V 2>&1 | grep -o with-http_stub_status_module`, om ni får utskrift med `with-http_stub_status_module` så är ni good to go! För mig vad den aktiverad i den vanliga Nginx man installerar med apt-get.
 
-När modulen är aktiverad kan ni följa [Monitoring nginx with Prometheus and Grafana](https://dimitr.im/monitoring-nginx-with-prometheus-and-grafana), den installerar exportern med Docker, om ni inte vill det kan ni installera den [som en binary](https://github.com/nginxinc/nginx-prometheus-exporter#running-the-exporter-binary).
+När modulen är aktiverad kan ni följa [Monitoring nginx with Prometheus and Grafana](https://dimitr.im/monitoring-nginx-with-prometheus-and-grafana), den installerar exportern med Docker, om ni inte vill det kan ni installera den [som en binary](https://github.com/nginxinc/nginx-prometheus-exporter#running-the-exporter-binary). Artikeln är lite utdaterad så docker kommandot fungerar inte, använd istället `docker run   -p 9113:9113   nginx/nginx-prometheus-exporter:0.4.2 -nginx.scrape-uri=https://<domännamn>/metrics -nginx.retries=10 -nginx.ssl-verify=false -web.telemetry-path=/prometheus`.
 
 Glöm inte att öppna portar i AWS.
 
