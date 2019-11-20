@@ -10,6 +10,8 @@ Kmom06: Container orchestration
 Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbördan mellan dem.
 
 <!-- https://www.guru99.com/kubernetes-tutorial.html
+Text om virtualisering och olika tekniker, hur det fungerar?
+
  -->
 
 <!-- more -->

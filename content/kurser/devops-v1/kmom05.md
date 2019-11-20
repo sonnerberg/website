@@ -13,6 +13,8 @@ Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på d
 
 <!-- more -->
 
+[FIGURE src="img/devops/devops-security.png" caption="Hur det inte ska se ut när man kör devops."]
+
 [WARNING]	
 
  **Kursutveckling pågår**	
@@ -55,7 +57,6 @@ https://techbeacon.com/security/6-devsecops-best-practices-automate-early-often
 https://techbeacon.com/security/10-top-open-source-tools-docker-security
 https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html#rule-9---use-static-analysis-tools
 
-Text om virtualisering och olika tekniker, hur det fungerar?
 -->
 
 
