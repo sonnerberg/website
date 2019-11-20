@@ -4,14 +4,15 @@ author:
 revision:
     "2019-10-15": "(A, aar) Första versionen."
 ...
-Kmom05: Säkerhet
+Kmom05: Continuous Security
 ==================================
 
-Vi har redan funderat lite på säkerhet, vi pushar inte AWS nycklar till GitHub utan istället har vi dem som miljövariabler. Nu ska vi kolla på mer saker vi kan göra för att öka säkerheten och dyka ner i vad vissa kallar DevSecOps.
+Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på development och operations teams men även security behöver inkluderas för att det ska bli ett bra resultat. Inom devops ska det gå snabbt och man ska ta risker och då är security teamets roll att fungera som skyddsnät och skydda företagets tillgångar.
 
 
 
 <!-- more -->
+
 [WARNING]	
 
  **Kursutveckling pågår**	
