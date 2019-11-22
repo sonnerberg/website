@@ -4,7 +4,7 @@ author:
 revision:
     "2019-10-15": "(A, aar) Första versionen."
 ...
-Kmom05: Continuous Security
+Kmom05: DevSecOps
 ==================================
 
 Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på development och operations teams men även security behöver inkluderas för att det ska bli ett bra resultat. Inom devops ska det gå snabbt och man ska ta risker och då är security teamets roll att fungera som skyddsnät och skydda företagets tillgångar.
@@ -28,6 +28,13 @@ Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stä
 
 
 
+### Vad är DevSecOps {#devsecops}
+
+https://www.newcontext.com/what-is-devsecops/
+
+
+### Stuff
+
 Säkra Docker i CircleCi? (docker benchmark)
 Säkra infrastruktur (deployer node, ssh_scan?(s.100+)) nämn audit cloud infrastructure (s.341+)
 snyk/Zap i CircleCi
@@ -36,10 +43,7 @@ Bättre https? (s.138+) hsts, https://testssl.sh/ / ssllabs.com
 Säkra ci/cd kedja s148+ 
 
 
-static code analasys (bandit)
-dynamic --||--
 dependency scanning (snyk)
-Security tests (typ enhetstester som testar säkerhet) (skippa)
 User management (hashicorp vault/mozilla sops)
 
 
@@ -66,50 +70,68 @@ https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html#
 
 
 https://www.denimgroup.com/resources/blog/2019/09/getting-started-questions/
-https://www.owasp.org/index.php/OWASP_Testing_Project
-https://www.owasp.org/index.php/ZAPpingTheTop10
 https://circleci.com/blog/adding-application-and-image-scanning-to-your-cicd-pipeline/
 https://app.snyk.io/org/andreasarne/manage/billing
-https://www.contrastsecurity.com/community-edition-lp-website
 https://www.aquasec.com/use-cases/devsecops-automation/
 https://vaddy.net/
 https://github.com/aquasecurity/trivy#comparison-with-other-scanners
 https://www.qualys.com/community-edition/
 https://github.com/hadolint/hadolint
 https://github.com/ottomatica/opunit
-https://www.owasp.org/index.php/OWASP_O2_Platform
 https://sonarcloud.io/dashboard?id=AndreasArne_redovisnings-sida
 https://github.com/docker/docker-bench-security
 https://github.com/OWASP/Container-Security-Verification-Standard
-https://github.com/Grunny/zap-cli
 -->
 
 
-Staging miljö? Vad för tester då?
+### SAST vs. DAST {#sast-dast}
 
-Labbmiljön  {#labbmiljo}
----------------------------------
+Static Application Security Testing (SAST), eller bara Static Code Analysis, är att analysera källkoden för kända säkerhetsrisker och sårbarheter utan att exekvera programmet. SAST är bra på att fånga upp programmeringsmisstag tidigt i utvecklingsprocessen av en applikation. Vi kommer använda [Bandit](https://github.com/PyCQA/bandit) för att utföra SAST på vår Python kod.
 
-Ingen labbmiljö än så länge!
+Dynamic Application Security Testing (DAST) letar efter sårbarheter i webapplikationer genom att skanna och utföra attacker på applikationen. Vi kommer använda [Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) för att utföra DAST på Microbloggen.
 
-
-
-Läs & Studera  {#lasanvisningar}
----------------------------------
-
-*(ca: 4-6 studietimmar)*
+Läs [SAST vs. DAST](https://www.synopsys.com/blogs/software-security/sast-vs-dast-difference/) för en jämförelse av de två och vad de är bra på.
 
 
 
-### Bok {#bok}
+#### Bandit {#bandit}
 
-Kolla in följande.
+[Bandit](https://github.com/PyCQA/bandit) är ett linting verktyg (som pylint) fast det analyserar istället säkerhet i koden. Ladda ner Bandit och lägg till det i `requirements/test.txt` så att det är en del av paketen för testning. Testa att köra Bandit med `bandit -r app` så att det bara analyserar koden för applikationen, vi behöver inte köra det mot testerna.
+
+Om ni har kodrader som ni anser är false-positivs kan ni lägga `# nosec` som en kommentar i slutet på den raden. Då ignorerar Bandit den raden. Det går även att hoppa över hela tester, ni kan skapa filen `.bandit.yml` och i den skriva:
+
+```
+skips: [<'list of tests'>]
+```
+
+För att Bandit ska läsa konfigurationen kör Bandit med `bandit -c .bandit.yml -r app`. Om ni får några fel kan ni antingen fixa felet, lägga till `# nosec` eller hoppa över regeln helt. Analysera felet och gör ett aktivt val över vad som är en passande åtgärd på felet.
+
+Lägg till ett make target I Makefile som kör Bandit på `app` mappen. Gör sen så att Bandit är en del av testerna som körs i Dockerfile_test och som en del av CircleCi.
 
 
 
-### Artiklar {#artiklar}
+### Zap {#zap}
 
-Kika igenom följande artiklar.
+[Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)/[Zap på Github](https://github.com/zaproxy/zaproxy) är ett verktyg som kan testa väldigt många saker, speciellt från OWASP10. Det går att köra det både automatiskt och manuellt.
+
+Vi kommer att nöja oss med att köra deras [Baseline tester](https://github.com/zaproxy/zaproxy/wiki/ZAP-Baseline-Scan) på Microbloggen, då utförs inga aktiva attacker, den bara skannar websidan. Mozilla har ett [blogginlägg](https://blog.mozilla.org/security/2017/01/25/setting-a-baseline-for-web-security-controls/) där de förklarar hur ni kan köra Zap med baseline testerna. Följ den för att testa köra den mot er Microblog, ni behöver inte lägga till det i CircleCi.
+
+Det går även att köra Zap mot er lokala miljö, men då måste ni sätta nätverk när ni startar containern:
+
+<!-- `docker run -t owasp/zap2docker-stable zap-baseline.py -t https://<domain>` -->
+```
+docker run --net host owasp/zap2docker-weekly zap-baseline.py -t http://0.0.0.0:8000
+```
+
+Fixa minst 5 valfria varningar från Zap, beskriv vilka och vad ni gjorde i redovisningstexten. Det lättaste sättet att fixa dem är att logga in på AWS instansen och ändra i Nginx konfigurationen, ladda om Nginx och köra Zap igen för att se om varningen försvann.
+
+Egentligen skulle vi lagt till Zap i CircleCi men vi har ingen staging miljö att köra den mot. Så vi får nöja oss med att köra det manuellt innan push. Lägg till ett make target i Makefilen som kör Zap mot er Microblog, döp det till `Zap`.
+
+
+
+### Lästips {#lastips}
+
+1. [Zapping the top 10](https://www.owasp.org/index.php/ZAPpingTheTop1), hur ni kan använda Zap för att testa OWASP10 sårbarheterna.
 
 
 
@@ -124,19 +146,13 @@ Det finns generellt kursmaterial i video form.
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-### Övningarr {#ovningar}
-
-Gör följande övningar, de behövs normalt för att klara uppgifterna..
-
-
-
 ### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
+1. Vad ska bandit köras som, make validate eller test? och som ett eget target? Lägg till det så sker när kör test docker.
+
+1. Fixa minst 5 varningar från Zap testerna. Glöm inte bort att uppdatera er Nginx config i Ansible!
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v5.0.0.
 
@@ -149,4 +165,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-...
+1. Ändrade ni något i er kod efter ni kört Bandit? Använder ni `# nosec` för att ignorera någon kod eller skippa något test? Varför?
+
+1. Beskriv vilka Zap varningar ni fixade och hur ni löste dem.
