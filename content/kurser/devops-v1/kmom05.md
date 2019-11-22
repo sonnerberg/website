@@ -28,28 +28,33 @@ Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stä
 
 
 
-Säkra Docker
+Säkra Docker i CircleCi? (docker benchmark)
+Säkra infrastruktur (deployer node, ssh_scan?(s.100+)) nämn audit cloud infrastructure (s.341+)
+snyk/Zap i CircleCi
+Databas, får bara ansluta från app server. (bra infp s.108+)
+Bättre https? (s.138+) hsts, https://testssl.sh/ / ssllabs.com
+Säkra ci/cd kedja s148+ 
 
-Säkra CI/CD flödet
-static code analasys
+
+static code analasys (bandit)
 dynamic --||--
-dependency scanning
-Security tests (typ enhetstester som testar säkerhet)
-User management (heter det helm? vault tjänst som kan hämta ssh nycklar och annan information från)
-splunk?
+dependency scanning (snyk)
+Security tests (typ enhetstester som testar säkerhet) (skippa)
+User management (hashicorp vault/mozilla sops)
 
 
 https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html
 Docker Linux Security Module (seccomp, AppArmor, or SELinux)?
 docker analysis https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html#rule-9---use-static-analysis-tools
 
-Säkra AWS miljön, vpc och access node
+zap s.~50?
+ zap baseline https://blog.mozilla.org/security/2017/01/25/setting-a-baseline-for-web-security-controls/ s.48
+Säkra AWS miljön, vpc och access node. Hur blir det med ansible-deploy om de inte kan ssh in på app noden??!?!?
+    multi factor authentic med duo security, på deploy noden? s 88-89
 
 Läs [Container security best practices](https://logz.io/blog/container-security-best-practices/) för en kort översikt av några saker att tänkta på när man jobbar med containrar i produktion. De pratar om Immutable deployment, alltså att bygga ny instance vid varje deploy och ta bort den gamla. Vår infrastructure är inte mogen nog för det. Vår monitoring är för simpel och vi har inte satt upp någon logging monitoring som kan analysera för säkerhetsintrång.
 
 https://github.com/freach/docker-image-policy-plugin whitelist docker images för pull
-
-Fail2Ban
 
 Om vi inte hade haft AWS student konton hade vi använt oss av Identity and Access Management (IAM). Med det kan vi kontrollera vem som har rättigheter att skapa/ändra/radera resurser på AWS. Vi kan t.ex. skapa en ny användare som används av `gather_aws_instances.yml` playbooken och den användaren har bara rättigheter att läsa data från AWS. Då hade vi inte varit lika sårbara om vi hade råkat läcka AWS nycklarna.
 
