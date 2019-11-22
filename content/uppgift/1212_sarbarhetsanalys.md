@@ -25,13 +25,15 @@ Du har deltagit i föreläsningarna som tillhör kursmomentet.
 Analys {#analys}
 -----------------------
 
-Er analys ska innehålla en summering, metodbeskrivning av hur ni gjort, en rankad lista över risker, samt en sammanfattning på vilka som är de högst prioriterade sårbarheterna (gärna i tabellform). Listan över risker och sårbarheter ska ni rangordna och er rankning bör även motiveras. Listan bör innehålla följande egenskaper för varje risk/sårbarhet:
+Er analys ska innehålla en summering, metodbeskrivning av hur ni gjort, en rankad lista över risker, samt en sammanfattning på vilka som är de högst prioriterade sårbarheterna (gärna i tabellform). Listan över risker och sårbarheter ska ni rangordna och er rankning bör även motiveras.
 
-• Risk/sårbarhet (namn)
-• Beskrivning
-• Allvarlighetsgrad
-• Sårbarhetsklassificering
-• Prioritet/rank
+Listan bör innehålla följande egenskaper för varje risk/sårbarhet:
+
+* Risk/sårbarhet (namn)
+* Beskrivning
+* Allvarlighetsgrad
+* Sårbarhetsklassificering
+* Prioritet/rank
 
 Metodbeskrivningen bör visa hur ni har gått tillväga, t.ex. om ni använt attackträd, use-cases, eller någon annan metodik. Era eventuella attackträd eller visualiseringar ska också tas med i rapporten.
 
