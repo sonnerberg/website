@@ -5,6 +5,7 @@ author:
     - mos
     - lew
 revision:
+    "2019-11-24": "(A, aurora) Updated with correct assignments and material"
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
 Kmom04: Skydda data
@@ -21,73 +22,42 @@ Kursen planeras ge hösten 2019.
 [/WARNING]
 
 
-
-
-
-<!--stop-->
-
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
-Labbmiljön  {#labbmiljo}
+Föreläsningar  {#forelasningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 2 studietimmar)*
 
-Behövs någon särskild labbmiljö för detta kmom?
+Du ska medverka på föreläsningen:
+
+* 10:00 (2019-11-25) i H430
 
 
 
 Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 4-6 studietimmar)*
 
-Föreläsningar:
+* [OAuth2](https://oauth.net/2/)
+    * [Google Developers - OAuth2](https://developers.google.com/identity/protocols/OAuth2)
+    * [GitHub Developers - Building OAuth Apps](https://developer.github.com/apps/building-oauth-apps/)
+    * [Digital Ocean - An Introduction to OAuth2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-* Introduktion till kryptering
-* symmetriska och asymmetriska metoder
-* nyckelhantering
-* signering och certifikat
-
-Läsanvisningar, video?
+* Encryption
+    * [Getting Started - Let's Encrypt](https://letsencrypt.org/getting-started/)
+    * [Certificates for localhost - Let's Encrypt](https://letsencrypt.org/docs/certificates-for-localhost/)
 
 
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 8-12 studietimmar)*
 
-Exempel på laborationer:
-
-* Dataintegritet med hashning
-    * Möjligheterna med hashing
-    * Verifiering av datakorrekthet, t.ex. lösenord
-    * Säkra hashmetoder, och osäkra alternativ
-    * Saltning
-
-* Asymmetriskt kryptering
-    * Nyckelgenerering och hantering
-    * Kryptering av data
-    * Signering av data
-
-* Certifikatgenerering och hantering
-    * Självsignerade certifikat och dess möjligheter samt begränsningar
-    * CA-signerade certifikat och dess möjligheter samt begränsningar
-
-
-
-### Övningar {#ovningar}
-
-Finns det övningar som studenten gör för att förbereda sig inför uppgifterna?
-
-
-
-### Uppgifter {#uppgifter}
-
-Finns det uppgifter som skall utföras och redovisas?
+* Gör uppgiften [Säker Lösenordshantering](/uppgift/losenordshantering)
 
 
 
@@ -100,8 +70,5 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-<!-- * Fråga relaterad till kursmaterialet. -->
-
-* Har du jobbat med någon av dessa tekniker/verktyg innan?
-* Är teknikerna som nämnts något du kommer använda i framtida projekt?
+* Har du jobbat med OAuth tidigare?
 * Vilken är din TIL för detta kmom?
