@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2019-11-25": (L, aar) Ändrade datum för omexamination.
     "2018-12-10": (k, efo, aar) Översyn och släpp inför python-v2 try3.
     "2018-12-10": (j, efo, aar) Översyn och släpp inför python-v2 try2.
     "2018-09-28": (j, efo, aar) Översyn och släpp inför python-v2 try1.
@@ -200,6 +201,6 @@ Omexamination {#omexamination}
 Som student har du rätt till tre examinationstillfällen med andra ord om du inte klarar första har du två försök till på dig.
 Följande tillfällen erbjuds efter 2019-10-28:
 
-Omexaminationstillfälle fredagen den 2020-01-10.
+Omexaminationstillfälle fredagen den 2020-01-09.
 
 Restexaminationstillfälle onsdagen den 2020-06-10.
