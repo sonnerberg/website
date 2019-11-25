@@ -59,6 +59,7 @@ I er redovisningstext, skriv vilka "krav" på lösenordet ni väljer att sätta.
 
 Utöver ovanstående krav gäller följande:
 
+* Konfigurera så att det inte går att chansa på lösenord hur många gånger som helst (timeout etc)
 * Applikationen ska fungera i Docker
 
 OAuth2 via GitHub (Optionellt) {#oauth}
