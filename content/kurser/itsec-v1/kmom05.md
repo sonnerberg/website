@@ -12,18 +12,6 @@ Kmom05: Attacker
 
 Det finns ett antal attacker som kan räknas som vanliga när man pratar om webbsäkerhet. I detta kursmomentet går vi igenom vanliga attacker och hur man kan skydda sig mot dem: XSS, session hijacking, redirect problem, directory traversal, etc.
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen planeras ge hösten 2019.
-
-[/WARNING]
-
-
-
-<!--more-->
-
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
