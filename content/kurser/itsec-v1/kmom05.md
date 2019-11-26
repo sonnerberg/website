@@ -28,42 +28,33 @@ Kursen planeras ge hösten 2019.
 
 
 
-Labbmiljön  {#labbmiljo}
+Föreläsningar  {#forelasningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 2 studietimmar)*
 
-Behövs någon särskild labbmiljö för detta kmom?
+Du ska medverka på genomgången:
 
-LabbMiljö: osäkra servrar i virtuella miljöer, där man ska ta flaggor (dvs utföra attacken och hitta info)
+* 10:00 (2019-12-02) i H430
 
 
 
 Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 4-6 studietimmar)*
 
-* [OWASP Top 10 Application Security Risks - 2017](https://www.owasp.org/index.php/Top_10-2017_Top_10)
+* [OWASP Top 10 Application Security Risks - 2017](https://www.owasp.org/index.php/Top_10-2017_Top_10)  
+* [Videoserien till top 10](https://securityintelligence.com/the-10-most-common-application-attacks-in-action/)
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 8-12 studietimmar)*
 
-
-
-### Övningar {#ovningar}
-
-Övningar: Ja.
-
-
-
-### Uppgifter {#uppgifter}
-
-Ja, osäker kod/config presenteras och ska patchas av studenterna.
+* Gör uppgiften [OWASP](/uppgift/owasp)
 
 
 
@@ -76,8 +67,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-<!-- * Fråga relaterad till kursmaterialet. -->
 
-* Vad tycker du om CTF som upplägg för labbar, tumme upp eller ner?
+
 * Har du tidigare erfarenhet av de typer av attacker som nämns i kursmomentet? Både som utvecklare och användare.
 * Vilken är din TIL för detta kmom?
