@@ -163,8 +163,15 @@ Glöm inte att öppna portar i AWS.
 
 #### Gunicorn {#gunicorn}
 
-I Gunicorn kan vi få ut mer intressant data, vi kan bl.a. se request duration och hur många av de olika request typerna vi får. Jobba igenom [Monitoring Gunicorn with Prometheus](https://medium.com/@damianmyerscough/monitoring-gunicorn-with-prometheus-789954150069) för att sätta upp flödet. När ni följer guiden behöver ni tänka på att ni kör Gunicorn i Docker, detta påverkar hur ni behöver köra det. Gunicorn har ett plugin som behöver koppla upp sig mot port 9125 på StatsD containern, det är så statsD får datan. För att Gunicorn ska kunna komma åt statsD's portar behöver de köra på samma nätverk. Då har ni två val, antingen skapar ni ett nätverk i Docker och köra båda containers på det. Det andra alternativet är att göra som i guiden där statsD containern körs på `host` nätverket, då behöver ni också köra Microblog på det nätverket. Nätverket `host` är speciellt, man kan inte öppna portar för containern manuellt utan alla portar är tillgängliga automatiskt, vilket betyder att ni inte behöver typ `-p 8000:5000` när ni startar containern. Ni behöver inte det heller för statsD containern som visas i guiden. Om ni kör på `host` nätverket glöm inte försäkra er om att Nginx är kopplad till rätt port, så att hur ni kör Gunicorn i Docker inte ändras från 8000 till 5000 och ni inte ändrar till det också i Nginx.  
-I slutet av artikeln finns en gömd länk som visar kod för en [Grafana Gunicorn Dashboard](https://gist.github.com/dmyerscough/59896aa752ba48794d2aef4c7a0fdd6e).
+I Gunicorn kan vi få ut mer intressant data, vi kan bl.a. se request duration och hur många av de olika request typerna vi får. Jobba igenom [Monitoring Gunicorn with Prometheus](https://medium.com/@damianmyerscough/monitoring-gunicorn-with-prometheus-789954150069) för att sätta upp flödet. När ni följer guiden behöver ni tänka på att ni kör Gunicorn i Docker, detta påverkar hur ni behöver köra det. Tänk på följande när ni gör guiden:
+
+- När ni ska starta docker containern behöver ni lägga till ett "-" i argumentet till statsd, `docker run -dP --net=host -v ${PWD}/statsd.conf:/statsd/statsd.conf prom/statsd-exporter "--statsd.mapping-config=/statsd/statsd.conf"`.
+
+- Gunicorn har ett plugin som behöver koppla upp sig mot port 9125 på StatsD containern, det är så statsD får datan. För att Gunicorn ska kunna komma åt statsD's portar behöver de köra på samma nätverk. Då har ni två val, antingen skapar ni ett nätverk i Docker och köra båda containers på det. Det andra alternativet är att göra som i guiden där statsD containern körs på `host` nätverket, då behöver ni också köra Microblog på det nätverket. Nätverket `host` är speciellt, man kan inte öppna portar för containern manuellt utan alla portar är tillgängliga automatiskt, vilket betyder att ni inte behöver typ `-p 8000:5000` när ni startar containern. Om ni kör på `host` nätverket glöm inte försäkra er om att Nginx är kopplad till rätt port, så att hur ni kör Gunicorn i Docker inte ändras från 8000 till 5000 och ni inte ändrar till det också i Nginx.  
+
+- För att förtydliga, statsd containern använder port 9102 för att skicka data, prometheus ska koppla upp sig på denna, och port 9125 för att ta emot data, skickas från gunicorn.
+
+- I slutet av artikeln finns en gömd länk som visar kod för en [Grafana Gunicorn Dashboard](https://gist.github.com/dmyerscough/59896aa752ba48794d2aef4c7a0fdd6e).
 
 Glöm inte att öppna portar i AWS.
 

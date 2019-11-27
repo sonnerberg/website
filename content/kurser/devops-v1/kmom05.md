@@ -48,24 +48,33 @@ När det kommer till att göra Docker säkrare finns det väldigt mycket man kan
 Läs också [Container security best practices](https://logz.io/blog/container-security-best-practices/) för en kort översikt av några saker att tänkta på när man jobbar med containrar i produktion. De pratar om Immutable deployment, alltså att bygga ny instance vid varje deploy och ta bort den gamla. Vår infrastructure är inte mogen nog för det. Vår monitoring är för simpel och vi har inte satt upp någon logging monitoring som kan analysera efter säkerhetsintrång.
 
 
+
+
+
+
+Staging miljö? Vad för tester då?
+
 ##### Docker Bench for Security {#bench}
 
 Docker har byggt ihop några skript som kollar basic säkerhet i Docker konfiguration och images. Projektet kallas för [Docker Bench Security](https://github.com/docker/docker-bench-security) och det kollar många av sakerna som tas upp dokumenten jag länkade ovanför. Docker Bench Security är en bra start för säkerhet i Docker men det är inte en fullstädning lösning.
 
-Jobba igenom guiden [Using Docker Bench Security to configure Docker to best practices](https://developers.hp.com/epic-stories/blog/docker-bench-security-container-hardening-and-auditing-host-security) för att fixa basic konfiguration på servrarna för att lösa många av varningarna. Logga in på er AppServer och kör kommandona där när ni jobbar igenom guiden. OBS! Läs igenom nedanstående info innan ni börjar med guiden, det rättar saker som inte funkar för oss, guiden kommer inte lösa alla felen ni har och den är skriven för Alpine os så t.ex. för ni skriva `apt-get` istället för `apk` när ni ska installera något.  
-När ni ska konfigurera `auditd` ska ni skriva reglerna i filen `/etc/audit/rules.d/audit.rules`.  
-När ni i guiden ska konfigurera Docker Daemon skippa följande två rader:
+Jobba igenom guiden [Using Docker Bench Security to configure Docker to best practices](https://developers.hp.com/epic-stories/blog/docker-bench-security-container-hardening-and-auditing-host-security) för att fixa basic konfiguration på servrarna för att lösa många av varningarna. Logga in på er AppServer och kör kommandona där när ni jobbar igenom guiden. OBS! Läs igenom nedanstående info innan ni börjar med guiden, det rättar saker som inte funkar för oss, guiden kommer inte lösa alla felen ni har och den är skriven för Alpine os så t.ex. behöver ni skriva `apt-get` istället för `apk` när ni ska installera något.
+
+- När ni ska konfigurera `auditd` ska ni skriva reglerna i filen `/etc/audit/rules.d/audit.rules`.  
+- När ni i guiden ska konfigurera Docker Daemon skippa följande två rader:
 
 ```
 "log-driver": "syslog",
 "disable-legacy-registry": true,
 ```
 
-Vi vill inte sätta log-driver för att vi har inte en extern log server att skicka dem till och `disable-legacy-registry` är deprecated. Efter att ni startat om Docker deamon efter ny config kan det vara så att microblog containern inte startar automatiskt så ni får starta den manuellt.
+Vi vill inte sätta log-driver för att vi har inte en extern log server att skicka dem till och `disable-legacy-registry` är [deprecated i nyare versioner av Docker](https://docs.docker.com/engine/deprecated/#interacting-with-v1-registries). Efter att ni startat om Docker deamon efter ny config kan det vara så att microblog containern inte startar automatiskt så ni får starta den manuellt.
 
-När ni ska exportera `DOCKER_CONTENT_TRUST=1` glöm inte att lägga den i `~/.profile`.
+- Använd `sudo less /var/log/syslog  |  grep docker` för att Docker felmededelande vid restart. kan också tillägga att om man försöker starta om Docker för ofta får man error. Då är det bara att vänta en stund innan man försöker igen.
 
-Ni behöver inte hämta hem Django och köra för Container Hardening utan utgå ifrån er Microblog som ni reda har körandes.
+- När ni ska exportera `DOCKER_CONTENT_TRUST=1` glöm inte att lägga den i `~/.profile`.
+
+- Ni behöver inte hämta hem Django och köra för Container Hardening utan utgå ifrån er Microblog som ni reda har körandes.
 
 Jobba igenom guiden nu.
 
