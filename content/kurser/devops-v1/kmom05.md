@@ -7,7 +7,7 @@ revision:
 Kmom05: DevSecOps
 ==================================
 
-Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på development och operations teams men även security behöver inkluderas för att det ska bli ett bra resultat. Inom devops ska det gå snabbt och man ska ta risker och då är security teamets roll att fungera som skyddsnät och skydda företagets tillgångar.
+Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på development och operations teams men även security behöver inkluderas för att det ska bli ett bra resultat. I detta kursmoment ska vi kolla på hur vi kan inkludera säkerhet i hela utvecklingsprocessen, så att alla blir ansvariga för säkerhet i ett projekt.
 
 
 
@@ -15,46 +15,40 @@ Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på d
 
 [FIGURE src="img/devops/devops-security.png" caption="Hur det inte ska se ut när man kör devops."]
 
-Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stängt av ssh inloggning som root användare, vi har en ny användare i database bara för microbloggen, vi pushar inte AWS nycklarna till GitHub och vi sparar känslig information som behövs till CircleCi som hemlig miljövariabler.
-
-[WARNING]	
-
- **Kursutveckling pågår**	
-
- Kursen ges hösten 2019 läsperiod 2.
-
-[/WARNING]
+Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stängt av ssh inloggning som root användare, vi har en ny användare i database bara för microbloggen, vi pushar inte AWS nycklarna till GitHub och vi sparar känslig information som behövs till CircleCi som hemlig miljövariabler. Nu ska vi gå vidare med att aktivt leta efter säkerhetsrisk.
 
 
 
 ### Vad är DevSecOps {#devsecops}
 
-https://www.newcontext.com/what-is-devsecops/
+Målet med DevSecOps är att alla behöver tänka på och är ansvariga för säkerheten hos en produkt. Säkerhet behöver vara en del av hela utvecklingsprocessen. Mycket inom devops handlar om automation och där vill vi även ha med säkerheten, manuell kontroll av säkerhet ska vara ett undantag inte regeln. DevSecOps har fått ett eget namn för att det är först på senare år som man börjat med att få in säkerhetstänket, det var inte riktigt med början av devops. Läs [The “What” “How” and “Why” of DevSecOps](https://www.newcontext.com/what-is-devsecops/) och [What is DevSecOps?](https://www.atlassian.com/continuous-delivery/principles/devsecops) som tar upp lite olika delar av DevSecOps.
 
-https://www.atlassian.com/continuous-delivery/principles/devsecops
+Läs också sida 1-17 i [Securing Devops](http://tinyurl.com/usyps42) (länken går till en E-bok version) för en introduktion till Continuous Security.
 
-Läs sida 1-17 i [Securing Devops](http://tinyurl.com/usyps42) (länken går till en E-bok version) för en introduktion till Continuous Security.
 
 
 ### Test-driven security {#tds}
 
-???
+Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja men vi jobbar ju inte med säkerhets så vi har inte kolla hur vi testar saker för säkerhet. Som tur är för oss finns det många projekt andra människor och företag har gjort som testar säkerhet i olika aspekter på olika system. Ni ska koppla på en mängd olika verktyg på CI/CD kedjan som utför tester på områden som man brukar testa.
+
 
 
 #### Docker {#docker}
 
-När det kommer till att göra Docker säkrare finns det väldigt mycket man kan göra, det finns flera olika långa dokument som går igenom vad man kan göra. T.ex. [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker/), ett av de längre dokumenten, och [OWASP Container security standard](https://github.com/OWASP/Container-Security-Verification-Standard), som tycker att CIS är för stor dokument. Ni behöver inte sätta er in i dem men om ni är intresserade rekommenderar jag OWASPs standard. Vi nöjer oss med att läsa OSWAP [Docker security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html). De har en bra sammanfattning av viktiga saker att tänka på. Vi gör några av sakerna för Microbloggen men de flesta uppfyller vi inte.
+När det kommer till att göra Docker säkrare finns det väldigt mycket man kan göra, det finns flera olika långa dokument som går igenom vad man kan göra. T.ex. [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker/), ett av de längre dokumenten, och [OWASP Container security standard](https://github.com/OWASP/Container-Security-Verification-Standard), som tycker att CIS är för långt dokument. Ni behöver inte sätta er in i dem men om ni är intresserade rekommenderar jag OWASPs standard. Vi nöjer oss med att läsa OSWAP [Docker security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html). De har en bra sammanfattning av viktiga saker att tänka på. Vi gör några av sakerna för Microbloggen men de flesta uppfyller vi inte.
 
 Läs också [Container security best practices](https://logz.io/blog/container-security-best-practices/) för en kort översikt av några saker att tänkta på när man jobbar med containrar i produktion. De pratar om Immutable deployment, alltså att bygga ny instance vid varje deploy och ta bort den gamla. Vår infrastructure är inte mogen nog för det. Vår monitoring är för simpel och vi har inte satt upp någon logging monitoring som kan analysera efter säkerhetsintrång.
 
 
 
+##### Docker image security scanning {#docker_scan}
 
+Det finns några olika verktyg för att skanna Docker images, Docker runtime och inställningar i Docker host. Tanken var att vi skulle använda oss av något av de verktygen. Tyvärr finns det problem med alla jag testade som gjorde att de blir jobbigare att använda dem än vad vi får ut av det. Jag rekomenderar att läsa [Docker Image Security Scanning: What It Can and Can't Do](https://resources.whitesourcesoftware.com/blog-whitesource/docker-image-security-scanning), den nämner några verktyg för att skanna filer. Den nämner dock inte [Docker Bench Security](https://github.com/docker/docker-bench-security) vilket är Dockers egna verktyg för att skanna olika delar av Docker.
 
+Det är bra att känna till verktygen och om ni jobbar med Docker på fritiden eller senare i arbetslivet rekommenderar jag er att använda något verktyg.
 
-Staging miljö? Vad för tester då?
-
-##### Docker Bench for Security {#bench}
+ 
+<!-- ##### Docker Bench for Security {#bench}
 
 Docker har byggt ihop några skript som kollar basic säkerhet i Docker konfiguration och images. Projektet kallas för [Docker Bench Security](https://github.com/docker/docker-bench-security) och det kollar många av sakerna som tas upp dokumenten jag länkade ovanför. Docker Bench Security är en bra start för säkerhet i Docker men det är inte en fullstädning lösning.
 
@@ -66,15 +60,12 @@ Jobba igenom guiden [Using Docker Bench Security to configure Docker to best pra
 ```
 "log-driver": "syslog",
 "disable-legacy-registry": true,
+"userns-remap": "default"
 ```
 
-Vi vill inte sätta log-driver för att vi har inte en extern log server att skicka dem till och `disable-legacy-registry` är [deprecated i nyare versioner av Docker](https://docs.docker.com/engine/deprecated/#interacting-with-v1-registries). Efter att ni startat om Docker deamon efter ny config kan det vara så att microblog containern inte startar automatiskt så ni får starta den manuellt.
+Vi vill inte sätta log-driver för att vi har inte en extern log server att skicka dem till, `disable-legacy-registry` är [deprecated i nyare versioner av Docker](https://docs.docker.com/engine/deprecated/#interacting-with-v1-registries). Efter att ni startat om Docker deamon efter ny config kan det vara så att microblog containern inte startar automatiskt så ni får starta den manuellt.
 
 - Använd `sudo less /var/log/syslog  |  grep docker` för att Docker felmededelande vid restart. kan också tillägga att om man försöker starta om Docker för ofta får man error. Då är det bara att vänta en stund innan man försöker igen.
-
-- När ni ska exportera `DOCKER_CONTENT_TRUST=1` glöm inte att lägga den i `~/.profile`.
-
-- Ni behöver inte hämta hem Django och köra för Container Hardening utan utgå ifrån er Microblog som ni reda har körandes.
 
 Jobba igenom guiden nu.
 
@@ -87,7 +78,7 @@ Efter guiden hade jag kvar följande fel:
 
 
 
-https://github.com/freach/docker-image-policy-plugin whitelist docker images för pull
+https://github.com/freach/docker-image-policy-plugin whitelist docker images för pull -->
 
 
 
@@ -148,7 +139,7 @@ Pusha konfigurationen och kolla att det går igenom. Ni borde inte få några va
 
 Static Application Security Testing (SAST), eller bara Static Code Analysis, är att analysera källkoden för kända säkerhetsrisker och sårbarheter utan att exekvera programmet. SAST är bra på att fånga upp programmeringsmisstag tidigt i utvecklingsprocessen av en applikation. Vi kommer använda [Bandit](https://github.com/PyCQA/bandit) för att utföra SAST på vår Python kod.
 
-Dynamic Application Security Testing (DAST) letar efter sårbarheter i webapplikationer genom att skanna och utföra attacker på applikationen. Vi kommer använda [Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) för att utföra DAST på Microbloggen.
+Dynamic Application Security Testing (DAST) letar efter sårbarheter i webbapplikationer genom att skanna och utföra attacker på applikationen. Vi kommer använda [Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) för att utföra DAST på Microbloggen.
 
 Läs [SAST vs. DAST](https://www.synopsys.com/blogs/software-security/sast-vs-dast-difference/) för en jämförelse av de två och vad de är bra på.
 
@@ -251,7 +242,7 @@ Kopiera konfigurationen för `Modern (OpenSSH 6.7+)`, SSH:a in på load balancer
 
 Kör ssh_scan igen och kolla att ni inte har några rekommendationer kvar. Uppdatera Ansible rollen `10-first-minutes` så att den nya SSH konfigurationen sätts på alla servrar.
 
-Det finns givetvis sätt att göra SSH ännu säkrare, det är inget vi ska göra men det kan vara bra att ha på sina egna servrar hemma om man har det. Tjänsten [Duo](https://duo.com/docs/loginduo) har multifactor authentication för SSH. Så när någon försöker logga in via SSH till er server får ni en notifikation och behöver t.ex. godkänna det i mobilen.
+Det finns givetvis sätt att göra SSH ännu säkrare, det är inget vi ska göra men det kan vara bra att ha på sina egna servrar hemma om man har det. Tjänsten [Duo](https://duo.com/docs/loginduo) har multi-factor authentication för SSH. Så när någon försöker logga in via SSH till er server får ni en notifikation och behöver t.ex. godkänna det i mobilen.
 
 
 
@@ -284,9 +275,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Skanna Python paketen och Microbloggen Docker image med Snyk på CircleCi. 
 
-1. Skapa make target `bandit`. Lägg till det så sker när kör test med docker och i CircleCI.
+1. Skapa make target `bandit`. Lägg till så att det körs med testerna i docker och i CircleCI.
 
-1. Fixa minst 5 varningar från Zap testerna. Glöm inte bort att uppdatera er Nginx config i Ansible!
+1. Fixa minst 5 varningar från Zap testerna. Glöm inte bort att uppdatera er Nginx konfiguration i Ansible!
 
 1. Uppdatera Security Groups rollen så att bara specifika IP kan koppla upp sig mot de olika portarna.
 
@@ -310,5 +301,7 @@ Se till att följande frågor besvaras i texten:
 1. Beskriv vilka Zap varningar ni fixade och hur ni löste dem.
 
 1. Gick det bra med SSH konfigurationen?
+
+1. Hur skulle du definiera DevSecOps och dess roll inom devops?
 
 1. Var skulle du säga att vi har den största säkerhets risken i vårt system och infrastruktur?
