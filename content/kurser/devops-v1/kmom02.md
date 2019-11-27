@@ -168,11 +168,11 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Två Dockerfile's i mappen `docker`, en för produktion som heter `Dockerfile_prod` och en som heter `Dockerfile_test`.
 
-1. docker-compose file för att köra test och starta prod miljön.
+1. En docker-compose fil för att köra test och starta prod miljön.
 
 1. `make test` kör testerna i Docker.
 
-1. CircleCi testar med docker och bygger produktions image och pushar till DockerHub.
+1. CircleCi kör testerna, validering och bygger produktions image och pushar till DockerHub.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v2.0.0. Om du pushar kmom02 flera gånger kan du öka siffrorna efter 2:an.
 
