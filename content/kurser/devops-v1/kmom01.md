@@ -127,6 +127,8 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Miguels guide för att följa andra](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers) OBS! koden kommer inte fungera rakt av, t.ex. när Miguel skapar routes skriver han `app` men ni behöver använda `bp`. Se till att de nya testerna går igenom och driftsätt den nya versionen på din server. Testerna kommer  inte heller fungera rakt av, Miguel använder sig av `unittest` modulen medan vår microblog använder `pytest`. Ni behöver skicka med `test_app` som parameter för att kunna använda databasen i testerna.
 
+1. Lägg till en CircleCi badge i README filen för repot.
+
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0. Om du pushar kmom01 flera gånger kan du öka siffrorna efter 1:an.
 
 1. Inkludera en länk till ditt GitHub repo och din webbsida (domännamn) i din inlämning på Canvas.
