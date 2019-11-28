@@ -29,7 +29,7 @@ Läs också sida 1-17 i [Securing Devops](http://tinyurl.com/usyps42) (länken g
 
 ### Test-driven security {#tds}
 
-Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja men vi jobbar ju inte med säkerhets så vi har inte kolla hur vi testar saker för säkerhet. Som tur är för oss finns det många projekt andra människor och företag har gjort som testar säkerhet i olika aspekter på olika system. Ni ska koppla på en mängd olika verktyg på CI/CD kedjan som utför tester på områden som man brukar testa.
+Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja men vi jobbar ju inte med säkerhets så vi har inte koll på hur vi testar saker för säkerhet. Som tur är för oss finns det många projekt andra människor och företag har gjort som testar säkerhet i olika aspekter på olika system. Ni ska koppla på en mängd olika verktyg på CI/CD kedjan som utför tester på områden som man brukar testa.
 
 
 
