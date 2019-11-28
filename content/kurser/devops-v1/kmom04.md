@@ -179,7 +179,7 @@ Glöm inte att öppna portar i AWS.
 
 #### Ansible {#ansible}
 
-Skapa en ny playbook för att sätta upp Prometheus och Grafana och lägg till alla exporters i respektive playbook. I er Prometheus config behöver ni koppla alla exporters till ip addresser, ni kan använda `{{ groups['<hostname>'][0] }}` för att få ut en ip i Ansible.
+Skapa en ny playbook för att sätta upp Prometheus och Grafana och lägg till alla exporters i respektive playbook. I er Prometheus config behöver ni koppla alla exporters till ip addresser, ni kan använda `{{ groups['<hostname>'][0] }}` för att få ut en ip i Ansible. PS! Ni behöver inte skapa dashboards eller datasource i Grafana via Ansible, det kan ni göra manuellt, bara installera det.
 
 
 
@@ -197,7 +197,7 @@ Det finns generellt kursmaterial i video form.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Ni har en till instans i er AWS infrastruktur som kör Prometheus och Grafana. Lägg till två Reverse Proxy i er Nginx konfiguration, en till Prometheus interfacet och en till Grafana. Länka till dem i er redovisningstext.
+1. Ni har en till instans i er AWS infrastruktur som kör Prometheus och Grafana. Lägg till en Reverse Proxy i er Nginx konfiguration till Grafana, [här](https://gist.github.com/AndreasArne/1b729078e53004303c511390f44dee7f) kan ni hitta exempel på Grafana och Nginx konfig. Länka till den i er redovisningstext och skriv inlogg uppgifter.
 
 1. Ha en Dashboard för varje exporter vi gått igenom, Nginx, Mysql, Node_exporter och Gunicorn.
 
