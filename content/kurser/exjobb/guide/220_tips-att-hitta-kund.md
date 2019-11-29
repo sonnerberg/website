@@ -38,3 +38,5 @@ När du väntat i 7 dagar så skickar du en vänlig påminnelse där du frågar 
 Det är alltid lättare att nå fram om man har en etablerad kontakt sedan tidigare, informell kontakt via någon annan eller någon form av kontakt "jag känner din moster och hon tipsade mig".
 
 Nåt i den stilen kan vara en start. Räkna inte med att få stor respons så kör på och prata med flera. Du är "säljaren" så du väljer vem du vill "sälja" till. Försök skaffa flera intressenter och väg dem mot varandra. Ta inte första erbjudandet, om du lyckas få fram flera.
+
+[YOUTUBE src=4Q-vxoGKAag caption="Emil pratar om uppsatsens pentagon."]

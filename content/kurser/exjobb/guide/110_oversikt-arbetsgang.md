@@ -31,7 +31,7 @@ Detta arbete sker förslagsvis innan kursen officiellt har startat. Se det som e
 Student och topic {#topic}
 ---------------------------
 
-Studenten tar kundens problemställning och formulerar ett topic i ett dokument. 
+Studenten tar kundens problemställning och formulerar ett topic i ett dokument.
 
 Topicet formulerar en grov ram för arbetet och bör normalt vara klart någon vecka in i kursen.
 
@@ -64,3 +64,8 @@ Varje arbete opponeras på av andra studenter. Kunden har möjlighet att ge feed
 Varje student opponerar på en annan students arbete.
 
 Studenten uppdaterar sitt arbete och lämnar in det slutliga resultatet som slutligen godkänns/underkänns.
+
+[YOUTUBE src=tIzvjbemuYs caption="Emil pratar om en studie och om forskning."]
+
+
+[YOUTUBE src=kqM9cwVjgqM caption="Emil pratar om uppsatsens pentagon."]
