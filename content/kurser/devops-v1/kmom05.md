@@ -254,7 +254,7 @@ Det är inte bara vår kod som behöver vara säker, även vår CI/CD infrastruk
 
 ### Lästips {#lastips}
 
-1. [Zapping the top 10](https://www.owasp.org/index.php/ZAPpingTheTop1), hur ni kan använda Zap för att testa OWASP10 sårbarheterna.
+1. [Zapping the top 10](https://www.owasp.org/index.php/ZAPpingTheTop10), hur ni kan använda Zap för att testa OWASP10 sårbarheterna.
 
 
 
