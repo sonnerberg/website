@@ -22,8 +22,26 @@ Text om virtualisering och olika tekniker, hur det fungerar?
  Kursen ges hösten 2019 läsperiod 2.
 
 [/WARNING]
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
+Börja med en snabb introduktion till Kubernetes begrepp.
+
+[YOUTUBE src="PH-2FfFD2PU" caption="Kubernetes in 5 mins."]
+
+Om det inte var pedagogiskt nog som förklaring av Kubernetes kan jag rekommendera följande video där de lär ut Kubernetes som en barnbok.
+
+[YOUTUBE src="4ht22ReBjno&t" caption="The Illustrated Children's Guide to Kubernetes."]
+
+Kubernetes har själva väldigt mycket och bra material för att lära sig Kubernetes och alla dess delar. En bra utgångspunkt är deras [dokumentation](https://kubernetes.io/docs/home/), där finns länkar till det mesta. För att få en bättre förståelse för grunderna i K8s (Kubernetes) och hur man kan interagera med det ska ni jobba igenom [Learn Kubernetes basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/), jobba igenom modul 1-6.
+
+
+yaml config file
+stateless
+stateful
+microblog?
+
+- kubernetes vs ...
+- docker vs ....
+- artikel om kubernets in production
 
 
 Labbmiljön  {#labbmiljo}
@@ -36,7 +54,6 @@ Ingen labbmiljö än så länge!
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar)*
 
 
 
@@ -63,22 +80,10 @@ Det finns generellt kursmaterial i video form.
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-12 studietimmar)*
-
-
-### Övningarr {#ovningar}
-
-Gör följande övningar, de behövs normalt för att klara uppgifterna..
-
-
-
-### Uppgifter {#uppgifter}
-
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
-
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v6.0.0.
 
@@ -86,8 +91,6 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
-
-*(ca: 1-2 studietimmar)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
