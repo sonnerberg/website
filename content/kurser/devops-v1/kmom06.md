@@ -9,6 +9,10 @@ Kmom06: Container orchestration
 
 Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbördan mellan dem.
 
+
+[FIGURE src="https://miro.medium.com/max/660/1*Mdj9wylSl0wqJ9sB0ENbRA.png" caption="Hur det är att lära sig kubernetes."]
+
+
 <!-- https://www.guru99.com/kubernetes-tutorial.html
 Text om virtualisering och olika tekniker, hur det fungerar?
 
@@ -29,14 +33,22 @@ Börja med en snabb introduktion till Kubernetes begrepp.
 
 Om det inte var pedagogiskt nog som förklaring av Kubernetes kan jag rekommendera följande video där de lär ut Kubernetes som en barnbok.
 
-[YOUTUBE src="4ht22ReBjno&t" caption="The Illustrated Children's Guide to Kubernetes."]
+[YOUTUBE src="Q4W8Z-D-gcQ" caption="The Illustrated Children's Guide to Kubernetes."]
 
 Kubernetes har själva väldigt mycket och bra material för att lära sig Kubernetes och alla dess delar. En bra utgångspunkt är deras [dokumentation](https://kubernetes.io/docs/home/), där finns länkar till det mesta. För att få en bättre förståelse för grunderna i K8s (Kubernetes) och hur man kan interagera med det ska ni jobba igenom [Learn Kubernetes basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/), jobba igenom modul 1-6.
 
 
-yaml config file
+
+#### Kubernetes yaml {#yaml}
+
+Det finns två sätt att hantera objekt i K8s
+https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/
+https://www.digitalocean.com/community/tutorials/imperative-vs-declarative-kubernetes-management-a-digitalocean-comic
+https://devopscube.com/kubernetes-deployment-tutorial/
+
 stateless
 stateful
+docker containrar i k8s, vad ska man tänka på? inga volymer? allt vara färdig packat i containern? https://www.digitalocean.com/community/curriculums/kubernetes-for-full-stack-developers#2.Containers,ModernizingApplicationsand12FactorDevelopment
 microblog?
 
 - kubernetes vs ...
