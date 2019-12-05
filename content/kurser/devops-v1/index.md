@@ -140,7 +140,7 @@ Läs [instruktionen till kursmoment 05](./kmom05).
 
 ### Kmom06: Container orchestration {#kmom06}
 
-Hur kan vi skala vårt program på ett bra sätt? Vi kollar på Container orchestration för att lära oss hur vi kan skapa flera containrar av samma image och dela på arbetsbördan mellan dem.
+Er Microblog har fått många nya användare och ni behöver utöka er infrastruktur för att hantera tycket på servrarna. Ni börjar med att utöka hur ni använder Ansible och startar upp fler servrar och containrar på servrarna. Dock märker ni snabbt att det är krångligt och Ansible är inte gjort för att användas till detta. Istället  börjar ni läsa på om container orchestration.
 
 Läs [instruktionen till kursmoment 06](./kmom06).
 
