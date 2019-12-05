@@ -46,6 +46,9 @@ Kubernetes har själva väldigt mycket och bra material för att lära sig Kuber
 
 
 
+
+
+
 #### Kubernetes yaml {#yaml}
 
 Det finns två sätt att hantera objekt (pods, deployments, etc...) i K8s imperative och declarative. I imperative kör vi kommandon i terminalen för att jobba mot ett K8s kluster, som ni gjorde i Kubernetes basics, och i declarative skriver vi konfiguration i filer och kör mot klustret. Läs om deras olika [för och nackdelar](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/). Vi vill givetvis jobba declarative för att då kan vi spara konfigurationen i Git och vi behöver inte oroa oss för snowflake servrar eller att bara en person har kunskapen om klustret.
@@ -79,18 +82,31 @@ Ni har nu titta lite på hur en applikations design/arkitektur påverkar hur lä
 
 
 
+### Microblog i Kubernetes {#microblog}
+
 microblog?
     https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes
 - något om alla olika sätt att köra k8s
 
-- artikel om kubernets in production
+
+
+### Kubernetes i produktion {#production}
+
+Läs följande artiklar som tar upp olika saker man behöver tänka när man ska köra K8s i produktion:
+
+- [Kubernetes in production vs. Kubernetes in development: 4 myths](https://enterprisersproject.com/article/2018/11/kubernetes-production-4-myths-debunked)
+
+- [7 Key Considerations for Kubernetes in Production](https://thenewstack.io/7-key-considerations-for-kubernetes-in-production/)
+
+Kolla på "Running Kubernetes in Production: A Million Ways to Crash Your Cluster" där Henning Jacobs från websidan [Zalando.se](https://www.zalando.se/) pratar om hur de använder Kubernetes och vad de lärt sig av att köra det i produktions miljön.
+
+[YOUTUBE src="pKFQuED_2kg" caption="Running Kubernetes in Production: A Million Ways to Crash Your Cluster"]
 
 
 
 ### Video {#video}
 
 Det finns generellt kursmaterial i video form.
-
 
 1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[Devops streams](https://www.youtube.com/playlist?list=PLKtP9l5q3ce90068cUPVMcPguKtFAqnvi)".
 
@@ -120,4 +136,6 @@ Se till att följande frågor besvaras i texten:
 
 1. Vad ska vi tänka på när vi designar ett projekt som ska köras i K8s?
 
-1.  
+1. Vad är viktigt att tänka på när man ska köra K8s i produktion?
+
+1. Hur känns det efter att ni använt K8s, var det lika svårt som alla skriver att det är?
