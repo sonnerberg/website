@@ -2,9 +2,10 @@
 author:
     - atb
     - mbo
-    - mos
+    - nik
     - lew
 revision:
+    "2019-11-27": "(A, aurora) Omskrivning av uppgift"
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
 Kmom06: Säkerhetstestning
@@ -21,54 +22,30 @@ Kursen planeras ge hösten 2019.
 [/WARNING]
 
 
-
-<!--stop-->
-
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
-
-Labbmiljön  {#labbmiljo}
+Förkunskapskrav {#forkunskapskrav}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
-
-LabbMiljö: DBWebb testmiljöer?
+Du har utfört uppgifterna [Sårbarhetsanalys](/uppgift/sarbarhetsanalys) och [OWASP](/uppgift/owasp).
 
 
-
-Läs &amp; Studera  {#lasanvisningar}
+<!-- Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 1-3 studietimmar)*
 
-Föreläsningar:
-	- ?
-
-Läsanvisningar: Ja. Bifogat finns läsmaterial för riskanalys.
+* Ett rapportexempel finns tillgängligt att läsa [här](#) -->
+<!-- * https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project -->
 
 
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 10-14 studietimmar)*
 
-
-
-
-### Övningar {#ovningar}
-
-Övningar: Ja. Bygg ett antal test fall för existerande kod.
-
-https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
-
-
-
-### Uppgifter {#uppgifter}
-
-Finns det uppgifter som skall utföras och redovisas?
-
+* Gör uppgiften [Sårbarhetsanalys - Del 2](/uppgift/sarbarhetsanalys-del2)
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -80,7 +57,5 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Fråga relaterad till kursmaterialet.
-* ...
-* ...
+* Har den sammanhängande uppgiften från 03, 05 och 06 varit givande? Är det något som saknas/kunnat göras annorlunda?
 * Vilken är din TIL för detta kmom?
