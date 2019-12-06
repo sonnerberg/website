@@ -27,7 +27,7 @@ Installation {#installation}
 $ rsync -ravd example/kmom03-app/ me/kmom06/app/
 ```
 
-**OBS: Tänk på att återställa er databas om ni tagit sönder den i kmom03**
+**OBS: Tänk på att återställa er databas om ni tagit sönder den i kmom03 (gäller enbart om ni kör applikationen utanför Docker)**
 
 *Det går bra att ta bort applikationen i er kmom03 mapp (om ni har godkänt), så slipper ni att den tar plats på studentservern*
 
