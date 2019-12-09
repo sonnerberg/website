@@ -446,7 +446,9 @@ kubectl delete pv mysql-pv-volume
 
 #### Microblog deployment {#microblog}
 
-Nästa steg är då att skapa en deployment för Microblogen, än så länga i kursmomentet har ni bara följt med och inte behövt tänka själva. Ni borde ha lärt er tillräckligt för att skapa en service och deployment för Microblogen. Skriv konfigurationen i en fil med namnet `microblog-deployment.yml`. Den ska ha 2 replicas, så att det alltid finns två pods rullande som kan hantera trafik.
+Nästa steg är då att skapa en deployment för Microblogen. Ni borde ha lärt er tillräckligt för att skapa en service och deployment för Microblogen. Skriv konfigurationen i en fil med namnet `microblog-deployment.yml`. Den ska ha 2 replicas, så att det alltid finns två pods rullande som kan hantera trafik.
+
+Ni behöver skapa en ny image av er Microblog och publicera till DockerHub. Ni kommer inte använda er av statsd i K8s och då kommer er nuvarande image generera fel för att Gunicorn inte kan koppla upp sig mot statsd. Skapa en nu image utan statsd konfigurationen i GUnicorn och ge den versionen `no-statsd` på DockerHub.
 
 Kolla i er `docker-compose.yml` för vilka env variabler ni behöver för att starta containern. Ni kan använda `mysql` istället för en IP till database i env variabeln `DATABASE_URL`.
 
@@ -467,22 +469,422 @@ Nästa steg är att sätta upp https och koppla domän till microbloggen, men ni
 
 
 #### HTTPS till klustret {#https}
+<!-- https://cert-manager.io/docs/tutorials/acme/ingress/#step-2-deploy-the-nginx-ingress-controller -->
 
-[WARNING]	
+Vi vill så klart koppla vårt domännamn och och sätta upp HTTPS till applikationen. Det finns en del olika lösningar för att få till det. Vi kommer att använda oss utav en [Nginx ingress](https://kubernetes.github.io/ingress-nginx) (blir vår load balancer) och [Cert-manager](https://cert-manager.io) (hanterar Let's Encrypt certifikat). Vi ska också använda oss utav [Helm](https://helm.sh/) vilket är en packet manager för K8s.
 
- **Kursutveckling pågår**	
+Jobba igenom [Helm quickstart](https://helm.sh/docs/intro/quickstart/) för att installera och sätta upp Helm.
 
- Denna delen är inte klar än.
 
-[/WARNING]
-https://medium.com/@geraldcroes/kubernetes-traefik-101-when-simplicity-matters-957eeede2cf8
-https://helm.sh/docs/intro/quickstart/
+##### Nginx Ingress {#nginx-ingress}
+<!-- https://kubernetes.github.io/ingress-nginx/deploy/#using-helm -->
+
+Använd sen Helm för att installera Nginx ingress.
+
+```
+helm install nginx stable/nginx-ingress --set rbac.create=true
+
+kubectl get svc
+NAME                                  TYPE           CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)                      AGE
+kubernetes                            ClusterIP      100.64.0.1       <none>                                                                    443/TCP                      19h
+microblog                             ClusterIP      100.68.59.26     <none>                                                                    5000/TCP                     13h
+mysql                                 ClusterIP      None             <none>                                                                    3306/TCP                     18h
+nginx-nginx-ingress-controller        LoadBalancer   100.68.72.140    a352bf19581e765dfb2653f6-1513732504.us-east-1.elb.amazonaws.com   80:31752/TCP,443:32396/TCP   121m
+nginx-nginx-ingress-default-backend   ClusterIP      100.66.156.110   <none>                                                                    80/TCP                       121m
+```
+
+Kopiera EXTERNAL-IP för `nginx-nginx-ingress-controller`, det kan ta någon minut innan den kommer upp. Nu borde det ha skapats en Load Balancer i AWS under EC2.
+
+Nu ska ni koppla IPn till en subdomän till er kluster domän ni redan har. Gå till Route 53 och er hosted zone för domänen ni använder för klustret. Skapa ett nytt record och döp den till valfritt, jag har `microblog.k8s.<domain>`. Välj Type `CNAME` och klistra in EXTERNAL-IP för nginx-ingress-controller.
+
+
+
+##### Microblog deployment {#microblog-deployment}
+
+För att koppla microblogen till ingress behöver ni troligen ändra er deployment. Jag visar bara upp de delar som används för denna delen.
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: microblog
+  labels:
+    app: microblog
+spec:
+  selector:
+    app: microblog
+  ports:
+    - port: 5000
+      protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microblog
+  labels:
+  app: microblog
+  ...
+spec:
+  ...
+  template:
+    metadata:
+      labels:
+        app: microblog
+    ...
+    spec:
+      containers:
+      - image: <dockerhub-användare>/<microblog-image>:no-statsd
+      ports:
+        - containerPort: 5000
+          name: microblog
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 5000
+```
+
+Jag la till en `livenessProbe`, den används av K8s för att kolla så containern är redo att användas. K8s kommer pinga `/` och kolla vad den får tillbaka för status kod, alla mellan 200 och 399 så tolkas det som att containern mår bra och kan användas. Notera också att jag inte har någon `type` på min Service.
+
+```
+kubectl apply -f microblog-deployment.yml
+```
+
+Skapa filen `ingress.yml` och lägg till en ingress i den. Vi ska använda ingressen till att göra vår microblog service tillgänglig publikt.
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "microblog-ingress"
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    # cert-manager.io/cluster-issuer: "letsencrypt-staging"
+spec:
+  tls:
+  - hosts:
+    - micrblog.k8s.<domain> # CHANGE ME!
+    secretName: microblog-tls
+  rules:
+  - host: micrblog.k8s.<domain> # CHANGE ME!
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: microblog
+          servicePort: 5000
+```
+
+Aktivera filen också.
+
+```
+kubectl apply -f ingress.yml
+
+kubectl get ingress -w
+NAME                HOSTS                    ADDRESS          PORTS     AGE
+microblog-ingress   microblog.k8s.<domain>   18.232.102.148   80, 443   91m
+```
+
+Gör `ctrl+c` när den fått en adress. Notera att `ADDRESS` inte behöver vara samma som EXTERNAL-IP för nginx-ingress-controller. Testa gå till domänen i er webbläsare, använd http och inte https.
+
+
+
+##### Cert manager {#cert-manager}
+<!-- https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm -->
+
+Vi använder Helm för att sätta upp Cert managern också. Men först installerar vi en `CustomResourceDefinition` och skapar ett namespace.
+
+```
+kubectl apply --validate=false -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
+
+kubectl create namespace cert-manager
+
+helm repo add jetstack https://charts.jetstack.io
+
+helm repo update
+
+helm install   cert-manager   --namespace cert-manager   --version v0.12.0   jetstack/cert-manager
+
+kubectl get pods --namespace cert-manager -w
+NAME                                       READY   STATUS    RESTARTS   AGE
+cert-manager-5b54dc9c97-wrj8w              1/1     Running   0          149m
+cert-manager-cainjector-84565c968b-797x4   1/1     Running   0          149m
+cert-manager-webhook-d9d886b4c-rjql5       1/1     Running   0          149m
+```
+
+Vänta på att alla pods är ready.
+
+
+
+##### Let's Encrypt Issuer {#issuer}
+
+Nästa steg är att sätta upp en [Issuer](https://cert-manager.io/docs/concepts/issuer), det är den som genererar certifikaten. Det finns två typer av issuers, Issuer och ClusterIssuer. En Issuer är begränsad till ett namespace, medans en CluserIssuer kan jobba i alla namespace. Vi använder ClusterIssuer för att det är lättare.
+
+Vi kommer sätta upp två issuers då Let's Encrypt har en begränsning på antalet gånger man får [fråga efter nya certifikat](https://letsencrypt.org/docs/rate-limits/) till produktion. Det blir lätt fel i början så då testar vi först med en staging issuer.
+
+Skapa `issuer-staging.yml` och `issuer-prod.yml`. Lägg till respektive konfiguration i rätt fil.
+
+Staging:
+```
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-staging
+  namespace: default
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: <email>
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-staging
+    # Enable the HTTP-01 challenge provider
+    solvers:
+    - http01:
+        ingress:
+          class:  nginx
+```
+
+prod:
+```
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+  # namespace: default
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: <email>
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    # Enable the HTTP-01 challenge provider
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
+```
+Aktivera dem.
+
+```
+kubectl apply -f issuer-staging.yml
+kubectl apply -f issuer-prod.yml
+```
+
+Vi använder [HTTP01](https://cert-manager.io/docs/configuration/acme/http01/) challenge providers för att få certifikaten, det finns också [DNS01](https://cert-manager.io/docs/configuration/acme/dns01/).
+
+Kolla status på er Issuers.
+
+```
+kubectl describe clusterissuer letsencrypt-staging
+
+Name:         letsencrypt-staging
+Namespace:    default
+Labels:       <none>
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"cert-manager.io/v1alpha2","kind":"Issuer","metadata":{"annotations":{},"name":"letsencrypt-staging","namespace":"default"},...
+API Version:  cert-manager.io/v1alpha2
+Kind:         ClusterIssuer
+Metadata:
+  Creation Timestamp:  2019-12-09T10:35:29Z
+  Generation:          1
+  Resource Version:    154508
+  Self Link:           /apis/cert-manager.io/v1alpha2/namespaces/default/issuers/letsencrypt-staging
+  UID:                 63ccde08-248e-4760-8000-27d3fdfc041e
+Spec:
+  Acme:
+    Email:  andreas_a@outlook.com
+    Private Key Secret Ref:
+      Name:  letsencrypt-staging
+    Server:  https://acme-staging-v02.api.letsencrypt.org/directory
+    Solvers:
+      http01:
+        Ingress:
+          Class:  nginx
+Status:
+  Acme: 
+    Last Registered Email:  <email>
+    Uri:                    https://acme-staging-v02.api.letsencrypt.org/acme/acct/11750774
+  Conditions:
+    Last Transition Time:  2019-12-09T10:35:30Z
+    Message:               The ACME account was registered with the ACME server
+    Reason:                ACMEAccountRegistered
+    Status:                True
+    Type:                  Ready
+Events:                    <none>
+```
+
+
+
+##### Aktiver HTTPS (TLS) {#aktivate_tls} 
+
+Nu borde vi ha grunden för att få igång HTTPS för klustret. Uppdatera `ingress.yml`.
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "microblog-ingress"
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+...
+```
+
+Aktiver den och vänta på ett certifikat.
+
+```
+kubectl apply -f ingress.yml
+
+kubectl get certificate
+NAME            READY   SECRET          AGE
+microblog-tls   True    microblog-tls   127m
+
+kubectl describe certificate microblog-tls
+Name:         microblog-tls
+Namespace:    default
+Labels:       <none>
+Annotations:  <none>
+API Version:  cert-manager.io/v1alpha2
+Kind:         Certificate
+Metadata:
+  Creation Timestamp:  2019-12-09T11:10:07Z
+  Generation:          1
+  Owner References:
+    API Version:           extensions/v1beta1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Ingress
+    Name:                  microblog-ingress
+    UID:                   6bb9e8c3-53fe-4ae9-9703-b7bd49990979
+  Resource Version:        162305
+  Self Link:               /apis/cert-manager.io/v1alpha2/namespaces/default/certificates/microblog-tls
+  UID:                     3c9e2d8e-b193-4484-a23c-062b7e3f02fd
+Spec:
+  Dns Names:
+    microblog.k8s.<domain>
+  Issuer Ref:
+    Group:      cert-manager.io
+    Kind:       ClusterIssuer
+    Name:       letsencrypt-staging
+  Secret Name:  microblog-tls
+Status:
+  Conditions:
+    Last Transition Time:  2019-12-09T11:10:07Z
+    Message:               Certificate is up to date and has not expired
+    Reason:                Ready
+    Status:                True
+    Type:                  Ready
+  Not After:               2020-03-08T09:49:26Z
+Events:                    <none>
+
+kubectl describe secret microblog-tls
+Name:         microblog-tls
+Namespace:    default
+Labels:       <none>
+Annotations:  cert-manager.io/alt-names: microblog.k8s.arnesson.dev
+              cert-manager.io/certificate-name: microblog-tls
+              cert-manager.io/common-name: microblog.k8s.arnesson.dev
+              cert-manager.io/ip-sans:
+              cert-manager.io/issuer-kind: ClusterIssuer
+              cert-manager.io/issuer-name: letsencrypt-staging
+              cert-manager.io/uri-sans:
+
+Type:  kubernetes.io/tls
+
+Data
+====
+ca.crt:   0 bytes
+tls.crt:  3566 bytes
+tls.key:  1675 bytes
+```
+
+Det kan ta någon minut innan den blir redo. Om det tar med än 3-5 min kan ni kolla loggarna för cert-managern och kolla om något är fel.
+
+```
+kubectl get po -n cert-manager
+NAME                                       READY   STATUS    RESTARTS   AGE
+cert-manager-5b54dc9c97-wrj8w              1/1     Running   0          179m
+cert-manager-cainjector-84565c968b-797x4   1/1     Running   0          179m
+cert-manager-webhook-d9d886b4c-rjql5       1/1     Running   0          179m
+
+kubectl logs cert-manager-5b54dc9c97-wrj8w -n cert-manager
+```
+
+Om allt ser rätt ut är ni redo att köra produktions issuer. Uppdatera `ingress.yml`.
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "microblog-ingress"
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+...
+```
+
+Aktiver den och radera microblog-tls secret, då skapas en ny med certifikat från prod istället för staging.
+
+```
+kubectl apply -f ingress.yml
+
+kubectl delete secret microblog-tls
+
+kubectl describe certificate
+Name:         microblog-tls
+Namespace:    default
+Labels:       <none>
+Annotations:  <none>
+API Version:  cert-manager.io/v1alpha2
+Kind:         Certificate
+Metadata:
+  Creation Timestamp:  2019-12-09T11:10:07Z
+  Generation:          1
+  Owner References:
+    API Version:           extensions/v1beta1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Ingress
+    Name:                  microblog-ingress
+    UID:                   6bb9e8c3-53fe-4ae9-9703-b7bd49990979
+  Resource Version:        162305
+  Self Link:               /apis/cert-manager.io/v1alpha2/namespaces/default/certificates/microblog-tls
+  UID:                     3c9e2d8e-b193-4484-a23c-062b7e3f02fd
+Spec:
+  Dns Names:
+    t.k8s.arnesson.dev
+  Issuer Ref:
+    Group:      cert-manager.io
+    Kind:       ClusterIssuer
+    Name:       letsencrypt-prod
+  Secret Name:  microblog-tls
+Status:
+  Conditions:
+    Last Transition Time:  2019-12-09T11:10:07Z
+    Message:               Certificate is up to date and has not expired
+    Reason:                Ready
+    Status:                True
+    Type:                  Ready
+  Not After:               2020-03-08T09:49:26Z
+Events:                    <none>
+```
+
+Om det tar tid kan ni kolla om `kubectl describe order` och `kubectl describe challenge` finns och om de har någon info.
+
+När certifikatet är True och Ready så ska ni kunna gå till `https://microblog.k8s.<domain>` och komma åt er Microblog.
+
+Det här var ett av många sätt att få till HTTPS i Kubernetes. Om ni jobbar med Kubernetes något i framtiden kan det vara intressant att kolla upp wildcard certifikat. Vi har bara en endpoint (microlog) i vårt system och då behöver vi inte det. Men om man hade haft ett större system med flera endpoints så hade man velat använda wildcard.
 
 
 
 ### Kubernetes i produktion {#production}
 
-Läs följande artiklar som tar upp olika saker man behöver tänka när man ska köra K8s i produktion:
+Vårt kluster är väldigt simpelt, det är mer ett utvecklings kluster än något man hade kört i produktion. För att få en inblick i vad som krävs för att lyckas med Kubernetes i produktion ska ni läsa följande artiklar:
 
 - [Kubernetes in production vs. Kubernetes in development: 4 myths](https://enterprisersproject.com/article/2018/11/kubernetes-production-4-myths-debunked)
 
@@ -509,7 +911,7 @@ Uppgifter  {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Sätt upp Microbloggen i Kubernetes på AWS, skapa alla objekten deklarativt och spara filerna i `kubernetes` mappen.
+1. Sätt upp Microbloggen i Kubernetes på AWS med HTTPS, skapa alla objekten deklarativt och spara filerna i `kubernetes` mappen.
 
 1. När ni har lämnat in kursmomentet kan ni stänga ner klustret. Ni behöver inte ha klustret körandes för att jag ska rätta.
 
