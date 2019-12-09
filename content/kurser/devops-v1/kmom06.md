@@ -7,24 +7,19 @@ revision:
 Kmom06: Container orchestration
 ==================================
 
-Er Microblog har fått många nya användare och ni behöver utöka er infrastruktur för att hantera tycket på servrarna. Ni börjar med att utöka hur ni använder Ansible och startar upp fler servrar och containrar på servrarna. Dock märker ni snabbt att det är krångligt och Ansible är inte gjort för att användas till detta. Istället  börjar ni läsa på om container orchestration.
+Er Microblog har fått många nya användare och ni behöver utöka er infrastruktur för att hantera trycket på servrarna. Ni börjar med att utöka hur ni använder Ansible och startar upp fler servrar och containrar på servrarna. Dock märker ni snabbt att det är krångligt och Ansible är inte gjort för att användas till detta. Istället  börjar ni läsa på om container orchestration.
 
 
 
 <!-- more -->
-[WARNING]	
-
- **Kursutveckling pågår**	
-
- Kursen ges hösten 2019 läsperiod 2.
-
-[/WARNING]
-
-
 
 [FIGURE src="https://miro.medium.com/max/660/1*Mdj9wylSl0wqJ9sB0ENbRA.png" caption="Hur det är att lära sig kubernetes."]
 
 Vi kommer använda oss utav Kubernetes (K8s) för container orchestration men det är bra att känna till vilka andra verktyg som finns och lite om vad som skiljer dem åt. Läs [What Is Container Orchestration?](https://blog.newrelic.com/engineering/container-orchestration-explained/)
+
+[INFO]
+Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat med originalet, [Syncing a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
+[/INFO]
 
 
 
@@ -46,7 +41,7 @@ Kubernetes har själva väldigt mycket och bra material för att lära sig Kuber
 
 Det finns två sätt att hantera objekt (pods, deployments, etc...) i K8s imperative och declarative. I imperative kör vi kommandon i terminalen för att jobba mot ett K8s kluster, som ni gjorde i Kubernetes basics, och i declarative skriver vi konfiguration i filer och kör mot klustret. Läs om deras olika [för och nackdelar](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/). Vi vill givetvis jobba declarative för att då kan vi spara konfigurationen i Git och vi behöver inte oroa oss för snowflake servrar eller att bara en person har kunskapen om klustret.
 
-[FIGURE src="https://www.digitalocean.com/community/tutorials/imperative-vs-declarative-kubernetes-management-a-digitalocean-comic" caption="digitalocean förklarar imperativ vs declarative"]
+[FIGURE src="http://assets.digitalocean.com/articles/comics/imperative-declarative-k8s.jpg" caption="digitalocean förklarar [imperativ vs declarative](https://www.digitalocean.com/community/tutorials/imperative-vs-declarative-kubernetes-management-a-digitalocean-comic)"]
 
 K8s använder yaml filer för att skriva konfigurationen i filer, som Ansible. Läs igenom [Kubernetes deployment tutorial](https://devopscube.com/kubernetes-deployment-tutorial/) för en överblick av hur filerna struktureras och vad de kan innehålla. Ni behöver inte jobba med i guiden, räcker om ni läser och förstår.
 
@@ -68,15 +63,23 @@ Det finns en mängd olika sätta och verktyg för att köra Kubernetes beroende 
 
 Nu när ni har testat på att köra en stateless applikatopn i K8s ska ni lära er hur man kan köra en stateful applikation. Börja med att läsa [The sad state of stateful Pods in Kubernetes](https://elastisys.com/2018/09/18/sad-state-stateful-pods-kubernetes/) för en förklaring av problemet med stateful applikationer.
 
-Läs sen om några av de olika sätten vi kan skapa volymer i K8s och jobba sen igenom [](https://www.katacoda.com/mjboxboat/courses/kubernetes-fundamentals-2/persistent-volumes).
+Kolla på följande videos om volymer i Kubernetes.
 
-https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+[YOUTUBE src="VB7vI9OT-WQ" caption="Kubernetes Volumes 1: emptydir, NFS, YAML, volumes, and intro to Persistent Volume Claims"]
 
-Innan ni stänger ner hela miljön, lägg till webui https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/ för att inspektera K8s infrastrukturen.
+[YOUTUBE src="OulmwTYTauI" caption="Kubernetes Volumes 2: Understanding Persistent Volume (PV) and Persistent Volume Claim (PVC)"]
 
-https://www.katacoda.com/courses/kubernetes/liveness-readiness-healthchecks
+Jobba igenom [Persistent volumes](https://www.katacoda.com/mjboxboat/courses/kubernetes-fundamentals-2/persistent-volumes) på Katacoda.
 
-https://www.katacoda.com/javajon/courses/kubernetes-pipelines/helm
+<!-- https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/ -->
+
+<!-- Innan ni stänger ner hela miljön, lägg till webui https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/ för att inspektera K8s infrastrukturen. -->
+
+<!-- https://www.katacoda.com/courses/kubernetes/liveness-readiness-healthchecks -->
+
+<!-- https://www.katacoda.com/javajon/courses/kubernetes-pipelines/helm -->
+
+
 
 #### Designa för Kubernetes {#design} 
 
@@ -433,11 +436,11 @@ mysql>
 
 Nu har vi en database i Kubernetes vi kan koppla Microbloggen till.
 
-<!-- ```
+<!--
 kubectl delete deployment,svc mysql
 kubectl delete pvc mysql-pv-claim
 kubectl delete pv mysql-pv-volume
-``` -->
+-->
 
 
 
@@ -463,8 +466,15 @@ Nästa steg är att sätta upp https och koppla domän till microbloggen, men ni
 
 
 
-#### Treafik (HTTPS)
+#### HTTPS till klustret {#https}
 
+[WARNING]	
+
+ **Kursutveckling pågår**	
+
+ Denna delen är inte klar än.
+
+[/WARNING]
 https://medium.com/@geraldcroes/kubernetes-traefik-101-when-simplicity-matters-957eeede2cf8
 https://helm.sh/docs/intro/quickstart/
 
@@ -498,6 +508,10 @@ Uppgifter  {#uppgifter}
 -------------------------------------------
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
+
+1. Sätt upp Microbloggen i Kubernetes på AWS, skapa alla objekten deklarativt och spara filerna i `kubernetes` mappen.
+
+1. När ni har lämnat in kursmomentet kan ni stänga ner klustret. Ni behöver inte ha klustret körandes för att jag ska rätta.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v6.0.0.
 
