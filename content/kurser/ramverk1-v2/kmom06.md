@@ -9,7 +9,7 @@ revision:
 Kmom06: Databasdrivna modeller
 ==================================
 
-Vi skall titta på klasser i modelllagret och utöka vår ramverksstruktur med formulärhantering via klasser och metoder samt databasdrivna modellklasser där vi använder oss av designmänstret Active Record.
+Vi skall titta på klasser i modelllagret och utöka vår ramverksstruktur med formulärhantering via klasser och metoder samt databasdrivna modellklasser där vi använder oss av designmönstret Active Record.
 
 Vi skall använda en extern modul för htmlformulär och vi skall använda en extern modul för databashanteringen.
 

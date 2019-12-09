@@ -6,6 +6,7 @@ category:
     - php
     - kursen ramverk1 v2
 revision:
+    "2019-12-09": "(C, mos) Genomgången, mindre justeringar i text."
     "2018-12-10": "(B, mos) Uppdaterad till kursen ravmerk1 v2."
     "2017-08-24": "(A, mos) Första utgåvan."
 ...
@@ -64,18 +65,27 @@ composer require anax/htmlform
 
 För att bekanta oss med modulen så öppnar vi webbläsaren mot modulens katalog `vendor/anax/htmlform/htdocs` och vi testar exemplen i `htdocs/formmodel`.
 
+Innan vi kan köra exemplen så behöver vi installera modulens utvecklingsmiljö.
+
+```bash
+# Gå till vendor/anax/htmlform
+composer install
+```
+
 Så här ser exemplet ut för `htdocs/formmodel/login.php`.
 
 [FIGURE src=image/snapht17/htmlform-login.png?w=w3 caption="Ett login formulär via modulen `anax/htmlform`."]
 
 Modulen `anax/htmlform` hjälper oss att skapa HTMLformulär och hanterar postning av formulär, validering av postad data och ompostning vid valideringsfel. Modulen ger en bestämd struktur i hur man jobbar med formulär. Tanken är att det kan tjäna tid och programmeringsrader samt erbjuda en god kodstruktur, när man väl lärt sig att använda modulen.
 
+Bekanta dig med ett par andra av de exempelprogram som ligger i katalogen `htdocs/formmodel/`.
+
 
 
 Kika på hur exemplet är uppbyggt {#htmlformexempel}
 --------------------------------------
 
-Låt oss kika på exemplet och hur koden är uppbyggd. För att studera hur exemplet är uppbyggt kan du gå baklänges och kika på koden.
+Låt oss kika på exemplet för login och se hur koden är uppbyggd. Gör följande steg för att kika på koden.
 
 
 
@@ -162,6 +172,7 @@ class FormModelLogin extends FormModel
             ]
         );
     }
+}
 ```
 
 Vi jobbar alltså med formulären som en array-struktur. Varje formulärelement kan skapas som ett array-element.
@@ -197,6 +208,8 @@ use Psr\Container\ContainerInterface;
  */
 class FormModelLogin extends FormModel
 {
+    
+}
 ```
 
 Vi kan anta att klassen `FormModel` döljer en basstruktur som vi återanvänder i den specifika klassen `FormModelLogin`.
