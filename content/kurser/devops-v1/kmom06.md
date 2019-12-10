@@ -19,6 +19,8 @@ Vi kommer använda oss utav Kubernetes (K8s) för container orchestration men de
 
 [INFO]
 Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat med originalet, [Syncing a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
+
+PS! Ni kan stänga ner era andra servrar när ni fått kmom05 rättat!
 [/INFO]
 
 
@@ -90,6 +92,8 @@ Ni har nu titta lite på hur en applikations design/arkitektur påverkar hur lä
 ### Microblog i Kubernetes {#microblog}
 
 Nu ska vi sätta upp Microbloggen i Kubernetes. Vi behöver en miljö att köra K8s i. AWS har en managed Kubernetes service kallat [EKS](https://aws.amazon.com/eks/) men det kostar ju massa kredit vilket vi inte har oändligt at så vi kommer använda oss utan [Kubernetes Operations](https://github.com/kubernetes/kops) (Kops). Kops skriver om sig själva "The easiest way to get a production grade Kubernetes cluster up and running." och än så länge har det varit väldigt trevlig att använda. Vi ska använda Kops för att sätta upp ett K8s kluster på vanliga EC2 servrar på AWS så blir det billigare än att använda EKS.
+
+Ni kommer jobba mot klustret på liknande sätt som med Ansible. Installera verktygen lokalt och sen kommer Kops att jobba mot AWS och styra servrar.
 
 
 
