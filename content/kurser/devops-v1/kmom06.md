@@ -124,7 +124,7 @@ När allt är installerat behöver både AWS cli och Kops era AWS nycklar som mi
 
 Kops behöver ett domännamn kopplat till klustret, ni kan välja att använda samma domän ni redan har eller att skapa en specifik subdomän för k8s. Om ni använder samma domän behöver ni gå in i Route 53 och ta bort de Record sets med `Type A`. Kops kommer skapa egna records. Om ni skapar en subdomän för klustret gör följande:
 
-1. skapa en nu hosted zone och döp den till vad ni vill att subdomänen ska heta, jag döpte min till `k8s.<domain>`.
+1. skapa en ny hosted zone och döp den till vad ni vill att subdomänen ska heta, jag döpte min till `k8s.<domain>`.
 
 1. Kopiera `NS` värdena för er subdomänen.
 
@@ -454,7 +454,7 @@ Nästa steg är då att skapa en deployment för Microblogen. Ni borde ha lärt 
 
 Ni behöver skapa en ny image av er Microblog och publicera till DockerHub. Ni kommer inte använda er av statsd i K8s och då kommer er nuvarande image generera fel för att Gunicorn inte kan koppla upp sig mot statsd. Skapa en nu image utan statsd konfigurationen i GUnicorn och ge den versionen `no-statsd` på DockerHub.
 
-Kolla i er `docker-compose.yml` för vilka env variabler ni behöver för att starta containern. Ni kan använda `mysql` istället för en IP till database i env variabeln `DATABASE_URL`.
+Kolla i er `docker-compose.yml` för vilka env variabler ni behöver för att starta containern. Ni kan använda `mysql` istället för en IP till database i env variabeln `DATABASE_URL`. OBS! starta inte containern med ett specifikt network i er deployment vi låter K8s hantera nätverk och Gunicorn behöver inte koppla upp sig till statsd.
 
 För att felsöka kan ni använda följande kommandon och UI:t.
 

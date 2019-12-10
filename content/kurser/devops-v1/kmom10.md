@@ -7,7 +7,7 @@ revision:
 Kmom07/10: Uppsats
 ==================================
 
-Avslutningsvis skriver du en uppsats. Uppsatsen är det sista som du gör och tillsammans med alla redovisningar används detta som underlag för att examinera dig från kursen.
+Avslutningsvis skriver du en rapport. Rapporten är det sista som du gör och tillsammans med alla redovisningar används detta som underlag för att examinera dig från kursen.
 
 
 
