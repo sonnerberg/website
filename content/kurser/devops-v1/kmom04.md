@@ -197,7 +197,7 @@ Det finns generellt kursmaterial i video form.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Ni har en till instans i er AWS infrastruktur som kör Prometheus och Grafana. Lägg till en Reverse Proxy i er Nginx konfiguration till Grafana. [Här](https://gist.github.com/AndreasArne/1b729078e53004303c511390f44dee7f) kan ni hitta exempel delar ni behöver ligga in i er Grafana och Nginx konfig. Länka till den i er redovisningstext och skriv inlogg uppgifter.
+1. Ni har en till instans i er AWS infrastruktur som kör Prometheus och Grafana. Lägg till en Reverse Proxy i er Nginx konfiguration till Grafana. [Här](https://gist.github.com/AndreasArne/1b729078e53004303c511390f44dee7f) kan ni hitta exempel på delar ni behöver lägga in i er Grafana och Nginx konfig. Länka till den i er redovisningstext och skriv inlogg uppgifter.
 
 1. Ha en Dashboard för varje exporter vi gått igenom, Nginx, Mysql, Node_exporter och Gunicorn.
 
