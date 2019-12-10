@@ -381,9 +381,9 @@ spec:
         env:
           # Use secret in real usage
         - name: MYSQL_USER
-          value: microblog
+          value: <user>
         - name: MYSQL_DATABASE
-          value: microblog
+          value: <db_name>
         - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
@@ -406,7 +406,7 @@ spec:
           claimName: mysql-pv-claim
 ```
 
-Vi läser lösenorden från secrets och mountar PV:n vi skapade tidigare. Notera ` strategy:` `type: Recreate`, det gör att K8s inte gör rolling updates. Vi vill inte använda det för databasen i och med att vi bara vill ha en igång åt gången. Nu kommer POD:en först soppas och en startas en ny med updaterad konfiguration.
+Vi läser lösenorden från secrets och mountar PV:n vi skapade tidigare. Notera ` strategy:` `type: Recreate`, det gör att K8s inte gör rolling updates. Vi vill inte använda det för databasen i och med att vi bara vill ha en igång åt gången. Nu kommer POD:en först soppas och en startas en ny med uppdaterade konfiguration.
 
 Nu kan vi starta mysql.
 
@@ -452,7 +452,7 @@ kubectl delete pv mysql-pv-volume
 
 Nästa steg är då att skapa en deployment för Microblogen. Ni borde ha lärt er tillräckligt för att skapa en service och deployment för Microblogen. Skriv konfigurationen i en fil med namnet `microblog-deployment.yml`. Den ska ha 2 replicas, så att det alltid finns två pods rullande som kan hantera trafik.
 
-Ni behöver skapa en ny image av er Microblog och publicera till DockerHub. Ni kommer inte använda er av statsd i K8s och då kommer er nuvarande image generera fel för att Gunicorn inte kan koppla upp sig mot statsd. Skapa en nu image utan statsd konfigurationen i GUnicorn och ge den versionen `no-statsd` på DockerHub.
+Ni behöver skapa en ny image av er Microblog och publicera till DockerHub. Ni kommer inte använda er av statsd i K8s och då kommer er nuvarande image generera fel för att Gunicorn inte kan koppla upp sig mot statsd. Skapa en nu image utan statsd konfigurationen i Gunicorn och ge den versionen `no-statsd` på DockerHub.
 
 Kolla i er `docker-compose.yml` för vilka env variabler ni behöver för att starta containern. Ni kan använda `mysql` istället för en IP till database i env variabeln `DATABASE_URL`. OBS! starta inte containern med ett specifikt network i er deployment vi låter K8s hantera nätverk och Gunicorn behöver inte koppla upp sig till statsd.
 
@@ -461,7 +461,7 @@ För att felsöka kan ni använda följande kommandon och UI:t.
 ```
 kubectl get po
 
-kubectl decribe po
+kubectl describe po
 
 kubectl describe deployment microblog
 
@@ -538,13 +538,14 @@ spec:
     spec:
       containers:
       - image: <dockerhub-användare>/<microblog-image>:no-statsd
-      ports:
+        ports:
         - containerPort: 5000
           name: microblog
-      livenessProbe:
-        httpGet:
-          path: /
-          port: 5000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000
+        ...
 ```
 
 Jag la till en `livenessProbe`, den används av K8s för att kolla så containern är redo att användas. K8s kommer pinga `/` och kolla vad den får tillbaka för status kod, alla mellan 200 och 399 så tolkas det som att containern mår bra och kan användas. Notera också att jag inte har någon `type` på min Service.
@@ -724,7 +725,7 @@ Events:                    <none>
 
 
 
-##### Aktiver HTTPS (TLS) {#aktivate_tls} 
+##### Aktivera HTTPS (TLS) {#activate_tls} 
 
 Nu borde vi ha grunden för att få igång HTTPS för klustret. Uppdatera `ingress.yml`.
 
@@ -739,7 +740,7 @@ metadata:
 ...
 ```
 
-Aktiver den och vänta på ett certifikat.
+Aktivera den och vänta på ett certifikat.
 
 ```
 kubectl apply -f ingress.yml
@@ -832,7 +833,7 @@ metadata:
 ...
 ```
 
-Aktiver den och radera microblog-tls secret, då skapas en ny med certifikat från prod istället för staging.
+Aktivera den och radera microblog-tls secret, då skapas en ny med certifikat från prod istället för staging.
 
 ```
 kubectl apply -f ingress.yml
