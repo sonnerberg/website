@@ -468,7 +468,7 @@ kubectl describe deployment microblog
 kubectl logs <pod-name>
 ```
 
-Nästa steg är att sätta upp https och koppla domän till microbloggen, men ni kan redan nu skapa en LoadBalancer eller NodePort Service till micrblogen så att den får en extern-ip. Ni kan få fram URL:en till microblogen med `kubectl get svc` och kolumnen `EXTERNAL-IP`. För mig var det `a0c6658f7626f461f925fa51f0a05c54-735889698.us-east-1.elb.amazonaws.com:5000`. [Här](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0) kan ni läsa en kort sammanfattning om de olika services som finns och skillnaden.
+Nästa steg är att sätta upp https och koppla domän till microbloggen, men ni kan redan nu skapa en LoadBalancer eller NodePort Service till microblogen så att den får en extern-ip. Ni kan få fram URL:en till microblogen med `kubectl get svc` och kolumnen `EXTERNAL-IP`. För mig var det `a0c6658f7626f461f925fa51f0a05c54-735889698.us-east-1.elb.amazonaws.com:5000`. [Här](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0) kan ni läsa en kort sammanfattning om de olika services som finns och skillnaden.
 
 
 
@@ -567,10 +567,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - micrblog.k8s.<domain> # CHANGE ME!
+    - microblog.k8s.<domain> # CHANGE ME!
     secretName: microblog-tls
   rules:
-  - host: micrblog.k8s.<domain> # CHANGE ME!
+  - host: microblog.k8s.<domain> # CHANGE ME!
     http:
       paths:
       - path: /

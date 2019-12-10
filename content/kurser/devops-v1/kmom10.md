@@ -26,8 +26,18 @@ Avslutningsvis skriver du en rapport. Rapporten är det sista som du gör och ti
 - Forskningsläget?
 - Framtiden
 - Devops historia 
+- devsecops är eget ord kan söka på också
+- Fokusera på ett område och devops. sec eller microservices t.ex.
+- Hur företag jobbar med det
 http://www.informationweek.com/strategic-cio/enterprise-agility/6-steps-to-survive-a-devops-transformation/a/d-id/1319704
- -->
+-->
+
+<!-- 
+Papers:
+https://dl.acm.org/citation.cfm?id=3359981
+https://ieeexplore.ieee.org/document/7458761
+-->
+
 
 
 
