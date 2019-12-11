@@ -36,6 +36,10 @@ http://www.informationweek.com/strategic-cio/enterprise-agility/6-steps-to-survi
 Papers:
 https://dl.acm.org/citation.cfm?id=3359981
 https://ieeexplore.ieee.org/document/7458761
+
+sammanfatta fördelar och nackdelar från litteratur.
+vetenskaplig/teknisk rapport
+Allt som rapporten ska innehålla måste vara kopplat till mål i kursplanen. Så nu kan jag typ bara ta med för och nackdelar.
 -->
 
 
