@@ -7,6 +7,7 @@ views:
         data:
             src: "image/snapht16/design-van-gogh.jpg?w=1100&h=360&cf&s=10&s=8&smooth&sharpen&f3=mean_removal&emboss&convolve=lighten:emboss-alt:motion"
 revision:
+    "2019-12-11": (D, mos) Genomgången inför kursomgång 2019.
     "2018-12-12": (C, mos) Genomgången inför design v2.
     "2018-06-08": (B1, mos) Nytt dokument inför uppdatering av kursen.
     "2016-12-13": (B, mos) Använd cimage med snygga länkar via htaccess.
@@ -14,12 +15,6 @@ revision:
 ...
 Kmom10: Projekt och examination
 ====================================
-
-[WARNING]
-
-**Uppdatering pågår inför ht19 projektomgång.**
-
-[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -29,19 +24,14 @@ Upplägget är enligt följande:
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
-<!--
-Beskriv mer på Om-sidan eller egentligen i en egen rapport på redovisa sidan, om site/tema, om alt tema och om kodstruktur. Dela i olika rapporter.
-
-Fundera över bloggens vara i projketet.
-
-Kanske passar nåt om produktsidor i projektet, eller inte.
--->
 
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
 När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
+
+För att få högsta betyg på kursen krävs det att du samlar poäng från samtliga optionella krav i denna kravspec.
 
 
 
@@ -136,11 +126,11 @@ Du kan själv välja profil och inriktning på webbplatsen, men gör medvetna va
 
 Skapa en ny webbplats till din kund, spara i en helt ny katalog `me/proj` i kursrepot.
 
-Använd din me/redovisa som grund. Du kan också välja en helt ny installation från example/redovisa och example/theme. Välj väg.
+Använd din me/redovisa som grund. Du kan också välja en helt ny installation från example/redovisa och example/theme. Välj väg. Glöm inte redigera filen `.htaccess`.
 
 Beskriv i redovisningstexten hur du gör och varför du valde det sättet.
 
-Webbplatsen skall bestå av en förstasida (minst två kolumner), en about-sida och en blogg med minst tre blogginlägg.
+Webbplatsen skall bestå av en förstasida (minst två kolumner), en about-sida och en blogg med minst tre blogginlägg (nyheter, produkter).
 
 Varje sida skall ha en flash-region med en bild.
 
@@ -164,6 +154,10 @@ Skapa ett tema till webbplatsen. Du kan använda dina egna teman som grund.
 
 Temat skall vara anpassat till kunden. Gör detta temat till standardtema i temaväljaren.
 
+Gör medvetna och rimliga val för färgpalett och typografi så att det matchar kundens profil.
+
+Du skall medvetet använda designelement och designprinciper för att uppnå en god design som passar kunden.
+
 Temat skall använda gridbaserat layout, vertikalt som horisontellt.
 
 Testsidor för gridet skall fungera via `?vgrid` och `?hgrid`.
@@ -174,6 +168,7 @@ På about-sidan förklarar du ditt tema.
 
 * Dokumentera färgpaletten och berätta hur du valde färgerna.
 * Beskriv typografin, designprinciper och designelement som du använt.
+* Berätta vilken känsla som kunden vill uppnå med webbplatsen.
 * Bifoga en snapshot på temat.
 
 
@@ -184,23 +179,33 @@ Du gör ytterligare ett tema till kunden, ett alternativt tema.
 
 I detta tema förändrar du markant färgppaletten, typografin, designprinciper och designelement.
 
+Även detta tema skall vara anpassat till kundens profil.
+
 Du använder också, till viss del, en annan layout än i tidigare tema, se till att de båda teman mixar regioner mellan 100% i bredd och en fast min-width. 
 
-Beskriv detta tema i din about-sida, gör ett nytt stycke med ny tydlig rubrik. Länka också till temaväljaren så man kan skifta till ditt alternativa tema.
+Beskriv detta tema i din about-sida, gör ett nytt stycke med ny tydlig rubrik. Länka också direkt till temaväljaren så man kan skifta till ditt alternativa tema.
 
 
 
 ### Uppdrag 6: Förklara strukturen kring temat (10p) (optionellt) {#k6}
 
-I din about-sida gör du ett nytt stycke och förklarar strukturen bakom ditt tema.
+För att utföra denna uppgift så måste du även ha utfört uppdrag 5 med det alternativ temat.
+
+Skapa en ny sida i webbplatsen och kalla den "dokumentation". Länka till den sidan från din about-sida.
+
+I dokumentation-sidan förklarar strukturen bakom ditt tema och hur man kan jobba med det för att uppdatera stilen.
+
+Förklara minst följande.
 
 1. Förklara struktur av LESS-koden. Berätta hur du valt att strukturera koden och förklara varför det är en god uppdelning.
 
 1. Berätta vilka moduler du använder och förklara kort vad de gör.
 
+1. Förklara hur man kan anpassa ditt tema till andra webbplatser.
+
 1. Du kan lägga till extra relevant information där du beskriver och eventuellt argumenterar kring LESS som teknik, de LESS-moduler vi valt att använda, alternativa LESS-moduler du finner intressant och kring grundstrukturen i uppdelning av filer som vi använder samt även hur vi bygger vårt tema.
 
-Texten bör omfattningsvis vara i storleksordningen likt de analys-rapporter du gjort i kursen.
+Texten bör omfattningsvis vara i struktur och storleksordningen likt de analys-rapporter du gjort i kursen.
 
 
 
