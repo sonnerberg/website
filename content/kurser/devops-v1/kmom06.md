@@ -480,8 +480,14 @@ Vi vill så klart koppla vårt domännamn och och sätta upp HTTPS till applikat
 Jobba igenom [Helm quickstart](https://helm.sh/docs/intro/quickstart/) för att installera och sätta upp Helm.
 
 
+
 ##### Nginx Ingress {#nginx-ingress}
 <!-- https://kubernetes.github.io/ingress-nginx/deploy/#using-helm -->
+<!-- https://github.com/terraform-aws-modules/terraform-aws-eks/issues/183 -->
+
+Nginx Ingress kommer skapa en load balancer på AWS som kommer hantera alla request och skicka vidare till vårt kluster. Av någon anledning klarar inte Nginx Ingress av att göra det om vi inte redan har skapat en load balancer manuellt en gång så det måste ni göra först.
+
+[YOUTUBE src="XdxvU6od4FQ" caption="Hur ni snabbt kan skapa en load balancer och sen ta bort den."]
 
 Använd sen Helm för att installera Nginx ingress.
 
