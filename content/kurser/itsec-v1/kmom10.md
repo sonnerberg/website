@@ -67,11 +67,12 @@ Börja med att kopiera in applikationen till arbetsmappen och installera de nöd
 ```
 # stå i kursmappen
 $ cp -rf example/itsec-proj me/kmom10/
-$ cd me/kmom10/itsec-proj && npm install
+$ cd me/kmom10/itsec-proj
 $ docker-compose up
 ```
 
-Om du inte har en fungerande Dockermiljö kan du starta med `npm start`.
+Om du inte har en fungerande Dockermiljö kan du installera paketen med `$ npm install`.  
+Starta sedan med `$ npm start`
 
 Applikationen hittar du sedan på *localhost:1337*.
 
@@ -81,11 +82,13 @@ Applikationen hittar du sedan på *localhost:1337*.
 Gör en sårbarhetsanalys av applikationen. Skriv ner analysen i `kmom10/sårbarhetsanalys.pdf`.
 
 
+
 ### Krav 2 Testfall {#k2}
 
-Implementera testfall för sårbarheterna från krav 3, ca 3-5 per sårbarhet. Använd gärna ett godtyckligt paket från `npm`.
+Implementera testfall för sårbarheterna från krav 1, ca 3-5 per sårbarhet. Använd gärna ett godtyckligt paket från `npm`.
 
 *Tips: Mocha*
+
 
 
 ### Krav 3 OWASP {#k3}
@@ -99,15 +102,13 @@ Laga de sårbarheterna du hittat och mappa dem mot OWASP's top 10 lista. Skriv n
 
 ### Krav 4 Loggning (optionell) {#k5}
 
-Implementera funktionalitet för loggning av data. Fundera över vad du väljer att logga och motivera dina val i din text i stycket **Krav 5 Loggning**. Varför väjer du just den datan? Vad valde du bort och varför?
+Implementera funktionalitet för loggning av data. Fundera över vad du väljer att logga och motivera dina val i din redovisningstext. Varför väljer du just den datan? Vad valde du bort och varför?
 
 
 
 ### Krav 5 OAuth (optionell) {#k4}
 
-Implementera inloggning via Oauth2.
-
-
+Implementera inloggning via Oauth2. Se till att stöda minst två tjänster, tex Facebook och Google. Skriv ett par rader om hur det påverkar säkerheten med applikationen.
 
 
 
