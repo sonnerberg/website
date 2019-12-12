@@ -77,36 +77,24 @@ Starta sedan med `$ npm start`
 Applikationen hittar du sedan på *localhost:1337*.
 
 
-### Krav 1 Sårbarhetsanalys {#k1}
 
-Gör en sårbarhetsanalys av applikationen. Skriv ner analysen i `kmom10/sårbarhetsanalys.pdf`.
+### Krav 1, 2, 3 Sårbarhetsanalys {#k1}
 
+* Gör en sårbarhetsanalys av applikationen och mappa den mot OWASP's top 10 lista. För godänt ska minst 5 st sårbarheter identifieras. Skriv ner analysen i `kmom10/sårbarhetsanalys.pdf`.
 
+* Laga de sårbarheterna du hittat. Skriv ned ett par rader om hur du lagade varje sårbarhet.
 
-### Krav 2 Testfall {#k2}
-
-Implementera testfall för sårbarheterna från krav 1, ca 3-5 per sårbarhet. Använd gärna ett godtyckligt paket från `npm`.
-
-*Tips: Mocha*
+* Implementera testfall för sårbarheterna ca 3-5 per sårbarhet. Använd gärna ett godtyckligt paket från `npm`. *Tips: Mocha*
 
 
 
-### Krav 3 OWASP {#k3}
-
-Laga de sårbarheterna du hittat och mappa dem mot OWASP's top 10 lista. Skriv ned ett par rader om varje sårbarhet:
-
-* Vilken sårbarhet är lagad?
-* Hur lagade du den?
-
-
-
-### Krav 4 Loggning (optionell) {#k5}
+### Krav 2 Loggning (optionell) {#k2}
 
 Implementera funktionalitet för loggning av data. Fundera över vad du väljer att logga och motivera dina val i din redovisningstext. Varför väljer du just den datan? Vad valde du bort och varför?
 
 
 
-### Krav 5 OAuth (optionell) {#k4}
+### Krav 3 OAuth (optionell) {#k3}
 
 Implementera inloggning via Oauth2. Se till att stöda minst två tjänster, tex Facebook och Google. Skriv ett par rader om hur det påverkar säkerheten med applikationen.
 
