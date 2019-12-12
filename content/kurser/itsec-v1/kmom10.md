@@ -11,14 +11,6 @@ revision:
 Kmom07/10: Projekt och examination
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen planeras ge hösten 2019.
-
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
