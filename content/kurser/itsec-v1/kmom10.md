@@ -82,9 +82,10 @@ Applikationen hittar du sedan på *localhost:1337*.
 
 * Gör en sårbarhetsanalys av applikationen och mappa den mot OWASP's top 10 lista. För godänt ska minst 5 st sårbarheter identifieras. Skriv ner analysen i `kmom10/sårbarhetsanalys.pdf`.
 
+* Implementera testfall för sårbarheterna ca 3-5 per sårbarhet. Använd gärna ett godtyckligt paket från `npm`. *Tips: Mocha*
+
 * Laga de sårbarheterna du hittat. Skriv ned ett par rader om hur du lagade varje sårbarhet.
 
-* Implementera testfall för sårbarheterna ca 3-5 per sårbarhet. Använd gärna ett godtyckligt paket från `npm`. *Tips: Mocha*
 
 
 
