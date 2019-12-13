@@ -23,15 +23,6 @@ Guiden förutsätter att kan grunderna i Python och du vet vad variabler, typer 
 
 
 
-Forumtråd kopplad till guiden {#forum}
-----------------------------------
-
-Säg till Andreas att Uppdatera detta!!!!
-
-Det finns en [tråd i forumet](t/?) som är kopplad till denna guide. Där kan du se större uppdateringar som är gjorda. Du kan även ställa frågor eller bidra med tips och trix. 
-
-
-
 Tidigare version {#tidigare}
 ----------------------------------
 
