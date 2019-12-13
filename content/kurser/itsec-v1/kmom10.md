@@ -81,13 +81,13 @@ Applikationen hittar du sedan på *localhost:1337*.
 
 
 
-### Krav 2 Loggning (optionell) {#k2}
+### Krav 4 Loggning (optionell) {#k4}
 
 Implementera funktionalitet för loggning av data. Fundera över vad du väljer att logga och motivera dina val i din redovisningstext. Varför väljer du just den datan? Vad valde du bort och varför?
 
 
 
-### Krav 3 OAuth (optionell) {#k3}
+### Krav 5 OAuth (optionell) {#k5}
 
 Implementera inloggning via Oauth2. Se till att stöda minst två tjänster, tex Facebook och Google. Skriv ett par rader om hur det påverkar säkerheten med applikationen.
 
