@@ -640,7 +640,6 @@ apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-staging
-  namespace: default
 spec:
   acme:
     # The ACME server URL
@@ -663,7 +662,6 @@ apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
-  # namespace: default
 spec:
   acme:
     # The ACME server URL
