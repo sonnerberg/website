@@ -28,7 +28,7 @@ För att uppnå godkänt behöver du demonstrerar följande:
 
 
 Rapporten ska vara på minst 2 sidor och lämnas in på Canvas i pdf-format
-och måste vara formaterad enligt Eurographics konferensmall, den finns för [Latex](https://www.overleaf.com/latex/templates/author-guidelines-and-template-for-eurographics-proceedings-manuscripts/rntmcbgtjqzg) och [Word](http://icat.vrsj.org/2015/files/icategve2015_word_templete.docx). För referense behöver ni inte följa mallen, ni kan göra som i [exjobb kursen](https://dbwebb.se/kurser/exjobb/guide/referenser).
+och måste vara formaterad enligt Eurographics konferensmall, den finns för [Latex](https://www.overleaf.com/latex/templates/author-guidelines-and-template-for-eurographics-proceedings-manuscripts/rntmcbgtjqzg) och [Word](http://icat.vrsj.org/2015/files/icategve2015_word_templete.docx). För referenser behöver ni inte följa mallen, ni kan göra som i [exjobb kursen](https://dbwebb.se/kurser/exjobb/guide/referenser).
 
 Alla inlämningar körs genom en [plagieringskontroll](https://dbwebb.se/kurser/exjobb/guide/plagieringskontroll).  
 Betyget UX kan kompletteras till G eller skickas in i nästa omgång för ny bedömning.  
