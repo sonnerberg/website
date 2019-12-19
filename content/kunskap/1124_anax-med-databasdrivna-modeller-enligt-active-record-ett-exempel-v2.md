@@ -231,7 +231,7 @@ När det går bra så ser det ut så här.
 
 [FIGURE src=image/snapht17/book-view-one.png?w=w3 caption="Boken blev tillagd och visas i översikten."]
 
-Nu kan jag klicka på bokens id för att redigera boken. Det tar mig till routen `book/edit/1` där ettan står för bokens id.
+Nu kan jag klicka på bokens id för att redigera boken. Det tar mig till routen `book/update/1` där ettan står för bokens id.
 
 Nu kan jag redigera och spara mina ändringar.
 
