@@ -7,6 +7,15 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+
+[WARNING]	
+ **Kursutveckling pågår**	
+ Kursen ges våren 2020 läsperiod 3.
+
+
+[/WARNING]
+
+
 [INFO]
 **Gör `dbwebb update` och `dbwebb init` innan du börjar med projektet.**
 [/INFO]

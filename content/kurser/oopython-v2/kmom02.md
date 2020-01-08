@@ -16,6 +16,13 @@ Vi ska skapa en basklass och subklasser som får sin data från ett formulär oc
 
 <!--more-->
 
+[WARNING]	
+ **Kursutveckling pågår**	
+ Kursen ges våren 2020 läsperiod 3.
+
+
+[/WARNING]
+
 
 <!-- Flytta nedan text till eget dokument/vy/block -->
 
