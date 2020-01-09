@@ -168,7 +168,7 @@ Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artikla
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)** -- Dusty Phillips  
+* **[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming-v3)** -- Dusty Phillips  
   En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python. Boken går även in på objektorienterad programmering med klasser, objekt och arv. Det är huvudsakligen de delarna vi ska använda oss utav.
 
 
