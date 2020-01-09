@@ -192,11 +192,11 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 |------------|--------------------------------------|
 | Kmom01     | Ch 1, 2                              |
 | Kmom02     | Ch 1, 2, 3, 4                        |
-| Kmom03     | Ch 3                                 |
-| Kmom04     | Ch 8 - Regular Expressions           |
-| Kmom05     | Ch 7 - Queues                        |
-| Kmom06     | Ch 6                                 |
-| Kmom10     |                                      |
+| Kmom03     | Ch 3, 4, 12                          |
+| Kmom04     | Ch 6                                 |
+| Kmom05     |                                      |
+| Kmom06     |                                      |
+| Kmom10     | Ch 5                                 |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 

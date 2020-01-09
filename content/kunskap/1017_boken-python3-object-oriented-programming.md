@@ -35,10 +35,3 @@ Om Boken {#om-boken}
 [BOOK isbn=9781784398781]  
 
 Boken finns som [ebook via PacktPub](https://www.packtpub.com/application-development/python-3-object-oriented-programming-second-edition).
-
-
-
-Diskutera boken i forumet {#forum}
-----------------------------------
-
-Det finns en [forumtråd](t/4653) där du kan fråga eller berätta vad du tyckte om boken.
