@@ -2,6 +2,7 @@
 author:
     - aar
 revision:
+    "2020-01-10": "(B, aar) La till att ska skicka med en feedback text."
     "2019-10-15": "(A, aar) Första versionen."
 ...
 Kmom07/10: Rapport
@@ -33,6 +34,12 @@ och måste vara formaterad enligt Eurographics konferensmall. Mallen finns för 
 Alla inlämningar körs genom en [plagieringskontroll](https://dbwebb.se/kurser/exjobb/guide/plagieringskontroll).  
 Betyget UX kan kompletteras till G eller skickas in i nästa omgång för ny bedömning.  
 
+
+Skapa också ett separat dokument där du skriver feedback på rapporten och kursen, svara på följande:
+
+1. Skriv ett allmänt stycke om hur rapporten gick att genomföra. Var den ett rimligt för er att visa upp att ni förstår både det praktiska och teoretiska av devops?
+
+1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
 
 ### Tips på litteratur {#literatur}
@@ -66,6 +73,7 @@ https://ieeexplore.ieee.org/document/7458761
 sammanfatta fördelar och nackdelar från litteratur.
 vetenskaplig/teknisk rapport
 -->
+
 
 
 ### Video {#video}
