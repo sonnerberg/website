@@ -15,15 +15,15 @@ Vi kollar även lite snabbt på något som heter List comprehension i slutet.
 Ny klass {#ny_klass}
 ----------------------------------
 
-Vi skapar en ny klass för extrautrustning i bilarna så vi kan ha koll på vad bilarna har för extra utrustning. Vi döper den till `Equipment` och ger den instansattributen `price`, `type`, och `name`. Tanken är att 
+Vi skapar en ny klass för extrautrustning i bilarna så vi kan ha koll på vad bilarna har för extra utrustning. Vi döper den till `Equipment` och ger den instansattributen `price`, `type_`, och `name`. Tanken är att vi ska skapa objekt av `Equipment` som ligger i `car` objekt. Notera att vi har variabeln `type_`, egentligen vill vi att den ska heta `type` men det finns en inbyggd funktion i Python med samma namn och den vill vi inte skriva över (då klagar valideringen). Enligt [PEP8](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles), som vi följer när vi skriver vår kod, ska man då ha ett `_` efter variabelnamnet. 
 
 [FIGURE src=/image/oopython/guide/eqp_class.png class="right" caption="Klassdiagram över klassen Equipment."]
 
 ```python
 class Equipment():
 
-    def __init__(self, name, type, price):
-        self.type = type
+    def __init__(self, name, type_, price):
+        self.type_ = type_
         self.price = price
         self.name = name
 
@@ -34,7 +34,7 @@ class Equipment():
         return self.name
 
     def get_type(self):
-        return self.type
+        return self.type_
 ```
 
 Nu har vi grunder för en fullutrustad bil, men vi behöver koppla Equipment objekt till Car objekt. Tanken är att ett Car objekt ska kunna innehålla X antal Equipment objekt så vi lägger till ett nytt instansattribut i Car som innehåller en tom lista. Vi skapar även en ny instansmetod i Car där vi skapar och lägger till nya Equipment objekt i listan.
@@ -53,8 +53,8 @@ class Car():
 
         Car.car_count += 1
     
-    def add_equipment(self, name, type, price):
-        temp = Equipment(name, type, price)
+    def add_equipment(self, name, type_, price):
+        temp = Equipment(name, type_, price)
         self.equipment.append(temp)
 
     ...
@@ -124,15 +124,15 @@ List comprehension är ett snabbt sätt att få ner tre rader till en. Vi testar
 ```python
 class Equipment():
 
-    def __init__(self, name, type, price):
-        self.type = type
+    def __init__(self, name, type_, price):
+        self.type_ = type_
         self.price = price
         self.name = name
 
         ...
         
         def get_info(self):
-            return "Name: {}, Type: {}, Price: {}".format(self.name, self.type, self.price)
+            return "Name: {}, Type: {}, Price: {}".format(self.name, self.type_, self.price)
 
 
 class Car():
@@ -164,8 +164,8 @@ Jag visar upp hela koden vi har producerat här.
 ```python
 class Equipment():
 
-    def __init__(self, name, type, price):
-        self.type = type
+    def __init__(self, name, type_, price):
+        self.type_ = type_
         self.price = price
         self.name = name
 
@@ -176,10 +176,10 @@ class Equipment():
         return self.name
 
     def get_type(self):
-        return self.type
+        return self.type_
 
     def get_info(self):
-        return "Name: {}, Type: {}, Price: {}".format(self.name, self.type, self.price)
+        return "Name: {}, Type: {}, Price: {}".format(self.name, self.type_, self.price)
 
 ```
 
@@ -208,8 +208,8 @@ class Car():
         self.price = self.calculate_price_reduction(self.price)
         return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 
-    def add_equipment(self, name, type, price):
-        temp = Equipment(name, type, price)
+    def add_equipment(self, name, type_, price):
+        temp = Equipment(name, type_, price)
         self.equipment.append(temp)
 
     def __add__(self, other):

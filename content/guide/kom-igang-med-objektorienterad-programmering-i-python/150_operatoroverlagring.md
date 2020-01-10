@@ -96,10 +96,10 @@ print(volvo.get_price())
 
 bmw += volvo
 print(bmw.get_price())
-250000
+350000
 
 print(volvo.get_price())
-150000
+250000
 ```
 
 `bmw += volvo` kan även visualiseras som `bmw = bmw.__iadd__(volvo)`. Med andra ord tilldelar vi `bmw` variablen samma objekt som den redan hade.
