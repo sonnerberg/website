@@ -98,7 +98,7 @@ Titta på följande:
 
 1. Titta på de första 7-minuterna av [Object-oriented programming](https://www.youtube.com/watch?v=lbXsrHGhBAU).  
 
-1. Tips på en bra video från en tidigare student [What is object-oriented programming?](https://www.youtube.com/watch?v=xoL6WvCARJY).
+1. Tips från en tidigare student på en bra video [What is object-oriented programming?](https://www.youtube.com/watch?v=xoL6WvCARJY).
 
 ###Lästips {#lastips}
 
