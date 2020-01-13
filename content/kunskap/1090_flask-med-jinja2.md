@@ -206,7 +206,7 @@ För Bootstrap's filer använder vi oss av [CDN](https://en.wikipedia.org/wiki/C
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('main') }}">Min första Flask app</a>säkerxhetsrisk
+                <a class="navbar-brand" href="{{ url_for('main') }}">Min första Flask app</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
