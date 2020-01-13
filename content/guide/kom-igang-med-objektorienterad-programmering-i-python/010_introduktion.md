@@ -1,7 +1,7 @@
 ---
 author: aar
 revision:
-    "2018-11-16": "(A, aar) Första versionen, uppdelad av större dokument."
+    "2018-11-16": "(A, aar) Första versionen, uppdelning av större dokument."
 ...
 Introduktion
 ==================================
