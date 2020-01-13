@@ -12,7 +12,7 @@ Objektorienterad terminologi
 
 * **Instansattribut**: En variabel som är definierad inuti en klass. Den tillhör enbart den instansen av klassen.
 
-* **Instans**: Ett individuellt objekt av en klass.
+* **Instans**: Ett individuellt (unikt) objekt av en klass.
 
 * **Objekt**: En instans av en klass.
 
