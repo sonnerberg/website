@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2020-01-16": "(B, aar) Finputsad inför VT20."
     "2018-11-19": "(A, aar) Första versionen, uppdelad av större dokument."
 ...
 Operatoröverlagring
@@ -36,11 +37,12 @@ class Car():
         self.price = price
 
         Car.car_count += 1
+        self.car_nr = Car.car_count
 
     ...
 
     def __add__(self, other):
-        return self.price + other.get_price()
+        return self.price + other.price
 ```
 
 Det är en instansmetod så första parametern är `self`, vi lägger även till parametern `other`. När vi skriver `bmw + volvo` utgår vi från objektet till vänster om `+`. Så `self` innehåller "bmw" instansen och `other` innehåller "volvo". Vi testar köra det igen med vår nya metod:
@@ -51,11 +53,18 @@ Det är en instansmetod så första parametern är `self`, vi lägger även till
 
 >>> print( volvo + bmw )
 250000
+
+>>> print(volvo.__add__(bmw))
+250000
 ```
+
+På sista kodraden kan ni se hur Python tolkar `volvo + bmw`.
 
 Nu har vi överlagrat vår första operator. Det är ett programmerat beteende i Python att leta efter en `__add__()` metod och anropa den när man använder `+` operatorn och det finns en specifik metod för varje operator. Även för jämförelse operatorerna som `==, <, > <= >=` m.m, med de metoderna kan vi programmera hur två objekt av klassen Car jämförs t.ex. vilket objekt som räknas som störst eller minst. Vid subtraktion heter den metoden t.ex. `__sub__()` och vid `==` heter den `__eq__()`. Alla går att hitta i [Pythons dokumentation](https://docs.python.org/3/library/operator.html). 
 
 Med operatorer som `+=` och `-=` behöver man tänka efter på ett annat sätt så vi kollar på hur det ser ut när man överlagrar `+=`. 
+
+
 
 Additions tilldelning {#iadd}
 ----------------------------------
@@ -78,30 +87,35 @@ class Car():
         self.price = price
 
         Car.car_count += 1
+        self.car_nr = Car.car_count
 
     ...
 
     def __add__(self, other):
-        return self.price + other.get_price()
+        return self.price + other.price
 
     def __iadd__(self, other):
-        self.price += other.get_price()
+        self.price += other.price
         return self
 
-print(bmw.get_price())
+print(bmw.price)
 100000
 
-print(volvo.get_price())
+print(volvo.price)
 250000
 
 bmw += volvo
-print(bmw.get_price())
+print(bmw.price)
 350000
 
-print(volvo.get_price())
+print(volvo.price)
 250000
+
+bmw = bmw.__iadd__(volvo)
+print(bmw.price)
+600000
 ```
 
-`bmw += volvo` kan även visualiseras som `bmw = bmw.__iadd__(volvo)`. Med andra ord tilldelar vi `bmw` variablen samma objekt som den redan hade.
+Sist i koden kan ni se hur Python tolkar `bmw += volvo`. Med andra ord tilldelar vi `bmw` variablen samma objekt som den redan hade.
 
 Nu så. Samma koncept gäller för övriga operatorer och kan vara behändigt vid hantering av klasser av olika slag.

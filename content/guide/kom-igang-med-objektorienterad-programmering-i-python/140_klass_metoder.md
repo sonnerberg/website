@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2020-01-16": "(B, aar) Finputsad inför VT20."
     "2018-11-18": "(A, aar) Första versionen, uppdelad av större dokument."
 ...
 Klassmetoder
@@ -10,7 +11,7 @@ Nästa typ av metod vi ska kolla på heter [klassmetod](https://docs.python.org/
 
 
 
-Lägg till en klassmetod i klassen {#klassmetod}
+Lägg till en klassmetod i Car {#klassmetod}
 ----------------------------------
 
 I Car klassen har vi det statiska attributet (klass attributet) "wheels" så vi skapar en klassmetod som skriver ut ett meddelande om antalet däck en normal bil har.
@@ -27,7 +28,9 @@ class Car():
         Car.car_count += 1
 
     def present_car(self):
-        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+        return "The model {m} costs {p}$.".format(
+            m=self.model, p=self.price
+        )
 
     @classmethod
     def wheel_message(cls):
@@ -38,12 +41,14 @@ class Car():
 A car normally have 4 wheels
 ```
 
-Det är vanligt att döpa första parametern i en klassmetod till `cls`. Det fungerade utmärkt att komma åt det statiska värdet men som det ser ut nu ser det ut som en vanlig instansmetod. Vi testar komma åt instans metoder och variabler från klassmetoden för att se att det inte fungerar.
+Det är vanligt att döpa första parametern i en klassmetod till `cls`. Det fungerade utmärkt att komma åt det statiska värdet. Vi testar komma åt instans metoder och variabler från klassmetoden för att se att det inte fungerar.
 
 ```python
 ...
     def present_car(self):
-        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+        return "The model {m} costs {p}$.".format(
+            m=self.model, p=self.price
+        )
         print(self)
 
     @classmethod
@@ -52,7 +57,7 @@ Det är vanligt att döpa första parametern i en klassmetod till `cls`. Det fun
         print(cls)
         print(cls.model)
 
->>> volvo.present_car()
+>>> print(volvo.present_car())
 Model: 240, Price: 1
 <__main__.Car object at 0x7f1004e2e860>
 

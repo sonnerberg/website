@@ -50,15 +50,17 @@ Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar 
 1. Skapa filen `person.py`, vilken ska innehålla en personklass, som ska användas i din me-sida. Fyll på klassen med information som:
     * Förnamn
     * Efternamn
-    * Ålder
+    * Födelsedatum (gör attributet privat)
     * länk till en bild som används
+    * En metod som räknar ut ålder från födelsedatumet och returnerar åldern.
     * Godtyckliga metoder för att underlätta utskrift.
 
 1. index.html ska innehålla minst
     * en bild
-    * Någon form av välkomsttext
+    * Någon form av välkomsttext, använd dig av ett objekt från personklassen för att få informationen. 
 
 1. redovisning.html ska innehålla
+    * Spara även din redovisningstexter i personklassen och hämta dem från 
     * Dina redovisningstexter för kursmomenten
 
 1. about.html kan innehålla något om kursen och vilka tekniker du jobbar i, det kan vara bra att visa upp när du är klar med kursen.
