@@ -92,7 +92,7 @@ update-docker: codebase-update site-build-docker clean-cache-anax
 warm-cache:
 	@$(call HELPTEXT,$@)
 	# Update this to pre warm the (local) cache
-	-curl -s https://dbwebb.se/ > /dev/null
+	-time curl -s https://dbwebb.se/ > /dev/null
 
 
 
