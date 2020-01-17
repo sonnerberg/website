@@ -5,6 +5,7 @@ category:
     - flask
     - kurs oopython
 revision:
+    "2020-01-17": (C, aar) Lade till videos som visar hur vi använder det på studentserver och förklarar CGI.
     "2017-11-01": (B, mos) Lade till felhantering och indelat i stycken samt kort note om hur lägga till CGI i Apache.
     "2017-01-06": (A, mos) Första versionen.
 ...
@@ -103,10 +104,13 @@ except Exception as e:
 
 Skapa skriptet och lägg båda filerna i en katalog som är tillgänglig via en webbserver som har konfigurerat att CGI fungerar och Flask finns installerat.
 
+[YOUTUBE src=fYfa3jhvf_0 width=700 caption="Använd CGI för att köra Flask app på studentservern"]
+
 Öppna din webbläsare mot skriptet för att testa det, se till att lägga till **en avslutande `/`** så länken avslutas med `app.cgi/`, annars blir det 404.
 
 Hela anropet är samlat under exceptionhantering för att visa tydliga felmeddelanden om något går snett. Om du kör detta i produktionsmiljö så vill du troligen inte vara så tydlig i att visa felmeddelanden.
 
+[YOUTUBE src=I--WjW7y_Fw width=700 caption="Hur fungerar cgi?"]
 
 
 Testkör studentservern {#stud}
