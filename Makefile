@@ -135,8 +135,10 @@ clean-cache-anax:
 .PHONY: local-cache-clear
 local-cache-clear:
 	@$(call HELPTEXT,$@)
-	-sudo rm -f $(LOCAL_HTDOCS)/cache/anax/*
-	-sudo rm -f $(LOCAL_HTDOCS)/cache/forum/*
+	-sudo rm -rf $(LOCAL_HTDOCS)/cache/anax/
+	-install -d $(LOCAL_HTDOCS)/cache/anax/
+	-chmod 777 $(LOCAL_HTDOCS)/cache/anax/
+	#-sudo rm -f $(LOCAL_HTDOCS)/cache/forum/*
 
 
 
