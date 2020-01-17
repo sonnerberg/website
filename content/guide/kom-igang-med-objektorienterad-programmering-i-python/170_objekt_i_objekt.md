@@ -20,6 +20,8 @@ Vi ska skapa en bilbana där bilar kan tävla om att köra först i mål, vi lä
 
 Vi börjar med att skapa RaceTrack klassen och i den skapar vi fyra Car objekt.
 
+[FIGURE src=/image/oopython/guide/rt_init.png? class="right" caption="Klassdiagram över RaceTrack."]
+
 ```python
 from car import Car
 
@@ -319,7 +321,7 @@ class RaceTrack():
 
     def create_cars(self):
         car1 = Car("model1", 20099, "Danica Patrick")
-        car2 = Car("model2", 100000, "Bo 'Bandi' Darville")
+        car2 = Car("model2", 100000, "Bo 'Bandit' Darville")
         car3 = Car("model3", 300000, "Memphis Raines")
         car4 = Car("model4", 305000, "Shirley Muldowney")
         self.cars = [car1, car2, car3, car4]
@@ -372,4 +374,6 @@ Det blev mycket ändringar i koden, vi börjar överst. I Car gjorde vi inte så
 
 List comprehension används för att skapa skapa en ny list utifrån en sekvens. I vårt fall använder vi den för att populera en lista med alla car objekt som har kommit fram till mållinjen.
 
-Det blev en lång artikel men jag hoppas ni tyckte att det var kul med något lite grafiskt och att ni fick bättre förståelse för klasser. Ni kan hitta alla koden i [example/guide/cars](https://github.com/dbwebb-se/oopython/tree/master/example/guide/cars).
+Det blev en lång artikel men jag hoppas ni tyckte att det var kul med något lite grafiskt och att ni fick bättre förståelse för klasser. Ni kan hitta alla koden i [example/guide/cars](https://github.com/dbwebb-se/oopython/tree/master/example/guide/cars). Nedanför kan ni se ett färdigt klassdiagram för Car och RaceTrack klasserna.
+
+[FIGURE src=/image/oopython/guide/rt_car_full.png? class="right" caption="Färdigt klassdiagram över RaceTrack och car."]

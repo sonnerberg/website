@@ -35,6 +35,8 @@ Vi kan ta priset på bilar som exempel. Priset i sig är inte hemligt men vi vil
 
 Vi uppdaterar Car så att price är privat och skapar en set och en get metod för attributet.
 
+[FIGURE src=/image/oopython/guide/car_priv_attr.png? class="right" caption="Klassdiagram över Car med instansmetod."]
+
 ```python
 class Car():
     wheels = 4

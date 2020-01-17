@@ -4,7 +4,7 @@ revision:
     "2020-01-16": "(B, aar) Finputsad inför VT20."
     "2018-11-18": "(A, aar) Första versionen, uppdelad av större dokument."
 ...
-Metoder
+Instansmetoder
 ==================================
 
 En metod är en funktion som är definierad inuti en klass. Det finns tre typer: instans-, statisk- och klassmetod. Vi har redan skapat en instansmetod i form av `__init__()`. Vi kollar lite mer på instansmetoder.
@@ -21,6 +21,8 @@ Instansmetoder identifieras på att den första parametern heter `self`, oftast.
 ### Instansmetod 
 
 Vi skapar en metod som returnerar en formaterad sträng med information om bilen.
+
+[FIGURE src=/image/oopython/guide/car_instans_meth.png? class="right" caption="Klassdiagram över Car med instansmetod."]
 
 ```python
 class Car():
