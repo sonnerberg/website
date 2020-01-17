@@ -91,6 +91,7 @@ update-docker: codebase-update site-build-docker clean-cache-anax
 .PHONY: update
 update: codebase-update site-build local-publish-clear
 	@$(call HELPTEXT,$@)
+	-curl -s https://dbwebb.se > /dev/null
 
 
 
@@ -98,6 +99,7 @@ update: codebase-update site-build local-publish-clear
 .PHONY: update-all
 update-all: codebase-update submodule-update site-build local-publish-clear
 	@$(call HELPTEXT,$@)
+	-curl -s https://dbwebb.se > /dev/null
 
 
 
