@@ -87,19 +87,26 @@ update-docker: codebase-update site-build-docker clean-cache-anax
 
 
 
+# target: warm-cache              - Warm up the cache.
+.PHONY: warm-cache
+warm-cache:
+	@$(call HELPTEXT,$@)
+	# Update this to pre warm the (local) cache
+	-curl -s https://dbwebb.se/ > /dev/null
+
+
+
 # target: update                  - Update codebase (no submodules) and publish by clearing the cache.
 .PHONY: update
-update: codebase-update site-build local-publish-clear
+update: codebase-update site-build local-publish-clear warm-cache
 	@$(call HELPTEXT,$@)
-	-curl -s https://dbwebb.se > /dev/null
 
 
 
 # target: update-all              - Update codebase and publish by clearing the cache.
 .PHONY: update-all
-update-all: codebase-update submodule-update site-build local-publish-clear
+update-all: codebase-update submodule-update site-build local-publish-clear warm-cache
 	@$(call HELPTEXT,$@)
-	-curl -s https://dbwebb.se > /dev/null
 
 
 
