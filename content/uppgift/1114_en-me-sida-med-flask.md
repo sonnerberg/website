@@ -9,7 +9,7 @@ category:
 Skapa en me-sida med Python och Flask
 ===================================
 
-Använd ett microramverk för att skapa en webbapplikation (alt. me-sida).
+Använd microramverket Flask för att skapa en webbapplikation (alt. me-sida).
 
 <!--more-->
 
@@ -47,20 +47,22 @@ Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar 
 
 1. header.html och footer.html ska inkluderas med Jinja2.
 
-1. Skapa filen `person.py`, vilken ska innehålla en personklass, som ska användas i din me-sida. Fyll på klassen med information som:
+1. Skapa filen `person.py`, vilken ska innehålla klassen `Person`, som ska användas i din me-sida. Fyll på klassen med följande information:
     * Förnamn
     * Efternamn
     * Födelsedatum (gör attributet privat)
     * länk till en bild som används
     * En metod som räknar ut ålder från födelsedatumet och returnerar åldern.
-    * Godtyckliga metoder för att underlätta utskrift.
+    * Godtyckliga metoder för skapa strängar som kan användas på me-sidan.
+    * Dina redovisningstexter 
+
+1. Hårdkoda inte datan som utgör ett Person objekt i din kod. Spara den istället i en JSON fil som läses upp när man startar `app.py` och skapa ett objekt med den datan.
 
 1. index.html ska innehålla minst
     * en bild
     * Någon form av välkomsttext, använd dig av ett objekt från personklassen för att få informationen. 
 
 1. redovisning.html ska innehålla
-    * Spara även din redovisningstexter i personklassen och hämta dem från 
     * Dina redovisningstexter för kursmomenten
 
 1. about.html kan innehålla något om kursen och vilka tekniker du jobbar i, det kan vara bra att visa upp när du är klar med kursen.
