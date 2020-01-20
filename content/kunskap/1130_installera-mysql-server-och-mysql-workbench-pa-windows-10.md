@@ -5,6 +5,7 @@ category:
     - mysql
     - windows
 revision:
+    "2020-01-20": "(G, nik) Förtydligande kring lösenord"
     "2019-01-23": "(F, mos) Alternativ användare heter dbwebb, inte mos."
     "2019-01-22": "(E, mos) Bort med stray ; with grant option."
     "2019-01-21": "(D, mos) Uppdaterad hur extra rootanvändare skapas."
@@ -182,7 +183,7 @@ Du kan läsa om problematiken på StackOverflow och "[Authentication plugin 'cac
 
 Då skapar vi alltså en ny root-användare som är kompatibel med äldre klienter.
 
-Vi öppnar terminalklienten (i cmd), som root, och skriver följande SQL-kod för att skapa en användare. Jag väljer att döpa användaren till "dbwebb".
+Vi öppnar terminalklienten (i cmd), som root, och skriver följande SQL-kod för att skapa en användare. Jag väljer att döpa användaren till "dbwebb" med lösenordet "password".
 
 ```text
 DROP USER IF EXISTS 'dbwebb'@'%';
