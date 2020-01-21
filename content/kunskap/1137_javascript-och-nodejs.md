@@ -40,7 +40,6 @@ De filer som används i exemplet kan du finna under kursrepot databas i  [`examp
 
 
 
-
 Interpretatorn {#inter}
 --------------------------------------
 

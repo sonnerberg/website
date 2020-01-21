@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
+    "2020-01-16": "(G, mos) Notera hur inlämningen sker."
     "2019-01-16": "(F, mos) Bort referens BTH labbmiljö."
     "2019-01-11": "(E, mos) Uppdaterat inför vt19."
     "2018-12-19": "(D, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
@@ -127,6 +128,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Jobba igenom första delen av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)". I guiden ombeds du göra övningar och spara din SQL-kod i filer. Lägg dem i katalogen `me/skolan` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
     * [Första delen: Grunderna](guide/kom-igang-med-sql-i-mysql/grunderna)
+
+1. När du är klar med allt så lämnar du in via `dbwebb publish me` och du kontrollerar att du laddat upp rätt saker via `dbwebb inspect kmom01`.
 
 Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
 
