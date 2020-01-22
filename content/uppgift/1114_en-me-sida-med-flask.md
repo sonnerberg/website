@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2020-01-18": (C, aar) Uppdaterade kraven för vad som ska finnas i Person objektet och spara data som json.
     "2018-11-21": (B, aar) La till krav om venv inför VT19.
     "2017-11-10": (A, lew) Updated version for VT18.
 category:
