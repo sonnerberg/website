@@ -48,6 +48,10 @@ class RaceTrack():
 
 Vi läser upp json datan från filen med `json.load`, den funktionen tar ett file objekt som argument och returnerar datan som en Python datastruktur. I vårt fall blir det en lista med dictionaries som element. Sen använder vi oss av `create_from_json()` i Car klassen, så vi behöver skapa den. Det är en så kallad _factory method_, en class method som bara skapar ett nytt objekt och returnerar det.
 
+Side note, om man har t.ex. `åäö` i filen kan man få följande fel `UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 120: ordinal not in range(128)`. Python använder då fel encoding när Python ska tolka filens innehåll från byte kod till tecken. Ni behöver då specificera vilken encoding filen har, vilket borde vara `UTF-8`. Det löser vi med `json.load(open("cars.json", encoding='utf-8'))`. För att förstå problemet bättre kan ni läsa [What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text](http://kunststube.net/encoding/) eller [Unicode & Character Encodings in Python: A Painless Guide](https://realpython.com/python-encodings-guide/) om ni vill koppla det mer till Python. De är lite långa men rekommenderar verkligen att läsa i alla fall en av dem, det är något som kommer följa med er resten av er karriär och bra att kunna.
+
+Back to the factory method!
+
 ```python
 class Car():
     ...
