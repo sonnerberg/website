@@ -52,6 +52,10 @@ Side note, om man har t.ex. `åäö` i filen kan man få följande fel `UnicodeD
 
 Back to the factory method!
 
+
+
+### Factory method {#factory-method}
+
 ```python
 class Car():
     ...
