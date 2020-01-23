@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2020-01-23": (D, aar) Tog bort krav om att spara redovisningstext i json filen.
     "2020-01-18": (C, aar) Uppdaterade kraven för vad som ska finnas i Person objektet och spara data som json.
     "2018-11-21": (B, aar) La till krav om venv inför VT19.
     "2017-11-10": (A, lew) Updated version for VT18.
@@ -55,7 +56,6 @@ Startfilen ska heta `app.py` och ska ligga i mappen `me/flask` och vara körbar 
     * länk till en bild som används
     * En metod som räknar ut ålder från födelsedatumet och returnerar åldern.
     * Godtyckliga metoder för skapa strängar som kan användas på me-sidan.
-    * Dina redovisningstexter 
 
 1. Hårdkoda inte datan som utgör ett Person objekt i din kod. Spara den istället i en JSON fil som läses upp när man startar `app.py` och skapa ett objekt med den datan.
 
