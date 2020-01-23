@@ -32,9 +32,12 @@ Du är medveten om strukturen och uppbyggnaden av en webbsida.
 Installation {#installation}
 ------------------------------
 
-Installera Flask och Jinja2 i en virtuell miljö med pakethanteraren `pip`. Läsa om [virtuell miljö i Python](kunskap/python-virtuel-miljo) och om du inte har pip installerat, kika på [instruktionerna för pip](kunskap/python-pakethantering-med-pip#installera).
+Installera Flask och Jinja2 i en virtuell miljö med pakethanteraren `pip`. Jobba igenom följande länkar för att sätta upp den virtuella miljön och installera pip:
 
-Sparka igång en terminal och installera modulerna, GLÖM INTE att aktivera venv.
+* [virtuell miljö i Python](kunskap/python-virtuel-miljo) och om du inte har pip installerat
+* [instruktionerna för pip](kunskap/python-pakethantering-med-pip#installera)
+
+När du har gjort det sparka igång en terminal och installera modulerna, GLÖM INTE att aktivera venv.
 
 ```bash
 $ source .venv/bin/activate
