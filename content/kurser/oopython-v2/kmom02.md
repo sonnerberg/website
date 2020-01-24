@@ -16,12 +16,6 @@ Vi ska skapa en basklass och subklasser som får sin data från ett formulär oc
 
 <!--more-->
 
-[WARNING]	
- **Kursutveckling pågår**	
- Kursen ges våren 2020 läsperiod 3.
-
-
-[/WARNING]
 
 
 <!-- Flytta nedan text till eget dokument/vy/block -->
@@ -130,7 +124,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Förstod du de olika relationerna och skillnaden på dem?
 * Vad innebär polymorfism inom objektorienterad programmering?
 * Vad innebär inkapsling och publika interface inom objektorienterad programmering?
-* Hur tänkte du när du valde basklass och arv mellan fråge typerna i uppgiften?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vad tycker du om den typen av uppgift?
 * Gjorde du extrauppgiften?
