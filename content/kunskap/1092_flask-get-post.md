@@ -454,10 +454,20 @@ class Handler():
     ...
     def write_session(self, session):
         session["employees"] = [e.to_json() for e in self.people]
+        # Samma kod fast utan list comprehension
+        # people = []
+        # for e in self.people:
+        #    people.append(e.to_json()
+        # session["employees"] = people
     
     def read_session(self, session):
+        # first check if session has values, otherwise will crash if try get values
         if session.get("employees", []):
             self.people = [Employee.from_json(e) for e in session["employees"]]
+            # Samma kod fast utan list comprehension
+            # self.people = []
+            # for e in session["employees"]:
+            #    self.people.append(Employee.from_json(e))
     ...
 ```
 
