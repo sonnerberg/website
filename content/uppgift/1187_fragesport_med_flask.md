@@ -53,6 +53,8 @@ Börja med att kopiera frontend koden till ditt uppgift.
 
 ```bash
 # Ställ dig i kurskatalogen
+# börja med att uppdatera mappen med senaste exempelkoden
+dbwebb update
 cp -ri example/flask/questions me/kmom02/
 cd me/kmom02/questions
 ```
