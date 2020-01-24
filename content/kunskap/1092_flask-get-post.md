@@ -373,7 +373,9 @@ def company():
     return render_template("company.html")
 ```
 
-`methods=["POST", "GET"]` talar om att det är helt i sin ordning att ta sig hit via både POST och GET, om man inte har med det kan man bara ta sig till den routen med GET requests. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. Vi behöver skapa `add_employee()` metoden i Handler.
+`methods=["POST", "GET"]` talar om att det är helt i sin ordning att ta sig hit via både POST och GET, om man inte har med det kan man bara ta sig till den routen med GET requests. Med modulen `request` kan vi se hur användaren har tagit sig in i routen med `request.method`. Om requesten är GET behöver vi inte göra något, då ska bara sidan renderas. Om det däremot är POST betyder det att det är formuläret som skickats och det behöver vi ta hand om. `request.form` är en typ av [dictionary](https://flask.palletsprojects.com/en/1.1.x/api/#flask.Request.form) och ni kan läsa lite mer om det i Flask's [Quickstart guide](https://flask.palletsprojects.com/en/1.1.x/quickstart/#the-request-object).
+
+Vi behöver skapa `add_employee()` metoden i Handler.
 
 ```python
 class Handler():
