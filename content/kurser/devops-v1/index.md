@@ -4,6 +4,7 @@ author:
     - aar
     - mos
 revision:
+    "2020-01-24": "(C, aar) Ändrade hur kmoms ger poäng."
     "2019-04-16": "(B, aar) Uppdaterad inför V1."
     "2018-12-06": "(A, mos) Första revisionen efter kursens inrättande."
 ...
@@ -237,11 +238,11 @@ Ladok {#ladok}
 
 Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
 
-| Kursens moment  | Ladok moment enligt kursplan  |
-|-----------------|-------------------------------|
-| Kmom01 + kmom02 | Inlämningsuppgift 1 á 2.5hp   |
-| Kmom03 + kmom04 | Inlämningsuppgift 2 á 2.5hp   |
-| Kmom07 - kmom10 | Inlämningsuppgift 3 á 2.5hp   |
+| Kursens moment           | Ladok moment enligt kursplan  |
+|--------------------------|-------------------------------|
+| Kmom01 + kmom02 + kmom03 | Inlämningsuppgift 1 á 2.5hp   |
+| Kmom04 + kmom05 + kmom06 | Inlämningsuppgift 2 á 2.5hp   |
+| Kmom07 - kmom10          | Inlämningsuppgift 3 á 2.5hp   |
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
