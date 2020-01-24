@@ -1,14 +1,15 @@
 ---
 author: aar
 revision:
+    "2020-01-24": "(B, aar) Tog bort del om private som nu är i eget dokument."
     "2018-11-27": "(A, aar) Första versionen, uppdelad av större dokument."
 ...
-Information hiding
+Information hiding del 2
 ==================================
 
 Information hiding är när man gömmer intern data, så att den inte kan användas på fel sätt eller utanför den egna klassen. Låt oss säga att vi har en klass som har ett attribut som innehåller någon känslig data. Då vill vi inte att det ska gå att använda den hur som helst. Vi vill kanske kontrollera hur värdet sätts, man måste göra en speciell uträkning för att få ett nytt värde, eller att värdet bara är hemligt och man ska inte komma åt det utanför instansmetoder. Vi vill kunna begränsa tillgången till attribut eller metoder utanför klassdefinitionen.
 
-Det finns tre olika klassificeringar inom klassisk objektorientering, publik, skyddad och privat. Men Python följer inte det till hundra utan här har vi istället publik, skyddad och "manglad" [name mangling](https://docs.python.org/3.7/tutorial/classes.html#private-variables). I tabellen nedanför finns en kort sammanfattning av vad de betyder. Efter den går vi igenom de olika mer noggrant. 
+I första delen gick vi igenom skyddad eller private, i denna delen ska vi kolla på "manglad" eller [name mangling](https://docs.python.org/3.7/tutorial/classes.html#private-variables). I tabellen nedanför finns en kort sammanfattning av vad de betyder. Efter den går vi igenom de olika mer noggrant. 
 
 | Implementation | Typ     | Syfte                                                                                 |
 |----------------|---------|---------------------------------------------------------------------------------------|
@@ -18,14 +19,10 @@ Det finns tre olika klassificeringar inom klassisk objektorientering, publik, sk
 
 
 
-Privata attribut och metoder {#privatAttributMetoder}
---------------------------------------------------------
+Name mangling {#nameMangling}
+------------------------------
 
-Om du var uppmärksam så är du med på att _privat_ inte finns som typ i Python. Det finns alltså inget sätt att förhindra användningen av attribut och metoder till skillnad från många andra programmeringsspråk. I python finns bara en överenskommelse att attribut/metoder vars namn börjar med ett `_` är "privata". Vilket innebär att du ska bara använda dem om du verkligen vet vad du gör. Detta uppfyller mer kraven för typen skyddad, men i och med att det inte finns privat används både privat och skyddad för samma sak i Python.
-
-`_<namn>` Används för att markera att en metod/attribut inte är en del av det publika api:et och den ska generellt sätt inte ändras eller användas utanför instansen. Det finns dock inget som stoppar någon från att göra det.
-
- Hur mycker pegnar något tjänar brukar vara lite känsligt så vi skapar ett skyddat/privat attribut för det i Video klassen:
+Vi utgår från koden i första delen
 
 [FIGURE src=/image/oopython/guide/vid_mov_priv_attr.png class="right" caption="Klassdiagram över Video och Movie med privat attribut."]
 
@@ -65,14 +62,7 @@ class Movie(Video):
 64241499
 ```
 
-Som sagt, det går att använda den både utanför och innanför instansen men jag som har utvecklat koden markerar för andra att den **inte ska** användas utanför instansen. Med andra ord det är OK att göra `self._revenue` men inte `charlie._revenue`. `_` funkar även på metoder.
-
-
-
-Name mangling {#nameMangling}
-------------------------------
-
-Vi går vidare till `__`, även kallat "name mangling". Name mangling är då till för att förhindra en subklass från att använda/skriva över en metod/attribut i basklassen. Dock är det vanligt att utvecklare använder `__` för att göra attribut "privata", men det ska man inte.
+Name mangling är då till för att förhindra en subklass från att använda/skriva över en metod/attribut i basklassen. Dock är det vanligt att utvecklare använder `__` för att göra attribut "privata", men det ska man inte.
 En metod med `__` i början kan "bara" användas i instansen den skapas i, med `self.__<namn>`. Detta är en egenskap privata attribut/metoder har i många andra programmeringsspråk, men inte i python, och därför är det lätt hänt att `__` används istället för `_`.
 
 Jag tänker att man drar 30% av skatten på inkomster för alla typer av videos. Vi lägger till en publik metod för att öka inkomsten och en med name mangling för dra 30% på de nya intäkterna. I och med att vi inte kan komma åt metoden med name mangling utanför instansen behöver vi en publik metod som anropas den andra.
