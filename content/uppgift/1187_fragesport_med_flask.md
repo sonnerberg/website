@@ -63,7 +63,7 @@ cd me/kmom02/questions
 
 1. Implementera klasserna som behövs i filerna `handler.py` och `questions.py`, en handler klass som heter `QuestionManager` och tre klasser för frågorna. Typerna av frågor är fritext (text) svar, flervalsfrågor med flera rätt (checkbox) och flervalsfrågor med ett rätt svar (radiobutton). I mappen `templates/answer_types` finns en html template för varje frågetyp (du ska inte behöva ändra i dem).
 
-1. Frågeklasserna behöver innehålla en fråga, svaret och svarslternativen, om det finns några. De behöver ha metoder för att hämta värdena och en metod för att kolla om användarens svar är rätt. 
+1. Frågeklasserna behöver innehålla en fråga, svaret och svarslternativen, om det finns några. De behöver ha metoder för att hämta värdena och en metod för att kolla om användarens svar är rätt. För checkboxes, räkna varje rätt alternativ som ett poäng, t.ex. om frågan har tre rätta svar får man 1 poäng för varje rätt gissning. 
 
 1. Handlern ska äga alla tillgängliga frågor, hålla reda på hur många poäng spelaren har, vilken fråga man är på och vad max poängen är. Det ska finnas metoder för att hämta antalet poäng, max poäng, kolla om det finns fler frågor, hämta nästa fråga, läsa från session, skriva till session, återställa spelet och kolla om användarens input är rätt svar på nuvarande frågan.
 
@@ -87,8 +87,6 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 
 Extrauppgift {#extra}
 -----------------------
-
-1. För de frågor med checkboxes ge poäng för varje rätt alternativ. Om det är två alternativ som är rätt på frågan ska den vara värd två poäng.
 
 1. På score screen visa också de rätta svaren.
 
