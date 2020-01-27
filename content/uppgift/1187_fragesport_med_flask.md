@@ -42,7 +42,7 @@ Attributen och metoderna som är **bold**-markerad används av den färdiga kode
 
 [YOUTUBE src=GBmyT_TntXA width=630 caption="Andreas förklarar klassdiagrammet och koden som ska skrivas."]
 
-I session behöver vi spara den dynamiska data, som applikationen inte kommer ihåg mellan request:en, vilket är hur många poäng spelaren har och vilken fråga spelaren är på. I write_session skriv den datan till session och i read_session hämta den datan från session.
+I session behöver vi spara den dynamiska data, som applikationen inte kommer ihåg mellan request:en, vilket är hur många poäng spelaren har och vilken fråga spelaren är på. I write_session skriv den datan till session och i read_session hämta den datan från session. Tips att när du börjar utveckla en ny metod som anropas från den färdiga koden, använd dig av `print()` i metoden du skapar och kolla klassdiagrammet för att ta reda på vad som skickas som argument till din metod.
 
 
 
@@ -69,7 +69,6 @@ cd me/kmom02/questions
 
 1. Handlern ska äga alla tillgängliga frågor, hålla reda på hur många poäng spelaren har, vilken fråga man är på och vad max poängen är. Det ska finnas metoder för att hämta antalet poäng, max poäng, kolla om det finns fler frågor, hämta nästa fråga, läsa från session, skriva till session, återställa spelet och kolla om användarens input är rätt svar på nuvarande frågan.
 
-1. När du börjar utveckla en ny metod som anropas från koden ni får, använd dig av `print()` i metoden du skapar och kolla klassdiagrammet för att ta reda på vad som skickas som argument till din metod.
 
 1. Session ska användas för att hålla kolla på hur många poäng spelaren har och vilken fråga spelaren är på. Ni behöver inte spara fråge objekten i session.
 
