@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-01-28": "(E, nik) La till notis om 'GROUP BY clause and contains nonaggregated column'"
     "2019-02-07": "(D, mos) Uppdaterade rubriker för sista uppgiften."
     "2019-02-01": "(C, mos) Genomgången efter feedback från studenter."
     "2019-01-15": "(B, mos) Uppdelad i två delar då HAVING fick mer material."
@@ -137,8 +138,17 @@ Använd de inbyggda aggregerande funktionerna `SUM()`, `COUNT()`, och `AVG()` ti
 3. Hur mycket är medellönen för de olika avdelningarna?
 3. Hur mycket är medellönen för kvinnor kontra män?
 
-
 Aggregerande betyder att de räknar samman värden baserat på många rader i tabellen. Dubbelkolla alltid mot din värdemängd, innehållet i tabellerna, om dina svar känns rimliga.
+
+[INFO]
+
+Följande felmeddelande kan uppstå:
+
+> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'skolan.larare.lon' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+
+Se följande forumtråd för mer information: [GROUP BY clause and contains nonaggregated column](https://dbwebb.se/forum/viewtopic.php?f=13&t=8909)
+
+[/INFO]
 
 Gör nu följande rapport.
 
