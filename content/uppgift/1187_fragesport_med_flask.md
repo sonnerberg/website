@@ -98,6 +98,7 @@ Extrauppgift {#extra}
 Tips från coachen {#tips}
 -----------------------
 
+För att hämta ut checkbox svaren från formuläret kan ni använda [getlist](https://www.youtube.com/watch?v=_sgVt16Q4O4).
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
