@@ -7,7 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
-    "2020-01-16": "(G, mos) Notera hur inlämningen sker."
+    "2020-01-21": "(G, mos) Notera hur inlämningen sker."
     "2019-01-16": "(F, mos) Bort referens BTH labbmiljö."
     "2019-01-11": "(E, mos) Uppdaterat inför vt19."
     "2018-12-19": "(D, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."

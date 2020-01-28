@@ -7,6 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2020-01-28": "(E, mos) Förtydligande om backuphanteringen."
     "2019-02-15": "(D, mos) länk till tips om vad UPDATE returnerar."
     "2019-02-12": "(C, mos) Förtydliga vilken databas som används för testkörning."
     "2019-01-28": "(B, mos) Uppdaterad inför vt19."
@@ -32,7 +33,7 @@ Du har tidigare löst uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgif
 
 Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js (v2)](kunskap/gor-en-kommandoradsklient-i-node-js-v2)" vilken gav dig upplägget om hur du gör ett menysystem i terminalklienten tillsammans med en oändlig loop som läser in kommandon från terminalen.
 
-Du har jobbat igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)".
+Du har jobbat igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Här står bland annat hur du löser en backup av din databas.
 
 
 
@@ -54,15 +55,18 @@ Om du använder externa moduler så måste de finnas i `me/package.json`, annars
 Provkörning {#prov}
 -----------------------
 
-Ditt program testkörs mot din egen databas som återskapas via ditt skript `me/skolan/skolan.sql`.
+Ditt program testkörs mot din egen databas som återskapas via backup-filen `me/skolan/skolan.sql`.
 
-Var därför noggran att gör en databasdump med den allra senaste versionen av din databas, innan du lämnar in uppgiften.
+Instruktioner för hur du skapar en sådan backupfil finns i del 3 av guiden "[Ta backup av databasen](guide/kom-igang-med-sql-i-mysql/ta-backup-av-databasen)"
+
+Var därför noggrann att gör en databasdump med den allra senaste versionen av din databas, innan du lämnar in uppgiften.
 
 Tänk på att stora och små bokstäver hanteras olika på Windows, Mac och Linux. Det är av den anledningen som vi följer en SQL-kodstandard som enbart använder sig av små bokstäver på tabeller och kolumner.
 
-Du kan själv verifiera att det fungerar, genom att läsa in din databasdump.
+Du kan själv verifiera att det fungerar, genom att läsa in din databasdump. Tänk på att detta kommando rensar allt innehåll i din nuvarande databas och ersätter med innehållet från backup-filen.
 
 ```text
+# Stå i roten av kursrepot
 mysql -udbwebb skolan < me/skolan/skolan.sql
 ```
 
@@ -88,8 +92,6 @@ Krav {#krav}
 1. Skapa kommandot `sok <sokstrang>` som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
 
 1. Skapa kommandot `nylon <akronym> <lon>` som tar argumenten för lärarens akronym samt den nya lönen och uppdaterar lärarens lön.
-
-1. Skapa en aktuell dump av din databas som du sparar i `me/skolan/skolan.sql`, det är den som kommer användas för att provköra ditt program.
 
 1. Validera din kod.
 
