@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
+    "2020-01-29": "(H, mos) Uppdaterade länk till streams vt20."
     "2020-01-21": "(G, mos) Notera hur inlämningen sker."
     "2019-01-16": "(F, mos) Bort referens BTH labbmiljö."
     "2019-01-11": "(E, mos) Uppdaterat inför vt19."
@@ -89,8 +90,11 @@ Kika igenom följande videor för att få grepp om grunderna i Databaser och SQL
 
 1. Videon "[Learn Basic SQL in 10 Minutes](https://www.youtube.com/watch?v=bEtnYWuo2Bw)" ger dig en snabb förklaring till grunderna i SQL. Videon hanterar även översikt av mer avancerade begrepp som JOIN, UNION och GROUP. Dessa kommer senare i kursen.
 
-1. Kursen innehåller föreläsningar som streamas och därefter läggs i en spellista. Du kan nå spellistan på "[databas streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8JaLBnz0TszCXc_eCVpmOh)".
+1. Kursen innehåller föreläsningar som streamas och därefter läggs i en spellista. Du kan nå spellistan på "[databas streams vt20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_rI4Y1xZE3TA3XSOJIq319)".
 
+<!--
+"[databas streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8JaLBnz0TszCXc_eCVpmOh)"
+-->
 
 <!--
 ### Läsvärt {#lastips}
