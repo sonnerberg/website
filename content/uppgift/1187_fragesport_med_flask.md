@@ -44,6 +44,7 @@ Attributen och metoderna som är **bold**-markerad används av den färdiga kode
 
 I session behöver vi spara den dynamiska data, som applikationen inte kommer ihåg mellan request:en, vilket är hur många poäng spelaren har och vilken fråga spelaren är på. I write_session skriv den datan till session och i read_session hämta den datan från session. Tips att när du börjar utveckla en ny metod som anropas från den färdiga koden, använd dig av `print()` i metoden du skapar och kolla klassdiagrammet för att ta reda på vad som skickas som argument till din metod.
 
+[YOUTUBE src=rqfqn29glIo width=630 caption="Hur ska man börja med frågesport uppgiften?"]
 
 
 Krav {#krav}
