@@ -56,7 +56,7 @@ Det vanligaste struktur diagrammet är _Klassdiagram_.
 ###Klassdiagram {#klass}
 
 
-Klassdiagram representerar den objektorienterade vyn av ett system. Det visar upp systemets klasser, deras attributer, metoder och relationen mellan klasserna. Det säge ingenting om funktionaliteten i klassen utan bara vilken struktur den ska ha. 
+Klassdiagram representerar den objektorienterade vyn av ett system. Det visar upp systemets klasser, deras attributer, metoder och relationen mellan klasserna. Det säger ingenting om funktionaliteten i klassen utan bara vilken struktur den ska ha. 
 
 Nedanför visas hur ett Klassdiagram kan se ut för följande kod.
 ```python
@@ -86,11 +86,11 @@ En klass i ett klassdiagram representeras med en ruta som är indelad i tre fack
 
 Attribut måste åtminstone visas med namnet men det kan även stå vilken datatyp de har, som i bilden ovan. Bilden visar även om de är publika eller privata:
 
-* **\+** Betyder publikt attribut.
+* **\+** Betyder publikt attribut/metod.
 
-* **\-** Betyder privat attribut.
+* **\-** Betyder privat attribut/metod.
 
-* **<u>attributnamn</u>** Betyder att attributet är statiskt. Gäller även för understrukna metodnamn
+* **<u>namn</u>** Betyder att attributet/metoden är statiskt.
 
 För metoder måste man skriva med namnet, det är att föredra att även visa parametrar och returtyp som bilden ovan. Det funkar likadant för metoder och attribut med **+-** för privata/publika.
 
