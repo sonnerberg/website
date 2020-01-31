@@ -18,12 +18,6 @@ Du kommer även skapa klasser utifrån ett färdigt UML-diagram och skriva unitt
 <!--more-->
 
 
-[WARNING]	
- **Kursutveckling pågår**	
- Kursen ges våren 2020 läsperiod 3.
-
-
-[/WARNING]
 
 <!-- Flytta nedan text till eget dokument/vy/block -->
 
