@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2020-02-04": (F, aar) Minskade storlek för VT20.
     "2019-02-15": (E, aar) Ändrade test kravet, ska testa insert istället för add.
     "2019-02-13": (D, aar) Uppdaterade klassdiagram och metod förklaringar.
     "2019-01-25": (C, aar) Formulerade om test kravet.
@@ -38,11 +39,9 @@ Nedanför ser vi ett klassdiagram för en UnorderedList klass. Under diagrammet 
 
 [FIGURE src=/image/oopython/kmom04/UnorderedList_klass_v2.png caption="klassdiagram för UnorderedList"]
 
-* `is_empty`: Returnera True/False för om listan är tom eller inte.
-* `add`: Lägg till nytt element/nod sist i listan.
-* `insert`: Lägg till nytt element/nod på specifikt index. Om index inte finns lyft exception.
+* `append`: Lägg till nytt element/nod sist i listan.
 * `set`: Skriv över element med ny data som finns på index. Om index inte finns lyft exception.
-* `size`: Returnera antaler element i listan.
+* `size`: Returnera antalet element i listan.
 * `get`: Returnera värde på index. Om index inte finns lyft exception.
 * `index_of`: Om data finns i listan returnera dess index. Om nod med data inte finns lyft exception.
 * `print_list`: Skriv ut listans innehåll.
@@ -74,7 +73,7 @@ cd me/kmom04/list
 
 1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i UnorderedList klassen.
 
-1. Skapa en fil med namnet `test.py` i "list" mappen. Skriv enhetstester för metoderna i UnorderedList klassen. Det ska finnas tester för metoderna, insert, set, get, index_of och remove. Kolla på [Testa exceptions](https://youtu.be/ePkZEOHhk-s) för att se hur man fångar exceptions i ett test.
+1. Skapa en fil med namnet `test.py` i "list" mappen. Skriv enhetstester för metoderna i UnorderedList klassen. Det ska finnas tester för metoderna, append, set, get, index_of och remove. Kolla på [Testa exceptions](https://youtu.be/ePkZEOHhk-s) för att se hur man fångar exceptions i ett test.
 
 
 
