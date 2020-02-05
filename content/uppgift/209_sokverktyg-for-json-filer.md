@@ -1,10 +1,12 @@
 ---
 author:
     - lew
+    - efo
 category:
     - javascript
     - kurs webapp
 revision:
+    "2020-02-05": "(D, efo) Gjorde om till labbverktyget."
     "2017-04-28": "(C, aar) Förtydligade krav 15, att alla användarnamn ska hittas och inte bara det första."
     "2017-04-05": "(B, mos) Ändrade krav 13 från felaktiga 3 till 7 som facit visar."
     "2015-11-23": "(A, mos) Första utgåvan i samband med kursen webapp."
@@ -12,7 +14,7 @@ revision:
 Sökverktyg för JSON filer
 ==================================
 
-Använd applikationen jq för att söka och visualisera data i en JSON fil. Svara på ett antal frågor genom att kombinera sökfrågor som du kör i verktyget jq och på det viset skapar du en egen förståelse för hur innehållet i en mer komplex JSON fil är uppbyggt.
+Använd applikationen jq och labbverktyget för att söka och visualisera data i en JSON fil. Svara på ett antal frågor genom att kombinera sökfrågor som du kör i verktyget jq och på det viset skapar du en egen förståelse för hur innehållet i en mer komplex JSON fil är uppbyggt.
 
 <!--more-->
 
@@ -25,106 +27,71 @@ Du har jobbat igenom artikeln "[Installera verktyget jq för att söka i JSON-fi
 
 
 
-Introduktion {#intro}
+Hämta labben {#hamta}
 -----------------------
 
-Du skall spara alla dina filer i katalogen `me/kmom03/jq` eller `me/kmom02/jq` för webapp-v2 och webapp-v3.
+Labben automatgenereras för dig. Gör så här för att checka ut din personliga labb.
 
-JSON-filen som du jobbar med heter `tag-dbwebb.json` och kommer från Instagram och du kan kopiera den från exempelmappen.
+Gå till din kurskatalog i terminalen och kör följande kommando.
 
-```bash
-# Gå till kursrepot
-# kmom03 för webapp, kmom02 för webapp-v2
-$ cp example/instagram/tag-dbwebb.json me/kmom03/jq
+```shell
+# Flytta till kurskatalogen
+dbwebb create jq
 ```
 
-Skapa en körbar bash-fil som heter `solution.bash` och skriv alla dina svar i den filen. Så här kan inledningen på filen se ut inklusive lösningen på första kravet.
+Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
+
+| Fil                | Innehåll                                                              |
+|--------------------|-----------------------------------------------------------------------|
+| `instruction.html` | Beskrivning av labben och de uppgifter som skall göras.               |
+| `answer.bash`      | Här skall du skriva din kod för att lösa respektive uppgift i labben. |
+| `tag-dbwebb.json`          | textfil för vissa av uppgifterna.                              |
+
+
+Öppna filen `instruction.html` i en webbläsare och läs igenom de uppgifter som labben omfattar.
+
+Öppna filen `answer.bash` i din texteditor och koda ihop svaren på uppgifterna.
+
+Skriv dina jq uttryck kod inom `$( )` för att den ska exekveras och returnera svaret, ex.:
 
 ```bash
-#!/usr/bin/env bash
-
-# 1. Hitta de 'keys' som finns i filen. Lägg svaret i filen 'a.txt'.
-jq 'keys' tag-dbwebb.json | tee a.txt
-
+ANSWER=$( jq 'keys' tag-dbwebb.json )
 ```
 
-Kommandot `tee` skriver dels till en fil och dels till terminalen. Du kan nu testköra alla dina lösningar så här.
+Du kan testa dina lösningar genom att köra programmet `answer.bash` i din terminal.
 
-```bash
-$ ./solution.bash
-[
-  "data",
-  "meta",
-  "pagination"
-]
-$ cat a.txt
-[
-  "data",
-  "meta",
-  "pagination"
-]
+```shell
+$ bash answer.bash
 ```
-
-Fråga i forumet om du behöver ledtrådar till lösningarna. Du kan också tjuvkika i filen `example/solution/jq.txt`.
 
 
 
 Krav {#krav}
 -----------------------
 
-Du skall samla ihop minst 15 poäng. Fråga 1-10 är värd en poäng var. Fråga 11-15 är värd 3 poäng var.
+1. Gör de uppgifter som finns i labben `instruction.html`.
 
-1. Hitta de 'keys' som finns i filen. Lägg svaret i filen 'a.txt'.
+2. Skriv dina lösningar, på rätt plats, i filen `answer.bash`.
 
-2. Vilket värde har `meta.code` som är statuskoden för HTTP requesten (b.txt)?
+3. Testkör din labb genom att köra filen `answer.bash`.
 
-3. Filen innehåller en länk till nästa resultat i flödet, en så kallad pagination. Visa länken till nästa länk (next_url) (c.txt).
+4. Ladda upp, validera och publicera labben genom att göra följande kommando i kurskatalogen i terminalen.
 
-4. Hur många 'likes' har den tionde bilden (d.txt).
-
-5. Vilka taggar (tags) har den första bilden (e.txt).
-
-6. Visa detaljer om den användare (user) som lagt upp den första bilden (f.txt).
-
-7. Den första bilden är tagen på en viss plats (location) som har ett visst namn (name), vilket (g.txt)?
-
-8. Den första bilden har en kommentar (comments), visa texten (text) för kommentaren (h.txt).
-
-9. Den första bilden har flera likes. Visa namnet på den andra personen som gjorde like på bilden (i.txt).
-
-10. Visa länken till den första bilden som är av standard_resolution (j.txt).
-
-11. (*Denna och resterande frågor är värda 3 poäng*) Användaren alkifaey har gjort en kommentar. Använd användarnamnet och visa själva kommentaren (text) (k.txt).
-
-12. Lista länkarna (link) till bilderna som användaren 'tobhed' har kommenterat (l.txt).
-
-13. Lista länkarna till de bilder med fler 'likes' än 7 (m.txt).
-
-14. Lista länkarna till de bilder som har fler än 5 'likes' och minst 1 'comment' (n.txt).
-
-15. Hitta användarnamnen (username) på de användare som likeat bilden som är tagen på 'Studentviken' (location "Studentviken") (o.txt).
-
-11. Validera din kod enligt följande.
-
-```bash
-# Ställ dig i kurskatalogen
+```shell
+# Flytta till kurskatalogen
 dbwebb validate jq
+dbwebb publish jq
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-Lägg lite extra tid på att göra följande extrauppgifter.
-
-* Skapa de frågor som hjälper dig bygga en enkel Instagram-app, dels en lista över bilderna med comment och like-count samt en "undersida" där detaljer visas om en bild.
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
 Tips från coachen {#tips}
 -----------------------
+
+Se till att dela upp problemen i mindre problem. Du kan använda `|` - pipe för att filtrera data.
+
+
 
 Lycka till och hojta till i forumet om du behöver hjälp!
