@@ -81,6 +81,58 @@ För fält där vi vill skriva in lösenord använder vi naturligtvis `password`
 [FIGURE src="/image/webapp/input-screenshot/input-password.png?w=200" caption="Password input"]
 
 
+
+HTML5 validering av innehåll {#validering}
+--------------------------------------
+
+En viktig del av att designa ett formulär är att ge återkoppling till användaren om hen har fyllt i ett värde som är korrekt för detta fältet. Vi såg ovan att input-typen kan ta oss en bit på vägen, men vad om vi vill validera användarens innehåll ytterligare? "HTML5 to the rescue". Som alltid har MDN en bra artikel om dessa möjligheter: [Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation).
+
+I HTML5 finns fyra olika attribut vi kan använda på våra formulärfält för att validera innehållet.
+
+### required
+
+Om vi vill att ett specifikt fält måste vara ifyllt kan vi använda `required` på följande sätt. Om fältet är tomt när vi skickar formuläret, får vi upp en varning om detta.
+
+```html
+<input type="text" required="required">
+```
+
+
+
+### minlength & maxlength
+
+Som vi nästan kan räkna ut baserad på attributen kan vi här bestämma minimums och maximums längd för vårt innehåll. Om du använder dessa se till att det inte hindrar någon i att fylla data. Till exempel om man sätter får hårda krav på ett namn eller liknande.
+
+```html
+<input type="text" minlength="3" maxlength="8">
+```
+
+
+### min, max & step
+
+Kan användas tillsammans med numeriska input-fält (number, date, time, range) för att begränsa värdena. Step anger vilket steg användaren kan ta mellan olika värden.
+
+```html
+<input type="number" min="0" max="1" step="0.1">
+```
+
+
+### pattern
+
+Om man vill ta det ett steg längre kan man använda så kallade reguljära uttryck för att validera fältens innehåll. Till exempel om vi vill validera ett personnummer kan vi göra följande.
+
+```html
+<input type="text" pattern="[0-9]{6}-[0-9]{4}" placeholder="YYMMDD-XXXX" >
+```
+
+
+
+### CSS-pseudoklasser
+
+Ytterligare en fördel med form valideringen är att om fältet validerar får fältet pseudoklassen `:valid`. Om fältet inte validerar har det pseudoklassen `:invalid`. Vi kan sedan använda dessa pseudoklasser för att styla våra input fält. I nästa del av artikeln använder vi denna möjlighet.
+
+
+
 Styling av formulär {#styling}
 --------------------------------------
 När vi designade våra knappar i förra kursmomentet ville vi att de tre olika elementen `button`, `a` och `input[type=submit]` skulle se likadana ut. När vi designar formulärfält vill vi att de olika fälten ser likadana ut. Vi ska i denna del av övningen titta på hur vi kan designa formulärfält som är enhetligt designade i olika webbläsare. Hur vi ligger till genomtänkta förifyllda värden och hur vi tydligt visar för användaren vilket fält som är i fokus.
@@ -99,6 +151,18 @@ Vi börjar med den enhetliga stylingen. Vi börjar med att definiera klassen `.i
     box-sizing: border-box;
     width: 32rem;
     margin-bottom: 1.4rem;
+}
+```
+
+För att använda oss av `:valid` och `:invalid` pseudoklasserna kan vi göra följande. Här sätter vi ramen runt fältet till grön om det validerar och röd om det inte validerar.
+
+```css
+.input:valid {
+    border: 1px solid green;
+}
+
+.input:invalid {
+    border: 1px solid red;
 }
 ```
 
@@ -122,7 +186,7 @@ En viktig del av formulärfälten är texten vi har som beskriver fälten med (l
 }
 ```
 
-Om man vill ha lite mindre marginal på första elementet med klassen `.input-label` kan man använda pseudo-klassen `:first-of-type` enligt nedan.
+Om man vill ha lite mindre marginal på första elementet med klassen `.input-label` kan man använda pseudoklassen `:first-of-type` enligt nedan.
 
 ```scss
 .input-label:first-of-type {
