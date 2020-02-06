@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2019-02-06": "(F, mos) Strukturerade artikeln för att bättra flödet och minska felkällor."
     "2019-02-12": "(E, mos) Länk till forumet om bugg workbench."
     "2019-02-11": "(D, mos) Bort med full path vid matcha kolumner."
     "2019-02-09": "(C, mos) Förtydligade felsökning av load local infile."
@@ -12,11 +13,13 @@ Importera från Excel till Tabell
 
 Ibland sitter man i Excel (eller liknande verktyg) och har en lång lista på saker som man vill föra in i en databastabell. Hur gör man det på ett snabbt och enkelt sätt?
 
-Låt oss fylla tabellerna för kurs och kurstillfalle med innehåll genom att hämta det från ett format som Excel kan exportera.
+Låt oss tömma och fylla tabellerna för kurs och kurstillfalle med innehåll genom att hämta det från ett format som Excel kan exportera.
 
 Spara den SQL-kod du skriver i filen `dml_insert_csv.sql`.
 
 Tjuvkika på refmanualen [LOAD DATA INFILE](https://dev.mysql.com/doc/refman/8.0/en/load-data.html) så kan du se vad det är vi skall göra.
+
+I denna artikel jobbar vi med terminalklienten.
 
 
 
@@ -67,10 +70,15 @@ Låt oss studera koden _innan vi kör den_.
 
 ```sql
 --
--- Insert into kurs 
+-- Delete tables, in order, depending on
+-- foreign key constraints. 
 --
+DELETE FROM kurstillfalle;
 DELETE FROM kurs;
 
+--
+-- Insert into kurs 
+--
 LOAD DATA LOCAL INFILE 'kurs.csv'
 INTO TABLE kurs
 CHARSET utf8
@@ -87,20 +95,22 @@ SELECT * FROM kurs;
 
 Vi anger sökvägen till filen och berättar att teckenkodningen är UTF-8. Fälten i filen är separerade med `,` och omslutna med `"`. Varje rad separeras med `\n` och den första raden som innehåller namnen på kolumnerna väljer vi att ignorera.
 
-Då kan vi köra koden.
+Då kan vi köra koden i din terminalklient, troligen får du problem. Fortsätt läsa för att lösa de problemen.
 
 
 
 Exekvera LOAD DATA INFILE {#execinto}
 ----------------------------------
 
-Det kan vara lite klurigt att få LOAD DATA INFILE att fungera, det är normalt avstängt 
+Det kan vara lite klurigt att få LOAD DATA INFILE att fungera, det är normalt avstängt i både servern och i klienten och din användare behöver rättigheter för att köra kommandot.
 
-Eventuellt får du nu ett felmeddelande.
+Eventuellt får du nu ett felmeddelande, något i stil med följande.
 
 > "ERROR 1148 (42000): The used command is not allowed with this MySQL version"
 
-Det kan bero både på terminalklienten och på din databasserver. Låt oss lösa båda dessa potentiella problem.
+> ERROR 3948 (42000) at line 11: Loading local data is disabled; this must be enabled on both the client and server sides
+
+Detta kan bero inställningar i terminalklienten och/eller i din databasserver. Låt oss lösa dessa potentiella problem.
 
 
 
@@ -131,17 +141,9 @@ Det är flera inställningar som skrivs ut, de kommer från din `.my.cnf`. Det �
 
 
 
-### Workbench {#fixworkbench}
-
-Man kan göra LOAD DATA LOCAL INFILE i Workbench, men det verkar finnas någon form av [bugg som gör det aningen svårare i Workbench version 8.0](f/64484), tidigare versioner av Worbench fungerar dock bra.
-
-Förslagsvis gör du alltså detta i terminalklienten, eller, om du känner att du har tid, så använder du den workaround som föreslås i foruminlägget, den gör en LOAD DATA INFILE istället för en LOAD DATA _LOCAL_ INFILE.
- 
-
-
 ### Databasservern {#fixserver}
 
-Felet 1148 kan också bero på att LOAD LOCAL INFILE är avstängt på databasservern och vi behöver sätta på det.
+Felet kan också bero på att LOAD LOCAL INFILE är avstängt på databasservern och vi behöver sätta på det.
 
 Vi använder följande kommando för att kolla om LOCAL INFILE är på eller av.
 
@@ -179,9 +181,85 @@ mysql> SHOW VARIABLES LIKE 'local_infile';
 1 row in set (0.00 sec)
 ```
 
-Nu kan jag köra mitt kommando med LOAD DATA INFILE.
+Nu har du gjort inställningar så att både terminalklienten och servern tillåter dig att köra kommandot LOAD DATA LOCAL INFILE.
+
+
+
+Kör LOAD DATA LOCAL INFILE {#go}
+----------------------------------
+
+Så här långt bör du ha skapat en sql-fil som ser ut ungefär så här.
+
+```sql
+--
+-- Delete tables, in order, depending on
+-- foreign key constraints. 
+--
+DELETE FROM kurstillfalle;
+DELETE FROM kurs;
+
+--
+-- Enable LOAD DATA LOCAL INFILE on the server.
+--
+SET GLOBAL local_infile = 1;
+SHOW VARIABLES LIKE 'local_infile';
+
+--
+-- Insert into kurs.
+--
+LOAD DATA LOCAL INFILE 'kurs.csv'
+INTO TABLE kurs
+CHARSET utf8
+FIELDS
+	TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+	TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+SELECT * FROM kurs;
+
+--
+-- Insert into kurstillfalle.
+--
+
+-- Add SQL to LOAD DATA LOCAL INFILE for the table
+-- kurstillfalle
+
+SELECT * FROM kurstillfalle;
+```
+
+Nu kan du köra filen i terminalklienten.
+
+```text
+mysql -uuser skolan < filens_namn.sql
+```
 
 Man får vara uppmärksam på eventuella varningar man kan få när filens innehåll och fält inte kan mappas in i tabellen. Men det bör gå bra för dig. Får du problem så kollar du hur du skapade tabellen kurs och ser om innehållet i CSV-filen mappar mot den strukturen, dubbelkolla till exempel längden på kolumnen och längden på texten i csv-filen.
+
+När det fungerar så kan du gå vidare och göra samma LOAD för tabellen kurstillfalle.
+
+
+
+### Rättigheter för att sätta globala variabler {#globvar}
+
+Det kan hända att du får problem med rättigheter, det kan vara din user-användare som inte har tillräckligt med rättigheter i databasen.
+
+> "ERROR 1227 (42000) at line 11: Access denied; you need (at least one of) the SUPER or SYSTEM_VARIABLES_ADMIN privilege(s) for this operation"
+
+Om du får problem med rättigheter så kan du antingen använda din root-användare, eller så tilldelar du din användare lite extra behörighet. I kursen kan det vara lite enklare om din user-användare har aningen mer rättigheter.
+
+Låt oss därför ge user-användare lite mer rättigheter.
+
+```sql
+GRANT ALL PRIVILEGES
+ON *.*
+TO 'user'@'%'
+;
+```
+
+Du kan spara undan koden ovan i din `setup.sql` så att den alltid körs när du skapar om din databas.
 
 
 
@@ -208,7 +286,26 @@ Om du får varningar så kan du visa dem med `SHOW WARNINGS`.
 
 
 
+Workbench {#fixworkbench}
+----------------------------------
+
+Detta stycket är överkurs.
+
+Vi använder inte Workbench i detta exemplet, men här finns lite information om LOAD DATA LOCAL INFILE i Workbench.
+
+När du gör LOAD DATA LOCAL INFILE i Workbench så får du troligen ett fel som säger att funktionen är disablad.
+
+> "Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides"
+
+Man kan göra LOAD DATA LOCAL INFILE i Workbench, men det verkar finnas någon form av [bugg som gör det aningen svårare i Workbench version 8.0](f/64484), tidigare versioner av Worbench fungerar dock bra.
+
+Om du verkligen vill dyka ner i hur du kan lösa det med Workbench så kan du börja läsa i forumtråden ovan. Men vi klarar oss ypperligt med terminalklienten i detta fallet.
+
+
+
 Kontrollera filen {#filen}
 ----------------------------------
 
 Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser, i en och samma sekvens, i filen du jobbar i.
+
+Din fil skall tömma tabellerna kurs och kurstillfalle och sedan ladda om deras innehåll med LOAD DATA LOCAL INFILE från filerna `{kurs,kurstillfalle}.csv`.
