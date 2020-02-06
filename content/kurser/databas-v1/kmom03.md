@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image02.jpg?w=1100&h=300&cf&a=0,0,16,0&f=grayscale"
 author: mos
 revision:
+    "2020-02-07": "(E, mos) Uppdaterat från 20h till 40h."
     "2019-02-08": "(D, mos) Flyttade vissa läsanvisningar om ER modellering till kmom04."
     "2019-01-31": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
@@ -35,14 +36,14 @@ När vi är klara har vi även byggt en menydriven terminalklient som pratar med
 
 
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
 Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 10-15 studietimmar)*
 
 
 ### Databasteknik {#dbteknik}
@@ -96,7 +97,7 @@ Gjort modelleringsövning i sal med draw.io: https://goo.gl/vNRvKt
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 20-25 studietimmar)*
 
 
 
