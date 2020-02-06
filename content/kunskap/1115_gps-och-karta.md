@@ -30,7 +30,7 @@ Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår
 ```bash
 # stå i me/kmom06/gps
 cordova create . se.dbwebb.gps GPS
-npm install --save mithril@2.0.0-rc.4
+npm install --save mithril
 npm install --save-dev webpack webpack-cli
 touch webpack.config.js
 ```

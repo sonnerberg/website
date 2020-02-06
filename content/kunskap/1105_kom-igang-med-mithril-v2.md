@@ -53,7 +53,7 @@ Vi ska nu installera mithril och webpack via npm och gör det med följande komm
 Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
 
 ```bash
-$ npm install --save mithril@2.0.0-rc.4
+$ npm install --save mithril
 $ npm install --save-dev webpack webpack-cli
 ```
 
@@ -70,15 +70,12 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mithril": "^2.0.0-rc.4"
-  },
-  "devDependencies": {
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "mithril": "^2.0.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
 ```

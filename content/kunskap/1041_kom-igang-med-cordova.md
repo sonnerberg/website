@@ -237,7 +237,7 @@ Hello World exemplet som följer med när vi skapar appar med `cordova create` k
 ```bash
 # Stå i me/kmom05/hello
 npm install --save-dev webpack webpack-cli
-npm install --save mithril@2.0.0-rc.4
+npm install --save mithril
 ```
 
 Vi vill nu konfigurera webpack så den kompilerar JavaScript filerna och lägger den kompilerade filen i `www/dist/app.js`. Vi använder därför `path` i `webpack.config.js` för att definiera en annan sökvägen till den kompilerade filen än standard sökvägen. Skapa först filen `webpack.config.js` och lägg in följande konfiguration.
