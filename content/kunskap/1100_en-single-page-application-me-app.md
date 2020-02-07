@@ -556,7 +556,15 @@ För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`.
 </body>
 ```
 
-De statiska kodvalideringen som körs med kommandot `dbwebb validate` tittar bara på en fil i taget. Därför känner validatorn inte till de andra filerna som vi importerade i `ìndex.html`. För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] [annat_variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade .
+De statiska kodvalideringen som körs med kommandot `dbwebb validate` tittar bara på en fil i taget. Därför känner validatorn inte till de andra filerna som vi importerade i `ìndex.html`. För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] [annat_variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade.
+
+
+
+Redovisningstext från markdown {#markdown}
+--------------------------------------
+
+Vissa upplever att det inte är helt lätt att skriva redovisningstexter med hjälp av `innerHTML` eller `appendChild`. I detta stycket ska vi titta på hur man kan använda markdown för att skriva sina redovisningstexter. Markdown filerna laddas sedan in med `fetch` eller `XMLHttpRequest` och renderas med en markdown-modul. Först lägger vi till markdown-modulen med hjälp av ett Content Delivery Network (CDN). Ett CDN är ett nätverk av servrar som 
+
 
 
 
