@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2020-02-07": (D, aar) La till Bubbel sort kod.
     "2019-03-01": (C, aar) Tog bort merge sort kod.
     "2018-02-01": (B, aar) Updated for v2.
     "2017-02-08": (A, lew) First version.
@@ -46,6 +47,17 @@ Bubble sort är en av de enklaste sorteringsalgoritmerna, både att implementera
 4. Upprepa steg 1-3. Då borde det näst högsta värdet vara näst sist i listan. Fortsätt upprepa steg 1-3 tills listan är sorterad.
 
 Bubble sort går att implementera utan rekursion. Oftast används istället en nästad for-loop. Det går även bra med en while- och en for-loop.
+
+```python
+def bubble_sort(items):
+    """ Bubble sort """
+    for i in range(len(items)):
+        for j in range(len(items)-1-i):
+            if items[j] > items[j+1]:
+                items[j], items[j+1] = items[j+1], items[j] # Byt plats
+
+    return items
+```
 
 [Bubble sort dance](https://www.youtube.com/watch?v=Iv3vgjM8Pv4)
 
