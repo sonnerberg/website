@@ -563,8 +563,13 @@ De statiska kodvalideringen som körs med kommandot `dbwebb validate` tittar bar
 Redovisningstext från markdown {#markdown}
 --------------------------------------
 
-Vissa upplever att det inte är helt lätt att skriva redovisningstexter med hjälp av `innerHTML` eller `appendChild`. I detta stycket ska vi titta på hur man kan använda markdown för att skriva sina redovisningstexter. Markdown filerna laddas sedan in med `fetch` eller `XMLHttpRequest` och renderas med en markdown-modul. Först lägger vi till markdown-modulen med hjälp av ett Content Delivery Network (CDN). Ett CDN är ett nätverk av servrar som 
+Vissa upplever att det inte är helt lätt att skriva redovisningstexter med hjälp av `innerHTML` eller `appendChild`. I detta stycket ska vi titta på hur man kan använda markdown för att skriva sina redovisningstexter. Markdown filerna laddas sedan in med `fetch` eller `XMLHttpRequest` och renderas med en markdown-modul. Först lägger vi till markdown-modulen med hjälp av ett Content Delivery Network (CDN). Ett CDN är ett nätverk av servrar som skickar statiska filer till klienter över hela världen. [Dokumentation för modulen](https://github.com/markdown-it/markdown-it) är bra att ha till hands när vi fortsätter utvecklingen.
 
+```html
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
+```
+
+Modulen `markdown-it` läggs till på `window` objektet och vi kommer åt det via `window.markdownit()`.
 
 
 
