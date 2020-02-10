@@ -233,7 +233,7 @@ SELECT * FROM kurstillfalle;
 Nu kan du köra filen i terminalklienten.
 
 ```text
-mysql -uuser skolan < filens_namn.sql
+mysql -uuser -ppass skolan < filens_namn.sql
 ```
 
 Man får vara uppmärksam på eventuella varningar man kan få när filens innehåll och fält inte kan mappas in i tabellen. Men det bör gå bra för dig. Får du problem så kollar du hur du skapade tabellen kurs och ser om innehållet i CSV-filen mappar mot den strukturen, dubbelkolla till exempel längden på kolumnen och längden på texten i csv-filen.
