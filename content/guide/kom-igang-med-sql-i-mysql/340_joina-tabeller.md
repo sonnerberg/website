@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-02-17": "(E, mos) Förtydligande om hur sista tabellen skulle formatteras."
     "2019-02-08": "(D, mos) Länk till forumtråd för mer tips om join med kurser och ålder."
     "2019-02-07": "(C, mos) Förtydligande om uppgift med kurser och ålder."
     "2019-01-29": "(B, mos) Genomgången och bytte namn på vyn."
@@ -240,7 +241,7 @@ Du har deras planering där du ser vilka kurser de är ansvariga för. Du vet hu
 
 Kan du nu joina, sortera och på något sätt begränsa så att du kan få fram följande rapport?
 
-Det bör se ut så här när du svarar, gör en exakt likadan rapport.
+Det bör se ut så här när du svarar, gör en motsvarande rapport som är sorterad på samma sätt och innehåller motsvarande rader.
 
 ```sql
 +------------------------------------+---------------------+-------+
@@ -249,9 +250,9 @@ Det bör se ut så här när du svarar, gör en exakt likadan rapport.
 | Försvar mot svartkonster (SVT201)  | Alastor Moody (ala) |    75 |
 | Försvar mot svartkonster (SVT202)  | Alastor Moody (ala) |    75 |
 | Kvastflygning (KVA101)             | Madam Hooch (hoc)   |    70 |
-| Trolldryckslära (DRY102)           | Severus Snape (sna) |    67 |
 | Försvar mot svartkonster (SVT401)  | Severus Snape (sna) |    67 |
 | Trolldryckslära (DRY101)           | Severus Snape (sna) |    67 |
+| Trolldryckslära (DRY102)           | Severus Snape (sna) |    67 |
 +------------------------------------+---------------------+-------+
 6 rows in set (0.00 sec)
 ```
