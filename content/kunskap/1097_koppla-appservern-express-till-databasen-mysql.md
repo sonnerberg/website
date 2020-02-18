@@ -6,6 +6,7 @@ category:
     - express
     - kursen databas
 revision:
+    "2020-02-18": "(C, mos) Stavning, omformulering i stycke om route."
     "2019-02-08": "(B, mos) Genomgången fokus mot kursen databas."
     "2018-01-09": "(A, mos) Första utgåvan."
 ...
@@ -269,7 +270,7 @@ Nu kan vi avkommentera koden i router-filen och börja använda modulen.
 
 ### Använd modulen i routen {#dbinroute}
 
-För att minnas de delar i routen som är viktiga i sammanhanget så kikar vi på dem. Det är tre rader kod.
+Låt oss kika på de delar i routen som är viktiga. Det är tre rader kod.
 
 ```javascript
 const bank = require("../src/bank.js");
@@ -280,7 +281,11 @@ router.get("/balance", async (req, res) => {
 });
 ```
 
-Den första raden importerar modulen, den andra raden visar att routens hanterar är `async` och man man använda `await` inuti den. Den sista raden gör själva anropet till modulens funktion som returnerar ett resultset.
+Den första raden importerar modulen.
+
+Den andra raden visar att routens hanterare, dess callback, är `async` och man man använda `await` inuti den.
+
+Den sista raden genomför själva anropet till modulens funktion som returnerar ett resultset.
 
 Hur ser det då ut i vyn?
 
