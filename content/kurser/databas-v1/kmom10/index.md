@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2020-02-19": "(H, mos) Lade till tentor för 2020."
     "2019-06-04": "(G, mos) Lade till övningstenta bibliotek."
     "2019-05-10": "(F, mos) Inför omtenta och länk till övningstenta säpo."
     "2019-03-08": "(E, mos) Krav till eshop3."
@@ -60,13 +61,13 @@ Med en godkänd tentamen kan du nå ett slutbetyg om E-C.
 
 Följande tentamen är planerade ([se även den rekommenderade studieplanen](./../#studieplan)).
 
-* Tenta (kmom10/try1): Torsdagen den 28:e mars, 2019.
-* Omtenta (kmom10/try2): Fredagen den 31:e maj, 2019.
-* Resttenta (kmom10/try3): Fredagen den 30:e augusti, 2019.
+* Tenta (kmom10/try1): Torsdagen den 26:e mars, 2020.
+* Omtenta (kmom10/try2): Fredagen den 29:e maj, 2020.
+* Resttenta (kmom10/try3): Fredagen den 28:e augusti, 2020.
 
 För campus mellan 9-14 i sal H430/H429. För distans 9-24. Ingen anmälan krävs.
 
-Nästkommande tillfällen sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2020.
+Nästkommande tillfällen sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2021.
 
 Du kan även se planeringen för dessa tentamen via `dbwebb exam ls`.
 
@@ -98,6 +99,7 @@ Det finns ingen garanti för att nya tentamen kommer att följa exakt samma uppl
 
 Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
 
+* [Pingis](./tentamen/pingis)
 * [Bibliotek](./tentamen/bibliotek)
 * [Säkerhetspolisens (SÄPO)](./tentamen/sapo)
 
