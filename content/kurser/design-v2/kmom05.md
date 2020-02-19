@@ -167,7 +167,7 @@ Följande verktygstips gäller bildhantering. Kika över lista och se vilka som 
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet)". Du skall skriva en rapport, ensilt eller i grupp.
+1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet)". Du skall skriva en rapport, enskilt eller i grupp.
 
 1. Gör uppgiften "[Tema och blogg med stöd för bilder](uppgift/tema-och-blogg-med-stod-for-bilder)". Du skall bygga en blogg med temat "Dagens bild" och på det sättet visa upp att du behärskar bildhanteringen med Cimage, shortcode FIGURE och LESS-modulen desinax/figure som stylar figure-elementet.
 

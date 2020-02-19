@@ -99,11 +99,12 @@ Det finns ingen garanti för att nya tentamen kommer att följa exakt samma uppl
 
 Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
 
-* [Pingis](./tentamen/pingis)
-* [Bibliotek](./tentamen/bibliotek)
-* [Säkerhetspolisens (SÄPO)](./tentamen/sapo)
+* 2019
+    * [Pingis](./tentamen/pingis)
+    * [Bibliotek](./tentamen/bibliotek)
+    * [Säkerhetspolisens (SÄPO)](./tentamen/sapo)
 
-Här följer en del äldre tentor, men dock relevanta som övningstentor. Observera att poängfördelningen är olika för nedan tentor.
+Här följer en del äldre tentor från 2017-18. De är relevanta som övningstentor, även om de delvis skiljer sig i det upplägg som används från 2019 och framåt. Observera att poängfördelningen är olika för nedan tentor.
 
 * [En japansk smakresa, 31 augusti 2018](./tentamen/en-japansk-smakresa)
 * [Det stora slaget om tårtan, 31 maj 2018](./tentamen/det-stora-slaget-om-tartan)
