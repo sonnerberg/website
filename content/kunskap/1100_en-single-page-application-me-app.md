@@ -350,10 +350,11 @@ Nu har vi en fin meny, men än så länge är det, det enda den är. För att un
     var showMenu = function (selected) {
         navigation.innerHTML = "";
 
-        var navElements = [{name: "Me", class: "home", nav: showHome},
-                            {name: "Om", class: "free_breakfast", nav: showAbout},
-                            {name: "Github", class: "folder", nav: showGithub},
-                            {name: "Redovisning", class: "people", nav: showPresentation}];
+        var navElements = [
+            {name: "Me", class: "home", nav: showHome},
+            {name: "Om", class: "free_breakfast", nav: showAbout},
+            {name: "Github", class: "folder", nav: showGithub}
+        ];
 
         navElements.forEach(function (element) {
             var navElement = document.createElement("a");
@@ -550,26 +551,71 @@ För att kunna använda dessa nya JavaScript filer inkluderas de i `index.html`.
     <script type="text/javascript" src="menu.js"></script>
     <script type="text/javascript" src="home.js"></script>
     <script type="text/javascript" src="about.js"></script>
-    <script type="text/javascript" src="presentation.js"></script>
     <script type="text/javascript" src="github.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>
 ```
 
-De statiska kodvalideringen som körs med kommandot `dbwebb validate` tittar bara på en fil i taget. Därför känner validatorn inte till de andra filerna som vi importerade i `ìndex.html`. För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] [annat_variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade.
+
+
+### Statisk kodvalidering {#validate}
+
+Den statiska kodvalideringen som körs med kommandot `dbwebb validate` tittar bara på en fil i taget. Därför känner validatorn inte till de andra filerna som vi importerade i `ìndex.html`. För att undvika valideringsfel när vi bryter ut vyerna till egna moduler kan man använda `/* global [variabel_namn] [annat_variabel_namn] */` längst upp i filen för de variabler man vill ska vara fördefinierade.
 
 
 
 Redovisningstext från markdown {#markdown}
 --------------------------------------
 
-Vissa upplever att det inte är helt lätt att skriva redovisningstexter med hjälp av `innerHTML` eller `appendChild`. I detta stycket ska vi titta på hur man kan använda markdown för att skriva sina redovisningstexter. Markdown filerna laddas sedan in med `fetch` eller `XMLHttpRequest` och renderas med en markdown-modul. Först lägger vi till markdown-modulen med hjälp av ett Content Delivery Network (CDN). Ett CDN är ett nätverk av servrar som skickar statiska filer till klienter över hela världen. [Dokumentation för modulen](https://github.com/markdown-it/markdown-it) är bra att ha till hands när vi fortsätter utvecklingen.
+Vissa upplever att det inte är helt lätt att skriva redovisningstexter med hjälp av `innerHTML` eller `appendChild`. I detta stycket ska vi titta på hur man kan använda markdown för att skriva sina redovisningstexter. Det är inget krav att skriva texterna i markdown, men kan underlätta och vi får i detta stycke möjlighet för att repetera ovanstående kunskap.
 
-```html
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
+Markdown har använts i kursen [design](kurser/design-v2) innan och [dokumentation](https://daringfireball.net/projects/markdown/) av formatet kan vara bra att ha bredvid sig när man skriver. Markdown är lättlästa strukturerade text filer som på ett enkelt sätt kan konverteras till HTML.
+
+Vi börjar med att skapa en fil `report.js` där vi vill visa redovisningstexter. Denna filen kan utgå från liknande filer till exempel `github.js`. Jag skapar dessutom en katalog `markdown` där jag lägger en enkel markdown fil `kmom01.md` enligt nedan.
+
+```markdown
+# kmom01
+
+__Är du sedan tidigare bekant med utveckling av mobila appar?__
+
+__Vilket är den viktigaste lärdomen du gjort om typografi för mobila enheter?__
+
+__Du har i kursmomentet hämtat data från två stycken API. Hur kändes detta?__
+
+__Vilken är din TIL för detta kmom?__
 ```
 
-Modulen `markdown-it` läggs till på `window` objektet och vi kommer åt det via `window.markdownit()`.
+I detta exempel kommer vi ladda markdown-filerna med `fetch` eller `XMLHttpRequest` och sedan rendera som HTML med en markdown-modul. Först lägger vi till markdown-modulen med hjälp av ett Content Delivery Network (CDN). Ett CDN är ett nätverk av servrar som skickar statiska filer till klienter över hela världen. [Dokumentation för modulen](https://github.com/markdown-it/markdown-it) är bra att ha till hands när vi fortsätter utvecklingen.
+
+```html
+<body>
+    <div id="root"></div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="about.js"></script>
+    <script type="text/javascript" src="github.js"></script>
+    <script type="text/javascript" src="report.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+```
+
+När vi laddar in modulen `markdown-it` läggs modulen till på `window` objektet och vi kommer åt det via `window.markdownit()`. Vi vill alltså först hämta in markdown filen, jag använder `fetch` i detta exempel, och sedan rendera HTML med hjälp av `window.markdownit()`.
+
+```javascript
+var md = window.markdownit();
+
+fetch("markdown/kmom01.md")
+.then(function(response) {
+    return response.text();
+})
+.then(function(result) {
+    mainContainer.innerHTML = md.render(result);
+});
+```
+
+Vi hämtar den lokala filen genom att ange en relativ sökväg till filen. Vi gör sedan om `response` objektet till text och använder modulen `window.markdownit()` för att rendera HTML.
 
 
 
