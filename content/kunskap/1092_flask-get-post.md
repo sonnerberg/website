@@ -491,6 +491,7 @@ def company():
     """ Company route """
 
     if request.method == "POST":
+        handler.read_session(session)
         handler.add_employee(request.form)
         handler.write_session(session)
         
@@ -499,7 +500,7 @@ def company():
 ...
 ```
 
-Vi ser till att alltid läsa från session när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till session efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa.
+Vi ser till att alltid läsa från session när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till session efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från session innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till.
 
 Vi har en liten sak kvar, vi har inget sätt att tömma session om vi vill glömma allt vi har lagt till. Det löser vi genom att lägga till en route där vi bara tömmer session och redirect:ar till index.html
 
