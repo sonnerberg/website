@@ -47,7 +47,7 @@ cd kmom05/sort
 
 1. Lägg till ett menyval i `main.py` som sorterar listan med din rekursiva insertion sort.
 
-1. Lägg till minst två tester för din Bubble sort i `test.py`. 
+1. Lägg till minst två tester för din rekursiva insertion sort i `test.py`.
 
 ```bash
 # Ställ dig i kurskatalogen
