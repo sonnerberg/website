@@ -508,11 +508,13 @@ Vi har en liten sak kvar, vi har inget sätt att tömma session om vi vill glöm
 @app.route("/reset")
 def reset():
     """ Route for reset session """
+    handler.people = []
+    handler.add_predefined_employees()
     _ = [session.pop(key) for key in list(session.keys())]
     return redirect(url_for('main'))
 ```
 
-Nu kan ni lägga till `/reset` i slutet av url:en för att tömma session, om man är lat kan man även lägga till en länk i `header.html` som går dit. Notera att om ni testar sidan lokalt med session så är tabellen ibland cachad och då visas tabellen med gammal data efter `/reset`. För att vara säker på att session fungerar testa på studentservern.
+Nu kan ni lägga till `/reset` i slutet av url:en för att tömma session, om man är lat kan man även lägga till en länk i `header.html` som går dit.
 
 
 
