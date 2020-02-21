@@ -22,3 +22,7 @@ Baserat på Connys mall och diskussionen i forumet så gjorde jag följande två
 Det är viktigt att de två försättssidorna följer mallen, resterande sidor kan du egentligen skriva som du vill, men säkerställ med din handledare att strukturen känns rätt.
 
 Det finns en forumtråd som diskuterar "[Skriva exjobb i Word, LaTeX, Markdown, annat?](t/7172)".
+
+I kursrepot finns mallar för [LaTeX](https://github.com/dbwebb-se/exjobb/tree/master/example/latex) och [Markdown](https://github.com/dbwebb-se/exjobb/tree/master/example/template).
+
+[YOUTUBE src=QnKYh0-Zh0g width=630 caption="Emil visar hur man kan importera i Overleaf."]
