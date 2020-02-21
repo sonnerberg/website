@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2020-02-21": (D, aar) Added optional dictionary material.
     "2019-02-22": (C, aar) Changed to be about Binary Search Tree.
     "2018-02-12": (B, aar) First version v2.
     "2017-11-10": (PB1, mos) Utkast till v2.
@@ -19,13 +20,7 @@ Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla p�
 
 [FIGURE src=/image/oopython/kmom06/bst.svg caption="Ett binärt sökträd."]
 
-
-[WARNING]	
- **Kursutveckling pågår**	
- Kursen ges våren 2020 läsperiod 3.
-
-
-[/WARNING]
+Det finns två valfria delar i detta kmom som är en repetition av Dictionaries från den första Python kursen. Detta är för att vi kan implementera Binary Search Tree både med listor eller Dictionaries. Tidigare år har det framkommit att många inte känner sig säkra på Dictionaries och därför valde alla att använda listor. Därför har jag lagt till material så man kan friska upp sitt minne av dictionaries, vilket förhoppningsvis gör att ni kan välja den metod som ni tycker verkar bäst/lättast och inte bara välja listor för att ni inte kommer ihåg dictionaries. 
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -47,7 +42,9 @@ Inget att läsa.
 
 ###Artiklar {#artiklar}
 
-Inget att läsa.
+1. Läs vilka [fördelar som finns med BST över hash tables](https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table/).
+
+1. Läs om de olika [fördelarna med som finns för olika datastrukturer](http://careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/).
 
 
 
@@ -56,6 +53,7 @@ Inget att läsa.
 Titta på följande:
 
 1. Kolla på de video som börjar med [kmom06 i spellistan](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_PJCiQrnRxGtrfSFRBLvap).
+
 
 
 ###Lästips {#lastips}
@@ -67,6 +65,7 @@ Titta på följande:
 1. [Python debugger i atom](https://atom.io/packages/python-debugger). Installera Pythons debugger i atom så du kan stega igenom koden i atom istället för i terminalen. (Har inte testat den än. Om du testar skriv i redovisningstexten om den funkade bra).
 
 
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
@@ -76,7 +75,9 @@ Titta på följande:
 
 ###Övningar {#ovningar}
 
-Gör övningen [Träd datastrukturer](kunskap/trad-datastruktur).
+1. Valfritt, friska upp minnet av dictionaries med övningen [Dictionaries och tuple i Python](kunskap/dictionaries-och-tupler-i-python).
+
+1. Gör övningen [Träd datastrukturer](kunskap/trad-datastruktur).
 
 
 
@@ -84,12 +85,15 @@ Gör övningen [Träd datastrukturer](kunskap/trad-datastruktur).
 
 Dessa uppgifter skall utföras och redovisas.
 
+1. Valfritt, gör labben "[Dictionaries i Python](uppgift/python-med-dictionaries-i-oopython)"
+
 1. Gör uppgiften "[Skapa ett Binary Search Tree](uppgift/binary-search-tree)"
 
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb publish flask
 ```
+
 
 
 ###Extra {#extra}

@@ -133,7 +133,7 @@ Vi lägger bara in högre nycklar och får då inga noder till vänster. Trädet
 
 Kolla på [CS50 Data structures](https://www.youtube.com/watch?v=pA-8eBZvN1E&t=3473s) från tidsstämpeln fram till 01:14:26, för en snabb förklaring av träd och Binary Search Tree och jobba sen igenom slides:en i [VisuAlgo Binary Search Tree](https://visualgo.net/en/bst?slide=1), fram till och med "kapitell" 13.
 
-Läsa sen om de olika sätten man kan [travesera noder i ett träd](https://en.wikipedia.org/wiki/Tree_traversal).
+Läs sen om de olika sätten man kan [travesera noder i ett träd](https://en.wikipedia.org/wiki/Tree_traversal).
 
 Avslutningsvis {#avslutning}
 ------------------------------
