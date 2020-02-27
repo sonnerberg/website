@@ -138,7 +138,6 @@ Läs sen om de olika sätten man kan [travesera noder i ett träd](https://en.wi
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Nu har vi kollat på ytterligare en sort av datastrukturer, träd, mer specifikt Heap och Binary Search Tree. Det finns en till vanlig typ som vi inte hinner ta upp i kursen och det är [Hash tables](https://en.wikipedia.org/wiki/Hash_table), vilket är den snabbaste datastrukturen för key/value data.
+Nu har vi kollat på ytterligare en sort av datastrukturer, träd, mer specifikt Heap och Binary Search Tree. Det finns en till vanlig typ av datastruktur,  [Hash tables](https://en.wikipedia.org/wiki/Hash_table), vilket är den snabbaste datastrukturen för key/value data.
 
-https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/
-https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
+Ni kan läsa följande två länkar [Find k-th smallest element in BST (Order Statistics in BST)](https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/) och [A program to check if a binary tree is BST or not]https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/ om ni är intresserade.
