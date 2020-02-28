@@ -35,14 +35,14 @@ Projektidé och upplägg {#upplagg}
 
 Du ska utveckla ett rättstavningsprogram till terminalen som använder en [Trie](https://www.youtube.com/watch?v=-urNrIAQnNo) för att lagra en ordlista.
 
-Börja med att kopiera filer med engelska rättstavade ord från exempel mappen.
+Börja med att kopiera filer med rättstavade engelska ord från exempel mappen.
 ```bash
 # Stå i kursrepo mappen
 cp example/dictionary/*.txt me/kmom10/spellchecker
 cd me/kmom10/SpellChecker
 ```
 
-Du kopierade fyra filer precis, alla har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade engelska ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. De andra två filerna är för krav 5.
+Du kopierade fyra filer, alla har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. Frequency filerna är för krav 5.
 
 Innan du börjar med programmeringen ska du göra en analys av programmet du ska bygga och dokumentera det med klassdiagram.
 
@@ -75,8 +75,8 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 Skriv din kod i katalogen `me/kmom10/spellchecker`. Filen som startar programmet skall heta `spellchecker.py` och ska innehålla klassen SpellChecker.
 
-Implementera en Trie datastruktur, i filen `trie.py`, som använder Node objekt, `node.py`. Varje Node objekt behöver innehålla vilken bokstav noden representerar, en dictionary eller lista som ska hålla barn noderna och en boolean för att markera om det är en slut nod. Om du gör krav fyra ska du använda dictionary, annars kan du välja själv.
-I Trie:en ska det gå att lägga till nya ord, kolla om ett ord finns i datastrukturen och få ut alla ord baserat på ett prefix.
+Implementera en Trie datastruktur, i filen `trie.py`, som använder Node objekt, `node.py`. Varje Node objekt behöver innehålla vilken bokstav noden representerar, en dictionary eller lista som ska hålla barn noderna och en boolean för att markera om det är en slut nod. Om du gör krav fyra måste du använda dictionary, annars kan du välja själv mellan dictionary och lista.
+I Trie:n ska det gå att lägga till nya ord, kolla om ett ord finns i datastrukturen och få ut alla ord baserat på ett prefix.
 
 När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser in en fil med rättstavade engelska ord (välj själv vilken fil som ska läsas upp vid start). Lägg in alla orden i ett Trie objekt. Starta sen ett klassiskt while-loop terminal program (Marvin meny). Följande menyval ska finnas:
 
@@ -90,7 +90,7 @@ När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser
 
 1. Exit
 
-I SpellChecker klassen, lägg inte all kod i while-loopen, dela upp koden i metoder. T.ex. en metod/menyval åtminstonde.
+I SpellChecker klassen, lägg inte all kod i while-loopen, dela upp koden i metoder. T.ex. en metod/menyval åtminstone.
 
 
 
