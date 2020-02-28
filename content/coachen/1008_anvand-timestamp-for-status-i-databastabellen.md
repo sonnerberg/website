@@ -146,7 +146,7 @@ mysql> SELECT
 Aktivera användaren (activated) {#activate}
 -----------------------------------
 
-Säg att vi har användare som är aktiverade och inte aktiverade. Kanske beror aktiveringen av att användaren skall verifiera att dens epostadress är korrekt eller så är användarna förskapade och de blir inte aktiva förrän första gången som användaren loggar in på systemet. Kanske vill man också ha möjligheten att städa bort användare och göra dem inaktiva om de inte anvädner systemet under en längre tid, eller kankse missbrukat systemet så de blivit avstängda.
+Säg att vi har användare som är aktiverade och inte aktiverade. Kanske beror aktiveringen av att användaren skall verifiera att dens epostadress är korrekt eller så är användarna förskapade och de blir inte aktiva förrän första gången som användaren loggar in på systemet. Kanske vill man också ha möjligheten att städa bort användare och göra dem inaktiva om de inte använder systemet under en längre tid, eller kanske missbrukat systemet så de blivit avstängda.
 
 Det finns alltså flera anledningar till varför man vill ha möjligheten att påverka om användaren är aktiverad eller inte.
 
@@ -228,7 +228,7 @@ mysql> SELECT
 Radera användaren (deleted) {#deleted}
 -----------------------------------
 
-På liknande sätt som vi använder `activated` så kan vi använda `deleted` till att åstakomma en _soft delete_ av en användare. Vi vill radera användaren, men inte med DELETE, så vi sätter en tidsstämpel som säger att användaren är raderad per aktuell tidsstämpel.
+På liknande sätt som vi använder `activated` så kan vi använda `deleted` till att åstadkomma en _soft delete_ av en användare. Vi vill radera användaren, men inte med DELETE, så vi sätter en tidsstämpel som säger att användaren är raderad per aktuell tidsstämpel.
 
 Ibland vill man att databasen skall behålla sin historik. Säg att det är ett forum där användaren har gjort en massa inlägg men vill radera sitt konto. Här ställer man sig frågan om man då verkligen vill radera användaren rent fysiskt från databasen med `DELETE`, eller om man bara vill betrakta användaren som raderad.
 
