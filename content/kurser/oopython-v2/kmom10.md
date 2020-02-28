@@ -1,24 +1,18 @@
 ---
 author: aar
 revision:
+    "2020-02-28": (C, aar) La till i krav att ta bort ord och skriva ut i bokstavsordning.
     "2019-02-29": (B, aar) Bytt projekt för att passa till algoritmer och datastrukturer. Förra projektet finns under [kmom10-2018](oopython-v2/kmom10-2018).
     "2018-02-21": (A, aar) Först utgåva till V2.
 ...
 Kmom10: Projekt och examination
 ==================================
 
-
-[WARNING]	
- **Kursutveckling pågår**	
- Kursen ges våren 2020 läsperiod 3.
-
-
-[/WARNING]
-
-
 [INFO]
-**Gör `dbwebb update` och `dbwebb init` innan du börjar med projektet.**
+**Gör `dbwebb update` innan du börjar med projektet.**
 [/INFO]
+
+
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -80,13 +74,15 @@ I Trie:n ska det gå att lägga till nya ord, kolla om ett ord finns i datastruk
 
 När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser in en fil med rättstavade engelska ord (välj själv vilken fil som ska läsas upp vid start). Lägg in alla orden i ett Trie objekt. Starta sen ett klassiskt while-loop terminal program (Marvin meny). Följande menyval ska finnas:
 
-1. Ta ett ord som input och kolla om det finns i ordlistan (Trie objektet).
+1. Ta ett ord som input och kolla om det finns i ordlistan (Trie objektet). Om ordet inte finns lyft felet SearchMiss, ni behöver också skapa det Exception själva. Det ska inte krasha programmet! Fånga felet i meny koden.
 
-1. En prefix sökning, användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. Du kan begränsa utskriften av ord till max 10 åt gången. Se video ovan för exempel.
+1. En prefix sökning (auto-complete), användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. Du kan begränsa utskriften av ord till max 10 åt gången. Se video ovan för exempel.
 
 1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från den nya filen.
 
-1. Skriv ut alla ord som finns i ordlistan.
+1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. PS! Tänk på att studentservern kör Python3.5 den har inte sorterade dictionaries, vilket nya versioner har. Om ni spara barn noderna i dictionaries måste ni se till att sortera dem när ni ska skriva ut i bokstavsordning. Ett till tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden. 
+
+1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska SearchMiss lyftas som error. Det ska inte krasha programmet!
 
 1. Exit
 
@@ -114,8 +110,7 @@ Spara som `classdiagrams.png`. Ladda upp filen på Canvas inlämningsuppgiften.
 
 Skriv enhetstester för dina klasser. Spara testerna i filen `test.py`.
 
-Minst tre tester för varje klass. Testa inte bara positiva utfall, testa även när saker går fel.
-I dina enhetstester ska du ha en TestCase klass för varje klass du testar. Alltså lägg inte alla tester i en och samma TestCase klass.
+Minst 6 tester för Trie klassen. Testa inte bara positiva utfall, försök även göra så att något går fel och testa hur det hanteras. Ni behöver också testa att SearchMiss exception:et lyfts.
 
 
 
@@ -132,7 +127,7 @@ dbwebb publish kmom10
 
 För menyval 4 sortera alla orden innan de skrivs ut. Implementera en [Merge Sort](kunskap/sorteringsalgoritmer-v2#merge-sort) algoritm som metod i SpellChecker klassen. Hämta ut alla ord från Trie objektet, lägg dem i en lista, sortera listan med Merge sort och skriv ut listan.
 <!-- (https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)-->
-Om du gör detta kravet ska du använda en dictionary för att hålla barn noderna i Node klassen.
+Om du gör detta kravet ska du använda en dictionary för att hålla barn noderna i Node klassen. Lägg till tester för din merge sort.
 
 
 
