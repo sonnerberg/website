@@ -123,6 +123,7 @@ CREATE FUNCTION grade(
     score INTEGER
 )
 RETURNS INTEGER
+DETERMINISTIC
 BEGIN
     RETURN score;
 END
@@ -264,7 +265,7 @@ Så här ser Stures betygstabell ut numer, en kombination mellan betygen A-F och
 | FX  | -     | 54-   | KOMPLETTERA – mer arbete krävs innan betyg kan sättas. |
 | F   | U     | 50-   | OTILLRÄCKLIGT – (avsevärt) mer arbete krävs. |
 
-SSture löser det med en ny funktion som ger betyg enligt skalan U, 3-5.
+Sture löser det med en ny funktion som ger betyg enligt skalan U, 3-5.
 
 ```sql
 --
@@ -277,6 +278,7 @@ CREATE FUNCTION grade2(
     score INTEGER
 )
 RETURNS CHAR(1)
+DETERMINISTIC
 BEGIN
     IF score >= 90 THEN
         RETURN '5';
