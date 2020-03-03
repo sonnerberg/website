@@ -7,6 +7,7 @@ category:
     - express
     - kursen databas
 revision:
+    "2020-03-03": "(D, mos) Kommandot move även på terminalklienten."
     "2019-02-12": "(C, mos) Förtydliga hur konfigurationsfilen uppdateras."
     "2019-02-08": "(B, mos) Genomgången fokus mot kursen databas."
     "2018-01-09": "(A, mos) Första utgåvan."
@@ -112,9 +113,7 @@ Krav {#krav}
 
 1. I terminalprogrammet, skapa kommandot `move` som flyttar 1.5 pengar från Adam till Eva. TIPS: se första extrauppgiften nedan, det kan förenkla din implementation.
 
-<!--
-1. I terminalprogrammet, skapa kommandot `balance` som visar en översikt av de konton som finns och kontobehållningen. (UPPDATERA TILL 2020)
--->
+1. I terminalprogrammet, skapa kommandot `balance` som visar en översikt av de konton som finns och kontobehållningen.
 
 1. Validera din kod.
 
