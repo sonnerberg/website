@@ -131,11 +131,9 @@ Extrauppgift {#extra}
 
 Gör följande om du har tid och ro.
 
-1. Se till att skriva en funktion som flyttar pengarna och dela den mellan webbklienten och terminalklienten. Funkttionen kan ta parametrar för `fromAccount`, `toAccount` och `amount`. Då får du en god kodstruktur.
+1. Se till att skriva en funktion som flyttar pengarna och dela den mellan webbklienten och terminalklienten. Funktionen kan ta parametrar för `fromAccount`, `toAccount` och `amount`. Då får du en god kodstruktur.
 
-1. Lägg till kommandot `balance` i terminalen så att du kan se balansen på konton, på liknande sett man gör i webbklienten.
-
-1. Lägg till kommandot `move <amount>` i din terminalklient.
+1. Lägg till kommandot `move <amount>` i din terminalklient, eller gör det ännu mer flexibelt med `move <amount> <from> <to>`.
 
 1. Snygga till din webklient med CSS och se över så att navigeringen är smidig mellan sidorna.
 
