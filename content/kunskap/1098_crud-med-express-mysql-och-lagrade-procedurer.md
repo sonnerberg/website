@@ -147,7 +147,7 @@ Det ger en JSON representation av datat jag jobbar på. Det kan se ut så här.
 
 Vill jag inte se utskriften kan jag kommentera bort den, men konstruktionen är bra vid behov, speciellt vid utveckling och felsökning.
 
-Du kommenterar bort den via en brädgård `#`. Det är en kostruktion i EJS.
+Du kommenterar bort den via en brädgård `#`. Det är en konstruktion i EJS.
 
 ```html
 <pre><%#= JSON.stringify(res, null, 4) %></pre>
