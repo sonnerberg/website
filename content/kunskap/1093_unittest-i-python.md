@@ -58,7 +58,7 @@ Python kommer med en inbygg modul, ett ramverk kallat "unittest". Inspirationsk�
 
 ###Kom igång med ett enhetstest {#kom-igang-med-ett-enhetstest}
 
-Artiklen utgår från filerna som vi hittar i [exempelmappen](https://github.com/dbwebb-se/oopython/tree/master/example/unittest). Där hittar vi klassen _Phone_ i `phone.py` och en tillhörande testfil, `test.py`. Det är testfilen som vi skriver våra enhetstester i. Testerna kör man med:
+Artiklen utgår från filerna som vi hittar i [exempelmappen](https://github.com/dbwebb-se/oopython/tree/master/example/unittest/phone). Där hittar vi klassen _Phone_ i `phone.py` och en tillhörande testfil, `test.py`. Det är testfilen som vi skriver våra enhetstester i. Testerna kör man med:
 
  ```python
  >>> python3 test.py
