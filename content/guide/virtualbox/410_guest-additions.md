@@ -6,7 +6,7 @@ revision:
 Guest Additions
 =======================
 
-Ibland vill man kopiera text mellan sin vanliga desktop och den virtuella maskinen man kör i VirtualBox. För det så krävs det ett "addon" från Guest Additions CD:n. Följande instruktioner skrivs i terminalen inuti Debian. När man skriver lösenord i terminalen ska det inte synas något. Dollartecknet ska inte skrivas, utan visar bara att det är terminalkommandon. Nu kör vi!
+Följande instruktioner skrivs i terminalen inuti Debian. När man skriver lösenord i terminalen ska det inte synas något. Dollartecknet ska inte skrivas, utan visar bara att det är terminalkommandon. Nu kör vi!
 <!-- Det är en inställning och det finns ett foruminlägg som visar "[Virtual Box och copy & paste till hostmaskinen](t/4063)". -->
 
 ```bash
@@ -62,5 +62,3 @@ Här är en video där jag gör stegen ovan:
 [YOUTUBE src=PQegEbDBSOU width=630 caption="Kenneth installerar Guest Additions."]
 
 Ibland kan det bli lite krångel. I videon ville inte Desktopen vara med och leka, men det räckte att starta om Debian. Notera att det även går att köra i fullskärm.
-
-Prova att göra den här installationen, det sparar lite tid när du behöver kopiera saker.

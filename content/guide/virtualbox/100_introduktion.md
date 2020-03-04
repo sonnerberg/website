@@ -9,9 +9,3 @@ Introduktion
 ==================================
 
 Syftet med denna guide är att ge en introduktion till virtualiseringstekniken VirtualBox.
-
-
-Förkunskaper {#forkunskaper}
------------------------------------
-
-Guiden förutsätter att du ...
