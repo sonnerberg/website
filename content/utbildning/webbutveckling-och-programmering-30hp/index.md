@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-03-09": "(G, aar) Inför HT20. Bytte ut linux mot oopython."
     "2018-06-29": "(F, mos) Inför HT18."
     "2017-06-08": "(E, mos) Ny strukur med antagningsomgångar."
     "2016-07-04": "(D mos) Genomgången inför ht16."
@@ -39,7 +40,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/linux-v2/block-kurser-kmom
+                                route: kurser/oopython-v2/block-kurser-kmom
                     column-4:
                         data:
                             meta:
@@ -69,9 +70,9 @@ Innehåll {#innehall}
 
 Du börjar med en grundkurs i programmering i Python för att komma i gång med tänket. Kursen har vissa inslag av webbutveckling men fokuserar på traditionell programmering. Därefter fortsätter du med programmering i JavaScript i en webbmiljö där du introduceras även i HTML och CSS samt webben som utvecklingsmiljö.
 
-Sedan breddar du dina kunskaper genom att studera operativsystemet Linux och dess olika delar och som sista kurs blir det utveckling av webbapplikationer till mobila enheter och läsplattor.
+Sedan breddar du dina kunskaper genom att studera en mer klassisk programmeringskurs, du lär dig objektorienterad programmering, datastrukturer och algoritmer. Du tittar även lite på webbramverk i Python. Som sista kurs blir det utveckling av webbapplikationer till mobila enheter och läsplattor.
 
-Alla kurser är praktiskt inriktade och varje kurs examineras med ett projekt.
+Alla kurser är praktiskt inriktade och varje kurs examineras med ett projekt. Förutom första kursen som avslutas med en digital programmeringstenta på distans.
 
 Efter kurspaketet har du breda och grundläggande kunskaper inom webbutveckling och programmering och du kan fortsätta att fördjupa dig inom området webbutvecklare och webbprogrammerare.
 
@@ -95,10 +96,10 @@ Kurspaketet består av fyra kurser, varje kurs är på 7.5hp och examineras sepa
 
 | Namn | Smeknamn | Poäng |
 |------|----------|-------|
-| Programmering och Problemlösning med Python | python      | 7.5hp |
-| Programmering med JavaScript                | javascript1 | 7.5hp |
-| Programmera webbtjänster i Linux            | linux       | 7.5hp |
-| Webbapplikationer för mobila enheter        | webapp      | 7.5hp |
+| Programmering och Problemlösning med Python               | python      | 7.5hp |
+| Programmering med JavaScript                              | javascript1 | 7.5hp |
+| Algoritmer och datastrukturer med objektorienterad Python | oopython    | 7.5hp |
+| Webbapplikationer för mobila enheter                      | webapp      | 7.5hp |
 
 Du går kurserna efter varandra, i den ordning som visas ovan. När du är klar med den första kursen så hoppar du på nästa.
 
