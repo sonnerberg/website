@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2020-03-10": (D, aar) La till i krav att spela in video som distans.
     "2020-02-28": (C, aar) La till i krav att ta bort ord och skriva ut i bokstavsordning.
     "2019-02-29": (B, aar) Bytt projekt för att passa till algoritmer och datastrukturer. Förra projektet finns under [kmom10-2018](oopython-v2/kmom10-2018).
     "2018-02-21": (A, aar) Först utgåva till V2.
@@ -162,9 +163,12 @@ Redovisning {#redovisning}
 
     3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
+1. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
 
-3\. Se till att samtliga kursmoment validerar.
+
+1. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i projektet. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
+
+1. Se till att samtliga kursmoment validerar.
 
 ```bash
 # Ställ dig i kurskatalogen
