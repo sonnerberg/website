@@ -139,6 +139,13 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 <!--
 1. Skapa en om-sida på `eshop/about` som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften.
+
+Skapa sida som visar alla kunder (likt produktöversikten) (eshop2 gör CRUD kunder).
+
+(ev extra) radera produkt med soft delete (kan återkomma i projektet)
+
+(ev extra) Klicka på kategori och se alla produkter som är av den kategorin?
+
 * -->
 
 
@@ -167,6 +174,8 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 1. Skapa kommandot `about` som visar namnen på de som jobbat (i grupp) för att lösa uppgiften.
 
 Ändra `inventory` till `inv`.
+
+Visa lista med de produkter som finns, inkl produktid.
 * -->
 
 
