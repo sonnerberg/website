@@ -146,6 +146,7 @@ Skapa sida som visar alla kunder (likt produktöversikten) (eshop2 gör CRUD kun
 
 (ev extra) Klicka på kategori och se alla produkter som är av den kategorin?
 
+KOMMENTAR "Mängden uppgifter var ganska stor"
 * -->
 
 

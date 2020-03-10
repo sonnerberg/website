@@ -9,6 +9,7 @@ author:
     - mos
     - lew
 revision:
+    "2020-03-10": "(F, mos) Förberedd med länk till streams vt20 youtube."
     "2019-03-13": "(E, mos) Uppdaterad till v5."
     "2018-03-23": "(D, mos) Lade till videoserie för kmom."
     "2018-03-19": "(C, mos) Uppdaterad till oophp v4."
@@ -110,7 +111,7 @@ Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort
 
 Det finns generellt kursmaterial i video form.
 
-1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
+1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams v20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_m6hfbskQSxXM70JhuOBhE)". Förra årets motsvarighet ligger på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
 
 1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
 
