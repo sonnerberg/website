@@ -3,14 +3,15 @@ author: lew
 revision:
     "2019-03-08": "(A, lew) Första versionen."
 ...
-Logga in med ssh  {#ssh}
+Logga in med ssh {#ssh}
 =======================
 
-Tanken är att du skall kunna logga in på din virtuella maskin från din egen desktop-miljö, via en terminal och ssh. Det finns flera sätt att göra det på och jag skall visa dig två av dem.
+Tanken är att du skall kunna logga in på din virtuella maskin från din egen desktop-miljö, via en terminal och ssh.
+<!-- Det finns flera sätt att göra det på och jag skall visa dig två av dem. -->
 
 
 
-### Alternativ 1: Nätverk via port forwarding {#pf}
+### Nätverk via port forwarding {#pf}
 
 Detta är det enklaste. Pröva det först. Det handlar om *port forwarding* där du mappar upp en port på din lokala maskin. När den porten får trafik så skickas trafiken vidare till den virtuella maskinen på en viss port. Man *forwardar* trafiken från en port till en annan port (och maskin).
 
@@ -42,7 +43,7 @@ Glöm inte att lösenordet du anger är för den virtuella maskinen.
 
 
 
-### Alternativ 2: Nätverk via delat nätverkskort {#bridge}
+<!-- ### Alternativ 2: Nätverk via delat nätverkskort {#bridge}
 
 Du kan dela nätverkskortet med *bridged network*, och den virtuella maskinen hämtar sin ip-adress via DHCP. Detta sätt ger den virtuella maskinen en egen ip-adress och den blir åtkomlig i hela ditt nätverk. Detta sättet är lite krångligare och fungerar det med port forward kan du hoppa över detta.
 
@@ -52,4 +53,4 @@ Jag har sammanställt ett foruminlägg som visar stegen du behöver göra för a
 
 Det är flera steg och det kan säkert krångla. Om det inte fungerar första gången så gör du om. Räkna med att få göra om och testa ett par gånger.
 
-Detta sättet kan krångla om du inte har koll på ditt lokala nätverk. Till exempel så misslyckas jag med denna lösning när jag är på skolans miljö då jag inte har full koll på hur DHCP är uppsatt. Så, om du är osäker så använder du lösningen med port forwarding istället.
+Detta sättet kan krångla om du inte har koll på ditt lokala nätverk. Till exempel så misslyckas jag med denna lösning när jag är på skolans miljö då jag inte har full koll på hur DHCP är uppsatt. Så, om du är osäker så använder du lösningen med port forwarding istället. -->
