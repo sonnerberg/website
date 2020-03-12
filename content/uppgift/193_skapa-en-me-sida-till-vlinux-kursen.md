@@ -1,17 +1,16 @@
 ---
-author: mos
+author: lew
 category:
     - webbprogrammering
-    - kursen linux
+    - kursen vlinux
 revision:
-    "2019-04-05": (C, lew) Uppdatering inför HT19
-    "2017-12-21": (B, mos) Kopierade upplägget från javascript1.
-    "2015-06-24": (A, mos) Första utgåvan i samband med kursen linux.
+    "2020-03-11": (B, lew) Uppdatering inför HT20
+    "2019-04-05": (A, lew) Uppdatering inför HT19
 ...
-Skapa en me-sida till linux-kursen
+Skapa en me-sida till vlinux-kursen
 ==================================
 
-Skapa en me-sida för redovisningar i kursen linux.
+Skapa en me-sida för redovisningar i kursen vlinux.
 
 <!--more-->
 
@@ -44,7 +43,7 @@ I din kurskatalog (repot) för kursen, skall du ta en kopia av exempelkatalogen 
 
 ```bash
 # Gå till kurskatalogen
-cp -ri example/redovisa me
+cp -ri example/redovisa me/
 ```
 
 1. Du har nu en grund för din me-sida i kursen. Modifiera den så den blir "din egen".

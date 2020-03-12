@@ -1,13 +1,10 @@
 ---
 author:
     - lew
-    - mos
 revision:
-    "2019-03-19": (E, lew) Inför HT19.
-    "2017-12-21": (D, mos) Eget dok labbmiljö, genomgången.
-    "2017-01-16": (C, mos) Länk till videoserie.
-    "2017-01-04": (B, mos) Förberedelse inför linux-v2.
-    "2015-06-23": (A, mos) Första utgåvan för kursen.
+    "2020-03-11": (B, lew) Inför HT20.
+    "2019-03-19": (A, lew) Inför HT19.
+
 ...
 Kmom01: Linux som server
 ==================================
@@ -106,7 +103,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Installera Debian som server](uppgift/installera-debian-som-server)".
 
-1. Gör uppgiften "[Skapa en me-sida till linux-kursen](uppgift/skapa-en-me-sida-till-linux-kursen)". Här fyller du på din redovisningstext efter varje kursmoment.
+1. Gör uppgiften "[Skapa en me-sida till linux-kursen](uppgift/skapa-en-me-sida-till-vlinux-kursen)". Här fyller du på din redovisningstext efter varje kursmoment.
 
 Dubbelkolla med [videon](https://youtu.be/6a_q5YojE0s) så du fått med alla delar.
 <!-- [YOUTUBE src=6a_q5YojE0s width=639 caption="Har du fått med alla delar?"] -->
