@@ -71,15 +71,17 @@ Titta på följande:
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/kom-igang-med-ssh/kom-igang-med-ssh-nycklar)".
+1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/unix-tools/kom-igang-med-ssh-nycklar)".
 
-1. Jobba igenom artikeln "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)".
+1. Jobba igenom guiden om "[tmux](guide/unix-tools/tmux)".
 
-1. Jobba igenom artikeln "[Installera webbplatser med Apache Name-based Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)".
+1. Jobba igenom guiden om "[rsync](guide/unix-tools/rsync)".
+
+1. Jobba igenom guiden om "[Apache Name-based Virtual Hosts](guide/unix-tools/apache)".
 
 
 
