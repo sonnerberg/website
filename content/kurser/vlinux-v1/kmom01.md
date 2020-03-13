@@ -91,9 +91,9 @@ Det finns videos kopplade till installationsanvisningarna.
 
 1. Som en del av labbmiljön har du redan [installerat Debian](guide/virtualbox/installera-os) i en VirtualBox. Det, tillsammans med installationen av VirtualBox är den stora biten i detta kursmomentet.
 
-1. Försök gärna installera [Guest Additions](guide/virtualbox/guest-additions). Det kommer underlätta arbetet framöver.
+1. Installera [Guest Additions](guide/virtualbox/guest-additions) om du inte gjorde det under labbmiljön. Det kommer underlätta arbetet framöver.
 
-1. Gör första delen i guiden "[Kom igång med SSH](guide/kom-igang-med-ssh/ssh)". SSH-nycklar tar vi i nästa kursmoment så det kan du vänta med.
+1. Gör första delen i guiden "[SSH](guide/unix-tools/ssh)". **SSH-nycklar tar vi i nästa kursmoment så det kan du vänta med.**
 
 
 
@@ -129,5 +129,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur känns det med Unix-kommandon på terminalen, är det udda eller bekvämt?
 * Valde du att köra standard med VirtualBox och Debian eller hur gjorde du?
 * Hur kändes det att jobba med VirtualBox och ser du fördelar med det arbetssättet?
-* Installerade du Guest Additions?
+* Hur gick det att installera Guest Additions?
 * Var det något som krånglade eller tog extra mycket tid?

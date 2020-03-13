@@ -6,10 +6,27 @@ revision:
 Installera rsync
 =======================
 
-För att installera programmet använder vi vår pakethanterare:
+Du kan installera rsync i Debian/Linux med `apt-get`.
 
-Linux: `$ sudo apt-get install rsync`  
+```bash
+$ sudo apt-get install rsync
+```
 
-Windows (Cygwin): `$ apt-cyg install rsync`  
+Om du har en Mac så använder du Brew.
 
-MacOS: `$ brew install rsync`
+```bash
+$ brew install rsync
+```
+
+Om du använder Windows/Cygwin så installerar du med `apt-cyg`.
+
+```bash
+$ apt-cyg install rsync
+```
+
+
+Kika snabbt på manualsidan för rsync.
+
+```bash
+$ man rsync
+```
