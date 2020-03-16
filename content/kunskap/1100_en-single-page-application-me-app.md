@@ -585,7 +585,7 @@ __Du har i kursmomentet hämtat data från två stycken API. Hur kändes detta?_
 __Vilken är din TIL för detta kmom?__
 ```
 
-I detta exempel kommer vi ladda markdown-filerna med `fetch` eller `XMLHttpRequest` och sedan rendera som HTML med en markdown-modul. Först lägger vi till markdown-modulen med hjälp av ett Content Delivery Network (CDN). Ett CDN är ett nätverk av servrar som skickar statiska filer till klienter över hela världen. [Dokumentation för modulen](https://github.com/markdown-it/markdown-it) är bra att ha till hands när vi fortsätter utvecklingen.
+I detta exempel kommer vi ladda markdown-filerna med `fetch` eller `XMLHttpRequest` och sedan rendera som HTML med en markdown-modul. Först lägger vi till markdown-modulen med hjälp av ett Content Delivery Network (CDN). Ett CDN är ett nätverk av servrar som skickar statiska filer till klienter över hela världen. [Dokumentation för modulen](https://github.com/markdown-it/markdown-it) är bra att ha till hands när vi fortsätter utvecklingen. **`fetch` fungerar bara via en webbserver så det går inte att öppna filen direkt i webbläsaren, men du kan ladda filen via din lokala webbserver.**
 
 ```html
 <body>
