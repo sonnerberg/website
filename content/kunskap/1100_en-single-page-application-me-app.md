@@ -601,21 +601,31 @@ I detta exempel kommer vi ladda markdown-filerna med `fetch` eller `XMLHttpReque
 </body>
 ```
 
-När vi laddar in modulen `markdown-it` läggs modulen till på `window` objektet och vi kommer åt det via `window.markdownit()`. Vi vill alltså först hämta in markdown filen, jag använder `fetch` i detta exempel, och sedan rendera HTML med hjälp av `window.markdownit()`.
+När vi laddar in modulen `markdown-it` läggs modulen till på `window` objektet och vi kommer åt det via `window.markdownit()`. Vi vill alltså först hämta in markdown filen, jag använder `fetch` i detta exempel, och sedan rendera HTML med hjälp av `window.markdownit()`. Vi hämtar den lokala filen genom att ange en relativ sökväg till filen. Vi gör sedan om `response` objektet till text och använder modulen `window.markdownit()` för att rendera HTML.
 
 ```javascript
 var md = window.markdownit();
 
-fetch("markdown/kmom01.md")
-.then(function(response) {
-    return response.text();
-})
-.then(function(result) {
-    mainContainer.innerHTML = md.render(result);
-});
-```
+var report = (function () {
+    var showReport = function () {
+        window.mainContainer.innerHTML = "";
 
-Vi hämtar den lokala filen genom att ange en relativ sökväg till filen. Vi gör sedan om `response` objektet till text och använder modulen `window.markdownit()` för att rendera HTML.
+        fetch("markdown/kmom01.md")
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(result) {
+                window.mainContainer.innerHTML = md.render(result);
+            });
+
+        menu.showMenu("people");
+    };
+
+    return {
+        showReport: showReport
+    };
+})(report);
+```
 
 
 
