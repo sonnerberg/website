@@ -5,7 +5,7 @@ author: lew
 revision:
     "2020-03-11": "(A, lew) Första versionen."
 ...
-Tmux
+Kom igång med tmux
 =======================
 
 [FIGURE src=/image/snapht15/tmux-create-windows.png?w=c5 class="right" caption="Tmux i en terminal."]

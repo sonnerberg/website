@@ -6,7 +6,7 @@ revision:
     "2020-03-11": "(A, lew) Första versionen."
 ...
 
-Apache
+Kom igång med Apache
 =======================
 
 [FIGURE src=/image/snapht15/vhosts.png?w=c5&a=0,50,50,0 class="right" caption="En virtuell host."]
