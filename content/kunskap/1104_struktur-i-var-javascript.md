@@ -163,7 +163,7 @@ Vi laddar om sidan och stora delar av vyn visas nu. Vi får dock fortfarande ett
 
 > ReferenceError: Can't find variable: menu
 
-På samma sätt som vi importerade och exporterade `/js/home.js` måste vi nu göra med `/js/menu.js` och resterande filer i lager appen. I `/js/home.js` lägger vi till `import { home } from "./home.js";` längst upp i filen. Vi ser samtidigt till att exportera `menu` i filen `/js/menu.js` som nu ser ut som följer. Notera hur de olika modulerna importeras längst upp i filen för att kunna anropa de olika modulerna för att visa sidorna.
+På samma sätt som vi importerade och exporterade `/js/home.js` måste vi nu göra med `/js/menu.js` och resterande filer i lager appen. I `/js/home.js` lägger vi till `import { menu } from "./menu.js";` längst upp i filen. Vi ser samtidigt till att exportera `menu` i filen `/js/menu.js` som nu ser ut som följer. Notera hur de olika modulerna importeras längst upp i filen för att kunna anropa de olika modulerna för att visa sidorna.
 
 ```javascript
 "use strict";
