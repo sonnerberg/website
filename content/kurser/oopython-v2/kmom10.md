@@ -81,9 +81,9 @@ När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser
 
 1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från den nya filen.
 
-1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. PS! Tänk på att studentservern kör Python3.5 den har inte sorterade dictionaries, vilket nya versioner har. Om ni spara barn noderna i dictionaries måste ni se till att sortera dem när ni ska skriva ut i bokstavsordning. Ett till tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden. 
+1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. PS! Tänk på att studentservern kör Python3.5 den har inte sorterade dictionaries, vilket nya versioner har. Om ni spara barn noderna i dictionaries måste ni se till att sortera dem när ni ska skriva ut i bokstavsordning. Ett till tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden.
 
-1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska SearchMiss lyftas som error. Det ska inte krasha programmet!
+1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska SearchMiss lyftas som error. Det ska inte krasha programmet! Det ärcker inte med att bara avmarkera noder när du tar bort ett ord. Om noderna i ordet inte används till ett annat ord ska du ta bort dem från datastrukturen.
 
 1. Exit
 
