@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2020-03-25": "(I, mos) Förtydligande om redovisningsvideo."
     "2020-02-19": "(H, mos) Lade till tentor för 2020."
     "2019-06-04": "(G, mos) Lade till övningstenta bibliotek."
     "2019-05-10": "(F, mos) Inför omtenta och länk till övningstenta säpo."
@@ -278,13 +279,13 @@ När du är klar med allt du avser lämna in, skriv då redovisningstexten enlig
 
     1. För varje projektkrav du implementerat, dvs 1-3, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
-    1. Du kan välja (optionellt) att spela in en redovisningsvideo som ett komplement till din redovisningstext och därmed underlätta rättningen av ditt projekt. I videon visar du tydligt vilka krav du löst och hur du löst dem.
+    1. Om du gjort projektet så skall du även spela in en redovisningsvideo som ett komplement till din redovisningstext och därmed underlätta rättningen av ditt projekt. I videon visar du tydligt vilka krav du löst och hur du löst dem.
 
     1. Skriv ett stycke om hur projektet gick att genomföra. Berätta om problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt som avslutning på kursen?
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen Canvas. Glöm inte länka till din me-sida. 
+1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen Canvas. Glöm inte länka till din me-sida.
 
 1. Publicera till studentservern och se till att samtliga kursmoment validerar.
 
