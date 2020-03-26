@@ -216,6 +216,8 @@ export { menu };
 Återanvända data {#caching}
 --------------------------------------
 
+**Nedanstående är ett exempel på hur man kan använda caching och hur man kan strukturera sin applikation. Det är inget krav att använda varken caching eller den nedanstående strukturen i uppgiften i detta kmom.** 
+
 Vid en del tillfällen är data tillgången för mobila enheter dålig, bristfällig eller till med helt saknad. Därför vill vi ibland försöka minska mängden förfrågningar till en backend och istället försöka återanvända den data vi redan har tillgänglig. Som ett exempel kan vi ta produktlistningen från uppgiften [Lager appen del 1](uppgift/lager-appen-del-1). Där hämtar vi alla produkter för listningen och den data kan vi återanvända sedan i produktvyn.
 
 Det finns ett exempelprogram i kursrepot i katalogen `example/lager_caching` och på [GitHub](https://github.com/dbwebb-se/webapp/tree/master/example/lager_caching). Följ gärna med i exempelprogrammet i följande stycken.
