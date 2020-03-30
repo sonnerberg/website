@@ -4,6 +4,7 @@ author:
   - efo
 category: webbprogrammering
 revision:
+  "2020-03-30": (C, efo) Uppdaterade för att passa kolada API:t istället.
   "2018-03-14": (B, efo) Native Postman istället för Chrome App.
   "2015-10-28": (A, mos) Första utgåvan inför kursen webapp.
 updated: "2015-10-28 08:19:23"
@@ -12,36 +13,24 @@ created: "2015-10-27 16:36:50"
 Utvecklingsverktyg för RESTful tjänster
 ==================================
 
-[FIGURE src=/image/snapht15/postman.png?w=c5&a=5,60,75,25 class="right"]
-
 När du utvecklar mot servrar som har ett RESTful API så underlättar det att ha ett par bra utvecklingsverktyg som hjälper dig att skicka requestarna till server och kanske även hjälper dig att visa och hantera svaren.
 
 <!--more-->
 
-Låt oss titta på tre varianter som hjälper dig att komma igång och undersöka en server som publicerat ett RESTful API. En variant till Chrome, En till Firefox och så en variant för kommandoraden med curl.
+Låt oss titta på tre varianter som hjälper dig att komma igång och undersöka en server som publicerat ett RESTful API: Postman, Curl och jQ.
 
 
 
 En RESTful tjänst att testa mot {#rest}
 -----------------------
 
-Först behöver vi en RESTful tjänst som vi kan använda för att testa mot. jag väljer Arbetsförmedlingens API som finns beskrivet på deras sida om "[Arbetsförmedlingens öppna data](http://www.arbetsformedlingen.se/psidata)".
+Först behöver vi en RESTful tjänst som vi kan använda för att testa mot. Jag väljer [Kolada API](https://www.kolada.se/), som är en tjänst för att jämföra kommuner och landsting.
 
-Där finns bland annat ett API för att hitta lediga jobb och det använder jag för att testa. informationen om hur jag använder API:et hittar jag i dokumentet "Teknisk beskrivning" som visar precis hur jag skall göra för att prata med API:et.
+Där finns bland annat ett API endpoint, en URL, för att hitta skolor i Sverige och i de olika kommunerna.
 
-Det jag använder är en länk som ger mig alla lediga jobb per län. Desutom behöver jag skicka med en del information i headern, men det hjälper mig verktygen med.
+Det jag använder är en länk som ger mig alla skolor i Karlskrona.
 
-Informationen som behövs för att testa verktygen är en basurl till API:et en metod att använda samt följande värde i HTTP-headern.
-
-| Vad             | Värde                                   |
-|-----------------|-----------------------------------------|
-| API             | http://api.arbetsformedlingen.se/af/v0/ |
-| Metod           | platsannonser/soklista/lan              |
-| Accept          | application/json                        |
-| Accept-language | sv                                      |
-| From            | Min emailadress                         |
-
-Detaljer om API:et finns som sagt att läsa om i dokumentet "Teknisk beskrivning", men detta hjälper dig att komma igång.
+Informationen som behövs för att testa verktygen är en basurl till API:et och en metod att använda.
 
 
 
@@ -51,7 +40,7 @@ Postman har tidigare varit en Chrome App, men är nu släppt som en native app. 
 
 Så här kan det se ut när jag gör en request med Postman.
 
-[FIGURE src=/image/snapht15/postman.png?w=w2 caption="En request mot AFs API med Postman."]
+[FIGURE src=/image/snapht15/postman.png?w=w2 caption="En request mot ett API med Postman."]
 
 Postman känns som ett potent verktyg med möjligheter att spara undan och synka arbetsytan.
 
@@ -75,28 +64,26 @@ REST Easy känns som en enklare lillebror till Postman, men ändock lika använd
 Curl på kommandoraden {#curl}
 -----------------------
 
-Verktyg är trevliga men ibland vill man ha tillgång till en enkel och snabb variant på kommandoraden. Låt oss se hur kommandot curl kan hantera det som Postman och REST Easy nu gjort.
+Verktyg är trevliga men ibland vill man ha tillgång till en enkel och snabb variant på kommandoraden. Låt oss se hur kommandot curl kan hantera det som Postman nu gjort.
 
-Först prövar vi bara att koppla upp oss mot tjänsten via länken.
-
-```bash
-$ curl http://api.arbetsformedlingen.se/af/v0/platsannonser/soklista/lan
-{"Error":{"statuskod":400,"titel":"Bad Request","beskrivning":"Felaktig headerparameter: [Accept-Language]"}}
-```
-
-Nej, det gick inte så bra. Jag behöver även skicka data i headern. Men det löser vi.
+Först prövar vi bara att koppla upp oss mot tjänsten för att hitta vilket ID Karlskrona har i Koladas API.
 
 ```bash
-$ curl --header "Accept-Language: sv"  http://api.arbetsformedlingen.se/af/v0/platsannonser/soklista/lan
-{"soklista":{"listnamn":"lan","totalt_antal_platsannonser":35565,"totalt_antal_ledigajobb":64845,"sokdata":[{"id"
-...
+$ curl http://api.kolada.se/v2/municipality?title=karlskrona
+{"count": 1, "values": [{"id": "1080", "title": "Karlskrona", "type": "K"}]}
 ```
 
-Nu gick det bättre. Jag behövde inte sätta alla värden i headern, uppenbarligen.
+Det gick ungefär som väntat. Vi ser att det finns en kommun (K) med id't 1080. Låt oss då använda ID't för att se vilka skolor som finns i Karlskrona kommun.
+
+```bash
+$ curl http://api.kolada.se/v2/ou?municipality=1080&title=skola
+{"count": 168, "values": [{"id": "V15E108000701", "municipality": "1080", "title": "Rödebyskolan F-9"}, {"id": "V15E108000801", "municipality": "1080", "title": "Nättraby kunskapscentrum 7-9"}, {"id": "V15E108000901", "municipality": "1080", "title": "Fridlevstadsskolan F-6"}, {"id": "V15E108000904", "municipality": "1080", "title": "Tvingskola F-6"}, {"id": "V15E108001101", "municipality": "1080", "title": "Spandelstorpskolan F-6"}, ...
+```
 
 
 
-###Curl i Bash-script {#bash}
+
+<!-- ###Curl i Bash-script {#bash}
 
 Om man gör detta många gånger så underlättar det att göra ett litet Bash-script. Här är en variant som jag döper till `af.bash`.
 
@@ -131,31 +118,49 @@ $ ./af.bash platsannonser/soklista/lan
       },
 ```
 
-Nu blir det enklare att se resultatet.
+Nu blir det enklare att se resultatet. -->
 
 
 
-###Sök i JSON data med jq {#jq}
+### Sök i JSON data med jq {#jq}
 
-En annan variant att formattera snyggt är programmet [jq](https://stedolan.github.io/jq/) som är en utility för att jobba med JSON data. Där kan jag få färgkodad utskrift vilket gör det än enklare att läsa innehållet i svaret. Med hjälp av `jq` kan man söka i JSON-svaret och enbart visa delar av svaret. Det kan vara behändigt när man söker efter viss information i större filer.
+En annan variant att formattera snyggt är programmet [jq](https://stedolan.github.io/jq/) som är en utility för att jobba med JSON data. Där kan jag få färgkodad utskrift vilket gör det än enklare att läsa innehållet i svaret. Med hjälp av `jq` kan man söka i JSON-svaret och enbart visa delar av svaret. Det kan vara behändigt när man söker efter viss information i större filer. Vi kommer jobba vidare med `jq` senare under kursen.
 
-Här är ett exempel där jag sparat undan svaret i en fil `a.json` och använder `jq` för att ställa frågor mot filens innehåll.
+Här är ett exempel där jag kombinerar curl och jq.
 
 ```bash
-$ jq '.soklista.totalt_antal_platsannonser' a.json
-35602
+$ curl -s "http://api.kolada.se/v2/ou?municipality=1080&title=skola" | jq "."
+{
+  "count": 30,
+  "values": [
+    {
+      "id": "V15E108000701",
+      "municipality": "1080",
+      "title": "Rödebyskolan F-9"
+    },
+    {
+      "id": "V15E108000901",
+      "municipality": "1080",
+      "title": "Fridlevstadsskolan F-6"
+    },
+    {
+      "id":"V15E108000904",
+      "municipality": "1080",
+      "title": "Tvingskola F-6"
+    },
+    {
+      "id": "V15E108001101",
+      "municipality": "1080",
+      "title": "Spandelstorpskolan F-6"
+    },
+    ...
 ```
 
-```bash
-Eller att plocka ut första svaret i svaret.
+Och med jq kan vi sedan plocka ut till exempel count
 
-$ jq '.soklista.sokdata[0]' a.json
-{
-  "id": 10,
-  "namn": "Blekinge län",
-  "antal_platsannonser": 405,
-  "antal_ledigajobb": 723
-}
+```bash
+$ curl -s "http://api.kolada.se/v2/ou?municipality=1080&title=skola" | jq ".count"
+30
 ```
 
 Som du ser så kan curl och jq vara alternativa verktyg att jobba mot RESTful tjänster. Att använda kommandoraden kan vara ett kraftfullt alternativ till de verktyg vi såg inledningvis.
