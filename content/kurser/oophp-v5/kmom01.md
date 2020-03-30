@@ -9,6 +9,7 @@ author:
     - mos
     - lew
 revision:
+    "2020-03-30": "(G, mos) Strukturerad med info om git/github och anax-moduler."
     "2020-03-10": "(F, mos) Förberedd med länk till streams vt20 youtube."
     "2019-03-13": "(E, mos) Uppdaterad till v5."
     "2018-03-23": "(D, mos) Lade till videoserie för kmom."
@@ -50,7 +51,7 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 2-4 studietimmar)*
 
-Labbmiljön är densamma som i design-kursen. Du behöver minst version 7.2 av PHP, både i webbservern och i terminalen.
+Labbmiljön är densamma som i design-kursen. Du behöver minst version 7.2 av PHP, både i webbservern och i terminalen. För tillfället är det PHP 7.3 och 7.4 som är [de aktiva releaserna](https://www.php.net/supported-versions.php), så någon av de rekommenderas om du har möjlighet att välja.
 
 Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
 
@@ -89,21 +90,46 @@ Kika igenom följande artiklar.
 
 1. Fräscha upp ditt minne av PHP genom att snabbt skumma igenom guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)". Du bör sedan tidigare (htmlphp) ha koll på det som nämns i guiden. Om du bygger exempelprogram för att testa och leka så kan du lägga dem i `me/kmom01/php20`.
 
-1. Bekanta dig snabbt och översiktligt med innehållet i PHP-manualen och stycket om [Klasser och Objekt](https://www.php.net/manual/en/language.oop5.php). Som vanligt är referensmanualen vår källa till information, så bli kompis med dess struktur och lär dig vilken typ av information du där kan hitta.
+1. Bekanta dig snabbt och översiktligt med innehållet i PHP-manualen och stycket om [Klasser och Objekt](https://www.php.net/manual/en/language.oop5.php). Som vanligt är referensmanualen vår källa till information, så bli kompis med dess struktur och lär dig vilken typ av information du där kan hitta. Vill du lära dig mycket om det som kursen handlar om så är detta stycket i manualen ytterst lämpligt att läsa igenom som helhet.
 
 1. Bekanta dig översiktligt med dokumentet [PHP The Right Way](http://www.phptherightway.com/). Det är skrivet av PHP communityn och ger en översikt över PHP som språk och de verktyg och processer man normalt arbetar med. Vi kommer att återkomma till dokumentet under kursens gång. Du kan se dokumentet som en innehållsförteckning till vad en god PHP-programmerare bör ha koll på.
 
 
 
-### Ramverk Anax {#anax}
+### Git & GitHub {#git}
 
-Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort och översiktligt.
+I kursen jobbar vi med Git och GitHub som du lärde dig om i design-kursen. Git är ett versionshanteringssystem för kod och GitHub är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster. I design-kursen föreslogs följande resurser för den som vill fördjupa sig i Git och GitHub. Annar kan du bara låta det vara som referens vid behov.
 
-1. Som bas använder vi ramverket Anax och dess moduler, tillsammans med ett antal andra moduler. [Källkoden för Anax finner du på GitHub](https://github.com/canax). Grunden för redovisa-sidan är [repot anax-oophp-me](https://github.com/canax/anax-oophp-me).
+* [Dokumentation på Gits hemsida](https://git-scm.com/doc)
+* [Guider för GitHub](https://guides.github.com/)
+
+
+
+### PHP kodstandard {#validering}
+
+Följande gäller för kodstandard och valideringsverktyg.
 
 1. Vi skriver PHP enligt kodstandarden [PSR-1: Basic Coding Standard](http://www.php-fig.org/psr/psr-1/) och [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/). Dessa är standardiserade av PHP communityn och standardiseringen hanteras av organisationen [PHP-FIG](https://www.php-fig.org/) vars syfte är att standardisera komponenter så att de går att använda mellan olika ramverk.
 
 1. Vi använder valideringsverktygen [phpcs](https://github.com/squizlabs/PHP_CodeSniffer/wiki) och [phpmd](https://phpmd.org/). Det går att installera dem som linters i Atom och se valideringsfelen direkt i texteditorn.
+
+
+
+### Ramverk Anax {#anax}
+
+Vi kommer att senare i kursen skriva kod i ramverket Anax vars struktur är jämförbar med PHP-ramverk likt Symfony, Laravel, Phalcon och Yii.
+
+* [Källkoden för Anax](https://github.com/canax) finner du på GitHub.
+
+Sådana här ramverk är ofta uppdelade i moduler. Här följer ett par av de kodmoduler som ingår i Anax. Du kan jämföra dem med de begrepp du lärt dig i ramverket Express.js i databas-kursen. Du behöver inte kika på modulerna i detalj nu, Vi tar det lite längre fram. De "badges" som visas är mått på kodmodulens kodtäckning och kodkvalitet.
+
+* [![Code Coverage](https://scrutinizer-ci.com/g/canax/commons/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/commons/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/commons/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/commons/?branch=master) [anax/commons](https://github.com/canax/commons)
+* [![Code Coverage](https://scrutinizer-ci.com/g/canax/controller/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/controller/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/controller/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/controller/?branch=master) [anax/controller](https://github.com/canax/controller)
+* [![Code Coverage](https://scrutinizer-ci.com/g/canax/request/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/request/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/request/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/request/?branch=master) [anax/request](https://github.com/canax/request)
+* [![Code Coverage](https://scrutinizer-ci.com/g/canax/response/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/response/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/response/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/response/?branch=master) [anax/response](https://github.com/canax/response)
+* [![Code Coverage](https://scrutinizer-ci.com/g/canax/router/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/router/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [anax/router](https://github.com/canax/router)
+* [![Code Coverage](https://scrutinizer-ci.com/g/canax/session/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/session/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/session/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/session/?branch=master) [anax/session](https://github.com/canax/session)
+* [![Code Coverage](https://scrutinizer-ci.com/g/canax/view/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/view/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/view/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/view/?branch=master) [anax/view](https://github.com/canax/view)
 
 
 
@@ -153,8 +179,8 @@ Se till att följande frågor besvaras i texten:
 * Hur gick det att komma in i PHP och programmering med objekt och klasser?
 * Hur det gick det att utföra uppgiften "Gissa numret"?
 * Vilken taktik valde du för att lagra spelet i sessionen?
-* Gick det bra att komma igång med Git och GitHub (du gjorde samma i kursen design)?
-* Har du några inledande reflektioner kring me-sidan och dess struktur?
+* Gick det bra att komma igång med Git och GitHub, du gjorde ungefär samma i design-kursen?
+* Har du några inledande reflektioner kring me-sidan och dess struktur, känner du igen dig från design-kursen?
 * Vilken är din TIL för detta kmom?
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
