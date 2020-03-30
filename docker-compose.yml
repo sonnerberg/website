@@ -9,6 +9,12 @@ services:
         volumes:
             - .:/app
             - ./config/docker/dbwebb.se.conf:/etc/apache2/sites-enabled/000-default.conf
+    cli:
+        #image: anax/dev:latest-apache
+        #image: anax/dev:php74-apache
+        image: anax/dev:php73-cli
+        volumes:
+            - .:/home/anax/repo
     php70:
         <<: *website
         image: anax/dev:php70-apache
