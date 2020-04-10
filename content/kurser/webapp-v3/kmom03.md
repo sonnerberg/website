@@ -54,7 +54,7 @@ Läs följande:
 
 ###Video  {#video}
 
-I nedanstående videoserie använder Emil sig av mithril versionen `mithril@2.0.0-rc.4`. Det var en såkallad [_release candidate_](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) av mithril 2.0.0. Senaste versionen av mithril är nu mithril 2.0.4 och vi kan installera med kommandot `npm install mithril --save`. Den stora ändringen från _release candidate_ som användes 2019 är hur man skapar länkar. I videon '305b Länkar i mithril 2.0.4' visar Emil hur man skapar länkar i mithril 2.0.4.
+I nedanstående videoserie använder Emil sig av mithril versionen `mithril@2.0.0-rc.4`. Det var en såkallad [_release candidate_](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) av mithril 2.0.0. Senaste versionen av mithril är nu mithril 2.0.4 och vi kan installera med kommandot `npm install mithril --save`. Den stora ändringen från _release candidate_ som användes 2019 är hur man skapar länkar. I videon '[305b Länkar i mithril 2.0.4](https://youtu.be/rMWngW5IgaY)' visar Emil hur man skapar länkar i mithril 2.0.4.
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 3.
 
