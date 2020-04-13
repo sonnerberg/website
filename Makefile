@@ -97,6 +97,22 @@ warm-cache:
 
 
 
+# target: install-cache-anax      - Install the local anax cache directory.
+.PHONY: install-cache-anax
+install-cache-anax:
+	@$(call HELPTEXT,$@)
+	-bash -c "install -d -m 777 cache/{cimage,anax}"
+
+
+
+# target: clean-cache-anax        - Clean the local anax cache directory.
+.PHONY: clean-cache-anax
+clean-cache-anax:
+	@$(call HELPTEXT,$@)
+	-rm -f cache/anax/*
+
+
+
 # target: update                  - Update codebase (no submodules) and publish by clearing the cache.
 .PHONY: update
 update: codebase-update site-build local-publish-clear warm-cache
@@ -130,14 +146,6 @@ local-publish:
 	# Make soma parts writable
 	# https://dbwebb.se/repo/htmlphp/example/pdo-sqlite/
 	if [ -d $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/ ]; then chmod 777 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/; chmod 666 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/*; fi
-
-
-
-# target: clean-cache-anax        - Clean the local anax cache directory.
-.PHONY: clean-cache-anax
-clean-cache-anax:
-	@$(call HELPTEXT,$@)
-	-rm -f cache/anax/*
 
 
 

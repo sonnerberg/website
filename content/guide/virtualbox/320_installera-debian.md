@@ -11,7 +11,9 @@ Sätt upp en virtuell maskin i VirtualBox för Debian {#init}
 
 Nu skapar vi en virtuell maskin i VirtualBox där vi kan installera Debian.
 
-[YOUTUBE src=UgVdcrXVojA width=630 caption="Kenneth skapar en virtuell maskin (VM) i VirtualBox."]
+[INFO]Notera att jag ökar storleken på den virtuella hårddisken. Det är viktigt att den ökas till 25-30Gb.[/INFO]
+
+[YOUTUBE src=02EXUbLy248 width=630 caption="Kenneth skapar en virtuell maskin (VM) i VirtualBox."]
 
 I mitt fall kunde jag installera 64-bitars OS så jag valde den image som hette *amd64*. Om jag bara kunde installera 32-bitars OS så hade jag valt imagen för *i386*.
 
