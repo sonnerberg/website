@@ -59,7 +59,7 @@ I fönstret som kommer upp kan du välja vilken Android version du vill utveckla
 
 [FIGURE src=/image/webapp/screenshot-android-studio-sdk-platforms.png caption="Android Studio SDK Manager."]
 
-Gå sen till SDK Tools i SDK managern och bocka i 'Android SDK Command-line Tools (latest)', tryck sedan Apply för att installera rätt SDK. Godkänna License Agreement och låt Android Studio Installera SDK:n.
+Gå sen till SDK Tools i SDK managern och bocka i `Android SDK Command-line Tools (latest)`, tryck sedan Apply för att installera rätt SDK. Godkänna License Agreement och låt Android Studio Installera SDK:n.
 
 Kopiera värdet för `Android SDK Location` för nästa steg.
 
@@ -79,6 +79,8 @@ Nästa steg är att lägga till undermappar i ANDROID_HOME i din PATH.
 
 [FIGURE src=/image/webapp/screenshot-android-home-paths.png caption="ANDROID_HOME undermappar i PATH."]
 
+Nu ska Cordova klara av att hitta allt det behöver för att bygga Android appar.
+
 
 
 Installera en virtuell enhet {#avd}
@@ -88,8 +90,6 @@ Starta ett nytt Android Studio project från startfönstret i Android Studio. Kl
 [FIGURE src=/image/webapp/screenshot-android-studio-gradle.png caption="Android Studio byggverktygen."]
 
 I nedanstående video visas hur man skapar en virtuell enhet, som vi sedan kan använda för att köra vår HelloWorld Cordova app i. Du kan under installationen få frågan om du vill installera Intel HAXM, gör detta då det snabba upp Emulatorn avsevärt.
-
-Se till att göra samma val som Emil gör i videon nedan. Välj alltså API 26 (Oreo) när du ombeds välja API för din virtuella enhet.
 
 [YOUTUBE src=KWAsnLTClzo caption="Emil skapar en virtuell Android enhet."]
 
