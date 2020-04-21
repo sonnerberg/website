@@ -123,9 +123,9 @@ Redirect /htmlphp/lektionsplan /kurser/htmlphp/lektionsplan
 Redirect /kurser/htmlphp/lektionsplan		https://docs.google.com/spreadsheets/d/1VxuFjmhGakKyE4kwKqpLNr6VGvLRgNnVeU3dyQTvVUI/edit?usp=sharing
 
 # python
-Redirect /python/studieplan /kurser/python/studieplan
-Redirect /kurser/python/studieplan         https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
-Redirect /kurser/python/lektionsplan https://docs.google.com/spreadsheets/d/1zFmphWE90vxLCFEhH60QEZ4I8p8pq3-XKWBLLQguOXM/edit?usp=sharing
+#Redirect /python/studieplan /kurser/python/studieplan
+#Redirect /kurser/python/studieplan         https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
+#Redirect /kurser/python/lektionsplan https://docs.google.com/spreadsheets/d/1zFmphWE90vxLCFEhH60QEZ4I8p8pq3-XKWBLLQguOXM/edit?usp=sharing
 
 # phpmvc
 Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGxWWmZwUE9oNGdiRDlFUDdaNzFPN1E
@@ -172,7 +172,9 @@ Redirect /javascript/kmom06/forelasning.pdf     https://dl.dropbox.com/u/2431521
 #
 
 # python
-Redirect /python            /kurser/python
+Redirect /python                        /kurser/python
+Redirect /kurser/python/studieplan      https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
+Redirect /kurser/python/lektionsplan    https://docs.google.com/spreadsheets/d/1zFmphWE90vxLCFEhH60QEZ4I8p8pq3-XKWBLLQguOXM/edit?usp=sharing
 
 
 # htmlphp
