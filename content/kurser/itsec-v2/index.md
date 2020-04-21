@@ -1,15 +1,17 @@
 ---
-title: itsec-v1
+title: itsec-v2
 author:
     - atb
     - mbo
     - mos
     - lew
+    - nik
 revision:
+    "2020-04-21": "(C, nik) Ny version inför HT20."
     "2019-02-04": "(B, mos) Uppdaterad med information från kursplan."
     "2018-12-04": "(A, mos) Kursen inrättas med namn och syfte."
 ...
-Kursen itsec (v1)
+Kursen itsec (v2)
 ==================================
 
 Kursen **Informationssäkerhet med webbtillämpningar**, a.k.a. *itsec*, lär ut generella grunder och principer inom området informationssäkerhet och hur det appliceras specifikt mot området webb.
@@ -21,7 +23,7 @@ Kursen **Informationssäkerhet med webbtillämpningar**, a.k.a. *itsec*, lär ut
 
 **Kursutveckling pågår**
 
-Kursstart hösten 2019.
+Kursstart hösten 2020.
 
 [/WARNING]
 
