@@ -93,7 +93,9 @@ Det finns videos kopplade till installationsanvisningarna.
 
 1. Installera [Guest Additions](guide/virtualbox/guest-additions) om du inte gjorde det under labbmiljön. Det kommer underlätta arbetet framöver.
 
-1. Gör första delen i guiden "[SSH](guide/unix-tools/ssh)". **SSH-nycklar tar vi i nästa kursmoment så det kan du vänta med.**
+1. I kursen kommer vi använda en guide ["unix-tools"](guide/unix-tools). För detta kursmoment gör du delen [Kom igång med SSH](guide/unix-tools/ssh).  
+
+[INFO]SSH-nycklar tar vi i nästa kursmoment så det kan du vänta med.[/INFO]
 
 
 
