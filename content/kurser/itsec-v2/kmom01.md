@@ -18,7 +18,7 @@ Kursmomentet ger en översiktlig orientering i området informationssäkerhet vi
 
 **Kursutveckling pågår**
 
-Kursen planeras ge hösten 2019.
+Kursen planeras ge hösten 2020.
 
 [/WARNING]
 

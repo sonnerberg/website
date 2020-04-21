@@ -17,7 +17,7 @@ Kursmomentet ger en introduktion till konceptet privacy genom att förklara cent
 
 **Kursutveckling pågår**
 
-Kursen planeras ge hösten 2019.
+Kursen planeras ge hösten 2020.
 
 [/WARNING]
 

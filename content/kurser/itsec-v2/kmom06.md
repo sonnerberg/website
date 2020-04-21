@@ -17,7 +17,7 @@ Mjukvarutest ökar kvaliteten i den mjukvara som skrivs, men hur fungerar det me
 
 **Kursutveckling pågår**
 
-Kursen planeras ge hösten 2019.
+Kursen planeras ge hösten 2020.
 
 [/WARNING]
 

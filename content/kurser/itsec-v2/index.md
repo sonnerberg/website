@@ -110,25 +110,25 @@ Kursmomentet ger en introduktion till konceptet privacy genom att förklara cent
 
 
 
-### Kmom03: Sårbarhetsanalys {#kmom03}
+### Kmom03: Attacker {#kmom03}
 
-Risk- och sårbarhetsanalysmomentet omfattar en introduktion till olika metoder för att modellera applikationers beteende, metoder för att genomföra sårbarhetsanalyser och attackscenarier. Vidare introduceras även riskanalys och riskhantering för att sätta sårbarheter i kontext.
+Det finns ett antal attacker som kan räknas som vanliga när man pratar om webbsäkerhet. I detta kursmomentet går vi igenom vanliga attacker och hur man kan skydda sig mot dem: XSS, session hijacking, redirect problem, directory traversal, etc.
 
 [Instruktion till kursmoment 03](./kmom03).
 
 
 
-### Kmom04: Skydda data {#kmom04}
+### Kmom04: Sårbarhetsanalys {#kmom04}
 
-Kursmomentet ger en övergripande introduktion till både symmetriska och asymmetriska krypteringsmetoder genom att på ett övergripande sätt förklara hur de fungerar. Vidare visas hur sådana krypteringsmetoder kan användas för att både skydda konfidentialiteten i data såväl som dess integritet. Dessutom kommer kryptografiska certifikat förklaras och hur de kan använda för att styrka identiteter i webbtjänster.
+Risk- och sårbarhetsanalysmomentet omfattar en introduktion till olika metoder för att modellera applikationers beteende, metoder för att genomföra sårbarhetsanalyser och attackscenarier. Vidare introduceras även riskanalys och riskhantering för att sätta sårbarheter i kontext.
 
 [Instruktion till kursmoment 04](./kmom04).
 
 
 
-### Kmom05: Attacker {#kmom05}
+### Kmom05: Skydda data {#kmom05}
 
-Det finns ett antal attacker som kan räknas som vanliga när man pratar om webbsäkerhet. I detta kursmomentet går vi igenom vanliga attacker och hur man kan skydda sig mot dem: XSS, session hijacking, redirect problem, directory traversal, etc.
+Kursmomentet ger en övergripande introduktion till både symmetriska och asymmetriska krypteringsmetoder genom att på ett övergripande sätt förklara hur de fungerar. Vidare visas hur sådana krypteringsmetoder kan användas för att både skydda konfidentialiteten i data såväl som dess integritet. Dessutom kommer kryptografiska certifikat förklaras och hur de kan använda för att styrka identiteter i webbtjänster.
 
 [Instruktion till kursmoment 05](./kmom05).
 
