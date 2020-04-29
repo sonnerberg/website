@@ -9,6 +9,7 @@ author:
     - mos
     - lew
 revision:
+    "2020-04-29": "(H, mos) Lade till not om PSR-12."
     "2020-03-30": "(G, mos) Strukturerad med info om git/github och anax-moduler."
     "2020-03-10": "(F, mos) Förberedd med länk till streams vt20 youtube."
     "2019-03-13": "(E, mos) Uppdaterad till v5."
