@@ -61,6 +61,12 @@ Exercises & Assignments {#ovningar_uppgifter}
 
 
 
+### Extra assignment {#extra_assignment}
+
+1. Read the [instructions](uppgift/unix-lab) and do the lab `jq`.
+
+
+
 Hand In {#resultat_redovisning}
 -----------------------------------------------
 

@@ -144,3 +144,27 @@ Additional files and folders:
 | `numbers.txt`      | text file for some of the tasks.   |
 | `quotes.txt`       | text file for some of the tasks.   |
 | `substitution.txt` | text file for some of the tasks.   |
+
+
+
+### Optional - Lab 4 (jq) {#lab4}
+
+Laboratory to practice searching in a JSON file. You will work with the tool *jq*. To your aid you have the guide ["install jq"](kunskap/install-jq).
+
+```bash
+$ dbwebb create jq
+```
+
+Enter your bash code within `$ ()` to execute and return the response, eg:
+
+```bash
+ANSWER=$( jq 'keys' tag-dbwebb.json )
+```
+
+Additional files and folders:
+
+| File                | Content                                                              |
+|--------------------|-----------------------------------------------------------------------|
+| `instruction.html` | Description of the lab and the tasks to be done.               |
+| `answer.bash`      | Here you should write your code to solve each task in the lab. |
+| `tag-dbwebb.json`          | text file for some of the tasks.                              |
