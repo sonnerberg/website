@@ -15,7 +15,7 @@ revision:
     "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
     "2014-06-23": (A, mos) Första revisionen inför kursstart HT2014.
 ...
-Kursen python (v2)
+Kursen python (v3)
 ==================================
 
 Kursen **Programmering och Problemlösning i Python**, a.k.a. *python*, lär ut grunderna i strukturerad programmering och problemlösning med programmeringsspråket Python.
@@ -298,12 +298,8 @@ Versioner av kursen {#versioner}
 
 Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
 
-Från och med vårterminen 2019 finns kursmaterialet i [oophp (v5)](kurser/oophp-v5).
+Från och med höstterminen 2020 finns kursmaterialet i [python (v3)](kurser/python-v3).
 
-Från och med vårterminen 2018 finns kursmaterialet i [oophp (v4)](kurser/oophp-v4).
+Från och med höstterminen 2018 finns kursmaterialet i [python (v2)](kurser/python-v2).
 
-Om du gick kursen under vårterminen 2017, så finns kursmaterialet i [oophp (v3)](kurser/oophp-v3).
-
-Om du gick kursen från hösten 2014 till och med vårterminen 2016, så finns kursmaterialet i [oophp (v2)](kurser/oophp-v2).
-
-Om du gick kursen tidigare, fram till och med vårterminen 2013, så finns kursmaterialet i [oophp (v1)](kurser/oophp-v1).
+Om du gick kursen tidigare, fram till och med höstterminen 2017, så finns kursmaterialet i [python (v1)](kurser/python-v1).
