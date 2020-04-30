@@ -63,7 +63,7 @@ Exercises & Assignments {#ovningar_uppgifter}
 
 ### Extra assignment {#extra_assignment}
 
-1. Read the [instructions](uppgift/unix-lab) and do the lab `jq`.
+1. Read the [instructions](uppgift/unix-lab) and do the lab `jq`. This lab is not graded.
 
 
 
@@ -88,10 +88,10 @@ Then on the education platform Canvas do a hand in for assignment 3 with a text 
 Your grade on this assignment and points towards the final grade is given based on the following criteria:
 
 | Grade | Final grade points | Assignments | Reflective answers | Extra assignments in labs |
-|-------|----------|------|------ |------|
-| A     | 20       | X    | X     | X
-| C     | 15       | X    | X  OR | X
-| E     | 10       | X    |       |
-| F     | 0        |      |       |
+|-------|--------------------|-------------|------------------- |---------------------------|
+| A     | 20                 | X           | X                  | X
+| C     | 15                 | X           | X  OR              | X
+| E     | 10                 | X           |                    |
+| F     | 0                  |             |                    |
 
 As a last text describe what you have done in this assignment and make an argument for the grade you deserve. The grading of your assignment will use this text as the starting point.
