@@ -133,7 +133,7 @@ Använd dina kunskaper om Cordova plugins från kursmoment 5 & 6 och pluginen [c
 
 När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling. Cordova pluginen [cordova-plugin-network-information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/) kan användas för att kolla status om internetuppkoppling
 
-Övningen [Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova) och exempel programmet `example/readFile` ([repo](https://github.com/dbwebb-se/webapp/tree/master/example/readFile)) hjälper en bit på vägen med att läsa från fil.
+Övningen [Filer i Cordova](kunskap/filer-i-cordova) och exempel programmet `example/file` ([repo](https://github.com/dbwebb-se/webapp/tree/master/example/file)) hjälper en bit på vägen.
 
 
 
