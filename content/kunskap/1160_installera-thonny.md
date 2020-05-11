@@ -28,7 +28,7 @@ Artikeln förutsätter att du har installerat Python och lagt till det i din PAT
 Installera Thonny {#installera}
 -------------------------------
 
-Thonny är simpelt att installera för alla operativsystem, gå till [Thonny](https://thonny.org/) och klicka uppe i högra hörnet på ditt operativsystem.
+Thonny är simpelt att installera för alla operativsystem, gå till [Thonny](https://thonny.org/), klicka uppe i högra hörnet på ditt operativsystem och följ deras instruktioner.
 
 
 
@@ -39,10 +39,6 @@ När du har installerat Thonny, starta det också ska vi fixa inställningar.
 
 Klicka på `view` och sen klicka i `Files`, `Shell` och `Variables`.
 
-Nästa steg är `Tools --> Options`. Klicka sen på Interpreter och välj `Alternativ Python 3 interpreter or cirtual environment` i dropdown menyn. I nästa dropdown väljer ni Python som ni installerade tidigare.
-
-[FIGURE src="/image/python/thonny-interpreter.png"]
-
-Om ni vill kan ni även gå in på `Editor` fliken och klicka i alla `Highlight ...`.
+Om ni vill kan ni även gå in på `Tools --> Options --> Editor` och klicka i alla `Highlight ...` alternativen.
 
 Nu är du redo att använda Thonny.
