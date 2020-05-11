@@ -7,7 +7,7 @@ category:
 revision:
     "2020-05-08": (A, aar) Första versionen.
 ...
-Installera Python i terminalen
+Installera Thonny
 ==================================
 
 [FIGURE src=/image/python/thonny.png?w=c3 class="right"]
