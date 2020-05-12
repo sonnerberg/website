@@ -1,14 +1,15 @@
 ---
 author: lew
 revision:
+    "2020-05-12": "(B, lew) Andra versionen."
     "2019-03-08": "(A, lew) Första versionen."
 ...
-Special karaktärer {#special_karakterer}
+Speciella karaktärer {#special_karakterer}
 =======================
 
-I regex har vissa karaktärer en speciell betydelse, det är detta som gör att vi kan matcha mönster dynamiskt och inte enbart fasta strängar.
+I regex har vissa karaktärer en speciell betydelse, det är detta som gör att vi kan matcha mönster dynamiskt och inte enbart fasta strängar. Man kan inte ta för givet att alla speciella karaktärer fungerar i alla dialekter av regex, men det ger en fingervisning på vad som oftast finns tillgängligt.
 
-[INFO]Vi kan använda ett option, -E, för att slippa escapa backslashes och vissa andra speciella karaktärer.[/INFO]
+[INFO]Vi kan använda ett option, -E, när vi arbetar med `sed` för att slippa escapa backslashes och vissa andra speciella karaktärer.[/INFO]
 
 * **.**(punkt): Matchar vilken karaktär som helst utom newline(\\n). Kallas även wildcard.
 
