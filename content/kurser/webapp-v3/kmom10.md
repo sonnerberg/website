@@ -39,6 +39,8 @@ I filmen nedan pratar Emil om hur man kan tänka vid val av datakällor och reko
 
 Om du upplever problem med Cross-Origin Access kan en API-proxy vara lösningen på problemet. I GitHub repot [emilfolino/api-proxy](https://github.com/emilfolino/api-proxy) finns källkod och instruktioner för hur man kan använda sig av en API-proxy på studentservern.
 
+Om du hittar ett XML-API du vill använda kan du göra om XML data till JSON med hjälp av en proxy. Med hjälp av tjänsten [https://xml-proxy.emilfolino.se/](https://xml-proxy.emilfolino.se/) kan du göra om XML till JSON.
+
 Du funderar och väljer en ansats för din webapp, fråga i forumet om du känner dig osäker.
 
 
