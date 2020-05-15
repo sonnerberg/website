@@ -20,3 +20,14 @@ done
 ```
 
 Ovan matchar vi de bilar som börjar på C, D eller E. Då bilarna kan ha namn separerade med space sätter vi IFS till endast nyrad.
+
+För att slippa ändraIFS fär hela omgivningen kan vi strukturera om koden så vi endast ändrar IFS för `read` kommandot:
+
+```bash
+filename="cars.txt"
+re="^[C-E].*$"
+
+while IFS=$'\n' read -r car; do
+    [[ $car =~ $re ]] && echo "$car"
+done < $filename
+```
