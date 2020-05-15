@@ -13,6 +13,8 @@ Du kommer få en färdig server, skriven i Node.js, och ett RESTful API till ser
 
 Din uppgift är att bygga en bash-klient till servern, enligt en kravspecifikation. Din klient skall använda servern för att lösa mazen. Vi lägger in klienten och servern i Docker-kontainrar och låter de prata med varandra med hjälp av "Docker network", där vi låter Docker skapa ett eget nätverk.
 
+Vi ska även kika lite på reguljära uttryck med hjälp av en labb.
+
 Så är upplägget. Låt se hur bra vingarna bär. Upplägget på detta kursmomentet är "lite friare", så vi går nästan rakt på själva uppgiften.
 
 <!--more-->
@@ -42,11 +44,15 @@ Läs lite om [Docker network](https://docs.docker.com/network/).
 
 1. Luta dig mot guiden [kom igång med Bash](guide/kom-igang-med-bash).
 
+1. Läs i guiden om "[Regulära uttryck](guide/kom-igang-med-regex/regex_in_bash)".
+
 
 
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften [lab 3](uppgift/vlinux-lab-regex) för att träna upp grundläggande färdigheter i reguljära uttryck i Bash.
 
 1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete under mappen `kmom05/maze/`.
 
