@@ -1,30 +1,24 @@
 ---
-author:
-    - mos
-    - aar
-    - efo
+author: mos
 revision:
-    "2019-06-14": (M, efo) Ändrade så kmom05 blir 04.
-    "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
-    "2018-06-18": (K, aar) La till moduler och flyttade listor till kmom05.
+    "2020-05-15": (I, aar) Flyttade Funktioner från 03 till 04 inför V3 HT20.
+    "2018-06-18": (H, aar) Flyttade moduler till kmom04.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
-    "2017-06-14": (J, lew) Uppdatering inför hösten 2017.
-    "2016-03-15": (I, mos) Tog bort videoserie MonkeyLords och NewBoston.
-    "2016-02-29": (H, mos) Tog bort material om två dimensionell lista och lade till övning "Kom igång med datatypen lista i Python".
-    "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
-    "2015-02-03": (F, mos) Tog bort curses fråga från redovisningsfrågorna.
-    "2015-02-02": (E, mos) Flyttade curses till extra uppgift och lade till ny uppgift med Marvin inventarier.
+    "2017-06-14": (G, efo) Ändrade kursliteratur till funktioner i kmom03, la till övningar.
+    "2016-03-15": (F, mos) Tog bort videoserie MonkeyLords och NewBoston.
+    "2016-02-22": (E, mos) Lade till videoserien "Lär dig Python".
     "2015-01-08": (D, mos) Bort blå ruta med kursutveckling pågår.
     "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
-    "2014-09-19": (B, mos) Tog bort beta status.
+    "2014-09-08": (B, mos) Första publika releasen.
     "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom04: Moduler och filer
+Kmom04: Funktioner
 ==================================
 
-Vi fortsätter med att titta på hur vi kan använda funktioner för att strukturera vår kod. För att ytterligare strukturera koden introduceras moduler där vi delar koden i olika filer. Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
+I detta kursmoment introduceras du till funktioner och hur de kan underlätta för att återanvända koden. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
-<!--[FIGURE src=/image/snap/py-marvin.png?w=w2 caption="Marvin i Python."]-->
+
+[FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -41,12 +35,20 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
-    * Ch7 Files
+    * Ch4 Functions
+    * Ch6 Strings
 
-
-<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
-    * Ch10 Lists
+<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist).
+    * Ch8 Strings
     * Ch14 Files
+
+Python har en inbyggd debugger som kan användas för att felsöka och rätta upp felaktiga program. Läs om den i följande böcker.
+
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
+    * App A Debugging
+
+2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python)
+    * Chapter 7 - Using the Debugger -->
 
 
 
@@ -54,30 +56,23 @@ Läs följande:
 
 Det finns inga artiklar.
 
-<!--
-Läs följande:
-
-2. Läs om hur man skapar en två-dimensionell array av listor i Python.
-    * [How to define two-dimensional array in python](http://stackoverflow.com/questions/6667201/how-to-define-two-dimensional-array-in-python)
--->
-
 
 
 ###Video  {#video}
 
 Titta på följande:
 
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
+1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 3.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
+    * [Python for Informatics: Chapter 4 - Functions part 1](https://youtu.be/5Kzw-0-DQAk?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    * [Python for Informatics: Chapter 4 - Functions part 2](https://youtu.be/AJVNYRqn8kM?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
+    <!-- * [Python for Informatics: Chapter 6 - Strings](https://www.youtube.com/watch?v=L2IUSArpG98)
+    * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois) -->
 
-    * [Python for Informatics: Chapter 7 - Files part 1](https://youtu.be/9KJ-XeQ6ZlI?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
-    * [Python for Informatics: Chapter 7 - Files part 1](https://youtu.be/0t4rvnySKR4?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
-    <!-- * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o) -->
 
 
-
-### Lästips {#lastips}
+###Lästips {#lastips}
 
 Det finns inga lästips.
 
@@ -89,35 +84,29 @@ Det finns inga lästips.
 *(ca: 12-16 studietimmar)*
 
 
-
-### Övningar {#ovningar}
+###Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/modules` då denna uppgiften bygger vidare på kmom03.
+1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
 
-1. Jobba igenom artikeln/övningen "[Att läsa filer som strängar i Python](kunskap/att-lasa-filer-i-python-strings)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
+1. Fortsätt med del 4 och 5 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern.
 
 
 
-### Uppgifter {#uppgifter}
+###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med funktioner och moduler](uppgift/python-med-funktioner-moduler)" för att träna på olika typer av funktioner och moduler. Spara alla filer under `me/kmom04/lab4`.
+1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom03/lab3`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - inventarie](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom04/marvin3`.
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2-v2)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom03/marvin2`.
 
 
 
-### Extra {#extra}
+###Extra {#extra}
 
-Det finns inga extrauppgifter.
-
-<!-- 1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1](uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
-    * [Curses Programming with Python](https://docs.python.org/3/howto/curses.html)
-    * [Curses — Terminal handling for character-cell displays](https://docs.python.org/3/library/curses.html) -->
-
+Det finns inga extra uppgifter.
 
 
 
@@ -130,9 +119,9 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Du har gjort din första modul i Python, känns strukturen bra?
-* Hur kan du använda moduler?
-* Hur jobbar man med filer i Python?
-* Vilka fördelar ger det att kunna läsa från fil?
-* Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
+* Har du programmerat med funktioner tidigare?
+* Hur kan du använda funktioner när du programmerar?
+* Vad tyckte du om de olika uppgifterna?
+* Hur tänkte du när du utförde dem?
+* Vad tycker du om video som läromedel, tycker du att de tillför något utöver litteraturen?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
