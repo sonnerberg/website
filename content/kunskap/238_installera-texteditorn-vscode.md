@@ -29,7 +29,7 @@ På Windows får man frågan under installationen om man vill lägga till "Open 
 
 [FIGURE src=/image/vscode/windows_setup.png]
 
-[Det finns documentation](https://code.visualstudio.com/docs) som innehåller information kring inställningar, programmeringsspråk som stöds, tips and tricks mm.
+[Det finns dokumentation](https://code.visualstudio.com/docs) som innehåller information kring inställningar, programmeringsspråk som stöds, tips and tricks mm.
 
 När du startar upp Visual Studio Code för första gången får du en trevlig välkomsskärm.
 
@@ -143,15 +143,15 @@ Visual Studio Code har en hel del tillägg (extensions). Det är små program so
 
 Ute till höger har vi en meny som ser ut som byggklossar där vi kan se vilka tillägg vi har installerade och vi har möjlighet att söka efter nya.
 
-[FIGURE src=/image/vscode/extensions.png?w=w2 caption="Sök och installera paket för att utöka editorns funktioner."]
+[FIGURE src=/image/vscode/extensions.png?w=w2 caption="Sök och installera tillägg för att utöka editorns funktioner."]
 
-Allt eftersom du blir varm i kläderna så är det en bra idé att se vilka paket som finns som kan underlätta din vardag som programmerare. Men till att börja med så nöjer vi oss med att konstatera att det finns möjligheter att anpassa sin editor.
+Allt eftersom du blir varm i kläderna så är det en bra idé att se vilka tillägg som finns som kan underlätta din vardag som programmerare. Men till att börja med så nöjer vi oss med att konstatera att det finns möjligheter att anpassa sin editor.
 
 
 Konfigurationsfiler {#config}
 --------------------------------------
 
-Visual Studio Code sparar sina konfigurationsfiler som `.json`. Beroende på vilket system du sitter på ligger dessa filer på olika ställen, men det kan vara bra att veta att de finns. Det är ett mer avancerat sätt att arbeta med inställningar, för oss duger GUIt bra.
+Visual Studio Code sparar sina konfigurationsfiler som `.json`. Beroende på vilket system du sitter på ligger dessa filer på olika ställen, men det kan vara bra att veta att de finns. Det är ett mer avancerat sätt att arbeta med inställningar, för oss duger det grafiska gränssnittet i editorn.
 
 
 Avslutningsvis {#avslutning}
