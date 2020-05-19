@@ -6,9 +6,9 @@ revision:
 Special characters {#special_characters}
 =======================
 
-In regex, certain characters have a special meaning, this is what allows us to match patterns dynamically and not just fixed strings.
+In regex, certain characters have a special meaning, this is what allows us to match patterns dynamically and not just fixed strings. One cannot assume for certain that all special characters work in all dialects of regex, but it gives a clue as to what is usually available.
 
-[INFO]We can use an option, -E, to avoid escaping backslashes and some other special characters.[/INFO]
+[INFO]We can use an option, -E, when we are working with `sed` to avoid escaping backslashes and some other special characters.[/INFO]
 
 * **.**(period): Matches any character except newline (\\n). Also called wildcard.
 

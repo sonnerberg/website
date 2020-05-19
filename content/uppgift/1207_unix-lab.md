@@ -120,9 +120,34 @@ Additional files and folders:
 
 
 
-### Lab 3 (sed1) {#lab3}
+### Lab 3 (regex) {#lab3}
 
-Laboratory to practice the basics of regex. You will work with the tool *sed* and various text files. To your help you have a [regex guide](guide/get-started-with-regex/intro).
+Laboratory to practice the basics of regex. To your help you have a [regex guide](guide/get-started-with-regex/intro).
+
+Create the lab with:
+
+```bash
+$ dbwebb create regex
+```
+
+Enter your bash code within `$ ()` to execute and return the response, eg:
+
+```bash
+ANSWER=$( ./cars.bash ^[a-z]+$ )
+```
+
+Additional files and folders:
+
+| File               | Content                            |
+|--------------------|------------------------------------|
+| `cars.txt`       | text file for some of the tasks.   |
+| `cars.bash`      | bash file with helper function.   |
+
+
+
+### Lab 4 (sed1) {#lab4}
+
+Laboratory to further practice the basics of regex. You will work with the tool *sed* and various text files. To your help you have a [regex guide](guide/get-started-with-regex/intro).
 
 Create the lab with:
 
@@ -147,7 +172,7 @@ Additional files and folders:
 
 
 
-### Optional - Lab 4 (jq) {#lab4}
+### Lab 5 (jq) {#lab5}
 
 Laboratory to practice searching in a JSON file. You will work with the tool *jq*. To your aid you have the guide ["install jq"](kunskap/install-jq).
 

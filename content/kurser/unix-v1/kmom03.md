@@ -55,15 +55,18 @@ Exercises & Assignments {#ovningar_uppgifter}
 
 
 
-### Assignment {#assignment}
+### Assignments {#assignments}
 
-1. Read the [instructions](uppgift/unix-lab) and do the lab `sed1`.
+1. Read the [instructions](uppgift/unix-lab#lab3) and do the lab `regex`.
 
+1. Read the [instructions](uppgift/unix-lab#lab4) and do the lab `sed1`.
+
+1. Read the [instructions](uppgift/unix-lab#lab5) and do the lab `jq`.
 
 
 ### Extra assignment {#extra_assignment}
 
-1. Read the [instructions](uppgift/unix-lab) and do the lab `jq`. This lab is not graded.
+There are no extra assignments.
 
 
 
