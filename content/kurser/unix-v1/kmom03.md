@@ -40,7 +40,7 @@ DV1563 Read the guide under *General tip*.
 
 1. Use the website [regex101](https://regex101.com/) to test your regex.
 
-
+ 
 
 Exercises & Assignments {#ovningar_uppgifter}
 -------------------------------------------
@@ -51,7 +51,7 @@ Exercises & Assignments {#ovningar_uppgifter}
 
 ### Exercises {#exercise}
 
-1. Follow the guide [get started with regex](guide/get-started-with-regex) and code along with it.
+1. Follow the guide [get started with regex](guide/get-started-with-regex).
 
 
 
