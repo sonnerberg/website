@@ -100,6 +100,9 @@ Det finns ingen garanti för att nya tentamen kommer att följa exakt samma uppl
 
 Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
 
+* 2020
+    * [Rock](./tentamen/rock)
+
 * 2019
     * [Pingis](./tentamen/pingis)
     * [Bibliotek](./tentamen/bibliotek)
