@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-05-26": "(G, mos) Information om produkter och blogginlägg skall sparas i databasen."
     "2020-05-05": "(F, mos) Genomgång och mindre justeringar i text samt lade till krav om redovisningsvideo."
     "2019-05-17": "(E, mos) Bort med del i krav 3 om redigera footer."
     "2019-05-10": "(D, mos) Uppdaterad till v5, optionella uppdaterade till flexibelt admin-interface och regga användare."
@@ -74,7 +75,7 @@ Bygg stöd för följande sidor på din webbplats.
 
 * Hem, en förstasida som ger en översikt av webbplatsens innehåll.
 * En produktsida som visar upp dina produkter (jämför uppgiften filmdatabas).
-* En blogg med nyheter om produkter, erbjudande och din verksamhet.
+* En blogg med nyheter om produkter, erbjudande och din verksamhet (jämför uppgiften i kmom06).
 * En om-sida med information om webbplatsens fokus, dig själv och din verksamhet.
 * Gemensam header med logo och titel, eller din egen personliga variant av header.
 * Gemensam footer, med text om Copyright med företagsnamnet.
@@ -83,6 +84,8 @@ Bygg stöd för följande sidor på din webbplats.
 På produktsidan ser man en översikt av alla produktvarianter och erbjudande som finns. Du kan välja att visa översikten av produkterna i en tabell, eller visa upp dem mer som en traditionell Eshop kunde gjort (välj själv). Visa upp minst 5 produkter. Man kan klicka på en produkt för att se den i sin helhet på en produktsida med bild(er) och information om produkten.
 
 I nyhetsbloggen presenterar du nyheter och allmän information om produkter och erbjudande. I översikten skall det visas inledningen till minst 5 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas i sin helhet. Använd minst en bild till varje blogginlägg.
+
+Information om produkter och blogginlägg skall sparas i databasen.
 
 Fyll din webbplats med relevanta bilder och texter.
 
