@@ -176,40 +176,6 @@ Referensdokumentationen är främst olika online-resurser i form av manualer.
 
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
 
-<!--
-* **[PHP Objects, Patterns, Practice](kunskap/boken-php-objects-patterns-and-practice)** -- Matt Zandstra  
-    En bok för den som kan sin PHP-programmering och vill mer med designpatterns, ramverk och mer avancerade tekniker som är nödvändiga för den professionella webbprogrammeraren.
-
-* **[Pro PHP: Patterns, Frameworks, Testing and More](kunskap/boken-pro-php-patterns-frameworks-testing-and-more)** -- Kevin McArthur  
-    En bok för den som kan sin PHP-programmering och vill lära sig mer avancerade tekniker vilka är vardagsmat för den professionella webbprogrammeraren.
-
-* **[Code Complete](kunskap/boken-code-complete)** -- Steve McConnell  
-    En bok för den som vill förädla sitt kunnande i konsten att programmera, skriva bra kod och göra rätt saker i programutvecklingsprojekt.
--->
-
-
-<!--
-
-Kursbok saknas så inga speciella läsanvisningar syns här.
-
-Läsanvisningar {#lasanvisning}
-------------------------------
-
-Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
-
-| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming |
-|------------|-----------------------------------------------------------|
-| Kmom01     | Ch 1, 12                                                  |
-| Kmom02     | Ch 2                                                      |
-| Kmom03     | Ch 3,                                                     |
-| Kmom04     | Ch 4, 6                                                   |
-| Kmom05     | Ch 12, 13, 14                                             |
-| Kmom06     |                                                           |
-| Kmom10     |                                                           |
-
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
-
--->
 
 
 
@@ -236,7 +202,7 @@ Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 Handledning {#handledning}
 ----------------------------------------
 
-Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i [Github Issues](https://github.com/dbwebb-se/itsec). Chatten lämpar sig för korta enkla frågor och issues för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du skapar en issue.
 
 Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 
@@ -269,7 +235,7 @@ Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 Kursutvärdering och kursutveckling {#kursutvardering}
 -----------------------------------------------------
 
-Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
+Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både issues, chatt eller mail.
 
 Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
 

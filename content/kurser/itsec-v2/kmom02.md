@@ -47,9 +47,11 @@ Läs &amp; Studera  {#lasanvisningar}
 
 Läs vidare i boken [Beyond Fear](/kunskap/boken-beyond-fear).
 
+Läs mer om GDPR på [EUs sida](https://gdpr.eu/) eller hos [Datainspektionen](https://www.datainspektionen.se/lagar--regler/dataskyddsforordningen/).
+
 Läs mer om [Privacy Enhancing Technologies (PET)](https://www.priv.gc.ca/en/opc-actions-and-decisions/research/explore-privacy-research/2017/pet_201711/).
 
-
+Mozilla har ett kort [blogginlägg](https://blog.mozilla.org/firefox/what-is-a-web-tracker/) där de beskriver vad en web tracker är.
 
 Uppgifter  {#uppgifter}
 -------------------------------------------
@@ -59,17 +61,6 @@ Uppgifter  {#uppgifter}
 1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal. Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
 
 1. Fyll på med redovisningstexten i din me-sida.
-
-<!--
-### Övningar {#ovningar}
-
-Finns det övningar som studenten gör för att förbereda sig inför uppgifterna?
-
-
-
-### Uppgifter {#uppgifter}
-
-1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)". Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa. -->
 
 
 Resultat & Redovisning  {#resultat_redovisning}
