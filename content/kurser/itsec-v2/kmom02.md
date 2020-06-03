@@ -53,6 +53,8 @@ Läs mer om [Privacy Enhancing Technologies (PET)](https://www.priv.gc.ca/en/opc
 
 Mozilla har ett kort [blogginlägg](https://blog.mozilla.org/firefox/what-is-a-web-tracker/) där de beskriver vad en web tracker är.
 
+Mozilla har även ett kort [blogginlägg](https://blog.mozilla.org/firefox/cross-site-tracking-lets-unpack-that/) kring Cross-Site Tracking.
+
 Uppgifter  {#uppgifter}
 -------------------------------------------
 
