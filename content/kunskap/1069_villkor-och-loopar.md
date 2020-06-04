@@ -326,7 +326,7 @@ Gör detta två gången i en loop och skriv ut de slumpade värdena fram tills a
 
 Om du fastnar eller bara vill se en lösning kan du kolla på videon nedanför där Andreas skriver koden för programmet.
 
-[YOUTUBE src=<spela in video!!!> caption="Andreas visar hur man kan skapa ett simpelt tärningsspel."]
+[YOUTUBE src=vZh_PPiLvS4 caption="Andreas visar hur man kan skapa ett simpelt tärningsspel."]
 
 
 
