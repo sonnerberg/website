@@ -38,9 +38,11 @@ DV1563 Read the guide under *General tip*.
 
 1. You have the guide [get started with regex](guide/get-started-with-regex). Use it as reference.
 
+1. Check out the videos starting with regex-01 in the [playlist](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_RqTYGCSbOMk4KFyHxfuFh).
+
 1. Use the website [regex101](https://regex101.com/) to test your regex.
 
- 
+
 
 Exercises & Assignments {#ovningar_uppgifter}
 -------------------------------------------
