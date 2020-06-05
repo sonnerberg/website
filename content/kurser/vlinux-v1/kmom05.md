@@ -40,9 +40,9 @@ Läs lite om [Docker network](https://docs.docker.com/network/).
 
 ### Övningar {#ovningar}
 
-1. Läs om [Docker network](guide/docker/docker-network) i guiden.
+1. Läs om "[Docker network](guide/docker/docker-network) i guiden".
 
-1. Luta dig mot guiden [kom igång med Bash](guide/kom-igang-med-bash).
+1. Luta dig mot guiden "[kom igång med Bash](guide/kom-igang-med-bash)".
 
 1. Läs i guiden om "[Regulära uttryck](guide/kom-igang-med-regex/regex_in_bash)".
 
