@@ -2,8 +2,9 @@
 author: mos
 category: python
 revision:
+  "2020-06-09": (B, aar) Uppdaterad inför HT20.
   "2016-02-29": (A, mos) Första utgåvan.
-updated: "2016-02-29 10:17:35"
+updated: "2020-06-09 10:17:35"
 created: "2016-02-29 10:17:31"
 ...
 Kom igång med datatypen lista i Python
@@ -11,7 +12,8 @@ Kom igång med datatypen lista i Python
 
 [FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
 
-Python är känt för sina datastrukturer och listor är en av de grundläggande datastrukturerna. Denna artikel introducerar listor och visar hur du kan jobba med dem.
+Python är känt för sina datastrukturer och listor är en av de grundläggande datastrukturerna. Denna artikel introducerar listor och visar hur du kan jobba med dem. Datastrukturer används för att organisera, hanter och förvara data.  
+Tidigare har vi pratat om datatyper som heltal och strängar, vi kan se dem som att vi skapar data och sen använder vi variabler för att referera till ett värde. Medan datastrukturer/listor är till för att förvara/hålla flera data värden, med datastrukturera kan vi gruppera relaterad data. Listor i Python kan innehålla värden av alla olika datatyper.
 
 Du får se hur du skapar en lista, hur du lägger till, tar bort och flyttar runt innehållet i listan samt hur du loopar runt en lista.
 
@@ -22,7 +24,7 @@ Du får se hur du skapar en lista, hur du lägger till, tar bort och flyttar run
 Förutsättning {#pre}
 -------------------------------
 
-Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebär.
+Du kan grunderna i Python och du vet vad variabler och typer innebär.
 
 
 
@@ -62,31 +64,105 @@ Sådär, nu har jag en tom lista att utgå ifrån.
 Det finns fler sätt att skapa en lista. Du kan till exempel använda en konstruktor `list()` eller skapa en färdig lista där du separerar värden med ett kommatecken.
 
 ```python
->>> alist = list() 
+>>> alist = list()
 >>> alist          
 []                 
 >>> anotherList = ["a", "b", "c"]
->>> anotherList                  
+>>> print(anotherList)                  
 ['a', 'b', 'c']                  
 ```
 
-Det finns alltid varianter på hur man gör saker. En enkel variant vore att jag helt enkelt skapade hela min shoppinglistan på en gång.
+`anotherList` innehåller här tre olika värden/strängar. Varje värde i en lista kallas ett element, `anotherList` innehåller tre element. Det finns alltid varianter på hur man gör saker. En enkel variant vore att jag helt enkelt skapade hela min shoppinglistan på en gång.
 
 ```python
->>> shopping = ["köttfärs", "krossade tomater", "grädde", "gul lök"]
->>> shopping                                                        
-['köttfärs', 'krossade tomater', 'grädde', 'gul lök']               
+>>> shopping = ["köttfärs", "krossade tomater", "grädde", "gul lök", 'röd lök']
+>>> print(shopping)                                                        
+['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']               
 ```
 
-Klar. Men det vore ju för enkelt. Jag vill ju gärna förklara hur man kan jobba med en lista, så jag fortsätter med min tomma lista.
+
+
+###En lista med positioner (index) {#pos}
+
+När saker ligger i en lista så ligger det på en viss position (kallas även index). Positionerna i listan är numrerad från 0 till antal saker i listan minus ett. Inom programmering börjar man oftast räkna från noll och inte ett.
+
+För att räkna ut antalet saker i listan så använder vi Pythons inbyggda funktion [`len()`](https://docs.python.org/3.5/library/functions.html?highlight=len#len).
 
 ```python
->>> shopping = []
->>> shopping
-[]
+>>> shopping                                                     
+['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> print(len(shopping))
+5  
 ```
 
-Så, då kikar vi lite på vad vi kan göra med en lista.
+[FIGURE src=/image/python/shopping_list.png]
+
+
+Det första elementet, "grädde",  i listan `shopping` har position 0 och det sista elementet, "röd lök", har position 4 (antalet element - 1).
+
+Det går att referera till individuella elementen/positioner i en lista, vilket man oftast vill göra för att kolla vilket värde som finns på positionen eller byta ut det. Syntaxen ser ut som följande, `list_variable[index]`.
+
+Vi börjar med att kolla på det första och sista värdet som finns i `shopping`.
+
+```python
+>>> print(shopping[0])
+'köttfärs'         
+>>> print(shopping[4])
+'röd lök'        
+```
+
+Det går att ändra värdet på en position på följande sätt.
+
+```python
+>>> print(shopping)                                                        
+['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> shopping[1] = "morötter"
+
+>>> print(shopping)                                                        
+['köttfärs', 'morätter', 'grädde', 'gul lök', 'röd lök']
+```
+
+Med hjälp av dessa konstruktioner kan vi nu byta plats på två element i listan. Säg jag vill byta plats på "grädde" och "köttfärs".
+
+```python
+>>> tempItem = shopping[0]                                      
+>>> shopping[0] = shopping[2]                                   
+>>> shopping[2] = tempItem                                      
+>>> print(shopping)                                                    
+['grädde', 'morötter', 'köttfärs', 'gul lök', 'röd lök']
+```
+
+Jag behöver mellanlagra värdet i variabeln `tempItem` och på det viset kan jag byta plats på två element i en lista.
+
+Vi kollar lite snabbt på vad som händer om man försöker använda ett för stort index på listan.
+
+```python
+>>> print(shopping[5])
+Traceback (most recent call last):                      
+  File "<stdin>", line 1, in <module>    
+IndexError: list index out of range
+```
+
+
+
+#### Negativa index {#neg_index}
+
+I Python kan man även använda sig av negativa index. Det används för att utgå från sista elmenetet istället första.
+
+```python
+>>> print(shopping[-1])
+'röd lök'
+>>> print(shopping[-3])
+'köttfärs'
+>>> print(shopping[-5])
+'grädde'
+>>> print(shopping[-6])
+Traceback (most recent call last):                      
+  File "<stdin>", line 1, in <module>    
+IndexError: list index out of range
+```
+
+Så, då kikar vi lite på vad vi kan göra med en lista. Vi börjar om med en tom lista och kollar på hur vi kan lägga till nya värden i den.
 
 
 
@@ -125,7 +201,7 @@ Jag testar att lägga till items i listan med hjälp av metoden `insert()`.
 >>> shopping.insert("köttfärs")                         
 Traceback (most recent call last):                      
   File "<stdin>", line 1, in <module>                   
-TypeError: insert() takes exactly 2 arguments (1 given) 
+TypeError: insert() takes exactly 2 arguments (1 given)
 >>> shopping.insert(2, "köttfärs")                      
 >>> shopping                                            
 ['köttfärs']                                            
@@ -137,14 +213,14 @@ TypeError: insert() takes exactly 2 arguments (1 given)
 ['grädde', 'krossade tomater', 'köttfärs']              
 ```
 
-Det visar sig att metoden `insert()` tar två parametrar, en som anger själva objektet, strängen i vårt fall, och en som anger positionen i listan. 
+Det visar sig att metoden `insert()` tar två parametrar, en som anger själva objektet, strängen i vårt fall, och en som anger positionen i listan.
 
 Nu var jag inte intresserad av positionen i listan, jag ville bara lägga in dem i en viss ordning. Jag kollar om det finns en annan bättre metod och finner `append()`.
 
 ```python
 >>> help(shopping.append)
 Help on built-in function append:             
-                                              
+
 append(...)                                   
     L.append(object) -- append object to end  
 ```
@@ -156,44 +232,13 @@ Jag testar att använda metoden `append()` istället.
 ['grädde', 'krossade tomater', 'köttfärs']            
 >>> shopping.append("gul lök")                        
 >>> shopping                                          
-['grädde', 'krossade tomater', 'köttfärs', 'gul lök'] 
+['grädde', 'krossade tomater', 'köttfärs', 'gul lök']
 >>> shopping.append("röd lök")                                   
 >>> shopping                                                     
-['grädde', 'krossade tomater', 'köttfärs', 'gul lök', 'röd lök'] 
+['grädde', 'krossade tomater', 'köttfärs', 'gul lök', 'röd lök']
 ```
 
 Ja, det var mer `append()` som jag hade tänkt mig. Det finns alltså olika sätt att lägga till saker till en lista.
-
-
-
-###En lista med positioner {#pos}
-
-När saker ligger i en lista så ligger det på en viss position. Positionerna i listan är numrerad från 0 till antal saker i listan minus ett.
-
-För att räkna ut antalet saker i listan så använder vi funktionen [`len()`](https://docs.python.org/3.5/library/functions.html?highlight=len#len).
-
-```python
->>> shopping                                                     
-['grädde', 'krossade tomater', 'köttfärs', 'gul lök', 'röd lök'] 
->>> len(shopping)
-5                
->>> shopping[0]  
-'grädde'         
->>> shopping[4]  
-'röd lök'        
-```
-
-Med hjälp av dessa konstruktioner kan vi nu byta plats på två element i listan. Säg jag vill byta plats på "grädde" och "köttfärs".
-
-```python
->>> tempItem = shopping[0]                                      
->>> shopping[0] = shopping[2]                                   
->>> shopping[2] = tempItem                                      
->>> shopping                                                    
-['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
-```
-
-Jag behöver mellanlagra värdet i variabeln `tempItem` och på det viset kan jag byta plats på två element i en lista.
 
 
 
@@ -233,7 +278,7 @@ Ibland lämpar sig den ena eller den andra bättre. Det är bara att välja, bå
 Säg jag vill loopa igenom min shoppinglista och skriva ut varje värde. En `for`-sats hjälper mig med det.
 
 ```python
->>> for item in shopping: 
+>>> for item in shopping:
 ...     print(item)       
 ...                       
 köttfärs                  
@@ -246,7 +291,7 @@ Säg nu att du vill ha listan numrerad. Du skulle kunna skapa en räknare som du
 
 ```python
 >>> for i, item in enumerate(shopping):      
-...     print("{}. {}".format(i + 1, item)); 
+...     print("{}. {}".format(i + 1, item));
 ...                                          
 1. köttfärs                                  
 2. krossade tomater                          
@@ -282,8 +327,4 @@ Men ta detta som ren överkurs och bara om du är bekväm med användandet av li
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Detta var en introduktion till listor i Python. Har du frågor eller funderingar så tar vi det i [forumet för Python-frågor](forum/viewforum.php?f=44). 
-
-
-
-
+Detta var en introduktion till listor i Python. Har du frågor eller funderingar så tar vi det i [forumet för Python-frågor](forum/viewforum.php?f=44).
