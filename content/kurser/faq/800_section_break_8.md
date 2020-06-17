@@ -1,12 +1,12 @@
 ---
-title: Förbered dig
+title: Arkiv
 sectionHeader: true
 linkable: true
 author: mos
 revision:
     "2020-06-17": "(A, mos) Ny inför HT20."
 ...
-Förbered dig
+Arkiv
 =========================
 
-Här finns information som hjälper dig att i god tid förbereda dig inför dina studier.
+Här sparas äldre och arkiverad information för att undvika att informationen försvinner.

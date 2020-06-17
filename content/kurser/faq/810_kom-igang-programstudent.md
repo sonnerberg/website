@@ -2,10 +2,19 @@
 author:
     - mos
 revision:
+    "2020-06-17": "(B, mos) Arkiverad då den inte används och behöver uppdateras för att bli aktuell."
     "2017-12-18": "(A, mos) Kopierad och anpassad till programstudenter och icke-dbwebbare."
 ...
 Kom igång med kurserna (programstudent)
 ==================================
+
+[WARNING]
+
+**ÄLDRE MATERIAL**
+
+Detta dokument är markerat som äldre/utgående information per den 2020-06-17 och ligger kvar av arkivskäl. Om du når detta dokument via en ny kurs så bör du be din kursansvarige att se över sina länkar och uppdatera dem till nyare information.
+
+[/WARNING]
 
 Välkommen till en dbwebb-kurs, kanske din första. Kurser benämnda dbwebb-kurser delar en gemensam kursstruktur som främst finns på webbplatsen dbwebb.se.
 
