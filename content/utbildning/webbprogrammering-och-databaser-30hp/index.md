@@ -22,12 +22,12 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/htmlphp-v3/block-kurser-kmom
+                                route: kurser/htmlphp-v4/block-kurser-kmom
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kurser/design-v2/block-kurser-kmom
+                                route: kurser/design-v3/block-kurser-kmom
                     column-3:
                         data:
                             meta:
@@ -40,6 +40,7 @@ views:
                                 route: kurser/oophp-v5/block-kurser-kmom
 
 revision:
+    "2019-06-17": "(K, mos) Inför HT20."
     "2019-06-12": "(J, mos) Inför HT19."
     "2018-06-29": "(I, mos) Inför HT18."
     "2017-06-08": "(H, mos) Ny strukur med antagningsomgångar."
@@ -128,7 +129,7 @@ Registrering och avregistrering per kurs {#reg}
 
 Du registrerar dig för varje kurs och du kan bli avregistrerad per kurs. Varje kurs har ett [3-veckors upprop](kurser/3-veckors-upprop) som sker ett par veckor in i varje kurs. Om du inte uppfyller kursens krav så riskerar du att bli avregistrerad från kursen.
 
-Det innebär att du kan vara antagen till kurspaketet, men om du inte fullföljer studierna enligt den rekommenderade studieplanen så riskerar du att bli avregistrerad på de resterande kurserna innan terminen är slut. 
+Det innebär att du kan vara antagen till kurspaketet, men om du inte fullföljer studierna enligt den rekommenderade studieplanen så riskerar du att bli avregistrerad på de resterande kurserna innan terminen är slut.
 
 [INFO]
 **Tips från coachen**
@@ -150,7 +151,7 @@ Efter avslutat kurspaket kan du ansöka till programmet Webbprogrammering och f�
 Vad säger andra studenter? {#andra}
 -----------------------------------------------------------
 
-Läs vad [Pernilla](blogg/pernilla-gick-ut-kurspaket-med-ett-plus-i-kanten), [Gabriel](blogg/gabriel-fick-jobb-som-php-backend-programmerare), [DanielJ](blogg/danielj-visade-framfotterna-i-chatten-och-fick-jobb) och [Dennis](blogg/dennis-jobbar-med-sin-hobby-webbutveckling) säger om sina studier och vilka jobb de fick. 
+Läs vad [Pernilla](blogg/pernilla-gick-ut-kurspaket-med-ett-plus-i-kanten), [Gabriel](blogg/gabriel-fick-jobb-som-php-backend-programmerare), [DanielJ](blogg/danielj-visade-framfotterna-i-chatten-och-fick-jobb) och [Dennis](blogg/dennis-jobbar-med-sin-hobby-webbutveckling) säger om sina studier och vilka jobb de fick.
 
 
 

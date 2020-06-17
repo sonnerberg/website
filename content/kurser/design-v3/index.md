@@ -1,19 +1,16 @@
 ---
-title: design-v2
+title: design-v3
 author: mos
-views:
-    flash:
-        region: flash
-        template: default/image
-        data:
-            src: "image/snapht16/design-van-gogh.jpg?w=1100&h=360&cf&s=10&s=8&smooth&sharpen&f3=mean_removal&emboss&convolve=lighten:emboss-alt:motion"
+#views:
+#    flash:
+#        region: flash
+#        template: default/image
+#        data:
+#            src: "image/snapht16/design-van-gogh.jpg?w=1100&h=360&cf&s=10&s=8&smooth&sharpen&f3=mean_removal&emboss&convolve=lighten:emboss-alt:motion"
 revision:
-    "2018-12-11": (D, mos) Alla kmom (utom projektet) uppdaterade till design v2.
-    "2018-06-08": (B1, mos) Utkast till kursuppdatering.
-    "2016-11-01": (B, mos) Skrev om lektionsplan/studieplan.
-    "2016-10-26": (A, mos) Strukturen omarbetad och 4 kmom publicerade.
+    "2020-06-17": "(A, mos) Landningssida för v3."
 ...
-Kursen design (v2)
+Kursen design (v3)
 ===================================================
 
 Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *design*, lär webbprogrammeraren att tekniskt förbereda sin webbplats för design och användbarhet.
@@ -75,7 +72,7 @@ Efter genomförd kurs skall studenten:
 * ha god praktisk förmåga att hantera de tekniker, verktyg och miljöer som används för att designa och göra en webbplats användbar.
 
 
-
+<!--
 Kursmoment {#kursmoment}
 ------------------------
 
@@ -163,6 +160,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 * **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**  
 
+-->
 
 <!--
 ### Referenslitteratur {#referenslitteratur}
@@ -174,7 +172,7 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 -->
 
 
-
+<!--
 ### Övrig litteratur {#ovriglitteratur}
 
 I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
@@ -258,6 +256,7 @@ Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderinga
 
 Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/faq/kursutvardering-och-kursutveckling).
 
+-->
 
 
 Kursplan {#kursplan}
@@ -274,8 +273,8 @@ Versioner av kursen {#versioner}
 
 Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
 
-För tillfällen från höstterminen 2020 så [används kursmaterialet till design (v3)](kurser/design-v3).
+För tillfällen från höstterminen 2020 så [finns kursmaterialet till design (v3) här](kurser/design-v3).
 
-För tillfällen från höstterminen 2018 till och med hösten 2019 så [finns kursmaterialet till design (v2) här](kurser/design-v2).
+För tillfällen från hösten 2018 till och med hösten 2019, så [finns kursmaterialet till den kursen i design (v2)](kurser/design-v2).
 
 För tillfällen fram till och med höstterminen 2017, så [finns kursmaterialet till den kursen i design (v1)](kurser/design-v1).
