@@ -60,7 +60,7 @@ Allt kursmaterial är tillgängligt via läroplattformen.
 Community, lärarkontakt och handledning {#community}
 -----------------------------------------------------------
 
-Varje kurs har normalt sett någon form av community som består av chatt(er) oc forumliknande verktyg. Här kan du kommunicera med med-studenter, lärare. Du kan få hjälp och hjälpa andra.
+Varje kurs har normalt sett någon form av community som består av chatt(er) och forumliknande verktyg. Här kan du kommunicera med med-studenter, lärare. Du kan få hjälp av med-studenter, äldre studenter och lärare. Samtidigt kan du hjälpa dina med-studenter och påtala oklarheter för lärarna.
 
 Informationen om dessa verktyg och kommunikationskanaler finns beskrivet i respektive kurs via läroplattformen. Vissa kommunikationskanaler ligger utanför BTH och kan kräva att du skapar extra konton för att få behörighet till verktyget.
 
