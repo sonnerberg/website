@@ -11,7 +11,7 @@ revision:
     "2013-09-26": (B, mos) Genomgången och uppdaterad.
     "2012-08-28": (A, mos) Första versionen, samlat info från andra platser.
 ...
-Lektionsplan och schema
+Lektionsplan, veckoplan och schema
 ==================================
 
 Här kan du läsa om den planering som finns för kurser när du deltar i undervisningen vid ett program (campus & distans) eller kurspaket. Varje kurs väljer själv på vilket sätt de vill lägga upp sin planering så upplägg kan skifta mellan olika kurser och lärare.
@@ -55,4 +55,4 @@ En veckoplan ger dig mer detaljerad information om vad du bör studera vecka fö
 
 Här är ett exempel på en veckoplan.
 
-* [htmlphp](https://dbwebb.se/kurser/htmlphp/veckoplan)
+* [htmlphp](https://dbwebb.se/kurser/htmlphp-v4/veckoplan/ht20lp1)
