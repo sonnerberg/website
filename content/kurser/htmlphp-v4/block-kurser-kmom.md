@@ -1,4 +1,4 @@
-#### [htmlphp (v3)](kurser/htmlphp-v4)
+#### [htmlphp (v4)](kurser/htmlphp-v4)
 
 * [01: Bygg en webbplats](kurser/htmlphp-v4/kmom01)
 * [02: Bygg ut din webbplats](kurser/htmlphp-v4/kmom02)
