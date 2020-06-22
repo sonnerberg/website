@@ -107,19 +107,20 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom05/lab5`.
+1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom03/lab3`.
 
-3. Gör uppgiften "[Din egen chattbot - Marvin - citat](uppgift/din-egen-chattbot-marvin-citat)". Spara alla filer under `me/kmom05/marvin4`.
+3. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2-v3)". Spara alla filer under `me/kmom03/marvin2`.
 
 
 
 ###Extra {#extra}
 
-Om du har tid och lust finns extra uppgifter att utföra.
+Det finns inga extrauppgifter.
+<!-- Om du har tid och lust finns extra uppgifter att utföra. -->
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe-v2)". Spara alla filer under `me/kmom05/marvin4`.
+<!-- 1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe-v2)". Spara alla filer under `me/kmom05/marvin4`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-krypt)". Spara alla filer under `me/kmom05/marvin4`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-krypt)". Spara alla filer under `me/kmom05/marvin4`. -->
 
 
 
