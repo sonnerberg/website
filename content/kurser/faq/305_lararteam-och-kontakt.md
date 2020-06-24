@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-06-24": (F, mos) In med Martin i lärarteamet.
     "2019-10-01": (E, mos) Bort med gemensam mailadress dbwebb@bth.se och ny info.
     "2019-06-12": (D, mos) Städning inför hösten 2019.
     "2018-06-19": (C, mos) Städning inför hösten 2018.
@@ -26,15 +27,18 @@ Lärarteamet består av:
 | ![Andreas](image/lararteam/andreas.png?w=100&h=100&cf) | Andreas&nbsp;Arnesson | zeldah   | aar@bth.se, [BTH](https://www.bth.se/?s=aar&searchtype=employee), [GitHub](https://github.com/AndreasArne), [Facebook](https://www.facebook.com/jaghatar.ansiktsbooken), [Linkedin](https://se.linkedin.com/in/andreas-arnesson-87a563b3)  |
 | ![Emil](image/lararteam/emil.jpg?w=100&h=100&cf) | Emil&nbsp;Folino | efobth | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee), [GitHub](https://github.com/emilfolino), [LinkedIn](https://se.linkedin.com/in/emil-folino-23a7002a) |
 | ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nik@bth.se, [BTH](https://www.bth.se/?s=nik&searchtype=employee), [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) |
+| ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png) | Martin&nbsp;Borg |  | martin.d@live.se [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) |
 
 
 
 Utökat Lärarteam {#uteam}
 --------------------------------------
 
-Varje termin har vi ett större antal hjälplärare som hjälper till med handledning och rättning. Hjälplärare är ofta de studenter som går på campusprogrammet och som med gott resultat har genomfört kursen de hjälper till i.
+Varje termin har vi ett större antal hjälplärare, även kallade lärarassistenter eller TA (teacher assisstant), som hjälper till med handledning och rättning. Hjälplärare är ofta de studenter som går på campusprogrammet och som med gott resultat har genomfört kursen de hjälper till i.
 
 
+
+<!--
 
 ### Lärarassistenter 2019/2020 {ass}
 
@@ -43,7 +47,8 @@ För läsåret är följande lärarassistenter, i olika omfattning.
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
 | ![Matilda](image/lararteam/matilda.jpeg?w=100&h=100&cf) | Matilda&nbsp;Olsson |  | matildaytc@gmail.com [GitHub](https://github.com/Maoo17) [Linkedin](https://www.linkedin.com/in/matilda-olsson-726593159/) |
-| ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png) | Martin&nbsp;Borg |  | martin.d@live.se [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) |
+-->
+
 
 <!--
 | ![Magnus](https://www.gravatar.com/avatar/f6519749cab15b46f612d0dfe249b5d7?s=100) | Magnus&nbsp;Greiff | Munge | mangegreiff@gmail.com [GitHub](https://github.com/MagnusGreiff/) [LinkedIn](https://www.linkedin.com/in/magnus-greiff-582907103/) |
@@ -58,10 +63,11 @@ För frågor rörande kurser så kontaktar du enklast den som för närvarande �
 
 För programrelaterade saker kontaktar du den som är programansvarig, ansvarig för kurspaketet, eller funktionsadressen webbprogrammering@bth.se.
 
+<!--
+
 Om du är osäker på vem du skall kontakta så kan du alltid rådfråga studentcentrum@bth.se.
 
 
-<!--
 
 
 Kursadministrativt {#mail}
