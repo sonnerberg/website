@@ -18,6 +18,11 @@ Omregistrering på kurs och kurstillfälle
 
 Om du inte hinner klart en kurs under dess ordinarie tid så har du möjligheten att slutföra kursen genom att omregistrera dig vid nästa kurstillfälle.
 
+[INFO]
+
+Denna artikel är bedömd som **icke aktuell info** och är arkiverad. Relevant information finns i artikeln "[Hinner inte färdigt](hinner-inte-fardigt)".
+
+[/INFO]
 
 <!--more-->
 
@@ -28,7 +33,7 @@ Hur omregistrerar jag mig? {#hur}
 
 Du kan bara omregistrera dig om du har en tidigare registrering. Om du har fått ett tidigt avbrott kan du inte göra en omregistrering. Vid tidigt avbrott måste du kontakta kursansvarig för råd.
 
-När du vill omregistrera dig så går du till [studentportalen](https://studentportal.bth.se/) och kika efter ansökningsblanketten under "Mina e-tjänster". 
+När du vill omregistrera dig så går du till [studentportalen](https://studentportal.bth.se/) och kika efter ansökningsblanketten under "Mina e-tjänster".
 
 Sist jag var där så fanns ansökningsblanketten under ["Mina e-tjänster - Ansökningsblanketter - Förändrad studiegång"](https://studentportal.bth.se/web/studentportal.nsf/web.xsp/antagning_forandrad_studiegang).
 
@@ -45,7 +50,7 @@ Får du inte igenom din ansökan så får du pröva vid nästa kurstillfälle.
 Kurstillfälle på ITs {#its}
 --------------------------------------------------------------------
 
-När du är omregistrerad så följer du det nya kurstillfället på ITs. Du skall *inte* lämna in redovisningar på ditt ursprungliga kurstillfälle. 
+När du är omregistrerad så följer du det nya kurstillfället på ITs. Du skall *inte* lämna in redovisningar på ditt ursprungliga kurstillfälle.
 
 Du får själv lägga till dig på kurstillfället på ITs (registreringsnyckel är "webbprogrammering"). Välj först "Kurser -> Alla kurser" och därefter enligt bilden nedan.
 
@@ -63,7 +68,7 @@ Du kan välja att lägga till dig på ITs bland följande kurstillfällen. Rådg
 
 | Kurs        | Läsperiod | Kurskod |
 |-------------|:---------:|:--------|
-| python      | lp1       | DV1531  | 
+| python      | lp1       | DV1531  |
 | htmlphp     | lp1       | PA1439 (DV1461) |
 | javascript1 | lp2       | DV1561 (DV1532) |
 | design      | lp2       | PA1436  |
@@ -103,7 +108,7 @@ Det finns uppsamlingsheat som annonseras i forumet. Generellt gäller följande,
 | April           | Mars 31         | April 1 -- 30    |
 
 När du gjort en restinlämning på ett kurstillfälle som inte är i den aktuella pågående terminen så behöver du alltid skicka mail till dbwebb@bth.se och ange vilka kurstillfällen på ITs det gäller samt vilka kmom det är. Annars kommer det inte med i rättningen.
- 
+
 Rättningsfönstret pågår under angiven period. Får du komplettering bör du lämna in den omgående.
 
 
@@ -136,7 +141,7 @@ Observera att htmlphp-kursen har bytt kurskod till PA1439.
 
 Normalt gäller följande ungefärliga tider för läsperioderna.
 
-| Läsperiod | Cirka datum för start och stopp | 
+| Läsperiod | Cirka datum för start och stopp |
 |:---------:|---------------------------------|
 | lp1       | september -- oktober            |
 | lp2       | november -- mitten av januari   |
@@ -146,7 +151,7 @@ Normalt gäller följande ungefärliga tider för läsperioderna.
 <!--
 *Studietakt 25%, 10h per vecka.*
 
-| Läsperiod | Cirka datum för start och stopp | 
+| Läsperiod | Cirka datum för start och stopp |
 |:---------:|---------------------------------|
 | lp12      | september -- mitten av januari  |
 | lp34      | 20-ish januari -- juni          |
@@ -168,13 +173,13 @@ Du skall dock, i din första redovisning, ange vilket/vilka ITs kurstillfälle s
 Begränsningar {#begransning}
 --------------------------------------------------------------------
 
-Du måste ha en tidigare kursregistrering för att kunna omregistrera dig. 
+Du måste ha en tidigare kursregistrering för att kunna omregistrera dig.
 
 Du får inte vara registrerad för ett tidigt avbrott på grund av 3-veckors uppropet.
 
 All omregistrering är i mån av plats. Det är inte säkert att du får plats och då kan du bli nekad en omregistrering.
 
-Det finns studieadministrativa regler som sätter en begränsning om inom vilket tidsperspektiv du måste slutföra kursen. Sist jag kollade så var det två år, men konsultera senaste versionen av regelverket om det skulle bli ett bekymmer. 
+Det finns studieadministrativa regler som sätter en begränsning om inom vilket tidsperspektiv du måste slutföra kursen. Sist jag kollade så var det två år, men konsultera senaste versionen av regelverket om det skulle bli ett bekymmer.
 
 
 
