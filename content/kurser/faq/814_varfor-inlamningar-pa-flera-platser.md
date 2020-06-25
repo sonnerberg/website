@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-06-25": (B, mos) Obsolete.
     "2016-10-11": (A, mos) Första versionen.
 ...
 Varför gör jag inlämningar på flera ställen?
@@ -8,6 +9,10 @@ Varför gör jag inlämningar på flera ställen?
 
 *Varför (måste) jag lämna in min redovisning på flera platser (me-sida, forum, ITs)? Kan jag inte bara zippa ihop allt och dra iväg i ett mail, eller bara lämna in på ITs?*
 
+
+[INFO]
+UNgefär vid 2018/2019 slutade vi publicera redovisningar från kmom i forumet. På gott och ont.
+[/INFO]
 
 När du skall redovisa ett kursmoment så finns det alltid en text som beskriver hur du skall redovisa. Det är en instruktion som skall följas. Den ser olika ut för varje kurs, här är exempel på texten i [htmlphp-](/kurser/htmlphp/redovisa) respektive [python-kursen](/kurser/python/redovisa).
 
@@ -37,7 +42,7 @@ När vi jobbar med kursutvärderingar så utgår vi från det som ligger i forum
 
 Inlämningarna i forumet blir en kunskapsbank som både lärare och medstudenter har nytta av.
 
-Inlämningarna i forumet är en del av det bränsle som krävs för att hålla liv i communityn kring kurserna och dbwebb. 
+Inlämningarna i forumet är en del av det bränsle som krävs för att hålla liv i communityn kring kurserna och dbwebb.
 
 
 
@@ -64,6 +69,6 @@ Fördelar, nackdelar? {#why}
 
 Kan man inte göra det enklare?
 
-Tja, kan man kanske. Men hittills har jag inte funnit en väg som gör att jag kan minimera förfarandet. Det man kan ta bort är redovisningen i forumet men det är jag inte villig att göra. Det riskerar en del av communityn och det sättet jag vill se på hur vi delar med oss av våra strävanden. 
+Tja, kan man kanske. Men hittills har jag inte funnit en väg som gör att jag kan minimera förfarandet. Det man kan ta bort är redovisningen i forumet men det är jag inte villig att göra. Det riskerar en del av communityn och det sättet jag vill se på hur vi delar med oss av våra strävanden.
 
 Så nej. Det finns en tanke bakom varför det är så här och alternativen har ännu inte varit tillräckligt attraktiva.
