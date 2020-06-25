@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-06-25": "(G, mos) Excelark för kp till 2019, 2020."
     "2020-05-18": "(F, mos) Länk till kurs-excel för 2021 + utbplaner för 2020."
     "2019-11-19": "(E, mos) Länk till kurs-excel för 2020."
     "2019-02-04": (D, mos) Länk till utbildningsplan för 2018, 2019 samt uppföljning av status och tog bort äldre studieplaner.
@@ -75,6 +76,19 @@ Få en översikt av de kurser som ingår i din antagningsomgång till programmet
 * [Antagen 2018](https://docs.google.com/spreadsheets/d/1uISBfMsOfx2fXWd8XSj3VIKbU4lmghRVKBjNyZ1OmJY/edit?usp=sharing)
 * [Antagen 2017](https://docs.google.com/spreadsheets/d/15wU6btyWTsK9F3I2TJINgduu_IfmCRbf2Wy46ayR9_0/edit?usp=sharing)
 * [Antagen 2016](https://docs.google.com/spreadsheets/d/1MXVzuA9VIw8hpDcIKl8zIhvyxx3mzOqB0aT5wD7jAWI/edit?usp=sharing)
+
+
+
+### Webbprogrammering och databaser 30hp (#webprog)
+
+* [Antagen 2020](https://docs.google.com/spreadsheets/d/17ROz2yigWiVgD4qpJcAQVl7ME_1kOIMt8pv8QOLbu7I/)
+* [Antagen 2019](https://docs.google.com/spreadsheets/d/1k4bW2SvbgrwxQmSE5iZ2Vrf9fYnkqObpY_D6WvRh-f4/edit?usp=sharing)
+
+
+
+### Webbprogrammering och databaser 30hp (#webutv)
+
+* [Antagen 2019](https://docs.google.com/spreadsheets/d/1Y050giCqTqFJXM2MkrRREXfudAoJuKFOf2Hc3bAvz54/)
 
 
 
