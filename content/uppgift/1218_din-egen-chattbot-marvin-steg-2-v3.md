@@ -19,12 +19,16 @@ Du kan grunderna i Python och stränghantering och du har byggt [första delen](
 
 
 
-<!-- Introduktion {#intro}
+Introduktion {#intro}
 -----------------------
 
-Spelet "Guess the number" är ett enkelt gissningsspel där någon tänker på ett tal mellan 1-100. Man har 6 gissningar på sig att gissa rätt tal. Vid varje gissning så får man svar om talet är "för lågt", "för högt" eller "rätt gissat".
+Du skall bygga en ryggsäck till Marvin med hjälp av listor.
 
-Kapitel 4 i boken [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) beskriver hur spelet "Guess the number" kan implementeras. -->
+Du skall kommunicera med Marvin via text och inte via ett menyval.
+
+Se hur det kan se ut när uppgiften är klar:
+
+[ASCIINEMA src=B7hLyjHGlGbUwj9c6JoTnONRB]
 
 
 
@@ -39,6 +43,26 @@ cd me
 cp -ri kmom02/marvin1/marvin.py kmom03/marvin2/
 cd kmom03/marvin2
 ```
+
+2. Lär Marvin att hantera listor. Lägg till så att Marvin kan plocka upp saker på en valfri plats i sin nya ryggsäck. Skickas ingen placering så skall den hamna på slutet.
+
+3. Marvin skall kunna säga hur många saker om finns i listan samt skriva ut dem.
+
+4. Man ska kunna skriva in namnet på en sak som Marvin skall kasta bort från sin ryggsäck.
+
+5. Ge Marvin möjligheten att kunna byta plats på två stycken saker.
+
+6. Felhantering. Anger man ett för högt index eller om det man vill kasta samt byta plats inte existerar i ryggsäcken så skall Marvin berätta detta för dig.
+
+Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad som helst. Nedan visas `flower`, `book` och `0` **enbart som exempel**.
+
+| Kommando               | Vad händer                                                               |
+|------------------------|:-------------------------------------------------------------------------|
+| inv                    | Marvin skall säga hur många saker om finns i listan samt skriva ut dem   |
+| inv pick flower        | Plocka upp en blomma                                                     |
+| inv pick book 0        | Plocka upp en bok och lägg den i början av listan                        |
+| inv swap flower book   | Byter plats på blomman och boken                                         |
+| inv drop flower        | Kasta bort blomman                                                       |
 
 7. Validera och publicera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
 
