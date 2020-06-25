@@ -43,6 +43,7 @@ Kurser per antagningsomgång {#kurserantagen}
 
 ### Webbprogrammering 180hp campus {#kurser180}
 
+* [Antagen HT2020](utbildning/webbprogrammering-180hp/2020/kurser)
 * [Antagen HT2019](utbildning/webbprogrammering-180hp/2019/kurser)
 * [Antagen HT2018](utbildning/webbprogrammering-180hp/2018/kurser)
 * [Antagen HT2017](utbildning/webbprogrammering-180hp/2017/kurser)
@@ -79,14 +80,14 @@ Få en översikt av de kurser som ingår i din antagningsomgång till programmet
 
 
 
-### Webbprogrammering och databaser 30hp (#webprog)
+### Webbprogrammering och databaser 30hp {#webprog}
 
 * [Antagen 2020](https://docs.google.com/spreadsheets/d/17ROz2yigWiVgD4qpJcAQVl7ME_1kOIMt8pv8QOLbu7I/)
 * [Antagen 2019](https://docs.google.com/spreadsheets/d/1k4bW2SvbgrwxQmSE5iZ2Vrf9fYnkqObpY_D6WvRh-f4/edit?usp=sharing)
 
 
 
-### Webbutveckling och programmering 30hp (#webutv)
+### Webbutveckling och programmering 30hp {#webutv}
 
 * [Antagen 2020](https://docs.google.com/spreadsheets/d/1Y050giCqTqFJXM2MkrRREXfudAoJuKFOf2Hc3bAvz54/)
 
