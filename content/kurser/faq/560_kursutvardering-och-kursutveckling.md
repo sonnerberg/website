@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-06-25": (C, mos) Bort med länk till forumet.
     "2016-08-04": (B, mos) Genomgången.
     "2012-06-27": (A, mos) Första utgåvan.
 ...
@@ -27,7 +28,7 @@ All feedback är oerhört viktig för kursens kvalitet och vidare utveckling. F�
 Löpande under kursens gång {#lopande}
 -------------------------------------
 
-Att löpande samla in feedback är nästan det viktigaste för att få en känsla för hur kursen upplevs. Jag kan läsa i redovisningstexter eller se vilka frågor som dyker upp i forum och chat. Det hjälper mig att förstå hur kursen upplevs och ger mig tips på hur jag kan utveckla kursen. 
+Att löpande samla in feedback är nästan det viktigaste för att få en känsla för hur kursen upplevs. Jag kan läsa i redovisningstexter eller se vilka frågor som dyker upp i forum och chat. Det hjälper mig att förstå hur kursen upplevs och ger mig tips på hur jag kan utveckla kursen.
 
 När det finns felaktigheter i kursmaterialet så försöker vi rätta till det omedelbart. Hittar du såna tveksamheter så är det bara att maila eller hojta till i chat eller forum. Förhoppningsvis är det enkla saker att rätta till och då gör vi det på en gång. Blir det lite mer tidskrävande så får vi lägga det på att-göra-listan.
 
@@ -66,10 +67,11 @@ Men jämna mellanrum, säg 2-3 års intervaller, så blir det dax för en störr
 Den stora utmaningen är att hålla en jämn takt med teknikens utveckling i webbprogrammeringens värld och erbjuda bra kurser med pedagogiskt och välskrivet material. Med din feedback blir det jobbet mycket enklare. Tack på förhand.
 
 
-
+<!--
 Diskutera kursutveckling och kursfeedback {#lopande}
 -------------------------------------
 
-Fråga i forument om du har en direkt fråga som du vill ha besvarad kring detta ämne. 
+Fråga i forument om du har en direkt fråga som du vill ha besvarad kring detta ämne.
 
 * Om [kursutvärdering och kursutveckling i forumet](/t/594)
+-->
