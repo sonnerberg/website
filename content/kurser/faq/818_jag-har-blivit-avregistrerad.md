@@ -1,15 +1,22 @@
 ---
 author: mos
 revision:
+    "2020-06-25": (C, mos) Markerad som obsolete.
     "2016-08-04": (B, mos) Genomgången inför HT16.
     "2013-10-24": (A, mos) För info till de som blivit avregistrerade.
 ...
 Jag har blivit avregistrerad?
 ==================================
 
-Du kommer troligen hit när du blivit avregistrerad på kurserna, antingen har mos länkat dig hit för att ge dig svar på din fråga "varför har jag blivit avregistrerad" eller så har du hittat hit på egen hand, kanske för att du har fått ett mail från CSN som berättar för dig att du avbrutit dina studier och därmed ber dig betala tillbaka studielånet. 
+Du kommer troligen hit när du blivit avregistrerad på kurserna, antingen har läraren länkat dig hit för att ge dig svar på din fråga "varför har jag blivit avregistrerad" eller så har du hittat hit på egen hand, kanske för att du har fått ett mail från CSN som berättar för dig att du avbrutit dina studier och därmed ber dig betala tillbaka studielånet.
 
 Låt oss ta det från början, så att vi inte missar något.
+
+[INFO]
+
+Denna artikel är markerad som **icke aktuell** och ersätts till större delen av artikeln om [3-veckors uppropet](3-veckors-upprop). 
+
+[/INFO]
 
 <!--more-->
 
@@ -33,7 +40,7 @@ Oavsett det, läs nu på, så att du vet [vad 3 veckors uppropet handlar om](3-v
 Jag förstår, men jag är aktiv {#aktiv}
 ------------------------------------------------------------
 
-Då kanske något har blivit fel. Kanske har mos fel i sin hantering, det är lätt att det smyger sig in fel när man hanterar hundratals studenter på en gång. Men, [blir det fel så går det alltid göra rätt](3-veckors-upprop#3v-fel). 
+Då kanske något har blivit fel. Kanske har mos fel i sin hantering, det är lätt att det smyger sig in fel när man hanterar hundratals studenter på en gång. Men, [blir det fel så går det alltid göra rätt](3-veckors-upprop#3v-fel).
 
 Kanske har du lämnat in på ett gammalt kurstillfälle och missat att hoppa över och lämna in på det kurstillfälle på ITs som gäller.
 
@@ -41,7 +48,7 @@ Kanske gjorde du klart kursen du är omregistrerad på och missade att du måste
 
 Kanske har du varit sjuk, eller på annat sätt har en, till synes, giltig frånvaro. Egentligen finns det inget som heter giltig frånvaro, men det kan finnas mer eller mindre giltiga skäl till din frånvaro.
 
-Kanske har du faktiskt inte gjort något alls, mer än registrerat dig på kursen. 
+Kanske har du faktiskt inte gjort något alls, mer än registrerat dig på kursen.
 
 Kanske hade du tänkt att göra kursen lite senare och trodde att det gick bra.
 
