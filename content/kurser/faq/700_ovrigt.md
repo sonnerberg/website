@@ -1,5 +1,5 @@
 ---
-title: Jag blir inte klar i tid
+title: Övrigt
 sectionHeader: true
 linkable: true
 author: mos
