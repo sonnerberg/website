@@ -86,9 +86,9 @@ Få en översikt av de kurser som ingår i din antagningsomgång till programmet
 
 
 
-### Webbprogrammering och databaser 30hp (#webutv)
+### Webbutveckling och programmering 30hp (#webutv)
 
-* [Antagen 2019](https://docs.google.com/spreadsheets/d/1Y050giCqTqFJXM2MkrRREXfudAoJuKFOf2Hc3bAvz54/)
+* [Antagen 2020](https://docs.google.com/spreadsheets/d/1Y050giCqTqFJXM2MkrRREXfudAoJuKFOf2Hc3bAvz54/)
 
 
 
