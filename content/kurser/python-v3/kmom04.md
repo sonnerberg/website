@@ -88,7 +88,7 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
+1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions`.
 
 1. Fortsätt med del 4 och 5 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern.
 
@@ -98,9 +98,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom03/lab3`.
+1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom04/lab4`.
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2-v2)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom03/marvin2`.
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v3)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom03/marvin2`.
 
 
 
