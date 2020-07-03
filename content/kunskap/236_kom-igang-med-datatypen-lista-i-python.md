@@ -305,6 +305,153 @@ Nu skall jag gå och handla med min shoppinglista.
 
 
 
+### Pausa med en uppgift {#uppgift}
+
+Ta en fem minuter bensträckare och försök dig sen på att lösa en liten uppgift.
+
+Om du har gjort [Ett simpelt tärningsspel](kunskap/villkor-och-loopar#dice_game) i övningen i kmom02 kan du fortsätta på den koden. Nu ska du göra ett simpelt tärningsspel där användare ska skriva in hur många tärningar som ska slås, spara varje slag i en lista. Räkna sen ut medelvärde och totalsumma för slagen och skriv ut det och alla slag. Som extrauppgift ska programmet inte avslutas när utskriften är gjord utan istället ska användaren kunna skriva in ett till antal tärningslag eller värja att avsluta.
+
+[YOUTUBE]
+
+
+
+### Slicing {#slicing}
+
+Ibland vill man ha ut en sekvens element från en lista till en egen lista. Man kan använda sig av en for-loop för det till exempel om man vill ha element från index 2-4.
+
+```python
+>>> shopping = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> new_list = []
+>>> for i in range(2, 5):
+....    new_list.append(shopping[i])
+
+>>> print(new_list)
+['grädde', 'gul lök', 'röd lök']
+```
+
+Det finns så klart smidigare sätt att göra detta i Python. Det vi gör i raden ovanför kan liknas med att bara hämta ett värde med ett index, fast vi vill ha flera värden istället för ett.
+
+Vi ska använda något som kallas slicing `a_list[start:end]`, inom hakparenteserna skickar vi in ett start index och ett slut index och då returneras en ny lista med indexen från start upp till slut (tänk -1 som med range()). PS. slicing funkar även på strängar, för att hämta ut en substräng.
+
+```python
+>>> shopping = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> new_list = shopping[2:5]
+>>> print(new_list)
+['grädde', 'gul lök', 'röd lök']
+```
+
+Smidigt! Så som vi använde slicing tar vi de tre sista elementen, i och med att vi tar upp till och med sista elementet behöver vi inte ha med slut indexet.
+
+```python
+>>> shopping = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> new_list = shopping[2:]
+>>> print(new_list)
+['grädde', 'gul lök', 'röd lök']
+```
+
+`shopping[2:]` producerar samma som `shopping[2:5]`, för att fyra är sista index i listan. Det funkar likadant med start index, om man vill ha från första värdet upp till ett annat, behöver man bara slut index.
+
+```python
+>>> shopping = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> new_list = shopping[:3] # samma som shopping[0:3]
+>>> print(new_list)
+['köttfärs', 'krossade tomater', 'grädde']
+```
+
+
+
+#### Kopiera lista {#copy}
+
+Slicing används ofta för att kopiera listor, `a_list[:]` skapar en ny lista från index noll till det sista. Med andra ord kopierar en lista.
+
+```python
+>>> shopping = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> new_list = shopping[:]
+>>> print(new_list)
+['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+```
+
+
+
+#### Negativa index i slice {#negativ_slice}
+
+Magin med Slicing slutar inte där, det funkar även med negativa index.
+
+```python
+>>> shopping = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> new_list = shopping[2:-1]
+>>> print(new_list)
+['grädde', 'gul lök']
+```
+
+`-1` säger ta fram till sista värdet och därför får vi inte "röd lök".
+
+```python
+>>> shopping = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> new_list = shopping[-3:]
+>>> print(new_list)
+['grädde', 'gul lök', 'röd lök']
+```
+
+`shopping[-3:]` börja med tredje sista elementet och ta sen resten.
+
+
+
+#### tilldelning med join {#del_slice}
+
+
+####  split/join {#del_slice}
+
+
+### Slice uppgift {#uppgift_slice}
+
+Vi avslutar artikeln med en till uppgift, den kommer vara lite svårare och längre än tidigare uppgifter men ni behöver använda det mesta av vad ni ska ha lärt er i kursen än så länge. Uppgiften är också uppdelad i tre delar. Du kan fortsätta på koden från den tidigare tärningsuppgiften.
+
+Med koden från förra uppgiften skrivs tärningsslagen ut i ordningen som de slogs, dvs. troligen inte i storleksordning. Du ska lägga till kod så att användaren manuellt ska sortera listan med slagen. Efter alla slag är gjorda ska du skriva ut listan och sen låta användaren flytta runt på slagen i listan så de blir i storleksordning. Låt användare skriva in två index platser vars värde ska byta plats, tills listan är sorterad. Användaren får själv avgöra när listan är sorterad och ska då skriva in `q` för att avsluta. T.ex. om du har listan `[2,1,4,3]`.
+
+```python
+>>> Antal slag: 4
+[2,1,4,3]
+
+>>> Vilka index ska byta plats? 0,1
+[1,2,4,3]
+
+>>> Vilka index ska byta plats? 2,3
+[1,2,3,4]
+
+>>> Vilka index ska byta plats? q
+```
+[YOUTUBE]
+
+Det var del 1, nästa steg är att lägga till stöd för att flytta flera index samtidigt (med slicing). T.ex. om du har listan `[3,4,1,2,5]` vill vi flytta elementen `1,2` på en gång. I denna delen av uppgiften behöver det inte vara möjligt att skicka in ett index. Utan för att indikera ett index använder vi fortfarande slicing notationen, t.ex. index 0 blir `[0-1]` med slicing. Så för tidigare exempel skriver vi in `2-4,0-1` för att sortera den korrekt. Flytta elementen med index 2 och 3 till index 0.
+
+```python
+>>> Antal slag: 5
+[3,4,1,2,5]
+
+>>> Vilka index ska byta plats? 2-4,0-1
+[1,2,3,4,5]
+
+>>> Vilka index ska byta plats? q
+```
+
+[YOUTUBE]
+
+I sista steget ska programmet klara av att hantera både enkla index och sekvens index. Med ovanstående exempel kan man istället skriva in `2-4,0`.
+```python
+>>> Antal slag: 5
+[3,4,1,2,5]
+
+>>> Vilka index ska byta plats? 2-4,0
+[1,2,3,4,5]
+
+>>> Vilka index ska byta plats? q
+```
+
+[YOUTUBE]
+
+
+
 Tre i rad med en lista {#treirad}
 ------------------------------
 
