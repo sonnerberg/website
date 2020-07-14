@@ -134,8 +134,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vad är en lista?
+* Vad är slicing?
 * Var det svårt att bekanta sig med datastrukturen för listor eller flöt det på bra?
 * Har du jobbat med listor, eller arrayer, i andra programmeringsspråk?
-* Kan du isåfall jämföra Python listor mot andra programmeringsspråk?
+* Kan du i så fall jämföra Python listor mot andra programmeringsspråk?
+* Om du gjorde uppgiften del 2 i listövningen, varför behöver man göra bytet i den specifika ordningen?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?
 <!-- * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall. -->

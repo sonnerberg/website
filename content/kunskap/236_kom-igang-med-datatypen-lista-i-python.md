@@ -12,6 +12,8 @@ Kom igång med datatypen lista i Python
 
 [FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
 
+Detta är en väldigt lång artikel, det finns mycket att gå igenom om listor. Tänk på att ta en bensträckare och dricka lite vatten under tiden så du kan hålla fokus.
+
 Python är känt för sina datastrukturer och listor är en av de grundläggande datastrukturerna. Denna artikel introducerar listor och visar hur du kan jobba med dem. Datastrukturer används för att organisera, hanter och förvara data.  
 Tidigare har vi pratat om datatyper som heltal och strängar, vi kan se dem som att vi skapar data och sen använder vi variabler för att referera till ett värde. Medan datastrukturer/listor är till för att förvara/hålla flera data värden, med datastrukturera kan vi gruppera relaterad data. Listor i Python kan innehålla värden av alla olika datatyper.
 
@@ -164,6 +166,8 @@ IndexError: list index out of range
 
 Så, då kikar vi lite på vad vi kan göra med en lista. Vi börjar om med en tom lista och kollar på hur vi kan lägga till nya värden i den.
 
+[YOUTUBE src=subD0Mhm7ks caption="Andreas introducerar listor."]
+
 
 
 ###Metoder för att jobba med en lista {#metoder}
@@ -271,6 +275,8 @@ Metoden `remove()` tar bort en sak ur listan baserad på dess värde. Jag hade a
 
 Ibland lämpar sig den ena eller den andra bättre. Det är bara att välja, båda utför arbetet som önskas, att ta bort "röd lök" från shoppinglistan.
 
+[YOUTUBE src=2H5ms6QZlPI caption="Andreas går igenom list metoder."]
+
 
 
 ###Loopa genom en lista {#loop}
@@ -303,15 +309,17 @@ Den inbyggda funktionen [`enumerate()`](https://docs.python.org/3.5/library/func
 
 Nu skall jag gå och handla med min shoppinglista.
 
+[YOUTUBE src=nLANWlxXg3o caption="Andreas går igenom listor med loopar."]
+
 
 
 ### Pausa med en uppgift {#uppgift}
 
 Ta en fem minuter bensträckare och försök dig sen på att lösa en liten uppgift.
 
-Om du har gjort [Ett simpelt tärningsspel](kunskap/villkor-och-loopar#dice_game) i övningen i kmom02 kan du fortsätta på den koden. Nu ska du göra ett simpelt tärningsspel där användare ska skriva in hur många tärningar som ska slås, spara varje slag i en lista. Räkna sen ut medelvärde och totalsumma för slagen och skriv ut det och alla slag. Som extrauppgift ska programmet inte avslutas när utskriften är gjord utan istället ska användaren kunna skriva in ett till antal tärningslag eller värja att avsluta.
+Om du har gjort [Ett simpelt tärningsspel](kunskap/villkor-och-loopar#dice_game) i övningen i kmom02 kan du fortsätta på den koden. Nu ska du göra ett simpelt tärningsspel där användare ska skriva in hur många tärningar som ska slås, spara varje slag i en lista. Räkna sen ut medelvärde och totalsumma för slagen och skriv ut det och alla slag. Som extrauppgift ska programmet inte avslutas när utskriften är gjord utan istället ska användaren kunna skriva in ett till antal tärningslag eller välja att avsluta.
 
-[YOUTUBE]
+[YOUTUBE src=YU_1IK3Cbzs caption="Andreas löser uppgiften."]
 
 
 
@@ -395,15 +403,131 @@ Magin med Slicing slutar inte där, det funkar även med negativa index.
 
 `shopping[-3:]` börja med tredje sista elementet och ta sen resten.
 
+[YOUTUBE src=KnNwrr6tMq8 caption="Andreas går igenom slicing."]
 
 
-#### tilldelning med join {#del_slice}
+
+#### Append med slicing {#append_slice}
+
+Det går även att lägga till element i en lista med slicing. Append med slicing används för att lägga till element från en lista i en annan. Vi kan se det som att slå ihop två listor. Man behöver tänka sig för när man ska göra det för att det kan också användas för att byta ut elementen i en lista mot en annan lista.
+
+Exempel på att lägga in alla element från en lista först i en annan.
+
+```python
+>>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde']
+>>> other_list = ['gul lök', 'röd lök']
+>>> shopping_list[0:0] = other_list
+>>> print(shopping_list)
+['gul lök', 'röd lök', 'köttfärs', 'krossade tomater', 'grädde']
+```
+
+`shopping_list[0:0] = other_list`, gör att alla element från `other_list` läggs in i `shopping_list`, från index 0 och framåt. Elementen som redan låg i `shopping_list` flyttades bak i listan. I exemplet användes `0:0` för att lägga till först, men det går att göra likadant för alla index i lista. Testa själv att använda t.ex. `2:2` istället.
 
 
-####  split/join {#del_slice}
+
+#### Append och ersätt med slicing {#replace_slice}
+
+Ovanför skrev jag att man behöver vara försiktigt med att använda slicing för att slå ihop listor. Det ska vi kolla på nu, istället för att använda samma index som start och stop i slicen ska vi använda en range.
+
+```python
+>>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde']
+>>> other_list = ['gul lök', 'röd lök']
+>>> shopping_list[1:2] = other_list
+>>> print(other_list)
+['köttfärs', 'gul lök', 'röd lök', 'grädde']
+```
+
+`shopping_list[1:2] = other_list` gör att elementen från other list ersätter elementen från `shopping_list` som med index `1`, vilket blir "krossade tomater".
+
+```python
+>>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde']
+>>> other_list = ['gul lök', 'röd lök']
+>>> shopping_list[1:3] = other_list
+>>> print(other_list)
+['köttfärs', 'gul lök', 'röd lök']
+```
+
+Här ersätter vi både index 1 och 2 med elementen från `other_list`. Testa själv med olika sekvenser i slicen för att se hur det påverkar.
+
+[YOUTUBE src=AyFcjm1v74s caption="Andreas går igenom hur man kan slå ihop listor med slicing."]
 
 
-### Slice uppgift {#uppgift_slice}
+
+### Listor och strängar {#string_list}
+
+Listor är en typ av itterable, det går att litterera över värdena i en lista. T.ex. i en for-loop, strängar är också en itterable. En sträng är egentligen en sekvens av flera karaktärer. Det gör att det ofta går att jobba med listor och strängar på liknande sätt. T.ex. i for-loopar, indexering och slicing. Nu ska vi titta på hur man kan göra strängar till listor och listor till strängar.
+
+
+
+#### Lista till sträng (join) {#join}
+
+Den inbyggda funktionen [join()](https://docs.python.org/3/library/stdtypes.html?highlight=str%20join#str.join) hos strängar kan vi använda för att ta alla element och bygga ihop till en sträng. Man kallar `join()` på en sträng och skickar inte listan som argument till join. Värdet som finns i strängen läggs som separator mellan varje element från listan i strängen. Vi kollar på hur vi kan ta shopping listan och göra den till en sträng med ett space mellan varje element.
+
+```python
+>>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> shopping_str = " ".join(shopping_list)
+>>> print(shopping_str)
+"köttfärs krossade tomater grädde gul lök röd lök"
+```
+
+Det blev inte så tydligt vad som är vad i och med att vi har space i ingredienserna också. Vi kan lägga till ett kommatecken också för att göra det tydligare.
+
+```python
+>>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> shopping_str = ", ".join(shopping_list)
+>>> print(shopping_str)
+"köttfärs krossade, tomater, grädde, gul lök, röd lök"
+```
+
+Notera att värdet i join-strängen inte läggs till i början eller slutet av den nya strängen, det läggs bara i mellan elementen. Vi kan dela upp dem på varsin rad istället, med `\n`.
+
+```python
+>>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+>>> shopping_str = "\n".join(shopping_list)
+>>> print(shopping_str)
+"köttfärs krossade
+tomater
+grädde
+gul lök
+röd lök"
+```
+
+Det är vanligt att använda join() när man vill göra en snygg utskrift av en lista.
+
+[YOUTUBE src=An52yGM2Knw caption="Andreas går igenom join()"]
+
+
+
+
+#### Sträng till lista (split) {#split}
+
+För att göra tvärtom, dela upp en sträng till en lista använder vi [split()](https://docs.python.org/3/library/stdtypes.html#str.split). Om vi har strängen `"köttfärs krossade tomater grädde gul lök röd lök"` kan vi välja vad vi vill ha som delimeter. Delimeter avgör vad som kommer användas som skiljetecken för vad som ska bli egna element i den nya listan. Vi testar använda space som delimeter.
+
+```python
+>>> shopping_str = "köttfärs krossade tomater grädde gul lök röd lök"
+>>> shopping_list = shopping_str.split(" ")
+>>> print(shopping_str)
+['köttfärs', 'krossade', 'tomater', 'grädde', 'gul', 'lök', 'röd', 'lök']
+```
+
+Python läser strängen från första bokstaven fram till första spacet, gör det till första elementet i listan, fortsätter läsa till nästa space och gör det till nästa element osv. Nu blev gul och lök uppdelat, vilket vi inte vill. Vi lägger till kommatecken i strängen igen och ändrar delimetern.
+
+```python
+>>> shopping_str = "köttfärs krossade, tomater, grädde, gul lök, röd lök"
+>>> shopping_list = shopping_str.split(", ")
+>>> print(shopping_str)
+['köttfärs', 'krossade tomater', 'grädde', 'gul lök', 'röd lök']
+```
+
+Nu är delimetern `", "`, vi kan har flera tecken som delimeter. Kommatecken eller space var för sig tolkas inte som delimeter utan strängen som används som delimeter måste matcha i strängen som ska delas upp.
+
+Det är vanligt att använda split() när man tar en input och vill göra den till en sträng för att lättare kunna jobba med specifika delar av input värdet.
+
+[YOUTUBE src=8H9mkvdAoQQ caption="Andreas går igenom split()"]
+
+
+
+### En längre uppgift {#uppgift_slice}
 
 Vi avslutar artikeln med en till uppgift, den kommer vara lite svårare och längre än tidigare uppgifter men ni behöver använda det mesta av vad ni ska ha lärt er i kursen än så länge. Uppgiften är också uppdelad i tre delar. Du kan fortsätta på koden från den tidigare tärningsuppgiften.
 
@@ -421,9 +545,11 @@ Med koden från förra uppgiften skrivs tärningsslagen ut i ordningen som de sl
 
 >>> Vilka index ska byta plats? q
 ```
-[YOUTUBE]
 
-Det var del 1, nästa steg är att lägga till stöd för att flytta flera index samtidigt (med slicing). T.ex. om du har listan `[3,4,1,2,5]` vill vi flytta elementen `1,2` på en gång. I denna delen av uppgiften behöver det inte vara möjligt att skicka in ett index. Utan för att indikera ett index använder vi fortfarande slicing notationen, t.ex. index 0 blir `[0-1]` med slicing. Så för tidigare exempel skriver vi in `2-4,0-1` för att sortera den korrekt. Flytta elementen med index 2 och 3 till index 0.
+[YOUTUBE src=H5pSDFlV1o0 caption="Andreas löser del 1"]
+
+Det var del 1, nästa steg är att lägga till stöd för att flytta flera index samtidigt (med slicing). T.ex. om du har listan `[3,4,1,2,5]` vill vi flytta elementen `1,2` på en gång. För att detta ska fungera behöver du göra bytet i en specifik ordning. Uppdatera de bakre element först och sen det främre elementen. För att underlätta kan du ha som vana att alltid skriva input i samma ordning. Låga index först eller tvärt om. För pluspoäng, undersök varför varför det kan bli fel om du gör det i andra ordningen. Skriv varför i din redovisningstext.  
+I denna delen av uppgiften behöver det inte vara möjligt att skicka in ett ensamt index. Utan för att indikera ett index använder vi fortfarande slicing notationen, t.ex. index 0 blir `[0-1]` med slicing. Så för tidigare exempel skriver vi in `0-1,2-4` för att sortera den korrekt. Flytta elementen med index 2 och 3 till index 0.
 
 ```python
 >>> Antal slag: 5
@@ -435,9 +561,10 @@ Det var del 1, nästa steg är att lägga till stöd för att flytta flera index
 >>> Vilka index ska byta plats? q
 ```
 
-[YOUTUBE]
+[YOUTUBE src=I5ZVvS_-hJs caption="Andreas löser del 2"]
 
-I sista steget ska programmet klara av att hantera både enkla index och sekvens index. Med ovanstående exempel kan man istället skriva in `2-4,0`.
+I sista steget ska programmet klara av att hantera både enkla index och sekvens index. Med ovanstående exempel kan man istället skriva in `0,2-4`. Tänk på att följande kombination med inputs kan förekomma från användaren, `0,2-4`, `2-4,0`, `0,2`, `0-2,3-4`. Din kod behöver klara av alla fyra olika input typer från användaren.
+
 ```python
 >>> Antal slag: 5
 [3,4,1,2,5]
@@ -448,7 +575,7 @@ I sista steget ska programmet klara av att hantera både enkla index och sekvens
 >>> Vilka index ska byta plats? q
 ```
 
-[YOUTUBE]
+[YOUTUBE src=a9wvTKoh5I8 caption="Andreas löser del 3"]
 
 
 
