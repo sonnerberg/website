@@ -9,6 +9,13 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -90,7 +97,7 @@ webbplatsens syfte och idé. Din redovisningstext skall innehålla ett stycke d�
 
 Det finns många bilder i `img`-katalogen. Använd dem när du presenterar objekten och för att illustrera artiklarna. Använd "rätt" storlek av bilderna.
 
-Objekten är i detta fallet de objekt som museet främst avser visa upp. Det finns även extra artiklar och information i underlaget. 
+Objekten är i detta fallet de objekt som museet främst avser visa upp. Det finns även extra artiklar och information i underlaget.
 
 
 
@@ -141,7 +148,7 @@ Med andra ord, det skall vara en bra webbplats och fungera som man förväntar s
 
 #### Responsiv webbplats {#responsiv}
 
-Din webbplats skall ha viss responsivitet för att stödja att visas på små/stora enheter. 
+Din webbplats skall ha viss responsivitet för att stödja att visas på små/stora enheter.
 
 Det är okey om responsiviteten inte är helt komplett. Men det måste finnas element av responsivitet som är implementerade i webbplatsen.
 
@@ -155,7 +162,7 @@ I sidan skriver du om följande.
 
 1. Berätta om din kodstruktur som ligger bakom din webbplats. Du kan tex berätta om katalogstrukturen, konfigfilen, funktioner, vyer, sidkontroller respektive multisidkontroller och så vidare.
 1. Berätta hur väl din sida fungerar responsivt.
-1. Ge förslag på ett par förbättringar du ser att man skulle kunna göra på din webbplats, i ett fiktivt vidareutvecklingsprojekt. 
+1. Ge förslag på ett par förbättringar du ser att man skulle kunna göra på din webbplats, i ett fiktivt vidareutvecklingsprojekt.
 
 
 
@@ -165,7 +172,7 @@ Var uppfinningsrik i hur du väljer att presentera objekten och artiklarna. Väl
 
 Gör minst 2 av följande (och fyll gärna på med något egen variant du anser gynnar webbplatsen).
 
-Låt användarens upplevelse, User Experience (UX), styra dig i dina val. Enkelt sagt, gör en bra webbplats som har bra innehåll och äv enkel att använda och navigera på. 
+Låt användarens upplevelse, User Experience (UX), styra dig i dina val. Enkelt sagt, gör en bra webbplats som har bra innehåll och äv enkel att använda och navigera på.
 
 1. Gör en sökfunktion där man kan söka bland objekt och artiklar.
 
@@ -208,7 +215,7 @@ Redovisning {#redovisning}
 
     3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet. 
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
 
 3. Se till att samtliga kursmoment validerar i "dbwebb validate/publish".
 

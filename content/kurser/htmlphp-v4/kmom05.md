@@ -13,6 +13,13 @@ revision:
 Kmom05: SQL och SQLite
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 Låt oss börja med databaser. Jag har valt att introducera databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
 
 Till databasen SQLite behövs klientprogram som kan användas för att prata med databasen. Vi prövar olika klienter, en variant för desktop, en som är webbaserad och en terminalbaserad.

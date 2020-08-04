@@ -12,6 +12,13 @@ revision:
 Kmom04: Formulär och sessioner
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 I detta kursmoment går vi igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
 
 I PHP får du lära dig att skapa egna funktioner och se hur du jobbar med HTML formulär och sessioner i PHP. Du kommer bekanta dig med de inbyggda globala arrayerna `$_GET`, `$_POST` och `$_SESSION` och se hur de relaterar till formulär och sessioner.

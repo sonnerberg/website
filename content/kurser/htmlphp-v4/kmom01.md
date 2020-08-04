@@ -20,6 +20,13 @@ revision:
 Kmom01: Bygg en webbplats
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 Vi skall bygga en webbplats med HTML, CSS och PHP. Vi kallar denna webbplats för din me-sida och den kommer följa dig genom hela kursen. Vi börjar med en enkel struktur för webbplatsen, strukturen förbättrar vi kontinuerligt genom kursen.
 
 Kursmomentet visar hur du kommer igång med labbmiljön, dels via en installation på din egen dator och dels genom att publicera resultatet på driftsservern. Du kommer att utveckla din kod lokalt och därefter kopiera över resultatet till en driftsserver.
