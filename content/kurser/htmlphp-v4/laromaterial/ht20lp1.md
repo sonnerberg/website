@@ -56,10 +56,10 @@ Installationen av labbmiljön sker i samband med de kursmoment där programvaror
 Chatt via Gitter och Discord {#chatt}
 ----------------------------------
 
-Det finns två kurschatter där du kan umgås med studenter, lärare och få eller ge hjälp.
+Det finns två kurschatter där du kan umgås med studenter, lärare och få eller ge hjälp. Discord-kanalen är den huvudsakliga chatten, så se till att du har tillgång till den. Gitter-chatten används av delvis historiska skäl då den tidigare var huvudchatt för kursen.
 
-* [Gitter htmlphp](https://gitter.im/dbwebb-se/htmlphp)
 * Discord server med kanal för htmlphp
+* [Gitter htmlphp](https://gitter.im/dbwebb-se/htmlphp)
 
 Du får en invite till Discord via Canvas, eller be din lärare om det. Troligen har du redan fått en invite i samband med att du blev antagen till utbildningen.
 
