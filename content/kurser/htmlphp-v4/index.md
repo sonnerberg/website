@@ -244,7 +244,7 @@ Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 Veckoplan {#veckoplan}
 ---------------------------------------------
 
-Det finns en [veckoplan](kurser/htmlphp/veckoplan) som kompletterar den rekommenderade studieplanen och lektionsplanen. Här kan du få en rekommendation till hur du skall lägga upp dina studier, vecka för vecka.
+Det finns en [veckoplan](kurser/htmlphp-v4/veckoplan) som kompletterar den rekommenderade studieplanen och lektionsplanen. Här kan du få en rekommendation till hur du skall lägga upp dina studier, vecka för vecka.
 
 
 
