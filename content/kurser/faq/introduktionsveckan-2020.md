@@ -64,6 +64,22 @@ Många hoppar av sin högskoleutbildning i förtid, läs gärna mer om "[Hur må
 
 
 
+Upprop {#upprop}
+-----------------------------------
+
+För att erbjuda flexibilitet så kan ni utföra uppropen per distans via följande formulär. Det gör att ni som har jobb inte behöver ta ledigt för att delta i ett formellt upprop ett bestämt klockslag under introveckan.
+
+Här är formulär för respektive upprop.
+
+* [Gör upprop Webbprogrammering 180hp campus](https://forms.gle/VJA4kgu49yPnue2m6)
+* [Gör upprop Webbprogrammering 120hp distans](https://forms.gle/tQhMHsZj1DQn2z6h8)
+* [Gör upprop Webbprogrammering och databaser 30hp distans](https://forms.gle/zva5LMnZ7xnjZQkWA)
+<!--
+* Webbutveckling och programmering 30hp distans
+-->
+
+
+
 Vad lär vi oss under introveckan? {#lara}
 -----------------------------------
 
