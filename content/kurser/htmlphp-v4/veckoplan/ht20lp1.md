@@ -13,19 +13,6 @@ Här är en rekommendation till veckoplanering för att jobba igenom kursen.
 
 
 
-Allmän planering {#allman}
-----------------------------------
-
-Kursen har en [rekommenderad studieplan](htmlphp/studieplan) som visar en översikt, vecka för vecka, vilket kursmoment som är aktuellt att jobba med. Där finns även rättningsfönster som visar när saker rättas.
-
-På Canvas finns datum för inlämningsuppgifter. Ett rättningsfönster pågår normalt sett 15 arbetsdagar efter inlämningsdatum på uppgiften.
-
-Kursen har en [lektionsplan](htmlphp/lektionsplan) som visar när det är lärarledda tillfällen för undervisning/handledning på campus/distans.
-
-Kursen har bokade tillfällen i schemat som säger när en fysisk sal är bokad på campus.
-
-
-
 Vecka 1: Introduktion {#v1}
 ----------------------------------
 
@@ -82,4 +69,8 @@ Vecka 10: Kmom10 redovisa {#v10}
 
 Nu slutför du ditt projekt och redovisar det.
 
-Det finns en deadline när projektet skall lämnas in. Dagen efter den deadlinen har du möjlighet att göra en presentation av ditt projekt och skriva redovisningstext som du skall lämna in.
+Det finns en deadline när projektet skall lämnas in. Du färdigställer och lämnar in ditt projekt tillsammans med en redovisningstext, detta skall vara klart och inlämnat till projektets deadline.
+
+Dagen efter är det deadline är sista dagen för att komplettera in inlämning med en länk till en 5-7 minuter lång video där du presenterar ditt projekt.
+
+Därefter påbörjas rättningen av projektet, rättningen är normalt klar inom 15 arbetsdagar.

@@ -27,7 +27,7 @@ Lärarteamet består av:
 | ![Andreas](image/lararteam/andreas.jpg?w=100&h=100&cf) | Andreas&nbsp;Arnesson | zeldah   | aar@bth.se, [BTH](https://www.bth.se/?s=aar&searchtype=employee), [GitHub](https://github.com/AndreasArne), [Facebook](https://www.facebook.com/jaghatar.ansiktsbooken), [Linkedin](https://se.linkedin.com/in/andreas-arnesson-87a563b3)  |
 | ![Emil](image/lararteam/emil.jpg?w=100&h=100&cf) | Emil&nbsp;Folino | efobth | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee), [GitHub](https://github.com/emilfolino), [LinkedIn](https://se.linkedin.com/in/emil-folino-23a7002a) |
 | ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nik@bth.se, [BTH](https://www.bth.se/?s=nik&searchtype=employee), [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) |
-| ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png) | Martin&nbsp;Borg |  | martin.d@live.se [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) |
+| ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png?s=100) | Martin&nbsp;Borg |  | martin.d@live.se [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) |
 
 
 <!--

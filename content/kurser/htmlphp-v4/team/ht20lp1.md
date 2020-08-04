@@ -64,4 +64,4 @@ Detta kurstillfälle ägs av [institutionen för datavetenskap (DIDA)](https://w
 Studentkår och utbildningsförening
 ----------------------------------
 
-Denna kurs ligger inom ramen för [utbildningsföreningen BITS](https://www.bthstudent.se/utbildning/utbildningsforeningar/) arbete inom [Blekinge Studentkår](https://www.bthstudent.se/).
+Denna kurs ligger inom ramen för [utbildningsföreningen BITS](https://www.bthstudent.se/utbildning/utbildningsforeningar/) arbete inom [Blekinge Studentkår](https://www.bthstudent.se/). Utbildningsföreningen jobbar med kvalitetssäkring och uppföljning av kvalitet på kurser och program och kan vara samtalspart för studenter.
