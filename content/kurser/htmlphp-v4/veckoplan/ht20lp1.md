@@ -13,6 +13,15 @@ Här är en rekommendation till veckoplanering för att jobba igenom kursen.
 
 
 
+Allmänt {#allmant}
+----------------------------------
+
+På grund av covid-19 så kommer kursen till största delen att ges på distans, även för våra campus-studenter.
+
+Campusstudenterna kommer dock att ha en dag i veckan, torsdagen, där lärare kommer att finnas tillgängliga i labbsalarna som skall covid-säkras av BTH. Tanken är att erbjuda någon form av campus-känsla, även i dessa tider.
+
+
+
 Vecka 1: Introduktion {#v1}
 ----------------------------------
 
@@ -20,11 +29,13 @@ Kursstart och upprop är enligt utsatt tid i lektionsplanen.
 
 Första veckan är en introvecka och syftet är att förbereda dig inför kursen och kmom01 genom att installera labbmiljö och nödvändig infrastruktur.
 
-Vi jobbar igenom delen med ["Labbmiljön" i kmom01](https://dbwebb.se/kurser/htmlphp/kmom01#labbmiljo).
+Det finns ett eget [schema och planering för introveckan](kurser/faq/introduktionsveckan-2020), det innehåller kursspecifika händelser tillsammans med andra aktiviteter som har olika relevans, beroende av vilken utbildning du går.
 
-Det är rätt lugn takt inledningsvis, syftet är att alla skall vara redo för kursen inför nästa vecka.
+Vi jobbar igenom delen med ["Labbmiljön" i kmom01](kurser/htmlphp/kmom01#labbmiljo).
 
-Tycker du det är alltför lugnt så påbörjar du att jobba med resten av kmom01 eller så läser du på i kurslitteraturen.
+Det är rätt lugn takt inledningsvis, men det beror naturligtvis på var och ens förkunskaper och förmåga att ta till sig det som lärs ut. Syftet med veckan är att alla skall vara redo för kursen inför nästa vecka.
+
+Tycker du det är alltför lugnt så påbörjar du att jobba med resten av kmom01 eller så läser du på extra i resurserna bland läsanvisningarna för kmom01.
 
 
 
@@ -35,11 +46,11 @@ Nu börjar kursen på riktigt och vi jobbar igenom kmom01 från start till mål.
 
 Kursmomentet omfattar både läsanvisningar, övningar, uppgifter och instruktion om hur du skall redovisa.
 
-Påbörja kmomet på egen hand så är du väl förberedd när du deltar i de lärarledda sessionerna (se lektionsplanen). Lärarna visar dig ibland hur du kan genomföra uppgifter och ibland berättar de mer allmänt om saker inom kursens område.
+Påbörja kmomet på egen hand, förslagsvis på måndagen eller tisdagen, så är du väl förberedd när du deltar i de lärarledda sessionerna (se lektionsplanen). Lärarna visar dig ibland hur du kan genomföra uppgifter och ibland berättar de mer allmänt om saker inom kursens område.
 
 Sikta på att vara klar med kursmomentet senast fredag eftermiddag. Hinner du inte så kan du jobba klart under helgen. Det rekommenderas att du jobbar klart så att du är redo för nästa kmom som startar nästa vecka.
 
-Du lämnar in din redovisning på Canvas och där bedöms den med betyget U/Ux/G. Ux betyder att du kan komplettera till godkänt. Inlämningsdatum på Canvas är ett par dagar in i nästa vecka för att ge dig ytterligare lite utrymme, om du hamnat efter.
+Du lämnar in din redovisning på Canvas och där bedöms den med betyget U/Ux/G. Ux betyder att du kan komplettera till godkänt genom att göra de uppdateringar som läraren/rättaren bett dig om. Inlämningsdatum på Canvas är på torsdagen in i nästa vecka för att ge dig ytterligare lite utrymme och slack, om du hamnat efter.
 
 
 
@@ -47,6 +58,8 @@ Vecka 3-7: Kmom02-kmom06 {#v3}
 ----------------------------------
 
 Nu följer 5 veckor med samma upplägg. Gör ett kmom i veckan för att ligga i fas.
+
+Tänk på att det är lite jobbigt att hamna efter, varje vecka introducerar nya saker och det är en arbetsintensiv kurs som i normalfallet kräver sina 20h arbete per vecka.
 
 
 
