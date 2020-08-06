@@ -74,15 +74,19 @@ Läs & Studera  {#lasanvisningar}
 
 Läs följande för att bekanta dig med teknikerna.
 
-1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
-    * [Grunderna](guide/kom-igang-med-html-och-css/grunderna)
-
-1. Webbplatsen MDN innehåller referensdokumentation för HTML och CSS. Bekanta dig med MDN genom att kort och översiktligt kika på följande sidor, bara så du vet vilken information som finns där.
+1. Webbplatsen MDN innehåller grundläggande information om HTML och CSS. Bekanta dig med MDN genom att kort och översiktligt kika på följande sidor, bara så du vet vilken information som finns där.
     * [Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
     * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
-    * [HTML reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
     * [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+1. Kom sedan ihåg referensdokumentationen på MDN, kika kort på den. Minns sedan att det går lika bra att googla sig fram till rätt sida i referensmanualen, pröva "mdn html body" och "mdn css text-align", men var noga med att du landar på en sida i referensmanualen, det är säkrast så.
+
+    * [HTML reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
     * [CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)". Det ger dig en grundläggande introduktion i HTML och CSS samt hjälper dig inför de uppgifter du skall göra.
+    * [Grunderna](guide/kom-igang-med-html-och-css/grunderna)
+
 
 
 
@@ -90,32 +94,25 @@ Läs följande för att bekanta dig med teknikerna.
 
 Läs följande för att bekanta dig med tekniken.
 
-1. Bekanta dig kort med [webbplatsen för PHP](http://php.net/), bara så att du har varit där och ser hur den ser ut. Det som vi framförallt kommer att använda framöver är [manualen för PHP](http://php.net/manual/en/). Kika snabbt igenom dess innehållsförteckning så att du ser vad det handlar om. Du behöver inte studera något i detalj för tillfället.
-
-1. Läs igenom följande sektion i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
-    * [Grunder och struktur](guide/kom-igang-med-programmering-i-php/grunder-och-struktur)
+1. Bekanta dig kort med [webbplatsen för PHP](http://php.net/), bara så att du har varit där och ser hur den ser ut. Det som vi framförallt kommer att använda framöver är [manualen för PHP](http://php.net/manual/en/). Kika snabbt igenom dess innehållsförteckning så att du ser vad det handlar om. Du behöver inte studera något i detalj för tillfället. Även för PHP funkar googling bra att nå rätt sida i referensmanualen, pröva "php echo" och min rekommendation är att du väljer PHP referensmanualen som landningssida, det blir bäst i längden.
 
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 1 Introduktion
     * Kapitel 2 Variabler (ej vektor, objekt, 2.4 Miljövariabler)
     * Kapitel 4 Operatorer
 
-<!--
-* [Introduktion](guide/kom-igang-med-programmering-i-php/introduktion)
-
-1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden. Kika på de videor som är markerade "[Grunder]".
-    * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1)
--->
+1. Läs igenom följande sektion i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)". Det ger dig en grundläggande introduktion i att hantera PHP och hjälper dig inför de uppgifter du skall göra.
+    * [Grunder och struktur](guide/kom-igang-med-programmering-i-php/grunder-och-struktur)
 
 
 
 ### Videor {#video}
 
-De genomgångar och föresläsningar som spelas in under kursen sparas i en spellista.
+De genomgångar och föresläsningar som spelas in under kursen sparas i en spellista som uppdateras under kursens gång.
 
 * [htmlphp streams ht20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9knU3C_9NarDQFQmn3pazs).
 
-Du kan även finna äldre inspelade föreläsningar.
+Du kan även finna äldre inspelade föreläsningar från tidigare kursomgångar.
 
 * [htmlphp streams ht19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-tE2eS0JRdCZSpXlbGSWVK).
 

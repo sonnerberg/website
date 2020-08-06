@@ -23,6 +23,13 @@ revision:
 Kmom10: Individuell examination
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 <!-- ctr+d efter "try3" och "2020-06-10" för ny examination -->

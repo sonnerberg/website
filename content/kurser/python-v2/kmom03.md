@@ -14,6 +14,13 @@ revision:
 Kmom03: Funktioner
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 I detta kursmoment introduceras du till funktioner och hur de kan underlätta för att återanvända koden. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
 
