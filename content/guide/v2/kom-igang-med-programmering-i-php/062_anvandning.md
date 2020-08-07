@@ -6,7 +6,7 @@ revision:
 Hur används PHP
 =======================
 
-Här är en översikt av hur PHP används.
+Här är en översikt av hur PHP används i dagligt bruk.
 
 <!--more-->
 

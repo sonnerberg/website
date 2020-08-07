@@ -8,7 +8,7 @@ revision:
 Tips från coachen
 ==================================
 
-Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva dem själv. Skapa en egen exempelsida där du testar olika kod-konstruktioner. Du måste testa själv för att lära dig. **Du måste själv skriva koden, det finns inga genvägar.**
+Här följer lite tips från guidens författare, om hur du kan ta dig igenom guiden.
 
 <!--more-->
 
@@ -17,9 +17,11 @@ Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva
 Hur jobba med guiden {#hur}
 -----------------------------------
 
-Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva dem själv. Skapa en egen exempelsida där du testar olika kod-konstruktioner. Du måste testa själv för att lära dig. **Du måste själv skriva koden, det finns inga genvägar.**
+Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva dem själv. Skapa en egen exempelsida där du testar olika kod-konstruktioner. Du måste testa själv för att lära dig.
 
-Spara de exempelprogram du gör, sida förs sida i guiden. Det är alltid bra att ha kodexempel som man kan gå tillbaka till. Även duktiga programmerare återanvänder sina gamla kodlösningar.
+> **Du måste själv skriva koden, det finns inga genvägar.**
+
+Spara de exempelprogram du gör, sida för sida i guiden. Det är alltid bra att ha kodexempel som man kan gå tillbaka till. Även duktiga programmerare återanvänder sina gamla kodlösningar.
 
 > "Det där har jag löst förut, var kan jag hitta koden och kopiera den lösningen?"
 

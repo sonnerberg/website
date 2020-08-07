@@ -17,7 +17,7 @@ För att jobba med guiden så underlättar det om du har installerat en labbmilj
 Labbmiljöns delar {#labbmiljo}
 -----------------------------------
 
-PHP fungerar på olika **operativsystem** så välj det os som du vill jobba i. När man driftar en PHP-baserad webblösning så är det ofta på Linux-maskiner. Men när du utvecklar så går det bra att sitta på vilket operativsystem som helst.
+PHP fungerar på olika **operativsystem** så välj det operativsystem som du vill jobba i. När man driftar en PHP-baserad webblösning så är det ofta på Linux-maskiner. Men när du utvecklar så går det bra att sitta på vilket operativsystem som helst.
 
 Du behöver en **texteditor** där du kan skriva din kod. Vissa använder en enklare texteditor och andra använder ett mer komplett IDE (Integrated Development Environment), pröva dig fram och se vilket som passar dig bäst.
 

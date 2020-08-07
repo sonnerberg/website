@@ -27,7 +27,28 @@ Programmeringsspråket JavaScript används vid byggande av webbplatser men kunsk
 
 Kunskaper om databaser är heller inte nödvändigt inledningsvis, det går bra att skriva PHP utan att koppla sig till en databas.
 
-För att bygga kompletta webbplatser är dock kunskap i HTML, CSS, JavaScript och PHP (eller liknande server-side språk) samt databaser och SQL att rekommendera. Men var sak har sin tid. Det finns många olika sätt att bygga webbplatser och webbtjänster och man måste påbörja sin resa någonstans.
+För att bygga kompletta webbplatser är kunskap i HTML, CSS, JavaScript och PHP (eller liknande server-side språk) samt databaser och SQL att rekommendera. Men var sak har sin tid. Det finns många olika sätt att bygga webbplatser och webbtjänster och man måste påbörja sin resa någonstans.
+
+
+
+Vad lär du dig {#vad}
+----------------------------------
+
+Guiden lär dig bygga enklare PHP-sidor för webbsammanhang. Samtidigt får du lära dig grundläggande programmeringsstrukturer i PHP.
+
+Guiden omfattar även grundläggande koncept i webbutveckling som formulär och sessioner.
+
+Du kommer visas hur man kan strukturera webbapplikationer och några vanliga designmönster för enklare webbapplikationer kommer att visas. Du kommer se hur man kan dela upp en webbapplikation i en katalogstruktur för god ordning och reda.
+
+Guiden omfattar även att skriva egendefinierade funktioner i PHP.
+
+PHP består av inbyggda funktioner som ibland används som funktioner och ibland används på ett objektorienterat programmeringssätt. Du kommer att använda båda dessa programmeringskonstruktioner.
+
+Guiden omfattar inte objektorientering eller hur du skriver objektorienterad kod i PHP.
+
+Guiden omfattar inte koppling till databaser.
+
+Guiden omfattar inte grunderna i HTML och CSS.
 
 
 
