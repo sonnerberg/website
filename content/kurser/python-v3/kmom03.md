@@ -107,7 +107,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[Python och listor](uppgift/python-listor)" för att träna på listor i Python. Spara alla filer under `me/kmom03/lab3`.
+1. Gör laborationen "[Python och listor](uppgift/python-listor-v2)" för att träna på listor i Python. Spara alla filer under `me/kmom03/lab3`.
 
 3. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2-v3)". Spara alla filer under `me/kmom03/marvin2`.
 
