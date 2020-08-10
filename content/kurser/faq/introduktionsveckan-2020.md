@@ -74,9 +74,7 @@ Här är formulär för respektive upprop.
 * [Gör upprop Webbprogrammering 180hp campus](https://forms.gle/VJA4kgu49yPnue2m6)
 * [Gör upprop Webbprogrammering 120hp distans](https://forms.gle/tQhMHsZj1DQn2z6h8)
 * [Gör upprop Webbprogrammering och databaser 30hp distans](https://forms.gle/zva5LMnZ7xnjZQkWA)
-<!--
-* Webbutveckling och programmering 30hp distans
--->
+* [Webbutveckling och programmering 30hp distans](https://forms.gle/BkJMJLp4eDL4fVF39)
 
 
 
