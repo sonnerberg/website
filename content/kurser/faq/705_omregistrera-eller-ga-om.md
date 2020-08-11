@@ -1,4 +1,5 @@
 ---
+title: Omregistrera eller gå om?
 author: mos
 revision:
     "2020-08-11": "(A, mos) Kopierad från forumet inför ht20."
