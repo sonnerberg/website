@@ -5,7 +5,7 @@ author: mos
 revision:
     "2020-08-11": "(A, mos) Ny inför HT20."
 ...
-Studieplanering
+Studieplanering och examen
 ===========================
 
 Vad händer om du får ett antal kurser efter dig? Hur kan du ta igen poängen och hur kan du lägga upp din planering?
