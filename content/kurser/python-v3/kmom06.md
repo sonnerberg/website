@@ -20,7 +20,7 @@ revision:
     "2014-09-19": (B, mos) Tog bort beta status.
     "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom06: Moduler och filer
+Kmom06: Filer
 ==================================
 
 Vi fortsätter med att titta på hur vi kan använda funktioner för att strukturera vår kod. För att ytterligare strukturera koden introduceras moduler där vi delar koden i olika filer. Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
@@ -95,7 +95,6 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/modules` då denna uppgiften bygger vidare på kmom03.
 
 1. Jobba igenom artikeln/övningen "[Att läsa filer som strängar i Python](kunskap/att-lasa-filer-i-python-strings)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
 
@@ -132,8 +131,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Du har gjort din första modul i Python, känns strukturen bra?
-* Hur kan du använda moduler?
 * Hur jobbar man med filer i Python?
 * Vilka fördelar ger det att kunna läsa från fil?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
