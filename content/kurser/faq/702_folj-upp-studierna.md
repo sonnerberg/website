@@ -15,7 +15,7 @@ Varför? {#varfor}
 
 Kanske är detta en bra sak för ditt eget kontrollbehov och lugn och ro, man sover bättre när man har koll på läget.
 
-Framförallt är detta bra om du hamnar efter och behöver rådgöra med programansvarig eller studievägledningen om hur du kan planera dina studier och komma i fatt.
+Framförallt är detta bra om du hamnar efter och behöver rådgöra med programansvarig eller studievägledningen om hur du kan planera dina studier och komma i fatt och nå en examen.
 
 Dels handlar det om att ha koll på kmom per kmom för att se vad du gjort, hur många poäng du har och vad du har kvar.
 
@@ -28,7 +28,7 @@ Har du csn-stress så är det klokt att fylla i din status, det kan visa dig sna
 Ifyllt excelark förutsättning för planering {#ifyllt}
 --------------------------
 
-När du kommunicerar med programansvarig så kommer du troligen att länkas hit och bli ombedd att ta en egen kopia av excelarket och fylla i status. Din programansvarige har dåligt minne och behöver ett underlag för er diskussion rörande din studieplanering, omregistreringar, anpassad studiegång eller examen.
+När du kommunicerar med programansvarig så kommer du troligen att länkas hit och bli ombedd att ta en egen kopia av excelarket och fylla i din status. Din programansvarige har dåligt minne och behöver ett underlag för er diskussion rörande din studieplanering, omregistreringar, anpassad studiegång eller examen.
 
 När du väl fyllt i excelarket så bör du även dubbelkolla direkt i Ladok så att informationen stämmer.
 
