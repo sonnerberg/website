@@ -79,10 +79,12 @@ Titta på följande:
 
 
 
- ### Lästips {#lastips}
+### Lästips {#lastips}
 
-Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
+1. Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
+    * App A Debugging
 
 <!--
 1. Bekanta dig kort med verktyget [Pylint](http://www.pylint.org/).

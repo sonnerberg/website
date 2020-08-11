@@ -3,6 +3,7 @@ title: htmlphp (v4)
 author:
     - mos
 revision:
+    "2020-08-04": "(G, mos) Genomgången och uppdaterad inför ht20."
     "2020-05-20": "(F, mos) Nytt dokument inför uppdatering v4 av kursen."
     "2018-10-15": "(E, mos) Nytt dokument inför uppdatering v3 av kursen."
     "2017-06-15": "(D, mos) Förbereder genomgång inför ht17."
@@ -221,6 +222,53 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 
 
+Planering och studieplaner {#planering}
+---------------------------------------------
+
+Eftersom kursen ges kombinerat på campus och distans så är kursens planering fördelad på ett antal olika dokument. Bekanta dig ed dem så att du har koll på hur kursens upplägg fungerar och vilket som är en normaltakt för kursen.
+
+Kursen har en [veckoplan](./veckoplan) där du få en rekommendation till hur du kursens övergripande planering ser ut och hur du skall lägga upp dina studier, vecka för vecka.
+
+Kursen har en [rekommenderad studieplan](htmlphp/studieplan) som visar en översikt, vecka för vecka, vilket kursmoment som är aktuellt att jobba med. Där finns även rättningsfönster som visar när saker rättas. Följer du denna planeringen så är du i fas med kursens normaltakt.
+
+På Canvas finns datum för inlämningsuppgifter. Ett rättningsfönster pågår normalt sett 15 arbetsdagar efter inlämningsdatum på uppgiften. Inlämningsdatumen på Canvas är ett par dagar senare än vad som visas i den rekommenderade studieplanen, det är för att ge dig lite slack/utrymme för att själv planera dina studier.
+
+Kursen har en [lektionsplan](htmlphp/lektionsplan) som visar när det är lärarledda tillfällen för undervisning/handledning på campus/distans.
+
+Kursen har bokade tillfällen i BTHs schemabokningsprogram, "schemat", som säger när en fysisk sal är bokad på campus. Det finns en länk till det aktuella schemar, via lektionsplanen.
+
+
+
+Läromaterial och resurser {#laromaterial}
+----------------------------------------
+
+Via [läromaterial](./laromaterial) kan du se en översikt av hur kurstillfället har valt att strukturera läromaterialet och vilka resurser och verktyg som används i undervisningen.
+
+Här finner du även länkar till aktuella video streams och spellistor samt chatter och forum för handledning.
+
+
+
+Lärarteam och intressenter {#team}
+----------------------------------------
+
+Du kan hitta [detaljer om ett kurstillfälle](./team) och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
+
+
+
+<!--
+Handledning {#handledning}
+----------------------------------------
+
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+
+I läromaterialet ovan kan du se vilka chatt/forum-verktyg som används vid ditt kurstillfälle.
+
+Läs mer om [lärande community](kurser/faq/larande-community) samt [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
+
+-->
+
+
+<!--
 Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
@@ -244,25 +292,9 @@ Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 Veckoplan {#veckoplan}
 ---------------------------------------------
 
-Det finns en [veckoplan](kurser/htmlphp/veckoplan) som kompletterar den rekommenderade studieplanen och lektionsplanen. Här kan du få en rekommendation till hur du skall lägga upp dina studier, vecka för vecka.
+Det finns en [veckoplan](kurser/htmlphp-v4/veckoplan) som kompletterar den rekommenderade studieplanen och lektionsplanen. Här kan du få en rekommendation till hur du skall lägga upp dina studier, vecka för vecka.
 
-
-
-Läromaterial {#laromaterial}
-----------------------------------------
-
-Via [läromaterial](laromaterial) kan du se en översikt av hur kurstillfället har valt att strukturera läromaterialet och vilka verktyg som används i undervisningen.
-
-
-
-Handledning {#handledning}
-----------------------------------------
-
-Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
-
-I läromaterialet ovan kan du se vilka chatt/forum-verktyg som används vid ditt kurstillfälle.
-
-Läs mer om [lärande community](kurser/faq/larande-community) samt [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
+-->
 
 
 
@@ -270,13 +302,6 @@ Betygsättning {#betyg}
 ------------------------
 
 Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
-
-
-
-Formalia {#formalia}
-----------------------------------------
-
-Du kan hitta [formalia om ett kurstillfälle](formalia) och se lärarteamet, deras roller och kontaktuppgifter tillsammans med vilka studentgrupper som läser kursen och övriga intressenter till kurstillfället.
 
 
 
@@ -302,7 +327,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
+Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/faq/kursutvardering-och-kursutveckling).
 
 
 

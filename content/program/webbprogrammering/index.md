@@ -57,7 +57,7 @@ Programöversikt, planering och uppföljning av kurser {#followup}
 
 Få en översikt av de kurser som ingår i din antagningsomgång till programmet och gör din egen uppföljning av ditt studieresultat i dessa handsnickrade excel-översikter av programmets kurser.
 
-
+<!-- denna information bör även kopieras över till kursfaqen -->
 
 ### Webbprogrammering 120hp distans {#followup120}
 

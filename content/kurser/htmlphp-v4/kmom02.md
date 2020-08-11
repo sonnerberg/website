@@ -14,6 +14,13 @@ revision:
 Kmom02: Bygg ut din webbplats
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 Vi fortsätter att bygga ut me-sidan. Detta moment är en vidare genomgång av grunder i HTML och CSS. Efter kursmomentet så har du en me-sida version 2 som innehåller några av de vanligaste konstruktionerna som återfinns i flertalet "riktiga" webbplatser.
 
 Vi börjar samtidigt använda fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
@@ -54,7 +61,7 @@ Läs följande för att fortsätta bekanta dig med tekniken.
     * [Sidkontroller](guide/kom-igang-med-programmering-i-php/sidkontroller)
 
 1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden. Kika på de videor som är markerade "[Typer]" och "[Kontrollstrukturer]".
-    * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1) 
+    * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1)
 
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 5 Villkorssatser

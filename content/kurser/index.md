@@ -55,7 +55,6 @@ views:
                         data:
                             meta:
                                 type: content
-                                # ht19 htmlphp-v3
                                 route: kurser/htmlphp-v4/block-kurser-kmom
                     column-2:
                         data:

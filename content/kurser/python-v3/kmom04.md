@@ -12,13 +12,13 @@ revision:
     "2014-09-08": (B, mos) Första publika releasen.
     "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom04: Funktioner
+Kmom04: Funktioner och moduler
 ==================================
 
-I detta kursmoment introduceras du till funktioner och hur de kan underlätta för att återanvända koden. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
+I detta kursmoment ska vi kolla på hur vi kan strukturera koden så den blir mer effektiv och mer lättläst. Du introduceras till funktioner och hur de kan underlätta för att återanvända koden och moduler för att strukturera koden i flera filer. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
 
-[FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
+[FIGURE src=/image/python/func-module.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -38,18 +38,6 @@ Läs följande:
     * Ch4 Functions
     * Ch6 Strings
 
-<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist).
-    * Ch8 Strings
-    * Ch14 Files
-
-Python har en inbyggd debugger som kan användas för att felsöka och rätta upp felaktiga program. Läs om den i följande böcker.
-
-1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
-    * App A Debugging
-
-2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python)
-    * Chapter 7 - Using the Debugger -->
-
 
 
 ###Artiklar {#artiklar}
@@ -62,7 +50,7 @@ Det finns inga artiklar.
 
 Titta på följande:
 
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 3.
+1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
     * [Python for Informatics: Chapter 4 - Functions part 1](https://youtu.be/5Kzw-0-DQAk?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
@@ -74,7 +62,8 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Det finns inga lästips.
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
+    * App A Debugging
 
 
 
@@ -90,7 +79,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions`.
 
-1. Fortsätt med del 4 och 5 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern.
+1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions` då koden bygger på förra övningen.
+
+1. Fortsätt med del 4 och 5 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern. Alternativ fortsätt använda Thonny, det är som en grafisk debugger.
 
 
 
@@ -98,7 +89,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med funktioner](uppgift/python-med-funktioner)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom04/lab4`.
+1. Gör uppgiften "[Python med funktioner och moduler](uppgift/python-med-funktioner-och-moduler-v2)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom04/lab4`.
 
 2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v3)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom04/marvin3`.
 
@@ -121,7 +112,9 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Har du programmerat med funktioner tidigare?
 * Hur kan du använda funktioner när du programmerar?
+* Du har gjort din första modul i Python, känns strukturen bra?
+* Hur kan du använda moduler?
 * Vad tyckte du om de olika uppgifterna?
 * Hur tänkte du när du utförde dem?
 * Vad tycker du om video som läromedel, tycker du att de tillför något utöver litteraturen?
-* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.

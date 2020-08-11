@@ -31,7 +31,7 @@ Programmering och problemlösning i Python. Strukturera koden i egna funktioner.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Pythons stränghantering och du har gjort den [andra delen](uppgift/din-egen-chattbot-marvin-steg-2-v3) av Marvin.
+Du kan grunderna i Pythons stränghantering, listor och du har gjort den [andra delen](uppgift/din-egen-chattbot-marvin-steg-2-v3) av Marvin.
 
 
 
@@ -47,29 +47,31 @@ cp -ri kmom03/marvin2/marvin.py kmom04/marvin3/
 cd kmom04/marvin3
 ```
 
-2. Skriv om koden så att menyn och varje menyval finns i en egen funktion.
+2. Skapa en ny fil `main.py`, den ska innehålla koden för while-loopen och vilket val som görs. marvin.py ska innehålla all kod som körs när ett val är gjort, alltså varje enskilt vals kod. Importera marvin.py i main.py.
 
-3. **Menyval 8**: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut.
+3. Skriv om koden så att menyn och varje menyval finns i en egen funktion. All kod ska ligga i funktioner, den enda koden som inte ska ligga i en funktioner är `if __name__ == "__main__":` i slutet av main.py.
 
-4. **Menyval 9**: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
+4. **Menyval 8**: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut.
+
+5. **Menyval 9**: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
 ```python
 input: "Anagram", "Magarna"     output: "Match"
 input: "Paris", "sirap"         output: "Match"
 input: "Nope", "note"           output: "No Match"
 ```
 
-5. **Menyval 10**: Akronym skapare. Marvin ska be om en sträng och skapa en akronym för den genom att plocka ut alla stora bokstäver och sätta ihop till en ny sträng. Tips, [isupper()](https://docs.python.org/3/library/stdtypes.html#str.isupper). Exempel:
+6. **Menyval 10**: Akronym skapare. Marvin ska be om en sträng och skapa en akronym för den genom att plocka ut alla stora bokstäver och sätta ihop till en ny sträng. Tips, [isupper()](https://docs.python.org/3/library/stdtypes.html#str.isupper). Exempel:
 ```python
 input: "BRöderna Ivarsson Osby"             output: "BRIO"
 input: "Ingvar Kamprad Elmtaryd Agunnaryd"  output: "IKEA"
 ```
 
-6. **Menyval 11**: Filtrera listor. Marvin ska ta emot en sträng med olika nummer. Dessa skall omvandlas till en lista som endast innehåller värden över `10`. Tips, [filter()](https://docs.python.org/3/library/functions.html#filter). Exempel:
+7. **Menyval 11**: Filtrera listor. Marvin ska ta emot en sträng med olika nummer. Dessa skall omvandlas till en lista som endast innehåller värden över `10`. Tips, [filter()](https://docs.python.org/3/library/functions.html#filter). Exempel:
 ```python
 input: "6 9 10 11 8 12 15"     output: [ 11, 12, 15 ]
 ```
 
-7. Validera och publicera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
+8. Validera och publicera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
@@ -97,7 +99,7 @@ input: "Palindrom", "par", "ind", "rom"     output: "No match"
 Tips från coachen {#tips}
 -----------------------
 
-Felsöka med debuggern och komplettera med utskrifter av `print()`.
+Felsöka med debuggern/Thonny och komplettera med utskrifter av `print()`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
