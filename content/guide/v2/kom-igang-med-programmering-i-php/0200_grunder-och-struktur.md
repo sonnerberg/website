@@ -10,4 +10,4 @@ revision:
 Grunder och struktur
 =======================
 
-Vi börjar med att titta på grunderna och strukturen i PHP och hur det fungerar tillsammans med HTML och hur man kan köra PHP-program som en webbsida.
+Vi börjar med att titta på grunderna och strukturen i PHP och hur det fungerar tillsammans med HTML och hur man kan köra PHP-program via en webbläsare och skriva ut resultatet genom att generera en websida.
