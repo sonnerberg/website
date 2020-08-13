@@ -1,9 +1,9 @@
 ---
 category: python
 author:
-    - aar
+    - mbn
 revision:
-  "2020-08-11": (B, aar) Skapad inför V3 HT20.
+  "2020-08-11": (A, mbn) Skapad inför V3 HT20.
 ...
 Funktioner, argument och returvärden
 ==================================
@@ -195,4 +195,4 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 Funktioner är en av de viktigaste byggstenarna i programmering. Funktioner ger oss möjligheten att kapsla in kod som vi kan återanvända. Vi kan dessutom ge logiska namn åt delar av koden som gör att utomstående mycket lättare kan förstå hur du har tänkt när du skrev programmet.
 
-Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/functions) och här på [dbwebb](https://dbwebb.se/repo/python/example/functions). Funktions- och argumentnamnen har ändrats i kodexemplen då funktioner i samma modul måste ha unika namn.
+Alla kodexempel från denna övningen finns i kursrepot för [python-kursen](https://github.com/dbwebb-se/python/tree/master/example/functions/functions_v2.py). Funktionsnamnen har ändrats i kodexemplett då funktioner i samma modul måste ha unika namn.
