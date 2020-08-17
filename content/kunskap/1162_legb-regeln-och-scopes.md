@@ -27,7 +27,7 @@ Det globala scopet {#det-globala-scopet}
 --------------------------------------
 När man deklarerar en variabel utanför en funktion kommer det att bli en global variabel. Detta betyder att man kan nå den från vart man än befinner sig i programmet.
 
-Låt oss titta på hur en global variabel kan skapas i Python.
+Låt oss titta på hur en global variabel kan skapas i Python:
 
 ```python
 x = "global"
@@ -42,7 +42,7 @@ print("x outside:", x)
 # x outside: global
 ```
 
-I koden ovan skapade vi `x` som är en global variabel och funktionen `foo()` som skall skriva ut den. Det fungerar fint att läsa värdet men vad skulle hända om vi vill ändra på `x` innuti i funktionen?
+I koden ovan skapade vi `x` som är en global variabel och funktionen `foo()` som skall skriva ut den. Det fungerar fint att läsa värdet men vad skulle hända om vi vill ändra på `x` inuti i funktionen?
 
 Låt oss testa:
 
@@ -58,7 +58,7 @@ foo()
 # UnboundLocalError: local variable 'x' referenced before assignment
 ```
 
-Detta ger oss ett felmeddelande som säger att `x` inte har blivit definerat än. Anledningen till detta är att Python kommer behandla `x` som en lokal variabel. Vi lämnar detta problem så länge och återkommer om hur man kan lösa problemet lite senare.
+Detta ger oss ett felmeddelande som säger att `x` inte har blivit definierat än. Anledningen till detta är att Python kommer behandla `x` som en lokal variabel. Vi lämnar detta problem så länge och återkommer om hur man kan lösa problemet lite senare.
 
 Det lokala scopet {#det-lokala-scopet}
 --------------------------------------
@@ -131,7 +131,7 @@ Nyckelord är helt enkelt speciella reserverade ord. De har specifika ändamål 
 
 Det inkapslade scopet {#det-inkapslade-scopet}
 --------------------------------------
-Det inkapslade (eller icke-lokala) scopet kan vara lite förvirrande till en början och inträffar när man jobbar med nestade funktioner. En nestad funktion är en funktion som är definierad inuti i en annan och används främst till closures. Closures är inget ni behöver kunna men om man är nyfiken finns det mer information [här](https://www.learnpython.org/en/Closures).
+Det inkapslade (eller icke-lokala) scopet kan vara lite förvirrande till en början och inträffar när man jobbar med nestade funktioner. En nestad funktion är en funktion som är definierad inuti i en annan och, används främst till att skapa closures. Closures är inget ni behöver kunna men om man är nyfiken finns det mer information [här](https://www.learnpython.org/en/Closures).
 
 En nestad funktion kan se ut såhär:
 
@@ -153,7 +153,7 @@ outer()
 # x outer: nonlocal
 ```
 
-Vi börjar med att kolla vad som händer när vi kallar på `outer()`. Precis som innan kommer det att skapas ett lokalt scope. Det kommer även att agera som det icke-lokala scopet för `inner()` då variablar som defineras i den yttre varken är dess globala eller lokala värden. Relationen mellan dessa fungerar på samma sätt som de globala och lokala, de inkapslade variablerna nås från dess inre funktioner men inte tilldelas eller uppdateras. Vill man ändra dessa måste man använda nyckelordet `nonlocal`. Detta fungerar precis som med `global`, definiera en lista med namn som kommer att behandlas som icke-lokala. 
+Vi börjar med att kolla vad som händer när vi kallar på `outer()`. Precis som innan kommer det att skapas ett lokalt scope. Det kommer även att agera som ett icke-lokalt scope för `inner()` då variabler som definieras i den yttre varken är dess globala eller lokala värden. Relationen mellan dessa fungerar på samma sätt som den mellan de globala och lokala scopes. Inkapslade variablerna kan nås från dess inre funktioner men inte tilldelas eller uppdateras. Vill man ändra dessa måste man använda nyckelordet `nonlocal`. Detta fungerar precis som med `global`, definiera en lista med namn som kommer att behandlas som icke-lokala. 
 
 Man kan inte kalla på `inner()` utanför det inkapslade scopet.
 
