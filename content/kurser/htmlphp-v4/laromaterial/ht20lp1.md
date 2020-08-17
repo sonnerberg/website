@@ -53,7 +53,7 @@ Installationen av labbmiljön sker i samband med de kursmoment där programvaror
 
 
 
-Chatt via Discord och Discord {#chatt}
+Chatt via Discord och Gitter {#chatt}
 ----------------------------------
 
 Det finns två kurschatter där du kan umgås med studenter, lärare och få eller ge hjälp. Discord-kanalen är den huvudsakliga chatten, så se till att du har tillgång till den. Gitter-chatten används av delvis historiska skäl då den tidigare var huvudchatt för kursen.
