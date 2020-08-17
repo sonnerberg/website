@@ -18,9 +18,9 @@ Vi rekommenderar att du kodar med i denna övning så du själv får känna på 
 Introduktion {#introduktion}
 --------------------------------------
 
-I ett programmeringsspråk innebär “scope” den synlighet och levnadstid som variabler och parametrar har. Python följer det så kallade LEGB -regeln som är namngett efter de första bokstäverna från dess egna scopes (Local, Enclosing, Global och Built-in).
+I ett programmeringsspråk innebär “scope” den tillgänglighet och levnadstid som variabler, funktioner och parametrar har. Python följer det så kallade LEGB -regeln som är namngett efter de första bokstäverna från dess egna scopes (Local, Enclosing, Global och Built-in).
 
-Regeln fungerar som en slags prioritering för namnuppsökning och bestämmer ordningen Python letar upp variabler. Om man till exempel refererar till ett visst namn kommer Python att titta upp det namnet i följd i det lokala, inneslutande, globala och inbyggda scopen. Om namnet existerar får man den första matchningen, annars kommer det att uppstå felmeddelanden.
+Regeln fungerar som en slags prioritering för namnuppsökning och bestämmer ordningen Python letar upp variabler. Om man till exempel refererar till ett visst namn kommer Python att titta upp det namnet i följd av det lokala, inneslutande, globala och inbyggda scopen.
 
 
 Det globala scopet {#det-globala-scopet}
@@ -42,7 +42,9 @@ print("x outside:", x)
 # x outside: global
 ```
 
-I koden ovan skapade vi `x` som är en global variabel och funktionen `foo()` för att skriva ut den. Men vad skulle hända om man vill ändra värdet på `x` i funktionen?
+I koden ovan skapade vi `x` som är en global variabel och funktionen `foo()` som skall skriva ut den. Det fungerar fint att läsa värdet men vad skulle hända om vi vill ändra på `x` innuti i funktionen?
+
+Låt oss testa:
 
 ```python
 x = "global"
@@ -56,13 +58,14 @@ foo()
 # UnboundLocalError: local variable 'x' referenced before assignment
 ```
 
-Detta ger oss ett felmeddelande eftersom Python kommer att behandla `x` som en lokal variabel. Vi lämnar detta problem tills vidare och återkommer lite senare.
-
+Detta ger oss ett felmeddelande som säger att `x` inte har blivit definerat än. Anledningen till detta är att Python kommer behandla `x` som en lokal variabel. Vi lämnar detta problem så länge och återkommer om hur man kan lösa problemet lite senare.
 
 Det lokala scopet {#det-lokala-scopet}
 --------------------------------------
-Det lokala (eller funktions) scopet skapas vid [`lambda`](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions) och funktions -anrop. Tänk dig att varje `def`-uttryck har sin egna lilla bubbla. När den förstörs kommer alla namn och värden försvinna.   
-Så här fungerar det:
+
+Det lokala (eller funktions) scopet skapas vid [`lambda`](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions) och funktions -anrop. Tänk dig att varje funktion har sin egna lilla bubbla och när den förstörs kommer alla namn och värden att försvinna.
+
+Vi tar en närmare titt på hur man en lokal variabel ser ut och vart den kan användas:
 
 ```python
 def foo():
@@ -82,47 +85,53 @@ foo()
 # skriver ut:
 # local
 ```
-
-Vi ser att det globala scopet inte kan få tillgång till `y` och den kan endast komma åt inuti i `foo()`.
-
-
-Om vi återgår till felmeddelandet från exempel 2 kan vi se hur båda scopen krockar. I det första exemplet kände vår funktion igen `x` från det globala scopet men i det andra försökte vi definiera ett lokalt `x`, vilket betyder att vi inte längre hade tillgång till den globala variabeln innan vi multiplicerade den.
-
-Normalt sätt är det en "bad practice" att ändra värden på globala variabler inuti i lokala scopes, men om man behöver göra det så finns nyckelordet `global`. Detta låter oss att använda och skriva över globala variabler i andra scopes.   
-Låt oss ta en titt på hur det kan se ut:
-
 ```python
-x = "global "
 y = "global"
 
 def foo():
-    global x
     y = "local"
+    print("y local:", y)
+
+foo()
+print("y global:", y)
+# skriver ut:
+# y local: local
+# y global: global
+```
+
+Vi ser att det globala scopet inte kan få tillgång till vår lokala variabel `y` då den kan endast läsas inuti i `foo()`. Vi ser också att man kan ha samma variabelnamn med olika värden så länge de ligger i olika scopes.
+
+I det första exemplet kände vår funktion igen `x` från det globala scopet men i det andra försökte vi även att definiera ett lokalt `x`, vilket betyder att vi inte längre har tillgång till den globala variabeln när vi försökte multiplicerade den.
+
+Normalt sätt är det en "bad practice" att ändra värden på globala variabler inuti i lokala scopes, då det föredras att skicka in det som en parameter och sedan returnera den. Men om man behöver göra det så finns nyckelordet `global`. Detta låter oss att använda och skriva över globala variabler utanför vårat lokala scope.   
+Så våran fix skulle likna:
+
+```python
+x = "global"
+
+def foo():
+    global x
     x = x * 2
     print("x inside:", x)
-    print("y inside:", y)
 
 foo()
 print("x outside:", x)
-print("y outside:",  y)
 # skriver ut:
-# x inside: global global 
-# y inside: local
-# x outside: global global
-# y outside: global
+# x inside: globalglobal
+# x outside: globalglobal
 ```
+
 
 Det inbyggda scopet {#det-inbyggda-scopet}
 --------------------------------------
-Det inbyggda scopet fungerar lite annorlunda och innehåller alla specialreserverade nyckelord. Man kan kalla på dessa var man än befinner sig i program. Inga definitioner behövs före användning.
+Det inbyggda scopet fungerar lite annorlunda och innehåller alla specialreserverade nyckelord. Man kan kalla på dessa vart än man befinner sig i programmet.
 
-Nyckelord är helt enkelt speciella reserverade ord. De lagras för specifika ändamål och kan **inte** skrivas över eller användas för något annat syfte i programmet. En lista på alla nyckelord kan hittas i [Pythons dokumentation](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
+Nyckelord är helt enkelt speciella reserverade ord. De har specifika ändamål och kan **inte** skrivas över eller användas för något annat syfte. En lista på alla nyckelord kan hittas i [Pythons dokumentation](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
 
 
 Det inkapslade scopet {#det-inkapslade-scopet}
 --------------------------------------
-Det inkapslade (eller icke-lokala) scopet kan vara lite förvirrande till en början och inträffar när man jobbar med nestade funktioner. En nestad funktion är en funktion som är definierad inuti i en annan och används främst till closures. Closures är inget ni behöver kunna men om man är nyfiken kan du hitta mer information på [denna länk](). 
-
+Det inkapslade (eller icke-lokala) scopet kan vara lite förvirrande till en början och inträffar när man jobbar med nestade funktioner. En nestad funktion är en funktion som är definierad inuti i en annan och används främst till closures. Closures är inget ni behöver kunna men om man är nyfiken finns det mer information [här](https://www.learnpython.org/en/Closures).
 
 En nestad funktion kan se ut såhär:
 
@@ -133,23 +142,20 @@ def outer():
     def inner():
         nonlocal x
         x = "nonlocal"
-        print("inner:", x)
+        print("x inner:", x)
 
     inner()
-    print("outer:", x)
+    print("x outer:", x)
 
 outer()
 # skriver ut:
-# inner: nonlocal
-# outer: nonlocal
+# x inner: nonlocal
+# x outer: nonlocal
 ```
 
-I detta fallet är `inner()` vårat inkapslade scope medans `outer()` fortfarande ligger i det lokala. På samma sätt som de globala variabelnamn kan de lokala namnen nås från dess inre funktioner, men inte tilldelas eller uppdateras.
+Vi börjar med att kolla vad som händer när vi kallar på `outer()`. Precis som innan kommer det att skapas ett lokalt scope. Det kommer även att agera som det icke-lokala scopet för `inner()` då variablar som defineras i den yttre varken är dess globala eller lokala värden. Relationen mellan dessa fungerar på samma sätt som de globala och lokala, de inkapslade variablerna nås från dess inre funktioner men inte tilldelas eller uppdateras. Vill man ändra dessa måste man använda nyckelordet `nonlocal`. Detta fungerar precis som med `global`, definiera en lista med namn som kommer att behandlas som icke-lokala. 
 
-
-Om du vill ändra dessa måste du använda nyckelordet `nonlocal`. Med detta kan du precis som med `global`, definiera en lista med namn som kommer att behandlas som icke-lokala. 
-
-
+Man kan inte kalla på `inner()` utanför det inkapslade scopet.
 
 
 
