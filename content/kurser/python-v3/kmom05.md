@@ -94,17 +94,15 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/warehouse`.
 
-<!-- 1. Gör övningen "[Modulen argparse](kunskap/argparse)" där vi skriver ett CLI-program som tar emot options och argument. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/argparse`. -->
-
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Spara alla filer under `me/kmom06/lab6`.
+1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Spara alla filer under `me/kmom05/lab5`.
 
-1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord-v2)". Spara alla filer under `me/kmom06/analyzer`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - Utsläpp](uppgift/din-egen-chattbot-marvin-utslapp)". Spara alla filer under `me/kmom05/marvin4`.
 
 
 
@@ -129,5 +127,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas?
 * Vad skiljer de tre datastrukturerna från varandra?
 * Hur använde du dem i uppgifterna?
-* Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
-* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
+* Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
