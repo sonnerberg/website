@@ -48,7 +48,7 @@ def create_sandwich_string(ingredients, presentation="Prova vår sandwich som in
 
 Nu har vi bara en funktion men vi kommer snart att bygga vidare och då är det skönt att ha en fin struktur redan från första början. Detta gör vi lättast genom att skapa en ny modul. Vi börjar med att skapa en ny fil, jag väljer att döpa den till `sandwich.py` och flyttar endast den ovanstående funktion.
 
-Sedan skapar vi en till fil `waysub.py` där vi skriver själva programmet. Vi har alltså nu våra funktioner i en fil och själva programmet i en annan. För att vi ska kunna använda våra funktioner från filen `sandwich.py` måste vi importera den filen in i `waysub.py`. Detta gör vi genom att använda `import`. Notera att vi skriver `import waysub` utan filändelse och längst upp i filen. Vi har nu tillgång till alla funktioner som är definieraade i `sandwich.py`. Vi kommer åt funktionerna genom att skriva modulens namn följt av en punkt `.` och sen funktionens namn, `module_name.function_name()`, detta kallas "dot notation".
+Sedan skapar vi en till fil `waysub.py` där vi skriver själva programmet. Vi har alltså nu våra funktioner i en fil och själva programmet i en annan. För att vi ska kunna använda våra funktioner från filen `sandwich.py` måste vi importera den filen in i `waysub.py`. Detta gör vi genom att använda `import`. Notera att vi skriver `import waysub` utan filändelse och längst upp i filen. Vi har nu tillgång till alla funktioner som är definierade i `sandwich.py`. Vi kommer åt funktionerna genom att skriva modulens namn följt av en punkt `.` och sen funktionens namn, `module_name.function_name()`, detta kallas "dot notation".
 
 ```python
 # waysub.py
@@ -82,12 +82,12 @@ print(ingredients_string)
 # En BLT innehåller ost, bacon, sallad och majonnäs.
 ```
 
-Det var inte svårare än så, lägg bara till `as name` i slutet av era import statement. Då kan vi använda det nya namnet i koden nedanför för att referera till den importerade modulen.
+Det är inte svårare än så, lägg bara till `as name` i slutet av era import statement. Då kan vi använda det nya namnet i koden nedanför för att referera till den importerade modulen.
 
 # Inbyggda moduler och importera specifika funktioner {#from}
 
 Python kommer skeppat med ett antal färdiga moduler som innehåller användbara funktioner. T.ex. modulen [math](https://docs.python.org/3/library/math.html) som innehåller funktioner b.la. för avrundning av tal och mer avancerad aritmetik än addition, subtraktion och division. Modulen [random](https://docs.python.org/3/library/random.html) är också användbar, den innehåller funktioner som b.la. kan slumpa fram tal, vilket är väldigt bra att ha. Dessa moduler kan innehålla väldigt många olika funktioner och ibland vill vi kanske bara komma åt en specifik, då är det bra att man kan importera specifika funktioner så man inte får alla.  
-För att göra det använder man sig av nyckelfordet `from` som används genom att specificera modulen vi vill hämta från och sen vilken funktionen vi vill ha (`from module_name import function_name`). Vi kollar på ett exempel där vi importera en funktion för att avrunda tal från "math".
+För att göra det använder man sig av nyckelordet `from` som används genom att specificera modulen vi vill hämta från och sen vilken funktionen vi vill ha (`from module_name import function_name`). Vi kollar på ett exempel där vi importera en funktion för att avrunda tal från "math".
 
 ```python
 from math import floor
@@ -114,7 +114,7 @@ print(pow(5,2))
 
 
 # Exekvera moduler som script {#exekvera}
-Som vi vet är en modul egentligen bara en fil med kod. Detta faktum gör att vi kan exekvera den som ett eget program. Vi fortsätter med vårat exempl och lägger till lite kod som vi tänker oss att vi vill använda för att testa att funktionerna fungerar som de ska.
+Som vi vet är en modul egentligen bara en fil med kod. Detta faktum gör att vi kan exekvera den som ett eget program. Vi fortsätter med vårat exempel och lägger till lite kod som vi tänker oss att vi vill använda för att testa att funktionerna fungerar som de ska.
 
 ```python
 # sandwich.py
