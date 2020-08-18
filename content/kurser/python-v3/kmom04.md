@@ -15,6 +15,13 @@ revision:
 Kmom04: Funktioner och moduler
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 I detta kursmoment ska vi kolla på hur vi kan strukturera koden så den blir mer effektiv och mer lättläst. Du introduceras till funktioner och hur de kan underlätta för att återanvända koden och moduler för att strukturera koden i flera filer. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
 
