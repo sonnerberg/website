@@ -25,7 +25,7 @@ Du kan grunderna i funktioner, listor och du har gjort övningen [Dictionaries o
 Introduktion {#intro}
 -----------------------
 
-I mappen "[example/emission_data]()" finns modulen `emission_data.py` och innehåller all data om utsläpp och länderna. Modulen innehåller fyra variabler:
+I mappen "[example/emission_data](https://github.com/dbwebb-se/python/tree/master/example/emission_data)" finns modulen `emission_data.py` och innehåller all data om utsläpp och länderna. Modulen innehåller fyra variabler:
 
 `emission_1990`: En dictionary med mängden koldioxid (i megatonnes, multiplicera med 1 000 000) som varje land släppte ut år 1990.
   
