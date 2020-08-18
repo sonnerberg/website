@@ -90,6 +90,7 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
+
 ###Kmom01: Kom i gång med Python {#kmom01}
 
 Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Sedan bekantar vi oss med värden och variabler både genom litteraturstudier och praktiska övningar. Som avslutning på kursmomentet skriver vi ett litet program, där vi använder våra kunskaper om värden och variabler.
@@ -106,33 +107,33 @@ Kom i gång med grunderna i Python och öva hur du skriver kod med if-satser, lo
 
 
 
-###Kmom03: Funktioner {#kmom03}
+###Kmom03: Listor {#kmom03}
 
-I detta kursmoment tittar vi hur vi kan använda funktioner för att strukturera våra kod i små återanvändbara delar. Vi tränar på detta i övningar och uppgifter. Vi fortsätter även med våra Marvin-bot som strukturerar med hjälp av funktioner och lär Marvin nya saker.
+Lär dig grunderna i datastrukturen listor. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lista behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i. Du använder sedan dina kunskaper och praktiska färdigheter för att utöka funktionaliteten i Marvin.
 
 [Instruktion till kursmoment 03](kurser/python-v3/kmom03).
 
 
 
-###Kmom04: Moduler och filer {#kmom04}
+###Kmom04: Funktioner och moduler {#kmom04}
 
-Vi fortsätter med att titta på hur vi kan använda funktioner för att strukturera vår kod. För att ytterligare strukturera koden introduceras moduler där vi delar koden i olika filer. Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
+I detta kursmoment tittar vi hur vi kan använda funktioner för att strukturera våra kod i små återanvändbara delar. Vi tränar på detta i övningar och uppgifter. Vi fortsätter även med våra Marvin-bot som strukturerar med hjälp av funktioner och lär Marvin nya saker.
 
 [Instruktion till kursmoment 04](kurser/python-v3/kmom04).
 
 
 
-###Kmom05: Listor {#kmom05}
+###Kmom05: Dictionaries och Tupler {#kmom05}
 
-Lär dig grunderna i datastrukturen listor. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lista behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i. Du använder sedan dina kunskaper och praktiska färdigheter för att utöka funktionaliteten i Marvin.
+Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler. Dictionaries sparar data som ett nyckel-värde par och tupler strukturer vår data i mindre enheter med ett sammanhang.
 
 [Instruktion till kursmoment 05](kurser/python-v3/kmom05).
 
 
 
-###Kmom06: Dictionaries och Tupler {#kmom06}
+###Kmom06: Filer {#kmom06}
 
-Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler. Dictionaries sparar data som ett nyckel-värde par och tupler strukturer vår data i mindre enheter med ett sammanhang. Vi använder våra kunskaper om dictionaries för att bygga ett verktyg för textanalys.
+Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil. Du ska använda allt du har lärt dig i kursen än så länge för att skapa ett program för textanalys.
 
 [Instruktion till kursmoment 06](kurser/python-v3/kmom06).
 
