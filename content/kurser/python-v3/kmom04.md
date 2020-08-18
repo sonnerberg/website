@@ -88,7 +88,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Jobba igenom övningen "[LEGB regeln och scopes i Python](kunskap/legb-regeln-och-scopes)" som handlar hur python hanterar scope och vart variabler är tillgängliga. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions`
 
-1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions` då koden bygger på förra övningen.
+1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python-v2)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions` då koden bygger på förra övningen.
 
 1. Fortsätt med del 4 och 5 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern. Alternativ fortsätt använda Thonny, det är som en grafisk debugger.
 
