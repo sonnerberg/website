@@ -4,6 +4,7 @@ author:
     - aar
 category: python
 revision:
+    "2020-08-19": (D, aar) Bytte cp till rsync, vissa studenter fick inte med .dbwebb mappen med cp.
     "2019-08-13": (C, aar, efo) Uppdaterade enligt enhetstester för analyzer.
     "2018-06-29": (B, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-06-21": (A, efo) Första utgåvan i samband med uppdatering av kmom05 i kursen python.
@@ -53,7 +54,8 @@ Börja med att kopiera text-filen `phil.txt`.
 
 ```bash
 # Ställ dig i kursrepo katalogen
-cp -ri example/text/. me/kmom06/analyzer/
+# rsync används för att kopiera filer och mappar
+rsync -a example/text/ me/kmom06/analyzer/
 cd me/kmom06/analyzer
 ```
 
