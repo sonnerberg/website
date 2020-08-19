@@ -30,9 +30,11 @@ Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är b
 
 [/WARNING]
 
-Du kommer även lära dig hur man kan läsa information från en fil samt att lagra information i en fil.
+Som vi jobbat i tidigare kursmoment försvinner all data när vi stänger av programmet, vi har ingen permanent data. Genom att skriva ner data i filer under exekvering kan vi uppnå ett permanent minne åt våra program. I detta kursmomentet kommer ni lära er läsa data från fil och hur man skriver ner data till fil.
 
-<!--[FIGURE src=/image/snap/py-marvin.png?w=w2 caption="Marvin i Python."]-->
+Vi kommer även lämna Marvin och istället ska ni skapa ett nytt program där ni får öva mycket på dictionaries och listor för att bygga ett verktyg för textanalys.
+
+[FIGURE src=/img/wikimedia/English_letter_frequency_(frequency).svg caption="Frekvensen för förekomsten av bokstäver i en engelsk text. [Bild från Wikimedia](https://en.wikipedia.org/wiki/Letter_frequency#mediaviewer/File:English_letter_frequency_(frequency).svg)."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -52,22 +54,10 @@ Läs följande:
     * Ch7 Files
 
 
-<!-- 2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
-    * Ch10 Lists
-    * Ch14 Files
-
-
 
 ###Artiklar {#artiklar}
 
 Det finns inga artiklar.
-
-<!--
-Läs följande:
-
-2. Läs om hur man skapar en två-dimensionell array av listor i Python.
-    * [How to define two-dimensional array in python](http://stackoverflow.com/questions/6667201/how-to-define-two-dimensional-array-in-python)
--->
 
 
 
@@ -85,7 +75,7 @@ Titta på följande:
 
 
 
-### Lästips {#lastips}
+###Lästips {#lastips}
 
 Det finns inga lästips.
 
@@ -103,29 +93,25 @@ Det finns inga lästips.
 Genomför övningarna för att träna inför uppgifterna.
 
 
-1. Jobba igenom artikeln/övningen "[Att läsa filer som strängar i Python](kunskap/att-lasa-filer-i-python-strings)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/file`.
+1. Jobba igenom artikeln/övningen "[Att läsa filer som strängar i Python](kunskap/att-lasa-filer-i-python-strings-v2)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/file`.
 
-1. Jobba igenom artikeln/övningen "[Att läsa filer till en lista i Python](kunskap/att-lasa-filer-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/file`.
+1. Jobba igenom artikeln/övningen "[Att läsa filer till en lista i Python](kunskap/att-lasa-filer-i-python-v2)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/file`.
 
 
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med funktioner och moduler](uppgift/python-med-funktioner-moduler)" för att träna på olika typer av funktioner och moduler. Spara alla filer under `me/kmom04/lab4`.
+1. Gör uppgiften "[Python med filer - SKAPA](uppgift/python-med-funktioner-moduler)" för att träna på olika typer av funktioner och moduler. Spara alla filer under `me/kmom06/lab6`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - inventarie](uppgift/din-egen-chattbot-marvin-inventarie)". Spara alla filer under `me/kmom04/marvin3`.
+1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord-v2)". Spara alla filer under `me/kmom06/analyzer`.
+
 
 
 
 ### Extra {#extra}
 
 Det finns inga extrauppgifter.
-
-<!-- 1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1](uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
-    * [Curses Programming with Python](https://docs.python.org/3/howto/curses.html)
-    * [Curses — Terminal handling for character-cell displays](https://docs.python.org/3/library/curses.html) -->
-
 
 
 
@@ -141,4 +127,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur jobbar man med filer i Python?
 * Vilka fördelar ger det att kunna läsa från fil?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
-* Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall.
