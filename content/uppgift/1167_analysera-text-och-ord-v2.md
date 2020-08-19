@@ -67,7 +67,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Filen `main.py` skall enbart innehålla kommandoloopen, tänk while-loopen i marvin, och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften. Koden ska ligga i en funktion som heter `main`.
 
-1. Menyvalet `menu` ska skriva ut menyn och vilka val man kan göra.
+1. Menyvalet `menu` ska skriva ut menyn och vilka val man kan göra. PS. Man ska inte vara tvungen att skriva menu först för att skriva de andra menyvalen.
 
 1. Analysera antal rader (ej tomma), ord och bokstäver med menyvalen `lines`, `words` och `letters`. Skriv en funktion för varje kommando.
 
