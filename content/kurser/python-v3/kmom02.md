@@ -16,13 +16,6 @@ revision:
 Kmom02: Villkor och loopar
 ==================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Vi har bekantat oss med värden, datatyper och variabler och det är nu dags för en introduktion till hur vi kan styra flödet av data i våra program. Först tittar vi på booleska operatorer och hur vi kan använda sant eller falsk för att exekverera olika delar av koden. Efter det introduceras loopar som kan användas för upprepa delar av koden. Till slut är det dags att skriva ditt första lite större program där Marvin skall få lite intelligens när han svarar på frågor.
 
 [FIGURE src=/image/python/py-marvin.png?w=w2 caption="Marvin i Python."]
@@ -113,7 +106,7 @@ Titta på följande:
 
 1. Jobba igenom artikeln/övningen "[Villkor och loopar](kunskap/villkor-och-loopar)" för att öva in hur vi kan styra flödet i våra program. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom02/flow`.
 
-1. Läs igenom och kolla på videorna för del 1 till 3 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern.
+1. Läs igenom och kolla på videorna för del 1 till 3 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern. Kan ersättas av Thonny. Thonny fungerar som en grafisk debugger.
 
 
 
