@@ -20,13 +20,6 @@ revision:
 Kmom01: Kom i gång med Python
 ==================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Python fungerar på många miljöer och i olika varianter.
 
 Vi börjar skriva de första enkla programmen för att komma underfund med hur Python kan användas och hur programmeringsspråket fungerar i grunden.
@@ -63,7 +56,7 @@ Om du vill ha en introduktion till det som händer i steg 2-4 så kikar du på v
 
 1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
 
-1. Du kan nu [ladda ned (klona) ditt lokala kursrepo `python`](dbwebb-cli/clone) som innehåller kursmaterial för kursen. Här kommer du att skriva all kod till övningar och uppgifter.
+1. Du kan nu [ladda ned (klona) ditt lokala kursrepo `python`](dbwebb-cli/clone) som innehåller kursmaterial för kursen (**OBS** i artikeln används kursen `htmlphp` som exempel, byt ut det mot `python`). Här kommer du att skriva all kod till övningar och uppgifter.
 
 
 
