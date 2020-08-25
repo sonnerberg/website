@@ -80,7 +80,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ### Kmom01: Ramverk, innehåll, style {#kmom01}
 
-Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material. Även om vi tittar på de mjuka aspekterna så är tanken att vi lära oss "hårda" tekniker för att jobba med de mjuka. Låt se vad det kan innebära i praktiken. Vi bygger vår första style med CSS.
+Vi ska ta oss en titt på den mjukare delen av webbprogrammering, webbdesign och användbarhet. Det handlar också om snabba sidomladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material. Vi ska även kolla över de tekniker som används för att uppnå detta.
 
 [Instruktion till kursmoment 01](./kmom01).
 
