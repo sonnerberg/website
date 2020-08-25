@@ -196,10 +196,10 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 |------------|------------------------|
 | Kmom01     | Ch 1, 2                |
 | Kmom02     | Ch 3, 5                |
-| Kmom03     | Ch 4                   |
-| Kmom04     | Ch 7                   |
-| Kmom05     | Ch 8                   |
-| Kmom06     | Ch 9, 10               |
+| Kmom03     | Ch 8                   |
+| Kmom04     | Ch 4                   |
+| Kmom05     | Ch 9, 10               |
+| Kmom06     | Ch 7                   |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
