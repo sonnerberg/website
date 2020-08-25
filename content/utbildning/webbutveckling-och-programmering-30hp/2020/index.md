@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-08-25": "(G, aar) Skapade inför HT20."
     "2020-03-09": "(G, aar) Inför HT20. Bytte ut linux mot oopython."
     "2018-06-29": "(F, mos) Inför HT18."
     "2017-06-08": "(E, mos) Ny strukur med antagningsomgångar."
