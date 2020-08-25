@@ -1,6 +1,6 @@
 ---
 title: design-v3
-author: mos
+author: nik
 #views:
 #    flash:
 #        region: flash
@@ -8,7 +8,7 @@ author: mos
 #        data:
 #            src: "image/snapht16/design-van-gogh.jpg?w=1100&h=360&cf&s=10&s=8&smooth&sharpen&f3=mean_removal&emboss&convolve=lighten:emboss-alt:motion"
 revision:
-    "2020-06-17": "(A, mos) Landningssida för v3."
+    "2020-08-25": "(A, nik) Landningssida för v3."
 ...
 Kursen design (v3)
 ===================================================
@@ -40,11 +40,11 @@ Kursen omfattar följande områden:
 * Typografi
 * Lagar och regler kring webbplatser
 * Anpassa webbplats för funktionshindrade
-* Grid-baserad layout, horisontell och vertikal
-* CSS-konstruktioner för style med CSS/LESS/SASS
+* Grid-baserad layout
+* CSS-konstruktioner för style med CSS/SASS
 * Bygga tema till webbplats
 * Använda PHP-ramverk för att skapa och designa webbplats
-* Sökmotoroptimering
+<!-- * Sökmotoroptimering -->
 
 
 
@@ -72,7 +72,6 @@ Efter genomförd kurs skall studenten:
 * ha god praktisk förmåga att hantera de tekniker, verktyg och miljöer som används för att designa och göra en webbplats användbar.
 
 
-<!--
 Kursmoment {#kursmoment}
 ------------------------
 
@@ -87,21 +86,21 @@ Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det ha
 
 
 
-### Kmom02: LESS och responsivitet {#kmom02}
+### Kmom02: SASS och typografi {#kmom02}
 
-Temat, eller stylen, skapar vi med LESS, en preprocessor till CSS. Vi lär oss grunderna i LESS och hur vi bygger CSS-filer från LESS-konstruktioner.
+Vi går igenom hur man kan designa med SASS, som är en preprocessor till CSS. Vi lär oss grunderna, hur vi bygger CSS-filer ifrån våra SASS-konstruktioner.
 
-Vi försöker bygga en modulär struktur av LESS-filer som vi delar in i LESS-moduler. Det skapar en grund av style-kod som blir enkla att återanvända i andra sammanhang, eller längre fram när vi gör fler teman och anpassar våra teman.
+Vi går även igenom fonter, vad man ska tänka på kring valet av font, var man kan hitta fonter och hur man använder dem tillsammans med SASS. Vi nuddar även ikoner, skillnaden mellan webbläsarna och begreppet minifiering.
 
 [Instruktion till kursmoment 02](./kmom02).
 
 
 
-### Kmom03: Grid, layout, typografi {#kmom03}
+### Kmom03: Layout {#kmom03}
 
-Vi skall titta på ett **vertikalt grid** som ger oss kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*. Här kan vi placera våra regioner i rader.
+Med hjälp utav CSS-grid och flexbox går vi igenom hur man kan lägga upp sin layout, vad man ska tänka på och hur de båda teknikerna används.
 
-Vi tittar sedan vidare på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen.
+Vi går även igenom vad polyfill är, hur man kan placera saker utanför sin layout och webbläsarens devtools, som är webbutvecklarens bästa vän.
 
 [Instruktion till kursmoment 03](./kmom03).
 
@@ -127,11 +126,9 @@ Vi skall se hur vi kan använda bilder för att skapa "bildtunga" teman, här ä
 
 
 
-### Kmom06: Design {#kmom06}
+### Kmom06: Tillgänglighet och prestanda {#kmom06}
 
-Det finns ett begrepp "the final touch" som är bra att vara medveten om i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
-
-Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Vi pratar om webbplatsens design och känslan den ger när man tittar på den. Det kan vara de små sakerna som gör det, *the final touch*.
+Vi arbetar med verktyget Google Lighthouse för att på ett tydligt sätt kunna se hur vi kan förbättra vår hemsida.
 
 [Instruktion till kursmoment 06](./kmom06).
 
@@ -145,7 +142,7 @@ Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det si
 
 
 
-Kurslitteratur {#litteratur}
+<!-- Kurslitteratur {#litteratur}
 ----------------------------
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
@@ -158,9 +155,8 @@ Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal art
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
-* **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**  
+* **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**   -->
 
--->
 
 <!--
 ### Referenslitteratur {#referenslitteratur}
