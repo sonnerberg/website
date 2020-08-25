@@ -92,8 +92,15 @@ update-docker: codebase-update site-build-docker clean-cache-anax
 warm-cache:
 	@$(call HELPTEXT,$@)
 	# Update this to pre warm the (local) cache
-	-time curl -s https://dbwebb.se > /dev/null
-	-curl -s --head https://dbwebb.se
+	@-install -d -m 777 $(LOCAL_HTDOCS)/cache/anax-warm
+	@-install -d -m 777 $(LOCAL_HTDOCS)/cache/anax
+	time php $(LOCAL_HTDOCS)/script/cache-warm.php
+	@-rm -rf $(LOCAL_HTDOCS)/cache/anax-pre
+	@-mv $(LOCAL_HTDOCS)/cache/anax $(LOCAL_HTDOCS)/cache/anax-pre
+	@-mv $(LOCAL_HTDOCS)/cache/anax-warm $(LOCAL_HTDOCS)/cache/anax
+
+	#-time curl -s https://dbwebb.se > /dev/null
+	curl -s --head https://dbwebb.se
 
 
 
@@ -131,7 +138,7 @@ update-all: codebase-update submodule-update site-build local-publish-clear warm
 .PHONY: local-publish
 local-publish:
 	@$(call HELPTEXT,$@)
-	rsync -av $(EXCLUDE_ON_PUBLISH) config content htdocs vendor $(LOCAL_HTDOCS)
+	rsync -av $(EXCLUDE_ON_PUBLISH) config content htdocs script vendor $(LOCAL_HTDOCS)
 
 	@# Enable upload of attachement to the forum
 	[ ! -d $(LOCAL_HTDOCS)/htdocs/forum/files ] ||  chmod 777 $(LOCAL_HTDOCS)/htdocs/forum/files
