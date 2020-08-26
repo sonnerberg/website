@@ -53,7 +53,7 @@ $ sh /media/cdrom/VBoxLinuxAdditions.run
 Reboot the VM:
 
 ```bash
-$ reboot
+$ sudo reboot
 ```
 
 When this is done, we turn off the VM and enter VirtualBox "settings". Under "General-> Advanced" we find "Shared Clipboard" and "Drag n drop". Set both of them to "Bidirectional" and restart Debian.
