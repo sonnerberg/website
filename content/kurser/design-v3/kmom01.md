@@ -114,7 +114,7 @@ I detta kursmomentet jobbar vi med CSS. Läs följande.
 
 Följande uppgift skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg en portfolio sida](#)". Du skall bygga en portfolio-sida som du taggar och publicerar på GitHub. Spara allt under `me/portfolio`.
+1. Lös uppgiften "[Bygg en portfolio sida](uppgift/skapa-din-egen-portfolio)". Du skall bygga en portfolio-sida som du taggar och publicerar på GitHub. Spara allt under `me/portfolio`.
 
 1. Försäkra dig om att du har gjort `dbwebb publish portfolio` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
