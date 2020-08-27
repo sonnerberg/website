@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2020-08-27": "(K, mos) Lade till övningstenta från 2020 maj."
     "2020-05-20": "(J, mos) Lade till övningstenta från 2020 mars."
     "2020-03-25": "(I, mos) Förtydligande om redovisningsvideo."
     "2020-02-19": "(H, mos) Lade till tentor för 2020."
@@ -102,6 +103,7 @@ Det finns ingen garanti för att nya tentamen kommer att följa exakt samma uppl
 Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
 
 * 2020
+    * [Vapen](./tentamen/vapen)
     * [Rock](./tentamen/rock)
 
 * 2019
