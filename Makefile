@@ -128,7 +128,7 @@ update: codebase-update site-build local-publish warm-cache
 
 # target: update-all              - Update codebase and publish by clearing the cache.
 .PHONY: update-all
-update-all: codebase-update submodule-update site-build local-publish-clear warm-cache
+update-all: codebase-update submodule-update site-build local-publish warm-cache
 	@$(call HELPTEXT,$@)
 
 
