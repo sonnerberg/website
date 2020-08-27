@@ -99,7 +99,6 @@ warm-cache:
 	@-mv $(LOCAL_HTDOCS)/cache/anax $(LOCAL_HTDOCS)/cache/anax-pre
 	@-mv $(LOCAL_HTDOCS)/cache/anax-warm $(LOCAL_HTDOCS)/cache/anax
 
-	#-time curl -s https://dbwebb.se > /dev/null
 	curl -s --head https://dbwebb.se
 
 
@@ -122,7 +121,7 @@ clean-cache-anax:
 
 # target: update                  - Update codebase (no submodules) and publish by clearing the cache.
 .PHONY: update
-update: codebase-update site-build local-publish-clear warm-cache
+update: codebase-update site-build local-publish warm-cache
 	@$(call HELPTEXT,$@)
 
 
