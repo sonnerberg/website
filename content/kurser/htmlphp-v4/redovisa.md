@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-08-27": (E, aar) Bytte ut videon för lämna in ett kmom.
     "2018-08-16": (D, mos) Bort redovisning i forum samt bytte ITs mot Canvas.
     "2017-06-15": (C, mos) Nytt stycke om feedback.
     "2015-08-06": (B, mos) Var man sparar redovisningstexter i kursrepot.
@@ -109,8 +110,7 @@ Du kan själv provköra och se samma resultat som läraren ser. Det är en mycke
 Klart! {#klar}
 ---------------------------------------
 
-[INFO]OBS! i videon nedan görs inlämningen till It's Learning men den används inte längre utan nu ska ni lämna in på [Canvas](https://www.bth.se/canvas/) istället![/INFO]
-[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
+[YOUTUBE src=-7Wzi_IkpEU width=630 caption="Andreas visar hur man lämnar in ett kmom."]
 
 Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
 

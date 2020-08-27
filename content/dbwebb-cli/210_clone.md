@@ -7,8 +7,8 @@ Förslagsvis så samlar du alla kursrepon i en och samma katalog och döper den 
 
 ```bash
 # Byt $HOME till $HOMEPATH för hemmakatalog för Windowsanvändaren
-$ mkdir $HOME/dbwebb-kurser
-$ cd $HOME/dbwebb-kurser
+$ mkdir "$HOME/dbwebb-kurser"
+$ cd "$HOME/dbwebb-kurser"
 ```
 
 Använder du Windows och Cygwin kan du byta ut `$HOME` mot `$HOMEPATH` så får du sökvägen till din hemmakatalog för din Windowsanvändare.

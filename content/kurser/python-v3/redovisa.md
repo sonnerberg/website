@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-08-27": (H, aar) Bytte ut videon för lämna in ett kmom.
     "2019-06-14": (G, aar) Tog bort krav om forum.
     "2017-06-14": (F, mos) Ny struktur i me/redovisa.
     "2015-08-25": (E, mos) Bytte bin/dbwebb mot dbwebb.
@@ -87,8 +88,8 @@ Du kan själv provköra och se samma resultat som läraren ser. Det är en mycke
 
 Klart! {#klar}
 ---------------------------------------
-[INFO]OBS! i videon nedan görs inlämningen till It's Learning men den används inte längre utan nu ska ni lämna in på [Canvas](https://www.bth.se/canvas/) istället![/INFO]
-[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
+
+[YOUTUBE src=-7Wzi_IkpEU width=630 caption="Andreas visar hur man lämnar in ett kmom."]
 
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
