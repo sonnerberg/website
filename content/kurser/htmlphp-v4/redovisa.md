@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2020-08-27": (E, aar) Bytte ut videon för lämna in ett kmom.
+    "2020-08-28": (E, mos) Ny video som visar inlämningen.
     "2018-08-16": (D, mos) Bort redovisning i forum samt bytte ITs mot Canvas.
     "2017-06-15": (C, mos) Nytt stycke om feedback.
     "2015-08-06": (B, mos) Var man sparar redovisningstexter i kursrepot.
@@ -100,18 +100,15 @@ dbwebb inspect kmom01
 
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
-Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
-
-
-[YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
+Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att själv upptäcka eventuella slarvfel.
 
 
 
 Klart! {#klar}
 ---------------------------------------
 
-[YOUTUBE src=-7Wzi_IkpEU width=630 caption="Andreas visar hur man lämnar in ett kmom."]
+Kika gärna på Andreas video när han rättar valideringsfel, kör inspect och lämnar in kmom01 genom att publicera till studentservern och lämna in på Canvas. Videon är för python-kursen men samma handhavande gäller i htmlphp, det är bara andra programmeringsspråk.
 
-Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
+[YOUTUBE src=-7Wzi_IkpEU width=630 caption="Andreas visar hur man lämnar in kmom01 i python-kursen."]
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
