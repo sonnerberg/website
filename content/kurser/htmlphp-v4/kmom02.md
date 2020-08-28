@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-08-28": (J, mos) Genomläst, mindre redaktionella uppdateringar i text.
     "2019-09-06": (I, mos) Ny videoserie tillsammans med guiden.
     "2018-08-21": (H, mos) Uppdaterad inför ht18.
     "2017-08-28": (G, mos) Bort referens till Firebug.
@@ -14,16 +15,9 @@ revision:
 Kmom02: Bygg ut din webbplats
 ==================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Vi fortsätter att bygga ut me-sidan. Detta moment är en vidare genomgång av grunder i HTML och CSS. Efter kursmomentet så har du en me-sida version 2 som innehåller några av de vanligaste konstruktionerna som återfinns i flertalet "riktiga" webbplatser.
 
-Vi börjar samtidigt använda fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
+Vi använder fler enkla PHP-konstruktioner för att dra nytta av PHP och dess fördelar.
 
 Vi börjar också prata om hur vi bör strukturera vår kod i filer, kataloger och vi börjar bygga en terminologi för olika typer av kod.
 
@@ -55,6 +49,10 @@ Läs följande för att fortsätta bekanta dig med teknikerna.
 
 Läs följande för att fortsätta bekanta dig med tekniken.
 
+1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
+    * Kapitel 5 Villkorssatser
+    * Kapitel 6 Iterationer (ej `foreach`)
+
 1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
     * [Värden, variabler och typer](guide/kom-igang-med-programmering-i-php/varden-variabler-och-typer)
     * [Kontrollstrukturer](guide/kom-igang-med-programmering-i-php/kontrollstrukturer)
@@ -62,10 +60,6 @@ Läs följande för att fortsätta bekanta dig med tekniken.
 
 1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden. Kika på de videor som är markerade "[Typer]" och "[Kontrollstrukturer]".
     * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1)
-
-1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
-    * Kapitel 5 Villkorssatser
-    * Kapitel 6 Iterationer (ej `foreach`)
 
 
 
@@ -83,7 +77,7 @@ Se till att du vet hur standarderna för HTML och CSS ser ut, bara så du vet. D
 
 ### Videor {#video}
 
-Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
+Du fick länkar till kursens inspelade och sparade videor i försa kursmomentet. Kika där om du glömt länkarna.
 
 
 
