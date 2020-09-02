@@ -85,6 +85,8 @@ Titta på följande:
 
 1. Kolla på bilden [My code isn't working](/image/python/code_not_working.jpg). Spara bilden för att underlätta när saker går fel.
 
+1. Läs [Hur man tänker som en programmerare och problemlösare](/coachen/tank-som-programmerare). Sammanfattning av en artikel som diskuterar hur man tänker som en programmerare.
+
 1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * App A Debugging
 
