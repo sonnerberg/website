@@ -55,7 +55,11 @@ Det räcker om du läser ovanstående, men vill du ha lite till och samtidigt li
 
 ### Artiklar {#artiklar}
 
-Det finns inga artiklar.
+Läs följande:
+
+1. Läs [Hur man tänker som en programmerare och problemlösare](/coachen/tank-som-programmerare). Sammanfattning av en artikel som diskuterar hur man tänker som en programmerare.
+
+1. Kolla på bilden [My code isn't working](/image/python/code_not_working.jpg). Spara bilden för att underlätta när saker går fel.
 
 
 
@@ -82,10 +86,6 @@ Titta på följande:
 ### Lästips {#lastips}
 
 1. Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
-
-1. Kolla på bilden [My code isn't working](/image/python/code_not_working.jpg). Spara bilden för att underlätta när saker går fel.
-
-1. Läs [Hur man tänker som en programmerare och problemlösare](/coachen/tank-som-programmerare). Sammanfattning av en artikel som diskuterar hur man tänker som en programmerare.
 
 1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * App A Debugging
