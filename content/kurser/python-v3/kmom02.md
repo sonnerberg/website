@@ -83,6 +83,8 @@ Titta på följande:
 
 1. Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
 
+1. Kolla på bilden [My code isn't working](/image/python/code_not_working.jpg). Spara bilden för att underlätta när saker går fel.
+
 1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * App A Debugging
 
