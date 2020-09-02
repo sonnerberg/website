@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-09-01": "(H, aar) Bytte javascript1 mot js."
     "2020-03-09": "(G, aar) Inför HT20. Bytte ut linux mot oopython."
     "2018-06-29": "(F, mos) Inför HT18."
     "2017-06-08": "(E, mos) Ny strukur med antagningsomgångar."
@@ -35,7 +36,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/javascript1-v2/block-kurser-kmom
+                                route: kurser/js-v1/block-kurser-kmom
                     column-3:
                         data:
                             meta:
@@ -97,7 +98,7 @@ Kurspaketet består av fyra kurser, varje kurs är på 7.5hp och examineras sepa
 | Namn | Smeknamn | Poäng |
 |------|----------|-------|
 | Programmering och Problemlösning med Python               | python      | 7.5hp |
-| Programmering med JavaScript                              | javascript1 | 7.5hp |
+| Programmering med JavaScript                              | js          | 7.5hp |
 | Algoritmer och datastrukturer med objektorienterad Python | oopython    | 7.5hp |
 | Webbapplikationer för mobila enheter                      | webapp      | 7.5hp |
 
