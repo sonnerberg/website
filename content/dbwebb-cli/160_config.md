@@ -21,7 +21,7 @@ Akronymen består av dina initialer följt av året som ditt studentkonto skapad
 Konfigurationsfilen sparas i din lokala hemmakatalog, du kan titta på dess innehåll via följande kommando.
 
 ```text
-$ cat $HOME/.dbwebb.config
+$ cat "$HOME/.dbwebb.config"
 ```
 
 Om något blir fel så kan du alltid skapa om din konfigurationsfil. Det är bara att köra samma kommando igen.

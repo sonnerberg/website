@@ -16,7 +16,7 @@ Om något går fel kan du köra kommandot igen, så skapas nya SSH-nycklar.
 SSH-nycklarna sparas i din hemmakatalog under `$HOME/.ssh`. 
 
 ```text
-$ ls -l $HOME/.ssh
+$ ls -l "$HOME/.ssh"
 ```
 
 Är du nyfiken på hur de kan se ut så kikar du på de filer som ligger i den katalogen.
