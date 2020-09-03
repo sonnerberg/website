@@ -48,4 +48,4 @@ Namnbaserade virtuall hostar med Apache är ett bra sätt att köra flera webbpl
 
 När man nu, som vi gjort, kombinerar detta med servar i VirtualBox, så får du en möjlighet att köra många webbplatser och att köra dem på många olika servrar som kan vara konfigurerade på olika sätt. Det kan vara ett kraftfullt verktyg för en webbprogrammerare.
 
-Om du stöter på problem så kan du alltid fråga i forumet. Det finns en egen tråd om [Apache Name-based Virtual Hosts](t/4341).
+<!-- Om du stöter på problem så kan du alltid fråga i forumet. Det finns en egen tråd om [Apache Name-based Virtual Hosts](t/4341). -->
