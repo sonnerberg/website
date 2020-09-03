@@ -1,12 +1,6 @@
 ---
 ...
-Webbserver Apache
+Webbläsare
 ==================================
 
-Det är bra med en lokal webbserver där du kan testa dina webbsidor innan du publicerar dem till en driftserver.
-
-I kurserna rekommenderar vi att installera webbservern Apache via paketet XAMPP som innehåller webbservern Apache.
-
-På Windows och Mac OS är det rekommenderat att du kör XAMPP, men sitter du på Linux så kan du göra som du vill. Kanske är det enklare att installera med pakethanteraren. Fråga i forumet om du behöver råd.
-
-Läs mer i artikeln [Installera Apache webbserver för utveckling](kunskap/installera-apache-webbserver-for-utveckling) på olika plattformar.
+Vi behöver inte fler verktyg för att jobba med Javascript på klientsidan.
