@@ -119,5 +119,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur jobbar man med filer i Python?
-* Vilka fördelar ger det att kunna läsa från fil?
-* Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?
+* Vilka fördelar ger det att kunna läsa från och skriva till filer?
+* Hur gick det att utföra uppgifterna?
+* Hur gick det med att rätta analyzer uppgiften med rättningsverktyget?
