@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-09-04": "(H, mos) Genomgången inför ht20."
     "2018-09-17": (F, mos) Uppdaterad för v3, mer exempelprogram.
     "2017-06-15": (E, mos) Uppdaterad labbserie.
     "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
@@ -12,18 +13,11 @@ revision:
 Kmom04: Formulär och sessioner
 ==================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 I detta kursmoment går vi igenom fler grunder i CSS, grunder såsom boxmodellen, storlekar, display, float, fonter, färger och bakgrund. Du får möjligheten att leka runt och testa olika konstruktioner. Det är ett bra sätt att lära sig.
 
-I PHP får du lära dig att skapa egna funktioner och se hur du jobbar med HTML formulär och sessioner i PHP. Du kommer bekanta dig med de inbyggda globala arrayerna `$_GET`, `$_POST` och `$_SESSION` och se hur de relaterar till formulär och sessioner.
+I PHP får du lära dig att skapa egna funktioner och se hur du jobbar med HTML formulär och sessioner i PHP. Du kommer bekanta dig med de inbyggda globala arrayerna (`$_GET`) `$_POST` och `$_SESSION` och se hur de relaterar till formulär och sessioner.
 
-Du jobbar med ett flöde där formulär postar till en procesingsida som skickar vidare till en resultatsida. Det flödet är ett vanligt sätt att strukturera sina webbapplikationer när man uppdaterar data i webbplatsen.
+Du jobbar med ett flöde där formulär postar till en processingsida som skickar vidare till en resultatsida. Det flödet är ett vanligt sätt att strukturera sina webbapplikationer när man uppdaterar data i webbplatsen.
 
 Du gör en labb med funktioner och du implementerar en multisida i din me-sida där du använder både formulär och sessioner.
 
@@ -63,19 +57,24 @@ Läs följande för att fortsätta bekanta dig med teknikerna.
 
 Läs följande för att fortsätta bekanta dig med tekniken.
 
+1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
+    * Kapitel 7 Funktioner
+
 1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
     * [Egenskapade funktioner](guide/kom-igang-med-programmering-i-php/egenskapade-funktioner)
     * [HTML formulär](guide/kom-igang-med-programmering-i-php/html-formular)
     * [Sessioner](guide/kom-igang-med-programmering-i-php/sessioner)
 
-1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
-    * Kapitel 7 Funktioner
+<!--
+1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden. Kika på de videor som är markerade "[Funktioner]", "[Formulär]" och "[Sessioner]".
+    * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1)
+-->
 
 
 
-### Video  {#video}
+### Videor {#video}
 
-Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
+Du fick länkar till kursens inspelade och sparade videor i försa kursmomentet. Kika där om du glömt länkarna.
 
 
 
