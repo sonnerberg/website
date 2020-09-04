@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-09-04": (J, aar) Släppt för HT20.
     "2020-05-15": (I, aar) Flyttade Funktioner från 03 till 04 inför V3 HT20.
     "2018-06-18": (H, aar) Flyttade moduler till kmom04.
     "2018-06-08": (prel, mos) Nytt dokument inför uppdatering av kursen.
@@ -14,13 +15,6 @@ revision:
 ...
 Kmom04: Funktioner och moduler
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 I detta kursmoment ska vi kolla på hur vi kan strukturera koden så den blir mer effektiv och mer lättläst. Du introduceras till funktioner och hur de kan underlätta för att återanvända koden och moduler för att strukturera koden i flera filer. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
 
@@ -124,5 +118,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur kan du använda moduler?
 * Vad tyckte du om de olika uppgifterna?
 * Hur tänkte du när du utförde dem?
-* Vad tycker du om video som läromedel, tycker du att de tillför något utöver litteraturen?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
+* Om du använder Thonny vad tycker du om det? Blir det lättare att förstå koden när du stegar igenom den?
