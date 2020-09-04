@@ -68,12 +68,12 @@ Här kan vi se att landet med id 0 är Afganistan. Vi kan också se att nycklarn
 
 För att få ut Albaniens folkmängd 2005 skriver vi `country_data["Albania"]["population"][1]`. När ni ska räkna ut utsläpp/capita/area behöver ni multiplicera utsläppen med 1,000,000 för att uträkningarna ska bli korrekt.
 
-Notera att alla länder inte har area, population eller utsläpps data. När du stöter på ett land som saknar den datan som behövs kan du ignorera landet. Programmet ska inte krascha. Bara låt blir att ta med det i uträkningen.
+Notera att alla länder inte har area, population eller utsläpps data. När du stöter på ett land som saknar den datan som behövs kan du ignorera landet. Programmet ska inte krascha. Bara låt bli att ta med det i uträkningen.
 
-Med datan ska du lägga till nya menyval i Marvin som skriver ut hur mycket varje land släpper ut, utsläpp per capita, utsläpp per are och det ska gå att söka på vilka länder som finns i `country_data`.
+Med datan ska du lägga till nya menyval i Marvin som skriver ut hur mycket varje land släpper ut, utsläpp per capita, utsläpp per area och det ska gå att söka på vilka länder som finns i `country_data`.
 
 För att se att dina uträkningar stämmer någorlunda kan du jämföra dina uträkningar för 2017 med de som finns i tabellen "[Fossil CO
-2 emissions by country/region](https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions#Fossil_CO2_emissions_by_country/region)". Det kommer inte stämma 100% den använder olika källor för landytor och befolkningsmängd men det ska vara snarlika resultat.
+2 emissions by country/region](https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions#Fossil_CO2_emissions_by_country/region)". Det kommer inte stämma 100% den använder andra källor för landytor och befolkningsmängd men det ska vara snarlika resultat.
 
 [ASCIINEMA src=353833]
 
@@ -92,13 +92,13 @@ cp ../example/emission_data/emission_data.py kmom05/marvin4/
 cd kmom05/marvin4
 ```
 
-2. Skapa en ny modul `emission_functions.py`, i den ska du skriva koden har med utsläppen att göra.
+2. Skapa en ny modul `emission_functions.py`, i den ska du skriva koden som har med utsläppen att göra.
 
 3. **Menyval 12**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först. Be Användaren om input där användaren skriver in vilket år som ska användas.
 
 4. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
-5. **Menyval 13**: Användaren ska kunna söka efter vilka länder som finns i `country_data`. Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. T.ex sökning på "sweden" ska skriva ut "Sweden" och sökning på "ed" ger "Zimbabwe", "Western Sahara" och "Sweden".
+5. **Menyval 13**: Användaren ska kunna söka efter vilka länder som finns i `country_data`. Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. T.ex sökning på "sweden" ska skriva ut "Sweden" och sökning på "ed" ger "Zimbabwe", "Western Sahara" och "Sweden". Sökningen ska vara case-insensitive.
 
 6. **Menyval 14**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera it storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 

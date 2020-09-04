@@ -3,6 +3,7 @@ author:
     - mos
     - efo
 revision:
+    "2020-09-04": (O, aar) Släppt för HT20.
     "2020-05-15": (N, aar) Flyttade Dict/Tuple från 06 till 05 inför V3 HT20.
     "2018-08-13": (M, aar) Flyttade extrauppgifter till kmom05.
     "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
@@ -21,13 +22,6 @@ revision:
 ...
 Kmom05: Dictionaries och Tupler
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler. Dictionaries sparar data som ett nyckel-värde par och tupler strukturer vår data i mindre enheter med ett sammanhang. Vi använder våra kunskaper om dictionaries för att utveckla Marvin med verktyg för att analysera koldioxidutsläpp.
 
@@ -99,7 +93,7 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom06/warehouse`.
+1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/warehouse`.
 
 
 
@@ -107,7 +101,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)". Spara alla filer under `me/kmom05/lab5`.
+1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler-v2)". Spara alla filer under `me/kmom05/lab5`.
 
 1. Gör uppgiften "[Din egen chattbot - Marvin - Utsläpp](uppgift/din-egen-chattbot-marvin-utslapp)". Spara alla filer under `me/kmom05/marvin4`.
 
@@ -135,3 +129,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad skiljer de tre datastrukturerna från varandra?
 * Hur använde du dem i uppgifterna?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
+* Vad tyckte du om emission uppgiften?
+* Om du använder Thonny vad tycker du om det? Blir det lättare att förstå koden när du stegar igenom den?

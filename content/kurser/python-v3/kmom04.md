@@ -119,4 +119,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad tyckte du om de olika uppgifterna?
 * Hur tänkte du när du utförde dem?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
-* Om du använder Thonny vad tycker du om det? Blir det lättare att förstå koden när du stegar igenom den?
