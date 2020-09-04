@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-09-04": "(H, mos) Genomgången inför ht20."
     "2018-06-22": (G, mos) Genomarbetad inför ht18.
     "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2016-08-31": (E, mos) Lade till rätt videoserie från youtube.
@@ -13,18 +14,11 @@ revision:
 Kmom03: Bygg multisida i PHP
 ==================================
 
-[WARNING]
-**Utveckling pågår**
+Vi tittar på PHP och den inbyggda datatypen för arrayer och ser hur vi kan lagra och hantera värden i både numeriska arrayer och strängindexerade arrayer. Vi ser vilka inbyggda funktioner som finns för att jobba med arrayer och vi tittar på två av de fördefinierade arrayerna $\_GET och $\_SERVER som låter webbservern och PHP dela information och webbfrågan.
 
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+Som vanligt behöver vi skriva ett antal testprogram för att klura ut och testa hur saker hänger ihop.
 
-[/WARNING]
-
-Vi tittar på den i PHP inbyggda datatypen för arrayer och ser hur vi kan lagra och hantera värden i både numeriska arrayer och strängindexerade arrayer. Vi tittar på vilka inbyggda funktioner som finns för att jobba med arrayer och vi tittar på två av de fördefinierade arrayerna $\_GET och $\_SERVER som hjälper att att bygga webbsidor.
-
-Som vanligt behöver vi skriva ett antal testprogram för att verkligen förstå hur saker hänger ihop.
-
-Sedan bygger vi en uppdaterad sidkontroller som har stöd för multisidor med egen navigering till undersidor. Vi lär oss begreppet multisida och samtidigt får vi en övning i hur kod kan struktureras i kataloger och filer efter kodens olika syften.
+Sedan bygger vi en uppdaterad sidkontroller som har stöd för multisidor med egen navigering till undersidor. Det handlar om att ha en undermeny till en egen grupp av undersidor. Vi kallar begreppet multisida. När vi jobbar igenom detta får vi samtidigt en övning i hur kod kan struktureras i kataloger och filer och hur man kan skicka "parametrar" till en webbsida.
 
 Till slut knyter vi ihop det genom att integrera multisidan i din me-sida. Resultatet blir me-sida version 3.0.
 
@@ -57,19 +51,24 @@ Läs följande för att fortsätta bekanta dig med teknikerna.
 
 Läs följande för att fortsätta bekanta dig med tekniken.
 
-1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
-    * [Datastrukturer](guide/kom-igang-med-programmering-i-php/datastrukturer)
-
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 2.3.5 Vektor
     * Kapitel 2.4 Miljövariabler
     * Kapitel 3 Konstanter
 
+1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
+    * [Datastrukturer](guide/kom-igang-med-programmering-i-php/datastrukturer)
+
+<!--
+1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden. Kika på de videor som är markerade "[Datastrukturer]".
+    * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1)
+-->
+
 
 
 ### Videor {#video}
 
-Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
+Du fick länkar till kursens inspelade och sparade videor i försa kursmomentet. Kika där om du glömt länkarna.
 
 
 
