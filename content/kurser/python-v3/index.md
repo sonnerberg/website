@@ -195,7 +195,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kursmoment | Python for Everybody   |
 |------------|------------------------|
 | Kmom01     | Ch 1, 2                |
-| Kmom02     | Ch 3, 5                |
+| Kmom02     | Ch 3, 5, 6             |
 | Kmom03     | Ch 8                   |
 | Kmom04     | Ch 4                   |
 | Kmom05     | Ch 9, 10               |

@@ -36,8 +36,8 @@ Läs följande:
 
 1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
     * Ch3 Conditional execution
-    <!-- * Ch4 Functions -->
     * Ch5 Iteration
+    * Ch6 Strings
 
 <!-- 2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python)
     * [Appendix A - Differences Between Python 2 and 3](http://inventwithpython.com/appendixa.html)
@@ -60,6 +60,8 @@ Läs följande:
 1. Läs [Hur man tänker som en programmerare och problemlösare](/coachen/tank-som-programmerare). Sammanfattning av en artikel som diskuterar hur man tänker som en programmerare.
 
 1. Kolla på bilden [My code isn't working](/image/python/code_not_working.jpg). Spara bilden för att underlätta när saker går fel.
+
+1. Läs om de olika sätten vi kan formatera strängar i [Python String Formatting Best Practices](https://realpython.com/python-string-formatting/). I kursen använder vi "New Style" eller "f-Strings".
 
 
 
