@@ -67,7 +67,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Modulen `menu.py` skall enbart innehålla kod för att visa menyn.
 
-1. Filen `main.py` skall enbart innehålla kommandoloopen, tänk while-loopen i marvin, och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften. Koden ska ligga i en funktion som heter `main`.
+1. Filen `main.py` skall enbart innehålla kommandoloopen, tänk while-loopen i marvin, och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften. Koden ska ligga i en funktion som heter `main`. Glöm inte `if __name__ == "__main__"` i main.py.
 
 1. Menyvalet `menu` ska skriva ut menyn och vilka val man kan göra. PS. Man ska inte vara tvungen att skriva menu först för att skriva de andra menyvalen.
 
@@ -90,7 +90,7 @@ dbwebb validate analyzer
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
-12. Rätta ditt program med hjälp av `dbwebb inspect`, genom att köra kommandot:
+12. **Rätta ditt program med hjälp av `dbwebb inspect`, genom att köra kommandot**:
 
 ```bash
 dbwebb inspect kmom06

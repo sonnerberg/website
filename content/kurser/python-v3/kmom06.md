@@ -4,7 +4,8 @@ author:
     - aar
     - efo
 revision:
-    "2020-05-15": (O, aar) Flyttade moduler/filer från 04 till 06 inför V3 HT20.
+    "2020-09-04": (O, aar) Släppt för HT20.
+    "2020-05-15": (N, aar) Flyttade moduler/filer från 04 till 06 inför V3 HT20.
     "2019-06-14": (M, efo) Ändrade så kmom05 blir 04.
     "2018-06-29": (L, aar) Uppdaterade mappstruktur mot kursrepo.
     "2018-06-18": (K, aar) La till moduler och flyttade listor till kmom05.
@@ -22,13 +23,6 @@ revision:
 ...
 Kmom06: Filer
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 Som vi jobbat i tidigare kursmoment försvinner all data när vi stänger av programmet, vi har ingen permanent data. Genom att skriva ner data i filer under exekvering kan vi uppnå ett permanent minne åt våra program. I detta kursmomentet kommer ni lära er läsa data från fil och hur man skriver ner data till fil.
 
@@ -65,7 +59,7 @@ Det finns inga artiklar.
 
 Titta på följande:
 
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
+1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 6.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
 

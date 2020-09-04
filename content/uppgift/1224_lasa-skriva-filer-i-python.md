@@ -6,7 +6,7 @@ category:
 revision:
     "2020-08-24": (a, aar) Skapad inför python-v3.
 ...
-Lasa och skriva filer i python
+LÄsa och skriva filer i python
 ==================================
 
 Vi ska i denna laboration träna på läsa och skriva data till filer i Python.
