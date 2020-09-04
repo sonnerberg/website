@@ -75,13 +75,15 @@ Titta på följande:
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/unix-tools/kom-igang-med-ssh-nycklar)".
+1. Jobba igenom guiden om "[Apache Name-based Virtual Hosts](guide/unix-tools/apache)".
 
-1. Jobba igenom guiden om "[tmux](guide/unix-tools/tmux)".
+1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/unix-tools/kom-igang-med-ssh-nycklar)".
 
 1. Jobba igenom guiden om "[rsync](guide/unix-tools/rsync)".
 
-1. Jobba igenom guiden om "[Apache Name-based Virtual Hosts](guide/unix-tools/apache)".
+1. Jobba igenom guiden om "[tmux](guide/unix-tools/tmux)".
+
+
 
 
 
