@@ -4,7 +4,8 @@ category:
     - kurs htmlphp
     - webbprogrammering
 revision:
-    "2018-09-17": (D, mos) Mindre justeringar i kraven, publicerad fr htmlphp v3.
+    "2020-09-04": "(E, mos) Mindre justeringar i kraven, publicerad för htmlphp v4."
+    "2018-09-17": (D, mos) Mindre justeringar i kraven, publicerad för htmlphp v3.
     "2018-09-14": (C, mos) Uppdaterad och ny struktur med fler uppgifter i htmlphp v3.
     "2015-08-26": (B, mos) Förtydligade delar av kraven.
     "2015-06-03": (A, mos) Första utgåvan i samband med kursen htmlphp v2.
@@ -39,6 +40,11 @@ Introduktion {#intro}
 Du skall uppdatera din me-sida och samtidigt integrera den med formulär och sessioner.
 
 
+### Multisida eller ej? {#multi}
+
+Du kan lösa uppgiften med en struktur som multisidan erbjöd. Eller så bygger du en alternativ struktur som du anser passa. Du kan själv välja väg för hur du löser uppgiften.
+
+
 
 ### Börja med att kopiera me-sidan {#copyme}
 
@@ -61,16 +67,16 @@ Krav {#krav}
 1. Se till att du har en fil `config.php`, inkludera den överst i alla sidor. Sessionen skall startas överst `config.php`.
 
 1. Se till att du har en fil `src/functions.php` som inkluderas i alla sidor. Där lägger du funktioner som du själv skapar. Skapa en funktion för att förstöra sessionen.
- 
-1. Skapa en ny multisida och lägg till i din navbar, döp den till "Session".
+
+1. Skapa en ny (multi) sida och lägg till i din navbar, döp den till "Session".
 
 1. Skapa en undersida som kan skriva ut sessionens innehåll.
 
 1. Skapa en undersida som kan förstöra sessionen.
 
-1. Skapa en undersida som lagrar en siffra i sessionen och dubblerar dess värde varje gång som sidan laddas.
+1. Skapa en undersida som lagrar en siffra i sessionen och dubblerar dess värde varje gång som sidan laddas. Gör man reload på sidan ser man att siffrans värde ökar.
 
-1. Skapa en undersida med ett ett POST-formulär som använder en processingsida  (undersida) och redirectar till en resultatsida (ny undersida). Du kan göra ett valfritt formulär eller ett "kontakta mig" formulär.
+1. Skapa en ny (multi) sida med ett ett POST-formulär som använder en processingsida och redirectar till en resultatsida. Du kan göra ett valfritt formulär eller ett "kontakta mig" formulär. Sista sidan skriver ut "Tack". Man kan göra reload på "Tack"-sidan utan att formuläret postas om.
 
 1. Gör ytterligare undersida med ett POST formulär där du har ett formulärfält (textarea) där användaren kan skriva ett eget meddelande. Detta meddelande skall du hantera i processingsidan, spara i sessionen, och slutligen visa i resultatsidan (tänk _read once flash message_).
 
@@ -82,7 +88,7 @@ Krav {#krav}
 dbwebb publish me4
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
