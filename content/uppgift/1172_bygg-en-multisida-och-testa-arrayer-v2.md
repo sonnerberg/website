@@ -7,6 +7,7 @@ category:
     - html
     - css
 revision:
+    "2020-09-07": "(C, mos) Bort länk till ofrumet om array_key_first/array_key_last."
     "2019-09-26": "(B, mos) Använd ej array_key_first/array_key_last."
     "2018-08-22": "(A, mos) Ny utgåva i samband med htmlphp v3."
 ...
@@ -46,7 +47,7 @@ Krav {#krav}
 
 1. Gör så att menyvalet i navigeringsmenyn blir aktivt. Du skall visa en annorlunda stil för menyvalet för den undersida som är vald.
 
-1. Skapa en ny undersida som skriver ut detaljer om innehållet i arrayen `$_SERVER`. Sidan skall skriva ut hur många "items" som arrayen innehåller. Till exempel "There are XX entries in the array for $\_SERVER.". Skriv även ut nyckeln och innehållet för det första och det sista värdet i arrayen. Du kan dock ej använda funktionerna `array_key_first()` eller `array_key_last()` (se [forumtråd](t/8761)). Var tydlig så man ser vilket som är det första och vilket som är det sista värdet.
+1. Skapa en ny undersida som skriver ut detaljer om innehållet i arrayen `$_SERVER`. Sidan skall skriva ut hur många "items" som arrayen innehåller. Till exempel "There are XX entries in the array for $\_SERVER.". Skriv även ut nyckeln och innehållet för det första och det sista värdet i arrayen. Var tydlig så man ser vilket som är det första och vilket som är det sista värdet.
 
 1. Skapa en ny undersida som innehåller följande. Skriv en `foreach()` loop som räknar ut längden på varje värde i arrayen `$_SERVER`. För varje nyckel i arrayen, skall du ta värdet och räkna ut längden av det med `strlen()`. Skriv ut nyckeln (key), följt av längden på dess värde. Avsluta med att skriva ut själva innehållet i den key/value som "är längst".
 
