@@ -42,7 +42,7 @@ Krav {#krav}
 
 1. Använd rsync över ssh för att kopiera din me-sida från `me/redovisa` och lägg den i den virtuella hostens webroot. Skriv kommandot för rsync i din loggfil.
 
-1. Öppna en terminal, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen.
+1. Öppna en terminal i din VM, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen.
 
 1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`. Spara bilden i formatet .png och använd små bokstäver i filnamnet.
 
