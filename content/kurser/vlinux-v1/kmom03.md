@@ -48,7 +48,7 @@ Läs följande:
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/watch?v=a2P26Zgy_mE&list=PLKtP9l5q3ce_WHGUiZfo9wr1C3aWaSYa7)", kika på de videor som börjar på "regex".
+1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/watch?v=a2P26Zgy_mE&list=PLKtP9l5q3ce_WHGUiZfo9wr1C3aWaSYa7)".
 
 1. Kris Occhipinti har en serie om [skriptprogrammering med Bash på YouTube](https://www.youtube.com/playlist?list=PLcUid3OP_4OXOUqYTDGjq-iEwtBf-3l2E). Det är många avsnitt och du kan välja vilka du vill titta på. Videorna ger dig bra bas-kunskaper i Bash.
 
