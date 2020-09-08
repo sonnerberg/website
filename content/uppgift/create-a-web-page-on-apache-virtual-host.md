@@ -42,7 +42,7 @@ Requirements {#krav}
 
 1. Create an Apache Virtual Host `me.linux.se`. Save a copy of the config file `me.linux.se.conf` in your course repo.
 
-1. Copy all files and directories from `me/report` to the `/var/www/html/me.linux.se` folder that you created when you created the virtual host. Enter the command you use in the log (`log.txt`).
+1. Copy all files and directories from `me/report` to the webroot of `me.linux.se/`. Enter the command you use in the log (`log.txt`).
 
 1. Make sure you can access the site with your browser on your local development computer through port forwarding.
 
