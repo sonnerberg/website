@@ -61,6 +61,8 @@ Läs följande för att fortsätta bekanta dig med tekniken.
 1. Det finns en videoserie som bygger på innehållet i guiden, kika gärna på den som ett komplement till guiden. Kika på de videor som är markerade "[Typer]" och "[Kontrollstrukturer]".
     * [Kom igång med programmering i PHP (2019)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oIvGdREyAH-Oq_DQdqYW1)
 
+<!-- Saknas videor för pagecontroller-delen -->
+
 
 
 ### W3C {#w3c}
