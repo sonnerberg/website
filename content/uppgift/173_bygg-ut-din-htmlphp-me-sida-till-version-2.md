@@ -49,7 +49,7 @@ Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/kmo
 Krav {#krav}
 -----------------------
 
-1. Strukturera sidornas innehåll med elementen `<main>`, `<article>` samt använd `<header>` och `<footer>` i din `<article>`. 
+1. Strukturera sidornas innehåll med elementen `<main>`, `<article>` samt använd `<header>` och `<footer>` i din `<article>`.
 
 2. Skapa länkar till HTML & CSS specifikationer samt Cheatsheet och lägg länkarna i din sidfooter.
 
@@ -69,6 +69,11 @@ Krav {#krav}
 
 10. Gör din me-sida responsiv. Det räcker om den innehåller en del som är responsiv.
 
+<!--
+Uppdatera till HT21.
+11. Se till att din webbplats validerar i Unicorn.
+-->
+
 11. Validera och publicera din kod enligt följande.
 
 ```bash
@@ -77,7 +82,7 @@ Krav {#krav}
 dbwebb publish me2
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
