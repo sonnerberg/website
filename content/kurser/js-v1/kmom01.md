@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-09-09": "(M, lew) Uppdatering inför ht20."
     "2019-10-31": "(L, lew) Uppdatering inför ht19."
     "2018-10-22": "(K, lew) Uppdatering inför ht18."
     "2017-12-27": "(J, mos) Enhetlig mall för me-sida."
@@ -42,8 +43,8 @@ Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo)
 ```text
 # Gå till din katalog för dbwebb-kurser
 dbwebb selfupdate
-dbwebb clone javascript1
-cd javascript1
+dbwebb clone js
+cd js
 dbwebb init
 ```
 
