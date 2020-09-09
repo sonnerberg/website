@@ -77,7 +77,7 @@ number_of_apples = 9
 
 if number_of_apples > 10:
     print("Du har mer än 10 äpplen")
-elif number_of_apples <= 10 and number_of_apples > 5:
+elif 5 < number_of_apples <= 10:
     print("Du blev snabbt mätt och åt bara upp några av dina äpplen")
 else:
     print("Du har nog varit hungrig och ätit upp dina äpplen")
@@ -89,7 +89,7 @@ print("Nu är vi klara med if-satsen")
 # Nu är vi klara med if-satsen
 ```
 
-Notera hur vi använder två separata villkor i vårt `elif` villkor. Vi kan bara jämföra med en operator åt gången och kan alltså inte skriva det matematisk korrekta uttrycket `10 >= number_of_apples > 5`.
+Notera `5 < number_of_apples <= 10`, i många andra programmeringsspråk funkar inte det. Då behöver man istället använda `and`, `number_of_apples > 5  and number_of_apples <= 10`
 
 Vi har även möjligheten att kombinera villkor för att få ett mer avancerat flöde i våra program. Om vi nu också vill kolla vilken sorts frukt vi har kan det se ut på följande sätt.
 
@@ -165,7 +165,7 @@ Vi har alltså nu en konstruktion som upprepar det som finns inuti `for`-loopen 
 for number_of_apples in range(3, 15):
     if number_of_apples > 10:
         print("Du har mer än 10 äpplen")
-    elif number_of_apples <= 10 and number_of_apples > 5:
+    elif 5 < number_of_apples <= 10:
         print("Du blev snabbt mätt och åt bara upp några av dina äpplen")
     else:
         print("Du har nog varit hungrig och ätit upp dina äpplen")
@@ -251,7 +251,7 @@ while True:
         number_of_apples = int(user_input)
         if number_of_apples > 10:
             print("Du har mer än 10 äpplen")
-        elif number_of_apples <= 10 and number_of_apples > 5:
+        elif 5 < number_of_apples <= 10:
             print("Du blev snabbt mätt och åt bara upp några av dina äpplen")
         else:
             print("Du har nog varit hungrig och ätit upp dina äpplen")
@@ -293,7 +293,7 @@ while True:
 
         if number_of_apples > 10:
             print("Du har mer än 10 äpplen")
-        elif number_of_apples <= 10 and number_of_apples > 5:
+        elif 5 < number_of_apples <= 10:
             print("Du blev snabbt mätt och åt bara upp några av dina äpplen")
         else:
             print("Du har nog varit hungrig och ätit upp dina äpplen")
