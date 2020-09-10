@@ -2,6 +2,7 @@
 author: efo
 category: python
 revision:
+  "2020-09-09": (C, aar) Uppdatera villkor med and till pythonic kod.
   "2020-05-12": (B, aar) Uppdaterad inför H20.
   "2017-05-29": (A, efo) Första utgåvan inför kursen python H17.
 ...
