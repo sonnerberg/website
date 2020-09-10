@@ -13,7 +13,7 @@ Tanken är att du skall kunna logga in på din virtuella maskin från din egen d
 
 ### Nätverk via port forwarding {#pf}
 
-Detta är det enklaste. Pröva det först. Det handlar om *port forwarding* där du mappar upp en port på din lokala maskin. När den porten får trafik så skickas trafiken vidare till den virtuella maskinen på en viss port. Man *forwardar* trafiken från en port till en annan port (och maskin).
+Det handlar om *port forwarding* där du mappar upp en port på din lokala maskin. När den porten får trafik så skickas trafiken vidare till den virtuella maskinen på en viss port. Man *forwardar* trafiken från en port till en annan port (och maskin).
 
 Gör så här. Öppna nätverksinställningarna på din virtuella maskin.
 
