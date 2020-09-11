@@ -76,8 +76,8 @@ Med datan ska du lägga till nya menyval i Marvin som skriver ut hur mycket varj
 För att se att dina uträkningar stämmer någorlunda kan du jämföra dina uträkningar för 2017 med de som finns i tabellen "[Fossil CO
 2 emissions by country/region](https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions#Fossil_CO2_emissions_by_country/region)". Det kommer inte stämma 100% den använder andra källor för landytor och befolkningsmängd men det ska vara snarlika resultat.
 
-[ASCIINEMA src=353833]
-Notera att jag har bytt plats på menyval 12 och 13 kraven nedanför.
+[ASCIINEMA src=359163]
+
 
 
 Krav {#krav}
@@ -99,7 +99,7 @@ cd kmom05/marvin4
 
 4. **Menyval 13**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först. Be Användaren om input där användaren skriver in vilket år som ska användas.
 
-5. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+5. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut. Ni kan välja själva om ni vill räkna från 0 eller 1.
 
 6. **Menyval 14**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera it storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
@@ -120,7 +120,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-* För menyval 12, 14 och 15, ska det även gå att skriva in en range på hur många länder som ska skrivas ut. T.ex. med input `2005 21-30`, då ska datan för 2005 användas och skriva ut länderna på plats 21 till 31 i det sorterade resultatet.
+* För menyval 12, 14 och 15, ska det även gå att skriva in en range på hur många länder som ska skrivas ut. T.ex. med input `2005 21-30`, då ska datan för 2005 användas och skriva ut länderna på plats 21 till och med 30 i det sorterade resultatet.
 
 * För menyval 12, 14 och 15, ska det även gå att skriva in ett land för att endast få ut det landets värde.
 
