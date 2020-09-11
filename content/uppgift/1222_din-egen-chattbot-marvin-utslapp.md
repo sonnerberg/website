@@ -98,7 +98,7 @@ cd kmom05/marvin4
 
 4. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
-5. **Menyval 13**: Användaren ska kunna söka efter vilka länder som finns i `country_data`. Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. T.ex sökning på "sweden" ska skriva ut "Sweden" och sökning på "ed" ger "Zimbabwe", "Western Sahara" och "Sweden". Sökningen ska vara case-insensitive.
+5. **Menyval 13**: Användaren ska kunna söka efter vilka länder som finns i `country_data`. Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. T.ex sökning på "sweden" ska skriva ut "Sweden" och sökning på "we" ger "Zimbabwe", "Western Sahara" och "Sweden". Sökningen ska vara case-insensitive.
 
 6. **Menyval 14**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera it storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
