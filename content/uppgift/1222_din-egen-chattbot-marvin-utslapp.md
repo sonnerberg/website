@@ -2,6 +2,7 @@
 author: aar
 category: python
 revision:
+  "2020-09-11": (B, aar) Bytte plats på menyval 12 och 13.
   "2020-08-17": (A, aar) Skapad inför python V3 HT20.
 ...
 Din egen chattbot - Marvin - Utsläpp
@@ -76,7 +77,7 @@ För att se att dina uträkningar stämmer någorlunda kan du jämföra dina utr
 2 emissions by country/region](https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions#Fossil_CO2_emissions_by_country/region)". Det kommer inte stämma 100% den använder andra källor för landytor och befolkningsmängd men det ska vara snarlika resultat.
 
 [ASCIINEMA src=353833]
-
+Notera att jag har bytt plats på menyval 12 och 13 kraven nedanför.
 
 
 Krav {#krav}
@@ -94,11 +95,11 @@ cd kmom05/marvin4
 
 2. Skapa en ny modul `emission_functions.py`, i den ska du skriva koden som har med utsläppen att göra.
 
-3. **Menyval 12**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först. Be Användaren om input där användaren skriver in vilket år som ska användas.
+3. **Menyval 12**: Användaren ska kunna söka efter vilka länder som finns i `country_data`. Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. T.ex sökning på "sweden" ska skriva ut "Sweden" och sökning på "we" ger "Zimbabwe", "Western Sahara" och "Sweden". Sökningen ska vara case-insensitive.
 
-4. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+4. **Menyval 13**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först. Be Användaren om input där användaren skriver in vilket år som ska användas.
 
-5. **Menyval 13**: Användaren ska kunna söka efter vilka länder som finns i `country_data`. Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. T.ex sökning på "sweden" ska skriva ut "Sweden" och sökning på "we" ger "Zimbabwe", "Western Sahara" och "Sweden". Sökningen ska vara case-insensitive.
+5. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
 6. **Menyval 14**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera it storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
