@@ -1,6 +1,10 @@
 #### Aktuellt
 
+<!--
 [FIGURE src=image/iphone-foto.jpeg?w=c10&h=100&cf&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
+-->
+
+[FIGURE src=image/person/jane-strandberg-2.jpg?w=c10&cf&h=100&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen har startat..."]
 
 Introveckan för nya studenter startar måndagen den 24 augusti 2020, se välkomstbrevet för detaljer.
 
