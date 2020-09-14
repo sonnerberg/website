@@ -120,9 +120,9 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-* För menyval 12, 14 och 15, ska det även gå att skriva in en range på hur många länder som ska skrivas ut. T.ex. med input `2005 21-30`, då ska datan för 2005 användas och skriva ut länderna på plats 21 till och med 30 i det sorterade resultatet.
+* För menyval 13, 14 och 15, ska det även gå att skriva in en range på hur många länder som ska skrivas ut. T.ex. med input `2005 21-30`, då ska datan för 2005 användas och skriva ut länderna på plats 21 till och med 30 i det sorterade resultatet.
 
-* För menyval 12, 14 och 15, ska det även gå att skriva in ett land för att endast få ut det landets värde.
+* För menyval 13, 14 och 15, ska det även gå att skriva in ett land för att endast få ut det landets värde.
 
 
 
