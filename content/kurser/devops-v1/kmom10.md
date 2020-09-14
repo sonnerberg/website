@@ -8,6 +8,13 @@ revision:
 Kmom07/10: Rapport
 ==================================
 
+[WARNING]
+**Utveckling pågår**
+
+Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+
+[/WARNING]
+
 Vi avslutar kursen med att ni individuellt skriver en rapport. Rapporten är det sista som du gör och tillsammans med alla redovisningar används detta som underlag för att examinera dig från kursen.
 
 <!-- more -->
