@@ -26,7 +26,7 @@ Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-
 Videoserie {#video}
 -----------------------
 
-Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ) som hjälper dig med denna labben titta på videor som börjar på 3.
+Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_WHGUiZfo9wr1C3aWaSYa7) som hjälper dig med denna labben.
 
 
 
