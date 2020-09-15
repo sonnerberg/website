@@ -7,6 +7,7 @@ category:
     - php
     - kurs htmlphp
 revision:
+    "2020-09-15": (F, mos) Förtydligade html-strukturen.
     "2018-06-27": (E, mos) Uppdatering inför ht18 och htmlphp v3.
     "2017-08-28": (D, mos) Bort referens till Firebug.
     "2015-09-17": (C, mos) Stängde article element.
@@ -18,7 +19,7 @@ Skapa en webbsida med HTML, CSS och PHP, steg 2
 
 [FIGURE src=image/snapvt15/me2-res.png?w=c5&a=0,0,30,0 class="right" caption="En me-sida i version 2."]
 
-Att bygga en webbplats innebär att man behöver någorlunda kunskaper i HTML, CSS och PHP. Det blir flera tekniker att ha koll på och det kan vara lite svårt i början. Vi tar därför små steg framåt för att uppgradera vår me-sida till version 2. 
+Att bygga en webbplats innebär att man behöver någorlunda kunskaper i HTML, CSS och PHP. Det blir flera tekniker att ha koll på och det kan vara lite svårt i början. Vi tar därför små steg framåt för att uppgradera vår me-sida till version 2.
 
 Vi blandar lite HTML, lite CSS och lite PHP. Via små enkla trix så får vi vår me-sida att se lite bättre ut. I slutet så prövar vi till och med att göra sidan responsiv för mobila enheter, bara för skojs skull.
 
@@ -64,29 +65,42 @@ Så, frågan är vad jag gjort och hur. Låt oss kika på det och gå igenom det
 HTML-element för `<main>` och `<article>` {#artikel}
 --------------------------------------
 
-Det handlar om att strukturera sidans innehåll i rätt html-element. Vad som är rätt och inte är inte alltid tydligt, men det finns grundstrukturer som är tydliga. Html-elementen har en *semantisk* mening, de berättar vilken typ av innehåll de har. Det underlättar när man läser sidans källkod, man ser tydligare vilken betydelse de olika elementen har. 
+Det handlar om att strukturera sidans innehåll i rätt html-element. Vad som är rätt och inte är inte alltid tydligt, men det finns grundstrukturer som är tydliga. Html-elementen har en *semantisk* mening, de berättar vilken typ av innehåll de har. Det underlättar när man läser sidans källkod, man ser tydligare vilken betydelse de olika elementen har.
 
 Så här gjorde jag. Jag började att tillföra ett element `<main>` som wrappar sidans huvudsakliga innehåll. En sida kan ha diverse mer eller mindre relaterat innehåll, elementet `<main>` burkar samla det som är sidans huvudsakliga fokus.
 
-Jag placerade sedan webbsidans artikel inom en `<article>`. Det är som det heter, en sammanhållande text som kan betraktas som en artikel, av något slag. 
+Jag placerade sedan webbsidans artikel inom en `<article>`. Det är som det heter, en sammanhållande text som kan betraktas som en artikel, av något slag.
 
 Artikeln fick en egen `<header>` och en `<footer>` där bylinen ligger. Strukturen ser ut så här.
 
 ```html
+<!doctype html>
+<head>
+    <!-- Olika konstruktioner -->
+</head>
+<body>
+
+<!-- Olika konstruktioner för sidans header och navbar -->
+
 <main>
     <article>
         <header>
             <h1>Artiklens rubrik</h1>
             <p class="author">Uppdaterad <time datetime="2015-05-06 11:17:43">6:e maj 2015</time> av Mikael Roos</p>    
         </header>
-        
+
         <p>Artikelns innehåll, bilder och så vidare.</p>
-        
+
         <footer class="byline">
             <p>Innehåll för min byline, eventuellt en bild.</p>
         </footer>
     </article>
 </main>
+
+<!-- Olika konstruktioner för sidans footer -->
+
+</body>
+</html>
 ```
 
 Jag brukar lägga till css-klasser där jag tycker det behövs, det gör det enklare att styla elementen. Det är inget man behöver göra från början, man kan fylla på med css-klasser efter hand, när man känner att det behövs. Som du ser av koden ovan har jag valt klasserna `author` och `byline`, mest för jag tycker det är enklare att styla de html-element som avses.
@@ -100,7 +114,7 @@ Specifikationer {#specar}
 
 Det finns specifikationer för HTML och CSS. Det finns flera. Det finns olika versioner av teknikerna, de senaste omtalas som HTML5 och CSS3, men vi säger bara HTML och CSS som benämning på helheten av teknologien.
 
-Varje version har sin egen specifikation. Det är inte alltid lätt att ha full koll på vilket html-element som hör till vilken specifikation, samma för css-konstruktionerna. Det är heller inte nödvändigt att veta det, iallafall inte i början. 
+Varje version har sin egen specifikation. Det är inte alltid lätt att ha full koll på vilket html-element som hör till vilken specifikation, samma för css-konstruktionerna. Det är heller inte nödvändigt att veta det, iallafall inte i början.
 
 De vanligaste specifikationerna är följande, länkarna leder till senaste versionen av specen.
 
@@ -111,7 +125,7 @@ När det gäller css så är specifikationerna uppdelade i moduler och det kräv
 
 Allt eftersom så kan man behöva sätta sig in i respektive specifikation och ta reda på hur stödet är i webbläsaren för en viss specifikation. Men det låter vi vara till senare.
 
-Så här i början är det inte jätteviktigt vilken spec som innehåller vad, men allt eftersom så kommer du troligen vilja ha bättre och bättre koll på det. 
+Så här i början är det inte jätteviktigt vilken spec som innehåller vad, men allt eftersom så kommer du troligen vilja ha bättre och bättre koll på det.
 
 
 
@@ -182,7 +196,7 @@ Clearfix med `overflow:auto` {#clearfix}
 
 Det finns likt förra stycket en liknande problematik som heter närlikt, men har en annan problemgrund och löses annorlunda. Det är något som kallas för en [clearfix](http://stackoverflow.com/questions/8554043/what-is-clearfix).
 
-Behovet av en clearfix inträffar eftersom ett flytande element inte påverkar den omslutande kontainerns höjd. Den omslutande kontainern/elementet, som innehåller det flytande elementet, har inte någon koll på hur högt elementet är. 
+Behovet av en clearfix inträffar eftersom ett flytande element inte påverkar den omslutande kontainerns höjd. Den omslutande kontainern/elementet, som innehåller det flytande elementet, har inte någon koll på hur högt elementet är.
 
 För att visa vad jag menar så finns det ett exempelprogram i ditt kursrepo under `example/clearfix`. Där ligger `clear-no.html` som visar hur sidan ser ut utan en clearfix och sedan `clear.html` som visar hur sidan ser ut efter att clearfixen använts.
 
@@ -263,7 +277,7 @@ div {
     height: 200px;
     margin: 10px;
     border: 10px solid green;
-    padding: 20px; 
+    padding: 20px;
     outline: 10px dotted blue;
 }
 ```
@@ -464,7 +478,7 @@ Glöm nu inte att göra ändringen i alla sidor. I alla sidor måste du tilldela
 
 [FIGURE src=image/snapvt15/me2-title-error.png?w=w3 caption="Variabeln för sidans title är inte definierad, istället visas ett felmeddelande."]
 
-För att se hela felmeddelandet så kan du högerklicka i webbläsarens fönster och visa källkoden för sidan. 
+För att se hela felmeddelandet så kan du högerklicka i webbläsarens fönster och visa källkoden för sidan.
 
 [FIGURE src=image/snapvt15/me2-title-error-source.png?w=w3 caption="Högerklicka och visa källkod för att se hela felmeddelandet."]
 
@@ -481,13 +495,13 @@ Ibland kan det vara kul att se hur lång tid det tar för servern att skapa sida
 
 För att lösa detta behöver vi ett par funktioner och en variabel från PHP.
 
-| Funktion / variabel   | Vad gör den    | 
+| Funktion / variabel   | Vad gör den    |
 |-----------------------|----------------|
 | [`microtime(true)`](http://php.net/manual/en/function.microtime.php) | Hämta nuvarande tid som ett tal med precisionen microsekunder. |
 | [`$_SERVER['REQUEST_TIME_FLOAT']`](http://php.net/manual/en/reserved.variables.server.php) | Tidsstämpel med microsekunder då webbservern startade PHP-processen. |
 | [`get_included_files()`](http://php.net/manual/en/function.get-included-files.php) | Hämta en array med namnen på alla filer som har inkluderats. |
 | [`count()`](http://php.net/manual/en/function.count.php) | Räkna antalet fält i en array. |
-|  [`memory_get_peak_usage()`](http://php.net/manual/en/function.memory-get-peak-usage.php) | Hämta totalt minne, i bytes, som allokerats av PHP processen. | 
+|  [`memory_get_peak_usage()`](http://php.net/manual/en/function.memory-get-peak-usage.php) | Hämta totalt minne, i bytes, som allokerats av PHP processen. |
 | [`round()`](http://php.net/manual/en/function.round.php) | Avrunda ett flyttal till ett heltal, eller ett tal med ett visst antal decimaler. |
 
 Tanken är att skriva ut informationen i slutet av webbsidan, i footern. Så här kan det se ut om man lägger PHP-kod för att hämta värdena från inbyggda funktionerna och lagra dem i variabler.
@@ -567,7 +581,7 @@ Felmeddelanden och felsökning {#felsok}
 
 Det blir alltid fel, hur man än gör. Mycket av webutveckling, och programmering rent generellt, handlar om att felsöka och rätta felen.
 
-Så här långt har du ett antal tekniker för att felsöka. 
+Så här långt har du ett antal tekniker för att felsöka.
 
 1. Validera enligt HTML och CSS
 1. Högerklicka och visa källkod, ser sidan ut som jag tänkte? Har PHP genererat den HTML-kod som jag ville?
