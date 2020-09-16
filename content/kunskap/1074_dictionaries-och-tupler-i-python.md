@@ -79,7 +79,19 @@ for key, value in warehouse.items():
 # grädde 80
 ```
 
-Vi noterar att nyckel-värde paren skrivs ut i en konstig ordning, inte alls som vi skrev in paren ovan. Detta är för att datastrukturen dictionary är osorterat och vi kan aldrig räkna med ordningen i en dictionary. Om vi vill ha ut värdena sorterat använder vi oss av funktionen `keys()` som returnerar alla nycklar. Vi kan sedan sortera nycklerna med samma sorteringsfunktioner som vi använde för listor. I exemplet nedan använder vi nyckeln för att hämta ut värdet från `warehouse`.
+Vi noterar att nyckel-värde paren skrivs ut i en konstig ordning, inte alls som vi skrev in paren ovan. Detta är för att datastrukturen dictionary är osorterat och vi kan aldrig räkna med ordningen i en dictionary.
+
+[INFO]
+Från och med python 3.6 är dictionaries ["insertion ordered"](https://docs.python.org/3.6/whatsnew/3.6.html#new-dict-implementation). Det betyder att nyckel-paren är sparade i ordningen de läggs in i dictionaryn. Som när man gör append() på en lista för att lägga till nya värden.
+
+Om någon är intresserad av hur det är implementerat kan ni läsa en [överskådlig förkling](https://stackoverflow.com/a/39980744).
+[/INFO]
+
+
+
+#### Sortering av dictionary {#sort}
+
+Om vi vill ha ut värdena sorterat använder vi oss av funktionen `keys()` som returnerar alla nycklar. Vi kan sedan sortera nycklerna med samma sorteringsfunktioner som vi använde för listor. I exemplet nedan använder vi nyckeln för att hämta ut värdet från `warehouse`.
 
 ```python
 for key in sorted(warehouse.keys()):
