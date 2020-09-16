@@ -23,6 +23,8 @@ Programmering och problemlösning i Python, du skall bygga en chattbot Marvin so
 
 <!--more-->
 
+[ASCIINEMA src=360066 caption="Marvin del 1"]
+
 
 
 Förkunskaper {#forkunskaper}
