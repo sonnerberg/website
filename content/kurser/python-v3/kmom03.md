@@ -84,7 +84,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Det finns inga lästips.
+1. Läs den [feedback jag gav](https://gist.github.com/AndreasArne/cecb1fb4dbc1ec7c83c57a8d2f678012) en student på labbuppgiften 4.2 i lab2.
 
 
 
