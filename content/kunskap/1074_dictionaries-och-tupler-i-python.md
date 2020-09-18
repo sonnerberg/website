@@ -155,12 +155,19 @@ for key, value in warehouse_sorted_on_values:
 Hade vi angett `key=itemgetter(0)` hade vi sorterat på nyckeln istället. Vi använder `reverse=True` för att sortera i fallande ordning. `reverse=False` sorterar i stigande ordning.
 
 
+##### Plocka ut bara värden {#values}
 
-<!-- #### Visa .values() också? -->
+Gör en inflikning för att påpeka att det finns också en funktion som heter `.values()`. Den returnerar alla värden i en dictionary som en lista där varje element är ett värde från dictionarin.
+
+```python
+print(warehouse.values())
+# skriver ut:
+# dict_values([20, 80, 33, 42])
+```
+
+
 
 ### Dictionaries i dictionaries
-
-<!-- LÄgg till här? kolla hur jag använder dicts i dicts i uppgiften. -->
 
 På ett riktigt lager räcker det inte bara med antal varor som är kvar, vi vill även ha en möjlighet att ange priset. Med dictionaries, precis som med listor, har vi möjligheten att skapa dictionaries i dictionaries, så kallade nästlade dictionaries. Detta gör att vi kan ha både antalet och ett pris för varje vara. Vi kan nu skriva ut en sorterad lista med pris på följande sätt.
 
@@ -188,7 +195,7 @@ För de som är intresserade finns ett litet exempel i Pythons [dokumentation f�
 
 Tupler {#tuples}
 --------------------------------------
-Ibland vill man ha en sekvens av data som inte ska eller kan ändras. I Python använder man tupler (tuples på engelska) för att åstadkomma detta. Tupler är en sekvens av data som kan vara av olika typer och vi skapar en tupel med hjälp av `()`. Tupler kan inte ändras men vi kan hämta ut data med hjälp av index för datat med samma notation (`[index]`) som för en lista. I vårt lager vill vi att varje vara ska ha en streckkod och ett internt lager nummer, dessa ska aldrig ändras så vi väljer att använda en tupel för denna data. I exemplet nedan har vi definerat en nyckel `ids` i varje element i `warehouse_deluxe` och som värde för nyckeln har vi en tupel. Vi lägger igen till "röd lök" i vårt lager och vi avslutar exemplet med att skriva ut en formatterad sträng med alla varor i lagret.
+Ibland vill man ha en sekvens av data som inte ska eller kan ändras. I Python använder man tupler (tuples på engelska) för att åstadkomma detta. Tupler är en sekvens av data som kan vara av olika typer och vi skapar en tupel med hjälp av `()`. Tupler kan inte ändras men vi kan hämta ut data med hjälp av index för datat med samma notation (`[index]`) som för en lista. I vårt lager vill vi att varje vara ska ha en streckkod och ett internt lager nummer, dessa ska aldrig ändras så vi väljer att använda en tupel för denna data. I exemplet nedan har vi definierat en nyckel `ids` i varje element i `warehouse_deluxe` och som värde för nyckeln har vi en tupel. Vi lägger igen till "röd lök" i vårt lager och vi avslutar exemplet med att skriva ut en formaterad sträng med alla varor i lagret.
 
 ```python
 warehouse_deluxe = {
@@ -222,6 +229,63 @@ for key in sorted(warehouse_deluxe.keys()):
 
 För de som är intresserade finns ett litet exempel i Pythons [dokumentation för tupler](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences).
 
+
+
+
+### Söka i nästlade datastrukturer {#search}
+
+Vi kollar också på hur vi kan jobba med nästlade datastrukturer för att hitta ett element med ett värde. Vi vill kunna söka på varors stock id för att få fram vilken vara det är kopplat till. Då kan vi passa på att utnyttja hur Python kan använda tupler vi tilldelning.
+
+Vi har redan sett att hur vi kan tilldela värden till två variabler i en for-loop med enumerate.
+
+```python
+for ind, value in enumerate(["ko", "apa","häst"]):
+    print(ind, value)
+
+# skriver ut:
+# 0 ko
+# 1 apa
+# 2 häst
+```
+
+enumerate() returnerar en lista där varje element är en tuple och varje tuple innehåller index värdet och värdet från listan. I loopen packas varje tuple upp så att första elementet tilldelas till första variabeln, `ind`, och det andra elementet tilldelas till den andra variabeln, `value`.
+
+Det funkar likadan om vi förser loopen men en lista som innehåller tupler. Om ni har varit uppmärksamma än så länge så har ni märkt att vi redan har gjort det.
+
+```python
+print(warehouse_deluxe.items())
+
+dict_items([
+    ('köttfärs', {'stock': 20, 'price': 50, 'ids': (1234, 'K14')}),
+    ('grädde', {'stock': 80, 'price': 20, 'ids': (3141, 'L12')}),
+    ('krossade tomater', {'stock': 33, 'price': 10, 'ids': (4224, 'E13')}), 
+    ('gul lök', {'stock': 42, 'price': 5, 'ids': (2742, 'D02')})
+])
+```
+
+`.items()` ger oss en lista med tupler som vi kan använda i for-loopen för att lägga varan i en variabeln och datan om varan i en annan.
+
+```python
+for item, data in warehouse_deluxe.items():
+    print(item, data)
+# skriver ut
+köttfärs {'stock': 20, 'price': 50, 'ids': (1234, 'K14')}
+grädde {'stock': 80, 'price': 20, 'ids': (3141, 'L12')}
+krossade tomater {'stock': 33, 'price': 10, 'ids': (4224, 'E13')}
+gul lök {'stock': 42, 'price': 5, 'ids': (2742, 'D02')}
+```
+
+Nu kan vi i loopen kolla om ett visst sock id finns och då skriva ut varans namn.
+
+```python
+search_for = "E13"
+for item, data in warehouse_deluxe.items():
+    if data["ids"][1] == search_for:
+        print(item)
+
+# skriver ut
+# krossade tomater
+```
 
 
 Avslutningsvis {#avslutning}
