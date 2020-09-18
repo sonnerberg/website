@@ -142,6 +142,10 @@ Länders folkmängd:
 Tips från coachen {#tips}
 -----------------------
 
+Försök identifiera data som används till flera menyval och skapa en funktion som returnerar den datan i en ny datastruktur. T.ex. en ny lista eller dictionary som bara innehåller den datan som behövs för menyvalen.
+
+Dela upp koden för ett menyval i flera funktioner. Då är det lättare att hitta funktioner som går att använda för flera menyval.
+
 För att se att dina uträkningar stämmer någorlunda kan du jämföra dina uträkningar för 2017 med de som finns i tabellen "[Fossil CO
 2 emissions by country/region](https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions#Fossil_CO2_emissions_by_country/region)". Det kommer inte stämma 100% den använder olika källor för landytor och befolkningsmängd men det ska vara snarlika resultat.
 
