@@ -117,32 +117,31 @@ Om vi istället vill sortera på antal varor, value, för att se vilka varor vi 
 
 #### Sortering på value {#sort-value}
 
-`itemgetter`  funktionen behöver värdena istället för nycklarna från dictionarien. För det kan vi använda funktionen `.items()` på vår dictionary.
+Vi behöver göra om vår dictionary till en sekvens där värdet också ingår, och inte bara nycklarna. Det kan vi göra med `.items()` funktionen.
 
-<!-- ### förklara hur sorteringen funkar!  så de kan använda den på dictionaries och tupler... kolla hur jag löst emission.-->
-<!-- ```python
+```python
 print(warehouse.items())
-f = itemgetter(0)
-print(f([('köttfärs', 20), ('grädde', 80), ('krossade tomater', 33), ('gul lök', 42)]))
+# skriver ut: dict_items([('köttfärs', 20), ('grädde', 80), ('krossade tomater', 33), ('gul lök', 42)])
+print(warehouse.items()[0])
+# skriver ut: ('köttfärs', 20))
+print(warehouse.items()[0][0])
+# skriver ut: 'köttfärs'
+```
 
-f2 = itemgetter(1)
-print(f2([('köttfärs', 20), ('grädde', 80), ('krossade tomater', 33), ('gul lök', 42)]))
+Vi får tillbaka en speciell lista för dictionary items men vi kan använda den som en vanlig lista. Värdena i listan är Tupler, också en speciell typ av lista som ni ska läsa om längre ner, där första elementet är nyckeln och det andra elementet är värdet kopplat till den nyckeln. För tillfället kan vi se Tupler som en lista. Så `warehouse.items()` returnerar en nästlad lista där varje element är en lista som innehåller ett nyckel och värde par.
 
-for x in warehouse.items():
-    print(f(x), end=" ")
-    print(f2(x))
+Nu vill vi sortera denna listan på värdena, vi använder oss fortfarande av `sorted()` men vi behöver ett sätt att få sorted att sortera på det andra elementet i varje tuple istället för det första. Här kommer `itemgetter` in i bilden. Med itemgetter kan vi säga till sorted vilket index den ska använda på våra tupler för att få ut ett värde att sortera på. För en mer detaljerad förklaring, kolla på videon nedanför.
 
-print(sorted(warehouse.items(), key=itemgetter(1)))
+[YOUTUBE src="Hcl5FSnu360" caption="Hur man sorterar dictionaries på värdet"]
 
-print(sorted(warehouse.items(), key=itemgetter(1), reverse=True))
+I koden nedanför säger vi till `sorted()` att använda 1 som index på tuplerna i `warehouse.items()` och sortera tuplerna efter det värdet. Sorterat från högt till lågt.
 
-for key, value in sorted(warehouse.items(), key=itemgetter(1), reverse=True):
-    print(key, value)
-``` -->
 ```python
 from operator import itemgetter
 
-for key, value in sorted(warehouse.items(), key=itemgetter(1), reverse=True):
+warehouse_as_list = warehouse.items()
+warehouse_sorted_on_values = sorted(warehouse_as_list, key=itemgetter(1), reverse=True)
+for key, value in warehouse_sorted_on_values:
     print(key, value)
 
 # skriver ut:
@@ -153,7 +152,7 @@ for key, value in sorted(warehouse.items(), key=itemgetter(1), reverse=True):
 # röd lök 7
 ```
 
-Vi ser ovan att vi inte importerar hela operator modulen enbart itemgetter delen. Vi använder `itemgetter` för att hämta ut värdet istället för nyckeln. Hade vi angett `key=itemgetter(0)` hade vi fått nyckeln istället. Vi använder `reverse=True` för att sortera i fallande ordning. `reverse=False` sorterar i stigande ordning.
+Hade vi angett `key=itemgetter(0)` hade vi sorterat på nyckeln istället. Vi använder `reverse=True` för att sortera i fallande ordning. `reverse=False` sorterar i stigande ordning.
 
 
 
@@ -163,7 +162,7 @@ Vi ser ovan att vi inte importerar hela operator modulen enbart itemgetter delen
 
 <!-- LÄgg till här? kolla hur jag använder dicts i dicts i uppgiften. -->
 
-På ett riktigt lager räcker det inte bara med antal varor som är kvar, vi vill även ha en möjlighet att ange priset. Med dictionaries, precis som med listor, har vi möjligheten att skapa dictionaries i dictionaries, så kallade nestlade dictionaries. Detta gör att vi kan ha både antalet och ett pris för varje vara. Vi kan nu skriva ut en sorterad lista med pris på följande sätt.
+På ett riktigt lager räcker det inte bara med antal varor som är kvar, vi vill även ha en möjlighet att ange priset. Med dictionaries, precis som med listor, har vi möjligheten att skapa dictionaries i dictionaries, så kallade nästlade dictionaries. Detta gör att vi kan ha både antalet och ett pris för varje vara. Vi kan nu skriva ut en sorterad lista med pris på följande sätt.
 
 ```python
 warehouse_deluxe = {
