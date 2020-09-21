@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-09-21": "(H, mos) Genomgången inför ht20."
     "2018-09-24": (G, mos) Nytt dokument inför v3.
     "2017-06-15": (F, mos) Uppdaterad labbserie.
     "2017-02-14": (E, mos) Kommenterade bort sql1 temporärt.
@@ -12,13 +13,6 @@ revision:
 ...
 Kmom05: SQL och SQLite
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 Låt oss börja med databaser. Jag har valt att introducera databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
 
@@ -70,11 +64,17 @@ Bekanta dig med följande.
 
 1. Vi kommer använda databasen SQLite och du kan orientera dig på deras [hemsida sqlite.org](https://www.sqlite.org/index.html). Kika snabbt och översiktligt.
 
+<!--
+1. Det finns en videoserie om SQL?
+1. Det finns en videoserie om PHP PDO med SQL?
+
+-->
 
 
-### Video  {#video}
 
-Det finns en samling videor som används i olika omfattning under kursens gång, [du finner dem på Youtube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg/playlists?view=50&shelf_id=9&sort=dd).
+### Videor {#video}
+
+Du fick länkar till kursens inspelade och sparade videor i första kursmomentet. Kika där om du glömt länkarna.
 
 
 
