@@ -433,7 +433,7 @@ Ovanför skrev jag att man behöver vara försiktigt med att använda slicing f�
 >>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde']
 >>> other_list = ['gul lök', 'röd lök']
 >>> shopping_list[1:2] = other_list
->>> print(other_list)
+>>> print(shopping_list)
 ['köttfärs', 'gul lök', 'röd lök', 'grädde']
 ```
 
@@ -443,7 +443,7 @@ Ovanför skrev jag att man behöver vara försiktigt med att använda slicing f�
 >>> shopping_list = ['köttfärs', 'krossade tomater', 'grädde']
 >>> other_list = ['gul lök', 'röd lök']
 >>> shopping_list[1:3] = other_list
->>> print(other_list)
+>>> print(shopping_list)
 ['köttfärs', 'gul lök', 'röd lök']
 ```
 
