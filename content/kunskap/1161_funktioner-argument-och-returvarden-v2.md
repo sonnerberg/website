@@ -1,9 +1,9 @@
 ---
 category: python
 author:
-    - mbn
+    - moc
 revision:
-  "2020-08-11": (A, mbn) Skapad inför V3 HT20.
+  "2020-08-11": (A, moc) Skapad inför V3 HT20.
 ...
 Funktioner, argument och returvärden
 ==================================

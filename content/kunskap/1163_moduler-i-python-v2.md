@@ -1,8 +1,8 @@
 ---
-author: mbn
+author: moc
 category: python
 revision:
-  "2020-08-17": (A, mbn) Skapad inför V3 HT20.
+  "2020-08-17": (A, moc) Skapad inför V3 HT20.
 ...
 Moduler i Python
 ==================================
