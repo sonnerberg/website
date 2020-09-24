@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-09-24": "(B, mos) Arrayen skall heta collection1."
     "2018-08-22": "(A, mos) Första versionen."
 ...
 Numeriska arrayer
@@ -90,7 +91,7 @@ Man kan kontrollera om ett index, en position i arrayen, har ett värde -- innan
 // Check if a item exists before accessing it.
 $value = "default value";
 if (array_key_exists(9, $collection1)) {
-    $value = $collection[9];
+    $value = $collection1[9];
 }
 var_dump($value);
 ```
@@ -101,7 +102,7 @@ Så här kan null operatorn användas för att hämta ett värde ur en numerisk 
 
 ```php
 // Check if a item exists before accessing it.
-$value = $collection[9] ?? "default value";
+$value = $collection1[9] ?? "default value";
 var_dump($value);
 ```
 
