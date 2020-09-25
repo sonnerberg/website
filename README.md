@@ -7,8 +7,10 @@ This is the main website for dbwebb.se, live at [https://dbwebb.se](https://dbwe
 
 
 
-Really short story
+The short Docker story
 --------------------------------
+
+This is how you can run and develop this repo within a Docker environment.
 
 Clone the website repo to get a clean install.
 
@@ -63,9 +65,23 @@ docker-compose down website
 ```
 
 
+Really short Docker-story
+--------------------------------
+
+You may run the website directly using docker.
+
+```
+docker run -p 8080:80 dbwebb/website
+```
+
+That might be useful if you want to have your own local backup instance of the website.
+
+
 
 Short story
 --------------------------------
+
+This is if the docker way does not work for you.
 
 Works for me on Debian.
 
