@@ -84,8 +84,9 @@ help:
 .PHONY: docker
 docker: codebase-update clean-cache-anax
 	@$(call HELPTEXT,$@)
-	# Always do "make clean-cache-anax" after you have updated files
-	# in content/, this enables the content/ cache to be re-built.
+	# Always do "make clean-cache-anax"
+	#  after you have updated files in 'content/',
+	#  this enables the 'cache/anax/' cache to be re-built.
 
 
 
