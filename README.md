@@ -10,11 +10,32 @@ This is the main website for dbwebb.se, live at [https://dbwebb.se](https://dbwe
 Really short story
 --------------------------------
 
-Prepare to run in docker and update all local files.
+Clone this repo to get a clean install.
+
+Prepare to run website in docker and update all local files.
 
 ```
-make update-docker
+make docker
 ```
+
+That creates the `cache/` directory. Remember to clean the Anax cache when making updates to files in the `content/` directory.
+
+```
+make clean-anax-cache
+```
+
+You can now can start the website container.
+
+```
+docker-compose up website
+docker-compose up -d website
+```
+
+Point your browser to "localhost:8080" and wait a few secods for the cache to warm up.
+
+Logfiles from Apache is written to `log/{access,error}.log`.
+
+Review the `docker-compose.yaml` to see what is mounted into the container and which directories that are not (`vendor/`).
 
 If this gives error try running `composer install` in the folder `/app` inside the container after you have started the container with the command below. To enter container run `docker exec -it <container_name> bash`.
 

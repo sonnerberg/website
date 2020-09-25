@@ -80,10 +80,12 @@ help:
 
 
 
-# target: update-docker           - Create/update basis for docker installation of website.
-.PHONY: update-docker
-update-docker: codebase-update site-build-docker clean-cache-anax
+# target: docker                  - Enable to execute in docker.
+.PHONY: docker
+docker: codebase-update clean-cache-anax
 	@$(call HELPTEXT,$@)
+	# Always do "make clean-cache-anax" after you have updated files
+	# in content/, this enables the content/ cache to be re-built.
 
 
 
@@ -113,7 +115,7 @@ install-cache-anax:
 
 # target: clean-cache-anax        - Clean the local anax cache directory.
 .PHONY: clean-cache-anax
-clean-cache-anax:
+clean-cache-anax: install-cache-anax
 	@$(call HELPTEXT,$@)
 	-rm -f cache/anax/*
 
@@ -391,16 +393,16 @@ site-build:
 
 
 
-# target: site-build-docker       - Create essential directories for a docker installation.
-.PHONY: site-build-docker
-site-build-docker:
-	# Create and sync cache
-	bash -c "install -d -m 777 cache/{cimage,anax,forum,forum-files}"
-
-	# Copy from CImage
-	install -d htdocs/cimage
-	bash -c "rsync -av vendor/mos/cimage/webroot/{img,imgd,imgf,imgp,imgs,check_system}.php vendor/mos/cimage/icc htdocs/cimage"
-	rsync -av vendor/mos/cimage/webroot/img/ htdocs/img/cimage/
+# # target: site-build-docker       - Create essential directories for a docker installation.
+# .PHONY: site-build-docker
+# site-build-docker:
+# 	# Create and sync cache
+# 	bash -c "install -d -m 777 cache/{cimage,anax,forum,forum-files}"
+#
+# 	# Copy from CImage
+# 	install -d htdocs/cimage
+# 	bash -c "rsync -av vendor/mos/cimage/webroot/{img,imgd,imgf,imgp,imgs,check_system}.php vendor/mos/cimage/icc htdocs/cimage"
+# 	rsync -av vendor/mos/cimage/webroot/img/ htdocs/img/cimage/
 
 
 
