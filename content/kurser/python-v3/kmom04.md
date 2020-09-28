@@ -63,7 +63,7 @@ Titta på följande:
 ###Lästips {#lastips}
 
 1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
-    * App A Debugging
+    * Chapter Debugging
 
 
 
