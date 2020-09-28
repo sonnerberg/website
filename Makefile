@@ -82,7 +82,7 @@ help:
 
 # target: docker                  - Enable to execute in docker.
 .PHONY: docker
-docker: codebase-update clean-cache-anax
+docker: clean-cache-anax
 	@$(call HELPTEXT,$@)
 	# Always do "make clean-cache-anax"
 	#  after you have updated files in 'content/',

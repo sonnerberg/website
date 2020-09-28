@@ -14,7 +14,7 @@ This is how you can run and develop this repo within a Docker environment.
 
 Clone the website repo to get a clean install.
 
-Prepare to run website in docker (and update your repo).
+Prepare to run website in docker.
 
 ```
 make docker
