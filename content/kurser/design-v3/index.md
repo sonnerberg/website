@@ -1,5 +1,5 @@
 ---
-title: design-v3
+title: design (v3)
 author: nik
 #views:
 #    flash:
@@ -142,7 +142,7 @@ Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det si
 
 
 
-<!-- Kurslitteratur {#litteratur}
+Kurslitteratur {#litteratur}
 ----------------------------
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
@@ -155,7 +155,7 @@ Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal art
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
-* **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**   -->
+* **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**  
 
 
 <!--
@@ -168,7 +168,6 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 -->
 
 
-<!--
 ### Övrig litteratur {#ovriglitteratur}
 
 I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
@@ -192,7 +191,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 
 
 
-Rekommenderad studieplan {#studieplan}
+<!-- Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
 Kursen har en [rekommenderad studieplan](kurser/design/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
@@ -208,14 +207,15 @@ Lektionsplan {#lektionsplan}
 
 Det finns en [lektionsplan](kurser/design/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
 
-Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema). -->
 
 
 
 Handledning {#handledning}
 ----------------------------------------
 
-Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och via [kursens Github Issues](https://github.com/dbwebb-se/design-v3/issues). Chatten lämpar sig för korta enkla frågor och issues för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderar vi att du skapar en Github Issue.
+
 
 Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 
@@ -243,7 +243,7 @@ Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtli
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
-
+<!-- 
 
 Kursutvärdering och kursutveckling {#kursutvardering}
 -----------------------------------------------------
