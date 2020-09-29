@@ -1,12 +1,12 @@
 ---
 title: design (v3)
 author: nik
-#views:
-#    flash:
-#        region: flash
-#        template: default/image
-#        data:
-#            src: "image/snapht16/design-van-gogh.jpg?w=1100&h=360&cf&s=10&s=8&smooth&sharpen&f3=mean_removal&emboss&convolve=lighten:emboss-alt:motion"
+views:
+   flash:
+       region: flash
+       template: default/image
+       data:
+            src: "image/kurs/design/ux.jpg?w=1100&h=650&crop-to-fit"
 revision:
     "2020-08-25": "(A, nik) Landningssida för v3."
 ...
