@@ -20,12 +20,14 @@ För att kunna hantera vårt konto behöver vi först och främst skapa ett. Det
 
 Vi vill ju hantera kontot på terminalnivå så vi kör följande för att logga in:
 
-`$ docker login --username=yourhubusername --email=youremail@example.com`
+`$ docker login`
 
-Knappa in lösenordet när du ombeds göra det. Om allt går bra ser du följande utskrift:
+Knappa in användarnamnet och lösenordet när du ombeds göra det. Om allt går bra ser du följande utskrift:
 
 ```
 WARNING: login credentials saved in /home/username/.docker/config.json
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 Login Succeeded
 ```
 

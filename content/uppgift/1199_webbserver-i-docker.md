@@ -40,7 +40,7 @@ JSON-filen kopierar du från exempelmappen:
 
 ```bash
 # Ställ dig i kursroten
-$ cp -r example/json/items.json me/kmom04/server/data/
+$ cp -r example/json/items.json me/kmom04/data/
 ```
 
 Krav {#krav}
