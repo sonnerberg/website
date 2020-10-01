@@ -122,13 +122,13 @@ Vi behöver göra om vår dictionary till en sekvens där värdet också ingår,
 ```python
 print(warehouse.items())
 # skriver ut: dict_items([('köttfärs', 20), ('grädde', 80), ('krossade tomater', 33), ('gul lök', 42)])
-print(warehouse.items()[0])
+print(list(warehouse.items())[0])
 # skriver ut: ('köttfärs', 20))
-print(warehouse.items()[0][0])
+print(list(warehouse.items())[0][0])
 # skriver ut: 'köttfärs'
 ```
 
-Vi får tillbaka en speciell lista för dictionary items men vi kan använda den som en vanlig lista. Värdena i listan är Tupler, också en speciell typ av lista som ni ska läsa om längre ner, där första elementet är nyckeln och det andra elementet är värdet kopplat till den nyckeln. För tillfället kan vi se Tupler som en lista. Så `warehouse.items()` returnerar en nästlad lista där varje element är en lista som innehåller ett nyckel och värde par.
+Vi får tillbaka en speciell lista, `dict_items` för dictionary items, den är itererbar (funkar i for-loopar) men inte indexerbar. Därför, om man vill hämta ut ett element med index måste man först göra om den till en lista. Värdena i listan är Tupler, också en speciell typ av lista som ni ska läsa om längre ner, där första elementet är nyckeln och det andra elementet är värdet kopplat till den nyckeln. För tillfället kan vi se Tupler som en lista. Så `warehouse.items()` returnerar en nästlad lista där varje element är en lista som innehåller ett nyckel och värde par.
 
 Nu vill vi sortera denna listan på värdena, vi använder oss fortfarande av `sorted()` men vi behöver ett sätt att få sorted att sortera på det andra elementet i varje tuple istället för det första. Här kommer `itemgetter` in i bilden. Med itemgetter kan vi säga till sorted vilket index den ska använda på våra tupler för att få ut ett värde att sortera på. För en mer detaljerad förklaring, kolla på videon nedanför.
 
