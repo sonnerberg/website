@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2020-10-01": (M, aar) Ändrade datum för try1 ht20.
     "2019-11-25": (L, aar) Ändrade datum för omexamination.
     "2018-12-10": (k, efo, aar) Översyn och släpp inför python-v2 try3.
     "2018-12-10": (j, efo, aar) Översyn och släpp inför python-v2 try2.
@@ -24,12 +25,12 @@ Kmom10: Individuell examination
 
 Detta kursmoment avslutar och examinerar kursen.
 
-<!-- ctr+d efter "try1" och "2018-10-30" för ny examination -->
+<!-- ctr+d efter "try1" och "2020-10-27" för ny examination -->
 
 Upplägg {#upplagg}
 --------------------------------------------------------------------
 
-<!-- Den individuella examinationen genomfördes den 2019-10-28. Omexamination genomfördes 2019-01-10. **Restexamination genomförs den 2019-06-10**. -->
+<!-- Den individuella examinationen genomfördes den 2020-10-27. Omexamination genomfördes 2019-01-10. **Restexamination genomförs den 2019-06-10**. -->
 
 Du använder dbwebb-kommandorads verktyget för att hämta din individuella examinations uppgift och för att rätta, validera och lämna in dina lösningar. Redovisning kan lämnas in dagen efter examinationen. Det är för att ni ska få en dag på er att göra er redovisning.
 
@@ -49,7 +50,7 @@ Examination sker på valfri plats, det går att ladda ner examination från kl 8
 
 
 
-Hämta examinationstillfälle 2019-10-28 (try1) {#hamta}
+Hämta examinationstillfälle 2020-10-27 (try1) {#hamta}
 ----------------------------------------------------------------------
 
 I [Om examination med dbwebb exam](./../om) finns mer information om `dbwebb exam`-verktyget.
@@ -199,7 +200,7 @@ Inga genomförda än för HT19.
 Omexamination {#omexamination}
 ----------------------------------------------------------------------
 Som student har du rätt till tre examinationstillfällen med andra ord om du inte klarar första har du två försök till på dig.
-Följande tillfällen erbjuds efter 2019-10-28:
+Följande tillfällen erbjuds efter 2020-10-27:
 
 Omexaminationstillfälle fredagen den 2020-01-09.
 
