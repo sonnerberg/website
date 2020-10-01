@@ -202,6 +202,6 @@ Omexamination {#omexamination}
 Som student har du rätt till tre examinationstillfällen med andra ord om du inte klarar första har du två försök till på dig.
 Följande tillfällen erbjuds efter 2020-10-27:
 
-Omexaminationstillfälle fredagen den 2020-01-09.
+Omexaminationstillfälle fredagen den 2021-01-12.
 
-Restexaminationstillfälle onsdagen den 2020-06-10.
+Restexaminationstillfälle onsdagen den 2021-06-08.
