@@ -4,6 +4,7 @@ category:
     - kurs htmlphp
     - webbprogrammering
 revision:
+    "2020-10-04": (F, nik) Klargörande att uppgift ska vara en del av me-sidan.
     "2020-09-04": "(E, mos) Mindre justeringar i kraven, publicerad för htmlphp v4."
     "2018-09-17": (D, mos) Mindre justeringar i kraven, publicerad för htmlphp v3.
     "2018-09-14": (C, mos) Uppdaterad och ny struktur med fler uppgifter i htmlphp v3.
@@ -79,6 +80,8 @@ Krav {#krav}
 1. Skapa en ny (multi) sida med ett ett POST-formulär som använder en processingsida och redirectar till en resultatsida. Du kan göra ett valfritt formulär eller ett "kontakta mig" formulär. Sista sidan skriver ut "Tack". Man kan göra reload på "Tack"-sidan utan att formuläret postas om.
 
 1. Gör ytterligare undersida med ett POST formulär där du har ett formulärfält (textarea) där användaren kan skriva ett eget meddelande. Detta meddelande skall du hantera i processingsidan, spara i sessionen, och slutligen visa i resultatsidan (tänk _read once flash message_).
+
+1. Samtliga sidor som visas ska vara en del av din me-sida (sammanhängande design, header, footer etc).
 
 1. Validera och publicera din kod.
 
