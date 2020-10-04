@@ -23,7 +23,7 @@ Bygg in en sökmotor i din me-sida, en sökmotor som söker i din egen-konstruer
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har utfört uppgiften "[Bygg ut din htmlphp me-sida till version 4](uppgift/bygg-ut-din-me-sida-till-version-4)".
+Du har utfört uppgiften "[Bygg ut din htmlphp me-sida till version 4](uppgift/bygg-ut-din-me-sida-till-version-4-v2)".
 
 Du har utfört uppgiften "[Bygg en multisida för att söka i en databas](uppgift/bygg-en-multisida-for-att-soka-i-en-databas)".
 
