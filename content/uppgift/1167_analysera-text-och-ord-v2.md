@@ -24,7 +24,7 @@ Vi har i Marvin byggt ett program bestående av två moduler och ett antal funkt
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har en bra förståelse för `dictionary` och har jobbat igenom "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)".
+Du har en bra förståelse för `dictionary` och har jobbat igenom "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)" och [Att läsa filer som listor i Python](kunskap/att-lasa-filer-i-python-v2).
 
 
 
@@ -37,13 +37,13 @@ Vill du lära dig mer om vad textanalys kan innebära "på riktigt" så läser d
 
 Du kommer göra en övning med ordfrekvens, läs gärna om det på [Wikipedia Letter Frequency](https://en.wikipedia.org/wiki/Letter_frequency) och studera bilden som visar bokstävernas procentuella förekomst i det engelska språket.
 
-För samtliga uppgifter gäller att ett ord består av bokstäverna [a-Z]. Ett tips är att konvertera alla ord till enbart små bokstäver [a-z], det kan göra uppgiften enklare.
+För samtliga uppgifter gäller att ett ord består av bokstäverna [A-z]. Ett tips är att konvertera alla ord till enbart små bokstäver [a-z], det kan göra uppgiften enklare.
 
 Googla "online word counter" eller "online letter counter" så hittar du verktyg som gör precis det du skall göra. Testa att köra in texten i ett av dem och se hur det ser ut. Då får du en referens och mental bild som kan hjälpa dig att se om du är på rätt väg eller ej.
 
 Du ska i uppgiften göra ett program som analyserar en text från en fil. Det kan se ut på detta sättet när vi kör programmet:
 
-[ASCIINEMA src=262104]
+[ASCIINEMA src=363438]
 
 
 
@@ -67,9 +67,9 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Modulen `menu.py` skall enbart innehålla kod för att visa menyn.
 
-1. Filen `main.py` skall enbart innehålla kommandoloopen, tänk while-loopen i marvin, och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften. Koden ska ligga i en funktion som heter `main`. Glöm inte `if __name__ == "__main__"` i main.py.
+1. Filen `main.py` skall enbart innehålla kommandoloopen, tänk while-loopen i marvin, och använda sig av modulerna `analyzer` och `menu` för att lösa uppgiften. Koden ska ligga i en funktion som heter `main`.**Glöm inte `if __name__ == "__main__"` i main.py för att starta programmet**.
 
-1. Menyvalet `menu` ska skriva ut menyn och vilka val man kan göra. PS. Man ska inte vara tvungen att skriva menu först för att skriva de andra menyvalen.
+1. Menyvalet `menu` ska skriva ut menyn och vilka val man kan göra.
 
 1. Analysera antal rader (ej tomma), ord och bokstäver med menyvalen `lines`, `words` och `letters`. Skriv en funktion för varje kommando.
 
@@ -79,18 +79,9 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Ditt program ska klara av att byta textfil för analys.
 
-1. Se till att inte göra fler `input` eller `print` än vad som krävs för att lösa uppgiften. Se asciinema ovan för exempel.
+1. Det är väldigt viktigt du har **exakt** rätt antal `input()` i din kod. Se asciinema ovan för exempel, en input för att göra ett menyval och en input efter att du har skrivit ut resultatet.
 
-1. Validera ditt program genom att göra följande kommando i kurskatalogen i terminalen.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate analyzer
-```
-
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
-
-12. **Rätta ditt program med hjälp av `dbwebb inspect`, genom att köra kommandot**:
+1. **Rätta ditt program med hjälp av `dbwebb inspect`, genom att köra kommandot**:
 
 ```bash
 dbwebb inspect kmom06
@@ -125,6 +116,15 @@ letter_frequency:
     "a": 64 | 7.1%
     "i": 64 | 7.1%
 ```
+
+12. Validera ditt program genom att göra följande kommando i kurskatalogen i terminalen.
+
+```bash
+# Ställ dig i kurskatalogen
+dbwebb validate analyzer
+```
+
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 

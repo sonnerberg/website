@@ -24,15 +24,6 @@ revision:
 Kmom06: Filer
 ==================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
-
-
 Som vi jobbat i tidigare kursmoment försvinner all data när vi stänger av programmet, vi har ingen permanent data. Genom att skriva ner data i filer under exekvering kan vi uppnå ett permanent minne åt våra program. I detta kursmomentet kommer ni lära er läsa data från fil och hur man skriver ner data till fil.
 
 Vi kommer även lämna Marvin och istället ska ni skapa ett nytt program där ni får öva mycket på dictionaries och listor för att bygga ett verktyg för textanalys.
