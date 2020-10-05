@@ -145,6 +145,12 @@ Tanken är här att vi ska flytta in vår Mazerunner i Docker och de ska prata m
 
 
 
+Så här kan det se ut när du är klar.
+
+[ASCIINEMA src=363527]
+
+
+
 ### Validera och publicera {#publish}
 
 Validera och publicera din kod enligt följande.
