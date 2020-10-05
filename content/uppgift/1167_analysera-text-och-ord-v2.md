@@ -89,6 +89,8 @@ dbwebb inspect kmom06
 
 När `dbwebb inspect` rättar dina filer körs enhetstester på din kod. Detta är samma sätt som används på den individuella examinationen.
 
+[YOUTUBE src=WeWFQmRNWng caption="Andreas går igenom rättningsprogrammet för Analyzer."]
+
 Följande är korrekt resultat för de olika kommando:
 
 ```
