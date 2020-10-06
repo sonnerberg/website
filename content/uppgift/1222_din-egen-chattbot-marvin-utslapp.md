@@ -87,7 +87,7 @@ Krav {#krav}
 
 ```bash
 cd me
-cp -ri kmom04/marvin3/ kmom05/marvin4/
+cp -ri kmom04/marvin3/* kmom05/marvin4/
 cp ../example/emission_data/emission_data.py kmom05/marvin4/
 
 cd kmom05/marvin4
