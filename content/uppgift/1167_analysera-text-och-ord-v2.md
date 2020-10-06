@@ -52,6 +52,10 @@ Krav {#krav}
 
 Börja med att kopiera text-filen `phil.txt`.
 
+[INFO]
+Gör `dbwebb update` innan du kopierar.
+[/INFO]
+
 ```bash
 # Ställ dig i kursrepo katalogen
 # rsync används för att kopiera filer och mappar
