@@ -11,6 +11,14 @@ revision:
 Kmom03: DI
 ==================================
 
+[WARNING]
+
+**Översyn pågår**
+
+Kmomet är under översyn och eventuell uppdatering kan komma att ske.
+
+[/WARNING]
+
 Vi skall titta på tekniker som kan sammafattas med Dependency Injection (DI). Dessa tekniker används för att skapa en grundläggande struktur i ramverket avseende hur man lägger till "tjänster" i ramverket. Det handlar om `$di`.
 
 Vi skall titta på begreppet Dependency Injection och några begrepp som är närliggande, begrepp såsom service locator, service container och lazy loading. Det handlar om designmönster och vanliga sätt att strukturera sin kod enligt det som kan betraktas som god programmeringssed.

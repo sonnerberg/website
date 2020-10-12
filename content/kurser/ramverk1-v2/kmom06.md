@@ -9,6 +9,14 @@ revision:
 Kmom06: Databasdrivna modeller
 ==================================
 
+[WARNING]
+
+**Översyn pågår**
+
+Kmomet är under översyn och eventuell uppdatering kan komma att ske.
+
+[/WARNING]
+
 Vi skall titta på klasser i modelllagret och utöka vår ramverksstruktur med formulärhantering via klasser och metoder samt databasdrivna modellklasser där vi använder oss av designmönstret Active Record.
 
 Vi skall använda en extern modul för htmlformulär och vi skall använda en extern modul för databashanteringen.
@@ -48,7 +56,7 @@ Kika igenom följande artiklar.
 
 1. Bekanta dig med begreppet [Active record](https://en.wikipedia.org/wiki/Active_record_pattern) genom att översiktligt titta på Wikipedias information. Se referenserna till implementationer i PHP och välj ut några av dem och titta översiktligt på dem. Du vill skaffa dig en känsla för hur olika ramverk jobbar mot databaser.
 
-1. Bekanta dig översiktligt med begreppet "[Object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping)" via Wikipedia. 
+1. Bekanta dig översiktligt med begreppet "[Object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping)" via Wikipedia.
 
 1. Artikeln PHP The Right Way innehåller ett kort stycke om "[Abstraction Layers (Databases)](http://www.phptherightway.com/#databases_abstraction_layers)", läs igenom det som en introduktion och kika på de länkar som leder till olika ramverks implementationer av databas-moduler.
 
