@@ -9,6 +9,14 @@ revision:
 Kmom07/10: Projekt och examination
 ==================================
 
+[WARNING]
+
+**Översyn pågår**
+
+Kmomet är under översyn och eventuell uppdatering kan komma att ske.
+
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -71,14 +79,14 @@ Alla inlägg som en användare gör kan kopplas till denna. Klickar man på en a
 
 En fråga kan ha en eller flera taggar kopplade till sig. När man listar en tagg kan man se de frågor som har den taggen. Klicka på en tagg för att komma till de frågor som har taggen kopplat till sig.
 
-En fråga kan ha många svar. Varje fråga och svar kan i sin tur ha kommentarer kopplade till sig. 
+En fråga kan ha många svar. Varje fråga och svar kan i sin tur ha kommentarer kopplade till sig.
 
 Alla frågor, svar och kommentarer skrivs i Markdown.
 
 Förstasidan skall ge en översikt av senaste frågor tillsammans med de mest populära taggarna och de mest aktiva användarna.
 
 Webbplatsen skall finnas på GitHub, tillsammans med en README som beskriver hur man checkar ut och installerar sin egen version.
- 
+
 Webbplatsen skall finnas i drift med innehåll på studentservern.
 
 Kommandot `make test` skall passera för källkoden.
@@ -95,7 +103,7 @@ Varje svar, fråga och kommentar kan röstas på av användare med +1 (up-vote) 
 
 Svaren på en fråga kan sorteras och visas antingen enligt datum, eller rank (antalet röster).
 
-Översikten av frågorna visar hur många svar en fråga har, samt vilken rank frågan har. 
+Översikten av frågorna visar hur många svar en fråga har, samt vilken rank frågan har.
 
 
 
@@ -135,7 +143,7 @@ Redovisning {#redovisning}
 
 1. Tagga din me/redovisa i v10.0.0 och publicera på GitHub.
 
-1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din me-sida och projektet samt till GitHub repot. 
+1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din me-sida och projektet samt till GitHub repot.
 
 1. Publicera på studentservern.
 

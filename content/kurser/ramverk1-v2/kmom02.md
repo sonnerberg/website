@@ -9,6 +9,14 @@ revision:
 Kmom02: MVC
 ==================================
 
+[WARNING]
+
+**Översyn pågår**
+
+Kmomet är under översyn och eventuell uppdatering kan komma att ske.
+
+[/WARNING]
+
 Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket. Vi har tidigare sett både vyer (V) och kontroller (C) så nu är det dags att väva in M:et som står för model, modell-klasser och/eller modell-lagret.
 
 Vi bekantar oss även med begreppet SOLID som är en akronym för en samling designmönster som är aktuella i sammhanget kring ramverk och allmän objektorienterad utveckling.

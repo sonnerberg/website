@@ -92,7 +92,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ### Kmom01: Ramverk {#kmom01}
 
-Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att börja anamma ett modultänkande kring PHP och ramverk. 
+Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att börja anamma ett modultänkande kring PHP och ramverk.
 
 [Instruktion till kursmoment 01](./kmom01).
 
@@ -203,55 +203,61 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming | 
+| Kursmoment | Eloquent JavaScript: A Modern Introduction to Programming |
 |------------|-----------------------------------------------------------|
 | Kmom01     | Ch 1, 12                                                  |
 | Kmom02     | Ch 2                                                      |
-| Kmom03     | Ch 3,                                                     | 
+| Kmom03     | Ch 3,                                                     |
 | Kmom04     | Ch 4, 6                                                   |
-| Kmom05     | Ch 12, 13, 14                                             | 
-| Kmom06     |                                                           | 
+| Kmom05     | Ch 12, 13, 14                                             |
+| Kmom06     |                                                           |
 | Kmom10     |                                                           |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 -->
 
 
 
-Rekommenderad studieplan {#studieplan}
+Planering och studieplaner {#planering}
 ---------------------------------------------
 
-Kursen har en [rekommenderad studieplan](kurser/ramverk1/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
+Eftersom kursen ges kombinerat på campus och distans så är kursens planering fördelad på ett antal olika dokument. Bekanta dig med dem så att du har koll på hur kursens upplägg fungerar och vilket som är en normaltakt för kursen.
 
-I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
+<!--
+Kursen har en [veckoplan](./veckoplan) där du få en rekommendation till hur du kursens övergripande planering ser ut och hur du skall lägga upp dina studier, vecka för vecka.
+-->
 
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
+Kursen har en [rekommenderad studieplan](ramverk1/studieplan) som visar en översikt, vecka för vecka, vilket kursmoment som är aktuellt att jobba med. Där finns även rättningsfönster som visar när saker rättas. Följer du denna planeringen så är du i fas med kursens normaltakt.
 
+På Canvas finns datum för inlämningsuppgifter. Ett rättningsfönster pågår normalt sett 15 arbetsdagar efter inlämningsdatum på uppgiften. Inlämningsdatumen på Canvas är ett par dagar senare än vad som visas i den rekommenderade studieplanen, det är för att ge dig lite slack/utrymme för att själv planera dina studier.
 
+Kursen har en [lektionsplan](ramverk1/lektionsplan) som visar när det är lärarledda tillfällen för undervisning/handledning på campus/distans.
 
-Lektionsplan {#lektionsplan}
----------------------------------------------
-
-Det finns en [lektionsplan](kurser/ramverk1/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
-
-Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
-
+Kursen har bokade tillfällen i BTHs schemabokningsprogram, "schemat", som säger när en fysisk sal är bokad på campus. Det finns en länk till det aktuella schemar, via lektionsplanen.
 
 
-Handledning {#handledning}
+
+Läromaterial och resurser {#laromaterial}
 ----------------------------------------
 
-Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+Via [läromaterial](./laromaterial) kan du se en översikt av hur kurstillfället har valt att strukturera läromaterialet och vilka resurser och verktyg som används i undervisningen.
 
-Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
+Här finner du även länkar till aktuella video streams och spellistor samt chatter och forum för handledning.
+
+
+
+Lärarteam och intressenter {#team}
+----------------------------------------
+
+Du kan hitta [detaljer om ett kurstillfälle](./team) och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
 
 
 
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
@@ -299,7 +305,7 @@ Versioner av kursen {#versioner}
 
 Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
 
-För tillfällen från höstterminen 2018 så [finns kursmaterialet till ramverk1 (v2) här](kurser/ramverk1-v2). 
+För tillfällen från höstterminen 2018 så [finns kursmaterialet till ramverk1 (v2) här](kurser/ramverk1-v2).
 
 För tillfället under höstterminen 2017, så [finns kursmaterialet till den kursen ramverk1 (v1)](kurser/ramverk1-v1).
 

@@ -53,7 +53,7 @@ Examination sker på valfri plats, det går att ladda ner examination från kl 8
 Hämta examinationstillfälle 2020-10-27 (try1) {#hamta}
 ----------------------------------------------------------------------
 
-I [Om examination med dbwebb exam](./../om) finns mer information om `dbwebb exam`-verktyget.
+I [Om examination med dbwebb exam](kurser/python-v3/kmom10/om) finns mer information om `dbwebb exam`-verktyget.
 
 Innan du kör kommandon nedan uppdatera `dbwebb` och kursrepot samt skapa kataloger i din me katalog med följande kommandon.
 
