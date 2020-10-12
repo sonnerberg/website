@@ -222,7 +222,7 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Planering och studieplaner {#planering}
 ---------------------------------------------
 
-Eftersom kursen ges kombinerat på campus och distans så är kursens planering fördelad på ett antal olika dokument. Bekanta dig ed dem så att du har koll på hur kursens upplägg fungerar och vilket som är en normaltakt för kursen.
+Eftersom kursen ges kombinerat på campus och distans så är kursens planering fördelad på ett antal olika dokument. Bekanta dig med dem så att du har koll på hur kursens upplägg fungerar och vilket som är en normaltakt för kursen.
 
 <!--
 Kursen har en [veckoplan](./veckoplan) där du få en rekommendation till hur du kursens övergripande planering ser ut och hur du skall lägga upp dina studier, vecka för vecka.
