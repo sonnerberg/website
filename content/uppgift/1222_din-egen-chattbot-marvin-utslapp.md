@@ -101,9 +101,9 @@ cd kmom05/marvin4
 
 5. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut. Ni kan välja själva om ni vill räkna från 0 eller 1.
 
-6. **Menyval 14**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera it storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+6. **Menyval 14**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera i storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
-7. **Menyval 15**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per landyta, sortera it storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+7. **Menyval 15**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per landyta, sortera i storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
 8. Validera och publicera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
 
