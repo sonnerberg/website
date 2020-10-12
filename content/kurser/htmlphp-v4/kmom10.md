@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-10-12": "(E, mos) Uppdatera tillgänglig tid i enlighet med läsperioden."
     "2019-10-14": "(D, mos) Trycker på Ux, responsivitet och kodstruktur."
     "2018-10-12": "(C, mos) Uppdatering och nytt alternativt projekt NVM."
     "2016-02-22": "(B, mos) Bort med not om kursutveckling och länk till version 1."
@@ -13,9 +14,9 @@ Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
 
-* Projektet och redovisning (20-80h)
+* Projektet och redovisning (20-60h)
 
-Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar. Du kan själv styra din arbetsinsats genom att välja vilka optionella delar du utför.
+Totalt omfattar kursmomentet (07/10) ca 20+20+20 studietimmar. Du kan själv styra din arbetsinsats genom att välja vilka optionella delar du utför.
 
 
 
