@@ -3,6 +3,7 @@ author: nik
 category:
     - kurs/design-v3
 revision:
+    "2020-10-12": (B, nik) Uppdaterad inför ht20
     "2020-08-26": (A, nik) Draft
 ...
 Skapa din egen portfolio-sida
@@ -166,7 +167,7 @@ git push --tags
 
 ### Bekanta dig {#bekanta}
 
-Bekanta dig med strukturen för din portfolio-katalog och se vad som finns där.
+Bekanta dig med strukturen för din portfolio-katalog och se vad som finns där. Om du inte har, läs igenom artikeln "[Vad är Pico?](kunskap/vad-ar-pico)".
 
 Du kan följa med i videon nedan för att se hur man kan:
 
@@ -184,23 +185,19 @@ Krav {#krav}
 
 1. Förstasidan `portfolio/content/index.md` skall innehålla en hälsning/presentation av/om dig tillsammans med minst en bild som representerar dig.
 
-1. Skapa en `about.md` där du skriver ett kort stycke om kursen tillsammans med en bild som du känner representerar din tanke kring design.
-
-    * På din `about.md` ska du ha en länk till kursens Github-repo.
-
-    * På din `about.md` ska du ha en länk till ditt egna Github-repo.
+1. Uppdatera länken i footern så den länkar till ditt egna Github-repo.
 
 1. Byt ut flash-bilden som finns på samtliga sidor.
 
 1. Skapa en `report/kmom01.md` där du påbörjar ett utkast till din redovisningstext för kursmomentet.
 
-1. Skapa ditt eget tema <!-- **FÖRKLARA** -->.
+1. Skapa ditt eget tema, se "[Vad är Pico? - Tema](kunskap/vad-ar-pico#tema)" för mer information.
 
 1. I din portfolio-mapp (`me/portfolio/`), skapa en fil som heter `github.txt` som innehåller enbart länken till ditt Github-repo (ex: `https://github.com/dbwebb-se/design-v3`)
 
 1. Publicera dina filer till studentservern, `dbwebb publish me`, och kontrollera att allt fungerar som det ska.
 
-1. Commit:a dina ändringar <!-- och lägg till en ny tagg (1.0.\*)-->.
+1. Commit:a dina ändringar<!-- och lägg till en ny tagg (1.0.\*)-->.
 
 1. Push:a repot till GitHub<!-- , inklusive taggarna -->.
 

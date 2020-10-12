@@ -115,7 +115,11 @@ I detta kursmomentet jobbar vi med CSS. Läs följande.
 
 *(ca: 8-10 studietimmar)*
 
+### Övningar {#ovningar}
 
+Följande länk är en genomstegning av Portfolio-sidan. Eget testande uppmuntras.
+
+1. Läs igenom och testa med artikeln "[Vad är Pico?](kunskap/vad-ar-pico)". Artikeln ligger i grund för att du ska förstå Pico's upplägg.
 
 ### Uppgifter {#uppgifter}
 
@@ -136,10 +140,10 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser?
-* Det blev en del nya verktyg och tekniker i labbmiljön och för att jobba med portfolio-sidan, är du bekant med några av dem sedan tidigare?
-* Har du några förutfattade meningar, eller kanske en etablerad övertygelse, inom design och användbarhet för webben?
-* Hur kändes det att styla webbplatsen med CSS? Gick det bra?
+* Har du jobbat med ramverk eller andra CMS:er tidigare?
+* Det blev en del nya verktyg och tekniker i labbmiljön och för att jobba med portfolio-sidan, är du bekant med någon av dem sedan tidigare?
+* Har du några förutfattade meningar, eller kanske etablerad övertygelse, inom design och användbarhet för webben?
+* Hur kändes det att göra din egna layout och styla den? Gick det bra?
 * Vilken är din TIL för detta kmom?
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
