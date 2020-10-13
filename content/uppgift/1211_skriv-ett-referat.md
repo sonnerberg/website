@@ -4,6 +4,7 @@ author:
     - nik
 category: itsec
 revision:
+    "2020-10-13": (B, nik) Uppdaterad för ht20, tog bort krav om specifik font.
     "2019-10-11": (A, lew, aurora) First edition.
 ...
 
@@ -44,7 +45,7 @@ Krav {#krav}
 
 1. Dokumentformatet ska vara PDF, men skriv gärna i LaTeX eller Word.
 
-1. Typsnittet är Times New Roman, storlek 11 för brödtexten. Rubriker får markeras med större storlek men tänk på att ert referat ska få plats på en A4 sida.
+1. Använd storlek 11 för brödtexten. Rubriker får markeras med större storlek men tänk på att ert referat ska få plats på en A4 sida.
 
 1. Referatet ska sparas som `me/kmom01/xxxx.pdf` där xxxx står för er akronym.
 
@@ -54,19 +55,3 @@ Krav {#krav}
 # Flytta till kurskatalogen
 $ dbwebb publish kmom01
 ```
-
-<!-- Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.   -->
-
-
-
-<!-- Extrauppgift {#extra}
------------------------
-
-Det finns inga extrauppgifter.
- -->
-
-<!--
-Tips från coachen {#tips}
------------------------
-
-Lycka till och hojta till i forumet om du behöver hjälp! -->

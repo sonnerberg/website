@@ -13,14 +13,15 @@ Kmom01: Orientering
 
 Kursmomentet ger en översiktlig orientering i området informationssäkerhet vilket involverar dels en kategorisering av området samt genomgång av central terminologi. Fokus ligger på de säkerhetskoncept som har relevans inom webbutveckling. Dessutom involverar den översiktliga orienteringen att ge studenterna en förståelse för säkerhetskonceptens möjligheter och begränsningar inom området webbutveckling.
 
-[WARNING]
+[INFO]
 
-**Kursutveckling pågår**
+**Kursmomentet är klart, men små justeringar kan ske**
 
-Kursen planeras ge hösten 2020.
+* Exempel på referat saknas
 
-[/WARNING]
+Kursmomentet släpps senast 2020-11-02.
 
+[/INFO]
 
 
 <!--more-->
@@ -49,14 +50,14 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningarna:
 
-* 10:00 (2019-11-04) i H430
-* 10:00 (2019-11-08) i H430
+* 10:00 (2020-11-02) via Zoom
+* 10:00 (2020-11-06) via Zoom
 
 
 Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 4-6 studietimmar)*
 
 * Läs i boken [Computer Security](/kunskap/boken-computer-security)
     * Kapitel 1-3
@@ -81,9 +82,9 @@ Det finns inga övningar till det här kursmomentet.
 Uppgifter {#uppgifter}
 -------------------------------------------
 
-*(ca: 10-12 studietimmar)*
+*(ca: 4-6 studietimmar)*
 
-1. Gör uppgiften "[Skapa en me-sida till itsec-kursen](uppgift/skapa-en-me-sida-till-itsec-kursen)".
+<!-- 1. Gör uppgiften "[Skapa en me-sida till itsec-kursen](uppgift/skapa-en-me-sida-till-itsec-kursen)". -->
 1. Gör uppgiften "[Skriv ett referat](uppgift/skriv-ett-referat)".
 
 
@@ -93,8 +94,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Publicera dina filer till studentservern och svara på följande frågor i textfältet på Canvas:
 
-Se till att följande frågor besvaras i redovisningstexten.
-
+* Vad har du för förväntningar inför kursen?
+* Kursen kommer nudda områden som etik, integritet på internet, OWASP och sårbarhetsanalyser. Tycker du det är viktigt att en webbutvecklare har en viss förståelse inom dessa områden även om hen kanske inte kommer jobba med det?
 * Vilken är din TIL för detta kmom?
