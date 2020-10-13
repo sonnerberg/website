@@ -92,7 +92,7 @@ filename = "items.txt"
 
 # with - as for reading a file automatically closes it after reading is done
 with open(filename) as filehandle:
-    line = filehandle.readlines()
+    items_as_list = filehandle.readlines()
 
 # print what the list looks like
 print(items_as_list)
