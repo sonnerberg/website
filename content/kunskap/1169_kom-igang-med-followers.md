@@ -11,7 +11,7 @@ revision:
 Intro {#intro}
 ==================================
 
-I denna artikeln ska vi jobba igenom [kapitel 8](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers) i Miguel's guide, så att vi kan följa andra användare och se inlägg från de personer som användare följer på sin feed.
+I denna artikeln ska vi jobba igenom [kapitel 8](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers) i Miguel's guide, så att vi kan följa andra användare och se inlägg från de personer som användaren följer på sin feed.
 
 
 Vi kommer främst att jobba med `SQLAlchemy ORM` i python ramverket `flask` och `pylint` för att skriva enhetstester till de nya uppdateringarna.
@@ -25,7 +25,8 @@ Du har läst och kollat igenom [introduktion till devops appen](kunskap/introduk
 
 Steg 1. Databas {#step1-databas}
 ---------------------------------
-Just nu består databasen två tabeller, `User` som håller koll på alla användare och `Post` som hanterar inläggen. Det vi skall göra nu är att lägga till en associeringstabell _eller kopplingstabell_ och jag väljer att döper den till `followers`. Här vill vi länka användarens `user_id` till det användar id't personen vill följa har.
+Just nu består databasen två tabeller, `User` som håller koll på alla användare och `Post` som hanterar inläggen. 
+Det vi skall göra nu är att lägga till en associeringstabell _eller kopplingstabell_, jag väljer att döper den till `followers`. Här skall vi länka användarens `user_id` till det användar id't personen vill följa har.
 
 Vi börjar med att skapa den nya modellen i filen `app/models.py` och lägger vår kod ovanför klassen `User`.
 
@@ -37,7 +38,7 @@ followers = db.Table('followers',
 # ..
 ```
 
-Anledningen varför vi inte gjorde denna tabell till en klass liknande de andra, kär att detta endast är en kopplingstabell, den skall skall alltså inte hålla någon annan information eller funktionalitet än två stycken `foreign keys`.
+Anledningen varför vi inte gjorde denna tabell till en klass liknande de andra, är att detta endast är en kopplingstabell, den skall skall alltså inte hålla någon annan information eller funktionalitet än två stycken `foreign keys`.
 
 
 Nu behöver vi bara berätta `User` -modellen att skapa en relation till `followers`. Detta kan göras med hjälp av `db.relationship()`:
@@ -78,7 +79,7 @@ Och nu så skall vår nya databas version vara genererad och satt som den aktiva
 
 Steg 2. Lägga till och ta bort "follows" {#step2-add-remove-followers}
 --------------------------------------------------------------------------
-Vi använder oss utav [`SQLAlchemy`](https://www.sqlalchemy.org/) som vårat *active directory*. Denna modul gör det enkelt att hantera relationer mellan tabeller då den agerar som att det vore listor. Exempelvis, om `user1` vill börja följa en ny användare (`user2`), kan man bara använda `list.append()` för att lägga till den nya användaren:
+Vi använder oss utav [`SQLAlchemy`](https://www.sqlalchemy.org/) som vårat *active directory*. Denna modul gör det lätt att hantera relationer mellan tabeller då den agerar som att det vore listor. Exempelvis, om `user1` vill börja följa en ny användare (`user2`), kan man bara använda `list.append()` för att lägga till den nya användaren:
 
 ```python
 user1.followed.append(user2)
@@ -114,7 +115,7 @@ class User(UserMixin, db.Model):
 
 Steg 3. Hämta inlägg från använade man följer {#step3-collect-posts}
 ----------------------------------------------------------------------
-Nu är vi nästan helt klara, det vi vill lägga till är är att appen även skall skriva alla inlägg från användare man följer. Till detta behöver vi lägga till en ny databas query i User modellen. Detta gör vi genom att skapa en ny metod `followed_posts`.
+Nu är vi nästan helt klara, det vi behöver lägga till är är att appen även skall skriva alla inlägg från användare man följer. Till detta behöver vi lägga till en ny metod `followed_posts` i User modellen som hanterar problemet.
 
 
 ```python
@@ -126,7 +127,7 @@ class User(UserMixin, db.Model):
                 followers.c.try == self.id).order_by(
                     Post.timestamp.desc())
 ```
-Queryn fungerar fast den hämtar inte ens egna inlägg. Det ensklast sättet skulle vara att användarna följde sig själva men det är en ful-lösning och kommer inte att hålla i längden. Så istället gör vi en till query som hämtar ut sina egna inlägg och returnerar en `union` på dessa.
+Queryn som returneras fungerar fast den hämtar inte ens egna inlägg. Det ensklast sättet skulle vara att användarna följde sig själva men det är kommer inte att hålla i längden. Så istället skapar vi en till query som hämtar ut sina egna inlägg och returnerar en `union` på dessa.
 
 ```python
 def followed_posts(self):
@@ -258,7 +259,7 @@ find . -name '.pytest_cache' -exec rm -fr {} +
 
 Steg 5. Integrera följare med applikationen {#step5-integrate}
 ---------------------------------------------------------------
-Funktionaliteten för backendedn existerar och går igenom testerna, det som nu behövs göras är att lägga till två nya GET routes i `app/main/routes.py` som hanterar följandet:
+Funktionaliteten för backendedn existerar och går igenom testerna, det som nu behövs göras är att lägga till två nya routes i `app/main/routes.py` som hanterar följandet av användare:
 
 
 ```python
@@ -317,7 +318,8 @@ Flask och SQLAlchemy hanterar det mesta, `current_user` är den inloggade använ
 
 Båda routerna har samma logik, först kollar vi om användaren existerar i vår databas och sedan kollar vi så att vi inte försöker lägga till eller ta bort oss själva.
 
-Går dessa kontroller igenom committar vi ändringen i databasen, sätter en bekräftelse att ändringen har skett och redirectar oss till `/user/<username>`. Det sista som återstår är nu att visa upp en länk som användaren kan klicka på för att antingen editera sin profil, följa eller avfölja användaren man kollar på.
+Går dessa kontroller igenom committar vi ändringen i databasen, sätter en bekräftelse att ändringen har skett och redirectar oss till `/user/<username>`.   
+Det sista som återstår är nu att visa upp en länk som användaren kan klicka på för att antingen editera sin profil, följa eller avfölja användaren man kollar på.
 
 
 ```html
@@ -350,7 +352,7 @@ Går dessa kontroller igenom committar vi ändringen i databasen, sätter en bek
 {% endblock %}
 ```
 
-Nu är allt klart, prova att starta applikationen och kolla så att allt fungerar. Det finns dock inget sätt att lista alla användare just nu, så för att se kunna se en användare behöver du gå in på deras url. E.g `http://localhost:5000/user/sven`.
+Nu är allt klart, prova att starta applikationen och kolla så att allt fungerar. Det finns inget sätt att lista alla användare just nu, så för att se kunna se en användare behöver du gå in på deras url. E.g `http://localhost:5000/user/sven`.
 
 
 Sammanfattningsvis {#sammanfattningsvis}
