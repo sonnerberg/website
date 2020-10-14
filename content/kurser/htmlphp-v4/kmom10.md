@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-10-14": "(F, mos) Not om access till databasen."
     "2020-10-12": "(E, mos) Uppdatera tillgänglig tid i enlighet med läsperioden."
     "2019-10-14": "(D, mos) Trycker på Ux, responsivitet och kodstruktur."
     "2018-10-12": "(C, mos) Uppdatering och nytt alternativt projekt NVM."
@@ -92,6 +93,16 @@ webbplatsens syfte och idé. Din redovisningstext skall innehålla ett stycke d�
 Det finns många bilder i `img`-katalogen. Använd dem när du presenterar objekten och för att illustrera artiklarna. Använd "rätt" storlek av bilderna.
 
 Objekten är i detta fallet de objekt som museet främst avser visa upp. Det finns även extra artiklar och information i underlaget.
+
+
+
+#### Databas {#databas}
+
+Informationen från databasen läses in från PHP. På det viset vi gjort i kmom05 och kmom06.
+
+Man skall inte kopiera innehåll från databasen och placera in i HTML-koden.
+
+Man kan göra mindre justeringer direkt i databasens innehåll och tabellstruktur. Det är okey att lägga till ytterligare tabeller och information i databasen.
 
 
 
