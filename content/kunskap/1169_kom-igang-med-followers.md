@@ -25,10 +25,10 @@ Du har läst och kollat igenom [introduktion till devops appen](kunskap/introduk
 
 Steg 1. Databas {#step1-databas}
 ---------------------------------
-Just nu består databasen två tabeller, `User` som håller koll på alla användare och `Post` som hanterar inläggen. 
-Det vi skall göra nu är att lägga till en associeringstabell _eller kopplingstabell_, jag väljer att döper den till `followers`. Här skall vi länka användarens `user_id` till det användar id't personen vill följa har.
+Just nu består databasen två tabeller, `User` som håller koll på alla användare och `Post` som hanterar inläggen.   
+Det vi skall göra nu är att utöka databasen så att användare kan följa varandra. För det skapar vi en en associeringstabell som skall ha två värden, första är användarens `user_id` och den andra är id't på personen den första användaren vill följa.
 
-Vi börjar med att skapa den nya modellen i filen `app/models.py` och lägger vår kod ovanför klassen `User`.
+Vi börjar med att skapa den nya modellen `followers` i filen `app/models.py` och lägger vår kod ovanför klassen `User`.
 
 ```python
 followers = db.Table('followers',
@@ -38,10 +38,7 @@ followers = db.Table('followers',
 # ..
 ```
 
-Anledningen varför vi inte gjorde denna tabell till en klass liknande de andra, är att detta endast är en kopplingstabell, den skall skall alltså inte hålla någon annan information eller funktionalitet än två stycken `foreign keys`.
-
-
-Nu behöver vi bara berätta `User` -modellen att skapa en relation till `followers`. Detta kan göras med hjälp av `db.relationship()`:
+Anledningen varför vi inte gjorde `followers` tabellen till en klass som de andra är att den endast skall hålla två stycken `foreign keys`. Den kommer alltså inte hålla någon annan information eller funktionalitet. Istället skall vi koppla den till `User` -modellen så att vi enkelt kan hålla koll på vem användaren följer. Detta kan kan göras med hjälp av `db.relationship()`:
 
 ```python
 class User(UserMixin, db.Model):
@@ -53,13 +50,11 @@ class User(UserMixin, db.Model):
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
 ```
 
-Den första parametern `'User'` är strängnamnet på den främmande tabellens klassnamn och eftersom vi skapar en relation från en användare till en annan refererar vi denna till sig själv.   
-Nästa argument `secondary` sätts till kopplingstabellens variabelnamn så att den vet vart datan skall sparas. Medans `primaryjoin` och `secondaryjoin` berättar hur kopplingen mellan User modellen kopplas till followers och lika så followers till User.
-
+Den första parametern `'User'` är strängnamnet på den främmande tabellens klassnamn och eftersom vi skapar en relation från en `User` till en annan, refererar vi den till sig själv.   
+Nästa argument `secondary` sätts till associeringstabell variabelnamn så att den vet vart datan skall sparas. Medans `primaryjoin` och `secondaryjoin` berättar hur kopplingen mellan User modellen kopplas till followers och lika så hur followers kopplas till User.   
 Den sista parametern `backref` definierar hur vi skall hämta datan när `User.followed` kallas. 
 
-
-Ändringarna som vi precis gjorde i databasen måste nu läggas till i våran databasmigration:
+Eftersom vi nu skapade en ny tabell samnt lade till en extra kollumn i `User` måste nu uppdatera våran databasmigration:
 
 ```bash
 ╰─ (venv) $ flask db migrate -m "followers"
@@ -74,25 +69,24 @@ INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
 INFO  [alembic.runtime.migration] Running upgrade 37f06a334dbf -> ab124256c621, followers
 ```
 
-Och nu så skall vår nya databas version vara genererad och satt som den aktiva versionen.
+Nu så skall vår nya databas version vara genererad och satt som den aktiva versionen.
 
 
 Steg 2. Lägga till och ta bort "follows" {#step2-add-remove-followers}
 --------------------------------------------------------------------------
-Vi använder oss utav [`SQLAlchemy`](https://www.sqlalchemy.org/) som vårat *active directory*. Denna modul gör det lätt att hantera relationer mellan tabeller då den agerar som att det vore listor. Exempelvis, om `user1` vill börja följa en ny användare (`user2`), kan man bara använda `list.append()` för att lägga till den nya användaren:
+Vi använder oss utav [`SQLAlchemy`](https://www.sqlalchemy.org/) som en typ av ORM (objekt-relationell mappning). Denna modul gör det lätt att hantera relationer mellan tabeller. Den agerar som att relationerna vore listor, exempelvis, om `user1` vill börja följa en ny användare (`user2`), kan man bara kalla på `list.append()` för att lägga till den nya användaren:
 
 ```python
 user1.followed.append(user2)
 ```
 
-
-En "unfollow" kan då hanteras på ett liknande sätt:
+En "unfollow" kan hanteras på ett liknande sätt:
 
 ```python
 user1.followed.remove(user2)
 ```
 
-Som vi ser är det ganska enkelt att följa och ta bort användare från sin lista, men eftersom det är viktigt att kunna återanvända kod, kommer vi att lägga till tre nya metoder som skall hantera detta i vår `User` modell. Detta kommer även att underlätta enhetstestningen som vi skall göra lite senare:
+Även om det är lätt att lägga till och ta bort följare skall vi lägga till tre nya metoder i `User` modellen. Detta är mest för att vi kan återanvända koden men det kommer också att underlätta testerna som vi skall göra lite senare:
 
 ```python
 class User(UserMixin, db.Model):
@@ -115,7 +109,7 @@ class User(UserMixin, db.Model):
 
 Steg 3. Hämta inlägg från använade man följer {#step3-collect-posts}
 ----------------------------------------------------------------------
-Nu är vi nästan helt klara, det vi behöver lägga till är är att appen även skall skriva alla inlägg från användare man följer. Till detta behöver vi lägga till en ny metod `followed_posts` i User modellen som hanterar problemet.
+Nu är vi nästan helt klara, det vi behöver lägga till är att appen även skall skriva ut alla inlägg från användaren man följer. Så vi lägger till yttligare en metod `followed_posts` som löser problemet.
 
 
 ```python
@@ -127,7 +121,8 @@ class User(UserMixin, db.Model):
                 followers.c.try == self.id).order_by(
                     Post.timestamp.desc())
 ```
-Queryn som returneras fungerar fast den hämtar inte ens egna inlägg. Det ensklast sättet skulle vara att användarna följde sig själva men det är kommer inte att hålla i längden. Så istället skapar vi en till query som hämtar ut sina egna inlägg och returnerar en `union` på dessa.
+
+Queryn som returneras fungerar fast den hämtar inte personens egna inlägg. Det ensklast sättet skulle vara att användarna följde sig själva men det är kommer inte att hålla i längden. Så istället skapar vi en till query `own` som hämtar ut sina egna inlägg och returnerar en `union` båda.
 
 ```python
 def followed_posts(self):
@@ -142,7 +137,7 @@ def followed_posts(self):
 Steg 4. Lägg till enhetstester {#step4-unittests}
 --------------------------------------------------
 
-Även om vi inte har gjort några större ändringar i koden vill vi se så försäkra oss om att allting fungerar, både nu och i framtiden. Vi använder oss utan modulen `pytest` för att skriva våra tester som i senare kursmoment, skall köras automatiskt när vi pushar upp vår kod.
+Även om vi inte har gjort några större ändringar i koden vill vi se så försäkra oss om att allting fungerar, både nu och i framtiden när saker ändras. Vi använder oss utav modulen `pytest` för att skriva våra tester som i senare kursmoment, skall köras automatiskt när vi pushar upp vår kod.
 
 ```python
 # pylint: disable=redefined-outer-name
@@ -259,7 +254,7 @@ find . -name '.pytest_cache' -exec rm -fr {} +
 
 Steg 5. Integrera följare med applikationen {#step5-integrate}
 ---------------------------------------------------------------
-Funktionaliteten för backendedn existerar och går igenom testerna, det som nu behövs göras är att lägga till två nya routes i `app/main/routes.py` som hanterar följandet av användare:
+Funktionaliteten för backendedn är klar och går igenom testerna, det som nu behövs göras är att lägga till två nya routes i `app/main/routes.py` som hanterar följandet av användare:
 
 
 ```python
@@ -314,9 +309,9 @@ def unfollow(username):
     return redirect(url_for('main.user', username=username))
 ```
 
-Flask och SQLAlchemy hanterar det mesta, `current_user` är den inloggade användaren och `username` användarnamnet vi skickar med i urlen.
+Flask och SQLAlchemy hanterar det mesta, `current_user` är den inloggade användaren och `username` användarnamnet skickas med i urlen.
 
-Båda routerna har samma logik, först kollar vi om användaren existerar i vår databas och sedan kollar vi så att vi inte försöker lägga till eller ta bort oss själva.
+Båda routerna har samma logik, först kollar den om användaren existerar i databasen och sedan kollar den så att man inte försöker lägga till eller sig själv från listan.
 
 Går dessa kontroller igenom committar vi ändringen i databasen, sätter en bekräftelse att ändringen har skett och redirectar oss till `/user/<username>`.   
 Det sista som återstår är nu att visa upp en länk som användaren kan klicka på för att antingen editera sin profil, följa eller avfölja användaren man kollar på.
@@ -352,14 +347,14 @@ Det sista som återstår är nu att visa upp en länk som användaren kan klicka
 {% endblock %}
 ```
 
-Nu är allt klart, prova att starta applikationen och kolla så att allt fungerar. Det finns inget sätt att lista alla användare just nu, så för att se kunna se en användare behöver du gå in på deras url. E.g `http://localhost:5000/user/sven`.
+Nu är allt klart, prova att starta applikationen och kolla så att allt fungerar. Det finns inget sätt att lista alla användare just nu, för att se kunna se en användare behöver du då gå in på deras url. E.g om vi skall titta på *svens* profil `http://localhost:5000/user/sven`.
 
 
 Sammanfattningsvis {#sammanfattningsvis}
 ---------------------------------------------------------------
-I devops är vi med och utvecklar, testar, automatiserar och driftsätter projekt som vi jobbar med.
-Även om vi bara har gjort lite av de två första kommer ni snart att få smak på hur hela processen kan gå till.
+I devops jobbar vi med att utveckla, testa, automatisera och driftsätta projekt.
+Även om vi bara har gjort lite av de två första delarna kommer ni snart att få smak på hur hela processen kan gå till.
 
-Ni behöver inte kunna allt som står i artikeln upp och ner men iallafall ha lite koll på hur appen fungerar. Så kolla gärna igenom [introduktionen till devops appen](kunskap/introduktion_till_devops_appen) en gång till om något är oklart.
+Ni behöver inte kunna allt som står i artikeln men, håll i alla fall lite koll på hur appen fungerar. Kolla gärna igenom [introduktionen till devops appen](kunskap/introduktion_till_devops_appen) en gång till om något är oklart.
 
 Hojta till i Discord om ni kör fast eller har andra funderingar. Annars är det bara att och kör på, lycka till!

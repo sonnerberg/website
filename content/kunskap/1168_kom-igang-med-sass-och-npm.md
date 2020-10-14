@@ -83,7 +83,7 @@ scripts: {
 ```
 **Notera**: `playful` är mitt aktiva tema så byt ut det namnet så att det passar erat tema.
 
-Vi behöver också skapa en till fil `themes/.stylelintrc` där vi kommer definiera lint reglerna så att de också kan validera våran scss kod.
+Vi behöver också skapa en till fil `.stylelintrc` där vi kommer definiera lint reglerna så att vi också kan validera våran scss kod.
 
 ```json
 {
@@ -101,7 +101,13 @@ Vi behöver också skapa en till fil `themes/.stylelintrc` där vi kommer defini
   ]
 }
 ```
-Nu behöver vi inte längre köra `dbwebb validate` för att validera vår style. Så se till att allt går igenom `npm run lint` istället.
+
+* `extends` ärver reglerna från andra filer. Så vi extendar `.css` reglerna från `dbwebb validate` och lägger till guidelines för `.scss` som vi nyligen installerade.
+* I `rules` kan man både skriva över regler från de ärvda filerna och lägga till egna.
+* `ignoreFiles` kan man lägga till både mappar och filer som man inte vill validera. Här lägger vi till `node_modules` mappen `default` temat som pico genererar och alla minifierade css filer.
+
+Nu kör vi inte längre `dbwebb validate` för att validera vår style. Så se till att allt går igenom `npm run lint` istället.   
+För att skippa valideringen när nu publiserar till studentservern kan ni använda er utav `dbwebb publishfast`.
 
 
 Bygg css med sass {#bygg-css-med-sass}
@@ -110,14 +116,14 @@ Jag fortsätter att utgå från ett nytt tema `playful` där jag leker runt för
 
 I `portfolio/themes/` börjar jag med att skapa en bas. Tanken är att man senare kan återanvända denna till kommande teman.
 
-Det första jag gör är att skapa tre nya filer som jag sen skall anpassa till mitt nya tema. Dessa lägger jag i mappen `themes/shared`. Jag skapar även huvudfilen för vårat nya tema.
+Det första jag gör är att skapa tre nya filer som jag sendan skall anpassa till mitt nya tema. Dessa lägger jag i mappen `themes/shared`. Jag skapar även huvudfilen för vårat nya tema.
 
 
 ```bash
 # stå i portfolio/themes/
-mkdir shared/scss playful/scss
-touch shared/scss/variables.scss shared/scss/base.scss shared/scss/layout.scss
-touch playful/scss/style.scss
+$ mkdir shared/scss playful/scss
+$ touch shared/scss/variables.scss shared/scss/base.scss shared/scss/layout.scss
+$ touch playful/scss/style.scss
 ```
 
 Nu när filerna är skapade så börjar jag att definiera några variabler inuti i `shared/scss/variables.scss`. Här vill jag också sätta `!default` efter variablerna deklareras. Detta säger att *"Om variabeln inte redan finns definierat på något annat ställe, sätt mig som värde. Annars, använd den istället"*.
@@ -140,7 +146,7 @@ Som vi ser så behöver man inte behöver ta med filändelsen när man importera
 I `shared/scss/layout.scss` skapar jag nu basutseendet för vår HTML.
 
 ```html
-<!-- Alert.md -->
+<!-- index.twig -->
 <div class="auto alert">
   <h1 class="auto">Alert!</h1>
 </div>
@@ -170,9 +176,9 @@ I `playful/scss/style.scss` kan jag nu importera basen vi nyss skapade.
 @import '../../shared/scss/base';
 ```
 
-Men innan det nya temat är helt klart vill jag ändra färgen på `.alert` samt dess `border` så det blir en mer passande färg för `playful` temat.
+Men innan det nya temat är helt klart vill jag ändra bakgrundsfärgen på `.alert` och dess `border`, så att färgen passar `playful` temat.
 
-Så, innan vi importerar `shared/scss/base` som innehåller `default` variablerna definierar jag `$base-color` så att layout filen kommer använda sig av den istället.
+Innan vi importerar `shared/scss/base` (som innehåller `!default` variablerna) definierar jag `$base-color` så att layout filen kommer använda sig av den istället.
 
 ```scss
 $base-color: #c6538c; // light pink
@@ -184,7 +190,7 @@ $base-color: #c6538c; // light pink
 
 Nu när allt är klart vill jag validera `.scss` filerna med kommandot `npm run lint`. Om allt är grönt är det bara att generera den nya css filen med `npm run style`.
 
-Vill man istället skapa en minifierad version av css koden kan man använda sig av `npm run style-min`. En rekommendation är att använda denna då det går mycket snabbare för webbläsaren att ladda in minifierade filer.
+Vill man istället skapa en minifierad version av css koden kan man använda sig av `npm run style-min`. En rekommendation är att använda denna då man slipper problem som kan uppkomma från `lint` kommandot och det även att det går snabbare för webbläsaren att ladda in minifierade filer.
 
 
 Avsluningsvis  {#avslutningsvis}
