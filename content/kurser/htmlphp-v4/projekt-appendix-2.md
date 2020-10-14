@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
-  "2018-10-12": (A, mos) Första ugåvan inför ht18 och htmlphp v3.
+    "2020-10-14": (B, mos) Förtydligade att man skall använda databasfilen nvm2.
+    "2018-10-12": (A, mos) Första ugåvan inför ht18 och htmlphp v3.
 ...
-Kmom10: Appendix 2 Projekt NVM 
+Kmom10: Appendix 2 Projekt NVM
 ==================================
 
 Projektet heter Nättraby Vägmuseum (NVM). Projektet innebär att du skall utveckla och leverera en webbplats till en kund. Du får tillgång till en databas som innehåller material samt bilder. Det finns en befintlig webbplats som du kan hämta inspiration ifrån men din uppgift är att bygga en bättre webbplats.
@@ -17,7 +18,7 @@ Här kan du läsa mer om kunden och webbplatsen.
 Översikt {#oversikt}
 --------------------------------------------------------------------
 
-Det finns en projektspecifikation som beskriver vad du skall göra och vad din leverans skall innnehålla. 
+Det finns en projektspecifikation som beskriver vad du skall göra och vad din leverans skall innnehålla.
 
 Det finns innehåll som du skall använda i din webbplats. Innehållet består av bilder i filer och en databas med artiklar. Artiklarna är dels generella och dels visar de upp objekten i vägmuseet. Allt innehåll är förpackat i kursrepot i en exempelmapp i kursrepot.
 
@@ -36,7 +37,7 @@ Redan 1995 kläckte journalisten Peter Öjerskog från Karlskrona idén om ett v
 
 2006 kontaktade Nättraby Hembygdsförening med ordförande Ingegerd Holm i spetsen återigen Peter Öjerskog. En styrgrupp och en referensgrupp bildades för Nättraby Vägmuseum. Huvudintressenter är Nättraby Hembygdsförening, Karlskrona kommun, Vägverket, länsstyrelsen i Blekinge och Blekinge Museum.
 
-Nättraby Vägmuseum är ett friluftsmuseum där befintliga vägmiljöer används. Den informella rastplatsen vid E22 avfart 61 till Nättraby används som centralplats för vägmuseet. 
+Nättraby Vägmuseum är ett friluftsmuseum där befintliga vägmiljöer används. Den informella rastplatsen vid E22 avfart 61 till Nättraby används som centralplats för vägmuseet.
 
 Idag är det webbplatsen [Nättraby Vägmuseum](http://nattrabyvagmuseum.se/) som visar upp museets innehåll.
 
@@ -44,12 +45,12 @@ Idag är det webbplatsen [Nättraby Vägmuseum](http://nattrabyvagmuseum.se/) so
 
 #### Museets objekt {#objekt}
 
-Nättraby Vägmuseum består av 14 utvalda vägmiljöer i Nättraby socken. Vägmiljöerna är: 
+Nättraby Vägmuseum består av 14 utvalda vägmiljöer i Nättraby socken. Vägmiljöerna är:
 
 * 01 Hålvägen – stigen
 * 02 Via Regia – landsvägen
 * 03 Värendsvägen – handelsvägen
-* 04 Skillinge – övergivna vägen 
+* 04 Skillinge – övergivna vägen
 * 05 Milstolparna – vägmärkena
 * 06 Ryttarliden – namnminnet
 * 07 Riks 4 – gatstensvägen
@@ -81,9 +82,10 @@ I katalogen finns följande.
 | Fil/katalog        | Beskrivning |
 |--------------------|-------------|
 | `img/orig`         | Orginalbilder från webbplatsen. |
-| `img/[250,500,800]` | Bilder skalade till upplösningar max bredd/höjd 80px, 250px och 550px. |
-| `img/[80x80,250x250]` | Bilder skalade till upplösningar max bredd/höjd 80x80px, 250x250px och 550x550px. |
-| `db/nvm.sqlite`    | Databasfil som innehåller artiklar. |
+| `img/[250,500,800]` | Bilder skalade till upplösningar max bredd/höjd 250px, 500px och 800px. |
+| `img/[80x80,250x250]` | Bilder skalade till upplösningar max bredd/höjd 80x80px, 150x150px. |
+| `db/nvm2.sqlite`    | Databasfil som innehåller artiklar, objekt och information. |
+| (`db/nvm.sqlite`)    | Äldre och utgången utgåva av databasfilen, använd inte denna. |
 
 
 
