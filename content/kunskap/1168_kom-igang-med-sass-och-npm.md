@@ -175,12 +175,13 @@ $base-color: #c6538c; // light pink
 @import '../../shared/scss/base';
 ```
 
+[FIGURE src=/image/design-v3/sass-alert-example.png]
+
 Så, innan vi importerar `shared/scss/base` som innehåller `default` variablerna definierar jag `$base-color` så att layout filen använder sig av den istället.
 
 Nu när allt är klart vill jag validera `.scss` filerna med kommandot `npm run lint`. Om allt är grönt är det bara att generera den nya css filen med `npm run style`.
 
 Vill man istället skapa en minifierad version av css koden kan man använda sig av `npm run style-min`. En rekommendation är att använda denna då det går mycket snabbare för webbläsaren att ladda in minifierade filer.
-
 
 
 Avsluningsvis  {#avslutningsvis}
