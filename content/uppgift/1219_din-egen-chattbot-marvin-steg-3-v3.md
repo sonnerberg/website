@@ -66,7 +66,7 @@ input: "BRöderna Ivarsson Osby"             output: "BRIO"
 input: "Ingvar Kamprad Elmtaryd Agunnaryd"  output: "IKEA"
 ```
 
-7. **Menyval 11**: Filtrera listor. Marvin ska ta emot en sträng med olika nummer. Dessa skall omvandlas till en lista som endast innehåller värden över `10`. Tips, [filter()](https://docs.python.org/3/library/functions.html#filter). Exempel:
+7. **Menyval 11**: Filtrera listor. Marvin ska ta emot en sträng med olika nummer. Dessa skall omvandlas till en lista som endast innehåller värden över `10`. Exempel:
 ```python
 input: "6 9 10 11 8 12 15"     output: [ 11, 12, 15 ]
 ```
