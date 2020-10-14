@@ -9,10 +9,11 @@ revision:
 ...
 Kom igång med SASS och npm {#intro}
 =====================================
+
 Vi har tidigare i krusen skrivit css kod för att styla våran webbsida. Även om css nu stödjer variabler så saknar den fortvarande funktionaliteter som funktioner och matematiska operationer.
 Vi skall i denna övningen titta på hur man kan använda sig av pakethanteraren `npm` för att bland annat underlätta stylandet och förbättra webbplatsens laddningstid.
 
-<!--  more  -->
+<!--more-->
 
 Förutsättningar {#forutsattningar}
 -------------------------------------

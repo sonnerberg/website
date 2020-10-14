@@ -8,18 +8,18 @@ category:
 revision:
     "2020-09-29": (A, moc) Skapad inför HT2020.
 ...
-Intro {#intro}
-==================================
+Kom igång med followers - Microblog {#intro}
+=============================================
 
 I denna artikeln ska vi jobba igenom [kapitel 8](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers) i Miguel's guide, så att vi kan följa andra användare och se inlägg från de personer som användaren följer på sin feed.
 
+<!--more-->
 
 Vi kommer främst att jobba med `SQLAlchemy ORM` i python ramverket `flask` och `pylint` för att skriva enhetstester till de nya uppdateringarna.
 
-<!-- more -->
 
 Förutsättningar {#prereq}
-===========================
+--------------------------
 Du har läst och kollat igenom [introduktion till devops appen](kunskap/introduktion_till_devops_appen) och fått igång applikationen.
 
 
