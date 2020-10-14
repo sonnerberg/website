@@ -24,6 +24,7 @@ Installera SASS, stylelint och normalize.css via npm {#installera-med-npm}
 Npm (Node Package Manager) är JavaScripts pakethanterare och världens största programvaruregister med över 800,000 tusen paket. Vem som helst kan publicera sina paket här så det gäller att vara lite försiktig med vad man installerar och använder.
 
 Vi skall använda detta för att installera tre slstycken paket:
+
 * [`sass`](https://www.npmjs.com/package/sass) som är en css preprocessor vilket tillåter oss att få en bättre struktur. Det kommer ge oss stöd att använda variabler, ta nytta av flera inbyggda funktioner samt göra egna funktioner för att göra vår kod mer återanvändbar och lättare att ändra.   
 * [`stylelint`](https://www.npmjs.com/package/stylelint) och [`stylelint-config-sass-guidelines`](https://www.npmjs.com/package/stylelint-config-sass-guidelines) som kommer att validera `.scss` koden vi skriver.
 * [`normalize.css`](https://www.npmjs.com/package/normalize.css) vilket är en vanlig css fil som man även kan ladda ner utanför npm. Denna skall vi använda för att normalisera stylen mellan olika webbläsare då, alla har sina egna default värden som gör att våran webbsida kan ha olika margins, paddings, typografi med mera.
