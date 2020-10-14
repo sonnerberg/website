@@ -223,7 +223,7 @@ Redovisning {#redovisning}
 
 2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
 
-3. Spela in en redovisningsvideo och lägg länken i en kommentar på din inlämning i Canvas. Detta kan du göra dagen efter projektets deadline. Läs mer om hur du kan [spela in en redovisningsvideo]().
+3. Spela in en redovisningsvideo och lägg länken i en kommentar på din inlämning i Canvas. Detta kan du göra dagen efter projektets deadline. <!--Läs mer om hur du kan [spela in en redovisningsvideo]().-->
 
 4. Se till att samtliga kursmoment validerar i "dbwebb validate/publish".
 
