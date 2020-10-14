@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2020-10-14": (N, aar) Corona anpassad.
     "2020-10-01": (M, aar) Ändrade datum för try1 ht20.
     "2019-11-25": (L, aar) Ändrade datum för omexamination.
     "2018-12-10": (k, efo, aar) Översyn och släpp inför python-v2 try3.
@@ -36,16 +37,25 @@ Du använder dbwebb-kommandorads verktyget för att hämta din individuella exam
 
 Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom dessa fem timmar.
 
-För båda studentgrupper är detta en **individuell** examination och uppgifterna ska lösas på egen hand.
+Detta är en **individuell** examination och uppgifterna ska lösas på egen hand, vilket betyder att ni inte får kommunicera med varandra under tiden ni utför examinationen.
 
-Lärarteamet finns tillgängliga i gitter för hjälp med tekniska problem samt frågor och förtydliganden.
+Lärarteamet finns tillgängliga i discor och på mejl för hjälp med tekniska problem och förtydliganden.
 
-Nedanför beskriver vi upplägget för de olika studentgrupperna:
+Om det inte står i en uppgift att en modul ska importeras får man **inte** använda sig av importerade moduler.
+
+<!-- Nedanför beskriver vi upplägget för de olika studentgrupperna:
 
 ### Campus studenter {#campus}
 Examination sker i sal H429, H430 och G404 mellan 8:00 och 13:00.
 
 ### Distansprogram och kurspakets studenter {#distans}
+Examination sker på valfri plats, det går att ladda ner examination från kl 8:00 till 23:59. När du har hämtat hem examinationen har du fem timmar på dig att göra klart den och lämna in. -->
+
+
+#### Distans {#distans}
+
+På grund av Corona kommer **alla** studenter utföra examinationen på distans.
+
 Examination sker på valfri plats, det går att ladda ner examination från kl 8:00 till 23:59. När du har hämtat hem examinationen har du fem timmar på dig att göra klart den och lämna in.
 
 
@@ -141,7 +151,13 @@ Efter din individuella examination lämna in en redovisningstext på din me-sida
 
 3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-5. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
+<!-- 5. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas. -->
+
+På grund av Corona ska också **alla** spela in en redovisningsvideo som ska lämnas in tillsammans med redovisningstexten.
+
+1. Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
+
+2. Visa ditt ansikte och en giltig ID handling, t.ex. körkot eller pass, i videon.
 
 
 
