@@ -7,7 +7,7 @@ category:
 revision:
     "2020-09-29": (A, moc) Skapad inför HT2020.
 ...
-Kom igång med sass och npm {#intro}
+Kom igång med SASS och npm {#intro}
 =====================================
 Vi har tidigare i krusen skrivit css kod för att styla våran webbsida. Även om css nu stödjer variabler så saknar den fortvarande funktionaliteter som funktioner och matematiska operationer.
 Vi skall i denna övningen titta på hur man kan använda sig av pakethanteraren `npm` för att bland annat underlätta stylandet och förbättra webbplatsens laddningstid.
@@ -19,8 +19,8 @@ Förutsättningar {#forutsattningar}
 Du har installerat [nodejs och npm](https://dbwebb.se/kunskap/installera-node-och-npm).
 
 
-Installera sass, stylelint och normalize.css via npm {#installera-med-npm}
-----------------------------------------------------------------
+Installera SASS, stylelint och normalize.css via npm {#installera-med-npm}
+---------------------------------------------------------------------------
 Npm (Node Package Manager) är JavaScripts pakethanterare och världens största programvaruregister med över 800,000 tusen paket. Vem som helst kan publicera sina paket här så det gäller att vara lite försiktig med vad man installerar och använder.
 
 Vi skall använda detta för att installera tre slstycken paket:
@@ -81,8 +81,7 @@ scripts: {
 ```
 **Notera**: `playful` är mitt aktiva tema så byt ut det namnet så att det passar erat tema.
 
-Vi behöver skapa en till fil `themes/.stylelintrc` där vi kommer definiera lint reglerna så att de också stödjer sass koden.   
-Detta kommer inte att köras med `dbwebb validate` så se till att allt går igenom `npm run lint` istället.
+Vi behöver också skapa en till fil `themes/.stylelintrc` där vi kommer definiera lint reglerna så att de också kan validera våran scss kod.
 
 ```json
 {
@@ -100,6 +99,8 @@ Detta kommer inte att köras med `dbwebb validate` så se till att allt går ige
   ]
 }
 ```
+Nu behöver vi inte längre köra `dbwebb validate` för att validera vår style. Så se till att allt går igenom `npm run lint` istället.
+
 
 Bygg css med sass {#bygg-css-med-sass}
 ---------------------------------------
@@ -190,6 +191,6 @@ Nu har vi lärt oss att använda `npm` för att sätta upp nya verktyg som kan a
 
 Ett tips när ni börjar styla är att använda många variabler och dela upp koden i flera moduler så det lättare att återanvända. Glöm inte heller att strukturera allt på ett bra sätt, gruppera gärna dem i undermappar så att de blir enklare att hitta.
 
-Sass dokumentation kan hittas på [sass-lang.com/documentation](https://sass-lang.com/documentation). SASS har två typer av syntax, en med `.sass` som är lite äldre och `.scss` vilket är nyare. Vi skall använda `.scss`.
+SASS dokumentation kan hittas på [sass-lang.com/documentation](https://sass-lang.com/documentation). SASS har två typer av syntax, en med `.sass` som är lite äldre och `.scss` vilket är nyare. Vi skall använda `.scss`.
 
 Om det är några frågor eller om något är oklart, tveka inte att hojta till i discord så kollar vi på det. Annars lycka till och kör på!
