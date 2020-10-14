@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-10-14": "(G, mos) Not om redovisningsvideo."
     "2020-10-14": "(F, mos) Not om access till databasen."
     "2020-10-12": "(E, mos) Uppdatera tillgänglig tid i enlighet med läsperioden."
     "2019-10-14": "(D, mos) Trycker på Ux, responsivitet och kodstruktur."
@@ -210,7 +211,7 @@ Skapa ett gränssnitt för webbplatsens administratör. Följande delar skall fi
 
 
 Redovisning {#redovisning}
---------------------------------------------------------------------
+-------------------------------------------------------------------
 
 1. På din [redovisningssida](./../redovisa), skriv följande:
 
@@ -222,7 +223,9 @@ Redovisning {#redovisning}
 
 2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
 
-3. Se till att samtliga kursmoment validerar i "dbwebb validate/publish".
+3. Spela in en redovisningsvideo och lägg länken i en kommentar på din inlämning i Canvas. Detta kan du göra dagen efter projektets deadline. Läs mer om hur du kan [spela in en redovisningsvideo]().
+
+4. Se till att samtliga kursmoment validerar i "dbwebb validate/publish".
 
 ```bash
 # Ställ dig i kursrepot
