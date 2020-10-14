@@ -108,6 +108,12 @@ I detta kursmomentet jobbar vi med CSS. Läs följande.
     * Base Rules
     * Layout Rules
 
+Videoserie {#videoserie}
+-------------------------------------------
+
+Kursen har en videoserie för hur man kan jobba med Pico:
+
+[YOUTUBE src="6aVDmXDXqDs" list="PLKtP9l5q3ce8h3PKihj_CSVBkyxtORWiy" width=700 caption="Pico introduktion"]
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

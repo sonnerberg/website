@@ -178,7 +178,7 @@ Du kan följa med i videon nedan för att se hur man kan:
 * Redigera flash-bilden
 * Hur du lägger till en bild på sidan
 
-<!-- LÄGG TILL LÄNK TILL VIDEO -->
+[YOUTUBE src="6aVDmXDXqDs" list="PLKtP9l5q3ce8h3PKihj_CSVBkyxtORWiy" width=700 caption="Pico introduktion"]
 
 Krav {#krav}
 -----------------------
