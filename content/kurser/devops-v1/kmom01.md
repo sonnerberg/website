@@ -125,6 +125,8 @@ När du pushar din kod ska CircleCi köra alla unittester, integrationtester och
 
 1. [DevOps Roadmap](https://roadmap.sh/devops) Visar upp vanligaste verktygen man behöver kunna för att jobba med de tekniska delarna av devops.
 
+    - Här kan ni se vilka av verktygen vi kommer använda oss i kursen, [i fylld devops roadmap](image/devops/devops-roadmap-filled.png)
+
 
 
 Uppgifter  {#uppgifter}
