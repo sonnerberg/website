@@ -1,15 +1,16 @@
 ---
 author: mos
 revision:
+    "2020-10-14": (C, mos) Förtydligade att bmo2 skall användas.
     "2018-10-12": (B, mos) Flyttade tips från coachen till eget dokument.
     "2015-10-11": (A, mos) Första omarbetade versionen till htmlphp v2.
 ...
-Kmom10: Appendix 1 Projekt BMO 
+Kmom10: Appendix 1 Projekt BMO
 ==================================
 
 Projektet heter Begravningsmuseum Online (BMO). Projektet innebär att du skall utveckla och leverera en webbplats till en kund. Du får tillgång till en databas som innehåller material samt bilder och du skall bygga en webbplats enligt en föreslagen struktur.
 
-Du kommer få läsa mer om kunden, Ronny Holm, för att förstå vad han vill ha ut av webbplatsen. 
+Du kommer få läsa mer om kunden, Ronny Holm, för att förstå vad han vill ha ut av webbplatsen.
 
 <!--more-->
 
@@ -20,9 +21,9 @@ Du kommer få läsa mer om kunden, Ronny Holm, för att förstå vad han vill ha
 
 Rent allmänt gäller följande.
 
-Det finns en projektspecifikation som beskriver vad du skall göra och vad din leverans skall innnehålla. 
+Det finns en projektspecifikation som beskriver vad du skall göra och vad din leverans skall innnehålla.
 
-Det finns tankar om webbplatsens style och layout. 
+Det finns tankar om webbplatsens style och layout.
 
 Det finns innehåll som du skall använda i din webbplats. Innehållet består av bilder, artiklar och objekt. Allt innehåll är förpackat i kursrepot i en exempelmapp i kursrepot.
 
@@ -37,7 +38,7 @@ Kund: Ronny Holm {#kund}
 
 Ronny Holm är vår kund, låt oss säga hej till Ronny och se vad han sysslar med.
 
-Vi börjar med en bakgrundssökning på Ronny Holm, bara för att vi kan göra det. 
+Vi börjar med en bakgrundssökning på Ronny Holm, bara för att vi kan göra det.
 Nu i dessa tider då "Google profilen" blir en allt mer viktig del i ens bakgrund. Nåja, vad finner vi?
 
 
@@ -46,8 +47,8 @@ Nu i dessa tider då "Google profilen" blir en allt mer viktig del i ens bakgrun
 
 [FIGURE src="img/bmo/ronny_holm_200.jpg" caption="Ronny Holm, vår kund" class="right"]
 
-Ronny Holm jobbar som [organisationschef på SKKF](http://www.skkf.se/node/129), 
-Sveriges Kyrkogårds- och Krematorieförbund. SKKF är Branschförbundet för 
+Ronny Holm jobbar som [organisationschef på SKKF](http://www.skkf.se/node/129),
+Sveriges Kyrkogårds- och Krematorieförbund. SKKF är Branschförbundet för
 begravningsverksamhet i Sverige.
 
 Följande finns att läsa [om SKKF och deras verksamhet och inriktning](http://www.skkf.se/node/119).
@@ -118,10 +119,10 @@ I katalogen finns följande.
 | `img/full-size`    | Orginalbilder till objekten. |
 | `img/[80,250,550]` | Objekt-bilder skalade till upplösningar max bredd/höjd 80px, 250px och 550px. |
 | `img/[80x80,250x250,550x550]` | Objekt-bilder skalade till upplösningar max bredd/höjd 80x80px, 250x250px och 550x550px. |
-| `img/maggy`        | Bilder till Maggys artikel om Begravningsseder och Bruk. |
-| `db/bmo.sqlite`    | Databasfil som innehåller artiklar (inklusive text till om-sidan) och objekt. |
-| `db/bmo2.sqlite`   | Uppdaterad databasfil med rätt sökvägar till bilder. |
-| `db/bildtexter.md` | Extra information om bildtexter till bilder. |
+| `img/maggy`        | Bilder till Maggys artikel om "Begravningsseder och Bruk". |
+| `db/bildtexter.md` | Extra information med bildtexter till bilder. |
+| `db/bmo2.sqlite`   | Databasfil 8uppdaterad) som innehåller artiklar (inklusive text till om-sidan) och objekt (inklusive rätt sökvägar till bilder). |
+| (`db/bmo.sqlite`)    | Utgången databasfil, använd inte denna. |
 
 
 
