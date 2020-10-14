@@ -167,7 +167,9 @@ I `playful/scss/style.scss` kan jag nu importera basen vi nyss skapade.
 @import '../../shared/scss/base';
 ```
 
-Skulle vi nu köra något av npm scripten så skall det skapas en ny fil `playful/css/style.css`. Men innan det nya temat är helt klart vill jag ändra färgen på `.alert` samt dess `border` så det blir en mer passande färg för `playful` temat.
+Men innan det nya temat är helt klart vill jag ändra färgen på `.alert` samt dess `border` så det blir en mer passande färg för `playful` temat.
+
+Så, innan vi importerar `shared/scss/base` som innehåller `default` variablerna definierar jag `$base-color` så att layout filen kommer använda sig av den istället.
 
 ```scss
 $base-color: #c6538c; // light pink
@@ -176,8 +178,6 @@ $base-color: #c6538c; // light pink
 ```
 
 [FIGURE src=/image/design-v3/sass-alert-example.png]
-
-Så, innan vi importerar `shared/scss/base` som innehåller `default` variablerna definierar jag `$base-color` så att layout filen använder sig av den istället.
 
 Nu när allt är klart vill jag validera `.scss` filerna med kommandot `npm run lint`. Om allt är grönt är det bara att generera den nya css filen med `npm run style`.
 
