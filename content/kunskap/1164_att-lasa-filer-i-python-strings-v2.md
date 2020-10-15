@@ -377,7 +377,7 @@ def remove_item():
         write_to_file(modified_content.strip(), "w")
 ```
 
-Då så, nu har vi ett någorlunda fungerande program för att jobba med filer. I kmom05 kommer vi kolla på det igen men då kommer vi jobba mot filens innehåll med en lista istället för sträng. Vilket kommer förenkla saker åt oss.
+Då så, nu har vi ett någorlunda fungerande program för att jobba med filer.
 
 Tänk själv hur du hade löst fäljande fel:
 
