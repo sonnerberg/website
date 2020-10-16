@@ -244,6 +244,20 @@ Redovisning {#redovisning}
 
 3. Se till att samtliga kursmoment validerar.
 
+
+### Krav på videon {#krav-video}
+
+1. Börja med att visa upp en idhandling och ditt ansikte så vi vet att du är du.
+
+2. Berätta om projektet och visa upp vad du har gjort.
+
+3. Lyft fram delar som du har jobbat mycket med eller som du är stolt över.
+
+4. Försök hålla presentationen som en demo i arbetslivet, det är bra träning.
+
+5. Sikta på 4-5 minuter.
+
+
 ```bash
 # Ställ dig i kursrepot
 dbwebb publish me
