@@ -39,7 +39,7 @@ Inlämning på [Canvas och redovisning](#redovisning) behövs inte göras inom d
 
 Detta är en **individuell** examination och uppgifterna ska lösas på egen hand, vilket betyder att ni inte får kommunicera med varandra under tiden ni utför examinationen.
 
-Lärarteamet finns tillgängliga i discor och på mejl för hjälp med tekniska problem och förtydliganden.
+Lärarteamet finns tillgängliga i discord och på mejl för hjälp med tekniska problem och förtydliganden.
 
 Om det inte står i en uppgift att en modul ska importeras får man **inte** använda sig av importerade moduler.
 
@@ -204,7 +204,7 @@ Rätta förberedelse uppgiften {#rattningfor}
 Tidigare examinationer {#tidigare}
 ----------------------------------------------------------------------
 
-Inga genomförda än för HT19.
+Inga genomförda än för HT20.
 <!-- `try1` genomfördes 2018-10-30, uppgifter och lösningsförslag finns tillgängligt i exempel-mappen, `example/old_exams/lp1-2018`.
 
 `try2` genomfördes 2019-01-10.
