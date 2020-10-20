@@ -126,19 +126,19 @@ Risk- och sårbarhetsanalysmomentet omfattar en introduktion till olika metoder 
 
 
 
-### Kmom05: Skydda data {#kmom05}
+<!-- ### Kmom05: Skydda data {#kmom05}
 
 Kursmomentet ger en övergripande introduktion till både symmetriska och asymmetriska krypteringsmetoder genom att på ett övergripande sätt förklara hur de fungerar. Vidare visas hur sådana krypteringsmetoder kan användas för att både skydda konfidentialiteten i data såväl som dess integritet. Dessutom kommer kryptografiska certifikat förklaras och hur de kan använda för att styrka identiteter i webbtjänster.
 
-[Instruktion till kursmoment 05](./kmom05).
+[Instruktion till kursmoment 05](./kmom05). -->
 
 
 
-### Kmom06: Säkerhetstestning {#kmom06}
+### Kmom05: Säkerhetstestning {#kmom06}
 
 Mjukvarutest ökar kvaliteten i den mjukvara som skrivs, men hur fungerar det med säkerhetstest. I detta kursmomentet, som bygger på sårbarhetsanalyser, går vi igenom vad säkerhetstester innebär och vad man behöver tänka på.
 
-[Instruktion till kursmoment 06](./kmom06).
+[Instruktion till kursmoment 06](./kmom05).
 
 
 
