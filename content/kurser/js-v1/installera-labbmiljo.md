@@ -17,7 +17,7 @@ Labbmiljön {#kurslabbmiljo}
 
 Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
 
-1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen.
 
 
 
@@ -54,8 +54,8 @@ Den snabba vägen.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
-dbwebb clone javascript1
-cd javascript1
+dbwebb clone js
+cd js
 dbwebb init
 ```
 
