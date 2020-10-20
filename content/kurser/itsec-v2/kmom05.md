@@ -2,16 +2,15 @@
 author:
     - atb
     - mbo
-    - mos
-    - lew
+    - nik
 revision:
-    "2019-11-24": "(A, aurora) Updated with correct assignments and material"
+    "2019-11-27": "(A, aurora) Omskrivning av uppgift"
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
-Kmom05: Skydda data
+Kmom05: Säkerhetstestning
 ==================================
 
-Kursmomentet ger en övergripande introduktion till både symmetriska och asymmetriska krypteringsmetoder genom att på ett övergripande sätt förklara hur de fungerar. Vidare visas hur sådana krypteringsmetoder kan användas för att både skydda konfidentialiteten i data såväl som dess integritet. Dessutom kommer kryptografiska certifikat förklaras och hur de kan använda för att styrka identiteter i webbtjänster.
+Mjukvarutest ökar kvaliteten i den mjukvara som skrivs, men hur fungerar det med säkerhetstest. I detta kursmomentet, som bygger på sårbarhetsanalyser, går vi igenom vad säkerhetstester innebär och vad man behöver tänka på.
 
 [WARNING]
 
@@ -25,40 +24,27 @@ Kursen planeras ge hösten 2020.
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
-
-Föreläsningar  {#forelasningar}
+Förkunskapskrav {#forkunskapskrav}
 ---------------------------------
 
-*(ca: 2 studietimmar)*
-
-Du ska medverka på föreläsningen:
-
-* 10:00 (2019-11-25) i H430
+Du har utfört uppgifterna [Sårbarhetsanalys](/uppgift/sarbarhetsanalys).
 
 
-
-Läs &amp; Studera  {#lasanvisningar}
+<!-- Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar)*
+*(ca: 1-3 studietimmar)*
 
-* [OAuth2](https://oauth.net/2/)
-    * [Google Developers - OAuth2](https://developers.google.com/identity/protocols/OAuth2)
-    * [GitHub Developers - Building OAuth Apps](https://developer.github.com/apps/building-oauth-apps/)
-    * [Digital Ocean - An Introduction to OAuth2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
-
-* Encryption
-    * [Getting Started - Let's Encrypt](https://letsencrypt.org/getting-started/)
-    * [Certificates for localhost - Let's Encrypt](https://letsencrypt.org/docs/certificates-for-localhost/)
+* Ett rapportexempel finns tillgängligt att läsa [här](#) -->
+<!-- * https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project -->
 
 
 Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-12 studietimmar)*
+*(ca: 10-14 studietimmar)*
 
-* Gör uppgiften [Säker Lösenordshantering](/uppgift/losenordshantering)
-
+* Gör uppgiften [Sårbarhetsanalys - Del 2](/uppgift/sarbarhetsanalys-del2)
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -70,5 +56,5 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du jobbat med OAuth tidigare?
+* Har den sammanhängande uppgiften från 03, 05 och 06 varit givande? Är det något som saknas/kunnat göras annorlunda?
 * Vilken är din TIL för detta kmom?

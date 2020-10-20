@@ -72,8 +72,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Publicera dina filer till studentservern och svara på följande frågor i textfältet på Canvas:
 
-Se till att följande frågor besvaras i redovisningstexten.
-
+* Har du hört talas om begreppet sårbarhetsanalys tidigare?
+* 
 * Vilken är din TIL för detta kmom?
