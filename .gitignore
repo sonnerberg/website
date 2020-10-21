@@ -3,6 +3,7 @@
 /config/error_reporting.php
 /backup/
 /cache/
+.vscode/
 .DS_Store
 node_modules/
 vendor/
