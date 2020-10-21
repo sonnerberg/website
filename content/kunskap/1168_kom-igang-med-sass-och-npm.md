@@ -10,7 +10,7 @@ revision:
 Kom igång med SASS och npm {#intro}
 =====================================
 
-Vi har tidigare i krusen skrivit css kod för att styla våran webbsida. Även om css nu stödjer variabler så saknar den fortvarande funktionaliteter som funktioner och matematiska operationer.
+Vi har tidigare i kursen skrivit CSS kod för att styla våran webbsida. Även om CSS nu stödjer variabler så saknar den fortfarande funktionalitet som funktioner och matematiska operationer.
 Vi skall i denna övningen titta på hur man kan använda sig av pakethanteraren `npm` för att bland annat underlätta stylandet och förbättra webbplatsens laddningstid.
 
 <!--more-->
@@ -22,15 +22,15 @@ Du har installerat [nodejs och npm](https://dbwebb.se/kunskap/installera-node-oc
 
 Installera SASS, stylelint och normalize.css via npm {#installera-med-npm}
 ---------------------------------------------------------------------------
-Npm (Node Package Manager) är JavaScripts pakethanterare och världens största programvaruregister med över 800,000 tusen paket. Vem som helst kan publicera sina paket här så det gäller att vara lite försiktig med vad man installerar och använder.
+Npm (Node Package Manager) är JavaScripts pakethanterare och världens största programvaruregister med över 800,000 paket. Vem som helst kan publicera sina paket här så det gäller att vara lite försiktig med vad man installerar och använder.
 
-Vi skall använda detta för att installera tre slstycken paket:
+Vi skall använda detta för att installera tre stycken paket:
 
-* [`sass`](https://www.npmjs.com/package/sass) som är en css preprocessor vilket tillåter oss att få en bättre struktur. Det kommer ge oss stöd att använda variabler, ta nytta av flera inbyggda funktioner samt göra egna funktioner för att göra vår kod mer återanvändbar och lättare att ändra.   
+* [`sass`](https://www.npmjs.com/package/sass) som är en CSS preprocessor vilket tillåter oss att få en bättre struktur. Det kommer ge oss stöd att använda variabler, ta nytta av flera inbyggda funktioner samt göra egna funktioner för att göra vår kod mer återanvändbar och lättare att ändra.   
 * [`stylelint`](https://www.npmjs.com/package/stylelint) och [`stylelint-config-sass-guidelines`](https://www.npmjs.com/package/stylelint-config-sass-guidelines) som kommer att validera `.scss` koden vi skriver.
-* [`normalize.css`](https://www.npmjs.com/package/normalize.css) vilket är en vanlig css fil som man även kan ladda ner utanför npm. Denna skall vi använda för att normalisera stylen mellan olika webbläsare då, alla har sina egna default värden som gör att våran webbsida kan ha olika margins, paddings, typografi med mera.
+* [`normalize.css`](https://www.npmjs.com/package/normalize.css) vilket är en vanlig CSS fil som man även kan ladda ner utanför npm. Denna skall vi använda för att normalisera vår style mellan olika webbläsare då, alla har sina egna default värden som gör att våran webbsida kan ha olika margins, paddings, typografi med mera.
 
-Vi börjar med att initiera en grund `package.json` fil som innehåller alla våra paket och scripts för vårt projekt.
+Vi börjar med att initiera en grund, en `package.json` fil som innehåller alla våra paket och scripts för vårt projekt.
 
 ```bash
 # gå till me
@@ -68,7 +68,7 @@ Nu när allt är installerat kommer vår `package.json` likna:
 }
 ```
 
-Vi kan se att det även har genererats en ny fil `package.lock.json` som innehåller en exakt kopia av alla våra modulers tillsammans med deras `dependencies` (moduler de behöver) så andra installationer kan få ett identisk träd av moduler, oavsett  om paketen har uppdaterats eller ej.   
+Vi kan se att det även har genererats en ny fil `package-lock.json` som innehåller en exakt kopia av alla våra modulers tillsammans med deras `dependencies` (moduler de behöver) så andra installationer kan få ett identisk träd av moduler, oavsett om paketen har uppdaterats eller ej.   
 Det har också skapats en ny mapp `node_modules` där alla modulerna från `package.lock.json` ligger. Denna mappen lägger vi alltid i vår `.gitignore` eftersom den redan nu innehåller lite över 36MB data och växer exponentiellt för varje paket. Vill man ladda ner filerna igen skriver man kommandot `npm install`.
 
 I vår `package.json` hittar vi `scripts`, den tar emot ett objekt av kommandon som kan nås med `npm run {kommando}`. Så för att både kunna validera och konvertera våra `.scss` filer till `.css` behöver vi då lägga till följande:
@@ -83,34 +83,36 @@ scripts: {
 ```
 **Notera**: `playful` är mitt aktiva tema så byt ut det namnet så att det passar erat tema.
 
-Vi behöver också skapa en till fil `.stylelintrc` där vi kommer definiera lint reglerna så att vi också kan validera våran scss kod.
+Vi behöver också skapa en till fil `.stylelintrc` där vi kommer definiera lint reglerna så att vi också kan validera våran SCSS kod.
 
 ```json
 {
-  "extends": [
-    "stylelint-config-sass-guidelines",
-    "../../../.stylelintrc.json"
-  ],
-  "rules": {
-    "at-rule-no-unknown": null
-  },
-  "ignoreFiles": [
-    "**/node_modules/",
-    "**/default/**/*.css",
-    "**/*.min.css"
-  ]
+    "extends": [
+        "stylelint-config-sass-guidelines",
+        "../../../.stylelintrc.json"
+    ],
+    "rules": {
+        "at-rule-no-unknown": null,
+        "order/properties-alphabetical-order": null,
+        "selector-max-compound-selectors": 5
+    },
+    "ignoreFiles": [
+        "**/node_modules/",
+        "**/default/**/*.css",
+        "**/*.min.css"
+    ]
 }
 ```
 
-* `extends` ärver reglerna från andra filer. Så vi extendar `.css` reglerna från `dbwebb validate` och lägger till guidelines för `.scss` som vi nyligen installerade.
+* `extends` ärver reglerna från andra filer. Så vi ärver `.css` reglerna från `dbwebb validate` och lägger till guidelines för `.scss` som vi nyligen installerade.
 * I `rules` kan man både skriva över regler från de ärvda filerna och lägga till egna.
-* `ignoreFiles` kan man lägga till både mappar och filer som man inte vill validera. Här lägger vi till `node_modules` mappen `default` temat som pico genererar och alla minifierade css filer.
+* `ignoreFiles` kan man lägga till både mappar och filer som man inte vill validera. Här lägger vi till `node_modules` mappen `default` temat som pico genererar och alla minifierade CSS filer.
 
 Nu kör vi inte längre `dbwebb validate` för att validera vår style. Så se till att allt går igenom `npm run lint` istället.   
-För att skippa valideringen när nu publiserar till studentservern kan ni använda er utav `dbwebb publishfast`.
+För att skippa valideringen när nu publicerar till studentservern kan ni använda er utav `dbwebb publishfast`.
 
 
-Bygg css med sass {#bygg-css-med-sass}
+Bygg CSS med SASS {#bygg-css-med-sass}
 ---------------------------------------
 Jag fortsätter att utgå från ett nytt tema `playful` där jag leker runt för att kolla så att allting fungerar. Jag tänkte att jag skulle skapa en liten *alert-box* så att vi kan se hur vi kan använda det nya verktyget.
 
@@ -121,7 +123,7 @@ Det första jag gör är att skapa tre nya filer som jag sendan skall anpassa ti
 
 ```bash
 # stå i portfolio/themes/
-$ mkdir shared/scss playful/scss
+$ mkdir -p shared/scss playful/scss
 $ touch shared/scss/variables.scss shared/scss/base.scss shared/scss/layout.scss
 $ touch playful/scss/style.scss
 ```
@@ -143,7 +145,7 @@ I `shared/scss/base.scss` lägger jag in alla mina filer för bastemat.
 Som vi ser så behöver man inte behöver ta med filändelsen när man importerar andra `.scss` eller `.css` filer.
 
 
-I `shared/scss/layout.scss` skapar jag nu basutseendet för vår HTML.
+I `themes/dbwebb/index.twig` skapar jag nu basutseendet för vår HTML och jag uppdaterar vår layout i `themes/shared/layout.scss`:
 
 ```html
 <!-- index.twig -->
@@ -190,7 +192,7 @@ $base-color: #c6538c; // light pink
 
 Nu när allt är klart vill jag validera `.scss` filerna med kommandot `npm run lint`. Om allt är grönt är det bara att generera den nya css filen med `npm run style`.
 
-Vill man istället skapa en minifierad version av css koden kan man använda sig av `npm run style-min`. En rekommendation är att använda denna då man slipper problem som kan uppkomma från `lint` kommandot och det även att det går snabbare för webbläsaren att ladda in minifierade filer.
+Vill man istället skapa en minifierad version av CSS koden kan man använda sig av `npm run style-min`. En rekommendation är att använda denna då man slipper problem som kan uppkomma från `lint` kommandot och det även att det går snabbare för webbläsaren att ladda in minifierade filer.
 
 
 Avsluningsvis  {#avslutningsvis}
@@ -201,4 +203,4 @@ Ett tips när ni börjar styla är att använda många variabler och dela upp ko
 
 SASS dokumentation kan hittas på [sass-lang.com/documentation](https://sass-lang.com/documentation). SASS har två typer av syntax, en med `.sass` som är lite äldre och `.scss` vilket är nyare. Vi skall använda `.scss`.
 
-Om det är några frågor eller om något är oklart, tveka inte att hojta till i discord så kollar vi på det. Annars lycka till och kör på!
+Om det är några frågor eller om något är oklart, tveka inte att hojta till i Discord så kollar vi på det. Annars lycka till och kör på!
