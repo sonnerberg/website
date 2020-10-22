@@ -28,7 +28,7 @@ Koden för appen är redan klar och finns i repot [devops](https://github.com/db
 
 
 
-## Länkar {#lankar}
+## Länkar till allt som appen är byggd med {#lankar}
 
 [Flask och Jinja2](kunskap/flask-och-jinja2) och dess förkunskaper kan du använda för att lite snabbt få kolla på Flask.
 
@@ -51,12 +51,3 @@ Koden för appen är redan klar och finns i repot [devops](https://github.com/db
 [Flask-Bootstrap](https://pythonhosted.org/Flask-Bootstrap/) addon för bootstrap i Jinja2 och WTF.
 
 [python-dotenv](https://saurabh-kumar.com/python-dotenv/) Gör om key-value par till miljövariabler.
-
-
-
-Avslutningsvis {#avslutning}
---------------------------------------
-
-Det är många olika saker att ta in i denna artikeln, ni har fått känna på hur det är att jobba med driftsättning av en applikation ni inte skapat själva och sett olika delar som kan ingå. Under kursens gång ska vi jobba oss ifrån att göra saker manuellt till att det antingen sker automatisk eller i alla fall finns i ett skript.
-
-Artikeln baseras mycket på [The Flask mega tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux).
