@@ -32,6 +32,7 @@ Kolla på följande video för att få en introduktion till ämnet devops. Devop
 
 För de som vill gräva ner sig i den teoretiska delen och företagskulturen av devops rekommenderar jag boken [Effective Devops](http://tinyurl.com/yyuw7a9w). Läs kapitel 1-6.
 
+<!-- https://tinyurl.com/y4kyayqa the devops handbook -->
 
 
 ## Miljö {#miljo}
@@ -48,30 +49,33 @@ Vi kommer att utöka vad som ingår i labbmiljön under kursen. Till en början 
 
 ### Produktionsmiljö {#produktionsmiljo}
 
-När man jobbar enligt devops ska saker ofta gå snabbt och automatiskt, då underlättar det om man snabbt och enkelt kan starta upp och stänga ner servrar. Därför ska vi använda oss av en molntjänst, mer specifikt [Amason Web Services (AWS)](https://aws.amazon.com/).
+När man jobbar enligt devops ska saker ofta gå snabbt och automatiskt, då underlättar det om man snabbt och enkelt kan starta upp och stänga ner servrar. Därför ska vi använda oss av en molntjänst, mer specifikt [Microsoft Azure](https://azure.microsoft.com/en-us/). OBS! logga inte in via den länken.
 
 
 
-#### AWS {#aws}
+#### Azure {#azure}
 
-För att få en introduktion till vad AWS är kan ni kolla in "AWS in 10 minutes".
+För att få en introduktion till vad Azure är kan ni kolla in "What Is Azure?".
 
-[YOUTUBE src="r4YIdn2eTm4" caption="AWS in 10 minutes."]
+[YOUTUBE src="3Arj5zlUPG4" caption="What Is Azure?"]
 
-Sen behöver du skaffa ett konto på AWS, som student kan man skapa ett gratiskonto och få 100$ i kredit gör till och med steg 10 i [AWS Educate starter account](https://www.instructables.com/id/Guide-to-AWS-Educate-Starter-Account/). Om du redan har ett konto på AWS kan du få 75$ i kredit på det. Gör då sida 4 och 5 i [Creating an aws account for students...](http://holowczak.com/creating-an-aws-account-for-student-use-with-aws-educate/4/).
-
-Skapa en server på AWS.
+Ett konto till Azure får du från skolan, du hittar länken på Canvas. Logga in via den länken och kolla sen på videon nedanför och skapa din första VM på Azure.
 
 [YOUTUBE src="fA_4k8vJp7I" caption="101 Skapa server på AWS."]
 
 
+
 #### Domännamn {#domain}
 
-Det underlättar dessutom om vi har ett domännamn som vi kan länka till en server. Om du inte redan har ett kolla in artikeln ["GitHub Education Pack och en server på Digital Ocean"](kunskap/github-education-pack-och-en-server-pa-digital-ocean). I den görs mer saker än vad vi behöver göra så kolla bara på delen [GitHub Education Pack](kunskap/github-education-pack-och-en-server-pa-digital-ocean#gep) och [En domän till din server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#domain) (Du kan sluta läsa när det börjar handla om Digital ocean).
+Det underlättar dessutom om vi har ett domännamn som vi kan länka till en server. Om du inte redan har ett kolla in artikeln ["GitHub Education Pack och en server på Digital Ocean"](kunskap/github-education-pack-och-en-server-pa-digital-ocean). I den görs mer saker än vad vi behöver göra så kolla bara på de två följande delarna:
+
+1. [GitHub Education Pack](kunskap/github-education-pack-och-en-server-pa-digital-ocean#gep)
+
+1. [En domän till din server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#domain) (Du kan sluta läsa när det börjar handla om Digital ocean).
 
 <!-- Möjlig alternativ till namecheap, http://www.dot.tk/en/index.html?lang=en -->
 
-Koppla ditt domän namn till servern.
+När du har fixat en domän, kolla på videon för att ditt domännamn till servern du skapade ovanför.
 
 [YOUTUBE src="diuYaLN1ius" caption="102 Koppla domän till AWS."]
 
@@ -79,24 +83,36 @@ Koppla ditt domän namn till servern.
 
 #### 10 första minuterna {#10first}
 
-Gör sen [Första 10 minuter på en server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#first10) delen. Tänk på att logga in med användaren `admin` istället för `root`. När du har loggat in vill du däremot byta till root användaren innan du fortsätter, gör det med `sudo su`. Du kan skippa följande kommandon:
+Nu ska vi logga in på servern och konfigurera den. Vi utgår från en artikeln som är gjord för jsramverk kursen så några saker är inte exakt likadant.
+
+När du loggar in på servern använd `azureuser` som användare istället för `root`.  
+Du behöver även byta till root användaren efter att du har loggat in, gör det med `sudo su`.  
+Du kan skippa följande kommandon:
+
 ```bash
 apt-get remove --purge unscd
 userdel -r debian
 ```
-Brandväggsdelen är frivillig i och med att vi kommer använda oss av security groups i AWS för att kontrollera kopplingar till servern.
+
+Brandväggsdelen är frivillig i och med att vi kommer styra portar till servern i Azure.
+
+Gör nu [Första 10 minuter på en server](kunskap/github-education-pack-och-en-server-pa-digital-ocean#first10) delen. 
 
 
 
 ### Appen {#appen}
 
-Nästa steg är att bekanta oss med appen som du ska jobba på i kursen. Läs igenom och följ [Introduktion till Devops appen](kunskap/introduktion_till_devops_appen).
+Nästa steg är att bekanta dig med appen som du ska jobba på i kursen. Läs igenom och följ:
+
+[Introduktion till Devops appen](kunskap/introduktion_till_devops_appen).
 
 
 
 #### Driftsätt appen {#driftsatt}
 
-Vi har en server och vi har en app, då måste vi lära oss ["Driftsätta en Flask app"](kunskap/driftsatta-en-flask-app). Om något blir fel och du inte riktigt vet hur du ska ångra det, skapa om servern i AWS och använd dig av [skripten i repot](https://github.com/dbwebb-se/microblog/tree/master/scripts) för att snabbt göra de 10 första minuterna på en server och börja om med driftsättningen.
+Vi har en server och vi har en app, då måste vi lära oss driftsätta den. Om något går fel när du jobbar igenom artikeln och du inte riktigt vet hur du ska ångra det, skapa om servern i Azure och använd dig av [skripten i repot](https://github.com/dbwebb-se/microblog/tree/master/scripts) för att snabbt göra de 10 första minuterna på en server och börja om med driftsättningen.
+
+Jobba igenom ["Driftsätta en Flask app"](kunskap/driftsatta-en-flask-app).
 
 <!-- https://askubuntu.com/questions/879437/ensurepip-is-disabled-in-debian-ubuntu-for-the-system-python -->
 
@@ -104,10 +120,11 @@ Vi har en server och vi har en app, då måste vi lära oss ["Driftsätta en Fla
 
 ### Continues Integration {#ci}
 
-Vi vill ha en CI-kedja till repot så att testerna automatiskt körs när du gör push. I kursen har jag valt att använda [CircleCi](https://circleci.com/). Läs igenom ["Continuous Integration With Python: An Introduction"](https://realpython.com/python-continuous-integration/) för att se hur man kan sätta upp CircleCi för ett Python projekt och gör det sen för ditt forkade repo.  
-När du pushar din kod ska CircleCi köra alla unittester, integrationtester och validera koden.
+Vi vill ha en CI-kedja till repot så att testerna automatiskt körs när du gör push. I kursen har jag valt att använda [CircleCi](https://circleci.com/). Nu ska du läsa igenom en artikel som visar hur vi kan använda CirclCi för python projekt. När du gjort det ska du göra det för ditt forkade repo.
 
+Jobba igenom ["Continuous Integration With Python: An Introduction"](https://realpython.com/python-continuous-integration/).
 
+När du pushar kod i ditt repo ska CircleCi köra alla unittester, integrationtester och validera koden.
 
 
 
@@ -134,9 +151,9 @@ Uppgifter  {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Miguels guide för att följa andra](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers) OBS! koden kommer inte fungera rakt av, t.ex. när Miguel skapar routes skriver han `app` men ni behöver använda `bp`. Se till att de nya testerna går igenom och driftsätt den nya versionen på din server. Testerna kommer  inte heller fungera rakt av, Miguel använder sig av `unittest` modulen medan vår microblog använder `pytest`. Ni behöver skicka med `test_app` som parameter för att kunna använda databasen i testerna.
+1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Kom igång med followers](kunskap/kom-igang-med-followers)
 
-1. Lägg till en CircleCi badge i README filen för repot.
+1. Koppla ditt repo till CircleCi. När du gör en commit ska CricleCi köra alla unittester, integrationtester och validera koden. Lägg till en CircleCi badge i README filen för repot.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0. Om du pushar kmom01 flera gånger kan du öka siffrorna efter 1:an.
 

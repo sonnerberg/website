@@ -28,12 +28,12 @@ Det finns flera alternativ till Gunicorn, [appdynamics](https://www.appdynamics.
 
 ## Installera grund beroenden {#base-dependencies}
 
-Jag gör installationen på en VPS som kör Debian 9.7 och Python 3.5.
+Jag gör installationen på en VM som kör Debian 10 och Python 3.7.
 
 Installera Python, Supervisor och MySQL. I produktion kör vi MySQL som databas istället för SQLite.
 
 ```bash
-apt-get install python3.5 python3-venv python3-dev supervisor mysql-server
+apt-get install python3-venv python3-dev supervisor git default-mysql-server
 ```
 
 Om du har gjort 10 första minuterna på en servern övningen har du redan nginx och git installerat, om du inte gjort det installera dem också.
@@ -42,7 +42,7 @@ Om du har gjort 10 första minuterna på en servern övningen har du redan nginx
 
 ## Installera appen {#install-app}
 
-Hämta git repot och checka ut senaste versionen. Optimalt sätt vill vi inte behöva hämta hela repot utan bara själva applikationen, men vår miljö är inte redo för det är.
+Hämta git repot och checka ut senaste versionen. Optimalt sätt vill vi inte behöva hämta hela repot utan bara själva applikationen, men vår miljö är inte redo för det än.
 
 ```bash
 git clone https://github.com/dbwebb-se/microblog.git
@@ -73,7 +73,7 @@ SECRET_KEY=1b45b32d4b724e67ad0758cec2d2ed34
 DATABASE_URL=mysql+pymysql://microblog:<passwd>@localhost:3306/microblog
 ```
 
-Byt ut `<passwd>` mot ett lösenord som du vill ha till databasen. Vi konfigurerar databasen i nästa steg. Vi också behöver sätta environment variabeln ["FLASK_APP"](http://flask.pocoo.org/docs/1.0/cli/#application-discovery), men det kan vi inte göra i `.env` filen då FlASK_APP används för att starta appen och `.env` läses in av appen efter den är startad. FLASK_APP ska innehålla namnet på filen som startar applikationen.
+Byt ut `<passwd>` mot ett lösenord som du vill ha till databasen. Vi konfigurerar databasen i nästa steg. Vi behöver också sätta environment variabeln ["FLASK_APP"](http://flask.pocoo.org/docs/1.0/cli/#application-discovery), men det kan vi inte göra i `.env` filen då FLASK_APP används för att starta appen och `.env` läses in av appen efter den är startad. FLASK_APP ska innehålla namnet på filen som startar applikationen.
 
 ```bash
 echo "export FLASK_APP=microblog.py" >> ~/.profile
@@ -118,7 +118,7 @@ Testa även `flask run` för att se att applikationen startar utan fel. Stäng n
 
 ## Konfigurera Gunicorn och Supervisor {#gunicorn_supervisor}
 
-Vi använder följande kommando för att starta appen med [Gunicorn](https://gunicorn.org/), notera att `venv` behöver fortfarande vara aktiverat för att det ska fungera, då vi installerade Gunicorn med pip.
+Vår app är nu redo att startas i [Gunicorn](https://gunicorn.org/), notera att `venv` fortfarande behöver vara aktiverat för att det ska fungera, då vi installerade Gunicorn i venv.
 
 Testa starta en Gunicorn server med:
 ```bash
@@ -139,9 +139,9 @@ Booting worker with pid: 4886
 
 `microblog:app` säger hur appen ska startas. Namnet före kolon är vilken modul/fil som innehåller appen och namnet efter kolon är namnet på appen.
 
-Om du vill testa att det fungerar som det ska kan du göra det. Öppna upp port 8000, `ufw allow 8000` och gå sen till `<server-ip>:8000` i din webbläsare. Då ska du komma till logga in sidan. Glöm inte att stänga porten när du är klar, `ufw deny 8000`.
+Om du vill testa att det fungerar som det ska kan du göra det. Öppna upp port 8000, `ufw allow 8000`, och i Azure. Gå sen till `<server-ip>:8000` i din webbläsare. Då ska du komma till logga in sidan. Glöm inte att stänga porten när du är klar, `ufw deny 8000`.
 
-Nu startade vi servern i terminalen och vi kan inte göra något annat så länge den körs. Detta är inte önskvärt i produktion, istället ska vi köra och övervaka den med supervisor i bakgrunden. Så att servern startas igen om den kraschar eller om servern startar om.
+Nu startade vi servern i terminalen och den är låst så länge Gunicorn körs. Detta är inte önskvärt i produktion, istället ska vi köra och övervaka den med supervisor i bakgrunden. På detta sättet startas servern igen om den kraschar eller om servern startar om.
 
 Skapa en config fil i `/etc/supervisor/conf.d/`, jag döper min till `microblog.conf`.
 
@@ -157,15 +157,30 @@ stopasgroup=true
 killasgroup=true
 ```
 
-Notera att jag bytte från `0.0.0.0` till `localhost` i gunicorn kommandot. Nu vill vi bara att servern ska ta emot request lokalt från nginx. `command`, `directory` och `user` berättar hur appen ska köras. `autostart` och `autorestart` gör att appen automatiskt startas och startas om vi uppstart eller krasch. `stopasgroup` och `killasgroup` försäkrar oss att alla underprocesser stängs av när appen ska startas om. Du hittar de olika inställningarna på [Supervisors webbsida](http://supervisord.org/configuration.html#program-x-section-settings).
+Notera att jag bytte från `0.0.0.0` till `localhost` i gunicorn kommandot. Nu vill vi bara att servern ska ta emot request lokalt från nginx. 
+
+`command`, `directory` och `user` berättar hur appen ska köras.
+
+`autostart` och `autorestart` gör att appen automatiskt startas och startas om vi uppstart eller krasch. 
+
+`stopasgroup` och `killasgroup` försäkrar oss att alla underprocesser stängs av när appen ska startas om. 
+
+Du hittar de olika inställningarna på [Supervisors webbsida](http://supervisord.org/configuration.html#program-x-section-settings).
 
 Vi behöver skapa mappen `/var/log/microblog` för loggarna.
+
 ```bash
 sudo mkdir /var/log/microblog
 sudo chmod -R 777 /var/log/microblog
 ```
 
-När konfig filen är på plats kör vi `sudo supervisorctl reload` för att aktivera den. Om det fungerar borde du få liknande utskrift om du kör `sudo supervisorctl status`:
+När konfig filen är på plats laddar vi om supervicor.
+
+```
+sudo supervisorctl reload
+```
+
+Om det fungerar borde du få liknande utskrift som nedanför om du kör `sudo supervisorctl status`:
 
 ```bash
 microblog            RUNNING   pid 8837, uptime 0:00:04
