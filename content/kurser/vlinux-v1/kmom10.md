@@ -37,8 +37,6 @@ Du hittar alltså filen som är relaterad till projektet i ditt kursrepo under `
 
 Du kikar snabbt i katalogen och väljer att fokusera på en server som söker i loggen. Det låter lagom stort. Då du inte vet vilken miljö de använder väljer du att bygga in applikationen i Docker.
 
-Fråga i forumet om du känner dig osäker.
-
 
 
 Projektspecifikation {#projspec}
