@@ -144,7 +144,7 @@ Får du problem med SSH-nycklarna så pröva igen, [GitHub själva har en bra st
 
 När det är klart har du publicerat din portfolio på GitHub.
 
-<!-- ### Git tag {#gittag}
+### Git tag {#gittag}
 
 När du är klar med alla uppdateringar så kan du committa alla ändringar i ditt git repo. Du kan också lägga till en tagg för att markera nuvarande status i git repot som väl fungerande.
 
@@ -163,7 +163,7 @@ När du är klar kan du ladda upp git repot och dess taggar till GitHub.
 ```text
 git push
 git push --tags
-``` -->
+```
 
 ### Bekanta dig {#bekanta}
 
@@ -197,9 +197,9 @@ Krav {#krav}
 
 1. Publicera dina filer till studentservern, `dbwebb publish me`, och kontrollera att allt fungerar som det ska.
 
-1. Commit:a dina ändringar<!-- och lägg till en ny tagg (1.0.\*)-->.
+1. Commit:a dina ändringar och lägg till en ny tagg (1.0.\*).
 
-1. Push:a repot till GitHub<!-- , inklusive taggarna -->.
+1. Push:a repot till GitHub, inklusive taggarna.
 
 Tips från coachen {#tips}
 -----------------------
