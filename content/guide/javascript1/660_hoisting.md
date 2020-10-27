@@ -30,17 +30,17 @@ function speak() {
 Anledningen är att JavaScript flyttar upp alla deklarationer högst upp så hela funktionen hamnar överst. Om vi istället tittar på ett expression:
 
 ```javascript
-var speak = function() {
+let speak = function() {
     console.log("Its working!");
 }
 ```
 
-Här deklareras inte funktionen förrän programmet körs. Deklarationen som sker är `var speak;` vilket inte innehåller funktionen om man anropar den för tidigt:
+Här deklareras inte funktionen förrän programmet körs. Deklarationen som sker är `let speak;` vilket inte innehåller funktionen om man anropar den för tidigt:
 
 ```javascript
 speak(); // prints "Uncaught TypeError: speak is not a function" in the console
 
-var speak = function() {
+let speak = function() {
     console.log("Its not working!!");
 }
 ```

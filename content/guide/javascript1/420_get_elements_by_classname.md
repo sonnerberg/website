@@ -24,9 +24,9 @@ Om vi hämtar element via klassnamn får vi alla element som har den klassen. Fu
 ### JavaScript-filen {#js-filen}
 
 ```javascript
-var boxes = document.getElementsByClassName("box");
+let boxes = document.getElementsByClassName("box");
 
-for (var i = 0; i < boxes.length; i++) {
+for (let i = 0; i < boxes.length; i++) {
     boxes[i].style.backgroundColor = "#503899";
     boxes[i].style.margin = "5px";
 }

@@ -10,8 +10,8 @@ Det finns inga [associativa arrayer](http://en.wikipedia.org/wiki/Associative_ar
 Du kan använda array-literalen för att skapa och jobba med arrayer på följande sätt.
 
 ```javascript
-var notMuch = [];
-var course = ['htmlphp', 'oophp', 'phpmvc', 'javascript'];
+let notMuch = [];
+let course = ['htmlphp', 'oophp', 'phpmvc', 'javascript'];
 
 console.log(notMuch.length); // 0
 console.log(course.length);  // 4

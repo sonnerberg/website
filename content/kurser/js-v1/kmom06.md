@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2020-10-27": (E, lew) Genomgång inför ht20.
     "2017-10-10": (D, mos) Genomgång inför ht17.
     "2016-03-15": (C, mos) Lade till videoserie med "Lär dig JavaScript".
     "2015-01-19": (B, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
@@ -79,9 +80,14 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom övningen om "[Funktioner, scope, closures och moduler med JavaScript](kunskap/funktioner-scope-closures-och-moduler-med-javascript)". Det är ingen kod du måste skriva, men du borde provköra varje exempel i din egen miljö. Det hjälper dig att öva in begreppen och du kan själv modifiera testprogrammen för att test hur de fungerar.
-2. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 6 gäller delen:
-    * [Module pattern](guide/javascript1/section_break_9)
+<!-- 1. Jobba igenom övningen om "[Funktioner, scope, closures och moduler med JavaScript](kunskap/funktioner-scope-closures-och-moduler-med-javascript)" -->
+<!-- 1. Jobba i guiden om "[Funktioner, scope, closures och callbacks](guide/javascript1/funktioner-scope-closure-och-callbacks)". Det är ingen kod du måste skriva, men du borde provköra varje exempel i din egen miljö. Det hjälper dig att öva in begreppen och du kan själv modifiera testprogrammen för att test hur de fungerar. -->
+1. Gå även igenom moduler i [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 6 gäller delarna:  
+
+* [Funktioner, scope, closures och callbacks](guide/javascript1/funktioner-scope-closure-och-callbacks)  
+* [Module pattern](guide/javascript1/section_break_9)
+
+Det är ingen kod du måste skriva, men du borde provköra varje exempel i din egen miljö. Det hjälper dig att öva in begreppen och du kan själv modifiera testprogrammen för att test hur de fungerar.
 
 
 

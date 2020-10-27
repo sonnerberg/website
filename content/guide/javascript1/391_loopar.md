@@ -13,7 +13,7 @@ En traditionell for-loop ser ut på följande sätt:
 
 ```javascript
 
-for(var i = 0; i < 10; i++) {
+for(let i = 0; i < 10; i++) {
     console.log(i); // print 0...9 in the console
 }
 ```
@@ -25,7 +25,7 @@ for(var i = 0; i < 10; i++) {
 Vi går raskt vidare till while-loopen:
 
 ```javascript
-var i = 0;
+let i = 0;
 
 while(i < 100) {
     console.log(i); // print 0...99 in the console
@@ -34,4 +34,4 @@ while(i < 100) {
 ```
 
 
-Övriga villkor fungerar med sådom `<`, `>`, `<=`, `>=` osv.
+Övriga villkor fungerar med såsom `<`, `>`, `<=`, `>=` osv.

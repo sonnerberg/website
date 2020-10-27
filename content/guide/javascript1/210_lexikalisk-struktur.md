@@ -59,7 +59,7 @@ i
 Pröva att skriva in en identifierare och tilldela den ett värde av en literal.
 
 ```javascript
-var myValue = "fortytwo";
+let myValue = "fortytwo";
 myValue;
 ```
 

@@ -47,21 +47,21 @@ Vårt utgångsläge så här långt ser ut som följer:
 Nu till det roliga. Vi vet hur vi fångar upp elementet att vi bland annat kan påverka dess css.
 
 ```javascript
-var box = document.getElementsByClassName("box")[0];
+let box = document.getElementsByClassName("box")[0];
 
 document.addEventListener("keydown", function(event) {
-    var key = event.key;
-    var left = box.offsetLeft;
-    var top = box.offsetTop;
-    var step = 10;
+    let key = event.key;
+    let left = box.offsetLeft;
+    let top = box.offsetTop;
+    let step = 10;
 
     console.log("Du tryckte på: ", key);
 });
 ```
 
-**var key = event.key;** fångar upp vilken tangent som tryckts ned.  
-**var left = box.offsetLeft;** fångar upp positionen på boxens vänstra kant i förhållande till dess förälders vänsterkant.  
-**var left = box.offsetTop;** fångar upp positionen på boxens övre kant i förhållande till dess förälders överkant.  
+**let key = event.key;** fångar upp vilken tangent som tryckts ned.  
+**let left = box.offsetLeft;** fångar upp positionen på boxens vänstra kant i förhållande till dess förälders vänsterkant.  
+**let left = box.offsetTop;** fångar upp positionen på boxens övre kant i förhållande till dess förälders överkant.  
 **step = 10** är antalet pixlar elementet ska förflytta sig.
 
 Vi behöver hantera vad som ska hända vid respektive tangent. Jag tänker att piltangenterna får styra elementet.

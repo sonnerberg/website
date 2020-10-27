@@ -22,7 +22,7 @@ Där har vi satt ett id på elementet, bra. Då är det bara att tuta på!
 Då JavaScript-filen har länkats in via `js/main.js` kan vi nå vår div därifrån:
 
 ```javascript
-var myContent = document.getElementById('content');
+let myContent = document.getElementById('content');
 
 myContent.innerHTML = '<h3>This is a template!</h3>';
 ```

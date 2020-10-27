@@ -6,7 +6,7 @@ Anonyma funktioner
 En anonym funktion, *anonymous function*, är en namnlös funktion. Det betyder att den inte har en namngiven identifierare, utan deklareras dynamiskt med funktions-operatorn när programmet körs.
 
 ```javascript
-var whoAreYou = function() {
+let whoAreYou = function() {
     console.log("We are Anonymous!");
 }
 

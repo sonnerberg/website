@@ -12,7 +12,7 @@ Vi går igenom hur villkorshantering kan se ut i JavaScript.
 En traditionell if-sats ser ut på följande sätt:
 
 ```javascript
-var aNumber = 50;
+let aNumber = 50;
 
 if (aNumber > 42) {
     console.log("large number!");
@@ -26,7 +26,7 @@ if (aNumber > 42) {
 Vi kan även lägga till fler villkor med else och elseif:
 
 ```javascript
-var aNumber = 42;
+let aNumber = 42;
 
 if (aNumber > 42) {
     console.log("large number!");

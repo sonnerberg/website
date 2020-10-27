@@ -33,9 +33,9 @@ Lite css på den skapar fina, fyrkantiga lådor.
 Vi hämtar lådorna med javascript och lägger på en eventlyssnare, som triggas när man klickar i respektive låda.
 
 ```javascript
-var boxes = document.getElementsByClassName("box");
+let boxes = document.getElementsByClassName("box");
 
-for (var i = 0; i < boxes.length; i++) {
+for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("click", function(event) {
         event.target.style.backgroundColor = "blue";
     });

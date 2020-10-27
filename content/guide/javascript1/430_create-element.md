@@ -6,10 +6,10 @@ createElement
 Vi kan även skapa html-element i JavaScript. Det görs med den inbyggda funktionen `createElement`. Låt säga att vi vill skapa 5 lådor, där vi har stylat klassnamnet `box` i css. Vi kan åstadkomma skapandet i JavaScript:
 
 ```javascript
-var myContent = document.getElementsByClassName('content')[0];
+let myContent = document.getElementsByClassName('content')[0];
 
-for (var i = 0; i < 5; i++) {
-    var box = document.createElement("div");
+for (let i = 0; i < 5; i++) {
+    let box = document.createElement("div");
     box.className = "box";
 
     myContent.appendChild(box);

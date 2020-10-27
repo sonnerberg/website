@@ -24,12 +24,12 @@ Vi kan se att det är typen `KeyBoardEvent` och en uppsättning egenskaper vi ka
 Vi har alltså fångat eventet att en tangent trycks ner. All information hittar vi i `event`. Vi kikar på hur vi kan använda informationen:
 
 ```javascript
-var myContent = document.getElementById('content');
+let myContent = document.getElementById('content');
 
 myContent.innerHTML = "<h3>Press a letter in the word 'dbwebb':</h3>";
 
 document.addEventListener("keydown", function(event) {
-    var key = event.key; // Catch the key property
+    let key = event.key; // Catch the key property
 
     switch (key) {
         case "d":

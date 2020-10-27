@@ -7,8 +7,8 @@ En tanke med moduler är att man väljer vilka metoder och variabler man vill ex
 
 ```javascript
 window.Me = (function() {
-    var age = 35;
-    var name = "Kenneth";
+    let age = 35;
+    let name = "Kenneth";
 
     function getAge() {
         return age;
@@ -32,8 +32,8 @@ Vi kan byta namn på variabler och metoder när vi returnerar objektet:
 
 ```javascript
 window.Me = (function() {
-    var age = 35;
-    var name = "Kenneth";
+    let age = 35;
+    let name = "Kenneth";
 
     function getAge() {
         return age;
@@ -54,8 +54,8 @@ Vi kan även strukturera om koden ovan på följande sätt:
 
 ```javascript
 window.Me = (function() {
-    var age = 35;
-    var name = "Kenneth";
+    let age = 35;
+    let name = "Kenneth";
 
     return {
         myNameIs: name,

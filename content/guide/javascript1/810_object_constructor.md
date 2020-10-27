@@ -10,7 +10,7 @@ function MyObj(size, background) {
     this.size = size;
     this.background = background;
     this.draw = function() {
-        var element = document.createElement("div");
+        let element = document.createElement("div");
         element.style.margin = "5px";
         element.style.height = this.size.h + "px";
         element.style.width = this.size.w + "px";
@@ -19,13 +19,13 @@ function MyObj(size, background) {
     }
 }
 
-var obj1 = new MyObj({h: 25, w: 54}, "green");
-var obj2 = new MyObj({h: 100, w: 250}, "red");
-var obj3 = new MyObj({h: 65, w: 147}, "yellow");
+let obj1 = new MyObj({h: 25, w: 54}, "green");
+let obj2 = new MyObj({h: 100, w: 250}, "red");
+let obj3 = new MyObj({h: 65, w: 147}, "yellow");
 
-var allObjects = [obj1, obj2, obj3];
+let allObjects = [obj1, obj2, obj3];
 
-for (var i = 0; i < allObjects.length; i++) {
+for (let i = 0; i < allObjects.length; i++) {
     allObjects[i].draw();
 }
 ```

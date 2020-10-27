@@ -6,7 +6,7 @@ Datumhantering med objektet `Date`
 Med objektet [`Date`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date) får vi en mängd metoder för att jobba med datum och tid.
 
 ```javascript
-var today = new Date();
+let today = new Date();
 /*
 * Year, month and day
 */

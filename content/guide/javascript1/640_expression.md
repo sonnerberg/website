@@ -6,7 +6,7 @@ Function expression
 *Function expression* tilldelar funktionen till en variabel som kan användas som identifierare. Funktionen är i sig anonym (namnlös) och deklareras när programmet körs.
 
 ```javascript
-var speak = function() {
+let speak = function() {
     console.log("I speak, therefore I am.");
 }
 
@@ -16,7 +16,7 @@ speak(); // Prints "I speak, therefore I am." in the console
 Vi kan även skicka med argument till funktionen:
 
 ```javascript
-var speak = function(what) {
+let speak = function(what) {
     console.log(what);
 }
 

@@ -11,14 +11,14 @@ Låt oss ta en djupare titt på funktioner och hur de kan användas.
 
 I ett programmeringsspråk innebär "scope" den synlighet och levnadstid som variabler och parameterar har. Det handlar om minneshantering och namnkonflikter. De flesta C-liknande programmeringsspråk har "block"-scope, alla variabler är synliga i det blocket de är definierade och försvinner ur scoopet när man går ur blocket.
 
-JavaScript har inte block-scope, även om det kan se ut så. JavaScript har "function"-scope vilket betyder att variabler som definierats i en funktion är *inte* synliga utanför den funktionen och en variabel i en funktion är synlig inom hela den funktionen, *inklusive* i funktioner som definierats i funktionen.
+JavaScript har numera block-scope, tack vare `let` och `const` som kom med ES6. Tidigare hade JavaScript bara "function"-scope vilket betyder att variabler som definierats i en funktion är *inte* synliga utanför den funktionen och en variabel i en funktion är synlig inom hela den funktionen, *inklusive* i funktioner som definierats i funktionen.
 
 ```javascript
 function f1 (a) {
-    var b = a + 1;
+    let b = a + 1;
 
     function f2 (c) {
-        var d = c + 1; 
+        let d = c + 1;
         return a + b + c + d - 2; // a, b, c, d is available
     }
 
@@ -29,11 +29,11 @@ f1(10); // Returns 42
 f2(); // Not callable
 ```
 
-I programmeringsspråk med block-scope säger man att variabler skall definieras så sent som möjligt, precis innan de används eller i det blocket de används. I JavaScript definierar vi variablerna överst i funktionen, helst inom en enda `var`-deklaration separerade med kommatecken.
+I programmeringsspråk med block-scope säger man att variabler skall definieras så sent som möjligt, precis innan de används eller i det blocket de används. I JavaScript definierar vi variablerna överst i funktionen, helst inom en enda `var/let`-deklaration separerade med kommatecken.
 
 
 
-###Closure {#closure}
+### Closure {#closure}
 
 I exemplet ovan har den inre funktionen `f2()` tillgång till allt som är definierat i funktionen `f1()`. Detta kallas för "[closure](http://en.wikipedia.org/wiki/Closure_%28computer_science%29)" vilket är ett välkänt begrepp i programmeringspråk som stödjer [funktionell programmering](http://en.wikipedia.org/wiki/Functional_programming), programmeringsspråket [Lisp](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29) är till exempel ett annat sådant språk.
 
@@ -42,7 +42,7 @@ Här är ett exempel på en closure där den inre funktionen har tillgång till 
 ```javascript
 // Example on closure where inner function has access to non-local variables
 window.accessToInner = (function() {
-    var a = 1;
+    let a = 1;
 
     function inner (b) {
         a += b;
@@ -76,27 +76,27 @@ Paranteserna gör att funktionen anropas direkt och är ett designmönster som h
 En funktion har det scope som finns när den definieras, oavsett var den anropas. Man kan alltså definiera en funktion i en miljö och sedan förutsätta att funktionen exekveras i samma miljö. Detta ger möjligheter till inkapsling och låter oss undvika globala variabler. Därför är closure viktigt i JavaScript.
 
 
-
+<!--
 ###Moduler -- "Module pattern" {#module}
 
 Ett vanligt sätt att använda closure är för att skapa moduler av JavaScript kod. Man lägger en hel modul i en funktion, där finns hela scopet, ett eget closure. I denna funktion definieras allt som behövs i modulen, variabler såsom funktioner. Till sist returneras en objekt-literal där man anger modulens publika interface. Se följande exempel där jag skapat en modul `Mos` som är tänkt att innehålla lite bra-att-ha saker.
 
 ```javascript
 window.Mos = (function(window, undefined) {
-  var private, Mos = {};
+  let private, Mos = {};
 
   /**
    * Dump own properties of an object
    * @param the object to show
    */
   Mos.dump = function (obj) {
-    for (var prop in obj) {
+    for (let prop in obj) {
       if (obj.hasOwnProperty(prop)) {
         console.log(prop);
       }
     }
   };
-    
+
   /**
    * Generate a random number.
    * @param min the smallest possible number
@@ -106,7 +106,7 @@ window.Mos = (function(window, undefined) {
   Mos.random = function (min, max) {
     return Math.floor(Math.random()*(max+1-min)+min);
   };
-    
+
   // Expose public methods
   return Mos;
 })(window);
@@ -167,18 +167,18 @@ window.Mumin = (function (name) {
 Mumin.myNameIs(); // returns 'Mumintrollet'
 ```
 
-Detta är alltså ett *module pattern* som ofta används i JavaScript för att kapsla in data i ett objekt, eller modul.
- 
+Detta är alltså ett *module pattern* som ofta används i JavaScript för att kapsla in data i ett objekt, eller modul. -->
 
 
-###Callbacks {#callbacks}
+
+### Callbacks {#callbacks}
 
 En funktion utan namn kallas ibland för [anonym funktion](http://en.wikipedia.org/wiki/Anonymous_function) eller lambda-funktion[^4]. [Lambda](http://en.wikipedia.org/wiki/Lambda_calculus) kommer från matematiken,
 
 Ett vanligt sätt att använda anonyma funktioner är för callbacks, följande exempel visar en event-hanterare, skapad med [`addEventListener()`](https://developer.mozilla.org/en/DOM/element.addEventListener) som tar hand om ett klick på en knapp via en anonym funktion som *callback funktion*.
 
 ```javascript
-var button = document.getElementById('button');
+let button = document.getElementById('button');
 
 button.addEventListener('click', function () {
     console.log('Great - you clicked the button!');
@@ -187,7 +187,7 @@ button.addEventListener('click', function () {
 
 Enda gången som funktionen kommer anropas är i samband med att någon klickar på den specifika knappen. Det finns ingen anledning att spara undan funktionen i en variabel någonstans, eller att definiera funktionen i det globala scopet. Det räcker bra med att definiera funktionen precis där den används, som en anonym funktion.
 
-[INFO]
+<!-- [INFO]
 **Tips**
 
 Har du koll på hur event fungerar? [Event är en del av DOM](https://developer.mozilla.org/en-US/docs/Web/Events), glöm inte att kolla in manualen vid behov.
@@ -196,10 +196,10 @@ Har du koll på hur event fungerar? [Event är en del av DOM](https://developer.
 Ett liknande exempel är om man vill animera en händelse med jämna tidsintervall. Då kan man använda en timer i JavaScript, tex [`window.setTimeout()`](https://developer.mozilla.org/en/DOM/window.setTimeout) eller [`window.setInterval()`](https://developer.mozilla.org/en/DOM/window.setInterval). Låt se hur det kan se ut.
 
 ```javascript
-var button = document.getElementById('button');
+let button = document.getElementById('button');
 
 button.addEventListener('click', function () {
-    var colors = ['green', 'yellow', 'red', 'blue', 'pink'],
+    let colors = ['green', 'yellow', 'red', 'blue', 'pink'],
         step = 0,
 
     animateFunction = function () {
@@ -222,4 +222,4 @@ Funktioner är både behändigt och kraftfullt i JavaScript, det är en central 
 
 Här kan du [testa mitt exempel](javascript/core/animate-using-setTimeout/).
 
-[YOUTUBE src=Nb4nU2VsyIE width=630 caption="Exempel på hur man kan animera med `setTimeout()`."]
+[YOUTUBE src=Nb4nU2VsyIE width=630 caption="Exempel på hur man kan animera med `setTimeout()`."] -->

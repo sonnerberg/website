@@ -13,7 +13,7 @@ function square (x) {           // Traditionellt sätt,
 }
 val = square(x);
 
-var square = function (x) {     // Funktions literal / Funktion expression,
+let square = function (x) {     // Funktions literal / Funktion expression,
   return x*x;                   // funktionen tilldelas en variabel
 }
 val = square(x);
@@ -32,7 +32,7 @@ Funktioner har en argumentlista. Om man anropar funktionen med färre argument �
 
 ```javascript
 function sum(a, b, c) {
-  return a + b + c;
+    return a + b + c;
 }
 
 sum(1, 2, 3); // returnerar 6
@@ -43,10 +43,10 @@ Man kan ge "default"-värden på ett argument med hjälp av operatorn `||`. Stud
 
 ```javascript
 function sum(a, b, c) {
-  a = a || 0;
-  b = b || 0;
-  c = c || 0;
-  return a + b + c;
+    a = a || 0;
+    b = b || 0;
+    c = c || 0;
+    return a + b + c;
 }
 
 sum(1, 2, 3); // returnerar 6
@@ -57,7 +57,7 @@ Man kan även hantera en variabel argument-lista med identifieraren `arguments` 
 
 ```javascript
 function sum() {
-  var i, sum = 0;
+  let i, sum = 0;
 
   for(i = 0; i < arguments.length; i++) {
     sum += arguments[i];
