@@ -36,11 +36,11 @@ Föreläsningar & Seminarium {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10:00 (2020-11-09) via Zoom
+* 10:00 (2020-11-10) via Zoom
 
 Du ska även medverka i seminariet kring privacy:
 
-* Mer information kommer
+* 10:00-12:00 (2020-11-13) via Zoom
 
 
 Läs &amp; Studera  {#lasanvisningar}
