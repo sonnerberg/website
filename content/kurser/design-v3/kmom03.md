@@ -18,18 +18,6 @@ Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är b
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
-
-<!-- Labbmiljön  {#labbmiljo}
----------------------------------
-
-*(ca: 2-4 studietimmar)*
-
-Installera följande.
-
-1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](labbmiljo/node-och-npm)".
-
-
-
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
@@ -43,9 +31,9 @@ TBA
 
 Läs följande:
 
-1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Det ger dig en bakgrund i tankar och hur man gör layout och komponerar ihop designen i en webbsida.
+1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
-    * Kap 1: Layout and Composition
+    * Kap 1: Layout and Composition (repetera)
 
 
 

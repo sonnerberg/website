@@ -55,7 +55,15 @@ cd design
 dbwebb init
 ```
 
+### Verktyg {#verktyg}
 
+Som designer finns det en del verktyg som hjälper dig att planera din design i förväg. Ingen av dessa program är ett måste för kursen, men om man vill kan man installera någon av dem och testa runt så
+
+* [Figma - The collaborative interface design tool](https://www.figma.com/) (Gratis att använda men med betalversion)
+* [Adobe XD - UI/UX design and collaboration tool](https://www.adobe.com/products/xd.html) (Gratis att använda men med betalversion)
+* [ColorZilla - ColorPicker for Chrome, Edge and Firefox](https://www.colorzilla.com/) (Gratis)
+
+Och som vi brukar säga, devtools är webbutvecklarens bästa vän.
 
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
@@ -66,8 +74,9 @@ Läs & Studera  {#lasanvisningar}
 
 ### Kurslitteratur  {#kurslitteratur}
 
-TBA
+Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa i samband med nästa kmom, men det skadar inte att ligga ett kapitel före.
 
+Boken, i sin tredje utgåva, finns tillgänglig online via [BTHs bibliotek](http://bth.summon.serialssolutions.com/?#!/search?ho=t&l=sv-SE&q=9780992279448).
 
 
 ### Design med HTML5 och CSS3  {#guide}
@@ -76,7 +85,6 @@ TBA
     * [Grunderna](guide/design-med-html5-och-css3/grunderna)
 
 I guiden tittar vi på hur vi kan använda CSS tillsammans med HTML för att implementera designprinciper. I sektionen [Grunderna](guide/design-med-html5-och-css3/grunderna) tittar vi på grundläggande struktur för HTML och på vilka sätt vi kan applicera styling med CSS.
-
 
 
 ### Markdown {#markdown}
@@ -95,7 +103,6 @@ I kursen introduceras Git och GitHub. Git är ett versionshanteringssystem för 
 1. Skaffa dig ett konto på [GitHub](https://github.com/). Du behöver det för att ladda upp och publicera ditt Git-repo. Det är gratis med konto och att ladda upp publika repon.
 
 1. Ägna en stund åt att bekanta dig med webbplatser för GitHub. Du kan även kort och översiktligt kika på de guider och videor som finns för GitHub. Notera att de täcker så mycket mer än vad vi kommer jobba med i kursen så det kan räcka att du endast noterar att det existerar [guider för hur man jobbar med GitHub](https://guides.github.com/).
-
 
 
 ### CSS {#css}
