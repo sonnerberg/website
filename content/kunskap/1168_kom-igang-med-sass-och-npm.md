@@ -76,7 +76,7 @@ I vår `package.json` hittar vi `scripts`, den tar emot ett objekt av kommandon 
 ```json
 scripts: {
   ...,
-  "lint": "stylelint '**/*.scss' '**/*.css'; exit 0",
+  "lint": "stylelint '**/*.scss'; exit 0",
   "style": "sass playful/scss/style.scss playful/css/style.css --no-source-map",
   "style-min": "sass playful/scss/style.scss playful/css/style.min.css --no-source-map --style compressed"
 }
@@ -88,28 +88,33 @@ Vi behöver också skapa en till fil `.stylelintrc` där vi kommer definiera lin
 ```json
 {
     "extends": [
-        "stylelint-config-sass-guidelines",
-        "../../../.stylelintrc.json"
+        "stylelint-config-sass-guidelines"
     ],
     "rules": {
+        "indentation": [
+            4,
+            {
+                "except": [
+                    "value"
+                ]
+            }
+        ],
         "at-rule-no-unknown": null,
         "order/properties-alphabetical-order": null,
         "selector-max-compound-selectors": 5
     },
     "ignoreFiles": [
         "**/node_modules/",
-        "**/default/**/*.css",
         "**/*.min.css"
     ]
 }
 ```
 
-* `extends` ärver reglerna från andra filer. Så vi ärver `.css` reglerna från `dbwebb validate` och lägger till guidelines för `.scss` som vi nyligen installerade.
+* `extends` ärver reglerna från andra filer. Här väljer vi att ärva ifrån `stylelint-config-sass-guidelines` som vi nyligen installerade.
 * I `rules` kan man både skriva över regler från de ärvda filerna och lägga till egna.
-* `ignoreFiles` kan man lägga till både mappar och filer som man inte vill validera. Här lägger vi till `node_modules` mappen `default` temat som pico genererar och alla minifierade CSS filer.
+* `ignoreFiles` kan man lägga till både mappar och filer som man inte vill validera. Här lägger vi till `node_modules` mappen `default` temat som pico genererar. Eftersom att vi kommer skriva SASS-filer och vår sida kommer använda `.min.css` så väljer vi även att exkludera `.css` filer.
 
-Nu kör vi inte längre `dbwebb validate` för att validera vår style. Så se till att allt går igenom `npm run lint` istället.   
-För att skippa valideringen när nu publicerar till studentservern kan ni använda er utav `dbwebb publishfast`.
+Nu kan vi köra våran lint-validering lokalt innan vi kör validate, det går snabbare och är en bra övning inför arbetslivet. Så när ni jobbar lokalt så ska allt gå igenom `npm run lint` och när ni sen kör `dbwebb validate` så körs lint:en en sista gång.
 
 
 Bygg CSS med SASS {#bygg-css-med-sass}
