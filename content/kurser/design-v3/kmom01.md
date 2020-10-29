@@ -74,17 +74,18 @@ Läs & Studera  {#lasanvisningar}
 
 ### Kurslitteratur  {#kurslitteratur}
 
-Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa i samband med nästa kmom, men det skadar inte att ligga ett kapitel före.
+Bläddra lite i kursboken "[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa i samband med nästa kmom, men det skadar inte att ligga ett kapitel före.
 
-Boken, i sin tredje utgåva, finns tillgänglig online via [BTHs bibliotek](http://bth.summon.serialssolutions.com/?#!/search?ho=t&l=sv-SE&q=9780992279448).
+Både tredje och fjärde utgåvan av boken fungerar, materialet är uppdaterat och fjärde upplagan är något längre. Boken, i sin tredje utgåva, finns tillgänglig online via [BTHs bibliotek](http://bth.summon.serialssolutions.com/?#!/search?ho=t&l=sv-SE&q=9780992279448).
 
 
 ### Design med HTML5 och CSS3  {#guide}
 
 1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
     * [Grunderna](guide/design-med-html5-och-css3/grunderna)
+    * [Responsivitet](guide/design-med-html5-och-css3/responsivitet)
 
-I guiden tittar vi på hur vi kan använda CSS tillsammans med HTML för att implementera designprinciper. I sektionen [Grunderna](guide/design-med-html5-och-css3/grunderna) tittar vi på grundläggande struktur för HTML och på vilka sätt vi kan applicera styling med CSS.
+I guiden tittar vi på hur vi kan använda CSS tillsammans med HTML för att implementera designprinciper. I sektionen [Grunderna](guide/design-med-html5-och-css3/grunderna) tittar vi på grundläggande struktur för HTML och på vilka sätt vi kan applicera styling med CSS. I [Responsivitet](guide/design-med-html5-och-css3/responsivitet) tittar vi på hur vi med hjälp av media queries kan anpassa en webbplats för både stora och små enheter.
 
 
 ### Markdown {#markdown}
