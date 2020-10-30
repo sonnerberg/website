@@ -2,17 +2,11 @@
 author:
     - aar
 revision:
+    "2020-10-20": "(B, aar) Uppdaterade med Azure inför HT20."
     "2019-04-17": "(A, aar) Första versionen släppt."
 ...
 Kmom01: Introduktion till DevOps
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 Det är en fullspäckat kurs där vi ska lära oss många ny verktyg och koncept. I kursen ska vi lära oss både om det kulturella inom devops men även det praktiska. Vi börjar med att skaffa en produktionsmiljö och bekantar oss med ett påbörjat projekt som ska kopplas till en CI kedja och driftsätta manuellt.
 
@@ -61,7 +55,8 @@ För att få en introduktion till vad Azure är kan ni kolla in "What Is Azure?"
 
 Ett konto till Azure får du från skolan, du hittar länken på Canvas. Logga in via den länken och kolla sen på videon nedanför och skapa din första VM på Azure.
 
-[YOUTUBE src="fA_4k8vJp7I" caption="101 Skapa server på AWS."]
+[YOUTUBE src="cTaHN99ldzE" caption="101 Skapa server på Azure."]
+
 
 
 
@@ -77,7 +72,7 @@ Det underlättar dessutom om vi har ett domännamn som vi kan länka till en ser
 
 När du har fixat en domän, kolla på videon för att ditt domännamn till servern du skapade ovanför.
 
-[YOUTUBE src="diuYaLN1ius" caption="102 Koppla domän till AWS."]
+[YOUTUBE src="CNSAT9n0554" caption="102 Koppla domän till Azure."]
 
 
 
