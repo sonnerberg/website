@@ -16,6 +16,13 @@ revision:
 Kursen design (v2)
 ===================================================
 
+[WARNING]
+**Kursen är ersatt av [version 3](kurser/design-v3)**
+
+Om du vill fortsätta med version två och behöver klona ett nytt kursrepo ska du istället för `dbwebb clone design` köra `git clone https://github.com/dbwebb-se/design`.
+
+[/WARNING]
+
 Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *design*, lär webbprogrammeraren att tekniskt förbereda sin webbplats för design och användbarhet.
 
 Kursen syftar till en orientering inom områden design och användbarhet, specifikt för tillämpningsområdet webb. Kursen har tekniken som utgångspunkt, där olika tekniker introduceras och används för att underlätta webbdesign och användbarhet för webbplatsen med syftet att skapa en korrekt och användarvänlig webbplats.
