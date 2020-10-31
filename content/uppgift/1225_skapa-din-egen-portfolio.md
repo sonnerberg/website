@@ -80,7 +80,7 @@ Så behöver du uppdatera rättigheterna på cache-mappen med hjälp utav:
 
 ```bash
 # Stå i me/portfolio
-chmod 777 cache/*
+chmod -R 777 cache/*
 ```
 
 ### Git {#git}
