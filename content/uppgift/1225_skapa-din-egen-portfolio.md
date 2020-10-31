@@ -64,6 +64,25 @@ Därefter kan ni publicera till studentservern för att se att allt fungerar:
 dbwebb publish me
 ```
 
+#### Bilder laddas inte lokalt
+
+Det kan hända att du får 404 på dina bilder lokalt. Om du går in i devtools (F12) och går till network, så kan du se alla filer som hämtas för hemsidan. Där kan du se länkarna till de bilder som inte laddas in. Om du öppnar en av dem och får felmeddelandet:
+
+```
+[img.php]
+
+img.php: Uncaught exception
+
+Cachedir is not a directory.
+```
+
+Så behöver du uppdatera rättigheterna på cache-mappen med hjälp utav:
+
+```bash
+# Stå i me/portfolio
+chmod 777 cache/*
+```
+
 ### Git {#git}
 
 Gör ett git-repo av alla filer i katalogen.
