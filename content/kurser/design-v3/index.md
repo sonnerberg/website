@@ -199,7 +199,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 
 
 
-<!-- Rekommenderad studieplan {#studieplan}
+Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
 Kursen har en [rekommenderad studieplan](kurser/design/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
@@ -215,7 +215,7 @@ Lektionsplan {#lektionsplan}
 
 Det finns en [lektionsplan](kurser/design/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
 
-Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema). -->
+Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
