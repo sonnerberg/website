@@ -2,65 +2,134 @@
 author:
     - mos
     - lew
+    - nik
 revision:
-    "2018-12-04": "(PA1, mos) Arbetskopia."
+    "2020-11-01": "(A, mos) Utkast inför ht20."
 ...
 Kmom03: Attacker
 ==================================
 
-Det finns ett antal attacker som kan räknas som vanliga när man pratar om webbsäkerhet. I detta kursmomentet går vi igenom vanliga attacker och hur man kan skydda sig mot dem: XSS, session hijacking, redirect problem, directory traversal, etc.
+När man som webbprogrammerare blir utsatt för en attack så är det lätt att hålla sig för skratt. En attack kan vara lättsam som en skämtsam och lekfull XSS där någon bara vill säga att de "ägde din webbplats". I artikeln "[Grundregel 1A i Cross Site Scripting (XSS) - Lita inte på någon](https://dbwebb.se/blogg/grundregel-1a-i-cross-site-scripting-xss-lita-inte-pa-nagon)" visas effekten av ett sådant exempel där någon litade på någon och det slutade med att studentföreningens webbplats gjordes till ett litet skämt.
 
-[WARNING]
+[YOUTUBE src=CYMR4BjHIeM width=700 caption="Studentföreningens sida som en XSS:ad variant."]
 
-**Kursutveckling pågår**
+Ibland kan det vara värre och det kan gälla ett mer verkligt hot mot en webbtjänst, ett system eller ett företags verksamhet och trovärdighet. Ibland kan det vara känslig data och ibland rör det sig om pengar.
 
-Kursen planeras ge hösten 2020.
+Kanske bör du fråga dig, som webbprogrammerare och potentiellt ansvarig för ett viktigt system.
 
-[/WARNING]
-[INFO]
-**Kursmomentet sträcker sig över två veckor**
+> "Vad är det värsta som kan hända?"
 
-Detta kursmoment sträcker sig över två veckor och involverar material kring attacker, OWASP, kryptering och hashing.
-[/INFO]
+Kanske bör du försöka svara på den frågan och fundera på hur du kan skydda dig eller hantera konsekvenserna av "det värsta som kan hända".
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+Låt oss i detta kmom kika in i olika typer av attacker som vi kan förvänta oss, eller attacker som man normalt kan förvänta sig som en webbprogrammerare. Låt oss även titta på hur man kan försvara sig och låta bli att utsätta sig för risker, eller iallafall hantera risknivåerna och vara förberedd för konsekvenserna som attacker kan medge.
 
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
-Föreläsningar  {#forelasningar}
+
+Föreläsningar &amp; Seminarier {#forelasningar}
 ---------------------------------
 
-*(ca: 2 studietimmar)*
+*(ca: 8-10 studietimmar)*
 
-Du ska medverka vid följande Zoom-tillfällen:
+Du ska medverka vid följande Zoom-tillfällen som alla hanterar olika aspekter ur det område som kmomet behandlar.
 
 Kursvecka 3:
 
-* 10:00 (2019-11-16) via Zoom (Mikael)
-* 10:00 (2019-11-20) via Zoom (Mikael)
+* 10:00 (2020-11-16) via Zoom med Mikael som berättar om verkliga attacker och visar exempel från OWASP.
+* 10:00 (2020-11-20) via Zoom Mikael om hur man kan "skydda sig" mot attacker.
+
+<!--
+Hur hantera attaker när de är ett faktum?
+
+betala för hackare som hittar felet?
+
+Snabb på att rätta felen?
+
+klick, ransomware, social attacks
+-->
 
 Kursvecka 4:
 
-* 10:00 (2019-11-23) via Zoom (Anton)
-* 10:00 (2019-11-27) via Zoom (Vidar)
+* 10:00 (2020-11-23) via Zoom med Vidar om "Hur man kan hacka"
+* 10:00 (2020-11-27) via Zoom med Anton om "Vulnerability Assesment, Threat modeling and Attack trees"
+
 
 
 Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar)*
+*(ca: 6-10 studietimmar)*
 
-<!-- * [OWASP Top 10 Application Security Risks - 2017](https://www.owasp.org/index.php/Top_10-2017_Top_10)  
-* [Videoserien till top 10](https://securityintelligence.com/the-10-most-common-application-attacks-in-action/) -->
+
+### Artiklar och studiematerial
+
+Läs och studera följande.
+
+* Läs artikeln "[Grundregel 1A i Cross Site Scripting (XSS) - Lita inte på någon](https://dbwebb.se/blogg/grundregel-1a-i-cross-site-scripting-xss-lita-inte-pa-nagon)" som ett enklare exempel på hur saker kan hända när man litar på någon.
+
+* Använd [OWASP Top Ten](https://owasp.org/www-project-top-ten/) som en källa för några av de vanligaste riskerna i en applikation. Börja med att kika igenom vilka de top-tio riskerna är och försök förstå vad de innebär för dig som utvecklare, hur bör du inte skriva din kod? Börja kika översiktligt.
+
+<!--
+Panama papers
+https://panamapapers.sueddeutsche.de/en/
+Kanske finns en video?
+-->
+
+Mer läsanvisningar presenteras i samband med seminarierna.
+
+
+
+### Video
+
+Titta på följande videor.
+
+1. Möt en hackare, "[Detectify | Meet the Hacker - Fredrik Nordberg Almroth](https://www.youtube.com/watch?v=ERXWb0KjMRo)". En 6 minuter video där vi får träffa en "hackare" som ger oss sina bsäta tips.
+
+1. Titta på denna videoserie med 2-minuters avsnitt som förklarar "[OWASP Top 10 Vulnerabilities Explained](https://www.youtube.com/playlist?list=PLbKl_RtocZetEzdHyZCgZHwaUHjE_jeQT)" från Detectify.
+
+1. (Extra) Om du vill ha mer förklaringar till en eller flera av OWASP Top Ten så kan du kika i videoserien (10 minuters avsnitt) "[OWASP Top Ten - 2017](https://www.youtube.com/playlist?list=PLyqga7AXMtPPuibxp1N0TdyDrKwP9H_jD)" från F5 DevCentral.
+
+1. (Extra) Vill du ha ännu mer OWASP så tittar du på konferenspresentationen "[GOTO 2019 • AppSec: From the OWASP Top Ten(s) to the OWASP ASVS • Jim Manico](https://www.youtube.com/watch?v=nvzMN5Z8DJI)" (51 minutes).
+
+
+<!--
+
+“Type Juggling and PHP Object Injection, and SQLi, Oh My!” on exploiting a == in the PHP framework Expression Engine.
+“Finding Vulnerabilities in Core WordPress: A Bug Hunter’s Trilogy, Part I” on step by step reaching higher access to the system. Continue with part II and III if you want to get the whole story.
+“Finding Vulnerabilities in Core WordPress: A Bug Hunter’s Trilogy, Part II – Supremacy”
+“Finding Vulnerabilities in Core WordPress: A Bug Hunter’s Trilogy, Part III – Ultimatum”
+
+As extra work, if you want to learn more about web application security, you might want to check up on the concept of CTF, Capture The Flag. I suggest you checkout the playlist by John Hammond on “writeups on how to solve various CTFs in the category Web Security”.
+
+-->
 
 
 
 Uppgifter  {#uppgifter}
 -------------------------------------------
 
-*(ca: 8-12 studietimmar)*
+*(ca: 15-20 studietimmar)*
 
-<!-- * Gör uppgiften [OWASP](/uppgift/owasp) -->
+<!--
+https://github.com/dbwebb-se/itsec
+
+Det finns en hel del skrivuppgifter i kursen, tycker inte att det är ett problem med fler. Jag ger mall i Overleaf, https://dbwebb.se/uppgift/diskussion-vad-ar-privat-egentligen#reflektion (https://www.overleaf.com/project/5ece574fac1a6400011cbaf2) för kmom02. Så känns rimligt att fortsätta vara snäll där
+-->
+
+Det finns två uppgifter, en skrivuppgift och en "titta på en film"-uppgift.
+
+1) Skrivuppgift är inom området attacker. Ni kan jobba i grupper om 2 och 2, eller individuellt. Rapportmall finns att tillgå för LaTeX/Overleaf (_länk kommer_).
+
+Upplägget är enligt följande:
+
+> Du/Ni är ansvarig för systemdrift och utveckling av programvaran på företag (välj själva företagets inriktning). Ledningen har bett om en rapport som berättar vilka risker och vilka typer av attacker som de kan förvänta sig mot företagets system och vilka konsekvenser som lyckade attacker kan få. Företagsledningen vill veta hur Du/Ni har planerat företages skydd och eventuella åtgärder när attacker lyckas.
+
+Skriv en rapport på två sidor text, exklusive försättssida. Det går bra att avgränsa och bara svara på delar av ledningens fråga. Tid och utrymme i rapporten är begränsat så det är okey att utelämna vissa delar. Men se till att rapporten hänger ihop som en helhet och innehåller minst 5 relevanta referenser. Vill ni dyka ned i en specifik fråga så går det bra, vill ni täcka flera frågor mer översiktligt så går det också bra.
+
+2) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?". Du skriver svaret på Canvas i samband med din inlämning.
+
+<!-- mer videor till denna spellistan? -->
 
 
 
@@ -69,7 +138,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Publicera dina filer till studentservern och svara på följande frågor i textfältet på Canvas:
+Gör en gruppinlämning på Canvas, om ni jobbade i grupp och ladda upp rapporten som pdf, senast fredagen veckan efter att kmomet är avslutat. Svara på följande frågor i textfältet på Canvas:
 
-* Har du tidigare erfarenhet av de typer av attacker som nämns i kursmomentet? Både som utvecklare och användare.
-* Vilken är din TIL för detta kmom?
+* Berätta vilken film du såg, lämna en länk till filmen om den finns på nätet och inte är med i spellistan ovan. Svara på "Vad driver en hacker och hur tänker en hacker?" och koppla till vad filmen berättade för dig. Skriv kortfattat om max 15 rader.
+* Summera, vilken är din/er TIL för detta kmom?
