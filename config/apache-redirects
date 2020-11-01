@@ -204,8 +204,8 @@ Redirect /kurser/js/lektionsplan    https://docs.google.com/spreadsheets/d/1WBUl
 # design
 Redirect /design            /kurser/design
 Redirect /kurser/design     /kurser/design-v3
-Redirect /kurser/design/studieplan  https://docs.google.com/spreadsheets/d/1sDq1lkG7ESK1gd0fdKIDegD83dRwhOlGgc_JoXybGW8
-Redirect /kurser/design/lektionsplan    https://docs.google.com/spreadsheets/d/1w_un3i7UDTOCEMfL42825xyFYCqGFILAhKG15qZVXbE
+Redirect /kurser/design-v3/studieplan  https://docs.google.com/spreadsheets/d/1sDq1lkG7ESK1gd0fdKIDegD83dRwhOlGgc_JoXybGW8
+Redirect /kurser/design-v3/lektionsplan    https://docs.google.com/spreadsheets/d/1w_un3i7UDTOCEMfL42825xyFYCqGFILAhKG15qZVXbE
 
 
 
