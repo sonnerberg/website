@@ -8,14 +8,6 @@ revision:
 Kmom01: Ramverk
 ==================================
 
-[WARNING]
-
-**Översyn pågår**
-
-Kmomet är under översyn och eventuell uppdatering kan komma att ske.
-
-[/WARNING]
-
 Vi tar en mjukstart för att komma in i ramverkstänkande och läser på om bra-att-ha kunskaper inom PHP och ramverk. Det handlar om nödvändiga verktyg och att nyttja den infrastruktur som finns kring PHP och att börja anamma ett modultänkande kring PHP och ramverk.
 
 Vi tittar på ett par seminarier från konferenser och funderar på vad de försöker säga oss om aktuella tekniker och trender. Kanske kan det hjälpa oss när vi nu skall försöka skapa oss en egen bild av ramverksläget i PHP och om allmänna interna strukturer och designmänster i ramverk.
