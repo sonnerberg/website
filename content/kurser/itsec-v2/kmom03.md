@@ -127,7 +127,7 @@ Upplägget är enligt följande:
 
 Skriv en rapport på två sidor text, exklusive försättssida. Det går bra att avgränsa och bara svara på delar av ledningens fråga. Tid och utrymme i rapporten är begränsat så det är okey att utelämna vissa delar. Men se till att rapporten hänger ihop som en helhet och innehåller minst 5 relevanta referenser. Vill ni dyka ned i en specifik fråga så går det bra, vill ni täcka flera frågor mer översiktligt så går det också bra.
 
-2) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?". Du skriver svaret på Canvas i samband med din inlämning.
+2) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?" Du skriver svaret på Canvas i samband med din inlämning.
 
 <!-- mer videor till denna spellistan? -->
 
