@@ -105,6 +105,8 @@ Vi behöver också skapa en till fil `.stylelintrc` där vi kommer definiera lin
     },
     "ignoreFiles": [
         "**/node_modules/",
+        "shared/*.scss",
+        "**/*.css",
         "**/*.min.css"
     ]
 }
