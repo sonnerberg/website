@@ -99,7 +99,7 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 ### Kmom01: Introduktion till DevOps {#kmom01}
 
-Vi startar kmom01 med att bekanta oss med koden för ett redan påbörjat projekt. Vi behöver servrar för att driftsätta projektet och ska därför skaffa oss konto på [Amazon Web Services](https://aws.amazon.com/). Dessutom börjar vi titta på innebörden av DevOps.
+Vi startar kmom01 med att bekanta oss med koden för ett redan påbörjat projekt. Vi behöver servrar för att driftsätta projektet och ska ska använda oss av [Azure](https://azure.microsoft.com/) för att hosta servrar i molnet. Dessutom börjar vi titta på innebörden av DevOps.
 
 Läs [instruktionen till kursmoment 01](./kmom01).
 
