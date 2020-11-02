@@ -153,8 +153,9 @@ Gå till GitHub och skapa ett nytt repository dit du kan ladda upp git-repot.
 Ladda upp ditt git-repo till GitHub (byt ut `git@github.com:dbwebb-se/design-v3.git` mot länken till ditt egna repo).
 
 ```text
+git branch -M main
 git remote add origin git@github.com:dbwebb-se/design-v3.git
-git push -u origin master
+git push -u origin main
 ```
 
 Använd SSH-nycklar för att identifiera dig, det blir enklare för dig att slippa behöva skriva in lösenord varje gång du ska ladda upp ditt repo.
