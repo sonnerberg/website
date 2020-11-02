@@ -116,7 +116,7 @@ Följande övningar bör genomföras:
 
 1. Arbeta igenom artikeln [Kom igång med SASS och npm](kunskap/kom-igang-med-sass-och-npm) som hjälper dig att sätta upp SASS i din portfoliosida.
 
-1. Arbeta igenom artikeln [Ikoner och fonter](#) som går igenom hur man kan ladda in ikoner och fonter.
+1. Arbeta igenom artikeln [Ikoner och fonter](kunskap/design-ikoner-och-fonter) som går igenom hur man kan ladda in ikoner och fonter.
 
 
 ### Uppgifter {#uppgifter}

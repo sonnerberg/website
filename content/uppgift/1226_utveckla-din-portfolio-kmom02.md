@@ -49,7 +49,7 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 
 1. Temat ska ladda in minst en extern font via t.ex [Google Fonts](https://fonts.google.com/).
 
-1. Temat ska använda sig av minst tre ikoner via t.ex [Font Awesome][https://fontawesome.com/].
+1. Temat ska använda sig av minst tre ikoner via t.ex [Font Awesome](https://fontawesome.com/).
 
 1. Jobba vidare med ditt tema. Du behöver inte styla jättemycket, det kommer fler möjligheter under kursen. Men, det måste vara ett hyfsat gott grundtema så att webbplatsen går att använda.
 
