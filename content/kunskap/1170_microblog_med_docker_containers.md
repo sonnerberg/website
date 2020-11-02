@@ -97,7 +97,7 @@ En annan intressant sak om Docker är att allt som containern skriver till `stdo
 Nu när vår Dockerfile är skapad kan vi bygga vår container image:
 
 ```bash
-╰─ $ docker build -t microblog:latest .
+$ docker build -t microblog:latest .
 ```
 
 Argumentet `-t` som vi lägger till i kommandot `docker build` anger namnet och taggen för den nya container imagen. `.` säger vart baskatalogen för vår container är. Det här är katalogen där *Dockerfile* finns. Byggprocessen kommer att köra alla kommandon i *Dockerfile* och sedan skapa en image som kommer att lagras på din egna maskin.
@@ -106,7 +106,7 @@ Argumentet `-t` som vi lägger till i kommandot `docker build` anger namnet och 
 Vill man se en lista av alla images som existerar lokalt kan man göra det med `docker images` :
 
 ```bash
-╰─ $ docker images
+$ docker images
 REPOSITORY    TAG          IMAGE ID        CREATED              SIZE
 microblog     latest       54a47d0c27cf    About a minute ago   216MB
 python        3.6-alpine   a6beab4fa70b    9 months ago         88.7MB
@@ -122,7 +122,7 @@ Starta upp Containern {#starta-microblog-containern}
 Efter att container imagen är byggd kan vi starta den med kommandot `docker run`. Denna tar vanligtvis emot ett stort antal argument, men vi börjar med ett mindre exempel:
 
 ```bash
-╰─ $ docker run --name microblog -d -p 8000:5000 --rm microblog:latest
+$ docker run --name microblog -d -p 8000:5000 --rm microblog:latest
 021da2e1e0d390320248abf97dfbbe7b27c70fefed113d5a41bb67a68522e91c
 ```
 
@@ -138,7 +138,7 @@ Det som skrivs ut efter `docker run` är det ID som tilldelats den nya container
 Om man vill se vilka containers som är körandes kan man använda `docker ps`:
 
 ```bash
-╰─ $ docker ps
+$ docker ps
 CONTAINER ID  IMAGE             COMMAND      PORTS                   NAMES
 021da2e1e0d3  microblog:latest  "./boot.sh"  0.0.0.0:8000->5000/tcp  microblog
 ```
@@ -146,7 +146,7 @@ CONTAINER ID  IMAGE             COMMAND      PORTS                   NAMES
 Om man nu vill stoppa containern kan man använda `docker stop` följt av dess ID:
 
 ```bash
-╰─ $ docker stop 021da2e1e0d3
+$ docker stop 021da2e1e0d3
 021da2e1e0d3
 ```
 
@@ -159,7 +159,7 @@ Så extra miljövariabler för byggtid kan vara användbara, men det finns ocks�
 
 
 ```bash
-╰─ $ docker run --name microblog -d -p 8000:5000 --rm -e SECRET_KEY=my-secret-key \
+$ docker run --name microblog -d -p 8000:5000 --rm -e SECRET_KEY=my-secret-key \
     -e MYSQL_DATABASE=microblog \
     microblog:latest
 ```
@@ -176,10 +176,10 @@ Liksom många andra produkter och tjänster har MySQL offentliga container image
 Här är kommandot jag använder för att starta MySQL servern:
 
 ```bash
-╰─ $ docker run --name mysql -d -e MYSQL_RANDOM_ROOT_PASSWORD=yes \
-      -e MYSQL_DATABASE=microblog -e MYSQL_USER=microblog \
-      -e MYSQL_PASSWORD=<database-password> \
-      mysql/mysql-server:5.7
+$ docker run --name mysql -d -e MYSQL_RANDOM_ROOT_PASSWORD=yes \
+    -e MYSQL_DATABASE=microblog -e MYSQL_USER=microblog \
+    -e MYSQL_PASSWORD=<database-password> \
+    mysql/mysql-server:5.7
 ```
 
 Inget mer behövs, alla maskiner som har Docker installerad kan köra kommandot ovan och en fullständigt installerad MySQL-server körs. Containern får ett slumpmässigt genererat root-lösenord, en helt ny databas som heter `microblog` och en användare med samma namn som är färdig konfigurerad med fullständiga behörigheter för att komma åt databasen. Observera att du måste ange ett rätt lösenord som värdet för miljövariabeln `MYSQL_PASSWORD`.
@@ -188,10 +188,10 @@ Inget mer behövs, alla maskiner som har Docker installerad kan köra kommandot 
 Vi kan nu starta om Microblog, men den här gången med en länk till databascontainern så att båda kan kommunicera via nätverket:
 
 ```
-╰─ $ docker run --name microblog -d -p 8000:5000 --rm -e SECRET_KEY=my-secret-key \
-      --link mysql:dbserver \
-      -e DATABASE_URL=mysql+pymysql://microblog:<database-password>@dbserver/microblog \
-      microblog:latest
+$ docker run --name microblog -d -p 8000:5000 --rm -e SECRET_KEY=my-secret-key \
+    --link mysql:dbserver \
+    -e DATABASE_URL=mysql+pymysql://microblog:<database-password>@dbserver/microblog \
+    microblog:latest
 ```
 
 
@@ -218,7 +218,7 @@ done
 exec gunicorn -b :5000 --access-logfile - --error-logfile - microblog:app
 ```
 
-Denna loop kontrollerar exit-koden för kommandot `flask db upgrade ', och om den inte är `0` antar den att något gick fel, så den väntar fem sekunder och försöker sedan igen.
+Denna loop kontrollerar exit-koden för kommandot `flask db upgrade`, och om den inte är `0` antar den att något gick fel, så den väntar fem sekunder och försöker sedan igen.
 
 
 The Docker Container Registry {#docker-container-registry}
@@ -232,13 +232,13 @@ För att få tillgång till Docker-registret måste du gå till [*https://hub.do
 När det är klart kan du nu logga in via terminalen med kommandot `docker login`:
 
 ```bash
-╰─ $ docker login
+$ docker login
 ```
 
 Vi har en image som heter `microblog:latest` lagrad lokalt på datorn men, för att kunna publicera den här imagen till Docker-registret, behöver vi ändra taggen lite genom att lägga till namnet på vårt konto:
 
 ```bash
-╰─ $ docker tag microblog:latest <your-docker-registry-account>/microblog:latest
+$ docker tag microblog:latest <your-docker-registry-account>/microblog:latest
 ```
 
 Om du listar dina images igen med `docker images` kommer vi att se två stycken, en för Microblog (den ursprungliga med `microblog:latest` namnet) och en ny som innehåller ditt kontonamn. Det här är egentligen två alias för samma image.
@@ -247,14 +247,7 @@ Om du listar dina images igen med `docker images` kommer vi att se två stycken,
 För att publicera din image i Docker-registret, använd kommandot `docker push`:
 
 ```bash
-╰─ $ docker push <your-docker-registry-account>/microblog:latest
+$ docker push <your-docker-registry-account>/microblog:latest
 ```
 
 Nu är din image offentligt tillgänglig och redo att användas.
-
-Sammanfattningsvis {#sammanfattningsvis}
----------------------------------------------------------------
-
-
-
-Hojta till i Discord om ni kör fast eller har andra funderingar. Annars är det bara att och kör på, lycka till!
