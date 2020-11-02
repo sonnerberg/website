@@ -137,6 +137,20 @@ Följande uppgift skall utföras och redovisas.
 1. Försäkra dig om att du har gjort `dbwebb publish portfolio` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
+Testa din inlämning {#testa}
+-----------------------------------------------
+
+När du är helt klar med uppgiften så är det ett par saker som du kan kolla för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
+
+* Kolla uppdaterad startsida
+* Kolla Github-länk i footer (profil eller repo, båda ok)
+* Uppdaterad flashbild
+* report/kmom01 klar
+* Eget tema under portfolio/theme
+* github.txt i me/portfolio
+* Github
+    * Kolla commits och taggar
+
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
