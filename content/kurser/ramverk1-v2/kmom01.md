@@ -24,6 +24,36 @@ För att komma igång med programmeringen i ramverket så bygger vi en mindre ko
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
+<!--
+
+Inför uppdatering.
+
+Allmänt om ramverk. Prata om deras uppbyggnad.
+Prata om designmönster, visa upp några vanliga mönster som används i ramverkssammanhang.
+Skrivuppgift om ramverk/designmönster.
+
+Bygg en controller och enhetstesta den.
+
+Bygg en RESTserver som erbjuder en tjänst (ip validering).
+(servern borde även erbjuda mer saker)
+
+Bygg en webbplats (controller) som använder restserverns tjänster.
+
+Koppla direkt mot travis, som byggtjänst.
+
+Använd anax manual som guide. Ge enkel uppgiftsbeskrivning utan någon extra hjälp. Studenten bygger från grunden.
+
+Kanske samma upplägg i oophp, när studenten skall komma in i ramverket. Använd scaffolding för att förenkla, jobba mot en och samma version av Anax.
+
+
+kmom02 kan bli att bygga en komplett REST server, men bara med get.
+den behöver lite fler funktioner dock.
+
+Sen gör vi enhetstester på restservern. Kanske även starta upp restservern så den körs lokalt på travis, under testerna.
+
+-->
+
+
 
 Labbmiljön  {#labbmiljo}
 ---------------------------------
@@ -67,6 +97,18 @@ Kika på följande videos och kommentera dem i redovisningstexten.
 1. Titta på videon "[PHP UK Conference 2017 - Eli White - State of the PHP Community](https://www.youtube.com/watch?v=1vFycFnVhaw)". Den ger dig en känsla av hur en community kring ett språk (PHP) kan fungera, på gott och ont. Fundera över utmaningar som ligger i att hålla en community levande och om det finns någon nytta med en commity.
 
 1. Titta på videon "[PHP UK Conference 2017 - Michael Cullum - Towards a frameworkless world](https://www.youtube.com/watch?v=aFhwnjFF96I)". Den ger dig en bakgrund och översikt till PHP och ramverk och den föreslår en ramverkslös framtid. Håller du med föredragshållaren?
+
+
+
+### Genomgångar {#video1}
+
+De genomgångar och föresläsningar som spelas in under kursen sparas i en spellista som uppdateras under kursens gång.
+
+* [ramverk1 streams ht20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce85Cdvu2iycOb4d4OXle_o7).
+
+Du kan även finna äldre inspelade föreläsningar från tidigare kursomgångar.
+
+* [ramverk1 streams ht19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-kBGV_-kmGIdbJYGgZ2_TW).
 
 
 
