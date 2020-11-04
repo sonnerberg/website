@@ -122,7 +122,7 @@ class User(UserMixin, db.Model):
                     Post.timestamp.desc())
 ```
 
-Queryn som returneras fungerar fast den hämtar inte personens egna inlägg. Det ensklast sättet skulle vara att användarna följde sig själva men det är kommer inte att hålla i längden. Så istället skapar vi en till query `own` som hämtar ut sina egna inlägg och returnerar en `union` båda.
+Queryn som returneras fungerar fast den hämtar inte personens egna inlägg. Det enklaste sättet skulle vara att användarna följde sig själva men det är kommer inte att hålla i längden. Så istället skapar vi en till query `own` som hämtar ut sina egna inlägg och returnerar en `union` båda.
 
 ```python
 def followed_posts(self):
@@ -254,7 +254,7 @@ find . -name '.pytest_cache' -exec rm -fr {} +
 
 Steg 5. Integrera följare med applikationen {#step5-integrate}
 ---------------------------------------------------------------
-Funktionaliteten för backendedn är klar och går igenom testerna, det som nu behövs göras är att lägga till två nya routes i `app/main/routes.py` som hanterar följandet av användare:
+Funktionaliteten för backenden är klar och går igenom testerna, det som nu behövs göras är att lägga till två nya routes i `app/main/routes.py` som hanterar följande av användare:
 
 
 ```python
@@ -351,7 +351,7 @@ def user(username):
     return render_template('user.html', user=user_, posts=posts)
 ```
 
-I `index` routen ändrar vi vilken datan som hämtas, i detta fallet vill vi ladda in allt från `followed_posts()`, så att alla inlägg från de vi följer plus ens egna, visas i flödet.   
+I `index` routen ändrar vi vilken data som hämtas, i detta fallet vill vi ladda in allt från `followed_posts()`, så att alla inlägg från de vi följer plus ens egna, visas i flödet.   
 Sedan ändrar vi även vad som laddas in när vi besöker en användares sida, då vi endast vill ladda in hens inlägg.
 
 ```html
