@@ -22,10 +22,10 @@ Du har [virtualiseringsmiljon docker](kunskap/installera-virtualiseringsmiljon-d
 Bygg en Container Image {#bygg-microblog-container-image}
 ----------------------------------------------------------
 
-Det första steget i att skapa en container för Microblog är att bygga en *image*. En *container image* är en typ av mall som används när man skapar en container. Den innehåller en översikt av hela filsystemet tillsammans med övriga inställningar som hanterar miljövariabler, hur nätverket är uppsatt och mycket annat. För att generera en image kommer vi skapa en ny fil `Dockerfile`. En *Dockerfile* är ett installationsskript som ser till att en applikation kan distribueras och köras likvärdigt på alla maskiner som har Docker installerad.
+Det första steget i att skapa en container för Microblog är att bygga en *image*. En *container image* är en typ av mall som används när man skapar en container. Den innehåller en översikt av hela filsystemet tillsammans med övriga inställningar som hanterar miljövariabler, hur nätverket är uppsatt och mycket annat. För att generera en image kommer vi skapa en ny Dockerfile `Dockerfile_prod` och lägga den i mappen `docker`. En *Dockerfile* är ett installationsskript som ser till att en applikation kan distribueras och köras likvärdigt på alla maskiner som har Docker installerad.
 
 
-*Dockerfile* för Microblog:
+`docker/Dockerfile_prod` för Microblog:
 
 ```dockerfile
 FROM python:3.6-alpine
@@ -94,13 +94,15 @@ Tittar vi närmre hittar vi ett `exec` kommando som läggs till innan `gunicorn`
 En annan intressant sak om Docker är att allt som containern skriver till `stdout` eller `stderr` fångas upp och lagras som loggar för containern. Av den anledningen är både `--access-logfile` och `--error-logfile` konfigurerade med en `-`, som skickar loggen till `stdout` så att Docker kan hantera loggarna istället.
 
 
-Nu när vår Dockerfile är skapad kan vi bygga vår container image:
+Nu när vår nya Dockerfile är skapad kan vi bygga vår container image:
 
 ```bash
-$ docker build -t microblog:latest .
+$ docker build -t microblog:latest -f docker/Dockerfile_prod .
 ```
 
-Argumentet `-t` som vi lägger till i kommandot `docker build` anger namnet och taggen för den nya container imagen. `.` säger vart baskatalogen för vår container är. Det här är katalogen där *Dockerfile* finns. Byggprocessen kommer att köra alla kommandon i *Dockerfile* och sedan skapa en image som kommer att lagras på din egna maskin.
+Argumentet `-t` som vi lägger till i kommandot `docker build` anger namnet och taggen för den nya container imagen.   
+`-f` specificerar vilken Dockerfile som skall användas. Sätter vi inte denna kommer Docker leta efter en fil som heter *Dockerfile* där vi sätter kontexten.   
+`.` säger vart kontexten för vår container är. Det här är katalogen som vår *Dockerfile* kommer att använda när den bland annat kopierar filerna. Byggprocessen kommer att köra alla kommandon i *Dockerfile* och sedan skapa en image som kommer att lagras på din egna maskin.
 
 
 Vill man se en lista av alla images som existerar lokalt kan man göra det med `docker images` :
