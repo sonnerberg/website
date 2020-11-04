@@ -223,6 +223,30 @@ exec gunicorn -b :5000 --access-logfile - --error-logfile - microblog:app
 Denna loop kontrollerar exit-koden för kommandot `flask db upgrade`, och om den inte är `0` antar den att något gick fel, så den väntar fem sekunder och försöker sedan igen.
 
 
+
+Validera Dockerfile {#validate}
+-----------------------------------------------------------
+
+Som med all annan kod vi skriver finns det så klart en linter/validator till koden i Dockerfiles. Vi ska använda [hadolint](https://github.com/hadolint/hadolint). Det finns olika sätt att installera den, men det lätaste är att använda deras docker container. Testa validera er kod med följande kommando.
+
+```
+docker run --rm -i hadolint/hadolint < Dockerfile_prod
+```
+
+Om allting gick bra, vilket det borde om ni har följt guiden, får ni ingen utsrift. Den skriver bara ut något om det finns valideringsfel.
+
+För att se hur det ser ut när det finns fel kan ni klista in raden `RUN cd /tmp && echo "hello!"` i er Dockerfile och köra validatorn igen. Ni kan ta bort raden efter ni har testat.
+
+```
+docker run --rm -i hadolint/hadolint < Dockerfile_prod
+
+/dev/stdin:4 DL3003 Use WORKDIR to switch to a directory
+```
+
+En lista på felen som hadolint kolla på hittar ni under [rules](https://github.com/hadolint/hadolint#rules).
+
+
+
 The Docker Container Registry {#docker-container-registry}
 -----------------------------------------------------------
 

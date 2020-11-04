@@ -86,7 +86,7 @@ Docker är väldigt populärt inom devops världen av många anledningar och ni 
 
 Nu när vi har lite kött på benen och vet vad Docker är och hur det fungerar ska ni skapa en egen Dockerfile för microblogen.
 
-- Jobba igenom [Deployment on Docker containers](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xix-deployment-on-docker-containers) för att skapa dig en Dockerfile för produktion. Döp din Dockerfile till `Dockerfile_prod` och lägg den i mappen `docker`.
+- Jobba igenom [Microblog med docker containers](kunskap/microblog_med_docker_containers) för att skapa dig en Dockerfile för produktion. Döp din Dockerfile till `Dockerfile_prod` och lägg den i mappen `docker`.
 
 Efter att ni skapat er Dockerfile kan läsa två relevanta artiklar om docker användning.
 
@@ -117,6 +117,8 @@ Vi vill inte behöva bygga om containern varje gång vi vill köra testerna. Det
 Skapa en Dockerfile, döp den till `Dockerfile_test` och lägg den i mappen `docker`. Den ska inte innehålla koden för testerna eller koden som testas, det ska läggas som en volym. När containern startar ska den validera koden och köra unit och integrations testerna. När det är klart ska containerna stängas ner av sig själv.
 
 Om ni vill kan ni ändra så integrationstesterna körs mot MySQL i docker container istället för SQLite i minnet. Testerna kommer troligen köras långsammare men testerna blir mer värdefulla då de körs mot likadant system som körs i produktion. När man kör databasen i en container för testerna brukar man inte göra data mappen till en volym, i och med att vi inte bryr oss om persistent data för tester.
+
+Kolla så att era Dockerfiler validerar med hadolint. Make kommandot `make validate-docker` kör validering på Dockerfile_prod och Dockerfile_test.
 
 
 
@@ -194,7 +196,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. En docker-compose fil för att köra test och starta prod miljön.
 
-1. `make test` kör testerna och validerar kod i Docker.
+1. `make test` kör testerna och validerar kod i Docker. `validate-docker` funkar inte på CircleCi, om ni vill lägga till att validera era dockerfiler behöver ni använda en [docker orb](https://github.com/hadolint/hadolint/blob/master/docs/INTEGRATION.md#circleci)
 
 1. CircleCi kör testerna, validering och bygger produktions image och pushar till DockerHub.
 
