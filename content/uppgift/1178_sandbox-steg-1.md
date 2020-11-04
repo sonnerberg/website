@@ -40,7 +40,7 @@ cp -ri example/sandbox/* me/kmom01/sandbox
 
 1. Se till att filerna validerar som HTML och CSS.
 
-1. Testa din JavaScript kod så att den validerar i onlineverktyget för JSHint.
+<!-- 1. Testa din JavaScript kod så att den validerar i onlineverktyget för JSHint. -->
 
 1. Använd din sandbox och lägg upp som ett exempel i JSFiddle eller CodePen. I din footer, länka till din fiddle/codepen.
 
