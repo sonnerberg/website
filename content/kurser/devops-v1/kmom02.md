@@ -24,8 +24,6 @@ Vi packar in vår kod i en Docker container för att underlätta utveckling, dri
 Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat med originalet, [Syncing a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
 [/INFO]
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
 
 
 ## Vad är Docker? {#docker}
@@ -151,8 +149,6 @@ Sista steget är att köra er prod image på produktionsservern på AWS. Install
 Ni ska inte använda supervisor längre. Vi använde supervisor för att se till att det hela tiden finns en Gunicorn process igång men det ansvaret flyttas över till Docker. När man startar en Container skickar man med `restart: always`.
 
 Docker har skrivit lite om att använda [compose i produktion](https://docs.docker.com/compose/production/).
-
-Om ni vill/har tid uppdatera skripten för att deploya appen till att använda Docker istället.
 
 
 
