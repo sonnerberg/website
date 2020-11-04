@@ -11,7 +11,7 @@ revision:
 Kom igång med followers - Microblog {#intro}
 =============================================
 
-I denna artikeln ska vi jobba igenom [kapitel 8](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers) i Miguel's guide, så att vi kan följa andra användare och se inlägg från de personer som användaren följer på sin feed.
+I denna artikeln ska vi jobba igenom [kapitel 8](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers) i Miguel's guide, så att vi kan följa andra användare och se deras inlägg på sin egna feed.
 
 <!--more-->
 
@@ -316,6 +316,43 @@ Båda routerna har samma logik, först kollar den om användaren existerar i dat
 Går dessa kontroller igenom committar vi ändringen i databasen, sätter en bekräftelse att ändringen har skett och redirectar oss till `/user/<username>`.   
 Det sista som återstår är nu att visa upp en länk som användaren kan klicka på för att antingen editera sin profil, följa eller avfölja användaren man kollar på.
 
+Vi behöver också uppdatera två stycken routes i samma fil.
+
+```python
+@bp.route('/', methods=['GET', 'POST'])
+@bp.route('/index', methods=['GET', 'POST'])
+@login_required 
+def index():
+    """
+    Route for index page
+    """
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user)
+        current_app.logger.debug("{}".format(post))
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('main.index'))
+
+    posts = current_user.followed_posts().all()
+    return render_template("index.html", title='Home Page', form=form,
+                           posts=posts)
+
+
+@bp.route('/user/<username>')
+@login_required
+def user(username):
+    """
+    Route for user
+    """
+    user_ = User.query.filter_by(username=username).first_or_404()
+    posts = user_.posts.all()
+    return render_template('user.html', user=user_, posts=posts)
+```
+
+I `index` routen ändrar vi vilken datan som hämtas, i detta fallet vill vi ladda in allt från `followed_posts()`, så att alla inlägg från de vi följer plus ens egna, visas i flödet.   
+Sedan ändrar vi även vad som laddas in när vi besöker en användares sida, då vi endast vill ladda in hens inlägg.
 
 ```html
 <!-- app/templates/user.html -->
