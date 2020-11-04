@@ -230,15 +230,15 @@ Validera Dockerfile {#validate}
 Som med all annan kod vi skriver finns det så klart en linter/validator till koden i Dockerfiles. Vi ska använda [hadolint](https://github.com/hadolint/hadolint). Det finns olika sätt att installera den, men det lätaste är att använda deras docker container. Testa validera er kod med följande kommando.
 
 ```
-docker run --rm -i hadolint/hadolint < Dockerfile_prod
+docker run --rm -i hadolint/hadolint < docker/Dockerfile_prod
 ```
 
-Om allting gick bra, vilket det borde om ni har följt guiden, får ni ingen utsrift. Den skriver bara ut något om det finns valideringsfel.
+Om allting gick bra, vilket det borde om ni har följt guiden, får ni ingen utskrift. Den skriver bara ut något om det finns valideringsfel.
 
-För att se hur det ser ut när det finns fel kan ni klista in raden `RUN cd /tmp && echo "hello!"` i er Dockerfile och köra validatorn igen. Ni kan ta bort raden efter ni har testat.
+För att se hur det ser ut när det finns fel kan ni klistra in raden `RUN cd /tmp && echo "hello!"` i er Dockerfile och köra validatorn igen. Ni kan ta bort raden efter ni har testat.
 
 ```
-docker run --rm -i hadolint/hadolint < Dockerfile_prod
+docker run --rm -i hadolint/hadolint < docker/Dockerfile_prod
 
 /dev/stdin:4 DL3003 Use WORKDIR to switch to a directory
 ```
