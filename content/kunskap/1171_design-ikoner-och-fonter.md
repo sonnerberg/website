@@ -52,8 +52,8 @@ Då har vi de nödvändiga filerna, men det är några saker vi behöver fixa in
 
 ```bash
 # Stå i me/portfolio/theme
-rsync -rd node_modules/@fortawesome/fontawesome-free/scss shared/
-rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/
+rsync -rd node_modules/@fortawesome/fontawesome-free/scss shared/fontawesome/
+rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/fontawesome/
 ```
 
 `scss/`-mappen innehåller SASS-filerna som laddar in våra fonter och `webfonts/`-mappen innehåller de nödvändiga font-filerna. Vi dubbelkollar att samtliga filer är på plats med hjälp utav `tree`-kommandot.
@@ -62,11 +62,7 @@ rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/
 [Aurora](~/git/teach/design-v3/me/portfolio/themes) $ tree -I node_modules .
 .
 ├── aurora
-│   ├── css
-│   │   └── style.css
-│   ├── index.twig
-│   └── scss
-│       └── style.scss
+│   ...
 ├── dbwebb
 │   ├── LICENSE
 │   ├── README.md
@@ -83,41 +79,42 @@ rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/
     │   ├── modernizr-3.3.1-custom.min.js
     │   ├── responsive-navbar.js
     │   └── utils.js
-    ├── scss
-    │   ├── _animated.scss
-    │   ├── _bordered-pulled.scss
-    │   ├── _core.scss
-    │   ├── _fixed-width.scss
-    │   ├── _icons.scss
-    │   ├── _larger.scss
-    │   ├── _list.scss
-    │   ├── _mixins.scss
-    │   ├── _rotated-flipped.scss
-    │   ├── _screen-reader.scss
-    │   ├── _shims.scss
-    │   ├── _stacked.scss
-    │   ├── _variables.scss
-    │   ├── brands.scss
-    │   ├── fontawesome.scss
-    │   ├── regular.scss
-    │   ├── solid.scss
-    │   └── v4-shims.scss
-    └── webfonts
-        ├── fa-brands-400.eot
-        ├── fa-brands-400.svg
-        ├── fa-brands-400.ttf
-        ├── fa-brands-400.woff
-        ├── fa-brands-400.woff2
-        ├── fa-regular-400.eot
-        ├── fa-regular-400.svg
-        ├── fa-regular-400.ttf
-        ├── fa-regular-400.woff
-        ├── fa-regular-400.woff2
-        ├── fa-solid-900.eot
-        ├── fa-solid-900.svg
-        ├── fa-solid-900.ttf
-        ├── fa-solid-900.woff
-        └── fa-solid-900.woff2
+    └── fontawesome
+        ├── scss
+        │   ├── _animated.scss
+        │   ├── _bordered-pulled.scss
+        │   ├── _core.scss
+        │   ├── _fixed-width.scss
+        │   ├── _icons.scss
+        │   ├── _larger.scss
+        │   ├── _list.scss
+        │   ├── _mixins.scss
+        │   ├── _rotated-flipped.scss
+        │   ├── _screen-reader.scss
+        │   ├── _shims.scss
+        │   ├── _stacked.scss
+        │   ├── _variables.scss
+        │   ├── brands.scss
+        │   ├── fontawesome.scss
+        │   ├── regular.scss
+        │   ├── solid.scss
+        │   └── v4-shims.scss
+        └── webfonts
+            ├── fa-brands-400.eot
+            ├── fa-brands-400.svg
+            ├── fa-brands-400.ttf
+            ├── fa-brands-400.woff
+            ├── fa-brands-400.woff2
+            ├── fa-regular-400.eot
+            ├── fa-regular-400.svg
+            ├── fa-regular-400.ttf
+            ├── fa-regular-400.woff
+            ├── fa-regular-400.woff2
+            ├── fa-solid-900.eot
+            ├── fa-solid-900.svg
+            ├── fa-solid-900.ttf
+            ├── fa-solid-900.woff
+            └── fa-solid-900.woff2
 
 10 directories, 47 files
 ```
@@ -127,11 +124,11 @@ rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/
 Nu ska vi ladda in våra fonter via vår egna SASS-fil, i mitt fall `theme/aurora/scss/style.scss`. Jag öppnar filen och lägger till följande rader längst upp.
 
 ```scss
-@import '../../shared/scss/fontawesome';
-$fa-font-path: '../../shared/webfonts';
-@import '../../shared/scss/brands';
-@import '../../shared/scss/solid';
-@import '../../shared/scss/regular';
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
 ```
 
 Vi kollar vad varje rad gör. Första importerar grundmodulen för Font Awesome, den som mappar klassnamnen vi använder mot vilken ikon som ska laddas in. Sen så uppdaterar vi vart vi lagt våra fonter. Ursprungligen utgår det ifrån den `.scss` fil man "kompilerar", i mitt fall `aurora/scss/style.scss`. Så jag behöver stega i filträdet tills jag hittar till `shared/webfonts`.
