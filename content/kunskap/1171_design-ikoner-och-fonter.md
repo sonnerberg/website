@@ -62,7 +62,11 @@ rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/fontawesome
 [Aurora](~/git/teach/design-v3/me/portfolio/themes) $ tree -I node_modules .
 .
 ├── aurora
-│   ...
+│   ├── css
+│   │   └── style.css
+│   ├── index.twig
+│   └── scss
+│       └── style.scss
 ├── dbwebb
 │   ├── LICENSE
 │   ├── README.md

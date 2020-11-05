@@ -7,13 +7,6 @@ revision:
 Kmom02: SASS och typografi
 ====================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Vi har nu en bas av en webbplats. Vi vet hur vi lägger till innehåll i webbplatsen och vi kan styla den. Låt oss då gå vidare och skapa en bättre bas för vårt tema. Temat, eller vår style, skapar vi med hjälp utav SASS, en preprocessor till CSS. Vi lär oss grunderna i SASS och hur vi bygger CSS-filer från SASS-konstruktioner.
 
 Vi försöker bygga en modulär struktur av SASS-filer som vi delar in i SASS-moduler. Det skapar en grund som blir enklare att återanvända i andra 
