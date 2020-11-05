@@ -76,7 +76,7 @@ I vår `package.json` hittar vi `scripts`, den tar emot ett objekt av kommandon 
 ```json
 scripts: {
   ...,
-  "lint": "stylelint '**/*.scss'; exit 0",
+  "lint": "stylelint \"**/*.scss\"",
   "style": "sass playful/scss/style.scss playful/css/style.css --no-source-map",
   "style-min": "sass playful/scss/style.scss playful/css/style.min.css --no-source-map --style compressed"
 }
@@ -105,7 +105,7 @@ Vi behöver också skapa en till fil `.stylelintrc` där vi kommer definiera lin
     },
     "ignoreFiles": [
         "**/node_modules/",
-        "shared/*.scss",
+        "shared/**/*.scss",
         "**/*.css",
         "**/*.min.css"
     ]
