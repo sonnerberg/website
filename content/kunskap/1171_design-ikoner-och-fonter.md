@@ -178,7 +178,7 @@ samt uppdaterar vår `portfolio/content/_meta.md` så den använder hela klassna
 # Efter
 - title: Link till sidans github repo.
   url: https://github.com/AuroraBTH
-  icon: fab fab-github
+  icon: fab fa-github
 ```
 
 Vi laddar om sidan och ser att vi nu laddar in Font Awesome via SASS istället.
