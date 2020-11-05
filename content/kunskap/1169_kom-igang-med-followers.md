@@ -314,9 +314,8 @@ Flask och SQLAlchemy hanterar det mesta, `current_user` är den inloggade använ
 Båda routerna har samma logik, först kollar den om användaren existerar i databasen och sedan kollar den så att man inte försöker lägga till eller sig själv från listan.
 
 Går dessa kontroller igenom committar vi ändringen i databasen, sätter en bekräftelse att ändringen har skett och redirectar oss till `/user/<username>`.   
-Det sista som återstår är nu att visa upp en länk som användaren kan klicka på för att antingen editera sin profil, följa eller avfölja användaren man kollar på.
 
-Vi behöver också uppdatera två stycken routes i samma fil.
+Vi behöver också uppdatera två routes i samma fil.
 
 ```python
 @bp.route('/', methods=['GET', 'POST'])
@@ -339,7 +338,7 @@ def index():
     return render_template("index.html", title='Home Page', form=form,
                            posts=posts)
 
-
+# ...
 @bp.route('/user/<username>')
 @login_required
 def user(username):
@@ -353,6 +352,9 @@ def user(username):
 
 I `index` routen ändrar vi vilken data som hämtas, i detta fallet vill vi ladda in allt från `followed_posts()`, så att alla inlägg från de vi följer plus ens egna, visas i flödet.   
 Sedan ändrar vi även vad som laddas in när vi besöker en användares sida, då vi endast vill ladda in hens inlägg.
+
+
+Det sista som återstår är nu att visa upp en länk som användaren kan klicka på för att antingen editera sin profil, följa eller avfölja användaren man kollar på.
 
 ```html
 <!-- app/templates/user.html -->
