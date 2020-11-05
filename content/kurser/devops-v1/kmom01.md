@@ -63,7 +63,6 @@ När ni skapar en VM till skillnad från i videon behöver ni under kategorin "D
 
 
 
-
 #### Domännamn {#domain}
 
 Det underlättar dessutom om vi har ett domännamn som vi kan länka till en server. Om du inte redan har ett kolla in artikeln ["GitHub Education Pack och en server på Digital Ocean"](kunskap/github-education-pack-och-en-server-pa-digital-ocean). I den görs mer saker än vad vi behöver göra så kolla bara på de två följande delarna:
