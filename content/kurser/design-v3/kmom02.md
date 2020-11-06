@@ -103,6 +103,8 @@ rsync -rd example/sass-example/ me/kmom02/sass/
 
 Hoppa in i mappen och testa lägg till din egna regel till exemplet. För att göra om din SASS (.scss) till CSS så kan du köra `npm run style` förutsatt att du har node/npm installerat och hämtat hem de nödvändiga modulerna med hjälp av `npm install`.
 
+Om du vill läsa mer om SASS och se vilka typer av regler du kan skriva kan du läsa mer om det [här](https://sass-lang.com/guide).
+
 ### Övningar {#ovningar}
 
 Följande övningar bör genomföras:
