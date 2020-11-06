@@ -2,17 +2,11 @@
 author:
     - aar
 revision:
+    "2020-11-06": "(B, aar) Ready for HT20."
     "2019-11-01": "(A, aar) Första versionen."
 ...
 Kmom02: Docker
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 Vi packar in vår kod i en Docker container för att underlätta utveckling, driftsättning och körning av vår applikation.
 
