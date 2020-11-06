@@ -19,6 +19,12 @@ Förutsättningar {#forutsattningar}
 -------------------------------------
 Du har installerat [nodejs och npm](https://dbwebb.se/kunskap/installera-node-och-npm).
 
+Innan du börjar övningen {#innan}
+-------------------------------------
+Denna övning är tänkt att göras i ditt egna tema. Om du känner dig osäker så kan du alltid göra en kopia på ditt tema (ex `theme/aurora` till `theme/auroratest`) innan du påbörjar övningen så kan du alltid gå tillbaka till något du vet fungerade.
+
+Du kan uppnå samma sak med hjälp utav `git` genom att göra `git restore <filnamn>` så länge du inte gjort en commit på dina ändringar. Det återställer filen till så den var vid din senaste commit av den filen. Du kan se vilka filer du uppdaterat med hjälp utav `git status`.
+
 
 Installera SASS, stylelint och normalize.css via npm {#installera-med-npm}
 ---------------------------------------------------------------------------

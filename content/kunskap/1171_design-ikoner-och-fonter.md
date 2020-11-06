@@ -21,6 +21,12 @@ Förutsättningar {#forutsattningar}
 -------------------------------------
 Du har installerat [nodejs och npm](https://dbwebb.se/kunskap/installera-node-och-npm) och du har jobbat igenom artikeln "[Kom igång med SASS och npm](kunskap/kom-igang-med-sass-och-npm)".
 
+Innan du börjar övningen {#forutsattningar}
+-------------------------------------
+Denna övning är tänkt att göras i ditt egna tema. Om du känner dig osäker så kan du alltid göra en kopia på ditt tema (ex `theme/aurora` till `theme/auroratest`) innan du påbörjar övningen så kan du alltid gå tillbaka till något du vet fungerade.
+
+Du kan uppnå samma sak med hjälp utav `git` genom att göra `git restore <filnamn>` så länge du inte gjort en commit på dina ändringar. Det återställer filen till så den var vid din senaste commit av den filen. Du kan se vilka filer du uppdaterat med hjälp utav `git status`.
+
 Font Awesome {#fontawesome}
 ----------------------------
 
@@ -39,7 +45,7 @@ Samt ta bort följande del i vår twig-fils `<head>`-element.
 <link rel="stylesheet" href="{{ theme_url }}/../shared/css/font-awsome.min.css" type="text/css" />
 ```
 
-## Installation
+## Installation {#installation}
 
 Vi börjar med att ladda ner de nödvändiga filerna som behövs. Går vi in på Font Awesome hemsida kan vi se att vi kan [ladda hem dem via npm](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers). Det känns som en bra lösning för oss.
 
@@ -123,7 +129,7 @@ rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/fontawesome
 10 directories, 47 files
 ```
 
-## Inkludera med SASS
+## Inkludera med SASS {#inkludera}
 
 Nu ska vi ladda in våra fonter via vår egna SASS-fil, i mitt fall `theme/aurora/scss/style.scss`. Jag öppnar filen och lägger till följande rader längst upp.
 
@@ -193,7 +199,7 @@ Jag börjar med att leta upp en till min brödtext och nöjer mig med Open Sans,
 
 [FIGURE src=image/design-v3/google-font-opensans-roboto.png caption="Vilka fonter passar med varandra?"]
 
-## Ladda in fonterna
+## Ladda in fonterna {#ladda}
 
 Nu ska vi ladda in våra två fonter, Roboto och Open Sans, samt applicera dem. Jag är nöjd med att ladda in 400 Regular, så jag trycker på "Select this style" för Open Sans och Roboto och ser att de läggs till i menyn längst upp till höger. Vi vill ladda in dem som `@import`, så vi markerar det alternativet och kopierar koden mellan `<style>`-taggarna in till vår stylesheet, `theme/aurora/scss/style.scss`.
 
