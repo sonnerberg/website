@@ -44,7 +44,7 @@ sandbox/
 ├── index.html                            
 ├── main.js                               
 └── style.css                             
-                                          
+
 0 directories, 3 files                    
 ```
 
@@ -167,7 +167,7 @@ Kom nu ihåg att alltid dubbelkolla att din sida validerar. Hamnar du i trubbel 
 
 
 
-Kodkvalitet med JSHint {#kvalitet}
+<!-- Kodkvalitet med JSHint {#kvalitet}
 -------------------------------
 
 *Från och med hösten 2017 ersätts jshint av eslint då utveckling har upphört på jshint till förmån för eslint. Webbplatsen för jshint fungerar dock fortfarande bra som exempel.*
@@ -185,7 +185,7 @@ Kör alltid igenom din JavaScript-kod igenom JSHint. Det kan spara dig en hel de
 Använd JSHint för att kolla att ditt sandbox-exempel går igenom utan felmeddelande och varningar.
 
 I kurserna använder vi en dbwebb-kodstandard som är beskriven på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
-
+ -->
 
 
 Kodvalidering med dbwebb validate {#validate}
@@ -253,7 +253,7 @@ Att jobba i JSFiddle eller CodePen kan vara en smaksak. För min del så väljer
 En annan resurs som kan underlätta felsökning via kollegor, är att dela med sig av koden via en codeshare via webbtjänsten [Codeshare](http://codeshare.io/). När du väl laddat upp din kod så kan du ta hjälp av kollegor som kan se koden i sitt sammanhang och de kan dessutom redigera koden och förslå förändringar.
 
 Tipset är att skaffa sig ett konto på Codeshare.
- 
+
 
 
 

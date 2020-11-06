@@ -18,7 +18,7 @@ Vi tar ett första steg i sandboxen och presenterar utskrift av datum och tid me
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)"  
+<!-- Du har jobbat igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)"   -->
 Du har jobbat igenom lab1 i kursen javascript1
 
 
