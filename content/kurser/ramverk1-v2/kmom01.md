@@ -26,6 +26,12 @@ För att komma igång med programmeringen i ramverket så bygger vi en mindre ko
 
 <!--
 
+OOPHP.
+
+* Lär dem controller fullt ut. Så kan vi bygga REST controller i kmom01.
+* Travis?
+
+
 Inför uppdatering.
 
 Allmänt om ramverk. Prata om deras uppbyggnad.
@@ -36,6 +42,8 @@ Bygg en controller och enhetstesta den.
 
 Bygg en RESTserver som erbjuder en tjänst (ip validering).
 (servern borde även erbjuda mer saker)
+
+(fetch mot REST server? exempel)
 
 Bygg en webbplats (controller) som använder restserverns tjänster.
 
