@@ -1,13 +1,7 @@
 ---
-author: mos
+author: lew
 revision:
-    "2017-10-10": (G, mos) Genomgång inför ht17.
-    "2017-09-27": (F, lew) Ny kurslitteratur.
-    "2016-03-15": (E, mos) Lade till videoserie med "Lär dig JavaScript".
-    "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
-    "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
-    "2014-09-08": (B, mos) Första publika utgåvan.
-    "2014-08-12": (A, mos) Första utgåvan för javascript1 kursen.
+    "2020-11-09": (A, lew) Genomgång inför ht20.
 ...
 Kmom03: Funktioner
 ==================================
@@ -61,7 +55,7 @@ Titta på följande:
 
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
-1. Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Act III: Function the Ultimate](https://www.youtube.com/watch?v=ya4UHuXNygM)".
+1. (Valfritt) Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Act III: Function the Ultimate](https://www.youtube.com/watch?v=ya4UHuXNygM)".
 
 
 

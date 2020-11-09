@@ -42,9 +42,9 @@ cp -ri me/kmom01/sandbox/* me/kmom03/sandbox3
 
 1. Presentera **medelvärdet** och **summan** av kasten i din sandbox. Skriv gärna ut varje tärnings värde i konsolen.
 
-1. Testa din JavaScript kod så att den validerar i onlineverktyget för JSHint.
-
 1. Gör en dbwebb publish för att kolla att allt validerar och fungerar.
+
+<!-- 1. Testa din JavaScript kod så att den validerar i onlineverktyget för JSHint. -->
 
 ```text
 dbwebb publish me
