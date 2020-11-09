@@ -73,9 +73,9 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 Extrauppgifter {#extra}
 -----------------------
 
-Det finns flera sätt att minska antalet beroende man har mot andra tjänster. Nedan är två förslag som är rimliga för kursmomentet:
+Det finns flera sätt att minska antalet beroende man har mot andra tjänster eller storleken på sidan. Nedan är två förslag som är rimliga för kursmomentet:
 
-1. Bytt ut Font Awesome mot Unicorn ikoner.
+1. Bytt ut Font Awesome mot Unicode ikoner.
 
 1. Ladda hem dina fonter och importera dem lokalt istället för ifrån din externa fonttjänst.
 
