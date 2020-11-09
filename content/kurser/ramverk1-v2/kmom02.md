@@ -2,20 +2,13 @@
 author:
     - mos
 revision:
+    "2020-11-09": "(D, mos) Mindre justering inför ht20."
     "2018-11-06": "(C, mos) Uppdaterad inför v2."
     "2017-09-04": "(B, mos) Minskade omfattningen genom att ta bort skrivuppgiften om MVC."
     "2017-08-08": "(A, mos) Första utgåvan."
 ...
 Kmom02: MVC
 ==================================
-
-[WARNING]
-
-**Översyn pågår**
-
-Kmomet är under översyn och eventuell uppdatering kan komma att ske.
-
-[/WARNING]
 
 Vi tittar på designmönstret Model, View, Controller (MVC) och använder det för att strukturera vår kod i ramverket. Vi har tidigare sett både vyer (V) och kontroller (C) så nu är det dags att väva in M:et som står för model, modell-klasser och/eller modell-lagret.
 
@@ -34,6 +27,28 @@ Som exempelkod används en REM-server som är byggd enligt MVC med fokus på del
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+<!--
+Fokus på modellklasser.
+
+Hur testa modell-klasser.
+
+Jämför modellklasser mellan ramverk.
+
+Jämför även kontroller/viewer, hela MVC. Ja troligen.
+
+Gör enhetstester.
+
+Hur enhetstesta när webbservern är beroende av restservern?
+
+Egen testserver, speciellt nu när vi börjar använda externa tjänster?
+
+kmom02 kan bli att bygga en komplett REST server, men bara med get.
+den behöver lite fler funktioner dock.
+
+Sen gör vi enhetstester på restservern. Kanske även starta upp restservern så den körs lokalt på travis, under testerna.
+
+-->
 
 
 
@@ -62,7 +77,9 @@ Kika igenom följande artiklar.
 
 Under kursen skall vi lära oss om ramverk och de moduler och designmönster som bygger upp dagens ramverk. En plats att lära sig om detta är ramverkens manualer. Här följer ett par av de mer använda ramverken och via dess manualer får man en god insikt i hur ett ramverk ser ut och fungerar idag.
 
-Det du kan studera nu är främst att se hur ramverkets router fungerar med en kontrolleroch om ramverkets manual har något särskilt stycke om MVC. Det räcker att du kikar i en av manualerna. Läs fler vid intresse.
+Det du kan studera nu är främst att se hur ramverkets router fungerar med en kontroller och om ramverkets manual har något särskilt stycke om MVC. Det räcker att du kikar i två av manualerna. Läs fler vid intresse.
+
+Det finns en fråga om detta som du skall besvara i din redovisningstext.
 
 * [Dokumentationen för Symfony](https://symfony.com/doc/current/), ett ledande ramverk inom PHP. Grundaren är Fabien Potencier och en stark profil inom branschen. Företaget Sensiolabs ligger bakom och stödjer utvecklingen.
 
@@ -138,7 +155,7 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 * Vilka tidigare erfarenheter har du av MVC? Använde du någon speciell källa för att läsa på om MVC? Kan du med egna ord förklara någon fördel med kontroller/modell-begreppet, så som du ser på det?
 * Kom du fram till vad begreppet SOLID innebar och vilka källor använde du? Kan du förklara SOLID på ett par rader med dina egna ord?
 * Har du någon erfarenhet av designmönster och kan du nämna och kort förklara några designmönster du hört talas om?
-* Vilket ramverk valde du att studera manualen för och fann du något intreesant?
+* Vilka ramverk valde du att studera manualen för och fann du något intressant? Försök relatera mellan det Anax du använder och de ramverk du studerade i manualerna.
 * Vilken är din TIL för detta kmom?
 
-Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i GitHub issues.

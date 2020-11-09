@@ -53,11 +53,7 @@ Använd anax manual som guide. Ge enkel uppgiftsbeskrivning utan någon extra hj
 
 Kanske samma upplägg i oophp, när studenten skall komma in i ramverket. Använd scaffolding för att förenkla, jobba mot en och samma version av Anax.
 
-
-kmom02 kan bli att bygga en komplett REST server, men bara med get.
-den behöver lite fler funktioner dock.
-
-Sen gör vi enhetstester på restservern. Kanske även starta upp restservern så den körs lokalt på travis, under testerna.
+Fixa in travis i kmom01? Som en avslutning?
 
 -->
 
@@ -188,7 +184,7 @@ Se till att följande frågor besvaras i texten:
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
 
-Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i GitHub issues.
 
 
 <!--stop-->
