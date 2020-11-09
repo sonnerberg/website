@@ -22,9 +22,9 @@ En enklare uppgift för att komma igång med HTML & CSS. Jag visar hur du kan sk
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Denna uppgift ingår i kursen [javascript1](kurser/javascript1).
+Denna uppgift ingår i kursen [js](kurser/js).
 
-Du kan grunderna i [HTML](coachen/gor-din-forsta-sida-med-html5) och [CSS](coachen/styla-din-sida-med-css-och-en-extern-stylesheet).
+Du kan grunderna i HTML/CSS.
 
 Du har även skapat din egen [sandbox för exempelprogram](uppgift/sandbox-steg-1) .
 
@@ -43,7 +43,7 @@ Behöver du hjälp att komma i gång så kan du se hur jag löste första delen 
 
 [YOUTUBE src=2BPXAEBWyys width=630 caption="Mikael gör en flagga."]
 
-Mitt exempelprogram från videon finns i [javascript1-repot](repo/javascript1/example/flag/flag1/).
+Mitt exempelprogram från videon finns i [js-repot](repo/js/example/flag/flag1/).
 
 
 
