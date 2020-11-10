@@ -41,7 +41,7 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 
 ### SASS-tema
 
-1. Skapa en ny mapp för ditt tema i `me/portfolio/themes/`.
+1. Jobba vidare med eller skapa ett nytt tema i `me/portfolio/themes/`.
 
 1. Temat ska bestå utav en `style.scss` som är huvudfilen för ditt tema. Här importerar du eventuella moduler du skapar.
 
