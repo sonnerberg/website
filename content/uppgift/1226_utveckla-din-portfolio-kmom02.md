@@ -24,7 +24,7 @@ Du har installerat Node.js och npm ([Installera nodejs och npm](labbmiljo/node-o
 
 Du har gått igenom artikeln [Kom igång med SASS och npm](kunskap/kom-igang-med-sass-och-npm).
 
-Du har gått igenom artikeln [Ikoner och fonter](#).
+Du har gått igenom artikeln [Ikoner och fonter](kunskap/design-ikoner-och-fonter).
 
 Krav {#krav}
 -----------------------
@@ -85,4 +85,4 @@ Tips från coachen {#tips}
 
 Testa gärna att göra flera teman om du får tid över, kanske finns det olika färgscheman du vill testa? Eller en helt annan layout?
 
-Lycka till och hojta till i forumet om du behöver hjälp!
+Lycka till och hojta till i Discord om du behöver hjälp!
