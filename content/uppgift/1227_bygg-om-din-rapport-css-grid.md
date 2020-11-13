@@ -12,7 +12,7 @@ Bygg om din rapport-sida med CSS-Grid
 
 Du skall bygga om rapport-sidan på din portfolio sida med hjälp utav CSS-Grid.
 
-Du börjar med att strukturera upp din samlingssida för alla rapporter och följer sedan upp med att fixa din layout på varje individuell sida.
+Du börjar med att strukturera upp din samlingssida (`portfolio/report/index.md`) för alla rapporter och följer sedan upp med att fixa din layout för dina individuella kursmoment (`portfolio/report/kmomXX.md`).
 
 <!--more-->
 
@@ -27,35 +27,48 @@ Du har jobbat igenom följande tre delar i "[Design med HTML5 och CSS3](guide/de
 
 Och artikeln [Skapa en specifik layout i Pico](kunskap/skapa-en-specifik-layout-i-pico) som beskriver hur du kan skapa en layout för specifika sidor.
 
+## Wireframe {#wireframe}
+
+Som webbutvecklare är det inte sällan man får något som kallas en wireframe av en kund eller en designer. Fokuset på dessa wireframes brukar bland annat vara att visa vilken funktionalitet som ska vara med på sidan och hur saker ska placeras på sidan. Vill du läsa mer om just wireframes så kan du göra det [här](https://en.wikipedia.org/wiki/Website_wireframe).
+
 Krav {#krav}
 -----------------------
 
-Det är ofta man som utvecklare ska bygga något ifrån Wireframes. En alumni till programmet, Matilda, var snäll att fixa fyra wireframes som ni ska försöka efterlikna i eran landningssida och report-sida.
+En alumni till programmet, Matilda, var snäll nog att göra fyra wireframes som ni ska efterlikna med hjälp utav CSS-Grid och/eller Flexbox. Själva designen på sidorna är er att välja, det är layout:en vi är ute efter. Om ni vill ha större bilder så kan ni trycka på bilderna för att få full storlek.
 
-### Landningssida
+## Landningssida {#landningssida}
 
-Din landningssida för report ska ha ett liknande upplägg till detta på desktop:
+* Din landningssida skall använda sig utav en egen layout, `report.twig`
+* Din landningssida skall använda sig utav CSS-Grid.
+* Din grid ska bestå utav tre kolumner.
+* Titel för sidan och projektboxen ska vara en del av gridet och ta tre kolumner i bredd.
+* Boxarna ska ha en länk till respektive kursmoment så man kan navigera vidare.
+* Sidan och dess grid ska vara responsivt genom att:
+    * Besöks sidan via en telefon ska gridet istället vara en kolumn bred.
 
-[FIGURE src=image/design-v3/wireframes/frame_2.png caption="Vår landningssida på desktop"]
+Resten av designen är upp till er att bestämma.
 
-För att uppnå detta ska du använda dig utav CSS-Grid. Sidan skall vara responsiv så om man går in på den via en mobil enhet så ska det istället se ut såhär:
+[FIGURE src=image/design-v3/wireframes/frame_2.png?height=450 caption="Vår landningssida på desktop"]
+[FIGURE src=image/design-v3/wireframes/frame_1.png?height=450 caption="Vår landningssida på en telefon"]
 
-[FIGURE src=image/design-v3/wireframes/frame_1.png caption="Vår landningssida på en telefon"]
+## Report {#report}
 
-### Report
+* Samtliga rapportsidor ska använda samma layout, `kmom.twig`
+* Rapportsidorna ska använda sig av antingen CSS-Grid eller flexbox.
+* Sidan ska ha två olika kolumner
+    * En sidebar som ska innehålla länkar till samtliga kursmoment.
+    * En content-del som ska skriva ut innehållet ifrån `report/kmomXX.md`.
+* Sidan ska vara responsiv genom att:
+    * Besöks sidan via en telefon ska sidebaren döljas.
 
-Varje enskild rapportsida ska nu ha en sidebar så man enkelt kan navigera mellan kursmoment, såhär kan det t.ex se ut:
+Resten av designen är upp till er att bestämma.
 
-[FIGURE src=image/design-v3/wireframes/frame_3.png caption="Vår enskilda report-sida på desktop"]
-
-För att uppnå detta ska du använda dig utav antingen CSS-Grid eller flexbox. Sidan ska även vara responsiv genom att sidebar:en döljs. Såhär kan det se ut:
-
-[FIGURE src=image/design-v3/wireframes/frame_4.png caption="Vår enskilda report-sida på mobil"]
+[FIGURE src=image/design-v3/wireframes/frame_3.png?height=450 caption="Vår enskilda report-sida på desktop"]
+[FIGURE src=image/design-v3/wireframes/frame_4.png?height=450 caption="Vår enskilda report-sida på mobil"]
 
 Extrauppgifter {#extra}
 -----------------------
 
-* Lägg på din report till länkar längst upp/ner som tar dig tillbaka till landningssidan.
 * Implementera gärna flexbox eller grid på någon annan del av din sida om du får tid över.
 
 
