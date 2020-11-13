@@ -36,8 +36,8 @@ Du ska medverka vid följande Zoom-tillfällen som alla hanterar olika aspekter 
 
 Kursvecka 3:
 
-* 10:00 (2020-11-16) via Zoom med Mikael som berättar om verkliga attacker och visar exempel från OWASP.
-* 10:00 (2020-11-20) via Zoom Mikael om hur man kan "skydda sig" mot attacker.
+* 10:00 (2020-11-16) via Zoom med Mikael som berättar om verkliga attacker och vad som hände.
+* 10:00 (2020-11-20) via Zoom Mikael pratar om OWASP Top Ten och vad de innebär för dig som programmerare.
 
 <!--
 Hur hantera attaker när de är ett faktum?
@@ -84,7 +84,7 @@ Mer läsanvisningar presenteras i samband med seminarierna.
 
 Titta på följande videor.
 
-1. Möt en hackare, "[Detectify | Meet the Hacker - Fredrik Nordberg Almroth](https://www.youtube.com/watch?v=ERXWb0KjMRo)". En 6 minuter video där vi får träffa en "hackare" som ger oss sina bsäta tips.
+1. Möt en hackare, "[Detectify | Meet the Hacker - Fredrik Nordberg Almroth](https://www.youtube.com/watch?v=ERXWb0KjMRo)". En 6 minuter video där vi får träffa en "hackare" som ger oss sina bästa tips.
 
 1. Titta på denna videoserie med 2-minuters avsnitt som förklarar "[OWASP Top 10 Vulnerabilities Explained](https://www.youtube.com/playlist?list=PLbKl_RtocZetEzdHyZCgZHwaUHjE_jeQT)" från Detectify.
 
@@ -119,7 +119,7 @@ Det finns en hel del skrivuppgifter i kursen, tycker inte att det är ett proble
 
 Det finns två uppgifter, en skrivuppgift och en "titta på en film"-uppgift.
 
-1) Skrivuppgift är inom området attacker. Ni kan jobba i grupper om 2 och 2, eller individuellt. Rapportmall finns att tillgå för LaTeX/Overleaf (_länk kommer_).
+1) Skrivuppgift är inom området attacker. Ni kan jobba i grupper om 2 och 2, eller individuellt. Rapportmall finns att tillgå för LaTeX/Overleaf i kursrepot under [`example/report-template-latex`](https://github.com/dbwebb-se/itsec/tree/master/example/report-template-latex). Det är inte ett krav att skriva i det formatet, men en bra övning. Kanske vill du skriva exjobbet i LaTeX?
 
 Upplägget är enligt följande:
 
