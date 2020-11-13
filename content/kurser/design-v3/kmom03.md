@@ -7,13 +7,6 @@ revision:
 Kmom03: Layout
 ====================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Vi ska denna vecka kolla på olika sätt att strukturera upp stommen av vår sida, vår layout. Att uppdatera vår layout är en av de större ändringar vi kan göra med hjälp av CSS/SASS, utan att uppdatera vår HTML.
 
 Några av de tekniker vi ska kolla lite närmre på är Flexbox och CSS-Grid, som är två vanliga sätt att gå tillväga. Tanken är att ni i slutet av kursmomentet ska implementera dessa tekniker i eran portfolio.
