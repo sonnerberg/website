@@ -36,8 +36,8 @@ Du ska medverka vid följande Zoom-tillfällen som alla hanterar olika aspekter 
 
 Kursvecka 3:
 
-* 10:00 (2020-11-16) via Zoom med Mikael som berättar om verkliga attacker och visar exempel från OWASP.
-* 10:00 (2020-11-20) via Zoom Mikael om hur man kan "skydda sig" mot attacker.
+* 10:00 (2020-11-16) via Zoom med Mikael som berättar om verkliga attacker och vad som hände.
+* 10:00 (2020-11-20) via Zoom Mikael pratar om OWASP Top Ten och vad de innebär för dig som programmerare.
 
 <!--
 Hur hantera attaker när de är ett faktum?
