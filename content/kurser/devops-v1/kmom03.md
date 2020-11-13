@@ -231,3 +231,5 @@ Se till att följande frågor besvaras i texten:
 1. Vad är CM?
 
 1. Vad är Continuous Deployment?
+
+1. Om du fick välja fritt hur hade du valt att bygga upp CD kedjan?
