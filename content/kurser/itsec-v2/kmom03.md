@@ -119,7 +119,7 @@ Det finns en hel del skrivuppgifter i kursen, tycker inte att det är ett proble
 
 Det finns två uppgifter, en skrivuppgift och en "titta på en film"-uppgift.
 
-1) Skrivuppgift är inom området attacker. Ni kan jobba i grupper om 2 och 2, eller individuellt. Rapportmall finns att tillgå för LaTeX/Overleaf (_länk kommer_).
+1) Skrivuppgift är inom området attacker. Ni kan jobba i grupper om 2 och 2, eller individuellt. Rapportmall finns att tillgå för LaTeX/Overleaf i kursrepot under [`example/report-template-latex`](https://github.com/dbwebb-se/itsec/tree/master/example/report-template-latex). Det är inte ett krav att skriva i det formatet, men en bra övning. Kanske vill du skriva exjobbet i LaTeX?
 
 Upplägget är enligt följande:
 
