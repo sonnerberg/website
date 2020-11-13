@@ -21,7 +21,7 @@ En uppgift för att komma igång med JavaScript, HTML och CSS. Jag visar hur du 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Denna uppgift ingår i kursen [javascript1](kurser/javascript1).
+Denna uppgift ingår i kursen [js](kurser/js).
 
 Du har gjort uppgiften att bygga en [svensk flagga med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css).
 
@@ -38,7 +38,7 @@ Behöver du hjälp att komma i gång så kan du se hur jag löste första delen 
 
 [YOUTUBE src=6GuJ8SPH_dA width=630 caption="Mikael gör en flagga med JavaScript."]
 
-Mitt exempelprogram från videon finns i [kursrepot javascript1](repo/javascript1/example/flag/flag2/).
+Mitt exempelprogram från videon finns i [kursrepot js](repo/js/example/flag/flag2/).
 
 
 
@@ -55,7 +55,7 @@ cp -ri kmom02/flag1/* kmom03/flag2
 
 2\. Skapa samma flaggor som tidigare, men använd JavaScript och organisera din kod i funktioner.
 
-3\. Skapa en meny av länkar, en länk för varje flagga. När du klickar på länken skall flaggan ritas ut. 
+3\. Skapa en meny av länkar, en länk för varje flagga. När du klickar på länken skall flaggan ritas ut.
 
 4\. När du är klar skall du validera och publicera ditt resultat enligt följande:
 

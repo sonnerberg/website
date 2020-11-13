@@ -18,7 +18,6 @@ Förkunskaper {#forkunskaper}
 -----------------------
 
 Du har jobbat igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)"  
-Du har jobbat igenom lab3 i kursen javascript1.  
 Du har jobbat igenom de relevanta delarna i guiden.
 
 
@@ -31,7 +30,7 @@ I din kurskatalog (repot) för kursen, skall du ta en kopia av din personliga sa
 ```bash
 # Gå till kurskatalogen
 cd me
-cp -ri me/kmom01/sandbox/* me/kmom03/sandbox3
+cp -ri me/kmom01/sandbox/* me/kmom03/sandbox3/
 ```
 
 1. Användaren ska kunna mata in antal tärningar och antal sidor på tärningarna. Tips på hur man kan hantera inmatningen: text/inputfält, select box etc.

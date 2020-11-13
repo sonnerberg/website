@@ -34,9 +34,9 @@ cp -ri example/sandbox/* me/kmom01/sandbox
 
 1. Använd JavaScript för att presentera dagens datum och den nuvarande tiden med hjälp av `Date()`. Det spelar ingen roll hur det är formaterat, utan det viktiga är att du får ut informationen på html-sidan.
 
-1. Modifiera filerna så att de fungerar för dig som din egen personliga miljö för alla dina kommande exempelprogram i kursen.
+1. Modifiera filerna så att sandboxen blir personlig för dig, utseendemässigt.
 
-1. I din testsida, skapa en footer-sektion med länkar till valideringsverktygen för HTML, CSS och Unicorn.
+1. I din sandbox, skapa en sektion med länkar till valideringsverktygen för HTML, CSS och Unicorn.
 
 1. Se till att filerna validerar som HTML och CSS.
 
