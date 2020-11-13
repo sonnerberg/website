@@ -53,7 +53,15 @@ Använd anax manual som guide. Ge enkel uppgiftsbeskrivning utan någon extra hj
 
 Kanske samma upplägg i oophp, när studenten skall komma in i ramverket. Använd scaffolding för att förenkla, jobba mot en och samma version av Anax.
 
-Fixa in travis i kmom01? Som en avslutning?
+Fixa in travis (Circleci) i kmom01? Som en avslutning?
+
+Scaffolda controller, full och minimal.
+
+Allt skall fungera smärtfritt i docker.
+
+
+JS på klientsidan. Det vore bra om vi kunde visa, och integrera, lite JS på klientsidan för att jobba med fetch och websockets mot server/REST server.
+    * Visar hur man kan jobba med serverside vyer och itnegrera med klientside js kanske.
 
 -->
 

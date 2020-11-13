@@ -42,11 +42,34 @@ Gör enhetstester.
 Hur enhetstesta när webbservern är beroende av restservern?
 
 Egen testserver, speciellt nu när vi börjar använda externa tjänster?
+Visa hur man kan mocka en klass.
 
 kmom02 kan bli att bygga en komplett REST server, men bara med get.
 den behöver lite fler funktioner dock.
 
 Sen gör vi enhetstester på restservern. Kanske även starta upp restservern så den körs lokalt på travis, under testerna.
+
+Scaffolda saker som behövs. Inkl REM-server som modul till egen.
+
+Bygga på scrutinizer, som en avslutning på kmom02?
+Fokus kodtäckningen.
+
+Lyft fram fler design patterns. Tex Url::create() (fler exempel på designmönster som använts i tex kmom01 eller i ramverket som man redan kommit i kontakt med)
+
+Om cURL, då visa exempel på hur man kodar med cURL.
+
+Designmönster, Gangoffour, läsanvisning någon form av artikel som berättar kort om designmönster.
+    * Samma med SOLID
+
+Fundera på att skriva artikel, typ Latex, för redovsingstexterna?
+
+Låt studenterna lägga till REMservern som en modul i deras egen server. Kanske kan man göra något som låter dem jobba mot remservern? Nån programmeringsövning?
+
+Glöm inte att REM servern har en liten specialvariant av hur dess routes är kopplade mot respektive dataset.
+
+
+Kmom03 fokus kodkvalitet på scrutinizer, phpmd, phpstan, phploc?
+
 
 -->
 
