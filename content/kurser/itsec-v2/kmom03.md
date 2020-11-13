@@ -84,7 +84,7 @@ Mer läsanvisningar presenteras i samband med seminarierna.
 
 Titta på följande videor.
 
-1. Möt en hackare, "[Detectify | Meet the Hacker - Fredrik Nordberg Almroth](https://www.youtube.com/watch?v=ERXWb0KjMRo)". En 6 minuter video där vi får träffa en "hackare" som ger oss sina bsäta tips.
+1. Möt en hackare, "[Detectify | Meet the Hacker - Fredrik Nordberg Almroth](https://www.youtube.com/watch?v=ERXWb0KjMRo)". En 6 minuter video där vi får träffa en "hackare" som ger oss sina bästa tips.
 
 1. Titta på denna videoserie med 2-minuters avsnitt som förklarar "[OWASP Top 10 Vulnerabilities Explained](https://www.youtube.com/playlist?list=PLbKl_RtocZetEzdHyZCgZHwaUHjE_jeQT)" från Detectify.
 
