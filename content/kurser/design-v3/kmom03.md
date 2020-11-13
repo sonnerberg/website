@@ -40,9 +40,9 @@ Läs följande:
 
 I sektionen [Layout](guide/design-med-html5-och-css3/layout) tittar vi på hur vi med hjälp utav Flexbox och CSS-Grid kan ändra sidans layout så den fungera bra oavsett skärmstorlek.
 
-### Grid-baserad layout {#grid}
+### Grid-baserad layout och Flex {#grid}
 
-Läs för att få en introduktion och översikt till gridbaserad layout och bakgrunden för ett vertikalt grid.
+Läs följande för att få en introduktion och översikt till gridbaserad layout och flexbox.
 
 1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layout handlar om.
 
@@ -52,6 +52,12 @@ Läs för att få en introduktion och översikt till gridbaserad layout och bakg
     * [CSS-Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
     * [CSS-Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
     * [CSS-Tricks - Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
+
+### Övrigt {#ovrigt}
+
+1. Artikeln "[Design elements and Principles](https://www.canva.com/learn/design-elements-principles/)" går igenom olika design element och principer och är bra att läsa igenom under kursens gång.
+
+1. I uppgiften så ska ni tolka Wireframes, vill man läsa mer om det kan man göra det [här](https://en.wikipedia.org/wiki/Website_wireframe).
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
@@ -78,9 +84,7 @@ Dessa uppgifter skall utföras och redovisas.
 Testa din inlämning {#testa}
 -----------------------------------------------
 
-När du är helt klar med uppgiften så är det ett par saker som du kan kolla för att testa din inlämning. Detta testar inte allt, men det är ett minimum av vad som skall fungera.
-
-* Lägg till bilder som visar hur det ska se ut (både desktop och mobil)
+I detta kursmoment jobbar vi utifrån wireframes som finns tillgängliga i "[Bygg om din rapport-sida med CSS-Grid](uppgift/bygg-om-din-rapport-css-grid)".
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
