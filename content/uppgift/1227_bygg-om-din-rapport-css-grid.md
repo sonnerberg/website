@@ -66,6 +66,10 @@ Resten av designen är upp till er att bestämma.
 [FIGURE src=image/design-v3/wireframes/frame_3.png?height=450 caption="Vår enskilda report-sida på desktop"]
 [FIGURE src=image/design-v3/wireframes/frame_4.png?height=450 caption="Vår enskilda report-sida på mobil"]
 
+## {#ovrigt}
+
+* Din SASS-filer ska validera enligt `npm run lint`.
+
 Extrauppgifter {#extra}
 -----------------------
 

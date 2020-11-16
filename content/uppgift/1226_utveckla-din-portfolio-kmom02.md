@@ -59,7 +59,7 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 
 ### Avslutningsvis
 
-1. Din kod ska gå igenom stylelint genom antingen `npm run lint` alternativt `dbwebb validate`.
+1. Din kod ska gå igenom stylelint, testkör med `npm run lint`.
 
 1. Aktivera ditt tema i `me/portfolio/config/config.yml`.
 
