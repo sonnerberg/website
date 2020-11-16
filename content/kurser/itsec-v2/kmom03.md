@@ -4,6 +4,7 @@ author:
     - lew
     - nik
 revision:
+    "2020-11-16": "(B, mos) Läsanvisningar om hacker writeups."
     "2020-11-01": "(A, mos) Utkast inför ht20."
 ...
 Kmom03: Attacker
@@ -70,6 +71,16 @@ Läs och studera följande.
 
 * Använd [OWASP Top Ten](https://owasp.org/www-project-top-ten/) som en källa för några av de vanligaste riskerna i en applikation. Börja med att kika igenom vilka de top-tio riskerna är och försök förstå vad de innebär för dig som utvecklare, hur bör du inte skriva din kod? Börja kika översiktligt.
 
+* Läs igenom artikeln "[TimThumb Attacks: The Scale of Legacy Malware Infections](https://blog.sucuri.net/2019/08/timthumb-attacks-the-scale-of-legacy-malware-infections.html)" som berättar historien om hur ett litet PHP-script för att skala om bilder blev ett stort säkerhetshål för "remote code execution" i WordPress.
+
+* I artikeln "[Type Juggling and PHP Object Injection, and SQLi, Oh My!](https://foxglovesecurity.com/2017/02/07/type-juggling-and-php-object-injection-and-sqli-oh-my/)" visas hur man gör en exploit på en "loose comparisom `==`" och "`unserialize()` user supplied data" i PHP frameworket Expression Engine. Läs den som ett exempel på hur en attackerare tänker och funderar när den försöker hitta svagheter i ett system.
+
+* En annan variant är vi kan lära från en hacker writeup är "Finding Vulnerabilities in Core WordPress: A Bug Hunter’s Trilogy" som steg för steg når längre in i systemet. Börja med att läsa del I för att få en insyn i vad det handlar om, finner du det intressant så kan du fortsätta läsa de andra delarna.
+    * [Part I](https://blog.checkpoint.com/2015/08/04/wordpress-vulnerabilities-1/)
+    * [Part II - Supremacy](https://blog.checkpoint.com/2015/08/11/finding-vulnerabilities-in-core-wordpress-a-bug-hunters-trilogy-part-ii-supremacy/)
+    * [Part III – Ultimatum](https://blog.checkpoint.com/2015/09/15/finding-vulnerabilities-in-core-wordpress-a-bug-hunters-trilogy-part-iii-ultimatum/)
+
+
 <!--
 Panama papers
 https://panamapapers.sueddeutsche.de/en/
@@ -94,11 +105,6 @@ Titta på följande videor.
 
 
 <!--
-
-“Type Juggling and PHP Object Injection, and SQLi, Oh My!” on exploiting a == in the PHP framework Expression Engine.
-“Finding Vulnerabilities in Core WordPress: A Bug Hunter’s Trilogy, Part I” on step by step reaching higher access to the system. Continue with part II and III if you want to get the whole story.
-“Finding Vulnerabilities in Core WordPress: A Bug Hunter’s Trilogy, Part II – Supremacy”
-“Finding Vulnerabilities in Core WordPress: A Bug Hunter’s Trilogy, Part III – Ultimatum”
 
 As extra work, if you want to learn more about web application security, you might want to check up on the concept of CTF, Capture The Flag. I suggest you checkout the playlist by John Hammond on “writeups on how to solve various CTFs in the category Web Security”.
 

@@ -6,6 +6,7 @@ category:
     - anax
     - kurs ramverk1
 revision:
+    "2020-11-16": "(B, mos) Bytte till OpenWeather Weather API."
     "2018-11-14": "(A, mos) Första utgåvan."
 ...
 En webbtjänst för att visa väderprognos och historiskt väder
@@ -35,9 +36,22 @@ Följande steg hjälper dig att komma igång med uppgiften.
 
 ### Väder API {#vader}
 
-Vi använder [Dark Sky JSON API](https://darksky.net/dev/docs) för att hämta väderdata.
+Vi använder [OpenWeather Weather API](https://openweathermap.org/api) för att hämta väderdata.
 
-Skaffa dig ett konto på Dark Sky samt en API nyckel.
+Du behöver skaffa dig ett konto på OpenWeather.
+
+
+<!--
+#### Alternativa vädertjänster {#altvader}
+
+Kikade lite på vädertjänster och både smhi och yr har var sitt API, kanske kör vi på det nästa vecka.
+* https://api.met.no/
+* https://opendata.smhi.se/apidocs/
+
+Mer relaterade tjänster:
+* https://luftdata.se/data/ (Emil)
+* https://weatherstack.com/ (Matilda)
+-->
 
 
 
