@@ -29,8 +29,7 @@ I din kurskatalog (repot) för kursen, skall du ta en kopia av din personliga sa
 
 ```bash
 # Gå till kurskatalogen
-cd me
-cp -ri me/kmom01/sandbox/* me/kmom03/sandbox3/
+cp -r me/kmom01/sandbox/* me/kmom03/sandbox3/
 ```
 
 1. Användaren ska kunna mata in antal tärningar och antal sidor på tärningarna. Tips på hur man kan hantera inmatningen: text/inputfält, select box etc.
