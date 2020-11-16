@@ -108,7 +108,7 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 
 * Hur känns det att jobba med begreppen kring $di?
 * Ge din egna korta förklaring, ett kort stycke, om dependency injection, service locator och lazy loading. Berätta gärna vilka källor du använde för att lära dig om begreppen.
-* Berätta hur andra ramverk (minst 1) använder sig av koncept som liknar $di. Liknar det "vårt" sätt?
+* Berätta hur andra ramverk (minst 2) använder sig av koncept som liknar $di. Liknar det "vårt" sätt?
 * Berätta lite om hur du löste uppgiften, till exempel vilka klasser du gjorde, om du gjorde refaktoring på äldre klasser och vad du valde att lägga i $di.
 * Har du någon reflektion kring hur det är att jobba med externa tjänster (ipvalidering, kartor, väder)?
 * Vilken är din TIL för detta kmom?
