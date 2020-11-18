@@ -9,7 +9,7 @@ revision:
 Övervaka Gunicorn med Prometheus och Grafana {#intro}
 =====================================================
 
-I denna artikel skall vi gå igenom hur man kan övervaka trafiken från en gunicorn server med hjälp av prometheus och grafana.
+I denna artikel skall vi gå igenom hur man kan övervaka trafiken från en gunicorn server med hjälp av Prometheus och Grafana.
 
 <!--more-->
 
@@ -20,13 +20,13 @@ Ni har jobbat igenom installerat [Complete Node Exporter Mastery with Prometheus
 
 Konfigurera statsd exporter {#stub_exporter}
 ---------------------------------------------------------
-För att prometheus skall kunna läsa allt som händer i gunicorn behöver vi köra en ny [statsd exportör](https://github.com/prometheus/statsd_exporter) för prometheus, jag väljer att använda Docker för att köra denna och börjar med att hämta den senaste versionen:
+För att prometheus skall kunna läsa allt som händer i gunicorn behöver vi starta en ny [statsd exportör](https://github.com/prometheus/statsd_exporter) för prometheus, ni får installera den på ett valfritt sätt men jag väljer att använda Docker och börjar med att hämta den senaste versionen:
 
 ```
 $ docker pull prom/statsd-exporter
 ```
 
-När imagen har laddats ner måste vi skapa en *metrics map* som gör att prometheus kan sortera HTTP -statuskoderna och låta oss filtrera bort ointressant data med ett reguljärt uttryck. Jag skapar en ny fil `statsd.conf`:
+När imagen har laddats ner måste vi skapa en *metrics map* som gör att prometheus kan sortera HTTP -statuskoderna och låta oss filtrera bort ointressant data. Jag skapar en ny fil `statsd.conf` och lägger till följande:
 
 ```yml
 mappings:
@@ -46,11 +46,11 @@ $ docker run -dP --net=host -v ${PWD}/statsd.conf:/statsd/statsd.conf prom/stats
 
 Kommandot startar containern och använder port 9102 för att skicka data och det är här vi senare kopplar prometheus. Port 9125 för att ta emot data, skickas från gunicorn.
 
-Gunicorn har ett plugin som låter oss använda [statsD](https://docs.gunicorn.org/en/stable/instrumentation.html) för att exportera den data vi senare vill åt och, eftersom vi använder Docker, behöver båda containrar köras i samma nätverk. Då har vi två alternativ, antingen skapar vi ett nätverk i Docker och köra båda containers på det eller så använder vi `host`. Nätverket `host` är speciellt, man kan inte öppna portar för containern manuellt utan alla portar är tillgängliga automatiskt, vilket betyder att man exempelvis inte behöver `-p 8000:5000` när vi startar en container. Om ni kör på host nätverket glöm inte försäkra er om att nginx är kopplad till rätt port och att den är öppen på Azure.
+Gunicorn har ett plugin som låter oss använda [statsD](https://docs.gunicorn.org/en/stable/instrumentation.html) protokollen för att exportera den data vi senare vill åt. För att Gunicorn ska kunna komma åt statsD’s portar behöver båda containrar köras i samma Docker-nätverk. Vi två alternativ, antingen skapar vi ett nätverk och köra båda containers i den eller så använder vi `host`. Nätverket `host` är speciellt, man kan inte öppna portar för containern manuellt utan alla portar är tillgängliga automatiskt, vilket betyder att man exempelvis inte behöver `-p 8000:5000` när vi startar en container. Om ni kör på host nätverket glöm inte försäkra er att nginx är kopplad till rätt port och att den också är öppen på Azure.
 
 Jag använder `host`, vill ni använda ert eget får ni inte glömma att uppdatera föregående Docker kommando.
 
-Nu behöver vi uppdatera `boot.sh` som vi använder för att starta Docker, med en statsD -host och prefix.
+Nu behöver vi uppdatera `boot.sh` (som vi använder för att starta Docker) med en statsD -host och prefix.
 
 ```bash
 #!/bin/sh
@@ -68,7 +68,7 @@ done
 exec gunicorn --statsd-host=localhost:9125 --statsd-prefix=helloworld --bind :5000 --access-logfile - --error-logfile - microblog:app
 ```
 
-Detta kommer säga vart exportörens data befinner sig samt vilken prefix applikationen skall ha.
+Detta kommer säga vart datan skall skickas samt vilken prefix applikationen skall använda sig utav.
 
 [INFO]
 Jag använder prefixen "helloworld" för att slippa ändra i den [färdigskrivna grafana kod](#config_graf) som vi skall använda oss utav senare, men vill man ändra den så kan du gärna göra det.
@@ -77,7 +77,7 @@ Jag använder prefixen "helloworld" för att slippa ändra i den [färdigskrivna
 
 Konfigurera Prometheus {#config_prom}
 ---------------------------------------------------------
-Nu när mätvärden skickas ut till statsd-exportören kan vi konfigurera prometheus till att fånga våra nya mätvärden. I din konfigurationsfil kan du lägga till följande jobb:
+Nu när mätvärden skickas ut till statsd-exportören kan vi konfigurera prometheus till att fånga upp den. I din konfigurationsfil kan du lägga till följande jobb:
 
 ```yml
 - job_name: 'helloworld_gunicorn'
@@ -92,7 +92,7 @@ Vi kan nu starta om prometheus, testa att besöka din *Microblog* några gånger
 
 Konfigurera Grafana {#config_graf}
 ---------------------------------------------------------
-Nu när allt är uppsatt kan vi använda oss av [färdig kod](https://gist.github.com/dmyerscough/59896aa752ba48794d2aef4c7a0fdd6e) som sätter upp en graf samma som bilden under.
+Nu när allt är uppsatt kan vi använda oss av [färdig kod](https://gist.github.com/dmyerscough/59896aa752ba48794d2aef4c7a0fdd6e) som sätter upp en graf liknande bilden under.
 
 [FIGURE src="https://miro.medium.com/max/700/1*qOvSwx8S5DPWUZgmiFR3zw.png"]
 
