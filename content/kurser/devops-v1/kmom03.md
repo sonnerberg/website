@@ -61,20 +61,23 @@ Ansible är ett verktyg för att automatisera server konfiguration. Läs om föl
 Använd den nyckeln från och med nu när du jobbar med Ansible och dina servrar.
 [/INFO]
 
-
 Innan ni fortsätter **ska** ni ta bort era gamla VMs och resurser. På Azure portalen, gå till `All resources` och radera allt utom er "DNS zone" och "SSH key"!
 
 
 
-### 10 first minutes on a server i Ansible
+### Bekanta er med Ansible skripten {#ansib-scripts}
 
 Än så länge har vi kopierat skript från `scripts` mappen över till servern och exekverat för att konfigurera servern. Nu ska vi uppgradera oss och göra detta i Ansible istället.
 
-I följande playlist, kollar på viderona med `30x`i namnet för att bekanta er med vad som finns i Ansbile mappen i Microblog repot.
+I följande playlist, kollar på videorna med `30x`i namnet för att bekanta er med vad som finns i Ansible mappen i Microblog repot.
 
 - [kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78).
 
 Jag rekommenderar även att läsa `ansible/README.md` filen. Den innehåller bra att ha info och i slutet finns några vanliga fel och lösningar!
+
+
+
+### 10 first minutes on a server i Ansible
 
 Nästa steg är att skapa er egna playbook för 10 first minutes on a server, kolla på videorna med [31x i namnet] och skapa en playbook för 10-first-minutes skripten.  
 **Notera** några rättelser i videon:
@@ -86,8 +89,8 @@ Nästa steg är att skapa er egna playbook för 10 first minutes on a server, ko
 ```
 hosts:
     -   database
-    -   appserver
-    -   loadbalancer
+    -   appServer
+    -   loadBalancer
 ```
 
 - Ni ska även ändra `remote_user` från `admin` till `azureuser`.
