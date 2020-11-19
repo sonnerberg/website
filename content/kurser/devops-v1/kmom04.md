@@ -56,7 +56,11 @@ Läs sen [Monitoring in a DevOps world](https://queue.acm.org/detail.cfm?id=3178
 
 ### Log management {#log}
 
-Log management är processen av att samla in, lagra, hantera och analysera loggar från infrastruktur, system och applikation. Det är ett väldigt brett ämne då typ allt genererar loggar av något slag och system för att sköta log hantering är väldigt avancerade. Läs [What is log management](https://www.tripwire.com/state-of-security/security-data-protection/security-controls/what-is-log-management/) för att få en överblick av delarna som ingår i log management. Läs sen om vilken användning olika roller har av log management i [Why is log management important](https://www.graylog.org/post/why-is-log-management-important).
+Log management är processen av att samla in, lagra, hantera och analysera loggar från infrastruktur, system och applikation. Det är ett väldigt brett ämne då typ allt genererar loggar av något slag och system för att sköta log hantering är väldigt avancerade. För att få en överblick av delarna som ingår i log management och vilken användning olika roller har av log management läs följande:
+
+- [What is log management](https://www.tripwire.com/state-of-security/security-data-protection/security-controls/what-is-log-management/).
+
+- [Why is log management important](https://www.graylog.org/post/why-is-log-management-important).
 
 Läs också [ELK stack tutorial](https://www.guru99.com/elk-stack-tutorial.html) för en överblick av ett av de mest populära systemen för Log management.
 
@@ -64,13 +68,17 @@ Läs också [ELK stack tutorial](https://www.guru99.com/elk-stack-tutorial.html)
 
 ### Application performance monitoring (APM) {#apm}
 
-APM kan även kallas Application Performance Management (också APM), enligt vissa är det skillnad. APM är att övervaka, hantera och diagnosera prestanda, tillgänglighet och användare upplevelse av applikationer. Avancerade program används för att göra om data till "business value". Läs [What is application performace monitoring](https://www.eginnovations.com/blog/what-is-application-performance-monitoring/).
+APM kan även kallas Application Performance Management (också APM), enligt vissa är det skillnad. APM är att övervaka, hantera och diagnosera prestanda, tillgänglighet och användare upplevelse av applikationer. Avancerade program används för att göra om data till "business value".
+
+Läs [What is application performace monitoring](https://www.eginnovations.com/blog/what-is-application-performance-monitoring/).
 
 
 
 ### Observability {#observability}
 
-På senare år har det även börjat talas mycket om Observability vilket hänger ihop med monitoring. Vi kan se monitoring som att ha kolla på hälsan av våra system medan observability är att ha djup insikt i hur våra system beter sig. Observability ska hjälpa oss hitta fel och problem. Läs [Observability sv. Monitoring](https://dzone.com/articles/observability-vs-monitoring).
+På senare år har det även börjat talas mycket om Observability vilket hänger ihop med monitoring. Vi kan se monitoring som att ha kolla på hälsan av våra system medan observability är att ha djup insikt i hur våra system beter sig. Observability ska hjälpa oss hitta fel och problem.
+
+Läs [Observability sv. Monitoring](https://dzone.com/articles/observability-vs-monitoring).
 
 Om ni vill kan ni även kolla på [What Does the Future Hold for Observability?](https://www.youtube.com/watch?v=MkSdvPdS1oA)
 
@@ -80,13 +88,16 @@ Om ni vill kan ni även kolla på [What Does the Future Hold for Observability?]
 
 Vi ska använda oss av [Prometheus](https://prometheus.io/), ett väldigt populärt verktyg för att lagra tidsserie data och visualisera data. Prometheus har inbyggt stöd för att visa simpla grafer för data men oftast använder man det tillsammans med externa visualiseringsverktyg. Vi ska använda [Grafana](https://grafana.com/) för att bygga dashboards med grafer och diagram över datan från Prometheus.
 
-Börja med att läsa [Prometheus Monitoring : The Definitive Guide in 2019](https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/) för en överblick av vad Prometheus är och vad det innehåller.
+Läs [Prometheus Monitoring : The Definitive Guide in 2019](https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/) för en överblick av vad Prometheus är och vad det innehåller.
 
-När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem. Men först behöver ni någonstans att kör verktygen, kolla på följande video för att uppdatera Ansible skripten för att skapa servrar på AWS:
+När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem. Men först behöver ni någonstans att kör verktygen, kolla på följande video för att uppdatera Ansible skripten för att skapa servrar på Azure:
 
-[YOUTUBE src=xpY0Z956MZE caption="Skapa en Monitoring instance på AWS med Ansible"]
+[YOUTUBE src=xpY0Z956MZE caption="Skapa en Monitoring instance på Azure med Ansible"]
 
-Följ nu guiden [Complete Node Exporter Mastery with Prometheus](https://devconnected.com/complete-node-exporter-mastery-with-prometheus/) som visar hur ni kan övervaka resurserna på AWS instansen som ni installerar Prometheus på. OBS! När ni sätter `scrape_interval` sätta inte mindre än 30 sekunder, era AWS instanser har begränsat med resurser, vi kan inte gå helt Crazy!  
+Nu ska ni följa en guide för att sätta upp Prometheus, Grafana och en exporter för att övervaka resurserna på instansen som ska köra programmen. När ni gör det ska ni konfigurera `scrape_interval`, sätt **inte** den till något mindre än **30** sek. Vi har begränsat med resurser.
+
+Följ nu guiden [Complete Node Exporter Mastery with Prometheus](https://devconnected.com/complete-node-exporter-mastery-with-prometheus/)
+
 Ni ska senare göra en Ansible playbook för att sätta upp Prometheus och Grafana, då kan ni installera det hur ni vill. Men börja med att följa guiden för att lära er verktygen först. 
 
 
@@ -228,4 +239,4 @@ Se till att följande frågor besvaras i texten:
 
 1. Beskriv Observability och försök koppla det till ovanstående frågor.
 
-1. Hur var storleken på detta kmom? Finns det tid att göra mer?
+1. Vad är dina tankar om Prometheus och Grafana?
