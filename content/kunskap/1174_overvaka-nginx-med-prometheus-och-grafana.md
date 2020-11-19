@@ -20,7 +20,7 @@ Ni har jobbat igenom installerat [Complete Node Exporter Mastery with Prometheus
 
 Aktivera stub_status i nginx {#stub_status}
 ---------------------------------------------------------
-Om ni har installerat nginx via *apt-get* kommer den redan med modulen [`ngx_http_stub_status_module`](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html). Denna behöver vi aktivera så att den [prometheus exportör](https://github.com/nginxinc/nginx-prometheus-exporter) vi senare skall använda oss utav skall fungera.
+Om ni har installerat nginx via *apt-get* ska den redan ha med modulen [`ngx_http_stub_status_module`](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html). Ni kan dubbel kolla att den är installerad med kommandot `sudo nginx -V 2>&1 | grep -o with-http_stub_status_module`, om ni får utskrift med `with-http_stub_status_module` så är ni good to go! Modulen behöver vi aktivera så att den [prometheus exportör](https://github.com/nginxinc/nginx-prometheus-exporter) vi senare skall använda oss utav skall fungera.
 
 
 Så i min konfigurationsfil för nginx, lägger jag till en ny `endpoint` och startar `stub_status`:

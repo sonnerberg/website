@@ -92,7 +92,7 @@ Vi kan nu starta om prometheus, testa att besöka din *Microblog* några gånger
 
 Konfigurera Grafana {#config_graf}
 ---------------------------------------------------------
-Nu när allt är uppsatt kan vi använda oss av [färdig kod](https://gist.github.com/dmyerscough/59896aa752ba48794d2aef4c7a0fdd6e) som sätter upp en graf liknande bilden under.
+Nu när allt är uppsatt kan vi använda oss av [färdig kod](https://gist.github.com/AndreasArne/1aa5856f0dc24b2499c3ae9d14b58d83) som sätter upp en graf liknande bilden under.
 
 [FIGURE src="https://miro.medium.com/max/700/1*qOvSwx8S5DPWUZgmiFR3zw.png"]
 

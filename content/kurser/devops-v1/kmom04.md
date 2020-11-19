@@ -104,62 +104,11 @@ Ni ska senare göra en Ansible playbook för att sätta upp Prometheus och Grafa
 
 ### MySQL {#mysql}
 
-Vi vill ha lite koll på vad som händer med databasen och det finns så klart en exporter för MySQL också. Jag sätter upp min exporter som en Docker container, om ni inte vill göra det kan ni följa [Complete mysql daschboard with Grafan and Prometheus](https://devconnected.com/complete-mysql-dashboard-with-grafana-prometheus).
+Vi vill ha lite koll på vad som händer med databasen och det finns så klart en exporter för MySQL också.
 
-Börja med att logga in på er databas instans. Sen behöver vi ha root lösenordet till er MySQL instans, om du inte sätter något root lösenord när du starta mysql containern kan vi hitta det i Dockers loggar för containern.
+Jobba igenom [Övervaka MySQL med Prometheus och Grafana](kunskap/overvaka-mysql-med-prometheus-och-grafana)
 
-```
-docker logs <mysql_container> 2>&1 | grep GENERATED
-```
-
-Sen kan vi logga in i databasen och skapa en ny användare för mysql_exporter att logga in som. Men vi måste först ändra root lösenordet innan MySQL låter oss skapa nya användare.
-```
-docker exec -it <container> mysql -uroot -p
-
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '<password>'; # skippa detta steget om du sätter root lösenord när du skapar containern.
-
-mysql> CREATE USER 'exporter'@'%' IDENTIFIED BY '<password>' WITH MAX_USER_CONNECTIONS 3;
-mysql> GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'%';
-mysql> GRANT SELECT ON performance_schema.* TO 'exporter'@'%';
-```
-
-Nu kan vi starta upp en `mysqld-exporter` container och koppla till databasen.
-
-```
-docker pull prom/mysqld-exporter
-
-docker run -d \
-  -p 9104:9104 \
-  --network host \
-  -e DATA_SOURCE_NAME="exporter:<password>@(localhost:3306)/" \
-  --restart always\
-  prom/mysqld-exporter:latest \
-  --collect.auto_increment.columns \
-  --collect.binlog_size \
-  --collect.engine_innodb_status \
-  --collect.engine_tokudb_status \
-  --collect.global_status
-```
-
-`--collect...` är flaggor för vilken data som exportern ska samla in. Det finns väldigt många fler och ni kan läsa om dem på [GitHub](https://github.com/prometheus/mysqld_exporter#collector-flags).
-
-Testa så det fungera i terminalen med `wget localhost:9104/metrics` om ni får ner en fil med data så fungerar det. Då behöver ni öppna upp porten på AWS så Prometheus kommer åt den.
-
-Nu kan ni konfigurera Prometheus att hämta datan, lägg till följande i er Prometheus konfiguration:
-
-```
-scrape_configs:
-  - job_name: 'mysql'
-    static_configs:
-            - targets: ['<database_host_ip>:9104']
-```
-
-Starta om Prometheus och gå sen in på GUI:ts webbsida och testa hämta datan `mysql_exporter_scrapes_total` för att kolla att kopplingen fungerar.
-
-Följ sen [Create the MySQL dashboard with Grafana](https://devconnected.com/complete-mysql-dashboard-with-grafana-prometheus/#IV_Create_the_MySQL_dashboard_with_Grafana) för att skapa en MySQL Overview dashboard kopplad till datan.
-
-Glöm inte att öppna portar i AWS så Prometheus kommer åt mysql_exporter.
-
+Glöm inte att öppna portar i Azure så Prometheus kommer åt mysql_exporter.
 
 
 
@@ -167,27 +116,19 @@ Glöm inte att öppna portar i AWS så Prometheus kommer åt mysql_exporter.
 
 Det finns en officiel exporter för [Nginx](https://github.com/nginxinc/nginx-prometheus-exporter) som använder sig utav [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) för att samla data. Tyvärr behöver man ha Nginx Plus för att få ut mer intressant data som hur många 4xx/5xx request man får in. Nu har vi inte Plus versionen och får nöja oss med att kunna se att servern är igång och hur många requests servern har fått.
 
-För att exportern ska fungera behvöer ni ha `status_module` aktiverad i Nginx. Ni kan kolla det är aktiverat med kommandot `sudo nginx -V 2>&1 | grep -o with-http_stub_status_module`, om ni får utskrift med `with-http_stub_status_module` så är ni good to go! För mig vad den aktiverad i den vanliga Nginx man installerar med apt-get.
+Jobba igenon [Övervaka nginx med Prometheus och Grafana](kunskap/overvaka-nginx-med-prometheus-och-grafana).
 
-När modulen är aktiverad kan ni följa [Monitoring nginx with Prometheus and Grafana](https://dimitr.im/monitoring-nginx-with-prometheus-and-grafana), den installerar exportern med Docker, om ni inte vill det kan ni installera den [som en binary](https://github.com/nginxinc/nginx-prometheus-exporter#running-the-exporter-binary). Artikeln är lite utdaterad så docker kommandot fungerar inte, använd istället `docker run   -p 9113:9113   nginx/nginx-prometheus-exporter:0.4.2 -nginx.scrape-uri=https://<domännamn>/metrics -nginx.retries=10 -nginx.ssl-verify=false -web.telemetry-path=/prometheus` och i Nginx lägg `location` blocket i er `load-balancer` konfiguration i https server blocket.
-
-Glöm inte att öppna portar i AWS.
+Glöm inte att öppna portar i Azure.
 
 
 
 #### Gunicorn {#gunicorn}
 
-I Gunicorn kan vi få ut mer intressant data, vi kan bl.a. se request duration och hur många av de olika request typerna vi får. Jobba igenom [Monitoring Gunicorn with Prometheus](https://medium.com/@damianmyerscough/monitoring-gunicorn-with-prometheus-789954150069) för att sätta upp flödet. När ni följer guiden behöver ni tänka på att ni kör Gunicorn i Docker, detta påverkar hur ni behöver köra det. Tänk på följande när ni gör guiden:
+I Gunicorn kan vi få ut mer intressant data, vi kan bl.a. se request duration och hur många av de olika request typerna vi får.
 
-- När ni ska starta docker containern behöver ni lägga till ett "-" i argumentet till statsd, `docker run -dP --net=host -v ${PWD}/statsd.conf:/statsd/statsd.conf prom/statsd-exporter "--statsd.mapping-config=/statsd/statsd.conf"`.
+Jobba igenom [Övervaka Gunicorn med Prometheus och Grafana](kunskap/overvaka-gunicorn-med-prometheus-och-grafana) för att sätta upp flödet.
 
-- Gunicorn har ett plugin som behöver koppla upp sig mot port 9125 på StatsD containern, det är så statsD får datan. För att Gunicorn ska kunna komma åt statsD's portar behöver de köra på samma nätverk. Då har ni två val, antingen skapar ni ett nätverk i Docker och köra båda containers på det. Det andra alternativet är att göra som i guiden där statsD containern körs på `host` nätverket, då behöver ni också köra Microblog på det nätverket. Nätverket `host` är speciellt, man kan inte öppna portar för containern manuellt utan alla portar är tillgängliga automatiskt, vilket betyder att ni inte behöver typ `-p 8000:5000` när ni startar containern. Om ni kör på host nätverket glöm inte försäkra er om att Nginx är kopplad till rätt port. Se till så Gunicorn, Docker och Nginx använder port 5000 och uppdatera även portarna i AWS.
-
-- För att förtydliga, statsd containern använder port 9102 för att skicka data, prometheus ska koppla upp sig på denna, och port 9125 för att ta emot data, skickas från gunicorn.
-
-- I slutet av artikeln finns en gömd länk som visar kod för en [Grafana Gunicorn Dashboard](https://gist.github.com/dmyerscough/59896aa752ba48794d2aef4c7a0fdd6e).
-
-Glöm inte att öppna portar i AWS.
+Glöm inte att öppna portar i Azure.
 
 
 
@@ -211,11 +152,11 @@ Det finns generellt kursmaterial i video form.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Ni har en till instans i er AWS infrastruktur som kör Prometheus och Grafana. Lägg till en Reverse Proxy i er Nginx konfiguration till Grafana. [Här](https://gist.github.com/AndreasArne/1b729078e53004303c511390f44dee7f) kan ni hitta exempel på delar ni behöver lägga in i er Grafana och Nginx konfig. Länka till den i er redovisningstext och skriv inlogg uppgifter.
+1. Ni har en till instans i er Azure infrastruktur som kör Prometheus och Grafana. Lägg till en Reverse Proxy i er Nginx konfiguration till Grafana. [Här](https://gist.github.com/AndreasArne/1b729078e53004303c511390f44dee7f) kan ni hitta exempel på delar ni behöver lägga in i er Grafana och Nginx konfig. Länka till den i er redovisningstext och skriv inlogg uppgifter.
 
 1. Ha en Dashboard för varje exporter vi gått igenom, Nginx, Mysql, Node_exporter och Gunicorn.
 
-1. Lägg till en Ansible playbook för Prometheus och Grafana. Lägg till att installera och starta alla olika exporters i respektive playbook.
+1. Lägg till en Ansible playbook för Prometheus och Grafana. Lägg till att installera och starta alla olika exporters i respektive playbook. Glöm inte öppna de nya portarna i `security_groups` rollen.
 
 <!-- 1. Skapa larm i Prometheus som varnar om någon Docker container, Nginx eller instans inte längre är igång. Skapa även ett larm som varnar om minnet på hårddisken på Prometheus instansen har mindre än 5G kvar. -->
 <!-- Hitta ett sätt som kan användas för att temporärt tar plats på hårddisken så larmet kan testas. -->
