@@ -2,21 +2,13 @@
 author:
     - aar
 revision:
+    "2020-11-19": "(B, aar) Släppt för HT20."
     "2019-10-15": "(A, aar) Första versionen."
 ...
 Kmom04: Monitoring
 ==================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Nu när vi har ett system uppe och rullande behöver vi veta när något går fel, vi ska övervaka hela produktionsmiljön och alla dess delar.
-
-
 
 <!-- more -->
 
@@ -92,7 +84,7 @@ Läs [Prometheus Monitoring : The Definitive Guide in 2019](https://devconnected
 
 När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem. Men först behöver ni någonstans att kör verktygen, kolla på följande video för att uppdatera Ansible skripten för att skapa servrar på Azure:
 
-[YOUTUBE src=xpY0Z956MZE caption="Skapa en Monitoring instance på Azure med Ansible"]
+[YOUTUBE src=LnSJKDLgsps caption="Skapa en Monitoring instance på Azure med Ansible"]
 
 Nu ska ni följa en guide för att sätta upp Prometheus, Grafana och en exporter för att övervaka resurserna på instansen som ska köra programmen. När ni gör det ska ni konfigurera `scrape_interval`, sätt **inte** den till något mindre än **30** sek. Vi har begränsat med resurser.
 
