@@ -7,13 +7,6 @@ revision:
 Kmom04: Färg
 ====================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Vi tittar på färger, färghjulet och olika tekniker för att kombinera färger i ett sammanhang, så kallade färgscheman.
 
 Ett akromatiskt färgschema med vitt, svart och nyanser av grått.
