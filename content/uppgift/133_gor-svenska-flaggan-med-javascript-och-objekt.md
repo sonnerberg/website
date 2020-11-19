@@ -2,13 +2,7 @@
 author: mos
 category: javascript
 revision:
-  "2015-08-27": (E, mos) Uppgraderad till dbwebb-cli version 2.
-  "2014-11-21": (D, mos) Tog bort referens till att video fanns.
-  "2014-08-25": (C, mos) Flytta till me-katalogen innan kopiera.
-  "2014-08-18": (B, mos) Genomgången och justerad.
-  "2014-06-30": (A, mos) Första utgåvan i samband med kursen javascript1.
-updated: "2015-08-27 08:51:32"
-created: "2014-06-26 09:01:33"
+  "2020-11-19": (A, lew) Genomgången inför ht20.
 ...
 Gör svenska flaggan med JavaScript och objekt
 ==================================
@@ -30,16 +24,16 @@ Du har löst labbarna med [JavaScript och arrayer](uppgift/javascript-och-arraye
 Introduktion {#intro}
 -----------------------
 
-Du har sedan tidigare skapat flaggor i JavaScript med funktioner. Du skall nu använda objekt i JavaScript för att samla all information om flaggorna. 
+Du har sedan tidigare skapat flaggor i JavaScript med funktioner. Du skall nu använda objekt i JavaScript för att samla all information om flaggorna.
 
 Tanken är att du gör ett objekt `flag` som innehåller grunderna för en flagga. Sedan kan du skapa en ny flagga utifrån det objektet. Ungefär så här.
 
 ```javascript
-var flag = { 
+let flag = {
     /* properties and methods */
 };
 
-var swedishFlag = Object.create(flag);
+let swedishFlag = Object.create(flag);
 swedishFlag.init( /* send arguments to init the flag as a swedish flag */);
 swedishFlag.draw( /* optional arguments useful when drawing the flag */);
 ```
@@ -49,12 +43,11 @@ swedishFlag.draw( /* optional arguments useful when drawing the flag */);
 Krav {#krav}
 -----------------------
 
-1. Ta en kopia av din flag2 (från kmom03) och spara i din kurskatalog under `javascript1/me/kmom04/flag3`.
+1. Ta en kopia av din flag2 (från kmom03) och spara i din kurskatalog under `js/me/kmom04/flag3`.
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -ri kmom03/flag2/* kmom04/flag3
+cp -r me/kmom03/flag2/* me/kmom04/flag3
 ```
 
 2\. Skapa samma flaggor som tidigare, men organisera din kod i objekt.
@@ -78,7 +71,7 @@ Extrauppgift {#extra}
 
 Kan du lägga till en (enda) funktion som eventhanterare (i objektet) så att respektive flagga försvinner när du klickar på den?
 
-Rita ut flaggorna med en "baksida" och använd eventhanterare för att "vända" flaggan så att den syns när man klickar på den. Klickar man igen så syns "baksidan" igen. Lite som [memory-exemplet](javascript1/repo/example/memory) kanske.
+Rita ut flaggorna med en "baksida" och använd eventhanterare för att "vända" flaggan så att den syns när man klickar på den. Klickar man igen så syns "baksidan" igen. Lite som [memory-exemplet](js/repo/example/memory) kanske.
 
 
 
@@ -87,10 +80,6 @@ Tips från coachen {#tips}
 
 Lös uppgiften på ditt eget vis. Det är det viktigaste. Se hur bra dina vingar bär.
 
-Kika i kodexemplen från [tutorialen](https://github.com/mosbth/javascript1/blob/master/tutorial/README.md) om du behöver stöd för din JavaScript-kodning, eller gå direkt till MDN om du känner dig lite mer erfaren.
+<!-- Kika i kodexemplen från [tutorialen](https://github.com/mosbth/javascript1/blob/master/tutorial/README.md) om du behöver stöd för din JavaScript-kodning, eller gå direkt till MDN om du känner dig lite mer erfaren. -->
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-

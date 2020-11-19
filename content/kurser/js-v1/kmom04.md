@@ -1,16 +1,7 @@
 ---
 author: mos
 revision:
-    "2017-10-10": (J, mos) Genomgång inför ht17.
-    "2017-09-27": (I, lew) Ny kurslitteratur.
-    "2016-03-15": (H, mos) Lade till videoserie med "Lär dig JavaScript".
-    "2015-11-09": (G, mos) Ändrade läsansvisningar i MDN Guide.
-    "2015-09-09": '(F, mos) Temporärt bort med extrauppgift om baddie #4.'
-    "2015-08-27": '(E, mos) Extrauppgift om baddie #4.'
-    "2015-01-19": (D, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
-    "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
-    "2014-09-17": (B, mos) Tog bort beta status.
-    "2014-08-18": (A, mos) Första utgåvan för javascript1 kursen.
+    "2020-110-19": (A, lew) Genomgång inför ht20.
 ...
 Kmom04: Arrayer och objekt
 ==================================
@@ -74,7 +65,6 @@ Titta på följande:
 
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
-1. Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Episode IV: The Metamorphosis of Ajax](https://www.youtube.com/watch?v=Fv9qT9joc0M)".
 
 
 
