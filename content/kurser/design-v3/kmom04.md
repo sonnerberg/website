@@ -2,7 +2,7 @@
 author:
     - nik
 revision:
-    "2020-10-15": (A, nik) Nysläpp för design-v3
+    "2020-11-19": (A, nik) Nysläpp för design-v3
 ...
 Kmom04: Färg
 ====================================
@@ -14,21 +14,54 @@ Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är b
 
 [/WARNING]
 
-<!--stop-->
+Vi tittar på färger, färghjulet och olika tekniker för att kombinera färger i ett sammanhang, så kallade färgscheman.
+
+Ett akromatiskt färgschema med vitt, svart och nyanser av grått.
+
+<table style="border-spacing: 4px; border-collapse: separate">
+<tr>
+<td style="height: 50px; width: 50px; background-color: #000">
+<td style="height: 50px; width: 50px; background-color: #333">
+<td style="height: 50px; width: 50px; background-color: #666">
+<td style="height: 50px; width: 50px; background-color: #999">
+<td style="height: 50px; width: 50px; background-color: #ccc">
+<td style="height: 50px; width: 50px; background-color: #eee">
+</tr>
+</table>
+
+Ett monokromatiskt färgschema med en basfärg och olika nyanser av den.
+
+<table style="border-spacing: 4px; border-collapse: separate">
+<tr>
+<td style="height: 50px; width: 50px; background-color: #500">
+<td style="height: 50px; width: 50px; background-color: #a44">
+<td style="height: 50px; width: 50px; background-color: #d46a6a">
+<td style="height: 50px; width: 50px; background-color: #faa">
+</tr>
+</table>
+
+Ett _complementary_ färgschema med en röd basfärg och två komplementfärger (blå/grön) på motsvarande sida av färghjulet, som kan användas som försiktigt som accentfärger eller för att kraftfullt färglägga webbplatsen.
+
+<table style="border-spacing: 4px; border-collapse: separate">
+<tr>
+<td style="height: 50px; width: 50px; background-color: #500">
+<td style="height: 50px; width: 50px; background-color: #aa3939">
+<td style="height: 50px; width: 50px; background-color: #d46a6a">
+<td style="height: 50px; width: 50px; background-color: #a44">
+<td style="height: 50px; width: 50px; background-color: #246c60">
+<td style="height: 50px; width: 50px; background-color: #43877b">
+<td style="height: 50px; width: 50px; background-color: #729c34">
+<td style="height: 50px; width: 50px; background-color: #9bc362">
+</tr>
+</table>
+
+Vi jobbar med tekniker kring hur en webbplats kan färgläggas. Men innan det funderar vi igenom om de vanligaste webbplatserna är färgglada eller inte? Det kan vara så att många webbplatser har ett begränsat användande av färger. Om det stämmer, hur kan det komma sig?
+
+Vi lyfter in vår nyfunna kunskap om färger till vårt nuvarande tema och därefter ska vi implementera ett "Dark Theme" på vår hemsida, som bygger på vårt ursprungliga tema. Detta blir en smidig övergång om vi använder oss utav variabler i vår SASS-kod.
+
+Vi gör även ett en studie om webbplatsers val av färger och typografi där vi skriver en rapport som vi publicerar i vår portfolio-sida. Rapporten kan man välja att lösa i grupp eller enskilt.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-<!-- Labbmiljön  {#labbmiljo}
----------------------------------
-
-*(ca: 2-4 studietimmar)*
-
-Installera följande.
-
-1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](labbmiljo/node-och-npm)".
-
-
 
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
@@ -39,67 +72,61 @@ Läs & Studera  {#lasanvisningar}
 
 ### Kurslitteratur  {#kurslitteratur}
 
-TBA
-
 Läs följande:
 
-1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Det ger dig en bakgrund i tankar och hur man gör layout och komponerar ihop designen i en webbsida.
-
-    * Kap 1: Layout and Composition
-
+1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
+    * Kap 2: Color
 
 
 ### Design med HTML5 och CSS3  {#guide}
 
-TBA
-
 1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
-    * [Responsivitet](guide/design-med-html5-och-css3/responsivitet)
+    * [Färg](guide/design-med-html5-och-css3/farg)
 
-I sektionen [Responsivitet](guide/design-med-html5-och-css3/responsivitet) tittar vi på hur vi med hjälp av media queries kan anpassa en webbplats för både stora och små enheter.
+I sektionen [Färg](guide/design-med-html5-och-css3/farg) tittar vi på hur vi kan använda färg för att skapa en specifik känsla på en webbplats. Vi börjar med en kort introduktion till färgteori för att gå vidare till hur vi kan välja vilka färgar som fungerar tillsammans.
 
+### Färg {#color}
 
+Lös följande artiklar för att få en bakgrund i allmän layout kopplad till färger och färgscheman.
 
-### SASS {#sass}
+1. Läs artikeln "[The Characteristics of Minimalism in Web Design](https://www.nngroup.com/articles/characteristics-minimalism/)". Artikeln sammanställer ett antal webbplatsers karaktäristik och diskuterar kring valet av stil och färgval. Fokuset är på minimalism, att "hålla det enkelt".
 
-Kom igång med SASS genom att läsa runt och eventuellt skriva något enklare testprogram som du kan spara under `me/kmom02/sass`. Det finns ett exempelprogram under `example/less` som du kan kopiera och utgå ifrån.
+1. Läs artikeln "[An Introduction to Color Theory for Web Designers](https://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)" som ger insyn i hur man väljer färger och färgschema för en webbplats.
 
-1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)". Artikeln ger en introduktion till CSS preprocessorer och behandlar skillnader och likheter mellan LESS och SASS som är två olika preprocessorer till CSS.
+1. Läs [kapitel 13 i boken Web Design - The Complete Reference](http://www.webdesignref.com/chapters/13/ch13-16.htm). Det handlar om "Color and Usability" och "The Hidden Meaning of Colors" och ger en kort introduktion till färger och webbdesign.
 
-1. I kursen använder vi SASS så bekanta dig med [SASS](https://sass-lang.com/guide) och se vad du kan göra. SASS är uppbyggd som ett programmeringsspråk, så kika runt bland de manualer som finns men fokusera på "SASS Basics" för att lära dig hur du skriver SASS konstruktioner.
+### Om färgteori {#farg}
 
-### SASS moduler {#sassmodul}
+Läs följande artikel "Traditional and Modern color theory", om du finner den intressant. Det handlar om färgteori, varianter av färghjul och hur färgteori lärs ut kontra dess historik.
 
-Följande moduler kommer du att använda när du bygger ditt tema i den kommande uppgiften.
+* [Part 1: Modern colour theory](http://www.huevaluechroma.com/001.php)
+* [Part 1: Traditional colour theory strikes back](http://www.huevaluechroma.com/002.php)
 
-1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
+### Om Dark Mode {#darkmode}
 
-1. Titta snabbt och översiktligt på [Font Awesome](https://fontawesome.com/) och se vilka ikoner man kan skapa med dess hjälp. Leta reda på webbsidan som visar hur man installerar Font Awesome och se om du kan hitta hur man installerar det som en LESS-modul med hjälp av pakethanteraren npm. Vi kommer att göra detta senare i uppgiften.
+Läs igenom följande artikel, främst del 6, kring hur man kan tänka när man applicerar ett mörkt tema på en hemsida.
 
-
-
-### Om responsivitet {#responsivitet}
-
-Läs följande om responsivitet.
-
-1. Läs artikeln "[Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)" som ger dig en introduktion i tekniker kring ämnet.
-
-
+* [A Complete Guide to Dark Mode on the Web](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
+    * [Part 6 - Design Considerations](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#design)
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
 *(ca: 8-10 studietimmar)*
 
+### Övning {#ovning}
 
+1. Arbeta igenom artikeln [Sätt upp session i Pico](kunskap/satt-upp-session-i-pico) som beskriver hur du sätter upp sessionen i Pico. Detta tillåter oss att byta tema.
 
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg ett LESS-tema till kursen design](uppgift/bygg-ett-less-tema-till-kursen-design)".
+1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar-v2)". Du skall göra en analys av webbplatser och skriva en kort rapport. jobba enskilt eller i grupp. Spara allt i `me/portfolio`.
 
-1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 2.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+1. Utför uppgiften "[Skapa ett mörkt tema](uppgift/skapa-ett-morkt-tema)" där du jobbar vidare med ditt nuvarande tema och lägger till ett mörkt tema.
+
+1. Försäkra dig om att du har gjort `dbwebb publishpure me` och taggat din inlämning med version 4.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
 
@@ -112,8 +139,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vad tycker du om LESS och det sättet vi jobbar med LESS-moduler?
-* Är du bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad anser du om det?
-* Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
-* Kommentera ditt tema, hur kan man beskriva dess design och hade du några planer på "design" när du byggde ditt tema?
-* Vilken är din TIL för detta kmom? -->
+* Kommentera kort om skrivuppgiften, något som är värt att nämna från arbetet med den?
+* Vilket färgschema valde du till ditt tema och hur valde du att använda färgerna (mer eller mindre eller lika mycket av alla färger)?
+* Valde du att jobba med accentfärg och isåfall hur?
+* Hur valde du att lösa ditt dark theme? Gjorde du en kopia på ditt vanliga tema? Eller löste du det med imports?
+* Vilken är din TIL för detta kmom?
