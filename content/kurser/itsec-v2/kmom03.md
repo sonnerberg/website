@@ -112,7 +112,7 @@ Som extra arbete, om ni vill lära er mer om säkerhet inom applikationer och we
 
 Här är en video från LiveOverflow som kan ge dig insikt i hur dessa writeups videor kan se ut. De kan verka avancerade men om man försöker hänga med så får man god insikt i hur utmanande säkerhetsområdet kan vara.
 
-[VIDEO src=lG7U3fuNw3A width=700 title="XSS on Google Search - Sanitizing HTML in The Client?"]
+[YOUTUBE src="lG7U3fuNw3A" width="700" title="XSS on Google Search - Sanitizing HTML in The Client?"]
 
 Följande är tips på bra kanaler och på ett par spellistor som fokuserar på webbapplikationer.
 
