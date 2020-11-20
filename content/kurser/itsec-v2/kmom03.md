@@ -4,6 +4,7 @@ author:
     - lew
     - nik
 revision:
+    "2020-11-20": "(C, mos) Lade till tips om CTF-kanaler."
     "2020-11-16": "(B, mos) Läsanvisningar om hacker writeups."
     "2020-11-01": "(A, mos) Utkast inför ht20."
 ...
@@ -63,7 +64,7 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 6-10 studietimmar)*
 
 
-### Artiklar och studiematerial
+### Artiklar och studiematerial {#las}
 
 Läs och studera följande.
 
@@ -91,7 +92,7 @@ Mer läsanvisningar presenteras i samband med seminarierna.
 
 
 
-### Video
+### Video {#video}
 
 Titta på följande videor.
 
@@ -104,11 +105,24 @@ Titta på följande videor.
 1. (Extra) Vill du ha ännu mer OWASP så tittar du på konferenspresentationen "[GOTO 2019 • AppSec: From the OWASP Top Ten(s) to the OWASP ASVS • Jim Manico](https://www.youtube.com/watch?v=nvzMN5Z8DJI)" (51 minutes).
 
 
-<!--
 
-As extra work, if you want to learn more about web application security, you might want to check up on the concept of CTF, Capture The Flag. I suggest you checkout the playlist by John Hammond on “writeups on how to solve various CTFs in the category Web Security”.
+### Capture The Flag {#ctf}
 
--->
+Som extra arbete, om ni vill lära er mer om säkerhet inom applikationer och webb, så finns konceptet CTF - Capture The Flag, som små problemlösande utmaningar där man skall leta reda på flaggor som är gömda i ett system eller applikation. Videorna är Writeups till hur man löser specifika CTF:er och de är ofta både spännande, intressanta, lärorika och pedagogiskt upplagda.
+
+Här är en video från LiveOverflow som kan ge dig insikt i hur dessa writeups videor kan se ut. De kan verka avancerade men om man försöker hänga med så får man god insikt i hur utmanande säkerhetsområdet kan vara.
+
+[VIDEO src=lG7U3fuNw3A width=700 title="XSS on Google Search - Sanitizing HTML in The Client?"]
+
+Följande är tips på bra kanaler och på ett par spellistor som fokuserar på webbapplikationer.
+
+1. Första tipset är [kanalen LiveOverflow](https://www.youtube.com/c/LiveOverflowCTF).
+    * [Spellista: LiveOverflow Web Hacking](https://www.youtube.com/playlist?list=PLhixgUqwRTjx2BmNF5-GddyqZcizwLLGP)
+
+1. Det andra tipset är [kanalen John Hammond](https://www.youtube.com/user/RootOfTheNull)
+    * [Spellista: Web Security](https://www.youtube.com/playlist?list=PL1H1sBF1VAKX9Mz0UVU2eR7EdGmtb5XJK)
+
+Glöm inte att även andra typer av CTF:er kan ge stor behållning av allmänt tänk inom programutveckling och säkerhet.
 
 
 
@@ -131,7 +145,7 @@ Upplägget är enligt följande:
 
 > Du/Ni är ansvarig för systemdrift och utveckling av programvaran på företag (välj själva företagets inriktning). Ledningen har bett om en rapport som berättar vilka risker och vilka typer av attacker som de kan förvänta sig mot företagets system och vilka konsekvenser som lyckade attacker kan få. Företagsledningen vill veta hur Du/Ni har planerat företages skydd och eventuella åtgärder när attacker lyckas.
 
-Skriv en rapport på två sidor text, exklusive försättssida. Det går bra att avgränsa och bara svara på delar av ledningens fråga. Tid och utrymme i rapporten är begränsat så det är okey att utelämna vissa delar. Men se till att rapporten hänger ihop som en helhet och innehåller minst 5 relevanta referenser. Vill ni dyka ned i en specifik fråga så går det bra, vill ni täcka flera frågor mer översiktligt så går det också bra.
+Skriv en rapport på två till fyra sidor text, exklusive försättssida och exklusive referenssida. Det går bra att avgränsa och bara svara på delar av ledningens fråga. Tid och utrymme i rapporten är begränsat så det är okey att utelämna vissa delar. Men se till att rapporten hänger ihop som en helhet och innehåller minst 5 relevanta referenser. Vill ni dyka ned i en specifik fråga så går det bra, vill ni täcka flera frågor mer översiktligt så går det också bra.
 
 2) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?" Du skriver svaret på Canvas i samband med din inlämning.
 
