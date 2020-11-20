@@ -50,7 +50,7 @@ Vi kan nu nå storleken med `myObject.size.h` respektive `myObject.size.w`.
 Vad sägs om en metod `init()` för att initiera vårt objekt med värden? Vi kallar det *metoder* när funktioner är kopplade till ett objekt.
 
 
-Objekt-literalen har ingen [konstruktor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor), utan för att se till så letje objekt blir sitt egna kan vi använda `Object.create()` som använder sig av urmoder-objektet *Object* och skapar en ny instans av vårt egna objekt. Men innan vi löser det behöver vi kunna definiera objektets egenskaper. Vi lägger till en metod för att sätta objektets storlek och bakgrundsfärg:
+Objekt-literalen har ingen [konstruktor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor), utan för att se till så varje objekt blir sitt egna kan vi använda `Object.create()` som använder sig av urmoder-objektet *Object* och skapar en ny instans av vårt egna objekt. Men innan vi löser det behöver vi kunna definiera objektets egenskaper. Vi lägger till en metod för att sätta objektets storlek och bakgrundsfärg:
 
 ```javascript
 let myObject = {
