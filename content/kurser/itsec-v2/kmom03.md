@@ -106,13 +106,13 @@ Titta på följande videor.
 
 
 
-### Capture The Flag {#ctf}
+### Capture The Flag (CTF) {#ctf}
 
-Som extra arbete, om ni vill lära er mer om säkerhet inom applikationer och webb, så finns konceptet CTF - Capture The Flag, som små problemlösande utmaningar där man skall leta reda på flaggor som är gömda i ett system eller applikation. Videorna är Writeups till hur man löser specifika CTF:er och de är ofta både spännande, intressanta, lärorika och pedagogiskt upplagda.
+Som extra arbete, om ni vill lära er mer om säkerhet inom applikationer och webb, så finns konceptet CTF - Capture The Flag. Det handlar om små problemlösande utmaningar där man skall leta reda på flaggor som är gömda i ett system eller applikation. Videorna är Writeups till hur man löser specifika CTF:er och de är ofta både spännande, intressanta, lärorika och pedagogiskt upplagda.
 
-Här är en video från LiveOverflow som kan ge dig insikt i hur dessa writeups videor kan se ut. De kan verka avancerade men om man försöker hänga med så får man god insikt i hur utmanande säkerhetsområdet kan vara.
+Här är en video från LiveOverflow som kan ge dig insikt i hur dessa writeups videor kan se ut. Denna video är en writeup på en XSS injection i Googles sökmotor. Dessa writeups kan verka avancerade men om man försöker hänga med så får man god insikt i hur utmanande säkerhetsområdet kan vara.
 
-[YOUTUBE src="lG7U3fuNw3A" width="700" title="XSS on Google Search - Sanitizing HTML in The Client?"]
+[YOUTUBE src="lG7U3fuNw3A" width="700" caption="XSS on Google Search - Sanitizing HTML in The Client?"]
 
 Följande är tips på bra kanaler och på ett par spellistor som fokuserar på webbapplikationer.
 
