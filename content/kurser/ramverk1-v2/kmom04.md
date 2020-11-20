@@ -9,14 +9,6 @@ revision:
 Kmom04: Modul på Packagist
 ==================================
 
-[WARNING]
-
-**Översyn pågår**
-
-Kmomet är under översyn och eventuell uppdatering kan komma att ske.
-
-[/WARNING]
-
 Du har hittills jobbat med egen kod inuti en installation av ramverket. Du skall nu skapa en fristående modul av din kod och placera det i ett eget repo på GitHub. Du skall alltså lyfta bort koden från din redovisa-sida och placera allt som modulen behöver i ett eget repo som du publicerar på GitHub.
 
 Du skall sedan publicera repot som en PHP modul på Packagist. När det är klart kan du åter installera modulen i din redovisa-sida med hjälp av composer.
