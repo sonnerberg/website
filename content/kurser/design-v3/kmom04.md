@@ -62,6 +62,15 @@ Läs & Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+### Verktyg {#verktyg}
+
+Nedan är några verktyg/hemsidor som kan hjälpa er hitta färger att jobba ifrån.
+
+* [Coolors.co](https://coolors.co/) - The super fast color schemes generator
+* [MaterialUI - FlatUIColors](https://www.materialui.co/flatuicolors) - Material UI Colors (and tons more)
+* [FlatUIColors](https://flatuicolors.com/) - Flat colors (similar to materialui.com)
+* [Color Wheel - Adobe](https://color.adobe.com/) - Color Wheel, a color palette generator
+* [Web Gradients](https://webgradients.com) - Fresh Backgrounds Gradients
 
 ### Kurslitteratur  {#kurslitteratur}
 
