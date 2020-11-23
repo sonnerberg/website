@@ -187,6 +187,8 @@ Ni behöver också ha tillgång till era Azure credentials. Gå till settings f�
 
 - `AZURE_SUBSCRIPTION_ID`
 
+- `AZURE_TENANT`
+
 Om ni har krypterat filer med Ansible-vault kolla i README.md för hur ni läser dem i CircleCi.
 
 Nu borde ni vara redo att lägga till stegen i er CircleCi konfiguration för att driftsätta den senaste Docker imagen för Microblogen.
