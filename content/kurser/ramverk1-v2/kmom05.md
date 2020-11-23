@@ -8,14 +8,6 @@ revision:
 Kmom05: CI
 ==================================
 
-[WARNING]
-
-**Översyn pågår**
-
-Kmomet är under översyn och eventuell uppdatering kan komma att ske.
-
-[/WARNING]
-
 Tanken är att ge en bild av hur automatiserad testning och continuous integration (CI) kan fungera med en PHP modul som ligger publicerad på GitHub och Packagist.
 
 Vi fortsätter jobba med modulen vi publicerade på GitHub och Packagist i föregående kursmoment. Vi låter externa verktyg checka ut vår kod från GitHub och köra testsuiten via `make install test`. De externa verktygen kan samtidigt analysera koden ur olika kvalitetsaspekter.
