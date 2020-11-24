@@ -96,7 +96,7 @@ if ($_GET["action"] == "theme") {
         $_SESSION["theme"] = "dark";
     }
 
-    $url = "http://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
+    $url = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
     $url = preg_replace("/index.php\//", "", $url);
     header("Location: $url");
 }
@@ -109,7 +109,7 @@ Sen vill vi även kunna nollställa sessionen helt (`?action=session_destroy`), 
 ```php
 if ($_GET["action"] == "session_destroy") {
     session_destroy();
-    $url = "http://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
+    $url = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
     $url = preg_replace("/index.php\//", "", $url);
     header("Location: $url");
 }
