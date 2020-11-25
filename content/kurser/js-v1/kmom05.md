@@ -1,11 +1,7 @@
 ---
-author: mos
+author: lew
 revision:
-    "2018-11-26": (E, lew) Moved memory to extra.
-    "2017-10-10": (D, mos) Genomgång inför ht17.
-    "2016-03-15": (C, mos) Lade till videoserie med "Lär dig JavaScript".
-    "2015-01-19": (B, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
-    "2014-10-06": (A, mos) Första utgåvan för javascript1 kursen.
+    "2020-11-25": (A, lew) Genomgång inför ht20.
 ...
 Kmom05: DOM och events
 ==================================
@@ -40,7 +36,7 @@ Läs följande:
 
 
 
-###MDN {#mdn}
+### MDN {#mdn}
 
 Läs följande:
 
@@ -64,8 +60,6 @@ Läs följande:
 Titta på följande:
 
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
-
-1. Se JavaScript-gurun Douglas Crockford i slutet om historian om JavaScript: "[Crockford on JavaScript - Part 5: The End of All Things](https://www.youtube.com/watch?v=47Ceot8yqeI)".
 
 
 

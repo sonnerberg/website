@@ -1,13 +1,8 @@
 ---
-author: mos
+author: lew
 category: javascript
 revision:
-  "2015-08-27": (D, mos) Uppgraderad till dbwebb-cli version 2.
-  "2015-04-15": (C, mos) Cirkel innebär border-radius om 50%.
-  "2015-01-07": (B, mos) Skriv i redovisningstexten om du hoppar över 4.2.
-  "2014-10-06": (A, mos) Första utgåvan i samband med javascript1.
-updated: "2015-08-27 08:56:31"
-created: "2014-06-18 10:01:14"
+  "2020-11-25": (A, lew) Genomgång inför ht20.
 ...
 JavaScript, DOM och Events
 ==================================
@@ -22,7 +17,7 @@ Förkunskaper {#forkunskaper}
 
 Du kan en del om både JavaScript, HTML, CSS och hur de samverkar. Du kan grunderna i programmering med JavaScript och du har tidigare testat på att skapa objekt på en sida via JavaScript och du har prövat på att skapa event.
 
-Du har skapat din egen [sandbox](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram) för exempelprogram.
+Du har skapat din egen [sandbox](uppgift/sandbox-steg-1) för exempelprogram.
 
 
 
@@ -31,7 +26,7 @@ Introduktion och tips {#intro}
 
 Använd alltid MDN när du slår upp en funktion för att se vad den gör. Är du osäker så dubbelkollar du. Googla "MDN" följt av funktionens namn, så brukar träffen ligga bland de första.
 
-Använd forumet för att fråga hur du kan lösa en viss uppgift. Du kan visa din kod i forumet och du kan länka till din sida (om du publicerat den). Fråga om du hamnar i bekymmer.
+Använd chatten för att fråga hur du kan lösa en viss uppgift. Du kan visa din kod i kanalen och du kan länka till din sida (om du publicerat den). Fråga om du hamnar i bekymmer.
 
 Gör hela tiden små funktioner som du kan återanvända. Detta är en labb där du kan skapa små funktioner för varje liten del av lösningen. Små funktioner som är enkla att återanvända -- det kan löna sig i längden.
 
@@ -52,7 +47,7 @@ Använd din sandbox, kopiera den till katalogen `me/kmom05/dom` enligt följande
 
 ```bash
 # Ställ dig i kurskatalogen
-cp -ri me/kmom01/sandbox/* me/kmom05/dom/
+cp -r me/kmom01/sandbox/* me/kmom05/dom/
 ```
 
 
@@ -103,7 +98,7 @@ Avsluta med att skapa en funktion som hjälper dig att skriva ut följande via `
 3. Bredd och höjd på `#box1`-elementet.
 4. Positionen på `#box1`-elementet enligt `left, top`.
 
-Tips. Studera exemplet [`example/getSize/` i kursrepot](javascript1/repo/example/getSize).
+Tips. Studera exemplet [`example/getSize/` i kursrepot](js/repo/example/getSize).
 
 Tips. Använd följande för att hämta detaljer om ett objekt: `Window.getComputedStyle()`, `parseInt()`.
 
@@ -129,7 +124,7 @@ Uppgift 2. Eventhantering {#uppgift2}
 
 Fånga eventet för när webbläsarens fönster ändrar storlek. När det händer skall du alltid placera `#box1` i mitten av fönstret.
 
-Tips. Studera exemplet [`example/resizeEvent/` i kursrepot](javascript1/repo/example/resizeEvent).
+Tips. Studera exemplet [`example/resizeEvent/` i kursrepot](js/repo/example/resizeEvent).
 
 Tips: `Window.onresize`.
 
@@ -157,13 +152,13 @@ Skapa en CSS-klass som gör ett cirkulärt element. Du kan uppnå denna effekten
 
 När man klickar på tangenten `e` så skall alla element som har klassen `selected` växla mellan formen fyrkantig och cirkulär.
 
-Tips: `Document.getElementsByClassName()`, `NodeList`, Använd en for-loop för att loopa runt elementen i `Nodelist`. 
+Tips: `Document.getElementsByClassName()`, `NodeList`, Använd en for-loop för att loopa runt elementen i `Nodelist`.
 
 
 
 ###2.4 Fånga ett event från tangentbordet {#24}
 
-Skapa en funktion som tar ett element och förändrar dess storlek men behåller dess centrumposition. 
+Skapa en funktion som tar ett element och förändrar dess storlek men behåller dess centrumposition.
 
 Skapa en eventhanterare för tangentbordsnedtryckningar som förstorar elementet med 10px varje gång som tangenten `q` trycks ned.
 
@@ -202,13 +197,13 @@ Uppgift 3. Lägg till och ta bort element {#uppgift3}
 
 ###3.1 Duplicera element {#31}
 
-När man trycker på knappen `t` skall det skapas en kopia av alla element som är `selected`. Kopian skall placeras ut på en slumpmässig position, men hela elementet måste vara placerat innanför nuvarande storlek på fönster. Det nya objektet skall få en `z-index` som är 1 större än orginalet. 
+När man trycker på knappen `t` skall det skapas en kopia av alla element som är `selected`. Kopian skall placeras ut på en slumpmässig position, men hela elementet måste vara placerat innanför nuvarande storlek på fönster. Det nya objektet skall få en `z-index` som är 1 större än orginalet.
 
 Missa inte att lägga till eventhanteraren för att göra select/de-select av ett element.
 
 Skriv ut i `console.log()` hur många element som skapades.
 
-Tips: `Element.cloneNode`, `Node.appendChild`. Använd inte `document.getElementsByClassName` som ger en *live `NodeList`*, använd , `document.querySelectorAll` som ger en *icke live `NodeList`*. 
+Tips: `Element.cloneNode`, `Node.appendChild`. Använd inte `document.getElementsByClassName` som ger en *live `NodeList`*, använd , `document.querySelectorAll` som ger en *icke live `NodeList`*.
 
 
 
@@ -315,7 +310,7 @@ dbwebb validate dom
 dbwebb publish dom
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 Dubbelkolla att din me-sida innehåller resultatet från uppgiften.
 
@@ -325,7 +320,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
