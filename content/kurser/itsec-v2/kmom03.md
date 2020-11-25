@@ -4,6 +4,7 @@ author:
     - lew
     - nik
 revision:
+    "2020-11-25": "(E, mos) Förtydliga om redovisningen."
     "2020-11-20": "(C, mos) Lade till tips om CTF-kanaler."
     "2020-11-16": "(B, mos) Läsanvisningar om hacker writeups."
     "2020-11-01": "(A, mos) Utkast inför ht20."
@@ -147,7 +148,7 @@ Upplägget är enligt följande:
 
 Skriv en rapport på två till fyra sidor text, exklusive försättssida och exklusive referenssida. Det går bra att avgränsa och bara svara på delar av ledningens fråga. Tid och utrymme i rapporten är begränsat så det är okey att utelämna vissa delar. Men se till att rapporten hänger ihop som en helhet och innehåller minst 5 relevanta referenser. Vill ni dyka ned i en specifik fråga så går det bra, vill ni täcka flera frågor mer översiktligt så går det också bra.
 
-2) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?" Du skriver svaret på Canvas i samband med din inlämning.
+2) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?" Du skriver svaret på Canvas i samband med din inlämning. Välj att titta på filmen individuellt, eller tillsammans med din gruppkompis för rapporten.
 
 <!-- mer videor till denna spellistan? -->
 
@@ -158,7 +159,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Gör en gruppinlämning på Canvas, om ni jobbade i grupp och ladda upp rapporten som pdf, senast fredagen veckan efter att kmomet är avslutat. Svara på följande frågor i textfältet på Canvas:
+Gör en gruppinlämning på Canvas, om ni jobbade i grupp och ladda upp rapporten som pdf, senast fredagen veckan efter att kmomet är avslutat. Svara på följande frågor i textfältet på Canvas (ge ett svar som grupp, såg ni olika filmer så ger ni två svar på den delen):
 
 * Berätta vilken film du såg, lämna en länk till filmen om den finns på nätet och inte är med i spellistan ovan. Svara på "Vad driver en hacker och hur tänker en hacker?" och koppla till vad filmen berättade för dig. Skriv kortfattat om max 15 rader.
 * Summera, vilken är din/er TIL för detta kmom?
