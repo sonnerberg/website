@@ -117,9 +117,9 @@ Läs följande om responsivitet och bilder.
 
 ### Övningar {#ovningar}
 
-1. Arbeta igenom artikeln "[Cimage, hur fungerar det?](#)" som går igenom hur vi kan använda oss av verktyget Cimage för att jobba med våra bilder.
+1. Arbeta igenom artikeln "[Cimage, hur fungerar det?](kunskap/cimage-hur-fungerar-det)" som går igenom hur vi kan använda oss av verktyget Cimage för att jobba med våra bilder.
 
-1. Arbeta även igenom artikeln "[srcset, video och iframe - Hur kan vi göra det responsivt?](#)".
+1. Arbeta även igenom artikeln "[srcset, video och iframe - Hur kan vi göra det responsivt?](kunskap/hur-kan-vi-gora-det-responsivt)".
 
 ### Uppgifter {#uppgifter}
 
@@ -127,7 +127,7 @@ Läs följande om responsivitet och bilder.
 
 1. Gör uppgiften "[Bygg ett galleri](#)" där ni med hjälp av tidigare kunskap om grid och er nyfunna kunskap om bildhantering ska bygga ett responsivt galleri.
 
-1. Gör uppgiften "[Youtube-klipp i iframe](#)". Du skall via en iframe ladda in valfri video på din redovisningssidan för kmom05.
+1. Gör uppgiften "[Youtube-klipp i iframe](uppgift/youtube-i-iframe)". Du skall via en iframe ladda in valfri video på din redovisningssidan för kmom05.
 
 1. Försäkra dig om att du har gjort `dbwebb purepublish me` och taggat din inlämning med version 5.0.0 (eller högre) samt pushat ditt repo och dess taggar till GitHub.
 
