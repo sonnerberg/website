@@ -125,7 +125,7 @@ Läs följande om responsivitet och bilder.
 
 1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet-v2)". Du skall skriva en rapport, enskilt eller i grupp.
 
-1. Gör uppgiften "[Bygg ett galleri](#)" där ni med hjälp av tidigare kunskap om grid och er nyfunna kunskap om bildhantering ska bygga ett responsivt galleri.
+1. Gör uppgiften "[Bygg ett galleri](uppgift/bygg-ett-galleri)" där ni med hjälp av tidigare kunskap om grid och er nyfunna kunskap om bildhantering ska bygga ett responsivt galleri.
 
 1. Gör uppgiften "[Youtube-klipp i iframe](uppgift/youtube-i-iframe)". Du skall via en iframe ladda in valfri video på din redovisningssidan för kmom05.
 
