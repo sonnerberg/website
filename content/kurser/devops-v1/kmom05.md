@@ -22,13 +22,13 @@ Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på d
 
 [FIGURE src="img/devops/devops-security.png" caption="Hur det inte ska se ut när man kör devops."]
 
-Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stängt av ssh inloggning som root användare, vi har en ny användare i database bara för microbloggen, vi pushar inte AWS nycklarna till GitHub och vi sparar känslig information som behövs till CircleCi som hemlig miljövariabler. Nu ska vi gå vidare med att aktivt leta efter säkerhetsrisk.
+Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stängt av ssh inloggning som root användare, vi har en ny användare i database bara för microbloggen, vi pushar inte Azure credentials till GitHub och vi sparar känslig information som behövs till CircleCi som hemlig miljövariabler. Nu ska vi gå vidare med att aktivt leta efter säkerhetsrisk.
 
 
 
 ### Vad är DevSecOps {#devsecops}
 
-Målet med DevSecOps är att alla behöver tänka på och är ansvariga för säkerheten hos en produkt. Säkerhet behöver vara en del av hela utvecklingsprocessen. Mycket inom devops handlar om automation och där vill vi även ha med säkerheten, manuell kontroll av säkerhet ska vara ett undantag inte regeln. DevSecOps har fått ett eget namn för att det är först på senare år som man börjat med att få in säkerhetstänket, det var inte riktigt med början av devops. Läs [The “What” “How” and “Why” of DevSecOps](https://www.newcontext.com/what-is-devsecops/) och [What is DevSecOps?](https://www.atlassian.com/continuous-delivery/principles/devsecops) som tar upp lite olika delar av DevSecOps.
+Målet med DevSecOps är att alla behöver tänka på och är ansvariga för säkerheten hos en produkt. Säkerhet behöver vara en del av hela utvecklingsprocessen. Mycket inom devops handlar om automation och där vill vi även ha med säkerheten, manuell kontroll av säkerhet ska vara ett undantag inte regeln. DevSecOps har fått ett eget namn för att det är först på senare år som man börjat med att få in säkerhetstänket, det var med inte riktigt i början av devops. Läs [The “What” “How” and “Why” of DevSecOps](https://www.newcontext.com/what-is-devsecops/) och [What is DevSecOps?](https://www.atlassian.com/continuous-delivery/principles/devsecops) som tar upp lite olika delar av DevSecOps.
 
 Läs också sida 1-17 i [Securing Devops](http://tinyurl.com/usyps42) (länken går till en E-bok version) för en introduktion till Continuous Security.
 
@@ -36,13 +36,15 @@ Läs också sida 1-17 i [Securing Devops](http://tinyurl.com/usyps42) (länken g
 
 ### Test-driven security {#tds}
 
-Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja men vi jobbar ju inte med säkerhets så vi har inte koll på hur vi testar saker för säkerhet. Som tur är för oss finns det många projekt andra människor och företag har gjort som testar säkerhet i olika aspekter på olika system. Ni ska koppla på en mängd olika verktyg på CI/CD kedjan som utför tester på områden som man brukar testa.
+Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja men vi jobbar ju inte med säkerhets så vi har inte koll på hur vi testar vårt projekt för säkerhet. Som tur är för oss finns det många projekt andra människor och företag har gjort som testar säkerhet i olika aspekter på olika system. Ni ska koppla på en mängd olika verktyg på CI/CD kedjan som utför säkerhetstester.
 
 
 
 #### Docker {#docker}
 
-När det kommer till att göra Docker säkrare finns det väldigt mycket man kan göra, det finns flera olika långa dokument som går igenom vad man kan göra. T.ex. [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker/), ett av de längre dokumenten, och [OWASP Container security standard](https://github.com/OWASP/Container-Security-Verification-Standard), som tycker att CIS är för långt dokument. Ni behöver inte sätta er in i dem men om ni är intresserade rekommenderar jag OWASPs standard. Vi nöjer oss med att läsa OSWAP [Docker security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html). De har en bra sammanfattning av viktiga saker att tänka på. Vi gör några av sakerna för Microbloggen men de flesta uppfyller vi inte.
+När det kommer till att göra Docker säkrare finns det väldigt mycket man kan göra, det finns flera olika långa dokument som går igenom vad man kan göra. T.ex. [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker/), ett av de längre dokumenten, och [OWASP Container security standard](https://github.com/OWASP/Container-Security-Verification-Standard), som tycker att CIS är för långt dokument. Ni behöver inte sätta er in i dem men om ni är intresserade rekommenderar jag OWASPs standard.
+
+Vi nöjer oss med att läsa OSWAP [Docker security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html). De har en bra sammanfattning av viktiga saker att tänka på. Vi gör några av sakerna för Microbloggen men de flesta uppfyller vi inte.
 
 Läs också [Container security best practices](https://logz.io/blog/container-security-best-practices/) för en kort översikt av några saker att tänkta på när man jobbar med containrar i produktion. De pratar om Immutable deployment, alltså att bygga ny instance vid varje deploy och ta bort den gamla. Vår infrastructure är inte mogen nog för det. Vår monitoring är för simpel och vi har inte satt upp någon logging monitoring som kan analysera efter säkerhetsintrång.
 
@@ -50,11 +52,13 @@ Läs också [Container security best practices](https://logz.io/blog/container-s
 
 ##### Docker image security scanning {#docker_scan}
 
-Det finns några olika verktyg för att skanna Docker images, Docker runtime och inställningar i Docker host. Tanken var att vi skulle använda oss av något av de verktygen. Tyvärr finns det problem med alla jag testade som gjorde att de blir jobbigare att använda dem än vad vi får ut av det. Jag rekomenderar att läsa [Docker Image Security Scanning: What It Can and Can't Do](https://resources.whitesourcesoftware.com/blog-whitesource/docker-image-security-scanning), den nämner några verktyg för att skanna filer. Den nämner dock inte [Docker Bench Security](https://github.com/docker/docker-bench-security) vilket är Dockers egna verktyg för att skanna olika delar av Docker.
+Det finns några olika verktyg för att skanna Docker images, Docker runtime och inställningar i Docker host. Tanken var att vi skulle använda oss av något av de verktygen. Tyvärr finns det problem med alla jag testade som gjorde att de är jobbigare att använda dem än vad vi får ut av dem. 
+
+Vi får nöja oss med att läsa [Docker Image Security Scanning: What It Can and Can't Do](https://resources.whitesourcesoftware.com/blog-whitesource/docker-image-security-scanning), den nämner några verktyg för att skanna filer. Den nämner dock inte [Docker Bench Security](https://github.com/docker/docker-bench-security) vilket är Dockers egna verktyg för att skanna olika delar av Docker.
 
 Det är bra att känna till verktygen och om ni jobbar med Docker på fritiden eller senare i arbetslivet rekommenderar jag er att använda något verktyg.
 
- 
+
 <!-- ##### Docker Bench for Security {#bench}
 
 Docker har byggt ihop några skript som kollar basic säkerhet i Docker konfiguration och images. Projektet kallas för [Docker Bench Security](https://github.com/docker/docker-bench-security) och det kollar många av sakerna som tas upp dokumenten jag länkade ovanför. Docker Bench Security är en bra start för säkerhet i Docker men det är inte en fullstädning lösning.
@@ -91,18 +95,20 @@ https://github.com/freach/docker-image-policy-plugin whitelist docker images fö
 
 #### Dependency Scanning {#dep_scan}
 
-I vårt projekt använder vi oss av många externa paket både i Python koden för Microbloggen men även i Docker imagen. Man kan aldrig riktigt veta om ett paket man installera är säkert eller om det innehåller säkerhetsrisker. Här kommer Dependency scanning in i bilden. Dependency Scanning verktyg har oftast en stor databas som kontinuerligt uppdateras med paket som man vet innehåller kända säkerhetssårbarheter. Vi ska använda oss utav verktyget [Snyk](https://snyk.io/) som kan scanna Python paket men även Docker images.
+I vårt projekt använder vi oss av många externa paket både i Python koden för Microbloggen men även i Docker imagen. Man kan aldrig riktigt veta om ett paket man installera är säkert eller om det innehåller säkerhetsrisker. Här kommer Dependency scanning in i bilden. Dependency Scanning verktyg har oftast en stor databas som kontinuerligt uppdateras med paket som man vet innehåller kända säkerhetssårbarheter. Vi ska använda oss utav verktyget [Snyk](https://snyk.io/) som kan scanna Python paket och Docker images.
 
 
 
 ##### Snyk {#snyk}
 
 <!-- https://circleci.com/blog/adding-application-and-image-scanning-to-your-cicd-pipeline/ -->
-Skapa ett konto på [Snyk.io](https://snyk.io/) och koppla det till er Microblog på DockerHub. Ni kan koppla det till GitHub också men Snyk klara tyvärr inte av att hitta requirements filerna som ligger i `requirements` mappen. Snyk kan bara hitta `requirements.txt`. För att Snyk ska klara av att hitta alla paket vi använder i Produktion ska vi skanna i CircleCi istället.
+Skapa ett konto på [Snyk.io](https://snyk.io/). Vi kan koppla Snyk till Microblog repot på GitHub och DockerHub här, men blir det inte en del av vår CI kedja utan vi behöver logga in på Snyk i efterhand och kolla resultatet. Det vill vi inte, så vi ska använda oss av [Orbs i CircleCi](https://snyk.io/blog/automating-open-source-security-scanning-with-snyk-and-circleci/), mer specifikt [Snyks orb](https://github.com/snyk/snyk-orb) så att det blir ett steg i CI kedjan.
 
-Vi ska använda oss av [Orbs i CircleCi](https://snyk.io/blog/automating-open-source-security-scanning-with-snyk-and-circleci/), mer specifikt [Snyks orb](https://github.com/snyk/snyk-orb) för att skanna både våra Python paket och Docker paketen som ligger i en skapad image. Först behöver ni tillåta 3rd party Orbs i CircleCi. Gå till settings, Secutiry och klicka i `Yes, allow all members of my organization to publish dev orbs... `. Sen behöver ni hämta en API nyckel från Snyk. Gå tlll `settings`, `personal API token` och klicka `click to show`. Kopiera nyckeln och gå till CircleCi och settings för ert Microblog projekt. Skapa en ny miljövariabel som heter `SNYK_TOKEN` och sätt api nyckeln som värde. Nu kan vi uppdatera er CircleCi konfig.
+Först behöver ni tillåta 3rd party Orbs i CircleCi. Gå till settings, Security och klicka i `Yes, allow all members of my organization to publish dev orbs... `. Sen behöver ni hämta en API nyckel från Snyk. Gå tlll `settings`, `personal API token` och klicka `click to show`. Kopiera nyckeln och gå till CircleCi och settings för ert Microblog projekt. Skapa en ny miljövariabel som heter `SNYK_TOKEN` och sätt api nyckeln som värde. Nu kan vi uppdatera er CircleCi konfig.
 
-Om ni inte redan kör version 2.1 uppdatera till det och lägg till snyk som en orb.
+Snyk ska fungera så att det läser av dependency filer, `.requirements.txt` och en docker image i vårt fall, men det verkar inte funka så bra med virtuelle miljöer och .requirements.txt filer. Men vi kan få det att fungera.
+
+Om ni inte redan kör version 2.1 i er CircleCi konfig, uppdatera till det och lägg till snyk som en orb.
 
 ```
 version: 2.1
@@ -110,7 +116,14 @@ orbs:
     snyk: snyk/snyk@0.0.8
 ```
 
-Vi börjar med att lägga till så att Python paketen skannas. Snyk cli kollar vilka paket som är installerade och klarar egentligen inte av att kolla virtual environment. Men vi kan lurar Snyk. Jag lägger till ett nytt jobb som heter `snyk`.
+
+
+##### Python {#snyk-python}
+
+- run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV # här gör vi så att så att CircleCi automatisk laddar venv och då kollar Snyk har installerat i den.
+Vi börjar med att lägga till så att Python paketen skannas. Snyk cli kollar vilka paket som är installerade och klarar egentligen inte av att kolla virtual environment. Men vi kan lurar Snyk med raden `- run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV`.
+
+Jag lägger till ett nytt jobb som heter `snyk`.
 
 ```
 snyk:
@@ -125,20 +138,62 @@ snyk:
                 python3 -m venv venv
                 . venv/bin/activate
                 make install
-        - run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV # här gör vi så att så att CircleCi automatisk laddar venv och då kollar Snyk har installerat i den.
+        - run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV # här gör vi så att så att CircleCi automatisk laddar venv och då kollar Snyk vad vi har installerat i den.
         - snyk/scan
 ```
 
-Pusha upp konfigurationen och kolla att det går igenom. Glöm inte att lägga till Snyk i Workflows jobs.
+Pusha upp konfigurationen och kolla att det går igenom. Glöm inte att lägga till Snyk i Workflows jobs. När ni ser att det fungerar ska vi lägga till att skanna Docker imagen. 
 
-När ni ser att det fungerar ska vi lägga till att skanna Docker imagen. I ert job där ni skapar och pushar docker imagen till DockerHub, lägg till ett nytt steg efter att ni byggt imagen men innan ni publicerar den.
+
+
+##### Docker {#snyk-docker}
+
+I ert job där ni skapar och pushar docker imagen till DockerHub, lägg till ett nytt steg efter att ni byggt imagen men innan ni publicerar den.
 
 ```
 - snyk/scan:
     docker-image-name: $IMAGE_NAME
 ```
 
-Pusha konfigurationen och kolla att det går igenom. Ni borde inte få några varningar eller fel, jag fick i alla fall inte det. Om ni får det försök fixa dem och skriv om det i redovisningstexten.
+Pusha konfigurationen och kolla att det går igenom. Här fick jag en varning som jag inte lyckades lösa:
+
+```
+✗ Low severity vulnerability found in musl/musl-utils
+  Description: CVE-2020-28928
+  Info: https://snyk.io/vuln/SNYK-ALPINE312-MUSL-1042762
+  Introduced through: musl/musl-utils@1.1.24-r9, libc-dev/libc-utils@0.7.2-r3
+  From: musl/musl-utils@1.1.24-r9
+  From: libc-dev/libc-utils@0.7.2-r3 > musl/musl-utils@1.1.24-r9
+  Fixed in: 1.1.24-r10
+```
+
+Ge det gärna ett försök och om ni lyckas, skriv i er redovisningstext hur ni gjorde.
+
+Men nu har vi ett problem, bygget avbryts när Snyk hittar ett fel men vi har ingen lösning på felet. Som tur är finns det [konfigurationsfiler till Snyk](https://support.snyk.io/hc/en-us/articles/360007487097-The-snyk-file) där vi kan ignorera felet.
+
+Skapa filen `.snyk` i rooten av ert repo. Sen lägger vi följande i den:
+
+```
+version: v1.14.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-ALPINE312-MUSL-1042762:
+    - '*':
+        reason: no remediation
+        expires: 2021-06-01T00:00:00.000Z
+```
+
+Kolla under [Syntax i dokumentationen](https://support.snyk.io/hc/en-us/articles/360007487097-The-snyk-file) för en förklaring av innehållet.
+
+Nu behöver vi i circleci konfigurationen säga till Snyk att läsa in `.snyk`, det ska leta efter den automatisk men det funkar inte för mig.
+
+```
+- snyk/scan:
+    docker-image-name: $IMAGE_NAME
+    additional-arguments: "--policy-path=.snyk"
+```
+
+Nu borde er CI kedja gå igenom igen. Om ni får några andra fel i Snyk, försök lösa dem och skriv om det i er redovisningstext.
 
 
 
@@ -162,9 +217,11 @@ Om ni har kodrader som ni anser är false-positivs kan ni lägga `# nosec` som e
 skips: [<'list of tests'>]
 ```
 
-För att Bandit ska läsa konfigurationen kör Bandit med `bandit -c .bandit.yml -r app`. Om ni får några fel kan ni antingen fixa felet, lägga till `# nosec` eller hoppa över regeln helt. Analysera felet och gör ett aktivt val över vad som är en passande åtgärd på felet.
+För att Bandit ska läsa konfigurationen kör Bandit med `bandit -c .bandit.yml -r app`.
 
-Lägg till ett `bandit` som ett make target I Makefile som kör Bandit på `app` mappen. Gör sen så att Bandit är en del av testerna som körs i Dockerfile_test och som en del av CircleCi.
+Om ni får några fel kan ni antingen fixa felet, lägga till `# nosec` eller hoppa över regeln helt. Analysera felet och gör ett aktivt val över vad som är en passande åtgärd på felet.
+
+Lägg till `bandit` som ett make target I Makefile som kör Bandit på `app` mappen. Gör sen så att Bandit är en del av testerna som körs i Dockerfile_test och som en del av CircleCi.
 
 
 
@@ -193,7 +250,7 @@ Produktionsmiljön, CI/CD och molntjänsten vi använder kan vi också göra sä
 
 
 
-#### AWS {#aws}
+#### Azure {#azure}
 
 När det kommer till att säkra molnmiljön handlar det om att verifiera konfiguration istället för att testa tjänsten.
 
@@ -201,11 +258,9 @@ Vi borde kontrollera följande:
 
 - Att rätt brandväggsregler används i Security Groups.
 
-- Att systemen är up-to-date genom att kolla versionen på bas imagen vi använder som OS på servrarna (AMI, Amazon Machine Image).
+- Att systemen är up-to-date genom att kolla versionen på bas imagen vi använder som OS på servrarna.
 
-- Kontrollera rättigheterna användare har i IAM roller. Vi kan inte göra detta då vi har studentkonton, vi har inte tillgång till [Identity and Access Management (IAM)](https://console.aws.amazon.com/iam/home?#/home). Med det kan vi kontrollera vem som har rättigheter att skapa/ändra/radera resurser på AWS. Vi kan t.ex. skapa en ny användare som används av `gather_aws_instances.yml` playbooken och den användaren har bara rättigheter att läsa data från AWS. Då hade vi inte varit lika sårbara om vi hade råkat läcka AWS nycklarna.
-
-- Om vi använt oss av en RDS instans för databasen, skulle vi kollat att backup är rätt konfigurerat.
+- Kontrollera rättigheterna användare har. Vi kan inte göra detta då vi har studentkonton, vi har inte tillgång till [ROle based access controll (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview). Med det kan man kontrollera vem som har rättigheter att skapa/ändra/radera resurser. Vi skulle t.ex. kunna skapa en ny användare som används av `gather_vm_instances.yml` playbooken och den användaren har bara rättigheter att läsa data från Azure. Då hade vi inte varit lika sårbara om vi hade råkat läcka credentials.
 
 Det finns olika verktyg för att verifiera konfigurationer i AWS. AWS har ett eget verktyg som heter [Trusted Advisor](https://console.aws.amazon.com/trustedadvisor/home#/dashboard), men igen är vi begränsade för att vi har studentkonto och inte kan sätta upp IAM roller. Ett annat populärt open-source verktyg är [ScoutSuite](https://github.com/nccgroup/ScoutSuite) men det kräver en read-only IAM roll, så vi kan inte använda det heller.
 
