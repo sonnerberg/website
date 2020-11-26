@@ -2,17 +2,11 @@
 author:
     - aar
 revision:
+    "2020-11-26": "(B, aar) Upp putsad inför HT20."
     "2019-10-15": "(A, aar) Första versionen."
 ...
 Kmom05: DevSecOps
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på development och operations teams men även security behöver inkluderas för att det ska bli ett bra resultat. I detta kursmoment ska vi kolla på hur vi kan inkludera säkerhet i hela utvecklingsprocessen, så att alla blir ansvariga för säkerhet i ett projekt.
 
@@ -28,7 +22,9 @@ Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stä
 
 ### Vad är DevSecOps {#devsecops}
 
-Målet med DevSecOps är att alla behöver tänka på och är ansvariga för säkerheten hos en produkt. Säkerhet behöver vara en del av hela utvecklingsprocessen. Mycket inom devops handlar om automation och där vill vi även ha med säkerheten, manuell kontroll av säkerhet ska vara ett undantag inte regeln. DevSecOps har fått ett eget namn för att det är först på senare år som man börjat med att få in säkerhetstänket, det var med inte riktigt i början av devops. Läs [The “What” “How” and “Why” of DevSecOps](https://www.newcontext.com/what-is-devsecops/) och [What is DevSecOps?](https://www.atlassian.com/continuous-delivery/principles/devsecops) som tar upp lite olika delar av DevSecOps.
+Målet med DevSecOps är att alla behöver tänka på och är ansvariga för säkerheten hos en produkt. Säkerhet behöver vara en del av hela utvecklingsprocessen. Mycket inom devops handlar om automation och där vill vi även ha med säkerheten, manuell kontroll av säkerhet ska vara ett undantag inte regeln. DevSecOps har fått ett eget namn för att det är först på senare år som man börjat med att få in säkerhetstänket, det var med inte riktigt i början av devops.
+
+Läs [The “What” “How” and “Why” of DevSecOps](https://www.newcontext.com/what-is-devsecops/) och [What is DevSecOps?](https://www.atlassian.com/continuous-delivery/principles/devsecops) som tar upp lite olika delar av DevSecOps.
 
 Läs också sida 1-17 i [Securing Devops](http://tinyurl.com/usyps42) (länken går till en E-bok version) för en introduktion till Continuous Security.
 
@@ -36,7 +32,7 @@ Läs också sida 1-17 i [Securing Devops](http://tinyurl.com/usyps42) (länken g
 
 ### Test-driven security {#tds}
 
-Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja men vi jobbar ju inte med säkerhets så vi har inte koll på hur vi testar vårt projekt för säkerhet. Som tur är för oss finns det många projekt andra människor och företag har gjort som testar säkerhet i olika aspekter på olika system. Ni ska koppla på en mängd olika verktyg på CI/CD kedjan som utför säkerhetstester.
+Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja, men vi jobbar inte med säkerhets så vi har inte kunskapen att utföra säkerhetstester på vårt projekt. Som tur är finns det många projekt andra människor och företag har gjort som testar säkerhet i olika aspekter på olika system. Ni ska koppla på en mängd olika verktyg på CI/CD kedjan som utför säkerhetstester.
 
 
 
@@ -102,9 +98,17 @@ I vårt projekt använder vi oss av många externa paket både i Python koden f�
 ##### Snyk {#snyk}
 
 <!-- https://circleci.com/blog/adding-application-and-image-scanning-to-your-cicd-pipeline/ -->
-Skapa ett konto på [Snyk.io](https://snyk.io/). Vi kan koppla Snyk till Microblog repot på GitHub och DockerHub här, men blir det inte en del av vår CI kedja utan vi behöver logga in på Snyk i efterhand och kolla resultatet. Det vill vi inte, så vi ska använda oss av [Orbs i CircleCi](https://snyk.io/blog/automating-open-source-security-scanning-with-snyk-and-circleci/), mer specifikt [Snyks orb](https://github.com/snyk/snyk-orb) så att det blir ett steg i CI kedjan.
+Skapa ett konto på [Snyk.io](https://snyk.io/). Vi kan koppla Snyk till Microblog repot på GitHub och DockerHub här, men då blir det inte en del av vår CI kedja utan vi behöver logga in på Snyk i efterhand och kolla resultatet. Det vill vi inte, så vi ska använda oss av [Orbs i CircleCi](https://snyk.io/blog/automating-open-source-security-scanning-with-snyk-and-circleci/), mer specifikt [Snyks orb](https://github.com/snyk/snyk-orb) så att det blir ett steg i CI kedjan.
 
-Först behöver ni tillåta 3rd party Orbs i CircleCi. Gå till settings, Security och klicka i `Yes, allow all members of my organization to publish dev orbs... `. Sen behöver ni hämta en API nyckel från Snyk. Gå tlll `settings`, `personal API token` och klicka `click to show`. Kopiera nyckeln och gå till CircleCi och settings för ert Microblog projekt. Skapa en ny miljövariabel som heter `SNYK_TOKEN` och sätt api nyckeln som värde. Nu kan vi uppdatera er CircleCi konfig.
+Först behöver ni tillåta 3rd party Orbs i CircleCi.
+
+- Gå till settings, Security och klicka i `Yes, allow all members of my organization to publish dev orbs... `. 
+
+- Sen behöver ni hämta en API nyckel från Snyk. Gå tlll `settings`, `personal API token` och klicka `click to show`.
+
+- Kopiera nyckeln och gå till CircleCi och settings för ert Microblog projekt.
+
+- Skapa en ny miljövariabel som heter `SNYK_TOKEN` och sätt api nyckeln som värde. Nu kan vi uppdatera er CircleCi konfig.
 
 Snyk ska fungera så att det läser av dependency filer, `.requirements.txt` och en docker image i vårt fall, men det verkar inte funka så bra med virtuelle miljöer och .requirements.txt filer. Men vi kan få det att fungera.
 
@@ -116,12 +120,13 @@ orbs:
     snyk: snyk/snyk@0.0.8
 ```
 
+Vi börjar med att lägga till så att Python paketen skannas.
 
 
-##### Python {#snyk-python}
 
-- run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV # här gör vi så att så att CircleCi automatisk laddar venv och då kollar Snyk har installerat i den.
-Vi börjar med att lägga till så att Python paketen skannas. Snyk cli kollar vilka paket som är installerade och klarar egentligen inte av att kolla virtual environment. Men vi kan lurar Snyk med raden `- run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV`.
+###### Python {#snyk-python}
+
+Snyk cli kollar vilka paket som är installerade och klarar egentligen inte av att kolla virtual environment. Men vi kan lurar Snyk med raden `- run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV` i CircleCi konfigurationen.
 
 Jag lägger till ett nytt jobb som heter `snyk`.
 
@@ -146,7 +151,7 @@ Pusha upp konfigurationen och kolla att det går igenom. Glöm inte att lägga t
 
 
 
-##### Docker {#snyk-docker}
+###### Docker {#snyk-docker}
 
 I ert job där ni skapar och pushar docker imagen till DockerHub, lägg till ett nytt steg efter att ni byggt imagen men innan ni publicerar den.
 
@@ -185,7 +190,7 @@ ignore:
 
 Kolla under [Syntax i dokumentationen](https://support.snyk.io/hc/en-us/articles/360007487097-The-snyk-file) för en förklaring av innehållet.
 
-Nu behöver vi i circleci konfigurationen säga till Snyk att läsa in `.snyk`, det ska leta efter den automatisk men det funkar inte för mig.
+Nu behöver vi i circleci konfigurationen säga till Snyk att läsa in `.snyk`, den ska leta efter den automatisk men det funkar inte för mig.
 
 ```
 - snyk/scan:
@@ -240,7 +245,7 @@ docker run --net host owasp/zap2docker-weekly zap-baseline.py -t http://0.0.0.0:
 
 Fixa minst 5 valfria varningar från Zap, beskriv vilka och vad ni gjorde i redovisningstexten. Det lättaste sättet att fixa dem är att logga in på load balancer instansen och ändra i Nginx konfigurationen, ladda om Nginx och köra Zap igen för att se om varningen försvann.
 
-Egentligen skulle vi lagt till Zap i CircleCi men vi har ingen staging miljö att köra den mot. Så vi får nöja oss med att köra det manuellt innan push. Lägg till ett make target i Makefilen som kör Zap mot er Microblog, döp det till `Zap`.
+Egentligen skulle vi lagt till Zap i CircleCi men vi har ingen staging miljö att köra den mot. Så vi får nöja oss med att köra det manuellt innan push. Lägg till ett make target i Makefilen som kör Zap mot er Microblog, döp det till `zap`.
 
 
 
@@ -260,35 +265,44 @@ Vi borde kontrollera följande:
 
 - Att systemen är up-to-date genom att kolla versionen på bas imagen vi använder som OS på servrarna.
 
-- Kontrollera rättigheterna användare har. Vi kan inte göra detta då vi har studentkonton, vi har inte tillgång till [ROle based access controll (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview). Med det kan man kontrollera vem som har rättigheter att skapa/ändra/radera resurser. Vi skulle t.ex. kunna skapa en ny användare som används av `gather_vm_instances.yml` playbooken och den användaren har bara rättigheter att läsa data från Azure. Då hade vi inte varit lika sårbara om vi hade råkat läcka credentials.
+- Kontrollera rättigheterna användare har. Vi kan inte göra detta då vi har studentkonton, vi har inte tillgång till [Role based access controll (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview). Med det kan man kontrollera vem som har rättigheter att skapa/ändra/radera resurser. Vi skulle t.ex. kunna skapa en ny användare som används av `gather_vm_instances.yml` playbooken och den användaren har bara rättigheter att läsa data från Azure. Då hade vi inte varit lika sårbara om vi hade råkat läcka credentials.
 
-Det finns olika verktyg för att verifiera konfigurationer i AWS. AWS har ett eget verktyg som heter [Trusted Advisor](https://console.aws.amazon.com/trustedadvisor/home#/dashboard), men igen är vi begränsade för att vi har studentkonto och inte kan sätta upp IAM roller. Ett annat populärt open-source verktyg är [ScoutSuite](https://github.com/nccgroup/ScoutSuite) men det kräver en read-only IAM roll, så vi kan inte använda det heller.
+Det finns olika verktyg för att verifiera konfigurationer i molntjänster, men igen är vi begränsade för att vi har studentkonto och inte kan sätta roller och kontrollera subscriptions. Ett populärt open-source verktyg är [ScoutSuite](https://github.com/nccgroup/ScoutSuite) men vi kan inte använda det.
+
+Vi nöjer oss med att veta att vi borde göra det, för att vi inte kan på grund av begränsningarna med studentkonton.
 
 
 
 ##### Security Groups {#sg}
 
-Vi ska förbättra våra security groups, som det ser ut nu kan vem som helst koppla upp sig till de olika portarna som är öppna, det är ju onödigt när vi vet vilka IP-addresser alla servrarna har. Vi kan inte göra det på ett bra sätt som det ser ut nu, för att vi kör rollen för SGs före vi skapar servrarna i Ansible. Nu behöver vi skapa servrarna först så att vi kan använda deras IP när vi skapar SGs. Ändra i Ansible så att Security Groups rollen körs efter Provision rollen. Det kan ni göra genom att ta bort `roles/provision/meta` mappen och sen lägga till `security_groups` i `roles` listan efter `provision` i filen `provision.yml`.
+Vi kan och ska förbättra våra security groups, som det ser ut nu kan vem som helst koppla upp sig till de olika portarna som är öppna på våra servrar. Det är onödigt när vi vet vilka IP-addresser alla servrarna har. Vi kan inte göra det på ett bra sätt som det ser ut nu, för att vi kör rollen för SGs före vi skapar servrarna i Ansible. Vi behöver skapa servrarna först så att vi kan använda deras IP när vi skapar SGs.
 
-I `roles/security_groups/vars/main.yml` hittar ni all security groups, vilka portar som är öppna och vilka IP som kan koppla upp sig mot dem. Nu borde alla IP vara `0.0.0.0/0`, nu vill vi bara att det är SSH portarna och port 80 och 443 på load balancern som ska ha det så. Övriga portar behöver bara specifik servrar koppla upp sig till. T.ex. är det bara load balancern som behöver kunna koppla sig till app serverns port 8000 och det är bara app servern som behöver kunna koppla upp sig till databasens port 3306. Gå igenom filen och byt ut alla `0.0.0.0/0` mot specifika IP addresser (förutom för SSH och port 80 och 443 på LB). Ni kan använda `{{ groups['<host>'][0] }}/32` för att sätta en IP address.
+Ändra i Ansible så att Security Groups rollen körs efter Provision rollen. Det kan ni göra genom att ta bort `roles/provision_instances/meta` mappen och sen lägga till `gather_vm_instances` och `security_groups` i `roles` listan efter `provision_instances` i filen `provision_instances.yml`. Vi behöver lägga till servrarna i hosts innan vi kan skapa SGs så att vi vet vilka ip addresser de har.
 
-Med detta har vi begränsat var personer kan personer kan utnyttja säkerhetshål för att ta sig in i våra servrar.
+I `roles/security_groups/vars/main.yml` hittar ni all security groups, vilka portar som är öppna och vilka IP som kan koppla upp sig mot dem. Nu borde alla IP vara `0.0.0.0/0`, vi vill bara att det är SSH portarna och port 80 och 443 på load balancern som ska ha det så. Övriga portar ska bara specifika servrar koppla upp sig till. T.ex. är det bara load balancern som behöver kunna koppla sig till app serverns port 8000 och det är bara app servern som behöver kunna koppla upp sig till databasens port 3306.
+
+Gå igenom `main.yml` och byt ut alla `0.0.0.0/0` mot specifika IP addresser (förutom för SSH och port 80 och 443 på LB). Ni kan använda `{{ groups["<host>"][0] }}/32` för att sätta en IP address.
+
+Med detta har vi begränsat var personer kan utnyttja säkerhetshål för att ta sig in i våra servrar.
 
 
 
 #### Produktionsmiljön {#prod_miljo}
 
-Det finns en hel del vi kan göra med servrarna i produktion. SSH är en viktig del i vårt arbetsflöde, Ansible behöver kunna SSH:a in till varje server för att konfigurera dem och vi gör det för att felsöka och testa saker. Dock så är vår SSH setup inte särskilt säker, vi har dock stängt av root och password login vilket är steg 1. I vår struktur kan man SSH:a in till varje server från vilken IP som helst. En säkrar struktur än vad vi har är att ha en deployer/access node som fungerar som ingång till hela produktions infrastrukturen. Då skapar vi en till instans som endast är till för att ge tillgång till resten av servrarna, vi ger den en security group så att man kan SSH:a till den från vilken IP som helst. På övriga servrar sätter vi security groups som bara tillåter SSH kopplingar från deployer nodens IP. Vi kommer inte att skapa en deployer node då vi har begränsat med kredit på AWS men med en större budget hade vi gjort detta.
+Det finns en hel del vi kan göra med servrarna i produktion. SSH är en viktig del i vårt arbetsflöde, Ansible behöver kunna SSH:a in till varje server för att konfigurera dem och vi gör det för att felsöka och testa saker. Dock så är vår SSH setup inte särskilt säker, även om vi har stängt av root och password login vilket är steg 1.
+
+I vår struktur kan man SSH:a in till varje server från vilken IP som helst. En säkrar struktur än vad vi har är att ha en bastion/access node som fungerar som ingång till hela produktions infrastrukturen. Då hade vi skapat en till instans som endast är till för att ge tillgång till resten av servrarna. Servern hade haft en security group så att man kan SSH:a till den från vilken IP som helst. På övriga servrar sätter vi security groups som bara tillåter SSH kopplingar från bastion nodens IP. Vi kommer inte att skapa en bastion node då vi har begränsat med resurser men med en större budget hade vi gjort detta. Ni kan läsa lite mer om det på [What is a bastion host?](https://www.learningjournal.guru/article/public-cloud-infrastructure/what-is-bastion-host-server/)
 
 
 
 ##### SSH {#ssh}
 
-När vi ändå är inne på SSH kopplingar så kan vi konfigurera säkrare kopplingar SSH på servrarna. Vi börjar med att använda [Mozillas ssh_scan](https://github.com/mozilla/ssh_scan) verktyg för att skanna SSH konfigurationen på våra servrar. Kör följande kommando lokalt på er dator.
+När vi ändå är inne på SSH kopplingar så kan vi konfigurera säkrare kopplingar på servrarna. Vi börjar med att använda [Mozillas ssh_scan](https://github.com/mozilla/ssh_scan) verktyg för att skanna SSH konfigurationen på våra servrar. Kör följande kommando lokalt på er dator.
 
 ```
 docker run -it mozilla/ssh_scan /app/bin/ssh_scan -t <domain>
 ```
+
 Alla servrar borde ha samma SSH konfiguration så det räcker att köra den mot er load balancer. Man får rätt mycket text utskriven men det viktiga är vad den skriver för `recommendation`, jag fick följande:
 
 ```
@@ -298,19 +312,25 @@ Alla servrar borde ha samma SSH konfiguration så det räcker att köra den mot 
 ],
 ```
 
-Så scannern tycker att jag borde ta bort gamla algoritmer som inte längre är säkra. Istället för att in och leta efter vilka algoritmer vi använder och hur vi stänger av dem så kan tänker jag att vi använder oss Mozillas openSSH moderna konfigurationer. På [guidelines/openssh](https://infosec.mozilla.org/guidelines/openssh) finns det färdiga konfigurations filer för säkrare SSH.
+Scannern tycker att jag borde ta bort gamla algoritmer som inte längre är säkra. Istället för att in och leta efter vilka algoritmer vi använder och hur vi stänger av dem så kan tänker jag att vi använder oss Mozillas moderna openSSH konfigurationer. På [guidelines/openssh](https://infosec.mozilla.org/guidelines/openssh) finns det färdiga konfigurations filer för säkrare SSH.
 
-Kopiera konfigurationen för `Modern (OpenSSH 6.7+)`, SSH:a in på load balancern och ersätt ssh konfigurationen i `/etc/ssh/sshd_config` med den nya. Lägg till raden `AllowUsers deploy` och ändra följande rad `Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO` till `Subsystem sftp  /usr/lib/openssh/sftp-server -f AUTHPRIV -l INFO`. Filvägen till sftp-servern är fel, och då klagar Ansible om det inte är konfigurerat rätt.
+- Kopiera konfigurationen för `Modern (OpenSSH 6.7+)`, SSH:a in på load balancern och ersätt ssh konfigurationen i `/etc/ssh/sshd_config` med den nya.
+
+- Lägg till raden `AllowUsers deploy`.
+
+- Ändra följande rad `Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO` till `Subsystem sftp  /usr/lib/openssh/sftp-server -f AUTHPRIV -l INFO`. Filvägen till sftp-servern är fel, och då klagar Ansible om det inte är konfigurerat rätt.
 
 Kör ssh_scan igen och kolla att ni inte har några rekommendationer kvar. Uppdatera Ansible rollen `10-first-minutes` så att den nya SSH konfigurationen sätts på alla servrar.
 
-Det finns givetvis sätt att göra SSH ännu säkrare, det är inget vi ska göra men det kan vara bra att ha på sina egna servrar hemma om man har det. Tjänsten [Duo](https://duo.com/docs/loginduo) har multi-factor authentication för SSH. Så när någon försöker logga in via SSH till er server får ni en notifikation och behöver t.ex. godkänna det i mobilen.
+Det finns givetvis sätt att göra SSH ännu säkrare, det är inget vi ska göra men det kan vara bra att ha på sina egna servrar hemma om man har det. T.ex. har tjänsten [Duo](https://duo.com/docs/loginduo) multi-factor authentication för SSH. Så när någon försöker logga in via SSH till er server får ni en notifikation och behöver godkänna det i mobilen.
 
 
 
 #### Hur säker är vår CI/CD pipeline? {#cicd}
 
-Det är inte bara vår kod som behöver vara säker, även vår CI/CD infrastruktur är en säkerhetsrisk. Någon kan ta sig in i CircleCi's system och komma åt våra olika API nycklar t.ex. och på så sätt få tillgång till vår kod. Läs [How Secure Is Your CICD Pipeline?](https://dzone.com/articles/how-secure-is-your-cicd-pipeline-1) som går igenom vad man ska tänka på när man sätter upp sin CI/CD pipeline och kopplar ihop olika tjänster.
+Det är inte bara vår kod som behöver vara säker, även vår CI/CD infrastruktur är en säkerhetsrisk. Någon kan ta sig in i CircleCi's system och komma åt våra olika API nycklar t.ex. och på så sätt få tillgång till vår kod.
+
+Läs [How Secure Is Your CICD Pipeline?](https://dzone.com/articles/how-secure-is-your-cicd-pipeline-1) som går igenom vad man ska tänka på när man sätter upp sin CI/CD pipeline och kopplar ihop olika tjänster.
 
 
 
