@@ -47,7 +47,7 @@ Följande verktygstips gäller bildhantering. Kika över listan och se vilka som
 
 * [Inkscape](https://inkscape.org/en/) är ett fritt program för att rita och hantera bilder i vektorgrafik såsom SVG. Vill du ha bilder att utgå ifrån så finns en bildbank med SVG-bilder på [OpenClipart](https://openclipart.org/https://openclipart.org/).
 
-* Ett bra snapshot-verktyg för skärmdumpar vill du integrera i din verktygslåda. Du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation eller på innehållet i en webbsida. Det är smidigt om det är kopplat till ett enklare ritverktyg vilket gör det enkelt att rita på din snap. Det finns mängder av alternativ så som [Shutter](http://shutter-project.org/), [Gyazo](https://gyazo.com/en) och den jag personligen använder, [Lightshot](https://app.prntscr.com/en/index.html). 
+* Ett bra snapshot-verktyg för skärmdumpar vill du integrera i din verktygslåda. Du vill ha ett verktyg där du enkelt kan ta en snapshot på hela eller delar av skärmen eller på en specifik applikation eller på innehållet i en webbsida. Det är smidigt om det är kopplat till ett enklare ritverktyg vilket gör det enkelt att rita på din snap. Det finns mängder av alternativ så som [Shutter](http://shutter-project.org/), [Gyazo](https://gyazo.com/en) och den jag personligen använder, [Lightshot](https://app.prntscr.com/en/index.html).
 
 ### Var kan jag hitta bilder? {#var-letar-man}
 
@@ -81,7 +81,7 @@ I sektionen [Bilder](guide/design-med-html5-och-css3/bilder) använder vi olika 
 
 ### Webbplatsers laddningstid {#artikel}
 
-[FIGURE src="image/snapht18/pagespeed_dbwebb.png?w=w3" caption="Webbplatsen dbwebb.se mäts med verktyget PageSpeec Insights."]
+[FIGURE src="image/snapht18/pagespeed_dbwebb.png?w=w3" caption="Webbplatsen dbwebb.se mäts med verktyget PageSpeed Insights."]
 
 Studera följande för att förbereda dig för uppgiften där du skall analysera webbplatsers laddningstid.
 
@@ -91,7 +91,7 @@ Studera följande för att förbereda dig för uppgiften där du skall analysera
 
 1. Hur snabbt en webbplats laddas är en del av de algoritmer som bestämmer hur Google visar en webbplats i SERPEN (webbplatsens plats i sökresultatet).
  Läs bloggartikeln "[Using page speed in mobile search ranking](https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html)" som berättar om en uppdatering av sökalgoritmerna som relaterar till webbplatsernas laddningstid.
- 
+
 1. Kika sedan snabbt på Googles "[PageSpeed Insights Rules](https://developers.google.com/speed/docs/insights/rules)" som ger råd för att snabba upp sidor. Artikeln är markerad som _deprecated_ (2018) men ger ändå vägledning i vilka delar som kan optimeras på en webbplats.
 
 1. Som extraläsning, vid intresse och om du har tid, så kan du läsa "[Google Developers: Why Performance Matters](https://developers.google.com/web/fundamentals/performance/why-performance-matters/)" som ger en översikt i varför man bör jobba med prestanda av en webbplats.
@@ -119,7 +119,9 @@ Läs följande om responsivitet och bilder.
 
 1. Arbeta igenom artikeln "[Cimage, hur fungerar det?](kunskap/cimage-hur-fungerar-det)" som går igenom hur vi kan använda oss av verktyget Cimage för att jobba med våra bilder.
 
-1. Arbeta även igenom artikeln "[srcset, video och iframe - Hur kan vi göra det responsivt?](kunskap/hur-kan-vi-gora-det-responsivt)".
+1. Arbeta även igenom artikeln "[Hur kan vi göra bilder och video responsivt](kunskap/hur-kan-vi-gora-det-responsivt)".
+
+
 
 ### Uppgifter {#uppgifter}
 
@@ -127,9 +129,11 @@ Läs följande om responsivitet och bilder.
 
 1. Gör uppgiften "[Bygg ett galleri](uppgift/bygg-ett-galleri)" där ni med hjälp av tidigare kunskap om grid och er nyfunna kunskap om bildhantering ska bygga ett responsivt galleri.
 
-1. Gör uppgiften "[Youtube-klipp i iframe](uppgift/youtube-i-iframe)". Du skall via en iframe ladda in valfri video på din redovisningssidan för kmom05.
+1. Gör uppgiften "[Youtube-klipp i iframe](uppgift/youtube-i-iframe)". Du skall via en iframe ladda in valfri video på din redovisningssida för kmom05.
 
 1. Försäkra dig om att du har gjort `dbwebb purepublish me` och taggat din inlämning med version 5.0.0 (eller högre) samt pushat ditt repo och dess taggar till GitHub.
+
+
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------

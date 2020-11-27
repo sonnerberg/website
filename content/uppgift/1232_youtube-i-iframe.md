@@ -14,18 +14,22 @@ Youtube i iframe
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln [Hur kan vi göra det responsivt?](kunskap/hur-kan-vi-gora-det-responsivt) som går igenom hur du kan göra en iframe med video responsiv.
+Du har jobbat igenom artikeln [Hur kan vi göra bilder och video responsivt?](kunskap/hur-kan-vi-gora-det-responsivt) som bland annat går igenom hur du kan göra en iframe med video responsiv.
+
+
 
 Krav {#krav}
 -----------------------
 
+1. Lägg till ditt favorit youtube-klipp som en embed på redovisningssidan för kmom05.
 
-
-### Övrigt {#ovrigt}
+1. Se till att videon skalas om när webbläsaren förstoras eller förminskas.
 
 1. Dina `.scss` filer ska gå igenom lint med hjälp utav `npm run lint`.
 
 1. Dubbelkolla att allt fungerar på studentservern.
+
+
 
 Tips från coachen {#tips}
 -----------------------
