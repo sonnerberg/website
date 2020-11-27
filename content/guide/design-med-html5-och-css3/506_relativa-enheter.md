@@ -20,4 +20,4 @@ Här ser vi till att alltid sätta den maximala bredden för bland annat bilder 
 
 I exempel-mappen i katalogen `example/responsiva-bilder` finns exempel på hur man kan använda relativa enheter tillsammans med bilder och på kommande delar i guiden.
 
-Ytterligare exempel finns i exempel-katalogen under `example/figure` och där främst i filen `example/figure/figure-responsive.html`.
+<!-- Ytterligare exempel finns i exempel-katalogen under `example/figure` och där främst i filen `example/figure/figure-responsive.html`. -->
