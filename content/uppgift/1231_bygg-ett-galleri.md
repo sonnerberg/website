@@ -21,7 +21,7 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom artikeln "[Cimage - Hur fungerar det?](kunskap/cimage-hur-fungerar-det)" som går igenom verktyget Cimage.
 
-Du har jobbat igenom artikeln "[srcset, video och iframe - Hur kan vi göra det responsivt?](kunskap/hur-kan-vi-gora-det-responsivt)" som går igenom hur vi kan ladda in bilder på ett responsivt sätt.
+Du har jobbat igenom artikeln "[Hur kan vi göra bilder och video responsivt?](kunskap/hur-kan-vi-gora-det-responsivt)" som går igenom hur vi kan ladda in bilder på ett responsivt sätt.
 
 Du har jobbat igenom uppgiften "[Bygg om din rapport-sida med CSS-Grid](uppgift/bygg-om-din-rapport-css-grid)" där du har skapat ett grid för din rapport-sida.
 

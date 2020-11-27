@@ -7,18 +7,15 @@ revision:
 Kmom05: Bilder
 ====================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Låt oss ägna ett kursmoment åt att testa runt med bilder, bildverktyg och bildformat samt hur vi publicerar bilderna på en webbplats, inklusive responsivitet.
 
 Vi skall skapa ett galleri i vår portfolio, det känns rimligt och ger oss en möjlighet att fortsätta öva på CSS-grid men även att jobba med bilder och responsivtet.
 
+[FIGURE src=image/design-v3/barack.png?width=50% caption="Ett exempel på galleri (Barack Obama's Instagram)" class="center"]
+
 När man pratar om bilders kvalité så kan man beakta olika format på bilder och hur dessa format kan optimeras. Två av de vanligaste formaten är JPEG och PNG. JPEG passar bra för foton där man kan justera kvalitén genom att ta bort delar av bildens exakthet. PNG lämpar sig för datoranimerade bilder, linjegrafik, skärmdumpar och i de fall där man inte vill att bildens exakthet ändras. Man bör välja rätt bildformat, det underlättar att behålla kvalitén på bilden. Andra bildformat som används i webbsammanhang är GIF och det lite nyare formatet WEBP.
+
+[FIGURE src=image/design-v3/cimage/area.png?width=50% caption="Beskärning" class="right"]
 
 Bilder kan optimeras, det finns _lossless_ och _lossy_ optimering där skillnaden om bildens exakthet påverkas eller ej. När man pratar om _lossless_ så är det optimering som inte påverkar bildens exakthet, alla delar av bilden är fortfarande kvar och det som optimeras är till exempel hur bilden lagras på fil. Optimering med tekniker som är _lossy_ innebär att man tar bort delar av bildens exakthet och ändå försöker nå så att användaren uppfattar bilden som tydlig.
 
