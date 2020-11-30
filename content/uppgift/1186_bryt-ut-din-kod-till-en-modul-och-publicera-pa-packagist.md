@@ -86,6 +86,11 @@ rsync -av vendor/ditt-vendor-namn/modul/view view/
 
 Se till att namnge dina filer så att de inte skriver över andra filer som användaren kan ha installerat i sin `me/redovisa`.
 
+<!--
+Tydliggör att alla delar skall flyttas, ipvalidator, geo, väder och så vidare.
+src-mappen i me/redovisa blir alltså tom.
+-->
+
 
 
 Krav {#krav}
@@ -107,11 +112,13 @@ Krav {#krav}
 
 1. Gör en `dbwebb publish redovisa` och kontrollera att redovisa fungerar på studentservern.
 
-1. Committa me/redovisa och tagga (4.0.\*).
+1. Committa me/redovisa och tagga 4.0.\*.
 
 1. Modulen me/module taggar du med 1.0.\*.
 
 1. Pusha de båda repona till GitHub, inklusive taggarna. Dubbelkolla att Packagist har senaste versionen av modulen.
+
+<!-- Badge för packagist skall finnas på både modulen och me/redovisa README. -->
 
 
 
