@@ -117,4 +117,6 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 * Vilket ramverk undersökte du och hur hanterar det ramverket paketering, moduler och versionshantering?
 * Vilken är din TIL för detta kmom?
 
-Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.
+PS. Lägg in länken till modulen i din redovisningstext.
+
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i GitHub issues.

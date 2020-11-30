@@ -113,4 +113,4 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 * Har du någon reflektion kring hur det är att jobba med externa tjänster (ipvalidering, kartor, väder)?
 * Vilken är din TIL för detta kmom?
 
-Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i GitHub issues.

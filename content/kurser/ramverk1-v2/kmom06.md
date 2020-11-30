@@ -9,14 +9,6 @@ revision:
 Kmom06: Databasdrivna modeller
 ==================================
 
-[WARNING]
-
-**Översyn pågår**
-
-Kmomet är under översyn och eventuell uppdatering kan komma att ske.
-
-[/WARNING]
-
 Vi skall titta på klasser i modelllagret och utöka vår ramverksstruktur med formulärhantering via klasser och metoder samt databasdrivna modellklasser där vi använder oss av designmönstret Active Record.
 
 Vi skall använda en extern modul för htmlformulär och vi skall använda en extern modul för databashanteringen.
@@ -164,4 +156,4 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 * Hur kan man jobba med enhetstestning när man scaffoldat fram en CRUD likt Book, vill du utvecklar några tankar kring det?
 * Vilken är din TIL för detta kmom?
 
-Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i GitHub issues.

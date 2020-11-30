@@ -111,7 +111,9 @@ Lägg extra tid på skrivandet i momentet då redovisningstexten är aningen mer
 * Fann du någon nivå på kodtäckning och kodkvalitet för ramverket och dess moduler?
 * Vilken är din TIL för detta kmom?
 
-Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i forumet.
+PS. Lägg in länken till modulen i din redovisningstext.
+
+Har du frågor eller funderingar som du vill ha besvarade så ställer du dem i GitHub issues.
 
 <!--
 1. Artikel om BDD, Behat, Mink samt phpunit mink.

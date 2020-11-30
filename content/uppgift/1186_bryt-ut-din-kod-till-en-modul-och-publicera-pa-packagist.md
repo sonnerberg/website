@@ -118,7 +118,10 @@ Krav {#krav}
 
 1. Pusha de båda repona till GitHub, inklusive taggarna. Dubbelkolla att Packagist har senaste versionen av modulen.
 
-<!-- Badge för packagist skall finnas på både modulen och me/redovisa README. -->
+<!--
+Badge för packagist skall finnas på både modulen och me/redovisa README.
+
+-->
 
 
 
