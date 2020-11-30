@@ -45,7 +45,7 @@ Innan du börjar, se till att du har en stabil kodbas i din `me/redovisa` som ä
 
 Du skall bryta ut din egen kod relaterad till uppgiften "En webbtjänst för att visa väderprognos och historiskt väder".
 
-Skapa en ny katalog under `me/module`, eller något katalognamn som du själv väljer. Gör ett git-repo av katalogen flytta över de delar som enbart skall ligga i modulen.
+Skapa en ny katalog under `me/module`. Gör ett git-repo av katalogen flytta över de delar som enbart skall ligga i modulen.
 
 Kanske har du filer i någon av följande kataloger som måste flyttas till modulen? Eler kan något ligga kvar i redovisa-installationen?
 
@@ -107,9 +107,11 @@ Krav {#krav}
 
 1. Gör en `dbwebb publish redovisa` och kontrollera att redovisa fungerar på studentservern.
 
-1. Committa alla filer och lägg till en tagg (4.0.\*) på redovisa. Modulen taggar du bäst du vill, men följ semantisk versionshantering.
+1. Committa me/redovisa och tagga (4.0.\*).
 
-1. Pusha redovisa/modulen till GitHub, inklusive taggarna. Dubbelkolla att Packagist har senaste versionen av modulen.
+1. Modulen me/module taggar du med 1.0.\*.
+
+1. Pusha de båda repona till GitHub, inklusive taggarna. Dubbelkolla att Packagist har senaste versionen av modulen.
 
 
 

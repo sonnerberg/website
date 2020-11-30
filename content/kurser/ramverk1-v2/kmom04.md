@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2020-11-30": "(D, mos) Förtydliga hur taggning skall ske."
     "2018-11-22": "(C, mos) Övning nu klar."
     "2018-11-19": "(B, mos) Tidigare kmom06, nu kmom04 i ramverk1 v2. Övnings saknas."
     "2017-09-11": "(A, mos) Preliminär release, artikel saknas."
@@ -93,9 +94,9 @@ Gör följande övning, de förbereder dig inför uppgiften.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Bryt ut din kod till en modul och publicera på Packagist](uppgift/bryt-ut-din-kod-till-en-modul-och-publicera-pa-packagist)". Alla ändringar sparar du i Koden uppdaterar du i `me/redovisa`.
+1. Gör uppgiften "[Bryt ut din kod till en modul och publicera på Packagist](uppgift/bryt-ut-din-kod-till-en-modul-och-publicera-pa-packagist)". Koden för modulen sparar du i `me/module`.
 
-1. Pusha och tagga din redovisa, allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med kursmomentet.
+1. Pusha och tagga din me/redovisa, allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med kursmomentet.
 
 
 
