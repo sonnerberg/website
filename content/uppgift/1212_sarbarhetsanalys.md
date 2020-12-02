@@ -1,9 +1,9 @@
 ---
 author:
-    - lew
     - nik
 category: itsec
 revision:
+    "2020-12-02": (B, nik) Uppdaterad inför ht20
     "2019-10-11": (A, lew, aurora) First edition.
 ...
 
@@ -19,43 +19,60 @@ Uppgiften går ut på att analysera en applikation efter sårbarheter.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har deltagit i föreläsningarna som tillhör kursmomentet. 
+Du har deltagit i föreläsningarna som tillhör kursmomentet.
 
+Du har deltagit i föreläsningarna om OWASP och föreläsningen "Fantastiska sårbarheter och var man hittar dem".
 
 Analys {#analys}
 -----------------------
 
-Er analys ska innehålla en summering, metodbeskrivning av hur ni gjort, en rankad lista över risker, samt en sammanfattning på vilka som är de högst prioriterade sårbarheterna (gärna i tabellform). Listan över risker och sårbarheter ska ni rangordna och er rankning bör även motiveras.
+Ni ska analysera applikationen utifrån de metoder och tekniker som nämns under föreläsningarna. Utgå ifrån att det är blackbox testing, dvs att ni inte har tillgång till koden. Bortse ifrån säkerhetsbrister som baseras på hur miljön är uppsatt, t.ex. HTTPS i en lokal utvecklingsmiljö.
 
-Listan bör innehålla följande egenskaper för varje risk/sårbarhet:
+Applikationen jobbar emot en SQLite-databas, om ni av någon anledning behöver återställa den så är det bara kopiera över den ifrån example igen.
 
-* Risk/sårbarhet (namn)
-* Beskrivning
-* Allvarlighetsgrad
-* Sårbarhetsklassificering
-* Prioritet/rank
+Det finns en LaTeX mall tillgänglig [här](https://www.overleaf.com/read/jmbktjvfxvff) som ni kan använda. Länken är till en read-only version, för att skapa er egna behöver ni vara inloggade och sen trycker ni "Menu" och sen "Copy Project". Det går givetvis att använda valfritt program, så länge man uppfyller nedanstående krav:
+
+1. Försättsblad med titel, ert namn och datum.
+1. Innehållsförteckning.
+1. Sammanfattning av innehållet i analysen.
+1. Målet med analysen.
+1. En beskrivning av systemet och dess funktionalitet/flöde (kan uppfyllas i nästkommande del).
+1. En metodbeskrivning av hur ni gått tillväga för att identifiera sårbarheter.
+1. En lista med de sårbarheter ni identifierat
+    * Risk/sårbarhet (namn)
+    * Beskrivning av sårbarheten
+    * Allvarlighetsgrad (Sannolikhet \* Risk)
+    * Estimerad kostnad att åtgärda (i timmar)
+    * OWASP-kategori
+1. En överskådlig tabell som presenterar ovanstående lista tillsammans med en rangordning och motiveringen till rangordningen.
 
 Metodbeskrivningen bör visa hur ni har gått tillväga, t.ex. om ni använt attackträd, use-cases, eller någon annan metodik. Era eventuella attackträd eller visualiseringar ska också tas med i rapporten.
 
-Krav {#krav}
------------------------
+### Applikationen
 
 Börja med att kopiera in mappen med applikationen till er me-katalog:
 
 ```bash
 # Flytta till kurskatalogen
-$ rsync -ravd example/kmom03-app/ me/kmom03/app/
+$ rsync -ravd example/bank-app me/kmom04/
 ```
 
-Starta applikationen med `docker-compose up -d`.
+Starta applikationen med `docker-compose up -d`. Du kan också välja att köra den lokalt med `npm install && npm start`.
 
-1. Analysera applikationen efter sårbarheter enligt de metoder som nämndes under föreläsningen ([se här](https://bth.instructure.com/files/201806)).
+### Lämna in
 
-1. Döp analysen till `me/kmom03/analys.pdf`.
+1. Analysera applikationen efter sårbarheter enligt de metoder som nämndes under föreläsningen ([se här](https://bth.instructure.com/courses/3047/files/364210)).
 
-
+1. Döp analysen till `me/kmom04/analys.pdf`.
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb publish kmom03
+$ dbwebb publish me
 ```
+
+Tips från coachen {#tips}
+-----------------------
+
+Gå igenom applikationen som en vanlig användare och bygg upp en visuell bild av hur flödet är. Det är lättare att leta säkerhetsbrister när man vet var de troligen finns.
+
+Lycka till och hojta till i Discord om du behöver hjälp!
