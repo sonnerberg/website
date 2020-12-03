@@ -14,92 +14,66 @@ Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är b
 
 [/WARNING]
 
-<!--stop-->
+Som avslutning på kursen så ska vi kolla över två områden som lätt hamnar i skymundan. Vi börjar med att kolla på begreppet "the final touch" som är bra att vara medveten om i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
+
+<!--more-->
+
+Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Vi pratar om webbplatsens design och känslan den ger när man tittar på den. Det kan vara de små sakerna som gör det, *the final touch*.
+
+Det är lätt att stirra sig blind på sin egen sida och det är därför viktigt att kolla på den utifrån en kritisk synvinkel. För att hjälpa med detta så kommer vi att analysera vår egen portfolio i jämförelse med tre andra sidor inom samma kategori, personsidor kan vi kalla det.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-<!-- Labbmiljön  {#labbmiljo}
----------------------------------
-
-*(ca: 2-4 studietimmar)*
-
-Installera följande.
-
-1. Installera labbmiljön för Node.js och npm via "[Installera nodejs och npm](labbmiljo/node-och-npm)".
-
-
 
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
-
-
 ### Kurslitteratur  {#kurslitteratur}
-
-TBA
 
 Läs följande:
 
-1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Det ger dig en bakgrund i tankar och hur man gör layout och komponerar ihop designen i en webbsida.
+1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
-    * Kap 1: Layout and Composition
-
-
+    * Kap 3: Texture
+    * Kap 1: Layout and Composition (repetera kapitlet, främst delarna med Balance, Unity, Emphasis)
 
 ### Design med HTML5 och CSS3  {#guide}
 
-TBA
-
 1. Läs igenom följande sektion i guiden "[Design med HTML5 och CSS3](guide/design-med-html5-och-css3)".
-    * [Responsivitet](guide/design-med-html5-och-css3/responsivitet)
+    * [Design](guide/design-med-html5-och-css3/design)
 
-I sektionen [Responsivitet](guide/design-med-html5-och-css3/responsivitet) tittar vi på hur vi med hjälp av media queries kan anpassa en webbplats för både stora och små enheter.
+I sektionen [Design](guide/design-med-html5-och-css3/design) tittar vi tillbaka på tidigare sektioner och använder vår kunskap för att skapa en helhet med ett stort fokus på detaljen.
 
+1. Det har även tillkommit en del i guiden för förra kursmomentet som kan hjälpa er med tillgänglighet.
+    * [Bilder - Highlight av bilder utan alt-attributet](guide/design-med-html5-och-css3/highlight-av-bilder)
 
+### Designelement och designprinciper {#design}
 
-### SASS {#sass}
+Gå igenom följande material om designelement och designprinciper, det ger dig en grund i vad det handlar om. Du behöver veta det för att utföra uppgiften.
 
-Kom igång med SASS genom att läsa runt och eventuellt skriva något enklare testprogram som du kan spara under `me/kmom02/sass`. Det finns ett exempelprogram under `example/less` som du kan kopiera och utgå ifrån.
+1. Titta igenom videos i spellistan [Design -- principer och element](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oz7aoBkk-oEn4xzGbtqxU). Där finns samlat ett par korta videor som visualiserar, exemplifierar och förklarar designelement och designprinciper. Titta där för att få en uppfattning om begreppen och se hur de kan användas. I videoserien finns även en föreläsning om "Elements & Principles of Art" (överkurs) som kan vara intressant att titta på i sammanhanget.
 
-1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)". Artikeln ger en introduktion till CSS preprocessorer och behandlar skillnader och likheter mellan LESS och SASS som är två olika preprocessorer till CSS.
+1. Studera ett par olika designprinciper och se hur designelement kan användas för att uppnå dessa principer. Materialet finns på webbplatsen [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/) (oklart om länken fungerar) och en offline-kopia av webbplatsen finns i dokumentet [vl.pdf](article/vl.pdf).
 
-1. I kursen använder vi SASS så bekanta dig med [SASS](https://sass-lang.com/guide) och se vad du kan göra. SASS är uppbyggd som ett programmeringsspråk, så kika runt bland de manualer som finns men fokusera på "SASS Basics" för att lära dig hur du skriver SASS konstruktioner.
+1. Läs mer om designprinciper i "[Design Elements & Principles](https://www.canva.com/learn/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 designprinciper.
 
-### SASS moduler {#sassmodul}
-
-Följande moduler kommer du att använda när du bygger ditt tema i den kommande uppgiften.
-
-1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
-
-1. Titta snabbt och översiktligt på [Font Awesome](https://fontawesome.com/) och se vilka ikoner man kan skapa med dess hjälp. Leta reda på webbsidan som visar hur man installerar Font Awesome och se om du kan hitta hur man installerar det som en LESS-modul med hjälp av pakethanteraren npm. Vi kommer att göra detta senare i uppgiften.
-
-
-
-### Om responsivitet {#responsivitet}
-
-Läs följande om responsivitet.
-
-1. Läs artikeln "[Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)" som ger dig en introduktion i tekniker kring ämnet.
-
-
+1. Hämta inspiration till designeffekter och designelement via exempel från CodePen. Här är en [CodePen sökning på "effects"](http://codepen.io/search/pens?q=effects) som ger en god start in bland exempel.
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
 *(ca: 8-10 studietimmar)*
 
-
-
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg ett LESS-tema till kursen design](uppgift/bygg-ett-less-tema-till-kursen-design)".
+1. Gör uppgiften "[Utvärdera designprinciper som webbplatser använder sig av](uppgift/utvardera-webbplatsers-designprinciper-v2)". Du skall skriva en rapport, enskilt eller i grupp.
 
-1. Försäkra dig om att du har gjort `dbwebb publishpure redovisa` och taggat din inlämning med version 2.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+1. Gör uppgiften "[Tillgänglighet med Google Lighthouse](uppgift/tillganglighet-med-google-lighthouse)". Du ska kolla på hur din sida presterar i tillgänglighet enligt Google Lighthouse.
+
+1. Försäkra dig om att du har gjort `dbwebb purepublish me` och taggat din inlämning med version 6.0.0 (eller högre) samt pushat ditt repo och dess taggar till GitHub.
 
 
 
@@ -112,8 +86,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vad tycker du om LESS och det sättet vi jobbar med LESS-moduler?
-* Är du bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad anser du om det?
-* Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
-* Kommentera ditt tema, hur kan man beskriva dess design och hade du några planer på "design" när du byggde ditt tema?
-* Vilken är din TIL för detta kmom? -->
+* Hur känns det att tänka i termer av designelement och designprinciper?
+* Finns det något speciellt du vill lyfta fram från uppgiften "Utvärdera designprinciper som webbplatser använder sig av". Vad tar du med dig från den uppgiften?
+* Gjorde du några uppdateringar till din egen sida utifrån vad du kom fram till i analysen?
+* Har du en uppfattning om "the final touch" och vad det kan vara i sammanhanget webbdesign?
+* Vilken är din TIL för detta kmom?
