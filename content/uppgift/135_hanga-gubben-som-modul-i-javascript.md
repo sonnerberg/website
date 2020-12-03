@@ -2,6 +2,7 @@
 author: mos
 category: webbprogrammering
 revision:
+  "2020-12-03": (D, lew) Genomgång inför ht20.
   "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
   "2014-11-19": (B, mos) Lagade länken till svg-bilden.
   "2014-10-27": (A, mos) Första utgåvan i samband med kursen javascript1.
@@ -34,7 +35,7 @@ Introduktion {#intro}
 
 Hänga gubben, i detta sammanhanget, är ett gissningsspel där det slumpas fram ett ord (från en lista av ord) och sedan gissar spelaren vilka bokstäver som finns i ordet. Vid varje felaktig gissning ritas delar av en bild ut och när alla delarna är utritade så har spelaren förlorat. Om spelaren lyckas gissa alla bokstäver i ordet så vinner spelaren.
 
-Det finns ett spel som du skall använda som förlaga, det visar hur spelet fungerar. Det är ett [Hangman-spel, byggt i PHP](kod-exempel/hangman/playhangman.php). Du kan alltid kika på källkoden om du tror du kan hämta ledtrådar till hur spelet ser ut.
+Det finns ett spel som du kan använda som förlaga, det visar hur spelet fungerar. Det är ett [Hangman-spel, byggt i PHP](kod-exempel/hangman/playhangman.php). Du kan alltid kika på källkoden om du tror du kan hämta ledtrådar till hur spelet ser ut.
 
 Som hjälp till ditt spel så har du en bild och en grund till hur du döljer och visar delar av bilden. Hjälpen är strukturerad som en JavaScript-modul `Hangman` och det visar också hur tanken är att du bygger ditt spel -- som en modul i JavaScript.
 
@@ -45,20 +46,20 @@ Som hjälp till ditt spel så har du en bild och en grund till hur du döljer oc
 Krav {#krav}
 -----------------------
 
-1\. Ta en kopia av din sandbox (från kmom01) och spara den i din kurskatalog under `javascript1/me/kmom06/hangman`.
+1\. Ta en kopia av din sandbox (från kmom01) och spara den i din kurskatalog under `js/me/kmom06/hangman`.
 
 ```bash
 # Gå till kurskatalogen
 cd me
-cp -ri kmom01/sandbox/* kmom06/hangman/
+cp -r kmom01/sandbox/* kmom06/hangman/
 ```
 
 2\. Kopiera hjälpkoden som visar hur du döljer och visar delar av bilden. Kopiera både HTML-koden (inklusive SVG-bilden som ligger i HTML-dokumentet) och koden för JavaScriptet. Filerna finns i din katalog `example/hangman`, du kan kopiera dem därifrån.
 
 ```bash
 # Gå till kurskatalogen
-cp -i example/hangman/hangman-inline-svg.html me/kmom06/hangman/index.html
-cp -i example/hangman/hangman.js me/kmom06/hangman/js/hangman.js
+cp example/hangman/hangman-inline-svg.html me/kmom06/hangman/index.html
+cp example/hangman/hangman.js me/kmom06/hangman/js/hangman.js
 ```
 
 Nu bör du ha ett fungerande exempel att utgå ifrån. Se till så du har rätt sökväg till filen main.js.
