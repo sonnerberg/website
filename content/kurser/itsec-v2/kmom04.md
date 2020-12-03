@@ -49,7 +49,7 @@ Läs &amp; Studera  {#lasanvisningar}
 * Läs artikeln om riskanalys, [Texten hittar du här](/kursmaterial/itsec/doc/riskanalys.pdf).
 * Material kring Penetration Studies finns tillgängligt på Canvas [här](https://bth.instructure.com/courses/3047/files/364211)
 
-Försvarsmakten har en "[Hot-, risk- och sårbarhetsanalys](/kursmaterial/itsec/FOIR3349.pdf)" som är något mer utförlig än vad vi planeras göra i denna kurs. Men det kan vara intressant att kolla på för att se hur en myndighet kan jobba med ämnet.
+Försvarsmakten har en "[Hot-, risk- och sårbarhetsanalys](https://www.foi.se/rest-api/report/FOI-R--3349--SE)" som är något mer utförlig än vad vi planeras göra i denna kurs. Men det kan vara intressant att kolla på för att se hur en myndighet kan jobba med ämnet. De har även en [modell](https://www.foi.se/rest-api/report/FOI-R--3288--SE) för sårbarhetsanalyser som kan vara intressant att kolla på.
 
 Uppgifter  {#uppgifter}
 -------------------------------------------
