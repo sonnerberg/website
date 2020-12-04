@@ -7,13 +7,6 @@ revision:
 Kmom06: Tillgänglighet och prestanda
 ====================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Som avslutning på kursen så ska vi kolla över två områden som lätt hamnar i skymundan. Vi börjar med att kolla på begreppet "the final touch" som är bra att vara medveten om i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
 <!--more-->
@@ -21,6 +14,10 @@ Som avslutning på kursen så ska vi kolla över två områden som lätt hamnar 
 Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Vi pratar om webbplatsens design och känslan den ger när man tittar på den. Det kan vara de små sakerna som gör det, *the final touch*.
 
 Det är lätt att stirra sig blind på sin egen sida och det är därför viktigt att kolla på den utifrån en kritisk synvinkel. För att hjälpa med detta så kommer vi att analysera vår egen portfolio i jämförelse med tre andra sidor inom samma kategori, personsidor kan vi kalla det.
+
+[FIGURE src=image/snapht16/design-van-gogh.jpg?w=w3 caption="Tavla Starry Night ([Stjärnenatt i Saint-Rémy](https://sv.wikipedia.org/wiki/Stj%C3%A4rnenatt)) av Van Gogh, 1889, används ofta i undervisning av Art & Design Principles."]
+
+Vi kommer även att kolla på hur vi kan förbättra vår sida sett ifrån tillgänglighet, "accessibility" som det heter på engelska. Vi använder oss utav verktyget Google Lighthouse där vi siktar på att nå 100 på samtliga sidor.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -59,6 +56,16 @@ Gå igenom följande material om designelement och designprinciper, det ger dig 
 1. Läs mer om designprinciper i "[Design Elements & Principles](https://www.canva.com/learn/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 designprinciper.
 
 1. Hämta inspiration till designeffekter och designelement via exempel från CodePen. Här är en [CodePen sökning på "effects"](http://codepen.io/search/pens?q=effects) som ger en god start in bland exempel.
+
+### Tillgänglighet {#tillganglighet}
+
+Gå igenom följande material om tillgänglighet, MDN erbjuder en liten mjukare läsning medans W3 är utförliga guidelines. Det finns även två verktyg som kan hjälpa dig, tillsammans med Google Lighthouse vi använder i uppgiften.
+
+1. "[What is accessibility - MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)" erbjuder en kort introduktion till begreppet "accessibility".
+
+1. "[Web Content Accessibility Guidelines (WCAG)](#)" är W3s guidelines kring "accessibility". Som vanligt när det gäller W3 så är det ganska utförligt, men det är bra att veta att det finns.
+
+1. Ett annat bra verktyg att använda på sin sida är [Toptal Colorblind Web Page Filter](https://www.toptal.com/designers/colorfilter/) som tillåter dig att se hur sidan ser ut med olika typer av färgblindhet. Det kan vara bra att använda på sin sida så man ser att inga färger får dålig kontrast eller överlag få ett hum om hur sidan kan uppfattas av andra.
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
