@@ -7,12 +7,12 @@ category:
     - kubernetes
     - mysql
 revision:
-    "2020-12-02": (A, moc) Skapad inför HT2020.
+    "2020-12-03": (A, moc) Skapad inför HT2020.
 ...
 
 Mysql i Kubernetes {#intro}
 =======================================================
-Vi läste tidigare att det inte är så bra att köra database i K8s, men vi gör det ändå för att öva på stateful applikationer. Vi ska använda PersistentVolumeClaim för att få stateful data åt databasen. Det är inte säkert egentligen då vi förlorar all data om noderna går ner. Om vi har gjort detta i verkligheten hade vi kopplat datan till en Azure Blob Storage också.
+Vi läste tidigare att det inte är så bra att köra en databas i K8s, men vi gör det ändå för att öva på stateful applikationer. Vi ska använda PersistentVolumeClaim för att få stateful data åt databasen. Det är inte säkert egentligen då vi förlorar all data om noden går ner. Om vi har gjort detta i verkligheten hade vi också kopplat vår data till en molntjänst eller server.
 
 <!--more-->
 
@@ -43,7 +43,7 @@ data:
   DB_PASSWORD: <password-string>
 ```
 
-Aktivera dem via din master nod med kubectl.
+Aktivera dem i kubectl.
 ```
 kubectl apply -f mysql-secrets.yml
 
@@ -98,7 +98,7 @@ spec:
       storage: 5Gi
 ```
 
-Vi skapar en Volym med 5 gig och `ReadWriteOnce` så at bara en nod kan använda volymen.
+Vi skapar en Volym med 5 gig och `ReadWriteOnce` så at bara en nod skall kunna använda volymen.
 
 ```
 kubectl apply -f mysql-pv.yml
