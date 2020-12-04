@@ -31,6 +31,7 @@ echo -n "micropassw" | base64
 ```
 
 Skapa en fil, `mysql-secrets.yml`.
+
 ```
 ---
 apiVersion: v1
@@ -44,6 +45,7 @@ data:
 ```
 
 Aktivera dem i kubectl.
+
 ```
 kubectl apply -f mysql-secrets.yml
 
@@ -65,8 +67,11 @@ DB_PASSWORD:    34 bytes
 ROOT_PASSWORD:  29 bytes
 ```
 
+
+
 Persisten data med PersistentVolumeClaim {#volym}
 --------------------------------------------------------
+
 Skapa filen `mysql-pv.yml`.
 
 ```
@@ -108,8 +113,11 @@ NAME             STATUS   VOLUME            CAPACITY   ACCESS MODES   STORAGECLA
 mysql-pv-claim   Bound    mysql-pv-volume   5Gi        RWO            manual         66s
 ```
 
+
+
 Mysql deployment {#deploy}
 --------------------------------------------------------
+
 Skapa filen `mysql-deployment.yml`. I den skapar vi en Service, så att Microblogen sen kan koppla upp sig mot databasen.
 
 ```
