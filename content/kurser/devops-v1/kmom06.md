@@ -48,7 +48,7 @@ Kubernetes har själva väldigt mycket och bra material för att lära sig Kuber
 
 #### Kubernetes yaml {#yaml}
 
-Det finns två sätt att hantera objekt (pods, deployments, etc...) i K8s imperative och declarative. I imperative kör vi kommandon i terminalen för att jobba mot ett K8s kluster, som ni gjorde i Kubernetes basics, och i declarative skriver vi konfiguration i filer och kör mot klustret.
+Det finns två sätt att hantera objekt (pods, deployments, etc...) i K8s, imperative och declarative. I imperative kör vi kommandon i terminalen för att jobba mot ett K8s kluster, som ni gjorde i Kubernetes basics, och i declarative skriver vi konfiguration i filer och kör mot klustret.
 
 Läs om deras olika [för och nackdelar](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/).
 
@@ -108,7 +108,7 @@ Ni har nu titta lite på hur en applikations design/arkitektur påverkar hur lä
 
 Läs [Architecting Applications for Kubernetes](https://www.digitalocean.com/community/tutorials/architecting-applications-for-kubernetes) som tar upp lite om hur man ska tänka runt applikationen men även hur man använder K8s.
 
-Läs[Modernizing Applications for Kubernetes](https://www.digitalocean.com/community/tutorials/modernizing-applications-for-kubernetes) som handlar mer om hur man kan skriva om en applikation för att den ska fungera bättre för K8s.
+Läs [Modernizing Applications for Kubernetes](https://www.digitalocean.com/community/tutorials/modernizing-applications-for-kubernetes) som handlar mer om hur man kan skriva om en applikation för att den ska fungera bättre för K8s.
 
 
 
@@ -116,13 +116,13 @@ Läs[Modernizing Applications for Kubernetes](https://www.digitalocean.com/commu
 
 Nu ska vi sätta upp Microbloggen i Kubernetes och vi behöver en miljö att köra K8s i. Azure har en managed Kubernetes service kallat [AKS](https://azure.microsoft.com/sv-se/services/kubernetes-service/) men vi har inte tillgång till den. Tanken var att vi skulle installera ett eget kluster på våra VMs på Azure. Tyvärr finns det väldigt lite verktyg som funkar mot VMs i Azure för sätta upp kluster, det verkar som att de som använder Azure och k8s använder AKS. Sen visade det sig att något med hur Azure funkar gör att det inte går att koppla på en load balancer på ett eget kluster i Azure VMs. Vilket gjorde att när vi hade satt upp en applikation i klustret kunde vi inte se den.
 
-Detta gör att vi får nöja oss med att sätta upp ett lokalt kluster på våra egna datorer med verktyget [Minikube](https://minikube.sigs.k8s.io/docs/). Minikube behöver dock en virtualiserings miljö att sätta upp pods. De stödjer bl.a. VirtualBox, Docker och Hyper-V.
+Detta gör att vi får nöja oss med att sätta upp ett lokalt kluster på våra egna datorer med verktyget [Minikube](https://minikube.sigs.k8s.io/docs/). Minikube behöver dock en virtualiserings miljö att sätta upp pods i. De stödjer bl.a. VirtualBox, Docker och Hyper-V.
 
 
 
 #### Installera verktyg {#install}
 
-Även om Minikube funkar mot docker så behöver Windows och Mac användare köra mot VirtualBox. Load balancern funkar inte mot Docker. Linux användare kan köra mot Docker.
+Även om Minikube funkar mot docker så behöver Windows och Mac användare köra mot VirtualBox. Load balancern funkar inte mot Docker. Linux användare kan köra i Docker.
 
 ##### Windows {#windows}
 
@@ -162,13 +162,13 @@ Ni ska använda [Ingress-Nginx](https://kubernetes.github.io/ingress-nginx) som 
 
 Innan ni ska göra det ska ni läsa om skillnaden mellan [NodePort, load balancer och ingress](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0).
 
-När ni har läst klart, ska ni jobba en guiden som visar hur ni aktiverar och använder Nginx Ingress. I och med att vi kör allt lokalt kommer det inte kopplas mot er riktiga domän utan ni kan använda vad ni vill. En bit in i guiden visar dem hur ni lägger till en domän i hosts filen och kopplar till klustret. I windows ligger Hosts filen i `C:\Windows\System32\drivers\etc\hosts`, ni behöver öppna den som admin för att ändra i den.
+När ni har läst klart, ska ni jobba igenom en guiden som visar hur ni aktiverar och använder Nginx Ingress. I och med att vi kör allt lokalt kommer det inte kopplas mot er riktiga domän utan ni kan använda vad ni vill. En bit in i guiden visar dem hur ni lägger till en domän i hosts filen och kopplar till klustret. I windows ligger Hosts filen i `C:\Windows\System32\drivers\etc\hosts`, ni behöver öppna den som admin för att ändra i den.
 
 Innan ni jobbar igenom guiden behöver ni rensa klustret så det är tom sen tidigare guide, `minikube delete`.
 
 Jobba nu igenom [aktiver och lära er Nginx Ingress i minikube](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/). 
 
-När ni är klara med guiden ska ni vara redo att sätta börja med Microblogen. Rensa först klustret och starta ett nytt.
+När ni är klara med guiden ska ni vara redo för att sätta upp Microblogen. Rensa först klustret och starta ett nytt.
 
 ```
 minikube delete
@@ -192,7 +192,7 @@ Ni behöver inte köra någon SQL kod då Migrations i Flask sköter det när vi
 
 Nästa steg är att skapa en deployment för Microblogen. Ni borde ha lärt er tillräckligt för att skapa en `service`,  `deployment` och `ingress` för Microblogen. Er microblog deployment ska ha 2 replicas, så att det alltid finns två pods rullande som kan hantera trafik.
 
-Ni behöver skapa en ny image av er Microblog och publicera till DockerHub. Ni kommer inte använda er av statsd i K8s och då kommer er nuvarande image generera fel för att Gunicorn inte kan koppla upp sig mot statsd.
+Ni behöver skapa en ny Docker image av er Microblog och publicera till DockerHub. Ni kommer inte använda er av statsd i K8s och då kommer er nuvarande image generera fel för att Gunicorn inte kan koppla upp sig mot statsd.
 
 Skapa en ny image utan statsd konfigurationen i Gunicorn och ge den versionen `no-statsd` på DockerHub.
 
