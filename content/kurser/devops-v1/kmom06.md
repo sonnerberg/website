@@ -82,7 +82,7 @@ Läs [Deploy Kubernetes In Five Different Ways](https://platform9.com/blog/5-met
 
 #### Stateful applications {#stateful}
 
-Nu när ni har testat på att köra en stateless applikatopn i K8s ska ni lära er hur man kan köra en stateful applikation. Börja med att läsa [The sad state of stateful Pods in Kubernetes](https://elastisys.com/2018/09/18/sad-state-stateful-pods-kubernetes/) för en förklaring av problemet med stateful applikationer.
+Nu när ni har testat på att köra en stateless applikation i K8s ska ni lära er hur man kan köra en stateful applikation. Börja med att läsa [The sad state of stateful Pods in Kubernetes](https://elastisys.com/2018/09/18/sad-state-stateful-pods-kubernetes/) för en förklaring av problemet med stateful applikationer.
 
 Kolla på följande videos om volymer i Kubernetes.
 
