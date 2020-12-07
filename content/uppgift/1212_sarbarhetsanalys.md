@@ -61,7 +61,7 @@ Starta applikationen med `docker-compose up -d`. Du kan också välja att köra 
 
 ### Lämna in
 
-1. Analysera applikationen efter sårbarheter enligt de metoder som nämndes under föreläsningen ([se här](https://bth.instructure.com/courses/3047/files/364210)).
+1. Analysera applikationen efter sårbarheter enligt de metoder som nämndes under föreläsningen ([se här](https://bth.instructure.com/courses/3047/files/402543)).
 
 1. Döp analysen till `me/kmom04/analys.pdf`.
 
