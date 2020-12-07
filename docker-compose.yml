@@ -4,8 +4,8 @@ services:
         #image: anax/dev:latest-apache
         #image: anax/dev:php74-apache
         #image: anax/dev:php73-apache
-        image: anax/dev:php72-apache
-        #image: dbwebb/website:all
+        #image: anax/dev:php72-apache
+        image: dbwebb/website:all
         ports:
             - "8080:80"
         volumes:

@@ -2,20 +2,13 @@
 author:
     - mos
 revision:
+    "2020-12-07": "(C, mos) Stycke om video."
     "2018-12-12": "(B, mos) Genomgången inför ramverk1 v2."
     "2018-06-08": "(A1, mos) Nytt dokument inför uppdatering av kursen."
     "2017-10-09": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
 ==================================
-
-[WARNING]
-
-**Översyn pågår**
-
-Kmomet är under översyn och eventuell uppdatering kan komma att ske.
-
-[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -144,6 +137,8 @@ Redovisning {#redovisning}
 1. Tagga din me/redovisa i v10.0.0 och publicera på GitHub.
 
 1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din me-sida och projektet samt till GitHub repot.
+
+1. Spela in en redovisningsvideo och lägg länken till videon i en kommentar på din inlämning i Canvas. Detta kan du göra dagen efter projektets deadline. Läs mer om hur du kan [spela in en redovisningsvideo](kurser/faq/slutpresentation).
 
 1. Publicera på studentservern.
 
