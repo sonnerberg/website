@@ -2,18 +2,12 @@
 author:
     - aar
 revision:
+    "2020-12-08": "(C, aar) La till krav om vetenskapliga referenser."
     "2020-01-10": "(B, aar) La till att ska skicka med en feedback text."
     "2019-10-15": "(A, aar) Första versionen."
 ...
 Kmom07/10: Rapport
 ==================================
-
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 Vi avslutar kursen med att ni individuellt skriver en rapport. Rapporten är det sista som du gör och tillsammans med alla redovisningar används detta som underlag för att examinera dig från kursen.
 
@@ -22,9 +16,8 @@ Vi avslutar kursen med att ni individuellt skriver en rapport. Rapporten är det
 [YOUTUBE src="8gwCFcGxOYE" caption="Andreas introducerar rapporten."]
 
 
+
 För att uppnå godkänt behöver du demonstrerar följande:
-
-
 
 - kunna redogöra för vad devops är, både det praktiska och filosofiska/kulturella.
 
@@ -34,9 +27,12 @@ För att uppnå godkänt behöver du demonstrerar följande:
 
 - Utförd rapport (innehåll, stavning, formatering, grammatik, logisk struktur, referenser).
 
+- Använd minst 2 vetenskapliga referenser.
 
-Rapporten ska vara på minst 2 sidor, skriven på engelska eller svenska, lämnas in på Canvas i pdf-format
-och måste vara formaterad enligt Eurographics konferensmall. Mallen finns för [Latex](https://www.overleaf.com/latex/templates/author-guidelines-and-template-for-eurographics-proceedings-manuscripts/rntmcbgtjqzg) och [Word](http://icat.vrsj.org/2015/files/icategve2015_word_templete.docx). För referenser behöver ni inte följa mallen, ni kan göra som i [exjobb kursen](https://dbwebb.se/kurser/exjobb/guide/referenser).
+
+
+Rapporten ska vara på minst 3 sidor, skriven på engelska eller svenska, lämnas in på Canvas i pdf-format
+och måste vara formaterad enligt Eurographics konferensmall. Mallen finns för [Latex](https://www.overleaf.com/latex/templates/author-guidelines-and-template-for-eurographics-proceedings-manuscripts/rntmcbgtjqzg) och [Word](http://icat.vrsj.org/2015/files/icategve2015_word_templete.docx). Mallen visar inte vilka rubriker ni ska ha utan bara strukturen på dokumentet. För referenser behöver ni inte följa mallen, ni kan göra som i [exjobb kursen](https://dbwebb.se/kurser/exjobb/guide/referenser).
 
 Alla inlämningar körs genom en [plagieringskontroll](https://dbwebb.se/kurser/exjobb/guide/plagieringskontroll).  
 Betyget UX kan kompletteras till G eller skickas in i nästa omgång för ny bedömning.  
@@ -47,6 +43,7 @@ Skapa också ett separat dokument där du skriver feedback på rapporten och kur
 1. Skriv ett allmänt stycke om hur rapporten gick att genomföra. Var den ett rimligt för er att visa upp att ni förstår både det praktiska och teoretiska av devops?
 
 1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+
 
 
 ### Tips på litteratur {#literatur}
@@ -86,7 +83,6 @@ vetenskaplig/teknisk rapport
 ### Video {#video}
 
 Det finns generellt kursmaterial i video form.
-
 
 1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[devops streams ht20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_MEDc_y12Zxdf3_zgb6YWy)".
 
