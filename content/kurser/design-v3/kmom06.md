@@ -63,7 +63,7 @@ Gå igenom följande material om tillgänglighet, MDN erbjuder en liten mjukare 
 
 1. "[What is accessibility - MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)" erbjuder en kort introduktion till begreppet "accessibility".
 
-1. "[Web Content Accessibility Guidelines (WCAG)](#)" är W3s guidelines kring "accessibility". Som vanligt när det gäller W3 så är det ganska utförligt, men det är bra att veta att det finns.
+1. "[Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)" är W3s guidelines kring "accessibility". Som vanligt när det gäller W3 så är det ganska utförligt, men det är bra att veta att det finns.
 
 1. Ett annat bra verktyg att använda på sin sida är [Toptal Colorblind Web Page Filter](https://www.toptal.com/designers/colorfilter/) som tillåter dig att se hur sidan ser ut med olika typer av färgblindhet. Det kan vara bra att använda på sin sida så man ser att inga färger får dålig kontrast eller överlag få ett hum om hur sidan kan uppfattas av andra.
 
