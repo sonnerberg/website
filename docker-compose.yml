@@ -22,3 +22,8 @@ services:
         image: dbwebb/website:all
         volumes:
             - .:/home/anax/repo
+
+    php73:
+        image: anax/dev:php73-cli
+        volumes:
+            - .:/app
