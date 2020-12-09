@@ -48,39 +48,6 @@ Projektet skall du _inte_ lägga i ett Git-repo. Om du väljer att göra det så
 
 <!--stop-->
 
-Uppdrag analys {#analys}
---------------------------------------------------------------------
-
-Följande uppdrag rör analyser och de kan göras i grupp, enligt samma villkor som tidigare i kursen.
-
-Analyserna lägger du tillsammans med dina andra analyser på me-sidan.
-
-Utför analyserna enligt samma mall och struktur som du gjort tidigare i kursen.
-
-
-
-### Uppdrag 1: Analys aktuell webbplatsdesign (10p) {#k1}
-
-**Företaget Sök Under** har bett dig att göra en analys av aktuell webbplatsdesign. Vilka är de trender och som är aktuella för tillfället?
-
-Du har här full frihet att göra ditt urval så du kan välja att undersöka webbplatsdesign för hockeyklubbar, försäkringsbolag, artister eller kommuner.
-
-Välj en kategori och välj därefter 3-5 webbplatser som du väljer att undersöka ur aspekten webbplatsdesign och aktuella trender.
-
-Du väljer själv hur du vill tolka "webbplatsdesign och aktuella trender", men skriv tydligt vilka aspekter du väljer att undersöka.
-
-Lägg resultatet i `content/rapport/09_webbplatsdesign.md`.
-
-
-
-### Uppdrag 2: Analys valfri (10p) (optionellt) {#k2}
-
-**Organisationen Valfrihet** har kontaktat dig och bett dig göra en analys inom design och webbplatser. Du tycker att det låter som en väldigt öppen fråga och du väljer därför att tolka "design och webbplatser" precis på det sättet du själv väljer.
-
-Du kan allstå fritt välja vad din undersökning handlar om. Gör att undersökningen handlar om något inom ramen för det som hanterats i kursen. Gör det tydligt i rapporten om vad du undersöker och hur du går tillväga.
-
-Lägg resultatet i `content/rapport/10_design-och-webbplatser.md`.
-
 
 
 Uppdrag webbplats och tema {#webbplats}
@@ -120,7 +87,7 @@ Du kan själv välja profil och inriktning på webbplatsen, men gör medvetna va
 
 
 
-### Uppdrag 3: Webbplats (10p) {#k3}
+### Uppdrag 1: Webbplats (10p) {#k3}
 
 Skapa en ny webbplats till din kund, spara i en helt ny katalog `me/proj` i kursrepot.
 
@@ -146,7 +113,7 @@ I about-sidan lägger du in information om kunden, så som du tolkat kundens ön
 
 
 
-### Uppdrag 4: Tema (10p) {#tema}
+### Uppdrag 2: Tema (10p) {#tema}
 
 Skapa ett tema till webbplatsen. Du kan använda dina egna teman som grund.
 
@@ -171,7 +138,7 @@ På about-sidan förklarar du ditt tema.
 
 
 
-### Uppdrag 5: Tema alternativt (10p) (optionellt) {#tema}
+### Uppdrag 3: Tema alternativt (10p) (optionellt) {#tema}
 
 Du gör ytterligare ett tema till kunden, ett alternativt tema.
 
@@ -179,13 +146,13 @@ I detta tema förändrar du markant färgppaletten, typografin, designprinciper 
 
 Även detta tema skall vara anpassat till kundens profil.
 
-Du använder också, till viss del, en annan layout än i tidigare tema, se till att de båda teman mixar regioner mellan 100% i bredd och en fast min-width. 
+Du använder också, till viss del, en annan layout än i tidigare tema, se till att de båda teman mixar regioner mellan 100% i bredd och en fast min-width.
 
 Beskriv detta tema i din about-sida, gör ett nytt stycke med ny tydlig rubrik. Länka också direkt till temaväljaren så man kan skifta till ditt alternativa tema.
 
 
 
-### Uppdrag 6: Förklara strukturen kring temat (10p) (optionellt) {#k6}
+<!-- ### Uppdrag 6: Förklara strukturen kring temat (10p) (optionellt) {#k6}
 
 För att utföra denna uppgift så måste du även ha utfört uppdrag 5 med det alternativ temat.
 
@@ -203,7 +170,38 @@ Förklara minst följande.
 
 1. Du kan lägga till extra relevant information där du beskriver och eventuellt argumenterar kring LESS som teknik, de LESS-moduler vi valt att använda, alternativa LESS-moduler du finner intressant och kring grundstrukturen i uppdelning av filer som vi använder samt även hur vi bygger vårt tema.
 
-Texten bör omfattningsvis vara i struktur och storleksordningen likt de analys-rapporter du gjort i kursen.
+Texten bör omfattningsvis vara i struktur och storleksordningen likt de analys-rapporter du gjort i kursen. -->
+
+
+
+Uppdrag analys {#analys}
+--------------------------------------------------------------------
+
+Följande uppdrag rör analyser och de kan göras i grupp, enligt samma villkor som tidigare i kursen. Analyserna lägger du tillsammans med dina andra analyser på me-sidan. Utför analyserna enligt samma mall och struktur som du gjort tidigare i kursen.
+
+
+
+### Uppdrag 4: Analys aktuell webbplatsdesign (15p) {#k1}
+
+**Företaget Sök Under** har bett dig att göra en analys av aktuell webbplatsdesign. Vilka är de trender och som är aktuella för tillfället?
+
+Du har här full frihet att göra ditt urval så du kan välja att undersöka webbplatsdesign för hockeyklubbar, försäkringsbolag, artister eller kommuner.
+
+Välj en kategori och välj därefter 3-5 webbplatser som du väljer att undersöka ur aspekten webbplatsdesign och aktuella trender.
+
+Du väljer själv hur du vill tolka "webbplatsdesign och aktuella trender", men skriv tydligt vilka aspekter du väljer att undersöka.
+
+Lägg resultatet i `content/rapport/09_webbplatsdesign.md`.
+
+
+
+### Uppdrag 5: Analys valfri (15p) (optionellt) {#k2}
+
+**Organisationen Valfrihet** har kontaktat dig och bett dig göra en analys inom design och webbplatser. De vill att du gör en analys av den webbplats du har skapat ovan under uppdragen [Uppdrag webbplats och tema](#webbplats).
+
+Du ska göra analysen utifrån **1** av de teman vi har haft i kursmoment 4-6 tidigare i kursen: _Färg (kmom04)_, _bilder och laddningstider (kmom05)_ eller _design element och principer (kmom06)_. Se respektive kursmoment för mall och instruktioner.
+
+Lägg resultatet i `content/rapport/10_design-och-webbplatser.md`.
 
 
 
@@ -220,7 +218,7 @@ Redovisning {#redovisning}
 
 1. Tagga din me/redovisa i v10.0.0 och publicera på GitHub.
 
-1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din me-sida och projektet. 
+1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din me-sida och projektet.
 
 1. Publicera på studentservern.
 
