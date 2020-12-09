@@ -73,7 +73,7 @@ Du kan själv välja om du vill att företagets verksamhet skall vara advokater/
 
 #### Kund 2 {#kund2}
 
-**Artisten Art Ist**, som är *new and upcoming* inom sitt gebit, vill ha en webbplats och du löser det. Det skall vara nytt och fräsht, tidsenligt och det skall skapa intresse.
+**Artisten Art Ist**, som är *new and upcoming* inom sitt gebit, vill ha en webbplats och du löser det. Det skall vara nytt och fräscht, tidsenligt och det skall skapa intresse.
 
 Du kan själv välja om du vill att artisten skall vara ung/gammal, hålla på med trolleri eller musik och om det är fiol, harpa eller techno. Artist-begreppet är brett.
 
@@ -89,99 +89,83 @@ Du kan själv välja profil och inriktning på webbplatsen, men gör medvetna va
 
 ### Uppdrag 1: Webbplats (10p) {#k3}
 
-Skapa en ny webbplats till din kund, spara i en helt ny katalog `me/proj` i kursrepot.
+Skapa en ny webbplats till din kund i katalogen `me/kmom10` i kursrepot.
 
-Använd din me/redovisa som grund. Du kan också välja en helt ny installation från example/redovisa och example/theme. Välj väg. Glöm inte redigera filen `.htaccess`.
+Du kan välja mellan att använda din me/portfolio som grund eller börja ifrån grunden med en helt ny installation från example/portfolio. Välj väg och glöm inte redigera filen `.htaccess`.
 
 Beskriv i redovisningstexten hur du gör och varför du valde det sättet.
 
-Webbplatsen skall bestå av en förstasida (minst två kolumner), en about-sida och en blogg med minst tre blogginlägg (nyheter, produkter).
+Webbplatsen skall bestå utav tre sidor, en förstasida, en about-sida och en highlight-sida, som presenterar projekt som kunden jobbar/har jobbat med.
 
-Varje sida skall ha en flash-region med en bild.
+Webbplatsen ska använda sig av en flash-bild eller hero-bild, välj själv om sidan använder samma eller byter beroende på sida.
 
-Headern skall ha en egen logo och en favicon.
+Webbplatsen skall ha en egen logo och en favicon.
 
-Footern skall innehålla rimlig standardinformation och du skall ha de tre footerkolumnerna.
+Footern skall innehålla rimlig standardinformation.
 
-Menyn skall länka till about och bloggen.
+Webbplatsen skall ha en navigering som fungerar för både desktop och mobil.
 
-Innehållet skall vara relevant, lagom mycket och bildrikt. Använd Cimage för att få rätt storlek på bilderna.. Skriv text som gynnar företagets profil, kopiera gärna, men använd inte Lorem Ipsum.
-
-Webbplatsen skall vara responsiv.
+Innehållet skall vara relevant, lagom mycket och bildrikt. Använd Cimage för att få rätt storlek på bilderna. Skriv text som gynnar företagets profil, kopiera gärna, men använd inte Lorem Ipsum.
 
 I about-sidan lägger du in information om kunden, så som du tolkat kundens önskemål, kundens verksamhet och hur kunden vill att webbplatsen skall se ut och användas. Det blir din egen formulering och tolkning av kundens krav.
 
-
-
 ### Uppdrag 2: Tema (10p) {#tema}
 
-Skapa ett tema till webbplatsen. Du kan använda dina egna teman som grund.
+Skapa ett tema till webbplatsen. Du kan använda dina egna teman som grund. Temat skall vara anpassat till kunden.
 
-Temat skall vara anpassat till kunden. Gör detta temat till standardtema i temaväljaren.
+Temat skall använda SASS. Dela upp koden i flera moduler, så det är lätt att uppdatera sidan om det skulle behövas.
 
 Gör medvetna och rimliga val för färgpalett och typografi så att det matchar kundens profil.
 
+Temat skall använda sig utav variabler för att bestämma färger.
+
 Du skall medvetet använda designelement och designprinciper för att uppnå en god design som passar kunden.
 
-Temat skall använda gridbaserat layout, vertikalt som horisontellt.
-
-Testsidor för gridet skall fungera via `?vgrid` och `?hgrid`.
-
-Temat skall fungera responsivt.
-
-På about-sidan förklarar du ditt tema.
+På about-sidan skall det finnas en länk till en dold sida (Tips, använd `hidden: true` i meta för att dölja den ifrån navigeringen) som innehåller:
 
 * Dokumentera färgpaletten och berätta hur du valde färgerna.
 * Beskriv typografin, designprinciper och designelement som du använt.
 * Berätta vilken känsla som kunden vill uppnå med webbplatsen.
-* Bifoga en snapshot på temat.
+* Beskriv hur du valt att dela upp din SASS-kod.
 
+### Uppdrag 3: Responsivitet och tillgänglighet {#k3}
 
+Kunden vill givetvis att sidan skall fungera bra för alla grupper av intressenter och betonar därför att sidan skall se bra ut på en mobil och att sidan ska ha bra tillgänglighet (accessibility).
 
-### Uppdrag 3: Tema alternativt (10p) (optionellt) {#tema}
+#### Responsivitet {#responsivitet}
+
+Sidan skall använda CSS-grid och/eller flexbox för att presentera innehållet på ett främjande sätt.
+
+Sidan skall fungera väl på mobila enheter, dvs inga horisontella scrollbars.
+
+Bilder ska anpassas efter enhet med hjälp utav cimage och `<image>`/`srcset`.
+
+#### Tillgänglighet {#tillganglighet}
+
+Samtliga sidor på sidan skall ha 100 i "accessibility" enligt Lighthouse (via devtools).
+
+Färgvalet på sidan ska ta färgblindhet i åtanke, ni kan använda [Toptal - Colorblind Web Page Filter](https://www.toptal.com/designers/colorfilter/) för att testa er publicerade sida.
+
+### Uppdrag 4: Tema alternativt (10p) (optionellt) {#tema-alt}
 
 Du gör ytterligare ett tema till kunden, ett alternativt tema.
 
 I detta tema förändrar du markant färgppaletten, typografin, designprinciper och designelement.
 
+<!-- Mörkt tema? -->
+
 Även detta tema skall vara anpassat till kundens profil.
 
-Du använder också, till viss del, en annan layout än i tidigare tema, se till att de båda teman mixar regioner mellan 100% i bredd och en fast min-width.
+<!-- Du använder också, till viss del, en annan layout än i tidigare tema, se till att de båda teman mixar regioner mellan 100% i bredd och en fast min-width. -->
 
 Beskriv detta tema i din about-sida, gör ett nytt stycke med ny tydlig rubrik. Länka också direkt till temaväljaren så man kan skifta till ditt alternativa tema.
-
-
-
-<!-- ### Uppdrag 6: Förklara strukturen kring temat (10p) (optionellt) {#k6}
-
-För att utföra denna uppgift så måste du även ha utfört uppdrag 5 med det alternativ temat.
-
-Skapa en ny sida i webbplatsen och kalla den "dokumentation". Länka till den sidan från din about-sida.
-
-I dokumentation-sidan förklarar strukturen bakom ditt tema och hur man kan jobba med det för att uppdatera stilen.
-
-Förklara minst följande.
-
-1. Förklara struktur av LESS-koden. Berätta hur du valt att strukturera koden och förklara varför det är en god uppdelning.
-
-1. Berätta vilka moduler du använder och förklara kort vad de gör.
-
-1. Förklara hur man kan anpassa ditt tema till andra webbplatser.
-
-1. Du kan lägga till extra relevant information där du beskriver och eventuellt argumenterar kring LESS som teknik, de LESS-moduler vi valt att använda, alternativa LESS-moduler du finner intressant och kring grundstrukturen i uppdelning av filer som vi använder samt även hur vi bygger vårt tema.
-
-Texten bör omfattningsvis vara i struktur och storleksordningen likt de analys-rapporter du gjort i kursen. -->
-
-
 
 Uppdrag analys {#analys}
 --------------------------------------------------------------------
 
-Följande uppdrag rör analyser och de kan göras i grupp, enligt samma villkor som tidigare i kursen. Analyserna lägger du tillsammans med dina andra analyser på me-sidan. Utför analyserna enligt samma mall och struktur som du gjort tidigare i kursen.
+Följande uppdrag rör analyser och de kan göras i grupp, enligt samma villkor som tidigare i kursen. Analyserna lägger du tillsammans med dina andra analyser i din portfolio-sida. Utför analyserna enligt samma mall och struktur som du gjort tidigare i kursen.
 
-
-
-### Uppdrag 4: Analys aktuell webbplatsdesign (15p) {#k1}
+### Uppdrag 5: Analys aktuell webbplatsdesign (10p) {#k5}
 
 **Företaget Sök Under** har bett dig att göra en analys av aktuell webbplatsdesign. Vilka är de trender och som är aktuella för tillfället?
 
@@ -191,19 +175,19 @@ Välj en kategori och välj därefter 3-5 webbplatser som du väljer att unders�
 
 Du väljer själv hur du vill tolka "webbplatsdesign och aktuella trender", men skriv tydligt vilka aspekter du väljer att undersöka.
 
-Lägg resultatet i `content/rapport/09_webbplatsdesign.md`.
+Lägg resultatet i `content/analysis/10_webbplatsdesign.md`.
 
+<!--
 
-
-### Uppdrag 5: Analys valfri (15p) (optionellt) {#k2}
+### Uppdrag 6: Analys valfri (10p) (optionellt) {#k6}
 
 **Organisationen Valfrihet** har kontaktat dig och bett dig göra en analys inom design och webbplatser. De vill att du gör en analys av den webbplats du har skapat ovan under uppdragen [Uppdrag webbplats och tema](#webbplats).
 
 Du ska göra analysen utifrån **1** av de teman vi har haft i kursmoment 4-6 tidigare i kursen: _Färg (kmom04)_, _bilder och laddningstider (kmom05)_ eller _design element och principer (kmom06)_. Se respektive kursmoment för mall och instruktioner.
 
-Lägg resultatet i `content/rapport/10_design-och-webbplatser.md`.
+Lägg resultatet i `content/rapport/11_design-och-webbplatser.md`.
 
-
+-->
 
 Redovisning {#redovisning}
 --------------------------------------------------------------------
@@ -218,7 +202,7 @@ Redovisning {#redovisning}
 
 1. Tagga din me/redovisa i v10.0.0 och publicera på GitHub.
 
-1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din me-sida och projektet.
+1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din portfolio-sida och projektet.
 
 1. Publicera på studentservern.
 
