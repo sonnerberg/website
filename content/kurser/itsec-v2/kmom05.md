@@ -1,25 +1,16 @@
 ---
 author:
     - atb
-    - mbo
     - nik
 revision:
-    "2019-11-27": "(A, aurora) Omskrivning av uppgift"
+    "2020-12-10": "(B, nik) Uppdaterad inför HT20"
+    "2019-11-27": "(A, nik) Omskrivning av uppgift"
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
 Kmom05: Säkerhetstestning
 ==================================
 
 Mjukvarutest ökar kvaliteten i den mjukvara som skrivs, men hur fungerar det med säkerhetstest. I detta kursmomentet, som bygger på sårbarhetsanalyser, går vi igenom vad säkerhetstester innebär och vad man behöver tänka på.
-
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen planeras ge hösten 2020.
-
-[/WARNING]
-
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -29,15 +20,17 @@ Förkunskapskrav {#forkunskapskrav}
 
 Du har utfört uppgifterna [Sårbarhetsanalys](/uppgift/sarbarhetsanalys).
 
+Du har medverkat på föreläsningen med Anton där han går igenom ämnet.
 
-<!-- Läs &amp; Studera  {#lasanvisningar}
+Tekniker  {#tekniker}
 ---------------------------------
 
-*(ca: 1-3 studietimmar)*
+Det finns flera vägar att gå för att sätta upp testning med JavaScript och ExpressJS. Använd er tidigare kunskaper ifrån jsramverk eller testa på något nytt, det är upp till er.
 
-* Ett rapportexempel finns tillgängligt att läsa [här](#) -->
-<!-- * https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project -->
-
+* [MochaJS](https://mochajs.org/)
+* [ChaiJS](https://www.chaijs.com/)
+* [Jest](https://jestjs.io/)
+* [SuperTest](https://www.npmjs.com/package/supertest)
 
 Uppgifter  {#uppgifter}
 -------------------------------------------
@@ -52,9 +45,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Svara på följande frågor i textfältet på Canvas.
 
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Har den sammanhängande uppgiften från 03, 05 och 06 varit givande? Är det något som saknas/kunnat göras annorlunda?
-* Vilken är din TIL för detta kmom?
+* Hur många av era sårbarheter åtgärdade ni?
+* Var det svårt att lösa någon av sårbarheterna? Kanske valde ni att skippa någon pga tidsbrist?
+* Stämde de estimeringar ni gjorde överens med den slutgiltiga tiden?
