@@ -3,21 +3,14 @@ author:
     - atb
     - mbo
     - mos
-    - lew
+    - nik
 revision:
+    "2020-12-10": "(B, nik) Uppdaterad inför HT20."
     "2019-12-09": "(A, lew) Första versionen."
     "2018-12-04": "(PA1, mos) Arbetskopia."
 ...
 Kmom07/10: Projekt och examination
 ==================================
-
-[WARNING]
-
-**Kursutveckling pågår**
-
-Kursen planeras ge hösten 2020.
-
-[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -27,7 +20,7 @@ Upplägget är enligt följande:
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
-
+<!--stop-->
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
@@ -54,46 +47,41 @@ Krav 5 (Optionellt) ger max 15 poäng.
 Uppdatera materialet så du har den senaste versionen:
 
 ```
-# stå i kursmappen
+# Stå i rooten av kursrepot
 $ dbwebb update
 ```
 
 Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10`.
 
-Redovisningstexten skriver du som vanligt i `me/redovisa`.
-
 Börja med att kopiera in applikationen till arbetsmappen och installera de nödvändiga paketen:
 
-```
-# stå i kursmappen
-$ cp -rf example/itsec-proj me/kmom10/
+```bash
+# Flytta till kurskatalogen
+$ rsync -ravd example/eshop-app me/kmom10/
 $ cd me/kmom10/itsec-proj
 $ docker-compose up
 ```
 
-Om du inte har en fungerande Dockermiljö kan du installera paketen med `$ npm install`.  
-Starta sedan med `$ npm start`
+Om du inte har en fungerande Dockermiljö kan du installera paketen med `composer install`.
 
-Applikationen hittar du sedan på *localhost:1337*.
+### Krav 1, 2, 3: Sårbarhetsanalys {#k1}
 
+* Gör en sårbarhetsanalys, enligt samma kravspecifikation som i kmom04. För godkänt ska minst 5 st sårbarheter identifieras. Spara sårbarhetsanalysen i `kmom10/sårbarhetsanalys.pdf`.
 
+* Implementera testfall för sårbarheterna ca 3-5 per sårbarhet.
+    * Det går att använda valfri "testsuite", men rekommendationen ligger på PHPUnit tillsammans med `make test` eller `composer test` (mer om Composer Script [här](https://getcomposer.org/doc/articles/scripts.md#writing-custom-commands)).
 
-### Krav 1, 2, 3 Sårbarhetsanalys {#k1}
+* Åtgärda de sårbarheterna du hittat. Utöka din analys på samma sätt som i kmom05.
 
-* Gör en sårbarhetsanalys av applikationen och mappa den mot OWASP's top 10 lista. För godänt ska minst 5 st sårbarheter identifieras. Skriv ner analysen i `kmom10/sårbarhetsanalys.pdf`.
+### Krav 4: Privacy (optionell) {#k4}
 
-* Implementera testfall för sårbarheterna ca 3-5 per sårbarhet. Använd gärna ett godtyckligt paket från `npm`. *Tips: Mocha*
+Sätt er in i situationen att ni sitter på ett företag som får följande uppdrag:
 
-* Laga de sårbarheterna du hittat. Skriv ned ett par rader om hur du lagade varje sårbarhet.
+Kunden *Infopedia* har insett att de börjat tappa användare för deras bristande fokus på privacy. De anlitar er för att göra en förberedande rapport som går igenom vad som är viktigt att tänka på inom privacy, varför det är viktigt och hur man kan gå tillväga för att uppnå det.
 
+De vill gärna att samtliga inom företaget ska gå igenom dokumentet och vill därför att längden på det ska vara **1-2 sidor**. De vill även att det som står i dokumentet ska styrkas av **vetenskapliga källor (minst 2)** och gärna ha referenser till ytterligare information inom ämnet.
 
-
-
-### Krav 4 Loggning (optionell) {#k4}
-
-Implementera funktionalitet för loggning av data. Fundera över vad du väljer att logga och motivera dina val i din redovisningstext. Varför väljer du just den datan? Vad valde du bort och varför?
-
-
+Spara rapporten i `kmom10/privacy.pdf`.
 
 ### Krav 5 OAuth (optionell) {#k5}
 
@@ -104,7 +92,7 @@ Implementera inloggning via Oauth2. Se till att stöda minst två tjänster, tex
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din [redovisningssida](./../redovisa), skriv följande:
+1. I textfältet på Canvas, skriv följande:
 
     1. För varje krav du implementerat, dvs 1-5, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
@@ -112,9 +100,9 @@ Redovisning {#redovisning}
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas/redovisningen. Glöm inte länka till din me-sida och projektet.
+2. Glöm inte länka till projektet.
 
-3. Se till att samtliga kursmoment validerar.
+3. Se till att allt är publicerat.
 
 ```bash
 # Ställ dig i kursrepot
