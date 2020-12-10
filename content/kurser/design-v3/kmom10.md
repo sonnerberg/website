@@ -132,9 +132,13 @@ På about-sidan skall det finnas en länk till en dold sida (Tips, använd `hidd
 
 
 
-### Uppdrag 3: Responsivitet och tillgänglighet (10p) (optionellt) {#k3}
+### Uppdrag 3: Responsivitet och tillgänglighet (10p) {#k3}
 
 Kunden vill givetvis att sidan skall fungera bra för alla grupper av intressenter och betonar därför att sidan skall se bra ut på en mobil och att sidan ska ha bra tillgänglighet (accessibility).
+
+Berätta i din redovisningstext hur du har åstadkommit två nedanstående krav och vilka delar du har valt att fokusera på inom responsivitet och tillgänglighet.
+
+
 
 #### Responsivitet {#responsivitet}
 
@@ -143,6 +147,8 @@ Sidan skall använda CSS-grid och/eller flexbox för att presentera innehållet 
 Sidan skall fungera väl på mobila enheter, dvs inga horisontella scrollbars.
 
 Bilder ska anpassas efter enhet med hjälp utav cimage och `<image>`/`srcset`.
+
+
 
 #### Tillgänglighet {#tillganglighet}
 
@@ -175,7 +181,7 @@ Följande uppdrag rör analyser och de kan göras i grupp, enligt samma villkor 
 
 
 
-### Uppdrag 5: Analys aktuell webbplatsdesign (10p) {#k5}
+### Uppdrag 5: Analys aktuell webbplatsdesign (10p)  (optionellt) {#k5}
 
 **Företaget Sök Under** har bett dig att göra en analys av aktuell webbplatsdesign. Vilka är de trender och som är aktuella för tillfället?
 
@@ -193,7 +199,7 @@ Lägg resultatet i `content/analysis/10_webbplatsdesign.md`.
 
 **Organisationen Valfrihet** har kontaktat dig och bett dig göra en analys inom design och webbplatser. De vill att du gör en analys av den webbplats du har skapat ovan under uppdragen [Uppdrag webbplats och tema](#webbplats).
 
-Du ska göra analysen utifrån **1** av de teman vi har haft i kursmoment 4-6 tidigare i kursen: _Färg (kmom04)_, _bilder och laddningstider (kmom05)_ eller _design element och principer (kmom06)_. Se respektive kursmoment för mall och instruktioner.
+Du ska göra analysen utifrån **1** av de analyserteman vi har haft i kursmoment 4-6 tidigare i kursen: _Färg (kmom04)_, _bilder och laddningstider (kmom05)_ eller _design element och principer (kmom06)_. Se respektive kursmoment för mall och instruktioner.
 
 Lägg resultatet i `content/rapport/11_design-och-webbplatser.md`.
 
