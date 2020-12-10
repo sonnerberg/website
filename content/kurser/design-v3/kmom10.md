@@ -1,7 +1,9 @@
 ---
 author:
     - nik
+    - efo
 revision:
+    "2020-12-10": "(B, efo, nik) Färdigställd projekt"
     "2020-10-15": "(A, nik) Nysläpp för design-v3"
 ...
 Kmom10: Projekt och examination
@@ -10,7 +12,7 @@ Kmom10: Projekt och examination
 [WARNING]
 **Utveckling pågår**
 
-Projektet är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
+Detta projekt är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
 
 [/WARNING]
 
@@ -45,8 +47,6 @@ Utveckla och leverera enligt specifikation. Om information saknas så kan du sj�
 Fråga i Discord om du känner dig osäker.
 
 Projektet skall du _inte_ lägga i ett Git-repo. Om du väljer att göra det så rekommenderas att du lägger det som ett _privat repo_ på GitHub eller motsvarande tjänst. Det är för att undvika att hamna i en diskussion om misstänkt fusk om någon illvilligt kopierar ditt projekt via ditt repo.
-
-<!--stop-->
 
 
 
@@ -99,7 +99,7 @@ Webbplatsen skall bestå utav tre sidor, en förstasida, en about-sida och en hi
 
 Webbplatsen ska använda sig av en flash-bild eller hero-bild, välj själv om sidan använder samma eller byter beroende på sida.
 
-Webbplatsen skall ha en egen logo och en favicon.
+Webbplatsen skall ha en egen logga och en favicon.
 
 Footern skall innehålla rimlig standardinformation.
 
@@ -108,6 +108,8 @@ Webbplatsen skall ha en navigering som fungerar för både desktop och mobil.
 Innehållet skall vara relevant, lagom mycket och bildrikt. Använd Cimage för att få rätt storlek på bilderna. Skriv text som gynnar företagets profil, kopiera gärna, men använd inte Lorem Ipsum.
 
 I about-sidan lägger du in information om kunden, så som du tolkat kundens önskemål, kundens verksamhet och hur kunden vill att webbplatsen skall se ut och användas. Det blir din egen formulering och tolkning av kundens krav.
+
+
 
 ### Uppdrag 2: Tema (10p) {#tema}
 
@@ -128,7 +130,9 @@ På about-sidan skall det finnas en länk till en dold sida (Tips, använd `hidd
 * Berätta vilken känsla som kunden vill uppnå med webbplatsen.
 * Beskriv hur du valt att dela upp din SASS-kod.
 
-### Uppdrag 3: Responsivitet och tillgänglighet {#k3}
+
+
+### Uppdrag 3: Responsivitet och tillgänglighet (10p) (optionellt) {#k3}
 
 Kunden vill givetvis att sidan skall fungera bra för alla grupper av intressenter och betonar därför att sidan skall se bra ut på en mobil och att sidan ska ha bra tillgänglighet (accessibility).
 
@@ -146,11 +150,13 @@ Samtliga sidor på sidan skall ha 100 i "accessibility" enligt Lighthouse (via d
 
 Färgvalet på sidan ska ta färgblindhet i åtanke, ni kan använda [Toptal - Colorblind Web Page Filter](https://www.toptal.com/designers/colorfilter/) för att testa er publicerade sida.
 
+
+
 ### Uppdrag 4: Tema alternativt (10p) (optionellt) {#tema-alt}
 
 Du gör ytterligare ett tema till kunden, ett alternativt tema.
 
-I detta tema förändrar du markant färgppaletten, typografin, designprinciper och designelement.
+I detta tema förändrar du markant färgpaletten, typografin, designprinciper och designelement.
 
 <!-- Mörkt tema? -->
 
@@ -160,10 +166,14 @@ I detta tema förändrar du markant färgppaletten, typografin, designprinciper 
 
 Beskriv detta tema i din about-sida, gör ett nytt stycke med ny tydlig rubrik. Länka också direkt till temaväljaren så man kan skifta till ditt alternativa tema.
 
+
+
 Uppdrag analys {#analys}
 --------------------------------------------------------------------
 
 Följande uppdrag rör analyser och de kan göras i grupp, enligt samma villkor som tidigare i kursen. Analyserna lägger du tillsammans med dina andra analyser i din portfolio-sida. Utför analyserna enligt samma mall och struktur som du gjort tidigare i kursen.
+
+
 
 ### Uppdrag 5: Analys aktuell webbplatsdesign (10p) {#k5}
 
@@ -177,7 +187,7 @@ Du väljer själv hur du vill tolka "webbplatsdesign och aktuella trender", men 
 
 Lägg resultatet i `content/analysis/10_webbplatsdesign.md`.
 
-<!--
+
 
 ### Uppdrag 6: Analys valfri (10p) (optionellt) {#k6}
 
@@ -187,7 +197,7 @@ Du ska göra analysen utifrån **1** av de teman vi har haft i kursmoment 4-6 ti
 
 Lägg resultatet i `content/rapport/11_design-och-webbplatser.md`.
 
--->
+
 
 Redovisning {#redovisning}
 --------------------------------------------------------------------

@@ -17,12 +17,6 @@ Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *design*, lär webbprogr
 
 Kursen syftar till en orientering inom områden design och användbarhet, specifikt för tillämpningsområdet webb. Kursen har tekniken som utgångspunkt, där olika tekniker introduceras och används för att underlätta webbdesign och användbarhet för webbplatsen med syftet att skapa en korrekt och användarvänlig webbplats.
 
-[WARNING]
-**Utveckling pågår**
-
-Detta kmom är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
 
 
 <!--more-->
@@ -163,7 +157,7 @@ Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal art
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
-* **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**  
+* **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**
 
 
 <!--
@@ -171,7 +165,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
-* **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)**  
+* **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)**
 
 -->
 
@@ -251,7 +245,7 @@ Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtli
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
-<!-- 
+<!--
 
 Kursutvärdering och kursutveckling {#kursutvardering}
 -----------------------------------------------------
