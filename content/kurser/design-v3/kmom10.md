@@ -170,7 +170,7 @@ I detta tema förändrar du markant färgpaletten, typografin, designprinciper o
 
 <!-- Du använder också, till viss del, en annan layout än i tidigare tema, se till att de båda teman mixar regioner mellan 100% i bredd och en fast min-width. -->
 
-Beskriv detta tema i din about-sida, gör ett nytt stycke med ny tydlig rubrik. Länka också direkt till temaväljaren så man kan skifta till ditt alternativa tema.
+Beskriv detta tema i ett nytt stycke med en tydlig rubrik i den dolda sidan ifrån krav 2. Implementera lösningen vi använde för det mörka temat i kmom04 för att tillåta ett byte mellan temana.
 
 
 
@@ -191,7 +191,7 @@ Välj en kategori och välj därefter 3-5 webbplatser som du väljer att unders�
 
 Du väljer själv hur du vill tolka "webbplatsdesign och aktuella trender", men skriv tydligt vilka aspekter du väljer att undersöka.
 
-Lägg resultatet i `content/analysis/10_webbplatsdesign.md`.
+Lägg resultatet i din portfolio-sida under `content/analysis/10_webbplatsdesign.md`.
 
 
 
@@ -201,7 +201,7 @@ Lägg resultatet i `content/analysis/10_webbplatsdesign.md`.
 
 Du ska göra analysen utifrån **1** av de analyserteman vi har haft i kursmoment 4-6 tidigare i kursen: _Färg (kmom04)_, _bilder och laddningstider (kmom05)_ eller _design element och principer (kmom06)_. Se respektive kursmoment för mall och instruktioner.
 
-Lägg resultatet i `content/rapport/11_design-och-webbplatser.md`.
+Lägg resultatet i din portfolio-sida under `content/analysis/11_design-och-webbplatser.md`.
 
 
 
@@ -216,7 +216,7 @@ Redovisning {#redovisning}
 
     1.3 Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-1. Tagga din me/redovisa i v10.0.0 och publicera på GitHub.
+1. Tagga din me/portfolio i v10.0.0 och publicera på GitHub.
 
 1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din portfolio-sida och projektet.
 
