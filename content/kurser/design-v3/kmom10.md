@@ -9,13 +9,6 @@ revision:
 Kmom10: Projekt och examination
 ====================================
 
-[WARNING]
-**Utveckling pågår**
-
-Detta projekt är under uppdatering, påbörja inte förrän denna gula rutan är borttagen.
-
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -226,3 +219,5 @@ Redovisning {#redovisning}
 # Ställ dig i kurskatalogen
 dbwebb publishpure me
 ```
+
+5. Spela in en redovisningsvideo och lägg länken till videon i en kommentar på din inlämning i Canvas. En lagom längd på videon är 4-8 minuter, prata gärna om hur du har tänkt med din design under arbetet med projektet. Läs mer om hur du kan [spela in en redovisningsvideo](kurser/faq/slutpresentation).
