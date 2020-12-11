@@ -46,7 +46,7 @@ $di->setShared("cache", function () {
 
 
 //$app->session();
-var_dump($app->request);
+//var_dump($app->request);
 $app->loadRoutes();
 $app->router->handle("licens");
 //$app->theme->render();
