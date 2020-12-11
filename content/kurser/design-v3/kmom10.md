@@ -78,7 +78,15 @@ Du kan själv välja om du vill att artisten skall vara ung/gammal, hålla på m
 
 Du kan själv välja profil och inriktning på webbplatsen, men gör medvetna val som gynnar Bew's profil. Här kan du välja att göra grunden till din egen CV-webbplats.
 
+#### Exempel {#exempel}
 
+Nedan är några exempel gjorda i Figma av en av våra alumni, Matilda.
+
+<div style="display: flex; justify-content: space-around;" markdown="1">
+[FIGURE src=image/design-v3/projekt/design_law.png?height=10% caption="Exempel på kund 1"]
+[FIGURE src=image/design-v3/projekt/design_music.png?height=10% caption="Exempel på kund 2"]
+[FIGURE src=image/design-v3/projekt/design_egenforetagare.png?height=10% caption="Exempel på kund 3"]
+</div>
 
 ### Uppdrag 1: Webbplats (10p) {#k3}
 
