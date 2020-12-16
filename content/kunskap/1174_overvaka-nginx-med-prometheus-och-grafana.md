@@ -92,7 +92,7 @@ Om du har konfigurerat grafana att ansluta till prometheus-databasen kan du stä
 Eftersom `nginx_http_requests_total` visar den totala mängden förfrågningar, måste vi använda funktionen `delta()` för att titta på skillnaden över en viss tid. Du kan använda följande för att t.ex. se mängden requests per två minuter:
 
 ```
-delta(nginx_http_requests_total{job="nginx"}[2m])
+delta(nginx_http_requests_total{job="nginx"}[5m])
 ```
 
 Nu skall vi ha en graf liknande:
