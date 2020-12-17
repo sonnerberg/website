@@ -11,6 +11,10 @@ Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och f
 
 <!--more-->
 
+[WARNING]
+Detta kmom uppdateras och är inte redo att jobbas igenom.
+[/WARNING]
+
 [FIGURE src=/image/oopython/kmom05/index_top.png?w=w2 caption="Bild på algoritmen Merge-sort."]
 
 

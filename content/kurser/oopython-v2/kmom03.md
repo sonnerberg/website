@@ -17,7 +17,9 @@ Du kommer även skapa klasser utifrån ett färdigt UML-diagram och skriva unitt
 
 <!--more-->
 
-
+[WARNING]
+Detta kmom uppdateras och är inte redo att jobbas igenom.
+[/WARNING]
 
 <!-- Flytta nedan text till eget dokument/vy/block -->
 

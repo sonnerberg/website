@@ -12,6 +12,10 @@ Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi a
 
 <!--more-->
 
+[WARNING]
+Detta kmom uppdateras och är inte redo att jobbas igenom.
+[/WARNING]
+
 [FIGURE src=/image/oopython/kmom01/flask1.png?w=w2 caption="En enkel me-sida med Flask."]
 
 

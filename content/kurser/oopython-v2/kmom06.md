@@ -18,6 +18,10 @@ Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla p�
 
 <!--more-->
 
+[WARNING]
+Detta kmom uppdateras och är inte redo att jobbas igenom.
+[/WARNING]
+
 [FIGURE src=/image/oopython/kmom06/bst.svg caption="Ett binärt sökträd."]
 
 Det finns två valfria delar i detta kmom som är repetition av Dictionaries från den första Python kursen. Detta är för att uppfriska minnet av hur man jobbar med key/value par i datastrukturer och för projektet i kmom10 kan man välja mellan att använda sig av listor eller dictionaries. Tidigare år har det framkommit att många inte känner sig säkra på Dictionaries och därför valde alla att använda listor. Därför har jag lagt till material så man kan friska upp sitt minne av dictionaries, vilket förhoppningsvis gör att ni kan välja den metod som ni tycker verkar bäst/lättast och inte bara välja listor för att ni inte kommer ihåg dictionaries. 

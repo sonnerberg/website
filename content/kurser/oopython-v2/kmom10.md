@@ -9,6 +9,10 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+Detta kmom uppdateras och är inte redo att jobbas igenom.
+[/WARNING]
+
 [INFO]
 **Gör `dbwebb update` innan du börjar med projektet.**
 [/INFO]
