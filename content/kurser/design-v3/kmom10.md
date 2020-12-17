@@ -90,6 +90,12 @@ Nedan är några exempel gjorda i Figma av en av våra alumni, Matilda.
 
 ### Uppdrag 1: Webbplats (10p) {#k3}
 
+[INFO]
+**Vilka bilder får användas?**
+
+Projektet har samma krav som kmom05, dvs att samtliga bilder ska du ha rätt att använda. Använd t.ex. bildtjänsterna som föreslås [här](kurser/design-v3/kmom05#var-letar-man) eller dina egna bilder.
+[/INFO]
+
 Skapa en ny webbplats till din kund i katalogen `me/kmom10` i kursrepot.
 
 Du kan välja mellan att använda din me/portfolio som grund eller börja ifrån grunden med en helt ny installation från example/portfolio. Välj väg och glöm inte redigera filen `.htaccess`.
@@ -98,7 +104,7 @@ Beskriv i redovisningstexten hur du gör och varför du valde det sättet.
 
 Webbplatsen skall bestå utav tre sidor, en förstasida, en about-sida och en highlight-sida, som presenterar projekt som kunden jobbar/har jobbat med.
 
-Webbplatsen ska använda sig av en flash-bild eller hero-bild, välj själv om sidan använder samma eller byter beroende på sida.
+Webbplatsen ska använda sig av en flash-bild eller hero-bild, välj själv om sidan använder samma, byter eller döljer beroende på sida.
 
 Webbplatsen skall ha en egen logga och en favicon.
 
