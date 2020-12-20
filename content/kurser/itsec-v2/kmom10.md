@@ -20,7 +20,7 @@ Upplägget är enligt följande:
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
-<!--stop-->
+
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
@@ -46,7 +46,7 @@ Krav 5 (Optionellt) ger max 15 poäng.
 
 Uppdatera materialet så du har den senaste versionen:
 
-```
+```bash
 # Stå i rooten av kursrepot
 $ dbwebb update
 ```
@@ -57,9 +57,9 @@ Börja med att kopiera in applikationen till arbetsmappen och installera de nöd
 
 ```bash
 # Flytta till kurskatalogen
-$ rsync -ravd example/eshop-app me/kmom10/
-$ cd me/kmom10/itsec-proj
-$ docker-compose up
+$ rsync -ravd example/eshop-app2 me/kmom10/
+$ cd me/kmom10/eshop-app2
+$ docker-compose up -d
 ```
 
 Om du inte har en fungerande Dockermiljö kan du installera paketen med `composer install`.
@@ -70,22 +70,37 @@ Om du inte har en fungerande Dockermiljö kan du installera paketen med `compose
 
 * Implementera testfall för sårbarheterna ca 3-5 per sårbarhet.
     * Det går att använda valfri "testsuite", men rekommendationen ligger på PHPUnit tillsammans med `make test` eller `composer test` (mer om Composer Script [här](https://getcomposer.org/doc/articles/scripts.md#writing-custom-commands)).
+    * Dokumentera i redovisningstexten vad du valde och hur man kör testerna. Notera även PHP-version du använder om du kör utanför Docker.
 
 * Åtgärda de sårbarheterna du hittat. Utöka din analys på samma sätt som i kmom05.
 
-### Krav 4: Privacy (optionell) {#k4}
+### Krav 4: Loggning (optionell) {#k4}
+
+Implementera loggning av data i applikationen ni gör en sårbarhetsanalys på. Fundera över vad som bör loggas och motivera dina val i din redovisningstext. Varför valde du just den datan? Vad valde du bort och varför?
+
+### Krav 5: Privacy (optionell) {#k5}
 
 Sätt er in i situationen att ni sitter på ett företag som får följande uppdrag:
 
 Kunden *Infopedia* har insett att de börjat tappa användare för deras bristande fokus på privacy. De anlitar er för att göra en förberedande rapport som går igenom vad som är viktigt att tänka på inom privacy, varför det är viktigt och hur man kan gå tillväga för att uppnå det.
 
-De vill gärna att samtliga inom företaget ska gå igenom dokumentet och vill därför att längden på det ska vara **1-2 sidor**. De vill även att det som står i dokumentet ska styrkas av **vetenskapliga källor (minst 2)** och gärna ha referenser till ytterligare information inom ämnet.
+De vill gärna att samtliga inom företaget ska gå igenom dokumentet och vill därför att längden på det ska vara **1-2 sidor**. De vill även att det som står i dokumentet ska styrkas av **vetenskapliga källor (minst 2)** och gärna ha referenser till ytterligare information inom ämnet. 
+
+*Infopedia* jobbar huvudsakligen med projekt/kunder i Europa så rapporten måste täcka GDPR.
 
 Spara rapporten i `kmom10/privacy.pdf`.
 
-### Krav 5 OAuth (optionell) {#k5}
+<!-- ### Krav 5 Säkerhet (optionell) {#k5}
 
-Implementera inloggning via Oauth2. Se till att stöda minst två tjänster, tex Facebook och Google. Skriv ett par rader om hur det påverkar säkerheten med applikationen.
+**UTANFÖR SCOPE AV KURSEN?**
+
+Kunden *SafeSecurity* vill att ni ska kolla på ett av följande tre typer av it-system och motivera vilken typ av data de behöver lagra, varför den behövs och hur man bör lagrar informationen.
+
+* Banksystem (Swedbank/Nordea eller ännu större, Visa/Mastercard)
+* Eshop (Amazon, Ebay)
+* Vårdinrättningar (1177, region Blekinge)
+
+Tänk bortom kunddata, vad behövs loggas för att garantera att systemet fungerar, att ingen obehörig får åtkomst till information de inte ska få läsa. -->
 
 
 
