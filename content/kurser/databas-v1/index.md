@@ -8,6 +8,7 @@ views:
 title: databas-v1
 author: mos
 revision:
+    "2020-12-22": "(G, mos) Ny struktur på planering, läromaterial och team."
     "2019-03-05": "(F, mos) Uppdaterat kmom10 för våren 2019."
     "2018-12-19": "(E, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-11-29": "(D, mos) Uppdaterad med nya kurskoder till vt19."
@@ -45,7 +46,7 @@ Kursen omfattar följande områden:
 * Databasmodellering
 * SQL
 * SQL med lagrade procedurer, funktioner och triggers.
-* SQL med index. 
+* SQL med index.
 * Applikationsprogrammering med databaser.
 * Applikationsprogrammering i webbmiljö med programmeringsspråket JavaScript på serversidan med Node.js med inslag av HTML och CSS.
 * Verktyg och tekniker för utveckling och test.
@@ -181,7 +182,7 @@ Kurslitteratur {#litteratur}
 Det finns läsanvisningar i samband med varje kursmoment.
 
 * **[Databasteknik](kunskap/boken-databasteknik)** -- Radron-McCarthy och Risch  
-    Komplett med det man vill veta om databasteknik, både grunder, modellering och SQL. En databasbok helt enkelt. 
+    Komplett med det man vill veta om databasteknik, både grunder, modellering och SQL. En databasbok helt enkelt.
 
 * **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
     En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
@@ -218,36 +219,42 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom06     | 9, 22 (23)         |                |                |
 | Kmom10     |                    |                |                |
 
-Varje kursmoment kan ha ytterligare läsanvisningar i artiklar, video och annat studiematerial. 
+Varje kursmoment kan ha ytterligare läsanvisningar i artiklar, video och annat studiematerial.
 
 
 
-Rekommenderad studieplan {#studieplan}
+Planering och studieplaner {#planering}
 ---------------------------------------------
 
-Kursen har en [rekommenderad studieplan](kurser/databas/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
+Eftersom kursen ges kombinerat på campus och distans så är kursens planering fördelad på ett antal olika dokument. Bekanta dig med dem så att du har koll på hur kursens upplägg fungerar och vilket som är en normaltakt för kursen.
 
-I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
+<!--
+Kursen har en [veckoplan](./veckoplan) där du få en rekommendation till hur du kursens övergripande planering ser ut och hur du skall lägga upp dina studier, vecka för vecka.
+-->
 
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
+Kursen har en [rekommenderad studieplan](databas/studieplan) som visar en översikt, vecka för vecka, vilket kursmoment som är aktuellt att jobba med. Där finns även rättningsfönster som visar när saker rättas. Följer du denna planeringen så är du i fas med kursens normaltakt.
 
+På Canvas finns datum för inlämningsuppgifter. Ett rättningsfönster pågår normalt sett 15 arbetsdagar efter inlämningsdatum på uppgiften. Inlämningsdatumen på Canvas är ett par dagar senare än vad som visas i den rekommenderade studieplanen, det är för att ge dig lite slack/utrymme för att själv planera dina studier.
 
+Kursen har en [lektionsplan](databas/lektionsplan) som visar när det är lärarledda tillfällen för undervisning/handledning på campus/distans.
 
-Lektionsplan {#lektionsplan}
----------------------------------------------
-
-Det finns en [lektionsplan](kurser/databas/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
-
-Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
-
+Kursen har bokade tillfällen i BTHs schemabokningsprogram, "schemat", som säger när en fysisk sal är bokad på campus. Det finns en länk till det aktuella schemar, via lektionsplanen.
 
 
-Handledning {#handledning}
+
+Läromaterial och resurser {#laromaterial}
 ----------------------------------------
 
-Förutom den planerade undervisningen enligt lektionsplanen så kan du få hjälp och stöd i kursens chatt och i forumet. Chatten lämpar sig för korta enkla frågor och forumet för mer utredande och längre frågor och svar. Om du inte får svar i chatten så rekommenderas att du postar i forumet.
+Via [läromaterial](./laromaterial) kan du se en översikt av hur kurstillfället har valt att strukturera läromaterialet och vilka resurser och verktyg som används i undervisningen.
 
-Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
+Här finner du även länkar till aktuella video streams och spellistor samt chatter och forum för handledning.
+
+
+
+Lärarteam och intressenter {#team}
+----------------------------------------
+
+Du kan hitta [detaljer om ett kurstillfälle](./team) och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
 
 
 
@@ -271,9 +278,18 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 
-Poängen inom parantes gäller kurskoden DV1605 för SE-programmet som läser kursen som en 10hp kurs då de inte har några förkunskaper i webbområdet. 
+Poängen inom parantes gäller kurskoden DV1605 för SE-programmet som läser kursen som en 10hp kurs då de inte har några förkunskaper i webbområdet.
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
+
+
+
+Fusk och plagiering {#fusk}
+-----------------------------------------------------
+
+När läraren misstänker att en student har fuskat så anmäls det till Disciplinnämnen.
+
+Läs om "[Fusk, plagiering, medveten vilseledande](kurser/faq/fusk-och-disciplinarende)" så du är medveten om kursens syn på dessa saker.
 
 
 
