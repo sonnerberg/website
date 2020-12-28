@@ -153,7 +153,7 @@ Sidan skall använda CSS-grid och/eller flexbox för att presentera innehållet 
 
 Sidan skall fungera väl på mobila enheter, dvs inga horisontella scrollbars.
 
-Bilder ska anpassas efter enhet med hjälp utav cimage och `<image>`/`srcset`.
+Bilder ska anpassas efter enhet med hjälp utav cimage och `<picture>`/`srcset`.
 
 
 
