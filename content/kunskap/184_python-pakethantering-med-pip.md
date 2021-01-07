@@ -2,7 +2,8 @@
 author: mos
 category: labbmiljo
 revision:
-  "2016-03-07": (C, mos) Ändrade paketnamn på Debian till python3-pip.
+  "2020-01-07": (C, aar) Flyttade runt stycken då pip kommer för installerat i nyare versioner av python.
+  "2016-03-07": (B, mos) Ändrade paketnamn på Debian till python3-pip.
   "2014-09-17": (A, mos) Första utgåvan för python kursen.
 updated: "2016-04-07 22:46:00"
 created: "2014-09-17 13:10:18"
@@ -31,6 +32,44 @@ pip install requests
 ```
 
 Nåväl, först behöver vi installera PIP.
+
+
+
+Använd PIP {#pip}
+--------------------------------------
+
+Från och med Python 3.4 så ska pip följa med python installationen. Försök kolla vilken version av pip som är installerat. Om kommandot inte finns hoppa ner till [Installera PIP för Python 3](#installera) för att installera det.
+
+
+
+###Vilken version har jag? {#pip1}
+
+Nu kan du köra kommandot `pip3`. Skriv `pip3 --version` för att se vilken version du har och för att dubbelkolla att pip är kopplad mot Python 3.
+
+```bash
+pip3 --version
+```
+
+Vi kör python 3 och därför använder vi `pip3` som kommando.
+
+
+
+###Installera moduler {#pip2}
+
+När du har installerat PIP kan du installera moduler. I exemplet installeras Python-modulen `request`.
+
+```bash
+pip3 install requests
+```
+
+
+###Hantera installerade moduler {#pip3}
+
+Du kan kolla upp vilken version du har av en viss modul.
+
+```bash
+pip3 show requests
+```
 
 
 
@@ -69,42 +108,6 @@ För att installera `pip3` i Debian Linux gör jag så här.
 
 ```bash
 apt-get install python3-pip
-```
-
-
-
-Använd PIP {#pip}
---------------------------------------
-
-
-
-###Vilken version har jag? {#pip1}
-
-Nu kan du köra kommandot `pip3`. Skriv `pip3 --version` för att se vilken version du har och för att dubbelkolla att pip är kopplad mot Python 3.
-
-```bash
-pip3 --version
-```
-
-Vi kör python 3 och därför använder vi `pip3` som kommando.
-
-
-
-###Installera moduler {#pip2}
-
-När du har installerat PIP kan du installera moduler. I exemplet installeras Python-modulen `request`.
-
-```bash
-pip3 install requests
-```
-
-
-###Hantera installerade moduler {#pip3}
-
-Du kan kolla upp vilken version du har av en viss modul.
-
-```bash
-pip3 show requests
 ```
 
 
