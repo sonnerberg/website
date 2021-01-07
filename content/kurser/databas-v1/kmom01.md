@@ -75,8 +75,8 @@ Viss information finns även i [bokens webbkurs](http://www.databasteknik.se/web
 
 Kika igenom följande artiklar.
 
-1. Kika igenom referensmanualen för MySQL, kort och översiktligt. Se till att du kan hitta till den delen som visar hur SQL skall skrivas i MySQL.
-    * [SQL Statement Syntax](https://dev.mysql.com/doc/refman/8.0/en/sql-syntax.html)
+1. Kika igenom referensmanualen för MySQL, kort och översiktligt. Se till att du kan hitta till den delen som visar hur SQL med SELECT skall skrivas i MySQL.
+    * [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/)
 
 1. Under kursen kommer vi att ponera vikten av att hålla sig till en kodstil för SQL-koden. Det kommer inte vara absolut strikt, men det är en rimlig rekommendation att följa en kodstil. För kursen har vi valt "[SQL Style Guide by Simon Holywell](https://www.sqlstyle.guide/)". Ha detta i bakhuvudet när du funderar på hur man skriver sin SQL-kod. Om du har funderingar kring kodstilen så kan du läsa "[SQL style guide misconceptions](https://www.simonholywell.com/post/2016/12/sql-style-guide-misconceptions/)".
 
