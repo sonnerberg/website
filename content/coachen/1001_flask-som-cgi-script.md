@@ -32,7 +32,7 @@ Du har en Flask-applikation som är sparad i `app.py`. Den kan se ut så här, e
 """
 Minimal Flask application, including useful error handlers.
 """
-
+import traceback
 from flask import Flask
 
 app = Flask(__name__)
@@ -59,7 +59,6 @@ def internal_server_error(e):
     Handler for internal server error 500
     """
     #pylint: disable=unused-argument
-    import traceback
     return "<p>Flask 500<pre>" + traceback.format_exc()
 
 
@@ -87,16 +86,14 @@ Skriptet `app.cgi` kan se ut så här.
 """
 A CGI-script for python, including error handling.
 """
+import traceback
+from wsgiref.handlers import CGIHandler
+from app import app
 
 try:
-    from wsgiref.handlers import CGIHandler
-    from app import app
-
     CGIHandler().run(app)
 
-except Exception as e:
-    import traceback
-
+except Exception as e: #pylint: disable=broad-except
     print("Content-Type: text/plain;charset=utf-8")
     print("")
     print(traceback.format_exc())
