@@ -19,7 +19,7 @@ Denna artikel beskriver kortfattat hur du jobbar med PIP och venv.
 Virtual environment {#venv}
 --------------------------------------
 
-När man använder pip installeras paket globalt vilket bl.a. innebär att om vi har flera olika Python projekt på datorn måste alla dem använda samma version av ett paket. Proj1 kan inte använda requests 1.3 medan proj2 använder requests 2.3 utan requests kan bara installeras en gång och då används den överallt.
+När man använder pip installeras paket globalt vilket bl.a. innebär att om vi har flera olika Python projekt på datorn måste alla dem använda samma version av ett paket. T.ex. Proj1 kan inte använda requests 1.3 medan proj2 använder requests 1.3. Utan virtual environments kan request modulen bara installeras en gång och då används den överallt.
 
 Lösningen på detta är [Virtual environment](https://docs.python.org/3/tutorial/venv.html) även kallat **venv**. Venv är ett sätt att isolera paket från övriga paket installerade på resten av ett system. Detta gör att vi kan installera paket för specifika projekt utan att det krockar med globala installationer eller andra projekts installationer.
 
@@ -49,6 +49,8 @@ Gör som står och installerar `venv` och kör sen kommandot igen.
 Nu har det skapats en ny mapp som heter `.venv` i roten och det har lagts till en mängd filer och mappar i den.
 
 [FIGURE src=/image/oopython/venv_dir.png caption="Mapp struktur i mappen '.venv'."]
+
+I .venv mappen skapas en liten avskalad python miljö med länkar till den globala installationen av python. Vi kan se det på bilden med `python3 -> /usr/bin/python3`.
 
 
 
