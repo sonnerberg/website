@@ -23,7 +23,9 @@ Förutsättning {#pre}
 -------------------------------
 
 Du kan grunderna i Python och du vet vad variabler, typer, objekt och funktioner innebär.  
-Du är medveten om strukturen och uppbyggnaden av en webbsida.
+Du är medveten om strukturen och uppbyggnaden av en webbsida.  
+Du har läst [virtuell miljö i Python](kunskap/python-virtuel-miljo) och har pip installerat.
+
 <!-- Du har gjort övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)".   -->
 <!-- Du har gjort övningen "[Kom igång med objekt](kunskap/kom-igang-med-objekt)". -->
 
@@ -32,19 +34,13 @@ Du är medveten om strukturen och uppbyggnaden av en webbsida.
 Installation {#installation}
 ------------------------------
 
-Installera Flask och Jinja2 i en virtuell miljö med pakethanteraren `pip`. Jobba igenom följande länkar för att sätta upp den virtuella miljön och installera pip:
-
-* [virtuell miljö i Python](kunskap/python-virtuel-miljo) och om du inte har pip installerat
-* [instruktionerna för pip](kunskap/python-pakethantering-med-pip#installera)
-
-När du har gjort det sparka igång en terminal och installera modulerna, GLÖM INTE att aktivera venv.
+Vi behöver installera Flask och Jinja2 modulerna. Vi förutsätter att du redan har skapat en venv i oopython mappen.
 
 ```bash
+# stå i root mappen i kursrepot.
 $ source .venv/bin/activate
 (.venv) $ pip3 install -r .requirements.txt
 ```
-
-Allt klart? Bra, nu är det bara att köra igång.
 
 
 
@@ -92,6 +88,7 @@ Vi lägger också in två "routes" för felhantering, det behövs för att felme
 My first Flask app
 """
 # Importera relevanta moduler
+import traceback
 from flask import Flask
 
 app = Flask(__name__)
@@ -116,7 +113,6 @@ def internal_server_error(e):
     Handler for internal server error 500
     """
     #pylint: disable=unused-argument
-    import traceback
     return "<p>Flask 500<pre>" + traceback.format_exc()
 
 if __name__ == "__main__":

@@ -8,11 +8,16 @@ revision:
 Python pakethantering med venv
 ==================================
 
-Python har många inbyggda moduler men det finns många fler externa moduler som kan användas. Vi har i artikeln [Python pakethantering med pip](kunskap/python-pakethantering-med-pip) kollat på hur man installerar sådana externa moduler. Här ska vi kolla på Virtual environments, även kallat venv, vilket är ett sätt att isolera paket från den globala installationen. Det ger oss möjligheten att installera versions specifika paket för olika projekt.
+Python har många inbyggda moduler men det finns många fler externa moduler som kan användas. Här ska vi kolla på Virtual environments, även kallat venv, vilket är ett sätt att isolera paket från den globala installationen. Det ger oss möjligheten att installera versions specifika paket för olika projekt.
 
 Denna artikel beskriver kortfattat hur du jobbar med PIP och venv.
 
 <!--more-->
+
+Installera moduler i Python {#modules}
+---------------------------------------
+
+Innan vi kollar på hur vi jobbar med externa moduler behöver vi veta hur vi installerar dem. Läs igenom artikeln [Python pakethantering med pip](kunskap/python-pakethantering-med-pip).
 
 
 
