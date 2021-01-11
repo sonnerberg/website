@@ -168,7 +168,7 @@ Se till att följande frågor besvaras i texten:
 
 1. Beskriv Log management och vad det används till.
 
-1. Beskriv APM vad det används till.
+1. Beskriv APM och vad det används till.
 
 1. Beskriv Observability och försök koppla det till ovanstående frågor.
 
