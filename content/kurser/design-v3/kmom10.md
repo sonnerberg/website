@@ -9,6 +9,13 @@ revision:
 Kmom10: Projekt och examination
 ====================================
 
+[INFO]
+**Publicering till studentservern**
+
+När ni publicerar till studentservern, kom ihåg att ni behöver uppdatera både ert akronym men även sökvägen i `.htaccess` på rad 12 och 15. Den som ni har ifrån tidigare pekar på er portfolio-mapp, men ska istället peka på den mapp ni jobbar med i projektet.
+
+[/INFO]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
