@@ -6,6 +6,8 @@ revision:
 Objektorienterad terminologi
 =======================
 
+Här beskrivs vanliga koncept in OO, om du inte har gått igenom hela guiden än räcker det om du skannar sidan och får ett hum om vad det handlar om. Koncepten beskrivs mer djupgående i guiden och denna sidan är mer en referenslista som ni kan gå tillbaka till för att få en överblick av vad ett koncpet är.
+
 * **Klass**: En användardefinierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klassattribut och instansattribut, som nås via "dot-notation".
 
 * **Klassattribut**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. Ett klassattribut kallas även _statiskt attribut.
@@ -34,7 +36,7 @@ Objektorienterad terminologi
 
 * **Arv**: _is-a_ relation mellan två klasser. En `Square` is a `Shape`, Square är en subklass till Shape och ärver metoder och attribut.
 
-* **Aggregation**: _has-a_ relation mellan två klasser med svag koppling. Ett objekt från en klass äger ett objekt av en annan klass. Ett `Pond` has a  `Duck`. Ett Duck objekt kan existera utanför ett Pond objekt.
+* **Aggregation**: _has-a_ relation mellan två klasser med svag koppling. Ett objekt från en klass äger ett objekt av en annan klass. En `Pond` has a  `Duck`. Ett Duck objekt kan existera utanför ett Pond objekt.
 
 * **Komposition**: _has-a_ relation mellan två klasser med stark koppling, en typ av aggregation. Ett objekt från en klass äger ett objekt av en annan klass och styr livscykeln för det ägda objektet. Ett `House` has a  `Room`. Ett Room objekt kan inte existera utanför ett House objekt.
 

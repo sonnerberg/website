@@ -4,17 +4,17 @@ revision:
     "2020-01-16": "(B, aar) Finputsad inför VT20."
     "2018-11-18": "(A, aar) Första versionen, uppdelad av större dokument."
 ...
-Instansmetoder
+Metoder
 ==================================
 
-En metod är en funktion som är definierad inuti en klass. Det finns tre typer: instans-, statisk- och klassmetod. Vi har redan skapat en instansmetod i form av `__init__()`. Vi kollar lite mer på instansmetoder.
+En metod är en funktion som är definierad inuti en klass. Det finns tre typer: instans-, statisk- och klassmetod. Vi har redan skapat en instansmetod i form av `__init__()`. Vi börjar med att kolla på instansmetoder.
 
 
 
 Instansmetoder {#instansmetoder}
 ----------------------------------
 
-Instansmetoder identifieras på att den första parametern heter `self`, oftast. I instansmetoder använder man sig av instansattributen, om man vill ha en metod i en klass där man inte behöver använda instansattributen skapar men en statisk metod istället.
+Instansmetoder identifieras på att den första parametern heter `self`. I instansmetoder använder man sig av instansattributen. Om man vill ha en metod i en klass där man inte använder instansattributen skapar men en statisk metod istället.
 
 
 
@@ -37,52 +37,68 @@ class Car():
         self.car_nr = Car.car_count
 
     def present_car(self):
-        return "The model {m} costs {p}$.".format(
-            m=self.model, p=self.price
+        return "This car is of model {m}, costs {p}$ and is car number {nr} of {tot}.".format(
+            m=self.model, p=self.price, nr=self.car_nr, tot=self.car_count
         )
+
 ```
 
 Metoden `present_car()` har enbart `self` som argument. I metoden använder vi bara värden från `self` parametern. Vi kollar på hur vi anropar metoden.
 
 ```
-volvo = Car("volvo v40", 40000)
-print(volvo.present_car())
-The model volvo v40 costs 40000$.
+>>> volvo = Car("volvo v40", 40000)
+>>> bmw = Car("BMW", 50000)
+
+>>> print(volvo.present_car())
+This car is of model volvo v40, costs 40000$ and is car number 1 of 2.
+>>> print(bmw.present_car())
+This car is of model BMW, costs 50000$ and is car number 2 of 2.
 ```
 
 Notera att vi inte skickade med något argument till metoden i anropet. Detta är vad som utgör en instansmetod, Python skickar automatiskt objektet, som metoden anropades på, som första argument till metoden. I koden ovanför när vi kör `volvo.present_car()`, i `present_car(self)` metoden är `self` vårt `volvo` objekt.
 
-Vi kan egentligen döpa om `self` till vad vi vill, det är bara ett parameternamn. Men i Python är det standard att döpa den till self. I många andra språk kallar man den `this`. Testa byt namn på `self` i metoden och kör koden igen för att se att den fortfarande fungerar.
-
-Vi kan självklart skicka med fler argument till metoden om vi vill det, i metod definitionen lägga vi bara till fler parametrar efter self. I anropet skickar vi in argument som vanligt, men då tilldelas de till parametrarna efter `self` i parameterlistan.
+Precis som vi såg i förra delen, att vi inte kan komma åt ett instansattribut från klassen kan vi inte komma åt en instansmetod från klassen heller. Man måste anropa metoden på ett objekt av en klass.
 
 ```
-    def present_car(self, test, test2):
-        return "The model {m} costs {p}$. {t1}, {t2}".format(
-            m=self.model, p=self.price, t1=test, t2=test2
-        )
-
-car = Car("volvo v40", 40000)
-print(car.present_car("hej", "hej"))
-The model volvo v40 costs 40000$. hej, hej
-```
-
-Ta bort test parametrarna innan ni fortsätter.
-
-Precis som vi såg i förra delen, att vi inte kan komma åt ett instansattribut från klassen kan vi inte komma åt en instansmetod från klassen heller. Man måste anropa metoden på en objekt/instans av en klass.
-
-```
-car = Car("volvo v40", 40000)
-Car.price
-    Car.price
-    AttributeError: class Car has no attribute 'price'
-```
-
-```
-car = Car("volvo v40", 40000)
-Car.present_car
-    print(car.present_car("hej", "hej"))
+>>> car = Car("volvo v40", 40000)
+>>> Car.present_car
+    print(car.present_car()
     TypeError: unbound method present_car() must be called with Car instance as first argument (got str instance instead)
 ```
 
-Om ni tycker att felmeddelandet låter konstigt kan ni fråga på föreläsningen varför felet är formulerat så.
+Om ni tycker att felmeddelandet låter konstigt kan ni fråga på föreläsningen varför vi får det felet.
+
+Testa runt själv med klassen, lägg till egna attribut, försöka ändra på dess värden och skriva ut dem. Skapa egna metoder och ändra attribut i dem. Lek med koden och testa era funderingar!
+
+
+
+Self {#self}
+-----------------------------
+
+Self hanteras av Python, det är som sagt inget vi behöver skicka med som argument när vi anropar en instansmetod. Men vi kan egentligen döpa om `self` till vad vi vill, det är bara ett parameternamn. Men i Python är det standard att döpa den till self. I många andra språk kallar man den `this`. Testa byt namn på `self` i metoden och kör koden igen för att se att den fortfarande fungerar.
+
+Det som sker när vi anropar en instans metod är att python tar instansen som metoden anropas på och skickar som första argumentet. Om vi tar `present_car()`på volvo variabeln som exempel.
+
+```
+volvo = Car("volvo v40", 40000)
+volvo.present_car()
+```
+
+Här skickar vi inget argument men vi har ändå `self` parametern. Det python gör i bakgrunden är att ändra anropet till.
+
+```
+volvo.present_car(volvo)
+```
+
+Så i metoden är self objekt som variabeln volvo pekar på.
+
+```
+def present_car(volvo):
+    return "This car is of model {m}, costs {p}$ and is car number {nr} of {tot}.".format(
+        m=volvo.model, p=volvo.price, nr=volvo.car_nr, tot=volvo.car_count
+    )
+```
+
+Konstruktorn (__init__) är speciell då vi inte redan har ett objekt vi kan skicka in som self. Det är varför vi inte ska anropa konstruktorn manuellt. När vi skapar ett objekt och anropar klassen, då skapar python ett "tomt" objekt, anropar `__init__()`, skickar med det nya objektet som argument till `self` parametern och det är först i konstruktorn som attributen läggs till på objektet och ger dem värden.
+
+Jag hoppas detta förtydligade lite hur instansen kopplas till klassen.

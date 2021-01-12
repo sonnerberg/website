@@ -31,8 +31,8 @@ class Car():
         self.car_nr = Car.car_count
 
     def present_car(self):
-        return "The model {m} costs {p}$.".format(
-            m=self.model, p=self.price
+        return "This car is of model {m}, costs {p}$ and is car number {nr} of {tot}.".format(
+            m=self.model, p=self.price, nr=self.car_nr, tot=self.car_count
         )
 
     @staticmethod
@@ -65,3 +65,37 @@ Priset för BMW är nu 66000
 ```
 
 Som du ser kan vi även använda den statiska metoden direkt från klassen. Vi behöver inte ha skapat något objekt av klassen för att använda metoden.
+
+
+
+
+Self fortsättning {#self}
+------------------------
+
+Vi gör ett till försök på att förklara self och förstå det. Nu när vi kan skapa statiska metoden vilket gör att Python inte automatiskt skickar med instansen till self kan vi göra om `present_car()` funktionen till en statisk metod men fortfarande få den att fungera som den ska.
+
+```python
+...
+    @staticmethod
+    def present_car(self):
+        return "This car is of model {m}, costs {p}$ and is car number {nr} of {tot}.".format(
+            m=self.model, p=self.price, nr=self.car_nr, tot=self.car_count
+        )
+```
+
+Om vi anropar metoden som vanlig.
+
+```python
+>>> bmw = Car("BMW", 100000)
+>>> bmw.present_car()
+TypeError: present_car() missing 1 required positional argument: 'self'
+```
+
+Som vi kan förväntas oss kraschar programmet för att vi inte skickade med något argument. Men om vi manuellt skickar med `bmw` kommer metoden att fungera precis som när den var en instansmetod.
+
+```python
+>>> bmw.present_car(bmw)
+This car is of model BMW, costs 100000$ and is car number 1 of 1.
+```
+
+Så här ska vi inte ska metoder egentligen med staticmethod och sen skicka in instansen manuellt. Jag gjorde bara detta för att försöka visa på hur det fungerar.

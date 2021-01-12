@@ -7,9 +7,6 @@ revision:
 Klasser och objekt
 ==================================
 
-
-Allt i Python är på ett eller annat sätt ett objekt. Strängar, integers, listor, moduler - ja, allt. Vi ska titta på är hur man skapar egna klasser och objekt och hur man hanterar dem.
-
 Vi testar skapa en egen klass med statiska- och instansattribut och instansierar två objekt av klassen.
 
 
@@ -17,19 +14,21 @@ Vi testar skapa en egen klass med statiska- och instansattribut och instansierar
 Skapa en klass {#skapa-en-klass}
 ------------------------------
 
-Låt oss gå igenom hur man skapar en bil klass, "Car". För enkelhetens skull hoppar jag över [docstrings](https://en.wikipedia.org/wiki/Docstring) i artikeln. En klass startar med:  
+Låt oss gå igenom hur man skapar en bil klass, "Car". För enkelhetens skull hoppar jag över [docstrings](https://en.wikipedia.org/wiki/Docstring) i artikeln. En klass börjar alltid med nyckelordet `class`.
 
 ```python
 class Car():
 ```
 
-En klass behöver även attribut som kan hålla dess state/värden så vi börjar med att lägga till statiska attribut.
+Efter `:` börjar vi ny indentation för att visa vilken kod som ingår i klassen.
+
+En klass behöver även attribut (variabler) som kan hålla dess state/värden så vi börjar med att lägga till statiska attribut.
 
 
 
 ### Statiska attribut
 
-Något som "alla" bilar har gemensamt är att de har 4 hjul, så vi skapar ett _statiskt attribut_ som innehåller hur många hjul alla bilar har. Vi lägger även till ett statiskt attribut som vi använder som en räknare för att hålla koll på hur många objekt vi har skapat av klassen, bil samlare gillar att veta hur många bilar som skapats och vilket nummer deras bil har. _statiska attribut_ innehåller värden som är gemensamma för alla objekt av klassen till skillnad från _instansattribut_ som är individuella för varje objekt av klassen. Statiska attribut kallas även _klass attribut_.
+Något som "alla" bilar har gemensamt är att de har 4 hjul, så vi skapar ett _statiskt attribut_ som innehåller hur många hjul alla bilar har. Bil samlare gillar att veta hur många bilar som skapats och vilket nummer deras bil har så vi lägger även till ett statiskt attribut som en räknare för att hålla koll på hur många objekt vi har skapat av klassen. _statiska attribut_ innehåller värden som är gemensamma för alla objekt av klassen till skillnad från _instansattribut_ som är individuella för varje objekt av klassen. Statiska attribut kallas även _klass attribut_.
 
 [FIGURE src=/image/oopython/guide/car_statisk_attr.png? class="right" caption="Klassdiagram över Car med statiska attribut."]
 
@@ -46,7 +45,7 @@ Sådär ja, vad fint det blev. Vi går vidare till att lägga till instansattrib
 
 ### Instansattribut
 
-Instans attribut skapar vi i _konstruktorn_; metoden som körs för att skapa en ny instans. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig mellan objekten. Konstruktormetoden heter `__init__` och den måste ha parametern `self` först i parameterlistan. "self" används för att referera till objektet som konstruktorn ska skapa.
+Instans attribut skapar vi i _konstruktorn_; metoden som körs för att skapa en ny instans/ett objekt. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig mellan objekten. Konstruktormetoden heter `__init__` och den måste ha parametern `self` först i parameterlistan. "self" används för att referera till objektet som konstruktorn ska skapa.
 
 Vi fyller på med instansattribut för modell och pris. I och med att `__init__`-metoden används för att skapa nya objekt av vår klass är det ett bra ställe att öka `car_counter` med 1. Då kommer `car_counter` öka med 1 varje gång vi skapar ett nytt Car objekt:
 
@@ -95,17 +94,17 @@ volvo = Car("Volvo", 150000)
 Vi testar att skriva ut objekten:
 
 ```python
-print(bmw)
+>>> print(bmw)
 <__main__.Car object at 0x7f824cc7b4e0>
 
-print(volvo)
+>>> print(volvo)
 <__main__.Car object at 0x7f824cc7b4a8>
 
-print("Antal bilar: {antal}".format(antal=Car.car_count))
+>>> print("Antal bilar: {antal}".format(antal=Car.car_count))
 Antal bilar: 2
-print(bmw.car_nr)
+>>> print(bmw.car_nr)
 1
-print(volvo.car_nr)
+>>> print(volvo.car_nr)
 2
 ```
 
