@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2021-01-04": (B, moc) Bytte __repr__ till __str__
     "2018-11-28": "(A, aar) Första versionen, uppdelad av större dokument."
 ...
 Komposition och aggregation
@@ -32,7 +33,7 @@ class Date():
         self.month = month
         self.day = day
 
-    def __repr__(self):
+    def __str__(self):
         return "{year}-{month}-{day}".format(year=self.year, month=self.month, day=self.day)
         
 class Person:
@@ -41,7 +42,7 @@ class Person:
         self.name = name
         self.date_of_birth = Date(year, month, day)
 
-    def __repr__(self):
+    def __str__(self):
         return "My name is {name} and my date of birth is {date}".format(name=self.name, date=self.date_of_birth)
 
 
@@ -61,7 +62,8 @@ My name is Klara and my date of birth is 2010-3-15
 
 Vilken typ av relation har vi här? Aggregation eller komposition? Tipsen från ovanför var om objektet skapas i konstruktorn eller skickas som argument och om man gör delete på Person objektet kommer Date objektet finnas kvar. I koden ovanför skapas Date objekten i konstruktorn vilket tyder på att det är en kompositions relation mellan Person och Date. Vidare har Date objekten bara en reference i koden och den ligger i Person objekten. Vilket betyder att om person objektet raderas kommer även Date objektet göra det. Date objekten uppfyller ingen funktionalitet utanför ett Person objekt. Av dessa tre anledningarna så är det komposition och inte aggregation.
 
-Jag gissar att du märkte att jag skapade en metod med namnet "[\_\_repr\_\_](https://docs.python.org/3/reference/datamodel.html#object.__repr__)", det är en magisk metod som används när objektet ska representeras, bl.a. när man gör print på objektet. Jag överskuggade den metoden istället för att skapa en `to_string()` metod. På detta sätte slipper vi göra `str(person1)` eller `person1.to_string()` utan kan bara skicka den direkt som argument. Då anropar print funktionen vår `__repr__()` automatiskt. Det samma gäller i `.format()` metoden, när vi använder `self.date_of_birth` som argument till `.format()` i `Person.__repr__()` letar den också efter en `__repr__` metod i Date objektet.
+
+Jag gissar att du märkte att jag skapade en metod med namnet "[\_\_str\_\_](https://docs.python.org/3/reference/datamodel.html#object.__str__)", det är en magisk metod som används när objektet ska representeras, bl.a. när man gör print på objektet. Jag överskuggade den metoden istället för att skapa en `to_string()` metod. På detta sätte slipper vi göra `str(person1)` eller `person1.to_string()` utan kan bara skicka den direkt som argument. Då anropar print funktionen vår `__str__()` automatiskt. Det samma gäller i `.format()` metoden, när vi använder `self.date_of_birth` som argument till `.format()` i `Person.__str__()` letar den också efter en `__str__` metod i Date objektet.
 
 
 
