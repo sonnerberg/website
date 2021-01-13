@@ -36,8 +36,8 @@ class Car():
         )
 
     @staticmethod
-    def calculate_price_reduction(aPrice):
-        return int(aPrice * 0.66)
+    def calculate_price_reduction(price):
+        return int(price * 0.66)
 
     def reduce_price(self):
         self.price = self.calculate_price_reduction(self.price)

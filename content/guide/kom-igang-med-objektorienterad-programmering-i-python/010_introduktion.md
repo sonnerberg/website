@@ -12,7 +12,7 @@ Det bästa sättet att gå igenom guiden är att läsa exemplen och samtidigt pr
 
 <!--more-->
 
-> **Du måste själv skriva koden, det finns inga genvägar.**
+**Du måste själv skriva koden, det finns inga genvägar. Använd också en debugger eller Thonny för att stega igenom koden!**
 
 
 

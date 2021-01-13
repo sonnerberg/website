@@ -7,7 +7,7 @@ revision:
 Operatoröverlagring
 ==================================
 
-Operatorer inom programmering (`+, -, *, /, <, >` med flera), har ett förutbestämt syfte och vi är vana vi att vi kan använda dem på våra värden. Men när vi skapar egna klasser gömmer vi datan i objekt och då kan vi inte bara addera eller subtrahera två objekt och förväta oss att det ska fungera. Vidare har våra objekt ofta flera attribut med olika värden. Hur ska Python veta vilka av attributen som ska användas vid uträkningrna?
+Operatorer inom programmering (`+, -, *, /, <, >` med flera), har ett förutbestämt syfte och vi är vana vi att vi kan använda dem på våra värden. Python vet vad det ska göra när vi skriver `3 + 5`. Men när vi skapar egna klasser gömmer vi datan i objekt och då kan vi inte bara addera eller subtrahera två objekt och förväta oss att det ska fungera, t.ex. `volvo + bmw`. Vidare har våra objekt ofta flera attribut med olika värden. Hur ska Python veta vilka av attributen som ska användas vid uträkningrna? Ska Python använda modell strängen eller pris heltalet i operationen?
 
 Här kommer **operatoröverlagring** in i bilden. När vi använder en operator är det en hemlig metod som anropas och exekverar, som med `__init__()`. I våra egenskapade klasser kan vi skriva över dessa metoderna och på så sätt bestämma vad som ska ske när man använder en operatorn.
 
@@ -58,7 +58,33 @@ Det är en instansmetod så första parametern är `self`, vi lägger även till
 250000
 ```
 
-På sista kodraden kan ni se hur Python tolkar `volvo + bmw`.
+På sista kodraden kan ni se hur Python tolkar `volvo + bmw`. Vad händer om vi adderar ett Car objekt med ett heltal?
+
+```python
+>>> print( bmw + 10000)
+AttributeError: 'int' object has no attribute 'price'
+```
+
+Då kraschar programmet för att vi i `__add__` försöker använda attributet `price` på other, men heltal har inte det attributet. För varje typ vi vill att det ska gå att använda operatorn behöver vi lägga till ett case för det i koden. Det kan vi göra genom att kolla vilken datatyp `other` har och göra olika saker beroende på det.
+
+```python
+class Car():
+    ...
+    
+    def __add__(self, other):
+        if isinstance(other, Car):
+            return self.price + other.price
+        if isinstance(other, int):
+            return self.price + other
+        raise ValueError("Car doesn't not support addition with object")
+
+>>> print(bmw + volvo)
+250000
+>>> print(bmw + 100000)
+200000
+>>> print(bmw + "1000")
+ValueError: Car doesn't not support addition with object
+```
 
 Nu har vi överlagrat vår första operator. Det är ett programmerat beteende i Python att leta efter en `__add__()` metod och anropa den när man använder `+` operatorn och det finns en specifik metod för varje operator. Även för jämförelse operatorerna som `==, <, > <= >=` m.m, med de metoderna kan vi programmera hur två objekt av klassen Car jämförs t.ex. vilket objekt som räknas som störst eller minst. Vid subtraktion heter den metoden t.ex. `__sub__()` och vid `==` heter den `__eq__()`. Alla går att hitta i [Pythons dokumentation](https://docs.python.org/3/library/operator.html). 
 
@@ -92,7 +118,11 @@ class Car():
     ...
 
     def __add__(self, other):
-        return self.price + other.price
+        if isinstance(other, Car):
+            return self.price + other.price
+        if isinstance(other, int):
+            return self.price + other
+        raise ValueError("Car doesn't not support addition with object")
 
     def __iadd__(self, other):
         self.price += other.price
@@ -119,3 +149,10 @@ print(bmw.price)
 Sist i koden kan ni se hur Python tolkar `bmw += volvo`. Med andra ord tilldelar vi `bmw` variablen samma objekt som den redan hade.
 
 Nu så. Samma koncept gäller för övriga operatorer och kan vara behändigt vid hantering av klasser av olika slag.
+
+
+
+Öva själv {#ova}
+----------------------------
+
+Lägg till stöd för att kunna göra additionstilldelning med Car objekt och heltal. Överlagra sen operatorn för subtrahering, `__sub__` och subtraheringstilldelning, `__isub__`.

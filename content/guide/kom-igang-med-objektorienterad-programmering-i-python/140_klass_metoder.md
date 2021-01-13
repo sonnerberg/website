@@ -7,7 +7,7 @@ revision:
 Klassmetoder
 ==================================
 
-Nästa typ av metod vi ska kolla på heter [klassmetod](https://docs.python.org/3/library/functions.html#classmethod) och som namnet antyder är det metoder som är koppla till klassen och inte instanser. I en instansmetod skickas automatiskt en instans som första argument och för en klassmetod skickas automatiskt klassen som första argument. I en klassmetod kan vi inte modifiera instansattribut utan bara statiska attribut.
+Nästa typ av metod vi ska kolla på heter [klassmetod](https://docs.python.org/3/library/functions.html#classmethod) och som namnet antyder är det metoder som är koppla till klassen och inte instansen. I en instansmetod skickas automatiskt en instans som första argument och för en klassmetod skickas automatiskt klassen som första argument. I en klassmetod kan vi inte modifiera instansattribut utan bara statiska attribut.
 
 
 
