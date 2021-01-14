@@ -75,11 +75,11 @@ DROP USER 'user'@'%';
 DROP USER IF EXISTS 'user'@'%';
 ```
 
-Konstruktionen nedan skapar användaren "user" med lösenordet "pass" och användaren kan logga in från godtycklig host "@'%'"
+Konstruktionen nedan skapar användaren "user" med lösenordet "pass" och användaren kan logga in från godtycklig host som representeras av '%'
 
 ```sql
 -- Skapa en användare user med lösenordet pass och ge tillgång oavsett
--- hostnamn. 
+-- hostnamn.
 CREATE USER IF NOT EXISTS 'user'@'%'
 IDENTIFIED
 BY 'pass'
@@ -106,7 +106,7 @@ Utgångsläget är att du skapar användaren med `WITH mysql_native_password`.
 När du väl har skapat användaren behöver du ge den behörigheter. Vi väljer att ge användaren fulla behörigheter till databasen "skolan".
 
 ```sql
--- Ge användaren alla rättigheter på en specifk databas.
+-- Ge användaren alla rättigheter på alla databaser.
 GRANT ALL PRIVILEGES
     ON skolan.*
     TO 'user'@'%'
@@ -181,7 +181,7 @@ USE skolan;
 
 -- -- Radera en databas med allt innehåll
 -- DROP DATABASE skolan;
--- 
+--
 -- -- Visa vilka databaser som finns
 -- SHOW DATABASES;
 
@@ -190,7 +190,7 @@ USE skolan;
 SHOW DATABASES LIKE "%skolan%";
 
 -- Skapa en användare user med lösenordet pass och ge tillgång oavsett
--- hostnamn. 
+-- hostnamn.
 CREATE USER IF NOT EXISTS 'user'@'%'
     IDENTIFIED BY 'pass'
 ;
