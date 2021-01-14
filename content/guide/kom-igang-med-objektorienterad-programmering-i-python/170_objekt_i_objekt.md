@@ -18,7 +18,9 @@ Vi ska skapa en bilbana där bilar kan tävla om att köra först i mål, vi lä
 
 [ASCIINEMA src=294042]
 
-Vi börjar med att skapa RaceTrack klassen och i den skapar vi fyra Car objekt.
+Målet är att ha två klasser, en klass för bilar och en klass för tävlingsbanan som bilarna kör på.
+
+Vi börjar med att skapa en klass som är tävlingsbanan och ger den ett attribut för att hålla bilarna och skapar en metod som skapar fyra Car objekt.
 
 [FIGURE src=/image/oopython/guide/rt_init.png? class="right" caption="Klassdiagram över RaceTrack."]
 
@@ -79,7 +81,7 @@ class Car():
     ...
 ```
 
-Notera `r"""` för model2 och 3, båda de strängarna innehåller backslashes som python special tolkar vilket gör att bilderna blir fel (och det get valideringsfel). Med `r` framför strängen gör vi det till en raw string. I raw strings låter python `\` vara en backslash och använder den inte för att escepa andra karaktärer. Vi lägger bilderna som statiska attribut i klassen och sen låter vi värdet i `model` attributet bestämma vilken av dem som varje instans ska använda. Det finns flera olika sätt vi kan lösa detta på, en if-sats som kollar om `model == model1/2/3/4` eller t.ex. lagt dem i en dictionary istället och använda `model` som nyckel för att få ut en bil. Men jag tänkte visa ett tredje sätt istället som använder funktionen [getattr](https://docs.python.org/3.5/library/functions.html#getattr). Med den kan vi jobba mer dynamiskt med klasser, det funkar lite som key/value par i dictionaries.
+Notera `r"""` för model2 och 3, båda de strängarna innehåller backslashes som python special tolkar vilket gör att bilderna blir fel (och det ger valideringsfel). Med `r` framför strängen gör vi det till en raw string. I raw strings låter python `\` vara en backslash och använder den inte för att escepa andra karaktärer. Vi lägger bilderna som statiska attribut i klassen och sen låter vi värdet i `model` attributet bestämma vilken av dem som varje instans ska använda. Det finns flera olika sätt vi kan lösa detta på, en if-sats som kollar om `model == model1/2/3/4` eller t.ex. lägga dem i en dictionary istället och använda `model` som nyckel för att få ut en bil. Men jag tänkte visa ett tredje sätt istället som använder funktionen [getattr](https://docs.python.org/3.5/library/functions.html#getattr). Med den kan vi jobba mer dynamiskt med klasser, det funkar lite som key/value par i dictionaries.
 
 
 
@@ -158,11 +160,11 @@ class Car():
         return self._position
 ```
 
-Vi har ett till slumpat tal när en bil rör sig framåt så att inte bara bashastigheten avgör vinnaren, skicklighet måste också spela roll och i det här fallet handlar skicklighet om hur bra vän de är med RNGesus. Testa ska några bilar och kolla att de får olika värden i `_speed`.
+Vi har ett till slumpat tal när en bil rör sig framåt så att inte bara bashastigheten avgör vinnaren, skicklighet måste också spela roll och i det här fallet handlar skicklighet om hur bra vän de är med RNGesus. Testa skapa några bilar och kolla att de får olika värden i `_speed`.
 
 Nu kan vi hålla koll på position och ändra den men hur ska vi rita ut det i terminalen?
 
-Jag tänker att vi använder oss av whitespace framför bilarna. Deras position är hur många space som ska skrivas framför bilen. I RaceTrack skapar vi en ny metod som utgör ett race.
+Jag tänker att vi använder oss av whitespace bakom bilarna. Deras position är hur många space som ska skrivas bakom bilen. I RaceTrack skapar vi en ny metod som utgör ett race.
 
 ```python
 class RaceTrack():
@@ -183,7 +185,7 @@ if __name__ == "__main__":
 Lång utskrift med alla bilar kvar på samma plats...
 ```
 
-Hmmm det funkade inte riktigt som vi ville. Bilarna rör sig inte till höger. Felet är att ascii bilderna är på flera rader och med koden vi har nu skrivs ett antal space ut ovanför varje bil och bilarna skrivs ut under. För att lösa detta behöver vi skriva ut X antal space framför varje rad i bilarna. För att göra detta på ett bra sätt kan vi använda format.
+Hmmm det funkade inte riktigt som vi ville. Bilarna rör sig inte till höger. Felet är att ascii bilderna är på flera rader och med koden vi har nu skrivs ett antal space ut ovanför varje bil och bilarna skrivs ut under. För att lösa detta behöver vi skriva ut X antal space bakom varje rad i bilarna. För att göra detta på ett bra sätt kan vi använda format.
 
 ```python
 class Car():
@@ -221,6 +223,7 @@ class Car():
 Om ni kör programmet igen borde ni få att bilarna flyttar på sig fem gånger. Vi kan snygga till utskriften clear console raden från marvin, `print(chr(27) + "[2J" + chr(27) + "[;H")`, och en [sov timer](https://docs.python.org/3/library/time.html#time.sleep).
 
 ```python
+import time
 class RaceTrack():
 
     def __init__(self, sleep):
@@ -372,7 +375,7 @@ Det blev mycket ändringar i koden, vi börjar överst. I Car gjorde vi inte så
         return finishers 
 ```
 
-List comprehension används för att skapa skapa en ny list utifrån en sekvens. I vårt fall använder vi den för att populera en lista med alla car objekt som har kommit fram till mållinjen.
+List comprehension används för att skapa skapa en ny lista utifrån en sekvens. I vårt fall använder vi den för att populera en lista med alla car objekt som har kommit fram till mållinjen.
 
 Det blev en lång artikel men jag hoppas ni tyckte att det var kul med något lite grafiskt och att ni fick bättre förståelse för klasser. Ni kan hitta alla koden i [example/guide/cars](https://github.com/dbwebb-se/oopython/tree/master/example/guide/cars). Nedanför kan ni se ett färdigt klassdiagram för Car och RaceTrack klasserna.
 
