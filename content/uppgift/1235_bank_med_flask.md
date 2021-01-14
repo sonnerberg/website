@@ -5,7 +5,7 @@ revision:
 category:
     - oopython
 ...
-Bank med Flask
+Bygg en bank med flask
 ===================================
 
 [FIGURE src=/image/oopython/kmom02/bank.png?w=c5 class="right"]
@@ -31,7 +31,7 @@ Du jobbar vid sidan om dina studier och din kund vill att du gör klart en webbs
 
 [YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."]
 
-Du ska implementera klasserna för person klassen, de två kontotyperna och handlern som app.py jobbar mot. Appen följer samma struktur som i övningen.
+Du ska implementera klasserna för person klassen, de två kontotyperna och handlern som app.py jobbar mot.
 
 [FIGURE src=/image/oopython/kmom02/bank_uml.png caption="Klassdiagram för uppgiften."]
 
@@ -39,7 +39,7 @@ Attributen och metoderna som är **bold**-markerad används av den färdiga kode
 
 [YOUTUBE src=GBmyT_TntXA width=630 caption="Andreas förklarar klassdiagrammet och koden som ska skrivas."]
 
-Tips att när du börjar utveckla en ny metod som anropas från den färdiga koden, använd dig av `print()` i metoden du skapar och kolla klassdiagrammet för att ta reda på vad som skickas som argument till din metod.
+Appen följer överlag samma struktur som i övningen, den enda skillnaden är att vi skall använda oss av en json-fil för att spara den dynamiska data som applikationen inte kommer ihåg mellan request:en. Ett tips, när du börjar utveckla en ny metod som anropas från den färdiga koden, använd dig av `print()` i metoden du skapar och kolla klassdiagrammet för att ta reda på vad som skickas som argument till din metod.
 
 [YOUTUBE src=rqfqn29glIo width=630 caption="Hur ska man börja med bank uppgiften?"]
 
@@ -61,19 +61,21 @@ cd me/kmom02/bank
 
 1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metod som behövs och vad de används till.
 
-1. Skapa filen `static/data/accounts.json` där du lägger in den data du behöver för att återskapa alla klasser. Filen skall automatiskt läsas in när en ny instans av `AccountManager` skapas. Uppdateras något (som ens kontobalans) skall ändringarna också skrivas in i filen.  
-Strukturen väljer du själv, du kan hitta ett exempel på hur filen kan se ut [här](https://gist.github.com/mabn17/1f985ce8b2f9cfe03d05d13c6ef62213).
+1. Skapa filen `static/data/accounts.json` där du lägger in den data du behöver för att återskapa alla klasser. Filen skall automatiskt läsas in när en ny instans av `AccountManager` skapas. Uppdateras något (t.ex. ens kontobalans) skall ändringarna också skrivas till filen.  
+Strukturen på filen väljer du själv, kodbasen innehåller ett [exempel](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank/static/data/accounts-example.json) du kan utgå ifrån.
 
-1. Implementera klasserna som behövs i filerna `handler.py`, `persons.py` och `accounts.py`. Det skall minst finnas tre konton av varje typ.
+1. Implementera klasserna som behövs i filerna `handler.py`, `persons.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ. Se till att det existerar en person som äger både ett sparkonto och ett vanligt.
 
-1. Handlern ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna vilken ränta man får mellan dagens datum till den som skickas in från datepickern under `/account/<account_id>`.  
-Det ska finnas metoder för att både hämta alla och ett specifikt konto, lägga till ett nytt konto samt hantera json-filen.
 
-1. Ett konto skall få sitt `_id` från klass variabeln `Account.account_number` och skall ej skickas med i konstruktorn.  
-`interest_rate` Representerar hur många `%` balansen skall öka med under ett år.  
-`transaction_fee` säger procenten skall dras av det överförda beloppet. Skickar man exempelvis 100kr med 1% ränta, skall 100kr dras av med bara 99kr skall föras över.
+1. Handlern ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna ut den ränta man kommer till att få mellan dagens datum till den som skickas in från datepickern.  
+Det ska finnas metoder för att hämta alla konton, hämta ett specifikt konto, lägga till ett nytt konto samt hantera json-filen.
 
-1. `SavingsAccount` skall har en extra överföringsavgift och högre ränta beroende på hur gammal ägaren är. Denna skall motsvara `0.1%` av hens ålder.
+1. Ett konto skall få sitt `_id` från klass variabeln `Account.account_number`, den skall ej skickas med i konstruktorn.  
+`interest_rate` representerar hur många `%` balansen ökar med under ett år.  
+`transaction_fee` säger procenten som skall dras av det överförda beloppet. Överför man exempelvis 100kr med 1% ränta, skall 100kr dras från kontot men mottagaren ska endast få 99kr insatta.
+
+
+1. `SavingsAccount` har en extra överföringsavgift och högre dag-för-dag ränta beroende på hur gammal ägaren är. Denna skall motsvara `0.1%` av hens ålder.
 
 1. Du ska inte behöva ändra i några av de andra filerna, förutom kanske style.css, men om du känner att du vill/behöver det skriv varför i din redovisningstext.
 
