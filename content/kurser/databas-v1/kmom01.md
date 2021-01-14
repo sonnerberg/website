@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
+    "2021-01-14": "(J, mos) Lade till länkar till föreläsningar."
     "2021-01-13": "(I, mos) Uppdaterade länk till streams vt21."
     "2020-01-29": "(H, mos) Uppdaterade länk till streams vt20."
     "2020-01-21": "(G, mos) Notera hur inlämningen sker."
@@ -62,11 +63,11 @@ Läs &amp; Studera  {#lasanvisningar}
 
 ### Föreläsningar {#flas}
 
-Titta på följande föreläsningar.
+Titta på följande inspelade föreläsningar.
 
 1. [F00 - Kursintro](./../forelasning/f00) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
 
-1. [F01 - Databasteknik, relationsdatabaser och SQL](./../forelasning/f01) ger dig en introduktion till de ämnen som hanteras inom ramen för kmom01.
+1. [F01 - Databasteknik, relationsdatabaser och SQL](./../forelasning/f01) ger dig en introduktion till de databaser och SQL.
 
 
 
