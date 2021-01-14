@@ -59,6 +59,17 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+
+### Föreläsningar {#flas}
+
+Titta på följande föreläsningar.
+
+1. [F00 - Kursintro](./../forelasning/f00) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
+
+1. [F01 - Databasteknik, relationsdatabaser och SQL](./../forelasning/f01) ger dig en introduktion till de ämnen som hanteras inom ramen för kmom01.
+
+
+
 ### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
@@ -93,9 +104,9 @@ Kika igenom följande videor för att få grepp om grunderna i Databaser och SQL
 
 
 
-### Föreläsningar och genomgångar {#flas}
+### Inspelat {#inspelat}
 
-Kursen innehåller genomgångar och föreläsningar som spelas in eller streamas och därefter läggs i en spellista.
+Kursen innehåller livesända genomgångar och föreläsningar som kan komma att spelas in och därefter läggs i en spellista.
 
 * Du kan nå spellistan på "[databas streams vt21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9dv4WGmlicIXnOArsNcMgl)".
 
