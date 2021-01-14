@@ -8,6 +8,7 @@ views:
 title: databas-v1
 author: mos
 revision:
+    "2021-01-14": "(H, mos) Video för kursintroduktion."
     "2020-12-22": "(G, mos) Ny struktur på planering, läromaterial och team."
     "2019-03-05": "(F, mos) Uppdaterat kmom10 för våren 2019."
     "2018-12-19": "(E, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
@@ -24,6 +25,17 @@ Kursen **Databasteknologier för webben**, a.k.a. *databas*, och syftet är att 
 Kursen erbjuds även under namnet "Webbprogrammering och databaser" med en alternativ kurskod.
 
 <!--more-->
+
+Läs vidare för en översikt för kursens innehåll, struktur och planering.
+
+
+
+Kursintro {#pres}
+------------------------
+
+Här är en video som "pratar" dig igenom kursens upplägg och delar av innehållet i detta dokumentet.
+
+[YOUTUBE src="ia-CE0mxcZI" width=700 caption="Kursintroduktion till kursen databas med Mikael."]
 
 
 
