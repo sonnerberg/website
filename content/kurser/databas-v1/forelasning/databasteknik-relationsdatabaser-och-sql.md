@@ -3,7 +3,7 @@ author: mos
 revision:
     "2021-01-14": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
-F01 - Databasteknik, relationsdatabaser och SQL
+Databasteknik, relationsdatabaser och SQL
 ====================
 
 En översikt och introduktion till området relationsdatabaser med fokus på MySQL, MariaDB, bakgrunden för relationsdatabaser, skillnaden mellan databasens schema och dess innehåll samt frågespråket SQL.
