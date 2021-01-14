@@ -5,6 +5,7 @@ category:
     - mysql
     - debian/linux
 revision:
+    "2021-01-14": "(C, mos) Ändra så att linux användare skapas med %."
     "2019-01-09": "(B, mos) Nu enbart för Debian/Linux."
     "2018-01-12": "(A, mos) Första utgåvan."
 ...
@@ -37,7 +38,7 @@ MySQL produkter {#download}
 
 Jag går till [nedladdningssidan för MySQLs produkter](https://dev.mysql.com/downloads/) för att kolla läget, innan vi startar med installationen.
 
-De produkter jag vill åt heter "MySQL Community Server" och "MySQL Workbench". 
+De produkter jag vill åt heter "MySQL Community Server" och "MySQL Workbench".
 
 MySQL Community Server innehåller databasservern och terminalbaserade klientprogram.
 
@@ -124,7 +125,7 @@ Innan vi går vidare så skapar vi en ny användare i databasen, denna användar
 Vi öppnar terminalklienten och skriver följande SQL-kod för att skapa en användare. Jag döper min användare till "mos", du väljer ditt egna användarnamn och ditt egna lösenord.
 
 ```text
-CREATE USER 'mos'@'localhost'
+CREATE USER 'mos'@'%'
 IDENTIFIED BY 'password';
 ```
 
@@ -133,7 +134,7 @@ Kommandot [`CREATE USER` finns beskrivet i manualen](https://dev.mysql.com/doc/r
 Vi ger nu denna användare fullständiga rättigheter på alla databaser `*.*`, det blir i princip samma rättigheter som root-användaren.
 
 ```text
-GRANT ALL PRIVILEGES ON *.* TO 'mos'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'mos'@'%';
 ```
 
 Kommandot [`GRANT` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/8.0/en/grant.html).

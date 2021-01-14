@@ -113,8 +113,8 @@ Kursen innehåller livesända genomgångar och föreläsningar som kan komma att
 
 Tidigare kursomgångar finns arkiverade under följande spellistor.
 
-    * [streams vt20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_rI4Y1xZE3TA3XSOJIq319)
-    * [streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8JaLBnz0TszCXc_eCVpmOh)
+* [streams vt20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_rI4Y1xZE3TA3XSOJIq319)
+* [streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8JaLBnz0TszCXc_eCVpmOh)
 
 
 <!--
