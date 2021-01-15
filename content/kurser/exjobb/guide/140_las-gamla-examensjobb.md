@@ -1,6 +1,9 @@
 ---
-author: mos
+author:
+    - mos
+    - efo
 revision:
+    "2021-01-15": "(B, efo) Arbeten från 2020."
     "2018-12-20": "(A, mos) Första utkastet."
 ...
 Läs gamla examensjobb
@@ -12,6 +15,8 @@ Du kan se ett urval av examensarbeten från tidigare årgångar.
 
 * [2018](./../../arbeten/a2018)
 * [2019](./../../arbeten/a2019)
+* [2020](./../../arbeten/a2020)
+
 
 Du kan även söka efter andra examensjobb i [bibliotekets söktjänst](https://www.bth.se/bibliotek/), välj fliken DIVA.
 
