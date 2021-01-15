@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-01-14": "(E, mos) Bort med databasen när man gör setup."
     "2019-01-31": "(D, mos) Kommentar om unix radslut."
     "2019-01-11": "(C, mos) Stycke om hur man blir av med varningen."
     "2018-03-27": "(B, mos) Lade till dml_update_lonerevision.sql."
@@ -30,7 +31,7 @@ Följande är de filer som behöver köras för att återställa databasen.
 |-------------------|----------------------|
 | `setup.sql`       | Kör som root för att skapa om databasen och skapa användaren user:pass. |
 | `ddl.sql`         | Skapa tabellen för lärare. |
-| `dml_insert.sql`  | Lägg till rader i tabellen lärare. | 
+| `dml_insert.sql`  | Lägg till rader i tabellen lärare. |
 | `ddl_migrate.sql` | Alter table lärare och lägg till kompetensen. |
 | `dml_update.sql`  | Förbered lönerevisionen, alla lärare har grundlön. |
 | `dml_update_lonerevision.sql`  | Utför lönerevisionen. |
@@ -38,7 +39,7 @@ Följande är de filer som behöver köras för att återställa databasen.
 Det kan se ut så här om du kör varje SQL-skript i terminalen (exklusive utskrifter). Notera att setup.sql måste köras som din root-användare och resten körs som användaren user.
 
 ```text
-mysql -uroot -p skolan < setup.sql
+mysql -uroot -p < setup.sql
 mysql -uuser -ppass skolan < ddl.sql
 mysql -uuser -ppass skolan < dml_insert.sql
 mysql -uuser -ppass skolan < ddl_migrate.sql
@@ -115,7 +116,7 @@ Här kan du se hur mitt skript ser ut, du kan använda det rakt av och det bör 
 #
 echo ">>> Reset skolan to after part 1"
 echo ">>> Recreate the database (as root)"
-mysql -uroot -p skolan < setup.sql > /dev/null
+mysql -uroot -p < setup.sql > /dev/null
 
 file="ddl.sql"
 echo ">>> Create tables ($file)"
