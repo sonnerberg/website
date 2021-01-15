@@ -64,15 +64,15 @@ cd me/kmom02/bank
 1. Skapa filen `static/data/accounts.json` där du lägger in den data du behöver för att återskapa alla klasser. Filen skall automatiskt läsas in när en ny instans av `AccountManager` skapas. Uppdateras något (t.ex. ens kontobalans) skall ändringarna också skrivas till filen.  
 Strukturen på filen väljer du själv, kodbasen innehåller ett [exempel](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank/static/data/accounts-example.json) du kan utgå ifrån.
 
-1. Implementera klasserna som behövs i filerna `handler.py`, `persons.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ. Se till att det existerar en person som äger både ett sparkonto och ett vanligt.
+1. Implementera klasserna som behövs i filerna `handler.py`, `persons.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ.
 
 
 1. Handlern ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna ut den ränta man kommer till att få mellan dagens datum till den som skickas in från datepickern.  
 Det ska finnas metoder för att hämta alla konton, hämta ett specifikt konto, lägga till ett nytt konto samt hantera json-filen.
 
-1. Ett konto skall få sitt `_id` från klass variabeln `Account.account_number`, den skall ej skickas med i konstruktorn.  
+1. Ett konto skall få sitt `_id` tilldelad från klass variabeln `Account.account_number`, den skall ej skickas med i konstruktorn.  
 `interest_rate` representerar hur många `%` balansen ökar med under ett år.  
-`transaction_fee` säger procenten som skall dras av det överförda beloppet. Överför man exempelvis 100kr med 1% ränta, skall 100kr dras från kontot men mottagaren ska endast få 99kr insatta.
+`transaction_fee` säger procenten som skall dras av det överförda beloppet. Överför man exempelvis 100kr med en avgift på 1%, skall 100kr dras från kontot men mottagaren ska endast få 99kr insatta.
 
 
 1. `SavingsAccount` har en extra överföringsavgift och högre dag-för-dag ränta beroende på hur gammal ägaren är. Denna skall motsvara `0.1%` av hens ålder.
