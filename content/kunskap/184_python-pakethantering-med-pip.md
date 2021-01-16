@@ -2,7 +2,8 @@
 author: mos
 category: labbmiljo
 revision:
-  "2020-01-07": (C, aar) Flyttade runt stycken då pip kommer för installerat i nyare versioner av python.
+  "2021-01-16": (D, aar) La till stycke om gcc problem i cygwin.
+  "2021-01-07": (C, aar) Flyttade runt stycken då pip kommer för installerat i nyare versioner av python.
   "2016-03-07": (B, mos) Ändrade paketnamn på Debian till python3-pip.
   "2014-09-17": (A, mos) Första utgåvan för python kursen.
 updated: "2016-04-07 22:46:00"
@@ -28,17 +29,19 @@ Som ett exempel på hur det kan se ut när en referens görs till att du *"kan i
 Så här står det där.
 
 ```bash
-pip install requests
+pip install <paket>
 ```
 
 Nåväl, först behöver vi installera PIP.
 
 
 
-Använd PIP {#pip}
+Använda PIP {#pip}
 --------------------------------------
 
 Från och med Python 3.4 så ska pip följa med python installationen. Försök kolla vilken version av pip som är installerat. Om kommandot inte finns hoppa ner till [Installera PIP för Python 3](#installera) för att installera det.
+
+När ni använder pip kommandot kommer troligen flera av er få en warning om att det finns en nya version tillgänglig. Ni kan ignorera felet eller köra kommandot för att uppdater pip, vilket som funkar.
 
 
 
@@ -61,6 +64,20 @@ När du har installerat PIP kan du installera moduler. I exemplet installeras Py
 ```bash
 pip3 install requests
 ```
+
+Pip försöker installera paket på fler olika sätt. Ett av dem kallas `wheel`, om ni får i utskriften typ 2-3 rader med röd text och det står något med wheel, men installationen fortsätter ändå. Då kan ni ignorera felet, det betyder bara att wheel inte funkade och sen använde pip ett annat verktyg för att installera.
+
+
+
+#### Cygwin problem {cygwin}
+
+Det finns ett känt fel som vissa med cygwin får när de försöker installera ett paket.
+
+[FIGURE src="image/oopython/kmom01/pip-cygwin-gcc-error.jpg" caption="gcc error i cygwin."]
+
+Lösningen är inte alltid självklar men vi har en lösning som oftast funkar. Ladda ner installations filen för Cygwin, och starta den. När du kommer till steget där du kan installera paket, i dropdown för `View` välj `full`. Sök sen på `gcc` och kolla att följande paket är installerade `gcc-core`, `gcc-g++`, `libgcc1`. Om de inte är installerade, installera dem annars klicka så de ominstalleras. Sök sen på `python3-devel`, installera eller ominstallera. Det sista paketet är `python3X-devel`, där `X` är din python version. Om du har python3.7 ska `X` vara 7 osv. När du har klickat i installera eller ominstallera alla paket kör klart installationen. Nu ska förhoppnings vis `pip install` fungera. Om det inte hjälpte, kontakta kursansvarig.
+
+
 
 
 ###Hantera installerade moduler {#pip3}

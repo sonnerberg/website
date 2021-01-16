@@ -130,6 +130,8 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 
 Genomför följande övning för att träna dig.
 
+1. Introducera dig själv med pip och venv, "[Python pakethantering med venv](kunskap/python-virtuel-miljo)".
+
 1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
 
 1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`. Ni behöver inte göra sista delen `Lägg till CGI i Apache webbserver` för detta behöver bara fungera på studentservern, **alltså inte lokalt**.

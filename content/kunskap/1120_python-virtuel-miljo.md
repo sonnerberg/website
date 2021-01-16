@@ -17,7 +17,7 @@ Denna artikel beskriver kortfattat hur du jobbar med PIP och venv.
 Installera moduler i Python {#modules}
 ---------------------------------------
 
-Innan vi kollar på hur vi jobbar med externa moduler behöver vi veta hur vi installerar dem. Läs igenom artikeln [Python pakethantering med pip](kunskap/python-pakethantering-med-pip).
+**Innan** vi kollar på hur vi jobbar med externa moduler behöver vi veta hur vi installerar dem. Läs igenom artikeln [Python pakethantering med pip](kunskap/python-pakethantering-med-pip).
 
 
 
