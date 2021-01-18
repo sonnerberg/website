@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2021-01-18": (C, moc) Bytt ut frågorsport uppgift mot bank.
     "2018-12-18": (B, aar) Bytt ut form uppgift mot frågorsport.
     "2017-11-24": (A, lew) oopython v2.
     "2017-11-10": (PE1, mos) Utkast till v2.
@@ -94,7 +95,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med klass relationer](uppgift/python-med-klass-relationer)" (lab 2)
 
-1. Gör uppgiften "[Frågesport med Flask](uppgift/fragesport_med_flask)". Spara koden i mappen `me/kmom02/questions/`.
+1. Gör uppgiften "[Bank med Flask](uppgift/bank_med_flask)". Spara koden i mappen `me/kmom02/bank/`.
+
+<!-- 1. Gör uppgiften "[Frågesport med Flask](uppgift/fragesport_med_flask)". Spara koden i mappen `me/kmom02/bank/`. -->
 
 <!-- 1. Gör uppgiften "[Skapa former](uppgift/skapa-former)". Spara koden i mappen `me/flask/`. -->
 
