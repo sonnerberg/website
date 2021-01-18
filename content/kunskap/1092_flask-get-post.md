@@ -3,6 +3,7 @@ author:
     - aar
     - lew
 revision:
+    "2021-01-18": (D, moc) La till date modul och json.
     "2018-12-12": (C, aar) La till session.
     "2018-11-26": (B, aar) Skrev om handler koden till en klass.
     "2017-12-01": (A, lew) First version for v2.
@@ -35,7 +36,7 @@ mkdir static templates static/styles templates/forms templates/tables
 touch app.py employee.py handler.py static/styles/style.css templates/{about.html,company.html,footer.html,header.html,index.html,forms/add_employee.html,tables/show_employees.html}
 ```
 
-Ett frädigt exempel finns i [example/flask/session](https://github.com/dbwebb-se/oopython/tree/master/example/flask/session).
+Ett färdigt exempel finns i [example/flask/read_write](https://github.com/dbwebb-se/oopython/tree/master/example/flask/read_write).
 
 Förutsättning {#pre}
 -------------------------------
@@ -120,19 +121,21 @@ Vi skapar en simple klass för att hålla data om anställda.
 Class file for Employee
 """
 import random
+from datetime import date
 
 class Employee():
     """
     Class for Employee
     """
 
-    def __init__(self, firstname, lastname, salary):
+    def __init__(self, firstname, lastname, salary, hired):
         """
         init method
         """
         self.firstname = firstname
         self.lastname = lastname
         self.salary = salary
+        self.hired = hired # "YYYY-MM-DD"
         self.id_number = random.sample(range(10), 4)
 
     def get_salary(self):
@@ -152,7 +155,32 @@ class Employee():
         Returns name
         """
         return self.firstname + " " + self.lastname
+
+    def get_days_hired(self):
+        """
+        Returns the number of days an Employee
+        has been hired.
+        """
+        today = date.today()
+
+        hired_date_list = [int(x) for x in self.hired.split('-')]
+        hired_date = date(*hired_date_list)
+        # Samma kod fast utan list comprehension:
+        # hired_date_list = []
+        # for x in self.hired.split('-'):
+        #   hired_date_list.append(int(x))
+        # * innan listan säger att varje element skall skickas som ett eget argument.
+        # hired_date = date(
+        #    hired_date_list[0], # År
+        #    hired_date_list[1], # Månad
+        #    hired_date_list[2], # Dag
+        # )
+
+        difference = today - hired_date
+        return difference.days
 ```
+
+I `get_days_hired` använder vi pythons inbyggda [`datatime` modul](https://docs.python.org/3/library/datetime.html#) för att dynamiskt hålla koll på hur många dagar en persone har varit anställd. 
 
 Nästa steg blir att skapa Handler klassen så vi kan använda Employee.
 
@@ -179,10 +207,10 @@ class Handler():
         return self.people
 
     def add_predefined_employees(self):
-        emil = Employee("Emil", "Folino", 30000)
-        mikael = Employee("Mikael", "Roos", 31000)
-        kenneth = Employee("Kenneth", "Lewenhagen", 75000)
-        andreas = Employee("Andreas", "Arnesson", 12000)
+        emil = Employee("Emil", "Folino", 30000, "2011-05-13")
+        mikael = Employee("Mikael", "Roos", 31000, "2010-01-01")
+        kenneth = Employee("Kenneth", "Lewenhagen", 75000, "2019-10-05")
+        andreas = Employee("Andreas", "Arnesson", 12000, "2020-03-02")
 
         self.people.append(emil)
         self.people.append(mikael)
@@ -210,6 +238,7 @@ Magin händer i `<tbody>`, vi använder en [for-loop](http://jinja.pocoo.org/doc
             <th>Name</th>
             <th>Id</th>
             <th>Salary</th>
+            <th>Days Hired</th>
         </tr>
     </thead>
 <tbody>
@@ -218,6 +247,7 @@ Magin händer i `<tbody>`, vi använder en [for-loop](http://jinja.pocoo.org/doc
         <td>{{ person.get_name() }}</td>
         <td>{{ person.get_id() }}</td>
         <td>{{ person.get_salary() }}</td>
+        <td>{{ person.get_days_hired() }}</td>
     </tr>
     {% endfor %}
 </tbody>
@@ -335,6 +365,13 @@ Mallen för formuläret, templates/forms/add_employee.html, ser ut på följande
         <label for="salary">Salary: </label>
         <input type="text" name="salary" class="form-control" />
     </div>
+    <div class="form-group row">
+        <input
+        class="form-control"
+        type="date"
+        name="hired"
+        >
+    </div>
     <button type="submit" class="btn btn-default">Lägg till</button>
 </form>
 ```
@@ -357,7 +394,7 @@ Vi sätter metoden till POST och action till sökvägen för `company.html`. Att
 
 Vi behöver modulen `request` från Flask för att hämta vilken typ av request det är och komma åt data från formulär i en route:
 
-```
+```python
 from flask import Flask, render_template, request
 ```
 Nu återstår att hantera det inskickade formuläret. Det gör vi i routen för company.html:
@@ -385,7 +422,8 @@ class Handler():
         empl = Employee(
             form["firstname"],
             form["lastname"],
-            form["salary"]
+            form["salary"],
+            form["hired"]
         )
         self.people.append(empl)
 
@@ -407,32 +445,26 @@ När vi kör sidan lokalt med Flasks inbyggda server är vårt program i app.py 
 
 [FIGURE src=/image/oopython/kmom02/cgi.png caption="Hur CGI fungerar på en webbserver."]
 
-Vi behöver ett externt minne som vårt program kan använda för att spara data mellan requests. Om vi hade skapat en större applikation där vi vill ha persistent data hade vi implementerat en databas. Ett annat alternativ är att skriva datan till fil, det finns ett exempel för detta i [example/flask/read_write](https://github.com/dbwebb-se/oopython/tree/master/example/flask/read_write). Men vi ska använda [Session](http://flask.pocoo.org/docs/1.0/api/#sessions) istället. För de som inte har koll på vad session är eller om någon bara vill friska upp minnet kan ni läsa [Session delen av PHP guiden](guide/kom-igang-med-programmering-i-php/sessioner). Ni kan ignorera att det är PHP kod, det fungera väldigt likt i Python.
+Vi behöver ett externt minne som vårt program kan använda för att spara data mellan requests. Om vi hade skapat en större applikation där vi vill ha persistent data hade vi implementerat en databas. Ett annat alternativ är att spara allt i en session, det finns ett exempel för detta i [example/flask/session](https://github.com/dbwebb-se/oopython/tree/master/example/flask/session). Men vi ska använda [JSON filer](https://docs.python.org/3/library/json.html) istället.
 
-### Session {#session}
+### Json {#json}
 
-För att skapa en unik session till vår applikation och använda den behöver vi skapa en hemlig nyckel som bara vi ska veta om, där av namnet hemlig. I app.py skapar vi en hemlig nyckel baserat på pathen till filen.
-
-```python
-# app.py
-import os
-import re
-from flask import Flask, render_template, request, session
-from handler import Handler
-
-app = Flask(__name__)
-app.secret_key = re.sub(r"[^a-z\d]", "", os.path.realpath(__file__))
-...
+Vi behöver först skapa en ny fil `employees.json` som vi lägger i `static/data` mappen. Efter det så uppdaterar vi även rättigheterna så att vi både kan läsa och skriva till den.
+```bash
+mkdir static/data
+touch static/data/employees.json
+chmod 777 static/data/employees.json
 ```
 
-Session är i princip en vanlig dictionary vilket betyder att om vi vill spara data behöver datan vara av datatypen Dict, eller JSON. Men vår data ligger i Employee objekt vilket inte översätts automatiskt till dictionary så vi kan inte spara datan som den är utan vi behöver [serialisera datan](https://sv.wikipedia.org/wiki/Serialisering). Serialisering är processen att formatera data/objekt till ett format som kan sparas och sedan deserialiseras för att återskapa det tidigare objektet/datan. Vi behöver skapa två nya metoder i Employee klassen för detta. En metod som tar datan från en instans och lägger i en Dict, serialisering, och en som skapar ett nytt Employee objekt av data från en Dict, deserialisering.
+Json är i princip en vanlig dictionary vilket betyder att om vi vill spara data behöver datan vara av datatypen Dict. Men vår data ligger i Employee objekt vilket inte översätts automatiskt till dictionary så vi kan inte spara datan som den är utan vi behöver [serialisera datan](https://sv.wikipedia.org/wiki/Serialisering). Serialisering är processen att formatera data/objekt till ett format som kan sparas och sedan deserialiseras för att återskapa det tidigare objektet/datan. Vi behöver skapa två nya metoder i Employee klassen för detta. En metod som tar datan från en instans och lägger i en Dict, serialisering, och en som skapar ett nytt Employee objekt av data från en Dict, deserialisering.
 
 ```python
 class Employee():
-    def __init__(self, firstname, lastname, salary, id_number=None):
+    def __init__(self, firstname, lastname, salary, hired, id_number=None):
         self.firstname = firstname
         self.lastname = lastname
         self.salary = salary
+        self.hired = hired
         self.id_number = id_number if id_number else random.sample(range(10), 4)
 
     def to_json(self):
@@ -440,50 +472,72 @@ class Employee():
             "fname": self.firstname,
             "lname": self.lastname,
             "salary": self.salary,
+            "hired": self.hired,
             "id": self.id_number,
         }
     # factory method
     @classmethod
     def from_json(cls, json):
-        return cls(json["fname"], json["lname"], json["salary"], json["id"])
+        return cls(json["fname"], json["lname"], json["salary"], json["hired"], json["id"])
     ...
 ```
 
-Inget jätte speciellt i metoderna, `to_json` returnerar en Dict med all data och `from_json` är en klassmetod som skapar en ny instans av klassen, typ som `__init__()`. Klassmetoder som fungerar som `__init__()` brukar kallas "factory methods". Vi lägger även till ett default värde på `id_number` parametern i konstruktorn, så vi kan skicka med id_number när vi skapar objekt från session. Då fortsätter vi med att lägga till två metoder i Handler, en för att skriva data till session och en för att läsa data från session.
+Inget jätte speciellt i metoderna, `to_json` returnerar en Dict med all data och `from_json` är en klassmetod som skapar en ny instans av klassen, typ som `__init__()`. Klassmetoder som fungerar som `__init__()` brukar kallas "factory methods". Vi lägger även till ett default värde på `id_number` parametern i konstruktorn, så vi kan skicka med id_number när vi skapar objekt från json filen. Då fortsätter vi med att lägga till två metoder i Handler, en för att skriva ner data till filen och en för att läsa data den.
 
 ```python
+import json
+
 class Handler():
+    filename = "static/data/employees.json"
+    
+    def __init__(self):
+        self.people = []
+        self.add_predefined_employees()
+        self.load_data()
+
     ...
-    def write_session(self, session):
-        session["employees"] = [e.to_json() for e in self.people]
+
+    def save_data(self):
+        data["employees"] = [e.to_json() for e in self.people]
         # Samma kod fast utan list comprehension
         # people = []
         # for e in self.people:
         #    people.append(e.to_json()
-        # session["employees"] = people
-    
-    def read_session(self, session):
-        # first check if session has values, otherwise will crash if try get values
-        if session.get("employees", []):
-            self.people = [Employee.from_json(e) for e in session["employees"]]
-            # Samma kod fast utan list comprehension
-            # self.people = []
-            # for e in session["employees"]:
-            #    self.people.append(Employee.from_json(e))
+        # data["employees"] = people
+
+        with open(Handler.filename, 'w'):
+            json.dump(data, fh, indent=4)
+
+    def load_data(self):
+        with open(Handler.filename, 'r') as fh:
+            data = json.load(fh)
+
+        self.people = [Employee.from_json(e) for e in data["Employees"]]
+        # Samma kod fast utan list comprehension
+        # self.people = []
+        # for e in data["employees"]:
+        #    self.people.append(Employee.from_json(e))
     ...
 ```
 
-I `write_session` använder vi `to_json()` för att serialisera varje objekt och lägga i en lista. I `read_session` använder vi `from_json()` för att deserialisera datan från session. Nu behöver vi bara anropas dessa två metoder på rätt ställe i `app.py`.
+Först importerar vi modulen `json` och sätter en klassvariabel med filnamnet. I `save_data()` använder vi `to_json()` för att serialisera varje objekt och lägga i en lista. Efter det öppnar vi filen i skrivläge och dumpar den, `indent` är inte nödvändigt, den säger bara hur filen skall formatera sitt innehåll.
+
+I `load_data` läser vi filen och använder `from_json()` för att deserialisera datan från filen. Filen kan vi läsa in redan i konstruktorn, men vi behöver fortfarande skriva till anropa `save_date` på rätt ställen i `app.py`.
+
 
 ```python
 # app.py
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request
+from handler import Handler
+
+app = Flask(__name__)
+handler = Handler()
 ...
 
 @app.route("/")
 def main():
     """ Main route """
-    handler.read_session(session)
+
     return render_template("index.html", people=handler.get_people())
 
 @app.route("/company", methods=["POST", "GET"])
@@ -491,34 +545,17 @@ def company():
     """ Company route """
 
     if request.method == "POST":
-        handler.read_session(session)
         handler.add_employee(request.form)
-        handler.write_session(session)
-        
+        handler.save_data()
 
     return render_template("company.html", persons=handler.get_people())
 ...
 ```
 
-Vi ser till att alltid läsa från session när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till session efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från session innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till.
-
-Vi har en liten sak kvar, vi har inget sätt att tömma session om vi vill glömma allt vi har lagt till. Det löser vi genom att lägga till en route där vi bara tömmer session och redirect:ar till index.html
-
-```python
-@app.route("/reset")
-def reset():
-    """ Route for reset session """
-    handler.people = []
-    handler.add_predefined_employees()
-    _ = [session.pop(key) for key in list(session.keys())]
-    return redirect(url_for('main'))
-```
-
-Nu kan ni lägga till `/reset` i slutet av url:en för att tömma session, om man är lat kan man även lägga till en länk i `header.html` som går dit.
-
+Vi ser till att alltid läsa från filen när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till session efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från filen innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till.
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Nu har vi kommit fram till slutet, det blev mycket information. Vi har lärt oss POST/GET, for-loop i template, CGI, Session och Serialisering bland annat.
+Nu har vi kommit fram till slutet, det blev mycket information. Vi har lärt oss POST/GET, for-loop i template, CGI, Json och Serialisering bland annat.
