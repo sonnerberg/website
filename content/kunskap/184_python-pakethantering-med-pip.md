@@ -69,7 +69,7 @@ Pip försöker installera paket på fler olika sätt. Ett av dem kallas `wheel`,
 
 
 
-#### Cygwin problem {cygwin}
+#### Cygwin problem {#cygwin-problem}
 
 Det finns ett känt fel som vissa med cygwin får när de försöker installera ett paket.
 

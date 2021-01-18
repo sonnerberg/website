@@ -2,6 +2,7 @@
 author: aar
 category: labbmiljo
 revision:
+  "2019-01-12": (C, aar) La till varning om python länk inte är ett kommando.
   "2019-01-12": (B, aar) Tog bort dbwebb venv kommandot.
   "2018-11-21": (A, aar) första utgåva för oopython kursen.
 ...
@@ -55,7 +56,7 @@ Nu har det skapats en ny mapp som heter `.venv` i roten och det har lagts till e
 
 [FIGURE src=/image/oopython/venv_dir.png caption="Mapp struktur i mappen '.venv'."]
 
-I .venv mappen skapas en liten avskalad python miljö med länkar till den globala installationen av python. Vi kan se det på bilden med `python3 -> /usr/bin/python3`.
+I .venv mappen skapas en liten avskalad python miljö med länkar till den globala installationen av python. Vi kan se det i bilden där det står "python3 -> /usr/bin/python3" (kör inte detta som ett kommando).
 
 
 
