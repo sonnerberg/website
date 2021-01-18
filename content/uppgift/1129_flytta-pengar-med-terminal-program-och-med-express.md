@@ -7,6 +7,7 @@ category:
     - express
     - kursen databas
 revision:
+    "2021-01-18": "(E, mos) Specificera tydligare vilken databas som gäller."
     "2020-03-03": "(D, mos) Kommandot move även på terminalklienten."
     "2019-02-12": "(C, mos) Förtydliga hur konfigurationsfilen uppdateras."
     "2019-02-08": "(B, mos) Genomgången fokus mot kursen databas."
@@ -45,7 +46,7 @@ Du har sedan tidigare skapat en terminalklient där du kan utföra kommandon via
 
 Du skall nu utföra funktionen att flytta pengar mellan två konton och man skall kunna göra det via terminalklienten och via webbklienten.
 
-I båda klienterna så hårdkodar vi att 1.5 pengar flyttas från ena kontot till det andra. Användaren kan i detta läget inte bestämma hur mycket pengar som flyttas eller från vilket konto och till vilket konto. 
+I båda klienterna så hårdkodar vi att 1.5 pengar flyttas från ena kontot till det andra. Användaren kan i detta läget inte bestämma hur mycket pengar som flyttas eller från vilket konto och till vilket konto.
 
 I nästa kmom gör vi flytten mer flexibel så man kan bestämma konto och antal pengar.
 
@@ -94,6 +95,8 @@ Krav {#krav}
 -----------------------
 
 1. Inloggningsdetaljer till databasen skall sparas i `config/db/bank.json` och delas mellan webbklient och terminalklient.
+
+1. Dina klienter kommer att testas mot den databas som finns i exemplet "[Transaktioner i databas](kunskap/transaktioner-i-databas)". Du kan alltså inte göra ändringar i databasens struktur.
 
 1. Flytten av pengar skall alltid utföras inom ramen för en transaktion.
 
