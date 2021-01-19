@@ -5,6 +5,7 @@ category:
     - python
     - labbmiljö
 revision:
+    "2021-01-19": (D, aar) La till länk till kändda fel FAQ på github issues.
     "2017-05-30": (C, mos) Uppdaterad inför ht17.
     "2016-02-22": (B, mos) Modifierad med nya videor och flyttade IDLE och python på studservern till egna tips.
     "2015-08-25": (A, mos) Flyttad från äldre artikel.
