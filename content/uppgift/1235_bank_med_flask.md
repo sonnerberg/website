@@ -8,7 +8,7 @@ category:
 Bygg en bank med flask
 ===================================
 
-[FIGURE src=/image/oopython/kmom02/bank.png?w=c5 class="right"]
+[FIGURE src=/image/oopython/kmom02/bank_1.png?w=c5 class="right"]
 
 Uppgiften går ut på att med hjälp av klasser, Flask, jinja2 och CSS, skapa en webbsida där man kan flytta pengar och räkna på räntor.
 
@@ -29,20 +29,21 @@ Introduktion {#intro}
 
 Du jobbar vid sidan om dina studier och din kund vill att du gör klart en webbsida som redan är påbörjad. Gränssnittet och routes för sidan är redan klart, du ska skapa klasserna för backend:en till webbsidan. I och med att frontend redan är klar och innehåller anrop till koden du ska skapa behöver dina klasser uppfylla abstraktionskraven som det medför. Med det menas att i dina klasser behöver det finnas vissa metoder och attribut med rätt namn, annars kommer inte frontend fungera med din backend. I klassdiagrammet nedanför kan du se vilket gränssnitt din klasser måste uppfylla. Med gränssnitt menas existerande publika metoder.
 
-[YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."]
+<!-- [YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."] -->
 
-Du ska implementera klasserna för de två kontotyperna och handlern som app.py jobbar mot.
+Du ska implementera klasserna för de två kontotyperna och kontohanteraren som app.py jobbar mot.
 
-[FIGURE src=/image/oopython/kmom02/bank_uml.png caption="Klassdiagram för uppgiften."]
+<!-- [FIGURE src=/image/oopython/kmom02/bank_uml_1.png?w=100% caption="Klassdiagram för uppgiften."] -->
 
-Attributen och metoderna som är **bold**-markerad används av den färdiga koden ni får och måste därför implementeras av er med de namnen. Övriga är bara exempel på vad man kan ha med.
+Attribut och metoder som är markerade med **<<get>>** eller **<<set>>** används för att markera properties och setters.  
+Attributen och metoderna som är **bold**-markerad används av den färdiga koden ni får och måste därför implementeras av er med de namnen.  
+Övriga är bara exempel på vad man kan ha med.
 
-[YOUTUBE src=GBmyT_TntXA width=630 caption="Andreas förklarar klassdiagrammet och koden som ska skrivas."]
+<!-- [YOUTUBE src=GBmyT_TntXA width=630 caption="Andreas förklarar klassdiagrammet och koden som ska skrivas."] -->
 
 Appen följer överlag samma struktur som i övningen, vi använder oss av en json-fil för att spara den dynamiska data som applikationen inte kommer ihåg mellan request:en. Ett tips, när du börjar utveckla en ny metod som anropas från den färdiga koden, använd dig av `print()` i metoden du skapar och kolla klassdiagrammet för att ta reda på vad som skickas som argument till din metod.
 
-[YOUTUBE src=rqfqn29glIo width=630 caption="Hur ska man börja med bank uppgiften?"]
-
+<!-- [YOUTUBE src=rqfqn29glIo width=630 caption="Hur ska man börja med bank uppgiften?"] -->
 
 Krav {#krav}
 -----------------------
@@ -59,7 +60,7 @@ cd me/kmom02/bank
 
 1. Kolla på youtube-klippen ovanför för att få en översyn av vad du ska göra.
 
-1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metod som behövs och vad de används till.
+1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metoder som behövs och vad de används till.
 
 1. Skapa filen `static/data/accounts.json` där du lägger in den data du behöver för att återskapa alla klasser. Filen skall automatiskt läsas in när en ny instans av `AccountManager` skapas.  
 Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också att ge filen skriv och läsrättigheter:
@@ -68,18 +69,21 @@ Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också
 chmod 777 static/data/accounts.json
 ```
 
-4. Implementera klasserna som behövs i filerna `handler.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ.
+4. Implementera klasserna som behövs i filerna `account_manager.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ.
 
-1. Ett konto skall få sitt *id* tilldelad från klass variabeln `Account.account_number`, den skall ej skickas med i konstruktorn.  
+1. Ett konto skall ha metoder som hämtar sitt id, balans och typen (klass namnet).  
+Den skall även kunna ändra på sin balans, innehålla en klass metod som returnerar en ny instans från en dictionary och beräkna en överföringskostnad.  
+Den skall få sitt *id* tilldelad från det statiskt attributet `Account.account_number` (den skall ej skickas med i konstruktorn).  
 `Account.transaction_fee` säger procenten som skall dras av det överförda beloppet. Överför man exempelvis 100kr med en avgift på 1%, skall 100kr dras från kontot men mottagaren ska endast få 99kr insatta.
 
-1. `SavingsAccount` ärver `Account`. Den skall ha en extra funktionalitet som räknar ut kontots dagliga ränta. 
+1. `SavingsAccount` ärver `Account`. Den skall ha en extra funktionalitet som räknar ut kontots dagliga ränta beroende på `SavingsAccount.interest_rate` som representerar den årliga räntan i %. Den skall också ha en högre `transaction_fee`.
 
-1. Handlern ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna ut den ränta man kommer till att få mellan dagens datum till den som skickas in från datepickern.  
+1. AccountManager klassen ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna ut den ränta man får mellan dagens datum till den som skickas in från datepickern.  
 Det ska finnas metoder för att hämta alla konton, hämta ett specifikt konto, lägga till ett nytt konto samt hantera json-filen.
 
 
 1. Du ska inte behöva ändra i några av de andra filerna, förutom kanske style.css, men om du känner att du vill/behöver det skriv varför i din redovisningstext.
+
 
 ```bash
 # Ställ dig i kurskatalogen
