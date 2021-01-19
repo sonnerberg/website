@@ -64,7 +64,7 @@ Verifiera att installationen gick bra genom att kontrollera vilken version av py
 python3 --version
 ```
 
-Nu har du Python3 installerad på din dator.
+Nu har du Python3 installerad på din dator. Om kommandot inte fungerade, kolla in [Kända fel och lösningar](https://github.com/dbwebb-se/python/issues/44).
 
 Du kan pröva att exekvera ett Python-kommando som skriver ut strängen "Hello World".
 
