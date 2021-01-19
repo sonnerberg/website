@@ -15,7 +15,7 @@ Flask, POST och GET
 
 [FIGURE src=/image/oopython/kmom02/topimage-art1.png?w=c5 class="right"]
 
-Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Målet är att vi ska med hjälp av ett formulär, en tabell, GET och POST, presentera innehåll i vår Flask-applikation. Vi behöver även blanda in Session för att spara data mellan requests på studentservern.
+Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Målet är att vi ska med hjälp av ett formulär, en tabell, GET och POST, presentera innehåll i vår Flask-applikation. Vi behöver även blanda in json filer för att spara data mellan requests på studentservern.
 
 <!--more-->  
 
@@ -552,7 +552,7 @@ def company():
 ...
 ```
 
-Vi ser till att alltid läsa från filen när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till session efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från filen innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till.
+Vi ser till att alltid läsa från filen när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till json filer efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från filen innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till.
 
 
 Avslutningsvis {#avslutning}
