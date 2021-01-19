@@ -49,7 +49,7 @@ MySQL ägdes från början av ett svenskt företag som köptes upp och numer äg
 
 
 
-Server, klient och DMBS {#dbms}
+Server, klient och DBMS {#dbms}
 ------------------------------
 
 När man pratar om databasen så delar man upp den i server och klient. Servern kan köras lokalt på samma maskin man sitter, eller på en annan maskin någonstans ute på nätet. Klienten kan man köra på godtycklig maskin och koppla sig till godtycklig databasserver, förutsatt att man har tillgång till servern och kan logga in på den med en användare och ett lösenord.
@@ -88,7 +88,7 @@ De vanligaste SQL-kommandona kallas DML, Data Manipulation Language. De handlar 
 
 Jag väljer att skapa olika filer för dessa (`setup.sql`, `ddl.sql`, `dml.sql`), det blir enklare att separera koden och hålla ordning på vad som är vad.
 
-För att få ett exempel som vi kan jobba med i olika klienter så skapar jag en testanvändare, en testdatabas och en testtabell som jag fyller med innehåll. 
+För att få ett exempel som vi kan jobba med i olika klienter så skapar jag en testanvändare, en testdatabas och en testtabell som jag fyller med innehåll.
 
 Här följer SQL-koden, separerad i filer. Du hittar alla filerna i kursrepot för databas-kursen, under [`example/intro`](https://github.com/dbwebb-se/databas/tree/master/example/intro).
 
@@ -228,9 +228,9 @@ USE dbwebb;
 --
 -- Delete from all tables.
 --
-DELETE FROM student2course; 
-DELETE FROM student; 
-DELETE FROM course; 
+DELETE FROM student2course;
+DELETE FROM student;
+DELETE FROM course;
 
 --
 -- Add some students.
@@ -248,7 +248,7 @@ VALUES
 --
 -- Add some courses.
 --
-INSERT INTO course 
+INSERT INTO course
     (code, name, nick, points)
 VALUES
     ('PA1439', 'Webbteknologier', 'htmlphp', 7.5),
