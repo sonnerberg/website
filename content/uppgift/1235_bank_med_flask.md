@@ -5,7 +5,7 @@ revision:
 category:
     - oopython
 ...
-Bygg en bank med flask
+Bygg en bank med flask - Del 1
 ===================================
 
 [FIGURE src=/image/oopython/kmom02/bank_1.png?w=c5 class="right"]
@@ -33,9 +33,9 @@ Du jobbar vid sidan om dina studier och din kund vill att du gör klart en webbs
 
 Du ska implementera klasserna för de två kontotyperna och kontohanteraren som app.py jobbar mot.
 
-<!-- [FIGURE src=/image/oopython/kmom02/bank_uml_1.png?w=100% caption="Klassdiagram för uppgiften."] -->
+[FIGURE src=/image/oopython/kmom02/bank_uml_1.png?w=100% caption="Klassdiagram för uppgiften."]
 
-Attribut och metoder som är markerade med **<<get>>** eller **<<set>>** används för att markera properties och setters.  
+Attribut och metoder som är markerade med `<<get>>` eller `<<set>>` används för att markera properties och setters.  
 Attributen och metoderna som är **bold**-markerad används av den färdiga koden ni får och måste därför implementeras av er med de namnen.  
 Övriga är bara exempel på vad man kan ha med.
 
@@ -62,11 +62,11 @@ cd me/kmom02/bank
 
 1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metoder som behövs och vad de används till.
 
-1. Skapa filen `static/data/accounts.json` där du lägger in den data du behöver för att återskapa alla klasser. Filen skall automatiskt läsas in när en ny instans av `AccountManager` skapas.  
+1. Skapa filen `static/data/data.json` där du lägger in den information du behöver för att återskapa alla klasser. Filen skall automatiskt läsas in när en ny instans av `AccountManager` skapas.  
 Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också att ge filen skriv och läsrättigheter:
 
 ```bash
-chmod 777 static/data/accounts.json
+chmod 777 static/data/data.json
 ```
 
 4. Implementera klasserna som behövs i filerna `account_manager.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ.
@@ -78,7 +78,7 @@ Den skall få sitt *id* tilldelad från det statiskt attributet `Account.account
 
 1. `SavingsAccount` ärver `Account`. Den skall ha en extra funktionalitet som räknar ut kontots dagliga ränta beroende på `SavingsAccount.interest_rate` som representerar den årliga räntan i %. Den skall också ha en högre `transaction_fee`.
 
-1. AccountManager klassen ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna ut den ränta man får mellan dagens datum till den som skickas in från datepickern.  
+1. `AccountManager` ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna på hur mycket pengar ett sparkonto kommer till att få av sin ränta mellan dagens datum till den som användaren väljer från en datepicker.  
 Det ska finnas metoder för att hämta alla konton, hämta ett specifikt konto, lägga till ett nytt konto samt hantera json-filen.
 
 
