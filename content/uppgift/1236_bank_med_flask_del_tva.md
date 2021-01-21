@@ -1,0 +1,82 @@
+---
+author: moc
+revision:
+    "2020-01-21": (A, moc) Skapad inför VT21.
+category:
+    - oopython
+...
+Bygg en bank med flask - Del 2
+===================================
+
+Du skall jobba vidareutveckla det du gjorde i förra kursmomentet och lägga till en ny klass. 
+
+<!--more-->
+
+
+
+Förkunskaper {#forkunskaper}
+-----------------------
+
+1. Du har gjort klart "[Bygg en bank med flask - Del 1](uppgift/bank_med_flask)".  
+
+2. Du kar läst artikeln "[Att skriva unittester](kunskap/unittest-i-python)".
+
+
+
+Introduktion {#intro}
+-----------------------
+
+Kunden blev riktigt nöjd med din insats och har nu bett dig att vidareutveckla bank applikationen. De har gett dig i uppdrag att uppdatera gränssnittet och lägga till nya routes. Du kommer till att behöva ändra i den existerande kodbasen och lägga till ny funktionalitet som att skapa nya konton och koppla dem till en ny person klass.
+
+
+<!-- [YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."] -->
+
+Det finns lite exempel på de nya vyerna och en början på routen som skapar konton/personer under [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
+
+Krav {#krav}
+-----------------------
+
+1. Kolla på youtube-klippen ovanför för att få en översyn av vad du ska göra.
+
+1. Skapa en ny klass `Person`, lägg den i filen `persons.py`. Varje person skall ha attributen **name** och **_id** (som är ett personnummer) samt metoden **\_\_str\_\_()** som returnerar hens namn. Resterande attribut och metoder avgör du själv.  
+
+1. Lägg till möjligheten att skapa en ny person. I vyn skall det finnas möjligheten att skriva in personens namn och personnummer.  
+Man skall ej kunna skapa en person vars personnummer redan existerar.
+
+1. Lägg till möjligheten att skapa ett nytt konto. I vyn skall det finnas en dropdown med alla konto typerna och ett fält där man kan skriva in kontots balans.
+
+1. Utöka koden och gör det möjligt att koppla personer till konton. Ett Konto skall kunna klara av att hålla flera användare. I vyn lägger du till tcå dropdowns, en med personernas id och en med kontonas id.  
+En person som redan "äger" ett konto skall ej kunna kopplas mot den igen.
+
+1. Uppdatera *index.html*, lägg till en ny kolumn i tabellen som visar namnen på alla som är kopplade till kontot. Namnen skall vara komma separerat utan `,` på stulet.
+
+1. Uppdatera *account.html*, lägg till lista med namnet och personnumret på varje person som är kopplad till kontot.
+
+1. Skriv enhetstester för att kolla om transaktioner för båda konto typerna fungerar, testa uträkning av räntor, skapandet av personer och konton samt funktionaliteten som kopplar dem tillsammans.  
+När du skriver tester för att skapa personer och kolla dem till ett konto, se till att du också täcker ett positivt fall och ett negativt fall för varje. Det negativa kan t.ex vara om du skapar en person vars id redan existerar.
+
+
+```bash
+# Ställ dig i kurskatalogen
+dbwebb validate bank
+dbwebb publish bank
+```
+
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
+
+
+
+Extrauppgift {#extra}
+-----------------------
+
+1. Uppdatera klassdiagrammet.
+
+2. Lägg till flera tester.
+
+
+Tips från coachen {#tips}
+-----------------------
+
+Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
+
+Lycka till och hojta till i discord om du behöver hjälp!
