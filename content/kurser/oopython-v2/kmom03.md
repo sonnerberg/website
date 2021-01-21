@@ -3,6 +3,7 @@ author: lew
 category:
     - oopython
 revision:
+    "": (C, moc) La in bank2 och ändrade war uppgiften till klassdiagram. 
     "2019-01-19": (B, aar) Tog bort uppgifter om sekvensdiagram.
     "2017-12-13": (A, lew) New version for v2.
 ...
@@ -105,7 +106,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 <!-- 1. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".   -->
 
-1. Gör uppgiften "[Kortspelet War](uppgift/kortspelet-war)". Utför uppgiften i mappen `war`.  
+<!-- 1. Gör uppgiften "[Kortspelet War](uppgift/kortspelet-war)". Utför uppgiften i mappen `war`.   -->
+
+1. Gör uppgiften "[Skapa ett UML diagram](uppgift/skapa_ett_uml_diagram)".  
+
+1. Gör uppgiften "[Bygg en bank med flask - Del 2](uppgift/bank_med_flask_del_tva)".  
 
 <!-- 1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram2)". Utför uppgiften i mappen `uml`.   -->
 
