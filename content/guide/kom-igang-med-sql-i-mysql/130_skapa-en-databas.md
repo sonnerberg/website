@@ -71,4 +71,4 @@ Så här kan du nu återskapa databasen, genom att köra SQL-filen med kommandor
 $ mysql --table -uroot -p < setup.sql
 ```
 
-Kommandot fungerar när inga felmeddelanden visas. Switchen `--table` ger en tydligare utskrift. Det kan se ut så här.
+Kommandot fungerar när inga felmeddelanden visas. Switchen `--table` ger en tydligare utskrift.
