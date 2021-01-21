@@ -46,7 +46,7 @@ Du är bekant med guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i
 Video {#video}
 --------------------------------------
 
-Det finns en inspelad föreläsning "[JavaScript och MySQL](kurser/databas-v1/forelasning/javascript-och-mysql)" som berör samma ämne som denna artikel hanterar. Titta på den för att komplettera den bilden du får från artikeln, eller som en introduktion till ämnet, innan du börjar jobba med artikeln.
+Det finns en inspelad föreläsning "[JavaScript och MySQL](kurser/databas-v1/forelasning/javascript-och-mysql)" som berör samma ämne som denna artikel hanterar. Du kan välja att titta på den för att komplettera den bilden du får från artikeln, eller som en introduktion till ämnet, innan du börjar jobba med artikeln.
 
 
 
