@@ -8,9 +8,7 @@ category:
 Skapa ett UML Diagram
 ===================================
 
-[FIGURE src=/image/oopython/kmom03/blackjack.jpg?w=c5 class="right"]
-
-Uppgiften går ut på att skapa ett klassdiagram över kortspelet war.
+Uppgiften går ut på att skapa ett klassdiagram för kortspelet war. Koden är färdig och ligger i [example/war](https://github.com/dbwebb-se/oopython/tree/master/example/war).
 
 <!--more-->
 
@@ -27,7 +25,7 @@ Du har läst guiden "[Klass relationer](guide/kom-igang-med-objektorienterad-pro
 Krav {#krav}
 -----------------------
 
-Börja med att kopiera frontend koden till ditt uppgift.
+Börja med att kopiera koden till uppgiften.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -58,4 +56,4 @@ Det finns inga extrauppgifter.
 Tips från coachen {#tips}
 -----------------------
 
-Det finns bra verktyg online för att rita uml diagram, kolla in [draw.io](https://www.draw.io) och [websequencediagrams](https://www.websequencediagrams.com/). Man kan också hitta ett flertal tillägg till VScode och Atom för b.la draw.io om man föredrar att göra det direkt i sin text editor.
+Det finns bra verktyg online för att rita uml diagram, kolla in [draw.io](https://www.draw.io) och [websequencediagrams](https://www.websequencediagrams.com/). Man kan också hitta ett flertal tillägg till VScode och Atom för bland annat draw.io om man föredrar att göra det lokalt i sin text editor.

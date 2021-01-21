@@ -31,7 +31,7 @@ Kunden blev riktigt nöjd med din insats och har nu bett dig att vidareutveckla 
 
 <!-- [YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."] -->
 
-Denna gången har de inte gett dig ett diagram eller någon färdig kod men, deras tidigare utvecklare började att skapa några av vyerna och lite kod för routen. Du behöver inte använda dig av dem men de ligger i [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
+Denna gången har kunden inte gett dig ett diagram eller någon färdig kod i routern men, deras tidigare utvecklare började att skapa några av vyerna och lite kod för routen. Du kan använda det för att komma igång (om du vill). Koden kan hittas under [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
 
 Krav {#krav}
 -----------------------
@@ -45,16 +45,19 @@ Man skall ej kunna skapa en person vars personnummer redan existerar.
 
 1. Lägg till möjligheten att skapa ett nytt konto. I vyn skall det finnas en dropdown med alla konto typerna och ett fält där man kan skriva in kontots balans.
 
-1. Utöka koden och gör det möjligt att koppla personer till konton. Ett Konto skall kunna klara av att hålla flera användare. I vyn lägger du till två dropdowns, en med personernas id och en med kontonas id.  
-En person som redan "äger" ett konto skall ej kunna kopplas mot den igen.
+1. Utöka koden och gör det möjligt att koppla personer till konton. Ett Konto skall kunna klara av att hålla flera användare. Man skall inte kunna koppla samma person till ett konto mer än en gång. I vyn lägger du till två dropdowns, en med personernas id och en med kontonas id.  
 
 1. Uppdatera *index.html*, lägg till en ny kolumn i tabellen som visar namnen på alla som är kopplade till kontot. Namnen skall vara komma separerat utan `,` på stulet.
 
-
 1. Uppdatera *account.html*, lägg till lista med namnet och personnumret på varje person som är kopplad till kontot.
 
-1. Skriv enhetstester för att kolla transaktioner för båda konto typerna, testa uträkning av räntor, skapandet av personer och konton samt funktionaliteten som kopplar dem tillsammans.  
-När du skriver tester för att skapa personer och kolla dem till ett konto, se till att du också täcker ett positivt fall och ett negativt fall för varje. Det negativa kan t.ex vara om du skapar en person vars id redan existerar.
+1. Skriv enhetstester för följande:
+    1. Transaktioner för båda konto typerna.
+    1. Testa uträkning av räntor mellan två dagar.
+    1. Kolla om skapandet av personer och konton fungerar som du har tänkt samt funktionaliteten som kopplar dem tillsammans.
+
+1. När du skriver enhetstester för att skapa personer och koppla när man kopplar dem till ett konto, se till att skriva testfall som täcker både positiva och negativa fall.  
+Det negativa fallen skall vara följande, se till att en person vars *id* redan existerar inte skapas och att du inte kan koppla samma person till ett konto två gånger.
 
 
 ```bash
@@ -70,9 +73,9 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. Uppdatera klassdiagrammet efter dina ändringar, lägg den i `static/img/uml.png`.
+1. Uppdatera klassdiagrammet så att den matchar din nuvarande kod, lägg den i `static/img/uml.png`.
 
-2. Lägg till flera testfall som du känner är viktiga att täcka.
+2. Gör flera enhetstester och testfall som du känner är viktiga att täcka.
 
 
 Tips från coachen {#tips}
