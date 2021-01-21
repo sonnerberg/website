@@ -6,15 +6,15 @@ revision:
 JavaScript och NodeJS
 ====================
 
-En översikt och introduktion till området relationsdatabaser med fokus på MySQL, MariaDB, bakgrunden för relationsdatabaser, skillnaden mellan databasens schema och dess innehåll samt frågespråket SQL.
+En introduktion till JavaScript på serversidan med Node.js. Presentationen börjar med bakgrunden i JavaScript och fortsätter med att jämföra features för JavaScript på klient- och på serversidan. Därefter blir det hur man programmerar i Node.js och om den asynkrona programmeringsmodellen.
 
 Denna föreläsning är bra att se på som en del i förberedelserna inför att jobba med kmom02.
 
-Videon är 33 minuter lång.
+Videon är 52 minuter lång.
 
-[YOUTUBE src="i6TGA-ov_E0" width=700 caption="Databasteknik, relationsdatabaser och SQL (med Mikael)."]
+[YOUTUBE src="tk_Bj28giSI" width=700 caption="JavaScript och Nodejs (med Mikael)."]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f01/slide.html).
+Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f02-javascript-and-nodejs/slide.html).
 
 
 

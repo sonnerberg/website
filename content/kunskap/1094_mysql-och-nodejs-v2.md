@@ -7,6 +7,7 @@ category:
     - kursen dbjs
     - kursen databas
 revision:
+    "2021-01-21": "(C, mos) lade till länk till inspelad föreläsning."
     "2019-01-21": "(B, mos) Genomgången och uppdaterad med mer förklaringar och ny kodstruktur på exempelprogrammen."
     "2017-12-29": "(A, mos) Uppdaterad version av tidigare artikel."
 ...
@@ -39,6 +40,13 @@ Du har installerat npm och du har Node.js version 10 eller senare.
 Exempelprogrammen i artikeln finns i kursrepot databas under [`example/nodejs/mysql`](https://github.com/dbwebb-se/databas/tree/master/example/nodejs/mysql).
 
 Du är bekant med guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)" och har tillgång till datasen "skolan" som är fylld med innehåll.
+
+
+
+Video {#video}
+--------------------------------------
+
+Det finns en inspelad föreläsning "[JavaScript och MySQL](kurser/databas-v1/forelasning/javascript-och-mysql)" som berör samma ämne som denna artikel hanterar. Titta på den för att komplettera den bilden du får från artikeln, eller som en introduktion till ämnet, innan du börjar jobba med artikeln.
 
 
 
@@ -156,7 +164,7 @@ Följande två konstruktioner är alltså likvärdiga.
 ```javascript
 // An ordinary async main function.
 async function main() {
-    
+
 }
 main();
 
@@ -771,7 +779,7 @@ rl.question[util.promisify.custom] = (arg) => {
 const question = util.promisify(rl.question);
 ```
 
-Vi fördjupar oss inte i konstruktionen som finns beskriven i [Node.js manualen för promisify och custom promisified functions](https://nodejs.org/api/util.html#util_util_promisify_original). 
+Vi fördjupar oss inte i konstruktionen som finns beskriven i [Node.js manualen för promisify och custom promisified functions](https://nodejs.org/api/util.html#util_util_promisify_original).
 
 Huvudsaken är att vi nu har en funktion `question()` som returnerar det som användaren skriver in och vi kan använda tillsammans med await.
 

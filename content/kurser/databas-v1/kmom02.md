@@ -51,20 +51,14 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 6-8 studietimmar)*
 
 
-<!--
+
 ### Föreläsningar {#flas}
 
 Titta på följande inspelade föreläsningar.
 
-1. [JavaScript och Node.js](./../forelasning/javascript-och-nodejs) ger dig en introduktion till de databaser och SQL.
--->
+1. [JavaScript och Node.js](./../forelasning/javascript-och-nodejs) ger en introduktion till den programmeringsmiljö av JavaScript och Node.js som väntar dig i kursen.
 
-<!--
-* Det fanns tidigare en liten äldre föreläsning om tips och trx kring hur man jobbar med SQL. https://dbwebb.se/repo/slides/vt20/120-databas-kmom02-intro.html
-Det känns som en uppsamling från kmom01, eventuellt löses den av Kenneths genomgång eller behövs någon annan video.
-
-Hmm, jag borde nog komplettera med en föreläsning om tipso ch trx med SQL. Som visar lite hur man jobbar. Kunde vara en kortare session innan vi startar med JavaScript.
--->
+1. [JavaScript och MySQL](./../forelasning/javascript-och-mysql) visar dig grunderna i hur du kopplar upp till till en databas via JavaScript och ställer vanliga SQL-frågor.
 
 
 

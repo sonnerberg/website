@@ -14,7 +14,7 @@ Videon är 33 minuter lång.
 
 [YOUTUBE src="i6TGA-ov_E0" width=700 caption="Databasteknik, relationsdatabaser och SQL (med Mikael)."]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f01/slide.html).
+Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f01-databasteknik/slide.html).
 
 
 

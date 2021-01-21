@@ -12,7 +12,7 @@ Videon är 23 minuter lång.
 
 [YOUTUBE src="ia-CE0mxcZI" width=700 caption="Kursintroduktion till kursen databas med Mikael."]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f00/slide.html).
+Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f01-kursintro/slide.html).
 
 
 
