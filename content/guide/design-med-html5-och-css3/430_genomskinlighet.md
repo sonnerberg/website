@@ -6,7 +6,7 @@ revision:
 Genomskinlighet
 =======================
 
-Vi såg i början av denna del i guiden att vi kan ange färg på många olika sätt. Vi har än så länga enbart använt hex som sätt att ange våra färger. Ett annat användbart sätt att ange färg är att använda `rgb()` eller `rgba()`.
+Vi såg i början av denna del i guiden att vi kan ange färg på många olika sätt. Vi har än så länge enbart använt hex som sätt att ange våra färger. Ett annat användbart sätt att ange färg är att använda `rgb()` eller `rgba()`.
 
 RGB står för Röd-Grön-Blå och vi anger färgen som ett heltal mellan 0 och 255. RGBA står för Röd-Grön-Blå-Alpha där Alpha är genomskinlighet, Alpha delen anges som ett flyttal mellan 0.0 och 1.0. 0.0 är full transparens och 1.0 är ingen transparens.
 

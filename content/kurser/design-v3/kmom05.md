@@ -25,7 +25,7 @@ När man placerar ut bilder i text så har man alternativen att låta bilden sp�
 
 Men hur bör detta förändras när man gör responsiva webbplatser där både text och bild förändras på mindre enheter? Här handlar det inte enbart om att leverera rätt bild till rätt enhet, det gäller även att placera ut bilden på rätt sätt i förhållande till texten på olika enheter.
 
-Att göra det för hand fungerar på mindre webbplatser, men om man har en webbplats som dbwebb så kan man behöva andra tekniker för att finna ett någorlunda standardiserat flödet för responsiva bilder i text.
+Att göra det för hand fungerar på mindre webbplatser, men om man har en webbplats som dbwebb så kan man behöva andra tekniker för att finna ett någorlunda standardiserat flöde för responsiva bilder i text.
 
 Behöver bilderna vara likadana på en desktop och en mobil? Ibland vill man skicka mindre bilder till en mindre enhet, speciellt om det är dålig koppling på nätverket mellan enheten och webbplatsen. Men, sedan finns det små enheter som har riktigt hög upplösning på skärmen och det kan kräva en större bild. Här ser vi krav som eventuellt inte går att förena.
 

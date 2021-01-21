@@ -155,7 +155,7 @@ I `shared/scss/base.scss` lägger jag in alla mina filer för bastemat.
 @import 'variables';
 @import 'layout';
 ```
-Som vi ser så behöver man inte behöver ta med filändelsen när man importerar andra `.scss` eller `.css` filer.
+Som vi ser så behöver man inte ta med filändelsen när man importerar andra `.scss` eller `.css` filer.
 
 
 I `themes/dbwebb/index.twig` skapar jag nu basutseendet för vår HTML och jag uppdaterar vår layout i `themes/shared/layout.scss`:

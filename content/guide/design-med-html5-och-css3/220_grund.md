@@ -25,4 +25,4 @@ p {
 ```
 
 Vi börjar med att sätta `font-size: 100%;` för rot-elementet `html` för att inte skriva över användarens typsnittsinställningar i webbläsaren. Kombinationen `font-size: 100%;` för `html` och `font-size: 1em;` för alla `p`
-element ledar i de flesta fallen till att vi har storleken `16px`.
+element leder i de flesta fallen till att vi har storleken `16px`.

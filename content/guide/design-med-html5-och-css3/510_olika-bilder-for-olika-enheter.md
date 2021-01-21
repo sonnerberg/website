@@ -6,7 +6,7 @@ revision:
 Olika bilder för olika enheter
 =======================
 
-Mobila enheters framtåg de senaste drygt 10 åren gör att man som utvecklare måste vara uppmärksam på vilken variant av en bild man användar för enheter av olika storlekar. För att ytterligare komplicera denna processen är pixeldensiteten för många mobila enheter samt för många bärbara datorer mycket stor.
+Mobila enheters framtåg de senaste drygt 10 åren gör att man som utvecklare måste vara uppmärksam på vilken variant av en bild man använder för enheter av olika storlekar. För att ytterligare komplicera denna process är pixeldensiteten för många mobila enheter samt för många bärbara datorer mycket stor.
 
 För att bilder inte ska bli suddiga på enheter med stor pixeldensitet kan vi med hjälp av `srcset` attributet definiera vilken variant av en bild vi vill visa beroende på pixeldensiteten på den enhet som används.
 

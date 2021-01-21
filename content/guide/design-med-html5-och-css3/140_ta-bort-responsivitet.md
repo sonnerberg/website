@@ -6,7 +6,7 @@ revision:
 Ta bort responsivitet
 =======================
 
-Vi ser i versionen `simple.css` att använda relativa enheter för att anpassa webbplatsen fungerar till stor del. Men när sidan blir för smal ser vi att designen kollapser och att delar av menyn blir svåra att läsa. Om sidan blir riktigt liten ser vi även att texten från menyn överlappar artikeln.
+Vi ser i versionen `simple.css` att använda relativa enheter för att anpassa webbplatsen fungerar till stor del. Men när sidan blir för smal ser vi att designen kollapsar och att delar av menyn blir svåra att läsa. Om sidan blir riktigt liten ser vi även att texten från menyn överlappar artikeln.
 
 Ett sätt att komma runt detta är att helt enkelt gömma vissa delar av webbplatsen. I exempelprogrammet `example/guide/responsivitet` väljer vi att gömma innehållsförteckningen när sidan blir liten. Du kan testa detta genom att trycka på knappen `removing.css`.
 
