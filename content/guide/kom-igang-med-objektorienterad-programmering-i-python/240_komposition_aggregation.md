@@ -18,9 +18,11 @@ Relationen kan vara enkelriktad eller dubbelriktade.
 Komposition och aggregation {#komposition_aggregation}
 ------------------------------
 
-Det är komposition när klasserna är starkt kopplade. Om _ägar_ klassen slutar existerar slutar även det _ägda_ objektet att existera. T.ex. House (ägare) och Room (ägd), ett Room objekt kan inte existera utan att vara i ett House objekt.  
+Det är komposition när klasserna är starkt kopplade. Om _ägar_ klassen slutar existerar slutar även det _ägda_ objektet att existera. T.ex. House (ägare) och Room (ägd), ett Room objekt kan inte existera utan att vara i ett House objekt.
+
 Det är aggregation när klasserna är svagt kopplade. Om _ägar_ klassen slutar existerar då fortsätter det _ägda_ objektet att existera.
-I exemplet, Person has-a Dog, så är det aggregation då Dog fortsätter existera om Person slutar existera.  
+I exemplet, Person has-a Dog, så är det aggregation då Dog fortsätter existera om Person slutar existera.
+
 Om det _ägda_ objektet skapas i _ägarens_ konstruktor är det oftast komposition medans om det _ägda_ objektet skickas som ett argument till konstruktorn är det oftast aggregation.
 
 Vi skapar en Person klass och en Date klass. Tanken är att ett Date ska innehålla födelsedatumet för ett Person objekt.
@@ -58,7 +60,7 @@ My name is Klara and my date of birth is 2010-3-15
 2010-3-14
 ```
 
-[FIGURE src=/image/oopython/guide/pers_date_comp.png caption="Klassdiagram över Person och Date med komposition."]
+[FIGURE src=/image/oopython/guide/pers-date-comp.png caption="Klassdiagram över Person och Date med komposition."]
 
 Vilken typ av relation har vi här? Aggregation eller komposition? Tipsen från ovanför var om objektet skapas i konstruktorn eller skickas som argument och om man gör delete på Person objektet kommer Date objektet finnas kvar. I koden ovanför skapas Date objekten i konstruktorn vilket tyder på att det är en kompositions relation mellan Person och Date. Vidare har Date objekten bara en reference i koden och den ligger i Person objekten. Vilket betyder att om person objektet raderas kommer även Date objektet göra det. Date objekten uppfyller ingen funktionalitet utanför ett Person objekt. Av dessa tre anledningarna så är det komposition och inte aggregation.
 

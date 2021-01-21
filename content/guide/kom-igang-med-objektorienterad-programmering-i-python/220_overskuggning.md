@@ -37,12 +37,16 @@ class Movie(Video):
         self.rating = rating
 
     def print_info(self):
-        print("{title} is {length} minute(s) long, has the director {dir} and a rating of {rating}".format(
+        print(
+            (
+                "{title} is {length} minute(s) long,"
+                "has the director {dir} and a rating of {rating}"
+            ).format(
                 title=self.title,
                 length=self.length,
                 dir=self.director,
                 rating=self.rating
-        ))
+            ))
 
 >>> charlie = Video("Charlie bit my finger", 1)
 >>> dogs = Movie("Isle of Dogs", 101, "Wes Anderson", 8.0)
@@ -99,11 +103,11 @@ class Movie(Video):
     ...
 
     def to_string(self):
-        return "{base_msg}, has the director {dir} and a rating of {rating}".format(
-            base_msg=super().to_string(),
-            dir=self.director,
-            rating=self.rating
-        )
+         return "{base_msg}, has the director {dir} and a rating of {rating}".format(
+             base_msg=super().to_string(),
+             dir=self.director,
+             rating=self.rating
+         )
 
     def print_info(self):
         print(self.to_string())
@@ -144,7 +148,7 @@ class Movie(Video):
         self.rating = rating
 
     def to_string(self):
-        return  "{base_msg}, has the director {dir} and a rating of {rating}".format(
+        return "{base_msg}, has the director {dir} and a rating of {rating}".format(
             base_msg=super().to_string(),
             dir=self.director,
             rating=self.rating
@@ -164,7 +168,7 @@ Isle of Dogs is 101 minute(s) long, has the director Wes Anderson and a rating o
 Abstract Method {#abstract_method}
 --------------------------------------------------
 
-Ibland vill man tvinga en subklass att överskugga en metod från basklassen. Det kan vara för att man vill påminna någon att metoden behöver implementeras, en så kallad TO-DO, eller kan metoden vara en så kallad *abstract method*. En abstrakt metod är en metod som är deklarerad men innehåler inte någon implementation. Den är tillför att skapa en struktur eller mall som subklassen behöver uppfylla.
+Ibland vill man tvinga en subklass att överskugga en metod från basklassen. Det kan vara för att man vill påminna någon att metoden behöver implementeras, en så kallad TO-DO, eller kan metoden vara en så kallad *abstract method*. En abstrakt metod är en metod som är deklarerad men innehåller inte någon implementation. Den är tillför att skapa en struktur eller mall som subklassen behöver uppfylla.
 
 Vi kan skapa en abstrakt metod med `_NotImplementedError_`. För att testa detta lägger vi till en metod i Video klassen, där vi lyfter ett `_NotImplementedError_`, och överskuggar inte metoden i Movie:
 
