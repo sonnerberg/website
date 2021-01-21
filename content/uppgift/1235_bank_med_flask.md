@@ -29,7 +29,7 @@ Introduktion {#intro}
 
 Du jobbar vid sidan om dina studier och din kund vill att du gör klart en webbsida som redan är påbörjad. Gränssnittet och routes för sidan är redan klart, du ska skapa klasserna för backend:en till webbsidan. I och med att frontend redan är klar och innehåller anrop till koden du ska skapa behöver dina klasser uppfylla abstraktionskraven som det medför. Med det menas att i dina klasser behöver det finnas vissa metoder och attribut med rätt namn, annars kommer inte frontend fungera med din backend. I klassdiagrammet nedanför kan du se vilket gränssnitt din klasser måste uppfylla. Med gränssnitt menas existerande publika metoder.
 
-<!-- [YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."] -->
+[YOUTUBE src=-4bddxGr0X0 width=630 caption="Så här ser det ut när uppgiften är klar."]
 
 Du ska implementera klasserna för de två kontotyperna och kontohanteraren som app.py jobbar mot.
 
@@ -57,8 +57,6 @@ dbwebb update
 cp -ri example/flask/bank me/kmom02/
 cd me/kmom02/bank
 ```
-
-1. Kolla på youtube-klippen ovanför för att få en översyn av vad du ska göra.
 
 1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metoder som behövs och vad de används till.
 
