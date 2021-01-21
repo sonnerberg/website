@@ -10,7 +10,7 @@ Presentationen handlar om hur man kan koppla ett programmeringsspråk likt JavaS
 
 Denna föreläsning är bra att se på som en del i förberedelserna inför att jobba med kmom02.
 
-I kursmomentet återkommer en övning där man gör detta praktiskt.
+I kursmomentet återkommer en övning "[MySQL och Node.js (v2)](https://dbwebb.se/kunskap/mysql-och-nodejs-v2)" där man senare gör detta praktiskt.
 
 Videon är 16 minuter lång.
 
@@ -20,11 +20,11 @@ Du kan själv bläddra igenom [de HTML slides som används i presentationen](kur
 
 
 
-<!--
 Resurser
 ------------------------
 
 Följande resurser används i olika omfattning i föreläsningen.
 
-*
--->
+* [MySQL om API och connectors](https://dev.mysql.com/doc/connectors/en/connectors-apis.html)
+* [Npm paketet mysql](https://www.npmjs.com/package/mysql)
+* [Npm paketet promise-mysql](https://www.npmjs.com/package/promise-mysql)

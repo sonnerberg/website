@@ -18,11 +18,12 @@ Du kan själv bläddra igenom [de HTML slides som används i presentationen](kur
 
 
 
-<!--
 Resurser
 ------------------------
 
 Följande resurser används i olika omfattning i föreläsningen.
 
-*
--->
+* [ECMA-262 - ECMAScript 2020 language specification](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+* [Wikipedia on ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
+* [MDN JavaScript reference manual](https://developer.mozilla.org/sv-SE/docs/Web/JavaScript/Reference)
+* [Node.js referensmanual](https://nodejs.org/en/docs/)
