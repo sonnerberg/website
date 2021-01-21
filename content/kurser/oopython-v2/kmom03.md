@@ -108,9 +108,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 <!-- 1. Gör uppgiften "[Kortspelet War](uppgift/kortspelet-war)". Utför uppgiften i mappen `war`.   -->
 
-1. Gör uppgiften "[Skapa ett UML diagram](uppgift/skapa_ett_uml_diagram)".  
+1. Gör uppgiften "[Skapa ett UML diagram](uppgift/skapa_ett_uml_diagram)". 
 
-1. Gör uppgiften "[Bygg en bank med flask - Del 2](uppgift/bank_med_flask_del_tva)".  
+1. Gör uppgiften "[Bygg en bank med flask - Del 2](uppgift/bank_med_flask_del_tva)". Spara koden i `me/kmom03/bank2/` 
 
 <!-- 1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram2)". Utför uppgiften i mappen `uml`.   -->
 
@@ -148,4 +148,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 <!-- * Överskuggade du någon metod i "Kortspelet War"? -->
 <!-- * Hur gick det med sekvensdiagrammet? -->
-<!-- * Gjorde du extrauppgiften? -->
+* Gjorde du extrauppgiften?
