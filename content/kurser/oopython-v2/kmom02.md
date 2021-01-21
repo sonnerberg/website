@@ -131,4 +131,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad innebär inkapsling och publika interface inom objektorienterad programmering?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vad tycker du om den typen av uppgift?
-* Gjorde du extrauppgiften?
+<!-- * Gjorde du extrauppgiften? -->
