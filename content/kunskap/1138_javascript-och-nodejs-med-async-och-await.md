@@ -39,7 +39,7 @@ Video {#video}
 
 Det finns en inspelad föreläsning "[JavaScript och NodeJS](kurser/databas-v1/forelasning/javascript-och-nodejs)" som delvis berör samma ämne som denna artikel hanterar. Du kan välja att titta på den för att komplettera den bilden du får från artikeln, eller som en introduktion till ämnet, innan du börjar jobba med artikeln.
 
-I videon finns ett exempel på asynkron hantering och det börjar ugnefär i mitten av föreläsningen, se videons kapitelindelning och det kapitel som heter "Asynkron programmering".
+I videon finns ett exempel på asynkron hantering och det börjar ungefär i mitten av föreläsningen, se videons kapitelindelning och det kapitel som heter "Asynkron programmering".
 
 
 
