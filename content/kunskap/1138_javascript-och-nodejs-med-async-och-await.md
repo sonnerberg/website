@@ -5,6 +5,7 @@ category:
     - javascript
     - kursen databas
 revision:
+    "2021-01-21": "(B, mos) Länk till föreläsning."
     "2019-01-17": "(A, mos) Första utgåvan."
 ...
 JavaScript och Node.js med async och await
@@ -30,6 +31,15 @@ Du har grundläggande kunskaper i JavaScript och du vet grunden i hur JavaScript
 Du har installerat Node.js, version 10 eller senare, samt pakethanteraren npm.
 
 De filer som används i exemplet kan du finna under kursrepot databas i  [`example/nodejs/async-await`](https://github.com/dbwebb-se/databas/tree/master/example/nodejs/async-await). Du kan tjuvkika på källkoden där, eller så skriver du din egen kod medans du jobbar igenom artikeln.
+
+
+
+Video {#video}
+--------------------------------------
+
+Det finns en inspelad föreläsning "[JavaScript och NodeJS](kurser/databas-v1/forelasning/javascript-och-nodejs)" som delvis berör samma ämne som denna artikel hanterar. Du kan välja att titta på den för att komplettera den bilden du får från artikeln, eller som en introduktion till ämnet, innan du börjar jobba med artikeln.
+
+I videon finns ett exempel på asynkron hantering och det börjar ugnefär i mitten av föreläsningen, se videons kapitelindelning och det kapitel som heter "Asynkron programmering".
 
 
 
