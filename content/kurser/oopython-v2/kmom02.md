@@ -17,10 +17,6 @@ Vi ska skapa en basklass och subklasser som får sin data från ett formulär oc
 
 <!--more-->
 
-[WARNING]
-Detta kmom uppdateras och är inte redo att jobbas igenom.
-[/WARNING]
-
 <!-- Flytta nedan text till eget dokument/vy/block -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
@@ -97,11 +93,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bank med Flask](uppgift/bank_med_flask)". Spara koden i mappen `me/kmom02/bank/`.
 
-<!-- 1. Gör uppgiften "[Frågesport med Flask](uppgift/fragesport_med_flask)". Spara koden i mappen `me/kmom02/bank/`. -->
+1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
+<!-- 1. Gör uppgiften "[Frågesport med Flask](uppgift/fragesport_med_flask)". Spara koden i mappen `me/kmom02/bank/`. -->
 <!-- 1. Gör uppgiften "[Skapa former](uppgift/skapa-former)". Spara koden i mappen `me/flask/`. -->
 
-1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -130,5 +126,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad innebär polymorfism inom objektorienterad programmering?
 * Vad innebär inkapsling och publika interface inom objektorienterad programmering?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Vad tycker du om den typen av uppgift?
-<!-- * Gjorde du extrauppgiften? -->
+* Vad tycker du om den typen av uppgift (bank)?
