@@ -5,6 +5,7 @@ category:
     - javascript
     - kursen databas
 revision:
+    "2021-01-21": "(C, mos) Komplettera med länk till föreläsning."
     "2019-02-01": "(B, mos) Rätta hur tärningen slumpas fram."
     "2019-01-17": "(A, mos) Första utgåvan."
 ...
@@ -37,6 +38,13 @@ Du har läst på om grunderna i programmeringsspråket JavaScript och du vet att
 Du vet att Node.js har en egen dokumentation för det API som Node.js bidrar med.
 
 De filer som används i exemplet kan du finna under kursrepot databas i  [`example/nodejs/javascript`](https://github.com/dbwebb-se/databas/tree/master/example/nodejs/javascript). Du kan tjuvkika på källkoden där, eller så skriver du din egen kod medans du jobbar igenom artikeln.
+
+
+
+Video {#video}
+--------------------------------------
+
+Det finns en inspelad föreläsning "[JavaScript och NodeJS](kurser/databas-v1/forelasning/javascript-och-nodejs)" som berör samma ämne som denna artikel hanterar. Du kan välja att titta på den för att komplettera den bilden du får från artikeln, eller som en introduktion till ämnet, innan du börjar jobba med artikeln.
 
 
 
