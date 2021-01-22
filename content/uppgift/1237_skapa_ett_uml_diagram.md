@@ -56,4 +56,4 @@ Det finns inga extrauppgifter.
 Tips från coachen {#tips}
 -----------------------
 
-Det finns bra verktyg online för att rita uml diagram, kolla in [draw.io](https://www.draw.io) och [websequencediagrams](https://www.websequencediagrams.com/). Man kan också hitta ett flertal tillägg till VScode och Atom för bland annat draw.io om man föredrar att göra det lokalt i sin text editor.
+Det finns bra verktyg online för att rita uml diagram, kolla in [draw.io](https://www.draw.io), [websequencediagrams](https://www.websequencediagrams.com/) och [lucidchart](https://www.lucidchart.com/pages/sv). Man kan också hitta ett flertal tillägg till VScode och Atom för bland annat draw.io om man föredrar att göra det lokalt i sin text editor.
