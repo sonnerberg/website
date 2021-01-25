@@ -105,7 +105,7 @@ Ibland är det bra att ha koll på vilken version man kör.
 Kontrollera status på användare {#version}
 --------------------------------------
 
-Du kan kontrolla att du nu har de användare som krävs för att jobba vidare i guiden. Kör följande sql-uttryck för att se viss information om dina användare.
+Du kan kontrollera att du nu har de användare som krävs för att jobba vidare i guiden. Kör följande sql-uttryck för att se viss information om dina användare.
 
 ```sql
 --
