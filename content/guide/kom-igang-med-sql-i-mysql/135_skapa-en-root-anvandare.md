@@ -35,7 +35,7 @@ Som ett alternativ hade vi kunnat uppdatera nuvarande root-användare och bytt l
 Problem med authenticering {#createuser}
 --------------------------------------
 
-Vi öppnar en klienten, som root, och skriver följande SQL-kod för att skapa en användare. Jag väljer här att döpa användaren till "dbwebb" och tillåta att användaren kan koppla upp sig från alla hostar `%`.
+Vi öppnar en klient, som root, och skriver följande SQL-kod för att skapa en användare. Jag väljer här att döpa användaren till "dbwebb" och tillåta att användaren kan koppla upp sig från alla hostar `%`.
 
 ```text
 DROP USER IF EXISTS 'dbwebb'@'%';
@@ -63,7 +63,7 @@ WITH GRANT OPTION
 
 Den sista delen med `WITH GRANT OPTION` gör så att användaren kan göra GRANT för andra användare.
 
-Kommandot [`GRANT` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/8.0/en/grant.html). 
+Kommandot [`GRANT` finns beskrivet i manualen](https://dev.mysql.com/doc/refman/8.0/en/grant.html).
 
 Bra, då har vi en användare som har samma rättigheter som root-användaren. En anledning till att vi gör detta nu är att det finns olika kryptering på lösenorden och denna användare vi nu skapade är mer kompatibel mellan versioner, mer kompatibel än den root-användare som skapades.
 
