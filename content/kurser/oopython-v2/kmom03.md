@@ -14,7 +14,7 @@ Kmom03: UML och unittest
 
 Kom igång med _UML_ och _unittest_. Det är kraftfulla verktyg som används i "riktig" produktionsmiljö. UML kan användas för att beskriva klassernas relation och unittester (enhetstester) används för att testa delar av koden såsom funktioner och metoder.  
 
-Du kommer även skapa klasser utifrån ett färdigt UML-diagram och skriva unittester för dem.
+Du kommer att skapa ett UML-diagram utifrån en färdig kodbas och skriva unittester.
 
 <!--more-->
 
@@ -120,7 +120,7 @@ Dessa uppgifter skall utföras och redovisas.
 ```bash
 # Ställ dig i kurskatalogen
 # dbwebb validate kmom03
-dbwebb publish kmom03
+dbwebb publish kmom03p
 ```
 
 

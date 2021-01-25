@@ -498,14 +498,14 @@ class Handler():
     ...
 
     def save_data(self):
-        data["employees"] = [e.to_json() for e in self.people]
+        data["Employees"] = [e.to_json() for e in self.people]
         # Samma kod fast utan list comprehension
         # people = []
         # for e in self.people:
         #    people.append(e.to_json()
-        # data["employees"] = people
+        # data["Employees"] = people
 
-        with open(Handler.filename, 'w'):
+        with open(Handler.filename, 'w') as fh:
             json.dump(data, fh, indent=4)
 
     def load_data(self):
@@ -515,7 +515,7 @@ class Handler():
         self.people = [Employee.from_json(e) for e in data["Employees"]]
         # Samma kod fast utan list comprehension
         # self.people = []
-        # for e in data["employees"]:
+        # for e in data["Employees"]:
         #    self.people.append(Employee.from_json(e))
     ...
 ```
