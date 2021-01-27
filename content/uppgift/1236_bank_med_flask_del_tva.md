@@ -31,7 +31,7 @@ Kunden blev riktigt nöjd med din insats och har nu bett dig att vidareutveckla 
 
 [YOUTUBE src=ykMoCALYLtA width=630 caption="Så här kan uppgiften se ut när det är färdigt."]
 
-Denna gången har kunden inte gett dig ett diagram eller någon färdig python kod. Deras tidigare utvecklare har dock skapat de tre nya vyerna och lite kod för routern som visar hur man kan återanvända dem. Du kan använda av detta för att komma igång. Koden kan hittas under [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
+Denna gången har kunden inte gett dig ett diagram eller någon färdig python kod. Deras tidigare utvecklare har däremot gjort klart de nya vyerna som kopplar användare till konton och för att skapa nya personer/konton. Det ligger också lite ofärdig kod i `app.py` som visar hur man kan lägga till personer och konton under samma route. Koden kan hittas under [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
 
 Krav {#krav}
 -----------------------
