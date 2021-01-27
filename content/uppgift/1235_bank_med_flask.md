@@ -35,7 +35,7 @@ Du ska implementera klasserna för de två kontotyperna och kontohanteraren som 
 
 [FIGURE src=/image/oopython/kmom02/bank_uml_1.png?w=100% caption="Klassdiagram för uppgiften."]
 
-- Attribut och metoder som är markerade med `<<get>>` eller `<<set>>` används för att markera properties och setters.  
+- Attribut och metoder som är markerade med `<<get>>` eller `<<set>>` används för att markera metoder med properties och setters decorator.  
 
 - Attribut och metoder som är <u>understrukna</u> är statiska.  
 
