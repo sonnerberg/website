@@ -492,8 +492,10 @@ class Handler():
     
     def __init__(self):
         self.people = []
-        self.add_predefined_employees()
-        self.load_data()
+        try:
+            self.load_data()
+        except FileNotFoundError:
+            self.add_predefined_employees()
 
     # ...
 
@@ -523,7 +525,9 @@ class Handler():
 
 Först importerar vi modulen `json` och sätter en klassvariabel med filnamnet. I `save_data()` använder vi `to_json()` för att serialisera varje objekt och lägga i en lista. Efter det öppnar vi filen i skrivläge och dumpar den, `indent` är inte nödvändigt, den säger bara hur filen skall formatera sitt innehåll.
 
-I `load_data` läser vi filen och använder `from_json()` för att deserialisera datan från filen. Filen kan vi läsa in redan i konstruktorn, men vi behöver fortfarande skriva till anropa `save_date` på rätt ställen i `app.py`.
+I `load_data` läser vi filen och använder `from_json()` för att deserialisera datan från filen. Filen kan vi läsa in redan i konstruktorn, men om vi inte redan har skapat den kommer programmet krascha. Därför lägger vi en try except runt, om vi inte kan läsa in filen lägg til default datan.
+
+Vi behöver fortfarande skriva till anropa `save_date` på rätt ställen i `app.py`.
 
 
 ```python
