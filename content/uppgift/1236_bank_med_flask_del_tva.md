@@ -29,14 +29,14 @@ Introduktion {#intro}
 Kunden blev riktigt nöjd med din insats och har nu bett dig att vidareutveckla bank applikationen. De har gett dig i uppdrag att uppdatera gränssnittet och lägga till nya routes. Du kommer till att behöva ändra i den existerande kodbasen och lägga till ny funktionalitet som att skapa nya konton och koppla dem till en ny person klass.
 
 
-<!-- [YOUTUBE src=PCGwx_wpzME width=630 caption="Så här kan det se ut när det är färdigt."] -->
+[YOUTUBE src=ykMoCALYLtA width=630 caption="Så här kan uppgiften se ut när det är färdigt."]
 
 Denna gången har kunden inte gett dig ett diagram eller någon färdig python kod. Deras tidigare utvecklare har dock skapat de tre nya vyerna och lite kod för routern som visar hur man kan återanvända dem. Du kan använda av detta för att komma igång. Koden kan hittas under [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
 
 Krav {#krav}
 -----------------------
 
-1. Kolla på youtube-klippen ovanför för att få en översyn av vad du ska göra.
+1. Kolla på youtube-klippen ovanför för att få en överblick på hur appen kan se ut när den är klar.
 
 1. Skapa en ny klass `Person`, lägg den i filen `person.py`. Varje person skall ha attributen `name` och `_id` som skall vara en **unik** sträng. Resterande attribut och metoder avgör du själv.  
 
@@ -50,7 +50,7 @@ Man skall inte kunna koppla samma person till ett konto mer än en gång, gör m
 
 1. Uppdatera *index.html*, lägg till en ny kolumn i tabellen som visar namnen på alla som är kopplade till kontot. Namnen skall vara komma separerat utan `,` på stulet.
 
-1. Uppdatera *account.html*, lägg till lista med namnet och personnumret på varje person som är kopplad till kontot.
+1. Uppdatera *account.html*, lägg till en lista med både namnet och id:t för varje person som är kopplad till kontot.
 
 1. Skapa filen `tests.py` och skriv enhetstester för följande:
     1. Transaktioner för båda konto typerna.
