@@ -427,7 +427,7 @@ class Handler():
         )
         self.people.append(empl)
 
-    ...
+    #...
 ```
 
 Notera, om man har ett formulär som innehåller t.ex. checkboxes kan man använda [getlist(key)](http://werkzeug.pocoo.org/docs/0.14/datastructures/#werkzeug.datastructures.MultiDict.getlist), `form.getlist("key")`, för att hämta ut dess värden.
@@ -495,9 +495,10 @@ class Handler():
         self.add_predefined_employees()
         self.load_data()
 
-    ...
+    # ...
 
     def save_data(self):
+        data = {}
         data["Employees"] = [e.to_json() for e in self.people]
         # Samma kod fast utan list comprehension
         # people = []
@@ -517,7 +518,7 @@ class Handler():
         # self.people = []
         # for e in data["Employees"]:
         #    self.people.append(Employee.from_json(e))
-    ...
+    #...
 ```
 
 Först importerar vi modulen `json` och sätter en klassvariabel med filnamnet. I `save_data()` använder vi `to_json()` för att serialisera varje objekt och lägga i en lista. Efter det öppnar vi filen i skrivläge och dumpar den, `indent` är inte nödvändigt, den säger bara hur filen skall formatera sitt innehåll.

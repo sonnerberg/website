@@ -74,7 +74,7 @@ chmod 777 static/data/data.json
 
 1. Ett konto skall ha metoder som hämtar sitt id, balans och typen (klass namnet).  
 Den skall även kunna ändra på sin balans, innehålla en klass metod som returnerar en ny instans från en dictionary och beräkna en överföringskostnad.  
-Den skall få sitt *id* tilldelad från det statiskt attributet `Account.account_number` (den skall ej skickas med i konstruktorn).  
+Den skall få sitt *id* tilldelad från det statiska attributet `Account.account_number` (den skall ej skickas med i konstruktorn).  
 `Account.transaction_fee` säger procenten som skall dras av det överförda beloppet. Överför man exempelvis 100kr med en avgift på 1%, skall 100kr dras från kontot men mottagaren ska endast få 99kr insatta.
 
 1. `SavingsAccount` ärver `Account`. Den skall ha en extra funktionalitet som räknar ut kontots dagliga ränta beroende på `SavingsAccount.interest_rate` som representerar den årliga räntan i %. Den skall också ha en högre `transaction_fee`.
