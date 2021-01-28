@@ -63,16 +63,17 @@ cd me/kmom02/bank
 
 1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metoder som behövs och vad de används till.
 
-1. Skapa filen `static/data/data.json` där du lägger in den information du behöver för att återskapa alla klasser. Filen skall automatiskt läsas in när en ny instans av `AccountManager` skapas.  
-Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också att ge filen skriv och läsrättigheter:
+1. Skapa filen `static/data/data.json` där du sparar den data man behöver för att återskapa alla existerande konto-objekt. Ändras något (t.ex kontots balans) skall det sparas till samma fil.  
+Filen skall läsas in ifrån AccountManagers konstruktor.  
+Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också att ge `data.json` läs och skrivrättigheter:
 
 ```bash
 chmod 777 static/data/data.json
 ```
 
-4. Implementera klasserna som behövs i filerna `account_manager.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ.
+3. Implementera klasserna som behövs i filerna `account_manager.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ.
 
-1. Ett konto skall ha metoder som hämtar sitt id, balans och typen (klass namnet).  
+1. Ett konto skall ha metoder som hämtar sitt id, balans och typen (namnet på klassen).  
 Den skall även kunna ändra på sin balans, innehålla en klass metod som returnerar en ny instans från en dictionary och beräkna en överföringskostnad.  
 Den skall få sitt *id* tilldelad från det statiska attributet `Account.account_number` (den skall ej skickas med i konstruktorn).  
 `Account.transaction_fee` säger procenten som skall dras av det överförda beloppet. Överför man exempelvis 100kr med en avgift på 1%, skall 100kr dras från kontot men mottagaren ska endast få 99kr insatta.
