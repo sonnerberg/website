@@ -1,7 +1,8 @@
 ---
 author: moc
 revision:
-    "2020-01-13": (A, moc) Skapad inför VT21.
+    "2021-01-28": (B, aar) Bytte namn på json filen så det är samma namn i exempel koden.
+    "2021-01-13": (A, moc) Skapad inför VT21.
 category:
     - oopython
 ...
@@ -63,12 +64,12 @@ cd me/kmom02/bank
 
 1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metoder som behövs och vad de används till.
 
-1. Skapa filen `static/data/data.json` där du sparar den data man behöver för att återskapa alla existerande konto-objekt. Ändras något (t.ex kontots balans) skall det sparas till samma fil.  
+1. Skapa filen `static/data/accounts.json` där du sparar den data man behöver för att återskapa alla existerande konto-objekt. Ändras något (t.ex kontots balans) skall det sparas till samma fil.  
 Filen skall läsas in ifrån AccountManagers konstruktor.  
-Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också att ge `data.json` läs och skrivrättigheter:
+Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också att ge `accounts.json` läs och skrivrättigheter:
 
 ```bash
-chmod 777 static/data/data.json
+chmod 777 static/data/accounts.json
 ```
 
 3. Implementera klasserna som behövs i filerna `account_manager.py` och `accounts.py`. Totalt skall det minst finnas tre konton av varje typ.
