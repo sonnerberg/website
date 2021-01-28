@@ -121,10 +121,9 @@ Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika
 
 
 
-###Kmom06: Analysera och förbättra kod {#kmom06}
+###Kmom06: Träd som datastruktur {#kmom06}
 
-Vi ska öva på att läsa och förstå kod. När vi har gjort det ska vi även förbättra koden genom att skriva om den så den exekverar snabbare.
-
+Vi kollar på en ny typ av datastruktur, träd. Mer specifikt balanserat binär träd.
 
 [Instruktion till kursmoment 06](kurser/oopython-v2/kmom06).
 
