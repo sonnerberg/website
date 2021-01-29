@@ -3,7 +3,7 @@ author: lew
 category:
     - oopython
 revision:
-    "": (C, moc) La in bank2 och ändrade war uppgiften till klassdiagram. 
+    "2021-01-25": (C, moc) La in bank2 och ändrade war uppgiften till klassdiagram. 
     "2019-01-19": (B, aar) Tog bort uppgifter om sekvensdiagram.
     "2017-12-13": (A, lew) New version for v2.
 ...
@@ -18,9 +18,9 @@ Du kommer att skapa ett UML-diagram utifrån en färdig kodbas och skriva unitte
 
 <!--more-->
 
-[WARNING]
-Detta kmom uppdateras och är inte redo att jobbas igenom.
-[/WARNING]
+[INFO]
+Gör `dbwebb update` och `dbwebb init` innan du startar med kursmomentet.
+[/INFO]
 
 <!-- Flytta nedan text till eget dokument/vy/block -->
 
@@ -63,6 +63,8 @@ Läs följande:
 Titta på följande video:  
 
 1. Videos 12-22 i spellistan [Software Development Process: Part 2 of 3](https://www.youtube.com/watch?v=pZ9-ujSP_48&index=12&list=PLAwxTw4SYaPm8PAGH7ov2Bj-nG4sXgCtJ)  om class diagrams.
+
+1. Videom klassdiagram: [UML Class Diagram Tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
 1. Video om unittester: [Python Functions 2: Unit Testing](https://www.youtube.com/watch?v=F7a0iUH6kVA)
 
@@ -108,12 +110,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 <!-- 1. Gör uppgiften "[Kortspelet War](uppgift/kortspelet-war)". Utför uppgiften i mappen `war`.   -->
 
-1. Gör uppgiften "[Skapa ett UML diagram](uppgift/skapa_ett_uml_diagram)". 
-
-1. Gör uppgiften "[Bygg en bank med flask - Del 2](uppgift/bank_med_flask_del_tva)". Spara koden i `me/kmom03/bank2/` 
-
 <!-- 1. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram2)". Utför uppgiften i mappen `uml`.   -->
 
+1. Gör uppgiften "[Skapa ett UML diagram](uppgift/skapa_ett_uml_diagram)". 
+
+1. Gör uppgiften "[Bygg en bank med flask - Del 2](uppgift/bank_med_flask_del_tva)". Spara koden i `me/kmom03/bank2/`.
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
@@ -146,6 +147,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kan du se nyttan med UML och tester inom ramen för ett projekt?
 * Vad tycker du om objektorienterad programmering än så länge?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-<!-- * Överskuggade du någon metod i "Kortspelet War"? -->
-<!-- * Hur gick det med sekvensdiagrammet? -->
 * Gjorde du extrauppgiften?
+<!-- * Hur gick det med sekvensdiagrammet? -->
