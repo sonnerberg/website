@@ -5,6 +5,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2020-01-29": "(C, mos) Stycke om föreläsningen om e-shop."
     "2019-02-08": "(B, mos) Genomgången och mindre justeringar i text."
     "2018-01-05": "(A, mos) Första utgåvan."
 ...
@@ -29,6 +30,8 @@ Du har jobbat igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-f
 Du har löst första delen av uppgiften i "[Skapa ER-modell för en databas (konceptuell)](uppgift/skapa-er-modell-for-en-databas-konceptuell)".
 
 Du har en befintlig modell med konceptuell modellering som du kan jobba vidare på.
+
+Du har eventuellt tittat på [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter, startar 15 minuter in och avslutas 1:18). Den föreläsningen ger dig en insikt i hur en e-shop kan modelleras.
 
 
 
