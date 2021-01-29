@@ -31,7 +31,7 @@ Kunden blev riktigt nöjd med din insats och har nu bett dig att vidareutveckla 
 
 [YOUTUBE src=ykMoCALYLtA width=630 caption="Så här kan uppgiften se ut när det är färdigt."]
 
-Denna gången har kunden inte gett dig ett diagram eller någon färdig python kod. Deras tidigare utvecklare har däremot gjort klart de nya vyerna som kopplar användare till konton och för att skapa nya personer/konton. Det ligger också lite ofärdig kod i `app.py` som visar hur man kan lägga till personer och konton under samma route. Koden kan hittas under [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
+Denna gången har kunden inte gett dig ett diagram eller någon färdig python kod. Deras tidigare utvecklare har däremot gjort klart de nya vyerna som kopplar användare till konton och skapar nya personer/konton. Det ligger också lite ofärdig kod i `app.py` som visar hur man kan lägga till personer och konton under samma route. Koden kan hittas under [example/flask/bank2](https://github.com/dbwebb-se/oopython/tree/master/example/flask/bank2).
 
 Krav {#krav}
 -----------------------
@@ -40,7 +40,7 @@ Krav {#krav}
 
 1. Skapa en ny klass `Person`, lägg den i filen `person.py`. Varje person skall ha attributen `name` och `_id` som skall vara en **unik** sträng. Resterande attribut och metoder avgör du själv.  
 
-1. Lägg till möjligheten att skapa en ny person. I vyn skall det finnas möjligheten att skriva in personens namn och id.  
+1. Lägg till möjligheten att skapa en ny person. I vyn skall man kunna skriva in ett namn och ett id på personen man vill skapa.  
 Man skall ej kunna skapa en person vars id redan existerar, gör man det skall ett felmeddelande visas.
 
 1. Lägg till möjligheten att skapa ett nytt konto. I vyn skall det finnas en dropdown med alla konto typerna och ett fält där man kan skriva in kontots balans.
@@ -57,7 +57,7 @@ Man skall inte kunna koppla samma person till ett konto mer än en gång, gör m
     1. Testa uträkning av räntor mellan två dagar.
     1. Kolla om skapandet av personer och konton fungerar som du har tänkt samt funktionaliteten som kopplar dem tillsammans.
 
-1. När du skriver enhetstester för att skapa personer och koppla när man kopplar dem till ett konto, se till att skriva testfall som täcker både positiva och negativa fall.  
+1. När du skriver enhetstester för att skapa personer och när man kopplar dem till ett konto, se till att skriva testfall som täcker både positiva och negativa fall.  
 Det negativa fallen skall vara följande, se till att en person vars *id* redan existerar inte skapas och att du inte kan koppla samma person till ett konto två gånger.
 
 
