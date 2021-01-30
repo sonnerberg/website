@@ -64,7 +64,7 @@ cd me/kmom02/bank
 
 1. Bekanta dig med koden, kolla igenom app.py för att se vilka routes som finns och vilka html filer som används till vad. Leta efter alla anrop som görs till klasserna du ska skapa så att du får en bild av vilka metoder som behövs och vad de används till.
 
-1. Skapa filen `static/data/accounts.json` där du sparar den data man behöver för att återskapa alla existerande konto-objekt. Ändras något (t.ex kontots balans) skall det sparas till samma fil.  
+1. Skapa filen `static/data/accounts.json` där du sparar den data man behöver för att återskapa alla existerande konto-objekt. Ändras något (t.ex kontots balans) skall det sparas till samma fil. Uppdatera innehållet så det innehåller 3 konton av varje klass.   
 Filen skall läsas in ifrån AccountManagers konstruktor.  
 Det finns ett exempel i samma katalog du kan utgå ifrån. **Glöm inte** också att ge `accounts.json` läs och skrivrättigheter:
 
@@ -82,7 +82,7 @@ Den skall få sitt *id* tilldelad från det statiska attributet `Account.account
 1. `SavingsAccount` ärver `Account`. Den skall ha en extra funktionalitet som räknar ut kontots dagliga ränta beroende på `SavingsAccount.interest_rate` som representerar den årliga räntan i %. Den skall också ha en högre `transaction_fee`.
 
 1. `AccountManager` ska äga alla tillgängliga konton, kunna överföra pengar mellan två konton samt, räkna på hur mycket pengar ett sparkonto kommer till att få av sin ränta mellan dagens datum till den som användaren väljer från en datepicker.  
-Det ska finnas metoder för att hämta alla konton, hämta ett specifikt konto, lägga till ett nytt konto samt hantera json-filen.
+Det ska finnas metoder för att hämta alla konton, hämta ett specifikt konto, lägga till ett nytt konto (använd när du skapar konton från sjon filen) samt hantera json-filen.
 
 
 1. Du ska inte behöva ändra i några av de andra filerna, förutom kanske style.css, men om du känner att du vill/behöver det skriv varför i din redovisningstext.
