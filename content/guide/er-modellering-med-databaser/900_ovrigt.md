@@ -17,6 +17,8 @@ Noteringar att göra:
     * Flervärdesattribut
     * Super/subtyper (kolla in boken för inspiration)
 
+Att välja PK från kandidatnycklar (foruminlägg)
+
 Modelleringsövningar:
 
 * Resultattabell

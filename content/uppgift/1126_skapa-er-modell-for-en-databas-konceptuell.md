@@ -35,7 +35,7 @@ Genomgång {#genomgang}
 
 Det finns en inspelad föreläsning (från en systerkurs) som går igenom vissa aspekter av denna uppgift. Föreläsningen pratar om databasmodellering och visar sedan ett exempel på en e-shop implementerad med SQL och föreläsningen avslutas med att göra reverse engineering på databasen och skapa en komplett ER-modell.
 
-[Titta på föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter).
+[Titta på föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter, startar 15 minuter in och avslutas 1:18).
 
 Flera av begreppen som du skall lösa i uppgiften, hanteras i föreläsningen, men lite ur andra vinklar.
 
@@ -68,7 +68,7 @@ Så här bör bilden se ut när du öppnar den.
 
 För den konceptuella modellen fungerar draw.io mer än tillräckligt.
 
-När du jobbar med den logiska modellen och den fysiska modellen så kan det vara en god idé att använda MySQL Workbench som har förmågan att både rita och uppdatera en modell samt generera SQL-kod utifrån modellen. 
+När du jobbar med den logiska modellen och den fysiska modellen så kan det vara en god idé att använda MySQL Workbench som har förmågan att både rita och uppdatera en modell samt generera SQL-kod utifrån modellen.
 
 Ett annat verktyg som är användbart för olika typer av diagram, inklusive UML och ER, är [Dia Diagram Editor](http://dia-installer.de/) som finns till olika plattformar.
 

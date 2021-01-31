@@ -40,6 +40,19 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+<!--
+### Föreläsningar {#flas}
+
+Titta på följande inspelade föreläsningar.
+
+1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen (logisk modelleringsfas).
+
+Föreläsning om transaktioner.
+
+-->
+
+
+
 ### Databasteknik: Transaktioner {#databasteknik-trans}
 
 Läs följande:
@@ -74,9 +87,9 @@ Läs följande:
     * Kap 5: Relationsmodellen
     * Kap 6: Översättning från ER-modellen till relationsmodellen
 
-En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa om ER-modellering och hur du översätter ER-modellen till relationsmodellen.
+En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa om hur du [översätter ER-modellen till relationsmodellen](http://www.databasteknik.se/webbkursen/er2relationer/index.html).
 
-Det finns ytterligare kapitel i boken som är relaterat till modellering. De går utanför kursens ram men läs vid intresse.
+Det finns ytterligare kapitel i boken som är relaterat till modellering. De går utanför kursens omfattning men läs vid intresse.
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 3: Mer om datamodellering
@@ -86,11 +99,13 @@ Det finns ytterligare kapitel i boken som är relaterat till modellering. De gå
 
 ### ER-modellering {#ermodellering}
 
-Följande är samma resurser som används i kmom03. Fortsätt läsa och repetera vid behov. Det ger dig stöd för uppgiften om Er-modellering.
+Följande är samma resurser som används i kmom03. Fortsätt läsa och repetera vid behov. Det ger dig stöd för uppgiften om ER-modellering.
 
-1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig processen du skall följa.
+1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig processen du skall följa. I detta kmom handlar det främst om att fokusera på logisk och fysisk modellering.
 
+<!--
 1. Reptera videon, vid behov, [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
+-->
 
 
 

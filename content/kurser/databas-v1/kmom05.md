@@ -40,6 +40,23 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+
+<!--
+### Föreläsningar {#flas}
+
+Titta på följande inspelade föreläsningar.
+
+1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen (logisk modelleringsfas).
+
+Föreläsning om lagrade procedurer och triggers.
+    * Inkludera även js till sp?
+
+Föreläsning om normalisering? (flytta läsanvisningen från kmom04)
+
+-->
+
+
+
 ### Kurslitteratur {#kurslitteratur}
 
 Läs följande:

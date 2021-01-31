@@ -37,6 +37,43 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 4-10 studietimmar)*
 
 
+
+<!--
+### Föreläsningar {#flas}
+
+Titta på följande inspelade föreläsningar.
+
+1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen (logisk modelleringsfas).
+
+Föreläsning om funktioner.
+
+Föreläsning om index.
+
+Föreläsning om dokumentation av databas.
+
+<!--
+
+Dokumentation av databasen
+Kanske till kmom05...
+
+En not om DD i artikeln:
+https://dbwebb.se/kunskap/kokbok-for-databasmodellering#dd
+
+# Reverse engineering
+
+* Dokumentera befintlig databas
+* Skapa mental bild av databasen
+* Testa workbench
+
+# Generera dokumentation
+
+* DD
+* Ladok
+
+-->
+
+
+
 ### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
@@ -58,7 +95,7 @@ Saker vi inte hanterat:
 
 * Kap 13: Säkerhet i databaser
 * Normalisering
-* 
+*
 -->
 
 

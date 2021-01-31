@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image02.jpg?w=1100&h=300&cf&a=0,0,16,0&f=grayscale"
 author: mos
 revision:
+    "2021-01-31": "(F, mos) Lade till inspelade föreläsningar."
     "2020-02-07": "(E, mos) Uppdaterat från 20h till 40h."
     "2019-02-08": "(D, mos) Flyttade vissa läsanvisningar om ER modellering till kmom04."
     "2019-01-31": "(C, mos) Uppdaterat inför vt19."
@@ -46,6 +47,24 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 10-15 studietimmar)*
 
 
+
+### Föreläsningar {#flas}
+
+Titta på följande inspelade föreläsningar.
+
+1. [Modellera databas - faser och steg](./../forelasning/modellera-databas) ger en översikt av modellering av databaser och visar olika faser och steg för att modellera databasen.
+
+1. [ER-modellering - konceptuell modellering](./../forelasning/er-modellering) visar hur man kan rita en ER-modell via olika konstruktioner och introducerar en del begrepp om ER som underlättar ritandet.
+
+
+<!--
+* Lägg till guide om modellering.
+    * https://dbwebb.se/guide/er-modellering-med-databaser
+    * Lägg till videoserie om hur man modellerar vissa övningar
+-->
+
+
+
 ### Databasteknik {#dbteknik}
 
 Läs följande:
@@ -63,9 +82,11 @@ En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik
 
 Läs igenom följande artiklar.
 
-1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig en metod för att modellera databaser i olika faser. Du kommer jobba enligt denna modellen i uppgiften. I detta kmom läser du först och främst delen om "Konceptuell modellering".
+1. Läs igenom igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig en metod för att modellera databaser i olika faser. Du kommer jobba enligt denna modellen i uppgiften. I detta kmom läser du först och främst delen om "Konceptuell modellering".
 
-1. Som ett komplement till kokboken kan du titta på [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
+<!--
+1. Som ett komplement till kokboken kan du titta på [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter, startar 15 minuter in och avslutas 1:18). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
+-->
 
 
 
@@ -73,7 +94,7 @@ Läs igenom följande artiklar.
 
 Det finns inga specifika läsanvisningar för JavaScript. Men du kommer att fortsätta skriva program för JavaScript i Node.js tillsammans med async/await och callbacks.
 
-Läs gärna vidare på egen hand, i "[Boken: JavaScript for impatient programmers](https://dbwebb.se/kunskap/boken-javascript-for-impatient-programmers)", i den mån du vill förkovra dig i JavaScript som programmeringsspråk. 
+Läs gärna vidare på egen hand, i "[Boken: JavaScript for impatient programmers](https://dbwebb.se/kunskap/boken-javascript-for-impatient-programmers)", i den mån du vill förkovra dig i JavaScript som programmeringsspråk.
 
 
 
@@ -86,7 +107,7 @@ Följande kan du använda för att fördjupa dig i ER-modellering, läs som öve
 -->
 
 <!--
-Modelleringsövningsuppgifter 
+Modelleringsövningsuppgifter
 https://docs.google.com/document/d/1kKoSO2BQL5T2cnzshpM_hnk5JbqT0_00khfGJKZQ2Fo/edit
 
 Gjort modelleringsövning i sal med draw.io: https://goo.gl/vNRvKt
@@ -156,7 +177,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Några generella reflektioner på att skriva och jobba med menydrivna terminalprogram i JavaScript och Node.js?
 * Berätta om din kodstruktur i ditt terminalprogram mot databasen, är du nöjd eller ser du förbättringspotential?
-* Något att nämna kring det aktuella stycket i guiden skolan med till exempel outer joins och subqueries? 
+* Något att nämna kring det aktuella stycket i guiden skolan med till exempel outer joins och subqueries?
 * Hur gick det att jobba med ER-modelleringen, några reflektioner?
 * Fanns det några extra svårigheter/utmaningar du kämpade med i kursmomentet?
 * Vilken är din TIL för detta kmom?
