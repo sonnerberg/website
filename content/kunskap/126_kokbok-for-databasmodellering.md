@@ -2,11 +2,10 @@
 author: mos
 category: artikel
 revision:
-    "2021-01-31": (D, mos) Kompletterad med inspelad föreläsning.
-    "2012-09-20": (C, mos) Flyttad från googledocs till dbwebb.
-    "2009-09-02": (B, mos) Uppdaterad för att användas i kursen Databasteknik moment
-    modellering.
-    "2008-12-10": (A, mos) Första utgåvan
+    "2021-01-31": "(D, mos) Kompletterad med inspelad föreläsning."
+    "2012-09-20": "(C, mos) Flyttad från googledocs till dbwebb."
+    "2009-09-02": "(B, mos) Uppdaterad för att användas i kursen Databasteknik moment modellering."
+    "2008-12-10": "(A, mos) Första utgåvan"
 updated: "2012-09-20 11:50:52"
 created: "2012-09-20 11:50:50"
 ...
