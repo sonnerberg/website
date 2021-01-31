@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2021-01-14": "(A, mos) Första utgåva inför kursstart VT2021."
+    "2021-01-31": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
 Modellera databas - faser och steg
 ====================
