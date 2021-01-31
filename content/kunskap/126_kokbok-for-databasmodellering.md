@@ -2,10 +2,11 @@
 author: mos
 category: artikel
 revision:
-  "2012-09-20": (C, mos) Flyttad från googledocs till dbwebb.
-  "2009-09-02": (B, mos) Uppdaterad för att användas i kursen Databasteknik moment
+    "2021-01-31": (D, mos) Kompletterad med inspelad föreläsning.
+    "2012-09-20": (C, mos) Flyttad från googledocs till dbwebb.
+    "2009-09-02": (B, mos) Uppdaterad för att användas i kursen Databasteknik moment
     modellering.
-  "2008-12-10": (A, mos) Första utgåvan
+    "2008-12-10": (A, mos) Första utgåvan
 updated: "2012-09-20 11:50:52"
 created: "2012-09-20 11:50:50"
 ...
@@ -22,6 +23,15 @@ Små databaser modelleras i utvecklarens huvud och dokumenteras i SQL-kod. Stör
 
 Läs dokumentet och använd de delar du anser passa i ditt specifika projekt.
 
+
+
+
+Inspelad föreläsning {#flas}
+--------------------------------------------------------------------
+
+Det finns en inspelad föreläsning som grundar sig på information i denna artikeln. Se den gärna som ett komplement till att läsa artikeln.
+
+[YOUTUBE src="Zdx40jc2lrk" width=700 caption="Modellera databas - faser och steg (med Mikael)."]
 
 
 
@@ -56,7 +66,7 @@ Fysisk modellering, eller fysisk design; det är nu dags att skapa tabellerna, i
 Skillnaden mellan logisk modellering och fysisk modellering är framförallt att vi i den fysiska modelleringen har bestämt vilken databashanterare som skall användas. Tanken är att man inte behöver binda sig vid en viss databashanterare under den logiska modelleringen. Just valet av databashanterare kan ställa olika krav på hur själva databasen implementeras och används. Det ställer i sin tur krav på databasens schema, hur vi väljer att lagra datat i tabeller. I den fysiska modelleringen så kan vi ta hänsyn till prestanda som i sin tur kan påverka hur vi väljer att lagra datat.
 
  Det sista vi gör, i modelleringen, är att lista de transaktioner som databasen skall stödja. Låt oss kalla det att skapa ett API, ett interface till databasen. Detta interface består av de transaktioner som databasen skall stödja. Det handlar om att lägga till, ta bort och uppdatera datat i databasen samt söka ut värden och förbereda dem för presentation. Ofta används databasen från ett eller flera applikationsprogram och det gynnar oss att skapa ett rent interface mellan databasen och applikationsprogrammen.
- 
+
 När vi listar transaktionerna så märker vi ibland vi att små förändringar av tabeller, eller tillägg av attribut och tabeller, är nödvändiga för att enkelt kunna jobba med databasen. Detta innebär att databasens schema, tabellerna och deras struktur, kan påverkas även i detta modelleringssteg.
 
 
@@ -102,7 +112,7 @@ Använd löpande text för att beskriva databasen, vad som skall lagras och hur 
 > "Vi skall utveckla ett webbaserat system för presentation av filmer. Filmerna skall presenteras tillsammans med information och bilder av innehållet och skådespelarna.
 
 > Filmerna är indelade i kategorier (komedi, action, drama, mfl) och för varje film finns information lagrad (titel, regissör, handling, bilder, skådespelare). Det kan finnas flera bilder och skådespelare för varje film.
-  
+
 > Skådespelarna presenteras tillsammans med information (namn, ålder, bilder, biografi) och för varje skådespelare finns en lista med vilka filmer de deltagit i (filmografi).
 Systemets användare kan betygssätta varje film och kommentera betyget (hur bra/dålig filmen var...)."
 
@@ -118,7 +128,7 @@ Viktigt är att formulera målet med databasapplikationen, vad är det som datab
 Entiteter är substantiv som är kandidater till lagring i databasen. Börja med att stryka under alla kandidater och skriv slutligen ned dem i en lista. Dessa entiteter blir ofta tabeller i databasen.
 
 > "Vi skall utveckla ett webbaserat system för presentation av <u>filmer</u>. Filmerna skall presenteras tillsammans med information och bilder av innehållet och skådespelarna.
-  
+
 > Filmerna är indelade i <u>kategorier</u> (komedi, action, drama, mfl) och för varje film finns information lagrad (titel, regissör, handling, bilder, skådespelare). Det kan finnas flera <u>bilder</u> och <u>skådespelare</u> för varje film.
 
 > Skådespelarna presenteras tillsammans med information (namn, ålder, bilder, biografi) och för varje skådespelare finns en lista med vilka filmer de deltagit i (filmografi).
@@ -219,13 +229,13 @@ När vi går över till den logiska modelleringen så vet vi att det är en rela
 
 ###7. Modifiera ER-diagrammet enligt relationsmodellen {#steg7}
 
-Vi gör en första ansats att modifiera ER-diagrammet så att det passar relationsmodellen. Framförallt har vi ett par N:M-förhållanden (många-till-många) att dela upp. 
+Vi gör en första ansats att modifiera ER-diagrammet så att det passar relationsmodellen. Framförallt har vi ett par N:M-förhållanden (många-till-många) att dela upp.
 
 [FIGURE src=/img/kunskap/kokbok-databasmodellering/image05.jpg caption="ER-diagram med attribut och kandidatnycklar."]
 
 Vi måste se till att vår modell stämmer överens med bla följande:
 
-* Inga många-många förhållanden (N:M). 
+* Inga många-många förhållanden (N:M).
 * Inga flervärdesattribut.
 * Endast ett värde i varje cell.
 * Varje rad är unik.           
@@ -248,7 +258,7 @@ Vi ser över ER-diagrammet en gång till och kompletterar med nycklar och attrib
 
 [FIGURE src=/img/kunskap/kokbok-databasmodellering/image00.jpg caption="ER-diagram med primära och främmande nycklar."]
 
-I varje steg av vårt modellerande måste vi ta olika beslut, det finns ofta flera alternativ att beakta. Försök alltid hålla dig till det ursprungliga målet med databasen, det kan underlätta. Om man är osäker så är det ofta inget problem, oavsett hur du modellerar i detta steget så kan du alltid gå tillbaka och ändra modellen i ett senare steg. Ofta lär man sig mer och mer om sin databas ju mer man använder den. 
+I varje steg av vårt modellerande måste vi ta olika beslut, det finns ofta flera alternativ att beakta. Försök alltid hålla dig till det ursprungliga målet med databasen, det kan underlätta. Om man är osäker så är det ofta inget problem, oavsett hur du modellerar i detta steget så kan du alltid gå tillbaka och ändra modellen i ett senare steg. Ofta lär man sig mer och mer om sin databas ju mer man använder den.
 
 En beskrivning i text av vårt diagram kan se ut som följer.
 
@@ -278,13 +288,13 @@ För vår modell skulle en enkel SQL DDL, för en delmängd av tabellerna, se ut
 CREATE TABLE Film
 (
   id INT,
-  titel CHAR(100), 
-  regissor CHAR(100), 
-  handling VARCHAR(400), 
+  titel CHAR(100),
+  regissor CHAR(100),
+  handling VARCHAR(400),
   Kategori_typ CHAR(10)
 );
 
-CREATE TABLE FilmBild 
+CREATE TABLE FilmBild
 (
   Film_id INT,
   Bild_id INT
@@ -301,15 +311,15 @@ Innan den blir helt färdig måste vi komplettera den med primärnycklar och fr�
 ```sql
 CREATE TABLE Film
 (
-  id INT PRIMARY KEY NOT NULL, 
-  titel CHAR(100) NOT NULL, 
-  regissor CHAR(100) NOT NULL, 
-  handling VARCHAR(400) NOT NULL, 
+  id INT PRIMARY KEY NOT NULL,
+  titel CHAR(100) NOT NULL,
+  regissor CHAR(100) NOT NULL,
+  handling VARCHAR(400) NOT NULL,
   Kategori_typ CHAR(10) NOT NULL,
   FOREIGN KEY (Kategori_typ) REFERENCES Kategori(typ)
 );
 
-CREATE TABLE FilmBild 
+CREATE TABLE FilmBild
 (
   Film_id INT NOT NULL,
   FOREIGN KEY (Film_id) REFERENCES Film(id),
@@ -329,7 +339,7 @@ Det finns mycket mer att tänka på när man skapar SQL DDL, ta en titt i manual
 
 ###10. Lista funktioner som databasen skall stödja (API) {#steg10}
 
-En databas vore knappast spännande om man inte nyttjade den, därför är det viktigt att se över hur den skall nyttjas, vilka transaktioner den skall stödja.  Skapa en lista med alla funktioner som databasen skall stödja. När du är klar har du databasens API. 
+En databas vore knappast spännande om man inte nyttjade den, därför är det viktigt att se över hur den skall nyttjas, vilka transaktioner den skall stödja.  Skapa en lista med alla funktioner som databasen skall stödja. När du är klar har du databasens API.
 
 Här ser du en delmängd till det API som behövs för vårt system.
 
