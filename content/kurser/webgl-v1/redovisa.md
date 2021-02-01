@@ -59,7 +59,7 @@ Feedback och frågor {#feedback}
 
 [Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
 
-Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
+Ställ dina frågor och funderingar i discord. Se till att du får dina frågor besvarade. Fråga igen om något är oklart.
 
 
 
@@ -89,6 +89,6 @@ I videon nedan lämnar Andreas in på Its, du ska göra din inlämning i Canvas.
 
 [YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
 
-Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
+<!-- Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet. -->
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
