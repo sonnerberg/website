@@ -14,7 +14,7 @@ revision:
 Kursen oopython (v2)
 ===================================================
 
-Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*, syftar till att lära studenterna objektorienterade angreppssätt och designprinciper för att utveckla objektorienterade program. Utöver detta ska studenterna lära sig såväl teoretiska aspekter som implementationsaspekter av algoritmer och datastrukturer. Programspråket Python används för implementering.
+Kursen **Algoritmer och datastrukturer med objektorienterad Python**, a.k.a. *oopython*, syftar till att lära studenterna objektorienterade angreppssätt och designprinciper för att utveckla objektorienterade program. Utöver detta ska studenterna lära sig såväl teoretiska aspekter som implementationsaspekter av algoritmer och datastrukturer. Programspråket Python används för implementering.
 
 
 
