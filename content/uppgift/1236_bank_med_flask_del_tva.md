@@ -41,7 +41,8 @@ Krav {#krav}
 1. Skapa en ny klass `Person`, lägg den i filen `person.py`. Varje person skall ha attributen `name` och `_id` som skall vara en **unik** sträng. Resterande attribut och metoder avgör du själv.  
 
 1. Lägg till möjligheten att skapa en ny person. I vyn skall man kunna skriva in ett namn och ett id på personen man vill skapa.  
-Man skall ej kunna skapa en person vars id redan existerar, gör man det skall ett felmeddelande visas.
+Man skall ej kunna skapa en person vars id redan existerar, gör man det skall ett felmeddelande visas.  
+Spara den nya personens information till **samma** json fil som håller alla konto-objekt.
 
 1. Lägg till möjligheten att skapa ett nytt konto. I vyn skall det finnas en dropdown med alla konto typerna och ett fält där man kan skriva in kontots balans.
 
