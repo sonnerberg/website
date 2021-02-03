@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2021-02-03": (B, aar) Uppdaterade koden till bättre struktur och stycke om EAFP.
     "2018-01-09": (A, lew) First version.
 category:
     - oopython
@@ -114,7 +115,9 @@ class ValueTooHighError(Error):
    pass
 ```
 
-Nu har vi ett exception för varje fel som vi vill tvinga fram. Studera main.py och se hur vi kan tvinga fram våra exceptions:
+Nu har vi ett exception för varje fel som vi vill tvinga fram. Notera att i nyare version av Python behöver vi inte ha med `pass` i klassen, det ger valideringsfel (tror det är python3.7 och uppåt).
+ 
+Nu kollar vi på hur vi kan använda de egen definierade felen.
 
 ```python
 #!/usr/bin/env python3
@@ -126,27 +129,77 @@ import random
 from exceptions import ValueTooLowError
 from exceptions import ValueTooHighError
 
-rand_val = random.randint(1, 100)
 
-while True:
-    try:
-        in_val = int(input("Ange siffra: "))
+def guess(number, correct):
+    if number < correct:
+        raise ValueTooLowError
+    if number > correct:
+        raise ValueTooHighError
 
-        if in_val < rand_val:
-            raise ValueTooLowError
-        elif in_val > rand_val:
-            raise ValueTooHighError
-        break
-    except ValueTooLowError:
-        print("För lågt, prova igen!")
+def game_loop():
+    rand_val = random.randint(1, 10)
 
-    except ValueTooHighError:
-        print("För högt, prova igen!")
+    while True:
+        try:
+            in_val = int(input("Ange siffra: "))
+            guess(in_val, rand_val)
+            break
+        except ValueTooLowError:
+            print("För lågt, prova igen!")
 
-print("Siffran {} är rätt!".format(in_val))
+        except ValueTooHighError:
+            print("För högt, prova igen!")
+
+    print("Siffran {} är rätt!".format(in_val))
+
+if __name__ == "__main__":
+    game_loop()
+
 ```
 
-Ett alternativ är att byta `print("...")` mot att skicka med meddelandet direkt till respektive exception, `raise ValueTooHighError("För högt, prova igen!")`.
+Notera att vi inte fångar felen i samma funktion som vi lyfter dem i.
+
+
+
+# It is easier to ask for forgiveness than permission {#ask-forgivness}
+
+Vi går lite överkurs och kollar på ett sätt att skriva kod som kallas för "It is easier to ask for forgiveness than permission" (EAFP) kontra "Look before you leap" (LBYL) vilket de flesta är vana vid.
+
+När vi skriver kod enlig LBYL använder vi if-satser och kollar i förväg om något kommer fungera. Med EAFP försöker vi göra något och om det går fel fångar vi felet och fortsätter. Nedanför kan ni se ett kort kodexempel.
+
+
+
+### LBYL {#lbyl}
+
+```python
+if "key" in a_dict:
+    print(a_dict["key"])
+```
+
+Vi kollar först att nyckeln finns innan vi gör något med den.
+
+
+
+### EAFP {#eafp}
+
+```python
+try:
+    print(a_dict["key"])
+except KeyError:
+    pass
+```
+
+Vi försöker använda nyckeln och om den inte finns fångar vi felet som lyfts.
+
+
+
+### Vilket ska man använda? {#which-use}
+
+Många programmeringsspråk förespråkar LBYL men Python är för att använda EAFP. Det är dock lättare att saker går fel med EAFP. Läs [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/) för ett längre utlägg om en problematik som uppstår med EAFP. Ni får gärna läsa kommentarerna på artikeln också för att läsa lite diskussioner om för och nackdelar.
+
+En annan aspekt är prestanda. Att lyfta och fånga fel tar generellt sätt längre tid än en if-sats. Men om villkoret som används i if-satsen är krävande kan det vara snabbare att använda try-except. Eller om bara 10% av gångerna koden körs kommer det resultera i att ett fel lyfts, då kan det vara värt att de andra 90% gångerna inte har en if-sats.
+
+Som ni ser kan mycket påverka och det är upp till er som skriver koden att avgöra vilket som är mest passande. Det är inget vi kommer kolla på i denna kursen dock.
 
 
 
