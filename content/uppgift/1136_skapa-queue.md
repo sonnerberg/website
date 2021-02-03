@@ -51,7 +51,7 @@ Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `he
 
 1. Det är helt OK att lägga till fler metoder/attribut om man vill det i Queue klassen.
 
-1. Skapa en fil med namnet `errors.py` i "queue" mappen. Här skall du skapa ett eget exception med namnet `EmptyQueueException`. Denna skall uppstå när man använder `peek()` eller `dequeue()` på en tom kö.
+1. Skapa en fil med namnet `errors.py` i "queue" mappen. Här skall du skapa ett eget exception med namnet `EmptyQueueException`. Denna skall lyftas när man använder `peek()` eller `dequeue()` på en tom kö.
 
 1. Se till att `Queue` klassen passerar alla tester.
 
