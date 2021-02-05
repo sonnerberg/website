@@ -69,9 +69,10 @@ Om du känner att du har tid och lust.
 
 1. kolla på [CS50 - Data structures](https://youtu.be/pA-8eBZvN1E?t=455), från tidsstämpeln fram till 28:15. Väldigt lärorik video, men de kan använda termer ni inte känner igen för de jobbar i C.
 
-1. [Datastructures - geeksforgeeks](http://www.geeksforgeeks.org/data-structures/)  
+1. [Datastructures - geeksforgeeks](http://www.geeksforgeeks.org/data-structures/)
 
 1. Kolla på [Abstract Data Type (ADT)](https://www.youtube.com/watch?v=HcxqzYsiJ3k)
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -94,6 +95,8 @@ Genomför följande övning för att träna dig.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+TIPS! När ni gör uppgifterna kan ni använda [Treevizer](https://pypi.org/project/treevizer/) för att skapa bilder av node strukturerna.
 
 1. Gör uppgiften "[Skapa queue](uppgift/skapa-queue)". Spara din kod i mappen `queue`.
 
