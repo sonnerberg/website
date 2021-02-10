@@ -36,7 +36,7 @@ cp -i kmom04/list/*.py kmom05/sort/
 cd kmom05/sort
 ```
 
-1. Skapa filen `sort.py` och kopiera in insertion sort från [artikeln](kunskap/sorteringsalgoritmer#insertion-sort).  
+1. Skapa filen `sort.py` och kopiera in insertion sort från [artikeln](kunskap/sorteringsalgoritmer-v2#insertion-sort).  
 "sort.py" behöver inte innehålla någon klass. Det räcker med enbart funktion för algoritmen.
 
 1. Justera din Insertion sort så den kan sortera din UnorderedList. PS! När ni skapar sorterings algoritmerna ska ni använda er av listans metoder för att flytta på element. Ni ska **inte** hämta head och traversera noder med den i era algoritmer.
