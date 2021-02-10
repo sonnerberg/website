@@ -31,7 +31,7 @@ Förutsättning {#pre}
 
 Exemplet visar hur du jobbar med transaktioner i MySQL. Ett avslutande stycke visar hur samma kod ser ut i SQLite.
 
-Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax-transactions.html).
+Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/refman/8.0/en/sql-transactional-statements.html).
 
 Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.org/transactional.html).
 
@@ -42,7 +42,7 @@ Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.
 ACID {#acid}
 --------------------------------------
 
-ACID är en samling properties för databastransaktioner. De beskriver hur en transaktion måste bete sig. 
+ACID är en samling properties för databastransaktioner. De beskriver hur en transaktion måste bete sig.
 
 | Property        | Beskrivning |
 |-----------------|-------------|
@@ -80,7 +80,7 @@ Först skapar vi en tabell med innehåll.
 ```sql
 --
 -- Example transactions
--- 
+--
 DROP TABLE IF EXISTS account;
 CREATE TABLE account
 (
@@ -125,13 +125,13 @@ SQL-koden för den flytten ser ut så här.
 --
 -- Move the money
 --
-UPDATE account 
+UPDATE account
 SET
     balance = balance + 1.5
 WHERE
     id = "2222";
 
-UPDATE account 
+UPDATE account
 SET
     balance = balance - 1.5
 WHERE
@@ -162,13 +162,13 @@ En transaktion inleds med `START TRANSACTION` och avslutas med `COMMIT`. Om man 
 --
 START TRANSACTION;
 
-UPDATE account 
+UPDATE account
 SET
     balance = balance + 1.5
 WHERE
     id = "2222";
 
-UPDATE account 
+UPDATE account
 SET
     balance = balance - 1.5
 WHERE

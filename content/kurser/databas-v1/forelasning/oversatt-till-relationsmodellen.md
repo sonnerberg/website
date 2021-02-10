@@ -1,28 +1,27 @@
 ---
 author: mos
 revision:
-    "2021-01-14": "(A, mos) Första utgåva inför kursstart VT2021."
+    "2021-02-10": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
-Databasmodellering - Översätt till relationsmodellen
+Logiskt databasmodellering - Översätt till relationsmodellen
 ====================
 
-En översikt och introduktion till området relationsdatabaser med fokus på MySQL, MariaDB, bakgrunden för relationsdatabaser, skillnaden mellan databasens schema och dess innehåll samt frågespråket SQL.
+En genomgång av hur man översätter konstruktioner från den koncepuella modelleringsfasen till den logiska modelleringsfasen. Det handlar om att överföre ER-modellen till relationsmodellen och hur man modellerar de delar som inte stöds i relationsmodellen.
 
-Denna föreläsning är bra att se på som en del i förberedelserna inför att jobba med kmom01.
+Denna föreläsning är bra att se på som en del i förberedelserna inför att jobba med kmom04.
 
-Videon är 33 minuter lång.
+Videon är 26 minuter lång.
 
-[YOUTUBE src="i6TGA-ov_E0" width=700 caption="Databasteknik, relationsdatabaser och SQL (med Mikael)."]
+[YOUTUBE src="EYL3dG6-gTA" width=700 caption="ER-modellering - översätt till relationsmodellen aka Logisk modellering (med Mikael)."]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f01-databasteknik/slide.html).
+Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f04-er-oversatt-till-relationsmodellen/slide.html).
 
 
 
-<!--
 Resurser
 ------------------------
 
 Följande resurser används i olika omfattning i föreläsningen.
 
-*
--->
+* [Kokbok för databasmodellering](https://dbwebb.se/kunskap/kokbok-for-databasmodellering) om de olika faserna och stegen för modellering.
+* Boken Databasteknik med webbkursen "[Översättning från ER-modellen till relationsmodellen](http://www.databasteknik.se/webbkursen/er2relationer/index.html)".

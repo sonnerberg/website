@@ -2,6 +2,7 @@
 author: mos
 category: artikel
 revision:
+    "2021-02-10": "(E, mos) Kompletterad med inspelade föreläsningar om ER-modellering och översättning till relationsmdoellen."
     "2021-01-31": "(D, mos) Kompletterad med inspelad föreläsning."
     "2012-09-20": "(C, mos) Flyttad från googledocs till dbwebb."
     "2009-09-02": "(B, mos) Uppdaterad för att användas i kursen Databasteknik moment modellering."
@@ -30,7 +31,7 @@ Inspelad föreläsning {#flas}
 
 Det finns en inspelad föreläsning som grundar sig på information i denna artikeln. Se den gärna som ett komplement till att läsa artikeln.
 
-[YOUTUBE src="Zdx40jc2lrk" width=700 caption="Modellera databas - faser och steg (med Mikael)."]
+[YOUTUBE src="Zdx40jc2lrk" width=700 caption="Modellera databas - faser och steg (med Mikael) (39 min)."]
 
 
 
@@ -366,7 +367,7 @@ Efter ett tag så behövs databasen modifieras eller vidareutvecklas, fler indiv
 Detta gör vi i ett dokument, vår Data Dictionary, som är en dokumentation över vår databas. Det är alltid svårt att upprätthålla dokumentationen när systemet väl är i drift. Men, låt oss spara vårt material som vi gjort i samband med modelleringen och sätta samman det materialet till en Data Dictionary.
 
 
-###Innehållsförteckning i en DD {#dd-toc}
+### Innehållsförteckning i en DD {#dd-toc}
 
 En Data Dictionary, baserad på materialet från denna 10-stegs raket, kan se ut så här.
 
@@ -377,6 +378,7 @@ En Data Dictionary, baserad på materialet från denna 10-stegs raket, kan se ut
 5. Det logiska ER-diagrammet.
 6. SQL DDL.
 7. Databasens API inklusive SQL för att lösa API:et.
+
 
 
 Läs mer {#mer}
@@ -396,7 +398,18 @@ Du kan även skumma och översiktligt gå igenom följande kapitel.
 * Kapitel 3: Mer om datamodellering
 
 
-###Nätet {#natet}
+
+### Inspelade föreläsningar {#inspel}
+
+Det finns två inspelade föreläsningar som grundar sig på materialet från boken Databasteknik och de handlar om ER-modelleringen i den konceptuella fasen och om hur man översätter till relationsmodellen i den logiska modelleringsfasen. Se dem gärna som ett komplement till att läsa artikeln och för vidare studier i ämnet.
+
+[YOUTUBE src="lq38MDrv11s" width=700 caption="ER modellering - konceptuell modellering (med Mikael) (24 min)"]
+
+[YOUTUBE src="EYL3dG6-gTA" width=700 caption="ER-modellering - översätt till relationsmodellen aka Logisk modellering (med Mikael) (26 min)"]
+
+
+
+### Nätet {#natet}
 
 Det finns flera webbresurser som ger en bra introduktion och översikt till databasmodellering. Använd dessa som referenslitteratur eller för vidare studier i ämnet.
 

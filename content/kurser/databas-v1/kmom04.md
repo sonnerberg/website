@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
+    "2021-02-10": "(E, mos) lade till inspelade föreläsningar."
     "2019-02-13": "(D, mos) lade till läsanvisning om EJS."
     "2019-02-08": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
@@ -40,16 +41,14 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-<!--
+
 ### Föreläsningar {#flas}
 
 Titta på följande inspelade föreläsningar.
 
-1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen (logisk modelleringsfas).
+1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen i den logisk modelleringsfasen.
 
-Föreläsning om transaktioner.
-
--->
+1. [Transaktioner i databaser - ACID](./../forelasning/transaktioner) ger en översikt till begreppet transaktioner i databasen och vad ACID innebär samt en liten utläggning om låsning, prestanda och tillförlitlighet i databasen.
 
 
 
