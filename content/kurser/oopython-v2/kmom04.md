@@ -127,7 +127,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Har du skapat egna datastrukturer förut?
-* Vilken typ av lista valde du att göra och varför?
+* Vilken typ av lista valde du att göra och varför (enkel- dubbellänkad, cirkulär)?
 * Vilka exceptions skapade du? Hur gör man för att de ska kastas i listan?
 * Gjorde du någon extrauppgiften?
 * Vad är en länkad lista kontra en array?
