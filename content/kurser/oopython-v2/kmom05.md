@@ -66,7 +66,7 @@ Om du känner att du har tid och lust.
 
 1. [Sorting algoritms - geeksforgeeks](http://www.geeksforgeeks.org/fundamentals-of-algorithms/#SearchingandSorting)
 
-
+1. [A series of nonverbal algorithm assembly instructions - IDEA](https://idea-instructions.com/)
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
