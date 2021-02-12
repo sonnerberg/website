@@ -133,11 +133,11 @@ class Queue:
         return self.items == []
 
     def enqueue(self, item):
-        self.items.insert(0,item)
+        self.items.append(item)
 
     def dequeue(self):
         try:
-            return self.items.pop()
+            return self.items.pop(0)
 
         except IndexError:
             return "Empty list."
