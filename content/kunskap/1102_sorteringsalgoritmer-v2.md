@@ -67,6 +67,8 @@ def bubble_sort(items):
 
 Insertion sort använder en osorterad lista och en sorterad lista. Värdet från den osorterade listan sätts in i den sorterade listan på rätt plats. Värdena i den sorterade listan flyttas baserat på det nya värdet som ska placeras på rätt plats. Då båda listorna är lika stora så samma lista representera båda fallen:  
 
+[FIGURE src=https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif]
+
 [VisuAlgo Insertion sort](https://visualgo.net/en/sorting?slide=8)
 
 ```python
@@ -88,6 +90,8 @@ def insertion_sort(items):
 ###Merge sort {#merge-sort}  
 
 Merge sort fungerar snarlikt quick sort. Den använder också ["divide and conquer"-metoden](https://en.wikipedia.org/wiki/Divide_and_conquer_algorithms) med att dela upp listan till fler och sortera del-listorna separat, baserat på ett pivotvärde. Merge sort använder rekursion för att sortera del-listorna och när listan är nere på en längd av 1 ses den som klar.
+
+[FIGURE src=https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif]
 
 [VisuAlgo Merge sort](https://visualgo.net/en/sorting?slide=10)
 
@@ -127,6 +131,8 @@ def merge_sort(items):
 ###Quick sort {#quick-sort}
 
 Quick sort använder sig utav ett [pivot-värde](https://en.wikipedia.org/wiki/Quicksort#Choice_of_pivot). Efter valet av pivot är gjort så delar man upp listan i två delar. Den ena delen hanterar värdena som är mindre än pivot och den andra delen hanterar värdena som är större än pivot. Quick sort arbetar med fördel rekursivt där varje anrop till funktionen hanterar ett nytt pivot-värde baserat på den nya listan som skickats in. Bas-fallet är när listans längd har nått 1. Till slut så slår man samman de tre delarna.  
+
+[FIGURE src=https://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif]
 
 [VisuAlgo Quick sort](https://visualgo.net/en/sorting?slide=11)
 
