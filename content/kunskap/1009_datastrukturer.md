@@ -206,17 +206,17 @@ Sen finns det så klart också Cirkulär dubbellänkad lista och de kan vara sor
 Då ska vi titta på hur koden kan se ut för nod klassen. Det behövs väldigt lite kod då vi enbart behöver ett attribut för data och ett för nästa nod.
 
 ```python
-class Node:
+class Node():
     """
     Node class
     """
-    def __init__(self, data, next=None):
+    def __init__(self, data, next_=None):
         """
         Initialize object with the data and set next to None.
         next will be assigned later when new data needs to be added.
         """
         self.data = data
-        self.next = next
+        self.next = next_
 ```
 
 Vi testar använda den i python3 interpretatorn.
