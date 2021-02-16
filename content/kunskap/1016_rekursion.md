@@ -49,11 +49,10 @@ def recursive_sum(times):
     # Här är basfallet. När times kommer till 1 så returneras bara värdet.
     if times <= 1:
         return times
-    else:
-        # Vi ändrar tillståndet och jobbar oss mot basfallet
-        sum_so_far = times + recursive_sum(times-1)
-        print(sum_so_far)
-        return sum_so_far
+    # Vi ändrar tillståndet och jobbar oss mot basfallet
+    sum_so_far = times + recursive_sum(times-1)
+    print(sum_so_far)
+    return sum_so_far
 >>> recursive_sum(5)
 3
 6
