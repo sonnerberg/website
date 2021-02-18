@@ -121,7 +121,7 @@ Dessa uppgifter skall utföras och redovisas.
 ```bash
 # Ställ dig i kurskatalogen
 # dbwebb validate kmom03
-dbwebb publish kmom03p
+dbwebb publish kmom03
 ```
 
 
