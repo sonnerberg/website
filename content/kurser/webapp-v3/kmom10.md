@@ -14,6 +14,10 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+Detta kmom uppdateras och är inte redo att jobbas igenom.
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
