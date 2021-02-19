@@ -41,15 +41,19 @@ Läs &amp; Studera  {#lasanvisningar}
 
 
 
-<!--
 ### Föreläsningar {#flas}
 
 Titta på följande inspelade föreläsningar.
 
-1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen (logisk modelleringsfas).
+1. [Tidstämplar i databastabell](./../forelasning/tidstamplar) visar hur tidstämplar kan fungera i en databastabell och hur de kan få sitt värde per automatik.
 
-Föreläsning om lagrade procedurer och triggers.
-    * Inkludera även js till sp?
+1. [Lagrade procedurer och programmera i databasen](./../forelasning/lagrade-procedurer) introducerar framförallt hur man jobbar med lagrade procedurer i databasen för att kombinera variabel, SQL och mer sedvanliga programmeringskonstruktioner.
+
+1. [Trigger i databasen](./../forelasning/trigger) om konceptet "programmera i databasen" och hur triggers passar in i den möjligheten.
+
+<!--
+
+Föreläsning om JS hur koppla lagrad procedur.
 
 Föreläsning om normalisering? (flytta läsanvisningen från kmom04)
 
