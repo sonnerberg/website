@@ -141,4 +141,4 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna övning tittat på hur man med hjälp av animationer får känslan av att använda en mobil enhet och att det inte bara ser ut som en mobil enhet.
 
-Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7319) om denna artikeln.
+<!-- Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7319) om denna artikeln. -->

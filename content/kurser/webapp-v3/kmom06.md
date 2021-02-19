@@ -110,5 +110,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vilka fördelar ger Cordova plugins?
 * Fick du till ett bra gränssnitt med kartan?
 * Vilka effekter gav animationer och övergångar?
-* Gjorde du extrauppgiften? Beskriv isåfall arbetet med extrauppgiften.
+<!-- * Gjorde du extrauppgiften? Beskriv isåfall arbetet med extrauppgiften. -->
 * Vilken är din TIL för detta kmom?
