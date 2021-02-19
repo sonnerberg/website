@@ -9,6 +9,7 @@ revision:
 ...
 Kmom05: Native
 ==================================
+
 Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på riktigt för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
 
 
@@ -43,29 +44,29 @@ Från [labbmiljö](./../labbmiljo) börja med att installera 'Apache Cordova' oc
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 0 studietimmar)*
+*(ca: 4 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
     * Ch 14: Mobile Performance
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 1. Läs igenom artikeln "[GUI ramverk](kunskap/gui-ramverk)".
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 5.
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Det finns inga extra lästips.
 
@@ -74,13 +75,11 @@ Det finns inga extra lästips.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 16-20 studietimmar)*
+*(ca: 12-15 studietimmar)*
 
 
 
 ### Övningar {#ovningar}
-
-
 
 1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)". Spara dina filer i `me/kmom05/hello`.
 
@@ -100,7 +99,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ### Extra {#extra}
 
-* Skapa ett offline-läge för din app med hjälp artikeln "[Filer i Cordova](kunskap/filer-i-cordova)" och Cordova pluginen "[Network information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/)".
+* Skapa ett offline-läge för din app med hjälp artikeln "[Filer i Cordova](kunskap/filer-i-cordova)" och Cordova pluginen "[Network information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/)". Du behöver inte göra om så hela appen fungerar, men kan välja ut specifika vyer och specifik data att göra offline. Skriv en rad eller tre i din redovisningstext om hur det gick om du valde att göra offline-läget.
 
 
 
