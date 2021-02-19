@@ -11,16 +11,12 @@ Kmom06: Datastrukturen träd
 ====================================
 [INFO]
 
-Gör `dbwebb update` och `dbwebb init` innan du startar med kursmomentet.
+Gör `dbwebb update` innan du startar med kursmomentet.
 [/INFO]
 
 Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla på träd strukturer. Mer specifikt ska vi lära oss skapa ett Binärt sökträd och skapa algoritmer som kan traversera trädet rekursivt. 
 
 <!--more-->
-
-[WARNING]
-Detta kmom uppdateras och är inte redo att jobbas igenom.
-[/WARNING]
 
 [FIGURE src=/image/oopython/kmom06/bst.svg caption="Ett binärt sökträd."]
 
