@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-02-25": "(B, mos) Förtydliga om hur man jobbar med ALTER TABLE."
     "2019-01-28": "(A, mos) Första versionen."
 ...
 Samla all DDL i en fil
@@ -70,7 +71,7 @@ Kom ihåg att du inte kan redigera dina befintliga filer, utan att riskera att d
 
 Du har ett CREATE TABLE i din fil `ddl_copy.sql`, kopiera in det i din nya fil, tillsammans med en motsvarande DROP TABLE.
 
-Du har ett par `ALTER TABLE` i din fil `ddl_migrate.sql`, integrera effekten av dem in i motsvarande `CREATE TABLE` som ligger i din nya fil.
+Du har ett par `ALTER TABLE` i din fil `ddl_migrate.sql`, integrera effekten av dem in i motsvarande `CREATE TABLE` som ligger i din nya fil. Med andra ord, använd inte ALTER TABLE i din slutliga fil utan redigera istället dina CREATE TABLE så att de motsvarar de ändringar som ALTER TABLE inför. Eventuellt behöver du då även justera dina INSERT satser. Gör så här så blir din slutliga DDL fil "snyggast".
 
 När du är klar, kör den nya filen och se att den fungerar att köra om och om igen.
 
@@ -123,16 +124,16 @@ Vi har så återställa hela databasen genom att köra följande filer.
 |-------------------|----------------------|
 | `setup.sql`       | Kör som root för att skapa om databasen och skapa användaren user:pass. |
 | `ddl_all.sql`     | Skapa tabeller och vyer. |
-| `insert.sql`      | Fyll databasen med innehåll innan lönerevisionen. | 
+| `insert.sql`      | Fyll databasen med innehåll innan lönerevisionen. |
 | `dml_update_lonerevision.sql`  | Utför lönerevisionen. |
 
 Skapa filen `reset_part3.bash` och utför ovan kommandon. Det kan se ut så här när du är klar och kör skriptet i din terminal.
 
 ```text
-$ bash reset_part3.bash 
+$ bash reset_part3.bash
 >>> Reset skolan to beginning of part 3
 >>> Initiera database and users (setup.sql)
-Enter password: 
+Enter password:
 >>> Create tables and views (ddl_all.sql)
 >>> Insert data (insert.sql)
 >>> Do lönerevision (dml_update_lonerevision.sql)
