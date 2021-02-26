@@ -9,16 +9,6 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-Detta kmom uppdateras och är inte redo att jobbas igenom.
-[/WARNING]
-
-[INFO]
-**Gör `dbwebb update` innan du börjar med projektet.**
-[/INFO]
-
-
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -41,11 +31,11 @@ cp example/dictionary/*.txt me/kmom10/spellchecker
 cd me/kmom10/SpellChecker
 ```
 
-Du kopierade fyra filer, alla har ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. Frequency filerna är för krav 5.
+Du kopierade fyra filer, alla innehåller ett ord per rad. `dictionary.txt` innehåller 349900 rättstavade ord och `tiny_dictionary.txt` innehåller 177. `dictionary.txt` kan ta lång tid att ladda och jobba med så när ni börjar med uppgiften använd `tiny_dictionary.txt` eller skapa en egen ännu mindre fil. Frequency filerna är för krav 5.
 
 Innan du börjar med programmeringen ska du göra en analys av programmet du ska bygga och dokumentera det med klassdiagram.
 
-Fråga i forumet om du känner dig osäker.
+Fråga i discord om du känner dig osäker.
 
 [YOUTUBE src=17SULXiU6hM width=700 caption="Andreas visar hur SpellChecker kan se ut när det är klart."]
 
@@ -85,7 +75,7 @@ När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser
 
 1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från den nya filen.
 
-1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. PS! Tänk på att studentservern kör Python3.5 den har inte sorterade dictionaries, vilket nya versioner har. Om ni spara barn noderna i dictionaries måste ni se till att sortera dem när ni ska skriva ut i bokstavsordning. Ett till tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden.
+1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. Ett tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden.
 
 1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska SearchMiss lyftas som error. Det ska inte krasha programmet! Det ärcker inte med att bara avmarkera noder när du tar bort ett ord. Om noderna i ordet inte används till ett annat ord ska du ta bort dem från datastrukturen.
 
@@ -169,10 +159,9 @@ Redovisning {#redovisning}
 
 1. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
 
+1. Kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i projektet. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
 
-1. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i projektet. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
-
-1. Se till att samtliga kursmoment validerar.
+<!-- 1. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i projektet. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas. -->
 
 ```bash
 # Ställ dig i kurskatalogen
