@@ -186,7 +186,9 @@ Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i sam
 
 Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil. I CSS-preprocessors finns det inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av moduler.
 
-Vissa har i kursen [design](kurser/design) träffat på LESS och det går alldeles utmärkt att använda sig av LESS även i denna kursen, men i följande exempel används [SASS](http://sass-lang.com/). För att installera SASS kan vi använda oss av `npm`.
+Vissa har i kursen [design](kurser/design) redan träffat på SASS och vet hur SASS fungerar, men denna artikeln utgår från att vi inte kan SASS.
+
+För att installera SASS kan vi använda oss av `npm`.
 
 ```bash
 # Stå i me/kmom02/buttons
@@ -196,11 +198,11 @@ npm install --save sass
 
 Kommandot `npm init --yes` skapar en fil `package.json` som är en konfigurationsfil för projekt som använder sig av npm.
 
-I `package.json` kan vi skriva ett såkallat npm-script för att kompilera en SASS fil till en CSS-fil. Nedanstående script kompilerar SASS filen `base.scss` till filen `style.min.css`. Vi kan med kommandot `npm run style` i terminalen köra scriptet.
+I `package.json` kan vi skriva ett såkallat npm-script för att kompilera en SASS fil till en CSS-fil. Nedanstående script kompilerar SASS filen `base.scss` till filen `style.css`. Vi kan med kommandot `npm run style` i terminalen köra scriptet.
 
 ```json
 "scripts": {
-  "style": "sass base.scss style.min.css"
+  "style": "sass base.scss style.css --no-source-map"
 },
 ```
 
@@ -259,8 +261,8 @@ Om man istället vill skapa en komprimerad version av CSS koden kan man använda
 
 ```json
 "scripts": {
-  "style": "sass base.scss style.min.css",
-  "style-min": "sass base.scss style.min.css --style compressed"
+  "style": "sass base.scss style.min.css --no-source-map",
+  "style-min": "sass base.scss style.min.css  --no-source-map --style compressed"
 },
 ```
 
@@ -270,6 +272,6 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna artikeln skapat knappar som är lätta att klicka på och samtidigt inbjuder till att bli klickade på. Vi designade först en grundknapp och med hjälp av andra klasser designade vi knappar som fyller hela skärmens bredd och knappar med andra färger för olika funktioner. Vi har även tittat på ett sätt att strukturera vår CSS kod med CSS-preprocessorn SASS.
 
-Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7314) om denna artikeln.
+<!-- Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7314) om denna artikeln. -->
 
 Exempelprogrammet från denna övning finns i kursrepot [example/sass-examples](https://github.com/dbwebb-se/webapp/tree/master/example/sass-examples) och i `example/sass-examples`.
