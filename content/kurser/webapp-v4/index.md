@@ -41,7 +41,9 @@ Via litteraturstudier och praktiska övningar förkovrar du dig i området. I sl
 [INFO]
 **Tidigare/Nyare version av kursen**
 
-Från och med vårterminen 2018 gäller version 3 av kursen.
+Från och med vårterminen 2021 gäller version 4 av kursen.
+
+Från och med vårterminen 2018 till 2020 gällde version 3 av kursen, , [webapp-v3](kurser/webapp-v3).
 
 Under vårterminen 2017 gällde version 2 av kursen, [webapp-v2](kurser/webapp-v2).
 
