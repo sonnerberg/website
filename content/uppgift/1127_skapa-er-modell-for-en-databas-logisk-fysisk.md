@@ -63,7 +63,7 @@ Krav {#krav}
 
 1. Berätta i dokumentet hur du gjorde för att skapa SQL DDL (per hand eller genererade). SQL DDL lägger du som ett Appendix i ditt dokument, för information, använd ett rimligt typsnitt.
 
-1. Din SQL DDL sparar du även som egen fil i `ddl.sql`. Denna filen skall inte innehålla SQL för att skapa själva databasen.
+1. Din SQL DDL sparar du även som egen fil i `ddl.sql`. Denna filen skall innehålla SQL för att skapa själva databasen.
 
 1. Skapa en separat fil `setup.sql` som skapar databasen `eshop` (CREATE DATABASE) och lägger till en användare `user` med lösenordet `pass` som har fulla rättigheter på databasen.
 
