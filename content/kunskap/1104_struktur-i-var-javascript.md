@@ -92,6 +92,8 @@ module.exports = {
 
 Vi vill alltså börja appen från `entry`-filen `js/main.js`. Vi använder sedan `path` modulen i nodejs för att peka ut sökvägen så den kompilerade filen hamnar i `dist/bundle.js`. Jag har strukturerat upp min kod lite ytterligare från kmom01 och lagt alla JavaScript filer i katalogen `js`.
 
+Raden `mode: 'development',` berättar för webpack att vi just nu hållar på att utveckla så vi vill ha att filerna kompileras för utveckling. Vi kommer senare i artikeln se hur vi bygger produktionsfiler.
+
 Raden `devtool: 'inline-source-map',` gör att i `bundle.js` får vi med information om vilken ursprungsfil koden kommer ifrån. Det gör det mycket lättare att felsöka under utveckling.
 
 För att kompilera JavaScript koden använder vi oss av kommandot `webpack --watch` i vår package.json fil. Då vi döpt vår konfigurationsfil till default-namnet `webpack.config.js` vet webpack redan om vilka filer vi ska utgå ifrån och vart den kompilerade filen ska läggas. Du kan nu köra kommandot `npm start` i terminalen och vår applikation kompileras. Vi kan nu lägga till `dist/bundle.js` längst ner i `index.html` som den enda JavaScript filen vi importerar.
@@ -452,5 +454,5 @@ Vi kommer längre fram i kursen titta ytterligare på cachning av data och till 
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna övning tittat på hur vi kan skapa en bättre struktur för vår JavaScript och hur vi explicit definierar vilka JavaScript moduler vi vill använda. Webpack kan konfigureras till att ta hand om alla våra assets: JavaScript, CSS/SASS och bilder, men i denna övning får det räcka med att vi kompilerar vår JavaScript till en enda fil. För mer information om [webpack](https://webpack.js.org) se deras utmärkta hemsida med bra dokumentation och guides.
-<!-- 
+<!--
 Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7315) om denna artikeln. -->
