@@ -1,1 +1,0 @@
-../../../labbmiljo/120_operativsystem.md
