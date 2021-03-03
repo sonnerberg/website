@@ -38,28 +38,21 @@ Läs &amp; Studera  {#lasanvisningar}
 
 
 
-<!--
 ### Föreläsningar {#flas}
 
 Titta på följande inspelade föreläsningar.
 
-1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen (logisk modelleringsfas).
+1. [Funktioner och programmera i databasen](./../forelasning/funktioner) visar hur du kan programmera egnedefinierade funktioner i databasen och hur du kan använda dem i SELECT-satser. Funktioner kompletterar lagrade procedurer och triggers och har ett litet annat användningsområde.
 
-Föreläsning om funktioner.
-
-Föreläsning om index.
-
-Föreläsning om dokumentation av databas.
+1. [Index och prestanda i databasen](./../forelasning/index-och-prestanda) ger inledande en allmän diskussion av de delar som påverkar den upplevda prestandan av en databas och därefter fortsätter föreläsningen med index för att se hur de kan användas för att ge databasens frågeoptimerare optimala förutsättningar för att genomföra sitt arbete.
 
 <!--
+Föreläsning om dokumentation av databas.
 
-Dokumentation av databasen
-Kanske till kmom05...
+# Reverse engineering
 
 En not om DD i artikeln:
 https://dbwebb.se/kunskap/kokbok-for-databasmodellering#dd
-
-# Reverse engineering
 
 * Dokumentera befintlig databas
 * Skapa mental bild av databasen
@@ -69,7 +62,6 @@ https://dbwebb.se/kunskap/kokbok-for-databasmodellering#dd
 
 * DD
 * Ladok
-
 -->
 
 

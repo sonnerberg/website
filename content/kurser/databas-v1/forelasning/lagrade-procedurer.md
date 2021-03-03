@@ -28,5 +28,6 @@ Följande resurser används i olika omfattning i föreläsningen.
 * MySQL manualen lagrade procedurer.
     * [24.1 Defining Stored Programs](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)
     * [24.2 Using Stored Routines (Procedures and Functions)](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
+    * [13.1.17 CREATE PROCEDURE and CREATE FUNCTION Statements](https://dev.mysql.com/doc/refman/8.0/en/create-procedure.html)
 
 * MySQL manualen om "[9.4 User-Defined Variables](https://dev.mysql.com/doc/refman/8.0/en/user-variables.html)".
