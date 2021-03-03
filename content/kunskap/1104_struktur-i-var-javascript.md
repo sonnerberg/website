@@ -256,6 +256,12 @@ module.exports = {
 };
 ```
 
+Vi lägger även till ett script i vår `package.json` så vi kan bygga produktionsfilerna:
+
+```json
+"start": "webpack --watch --config webpack.dev.config.js",
+"build": "webpack --config webpack.prod.config.js"
+```
 
 
 Återanvända data {#caching}

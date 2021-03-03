@@ -48,16 +48,14 @@ $ cd me/kmom03/nobel
 $ npm init --yes
 ```
 
-Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi installerar den senaste versionen av mithril vilket vill säga `2.0.0-rc.4`.
+Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi installerar den senaste versionen av mithril vilket vill säga `2.0.4`.
 
 Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att som tidigare i kursen kunna skriva vår JavaScript kod i moduler.
 
 ```bash
 $ npm install --save mithril
-$ npm install --save-dev webpack webpack-cli
+$ npm install --save-dev webpack webpack-cli clean-webpack-plugin
 ```
-
-Det kan hända att du får varningar när du kör ovanstående kommandon, men dessa kan du ignorera för nu.
 
 Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats och lägga till så vi kan köra våra mithril applikationer.
 
@@ -73,20 +71,32 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mithril": "^2.0.4",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
   }
 }
 ```
 
-Vi skapar även en webpack konfigurationsfil `webpack.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `app.js`. `webpack-cli` lägger sina kompilerade filer i en katalog `dist` per automatik, så sökvägen till den kompilerade koden blir `dist/app.js`.
+Vi skapar även en webpack konfigurationsfil `webpack.dev.config.js` där vi lägger till att vår ingångspunkt för appen ska vara filen `js/index.js` och den kompilerade filen ska heta `bundle.js`, som vi som tidigare lägger i katalogen `dist/`.
 
 ```javascript
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
+    mode: 'development',
     entry: './js/index.js',
+    devtool: 'inline-source-map',
+    plugins: [
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    ],
     output: {
-        filename: './app.js'
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     }
 };
 ```
@@ -96,18 +106,37 @@ Vi kan nu använda oss av möjligheten för att skapa skripts i `package.json` o
 ```json
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "webpack -d",
-  "watch": "webpack -d --watch"
+  "start": "webpack --watch --config webpack.dev.config.js",
+  "build": "webpack --config webpack.prod.config.js"
 },
+```
+
+Vi ser ovan att vi som tidigare även har skapat en konfiguration för produktionsfilerna. Den ser ut som nedan.
+
+```javascript
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+module.exports = {
+    mode: 'production',
+    entry: './js/index.js',
+    plugins: [
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    ],
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+    }
+};
 ```
 
 
 
 Början till en mithril app {#forsta}
 --------------------------------------
-Tanken med appen är att vi har en lista med knappar från åren 2010 till 2017. När man klickar på knapparna kommer man till en vy med information om det valda årets Nobelvinnare.
+Tanken med appen är att vi har en lista med knappar från åren 2010 till 2020. När man klickar på knapparna kommer man till en vy med information om det valda årets Nobelvinnare.
 
-Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`. Vi inkluderar även `dist/app.js` längst ner i `index.html`.
+Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från tidigare. Notera att jag har lagt till den minifierade CSS-filen från tidigare kursmoment, som baseras på `base.scss`. Vi inkluderar även `dist/bundle.js` längst ner i `index.html`.
 
 ```html
 <!doctype html>
@@ -121,7 +150,7 @@ Vi börjar dock med en enkel `index.html`, där vi känner igen det mesta från 
 </head>
 <body>
 
-    <script type="text/javascript" src="dist/app.js"></script>
+    <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 </html>
 ```
@@ -178,7 +207,7 @@ import { list } from './views/list.js';
 m.mount(document.body, list);
 ```
 
-Nu behöver vi bara kompilera vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definierade tidigare som ett npm script i `package.json`. Öppna upp filen `index.html` i din webbläsare och skåda mästerverket eller iallafall Nobelfesten som en fin rubrik. Vi kan nu köra kommandot `npm run watch` i terminalen för att löpande under utveckling kompilera om filerna när de sparas.
+Nu behöver vi bara kompilera vår mithril app med hjälp av webpack för att se Nobelfest-appen för första gången. Detta gör vi i terminalen med `npm start`, som vi definierade tidigare som ett npm script i `package.json`. Öppna upp filen `index.html` i din webbläsare och skåda mästerverket eller iallafall Nobelfesten som en fin rubrik. I och med vi har flaggan `--watch` kompileras `dist/bundle.js` om löpande under utveckling när JavaScript filer sparas.
 
 Låt oss använda lite av stylingen från tidigare kursmoment och samtidigt titta på hur vi lägger till flera virtuella noder i samma vy/komponent.
 
@@ -213,7 +242,7 @@ import m from 'mithril';
 let list = {
     view: function() {
         var startYear = 2010;
-        var endYear = 2017;
+        var endYear = 2020;
         var years = [];
 
         while (startYear <= endYear) {
