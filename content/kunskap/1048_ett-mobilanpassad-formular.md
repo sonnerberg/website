@@ -213,88 +213,105 @@ Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots ol
 
 Ett formulär i mithril {#mithril}
 --------------------------------------
-Formuläret nedan gör det möjligt att redigera en dator. Det finns en `Computer` modell som tar hand om data när det skickas från formuläret. När vi skapar formulär i mithril använder vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. För att de ändringar vi gör i formulärfältet ska sparas använder vi oss av livscykel metoderna `oninput` och `onchange`. `oninput` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi får input i fältet.
 
-Vi använder oss av en livscykel metod `onsubmit` för formuläret för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. Vi anropar dessutom modellens `save` funktion och då vi har redan satt värdet på den nuvarande dator kan vi helt enkelt bara spara den med hjälp av `m.request` och API:t som ligger i bakgrunden för appen.
+I `example` finns exempelprogrammet `example/bakery` där det finns ett exempel på hur man kan göra ett formulär. Det är detta exempel som visas nedan.
+
+Formuläret nedan gör det möjligt att redigera kakor. Det finns en `bakery` modell som tar hand om data när det skickas från formuläret. När vi skapar formulär i mithril använder vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. För att de ändringar vi gör i formulärfältet ska sparas använder vi oss av livscykel metoderna `oninput` och `onchange`. `oninput` sätter värdet på den nuvarande kakan (`bakery.current`) varje gång vi får input i fältet.
+
+Vi använder oss av en livscykel metod `onsubmit` för formuläret för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. Vi anropar dessutom modellens `save` funktion och då vi har redan satt värdet på den nuvarande dator kan vi helt enkelt bara spara den med hjälp av `m.request` och Lager-API:t som ligger i bakgrunden för appen.
 
 ```javascript
 import m from 'mithril';
-import computer from "../models/computer";
+import { bakery } from "../models/bakery";
 
-let computerForm = {
+let bakedGoodsForm = {
     oninit: function(vnode) {
-        computer.load(vnode.attrs.id);
+        bakery.load(vnode.attrs.id);
     },
     view: function() {
-        return m("form", {
+        return m("div.container", m("form", {
                 onsubmit: function(event) {
                     event.preventDefault();
-                    computer.save();
+                    bakery.save();
                 } }, [
-            m("label.input-label", "Name"),
+            m("label.input-label", "Namn"),
             m("input.input[type=text][placeholder=Name]", {
                 oninput: function (e) {
-                    computer.current.name = e.target.value;
+                    bakery.current.name = e.target.value;
                 },
-                value: computer.current.name
+                value: bakery.current.name
             }),
-            m("label.input-label", "Year"),
-            m("input.input[type=number][placeholder=Year]", {
+            m("label.input-label", "Lagerplats"),
+            m("input.input[type=text][placeholder=Lagerplats]", {
                 oninput: function (e) {
-                    computer.current.year = e.target.value;
+                    bakery.current.location = e.target.value;
                 },
-                value: computer.current.year
+                value: bakery.current.location
             }),
-            m("label.input-label", "Operating System"),
+            m("label.input-label", "Lagersaldo"),
+            m("input.input[type=number][placeholder=Lagersaldo]", {
+                oninput: function (e) {
+                    bakery.current.stock = parseInt(e.target.value);
+                },
+                value: bakery.current.stock
+            }),
+            m("label.input-label", "Typ"),
             m("select.input", {
                 onchange: function (e) {
-                    computer.current.os = parseInt(e.target.value);
+                    bakery.current.specifiers = parseInt(e.target.value);
                 }
-            }, computer.operatingSystems.map(function(os) {
-                return m("option", { value: os.id }, os.name);
+            }, bakery.cakeTypes.map(function(cakeType) {
+                return m("option", { value: cakeType }, cakeType);
             })),
-            m("input[type=submit][value=Save].button", "Save")
-        ]);
+            m("input[type=submit][value=Save].button", "Spara")
+        ]));
     }
 };
 
-export { computerForm };
+export { bakedGoodsForm };
 ```
 
-Modellen `computer` som används för att hämta ut den specifika datorn som ska redigeras (`load`) och spara datorn (`save`) ser ut enligt nedan. Först definierar vi `computer.operatingSystems` och  `computer.current`. De används för att visa upp operativsystem och `current` används för att spara data vi hämtar från vårt låtsas API. När vi sedan ska spara datorn anropar vi en `PUT` route och skickar med `computer.current` som data objekt.
+Modellen `bakery` som används för att hämta ut den specifika datorn som ska redigeras (`load`) och spara datorn (`save`) ser ut enligt nedan. Först definierar vi `bakery.cakeTypes` och  `bakery.current`, samt `url` och `apiKey`. De används för att visa upp de olika sorters kakor vi har i konditoriet och `current` används för att spara data vi hämtar från Lager-API:t. När vi sedan ska spara kakan anropar vi en `PUT` route och skickar med `bakery.current` som data objekt.
 
 ```javascript
 var m = require("mithril");
 
-var computer = {
-    operatingSystems: [
-        { id: 1, name: "Windows 10" },
-        { id: 2, name: "Windows 7" },
-        { id: 3, name: "MacOS" },
-        { id: 4, name: "Debian" },
-        { id: 4, name: "Ubuntu" }
-    ],
+var bakery = {
+    apiKey: "[API_KEY]", // i example/bakery finns en riktig api-nyckel som man kan använda för testning
+    url: "https://lager.emilfolino.se/v2/products",
+    cakeTypes: ["Tårta", "Bröd", "Småkaka"],
+    currentCakes: [],
+    loadAll: function() {
+        return m.request({
+            method: "GET",
+            url: bakery.url + "?api_key=" + bakery.apiKey
+        }).then(function(result) {
+            bakery.currentCakes = result.data;
+        });
+    },
     current: {},
     load: function(id) {
         return m.request({
             method: "GET",
-            url: "www.api-url.com/load/" + id
+            url: bakery.url + "/" + id + "?api_key=" + bakery.apiKey
         }).then(function(result) {
-            computer.current = result;
+            bakery.current = result.data;
         });
     },
     save: function() {
+        bakery.current.api_key = bakery.apiKey;
+
         return m.request({
             method: "PUT",
-            url: "www.api-url.com/save",
-            body: computer.current
+            url: bakery.url,
+            body: bakery.current
         }).then(function() {
-            m.route.set("/computers");
+            m.route.set("/");
         });
     }
 };
 
-export { computer };
+export { bakery };
 ```
 
 För ytterligare exempel på formulär hantering i mithril titta i [tutorial](https://mithril.js.org/simple-application.html).
