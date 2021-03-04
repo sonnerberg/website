@@ -263,6 +263,9 @@ Vi lägger även till ett script i vår `package.json` så vi kan bygga produkti
 "build": "webpack --config webpack.prod.config.js"
 ```
 
+Vi kan nu köra script `build` med kommandot `npm run build`. Vi ser alltså att vi kan lägga till vilket script som helst och använda `run` framför scriptets namn för att köra det.
+
+
 
 Återanvända data {#caching}
 --------------------------------------

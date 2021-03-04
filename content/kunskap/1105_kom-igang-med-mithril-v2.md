@@ -592,6 +592,8 @@ I kursrepot finns några mithril exempel program. Följande exempelprogram är r
 
 * `example/calendar` använder komponenter för att skapa en kalender med namnsdagar.
 
+* `[emilfolino/me-mithril](https://github.com/emilfolino/me-mithril)` är ytterligare en me-app som används i kursen [jsramverk](https://jsramverk.se/) och som föreläsningsmaterial i detta kmom. Finns driftsatt [https://me-mithril.jsramverk.se/](https://me-mithril.jsramverk.se/).
+
 
 
 Avslutningsvis {#avslutning}
