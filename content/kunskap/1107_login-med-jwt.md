@@ -21,7 +21,7 @@ I denna övning tittar vi på hur vi med hjälp av Postman registrerar en använ
 
 Registrering och inloggning {#login}
 --------------------------------------
-Vi börjar med att registrera en användare i Lager API:t genom att skicka en `POST` till URL'en `/v2/auth/register` med 3 parametrar i `body`: `api_key`, `email` och `password`.
+Vi börjar med att registrera en användare i Lager API:t genom att skicka en `POST` till URL'en `/v2/auth/register` med 3 parametrar i `body`: `api_key`, `email` och `password`. Detta kan till exempel göras med Postman eller som en POST request från JavaScript.
 
 Vi får följande svar från Lager API:t:
 
@@ -77,9 +77,107 @@ m.request({
 I [mithrils dokumentation](https://mithril.js.org/route.html#authentication) ges ett exempel på hur man kan hantera om en användare är inloggad eller ej och visa olika beroende på status.
 
 
+### Exempelprogram {#example}
+
+I `example/bakery` exempelprogrammet finns ett exempel på hur man kan använda sig av JWT för att skydda vissa delar av en app.
+
+Jag har i exempelprogrammet skapat en autentiserings-modell `auth`. Modellen håller koll på om användaren är inloggad eller ej beroende på om det finns innehåll i attributet `auth.token`.
+
+```javascript
+import m from 'mithril';
+
+const auth = {
+    apiKey: "[API_KEY]",
+    url: "https://lager.emilfolino.se/v2/auth/login",
+    email: "",
+    password: "",
+    token: "",
+    login: function() {
+        return m.request({
+            method: "POST",
+            url: auth.url,
+            body: {
+                api_key: auth.apiKey,
+                email: auth.email,
+                password: auth.password
+            }
+        }).then(function(result) {
+            auth.email = "";
+            auth.password = "";
+
+            auth.token = result.data.token;
+
+            return m.route.set("/");
+        });
+    }
+};
+
+export { auth };
+```
+
+Dessutom finns funktionen `auth.login` som kan användas för att logga in i systemet med. Själva kontrollen av om vi från klienten får gå till routen `/new` för att skapa nya produkter görs i routern i `js/index.js`. Först kollar vi om `token` är satt i `auth`-modellen annars gör vi en redirect till login-sidan. `newForm` som returneras från `onmatch` skickas in till render-funktionen som parametern `vnode` och vi kan sedan använda den för att rita ut formuläret.
+
+```javascript
+"/new": {
+    onmatch: function() {
+        if (auth.token) {
+            return newForm;
+        } else {
+            return m.route.set("/login");
+        }
+    },
+    render: function(vnode) {
+        return m(layout, {
+            topNav: { route: "#!/", title: "Hem"},
+            bottomNav: "#!/new"
+        }, vnode);
+    }
+},
+```
+
+För att vi ska kunna logga in behövs ett inloggningsformulär. I filen `js/views/login.js` finns formuläret och för enkelhetens skulle har jag för registrerat en användare om ni vill testa exempelprogrammet.
+
+```javascript
+import m from 'mithril';
+
+import { auth } from "../models/auth.js";
+
+let login = {
+    view: function() {
+        return m("div.container",
+            m("h2", "Logga in"),
+            m("p", "Finns en registrerad användare: kaka@kaka.se, Lösenord: test1234"),
+            m("form", {
+                onsubmit: function(event) {
+                    event.preventDefault();
+                    auth.login();
+                } }, [
+                m("label.input-label", "E-post"),
+                m("input.input[type=email][placeholder=E-post]", {
+                    oninput: function (e) {
+                        auth.email = e.target.value;
+                    },
+                    value: auth.email
+                }),
+                m("label.input-label", "Lösenord"),
+                m("input.input[type=password][placeholder=Lösenord]", {
+                    oninput: function (e) {
+                        auth.password = e.target.value;
+                    },
+                    value: auth.password
+                }),
+                m("input.button.green-button[type=submit][value=Logga in].button", "Logga in")
+            ]));
+    }
+};
+
+export { login };
+```
+
+
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna artikel använd oss av Postman för att registrera en användare och logga in med den användaren. Vi har även tittat på hur man kan använda `headers` som en del av ett anrop i mithrils `m.request` funktion.
+Vi har i denna artikel använd oss av Postman för att registrera en användare och logga in med den användaren. Vi har även tittat på hur man kan använda `headers` som en del av ett anrop i mithrils `m.request` funktion. Vi har även tittat på hur man kan implementera en fullständig autentiseringslösning i mithril i exempelprogrammet `example/bakery`.
 
-Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7319) om denna artikeln.
+<!-- Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7319) om denna artikeln. -->

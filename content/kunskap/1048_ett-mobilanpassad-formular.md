@@ -214,7 +214,7 @@ Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots ol
 Ett formulär i mithril {#mithril}
 --------------------------------------
 
-I `example` finns exempelprogrammet `example/bakery` där det finns ett exempel på hur man kan göra ett formulär. Det är detta exempel som visas nedan.
+I `example/bakery` finns ett exempelprogram på hur man kan göra ett formulär. Det är detta exempel som visas nedan. Exempelprogrammet innehåller ett fullständigt exempel och finns även inloggning och hantering av en JWT-token, som vi tar en titt på i [kmom04](kurser/webapp/kmom04).
 
 Formuläret nedan gör det möjligt att redigera kakor. Det finns en `bakery` modell som tar hand om data när det skickas från formuläret. När vi skapar formulär i mithril använder vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. För att de ändringar vi gör i formulärfältet ska sparas använder vi oss av livscykel metoderna `oninput` och `onchange`. `oninput` sätter värdet på den nuvarande kakan (`bakery.current`) varje gång vi får input i fältet.
 
