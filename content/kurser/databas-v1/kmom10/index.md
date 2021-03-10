@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2021-03-10": "(M, mos) Lade till genomgångsvideo."
     "2021-03-10": "(L, mos) Uppdaterad med tillfällen för kursrunda vt2021."
     "2020-08-27": "(K, mos) Lade till övningstenta från 2020 maj."
     "2020-05-20": "(J, mos) Lade till övningstenta från 2020 mars."
@@ -34,6 +35,15 @@ Upplägget är enligt följande:
 * [Redovisning (obligatorisk)](#redovisning)
 
 Totalt omfattar kursmoment 07/10 i storleksordningen 20--40 studietimmar.
+
+
+
+Inspelad genomgång {#flas}
+--------------------------------------------------------------------
+
+Det finns en inspelad genomgång som går igenom hur kmom10 och examinationen är upplagd. Se den gärna som ett komplement till att läsa informationen nedan.
+
+[YOUTUBE src="I2f-tzp3k0Q" width=700 caption="Genomgång av kmom10 - examination med programmeringstenta, projekt och redovisning (med Mikael) (17 min)."]
 
 
 
