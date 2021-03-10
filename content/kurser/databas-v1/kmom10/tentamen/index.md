@@ -6,6 +6,7 @@ category:
     - tentamen
     - dbwebb exam
 revision:
+    "2020-03-10": "(B, mos) Genomgången och mindre justeringar i text inför våren 2021."
     "2019-03-06": "(A, mos) Omskriven inför våren 2019."
 ...
 Tentamen "programmeringstenta" och dbwebb exam
@@ -55,7 +56,7 @@ dbwebb exam ls
 
 Du får fram en lista med planerade, aktiva och avslutade tentamen och deras respektive id.
 
-Preptentan `prep` är alltid tillgänglig så att du kan testa förfarandet i lugn och ro och bekanta dig med `dbwebb exam`.
+Preptentan `prep` är alltid tillgänglig så att du kan testa förfarandet i lugn och ro och bekanta dig med `dbwebb exam`. Du kan checka ut preptentan hur många gånger du vill.
 
 
 
@@ -119,7 +120,7 @@ dbwebb exam seal try1
 
 Du anger ditt namn och epost när du förseglar.
 
-Blir något fel så kan du försegla och lämna in igen, det är din sista inlämning som räknas. Om du förseglar flera gånger så måste du försegla sista gången max 15 minuter efter din första försegling.
+Blir något fel så kan du försegla och lämna in igen, det är din sista inlämning som räknas.
 
 Vi förseglingen laddas ditt kursrepo upp till studentservern och det skickas ett meddelande till läraren som får veta att du har lämnat in.
 
