@@ -83,7 +83,11 @@ Du kan även se planeringen för tentamen via `dbwebb exam ls` i kursrepot.
 
 ### Genomförande {#genomfor}
 
-Tentamen sker vid ett bokat tillfälle under en dag. <s>Campusstudenter har en bokad sal på campus 9-14. Distansstudenter har en hemtentamen som skall utföras någon gång med start mellan 9-24.</s> Samtliga studenter har hemtentamen som skall utföras någon gång med start mellan 9-24.
+Tentamen sker vid ett bokat tillfälle under en dag. Samtliga studenter har hemtentamen som skall utföras någon gång med start mellan 9-24.
+
+<!--
+Campusstudenter har en bokad sal på campus 9-14. Distansstudenter har en hemtentamen som skall utföras någon gång med start mellan 9-24.
+-->
 
 Tiden för tentamen är begränsad till 5 timmar. Om du har rätt till utökad tid vid tentamen så meddelar du läraren och bifogar underlag.
 
@@ -93,17 +97,17 @@ Du får ha tillgång till internet, manualer, dokumentation, ditt kursrepo och a
 
 Du jobbar individuellt och självständigt och tar inte hjälp av någon. Generella förtydligande kan du få av lärare som är tillgänglig i chatten.
 
-Verktyget `dbwebb exam` används tillsammans med kursrepot för att checka ut och lämna in din tentamen. Du kan, och bör, förbereda dig genom att läsa [hur du checkar ut och lämnar in din tentamen](./tentamen).
-
-Det är fritt att förbereda sig inför tentamen, efter bästa förmåga. Det är till och med väldigt klokt att göra det och det ger troligen en rejäl fördel under tentadagen.
+Verktyget `dbwebb exam` används tillsammans med kursrepot för att checka ut och lämna in din tentamen. Du behöver alltså tillgång till både kursrepo och dbwebb-cli för att kunna genomföra tentamen.
 
 
 
 ### Förbered via tidigare tentamen {#tidigare}
 
+Det är fritt att förbereda sig inför tentamen, efter bästa förmåga. Det är till och med väldigt klokt att göra det och det ger troligen en rejäl fördel under tentadagen.
+
 Du kan träna på tidigare tentamen för att få övning och en känsla av vilken typ av uppgifter och struktur du kan förvänta dig.
 
-Det finns ingen garanti för att nya tentamen kommer att följa exakt samma upplägg som tidigare tentamen. Oavsett det så bedömmer läraren att de tidigare tentamen som finns tillgängliga nedan är relevanta övningsobjekt.
+Det finns ingen garanti för att nya tentamen kommer att följa exakt samma upplägg som tidigare tentamen. Oavsett det så bedömer läraren att de tidigare tentamen som finns tillgängliga nedan är relevanta övningsobjekt.
 
 Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
 
@@ -125,7 +129,9 @@ Här följer en del äldre tentor från 2017-18. De är relevanta som övningste
 * [Hotel Paradise, 5 maj 2017](kurser/dbjs-v1/examination/paradise)
 * [Mannsmandel, 12 april 2017](kurser/dbjs-v1/examination/mannsmandel)
 
-Du kan checka ut ovan tentamen via `dbwebb exam checkout prep`, de sparas då i katalogen `me/kmom10/prep` och du kan använda `dbwebb exam` som vid en vanlig tentamen. Förbered dig genom att läsa om [hur du checkar ut och lämnar in din tentamen med `dbwebb exam`](./tentamen).
+Du kan checka ut en delmängd av ovan tentamen via `dbwebb exam checkout prep`, de sparas då i katalogen `me/kmom10/prep` och du kan använda `dbwebb exam` som vid en vanlig tentamen.
+
+Förbered dig till tentorna genom att läsa om [hur du checkar ut och lämnar in din tentamen med `dbwebb exam`](./tentamen). Pröva sedan att göra en eller flera övningstentor för att se vad som väntar dig.
 
 
 

@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-03-10": "(D, mos) Mindre justering av text."
     "2020-04-01": "(C, mos) Uppdatering i beräkning hur betyget sätts."
     "2019-03-05": "(B, mos) Kopia av projekt+individuell och omskriven för tentamen+projekt individuellt."
     "2018-02-27": "(A, mos) Kopia av projektexamination, uppdaterad för projektexamination plus individuell examination."
@@ -60,7 +61,7 @@ Följande tabell används vid bedömning av examinationen med programmeringstent
 |-----------------|-------|-----------|
 | Tentamen visar att studenten behärskar området. | >= 18 | E |
 | Tentamen är löst med någon extrauppgift med gott resultat. | >= 23 | D |
-| Tentamen är löst med samtliga extrauppgift med utmärkt resultat. | >= 28 | C |
+| Tentamen är löst med samtliga extrauppgifter med utmärkt resultat. | >= 28 | C |
 
 Tentamen anses normalt som godkänd då minst 60% av totalen är uppnådd. Om man inte uppnår godkänd på tentamen så måste man göra om den vid senare tillfälle. Man får inte komplettera en tentainlämning till högre betyg.
 
@@ -86,12 +87,12 @@ Följande tabell används vid bedömning av genomförda kursmoment och redovisni
 
 | Bedömningspunkt | Poäng | Betyg |
 |-----------------|-------|-----------|
-| Kursmomenten är utförda enligt instruktion och redovisningstexterna är kompletta. | 30 | Krävs för godkänt betyg i kursen |
-| Kursmomenten är mycket väl utförda och har det lilla extra. Redovisningstexterna är mycket välskrivna, insiktsfulla och visar på en mycket god förmåga att reflektera över kursmomenten, dess innehåll och studentens eget lärande. | 10 | När ett betyg står och väger används denna del |
+| Kursmomenten är utförda enligt instruktion och redovisningstexterna är kompletta. | 30 | Krävs för godkänt betyg i kursen. |
+| Kursmomenten är mycket väl utförda och har det lilla extra. Redovisningstexterna är mycket välskrivna, insiktsfulla och visar på en mycket god förmåga att reflektera över kursmomenten, dess innehåll och studentens eget lärande. | 10 | När/om ett betyg står och väger används denna del, annars inte. |
 
-Redovsiningstexten (och me-sidan) speglar allt arbete som studenten utfört i kursen. Den skall nå upp till de minimikrav som finns på redovisningstext och övriga kmom. Det leder till ett godkänt betyg. Är denna delen undermålig skall komplettering ges.
+Redovisningstexten (och me-sidan) speglar allt arbete som studenten utfört i kursen. Den skall nå upp till de minimikrav som finns på redovisningstext och övriga kmom. Det leder till ett godkänt betyg. Är denna delen undermålig skall komplettering ges.
 
-Om text och redovisa-sida är av utomordentlig/undermålig särart så kan det påverka ett betyg som står och väger, det kan påverka höjning eller sänkning av en betygsnivå.
+Om text och redovisa-sida är av utomordentlig/undermålig särart så kan det påverka ett betyg som står och väger, det kan påverka höjning eller sänkning av en betygsnivå. Detta används normalt sett enbart när ett betyg står och väger mellan två betyg, annars används inte denna bedömning.
 
 
 
