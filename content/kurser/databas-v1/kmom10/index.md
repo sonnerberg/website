@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2021-03-10": "(L, mos) Uppdaterad med tillfällen för kursrunda vt2021."
     "2020-08-27": "(K, mos) Lade till övningstenta från 2020 maj."
     "2020-05-20": "(J, mos) Lade till övningstenta från 2020 mars."
     "2020-03-25": "(I, mos) Förtydligande om redovisningsvideo."
@@ -24,7 +25,7 @@ Kmom10: Examination och redovisning
 
 Detta kursmoment avslutar och examinerar kursen.
 
-Alla delar i detta kursmoment skall utföras individuellt och självständigt.
+Alla delar i detta kursmoment skall utföras individuellt och självständigt. Respektera det.
 
 Upplägget är enligt följande:
 
@@ -62,35 +63,39 @@ Med en godkänd tentamen kan du nå ett slutbetyg om E-C.
 
 ### Planerade tentamen {#planerade}
 
-Följande tentamen är planerade ([se även den rekommenderade studieplanen](./../#studieplan)).
+Följande tentamen är planerade ([se även kursens planering](./../#planering)).
 
-* Tenta (kmom10/try1): Torsdagen den 26:e mars, 2020.
-* Omtenta (kmom10/try2): Fredagen den 29:e maj, 2020.
-* Resttenta (kmom10/try3): Fredagen den 28:e augusti, 2020.
+* Tenta (kmom10/try1): Onsdagen den 24:e mars, 2021.
+* Omtenta (kmom10/try2): Fredagen den 28:e maj, 2021.
+* Resttenta (kmom10/try3): Fredagen den 27:e augusti, 2021.
 
+Tentamen är distans och online. Ingen anmälan krävs.
+
+<!--
 För campus mellan 9-14 i sal H430/H429. För distans 9-24. Ingen anmälan krävs.
+-->
 
-Nästkommande tillfällen sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2021.
+Nästkommande tillfällen för examination sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2022.
 
-Du kan även se planeringen för dessa tentamen via `dbwebb exam ls`.
+Du kan även se planeringen för tentamen via `dbwebb exam ls` i kursrepot.
 
 
 
 ### Genomförande {#genomfor}
 
-Tentamen sker vid ett bokat tillfälle under en dag. Campusstudenter har en bokad sal på campus 9-14. Distansstudenter har en hemtentamen som skall utföras någon gång med start mellan 9-24.
+Tentamen sker vid ett bokat tillfälle under en dag. <s>Campusstudenter har en bokad sal på campus 9-14. Distansstudenter har en hemtentamen som skall utföras någon gång med start mellan 9-24.</s> Samtliga studenter har hemtentamen som skall utföras någon gång med start mellan 9-24.
 
 Tiden för tentamen är begränsad till 5 timmar. Om du har rätt till utökad tid vid tentamen så meddelar du läraren och bifogar underlag.
 
 Lärare är normalt tillgängliga för frågor under 9-17, lärarstöd under 17-24 är inte garanterat.
 
-Du får ha tillgång till internet, ditt kursrepo och all kod du skrivit under kursen. Du gör uppgiften på din egen dator, i ditt kursrepo.
+Du får ha tillgång till internet, manualer, dokumentation, ditt kursrepo och all kod du skrivit under kursen. Du gör uppgiften på din egen dator, i ditt kursrepo.
 
-Du jobbar individuellt och självständigt och tar inte hjälp av någon. Generella förtydligande kan du få av lärare i salen eller via chatt/forum.
+Du jobbar individuellt och självständigt och tar inte hjälp av någon. Generella förtydligande kan du få av lärare som är tillgänglig i chatten.
 
 Verktyget `dbwebb exam` används tillsammans med kursrepot för att checka ut och lämna in din tentamen. Du kan, och bör, förbereda dig genom att läsa [hur du checkar ut och lämnar in din tentamen](./tentamen).
 
-Det är fritt att förbereda sig inför tentamen, efter bästa förmåga.
+Det är fritt att förbereda sig inför tentamen, efter bästa förmåga. Det är till och med väldigt klokt att göra det och det ger troligen en rejäl fördel under tentadagen.
 
 
 
@@ -120,7 +125,7 @@ Här följer en del äldre tentor från 2017-18. De är relevanta som övningste
 * [Hotel Paradise, 5 maj 2017](kurser/dbjs-v1/examination/paradise)
 * [Mannsmandel, 12 april 2017](kurser/dbjs-v1/examination/mannsmandel)
 
-Du kan checka ut ett par av ovan tentamen via `dbwebb exam checkout prep`, de sparas då i katalogen `me/kmom10/prep` och du kan använda `dbwebb exam` som vid en vanlig tentamen. Läsa om [hur du checkar ut och lämnar in din tentamen med `dbwebb exam`](./tentamen).
+Du kan checka ut ovan tentamen via `dbwebb exam checkout prep`, de sparas då i katalogen `me/kmom10/prep` och du kan använda `dbwebb exam` som vid en vanlig tentamen. Förbered dig genom att läsa om [hur du checkar ut och lämnar in din tentamen med `dbwebb exam`](./tentamen).
 
 
 
