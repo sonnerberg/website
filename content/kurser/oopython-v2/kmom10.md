@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2021-03-10": (E, aar) La till referensmaterial om Trie.
     "2020-03-10": (D, aar) La till i krav att spela in video som distans.
     "2020-02-28": (C, aar) La till i krav att ta bort ord och skriva ut i bokstavsordning.
     "2019-02-29": (B, aar) Bytt projekt för att passa till algoritmer och datastrukturer. Förra projektet finns under [kmom10-2018](oopython-v2/kmom10-2018).
@@ -143,6 +144,19 @@ För framtiden? Undersida för att byta fil och menyval 2?
 Webbsidan ska även fungera på studentservern!
 
 Koden som finns i app.py, som har med Flask att göra, behöver inte vara i en klass.
+
+
+
+Vad är en Trie {#what-trie}
+--------------------------------------------------------------------
+
+Här kan ni hitta lite mer material om vad Trie är och hur den ska fungera.
+
+- [Artikel](https://medium.com/underrated-data-structures-and-algorithms/trie-data-structure-fd9a2aa6fcb8).
+
+- [Video](https://www.youtube.com/watch?v=TRg9DQFu0kU).
+
+- [Visualisering av funktionaliteten](https://www.cs.usfca.edu/~galles/visualization/Trie.html). Som Visualgo fast en annan sida då Visualgo inte har Trie.
 
 
 
