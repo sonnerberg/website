@@ -32,21 +32,26 @@ Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår
 cordova create . se.dbwebb.gps GPS
 npm install --save mithril
 npm install --save-dev webpack webpack-cli
-touch webpack.config.js
+touch webpack.dev.config.js webpack.prod.config.js
 ```
 
-I `webpack.config.js` är vår konfiguration ungefär som vanligt, men vi kommer se senare varför vi inte har med `/dist` katalogen som vanligt.
+I `webpack.dev.config.js` och `webpack.prod.config.js` är vår konfiguration ungefär som vanligt, men vi kommer se senare varför vi inte har med `/dist` katalogen som vanligt. En skillnad mot tidigare är att vi inte har med `CleanWebpackPlugin` vilket beror på hur vi sedan använder kartan `leaflet`. Vi börjar dock med att enbart titta på `webpack.dev.config.js`.
 
 ```javascript
-var path = require("path");
+// webpack.dev.config.js
+
+const path = require("path");
 
 module.exports = {
-    entry: "./www/js/index.js",
+    entry: './www/js/index.js',
+    mode: 'development',
+    devtool: 'inline-source-map',
     output: {
         path: path.resolve(__dirname, 'www'),
-        filename: "app.js"
+        filename: 'bundle.min.js'
     }
 };
+
 ```
 
 Vi rensar ut i `www/index.html` och har kvar nedanstående, notera att jag har tagit bort CSS filen i head och rensat ut Cordovas Hello World exempelkod.
@@ -64,7 +69,7 @@ Vi rensar ut i `www/index.html` och har kvar nedanstående, notera att jag har t
     <body>
 
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="bundle.min.js"></script>
     </body>
 </html>
 ```
@@ -198,16 +203,18 @@ npm install --save-dev style-loader css-loader
 npm install --save-dev file-loader
 ```
 
-`style-loader` och `css-loader` är loaders som tar hand om CSS och `file-loader` kommer hantera bilderna. I vår `webpack.config.js` fil lägger vi till två objekt i en arrayen `module.rules` vår webpack konfiguration. Vi ser även till att ändra output katalogen så att bilderna kan laddas utan att ändra laddningskatalog i leaflet. Vi behöver därför ändra i `index.html` att filen `app.js` laddas istället för `dist/app.js`.
+`style-loader` och `css-loader` är loaders som tar hand om CSS och `file-loader` kommer hantera bilderna. I vår `webpack.config.js` fil lägger vi till två objekt i en arrayen `module.rules` vår webpack konfiguration. Vi ser även till att ändra output katalogen så att bilderna kan laddas utan att ändra laddningskatalog i leaflet.
 
 ```javascript
 const path = require("path");
 
 module.exports = {
     entry: './www/js/index.js',
+    mode: 'development',
+    devtool: 'inline-source-map',
     output: {
         path: path.resolve(__dirname, 'www'),
-        filename: 'app.js'
+        filename: 'bundle.min.js'
     },
     module: {
         rules: [
@@ -235,6 +242,8 @@ module.exports = {
 ```
 
 De två regler vi lägger till säger helt enkelt: matcher filtypen en av följande använd denna loader för att ladda filen. Vi kan nu köra `npm start` igen och denna gången ser vi att bygget går bra och att en ett antal olika filer skapas. Vi kan nu köra `cordova run browser` och nu börjar det likna nått.
+
+Anledningen till att vi inte använder `CleanWebpackPlugin` är att `leaflet` per automatik laddar filer från samma katalog som `index.html`. Hade vi rensat den katalogen hela tiden hade vi behövt lägga till filerna igen varje gång.
 
 
 
@@ -359,19 +368,19 @@ I `showMap` funktionen lägger vi till en ny sorts markör som markerar använda
 cp example/gps/www/location.png me/kmom06/gps/www
 ```
 
-Vi skapar nu leaflet ikonen `locationMarker`.
+Vi skapar nu leaflet ikonen `locationMarker` genom att först importera bilden i JavaScript och sedan skapa en ny ikon i leaflet.
 
 
 ```javascript
-var locationMarker = L.icon({
-    iconUrl: 'location.png',
+import locationIcon from "../../location.png";
 
+var locationMarker = L.icon({
+    iconUrl: locationIcon,
     iconSize:     [24, 24],
     iconAnchor:   [12, 12],
     popupAnchor:  [0, 0]
 });
 ```
-
 
 Och vi skapar funktionen `showPosition()` där vi sätter positionen för vår markör `locationMarker`.
 
@@ -386,12 +395,7 @@ function showPosition() {
 }
 ```
 
-
-
-Produktionsfiler från webpack {#prod}
---------------------------------------
-
-Vi har än så länge i kursen använt `webpack -d` när vi har kompilerat vår modulariserade kod. I detta stycke ska vi titta på hur vi kan skapa optimerade produktionsfiler meed hjälp av webpack. Vi skapar först en kopia av filen `webpack.config.js` och döper kopian till `webpack.prod.js`. Vi ändrar sedan namnet på output filen till `bundle.min.js` och lägger till attributet `mode: production` för att berätta för webpack att vi vill skapa produktionsfiler. `webpack.prod.js` ser alltså nu ut på följande sätt.
+Vi avslutar detta exempel genom att skapa konfigurationen för produktionsfilerna med hjälp av webpack och filen `webpack.prod.config.js`.
 
 ```javascript
 const path = require("path");
@@ -427,18 +431,6 @@ module.exports = {
     }
 };
 ```
-
-Vi skapar sedan ett nytt npm-script i `package.json` där vi sedan kan köra webpack med den nya konfigurationsfilen.
-
-```json
-"scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -d",
-    "build": "webpack --config webpack.prod.js"
-},
-```
-
-Vi kan nu skapa produktionsfilen `bundle.min.js` genom att köra kommandot `npm run build`. Om vi jämför filstorlekarna från utvecklingsfilerna och produktionsfilerna ser vi att de har minskat från ungefär 1,6MB till ungefär 200KB så en ganska så drastisk ändring i filstorlek.
 
 
 
