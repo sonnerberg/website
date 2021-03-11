@@ -236,20 +236,48 @@ Hello World exemplet som följer med när vi skapar appar med `cordova create` k
 
 ```bash
 # Stå i me/kmom05/hello
-npm install --save-dev webpack webpack-cli
-npm install --save mithril
+$ npm install --save mithril
+$ npm install --save-dev webpack webpack-cli clean-webpack-plugin
 ```
 
-Vi vill nu konfigurera webpack så den kompilerar JavaScript filerna och lägger den kompilerade filen i `www/dist/app.js`. Vi använder därför `path` i `webpack.config.js` för att definiera en annan sökvägen till den kompilerade filen än standard sökvägen. Skapa först filen `webpack.config.js` och lägg in följande konfiguration.
+Vi vill nu konfigurera webpack så den kompilerar JavaScript filerna och lägger den kompilerade filen i `www/dist/app.js`. Vi använder därför `path` i webpack-konfigurationen för att definiera en annan sökvägen till den kompilerade filen än standard sökvägen. Skapa först filerna `webpack.dev.config.js` och `webpack.prod.config.js` och lägg in följande konfiguration.
 
 ```js
-var path = require("path");
+// webpack.dev.config.js
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: "./www/js/index.js",
+    mode: 'development',
+    entry: './js/index.js',
+    devtool: 'inline-source-map',
+    plugins: [
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    ],
     output: {
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'www/dist'),
-        filename: "app.js"
+    }
+};
+```
+
+Och produktionskonfigurationen blir:
+
+```javascript
+// webpack.prod.config.js
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+module.exports = {
+    mode: 'development',
+    entry: './js/index.js',
+    devtool: 'inline-source-map',
+    plugins: [
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    ],
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'www/dist'),
     }
 };
 ```
@@ -259,18 +287,18 @@ Vi lägger även till vanliga npm skripten i `package.json`.
 ```json
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "webpack -d",
-  "watch": "webpack -d --watch"
+  "start": "webpack --watch --config webpack.dev.config.js",
+  "build": "webpack --config webpack.prod.config.js"
 },
 ```
 
-Vi vill nu ladda filen `app.js` istället för `js/index.js` i `index.html`. Och vi passar samtidigt på att rensa ut `index.html` så det enbart är våra två JavaScript filer som laddas i `body`.
+Vi vill nu ladda filen `bundle.js` istället för `js/index.js` i `index.html`. Och vi passar samtidigt på att rensa ut `index.html` så det enbart är våra två JavaScript filer som laddas i `body`.
 
 ```html
 ...
 <body>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="dist/app.js"></script>
+    <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 ...
 ```
