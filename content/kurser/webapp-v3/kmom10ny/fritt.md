@@ -71,7 +71,7 @@ Din webapp ska använda följande teknologier:
 
 Välj ut de datakällor du skall använda och vilken data du behöver ur varje datakälla. Berätta om ditt val. Du ska använda minst två API:er. API:erna måste inte vara från Hack for Sweden, det är enbart ett tips.
 
-Skapa filen `README.md` i din projekt katalog `me/kmom10/proj`. Filen ska innehålla följande stycken:
+Din inlämning för krav 1 ska innehålla en beskrivning uppdelat i följande stycken:
 
 * __Specifikation__: En kortfattad beskrivning av din app och vad användaren av din app ska kunna åstadkomma med appen.
 

@@ -7,7 +7,7 @@ revision:
 Kmom10: Tågtrafik upplägget
 ==================================
 
-
+Detta projektet har i grunden förbestämda datakällor från Trafikverkets API. Data från API:t behandlas av ett [API-proxy](https://trafik.emilfolino.se/) för att förenkla gränssnittet mot API:t.
 
 
 Projektspecifikation {#projspec}
@@ -15,11 +15,9 @@ Projektspecifikation {#projspec}
 
 Utveckla och leverera projektet enligt följande specifikationen. Saknas information så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
-<!-- De två första kraven är obligatoriska och de fyra sista kraven är optionella krav. De två obligatoriska kraven måste lösas tillsammans med ett (1) valfritt optionellt krav för att få godkänt på uppgiften. Lös valfritt antal av de resterande optionella krav för att samla poäng och därmed nå högre betyg.
+De två första kraven är obligatoriska och de fyra sista kraven är optionella krav. De två obligatoriska kraven måste lösas tillsammans med ett (1) valfritt optionellt krav för att få godkänt på uppgiften. Lös valfritt antal av de resterande optionella krav för att samla poäng och därmed nå högre betyg.
 
 Varje krav ger maximalt 10 poäng, totalt är det 60 poäng.
-
-**Se till att läsa igenom alla kraven innan du bestämmer dig för datakällor då de optionella kraven kan påverka val av API.** -->
 
 
 
@@ -31,14 +29,29 @@ Skapa ditt Cordova projekt med följande kommando:
 
 ```bash
 # stå i me/kmom10/proj
-cordova create . se.dbwebb.<valfritt namn> <Valfritt namn>
+cordova create . se.dbwebb.trafik Trafik
 ```
 
 Redovisningstexten skriver du i `me/redovisa`.
 
 
 
-### Krav 1: Specifikation, datakällor och arkitektur {#k1}
+### Datakällor {data}
+
+[Trafikverkets API](https://api.trafikinfo.trafikverket.se/) innehållar data om tåg- och vägtrafik i Sverige. API:t följer en lite annan standard än vad vi är vana vid från tidigare i kursen. Därför finns ett API-proxy [trafik.emilfolino.se](https://trafik.emilfolino.se/) som hanterar och cacher tågtrafik data från Trafikverkets API.
+
+Dokumentationen för [trafik.emilfolino.se](https://trafik.emilfolino.se/) visar upp att det finns ett antal olika endpoints:
+
+```
+GET /stations - Alla stationer i Sverige
+GET /messages - Meddelanden för tågtrafiken i Sverige
+GET /codes - Beskrivningar av koder som återfinns under messages
+GET /delayed - Försenade tåg i Sverige kommande 14 timmarna
+```
+
+
+
+### Krav 1: Specifikation och arkitektur {#k1}
 
 Din webapp ska använda följande teknologier:
 
@@ -47,19 +60,7 @@ Din webapp ska använda följande teknologier:
 * Stödja Android eller iOS samt webbläsare
 * Innehålla en egen ikon och splashscreen
 
-Välj ut de datakällor du skall använda och vilken data du behöver ur varje datakälla. Berätta om ditt val. Du ska använda minst två API:er. API:erna måste inte vara från Hack for Sweden, det är enbart ett tips.
-
-Skapa filen `README.md` i din projekt katalog `me/kmom10/proj`. Filen ska innehålla följande stycken:
-
-* __Specifikation__: En kortfattad beskrivning av din app och vad användaren av din app ska kunna åstadkomma med appen.
-
-* __Datakällor__: Lista från vilka API:er du hämtar data.
-
-* __Arkitektur__: Beskriv i textstycke vilka val av teknik du har gjort för din app. Berätta hur du har organiserad din kod så att en kollega snabbt kan sätta sig in i din app.
-
-
-
-### Krav 2: En webapp {#k2}
+* __Arkitektur__: Beskriv i ett textstycke, som en del av din inlämning, vilka val av teknik du har gjort för din app. Berätta hur du har organiserad din kod så att en kollega snabbt kan sätta sig in i din app.
 
 Bygg en så gott som felfri webapp, i enlighet med din spec.
 
@@ -69,6 +70,8 @@ Kritisera din webapp och framhäv dess brister.
 
 Berätta om någon av de möjligheter som finns för att förbättra din lösning. Tänk att det finns begränsade resurser av tid, så förhåll dig till det och ta bara de möjligheter som kan utföras med begränsad insats av tid och/eller extra kunskap.
 
+
+### Krav 2: En webapp {#k2}
 
 
 ### Krav 3: Native design (optionellt) {#k3}
@@ -81,9 +84,7 @@ Beskriv i ett textstycke om 15-20 meningar designprocessen att efterlikna en bef
 
 ### Krav 4: Autentisering av användaren (optionellt) {#k4}
 
-Utnyttja autentiseringstjänsten [auth.emilfolino.se](https://auth.emilfolino.se) för att ge möjlighet för att användare av din app kan autentisera sig med hjälp JSON Web Tokens. En autentiserad användare får sedan tillgång till delar av appen, som annars är stängda. Du kan även använda autentiseringstjänsten för att spara data för de inloggade användarna.
-
-Du kan inte räkna autentiseringstjänsten som en av dina två API:er.
+Utnyttja autentiseringstjänsten [auth.emilfolino.se](https://auth.emilfolino.se) för att ge möjlighet för att användare av din app kan autentisera sig med hjälp JSON Web Tokens. En autentiserad användare ska sedan få tillgång till att spara ner favorit stationer och en vy ska skapas där man lätt och överskådligt får en överblick om tåg är försenade till den inloggade användarens favoriter.
 
 
 
@@ -100,6 +101,11 @@ När du ansluter till ett api och hämtar data ska du spara den till en fil som 
 ### Krav 6: Karta och GPS (optionellt) {#k6}
 
 Använd positionsdata (Koordinater eller adresser) från en av dina valda API:er och visa upp denna data i en karta med hjälp av de tekniker vi använde i kursmoment 6. Använd Cordova pluginen [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation) för att visa upp användarens position på kartan.
+
+
+### Krav 
+
+https://leafletjs.com/plugins.html#heatmaps
 
 
 
