@@ -53,16 +53,19 @@ GET /delayed - Försenade tåg i Sverige kommande 14 timmarna
 
 ### Krav 1: Specifikation och arkitektur {#k1}
 
-Din webapp ska använda följande teknologier:
+Din app ska visa upp förseningar i tågtrafiken i Sverige.
+
+Din app ska använda följande teknologier:
 
 * Mithril eller vanilla JavaScript
 * Cordova
 * Stödja Android eller iOS samt webbläsare
 * Innehålla en egen ikon och splashscreen
 
-* __Arkitektur__: Beskriv i ett textstycke, som en del av din inlämning, vilka val av teknik du har gjort för din app. Berätta hur du har organiserad din kod så att en kollega snabbt kan sätta sig in i din app.
 
-Bygg en så gott som felfri webapp, i enlighet med din spec.
+__Arkitektur__: Beskriv i ett textstycke, som en del av din inlämning, vilka val av teknik du har gjort för din app. Berätta hur du har organiserad din kod så att en kollega snabbt kan sätta sig in i din app.
+
+Bygg sedan en så gott som felfri webapp, i enlighet med din spec.
 
 Fick du göra prioriteringar under arbetets gång eller nådde du din fulla ambitionsnivå med din webapp? Berätta.
 
@@ -71,7 +74,11 @@ Kritisera din webapp och framhäv dess brister.
 Berätta om någon av de möjligheter som finns för att förbättra din lösning. Tänk att det finns begränsade resurser av tid, så förhåll dig till det och ta bara de möjligheter som kan utföras med begränsad insats av tid och/eller extra kunskap.
 
 
-### Krav 2: En webapp {#k2}
+
+### Krav 2: Karta och GPS {#k2}
+
+Använd positionsdata som finns för stationerna för att visa upp förseningar i tågtrafiken på en karta med hjälp av de tekniker vi använde i kursmoment 6. Använd Cordova pluginen [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation) för att visa upp användarens position på kartan.
+
 
 
 ### Krav 3: Native design (optionellt) {#k3}
@@ -98,14 +105,9 @@ När du ansluter till ett api och hämtar data ska du spara den till en fil som 
 
 
 
-### Krav 6: Karta och GPS (optionellt) {#k6}
+### Krav 6: Heatmap (optionellt) {#k6}
 
-Använd positionsdata (Koordinater eller adresser) från en av dina valda API:er och visa upp denna data i en karta med hjälp av de tekniker vi använde i kursmoment 6. Använd Cordova pluginen [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation) för att visa upp användarens position på kartan.
-
-
-### Krav 
-
-https://leafletjs.com/plugins.html#heatmaps
+Använd en av [heatmap-modulerna](https://leafletjs.com/plugins.html#heatmaps) från leaflet's dokumentation för att rita ut en heatmap över tåg förseningarna i Sverige. Beskriv i texten om detta krav vilken modul du valde och varför. En viktig egenskap som (webb)programmerare är att kunna värdera olika moduler och vilken som är lämpligast att använda i ditt specifika fall.
 
 
 
@@ -114,7 +116,7 @@ Redovisning {#redovisning}
 
 1. På din [redovisningssida](./../redovisa), skriv följande:
 
-    1. För varje krav du implementerat förutom krav 1, dvs 2-6, skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+    1. För varje krav du implementerat skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
     1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 

@@ -28,7 +28,7 @@ Om du upplever problem med Cross-Origin Access kan en API-proxy vara lösningen 
 
 Om du hittar ett XML-API du vill använda kan du göra om XML data till JSON med hjälp av en proxy. Med hjälp av tjänsten [https://xml-proxy.emilfolino.se/](https://xml-proxy.emilfolino.se/) kan du göra om XML till JSON.
 
-Du funderar och väljer en ansats för din webapp, fråga i forumet om du känner dig osäker.
+Du funderar och väljer en ansats för din webapp, fråga i chatten om du känner dig osäker.
 
 
 
@@ -130,7 +130,7 @@ Redovisning {#redovisning}
 
 1. På din [redovisningssida](./../redovisa), skriv följande:
 
-    1. För varje krav du implementerat förutom krav 1, dvs 2-6, skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+    1. För varje krav du implementerat skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
     1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
