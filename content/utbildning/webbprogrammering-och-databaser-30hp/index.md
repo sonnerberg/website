@@ -37,7 +37,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v5/block-kurser-kmom
+                                route: kurser/mvc-v1/block-kurser-kmom
 
 revision:
     "2020-06-17": "(K, mos) Inför HT20."

@@ -37,7 +37,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/oophp-v5/block-kurser-kmom
+                                route: kurser/mvc-v1/block-kurser-kmom
 
 revision:
     "2020-06-17": "(K, mos) Inför HT20."
@@ -100,7 +100,7 @@ Kurspaketet består av fyra kurser, varje kurs är på 7.5hp och examineras sepa
 | Webbteknologier                     | htmlphp | 7.5hp |
 | Teknisk webbdesign och användbarhet | design  | 7.5hp |
 | Databasteknologier för webben       | databas | 7.5hp |
-| Objektorienterade Webbteknologier   | oophp   | 7.5hp |
+| Objektorienterade Webbteknologier   | mvc     | 7.5hp |
 
 Du går kurserna efter varandra, i den ordning som visas ovan. När du är klar med den första kursen så hoppar du på nästa.
 
