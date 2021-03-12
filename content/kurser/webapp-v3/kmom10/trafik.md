@@ -53,7 +53,9 @@ GET /delayed - Försenade tåg i Sverige kommande 14 timmarna
 
 ### Krav 1: Specifikation och arkitektur {#k1}
 
-Din app ska visa upp förseningar i tågtrafiken i Sverige.
+Din app ska visa upp förseningar i tågtrafiken i Sverige. I [trafik API:t](https://trafik.emilfolino.se/) finns information om förseningar under endpointen `/delayed` med [dokumentation](https://trafik.emilfolino.se/#delayed). Platsinformation för de olika stationerna finns under endpointen `/stations`.
+
+De två datasätten kan kopplas ihop med hjälp `LocationSignature` från `/stations` och `FromLocation[].LocationName` i `/delayed`.
 
 Din app ska använda följande teknologier:
 
@@ -78,6 +80,8 @@ Berätta om någon av de möjligheter som finns för att förbättra din lösnin
 ### Krav 2: Karta och GPS {#k2}
 
 Använd positionsdata som finns för stationerna för att visa upp förseningar i tågtrafiken på en karta med hjälp av de tekniker vi använde i kursmoment 6. Använd Cordova pluginen [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation) för att visa upp användarens position på kartan.
+
+Rita ut förseningarna som markers på den station där förseningen är `FromLocation`. Skriv ut stationens namn och förseningen i markerns popup.
 
 
 
