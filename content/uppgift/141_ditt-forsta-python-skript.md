@@ -71,9 +71,13 @@ cd me/kmom01/plane
 ls
 ```
 
-2. Skriv programmet så att det fungerar enligt introduktionen ovan.
+2. `plane.py` skall innehålla 3 separata inputs, den första skall vara höjden, den andra skall vara hastigheten och den sista skall vara temperaturen.
 
-3. Ladda upp och publicera uppgiften genom att göra följande kommandon i kurskatalogen i terminalen.
+3. De slutliga värden som skrivs ut skall vara avrundade till två decimaler.
+
+4. Skriv programmet så att det fungerar enligt introduktionen ovan.
+
+5. Ladda upp och publicera uppgiften genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i roten av kurskatalogen python
