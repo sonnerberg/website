@@ -2,6 +2,7 @@
 author: mos
 category: python
 revision:
+  "2021-03-15": (G, moc) La till mer specifika krav.
   "2020-05-07": (F, aar) La till förkunskapskrav och fixade copy kommandot.
   "2017-06-31": (E, efo) Rensade uppgiften så den inte är .cgi.
   "2016-03-17": (D, mos) hur man kopierar plane.py.
@@ -71,7 +72,7 @@ cd me/kmom01/plane
 ls
 ```
 
-2. `plane.py` skall innehålla 3 separata inputs, den första skall vara höjden, den andra skall vara hastigheten och den sista skall vara temperaturen.
+2. `plane.py` skall innehålla 3 separata inputs, den första skall vara höjden, den andra skall vara hastigheten och den sista skall vara temperaturen. Dessa värden skall behandlas som flyttal (float).
 
 3. De slutliga värden som skrivs ut skall vara avrundade till två decimaler.
 
