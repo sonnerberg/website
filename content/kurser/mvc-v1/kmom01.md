@@ -13,31 +13,19 @@ Kmom01: Objektorientering
 
 [/WARNING]
 
-<!--stop-->
+Vi skall lära oss programmera webbapplikationer på ett objektorienterat sätt med fokus på det arkitekturella designmönstret MVC.
 
-Vi har mycket att göra så det är bäst vi sätter igång. Innan kursen är slut skall vi hantera objektorienterad PHP, enhetstestning, grunder i PHP-baserade ramverk och databaser med ramverk.
+I kurserna htmlphp och design använde vi oss av begreppet vyer, det är V:et i MVC. Det är något vi fortsätter använda i detta kursmomentet.
 
-Vi börjar med grunderna i objektorienterad PHP, det blir objekt och klasser med inkapsling, konstruktorer och destruktorer, setters och getters, egenskapade exceptions och vi ser hur man kan lagra ett objekt i sessionen.
+I nästa kursmoment skall vi introducera C:et i MVC, Controller. Men för att lära oss det behöver vi någorlunda koll på hur klasser och objektorienterad programmering fungerar i PHP. Det får alltså bli huvudsyftet för detta inledande kursmoment.
 
-Vi jobbar i en guide och bygger små grundläggande testprogram för att testa och se hur objektorienterade konstruktionerna fungerar i PHP.
+Vi skall komma igång med grunderna i objektorienterad programmering i PHP genom att bygga ett antal enklare klasser som vi använder visar upp via ett par webbsidor.
 
-För att repetera våra PHP-kunskaper och samtidigt komma igång med klasser och objekt så bygger vi en variant av spelet "Gissa vilket nummer jag tänker på".
+Vi får även möjlighet att repetera begrepp som GET, POST och SESSION som är bra att ha koll på när vi bygger webbapplikationer.
 
-Vi bygger en me-sida (redovisa-sida) med PHP-ramverket Anax. Det ger oss möjligheten att bekanta oss med en färdig webbplats i eet PHP-ramverk. Senare i kursen kommer vi att flytta in spelet "Gissa mitt nummer" in i ramverkets struktur.
-
-
+<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
 
 <!-- more -->
-
-Här är ett par bilder som visar vad som nu skall hända.
-
-[FIGURE src=image/snapvt18/oophp-constructor.png?w=w3 caption="Små testprogram hjälper oss att förstå grunderna."]
-
-[FIGURE src=image/snapvt18/oophp-guess-my-number-post.png?w=w3 caption="Spela spelet Gissa mitt nummer med PHP."]
-
-[FIGURE src=image/snapvt19/oophp-me.png?w=w3 caption="Mallen för me-sidan i oophp."]
-
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -46,19 +34,41 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 2-4 studietimmar)*
 
-Labbmiljön är densamma som i design-kursen. Du behöver minst version 7.2 av PHP, både i webbservern och i terminalen. För tillfället är det PHP 7.3 och 7.4 som är [de aktiva releaserna](https://www.php.net/supported-versions.php), så någon av de rekommenderas om du har möjlighet att välja.
+Se till att du har kursens labbmiljö installerad.
 
-Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
+1. En [översikt av labbmiljön som krävs för att genomföra första kursmomentet](./../installera-labbmiljo).
 
-Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
-```text
-# Gå till din katalog för dbwebb-kurser
-dbwebb selfupdate
-dbwebb clone oophp
-cd oophp
-dbwebb init
-```
+
+<!--stop-->
+
+
+
+Uppgifter {#uppgifter}
+-------------------------------------------
+
+*(ca: 8-12 studietimmar)*
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" jobbar du igenom följande delar. Spara koden i `me/guide`.
+    * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
+    * [Objekt och Klass](guide/kom-igang-med-objektorienterad-programmering-i-php/objekt-och-klass)
+
+1. Gör uppgiften "[Gissa numret med PHP](uppgift/gissa-numret-med-php)". Uppgiften låter dig värma upp din gamla PHP-kunskaper och samtidigt träna på grunderna med objekt och klasser. Spara din kod i `me/kmom01/guess`.
+
+1. Gör uppgiften "[Bygg en me-sida för oophp med Anax](uppgift/bygg-en-me-sida-for-oophp-med-anax)". Du skall bygga en me-sida som du taggar och publicerar på GitHub. Spara allt under `me/redovisa`.
+
+1. Försäkra dig om att du har gjort `dbwebb publish redovisa` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
+
+
+Övningar  {#ovningar}
+-------------------------------------------
+
+*(ca: 0-4 studietimmar)*
+
+Det finns inga övningar i detta kursmoment.
 
 
 
@@ -91,85 +101,12 @@ Kika igenom följande artiklar.
 
 
 
-### Git & GitHub {#git}
-
-I kursen jobbar vi med Git och GitHub som du lärde dig om i design-kursen. Git är ett versionshanteringssystem för kod och GitHub är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster. I design-kursen föreslogs följande resurser för den som vill fördjupa sig i Git och GitHub. Annar kan du bara låta det vara som referens vid behov.
-
-* [Dokumentation på Gits hemsida](https://git-scm.com/doc)
-* [Guider för GitHub](https://guides.github.com/)
-
-
-
-### PHP kodstandard {#validering}
-
-Följande gäller för kodstandard och valideringsverktyg.
-
-1. Vi skriver PHP enligt kodstandarden [PSR-1: Basic Coding Standard](http://www.php-fig.org/psr/psr-1/) och [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/). Dessa är standardiserade av PHP communityn och standardiseringen hanteras av organisationen [PHP-FIG](https://www.php-fig.org/) vars syfte är att standardisera komponenter så att de går att använda mellan olika ramverk.  
-_PSR-2 är på väg att ersättas av [PSR-12: Extended Coding Style](https://www.php-fig.org/psr/psr-12/), så även den delen kan vara av intresse att studera._
-
-1. Vi använder valideringsverktygen [phpcs](https://github.com/squizlabs/PHP_CodeSniffer/wiki) och [phpmd](https://phpmd.org/). Det går att installera dem som linters i Atom och se valideringsfelen direkt i texteditorn.
-
-<!-- phpstan? -->
-
-
-
-### Ramverk Anax {#anax}
-
-Vi kommer att senare i kursen skriva kod i ramverket Anax vars struktur är jämförbar med PHP-ramverk likt Symfony, Laravel, Phalcon och Yii.
-
-* [Källkoden för Anax](https://github.com/canax) finner du på GitHub.
-
-Sådana här ramverk är ofta uppdelade i moduler. Här följer ett par av de kodmoduler som ingår i Anax. Du kan jämföra dem med de begrepp du lärt dig i ramverket Express.js i databas-kursen. Du behöver inte kika på modulerna i detalj nu, Vi tar det lite längre fram. De "badges" som visas är mått på kodmodulens kodtäckning och kodkvalitet.
-
-* [![Code Coverage](https://scrutinizer-ci.com/g/canax/commons/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/commons/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/commons/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/commons/?branch=master) [anax/commons](https://github.com/canax/commons)
-* [![Code Coverage](https://scrutinizer-ci.com/g/canax/controller/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/controller/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/controller/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/controller/?branch=master) [anax/controller](https://github.com/canax/controller)
-* [![Code Coverage](https://scrutinizer-ci.com/g/canax/request/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/request/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/request/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/request/?branch=master) [anax/request](https://github.com/canax/request)
-* [![Code Coverage](https://scrutinizer-ci.com/g/canax/response/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/response/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/response/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/response/?branch=master) [anax/response](https://github.com/canax/response)
-* [![Code Coverage](https://scrutinizer-ci.com/g/canax/router/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/router/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [anax/router](https://github.com/canax/router)
-* [![Code Coverage](https://scrutinizer-ci.com/g/canax/session/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/session/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/session/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/session/?branch=master) [anax/session](https://github.com/canax/session)
-* [![Code Coverage](https://scrutinizer-ci.com/g/canax/view/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/view/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/view/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/view/?branch=master) [anax/view](https://github.com/canax/view)
-
-
-
-### Video {#video}
-
-Det finns generellt kursmaterial i video form.
-
-1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams v20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_m6hfbskQSxXM70JhuOBhE)". Förra årets motsvarighet ligger på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
-
-1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-12 studietimmar)*
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
-
-1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" jobbar du igenom följande delar. Spara koden i `me/guide`.
-    * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
-    * [Objekt och Klass](guide/kom-igang-med-objektorienterad-programmering-i-php/objekt-och-klass)
-
-1. Gör uppgiften "[Gissa numret med PHP](uppgift/gissa-numret-med-php)". Uppgiften låter dig värma upp din gamla PHP-kunskaper och samtidigt träna på grunderna med objekt och klasser. Spara din kod i `me/kmom01/guess`.
-
-1. Gör uppgiften "[Bygg en me-sida för oophp med Anax](uppgift/bygg-en-me-sida-for-oophp-med-anax)". Du skall bygga en me-sida som du taggar och publicerar på GitHub. Spara allt under `me/redovisa`.
-
-1. Försäkra dig om att du har gjort `dbwebb publish redovisa` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denna kursen skiljer sig från hur du normalt sett lämnar in din redovisningstext.
 
 Se till att följande frågor besvaras i texten:
 
@@ -182,3 +119,47 @@ Se till att följande frågor besvaras i texten:
 * Vilken är din TIL för detta kmom?
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
+
+
+
+Resurser  {#resurser}
+---------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Här anges övriga resurser som kan användas för vidare studier i det som kursmomentet omfattar.
+
+
+
+### Videor och spellista {#playlist}
+
+Kursen innehåller genomgångar och föreläsningar som spelas in eller streamas och därefter läggs i en spellista. Du kan nå spellistan på "[mvc streams v21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_cbYbdnzKKF8-4igef73u6)".
+
+
+
+### Git & GitHub {#git}
+
+Git är ett versionshanteringssystem för kod och GitHub/GitLab är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster.
+
+* [Git documentation](https://git-scm.com/doc)
+* [GitHub](https://github.com/)
+* [GitHub Docs](https://docs.github.com/en)
+* [GitLab](https://gitlab.com/)
+* [GitLab Docs](https://docs.gitlab.com/)
+
+
+
+### Kodstandard {#kodstandard}
+
+Följande gäller för kodstandard och valideringsverktyg.
+
+1. Vi skriver PHP enligt kodstandarden [PSR-1: Basic Coding Standard](http://www.php-fig.org/psr/psr-1/) och [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/). Dessa är standardiserade av PHP communityn och standardiseringen hanteras av organisationen [PHP-FIG](https://www.php-fig.org/) vars syfte är att standardisera komponenter så att de går att använda mellan olika ramverk.  
+_PSR-2 är på väg att ersättas av [PSR-12: Extended Coding Style](https://www.php-fig.org/psr/psr-12/), så även den delen kan vara av intresse att studera._
+
+
+
+### Linter och validatorer {#validering}
+
+1. Vi använder valideringsverktygen [phpcs](https://github.com/squizlabs/PHP_CodeSniffer/wiki) och [phpmd](https://phpmd.org/). Det går att installera dem som linters i Atom och se valideringsfelen direkt i texteditorn.
+
+<!-- phpstan? -->

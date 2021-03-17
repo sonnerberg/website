@@ -17,7 +17,7 @@ Labbmiljön {#kurslabbmiljo}
 
 Det första du behöver göra är att installera en labbmiljö för kursen. Om detta är din första dbwebb-kurs så kan det innebära en hel del jobb och en del nya tekniker. Se till att du har gott om tid när du gör detta.
 
-1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen. 
+1. [Installera labbmiljön](./../labbmiljo) som behövs för kursen.
 
 
 
@@ -42,7 +42,6 @@ Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar 
 
 
 
-
 Klona och initiera kursrepot {#clona}
 ----------------------------------
 
@@ -54,8 +53,8 @@ Den snabba vägen.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
-dbwebb clone oophp
-cd oophp
+dbwebb clone mvc
+cd mvc
 dbwebb init
 ```
 
