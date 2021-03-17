@@ -17,9 +17,9 @@ Vi skall lära oss programmera webbapplikationer på ett objektorienterat sätt 
 
 I kurserna htmlphp och design använde vi oss av begreppet vyer, det är V:et i MVC. Det är något vi fortsätter använda i detta kursmomentet.
 
-I nästa kursmoment skall vi introducera C:et i MVC, Controller. Men för att lära oss det behöver vi någorlunda koll på hur klasser och objektorienterad programmering fungerar i PHP. Det får alltså bli huvudsyftet för detta inledande kursmoment.
+I nästa kursmoment skall vi introducera C:et i MVC, Controller. Men för att lära oss bygga Controllers så behöver vi någorlunda koll på hur klasser och objektorienterad programmering fungerar i PHP. Det får alltså bli huvudsyftet för detta inledande kursmoment.
 
-Vi skall komma igång med grunderna i objektorienterad programmering i PHP genom att bygga ett antal enklare klasser som vi använder visar upp via ett par webbsidor.
+Vi prövar därför att komma igång med grunderna i objektorienterad programmering i PHP genom att bygga ett antal enklare klasser som vi använder visar upp via ett par webbsidor.
 
 Vi får även möjlighet att repetera begrepp som GET, POST och SESSION som är bra att ha koll på när vi bygger webbapplikationer.
 
