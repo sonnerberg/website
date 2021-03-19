@@ -1,10 +1,7 @@
 ---
 author: mos
 revision:
-    "2018-08-16": "(D, mos) Bort redovisning i forum samt bytte ITs mot Canvas."
-    "2018-03-19": "(C, mos) Uppdaterad inför oophp-v4 vt18."
-    "2017-03-24": "(B, mos) Uppdaterad inför oophp-v3 vt17."
-    "2015-10-29": "(A, mos) Ny inför oophp ht15."
+    "2021-03-29": "(A, mos) Ny inför mvc vt21."
 ...
 Resultat och redovisning
 ==================================
@@ -15,60 +12,58 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 
 
 
+Rapport i LaTeX {#latex}
+---------------------------------------
+
+Du skall skriva din redovisningstext i ett LaTeX dokument. När du är klar genererar du en pdf-kopia av rapporten och laddar upp på Canvas.
+
+LaTeX är en form av markup där man skriver texten och lägger till hur texten skall formatteras (typsättas) vid utskriften till ett slutligt dokument. Du kan läsa [om LaTeX i Wikibooks](https://en.wikibooks.org/wiki/LaTeX) för att få en kort introduktion till systemet.
+
+Verktyget [OverLeaf](https://www.overleaf.com/) är ett sätt att skriva LaTeX dokument via webbläsaren. Det verktyget erbjuder också en god [manual och lärresurs](https://www.overleaf.com/learn) för en nybörjare till LaTeX.
+
+Det finns en [mall till rapporten](https://www.overleaf.com/read/crczvvdxvwxp
+) som du kan utgå ifrån. Börja med att ta en egen kopia av den mallen och börja skriva.
+
+Vi kallar nu detta dokument för kursrapporten, eller bara "rapporten".
+
+
+
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-I din me-sida har du en dedikerad plats för dina redovisningstexter. Där skall du [redovisa dina reflektioner](kurser/faq/att-skriva-en-bra-redovisningstext) från varje kursmoment.
+Skriv din redovisningstext i rapporten.
 
 Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Kan du koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare?
+Skriv ett stycke om totalt cirka 1-2 sidor. Försök väva in frågorna i löpande text. Använd rubriker för att dela in din text.
 
-Skriv ett stycke om 15-30 meningar, försök väva in frågorna i löpande text.
+Det ser bra ut i rapporten om du kan koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare.
+
+Använd gärna referenser, det är bra att öva på det och dessutom blir det en bra samling av läsvärda resurser som du kan ha nytta av även efter kursen.
+
+Här kan du läsa om [tips att skriva bra redovisningstexter](kurser/faq/att-skriva-en-bra-redovisningstext).
 
 
 
-Tagga ny version {#tag}
+Lämna in din redovisning {#submit}
 ---------------------------------------
 
-Se till att du har taggat en ny version på din me-sida, så att dina senaste ändringar finns med i taggen och är pushade till GitHub. Versionen ger en historik över dina ändringar enligt följande.
+Gör följande steg för att lämna in din redovisning.
 
-| Version | Kmom   |
-|---------|--------|
-| 1.0.*   | kmom01 |
-| 2.0.*   | kmom02 |
-| 3.0.*   | kmom03 |
-| 4.0.*   | kmom04 |
-| 5.0.*   | kmom05 |
-| 6.0.*   | kmom06 |
-| 10.0.*  | kmom10 |
+1. Git repon, se till att du har committat, taggat och pushat.
 
-Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du historik och du kan få problem med inlämningarna.
+1. Gör `dbwebb publish me`.
+
+1. Ladda upp en pdf av din rapport till Canvas.
+
+1. På Canvas, lägg en länk till ditt kursrepo på studentservern.
 
 
 
-Ladda upp och publicera din kurskatalog {#repo}
+Bedömning och betygsättning {#bedom}
 ---------------------------------------
-
-Ladda upp ditt kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb publish me
-```
-
-Den länken som visas i utskriften av kommandot, är länken till din me-sida. Där kan du se ditt publicerade resultat.
-
-Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
-
-
-
-Kopiera redovisningstexten till Canvas {#lms}
----------------------------------------
-
-Kopiera redovisningstexten och lämna in den på redovisningen i Canvas tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
 
@@ -79,32 +74,4 @@ Feedback och frågor {#feedback}
 
 [Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
 
-Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
-
-
-
-Hur testas mitt resultat? {#inspect}
----------------------------------------
-
-Den som rättar och kontrollerar din inlämning utgår från följande kommando.
-
-```bash
-dbwebb inspect kmom01
-```
-
-Byt ut kmom01 mot det kursmoment du vill inspektera.
-
-Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
-
-[YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
-
-
-
-Klart! {#klar}
----------------------------------------
-
-[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
-
-Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
-
-Ta en kort mental paus innan du ger dig på nästa kursmoment.
+Ställ dina frågor och funderingar i chatt eller forum (GitHub issues). Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
