@@ -65,7 +65,7 @@ def bubble_sort(items):
 
 ###Insertion sort {#insertion-sort}  
 
-Insertion sort använder en osorterad lista och en sorterad lista. Värdet från den osorterade listan sätts in i den sorterade listan på rätt plats. Värdena i den sorterade listan flyttas baserat på det nya värdet som ska placeras på rätt plats. Då båda listorna är lika stora så samma lista representera båda fallen:  
+Insertion sort delar upp listan i en osorterad sektion och en sorterad sektion. Värdet från den osorterade sektionen sätts in i den sorterade sektionen på rätt plats. Värdena i den sorterade sektionen flyttas baserat på det nya värdet som ska placeras på rätt plats.
 
 [FIGURE src=https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif]
 
