@@ -7,6 +7,14 @@ revision:
 Kmom01: Objektorientering
 ==================================
 
+[INFO]
+
+**Publicerat - men inte komplett**
+
+Detta kmom är publicerat men ännu inte komplett. Om du är en "early user" med relativt höga förkunskaper kan du gärna pröva att genomföra kursmomentet. Annars bör du avvakta tills denna blå ruta försvinner.
+
+[/INFO]
+
 I denna kursen skall vi lära oss programmera webbapplikationer på ett objektorienterat sätt med fokus på det arkitekturella designmönstret MVC.
 
 I kurserna htmlphp och design använde vi oss av begreppet vyer, det är V:et i MVC. Vyer är något vi fortsätter använda i detta kursmomentet.
