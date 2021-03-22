@@ -15,7 +15,7 @@ revision:
     "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
     "2014-06-23": (A, mos) Första revisionen inför kursstart HT2014.
 ...
-Kursen python (v3)
+Kursen python (v4)
 ==================================
 
 Kursen **Programmering och Problemlösning i Python**, a.k.a. *python*, lär ut grunderna i strukturerad programmering och problemlösning med programmeringsspråket Python.
