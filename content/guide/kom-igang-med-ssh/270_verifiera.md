@@ -20,5 +20,3 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 SSH-nycklar är oerhört smidigt, när man väl kommit över den första tröskeln av att sätta upp dem. Men när det är klart så vill man aldrig mer skriva ett lösenord i onödan.
-
-Om du stöter på problem så kan du alltid [fråga i forumet om Unix och Linux](forum/viewforum.php?f=49).

@@ -18,6 +18,7 @@ Guider i produktionsläge.
 * [VirtualBox](guide/virtualbox)
 * [Kom igång med SSH](guide/kom-igang-med-ssh)
 * [Programmering med JavaScript](guide/javascript1)
+* [Kom igång med awk](guide/kom-igang-med-awk)
 
 Guides in English.
 
@@ -49,7 +50,7 @@ Guider under utveckling till hösten 2020.
 
 Guider under utveckling till hösten 2021.
 
-* [Kom igång med awk](guide/kom-igang-med-awk)
+
 
 
 

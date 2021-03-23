@@ -12,7 +12,7 @@ Det finns gott om inbyggda variabler i awk. Vi tar en titt på några av dem.
 
 ### Field separator {#fs}
 
-Filen som används är [phones.txt](asdfsdf). Det är en liten fil med följande innehåll:
+Filen som används är [example/phones.txt](https://raw.githubusercontent.com/dbwebb-se/vlinux/master/example/awk/phones.txt). Det är en liten fil med följande innehåll:
 
 ```text
 Brand,Model,Price,Units
