@@ -31,7 +31,7 @@ Vi får även möjlighet att repetera begrepp som GET, POST och SESSION som är 
 
 
 
-Labbmiljön  {#labbmiljo}
+Labbmiljö  {#labbmiljo}
 ---------------------------------
 
 *(ca: 2-4 studietimmar)*
@@ -45,11 +45,16 @@ Se till att du har kursens labbmiljö installerad.
 <!-- stop-->
 
 
-
-Uppgifter {#uppgifter}
+Uppgifter & Övningar {#uppgifter_ovningar}
 -------------------------------------------
 
 *(ca: 8-12 studietimmar)*
+
+Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
+
+
+
+### Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
@@ -57,15 +62,11 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 
 
-<!--
-Övningar  {#ovningar}
--------------------------------------------
-
-*(ca: 0-4 studietimmar)*
+### Övningar {#ovningar}
 
 Det finns inga övningar i detta kursmoment.
 
--->
+<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
 
 
 
@@ -74,18 +75,36 @@ Läs & Studera  {#lasanvisningar}
 
 *(ca: 2-4 studietimmar)*
 
-För att lösa uppgifterna och redovisningen är följande punkter starkt rekommenderade att utföra.
+För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
-1. Bekanta dig snabbt och översiktligt med innehållet i PHP-manualen och stycket om [Klasser och Objekt](https://www.php.net/manual/en/language.oop5.php). Referensmanualen vår källa till information, lär dig dess struktur så att du kan slå upp saker vid behov.
+<!--
 
-1. Titta i guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" och se om den kan hjälpa dig med att förstå grunderna till klassbegreppeti PHP. Välj själv om du enbart använder guiden som läsresurs eller om du kodar dess övningsprogram.
+### Föreläsning {#flas}
+
+* Kursintro
+
+* Objektorientering och klasser i PHP.
+
+1. [Kursintro](./../forelasning/kursintro) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
+
+1. [Databasteknik, relationsdatabaser och SQL](./../forelasning/databasteknik-relationsdatabaser-och-sql) ger dig en introduktion till de databaser och SQL.
+
+-->
+
+
+### Litteratur  {#litteratur}
+
+1. Bekanta dig snabbt och översiktligt med innehållet i PHP-manualen om de delar som är extra relevant i detta kursmoment.
+
+    * [Classes and Objects](https://www.php.net/manual/en/language.oop5.php)
+    * [Namespaces](https://www.php.net/manual/en/language.namespaces.php)
+
+1. Titta i guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" och se om den kan hjälpa dig med att förstå grunderna till klassbegreppet i PHP. Välj själv om du enbart använder guiden som läsresurs eller om du kodar dess övningsprogram.
 
     * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
     * [Objekt och Klass](guide/kom-igang-med-objektorienterad-programmering-i-php/objekt-och-klass)
 
 1. Bekanta dig översiktligt med dokumentet [PHP The Right Way](http://www.phptherightway.com/). Det är skrivet av PHP communityn och ger en översikt över PHP som språk och de verktyg och processer man normalt arbetar med. Vi kommer att återkomma till dokumentet under kursens gång. Du kan se dokumentet som en innehållsförteckning till vad en god PHP-programmerare bör ha koll på.
-
-Övriga bra-att-ha resurser ligger längre ned i detta dokument, kika igenom dem snabbt för att se vad där finns.
 
 
 
@@ -96,7 +115,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denna kursen skiljer sig från hur du normalt sett lämnar in din redovisningstext.
 
-Se till att följande frågor besvaras i texten:
+Se till att följande frågor besvaras i texten i din rapport:
 
 * Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering. Kanske har du redan nu en uppfattning om det är bra eller ej?
 
@@ -195,3 +214,12 @@ Följande linters och validatorer används i olika omfattning.
 Vertyg likt phpcs och phpmd går bra att installera i din texteditor som plugins. Det underlättar att få information om dessa fel medan du skriver din kod.
 
 Första gången man installerar kan det dock vara lite klurigt så vi lägger denna delen på överkurs. Pröva gärna när du får tid och kraft.
+
+
+
+### Twig med vyer {#twig}
+
+I uppgiften används PHP som vymotor, eller _template engine_. Du kan installera vymotorn Twig och använda den för dina vyer, om du så önskar.
+
+* Läs om [vymotorn Twig](https://twig.symfony.com/).
+<!--* Exempel på hur du kommer igång med vymotorn Twig i uppgiften. -->

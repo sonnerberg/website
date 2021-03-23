@@ -5,5 +5,5 @@
 * [03: Enhetstestning](kurser/mvc-v1/kmom03)
 * [04: Ramverk](kurser/mvc-v1/kmom04)
 * [05: Autentisering](kurser/mvc-v1/kmom05)
-* [06: TBD](kurser/mvc-v1/kmom06)
+* [06: Automatiserad test](kurser/mvc-v1/kmom06)
 * [07/10: Projekt och examination](kurser/mvc-v1/kmom10)

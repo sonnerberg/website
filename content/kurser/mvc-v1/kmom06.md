@@ -4,7 +4,7 @@ author:
 revision:
     "2021-03-12": "(PA1, mos) Arbete påbörjat."
 ...
-Kmom06: TBD
+Kmom06: Automatiserad test
 ==================================
 
 [WARNING]

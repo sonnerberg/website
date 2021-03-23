@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2021-03-12": "(PA1, mos) Arbete påbörjat."
+    "2021-03-22": "(PA1, mos) Arbete påbörjat."
 ...
 Kmom02: Controller
 ==================================
@@ -14,6 +14,135 @@ Kmom02: Controller
 [/WARNING]
 
 <!--stop-->
+
+<!--
+[INFO]
+
+**Publicerat - men inte komplett**
+
+Detta kmom är publicerat men ännu inte komplett. Om du är en "early user" med relativt höga förkunskaper kan du gärna pröva att genomföra kursmomentet. Annars bör du avvakta tills denna blå ruta försvinner.
+
+[/INFO]
+-->
+
+Vi skall introducera C:et i MVC, Controller.
+
+<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
+
+<!-- more -->
+
+
+
+
+<!-- stop-->
+
+
+
+Uppgifter & Övningar {#uppgifter_ovningar}
+-------------------------------------------
+
+*(ca: 8-12 studietimmar)*
+
+Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Lös uppgiften "[Bygg Controller i PHP enligt MVC](uppgift/bygg-controller-i-php-enligt-mvc)".
+
+
+
+### Övningar {#ovningar}
+
+Det finns inga övningar i detta kursmoment.
+
+<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
+
+
+
+Läs & Studera  {#lasanvisningar}
+---------------------------------
+
+*(ca: 2-4 studietimmar)*
+
+För att lösa uppgifterna och redovisningen bör du studera enligt följande.
+
+<!--
+
+### Föreläsning {#flas}
+
+* Flowchart & pseudocode
+
+1. [Kursintro](./../forelasning/kursintro) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
+
+1. [Databasteknik, relationsdatabaser och SQL](./../forelasning/databasteknik-relationsdatabaser-och-sql) ger dig en introduktion till de databaser och SQL.
+
+-->
+
+
+### Litteratur  {#litteratur}
+
+1. Bekanta dig snabbt och översiktligt med innehållet i PHP-manualen och stycket om [Klasser och Objekt](https://www.php.net/manual/en/language.oop5.php). Referensmanualen vår källa till information, lär dig dess struktur så att du kan slå upp saker vid behov.
+
+1. Titta i guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" och se om den kan hjälpa dig med att förstå grunderna till klassbegreppeti PHP. Välj själv om du enbart använder guiden som läsresurs eller om du kodar dess övningsprogram.
+
+    * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
+    * [Objekt och Klass](guide/kom-igang-med-objektorienterad-programmering-i-php/objekt-och-klass)
+
+1. I dokumentet [PHP The Right Way](http://www.phptherightway.com/), läs igenom delen om "MVC?".
+
+
+
+Resultat & Redovisning  {#resultat_redovisning}
+-----------------------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denna kursen skiljer sig från hur du normalt sett lämnar in din redovisningstext.
+
+Se till att följande frågor besvaras i texten i din rapport:
+
+* Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering. Kanske har du redan nu en uppfattning om det är bra eller ej?
+
+* Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?
+
+* Reflektera kort över den kodbas som användes till uppgiften, hur uppfattar du den?
+
+* Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
+
+* Med tanke på artikeln "PHP The Right Way", vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om?
+
+* Vilken är din TIL för detta kmom?
+
+
+
+Resurser bra-att-ha {#resurser}
+---------------------------------
+
+Här anges övriga resurser som kan användas för vidare studier i det som kursmomentet omfattar.
+
+
+
+### Model, View, Controller (MVC) {#mvc}
+
+Git är ett versionshanteringssystem för kod och GitHub/GitLab är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster.
+
+Om Git.
+
+* [Git documentation](https://git-scm.com/doc)
+
+
+
+### En klass för en Router {#router}
+
+### Klasser för Request, Response och Url Router {#request}
+
+<!--stop-->
+
+
 
 Kmom02: Arv och Komposition
 ==================================

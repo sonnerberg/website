@@ -163,7 +163,7 @@ Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read
 Läs [instruktionen till kursmoment 05](./kmom05).
 
 
-### Kmom06: TBD {#kmom06}
+### Kmom06: Automatiserad test {#kmom06}
 
 To Be Defined.
 
