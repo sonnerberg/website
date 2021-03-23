@@ -30,7 +30,7 @@ Introduktion {#intro}
 
 Du skall bygga ett Memory-spel genom att använda ditt flagg-objekt.
 
-Det finns ett [exempelprogram som visar hur ett Memory-spel](javascript1/repo/example/memory) kan fungera.
+Det finns ett [exempelprogram som visar hur ett Memory-spel](js/repo/example/memory) kan fungera.
 
 [YOUTUBE src=Z7z3xMsH3Eg width=630 caption="Så här kan det se ut när du spelar Memory, fast utan flaggor."]
 
@@ -72,7 +72,3 @@ Tips från coachen {#tips}
 -----------------------
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-

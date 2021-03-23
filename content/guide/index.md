@@ -47,6 +47,10 @@ Guider under utveckling till hösten 2020.
 
 * [Unix tools](guide/unix-tools)
 
+Guider under utveckling till hösten 2021.
+
+* [Kom igång med awk](guide/kom-igang-med-awk)
+
 
 
 Guider som ligger till sig och eventuellt utvecklas framöver.
