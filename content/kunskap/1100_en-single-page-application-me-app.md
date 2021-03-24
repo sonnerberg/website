@@ -407,7 +407,7 @@ githubRequest.open("GET", "https://api.github.com/users/:username/repos");
 githubRequest.send();
 ```
 
-Först skapar vi ett `XMLHttpRequest` objekt `githubRequest`. Då hämtning av data från ett API är en asynkron process skapar vi en `EventListener` för händelsen `load` för `githubRequest`. Vi tilldelar en callback funktion `renderGithubRepos`, som anropas när vi har laddat data. De två sista raderna definierar vilket sorts anrop vi vill göra `GET` och den URL vi vill anropa. Byt ut `:username` mot ditt Github användarnamn så hämtar du dina egna repon. Sista raden skickar iväg anropet till Githubs api. När vi får tillbaka svar anropas funktionen `renderGithubRepos`, som vi tilldelade som callback funktion när vi la till vår `EventListener`.
+Först skapar vi ett `XMLHttpRequest` objekt `githubRequest`. Då hämtning av data från ett API är en asynkron process skapar vi en `EventListener` för händelsen `load` för `githubRequest`. Vi tilldelar en callback funktion `renderGithubRepos`, som anropas när vi har laddat data. De två sista raderna definierar vilket sorts anrop vi vill göra `GET` och den URL vi vill anropa. Byt ut `:username` mot ditt Github användarnamn så hämtar du dina egna repon. Sista raden skickar iväg anropet till Githubs api. Om du inte har ett konto på GitHub kan du använda dig av dbwebb-organisationens repon, URL'n till de repos är [https://api.github.com/users/dbwebb-se/repos](https://api.github.com/users/dbwebb-se/repos). När vi får tillbaka svar anropas funktionen `renderGithubRepos`, som vi tilldelade som callback funktion när vi la till vår `EventListener`.
 
 ```javascript
 var renderGithubRepos = function () {
