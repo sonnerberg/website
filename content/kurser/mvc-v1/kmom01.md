@@ -87,19 +87,19 @@ Titta igenom följande föreläsningar.
 
 
 
-#### Lektion 00 - Kursintroduktion {#f1}
+#### Kursintroduktion {#f1}
 
 Introduktion till kursen mvc med kursformalia, innehåll och labbmiljö ([slides](https://dbwebb-se.github.io/mvc/lecture/L00-kursintro/slide.html)).
 
-[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Lektion 00 - Kursintroduktion (med Mikael)."]
+[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Kursintroduktion (med Mikael)."]
 
 
 
-#### Lektion 01 - Klasser och objekt i PHP {#f2}
+#### Klasser och objekt i PHP {#f2}
 
 Introduktion till klasser och objekt i PHP, för att komma igång med grunderna i hur man skapar en klass och instansierar ett objekt. Koncept som objekt i sessioner, namespace och autoloader hanteras ([slides](https://dbwebb-se.github.io/mvc/lecture/L01-klasser-i-php/slide.html)).
 
-[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Lektion 01 - Klasser och objekt i PHP (med Mikael)."]
+[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Klasser och objekt i PHP (med Mikael)."]
 
 
 
