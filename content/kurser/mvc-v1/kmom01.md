@@ -2,11 +2,12 @@
 author:
     - mos
 revision:
-    "2021-03-22": "(PA1, mos) Arbete påbörjat."
+    "2021-03-25": "(A, mos) Första versionen släppt för mvc-v1."
 ...
 Kmom01: Objektorientering
 ==================================
 
+<!--
 [INFO]
 
 **Publicerat - men inte komplett**
@@ -14,6 +15,7 @@ Kmom01: Objektorientering
 Detta kmom är publicerat men ännu inte komplett. Om du är en "early user" med relativt höga förkunskaper kan du gärna pröva att genomföra kursmomentet. Annars bör du avvakta tills denna blå ruta försvinner.
 
 [/INFO]
+-->
 
 I denna kursen skall vi lära oss programmera webbapplikationer på ett objektorienterat sätt med fokus på det arkitekturella designmönstret MVC.
 
@@ -77,19 +79,28 @@ Läs & Studera  {#lasanvisningar}
 
 För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
-<!--
+
 
 ### Föreläsning {#flas}
 
-* Kursintro
+Titta igenom följande föreläsningar.
 
-* Objektorientering och klasser i PHP.
 
-1. [Kursintro](./../forelasning/kursintro) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
 
-1. [Databasteknik, relationsdatabaser och SQL](./../forelasning/databasteknik-relationsdatabaser-och-sql) ger dig en introduktion till de databaser och SQL.
+#### Lektion 00 - Kursintroduktion {#f1}
 
--->
+Introduktion till kursen mvc med kursformalia, innehåll och labbmiljö ([slides](https://dbwebb-se.github.io/mvc/lecture/L00-kursintro/slide.html)).
+
+[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Lektion 00 - Kursintroduktion (med Mikael)."]
+
+
+
+#### Lektion 01 - Klasser och objekt i PHP {#f2}
+
+Introduktion till klasser och objekt i PHP, för att komma igång med grunderna i hur man skapar en klass och instansierar ett objekt. Koncept som objekt i sessioner, namespace och autoloader hanteras ([slides](https://dbwebb-se.github.io/mvc/lecture/L01-klasser-i-php/slide.html)).
+
+[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Lektion 01 - Klasser och objekt i PHP (med Mikael)."]
+
 
 
 ### Litteratur  {#litteratur}
