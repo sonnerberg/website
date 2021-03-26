@@ -303,7 +303,7 @@ Kraven är uppdelade i sektioner.
 
 1. Det finns ingen anledning att lägga till "webbsidor" direkt i `htdocs/`, allt hanteras via din frontcontroller.
 
-1. Om du lägger till andra paket med composer så måste de finnas med i din `package.json`.
+1. Om du lägger till andra paket med composer så måste de finnas med i din `composer.json`.
 
 1. Du behöver ha en Makefile som stödjer `make install` och `make test` på det viset som den bifogade Makefilen gör.
 
