@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2021-03-29": "(B, mos) Lade till läsresurs om Templating."
     "2021-03-25": "(A, mos) Första versionen släppt för mvc-v1."
 ...
 Kmom01: Objektorientering
@@ -225,6 +226,12 @@ Följande linters och validatorer används i olika omfattning.
 Vertyg likt phpcs och phpmd går bra att installera i din texteditor som plugins. Det underlättar att få information om dessa fel medan du skriver din kod.
 
 Första gången man installerar kan det dock vara lite klurigt så vi lägger denna delen på överkurs. Pröva gärna när du får tid och kraft.
+
+
+
+### Om templatefiler och vyer, V i MVC {#twig}
+
+I artikeln "[PHP The Right Way](http://www.phptherightway.com/)" finns det ett eget kapitel om vyer och templatefiler som heter "Templating". Det är bra att läsa igenom det för att få en överblick hur termen vyer och templatfiler hör ihop med V:et i MVC.
 
 
 
