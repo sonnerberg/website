@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2021-03-29": "(N, mos) Förtydliga självtest på krav 1 projektet."
     "2021-03-10": "(M, mos) Lade till genomgångsvideo."
     "2021-03-10": "(L, mos) Uppdaterad med tillfällen för kursrunda vt2021."
     "2020-08-27": "(K, mos) Lade till övningstenta från 2020 maj."
@@ -162,7 +163,8 @@ Du måste lösa krav 1 innan du kan lösa krav2 eller 3.
 
 ### Krav 1 {#k1}
 
-Följande krav måste vara uppfylla
+Följande krav måste vara uppfyllda.
+
 Ditt eshop3 skall uppfylla de krav som finns för ehop1 och eshop2.
 
 Du har följande filer med relevant innehåll:
@@ -182,6 +184,10 @@ I webbklienten, gör så att man kan klicka på en kategori och sedan visas de p
 
 I webbklienten, gör så att man kan koppla en produkt till en eller flera produktkategorier.
 
+<!--
+Se till att du kan lägga till och ta bort saker från lagret i menyklienten.
+-->
+
 
 
 #### Självtest krav 1 {k1test}
@@ -194,12 +200,16 @@ Lägg till och hantera en produkt i webbklienten.
 2. Lägg produkt i flera kategorier.
 3. Se produktöversikten och produkten skall synas med sina kategorier.
 4. Visa kategorier, klicka på en kategori, produkterna skall synas.
+5. Kollas så att `eshop/about` fungerar.
+6. Kollas så att `eshop/log` fungerar.
 
 I terminalklienten.
 
-1. Lägg till produkten på ett par hyllor i lagret.
+1. Lägg till den nyskapade produkten på ett par hyllor i lagret.
 2. Se att produkten finns i lagret på rätt hyllor med rätt antal.
 3. Plocka bort ett visst antal av produkten från någon av lagerhyllorna.
+4. Kolla så att `about` fungerar.
+5. Kolla så att `logsearch <str>` fungerar.
 
 
 
