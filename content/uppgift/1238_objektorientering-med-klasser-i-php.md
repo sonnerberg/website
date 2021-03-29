@@ -3,6 +3,7 @@ author: mos
 category:
     - kurs mvc
 revision:
+    "2021-03-29": "(B, mos) Lade till not om composer dump."
     "2021-03-22": "(A, mos) Första utgåvan."
 ...
 Objektorientering med klasser i PHP
@@ -251,6 +252,13 @@ Vendornamnet `Dbwebb\` är ytterligare ett exempel på vendornamn. Det kan du by
 Använd gärna ett namn som inte redan finns i [paketdatabasen Packagist](https://packagist.org/). Om du är osäker kan du tex använda din studentakronym eller ditt användarid på GitHub/GitLab.
 
 När du placerar ett vendornamn i `composer.json` så sker en koppling mellan namnet och var dess källkod placeras.
+
+Du måste generera en ny autoloader varje gång du uppdaterar din `composer.json`, det gör du med följande kommando.
+
+```
+# Uppdatera composers generereade autoloader filer
+composer dump
+```
 
 När du anger ett namespace i en fil så måste små och stora bokstäver i dess namespace matcha exakt den sökväg där filen ligger.
 
