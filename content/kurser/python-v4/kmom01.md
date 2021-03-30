@@ -149,7 +149,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör laborationen "[Python med värden och variabler](uppgift/python-med-varden-och-variabler)" för att träna på grunderna i Python. Spara alla filer under `me/kmom01/lab1`.
 
-1. Gör uppgiften "[Ditt första Python-skript](uppgift/ditt-forsta-python-skript)" för att visa att du har koll på grunderna. Spara alla filer under `me/kmom01/plane`.
+1. Gör uppgiften "[Ditt första Python-skript](uppgift/ditt-forsta-python-skript-v2)" för att visa att du har koll på grunderna. Spara alla filer under `me/kmom01/plane`.
 
 1. Gör uppgiften "[Skapa en me-sida för Python-kursen](uppgift/skapa-en-me-sida-till-python-kursen)" så du kan skriva dina redovisningstexter. Spara alla filer under `me/redovisa`.
 
