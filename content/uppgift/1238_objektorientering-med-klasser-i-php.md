@@ -126,6 +126,8 @@ Men, den breda och rekommenderade vägen är att utgå från mallen och sedan ju
 
 I denna inledande uppgift handlar det mest om att skriva och använda klasser i PHP. I kommande uppgifter så kikar vi mer på den delen som berör ramverket.
 
+Här är ett längre inlägg om [varför man bör utgå från den givna mallen](https://github.com/dbwebb-se/mvc/issues/2), iallafall inledningsvis i kursen.
+
 
 
 #### CSS {#css}
@@ -364,7 +366,7 @@ Under ditt eget namespace, skapa följande efter bästa förmåga.
 
 1. Spara undan ställningen i antal rundor, vem som vunnit, spelaren eller datorn. Det skall finnas en möjlighet att nollställa poängställningen.
 
-1. Se till att man nåt ditt spel via en länk "Game 21" i navbaren för din webbsida.
+1. Se till att man når ditt spel via en länk "Game 21" i navbaren för din webbsida.
 
 1. Som ren överkurs kan du välja att implementera att du kan satsa "bitcoins" i varje spelrunda. Spelaren kan börja med 10 bitcoins och man kan satsa max 50% av sina bitcoins per spel. Banken (datorn) kan ha 100 bitcoins när du börjar. Klarar du av att vinna alla pengarna från banken?
 
