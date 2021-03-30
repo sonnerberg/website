@@ -87,7 +87,7 @@ ls
 
 ```bash
 # Ställ dig i roten av kurskatalogen python
-<kommando för att testa koden>
+dbwebb test plane
 dbwebb validate plane
 dbwebb publish plane
 ```
