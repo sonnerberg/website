@@ -38,6 +38,28 @@ Vi skall enhetstesta våra klasser.
 
 
 
+### Dokumentation och PHPDoc {#phpdoc}
+
+Följande handlar om att automatgenerera dokumentation baserad på kommentarer i koden. Det är bakgrundsinformation till en av uppgifterna nedan.
+
+1. I dokumentet [PHP The Right Way](http://www.phptherightway.com/), finns en sektion som berör dokumentering av koden.
+    * [PHP The Right Way: Documenting your Code](https://phptherightway.com/#documenting)
+
+1. Bekanta dig kort med verktyget [phpDocumentor](https://www.phpdoc.org/) som kan automatgenerera dokumentation av din kod, genom att bland annat läsa informationen från dina docblock kommentarer. Läs översiktligt så att de är medveten om vad verktyget kan göra.
+
+1. Kika snabbt och översiktligt igenom [referensen till PHPDoc](https://docs.phpdoc.org/references/phpdoc/), det ger dig en bas för information om hur du skriver dina egna docblock kommentarer.
+
+
+
+
+
+1. Gör uppgiften "[Dokumentera PHP med phpdoc och phpDocumentor](uppgift/dokumentera-php-med-phpdoc-och-phpdocumentor)". Spara uppdateringarna du gör i ditt `me/redovisa`.
+
+
+* Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde? Vad tycker du om konceptet `make doc`?
+
+
+
 Labbmiljö  {#labbmiljo}
 ---------------------------------
 

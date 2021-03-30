@@ -2,30 +2,32 @@
 author:
     - mos
 revision:
-    "2021-03-22": "(PA1, mos) Arbete påbörjat."
+    "2021-03-30": "(A, mos) Första utgåvan i mvc-v1."
 ...
 Kmom02: Controller
 ==================================
 
-[WARNING]
-
-**Arbete pågår**
-
-[/WARNING]
-
-<!--stop-->
-
-<!--
 [INFO]
 
 **Publicerat - men inte komplett**
 
-Detta kmom är publicerat men ännu inte komplett. Om du är en "early user" med relativt höga förkunskaper kan du gärna pröva att genomföra kursmomentet. Annars bör du avvakta tills denna blå ruta försvinner.
+Detta kmom är publicerat men ännu inte komplett, det saknas följande:
+
+* Föreläsning om klasser/objekt med arv, interface, trait.
+
+Kursrepot är dock uppdaterat. Glöm inte en `dbwebb update` för att få hem senaste versionen.
 
 [/INFO]
--->
 
-Vi skall introducera C:et i MVC, Controller.
+<!-- stop-->
+
+Vi skall introducera C:et i MVC, Controller. Vi bygger om vår befintliga kod så att den använder sig av controllers och sedan bygger vi vidare med fler klasser för att konstruera ett tärningsspel Yatzy.
+
+I samband med att vi börjar med controllers så inkluderar vi ett par externa moduler till vårt miniramverk. Det handlar om en router och klasser för att hantera request och response. Detta blir en insyn i hur man kan bygga upp ett ramverk via standardiserade moduler där varje modul kan vara utbytbar förutsatt att den uppfyller ett visst interface.
+
+Apropå interface så kikar vi mer på objektorienterade konstruktioner i PHP där vi tar upp arv, komposition, interface och trait.
+
+Vi tar också hjälp av allmän problemlösning i form av top-down/bottom-up, pseudokod och flödesdiagram och använder det för att bygga upp och designa flödet i vårt Yatsy-spel.
 
 <small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
 
@@ -33,15 +35,10 @@ Vi skall introducera C:et i MVC, Controller.
 
 
 
-
-<!-- stop-->
-
-
-
 Uppgifter & Övningar {#uppgifter_ovningar}
 -------------------------------------------
 
-*(ca: 8-12 studietimmar)*
+*(ca: 10-14 studietimmar)*
 
 Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
 
@@ -70,29 +67,45 @@ Läs & Studera  {#lasanvisningar}
 
 För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
-<!--
+
 
 ### Föreläsning {#flas}
 
-* Flowchart & pseudocode
+Titta igenom följande föreläsningar.
 
-1. [Kursintro](./../forelasning/kursintro) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
 
-1. [Databasteknik, relationsdatabaser och SQL](./../forelasning/databasteknik-relationsdatabaser-och-sql) ger dig en introduktion till de databaser och SQL.
+
+#### Problemlösning och design av algoritmer för programmerare {#f1}
+
+Om modeller och representation av algoritmer samt generellt om problemlösning. Vi tittar på olika metoder för att lösa problem och strukturera algoritmer när vi bygger program och applikationer. Begrepp som hanteras är bland annat Polya problem solving, top-down, bottom-up, flowchart och pseudocode.
+
+Slides till föreläsningen "[Problemlösning och design av algoritmer för programmerare](https://dbwebb-se.github.io/mvc/lecture/L02-algorithms/slide.html)".
+
+[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="Problemlösning och design av algoritmer för programmerare (med Mikael)."]
+
+<!--
+
+#### Klasser och objekt i PHP, fortsättning {#f2}
+
+Fortsättning med  klasser och objekt i PHP, för att komma igång med grunderna i hur man skapar en klass och instansierar ett objekt. Koncept som objekt i sessioner, namespace och autoloader hanteras ([slides](https://dbwebb-se.github.io/mvc/lecture/L01-klasser-i-php/slide.html)).
+
+[YOUTUBE src="MV4eC2yKgOE" width=700 caption="Klasser och objekt i PHP (med Mikael)."]
 
 -->
 
 
 ### Litteratur  {#litteratur}
 
-1. Bekanta dig snabbt och översiktligt med innehållet i PHP-manualen och stycket om [Klasser och Objekt](https://www.php.net/manual/en/language.oop5.php). Referensmanualen vår källa till information, lär dig dess struktur så att du kan slå upp saker vid behov.
+1. I detta kursmoment behandlas bland annat följande delar utifrån manualen om "[Classes and Objects](https://www.php.net/manual/en/language.oop5.php)".
 
-1. Titta i guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" och se om den kan hjälpa dig med att förstå grunderna till klassbegreppeti PHP. Välj själv om du enbart använder guiden som läsresurs eller om du kodar dess övningsprogram.
+    * [Object Inheritance](https://www.php.net/manual/en/language.oop5.inheritance.php)
+    * [Object Interfaces](https://www.php.net/manual/en/language.oop5.interfaces.php)
+    * [Traits](https://www.php.net/manual/en/language.oop5.traits.php)
 
-    * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
-    * [Objekt och Klass](guide/kom-igang-med-objektorienterad-programmering-i-php/objekt-och-klass)
+1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" finns följande stycke att studera (du behöver inte görea exempelprogrammen i guiden).
 
-1. I dokumentet [PHP The Right Way](http://www.phptherightway.com/), läs igenom delen om "MVC?".
+    * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
+    * [Trait och Interface](http://localhost:8080/guide/kom-igang-med-objektorienterad-programmering-i-php/trait-och-interface)
 
 
 
@@ -105,15 +118,13 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denn
 
 Se till att följande frågor besvaras i texten i din rapport:
 
-* Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering. Kanske har du redan nu en uppfattning om det är bra eller ej?
+* Berätta på vilket sätt du drog nytta, eller inte, av att modellera din lösning med flödesdiagram och psuedokod. Använder du dig av top-down eller bottom-up när du planerar din kod?
 
-* Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?
-
-* Reflektera kort över den kodbas som användes till uppgiften, hur uppfattar du den?
+* Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.
 
 * Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
 
-* Med tanke på artikeln "PHP The Right Way", vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om?
+* Hur känner du för den kodstruktur som växer fram, tycker du det blev snyggare kod med modulerna router och request och hur vi jobbade med controllers eller vad är din syn på det?
 
 * Vilken är din TIL för detta kmom?
 
@@ -126,160 +137,95 @@ Här anges övriga resurser som kan användas för vidare studier i det som kurs
 
 
 
-### Model, View, Controller (MVC) {#mvc}
+### Om design av algoritmer {#algo}
 
-Git är ett versionshanteringssystem för kod och GitHub/GitLab är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster.
+Via följande resurser kan du fördjupa dig i metoder för problemlösning.
 
-Om Git.
+* Artikel "[Polya’s Problem Solving Techniques](https://math.berkeley.edu/~gmelvin/polya.pdf)" om hur man kan tänka när man löser problem.
+* Artikel "[Pseudocode Standard](http://users.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html)" om exempel på hur man skriver pseudokod.
 
-* [Git documentation](https://git-scm.com/doc)
+Wikipedia har artiklar om följande.
 
+* [Top-down and bottom-up design](https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design)
+* [Flowchart](https://en.wikipedia.org/wiki/Flowchart)
+* [Pseudocode](https://en.wikipedia.org/wiki/Pseudocode)
 
+Verktyg för att rita flödesdiagram.
 
-### En klass för en Router {#router}
+* [App.diagrams.net](https://app.diagrams.net/) är ett online ritverktyg där du kan rita flödesscheman utan att installera en applikation.
 
-### Klasser för Request, Response och Url Router {#request}
+* [Dia Diagram Editor](http://dia-installer.de/) är en desktopapplikation som kan installeras på din dator. Det är gratis, öppen källkod och plattform.
 
-<!--stop-->
+    * Så här kan [ett flödesschema se ut i Dia](http://dia-installer.de/shapes/Flowchart/index.html.en).
 
 
 
-Kmom02: Arv och Komposition
-==================================
+### Standardisering och PHP-FIG {#phpfig}
 
-Vi jobbar vidare med programmering av klasser och objekt. Vi tar fler grundkonstruktioner i objektorientering och PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4.
+PHP-FIG är ett standardiseringsorgan för att skapa standarder för PHP och moduler för PHP-baserade ramverk.
 
-Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden via docblock-kommentarer.
+I detta kursmoment berör vi moduler som har implementerat följande standarder.
 
-Vi börjar koda inuti ramverket och använder oss av konstruktioner som routes, vyer och placerar klasserna inuti ramverket med givna namespaces och använder oss av ramverkets autoloader. Som övning tar vi och flyttar vårt spel "Gissa mitt nummer" in i ramverket.
+* [PSR-7 HTTP Message Interface](https://www.php-fig.org/psr/psr-7)
+* [PSR-15 HTTP Handlers](https://www.php-fig.org/psr/psr-15)
+* [PSR-17 HTTP Factories](https://www.php-fig.org/psr/psr-17)
 
-<!-- more -->
 
-[FIGURE src=image/snapvt18/dice-graphic-css-sprite.png?w=w3 caption="Ett antal tärningar representerade med olika grafiska metoder."]
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+### Router till ramverket {#router}
 
+Vi använder en modul för routern [FastRoute - Fast request router for PHP](https://github.com/nikic/FastRoute).
 
+Det finns en bloggartikel som förklarar hur routern är implementerad, "[Fast request routing using regular expressions](https://www.npopov.com/2014/02/18/Fast-request-routing-using-regular-expressions.html)".
 
-Läs & Studera  {#lasanvisningar}
----------------------------------
 
-*(ca: 3-6 studietimmar)*
 
+### Request och Response till ramverket {#reqresp}
 
+Vi använder en modul för att hantera response-objektet, "[PSR-7 implementation](https://github.com/Nyholm/psr7)". I den modulen finns även stöd för att hantera ett request-objekt och att skapa länkar.
 
-### Bok & Artiklar {#bok}
+För att skicka tillbaka response-objektet använder vi en emitter via modulen "[laminas-httphandlerrunner](https://github.com/laminas/laminas-httphandlerrunner)".
 
-Läs följande för att skaffa dig bakgrundskunskap i PHP och objektorientering. Gör din egen läsplan så att du hinner läsa igenom dem innan kursen är slut, du behöver inte läsa allt i detta kmom.
 
-1. Följande böcker nämndes i första kmomet, det finns dock inga specifika läsanvisningar till dem, således fri läsning efter behov och intresse.
 
-    1. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql)
-    1. [PHP Apprentice - An online book for learning PHP](https://phpapprentice.com/)
+### Controller i ramverk {#controller}
 
-1. PHP-manualen är läsvärd och specifikt det stycket som handlar om "[Klasser och Objekt](http://php.net/manual/en/oop5.intro.php)". Försök läsa igenom hela stycket innan kursen är slut, det ger dig en god insyn i objektorienterad PHP.
+Hur controllers implementeras och konfigureras i ramverk kan skilja åt i detaljer men grundprincipen med en controller-klass är densamma.
 
-1. Läs dokumentet [PHP The Right Way](http://www.phptherightway.com/), skrivet och underhållet av PHP communityn ger det dig en god översikt till de verktyg, processer och begrepp som är viktiga ur ett helhetsperspektiv.
+Här är ett par olika implementationer i PHP ramverk.
 
+* [Symfony Controller](https://symfony.com/doc/current/controller.html)
+* [Laravel Controller](https://laravel.com/docs/8.x/controllers)
+* [Yii Controller](https://www.yiiframework.com/doc/guide/2.0/en/structure-controllers)
+* [Phalcon Controller](https://docs.phalcon.io/4.0/nl-nl/controllers)
 
 
-### Namespace och autoloader {#namespace}
-
-En viktig del i detta kmom är begreppen namespace och autoloader. Här är en samling av läsvärt material som ger dig grundkunskapen.
-
-1. Läs igenom, men hoppa över detaljer, det stycke i PHP manualen som handlar om [begreppet namespace](http://php.net/manual/en/language.namespaces.php). Skaffa dig en översikt vad det handlar om och hur man definierar och använder namespace.
-
-1. När det gäller namespace så använder vi oss av [PHP-FIG](https://www.php-fig.org/) och standarden [PSR-4: Autoloader](https://www.php-fig.org/psr/psr-4/).
-
-1. Vi använder composers implementation av autoloadern, läs om [Autoloading i manualen för composer](https://getcomposer.org/doc/01-basic-usage.md#autoloading).
-
-
-
-### Modellering och UML {#uml}
-
-Kika igenom följande lästips om UML och modellering, ägna tid åt dem om du finner det intressant.
-
-1. I kursen databas introducerades du till ritverktyg för ER-modellering, du kan använda samma verktyg till UML-modellering. Här är två verktyg att välja bland.
-    * [Dia](https://wiki.gnome.org/Apps/Dia/) (desktop)
-    * [draw.io](draw.io) (webbaserat)
-
-1. När man pratar om objektorienterad programmering så underlättar det om man har en viss bas i objektorienterad modellering. Därför kan du läsa kort om UML, "Unified Modelling Language". En bra plats att starta är någon av följande:
-    * Andreas artikel "[Vad är UML?](kunskap/vad-ar-uml)" som är en del av kursen oopython.
-    * [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
-
-
-
-### Dokumentation och PHPDoc {#phpdoc}
-
-Följande handlar om att automatgenerera dokumentation baserad på kommentarer i koden. Det är bakgrundsinformation till en av uppgifterna nedan.
-
-1. I dokumentet [PHP The Right Way](http://www.phptherightway.com/), finns en sektion som berör dokumentering av koden.
-    * [PHP The Right Way: Documenting your Code](https://phptherightway.com/#documenting)
-
-1. Bekanta dig kort med verktyget [phpDocumentor](https://www.phpdoc.org/) som kan automatgenerera dokumentation av din kod, genom att bland annat läsa informationen från dina docblock kommentarer. Läs översiktligt så att de är medveten om vad verktyget kan göra.
-
-1. Kika snabbt och översiktligt igenom [referensen till PHPDoc](https://docs.phpdoc.org/references/phpdoc/), det ger dig en bas för information om hur du skriver dina egna docblock kommentarer.
-
-
-
-### Ramverk Anax {#anax}
-
-Följande referenser är relevanta för ramverket Anax, studera dem snabbt, kort och översiktligt.
-
-1. Följande Anax moduler är extra relevanta i detta kmom, läs deras README för en översyn av hur de fungerar.
-    * [anax/request](https://github.com/canax/request)
-    * [anax/response](https://github.com/canax/response)
-    * [anax/router](https://github.com/canax/router)
-    * [anax/view](https://github.com/canax/view)
-
-
-
-### Video {#video}
-
-Det finns generellt kursmaterial i video form.
-
-1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
-
-1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 10-14 studietimmar)*
-
-
-### Uppgifter {#uppgifter}
-
-Gör följande uppgifter.
-
-1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" jobbar du igenom följande del. Spara koden i `me/guide`.
-    * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
-
-1. Gör uppgiften "[Flytta spelet Gissa mitt nummer till me-sidan (v5)](uppgift/flytta-spelet-gissa-mitt-nummer-till-me-sidan-v5)". Du skall kopiera koden för ditt gissa-spel och integrera in det i din me-sida och använda ramverkets struktur. Koden sparar du i `me/redovisa`.
-
-1. Gör uppgiften "[Dokumentera PHP med phpdoc och phpDocumentor](uppgift/dokumentera-php-med-phpdoc-och-phpdocumentor)". Spara uppdateringarna du gör i ditt `me/redovisa`.
-
-1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make test` som en sista avstämning, innan du sätter sista taggen.
 
 <!--
-Dice med kontroller.
+### Model, View, Controller (MVC) {#mvc}
+
+MVC pattern
 -->
 
 
 
+### Git Workflow {#gitflow}
 
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
+Att jobba med branches när man utvecklar sin kod kan göra det enklare att jobba många i samma repo och även när man är ensam kan det underlätta att hålla ordning och reda samt att man alltid har fungerande kod i sin mainbranch.
 
-*(ca: 1-2 studietimmar)*
+Här kan du läsa om ett par alternativa sätt att jobba med branches för ny kod.
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+* "[Introduction to GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html)"
+* "[Understanding the GitHub flow](https://guides.github.com/introduction/flow/)"
+* "[Git Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)"
+* "[Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)"
 
-Se till att följande frågor besvaras i texten:
 
-* Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde? Vad tycker du om konceptet `make doc`?
-* Hur gick det att överföra spelet "Gissa mitt nummer" in i din me-sida, hade du en bra grundstruktur du kunde behålla eller fick du skriva om mycket av koden?
-* Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
-* Vilken är din TIL för detta kmom?
+
+<!--
+### Modellering och UML {#uml}
+
+När man pratar om objektorienterad programmering så underlättar det om man har en viss bas i objektorienterad modellering. Därför kan du läsa kort om UML, "Unified Modelling Language". En bra plats att starta är någon av följande:
+    * Andreas artikel "[Vad är UML?](kunskap/vad-ar-uml)" som är en del av kursen oopython.
+    * [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
+-->

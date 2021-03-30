@@ -30,6 +30,12 @@ Totalt omfattar kursmoment 07/10 i storleksordningen 20--40 studietimmar.
 
 
 
+1. Som ren överkurs kan du välja att implementera att du kan satsa "bitcoins" i varje spelrunda. Spelaren kan börja med 10 bitcoins och man kan satsa max 50% av sina bitcoins per spel. Banken (datorn) kan ha 100 bitcoins när du börjar. Klarar du av att vinna alla pengarna från banken?
+
+1. Yatzy mot datorn.
+
+
+
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------

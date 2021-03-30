@@ -45,9 +45,6 @@ Se till att du har kursens labbmiljö installerad.
 
 
 
-<!-- stop-->
-
-
 Uppgifter & Övningar {#uppgifter_ovningar}
 -------------------------------------------
 
@@ -241,3 +238,18 @@ I uppgiften används PHP som vymotor, eller _template engine_. Du kan installera
 
 * Läs om [vymotorn Twig](https://twig.symfony.com/).
 <!--* Exempel på hur du kommer igång med vymotorn Twig i uppgiften. -->
+
+
+
+<!--
+### Vyer och templatemotorer i ramverk {#vyer}
+
+Hur vyer implementeras och konfigureras i ramverk kan skilja åt i detaljer men grundprincipen med en controller-klass är densamma.
+
+Här är ett par olika implementationer i PHP ramverk.
+
+* [Symfony Controller](https://symfony.com/doc/current/controller.html)
+* [Laravel Controller](https://laravel.com/docs/8.x/controllers)
+* [Yii Controller](https://www.yiiframework.com/doc/guide/2.0/en/structure-controllers)
+
+-->
