@@ -42,7 +42,7 @@ Krav {#krav}
 ```bash
 # Flytta till kurskatalogen
 cd me
-cp -ri kmom03/marvin2/ kmom04/marvin3/
+cp -ri kmom03/marvin2/* kmom04/marvin3/
 cd kmom04/marvin3
 ```
 
@@ -75,7 +75,7 @@ Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad so
 | inv swap flower book   | Byter plats på "flower" och "book"                                          | `swap(bag, "flower", "book")` |
 | inv drop flower        | Kasta bort "flower"                                                         | `drop(bag, "flower")`         |
 
-7. Validera och publicera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
+7. Testa, validera och publicera din kod enligt följande.
 
 ```bash
 # Flytta till kurskatalogen

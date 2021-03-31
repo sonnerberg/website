@@ -63,16 +63,22 @@ Taggarna för varje uppgift motsvarar själva menyvalet. För att testa Menyval 
 1. Uppdatera menyval **1** för att berätta vad du heter. Byt ut hälsningsfrasen mot en annan. Du kan även byta namnet på din "Marvin", om du vill.
 
 
-1. Menyval **2**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut motsvarande i Farenheit.
+1. Menyval **2**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut motsvarande i Farenheit. Avrunda värdet till två decimaler.
 
 
-1. Menyval **3**: Ordmultiplicering. Marvin skall ha två `input()`, den första be om ett ord och sedan en siffra. Marvin skall sedan skriva ut ordet så många gånger.
+1. Menyval **3**: Ordmultiplicering. Här skall Marvin ta emot två `input()`, den första be om ett ord och sedan en siffra. Marvin skall sedan skriva ut ordet så många gånger.
 
 
-1. Menyval **4**: Summa och medel: Marvin ska fråga efter tal tills du skriver “done” och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal.
+1. Menyval **4**: Summa och medel: Marvin ska fråga efter tal tills du skriver “done” och sedan ska Marvin skriva ut summan och medelvärdet för dessa tal. Avrunda till en decimal. Exempel:
+```python
+input: 30
+input: 2
+input: 3
+input "done"     output: "The sum of all numbers are 35 and the avrage is 11.7"
+```
 
 
-1. Menyval **5**: Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut “larger” om det nya talet är större, “smaller” om det var mindre eller “same” om talet som skrev in hade samma värde. Första gången man startar menyvalet kommer Marvin inte ha något tal att jämföra med, då skall du be användaren att mata in ett nytt tal. Detta ska göras tills användaren skriver “done”. Exempel:
+7. Menyval **5**: Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut “larger” om det nya talet är större, “smaller” om det var mindre eller “same” om talet som skrev in hade samma värde. Första gången man startar menyvalet kommer Marvin inte ha något tal att jämföra med, då skall du be användaren att mata in två nytt tal. Detta ska göras tills användaren skriver “done”. Exempel:
 ```python
 input: 1, 2      output: "larger"
 input: 2         output: "same"
@@ -92,8 +98,7 @@ input: "apa"      output: "No match"
 input: "Dansk"    output: "Match"
 ```
 
-10. Validera och publicera din kod enligt följande.
-
+10. Testa, validera och publicera din kod enligt följande.
 
 
 ```bash
@@ -110,19 +115,16 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 [INFO]
-För att inkludera dina extrauppgifter i testerna behöver du skicka med argumentet `-e` eller `--extra`.
+För att inkludera dina extrauppgifter i testerna behöver du skicka med option `-e` eller `--extra`.
 [/INFO]
 
 
 
-* Menyval **a1**: Gör ett val där Marvin tar emot två strängar och kollar om alla karaktärer i den andra strängen finns i den första.
-    - Tags: `a1`
-
-Exempel:
+* Menyval **a1**: Gör ett val där Marvin tar emot två strängar och kollar om alla karaktärer i den andra strängen finns i den första. Exempel:
 ```python
-input: "Python", "phno"        output: Match
-input: "Programming", "gram"   output: Match
-input: "kassler", "kusl"       output: No match
+input: "Python", "phno"        output: "Match"
+input: "Programming", "gram"   output: "Match"
+input: "kassler", "kusl"       output: "No match"
 ```
 
 * Menyval **a2**: Dubblera tills innehåller alla siffror, gör ett menyval där Marvin räknar ut hur många gånger ett tal behöver multipliceras med två för att talet ska innehålla alla siffror mellan 0 och 9 minst en gång. Menyvalet ska ta två inputs, ett som är talet som ska multipliceras och ett input som är hur många gånger den ska försöka multiplicera innan den ger upp. Om den inte lyckas innan den ska ge upp returnera -1. Exempel:
