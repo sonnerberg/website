@@ -98,7 +98,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Läsa och skriva filer i python](uppgift/lasa-skriva-filer-i-python)" för att träna på olika typer av funktioner och moduler. Spara alla filer under `me/kmom06/lab6`.
 
-1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord-v2)". Spara alla filer under `me/kmom06/analyzer`.
+1. Gör uppgiften "[Analysera text och ord](uppgift/analysera-text-och-ord-v3)". Spara alla filer under `me/kmom06/analyzer`.
 
 
 

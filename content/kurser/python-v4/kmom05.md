@@ -103,7 +103,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler-v2)". Spara alla filer under `me/kmom05/lab5`.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - Utsläpp](uppgift/din-egen-chattbot-marvin-utslapp)". Spara alla filer under `me/kmom05/marvin4`.
+1. Gör uppgiften "[Din egen chattbot - Marvin - Utsläpp](uppgift/din-egen-chattbot-marvin-utslapp-v2)". Spara alla filer under `me/kmom05/marvin4`.
 
 
 
