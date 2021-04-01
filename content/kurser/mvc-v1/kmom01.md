@@ -61,6 +61,10 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 1. Lös uppgiften "[Objektorientering med klasser i PHP](uppgift/objektorientering-med-klasser-i-php)".
 
 
+<!--
+Borde rita ett klassdiagram enligt UML? Ta vidare kunskap från databaskursen i modellering.
+-->
+
 
 ### Övningar {#ovningar}
 

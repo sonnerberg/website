@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2021-03-30": "(A, mos) Första utgåvan i mvc-v1."
+    "2021-04-01": "(A, mos) Första utgåvan i mvc-v1."
 ...
 Kmom02: Controller
 ==================================
@@ -13,7 +13,7 @@ Kmom02: Controller
 
 Detta kmom är publicerat men ännu inte komplett, det saknas följande:
 
-* Föreläsning om klasser/objekt med arv, interface, trait.
+* Inspelad föreläsning om klasser/objekt med arv, interface, trait.
 
 Kursrepot är dock uppdaterat. Glöm inte en `dbwebb update` för att få hem senaste versionen.
 
@@ -83,15 +83,26 @@ Slides till föreläsningen "[Problemlösning och design av algoritmer för prog
 
 [YOUTUBE src="RJ5HKgZZs6w" width=700 caption="Problemlösning och design av algoritmer för programmerare (med Mikael)."]
 
+
+
+#### Klasser och objekt i PHP - arv, komposition, interface och trait {#f2}
+
+Fortsättning med objekt och klasser i PHP. Vi studerar konstrukturer för arv, komposition, interface och trait. Vi pratar också om hur man skall tänka när man kodar objektorienterat och vad som är god kodsed och riktlinjer när man designar och implementerar sina klasser.
+
+Slides till föreläsningen "[Classes and Objects (PHP) - Inheritance, composition, interface, trait](https://dbwebb-se.github.io/mvc/lecture/L02-arv-och-komposition/slide.html)".
+
+[INFO]
+
+**På väg**
+
+Inspelad föreläsning om klasser/objekt med arv, interface, trait är på gång.
+
+[/INFO]
+
 <!--
-
-#### Klasser och objekt i PHP, fortsättning {#f2}
-
-Fortsättning med  klasser och objekt i PHP, för att komma igång med grunderna i hur man skapar en klass och instansierar ett objekt. Koncept som objekt i sessioner, namespace och autoloader hanteras ([slides](https://dbwebb-se.github.io/mvc/lecture/L01-klasser-i-php/slide.html)).
-
 [YOUTUBE src="MV4eC2yKgOE" width=700 caption="Klasser och objekt i PHP (med Mikael)."]
-
 -->
+
 
 
 ### Litteratur  {#litteratur}

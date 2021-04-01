@@ -3,7 +3,7 @@ author: mos
 category:
     - kurs mvc
 revision:
-    "2021-03-30": "(A, mos) Första utgåvan i mvc-v1."
+    "2021-04-01": "(A, mos) Första utgåvan i mvc-v1."
 ...
 Bygg Controller i PHP enligt MVC
 ===================================
