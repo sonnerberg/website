@@ -2,24 +2,10 @@
 author:
     - mos
 revision:
-    "2021-04-01": "(A, mos) Första utgåvan i mvc-v1."
+    "2021-04-02": "(A, mos) Första utgåvan i mvc-v1."
 ...
 Kmom02: Controller
 ==================================
-
-[INFO]
-
-**Publicerat - men inte komplett**
-
-Detta kmom är publicerat men ännu inte komplett, det saknas följande:
-
-* Inspelad föreläsning om klasser/objekt med arv, interface, trait.
-
-Kursrepot är dock uppdaterat. Glöm inte en `dbwebb update` för att få hem senaste versionen.
-
-[/INFO]
-
-<!-- stop-->
 
 Vi skall introducera C:et i MVC, Controller. Vi bygger om vår befintliga kod så att den använder sig av controllers och sedan bygger vi vidare med fler klasser för att konstruera ett tärningsspel Yatzy.
 
@@ -91,17 +77,7 @@ Fortsättning med objekt och klasser i PHP. Vi studerar konstrukturer för arv, 
 
 Slides till föreläsningen "[Classes and Objects (PHP) - Inheritance, composition, interface, trait](https://dbwebb-se.github.io/mvc/lecture/L02-arv-och-komposition/slide.html)".
 
-[INFO]
-
-**På väg**
-
-Inspelad föreläsning om klasser/objekt med arv, interface, trait är på gång.
-
-[/INFO]
-
-<!--
-[YOUTUBE src="MV4eC2yKgOE" width=700 caption="Klasser och objekt i PHP (med Mikael)."]
--->
+[YOUTUBE src="n3dC2E4zACM" width=700 caption="Arv, komposition, interface, trait i PHP (med Mikael)."]
 
 
 
