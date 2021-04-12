@@ -70,4 +70,4 @@ Om du inte vill skapa fler filer kan du även lägga din export i `~/.bash_profi
 
 ### sed på Windows {#sed-on-win}
 
-Du gör enklast i att köra sed i din VirtualBox.
+Du gör enklast i att köra sed i din VirtualBox. 

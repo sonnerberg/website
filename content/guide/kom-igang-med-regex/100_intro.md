@@ -13,4 +13,8 @@ I regex definieras ett mönster av karaktärer som regex sedan försöker hitta/
 
 Om ni har svårt att förstå ett regex mönster eller ni vill testa mönstret på en text, snabbt och lätt, rekommenderar jag sidan [https://regex101.com/](https://regex101.com/). Du skriver in ett mönster och en text där förklarar de olika delarna i mönstret och visar på ett bra sätt vad som matchas.
 
+Notera dock att den sidan använder andra *flavours* (PCRE, PHP, ES, Python, Golang etc).
+
+I den här guiden kommer vi använda oss av verktyget Sed för att hantera regex.
+
 <!-- Det finns olika verktyg vi kan använda för att hantera uttrycken och i den här kursen tittar vi på *sed* (Stream Editor). Du har hela tiden tillgång till manualen, `man sed`. -->

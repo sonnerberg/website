@@ -181,8 +181,8 @@ for (item in items) {
 
 Vi loopar igenom vår array och för varje `item` i arrayen kör vi följande:
 
-**split(items[item], temp, ",")** Vi använder en inbyggd funktion som konverterar en sträng till en array. Syntaxen för funktionen är `split(SOURCE, DESTINATION, DELIMITER)`. Som en bonus returneras antalet element.
-**printToJSON(temp[1],temp[2],temp[3],temp[4])** Vi skickar in de olika delarna till printfunktionen.
+**split(items[item], temp, ",")** Vi använder en inbyggd funktion som konverterar en sträng till en array. Syntaxen för funktionen är `split(SOURCE, DESTINATION, DELIMITER)`. Som en bonus returneras antalet element.  
+**printToJSON(temp[1],temp[2],temp[3],temp[4])** Vi skickar in de olika delarna till printfunktionen.  
 **if (item < length(items)-1) { ...** Vi gör vår kontroll på det sista värdet och hoppar över kommatecknet.
 
 Resultatet blir JSON som validerar. Avslutningsvis skriver vi det till en fil: `$ akw -f phones.awk phones.txt > phones.json`.
