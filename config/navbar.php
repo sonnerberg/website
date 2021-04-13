@@ -107,10 +107,10 @@ return [
                             "title" => "Kursen htmlphp"
                         ],
 
-                        "javascript1" => [
-                            "text"  =>"javascript1",
-                            "url"   => $this->di->get("url")->create("kurser/javascript1"),
-                            "title" => "Kursen javascript1"
+                        "js" => [
+                            "text"  =>"js",
+                            "url"   => $this->di->get("url")->create("kurser/js"),
+                            "title" => "Kursen js"
                         ],
 
                         "design" => [
@@ -143,10 +143,10 @@ return [
                             "title" => "Kursen databas"
                         ],
 
-                        "oophp" => [
-                            "text"  =>"oophp",
-                            "url"   => $this->di->get("url")->create("kurser/oophp"),
-                            "title" => "Kursen oophp"
+                        "mvc" => [
+                            "text"  =>"mvc",
+                            "url"   => $this->di->get("url")->create("kurser/mvc"),
+                            "title" => "Kursen mvc"
                         ],
 
                         "ramverk1" => [
@@ -155,10 +155,28 @@ return [
                             "title" => "Kursen ramverk1"
                         ],
 
-                        "ramverk2" => [
-                            "text"  =>"ramverk2",
-                            "url"   => $this->di->get("url")->create("kurser/ramverk2"),
-                            "title" => "Kursen ramverk2"
+                        "vlinux" => [
+                            "text"  =>"vlinux",
+                            "url"   => $this->di->get("url")->create("kurser/vlinux"),
+                            "title" => "Kursen vlinux"
+                        ],
+
+                        "jsramverk" => [
+                            "text"  =>"jsramverk",
+                            "url"   => $this->di->get("url")->create("kurser/jsramverk"),
+                            "title" => "Kursen jsramverk"
+                        ],
+
+                        "devops" => [
+                            "text"  =>"devops",
+                            "url"   => $this->di->get("url")->create("kurser/devops"),
+                            "title" => "Kursen devops"
+                        ],
+
+                        "itsec" => [
+                            "text"  =>"itsec",
+                            "url"   => $this->di->get("url")->create("kurser/itsec"),
+                            "title" => "Kursen itsec"
                         ],
 
                         "webgl" => [
