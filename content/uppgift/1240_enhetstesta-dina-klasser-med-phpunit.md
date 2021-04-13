@@ -54,6 +54,9 @@ Om du väljer så kan du kopiera alla filerna på en gång, så här.
 
 ```text
 # Gå till roten av ditt kursrepo
+
+# Försiktig, dina egna filer under me/game kan nu skrivas över
+# av exemplets filer, du bör egentligen göra detta fil för fil
 rsync -av example/game/phpunit/ me/game/
 ```
 
@@ -61,9 +64,47 @@ Du har nu en komplett test suite för de controller som fanns i exempelkoden.
 
 
 
+### Installera om din kodbas {#install}
+
+För att vara säker på att du har en ren kodbas kan du göra en ominstallation av repots miljö.
+
+```text
+# Gå till me/game
+make clean-all install
+```
+
+Nu har du en ren miljö med senaste versionerna av de program och moduler som används i ditt repo, dels utvecklingsverktyg och dels kod som behövs för att din applikation skall fungera.
+
+
+
 ### Kör enhetstesterna {#runner}
 
-Du kan nu köra enhetstesterna.
+Du kan nu köra enhetstesterna från test suiten med PHPUnit.
+
+```text
+make phpunit
+```
+
+Du kan även köra samliga linters och enhetstester så här.
+
+```text
+make test
+```
+
+Om du har installerat Xdebug så kommer följande rader visas i utskriften.
+
+```text
+Generating code coverage report in Clover XML format ... done
+Generating code coverage report in HTML format ... done
+```
+
+Det innebär att rapporter från kodtäckningen är genererade. I vårt fall placeras de under katalogen `build/` och du kan öppna din webbläsare för att se rapporten från kodtäckningen.
+
+```text
+firefox build/coverage
+```
+
+Eller så letar du reda på filen `build/coverage/index.html` och drar den till din webbläsare i en ny flik.
 
 
 
@@ -84,9 +125,9 @@ Kraven är uppdelade i sektioner.
 
 1. Skriv enhetstester för att testa dina egna klasser och funktioner.
 
-1. Försök även få med kod i `config/` och `view/` så att den omfattas av din kodtäckning och du kan visuellt se hur väl dina testfall täcker även de filerna.
+1. Försök även få med kod i `config/` så att den omfattas av din kodtäckning och du kan visuellt se hur väl dina testfall täcker även de filerna.
 
-1. Försök nå 100% kodtäckning av din kod. Om du inte lyckas med det så försöker du nå så hög kodtäckning som du anser vara rimligt med skäliga medel.
+1. Försök nå 100% kodtäckning av all din kod. Om du inte lyckas med det så försöker du nå så hög kodtäckning som du anser vara rimligt med skäliga medel.
 
 
 
@@ -102,13 +143,14 @@ Kraven är uppdelade i sektioner.
 
 
 
-<!--
 Extrauppgift {#extra}
 -----------------------
 
 Lös följande extrauppgifter om du har tid och lust.
 
--->
+1. Försök få med filerna i katalogen `view/` så att de omfattas av rapporten för kodtäckning. Det räcker att du uppdaterar PHPUnits konfigurationfil `.phpunit.xml` för att inkludera katalogen i rapporten.
+
+1. Fundera ut om det är möjligt att enhetstesta templatefilerna och om det finns någon fördel med det. Skriv ett par enhetstester för dina templatefiler och se hur det känns. Du kan antingen inkludera dem direkt, eller inkludera dem via funktioner likt `renderView()` så kan de blir enklare att testa.
 
 
 

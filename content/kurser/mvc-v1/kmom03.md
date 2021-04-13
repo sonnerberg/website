@@ -84,9 +84,9 @@ Titta igenom följande föreläsningar.
 
 Om "software testing" och ingenjörsprocessen att utföra testning.
 
-Slides till föreläsningen "[Introduktion till området "Software Testing"](https://dbwebb-se.github.io/mvc/lecture/L03-software-testing/slide.html)".
+Slides till föreläsningen "[Introduktion till området 'Software Testing'](https://dbwebb-se.github.io/mvc/lecture/L03-software-testing/slide.html)".
 
-[YOUTUBE src="OouC3mBVOhU" width=700 caption="Introduktion till området "Software Testing" (med Mikael)."]
+[YOUTUBE src="OouC3mBVOhU" width=700 caption="Introduktion till området 'Software Testing' (med Mikael)."]
 
 
 
@@ -94,9 +94,9 @@ Slides till föreläsningen "[Introduktion till området "Software Testing"](htt
 
 Fortsättning med objekt och klasser i PHP. Vi studerar konstrukturer för arv, komposition, interface och trait. Vi pratar också om hur man skall tänka när man kodar objektorienterat och vad som är god kodsed och riktlinjer när man designar och implementerar sina klasser.
 
-Slides till föreläsningen "[Introduktion till området "Software Unit Testing"](https://dbwebb-se.github.io/mvc/lecture/L03-software-unit-testing/slide.html)".
+Slides till föreläsningen "[Introduktion till området 'Software Unit Testing'](https://dbwebb-se.github.io/mvc/lecture/L03-software-unit-testing/slide.html)".
 
-[YOUTUBE src="LgFHTPEu6BI" width=700 caption="Introduktion till området "Software Unit Testing" (med Mikael)."]
+[YOUTUBE src="LgFHTPEu6BI" width=700 caption="Introduktion till området 'Software Unit Testing' (med Mikael)."]
 
 
 
@@ -175,7 +175,7 @@ Följande resurser används i olika omfattning i samband med föreläsningen "In
     * Läs om den relaterade termen "[Pure function](https://en.wikipedia.org/wiki/Pure_function)".
     * Läs om den relaterade termen "[Deterministic algorithm](https://en.wikipedia.org/wiki/Deterministic_algorithm)".
 
-* Försök få en förståelse för "False positives and false negatives" genom att läsa artikeln "[Wikipedia article on False positives and false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives)".
+* Försök få en förståelse för begreppet "[False positives and false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives)" och hur det hänger ihop med enhetstester.
 
 
 
@@ -197,3 +197,16 @@ För att kodtäckningen skall fundera behöver du installera Xdebug.
 ### Arkiv {#arkiv}
 
 En introduktionen till enhetstester och enhetstestning ges i artikeln "[Enhetstestningens roll i test av mjukvara](kunskap/enhetstestningens-roll-i-test-av-mjukvara)". Denna artikeln kan anses ersatt av de båda föreläsningarna om test och ligger med här enbart av kuriosa skäl.
+
+
+
+### Git och skriva bra commits {#gitcommit}
+
+Det kan vara en konst att skriva bra commit-meddelande så att man får en bra historik när man tittar på koden via ens commits.
+
+* Läs artikeln "[How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)" för att få sju gyllene regler som kan hjälpa dig till bättre commit-meddelanden.
+
+I artikeln ovan refereras till Linux kärnan och repon skrivna av Tim Pope som bra exempel på commit-historik. Följande länkar leder till den typen av exempel.
+
+* StackOverflow "[Git Commit Messages: 50/72 Formatting](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting)" men ett histogram över längden på commit-meddelanden från Linux kärnan.
+* Tim Pope "[A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)" som är en äldra artikel som ofta refereras till i sammanhanget.
