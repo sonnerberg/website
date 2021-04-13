@@ -92,7 +92,7 @@ Slides till föreläsningen "[Classes and Objects (PHP) - Inheritance, compositi
 1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" finns följande stycke att studera (du behöver inte görea exempelprogrammen i guiden).
 
     * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
-    * [Trait och Interface](http://localhost:8080/guide/kom-igang-med-objektorienterad-programmering-i-php/trait-och-interface)
+    * [Trait och Interface](guide/kom-igang-med-objektorienterad-programmering-i-php/trait-och-interface)
 
 
 

@@ -378,7 +378,7 @@ Under ditt eget namespace, skapa följande efter bästa förmåga.
 
 1. Dubbelkolla att webbplatsen fungerar på studentservern genom att göra en `dbwebb publishpure me` och testköra den.
 
-1. Committa alla filer till ditt repo och lägg till en ny tagg (1.0.\*). Öka versionnumret om du lägger till ändringar (1.0.1, 1.0.2 och så vidare). Rättaren kommer normalt sett att använda din senaste tagg som är >= 1.0.0 och > 2.0.0.
+1. Committa alla filer till ditt repo och lägg till en ny tagg (1.0.\*). Öka versionnumret om du lägger till ändringar (1.0.1, 1.0.2 och så vidare). Rättaren kommer normalt sett att använda din senaste tagg som är >= 1.0.0 och < 2.0.0.
 
 1. Pusha upp repot till GitHub/GitLab, inklusive taggarna.
 

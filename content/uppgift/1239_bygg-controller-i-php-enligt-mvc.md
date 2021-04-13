@@ -194,7 +194,7 @@ Kraven är uppdelade i sektioner.
 
 1. Dubbelkolla att webbplatsen fungerar på studentservern genom att göra en `dbwebb publishpure me` och testköra den.
 
-1. Committa alla filer till ditt repo och lägg till en ny tagg (2.0.\*). Öka versionnumret om du lägger till ändringar (2.0.1, 2.0.2 och så vidare). Rättaren kommer normalt sett att använda din senaste tagg som är >= 2.0.0 och > 3.0.0.
+1. Committa alla filer till ditt repo och lägg till en ny tagg (2.0.\*). Öka versionnumret om du lägger till ändringar (2.0.1, 2.0.2 och så vidare). Rättaren kommer normalt sett att använda din senaste tagg som är >= 2.0.0 och < 3.0.0.
 
 1. Pusha upp repot till GitHub/GitLab, inklusive taggarna.
 
