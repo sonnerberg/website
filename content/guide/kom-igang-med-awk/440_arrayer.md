@@ -81,3 +81,23 @@ NR==1 { next }
     }
 }
 ```
+
+
+
+### split() {#split}
+
+Det finns en inbyggd funktion som är nyttig att känna till. Vi kan använda `split()` på en sträng och skapa en array. Syntaxen är `split(string, array, [delimiter])`. Om inte avgränsaren är satt, används FS.
+
+```awk
+#!/usr/bin/env awk
+
+{
+    inputstring = "This/could/be/a/string"
+
+    split(inputstring, outputarray, "/")
+
+    print outputarray[2]
+}
+```
+
+Ovan exempel skriver ut `could`.

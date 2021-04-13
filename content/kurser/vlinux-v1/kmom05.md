@@ -51,7 +51,9 @@ Läs lite om [Docker network](https://docs.docker.com/network/).
 
 1. Luta dig mot guiden "[kom igång med Bash](guide/kom-igang-med-bash)".
 
-1. Läs i guiden om "[Regulära uttryck](guide/kom-igang-med-regex/regex_in_bash)".
+1. Läs artikeln om "[Regulära uttryck](kunskap/regex)".
+
+1. Läs stycket om verktyget "sed" i artikeln ["Text processering"](kunskap/text-processering#sed).
 
 
 
@@ -59,7 +61,7 @@ Läs lite om [Docker network](https://docs.docker.com/network/).
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [lab 3](uppgift/vlinux-lab-regex) för att träna upp grundläggande färdigheter i reguljära uttryck i Bash.
+1. Gör uppgiften [lab 3](uppgift/vlinux-lab-sed1) för att träna upp grundläggande färdigheter i reguljära uttryck.sh.
 
 1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete under mappen `kmom05/maze/`.
 

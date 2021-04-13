@@ -13,7 +13,6 @@ Guider i produktionsläge.
 * [Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql)
 * [Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)
 * [Kom igång med Bash](guide/kom-igang-med-bash)
-* [Kom igång med Regex](guide/kom-igang-med-regex)
 * [Docker](guide/docker)
 * [VirtualBox](guide/virtualbox)
 * [Kom igång med SSH](guide/kom-igang-med-ssh)
@@ -24,7 +23,7 @@ Guides in English.
 
 * [VirtualBox](guide/virtualbox_en)
 * [Get started with Bash](guide/get-started-with-bash)
-* [Get started with Regex](guide/get-started-with-regex)
+
 
 Guider under utveckling till hösten 2018.
 

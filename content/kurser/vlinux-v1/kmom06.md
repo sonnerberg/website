@@ -7,7 +7,7 @@ revision:
 Kmom06: Docker Compose
 ==================================
 
-Nu har vi koll på hur vi kan strukturera lite större Bash-script. Vi ska gå vidare med Docker och kika på *Docker Compose*. Det underlättar för oss när Docker konstruktionerna växer. Vi ska ta vår Mazerunner från förra kursmomentet och använda oss utav Docker Compose för att köra igång kontainrarna och nätverket. Vi ska även lägga till lite funktionalitet till Mazerunner. Utöver Bash och Docker Compose ska vi fortsätta titta på reguljära uttryck och hur vi kan arbeta med dem.
+Nu har vi koll på hur vi kan strukturera lite större Bash-script. Vi ska gå vidare med Docker och kika på *Docker Compose*. Det underlättar för oss när Docker konstruktionerna växer. Vi ska ta vår Mazerunner från förra kursmomentet och använda oss utav Docker Compose för att köra igång kontainrarna och nätverket. Vi ska även lägga till lite funktionalitet till Mazerunner. Utöver Bash och Docker Compose ska vi fortsätta titta på reguljära uttryck och verktyget "Awk".
 
 <!--more-->
 
@@ -52,7 +52,7 @@ Genomför följande övningar.
 
 1. Gå igenom delen i guiden som handlar om "[Docker Compose](guide/docker/docker-compose)".
 
-1. Läs i guiden om "[sed](guide/kom-igang-med-regex/sed)".
+1. Läs i guiden om "[awk](guide/kom-igang-med-awk)".
 
 
 
@@ -60,7 +60,7 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [lab 4](uppgift/vlinux-lab-sed1) för att träna upp grundläggande färdigheter i reguljära uttryck.
+1. Gör uppgiften [awk script](uppgift/vlinux-awk) för att träna upp grundläggande färdigheter i verktyget awk. Du arbetar i mappen `awk/`.
 
 1. Gör uppgiften [Spel loop i Mazerunner](uppgift/mazerunner-loop). Du arbetar i mappen `maze2/`.
 
@@ -83,3 +83,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kommer du använda Docker utanför kursens ramar?
 * Gjorde du någon uppdatering av Mazerunnerns struktur?
 * Vad tycker du om regex så här långt?
+* Beskriv dina tankar om awk.
