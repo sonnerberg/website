@@ -29,6 +29,15 @@ Du har installerat Xdebug och kan mäta kodtäckning med phpunit.
 
 
 
+Genomgång {#genom}
+------------------------
+
+Här är en video som "pratar" dig igenom uppgiftens upplägg och visar hur du kommer igång.
+
+[YOUTUBE src="gKzwQTG9eCI" width=700 caption="Kurs mvc kmom03 tisdagsgenomgång, del 3/3 uppgiften (Zoom med Mikael)."]
+
+
+
 Introduktion och förberedelse {#intro}
 -----------------------
 
