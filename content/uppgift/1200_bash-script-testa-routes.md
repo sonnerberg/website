@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2021-04-14": (B, lew) Uppdaterade porten i kravet inför HT21.
     "2019-04-16": (A, lew) Första utgåvan inför HT19.
 ...
 Bash-script som testar serverns routes
@@ -51,6 +52,7 @@ Krav {#krav}
 |-----------------------|-----------------|
 | `-h, --help`          | Skriv ut en hjälptext om hur programmet används. |
 | `-v, --version`       | Visar nuvarande version av programmet. |
+| `-p, --port`          | Sätter porten klienten ska använda mot servern. Välj defaultport själv.|
 | `-s, --save`          | Spara den returnerade datan till `client/saved.data`. Det ska fungera för alla argument.|
 
 
