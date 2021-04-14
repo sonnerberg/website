@@ -44,6 +44,8 @@ Krav {#krav}
 
 1. Använd en main-funktion för att starta programmet.
 
+1. Gör en kontroll om miljövariabeln `DBWEBB_PORT` är satt. Är den det ska den användas mot servern. Annars väljer du port själv.
+
 1. Strukturera koden i olika funktioner.
 
 1. Följande *options* ska fungera:
@@ -52,7 +54,6 @@ Krav {#krav}
 |-----------------------|-----------------|
 | `-h, --help`          | Skriv ut en hjälptext om hur programmet används. |
 | `-v, --version`       | Visar nuvarande version av programmet. |
-| `-p, --port`          | Sätter porten klienten ska använda mot servern. Välj defaultport själv.|
 | `-s, --save`          | Spara den returnerade datan till `client/saved.data`. Det ska fungera för alla argument.|
 
 
