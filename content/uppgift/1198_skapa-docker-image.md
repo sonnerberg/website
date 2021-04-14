@@ -51,7 +51,7 @@ Krav {#krav}
 
 1. Publicera imagen till Docker Hub.
 
-1. Skapa en fil `script/dockerhub.txt` som innehåller *username/imagename:tag*.
+1. Skapa en fil `script/dockerhub.txt` som ENDAST innehåller *username/imagename:tag*.
 
 <!-- 1. Skapa ett script `script/kmom03.bash` som kör din kontainer med rätt namn och tagg. -->
 
