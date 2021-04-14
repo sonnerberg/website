@@ -46,17 +46,19 @@ $ cp -r example/json/items.json me/kmom04/data/
 Krav {#krav}
 -----------------------
 
+Du ska i den här uppgiften jobba i mappen `kmom04/server/`.
+
 1. Bygg en router som kan svara på "routsen" ovan. Alla svar ska vara JSON.
 
-1. Skapa en Dockerfile `server/Dockerfile` och lägg till din server. Mappen med JSON-filen ska läggas till som en volym.
+1. Skapa en Dockerfile `Dockerfile` och lägg till din server i arbetsmappen `/server`. Mappen med JSON-filen ska läggas till som en volym vid exekvering av containern och vara nåbar inuti containern på sökvägen `/server/data`.
 
 1. Bygg din image med namnet *username/vlinux-server:latest* där du använder ditt egna användarnamn.
 
 1. Publicera imagen till Docker Hub.
 
-1. Skapa en fil `server/dockerhub.txt` som innehåller två rader.  
+1. Skapa en fil `dockerhub.txt` som innehåller två rader - porten servern lyssnar på, samt info om din image. Till exempel:  
 ```
-Porten servern lyssnar på
+1337
 username/imagename:tag
 ```
 
@@ -84,4 +86,4 @@ Det finns inga extrauppgifter.
 Tips från coachen {#tips}
 -----------------------
 
-Lycka till och hojta till i forumet om du behöver hjälp!
+Lycka till och hojta till i chatten om du behöver hjälp!
