@@ -47,7 +47,7 @@ All data i filen är automatgenererad och är inga verkliga personer. Skulle det
 
 ### Uppgift {#uppgift}
 
-Du ska skapa en uppsättning awk script. Tänk på att första raden ofta är en form av rubriker. Alla utskrifter ska ha samma formattering som i exemplet. Ett tips är att använda printf() i viss svar.
+Du ska skapa en uppsättning awk script. Tänk på att första raden ofta är en form av rubriker. Alla utskrifter ska ha samma formattering som i exemplet. Ett tips är att använda printf() i vissa svar.
 
 Alla script ska presentera korrekt resultat med kommandot:
 

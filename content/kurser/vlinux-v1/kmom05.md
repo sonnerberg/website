@@ -61,7 +61,7 @@ Läs lite om [Docker network](https://docs.docker.com/network/).
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [lab 3](uppgift/vlinux-lab-sed1) för att träna upp grundläggande färdigheter i reguljära uttryck.sh.
+1. Gör uppgiften [lab3 (sed1)](uppgift/vlinux-lab-sed1) för att träna upp grundläggande färdigheter i sed och reguljära uttryck.
 
 1. Gör uppgiften "[Mazerunner i bash](uppgift/mazerunner-i-bash)". Du sparar ditt arbete under mappen `kmom05/maze/`.
 
@@ -82,3 +82,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur kändes det att skriva ett litet större bash-skript? Var det något som var mer eller mindre utmanande och tidskrävande?
 * Kikade du på källkoden till maze-servern? Har du några reflektioner kring den?
 * Gjorde du nåt speciellt i din mazerunner som du vill lyfta fram?
+* Vad tycker du om regex så här långt?
+* Känner du att du är med på grunderna i verktyget sed?

@@ -82,5 +82,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Känner du dig bekväm med Docker överlag?
 * Kommer du använda Docker utanför kursens ramar?
 * Gjorde du någon uppdatering av Mazerunnerns struktur?
-* Vad tycker du om regex så här långt?
 * Beskriv dina tankar om awk.

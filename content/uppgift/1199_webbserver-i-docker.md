@@ -50,7 +50,13 @@ Du ska i den här uppgiften jobba i mappen `kmom04/server/`.
 
 1. Bygg en router som kan svara på "routsen" ovan. Alla svar ska vara JSON.
 
-1. Skapa en Dockerfile `Dockerfile` och lägg till din server i arbetsmappen `/server`. Mappen med JSON-filen ska läggas till som en volym vid exekvering av containern och vara nåbar inuti containern på sökvägen `/server/data`.
+1. Skapa en Dockerfile `Dockerfile` och lägg till din server i arbetsmappen `/server`.
+
+1. Mappen med JSON-filen ska läggas till som en volym vid exekvering av containern och vara nåbar inuti containern på sökvägen `/server/data`. Du ska till exempel kunna stå i mappen `kmom04` och köra kommandot:
+
+```
+$ docker run --rm -v data/:/server/data/ -p ...
+```
 
 1. Bygg din image med namnet *username/vlinux-server:latest* där du använder ditt egna användarnamn.
 
