@@ -117,6 +117,14 @@ Slides till föreläsningen "[Introduktion till området 'Software Unit Testing'
 
 
 
+<!--
+1. På StackOverflow/StackExchange finns följande funderingar och frågor om enhetstestning besvarade, läs frågorna och de olika svaren för att skapa dig en bild av vad programmerare generellt anser om enhetstestning.
+    * "[Is Unit Testing worth the effort?](https://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort)"
+    * "[Why would you write unit-tests for controllers?](https://softwareengineering.stackexchange.com/questions/338420/why-would-you-write-unit-tests-for-controllers)"
+-->
+
+
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 

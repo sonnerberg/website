@@ -2,142 +2,61 @@
 author:
     - mos
 revision:
-    "2021-03-12": "(PA1, mos) Arbete påbörjat."
+    "2021-04-16": "(A, mos) Första utgåvan."
 ...
 Kmom04: Ramverk
 ==================================
 
-[WARNING]
+Vi skall nu göra en liten miniundersökning av några av de mest populära ramverken inom PHP. Du skall själv välja ett av dem och installera det och komma igång och använda det samt porta en del av din kod och utvecklingsmiljö till ramverket.
 
-**Arbete pågår**
+Ramverk inom PHP är numer uppbyggda enligt liknande modulära strukturer. Men varje ramverk kan ha sin egen lilla nish och vinkel. Även om det finns standardiseringsorgan som PHP-FIG så behöver det inte betyda att ramverken inte tar möjligheten att visa upp sina personliga förmågor.
 
-[/WARNING]
-
-<!--stop-->
-
-Kmom04: Trait och Interface
-==================================
-
-Vi fortsätter med kodande, kodningsstrukturer, testbar kod, enhetstester och objektorienterade konstruktioner i PHP.
-
-Med hjälp av ramverkets struktur flyttar vi vårt 100-spel in i en kontroller-klass som bildar ett gränssnitt mellan ramverkets kärna (klienten) och applikationens kod (100-spelet).
-
-Med en kontroller-klass vinner vi en bättre struktur av våra routes och dessutom hamnar de i en klass som är enklare att testa än de routes med callbacks vi haft tidigare.
-
-Vi jobbar mer och mer att integrera oss i de möjligheter som ramverket ger. Vi använder ramverkets klasser för att få tillgång till GET, POST och SESSION. Tanken är att vi inte skall ha tillgång till dessa globala variabler på ett godtyckligt sätt i varje klass, istället knyter vi accessen till dessa globala PHP systemvariabler via ramverkets klasser. En tanke är att göra det enklare att testa koden genom att mocka värden i dessa globala variabler.
-
-Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod på ett objektorienterat sätt. Det ger oss två nya verktyg för att tänka när vi implementerar koden. När vi tittar på hur kontroller-klassen är specificerad så ser vi hur ramverket använder sig av dessa konstruktioner.
-
-Erfarenheterna från trait och interface använder vi för att vidareutveckla vårt 100-spel med intelligens när vi spelar mot datorn som spelare.
-
-Vi tittar även kort på objektorienterade konstruktioner såsom abstrakta klasser och generalisering av typer.
-
-När detta är gjort så bygger vi vidare på testsuiten för våra klasser, inklusive kontroller-klassen och vi gör `make test` inuti ramverket.
+Det kan alltså kräva att du läser på lite om varje ramverk och deras nisch, innan du väljer väg och gör ditt val.
 
 <!-- more -->
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
+
+
+
+Uppgifter & Övningar {#uppgifter_ovningar}
+-------------------------------------------
+
+*(ca: 10-14 studietimmar)*
+
+Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Lös uppgiften "[Analysera PHP ramverk och välj ut ett att använda](uppgift/analysera-php-ramverk-och-valj-ut-ett-att-anvanda)".
+
+
+
+### Övningar {#ovningar}
+
+Det finns inga övningar i detta kursmoment.
+
+<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
 
 
 
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 3-6 studietimmar)*
+*(ca: 2-8 studietimmar)*
 
+Läsanvisningarna berör följande olika ramverk.
 
+* Symfony
+* Laravel
+* Yii
+* Laminas
 
-### Artiklar {#artiklar}
-
-Läs följande.
-
-1. Vi skall fördjupa oss i ett par objektorienterade konstruktioner. Vi kan läsa om dessa i PHP-manualen "[Klasser och Objekt](http://php.net/manual/en/oop5.intro.php)". Börja med att studera dessa i manualen.
-    * [Static Keyword](https://www.php.net/manual/en/language.oop5.static.php)
-    * [Class Abstraction](https://www.php.net/manual/en/language.oop5.abstract.php)
-    * [Object Interfaces](https://www.php.net/manual/en/language.oop5.interfaces.php)
-    * [Traits](https://www.php.net/manual/en/language.oop5.traits.php)
-    * [Anonymous classes](https://www.php.net/manual/en/language.oop5.anonymous.php#language.oop5.anonymous)
-
-
-
-### Enhetstestning {#test}
-
-Läs följande.
-
-1. På StackOverflow/StackExchange finns följande funderingar och frågor om enhetstestning besvarade, läs frågorna och de olika svaren för att skapa dig en bild av vad programmerare generellt anser om enhetstestning.
-    * "[Is Unit Testing worth the effort?](https://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort)"
-    * "[Why would you write unit-tests for controllers?](https://softwareengineering.stackexchange.com/questions/338420/why-would-you-write-unit-tests-for-controllers)"
-
-
-
-### Objektorientering {#oo}
-
-Läs följande.
-
-1. Läs igenom den korta artikeln "[Martin Fowler: Tell Dont Ask](https://martinfowler.com/bliki/TellDontAsk.html)" som ger en insikt i objektorienterat tänkade och hur man delvis kan tänka när man strukturerar sina objekt och var man väljer att lägga sin kod.
-
-
-
-### Ramverk Anax {#anax}
-
-Vi fortsätter att jobba med modulerna i ramverket Anax, du kan några av dem sedan tidigare och i detta kursmomentet tillkommer moduler `anax/commons` och `anax/controller`. Använd respektive moduls README som referensdokumentation.
-
-Modulen `anax/commons` innehåller "limmet" som knyter ihop olika Anax moduler och det finns flera andra Anax moduler som är beroende av denna.
-
-Modulen `anax/controller` ger dig ett par exempel till hur en kontroller-klass kan utformas.
-
-* [anax/commons](https://github.com/canax/commons)
-* [anax/controller](https://github.com/canax/controller)
-* [anax/request](https://github.com/canax/request)
-* [anax/response](https://github.com/canax/response)
-* [anax/router](https://github.com/canax/router)
-* [anax/session](https://github.com/canax/session)
-* [anax/view](https://github.com/canax/view)
-
-
-
-### Video {#video}
-
-Det finns generellt kursmaterial i video form.
-
-1. Kursen innehåller genomgångar och föreläsningar som spelas in (streamas) och därefter läggs i en spellista. Du kan nå spellistan på "[oophp streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-igucRSQ6tFYg9x8to5HiE)".
-
-1. Uppgifter och övningar kan innehålla extra videomaterial i form av spellistor kopplade till respektive artikel. Ofta syns dessa videor i inledningen av artikeln.
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-14 studietimmar)*
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
-
-1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)"jobbar du igenom följande del. Spara koden i `me/guide`.
-    * [Trait och Interface](guide/kom-igang-med-objektorienterad-programmering-i-php/trait-och-interface)
-
-1. Gör uppgift "[Uppdatera 100-spelet med intelligens och kontroller](uppgift/uppdatera-100-spelet-med-intelligens-och-kontroller)" och spara filerna i `me/redovisa`.
-
-1. Pusha och tagga ditt repo `me/redovisa` allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med alla uppgifter och redovisningstext i kursmomentet. Gör även en avslutande `make test` som en sista avstämning, innan du sätter sista taggen.
-
-<!--
-Guiden saknar
-* magisk metoder
-* abstrakt klass
-* Generalisering av typer
-* static
-
-Howto controller-klassen
-README router, controller
-
-Bygg labb där man övar på begreppen?
-Eller bygg ut guiden så att övningen finns i guiden?
-
--->
+Läsresurserna är samlade längst ned i detta dokumentet under rubriken "Resurser bra-att-ha".
 
 
 
@@ -146,13 +65,97 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denna kursen skiljer sig från hur du normalt sett lämnar in din redovisningstext.
 
-Se till att följande frågor besvaras i texten:
+Se till att följande frågor besvaras i texten i din rapport:
 
-* Vilka är dina tankar och funderingar kring trait och interface?
-* Är du sedan tidigare bekant med begreppet kontroller eller är det nytt och oavsett vad, hur känner du inför begreppet?
-* Hur gick det att skapa intelligensen och taktiken till tärningsspelet, hur gjorde du?
-* Några reflektioner från att integrera hårdare in i ramverkets klasser och struktur?
-* Berätta hur väl du lyckades med `make test` inuti ramverket och hur väl du lyckades att testa din kod med enhetstester (med eller utan kontrollerklassen) och vilken kodtäckning du fick.
+* Berätta hur du tog dig an uppgiften och valde bland ramverken, vad lät du styra dina val och vilka ramverk valde du bland och vad gjorde att du slutligen valde ditt ramverk?
+
+* När du kom in i ramverket och började installerade det, hur gick det? Var dokumentationen stöttande och kändes terminologin bekant sedan tidigare?
+
+* Vilka delar och hur mycket av din föregående kod, utvecklingsmiljö och testfall lyckades du porta till ramverket och fanns det svårigheter i det arbetet?
+
+* Vilka är dina viktigaste lärdomar från det ramverket du valde? Fundera gärna på dokumentationen, hur det gick att installera och komma igång och om det krävdes en högs tröskel innan du kunde skapa din första webbsida.
+
 * Vilken är din TIL för detta kmom?
+
+
+
+Resurser bra-att-ha {#resurser}
+---------------------------------
+
+Här anges övriga resurser som kan användas för vidare studier i det som kursmomentet omfattar.
+
+
+
+### Symfony {#symfony}
+
+Resurser för Symfony.
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Symfony)
+* [Webbplats](https://symfony.com/)
+* [Dokumentation](https://symfony.com/doc/current/index.html)
+* [GitHub organisation](https://github.com/symfony)
+* [Git repo](https://github.com/symfony/symfony)
+* [Fabien Potencier](http://fabien.potencier.org/about.html)
+
+Symfony utvecklades ursprungligen av Fabian Potencier och det är han som nu leder det franska företaget SensioLabs som står bakom ramverket.
+
+Symfony är ett modulärt ramverk som har funnits länge, är "komplett" med många moduler och tillval.
+
+Detta kan vara standardvalet för uppgiften, om du inte riktigt vet vad du skall välja.
+
+
+
+### Laravel {#laravel}
+
+Resurser för Laravel.
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Laravel)
+* [Webbplats](https://laravel.com/)
+* [Dokumentation](https://laravel.com/docs/)
+* [GitHub organisation](https://github.com/laravel)
+* [Git repo](https://github.com/laravel/laravel)
+* [Taylor Otwell](https://twitter.com/taylorotwell)
+
+Taylor Otwell är skaparen bakom Laravel och hand är bosatt i staten Arkansas i USA.
+
+Laravel bygger på Symfony i botten och lägger till ett ett lager av syntaktsiskt socker som är tänkt att låta programmeraren skriva enklare kod.
+
+Om du vill ha ett ramverk med extra-allt och du gillar ett lager av syntaktiskt socker, då är detta valet för dig.
+
+
+
+### Yii framework {#yii}
+
+Resurser för Yii framework.
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Yii)
+* [Webbplats](https://www.yiiframework.com/)
+* [Dokumentation](https://www.yiiframework.com/doc/guide/2.0/en)
+* [GitHub organisation](https://github.com/yiisoft)
+* [Git repo](https://github.com/yiisoft/yii2)
+* [Alexander Makarov: De tidiga åren](https://en.rmcreative.ru/blog/the-history-of-yii-framework/)
+
+Yii har sitt ursprung i kinesiska och ryska utvecklare och Alexander Makarov är en av ramverkets utvecklare.
+
+Yii är ett komplett ramverk och allt finns inkluderat.
+
+Nuvarande versionen har några år på nacken och kanske ser vi inte uppenbara spår av de senaste PSR standarderna eller modulariteten, även om Yii deltar i PHP-FIG. Men manualen är bra och ramverket ser ut lite "som ramverk såg ut för 5 år sedan".
+
+
+
+### Laminas {#laminas}
+
+Resurser för Laminas.
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Laminas)
+* [Webbplats](https://getlaminas.org/)
+* [Dokumentation](https://docs.laminas.dev/)
+* [GitHub organisation](https://github.com/laminas)
+* [Git repo](https://github.com/laravel/laravel)
+* [Andi Gutmans](https://en.wikipedia.org/wiki/Andi_Gutmans) and [Zeev Suraski](https://en.wikipedia.org/wiki/Zeev_Suraski)
+
+Andi Gutman och Zeev Suraski är två israelier som byggde PHP 3 och PHP 4 och samtidigt startade företaget Zend som varit drivande inom PHP sedan dess.
+
+Inom Lamina projektet finns bland annat [`mezzio`](https://github.com/mezzio/mezzio) som ger en bas till den som gärna vill komponera sitt eget ramverk enligt PSR standarder och välja bland komponenter, även från externa leverantörer.
