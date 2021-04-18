@@ -29,7 +29,7 @@ Börja med att kopiera din lager app från kmom01, om du inte gjorde det i övni
 
 ```bash
 # stå i me-katalogen
-cp kmom01/lager1/* kmom02/lager2/
+cp -r kmom01/lager1/* kmom02/lager2/
 ```
 
 Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om order. Här kan du hämta ut ordern och alla orderrader. När du ska uppdatera lagersaldot använder du dig av `PUT` HTTP-metoden för produkterna.

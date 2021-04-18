@@ -20,7 +20,7 @@ Du kan med fördel strukturera upp koden från uppgiften [Lager appen del 1](upp
 
 ```bash
 # stå i me-katalogen
-cp kmom01/lager1/* kmom02/lager2/
+cp -r kmom01/lager1/* kmom02/lager2/
 ```
 
 I den andra delen av artikeln från och med [Återanvända data](#caching) tittar vi ytterligare på hur vi kan strukturera vår kod. Vi delar upp hämtningen av data och renderingen av element i webbläsaren, så vi får kod som är lättare att återanvända.
