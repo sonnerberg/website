@@ -5,6 +5,7 @@ category:
     - python
     - lab
 revision:
+    "2021-04-20": (G, aar) Uppdaterade titel namn.
     "2018-06-29": (F, aar) Uppdaterade mappstruktur mot kursrepo.
     "2017-08-28": (E, mos) Bort med stycke om extrauppgifter.
     "2017-06-14": (D, efo) Uppdaterade till ny kursstruktur med funktioner i kmom03.
@@ -12,7 +13,7 @@ revision:
     "2014-08-27": (B, mos) Gneomgången och uppdaterad inför kursstart.
     "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.
 ...
-Python med funktioner
+Python med funktioner och moduler
 ==================================
 
 Vi ska i denna laboration träna på funktioner, argument och returvärden i Python.
