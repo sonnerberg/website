@@ -44,25 +44,25 @@ cp -ri kmom02/marvin1/marvin.py kmom03/marvin2/
 cd kmom03/marvin2
 ```
 
-2. Skapa filen `main.py`, den skall innehålla koden för att starta din while-loop. Skapa funktionen `main` som innehåller koden för din loop. Din main fil skall sedan kalla på denna funktion i villkoret `if __name__ == "__main__"` som du lägger längst ner i main.py som startar den.
+2. Skapa filen `main.py`, den skall innehålla koden för att starta ditt program. Skapa **funktionen** `main` som innehåller koden för din while-loop. Din main fil skall sedan kalla på `main` funktion i blocket för villkoret `if __name__ == "__main__"` som du lägger längst ner i main.py.
 
-3. Flytta all kod dina nuvarande och nya menyval till `marvin.py`, dessa skall sparas i funktioner som du kallar på när ett menyval ha gjorts. Importera marvin.py i main.py och skapa följande funktioner för menyval **1 till 7**.
+3. Koden för dina menyval ska nu ligga i `marvin.py`. Flytta all kod för dina nuvarande menyval till `marvin.py`, dessa skall sparas i funktioner som du kallar på när ett menyval ha gjorts i programmet. Importera `marvin.py` i `main.py` och strukturera om koden för de gamla menyvalen så att de läggs i en varsin funktion, med **följande namn**.
   * Menyval 1 - `greet`
   * Menyval 2 - `celcius_to_farenheit`
   * Menyval 3 - `word_manipulation`
   * Menyval 4 - `sum_and_avrage`
   * Menyval 5 - `compare_numbers`
-  * Menyval 6 - `hyphen_string`
+  * Menyval 6 - `hyphen_string` * Tips, gör denna i samband med menyval **11**, (krav 7).
   * Menyval 7 - `is_isogram`
 
 Om du har gjort några av extrauppgifterna från föregående kursmoment så kan du döpa dem till ett valfritt namn.
 
-**Alla** `input()` och `print()` som funktionerna använder sig av skall ligga i funktionen och inte i main programmet.  
+**Alla** `input()` och `print()` som används i menyvalen skall ligga i funktionen för menyvalet och inte i main programmet.  
 Det är OK att bryta ut din kod till flera mindre funktioner så länge de används i funktionen som efterfrågas.
 
-4. Menyval **8** - `randomize_string`: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut.
+4. Menyval **8** - `randomize_string`: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut. Tips [random modulen](https://docs.python.org/3.8/library/random.html).
 
-5. Menyval **9** - `anagram`: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
+5. Menyval **9** - `anagram`: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Läsningen ska inte vara case-sensitive, med andra ord `A == a`. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
 ```python
 input: "Anagram", "Magarna"     output: "Match"
 input: "Paris", "sirap"         output: "Match"
@@ -80,6 +80,14 @@ input: "Ingvar Kamprad Elmtaryd Agunnaryd"  output: "IKEA"
 input: "4556364607935616"     output: "############5616"
 input: "64607935616"          output: "#######5616"
 ```
+
+Till detta menyvalet ska du också skapa funktionen `multiply_str`. `multiply_str` funktionen ska ta emot två argument, det första ska vara en sträng och det andra ett heltal. Funktionen ska multiplicera strängen med heltalet och returnera strängen som skapas.
+
+Skriv koden i `mask_string` så att `multiply_str` används för att skapa delen av strängen med `#`.
+
+Använd också `multiply_str` i funktionen för menyval **6**. Använd `multiply_str` upprepa varje bokstav.
+
+
 
 8. Testa, validera och publicera din kod enligt följande.
 
@@ -103,7 +111,7 @@ För att inkludera dina extrauppgifter i testerna behöver du skicka med option 
 
 * Menyval **b1** - `points_to_grade`: Poäng till betyg, Marvin ska fråga efter maxpoäng samt dina poäng och sedan ska Marvin skriva ut vilket betyg dina poäng motsvarade. Kika på övning 3.3 i boken [Python for Informatics](kunskap/boken-python-for-informatics-exploring-information).
 
-* Menyval **b2** - `has_strings`: Gör så Marvin kan ta emot fyra strängar, den första strängen ska jämföras med de andra tre. Kolla om den första strängen börjar med den andra, innehåller den tredje och slutar med den sista. Tips, [startswith()](https://docs.python.org/3/library/stdtypes.html#str.startswith), [endswith()](https://docs.python.org/3/library/stdtypes.html#str.endswith) Exempel:
+* Menyval **b2** - `has_strings`: Gör så Marvin kan ta emot fyra strängar, den första strängen ska jämföras med de andra tre. Kolla om den första strängen börjar med den andra, innehåller den tredje och slutar med den sista. Lösningen ska vara case-sensitive, med andra ord `A != a`. Tips, [startswith()](https://docs.python.org/3/library/stdtypes.html#str.startswith), [endswith()](https://docs.python.org/3/library/stdtypes.html#str.endswith) Exempel:
 ```python
 input: "anagram", "ana", "agr", "am"        output: "Match"
 input: "isogram", "is", "gra", "m"          output: "Match"
