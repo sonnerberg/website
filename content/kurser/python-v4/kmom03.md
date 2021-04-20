@@ -14,7 +14,7 @@ revision:
     "2014-09-08": (B, mos) Första publika releasen.
     "2014-08-27": (A, mos) Första utgåvan för python kursen.
 ...
-Kmom04: Funktioner och moduler
+Kmom03: Funktioner och moduler
 ==================================
 
 I detta kursmoment ska vi kolla på hur vi kan strukturera koden så den blir mer effektiv och mer lättläst. Du introduceras till funktioner och hur de kan underlätta för att återanvända koden och moduler för att strukturera koden i flera filer. Vi kommer i övningar och uppgifter träna på hur vi skriver funktioner med och utan argument och hur vi skickar tillbaka data från funktioner. Till slut vidareutvecklar vi Marvin så han kan svara på ännu fler frågor.
@@ -78,11 +78,11 @@ Titta på följande:
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden-v2)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions`.
+1. Jobba igenom artikeln/övningen "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" för att träna på hur du skapar funktioner. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`.
 
-1. Jobba igenom övningen "[LEGB regeln och scopes i Python](kunskap/legb-regeln-och-scopes)" som handlar hur python hanterar scope och vart variabler är tillgängliga. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions`
+1. Jobba igenom övningen "[LEGB regeln och scopes i Python](kunskap/legb-regeln-och-scopes)" som handlar hur python hanterar scope och vart variabler är tillgängliga. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions`
 
-1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python-v2)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/functions` då koden bygger på förra övningen.
+1. Jobba igenom artikeln/övningen "[Moduler i Python](kunskap/moduler-i-python)" för att bekanta dig med ett sätt att strukturera koden i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/functions` då koden bygger på förra övningen.
 
 1. Fortsätt med del 4 och 5 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern. Alternativ fortsätt använda Thonny, det är som en grafisk debugger.
 
@@ -92,9 +92,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med funktioner och moduler](uppgift/python-med-funktioner-och-moduler-v2)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom04/lab4`.
+1. Gör uppgiften "[Python med funktioner och moduler](uppgift/python-med-funktioner)" för att träna på olika typer av funktioner, med och utan argument. Spara alla filer under `me/kmom03/lab3`.
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2-v4)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom04/marvin3`.
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2-v4)" för att träna på strukturering av dina program. Spara alla filer under `me/kmom03/marvin2`.
 
 
 
@@ -117,6 +117,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur kan du använda funktioner när du programmerar?
 * Du har gjort din första modul i Python, känns strukturen bra?
 * Hur kan du använda moduler?
-* Vad tyckte du om de olika uppgifterna?
 * Hur tänkte du när du utförde dem?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
