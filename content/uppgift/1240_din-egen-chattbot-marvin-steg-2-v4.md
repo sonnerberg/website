@@ -49,10 +49,10 @@ cd kmom03/marvin2
 3. Koden för dina menyval ska nu ligga i `marvin.py`. Flytta all kod för dina nuvarande menyval till `marvin.py`, dessa skall sparas i funktioner som du kallar på när ett menyval ha gjorts i programmet. Importera `marvin.py` i `main.py` och strukturera om koden för de gamla menyvalen så att de läggs i en varsin funktion, med **följande namn**.
   * Menyval 1 - `greet`
   * Menyval 2 - `celcius_to_farenheit`
-  * Menyval 3 - `word_manipulation`
+  * Menyval 3 - `word_manipulation` * Tips, gör denna i samband med menyval **11**, (krav 7).
   * Menyval 4 - `sum_and_avrage`
   * Menyval 5 - `compare_numbers`
-  * Menyval 6 - `hyphen_string` * Tips, gör denna i samband med menyval **11**, (krav 7).
+  * Menyval 6 - `hyphen_string`
   * Menyval 7 - `is_isogram`
 
 Om du har gjort några av extrauppgifterna från föregående kursmoment så kan du döpa dem till ett valfritt namn.
@@ -85,7 +85,7 @@ Till detta menyvalet ska du också skapa funktionen `multiply_str`. `multiply_st
 
 Skriv koden i `mask_string` så att `multiply_str` används för att skapa delen av strängen med `#`.
 
-Använd också `multiply_str` i funktionen för menyval **6**. Använd `multiply_str` upprepa varje bokstav.
+Använd också `multiply_str` i funktionen för menyval **3**.
 
 
 
