@@ -65,7 +65,7 @@ Om man anger ett för högt index i pick kommandot skall den inte plocka upp nå
 När ett av dessa fel uppstår skall funktionerna returnera den originella ryggsäcken.
     - Tags: `error`
 
-Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad som helst. Nedan visas `flower`, `book` och `0` **enbart som exempel**.
+Följande kommandon skall fungera. Notera att Marvin ska kunna plocka upp vad som helst. Nedan visas `flower`, `book` och `0` **enbart som exempel**, `bag` motsvarar Marvins ryggsäck.
 
 | Kommando               | Vad händer                                                                  | Kallar på                     |
 |------------------------|:----------------------------------------------------------------------------|-------------------------------|
