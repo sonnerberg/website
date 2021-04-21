@@ -115,7 +115,7 @@ I detta kursmoment tittar vi hur vi kan använda funktioner för att strukturera
 
 
 
-###Kmom04: Listor {#kmom03}
+###Kmom04: Listor {#kmom04}
 
 Lär dig grunderna i datastrukturen listor. En *lista* är en linjär datastruktur som är inbyggd i Python. Värdena i en lista behöver inte vara av samma typ, utan kan variera, beroende på vilket användningsområde den används i. Du använder sedan dina kunskaper och praktiska färdigheter för att utöka funktionaliteten i Marvin.
 
