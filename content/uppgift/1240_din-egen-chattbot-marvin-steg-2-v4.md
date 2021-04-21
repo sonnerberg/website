@@ -50,7 +50,7 @@ cd kmom03/marvin2
   * Menyval 1 - `greet`
   * Menyval 2 - `celcius_to_farenheit`
   * Menyval 3 - `word_manipulation` * Tips, gör denna i samband med menyval **11**, (krav 7).
-  * Menyval 4 - `sum_and_avrage`
+  * Menyval 4 - `sum_and_average`
   * Menyval 5 - `compare_numbers`
   * Menyval 6 - `hyphen_string`
   * Menyval 7 - `is_isogram`
