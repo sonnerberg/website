@@ -193,7 +193,7 @@ För att installera SASS kan vi använda oss av `npm`.
 ```bash
 # Stå i me/kmom02/buttons
 npm init --yes
-npm install --save sass
+npm install --save-dev sass
 ```
 
 Kommandot `npm init --yes` skapar en fil `package.json` som är en konfigurationsfil för projekt som använder sig av npm.
