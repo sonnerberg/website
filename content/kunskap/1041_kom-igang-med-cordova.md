@@ -65,15 +65,7 @@ Vi tar en titt på vad för mappar och filer som har skapats.
 $ tree hello -L 2
 hello
 ├── config.xml
-├── hooks
-│   └── README.md
 ├── package.json
-├── platforms
-├── plugins
-├── res
-│   ├── icon
-│   ├── README.md
-│   └── screen
 └── www
     ├── css
     ├── img
@@ -83,13 +75,13 @@ hello
 
 * **config.xml**: Configurerar appen. I den kan du ändra beteendet av appen och ändra titel, beskrivning och skapare av appen. [Dokumentation](https://cordova.apache.org/docs/en/latest/config_ref/index.html) för de som vill gräva ner sig.
 
-* **package.json**: Är som tidigare paket filen för npm.
+<!-- * **package.json**: Är som tidigare paket filen för npm.
 
 * **hook**: Här kan vi lägga in skript som vi vill ska ingå i Cordovas skripts. T.ex. om vi vill lägga till ett skript till `build` kommandot.
 
 * **platforms**: Här finns källkoden för alla platformar, som vi lägger till i projektet. Vi kommer ha källkod för Android och Browser. Oftast ska/behöver man inte ändra på någon av den koden.
 
-* **plugins**: Plugin vi lägger till i projektet kommer kopieras hit.
+* **plugins**: Plugin vi lägger till i projektet kommer kopieras hit. -->
 
 * **www**: Här vi kommer jobba och ändra saker. Innehåller vår källkod för webb delen, HTML, CSS och JavaScript.
 
@@ -159,29 +151,20 @@ Längst ner i `body` inkluderar vi två JavaScript filer. `index.js` filen komme
 Vi går vidare och inspekterar `index.js`. Jag har tagit bort kommentarerna.
 
 ```js
-var app = {
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-    },
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+document.addEventListener('deviceready', onDeviceReady, false);
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+function onDeviceReady() {
+    // Cordova is now initialized. Have fun!
 
-        console.log('Received Event: ' + id);
-    }
-};
-app.initialize();
+    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+    document.getElementById('deviceready').classList.add('ready');
+}
 ```
 
-Vanlig JavaScript kod, ett objekt med tre funktioner. Det intressanta här är event lyssnaren som lyssnar efter `deviceready`. `deviceready` är ett event från Cordova som meddelar när appen är färdig laddad och det går att använda Cordovas plugins. Vi kommer utgå från funktionen `onDeviceReady` som startpunkt för vår kod.
-Koden som finns där nu döljer `<p>` taggen med innehållet `Connecting to Device` och gör `<p>` taggen som innehåller `Device is ready` synlig.
+Vi ser att detta är helt vanlig JavaScript kod. En funktion och en `EventListener`. Funktionen kopplas till `EventListener` och den anropas när eventet `deviceready` skickas av Cordova.
+
+<!-- Vanlig JavaScript kod, ett objekt med tre funktioner. Det intressanta här är event lyssnaren som lyssnar efter `deviceready`. `deviceready` är ett event från Cordova som meddelar när appen är färdig laddad och det går att använda Cordovas plugins. Vi kommer utgå från funktionen `onDeviceReady` som startpunkt för vår kod.
+Koden som finns där nu döljer `<p>` taggen med innehållet `Connecting to Device` och gör `<p>` taggen som innehåller `Device is ready` synlig. -->
 
 Cordova har fler events vi kan utnyttja, här kan du läsa om [de olika eventen](https://cordova.apache.org/docs/en/latest/cordova/events/events.html). Det finns bl.a. `pause` som aktiveras när appen läggs i bakgrunden och `resume` som aktiveras när appen plockas fram från bakgrunden.
 
@@ -269,9 +252,8 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './js/index.js',
-    devtool: 'inline-source-map',
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     ],
@@ -311,16 +293,13 @@ I filen `www/js/index.js` som är vår ingångspunkt i appen importerar vi mithr
 import m from "mithril";
 import hello from "./views/hello.js";
 
-var app = {
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-    onDeviceReady: function() {
-        m.mount(document.body, hello);
-    }
-};
+document.addEventListener('deviceready', onDeviceReady, false);
 
-app.initialize();
+function onDeviceReady() {
+    // Cordova is now initialized. Have fun!
+
+    m.mount(document.body, hello);
+}
 ```
 
 Nedan syns hello vyn.
@@ -353,8 +332,11 @@ När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `c
 ```js
 // www/js/index.js
 
-onDeviceReady: function() {
-    console.log("Ready to take off");
+document.addEventListener('deviceready', onDeviceReady, false);
+
+function onDeviceReady() {
+    // Cordova is now initialized. Have fun!
+    console.log("Ready to take off!")
 
     m.mount(document.body, hello);
 }
