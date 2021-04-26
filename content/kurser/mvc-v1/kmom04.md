@@ -42,12 +42,29 @@ Det finns inga övningar i detta kursmoment.
 
 <!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
 
+<!--
+
+Pusha för övningen, exempelkoden som finns, gör den till en mer enhetlig applikation som skall fungera i varje ramverk och inkludera session, post, form, post/get, exception, , views, url, redirect, flash
+
+Spela in video om hur man jobbar igenom övningen.
+
+Lägg till Slim.
+
+-->
+
 
 
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 2-8 studietimmar)*
+
+<!--
+Spela in föreläsning om de olika ramverken och deras ursprung.
+Lite historik om ramverk.
+Statistik.
+Affärsmodeller kontra opensource.
+-->
 
 Läsanvisningarna berör följande olika ramverk.
 
@@ -149,6 +166,10 @@ Nuvarande versionen har några år på nacken och kanske ser vi inte uppenbara s
 
 Resurser för Laminas.
 
+<!--
+https://discourse.laminas.dev/
+-->
+
 * [Wikipedia](https://en.wikipedia.org/wiki/Laminas)
 * [Webbplats](https://getlaminas.org/)
 * [Dokumentation](https://docs.laminas.dev/)
@@ -159,3 +180,10 @@ Resurser för Laminas.
 Andi Gutman och Zeev Suraski är två israelier som byggde PHP 3 och PHP 4 och samtidigt startade företaget Zend som varit drivande inom PHP sedan dess.
 
 Inom Lamina projektet finns bland annat [`mezzio`](https://github.com/mezzio/mezzio) som ger en bas till den som gärna vill komponera sitt eget ramverk enligt PSR standarder och välja bland komponenter, även från externa leverantörer.
+
+
+<!--
+### Slim {#slim}
+
+Resurser för Slim.
+-->
