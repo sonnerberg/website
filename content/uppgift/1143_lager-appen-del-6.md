@@ -28,7 +28,7 @@ Börja med att kopiera din lager app från kmom05 så har du nått att utgå ifr
 
 ```bash
 # stå i me-katalogen
-cp kmom05/lager5/* kmom06/lager6/
+cp -r kmom05/lager5/* kmom06/lager6/
 ```
 
 Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om ordrar. Här kan du hämta ut alla ordrar.
