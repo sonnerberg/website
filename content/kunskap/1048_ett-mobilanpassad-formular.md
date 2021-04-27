@@ -263,7 +263,7 @@ let bakedGoodsForm = {
             }, bakery.cakeTypes.map(function(cakeType) {
                 return m("option", { value: cakeType }, cakeType);
             })),
-            m("input[type=submit][value=Save].button", "Spara")
+            m("input[type=submit][value=Spara].button")
         ]));
     }
 };
