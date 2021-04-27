@@ -3,6 +3,7 @@ author: mos
 category:
     - kurs mvc
 revision:
+    "2021-04-27": "(B, mos) Stryk kravet om tärningssida, räcker med att man portar spelet."
     "2021-04-16": "(A, mos) Första utgåvan."
 ...
 Analysera PHP ramverk och välj ut ett att använda
@@ -77,7 +78,7 @@ Kraven är uppdelade i sektioner.
 
 1. Installera och skapa en landningssida med en meny så man kan förflytta sig mellan sidorna på din webbplats.
 
-1. Skapa en sida där man kan rulla din tärning och eller tärningshand.
+1. <s>Skapa en sida där man kan rulla din tärning och eller tärningshand.</s> Gör denna som övning, inte nödvändig när du väl lyckats porta ditt spel.
 
 1. Porta spelet 21 och/eller Yatzy till ramverket. Välj båda om du känner att du har koll på det här.
 
