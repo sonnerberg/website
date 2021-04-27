@@ -60,19 +60,8 @@ Det finns inga övningar i detta kursmoment.
 <!--
 Följande övningar kan förbereda dig inför uppgiften.
 
-1. Om du valt MySQL/MariaDB som databas så finns det en övning som visar hur du kommer igång med BTHs labbmiljö.
-
-    * [BTH’s labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)
-
-1. Vill du fräscha upp minnet om SQLite så finns det resurser som använts i tidigare kurser.
-
-    * [Kom igång med databasen SQLite med DB Browser för SQLite](kunskap/kom-igang-med-databasen-sqlite-med-db-browser-for-sqlite)
-    * [Kom igång med SQLite och PHP PDO](kunskap/kom-igang-med-sqlite-och-php-pdo)
+1. I kursrepot under [`example/orm`](https://github.com/dbwebb-se/mvc/tree/main/example/orm) ligger exempelkod som visar hur du kommer igång med olika ORM och ramverk.
 -->
-
-<!-- Fixa övning för diverse orm -->
-
-<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
 
 
 
@@ -83,7 +72,8 @@ Läs & Studera  {#lasanvisningar}
 
 <!--
 
-* Föreläsning om ORM, DAO och liknande patterns
+* Föreläsning om ORM, DAO och liknande patterns (se föreläsning 05)
+
 * Föreläs och visa Doctrine (bygg ut Anax database så att den kan användas som QB & AR implementation)
 
 -->
