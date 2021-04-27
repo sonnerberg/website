@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2021-04-27": "(B, mos) Förtydliga att övning finns."
     "2021-04-16": "(A, mos) Första utgåvan."
 ...
 Kmom04: Ramverk
@@ -38,9 +39,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 ### Övningar {#ovningar}
 
-Det finns inga övningar i detta kursmoment.
+Följande övningar kan förbereda dig inför uppgiften.
 
-<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
+1. I kursrepot under [`example/framework`](https://github.com/dbwebb-se/mvc/tree/main/example/framework) ligger exempelkod som visar hur du kommer igång med de olika ramverken och skapar egna vyer, routes och hur du publicerar till studentservern.
 
 <!--
 
