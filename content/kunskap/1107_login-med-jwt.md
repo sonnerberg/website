@@ -166,7 +166,7 @@ let login = {
                     },
                     value: auth.password
                 }),
-                m("input.button.green-button[type=submit][value=Logga in].button", "Logga in")
+                m("input.button.green-button[type=submit][value=Logga in].button")
             ]));
     }
 };
