@@ -260,6 +260,8 @@ Lärarstöd och handledning {#handledning}
 
 Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
 
+Ofta ställda frågor (FAQ) finns på [GitHub issues](https://github.com/dbwebb-se/webapp/issues?q=is%3Aopen+is%3Aissue+label%3Afaq).
+
 
 
 Betygsättning {#betyg}
