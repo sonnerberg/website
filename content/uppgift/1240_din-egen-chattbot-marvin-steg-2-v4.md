@@ -46,7 +46,7 @@ cd kmom03/marvin2
 
 2. Skapa filen `main.py`, den skall innehålla koden för att starta ditt program. Skapa **funktionen** `main` som innehåller koden för din while-loop. Din main fil skall sedan kalla på `main` funktion i blocket för villkoret `if __name__ == "__main__"` som du lägger längst ner i main.py.
 
-3. Koden för dina menyval ska nu ligga i `marvin.py`. Flytta all kod för dina nuvarande menyval till `marvin.py`, dessa skall sparas i funktioner som du kallar på när ett menyval ha gjorts i programmet. Importera `marvin.py` i `main.py` och strukturera om koden för de gamla menyvalen så att de läggs i en varsin funktion, med **följande namn**.
+3. Koden för dina menyval ska nu ligga i `marvin.py`. Flytta all kod för dina nuvarande menyval till `marvin.py`, dessa skall sparas i funktioner som du kallar på när ett menyval ha gjorts i programmet. Importera `marvin.py` i `main.py` och strukturera om koden för de gamla menyvalen så att de läggs i en varsin funktion, med **följande namn**. Dessa funktionerna har utöver sitt menyval som tag också "marvin1" som tag.
   * Menyval 1 - `greet`
   * Menyval 2 - `celcius_to_farenheit`
   * Menyval 3 - `word_manipulation` * Tips, gör denna i samband med menyval **11**, (krav 7).
@@ -60,9 +60,17 @@ Om du har gjort några av extrauppgifterna från föregående kursmoment så kan
 **Alla** `input()` och `print()` som används i menyvalen skall ligga i funktionen för menyvalet och inte i main programmet.  
 Det är OK att bryta ut din kod till flera mindre funktioner så länge de används i funktionen som efterfrågas.
 
-4. Menyval **8** - `randomize_string`: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut. Tips [random modulen](https://docs.python.org/3.8/library/random.html).
 
-5. Menyval **9** - `anagram`: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Läsningen ska inte vara case-sensitive, med andra ord `A == a`. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
+- Tags: `struct`. Kör tester som kollar att "marvin.py" och "main.py" finns och att funktionen "main()" finns i "main.py"
+
+4. Menyval **8** - `randomize_string`: Kasta om bokstäver. Marvin ska be dig skriva in ett ord som sedan slumpmässigt kastas om. Det omkastade ordet ska sedan skrivas ut i formatet `<orginal sträng> --> <slumpad sträng>`. Lösningen ska vara case-sensitive, med andra ord `A != a`. Tips [random modulen](https://docs.python.org/3.8/library/random.html).
+```python
+input: "Hej"                        output: "Hej --> jHe"
+input: "Borde inte bli samma igen"  output: "Borde inte bli samma igen --> eel gn rtm dBmibo saiiane"
+```
+
+
+5. Menyval **9** - `anagram`: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Lösningen ska inte vara case-sensitive, med andra ord `A == a`. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
 ```python
 input: "Anagram", "Magarna"     output: "Match"
 input: "Paris", "sirap"         output: "Match"
@@ -109,7 +117,20 @@ För att inkludera dina extrauppgifter i testerna behöver du skicka med option 
 [/INFO]
 
 
-* Menyval **b1** - `points_to_grade`: Poäng till betyg, Marvin ska fråga efter maxpoäng samt dina poäng och sedan ska Marvin skriva ut vilket betyg dina poäng motsvarade. Kika på övning 3.3 i boken [Python for Informatics](kunskap/boken-python-for-informatics-exploring-information).
+* Menyval **b1** - `points_to_grade`: Poäng till betyg, Marvin ska fråga efter maxpoäng samt dina poäng och sedan ska Marvin skriva ut vilket betyg dina poäng motsvarade. Använd betygsskalan:
+```
+Score   Grade
+>= 90%    A
+>= 80%    B
+>= 70%    C
+>= 60%    D
+<  60%    F
+```
+Formatera output enligt `score: <betyg>`.
+```python
+input: "100", "59"     output: "score: F"
+input: "70", "50"     output: "score: C"
+```
 
 * Menyval **b2** - `has_strings`: Gör så Marvin kan ta emot fyra strängar, den första strängen ska jämföras med de andra tre. Kolla om den första strängen börjar med den andra, innehåller den tredje och slutar med den sista. Lösningen ska vara case-sensitive, med andra ord `A != a`. Tips, [startswith()](https://docs.python.org/3/library/stdtypes.html#str.startswith), [endswith()](https://docs.python.org/3/library/stdtypes.html#str.endswith) Exempel:
 ```python
