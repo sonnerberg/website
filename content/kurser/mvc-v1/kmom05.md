@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2021-04-30": "(B, mos) Lade till ORM föreläsning från Zoom och övningar."
     "2021-04-26": "(A, mos) Första utgåvan."
 ...
 Kmom05: ORM / Databas
@@ -34,6 +35,8 @@ Du kan använda databaserna MySQL, MariaDB eller SQLite för att genomföra uppg
 
 1. Väljer du SQLite så bör du vara bekant med den databasen sedan tidigare och du vet hur den kan publiceras till studentservern (htmlphp-kursen).
 
+En rekommendation är att i övningarna nedan börja jobba med SQLite och när man är bekväm med att det fungerar så kan man byta över till MySQL/MariaDB då de databaserna kräver lite mer administration och hantering för att komma igång.
+
 
 
 Uppgifter & Övningar {#uppgifter_ovningar}
@@ -55,13 +58,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 ### Övningar {#ovningar}
 
-Det finns inga övningar i detta kursmoment.
-
-<!--
 Följande övningar kan förbereda dig inför uppgiften.
 
-1. I kursrepot under [`example/orm`](https://github.com/dbwebb-se/mvc/tree/main/example/orm) ligger exempelkod som visar hur du kommer igång med olika ORM och ramverk.
--->
+1. I kursrepot under [`example/orm`](https://github.com/dbwebb-se/mvc/tree/main/example/orm) ligger exempelkod som visar hur du kommer igång med olika ORM och ramverk. Jobba igenom valda exempel, när du har valt vilket ORM/ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
 
 
 
@@ -70,21 +69,40 @@ Läs & Studera  {#lasanvisningar}
 
 *(ca: 2-8 studietimmar)*
 
+
+
+### Föreläsning {#flas}
+
+Titta igenom följande föreläsningar.
+
+
+
+#### Database ORM - Object Relational Mapping {#f1}
+
+Som en del i en Zoom-session hölls en föreläsning om "Database ORM - Object Relational Mapping" och det ger en bra introduktion till vad detta kmom handlar om.
+
+Slides till föreläsningen "[Database ORM - Object Relational Mapping](https://dbwebb-se.github.io/mvc/lecture/L05-orm/slide.html)".
+
+[YOUTUBE src="tCbb3ahGGpA" width=700 caption="Database ORM - Object Relational Mapping (med Mikael)."]
+
+Som ett komplement till föreläsningen hittar du referenser längre ned i detta dokumentet under "[PHP, data abstraktion och ORM](#phporm)".
+
+
 <!--
 
-* Föreläsning om ORM, DAO och liknande patterns (se föreläsning 05)
-
-* Föreläs och visa Doctrine (bygg ut Anax database så att den kan användas som QB & AR implementation)
+* Föreläs och visa strukturen i Doctrine (bygg ut Anax database så att den kan användas som QB & AR implementation)
 
 -->
 
-Läsanvisningar finns generellt för begreppet ORM.
+
+
+### Litteratur  {#litteratur}
+
+Läsanvisningar finns generellt för begreppet ORM och de är samlade längst ned i detta dokumentet under rubriken "Resurser bra-att-ha".
 
 Läsanvisningarna berör olika ramverk och deras implementationer av ORM.
 
 Läsanvisningarna berör implementationer av fristående ORM som kan användas oberoende av ramverk.
-
-Läsresurserna är samlade längst ned i detta dokumentet under rubriken "Resurser bra-att-ha".
 
 
 

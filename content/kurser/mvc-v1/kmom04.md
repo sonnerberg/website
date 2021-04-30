@@ -41,7 +41,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 Följande övningar kan förbereda dig inför uppgiften.
 
-1. I kursrepot under [`example/framework`](https://github.com/dbwebb-se/mvc/tree/main/example/framework) ligger exempelkod som visar hur du kommer igång med de olika ramverken och skapar egna vyer, routes och hur du publicerar till studentservern.
+1. I kursrepot under [`example/framework`](https://github.com/dbwebb-se/mvc/tree/main/example/framework) ligger exempelkod som visar hur du kommer igång med de olika ramverken och skapar egna vyer, routes och hur du publicerar till studentservern. Jobba igenom valda exempel, när du har valt vilket ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
 
 <!--
 
