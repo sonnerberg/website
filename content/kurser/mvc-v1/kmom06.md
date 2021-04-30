@@ -2,20 +2,29 @@
 author:
     - mos
 revision:
-    "2021-03-12": "(A, mos) Första utgåvan."
+    "2021-04-30": "(A, mos) Första utgåvan."
 ...
 Kmom06: Automatiserad test
 ==================================
 
+<!--
 [WARNING]
 
 **Arbete pågår**
 
 [/WARNING]
+-->
+<!-- stop-->
 
-<!--stop-->
+Det handlar nu om att ta vara på de tester vi kör mot vår applikation och automatisera och visualisera dem så att vi har ännu större nytta av dem och det resultat de kan ge oss. När vi pratar tester så innebär det både enhetstester och den statiska kodvalidering som våra validatorer gör åt oss. Statisk kodvalidering innebär i vårt fall både kodstandarder och det som kallas "mess detectors" som upptäcker kod med förbättringspotential.
 
+Vi skall jobba med begrepp som automatiserad testning, automatiserad bygg av projektet samt fundera över vad det är alla validatorer försöker berätta för oss. Detta kommer vi att göra genom att påbörja en kedja av Continous integration (CI) och koppla vårt repo mot byggtjänsterna Travis CI och Scrutinizer CI och låta dem bygga och testa vår kod, varje gång vi pushar en ny committ till GitHub/GitLab.
 
+När vi är klara får vi en badge, en liten grön/röd status-bild av bygget, som berättar om kodbygget gick bra eller inte. Vi kan också få badges som ger oss information om hur vacker vår kod är, vilken upplevd kodkvalitet som vi har producerat.
+
+När vi är klara så kommer vi framförallt att bättre förstå innebörden av vad följande tre badges kan innebära och vi kan även bedöma om de eventuellt berättar något om ordning och reda samt kodkvaliteten i det projekt som de representerar.
+
+[![Build Status](https://www.travis-ci.com/canax/router.svg?branch=master)](https://www.travis-ci.com/canax/router) [![Build Status](https://scrutinizer-ci.com/g/canax/database/badges/build.png?b=master)](https://scrutinizer-ci.com/g/canax/database/build-status/master) [![Code Coverage](https://scrutinizer-ci.com/g/canax/router/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/database/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/database/?branch=master)
 
 <!-- more -->
 
@@ -36,7 +45,9 @@ Uppgifter skall utföras och redovisas, övningar är träning inför uppgiftern
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Lös uppgiften "[Kom igång med ett ORM i ditt PHP-ramverk](uppgift/kom-igang-med-ett-orm-i-ditt-php-ramverk)".
+1. Utför uppgiften "[Integrera din applikation med en CI kedja](uppgift/integrera-din-applikation-med-en-ci-kedja)".
+
+1. Utför uppgiften "[Analysera PHP kod ur kvalitetsaspekter](uppgift/analysera-kodkvalitet-i-tre-php-moduler)"
 
 
 
@@ -44,11 +55,12 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 Följande övningar kan förbereda dig inför uppgiften.
 
-* PHP kodkvalitet extra övning
-* Exempelkod för att koppla till travis och scrutinizer
+* Övningen "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1.
 
 <!--
-1. I kursrepot under [`example/orm`](https://github.com/dbwebb-se/mvc/tree/main/example/orm) ligger exempelkod som visar hur du kommer igång med olika ORM och ramverk. Jobba igenom valda exempel, när du har valt vilket ORM/ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
+* Exempelkod för att koppla till travis och scrutinizer
+* PHP kodkvalitet extra övning verktyg, kanske tips från coachen
+https://phpmetrics.org/
 -->
 
 
@@ -78,14 +90,9 @@ Slides till föreläsningen "[Software quality metrics and static code analysis]
 
 ### Litteratur  {#litteratur}
 
-<!--
-Läsanvisningar finns generellt för begreppet ORM och de är samlade längst ned i detta dokumentet under rubriken "Resurser bra-att-ha".
+Läsanvisningar finns inom uppgiften, övningen och föreläsningen.
 
-Läsanvisningarna berör olika ramverk och deras implementationer av ORM.
-
-Läsanvisningarna berör implementationer av fristående ORM som kan användas oberoende av ramverk.
-
--->
+Förlita dig på det material som finns i dokumentationerna för respektive tjänst vi använder.
 
 
 
@@ -98,13 +105,13 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denn
 
 Se till att följande frågor besvaras i texten i din rapport:
 
-* Berätta hur du tog dig an uppgiften och valde ditt ORM och den kodbas du valde att bygga uppgiften på, vad lät du styra dina val, vad valde du och vad gjorde att du slutligen valde det du gjorde?
+* I den ena uppgiften ombeds du göra en analys för kodkvalitet kring ett par PHP-moduler samt din egen kod, gör det i rapporten.
 
-* När du kom in i ORM-modulerna och började installerade det, hur gick det? Var dokumentationen stöttande och kändes terminologin bekant sedan tidigare?
+* Hur är din egen syn på kodkvalitet? Kan man belysa den i någon viss mån med badges eller har du en annan syn?
 
-* Berätta om din applikation, hur den använder databasen och hur du implementerade applikationen, dels med vilken databas och dels med vilka tekniker/lager i ditt valda ORM. Fanns det svårigheter och utmaningar i arbetet?
+* Hur nöjd är du med kodkvaliteten i din egen kod? Gjorde du något under detta kmom för att förbättra den och hur högt lyckades du komma i kodtäckning och kodkvalitet?
 
-* Vad är din uppfattning om ORM så här långt och relatera gärna till andra sätt att jobba med applikationskod mot databaser?
+* Något annat som du anser är värt att nämna, "För övrigt anser jag att..."?
 
 * Vilken är din TIL för detta kmom?
 
@@ -116,10 +123,55 @@ Resurser bra-att-ha {#resurser}
 Här anges övriga resurser som kan användas för vidare studier i det som kursmomentet omfattar.
 
 
-* CI
-* Automatiserade tester
-* Kodkvalitet
+<!--
+### Software quality metrics {#metrics}
+
+Från föreläsningen
+
+### PHP validatorer och linters {#linters}
+
+Lista de linters vi jobbar med
+
+### PHP och quality metrics {#metrics}
+
+Visa hur man kommer åt metrics i php
+phploc
+Inklusive https://phpmetrics.org/
+-->
+
+
+### Continous integration (CI) {#ci}
+
+Läsresurser för Continous integration.
+
+[Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration)
+
+I trean i utbildningen Webbprogrammering läser man en [kurs devops](/kurser/devops) som handlar vidare om begreppen bakom CI.
 
 
 
-### PHP, data abstraktion och ORM {#phporm}
+### Travis CI {#travisci}
+
+Läsresurser för Travis CI.
+
+* [Travis CI](https://travis-ci.org/)
+* [Travis docs](https://docs.travis-ci.com/)
+* [Travis tutorial](https://docs.travis-ci.com/user/tutorial/)
+* [Wikipedia om Travis CI](https://en.wikipedia.org/wiki/Travis_CI)
+
+Badges från Travis, klicka på den för att komma till repots statussida.
+
+[![Build Status](https://www.travis-ci.com/canax/router.svg?branch=master)](https://www.travis-ci.com/canax/router)
+
+
+
+### Scrutinizer CI {#scrutici}
+
+Läsresurser för Scrutinizer CI.
+
+* [Scrutinizer CI](https://scrutinizer-ci.com/)
+* [Scrutinizer docs](https://scrutinizer-ci.com/docs/)
+
+Badges från Scrutinizer, klicka på dem för att komma till respektive repos statussida.
+
+[![Build Status](https://scrutinizer-ci.com/g/canax/database/badges/build.png?b=master)](https://scrutinizer-ci.com/g/canax/database/build-status/master) [![Code Coverage](https://scrutinizer-ci.com/g/canax/router/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/database/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/database/?branch=master)
