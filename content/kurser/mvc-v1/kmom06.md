@@ -7,15 +7,6 @@ revision:
 Kmom06: Automatiserad test
 ==================================
 
-<!--
-[WARNING]
-
-**Arbete pågår**
-
-[/WARNING]
--->
-<!-- stop-->
-
 Det handlar nu om att ta vara på de tester vi kör mot vår applikation och automatisera och visualisera dem så att vi har ännu större nytta av dem och det resultat de kan ge oss. När vi pratar tester så innebär det både enhetstester och den statiska kodvalidering som våra validatorer gör åt oss. Statisk kodvalidering innebär i vårt fall både kodstandarder och det som kallas "mess detectors" som upptäcker kod med förbättringspotential.
 
 Vi skall jobba med begrepp som automatiserad testning, automatiserad bygg av projektet samt fundera över vad det är alla validatorer försöker berätta för oss. Detta kommer vi att göra genom att påbörja en kedja av Continous integration (CI) och koppla vårt repo mot byggtjänsterna Travis CI och Scrutinizer CI och låta dem bygga och testa vår kod, varje gång vi pushar en ny committ till GitHub/GitLab.
