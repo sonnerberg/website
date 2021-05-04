@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2021-05-04": "(B, mos) Kompletterade med läsanvisningar."
     "2021-04-30": "(A, mos) Första utgåvan."
 ...
 Kmom06: Automatiserad test
@@ -46,13 +47,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 Följande övningar kan förbereda dig inför uppgiften.
 
-* Övningen "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1.
+* I kursrepot under [`example/ci`](https://github.com/dbwebb-se/mvc/tree/main/example/ci) ligger ett kort exempel som ger en översikt till de steg som krävs för att integrera med byggtjänsterna Travis CI och Scrutinizer CI. Eventuellt vill du läsa igenom det innan du påbörjar den större övningen som ligger nedan.
 
-<!--
-* Exempelkod för att koppla till travis och scrutinizer
-* PHP kodkvalitet extra övning verktyg, kanske tips från coachen
-https://phpmetrics.org/
--->
+* Övningen "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1.
 
 
 
@@ -73,7 +70,7 @@ Titta igenom följande föreläsningar.
 
 När det gäller snygg och ren kod försöker vi förstå om kodkvalitet kan mätas och visualiseras. Vilken typ av mätvärde, "metrics", kan användas och vad säger de om programvaran. Hur ska vi arbeta med valideringsverktyg för att förbättra den upplevda kvaliteten på vår programvara.
 
-Slides till föreläsningen "[Software quality metrics and static code analysis](https://dbwebb-se.github.io/mvc/lecture/L06_static-code-analysis-and-metrics/slide.html)".
+Slides till föreläsningen "[Software quality metrics and static code analysis](https://dbwebb-se.github.io/mvc/lecture/L06-static-code-analysis-and-metrics)".
 
 [YOUTUBE src="SjIdSbVxvk4" width=700 caption="Software quality metrics and static code analysis (med Mikael)."]
 
@@ -84,6 +81,11 @@ Slides till föreläsningen "[Software quality metrics and static code analysis]
 Läsanvisningar finns inom uppgiften, övningen och föreläsningen.
 
 Förlita dig på det material som finns i dokumentationerna för respektive tjänst vi använder.
+
+Om du känner att du behöver en introduktion till "varför vi sysslar med detta" så kan du läsa om följande två begrepp som till viss mån berör problemområdet inom mätning av kvalitet av programvara och allmänt om kodkvalitet.
+
+* [Code smell](https://en.wikipedia.org/wiki/Code_smell).
+* [Technical debt](https://en.wikipedia.org/wiki/Technical_debt)
 
 
 
@@ -113,22 +115,6 @@ Resurser bra-att-ha {#resurser}
 
 Här anges övriga resurser som kan användas för vidare studier i det som kursmomentet omfattar.
 
-
-<!--
-### Software quality metrics {#metrics}
-
-Från föreläsningen
-
-### PHP validatorer och linters {#linters}
-
-Lista de linters vi jobbar med
-
-### PHP och quality metrics {#metrics}
-
-Visa hur man kommer åt metrics i php
-phploc
-Inklusive https://phpmetrics.org/
--->
 
 
 ### Continous integration (CI) {#ci}
@@ -166,3 +152,46 @@ Läsresurser för Scrutinizer CI.
 Badges från Scrutinizer, klicka på dem för att komma till respektive repos statussida.
 
 [![Build Status](https://scrutinizer-ci.com/g/canax/database/badges/build.png?b=master)](https://scrutinizer-ci.com/g/canax/database/build-status/master) [![Code Coverage](https://scrutinizer-ci.com/g/canax/router/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/database/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/database/?branch=master)
+
+
+
+### Software quality metrics {#metrics}
+
+I föreläsningen om "Static code analysis - Software quality metrics of code" förekommer bland annat följande koncept som berör mätning av programvara relaterat till dess kvalitet.
+
+* [Source lines of code](https://en.wikipedia.org/wiki/Source_lines_of_code)
+* [Code duplication](https://en.wikipedia.org/wiki/Duplicate_code)
+* [Cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science))
+* [Coupling](https://en.wikipedia.org/wiki/Coupling_(computer_programming))
+* [Cyclomatic complexity (McCabe)](https://en.wikipedia.org/wiki/Cyclomatic_complexity)
+* [CRAP score](https://www.artima.com/weblogs/viewpost.jsp?thread=215899)
+* [Halstead complexity measures](https://en.wikipedia.org/wiki/Halstead_complexity_measures)
+* [Maintainability index (Visual Studio)](https://docs.microsoft.com/en-us/visualstudio/code-quality/code-metrics-values?view=vs-2019)
+
+
+
+<!--
+
+### PHP validatorer och linters {#linters}
+
+Lista de linters vi jobbar med
+
+och andra som finns.
+
+
+
+### PHP och quality metrics {#metrics}
+
+Visa hur man kommer åt metrics i php
+phploc
+
+* Fyra C:n för att komma igång med kodkvalitet.
+
+
+
+### Verktyget phpmetrics {#phpmetrics}
+
+* PHP kodkvalitet extra övning verktyg, kanske tips från coachen
+https://phpmetrics.org/
+
+-->
