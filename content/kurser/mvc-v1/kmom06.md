@@ -84,7 +84,7 @@ Förlita dig på det material som finns i dokumentationerna för respektive tjä
 
 Om du känner att du behöver en introduktion till "varför vi sysslar med detta" så kan du läsa om följande två begrepp som till viss mån berör problemområdet inom mätning av kvalitet av programvara och allmänt om kodkvalitet.
 
-* [Code smell](https://en.wikipedia.org/wiki/Code_smell).
+* [Code smell](https://en.wikipedia.org/wiki/Code_smell)
 * [Technical debt](https://en.wikipedia.org/wiki/Technical_debt)
 
 
