@@ -224,9 +224,13 @@ done
 Setup the production environment
 --------------------------------
 
+This is a sample production environment.
+
 ```
+# Get the source to git/dbwebb.se
 git clone git@github.com:dbwebb-se/website.git dbwebb.se
 cd dbwebb.se
+composer install
 
 # Setup the mirror at htdoc/dbwebb.se
 make site-build

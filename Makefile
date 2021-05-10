@@ -452,7 +452,7 @@ ServerName $${site}
 <VirtualHost *:80>
 	ServerAlias local.$${site}
 	ServerAlias do4.$${site}
-	ServerAlias do2.$${site}
+	ServerAlias do3.$${site}
 	ServerAlias bth1.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
 	ServerSignature Off
@@ -536,7 +536,7 @@ ServerName $${site}
 
 <VirtualHost *:80>
 	ServerAlias do4.$${site}
-	ServerAlias do2.$${site}
+	ServerAlias do3.$${site}
 	ServerAlias bth1.$${site}
 	Redirect "/" "https://$${site}/"
 </VirtualHost>
@@ -549,7 +549,7 @@ ServerName $${site}
 
 	ServerName $${site}
 	ServerAlias do4.$${site}
-	ServerAlias do2.$${site}
+	ServerAlias do3.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
 	ServerSignature Off
 
