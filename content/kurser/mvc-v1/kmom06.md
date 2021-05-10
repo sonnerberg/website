@@ -49,7 +49,7 @@ Följande övningar kan förbereda dig inför uppgiften.
 
 * I kursrepot under [`example/ci`](https://github.com/dbwebb-se/mvc/tree/main/example/ci) ligger ett kort exempel som ger en översikt till de steg som krävs för att integrera med byggtjänsterna Travis CI och Scrutinizer CI. Eventuellt vill du läsa igenom det innan du påbörjar den större övningen som ligger nedan.
 
-* Övningen "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1.
+* Artikeln "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1. Du behöver inte utföra det som står i artikeln utan den är mer tänkt som exempel för att visa hur det fungerar.
 
 
 

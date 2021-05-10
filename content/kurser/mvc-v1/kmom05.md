@@ -226,6 +226,28 @@ Resurser för Laminas.
 
 
 <!--
+### DotEnv {#dotenv}
+
+https://github.com/dbwebb-se/mvc/issues/37
+
+Fixa också ett exempel där man skapa konfifiler för MySQL på studentservern.
+
+Hur jobba med dotenv filer. Gör artikel och visa hur det fungerar med programvaran och gör ett test-cli verktyg.
+
+#  * .env                contains default values for the environment variables needed by the app
+#  * .env.local          uncommitted file with local overrides
+#  * .env.$APP_ENV       committed environment-specific defaults
+#  * .env.$APP_ENV.local uncommitted environment-specific overrides
+
+https://laravel.com/docs/8.x/configuration
+https://symfony.com/doc/current/configuration.html#configuration-based-on-environment-variables
+https://github.com/bkeepers/dotenv
+https://github.com/vlucas/phpdotenv
+-->
+
+
+
+<!--
 ### Slim {#slim}
 
 Resurser för Slim.
