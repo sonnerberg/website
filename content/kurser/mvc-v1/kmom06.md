@@ -41,6 +41,12 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Utför uppgiften "[Analysera PHP kod ur kvalitetsaspekter](uppgift/analysera-kodkvalitet-i-tre-php-moduler)"
 
+<!--
+Städa så att man jobbar vidare i en och samma katalog samt "färdigställer" sitt Yatzy så det är spelbart.
+
+Om test mot databas använd .env.test
+-->
+
 
 
 ### Övningar {#ovningar}
@@ -189,7 +195,7 @@ och andra som finns.
 ### PHP och quality metrics {#metrics}
 
 Visa hur man kommer åt metrics i php
-phploc
+phploc/phpmetrics
 
 * Fyra C:n för att komma igång med kodkvalitet.
 
@@ -199,5 +205,7 @@ phploc
 
 * PHP kodkvalitet extra övning verktyg, kanske tips från coachen
 https://phpmetrics.org/
+
+https://github.com/dbwebb-se/mvc/issues/38
 
 -->

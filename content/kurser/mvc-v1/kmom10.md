@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2021-03-12": "(PA1, mos) Arbete påbörjat."
+    "2021-05-10": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
 ==================================
@@ -13,10 +13,10 @@ Alla delar i detta kursmoment skall utföras individuellt och självständigt.
 
 Upplägget är enligt följande:
 
-* Projektet
+* Projekt
 * Redovisning
 
-Totalt omfattar kursmoment 07/10 i storleksordningen 20--40 studietimmar.
+Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 
 <!--more-->
 

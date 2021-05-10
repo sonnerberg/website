@@ -109,6 +109,10 @@ Kraven är uppdelade i sektioner.
 
 1. Det skall finnas ett menyval i din webbplats som leder till denna exempelsida.
 
+<!--
+1. Knapp för att lägga till slumpmässig data till tabellen så att man kan testa den. Samt knapp för att återställa.
+-->
+
 
 
 ### Bygg din applikation mot ett ORM {#app}

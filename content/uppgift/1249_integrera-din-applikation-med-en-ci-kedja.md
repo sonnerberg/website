@@ -25,7 +25,11 @@ Du har sedan tidigare ett PHP-ramverk installerat med en egenutvecklad applikati
 * kmom04
 * kmom05
 
+<!-- Nästa år kan man enbart bygga vidare på 04 -->
+
 Lokalt kan du köra dina tester genom att installera en lokal utvecklingsmiljö via `make install` och testerna kör du via `make test`.
+
+<!-- testsuiten skall fungera från kmom04 -->
 
 Din applikation har stöd för följande validatorer.
 
@@ -34,6 +38,7 @@ Din applikation har stöd för följande validatorer.
 * phpstan
 
 Din applikation har stöd för en testsuite som köras av phpunit.
+
 
 
 
