@@ -78,16 +78,18 @@ That might be useful if you want to have your own local backup instance of the w
 
 
 
-Short story
+Dev story
 --------------------------------
 
-This is if the docker way does not work for you.
+This is if the docker way does not work for you or if you are a developer.
 
+<!--
 Works for me on Debian.
 
 ```
 $ sudo apt-get install apache2 php5 libapache2-mod-php5 php5-dev php-pear php5-gd
 ```
+-->
 
 ```
 $ git clone <the original or your forked repo>
@@ -219,7 +221,26 @@ done
 
 
 
+Setup the production environment
+--------------------------------
+
+```
+git clone git@github.com:dbwebb-se/website.git dbwebb.se
+cd dbwebb.se
+
+# Setup the mirror at htdoc/dbwebb.se
+make site-build
+make local-publish
+
+# Create the virtual host for http
+make virtual-host-echo
+make virtual-host
+
+```
+
+
+
 ```                                                            
  .                                                             
-..:  Copyright (c) 2012 - 2019 Mikael Roos, mos@dbwebb.se   
+..:  Copyright (c) 2012 - 2021 Mikael Roos, mos@dbwebb.se   
 ```                                                            

@@ -447,9 +447,9 @@ install-fresh: etc-hosts virtual-host update
 define VIRTUAL_HOST_80
 Define site $(WWW_SITE)
 ServerAdmin $(SERVER_ADMIN)
+ServerName $${site}
 
 <VirtualHost *:80>
-	ServerName $${site}
 	ServerAlias local.$${site}
 	ServerAlias do4.$${site}
 	ServerAlias do2.$${site}
@@ -532,9 +532,9 @@ virtual-host-echo:
 define VIRTUAL_HOST_443
 Define site $(WWW_SITE)
 ServerAdmin $(SERVER_ADMIN)
+ServerName $${site}
 
 <VirtualHost *:80>
-	ServerName $${site}
 	ServerAlias do4.$${site}
 	ServerAlias do2.$${site}
 	ServerAlias bth1.$${site}
