@@ -27,64 +27,9 @@ views:
                             meta:
                                 type: content
                                 #route: block/gitter
-                                route: block/forum
-
-    columns2:
-        region: columns-above-NO
-        template: default/columns
-        sort: 2
-        data:
-            class: col3
-            meta:
-                type: columns
-                columns:
-                    column-1:
-                        data:
-                            meta:
-                                type: content
-                                #route: block/hangout
-                                route: block/empty
-                    column-2:
-                        data:
-                            meta:
-                                type: content
-                                #route: block/lararteam
-                                route: block/empty
-                    column-3:
-                        data:
-                            meta:
-                                type: content
-                                #route: block/youtube
-                                route: block/empty
-
-    columns3:
-        region: columns-above
-        template: default/columns
-        sort: 3
-        data:
-            class: col3
-            meta:
-                type: columns
-                columns:
-                    column-1:
-                        data:
-                            meta:
-                                type: content
-                                #route: block/github-community
-                                route: block/gitter
-                    column-2:
-                        data:
-                            meta:
-                                type: content
-                                #route: block/youtube
-                                route: block/irc
-                    column-3:
-                        data:
-                            meta:
-                                type: content
-                                #route: block/social
+                                #route: block/forum
                                 route: block/alumni
-
+ 
 
 ...
 <!--
