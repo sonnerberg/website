@@ -62,6 +62,10 @@ Följande övningar kan förbereda dig inför uppgiften.
 
 1. I kursrepot under [`example/orm`](https://github.com/dbwebb-se/mvc/tree/main/example/orm) ligger exempelkod som visar hur du kommer igång med olika ORM och ramverk. Jobba igenom valda exempel, när du har valt vilket ORM/ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
 
+<!--
+Bygg ut exemplet så de visar mer samt inkludera MySQL och .env.student.
+-->
+
 
 
 Läs & Studera  {#lasanvisningar}
@@ -89,6 +93,8 @@ Som ett komplement till föreläsningen hittar du referenser längre ned i detta
 
 
 <!--
+
+* Gör om ovan zoom till en vanlig inspelad föreläsning.
 
 * Föreläs och visa strukturen i Doctrine (bygg ut Anax database så att den kan användas som QB & AR implementation)
 

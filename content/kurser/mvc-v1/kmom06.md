@@ -51,6 +51,12 @@ Följande övningar kan förbereda dig inför uppgiften.
 
 * Artikeln "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1. Du behöver inte utföra det som står i artikeln utan den är mer tänkt som exempel för att visa hur det fungerar.
 
+<!-- Eventuellt byt ut ovan äldre artikel. Kanske spela in nya videor eller nåt annat... -->
+
+<!-- Lägg till övning om phpmetrics enligt:
+https://github.com/dbwebb-se/mvc/issues/38
+-->
+
 
 
 Läs & Studera  {#lasanvisningar}
