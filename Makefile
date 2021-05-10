@@ -384,7 +384,8 @@ lint: less
 .PHONY: site-build
 site-build:
 	# Create and sync cache
-	bash -c "install -d -m 777 cache/{cimage,anax,forum,forum-files}"
+	#bash -c "install -d -m 777 cache/{cimage,anax,forum,forum-files}"
+	bash -c "install -d -m 777 cache/{cimage,anax}"
 	rsync -av cache $(LOCAL_HTDOCS)
 
 	# Copy from CImage
@@ -450,7 +451,7 @@ ServerAdmin $(SERVER_ADMIN)
 <VirtualHost *:80>
 	ServerName $${site}
 	ServerAlias local.$${site}
-	ServerAlias do1.$${site}
+	ServerAlias do4.$${site}
 	ServerAlias do2.$${site}
 	ServerAlias bth1.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
@@ -534,7 +535,7 @@ ServerAdmin $(SERVER_ADMIN)
 
 <VirtualHost *:80>
 	ServerName $${site}
-	ServerAlias do1.$${site}
+	ServerAlias do4.$${site}
 	ServerAlias do2.$${site}
 	ServerAlias bth1.$${site}
 	Redirect "/" "https://$${site}/"
@@ -547,7 +548,7 @@ ServerAdmin $(SERVER_ADMIN)
 	SSLCertificateChainFile $(SSL_PEM_BASE)/chain.pem
 
 	ServerName $${site}
-	ServerAlias do1.$${site}
+	ServerAlias do4.$${site}
 	ServerAlias do2.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
 	ServerSignature Off
