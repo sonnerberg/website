@@ -101,7 +101,7 @@ Full pott på ovan innebär maximalt betyg C. Man kan inte nå högre än C, äv
 För betygsnivån AB krävs följande.
 
 * Inspelad video presentation med slides
-* Projekt med optionella krav
+* Projekt med/utan optionella krav
 * Rapport med/utan optionella krav
 
 
