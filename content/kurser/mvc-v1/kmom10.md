@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2021-05-10": "(A, mos) Första utgåvan."
+    "2021-05-11": "(A, mos) Första utgåvan."
 ...
 Kmom07/10: Projekt och examination
 ==================================
@@ -13,189 +13,171 @@ Alla delar i detta kursmoment skall utföras individuellt och självständigt.
 
 Upplägget är enligt följande:
 
-* Projekt
-* Redovisning
+* Projekt/applikation (obligatoriskt med optionella krav)
+* Redovisning (obligatoriskt)
+* Fristående Rapport (optionell)
+* Quiz (optionell)
+* Videopresentation (optionell)
 
-Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
+
+Totalt omfattar kursmoment 07/10 i storleksordningen 20--50 studietimmar.
 
 <!--more-->
-
-[WARNING]
-
-**Arbete pågår**
-
-[/WARNING]
-
-<!--stop-->
-
-
-
-1. Som ren överkurs kan du välja att implementera att du kan satsa "bitcoins" i varje spelrunda. Spelaren kan börja med 10 bitcoins och man kan satsa max 50% av sina bitcoins per spel. Banken (datorn) kan ha 100 bitcoins när du börjar. Klarar du av att vinna alla pengarna från banken?
-
-1. Yatzy mot datorn.
-
 
 
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
+Läs först igenom [grunderna för bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning-projekt-quiz-rapport-video). Dokumentet berättar för dig hur kraven mappas mot betygsnivåerna.
 
 
 
-Projektidé och upplägg {#upplagg}
+Krav 1: Projekt/Applikation {#proj}
 --------------------------------------------------------------------
 
-Ryktet har spritt sig att du är en högst kompetent programutvecklare vilket resulterat i att en välkänd IT-profil, låt oss kalla honom Matt Mullvägg, har bett dig utveckla nästa generations bloggverktyg.
+Kraven är indelade i ett antal grundkrav samt en del med optionella krav.
 
-Du accepterar uppdraget, väl medveten om att du redan har en god grund till lösningen.
+Se till att du är uppdaterad innan du påbörjar projektet.
 
-Du tar din grund `me/redovisa` och skapar ett helt nytt projekt i `me/kmom10/proj`. Om du väljer att göra ett Git-repo av projektet och väljer att lägga det på GitHub/Bitbucket så behöver det vara privat. Eftersom detta är det avslutande projektet så vill vi undvika att någon hittar och lånar dina affärshemligheter.
-
-Du skall alltså göra ett bloggverktyg där användaren kan skapa och publicera webbsidor och bloggposter via ett administrativt gränssnitt. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil du väljer för din webbplats som demonstrerar din lösning.
-
-Du kan bygga din webbplats med följande fokus.
-
-* Marknadsför en/flera (verklig/påhittad) produkt, tjänst, koncept, idé så att hela din webbplats handlar om just denna "grej" och dess utomordentliga förträfflighet. Det kan vara tydlig försäljning "köp denna produkten" eller någon variant av influencer där säljandet vävs in i webbplatsen.
-
-Om du vill kan du anpassa upplägget ovan och bygga webbplatsen med alternativt fokus, till exempel enligt följande.
-
-* Personlig webbplats (för dig själv eller en påhittad person) med allmänna reflektioner och betraktelser i vardagen tillsammans med fotografier för att ge känsla, kanske kan det bli en variant av din egen webbplats där du marknadsför dig själv.
-
-Specen nedan bygger på att du gör en webbplats som marknadsför en produkt/tjänst/koncept. Men du kan säkert anpassa det till din egen idé.
+```
+dbwebb update
+```
 
 
 
-Projektspecifikation {#projspec}
+### Struktur {#struktur}
+
+* Välj ramverk från de som vi tidigare pratat om i kursen.
+* Välj ORM från de som vi tidigare pratat om i kursen.
+* Placera koden i `me/proj`.
+* Initiera som nytt repo och publicera på GitHub eller GitLab.
+* Tagga som v7.0.0 eller högre (men lägre än v8.0.0).
+* Applikationen skall fungera på studentservern.
+* En lokal utvecklingsmiljö skall finnas på plats med validatorer och enhetstester.
+* Integrera mot Travis och Scutinizer med badges i din README.
+* Inkludera minst ett flödesschema och ett dokument för pseudokod och placera i katalogen `doc/design` (omfattningen på dokumenten är valfri).
+* Se till att `dbwebb test kmom10` passerar grönt. Här kan fler detaljkrav uppenbara sig.
+
+
+
+### Projekt/Applikation {#applikation}
+
+Kraven på själva applikationen du bygger är fria och det är upp till din egen bedömning om vad som är rimligt och ej. Tolka kraven och tolka de bedömningskriterier som finns.
+
+* Färdigställ ditt Yatzy alternativt ditt 21-spel inklusive vadslagning.
+* Förbättra din highscorelista med fler features.
+* Gör en visuell statistik på histogram, tärningar och/eller resultat (sparas i databas)
+* Applikationen skall var lätt att använda.
+* Webbplatsen skall vara snygg och tilltalande, lägg kraft på stil och utseende.
+* Webbplatsen skall ha en tilltalande header, navbar och footer.
+* Förklara din applikation projekt i en README.md, dels vad applikationen handlar om, som en liten manual. Dels hur man kan installera den utifrån dess GitHub/GitLab repo. Gör din README snygg och lägg till en representativ bild.
+
+
+
+### Optionellt {#projopt}
+
+Gör ett "svårare" och lite mer utmanande projekt med tanke på implementation och arbetsinsats.
+
+Till exempel kan du göra något av följande.
+
+* Gör en applikation som kräver att du jobbar mer med klasser (skapa fler klasser) och objektorienterade konstruktioner som arv, "använder", interface, trait.
+* Använd en mer avancerad databasmodell med flera tabeller.
+* Börja på nytt och välj ett annat ramverk och ORM.
+* Fokusera på kodkvalitet, enhetstester och kodtäckning.
+* Gör en ny applikation, tex något av följande:
+    * Ett klassiskt äventyrsspel där man går från rum till rum och löser gåtor.
+    * En enkel blogg eller en todo applikation.
+    * Ett nytt spel, tex ett kortspel eller ett nytt tärningsspel (behåll dina gamla spel eller ta bort dem).
+
+Det är fritt val och du behöver i slutändan argumentera i din redovisning vad det är som gör att ditt projekt kvalificerar sig som "svårare".
+
+Tänk till så att du inte väljer ett alltför stort och komplext projekt som tar allt för mycket tid. Välj ett projekt som du kan slutföra grundkraven på inom 15-30h.
+
+
+
+Krav 2: Redovisningstext {#redovisa}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikation. Saknas info i specen så kan du själv göra en bedömning och välja väg, dokumentera dina val i redovisningstexten.
+Kravet är obligatoriskt.
 
-De tre första kraven är obligatoriska. De tre sista kraven är optionella krav,  lös dem för att samla poäng och därmed nå högre betyg.
+1. I din kursrapport, skapa ett nytt kapitel för "Projekt" och besvara följande frågeställningar.
 
-Varje krav ger max 10 poäng, totalt är det 60 poäng.
+    1. Beskriv arbetet med ditt projekt/applikation i ett textstycke om ca 7-20 meningar där du beskriver vad du gjort, vilka val du gjorde, hur du tänkte inledningsvis och hur du betraktar ditt resultat. Nämn gärna problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, med mera. Fundera över tidsaspekten, tog projektet mer eller midre tid än vad du först trodde?
 
+    1. Om du valde att göra ett "svårare" projekt, beskriv ett textstycke om ca 7-20 meningar vad som gör just ditt projekt till "svårare".
 
+    1. Avsluta med ett stycke med dina tankar om kursen och dess innehåll, genomförande, upplägg och material (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-### Krav 1: Webbplats som demo {#k1}
-
-Nedan används "produkt" som ett samlingsnamn för det fokus du valt vilket kan innebära att lyfta fram en produkt, tjänst, koncept, person eller annat. Det du lyfter fram är alltså "produkten".
-
-Bygg stöd för följande sidor på din webbplats.
-
-* Hem, en förstasida som ger en översikt av webbplatsens innehåll.
-* En produktsida som visar upp dina produkter (jämför uppgiften filmdatabas).
-* En blogg med nyheter om produkter, erbjudande och din verksamhet (jämför uppgiften i kmom06).
-* En om-sida med information om webbplatsens fokus, dig själv och din verksamhet.
-* Gemensam header med logo och titel, eller din egen personliga variant av header.
-* Gemensam footer, med text om Copyright med företagsnamnet.
-* En navbar med länkar till webbplatsens olika delar.
-
-På produktsidan ser man en översikt av alla produktvarianter och erbjudande som finns. Du kan välja att visa översikten av produkterna i en tabell, eller visa upp dem mer som en traditionell Eshop kunde gjort (välj själv). Visa upp minst 5 produkter. Man kan klicka på en produkt för att se den i sin helhet på en produktsida med bild(er) och information om produkten.
-
-I nyhetsbloggen presenterar du nyheter och allmän information om produkter och erbjudande. I översikten skall det visas inledningen till minst 5 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas i sin helhet. Använd minst en bild till varje blogginlägg.
-
-Information om produkter och blogginlägg skall sparas i databasen.
-
-Fyll din webbplats med relevanta bilder och texter.
-
-Ditt system driftas på studentservern.
+Om du väljer att skriva en fristående rapport så lägger du ovan text i den rapporten istället.
 
 
 
-### Krav 2: Ordning och reda {#k2}
-
-Du vill dokumentera ditt system så att en likasinnad programmerare kan förstå vad du gjort.
-
-Lägg till ytterligare en sida på webbplatsen som heter "doc" där du förklarar den kodstruktur som du har i din lösning. Vilka klasser är centrala, vilka kontroller har du och vilka övriga klasser som är viktiga. Var kortfattad och tänk att du förklarar din kod för en likasinnad programmerare. Skriv ett stycke om 15-30 rader eller så. Lägg till en bild som visar ett översiktligt klasssdiagram. Lägg till sidan i navbaren.
-
-Du skapar ett ER-diagram av din färdiga databas och sparar i `htdocs/img/er.png`. Det är okey att automatgenerera en översikt av tabellerna. Skapa rubriken "Databas" i din "doc" och infoga ER-diagrammet som bild samt nämn något om dina tabeller och din databasstruktur.
-
-Ditt projekt skall innehålla en Makefile som kan köra enhetstester med phpunit och generera kodtäckning via `make phpunit`. Det finns inga speciella krav på kodtäckningen, men ange i korthet din ambitionsnivå i sidan "doc", under rubriken "Testning" och berätta vilken kodtäckning du nådde.
-
-Du kan även köra `make test` och validera koden i ditt projekt, försök städa bort så mycket valideringsfel du kan och kommentera övriga i sidan "doc".
-
-Ditt projekt kan generera dokumentation med phpdoc via `make doc`. Vid problem med installation av phpdoc så berättar du om problemen i sidan "doc" och sen går du vidare och lägger tiden på annat.
-
-
-
-### Krav 3: Administrativt gränssnitt {#k3}
-
-Webbsidan skyddas av inloggning och man kan logga in som användaren admin med lösenordet admin, man får då behörigheten "administratör". Användare och lösenord sparas i databasen.
-
-När man är inloggad (och har behörighet som "administratör") kan man via ett gränssnitt ändra innehållet på webbplatsen enligt följande.
-
-* Hantera nyhetsbloggen (lägga till, ta bort och redigera inlägg).
-* Administrera produkterna (lägga till, ta bort och redigera informationen).
-
-När du skriver texten till blogg- och produktsidor så skriver du den i Markdown och använder en textfilter-klass för att formattera den.
-
-
-
-### Krav 4: Förstasidan (optionell) {#k4}
-
-Lägg extra kraft på förstasidan och gör den fin, välkomnande, stylad och full av information. Snygg och tilltalande helt enkelt.
-
-Du kan dela in sidan i regioner/block (gör som du vill) och presentera extra information enligt följande.
-
-* De tre senaste inläggen från din nyhetsblogg. Visa inledningen och en länk för att läsa hela blogginlägget.
-* Ett "featured" blogginlägg, visa titel och inledningen semt en länk till hela blogginlägget.
-* Senaste inkomna produkter.
-* Veckans erbjudande(n) som länk till en produkt eller blogginlägg.
-* Rekommenderad produkt(er).
-
-Du kan uppdatera förstasidans innehåll genom att använda information från databasen.
-
-
-
-### Krav 5: Registrera nytt konto (optionell) {#k5}
-
-Erbjud en möjlighet för besökaren att registrera ett konto på din webbplats. Man skall kunna registrera ett konto, logga in och där kan man editera sin personliga profilsida där man har sitt namn och epostadress.
-
-Användarna sparas i databasen och du väljer om de loggar in med ett användarnamn och/eller sin epostadress samt ett lösenord.
-
-Lägg till så att användarens profilbild visas med en Gravatar (eller motsvarande), se gravatar.org för detaljer.
-
-I ditt admingränssnitt visar du en översikt av alla användare som finns registrerade.
-
-De användare som lägger till sig själva har inte rättigheter att nå ditt admin gränssnitt, det är bara administratören som kan göra det. Du behöver alltså ha två olika typer av användare, administratörer och vanliga användare.
-
-
-
-### Krav 6: Ett flexibelt admingränssnitt (optionell) {#k6}
-
-I admingränssnittet visar du innehållet (produkter, pages, posts eller motsvarande) och användarna i tabellform.
-
-Du har möjlighet till CRUD för dem.
-
-Du har också möjlighet till paginering, sökning/filtrering och sortering av det resultat som visas i tabellerna (jämför kmom05 movie).
-
-Det skall alltså finnas stöd för följande.
-
-* CRUD av innehåll och användare.
-* Tabellen skall pagineras och man kan välja hur många träffar som visas på varje sida.
-* Man skall kunna filtrera resultatet i tabellen och endast visa de träffar som matchar en viss söksträng.
-* Man kan klicka på rubrikerna i tabellen och få tabellen sorterad per den kolumnen i stigande eller sjunkande ordning.
-
-
-
-Redovisning {#redovisning}
+Krav 3: Fristående Rapport {#rapport}
 --------------------------------------------------------------------
 
-1. På din [redovisningssida](./../redovisa), skriv följande:
+Kravet är optionellt i sin helhet. Om man väljer att utföra kravet finns det obligatoriska och optionella delkrav.
 
-    1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
-    1. Spela in en redovisningsvideo om 5-7 minuter där du visar upp ditt projekt och går igenom dess delar. Utgå gärna från hur du löste kraven. Kombinera med en snabb översikt av någon utvald del i din kod och avsluta med en summering om du är nöjd med din insats och om du hade gjort annorlunda om du hade gjort om projektet.
 
-    1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+### Obligatoriskt {#rapportobl}
 
-    1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+* Gör en helt ny rapport utifrån samma mall du använt för kursen. Dokumentet innehåller nu enbart saker relaterat till ditt projekt.
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida med projektet.
+* Redovisningstext enligt Krav 2 ovan skall finnas som ett eget inledande kapitel döpt till "Projekt".
 
-```bash
-# Ställ dig i kursrepot
-dbwebb publish me
+* Skriv ett nytt kapitel "Tips från coachen" om ca 1-2 sidor där du kort riktar dig till nybörjare på ramverk och du ger dina egna råd om vad som är viktigt att tänka på när man tar sig an ramverk och ORM. Du kan till exempel rikta dig till "ditt gamla jag som du var i kmom01" och ge dig själv tips och råd som hade varit viktiga för att nå dit du är nu.
+
+
+
+### Optionellt {#rapportopt}
+
+* Skriv ett nytt kapitel "Analys av [valfritt]" om ca 1-2 sidor där du gör en analys av ditt projekt/applikation ur någon aspekt som du själv väljer. Det kan röra objektorienterad kodstruktur, kodkvalitet, enhetstester med kodtäckning, testbar kod, ramverk/ORM, reflektioner kring manualer och dokumentation eller något annat som känns intressant och relevant för dig inom området som projektet och kursen omfattar.
+
+* Lägg till referenser och använd dem i texten. lista alla referenser som ett eget appendix längst bak i rapporten.
+
+
+
+Krav 4: Quiz {#quiz}
+--------------------------------------------------------------------
+
+Kravet är optionellt.
+
+Lös och få godkänt på en Quiz (på Canvas) med teori och bakgrundsfrågor. Quizen är tidsbegränsad, automaträttande och du har oändligt med försök att nå godkänt. Frågor slumpas fram vid varje nytt försök.
+
+
+
+Krav 5: Inspelad video presentation {#video}
+--------------------------------------------------------------------
+
+Kravet är optionellt och kan endast utföras om samtliga krav ovan är utförda.
+
+Baserat på informationen i din rapport, gör en "professionell" presentation med slides och spela in den. Din cam skall synas i bilden tillsammans med dina slides.
+
+Försök göra en så "professionell" presentation du kan. Tänk på inledning,  avslutning och "energinivå".
+
+Håll tiden och försök göra presentationen till "exakt 5 minuter". Ett "proffs" kan alltid avsluta en presentation när tiden är slut.
+
+Det är fritt fram att klippa och redigera din video i efterhand liksom att lägga till intro och outro.
+
+
+
+Lämna in {#lamnain}
+--------------------------------------------------------------------
+
+1. Lämna in ditt resultat på Canvas med länk till ditt studentrepo, bifoga rapporter som PDF. Länka till optionell redovisningsvideo.
+
+2\. Se till att ditt repo är taggar och klart samt pushat till GitHub/GitLab.
+
+3\. Se till att du testar att din inlämning motsvarar grundkraven för `me/proj`.
+
+```text
+dbwebb update
+dbwebb test kmom10
+```
+
+4\. Ladda upp och publicera på studentservern.
+
+```text
+dbwebb publishpure proj
 ```
