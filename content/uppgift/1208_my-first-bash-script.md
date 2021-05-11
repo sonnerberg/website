@@ -48,7 +48,7 @@ Requirements {#req}
 
 1. Create a script `forloop.bash` that prints the numbers 10 to 20 using a forloop.
 
-1. Create a script `myFunction.bash` containing a function, `greet ()`. Call the function to print "Hello $USER".
+1. Create a script `my_function.bash` containing a function, `greet ()`. Call the function to print "Hello $USER".
 
 1. Publish your answers as follows.
 
