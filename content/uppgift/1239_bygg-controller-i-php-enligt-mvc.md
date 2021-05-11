@@ -172,9 +172,9 @@ Kraven är uppdelade i sektioner.
 
 1. Implementera en (eller flera) controller för att spela spelet i ramverket.
 
-1. Skapa ett flödesschema som representerar hur du tänker lösa (del av) spelet. Spara som `doc/yatzy/flowchart.{md,pdf,png}` och gör till en del av ditt repo.
+1. Skapa ett flödesschema som representerar hur du tänker lösa (del av) spelet. Spara som `doc/yatzy/flowchart.{txt,md,pdf,png}` och gör till en del av ditt repo.
 
-1. Skapa psudokod som visar hur du tänker lösa (del av) spelet. Spara som `doc/yatzy/psuedocode.{md,pdf,png}` och gör till en del av ditt repo.
+1. Skapa psudokod som visar hur du tänker lösa (del av) spelet. Spara som `doc/yatzy/psuedocode.{txt,md,pdf,png}` och gör till en del av ditt repo.
 
 1. Man skall rulla sina tärningar, välja vilka man sparar, och slå om. Man har tre slag och fem tärningar. En vanlig Yatzy-omgång helt enkelt.
 

@@ -240,6 +240,10 @@ make local-publish
 make virtual-host-echo
 make virtual-host
 
+# Create the certs
+# Create the virtual host for https
+#make virtual-host-echo
+#make virtual-host
 ```
 
 

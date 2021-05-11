@@ -1,9 +1,12 @@
 #### Aktuellt
 
-<!--
 [FIGURE src=image/iphone-foto.jpeg?w=c10&h=100&cf&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."]
--->
 
+Våren går och sommarlov finns runt hörnet.
+
+Läs mer om [läsårets indelning och terminsstider](https://studentportal.bth.se/page/lasarochterminstider).
+
+<!--
 [FIGURE src=https://dbwebb.se/image/person/jane-strandberg-2.jpg?w=c10&cf&h=100&convolve=lighten&sharpen&convolve=draw&blur caption="Höstterminen har startat..."]
 
 Introveckan för nya studenter startar måndagen den 24 augusti 2020, se välkomstbrevet för detaljer.
@@ -11,6 +14,7 @@ Introveckan för nya studenter startar måndagen den 24 augusti 2020, se välkom
 Höstterminen för 2:or och 3:or startar en vecka senare, den 31/8.
 
 Läs mer om [läsårets indelning och terminsstider](https://studentportal.bth.se/page/lasarochterminstider).
+-->
 
 <!-- [FIGURE src=image/iphone-foto.jpeg?w=c8&cf&h=150&convolve=lighten&sharpen&convolve=draw&blur caption="Sommarlov och hobbyverksamhet."] -->
 
