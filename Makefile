@@ -98,7 +98,7 @@ warm-cache:
 	# Update this to pre warm the (local) cache
 	@-install -d -m 777 $(LOCAL_HTDOCS)/cache/anax-warm
 	@-install -d -m 777 $(LOCAL_HTDOCS)/cache/anax
-	/usr/bin/time php $(LOCAL_HTDOCS)/script/cache-warm.php
+	bash -c time php $(LOCAL_HTDOCS)/script/cache-warm.php
 	@-rm -rf $(LOCAL_HTDOCS)/cache/anax-pre
 	@-mv $(LOCAL_HTDOCS)/cache/anax $(LOCAL_HTDOCS)/cache/anax-pre
 	@-mv $(LOCAL_HTDOCS)/cache/anax-warm $(LOCAL_HTDOCS)/cache/anax
