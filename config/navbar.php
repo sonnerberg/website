@@ -88,8 +88,8 @@ return [
         // Here comes the menu strcture
         "items" => [
 
-            "kurser" => [
-                "text"  =>"<i class=\"fa fa-graduation-cap\"></i> Kurser",
+            "kurser1" => [
+                "text"  =>"<i class=\"fa fa-graduation-cap\"></i> Kurser år 1",
                 "url"   => $this->di->get("url")->create("kurser"),
                 "title" => "Jobba med kurserna",
 
@@ -107,6 +107,12 @@ return [
                             "title" => "Kursen htmlphp"
                         ],
 
+                        // "webtec" => [
+                        //     "text"  =>"webtec",
+                        //     "url"   => $this->di->get("url")->create("kurser/webtec"),
+                        //     "title" => "Kursen webtec"
+                        // ],
+
                         "js" => [
                             "text"  =>"js",
                             "url"   => $this->di->get("url")->create("kurser/js"),
@@ -119,22 +125,10 @@ return [
                             "title" => "Kursen design"
                         ],
 
-                        "linux" => [
-                            "text"  =>"linux",
-                            "url"   => $this->di->get("url")->create("kurser/linux-v2"),
-                            "title" => "Kursen linux"
-                        ],
-
                         "oopython" => [
                             "text"  =>"oopython",
                             "url"   => $this->di->get("url")->create("kurser/oopython"),
                             "title" => "Kursen oopython"
-                        ],
-
-                        "webapp" => [
-                            "text"  =>"webapp",
-                            "url"   => $this->di->get("url")->create("kurser/webapp"),
-                            "title" => "Kursen webapp"
                         ],
 
                         "databas" => [
@@ -143,10 +137,40 @@ return [
                             "title" => "Kursen databas"
                         ],
 
+                        "webapp" => [
+                            "text"  =>"webapp",
+                            "url"   => $this->di->get("url")->create("kurser/webapp"),
+                            "title" => "Kursen webapp"
+                        ],
+
                         "mvc" => [
                             "text"  =>"mvc",
                             "url"   => $this->di->get("url")->create("kurser/mvc"),
                             "title" => "Kursen mvc"
+                        ],
+
+                    ],
+                ],
+            ],
+
+            "kurser2" => [
+                "text"  =>"<i class=\"fa fa-graduation-cap\"></i> Kurser år 2",
+                "url"   => $this->di->get("url")->create("kurser"),
+                "title" => "Jobba med kurserna",
+
+                "submenu" => [
+                    "items" => [
+
+                        "vlinux" => [
+                            "text"  =>"vlinux",
+                            "url"   => $this->di->get("url")->create("kurser/vlinux"),
+                            "title" => "Kursen vlinux"
+                        ],
+
+                        "jsramverk" => [
+                            "text"  =>"jsramverk",
+                            "url"   => $this->di->get("url")->create("kurser/jsramverk"),
+                            "title" => "Kursen jsramverk"
                         ],
 
                         "ramverk1" => [
@@ -155,11 +179,22 @@ return [
                             "title" => "Kursen ramverk1"
                         ],
 
-                        "vlinux" => [
-                            "text"  =>"vlinux",
-                            "url"   => $this->di->get("url")->create("kurser/vlinux"),
-                            "title" => "Kursen vlinux"
-                        ],
+                        // "pattern" => [
+                        //     "text"  =>"pattern",
+                        //     "url"   => $this->di->get("url")->create("kurser/pattern"),
+                        //     "title" => "Kursen pattern"
+                        // ],
+                    ],
+                ],
+            ],
+
+            "kurser3" => [
+                "text"  =>"<i class=\"fa fa-graduation-cap\"></i> Kurser år 3",
+                "url"   => $this->di->get("url")->create("kurser"),
+                "title" => "Jobba med kurserna",
+
+                "submenu" => [
+                    "items" => [
 
                         "jsramverk" => [
                             "text"  =>"jsramverk",
@@ -178,17 +213,27 @@ return [
                             "url"   => $this->di->get("url")->create("kurser/itsec"),
                             "title" => "Kursen itsec"
                         ],
+                    ],
+                ],
+            ],
+
+            "kurserö" => [
+                "text"  =>"<i class=\"fa fa-graduation-cap\"></i> Kurser övrigt",
+                "url"   => $this->di->get("url")->create("kurser"),
+                "title" => "Jobba med kurserna",
+
+                "submenu" => [
+                    "items" => [
+                        "faq" => [
+                            "text"  =>"FAQ",
+                            "url"   => $this->di->get("url")->create("kurser/faq"),
+                            "title" => "Kursen faq"
+                        ],
 
                         "webgl" => [
                             "text"  =>"webgl",
                             "url"   => $this->di->get("url")->create("kurser/webgl"),
                             "title" => "Kursen webgl"
-                        ],
-
-                        "faq" => [
-                            "text"  =>"FAQ",
-                            "url"   => $this->di->get("url")->create("kurser/faq"),
-                            "title" => "Kursen faq"
                         ],
 
                     ],
@@ -202,10 +247,11 @@ return [
 
                 "submenu" => [
                     "items" => [
-                        "blogg" => [
-                            "text"  =>"Blogg",
-                            "url"   => $this->di->get("url")->create("blogg"),
-                            "title" => "Läs om dbwebb, kurserna, webbprogrammering och webbutveckling och utbildning i allmänhet"
+
+                        "youtube" => [
+                            "text"  =>"YouTube kanal",
+                            "url"   => $this->di->get("url")->create("https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg"),
+                            "title" => "Inspelningar och livesändningar"
                         ],
 
                         "kunskap" => [
@@ -225,6 +271,13 @@ return [
                             "url"   => $this->di->get("url")->create("uppgift"),
                             "title" => "Jobba med uppgifter och övningar"
                         ],
+
+                        "blogg" => [
+                            "text"  =>"Blogg",
+                            "url"   => $this->di->get("url")->create("blogg"),
+                            "title" => "Läs om dbwebb, kurserna, webbprogrammering och webbutveckling och utbildning i allmänhet"
+                        ],
+
                     ],
                 ],
             ],
@@ -236,23 +289,42 @@ return [
 
                 "submenu" => [
                     "items" => [
-                        "forum"  => [
-                            "text"  => "Forum",
-                            "url"   => $this->di->get("url")->create("forum"),
-                            "title" => "Diskutera i forumet",
+
+                        "discord"  => [
+                            "text"  => "Discord",
+                            "url"   => $this->di->get("url")->create("https://discord.com/channels/118332969004957705/694119633069801482"),
+                            "title" => "Kurs och programchatt",
                         ],
 
-                        "irc"  => [
-                            "text"  => "Chatt",
-                            "url"   => $this->di->get("url")->create("irc"),
-                            "title" => "Chatta på IRC och Gitter",
+                        "github"  => [
+                            "text"  => "GitHub",
+                            "url"   => $this->di->get("url")->create("https://github.com/dbwebb-se"),
+                            "title" => "Organisation på GitHub",
                         ],
 
-                        "social"  => [
-                            "text"  => "Social",
-                            "url"   => $this->di->get("url")->create("social"),
-                            "title" => "Sociala tjänster och nätverk",
+                        "grillcon"  => [
+                            "text"  => "Grillcon",
+                            "url"   => $this->di->get("url")->create("https://grillcon.dbwebb.se/"),
+                            "title" => "Om GrillCon",
                         ],
+
+                        // "forum"  => [
+                        //     "text"  => "Forum",
+                        //     "url"   => $this->di->get("url")->create("forum"),
+                        //     "title" => "Diskutera i forumet",
+                        // ],
+                        //
+                        // "irc"  => [
+                        //     "text"  => "Chatt",
+                        //     "url"   => $this->di->get("url")->create("irc"),
+                        //     "title" => "Chatta på IRC och Gitter",
+                        // ],
+                        //
+                        // "social"  => [
+                        //     "text"  => "Social",
+                        //     "url"   => $this->di->get("url")->create("social"),
+                        //     "title" => "Sociala tjänster och nätverk",
+                        // ],
                     ],
                 ],
             ],
