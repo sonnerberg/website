@@ -50,7 +50,8 @@ LOCAL_HTDOCS = $(HTDOCS_BASE)/$(WWW_SITE)
 ROBOTSTXT	 := robots.txt
 
 # Certificates for https
-SSL_APACHE_CONF = /etc/letsencrypt/options-ssl-apache.conf
+#SSL_APACHE_CONF = /etc/letsencrypt/options-ssl-apache.conf
+SSL_APACHE_CONF = $(GIT_BASE)/config/apache/options-ssl-apache.conf
 SSL_PEM_BASE 	= /etc/letsencrypt/live/$(WWW_SITE)
 
 # Theme
