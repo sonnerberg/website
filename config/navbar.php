@@ -273,7 +273,7 @@ return [
                         ],
 
                         "blogg" => [
-                            "text"  =>"Blogg",
+                            "text"  =>"(Blogg)",
                             "url"   => $this->di->get("url")->create("blogg"),
                             "title" => "Läs om dbwebb, kurserna, webbprogrammering och webbutveckling och utbildning i allmänhet"
                         ],
@@ -308,23 +308,24 @@ return [
                             "title" => "Om GrillCon",
                         ],
 
-                        // "forum"  => [
-                        //     "text"  => "Forum",
-                        //     "url"   => $this->di->get("url")->create("forum"),
-                        //     "title" => "Diskutera i forumet",
-                        // ],
-                        //
+                        "forum"  => [
+                            "text"  => "(Forum)",
+                            "url"   => $this->di->get("url")->create("forum"),
+                            "title" => "Diskutera i forumet",
+                        ],
+
+                        "social"  => [
+                            "text"  => "(Social)",
+                            "url"   => $this->di->get("url")->create("social"),
+                            "title" => "Sociala tjänster och nätverk",
+                        ],
+
                         // "irc"  => [
                         //     "text"  => "Chatt",
                         //     "url"   => $this->di->get("url")->create("irc"),
                         //     "title" => "Chatta på IRC och Gitter",
                         // ],
                         //
-                        // "social"  => [
-                        //     "text"  => "Social",
-                        //     "url"   => $this->di->get("url")->create("social"),
-                        //     "title" => "Sociala tjänster och nätverk",
-                        // ],
                     ],
                 ],
             ],
