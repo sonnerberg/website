@@ -246,6 +246,12 @@ make virtual-host
 #make virtual-host
 ```
 
+Add crontab.
+
+```
+30   6,12,18 * * * MAILTO=""; cd $HOME/git/dbwebb.se; git pull && bash -cl "make update-all" &> /dev/null
+```
+
 
 
 ```                                                            
