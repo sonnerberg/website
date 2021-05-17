@@ -130,6 +130,12 @@ Redovisning {#redovisning}
 
 3. Se till att samtliga kursmoment validerar.
 
+På grund av Corona ska alla spela in en redovisningsvideo som ska lämnas in tillsammans med redovisningstexten.
+
+1. Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
+
+2. Visa ditt ansikte och en giltig ID handling, t.ex. körkot eller pass, i videon.
+
 [INFO]
 Se till att göra en `dbwebb update` innan `dbwebb publish me` så du får senaste versionen av kursrepot och konfiguration för kursrepot.
 [/INFO]
