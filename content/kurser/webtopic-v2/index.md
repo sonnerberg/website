@@ -3,6 +3,7 @@ title: webtopic (v2)
 author:
     - mos
 revision:
+    "2020-05-17": "(B, mos) Ny kurs/kurskod from ht22."
     "2018-02-27": "(A, mos) Första revisionen."
 ...
 Kursen webtopic (v2)
@@ -18,7 +19,9 @@ inom webbutveckling. Studenterna fördjupar sin kunskap genom en teoretisk studi
 Kursplan {#kursplan}
 -----------------------------------------------------
 
-Kursens namn är "Fördjupningskurs i Webbutveckling". Du hittar [kursplanen genom att söka på kurskoden PA1452 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1452).
+Fram till och med hösten 2021 användes kursen "Fördjupningskurs i Webbutveckling". Du hittar [kursplanen genom att söka på kurskoden PA1452 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1452).
+
+Från och med hösten 2022 ges kursen "Forskningsmetodik i datavetenskaper" under kurskod PA1433. [Hitta kursplanen](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1433).
 
 
 
