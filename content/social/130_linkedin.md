@@ -12,7 +12,7 @@ Vi har skapat ett par grupper på LinkedIn som hjälper dig att hålla kvar kont
 
 Även följande kan vara aktuell för dig som tar examen i programvaruteknik.
 
-[Programvarutekniker@BTH »](http://www.linkedin.com/groups/Programvaruteknik-Blekinge-Tekniska-H%C3%B6gskola-100958/about) Denna grupp är för de som har en, eller är på väg att ta en **examen i Programvaruteknik från BTH**. Ursprunget till gruppen är de som gick den klassiska utbildningen i "Programvaruteknik", numer kallas den "Software Engineering". Studenter från Webbprogrammering får en examen i Programvaruteknik och har en given plats i denna gruppen. Det finns även civilingenjörsutbildningar som ger en examen i Programvaruteknik. Dessa äkta programvarutekniker hittar du i denna gruppen som går tillbaka till första gången som programmet gavs vid BTH, året 1990. Det finns alltså mer än två sekel av duktiga och erfarna programvarutekniker i denna gruppen.
+[Programvarutekniker@BTH »](https://www.linkedin.com/groups/100958) Denna grupp är för de som har en, eller är på väg att ta en **examen i Programvaruteknik från BTH**. Ursprunget till gruppen är de som gick den klassiska utbildningen i "Programvaruteknik", numer kallas den "Software Engineering". Studenter från Webbprogrammering får en examen i Programvaruteknik och har en given plats i denna gruppen. Det finns även civilingenjörsutbildningar som ger en examen i Programvaruteknik. Dessa äkta programvarutekniker hittar du i denna gruppen som går tillbaka till första gången som programmet gavs vid BTH, året 1990. Det finns alltså mer än två sekel av duktiga och erfarna programvarutekniker i denna gruppen.
 
 <hr>
 
