@@ -237,13 +237,13 @@ make site-build
 make local-publish
 
 # Create the virtual host for http
-make virtual-host-echo
 make virtual-host
 
 # Create the certs
+make ssl-cert-create
+
 # Create the virtual host for https
-#make virtual-host-echo
-#make virtual-host
+make virtual-host-https
 ```
 
 Add crontab.

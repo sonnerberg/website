@@ -33,7 +33,8 @@ Redirect 301 /grill     https://arkiv.dbwebb.se/grill/
 Redirect 301 /grilla    https://arkiv.dbwebb.se/grilla/
 Redirect 301 /chatt     /irc
 
-
+# Forum
+Redirect 301 /forum     http://bth1.dbwebb.se/forum
 
 #
 #

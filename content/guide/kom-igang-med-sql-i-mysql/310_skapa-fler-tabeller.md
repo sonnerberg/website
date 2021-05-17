@@ -60,7 +60,7 @@ Leta i refmanualen om något är oklart, till exempel så vill du kanske slå up
 Primärnyckel {#primar}
 ----------------------------------
 
-En primärnyckel är den kolumn, eller en kombination av två eller fler kolumner, så gör varje rad unik.
+En primärnyckel är den kolumn, eller en kombination av två eller fler kolumner, som gör varje rad unik.
 
 Man börjar med att använda de kolumner som finns i tabellen, ibland räcker de inte och man kan då skapa en surrogatnyckel som man använder till primärnyckel.
 
