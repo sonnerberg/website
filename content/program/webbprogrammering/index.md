@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-05-18": "(H, mos) Bort med kalender och till utbplan för 2021."
     "2020-06-25": "(G, mos) Excelark för kp till 2019, 2020."
     "2020-05-18": "(F, mos) Länk till kurs-excel för 2021 + utbplaner för 2020."
     "2019-11-19": "(E, mos) Länk till kurs-excel för 2020."
@@ -15,14 +16,14 @@ Webbprogrammering 120/180
 Bra att ha saker.
 
 
-
+<!--
 Övergripande planering {#cal}
 --------------------------------------------------------------
 
 Det finns övergripande planering i Google kalender som riktar sig till de som går läsår1 och kurspaket, läsår 2 samt generella dbwebb-aktiviteter.
 
 [Läs mer om kalendrarna](kalender).
-
+-->
 
 
 Kurser per antagningsomgång {#kurserantagen}

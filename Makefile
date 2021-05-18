@@ -180,7 +180,7 @@ local-publish-clear: local-cache-clear local-publish
 # target: production-publish      - Publish latest to the production server.
 production-publish:
 	@$(call HELPTEXT,$@)
-	ssh -p 2222 mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
+	ssh -p 22 mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
 
 
 
