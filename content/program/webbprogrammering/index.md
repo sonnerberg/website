@@ -61,6 +61,7 @@ Få en översikt av de kurser som ingår i din antagningsomgång till programmet
 
 ### Webbprogrammering 120hp distans {#followup120}
 
+* [Antagen 2022](https://docs.google.com/spreadsheets/d/1NaFXloCV0nsEMgTtr44q91PkBHXebwkmS0Eqxi-nj2c/edit?usp=sharing)
 * [Antagen 2021](https://docs.google.com/spreadsheets/d/1pKlRPVwqxpAyfaDdi-ERQC_jq5bxxdjEgEh1FPLC6Zo/edit?usp=sharing)
 * [Antagen 2020](https://docs.google.com/spreadsheets/d/1mIseONfKc2mM0u__o2-bOXY5zEnvcAtk5KjXPWqxLj4/edit?usp=sharing)
 * [Antagen 2019](https://docs.google.com/spreadsheets/d/1N4zZNRkPcaOH7a4Eco_kUpXymJF3s9Z6C3TFbbufajE/edit?usp=sharing)
@@ -72,6 +73,7 @@ Få en översikt av de kurser som ingår i din antagningsomgång till programmet
 
 ### Webbprogrammering 180hp campus {#followup180}
 
+* [Antagen 2022](https://docs.google.com/spreadsheets/d/1mOe2l5iGMpxRjRK4Tb3yHSys-aVyNLuaCI1ni_DesgA/edit?usp=sharing)
 * [Antagen 2021](https://docs.google.com/spreadsheets/d/1SiiXMBWIxBRUIBW7y56qEccrVZBOxLyWwaibyScB87Y/edit?usp=sharing)
 * [Antagen 2020](https://docs.google.com/spreadsheets/d/1-j2Tg90kRGwCN97wqljachAyZDsN6ct-9l6an1D2ehg/edit?usp=sharing)
 * [Antagen 2019](https://docs.google.com/spreadsheets/d/1Q9hQuoQ2J6cfZ0JGiGUU-mDr9iHZXgIN3qG5mRcNGxo/edit?usp=sharing)
@@ -103,6 +105,7 @@ Utbildningsplanen är det formella dokumentet som styr upplägget för en antagn
 
 ### Webbprogrammering 120hp distans {#uplan120}
 
+* [Utbildningsplan PAGWG antagen HT2021](http://edu.bth.se/utbildningsplaner/PAGWG_HT-21.pdf)
 * [Utbildningsplan PAGWG antagen HT2020](http://edu.bth.se/utbildningsplaner/PAGWG_HT-20.pdf)
 * [Utbildningsplan PAGWG antagen HT2019](http://edu.bth.se/utbildningsplaner/PAGWG_HT-19.pdf)
 * [Utbildningsplan PAGWG antagen HT2018](http://edu.bth.se/utbildningsplaner/PAGWG_HT-18.pdf)
@@ -113,6 +116,7 @@ Utbildningsplanen är det formella dokumentet som styr upplägget för en antagn
 
 ### Webbprogrammering 180hp campus {#uplan180}
 
+* [Utbildningsplan PAGWE antagen HT2021](http://edu.bth.se/utbildningsplaner/PAGWE_HT-21.pdf)
 * [Utbildningsplan PAGWE antagen HT2020](http://edu.bth.se/utbildningsplaner/PAGWE_HT-20.pdf)
 * [Utbildningsplan PAGWE antagen HT2019](http://edu.bth.se/utbildningsplaner/PAGWE_HT-19.pdf)
 * [Utbildningsplan PAGWE antagen HT2018](http://edu.bth.se/utbildningsplaner/PAGWE_HT-18.pdf)

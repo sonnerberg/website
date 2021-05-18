@@ -34,7 +34,10 @@ Redirect 301 /grilla    https://arkiv.dbwebb.se/grilla/
 Redirect 301 /chatt     /irc
 
 # Forum
-Redirect 301 /forum     http://bth1.dbwebb.se/forum
+<If "req('Host') != 'bth1.dbwebb.se'">
+    Redirect 301 /forum     http://bth1.dbwebb.se/forum
+</If>
+
 
 #
 #
