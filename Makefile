@@ -533,9 +533,9 @@ virtual-host-echo:
 define VIRTUAL_HOST_443
 Define site $(WWW_SITE)
 ServerAdmin $(SERVER_ADMIN)
-ServerName $${site}
 
 <VirtualHost *:80>
+    ServerName $${site}
 	ServerAlias do4.$${site}
 	ServerAlias do3.$${site}
 	ServerAlias bth1.$${site}
@@ -543,6 +543,8 @@ ServerName $${site}
 </VirtualHost>
 
 <VirtualHost *:443>
+    ServerName $${site}
+
 	Include $(SSL_APACHE_CONF)
 	SSLCertificateFile 		$(SSL_PEM_BASE)/cert.pem
 	SSLCertificateKeyFile 	$(SSL_PEM_BASE)/privkey.pem
@@ -597,13 +599,15 @@ export VIRTUAL_HOST_443
 define VIRTUAL_HOST_443_WWW
 Define site $(WWW_SITE)
 ServerAdmin $(SERVER_ADMIN)
-ServerName www.$${site}
 
 <VirtualHost *:80>
+    ServerName www.$${site}
 	Redirect "/" "https://$${site}/"
 </VirtualHost>
 
 <VirtualHost *:443>
+    ServerName www.$${site}
+
 	Include $(SSL_APACHE_CONF)
 	SSLCertificateFile 		$(SSL_PEM_BASE)/cert.pem
 	SSLCertificateKeyFile 	$(SSL_PEM_BASE)/privkey.pem
