@@ -21,7 +21,7 @@ Notera dock att den sidan använder andra *flavours* (PCRE, PHP, ES, Python, Gol
 
 Ett annat bra verktyg online är [https://regexone.com/](https://regexone.com/).
 
-
+<!-- more -->
 
 ### Special Characters {#special_characters}
 
