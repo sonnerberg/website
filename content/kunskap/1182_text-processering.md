@@ -24,7 +24,7 @@ På ytan kan man tycka att de gör samma sak, men de har trots det olika använd
 
 I den här artikeln tas det upp Grep och Sed. Awk är mer omfattande och har en egen plats i [guiden](https://dbwebb.se/guide/kom-igang-med-awk). Alla verktygen hanterar reguljära uttryck (regex). Vi tar det ett steg i taget och blandar in det när vi kommer till Sed.
 
-
+<!-- more -->
 
 Grep {#grep}
 -------------------
