@@ -597,10 +597,10 @@ export VIRTUAL_HOST_443
 define VIRTUAL_HOST_443_WWW
 Define site $(WWW_SITE)
 ServerAdmin $(SERVER_ADMIN)
+ServerName www.$${site}
 
 <VirtualHost *:80>
-	ServerName www.$${site}
-	Redirect "/" "https://www.$${site}/"
+	Redirect "/" "https://$${site}/"
 </VirtualHost>
 
 <VirtualHost *:443>
@@ -609,7 +609,6 @@ ServerAdmin $(SERVER_ADMIN)
 	SSLCertificateKeyFile 	$(SSL_PEM_BASE)/privkey.pem
 	SSLCertificateChainFile $(SSL_PEM_BASE)/chain.pem
 
-	ServerName www.$${site}
 	Redirect "/" "https://$${site}/"
 </VirtualHost>
 endef
