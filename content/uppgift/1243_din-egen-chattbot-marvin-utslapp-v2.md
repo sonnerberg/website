@@ -8,7 +8,7 @@ revision:
 Din egen chattbot - Marvin - Utsläpp
 ==================================
 
-I denna övningen ska vi bygga ut Marvin så att vi kan analysera hur mycket koldioxidutsläpp varje land släpper ut.
+I denna uppgiften ska vi bygga ut Marvin så att vi kan analysera hur mycket koldioxidutsläpp länder släpper ut.
 
 <!--more-->
 
@@ -34,9 +34,9 @@ I mappen "[example/emission_data](https://github.com/dbwebb-se/python/tree/maste
   
 `emission_2017`: En dictionary med mängden koldioxid (i megatonnes, multiplicera med 1 000 000) som varje land släppte ut år 2017.
 
-`country_data`: En dictionary med antalet invånare varje land har, landets storlek (i KM2) och ett heltals id som används för att identifiera länderna i ovanstående variabler.
+`country_data`: En dictionary med antalet invånare varje land har, landets storlek (i KM2) och ett heltals id som används för att identifiera länderna i ovanstående dictionaries.
 
-Exampel på `emission_xxxx`:
+Exampel på `emission_xxxx` dictionary:
 
 ```python
 emission_1990 = {
@@ -69,13 +69,11 @@ Här kan vi se att landet med id 0 är Afganistan. Vi kan också se att nycklarn
 
 För att få ut Albaniens folkmängd 2005 skriver vi `country_data["Albania"]["population"][1]`. När ni ska räkna ut utsläpp/capita/area behöver ni multiplicera utsläppen med 1,000,000 för att uträkningarna ska bli korrekt.
 
-!!! ** Notera att alla länder inte har area, population eller utsläpps data. När du stöter på ett land som saknar den datan som behövs kan du ignorera landet. Programmet ska inte krascha. Bara låt bli att ta med det i uträkningen. ** !!! Uppdatera med exception istället
+**Notera** att alla länder inte har area, population eller utsläpps data.
 
-** Med datan ska du lägga till nya menyval i Marvin som skriver ut hur mycket varje land släpper ut, utsläpp per capita, utsläpp per area och det ska gå att söka på vilka länder som finns i `country_data`. **
 
-För att se att dina uträkningar stämmer någorlunda kan du jämföra dina uträkningar för 2017 med de som finns i tabellen "[Fossil CO
-2 emissions by country/region](https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions#Fossil_CO2_emissions_by_country/region)". Det kommer inte stämma 100% den använder andra källor för landytor och befolkningsmängd men det ska vara snarlika resultat.
 
+**BYT UT DENNA!!!!!!**
 [ASCIINEMA src=359163]
 
 
@@ -93,23 +91,125 @@ cp ../example/emission_data/emission_data.py kmom05/marvin4/
 cd kmom05/marvin4
 ```
 
-2. Skapa en ny modul `emission_functions.py`, i den ska du skriva funktionerna som har med utsläppen att göra.
+2. Skapa en ny modul `emission_functions.py`, i den ska du skriva funktionerna som har med utsläppen att göra. I kraven när det står att du ska skapa en specifik funktion ska du skapa den i filen `emission_functions.py`.
 
-3. Menyval **12**: Användaren ska kunna söka efter vilka länder som finns i `country_data`. Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. T.ex sökning på "sweden" ska skriva ut "Sweden" och sökning på "we" ger "Zimbabwe", "Western Sahara" och "Sweden". Sökningen ska vara case-insensitive.
+    - Tags: `struct`
 
-Om användaren söker på ett land som inte finns ska du lyfta ett `ValueError` i `country_data` och fånga det ute i menyn och skriva ut `"Country does not exist!"`.
 
-- Tags: `12`
 
-4. Menyval **13**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först. Be Användaren om input där användaren skriver in vilket år som ska användas.
+3. Menyval **12**: Användaren ska kunna söka efter vilka länder som finns i `country_data`.  Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. Ett input anrop ska tas emot som innehåller söksträngen. Alla länder som matchar sökningen ska skrivas ut.
 
-5. På föregående menyval, lägg till att användaren även kan skriva in hur många länder som ska skrivas ut i utskriften. T.ex. `1990 10`, då ska bara de 10 länder med mest utsläpp skrivas ut för år 1990. Om användaren enbart skriver in ett år ska alla länder skrivas ut. Ni kan välja själva om ni vill räkna från 0 eller 1.
+    Skapa funktionen `search_country(search_word)`. Den ska ta emot en sträng som argumet vilket är sökordet för att hitta länder. I funktionen hitta alla länder som matchar sökordet och returnera dem i en lista.
 
-6. Menyval **14**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera i storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+    ```python
 
-7. Menyval **15**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per landyta, sortera i storleksordning. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+    arguments: "sweden"       return: ["Sweden"]
+    arguments: "we"           return: ["Zimbabwe", "Western Sahara"]
+    ```
 
-8. Testa, validera och publicera din kod enligt följande.
+    Om sök ordet inte matchar något land ska du lyfta ett `ValueError` i funktionen och sen fånga det ute i meny koden som har anropat funktionen och då skriva ut `"Country does not exist!"`.
+
+    Exempel för menyvalet:
+
+    ```python
+
+    input: "sweden"       output: "Following countries were found: Sweden"
+    input: "we"           output: "Following countries were found: Sweden, Zimbabwe, Western Sahara"
+    input "atlantis"      output: "Country does not exist!"
+    ```
+
+    - Tags: `12`, `search_menu` (testar meny valet), `search_func` (testar funktionen)
+
+
+
+
+4. Menyval **13**: Menyvalet ska skriva ut hur ett lands utsläpp har förändrats i procent mellan två år. Menyvalet ska ta emot ett input anrop där input kommer vara kommaseparerad , `country,year1,year2`. Du behöver plocka ut argumentetn från den strängen. Utskriften ska vara formaterad som `"Country_name:change"`. Du ska skapa två funktioner `get_country_year_data_megatonnes(country, year)` och `get_country_change_for_years(country, year1, year2)`. Om användaren skriver ett felaktigt år ska du fånga det `ValueError` som lyfts från `get_country_year_data_megatonnes` och skriva ut `"Wrong year!"` 
+
+    ```python
+
+    input: "Sweden,1990,2017"       output: "Sweden:-12.46%"
+    input: "Sweden,1000,2017"       output: "Wrong year!"
+    ```
+
+    I `get_country_year_data_megatonnes(country, year)` funktionen ska du returnera hur mycket utsläpp som det landet gjorde för det året i måttet megaton (du behöver multiplisera datan med `1000000`.). Funktionen tar emot två argument, första argumentet ska vara en sträng med landets namn och det andra argumentet ska vara en sträng med året.  
+    Om årtalet som skickas in inte finns ska funktionen lyfta ett `ValueError`.
+
+    ```python
+    arguments: "Sweden", "1990"      return: 58117000.0
+    ```
+
+    `get_country_change_for_years(country, year1, year2)` Funktionen ska räkna ut och returnera skillnaden för ett lands utsläpp mellan två år. Första argumentet ska vara en sträng med landets namn, andra argumentet en sträng med ett år som en sträng och tredje argumentet en sträng med ett år som en sträng. Räkna ut med hur många procent utsläppen har ändrats mellan `year1` och `year2` och avrunda till två decimaler. Använd dig av funktionen `get_country_year_data_megatonnes` för att hämta ut utsläpps datan för de båda åren.
+
+    ```python
+    arguments: "Sweden", "1990", "2017"       return: -12.46 # Utsläppen har minskat med -12.46% från 1990 till 2017
+    ```
+
+    - Tags: `13`, `change_menu`, `change_func`
+
+
+
+5. Menyval **14**: Menyvalet ska samla all data för ett land och skriva ut den. Som input ska menyvalet be om ett land. Du ska skapa två funktioner `get_country_data(country_name)` och `print_country_data(data)`. Använd `print_country_data` för att skriva ut datan du får från `get_country_data`.
+
+    Funktionen `get_country_data(country_name)` ska ta emot en sträng som argumet vilket är namnet på landet. I funktionen ska du bygga upp en dictionary med data och returnera. Om landet saknar populations data, sätt värdet `None` för den nyckeln. Använd de tidigare funktionerna `get_country_change_for_years` och `get_country_year_data_megatonnes` för att hämta ut utsläpps data. Nedanför kan ni se strukturen på vad som ska returneras.
+
+    ```python
+
+    {
+        'name': '<name>',
+        '1990': {'emission': <utsläpp i megaton>, 'population': <antal eller None>},
+        '2005': {'emission': <utsläpp i megaton>, 'population': <antal eller None>},
+        '2017': {'emission': <utsläpp i megaton>, 'population': <antal eller None>},
+        'emission_change': (<skillnad mellan 1990-2005>, <skillnad mellan 2005-2017>)
+    }
+    ```
+
+    Exempel:
+
+    ```python
+
+    arguments: "Sweden"     return:{
+                                'name': 'Sweden',
+                                '1990': {'emission': 58117000.0, 'population': 8567375},
+                                '2005': {'emission': 55877000.0, 'population': 9038627},
+                                '2017': {'emission': 50874000.0, 'population': 9904895},
+                                'emission_change': (-3.85, -8.95)
+                            }
+
+    arguments: "Greenland"  return: {
+                                'name': 'Greenland',
+                                '1990': {'emission': 3000.0, 'population': None},
+                                '2005': {'emission': 631000.0, 'population':None},
+                                '2017': {'emission': 518000.0, 'population': None},
+                                'emission_change': (20933.33, -17.91)
+                            }
+    ```
+
+    Funktionen `print_country_data(data)` ska ta emot en dictionary med data om ett land och skriva ut den. Formatera utskriften av datan enligt:
+
+    ```bash
+
+    "<landets namn>"
+    "<år>: <utsläpp för det året i megaton>"
+    "<år>: <antal invårare för det året>"
+    "<år>-<år>: <förändring av utsläpp i procent>"
+    ```
+
+    Övrig formatering runt om kvittar, men de specifika värdena ska använda formateringen ovanför.
+
+    ```python
+
+    arguments: "sweden"       output: 
+    Sweden
+    Emission          - 1990: 58117000.0    2005: 55877000.0        2017: 50874000.0
+    Emission change   -   1990-2005: -3.85%        2005-2017: -8.95%
+    Population        - 1990: 8567375       2005: 9038627   2017: 9904895
+    ```
+
+    - Tags: `14`, `data_menu`, `data_func`
+
+
+
+6. Testa, validera och publicera din kod enligt följande.
 
 ```bash
 # Flytta till kurskatalogen
@@ -125,9 +225,49 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-* För menyval 13, 14 och 15, ska det även gå att skriva in en range på hur många länder som ska skrivas ut. T.ex. med input `2005 21-30`, då ska datan för 2005 användas och skriva ut länderna på plats 21 till och med 30 i det sorterade resultatet.
+I följande menyval, om ett land saknar någon av datan som behövs för uitskriften, hoppa över det landet. Låtsas som att det inte finns.
 
-* För menyval 13, 14 och 15, ska det även gå att skriva in ett land för att endast få ut det landets värde.
+1. Menyval **E1**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först, avrunda till 2 decimaler. Be Användaren om input där användaren skriver in vilket år som ska användas, t.ex. `"1990"` . Det ska även gå att skriva in hur många länder som ska visas, t.ex. `"1990 10"`, då ska bara de 10 högsta länderna skrivas ut. Utskriften ska ha formatet `<land>: <utsläpp>` med ett land per rad.
+
+    ```python
+
+    input: "1990 2"     output: "United States of America: 5085897000.0
+                                European Union: 4409339000.0"
+    ```
+
+    - Tags: `E1`
+
+
+
+2. Menyval **E2**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera i storleksordning, avrunda till 2 decimaler. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+
+    ```python
+
+    input: "2017 4"     output: "Curaçao: 46.42
+                                Qatar: 35.89
+                                Trinidad and Tobago: 27.27
+                                Kuwait: 23.95"
+    ```
+
+    - Tags: `E2`
+
+
+
+4. Menyval **E3**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per landyta, sortera i storleksordning, avrunda till 2 decimaler. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+
+
+
+    ```python
+
+    input: "1990 2"     output: "Singapore: 43829.52
+                                Bahrain: 15664.45"
+    ```
+
+    - Tags: `E3`
+
+<!-- 5. För menyval 13, 14 och 15, ska det även gå att skriva in en range på hur många länder som ska skrivas ut. T.ex. med input `2005 21-30`, då ska datan för 2005 användas och skriva ut länderna på plats 21 till och med 30 i det sorterade resultatet.
+
+6. För menyval 13, 14 och 15, ska det även gå att skriva in ett land för att endast få ut det landets värde. -->
 
 
 
