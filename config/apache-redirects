@@ -182,6 +182,18 @@ Redirect /kurser/mvc/studieplan     https://docs.google.com/spreadsheets/d/1a2tV
 Redirect /kurser/mvc/lektionsplan   https://docs.google.com/spreadsheets/d/13nsNIJ6HmngTFQEDdDEMnb8e1kCPuhZx0vlYGtVA54c/edit?usp=sharing
 Redirect /kurser/mvc                /kurser/mvc-v1
 
+# webtec
+Redirect /webtec                       /kurser/webtec
+Redirect /kurser/webtec/studieplan     https://docs.google.com/spreadsheets/d/1ohdubYpmJQ095Z4BTgADIh98LkgcZion3AbpuS1pXvA/edit?usp=sharing
+Redirect /kurser/webtec/lektionsplan   https://docs.google.com/spreadsheets/d/1HW5prIQffx8hHbW8JUEgfodSr2yOCV7sHScW8DDl0QY/edit?usp=sharing
+Redirect /kurser/webtec                /kurser/webtec-v1
+
+# pattern
+Redirect /pattern                       /kurser/pattern
+Redirect /kurser/pattern/studieplan     https://docs.google.com/spreadsheets/d/1Jsm5RFD4Lsn_Kig1Z8hPzuZ3Le1mskwXYwxCrjGgsEk/edit?usp=sharing
+Redirect /kurser/pattern/lektionsplan   https://docs.google.com/spreadsheets/d/1ETZ4rRBAu6DopFg00Hugo4fGyGXoSUjyRaOyQBOU9u8/edit?usp=sharing
+Redirect /kurser/pattern                /kurser/pattern-v1
+
 # python
 Redirect /python                        /kurser/python
 Redirect /kurser/python/studieplan      https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing

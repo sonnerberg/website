@@ -107,11 +107,11 @@ return [
                             "title" => "Kursen htmlphp"
                         ],
 
-                        // "webtec" => [
-                        //     "text"  =>"webtec",
-                        //     "url"   => $this->di->get("url")->create("kurser/webtec"),
-                        //     "title" => "Kursen webtec"
-                        // ],
+                        "webtec" => [
+                            "text"  =>"webtec",
+                            "url"   => $this->di->get("url")->create("kurser/webtec"),
+                            "title" => "Kursen webtec"
+                        ],
 
                         "js" => [
                             "text"  =>"js",
@@ -179,11 +179,11 @@ return [
                             "title" => "Kursen ramverk1"
                         ],
 
-                        // "pattern" => [
-                        //     "text"  =>"pattern",
-                        //     "url"   => $this->di->get("url")->create("kurser/pattern"),
-                        //     "title" => "Kursen pattern"
-                        // ],
+                        "pattern" => [
+                            "text"  =>"pattern",
+                            "url"   => $this->di->get("url")->create("kurser/pattern"),
+                            "title" => "Kursen pattern"
+                        ],
                     ],
                 ],
             ],

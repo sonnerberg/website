@@ -87,7 +87,7 @@ Efter genomförd kurs skall studenten:
 Kursmoment {#kursmoment}
 ------------------------
 
-Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
+Kursen är uppdelad i 10 kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
@@ -289,7 +289,7 @@ Här kan du se en översikt av hur kurstillfället har valt att strukturera lär
 
 Här finner du även länkar till aktuella video streams och spellistor samt chatter och forum för handledning.
 
-* [Läromaterial vt21, lp4](./laromaterial/vt21lp4)
+* [Läromaterial vt21, lp4](./laromaterial-vt21lp4)
 
 
 
@@ -298,14 +298,7 @@ Lärarteam och intressenter {#team}
 
 Här kan du hitta detaljer om ett kurstillfälle och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
 
-* [Lärarteam och intressenter vt21, lp4](./team/vt21lp4)
-
-
-
-Betygsättning {#betyg}
-------------------------
-
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
+* [Lärarteam och intressenter vt21, lp4](./team-vt21lp4)
 
 
 
@@ -318,13 +311,18 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 |-----------------|-------------------------------|:-----------:|
 | Kmom01 + kmom02 | Inlämningsuppgift 1 á 2.5hp   | U-G         |
 | Kmom03 + kmom04 | Inlämningsuppgift 2 á 2.5hp   | U-G         |
-| Kmom07 - kmom10 | Inlämningsuppgift 3 á 2.5hp   | A-F, Fx     |
+| Kmom05 - kmom10 | Inlämningsuppgift 3 á 2.5hp   | A-F, Fx     |
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment (kmom01-kmom10) godkänts.
 
-Totalt omfattar kursen 7.5hp.
-
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
+
+
+
+Betygsättning {#betyg}
+------------------------
+
+Det finns ett särskilt dokument som beskriver [grunderna för bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning-projekt-quiz-rapport-video).
 
 
 

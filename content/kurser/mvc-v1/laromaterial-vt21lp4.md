@@ -53,7 +53,7 @@ Installationen av labbmiljön sker i samband med de kursmoment där programvaror
 
 
 
-Chatt via Discord och Gitter {#chatt}
+Chatt via Discord {#chatt}
 ----------------------------------
 
 Det finns en kurschatt i Discord där du kan umgås med studenter, lärare och få eller ge hjälp.
