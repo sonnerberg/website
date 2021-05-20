@@ -20,5 +20,6 @@ Planering för introveckan {#plan}
 
 Här kan du se planering för introduktionsveckan.
 
-* [Introduktionsveckan hösten 2021](introduktionsveckan-2021).
+<!--* [Introduktionsveckan hösten 2021](introduktionsveckan-2021).-->
+
 * [Introduktionsveckan hösten 2020](introduktionsveckan-2020).

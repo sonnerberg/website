@@ -12,6 +12,13 @@ Introduktionsveckan är för nya studenter på program och kurspaket och syftar 
 
 <!--more-->
 
+[WARNING]
+
+**Planering pågår, preliminär information.**
+
+[/WARNING]
+
+
 [INFO]
 **Covid planering...**
 
