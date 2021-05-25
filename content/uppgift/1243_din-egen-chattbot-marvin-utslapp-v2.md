@@ -71,10 +71,7 @@ För att få ut Albaniens folkmängd 2005 skriver vi `country_data["Albania"]["p
 
 **Notera** att alla länder inte har area, population eller utsläpps data.
 
-
-
-**BYT UT DENNA!!!!!!**
-[ASCIINEMA src=359163]
+[ASCIINEMA src=416110]
 
 
 
