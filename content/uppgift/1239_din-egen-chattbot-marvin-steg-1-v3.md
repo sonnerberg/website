@@ -65,9 +65,16 @@ Taggarna för varje uppgift motsvarar själva menyvalet. För att testa Menyval 
 
 1. Menyval **2**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut en sträng som skall innehålla motsvarande i Farenheit. Värdet skall avrundas till två decimaler.
 
+```python
+input: 3135.205     output: "275.37"
+```
 
 1. Menyval **3**: Ordmultiplicering. Här skall Marvin ta emot två `input()`, den första skall be om ett ord och den andra skall be om en siffra. Marvin skall sedan skriva ut det givna ordet så många gånger.
 
+```python
+input: "hej"
+input: 3        output: "hejhejhej"
+```
 
 1. Menyval **4**: Summa och medel: Marvin ska fråga efter tal tills du skriver “done” och sedan ska Marvin skriva ut en sträng som skall innehålla summan och medelvärdet för dessa tal. Avrunda dina värden till två decimaler. Exempel:
 ```python
@@ -78,11 +85,12 @@ input "done"     output: "The sum of all numbers are 6 and the avrage is 2"
 ```
 
 
-7. Menyval **5**: Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut “larger!” om det nya talet är större, “smaller!” om det var mindre eller “same!” om talet som skrev in hade samma värde som det föregående talet. Första gången man startar menyvalet kommer Marvin inte ha något tal att jämföra med, då skall den be användaren att mata in två nytt tal. Detta ska göras tills användaren skriver “done”. Exempel:
+7. Menyval **5**: Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut “larger!” om det nya talet är större, “smaller!” om det var mindre eller “same!” om talet som skrev in hade samma värde som det föregående talet. Första gången man startar menyvalet kommer Marvin inte ha något tal att jämföra med, då skall den be användaren att mata in två tal. Detta ska göras tills användaren skriver “done”. Exempel:
 ```python
 input: 1, 2      output: "larger!"
 input: 2         output: "same!"
 input: 1         output: "smaller!"
+input: 3         output: "larger!"
 input "done"
 ```
 
