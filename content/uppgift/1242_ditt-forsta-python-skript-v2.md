@@ -50,7 +50,9 @@ För att konvertera från Celcius till [Farenheit](http://en.wikipedia.org/wiki/
 [°F] = [°C] * 9 / 5 + 32
 ```
 
-<Asciinema som visar struktur>
+Exempel på hur det kan se ut när man kör progrmmet:
+
+[ASCIINEMA src=416115]
 
 Det är viktigt att ditt program följer instruktionerna i kraven annars kommer inte testerna fungera och då rättas inte er inlämning.
 
@@ -71,12 +73,36 @@ ls
 2. `plane.py` skall innehålla kod för att omvandla tre värden, som beskrivs i texten ovanför, höjd, hastighet och temperatur.
 
 3. Gör ett `input()` anrop för att omvandla höjd från meter till feet.
+
+    Exempel input och output värde:
+
+    ```python
+
+    input: "59"       output: "193.57"
+    ```
+
     - Tags: `height`
 
 4. Gör ett `input()` anrop för att omvandla hastighet, från km/h till mph.
+
+    Exempel input och output värde:
+
+    ```python
+
+    input: "200"       output: "124.27"
+    ```
+
     - Tags: `speed`
 
 5. Gör ett `input()` anrop för att omvandla temperatur, från °C till °F.
+
+    Exempel input och output värde:
+
+    ```python
+
+    input: "30"       output: "86.0"
+    ```
+
     - Tags: `temp`
 
 6. Skriv ut alla omvandlade värden avrundade till två decimaler.
