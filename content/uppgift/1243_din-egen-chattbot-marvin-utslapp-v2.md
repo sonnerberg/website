@@ -224,7 +224,7 @@ Extrauppgift {#extra}
 
 I följande menyval, om ett land saknar någon av datan som behövs för uitskriften, hoppa över det landet. Låtsas som att det inte finns.
 
-1. Menyval **E1**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först, avrunda till 2 decimaler. Be Användaren om input där användaren skriver in vilket år som ska användas, t.ex. `"1990"` . Det ska även gå att skriva in hur många länder som ska visas, t.ex. `"1990 10"`, då ska bara de 10 högsta länderna skrivas ut. Utskriften ska ha formatet `<land>: <utsläpp>` med ett land per rad.
+1. Menyval **e1**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först, avrunda till 2 decimaler. Be Användaren om input där användaren skriver in vilket år som ska användas, t.ex. `"1990"` . Det ska även gå att skriva in hur många länder som ska visas, t.ex. `"1990 10"`, då ska bara de 10 högsta länderna skrivas ut. Utskriften ska ha formatet `<land>: <utsläpp>` med ett land per rad.
 
     ```python
 
@@ -232,11 +232,11 @@ I följande menyval, om ett land saknar någon av datan som behövs för uitskri
                                 European Union: 4409339000.0"
     ```
 
-    - Tags: `E1`
+    - Tags: `e1`
 
 
 
-2. Menyval **E2**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera i storleksordning, avrunda till 2 decimaler. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+2. Menyval **e2**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per capita, sortera i storleksordning, avrunda till 2 decimaler. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
     ```python
 
@@ -246,11 +246,11 @@ I följande menyval, om ett land saknar någon av datan som behövs för uitskri
                                 Kuwait: 23.95"
     ```
 
-    - Tags: `E2`
+    - Tags: `e2`
 
 
 
-4. Menyval **E3**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per landyta, sortera i storleksordning, avrunda till 2 decimaler. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
+4. Menyval **e3**: Användaren ska skriva in ett år och få utskriften varje lands utsläpp per landyta, sortera i storleksordning, avrunda till 2 decimaler. Det ska även gå att skriva in hur många länder som ska skriva ut. Om användaren enbart skriver in ett år ska alla länder skrivas ut.
 
 
 
@@ -260,7 +260,7 @@ I följande menyval, om ett land saknar någon av datan som behövs för uitskri
                                 Bahrain: 15664.45"
     ```
 
-    - Tags: `E3`
+    - Tags: `e3`
 
 <!-- 5. För menyval 13, 14 och 15, ska det även gå att skriva in en range på hur många länder som ska skrivas ut. T.ex. med input `2005 21-30`, då ska datan för 2005 användas och skriva ut länderna på plats 21 till och med 30 i det sorterade resultatet.
 
