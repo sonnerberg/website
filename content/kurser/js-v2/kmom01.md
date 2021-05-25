@@ -46,9 +46,10 @@ Läsanvisningar  {#lasanvisningar}
 
 ### Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
 
-1. Bekanta dig med kurslitteraturen [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att läsa igenom det första kapitlet [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode") som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript.
+Läs följande: TBD
+<!--
+1. Bekanta dig med kurslitteraturen [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att läsa igenom det första kapitlet [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode") som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript. -->
 
 
 
@@ -68,9 +69,9 @@ Gör följande:
 
 ### Video  {#video}
 
-Titta på följande:
-
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
+Titta på följande: TBD
+<!--
+1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång. -->
 
 
 
@@ -89,12 +90,9 @@ Jobba igenom följande.
 
 <!-- 1. Jobba igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)" som visar dig hur du gör ditt första program i JavaScript och ger dig en grundstruktur för kursens övningar. -->
 
-1. Gå igenom [guiden](guide/js/) som följer kursens moment. För kursmoment 1 gäller delarna:
-    * [Inledning](guide/js/section_break_1)
-    * [Språkkonstruktioner](guide/js/section_break_2)
-    * [Inbyggda typer - steg 1](guide/js/section_break_3)
+1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom01)
 
-1. Jobba igenom artikeln [Kom igång med JavaScript i terminalen](kunskap/kom-igang-med-javascript-i-terminalen).
+1. Jobba igenom det praktiska exemplet [Kom igång med JavaScript i terminalen](https://github.com/dbwebb-se/js-v2/tree/master/example/kmom01).
 
 
 
@@ -102,18 +100,9 @@ Jobba igenom följande.
 
 Dessa uppgifter skall utföras och redovisas.
 
-<!-- 1. Gör laborationen "[JavaScript med variabler och inbyggda funktioner](uppgift/javascript-med-variabler-och-inbyggda-funktioner)". Labben genereras i `me/kmom01/lab1`.
+1. Gör uppgiften "[Glacier report](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/glacier.md)". Spara dina filer i `kmom01/glacier/`.
 
-1. Gör uppgiften "[Sandbox steg 1](uppgift/sandbox-steg-1)". Spara resultatet i `me/kmom01/sandbox`. -->
-
-1. Gör uppgiften "[JavaScript i terminalen](uppgift/javascript-i-terminalen)". Spara dina filer `kmom01/script/`.
-
-1. Gör uppgiften "[Skapa en me-sida för redovisning i dbwebb-kurs](uppgift/skapa-en-me-sida-for-redovisning-i-dbwebb-kurs)". Spara resultatet i `me/redovisa`.
-
-
-<!-- 1. Gör uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)". Har du gjort övningen är du nästan klar. Spara resultatet i `me/kmom01/sandbox`. -->
-
-
+1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/mepage.md)". Spara resultatet i `me/redovisa`.
 
 
 
@@ -128,6 +117,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken utvecklingsmiljö använder du (berätta om något förändrats sen sist, om du svarat på frågan i tidigare kurser)?
 * Är du bekant med HTML och CSS tillsammans med JavaScript sedan tidigare?
-* Gick det bra med JSFiddle/CodePen, några funderingar kring verktygen?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort, något som var svårt eller saknades?
 * Vilken är din TIL för detta kmom?
