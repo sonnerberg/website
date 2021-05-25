@@ -1,9 +1,10 @@
 ---
 author:
-    - efo
     - aar
+    - efo
 category: python
 revision:
+    "2020-05-25": (B, aar) Skrev om uppgifter för hantera automaträttning.
     "2020-03-30": (A, moc) Ny version för att introducerar automaträttning.
 ...
 Analysera text och ord
@@ -40,7 +41,10 @@ Googla "online word counter" eller "online letter counter" så hittar du verktyg
 
 Du ska i uppgiften göra ett program som analyserar en text från en fil. Det kan se ut på detta sättet när vi kör programmet:
 
-[ASCIINEMA src=363438]
+[ASCIINEMA src=416107]
+
+
+Försök gärna skriva DRY kod, funktioner som kan återanvändas för mer än 1 menyval.
 
 
 
@@ -60,7 +64,7 @@ rsync -a example/text/ me/kmom06/analyzer/
 cd me/kmom06/analyzer
 ```
 
-Se till att din katalog `analyzer` innehåller filen `phil.txt`.
+Se till att din katalog `analyzer` innehåller filen `phil.txt` och `lorum.txt`. `phil.txt` ska vara **FÖRVALT** i programmet när man startar det.
 
 1. Ditt program ska bestå av tre moduler: `main.py`, `menu.py` och `analyzer.py`.
 
@@ -72,17 +76,97 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt`.
 
 1. Menyvalet `menu` ska skriva ut menyn och vilka val man kan göra.
 
-1. Analysera antal rader (ej tomma), ord och bokstäver med menyvalen `lines`, `words` och `letters`. Skriv en funktion för varje kommando.
+1. Analysera antal rader (ej tomma), ord och bokstäver med menyvalen `lines`, `words` och `letters`. Skriv minst en funktion för varje kommando i `analyzer.py`.
 
-1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd menyvalen `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver. Avrunda till en (1) decimal.
+    ```python
 
-1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion.
+    input: "lines"       output: "17"
+    input: "words"       output: "199"
+    input: "letters"     output: "907"
+    ```
 
-1. Ditt program ska klara av att byta textfil för analys.
+    - Tags: `count` (gemensam för alla tre), `words`, `lines`, `letters`. 
 
-1. Det är väldigt viktigt att programmet har samma flöde som asciinemat ovan.
 
-11. Testa, validera och publicera din kod enligt följande.
+
+1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd menyvalen `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver. Avrunda till en (1) decimal. Använd strukturen `"<bokstav/ord>: <antal> | <procent>%"` i utskriften.  Skriv minst en funktion för varje kommando i `analyzer.py`.
+
+    ```python
+
+    input: "word_frequency"       output: "the: 12 | 6.0%
+                                           to: 8 | 4.0%
+                                           and: 7 | 3.5%
+                                           of: 6 | 3.0%
+                                           street: 5 | 2.5%
+                                           him: 5 | 2.5%
+                                           he: 5 | 2.5%" 
+    input: "letter_frequency"     output: "e: 108 | 11.9%
+                                           t: 91 | 10.0%
+                                           o: 77 | 8.5%
+                                           h: 67 | 7.4%
+                                           n: 66 | 7.3%
+                                           i: 64 | 7.1%
+                                           a: 64 | 7.1%"
+    ```
+
+    - Tags: `freq` (gemensam för alla båda), `word_frequency`, `letter_frequency`. 
+
+
+
+1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion. Skriv minst en funktion för varje kommando i `analyzer.py`.
+
+    ```python
+
+    input: "all"       output: "17
+                                199
+                                907
+                                the: 12 | 6.0%
+                                to: 8 | 4.0%
+                                and: 7 | 3.5%
+                                of: 6 | 3.0%
+                                street: 5 | 2.5%
+                                him: 5 | 2.5%
+                                he: 5 | 2.5%" 
+                                e: 108 | 11.9%
+                                t: 91 | 10.0%
+                                o: 77 | 8.5%
+                                h: 67 | 7.4%
+                                n: 66 | 7.3%
+                                i: 64 | 7.1%
+                                a: 64 | 7.1%"
+    ```
+
+    - Tags: `freq` (gemensam för alla båda), `word_frequency`, `letter_frequency`. 
+
+1. Ditt program ska klara av menyvalet `change`. Det ska användas för att byta ut vilken fil som används vid övriga menyval. Använd ett input anrop för att fråga användaren om vad den nya filen heter som ska användas. Ni kan testa byta mellan `phil.txt` och `lorum.txt` för att kolla att det fungerar.
+
+    - Tags: `change`.
+    
+    PS. följande är rätt svar för `all` med `lorum.txt`filen:
+
+    ```python
+
+    input: "all"       output: "23
+                                3
+                                140
+                                dolor: 2 | 8.0%
+                                vivamus: 1 | 4.0%
+                                vitae: 1 | 4.0%
+                                varius: 1 | 4.0%
+                                urna: 1 | 4.0%
+                                sit: 1 | 4.0%
+                                pellentesque: 1 | 4.0%
+                                i: 18 | 12.9%
+                                e: 16 | 11.4%
+                                u: 12 | 8.6%
+                                a: 12 | 8.6%
+                                t: 10 | 7.1%
+                                l: 10 | 7.1%
+                                s: 9 | 6.4%"
+    ```
+
+
+1. Testa, validera och publicera din kod enligt följande.
 
 ```bash
 # Flytta till kurskatalogen
@@ -90,35 +174,6 @@ dbwebb test analyzer
 dbwebb validate analyzer
 dbwebb publish analyzer
 ```
-
-Följande är korrekt resultat för de olika kommando:
-
-```
-lines: 17
-
-words: 199
-
-letters: 907
-
-word_frequency:
-    "the": 12 | 6.0%
-    "to": 8 | 4.0%
-    "and": 7 | 3.5%
-    "of": 6 | 3.0%
-    "he": 5 | 2.5%
-    "him": 5 | 2.5%
-    "street": 5 | 2.5%
-
-letter_frequency:
-    "e": 108 | 11.9%
-    "t": 91 | 10.0%
-    "o": 77 | 8.5%
-    "h": 67 | 7.4%
-    "n": 66 | 7.3%
-    "a": 64 | 7.1%
-    "i": 64 | 7.1%
-```
-
 
 
 Extrauppgift {#extra}
