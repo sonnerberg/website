@@ -82,7 +82,7 @@ Titta igenom följande föreläsningar.
 
 När det gäller snygg och ren kod försöker vi förstå om kodkvalitet kan mätas och visualiseras. Vilken typ av mätvärde, "metrics", kan användas och vad säger de om programvaran. Hur ska vi arbeta med valideringsverktyg för att förbättra den upplevda kvaliteten på vår programvara.
 
-Slides till föreläsningen "[Software quality metrics and static code analysis](https://dbwebb-se.github.io/mvc/lecture/L06-static-code-analysis-and-metrics)".
+Slides till föreläsningen "[Software quality metrics and static code analysis](https://dbwebb-se.github.io/mvc/lecture/L06-static-code-analysis-and-metrics/slide.html)".
 
 [YOUTUBE src="SjIdSbVxvk4" width=700 caption="Software quality metrics and static code analysis (med Mikael)."]
 

@@ -23,6 +23,16 @@ services:
         volumes:
             - .:/home/anax/repo
 
+    php80:
+        image: anax/dev:php80-apache
+        ports:
+            - "8088:80"
+        volumes:
+            - .:/app
+            - ./config/docker/dbwebb.se.conf:/etc/apache2/sites-enabled/000-default.conf
+            # Do not mount these, use the ones exiting in the container
+            #- /app/vendor
+
     php73:
         image: anax/dev:php73-cli
         volumes:

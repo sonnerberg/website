@@ -196,7 +196,7 @@ När det gäller phpunit så är bland annat följande resurser intressanta att 
 * [PHPUnit och PHP supportade versioner](https://phpunit.de/supported-versions.html), se vilka versioner som är aktiva för tillfället.
 * [PHPUnit på GitHub](https://github.com/sebastianbergmann/phpunit), följ utvecklingen och läs om vilka issues som finns.
 
-För att kodtäckningen skall fundera behöver du installera Xdebug.
+För att kodtäckningen skall fungera behöver du installera Xdebug.
 
 * [Hemsidan för Xdebug](https://xdebug.org/)
 
