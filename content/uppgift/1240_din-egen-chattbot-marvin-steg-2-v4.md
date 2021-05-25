@@ -14,6 +14,10 @@ Programmering och problemlösning i Python. Strukturera koden i egna funktioner.
 
 <!--more-->
 
+Nu ska ni strukturerar upp er marvin kod i fler filer och funktioner.
+
+[ASCIINEMA src=416124 caption="Marvin del 2"]
+
 
 <!-- Introduktion {#intro}
 -----------------------
@@ -72,9 +76,14 @@ input: "Borde inte bli samma igen"  output: "Borde inte bli samma igen --> eel g
 
 5. Menyval **9** - `anagram`: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Lösningen ska inte vara case-sensitive, med andra ord `A == a`. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
 ```python
-input: "Anagram", "Magarna"     output: "Match"
-input: "Paris", "sirap"         output: "Match"
-input: "Nope", "note"           output: "No Match"
+input: "Anagram"
+input: "Magarna"     output: "Match"
+
+input: "Paris"
+input: "sirap"       output: "Match"
+
+input: "Nope"
+input: "note"        output: "No Match"
 ```
 
 6. Menyval **10** - `get_acronym`: Akronym skapare. Marvin ska be om en sträng och skapa en akronym för den genom att plocka ut alla stora bokstäver och sätta ihop till en ny sträng. Tips, [isupper()](https://docs.python.org/3/library/stdtypes.html#str.isupper). Exempel:
@@ -84,16 +93,18 @@ input: "Ingvar Kamprad Elmtaryd Agunnaryd"  output: "IKEA"
 ```
 
 7. Menyval **11** - `mask_string`: Sträng maskering. Skapa ett nytt val där Marvin ber om en sträng och ersätter alla utom de fyra sista karaktärerna med “#”. Exempel:
-```python
-input: "4556364607935616"     output: "############5616"
-input: "64607935616"          output: "#######5616"
-```
 
-Till detta menyvalet ska du också skapa funktionen `multiply_str`. `multiply_str` funktionen ska ta emot två argument, det första ska vara en sträng och det andra ett heltal. Funktionen ska multiplicera strängen med heltalet och returnera strängen som skapas.
+  ```python
 
-Skriv koden i `mask_string` så att `multiply_str` används för att skapa delen av strängen med `#`.
+  input: "4556364607935616"     output: "############5616"
+  input: "64607935616"          output: "#######5616"
+  ```
 
-Använd också `multiply_str` i funktionen för menyval **3**.
+  Till detta menyvalet ska du också skapa funktionen `multiply_str`. `multiply_str` funktionen ska ta emot två argument, det första ska vara en sträng och det andra ett heltal. Funktionen ska multiplicera strängen med heltalet och returnera strängen som skapas.
+
+  Skriv koden i `mask_string` så att `multiply_str` används för att skapa delen av strängen med `#`.
+
+  Använd också `multiply_str` i funktionen för menyval **3**.
 
 
 
@@ -128,15 +139,29 @@ Score   Grade
 ```
 Formatera output enligt `score: <betyg>`.
 ```python
-input: "100", "59"     output: "score: F"
-input: "70", "50"     output: "score: C"
+input: "100"
+input: "59"     output: "score: F"
+
+input: "70"
+input: "50"     output: "score: C"
 ```
 
 * Menyval **b2** - `has_strings`: Gör så Marvin kan ta emot fyra strängar, den första strängen ska jämföras med de andra tre. Kolla om den första strängen börjar med den andra, innehåller den tredje och slutar med den sista. Lösningen ska vara case-sensitive, med andra ord `A != a`. Tips, [startswith()](https://docs.python.org/3/library/stdtypes.html#str.startswith), [endswith()](https://docs.python.org/3/library/stdtypes.html#str.endswith) Exempel:
 ```python
-input: "anagram", "ana", "agr", "am"        output: "Match"
-input: "isogram", "is", "gra", "m"          output: "Match"
-input: "Palindrom", "par", "ind", "rom"     output: "No match"
+input: "anagram"
+input: "ana"
+input: "agr"
+input: "am"        output: "Match"
+
+input: "isogram"
+input: "is"
+input: "gra"
+input: "m"          output: "Match"
+
+input: "Palindrom"
+input: "par"
+input: "ind"
+input: "rom"        output: "No match"
 ```
 
 
