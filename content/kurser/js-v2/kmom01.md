@@ -82,7 +82,7 @@ Titta på följande: TBD
 
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Jobba igenom följande.
 
@@ -92,7 +92,7 @@ Jobba igenom följande.
 
 1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom01)
 
-1. Jobba igenom det praktiska exemplet [Kom igång med JavaScript i terminalen](https://github.com/dbwebb-se/js-v2/tree/master/example/kmom01).
+1. Jobba igenom det praktiska exemplet [Kom igång med JavaScript i terminalen](https://github.com/dbwebb-se/js-v2/tree/master/example/basics).
 
 
 
