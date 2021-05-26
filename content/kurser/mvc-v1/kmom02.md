@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2021-05-26": "(B, mos) Läsresurs om semantisk versionshantering."
     "2021-04-02": "(A, mos) Första utgåvan i mvc-v1."
 ...
 Kmom02: Controller
@@ -206,6 +207,12 @@ Här kan du läsa om ett par alternativa sätt att jobba med branches för ny ko
 * "[Understanding the GitHub flow](https://guides.github.com/introduction/flow/)"
 * "[Git Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)"
 * "[Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)"
+
+
+
+### Semantisk versionshantering {#version}
+
+I dokumentet om "[Semantisk versionshantering 2.0.0](https://semver.org/lang/sv/)" kan man läsa hur man kan tänka när man sätter en viss version med ett versionsnummer på din kod. Dokumentet visar och ger en innebörd till vad de olika siffrorna betyder i ett sammanhang.
 
 
 
