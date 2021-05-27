@@ -224,13 +224,6 @@ E: 17,19: Using variable 'str4' before assignment (used-before-assignment)
 
 Det du ser är liknande felaktigheter som du fick när du exekverade programmet tidigare. Detta är ett sätt att analysera ett program utan att köra det. På det viset kan man upptäcka problem med koden innan man exekverar den.
 
-Du kan nu radera filen så att den inte ligger och ger felmeddelande.
-
-```bash
-# Gå till ditt kursrepo python
-$ rm me/kmom01/hello/hello-fel-igen.py
-```
-
 Så här kan det se ut när du kör alla kommandon.
 
 [ASCIINEMA src=124048]
@@ -239,11 +232,18 @@ Du vill att alla dina filer skall validera så när du får valideringsfel så b
 
 Valideringen kan upptäcka direkta felaktigheter men också tveksamma konstruktioner i din kod, konstruktioner som kan vara fel, men behöver inte vara det. Det kan också vara konstruktioner som inte är lämpliga för att de är en potentiell felkälla.
 
-Så här gjorde Kenneth.
+Kolla på videon med nedanför där Kenneth förklarar felen och hur man löser dem.
 
 [YOUTUBE src=MVobjdbN4bw width=630 caption="Kenneth visar hur man validerar koden."]
 
 Validering är alltså ett sätt att kvalitetssäkra din kod. Valideringen kan upptäcka potentiella felaktigheter som inte syns när du exekverar koden. Valideringsverktyg är viktiga verktyg för en proffsprogrammerare.
+
+Du kan nu radera filen så att den inte ligger och ger felmeddelande.
+
+```bash
+# Gå till ditt kursrepo python
+$ rm me/kmom01/hello/hello-fel-igen.py
+```
 
 
 
