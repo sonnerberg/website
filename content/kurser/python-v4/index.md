@@ -1,10 +1,11 @@
 ---
-title: python-v3
+title: python-v4
 author:
     - mos
     - efo
     - aar
 revision:
+    "2021-05-27": (I, aar) Flyttat om kmom inför v4.
     "2018-08-06": (H, efo) Uppdatering från projekt till individuell examination.
     "2018-06-20": (G, aar) Uppdatering av vilka kapitels som ska läsas när.
     "2018-06-19": (F, efo) Uppdatering av kmom beskrivningar inför v2 HT18.
