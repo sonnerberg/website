@@ -4,6 +4,7 @@ author:
     - efo
 category: python
 revision:
+    "2021-05-27": (G, aar) Bytte från karaktär till tecken.
     "2020-05-07": (F, aar) La till videor.
     "2019-05-24": (E, efo, aar) La till stycke om isinstance.
     "2018-06-21": (D, efo) Genomgång inför HT18 med fler exempel.
@@ -118,7 +119,7 @@ Ibland vill vi bara visa några få decimaler genom att avrunda decimaltalen. I 
 
 ### Sträng (String) {#strang}
 
-Textvärden heter [_sträng_](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str) på svenska och _string_ på engelska (förkortas med __str__). En sträng är en sekvens av karaktärer omslutna av enkla (') eller dubbla (") citattecken. Vi vet att `"Hello world"` är en sträng för att den är omsluten av citattecken. En sträng kan inte innehålla samma typ av citattecken som den är omsluten av ochen sträng avslutas så fort ett likadant citattecken påträffas i sekvensen.
+Textvärden heter [_sträng_](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str) på svenska och _string_ på engelska (förkortas med __str__). En sträng är en sekvens av tecken omslutna av enkla (') eller dubbla (") citattecken. Vi vet att `"Hello world"` är en sträng för att den är omsluten av citattecken. En sträng kan inte innehålla samma typ av citattecken som den är omsluten av ochen sträng avslutas så fort ett likadant citattecken påträffas i sekvensen.
 
 I koden nedan visas vårt första felmeddelande. Felmeddelanden visas när något går fel i vårt program, då avslutas programmet och ett felmeddelande visas. I detta fall får vi ett felmeddelande när vi försöker skriva värdet `"It"s Learning"`, alltså en sträng skapad med `"` som innehåller en `"` som en del av värdet. Kolla på felmeddelandet och se om du förstår vad felet är, jag förklarar felet i texten under koden.
 
@@ -139,7 +140,7 @@ I koden nedan visas vårt första felmeddelande. Felmeddelanden visas när någo
 SyntaxError: invalid syntax
 ```
 
-Python interpretatorn klarar bara av att exekvera kod som följer dess struktur. När vi skriver `"It"s Learning"` skapar vi en sträng som innehåller karaktärerna `It`. När den andra `"` påträffas i koden avslutas strängen och då blir de efterföljande karaktärerna inte en del av strängen. Python interpretatorn klarar inte av att det kommer ett `s` efter en sträng och då stoppas programmet och interpretatorn visar felet som vi ser ovanför, ett så kallat syntaxfel. Syntaxfel betyder att koden inte är korrekt skriven. Vi kan även se att koden är på rad 1 och en "^" som pekar på vart felet är.
+Python interpretatorn klarar bara av att exekvera kod som följer dess struktur. När vi skriver `"It"s Learning"` skapar vi en sträng som innehåller tecknen `It`. När den andra `"` påträffas i koden avslutas strängen och då blir de efterföljande tecknen inte en del av strängen. Python interpretatorn klarar inte av att det kommer ett `s` efter en sträng och då stoppas programmet och interpretatorn visar felet som vi ser ovanför, ett så kallat syntaxfel. Syntaxfel betyder att koden inte är korrekt skriven. Vi kan även se att koden är på rad 1 och en "^" som pekar på vart felet är.
 
 Om vi har två strängar som vi vill lägga ihop till en lång kan detta med ett "+" mellan två strängar. Detta kallas att konkatenera strängar, den engelska översättningen är 'concatenate'.
 
@@ -328,7 +329,7 @@ Precis som med värden kan vi med variabler utföra matematiska operationer i oc
 
 ## Namngivning och Keywords {#namngivning_keywords}
 
-När du namnger variabler ska det vara på engelska, beskrivande och dokumentera vad variabeln används till. Variabelnamn kan innehålla både bokstäver, siffror och vissa andra karaktärer men får inte börja på siffror. Om ditt namn ska innehålla flera ord bör du seperera dem med ett "\_" och det är inte tillåtet med mellanrum (" ") i variabelnamn.
+När du namnger variabler ska det vara på engelska, beskrivande och dokumentera vad variabeln används till. Variabelnamn kan innehålla både bokstäver, siffror och vissa andra tecknen men får inte börja på siffror. Om ditt namn ska innehålla flera ord bör du seperera dem med ett "\_" och det är inte tillåtet med mellanrum (" ") i variabelnamn.
 
 Vi kikar på några variabelnamn.
 
@@ -422,7 +423,7 @@ Först ska vi dock kommentera koden vi redan har så andra utvecklare och du sj�
 
 ### Kommentera {#kommentera}
 
-Kommentarer används för att förklara vad kod och program gör så att du själv och andra utvecklare lätt vet vad saker ska göra. Om det var länge sedan du jobbade med ett program och sen återvänder kan det vara svårt att komma ihåg vad all kod gör, då är det bra om du har kommenterat den. Karaktären "#" används för att kommentera en rad. När Python interpretatorn läser en "#" vet den att allt som kommer efter på samma rad är en kommentar och låter bli att exekvera det som kod.
+Kommentarer används för att förklara vad kod och program gör så att du själv och andra utvecklare lätt vet vad saker ska göra. Om det var länge sedan du jobbade med ett program och sen återvänder kan det vara svårt att komma ihåg vad all kod gör, då är det bra om du har kommenterat den. Tecknet "#" används för att kommentera en rad. När Python interpretatorn läser en "#" vet den att allt som kommer efter på samma rad är en kommentar och låter bli att exekvera det som kod.
 
 Vårt program innehåller inte mycket än så länge men vi kan lägga en kommentar överst i filen som förklarar vad programmet ska göra.
 
