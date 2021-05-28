@@ -44,7 +44,7 @@ Du har blivit rekryterad till organisationen Effektiv Vaccinering som bedriver e
 
 Det är första veckan på jobbet och du vill framstå som en god databasprogrammerare.
 
-Chefen har gett dig [ett excelark med lite data](https://docs.google.com/spreadsheets/d/167g1Dcl_YCG0YWABRVVyoJjDaKzxvRWnYmFqWKkFfwU/edit?usp=sharing) och bett dig att göra en databas.
+Chefen har gett dig [ett excelark med lite data](https://docs.google.com/spreadsheets/d/14N8U0R04n5xP2P-Rm-73GlFm6j6I18NPu5kYo2f_z_U/) och bett dig att göra en databas.
 
 Excelarket innehåller fyra (5) flikar med data där varje flik är en tabell med kolumner och rader (du ser flikarna om du skrollar längst ned i webbsidan).
 
