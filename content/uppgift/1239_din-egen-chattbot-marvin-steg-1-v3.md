@@ -62,6 +62,7 @@ Taggarna för varje uppgift motsvarar själva menyvalet. För att testa Menyval 
 
 1. Uppdatera menyval **1** för att berätta vad du heter. Byt ut hälsningsfrasen mot en annan. Du kan även byta namnet på din "Marvin", om du vill.
 
+1. Menyval **q**: Avsluta programmet. Använd **inte** `exit()` för att avsluta programmet. Använd istället `break` för att avsluta loopen så att programmet stängs när för att all kod har blivit exekverad.
 
 1. Menyval **2**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut en sträng som skall innehålla motsvarande i Farenheit. Värdet skall avrundas till två decimaler.
 
