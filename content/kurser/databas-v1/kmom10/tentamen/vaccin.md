@@ -196,19 +196,19 @@ Studera utskriften nedan extra noggrant, skriv sedan SQL-kod som löser EXAKT sa
 Det är rapportens innehåll som är viktigt, inte hur du skriver ut det i tabellformatet, det är som vanligt godtyckligt tabellformat.
 
 ```text
-+--------------------------------+---------------------------------+----------+-----------------------------+
-| Kund                           | Vaccin                          | Datum    | Sjukdom                     |
-+--------------------------------+---------------------------------+----------+-----------------------------+
-| Joe Biden (Washington)         | Stor spruta (Spruta)            | 08-08-15 | Agorafobi                   |
-| Joe Biden (Washington)         | Stor spruta (Spruta)            | 21-07-31 | Agorafobi                   |
-| Xi Jinping (Peking)            | NULL                            | NULL     | NULL                        |
-| Vladimir Putin (Moskva)        | Stor spruta (Spruta)            | 08-08-13 | Agorafobi                   |
-| Vladimir Putin (Moskva)        | Allverkande svamp (Svamp)       | 21-05-29 | Anemi                       |
-| Vladimir Putin (Moskva)        | Den magiska tabletten (Tablett) | 05-06-08 | Agorafobi, Anafylaxi, Anemi |
-| Boris Johnson (London)         | Den magiska tabletten (Tablett) | 02-06-08 | Agorafobi, Anafylaxi, Anemi |
-| Cyril Ramaphosa (Johannisburg) | Allverkande svamp (Svamp)       | 21-02-24 | Anemi                       |
-+--------------------------------+---------------------------------+----------+-----------------------------+
-8 rows in set (0.002 sec)
++--------------------------------+---------------------------------+----------+-----------------------------+  
+| Kund                           | Vaccin                          | Datum    | Sjukdom                     |  
++--------------------------------+---------------------------------+----------+-----------------------------+  
+| Joe Biden (Washington)         | Stor spruta (Spruta)            | 08-08-15 | Agorafobi                   |  
+| Joe Biden (Washington)         | Stor spruta (Spruta)            | 21-05-02 | Agorafobi                   |  
+| Xi Jinping (Peking)            | NULL                            | NULL     | NULL                        |  
+| Vladimir Putin (Moskva)        | Stor spruta (Spruta)            | 08-08-13 | Agorafobi                   |  
+| Vladimir Putin (Moskva)        | Allverkande svamp (Svamp)       | 21-05-29 | Anemi                       |  
+| Vladimir Putin (Moskva)        | Den magiska tabletten (Tablett) | 01-06-08 | Agorafobi, Anafylaxi, Anemi |  
+| Boris Johnson (London)         | Den magiska tabletten (Tablett) | 02-06-09 | Agorafobi, Anafylaxi, Anemi |  
+| Cyril Ramaphosa (Johannisburg) | Allverkande svamp (Svamp)       | 21-02-24 | Anemi                       |  
++--------------------------------+---------------------------------+----------+-----------------------------+  
+8 rows in set (0.073 sec)
 ```
 
 1. I terminalklienten, skapa kommandot `report` som visar ovan rapport.
