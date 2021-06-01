@@ -62,7 +62,7 @@ En bra fråga berättar följande:
 
 Det bästa är när du kan visa hur man kan återskapa och se ditt fel. Då är det lättare att hjälpa dig.
 
-Läs mer om att [ställa smarta frågor](t/885#p7802).
+Läs mer om att [ställa smarta frågor](/t/885#p7802).
 
 
 
