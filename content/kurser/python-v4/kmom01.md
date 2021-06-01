@@ -120,6 +120,8 @@ Som en generell introduktion till programming och vissa av de tekniker och konst
 
 ###Lästips {#lastips}
 
+- [Exempel och förklaringar av valideringsfel](https://github.com/dbwebb-se/python/issues/46)
+
 - Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
 
 - Kolla på [Study Less Study Smart](https://www.youtube.com/watch?v=IlU-zDU6aQ0), 60 min video hur man studerar effektivt. Om ni känner att den är för lång kan ni kolla på [Study Less Study Smart: A 6-Minute Summary](https://www.youtube.com/watch?v=23Xqu0jXlfs).

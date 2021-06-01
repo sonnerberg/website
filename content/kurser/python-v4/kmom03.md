@@ -66,6 +66,8 @@ Titta på följande:
 1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Chapter Debugging
 
+1. [Exempel och förklaringar av valideringsfel](https://github.com/dbwebb-se/python/issues/46)
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

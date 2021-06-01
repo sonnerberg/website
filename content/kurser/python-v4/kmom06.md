@@ -71,7 +71,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Det finns inga lästips.
+1. [Exempel och förklaringar av valideringsfel](https://github.com/dbwebb-se/python/issues/46)
 
 
 

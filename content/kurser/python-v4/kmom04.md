@@ -87,6 +87,8 @@ Titta på följande:
 
 1. Läs den [feedback jag gav](https://gist.github.com/AndreasArne/cecb1fb4dbc1ec7c83c57a8d2f678012) en student på labbuppgiften 4.2 i lab2.
 
+1. [Exempel och förklaringar av valideringsfel](https://github.com/dbwebb-se/python/issues/46)
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

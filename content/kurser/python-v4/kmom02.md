@@ -87,6 +87,8 @@ Titta på följande:
 
 ### Lästips {#lastips}
 
+1. [Exempel och förklaringar av valideringsfel](https://github.com/dbwebb-se/python/issues/46)
+
 1. Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
 
 1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
