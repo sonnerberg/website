@@ -18,6 +18,8 @@ Du kan ha en bärbar eller stationär, välj efter eget tycke. Kanske en av varj
 
 Om du går på campus så rekommenderas att du har en bärbar som du kan ha med dig till skolan och sitta och jobba på i labbsalarna eller i biblioteket. Även på distans kan det vara skönt att ha en bärbar och ha möjligheten att gå någon annanstans för att studera, kanske tillsammans med studiekompisar.
 
+Ha gärna flera skärmar, själv använder jag helst tre skärmar. Det ger mig en bra och effektiv arbetsyta.
+
 Köp gärna mycket primärminne. Själv hade jag valt 16GB eller mer. 8GB får räcka om plånboken är tunn. Är pengar ett mindre problem så väljer du gärna mer. Webbläsare äter minne och det är bra att ha minne för virtualisering (att köra en dator i din dator).
 
 SSD-disk eller liknande är bra för hyffsat snabb dator. Vill du spara mycket data så vill du även ha en traditionell mekanisk hårddisk som ger dig extra utrymme, eller skaffa dig en bärbar USB-disk att ha som extra lagring. Se tilla tt du kan kopiera data mellan dina hårddiskar och på så sätt få en enkel backup.
