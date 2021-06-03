@@ -40,6 +40,8 @@ Högtalare är bra så att du kan spela upp ljudet från inspelade föreläsning
 
 Se till att få en lugn och trevlig miljö kring datorn, en miljö som du trivs med. Pynta lite. Du kommer tillbringa mycket tid där. Rensa allt som distraherar dig från studierna.
 
+Mycket av läromaterialet är digitalt och du har kan god nytta av en läsplatta. Då kan du ligga/sitta bekvämt och se på en föreläsning eller läsa en PDF.
+
 Som referens finns här en beskrivning över [de flesta programvaror som används i undervisningen](labbmiljo/inledning).
 
 **Bli vän med din dator.** Lär dig installera och avinstallera program, om och om igen. Öppna terminalen och fundera på vad den fyller för funktion. Lär dig tjänster som dela filer (Dropbox etc) och hitta webbtjänster där du kan dela skärmdumpar (imgur etc) och kodsnuttar (gist, codeshare etc).
