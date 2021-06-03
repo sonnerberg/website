@@ -1,9 +1,9 @@
 ---
 author: lew
 revision:
-    "2020-11-09": (A, lew) Genomgång inför ht20.
+    "2021-06-03": (A, lew) Ny version inför ht21.
 ...
-Kmom03: Funktioner
+Kmom03: DOM och events
 ==================================
 
 I JavaScript handlar det mycket om funktioner och språket är delvis ett funktionsorienterat programmeringsspråk. Låt oss nu träna på funktioner i alla dess varianter för att komma i gång med hur de fungerar, är uppbyggda och strukturerade. Att organisera sin kod i funktioner är första steget mot att skriva större och väl organiserade program.
@@ -24,23 +24,23 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. Läs i boken [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) om funktioner.
-    * [Ch15 Functions](http://speakingjs.com/es5/ch15.html)
+<!-- 1. Läs i boken [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) om funktioner.
+    * [Ch15 Functions](http://speakingjs.com/es5/ch15.html) -->
 
 <!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
     * [Ch3 Functions](http://eloquentjavascript.net/03_functions.html) -->
 
 
 
-###MDN {#mdn}
+### MDN {#mdn}
 
 Läs följande:
 
-1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för funktioner.
+<!-- 1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för funktioner.
     * [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
 1. I referensmanualen [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) läs översiktligt om funktioner.
-    * [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+    * [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) -->
 
 
 
@@ -49,13 +49,13 @@ Läs följande:
 -->
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
+<!-- 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
 
-1. (Valfritt) Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Act III: Function the Ultimate](https://www.youtube.com/watch?v=ya4UHuXNygM)".
+1. (Valfritt) Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Act III: Function the Ultimate](https://www.youtube.com/watch?v=ya4UHuXNygM)". -->
 
 
 
@@ -73,26 +73,21 @@ Det finns inga lästips.
 *(ca: 12-16 studietimmar)*
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 3 gäller delen:
-    * [Funktioner](guide/javascript1/section_break_6)
+1. Gå igenom [artiklarna i kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom03) för kursmoment 3.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[JavaScript med funktioner](uppgift/javascript-med-funktioner)". Spara resultatet i `me/kmom03/lab3`.
+1. Gör uppgiften "[Rainbow](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom03/rainbow.md)". Spara dina filer i `kmom03/`.
 
-1. Gör uppgiften "[sandbox steg 3](uppgift/sandbox-steg-3)". Spara resultatet i `me/kmom03/sandbox3`.
-
-1. Gör uppgiften "[Rita flaggor med JavaScript och funktioner](uppgift/gor-svenska-flaggan-med-javascript-html-och-css)". Spara koden i `me/kmom03/flag2`.
-
-<!-- 3. Gör uppgiften ["Flytta runt Baddie på webbsidan #2"](uppgift/flytta-baddie-pa-webbsida-2). Spara koden i `me/kmom03/baddie2`. -->
+1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom03/mepage3.md)". Spara resultatet i `me/redovisa/`.
 
 
 

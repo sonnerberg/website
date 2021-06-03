@@ -1,9 +1,9 @@
 ---
 author: lew
 revision:
-    "2020-11-04": (A, lew) Genomgång inför ht20.
+    "2021-05-04": (A, lew) Ny version inför ht21.
 ...
-Kmom02: Villkor och loopar
+Kmom02: Moduler
 ==================================
 
 Vi skall nu koda mer JavaScript. Vi bekantar oss med fler konstruktioner i språket och använder variabler och loopar tillsammans med en del inbyggda funktioner.
@@ -39,22 +39,22 @@ Läs följande:
 
 Läs igenom följande.
 
-1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för villkor och loopar.
+<!-- 1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för villkor och loopar.
     * Control flow and error handling
     * Loops and iteration
 
 1. Bekanta dig med referensmanualen [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference). Som en introduktion kan du kika på konstruktioner för villkor och loopar.
     * [Statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
     * [if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-    * [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+    * [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) -->
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Läs följande.
 
-1. På MDN finns en längre artikel om grunderna i JavaScript, som en översiktlig introduktion till grundläggande begrepp i JavaScript. Du kan kika i artikeln "[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)" och läsa översiktligt. Kanske vill du komma tillbaka till artikeln i senare kursmoment. Artikeln ger en bra översikt till den som redan kan andra programmeringsspråk.
+<!-- 1. På MDN finns en längre artikel om grunderna i JavaScript, som en översiktlig introduktion till grundläggande begrepp i JavaScript. Du kan kika i artikeln "[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)" och läsa översiktligt. Kanske vill du komma tillbaka till artikeln i senare kursmoment. Artikeln ger en bra översikt till den som redan kan andra programmeringsspråk. -->
 
 
 
@@ -62,7 +62,7 @@ Läs följande.
 
 Titta på följande:
 
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
+<!-- 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång. -->
 
 
 
@@ -74,22 +74,24 @@ Titta på följande:
 
 ### Övningar {#ovningar}
 
+1. Gå igenom artikeln om moduler i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom02)
+
+<!-- 1. Jobba igenom det praktiska exemplet [Kom igång med JavaScript i terminalen](https://github.com/dbwebb-se/js-v2/tree/master/example/basics). -->
+<!--
 1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 2 gäller delarna:
     * [Loopar och villkor](guide/javascript1/section_break_3-5)
     * [Hantera DOM](guide/javascript1/section_break_4)
-    * [Eventlyssnare](guide/javascript1/section_break_5)
+    * [Eventlyssnare](guide/javascript1/section_break_5) -->
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[JavaScript med villkor och loopar](uppgift/javascript-med-villkor-och-loopar)". Spara arbetet i `me/kmom02/lab2`.
+1. Gör uppgiften "[Animals](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom02/animals.md)". Spara dina filer i `kmom02/`.
 
-1. Gör uppgiften "[Rita flaggor med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css)". Spara resultatet i `me/kmom02/flag1`.
-
-1. Gör uppgiften "[Sandbox steg 2](uppgift/sandbox-steg-2)". Spara resultatet i `me/kmom02/sandbox2`.
+1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom02/mepage2.md)". Spara resultatet i `me/redovisa/`.
 
 
 

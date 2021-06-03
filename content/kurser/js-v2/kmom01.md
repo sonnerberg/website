@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2021-05-12": "(A, lew) Nytt material inför HT21."
+    "2021-05-12": "(A, lew) Ny version inför HT21."
 ...
 
 Kmom01: Utvecklingsmiljö
@@ -96,13 +96,13 @@ Jobba igenom följande.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Glacier report](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/glacier.md)". Spara dina filer i `kmom01/glacier/`.
+1. Gör uppgiften "[Glacier report](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/glacier.md)". Spara dina filer i `kmom01/`.
 
-1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/mepage.md)". Spara resultatet i `me/redovisa`.
+1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/mepage.md)". Spara resultatet i `me/redovisa/`.
 
 
 
