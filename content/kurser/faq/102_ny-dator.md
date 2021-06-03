@@ -2,6 +2,7 @@
 author: mos
 baseurl: null
 revision:
+    "2021-06-03": "(B, mos) Genomgången inför HT21."
     "2020-06-22": "(A, mos) Ny inför HT20."
 ...
 Ny dator till dina studier?
@@ -15,26 +16,30 @@ Du kan välja Windows, Mac eller Linux. Alla fungerar med programvarorna vi anv�
 
 Du kan ha en bärbar eller stationär, välj efter eget tycke. Kanske en av varje?
 
-Om du går på campus så rekommenderas att du har en bärbar som du kan ha med dig till skolan och sitta och jobba på i labbsalarna.
+Om du går på campus så rekommenderas att du har en bärbar som du kan ha med dig till skolan och sitta och jobba på i labbsalarna eller i biblioteket. Även på distans kan det vara skönt att ha en bärbar och ha möjligheten att gå någon annanstans för att studera, kanske tillsammans med studiekompisar.
 
-Köp gärna mycket primärminne. Själv hade jag valt 16GB eller mer. Är pengar ett mindre problem så väljer du gärna mer. Webbläsare äter minne och det är bra att ha minne för virtualisering (att köra en dator i din dator).
+Köp gärna mycket primärminne. Själv hade jag valt 16GB eller mer. 8GB får räcka om plånboken är tunn. Är pengar ett mindre problem så väljer du gärna mer. Webbläsare äter minne och det är bra att ha minne för virtualisering (att köra en dator i din dator).
 
-SSD-disk eller liknande är bra för hyffsat snabb dator. Vill du spara mycket data så vill du även ha en traditionell mekanisk hårddisk som ger dig extra utrymme. Då kan du även kopiera data mellan dina två hårddiskar och på så sätt få en enkel backup.
+SSD-disk eller liknande är bra för hyffsat snabb dator. Vill du spara mycket data så vill du även ha en traditionell mekanisk hårddisk som ger dig extra utrymme, eller skaffa dig en bärbar USB-disk att ha som extra lagring. Se tilla tt du kan kopiera data mellan dina hårddiskar och på så sätt få en enkel backup.
 
-Processor CPU Intel I5 räcker, för egen del har jag I7.
+Det är bra att ha en lagringsmöjlighet på nätet, något i stil med DropBox, OneDrive, iCloud, Google Drive eller motsvarande. Se till att ha en backup i molnet.
+
+Processor CPU Intel I5 räcker, för egen del har jag I7. Det spelar inte så stor roll.
 
 I några kurser används virtualisering med Docker/VirtualBox och liknande. De allra nyaste datorerna klarar det bra medans äldre datorer kan vara svårare. För att vara på säkraste sidan så använd nyare datorer.
 
-Kör alltid det allra senaste versionen av operativsystemet.
+Kör alltid det allra senaste versionen av operativsystemet, så undviker du bekymmer.
 
-Alla programvaror som krävs för studierna är fria, de flesta öppen källkod och finns till Windows, Mac, Linux. Via skolan kan du få vissa licenser till Microsoft-program (bonus).
+Alla programvaror som krävs för studierna är fria och gratis. De flesta är öppen källkod och finns till Windows, Mac och Linux. Via skolan kan du få vissa licenser till Microsoft-program (bonus).
 
-Du vill ha en webbkamera (distansstudent), vi använder en som heter Logitech 920C (eller liknande), tror priser ligger runt 700. Men du klarar dig om datorn har en inbyggd kamera. Det är sällan du behöver använda kameran.
+Du vill ha en webbkamera (distansstudent), vi använder en som heter Logitech 920C (eller liknande), jag tror priser ligger runt 700. Men du klarar dig om datorn har en inbyggd kamera. Det är sällan du behöver använda kameran, men det är bra att ha när du tex spelar in en redovisningsvideo eller deltar i en onlineträff.
 
-Du vill ha en mikrofon till datorn. Du klarar dig med en enkel, men det är inte dumt att investera i en bättre mikrofon som ger bra ljud. Min mikrofon med stativ kostar kanske 2-3 tusen, jag har nån annan mikrofon som kostade 1300. Men du klarar dig genom att använda dina iphone lurar och koppla dem till datorn. Låt din plånbok och ljud-ambition bestämma.
+Du vill ha en mikrofon till datorn. Du klarar dig med en enkel, men det är inte dumt att investera i en bättre mikrofon som ger bra ljud. Min mikrofon med stativ kostar kanske 2-3 tusen och jag har ytterligare någon som kostade 1300. Men du klarar dig genom att använda dina lurar från mobilen. Låt din plånbok och ljud-ambition bestämma.
+
+Högtalare är bra så att du kan spela upp ljudet från inspelade föreläsningar och läsanvisningar som innebär att titta på video. Här fungerar även ditt headset. Sitter du i labbsalen eller biblioteket så vill du ha möjlighet att lyssna på inspelningar utan att störa någon annan.
 
 Se till att få en lugn och trevlig miljö kring datorn, en miljö som du trivs med. Pynta lite. Du kommer tillbringa mycket tid där. Rensa allt som distraherar dig från studierna.
 
 Som referens finns här en beskrivning över [de flesta programvaror som används i undervisningen](labbmiljo/inledning).
 
-**Bli vän med din dator.** Lär dig installera och avinstallera program, om och om igen. Öppna terminalen och fundera på vad den fyller för funktion.Lär dig tjänster som dela filer (dropbox etc) och hitta webbtjänster där du kan dela skärmdumpar (imgur etc) och kodsnuttar (gist, codeshare etc).
+**Bli vän med din dator.** Lär dig installera och avinstallera program, om och om igen. Öppna terminalen och fundera på vad den fyller för funktion. Lär dig tjänster som dela filer (Dropbox etc) och hitta webbtjänster där du kan dela skärmdumpar (imgur etc) och kodsnuttar (gist, codeshare etc).
