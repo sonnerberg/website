@@ -100,9 +100,9 @@ Jobba igenom följande.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Glacier report](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/glacier.md)". Spara dina filer i `kmom01/`.
+1. Gör uppgiften "[Glacier report](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom01/01_glacier.md)". Spara dina filer i `kmom01/`.
 
-1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom01/mepage.md)". Spara resultatet i `me/redovisa/`.
+1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom01/02_mepage.md)". Spara resultatet i `me/redovisa/`.
 
 
 
