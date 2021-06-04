@@ -87,6 +87,8 @@ Titta på följande:
 
 ### Lästips {#lastips}
 
+1. [Hur ber man om hjälp med kod i chatten?](coachen/hur_fraga_hjalp)
+
 1. [Exempel och förklaringar av valideringsfel](https://github.com/dbwebb-se/python/issues/46)
 
 1. Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).

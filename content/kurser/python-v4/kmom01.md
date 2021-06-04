@@ -120,6 +120,8 @@ Som en generell introduktion till programming och vissa av de tekniker och konst
 
 ###Lästips {#lastips}
 
+- [Hur ber man om hjälp med kod i chatten?](coachen/hur_fraga_hjalp)
+
 - [Exempel och förklaringar av valideringsfel](https://github.com/dbwebb-se/python/issues/46)
 
 - Hur man löser valideringsfelet "line-to-long" med [radbrytning i Python](coachen/radbrytning-i-python).
