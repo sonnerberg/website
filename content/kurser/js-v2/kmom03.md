@@ -9,7 +9,7 @@ Kmom03: DOM och events
 I JavaScript handlar det mycket om funktioner och språket är delvis ett funktionsorienterat programmeringsspråk. Låt oss nu träna på funktioner i alla dess varianter för att komma i gång med hur de fungerar, är uppbyggda och strukturerade. Att organisera sin kod i funktioner är första steget mot att skriva större och väl organiserade program.
 
 [FIGURE src=/image/snapht14/js1-megasandbox2.png?w=w2 caption="En flagga med HTML CSS och JavaScript."]
-
+<!--more-->
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
