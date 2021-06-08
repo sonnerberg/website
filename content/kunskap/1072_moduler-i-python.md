@@ -122,7 +122,7 @@ print(pow(5,2))
 
 
 # Exekvera moduler som script {#exekvera}
-Som jag nämde förut är en modul egentligen bara en fil med kod. Detta faktum gör att vi kan exekvera den som ett eget program. Vi fortsätter med energi exemplet och lägger till lite kod som vi tänker oss att vi vill använda för att testa att funktionerna fungerar som de ska.
+Som jag nämnde förut är en modul egentligen bara en fil med kod. Detta faktum gör att vi kan exekvera den som ett eget program. Vi fortsätter med energi exemplet och lägger till lite kod som vi tänker oss att vi vill använda för att testa att funktionerna fungerar som de ska.
 
 ```python
 # energy_calculation.py
@@ -169,7 +169,7 @@ Test av calculate energy:
 640.0
 name: __main__
 ```
-När vi kör "main.py" skrivs "name: energy_calculation" ut från modulen och "name: __main__" från "main.py". När vi exekverar "energy_calculation.py" skrivs "name: __main__" ut. Det vi kan göra med denna kunskapen är att lägga till en if-sats i slutet av "energy_calculation.py" som kollar om `__name__ == "__main__"`. Om det är sant vet vi att filen exekveras som ett eget program och om vi då lägger vår test kod i if-sats blocket kommer den inte exekveras när filen blir importerad.
+När vi kör "main.py" skrivs "name: energy_calculation" ut från modulen och `"name: __main__"` från "main.py". När vi exekverar "energy_calculation.py" skrivs `"name: __main__"` ut. Det vi kan göra med denna kunskapen är att lägga till en if-sats i slutet av "energy_calculation.py" som kollar om `__name__ == "__main__"`. Om det är sant vet vi att filen exekveras som ett eget program och om vi då lägger vår test kod i if-sats blocket kommer den inte exekveras när filen blir importerad.
 
 ```python
 # energy_calculation.py
@@ -197,6 +197,65 @@ if __name__ == "__main__":
 
 Testa exekvera båda filerna igen och lägg märke till att det inte längre blir några utskrifter från "energy_calculation.py" när du exekverar "main.py".
 
+
+
+# if __name__ == "__main__" {#name}
+
+I förra stycket pratar vi om att använda `if __name__ == "__main__"` för att testa moduler. Vi kan också använda det för att kontrollera vad som ska ske om ett program blir importerat eller startat. Även i vår "main.py" fil borde vi använda oss av `if __name__ == "__main__"`, det är en bra vana att ha det i alla python filer man skapar.
+
+I "main.py" vill vi använda det för att bestämma vad som sker när vi startar programmet.
+
+
+Koden vi redan har i "main.py" lägger vi i en ny funktion och sen anropar vi den i `if __name__ == "__main__"` blocket.
+
+```python
+# main.py
+
+import energy_calculation as ec
+
+def main():
+    emil_time = 2.5 / 60
+    emil_energy = ec.calculate_energy(emil_time)
+    emil_cost = ec.calculate_cost(emil_energy)
+
+    emil_string = "Emil använder {energy:.4f} kWh och detta kostar {cost:.4f} kr".format(
+        energy=emil_energy,
+        cost=emil_cost
+    )
+    print(emil_string)
+    # Emil använder 0.0333 kWh och detta kostar 0.0260 kr
+
+if __name__ == "__main__":
+    main()
+```
+
+Det här är inte något vi måste göra egentligen men vi tar det som vana att jobba på det sättet. Vi vill undvika att ha "lös" kod, i det globala scopet. Fördelen med den nya strukturen är att vi lätt kan skriva om funktionen så att även den går att återanvända och importeras som module i ett annat program.
+
+Det ända vi behöver göra är att lägga till parametrarna `user` och `time` i funktionen och byta ut `2.5` och `"emil"` med de nya parametrarna. 
+
+```python
+# main.py
+
+import energy_calculation as ec
+
+def main(name, time_minutes):
+    time = time_minutes / 60
+    energy = ec.calculate_energy(time)
+    cost = ec.calculate_cost(energy)
+
+    string = "{name} använder {energy:.4f} kWh och detta kostar {cost:.4f} kr".format(
+        name=name
+        energy=energy,
+        cost=cost
+    )
+    print(string)
+    # Emil använder 0.0333 kWh och detta kostar 0.0260 kr
+
+if __name__ == "__main__":
+    main("emil", 2.5)
+```
+
+Nu fungerar programmet likadant som förut fast det går också att importera det som en modul.
 
 
 
