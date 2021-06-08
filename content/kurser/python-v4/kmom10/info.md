@@ -73,3 +73,5 @@ Efter exam {#after}
 -------------------------------
 
 - Om ni inte har fått alla tidigare kmoms rättade och godkända innan examinationen får ni Fx som betyg så länge och när allt är godkänt sätter vi ert faktiska betyg och rapporterar till ladok.
+
+- Om ni inte fick ihop 20 poäng, inte godkänt, behöver ni inte spela in redovisningsvideo och lämna in på Canvas. Ni kan fortfarande lämna in och skicka med en feedbacktext på kursen om ni vill.
