@@ -48,7 +48,7 @@ Examination sker på valfri plats, det går att ladda ner examination från kl 8
 Hämta examinationstillfälle 2021-06-08 (try3) {#hamta}
 ----------------------------------------------------------------------
 
-I [Om examination med dbwebb exam](kurser/python-v3/kmom10/om) finns mer information om `dbwebb exam`-verktyget.
+I [Om examination med dbwebb exam](kurser/python-v4/kmom10/om) finns mer information om `dbwebb exam`-verktyget.
 
 Innan du kör kommandon nedan uppdatera `dbwebb` och kursrepot samt skapa kataloger i din me katalog med följande kommandon.
 
@@ -142,7 +142,7 @@ På grund av Corona ska också **alla** spela in en redovisningsvideo som ska l�
 
 1. Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
 
-2. Visa ditt ansikte och en giltig ID handling, t.ex. körkot eller pass, i videon.
+2. Visa ditt ansikte och en giltig ID handling, t.ex. körkort eller pass, i videon.
 
 
 
