@@ -38,7 +38,12 @@ say_hello()
 # Hello
 ```
 
-Nu har vi skapat vår första egna funktion och anropat den med funktionsnamnet följt av parenteser. Parenteserna är inte en del av namnet utan det är en del av syntaxen för att anropa funktioner. Nedan följer ett större exempel på hur man använder och skapar funktioner.
+Nu har vi skapat vår första egna funktion och anropat den med funktionsnamnet följt av parenteser. Parenteserna är inte en del av namnet utan det är en del av syntaxen för att anropa funktioner.
+
+En tidigare student gillade metaforen att lika funktioner med hur en bok fungerar. När vår kod exekveras läses den uppi från och ner, en rad åt gången. Precis som hur vi läser en bok, uppi från och ner en rad åt gången. I en bok kan vi pausa vår läsning och hoppa till en annan sida, läsa den sidan och sen gå tillbaka till sidan vi var på. Vi använder sido nummer för att ha kolla på vilken sida vi var på och vilken vi vill hoppa till för att läsa.  
+Vi kan se funktioner på ett liknande sätt. Vi kan dela in vår kod i funktioner och kan likna funktionsnamn med sidnummer. I koden kan vi hoppa till koden som ligger i funktionerna med funktionsnamnen och när den koden är färdig exekverad hoppar programmet tillbaka till raden där vi gjorde pausen och hoppade till funktionen.
+
+Nedan följer ett större exempel på hur man använder och skapar funktioner.
 
 
 
