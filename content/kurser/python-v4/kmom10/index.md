@@ -28,6 +28,9 @@ Lärarteamet finns tillgängliga i discord och på mejl för hjälp med tekniska
 
 Om det inte står i en uppgift att en modul ska importeras får man **inte** använda sig av importerade moduler.
 
+Ha koll på informationen som står [här](kurser/python-v4/kmom10/info).
+
+
 <!-- Nedanför beskriver vi upplägget för de olika studentgrupperna:
 
 ### Campus studenter {#campus}

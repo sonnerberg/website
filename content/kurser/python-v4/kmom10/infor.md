@@ -20,9 +20,9 @@ Allmän info {#generall}
 
 - Även om man inte är klar med alla tidigare kursmoment rekommenderar vi att ni försöker göra examinationen.
 
-- Man kan inte "plussa" tentant. Satt betyg sitter.
+- Man kan inte "plussa" tentan. Satt betyg sitter.
 
-- Man ska INTE spela in sig själv UNDER TIDEN man gör tentant. Ni ska spela in en redovisningsvideo efteråt!
+- Man ska INTE spela in sig själv UNDER TIDEN man gör tentan. Ni ska spela in en redovisningsvideo efteråt!
 
 - Om ni redan har kod i er "tryX" mapp, rensa den så den är tom innan ni gör checkout på examinationen!
 
