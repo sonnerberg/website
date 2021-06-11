@@ -85,27 +85,33 @@ input: 3
 input "done"     output: "The sum of all numbers are 6 and the avrage is 2"
 ```
 
-
-7. Menyval **5**: Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut “larger!” om det nya talet är större, “smaller!” om det var mindre eller “same!” om talet som skrev in hade samma värde som det föregående talet. Första gången man startar menyvalet kommer Marvin inte ha något tal att jämföra med, då skall den be användaren att mata in två tal. Detta ska göras tills användaren skriver “done”. Exempel:
-```python
-input: 1, 2      output: "larger!"
-input: 2         output: "same!"
-input: 1         output: "smaller!"
-input: 3         output: "larger!"
-input "done"
-```
-
-8. Menyval **6**: Marvin ska fråga efter en sträng och skriva ut en ny sträng där varje karaktär har ökat med +1 och är separerad med "-". Exempel:
+8. Menyval **5**: Marvin ska fråga efter en sträng och skriva ut en ny sträng där varje karaktär har ökat med +1 och är separerad med "-". Exempel:
 ```python
 input: "apa"      output: "a-pp-aaa"
 input: "kassler"  output: "k-aa-sss-ssss-lllll-eeeeee-rrrrrrr"
 ```
 
-9. Menyval **7**: Gör så Marvin kan kolla om ett ord är ett isogram. Ett ord är ett isogram om det inte innehåller några återupprepande bokstäver, både i följd och icke i följd. Det är OK om den är case-sensitive, a != A. Exempel:
+9. Menyval **6**: Gör så Marvin kan kolla om ett ord är ett isogram. Ett ord är ett isogram om det inte innehåller några återupprepande bokstäver, både i följd och icke i följd. Det är OK om den är case-sensitive, a != A. Exempel:
 ```python
 input: "apa"      output: "No match!"
 input: "Dansk"    output: "Match!"
 ```
+
+
+7. Menyval **7**: Lägg till så att Marvin frågar efter tal och för varje tal angivet så ska Marvin skriva ut “larger!” om det nya talet är större, “smaller!” om det var mindre eller “same!” om talet som skrev in hade samma värde som det föregående talet. Första gången man startar menyvalet kommer Marvin inte ha något tal att jämföra med, då skall den be användaren att mata in två tal. Detta ska göras tills användaren skriver “done”. Använd try-except för att hantera om användaren skriver in något som inte är en siffra. Om användaren gör det ska programmet inte krascha. Istället ska det skriva ut `"not a number!"` och sen fortsätta med loopen så att användaren kan fortsätta skriva in siffror.
+
+    Exempel:
+
+    ```python
+    input: 1
+    input: 2         output: "larger!"
+    input: 2         output: "same!"
+    input: 1         output: "smaller!"
+    input: hej       output: "not a number!
+    input: 3         output: "larger!"
+    input "done"
+    ```
+
 
 10. Testa, validera och publicera din kod enligt följande.
 
