@@ -118,6 +118,8 @@ Titta på följande:
 
 1. Läs igenom och kolla på videorna för del 1 till 3 i "[Debugger i Python](kunskap/python-debugger)" för att lära dig felsöka och förstå din kod med debuggern. Kan ersättas av Thonny. Thonny fungerar som en grafisk debugger.
 
+1. Läs igenom artikeln/övningen "[Felhantering i Python](kunskap/felhantering_python)". Vänta med att läsa denna artikeln till andra veckan i kmom02 eller när du börjar bli klar med Marvin uppgiften. I den lär du dig att hantera fel som uppstår under exekvering och förhindra ditt program från att krascha.
+
 
 
 ###Uppgifter {#uppgifter}
