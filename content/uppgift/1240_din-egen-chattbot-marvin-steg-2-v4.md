@@ -55,9 +55,9 @@ cd kmom03/marvin2
   * Menyval 2 - `celcius_to_farenheit`
   * Menyval 3 - `word_manipulation` * Tips, gör denna i samband med menyval **11**, (krav 7).
   * Menyval 4 - `sum_and_average`
-  * Menyval 5 - `compare_numbers`
-  * Menyval 6 - `hyphen_string`
-  * Menyval 7 - `is_isogram`
+  * Menyval 5 - `hyphen_string`
+  * Menyval 6 - `is_isogram`
+  * Menyval 7 - `compare_numbers`
 
 Om du har gjort några av extrauppgifterna från föregående kursmoment så kan du döpa dem till ett valfritt namn.
 

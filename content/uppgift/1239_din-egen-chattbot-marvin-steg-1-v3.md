@@ -64,7 +64,7 @@ Taggarna för varje uppgift motsvarar själva menyvalet. För att testa Menyval 
 
 1. Menyval **q**: Avsluta programmet. Använd **inte** `exit()` för att avsluta programmet. Använd istället `break` för att avsluta loopen så att programmet stängs när för att all kod har blivit exekverad.
 
-1. Menyval **2**: Celcius till Farenheit. Marvin ska fråga efter en temperatur i Celcius och sedan skriva ut en sträng som skall innehålla motsvarande i Farenheit. Värdet skall avrundas till två decimaler.
+1. Menyval **2**: Celsius till Fahrenheit. Marvin ska fråga efter en temperatur i Celsius och sedan skriva ut en sträng som skall innehålla motsvarande i Fahrenheit. Värdet skall avrundas till två decimaler.
 
 ```python
 input: 3135.205     output: "275.37"
@@ -82,7 +82,7 @@ input: 3        output: "hejhejhej"
 input: 1
 input: 2
 input: 3
-input "done"     output: "The sum of all numbers are 6 and the avrage is 2"
+input "done"     output: "The sum of all numbers are 6 and the average is 2"
 ```
 
 8. Menyval **5**: Marvin ska fråga efter en sträng och skriva ut en ny sträng där varje karaktär har ökat med +1 och är separerad med "-". Exempel:
