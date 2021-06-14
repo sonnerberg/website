@@ -53,7 +53,7 @@ cd kmom03/marvin2
 3. Koden för dina menyval ska nu ligga i `marvin.py`. Flytta all kod för dina nuvarande menyval till `marvin.py`, dessa skall sparas i funktioner som du kallar på när ett menyval ha gjorts i programmet. Importera `marvin.py` i `main.py` och strukturera om koden för de gamla menyvalen så att de läggs i en varsin funktion, med **följande namn**. Dessa funktionerna har utöver sitt menyval som tag också "marvin1" som tag.
   * Menyval 1 - `greet`
   * Menyval 2 - `celcius_to_farenheit`
-  * Menyval 3 - `word_manipulation` * Tips, gör denna i samband med menyval **11**, (krav 7).
+  * Menyval 3 - `word_manipulation` * Tips, gör denna i samband med menyval **10**, (krav 6).
   * Menyval 4 - `sum_and_average`
   * Menyval 5 - `hyphen_string`
   * Menyval 6 - `is_isogram`
@@ -73,26 +73,13 @@ input: "Hej"                        output: "Hej --> jHe"
 input: "Borde inte bli samma igen"  output: "Borde inte bli samma igen --> eel gn rtm dBmibo saiiane"
 ```
 
-
-5. Menyval **9** - `anagram`: Anagram. Skapa ett val där marvin ber om två strängar och kollar om de är anagram. Ett anagram är när man kan få fram samma sträng genom att kasta om bokstäverna i den andra. Lösningen ska inte vara case-sensitive, med andra ord `A == a`. Tips, [sorted()](https://docs.python.org/3/howto/sorting.html) och [lower()](https://docs.python.org/3/library/stdtypes.html#str.lower). Exempel:
-```python
-input: "Anagram"
-input: "Magarna"     output: "Match"
-
-input: "Paris"
-input: "sirap"       output: "Match"
-
-input: "Nope"
-input: "note"        output: "No Match"
-```
-
-6. Menyval **10** - `get_acronym`: Akronym skapare. Marvin ska be om en sträng och skapa en akronym för den genom att plocka ut alla stora bokstäver och sätta ihop till en ny sträng. Tips, [isupper()](https://docs.python.org/3/library/stdtypes.html#str.isupper). Exempel:
+5. Menyval **9** - `get_acronym`: Akronym skapare. Marvin ska be om en sträng och skapa en akronym för den genom att plocka ut alla stora bokstäver och sätta ihop till en ny sträng. Tips, [isupper()](https://docs.python.org/3/library/stdtypes.html#str.isupper). Exempel:
 ```python
 input: "BRöderna Ivarsson Osby"             output: "BRIO"
 input: "Ingvar Kamprad Elmtaryd Agunnaryd"  output: "IKEA"
 ```
 
-7. Menyval **11** - `mask_string`: Sträng maskering. Skapa ett nytt val där Marvin ber om en sträng och ersätter alla utom de fyra sista karaktärerna med “#”. Exempel:
+6. Menyval **10** - `mask_string`: Sträng maskering. Skapa ett nytt val där Marvin ber om en sträng och ersätter alla utom de fyra sista karaktärerna med “#”. Exempel:
 
   ```python
 
