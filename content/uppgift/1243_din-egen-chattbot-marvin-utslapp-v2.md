@@ -98,7 +98,7 @@ cd kmom05/marvin4
 
 3. Menyval **12**: Användaren ska kunna söka efter vilka länder som finns i `country_data`.  Sökningen ska vara case insensitive och det ska gå att söka på hela namn och delar av namn. Ett input anrop ska tas emot som innehåller söksträngen. Alla länder som matchar sökningen ska skrivas ut.
 
-    Skapa funktionen `search_country(search_word)`. Den ska ta emot en sträng som argument vilket är sökordet för att hitta länder. I funktionen hitta alla länder som matchar sökordet och returnera dem i en lista.
+    Skapa funktionen `search_country(search_word)`. Den ska ta emot en sträng som argument, vilket är sökordet för att hitta länder. I funktionen hitta alla länder som matchar sökordet och returnera dem i en lista.
 
     ```python
 
@@ -106,7 +106,7 @@ cd kmom05/marvin4
     arguments: "we"           return: ["Zimbabwe", "Western Sahara"]
     ```
 
-    Om sök ordet inte matchar något land ska du lyfta ett `ValueError` i funktionen och sen fånga det ute i meny koden som har anropat funktionen och då skriva ut `"Country does not exist!"`.
+    Om sökordet inte matchar något land ska du lyfta ett `ValueError` i funktionen och sen fånga det ute i meny-koden som har anropat funktionen och då skriva ut `"Country does not exist!"`.
 
     Exempel för menyvalet:
 
@@ -122,7 +122,7 @@ cd kmom05/marvin4
 
 
 
-4. Menyval **13**: Menyvalet ska skriva ut hur ett lands utsläpp har förändrats i procent mellan två år. Menyvalet ska ta emot ett input anrop där input kommer vara kommaseparerad , `country,year1,year2`. Du behöver plocka ut argumenten från den strängen. Utskriften ska vara formaterad som `"Country_name:change"`. Du ska skapa två funktioner `get_country_year_data_megaton(country, year)` och `get_country_change_for_years(country, year1, year2)`. Om användaren skriver ett felaktigt år ska du fånga det `ValueError` som lyfts från `get_country_year_data_megaton` och skriva ut `"Wrong year!"` 
+4. Menyval **13**: Menyvalet ska skriva ut hur ett lands utsläpp har förändrats i procent mellan två år. Menyvalet ska ta emot ett input anrop där input kommer vara kommaseparerad , `country,year1,year2`. Du behöver plocka ut argumenten från den strängen. Resultat utskriften ska vara formaterad som `"Country_name:change"`. Du ska skapa två funktioner `get_country_year_data_megaton(country, year)` och `get_country_change_for_years(country, year1, year2)`. Om användaren skriver ett felaktigt år ska du skriva ut `"Wrong year!"`.
 
     ```python
 
@@ -130,7 +130,7 @@ cd kmom05/marvin4
     input: "Sweden,1000,2017"       output: "Wrong year!"
     ```
 
-    I `get_country_year_data_megaton(country, year)` funktionen ska du returnera hur mycket utsläpp som det landet gjorde för det året i måttet megaton (du behöver multiplisera datan med `1000000`.). Funktionen tar emot två argument, första argumentet ska vara en sträng med landets namn och det andra argumentet ska vara en sträng med året.  
+    I `get_country_year_data_megaton(country, year)` funktionen ska du returnera hur mycket utsläpp ett land gjorde ett specifikt år, i måttet megaton (du behöver multiplicera datan med `1000000`.). Funktionen tar emot två argument, första argumentet ska vara en sträng med landets namn och det andra argumentet ska vara en sträng med året.  
     Om årtalet som skickas in inte finns ska funktionen lyfta ett `ValueError`.
 
     ```python
@@ -149,7 +149,7 @@ cd kmom05/marvin4
 
 5. Menyval **14**: Menyvalet ska samla all data för ett land och skriva ut den. Som input ska menyvalet be om ett land. Du ska skapa två funktioner `get_country_data(country_name)` och `print_country_data(data)`. Använd `print_country_data` för att skriva ut datan du får från `get_country_data`.
 
-    Funktionen `get_country_data(country_name)` ska ta emot en sträng som argumet vilket är namnet på landet. I funktionen ska du bygga upp en dictionary med data och returnera. Om landet saknar populations data, sätt värdet `None` för den nyckeln. Använd de tidigare funktionerna `get_country_change_for_years` och `get_country_year_data_megaton` för att hämta ut utsläpps data. Nedanför kan ni se strukturen på vad som ska returneras.
+    Funktionen `get_country_data(country_name)` ska ta emot en sträng som argument vilket är namnet på landet. I funktionen ska du bygga upp en dictionary med data och returnera. Om landet saknar populations data, sätt värdet `None` för den nyckeln. Använd de tidigare funktionerna `get_country_change_for_years` och `get_country_year_data_megaton` för att hämta ut utsläpps data. Nedanför kan ni se strukturen på vad som ska returneras.
 
     ```python
 
@@ -224,7 +224,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-I följande menyval, om ett land saknar någon av datan som behövs för uitskriften, hoppa över det landet. Låtsas som att det inte finns.
+I följande menyval, om ett land saknar någon av datan som behövs för utskriften, hoppa över det landet. Låtsas som att det inte finns.
 
 1. Menyval **e1**: Skriv ut hur mycket CO2 varje land släpper ut för ett av åren i storleks ordning, mest utsläpp först, avrunda till 2 decimaler. Be Användaren om input där användaren skriver in vilket år som ska användas, t.ex. `"1990"` . Det ska även gå att skriva in hur många länder som ska visas, t.ex. `"1990 10"`, då ska bara de 10 högsta länderna skrivas ut. Utskriften ska ha formatet `<land>: <utsläpp>` med ett land per rad.
 
