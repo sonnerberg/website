@@ -95,6 +95,8 @@ Genomför övningarna för att träna inför uppgifterna.
 
 1. Gör övningen "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)" för att bekanta dig med dictionaries och tupler i Python. De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom05/warehouse`.
 
+1. Jobba igen "[Lyfta exceptions i Python](kunskap/lyfta-fel-python)" för att lära dig hur du lyfter/kastar exceptions i din kod.
+
 
 
 ###Uppgifter {#uppgifter}
@@ -128,6 +130,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas?
 * Vad skiljer de tre datastrukturerna från varandra?
 * Hur använde du dem i uppgifterna?
+* Nu har ni lärt er allt ni ska om exceptions i denna kursen. Hur känns det att jobba med det och skillnaden mellan LBYL och EAFP?
 * Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall.
 * Vad tyckte du om emission uppgiften?
 * Om du använder Thonny vad tycker du om det? Blir det lättare att förstå koden när du stegar igenom den?
