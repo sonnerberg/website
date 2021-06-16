@@ -53,6 +53,15 @@ ImportError: No module named 'Nangijala'
 
 Här kastas felet *ImportError* och vi får information om var i filen felet uppstår och ett meddelande: "No module named 'Nangijala'". Hjälpsamt och trivsamt.
 
+Fel kan också uppstå när vi anropar vissa funktioner med felaktig data. T.ex. [index()](https://docs.python.org/3/library/stdtypes.html#str.index) funktionen på strängar, funktionen returnerar index positionen för en del-sträng. Om del-strängen inte finns lyfter funktionen ett `ValueError`.
+
+```python
+>>> "python".index("finns inte")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: substring not found
+```
+
 Det finns många inbyggda exceptions som hjälper oss att se vad som blivit fel. Några av de vanligaste är:
 
 | Exception     | Meddelande                             |
@@ -260,6 +269,9 @@ Något gick fel!
 Notera att vi inte har skrivit vilka exception vi vill fånga på `except` raden. Det gör att, för alla exceptions som lyfts i `try` blocket kommer `except` koden att köra. Det farliga med detta är att vi inte vet vad som skapar fel utskriften. Nu har vi väldigt lite kod att jobba med så vi får tänka att i `try` blocket ligger det kanske 10 rader istället. Vilket innebär att det finns många ställen där olika typer av kan uppstå och då blir det väldigt jobbigt att hitta vad som går fel om man alltid bara får samma resultat oberoende av vad som går fel. Det blir svår för användaren att veta vad den gjorde fel och hur det ska undvikas och det är svår för utvecklaren att ta reda på felsöka varför felet uppstår, för att utvecklaren får inga exceptions.
 
 Därför ska vi "alltid" fånga specifika fel, för att vi kan aldrig garantera att vår kod funkar exakt som den ska och att den inte innehåller några buggar. Så då ska vi bara dölja/fånga de som vi förväntar oss att de kan kastas.
+
+
+
 
 
 <!-- 
