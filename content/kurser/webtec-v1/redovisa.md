@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2021-06-14": (F, mos) Uppdaterad inför webtec.
     "2020-08-28": (E, mos) Ny video som visar inlämningen.
     "2018-08-16": (D, mos) Bort redovisning i forum samt bytte ITs mot Canvas.
     "2017-06-15": (C, mos) Nytt stycke om feedback.
@@ -20,29 +21,17 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-Skriv en redovisningstext och [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från kursmomentet.
+Skriv en redovisningstext för att besvara frågor och redovisa dina reflektioner från kursmomentet. Läs gärna hur du kan skriva [en bra redovisningstext](kurser/faq/att-skriva-en-bra-redovisningstext).
 
-Besvara de specifika frågor som finns för varje kursmoment.
+Du skriver din redovisningstext i `me/report`.
+
+Besvara de specifika frågor som finns för varje uppgift och kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
 Kan du koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare?
 
-Skriv ett stycke om 15-30 meningar, försök väva in frågorna i löpande text.
-
-Spara redovisningstexten enligt följande.
-
-| Kursmoment | Fil för redovisningstext   |
-|------------|----------------------------|
-| kmom01     | `me/kmom01/me1/report.php` |
-| kmom02     | `me/kmom02/me2/report.php` |
-| kmom03     | `me/kmom03/me3/report.php` |
-| kmom04     | `me/kmom04/me4/report.php` |
-| kmom05     | `me/kmom05/me5/report.php` |
-| kmom06     | `me/kmom06/me6/report.php` |
-| kmom10     | `me/kmom06/me6/report.php` |
-
-När du är klar innehåller filen `me/kmom06/me6/report.php` samtliga redovisningstexter från alla kursmoment.
+Skriv ett stycke om totalt 30-40 meningar för varje kursmoment. Försök väva in frågorna i löpande text.
 
 
 
@@ -62,21 +51,31 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt.
 
 
 
-<!--
-Kopiera redovisningstexten till forumet {#forum}
+Testa din inlämning {#testa}
 ---------------------------------------
 
-Visa upp vad du gjort och berätta att du är klar genom att ta en kopia av redovisningstexten och göra ett inlägg i [kursforumet](forum/utbildning/htmlphp). Bifoga länken till din me-sida.
--->
+Du kan själv testköra rättningsprocessen via följande kommando.
+
+```text
+dbwebb test kmom01
+```
+
+Byt ut kmom01 mot det kursmoment du vill inspektera.
+
+Den som rättar och kontrollerar din inlämning utgår från ovan kommando.
+
+Du kan själv provköra och se samma resultat som rättaren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att själv upptäcka eventuella slarvfel.
 
 
 
-Kopiera redovisningstexten till Canvas {#canvas}
+Lämna in på Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen i Canvas tillsammans med en länk till din me-sida.
+Lämna in en länk till din rapport-sida på Canvas. Länken innehåller din studentakronym och på det viset hittar rättaren din inlämning.
 
-Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
+Det är bra om du också kopierar in din redovisningstext in i Canvas, det kan vara bra att ha som backup om något händer.
+
+Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att du har fullgjort kursmomentets uppgifter.
 
 
 
@@ -85,30 +84,17 @@ Feedback och frågor {#feedback}
 
 [Vilken feedback kan jag förvänta mig](kurser/faq/vilken-feedback-far-man-pa-inlamningarna)?
 
-Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att alltid skapa en tråd i forumet om du funderar på något.
-
-
-
-Hur testas mitt resultat? {#inspect}
----------------------------------------
-
-Den som rättar och kontrollerar din inlämning utgår från följande kommando.
-
-```bash
-dbwebb inspect kmom01
-```
-
-Byt ut kmom01 mot det kursmoment du vill inspektera.
-
-Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att själv upptäcka eventuella slarvfel.
+Ställ dina frågor och funderingar i de kanaler som erbjuds i kursen. Se till att du får dina frågor besvarade. Fråga igen om något är oklart. Se till att din fråga alltid blir besvarad.
 
 
 
 Klart! {#klar}
 ---------------------------------------
 
+Ta en kort mental paus innan du ger dig på nästa kursmoment.
+
+<!--
 Kika gärna på Andreas video när han rättar valideringsfel, kör inspect och lämnar in kmom01 genom att publicera till studentservern och lämna in på Canvas. Videon är för python-kursen men samma handhavande gäller i htmlphp, det är bara andra programmeringsspråk.
 
 [YOUTUBE src=-7Wzi_IkpEU width=630 caption="Andreas visar hur man lämnar in kmom01 i python-kursen."]
-
-Ta en kort mental paus innan du ger dig på nästa kursmoment.
+-->

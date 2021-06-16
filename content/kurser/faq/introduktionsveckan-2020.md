@@ -29,7 +29,7 @@ Troligen kommer labbsalarna att corona-säkras så att det finns ett begränsat 
 Planering och schema {#plan}
 -----------------------------------
 
-Du kan se [schemat för introduktionsveckan](https://docs.google.com/spreadsheets/d/1d6pcs09zjH1_KHSBP7MFu6pIRmBM2WnFUtyCikTmivE/) via google sheet, notera att det finns flera flikar i dokumentet och du får välja den fliken som matchar din utbildning.
+Du kan se [schemat för introduktionsveckan](https://docs.google.com/spreadsheets/d/1d6pcs09zjH1_KHSBP7MFu6pIRmBM2WnFUtyCikTmivE/edit?usp=sharing) via google sheet, notera att det finns flera flikar i dokumentet och du får välja den fliken som matchar din utbildning.
 
 Det finns en videoserie med lite blandade välkomstvideos, "[Välkommen till Webbprogrammering hösten 2020](https://www.youtube.com/playlist?list=PLKtP9l5q3ce96v15ZqsTmKL5hkoLX-iOn)". Kika igenom den serien för lite tips och trix inför terminsstarten.
 

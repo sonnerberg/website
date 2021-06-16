@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/webtec/logo.png"
 title: webtec (v1)
 author:
     - mos
@@ -170,7 +176,7 @@ På Canvas finns datum för inlämningsuppgifter. Ett rättningsfönster pågår
 
 Kursen har en [lektionsplan](webtec/lektionsplan) som visar när det är lärarledda tillfällen för undervisning/handledning på campus/distans.
 
-Kursen har bokade tillfällen i BTHs schemabokningsprogram, "schemat", som säger när en fysisk sal är bokad på campus. Det finns en länk till det aktuella schemar, via lektionsplanen.
+Kursen har bokade tillfällen i BTHs schemabokningsprogram, "schemat", som säger när en fysisk sal är bokad på campus. Det finns en länk till det aktuella schemat, via lektionsplanen.
 
 
 
@@ -191,6 +197,24 @@ Lärarteam och intressenter {#team}
 Här kan du hitta detaljer om ett kurstillfälle och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
 
 * [Lärarteam och intressenter ht21, lp1](./team-ht21lp1)
+
+
+
+Dialog & Samarbete {#samarbete}
+---------------------------------
+
+Kursen främjar att studenter för dialog och samarbeter. Diskutera med studiekollegor kring problem och lösningar på de övningar och uppgifter som finns. Använd de möjligheter som finns inom kursen för att samverka och hjälpa varandra. Tveka inte att starta egna studiegrupper där ni kan stödja varandra.
+
+
+
+Fusk & Disciplinnämnden {#fusk}
+---------------------------------
+
+Läs om skolans syn och hantering av "[Fusk och medveten vilseledning](https://dbwebb.se/kurser/faq/fusk-och-disciplinarende)" samt var gränserna går mellan samarbete och fusk.
+
+> "Hjälp varandra och diskutera, men kopiera inte och skriv all kod/text själv."
+
+Misstanke om fusk anmäls alltid till Discplinnämnden.
 
 
 

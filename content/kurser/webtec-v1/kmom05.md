@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/webtec/logo-sql.png"
 author:
     - mos
 revision:

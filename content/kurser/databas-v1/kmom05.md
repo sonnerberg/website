@@ -57,6 +57,13 @@ Föreläsning om JS hur koppla lagrad procedur.
 
 Föreläsning om normalisering? (flytta läsanvisningen från kmom04)
 
+menyklienten command "product" to show all products.
+
+Förtydliga mer hur invadd skall fungera.
+
+Förtydliga om invdel skall fungera, eventuellt byt till invremove och plocka bort item tills 0, eller minus kanske. Jobba med softdelete och inte delete.
+
+Gör det jättetydligt vad som skall fungera.
 -->
 
 

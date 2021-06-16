@@ -20,8 +20,6 @@ Om kurslitteratur {#om-kurslitteratur}
 
 Varje kurs har kurslitteratur och referenslitteratur. I beskrivningen för varje kurs finns också läsanvisningar där du kan se i vilken omfattning som respektive bok används i kursen.
 
-Börja med att kika på [beskrivningen för kursen htmlphp](/kurser/htmlphp), skrolla ned till stycket för *Kurslitteratur*. Läs igenom det för att få ett exempel på vad jag menar.
-
 [FIGURE src=/image/snapshot/kurslitteratur.jpg&sa=jpg caption="Tänk när du läst alla dessa böcker, vilken kunskap du besitter."]
 
 
@@ -35,7 +33,7 @@ Tja, vad ska jag säga... troligen kan man göra det ja. Det beror på personlig
 
 Men, den vägen är inget som imponerar på mig.
 
-Böckerna används som stöd för att du skall lära dig det som kurserna hanterar. Kurserna är praktiska och kodningsinriktade, men för att förstå koncepten och helheten så behövs mer. 
+Böckerna används som stöd för att du skall lära dig det som kurserna hanterar. Kurserna är praktiska och kodningsinriktade, men för att förstå koncepten och helheten så behövs mer.
 
 Är du nybörjare så behöver du troligen hjälp och guidning, böckerna kan ge dig det.
 
@@ -65,7 +63,7 @@ Läsning på nätet {#nat}
 
 Det finns mycket information, guider, videotutorials och kunskap på nätet som rör vårt ämne. Jag använder det i kurserna så gott det går. Nätet är trots allt vår primära kunskapskälla, numer. Att söka och snabbt hitta rätt material är en oerhört viktig förmåga för en webbprogrammerare.
 
-Böcker ger fortfarande en aspekt där en sammansatt kunskap finns presenterad, redigerad av kunnigt folk och sammansatt i ett läsbart format. Kunskap på nätet och böckerna kompletterar varandra. 
+Böcker ger fortfarande en aspekt där en sammansatt kunskap finns presenterad, redigerad av kunnigt folk och sammansatt i ett läsbart format. Kunskap på nätet och böckerna kompletterar varandra.
 
 
 

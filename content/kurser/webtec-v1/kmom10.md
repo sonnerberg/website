@@ -1,4 +1,10 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/webtec/logo.png"
 author: mos
 revision:
     "2020-10-14": "(G, mos) Not om redovisningsvideo."

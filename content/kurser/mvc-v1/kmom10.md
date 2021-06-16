@@ -25,6 +25,89 @@ Totalt omfattar kursmoment 07/10 i storleksordningen 20--50 studietimmar.
 <!--more-->
 
 
+<!--
+(Skippa krav om flowchart & pseudocode)
+
+För svår och komplex att rätta. Förenkla och förtydliga.
+Förenkla, förenkla, förenkla.
+
+Alla kan göra quizzen, den behöver inte vara optionell.
+Sätt som fristående assignment i Canvas och bedöm bara som G.
+
+Alla gör en fristående rapport som leder till G? Eller ladda upp rapporten separat och gör en bedömning G/VG på rapporten enbart? Med feedback om hur man skriver en rapport bättre? Eller låt rapporten mer vara en del av 01-06 och en bra sådan ger bonus till slutbetyget?
+Rapporten borde ha en annan template? Kanske mer som en artikel och skippa kapitelindelningen? Fundera på det. Kan vara lättare att ge feedback på att strukturen följs.
+Kanske en rapport mer artikel-lik för redovisningstexten. Sen kan man ha en separat rapport för extra.
+Eller en artikel-typ för varje kmom, istället för kapitel-grejen? Nja, troligen inte men bra att fundera på.
+
+Extrarapporten kan fokusera även på Symfony/Laravel och dess features.
+
+Extrarapporten kan ha högre höjd och kräva referenser. Hmm, men såna saker kanske alla borde lära sig...
+
+Redovisningstexten kanske kan vara i kursrapporten och extrarapporten i ett eget dokument?
+
+Ett upplägg på projektet som leder till E-C alt E-D.
+Ett upplägg på projektet som leder till C-A eller BA.
+Projektet kan rättas av tas?
+
+Friheten kontra Uppstyrdhet i kraven. Kanske ToDo ger en nivå. En blog ger en annan nivå. Helt fritt ger ytterligare en nivå. Vissa gillar tydlighet och andra gillar frihet och kreativitet.
+
+Eventuellt ett skarpt projekt, samma för alla?
+Eller ett tydligt projekt som majoriteten gör och ett som är mer valbart?
+Ett projekt som har kopplingar till näringslivet eller forskning?
+
+Kanske borde kmom ORM göra en CRUD eller inloggning. Kanske oauth trots allt?
+
+Kanske projekt som blog med inloggning och admin kontra besökare.
+
+Om inloggning, använd doe:doe som default användare.
+
+Lägg in class diagram i inledningen.
+
+Fixa phpdoc generering så vi kan fokusera delvis på dokumentationen.
+
+Fixa phpmetrics så man kan reflektera över kodkvalitet på ett bättre sätt.
+
+Adventurespel som projekt kan tillåta fokus på Ux.
+
+Videon vad ska den ta upp, enbart projektet? Eller infoga även de saker man skrev i rapporten (tips från coachen, egen analys)?
+
+Lös nedladdningstiden.
+
+Ge poäng för den statiska valideringen för att uppmuntra att den biten blir rätt (dbwebb test kmom10).
+
+Jobba i grupp?
+
+Projekt:
+
+* ToDo
+* Blog
+    * Wordpress
+    * Travelblogg
+    * Hemnet
+    * Blocket
+    * Fotoblogg
+* CMS
+* Cards
+* Cards in 5x5 (Poker square)
+* Dice 5x5 (Dice square) (inkl highscore och histogram)
+
+* Yatzy var väldigt svårt att få ett bra gränssnitt.
+
+Spel fram till kmom04, sen login & db i valfritt ramverk?
+    * Proj mer spel, eller adventure eller blog/ToDo (inkl inlogg)
+
+Gör tydligt att repot skall se bra ut, så det kan användas för att länka till.
+
+Repot kan använda GitHub/GitLab Pages visa upp sin dokumentation och kodtäckning samt metrics.
+
+Mer tydligt vad histogram och stats skall innehålla. Kanske även visa hur man kan göra mer grafiskt representativt. Dels med enkla medel och dels med Google diagrams (eller annan tredjepartare).
+
+Inloggning på Game kan erbjuda möjlighet att reinitiera databasen eller andra admin-saker.
+
+
+-->
+
+
 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------

@@ -64,7 +64,7 @@ I övrigt är kraven uppfyllda enligt nedan.
 
 
 
-### E eller D (G) {#e}
+### Betyg E eller D (G) {#e}
 
 Projektet är utfört enligt instruktionerna och fungerar utan problem. Användargränssnittet är tilltalande och applikationen är lätt att använda och fungerar utan problem.
 
@@ -91,7 +91,7 @@ Följande är en lathund som kort visar hur bedömning sker i normalfallet.
     * Projekt utan optionella krav -> E
     * Projekt med optionella krav -> D
 
-Förutsatt att ovan är uppfyllt.
+Förutsatt att ovan är uppfyllt kan man höja max till C för nedan.
 
 * Fristående projektrapport höjer ett betygsteg (max till C)
 * Quiz höjer ett betygsteg (max till C)

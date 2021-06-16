@@ -114,14 +114,22 @@ Krav {#krav}
 
 Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databasdetaljer, en för webbklienten och en för terminalklienten.
 
+<!--
 
+Förtydliga att det måste finnas kunder inlagda i databasen.
+
+Och ordrar med olika status
+
+Och produkter på lagret.
+
+-->
 
 ### Generella krav {#gen}
 
 1. Du behöver uppfylla de krav du hade i del 1 av uppgiften.
 
 1. En order skall ha kolumner med tidsstämplar för när ordern skapades (1), när ordern senast uppdaterades (2), när/om ordern raderats (_soft delete_) (3), när/om ordern beställts (4) och när/om ordern skickats till kund (5). Se "Tips från Coachen" nedan, om tidsstämplar.
-  
+
 1. Skapa en egendefinierad funktion `order_status()` som tar nödvändiga argument av tidsstämplar och returnerar en sträng med någon av statusen "Skapad", "Uppdaterad", "Raderad", "Beställd" eller "Skickad". Visa den status som är mest aktuell och viktigast.
 
 1. Databasen skall innehålla egenskapade INDEX på minst ytterligare två platser, förutom primärnycklar och främmande nycklar. Analysera var INDEX kan passa in och inför dem.
@@ -193,7 +201,7 @@ Gör följande om du har tid, energi och ro.
 1. När en order ändrar status till "Skickad" så skall lagret uppdateras genom att räkna ned alla antalet produkter som finns i ordern.
 
 1. Lägg till stöd för att radera order via "soft delete" samt möjligheten att göra "undo" på en "soft delete".
- 
+
 
 
 Tips från coachen {#tips}

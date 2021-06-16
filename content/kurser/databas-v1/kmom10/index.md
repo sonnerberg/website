@@ -37,6 +37,28 @@ Upplägget är enligt följande:
 
 Totalt omfattar kursmoment 07/10 i storleksordningen 20--40 studietimmar.
 
+<!--
+
+Förtydliga kraven så att det inte känns som "man har redan löst dem".
+
+Men, använd optionella krav i 05/06 och låt dem återfinnas i projektet.
+
+Kanske enbart fokusera på faktureringen i projektet. Kanske fokusera på att göra nåt snyggare i webbklienten.
+
+* Lista fakturor
+* Skapa faktura
+* Betala faktura
+
+Förtydliga minsta möjliga krav för att klara av tentan.
+
+* Lagrade procedurer
+* LEFT/RIGHT JOIN
+
+Kanske även förtydliga att det krävs mer för att nå högre betyg,
+
+Förtydliga också att man inte kan göra tentan om man inte klarat/lämnat in kmom05.
+
+-->
 
 
 Inspelad genomgång {#flas}

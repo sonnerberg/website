@@ -7,9 +7,9 @@ revision:
 Installera kursens labbmiljö
 ==================================
 
-*(ca: 2-6 studietimmar)*
-
 Du behöver installera kursens labbmiljö samt ha tillgång till verktyget `dbwebb` som du installerar i terminalen. När du är klar kan du klona kursrepot där du finner en del av kursens material.
+
+<!--more-->
 
 
 
@@ -25,13 +25,15 @@ Det första du behöver göra är att installera en labbmiljö för kursen. Om d
 Installera/uppdatera kommandot dbwebb {#dbwebbcli}
 ----------------------------------
 
+Kommandot, eller verktyget, dbwebb, är ett terminalprogram, skrivet i Bash, som hjälper dig att ha koll på dina filer i kursen. Det hjälper dig också att lämna in resutlatet så att lärarna kan rätta och det hjälper dig att publicera till en webbplats för studenter.
+
 Om du redan har installerat kommandot dbwebb så gör du en selfupdate för att vara säker på att du har senaste versionen. Sedan kan du fortsätta till nästa stycke.
 
 ```text
 dbwebb selfupdate
 ```
 
-Annars utför du följande steg för att göra en fräsh installera kommandot dbwebb.
+Annars utför du följande steg för att göra en fräsh installation av kommandot dbwebb.
 
 1. [Installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
 
@@ -55,9 +57,15 @@ Den snabba vägen.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
-dbwebb clone htmlphp
-cd htmlphp
+dbwebb clone webtec
+cd webtec
 dbwebb init
+```
+
+Kursrepot finns publikt på GitHub. Du kan hitta länken till det genom att skriva följande kommando i din terminal.
+
+```text
+dbwebb github webtec
 ```
 
 Bra, det var grunden som behövs. Nu kan du sätta igång "på riktigt" med det första kursmomentet.
