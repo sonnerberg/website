@@ -26,7 +26,7 @@ A command line program in Bash {#intro}
 
 ### Download {#down}
 
-In the [GitHub-repository for the unix-course](https://github.com/dbwebb-se/unix/) there is an example program called [`bash-cli`](https://github.com/dbwebb-se/unix/blob/master/example/bash/cli-with-options/bash-cli.bash). The program shows a basic structure that can be used to create command line programs with Bash.
+In the [GitHub-repository for the unix-course](https://github.com/dbwebb-se/unix/) there is an example program called [`bash-cli`](https://github.com/dbwebb-se/unix/blob/master/example/bash/cli-with-options/bash-cli). The program shows a basic structure that can be used to create command line programs with Bash.
 
 If you have already cloned a course repo, you will find the sample program in the following directory.
 
@@ -65,7 +65,7 @@ That's all the program managed, let's see what the code behind it looks like.
 A template for a command line application {#template}
 --------------------------------------
 
-We take a look at the code in `bash-cli.bash`, top to bottom.
+We take a look at the code in `bash-cli`, top to bottom.
 
 The first lines are a [*shebang*] (https://en.wikipedia.org/wiki/Shebang_(Unix)) followed by some comments that tell you what the script is about.
 
