@@ -128,6 +128,8 @@ Som en generell introduktion till programming och vissa av de tekniker och konst
 
 - Kolla på [Study Less Study Smart](https://www.youtube.com/watch?v=IlU-zDU6aQ0), 60 min video hur man studerar effektivt. Om ni känner att den är för lång kan ni kolla på [Study Less Study Smart: A 6-Minute Summary](https://www.youtube.com/watch?v=23Xqu0jXlfs).
 
+- Läs om hur du kan använda [dbwebb test](dbwebb-cli/python) för att rätta din kod.
+
 Om du känner att du har tid och lust.
 
 
@@ -172,7 +174,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Läs [instruktionen om hur du skall lämna in och redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

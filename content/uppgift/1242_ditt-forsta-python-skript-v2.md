@@ -107,22 +107,17 @@ ls
 
 6. Skriv ut alla omvandlade värden avrundade till två decimaler.
 
-7. Kör testerna och validera koden för att kolla att du är godkänd.
+7. [Kör testerna](dbwebb-cli/python) och validera koden för att kolla att du är godkänd.
 
 8. Ladda upp och publicera uppgiften genom att göra följande kommandon i kurskatalogen i terminalen.
 
 ```bash
 # Ställ dig i roten av kurskatalogen python
 dbwebb test plane
-dbwebb validate plane
 dbwebb publish plane
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
-
-[INFO]
-Dina uppladdade python filer syns inte på studentservern. Vill du dubbelkolla att dina filer finns på studentservern kan du använda kommandot: `dbwebb inspect kmom01`. Med kommandot `dbwebb inspect kmom01` ser du dina inlämningar på samma sätt som de som rättar.
-[/INFO]
 
 
 

@@ -113,7 +113,7 @@ input: "Dansk"    output: "Match!"
     ```
 
 
-10. Testa, validera och publicera din kod enligt följande.
+10. [Testa](dbwebb-cli/python), validera och publicera din kod enligt följande.
 
 
 ```bash
