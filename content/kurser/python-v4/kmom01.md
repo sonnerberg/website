@@ -182,3 +182,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du bekant med terminalen och Unix-kommandon sedan tidigare?
 * Gick det bra att komma i gång med kursmomentet, fanns det svårigheter som du fastnade på?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest, använde du dem alla?
+* Gick det bra att använda `dbwebb test` kommandot? Har du någon feedback på verktyget?

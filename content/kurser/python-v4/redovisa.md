@@ -1,22 +1,33 @@
 ---
 author:
-    - mos
+    - aar
 revision:
-    "2020-08-27": (H, aar) Bytte ut videon för lämna in ett kmom.
-    "2019-06-14": (G, aar) Tog bort krav om forum.
-    "2017-06-14": (F, mos) Ny struktur i me/redovisa.
-    "2015-08-25": (E, mos) Bytte bin/dbwebb mot dbwebb.
-    "2014-09-26": (D, mos) Tog bort kravet på att hålla me.py och redovisning.py uppdaterade.
-    "2014-09-17": (C, mos) Förtydligade kravet om 15 meningar.
-    "2014-08-21": (B, mos) Genomgången.
-    "2014-06-13": (A, mos) Första utgåvan för python kursen.
+    "2021-06-18": (A, aar) Första utgåva för automaträttning.
 ...
-Resultat och redovisning
+Lämna in och redovisa
 ==================================
 
-Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
+Som ett sista steg i varje kursmoment skall du lämna in och redovisa uppgifterna du har gjort. Gör så här.
 
 <!--more-->
+
+Du kan lämna in hur många gånger som helst, tills du får godkänt. Om du får Ux är det bara att lösa felet och lämna in igen.
+
+
+
+Testa uppgifterna {#test}
+---------------------------------------
+
+När du känner att du är klar med uppgifterna ska du köra testerna som finns för dem. Varje kmom består av en större uppgift och en lab. Till de större uppgifterna har vi skrivit tester som kollar att er kod uppfyller kraven som står i uppgiftsbeskrivningen. Om de testerna inte passerar kommer er inlämning inte rättas. Därför ska ni alltid köra dem innan ni lämnar in.
+
+Kör testerna med kommandot `dbwebb test` på kursmomentet du lämnar in. Du kan [läsa mer om dbwebb test](dbwebb-cli/python) och hur du kan använda det.
+
+```bash
+# Gå till din kurskatalog
+dbwebb test <kmom> # ersätt med ditt kmom, t.ex. kmom01. dbwebb test kmom01
+```
+
+Det kommandot kommer validera din kod, rätta labben och uppgiften. Om allt blir grönt är du klar och redo att ladda upp koden. Om någon del är röd behöver du göra om den delen, köra om testerna och kolla att det är grönt. När det är grönt är du redo att skriva redovisningstext.
 
 
 
@@ -45,18 +56,25 @@ Ladda upp din kurskatalog med alla dina övningar genom att göra följande komm
 dbwebb publish me
 ```
 
-Den länken som visas i utskriften av kommandot, är länken till din me-sida. Där kan du se ditt publicerade resultat.
+Den **länken** som visas i utskriften av kommandot, är länken till din **me-sida**. Där kan du se ditt publicerade resultat.
 
 Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
-Kopiera redovisningstexten till Canvas {#canvas}
+Lämna in på Canvas {#canvas}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [Canvas](https://www.bth.se/canvas/) tillsammans med en länk till din me-sida.
+Kopiera din redovisningstext och lämna in den på redovisningen [Canvas](https://www.bth.se/canvas/) tillsammans med en **länk till din me-sida**. Nu är det bara att vänta på att det rättas.
 
-Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
+
+
+Hur rättas min inlämning? {#umbridge}
+---------------------------------------
+
+Efter att du har gjort en inlämning på Canvas kommer, inom några minuter, vårt [Umbridge](länk) system att ladda ner din kod och köra `dbwebb test` på den. Om alla tester går igenom kommer Umbridge sätta betyget `PG` (Preliminärt Godkänt) på inlämningen. Om testerna inte går igen får du betyget `Ux` (komplettera → gör om → gör bättre). Din inlämning kommer inte rättas när den har betyget Ux. Då ska du kolla loggen som Umbridge skickar med och fixa felet som visas och sen lämna in igen på Canvas. Om ni anser att Umbridge har gett er ett felaktigt Ux, kontakta kursansvarig.
+
+Inlämningar med betyg PG går rättarna så småningom igenom. När en rättar kollar på en inlämning läser rättaren igenom redovisningstexten, loggen från Umbridge och den inlämnade koden. Om allt ser bra ut sätter de betyget `G` (Godkänt). Då är det kursmomentet helt klar och ni är redo att gå vidare till nästa. Om rättaren tycker något ser konstigt/fel ut sätter de betyget Ux och skriver vad ni behöver förbättra för att få godkänt.
 
 
 
@@ -69,27 +87,9 @@ Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor 
 
 
 
-Hur testas mitt resultat? {#inspect}
----------------------------------------
-
-Den som rättar och kontrollerar din inlämning utgår från följande kommando.
-
-```bash
-dbwebb inspect kmom01
-```
-
-Byt ut kmom01 mot det kursmoment du vill inspektera.
-
-Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
-
-[YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
-
-
-
 Klart! {#klar}
 ---------------------------------------
 
 [YOUTUBE src=-7Wzi_IkpEU width=630 caption="Andreas visar hur man lämnar in ett kmom."]
-
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.

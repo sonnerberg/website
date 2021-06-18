@@ -22,5 +22,5 @@ Kommandot `dbwebb test [part] [options]` funkar lite olika för varje kurs och d
 Följande kurser har stöd för dbwebb test:
 
 - python
-- htmlphp
+- webtec
 - mvc
