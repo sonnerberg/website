@@ -60,6 +60,8 @@ Kanske vill du pröva lyckan i gitter-chatten eller forumet?
 Vad säger kursledningen till handledarna? {#handled}
 -----------------------
 
+Kursledningen har utvecklat en checklista för att handledaren och examinatorn har samma syn på kvalitet i arbetet. [Checklistan](https://bthse-my.sharepoint.com/:x:/g/personal/efo_bth_se/EVAtQGX4qjxDpfFgJJkEUVgBxoSCt4UzEZZNCgMIZgE2iA?e=xj65mh) finns att tillgå även för ni studenter.
+
 För er information. Så här formulerar sig Conny, när han ger instruktioner till handledare och deras relation till studenterna.
 
 > Det finns ett par förbättringspunkter relaterat handledning identifierat i kursutvärderingen:
