@@ -253,7 +253,7 @@ enumerate() returnerar en lista där varje element är en tuple och varje tuple 
 Det funkar likadan om vi förser loopen men en lista som innehåller tupler. Om ni har varit uppmärksamma än så länge så har ni märkt att vi redan har gjort det.
 
 ```python
-print(warehouse_deluxe.items())
+>>> print(warehouse_deluxe.items())
 
 dict_items([
     ('köttfärs', {'stock': 20, 'price': 50, 'ids': (1234, 'K14')}),
@@ -286,6 +286,7 @@ for item, data in warehouse_deluxe.items():
 # skriver ut
 # krossade tomater
 ```
+
 
 
 Avslutningsvis {#avslutning}
