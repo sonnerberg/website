@@ -187,9 +187,15 @@ Genomför följande övningar, det hjälper dig inför uppgifterna.
 
 1. Jobba igenom övningen "[Bygg en multisida med PHP (v2)](kunskap/bygg-en-multisida-med-php-v2)". Spara filerna i katalogen `me/kmom03/multi`, så kan du använda dem i den kommande uppgiften.
 
-
 Bygg formulär.
 https://jonkopingenergi.se/privat/fiber/serviceavgift (använd även till databasen)
+
+Debugbar
+http://phpdebugbar.com/
+
+Validator:
+https://github.com/phan/phan/
+
 
 <!--
 Programmera PHP i cli-skript
