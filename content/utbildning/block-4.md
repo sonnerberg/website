@@ -4,6 +4,6 @@
 
 **Kurspaket "Webbutveckling och programmering"** (webutv) ger dig grunder i programmering och problemlösning.
 
-Du kodar Python, JavaScript (klient & server) i Linux-miljö. Avslutningsvis bygger du bygger en webapp med HTML, CSS och JavaScript.
+Du kodar Python och JavaScript för att lära dig grunderna inom programmering och webbprogrammering. Avslutningsvis bygger du bygger en webapp med HTML, CSS och JavaScript.
 
 [Läs om kurspaketet webutv »](webutv)
