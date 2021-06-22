@@ -79,10 +79,10 @@ Nu är du redo för kursen.
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
-* [HTML, introduktion](./../forelasning/html-introduktion). Grunderna i HTML.
-* [HTML, element och grundstruktur](./../forelasning/html-element). HTML och dess olika element och hur de kan användas för att bygga upp sidans grundstruktur.
-* [CSS, introduktion](./../forelasning/css-introduktion). Hur CSS påverkar utseende och layout samt hur språket är uppbyggt.
-* [CSS, stil och layout](./../forelasning/css-stil-och-layout). Hur vi kan bygga webbsidor med flera kolumner och hur vi kan styla webbsidan med utrymme, färger och typsnitt.
+* [HTML, introduktion](./../forelasning/html-introduktion)
+* [HTML, element och grundstruktur](./../forelasning/html-element)
+* [CSS, introduktion](./../forelasning/css-introduktion)
+* [CSS, stil och layout](./../forelasning/css-stil-och-layout)
 
 Delta i lektionen som förbereder dig för veckans uppgift.
 
@@ -90,7 +90,7 @@ Delta i lektionen som förbereder dig för veckans uppgift.
 
 Genomför veckans uppgift.
 
-* Gör uppgiften "[Skapa en One-page-website](uppgift/skapa-en-one-page-webbsite)".
+* Gör uppgiften "[Skapa en One-page-website](uppgift/skapa-en-one-page-website)".
 
 
 
@@ -98,8 +98,8 @@ Genomför veckans uppgift.
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
-* [Protokollet HTTP](./../forelasning/protokollet-http). Hur protokollet HTTP hämtar hem en webbsida från en webbserver och hur vi kan analysera vad som händer i bakgrunden.
-* [Responsiv webbdesign](./../forelasning/responsiv-webbdesign). Vad är en responsiv webbplats och hur vi bygger dem.
+* [Protokollet HTTP](./../forelasning/protokollet-http)
+* [Responsiv webbdesign](./../forelasning/responsiv-webbdesign)
 
 Delta i lektionen som förbereder dig för veckans uppgift.
 
@@ -123,13 +123,7 @@ För att avrunda detta kmom, se till att följande frågor besvaras i redovisnin
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
 
-Glöm inte att testköra din inlämning, se till att allt är grönt.
-
-```text
-# Gå till ditt kursrepo
-dbwebb update
-dbwebb test kmom01
-```
+Glöm inte att testa din inlämning med `dbwebb test kmom01`.
 
 
 
@@ -161,7 +155,7 @@ Titta på följande videor/filmer. Filmerna är tänkta att ge dig en liten orie
 * [Evolution of Web Design 1990-2019](https://www.youtube.com/watch?v=XYTwYmOjqQs) (8 min)
 * [Bad Web Design: A Look At The Most Hilariously Terrible Websites From Around The Web](https://www.youtube.com/watch?v=6befMTTTTRQ) (11 min)
 
-Videorna ovan finns även att finna i spellistan "[ Om webbutveckling (HTML, CSS, PHP, SQL)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Qp6DTS_2s6q-Br66ufoWc)".
+Videorna ovan finner du även i spellistan "[ Om webbutveckling (HTML, CSS, PHP, SQL)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Qp6DTS_2s6q-Br66ufoWc)".
 
 
 

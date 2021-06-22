@@ -21,15 +21,11 @@ Kmom03/04: PHP
 
 <!-- stop-->
 
-En webbplats med HTML och CSS kan man kalla en statisk webbplats då innehållet ligger statiskt i HTML- och CSS-filer. En dynamisk webbplats kan ändra sidornas innehåll baserat på inkommande argument eller om användaren är inloggad på webbplatsen eller ej. En dynamisk webbplats kan också hämta sitt innehåll från andra källor, till exempel en databas. Dynamiken i en webbplats kan implementeras i klienten (webbläsaren med JavaScript) och/eller på serversidan (webbservern). Vi kommer titta på hur man gör dynamiska webbplatser med PHP på serversidan.
+Vi lär oss programmeringsspråket PHP och hur man programmerar i det via vanliga programmeringskonstruktioner som variabler, if-satser, loopar, datastrukturer som arrayer och vi organiserar koden i filer och funktioner.
 
-PHP är ett programmeringsspråk som är populärt att använda för att bygga dynamiska webbplatser. Vi skall börja med att lära oss hur PHP fungerar som programmeringsspråk och sedan ser vi hur PHP kan användas för att bygga dynamiska webbplatser.
+När vi kan grunderna går vi vidare och använder PHP för att bygga en webbplats. PHP är ett server-side språk och det är på webbserverns sida som PHP hjälper oss att skapa dynamik när vi genererar webbsidorna. Vi berör olika koncept som HTML formulär, GET/POST och SESSION/COOKIE som ofta används när man utvecklar webbplatser.
 
-PHP är ett vanligt programmeringsspråk och har konstruktioner som variabler, uttryck, if-satser, loopar, funktioner, arrayer och så vidare.
-
-När PHP används tillsammans med webbplatsen kan vi posta HTML formulär till servern som hanterar dess innehåll. Vi kan till exempel bygga en procedur för att logga in på en webbplats med hjälp av formulär och sessioner.
-
-När en webbplats växer med fler sidor och konstruktioner så är det viktigt att ha en god grundstruktur för hur filerna sparas. Vi går igenom hur denna grundstruktur kan se ut.
+Vi försöker skapa en god katalogstruktur som är stödjande när vi utvecklar allt större webbplatser. Vi försöker återanvända kodsegment så att vi inte behöver duplicera koden.
 
 <!--more-->
 
@@ -37,217 +33,105 @@ När en webbplats växer med fler sidor och konstruktioner så är det viktigt a
 [FIGURE src=image/snapht18/multipage.png?w=w3 caption="En multisida i PHP, navigeringsmeny i vänsterkanten och färgad i pastellfärger."]
 -->
 
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 + 20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+När du är klar med detta kursmoment så har du grundläggande kunskap i hur man programmerar med PHP och grunderna för hur man bygger och driftsätter en dynamisk webbplats med PHP.
+
+<small><i>Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.</i></small>
 
 
 
-Labbmiljö  {#labbmiljo}
+Studieplan & Upplägg {#studieplan}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+Följande är förslag till en grov och övergripande studieplan för att genomföra kursmomentet. Läs igenom hela dokumentet, innan du bestämmer din plan, det kan finnas mer aktiviteter och lärmoment som är relevanta att utföra inom ramen för kursmomentet.
 
-Moped
-
-* Installera PHP i pathen
-* Installera composer
+<small><i>Kursmomentet omfattar cirka **20 + 20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke.</i></small>
 
 
 
-Läs & Studera  {#lasanvisningar}
----------------------------------
+### Vecka 1 {#v1}
 
-*(ca: 4-12 studietimmar)*
+Börja med att komplettera din labbmiljön för PHP.
 
-Följande är det som du bör studera för att läsa in dig på området och förbereda dig inför övningar och uppgifter.
+* [Lägg till PHP i din PATH](labbmiljo/php-i-pathen).
+* [Installera Composer för pakethantering med PHP](labbmiljo/composer).
 
+Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
+* [PHP, introduktion](./../forelasning/php-introduktion)
+* [PHP och arrayer](./../forelasning/php-arrayer)
+* [PHP och funktioner](./../forelasning/php-funktioner)
 
-### Introduktion till PHP {#f1}
+Delta i lektionen som förbereder dig för veckans uppgift.
 
-Vi börjar med en introduktion till programmeringsspråket PHP, dess beståndsdelar och hur man skriver program med PHP.
+* I lektionen "[Programmera med PHP](./../forelasning/programmera-med-php)" får du hjälp att komma igång med uppgiften. Lektionen spelas in.
 
-<!--
-Slides till föreläsningen "[HTML, introduktion](https://dbwebb-se.github.io/webtec/lecture/L01-html-intro/slide.html)".
+Genomför veckans uppgift.
 
-[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="HTML, introduktion (med Mikael)."]
--->
-
-
-
-### PHP och arrayer {#f2}
-
-Vi tittar på hur vi kan jobba med arrayer i PHP.
+* Gör uppgiften "[Programmera med PHP](uppgift/programmera-med-php)".
 
 <!--
-Slides till föreläsningen "[HTML, introduktion](https://dbwebb-se.github.io/webtec/lecture/L01-html-intro/slide.html)".
-
-[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="HTML, introduktion (med Mikael)."]
--->
-
-
-
-### PHP och funktioner {#f3}
-
-Vi ser hur vi kan arrangera och organisera PHP-kod i funktioner.
-
-<!--
-Slides till föreläsningen "[HTML, introduktion](https://dbwebb-se.github.io/webtec/lecture/L01-html-intro/slide.html)".
-
-[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="HTML, introduktion (med Mikael)."]
--->
-
-
-
-### PHP webbsidor med sidkontroller och vyer {#f4}
-
-Vi fortsätter med att se hur PHP kan användas när vi bygger webbplatser och vi skapar en grundstruktur för webbplatsens sidor.
-
-<!--
-Slides till föreläsningen "[HTML, introduktion](https://dbwebb-se.github.io/webtec/lecture/L01-html-intro/slide.html)".
-
-[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="HTML, introduktion (med Mikael)."]
--->
-
-
-
-### PHP och HTML formulär {#f5}
-
-Vi fortsätter med att se hur PHP kan användas när vi bygger webbplatser och vi skapar en grundstruktur för webbplatsens sidor.
-
-<!--
-Slides till föreläsningen "[HTML, introduktion](https://dbwebb-se.github.io/webtec/lecture/L01-html-intro/slide.html)".
-
-[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="HTML, introduktion (med Mikael)."]
--->
-
-
-
-### PHP, cookies och sessioner {#f6}
-
-Vi fortsätter med att se hur PHP kan användas när vi bygger webbplatser och vi skapar en grundstruktur för webbplatsens sidor.
-
-<!--
-Slides till föreläsningen "[HTML, introduktion](https://dbwebb-se.github.io/webtec/lecture/L01-html-intro/slide.html)".
-
-[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="HTML, introduktion (med Mikael)."]
--->
-
-
-
-
-<!--
-
-Lägg läsanvisningar under respektive föreläsning
-
-### PHP {#php}
-
-
-Läs följande för att bekanta dig med tekniken.
-
-1. Bekanta dig kort med [webbplatsen för PHP](http://php.net/), bara så att du har varit där och ser hur den ser ut. Det som vi framförallt kommer att använda framöver är [manualen för PHP](http://php.net/manual/en/). Kika snabbt igenom dess innehållsförteckning så att du ser vad det handlar om. Du behöver inte studera något i detalj för tillfället. Även för PHP funkar googling bra att nå rätt sida i referensmanualen, pröva "php echo" och min rekommendation är att du väljer PHP referensmanualen som landningssida, det blir bäst i längden.
-
-
-
-### Kurslitteratur {#kursboken}
-
-I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom och/eller använda som referens.
-
-* Kapitel 1 Introduktion
-* Kapitel 2 Variabler
-* Kapitel 3 Konstanter
-* Kapitel 4 Operatorer
-* Kapitel 5 Villkorssatser
-* Kapitel 6 Iterationer
-
--->
-
-
-### Video för orientering {#video}
-
-Titta på följande videor/filmer.
-
-* [A brief history of the World Wide Web](https://www.youtube.com/watch?v=sSqZ_hJu9zA)
-
-
-
-Övningar & Uppgifter  {#ovningar_uppgifter}
--------------------------------------------
-
-*(ca: 8-12 studietimmar)*
-
-
-
-### Övningar {#ovningar}
-
-Genomför följande övningar, det hjälper dig inför uppgifterna.
-
-1. Jobba igenom övningen "[Gör en me-sida med HTML, CSS och PHP](kunskap/skapa-en-webbsida-med-html-css-och-php)". Övningen innehåller grunderna i HTML, CSS och PHP och visar hur du bygger upp en enkel webbplats. Filerna du jobbar med kan du spara i `me/kmom01/me`.
-
-1. Jobba igenom övningen "[Gör en me-sida med HTML, CSS och PHP - steg 2](kunskap/skapa-en-webbsida-med-html-css-och-php-steg-2)". Övningen bygger vidare på grunderna i HTML, CSS och PHP och visar hur du bygger ut din webbplats med några vanliga bra-att-ha konstruktioner.
-
-1. Jobba igenom övningen "[Bygg en multisida med PHP (v2)](kunskap/bygg-en-multisida-med-php-v2)". Spara filerna i katalogen `me/kmom03/multi`, så kan du använda dem i den kommande uppgiften.
-
-Bygg formulär.
-https://jonkopingenergi.se/privat/fiber/serviceavgift (använd även till databasen)
-
 Debugbar
 http://phpdebugbar.com/
 
 Validator:
 https://github.com/phan/phan/
 
-
-<!--
-Programmera PHP i cli-skript
-
-Formulär GET
-* POST
-* FILE
-* SESSION
-* COOKIE
-* login
-
-* kontaktformulär, flashmeddelande
-
-PHP
-* funktioner, arrayer
--->
-
-
-
-### Uppgifter {#uppgifter}
-
-Dessa uppgifter skall utföras och redovisas.
-
 1. Gör uppgiften "[PHP lab 1: uttryck, datatyper och variabler](uppgift/php-lab1-uttryck-datatyper-och-variabler)". Spara alla filerna i katalogen `me/kmom01/lab1`.
 
 1. Gör uppgiften "[PHP lab 2: villkor, loopar och inbyggda funktioner](uppgift/php-lab2-villkor-loopar-och-inbyggda-funktioner)". Spara alla filerna i katalogen `me/kmom02/lab2`.
 
 1. Gör uppgiften "[PHP lab 3: Arrayer](uppgift/php-lab3-arrayer)". Spara alla filerna i katalogen `me/kmom03/lab3`.
+-->
 
+
+
+### Vecka 2 {#v2}
+
+Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
+
+* [PHP sidkontroller och vyer](./../forelasning/php-sidkontroller-vyer)
+* [PHP och HTML formulär](./../forelasning/php-html-formular)
+* [PHP, cookies och sessioner](./../forelasning/php-cookie-session)
+
+Delta i lektionen som förbereder dig för veckans uppgift.
+
+* I lektionen "[Bygg en webbplats med PHP](./../forelasning/bygg-en-webbplats-med-php)" får du hjälp att komma igång med uppgiften. Lektionen spelas in.
+
+Genomför veckans uppgift.
+
+* Gör uppgiften "[Bygg en webbplats med PHP](uppgift/bygg-en-webbplats-med-php)".
+
+
+<!--
 1. Gör uppgiften "[Bygg en multisida och testa arrayer (v2)](uppgift/bygg-en-multisida-och-testa-arrayer-v2)". Spara filerna i katalogen `me/kmom03/multi`.
 
 1. Gör uppgiften "[Bygg ut din me-sida till version 3 (v2)](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3-v2)". Spara filerna i katalogen `me/kmom03/me3`.
+
+Bygg formulär.
+https://jonkopingenergi.se/privat/fiber/serviceavgift (använd även till databasen)
+
+1. Jobba igenom övningen "[Gör en me-sida med HTML, CSS och PHP](kunskap/skapa-en-webbsida-med-html-css-och-php)". Övningen innehåller grunderna i HTML, CSS och PHP och visar hur du bygger upp en enkel webbplats. Filerna du jobbar med kan du spara i `me/kmom01/me`.
+
+1. Jobba igenom övningen "[Gör en me-sida med HTML, CSS och PHP - steg 2](kunskap/skapa-en-webbsida-med-html-css-och-php-steg-2)". Övningen bygger vidare på grunderna i HTML, CSS och PHP och visar hur du bygger ut din webbplats med några vanliga bra-att-ha konstruktioner.
+
+1. Jobba igenom övningen "[Bygg en multisida med PHP (v2)](kunskap/bygg-en-multisida-med-php-v2)". Spara filerna i katalogen `me/kmom03/multi`, så kan du använda dem i den kommande uppgiften.
+-->
 
 
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+Läs instruktionen om [hur du skall redovisa](./../redovisa).
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+För att avrunda detta kmom, se till att följande frågor besvaras i redovisningstexten.
 
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Hur känns det att komma igång med datastrukturer som arrayer? Är det koncept du känner igen sedan tidigare?
-* Hur känns det med strukturer såsom sidkontroller, multisida och templatefiler?
-* Är det något särskild du vill berätta om din me-sida och dess struktur? Något som du är extra nöjd med?
-* Får du hjälp och stöd i guiderna (html/css-guiden och php-guiden)?
+* Hur är din uppfattning om programmeringsspråket PHP så här långt?
+* Är du bekväm med att använda GET, POST, SESSION och COOKIE i din webbutveckling?
+* Hur kändes det att bygga webbplatsen med sidkontroller och vyer?
 * Vilken är din TIL för detta kmom?
 
-* Hur bekant är du med PHP och programmering rent allmänt, hur känns det att utveckla med PHP?
-* Vad tyckte du om PHP-labben, enkel eller utmanande?
+Glöm inte att testa din inlämning med `dbwebb test kmom03`.
 
 
 
@@ -274,6 +158,17 @@ Det fungerar bra att googla sig fram till relevant sida/funktion i manualen, pr�
 Webbplatsen W3Schools har en guide som är lättilgänglig när man vill komma igång med grunderna i PHP.
 
 * [PHP Tutorial](https://www.w3schools.com/php/)
+
+
+
+### Video för orientering {#video}
+
+Titta på följande videor/filmer. Filmerna är tänkta att ge dig en liten orientering i det område som behandlas i kursmomentet.
+
+* [The GAMECHANGING features of PHP 8!](https://www.youtube.com/watch?v=f_cwnwaEwaY) (13 min)
+* [Rasmus Lerdorf – 25 years of PHP](https://www.youtube.com/watch?v=Qa_xVjTiOUw) (55 min)
+
+Videorna ovan finner du även i spellistan "[ Om webbutveckling (HTML, CSS, PHP, SQL)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-Qp6DTS_2s6q-Br66ufoWc)".
 
 
 

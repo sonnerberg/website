@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2021-05-20": "(B, mos) lade till introvecka 2021."
+    "2021-06-22": "(B, mos) lade till introvecka 2021 och gamla veckor."
     "2020-06-22": "(A, mos) Ny inför ht20."
 ...
 Introduktionsveckan
@@ -20,6 +20,11 @@ Planering för introveckan {#plan}
 
 Här kan du se planering för introduktionsveckan.
 
-<!--* [Introduktionsveckan hösten 2021](introduktionsveckan-2021).-->
+* [Introduktionsveckan hösten 2021](introduktionsveckan-2021)
 
-* [Introduktionsveckan hösten 2020](introduktionsveckan-2020).
+Här är äldre versioner av introduktionsveckorna.
+
+* [Introduktionsveckan hösten 2020](introduktionsveckan-2020)
+* [Introduktionsveckan hösten 2019](/blogg/introduktionsveckan-2019)
+* [Introduktionsveckan hösten 2018](/blogg/introduktionsveckan-2018)
+* [Introduktionsveckan hösten 2017](/blogg/introduktionsveckan-2017)

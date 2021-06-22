@@ -12,34 +12,32 @@ Introduktionsveckan är för nya studenter på program och kurspaket och syftar 
 
 <!--more-->
 
-[WARNING]
-
-**Planering pågår, preliminär information.**
-
-[/WARNING]
-
-
 [INFO]
 **Covid planering...**
 
 På grund av läget med covid-19 så kommer introveckan att ske per distans, även för campusstudenterna.
 
-Det kommer ske en campusvandring på torsdagen för campusstudenterna.
+Det kommer ske en campusvandring för campusstudenterna.
 
 Campusstudenterna (ettorna) kommer att få tillgång till våra labbsalar i samband med kursstart, så efter campusvandringen finns möjlighet att sitta i dem och jobba.
 
-Troligen kommer labbsalarna att corona-säkras så att det finns ett begränsat antal platser i dem.
-
 [/INFO]
+
+
+
+Allmänt {#allman}
+-----------------------------------
+
+Det finns en videoserie med lite blandade välkomstvideos, "[Välkommen till Webbprogrammering hösten 2021](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-bmkUvx59NWWTdR69kGO5w)". Kika igenom den serien för lite tips och trix inför terminsstarten.
 
 
 
 Planering och schema {#plan}
 -----------------------------------
 
-Du kan se [schemat för introduktionsveckan](https://docs.google.com/spreadsheets/d/1ZOk4IWaE7aZcPnlr02SdSvwkQt6aIyH3km4luUQx_FM/edit?usp=sharing) via google sheet, notera att det finns flera flikar i dokumentet och du får välja den fliken som matchar din utbildning.
+Alla händelser är per distans (covid-19) förutom campusvandringen.
 
-Det finns en videoserie med lite blandade välkomstvideos, "[Välkommen till Webbprogrammering hösten 2021](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-bmkUvx59NWWTdR69kGO5w)". Kika igenom den serien för lite tips och trix inför terminsstarten.
+Du kan se [schemat för introduktionsveckan](https://docs.google.com/spreadsheets/d/1ZOk4IWaE7aZcPnlr02SdSvwkQt6aIyH3km4luUQx_FM/edit?usp=sharing) via google sheet, **notera** att det finns flera flikar i dokumentet och du får välja den fliken som matchar din utbildning.
 
 Vissa videor och streams från introduktionsveckan kan komma att sparas i spellistan "[Introveckan augusti 2021](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_w5J1GHrIMxip-NbqIWGPY)"
 
@@ -52,10 +50,12 @@ De som deltar på introveckan är nyantagen till någon av följande utbildninga
 
 * Webbprogrammering 180hp campus
 * Webbprogrammering 120hp distans
-* Webbprogrammering och databaser 30hp distans (kurspaket)
-* Webbutveckling och programmering 30hp distans (kurspaket)
+* Webbprogrammering och databaser 30hp distans (kurspaket 1)
+* Webbutveckling och programmering 30hp distans (kurspaket 2)
 
 Det som är gemensamt är att ni, under första läsåret, läser samma kurser med samma lärarteam och samma kurstillfällen.
+
+Under introveckan är det två kurser som startar, python och webtec. Webbprogrammering 180/120 läser båda kurserna, kurspaket 1 läser webtec och kurspaket 2 läser python.
 
 Introduktionsveckan sker på <s>campus</s> distans (mestadels) för campusprogrammet och på distans för övriga utbildningar.
 
@@ -79,9 +79,9 @@ För att erbjuda flexibilitet så kan ni utföra uppropen per distans via följa
 
 Här är formulär för respektive upprop.
 
-* [Gör upprop Webbprogrammering 180hp campus](https://forms.gle/VJA4kgu49yPnue2m6)
-* [Gör upprop Webbprogrammering 120hp distans](https://forms.gle/tQhMHsZj1DQn2z6h8)
-* [Gör upprop Webbprogrammering och databaser 30hp distans](https://forms.gle/zva5LMnZ7xnjZQkWA)
+* [Gör upprop Webbprogrammering 180hp campus](https://forms.gle/4sMUaw3eTWP48JhB7)
+* [Gör upprop Webbprogrammering 120hp distans](https://forms.gle/BXsS6R74ufRFjd1MA)
+* [Gör upprop Webbprogrammering och databaser 30hp distans](https://forms.gle/tPr74eg79ZpLkzW76)
 * [Webbutveckling och programmering 30hp distans](https://forms.gle/BkJMJLp4eDL4fVF39)
 
 
