@@ -153,7 +153,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/webtopic-v3/block-kurser-kmom
+                                route: kurser/webtopic-v2/block-kurser-kmom
                     column-2:
                         data:
                             meta:
