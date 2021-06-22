@@ -93,7 +93,7 @@ https://github.com/phan/phan/
 
 
 
-### Vecka 2: Webbpalts med PHP {#v2}
+### Vecka 2: Webbplats med PHP {#v2}
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
