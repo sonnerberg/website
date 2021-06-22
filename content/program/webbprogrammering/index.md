@@ -35,6 +35,7 @@ Kurser per antagningsomgång {#kurserantagen}
 
 ### Webbprogrammering 120hp distans {#kurser120}
 
+* [Antagen HT2021](utbildning/webbprogrammering-120hp/2021/kurser)
 * [Antagen HT2020](utbildning/webbprogrammering-120hp/2020/kurser)
 * [Antagen HT2019](utbildning/webbprogrammering-120hp/2019/kurser)
 * [Antagen HT2018](utbildning/webbprogrammering-120hp/2018/kurser)
@@ -45,6 +46,7 @@ Kurser per antagningsomgång {#kurserantagen}
 
 ### Webbprogrammering 180hp campus {#kurser180}
 
+* [Antagen HT2021](utbildning/webbprogrammering-180hp/2021/kurser)
 * [Antagen HT2020](utbildning/webbprogrammering-180hp/2020/kurser)
 * [Antagen HT2019](utbildning/webbprogrammering-180hp/2019/kurser)
 * [Antagen HT2018](utbildning/webbprogrammering-180hp/2018/kurser)
