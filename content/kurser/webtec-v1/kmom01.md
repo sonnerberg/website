@@ -109,6 +109,10 @@ Genomför veckans uppgift.
 
 * Gör uppgiften "[Skapa en responsiv webbplats med HTML och CSS](uppgift/skapa-en-responsiv-webbplats-med-html-och-css)".
 
+<!--
+1. Läs igenom artikeln "[Vanliga CSS-konstruktioner som är bra att kunna](kunskap/vanliga-css-konstruktioner-som-ar-bra-att-kunna)" och prova konstruktionerna på egen hand.
+-->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}

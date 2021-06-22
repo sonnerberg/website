@@ -48,7 +48,7 @@ Följande är förslag till en grov och övergripande studieplan för att genomf
 
 
 
-### Vecka 1 {#v1}
+### Vecka 1: PHP {#v1}
 
 Börja med att komplettera din labbmiljön för PHP.
 
@@ -76,16 +76,24 @@ http://phpdebugbar.com/
 Validator:
 https://github.com/phan/phan/
 
+1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
+    * [Egenskapade funktioner](guide/kom-igang-med-programmering-i-php/egenskapade-funktioner)
+
 1. Gör uppgiften "[PHP lab 1: uttryck, datatyper och variabler](uppgift/php-lab1-uttryck-datatyper-och-variabler)". Spara alla filerna i katalogen `me/kmom01/lab1`.
 
 1. Gör uppgiften "[PHP lab 2: villkor, loopar och inbyggda funktioner](uppgift/php-lab2-villkor-loopar-och-inbyggda-funktioner)". Spara alla filerna i katalogen `me/kmom02/lab2`.
 
 1. Gör uppgiften "[PHP lab 3: Arrayer](uppgift/php-lab3-arrayer)". Spara alla filerna i katalogen `me/kmom03/lab3`.
+
+1. Gör uppgiften "[PHP lab 4: skapa egna funktioner](uppgift/php-lab4-skapa-egna-funktioner)". Spara alla filerna i katalogen `me/kmom04/lab4`.
+
+1. Gör uppgiften "[PHP lab 5: utforska inbyggda funktioner](uppgift/php-lab5-utforska-inbyggda-funktioner)". Spara filerna i katalogen `me/kmom05/lab5`.
+
 -->
 
 
 
-### Vecka 2 {#v2}
+### Vecka 2: Webbpalts med PHP {#v2}
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
@@ -103,6 +111,15 @@ Genomför veckans uppgift.
 
 
 <!--
+1. Läs igenom följande sektioner i guiden "[Kom igång med programmering i PHP](guide/kom-igang-med-programmering-i-php)".
+    * [HTML formulär](guide/kom-igang-med-programmering-i-php/html-formular)
+    * [Sessioner](guide/kom-igang-med-programmering-i-php/sessioner)
+
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
+    * [Formular](guide/kom-igang-med-html-och-css/formular)
+
+1. Se en [översikt av olika formulärelement](forms), det räcker att du bekantar dig med hur de ser ut. Du kan även testa dem hur de fungerar.
+
 1. Gör uppgiften "[Bygg en multisida och testa arrayer (v2)](uppgift/bygg-en-multisida-och-testa-arrayer-v2)". Spara filerna i katalogen `me/kmom03/multi`.
 
 1. Gör uppgiften "[Bygg ut din me-sida till version 3 (v2)](uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3-v2)". Spara filerna i katalogen `me/kmom03/me3`.
@@ -115,6 +132,16 @@ https://jonkopingenergi.se/privat/fiber/serviceavgift (använd även till databa
 1. Jobba igenom övningen "[Gör en me-sida med HTML, CSS och PHP - steg 2](kunskap/skapa-en-webbsida-med-html-css-och-php-steg-2)". Övningen bygger vidare på grunderna i HTML, CSS och PHP och visar hur du bygger ut din webbplats med några vanliga bra-att-ha konstruktioner.
 
 1. Jobba igenom övningen "[Bygg en multisida med PHP (v2)](kunskap/bygg-en-multisida-med-php-v2)". Spara filerna i katalogen `me/kmom03/multi`, så kan du använda dem i den kommande uppgiften.
+
+1. Jobba igenom övningen "[Att bygga en styleväljare till sin webbplats](kunskap/att-bygga-en-stylevaljare-till-sin-webbplats)".
+
+https://arkiv.dbwebb.se/kod-exempel/business-card-generator/
+
+1. Gör uppgiften "[Bygg ut din me-sida till version 4 (v2)](uppgift/bygg-ut-din-me-sida-till-version-4-v2)". Spara filerna i katalogen `me/kmom04/me4`.
+
+1. Läs igenom följande sektion i guiden "[Kom igång med HTML och CSS](guide/kom-igang-med-html-och-css)".
+    * [Tabeller](guide/kom-igang-med-html-och-css/tabeller)
+
 -->
 
 

@@ -3,10 +3,10 @@ author: mos
 revision:
     "2021-03-03": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
-PHP och funktioner
+SQLite, en filbaserad databas
 ====================
 
-Lär dig strukturera din kod genom att dela upp i olika filer och funktioner.
+Vi tittar allmänt på databaser i webbsammanhang och specifikt på databasen SQLite och hur den fungerar.
 
 Videon är XX minuter lång.
 
@@ -19,5 +19,5 @@ Du kan själv bläddra igenom [de HTML slides som används i presentationen](kur
 Resurser
 ------------------------
 
-1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
-    * Kapitel 7 Funktioner
+1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom översiktligt.
+    * Kap 8 Databaser. Kapitlet handlar om databasen MySQL men är ändå relevant och ger en god introduktion till databaser och SQL.

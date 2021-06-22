@@ -3,10 +3,10 @@ author: mos
 revision:
     "2021-03-03": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
-PHP och funktioner
+Bygg en databas med SQL
 ====================
 
-Lär dig strukturera din kod genom att dela upp i olika filer och funktioner.
+Visa hur du kommer igång med uppgiften "Bygg en databas med SQL".
 
 Videon är XX minuter lång.
 
