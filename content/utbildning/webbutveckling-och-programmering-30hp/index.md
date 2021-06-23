@@ -37,7 +37,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/js-v1/block-kurser-kmom
+                                route: kurser/js-v2/block-kurser-kmom
                     column-3:
                         data:
                             meta:

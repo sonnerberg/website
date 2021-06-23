@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2021-06-21": "(I, aar) Bytte python v3 till v4."
+    "2021-06-21": "(I, aar) Bytte python v3 till v4 och js v1 till v2."
     "2020-09-01": "(H, aar) Bytte javascript1 mot js."
     "2020-03-09": "(G, aar) Inför HT20. Bytte ut linux mot oopython."
     "2018-06-29": "(F, mos) Inför HT18."
@@ -37,7 +37,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/js-v1/block-kurser-kmom
+                                route: kurser/js-v2/block-kurser-kmom
                     column-3:
                         data:
                             meta:
