@@ -65,14 +65,14 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 Lämna in på Canvas {#canvas}
 ---------------------------------------
 
-Kopiera din redovisningstext och lämna in den på redovisningen [Canvas](https://www.bth.se/canvas/) tillsammans med en **länk till din me-sida**. Nu är det bara att vänta på att det rättas.
+Kopiera din redovisningstext och lämna in den på redovisningen [Canvas](https://www.bth.se/canvas/) tillsammans med en **länk till din me-sida**, om länken saknas på Canvas kan du få Ux på inlämningen. Nu är det bara att vänta på att det rättas.
 
 
 
 Hur rättas min inlämning? {#umbridge}
 ---------------------------------------
 
-Efter att du har gjort en inlämning på Canvas kommer, inom några minuter, vårt [Umbridge](länk) system att ladda ner din kod och köra `dbwebb test` på den. Om alla tester går igenom kommer Umbridge sätta betyget `PG` (Preliminärt Godkänt) på inlämningen. Om testerna inte går igen får du betyget `Ux` (komplettera → gör om → gör bättre). Din inlämning kommer inte rättas när den har betyget Ux. Då ska du kolla loggen som Umbridge skickar med och fixa felet som visas och sen lämna in igen på Canvas. Om ni anser att Umbridge har gett er ett felaktigt Ux, kontakta kursansvarig.
+Efter att du har gjort en inlämning på Canvas kommer, inom några minuter, vårt [Umbridge](coachen/umbridge) system att ladda ner din kod och köra `dbwebb test` på den. Om alla tester går igenom kommer Umbridge sätta betyget `PG` (Preliminärt Godkänt) på inlämningen. Om testerna inte går igen får du betyget `Ux` (komplettera → gör om → gör bättre). Din inlämning kommer inte rättas när den har betyget Ux. Då ska du kolla loggen som Umbridge skickar med och fixa felet som visas och sen lämna in igen på Canvas. Om ni anser att Umbridge har gett er ett felaktigt Ux, kontakta kursansvarig.
 
 Inlämningar med betyg PG går rättarna så småningom igenom. När en rättar kollar på en inlämning läser rättaren igenom redovisningstexten, loggen från Umbridge och den inlämnade koden. Om allt ser bra ut sätter de betyget `G` (Godkänt). Då är det kursmomentet helt klar. Om rättaren tycker något ser konstigt/fel ut sätter de betyget Ux och skriver vad ni behöver förbättra för att få godkänt.
 
