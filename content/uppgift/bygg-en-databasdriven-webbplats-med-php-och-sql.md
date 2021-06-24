@@ -5,10 +5,10 @@ category:
 revision:
     "2021-06-15": "(A, mos) Första utgåvan."
 ...
-Bygg en databas med SQL
+Bygg en databasdriven webbplats med PHP med SQL
 ===================================
 
-Du skall bygga upp en databas från grunden med hjälp av SQL i databasen SQLite. Du fyller databasen med innehåll och skriver SELECT för att få ut rapporter.
+Du skall bygga en databasdriven webbplats och använda CRUD för att jobba mot databasen.
 
 <!--more-->
 
@@ -17,7 +17,11 @@ Du skall bygga upp en databas från grunden med hjälp av SQL i databasen SQLite
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har grundläggande kunskap om databasen SQLIte och SQL.
+Du har grundläggande kunskap om databasen SQLite och SQL.
+
+Du har grundläggande kunskap om PHP PDO.
+
+Du vet vad begreppet CRUD innebär i sammanhanget.
 
 
 

@@ -21,3 +21,5 @@ Resurser
 
 1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom.
     * Kapitel 7 Funktioner
+
+https://phpdoc.org/

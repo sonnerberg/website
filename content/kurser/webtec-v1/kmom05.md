@@ -52,7 +52,7 @@ Följande är förslag till en grov och övergripande studieplan för att genomf
 
 
 
-### Vecka 1: SQL och SQLite {#v1}
+### Del 1: SQL och SQLite {#v1}
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
@@ -61,7 +61,7 @@ Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligar
 
 Jobba på egen hand igenom följande uppgifter.
 
-* Jobba igenom övningen "[Kom igång med databasen SQLite med DB Browser för SQLite](kunskap/kom-igang-med-databasen-sqlite-med-db-browser-for-sqlite)". <!-- Spara dina filer under katalogen `me/sqlite`. -->
+* Jobba igenom övningen "[Kom igång med databasen SQLite med DB Browser för SQLite](kunskap/kom-igang-med-databasen-sqlite-med-db-browser-for-sqlite)".
 
 * Läs igenom artikeln "[En kommandoradsklient för SQLite](kunskap/en-kommandoradsklient-for-sqlite)" och installera kommandoklienten på ditt eget system. Testa den så du känner att du har koll på hur den fungerar.
 
@@ -81,16 +81,35 @@ Genomför veckans uppgift.
 
 
 
-### Vecka 2: PHP PDO, SQL och SQLite {#v2}
+### Del 2: Terminalprogram med PHP PDO, SQL och SQLite {#v2}
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
 * [PHP PDO och databaser](./../forelasning/php-pdo-och-databaser)
+
+Jobba på egen hand igenom följande övning.
+
+* Jobba igenom halva artikeln "[Kom igång med SQLite och PHP PDO](kunskap/kom-igang-med-sqlite-och-php-pdo)" (fram till och med SELECT).
+
+Delta i lektionen som förbereder dig för veckans uppgift.
+
+* I lektionen "[Bygg en databasdriven terminalklient med PHP och SQL](./../forelasning/bygg-en-databasdriven-terminalklient-med-php-och-sql)" får du hjälp att komma igång med uppgiften. Lektionen spelas in.
+
+Genomför veckans uppgift.
+
+* Gör uppgiften "[Bygg en databasdriven terminalklient med PHP och SQL](uppgift/bygg-en-databasdriven-terminalklient-med-php-och-sql)".
+
+
+
+### Del 3: Webbplats med PHP PDO, SQL och SQLite {#v2}
+
+Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
+
 * [Databasdriven webbplats med CRUD](./../forelasning/webbplats-med-crud)
 
-Jobba på egen hand igenom följande uppgift.
+Jobba på egen hand igenom följande övning.
 
-* Jobba igenom artikeln "[Kom igång med SQLite och PHP PDO](kunskap/kom-igang-med-sqlite-och-php-pdo)".
+* Jobba vidare och avsluta artikeln "[Kom igång med SQLite och PHP PDO](kunskap/kom-igang-med-sqlite-och-php-pdo)" (samma artikel som användes i föregående del).
 
 Delta i lektionen som förbereder dig för veckans uppgift.
 

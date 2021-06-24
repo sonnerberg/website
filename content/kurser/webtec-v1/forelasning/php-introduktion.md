@@ -31,3 +31,5 @@ I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-
 * Kapitel 4 Operatorer
 * Kapitel 5 Villkorssatser
 * Kapitel 6 Iterationer
+
+[strikta typer](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.strict)

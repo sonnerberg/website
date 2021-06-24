@@ -50,7 +50,7 @@ Följande är förslag till en grov och övergripande studieplan för att genomf
 
 ### Vecka 1: PHP {#v1}
 
-Börja med att komplettera din labbmiljön för PHP.
+Börja med att komplettera din labbmiljön för PHP. Dubbelkolla även att du kör version 8.0 (eller högre) av PHP.
 
 * [Lägg till PHP i din PATH](labbmiljo/php-i-pathen).
 * [Installera Composer för pakethantering med PHP](labbmiljo/composer).
@@ -70,6 +70,8 @@ Genomför veckans uppgift.
 * Gör uppgiften "[Programmera med PHP](uppgift/programmera-med-php)".
 
 <!--
+Artikel om utvecklingsmiljö med phpcs, phpcbf, phpmd?
+
 Debugbar
 http://phpdebugbar.com/
 

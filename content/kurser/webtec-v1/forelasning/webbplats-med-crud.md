@@ -6,7 +6,7 @@ revision:
 Databasdriven webbplats med CRUD
 ====================
 
-CRUD är en förkortning av Create, Read, Update och Delete. Det hanldar om att läsa och skriva till databasen och hur vi lägger till, uppdaterar och tar bort information från databasen. Vi ser hur dessa funktioner kan byggas in i en databasdriven webbplats.
+CRUD är en förkortning av Create, Read, Update och Delete. Det handlar om att läsa och skriva till databasen och hur vi lägger till, uppdaterar och tar bort information från databasen. Vi ser hur dessa funktioner kan byggas in i en databasdriven webbplats.
 
 Videon är XX minuter lång.
 
