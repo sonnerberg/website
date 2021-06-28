@@ -1,16 +1,16 @@
 ---
 author: lew
 revision:
-    "2020-11-25": (A, lew) Genomgång inför ht20.
+    "2021-06-16": (A, lew) Ny inför ht21.
 ...
-Kmom05: DOM och events
+Kmom05: Web API
 ==================================
 
-När vi använder JavaScript i webbläsaren handlar det mycket om att modifiera HTML-sidan och tillföra effekter. För att göra det manipulerar HTML-sidans DOM träd via JavaScript. Det handlar om att modifiera elementen på sidan och förändra deras style för att uppnå önskat beteende.
+När vi använder JavaScript i webbläsaren kan vi använda färdiga API:er som ger oss möjlighet att bygga våra webbsidor och applikationer på nya sätt. Vi ska i det här kursmomentet ta en närmare titt på ett av dem.
 
 <!--more-->
 
-[YOUTUBE src=Ra4qyJWjwmk width=630 caption="Så här kan det se ut när man leker med JavaScript och DOM."]
+<!-- [YOUTUBE src=Ra4qyJWjwmk width=630 caption="Så här kan det se ut när man leker med JavaScript och DOM."] -->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 

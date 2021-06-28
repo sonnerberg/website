@@ -8,8 +8,7 @@ Regex
 
 Vi kan även använda reguljära uttryck för att filtrera datan innan vi behandlar den.
 
-
-<!-- more -->
+<!--more-->
 
 ### Matchning {#match}
 
