@@ -80,7 +80,7 @@ Nu är du redo för kursen.
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
 * [HTML, introduktion](./../forelasning/html-introduktion)
-* [HTML, element och grundstruktur](./../forelasning/html-element)
+* [HTML, element och struktur](./../forelasning/html-element)
 * [CSS, introduktion](./../forelasning/css-introduktion)
 * [CSS, stil och layout](./../forelasning/css-stil-och-layout)
 
