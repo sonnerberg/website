@@ -82,9 +82,11 @@ Utför följande krav.
 
 1. Skapa en rapport (SELECT) som visar alla dina aktiviteter.
 
+1. Skapa en rapport (SELECT) som visar de aktiviteter som matchar delar av en söksträng (LIKE). Sök i titel, description och prioritet.
+
 1. Skapa en rapport som visar titel och prioritering på aktiviteter, sorterat per prioritet så att den viktigaste kommer först.
 
-1. Skapa en rapport som visar titel och aktivitens start, slut och längd. Längden på en aktivitet kan du beräkna med [inbyggda funktioner för datum och tid](https://www.sqlite.org/lang_datefunc.html).
+1. Skapa en rapport som visar titel och aktivitens start, slut och längd. Längden på en aktivitet kan du beräkna med [inbyggda funktioner för datum och tid](https://www.sqlite.org/lang_datefunc.html). Sortera per längd i sjunkande ordning.
 
 1. Visa att du kan göra en UPDATE-sats genom att ändra prioriteringen för en av dina aktiviteter. Spara koden tillsammans med en kommentar i `dml.sql`.
 

@@ -59,7 +59,7 @@ Din kod skall validera enligt `composer phpcs` och `composer phpmd`.
 
 Så här kan det se ut när de första menyvalen är implementerade.
 
-[ASCIINEMA src="421936" caption="De första menyvalen är implementerade."]
+[ASCIINEMA src="422647" caption="De första menyvalen är implementerade."]
 
 
 
@@ -69,6 +69,14 @@ Kodstruktur {#struktur}
 Skapa en fil `src/database.php` där du placerar kod för att koppla dig mot databasen och där du skriver alla databasfrågorna. Dina funktioner kan ta inparametrar och returnera resultat.
 
 Detta är en god struktur och separation av din kod. Du kommer märka att denna strukturen gör det enklare att återanvända kod från denna uppgiften till nästkommande uppgift där du skall bygga en webbklient mot databasen.
+
+I din `config.php` sparar du dina DSN som berättar hur man kopplar sig till d atabasen. Du kan ha flera DSN och du kan koppla dig till flera databaser.
+
+En DSN är en sträng och den kan definieras som en konstant och se ut så här.
+
+```php
+define("DSN_TODO", "sqlite:" . __DIR__ . "/../sqlite/db.sqlite");
+```
 
 
 
@@ -100,37 +108,45 @@ Uppgift 2: ToDo databasen {#u2}
 Lägg till menyvalet "2. ToDo utskrift" som via PHP PDO kopplar sig till din ToDo-databas och gör enligt följande.
 
 * Skriv ut hur många rader tabellen innehåller.
-* Skriv ut titel, start, slut och längden för samtliga aktiviteter.
+* Skriv ut titel, start, slut och längden för samtliga aktiviteter, sorterade per längden i sjunkande ordning.
 
-Döp funktionen till `printToDo()`. Den funktionen skall i sin tur använda sig av databasfunktioner som du själv bygger för att koppla sig mot databasen, ställa frågor och returnera ett resultset som du kan skriva ut.
+Döp funktionen till `toDoPrint()`. Den funktionen skall i sin tur använda sig av ett flöde av databasfunktioner som du själv bygger för att koppla sig mot databasen, ställa frågor och returnera ett resultset som du kan skriva ut.
 
 
 
 Uppgift 3: ToDo sök {#u3}
 -----------------------
 
-Söka bland titel och description samt prio i tabellen.
+Lägg till menyvalet "3. ToDo sök" som låter dig mata in en söksträng och sedan söker du ut i databasen de rader som matchar delar av söksträngen (LIKE).
+
+Man skall kunna söka bland titel, description och prio i tabellen.
 
 
 
 Uppgift 4: ToDo skapa {#u4}
 -----------------------
 
-Skapa en ny ToDo.
+Lägg till menyvalet "4. ToDo skapa" som låter dig skapa en ny ToDo.
+
+Låt användaren skriva in de värden som skall gälla och spara sedan en ny ToDo till databasen.
 
 
 
-Uppgift 5: ToDo uppdatera {#u5}
+Uppgift 5: ToDo radera {#u5}
 -----------------------
 
-Ändra prioritet på ToDo.
+Lägg till menyvalet "5. ToDo radera" som låter dig radera en ToDo.
+
+Låt användaren först se vilka ToDo som finns och sedan välja ett id (rowid) på den som skall raderas. Ta sedan bort den valda ToDo från databasen.
 
 
 
-Uppgift 6: ToDo radera {#u6}
+Uppgift 6: ToDo uppdatera {#u6}
 -----------------------
 
-Välj en ToDo att radera.
+Lägg till menyvalet "6. ToDo ändra" som låter dig ändra prioritet på en ToDo.
+
+Låt användaren först se vilka ToDo som finns och sedan välja ett id (rowid) på den som skall ändras. Sedan skriver användaren in en ny prioritet och du sparar denna prioritet i databasen till den ToDo som är vald.
 
 
 
@@ -150,7 +166,7 @@ Uppgift 8: Sök namn {#u8}
 
 Sök efter namn i "namn-databasen" och visa information och betydelse av namnet samt hur många som har detta namnet i Sverige och när namnet har namnsdag.
 
-Använd så mycket information du kan från de tabeller sm ligger i databasen.
+Använd så mycket information du kan från de tabeller som ligger i databasen.
 
 
 
