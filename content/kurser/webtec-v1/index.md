@@ -9,7 +9,7 @@ title: webtec (v1)
 author:
     - mos
 revision:
-    "2021-05-20": "(A, mos) Första revisionen inför kursstart HT2021."
+    "2021-05-28": "(A, mos) Första revisionen inför kursstart HT2021."
 ...
 Kursen webtec (v1)
 ==================================
@@ -101,7 +101,7 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 ### Kmom01/02: HTML och CSS {#kmom01}
 
-To Be Defined.
+Vi börjar med en labbmiljö för att bygga webbplatser och med hjälp av den så studerar vi HTML och CSS för att se hur de bidrar när vi bygger en webbplats. HTML står för strukturen och innehållet på webbplatsen och CSS bidrar med utseende och layout.
 
 [Instruktion till kursmoment 01/02](./kmom01).
 
@@ -109,7 +109,7 @@ To Be Defined.
 
 ### Kmom03/04: PHP {#kmom03}
 
-To Be Defined.
+Vi lär oss programmeringsspråket PHP och hur man programmerar i det via vanliga programmeringskonstruktioner som variabler, if-satser, loopar, datastrukturer som arrayer och vi organiserar koden i filer och funktioner. När vi kan grunderna går vi vidare och använder PHP för att bygga en webbplats. Vi berör olika koncept som HTML formulär, GET/POST och SESSION/COOKIE som ofta används när man utvecklar webbplatser.
 
 [Instruktion till kursmoment 03/04](./kmom03).
 
@@ -117,7 +117,9 @@ To Be Defined.
 
 ### Kmom05/06: SQL {#kmom05}
 
-To Be Defined.
+Vi skall titta på databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
+
+I en databas, en relationsdatabas som SQLite, så pratar vi SQL med databasen. Vi skriver SQL uttryck för att skapa tabeller och för att lägga till, uppdatera, visa och radera data från databasen.
 
 [Instruktion till kursmoment 05/06](./kmom05).
 
