@@ -326,8 +326,8 @@ Redirect /phpmvc            /kurser/phpmvc
 # vlinux
 Redirect /vlinux         /kurser/vlinux-v1
 Redirect /vlinux-v1         /kurser/vlinux-v1
-Redirect /kurser/vlinux-v1/studieplan  https://docs.google.com/spreadsheets/d/1Ng7LF7uretOsY_3sUCFsIk8CrZEnVxIAn0Wf1hA7Wrc/edit?usp=sharing
-Redirect /kurser/vlinux-v1/lektionsplan  https://docs.google.com/spreadsheets/d/1K9ePKcoSPV34_qA6BpwjV7TkmzuXibvqH5SlQOSQyH4/edit?usp=sharing
+Redirect /kurser/vlinux-v1/studieplan  https://docs.google.com/spreadsheets/d/1Sk90Ws14djP5Zvyx6Ho1YgpukF2t38AAuHH-F97IxDA/edit?usp=sharing
+Redirect /kurser/vlinux-v1/lektionsplan  https://docs.google.com/spreadsheets/d/1nuIahQ2FVTBKmokddWItKbBAEoowspmSfosMley1ZYg/edit?usp=sharing
 Redirect /forum/utbildning/vlinux     /forum/viewforum.php?f=82
 
 
