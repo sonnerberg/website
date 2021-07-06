@@ -330,6 +330,11 @@ Redirect /kurser/vlinux-v1/studieplan  https://docs.google.com/spreadsheets/d/1S
 Redirect /kurser/vlinux-v1/lektionsplan  https://docs.google.com/spreadsheets/d/1nuIahQ2FVTBKmokddWItKbBAEoowspmSfosMley1ZYg/edit?usp=sharing
 Redirect /forum/utbildning/vlinux     /forum/viewforum.php?f=82
 
+# unix
+Redirect /unix         /kurser/unix
+Redirect /kurser/unix/studyplan  https://docs.google.com/spreadsheets/d/1o-vvRgfm1NSKS-RMvj0Q9EE2gGU29TUdtaL3LHSOnos/edit?usp=sharing
+Redirect /kurser/unix/lessonplan  https://docs.google.com/spreadsheets/d/1mK2HT1GSMerbpx-BPwIw-1oJC_oQ-KCoU2kUzpBRyWA/edit?usp=sharing
+
 
 
 # devops
