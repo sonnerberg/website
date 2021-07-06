@@ -53,22 +53,23 @@ Exercises & Assignments {#ovningar_uppgifter}
 
 ### Exercises {#exercise}
 
-1. Follow the guide [get started with regex](guide/get-started-with-regex).
+1. Follow the guide [get started with awk](guide/get-started-with-awk).
+
+1. Read in the guide about [sed](guide/get-started-with-regex/sed).
 
 
 
 ### Assignments {#assignments}
 
-1. Read the [instructions](uppgift/unix-lab#lab3) and do the lab `regex`.
-
 1. Read the [instructions](uppgift/unix-lab#lab4) and do the lab `sed1`.
 
-1. Read the [instructions](uppgift/unix-lab#lab5) and do the lab `jq`.
+1. Do the assignment [awk script](uppgift/unix-awk).
+
 
 
 ### Extra assignment {#extra_assignment}
 
-There are no extra assignments.
+1. Read the [instructions](uppgift/unix-lab#lab5) and do the lab `jq`.
 
 
 
@@ -87,6 +88,7 @@ Then on the education platform Canvas do a hand in for assignment 3 with a text 
 
 * Can you think of any use cases for regular expressions?
 * Do you feel more comfortable using the terminal, compared to when you started the course?
+* Do you feel comfortable with awk?
 * Did you try the extra assignments in the lab?
 * Describe your problem solving during the assignment.
 
