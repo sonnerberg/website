@@ -6,6 +6,12 @@ revision:
 PHP och arrayer
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Lär dig hantera datastrukturen arrayer i PHP.
 
 Videon är XX minuter lång.

@@ -6,6 +6,12 @@ revision:
 Responsiv webbdesign
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Vad är en responsiv webbplats och hur vi bygger dem.
 
 Videon är XX minuter lång.

@@ -6,6 +6,12 @@ revision:
 Lektion: Skapa en One-page-website
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Kom igång med uppgiften "Skapa en One-page-website".
 
 Videon är XX minuter lång.

@@ -6,6 +6,12 @@ revision:
 PHP och funktioner
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Lär dig strukturera din kod genom att dela upp i olika filer och funktioner.
 
 Videon är XX minuter lång.

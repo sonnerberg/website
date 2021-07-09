@@ -169,6 +169,12 @@ För tips, leta i manualen.
 Uppgift 3: XXX {#u3}
 -----------------------
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Dagens tid och datum samt formattera.
 
 

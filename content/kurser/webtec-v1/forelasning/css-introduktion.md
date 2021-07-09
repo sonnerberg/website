@@ -6,6 +6,12 @@ revision:
 CSS, introduktion
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Hur CSS påverkar utseende och layout samt hur språket är uppbyggt.
 
 Videon är XX minuter lång.

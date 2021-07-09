@@ -6,6 +6,12 @@ revision:
 Lektion: Skapa en webbplats med HTML och CSS
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Kom igång med uppgiften "Skapa en webbplats med HTML och CSS".
 
 Videon är XX minuter lång.

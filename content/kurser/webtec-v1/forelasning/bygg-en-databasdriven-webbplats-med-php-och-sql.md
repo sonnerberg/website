@@ -6,6 +6,12 @@ revision:
 Bygg en databasdriven webbplats med PHP och SQL
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Vi tittar allmänt på databaser i webbsammanhang och specifikt på databasen SQLite och hur den fungerar.
 
 Videon är XX minuter lång.

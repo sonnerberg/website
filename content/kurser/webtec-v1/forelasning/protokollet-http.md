@@ -6,6 +6,12 @@ revision:
 Protokollet HTTP
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Hur protokollet HTTP hämtar hem en webbsida från en webbserver och hur vi kan analysera vad som händer i bakgrunden.
 
 Videon är XX minuter lång.

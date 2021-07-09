@@ -6,6 +6,12 @@ revision:
 CSS, stil och layout
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Hur vi kan bygga webbsidor med flera kolumner och hur vi kan styla webbsidan med utrymme, färger och typsnitt.
 
 Videon är XX minuter lång.

@@ -6,6 +6,12 @@ revision:
 Bygg en databas med SQL
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Visa hur du kommer igång med uppgiften "Bygg en databas med SQL".
 
 Videon är XX minuter lång.

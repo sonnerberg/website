@@ -6,6 +6,12 @@ revision:
 PHP PDO och databaser
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Vi tittar på PHP PDO som är ett sätt att koppla sig mot olika databaser via PHPs gränssnitt som heter PDO. Ve ser olika sätt att ställa frågor till databasen och hur man hanterar resultatet.
 
 Videon är XX minuter lång.

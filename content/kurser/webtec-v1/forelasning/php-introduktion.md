@@ -6,6 +6,12 @@ revision:
 PHP, introduktion
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Grunderna i att programmera med PHP.
 
 Videon är XX minuter lång.

@@ -6,6 +6,12 @@ revision:
 HTML, element och grundstruktur
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 HTML och dess olika element och hur de kan användas för att bygga upp sidans grundstruktur.
 
 Videon är XX minuter lång.

@@ -6,6 +6,12 @@ revision:
 PHP, cookies och sessioner
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Lär dig hantera sessioner och cookies med PHP och se hur du kan använda dem för att bygga flöde i en webbsida.
 
 Videon är XX minuter lång.

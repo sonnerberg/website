@@ -6,6 +6,12 @@ revision:
 Kursintroduktion
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Vi går igenom kursen avseende innehåll, struktur, schema och upplägg.
 
 Videon är XX minuter lång.

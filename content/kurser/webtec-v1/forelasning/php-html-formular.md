@@ -6,6 +6,12 @@ revision:
 PHP och HTML formulär
 ====================
 
+[WARNING]
+
+**Arbete pågår**.
+
+[/WARNING]
+
 Lär du hur du kan posta HTML formulär och hantera det postade resultatet med PHP.
 
 Videon är XX minuter lång.
