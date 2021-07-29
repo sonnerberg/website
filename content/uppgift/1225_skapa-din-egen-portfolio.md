@@ -6,7 +6,7 @@ revision:
     "2020-10-12": (B, nik) Uppdaterad inför ht20
     "2020-08-26": (A, nik) Draft
 ...
-Skapa din egen portfolio-sida
+Skapa din egen portfolio-sida {#inledning}
 ===================================
 
 Du skall sätta samman en portfolio-sida till kursen design. För att göra det skall du använda en förberedd kopia av ramverket [Pico](http://picocms.org/) med innehåll anpassat till kursen design.
@@ -28,7 +28,7 @@ Introduktion och förberedelse {#intro}
 
 Gör följande steg för att förbereda dig inför uppgiften.
 
-### Kopiera från example/portfolio
+### Kopiera från example/portfolio {#kopiera}
 
 Det finns en förberedd installation som är specifik för kursen design och dess portfolio-sida. Kopiera den och installera det som behövs med composer
 
@@ -64,7 +64,7 @@ Därefter kan ni publicera till studentservern för att se att allt fungerar:
 dbwebb publish me
 ```
 
-#### Bilder laddas inte lokalt
+#### Bilder laddas inte lokalt {#bilder-felsok}
 
 Det kan hända att du får 404 på dina bilder lokalt. Om du går in i devtools (F12) och går till network, så kan du se alla filer som hämtas för hemsidan. Där kan du se länkarna till de bilder som inte laddas in. Om du öppnar en av dem och får felmeddelandet:
 

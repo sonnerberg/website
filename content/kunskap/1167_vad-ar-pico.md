@@ -7,7 +7,7 @@ category:
 revision:
     "2020-10-12": (A, nik) Skapad inför HT2020.
 ...
-Vad är Pico?
+Vad är Pico? {#inledning}
 ==================================
 
 Pico är ett CMS, Content Management System, som tillåter användaren att hantera innehållet på en sida utan att behöva "koda" sidan själv. Det finns flera andra stora alternativ, så som WordPress, Drupal och Grav, men i denna kursen ville vi ha ett tunnare ramverk som låter oss fokusera på design-aspekten av webbutveckling. Pico är även ett "flat-file" CMS, vilket innebär att man jobbar emot filer istället för en databas, ungefär så som [dbwebb](https://dbwebb.se/) är uppbyggt.
@@ -78,7 +78,7 @@ Rimligen vill vi fylla vår sida med innehåll, även i en design-kurs. När vi 
 
 Filerna skrivs i Markdown, som ni kan hitta mer läsmaterial om [här](kurser/design-v3/kmom01#markdown).
 
-### Meta
+### Meta {#meta}
 
 `_meta.md` innehåller meta information som varje sida i dess mapp får. Vi kan öppna den och se vad som menas med meta information:
 
@@ -99,15 +99,15 @@ Social:
 * Tagline (blått): En tagline för vår sida, visas under sidans namn i vår header.
 * Social: Länkar till eventuella sociala medier i vår footer, i nuläget en länk till sidans kursrepo på Github. Ikonerna laddas in ifrån FontAwesome, så de flesta därifrån borde fungera.
 
-### Index
+### Index {#indexmd}
 
 `index.md` är vår startsida, precis som `index.php` eller `index.html` hade varit vår startsida om vi jobbade med ren PHP/HTML. Man bör ha en `index.md` för varje mapp, som exempel kan vi se i `content/index.md` men även `content/example/index.md` och `content/docs/index.md`.
 
-### 404
+### 404 {#404md}
 
 `404.md` är vår 404-sida. Det är där vi hamnar om vi försöker gå till en sida som Pico inte kan hitta.
 
-### Eget innehåll
+### Eget innehåll {#eget-innehall}
 
 Vi testar att lägga till eget innehåll, t.ex vår redovisningssida, genom att skapa en ny mapp, `content/report/` och en `content/report/index.md` som landningssida. I `content/report/index.md` så lägger vi till lite meta information som behövs för att den ska synas i vår navigering samt länkarna till varje kursmoment.
 
@@ -161,7 +161,7 @@ Men fokuset i kursen är design och en del av design är att arbeta med sin layo
 Det går att läsa på mer om de olika funktionerna som är tillgängliga i Twig i deras [dokumentation](https://twig.symfony.com/doc/3.x/).
 
 [INFO]
-**Editor plugins**
+**Editor plugins** {#plugins}
 
 Syntax:en kan se lite lustig ut då Atom och VSCode tror att det är HTML-filer. Om man kollar [Twigs dokumentation](https://twig.symfony.com/doc/3.x/templates.html#ides-integration) kan man se vilka paket som löser syntaxen:
 
@@ -170,11 +170,11 @@ Syntax:en kan se lite lustig ut då Atom och VSCode tror att det är HTML-filer.
 
 [/INFO]
 
-### Vår layout
+### Vår layout {#var-layout}
 
 I `themes/dbwebb/index.twig` så kan vi se vår default-layout. Den består egentligen utav vanlig HTML, plus lite syntax ifrån Twig. Men jag stegar igenom den, så ni har hyfsad koll på vad som är vad.
 
-### Head-elementet
+### Head-elementet {#head}
 
 Vi börjar med att kolla på vårt `<head>` element,
 
@@ -212,11 +212,11 @@ Rad 6-15 skriver ut lite olika meta-data (om de är specificerade), inget som ä
 
 Sen känner vi igen oss igen, det är länkar till våra CSS-filer. Vi behöver jobba utifrån vår `theme_url` som pekar till vårt default tema, `portfolio/themes/dbwebb`.
 
-### Body
+### Body {#body}
 
 Body-delen är lite stor att ta i ett svep, så vi stegar igenom den. Till att börja med så har vi en if-sats som kollar om vi satt `widescreen: true` i vår config (`config/config.yml`) och lägger på en `.widescreen` på vår body om det är fallet.
 
-#### Header
+#### Header {#header}
 
 Vår header innehåller följande:
 
@@ -271,7 +271,7 @@ Sen så skrivs vår navigering ut, som används både vid desktop och mobilanvä
 
 Tillslut så skriver vi ut vår flash-bild, snällt lånad ifrån dbwebb.
 
-#### Content
+#### Content {#content}
 
 Nästa stycke skriver ut vårt innehåll på sidan, inga konstigheter där:
 
@@ -283,7 +283,7 @@ Nästa stycke skriver ut vårt innehåll på sidan, inga konstigheter där:
 </div>
 ```
 
-#### Footer
+#### Footer {#footer}
 
 Sist har vi sidans footer, som skriver ut länkar till sociala medier utöver en kort liten text.
 
@@ -409,7 +409,7 @@ body {
 }
 ```
 
-### Mobilmeny
+### Mobilmeny {#mobilmeny}
 
 Nu ser sidan bra ut, men vår navigering fungerar inte riktigt som vi vill. Jag väljer att skapa en till CSS-fil som får innehålla reglerna som påverkar navigeringen relaterat till mobila enheter. Den får heta `themes/aurora/css/nav.css` och jag inleder med att länka den i min layout under min föregående CSS-fil
 
