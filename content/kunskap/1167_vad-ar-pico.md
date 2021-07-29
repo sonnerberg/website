@@ -26,7 +26,6 @@ Om vi hoppar in i `example/portfolio` så kan vi se hur mappstrukturen ser ut f�
 
 ```bash
 .
-├── Makefile
 ├── assets/
 │   ├── cimage/
 │   └── img/
@@ -54,7 +53,8 @@ Om vi hoppar in i `example/portfolio` så kan vi se hur mappstrukturen ser ut f�
 
 Kan se ut att vara lite mycket i början, men vi stegar igenom det. Vi börjar med att kolla på allt som ligger längst upp i filträdet.
 
-* `Makefile` är en fil som tillåter oss att köra `make <command>` för att underlätta i utvecklingen. Så istället för att komma ihåg eller behöva skriva `rm -rf vendor composer.lock` så kan vi köra `make clean-all` för att rensa bort samtliga temporära filer.
+<!-- * `Makefile` är en fil som tillåter oss att köra `make <command>` för att underlätta i utvecklingen. Så istället för att komma ihåg eller behöva skriva `rm -rf vendor composer.lock` så kan vi köra `make clean-all` för att rensa bort samtliga temporära filer. -->
+
 * `assets/`-mappen innehåller en mapp för de bilder vi vill använda, `assets/img/`. Bilderna kan vi nå i våra Markdown-filer genom en inbyggd variabel i Pico, `%assets_url%`, t.ex. `%assets_url%/img/tree2.jpg`.
 * `cache`-mappen innehåller våra cache:ade filer, i detta fallet de filer som bearbetats av CImage. Detta är för att CImage ska slippa behöva arbeta med våra filer varje gång vi laddar hemsidan.
 * `composer.json` specificerar vilka moduler vår sida behöver för att fungera, här specificerar vi t.ex. `picocms/pico` och `erusev/parsedown-extra` för att få hem Pico och en extension för våra Markdown-filer. `composer.lock` är autogenererad och säger vilken version man har av varje modul. Ni kommer inte behöva arbeta med dessa filer under denna kurs, men det kommer nämnas mer i oophp i vår.
