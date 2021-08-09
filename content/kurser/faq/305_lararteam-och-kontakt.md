@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-08-09": (G, mos) Bort med Martin och Niklas som lämnar.
     "2020-06-24": (F, mos) In med Martin i lärarteamet.
     "2019-10-01": (E, mos) Bort med gemensam mailadress dbwebb@bth.se och ny info.
     "2019-06-12": (D, mos) Städning inför hösten 2019.
@@ -26,9 +27,11 @@ Lärarteamet består av:
 | ![Kenneth](image/lararteam/kenneth.jpg?w=100&h=100&cf) | Kenneth&nbsp;Lewenhagen | lew   | klw@bth.se, [BTH](https://www.bth.se/?s=klw&searchtype=employee), [GitHub](https://github.com/lewenhagen), [Facebook](http://www.facebook.com/kenneth.lewenhagen), [Linkedin](http://www.linkedin.com/in/kennethlewenhagen) |
 | ![Andreas](image/lararteam/andreas.jpg?w=100&h=100&cf) | Andreas&nbsp;Arnesson | zeldah   | aar@bth.se, [BTH](https://www.bth.se/?s=aar&searchtype=employee), [GitHub](https://github.com/AndreasArne), [Facebook](https://www.facebook.com/jaghatar.ansiktsbooken), [Linkedin](https://se.linkedin.com/in/andreas-arnesson-87a563b3)  |
 | ![Emil](image/lararteam/emil.jpg?w=100&h=100&cf) | Emil&nbsp;Folino | efobth | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee), [GitHub](https://github.com/emilfolino), [LinkedIn](https://se.linkedin.com/in/emil-folino-23a7002a) |
+
+<!--
 | ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nik@bth.se, [BTH](https://www.bth.se/?s=nik&searchtype=employee), [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) |
 | ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png?s=100) | Martin&nbsp;Borg | martin | moc@bth.se, [BTH](https://www.bth.se/?s=moc&searchtype=employee), [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) |
-
+-->
 
 <!--
 | ![Mikael](image/mikael-roos/mos-tjaro.jpg?w=100&h=100&cf&a=27,12,18,10) | Mikael&nbsp;Roos | mos   | mos@bth.se, [BTH](https://www.bth.se/?s=mos&searchtype=employee), [GitHub](https://github.com/mosbth), [Facebook](http://www.facebook.com/mikael.t.h.roos), [Google+](https://plus.google.com/u/0/+MikaelRoos/about),  [Twitter](http://twitter.com/mikael_roos), [Linkedin](http://www.linkedin.com/in/pt90mr), [Flickr](http://www.flickr.com/photos/mikaelroos/), [mikaelroos.se](http://mikaelroos.se) |
