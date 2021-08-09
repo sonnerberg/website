@@ -9,7 +9,7 @@ Studiernas upplägg
 
 Upplägget för studierna skiftar per kurs då varje lärare kan välja sitt eget upplägg.
 
-Alla kurser under första året och cirka 80% av kurserna under det andra året på programmet Webbprogrammering har ett liknande upplägg. Här nedan beskrivs detta "standardupplägg".
+Alla kurser under första året och cirka 75% av kurserna under det andra året på programmet Webbprogrammering har ett liknande upplägg. Här nedan beskrivs detta "standardupplägg".
 
 
 
