@@ -14,14 +14,13 @@ Källkoden för verktyget kan ni hitta på [GitHub](https://github.com/dbwebb-se
 
 
 
-Hur det funkar {#how}
--------------------------------------
+## Hur det funkar {#how}
 
 Det finns enhetstester kopplade till varje inlämning. Enhetstesterna är skrivna så att de täcker upp alla kraven. På så sätt är vi 99% säkra på att studenten har utfört uppgifterna på lämpligt sätt för att uppnå godkänt om alla tester passerar.
 
 [FIGURE src=/image/wall-e.png caption="Översikt av Umbridge"]
 
-Processen består av fyra steg, där egentligen det bara är steg två och tre som är en del av Umbridge. 
+Processen består av fyra steg, där egentligen det bara är steg två och tre som är en del av Umbridge.
 
 1. Förberedelse fasen. Studenten laddar upp sin kod så den finns tillgänglig för Umbridge och lämnar in på Canvas.
 
@@ -35,8 +34,7 @@ Det sista steget är viktigt för att säkerställa att studenterna inte skriver
 
 
 
-Syfte {#why}
-------------------------------------
+## Syfte {#why}
 
 Varför valde vi att börja med automaträttning och varför utvecklade vi systemet själva istället för att köpa in en färdig tjänst?
 
@@ -46,14 +44,13 @@ Vi valde att utveckla ett eget system för att existerande tjänster kostar väl
 
 
 
-Forskning {#research}
--------------------------------------
+## Forskning {#research}
 
 Vad säger forskningen om automaträttade uppgifter?
 
 TO-DO
 
-<!-- 
+<!--
 https://www.lth.se/fileadmin/lth/genombrottet/konferens2018/A1_Wikstro__m.pdf - kolla dess referenser
 https://www.skolverket.se/download/18.6bfaca41169863e6a658d9a/1553962384309/pdf2430.pdf - något från skolverket om undersöka datorbaserade prov och automaträttning
  -->
