@@ -3,7 +3,7 @@ author: mos
 revision:
     "2021-08-11": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
-Responsiv webbdesign
+HTML
 ====================
 
 [WARNING]
@@ -12,7 +12,7 @@ Responsiv webbdesign
 
 [/WARNING]
 
-Vad är en responsiv webbplats och hur vi bygger dem.
+Vi går igenom grunderna i HTML och utgår från standarden och kikar på struktur, element och hur det fungerar.
 
 <!--
 Videon är XX minuter lång.
@@ -20,9 +20,7 @@ Videon är XX minuter lång.
 [YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
 -->
 
-<!--
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](https://dbwebb-se.github.io/webtec/lecture/L06-responsive-web-design/slide.html).
--->
+Du kan själv bläddra igenom [de HTML slides som används i presentationen](https://dbwebb-se.github.io/webtec/lecture/L02-html/slide.html).
 
 
 

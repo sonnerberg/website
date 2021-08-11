@@ -8,7 +8,7 @@ views:
 author:
     - mos
 revision:
-    "2021-05-20": "(PA, mos) Arbete påbörjat för webtec-v1."
+    "2021-08-11": "(PA, mos) Arbete påbörjat för webtec-v1."
 ...
 Kmom01/02: HTML & CSS
 ==================================
@@ -79,10 +79,9 @@ Nu är du redo för kursen.
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
-* [HTML, introduktion](./../forelasning/html-introduktion)
-* [HTML, element och struktur](./../forelasning/html-element)
-* [CSS, introduktion](./../forelasning/css-introduktion)
-* [CSS, stil och layout](./../forelasning/css-stil-och-layout)
+* [Webbteknologier](./../forelasning/webbteknologier)
+* [HTML](./../forelasning/html)
+* [CSS](./../forelasning/css)
 
 Delta i lektionen som förbereder dig för veckans uppgift.
 
@@ -98,7 +97,7 @@ Genomför veckans uppgift.
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
-* [Protokollet HTTP](./../forelasning/protokollet-http)
+<!-- * [Protokollet HTTP](./../forelasning/protokollet-http) -->
 * [Responsiv webbdesign](./../forelasning/responsiv-webbdesign)
 
 Delta i lektionen som förbereder dig för veckans uppgift.
@@ -182,9 +181,21 @@ Resurser på W3Schools.
 
 
 
+### WHATWG standarder {#whatwg}
+
+Organisationen WHATWG arbetar med standardiseringar av webbteknologier, bland annat HTML och DOM.
+
+* [WHATWG Standardiseringsorgan](https://whatwg.org/) för standardisering av HTML och DOM.
+* [HTML Living Standard](https://html.spec.whatwg.org/multipage/) är det levande standarden för HTML.
+* [DOM Living Standard](https://dom.spec.whatwg.org/) är det levande standarden för DOM.
+
+WHATWG är sedan 2019 den organisation som standardiserar HTML och DOM, W3C följer deras arbete och återanvänder deras specifikationer. [Läs deras överenskommelse](https://www.w3.org/2019/04/WHATWG-W3C-MOU.html).
+
+
+
 ### W3C standarder {#w3c}
 
-Organisationen W3C arbetar med standardiseringar av HTML och CSS.
+Organisationen W3C arbetar med standardiseringar av webbteknologier, bland annat HTML och CSS.
 
 * [W3C Standardiseringsorgan](https://www.w3.org/) standardiseringar av HTML och CSS.
 * [W3C Web design and Applications](https://www.w3.org/standards/webdesign/) omfattar bland annat HTML och CSS.
@@ -223,6 +234,7 @@ Följande verktyg är bra att ha när man utvecklar webbplatser.
 * [HTML validator](https://validator.w3.org/)
 * [CSS validator](https://validator.w3.org/)
 * [Unicorn HTML/CSS validator](https://validator.w3.org/unicorn/)
+* [Link checker](https://validator.w3.org/checklink)
 * [Mät sidans prestanda](https://web.dev/measure/), kolla upp sidans tekniska kvalitet.
 * [CanIUse](https://caniuse.com/), vilka konstruktioner stöds av olika webbläsare.
 * [CodePen](https://codepen.io/), ett utvecklingsverktyg där du kan skriva HTML och CSS för att testa konstruktioner som du även kan dela med din kompis.
