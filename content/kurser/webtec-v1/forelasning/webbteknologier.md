@@ -27,4 +27,19 @@ Du kan själv bläddra igenom [de HTML slides som används i presentationen](htt
 Resurser
 ------------------------
 
-Presenteras senare.
+Resurser som används, eller är relevanta, för de områden som föreläsningen behandlar.
+
+För skojs skull.
+
+* [First website ever, info.cern.ch](http://info.cern.ch/hypertext/WWW/TheProject.html).
+* [Första webbläsaren](https://worldwideweb.cern.ch/)
+* [Wayback machine, pröva och se hur gamla webbplatser såg ut](https://archive.org/web/).
+
+Webbteknologier via Wikipedia.
+
+* [URL](https://en.wikipedia.org/wiki/URL)
+* [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), [HTTPS](https://en.wikipedia.org/wiki/HTTPS)
+* [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [DOM](https://en.wikipedia.org/wiki/Document_Object_Model)
+* [Web browser](https://en.wikipedia.org/wiki/Web_browser)
+* [Web server](https://en.wikipedia.org/wiki/Web_server)
