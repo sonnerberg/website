@@ -57,7 +57,7 @@ Börja med att komplettera din labbmiljön för PHP. Dubbelkolla även att du k�
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
-* [PHP, introduktion](./../forelasning/php-introduktion)
+* [PHP introduktion](./../forelasning/php-introduktion)
 * [PHP och arrayer](./../forelasning/php-arrayer)
 * [PHP och funktioner](./../forelasning/php-funktioner)
 
