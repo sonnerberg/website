@@ -7,6 +7,12 @@ revision:
 Kmom06: Tillgänglighet och prestanda
 ====================================
 
+[WARNING]
+
+**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
+
+[/WARNING]
+
 Som avslutning på kursen så ska vi kolla över två områden som lätt hamnar i skymundan. Vi börjar med att kolla på begreppet "the final touch" som är bra att vara medveten om i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
 <!--more-->

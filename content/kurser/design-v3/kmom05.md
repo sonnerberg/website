@@ -7,6 +7,12 @@ revision:
 Kmom05: Bilder
 ====================================
 
+[WARNING]
+
+**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
+
+[/WARNING]
+
 Låt oss ägna ett kursmoment åt att testa runt med bilder, bildverktyg och bildformat samt hur vi publicerar bilderna på en webbplats, inklusive responsivitet.
 
 Vi skall skapa ett galleri i vår portfolio, det känns rimligt och ger oss en möjlighet att fortsätta öva på CSS-grid men även att jobba med bilder och responsivtet.

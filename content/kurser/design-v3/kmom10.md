@@ -9,6 +9,12 @@ revision:
 Kmom10: Projekt och examination
 ====================================
 
+[WARNING]
+
+**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
+
+[/WARNING]
+
 [INFO]
 **Publicering till studentservern**
 
