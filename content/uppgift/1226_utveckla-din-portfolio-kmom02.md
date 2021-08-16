@@ -37,7 +37,7 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 
 1. Sidan ska vara hyfsat responsiv, t.ex. ingen horisontella scroll eller bilder som tar sönder flödet.
 
-1. Påbörja en utkast av din `report/kmom02.md`.
+1. Skriv din redovisningstext i `report/kmom02.md`.
 
 ### SASS-tema
 
@@ -49,7 +49,7 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 
 1. Temat ska ladda in minst en extern font via t.ex [Google Fonts](https://fonts.google.com/).
 
-1. Temat ska använda sig av minst tre ikoner via t.ex [Font Awesome](https://fontawesome.com/).
+1. Temat ska använda sig av minst två ikoner via t.ex [Font Awesome](https://fontawesome.com/) (GitHub ikonen inkluderad).
 
 1. Jobba vidare med ditt tema. Du behöver inte styla jättemycket, det kommer fler möjligheter under kursen. Men, det måste vara ett hyfsat gott grundtema så att webbplatsen går att använda.
 
