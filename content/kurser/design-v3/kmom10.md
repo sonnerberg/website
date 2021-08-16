@@ -67,7 +67,9 @@ Följande uppdrag rör utveckling av webbplatser och teman och de skall göras i
 
 Du har tre potentiella kunder, du väljer att utveckla en webbplats, med tillhörande teman, till **en av dessa kunder**.
 
-
+[INFO]
+Du kan byta namnet på din kund, förutsatt att det är tydligt vilken kund du valt (både på hemsidan och i din projekttext) och att det inte är en publik person.
+[/INFO]
 
 #### Kund 1 {#kund1}
 
@@ -115,7 +117,7 @@ Du kan välja mellan att använda din me/portfolio som grund eller börja ifrån
 
 Beskriv i redovisningstexten hur du gör och varför du valde det sättet.
 
-Webbplatsen skall bestå utav tre sidor, en förstasida, en about-sida och en highlight-sida, som presenterar projekt som kunden jobbar/har jobbat med.
+Webbplatsen skall bestå utav **minst** tre sidor, en förstasida, en about-sida och en highlight-sida, som presenterar projekt som kunden jobbar/har jobbat med.
 
 Webbplatsen ska använda sig av en flash-bild eller hero-bild, välj själv om sidan använder samma, byter eller döljer beroende på sida.
 
@@ -127,8 +129,9 @@ Webbplatsen skall ha en navigering som fungerar för både desktop och mobil.
 
 Innehållet skall vara relevant, lagom mycket och bildrikt. Använd Cimage för att få rätt storlek på bilderna. Skriv text som gynnar företagets profil, kopiera gärna, men använd inte Lorem Ipsum.
 
-I about-sidan lägger du in information om kunden, så som du tolkat kundens önskemål, kundens verksamhet och hur kunden vill att webbplatsen skall se ut och användas. Det blir din egen formulering och tolkning av kundens krav.
+I about-sidan lägger du in information om kunden, så som du tolkat kundens önskemål, kundens verksamhet och hur kunden vill att webbplatsen skall se ut och användas. Det blir din egen formulering och tolkning av kundens krav (ca 150+ ord).
 
+Highlight-sidan ska innehålla minst 5 tidigare projekt/kunder/annan relevant aktivitet.
 
 
 ### Uppdrag 2: Tema (10p) {#tema}
@@ -137,13 +140,15 @@ Skapa ett tema till webbplatsen. Du kan använda dina egna teman som grund. Tema
 
 Temat skall använda SASS. Dela upp koden i flera moduler, så det är lätt att uppdatera sidan om det skulle behövas.
 
+Sidan ska gå igenom validering genom kommandot `npm run lint`.
+
 Gör medvetna och rimliga val för färgpalett och typografi så att det matchar kundens profil.
 
 Temat skall använda sig utav variabler för att bestämma färger.
 
 Du skall medvetet använda designelement och designprinciper för att uppnå en god design som passar kunden.
 
-På about-sidan skall det finnas en länk till en dold sida (Tips, använd `hidden: true` i meta för att dölja den ifrån navigeringen) som innehåller:
+På about-sidan skall det finnas en länk till en dold sida (Tips, använd `hidden: true` i meta för att dölja den ifrån navigeringen) som innehåller (ca 250+ ord):
 
 * Dokumentera färgpaletten och berätta hur du valde färgerna.
 * Beskriv typografin, designprinciper och designelement som du använt.
@@ -166,7 +171,7 @@ Sidan skall använda CSS-grid och/eller flexbox för att presentera innehållet 
 
 Sidan skall fungera väl på mobila enheter, dvs inga horisontella scrollbars.
 
-Bilder ska anpassas efter enhet med hjälp utav cimage och `<picture>`/`srcset`.
+Bilder ska anpassas efter enhet med hjälp utav cimage och `<picture>`/`srcset` (gäller inte `.svg`).
 
 
 
