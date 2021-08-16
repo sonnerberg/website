@@ -1,4 +1,4 @@
-####[python (v3)](kurser/python-v4)
+####[python (v4)](kurser/python-v4)
 
 * [01: Kom i gång med Python](kurser/python-v4/kmom01)
 * [02: Villkor och loopar](kurser/python-v4/kmom02)
