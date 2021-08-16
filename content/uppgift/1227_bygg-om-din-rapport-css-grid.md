@@ -36,6 +36,10 @@ Krav {#krav}
 
 En alumni till programmet, Matilda, var snäll nog att göra fyra wireframes som ni ska efterlikna med hjälp utav CSS-Grid och/eller Flexbox. Själva designen på sidorna är er att välja, det är layout:en vi är ute efter. Om ni vill ha större bilder så kan ni trycka på bilderna för att få full storlek.
 
+[INFO]
+Mobilmenyn som visas i våra wireframes är den för hela portfolion. Ni behöver inte göra en till för era undersidor.
+[/INFO]
+
 ## Landningssida {#landningssida}
 
 * Din landningssida skall använda sig utav en egen layout, `report.twig`
