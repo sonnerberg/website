@@ -10,10 +10,17 @@ author:
 #         data:
 #             src: "image/snapht18/design-kmom01-me.png?w=1100&h=360&a=12,10,40,2&f1=pixelate,8,2&cf&nc&f2=colorize,0,30,0,0"
 revision:
+    "2021-08-11": (B, nik) Uppdaterad inför HT21
     "2020-08-25": (A, nik) Mall för kursmoment
 ...
 Kmom01: Ramverk, innehåll, style
 ====================================
+
+[WARNING]
+
+**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
+
+[/WARNING]
 
 Vi ska ta oss en titt på den mjukare delen av webbprogrammering, webbdesign och användbarhet. Det handlar också om snabba sidomladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material. Vi ska även kolla över de tekniker som används för att uppnå detta.
 
@@ -126,11 +133,13 @@ Kursen har en videoserie för hur man kan jobba med Pico:
 
 Följande länk är en genomstegning av Portfolio-sidan. Eget testande uppmuntras.
 
-1. Läs igenom och testa med artikeln "[Vad är Pico?](kunskap/vad-ar-pico)". Artikeln ligger i grund för att du ska förstå Pico's upplägg.
+1. Läs igenom och testa med artikeln "[Vad är Pico?](kunskap/vad-ar-pico-v2)". Artikeln ligger i grund för att du ska förstå Pico's upplägg.
 
 ### Uppgifter {#uppgifter}
 
 Följande uppgift skall utföras och redovisas.
+
+1. Jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)". Denna guide introducerar dig till Git/GitHub, ett verktyg som är branchstandard för att versionshantera kod.
 
 1. Lös uppgiften "[Bygg en portfolio sida](uppgift/skapa-din-egen-portfolio)". Du skall bygga en portfolio-sida som du taggar och publicerar på GitHub. Spara allt under `me/portfolio`.
 
