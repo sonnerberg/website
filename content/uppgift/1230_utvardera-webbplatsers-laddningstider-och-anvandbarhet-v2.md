@@ -45,6 +45,7 @@ Krav {#krav}
 1. Beskriv vilka verktyg du använde och hur du utförde arbetet för att samla in dina mätvärden. Det blir en kort beskrivning av din metod.
 
 1. Skapa ett Excel-ark, till exempel Google Kalkylark, för att spara dina mätningar i. För allt du nu skall mäta, dokumentera det i Excel-arket. Länka till ditt Excel-ark så man ser rådatan.
+    1. Embedda din data i din analys. För att göra detta på Google Sheets trycker du på "File -> Publish to the web -> Embed". Lägg en klass på din iframe och ändra bredden/höjden så det passar din analys.
 
 1. För varje webbplats, gör följande:
     1. Ta en snapshot (bild) på webbplatsen.

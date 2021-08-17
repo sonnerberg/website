@@ -122,9 +122,9 @@ Läs följande om responsivitet och bilder.
 
 1. Arbeta igenom artikeln "[Cimage, hur fungerar det?](kunskap/cimage-hur-fungerar-det)" som går igenom hur vi kan använda oss av verktyget Cimage för att jobba med våra bilder.
 
-1. Arbeta även igenom artikeln "[Hur kan vi göra bilder och video responsivt](kunskap/hur-kan-vi-gora-det-responsivt)".
+1. Arbeta igenom artikeln "[Hur kan vi göra bilder och video responsivt](kunskap/hur-kan-vi-gora-det-responsivt)".
 
-
+1. Arbeta igenom artikeln "[Picture tillsammans med Twig och Mardown](kunskap/picture-tillsammans-med-twig-markdown)".
 
 ### Uppgifter {#uppgifter}
 
