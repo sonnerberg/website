@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-08-17": "(D, mos) Lade till checklista."
     "2021-05-20": "(C, mos) Kopia och uppdaterad inför ht21."
     "2020-08-04": "(B, mos) Uppdaterad inför ht20."
     "2020-06-22": "(A, mos) Ny inför ht20."
@@ -95,3 +96,12 @@ Under introveckan kommer det vara allmän info och fokus på att installera labb
 * [webtec/kmom01/labbmiljö](/kurser/webtec/labbmiljo)
 
 När det är klart är vi nöjda. Det är veckans huvudsakliga fokus. Om du löser det på egen hand så är det också okey. Då kan du ägna veckan åt att socialisera dig med dina studiekompisar.
+
+
+
+Checklista för nya studenter {#check}
+-----------------------------------
+
+Som programansvarig får jag en "Checklista för välkomnande av nya studenter". Tanken är att jag skall följa den vid välkomstträffen med studenter. Den gäller främst campus men distansstudenter kan säkert kika igenom den likväl.
+
+* [Programansvarig's Checklista för välkomnande av nya studenter](https://docs.google.com/document/d/19hAhAPlQi8R7sb3dtUFYxsDdIHp5hlpJ/edit?usp=sharing&ouid=101196514892086552893&rtpof=true&sd=true)
