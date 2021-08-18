@@ -20,4 +20,4 @@ Du kan själv bläddra igenom [de HTML slides som används i presentationen](htt
 Resurser
 ------------------------
 
-De resurser som används i föreläsninge utgår till största delen från kursens introsida på [kursen webtec](kurser/webtec).
+De resurser som används i föreläsningen utgår till största delen från kursens introsida på [kursen webtec](kurser/webtec).
