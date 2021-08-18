@@ -9,6 +9,7 @@ title: webtec (v1)
 author:
     - mos
 revision:
+    "2021-08-18": "(B, mos) Video kursintro inspelad."
     "2021-05-28": "(A, mos) Första revisionen inför kursstart HT2021."
 ...
 Kursen webtec (v1)
@@ -30,14 +31,12 @@ Läs vidare för en översikt för kursens innehåll, struktur och planering.
 
 
 
-<!--
 Kursintro {#pres}
 ------------------------
 
 Här är en video som "pratar" dig igenom kursens upplägg och delar av innehållet i detta dokumentet.
 
-[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Kursintroduktion till kursen mvc med Mikael."]
--->
+[YOUTUBE src="RvCFLObcJUk" width=700 caption="Kursintroduktion till kursen webtec med Mikael."]
 
 
 
@@ -99,7 +98,7 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 
 
-### Kmom01/02: HTML och CSS {#kmom01}
+### Kmom01/02: HTML & CSS {#kmom01}
 
 Vi börjar med en labbmiljö för att bygga webbplatser och med hjälp av den så studerar vi HTML och CSS för att se hur de bidrar när vi bygger en webbplats. HTML står för strukturen och innehållet på webbplatsen och CSS bidrar med utseende och layout.
 
