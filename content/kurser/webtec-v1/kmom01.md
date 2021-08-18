@@ -17,6 +17,8 @@ Kmom01/02: HTML & CSS
 
 **Arbete pågår**.
 
+Det som "kvarstår" är att spela in ett antal föreläsningar.
+
 [/WARNING]
 
 <!-- stop-->
