@@ -9,6 +9,7 @@ title: webtec (v1)
 author:
     - mos
 revision:
+    "2021-08-19": "(C, grm) La till kmom05/06 i Ladoktabellen."
     "2021-08-18": "(B, mos) Video kursintro inspelad."
     "2021-05-28": "(A, mos) Första revisionen inför kursstart HT2021."
 ...
@@ -21,7 +22,7 @@ Kursen **Webbteknologier**, a.k.a. *webtec* (f.d. *htmlphp*), lär ut webbutveck
 
 HTML och CSS ger grundförutsättningarna för hur en webbapplikation kan byggas. Genom att använda server-side skriptprogrammering med PHP så kan webbapplikationen bli mer dynamisk och lagra information i databaser. Dessutom kan webbapplikationen byggas upp med en programmeringsmässig struktur, en struktur som underlättar utveckling och underhåll av webbplatsen.
 
-Detta är en introduktionskurs för den som vill lära sig teknikerna från grunden. Kursen kräver inga förkunskaper och hanterar helheten kring en webbapplikation. Till att börja med fokuseras på HTML och CSS. Vi använder HTML5 och tittar på vilka möjligheter som CSS3 kommer att erbjuda.
+Detta är en introduktionskurs för den som vill lära sig teknikerna från grunden. Kursen kräver inga förkunskaper och hanterar helheten kring en webbapplikation. Till att börja med fokuserar vi på HTML och CSS. Vi använder HTML5 och tittar på vilka möjligheter som CSS3 kommer att erbjuda.
 
 Därefter introduceras PHP som ett skriptspråk och med enkla programmeringskonstruktioner får vi möjlighet att bygga ut vår webbplats på ett strukturerat sätt. Vi fortsätter med att lagra information i en filbaserad databas (SQLite) via PHP's gränssnitt PHP Data Objekt. Vi använder på frågespråket SQL och lär oss de grundläggande konstruktionerna.
 
@@ -84,7 +85,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* självständigt, utefter en specifikation, kunna utveckla och driftsätta en webbplatts med HTML, CSS, PHP och SQL.
+* självständigt, utefter en specifikation, kunna utveckla och driftsätta en webbplats med HTML, CSS, PHP och SQL.
 * ha god praktisk förmåga att hantera de verktyg och miljöer som används vid utveckling av databasdrivna webbapplikationer.
 
 
@@ -162,7 +163,7 @@ Referensdokumentationen är främst olika online-resurser i form av manualer.
 
 ### Övrig litteratur {#ovriglitteratur}
 
-I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer, videor och webbmaterial.
+I varje kursmoment kan det tillkomma läsanvisningar, till exempel artiklar, manualer, videor och webbmaterial.
 
 
 
@@ -224,11 +225,11 @@ Ladok {#ladok}
 
 Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
 
-| Kursens moment  | Ladok moment enligt kursplan  | Betygsskala |
-|-----------------|-------------------------------|:-----------:|
-| Kmom01/02       | Inlämningsuppgift 1 á 2.5hp   | U-G         |
-| Kmom03/04       | Inlämningsuppgift 2 á 2.5hp   | U-G         |
-| Kmom07/10       | Individuellt projekt á 2.5hp  | A-F, Fx     |
+| Kursens                     | Ladok moment enligt kursplan  | Betygsskala |
+|-----------------------------|-------------------------------|:-----------:|
+| Kmom01/02                   | Inlämningsuppgift 1 á 2.5hp   | U-G         |
+| Kmom03/04                   | Inlämningsuppgift 2 á 2.5hp   | U-G         |
+| Kmom05/06 - Kmom07/10       | Individuellt projekt á 2.5hp  | A-F, Fx     |
 
 Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
 

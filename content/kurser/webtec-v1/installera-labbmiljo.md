@@ -25,7 +25,7 @@ Det första du behöver göra är att installera en labbmiljö för kursen. Om d
 Installera/uppdatera kommandot dbwebb {#dbwebbcli}
 ----------------------------------
 
-Kommandot, eller verktyget, dbwebb, är ett terminalprogram, skrivet i Bash, som hjälper dig att ha koll på dina filer i kursen. Det hjälper dig också att lämna in resutlatet så att lärarna kan rätta och det hjälper dig att publicera till en webbplats för studenter.
+Kommandot, eller verktyget, dbwebb, är ett terminalprogram, skrivet i Bash, som hjälper dig att ha koll på dina filer i kursen. Det hjälper dig också att lämna in resultatet så att lärarna kan rätta och det hjälper dig att publicera till en webbplats för studenter.
 
 Om du redan har installerat kommandot dbwebb så gör du en selfupdate för att vara säker på att du har senaste versionen. Sedan kan du fortsätta till nästa stycke.
 
@@ -33,13 +33,13 @@ Om du redan har installerat kommandot dbwebb så gör du en selfupdate för att 
 dbwebb selfupdate
 ```
 
-Annars utför du följande steg för att göra en fräsh installation av kommandot dbwebb.
+Annars utför du följande steg för att göra en fräsch installation av kommandot dbwebb.
 
 1. [Installera kommandot `dbwebb`](dbwebb-cli/kom-igang-och-installera). Kommandot används under hela kursen för att jobba med kursmaterialet.
 
 1. När du har installerat kommandot så fortsätter du med sektionen för att [konfigurera kommandot `dbwebb`](dbwebb-cli/konfiguration).
 
-Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar du på följande video.
+Om du vill ha en introduktion till installationen av dbwebb-kommandot, så kikar du på följande video.
 
 [YOUTUBE src=vlZRW2OZamE width=639 caption="Mikael installerar dbwebb-cli som en del av labbmiljön"]
 
@@ -49,9 +49,9 @@ Om du vill ha en introduktion till installationen av dbwebb-kommandot så kikar 
 Klona och initiera kursrepot {#clona}
 ----------------------------------
 
-Kursrepot innehåller en viss del av kursmaterialet och det ger en struktur där du skriver kod för att lösa övningar och uppgifter i kursen. Du hämter det med hjälp av kommandot dbwebb. Vi kallar det för att du klonar ditt kursrepo. Klona är ett begrepp som används i versionshanteringssystemet Git.
+Kursrepot innehåller en viss del av kursmaterialet och det ger en struktur där du skriver kod för att lösa övningar och uppgifter i kursen. Du hämtar det med hjälp av kommandot dbwebb. Vi kallar det för att du klonar ditt kursrepo. Klona är ett begrepp som används i versionshanteringssystemet Git och betyder gör en exakt kopia av.
 
-1. Läs sektionen om hur du [laddar ned (klona) och initiera ditt lokala kursrepo](dbwebb-cli/kursrepo) som innehåller kursmaterial för kursen.
+1. Läs sektionen om hur du [laddar ned (klona) och initierar ditt lokala kursrepo](dbwebb-cli/kursrepo) som innehåller kursmaterial för kursen.
 
 Den snabba vägen.
 
