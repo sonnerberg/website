@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-08-19": (H, grm) In med Marie i lärarteamet.
     "2021-08-09": (G, mos) Bort med Martin och Niklas som lämnar.
     "2020-06-24": (F, mos) In med Martin i lärarteamet.
     "2019-10-01": (E, mos) Bort med gemensam mailadress dbwebb@bth.se och ny info.
@@ -27,6 +28,7 @@ Lärarteamet består av:
 | ![Kenneth](image/lararteam/kenneth.jpg?w=100&h=100&cf) | Kenneth&nbsp;Lewenhagen | lew   | klw@bth.se, [BTH](https://www.bth.se/?s=klw&searchtype=employee), [GitHub](https://github.com/lewenhagen), [Facebook](http://www.facebook.com/kenneth.lewenhagen), [Linkedin](http://www.linkedin.com/in/kennethlewenhagen) |
 | ![Andreas](image/lararteam/andreas.jpg?w=100&h=100&cf) | Andreas&nbsp;Arnesson | zeldah   | aar@bth.se, [BTH](https://www.bth.se/?s=aar&searchtype=employee), [GitHub](https://github.com/AndreasArne), [Facebook](https://www.facebook.com/jaghatar.ansiktsbooken), [Linkedin](https://se.linkedin.com/in/andreas-arnesson-87a563b3)  |
 | ![Emil](image/lararteam/emil.jpg?w=100&h=100&cf) | Emil&nbsp;Folino | efobth | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee), [GitHub](https://github.com/emilfolino), [LinkedIn](https://se.linkedin.com/in/emil-folino-23a7002a) |
+| ![Marie](image/lararteam/marie.jpg?w=100&h=100&cf) | Marie&nbsp;Grahn | Marie | grm@bth.se, [BTH](https://www.bth.se/?s=grm&searchtype=employee), [GitHub](https://github.com/epkmagr), [LinkedIn](https://se.linkedin.com/in/marie-grahn-32548811a/) |
 
 <!--
 | ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nik@bth.se, [BTH](https://www.bth.se/?s=nik&searchtype=employee), [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) |
