@@ -98,7 +98,7 @@ Börja med att kopiera logg-filen. Ställ dig i kursroten:
 $ cp example/proj/access-50k.log me/kmom10/
 ```
 
-Skapa ett Bash-script som automatiskt skapar en JSON-fil utifrån innehållet i logg-filen med hjälp av regex.
+Skapa ett Bash-script som automatiskt skapar en JSON-fil utifrån innehållet i logg-filen med hjälp av regex. Du får ta hjälp av verktygen vi gått igenom i kursen, tex sed och awk.
 
 Döp ditt Bash-script till `bthloggen/log2json.bash`. När skriptet körs så skall det skapas en fil `bthloggen/data/log.json` som innehåller samtliga rader enligt strukturen ovan.
 
