@@ -37,7 +37,7 @@ Standarder.
 * [WHATWG more standards](https://spec.whatwg.org/)
 * [Memorandum of Understanding Between W3C and WHATWG](https://www.w3.org/2019/04/WHATWG-W3C-MOU.html)
 
-Get going and start to learn.
+Kom igång och lär dig.
 
 * [MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
@@ -48,14 +48,14 @@ Get going and start to learn.
 * [CanIUse](https://caniuse.com/)
 * [CodePen](https://codepen.io/)
 
-Validate your pages.
+Validera dina sidor.
 
 * [HTML validator](https://validator.w3.org/)
 * [HTML validator (nu)](https://validator.w3.org/nu/)
 * [Unicorn](https://validator.w3.org/unicorn/)
 * [Link checker](https://validator.w3.org/checklink)
 
-More useful stuff.
+Mer användbart.
 
 * [MIME/Media types](https://en.wikipedia.org/wiki/Media_type)
 * [Unicode](https://en.wikipedia.org/wiki/Unicode)

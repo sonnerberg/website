@@ -101,4 +101,4 @@ Avsluta uppgiften så här.
 
 1. När du är klar kan du publicera resultatet med `dbwebb publish report`.
 
-1. Testa ditt resultat så att det passera de automatiska testerna med `dbwebb test report`.
+1. Testa ditt resultat så att det passerar de automatiska testerna med `dbwebb test report`.
