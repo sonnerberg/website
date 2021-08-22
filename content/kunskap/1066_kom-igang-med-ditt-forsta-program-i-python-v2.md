@@ -234,7 +234,7 @@ Valideringen kan upptäcka direkta felaktigheter men också tveksamma konstrukti
 
 Kolla på videon med nedanför där Kenneth förklarar felen och hur man löser dem.
 
-[YOUTUBE src=MVobjdbN4bw width=630 caption="Kenneth visar hur man validerar koden."]
+[YOUTUBE src=X9rngBcaHpA width=630 caption="Andreas visar hur man validerar koden."]
 
 Validering är alltså ett sätt att kvalitetssäkra din kod. Valideringen kan upptäcka potentiella felaktigheter som inte syns när du exekverar koden. Valideringsverktyg är viktiga verktyg för en proffsprogrammerare.
 
