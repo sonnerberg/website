@@ -76,6 +76,8 @@ Efter att du har gjort en inlämning på Canvas kommer, inom några minuter, vå
 
 Inlämningar med betyg PG går rättarna så småningom igenom. När en rättar kollar på en inlämning läser rättaren igenom redovisningstexten, loggen från Umbridge och den inlämnade koden. Om allt ser bra ut sätter de betyget `G` (Godkänt). Då är det kursmomentet helt klar. Om rättaren tycker något ser konstigt/fel ut sätter de betyget Ux och skriver vad ni behöver förbättra för att få godkänt.
 
+Kolla på videon [i slutet](#klart) om du vill se ett exempel.
+
 
 
 Feedback och frågor {#feedback}
