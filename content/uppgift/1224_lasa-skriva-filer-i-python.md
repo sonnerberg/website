@@ -17,7 +17,7 @@ Vi ska i denna laboration träna på läsa och skriva data till filer i Python.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Installera en labbmiljö till Python](installera-en-labbmiljo-till-python)" och du kan grundläggande konstruktioner i Python.
+Du har jobbat igenom artikeln "[Att läsa filer som listor i Python](kunskap/att-lasa-filer-i-python-v2)" och "[Att läsa filer som strängar i Python](kunskap/att-lasa-filer-i-python-strings-v2)".
 
 
 

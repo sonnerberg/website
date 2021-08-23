@@ -15,7 +15,7 @@ Skriv ett av dina första enklare program i Python genom att konvertera mellan o
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Installera en labbmiljö till Python](kunskap/installera-en-labbmiljo-till-python)" och "[Introduktion till variabler och datatyper](kunskap/introduktion-till-variabler-och-datatyper)".
+Du har jobbat igenom artikeln "[Introduktion till variabler och datatyper](kunskap/introduktion-till-variabler-och-datatyper)".
 
 Du har även läst om [dbwebb test](dbwebb-cli/python) och förstår hur du kan rätta uppgiften när du är klar med den.
 

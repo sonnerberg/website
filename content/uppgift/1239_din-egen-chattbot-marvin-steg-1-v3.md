@@ -21,7 +21,7 @@ Programmering och problemlösning i Python, du skall bygga en chattbot Marvin so
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Installera en labbmiljö till Python](kunskap/installera-en-labbmiljo-till-python)" och du kan grunderna i Python.
+Du har jobbat igenom artikeln "[Villkor och loopar](kunskap/villkor-och-loopar)" och gjort labben [Python med villkor och loopar](uppgift/python-med-villkor-och-loopar).
 
 
 

@@ -18,7 +18,7 @@ Vi ska i denna laboration träna på funktioner, argument, returvärden och modu
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Installera en labbmiljö till Python](installera-en-labbmiljo-till-python)" och du kan grundläggande konstruktioner i Python.
+Du har jobbat igenom artikeln "[Funktioner, argument och returvärden](kunskap/funktioner-argument-och-returvarden)" och "[Moduler i Python](kunskap/moduler-i-python)".
 
 
 

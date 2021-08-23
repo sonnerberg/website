@@ -18,7 +18,7 @@ I denna laboration tränar vi på dictionaries och tupler i Python.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Installera en labbmiljö till Python](kunskap/installera-en-labbmiljo-till-python)" och du kan grundläggande konstruktioner i Python.
+Du har jobbat igenom artikeln "[Dictionaries och tupler i Python](kunskap/dictionaries-och-tupler-i-python)".
 
 
 
