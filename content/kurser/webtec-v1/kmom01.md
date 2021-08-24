@@ -17,7 +17,11 @@ Kmom01/02: HTML & CSS
 
 **Arbete pågår**.
 
-Det som "kvarstår" är att spela in ett antal föreläsningar.
+Allt material är på plats för introveckan och vecka 1, inklusive uppgiften.
+
+Det som "kvarstår" är att spela in en föreläsning för vecka 2 samt testköra uppgiften för vecka 2.
+
+Glöm inte `dbwebb update` för att få hem de updpateringar som gjorts i kursrepot.
 
 [/WARNING]
 
