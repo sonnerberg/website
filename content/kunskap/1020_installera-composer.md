@@ -4,6 +4,7 @@ category:
     - labbmiljo
     - make
 revision:
+    "2021-08-25": (D, mos) Uppdaterad i samband med PHP 8.
     "2018-10-25": (C, mos) Genomgång och smärre justeringar.
     "2016-10-28": (B, mos) Ändrade install --mode till -m på Mac.
     "2016-10-13": (A, mos) Första utgåvan.
@@ -22,6 +23,13 @@ Composer är ett kommandoradsprogram som låter dig installera paket och moduler
 
 
 
+Förutsättning {#pre}
+-------------------------------
+
+Du har [PHP i din path](labbmiljo/php-i-pathen).
+
+
+
 Läs mer {#mer}
 -------------------------------
 
@@ -31,17 +39,10 @@ Du kan se vilka [PHP-paket som finns publicerade på Packagist](https://packagis
 
 
 
-Förutsättning {#pre}
--------------------------------
-
-Du har [PHP i din path](labbmiljo/php-i-pathen).
-
-
-
 Installera på Windows XAMPP {#windows}
 -------------------------------
 
-Denna instruktion är för dig som har Cygwin och XAMPP. Om du använder Windows 10 med Bash så följer du istället instruktionen för [Linux](#linux).
+Denna instruktion är för dig som har Cygwin och XAMPP.
 
 Öppna Cygwin. Gå till katalogen där din exekverbara PHP ligger.
 
@@ -92,7 +93,7 @@ composer --version
 
 
 
-Installera på Mac OS {#macos}
+Installera på Mac, Linux och Windows 10 WSL/Bash {#linux}
 -------------------------------
 
 Följ instruktionen om hur man [laddar ned och installerar composer](https://getcomposer.org/download/).
@@ -102,44 +103,7 @@ När filen är nedladdad, gör följande.
 Kontrollera att filen finns på plats.
 
 ```text
-$ ls -l composer.phar 
--rwxr-xr-x 1 mos mos 1.7M Oct 13 14:33 composer.phar*
-```
-
-Provkör kommandot.
-
-```text
-php composer.phar --version
-```
-
-Bra, nu vet du att den nedladdade filen fungerar. Placera den nu i en katalog som ligger i din path. Nedan förutsätter att du har en egen katalog `$HOME/bin` som ligger i din PATH.
-
-```bash
-sudo install -m 0755 composer.phar $HOME/bin/composer
-```
-
-Verifiera att filen ligger på plats och att den går att köra.
-
-```bash
-ls -l $HOME/bin/composer
-composer --version
-```
-
-Om det sista kommandot gick bra och visade nuvarande version för composer så är allt okey.
-
-
-
-Installera på Linux och Windows 10 Bash {#linux}
--------------------------------
-
-Följ instruktionen om hur man [laddar ned och installerar composer](https://getcomposer.org/download/).
-
-När filen är nedladdad, gör följande.
-
-Kontrollera att filen finns på plats.
-
-```text
-$ ls -l composer.phar 
+$ ls -l composer.phar
 -rwxr-xr-x 1 mos mos 1.7M Oct 13 14:33 composer.phar*
 ```
 
@@ -199,10 +163,3 @@ Du kan göra fler saker med `composer`. Använd hjälptexten för att snabbt få
 ```text
 composer
 ```
-
-
-
-Avslutningsvis {#avslutning}
-------------------------------
-
-Det finns en [forumtråd om Composer](t/5795), ställ dina frågor där och tipsa gärna om hur du använder det.
