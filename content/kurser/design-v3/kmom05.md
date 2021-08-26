@@ -124,8 +124,6 @@ Läs följande om responsivitet och bilder.
 
 1. Arbeta igenom artikeln "[Hur kan vi göra bilder och video responsivt](kunskap/hur-kan-vi-gora-det-responsivt)".
 
-1. Arbeta igenom artikeln "[Picture tillsammans med Twig och Mardown](kunskap/picture-tillsammans-med-twig-markdown)".
-
 ### Uppgifter {#uppgifter}
 
 1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet-v2)". Du skall skriva en rapport, enskilt eller i grupp.

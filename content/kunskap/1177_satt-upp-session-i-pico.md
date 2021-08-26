@@ -72,11 +72,12 @@ $pico->setConfig(array(
 
 Sådär, nu är vår session igång och rullar och vi kan nå den vart som i våra `.twig`-filer genom att hämta den såhär: `{{ config.session }}`.
 
-### Formulär {#forms}
+Formulär {#forms}
+--------------------------------------
 
 Men vi har inget sätt att uppdatera vår session och det känns onödigt att bygga formulär för det. Jag löser det istället med hjälp av två länkar som använder sig utav GET, en för att uppdatera temat och en för att nollställa sessionen. Den sista är en bra sak att ha.
 
-Jag jobbar vidare i `index.php` och lägger en if-sats som kollar ifall `$_GET["action"]` är satt:
+I och med att vi laddar in vår `config/config.php` så väljer jag att lägga logiken för sessionen där. Vi börjar med att lägga till en if-sats som kollar ifall `$_GET["action"]` är satt:
 
 ```php
 if (isset($_GET["action"])) {

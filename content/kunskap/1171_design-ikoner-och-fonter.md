@@ -49,7 +49,11 @@ Samt ta bort följande del i vår twig-fils `<head>`-element.
 
 Vi börjar med att ladda ner de nödvändiga filerna som behövs. Går vi in på Font Awesome hemsida kan vi se att vi kan [ladda hem dem via npm](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers). Det känns som en bra lösning för oss.
 
-```bash
+[INFO]
+Pågrund av en ändring hos Font Awesome så ger deras SASS-filer oss ett felmeddelande. Vi väljer därför att istället använda en patchad version lokalt.
+[/INFO]
+
+<!-- ```bash
 # Stå i me/portfolio/themes
 npm install --save @fortawesome/fontawesome-free
 ```
@@ -60,6 +64,13 @@ Då har vi de nödvändiga filerna, men det är några saker vi behöver fixa in
 # Stå i me/portfolio/themes
 rsync -rd node_modules/@fortawesome/fontawesome-free/scss shared/fontawesome/
 rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/fontawesome/
+``` -->
+
+Vi kopierar över våra patchade filer ifrån `example/font-awesome-fix/` och lägger dom i vår `shared/`-mapp så de kan användas i alla teman vi har.
+
+```bash
+# Stå i me/portfolio/themes
+rsync -rd ../../../example/font-awesome-fix/fontawesome/ shared/fontawesome
 ```
 
 `scss/`-mappen innehåller SASS-filerna som laddar in våra fonter och `webfonts/`-mappen innehåller de nödvändiga font-filerna. Vi dubbelkollar att samtliga filer är på plats med hjälp utav `tree`-kommandot.

@@ -1,10 +1,12 @@
 ---
 author:
     - efo
+    - nik
 category:
     - design
     - responsivitet
 revision:
+    "2021-08-26": (B, nik) Uppdaterad inför HT21.
     "2020-11-26": (A, efo) Skapad inför HT2020.
 ...
 Hur kan vi göra bilder och video responsivt?
@@ -91,7 +93,35 @@ För `iframe`-elementet sätter vi `position: absolute;` och positionerar iframe
 }
 ```
 
+Twig {#twig}
+-------------------------------------
 
+I Twig kan vi skriva vanlig HTML, så där är det relativt simpelt att länka våra bilder. Jag utgår ifrån en bild, `sheep.jpg` som har sökvägen `portfolio/assets/img/sheep.jpg`. Jag väljer att wrap:a min bild med en länk till originalet, så om man vill se bilden i sin rätta storlek är det bara trycka på den. I exemplet så nöjer jag mig med två storlekar, en för små enheter och en för stora enheter.
+
+```html
+<a href="{{ base_url }}/image/sheep.jpg" target="_blank">
+    <picture>
+        <source media="(min-width: 668px)" srcset="{{ base_url }}/image/sheep.jpg">
+        <img src="{{ base_url }}/image/sheep.jpg&w=667" alt="A sheep">
+    </picture>
+</a>
+```
+
+Vi kombinerar helt enkelt `{{ base_url}}` som pekar på rooten av Pico-ramverket (i vårt fall `me/portfolio`). Sen lägger vi till sökvägen `/image` som i vår `.htaccess` pekar oss till cimage. Därefter säger vi vilken bild vi vill använda, `sheep.jpg` och de parametrar vi vill skicka med till cimage, t.ex. `&w=667`.
+
+Markdown {#markdown}
+-------------------------------------
+
+I Markdown ser det snarlikt ut, bara att vi behöver uppdatera vår `{{ base_url }}` till `%base_url%` så länken fungerar som det ska, ungefär såhär:
+
+```html
+<a href="%base_url%/image/sheep.jpg" target="_blank">
+    <picture>
+        <source media="(min-width: 668px)" srcset="%base_url%/image/sheep.jpg">
+        <img src="%base_url%/image/sheep.jpg&w=667" alt="A sheep">
+    </picture>
+</a>
+```
 
 Avslutningsvis {#avslut}
 --------------------------------------

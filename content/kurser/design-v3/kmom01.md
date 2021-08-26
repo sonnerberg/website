@@ -135,11 +135,11 @@ Följande länk är en genomstegning av Portfolio-sidan. Eget testande uppmuntra
 
 1. Läs igenom och testa med artikeln "[Vad är Pico?](kunskap/vad-ar-pico-v2)". Artikeln ligger i grund för att du ska förstå Pico's upplägg.
 
+1. Jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)". Denna guide introducerar dig till Git/GitHub, ett verktyg som är branchstandard för att versionshantera kod.
+
 ### Uppgifter {#uppgifter}
 
 Följande uppgift skall utföras och redovisas.
-
-1. Jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)". Denna guide introducerar dig till Git/GitHub, ett verktyg som är branchstandard för att versionshantera kod.
 
 1. Lös uppgiften "[Bygg en portfolio sida](uppgift/skapa-din-egen-portfolio)". Du skall bygga en portfolio-sida som du taggar och publicerar på GitHub. Spara allt under `me/portfolio`.
 

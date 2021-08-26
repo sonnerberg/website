@@ -261,7 +261,7 @@ Efter feedback ifrån HT2020 så har denna introduktion fått sig en omskrivning
 Om man är intresserad av den gamla versionen kan man läsa den här [Kom igång med SASS och npm](kunskap/kom-igang-med-sass-och-npm).
 
 
-Avsluningsvis  {#avslutningsvis}
+Avslutningsvis  {#avslutningsvis}
 -------------------------------------
 
 Nu har vi lärt oss att använda `npm` för att sätta upp nya verktyg som kan användas när vi utvecklar. Det blev mycket nytt och det kan ta ett litet tag att komma in i allt.

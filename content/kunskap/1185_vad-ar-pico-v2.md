@@ -106,7 +106,7 @@ Social:
 ---
 ```
 
-[FIGURE src=/image/design-v3/pico-meta.png]
+[FIGURE src=/image/design-v3/pico-meta-v2.png]
 
 * Logo (rött): säger vilken logotyp vi vill använda på sidan, denna variabel används sen i vår layout för att visa en bild längst upp till vänster.
 * Tagline (blått): En tagline för vår sida, visas under sidans namn i vår header.
