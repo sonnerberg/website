@@ -14,11 +14,13 @@ PHP, introduktion
 
 Grunderna i att programmera med PHP.
 
+<!--
 Videon är XX minuter lång.
 
 [YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
+-->
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f06-funktioner/slide.html).
+Du kan själv bläddra igenom [de HTML slides som används i presentationen](https://dbwebb-se.github.io/webtec/lecture/L11-php-introduction/slide.html).
 
 
 
