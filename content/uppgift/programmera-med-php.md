@@ -114,7 +114,7 @@ Denna uppgift skall passera följande verktyg.
 
 Du kan köra båda verktygen direkt via `composer test`.
 
-Du måste stå i kagalogen `me/` när du kör ovan kommandon.
+Du måste stå i katalogen `me/` när du kör ovan kommandon.
 
 
 
@@ -136,13 +136,12 @@ När programmet startar skall du skriva ut en välkomsttext och en ascii-bild (v
 
 Om användaren skriver in ett val som inte finns så anropas en funktion `notValidChoice()` som skriver ut ett meddelande att det var ett felaktigt menyval.
 
-När det valda menyvalet är utfört så visas menyn och ascii-bilden igen.
+När det valda menyvalet är utfört så visas menyn och ascii-bilden igen. Använd if-else för menyalternativen.
 
 För tips, leta i manualen.
 
 * [`readline()`](https://www.php.net/manual/en/function.readline.php)
 * [`require()`](https://www.php.net/manual/en/function.require.php)
-* [`match()`](https://www.php.net/manual/en/control-structures.match.php)
 
 
 
@@ -226,6 +225,15 @@ Uppgift 8: XXX {#u8}
 
 Kolla vilka primtal som finns upp till en viss nivå?
 
+
+Extrauppgift match()  {#u9}
+---------------------
+
+Byt ut din switch-sats i menyn till match.
+
+För tips, leta i manualen.
+
+* [`match()`](https://www.php.net/manual/en/control-structures.match.php)
 
 
 Redovisning {#redovisa}

@@ -70,7 +70,7 @@ Utför följande krav.
 
 1. Sidorna skall ha en navbar så att man kan klicka och navigera mellan webbplatsens sidor.
 
-1. Sidorna skall ha en gemensam footer. Placera en copyright text i footern tillsammans med länkar till validatorer, navbar och footer.
+1. Sidorna skall ha en gemensam footer. Placera en copyright text i footern tillsammans med länkar till validatorer, navbar och footer. Kopiera gärna de footers du gjort i onepage-uppgiften och styla dem så att det ser ut som en footer. 
 
 1. Fyll de tre sidorna med innehåll såsom till exempel text och bilder.
     1. En av sidorna skall vara en-kolumn layout.
