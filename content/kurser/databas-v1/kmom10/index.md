@@ -144,6 +144,12 @@ Det finns ingen garanti för att nya tentamen kommer att följa exakt samma uppl
 
 Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
 
+<!--
+* 2021
+    * Hund
+    * Vaccin
+-->
+
 * 2020
     * [Vapen](./tentamen/vapen)
     * [Rock](./tentamen/rock)
