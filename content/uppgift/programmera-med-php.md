@@ -75,7 +75,7 @@ Sätt på felutskrifter i `config.php`.
 
 ```php
 error_reporting(-1);              // Report all type of errors
-ini_set("display_errors", 1);     // Display all errors
+ini_set("display_errors", "1");   // Display all errors
 ```
 
 Se till att denna filen inkluderas som den första filen i din `main.php`.
@@ -136,7 +136,7 @@ När programmet startar skall du skriva ut en välkomsttext och en ascii-bild (v
 
 Om användaren skriver in ett val som inte finns så anropas en funktion `notValidChoice()` som skriver ut ett meddelande att det var ett felaktigt menyval.
 
-När det valda menyvalet är utfört så visas menyn och ascii-bilden igen. Använd if-else för menyalternativen.
+När det valda menyvalet är utfört så visas menyn och ascii-bilden igen.
 
 För tips, leta i manualen.
 
@@ -147,6 +147,8 @@ För tips, leta i manualen.
 
 Uppgift 2: Detaljer om din PHP installation {#u2}
 -----------------------
+
+Om du använde if-sats i uppgift 1, så byt ut din if-sats till en switch-sats.
 
 Lägg till menyvalet "2. Detaljer om PHP" som gör enligt följande.
 
@@ -165,7 +167,7 @@ För tips, leta i manualen.
 
 
 
-Uppgift 3: XXX {#u3}
+Uppgift 3: Tid och datum {#u3}
 -----------------------
 
 [WARNING]
@@ -174,66 +176,181 @@ Uppgift 3: XXX {#u3}
 
 [/WARNING]
 
-Dagens tid och datum samt formattera.
+Lägg till menyvalet "3. Dagen tid och datum" som gör följande.
 
+* Skriv ut dagens datum, enligt formatet ÅÅÅÅ-MM-DD.
+* Skriv ut dagens veckodag på engelska.
+* Skriv ut dagens datum och tid, enligt ISO 8601.
+* Skriv ut dagens tid (svensk tidszon), enligt TT:MM:SS
+* Skriv en dagens tid (tidszon i Los Angeles, USA), enligt TT:MM:SS
 
+Döp funktionen till `printCurrentDateAndTime()`.
 
-Uppgift 4: XXX {#u4}
+För tips, leta i manualen.
+
+* [DateTime::format](https://www.php.net/manual/en/datetime.format.php)
+
+Uppgift 4: Stränghantering {#u4}
 -----------------------
 
-Stränghantering. Mata in en sträng och kör vissa modifikationer och tester på den strängen.
+Lägg till menyvalet "4. Stränghantering" som gör följande.
 
-Eller mata in en text från fil och analysera den.
-md, rot13, password_hash, password_verify
+* Kolla ordet "skärgårdsö" med strlen() och med mb_strlen(). Skriv ut svaren separerade med komma och mellanslag.
+* Skriv ut positionen för bokstaven "l" i meningen "Hello world!".
+* Byt ut ordet "world" mot "Sweden" i meningen "Hello world!" och skriv ut den.
+* Gör om meningen "Hello world!" till stora bokstäver och skriv ut.
+* Dela upp meningen "Hello world!" i två strängar och skriv ut första strängen.
 
-Check the strlen() and mb_strlen() of the word "skärgårdsö". Answer with the two results as a comma and space-separated string.
+Döp funktionen till `printStringTests()`. Lägg gärna ordet och meningen i variabler.
+
+För tips, leta i manualen.
+
+* [strlen()](https://www.php.net/manual/en/function.strlen)
+* [explode()](https://www.php.net/manual/en/function.explode.php)
 
 
 
-Uppgift 5: XXX {#u5}
+Uppgift 5: Fibonaccitalföljd {#u5}
 -----------------------
 
-You are going to solve the well-known ‘chessboard and rice grain problem’.
+Skapa en funktion som använder Fibonaccital, som ser ut så här 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Räkna ut summan av alla udda tal under 1.000.000 i funktionen och returnera summan.
+Skriv sedan ut svaret i menyn.
 
-Imagine you have a standard chessboard and put one rice grain on the first square. Then you put two grains on the second square, four on the third, eight on the fourth and so on… How many rice grains are there on the last square?
+Lägg till menyvalet "5. Fibonaccital.
+
+* Skriv ut talföljden upp till och med 55 samt summan av alla udda tal under 1.000.000 på en ny rad.
+
+Döp funktionen till `fibonacci()`.
 
 
 
-Uppgift 6: XXX {#u6}
+Uppgift 6: Arrayer med strängar {#u6}
 -----------------------
 
-Create a function called fibonacci(). The function should use the Fibbonacci Sequence, starting with 1, 1, 2. Return the sum of all odd numbers in the sequence, when the sequence value dont exceed 1.000.000.
+Skapa en array med länderna Sverige, Norge och Danmark och kalla den `$countries`. Använd konstruktionen [].
+Skapa ännu en array med städerna Stockholm, Oslo Köpenhamn och kalla den `$capitals`. Använd array().
 
-Answer with a call of the function. A Fibonacci-sequence can look like this: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. You add the current value with the last, i.e. 1+2=3, 3+2=5, 5+3=8 etc.
+Lägg till menyvalet "6. Arrayer med strängar" och gör följande.
+
+* Skriv ut innehållet i $countries. Använd en for-sats.
+* Skriv ut innehållet i första elementet i $countries och det fjärde. Du får en varning när du skriver ut det fjärde elementet för det finns inte fyra element i arrayen. Gör en enkel felhantering för arrayer; en if-else-sats som kollar antalet element i arrayen innan du skriver ut antingen fjärde elementet eller ett felmeddelande.
+* Skapa en ny array `$atlas`, där första elementet ser ut så här: "Sverige - Stockholm", andra innehåller "Norge - Oslo" och så vidare. Utgå ifrån `$countries` och `$capitals`. Använd array_push()
+Skriv ut arrayen `$atlas` med kommatecken och mellanslag mellan. Använd foreach och implode().
+* Skapa en key/value array `$keyArray` där landet är key (nyckel) och huvudstaden value (värde). Skriv ut huvudstaden i Norge. Tips använd `$keyArray["Norge"]`. Lägg till array_key_exists() för att kontrollera att nyckeln "Norge" finns.
+* Lägg till Finland och Helsingfors. Skriv ut vilket land som Helsingfors är huvudstad i.
+
+Döp funktionen till `printStringArrays()`.
+
+För tips, leta i manualen.
+
+* [array_push()](https://www.php.net/manual/en/function.array-push.php)
+* [implode()](https://www.php.net/manual/en/function.implode.php)
 
 
-Uppgift 7: XXX {#u7}
+
+Uppgift 7: Arrayer med siffror {#u7}
 -----------------------
 
-arrayer. både med siffror och key/val
-tänk på databas resultat
-sortera array med siffror?
-summera
-medelvärde
+Skapa en array med siffrorna [285, 11, 9.75, 9, 2216] och kalla den `$numbers1`.
+Skapa ännu en array med siffrorna [324, 36, 20.02, 8, 4998, 0, 11] och kalla den `$numbers2`.
 
-implode, explode, serialized/unserialize from file
+Lägg till menyvalet "7. Arrayer med siffror" och gör följande.
+
+* Skriv ut medelvärdet för `$numbers1`, avrundat till 2 decimaler.
+* Lägg till den minsta siffran från `$numbers1` först i `$numbers2` samt summan av det sista och första elementet i `$numbers` sist i `$numbers2`. Skriv ut `$numbers2` med " - " emellan.
+* Sortera `$numbers2` i sjunkande (decending) ordning och skriv ut resultatet. Vilket metod skulle du använt om du hade haft en key/value array? Skriv ut det också.
+
+Döp funktionen till `printNumberArrays()`.
+
+För tips, leta i manualen.
+
+* [array_sum()](https://www.php.net/manual/en/function.array-sum.php)
+* [round()](https://www.php.net/manual/en/function.round.php)
+* [array_unshift()](https://www.php.net/manual/en/function.array-unshift.php)
 
 
 
-Uppgift 8: XXX {#u8}
+Uppgift 8: Filhantering {#u8}
 -----------------------
 
-Kolla vilka primtal som finns upp till en viss nivå?
+Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`. Titta på innehållet i filerna.
+
+Lägg till menyvalet "8. Filhantering" och gör följande.
+
+* Kolla om filen `$file1` finns. Skriv ut "Filen files\sherlock.txt finns.". Använd print() och $file1 i strängen du skriver ut.
+* Läs innehållet i sherlock.txt och lägg i en sträng. Skriv ut strängen.
+* Läs innehållet i sherlock.txt från tecken 12 och 20 tecken framåt och lägg informationen i en sträng. Skriv ner strängen på en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
+* Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet.
+
+Döp funktionen till `printFileTests()`.
+
+För tips, leta i manualen.
+
+* [file_get_contents()](https://www.php.net/manual/en/function.file-get-contents)
+* [serialize()](https://www.php.net/manual/en/function.serialize.php)
 
 
-Extrauppgift match()  {#u9}
+
+Extrauppgift match()  {#u10}
 ---------------------
 
-Byt ut din switch-sats i menyn till match.
+Byt ut din switch-sats i menyn till match().
 
 För tips, leta i manualen.
 
 * [`match()`](https://www.php.net/manual/en/control-structures.match.php)
+
+
+
+Extrauppgift password  {#u12}
+---------------------
+
+Skapa en varibel som är ditt lösenord med innehållet "Hello2world!".
+
+Lägg till menyvalet "A. Password" och gör följande.
+
+* Beräkna md5 hash av din variabel och skriv ut den.
+* Skapa en hash av ditt lösenord och verifiera det. Skriv ut "Lösenord är ok!" om verifieringen gick igenom.
+* Här är en sträng "Pvaqreryyn, Ynql naq gur Genzc, Byq Lryyre, Gernfher Vfynaq, Gur Whatyr Obbx". Vad innehåller den för information? Skriv ut informationen. Tips: formatet är rot13.
+
+Döp funktionen till `printPasswordTests()`.
+
+För tips, leta i manualen.
+
+* [`password_hash()`](https://www.php.net/manual/en/function.password-hash)
+
+
+
+Extrauppgift datum och tid  {#u12}
+---------------------
+
+Lägg till menyvalet "B. Mer om datum och tid" och gör följande.
+
+* Skapa ett DateTime objekt med dagens datum och skriv ut det på formatet "år-månad-dag timmar:minuter:sekunder".
+* Vilken metod används för att sätta en tidszon? Skriv ut det.
+* Skapa ett DateTime objekt med ett gammalt datum "2021-05-12 11:15:17", ta bort 2 månader och lägg till 3 timmar. Skriv ut resultatet.
+
+Döp funktionen till `printDateAndTimeExtra()`.
+
+För tips, leta i manualen.
+
+* [`DateTime()`](https://www.php.net/manual/en/class.datetime.php)
+
+
+
+<!-- Extrauppgift : Riskornen på schackbrädet {#u11}
+-----------------------
+
+Känner du till problemet "Riskornen på schackbrädet" (‘chessboard and rice grain problem’ på engelska)?
+
+Tänk dig ett vanligt schackbräde och lägg ett riskorn på den första rutan. Sedan lägger du två riskorn på andra rutan, och därefter en fördubbling på varje ruta, det vill säga, fyra på tredje åtta på fjärde och så vidare. Hur många riskorn ligger det på schackbrädet när samtliga rutor fyllts med riskorn?
+
+Lägg till menyvalet "C. Riskornen på schackbrädet" som gör följande.
+
+* Skriv ut antalet riskorn. Lägg märke till att php inte är bra på att hantera stora tal.
+
+Tips: Tänk 1 + 2*1 + .... etc. -->
+
 
 
 Redovisning {#redovisa}
