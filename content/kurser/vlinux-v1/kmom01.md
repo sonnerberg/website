@@ -11,11 +11,11 @@ Kmom01: Linux som server
 
 Det första vi behöver är en Linux-server. På något sätt.
 
-Jag kommer visa hur du installerar Linux i VirtualBox, en virtualiseringsmiljö. Du kan välja att göra som jag gör eller så installerar du på en annan server. Kanske har du en gammal dator till övers, eller är du bekväm med virtuella servrar, eller investerar du i en Raspberry Pi för ett par hundralappar.
-
-Det första kursmomentet går ut på att installera Debian/Linux och logga in på maskinen som en server, via SSH.
+Jag kommer visa hur du installerar Linux i VirtualBox, en virtualiseringsmiljö. Det första kursmomentet går ut på att installera Debian/Linux och logga in på maskinen som en server, via SSH.
 
 För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
+
+Vid sidan av studierna kan du välja att installera på en annan server också. Kanske har du en gammal dator till övers, eller är du bekväm med virtuella servrar, eller investerar du i en Raspberry Pi för ett par hundralappar.
 
 
 <!--more-->
