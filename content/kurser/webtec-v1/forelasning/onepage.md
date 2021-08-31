@@ -1,14 +1,22 @@
 ---
 author: mos
 revision:
-    "2021-08-11": "(A, mos) Första utgåva inför kursstart VT2021."
+    "2021-08-31": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
 Lektion: Skapa en One-page-website
 ====================
 
 En live online lektion för att komma igång med uppgiften "Skapa en One-page-website".
 
-Föreläsningen spelas in och sparas här när det är klart.
+Föreläsningen är i två delar.
+
+Del 1 är 37 minuter lång.
+
+[YOUTUBE src="Xy3kvHamBrQ" width=700 caption="Kom igång och lös uppgiften 'one page website', del I/II (Tisdags-Zoom med Mikael 13-14)"]
+
+Del 2 är 1:05h lång.
+
+[YOUTUBE src="Xy3kvHamBrQ" width=700 caption="Kom igång och lös uppgiften 'one page website', del II/II (Tisdags-Zoom med Mikael 14-15)"]
 
 <!--
 Videon är XX minuter lång.
@@ -23,4 +31,6 @@ Du kan själv bläddra igenom [de HTML slides som används i presentationen](kur
 Resurser
 ------------------------
 
-Presenteras efter föreläsningen.
+Presenteras i föreläsningen.
+
+Exempelprogrammen finns i kursrepot.
