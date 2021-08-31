@@ -35,7 +35,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-cp example/awk_names.csv me/kmom06/awk/
+cp example/awk/awk_names.csv me/kmom06/awk/
 ```
 
 Filen innehåller en hel del rader med påhittade personuppgifter.
