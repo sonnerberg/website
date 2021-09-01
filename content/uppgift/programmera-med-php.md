@@ -322,7 +322,7 @@ Extrauppgift: Filhantering {#u8}
 
 Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`.
 
-Kopiera filerna med kommandot `rsync`, så här.
+Kopiera filerna med kommandot `cp`, så här.
 
 ```text
 # Stå i `me/php`
