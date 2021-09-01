@@ -270,28 +270,7 @@ För tips, leta i manualen.
 
 
 
-Uppgift 8: Filhantering {#u8}
------------------------
-
-Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`. Titta på innehållet i filerna.
-
-Lägg till menyvalet "8. Filhantering" och gör följande.
-
-* Kolla om filen `$file1` finns. Skriv ut "Filen files\sherlock.txt finns.". Använd print() och $file1 i strängen du skriver ut.
-* Läs innehållet i sherlock.txt och lägg i en sträng. Skriv ut strängen.
-* Läs innehållet i sherlock.txt från tecken 12 och 20 tecken framåt och lägg informationen i en sträng. Skriv ner strängen på en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
-* Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet.
-
-Döp funktionen till `printFileTests()`.
-
-För tips, leta i manualen.
-
-* [file_get_contents()](https://www.php.net/manual/en/function.file-get-contents)
-* [serialize()](https://www.php.net/manual/en/function.serialize.php)
-
-
-
-Extrauppgift match()  {#u10}
+Extrauppgift: match()  {#u10}
 ---------------------
 
 Byt ut din switch-sats i menyn till match().
@@ -302,18 +281,18 @@ För tips, leta i manualen.
 
 
 
-Extrauppgift password  {#u12}
+Extrauppgift: password  {#u12}
 ---------------------
 
 Skapa en varibel som är ditt lösenord med innehållet "Hello2world!".
 
-Lägg till menyvalet "A. Password" och gör följande.
+Gör ett nytt program som gör följande.
 
 * Beräkna md5 hash av din variabel och skriv ut den.
 * Skapa en hash av ditt lösenord och verifiera det. Skriv ut "Lösenord är ok!" om verifieringen gick igenom.
 * Här är en sträng "Pvaqreryyn, Ynql naq gur Genzc, Byq Lryyre, Gernfher Vfynaq, Gur Whatyr Obbx". Vad innehåller den för information? Skriv ut informationen. Tips: formatet är rot13.
 
-Döp funktionen till `printPasswordTests()`.
+Döp programmet till `printPassword()`.
 
 För tips, leta i manualen.
 
@@ -321,20 +300,41 @@ För tips, leta i manualen.
 
 
 
-Extrauppgift datum och tid  {#u12}
+Extrauppgift: datum och tid  {#u12}
 ---------------------
 
-Lägg till menyvalet "B. Mer om datum och tid" och gör följande.
+Gör ett nytt program som gör följande.
 
 * Skapa ett DateTime objekt med dagens datum och skriv ut det på formatet "år-månad-dag timmar:minuter:sekunder".
 * Vilken metod används för att sätta en tidszon? Skriv ut det.
 * Skapa ett DateTime objekt med ett gammalt datum "2021-05-12 11:15:17", ta bort 2 månader och lägg till 3 timmar. Skriv ut resultatet.
 
-Döp funktionen till `printDateAndTimeExtra()`.
+Döp programmet till `printDateTime()`.
 
 För tips, leta i manualen.
 
 * [`DateTime()`](https://www.php.net/manual/en/class.datetime.php)
+
+
+
+Extrauppgift: Filhantering {#u8}
+-----------------------
+
+Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`. Titta på innehållet i filerna.
+
+Gör ett nytt program som gör följande.
+
+* Kolla om filen `$file1` finns. Skriv ut "Filen sherlock.txt finns.". Använd print() och $file1 i strängen du skriver ut.
+* Läs innehållet i sherlock.txt och lägg i en sträng. Skriv ut strängen.
+* Läs innehållet i sherlock.txt från tecken 12 och 20 tecken framåt och lägg informationen i en sträng. Skriv ner strängen på en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
+* Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet.
+
+Döp programmet till `printFile.php`.
+
+För tips, leta i manualen.
+
+* [file_get_contents()](https://www.php.net/manual/en/function.file-get-contents)
+* [serialize()](https://www.php.net/manual/en/function.serialize.php)
 
 
 
