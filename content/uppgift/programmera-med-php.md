@@ -320,7 +320,16 @@ För tips, leta i manualen.
 Extrauppgift: Filhantering {#u8}
 -----------------------
 
-Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`. Titta på innehållet i filerna.
+Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`.
+
+Kopiera filerna med kommandot `rsync`, så här.
+
+```text
+# Stå i `me/php`
+cp ../../example/php/examples/*.txt .
+```
+
+Titta på innehållet i filerna.
 
 Gör ett nytt program som gör följande.
 
