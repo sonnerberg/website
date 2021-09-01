@@ -67,7 +67,7 @@ Taggarna för varje uppgift motsvarar själva menyvalet. För att testa Menyval 
 1. Menyval **2**: Celsius till Fahrenheit. Marvin ska fråga efter en temperatur i Celsius och sedan skriva ut en sträng som skall innehålla motsvarande i Fahrenheit. Värdet skall avrundas till två decimaler.
 
 ```python
-input: 3135.205     output: "275.37"
+input: 135.205     output: "275.37"
 ```
 
 1. Menyval **3**: Ordmultiplicering. Här skall Marvin ta emot två `input()`, den första skall be om ett ord och den andra skall be om en siffra. Marvin skall sedan skriva ut det givna ordet så många gånger.
