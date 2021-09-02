@@ -1,28 +1,18 @@
 ---
 author: mos
 revision:
-    "2021-08-11": "(A, mos) Första utgåva inför kursstart VT2021."
+    "2021-09-02": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
 Responsiv webbdesign
 ====================
 
-[WARNING]
+Föreläsningen besvarar frågor kring responsiv webbdesign och vad beståndsdelarna är i en responsiv webbplats och vilka tekniker ligger bakom detta sätt att designa en webbplats.
 
-**Arbete pågår, video skall spelas in och publiceras här...**.
+Videon är 46 minuter lång.
 
-[/WARNING]
+[YOUTUBE src="FcoriRzjYw4" width=700 caption="Responsiv webbdesign."]
 
-Vad är en responsiv webbplats och hur vi bygger dem.
-
-<!--
-Videon är XX minuter lång.
-
-[YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
--->
-
-<!--
 Du kan själv bläddra igenom [de HTML slides som används i presentationen](https://dbwebb-se.github.io/webtec/lecture/L06-responsive-web-design/slide.html).
--->
 
 
 
