@@ -8,24 +8,10 @@ views:
 author:
     - mos
 revision:
-    "2021-08-11": "(PA, mos) Arbete påbörjat för webtec-v1."
+    "2021-09-02": "(A, mos) Första utgåvan."
 ...
 Kmom01/02: HTML & CSS
 ==================================
-
-[WARNING]
-
-**Arbete pågår**.
-
-Allt material är på plats för introveckan och vecka 1, inklusive uppgiften.
-
-Det som "kvarstår" är att spela in en föreläsning för vecka 2 samt testköra uppgiften för vecka 2.
-
-Glöm inte `dbwebb update` för att få hem de updpateringar som gjorts i kursrepot.
-
-[/WARNING]
-
-<!-- stop-->
 
 Vi börjar med en labbmiljö för att bygga webbplatser och med hjälp av den så studerar vi HTML och CSS för att se hur de bidrar när vi bygger en webbplats. HTML står för strukturen och innehållet på webbplatsen och CSS bidrar med utseende och layout.
 
