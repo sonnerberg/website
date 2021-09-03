@@ -53,19 +53,6 @@ Vi börjar med att ladda ner de nödvändiga filerna som behövs. Går vi in på
 Pågrund av en ändring hos Font Awesome så ger deras SASS-filer oss ett felmeddelande. Vi väljer därför att istället använda en patchad version lokalt.
 [/INFO]
 
-<!-- ```bash
-# Stå i me/portfolio/themes
-npm install --save @fortawesome/fontawesome-free
-```
-
-Då har vi de nödvändiga filerna, men det är några saker vi behöver fixa innan vi kan använda ikonerna. Till att börja med så kopierar vi filerna ifrån `node_modules` där de installerades till vår `shared/`-mapp, så de kan användas i alla teman vi har.
-
-```bash
-# Stå i me/portfolio/themes
-rsync -rd node_modules/@fortawesome/fontawesome-free/scss shared/fontawesome/
-rsync -rd node_modules/@fortawesome/fontawesome-free/webfonts shared/fontawesome/
-``` -->
-
 Vi kopierar över våra patchade filer ifrån `example/font-awesome-fix/` och lägger dom i vår `shared/`-mapp så de kan användas i alla teman vi har.
 
 ```bash
