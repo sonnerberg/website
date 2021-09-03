@@ -176,89 +176,61 @@ Uppgift 3: Tid och datum {#u3}
 
 [/WARNING]
 
-Lägg till menyvalet "3. Dagen tid och datum" som gör följande.
+<!-- I Sverige kan vi skaffa pass på polisstationen men om vi är i utomlands i till exempel New York så får vi gå till Svenska generalkonsulatet. Det ligger på One Dag Hammarskjöld Plaza på Manhattan. -->
 
-* Skriv ut dagens datum, enligt formatet ÅÅÅÅ-MM-DD.
-* Skriv ut dagens veckodag på engelska.
-* Skriv ut dagens datum och tid, enligt ISO 8601.
-* Skriv ut dagens tid (svensk tidszon), enligt TT:MM:SS
-* Skriv en dagens tid (tidszon i Los Angeles, USA), enligt TT:MM:SS
+Företaget "Bäst Reklam" har en reklamkampanj, som startades upp i 1:e mars i år och ska lanseras den 13:e december samma år (Svensk tid). Företaget har ett litet kontor på Manhattan i New York och huvudkontoret i Karlskrona. Personalen är svensktalande men ringer varandra på konstiga tider. För att slippa väcka varandra i onödan, så vill VD:n att de anställda möts av följande välkomstmeddelande när de loggar in.  
 
-Döp funktionen till `printCurrentDateAndTime()`.
+Lägg till menyvalet "3. Tid och datum" som ger följande utskrift.
+
+[FIGURE src=/img/webtec/php/uppgift3.png?w=c5]
+
+Döp funktionen till `printTimeAndDate()`. Tips: Antal dagar kvar kommer att variera beroende på dagens datum. Hur många sekunder går det på en dag?
 
 För tips, leta i manualen.
 
-* [DateTime::format](https://www.php.net/manual/en/datetime.format.php)
+* [DateTime::format (date_format)](https://www.php.net/manual/en/datetime.format.php)
+* [strtotime](https://www.php.net/manual/en/function.strtotime)
+* [round](https://www.php.net/manual/en/function.round)
+
+
 
 Uppgift 4: Stränghantering {#u4}
 -----------------------
 
-Lägg till menyvalet "4. Stränghantering" som gör följande.
+Prorektor Eva Pettersson hälsade nya studenter välkomna till BTH på introduktionsveckan. Men när webbansvarig skrev in det på webbsidan, så blev det lite fel. Hjälp till att rätta strängen!
 
-* Kolla ordet "skärgårdsö" med strlen() och med mb_strlen(). Skriv ut svaren separerade med komma och mellanslag.
-* Skriv ut positionen för bokstaven "l" i meningen "Hello world!".
-* Byt ut ordet "world" mot "Sweden" i meningen "Hello world!" och skriv ut den.
-* Gör om meningen "Hello world!" till stora bokstäver och skriv ut.
-* Dela upp meningen "Hello world!" i två strängar och skriv ut första strängen.
+`"      ”Varmt välkommen till BTX och till första dagen på dina studier hos oss”. Men dessa ord hälsade prorektor Eva Pettersson alla nya STUDENTER välkomna."`
 
-Döp funktionen till `printStringTests()`. Lägg gärna ordet och meningen i variabler.
+Lägg till menyvalet "4. Stränghantering" som ger följande utskrift.
+
+[FIGURE src=/img/webtec/php/uppgift4.png?w=c5]
+
+Döp funktionen till `printString()`. Kopiera strängen ovan inklusive dubbelfnuttarna och lägg strängen i en variabel.
+
+Tips: skriv ut strängen för varje rättning du gör när du jobbar med strängen för att se om det blir som du tänkt dig. Dessa kontrollutskrifter tar du bort när du färdig sen. OBS! Det är tre fel i strängen.
 
 För tips, leta i manualen.
 
 * [strlen()](https://www.php.net/manual/en/function.strlen)
-* [explode()](https://www.php.net/manual/en/function.explode.php)
+* [strpos()](https://www.php.net/manual/en/function.strpos.php)
+* [trim()](https://www.php.net/manual/en/function.trim.php)
+* [str-replace()](https://www.php.net/manual/en/function.str-replace.php)
+* [str_word_count()](https://www.php.net/manual/en/function.str-word-count)
 
 
 
-Uppgift 5: Fibonaccitalföljd {#u5}
+Uppgift 5: Arrayer med siffror {#u5}
 -----------------------
 
-Skapa en funktion som använder Fibonaccital, som ser ut så här 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Räkna ut summan av alla udda tal under 1.000.000 i funktionen och returnera summan.
-Skriv sedan ut svaret i menyn.
+Nedskräpningen på tre badstränder i Lomma, Vellinge och Svedala mättes sommaren 2020. Här är resultatet
 
-Lägg till menyvalet "5. Fibonaccital.
+[FIGURE src=/img/webtec/php/chartLitteringBeach.png?w=c5]
 
-* Skriv ut talföljden upp till och med 55 samt summan av alla udda tal under 1.000.000 på en ny rad.
+Lägg in siffrorna från tabellen i en array som decimaltal med punkt utan procenttecknet.
 
-Döp funktionen till `fibonacci()`.
+Lägg till menyvalet "5. Arrayer med siffror" som ger följande utskrift.
 
-
-
-Uppgift 6: Arrayer med strängar {#u6}
------------------------
-
-Skapa en array med länderna Sverige, Norge och Danmark och kalla den `$countries`. Använd konstruktionen [].
-Skapa ännu en array med städerna Stockholm, Oslo Köpenhamn och kalla den `$capitals`. Använd array().
-
-Lägg till menyvalet "6. Arrayer med strängar" och gör följande.
-
-* Skriv ut innehållet i $countries. Använd en for-sats.
-* Skriv ut innehållet i första elementet i $countries och det fjärde. Du får en varning när du skriver ut det fjärde elementet för det finns inte fyra element i arrayen. Gör en enkel felhantering för arrayer; en if-else-sats som kollar antalet element i arrayen innan du skriver ut antingen fjärde elementet eller ett felmeddelande.
-* Skapa en ny array `$atlas`, där första elementet ser ut så här: "Sverige - Stockholm", andra innehåller "Norge - Oslo" och så vidare. Utgå ifrån `$countries` och `$capitals`. Använd array_push()
-Skriv ut arrayen `$atlas` med kommatecken och mellanslag mellan. Använd foreach och implode().
-* Skapa en key/value array `$keyArray` där landet är key (nyckel) och huvudstaden value (värde). Skriv ut huvudstaden i Norge. Tips använd `$keyArray["Norge"]`. Lägg till array_key_exists() för att kontrollera att nyckeln "Norge" finns.
-* Lägg till Finland och Helsingfors. Skriv ut vilket land som Helsingfors är huvudstad i.
-
-Döp funktionen till `printStringArrays()`.
-
-För tips, leta i manualen.
-
-* [array_push()](https://www.php.net/manual/en/function.array-push.php)
-* [implode()](https://www.php.net/manual/en/function.implode.php)
-
-
-
-Uppgift 7: Arrayer med siffror {#u7}
------------------------
-
-Skapa en array med siffrorna [285, 11, 9.75, 9, 2216] och kalla den `$numbers1`.
-Skapa ännu en array med siffrorna [324, 36, 20.02, 8, 4998, 0, 11] och kalla den `$numbers2`.
-
-Lägg till menyvalet "7. Arrayer med siffror" och gör följande.
-
-* Skriv ut medelvärdet för `$numbers1`, avrundat till 2 decimaler.
-* Lägg till den minsta siffran från `$numbers1` först i `$numbers2` samt summan av det sista och första elementet i `$numbers` sist i `$numbers2`. Skriv ut `$numbers2` med " - " emellan.
-* Sortera `$numbers2` i sjunkande (decending) ordning och skriv ut resultatet. Vilket metod skulle du använt om du hade haft en key/value array? Skriv ut det också.
+[FIGURE src=/img/webtec/php/uppgift5.png?w=c5]
 
 Döp funktionen till `printNumberArrays()`.
 
@@ -266,18 +238,42 @@ För tips, leta i manualen.
 
 * [array_sum()](https://www.php.net/manual/en/function.array-sum.php)
 * [round()](https://www.php.net/manual/en/function.round.php)
-* [array_unshift()](https://www.php.net/manual/en/function.array-unshift.php)
+* [array_shift()](https://www.php.net/manual/en/function.array-shift.php)
+* [array_push()](https://www.php.net/manual/en/function.array-push.php)
 
 
 
-Extrauppgift: match()  {#u10}
----------------------
+Uppgift 6: Arrayer med strängar {#u6}
+-----------------------
 
-Byt ut din switch-sats i menyn till match().
+Siffrorna från uppgifter säger mer om vi får reda på vad nedskräpningen beror på, att 32.6% är cigarettfimpar. Kopiera arrayen nedan till din kod.
+
+`"Cigarettfimp Snusprilla Annat Glas Metall Organiskt Papper/kartong Plast"`
+
+Lägg till menyvalet "6. Arrayer med strängar" som ger följande utskrift.
+
+[FIGURE src=/img/webtec/php/uppgift6.png?w=c5]
+
+Döp funktionen till `printStringArrays()`.
 
 För tips, leta i manualen.
 
-* [`match()`](https://www.php.net/manual/en/control-structures.match.php)
+* [explode()](https://www.php.net/manual/en/function.explode.php)
+* [array_combine()](https://www.php.net/manual/en/function.array-combine)
+
+
+
+Extrauppgift: Fibonaccitalföljd {#u11}
+-----------------------
+
+Skapa en funktion som använder Fibonaccital, som ser ut så här 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Räkna ut summan av alla udda tal under 1.000.000 i funktionen och returnera summan.
+Skriv sedan ut svaret i menyn.
+
+Lägg till menyvalet "A. Fibonacci".
+
+* Skriv ut talföljden upp till och med 55 samt summan av alla udda tal under 1.000.000 på en ny rad.
+
+Döp funktionen till `fibonacci()`.
 
 
 
@@ -292,7 +288,9 @@ Gör ett nytt program som gör följande.
 * Skapa en hash av ditt lösenord och verifiera det. Skriv ut "Lösenord är ok!" om verifieringen gick igenom.
 * Här är en sträng "Pvaqreryyn, Ynql naq gur Genzc, Byq Lryyre, Gernfher Vfynaq, Gur Whatyr Obbx". Vad innehåller den för information? Skriv ut informationen. Tips: formatet är rot13.
 
-Döp programmet till `printPassword()`.
+Lägg till menyvalet "B. Password".
+
+Döp funktionen till `printPassword()`.
 
 För tips, leta i manualen.
 
@@ -300,24 +298,7 @@ För tips, leta i manualen.
 
 
 
-Extrauppgift: datum och tid  {#u12}
----------------------
-
-Gör ett nytt program som gör följande.
-
-* Skapa ett DateTime objekt med dagens datum och skriv ut det på formatet "år-månad-dag timmar:minuter:sekunder".
-* Vilken metod används för att sätta en tidszon? Skriv ut det.
-* Skapa ett DateTime objekt med ett gammalt datum "2021-05-12 11:15:17", ta bort 2 månader och lägg till 3 timmar. Skriv ut resultatet.
-
-Döp programmet till `printDateTime()`.
-
-För tips, leta i manualen.
-
-* [`DateTime()`](https://www.php.net/manual/en/class.datetime.php)
-
-
-
-Extrauppgift: Filhantering {#u8}
+Extrauppgift: Filhantering {#u13}
 -----------------------
 
 Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`.
@@ -338,7 +319,9 @@ Gör ett nytt program som gör följande.
 * Läs innehållet i sherlock.txt från tecken 12 och 20 tecken framåt och lägg informationen i en sträng. Skriv ner strängen på en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
 * Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet.
 
-Döp programmet till `printFile.php`.
+Lägg till menyvalet "C. Filhantering".
+
+Döp funktionen till `printFile())`.
 
 För tips, leta i manualen.
 
@@ -347,7 +330,24 @@ För tips, leta i manualen.
 
 
 
-<!-- Extrauppgift : Riskornen på schackbrädet {#u11}
+<!-- Extrauppgift: datum och tid  {#u14}
+---------------------
+
+Gör ett nytt program som gör följande.
+
+* Skapa ett DateTime objekt med dagens datum och skriv ut det på formatet "år-månad-dag timmar:minuter:sekunder".
+* Vilken metod används för att sätta en tidszon? Skriv ut det.
+* Skapa ett DateTime objekt med ett gammalt datum "2021-05-12 11:15:17", ta bort 2 månader och lägg till 3 timmar. Skriv ut resultatet.
+
+Döp programmet till `printDateTime()`.
+
+För tips, leta i manualen.
+
+* [`DateTime()`](https://www.php.net/manual/en/class.datetime.php) -->
+
+
+
+<!-- Extrauppgift : Riskornen på schackbrädet {#u15}
 -----------------------
 
 Känner du till problemet "Riskornen på schackbrädet" (‘chessboard and rice grain problem’ på engelska)?
