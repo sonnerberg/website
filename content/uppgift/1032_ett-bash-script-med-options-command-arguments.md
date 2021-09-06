@@ -83,9 +83,11 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-1. Skapa kommandot `starwars` som i sin tur kör kommandot `telnet towel.blinkenlights.nl`
+Det finns inga extrauppgifter.
 
-OBS! Om du har cygwin i Windows kan du behöva installera `telnet` genom att köra kommandot `apt-cyg install inetutils`.
+<!-- 1. Skapa kommandot `starwars` som i sin tur kör kommandot `telnet towel.blinkenlights.nl`
+
+OBS! Om du har cygwin i Windows kan du behöva installera `telnet` genom att köra kommandot `apt-cyg install inetutils`. -->
 
 
 
