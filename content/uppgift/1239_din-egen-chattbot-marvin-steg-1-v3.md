@@ -162,7 +162,7 @@ input: "ross", "rachel"     output: "rachel"
 input: "britain", "exit"    output: "brexit"
 ```
 
-* Menyval **a5**: Räkna poäng, gör ett menyval där Marvin tar emot en input som ska vara en lång sträng med där varannan karaktär är en bokstav och varannan är en siffra, ex `"a2b4A5s3B1"`. En bokstav representerar en spelare och efterföljande siffra är dess poäng. Om bokstaven är liten, får spelaren poäng, om det är en stor bokstav förlorar spelaren poäng. Räkna ut och skriv ut varje spelares totala poäng. Exempel:
+* Menyval **a5**: Räkna poäng, gör ett menyval där Marvin tar emot en input som ska vara en lång sträng med där varannan karaktär är en bokstav och varannan är en siffra, ex `"a2b4A5s3B1"`. En bokstav representerar en spelare och efterföljande siffra är dess poäng. Om bokstaven är liten, får spelaren poäng, om det är en stor bokstav förlorar spelaren poäng. Räkna ut och skriv ut varje spelares totala poäng. Notera att utskriften ska vara formatterad som i exemplet nedanför, inget mellanrum före första bokstaven och inget komma efter sista siffran. Exempel:
 ```python
 input: "a2b4A5s3B1"     output: "a -3, b 3, s 3"
 input: "g3l1H5l2G3l1"   output: "g 0, l 4, h -5"
