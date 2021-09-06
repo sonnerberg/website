@@ -178,13 +178,13 @@ Uppgift 3: Tid och datum {#u3}
 
 <!-- I Sverige kan vi skaffa pass på polisstationen men om vi är i utomlands i till exempel New York så får vi gå till Svenska generalkonsulatet. Det ligger på One Dag Hammarskjöld Plaza på Manhattan. -->
 
-Företaget "Bäst Reklam" har en reklamkampanj, som startades upp i 1:e mars i år och ska lanseras den 13:e december samma år (Svensk tid). Företaget har ett litet kontor på Manhattan i New York och huvudkontoret i Karlskrona. Personalen är svensktalande men ringer varandra på konstiga tider. För att slippa väcka varandra i onödan, så vill VD:n att de anställda möts av följande välkomstmeddelande när de loggar in.  
+Företaget "Bäst Reklam" har en reklamkampanj, som startades upp i 1:e mars i år och ska lanseras på lucia den 13:e december samma år (Svensk tid). Företaget har ett litet kontor på Manhattan i New York och huvudkontoret i Karlskrona. Personalen är svensktalande men de ringer till varandra på konstiga tider. För att slippa väcka varandra i onödan, så vill VD:n att de anställda möts av följande välkomstmeddelande när de loggar in.  
 
 Lägg till menyvalet "3. Tid och datum" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift3.png?w=c5]
 
-Döp funktionen till `printTimeAndDate()`. Tips: Antal dagar kvar kommer att variera beroende på dagens datum. Hur många sekunder går det på en dag?
+Döp funktionen till `printTimeAndDate()`. Tips: Antal dagar kvar på kampanjen kommer att variera beroende på dagens datum. Hur många sekunder går det på en dag?
 
 För tips, leta i manualen.
 
@@ -214,7 +214,7 @@ För tips, leta i manualen.
 * [strlen()](https://www.php.net/manual/en/function.strlen)
 * [strpos()](https://www.php.net/manual/en/function.strpos.php)
 * [trim()](https://www.php.net/manual/en/function.trim.php)
-* [str-replace()](https://www.php.net/manual/en/function.str-replace.php)
+* [str_replace()](https://www.php.net/manual/en/function.str-replace.php)
 * [str_word_count()](https://www.php.net/manual/en/function.str-word-count)
 
 
@@ -222,7 +222,8 @@ För tips, leta i manualen.
 Uppgift 5: Arrayer med siffror {#u5}
 -----------------------
 
-Nedskräpningen på tre badstränder i Lomma, Vellinge och Svedala mättes sommaren 2020. Här är resultatet
+Nedskräpningen på tre badstränder i Lomma, Vellinge och Svedala mättes sommaren 2020. Det som skiljer sig mest i mätningarna mot andra miljöer är att nedskräpningen av plast är så hög på stränderna. Skräpmätningen görs på samma yta av stranden varje dag i minst sju veckor.
+Se resultatet:
 
 [FIGURE src=/img/webtec/php/chartLitteringBeach.png?w=c5]
 
@@ -240,13 +241,16 @@ För tips, leta i manualen.
 * [round()](https://www.php.net/manual/en/function.round.php)
 * [array_shift()](https://www.php.net/manual/en/function.array-shift.php)
 * [array_push()](https://www.php.net/manual/en/function.array-push.php)
+* [Sorting Arrays](https://www.php.net/manual/en/array.sorting.php)
 
 
 
 Uppgift 6: Arrayer med strängar {#u6}
 -----------------------
 
-Siffrorna från uppgifter säger mer om vi får reda på vad nedskräpningen beror på, att 32.6% är cigarettfimpar. Kopiera arrayen nedan till din kod.
+32,6% av nedskräpningen på stränderna var cigarettfimpar medan den är uppmätt till 64.5% i tätort, 49.9% i förort och 43.4% i parkmiljö. Det tar cirka 1-5 år för naturen att sönderdela en cigarettfimp till mikroplast (fimpens filter innehåller plast). Mikroplast kan ta 100 år innan den försvinner, om den ens gör det. Allt enligt "Håll Sverige rent".
+
+För att få reda på vad nedskräpningen på stränderna beror på, till exempel att 32.6% är cigarettfimpar, så vill vi skapa en key/value array med orsaken som key och procenten som value. Kopiera strängen nedan till din funktion och bygg ihop en key/value array. För att du ska få träna på olika iterationer, så använder du if-sats i första och foreach-sats i andra.
 
 `"Cigarettfimp Snusprilla Annat Glas Metall Organiskt Papper/kartong Plast"`
 
@@ -260,6 +264,7 @@ För tips, leta i manualen.
 
 * [explode()](https://www.php.net/manual/en/function.explode.php)
 * [array_combine()](https://www.php.net/manual/en/function.array-combine)
+* [array_key_exists()](https://www.php.net/manual/en/function.array-key-exists)
 
 
 
@@ -280,21 +285,45 @@ Döp funktionen till `fibonacci()`.
 Extrauppgift: password  {#u12}
 ---------------------
 
-Skapa en varibel som är ditt lösenord med innehållet "Hello2world!".
+För att komma ihåg sitt lösenord så har hemlige Arne skrivit upp det. Han är dock lurig och har skrivit upp det blandat med falska lösenord. Eftersom han blev hackad av Trazan och Banarne förra året så har han "hashat" lösenordet på tre olika sätt, för att göra det svårare att hacka för dem att hacka honom igen. Du kanske kan hacka lösenordet!
 
-Gör ett nytt program som gör följande.
+Ett exempel på md5 hash på lösenordet:
 
-* Beräkna md5 hash av din variabel och skriv ut den.
-* Skapa en hash av ditt lösenord och verifiera det. Skriv ut "Lösenord är ok!" om verifieringen gick igenom.
-* Här är en sträng "Pvaqreryyn, Ynql naq gur Genzc, Byq Lryyre, Gernfher Vfynaq, Gur Whatyr Obbx". Vad innehåller den för information? Skriv ut informationen. Tips: formatet är rot13.
+```text
+# $pwd = md5("Hello2world!");
+# echo $pwd;
+# 025cfbe826280df9815be962cc272b2c
+```
 
-Lägg till menyvalet "B. Password".
+Enligt Myndigheten för samhällskydd och beredskap, så är md5 inte tillräckligt bra för att hasha lösenord. Då dagens datorer med ett modern grafikkort kan generera 7 miljarder MD5 förslag per sekund.
 
-Döp funktionen till `printPassword()`.
+Hemliga Arnes lösenord och hans lista med hashade lösenord:
+
+```text
+$password = "Hello2world!";
+$hashArray = array('Uryyb3jbeyq!', 'Uryyb2ibeyq!', 'Uryyb2jbey!', 'Uryyb2jbeyq!', 'Uryyb2jbeyg!',
+    '$2y$10$Nl1KcQWR.saeHZryyy4FueawpZqoyx.eXVglabfekJNecrdvULy/K',
+    '$2y$1O$Nl1KcQWR.saeHZryyy4FueawpZqoyx.eXVglabfekJNecrdvULy/K',
+    '$2y$10$Nl1KcQWR.saeHZryyy4FueawpZqoyx.eXVqlabfekJNecrdvULy/K',
+    '$2y$10$.tCflgh5pOcG/HVf.QsXguTUkelucRBg0CGUpRhxtrBW4ZhsK6tKu',
+    '$2y$10$.tCflgh5pDcG/HVf.QsXguTUkeluoRBg0CGUpRhxtrBW4ZhsK6tKu',
+    '$2y$10$.tCflgh5pDcG/HVf.QsXguTUkelucRBg0CGUpRhxtrBW4ZhsK6tKu');
+```
+
+Försök hitta hans hashade lösenord i listan. Det finns med tre gånger med tre olika hashmetoder.
+
+Lägg till menyvalet "B. Password" som skriver ut summan av de tre positionerna i `$hashArray` ovan.
+
+Döp funktionen till `printPassword()`. Kopiera variablerna ovan till din funktion.
 
 För tips, leta i manualen.
 
 * [`password_hash()`](https://www.php.net/manual/en/function.password-hash)
+* [`str_rot13()`](https://www.php.net/manual/en/function.str-rot13)
+
+För mer information, besök Myndigheten för samhällskydd och beredskap.
+
+* [`MSB`](https://www.cert.se/2013/03/hasha-losenord-ratt-aterkomsten)
 
 
 
@@ -312,14 +341,16 @@ cp ../../example/php/examples/*.txt .
 
 Titta på innehållet i filerna.
 
-Gör ett nytt program som gör följande.
+<!-- Gör ett nytt program som gör följande.
 
 * Kolla om filen `$file1` finns. Skriv ut "Filen sherlock.txt finns.". Använd print() och $file1 i strängen du skriver ut.
 * Läs innehållet i sherlock.txt och lägg i en sträng. Skriv ut strängen.
 * Läs innehållet i sherlock.txt från tecken 12 och 20 tecken framåt och lägg informationen i en sträng. Skriv ner strängen på en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
-* Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet.
+* Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet. -->
 
-Lägg till menyvalet "C. Filhantering".
+Lägg till menyvalet "C. Filhantering" som ger följande utskrift. Tips: Läs innehållet i sherlock.txt från tecken 17 och 15 tecken framåt och skriv ner i en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
+
+[FIGURE src=/img/webtec/php/uppgift13.png?w=c5]
 
 Döp funktionen till `printFile())`.
 
