@@ -330,7 +330,7 @@ För mer information, besök Myndigheten för samhällskydd och beredskap.
 Extrauppgift: Filhantering {#u13}
 -----------------------
 
-Det finns två filer under katalogen files; sherlock.txt och serialized.txt. Skapa två variabler med filnamnen i och kalla dem `$file1` och `$file2`.
+Det finns två filer under katalogen files; sherlock.txt och serialized.txt.
 
 Kopiera filerna med kommandot `cp`, så här.
 
@@ -348,11 +348,11 @@ Titta på innehållet i filerna.
 * Läs innehållet i sherlock.txt från tecken 12 och 20 tecken framåt och lägg informationen i en sträng. Skriv ner strängen på en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
 * Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet. -->
 
-Lägg till menyvalet "C. Filhantering" som ger följande utskrift. Tips: Läs innehållet i sherlock.txt från tecken 17 och 15 tecken framåt och skriv ner i en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
+Lägg till menyvalet "C. Filhantering" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift13.png?w=c5]
 
-Döp funktionen till `printFile())`.
+Döp funktionen till `printFile())`. Skapa två variabler i din funktion med filnamnen i och kalla dem `$file1` och `$file2`. Tips: Läs innehållet i sherlock.txt från tecken 17 och 15 tecken framåt och skriv ner i en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
 
 För tips, leta i manualen.
 
