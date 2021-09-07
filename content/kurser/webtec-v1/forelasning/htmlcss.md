@@ -3,7 +3,7 @@ author: mos
 revision:
     "2021-09-07": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
-Lektion: Skapa en webbplats med HTML och CSS
+Lektion: Skapa en responsiv webbplats med HTML och CSS
 ====================
 
 En live online lektion för att komma igång med uppgiften "Skapa en responsiv webbplats med HTML och CSS".
