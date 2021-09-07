@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2021-09-07": "(A, mos) Första utgåva inför kursstart VT2021."
+    "2021-09-07": "(A, mos) Första utgåva vid kurstillfället HT21."
 ...
 Lektion: Skapa en responsiv webbplats med HTML och CSS
 ====================
