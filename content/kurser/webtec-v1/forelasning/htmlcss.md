@@ -14,11 +14,11 @@ Föreläsningen är i två delar.
 
 Del 1 är 41 minuter lång.
 
-[YOUTUBE src="Eb2_PK7tx2M" width=700 caption="Kom igång och lös uppgiften "responsiv" (Tisdags-Zoom med Mikael, vecka 2, 13-14)"]
+[YOUTUBE src="Eb2_PK7tx2M" width=700 caption="Kom igång och lös uppgiften 'responsiv' (Tisdags-Zoom med Mikael, vecka 2, 13-14)"]
 
 Del 2 är 55 minuter lång.
 
-[YOUTUBE src="IVOa0LFbuRI" width=700 caption="Kom igång och lös uppgiften "responsiv", del 2/2 (Tisdags-Zoom med Mikael, vecka 2, 14-15)"]
+[YOUTUBE src="IVOa0LFbuRI" width=700 caption="Kom igång och lös uppgiften 'responsiv', del 2/2 (Tisdags-Zoom med Mikael, vecka 2, 14-15)"]
 
 
 
