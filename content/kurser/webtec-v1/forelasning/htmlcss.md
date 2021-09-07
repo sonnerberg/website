@@ -6,21 +6,27 @@ revision:
 Lektion: Skapa en webbplats med HTML och CSS
 ====================
 
-En live online lektion för att komma igång med uppgiften "Skapa en webbplats med HTML och CSS".
+En live online lektion för att komma igång med uppgiften "Skapa en responsiv webbplats med HTML och CSS".
 
 Föreläsningen spelas in och sparas här när det är klart.
 
-<!--
-Videon är XX minuter lång.
+Föreläsningen är i två delar.
 
-[YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
+Del 1 är 41 minuter lång.
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f06-funktioner/slide.html).
+[YOUTUBE src="Eb2_PK7tx2M" width=700 caption="Kom igång och lös uppgiften "responsiv" (Tisdags-Zoom med Mikael, vecka 2, 13-14)"]
 
--->
+Del 2 är 1:05h lång.
+
+[YOUTUBE src="IVOa0LFbuRI" width=700 caption="Kom igång och lös uppgiften "responsiv", del 2/2 (Tisdags-Zoom med Mikael, vecka 2, 14-15)"]
+
 
 
 Resurser
 ------------------------
 
-Presenteras efter föreläsningen.
+Presenteras i föreläsningen samt är tillgängliga i [föreläsarens anteckningar](https://github.com/dbwebb-se/webtec/tree/main/docs/session/S02-report-website).
+
+Exempelprogrammen finns i kursrepot.
+
+Vanliga CSS-fixar finns förklarade i ett par av exempelprogrammen, se ddokumentet "[Om exempelprogrammen](https://github.com/dbwebb-se/webtec/blob/main/example/css/README.md)".
