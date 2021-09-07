@@ -5,6 +5,7 @@ category:
     - mac os
     - labbmiljö
 revision:
+    "2021-09-07": (B, aar) La till coreutils.
     "2015-04-10": (A, mos) Första utgåvan.
 ...
 Terminalen och pakethantering med Brew på Mac OS
@@ -50,11 +51,12 @@ Ett Unix-system har normalt en pakethanterare som gör det enkelt att installera
 
 Följ instruktionerna på deras hemsida för att installera Homebrew som pakethanterare på din Mac.
 
-När du väl installerat Homebrew så kan du testa att installera wget. Det är ett kommando som du kommer att behöva.
+När du väl installerat Homebrew så kan du testa att installera wget och coreutils. Det är ett kommandon som du kommer att behöva.
 
 
 ```text
 brew install wget
+brew install coreutils
 ```
 
 <!--
