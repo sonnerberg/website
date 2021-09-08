@@ -14,6 +14,12 @@ Men, först måste vi kopiera den publika nyckel, det gör vi med kommandot `ssh
 ssh-copy-id -i $HOME/.ssh/id_rsa.pub mos@linux.dbwebb.se -p 2222
 ```
 
+Notera att vi i Cygwin kan behöva ändra lite på kommandot:
+
+```bash
+ssh-copy-id -i $HOME/.ssh/id_rsa.pub -p 2222 mos@linux.dbwebb.se 
+```
+
 Kommandot tar den filen vi anger och lägger till dess innehåll på *remote server* i filen `.ssh/authorized_keys`.
 
 Det kan se ut så här när kommandot utförs och verifieras genom att logga in på den andra maskinen, nu utan lösenord, och kontrollera innehållet i filen `authorized_keys`.
