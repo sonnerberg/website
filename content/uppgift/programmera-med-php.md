@@ -176,7 +176,7 @@ Du kan dubbelkolla att grundstrukturen är korrekt genom att köra kommandot `db
 
 Om du har löst kraven enligt ovan så har du en grov mall till din `main.php` som inleds så här.
 
-```txt
+```text
 <?php
 
 declare(strict_types=1);
