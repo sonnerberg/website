@@ -1,9 +1,11 @@
 ---
-author: mos
+author:
+    - mos
+    - Marie
 category:
     - kurs webtec
 revision:
-    "2021-06-15": "(A, mos) Första utgåvan."
+    "2021-09-10": "(A, mos) Första utgåvan."
 ...
 Programmera med PHP
 ===================================
@@ -23,13 +25,20 @@ Du har grundläggande kunskap om att programmera med PHP.
 
 Du har PHP i din PATH och kan exekvera kommandot `php` i terminalen.
 
+Du använder PHP 8.0 eller högre.
+
+<!--
+example/devtools
 Du har installerat en utvecklingsmiljö med validatorer som testkör din kod via statisk kodanalys.
+-->
 
 
 
 <!--
 Genomgång {#genom}
 ------------------------
+
+Det finns en lektion och genomgång som är tänkt att förbereda dig inför uppgiften.
 
 Här är en video som "pratar" dig igenom uppgiftens upplägg och visar hur du kommer igång.
 
@@ -45,7 +54,7 @@ Uppgifterna löser du genom att skriva kod i filer som du exekverar via terminal
 
 Spara alla filerna under `me/php`.
 
-Du skall ha ett main-program och den koden sparar du i filen `main.php`. Main-programmet skriver ut menyn och läser input från användaren och utför sedan en uppgift.
+Du skall ha ett main-program och den koden sparar du i filen `main.php`. Main-programmet skriver ut menyn och läser input från användaren och utför sedan en uppgift. När uppgiften är utför återgår menyprogrammet till att vänta på nästa input från användaren.
 
 Lösningen på varje uppgift skall kodas som en funktion med ett bestämt namn. Samtliga funktioner placeras i filen `src/functions.php` som inkluderas i `main.php`. När koden växer blir det troligen fler funktioner som delas upp i olika filer och då är det bra att samla dem i en underkatalog och `src` är ett vanligt namn på en sådan katalog.
 
@@ -78,7 +87,7 @@ error_reporting(-1);              // Report all type of errors
 ini_set("display_errors", "1");   // Display all errors
 ```
 
-Se till att denna filen inkluderas som den första filen i din `main.php`.
+Se till att denna filen inkluderas som den första filen i din `main.php`. Inkludera denna filen innan du inkluderar `src/functions.php`.
 
 
 
@@ -92,7 +101,7 @@ Det är mest lämpligt att använda engelska när man skriver kod och kommentare
 /**
  * Prints details about this program.
  */
-function about() : void {
+function about(): void {
     // some code
 }
 ```
@@ -102,6 +111,17 @@ När funktionerna växer kan man även dokumentera inkommande parametrar till fu
 
 
 ### Utvecklingsmiljö med validatorer {#validate}
+
+Du kan köra statisk kodvalidering för att kontrollera att din PHP-kod stämmer överens med kodstandard och att den inte innehåller någon "skräpig kod".
+
+```text
+dbwebb validate php
+```
+
+De validatorer som körs är främst för phpcs som är kodstandard och phpmd som upptäcker misstänkt "skräpig kod".
+
+<!--
+KRÄVER installationsbeskrivning samt mer tester kring example/devtools.
 
 Du bör sedan tidigare ha installerat en utvecklingsmiljö för PHP under katalogen `me/` där du via composer kan köra verktyg för statisk kodvalidering.
 
@@ -115,6 +135,63 @@ Denna uppgift skall passera följande verktyg.
 Du kan köra båda verktygen direkt via `composer test`.
 
 Du måste stå i katalogen `me/` när du kör ovan kommandon.
+-->
+
+
+
+### Katalogstruktur {#struktur}
+
+Så här ser din katalogstruktur ut i `me/php` när du är redo att börja.
+
+```text
+$ tree .
+.
+├── config.php
+├── main.php
+└── src
+    └── functions.php
+
+1 directory, 3 files
+```
+
+Kommandot tree kan du installera med din pakethanterare.
+
+```text
+# Cygwin
+apt-cyg install tree
+
+# Mac
+brew install tree
+
+# Linux, WSL
+apt install tree
+aptget install tree
+```
+
+Du kan dubbelkolla att grundstrukturen är korrekt genom att köra kommandot `dbwebb test php`.
+
+
+
+### Mall till main.php {#mall}
+
+Om du har löst kraven enligt ovan så har du en grov mall till din `main.php` som inleds så här.
+
+```txt
+<?php
+
+declare(strict_types=1);
+
+require "config.php";
+require "src/functions.php";
+
+echo "Ready to begin some hard coding...";
+```
+
+Provkör ditt main-program så du vet att grundstrukturen är på plats.
+
+```text
+php main.php
+```
 
 
 
@@ -124,17 +201,19 @@ Uppgift 1: Ett menydrivet program i terminalen {#u1}
 Skapa grunden för ditt menydrivna program. Följande menyval skall finnas.
 
 ```
-1. Skriv ut detaljer om programmet
-9. Avsluta
+1) Skriv ut detaljer om programmet
+Q) Avsluta
 ```
 
-Om användaren skriver in `1` så skall programmet skriva ut en kort beskrivning av programmet samt vem som skrivit det. Koden för att utföra utskriften skall skrivas i en funktion `about()` som placeras i filen `functions.php`
+Om användaren skriver in `1` så skall programmet skriva ut en kort beskrivning av programmet samt vem som skrivit det. Koden för att utföra utskriften skall skrivas i en funktion `about()`.
 
-Om användaren skriver in `9` så skall programmet avslutas via funktionen `exitProgram()` samt skriva ut ett avslutningsmeddelande.
+Om användaren skriver in `q` eller `Q` så skall programmet avslutas via funktionen `exitProgram()` samt skriva ut ett avslutningsmeddelande.
 
 När programmet startar skall du skriva ut en välkomsttext och en ascii-bild (välj själv motiv på bilden).
 
 Om användaren skriver in ett val som inte finns så anropas en funktion `notValidChoice()` som skriver ut ett meddelande att det var ett felaktigt menyval.
+
+Alla funktioner placeras i filen `src/functions.php`.
 
 När det valda menyvalet är utfört så visas menyn och ascii-bilden igen.
 
@@ -150,7 +229,7 @@ Uppgift 2: Detaljer om din PHP installation {#u2}
 
 Om du använde if-sats i uppgift 1, så byt ut din if-sats till en switch-sats.
 
-Lägg till menyvalet "2. Detaljer om PHP" som gör enligt följande.
+Lägg till menyvalet "2) Detaljer om PHP" som gör enligt följande.
 
 * Skriv ut versionen av PHP.
 * Skriv ut vilket operativsystem som ligger i botten av PHP-installationen.
@@ -170,17 +249,11 @@ För tips, leta i manualen.
 Uppgift 3: Tid och datum {#u3}
 -----------------------
 
-[WARNING]
-
-**Arbete pågår**.
-
-[/WARNING]
-
 <!-- I Sverige kan vi skaffa pass på polisstationen men om vi är i utomlands i till exempel New York så får vi gå till Svenska generalkonsulatet. Det ligger på One Dag Hammarskjöld Plaza på Manhattan. -->
 
 Företaget "Bäst Reklam" har en reklamkampanj, som startades upp i 1:e mars i år och ska lanseras på lucia den 13:e december samma år (Svensk tid). Företaget har ett litet kontor på Manhattan i New York och huvudkontoret i Karlskrona. Personalen är svensktalande men de ringer till varandra på konstiga tider. För att slippa väcka varandra i onödan, så vill VD:n att de anställda möts av följande välkomstmeddelande när de loggar in.  
 
-Lägg till menyvalet "3. Tid och datum" som ger följande utskrift.
+Lägg till menyvalet "3) Tid och datum" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift3.png?w=c5]
 
@@ -229,7 +302,7 @@ Se resultatet:
 
 Lägg in siffrorna från tabellen i en array som decimaltal med punkt utan procenttecknet.
 
-Lägg till menyvalet "5. Arrayer med siffror" som ger följande utskrift.
+Lägg till menyvalet "5) Arrayer med siffror" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift5.png?w=c5]
 
@@ -254,7 +327,7 @@ För att få reda på vad nedskräpningen på stränderna beror på, till exempe
 
 `"Cigarettfimp Snusprilla Annat Glas Metall Organiskt Papper/kartong Plast"`
 
-Lägg till menyvalet "6. Arrayer med strängar" som ger följande utskrift.
+Lägg till menyvalet "6) Arrayer med strängar" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift6.png?w=c5]
 
@@ -272,9 +345,9 @@ Extrauppgift: Fibonaccitalföljd {#u11}
 -----------------------
 
 Skapa en funktion som använder Fibonaccital, som ser ut så här 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Räkna ut summan av alla udda tal under 1.000.000 i funktionen och returnera summan.
-Skriv sedan ut svaret i menyn.
+Skriv sedan ut svaret.
 
-Lägg till menyvalet "A. Fibonacci".
+Lägg till menyvalet "A) Fibonacci".
 
 * Skriv ut talföljden upp till och med 55 samt summan av alla udda tal under 1.000.000 på en ny rad.
 
@@ -312,7 +385,7 @@ $hashArray = array('Uryyb3jbeyq!', 'Uryyb2ibeyq!', 'Uryyb2jbey!', 'Uryyb2jbeyq!'
 
 Försök hitta hans hashade lösenord i listan. Det finns med tre gånger med tre olika hashmetoder.
 
-Lägg till menyvalet "B. Password" som skriver ut summan av de tre positionerna i `$hashArray` ovan.
+Lägg till menyvalet "B) Password" som skriver ut summan av de tre positionerna i `$hashArray` ovan.
 
 Döp funktionen till `printPassword()`. Kopiera variablerna ovan till din funktion.
 
@@ -348,7 +421,7 @@ Titta på innehållet i filerna.
 * Läs innehållet i sherlock.txt från tecken 12 och 20 tecken framåt och lägg informationen i en sträng. Skriv ner strängen på en ny fil `test.txt` och skriv ut innehållet i filen `test.txt`.
 * Gör unserialize på filen `$file2` (serialized.txt) och skriv ut innehållet. -->
 
-Lägg till menyvalet "C. Filhantering" som ger följande utskrift.
+Lägg till menyvalet "C) Filhantering" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift13.png?w=c5]
 
@@ -408,7 +481,11 @@ Publicera {#publicera}
 
 Avsluta uppgiften så här.
 
+<!--
 1. Testa att din kod validerar genom att ställa dig i katalogen `me/` och köra dem via `composer test`.
+-->
+
+1. Kontrollera att din kod validerar med `dbwebb validate php`.
 
 1. Testa ditt resultat så att det passera de automatiska testerna med `dbwebb test php`.
 
