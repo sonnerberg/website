@@ -227,7 +227,7 @@ För tips, leta i manualen.
 Uppgift 2: Detaljer om din PHP installation {#u2}
 -----------------------
 
-Om du använde if-sats i uppgift 1, så byt ut din if-sats till en switch-sats.
+Om du i uppgift 1 använde if-sats för att anropa rätt funktion för menyvalen `main.php`, så byt ut din if-sats till en switch-sats.
 
 Lägg till menyvalet "2) Detaljer om PHP" som gör enligt följande.
 
@@ -249,8 +249,6 @@ För tips, leta i manualen.
 Uppgift 3: Tid och datum {#u3}
 -----------------------
 
-<!-- I Sverige kan vi skaffa pass på polisstationen men om vi är i utomlands i till exempel New York så får vi gå till Svenska generalkonsulatet. Det ligger på One Dag Hammarskjöld Plaza på Manhattan. -->
-
 Företaget "Bäst Reklam" har en reklamkampanj, som startades upp i 1:e mars i år och ska lanseras på lucia den 13:e december samma år (Svensk tid). Företaget har ett litet kontor på Manhattan i New York och huvudkontoret i Karlskrona. Personalen är svensktalande men de ringer till varandra på konstiga tider. För att slippa väcka varandra i onödan, så vill VD:n att de anställda möts av följande välkomstmeddelande när de loggar in.  
 
 Lägg till menyvalet "3) Tid och datum" som ger följande utskrift.
@@ -270,17 +268,17 @@ För tips, leta i manualen.
 Uppgift 4: Stränghantering {#u4}
 -----------------------
 
-Prorektor Eva Pettersson hälsade nya studenter välkomna till BTH på introduktionsveckan. Men när webbansvarig skrev in det på webbsidan, så blev det lite fel. Hjälp till att rätta strängen!
+Prorektor Eva Pettersson hälsade nya studenter välkomna till BTH på introduktionsveckan. Men när webbansvarig skrev in det på webbsidan, så blev det lite fel. Hjälp till att rätta strängen genom att göra ett enkelt rättstavningsprogram!
 
-`"      ”Varmt välkommen till BTX och till första dagen på dina studier hos oss”. Men dessa ord hälsade prorektor Eva Pettersson alla nya STUDENTER välkomna."`
+`$faultyStr = "      ”Varmt välkommen till BTX och till första dagen på dina studier hos oss”. Men dessa ord hälsade prorektor Eva Pettersson alla nya STUDENTER välkomna.";`
 
 Lägg till menyvalet "4. Stränghantering" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift4.png?w=c5]
 
-Döp funktionen till `printString()`. Kopiera strängen ovan inklusive dubbelfnuttarna och lägg strängen i en variabel.
+Döp funktionen till `printString()`. Kopiera ovanstående variabeldeklaration inklusive dubbelfnuttarna och semikolon. Använd de inbyggda funktionerna i php för att ändra i strängen.
 
-Tips: skriv ut strängen för varje rättning du gör när du jobbar med strängen för att se om det blir som du tänkt dig. Dessa kontrollutskrifter tar du bort när du färdig sen. OBS! Det är tre fel i strängen.
+Tips: skriv ut strängen för varje rättning du gör när du jobbar med strängen för att se om det blir som du tänkt dig. Dessa kontrollutskrifter tar du bort när du färdig sen. OBS! Det är tre fel i strängen; bland annat inledande mellanslag. Hur löser du det problemet med kommandona nedan?
 
 För tips, leta i manualen.
 
@@ -331,7 +329,7 @@ Lägg till menyvalet "6) Arrayer med strängar" som ger följande utskrift.
 
 [FIGURE src=/img/webtec/php/uppgift6.png?w=c5]
 
-Döp funktionen till `printStringArrays()`.
+Döp funktionen till `printStringArrays()`. Tips: Vad är skillnaden på sort() och asort()? Vad menas med associativ sorting?
 
 För tips, leta i manualen.
 
@@ -368,7 +366,7 @@ Ett exempel på md5 hash på lösenordet:
 # 025cfbe826280df9815be962cc272b2c
 ```
 
-Enligt Myndigheten för samhällskydd och beredskap, så är md5 inte tillräckligt bra för att hasha lösenord. Då dagens datorer med ett modern grafikkort kan generera 7 miljarder MD5 förslag per sekund.
+Enligt Myndigheten för samhällskydd och beredskap, så är md5 inte tillräckligt bra för att hasha lösenord. Det beror på att dagens datorer med ett modern grafikkort kan generera 7 miljarder MD5 förslag per sekund.
 
 Hemliga Arnes lösenord och hans lista med hashade lösenord:
 
