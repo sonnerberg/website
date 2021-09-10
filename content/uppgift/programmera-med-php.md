@@ -355,7 +355,7 @@ Döp funktionen till `fibonacci()`.
 
 
 
-Extrauppgift: password  {#u12}
+Extrauppgift: Password  {#u12}
 ---------------------
 
 För att komma ihåg sitt lösenord så har hemlige Arne skrivit upp det. Han är dock lurig och har skrivit upp det blandat med falska lösenord. Eftersom han blev hackad av Trazan och Banarne förra året så har han "hashat" lösenordet på tre olika sätt, för att göra det svårare att hacka för dem att hacka honom igen. Du kanske kan hacka lösenordet!
