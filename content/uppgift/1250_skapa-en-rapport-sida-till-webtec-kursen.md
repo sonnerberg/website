@@ -3,6 +3,7 @@ author: mos
 category:
     - kurs webtec
 revision:
+    "2021-09-10": "(B, mos) Byt rsync till cp -ri."
     "2021-06-15": "(A, mos) Första utgåvan."
 ...
 Skapa en rapportsida till webtec-kursen
@@ -45,10 +46,10 @@ I kursrepot finns en mall för rapportsidan i `example/report`. Du kan utgå fr�
 
 ```text
 # Gå till roten av kursrepot
-rsync -av example/report me/
+cp -ri example/report/ me/
 ```
 
-Kommandot `rsync` tar en kopia av katalogen `example/report` och sparar som `me/report`.
+Kommandot `cp` tar en kopia av katalogen `example/report` och sparar som `me/report`.
 
 
 
