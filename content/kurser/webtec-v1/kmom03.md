@@ -8,7 +8,7 @@ views:
 author:
     - mos
 revision:
-    "2021-05-20": "(PA, mos) Arbete påbörjat för webtec-v1."
+    "2021-09-10": "(PA, mos) Arbete pågår för webtec-v1."
 ...
 Kmom03/04: PHP
 ==================================
@@ -16,6 +16,10 @@ Kmom03/04: PHP
 [WARNING]
 
 **Arbete pågår**.
+
+Material till vecka 1 finns framme.
+
+Material till vecka 2 finns EJ framme.
 
 [/WARNING]
 
