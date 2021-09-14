@@ -4,6 +4,7 @@ category:
     - labbmiljo
     - make
 revision:
+    "2021-09-14": "(E, mos) Korrigera -m med install och tydliggör att ej använda windows installer."
     "2021-08-25": (D, mos) Uppdaterad i samband med PHP 8.
     "2018-10-25": (C, mos) Genomgång och smärre justeringar.
     "2016-10-28": (B, mos) Ändrade install --mode till -m på Mac.
