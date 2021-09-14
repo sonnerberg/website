@@ -5,7 +5,7 @@ author:
 category:
     - kurs webtec
 revision:
-    "2021-09-10": "(A, mos) Första utgåvan."
+    "2021-09-10": "(A, mos, marie) Första utgåvan."
 ...
 Programmera med PHP
 ===================================
