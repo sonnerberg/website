@@ -122,7 +122,10 @@ Additional files and folders:
 
 ### Lab 3 (regex) {#lab3}
 
-Laboratory to practice the basics of regex. To your help you have a [regex guide](guide/get-started-with-regex/intro).
+[INFO]
+This lab is removed 2021.
+[/INFO]
+<!-- Laboratory to practice the basics of regex. To your help you have a [regex guide](guide/get-started-with-regex/intro).
 
 Create the lab with:
 
@@ -141,7 +144,7 @@ Additional files and folders:
 | File               | Content                            |
 |--------------------|------------------------------------|
 | `cars.txt`       | text file for some of the tasks.   |
-| `cars.bash`      | bash file with helper function.   |
+| `cars.bash`      | bash file with helper function.   | -->
 
 
 
