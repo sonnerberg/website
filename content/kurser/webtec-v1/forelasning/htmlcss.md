@@ -8,8 +8,6 @@ Lektion: Skapa en responsiv webbplats med HTML och CSS
 
 En live online lektion för att komma igång med uppgiften "Skapa en responsiv webbplats med HTML och CSS".
 
-Föreläsningen spelas in och sparas här när det är klart.
-
 Föreläsningen är i två delar.
 
 Del 1 är 41 minuter lång.

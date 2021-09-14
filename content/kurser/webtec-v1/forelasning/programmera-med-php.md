@@ -1,40 +1,30 @@
 ---
 author: mos
 revision:
-    "2021-03-03": "(A, mos) Första utgåva inför kursstart HT2021."
+    "2021-09-14": "(A, mos) Första utgåva i samband med kursstart HT2021."
 ...
 Programmera med PHP
 ====================
 
-[WARNING]
-
-**Arbete pågår**.
-
-[/WARNING]
+En live online lektion för att komma igång med uppgiften "Programmera med PHP".
 
 Visa hur du kommer igång med uppgiften "Programmera med PHP".
 
-<!--
-Videon är XX minuter lång.
+Föreläsningen är i två delar.
 
-[YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
+Del 1 är 55 minuter lång.
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f06-funktioner/slide.html).
--->
+[YOUTUBE src="Nns4WBnlE2A" width=700 caption="Kom igång och lös uppgiften "Programmera med PHP", del I/II (Tisdags-Zoom med M, vecka 3, 13-14)"]
+
+Del 2 är 23 minuter lång.
+
+[YOUTUBE src="w2jVD7LR--8" width=700 caption="Kom igång och lös uppgiften "Programmera med PHP", del II/II (Tisdags-Zoom med M, vecka 3, 14-15)"]
+
 
 
 Resurser
 ------------------------
 
-Skall definieras.
+Det finns inga resurser förutom det som visas i föreläsningen.
 
-<!--
-Följande resurser används i olika omfattning i föreläsningen.
-
-* Artikel om "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)".
-
-* MySQL manualen funktioner och lagrade rutiner.
-    * [24.1 Defining Stored Programs](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)
-    * [24.2 Using Stored Routines (Procedures and Functions)](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
-    * [13.1.17 CREATE PROCEDURE and CREATE FUNCTION Statements](https://dev.mysql.com/doc/refman/8.0/en/create-procedure.html)
--->
+Det finns inget exempelprogram i kursrepot som matchar genomgången, förutom de exempelprogram som är kopplade till de föreläsningar som introducerat PHP, arrayer och funktioner.
