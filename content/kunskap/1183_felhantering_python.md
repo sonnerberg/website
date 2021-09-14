@@ -182,7 +182,7 @@ Om vi vill köra samma kod för både `ValueError` och `ZeroDivisionError`, då 
 
 ```python
     ...
-except ValueError, ZeroDivisionError:
+except (ValueError, ZeroDivisionError):
     # except blocket
     print("Antingen skrev du inte in en siffra eller så skrev du in 0. Vilket inte är OK!")
 ```
