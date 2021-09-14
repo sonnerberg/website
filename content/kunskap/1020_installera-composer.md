@@ -50,7 +50,7 @@ Denna instruktion är för dig som har Cygwin och XAMPP.
 cd $( dirname $( which php ))
 ```
 
-Hämta hem composer enligt de stegen som beskrivs i [Download Composer](https://getcomposer.org/download/).
+Hämta hem composer enligt de stegen som beskrivs i [Download Composer](https://getcomposer.org/download/). Använd inte den metoden som har ett installationsprogram för Windows.
 
 Kontrollera att du har laddat ned filen.
 
@@ -116,7 +116,7 @@ php composer.phar --version
 Bra, nu vet du att den nedladdade filen fungerar. Placera den nu i en katalog som ligger i din path.
 
 ```text
-sudo install --mode=0755 composer.phar /usr/local/bin/composer
+sudo install -m 0755 composer.phar /usr/local/bin/composer
 ```
 
 Verifiera att filen ligger på plats och att kommandot går att köra.
