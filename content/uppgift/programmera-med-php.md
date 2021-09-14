@@ -5,7 +5,7 @@ author:
 category:
     - kurs webtec
 revision:
-    "2021-09-10": "(A, mos, marie) Första utgåvan."
+    "2021-09-10": "(A, mos) Första utgåvan."
 ...
 Programmera med PHP
 ===================================
@@ -350,6 +350,8 @@ Lägg till menyvalet "A) Fibonacci".
 * Skriv ut talföljden upp till och med 55 samt summan av alla udda tal under 1.000.000 på en ny rad.
 
 Döp funktionen till `fibonacci()`.
+
+Tips: Summan blir 1089154.
 
 
 
