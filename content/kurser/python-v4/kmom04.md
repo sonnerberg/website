@@ -102,7 +102,7 @@ Titta på följande:
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom03/list`.
+1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)". De exempelprogram du gör kan du spara i ditt kursrepo under `me/kmom04/list`.
 
 
 
@@ -110,9 +110,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[Python och listor](uppgift/python-listor-v2)" för att träna på listor i Python. Spara alla filer under `me/kmom03/lab3`.
+1. Gör laborationen "[Python och listor](uppgift/python-listor-v3)" för att träna på listor i Python. Spara alla filer under `me/kmom04/lab4`.
 
-3. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v4)". Spara alla filer under `me/kmom03/marvin2`.
+3. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3-v4)". Spara alla filer under `me/kmom04/marvin3`.
 
 
 
@@ -143,4 +143,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kan du i så fall jämföra Python listor mot andra programmeringsspråk?
 * Om du gjorde uppgiften del 2 i listövningen, varför behöver man göra bytet i den specifika ordningen?
 * Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?
+* Vad tycker du om rättningssytemet Umbridge? Funkar det bra? Något vi kan förbättre?
 <!-- * Gjorde du någon av extrauppgifterna? Berätta om det arbetet isåfall. -->
