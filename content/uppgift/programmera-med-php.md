@@ -253,6 +253,8 @@ Företaget "Bäst Reklam" har en reklamkampanj, som startades upp i 1:e mars i �
 
 Lägg till menyvalet "3) Tid och datum" som ger följande utskrift.
 
+OBS! Aktuell tid ska vara dagens datum, använd date() och glöm inte att sätta tidzonerna innan.
+
 [FIGURE src=/img/webtec/php/uppgift3.png?w=c5]
 
 Döp funktionen till `printTimeAndDate()`. Tips: Antal dagar kvar på kampanjen kommer att variera beroende på dagens datum. Hur många sekunder går det på en dag?
