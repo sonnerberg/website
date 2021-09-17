@@ -227,7 +227,7 @@ För tips, leta i manualen.
 Uppgift 2: Detaljer om din PHP installation {#u2}
 -----------------------
 
-Om du i uppgift 1 använde if-sats för att anropa rätt funktion för menyvalen `main.php`, så byt ut din if-sats till en switch-sats.
+Om du i uppgift 1 använde if-sats för att anropa rätt funktion för menyvalen `main.php`, så byt ut din if-sats till en switch-sats eller varför inte en match().
 
 Lägg till menyvalet "2) Detaljer om PHP" som gör enligt följande.
 
@@ -280,7 +280,7 @@ Lägg till menyvalet "4. Stränghantering" som ger följande utskrift.
 
 Döp funktionen till `printString()`. Kopiera ovanstående variabeldeklaration inklusive dubbelfnuttarna och semikolon. Använd de inbyggda funktionerna i php för att ändra i strängen.
 
-Tips: skriv ut strängen för varje rättning du gör när du jobbar med strängen för att se om det blir som du tänkt dig. Dessa kontrollutskrifter tar du bort när du färdig sen. OBS! Det är tre fel i strängen; bland annat inledande mellanslag. Hur löser du det problemet med kommandona nedan?
+Tips: skriv ut strängen för varje rättning du gör när du jobbar med strängen för att se om det blir som du tänkt dig. Dessa kontrollutskrifter tar du bort när du färdig sen. OBS! Det är fyra fel i strängen; bland annat inledande mellanslag. Hur löser du det problemet med kommandona nedan?
 
 För tips, leta i manualen.
 
@@ -323,7 +323,7 @@ Uppgift 6: Arrayer med strängar {#u6}
 
 32,6% av nedskräpningen på stränderna var cigarettfimpar medan den är uppmätt till 64.5% i tätort, 49.9% i förort och 43.4% i parkmiljö. Det tar cirka 1-5 år för naturen att sönderdela en cigarettfimp till mikroplast (fimpens filter innehåller plast). Mikroplast kan ta 100 år innan den försvinner, om den ens gör det. Allt enligt "Håll Sverige rent".
 
-För att få reda på vad nedskräpningen på stränderna beror på, till exempel att 32.6% är cigarettfimpar, så vill vi skapa en key/value array med orsaken som key och procenten som value. Kopiera strängen nedan till din funktion och bygg ihop en key/value array. För att du ska få träna på olika iterationer, så använder du if-sats i första och foreach-sats i andra.
+För att få reda på vad nedskräpningen på stränderna beror på, till exempel att 32.6% är cigarettfimpar, så vill vi skapa en key/value array med orsaken som key och procenten som value. Kopiera strängen nedan till din funktion och bygg ihop en key/value array. För att du ska få träna på olika iterationer, så använder du for-loop i första utskriften och foreach-sats i utskriften av den sorterade arrayen.
 
 `"Cigarettfimp Snusprilla Annat Glas Metall Organiskt Papper/kartong Plast"`
 
@@ -344,7 +344,7 @@ För tips, leta i manualen.
 Extrauppgift: Fibonaccitalföljd {#u11}
 -----------------------
 
-Skapa en funktion som använder Fibonaccital, som ser ut så här 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Räkna ut summan av alla udda tal under 1.000.000 i funktionen och returnera summan.
+Skapa en funktion som använder Fibonaccital, som ser ut så här 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Räkna ut summan av alla udda Fibonaccital under 1.000.000 i funktionen och returnera summan.
 Skriv sedan ut svaret.
 
 Lägg till menyvalet "A) Fibonacci".
