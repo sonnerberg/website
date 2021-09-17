@@ -1,35 +1,64 @@
 ---
 author: mos
 revision:
-    "2021-03-03": "(A, mos) Första utgåva inför kursstart HT2021."
+    "2021-09-17": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
 Bygg en webbplats med PHP
 ====================
 
-[WARNING]
+Visa hur du kommer igång med uppgiften "Bygg en webbplats med PHP" samt förklara bakomliggande begrepp kring den kodbas vi jobbar med.
 
-**Arbete pågår**.
+Genomgången sker i en tisdags zoom.
 
-[/WARNING]
+<!--
+Föreläsningen är i två delar.
 
-Visa hur du kommer igång med uppgiften "Bygg en webbplats med PHP".
+Del 1 är 41 minuter lång.
 
-Videon är XX minuter lång.
+[YOUTUBE src="Eb2_PK7tx2M" width=700 caption="Kom igång och lös uppgiften 'responsiv' (Tisdags-Zoom med Mikael, vecka 2, 13-14)"]
 
-[YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
+Del 2 är 55 minuter lång.
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f06-funktioner/slide.html).
+[YOUTUBE src="IVOa0LFbuRI" width=700 caption="Kom igång och lös uppgiften 'responsiv', del 2/2 (Tisdags-Zoom med Mikael, vecka 2, 14-15)"]
+-->
 
 
 
 Resurser
 ------------------------
 
-Följande resurser används i olika omfattning i föreläsningen.
+Som underlag till föreläsningen används bland annat exempelprogrammet som finns i kursrepot under `example/php/pagecontroller-exercise`.
 
-* Artikel om "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)".
+Pakethantering
 
-* MySQL manualen funktioner och lagrade rutiner.
-    * [24.1 Defining Stored Programs](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)
-    * [24.2 Using Stored Routines (Procedures and Functions)](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
-    * [13.1.17 CREATE PROCEDURE and CREATE FUNCTION Statements](https://dev.mysql.com/doc/refman/8.0/en/create-procedure.html)
+* [Composer](https://getcomposer.org/) och [Packagist](https://packagist.org/)
+
+Koncept och strukturer
+
+* Sidkontroller
+    * Design pattern for [Page Controller](https://martinfowler.com/eaaCatalog/pageController.html) by Martin Fowler
+* Vyer
+    * [Understanding MVC Views in PHP](https://stackoverflow.com/a/16596704/341137)
+
+Design princip
+
+* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+* [Don't repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+* [KISS principle](https://en.wikipedia.org/wiki/KISS_principle)
+
+Webbteknologier
+
+* HTML formulär
+    * [MDN on form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+* [GET](https://www.php.net/manual/en/reserved.variables.get.php)
+* [POST](https://www.php.net/manual/en/reserved.variables.post.php)
+* [SESSION](https://www.php.net/manual/en/reserved.variables.session.php)
+* [COOKIE](https://www.php.net/manual/en/reserved.variables.cookies.php)
+
+Validatorer
+
+* [phpcs](https://github.com/squizlabs/PHP_CodeSniffer/wiki)
+* [phpmd](https://phpmd.org/)
+* [phpstan](https://phpstan.org/)
+    * [PHPStan: Find Bugs In Your Code Without Writing Tests!](https://phpstan.org/blog/find-bugs-in-your-code-without-writing-tests)
+* [psalm](https://psalm.dev/)

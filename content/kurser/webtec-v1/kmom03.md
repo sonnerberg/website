@@ -8,22 +8,10 @@ views:
 author:
     - mos
 revision:
-    "2021-09-10": "(PA, mos) Arbete pågår för webtec-v1."
+    "2021-09-17": "(A, mos) Första utgåvan webtec-v1 ht21."
 ...
 Kmom03/04: PHP
 ==================================
-
-[WARNING]
-
-**Arbete pågår**.
-
-Material till vecka 1 finns framme.
-
-Material till vecka 2 finns EJ framme.
-
-[/WARNING]
-
-<!-- stop-->
 
 Vi lär oss programmeringsspråket PHP och hur man programmerar i det via vanliga programmeringskonstruktioner som variabler, if-satser, loopar, datastrukturer som arrayer och vi organiserar koden i filer och funktioner.
 
@@ -101,13 +89,13 @@ https://github.com/phan/phan/
 
 ### Vecka 2: Webbplats med PHP {#v2}
 
-Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
+<s>Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.</s>
 
-* [PHP sidkontroller och vyer](./../forelasning/php-sidkontroller-vyer)
-* [PHP och HTML formulär](./../forelasning/php-html-formular)
-* [PHP, cookies och sessioner](./../forelasning/php-cookie-session)
+* <s>[PHP sidkontroller och vyer](./../forelasning/php-sidkontroller-vyer)</s>
+* <s>[PHP och HTML formulär](./../forelasning/php-html-formular)</s>
+* <s>[PHP, cookies och sessioner](./../forelasning/php-cookie-session)</s>
 
-Delta i lektionen som förbereder dig för veckans uppgift.
+Delta i lektionen som förbereder dig för veckans uppgift. Lektionen kommer även täcka det som ovan föreläsningar var tänkta att täcka.
 
 * I lektionen "[Bygg en webbplats med PHP](./../forelasning/bygg-en-webbplats-med-php)" får du hjälp att komma igång med uppgiften. Lektionen spelas in.
 

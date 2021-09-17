@@ -62,6 +62,10 @@ Utför följande krav.
 
 1. I filen `onepage.html` finns det instruktioner. Utför dem för att bygga en webbsida med olika konstruktioner och olika style.
 
+<!--
+1. Sidan skall validera i Unicorn.
+-->
+
 1. Besvara följande frågor i din redovisningstext.
 
     * Berätta hur det gick att lösa uppgiften, var något extra svårt, lurigt, krångligt eller flöt det på smidigt?

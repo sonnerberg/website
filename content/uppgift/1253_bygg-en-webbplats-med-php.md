@@ -3,16 +3,20 @@ author: mos
 category:
     - kurs webtec
 revision:
-    "2021-06-15": "(A, mos) Första utgåvan."
+    "2021-09-17": "(A, mos) Första utgåvan."
 ...
 Bygg en webbplats med PHP
 ===================================
 
-Du skall utgå från en webbplats du byggt tidigare i kursen och strukturera om den så att den blir byggt med hjälp av PHP.
+Du kommer få en befintlig struktur till en webbplats som är byggd med PHP, sidkontroller och vyer enligt en bestämd katalogstruktur, inklusive ett antal testverktyg och någon extern modul som du installerar med composer.
 
-Du skall även utveckla nya webbsidor till din webbplats för att pröva konstruktioner såsom GET, POST, SESSION och COOKIE.
+Utmaningen är att förstå strukturen, inse hur den är uppbyggd och förändra samt bygga vidare på webbplatsens innehåll. Fokus är på hur PHP-koden används för att skapa en struktur där webbplatser kan byggas på ett mer effektivt sätt, där delar återanvänds på ett effektivt sätt.
+
+Du kommer jobba med koncept såsom HTML formulär, GET, POST, SESSION och COOKIE.
 
 <!--more-->
+
+[FIGURE src=img/webtec/session/sample.png caption="Så är ser webbplatsen ut du skall jobba med, men det är den bakomliggande strukturen som är det intressanta."]
 
 
 
@@ -21,14 +25,22 @@ Förkunskaper {#forkunskaper}
 
 Du har utfört uppgiften "Skapa en responsiv webbplats med HTML och CSS".
 
-Du har grundläggande kunskap om hur man bygger webbplatser med PHP.
+Du har grundläggande kunskap om PHP, arrayer och funktioner.
+
+Du har installerat PHP och composer i din path.
+
+Du är medveten om begreppen sidkontroller och vyer och hur det används för att bygga en webbplats.
+
+Du har grundläggande kunskap om begreppen HTML formulär, GET, POST, SESSION och COOKIE.
 
 
 
-<!--
 Genomgång {#genom}
 ------------------------
 
+Det finns en genomgång "[Bygg en webbplats med PHP](kurser/webtec-v1/forelasning/bygg-en-webbplats-med-php)" som hjälper dig att förbereda dig inför uppgiften.
+
+<!--
 Här är en video som "pratar" dig igenom uppgiftens upplägg och visar hur du kommer igång.
 
 [YOUTUBE src="gKzwQTG9eCI" width=700 caption="Kurs mvc kmom03 tisdagsgenomgång, del 3/3 uppgiften (Zoom med Mikael)."]
@@ -39,45 +51,165 @@ Här är en video som "pratar" dig igenom uppgiftens upplägg och visar hur du k
 Introduktion och förberedelse {#intro}
 -----------------------
 
-Du har sedan tidigare utvecklat en webbplats i `me/htmlcss`. Du kan utgå från den och dess innehåll för att nu tillföra PHP för att bygga din webbplats och kod mer dynamiskt.
+Uppgiften består av två delar och båda delarna skall utföras.
+
+1. Övningsuppgift. Lär dig strukturen och koncepten, träna.
+
+1. Uppgift. Bygg en egen lösning.
+
+Du sparar alla dina filer i katalogen `me/session`.
+
+Gör ofta `dbwebb publish` för att validera och testa om din webbplats fungerar på studentservern.
+
+Använd `dbwebb publishpure` för att publicera snabbare och få korrekta felmeddelande som pekar på rätt rader i din kod.
 
 
 
-Krav {#krav}
+Övningsuppgift {#ova}
 -----------------------
+
+Du skall ta en kopia av en befintlig webbplats och undersöka den samt genomföra ett antal uppgifter som hjälper dig att undersöka och förstå kodbasen.
+
+
+
+### Kopiera {#kopiera}
+
+Börja med att kopiera kodbasen du skall jobba med.
+
+```
+# Gå till roten av ditt kursrepo
+cp -ri example/php/pagecontroller-exercise/* me/session/
+cd me/session
+```
+
+
+
+### Installera med composer {#composer}
+
+Installera externa resurser och utvecklingsverktyg med composer.
+
+```
+composer update
+```
+
+Katalogen `vendor/` skapades tillsammans med filen `composer.lock`.
+
+
+
+### Kör testverktygen {#test}
+
+Kör testverktygen för att se om kodbasen är felfri.
+
+```
+composer test-hard
+```
+
+När du nu utvecklar så räcker det om du kör följande testsuite.
+
+```
+composer test
+```
+
+Öppna filen `composer.json` för att se vilka testverktyg som körs. Du kommer bland annat att hitta phpcs och phpmd.
+
+
+
+### Bekanta dig med webbplatsen {#bekant}
+
+Öppna katalogen du står i(`me/session`) i din texteditor och kika igenom vilka filer som finns där. Börja titta på filen `public/home.php`.
+
+Peka sedan din webbläsare på `public/home.php` för att börja bekanta dig med webbplatsen och hur sidan ser ut när den renderas.
+
+Använd navbaren och testa alla sidorna och försök förstå vad de visar.
+
+Använd texteditorn för att försöka finna hur sidornas struktur och innehåll byggs upp.
+
+
+
+### Lös kraven {#los}
+
+I filen `README.md` finns de uppgifter som du skall göra. Jobba igenom dem.
+
+Det finns även frågor som du skall fundera på och besvara. Det räcker om du kan besvara dem för dig själv. Lyckas du inte så frågar du i chatten.
+
+Om någon av uppgifterna är för svåra så är det tillåtet att hoppa över en punkt eller två. Mer borde inte hoppas över.
+
+
+
+Uppgift {#uppgift}
+-----------------------
+
+Du skall utveckla ett spel som heter "Guess My Number" till din webbplats som du jobbat med i övningsuppgiften. Du skall använda de teknikerna du lärt dig i övningsuppgiften.
+
+
+
+### Läs om spelet {#las}
+
+Du kan provspela en variant av spelet på "[Guess My Number](https://www.mathsisfun.com/games/guess_number.html)".
+
+Du kan läsa om tankarna bakom spelet i artikeln "[Guess My Number 3-5](https://mathsolutions.com/ms_classroom_lessons/guess-my-number-2/)".
+
+
+
+### Hur man spelar {#hur}
+
+Man kommer till en sida där man kan påbörja spelet genom att klicka på en knapp.
+
+När man börjar så slumpar datorn fram ett tal mellan 1 till 100.
+
+Därefter kan du gissa på det nummer som datorn slumpade fram. Efter varje gissning berättar datorn om du har "rätt", "för lågt" eller "för högt".
+
+När du gissat rätt avslutas spelet och du får ett "Grattis" meddelande och du kan inte göra fler gissningar.
+
+Det skall finnas en knapp som heter "Tjuvkika" och när man klickar på den får man se numret som datorn slumpat fram.
+
+Det skall finnas en knapp där man kan nollställa ett pågående spel och börja om igen.
+
+
+
+### Varianter på spelet {#hur}
+
+Det kan vara hårdkodat att spelet alltid fungerar mellan 1 till 100, eller så bygger du ett formulär där användaren kan ange mellan vilka tal som datorn skall slumpa fram ett.
+
+Du kan lägga till en checkbox som aktiverar en hårdare inställning "max gissningar" på spelet där man tillåter ett visst maxtal på antalet gissningar. Fundera om detta passar bäst i en cookie eller i sessionen.
+
+Håll koll på hur lång tid det tar att spela klart spelet och spara användares bästa tid i en cookie.
+
+
+
+### Krav {#krav}
 
 Utför följande krav.
 
-1. Spara alla filerna i ditt kursrepo under `me/session`.
+1. Lägg till en sidkontroller `game.php`. Placera den i din navbar under "Guess".
 
-1. Bygg om webbplatsen så att den körs som PHP-sidor. Första sidan skall heta `index.php`.
+1. Använd POST och processingsidor med redirect.
 
-1. Organisera din PHP-kod i filer och funktioner där det är lämpligt.
+1. Speldata sparas i sessionen.
 
-1. Organisera webbplatsen enligt konceptet sidkontroller och vyer.
+1. Välj om du skriver koden i sidkontrollern eller i vyerna, bestäm det som känns lämpligast.
 
-1. Skapa en webbsida som sparar ett datum för senaste tillfället då du besökte sidan. Visa upp datumet, om det finns, annars skriv ut "du har inte besökt denna webbsidan tidigare". Avsluta med att spara tiden för det senaste besöket i din cookie.
+1. Man skall kunna starta spelet.
 
-1. Skapa en webbsida som kan radera/förstöra din cookie.
+1. Man skall kunna starta om ett pågående spel.
 
-1. Skapa en webbsida som sparar information i sessionen och visar upp det. Varje gång man laddar om sidan skall det synas att informationen i sessionen ökas, till exempel en variabel som ökas med +1.
+1. Reglerna enligt "Hur man spelar" skall vara uppfyllda.
 
-1. Skapa en webbsida som kan radera/förstöra sessionen.
+Optionella krav.
 
-1. Skapa en webbsida med ett formulär som ser ut som en sökmotor. Använd GET och i resultatsidan skriver du ut innehållet i söksträngen.
+1. Hitta på egna varianter på spelet och utöka och modifiera efter din egen förmåga, ambitionsnivå och tid som finns att tillgå.
 
-1. Skapa en webbsida med ett formulär där du skall registrera dig själv som kund (eller liknande). Använd POST med en processingsida som sparar till sessionen och gör redirect till en resultatsidan där du skriver ut innehållet från det postade formuläret i en HTML tabell.
 
-1. Kontrollera att din webbplats är fortsatt responsiv för olika bredder på webbläsaren.
 
-1. Besvara följande frågor i din redovisningstext.
+Frågor att besvara {#fragar}
+-----------------------
 
-    * Berätta hur det gick att lösa uppgiften, var något extra svårt, lurigt, krångligt eller flöt det på smidigt?
-    * Är det något som du är extra nöjd med i ditt resultat från uppgiften?
+Besvara följande frågor i din redovisningstext.
 
-<!--
-Överkurs drag & drop för att ladda upp en bild.
--->
+* Börja med att berätta hur du uppfattade övningsuppgiften och dess upplägg, var något extra svårt, lurigt, krångligt eller flöt det på smidigt?
+* Fortsätt att berätta om hur du tog dig an uppgiften. Var något extra svårt, lurigt, krångligt eller flöt det på smidigt?
+* Berätta om ditt spel, hur löste du det rent implementationsmässigt i koden?
+* Är det något som du är extra nöjd med i ditt resultat?
 
 
 
@@ -86,6 +218,8 @@ Publicera {#publicera}
 
 Avsluta uppgiften så här.
 
-1. Testa ditt resultat så att det passera de automatiska testerna med `dbwebb test session`.
+1. Dubbelkolla om din kod går igenom testerna med `composer test` och `composer test-hard`. Välj själv om du vill rätta felen eller ej.
 
-1. När du är klar kan du publicera resultatet med `dbwebb publish session`.
+1. Testa ditt resultat så att det passera de automatiska testerna med `dbwebb test session`. Det kollar mest så att dina filer är på plats.
+
+1. När du är klar kan du validera och publicera resultatet med `dbwebb publish session`. Lös eventuella valideringsfel.

@@ -62,6 +62,12 @@ Utför följande krav.
 
 1. Skapa en webbplats med tre webbsidor. Döp förstasidan till `index.html`.
 
+<!--
+1. Skapa en webbplats med tre webbsidor. Döp förstasidan till `home.html`.
+
+1. Sidorna skall validera i Unicorn.
+-->
+
 1. Alla sidor skall ha en enhetliga layout och utseende.
 
 1. Sidorna skall ha en favicon.
@@ -70,7 +76,7 @@ Utför följande krav.
 
 1. Sidorna skall ha en navbar så att man kan klicka och navigera mellan webbplatsens sidor.
 
-1. Sidorna skall ha en gemensam footer. Placera en copyright text i footern tillsammans med länkar till validatorer. Kopiera gärna de footers du gjort i onepage-uppgiften och styla dem så att det ser ut som en footer. 
+1. Sidorna skall ha en gemensam footer. Placera en copyright text i footern tillsammans med länkar till validatorer. Kopiera gärna de footers du gjort i onepage-uppgiften och styla dem så att det ser ut som en footer.
 
 1. Fyll de tre sidorna med innehåll såsom till exempel text och bilder.
     1. En av sidorna skall vara en-kolumn layout.
