@@ -344,21 +344,25 @@ För tips, leta i manualen.
 Extrauppgift: Fibonaccitalföljd {#u11}
 -----------------------
 
-Skapa en funktion som använder Fibonaccital, som ser ut så här 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Räkna ut summan av alla udda Fibonaccital under 1.000.000 i funktionen och returnera summan.
-Skriv sedan ut svaret.
+Skapa en funktion som använder Fibonaccital. De ser ut så här 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. Där varje tal är summan av de två föregående talen.
 
 Lägg till menyvalet "A) Fibonacci".
 
-* Skriv ut talföljden upp till och med 55 samt summan av alla udda tal under 1.000.000 på en ny rad.
+* Skriv ut talföljden upp till och med 55
+* Skriv ut summan av alla udda Fibonaccital under 1.000.000 på en ny rad.
 
 Döp funktionen till `fibonacci()`.
 
 Tips: Summan blir 1089154.
 
+Fibonaccitalföljder kan starta antingen på 0 eller 1. Ryktet säger att Fibonacci själv började på 1. Vill du läsa mer om Fibonaccital, se [här](https://sv.wikipedia.org/wiki/Fibonaccital).
+
 
 
 Extrauppgift: Password  {#u12}
 ---------------------
+
+Hitta tre hashade lösenord!
 
 För att komma ihåg sitt lösenord så har hemlige Arne skrivit upp det. Han är dock lurig och har skrivit upp det blandat med falska lösenord. Eftersom han blev hackad av Trazan och Banarne förra året så har han "hashat" lösenordet på tre olika sätt, för att göra det svårare att hacka för dem att hacka honom igen. Du kanske kan hacka lösenordet!
 
@@ -389,7 +393,7 @@ Försök hitta hans hashade lösenord i listan. Det finns med tre gånger med tr
 
 Lägg till menyvalet "B) Password" som skriver ut summan av de tre positionerna i `$hashArray` ovan.
 
-Döp funktionen till `printPassword()`. Kopiera variablerna ovan till din funktion.
+Döp funktionen till `printPassword()`. Kopiera variablerna ovan till din funktion. Du har rätt svar om svaret är samma som precis myndig och får ta körkort.
 
 För tips, leta i manualen.
 
