@@ -107,7 +107,7 @@ input: "Dansk"    output: "Match!"
     input: 2         output: "larger!"
     input: 2         output: "same!"
     input: 1         output: "smaller!"
-    input: hej       output: "not a number!
+    input: "hej"       output: "not a number!"
     input: 3         output: "larger!"
     input "done"
     ```
