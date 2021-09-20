@@ -46,11 +46,11 @@ $ cp -r example/json/items.json me/kmom04/data/
 Krav {#krav}
 -----------------------
 
-Du ska i den här uppgiften huvudsakligen jobba i mappen `kmom04/server/`.
+Du ska i den här uppgiften jobba i mappen `kmom04/server/`.
 
 1. Bygg en router som kan svara på "routsen" ovan. Alla svar ska vara JSON.
 
-1. Skapa en Dockerfile `kmom04/Dockerfile` och lägg till din server i arbetsmappen `/server`.
+1. Skapa en Dockerfile `Dockerfile` och lägg till din server i arbetsmappen `/server`.
 
 1. Mappen med JSON-filen ska läggas till som en volym vid exekvering av containern och vara nåbar inuti containern på sökvägen `/server/data`. Du ska till exempel kunna stå i mappen `kmom04` och köra kommandot:
 
