@@ -109,7 +109,7 @@ Taggarna för varje uppgift motsvarar själva menyvalet. För att testa Menyval 
 
     Skriv koden i `mask_string` så att `multiply_str` används för att skapa delen av strängen med `#`.
 
-    Använd också `multiply_str` i funktionen för menyval **3**.
+    Använd också `multiply_str` för att lösa menyval **3**. I `word_manipulation` anropa `multiply_str` för att bygga upp strängen.
 
 
 
