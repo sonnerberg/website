@@ -142,6 +142,8 @@ Det finns även frågor som du skall fundera på och besvara. Det räcker om du 
 
 Om någon av uppgifterna är för svåra så är det tillåtet att hoppa över en punkt eller två. Mer borde inte hoppas över.
 
+PS. Om du blir nöjd med din kod så kan du ersätta din `me/report` med denna versionen.
+
 
 
 Utmaning {#utmaning}
