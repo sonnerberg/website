@@ -323,9 +323,11 @@ Uppgift 6: Arrayer med strängar {#u6}
 
 32,6% av nedskräpningen på stränderna var cigarettfimpar medan den är uppmätt till 64.5% i tätort, 49.9% i förort och 43.4% i parkmiljö. Det tar cirka 1-5 år för naturen att sönderdela en cigarettfimp till mikroplast (fimpens filter innehåller plast). Mikroplast kan ta 100 år innan den försvinner, om den ens gör det. Allt enligt "Håll Sverige rent".
 
-För att få reda på vad nedskräpningen på stränderna beror på, till exempel att 32.6% är cigarettfimpar, så vill vi skapa en key/value array med orsaken som key och procenten som value. Kopiera strängen nedan till din funktion och bygg ihop en key/value array. För att du ska få träna på olika iterationer, så använder du for-loop i första utskriften och foreach-sats i utskriften av den sorterade arrayen.
+Ta reda på vad nedskräpningen på stränderna beror på, till exempel att 32.6% är cigarettfimpar. Återanvänd arrayen med siffrorna från uppgift 5. Kopiera strängen nedan och lägg i en ny array med orsaken. Iterera över en av arrayerna för att skapa första utskriften.
 
 `"Cigarettfimp Snusprilla Annat Glas Metall Organiskt Papper/kartong Plast"`
+
+Skapa sedan en key/value array med orsaken som key och procenten som value med hjälp av dina två arrayer. Kopiera strängen nedan till din funktion och bygg ihop en key/value array. För att se om din key/value array fungerar så kollar vi om key "Cigarettfimp" finns i den. Använd därefter en foreach-sats för att skriva ut innehållet i din sorterade key/value array.
 
 Lägg till menyvalet "6) Arrayer med strängar" som ger följande utskrift.
 
@@ -380,13 +382,13 @@ Hemliga Arnes lösenord och hans lista med hashade lösenord:
 
 ```text
 $password = "Hello2world!";
-$hashArray = array('Uryyb3jbeyq!', 'Uryyb2ibeyq!', 'Uryyb2jbey!', 'Uryyb2jbeyq!', 'Uryyb2jbeyg!',
+$hashArray = ['Uryyb3jbeyq!', 'Uryyb2ibeyq!', 'Uryyb2jbey!', 'Uryyb2jbeyq!', 'Uryyb2jbeyg!',
     '$2y$10$Nl1KcQWR.saeHZryyy4FueawpZqoyx.eXVglabfekJNecrdvULy/K',
     '$2y$1O$Nl1KcQWR.saeHZryyy4FueawpZqoyx.eXVglabfekJNecrdvULy/K',
     '$2y$10$Nl1KcQWR.saeHZryyy4FueawpZqoyx.eXVqlabfekJNecrdvULy/K',
     '$2y$10$.tCflgh5pOcG/HVf.QsXguTUkelucRBg0CGUpRhxtrBW4ZhsK6tKu',
     '$2y$10$.tCflgh5pDcG/HVf.QsXguTUkeluoRBg0CGUpRhxtrBW4ZhsK6tKu',
-    '$2y$10$.tCflgh5pDcG/HVf.QsXguTUkelucRBg0CGUpRhxtrBW4ZhsK6tKu');
+    '$2y$10$.tCflgh5pDcG/HVf.QsXguTUkelucRBg0CGUpRhxtrBW4ZhsK6tKu'];
 ```
 
 Försök hitta hans hashade lösenord i listan. Det finns med tre gånger med tre olika hashmetoder.
