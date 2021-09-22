@@ -3,6 +3,7 @@ author: mos
 category:
     - kurs webtec
 revision:
+    "2021-09-22": "(B, mos) Första delen är nu Uppgift och andra delen är en optionell Utmaning."
     "2021-09-17": "(A, mos) Första utgåvan."
 ...
 Bygg en webbplats med PHP
@@ -51,11 +52,11 @@ Här är en video som "pratar" dig igenom uppgiftens upplägg och visar hur du k
 Introduktion och förberedelse {#intro}
 -----------------------
 
-Uppgiften består av två delar och båda delarna skall utföras.
+Uppgiften består av två delar, första delen "Uppgift" är obligatorisk och andra delen "Utmaning" är optionell.
 
-1. Övningsuppgift. Lär dig strukturen och koncepten, träna.
+1. Uppgift. Lär dig strukturen och koncepten, träna på att modifiera och bygga ut en existerade webbplats.
 
-1. Uppgift. Bygg en egen lösning.
+1. Utmaning. Bygg en egen applikation som använder sig av sidkontroller, formulär och sessioner.
 
 Du sparar alla dina filer i katalogen `me/session`.
 
@@ -65,7 +66,7 @@ Använd `dbwebb publishpure` för att publicera snabbare och få korrekta felmed
 
 
 
-Övningsuppgift {#ova}
+Uppgift {#ova}
 -----------------------
 
 Du skall ta en kopia av en befintlig webbplats och undersöka den samt genomföra ett antal uppgifter som hjälper dig att undersöka och förstå kodbasen.
@@ -99,6 +100,13 @@ Katalogen `vendor/` skapades tillsammans med filen `composer.lock`.
 ### Kör testverktygen {#test}
 
 Kör testverktygen för att se om kodbasen är felfri.
+
+[INFO]
+**PS**
+
+Nedan fungerar inte felfritt på Windows/Cygwin, pröva därför istället att enbart köra `composer phpcs` som kör ett av valideringsverktygen för att kolla så du följer kodstandarden. I övrigt kan du låta valideringsverktygen med composer vara tills det är löst.
+
+[/INFO]
 
 ```
 composer test-hard
@@ -136,7 +144,7 @@ Om någon av uppgifterna är för svåra så är det tillåtet att hoppa över e
 
 
 
-Uppgift {#uppgift}
+Utmaning {#utmaning}
 -----------------------
 
 Du skall utveckla ett spel som heter "Guess My Number" till din webbplats som du jobbat med i övningsuppgiften. Du skall använda de teknikerna du lärt dig i övningsuppgiften.
@@ -206,9 +214,10 @@ Frågor att besvara {#fragar}
 
 Besvara följande frågor i din redovisningstext.
 
-* Börja med att berätta hur du uppfattade övningsuppgiften och dess upplägg, var något extra svårt, lurigt, krångligt eller flöt det på smidigt?
-* Fortsätt att berätta om hur du tog dig an uppgiften. Var något extra svårt, lurigt, krångligt eller flöt det på smidigt?
-* Berätta om ditt spel, hur löste du det rent implementationsmässigt i koden?
+* Börja med att berätta hur du uppfattade uppgiften och dess upplägg, var något extra svårt, lurigt, krångligt eller flöt det på smidigt?
+    * Hur uppfattar du den strukturen som finns för att skapa webbsidorna?
+* Fortsätt att berätta om du tog dig an utmaningen. Var något extra svårt, lurigt, krångligt eller flöt det på smidigt?
+    * Berätta om ditt spel, hur löste du det rent implementationsmässigt i koden?
 * Är det något som du är extra nöjd med i ditt resultat?
 
 
