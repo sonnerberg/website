@@ -6,28 +6,53 @@ revision:
 Bygg en webbplats med PHP
 ====================
 
-Visa hur du kommer igång med uppgiften "Bygg en webbplats med PHP" samt förklara bakomliggande begrepp kring den kodbas vi jobbar med.
+Visa hur du kommer igång med uppgiften 'Bygg en webbplats med PHP' samt förklara bakomliggande begrepp kring den kodbas vi jobbar med.
 
 Genomgången sker i en tisdags zoom.
 
-<!--
-Föreläsningen är i två delar.
+Genomgången/föreläsningen är i fem delar.
 
-Del 1 är 41 minuter lång.
+Föreläsningarna bygger på koden som finns i exempelrepot under [`example/php/pagecontroller/step*`](https://github.com/dbwebb-se/webtec/tree/main/example/php/pagecontroller). Exempelkoden är uppdelad i step1 - step9 och varje step har en förklarande text i README.md.
 
-[YOUTUBE src="Eb2_PK7tx2M" width=700 caption="Kom igång och lös uppgiften 'responsiv' (Tisdags-Zoom med Mikael, vecka 2, 13-14)"]
+Första delen ger bakgrunden till hur PHP används i webbplatser via exempelkoden step1 (och step2).
 
-Del 2 är 55 minuter lång.
+Del 1 är 46 minuter lång.
 
-[YOUTUBE src="IVOa0LFbuRI" width=700 caption="Kom igång och lös uppgiften 'responsiv', del 2/2 (Tisdags-Zoom med Mikael, vecka 2, 14-15)"]
--->
+[YOUTUBE src="2R_bIZBae0g" width=700 caption="Kom igång och lös uppgiften 'Bygg en webbplats med PHP', del I/V (Tisdags-Zoom, vecka 2, 10-11)"]
+
+Andra delen hanterar step2 (sammanfattning) och step3, step4 och step5 som ger en grundstruktur och konceptet om vyer.
+
+Del 2 är 48 minuter lång.
+
+[YOUTUBE src="V6wVglmO2iA" width=700 caption="Kom igång och lös uppgiften 'Bygg en webbplats med PHP', del II/V (Tisdags-Zoom, vecka 2, 11-12)"]
+
+Tredje delen inleds med step7 som hanterar content i separata filer och fortsätter sedan med step8 som hanterar HTML formulär med GET och POST.
+
+Del 3 är 42 minuter lång.
+
+[YOUTUBE src="rl1L8vaNYEs" width=700 caption="Kom igång och lös uppgiften 'Bygg en webbplats med PHP', del III/V (Tisdags-Zoom, vecka 2, 13-14)"]
+
+Fjärde delen hanterar step9 med cookies och sessioner samt processingsidor.
+
+Del 4 är 22 minuter lång.
+
+[YOUTUBE src="a_0UWHfU_AM" width=700 caption="Kom igång och lös uppgiften 'Bygg en webbplats med PHP', del IV/V (Tisdags-Zoom, vecka 2, 14-14:30)"]
+
+Femte delen hanterar uppgiften och hur man kommer igång med den.
+
+Del 5 är 40 minuter lång.
+
+[YOUTUBE src="Z-8xl1KcmHI" width=700 caption="Kom igång och lös uppgiften 'Bygg en webbplats med PHP', del II/V (Tisdags-Zoom, vecka 2, 11-12)"]
 
 
 
 Resurser
 ------------------------
 
-Som underlag till föreläsningen används bland annat exempelprogrammet som finns i kursrepot under `example/php/pagecontroller-exercise`.
+Som underlag till föreläsningen används bland annat exempelprogramm som finns i kursrepot.
+
+1. `example/php/pagecontroller-exercise` som är grunden för uppgiften.
+1. `example/php/pagecontroller` som visar steg för steg hur man bygger upp kodstrukturen.
 
 Pakethantering
 

@@ -95,6 +95,8 @@ https://github.com/phan/phan/
 * <s>[PHP och HTML formulär](./../forelasning/php-html-formular)</s>
 * <s>[PHP, cookies och sessioner](./../forelasning/php-cookie-session)</s>
 
+Ovan föreläsningar ersätts av en längre lektion.
+
 Delta i lektionen som förbereder dig för veckans uppgift. Lektionen kommer även täcka det som ovan föreläsningar var tänkta att täcka.
 
 * I lektionen "[Bygg en webbplats med PHP](./../forelasning/bygg-en-webbplats-med-php)" får du hjälp att komma igång med uppgiften. Lektionen spelas in.
