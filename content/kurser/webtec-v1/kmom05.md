@@ -72,7 +72,7 @@ Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligar
 
 Jobba på egen hand igenom följande artikel/övning.
 
-* [Kom igång med SQL och databasen SQLite med terminalklienten sqlite3](kunskap/kom-igang-med-sql-och-databasen-sqlite-med-terminalklienten-sqlite3) (**artikeln är under bearbetning och uppdatering inför ht21**)
+* [Kom igång med SQL och databasen SQLite med terminalklienten sqlite3](kunskap/kom-igang-med-sql-och-databasen-sqlite-med-terminalklienten-sqlite3)
 
 Delta i lektionen som förbereder dig för veckans uppgift.
 
