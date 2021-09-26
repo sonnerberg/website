@@ -61,7 +61,7 @@ Följande är förslag till en grov och övergripande studieplan för att genomf
 
 
 
-### Del 1: SQL och SQLite {#v1}
+### Vecka 1: SQL och SQLite {#v1}
 
 Börja med att installera terminalklienten `sqlite3` som låter dig jobba mot en SQLite databas.
 
@@ -92,7 +92,7 @@ Genomför veckans uppgift.
 
 
 
-### Del 2: Terminalprogram och webbplats med PHP PDO, SQL och SQLite {#v2}
+### Vecka 2: Terminalprogram och webbplats med PHP PDO, SQL och SQLite {#v2}
 
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
