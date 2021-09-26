@@ -8,14 +8,16 @@ views:
 author:
     - mos
 revision:
-    "2021-05-20": "(PA, mos) Arbete påbörjat för webtec-v1."
+    "2021-09-26": "(A, mos) Släppt material för vecka 1."
 ...
 Kmom05/06: SQL
 ==================================
 
 [WARNING]
 
-**Arbete pågår**.
+**Vecka 1 - Materialet finns på plats**
+
+**Vecka 2 - Arbete pågår**.
 
 [/WARNING]
 
