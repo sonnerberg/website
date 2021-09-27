@@ -134,12 +134,14 @@ cd kmom05/marvin4
     Om årtalet som skickas in inte finns ska funktionen lyfta ett `ValueError`.
 
     ```python
+
     arguments: "Sweden", "1990"      return: 58117000.0
     ```
 
     `get_country_change_for_years(country, year1, year2)` Funktionen ska räkna ut och returnera skillnaden för ett lands utsläpp mellan två år. Första argumentet ska vara en sträng med landets namn, andra argumentet en sträng med ett år som en sträng och tredje argumentet en sträng med ett år som en sträng. Räkna ut med hur många procent utsläppen har ändrats mellan `year1` och `year2` och avrunda till två decimaler. Använd dig av funktionen `get_country_year_data_megaton` för att hämta ut utsläpps datan för de båda åren.
 
     ```python
+
     arguments: "Sweden", "1990", "2017"       return: -12.46 # Utsläppen har minskat med -12.46% från 1990 till 2017
     ```
 
@@ -192,6 +194,8 @@ cd kmom05/marvin4
     "<år>: <antal invårare för det året>"
     "<år>-<år>: <förändring av utsläpp i procent>"
     ```
+
+    Om invånare data saknas (är `None`) skriv ut `"Missing population data!"` istället för `<år>: <antal invånare>`.
 
     Övrig formatering runt om kvittar, men de specifika värdena ska använda formateringen ovanför.
 
