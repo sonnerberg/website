@@ -51,7 +51,7 @@ Det finns inga artiklar.
 
 Titta på följande:
 
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
+1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 3.
 
 2. De videor som följer med och kompletterar kurslitteraturen.
     * [Python for Informatics: Chapter 4 - Functions part 1](https://youtu.be/5Kzw-0-DQAk?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p)
