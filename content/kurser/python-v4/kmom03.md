@@ -63,6 +63,8 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
+1. Läs den [feedback jag gav](https://gist.github.com/AndreasArne/cecb1fb4dbc1ec7c83c57a8d2f678012) en student på labbuppgiften 4.2 i lab2.
+
 1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Chapter Debugging
 
