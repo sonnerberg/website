@@ -70,7 +70,7 @@ Skapa en fil `src/database.php` där du placerar kod för att koppla dig mot dat
 
 Detta är en god struktur och separation av din kod. Du kommer märka att denna strukturen gör det enklare att återanvända kod från denna uppgiften till nästkommande uppgift där du skall bygga en webbklient mot databasen.
 
-I din `config.php` sparar du dina DSN som berättar hur man kopplar sig till d atabasen. Du kan ha flera DSN och du kan koppla dig till flera databaser.
+I din `config.php` sparar du dina DSN som berättar hur man kopplar sig till databasen. Du kan ha flera DSN och du kan koppla dig till flera databaser.
 
 En DSN är en sträng och den kan definieras som en konstant och se ut så här.
 

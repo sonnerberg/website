@@ -323,7 +323,7 @@ Uppgift 6: Arrayer med strängar {#u6}
 
 32,6% av nedskräpningen på stränderna var cigarettfimpar medan den är uppmätt till 64.5% i tätort, 49.9% i förort och 43.4% i parkmiljö. Det tar cirka 1-5 år för naturen att sönderdela en cigarettfimp till mikroplast (fimpens filter innehåller plast). Mikroplast kan ta 100 år innan den försvinner, om den ens gör det. Allt enligt "Håll Sverige rent".
 
-Ta reda på vad nedskräpningen på stränderna beror på, till exempel att 32.6% är cigarettfimpar. Återanvänd arrayen med siffrorna från uppgift 5. Kopiera strängen nedan och lägg i en ny array med orsaken. Iterera över en av arrayerna för att skapa första utskriften.
+Ta reda på vad nedskräpningen på stränderna beror på, till exempel att 32.6% är cigarettfimpar. Återanvänd arrayen med siffrorna från uppgift 5. Kopiera strängen nedan och lägg i en ny array med orsaken. Iterera över en av arrayerna med en for-loop för att skapa första utskriften.
 
 `"Cigarettfimp Snusprilla Annat Glas Metall Organiskt Papper/kartong Plast"`
 

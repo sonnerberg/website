@@ -59,7 +59,7 @@ Prepared statements och SQL injections {#sqlinjections}
 
 En feature som stöds av många databaser är "Prepared Statements". Prepared statements har ett säkert sätt att hantera argument, ett sätt som undviker säkerhetshål som SQL injections.
 
-Läs det snabbt det inledande stycket om [prepared statements och studera översiktligt exemplen](http://www.php.net/manual/en/pdo.prepared-statements.php). Där får du en kort introduktion till hur prepared statements fungerar.
+Läs snabbt det inledande stycket om [prepared statements och studera översiktligt exemplen](http://www.php.net/manual/en/pdo.prepared-statements.php). Där får du en kort introduktion till hur prepared statements fungerar.
 
 Låt oss säga några ord om säkerhetshål och SQL injections innan vi fortsätter.
 
@@ -149,7 +149,7 @@ Det bör se ut ungefär så här när du kör skriptet.
 
 [FIGURE src=image/snapvt15/pdo20-connect.png?w=w3 capition="Utskrift av resultatet från databasfrågan."]
 
-Svaret kommer som en array, där varje rad i arrayen är en rad från databasen. Det är en array som innehåller arrayer. Man kallar det även för tvådimensionell array.
+Svaret kommer som en array, där varje rad i arrayen är en rad från databasen. Det är en array som innehåller arrayer. Man kallar det även för en tvådimensionell array.
 
 Studera källkoden i exemplet och försök att skapa dig en mental bild av flödet i PHP-koden. Det som sker är följande.
 
@@ -163,7 +163,7 @@ Studera källkoden i exemplet och försök att skapa dig en mental bild av flöd
 
 Kopiera koden till din egna fil och gör ett eget exempel. Testa så att det fungerar. Detta är grunden i att koppla PHP mot en databas. Inte så svårt va?
 
-Databasfilen ligger i underkatalogen `db` och sökvägen dit är alltså `db/jetty.sqlite`.
+Databasfilen ligger i underkatalogen `db` och sökvägen dit är alltså `db/boatclub.sqlite`.
 
 En DSN är en sträng som innehåller informationen för att koppla dig till databasen. En DSN ser olika ut för varje databas. I vårt fall består den av strängen `sqlite:` följt av filens sökväg.
 
