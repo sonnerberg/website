@@ -85,9 +85,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Rainbow](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom03/rainbow.md)". Spara dina filer i `kmom03/`.
+1. Gör uppgiften "[Rainbow](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom03/01_rainbow.md)". Spara dina filer i `kmom03/`.
 
-1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom03/mepage3.md)". Spara resultatet i `me/redovisa/`.
+1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom03/02_mepage3.md)". Spara resultatet i `me/redovisa/`.
 
 
 

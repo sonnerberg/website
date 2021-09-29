@@ -96,9 +96,9 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Mera dom](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom04/dom.md)". Spara dina filer i `kmom04/`.
+1. Gör uppgiften "[Mera dom](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom04/01_dom.md)". Spara dina filer i `kmom04/`.
 
-1. Gör uppgiften "[Me page 4](https://github.com/dbwebb-se/js-v2/blob/master/exercises/kmom04/mepage4.md)". Spara resultatet i `me/redovisa/`.
+1. Gör uppgiften "[Me page 4](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom04/mepage4.md)". Spara resultatet i `me/redovisa/`.
 
 <!-- 4. Gör uppgiften ["Flytta runt Baddie på webbsidan #3"](uppgift/flytta-baddie-pa-webbsida-3). Spara koden i `me/kmom04/baddie3`. -->
 

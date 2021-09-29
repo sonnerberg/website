@@ -89,9 +89,9 @@ Titta på följande:
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Animals](https://github.com/dbwebb-se/js-v2/assignments/kmom02/animals.md)". Spara dina filer i `kmom02/`.
+1. Gör uppgiften "[Animals](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom02/01_animals.md)". Spara dina filer i `kmom02/`.
 
-1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/assignments/kmom02/mepage2.md)". Spara resultatet i `me/redovisa/`.
+1. Gör uppgiften "[Me page](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom02/02_mepage2.md)". Spara resultatet i `me/redovisa/`.
 
 
 
