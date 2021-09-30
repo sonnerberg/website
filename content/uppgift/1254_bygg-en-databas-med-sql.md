@@ -3,7 +3,8 @@ author: mos
 category:
     - kurs webtec
 revision:
-    "2021-06-15": "(A, mos) Första utgåvan."
+    "2021-09-30": "(B, mos) Felstavade filnamn, skall ha ändelse .sql."
+    "2021-09-23": "(A, mos) Första utgåvan."
 ...
 Bygg en databas med SQL
 ===================================
@@ -76,7 +77,7 @@ Utför följande krav.
 
 1. I filen `insert.sql` lägger du INSERT-satser som fyller tabellen med innehåll. Du skall ha minst 7 aktiviter i tabellen. Lägg in data så att det blir lätt att testa och prova din databas.
 
-1. Du skall nu kunna återskapa databasen genom att först köra alla kommandon i `ddl.sql` följt av `insert.ddl`. Du skall också kunna återfylla databasen genom att enbart köra filen `insert.ddl`. Provkör så att återställningen fungerar.
+1. Du skall nu kunna återskapa databasen genom att först köra alla kommandon i `ddl.sql` följt av `insert.sql`. Du skall också kunna återfylla databasen genom att enbart köra filen `insert.sql`. Provkör så att återställningen fungerar.
 
 1. I filen `dml.sql` lägger du all SQL som är relaterad till dina rapporter.
 
