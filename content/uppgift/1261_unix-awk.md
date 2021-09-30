@@ -35,7 +35,7 @@ Go to your course folder in the terminal and run the following command.
 
 ```bash
 # Move to the course folder
-cp example/awk_names.csv me/kmom03/awk/
+cp example/awk/awk_names.csv me/kmom03/awk/
 ```
 
 The file contains a lot of lines with fictitious personal information.
