@@ -252,4 +252,10 @@ Redovisning {#redovisning}
 dbwebb publishpure me
 ```
 
-5. Spela in en redovisningsvideo och lägg länken till videon i en kommentar på din inlämning i Canvas. En lagom längd på videon är 4-8 minuter, prata gärna om hur du har tänkt med din design under arbetet med projektet. Läs mer om hur du kan [spela in en redovisningsvideo](kurser/faq/slutpresentation).
+
+
+### Presentation {#presentation}
+
+**Distansstudenter:** Spela in en redovisningsvideo och lägg länken till videon i en kommentar på din inlämning i Canvas. En lagom längd på videon är 4-8 minuter, prata gärna om hur du har tänkt med din design under arbetet med projektet. Läs mer om hur du kan [spela in en redovisningsvideo](kurser/faq/slutpresentation).
+
+**Campusstudenter:** Presenterar i sal på campus under examinationsveckan i LP2. Information kommer publiceras i Canvas om detta tillfället. En lagom längd på presentationen är 4-8 minuter, prata gärna om hur du har tänkt med din design under arbetet med projektet.
