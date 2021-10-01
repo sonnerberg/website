@@ -7,6 +7,7 @@ author:
     - lew
     - nik
 revision:
+    "2021-10-01": "(D, lew) Ny version inför HT21."
     "2020-04-21": "(C, nik) Ny version inför HT20."
     "2019-02-04": "(B, mos) Uppdaterad med information från kursplan."
     "2018-12-04": "(A, mos) Kursen inrättas med namn och syfte."
@@ -23,7 +24,7 @@ Kursen **Informationssäkerhet med webbtillämpningar**, a.k.a. *itsec*, lär ut
 
 **Kursutveckling pågår**
 
-Kursstart hösten 2020.
+Kursstart hösten 2021.
 
 [/WARNING]
 
