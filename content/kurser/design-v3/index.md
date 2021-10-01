@@ -8,6 +8,7 @@ views:
        data:
             src: "image/kurs/design/ux.jpg?w=1100&h=650&crop-to-fit"
 revision:
+    "2021-10-01": "(A, nik) Landningssida för v3."
     "2020-08-25": "(A, nik) Landningssida för v3."
 ...
 Kursen design (v3)
@@ -83,7 +84,9 @@ Efter genomförd kurs skall studenten:
 Kursmoment {#kursmoment}
 ------------------------
 
-Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
+Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke.
+
+<!-- Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida. -->
 
 
 ### Kmom01: Ramverk, innehåll, style {#kmom01}

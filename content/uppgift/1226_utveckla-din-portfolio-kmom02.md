@@ -37,7 +37,7 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 
 1. Sidan ska vara hyfsat responsiv, t.ex. ingen horisontella scroll eller bilder som tar sönder flödet.
 
-1. Skriv din redovisningstext i `report/kmom02.md`.
+<!-- 1. Skriv din redovisningstext i `report/kmom02.md`. -->
 
 ### SASS-tema
 
