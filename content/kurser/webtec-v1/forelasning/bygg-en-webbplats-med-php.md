@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-10-01": "(B, mos) Lade till video från extraföreläsningen."
     "2021-09-17": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
 Bygg en webbplats med PHP
@@ -42,7 +43,7 @@ Femte delen hanterar uppgiften och hur man kommer igång med den.
 
 Del 5 är 40 minuter lång.
 
-[YOUTUBE src="Z-8xl1KcmHI" width=700 caption="Kom igång och lös uppgiften 'Bygg en webbplats med PHP', del II/V (Tisdags-Zoom, vecka 2, 11-12)"]
+[YOUTUBE src="Z-8xl1KcmHI" width=700 caption="Kom igång och lös uppgiften 'Bygg en webbplats med PHP', del 5/5 (Tisdags-zoom 14:30-15:15)"]
 
 
 
@@ -87,3 +88,34 @@ Validatorer
 * [phpstan](https://phpstan.org/)
     * [PHPStan: Find Bugs In Your Code Without Writing Tests!](https://phpstan.org/blog/find-bugs-in-your-code-without-writing-tests)
 * [psalm](https://psalm.dev/)
+
+
+
+Extra genomgång
+------------------------
+
+Veckan efter så spelades in ytterligare extra genomgångar rörande hur man jobbade med PHP i webbplatserna i den strukturen som erbjöds samt erbjöd tips till hur man jobbade med uppgfiften, vad som var viktigt och vad som kunde prioriteras lägre.
+
+Det blev tre videor som spelades in, frågestunder och när det gjordes mer avancerade saker som var optionella, de spelades inte in.
+
+Första delen är 56 minuter lång.
+
+Denna del tar uppgiftens första steg relativt långsamt och pratar om katalogstrukturen och hur man gör en sidkontroller. Det ger en viktig bas till resten av uppgiften och hjälper dig att sortera bort saker som inte är absolut nödvändiga för att klara uppgiften.
+
+[YOUTUBE src="bBrqL4EdZrI" width=700 caption="Extra PHP vecka 4: Grunden i katalogstrukturen och sidkontroller (10-11)"]
+
+
+
+Andra delen är 9 minuter lång.
+
+Mikael förbättrar strukturen för processingsidan för sessionen och flyttar koden från en templatefil/vy till själva sidkontrollern.
+
+[YOUTUBE src="7wHwwb8QLu0" width=700 caption="Extra PHP vecka 4: En bättre processingsida för sessionen (11:15-11:30)"]
+
+
+
+Tredje delen är 9 minuter lång.
+
+Mikael visar hur ett enkelt histogram kan skapas med sessionen samt visar hur man kan jobba med och debugga en processing sida. Resultat räcker för att klara av denna delen av uppgiften i vecka 4.
+
+[YOUTUBE src="MrXGFBk0DkI" width=700 caption="Extra PHP vecka 4: Lösningen till vecka 4 - Histogram + Debugga en processingsida (11:45-12:30)"]

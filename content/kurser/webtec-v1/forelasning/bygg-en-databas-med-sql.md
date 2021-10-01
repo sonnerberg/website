@@ -1,26 +1,29 @@
 ---
 author: mos
 revision:
-    "2021-03-03": "(A, mos) Första utgåva inför kursstart HT2021."
+    "2021-10-01": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
 Bygg en databas med SQL
 ====================
 
-[WARNING]
+Visa hur du kommer igång med uppgiften "Bygg en databas med SQL" med terminalklienten `sqlite3` och SQL. Vi inleder med att jobba igenom övningen "Kom igång med SQL och databasen SQLite med terminalklienten sqlite3".
 
-**Arbete pågår**.
+Genomgången sker i en tisdags zoom.
 
-[/WARNING]
+Genomgången/föreläsningen är i två delar.
 
-Visa hur du kommer igång med uppgiften "Bygg en databas med SQL".
+Första delen jobbar vi främst igenom artikeln/övningen "Kom igång med SQL och databasen SQLite med terminalklienten sqlite3".
 
-<!--
-Videon är XX minuter lång.
+Del 1 är 54 minuter lång.
 
-[YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
+[YOUTUBE src="VsY425TWM5o" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 1/2 (Tisdags-zoom 13-14)"]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f06-funktioner/slide.html).
--->
+Andra delen visar främst hur vi kommer igång med veckans uppgift "Bygg en databas med SQL".
+
+Del 2 är 43 minuter lång.
+
+[YOUTUBE src="V6wVglmO2iA" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 2/2 (Tisdags-zoom 14-15)"]
+
 
 
 Resurser
