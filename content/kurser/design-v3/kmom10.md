@@ -35,7 +35,7 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
+När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning-quiz).
 
 För att få högsta betyg på kursen krävs det att du samlar poäng från samtliga optionella krav i denna kravspec.
 
@@ -252,4 +252,10 @@ Redovisning {#redovisning}
 dbwebb publishpure me
 ```
 
-5. Spela in en redovisningsvideo och lägg länken till videon i en kommentar på din inlämning i Canvas. En lagom längd på videon är 4-8 minuter, prata gärna om hur du har tänkt med din design under arbetet med projektet. Läs mer om hur du kan [spela in en redovisningsvideo](kurser/faq/slutpresentation).
+
+
+### Presentation {#presentation}
+
+**Distansstudenter:** Spela in en redovisningsvideo och lägg länken till videon i en kommentar på din inlämning i Canvas. En lagom längd på videon är 4-8 minuter, prata gärna om hur du har tänkt med din design under arbetet med projektet. Läs mer om hur du kan [spela in en redovisningsvideo](kurser/faq/slutpresentation).
+
+**Campusstudenter:** Presenterar i sal på campus under examinationsveckan i LP2. Information kommer publiceras i Canvas om detta tillfället. En lagom längd på presentationen är 4-8 minuter, prata gärna om hur du har tänkt med din design under arbetet med projektet.
