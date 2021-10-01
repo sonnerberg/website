@@ -5,6 +5,7 @@ author:
     - lew
     - nik
 revision:
+    "2021-10-01": "(C, klw) Uppdaterad inför LP2 HT21."
     "2020-10-13": "(B, nik) Uppdaterad inför HT20, me-sida borttagen."
     "2019-10-21": "(A, lew) First edition for HT19."
 ...
@@ -26,11 +27,11 @@ Föreläsningar & Seminarium {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10:00 (2020-11-10) via Zoom
+* 10:00 (2021-11-08) via Zoom
 
 Du ska även medverka i seminariet kring privacy:
 
-* 10:00-12:00 (2020-11-13) via Zoom
+* 10:00-12:00 (2021-11-12) via Zoom
 
 
 Läs &amp; Studera  {#lasanvisningar}
@@ -53,7 +54,7 @@ Uppgifter  {#uppgifter}
 
 *(ca: 6-10 studietimmar)*
 
-1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal (virtuellt ht20). Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
+1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal (eller virtuellt). Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
 
 <!-- 1. Fyll på med redovisningstexten i din me-sida. -->
 

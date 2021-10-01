@@ -3,6 +3,7 @@ author:
     - atb
     - nik
 revision:
+    "2021-10-01": "(B, lew) Uppdatering för ht21"
     "2020-11-02": "(A, nik) Uppdatering för ht20"
 ...
 Kmom04: Sårbarhetsanalys
@@ -39,7 +40,7 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 13:15 (2020-12-03) via Zoom (länk på Canvas)
+* 10.00 (2021-12-03) via Zoom (länk på Canvas)
 
 Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------

@@ -4,6 +4,7 @@ author:
     - lew
     - nik
 revision:
+    "2021-10-01": "(F, lew) Uppdatering inför HT21."
     "2020-11-25": "(E, mos) Förtydliga om redovisningen."
     "2020-11-20": "(C, mos) Lade till tips om CTF-kanaler."
     "2020-11-16": "(B, mos) Läsanvisningar om hacker writeups."
@@ -35,12 +36,12 @@ Föreläsningar &amp; Seminarier {#forelasningar}
 
 *(ca: 8-10 studietimmar)*
 
-Du ska medverka vid följande Zoom-tillfällen som alla hanterar olika aspekter ur det område som kmomet behandlar.
+Du ska medverka vid följande Zoom-tillfällen som alla hanterar olika aspekter ur det område som kursmomentet behandlar.
 
 Kursvecka 3:
 
-* 10:00 (2020-11-16) via Zoom med Mikael som berättar om verkliga attacker och vad som hände.
-* 13:00 (2020-11-20) via Zoom Mikael pratar om OWASP Top Ten och vad de innebär för dig som programmerare.
+* 10:00 (2021-11-15) via Zoom med `<INSERT TEACHER>` som berättar om `<INSERT SUBJECT>`.
+* 10:00 (2021-11-19) via Zoom `<INSERT TEACHER>` pratar om OWASP Top Ten och vad de innebär för dig som programmerare.
 
 <!--
 Hur hantera attaker när de är ett faktum?
@@ -54,8 +55,8 @@ klick, ransomware, social attacks
 
 Kursvecka 4:
 
-* 10:00 (2020-11-23) via Zoom med Vidar om "Hur man kan hacka"
-* 10:00 (2020-11-27) via Zoom med Anton om "Vulnerability Assesment, Threat modeling and Attack trees"
+* 10:00 (2021-11-22) via Zoom med `<INSERT TEACHER>` om `<INSERT SUBJECT>`.
+* 10:00 (2021-11-26) via Zoom med Anton om "Vulnerability Assesment, Threat modeling and Attack trees"
 
 
 
@@ -89,7 +90,7 @@ https://panamapapers.sueddeutsche.de/en/
 Kanske finns en video?
 -->
 
-Mer läsanvisningar presenteras i samband med seminarierna.
+<!-- Mer läsanvisningar presenteras i samband med seminarierna. -->
 
 
 

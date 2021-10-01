@@ -3,6 +3,7 @@ author:
     - atb
     - nik
 revision:
+    "2021-10-01": "(C, lew) Uppdaterad inför HT21"
     "2020-12-10": "(B, nik) Uppdaterad inför HT20"
     "2019-11-27": "(A, nik) Omskrivning av uppgift"
     "2018-12-04": "(PA1, mos) Arbetskopia."
@@ -21,6 +22,8 @@ Förkunskapskrav {#forkunskapskrav}
 Du har utfört uppgifterna [Sårbarhetsanalys](/uppgift/sarbarhetsanalys).
 
 Du har medverkat på föreläsningen med Anton där han går igenom ämnet.
+
+
 
 Tekniker  {#tekniker}
 ---------------------------------
