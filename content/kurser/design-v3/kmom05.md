@@ -139,13 +139,21 @@ Läs följande om responsivitet och bilder.
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 1 studietimme)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i redovisningstexten.
+Kom ihåg att publicera din portfölj till GitHub. Använd nedanstående kommandon i terminal när du står i `me/portfolio:
 
-* Berätta kort om erfarenheterna med din undersökning av webbplatsers laddningstid och vad du kom fram till.
-* Har du några funderingar kring Cimage och dess nytta och features? Vilka bildverktyg använder du själv normalt sett?
-* Vad är din egen allmänna uppfattning kring bilder för webben, nedladdningstider, responsiva bilder och allmänt kring bildbehandling för webben?
-* Vilken är din TIL för detta kmom?
+```shell
+git push
+git push origin --tags
+```
+
+Publicera sedan till studentservern med följande kommando:
+
+```shell
+dbwebb publish me
+```
+
+Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.

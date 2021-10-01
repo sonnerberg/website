@@ -15,7 +15,7 @@ Kmom02: SASS och typografi
 
 Vi har nu en bas av en webbplats. Vi vet hur vi lägger till innehåll i webbplatsen och vi kan styla den. Låt oss då gå vidare och skapa en bättre bas för vårt tema. Temat, eller vår style, skapar vi med hjälp utav SASS, en preprocessor till CSS. Vi lär oss grunderna i SASS och hur vi bygger CSS-filer från SASS-konstruktioner.
 
-Vi försöker bygga en modulär struktur av SASS-filer som vi delar in i SASS-moduler. Det skapar en grund som blir enklare att återanvända i andra 
+Vi försöker bygga en modulär struktur av SASS-filer som vi delar in i SASS-moduler. Det skapar en grund som blir enklare att återanvända i andra
 sammanhang men även enklare att jobba med. Vi testar att överföra vårt tema ifrån kmom01 till SASS. Därefter bygger vi vidare på vårt tema och samtidigt fördelar vi koden i olika SASS-moduler.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -147,18 +147,25 @@ När du är helt klar med uppgiften så är det ett par saker som du kan kolla f
     * Kolla commits och taggar (högre än 2.\*.\*)
 
 
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 1 studietimme)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i redovisningstexten.
+Kom ihåg att publicera din portfölj till GitHub. Använd nedanstående kommandon i terminal när du står i `me/portfolio:
 
-* Vad tycker du om SASS än så länge?
-* Är du bekant med Node, npm eller npm scripts (t.ex. `npm run lint`) sedan tidigare? Vad anser du om det?
-* Hur kändes det att kompilera SASS till CSS, var det något du reflekterade över?
-* Kommentera ditt tema, hur kan man beskriva dess design och hade du några planer på "design" när du byggde ditt tema?
-* Valde du att dela upp din kod? Vilka uppdelningar valde du att göra?
-* Vilken är din TIL för detta kmom?
+```shell
+git push
+git push origin --tags
+```
+
+Publicera sedan till studentservern med följande kommando:
+
+```shell
+dbwebb publish me
+```
+
+Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.

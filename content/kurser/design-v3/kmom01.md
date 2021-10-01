@@ -10,6 +10,7 @@ author:
 #         data:
 #             src: "image/snapht18/design-kmom01-me.png?w=1100&h=360&a=12,10,40,2&f1=pixelate,8,2&cf&nc&f2=colorize,0,30,0,0"
 revision:
+    "2021-10-01": (C, efo) Uppdaterad inför HT21, med redovisningsbeskrivning.
     "2021-08-11": (B, nik) Uppdaterad inför HT21
     "2020-08-25": (A, nik) Mall för kursmoment
 ...
@@ -129,13 +130,17 @@ Kursen har en videoserie för hur man kan jobba med Pico:
 
 *(ca: 8-10 studietimmar)*
 
+
+
 ### Övningar {#ovningar}
 
 Följande länk är en genomstegning av Portfolio-sidan. Eget testande uppmuntras.
 
-1. Läs igenom och testa med artikeln "[Vad är Pico?](kunskap/vad-ar-pico-v2)". Artikeln ligger i grund för att du ska förstå Pico's upplägg.
+1. Läs igenom och testa med artikeln "[Vad är Pico?](kunskap/vad-ar-pico-v2)". Artikeln ligger till grund för att du ska förstå Pico's upplägg.
 
 1. Jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)". Denna guide introducerar dig till Git/GitHub, ett verktyg som är branchstandard för att versionshantera kod.
+
+
 
 ### Uppgifter {#uppgifter}
 
@@ -144,6 +149,7 @@ Följande uppgift skall utföras och redovisas.
 1. Lös uppgiften "[Bygg en portfolio sida](uppgift/skapa-din-egen-portfolio)". Du skall bygga en portfolio-sida som du taggar och publicerar på GitHub. Spara allt under `me/portfolio`.
 
 1. Försäkra dig om att du har gjort `dbwebb publish portfolio` och taggat din inlämning med version 1.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
+
 
 
 Testa din inlämning {#testa}
@@ -161,19 +167,25 @@ När du är helt klar med uppgiften så är det ett par saker som du kan kolla f
     * Kolla commits och taggar
 
 
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 1 studietimme)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i redovisningstexten.
+Kom ihåg att publicera din portfölj till GitHub. Använd nedanstående kommandon i terminal när du står i `me/portfolio:
 
-* Har du jobbat med ramverk eller andra CMS:er tidigare?
-* Det blev en del nya verktyg och tekniker i labbmiljön och för att jobba med portfolio-sidan, är du bekant med någon av dem sedan tidigare?
-* Har du några förutfattade meningar, eller kanske etablerad övertygelse, inom design och användbarhet för webben?
-* Hur kändes det att göra din egna layout och styla den? Gick det bra?
-* Vilken är din TIL för detta kmom?
+```shell
+git push
+git push origin --tags
+```
 
-TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
+Publicera sedan till studentservern med följande kommando:
+
+```shell
+dbwebb publish me
+```
+
+Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.

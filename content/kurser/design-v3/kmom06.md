@@ -93,14 +93,21 @@ Dessa uppgifter skall utföras och redovisas.
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 1 studietimme)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i redovisningstexten.
+Kom ihåg att publicera din portfölj till GitHub. Använd nedanstående kommandon i terminal när du står i `me/portfolio:
 
-* Hur känns det att tänka i termer av designelement och designprinciper?
-* Finns det något speciellt du vill lyfta fram från uppgiften "Utvärdera designprinciper som webbplatser använder sig av". Vad tar du med dig från den uppgiften?
-* Gjorde du några uppdateringar till din egen sida utifrån vad du kom fram till i analysen?
-* Har du en uppfattning om "the final touch" och vad det kan vara i sammanhanget webbdesign?
-* Vilken är din TIL för detta kmom?
+```shell
+git push
+git push origin --tags
+```
+
+Publicera sedan till studentservern med följande kommando:
+
+```shell
+dbwebb publish me
+```
+
+Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.

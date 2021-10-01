@@ -88,14 +88,21 @@ I detta kursmoment jobbar vi utifrån wireframes som finns tillgängliga i "[Byg
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+*(ca: 1 studietimme)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i redovisningstexten.
+Kom ihåg att publicera din portfölj till GitHub. Använd nedanstående kommandon i terminal när du står i `me/portfolio:
 
-* Hur har det gått att jobba med CSS-Grid/Flexbox?
-* Har du jobbat med dessa tekniker sedan tidigare? Vad anser du om det?
-* Har du försökt dela upp din SASS-kod i olika moduler? Kanske har du skapat en ny modul som är din layout?
-* Valde du att göra om din sidas layout eller nöjde du dig med report sidan?
-* Vilken är din TIL för detta kmom?
+```shell
+git push
+git push origin --tags
+```
+
+Publicera sedan till studentservern med följande kommando:
+
+```shell
+dbwebb publish me
+```
+
+Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
