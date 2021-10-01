@@ -69,12 +69,14 @@ Gör följande:
 
 ### Video  {#video}
 
-Titta på följande: TBD
+Titta på följande videos om du känner dig ringrostig på HTML och CSS. Om du inte har förkunskaper i de teknikerna är det en klar fördel att titta på dessa.
 <!--
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång. -->
 
-1. Titta på Mikael när han berättar om [HTML](https://www.youtube.com/watch?v=8QMveCqpegw)
-1. Titta på Mikael när han berättar om [CSS](https://www.youtube.com/watch?v=Rzpl9mrJ05w)
+1. Mikael berättar om [HTML](https://www.youtube.com/watch?v=8QMveCqpegw).
+1. Mikael berättar om [CSS](https://www.youtube.com/watch?v=Rzpl9mrJ05w).
+
+
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
