@@ -94,15 +94,31 @@ Genomför veckans uppgift.
 
 ### Vecka 2: Terminalprogram och webbplats med PHP PDO, SQL och SQLite {#v2}
 
+[WARNING]
+
+** Materialet är under utveckling och släpps löpande söndag, måndag, tisdag.**
+
+[/WARNING]
+
 Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
 * [PHP PDO och databaser](./../forelasning/php-pdo-och-databaser)
-* [Databasdriven webbplats med CRUD](./../forelasning/webbplats-med-crud)
+* <s>[Databasdriven webbplats med CRUD](./../forelasning/webbplats-med-crud)</s>
 
 Jobba på egen hand igenom följande övning.
 
-* [Kom igång med SQLite och PHP PDO (v2)](kunskap/kom-igang-med-sqlite-och-php-pdo-v2) (**artikeln är under bearbetning och uppdatering inför ht21**)
+* [Kom igång med SQLite och PHP PDO (v2)](kunskap/kom-igang-med-sqlite-och-php-pdo-v2)
 
+Delta i lektionen som förbereder dig för veckans uppgift.
+
+* I lektionen "[Bygg en databasdriven webbplats med PHP och SQL](./../forelasning/bygg-en-databasdriven-webbplats-med-php-och-sql)" får du hjälp att komma igång med uppgiften. Lektionen spelas in.
+
+Genomför veckans uppgift.
+
+* Gör uppgiften "[Bygg en databasdriven webbplats med PHP och SQL](uppgift/bygg-en-databasdriven-webbplats-med-php-och-sql)".
+
+
+<!--
 Det är två uppgifter som skall utföras och det finns en lektion som förbereder dig inför varje uppgift.
 
 1. Gör uppgiften "[Bygg en databasdriven terminalklient med PHP och SQL](uppgift/bygg-en-databasdriven-terminalklient-med-php-och-sql)".
@@ -110,7 +126,7 @@ Det är två uppgifter som skall utföras och det finns en lektion som förbered
 
 1. Gör uppgiften "[Bygg en databasdriven webbplats med PHP och SQL](uppgift/bygg-en-databasdriven-webbplats-med-php-och-sql)".
     * I lektionen "[Bygg en databasdriven webbplats med PHP och SQL](./../forelasning/bygg-en-databasdriven-webbplats-med-php-och-sql)" får du hjälp att komma igång med uppgiften. Lektionen spelas in.
-
+-->
 
 
 <!--

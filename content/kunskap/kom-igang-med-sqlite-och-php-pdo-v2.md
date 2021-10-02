@@ -21,6 +21,12 @@ Guiden hanterar grunderna i hur du använder PHP PDO för att koppla upp dig mot
 
 <!--more-->
 
+[WARNING]
+
+**Arbete pågår**
+
+[/WARNING]
+
 Bästa sättet att gå igenom guiden är att genomföra varje övning på egen hand. Gör precis som jag gjort, fast på egen hand. Kopiera eller skriv om kodexemplen, det viktiga är att du återskapar koden i din egna miljö. Läsa är bra men man måste göra själv, "kan själv", för att lära sig.
 
 
@@ -36,6 +42,17 @@ Exempelkod {#exempelkod}
 --------------------------------------
 
 Denna artikel har exempelkod i kursrepot för webtec under [`example/pdo`](https://github.com/dbwebb-se/webtec/tree/main/example/pdo). Men skriv helst din egna kod när du jobbar igenom artikeln. Det brukar löna sig i längden.
+
+Förslagsvis kan du göra en ny katalog under ditt kursrepo i `me/pdo` och spara all kod du skriver där. I resten av artikeln förutsätts att du har en sådan katalog.
+
+För att vi skall ha en databas att jobba med i artikeln så använder vi en som ligger i kursrepot under [`example/database`](https://github.com/dbwebb-se/webtec/tree/main/example/database). Du kan läsa information om den databasen i README.md.
+
+
+
+Kom igång {#komigang}
+--------------------------------------
+
+Kopiera exempelkoden.
 
 
 
@@ -85,7 +102,6 @@ Med PHP-kod kan du kontrollera om din PHP-installation har stöd för PDO och SQ
 Lägg följande kod i en PHP-fil och kör den på din webbserver för att se om det finns stöd för PDO och SQLite.
 
 ```php
-<?php
 if (class_exists('PDO')) {
     echo "<p>PDO exists and the following PDO drivers are loaded.<pre>";
     print_r(PDO::getAvailableDrivers());
@@ -118,7 +134,6 @@ Vi gör ett minsta möjliga skript som kopplar sig mot en SQLite databas via PHP
 Därefter kan du skapa ett PHP-skript `connect.php` med följande kod.
 
 ```php
-<?php
 // Enable verbose output of error (or include from config.php)
 error_reporting(-1);              // Report all type of errors
 ini_set("display_errors", 1);     // Display all errors
@@ -130,9 +145,10 @@ $dsn = "sqlite:$fileName";
 // Open the database file and catch the exception if it fails.
 try {
     $db = new PDO($dsn);
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo "Failed to connect to the database using DSN:<br>$dsn<br>";
+    echo "Failed to connect to the database using DSN:<br>'$dsn'<br>";
     throw $e;
 }
 
