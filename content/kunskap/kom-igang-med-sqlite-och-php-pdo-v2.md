@@ -45,14 +45,33 @@ Denna artikel har exempelkod i kursrepot för webtec under [`example/pdo`](https
 
 Förslagsvis kan du göra en ny katalog under ditt kursrepo i `me/pdo` och spara all kod du skriver där. I resten av artikeln förutsätts att du har en sådan katalog.
 
-För att vi skall ha en databas att jobba med i artikeln så använder vi en som ligger i kursrepot under [`example/database`](https://github.com/dbwebb-se/webtec/tree/main/example/database). Du kan läsa information om den databasen i README.md.
+Du kan skriva koden som webbsidor, eller i din terminalklient. Båda fungerar men artikeln kommer använda webbsidor.
 
 
 
 Kom igång {#komigang}
 --------------------------------------
 
-Kopiera exempelkoden.
+För att vi skall ha en databas att jobba med i artikeln så använder vi en som ligger i kursrepot under [`example/database`](https://github.com/dbwebb-se/webtec/tree/main/example/database). Du kan läsa information om den databasen i README.md.
+
+Du kan kopiera databasen så här.
+
+```text
+# Stå i rooten av kursrepot
+install -d me/pdo/db
+cp -i example/database/db.sqlite me/pdo/db/
+```
+
+Så här ser det ut när du är redo.
+
+```text
+$ tree me/pdo
+me/pdo
+└── db
+    └── db.sqlite
+
+1 directory, 1 file
+```
 
 
 
@@ -61,7 +80,7 @@ Om PHP PDO och SQLite {#om}
 
 Via PHP kan man komma åt informationen i en SQLite-databas. Det finns olika PHP-interface för att jobba mot SQLite, det finns [sqlite](http://php.net/manual/en/book.sqlite.php), [sqlite3](http://php.net/manual/en/book.sqlite3.php) eller [pdo-sqlite](http://php.net/manual/en/ref.pdo-sqlite.php).
 
-Vi kommer att använda interfacet PDO för att jobba mot SQLite. Databasen SQLite är version 3.
+Vi kommer att använda interfacet PDO för att jobba mot SQLite. Databasen SQLite vi använder är i version 3.
 
 Läs den korta [introduktionen om PHP PDO](http://php.net/manual/en/intro.pdo.php).
 
@@ -71,29 +90,8 @@ En PDO driver krävs för att PDO ska kunna prata med den valda databasen. En PD
 
 
 
-Prepared statements och SQL injections {#sqlinjections}
---------------------------------------
-
-En feature som stöds av många databaser är "Prepared Statements". Prepared statements har ett säkert sätt att hantera argument, ett sätt som undviker säkerhetshål som SQL injections.
-
-Läs snabbt det inledande stycket om [prepared statements och studera översiktligt exemplen](http://www.php.net/manual/en/pdo.prepared-statements.php). Där får du en kort introduktion till hur prepared statements fungerar.
-
-Låt oss säga några ord om säkerhetshål och SQL injections innan vi fortsätter.
-
-[FIGURE src=http://imgs.xkcd.com/comics/exploits_of_a_mom.png caption="Strip om SQL injections från [http://xkcd.com/327/](http://xkcd.com/327/)."]
-
-SQL injections är ett sätt för en "cracker" att "bryta sig in" i en webbapplikation genom att via URL:en, eller formulär, modifiera SQL-satserna som körs av webbapplikationen. Ett sådant säkerhetshål kan ge en inbrytare tillgång till alla användare och lösenord i en databas.
-
-Läs lite snabbt (och översiktligt) om [SQL injections på Wikipedia](http://en.wikipedia.org/wiki/SQL_injection).
-
-Låt oss nu komma igång och använda PDO.
-
-
-
 Finns PDO och PDO SQLite installerat? {#install}
 --------------------------------------
-
-[WARNING] Uppdatering pågår [/WARNING]
 
 Börja med en liten terminalklient?
 
@@ -188,6 +186,30 @@ Du kan läsa lite om DSN i metoden för att koppla upp sig mot databasen, [PDO::
 Det är bra att ha en mental bild av flödet i programmet. Så man vet i vilken ordning saker sker.
 
 Då kikar vi vidare.
+
+
+
+Prepared statements och SQL injections {#sqlinjections}
+--------------------------------------
+
+En feature som stöds av många databaser är "Prepared Statements". Prepared statements har ett säkert sätt att hantera argument, ett sätt som undviker säkerhetshål som SQL injections.
+
+Läs snabbt det inledande stycket om [prepared statements och studera översiktligt exemplen](http://www.php.net/manual/en/pdo.prepared-statements.php). Där får du en kort introduktion till hur prepared statements fungerar.
+
+Låt oss säga några ord om säkerhetshål och SQL injections innan vi fortsätter.
+
+[FIGURE src=http://imgs.xkcd.com/comics/exploits_of_a_mom.png caption="Strip om SQL injections från [http://xkcd.com/327/](http://xkcd.com/327/)."]
+
+SQL injections är ett sätt för en "cracker" att "bryta sig in" i en webbapplikation genom att via URL:en, eller formulär, modifiera SQL-satserna som körs av webbapplikationen. Ett sådant säkerhetshål kan ge en inbrytare tillgång till alla användare och lösenord i en databas.
+
+Läs lite snabbt (och översiktligt) om [SQL injections på Wikipedia](http://en.wikipedia.org/wiki/SQL_injection).
+
+Låt oss nu komma igång och använda PDO för att ställa en SELECT fråga mot databasen.
+
+
+
+Ställ en SELECT fråga {#stall-select}
+--------------------------------------
 
 
 
