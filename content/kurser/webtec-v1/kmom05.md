@@ -8,20 +8,11 @@ views:
 author:
     - mos
 revision:
+    "2021-10-03": "(B, mos) Delar (uppgift och övning) av materialet släppt för vecka 2."
     "2021-09-26": "(A, mos) Släppt material för vecka 1."
 ...
 Kmom05/06: SQL
 ==================================
-
-[WARNING]
-
-**Vecka 1 - Materialet finns på plats**
-
-**Vecka 2 - Arbete pågår**.
-
-[/WARNING]
-
-<!-- stop-->
 
 Låt oss börja med databaser. Vi skall titta på databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
 
@@ -33,20 +24,13 @@ När vi kan vår SQL så använder vi den kunskapen till att koppla samman PHP o
 
 <!--more-->
 
-<!--
+Så här kan det se ut när du jobbar med övningen som förbereder dig för uppgiften.
 
-Uppdatera med nya bilder.
+[FIGURE src="image/webtec/pdo/search-result.png?w=w3" caption="Resultatet från sökningen presenteras."]
 
-[FIGURE src=image/snapht18/jetty-select-where-andor.png?w=w3 caption="Med SQL kan man ställa frågor mot databasen och visa urval av dess innehåll."]
+[FIGURE src="image/webtec/pdo/insert-filled.png?w=w3" caption="Formuläret är ifyllt med värden."]
 
-När vi väl bekantat oss med SQLite, dess klienter och SQL så tar vi ett första steg in i att koppla ihop PHP-kod med databasen.
-
-[FIGURE src=/image/snapvt15/pdo-select-table.png?w=w3 caption="En databas har tabeller med kolumner och rader, det finns olika sätt att visualisera detta."]
-
-Vi avslutar med en programmeringsövning där du bygger en databasdriven webbplats.
-
--->
-
+[FIGURE src="image/webtec/pdo/search-delete.png?w=w3" caption="Klicka på ett id för att se mer, eller update/delete för att modifiera raden."]
 
 <small><i>Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.</i></small>
 
@@ -96,16 +80,22 @@ Genomför veckans uppgift.
 
 [WARNING]
 
-** Materialet är under utveckling och släpps löpande söndag, måndag, tisdag.**
+**Uppgiften och övningsartikeln är på plats och man kan börja jobba med det.**
+
+**Lektionen hålls på tisdag och kommer utgå från övningen och därefter introducera uppgiften**
+
+**Föreläsningen om PHP PDO är ännu inte släppt, den skall ge en introduktion till PHP PDO (men det gör också övningen så man kan gå direkt till övningen och titta på föreläsningen senare).**
 
 [/WARNING]
 
-Titta på följande föreläsningar. Föreläsningarna kan innehålla ytterligare läsanvisningar.
+Titta på följande föreläsning. Föreläsningarna kan innehålla ytterligare läsanvisningar.
 
 * [PHP PDO och databaser](./../forelasning/php-pdo-och-databaser)
-* <s>[Databasdriven webbplats med CRUD](./../forelasning/webbplats-med-crud)</s>
+<!--
+* <s>[Databasdriven webbplats med CRUD](./../forelasning/webbplats-med-crud)</s> utgår.
+-->
 
-Jobba på egen hand igenom följande övning.
+Jobba på egen hand igenom följande övning, den förbereder dig för uppgiften.
 
 * [Kom igång med SQLite och PHP PDO (v2)](kunskap/kom-igang-med-sqlite-och-php-pdo-v2)
 

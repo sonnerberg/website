@@ -1,29 +1,33 @@
 ---
 author: mos
 revision:
-    "2021-03-03": "(A, mos) Första utgåva inför kursstart HT2021."
+    "2021-10-03": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
 Bygg en databasdriven webbplats med PHP och SQL
 ====================
 
-[WARNING]
+Visa hur du kommer igång med uppgiften "[Bygg en databasdriven webbplats med PHP och SQL](uppgift/bygg-en-databasdriven-webbplats-med-php-och-sql)". Vi utgår från uppgiftens krav och sedan ser vi hur de exempel som visas i övningen [Kom igång med SQLite och PHP PDO (v2)](kunskap/kom-igang-med-sqlite-och-php-pdo-v2) kan hjälpa oss att lösa kraven.
 
-**Arbete pågår**.
+Genomgången sker i en tisdags zoom.
 
-[/WARNING]
+<!--
+Genomgången/föreläsningen är i två delar.
 
-Vi tittar allmänt på databaser i webbsammanhang och specifikt på databasen SQLite och hur den fungerar.
+Första delen jobbar vi främst igenom artikeln/övningen "Kom igång med SQL och databasen SQLite med terminalklienten sqlite3".
 
-Videon är XX minuter lång.
+Del 1 är 54 minuter lång.
 
-[YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
+[YOUTUBE src="VsY425TWM5o" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 1/2 (Tisdags-zoom 13-14)"]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f06-funktioner/slide.html).
+Andra delen visar främst hur vi kommer igång med veckans uppgift "Bygg en databas med SQL".
 
+Del 2 är 43 minuter lång.
+
+[YOUTUBE src="V6wVglmO2iA" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 2/2 (Tisdags-zoom 14-15)"]
+-->
 
 
 Resurser
 ------------------------
 
-1. I kursboken [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) är följande kapitel relevanta att läsa igenom översiktligt.
-    * Kap 8 Databaser. Kapitlet handlar om databasen MySQL men är ändå relevant och ger en god introduktion till databaser och SQL.
+Främst används material från övningen som är länkad ovan. Till övningen finns även exempelkod som ligger i kursrepot.

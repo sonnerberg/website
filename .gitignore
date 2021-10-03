@@ -9,3 +9,5 @@ node_modules/
 vendor/
 debug.log
 composer.lock
+.apache_access.log
+.apache_error.log
