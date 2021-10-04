@@ -17,7 +17,7 @@ Titel på arbetet: Webbteknologier i skolmiljön - Digitalisering av det fysiska
 
 
 
-### Robin Nylin Blixter
+### Robin Nylin Blixter {#robin}
 
 Titel på arbetet: GraphQL vs REST-API – En jämförelse
 
@@ -25,9 +25,8 @@ Titel på arbetet: GraphQL vs REST-API – En jämförelse
 
 
 
-### Jesper Nyhlén
+### Jesper Nyhlén {#jesper}
 
 Titel på arbetet: PWAMP - Combine technology for faster loading and improved user experience
 
 [Topic](article/exjobb/jeny18_topic.pdf) - [Proposal](article/exjobb/jeny18_proposal.pdf) - [Rapport](http://urn.kb.se/resolve?urn=urn:nbn:se:bth-19624)
-
