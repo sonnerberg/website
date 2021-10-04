@@ -21,7 +21,7 @@ Titel på arbetet: Webbteknologier i skolmiljön - Digitalisering av det fysiska
 
 Titel på arbetet: GraphQL vs REST-API – En jämförelse
 
-[Topic](article/exjobb/rony18_topic.pdf) - [Proposal](article/exjobb/rony18_proposal.pdf) - [Rapport](http://urn.kb.se/resolve?urn=urn:nbn:se:bth-19935)
+[Topic](article/exjobb/rony18_topic.pdf) - [Proposal](article/exjobb/rony18_proposal.pdf) - [Rapport](article/exjobb/rony18_report.pdf)
 
 
 
