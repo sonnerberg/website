@@ -3,6 +3,7 @@ author: mos
 category:
     - kurs webtec
 revision:
+    "2021-10-04": "(B, mos) Uppdatera hur kodbasen kopieras så att dolda filer följer med."
     "2021-10-03": "(A, mos) Första utgåvan i samband med webtec-v1 ht21."
 ...
 Bygg en databasdriven webbplats med PHP med SQL
@@ -66,19 +67,19 @@ Kopiera {#kopiera}
 
 Du kan välja om du vill utgå från en tom kodbas eller om du vill kopiera din kodbas från `me/session`
 
-Så här börjar du med en tom kodbas.
-
-```text
-# Gå till roten av ditt kursrepo
-cp -ri example/php/pagecontroller-setup/* me/pdoweb/
-cd me/pdoweb
-```
-
 Så här börjar du genom att kopiera din kodbas från `me/session`.
 
 ```text
 # Gå till roten av ditt kursrepo
-cp -ri me/session/* me/pdoweb/
+cp -ri me/session/. me/pdoweb
+cd me/pdoweb
+```
+
+Så här börjar du med en tom kodbas.
+
+```text
+# Gå till roten av ditt kursrepo
+cp -ri example/php/pagecontroller-setup/. me/pdoweb
 cd me/pdoweb
 ```
 
