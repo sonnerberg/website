@@ -41,7 +41,9 @@ Föreläsningar  {#forelasningar}
 Du ska medverka på föreläsningarna:
 
 * 10:00 (2021-11-01) via Zoom
-* 10:00 (2021-11-05) via Zoom
+* 10:00 (2021-11-04) via Zoom
+
+<!-- https://bth.zoom.us/j/67269425633 -->
 
 
 Läs &amp; Studera  {#lasanvisningar}
