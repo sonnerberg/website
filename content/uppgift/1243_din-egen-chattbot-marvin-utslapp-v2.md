@@ -103,7 +103,7 @@ cd kmom05/marvin4
     ```python
 
     arguments: "sweden"       return: ["Sweden"]
-    arguments: "we"           return: ["Zimbabwe", "Western Sahara"]
+    arguments: "we"           return: ["Sweden", "Zimbabwe", "Western Sahara"]
     ```
 
     Om sökordet inte matchar något land ska du lyfta ett `ValueError` i funktionen och sen fånga det ute i meny-koden som har anropat funktionen och då skriva ut `"Country does not exist!"`.
