@@ -28,11 +28,11 @@ Introduktion {#intro}
 
 I mappen "[example/emission_data](https://github.com/dbwebb-se/python/tree/master/example/emission_data)" finns modulen `emission_data.py` och innehåller all data om utsläpp och länderna. Modulen innehåller fyra variabler:
 
-`emission_1990`: En dictionary med mängden koldioxid (i megaton, multiplicera med 1 000 000) som varje land släppte ut år 1990.
+`emission_1990`: En dictionary med mängden koldioxid (i megaton, multiplicera med 1 000 000 för att få i ton) som varje land släppte ut år 1990.
   
-`emission_2005`: En dictionary med mängden koldioxid (i megaton, multiplicera med 1 000 000) som varje land släppte ut år 2005.
+`emission_2005`: En dictionary med mängden koldioxid (i megaton, multiplicera med 1 000 000 för att få i ton) som varje land släppte ut år 2005.
   
-`emission_2017`: En dictionary med mängden koldioxid (i megaton, multiplicera med 1 000 000) som varje land släppte ut år 2017.
+`emission_2017`: En dictionary med mängden koldioxid (i megaton, multiplicera med 1 000 000 för att få i ton) som varje land släppte ut år 2017.
 
 `country_data`: En dictionary med antalet invånare varje land har, landets storlek (i KM2) och ett heltals id som används för att identifiera länderna i ovanstående dictionaries.
 
@@ -44,7 +44,7 @@ emission_1990 = {
     1: 6.583,
 }
 ```
-Nyckeln är heltals id:et som används för att identifiera landet i `country_data`. Landet med id 0 släppte ut 2.546 megaton (2,546,000) koldioxid 1990.
+Nyckeln är heltals id:et som används för att identifiera landet i `country_data`. Landet med id 0 släppte ut 2.546 megaton (2,546,000 ton) koldioxid 1990.
 
 Exempel på `country_data`:
 
@@ -130,7 +130,7 @@ cd kmom05/marvin4
     input: "Sweden,1000,2017"       output: "Wrong year!"
     ```
 
-    I `get_country_year_data_megaton(country, year)` funktionen ska du returnera hur mycket utsläpp ett land gjorde ett specifikt år, i måttet megaton (du behöver multiplicera datan med `1000000`.). Funktionen tar emot två argument, första argumentet ska vara en sträng med landets namn och det andra argumentet ska vara en sträng med året.  
+    I `get_country_year_data_megaton(country, year)` funktionen ska du returnera hur mycket utsläpp ett land gjorde ett specifikt år, i måttet ton (du behöver multiplicera datan med `1000000`.). Funktionen tar emot två argument, första argumentet ska vara en sträng med landets namn och det andra argumentet ska vara en sträng med året.  
     Om årtalet som skickas in inte finns ska funktionen lyfta ett `ValueError`.
 
     ```python
@@ -157,9 +157,9 @@ cd kmom05/marvin4
 
     {
         'name': '<name>',
-        '1990': {'emission': <utsläpp i megaton>, 'population': <antal eller None>},
-        '2005': {'emission': <utsläpp i megaton>, 'population': <antal eller None>},
-        '2017': {'emission': <utsläpp i megaton>, 'population': <antal eller None>},
+        '1990': {'emission': <utsläpp i ton>, 'population': <antal eller None>},
+        '2005': {'emission': <utsläpp i ton>, 'population': <antal eller None>},
+        '2017': {'emission': <utsläpp i ton>, 'population': <antal eller None>},
         'emission_change': (<skillnad mellan 1990-2005>, <skillnad mellan 2005-2017>)
     }
     ```
@@ -190,7 +190,7 @@ cd kmom05/marvin4
     ```bash
 
     "<landets namn>"
-    "<år>: <utsläpp för det året i megaton>"
+    "<år>: <utsläpp för det året i ton>"
     "<år>: <antal invårare för det året>"
     "<år>-<år>: <förändring av utsläpp i procent>"
     ```
