@@ -23,6 +23,14 @@ Guiden hanterar grunderna i hur du använder PHP PDO för att koppla upp dig mot
 
 Bästa sättet att gå igenom guiden är att genomföra varje övning på egen hand. Gör precis som jag gjort, fast på egen hand. Kopiera eller skriv om kodexemplen, det viktiga är att du återskapar koden i din egna miljö. Läsa är bra men man måste göra själv, "kan själv", för att lära sig.
 
+<!--
+Artikeln är stor, eventuellt dela i två delar så den blir enklare att hantera. Första delen kan sluta vid search och andra delen kan fokusera på CRUD. Troligen blir det två bättre artiklar än en stor.
+
+I CRUD kan vi ha koll på om execute gick bra eller inte.
+
+Vi bör även ha koll på felmeddelanden och debugDumpParams() som hjälp till felsökning.
+-->
+
 
 
 Förkunskaper {#for}
