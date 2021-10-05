@@ -255,7 +255,6 @@ sqlite> SELECT
    ...> WHERE
    ...>     namn = 'Mikael'
    ...>     OR namn = 'Magnus'
-
    ...>     OR namn = 'Carina'
    ...> ;
 rowid       namn        datum       namnlangd
