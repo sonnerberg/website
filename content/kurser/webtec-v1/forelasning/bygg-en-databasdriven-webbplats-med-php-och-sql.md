@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-10-05": "(B, mos) Inklusive inspelningen från Zoom."
     "2021-10-03": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
 Bygg en databasdriven webbplats med PHP och SQL
@@ -10,21 +11,26 @@ Visa hur du kommer igång med uppgiften "[Bygg en databasdriven webbplats med PH
 
 Genomgången sker i en tisdags zoom.
 
-<!--
-Genomgången/föreläsningen är i två delar.
+Genomgången/föreläsningen är i tre delar.
 
-Första delen jobbar vi främst igenom artikeln/övningen "Kom igång med SQL och databasen SQLite med terminalklienten sqlite3".
+Första delen inleds med att kolla om databasen finns, vi gö en koppling till databasen och vi avslutar med en SELECTsats som vi skriver ut.
 
-Del 1 är 54 minuter lång.
+Del 1 är 1 timme och 13 minuter lång.
 
-[YOUTUBE src="VsY425TWM5o" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 1/2 (Tisdags-zoom 13-14)"]
+[YOUTUBE src="mIjOMX-gZhU" width=700 caption="Kom igång 'Bygg en databasdriven webbplats med PHP med SQL' del 1/3 (Tisdags-Zoom 13:30-14:45)"]
 
-Andra delen visar främst hur vi kommer igång med veckans uppgift "Bygg en databas med SQL".
+Andra delen visar hur vi gör ett sökformulär mot databasen.
 
-Del 2 är 43 minuter lång.
+Del 2 är 30 minuter lång.
 
-[YOUTUBE src="V6wVglmO2iA" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 2/2 (Tisdags-zoom 14-15)"]
--->
+[YOUTUBE src="7-Qasd8PolA" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 2/3 (Tisdags-Zoom 15:00-15:30)"]
+
+Tredje delen visar hur man skriver ut innehållet i ett resultset till en tabell.
+
+Del 3 är 20 minuter lång.
+
+[YOUTUBE src="war9qZrT-G8" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 3/3 (Tisdags-Zoom 15:30-16:00)"]
+
 
 
 Resurser

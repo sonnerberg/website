@@ -24,7 +24,7 @@ När vi kan vår SQL så använder vi den kunskapen till att koppla samman PHP o
 
 <!--more-->
 
-Så här kan det se ut när du jobbar med övningen som förbereder dig för uppgiften.
+Så här kan det se ut när du är klar med kursmomentet.
 
 [FIGURE src="image/webtec/pdo/search-result.png?w=w3" caption="Resultatet från sökningen presenteras."]
 
