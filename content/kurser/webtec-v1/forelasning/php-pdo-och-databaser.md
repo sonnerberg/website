@@ -19,9 +19,9 @@ Videon är XX minuter lång.
 
 [YOUTUBE src="WmFHIZ_4exo" width=700 caption="Funktioner och programmera i databasen (med Mikael)."]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](https://dbwebb-se.github.io/webtec/lecture/L30-php-pdo-and-databases/slide.html).
-
 -->
+
+Du kan själv bläddra igenom [de HTML slides som används i presentationen](https://dbwebb-se.github.io/webtec/lecture/L30-php-pdo-and-databases/slide.html).
 
 
 
@@ -29,3 +29,5 @@ Resurser
 ------------------------
 
 1. I PHP-manualen finns ett stycke om [PHP Data Objects (PDO)](http://php.net/manual/en/intro.pdo.php).
+
+1. Delar av materialet och kodexempel i föreläsningen kommer från övningen "[Kom igång med SQLite och PHP PDO (v2)](kunskap/kom-igang-med-sqlite-och-php-pdo-v2)".
