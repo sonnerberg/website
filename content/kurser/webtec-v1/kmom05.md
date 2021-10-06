@@ -8,6 +8,7 @@ views:
 author:
     - mos
 revision:
+    "2021-10-06": "(C, mos) Justerade fråga som refererade till utgånget terminalprogram."
     "2021-10-03": "(B, mos) Delar (uppgift och övning) av materialet släppt för vecka 2."
     "2021-09-26": "(A, mos) Släppt material för vecka 1."
 ...
@@ -144,7 +145,7 @@ Läs instruktionen om [hur du skall redovisa](./../redovisa).
 För att avrunda detta kmom, se till att följande frågor besvaras i redovisningstexten.
 
 * Hur kändes det att bygga en databasdriven webbplats?
-* Lyckades du återanvända koden till databasen mellan terminalprogrammet och webbplatsen?
+* Var det svårt att komma in i hur du jobbar med SQL mot databasen och sedan SQL mot databasen via PHP eller kändes det som logiskt? Fanns det något som gav dig bekymmer?
 * Vilken är din TIL för detta kmom?
 
 Glöm inte att testa din inlämning med `dbwebb test kmom05`.
