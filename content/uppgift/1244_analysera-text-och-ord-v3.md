@@ -89,7 +89,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt` och `lorum.txt`.
 
 
 
-1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd menyvalen `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver. Avrunda till en (1) decimal. Använd strukturen `"<bokstav/ord>: <antal> | <procent>%"` i utskriften. Utskriften ska vara soreterad i storleks ordning och bokstavsordning. Om två ord har 5 ska orden sorteras i bokstavsordning. Skriv minst en funktion för varje kommando i `analyzer.py`.
+1. Analysera även ord- och bokstavsfrekvensen och skriv ut de sju mest förekommande orden och bokstäverna. Använd menyvalen `word_frequency` och `letter_frequency`. Ange frekvensen i % av totala mängden ord eller bokstäver. Avrunda till en (1) decimal. Använd strukturen `"<bokstav/ord>: <antal> | <procent>%"` i utskriften. Utskriften ska vara soreterad i storleks ordning och bokstavsordning sjunkande. Om två ord har 5 ska orden sorteras i bokstavsordning sjunkande. Skriv minst en funktion för varje kommando i `analyzer.py`.
 
     ```python
 
@@ -113,7 +113,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt` och `lorum.txt`.
 
 
 
-1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion. Utskriften ska vara soreterad i storleks ordning och bokstavsordning. Om två ord har 5 ska orden sorteras i bokstavsordning. Skriv minst en funktion för varje kommando i `analyzer.py`.
+1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Tips, låt dina funktioner returnerar ett värde, spara undan resultatet i en dictionary och skriv ut i en egen utskriftsfunktion. Utskriften ska vara soreterad i storleks ordning och bokstavsordning sjunkande. Om två ord har 5 ska orden sorteras i bokstavsordning sjunkande. Skriv minst en funktion för varje kommando i `analyzer.py`.
 
     ```python
 
