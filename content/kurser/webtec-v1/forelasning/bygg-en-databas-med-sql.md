@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-10-07": "(B, mos) Fixade länken till andra videon."
     "2021-10-01": "(A, mos) Första utgåva inför kursstart HT2021."
 ...
 Bygg en databas med SQL
@@ -22,7 +23,7 @@ Andra delen visar främst hur vi kommer igång med veckans uppgift "Bygg en data
 
 Del 2 är 43 minuter lång.
 
-[YOUTUBE src="V6wVglmO2iA" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 2/2 (Tisdags-zoom 14-15)"]
+[YOUTUBE src="8hzc1LS1jRQ" width=700 caption="Kom igång och lös uppgiften 'Bygg en databas med SQL' del 2/2 (Tisdags-zoom 14-15)"]
 
 
 
