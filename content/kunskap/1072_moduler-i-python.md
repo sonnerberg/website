@@ -71,7 +71,8 @@ print(emil_string)
 
 En modul är egentligen bara en python fil med kod i, så alla filer vi har skapat än så länge har varit moduler. Det vi gör nu är egentligen bara att lära oss hur vi kan importera/använda funktioner från andra filer/moduler.
 
-# Byta namn på moduler {#as}
+Byta namn på moduler {#as}
+---------------------------------
 
 Av olika anledningar vill man ibland använda ett annat namn på modulen i koden, t.ex. det kan vara långt eller det linkar något annat. Då kan man använda nyckelordet `as` för att ändra namnet. Vi kollar på hur det vi gör för att byta namn på "energy_calculation" till "ec".
 
@@ -94,7 +95,8 @@ print(emil_string)
 
 Det var inte svårare än så, lägg till `as name` i slutet av ditt import statement. Då kan vi använda det nya namnet i koden nedanför för att referera till den importerade modulen.
 
-# Inbyggda moduler och importera specifika funktioner {#from}
+Inbyggda moduler och importera specifika funktioner {#from}
+--------------------------------------------------------------
 
 Python kommer skeppat med ett antal färdiga moduler som innehåller användbara funktioner. T.ex. modulen "math" som innehåller funktioner b.la. för avrundning av tal och mer avancerad aritmetik än plus, minus och delat med. Modulen "random" finns också, den innehåller funktioner som b.la. kan slumpa fram tal, vilket är väldigt bra att ha. Dessa moduler kan innehålla väldigt många olika funktioner och ibland vill vi kanske bara komma åt en specifik, då är det bra att man kan importera specifika funktioner så man inte får alla.  
 För att göra det använder man sig av "from", då specificerar vi modulen vi vill hämta från och sen vilken funktionen vi vill ha, `from module_name import function_name`. Vi kollar på ett exempel där vi importera en funktion för att avrunda tal från "math".
@@ -121,7 +123,9 @@ print(pow(5,2))
 
 
 
-# Exekvera moduler som script {#exekvera}
+Exekvera moduler som script {#exekvera}
+-----------------------------------------------
+
 Som jag nämnde förut är en modul egentligen bara en fil med kod. Detta faktum gör att vi kan exekvera den som ett eget program. Vi fortsätter med energi exemplet och lägger till lite kod som vi tänker oss att vi vill använda för att testa att funktionerna fungerar som de ska.
 
 ```python
@@ -199,7 +203,8 @@ Testa exekvera båda filerna igen och lägg märke till att det inte längre bli
 
 
 
-# if __name__ == "__main__" {#name}
+if __name__ == "__main__" {#name}
+------------------------------------
 
 I förra stycket pratar vi om att använda `if __name__ == "__main__"` för att testa moduler. Vi kan också använda det för att kontrollera vad som ska ske om ett program blir importerat eller startat. Även i vår "main.py" fil borde vi använda oss av `if __name__ == "__main__"`, det är en bra vana att ha det i alla python filer man skapar.
 
