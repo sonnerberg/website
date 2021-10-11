@@ -235,7 +235,7 @@ Läs om [lärarstöd och handledning](kurser/faq/lararstod-och-handledning).
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning).
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-quiz).
 
 
 

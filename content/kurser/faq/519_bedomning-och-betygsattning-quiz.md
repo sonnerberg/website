@@ -49,7 +49,7 @@ Följande tabell används vid bedömning av genomförda kursmoment och redovisni
 | Bedömningspunkt | Poäng | Din poäng |
 |-----------------|-------|-----------|
 | Kursmomenten är utförda enligt instruktion. | 30 | |
-| Quizzerna i kursen är genomförda på en bra nivå och poängen för quiz-delen beräknas automatiskt i Canvas. | 10 | |
+| Quizerna i kursen är genomförda. Poängen för quiz-delen beräknas enligt: Totalt finns det 25 quiz-poäng att hämta. Quiz-poängen delas på 2,5 för att få slutbetygspoängen.  | 10 | |
 | TOTALT | 40 | |
 
 
