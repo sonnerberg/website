@@ -17,12 +17,6 @@ revision:
 Kmom01: Ramverk, innehåll, style
 ====================================
 
-[WARNING]
-
-**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
-
-[/WARNING]
-
 Vi ska ta oss en titt på den mjukare delen av webbprogrammering, webbdesign och användbarhet. Det handlar också om snabba sidomladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material. Vi ska även kolla över de tekniker som används för att uppnå detta.
 
 <!--more-->
