@@ -1,10 +1,12 @@
 ---
 author:
     - nik
+    - efo
 category:
     - design
     - pico
 revision:
+    "2021-10-11": (C, efo) La till chmod -R 777.
     "2021-08-04": (B, nik) Uppdaterad inför HT2021.
     "2020-10-12": (A, nik) Skapad inför HT2020.
 ...
@@ -65,7 +67,7 @@ Vi börjar med att kolla på hur mappstrukturen ser ut för vår grundläggande 
 
 Det kan se ut som lite mycket i början, men vi stegar igenom det.
 
-* `assets/`-mappen innehåller två mappar. 
+* `assets/`-mappen innehåller två mappar.
     * `assets/img/` är där vi lägger de bilder vi vill använda på sidan. Bilderna kan vi sedan nå i våra Markdown-filer genom en inbyggd variabel i Pico, `%assets_url%`, t.ex. `%assets_url%/img/tree2.jpg`.
     * `assets/cimage` är en bildhanterare vi kommer jobba med senare under kursen som ligger med i grundinstallationen för att underlätta.
 * `cache/`-mappen innehåller våra cache:ade filer, i detta fallet bilder som bearbetas av CImage. Detta är för att Cimage ska slippa behöva arbeta med våra filer varje gång vi laddar hemsidan. Mer om detta kommer senare i kursen, [kmom05 - Bilder](kurser/design-v3/kmom05).
@@ -112,59 +114,44 @@ Social:
 * Tagline (blått): En tagline för vår sida, visas under sidans namn i vår header.
 * Social: Länkar till eventuella sociala medier i vår footer, i nuläget en länk till sidans kursrepo på Github. Ikonerna laddas in ifrån FontAwesome, så de flesta därifrån borde fungera.
 
+Om du inte kan ladda bilden i exemplet bör du ändra rättigheter för `cache`-katalogen.
+
+```shell
+# stå i me/portfolio
+chmod -R 777 cache
+```
+
+
+
 ### Index {#indexmd}
 
 `index.md` är vårt startsida, precis som `index.php` eller `index.html` hade varit vår startsida om vi jobbade med ren PHP/HTML. Man bör ha en `index.md` för varje mapp, som exempel kan vi se `content/index.md` men även `content/docs/index.md`.
+
+
 
 ### 404 {#404md}
 
 `404.md` är vår 404-sida. Det är där vi hamnar om vi försöker gå till en sida som Pico inte kan hitta.
 
+
+
 ### Eget innehåll {#eget-innehall}
 
-Vi testar att lägga till eget innehåll, vår redovisningssidan, genom att skapa en ny mapp, `content/report/` och en `content/report/index.md` som landningssida. I vår `content/report/index.md` så börjar vi med att lägga till lite meta information som behövs för att den ska synas i vår navigering och sen även länkarna till varje kursmoment.
+Vi testar att lägga till eget innehåll och skapar en ny sida `content/hobby.md`. I vår `content/hobby.md` så börjar vi med att lägga till lite meta information som behövs för att den ska synas i vår navigering och sen text om en hobby.
 
 ```
 ---
-Title: Report
-Description: The course report page
+Title: Hobby
+Description: Page about my hobby
 ---
 
-Redovisningssida för design
+Min hobby
 ==================
 
-* [kmom01](report/kmom01)
-* [kmom02](report/kmom02)
-* [kmom03](report/kmom03)
-* [kmom04](report/kmom04)
-* [kmom05](report/kmom05)
-* [kmom06](report/kmom06)
-* [kmom10](report/kmom10)
-```
-
-Detta ger oss en länklista som kan se ut såhär:
-
-[FIGURE src=/image/design-v3/report-example-v2.png]
-
-Trycker vi på någon av länkarna så får vi en 404, vilket inte är så konstigt i och med att filerna saknas. Jag visar hur man skapar en sida för kmom01, så kan ni lösa resterande del av kursmomenten.
-
-Jag skapar följande fil: `content/report/kmom01.md` och fyller den på liknande sätt som `index.md`.
+Jag har sedan innan jag kunde gå sprungit orientering. Det är en härlig sport ute i skogen med utmaningar för både kropp och knopp.
 
 ```
----
-Title: Kmom01
-Description: Part 1
----
 
-Kursmoment 1
-==================
-
-Vi testar en undersida
-```
-
-I slutet borde ni ha något liknande detta, förutsatt att ni inte hoppat i förväg och pillat på temat, på `me/portfolio/report/kmom01`
-
-[FIGURE src=/image/design-v3/kmom01-example-v2.png]
 
 
 Layout {#layout}
@@ -197,7 +184,7 @@ I `themes/example/index.twig` så kan vi se vår default-layout. Den består ege
     <div class="main" role="main">
         {{ content }}
     </div>
-    
+
     {% include 'incl/footer.twig' %}
 </body>
 
@@ -250,7 +237,7 @@ Body-delen är lite stor att ta i ett svep, så jag tar varje include för sig s
     <div class="main" role="main">
         {{ content }}
     </div>
-    
+
     {% include 'incl/footer.twig' %}
 </body>
 
