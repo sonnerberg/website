@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
-    "2020-10-14": (C, mos) Förtydligade att bmo2 skall användas.
-    "2018-10-12": (B, mos) Flyttade tips från coachen till eget dokument.
-    "2015-10-11": (A, mos) Första omarbetade versionen till htmlphp v2.
+    "2021-10-12": "(D, mos) Genomgång inför webtec v1."
+    "2020-10-14": "(C, mos) Förtydligade att bmo2 skall användas."
+    "2018-10-12": "(B, mos) Flyttade tips från coachen till eget dokument."
+    "2015-10-11": "(A, mos) Första omarbetade versionen till htmlphp v2."
 ...
 Kmom10: Appendix 1 Projekt BMO
 ==================================
@@ -47,11 +48,11 @@ Nu i dessa tider då "Google profilen" blir en allt mer viktig del i ens bakgrun
 
 [FIGURE src="img/bmo/ronny_holm_200.jpg" caption="Ronny Holm, vår kund" class="right"]
 
-Ronny Holm jobbar som [organisationschef på SKKF](http://www.skkf.se/node/129),
+Ronny Holm jobbar som organisationschef på [SKKF](http://www.skkf.se),
 Sveriges Kyrkogårds- och Krematorieförbund. SKKF är Branschförbundet för
 begravningsverksamhet i Sverige.
 
-Följande finns att läsa [om SKKF och deras verksamhet och inriktning](http://www.skkf.se/node/119).
+Följande finns att läsa [om SKKF och deras verksamhet och inriktning](https://skkf.se/om-skkf/).
 
 > *1983 fick Sveriges kyrkogårds- och krematorieförbund, SKKF, sitt nuvarande namn. Dessförinnan var namnet Svenska Eldbegängelseföreningen vars historia börjar redan 1882. Utvecklingen av förbundet som en bred, politiskt och konfessionellt obunden branschorganisation står i centrum då förbundet nu utvecklas vidare.*
 
@@ -110,6 +111,10 @@ Det finns fördefinerat innehåll som skall finnas på BMO. Innehållet består 
 * Objekt
 * Bilder
 
+Objekt är enskilda föremål som "ställs ut" och visas upp i museet.
+
+Artiklar finns för att förklara och berätta hur de olika objekten passade in i ett sammanhang.
+
 Allt innehåll är samlat i kursrepots exempel-katalog i `example/bmo`. Du kan kopiera allt innehåll från den katalogen.
 
 I katalogen finns följande.
@@ -117,12 +122,11 @@ I katalogen finns följande.
 | Fil/katalog        | Beskrivning |
 |--------------------|-------------|
 | `img/full-size`    | Orginalbilder till objekten. |
-| `img/[80,250,550]` | Objekt-bilder skalade till upplösningar max bredd/höjd 80px, 250px och 550px. |
-| `img/[80x80,250x250,550x550]` | Objekt-bilder skalade till upplösningar max bredd/höjd 80x80px, 250x250px och 550x550px. |
+| `img/[80,250,550]` | Objekt-bilder skalade till upplösningar max bredd eller höjd 80px, 250px och 550px. |
+| `img/[80x80,250x250,550x550]` | Objekt-bilder skalade till upplösningar max bredd och höjd 80x80px, 250x250px och 550x550px. |
 | `img/maggy`        | Bilder till Maggys artikel om "Begravningsseder och Bruk". |
 | `db/bildtexter.md` | Extra information med bildtexter till bilder. |
-| `db/bmo2.sqlite`   | Databasfil 8uppdaterad) som innehåller artiklar (inklusive text till om-sidan) och objekt (inklusive rätt sökvägar till bilder). |
-| (`db/bmo.sqlite`)    | Utgången databasfil, använd inte denna. |
+| `db/bmo.sqlite`    | Databasfil med artiklar (inklusive text till om-sidan) och objekt (inklusive sökvägar till bilder). |
 
 
 
@@ -133,7 +137,7 @@ Styla webbplatsen och ge den en style och profil som du anser stämmer överens 
 
 Vi (Ronny och jag) pratade en del om layouten på Begravningsmuseum Online. Vi bestämde att var och en gör sin personliga layout. Personlig såsom: En vågad stylesheet efter ditt eget tycke och smak. Utmanande, stilig eller urflippad. Du väljer själv.
 
-VI vill gärna se hur var och en väljer att symbolisera och representera konceptet Begravningsmuseum Online (BMO).
+Vi vill gärna se hur var och en väljer att symbolisera och representera konceptet Begravningsmuseum Online (BMO).
 
 Alla har vi ett förhållande till döden. Vi drabbas när det händer nära och kära. Ofta smärtsamt, jobbigt, ibland en befrielse, men nästan alltid känslosamt. Vi har alla våra egna privata förhållande till döden och vad det innebär.
 

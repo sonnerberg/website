@@ -1,8 +1,9 @@
 ---
 author: mos
 revision:
-    "2020-10-14": (B, mos) Förtydligade att man skall använda databasfilen nvm2.
-    "2018-10-12": (A, mos) Första ugåvan inför ht18 och htmlphp v3.
+    "2021-10-12": "(C, mos) Uppdaterad inför webtec v1."
+    "2020-10-14": "(B, mos) Förtydligade att man skall använda databasfilen nvm2."
+    "2018-10-12": "(A, mos) Första ugåvan inför ht18 och htmlphp v3."
 ...
 Kmom10: Appendix 2 Projekt NVM
 ==================================
@@ -40,6 +41,8 @@ Redan 1995 kläckte journalisten Peter Öjerskog från Karlskrona idén om ett v
 Nättraby Vägmuseum är ett friluftsmuseum där befintliga vägmiljöer används. Den informella rastplatsen vid E22 avfart 61 till Nättraby används som centralplats för vägmuseet.
 
 Idag är det webbplatsen [Nättraby Vägmuseum](http://nattrabyvagmuseum.se/) som visar upp museets innehåll.
+
+Vi har fått tillstånd att använda materialet från deras webbplats som underlag till vårt projekt. Materialet vi har, i form av texter och bilder, är nedladdat från deras webbplats.
 
 
 
@@ -82,10 +85,9 @@ I katalogen finns följande.
 | Fil/katalog        | Beskrivning |
 |--------------------|-------------|
 | `img/orig`         | Orginalbilder från webbplatsen. |
-| `img/[250,500,800]` | Bilder skalade till upplösningar max bredd/höjd 250px, 500px och 800px. |
-| `img/[80x80,250x250]` | Bilder skalade till upplösningar max bredd/höjd 80x80px, 150x150px. |
-| `db/nvm2.sqlite`    | Databasfil som innehåller artiklar, objekt och information. |
-| (`db/nvm.sqlite`)    | Äldre och utgången utgåva av databasfilen, använd inte denna. |
+| `img/[250,500,800]` | Bilder skalade till upplösningar max bredd eller höjd 250px, 500px och 800px. |
+| `img/[80x80,150x150]` | Bilder skalade till upplösningar max bredd/höjd 80x80px, 150x150px. |
+| `db/nvm.sqlite`    | Databasfil som innehåller artiklar, objekt och information. |
 
 
 
