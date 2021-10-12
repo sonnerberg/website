@@ -8,7 +8,7 @@ views:
        data:
             src: "image/kurs/design/ux.jpg?w=1100&h=650&crop-to-fit"
 revision:
-    "2021-10-01": "(A, nik) Landningssida för v3."
+    "2021-10-07": "(B, efo) Introvideos."
     "2020-08-25": "(A, nik) Landningssida för v3."
 ...
 Kursen design (v3)
@@ -27,6 +27,16 @@ Kursen syftar till en orientering inom områden design och användbarhet, specif
 
 
 <!--more-->
+
+Introduktion till kursen:
+
+[YOUTUBE src=R4kMXfMHwp8 width=630 caption="Kursintro design"]
+
+
+
+Varför design:
+
+[YOUTUBE src=a59Vre1I6qs width=630 caption="Varför design?"]
 
 
 
