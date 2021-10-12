@@ -66,6 +66,8 @@ cd me/kmom06/analyzer
 
 Se till att din katalog `analyzer` innehåller filen `phil.txt` och `lorum.txt`. `phil.txt` ska vara **FÖRVALT** i programmet när man startar det.
 
+1. Ni får inte använda externa moduler för att göra analyzen. T.ex. får ni inte använda `collections` modulen. Ni ska skriva koden själva.
+
 1. Ditt program ska bestå av tre moduler: `main.py`, `menu.py` och `analyzer.py`.
 
 1. Du skall skapa funktioner för textanalysering i modulen `analyzer.py`.
