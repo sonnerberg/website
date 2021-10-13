@@ -140,6 +140,10 @@ Here is how it may look when you are done.
 
 This is what it might look like.
 
+[INFO]
+You do not have to start and stop the server from within your script. You can do that manually.
+[/INFO]
+
 [ASCIINEMA src=23368]
 
 
