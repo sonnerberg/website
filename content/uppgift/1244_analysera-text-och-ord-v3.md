@@ -148,7 +148,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt` och `lorum.txt`.
 
     ```python
 
-    input: "all"       output: "23
+    input: "all"       output: "25
                                 3
                                 140
                                 dolor: 2 | 8.0%
