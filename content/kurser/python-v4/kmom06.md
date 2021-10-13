@@ -46,6 +46,7 @@ Läs följande:
 
 1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)
     * Ch7 Files
+    * Ch9 Dictionaries - andra halvan
 
 
 
