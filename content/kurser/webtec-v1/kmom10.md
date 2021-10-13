@@ -107,7 +107,7 @@ webbplatsens syfte och idé. Din redovisningstext skall innehålla ett stycke d�
 
 Det finns många bilder i `img`-katalogen. Använd dem när du presenterar objekten och för att illustrera artiklarna. Använd "rätt" storlek av bilderna så att webbläsaren inte behöver skala om bilden.
 
-Objekten är de utställningsobjekt som visas upp i museet. Det finns också artiklar som berättar och sätter in objekten i ett sammanhang. et kan också förekomma extra bra att ha information i underlaget.
+Objekten är de utställningsobjekt som visas upp i museet. Det finns också artiklar som berättar och sätter in objekten i ett sammanhang.
 
 
 
