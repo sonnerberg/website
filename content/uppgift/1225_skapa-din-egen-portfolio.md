@@ -123,8 +123,6 @@ Krav {#krav}
 
 1. Byt ut logotypen som används i headern (`content/_meta.md`)
 
-<!-- 1. Skapa en `content/report/kmom01.md` där du skriver redovisningstexten för kursmomentet. -->
-
 1. Skapa ditt eget tema och aktivera det i `config/config.yml`, se "[Vad är Pico? - Tema](kunskap/vad-ar-pico-v2#tema)" för mer information.
 
 1. I din portfolio-mapp (`me/portfolio/`), skapa en fil som heter `github.txt` som innehåller enbart länken till ditt Github-repo (ex: `https://github.com/dbwebb-se/design-v3`)
