@@ -146,21 +146,6 @@ Följande uppgift skall utföras och redovisas.
 
 
 
-Testa din inlämning {#testa}
------------------------------------------------
-
-När du är helt klar med uppgiften så är det ett par saker som du kan kolla för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
-
-* Kolla uppdaterad startsida
-* Uppdaterad logga
-* Kolla Github-länk i footer (profil eller repo, båda ok)
-* Eget tema under portfolio/theme
-* github.txt i me/portfolio
-* Github
-    * Kolla commits och taggar
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -182,3 +167,31 @@ dbwebb publish me
 ```
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
+
+
+
+Testa din inlämning {#testa}
+-----------------------------------------------
+
+När du är helt klar med uppgiften så är det ett par saker som du kan kolla för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
+
+* Kolla uppdaterad startsida
+* Uppdaterad logga
+* Kolla Github-länk i footer (profil eller repo, båda ok)
+* Eget tema under portfolio/theme
+* github.txt i me/portfolio
+* Github
+    * Kolla commits och taggar
+
+
+
+### dbwebb test {#dbwebb-test}
+
+Kommandot `dbwebb test` kommer användas som utgångspunkt för rättningen. Du kan göra följande om du vill testa på liknande sätt som de som rättar:
+
+```shell
+# stå i roten av kursrepot (dbwebb-kurser/design)
+dbwebb update
+npm install
+dbwebb test kmom01
+```

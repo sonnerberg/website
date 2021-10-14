@@ -123,24 +123,6 @@ Dessa uppgifter skall utföras och redovisas.
 1. Försäkra dig om att du har gjort `dbwebb publish me` och taggat din inlämning med version 2.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
 
-Testa din inlämning {#testa-inlamning}
------------------------------------------------
-
-När du är helt klar med uppgiften så är det ett par saker som du kan kolla för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
-
-* Kolla så att om-sida finns med innehåll
-* Kolla i portfolio/config/config.yml vilket tema som används
-* Kolla om `themes/<tema>/scss/style.scss` finns
-    * Kolla så den inkluderar normalize.css
-    * Kolla så den laddar in FontAwesome
-    * Kolla så den laddar in font ifrån Google Fonts
-    * Kolla så att någon typ av SASS syntax används
-    * `npm run lint`
-* github.txt i me/portfolio
-* Github
-    * Kolla commits och taggar (högre än 2.\*.\*)
-
-
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
@@ -163,3 +145,35 @@ dbwebb publish me
 ```
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
+
+
+
+Testa din inlämning {#testa-inlamning}
+-----------------------------------------------
+
+När du är helt klar med uppgiften så är det ett par saker som du kan kolla för att testa din inlämning. Detta testar inte allt, men det är ett minimum av ett flöde som skall fungera.
+
+* Kolla så att om-sida finns med innehåll
+* Kolla i portfolio/config/config.yml vilket tema som används
+* Kolla om `themes/<tema>/scss/style.scss` finns
+    * Kolla så den inkluderar normalize.css
+    * Kolla så den laddar in FontAwesome
+    * Kolla så den laddar in font ifrån Google Fonts
+    * Kolla så att någon typ av SASS syntax används
+    * `npm run lint`
+* github.txt i me/portfolio
+* Github
+    * Kolla commits och taggar (högre än 2.\*.\*)
+
+
+
+### dbwebb test {#dbwebb-test}
+
+Kommandot `dbwebb test` kommer användas som utgångspunkt för rättningen. Du kan göra följande om du vill testa på liknande sätt som de som rättar:
+
+```shell
+# stå i roten av kursrepot (dbwebb-kurser/design)
+dbwebb update
+npm install
+dbwebb test kmom01
+```

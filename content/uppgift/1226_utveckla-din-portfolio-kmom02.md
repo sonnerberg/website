@@ -33,11 +33,11 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 
 ### Innehåll
 
-1. Sidan ska ha en om-sida där du skriver ett kort stycke om vilka tekniker du använder i sidan.
+1. Din portfölj ska ha en om-sida med routen `/about` där du skriver ett kort stycke om vilka tekniker du använder i sidan.
 
 1. Sidan ska vara hyfsat responsiv, t.ex. ingen horisontella scroll eller bilder som tar sönder flödet.
 
-<!-- 1. Skriv din redovisningstext i `report/kmom02.md`. -->
+
 
 ### SASS-tema
 
@@ -56,6 +56,8 @@ Uppgiften är indelad i två delar, en del angående innehåll och en där du sk
 1. Använd någon typ av funktionalitet som SASS erbjuder utöver CSS, t.ex. operatorer, variabler, arv eller nästlade regler.
 
 1. Testa att gå in på din sida via telefonen. Det behöver inte vara perfekt, men en viss spacing kanske fungerar på desktop men inte så bra på telefonen.
+
+
 
 ### Avslutningsvis
 
