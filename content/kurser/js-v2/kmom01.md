@@ -13,7 +13,7 @@ Detta kursmoment ger dig basen för resten av kursen, det hanterar grunderna som
 
 <!--more-->
 
-[FIGURE src=/img/js-v2/batman.png?w=w2 caption="JavaScript i terminalen."]
+[FIGURE src=/img/js-v2/batman.png?w=w2 caption="En interpretator för JavaScript."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -26,14 +26,14 @@ Labbmiljön  {#labbmiljo}
 
 Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
 
-Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+Den korta varianten är att du behöver jobba igenom [artiklarna för labbmiljön](https://github.com/dbwebb-se/js-v2/blob/master/articles/environment), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
-dbwebb selfupdate
-dbwebb clone js
-cd js
-dbwebb init
+$ dbwebb selfupdate
+$ dbwebb clone js
+$ cd js
+$ dbwebb init
 ```
 
 
@@ -69,12 +69,9 @@ Gör följande:
 
 ### Video  {#video}
 
-Titta på följande videos om du känner dig ringrostig på HTML och CSS. Om du inte har förkunskaper i de teknikerna är det en klar fördel att titta på dessa.
+Titta på följande: TBD
 <!--
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång. -->
-
-1. Mikael berättar om [HTML](https://www.youtube.com/watch?v=8QMveCqpegw).
-1. Mikael berättar om [CSS](https://www.youtube.com/watch?v=Rzpl9mrJ05w).
 
 
 
@@ -93,7 +90,7 @@ Jobba igenom följande.
 
 <!-- 1. Jobba igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)" som visar dig hur du gör ditt första program i JavaScript och ger dig en grundstruktur för kursens övningar. -->
 
-1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom01).
+1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom01)
 
 1. Jobba igenom det praktiska exemplet [Kom igång med JavaScript i terminalen](https://github.com/dbwebb-se/js-v2/tree/master/example/basics).
 
