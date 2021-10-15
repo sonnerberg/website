@@ -4,6 +4,7 @@ author:
     - aar
     - efo
 revision:
+    "2021-10-15": (B, aar) Första La till info om old_exams och uppdaterade till dbwebb test som rättnings kommando.
     "2021-06-01": (A, aar) Första versionen till python-v4.
 ...
 Kmom10: Individuell examination
@@ -84,10 +85,10 @@ Rätta din examination (try1) {#ratta}
 För att rätta din individuella examination och visa hur många uppgifter du har klarat och dina poäng använd följande kommando.
 
 ```bash
-dbwebb exam correct try1
+dbwebb test try1
 ```
 
-Längst upp i utskriften finns en sammanfattning av vilka uppgifter du har löst och hur många poäng du har.
+Längst ner i utskriften finns en sammanfattning av vilka uppgifter du har löst och hur många poäng du har.
 
 Under sammanfattningen finns en utskrift från testprogrammet som körs när examinationen rättas. I denna utskrift kan du få hinter om vad som är fel med din inlämning enligt testprogrammet.
 Du kan ignorera fel från uppgifter du inte utfört.
@@ -124,7 +125,7 @@ Bedömning och betygsättning {#bedomning}
 
 Det finns ett särskilt dokument som beskriver hur [bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-individuell).
 
-Under hela examinationen kan du köra kommandot `dbwebb exam correct try1` för att rätta dina lösningar och se hur många poäng du har uppnått. <!-- Sista try1 raden att ändra-->
+Under hela examinationen kan du köra kommandot `dbwebb test try1` för att rätta dina lösningar och se hur många poäng du har uppnått. <!-- Sista try1 raden att ändra-->
 
 
 
@@ -181,11 +182,27 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 Rätta förberedelse uppgiften {#rattningfor}
 ----------------------------------------------------------------------
 
-`dbwebb exam correct prep` rättar din förberedelse uppgift och visar hur många uppgifter du har klarat och dina poäng.
+`dbwebb test prep` rättar din förberedelse uppgift och visar hur många uppgifter du har klarat och dina poäng.
 
 `dbwebb validate prep` validerar din förberedelse uppgift.
 
 `dbwebb exam seal prep` lämnar in din förberedelse uppgift.
+
+
+
+Mer förberedelser {#more_prepare}
+----------------------------------------------------------------------
+
+I mappen `example/old_exams` kan ni hitta tidigare examination som ni kan använda för att öva.
+
+För att öva på en gammal examination, kopiera mappen till `me/kmom10/`. T.ex. för `lp1-2018` kör.
+
+```
+# stå i root mappen i python
+cp -r example/old_exams/lp1-2018 me/kmom10/
+```
+
+För att rätta din lösning kan du köra `dbwebb test lp1-2018`.
 
 
 
@@ -206,8 +223,8 @@ Inga genomförda än för HT21.
 Omexamination {#omexamination}
 ----------------------------------------------------------------------
 Som student har du rätt till tre examinationstillfällen med andra ord om du inte klarar första har du två försök till på dig.
-Följande tillfällen erbjuds efter 2020-10-27:
+Följande tillfällen erbjuds efter 2020-10-27. **Obs** datumen är preliminära!
 
-Omexaminationstillfälle fredagen den 2021-01-07.
+Omexaminationstillfälle fredagen den 2022-01-07.
 
-Restexaminationstillfälle onsdagen den 2021-06-08.
+Restexaminationstillfälle onsdagen den 2022-06-08.
