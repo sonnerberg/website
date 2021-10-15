@@ -124,4 +124,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur jobbar man med filer i Python?
 * Vilka fördelar ger det att kunna läsa från och skriva till filer?
 * Hur gick det att utföra uppgifterna?
-* Hur gick det med att rätta analyzer uppgiften med rättningsverktyget?
