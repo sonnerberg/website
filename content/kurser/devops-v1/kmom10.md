@@ -13,6 +13,11 @@ Vi avslutar kursen med att ni individuellt skriver en rapport. Rapporten är det
 
 <!-- more -->
 
+[WARNING]
+Kursmoment är uppdateras. Saker kan förändras.
+Fortsätt på egen risk!
+[/WARNING]
+
 [YOUTUBE src="8gwCFcGxOYE" caption="Andreas introducerar rapporten."]
 
 

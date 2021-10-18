@@ -11,6 +11,12 @@ Kmom02: Docker
 Vi packar in vår kod i en Docker container för att underlätta utveckling, driftsättning och körning av vår applikation.
 
 <!-- more -->
+
+[WARNING]
+Kursmoment är uppdateras. Saker kan förändras.
+Fortsätt på egen risk!
+[/WARNING]
+
 [FIGURE src="https://pics.me.me/it-works-on-my-machine-then-well-ship-your-machine-62072263.png"]
 
 

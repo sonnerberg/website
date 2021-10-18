@@ -14,6 +14,11 @@ Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på d
 
 <!-- more -->
 
+[WARNING]
+Kursmoment är uppdateras. Saker kan förändras.
+Fortsätt på egen risk!
+[/WARNING]
+
 [FIGURE src="img/devops/devops-security.png" caption="Hur det inte ska se ut när man kör devops."]
 
 Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stängt av ssh inloggning som root användare, vi har en ny användare i database bara för microbloggen, vi pushar inte Azure credentials till GitHub och vi sparar känslig information som behövs till CircleCi som hemlig miljövariabler. Nu ska vi gå vidare med att aktivt leta efter säkerhetsrisk.
