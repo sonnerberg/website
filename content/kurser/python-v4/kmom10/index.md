@@ -148,6 +148,8 @@ På grund av Corona ska också **alla** spela in en redovisningsvideo som ska l�
 
 2. Visa ditt ansikte och en giltig ID handling, t.ex. körkort eller pass, i videon.
 
+Ni kan välja valfritt program för att spela in redovisningsvideon. Vi kan rekommendera programmet [OBS](https://obsproject.com/sv) eller att filma med er mobilkamera. För instruktioner om OBS kan ni kolla på [Använd OBS Studio för att spela in redovisningsvideo](https://www.youtube.com/watch?v=vw1pt4-1dFU&t=9s).
+
 
 
 Förberedelse {#forberedelse}
