@@ -229,4 +229,4 @@ Följande tillfällen erbjuds efter 2020-10-27. **Obs** datumen är preliminära
 
 Omexaminationstillfälle fredagen den 2022-01-07.
 
-Restexaminationstillfälle onsdagen den 2022-06-08.
+Restexaminationstillfälle onsdagen den 2022-06-02.
