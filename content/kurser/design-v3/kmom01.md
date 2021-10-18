@@ -119,6 +119,14 @@ Kursen har en videoserie för hur man kan jobba med Pico:
 [YOUTUBE src="6aVDmXDXqDs" list="PLKtP9l5q3ce8h3PKihj_CSVBkyxtORWiy" width=700 caption="Pico introduktion"]
 
 
+
+### PT-videos
+
+Under kursens gång behandlar vi även mer mjuka delar av programvaruteknik. I denna första videon i PT-video-serien berättar Emil om olika roller och hur man kommunicerar på olika sätt.
+
+[YOUTUBE src="QO6tQcwdO_o" width=700 caption="Roller i teams"]
+
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
