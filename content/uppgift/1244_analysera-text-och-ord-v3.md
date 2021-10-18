@@ -115,7 +115,7 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt` och `lorum.txt`.
 
 
 
-1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Utskriften ska vara soreterad i storleks ordning och bokstavsordning sjunkande. Om två ord har 5 ska orden sorteras i bokstavsordning sjunkande. Skriv minst en funktion för varje kommando i `analyzer.py`.
+1. Ditt program skall klara av menyvalet `all` som kör alla analyserings funktioner i följd och skriver ut resultatet. Utskriften ska vara soreterad i storleks ordning och bokstavsordning sjunkande. Om två ord har 5 ska orden sorteras i bokstavsordning sjunkande.
 
     ```python
 
@@ -148,8 +148,8 @@ Se till att din katalog `analyzer` innehåller filen `phil.txt` och `lorum.txt`.
 
     ```python
 
-    input: "all"       output: "25
-                                3
+    input: "all"       output: "3
+                                25
                                 140
                                 dolor: 2 | 8.0%
                                 vivamus: 1 | 4.0%
