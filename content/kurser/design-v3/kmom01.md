@@ -176,6 +176,8 @@ dbwebb publish me
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
 
+[YOUTUBE src="h3pAuMliut4" width=700 caption="En inlämning i design"]
+
 
 
 Testa din inlämning {#testa}
