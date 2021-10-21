@@ -16,6 +16,10 @@ Som ett sista steg i varje kursmoment skall du lämna in och redovisa. Gör så 
 
 <!--more-->
 
+Emil visar hur man gör en inlämning i design:
+
+[YOUTUBE src="bawqieKlPeg" width=700 caption="En inlämning i design"]
+
 
 
 <!-- Skriv redovisningstext {#text}
