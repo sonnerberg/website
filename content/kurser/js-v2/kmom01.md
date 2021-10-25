@@ -9,7 +9,7 @@ Kmom01: Utvecklingsmiljö
 
 Låt oss komma i gång med en labbmiljö, och en miljö för kursen. För er som vill repetera eller inte har läst HTML/CSS innan kommer det finnas möjlighet att läsa på om det innan det används i den här kursen.
 
-Detta kursmoment ger dig basen för resten av kursen, det hanterar grunderna som behövs så att vi i kommande kursmoment kan dyka ned mer i programmering i JavaScript.
+Detta kursmoment ger dig basen för resten av kursen, det hanterar grunderna som behövs så att vi i kommande kursmoment ska kunna dyka ned mer i JavaScript.
 
 <!--more-->
 
@@ -43,17 +43,11 @@ Läsanvisningar  {#lasanvisningar}
 
 *(ca: 6-10 studietimmar)*
 
-
-### Kurslitteratur  {#kurslitteratur}
-
-
-Läs följande: TBD
-<!--
-1. Bekanta dig med kurslitteraturen [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) genom att läsa igenom det första kapitlet [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html) (läs till och med stycket om "Strict Mode") som ger dig en introduktion till grundkonstruktioner i programmeringsspråket JavaScript. -->
+* Läs igenom kapitel 1-4 i [exploringjs](https://exploringjs.com/impatient-js).
 
 
 
-###MDN {#mdn}
+### MDN {#mdn}
 
 I kursen används Mozilla Developers Network (MDN) som en resurs generellt för webbresurser och specifikt för referensmanual till programmeringsspråket JavaScript.
 
@@ -86,11 +80,7 @@ Titta på följande: TBD
 
 Jobba igenom följande.
 
-<!-- 1. Du behöver ha grundläggande koll på HTML och CSS. Som en uppfräschning av dina kunskaper, eller som en kort intro, så jobbar du igenom materialet i tipset "[Kom igång (snabbt) med HTML, CSS och JavaScript](coachen/kom-igang-snabbt-med-html-css-och-javascript)". Jobba igenom materialet grundligt eller översiktligt, beroende på ditt eget behov. -->
-
-<!-- 1. Jobba igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)" som visar dig hur du gör ditt första program i JavaScript och ger dig en grundstruktur för kursens övningar. -->
-
-1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom01)
+1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom01).
 
 1. Jobba igenom det praktiska exemplet [Kom igång med JavaScript i terminalen](https://github.com/dbwebb-se/js-v2/tree/master/example/basics).
 
@@ -116,6 +106,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken utvecklingsmiljö använder du (berätta om något förändrats sen sist, om du svarat på frågan i tidigare kurser)?
-* Är du bekant med HTML och CSS tillsammans med JavaScript sedan tidigare?
+* Är du bekant med JavaScript sedan tidigare?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort, något som var svårt eller saknades?
 * Vilken är din TIL för detta kmom?

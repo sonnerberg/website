@@ -21,30 +21,8 @@ Läsanvisningar  {#lasanvisningar}
 
 *(ca: 4-6 studietimmar)*
 
+Läs på om moduler i tex [exploringjs](https://exploringjs.com/impatient-js/ch_modules.html).
 
-###Kurslitteratur  {#kurslitteratur}
-
-Läs följande:
-
-
-1. Läs i kurslitteraturen [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) om villkor och loopar.
-    * [Ch1 Basic JavaScript](http://speakingjs.com/es5/ch01.html#_statements) (läs endast om conditionals och loops)
-    * [Ch13 Statements](http://speakingjs.com/es5/ch13.html) (hoppa över `with`)
-
-
-
-###MDN {#mdn}
-
-Läs igenom följande.
-
-<!-- 1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för villkor och loopar.
-    * Control flow and error handling
-    * Loops and iteration
-
-1. Bekanta dig med referensmanualen [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference). Som en introduktion kan du kika på konstruktioner för villkor och loopar.
-    * [Statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
-    * [if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-    * [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) -->
 
 
 
@@ -52,7 +30,7 @@ Läs igenom följande.
 
 Läs följande.
 
-<!-- 1. På MDN finns en längre artikel om grunderna i JavaScript, som en översiktlig introduktion till grundläggande begrepp i JavaScript. Du kan kika i artikeln "[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)" och läsa översiktligt. Kanske vill du komma tillbaka till artikeln i senare kursmoment. Artikeln ger en bra översikt till den som redan kan andra programmeringsspråk. -->
+1. På MDN finns en längre artikel om grunderna i JavaScript, som en översiktlig introduktion till grundläggande begrepp i JavaScript. Du kan kika i artikeln "[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)" och läsa översiktligt. Kanske vill du komma tillbaka till artikeln i senare kursmoment. Artikeln ger en bra översikt till den som redan kan andra programmeringsspråk.
 
 
 
@@ -72,14 +50,7 @@ Titta på följande:
 
 ### Övningar {#ovningar}
 
-1. Gå igenom artikeln om moduler i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom02)
-
-<!-- 1. Jobba igenom det praktiska exemplet [Kom igång med JavaScript i terminalen](https://github.com/dbwebb-se/js-v2/tree/master/example/basics). -->
-<!--
-1. Gå igenom [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 2 gäller delarna:
-    * [Loopar och villkor](guide/javascript1/section_break_3-5)
-    * [Hantera DOM](guide/javascript1/section_break_4)
-    * [Eventlyssnare](guide/javascript1/section_break_5) -->
+1. Gå igenom artikeln om moduler i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom02).
 
 
 
@@ -103,6 +74,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Har du programmerat i JavaScript tidigare, eller kan du relatera till andra språk du har programmerat i?
-* Vad tycker du är det svåraste, mest utmanande i utveckling med HTML, CSS och JavaScript - så här långt?
-* Hur gick det att utföra respektive uppgift, vilken tog mest tid och vilken var mest lärorik?
+* Vad tycker du är det svåraste, mest utmanande med JavaScript jämfört med Python eller PHP - så här långt?
+* Känner du att du har koll på vad en modul är?
 * Vilken är din TIL för det här kursmomentet?
