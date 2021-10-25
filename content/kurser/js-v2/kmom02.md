@@ -6,13 +6,11 @@ revision:
 Kmom02: Moduler
 ==================================
 
-Vi skall nu koda mer JavaScript. Vi bekantar oss med fler konstruktioner i språket och använder variabler och loopar tillsammans med en del inbyggda funktioner.
-
-Samtidigt gör vi ett par enklare program som övar oss i hur HTML, CSS och JavaScript kan samarbeta för att bygga upp en webbsida.
+Vi skall nu koda mer JavaScript. Vi bekantar oss med fler konstruktioner i språket och tar en titt på hur vi kan dela upp koden i moduler som i sin tur importerar och exporterar koden.
 
 <!--more-->
 
-[FIGURE src=/image/snap/flag1-demo.png?w=w2 caption="En flagga i HTML, CSS och JavaScript."]
+[FIGURE src=/img/js-v2/whale.jpeg?w=w2 caption="En blåval."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
