@@ -151,27 +151,18 @@ Kurslitteratur {#litteratur}
 
 ### Kurslitteratur {#kurslitteratur}
 
-Följande bok är kurslitteratur tillsammans med övrigt material som finns i respektive kursmoment.
+Det finns ett flertal böcker som är gratis att läsa online, tex [Exploringjs](https://exploringjs.com/). Det händer mycket i JS världen så att köpa en bok är inte rekommenderat och jag har därför valt att inte ha en specifik bok som kurslitteratur. Använd de resurser som finns online istället.
 
-Det finns läsanvisningar i samband med varje kursmoment.
-
-* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
-    En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
-
-
-
-### Referenslitteratur {#referenslitteratur}
-
-Följande böcker har jag valt som referenslitteratur som är en fördjupning av kurslitteraturen. De behövs inte för att klara kursen men vill du bemästra kursens område så är litteraturn en god startpunkt.
-
-* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
-  En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
+Det finns ämnen att läsa på om i samband med varje kursmoment.
 
 
 
 ### Övrig litteratur {#ovriglitteratur}
 
 Det finns närliggande litteratur som är intressant för den som vill fördjupa sig i ämnet eller den som vill skaffa sig förkunskaper innan kursen.
+
+* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
+En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
 
 * **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
     En bok om ES6 som förutsätter att man kan ES5.
