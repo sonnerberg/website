@@ -27,11 +27,15 @@ Föreläsningar & Seminarium {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10:00 (2021-11-08) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633))
+* 10:00 (2021-11-08) H430
+
+<!-- * 10:00 (2021-11-08) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633)) -->
 
 Du ska även medverka i seminariet kring privacy:
 
-* 10:00-12:00 (2021-11-12) via Zoom ([Kenneth, Marie](https://bth.zoom.us/j/6772303809))
+* 10:00-12:00 (2021-11-12) H430
+
+<!-- * 10:00-12:00 (2021-11-12) via Zoom ([Kenneth, Marie](https://bth.zoom.us/j/6772303809)) -->
 
 
 Läs &amp; Studera  {#lasanvisningar}

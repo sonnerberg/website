@@ -55,8 +55,11 @@ klick, ransomware, social attacks
 
 Kursvecka 4:
 
+* 10:00 (2021-11-22) H430.
+* 10:00 (2021-11-26) H430, med Anton om "Vulnerability Assessment, Threat modeling and Attack trees"
+<!--
 * 10:00 (2021-11-22) via Zoom med `<INSERT TEACHER>` om `<INSERT SUBJECT>`.
-* 10:00 (2021-11-26) via Zoom med Anton om "Vulnerability Assesment, Threat modeling and Attack trees"
+* 10:00 (2021-11-26) via Zoom med Anton om "Vulnerability Assesment, Threat modeling and Attack trees" -->
 
 
 

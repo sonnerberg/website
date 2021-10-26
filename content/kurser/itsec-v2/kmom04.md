@@ -40,7 +40,10 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10.00 (2021-12-03) via Zoom (länk på Canvas)
+* 10.00 (2021-12-03) H430
+
+<!-- * 10.00 (2021-12-03) via Zoom (länk på Canvas) -->
+
 
 Läs &amp; Studera  {#lasanvisningar}
 ---------------------------------

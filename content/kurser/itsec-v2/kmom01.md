@@ -40,8 +40,13 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningarna:
 
+* 10:00 (2021-11-01) H430
+
+* 10:00 (2021-11-04) H430
+
+<!--
 * 10:00 (2021-11-01) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633))
-* 10:00 (2021-11-04) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633))
+* 10:00 (2021-11-04) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633)) -->
 
 <!-- https://bth.zoom.us/j/67269425633 -->
 
