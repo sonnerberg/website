@@ -21,7 +21,7 @@ Fortsätt på egen risk!
 
 ## Vad är devops? {#devops}
 
-Kolla på följande video för att få en introduktion till ämnet devops. Devops är ett brett ämne med många olika defenitioner, här försöker skaparen av CM verktyget [Chef](https://www.chef.io) beskriva konceptet och komma fram till en rimlig definition.
+Kolla på följande video för att få en introduktion till ämnet devops. Devops är ett brett ämne med många olika definitioner, här försöker skaparen av CM verktyget [Chef](https://www.chef.io) beskriva konceptet och komma fram till en rimlig definition.
 
 [YOUTUBE src="_DEToXsgrPc" caption="Chef Style DevOps Kungfu - Adam Jacob Keynote - ChefConf 2015."]
 
@@ -57,7 +57,7 @@ För att få en introduktion till vad Azure är kan ni kolla in "What Is Azure?"
 
 [YOUTUBE src="3Arj5zlUPG4" caption="What Is Azure?"]
 
-Ett konto till Azure får du från skolan, du hittar länken på Canvas. Logga in via den länken och kolla sen på videon nedanför och skapa din första VM på Azure.
+Logga in på [Azure](https://portal.azure.com/#home) med ditt studentinlogg och kolla sen på videon nedanför och skapa din första VM på Azure.
 
 [INFO]
 När ni skapar en VM till skillnad från i videon behöver ni under kategorin "Disks" ändra `OS disk type` från `Premium SSD` till `Standard HDD`.
@@ -132,7 +132,7 @@ När du pushar kod i ditt repo ska CircleCi köra alla unittester, integrationte
 
 ### Video {#video}
 
-1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[devops streams ht20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_MEDc_y12Zxdf3_zgb6YWy)".
+1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[devops streams ht21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8g4N0v72y47OiNePhjOqqN)".
 
 1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 1xx i namnet.
 

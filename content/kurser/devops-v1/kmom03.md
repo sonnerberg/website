@@ -84,10 +84,10 @@ Jag rekommenderar även att läsa `ansible/README.md` filen. Den innehåller bra
 
 ### 10 first minutes on a server i Ansible
 
-Nästa steg är att skapa er egna playbook för 10 first minutes on a server, kolla på videorna med [31x i namnet] och skapa en playbook för 10-first-minutes skripten.  
+Nästa steg är att skapa er egna playbook för 10 first minutes on a server, kolla på videorna med `31x` i namnet och skapa en playbook för 10-first-minutes skripten.  
 **Notera** några rättelser i videon:
 
-- I videon används `gather_aws_instances.yml`, ni ska instället använda `gather_vm_instances.yml`.
+- I videon används `gather_aws_instances.yml`, ni ska istället använda `gather_vm_instances.yml`.
 
 - I videon används `hosts: devops`, ni ska använd:
 
