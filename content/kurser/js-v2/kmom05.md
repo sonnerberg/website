@@ -8,6 +8,8 @@ Kmom05: Web API
 
 När vi använder JavaScript i webbläsaren kan vi använda färdiga API:er som ger oss möjlighet att bygga våra webbsidor och applikationer på nya sätt. Vi ska i det här kursmomentet ta en närmare titt på ett av dem.
 
+<!--stop-->
+
 <!--more-->
 
 <!-- [YOUTUBE src=Ra4qyJWjwmk width=630 caption="Så här kan det se ut när man leker med JavaScript och DOM."] -->

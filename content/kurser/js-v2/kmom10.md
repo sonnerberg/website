@@ -19,6 +19,7 @@ Upplägget är enligt följande:
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 
+<!--stop-->
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
