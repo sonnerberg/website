@@ -34,9 +34,9 @@ Läs följande.
 
 
 
-###Video  {#video}
+<!-- ###Video  {#video}
 
-Titta på följande:
+Titta på följande: -->
 
 <!-- 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång. -->
 
