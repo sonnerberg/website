@@ -8,6 +8,12 @@ Kmom04: Webpack
 
 I JavaScript finns strukturer för arrayer och objekt tillsammans med en del inbyggda funktioner. För att skriva bra och effektiva program är det en förutsättning att man förstår hur dessa är uppbyggda och vilket stöd som erbjuds i form av inbyggda funktioner som hjälper oss att arbete mot arrayer och objekt.
 
+[WARNING]
+
+**Kursutveckling pågår**
+
+[/WARNING]
+
 <!--stop-->
 
 <!--more-->
