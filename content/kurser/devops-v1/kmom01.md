@@ -124,6 +124,8 @@ Jobba igenom ["Continuous Integration With Python: An Introduction"](https://rea
 
 När du pushar kod i ditt repo ska CircleCi köra alla unittester, integrationtester och validera koden. Använd dig av make kommandot `make test` för att köra det. Du ska **inte** använda dig av flake8 som de gjorde i artikeln. 
 
+Om ni vill snabba på CircleCi jobbet kan ni cacha det installerade paketen, detta är frivilligt. Kolla in [Caching dependencies](https://circleci.com/docs/2.0/project-walkthrough/#caching-dependencies), det är i `steps:` delen det intressanta sker. En längre förklaring på hur det funkar kan ni hitta i [CircleCi's dokumentation](https://circleci.com/docs/2.0/caching/).
+
 
 
 ### Video {#video}
