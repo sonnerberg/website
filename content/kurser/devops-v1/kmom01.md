@@ -14,12 +14,6 @@ Det är en fullspäckat kurs där vi ska lära oss många ny verktyg och koncept
 
 <!-- more -->
 
-[WARNING]
-Kursmoment är uppdateras. Saker kan förändras.
-Fortsätt på egen risk!
-[/WARNING]
-
-
 ## Vad är devops? {#devops}
 
 Kolla på följande video för att få en introduktion till ämnet devops. Devops är ett brett ämne med många olika definitioner, här försöker skaparen av CM verktyget [Chef](https://www.chef.io) beskriva konceptet och komma fram till en rimlig definition.
