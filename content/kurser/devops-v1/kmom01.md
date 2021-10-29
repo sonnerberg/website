@@ -126,7 +126,7 @@ Vi vill ha en CI-kedja till repot så att testerna automatiskt körs när du gö
 
 Jobba igenom ["Continuous Integration With Python: An Introduction"](https://realpython.com/python-continuous-integration/).
 
-När du pushar kod i ditt repo ska CircleCi köra alla unittester, integrationtester och validera koden.
+När du pushar kod i ditt repo ska CircleCi köra alla unittester, integrationtester och validera koden. Använd dig av make kommandot `make test` för att köra det. Du ska **inte** använda dig av flake8 som de gjorde i artikeln. 
 
 
 
@@ -141,8 +141,8 @@ När du pushar kod i ditt repo ska CircleCi köra alla unittester, integrationte
 ### Lästips {#lastips}
 
 1. Bättre commit meddelanden:
-    - [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/#seven-rules). Ni kan också läsa stycket ovanför i länken, om varför det är viktigt.
-    - [Keeping Git Commit Messages Consistent with a Custom Template ](https://dev.to/timmybytes/keeping-git-commit-messages-consistent-with-a-custom-template-1jkm)
+    - [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/#seven-rules). Ni kan också läsa stycket ovanför, i länken, om varför det är viktigt.
+    - [Keeping Git Commit Messages Consistent with a Custom Template ](https://dev.to/timmybytes/keeping-git-commit-messages-consistent-with-a-custom-template-1jkm). I denna kursen kan ni t.ex. använda vilket kursmoment ni jobbar på i footern.
 
 1. [The 12 Factor App](https://12factor.net/) är en populär "standard" för att bygga Software-as-a-service och  används mycket i devops sammanhang.
 
