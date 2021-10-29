@@ -6,6 +6,7 @@ category:
     - python
     - sql
 revision:
+    "2021-10-29": (b, aar) Byte .format() till f-strings.
     "2020-09-29": (A, moc) Skapad inför HT2020.
 ...
 Kom igång med followers - Microblog {#intro}
@@ -280,14 +281,14 @@ def follow(username):
     """
     user_ = User.query.filter_by(username=username).first()
     if user_ is None:
-        flash('User {} not found.'.format(username))
+        flash(f'User {username} not found.')
         return redirect(url_for('index'))
     if user_ == current_user:
         flash('You cannot follow yourself!')
         return redirect(url_for('user', username=username))
     current_user.follow(user_)
     db.session.commit()
-    flash('You are following {}!'.format(username))
+    flash(f'You are following {username}!')
     return redirect(url_for('main.user', username=username))
 
 @bp.route('/unfollow/<username>')
@@ -298,14 +299,14 @@ def unfollow(username):
     """
     user_ = User.query.filter_by(username=username).first()
     if user is None:
-        flash('User {} not found.'.format(username))
+        flash(f'User {username} not found.')
         return redirect(url_for('index'))
     if user_ == current_user:
         flash('You cannot unfollow yourself!')
         return redirect(url_for('user', username=username))
     current_user.unfollow(user_)
     db.session.commit()
-    flash('You are not following {}.'.format(username))
+    flash(f'You are not following {username}.')
     return redirect(url_for('main.user', username=username))
 ```
 
@@ -328,7 +329,7 @@ def index():
     form = PostForm()
     if form.validate_on_submit():
         post = Post(body=form.post.data, author=current_user)
-        current_app.logger.debug("{}".format(post))
+        current_app.logger.debug(f"{post}")
         db.session.add(post)
         db.session.commit()
         flash('Your post is now live!')
