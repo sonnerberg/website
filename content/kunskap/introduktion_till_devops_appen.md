@@ -12,13 +12,24 @@ Introduktion till Devops appen
 Introduktion till projektet vi ska jobba med i hela kursen. Vi ska titta på lite kod, strukturen och de olika verktygen som används för appen.
 <!--more-->
 
-Vi behöver ett projekt/en app att jobba med när vi ska lära oss devops. Jag har redan skapat en blog som du ska använda och jobba vidare med i kursen. Bloggen baseras på [The Flask mega tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world). I den tutorialen visar Miguel hur man skapar en blog i Flask från grunden till att driftsätta den.
+Vi behöver ett projekt/en app att jobba med när vi ska lära oss devops. Jag har redan skapat en blog som du ska använda och jobba vidare med i kursen. Bloggen baseras på [The Flask mega tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world). I den genomgången visar Miguel hur man skapar en blog i Flask från grunden till att driftsätta den.
 
 
 
 ## Appen {#appen}
 
-Koden för appen är redan klar och finns i repot [devops](https://github.com/dbwebb-se/microblog), börja med att forka och klona repot. Här följer några videos som du kan kolla på för att få en uppfattning av hur bloggen fungerar och koden ser ut. Använd även [The Flask mega tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) för att förstå koden.
+Koden för appen är redan klar och finns i repot [devops](https://github.com/dbwebb-se/microblog), börja med att **forka** och klona din fork av repot. För att forka repot, klicka på knappen `Fork' uppe till vänster på Github sidan.
+
+
+Här följer några videos som du kan kolla på för att sätta upp bloggen, få en uppfattning av hur den fungerar och hur koden ser ut. Använd även [The Flask mega tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) för att förstå koden.
+
+[INFO]
+Ni kan behöva uppdatera pip3 för att kunna installera paketen som behövs.
+
+python3 -m pip install --upgrade pip  
+python3 -m pip install --upgrade setuptools
+
+[\INFO]
 
 [YOUTUBE src="PUigbi1lGQU" caption="110 Introduktion till app strukturen och repot."]
 
