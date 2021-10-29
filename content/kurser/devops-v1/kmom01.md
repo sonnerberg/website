@@ -140,6 +140,10 @@ När du pushar kod i ditt repo ska CircleCi köra alla unittester, integrationte
 
 ### Lästips {#lastips}
 
+1. Bättre commit meddelanden:
+    - [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/#seven-rules). Ni kan också läsa stycket ovanför i länken, om varför det är viktigt.
+    - [Keeping Git Commit Messages Consistent with a Custom Template ](https://dev.to/timmybytes/keeping-git-commit-messages-consistent-with-a-custom-template-1jkm)
+
 1. [The 12 Factor App](https://12factor.net/) är en populär "standard" för att bygga Software-as-a-service och  används mycket i devops sammanhang.
 
 1. [DevOps Roadmap](https://roadmap.sh/devops) Visar upp vanligaste verktygen man behöver kunna för att jobba med de tekniska delarna av devops.
