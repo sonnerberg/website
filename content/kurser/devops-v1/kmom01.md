@@ -2,6 +2,7 @@
 author:
     - aar
 revision:
+    "2021-10-29": "(C, aar) Slog ihop canvas inlämning med kmom02."
     "2020-10-20": "(B, aar) Uppdaterade med Azure inför HT20."
     "2019-04-17": "(A, aar) Första versionen släppt."
 ...
@@ -165,13 +166,16 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v1.0.0. Om du pushar kmom01 flera gånger kan du öka siffrorna efter 1:an.
 
-1. Inkludera en länk till ditt GitHub repo och din webbsida (domännamn) i din inlämning på Canvas.
+<!-- 1. Inkludera en länk till ditt GitHub repo och din webbsida (domännamn) i din inlämning på Canvas. -->
 
 
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
+Det är ingen inlämning på Canvas för kmom01. Kmom01 redovisas tillsammans med kmom02 istället.
+
+<!--
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
@@ -185,3 +189,4 @@ Se till att följande frågor besvaras i texten:
 1. Finns det något speciellt du vill lära dig i denna kursen?
 
 1. Vad tycker du om kmom01's upplägg och storlek?
+-->

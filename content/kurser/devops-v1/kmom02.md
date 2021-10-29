@@ -2,6 +2,7 @@
 author:
     - aar
 revision:
+    "2021-10-29": "(C, aar) Slog ihop canvas inlämning med kmom01."
     "2020-11-06": "(B, aar) Ready for HT20."
     "2019-11-01": "(A, aar) Första versionen."
 ...
@@ -28,9 +29,9 @@ Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat
 
 ## Vad är Docker? {#docker}
 
-En snabb översikten av vad Docker är kan vi hitta på [Dockers egna webbsida](https://www.docker.com/resources/what-container). Docker är en container teknologi som liknar en avskalad virtuelle maskin. Vad tillför det till oss som utvecklare?
+En snabb översikten av vad Docker är kan vi hitta på [Dockers egna webbsida](https://www.docker.com/resources/what-container). Docker är en container teknologi som liknar en avskalad virtuella maskin. Vad tillför det till oss som utvecklare?
 
-Docker låter utvecklare att utveckla och driftsätta applikationer i virtuella container miljöer. Detta ska göra att en applikation kan köras på exakt samma sätt utan kompabilitets problem oberoende av vilken dator/server den körs på, så länge Docker är installerat. Att applikationen kan köras oberoende av systemet gör att applikationen blir lättare att använda, utveckla och underhålla och driftsätta.
+Docker låter utvecklare att utveckla och driftsätta applikationer i virtuella container miljöer. Detta ska göra att en applikation kan köras på exakt samma sätt utan kopabilitets problem oberoende av vilken dator/server den körs på, så länge Docker är installerat. Att applikationen kan köras oberoende av systemet gör att applikationen blir lättare att använda, utveckla och underhålla och driftsätta.
 
 
 
@@ -188,6 +189,18 @@ Det finns generellt kursmaterial i video form.
 
 
 
+## Lästips {#lastips}
+
+[Multistage builds](https://docs.docker.com/develop/develop-images/multistage-build/), för vår app är detta kanske inte nödvändigt men det är väldigt bra att känna till.
+
+[Best practices](https://www.wintellect.com/security-best-practices-for-docker-images/) för Docker.
+
+[Docker latest tag](https://vsupalov.com/docker-latest-tag/), ett annat hett ämne inom Docker är om man ska använda `latest` taggen för att köra images eller ej.
+
+[Building Your Production Tech Stack for Docker Container Platform](https://dockercon2018.hubs.vidyard.com/watch/k3Cv676wmxAwYDxbvcgcgC), video från DockerCon 2018.
+
+
+
 Uppgifter {#uppgifter}
 -----------------------------------------------
 
@@ -208,24 +221,18 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 
 
-## Lästips {#lastips}
-
-[Multistage builds](https://docs.docker.com/develop/develop-images/multistage-build/), för vår app är detta kanske inte nödvändigt men det är väldigt bra att känna till.
-
-[Best practices](https://www.wintellect.com/security-best-practices-for-docker-images/) för Docker.
-
-[Docker latest tag](https://vsupalov.com/docker-latest-tag/), ett annat hett ämne inom Docker är om man ska använda `latest` taggen för att köra images eller ej.
-
-[Building Your Production Tech Stack for Docker Container Platform](https://dockercon2018.hubs.vidyard.com/watch/k3Cv676wmxAwYDxbvcgcgC), video från DockerCon 2018.
-
-
-
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i texten:
+
+1. Vad var din uppfattning av devops innan kursen började?
+
+1. Har din uppfattning ändrats så här långt in i kursen?
+
+1. Hur skulle du definiera devops?
 
 1. Har du använt Docker förut? Gick det bra att använda det nu?
 
@@ -237,4 +244,4 @@ Se till att följande frågor besvaras i texten:
 
 1. Hur var storleken på kursmomentet? Vad tycker du om upplägget på kursmomentet?
 
-1. Veckans TIL?
+1. Veckornas TIL?
