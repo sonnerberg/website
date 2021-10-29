@@ -26,10 +26,11 @@ Här följer några videos som du kan kolla på för att sätta upp bloggen, få
 [INFO]
 Ni kan behöva uppdatera pip3 för att kunna installera paketen som behövs.
 
+```
 python3 -m pip install --upgrade pip  
 python3 -m pip install --upgrade setuptools
-
-[\INFO]
+```
+[/INFO]
 
 [YOUTUBE src="PUigbi1lGQU" caption="110 Introduktion till app strukturen och repot."]
 
