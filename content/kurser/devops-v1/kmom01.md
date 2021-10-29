@@ -159,7 +159,9 @@ Uppgifter  {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Kom igång med followers](kunskap/kom-igang-med-followers)
+1. Lägg till funktionaliteten att följa andras blogginlägg. Jobba igenom [Kom igång med followers](kunskap/kom-igang-med-followers).
+
+1. Driftsätt den nya funktionaliteten på din server.
 
 1. Koppla ditt repo till CircleCi. När du gör en commit ska CricleCi köra alla unittester, integrationtester och validera koden. Lägg till en CircleCi badge i README filen för repot.
 
