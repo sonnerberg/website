@@ -59,11 +59,7 @@ För att få en introduktion till vad Azure är kan ni kolla in "What Is Azure?"
 
 Logga in på [Azure](https://portal.azure.com/#home) med ditt studentinlogg och kolla sen på videon nedanför och skapa din första VM på Azure.
 
-[INFO]
-När ni skapar en VM till skillnad från i videon behöver ni under kategorin "Disks" ändra `OS disk type` från `Premium SSD` till `Standard HDD`.
-[/INFO]
-
-[YOUTUBE src="cTaHN99ldzE" caption="101 Skapa server på Azure."]
+[YOUTUBE src="xs9dMl_AE1A" caption="101 Skapa server på Azure."]
 
 
 
