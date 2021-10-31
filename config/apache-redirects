@@ -212,6 +212,7 @@ Redirect /kurser/javascript1/lektionsplan    https://docs.google.com/spreadsheet
 
 
 # js
+Redirect /kurser/js     /kurser/js-v2
 Redirect /kurser/js/repo   /repo/js-v2
 Redirect /js               /kurser/js-v2
 Redirect /kurser/js/studieplan    https://docs.google.com/spreadsheets/d/1WRlrnhph1jQKvIJIjkzgqVYFXj3bIFh4C2Kth4yxDA4/edit?usp=sharing
