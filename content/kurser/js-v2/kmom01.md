@@ -63,7 +63,11 @@ Gör följande:
 
 ### Video  {#video}
 
-Titta på följande: TBD
+Senare i kursen, i kursmoment 03, behöver du ha en del baskunskaper i HTML och CSS. Om du känner att du behöver färska upp minnet eller rent av skaffa dig baskunskaperna bör du redan nu titta igenom följande av Mikael:
+
+* [HTML](https://youtu.be/8QMveCqpegw)
+* [CSS](https://youtu.be/Rzpl9mrJ05w)
+
 <!--
 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång. -->
 
