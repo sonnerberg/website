@@ -92,7 +92,7 @@ chmod -R 777 cache/*
 Ni ska ladda upp eran portfolio till GitHub. Om ni inte redan har, jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)" som går igenom hur man sätter upp ett repo. Kort sagt:
 
 * Skapa repot i `me/portfolio` med `git init`
-* Lägg till filerna med `git add`
+* Lägg till filerna med `git add .`
 * Commit:a med `git commit -m <message>`
 * Säg vart du vill ladda upp koden med `git remote add origin <url>`
 * Ladda upp med `git push`
