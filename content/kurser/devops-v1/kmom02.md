@@ -31,17 +31,17 @@ Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat
 
 En snabb översikten av vad Docker är kan vi hitta på [Dockers egna webbsida](https://www.docker.com/resources/what-container). Docker är en container teknologi som liknar en avskalad virtuella maskin. Vad tillför det till oss som utvecklare?
 
-Docker låter utvecklare att utveckla och driftsätta applikationer i virtuella container miljöer. Detta ska göra att en applikation kan köras på exakt samma sätt utan kopabilitets problem oberoende av vilken dator/server den körs på, så länge Docker är installerat. Att applikationen kan köras oberoende av systemet gör att applikationen blir lättare att använda, utveckla och underhålla och driftsätta.
+Docker låter utvecklare att utveckla och driftsätta applikationer i virtuella container miljöer. Detta ska göra att en applikation kan köras på exakt samma sätt utan kompabilitets problem oberoende av vilken dator/server den körs på, så länge Docker är installerat. Att applikationen kan köras oberoende av systemet gör att applikationen blir lättare att använda, utveckla, underhålla och driftsätta.
 
 
 
 ### Docker terminologi {#terminologi}
 
-- **Image**: En image är typ ett exekverbart paket som innehåller allt som behövs för att köra applikationen, det inkluderar konfigurationsfiler, miljö variabler och bibliotek.
-- **Dockerfile**: Fil som innehåller instruktionerna för att bygga en Docker image.
-- **Build**: Skapa en image snapshot från Dockerfile.
+- **Image**: En image är typ ett exekverbart paket som innehåller allt som behövs för att köra applikationen, det inkluderar konfigurationsfiler, miljövariabler och bibliotek.
+- **Dockerfile**: Fil som innehåller instruktionerna för att bygga en Docker image. Koden som används för att skapa en **Image**.
+- **Build**: Skapar en image snapshot från Dockerfile.
 - **Tag**: Version av en image. Varje image har ett tag namn.
-- **Container**: Ett lättviktig program paket skapat från en specifik image version. 
+- **Container**: Ett lättviktig program skapat från en specifik image version. Vi kan se det som att vi kallar en image en container när den exekveras.
 - **DockerHub**: Image repository där vi kan hitta images. Typ GitHub för images.
 - **Docker Daemon**: Körs på host systemet. Användare kan inte jobba direkt mot Docker daemon utan gör det via Docker klienter.
 - **Docker Engine**: Skapar och kör Containers.
@@ -67,7 +67,7 @@ Om ni redan har läst kursen vlinux kan ni gå vidare till nästa steg. Annars j
 
 - [Docker](guide/docker/introduktion)
 
-Om ni har tid och känner att ni vill öva lite mer på Docker kan ni testa [Docker på Catacoda](https://katacoda.com/courses/docker).
+Om ni vill öva mer på Docker så finns det många [Docker övningar på Catacoda](https://katacoda.com/courses/docker).
 
 
 
@@ -93,8 +93,6 @@ Efter att ni skapat er Dockerfile kan läsa två relevanta artiklar om docker an
 
 - Vsupalov's review av [Docker Usage in 'The Flask Mega-Tutorial'](https://vsupalov.com/flask-megatutorial-review/).
 
-- [Should Built Docker Images Be Used in a Development Environment?](https://vsupalov.com/dockerfile-in-production-docker-image-in-dev/).
-
 
 
 ### Databas i Docker {#db_docker}
@@ -103,23 +101,25 @@ Att köra sin databas i Docker har länge varit debatterat, många är emot men 
 
 - Läsa lite om argumenten i [Should You Run Your Database in Docker?](https://vsupalov.com/database-in-docker/). 
 
-MySQL sparar sin data i mappen `/var/lib/mysql` så när ni kör er databas container i produktion gör den mappen till en volym på host systemet.
+MySQL sparar sin data i mappen `/var/lib/mysql` så när ni kör er databas container i produktion gör den mappen till en volym på host systemet. Så att datan i databasen inte försvinner när vi stänger ned containern.
 
 
 
 ## Skapa en Docker image för testning {#file_test}
 
-Nästa steg är att skapa en till Dockerfile, fast en som bara ska användas för testning.
+Nu borde ni ha en image för produktions miljön, vi vill även ha en för vår utvecklings/testningsmiljö. Hur vår image ska bete sig skiljer mellan de olika miljöerna.
 
-När vi kör docker i produktion vill vi att containern ska vara igång för evigt. När vi istället gör en image för testning vill vi bara starta upp en container, köra alla tester i den och sedan stänga ner.
+När vi kör docker i produktion vill vi att containern ska vara igång för evigt. När vi istället gör en image för testning vill vi starta upp en container, köra alla tester i den och sedan ska den stänga ner.
 
-Vi vill inte behöva bygga om containern varje gång vi vill köra testerna. Det tar för lång tid. Vi kan lösa det genom att inte kopiera in koden i containern när den byggs. Istället mappar vi mappen som koden ligger i in i containern. Då behöver bara containern innehålla miljön för att köra testerna. Detta gör att vi bara behöver skapa containern en gång och sen kan vi återanvända den när vi har ändrat i koden.
+Vi vill inte behöva bygga om containern varje gång vi vill köra testerna. Som imagen för produktionsmiljön är byggd behöver vi bygga om den varje gång vi uppdaterar koden. Det tar för lång tid. Vi kan lösa det genom att inte kopiera in koden i containern när den byggs. Istället lägger vi mappen som koden ligger som en volym i containern. Då behöver bara containern innehålla miljön för att köra testerna. Detta gör att vi bara behöver skapa containern en gång och sen kan vi återanvända den när vi har ändrat i koden.
 
-Skapa en Dockerfile, döp den till `Dockerfile_test` och lägg den i mappen `docker`. Den ska inte innehålla koden för testerna eller koden som testas, det ska läggas som en volym. När containern startar ska den validera koden och köra unit och integrations testerna. När det är klart ska containerna stängas ner av sig själv.
+- Skapa en Dockerfile, döp den till `Dockerfile_test` och lägg den i mappen `docker`.
+- I den ska ni inte kopiera in koden för testerna eller koden som testas. `app` och `tests` mapparna ska läggas som en volymer istället.
+- När containern startar ska den validera koden och köra unit och integrations testerna. När det är klart ska containerna stängas ner av sig själv.
 
 Om ni vill kan ni ändra så integrationstesterna körs mot MySQL i docker container istället för SQLite i minnet. Testerna kommer troligen köras långsammare men testerna blir mer värdefulla då de körs mot likadant system som körs i produktion. När man kör databasen i en container för testerna brukar man inte göra data mappen till en volym, i och med att vi inte bryr oss om persistent data för tester.
 
-Kolla så att era Dockerfiler validerar med [Hadolint](https://github.com/hadolint/hadolint). Det finns redan ett Make kommando, `make validate-docker`, som kör validering på `Dockerfile_prod` och `Dockerfile_test`.
+Kolla så att era Dockerfiler validerar med Hadolint. Det finns redan ett Make kommando, `make validate-docker`, som kör validering på `Dockerfile_prod` och `Dockerfile_test`.
 
 
 
@@ -139,7 +139,7 @@ Skapa filen `docker-compose.yml` i root mappen av repot. I den, lägg till en se
 
 `docker-compose up prod` ska starta en MySQL container och er prod container.
 
-Updatera `make test` så det startar er test container och kör alla tester.
+Uppdatera `make test` så det startar er test container och kör alla tester.
 
 
 
