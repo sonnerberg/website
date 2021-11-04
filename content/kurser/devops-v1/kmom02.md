@@ -119,7 +119,7 @@ Skapa en Dockerfile, döp den till `Dockerfile_test` och lägg den i mappen `doc
 
 Om ni vill kan ni ändra så integrationstesterna körs mot MySQL i docker container istället för SQLite i minnet. Testerna kommer troligen köras långsammare men testerna blir mer värdefulla då de körs mot likadant system som körs i produktion. När man kör databasen i en container för testerna brukar man inte göra data mappen till en volym, i och med att vi inte bryr oss om persistent data för tester.
 
-Kolla så att era Dockerfiler validerar med hadolint. Make kommandot `make validate-docker` kör validering på Dockerfile_prod och Dockerfile_test.
+Kolla så att era Dockerfiler validerar med [Hadolint](https://github.com/hadolint/hadolint). Det finns redan ett Make kommando, `make validate-docker`, som kör validering på `Dockerfile_prod` och `Dockerfile_test`.
 
 
 
@@ -152,13 +152,17 @@ Vi ska inte uppnå "riktigt" CD då vi inte har en staging miljö och vi borde t
 
 Om ni inte redan har ett, skapa först ett konto på [DockerHub](https://hub.docker.com/). Skapa sen ett nytt repo där ni kan ladda upp er produktions image. När ni gjort det testa ladda upp er första image manuellt. 
 
-Nu vill vi att er produktions image byggs och pushas till dockerhub automatiskt när ni pushar uppdateringar i er kod till GitHub. Vi gör så att detta sker i CircleCi. Läs följande artikeln för att se hur ni kan skriva er CircleCi config för att bygga och publicera er image till DockerHub. Tänk på att ni bara vill bygga och publicera en ny image om alla tester går igenom. Innan ni gör det kan ni installera CircleCi CLI för att slippa massa commit där CircleCi configen inte validerar.
+- [Skapa och hanter konto på DockerHub](https://dbwebb.se/guide/docker/skapa-och-hantera-konto).
+
+Nu vill vi att er produktions image byggs och pushas till dockerhub automatiskt när ni pushar uppdateringar i er kod till GitHub. Vi gör så att detta sker i CircleCi. Läs följande artiklar för att se hur ni kan skriva er CircleCi config för att bygga och publicera er image till DockerHub. Tänk på att ni bara vill bygga och publicera en ny image om alla tester går igenom. Innan ni gör det kan ni installera CircleCi CLI för att slippa massa commits där CircleCi configen inte validerar.
 
 - [Installera CircleCi CLI](kunskap/installera-circleci-cli).
 
+- Ni som inte använder Cygwin kan även använda CircleCI för att [köra CircleCi jobb lokalt](https://circleci.com/docs/2.0/local-cli/#run-a-job-in-a-container-on-your-machine). Använd det och validate för att spara tid och slipp göra nya commits för att testa konfigurationen.
+
 - [Using CircleCI workflows to replicate Docker Hub automated builds](https://circleci.com/blog/using-circleci-workflows-to-replicate-docker-hub-automated-builds/) 
 
-Gör ett aktivt val mellan att bara publicera ny image för varje ny release eller om det ska ske vid varje commit.
+Gör ett aktivt val mellan att publicera ny image för varje ny release eller vid varje commit!
 
 Vi vill inte spara lösenord eller annan känslig information i kod så att det finns publikt på GitHub. Samtidigt behöver vi använda oss av t.ex. lösenord när vi kör saker i CircleCi. Känslig information kan vi spara som miljövariabler i CircleCi och sen använda i CircleCI flödet.
 
@@ -211,7 +215,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. En docker-compose fil för att köra test och starta prod miljön.
 
-1. `make test` kör testerna och validerar kod i Docker. `validate-docker` funkar inte på CircleCi, om ni vill lägga till att validera era dockerfiler behöver ni använda en [docker orb](https://github.com/hadolint/hadolint/blob/master/docs/INTEGRATION.md#circleci)
+1. Använd `make test` för att köra testerna och validerar kod i Docker. `validate-docker` funkar inte på CircleCi, om ni vill lägga till att validera era dockerfiler behöver ni använda en [docker orb](https://github.com/hadolint/hadolint/blob/master/docs/INTEGRATION.md#circleci)
 
 1. CircleCi kör testerna, validering och bygger produktions image och pushar till DockerHub.
 
