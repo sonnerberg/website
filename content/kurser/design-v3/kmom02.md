@@ -52,6 +52,16 @@ Läs följande:
 
 I sektionen [Typografi](guide/design-med-html5-och-css3/grid-och-typografi) tittar vi främst på hur typografi kan skapa lättläst och anpassad typografi på en webbplats.
 
+
+
+### Video {#video}
+
+Veckans PT-video handlar om "Alla dessa verktyg", vi använder oss av i kursen. Finns som alltid både fördelar och nackdelar med verktyg.
+
+[YOUTUBE src="Fp3iOKAtAsw" width=700 caption="Alla dessa verktyg"]
+
+
+
 ### SASS {#sass}
 
 För att komma igång så kan du läsa igenom följande artiklar:
