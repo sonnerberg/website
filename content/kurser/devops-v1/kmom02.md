@@ -13,11 +13,6 @@ Vi packar in vår kod i en Docker container för att underlätta utveckling, dri
 
 <!-- more -->
 
-[WARNING]
-Kursmoment är uppdateras. Saker kan förändras.
-Fortsätt på egen risk!
-[/WARNING]
-
 [FIGURE src="https://pics.me.me/it-works-on-my-machine-then-well-ship-your-machine-62072263.png"]
 
 
