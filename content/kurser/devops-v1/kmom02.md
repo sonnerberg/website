@@ -114,8 +114,8 @@ När vi kör docker i produktion vill vi att containern ska vara igång för evi
 Vi vill inte behöva bygga om containern varje gång vi vill köra testerna. Som imagen för produktionsmiljön är byggd behöver vi bygga om den varje gång vi uppdaterar koden. Det tar för lång tid. Vi kan lösa det genom att inte kopiera in koden i containern när den byggs. Istället lägger vi mappen som koden ligger som en volym i containern. Då behöver bara containern innehålla miljön för att köra testerna. Detta gör att vi bara behöver skapa containern en gång och sen kan vi återanvända den när vi har ändrat i koden.
 
 - Skapa en Dockerfile, döp den till `Dockerfile_test` och lägg den i mappen `docker`.
-- I den ska ni inte kopiera in koden för testerna eller koden som testas. `app` och `tests` mapparna ska läggas som en volymer istället.
-- När containern startar ska den validera koden och köra unit och integrations testerna. När det är klart ska containerna stängas ner av sig själv.
+- I den ska ni inte kopiera in koden för testerna eller koden som testas. Lägg till `microblog` mappen som en volym istället.
+- När containern startar ska den validera koden och köra unit och integrations testerna. När det är klart ska containerna stängas ner av sig själv. Ni behöver skapa ett nytt bash script som används istället för `boot.sh`, för att köra testerna.
 
 Om ni vill kan ni ändra så integrationstesterna körs mot MySQL i docker container istället för SQLite i minnet. Testerna kommer troligen köras långsammare men testerna blir mer värdefulla då de körs mot likadant system som körs i produktion. När man kör databasen i en container för testerna brukar man inte göra data mappen till en volym, i och med att vi inte bryr oss om persistent data för tester.
 
@@ -139,7 +139,7 @@ Skapa filen `docker-compose.yml` i root mappen av repot. I den, lägg till en se
 
 `docker-compose up prod` ska starta en MySQL container och er prod container.
 
-Uppdatera `make test` så det startar er test container och kör alla tester.
+Skapa ett nytt Make kommado `make test-docker` som startar er test image och kör alla tester på koden.
 
 
 
@@ -156,9 +156,9 @@ Om ni inte redan har ett, skapa först ett konto på [DockerHub](https://hub.doc
 
 Nu vill vi att er produktions image byggs och pushas till dockerhub automatiskt när ni pushar uppdateringar i er kod till GitHub. Vi gör så att detta sker i CircleCi. Läs följande artiklar för att se hur ni kan skriva er CircleCi config för att bygga och publicera er image till DockerHub. Tänk på att ni bara vill bygga och publicera en ny image om alla tester går igenom. Innan ni gör det kan ni installera CircleCi CLI för att slippa massa commits där CircleCi configen inte validerar.
 
-- [Installera CircleCi CLI](kunskap/installera-circleci-cli).
+- [Installera CircleCi CLI](kunskap/installera-circleci-cli) om ni inte redan har gjort det.
 
-- Ni som inte använder Cygwin kan även använda CircleCI för att [köra CircleCi jobb lokalt](https://circleci.com/docs/2.0/local-cli/#run-a-job-in-a-container-on-your-machine). Använd det och validate för att spara tid och slipp göra nya commits för att testa konfigurationen.
+- Använd validate kommandot för att spara tid och kolla att ni har giltiga konfigurationer.
 
 - [Using CircleCI workflows to replicate Docker Hub automated builds](https://circleci.com/blog/using-circleci-workflows-to-replicate-docker-hub-automated-builds/) 
 
@@ -174,7 +174,7 @@ Vi vill inte spara lösenord eller annan känslig information i kod så att det 
 
 ## Kör i produktion {#docker_prod}
 
-Det sista steget är att köra er produktions container på er VM i Azure. Installera Docker på servern och starta up er microblog med docker-compose. Bygg inte containerna på servern utan använd den som byggts på CircleCi och laddas upp till DockerHub.
+Det sista steget är att köra er produktions container på er VM i Azure. Installera Docker på servern och starta up er microblog med docker-compose. Bygg inte containerna på servern utan använd den som byggdes på CircleCi och laddades upp till DockerHub.
 
 Ni ska inte använda supervisor längre. Vi använde supervisor för att se till att det hela tiden finns en Gunicorn process igång men det ansvaret flyttas över till Docker. Lägg till `restart: always` i er docker-compose fil.
 
@@ -187,7 +187,7 @@ Läs om vad Docker tycker om att använda [compose i produktion](https://docs.do
 Det finns generellt kursmaterial i video form.
 
 
-1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[devops streams ht20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_MEDc_y12Zxdf3_zgb6YWy)".
+1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[devops streams ht21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8g4N0v72y47OiNePhjOqqN)".
 
 1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 2xx i namnet.
 
@@ -215,7 +215,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. En docker-compose fil för att köra test och starta prod miljön.
 
-1. Använd `make test` för att köra testerna och validerar kod i Docker. `validate-docker` funkar inte på CircleCi, om ni vill lägga till att validera era dockerfiler behöver ni använda en [docker orb](https://github.com/hadolint/hadolint/blob/master/docs/INTEGRATION.md#circleci)
+1. Använd `make test-docker` för att köra testerna och validerar kod i Docker. `validate-docker` funkar inte på CircleCi, om ni vill lägga till att validera era dockerfiler behöver ni använda en [docker orb](https://github.com/hadolint/hadolint/blob/master/docs/INTEGRATION.md#circleci)
 
 1. CircleCi kör testerna, validering och bygger produktions image och pushar till DockerHub.
 
@@ -243,8 +243,6 @@ Se till att följande frågor besvaras i texten:
 1. Valde du att bygga ny Docker image vid varje commit eller release? Varför?
 
 1. Vad är Continuous Delivery?
-
-1. Uppdaterade du deploy skripten med Docker?
 
 1. Hur var storleken på kursmomentet? Vad tycker du om upplägget på kursmomentet?
 
