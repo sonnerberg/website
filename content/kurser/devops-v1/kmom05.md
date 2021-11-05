@@ -350,7 +350,7 @@ Läs [How Secure Is Your CICD Pipeline?](https://dzone.com/articles/how-secure-i
 Det finns generellt kursmaterial i video form.
 
 
-1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[devops streams ht20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_MEDc_y12Zxdf3_zgb6YWy)".
+1. Kursen innehåller föreläsningar som spelas in och därefter läggs i spellistan "[devops streams ht21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8g4N0v72y47OiNePhjOqqN)".
 
 1. I "[kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)" hittar du alla videor som är kopplade till kursmomentet, de börjar på 5xx i namnet.
 
