@@ -4,6 +4,7 @@ category:
     - devops
     - docker
 revision:
+    "2021-11-09": (B, aar) Updaterade python version för att bli av med gcc problem.
     "2020-10-25": (A, moc) Skapad inför HT2020.
 ...
 Microblog med Docker containers {#intro}
@@ -28,7 +29,7 @@ Det första steget i att skapa en container för Microblog är att bygga en *ima
 `docker/Dockerfile_prod` för Microblog:
 
 ```dockerfile
-FROM python:3.6-alpine
+FROM python:3.8-alpine
 RUN adduser -D microblog
 
 WORKDIR /home/microblog
@@ -52,7 +53,7 @@ EXPOSE 5000
 ENTRYPOINT ["./boot.sh"]
 ```
 
-Varje rad i en *Dockerfile* är ett eget kommando som körs vid installationen. `FROM` anger den container image som vår nya image ska byggas på. Oftast börjar man från en existerande image och anpassar den till sitt projekt. Imagen innehåller ett namn och en tagg, separerade med ett kolon. Taggen används som en versionshantering vilket gör att en container image kan ha mer än bara en variant. Namnet på vår image är *python*, vilket är den officiella Dockerimagen för Python. Taggarna för den här imagen låter dig ange vilken version av python man vill köra och vilket operativsystem den skall ligga på. Taggen `3.6-alpine` väljer en Python v3.6 installerad på Alpine Linux. Alpine Linux-distributionen används ofta istället för andra populära distors som Ubuntu på grund av dess minimala storlek. Är du nyfiken kan man se vilka taggar som finns tillgängliga för Python-imagen på [Pythons image repository](https://hub.docker.com/_/python?tab=tags)
+Varje rad i en *Dockerfile* är ett eget kommando som körs vid installationen. `FROM` anger den container image som vår nya image ska byggas på. Oftast börjar man från en existerande image och anpassar den till sitt projekt. Imagen innehåller ett namn och en tagg, separerade med ett kolon. Taggen används som en versionshantering vilket gör att en container image kan ha mer än bara en variant. Namnet på vår image är *python*, vilket är den officiella Dockerimagen för Python. Taggarna för den här imagen låter dig ange vilken version av python man vill köra och vilket operativsystem den skall ligga på. Taggen `3.8-alpine` väljer en Python v3.8 installerad på Alpine Linux. Alpine Linux-distributionen används ofta istället för andra populära distors som Ubuntu på grund av dess minimala storlek. Är du nyfiken kan man se vilka taggar som finns tillgängliga för Python-imagen på [Pythons image repository](https://hub.docker.com/_/python?tab=tags)
 
 
 `RUN` exekverar ett kommando inuti i containern, liknande när man skriver något i terminalen. Många dockerfiler gör misstaget och använder sig av default användaren (`root`) vilket inte är bra säkerhetsmässigt. Så för att begränsa åtkomsten lägger vi till en ny användare `microblog` med hjälp av `adduser -D` kommandot.
