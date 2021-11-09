@@ -1,5 +1,5 @@
 ---
-author: nik 
+author: nik
 category:
     - npm
     - sass
@@ -47,7 +47,7 @@ Samt ta bort följande del i vår twig-fils `<head>`-element.
 
 ## Installation {#installation}
 
-Vi börjar med att ladda ner de nödvändiga filerna som behövs. Går vi in på Font Awesome hemsida kan vi se att vi kan [ladda hem dem via npm](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers). Det känns som en bra lösning för oss.
+<!-- Vi börjar med att ladda ner de nödvändiga filerna som behövs. Går vi in på Font Awesome hemsida kan vi se att vi kan [ladda hem dem via npm](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers). Det känns som en bra lösning för oss. -->
 
 [INFO]
 Pågrund av en ändring hos Font Awesome så ger deras SASS-filer oss ett felmeddelande. Vi väljer därför att istället använda en patchad version lokalt.
