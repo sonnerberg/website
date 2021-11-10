@@ -57,7 +57,7 @@ Ansible är ett verktyg för att automatisera server konfiguration. Läs om föl
 
 
 
-### Förbered för Ansible
+### Förbered för Ansible {#prepare}
 
 [INFO]Du behöver troligen skapa en ny SSH nyckel. På grund av ändringar i programmet för att skapa SSH nycklar och begränsningar i CircleCI behöver du ha en `.pem` SSH nyckel och utan lösenord. Om du inte har det kan du skapa det med följande kommando. Lägg den i din `~/.ssh` mapp:
 
