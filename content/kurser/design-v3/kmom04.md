@@ -155,7 +155,7 @@ git push origin --tags
 Publicera sedan till studentservern med följande kommando:
 
 ```shell
-dbwebb publish me
+dbwebb publishpure me
 ```
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
