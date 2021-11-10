@@ -3,8 +3,10 @@ author:
     - mos
     - lew
     - nik
+    - grm
 revision:
-    "2021-10-01": "(F, lew) Uppdatering inför HT21."
+    "2021-11-10": "(G, grm) Komplettering HT21."
+    "2021-10-01": "(F, lew Uppdatering inför HT21."
     "2020-11-25": "(E, mos) Förtydliga om redovisningen."
     "2020-11-20": "(C, mos) Lade till tips om CTF-kanaler."
     "2020-11-16": "(B, mos) Läsanvisningar om hacker writeups."
@@ -36,12 +38,12 @@ Föreläsningar &amp; Seminarier {#forelasningar}
 
 *(ca: 8-10 studietimmar)*
 
-Du ska medverka vid följande Zoom-tillfällen som alla hanterar olika aspekter ur det område som kursmomentet behandlar.
+Du ska medverka på föreläsningarna:
 
 Kursvecka 3:
 
-* 10:00 (2021-11-15) via Zoom med `<INSERT TEACHER>` som berättar om `<INSERT SUBJECT>`.
-* 10:00 (2021-11-19) via Zoom `<INSERT TEACHER>` pratar om OWASP Top Ten och vad de innebär för dig som programmerare.
+* 10:00 (2021-11-15) H430, med Victor om hot.
+* 10:00 (2021-11-19) H430, med Victor om attacker.
 
 <!--
 Hur hantera attaker när de är ett faktum?
@@ -55,12 +57,13 @@ klick, ransomware, social attacks
 
 Kursvecka 4:
 
-* 10:00 (2021-11-22) H430.
-* 10:00 (2021-11-26) H430, med Anton om "Vulnerability Assessment, Threat modeling and Attack trees"
-<!--
-* 10:00 (2021-11-22) via Zoom med `<INSERT TEACHER>` om `<INSERT SUBJECT>`.
-* 10:00 (2021-11-26) via Zoom med Anton om "Vulnerability Assesment, Threat modeling and Attack trees" -->
+* 10:00 (2021-11-26) H430, med Anton om Sårbarhetsanalys
 
+Frivilligt att delta:
+
+Kursvecka 4:
+
+* 10:00 (2021-11-22) H430. Frågor, eget arbete
 
 
 Läs &amp; Studera  {#lasanvisningar}

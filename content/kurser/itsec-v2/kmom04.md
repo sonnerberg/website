@@ -2,7 +2,9 @@
 author:
     - atb
     - nik
+    - grm
 revision:
+    "2021-11-10": "(C, grm) Komplettering HT21."
     "2021-10-01": "(B, lew) Uppdatering för ht21"
     "2020-11-02": "(A, nik) Uppdatering för ht20"
 ...
@@ -33,6 +35,7 @@ Du behöver ha följande installerat:
 
 * Docker (om du hellre vill använda det)
 
+
 Föreläsningar  {#forelasningar}
 ---------------------------------
 
@@ -40,7 +43,7 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10.00 (2021-12-03) H430
+* 10.00 (2021-12-03) H430 ???
 
 <!-- * 10.00 (2021-12-03) via Zoom (länk på Canvas) -->
 

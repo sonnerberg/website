@@ -4,8 +4,10 @@ author:
     - mbo
     - lew
     - nik
+    - grm
 revision:
-    "2021-10-01": "(C, klw) Uppdaterad inför LP2 HT21."
+    "2021-11-10": "(D, grm) Komplettering HT21."
+    "2021-10-01": "(C, lew) Uppdaterad inför LP2 HT21."
     "2020-05-27": "(B, nik) Uppdaterad inför LP2 HT20."
     "2019-10-11": "(A, lew, nik) Ny inför lp2 HT19."
 ...
@@ -40,9 +42,9 @@ Föreläsningar  {#forelasningar}
 
 Du ska medverka på föreläsningarna:
 
-* 10:00 (2021-11-01) H430
+* 10:00 (2021-11-01) H430, med Martin om introduktion till säkerhet del 1.
 
-* 10:00 (2021-11-04) H430
+* 10:00 (2021-11-04) H430, med Martin om introduktion till säkerhet del 2.
 
 <!--
 * 10:00 (2021-11-01) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633))

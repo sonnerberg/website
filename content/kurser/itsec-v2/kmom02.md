@@ -4,8 +4,10 @@ author:
     - mbo
     - lew
     - nik
+    - grm
 revision:
-    "2021-10-01": "(C, klw) Uppdaterad inför LP2 HT21."
+    "2021-11-10": "(D, grm) Komplettering HT21."
+    "2021-10-01": "(C, lew) Uppdaterad inför LP2 HT21."
     "2020-10-13": "(B, nik) Uppdaterad inför HT20, me-sida borttagen."
     "2019-10-21": "(A, lew) First edition for HT19."
 ...
@@ -27,7 +29,7 @@ Föreläsningar & Seminarium {#forelasningar}
 
 Du ska medverka på föreläsningen:
 
-* 10:00 (2021-11-08) H430
+* 10:00 (2021-11-08) H430, med Martin om etik och privacy.
 
 <!-- * 10:00 (2021-11-08) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633)) -->
 

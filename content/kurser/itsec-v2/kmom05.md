@@ -2,7 +2,9 @@
 author:
     - atb
     - nik
+    - grm
 revision:
+    "2021-11-10": "(D, grm) Komplettering HT21."
     "2021-10-01": "(C, lew) Uppdaterad inför HT21"
     "2020-12-10": "(B, nik) Uppdaterad inför HT20"
     "2019-11-27": "(A, nik) Omskrivning av uppgift"
@@ -16,13 +18,22 @@ Mjukvarutest ökar kvaliteten i den mjukvara som skrivs, men hur fungerar det me
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
+Föreläsningar  {#forelasningar}
+---------------------------------
+
+*(ca: 2 studietimmar)*
+
+Du ska medverka på föreläsningen:
+
+* 10.00 (2021-12-06) H430, med Anton om säkerhetstänket vid testning.
+
+
 Förkunskapskrav {#forkunskapskrav}
 ---------------------------------
 
 Du har utfört uppgifterna [Sårbarhetsanalys](/uppgift/sarbarhetsanalys).
 
 Du har medverkat på föreläsningen med Anton där han går igenom ämnet.
-
 
 
 Tekniker  {#tekniker}
@@ -34,6 +45,7 @@ Det finns flera vägar att gå för att sätta upp testning med JavaScript och E
 * [ChaiJS](https://www.chaijs.com/)
 * [Jest](https://jestjs.io/)
 * [SuperTest](https://www.npmjs.com/package/supertest)
+
 
 Uppgifter  {#uppgifter}
 -------------------------------------------

@@ -8,14 +8,14 @@ created: "2013-11-08 09:06:51"
 Grundregel 1A i Cross Site Scripting (XSS) - Lita inte på någon
 ==================================
 
-Som webbprogrammerare vill du bygga en säker webbplats och du matas med information om hur viktigt det är att sanera inkommande variabler från skadlig kod, så kallade injections. Du får lära dig att skydda dig på olika sätt, varav några tas upp i samlingstråden för ["Säker programmering med PHP"](t/1702).
+Som webbprogrammerare vill du bygga en säker webbplats och du matas med information om hur viktigt det är att sanera inkommande variabler från skadlig kod, så kallade injections. Du får lära dig att skydda dig på olika sätt, varav några tas upp i samlingstråden för ["Säker programmering med PHP"](https://dbwebb.se/kunskap/bygg-en-multisida-med-php#secure.
 
 Men, tydligen glömde vi att påminna dig om **grundregel 1A -- "Trust no one" -- Lita inte på någon**. För isåfall kan det gå så här...
 
 <!--more-->
 
 
-Du vill låna ett JavaScript av en student som går tvåan i Webbprogrammering -- du tycker att hans JavaScript med [gubben som går runt på skärmen](javascript/lekplats/move-around-css-sprite-using-css3-transitions/) är coolt -- du väljer att *inkludera hans skript* i din sida. Du litar (*litade*) på honom.
+Du vill låna ett JavaScript av en student som går tvåan i Webbprogrammering -- du tycker att hans JavaScript med [gubben som går runt på skärmen](https://github.com/dbwebb-se/javascript/tree/master/example/lekplats/move-around-css-sprite-using-css3-transitions) är coolt -- du väljer att *inkludera hans skript* i din sida. Du litar (*litade*) på honom.
 
 > *"Vilket coolt Javascript du har, kan jag få låna det till min hemsida?"*
 
@@ -29,6 +29,6 @@ När eftermiddagen hade gått och alla tvåor hade varit oerhört hjälpsamma oc
 
 [YOUTUBE src=CYMR4BjHIeM width=630 caption="Studentföreningens sida som en XSS:ad variant."]
 
-Vi glömmer det aldrig - "Trust no one". 
+Vi glömmer det aldrig - "Trust no one".
 
 Check på "Jag vet vad XSS kan innebära".

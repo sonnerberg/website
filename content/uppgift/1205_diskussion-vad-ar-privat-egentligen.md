@@ -3,6 +3,7 @@ author: nik
 category:
     - kurs/itsec
 revision:
+    "2021-11-10": "(D, grm) Komplettering HT21."
     "2020-05-27": (C, nik) Uppdaterad med bland annat LaTeX mall
     "2019-11-13": (B, nik) Fler frågor, tydligare struktur på reflektion.
     "2019-08-07": (A, nik) Första utgåvan.
@@ -45,7 +46,7 @@ Reflektion (självständig) {#reflektion}
 Skriv en egen reflektion där du tänker igenom över vad ni diskuterat i gruppen och vad du själv tycker/tänker. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
 
 - Reflektionen ska ha ett försättsblad med titel (Vad är privat egentligen?), datum och namn/studentakronym.
-- Reflektionen ska vara ca 1-2 sidor (exklusive försättsbladet).
+- Reflektionen ska vara ca 1-2 sidor (exklusive försättsbladet, storlek 11 för brödtexten, 1 sida är ca 600 ord).
 - Texten kan skrivas på svenska eller engelska.
 - Använd stycken för att dela upp texten och försök att skriva det som en sammanhängande text.
 - Om diskussionen har fått er att fundera kring hur ni hanterar er data (både privat och som utvecklare), lyft gärna detta.
@@ -56,7 +57,7 @@ Det finns en LaTeX mall tillgänglig [här](https://www.overleaf.com/read/qfdtff
 Publicera {#publicera}
 -----------------------
 
-Spara din reflektion som `me/kmom02/reflektion.pdf` och kör
+Spara din reflektion som `me/kmom02/reflektion.pdf` och kör på!
 
 ```bash
 # Flytta till kurskatalogen
