@@ -12,7 +12,6 @@ Nu är det dags att ta JavaScript koden ett stort kliv rakt in i webbläsaren. D
 <!--more-->
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
-<!--stop-->
 
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
@@ -20,50 +19,12 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
-
-Läs följande:
-
-<!-- 1. Läs i boken [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) om funktioner.
-    * [Ch15 Functions](http://speakingjs.com/es5/ch15.html) -->
-
-<!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
-    * [Ch3 Functions](http://eloquentjavascript.net/03_functions.html) -->
-
-
-
 ### MDN {#mdn}
 
-Läs följande:
+Läs följande (översiktligt):
 
-<!-- 1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för funktioner.
-    * [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+1. [Intro till DOM på mdn](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
-1. I referensmanualen [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) läs översiktligt om funktioner.
-    * [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) -->
-
-
-
-<!--
-###Artiklar {#artiklar}
--->
-
-
-### Video  {#video}
-
-Titta på följande:
-
-<!-- 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
-
-1. (Valfritt) Se JavaScript-gurun Douglas Crockford i forsättningen om historian om JavaScript: "[Crockford on JavaScript - Act III: Function the Ultimate](https://www.youtube.com/watch?v=ya4UHuXNygM)". -->
-
-
-
-<!--
-###Lästips {#lastips}
-
-Det finns inga lästips.
--->
 
 
 
@@ -91,13 +52,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-<!--
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
--->
-
-
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
@@ -108,6 +62,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känner du för funktioner i JavaScript, kan du relatera liknande konstruktioner i något annat programspråk?
+* Har du arbetat med HTML och CSS innan?
+* Känner du att du har koll på hur vi använder JavaScript för att manipulera DOM?
 * Vad tyckte du om de olika uppgifterna? Hur tänkte du när du utförde dem? Var de svåra eller lätta?
 * Vad är din TIL för det här kursmomentet?
