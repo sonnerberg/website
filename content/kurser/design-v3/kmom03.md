@@ -1,17 +1,13 @@
 ---
 author:
     - nik
+    - efo
 revision:
+    "2021-11-09": (B, efo) Nya uppgift.
     "2020-10-15": (A, nik) Nysläpp för design-v3
 ...
 Kmom03: Layout
 ====================================
-
-[WARNING]
-
-**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
-
-[/WARNING]
 
 Vi ska denna vecka kolla på olika sätt att strukturera upp stommen av vår sida, vår layout. Att uppdatera vår layout är en av de större ändringar vi kan göra med hjälp av CSS/SASS, utan att uppdatera vår HTML.
 
@@ -72,18 +68,17 @@ Läs följande för att få en introduktion och översikt till gridbaserad layou
 
 1. Arbeta igenom artikeln [Skapa en specifik layout i Pico](kunskap/skapa-en-specifik-layout-i-pico) som beskriver hur du kan skapa en layout för specifika sidor.
 
+
+
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg om din rapport-sida med CSS-Grid](uppgift/bygg-om-din-rapport-css-grid)".
+1. Lös uppgiften "[Bygg en teknologi-sida med CSS-Grid](uppgift/bygg-en-teknologi-sida-css-grid)".
 
 1. Försäkra dig om att du har gjort `dbwebb publish me` och taggat din inlämning med version 3.0.0 (eller högre) samt pushat repot inklusive taggarna till GitHub.
 
-Testa din inlämning {#testa}
------------------------------------------------
 
-I detta kursmoment jobbar vi utifrån wireframes som finns tillgängliga i "[Bygg om din rapport-sida med CSS-Grid](uppgift/bygg-om-din-rapport-css-grid)".
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
@@ -106,3 +101,20 @@ dbwebb publishpure me
 ```
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
+
+
+
+Testa din inlämning {#testa}
+-----------------------------------------------
+
+I detta kursmoment jobbar vi utifrån wireframes som finns tillgängliga i "[Bygg en teknologi-sida med CSS-Grid](uppgift/bygg-en-teknologi-sida-css-grid)". Kolla så funktionaliteten överenstämmer de wireframes som finns i uppgiften.
+
+
+
+### dbwebb test {#dbwebb-test}
+
+Kommandot `dbwebb test` testar att grunderna för kmom'et är på plats. Vår rättning utgår från detta kommando.
+
+```shell
+$ dbwebb test kmom03
+```
