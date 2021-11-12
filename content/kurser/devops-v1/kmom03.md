@@ -89,15 +89,6 @@ Nästa steg är att skapa er egna playbook för 10 first minutes on a server, ko
 
 - I videon används `gather_aws_instances.yml`, ni ska istället använda `gather_vm_instances.yml`.
 
-- I videon används `hosts: devops`, ni ska använd:
-
-```
-hosts:
-    -   database
-    -   appServer
-    -   loadBalancer
-```
-
 - Ni ska även ändra `remote_user` från `admin` till `azureuser`.
 
 - Kolla nu på videorna [kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78)
