@@ -63,6 +63,13 @@ Skriv en egen reflektion där du tänker igenom över vad ni diskuterat i gruppe
 
 Det finns en LaTeX mall tillgänglig [här](https://www.overleaf.com/read/qfdtffsgbspf) som ni kan använda. Länken är till en read-only version, för att skapa er egna så trycker ni "Menu" och sen "Copy Project". Det går givetvis att använda valfritt program, så länge man uppfyller kraven ovan.
 
+Bedömning  {#bedömning}
+-----------------------
+
+Se det som att administratören på Dbwebb AB plockar bort de reflektioner som inte följer kraven med försättsblad, antal sidor osv. Sen är det tekniska ledningsgruppen på Dbwebb AB som bedömer innehållet.
+
+Har ni fått ett G, så har ert företag fått uppdraget. Lycka till!
+
 Publicera {#publicera}
 -----------------------
 
@@ -72,11 +79,3 @@ Spara din reflektion som `me/kmom02/reflektion.pdf` och kör på!
 # Flytta till kurskatalogen
 $ dbwebb publish kmom02
 ```
-
-
-Bedömning {#bedömning}
------------------------
-
-Se det som att administratören på Dbwebb AB plockar bort de reflektioner som inte följer kraven med försättsblad, antal sidor osv. Sen är det tekniska ledningsgruppen på Dbwebb AB som bedömer innehållet.
-
-Har ni fått ett G, så har ert företag fått uppdraget. Lycka till!
