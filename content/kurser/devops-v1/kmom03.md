@@ -148,6 +148,8 @@ Använd [template](https://docs.ansible.com/ansible/latest/modules/template_modu
 
 Ni kan använda [file](https://docs.ansible.com/ansible/latest/modules/file_module.html?highlight=file) modulen för att länka `load-balancer.conf` till `sites-enabled` mappen.
 
+Tänk på att ni kan använda `sudo nginx -t` som `validate` steg, på tasks i Ansible, för att validera er Nginx konfiguration.
+
 För att få till HTTPS via Ansible kolla nedanför.
 
 
