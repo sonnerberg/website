@@ -115,7 +115,7 @@ När ni startar containern skicka också med `- MYSQL_ROOT_PASSWORD=<password>` 
 
 #### Applikations playbook {#app_pb}
 
-Skapa en playbook som startar en Docker container med er senaste Microblog imagen på servern. När ni ska koppla Flask appen till databasen behöver ni IP addressen för databas servern, ni kan inte längre använda er av Dockers länkning för att de körs på två olika maskiner. I ansible kan ni använda `{{ groups.database[0] }}` för att få ut IP för databas hosten.
+Skapa en playbook som startar en Docker container med er senaste Microblog imagen på servern. När ni ska koppla Flask appen till databasen behöver ni IP addressen för databas servern, ni kan inte längre använda er av Dockers länkning för att de körs på två olika maskiner. I ansible kan ni använda `{{ groups.database[0] }}` för att få ut IP för databas hosten. **Tips** om ni inte lyckas koppla upp er mot database kan ni logga in på er VM och köra `docker logs <microblog container namn>` för att se loggen för docker containern.
 
 Ni behöver inte längre installera Supervisor på appServern, nu ska Docker se till att det alltid finns en applikation körandes.
 
@@ -138,6 +138,8 @@ Använd [template](https://docs.ansible.com/ansible/latest/modules/template_modu
 - `load-balancer.conf.j2` till `/etc/nginx/sites-available/load-balancer.conf`.
 
 Ni kan använda [file](https://docs.ansible.com/ansible/latest/modules/file_module.html?highlight=file) modulen för att länka `load-balancer.conf` till `sites-enabled` mappen.
+
+**Tips** Ni hittar logfilerna för Nginx i `/var/log/nginx`. Om en konfig fil inte fungerar kan ni köra `nginx -t` för att validera den.
 
 <!-- Tänk på att ni kan använda `sudo nginx -t` som `validate` steg, på tasks i Ansible, för att validera er Nginx konfiguration. -->
 
