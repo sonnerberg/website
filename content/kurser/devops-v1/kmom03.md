@@ -14,11 +14,6 @@ Vi fortsätter med att kolla in fler sätt att automatisera flöden. Vi lär oss
 
 <!-- more -->
 
-[WARNING]
-Kursmoment är uppdateras. Saker kan förändras.
-Fortsätt på egen risk!
-[/WARNING]
-
 [FIGURE src="https://www.gocd.org/assets/images/blog/continous-delivery-vs-deployment-infographic/continuous-delivery-vs-continuous-deployment-infographic-305dd620.png"]
 
 
