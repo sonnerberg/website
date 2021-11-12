@@ -1,5 +1,7 @@
 ---
-author: nik
+author:
+    - nik
+    - programutvecklingsprojekt
 category:
     - kurs/itsec
 revision:
@@ -23,10 +25,17 @@ Nice-to-have länkar {#nice-to-have}
 * [What categories of my Facebook data are available to me?](https://www.facebook.com/help/930396167085762)
 * [Have I been pwned?](https://haveibeenpwned.com/)
 
+
+Scenario {#scenario}
+-----------------------
+
+Företaget ni jobbar på ska göra en webbplats med känslig information åt företaget Dbwebb AB. Dbwebb AB vet att ni är duktiga webbprogrammerare men vad vet ni om privat information och hur hanterar ni den.
+
+
 Diskussion (grupp) {#disk}
 -----------------------
 
-Vi kommer i sal att dela upp oss i grupper där ni ska diskutera kring följande frågor:
+Tänk då att ni är tillbaka på ert företag och diskuterar med dina kollegor. Ni är i grupper med 2-4 personer,  där ni ska diskutera kring följande frågor:
 
 * Vilken typ av information är privat?
     * Har du/ni samma uppfattning i gruppen?
@@ -43,7 +52,7 @@ För varje fråga, skrev ner lite minnesanteckningar som hjälper dig att skriva
 Reflektion (självständig) {#reflektion}
 -----------------------
 
-Skriv en egen reflektion där du tänker igenom över vad ni diskuterat i gruppen och vad du själv tycker/tänker. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data.
+Skriv en egen reflektion där du tänker igenom över vad ni diskuterat i gruppen och vad du själv tycker/tänker. Kanske har du fått en annan syn på vilken information som ligger ute eller så har du stenkoll på din data. Självständig eftersom dina kollegor har andra uppgifter att göra. Följ kraven i reflektionen.
 
 - Reflektionen ska ha ett försättsblad med titel (Vad är privat egentligen?), datum och namn/studentakronym.
 - Reflektionen ska vara ca 1-2 sidor (exklusive försättsbladet, storlek 11 för brödtexten, 1 sida är ca 600 ord).
@@ -63,3 +72,10 @@ Spara din reflektion som `me/kmom02/reflektion.pdf` och kör på!
 # Flytta till kurskatalogen
 $ dbwebb publish kmom02
 ```
+
+Bedömning {#bedömning}
+-----------------------
+
+Se det som att administratören på Dbwebb AB plockar bort de reflektioner som inte följer kraven med försättsblad, antal sidor osv. Sen är det tekniska ledningsgruppen på Dbwebb AB som bedömer innehållet.
+
+Har ni fått ett G, så har ert företag fått uppdraget. Lycka till!

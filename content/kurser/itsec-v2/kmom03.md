@@ -42,7 +42,7 @@ Du ska medverka på föreläsningarna:
 
 Kursvecka 3:
 
-* 10:00 (2021-11-15) H430, med Victor om hot.
+* 14:00 (2021-11-15) H430, med Victor om hot.
 * 10:00 (2021-11-19) H430, med Victor om attacker.
 
 <!--
