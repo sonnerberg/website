@@ -116,5 +116,6 @@ I detta kursmoment jobbar vi utifrån wireframes som finns tillgängliga i "[Byg
 Kommandot `dbwebb test` testar att grunderna för kmom'et är på plats. Vår rättning utgår från detta kommando.
 
 ```shell
+$ dbwebb update
 $ dbwebb test kmom03
 ```
