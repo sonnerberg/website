@@ -1,9 +1,12 @@
 ---
-author: nik
+author:
+    - nik
+    - efo
 category:
     - kurs/design
     - tema
 revision:
+    "2021-11-15": (B, efo) Uppdaterad med peer-review
     "2020-11-25": (A, nik) Första utgåvan.
 ...
 Utvärdera webbplatsers laddningstid och användbarhet (v2)
@@ -60,6 +63,15 @@ Krav {#krav}
 1. Bestäm en gräns för absolut laddningstid som du själv uppfattar som snabb eller långsam webbplats. Skriv en mening om hur ditt urval av webbplatser klarar ditt gränsvärde och hur du upplever webbplatsernas snabbhet, rent generellt, i ditt urval.
 
 1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
+
+
+
+Peer-review {#peer-review}
+-----------------------
+
+Inom akademin är en viktig del att utvärdera andras arbeten. Forskare utvärderar varandras forskning genom peer-reviews och i kommande examensarbeten ska ni opponera på andra studenters arbeten. För att förbereda inför detta och för att lära dig att ge och ta emot konstruktiv kritik ges i kursen möjlighet för peer-review. Denna del är frivillig, men jag hoppas en del studenter utnyttjar möjligheten.
+
+I Canvas finns uppgift för kmom04-kmom06 under uppgiftsgruppen Rapport peer-review. Lämna in en länk direkt till din rapportsida. Onsdagen efter inlämning görs en fördelning av rapporter studenter i mellan. Ni kan sedan gå in och läsa varandras rapport och skriva en kommentar. Skriv gärna med utgångspunkt i [mallen](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar-v2#struct) och de kommentarer som finns där.
 
 
 

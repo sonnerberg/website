@@ -7,12 +7,6 @@ revision:
 Kmom04: Färg
 ====================================
 
-[WARNING]
-
-**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
-
-[/WARNING]
-
 Vi tittar på färger, färghjulet och olika tekniker för att kombinera färger i ett sammanhang, så kallade färgscheman.
 
 Ett akromatiskt färgschema med vitt, svart och nyanser av grått.
@@ -159,3 +153,15 @@ dbwebb publishpure me
 ```
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
+
+
+
+Testa din inlämning {#testa}
+-----------------------------------------------
+
+Kommandot `dbwebb test` testar att grunderna för kmom'et är på plats. Vår rättning utgår från detta kommando.
+
+```shell
+$ dbwebb update
+$ dbwebb test kmom04
+```

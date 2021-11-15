@@ -1,9 +1,12 @@
 ---
-author: nik
+author:
+    - nik
+    - efo
 category:
     - kurs/design
     - tema
 revision:
+    "2021-11-15": (B, efo) Uppdaterad med peer-review
     "2020-11-19": (A, nik) Uppdaterad till version 2 inför design-v3.
 ...
 Utvärdera webbplatsers färgval och känslan de signalerar (v2)
@@ -130,7 +133,7 @@ Strukturen är inte absolut nödvändig, se den som en möjlighet att träna på
 Krav {#krav}
 -----------------------
 
-1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet (urval). Tänk att ditt urval påverkar vad du kan komma fram till i din rapport. Gör ditt urval från en kategori av webbplatser, eller välj helt olika kategorier för att jämföra. 
+1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet (urval). Tänk att ditt urval påverkar vad du kan komma fram till i din rapport. Gör ditt urval från en kategori av webbplatser, eller välj helt olika kategorier för att jämföra.
 
 1. Berätta om du använde något särskilt verktyg för att göra färganalysen (metod).
 
@@ -145,6 +148,15 @@ Krav {#krav}
 1. Skriv ett stycke om dina samlade intryck från resultatet, finns det något värt att nämna, diskutera, att analysera (analys), fick du fram något bra med din studie?
 
 1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
+
+
+
+Peer-review {#peer-review}
+-----------------------
+
+Inom akademin är en viktig del att utvärdera andras arbeten. Forskare utvärderar varandras forskning genom peer-reviews och i kommande examensarbeten ska ni opponera på andra studenters arbeten. För att förbereda inför detta och för att lära dig att ge och ta emot konstruktiv kritik ges i kursen möjlighet för peer-review. Denna del är frivillig, men jag hoppas en del studenter utnyttjar möjligheten.
+
+I Canvas finns uppgift för kmom04-kmom06 under uppgiftsgruppen Rapport peer-review. Lämna in en länk direkt till din rapportsida. Onsdagen efter inlämning görs en fördelning av rapporter studenter i mellan. Ni kan sedan gå in och läsa varandras rapport och skriva en kommentar. Skriv gärna med utgångspunkt i [mallen](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar-v2#struct) och de kommentarer som finns där.
 
 
 
