@@ -37,7 +37,7 @@ Nästa fil vi ska in i är `index.php`, den som driver hela ramverket. Vi ska l�
 
 ```php
 /* index.php */
-<?php 
+<?php
 if (is_file(__DIR__ . '/vendor/autoload.php')) {
     require_once(__DIR__ . '/vendor/autoload.php');
 } else {
@@ -81,7 +81,7 @@ I och med att vi laddar in vår `config/config.php` så väljer jag att lägga l
 
 ```php
 if (isset($_GET["action"])) {
-    
+
 }
 ```
 
@@ -124,7 +124,7 @@ Twig & Meta {#twig}
 Nu ska vi in och uppdatera våra `.twig` filer.
 
 [WARNING]
-I denna del kommer vi behöva uppdatera samtliga `.twig` filer vi har i vårt tema. För mig är det `index.twig`, `report.twig` och `kmom.twig` men det kan skilja sig för er.
+I denna del kommer vi behöva uppdatera samtliga `.twig` filer vi har i vårt tema.
 [/WARNING]
 
 Jag väljer att lägga mina länkar i min footer med hjälp av `content/_meta.md`, men ni kan själva välja att lägga länkarna varsom med hjälp av följande:
