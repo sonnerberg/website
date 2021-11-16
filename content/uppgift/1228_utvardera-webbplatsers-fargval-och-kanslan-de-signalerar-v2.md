@@ -40,12 +40,12 @@ Jobba igenom denna introduktion för att förbereda inför uppgiften.
 
 ### Skapa rapportfilen {#create}
 
-Skapa en struktur för din rapport, det kommer fler sådana här uppgifter. I förra kursmomentet byggde vi upp en bra struktur för vår redovisningssida, jag tycker vi återanvänder den här. För mig kan jag lösa det genom att köra följande:
+Skapa en struktur för din rapport, det kommer fler sådana här uppgifter. I förra kursmomentet byggde vi upp en bra struktur för vår teknologisida, jag tycker vi återanvänder den här. För mig kan jag lösa det genom att köra följande:
 
 ```bash
 # Gå till kursrepot
 cd me/portfolio
-rsync -av content/report/index.md content/analysis/
+rsync -av content/technology/index.md content/analysis/
 ```
 
 Redigera `analysis/index.md` så den fungerar som landningssida för de tre rapporter vi kommer skriva i 04/05/06. Jag skapar alla filer i förväg, så kan jag lösa min `analysis/index.md` direkt.

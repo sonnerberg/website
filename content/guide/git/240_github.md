@@ -6,13 +6,10 @@ revision:
 Koppla oss mot GitHub
 ==================================
 
-Nu ska vi koppla oss mot GitHub med våra nyskapade nycklar. Vi öppnar den publika nyckeln med valfri editor och kopierar den:
+Nu ska vi koppla oss mot GitHub med våra nyskapade nycklar. Vi öppnar den publika nyckeln med `cat` och kopierar från terminalen:
 
 ```bash
-# Visual Studio Code
-code ~/.ssh/id_ed25519.pub
-# Atom
-atom ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub
 ```
 
 Sen så hoppar vi in på GitHub och trycker uppe i högra hörnet och väljer "Settings":
