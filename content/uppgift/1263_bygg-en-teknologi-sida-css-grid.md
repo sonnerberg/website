@@ -12,9 +12,13 @@ Bygg en teknologi-sida med CSS-Grid
 
 Du skall bygga om teknologi-sida på din portfolio sida med hjälp utav CSS-Grid.
 
-Du börjar med att strukturera upp din samlingssida (`portfolio/technology/index.md`) för alla teknologier och följer sedan upp med att fixa din layout för de individuella artiklar (`portfolio/technology/XX.md`).
+Du börjar med att strukturera upp din samlingssida (`portfolio/content/technology/index.md`) för alla teknologier och följer sedan upp med att fixa din layout för de individuella artiklar (`portfolio/content/technology/XX.md`).
+
+
 
 <!--more-->
+
+
 
 Förkunskaper {#forkunskaper}
 -----------------------
