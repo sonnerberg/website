@@ -88,24 +88,26 @@ if (isset($_GET["action"])) {
 Där i väljer jag att bygga vidare med de två länkar jag ska hantera, `?action=theme` som uppdaterar temat och `?action=session_destroy` som nollställer sessionen. Vi börjar med `?action=theme`:
 
 ```php
-if ($_GET["action"] == "theme") {
-    $previousValue = isset($_SESSION["theme"]) ? $_SESSION["theme"] : null;
+if (isset($_GET["action"])) {
+    if ($_GET["action"] == "theme") {
+        $previousValue = isset($_SESSION["theme"]) ? $_SESSION["theme"] : null;
 
-    if ($previousValue == "dark") {
-        unset($_SESSION["theme"]);
-    } else {
-        $_SESSION["theme"] = "dark";
+        if ($previousValue == "dark") {
+            unset($_SESSION["theme"]);
+        } else {
+            $_SESSION["theme"] = "dark";
+        }
+
+        $url = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
+        $url = preg_replace("/index.php\//", "", $url);
+        header("Location: $url");
     }
-
-    $url = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
-    $url = preg_replace("/index.php\//", "", $url);
-    header("Location: $url");
 }
 ```
 
 Andra raden kollar ifall `$_SESSION["theme"]` är satt och använder den ifall den är det, annars sätts den till `null`. Vi använder `$previousValue` för att veta om vi ska byta tillbaka till ljus tema eller om vi ska sätta den till mörkt. I slutet bygger vi en URL som gör att länken skickar tillbaka dig till samma sida som du var på.
 
-Sen vill vi även kunna nollställa sessionen helt (`?action=session_destroy`), det gör vi med följande kod:
+Sen vill vi även kunna nollställa sessionen helt (`?action=session_destroy`), det gör vi med nedanstående kod:
 
 ```php
 if ($_GET["action"] == "session_destroy") {
@@ -113,6 +115,40 @@ if ($_GET["action"] == "session_destroy") {
     $url = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
     $url = preg_replace("/index.php\//", "", $url);
     header("Location: $url");
+}
+```
+
+Hela `config.php` ser alltså ut så här nu:
+
+```php
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    $name = preg_replace("/[^a-z\d]/i", "", __DIR__);
+    session_name($name);
+    session_start();
+}
+
+if (isset($_GET["action"])) {
+    if ($_GET["action"] == "theme") {
+        $previousValue = isset($_SESSION["theme"]) ? $_SESSION["theme"] : null;
+
+        if ($previousValue == "dark") {
+            unset($_SESSION["theme"]);
+        } else {
+            $_SESSION["theme"] = "dark";
+        }
+
+        $url = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
+        $url = preg_replace("/index.php\//", "", $url);
+        header("Location: $url");
+    }
+
+    if ($_GET["action"] == "session_destroy") {
+        session_destroy();
+        $url = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
+        $url = preg_replace("/index.php\//", "", $url);
+        header("Location: $url");
+    }
 }
 ```
 
