@@ -12,11 +12,6 @@ Nu när vi har ett system uppe och rullande behöver vi veta när något går fe
 
 <!-- more -->
 
-[WARNING]
-Kursmoment är uppdateras. Saker kan förändras.
-Fortsätt på egen risk!
-[/WARNING]
-
 [FIGURE src="https://upload.wikimedia.org/wikipedia/commons/d/d2/IoT_environmental_monitoring_system_solution_-_Overview.jpg" caption="Överblick av olika delar som kan ingå i ett system med övervakning."]
 
 
@@ -104,6 +99,18 @@ Nu ska ni ha en övervakningsmiljö uppsatt på en ny VM! Nästa steg är att ak
 
 
 
+
+#### Flask appen {#app}
+
+Vi vill så klart visualisera hur själva flask appen mår i Grafana.
+
+- Jobba igenom videorna med siffrorna 41x i titeln i spellistan [kursen devops](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78).
+
+- Uppdatera er Ansible kod så att den sätter upp den nya dashboard:en när man kör er monitor playbook.
+
+
+
+
 ### MySQL {#mysql}
 
 Vi vill ha koll på vad som händer med databasen och det finns så klart en exporter för MySQL också.
@@ -124,19 +131,9 @@ Glöm inte att öppna portar i Azure.
 
 
 
-#### Gunicorn {#gunicorn}
-
-I Gunicorn kan vi få ut mer intressant data, vi kan bl.a. se request duration och hur många av de olika request typerna vi får.
-
-Jobba igenom [Övervaka Gunicorn med Prometheus och Grafana](kunskap/overvaka-gunicorn-med-prometheus-och-grafana) för att sätta upp flödet.
-
-Glöm inte att öppna portar i Azure.
-
-
-
 #### Ansible {#ansible}
 
-Skapa en ny playbook för att sätta upp Prometheus och Grafana och lägg till alla exporters i respektive playbook. I er Prometheus config behöver ni koppla alla exporters till ip addresser, ni kan använda `{{ groups['<hostname>'][0] }}` för att få ut en ip i Ansible. PS! Ni behöver inte skapa dashboards eller datasource i Grafana via Ansible, det kan ni göra manuellt, bara installera det.
+Uppdatera era playbooks så att de också sätter upp exportörerna och att Grafana kan visa upp datan. I er Prometheus config behöver ni koppla alla exporters till ip addresser, ni kan använda `{{ groups['<hostname>'][0] }}` för att få ut en ip i Ansible.
 
 
 
@@ -156,7 +153,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Ni har en till instans i er Azure infrastruktur som kör Prometheus och Grafana. Lägg till en Reverse Proxy i er Nginx konfiguration till Grafana. [Här](https://gist.github.com/AndreasArne/1b729078e53004303c511390f44dee7f) kan ni hitta exempel på delar ni behöver lägga in i er Grafana och Nginx konfig. Länka till den i er redovisningstext och skriv inlogg uppgifter.
 
-1. Ha en Dashboard för varje exporter vi gått igenom, Nginx, Mysql, Node_exporter och Gunicorn.
+1. Ha en Dashboard för varje exporter vi gått igenom, Nginx, Mysql, Node_exporter och FLask.
 
 1. Lägg till en Ansible playbook för Prometheus och Grafana. Lägg till att installera och starta alla olika exporters i respektive playbook. Glöm inte öppna de nya portarna i `security_groups` rollen.
 
