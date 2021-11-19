@@ -1,20 +1,14 @@
 ---
-author: mos
+author: lew
 revision:
-    "2020-110-19": (A, lew) Genomgång inför ht20.
+    "2021-11-19": (A, lew) Genomgång inför ht20.
 ...
 Kmom04: Webpack
 ==================================
 
-I JavaScript finns strukturer för arrayer och objekt tillsammans med en del inbyggda funktioner. För att skriva bra och effektiva program är det en förutsättning att man förstår hur dessa är uppbyggda och vilket stöd som erbjuds i form av inbyggda funktioner som hjälper oss att arbete mot arrayer och objekt.
+Nu har vi blivit lite varma i kläderna och ska ta et djupare kliv in i DOM manipuleringen. Vi ska arbeta med fler former och fler events. Till detta ska vi se hur vi kan packa ihop vår kod för produktion. Självklart ska vi arbeta med moduler.
 
-[WARNING]
 
-**Kursutveckling pågår**
-
-[/WARNING]
-
-<!--stop-->
 
 <!--more-->
 
@@ -30,58 +24,12 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
-<!--
-1. Läs i boken [Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript) om arrayer och grunderna för objekt.
-    * [Ch17 Objects and Inheritance](http://speakingjs.com/es5/ch17.html) (läs endast första stycket om "Layer 1: Single Objects")
-    * [Ch18 Arrays](http://speakingjs.com/es5/ch18.html) -->
+### MDN {#mdn}
 
+Ha följande dokumentation nära tillhands:
 
-<!-- 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
-    * [Ch4 Data structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
-    * [Ch5 Higher-Order Functions](http://http://eloquentjavascript.net/05_higher_order.html)
-    * [Ch6 The Secret Life of Objects](http://eloquentjavascript.net/06_object.html) -->
-
-
-
-###MDN {#mdn}
-
-Läs följande:
-<!--
-1. I dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" läs om konstruktioner för arrayer och grunderna om objekt.
-    * [Indexed collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
-    * [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
-
-1. I referensmanualen [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) läs översiktligt om arrayer.
-    * [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) -->
-
-<!--
-1. Map o Set
-    * [Keyed collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
--->
-
-<!--
-###Artiklar {#artiklar}
--->
-
-
-
-###Video  {#video}
-
-Titta på följande:
-
-<!-- 1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång. -->
-
-
-
-
-<!--
-###Lästips {#lastips}
-
-Det finns inga lästips.
--->
+1. [Intro till DOM på mdn](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 
 
@@ -99,24 +47,13 @@ Genomför övningarna för att träna inför uppgifterna.
 
 
 
-
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Mera dom](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom04/01_dom.md)". Spara dina filer i `kmom04/`.
 
-1. Gör uppgiften "[Me page 4](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom04/mepage4.md)". Spara resultatet i `me/redovisa/`.
-
-<!-- 4. Gör uppgiften ["Flytta runt Baddie på webbsidan #3"](uppgift/flytta-baddie-pa-webbsida-3). Spara koden i `me/kmom04/baddie3`. -->
-
-
-
-<!--
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
--->
+1. Gör uppgiften "[Me page 4](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom04/02_mepage4.md)". Spara resultatet i `me/redovisa/`.
 
 
 
@@ -129,9 +66,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur kändes det att bekanta sig med begreppet array?
-* Hur kändes det att bekanta sig med begreppet objekt?
-* Kan du relatera till andra programmeringsspråk för arrayer och objekt?
+* Hur upplevde du DOM-uppgiften, var något svårt eller utmanande?
+* Beskriv vad du gjorde som sista uppgift i DOM-uppgiften.
 * Hur kändes omfattningen på detta kursmoment jämfört med övriga kmom?
 * Är det någon av uppgifterna, eller materialet i allmänhet, som du vill lyfta upp som extra lärorik?
 * Vad är din TIL för det här kursmomentet?
