@@ -13,14 +13,11 @@ I denna artikel skall vi gå igenom hur man kan övervaka trafiken till våran n
 
 <!--more-->
 
-Förutsättningar {#forutsattningar}
--------------------------------------
-Ni har jobbat igenom installerat [Complete Node Exporter Mastery with Prometheus](https://devconnected.com/complete-node-exporter-mastery-with-prometheus/) och installerat Grafana samt Prometheus.
 
 
 Aktivera stub_status i nginx {#stub_status}
 ---------------------------------------------------------
-Om ni har installerat nginx via *apt-get* ska den redan ha med modulen [`ngx_http_stub_status_module`](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html). Innan ni fortsätter kan man dubbel kolla att den är installerad med kommandot `sudo nginx -V 2>&1 | grep -o with-http_stub_status_module`, får ni en utskrift med `with-http_stub_status_module` är ni good to go!
+Om ni har installerat nginx via *apt-get* ska ni redan ha modulen [`ngx_http_stub_status_module`](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html). Innan ni fortsätter kan ni dubbel kolla att den är installerad. Logga in på load balancer instansen och kör kommandot `sudo nginx -V 2>&1 | grep -o with-http_stub_status_module`, får ni en utskrift med `with-http_stub_status_module` är ni good to go!
 
 Vi behöver starta denna modul i nginx så att den [prometheus exportör](https://github.com/nginxinc/nginx-prometheus-exporter) vi senare skall använda oss utav skall fungera.
 
@@ -75,9 +72,9 @@ Nästa steg för att få igång detta är att konfigurera prometheus. Detta gör
 scrape_configs: 
   - job_name: nginx
     metrics_path: /prometheus
-    scrape_interval: 2m
+    scrape_interval: 30s
     static_configs: 
-    - targets: ["domännamn:9113"]
+    - targets: ["<domännamn>:9113"]
 ```
 
 Starta om prometheus, för mig räckte det att skicka en POST `curl -X POST http://localhost:9090/-/reload` men fungerar inte det kan ni testa `sudo killall -HUP prometheus` som skickar en `SIGHUP` signal till prometheusprocessen och laddar om sina konfigurationer.
@@ -89,7 +86,7 @@ Konfigurera Grafana {#configure_graf}
 ---------------------------------------------------------
 Om du har konfigurerat grafana att ansluta till prometheus-databasen kan du ställa in dina *dashboards*. I det här fallet är jag intresserad efter ett diagram som visar den totala mängden anslutningar som har gjorts under en viss tid. Detta kan vi göra genom att titta på `nginx_http_requests_total`.
 
-Eftersom `nginx_http_requests_total` visar den totala mängden förfrågningar, måste vi använda funktionen `delta()` för att titta på skillnaden över en viss tid. Du kan använda följande för att t.ex. se mängden requests per två minuter:
+Eftersom `nginx_http_requests_total` visar den totala mängden förfrågningar, måste vi använda funktionen `delta()` för att titta på skillnaden över en viss tid. Du kan använda följande för att t.ex. se mängden requests per fem minuter:
 
 ```
 delta(nginx_http_requests_total{job="nginx"}[5m])
@@ -97,7 +94,7 @@ delta(nginx_http_requests_total{job="nginx"}[5m])
 
 Nu skall vi ha en graf liknande:
 
-[FIGURE src="https://dimitr.im/static/87d93f8565b6ee6b8e70660e49fdafe5/b1718/grafana-nginx-requests.png"]
+[FIGURE src="image/devops/grafana-nginx-requests.png"]
 
 
 Avslutningsvis {#avslutningsvis}

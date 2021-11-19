@@ -87,21 +87,26 @@ Vi ska använda oss av [Prometheus](https://prometheus.io/), ett väldigt popul�
 
 Läs [Prometheus Monitoring : The Definitive Guide in 2019](https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/) för en överblick av vad Prometheus är och vad det innehåller.
 
-När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem. Men först behöver ni någonstans att kör verktygen, kolla på följande video för att uppdatera Ansible skripten för att skapa servrar på Azure:
+När ni sen har lite kolla på hur Prometheus fungerar ska ni testa installera Prometheus, Grafana och koppla ihop dem.
 
-[YOUTUBE src=LnSJKDLgsps caption="Skapa en Monitoring instance på Azure med Ansible"]
+- Kolla på videorna 401-403 i spellistan [kursen devops](https://www.youtube.com/watch?v=u84GyxLGdEo&list=PLKtP9l5q3ce8s67TUj2qS85C4g1pbrx78&index=12). Gör det lokalt på er dator för att testa få det att fungera.
 
-Nu ska ni följa en guide för att sätta upp Prometheus, Grafana och en exporter för att övervaka resurserna på instansen som ska köra programmen. När ni gör det ska ni konfigurera `scrape_interval`, sätt **inte** den till något mindre än **30** sek. Vi har begränsat med resurser.
+Nu är tanken att ni ska sätta upp den miljön på en ny VM. Kolla på följande video, för att se hur ni kan uppdatera Ansible skripten för att skapa en till VM.
 
-Följ nu guiden [Complete Node Exporter Mastery with Prometheus](https://devconnected.com/complete-node-exporter-mastery-with-prometheus/)
+[YOUTUBE src=LnSJKDLgsps  caption="Skapa en Monitoring instance på Azure med Ansible"]
 
-Ni ska senare göra en Ansible playbook för att sätta upp Prometheus och Grafana, då kan ni installera det hur ni vill. Men börja med att följa guiden för att lära er verktygen först. 
+- Skapa nu en ny playbook där ni sätter upp en node exporter, prometheus och Grafana på er nya monitor VM.
+
+- Använd er av modulerna [Grafana datasources](https://docs.ansible.com/ansible/latest/collections/community/grafana/grafana_datasource_module.html) och [dashboards](https://docs.ansible.com/ansible/latest/collections/community/grafana/grafana_dashboard_module.html) för att automatiskt lägga till prometheus som data källa och `Node Exporter Full` som dashboard.
+    - **Notera** att ni behöver installera `community.grafana` i ansible-galaxy innan ni kan använda modulerna. Lägg till `community.grafana` i `ansible/requirements.yml` kör sen `ansible-galaxy install -r ansible/requirements.yml`.
+
+Nu ska ni ha en övervakningsmiljö uppsatt på en ny VM! Nästa steg är att aktivera fler exportörer och koppla dem till Prometheus.
 
 
 
 ### MySQL {#mysql}
 
-Vi vill ha lite koll på vad som händer med databasen och det finns så klart en exporter för MySQL också.
+Vi vill ha koll på vad som händer med databasen och det finns så klart en exporter för MySQL också.
 
 Jobba igenom [Övervaka MySQL med Prometheus och Grafana](kunskap/overvaka-mysql-med-prometheus-och-grafana)
 
@@ -111,9 +116,9 @@ Glöm inte att öppna portar i Azure så Prometheus kommer åt mysql_exporter.
 
 #### Nginx {#nginx}
 
-Det finns en officiel exporter för [Nginx](https://github.com/nginxinc/nginx-prometheus-exporter) som använder sig utav [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) för att samla data. Tyvärr behöver man ha Nginx Plus för att få ut mer intressant data som hur många 4xx/5xx request man får in. Nu har vi inte Plus versionen och får nöja oss med att kunna se att servern är igång och hur många requests servern har fått.
+Det finns en officiell exporter för [Nginx](https://github.com/nginxinc/nginx-prometheus-exporter) som använder sig utav [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) för att samla data. Tyvärr behöver man ha Nginx Plus för att få ut mer intressant data som hur många 4xx/5xx request man får in. Nu har vi inte Plus versionen och får nöja oss med att kunna se att servern är igång och hur många requests servern har fått.
 
-Jobba igenon [Övervaka nginx med Prometheus och Grafana](kunskap/overvaka-nginx-med-prometheus-och-grafana).
+Jobba igenom [Övervaka nginx med Prometheus och Grafana](kunskap/overvaka-nginx-med-prometheus-och-grafana).
 
 Glöm inte att öppna portar i Azure.
 

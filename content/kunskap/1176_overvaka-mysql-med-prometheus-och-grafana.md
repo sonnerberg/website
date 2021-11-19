@@ -70,7 +70,9 @@ docker run -d \
 ```
 --collect... är flaggor för vilken data som exportern ska samla in. Det finns väldigt många fler och ni kan läsa om dem på [MySQL exporters GitHub](https://github.com/prometheus/mysqld_exporter#collector-flags).
 
-Testa så det fungera i terminalen med `wget localhost:9104/metrics`, om ni får ner en fil med data så fungerar det. Då behöver ni öppna upp porten så Prometheus kommer åt den.
+Testa så det fungera i terminalen med `wget localhost:9104/metrics`, om ni får ner en fil med data så fungerar det.
+
+När det fungerar ska ni öppna upp porten 9104 på Azure så att Prometheus kommer åt datan. Lägg också till porten i rollen `security_groups`.
 
 
 
@@ -88,14 +90,12 @@ scrape_configs:
 
 Starta om Prometheus och gå sen in på GUI:ts webbsida och testa hämta datan `mysql_exporter_scrapes_total` för att kolla att kopplingen fungerar.
 
-Följ sen Create the MySQL dashboard with Grafana för att skapa en MySQL Overview dashboard kopplad till datan.
-
 
 
 Konfigurera Grafana {#configure_graf}
 ---------------------------------------------------------
 
-Vi vill så klart ha fina grafer att titta på också. Företaget [Percona](https://github.com/percona/grafana-dashboards) har en hel drös med färdiga dashboards för MySQL och MongoDB. Vi väljer [MySQL_Overview.json](https://github.com/percona/grafana-dashboards/blob/master/dashboards/MySQL_Overview.json), importera den Grafana.
+Vi vill så klart ha fina grafer att titta på också. Företaget [Percona](https://github.com/percona/grafana-dashboards) har en hel drös med färdiga dashboards för MySQL och MongoDB. Vi väljer [MySQL_Overview.json](https://github.com/percona/grafana-dashboards/blob/98924a83e9465228fb8a8b734de71c3613cdd213/dashboards/MySQL_Overview.json), importera den i Grafana.
 
 Nu skall vi en dashboard som ser ut något så här:
 
