@@ -16,6 +16,8 @@ I denna uppgift ska ni använda er av er tidigare kunskap inom grid och bygga et
 
 Vi behöver inte göra något riktigt så avancerat som Instagram, men vi vill ha ett galleri på sidan som kan visa upp bilder som en blogg eller bilder på olika projekt ni arbetat med.
 
+
+
 Förkunskaper {#forkunskaper}
 -----------------------
 
@@ -23,12 +25,16 @@ Du har jobbat igenom artikeln "[Cimage - Hur fungerar det?](kunskap/cimage-hur-f
 
 Du har jobbat igenom artikeln "[Hur kan vi göra bilder och video responsivt?](kunskap/hur-kan-vi-gora-det-responsivt)" som går igenom hur vi kan ladda in bilder på ett responsivt sätt.
 
-Du har jobbat igenom uppgiften "[Bygg om din rapport-sida med CSS-Grid](uppgift/bygg-om-din-rapport-css-grid)" där du har skapat ett grid för din rapport-sida.
+Du har jobbat igenom uppgiften "[Bygg en teknologi-sida med CSS-Grid](uppgift/bygg-en-teknologi-sida-css-grid)" där du har skapat ett grid för din teknologi-sida.
+
+
 
 Krav {#krav}
 -----------------------
 
-Uppgiften är två delad, grid-delen och bildhanterings-delen.
+Uppgiften är två delad, grid-delen och bildhanterings-delen. Skapa en ny katalog för galleriet i `portfolio/content/gallery.md`. Skapa själv nya template-filer i ditt `theme` om du anser att det behövs.
+
+
 
 ### Gridet
 
@@ -40,6 +46,8 @@ Uppgiften är två delad, grid-delen och bildhanterings-delen.
     * Exempel: Bilden längst upp på denna sidan.
 4. Sidan skall vara responsiv på samma sätt som er rapport-sida.
 
+
+
 ### Bilderna
 
 1. Det ska inte finnas dubbletter i gridet.
@@ -49,9 +57,11 @@ Uppgiften är två delad, grid-delen och bildhanterings-delen.
     * En storlek när gridet har en kolumn i bredd.
     * En storlek när gridet har tre kolumner i bredd.
     * Tips: Cimage kan hjälpa dig med storleken på bilden.
-4. När man trycker på bilden (så den öppnas i ny flik) så ska den öppnas i sin ursprungliga storlek.
+4. När man trycker på bilden (så den öppnas i ny flik) så ska den öppnas i sin ursprungliga storlek. Du behöver inte göra en ny sida per bild, men kan öppna bilden direkt med hjälp av en länk till bilden.
 5. Samtliga bilder som används ska du ha rätt att använda.
     * Använd egna bilder eller någon av de tjänster som finns tillgängliga [här](kurser/design-v3/kmom05#var-letar-man).
+
+
 
 ### Övrigt {#ovrigt}
 
@@ -60,6 +70,8 @@ Uppgiften är två delad, grid-delen och bildhanterings-delen.
 1. Dubbelkolla att allt fungerar på studentservern.
 
 1. När du laddat upp till studentservern kan du testköra sidan på mobilen och se så att allt fungerar.
+
+
 
 Tips från coachen {#tips}
 -----------------------
