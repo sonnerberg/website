@@ -111,3 +111,15 @@ dbwebb publishpure me
 ```
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
+
+
+
+Testa din inlämning {#testa}
+-----------------------------------------------
+
+Kommandot `dbwebb test` testar att grunderna för kmom'et är på plats. Vår rättning utgår från detta kommando.
+
+```shell
+$ dbwebb update
+$ dbwebb test kmom06
+```

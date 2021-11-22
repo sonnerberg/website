@@ -7,12 +7,6 @@ revision:
 Kmom05: Bilder
 ====================================
 
-[WARNING]
-
-**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
-
-[/WARNING]
-
 Låt oss ägna ett kursmoment åt att testa runt med bilder, bildverktyg och bildformat samt hur vi publicerar bilderna på en webbplats, inklusive responsivitet.
 
 Vi skall skapa ett galleri i vår portfolio, det känns rimligt och ger oss en möjlighet att fortsätta öva på CSS-grid men även att jobba med bilder och responsivtet.
@@ -124,13 +118,15 @@ Läs följande om responsivitet och bilder.
 
 1. Arbeta igenom artikeln "[Hur kan vi göra bilder och video responsivt](kunskap/hur-kan-vi-gora-det-responsivt)".
 
+
+
 ### Uppgifter {#uppgifter}
 
 1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet-v2)". Du skall skriva en rapport, enskilt eller i grupp.
 
 1. Gör uppgiften "[Bygg ett galleri](uppgift/bygg-ett-galleri)" där ni med hjälp av tidigare kunskap om grid och er nyfunna kunskap om bildhantering ska bygga ett responsivt galleri.
 
-1. Gör uppgiften "[Youtube-klipp i iframe](uppgift/youtube-i-iframe)". Du skall via en iframe ladda in valfri video på din redovisningssida för kmom05.
+1. Gör uppgiften "[Youtube-klipp i iframe](uppgift/youtube-i-iframe)". Du skall via en iframe ladda in valfri video som en del av din galleri sida.
 
 1. Försäkra dig om att du har gjort `dbwebb purepublish me` och taggat din inlämning med version 5.0.0 (eller högre) samt pushat ditt repo och dess taggar till GitHub.
 
@@ -157,3 +153,15 @@ dbwebb publishpure me
 ```
 
 Gör Quiz på Canvas och lämna sedan in din inlämning i den nu upplåsta uppgiften. Länka till din portfölj på studentservern som en del av din inlämning.
+
+
+
+Testa din inlämning {#testa}
+-----------------------------------------------
+
+Kommandot `dbwebb test` testar att grunderna för kmom'et är på plats. Vår rättning utgår från detta kommando.
+
+```shell
+$ dbwebb update
+$ dbwebb test kmom05
+```

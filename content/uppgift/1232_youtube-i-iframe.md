@@ -21,7 +21,7 @@ Du har jobbat igenom artikeln [Hur kan vi göra bilder och video responsivt?](ku
 Krav {#krav}
 -----------------------
 
-1. Lägg till ditt favorit youtube-klipp som en embed på redovisningssidan för kmom05.
+1. Lägg till ditt favorit youtube-klipp som en embed under griddet på din galleri-sida.
 
 1. Se till att videon skalas om när webbläsaren förstoras eller förminskas.
 
