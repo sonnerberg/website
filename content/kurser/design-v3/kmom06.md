@@ -120,6 +120,9 @@ Testa din inlämning {#testa}
 Kommandot `dbwebb test` testar att grunderna för kmom'et är på plats. Vår rättning utgår från detta kommando.
 
 ```shell
+# stå i dbwebb-kurser/design
+
 $ dbwebb update
+$ npm install
 $ dbwebb test kmom06
 ```
