@@ -96,7 +96,8 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk1-v2/block-kurser-kmom
+                                #route: kurser/ramverk1-v2/block-kurser-kmom
+                                route: kurser/pattern-v1/block-kurser-kmom-proj
                     column-3:
                         data:
                             meta:
@@ -159,7 +160,8 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kurser/ramverk1-v2/block-kurser-kmom
+                                #route: kurser/ramverk1-v2/block-kurser-kmom
+                                route: kurser/pattern-v1/block-kurser-kmom-proj
                     column-3:
                         data:
                             meta:
@@ -264,6 +266,70 @@ views:
                             meta:
                                 type: content
                                 route: kurser/exjobb-kandidat/block-kurser-kmom
+
+    kurserovrigt1:
+        region: columns-above
+        template: default/columns
+        sort: 90
+        data:
+            title: Mer kurser
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        #data:
+                        #    meta:
+                        #        type: content
+                        #        route: kurser/webtopic-v2/block-kurser-kmom
+                    column-2:
+                        #data:
+                        #    meta:
+                        #        type: content
+                        #        route: kurser/devops-v1/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/webgl/block-kurser-kmom
+                    column-4:
+                        #data:
+                        #    meta:
+                        #        type: content
+                        #        route: kurser/stortproj/block-kurser-kmom
+
+    kurserovrigt2:
+        region: columns-above
+        template: default/columns
+        sort: 91
+        data:
+            #title: Mer kurser
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        #data:
+                        #    meta:
+                        #        type: content
+                        #        route: kurser/webtopic-v2/block-kurser-kmom
+                    column-2:
+                        #data:
+                        #    meta:
+                        #        type: content
+                        #        route: kurser/devops-v1/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/moln/block-kurser-kmom
+                    column-4:
+                        #data:
+                        #    meta:
+                        #        type: content
+                        #        route: kurser/stortproj/block-kurser-kmom
 
     columnsXtra:
         region: columns-above
