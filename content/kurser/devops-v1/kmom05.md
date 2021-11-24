@@ -14,11 +14,6 @@ Devops handlar om att brygga kommunikationsbarriärer, det är stort fokus på d
 
 <!-- more -->
 
-[WARNING]
-Kursmoment är uppdateras. Saker kan förändras.
-Fortsätt på egen risk!
-[/WARNING]
-
 [FIGURE src="img/devops/devops-security.png" caption="Hur det inte ska se ut när man kör devops."]
 
 Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stängt av ssh inloggning som root användare, vi har en ny användare i database bara för microbloggen, vi pushar inte Azure credentials till GitHub och vi sparar känslig information som behövs till CircleCi som hemlig miljövariabler. Nu ska vi gå vidare med att aktivt leta efter säkerhetsrisk.
@@ -335,7 +330,7 @@ Det finns givetvis sätt att göra SSH ännu säkrare, det är inget vi ska gör
 
 Det är inte bara vår kod som behöver vara säker, även vår CI/CD infrastruktur är en säkerhetsrisk. Någon kan ta sig in i CircleCi's system och komma åt våra olika API nycklar t.ex. och på så sätt få tillgång till vår kod.
 
-Läs [How Secure Is Your CICD Pipeline?](https://dzone.com/articles/how-secure-is-your-cicd-pipeline-1) som går igenom vad man ska tänka på när man sätter upp sin CI/CD pipeline och kopplar ihop olika tjänster.
+Läs [How Secure Is Your CICD Pipeline?](https://www.weave.works/blog/how-secure-is-your-cicd-pipeline) och [Ultimate guide to CI/CD security and DevSecOps](https://circleci.com/blog/security-best-practices-for-ci-cd/) som går igenom vad man ska tänka på när man sätter upp sin CI/CD pipeline och kopplar ihop olika tjänster.
 
 
 
