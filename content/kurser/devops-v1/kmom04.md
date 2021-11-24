@@ -94,6 +94,7 @@ Nu är tanken att ni ska sätta upp den miljön på en ny VM. Kolla på följand
 
 - Använd er av modulerna [Grafana datasources](https://docs.ansible.com/ansible/latest/collections/community/grafana/grafana_datasource_module.html) och [dashboards](https://docs.ansible.com/ansible/latest/collections/community/grafana/grafana_dashboard_module.html) för att automatiskt lägga till prometheus som data källa och `Node Exporter Full` som dashboard.
     - **Notera** att ni behöver installera `community.grafana` i ansible-galaxy innan ni kan använda modulerna. Lägg till `community.grafana` i `ansible/requirements.yml` kör sen `ansible-galaxy install -r ansible/requirements.yml`.
+- Ni behöver **inte** koppla ihop er dashboard och datasource i Ansible koden. Modulerna saknar stöd för det. Bara skapa dem via Ansible och sen får ni koppla ihop dem manuellt.
 
 Nu ska ni ha en övervakningsmiljö uppsatt på en ny VM! Nästa steg är att aktivera fler exportörer och koppla dem till Prometheus.
 
