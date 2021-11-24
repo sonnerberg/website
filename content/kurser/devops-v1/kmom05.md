@@ -24,9 +24,11 @@ Vi har redan gjort några saker för att förbättra vår säkerhet, vi har stä
 
 Målet med DevSecOps är att alla behöver tänka på och är ansvariga för säkerheten hos en produkt. Säkerhet behöver vara en del av hela utvecklingsprocessen. Mycket inom devops handlar om automation och där vill vi även ha med säkerheten, manuell kontroll av säkerhet ska vara ett undantag inte regeln. DevSecOps har fått ett eget namn för att det är först på senare år som man börjat med att få in säkerhetstänket, det var med inte riktigt i början av devops.
 
-Läs [The “What” “How” and “Why” of DevSecOps](https://www.newcontext.com/what-is-devsecops/) och [What is DevSecOps?](https://www.atlassian.com/continuous-delivery/principles/devsecops) som tar upp lite olika delar av DevSecOps.
+Läs följande artiklar som tar upp lite olika delar av DevSecOps:
 
-Läs också kapitell 1 "Securing devops", 1.1-1.3, i [Securing Devops](http://tinyurl.com/usyps42) (länken går till en E-bok version) för en introduktion till Continuous Security.
+- [The “What” “How” and “Why” of DevSecOps](https://www.newcontext.com/what-is-devsecops/)
+- [What is DevSecOps?](https://www.atlassian.com/continuous-delivery/principles/devsecops)
+- kapitell 1 "Securing devops", 1.1-1.3, i [Securing Devops](http://tinyurl.com/usyps42) (länken går till en E-bok version) för en introduktion till Continuous Security.
 
 
 
@@ -40,17 +42,23 @@ Vi ska nu lägga in automatiska säkerhetskontroller i vår CI/CD kedja, men vi 
 
 När det kommer till att göra Docker säkrare finns det väldigt mycket man kan göra, det finns flera olika långa dokument som går igenom vad man kan göra. T.ex. [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker/), ett av de längre dokumenten, och [OWASP Container security standard](https://github.com/OWASP/Container-Security-Verification-Standard), som tycker att CIS är för långt dokument. Ni behöver inte sätta er in i dem men om ni är intresserade rekommenderar jag OWASPs standard.
 
-Vi nöjer oss med att läsa OSWAP [Docker security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html). De har en bra sammanfattning av viktiga saker att tänka på. Vi gör några av sakerna för Microbloggen men de flesta uppfyller vi inte.
+Vi nöjer oss med att läsa OSWAP's sammanfattning av viktiga saker att tänka på. Vi gör några av sakerna för Microbloggen men de flesta uppfyller vi inte.
 
-Läs också [Container security best practices](https://logz.io/blog/container-security-best-practices/) för en kort översikt av några saker att tänkta på när man jobbar med containrar i produktion. De pratar om Immutable deployment, alltså att bygga ny instance vid varje deploy och ta bort den gamla. Vår infrastructure är inte mogen nog för det. Vår monitoring är för simpel och vi har inte satt upp någon logging monitoring som kan analysera efter säkerhetsintrång.
+-[Docker security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)
+
+Läs också en kort översikt av några saker att tänkta på när man jobbar med containrar i produktion. De pratar om Immutable deployment, alltså att bygga ny instance vid varje deploy och ta bort den gamla. Vår infrastructure är inte mogen nog för det. Vår monitoring är för simpel och vi har inte satt upp någon logging monitoring som kan analysera efter säkerhetsintrång.
+
+- [Container security best practices](https://logz.io/blog/container-security-best-practices/)
 
 
 
 ##### Docker image security scanning {#docker_scan}
 
-Det finns några olika verktyg för att skanna Docker images, Docker runtime och inställningar i Docker host. Tanken var att vi skulle använda oss av något av de verktygen. Tyvärr finns det problem med alla jag testade som gjorde att de är jobbigare att använda dem än vad vi får ut av dem. 
+Det finns några olika verktyg för att skanna Docker images, Docker runtime och inställningar i Docker host. Tanken var att vi skulle använda oss av något av de verktygen. Tyvärr finns det problem med alla jag testade som gjorde att de är jobbigare att använda dem än nyttan vi får ut av dem. 
 
-Vi får nöja oss med att läsa [Docker Image Security Scanning: What It Can and Can't Do](https://resources.whitesourcesoftware.com/blog-whitesource/docker-image-security-scanning), den nämner några verktyg för att skanna filer. Den nämner dock inte [Docker Bench Security](https://github.com/docker/docker-bench-security) vilket är Dockers egna verktyg för att skanna olika delar av Docker.
+Vi får nöja oss med att läsa om det och vilka verktyg som finns. Den nämner dock inte [Docker Bench Security](https://github.com/docker/docker-bench-security) vilket är Dockers egna verktyg för att skanna olika delar av Docker.
+
+- [Docker Image Security Scanning: What It Can and Can't Do](https://resources.whitesourcesoftware.com/blog-whitesource/docker-image-security-scanning)
 
 Det är bra att känna till verktygen och om ni jobbar med Docker på fritiden eller senare i arbetslivet rekommenderar jag er att använda något verktyg.
 
@@ -98,13 +106,15 @@ I vårt projekt använder vi oss av många externa paket både i Python koden f�
 ##### Snyk {#snyk}
 
 <!-- https://circleci.com/blog/adding-application-and-image-scanning-to-your-cicd-pipeline/ -->
-Skapa ett konto på [Snyk.io](https://snyk.io/). Vi kan koppla Snyk till Microblog repot på GitHub och DockerHub här, men då blir det inte en del av vår CI kedja utan vi behöver logga in på Snyk i efterhand och kolla resultatet. Det vill vi inte, så vi ska använda oss av [Orbs i CircleCi](https://snyk.io/blog/automating-open-source-security-scanning-with-snyk-and-circleci/), mer specifikt [Snyks orb](https://github.com/snyk/snyk-orb) så att det blir ett steg i CI kedjan.
+ Vi kan koppla Snyk till Microblog repot på GitHub och DockerHub, men då blir det inte en del av vår CI kedja utan vi behöver logga in på Snyk i efterhand och kolla resultatet. Det vill vi inte, vi ska använda oss av [Orbs i CircleCi](https://snyk.io/blog/automating-open-source-security-scanning-with-snyk-and-circleci/), mer specifikt [Snyks orb](https://github.com/snyk/snyk-orb) så att det blir ett steg i CI kedjan.
 
 Först behöver ni tillåta 3rd party Orbs i CircleCi.
 
 - Gå till settings, Security och klicka i `Yes, allow all members of my organization to publish dev orbs... `. 
 
-- Sen behöver ni hämta en API nyckel från Snyk. Gå tlll `settings`, `personal API token` och klicka `click to show`.
+- Sen behöver ni hämta en API nyckel från Snyk. 
+    - Skapa ett konto på [Snyk.io](https://snyk.io/).
+    - Gå tlll `settings`, `personal API token` och klicka `click to show`.
 
 - Kopiera nyckeln och gå till CircleCi och settings för ert Microblog projekt.
 
@@ -126,7 +136,7 @@ Vi börjar med att lägga till så att Python paketen skannas.
 
 ###### Python {#snyk-python}
 
-Snyk cli kollar vilka paket som är installerade och klarar egentligen inte av att kolla virtual environment. Men vi kan lurar Snyk med raden `- run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV` i CircleCi konfigurationen.
+Snyk cli kollar vilka paket som är installerade och klarar egentligen inte av att kolla vår virtual environment. Men vi kan lurar Snyk med raden `- run: echo "source ~/repo/venv/bin/activate" >> $BASH_ENV` i CircleCi konfigurationen.
 
 Jag lägger till ett nytt jobb som heter `snyk`.
 
@@ -208,13 +218,15 @@ Static Application Security Testing (SAST), eller bara Static Code Analysis, är
 
 Dynamic Application Security Testing (DAST) letar efter sårbarheter i webbapplikationer genom att skanna och utföra attacker på applikationen. Vi kommer använda [Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) för att utföra DAST på Microbloggen.
 
-Läs [SAST vs. DAST](https://www.synopsys.com/blogs/software-security/sast-vs-dast-difference/) för en jämförelse av de två och vad de är bra på.
+- Läs [SAST vs. DAST](https://www.synopsys.com/blogs/software-security/sast-vs-dast-difference/) för en jämförelse av de två och vad de är bra på.
 
 
 
 ##### Bandit {#bandit}
 
-[Bandit](https://github.com/PyCQA/bandit) är ett linting verktyg (som pylint) fast det analyserar istället säkerhet i koden. Ladda ner Bandit och lägg till det i `requirements/test.txt` så att det är en del av paketen för testning. Testa att köra Bandit med `bandit -r app` så att det bara analyserar koden för applikationen, vi behöver inte köra det mot testerna.
+[Bandit](https://github.com/PyCQA/bandit) är ett linting verktyg (som pylint) fast det analyserar istället säkerhet i koden. Ladda ner Bandit och lägg till det i `requirements/test.txt` så att det är en del av paketen för testning.
+
+- Testa att köra Bandit med `bandit -r app` så att det bara analyserar koden för applikationen, vi behöver inte köra det mot testerna.
 
 Om ni har kodrader som ni anser är false-positivs kan ni lägga `# nosec` som en kommentar i slutet på den raden. Då ignorerar Bandit den raden. Det går även att hoppa över hela tester, ni kan skapa filen `.bandit.yml` och i den skriva:
 
@@ -226,7 +238,7 @@ För att Bandit ska läsa konfigurationen kör Bandit med `bandit -c .bandit.yml
 
 Om ni får några fel kan ni antingen fixa felet, lägga till `# nosec` eller hoppa över regeln helt. Analysera felet och gör ett aktivt val över vad som är en passande åtgärd på felet.
 
-Lägg till `bandit` som ett make target I Makefile som kör Bandit på `app` mappen. Gör sen så att Bandit är en del av testerna som körs i Dockerfile_test och som en del av CircleCi.
+- Lägg till `bandit` som ett make target I Makefile som kör Bandit på `app` mappen. Gör sen så att Bandit är en del av testerna som körs i Dockerfile_test och som en del av CircleCi.
 
 
 
@@ -234,7 +246,9 @@ Lägg till `bandit` som ett make target I Makefile som kör Bandit på `app` map
 
 [Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)/[Zap på Github](https://github.com/zaproxy/zaproxy) är ett verktyg som kan testa väldigt många saker, speciellt från OWASP10. Det går att köra det både automatiskt och manuellt.
 
-Vi kommer att nöja oss med att köra deras [Baseline tester](https://github.com/zaproxy/zaproxy/wiki/ZAP-Baseline-Scan) på Microbloggen, då utförs inga aktiva attacker, den bara skannar websidan. Mozilla har ett [blogginlägg](https://blog.mozilla.org/security/2017/01/25/setting-a-baseline-for-web-security-controls/) där de förklarar hur ni kan köra Zap med baseline testerna. Följ den för att testa köra den mot er Microblog, ni behöver inte lägga till det i CircleCi.
+Vi kommer att nöja oss med att köra deras [Baseline tester](https://github.com/zaproxy/zaproxy/wiki/ZAP-Baseline-Scan) på Microbloggen, då utförs inga aktiva attacker, den bara skannar webbsidan. Mozilla har ett [blogginlägg](https://blog.mozilla.org/security/2017/01/25/setting-a-baseline-for-web-security-controls/) där de förklarar hur ni kan köra Zap med baseline testerna.
+
+- Följ blogginlägget ovanför för att testa köra den mot er Microblog, ni behöver inte lägga till det i CircleCi.
 
 Det går även att köra Zap mot er lokala miljö, men då måste ni sätta nätverk när ni startar containern:
 
@@ -291,7 +305,9 @@ Med detta har vi begränsat var personer kan utnyttja säkerhetshål för att ta
 
 Det finns en hel del vi kan göra med servrarna i produktion. SSH är en viktig del i vårt arbetsflöde, Ansible behöver kunna SSH:a in till varje server för att konfigurera dem och vi gör det för att felsöka och testa saker. Dock så är vår SSH setup inte särskilt säker, även om vi har stängt av root och password login vilket är steg 1.
 
-I vår struktur kan man SSH:a in till varje server från vilken IP som helst. En säkrar struktur än vad vi har är att ha en bastion/access node som fungerar som ingång till hela produktions infrastrukturen. Då hade vi skapat en till instans som endast är till för att ge tillgång till resten av servrarna. Servern hade haft en security group så att man kan SSH:a till den från vilken IP som helst. På övriga servrar sätter vi security groups som bara tillåter SSH kopplingar från bastion nodens IP. Vi kommer inte att skapa en bastion node då vi har begränsat med resurser men med en större budget hade vi gjort detta. Ni kan läsa lite mer om det på [What is a bastion host?](https://www.learningjournal.guru/article/public-cloud-infrastructure/what-is-bastion-host-server/)
+I vår struktur kan man SSH:a in till varje server från vilken IP som helst. En säkrar struktur än vad vi har är att ha en bastion/access node som fungerar som ingång till hela produktions infrastrukturen. Då hade vi skapat en till instans som endast är till för att ge tillgång till resten av servrarna. Servern hade haft en security group så att man kan SSH:a till den från vilken IP som helst. På övriga servrar sätter vi security groups som bara tillåter SSH kopplingar från bastion nodens IP. Vi kommer inte att skapa en bastion node då vi har begränsat med resurser men med en större budget hade vi gjort detta.
+
+- Läsa mer om det i [What is a bastion host?](https://www.learningjournal.guru/article/public-cloud-infrastructure/what-is-bastion-host-server/)
 
 
 
@@ -330,7 +346,10 @@ Det finns givetvis sätt att göra SSH ännu säkrare, det är inget vi ska gör
 
 Det är inte bara vår kod som behöver vara säker, även vår CI/CD infrastruktur är en säkerhetsrisk. Någon kan ta sig in i CircleCi's system och komma åt våra olika API nycklar t.ex. och på så sätt få tillgång till vår kod.
 
-Läs [How Secure Is Your CICD Pipeline?](https://www.weave.works/blog/how-secure-is-your-cicd-pipeline) och [Ultimate guide to CI/CD security and DevSecOps](https://circleci.com/blog/security-best-practices-for-ci-cd/) som går igenom vad man ska tänka på när man sätter upp sin CI/CD pipeline och kopplar ihop olika tjänster.
+Läs artiklarna nedanför som går igenom vad man ska tänka på när man sätter upp sin CI/CD pipeline och kopplar ihop olika tjänster.
+
+- [How Secure Is Your CICD Pipeline?](https://www.weave.works/blog/how-secure-is-your-cicd-pipeline)
+- [Ultimate guide to CI/CD security and DevSecOps](https://circleci.com/blog/security-best-practices-for-ci-cd/) 
 
 
 
