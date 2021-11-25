@@ -3,22 +3,17 @@ author:
     - nik
     - efo
 revision:
+    "2021-11-25": "(C, efo) Tog bort redovisningssida"
     "2020-12-10": "(B, efo, nik) Färdigställd projekt"
     "2020-10-15": "(A, nik) Nysläpp för design-v3"
 ...
 Kmom10: Projekt och examination
 ====================================
 
-[WARNING]
-
-**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
-
-[/WARNING]
-
 [INFO]
 **Publicering till studentservern**
 
-När ni publicerar till studentservern, kom ihåg att ni behöver uppdatera både ert akronym men även sökvägen i `.htaccess` på rad 12 och 15. Den som ni har ifrån tidigare pekar på er portfolio-mapp, men ska istället peka på den mapp ni jobbar med i projektet.
+När ni publicerar till studentservern, kom ihåg att ni behöver uppdatera både eran akronym men även sökvägen i `.htaccess` på rad 12 och 15. Den som ni har ifrån tidigare pekar på er portfolio-mapp, men ska istället peka på den mapp ni jobbar med i projektet.
 
 [/INFO]
 
@@ -68,8 +63,10 @@ Följande uppdrag rör utveckling av webbplatser och teman och de skall göras i
 Du har tre potentiella kunder, du väljer att utveckla en webbplats, med tillhörande teman, till **en av dessa kunder**.
 
 [INFO]
-Du kan byta namnet på din kund, förutsatt att det är tydligt vilken kund du valt (både på hemsidan och i din projekttext) och att det inte är en publik person.
+Du kan byta namnet på din kund, förutsatt att det är tydligt vilken kund du valt (både på hemsidan och i din projekttext på Canvas) och att det inte är en publik person.
 [/INFO]
+
+
 
 #### Kund 1 {#kund1}
 
@@ -93,6 +90,8 @@ Du kan själv välja om du vill att artisten skall vara ung/gammal, hålla på m
 
 Du kan själv välja profil och inriktning på webbplatsen, men gör medvetna val som gynnar Bew's profil. Här kan du välja att göra grunden till din egen CV-webbplats.
 
+
+
 #### Exempel {#exempel}
 
 Nedan är några exempel gjorda i Figma av en av våra alumni, Matilda.
@@ -102,6 +101,8 @@ Nedan är några exempel gjorda i Figma av en av våra alumni, Matilda.
 [FIGURE src=image/design-v3/projekt/design_music.png?height=10% caption="Exempel på kund 2"]
 [FIGURE src=image/design-v3/projekt/design_egenforetagare.png?height=10% caption="Exempel på kund 3"]
 </div>
+
+
 
 ### Uppdrag 1: Webbplats (10p) {#k3}
 
@@ -233,17 +234,17 @@ Lägg resultatet i din portfolio-sida under `content/analysis/11_design-och-webb
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din redovisningssida, skriv följande:
+Gör din inlämning på Canvas och skriv nedanstående stycken där som en del av inlämningen:
 
-    1.1 För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Inled varje stycke med en rubrik med krav 1-6. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
-    1.2 Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
-    1.3 Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-1. Tagga din me/portfolio i v10.0.0 och publicera på GitHub.
+<!-- 1. Tagga din me/portfolio i v10.0.0 och publicera på GitHub.
 
-1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din portfolio-sida och projektet.
+1. Ta en kopia av texten på din redovisningssida och kopiera in den på läroplattformen i redovisningen. Glöm inte länka till din portfolio-sida och projektet. -->
 
 1. Publicera på studentservern.
 
