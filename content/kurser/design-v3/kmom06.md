@@ -1,17 +1,13 @@
 ---
 author:
     - nik
+    - efo
 revision:
-    "2020-10-15": (A, nik) Nysläpp för design-v3
+    "2021-11-25": (B, efo) Added new assignment.
+    "2020-10-15": (A, nik) Nysläpp för design-v3.
 ...
 Kmom06: Tillgänglighet och prestanda
 ====================================
-
-[WARNING]
-
-**Kursuppdatering pågår, fråga lärare eller invänta att rutan försvinner.**
-
-[/WARNING]
 
 Som avslutning på kursen så ska vi kolla över två områden som lätt hamnar i skymundan. Vi börjar med att kolla på begreppet "the final touch" som är bra att vara medveten om i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
@@ -83,6 +79,8 @@ Gå igenom följande material om tillgänglighet, MDN erbjuder en liten mjukare 
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Utvärdera designprinciper som webbplatser använder sig av](uppgift/utvardera-webbplatsers-designprinciper-v2)". Du skall skriva en rapport, enskilt eller i grupp.
+
+1. Gör uppgiften "[Förbättra din portfölj med designprinciper](uppgift/forbattra-din-portfolj-med-design-principer)". Där vi använder erfarenheter från analysen om designprinciper och förbättrar vår portfölj.
 
 1. Gör uppgiften "[Tillgänglighet med Google Lighthouse](uppgift/tillganglighet-med-google-lighthouse)". Du ska kolla på hur din sida presterar i tillgänglighet enligt Google Lighthouse.
 
