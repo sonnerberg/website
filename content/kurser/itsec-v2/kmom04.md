@@ -36,14 +36,14 @@ Du behöver ha följande installerat:
 * Docker (om du hellre vill använda det)
 
 
-Föreläsningar  {#forelasningar}
+Laboration  {#laboration}
 ---------------------------------
 
 *(ca: 2 studietimmar)*
 
-Du ska medverka på föreläsningen:
+Du ska medverka på laborationen:
 
-* 10.00 (2021-12-03) H430 ???
+* 10.00 (2021-12-03) H430 Sårbarhetsanalys, se uppgiften nedan
 
 <!-- * 10.00 (2021-12-03) via Zoom (länk på Canvas) -->
 
