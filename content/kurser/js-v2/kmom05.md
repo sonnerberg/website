@@ -6,19 +6,13 @@ revision:
 Kmom05: Web API
 ==================================
 
-När vi använder JavaScript i webbläsaren kan vi använda färdiga API:er som ger oss möjlighet att bygga våra webbsidor och applikationer på nya sätt. Vi ska i det här kursmomentet ta en närmare titt på ett av dem.
+När vi använder JavaScript i webbläsaren kan vi använda färdiga API:er som ger oss möjlighet att bygga våra webbsidor och applikationer på nya sätt. Vi ska i det här kursmomentet ta en närmare titt på två av dem.
 
-[WARNING]
 
-**Kursutveckling pågår**
-
-[/WARNING]
-
-<!--stop-->
 
 <!--more-->
 
-<!-- [YOUTUBE src=Ra4qyJWjwmk width=630 caption="Så här kan det se ut när man leker med JavaScript och DOM."] -->
+
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -30,44 +24,14 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 
-###Kurslitteratur {#kurslitteratur}
-
-Det finns inga läsanvisningar till kurslitteraturen.
-<!--
-Läs följande:
-
-1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)
-    * [Ch12 JavaScript and the Browser](http://eloquentjavascript.net/12_browser.html)
-    * [Ch13 The Document Object Model](http://eloquentjavascript.net/13_dom.html)
-    * [Ch14 Handling Events](http://eloquentjavascript.net/14_event.html)
--->
-
-
 
 ### MDN {#mdn}
 
-Läs följande:
+Skaffa en överblick av följande:
 
-1. I samlingen om "Web technology for developers" finns en sektion "Web APIs" där vi hittar information om "[Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/DOM)". Bekanta dig översiktligt med det dokumentet och dess innehåll.
+1. [Web API på mdn](https://developer.mozilla.org/en-US/docs/Web/API).
 
-1. Läs igenom följande guider relaterade till DOM.
-    * [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-    * [Events and the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events)
-    * [Example](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples) (översiktligt).
-
-
-
-<!--
-###Artiklar {#artiklar}
--->
-
-
-
-###Video  {#video}
-
-Titta på följande:
-
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
+Där finns en hel del listade API:er. I detta kursmoment ska vi titta närmare på [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) och [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API).
 
 
 
@@ -76,13 +40,12 @@ Titta på följande:
 
 *(ca: 12-16 studietimmar)*
 
-<!--
+
 ###Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
-Det finns inga övningar.
--->
+1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom05) för kursmoment 5.
 
 
 
@@ -90,20 +53,10 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[JavaScript, DOM och Events](uppgift/javascript-dom-och-events)". Spara koden i `me/kmom05/dom`.
+1. Gör uppgiften "[CO2 Emission](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom05/01_co2-emission.md)". Spara koden i `kmom05/`.
 
+1. Gör uppgiften "[Me page 5](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom05/02_mepage5.md)". Spara resultatet i `me/redovisa/`.
 
-
-###Extra {#extra}
-
-Gör uppgiften "[Memory - rita flaggor med JavaScript vid DOM](uppgift/memory-rita-flaggor-med-javascript-och-dom)". Spara koden i `me/kmom05/flag4`.
-
-
-<!--
-Lös följande extrauppgifter om du har tid.
-
-1. Gör uppgiften "[Flytta Baddie på webbsida (#4)](uppgift/flytta-baddie-pa-webbsida-4)" som handlar om att bygga baddien med objekt.
--->
 
 
 
@@ -116,7 +69,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur upplevde du DOM-uppgiften, var något svårt eller utmanande?
-* Beskriv vad du gjorde som sista uppgift i DOM-uppgiften.
-* Vad anser du om Crockfords videor, har du tittat på dem och gav de något?
+* Kan du komma på något annat sammanhang där Web Storage hade fungerat bra?
+* Vad känner du för fetch API?
+* Beskriv skillnaden mellan synkron och asynkron.
 * Vad är din TIL för det här kursmomentet?
