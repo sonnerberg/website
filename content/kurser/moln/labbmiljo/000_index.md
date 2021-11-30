@@ -1,1 +1,5 @@
-../../../labbmiljo/000_index.md
+---
+titleBreadcrumb: Labbmiljö
+...
+Index
+===============================

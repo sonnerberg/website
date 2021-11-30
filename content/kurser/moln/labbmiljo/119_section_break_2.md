@@ -1,1 +1,5 @@
-../../../labbmiljo/119_section_break_2.md
+---
+title: Verktyg (alla kurser)
+sectionHeader: true
+linkable: false
+...

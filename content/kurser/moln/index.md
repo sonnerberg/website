@@ -38,8 +38,6 @@ Kursen omfattar följande områden:
 Mål {#mal}
 ------------------------
 
-
-
 ###Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:

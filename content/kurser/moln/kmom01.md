@@ -1,27 +1,15 @@
 ---
 author:
-  - mos
   - efo
 revision:
-    "2018-09-24": "(E, efo) Rensade ut i litteratur och flyttade portfölj längst ner i listan."
-    "2017-12-27": "(D, mos) Enhetlig mall för me-sida."
-    "2017-11-01": "(C, mos) Länk till rätt uppgift om me-sidan (v2)."
-    "2017-10-17": (B, mos) Uppdaterad inför ht17.
-    "2015-10-15": (A, mos) Första utgåvan för kursen.
+    "2021-11-30": (A, efo) Första utgåvan för kursen VT22.
 ...
-Kmom01: JavaScript och WebGL
+Kmom01: Virtualisering med VirtualBox
 ==================================
 
-Du kommer igång med en labb- och utvecklingsmiljö som stödjer utveckling av HTML, CSS och JavaScript tillsammans med WebGL. Du testar på programmering i JavaScript, bygger en sandbox för dina tester och du skapar dina första WebGL-ritningar i webbläsaren.
+Vi ska i detta kursmoment titta på hur vi kan installera annat operativsystem på din dator och använda det som en server. Detta tillvägagångsättet heter virtualisering och är en viktig del av hur molnet är uppbyggt. Virtualisering gör det möjligt att ha många "små datorer" på en stor och kraftfull server.
 
 <!--more-->
-
-
-Så här långt kommer du när du läst boken och testat dess exempel.
-
-[FIGURE src=/image/snapht15/webgl-sandbox2-point-random-color.png?w=w2 caption="Placera ut punkter på canvasen i olika färger."]
-
-
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
