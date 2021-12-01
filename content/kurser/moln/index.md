@@ -38,7 +38,7 @@ Kursen omfattar följande områden:
 Mål {#mal}
 ------------------------
 
-###Kunskap och förståelse {#kunskap}
+### Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:
 
@@ -47,7 +47,7 @@ Efter genomförd kurs skall studenten:
 
 
 
-###Färdighet och förmåga {#fardighet}
+### Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
@@ -56,7 +56,7 @@ Efter genomförd kurs skall studenten:
 
 
 
-###Värderingsförmåga och förhållningssätt {#vardering}
+### Värderingsförmåga och förhållningssätt {#vardering}
 
 Efter genomförd kurs ska studenten:
 
@@ -87,7 +87,7 @@ Vi börjar utvecklingen av vår applikation i Python och micro-ramverket Flask d
 
 
 
-### kmom3: Projekt och examination {#kmom03}
+### kmom03: Projekt och examination {#kmom03}
 
 Avslutningsvis gör vi ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med inlämningsuppgifter och redovisningar används detta som underlag för att examinera dig från kursen.
 
@@ -98,7 +98,9 @@ Avslutningsvis gör vi ett projekt enligt en specifikation. Projektet är det si
 Kurslitteratur {#litteratur}
 ----------------------------
 
+Kurslitteraturen i kursen är boken "What is the cloud?" av Bill Laberis. Boken är en kort introduktion till vad Cloud är och kan med fördel läsas i början av kursen.
 
+Du kommer åt den boken via biblioteket på BTH. Gå till [https://bibliotek.bth.se/databases?q=o%27reilly](https://bibliotek.bth.se/databases?q=o%27reilly) och välj O'reilly. Du ska nu kunna söka på "What is the cloud?" i Sökrutan och första träffen är kurslitteraturen.
 
 
 
@@ -114,7 +116,7 @@ Lärarstöd och handledning {#handledning}
 
 Kursen ges på campus och handledning sker i anslutning till tid i labbsalen.
 
-Det finns även forum och chatt där man kan få hjälp och handledning.
+Det finns även en Discord chatt där man kan få hjälp och handledning. Invite-länk finns i Canvas.
 
 
 
@@ -125,7 +127,7 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 
 | Kursens moment   | Ladok moment enligt kursplan |
 |------------------|------------------------------|
-| kmom01 + kmom02  | Laboration á 1hp              |
+| kmom01 + kmom02  | Laboration á 2hp              |
 | Kmom03           | Projekt á 2hp              |
 
 
