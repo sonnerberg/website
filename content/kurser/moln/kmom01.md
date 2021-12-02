@@ -20,7 +20,7 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 2-6 studietimmar)*
 
-Kolla igenom [labbmiljön](./labbmiljo/inledning) som behövs för kursen. Se till att du har de verktyg som efterfrågas under "Verktyg (alla kurser)" och "Verktyg (kmom01)".
+Kolla igenom [labbmiljön](./../labbmiljo/inledning) som behövs för kursen. Se till att du har de verktyg som efterfrågas under "Verktyg (alla kurser)" och "Verktyg (kmom01)".
 
 
 
