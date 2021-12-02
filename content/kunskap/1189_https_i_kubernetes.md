@@ -10,7 +10,7 @@ Video för det ovanför!!
 
 https://logz.io/blog/azure-kubernetes-cluster-aks/
 
-  az login
+  az login # behövde köra sudo apt install azure-cli
 
 Testa att vi hittar klustret
   az aks show --name name_of_aks_cluster --resource-group name_of_resource_group
@@ -26,7 +26,10 @@ kolla att det fungerade
   aks-agentpool-86164874-vmss000000   Ready      agent   11m     v1.20.9
   aks-userpool-86164874-vmss000000    Ready      agent   9m46s   v1.20.9
   aks-userpool-86164874-vmss000002    NotReady   agent   10m     v1.20.9
-
+Fick detta en gång
+  kubectl get nodes
+  NAME                                STATUS   ROLES   AGE   VERSION
+  aks-agentpool-18210345-vmss000001   Ready    agent   66m   v1.20.9
 
 installera helm
 
