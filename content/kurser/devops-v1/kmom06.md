@@ -2,6 +2,7 @@
 author:
     - aar
 revision:
+    "2021-12-03": "(C, aar) Bytt Minikube till AKS."
     "2020-12-04": "(B, aar) Bytt AWS till Minikube."
     "2019-10-15": "(A, aar) Första versionen."
 ...
@@ -14,11 +15,6 @@ Er Microblog har fått många nya användare och ni behöver utöka er infrastru
 
 <!-- more -->
 
-[WARNING]
-Kursmoment är uppdateras. Saker kan förändras.
-Fortsätt på egen risk!
-[/WARNING]
-
 [FIGURE src="https://miro.medium.com/max/660/1*Mdj9wylSl0wqJ9sB0ENbRA.png" caption="Hur det är att lära sig kubernetes."]
 
 Vi kommer använda oss utav Kubernetes (K8s) för container orchestration men det är bra att känna till vilka andra verktyg som finns och lite om vad som skiljer dem åt.
@@ -26,11 +22,11 @@ Vi kommer använda oss utav Kubernetes (K8s) för container orchestration men de
 Läs [What Is Container Orchestration?](https://blog.newrelic.com/engineering/container-orchestration-explained/)
 
 [INFO]
-PS! Stänga ner era andra servrar när ni fått kmom05 rättat!
+PS! Om ni har fått kmom05 rättat, radera alla era resurser på Azure förutom er DNS zone.
 
 Innan ni sätter igång med kursmomentet kolla att ert Microblog repo är synkat med originalet, [Syncing a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
 
-PS! Stänga ner era andra servrar när ni fått kmom05 rättat!
+PS! Om ni har fått kmom05 rättat, radera alla era resurser på Azure förutom er DNS zone.
 [/INFO]
 
 
@@ -75,13 +71,14 @@ K8s bygger på virtualisering och containrar, vilket i grunden är stateless. Vi
 
 Läs [Stateful vs Stateless Applications on Kubernetes](https://linuxhint.com/stateful-vs-stateless-kubernetes/) för en bättre genomgång av skillnaden.
 
+<!-- ** guiden nedanför funkar bra på aks!!!!!** Om de har skapat resursgrupp och satt upp ett kluster redan. Funkade med 1 nod.
+
+I så fall gör första delen av den nya artikeln, videon, installera saker och aktivera config
+ -->
+
 Ni ska börja med att öva på att skapa en stateless applikation och som tur är har K8s själva en bra guide för det. För guiden behöver ni ha tillgång till ett k8s kluster. I guiden finns det länkar till sandbox miljöer både i "Katacoda" och "Play with Kubernetes" som ni kan använda. Jag rekommenderar Katacoda då jag inte fick Play with K8s att fungera. Katacoda har dessutom Nano installerat så ni kan skriva konfigurationen till filer. Allt borde fungera utan problem fram tills steget [Viewing the Frontend Service via NodePort](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/#viewing-the-frontend-service-via-nodeport), Katacoda använder inte minikube för att starta sitt kluster så då kan ni inte använda det för att få en extern ip till ert kluster. Istället kan ni i Katacoda klicka på `+` som finns uppe på er terminal och välja `select port to view on host 1`. Då öppnas en ny tab i webbläsaren med koppling till klustret och där skriver ni in NodePort för er frontend service.
 
 Jobba igenom [Deploying PHP Guestbook application with Redis](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/).
-
-Det finns en mängd olika sätta och verktyg för att köra Kubernetes beroende på vilken miljö man vill köra det i.
-
-Läs [Deploy Kubernetes In Five Different Ways](https://platform9.com/blog/5-methods-deploy-kubernetes/) för en kort överblick av några.
 
 
 
@@ -117,77 +114,25 @@ Läs [Modernizing Applications for Kubernetes](https://www.digitalocean.com/comm
 
 
 
+### Kubernetes i Azure {#aks}
+
+Det finns en uppsjö av olika sätt och verktyg för att köra Kubernetes beroende på vilken miljö man vill köra det i. Man kan installera det lokalt, köpa in sig på redan uppsatta k8s miljöer eller tjänster som sätter upp k8s miljön åt oss. Vi ska använda sista alternativet, Azure's AKS tjänst.
+
+Ni ska nu jobba igenom en artikel som går igenom hur vi sätter upp ett kluster i AKS, installerar en demo och fixar HTTPS till den.
+
+Jobba igenom [Sätt upp ett Kubernetes kluster i AKS med HTTPS](kunskap/aks-kluster-https).
+
+
+
 ### Microblog i Kubernetes {#microblog}
 
-Nu ska vi sätta upp Microbloggen i Kubernetes och vi behöver en miljö att köra K8s i. Azure har en managed Kubernetes service kallat [AKS](https://azure.microsoft.com/sv-se/services/kubernetes-service/) men vi har inte tillgång till den. Tanken var att vi skulle installera ett eget kluster på våra VMs på Azure. Tyvärr finns det väldigt lite verktyg som funkar mot VMs i Azure för sätta upp kluster, det verkar som att de som använder Azure och k8s använder AKS. Sen visade det sig att något med hur Azure funkar gör att det inte går att koppla på en load balancer på ett eget kluster i Azure VMs. Vilket gjorde att när vi hade satt upp en applikation i klustret kunde vi inte se den.
-
-Detta gör att vi får nöja oss med att sätta upp ett lokalt kluster på våra egna datorer med verktyget [Minikube](https://minikube.sigs.k8s.io/docs/). Minikube behöver dock en virtualiserings miljö att sätta upp pods i. De stödjer bl.a. VirtualBox, Docker och Hyper-V.
-
-
-
-#### Installera verktyg {#install}
-
-Även om Minikube funkar mot docker så behöver Windows och Mac användare köra mot VirtualBox. Load balancern funkar inte mot Docker. Linux användare kan köra i Docker.
-
-##### Windows {#windows}
-
-Jag hade problem med att köra Minikube via WSL (och har inte testat cygwin). Jag rekommenderar att installera saker i Windows och jobba i PowerShell för Kubernetes sakerna.
-
-Det ska gå att köra Minikube i en VirtualBox VM med Linux på windows 10 men jag har inte testat och jag vet inte om load balancern funkar. Om någon vill testa kan ni läsa [Setup minikube on VirtualBox](https://vovaprivalov.medium.com/setup-minikube-on-virtualbox-7cba363ca3bc).
-
-
-
-##### VirtualBox {#virtualbox}
-
-Om ni inte redan har det installerat kan ni bara [ladda ner och installera det](https://www.virtualbox.org/wiki/Downloads). Ni behöver inte göra några inställningar.
-
-
-
-###### Windows
-
-Om ni har Hyper-V igång behöver ni stänga av det.
-
-Sök på `Turn Windows features on or off` och checka av `Hyper-V`.
-
-
-
-##### Minikube {#minikube}
-
-Minikube är inte mycket svårare att installera.
-
-Jobba igenom [Get started](https://minikube.sigs.k8s.io/docs/start/) för att installera och testa Minikube. I del 3 av guiden visar dem hur ni kan använda `kubectl` eller `minikube kubectl --`. Om ni vill installera kubectl hittar ni det [här](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
-
-Om något går fel när ni kör `minikube start` behöver ni köra `minikube delete` för att rensa filer innan ni kör start igen.
-
-
-
-#### Ingress som load balancer {#ingress}
-
-Ni ska använda [Ingress-Nginx](https://kubernetes.github.io/ingress-nginx) som load balancer i klustret. Som tur är följer den med i Minikube och ni slipper installera den men den behöver fortfarande aktiveras.
-
-Innan ni ska göra det ska ni läsa om skillnaden mellan [NodePort, load balancer och ingress](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0).
-
-När ni har läst klart, ska ni jobba igenom en guiden som visar hur ni aktiverar och använder Nginx Ingress. I och med att vi kör allt lokalt kommer det inte kopplas mot er riktiga domän utan ni kan använda vad ni vill. En bit in i guiden visar dem hur ni lägger till en domän i hosts filen och kopplar till klustret. I windows ligger Hosts filen i `C:\Windows\System32\drivers\etc\hosts`, ni behöver öppna den som admin för att ändra i den.
-
-Innan ni jobbar igenom guiden behöver ni rensa klustret så det är tom sen tidigare guide, `minikube delete`.
-
-Jobba nu igenom [aktiver och lära er Nginx Ingress i minikube](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/). 
-
-När ni är klara med guiden ska ni vara redo för att sätta upp Microblogen. Rensa först klustret och starta ett nytt.
-
-```
-minikube delete
-
-minikube start
-
-minikube addons enable ingress
-```
+Nu ska ni sätta upp Microbloggen i Kubernetes. Skapa ett nytt kluster i AKS med samma inställningar som ni gjorde sist, i videon. Arbetet är uppdelat i tre sektioner nedanför. Spara alla filer i `kubernetes/` mappen.
 
 
 
 #### Mysql i Kubernetes {#mysql}
 
-Jobba igenom [Mysql i Kubernetes](kunskap/mysql_i_kubernetes).
+Jobba igenom [Mysql i Kubernetes](kunskap/mysql_i_kubernetes) för att sätta upp en Mysql server i ert kluster. Den förutsätter att ni har skapat klustret och kopplat kubectl till det.
 
 Ni behöver inte köra någon SQL kod då Migrations i Flask sköter det när vi startar Microblogen.
 
@@ -195,15 +140,11 @@ Ni behöver inte köra någon SQL kod då Migrations i Flask sköter det när vi
 
 #### Microblog deployment {#microblog}
 
-Nästa steg är att skapa en deployment för Microblogen. Ni borde ha lärt er tillräckligt för att skapa en `service`,  `deployment` och `ingress` för Microblogen. Er microblog deployment ska ha 2 replicas, så att det alltid finns två pods rullande som kan hantera trafik.
+Nästa steg är att skapa en deployment för Microblogen. Ni borde ha lärt er tillräckligt för att skapa en `service`,  `deployment` och `ingress` för Microblogen. Er microblog deployment ska ha 2 replicas, så att det alltid finns två pods rullande som kan hantera trafik. Ni ska komma åt er Microblog med ert domännamn och använda HTTPS.
 
-Ni behöver skapa en ny Docker image av er Microblog och publicera till DockerHub. Ni kommer inte använda er av statsd i K8s och då kommer er nuvarande image generera fel för att Gunicorn inte kan koppla upp sig mot statsd.
+Kolla i er `docker-compose.yml` för vilka env variabler ni behöver för att starta containern. Ni kan använda `mysql` istället för en IP till database i env variabeln `DATABASE_URL`. OBS! starta inte containern med ett specifikt network i er deployment, vi låter K8s hantera nätverk.
 
-Skapa en ny image utan statsd konfigurationen i Gunicorn och ge den versionen `no-statsd` på DockerHub.
-
-Kolla i er `docker-compose.yml` för vilka env variabler ni behöver för att starta containern. Ni kan använda `mysql` istället för en IP till database i env variabeln `DATABASE_URL`. OBS! starta inte containern med ett specifikt network i er deployment, vi låter K8s hantera nätverk och Gunicorn behöver inte koppla upp sig till statsd.
-
-För att felsöka kan ni använda följande kommandon och `minikube dashboard`.
+För att felsöka kan ni använda följande kommandon.
 
 ```
 kubectl get po
@@ -228,8 +169,23 @@ Ett tips är att lägga till en `livenessProbe`, på containern i er Deployment.
         ...
 ```
 
-När ni kan se er microblog via webbläsaren med ett domännamn är ni klara. Bra jobbat!
+När ni kan se er microblog via webbläsaren med ett domännamn är ni klara.
 
+
+
+#### Automatisk skalning av er deployment {#autoscaling}
+
+När ni har fått upp microblogen och kopplat på er domän ska ni testa att automatiskt skala er Microblog deployment, med hjälp av [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/).
+
+Läs om fyra olika sätt att skapa k8s, [Azure Auto Scaling- Why and How ?](https://2bcloud.io/azure-auto-scaling-why-and-how/)
+
+Jobba sen med i följande video för att testa på att skala er deployment.
+
+[YOUTUBE src=webuyGs-spQ  caption="Autoscale ett kubernetes kluster med HPA."]
+
+[INFO]
+När ni har gjort det kan ni radera ert AKS kluster i Azure, ni behöver bara lämna in filerna för rättning.
+[/INFO]
 
 
 ### Kubernetes i produktion {#production}
@@ -240,15 +196,11 @@ Vårt kluster är väldigt simpelt, det är mer ett utvecklings kluster än någ
 
 - [7 Key Considerations for Kubernetes in Production](https://thenewstack.io/7-key-considerations-for-kubernetes-in-production/)
 
+- [Deployment Strategies In Kubernetes](https://auth0.com/blog/deployment-strategies-in-kubernetes/)
+
 Kolla på "Running Kubernetes in Production: A Million Ways to Crash Your Cluster" där Henning Jacobs från websidan [Zalando.se](https://www.zalando.se/) pratar om hur de använder Kubernetes och vad de lärt sig av att köra det i produktions miljön.
 
 [YOUTUBE src="pKFQuED_2kg" caption="Running Kubernetes in Production: A Million Ways to Crash Your Cluster"]
-
-
-
-### Lästips {#lastips}
-
-- Läs [Deploy Kubernetes In Five Different Ways](https://platform9.com/blog/5-methods-deploy-kubernetes/).
 
 
 
@@ -267,7 +219,9 @@ Uppgifter  {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Sätt upp Microbloggen i Kubernetes med Minikube lokalt, skapa alla objekten deklarativt och spara filerna i `kubernetes` mappen.
+1. Sätt upp Microbloggen i Kubernetes på AKS, skapa alla objekten deklarativt och spara filerna i `kubernetes` mappen.
+
+1. Radera ert AKS kluster.
 
 1. Försäkra dig om att du har pushat repot med din senaste kod och taggat din inlämning med version v6.0.0.
 

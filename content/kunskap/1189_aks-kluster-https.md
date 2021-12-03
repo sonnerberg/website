@@ -65,7 +65,7 @@ Skapa ett kluster på AKS {#aks}
 
 Jobba igenom videon nedanför och skapa ett kluster.
 
-[YOUTUBE src=1h31fCD7OJo caption="Skapa ett AKS kluster"]
+[YOUTUBE src=kdlHJ4zGuks caption="Skapa ett AKS kluster"]
 
 När ni har skapat ett kluster ska vi göra så att vi kommer åt det med kubectl.
 
@@ -760,6 +760,13 @@ Om det tar tid kan ni kolla om `kubectl describe order` och `kubectl describe ch
 That's it! Nu kan ni gå till er domän i webbläsaren och ni borde mötas av en liknande vy.
 
 [FIGURE src=/image/devops/sucess.png caption="kuard i webbläsaren"]
+
+
+
+Städa upp {#cleanup}
+-------------------------------
+
+Gå in på Azure och radera ert kluster.
 
 
 
