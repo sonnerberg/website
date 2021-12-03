@@ -61,7 +61,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Hangman](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom06/01_hangman.md)". Spara koden i `kmom06/`.
 
-
+1. Gör uppgiften "[Me page 6](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom06/02_mepage6.md)". Spara resultatet i `me/redovisa/`.
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
