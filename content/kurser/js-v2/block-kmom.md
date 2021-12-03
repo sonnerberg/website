@@ -5,5 +5,5 @@
 * [03: DOM och events](kurser/js-v2/kmom03)
 * [04: Webpack](kurser/js-v2/kmom04)
 * [05: Web API](kurser/js-v2/kmom05)
-* [06: Web components](kurser/js-v2/kmom06)
+* [06: Objekt](kurser/js-v2/kmom06)
 * [07/10: Projekt och examination](kurser/js-v2/kmom10)

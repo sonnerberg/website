@@ -125,9 +125,9 @@ Det finns en uppsjö med API:er vi kan använda för att bredda vår programmeri
 
 
 
-### Kmom06: Web components {#kmom06}
+### Kmom06: Objekt {#kmom06}
 
-Vi bygger på vårt förråd med "web components". Det möjliggör att vi kan skapa återanvändbara element som är helt fristående från resten av koden.
+Vi skapar ett spel, hangman, utifrån objekt och moduler, och ser hur vi kan skapa objekt på olika sätt.
 <!-- När vår kodbas växer blir det mer och mer viktigt att ha en bra struktur på den. Annars blir det svårt att vidareutveckla koden och underhålla den. När man dessutom skall använda olika moduler av kod från olika tillverkare så är det viktigt att de olika kod-delarna inte krockar. Att använda ett konstruktion som heter *module* hittar vi ett sätt att bättre strukturera vår kod. -->
 
 [Instruktion till kursmoment 06](./kmom06).

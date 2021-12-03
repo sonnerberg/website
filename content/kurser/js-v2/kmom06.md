@@ -1,24 +1,13 @@
 ---
-author: mos
+author: lew
 revision:
-    "2020-10-27": (E, lew) Genomgång inför ht20.
-    "2017-10-10": (D, mos) Genomgång inför ht17.
-    "2016-03-15": (C, mos) Lade till videoserie med "Lär dig JavaScript".
-    "2015-01-19": (B, mos) Bort ruta om kursutveckling och bort länk till youtube-serie.
-    "2014-10-30": (A, mos) Första utgåvan för javascript1 kursen.
+    "2021-12-03": (A, lew) Ny version inför ht21.
 ...
-Kmom06: Modul och closure
+Kmom06: Objekt
 ==================================
 
-När kodbasen växer blir det mer och mer viktigt att ha en bra struktur på den, annars blir det svårare och svårare att vidareutveckla och underhålla koden. När man dessutom skall använda olika moduler av kod från olika tillverkare så är det viktigt att de olika delarna av koden inte krockar. Genom att använda en konstruktion som kallas *module pattern* hittar vi ett sätt att bättre strukturera vår kod.
+Vi har lärt oss att använda moduler för att strukturera vår kod och dela upp den i mindre delar. Vi ska i det här momentet fortsätta med en modulstruktur med hjälp av objekt. Till vår hjälp har vi en grund i form av ett halvfärdigt "hänga gubben" spel.
 
-[WARNING]
-
-**Kursutveckling pågår**
-
-[/WARNING]
-
-<!--stop-->
 
 <!--more-->
 
@@ -32,49 +21,23 @@ Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4-6 studietimmar)*
-
-
-###Kurslitteratur  {#kurslitteratur}
-
+<!--
 Läs följande.
 
 1. Läs i boken [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/) för att ta reda på vad ett module pattern är.
     * [Introduction](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#introduction)
     * [What is a Pattern?](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#whatisapattern)
     * [The Module Pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
+ -->
 
 
-
-###MDN {#mdn}
+### MDN {#mdn}
 
 Läs följande:
 
-1. Läs i [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) för att studera begreppet closure.
+1. Läs i [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) för att påminna dig om begreppet closure.
     * [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
 
-
-
-<!--
-###Artiklar {#artiklar}
--->
-
-
-
-###Video  {#video}
-
-Titta på följande:
-
-1. Videoserien [Lär dig JavaScript](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_YXUQlr5aAzJ406vSsmeMT) är tätt kopplat till kursmaterialet. Kika igenom serien under kursens gång.
-
-1. Se Douglas Crockford på konferensen HTML5DevConf 2011 när han pratar om ["JavaScript Programming Style and Your Brain"](https://www.youtube.com/watch?v=cIOIyfRoGcM). Video riktar sig till mer erfarna programmerare men även nybörjare har nytta av den.
-
-
-
-<!--
-###Lästips {#lastips}
-
-Det finns inga lästips.
--->
 
 
 
@@ -84,34 +47,19 @@ Det finns inga lästips.
 *(ca: 12-16 studietimmar)*
 
 
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Genomför övningarna för att träna inför uppgifterna.
 
-<!-- 1. Jobba igenom övningen om "[Funktioner, scope, closures och moduler med JavaScript](kunskap/funktioner-scope-closures-och-moduler-med-javascript)" -->
-<!-- 1. Jobba i guiden om "[Funktioner, scope, closures och callbacks](guide/javascript1/funktioner-scope-closure-och-callbacks)". Det är ingen kod du måste skriva, men du borde provköra varje exempel i din egen miljö. Det hjälper dig att öva in begreppen och du kan själv modifiera testprogrammen för att test hur de fungerar. -->
-1. Gå även igenom moduler i [guiden](guide/javascript1/) som följer kursens moment. För kursmoment 6 gäller delarna:  
-
-* [Funktioner, scope, closures och callbacks](guide/javascript1/funktioner-scope-closure-och-callbacks)  
-* [Module pattern](guide/javascript1/section_break_9)
-
-Det är ingen kod du måste skriva, men du borde provköra varje exempel i din egen miljö. Det hjälper dig att öva in begreppen och du kan själv modifiera testprogrammen för att test hur de fungerar.
+1. Gå igenom artiklarna i [kursrepot](https://github.com/dbwebb-se/js-v2/tree/master/articles/kmom06) för kursmoment 6.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Hänga gubben som modul i JavaScript](uppgift/hanga-gubben-som-modul-i-javascript)". Spara koden i `me/kmom06/hangman`.
-
-
-
-<!--
-###Extra {#extra}
-
-Det finns inga extra uppgifter.
--->
+1. Gör uppgiften "[Hangman](https://github.com/dbwebb-se/js-v2/blob/master/assignments/kmom06/01_hangman.md)". Spara koden i `kmom06/`.
 
 
 
@@ -124,9 +72,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Var det svårt att greppa hur function scope och closure fungerar eller känns det naturligt?
+* Har du koll på hur function scope och closure fungerar eller känns det naturligt?
 * Har du några erfarenheter av designmönster sedan tidigare?
-* Kan du jämföra "module pattern" med någon annan liknande datastruktur?
-* Känns "module pattern" som en bra kodstruktur?
-* Var boken "Learning JavaScript Design Patterns" lättläst eller utmanande?
+* Har du koll på vad termerna `this` och `instans` är när vi pratar om objekt?
 * Vad är din TIL för det här kursmomentet?
