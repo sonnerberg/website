@@ -97,3 +97,34 @@ Tjänsten är mycket bra för att få en förståelse för på vilket sätt kost
 Microsoft, Amazon och Google har alla erbjudanden om kostnadsfria testkonton som du kan använda.
 
 Utöver detta erbjuder Microsoft genom Ignite möjlighet för dig att skapa ett studentkonto vilket ger möjligheter att testa Azure i egen regi.
+
+
+## Kostnader moln vs egen drift {#kostnader}
+
+Cloud computing har en konsumtionsbaserad betalningsmodell vilket innebär att man betalar för det man använder. Beroende på hur mycket resurser som konsumeras så blir kostnaden högre, och när användningen minskar så gör också kostnaden det.
+
+Kostnader benämns ofta som Capital Expenditure (CapEx) dvs investering i anläggningstillgångar och Operational Expenditures (OpEx) dvs löpande utgifter.
+
+En transition till molnet i jämförelse med egen drift innebär eventuellt att investering i anläggningstillgångar minskar och löpande utgifter ökar.
+
+Om man googlar på **Azure/Google/AWS/{din cloud provider här} pricing calculator** så får man oftast tydliga och exakta kostnadsuppgifter vad tjänster kostar per gigabyte, timme, storlekar på SKU's, antal transaktioner mm.
+
+Ofta innebär en lokal infrastruktur som erbjuder samma nivå av tjänst en avsevärd investering.
+
+Det finns även många exempel på tjänster som har en funktionalitet där en lokal drift knappt ens är möjlig, eller inte går att motivera kostnadsmässigt.
+
+Läs mer om CapEx/OpEx samt fördelar med molntjänster [här](https://docs.microsoft.com/en-us/learn/modules/fundamental-azure-concepts/benefits-of-cloud-computing).
+
+Cloud providers har ofta en kalkylator (t.ex [Microsofts](https://azure.microsoft.com/sv-se/pricing/tco/calculator/)) för att hjälpa till att beräkna dessa kostnader, men de är inte helt enkla att använda såvida man inte redan har ett datacenter och en ganska klar bild av vilka kostnader och behov som man har. Men det kan tjäna som hjälp för att få en insikt i vilka kostnader som kan finnas.
+
+Men så vad landar detta? Är molnet billigare och bättre än egen drift? Svaret är inte lätt att ge för det beror på.
+
+För BTH's del så har satsningen på molnet varit mycket lyckat, men kostnader har inte varit den enda framgångsfaktorn.
+
+Vi kan som litet lärosäte erbjuda kraftfulla tjänster som hade varit mycket kostsamma om de hade krävt en investering i ett lokalt datacenter.
+
+Om det har blivit billigare är rätt svårt att svara på eftersom möjligheterna har ökat och därför användning av tjänster likaså.
+
+Dessutom innebär en lokal drift många "gömda" kostnader som inte är helt lätta att fördela ut på driftskostnaden av en app.
+
+![Cost of ownership](image/moln/cost-of-ownership.jpg)

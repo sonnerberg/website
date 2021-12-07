@@ -3,6 +3,6 @@
 Python
 ==================================
 
-Nu är det dags att installera Python i din terminal. Det finns olika sätt att installera Python på din datorn men jag har valt att installera det i terminalen. Det blir alltså vår referensmiljö.
+Utveckling kommer att göras i Python. Notera att Visual Studio och Azure ännu inte stöder den senaste versionen av Python, såvida man inte konfigurerar upp extensions vilket är utanför kursens scope.
 
-För att installera och komma igång med ditt första Python-program så läser du artikeln "[Installera Python i terminalen](kunskap/installera-python-i-terminalen)".
+Börja därför med att ladda ned och installera [Python 3.8.1](https://www.python.org/downloads/release/python-381/).

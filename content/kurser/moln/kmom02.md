@@ -35,17 +35,11 @@ I detta kursmomentet kommer vi använda micro-ramverket `flask` och python modul
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-<!--
-###Övningar {#ovningar}
+### Övningar {#ovningar}
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. **Gammal måste uppdateras** Läs igenom artiklen "[Programmering med grunderna i JavaScript](kunskap/programmering-med-grunderna-i-javascript)". Om du gör exempelprogrammen så kan du spara dem i kursrepot under `me/kmom02/core`.
--->
-
-<!--
-1. **EJ KLAR** Förbättra din testmiljö för WebGL genom att uppgrader din sandbox till sandbox version 2 med stöd för "[WebGL med animering i fullskärmsläge](kunskap1/webgl-med-animering-i-fullskarmslage)".
--->
+1. Jobba igenom övningen [En Flask App i molnet](kunskap/en-flask-app-i-molnet) för att skapa grunden till kursmomentets uppgifter.
 
 
 
@@ -53,11 +47,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen "[JavaScript med funktioner](uppgift/javascript-med-funktioner)". Spara resultatet i `me/kmom02/lab3`.
-
-1. Gör uppgiften "[JavaScript och arrayer](uppgift/javascript-och-arrayer)". Spara resultatet i `me/kmom02/lab4`.
-
-1. Gör uppgiften "[Rita trianglar med WebGL och animera dem](uppgift/rita-trianglar-med-webgl-och-animera-dem)". Ditt resultat sparar du delvis i `me/kmom02/sandbox3` och delvis i `me/kmom02/tri`.
+1.
 
 
 

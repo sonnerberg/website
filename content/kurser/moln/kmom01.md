@@ -22,6 +22,15 @@ Kolla igenom [labbmiljön](./../labbmiljo/inledning) som behövs för kursen. Se
 
 
 
+Kurslitteratur {#litteratur}
+----------------------------
+
+Kurslitteraturen i kursen är boken "What is the cloud?" av Bill Laberis. Boken är en kort introduktion till vad Cloud är och kan med fördel läsas i början av kursen.
+
+Du kommer åt den boken via biblioteket på BTH. Gå till [https://bibliotek.bth.se/databases?q=o%27reilly](https://bibliotek.bth.se/databases?q=o%27reilly) och välj O'reilly. Du ska nu kunna söka på "What is the cloud?" i Sökrutan och första träffen är kurslitteraturen.
+
+
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
