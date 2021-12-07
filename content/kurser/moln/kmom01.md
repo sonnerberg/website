@@ -7,18 +7,16 @@ revision:
 Kmom01: Virtualisering med VirtualBox
 ==================================
 
-Vi ska i detta kursmoment titta på hur vi kan installera annat operativsystem på din dator och använda det som en server. Detta tillvägagångsättet heter virtualisering och är en viktig del av hur molnet är uppbyggt. Virtualisering gör det möjligt att ha många "små datorer" på en stor och kraftfull server.
+Vi ska i detta kursmoment titta på hur vi kan installera ett annat operativsystem på din dator och använda det som en server. Detta tillvägagångsättet heter virtualisering och är en viktig del av hur molnet är uppbyggt. Virtualisering gör det möjligt att ha många "små datorer" på en stor och kraftfull server.
+
+
 
 <!--more-->
-
-<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
 Labbmiljön  {#labbmiljo}
 ---------------------------------
-
-*(ca: 2-6 studietimmar)*
 
 Kolla igenom [labbmiljön](./../labbmiljo/inledning) som behövs för kursen. Se till att du har de verktyg som efterfrågas under "Verktyg (alla kurser)" och "Verktyg (kmom01)".
 
@@ -26,10 +24,6 @@ Kolla igenom [labbmiljön](./../labbmiljo/inledning) som behövs för kursen. Se
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
-
-*(ca: 10-12 studietimmar)*
-
-
 
 ### Övningar {#ovningar}
 
@@ -57,8 +51,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
-
-*(ca: 1-2 studietimmar)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
