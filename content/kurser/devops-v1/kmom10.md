@@ -25,6 +25,7 @@ Fortsätt på egen risk!
 För att uppnå godkänt behöver du demonstrerar följande:
 
 - kunna redogöra för vad devops är, både det praktiska och filosofiska/kulturella.
+    - bl.a. blamelessness, kontinuerlig lärande och postmortems.
 
 - Kunna förhålla sig till devops begrepp och relatera till hur de används och kan kopplas till verktyg.
 
