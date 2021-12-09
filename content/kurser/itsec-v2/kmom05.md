@@ -47,6 +47,16 @@ Det finns flera vägar att gå för att sätta upp testning med JavaScript och E
 * [SuperTest](https://www.npmjs.com/package/supertest)
 
 
+Laboration  {#laboration}
+---------------------------------
+
+*(ca: 2 studietimmar)*
+
+Du ska medverka på laborationen:
+
+* 10.00 (2021-12-10) H430 Säkerhetstestning, se uppgiften nedan
+
+
 Uppgifter  {#uppgifter}
 -------------------------------------------
 
@@ -62,6 +72,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Svara på följande frågor i textfältet på Canvas.
 
+* Vilka tekniker använde du för testning?
+* Vilka testfall gjorde du? Och varför?
 * Hur många av era sårbarheter åtgärdade ni?
 * Var det svårt att lösa någon av sårbarheterna? Kanske valde ni att skippa någon pga tidsbrist?
 * Stämde de estimeringar ni gjorde överens med den slutgiltiga tiden?
