@@ -1,11 +1,7 @@
 ---
-author: mos
+author: lew
 revision:
-    "2017-11-17": (E, mos) Slumpa fizzbuzz start och fler tipsfrågor.
-    "2015-08-27": (D, mos) Uppgraderad till dbwebb-cli version 2.
-    "2015-01-19": (C, mos) Bort ruta om kursutveckling.
-    "2014-11-24": (B, mos) Berättar var koden skall sparas och hur man validerar, samt hur man räknar max intelligens.
-    "2014-11-19": (A, mos) Första versionen.
+    "2021-12-10": (A, lew) Uppdaterad inför ht21.
 ...
 Kmom10: Projekt och examination
 ==================================
@@ -17,14 +13,6 @@ Upplägget är enligt följande:
 * Projektet och redovisning (20-80h)
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
-
-[WARNING]
-
-**Kursutveckling pågår**
-
-[/WARNING]
-
-<!--stop-->
 
 
 
