@@ -5,7 +5,7 @@ category:
 revision:
     "2021-12-14": (A, efo) Första utgåvan i samband med kursen moln.
 ...
-Installera Debian och Apache i VirtualBox
+Ett Python och Flask API driftsatt i molnet
 ==================================
 
 Installera Debian som en server och kom igång och logga in på systemet med SSH.
@@ -17,7 +17,7 @@ Installera Debian som en server och kom igång och logga in på systemet med SSH
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat en labbmiljö motsvarande "[Installera labbmiljön](moln/labbmiljo)". Du har jobbat igenom guiden "[Installera webbplatser med Apache Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)" och guiden "[Kom igång med SSH-nycklar](guide/kom-igang-med-ssh/kom-igang-med-ssh-nycklar)".
+Du har installerat en labbmiljö motsvarande "[Installera labbmiljön](vlinux/labbmiljo)". Du har jobbat igenom guiden "[Installera webbplatser med Apache Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)" och guiden "[Kom igång med SSH-nycklar](guide/kom-igang-med-ssh/kom-igang-med-ssh-nycklar)".
 
 
 
@@ -45,13 +45,9 @@ Krav {#krav}
 
 1. Öppna en terminal på din arbetsstation. Använd SSH för att logga in på servern. När du är inloggad så kör du kommandot `cowsay` med en trevlig hälsningsfras. Ta en skärmdump av terminalfönstret som visar resultatet. Spara bilden i formatet PNG och lägg filen i samma katalog som loggfilen, döp den till `ssh.png` (använd små bokstäver i filnamnet, inte STORA).
 
-1. Spara innehållet av HTML-filen [index.html](https://raw.githubusercontent.com/emilfolino/moln/main/index.html) som filen `index.html` i din katalog.
+1. Skapa en Apache Virtual Host `me.linux.se`. Spara en kopia av config-filen `me.linux.se.conf` i din katalog. Kontrollera att du kommer åt webbplatsen med din webbläsare.
 
-1. Skapa en Apache Virtual Host `me.linux.se`. Spara en kopia av config-filen `me.linux.se.conf` i din katalog.
-
-1. Använd kommandot `rsync` för att överföra filen till rätt plats på din server i VirtualBox. Kontrollera att du kommer åt webbplatsen med din webbläsare. Notera ner `rsync`-kommandot i loggen.
-
-1. Öppna en terminal i VirtualBox, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen.
+1. Öppna en terminal i din VM, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen.
 
 1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`. Spara bilden i formatet .png och använd små bokstäver i filnamnet.
 

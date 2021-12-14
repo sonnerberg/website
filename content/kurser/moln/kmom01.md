@@ -7,7 +7,7 @@ revision:
 Kmom01: Virtualisering med VirtualBox
 ==================================
 
-Vi ska i detta kursmoment titta på hur vi kan installera ett annat operativsystem på din dator och använda det som en server. Detta tillvägagångsättet heter virtualisering och är en viktig del av hur molnet är uppbyggt. Virtualisering gör det möjligt att ha många "små datorer" på en stor och kraftfull server.
+Vi ska i detta kursmoment titta på hur vi kan installera ett annat operativsystem på din dator och använda det som en server. Detta tillvägagångssätt heter virtualisering och är en viktig del av hur molnet är uppbyggt. Virtualisering gör det möjligt att ha många "små datorer" på en stor och kraftfull server.
 
 
 
@@ -52,7 +52,7 @@ Du kommer åt den boken via biblioteket på BTH. Gå till [https://bibliotek.bth
 
 ### Uppgifter {#uppgifter}
 
-Dessa uppgifter skall utföras och redovisas.
+Dessa uppgifter skall utföras och lämnas in. Uppgifterna får utföras tillsammans i par. Skriv en kommentar i Canvas med namn på eventuell samarbetsstudent.
 
 1. Gör uppgiften "[Installera Debian och Apache i VirtualBox](uppgift/installera-debian-som-server-och-apache)".
 
@@ -63,4 +63,13 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i redovisningstexten.
+**Redovisningen görs individuellt.**
+
+Se till att följande frågor besvaras i redovisningstexten:
+
+1. Vad är fördelen med virtualisering till exempel VirtualBox?
+1. Vi använder Apache som applikationsserver på vår "server". Vad är ditt första intryck av klient/server-modellen vi har använt i detta kursmoment?
+
+TIL är en akronym för “Today I Learned” vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
+
+3. Vilken är din TIL för detta kmom?

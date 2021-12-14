@@ -6,7 +6,9 @@ revision:
 Resultat och redovisning
 ==================================
 
-Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
+Som ett sista steg i varje kursmoment skall du redovisa. Gör så här. Redovisningen görs individuellt även om du har jobbat tillsammans med en annan student
+
+
 
 <!--more-->
 
