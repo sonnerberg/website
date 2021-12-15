@@ -27,4 +27,21 @@ Flask {#flask}
 
 När vi anropar en server från en webbläsare till exempel om vi skriver `https://dbwebb.se` görs ett GET-anrop. Så när vi skriver ett API definierar vi de olika endpoints för olika url'er där vi vill att vår server/API ska svara med olika data i JSON-formatet.
 
-Låt oss titta på hur det kan se ut. Skapa en katalog på ett lämpligt ställe på din dator och skapa filen `app.py`. Ett fullständigt exempel finns i
+Låt oss titta på hur det kan se ut. I din katalog som du skapade och använde i kmom01 skapa en ny underkatalog `lager_api`. Vi kommer återanvända denna underkatalogen i inlämningsuppgiften senare i kmomet.
+
+Om du vill titta på ett fullständigt exempel finns ett i [moln/flask_starter](https://github.com/dbwebb-se/moln/tree/main/flask_starter).
+
+
+
+Virtual Environment {#venv}
+--------------------------------------
+
+För att vi ska kunna installera externa paket som `Flask` och `requests` behöver vi berätta för Python att vi vill ha en virtual environment där vi kan spara dessa moduler.
+
+Följa instruktionerna för ditt operativsystem i Flask's guide för [Virtual environments](https://flask.palletsprojects.com/en/2.0.x/installation/#virtual-environments). Du behöver inte skapa en ny katalog om du har gjort det ovan. Om du använder WSL terminalen eller Cygwin terminalen kan du använda instruktionerna för macOS/Linux. Vi ser även till att aktivera vår virtual environment.
+
+Som ett sista steg i installationen installerar vi Flask med hjälp av Pythons pakethanterare `pip`.
+
+```python
+pip install Flask
+```
