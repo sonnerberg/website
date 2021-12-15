@@ -60,9 +60,15 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 1. Ta reda på vilken cloud service provider som tre av de tjänster du konsumerar använder. Oscar beskriver sina tre tjänster i [Introduktion till molnet](kunskap/introduktion-till-molnet).
+
 1. Vilka för- och nackdelar finns med att använda ett JSON-API för att överföra data jämfört med till exempel en webbplats eller en databas?
+
 1. Vad är skillnaden på IAAS och PAAS tjänster? Ge exempel på scenarion då det är fördelaktigt att välja den ena över den andre.
+
 1. Vad är fördelar med Serverless arkitekturen?
+
 1. Ditt API gör succé! Särskilt vid årsskiftet märks en avsevärt högre mängd anrop. På vilka sätt skulle man kunna hantera dessa trafik- och belastningsförändringar?
+
 1. Ditt API har blivit en grundläggande del i många bolags basbehov och kravet på hög tillgänglighet ökar. På vilka sätt skulle man kunna förstärka den tillgänglighet som din tjänst har idag?
+
 1. Vilken är din TIL för detta kmom?
