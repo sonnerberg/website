@@ -34,6 +34,12 @@ Du kommer åt den boken via biblioteket på BTH. Gå till [https://bibliotek.bth
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
+### Förberedelser {#forberedelser}
+
+I kursen kommer vi behöva en katalog för att spara filer och kod. Jag rekommenderar att ni skapar den i er hemmakatalog och döper den till `moln`. Jag kommer i kursmaterialet referera tillbaka till denna katalog som "katalogen".
+
+
+
 ### Övningar {#ovningar}
 
 Övningar förbereder inför de uppgifter som ska lämnas in.
@@ -42,7 +48,7 @@ Du kommer åt den boken via biblioteket på BTH. Gå till [https://bibliotek.bth
 
 1. Installera [Guest Additions](guide/virtualbox/guest-additions) om du inte gjorde det under labbmiljön. Det kommer underlätta arbetet framöver.
 
-1. I kursen kommer vi använda en guide "[unix-tools](guide/unix-tools)". Gör alla delar av guiden förutom "Kom igång med tmux".
+1. I kursen kommer vi använda en guide "[unix-tools](guide/unix-tools)". Gör alla delar av guiden **förutom** "Kom igång med tmux".
 
 1. Jobba igenom guiden "[Installera webbplatser med Apache Virtual Hosts](kunskap/installera-webbplatser-med-apache-name-based-virtual-hosts)".
 

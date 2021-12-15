@@ -24,9 +24,9 @@ Du har installerat en labbmiljö motsvarande "[Installera labbmiljön](moln/labb
 Introduktion {#intro}
 -----------------------
 
-Se till att spara alla filer i en katalog på datorn. De används för att redovisa uppgiften.
+Se till att spara alla filer i katalogen på din dator. De används för att redovisa uppgiften.
 
-Skapa en fil, `log.txt`, och lägg den i katalogen ovan. I kraven nedan kallas denna fil för *loggen*. I filen skall du föra noteringar för din egen del. Det kan vara bra som minnesanteckningar, så går det enklare nästa gång du installerar ett liknande system.
+Skapa en fil, `log.txt`, och lägg den i katalogen. I kraven nedan kallas denna fil för *loggen*. I filen skall du föra noteringar för din egen del. Det kan vara bra som minnesanteckningar, så går det enklare nästa gång du installerar ett liknande system.
 
 En bra sak är att logga varje kommando du kör, så får du en logg som du kan titta tillbaka på. Det är lätt att glömma alla nya kommandon, så en logg för minnet blir bra.
 
@@ -45,7 +45,7 @@ Krav {#krav}
 
 1. Öppna en terminal på din arbetsstation. Använd SSH för att logga in på servern. När du är inloggad så kör du kommandot `cowsay` med en trevlig hälsningsfras. Ta en skärmdump av terminalfönstret som visar resultatet. Spara bilden i formatet PNG och lägg filen i samma katalog som loggfilen, döp den till `ssh.png` (använd små bokstäver i filnamnet, inte STORA).
 
-1. Spara innehållet av HTML-filen [index.html](https://raw.githubusercontent.com/emilfolino/moln/main/index.html) som filen `index.html` i din katalog.
+1. Spara innehållet av HTML-filen [index.html](https://raw.githubusercontent.com/dbwebb-se/moln/main/index.html) som filen `index.html` i din katalog.
 
 1. Skapa en Apache Virtual Host `me.linux.se`. Spara en kopia av config-filen `me.linux.se.conf` i din katalog.
 

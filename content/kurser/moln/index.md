@@ -104,6 +104,13 @@ Du kommer åt den boken via biblioteket på BTH. Gå till [https://bibliotek.bth
 
 
 
+Exempelkod {#examplecode}
+----------------------------
+
+På GitHub finns det ett repo med exempelkod som kan användas som inspiration. Repot [dbwebb-se/moln](https://github.com/dbwebb-se/moln) kommer uppdateras under kursens gång.
+
+
+
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
