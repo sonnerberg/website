@@ -111,10 +111,10 @@ På GitHub finns det ett repo med exempelkod som kan användas som inspiration. 
 
 
 
-Lektionsplan och rekommenderad studieplan {#schema}
+Rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Det finns en [rekommenderad studieplan](moln/studieplan) som är kopplad till varje kurstillfälle. Och en [lektionsplan](moln/lektionsplan) för de tillfällen där vi träffas.
+Det finns en [rekommenderad studieplan](moln/studieplan) som är kopplad till varje kurstillfälle.
 
 
 
