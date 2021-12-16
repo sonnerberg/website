@@ -45,11 +45,11 @@ Krav {#krav}
 ]}
 ```
 
-5. Ditt API ska innehålla två endpoints /unique och /search/<query>
+5. Ditt API ska innehålla två endpoints `/unique` och `/search/<query>`
 
-6. /unique ska skriva ut alla unika produkter som ett JSON svar enligt ovanstående format.
+6. `/unique` ska skriva ut alla unika produkter som ett JSON svar enligt ovanstående format.
 
-7. /search/<query> ska skriva ut alla unika produkter som matcher <query> strängen, som ett JSON svar enligt ovanstående format.
+7. `/search/<query>` ska skriva ut alla unika produkter som matcher `<query>` strängen, som ett JSON svar enligt ovanstående format.
 
 8. Driftsätt ditt API i Azures moln enligt instruktionerna i [En Flask App i molnet](kunskap/en-flask-app-i-molnet#cloud). Lämna in den driftsatta url (*.azurewebsites.net) som en del av din inlämning i Canvas.
 
