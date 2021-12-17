@@ -6,8 +6,8 @@ revision:
 Kmom03: Projekt och examination
 ==================================
 
-[WARNING]
-Kursmomentet håller på att uppdateras.
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
+
+Vi ska i projektet fortsätta utveckla vår befintliga applikation, men vi ska dessutom kolla på hur vi kan använda oss av Azure molnets AI och ML resurser.
+
+<!--more-->
