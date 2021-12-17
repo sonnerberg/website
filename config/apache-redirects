@@ -281,15 +281,17 @@ Redirect /forum/utbildning/ramverk2 /forum/viewforum.php?f=60
 
 
 # webgl
-Redirect /webgl/repo    /repo/webgl
-Redirect /webgl         /kurser/webgl
 Redirect /webgl/lektionsplan    https://goo.gl/3F4Kju
 Redirect /webgl/studieplan      https://goo.gl/Sp5Fhz
+Redirect /webgl/repo    /repo/webgl
+Redirect /webgl         /kurser/webgl
+
 
 
 # moln
-Redirect /moln         /kurser/moln
 Redirect /moln/studieplan      https://docs.google.com/spreadsheets/d/1LxpTEczgMIM19HSohlX-18saXdBxINKbjMT7G7TmF88/edit?usp=sharing
+Redirect /moln        /kurser/moln
+
 
 
 # matmod
