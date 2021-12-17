@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-12-17": (C, AAR) Förtydligade att studenter ska skriva koden själva men kan samarbeta för att komma fram till en lösning.
     "2020-11-27": (B, AAR) Uppdaterade förklaring av vad som utgör plagiering/kopiering av kod.
     "2016-11-09": (A, mos) Kopia av information från disciplinnämnden.
 ...
@@ -9,7 +10,7 @@ Fusk och Disciplinnämnden
 
 Plagiering, fusk, att medvetet försöka vilseleda --- är olika benämningar på otillåtna medel när man studerar på dessa kurser.
 
-Vi har generellt en väldigt öppen syn på hur vi tittar på andras kodlösningar, hur vi återanvänder dem och exempelkod samt hur vi hjälper varandra och samarbetar. Vi vill att ni ska samarbeta och diskutera med era studiekamrater, studenten lär sig mycket av och det är så studenten kommer arbeta i arbetslivet. Men det finns en gräns när studenten medvetet försöker vilseleda genom otillåten kopiering av kod eller texter. Det räcker inte med att bara byta ut variabelnamn i koden för att göra den till sin egen eller visa att man förstår den. Programmering handlar om logik och struktur, det måste finnas individualitet i studentens kod som visar att studenten har skrivit den och förstår den. Att bara kopiera kod från en kompis eller internet och sen byta ut variabelnamn visar inte på förståelse då variabelnamn inte har med förståelse av ett problem eller lösning att göra. Studenten kan diskutera fram en lösning med en studiekamrat men koden för den lösningen ska skrivas individuellt. Samma lösning kan skrivas på flera olika sätt inom programmering.
+Vi har generellt en väldigt öppen syn på hur vi tittar på andras kodlösningar samt hur vi hjälper varandra och samarbetar. Vi vill att ni ska samarbeta och diskutera med era studiekamrater, studenten lär sig mycket av det och det är så studenten kommer arbeta i arbetslivet. Men det finns en gräns när studenten medvetet försöker vilseleda genom otillåten kopiering av kod eller texter. Alternativt att studenten inte gör något av jobbet själv utan bara kopierar en studiekamrat. Det räcker inte med att bara byta ut variabelnamn i koden för att göra den till sin egen eller visa att man förstår den. Programmering handlar om logik och struktur, det måste finnas individualitet i studentens kod som visar att studenten har skrivit den och förstår den. Att bara kopiera kod från en studiekamrat eller internet och sen byta ut variabelnamn visar inte på förståelse då variabelnamn eller kommentarer inte har med förståelse av ett problem eller lösning att göra. Studenten kan diskutera fram en lösning med en studiekamrat men koden för den lösningen ska skrivas individuellt. Samma lösning kan skrivas på flera olika sätt inom programmering. Om det inte står att en uppgift ska göras tillsammans ska varje student skriva sin kod/text själv.
 
 
 
