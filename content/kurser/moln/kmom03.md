@@ -27,14 +27,17 @@ Läs igenom och reflektera över fördelar med [virtualisering och containers](k
 
 
 
-
-
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
 ### Övningar {#ovningar}
 
 Gör följande övningar för att träna inför uppgifterna.
+
+1. Jobba igenom övningen "[En Flask App i molnet](kunskap/flask_och_templates_med_jinja)".
+
+1.  Jobba igenom övningen "[Cognitive Services i Azure](kunskap/cognitive-services-i-azure)".
+
 
 
 
@@ -43,6 +46,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och lämnas in. Uppgifterna får utföras tillsammans i par. Skriv en kommentar i Canvas med namn på eventuell samarbetsstudent.
 
+1. Gör uppgiften "[AI/ML i molnet](uppgift/ai-ml-i-molnet)".
 
 
 
