@@ -7,6 +7,7 @@ category:
     - debian/linux
     - docker
 revision:
+    "2021-12-20": "(C, mos) Lade till stycket 'Det snabba sättet'."
     "2019-01-10": "(B, mos) Lade till hänvisning till komplett exempel."
     "2019-01-09": "(A, mos) Första utgåvan."
 ...
@@ -26,12 +27,48 @@ Vi använder terminalklienten `mysql`, inuti en separat docker-kontainer, för a
 Förberedelse {#prep}
 --------------------------------------
 
-Du har Debian/Linux installerat. Eventuellt kan/bör detta fungera även på macOS och Windows 10, men jag har inte testat den persistenta lagringen.
+Du har Debian/Linux installerat. Jag har inte testkört men detta bör även fungera på Mac/Windows om du har docker installerat.
 
 Du är bekant med terminalen.
 
 Du har installerat docker och docker-compose och du är bekant med verktygen.
 
+
+
+Det snabba sättet {#snabb}
+--------------------------------------
+
+Här följer en snabb guide för att köra MySQL och MariaDB via docker-compose.
+
+I ditt kursrepo finns en fil `docker-compose.yaml` som har stöd för att starta en kontainer med MySQL och en kontainer med MariaDB, du kan även starta dessa kontainrar samtidigt.
+
+```text
+docker-compose up -d mariadb mysql
+```
+
+Du kan nu koppla upp dig till dessa, till exempel om du har en klient installerad lokalt.
+
+```text
+# Connect to MySQL on port 13306
+mysql -P 13306
+
+# Connect to MariaDB on port 13307
+mysql -P 13307
+```
+
+Du kan också använda den klient som finns i docker imagen, så här.
+
+```text
+# Connect to MySQL
+docker-compose run mysql mysql
+
+# Connect to MariaDB
+docker-compose run mariadb mariadb
+```
+
+Detta var grunden, nu har du en databas som du kan använda.
+
+Vill du lära dig mer detaljer om hur det fungerar och lära dig kontrollera detaljer, så kan du läsa vidare.
 
 
 
