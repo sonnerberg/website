@@ -21,9 +21,9 @@ revision:
 Kmom01: Databas
 ====================================
 
-Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi kommer jobba med MySQL/MariaDB som är en relationsdatabas. Som klienter använder vi en terminalbaserad klient och en fönsterbaserad grafisk klient. Klienterna har båda sin plats i vår verktygslåda och de är bra att använda vid olika typer av tillfällen.
+Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi skall jobba med databasen MySQL/MariaDB som är en relationsdatabas. Som klienter använder vi en terminalbaserad klient och en fönsterbaserad grafisk klient. Klienterna har båda sin plats i vår verktygslåda och de är bra att använda vid olika typer av tillfällen.
 
-I en relationsdatabas pratar vi SQL med databasen. Vi skriver SQL för att skapa tabeller och för att lägga till, uppdatera, visa och radera data från databasen. När databasen är på plats så kikar vi även lite på olika grundkonstruktioner för SQL.
+I en relationsdatabas pratar vi SQL med databasen. Vi skriver SQL för att skapa tabeller och för att lägga till, uppdatera, visa och radera data från databasen. När databasen är på plats så kikar vi på en del grundkonstruktioner för SQL.
 
 <!--more-->
 
