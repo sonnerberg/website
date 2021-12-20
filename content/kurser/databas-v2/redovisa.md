@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2021-12-20": "(C, mos) Genomgången inför v2 och vt22."
     "2019-01-10": "(B, mos) Bort med inlämning i forumet."
     "2017-12-27": "(A, mos) Första utgåvan."
 ...
@@ -44,12 +45,31 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
-Kopiera redovisningstexten till Canvas {#canvas}
+Testa din inlämning {#testa}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen i Canvas tillsammans med en länk till din me-sida.
+Du kan själv testköra delar av rättningsprocessen via följande kommando.
 
-Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
+```text
+dbwebb test kmom01
+```
+
+Byt ut kmom01 mot det kursmoment du vill inspektera.
+
+Den som rättar och kontrollerar din inlämning utgår delvis från ovan kommando.
+
+Du kan själv provköra och se samma resultat som rättaren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att själv upptäcka eventuella slarvfel.
+
+
+
+Lämna in på Canvas {#canvas}
+---------------------------------------
+
+Lämna in en länk till din rapport-sida på Canvas. Länken innehåller din studentakronym och på det viset hittar rättaren din inlämning.
+
+Det är bra om du också kopierar in din redovisningstext in i Canvas, det kan vara bra att ha som backup om något händer.
+
+Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att du har fullgjort kursmomentets uppgifter.
 
 
 
@@ -62,28 +82,7 @@ Ställ dina frågor och funderingar i forumet. Se till att du får dina frågor 
 
 
 
-Hur testas mitt resultat? {#inspect}
----------------------------------------
-
-Den som rättar och kontrollerar din inlämning utgår från följande kommando.
-
-```bash
-dbwebb inspect kmom01
-```
-
-Byt ut kmom01 mot det kursmoment du vill inspektera.
-
-Du kan själv provköra och se samma resultat som läraren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att upptäcka eventuella slarvfel.
-
-[YOUTUBE src=mxYJW0whkZ4 width=630 caption="Andreas visar hur man rätta sitt egna kmom."]
-
-
-
 Klart! {#klar}
 ---------------------------------------
-
-[YOUTUBE src=d8aotB5X2qk width=630 caption="Andreas visar hur man lämnar in ett kmom."]
-
-Läs gärna dina med-studenters inlämningar och ställ dina frågor och funderingar i forumet.
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.

@@ -54,7 +54,7 @@ Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt.
 Testa din inlämning {#testa}
 ---------------------------------------
 
-Du kan själv testköra rättningsprocessen via följande kommando.
+Du kan själv testköra delar av rättningsprocessen via följande kommando.
 
 ```text
 dbwebb test kmom01

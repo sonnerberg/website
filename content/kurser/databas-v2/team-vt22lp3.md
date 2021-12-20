@@ -2,9 +2,9 @@
 author:
     - mos
 revision:
-    "2020-12-22": "(A, mos) Ny för vt21."
+    "2021-12-20": "(A, mos) Ny för vt22."
 ...
-Kursformalia våren 2021, läsperiod 3
+Kursformalia våren 2022, läsperiod 3
 ==================================
 
 Kursformalia berör detaljer om kurstillfället och visar när det sker, vilka som är ansvariga och vilka studentgrupper som deltar samt information om kursens genomförande.
@@ -16,9 +16,9 @@ Kursformalia berör detaljer om kurstillfället och visar när det sker, vilka s
 Kurstillfälle {#tillfalle}
 ----------------------------------
 
-Kurstillfället pågår under läsperiod 3, våren 2021.
+Kurstillfället pågår under läsperiod 3, våren 2022.
 
-Kurstillfället pågår 10 veckor, det startar v03 och avslutas v12 (2021-01-18 - 2021-03-28).
+Kurstillfället pågår 10 veckor, det startar v03 och avslutas v12 (2022-01-17 - 2022-03-27).
 
 
 
@@ -31,8 +31,7 @@ Följande är lärarteamet för kursen.
 |---------|-------------|-------|------------------|------|
 | ![Mikael](image/mikael-roos/mos-tjaro.jpg?w=100&h=100&cf&a=27,12,18,10) | Mikael&nbsp;Roos | mos   | mos@bth.se, [BTH](https://www.bth.se/staff/mikael-roos-mos/), [GitHub](https://github.com/mosbth), [Linkedin](http://www.linkedin.com/in/pt90mr), [mikaelroos.se](https://mikaelroos.se) | Examinator, kursansvarig, lärare
 | ![Kenneth](image/lararteam/kenneth.jpg?w=100&h=100&cf) | Kenneth&nbsp;Lewenhagen | lew   | klw@bth.se, [BTH](https://www.bth.se/?s=klw&searchtype=employee), [GitHub](https://github.com/lewenhagen), [Facebook](http://www.facebook.com/kenneth.lewenhagen), [Linkedin](http://www.linkedin.com/in/kennethlewenhagen) | Lärare
-| ![Niklas](https://s.gravatar.com/avatar/433d481f73525926b51c863a41f69d59?s=100) | Niklas&nbsp;Andersson | Aurora | nik@bth.se, [BTH](https://www.bth.se/?s=nik&searchtype=employee), [GitHub](https://github.com/AuroraBTH), [Linkedin](https://www.linkedin.com/in/niklas-andersson-37a29a153/) | Lärare
-| ![Martin](https://sv.gravatar.com/userimage/145658893/8947805b418da95b793e335d06ffccca.png?s=100) | Martin&nbsp;Borg | martin | moc@bth.se, [BTH](https://www.bth.se/?s=moc&searchtype=employee), [GitHub](https://github.com/mabn17) [Linkedin](https://www.linkedin.com/in/martin-borg-b0602b151/) | Lärare
+| ![Marie](image/lararteam/marie.jpg?w=100&h=100&cf) | Marie&nbsp;Grahn | Marie | grm@bth.se, [BTH](https://www.bth.se/?s=grm&searchtype=employee), [GitHub](https://github.com/epkmagr), [LinkedIn](https://se.linkedin.com/in/marie-grahn-32548811a/) | Lärare
 | ![Emil](image/lararteam/emil.jpg?w=100&h=100&cf) | Emil&nbsp;Folino | efobth | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee), [GitHub](https://github.com/emilfolino), [LinkedIn](https://se.linkedin.com/in/emil-folino-23a7002a) | Lärare
 
 Dessutom tillkommer ett antal lärarassistenter som hjälper till med rättning och handledning.
@@ -46,21 +45,21 @@ Följande studentgrupper/utbildningar deltar i kurstillfället.
 
 | Utbildning | Kurstillfälle | Format | Utbildningsplan | Ansvarig |
 |------------|--------------|--------|-----------------|----------|
-| [Webbprogrammering 180hp](https://www.bth.se/utbildning/program/pagwe/) | [DV1606 vt21lp3](https://www.bth.se/kurser/B3JAQ/20211/) | <s>Campus</s> Distans | [PAGWE20](http://edu.bth.se/utbildningsplaner/PAGWE_HT-20.pdf) | Mikael Roos mos@bth.se |
-| [Webbprogrammering 120hp](https://www.bth.se/utbildning/program/pagwg/) | [DV1606 vt21lp3](https://www.bth.se/kurser/BTUCF/20211/) | Distans | [PAGWG20](http://edu.bth.se/utbildningsplaner/PAGWG_HT-20.pdf) | Mikael Roos mos@bth.se |
-| [Webbprogrammering och databaser 30hp](https://www.bth.se/kurspaket/KP667/20202/) | [DV1606 vt21lp3](https://www.bth.se/kurser/P0154/20211/) | Distans | [Se kursssidan](https://www.bth.se/kurspaket/KP667/20202/) | Mikael Roos mos@bth.se |
-| [Software Engineering 180hp](https://www.bth.se/utbildning/program/pagpt/) | [DV1605 vt21lp3](https://www.bth.se/kurser/B9KGN/20211/) | <s>Campus</s> Distans | [PAGPT20](http://edu.bth.se/utbildningsplaner/PAGPT_HT-20.pdf) | Torbjörn Fridensköld torbjorn.fridenskold@bth.se  |
+| [Webbprogrammering 180hp](https://www.bth.se/utbildning/program/pagwe/) | [DV1606 vt22lp3](http://www.bth.se/utbildning/program-och-kurser/kurser/20231/BTWD7) | Campus | [PAGWE21](http://edu.bth.se/utbildningsplaner/PAGWE_HT-21.pdf) | Mikael Roos mos@bth.se |
+| [Webbprogrammering 120hp](https://www.bth.se/utbildning/program/pagwg/) | [DV1606 vt22lp3](http://www.bth.se/utbildning/program-och-kurser/kurser/20231/BAMHL) | Distans | [PAGWG21](http://edu.bth.se/utbildningsplaner/PAGWG_HT-21.pdf) | Mikael Roos mos@bth.se |
+| [Webbprogrammering och databaser 30hp](https://www.bth.se/utbildning/program-och-kurser/kurspaket/20212/KP671/) | DV1606 vt22lp3 | Distans | Se kursssidan | Mikael Roos mos@bth.se |
+| [Software Engineering 180hp](https://www.bth.se/utbildning/program/pagpt/) | [DV1605 vt21lp3](http://www.bth.se/utbildning/program-och-kurser/kurser/20231/BK9TW) | Campus | [PAGPT21](http://edu.bth.se/utbildningsplaner/PAGPT_HT-21.pdf) | Torbjörn Fridensköld torbjorn.fridenskold@bth.se  |
 
 
 
 Kursägare och studierektor
 ----------------------------------
 
-Detta kurstillfälle ägs av [institutionen för datavetenskap (DIDA)](https://www.bth.se/om-bth/organisation/fakulteten-for-datavetenskaper/dida/).
+Detta kurstillfälle ägs av [institutionen för datavetenskap (DIDA)](https://www.bth.se/om-oss/institutioner/dida/).
 
 | Roll | Vem |
 |------|-----|
-| Prefekt | [Anton Borg](https://www.bth.se/eng/staff/anton-borg-atb/) |
+| Prefekt | [Bo Peterson](https://www.bth.se/?s=Bo+Peterson&searchtype=employee) |
 | Studierektor | [Birgitta Hermansson](https://www.bth.se/?s=Hermanson%2C+Birgitta+) |
 | Studierektor | [Anders Nelson](https://www.bth.se/eng/?s=Anders+Nelsson) |
 

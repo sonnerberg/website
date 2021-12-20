@@ -2,9 +2,9 @@
 author:
     - mos
 revision:
-    "2020-12-22": "(A, mos) Ny för vt21."
+    "2021-12-20": "(A, mos) Ny för vt22."
 ...
-Läromaterial våren 2021, läsperiod 3
+Läromaterial våren 2022, läsperiod 3
 ==================================
 
 Följande visar hur kursens läromaterial är uppdelat och publicerat samt vilka verktyg som används vid undervisningen.
@@ -18,7 +18,7 @@ Lärplattformen Canvas {#canvas}
 
 Allt kursmaterial nås via kurssidan på Canvas.
 
-* [DV1606/DV1605 V21 lp3 Databasteknologier för webben](https://bth.instructure.com/courses/3234)
+* [DV1606/DV1605 V21 lp3 Databasteknologier för webben](https://bth.instructure.com/courses/3963)
 
 Här publiceras även större meddelanden rörande kursen.
 
@@ -29,7 +29,7 @@ Kurssida dbwebb.se {#dbwebb}
 
 En stor del av kursmaterialet finns tillgängligt via kurssidan på den öppna webbplatsen dbwebb.se.
 
-* [databas v1](kurser/databas-v1)
+* [databas v2](kurser/databas-v2)
 
 
 
@@ -97,10 +97,11 @@ När det sker streamade (eller inspelade) genomgångar och föreläsningar så s
 
 Det som streamas sparas även i en spellista på YouTube så att du kan se det när det passar dig.
 
-* [databas streams vt21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9dv4WGmlicIXnOArsNcMgl)
+* [databas streams vt22](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_5ptH22JfxcVdlmsJIZOer)
 
 Tidigare kurstillfällen kan ses via andra spellistor.
 
+* [databas streams vt21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9dv4WGmlicIXnOArsNcMgl)
 * [databas streams vt20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_rI4Y1xZE3TA3XSOJIq319)
 * [databas streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8JaLBnz0TszCXc_eCVpmOh)
 
@@ -111,10 +112,11 @@ Kursfeedback {#kursfeedback}
 
 Under kursens gång används GitHub issues som ett forumför kursen och där finns en issue där vi samlar in kursfeedback under kursens gång.
 
-* [Kursfeedback våren 2021](https://github.com/dbwebb-se/databas/issues/10)
+* [Kursfeedback våren 2022](https://github.com/dbwebb-se/databas/issues/37)
 
 Där finns även sparat tidigare kurstillfällens kursfeedback.
 
+* [Kursfeedback våren 2021](https://github.com/dbwebb-se/databas/issues/10)
 * [Kursfeedback våren 2020](https://github.com/dbwebb-se/databas/issues/8)
 * [Kursfeedback våren 2019](https://github.com/dbwebb-se/databas/issues/7)
 * [Kursfeedback lp4 2018](https://github.com/dbwebb-se/databas/issues/2)

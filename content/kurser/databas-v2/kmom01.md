@@ -21,9 +21,9 @@ revision:
 Kmom01: Databas
 ====================================
 
-Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi kommer jobba med relationsdatabaser och där har vi valt MySQL/MariaDB. Som klienter så använder vi både terminalbaserade klienter och en fönsterbaserad grafisk klient MySQL WorkBench. Klienterna har båda sin plats och användningsområde vid olika tillfällen.
+Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi kommer jobba med MySQL/MariaDB som är en relationsdatabas. Som klienter använder vi en terminalbaserad klient och en fönsterbaserad grafisk klient. Klienterna har båda sin plats i vår verktygslåda och de är bra att använda vid olika typer av tillfällen.
 
-I en relationsdatabas pratar vi SQL med databasen. Vi skriver SQL för att skapa tabeller och för att lägga till, uppdatera, visa och radera data från databasen. Låt oss börja med att kika på grundkonstruktioner för SQL.
+I en relationsdatabas pratar vi SQL med databasen. Vi skriver SQL för att skapa tabeller och för att lägga till, uppdatera, visa och radera data från databasen. När databasen är på plats så kikar vi även lite på olika grundkonstruktioner för SQL.
 
 <!--more-->
 
@@ -40,9 +40,11 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 2-4 studietimmar)*
 
-Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
+Börja med att installera kursens labbmiljö som behövs för att komma igång med kmom01.
 
-Den korta varianten är att du behöver [installera labbmiljön](./../labbmiljo), uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
+* [Installera labbmiljön](./../labbmiljo)
+
+Därefter kan du uppdatera dig och clona kursrepot. Läs mer om [dbwebb-cli](dbwebb-cli) vid behov.
 
 ```text
 # Gå till din katalog för dbwebb-kurser
@@ -51,6 +53,12 @@ dbwebb clone databas
 cd databas
 dbwebb init
 ```
+
+Kursrepot kan du även se på GitHub.
+
+* [https://github.com/dbwebb-se/databas](https://github.com/dbwebb-se/databas)
+
+PS. Om du är osäker på något steg så kan du läsa en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo).
 
 
 
@@ -67,7 +75,7 @@ Titta på följande inspelade föreläsningar.
 
 1. [Kursintro](./../forelasning/kursintro) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
 
-1. [Databasteknik, relationsdatabaser och SQL](./../forelasning/databasteknik-relationsdatabaser-och-sql) ger dig en introduktion till de databaser och SQL.
+1. [Databasteknik, relationsdatabaser och SQL](./../forelasning/databasteknik-relationsdatabaser-och-sql) ger dig en introduktion till databaser och SQL.
 
 <!--
 * Emils introföreläsning i HTML, CSS, JavaScript.
@@ -87,7 +95,11 @@ Läs följande:
     * Kap 7: Introduktion till frågespråket SQL
     * Kap 29: Introduktion till MySQL
 
-Viss information finns även i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1 och 3.
+2. [Boken har även en webbplats](http://www.databasteknik.se/webbkursen/) och vissa utdrag från boken finns där. Relevant för detta kmom är följande:
+
+    * [Introduktion till databaser och databashanterare](http://www.databasteknik.se/webbkursen/databaser/index.html)
+    * [Introduktion till frågespråket SQL](http://www.databasteknik.se/webbkursen/sql/index.html)
+    * [Introduktion till MySQL](http://www.databasteknik.se/webbkursen/mysql/index.html)
 
 
 
@@ -116,10 +128,11 @@ Kika igenom följande videor för att få grepp om grunderna i Databaser och SQL
 
 Kursen innehåller livesända genomgångar och föreläsningar som kan komma att spelas in och därefter läggs i en spellista.
 
-* Du kan nå spellistan på "[databas streams vt21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9dv4WGmlicIXnOArsNcMgl)".
+* Du kan nå spellistan på "[databas streams vt22](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_5ptH22JfxcVdlmsJIZOer)".
 
 Tidigare kursomgångar finns arkiverade under följande spellistor.
 
+* [streams vt21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9dv4WGmlicIXnOArsNcMgl)
 * [streams vt20](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_rI4Y1xZE3TA3XSOJIq319)
 * [streams vt19](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8JaLBnz0TszCXc_eCVpmOh)
 
@@ -138,6 +151,8 @@ Följande kan du studera om du har tid, intresse och kraft över.
 -------------------------------------------
 
 *(ca: 8-10 studietimmar)*
+
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
 
 
 <!--
@@ -163,14 +178,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. När du är klar med allt så lämnar du in via `dbwebb publish me` och du kontrollerar att du laddat upp rätt saker via `dbwebb inspect kmom01`.
 
-Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
-
-<!--
-IMPROVE: Gör någon enkel labb som kontrollerar att studenten har koll på vad guiden går igenom. Använd databasen som finns i guiden.
-
-1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon.
--->
-
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -187,7 +194,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du jobbat med databaser eller liknande tidigare?
 * Hur gick det att jobba med SQL i guiden?
 * Jämför SQL med andra sätt att programmera.
+* Vilken är din TIL för detta kmom?
 
 TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
-
-* Vilken är din TIL för detta kmom?

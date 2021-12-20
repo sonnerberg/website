@@ -5,9 +5,10 @@ views:
         template: default/image
         data:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=grayscale&f1=smooth,-8&f2=pixelate,4,1"
-title: databas-v1
+title: databas-v2
 author: mos
 revision:
+    "2021-12-20": "(I, mos) Genomgången inför version 2 och vt22."
     "2021-01-14": "(H, mos) Video för kursintroduktion."
     "2020-12-22": "(G, mos) Ny struktur på planering, läromaterial och team."
     "2019-03-05": "(F, mos) Uppdaterat kmom10 för våren 2019."
@@ -17,7 +18,7 @@ revision:
     "2018-02-27": "(B, mos) Inkluderad i Webbprogrammering från vt18 lp4."
     "2018-01-11": "(A, mos) Första utgåva inför kursstart VT2018."
 ...
-Kursen databas (v1)
+Kursen databas (v2)
 ==================================
 
 Kursen **Databasteknologier för webben**, a.k.a. *databas*, och syftet är att studenten ska förstå och lära sig modellera och implementera en databas samt utveckla en webbapplikation som använder databasen. Som applikationsspråk används serverbaserad JavaScript i webbmiljö.
@@ -193,21 +194,20 @@ Kurslitteratur {#litteratur}
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
+Följande två böcker kan läsas i sin helhet under kursens gång. En bok om databasteknik och en bok om programmeringsspråket JavaScript.
+
 * **[Databasteknik](kunskap/boken-databasteknik)** -- Radron-McCarthy och Risch  
     Komplett med det man vill veta om databasteknik, både grunder, modellering och SQL. En databasbok helt enkelt.
 
-* **[Speaking JavaScript: An In-Depth Guide for Programmers](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer  
+* **[JavaScript for impatient programmers (ES2021 edition)](https://exploringjs.com/impatient-js/index.html)** -- Axel Rauschmayer  
     En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
-* **[Exploring ES6](kunskap/boken-exploring-es6)** -- Axel Rauschmayer  
-    En bok om ES6 som bygger vidare på att man kan ES5.
 
 
-<!--
 ### Referenslitteratur {#referenslitteratur}
 
 Referensdokumentationen är främst olika online-resurser i form av manualer.
--->
+
 
 
 ### Övrig litteratur {#ovriglitteratur}
@@ -216,39 +216,20 @@ I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, ma
 
 
 
-Läsanvisningar {#lasanvisning}
-------------------------------
-
-Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
-
-| Kursmoment | Databasteknik      | Javascript ES5 | JavaScript ES6 |
-|------------|--------------------|----------------|----------------|
-| Kmom01     | 1, 7, 29           |                |                |
-| Kmom02     | 8, 21 (11)         | 1, 13          | 4              |
-| Kmom03     | 2, 4, 5, 6 (3, 12) |                |                |
-| Kmom04     | 24 (25)            |                |                |
-| Kmom05     | 13, 15, 16         |                |                |
-| Kmom06     | 9, 22 (23)         |                |                |
-| Kmom10     |                    |                |                |
-
-Varje kursmoment kan ha ytterligare läsanvisningar i artiklar, video och annat studiematerial.
-
-
-
 Planering och studieplaner {#planering}
 ---------------------------------------------
 
 Eftersom kursen ges kombinerat på campus och distans så är kursens planering fördelad på ett antal olika dokument. Bekanta dig med dem så att du har koll på hur kursens upplägg fungerar och vilket som är en normaltakt för kursen.
-
-<!--
-Kursen har en [veckoplan](./veckoplan) där du få en rekommendation till hur du kursens övergripande planering ser ut och hur du skall lägga upp dina studier, vecka för vecka.
--->
 
 Kursen har en [rekommenderad studieplan](databas/studieplan) som visar en översikt, vecka för vecka, vilket kursmoment som är aktuellt att jobba med. Där finns även rättningsfönster som visar när saker rättas. Följer du denna planeringen så är du i fas med kursens normaltakt.
 
 På Canvas finns datum för inlämningsuppgifter. Ett rättningsfönster pågår normalt sett 15 arbetsdagar efter inlämningsdatum på uppgiften. Inlämningsdatumen på Canvas är ett par dagar senare än vad som visas i den rekommenderade studieplanen, det är för att ge dig lite slack/utrymme för att själv planera dina studier.
 
 Kursen har en [lektionsplan](databas/lektionsplan) som visar när det är lärarledda tillfällen för undervisning/handledning på campus/distans.
+
+<!--
+Kursen har en [veckoplan](./veckoplan) där du få en rekommendation till hur du kursens övergripande planering ser ut och hur du skall lägga upp dina studier, vecka för vecka.
+-->
 
 Kursen har bokade tillfällen i BTHs schemabokningsprogram, "schemat", som säger när en fysisk sal är bokad på campus. Det finns en länk till det aktuella schemar, via lektionsplanen.
 
@@ -257,16 +238,38 @@ Kursen har bokade tillfällen i BTHs schemabokningsprogram, "schemat", som säge
 Läromaterial och resurser {#laromaterial}
 ----------------------------------------
 
-Via [läromaterial](./laromaterial) kan du se en översikt av hur kurstillfället har valt att strukturera läromaterialet och vilka resurser och verktyg som används i undervisningen.
+Här kan du se en översikt av hur kurstillfället har valt att strukturera läromaterialet och vilka resurser och verktyg som används i undervisningen.
 
 Här finner du även länkar till aktuella video streams och spellistor samt chatter och forum för handledning.
+
+* [Läromaterial vt22, lp3](./laromaterial-vt22lp3)
 
 
 
 Lärarteam och intressenter {#team}
 ----------------------------------------
 
-Du kan hitta [detaljer om ett kurstillfälle](./team) och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
+Här kan du hitta detaljer om ett kurstillfälle och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
+
+* [Lärarteam och intressenter vt22, lp3](./team-vt22lp3)
+
+
+
+Dialog & Samarbete {#samarbete}
+---------------------------------
+
+Kursen främjar att studenter för dialog och samarbeter. Diskutera med studiekollegor kring problem och lösningar på de övningar och uppgifter som finns. Använd de möjligheter som finns inom kursen för att samverka och hjälpa varandra. Tveka inte att starta egna studiegrupper där ni kan stödja varandra.
+
+
+
+Fusk & Disciplinnämnden {#fusk}
+---------------------------------
+
+Läs om skolans syn och hantering av "[Fusk och medveten vilseledning](https://dbwebb.se/kurser/faq/fusk-och-disciplinarende)" samt var gränserna går mellan samarbete och fusk.
+
+> "Hjälp varandra och diskutera, men kopiera inte och skriv all kod/text själv."
+
+Misstanke om fusk anmäls alltid till Discplinnämnden.
 
 
 
@@ -293,15 +296,6 @@ Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtli
 Poängen inom parantes gäller kurskoden DV1605 för SE-programmet som läser kursen som en 10hp kurs då de inte har några förkunskaper i webbområdet.
 
 Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
-
-
-
-Fusk och plagiering {#fusk}
------------------------------------------------------
-
-När läraren misstänker att en student har fuskat så anmäls det till Disciplinnämnen.
-
-Läs om "[Fusk, plagiering, medveten vilseledande](kurser/faq/fusk-och-disciplinarende)" så du är medveten om kursens syn på dessa saker.
 
 
 
@@ -340,3 +334,16 @@ Följande gällde till och med 2018.
 Kursens namn är "Databasteknologier för webben" för programmet Webbprogrammering och kurspaketet webprog (från VT18). Du hittar [kursplanen genom att söka på kurskoden PA1451 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1451).
 
 Kursens namn är "Webbprogrammering och databaser" till programmen Software Engineering och International Software Engieering (från VT17). Du hittar [kursplanen genom att söka på kurskoden PA1444 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1444).
+
+
+
+Versioner av kursen {#versioner}
+-----------------------------------------------------
+
+Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
+
+Från vårterminen 2022 så används kursen databas version 2 (detta dokument).
+
+Från vårterminen 2018 till och med våren 2021 användes kursen [databas version 1](kurser/databas-v1).
+
+Undet vårterminen 2017 gavs kursen [dbjs version 1](kurser/dbjs-v1).
