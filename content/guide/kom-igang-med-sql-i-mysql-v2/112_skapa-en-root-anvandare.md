@@ -117,6 +117,22 @@ Kontrollera alltid att det inte skrivs ut felmeddelande i skriptet, då behöver
 
 
 
+Vilken användare skall jag använda? {#vilkenanv}
+--------------------------------------
+
+Du kan nu jobba vidare med vilken användare du vill. Du har troligen två att välja på, "dbadm" eller "maria" (eller vad du nu döpte din användar till).
+
+Vill du växla användare så bör det gå bra så här.
+
+```text
+mariadb -udbadm
+mariadb -umaria
+```
+
+Glöm inte att uppdatera din `.my.cnf` med det användarnamn som är ditt "default". Det förutsätter naturligtvis att du har [konfigurerat och använder en konfigurationsfil för my.cnf](coachen/mariadb-klient-och-my-cnf).
+
+
+
 Problem och facit? {#problem}
 --------------------------------------
 
