@@ -27,13 +27,9 @@ Kmom01: Databas
 
 Du kan påbörja att installera labbmiljön som är uppdaterad inför VT22. Rekommendationen är att använda databasen MariaDB i år.
 
-Läsrekommendationer är också ok att börja med.
+Läsrekommendationer (exklusive föreläsningarna som kan komma att uppdateras) är också ok att börja med.
 
-Kursrepot är under uppdatering.
-
-Uppgiften med me/redovisa är okey att starta med.
-
-Uppgiften med guiden är inte uppdaterad. Hela guiden är under uppdatering inför vårens kursomgång.
+I övrigt är det klokt att avvakta kursstarten eller att denna gula rutan försvinner.
 
 [/WARNING]
 
