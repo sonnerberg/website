@@ -15,6 +15,14 @@ revision:
 Kmom06: Prestanda
 ====================================
 
+[WARNING]
+
+**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
+
+Detta kursmoment är inte uppdaterat inför VT22.
+
+[/WARNING]
+
 Vi fortsätter med programmering i databasen, denna gången med "funktioner" som har en liknande struktur som lagrade procedurer och triggers.
 
 Vi studerar hur databasen jobbar internt för att optimera SQL-frågor och hur index kan användas för att optimera databasen.

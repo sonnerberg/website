@@ -8,7 +8,7 @@ Rättningsverktyget Umbridge
 
 Umbridge är ett verktyg för att automaträtta inlämningar i programmeringskurser.
 
-<!-- more -->
+<!--more-->
 
 Källkoden för verktyget kan ni hitta på [GitHub](https://github.com/dbwebb-se/umbridge/).
 

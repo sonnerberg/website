@@ -16,6 +16,14 @@ revision:
 Kmom04: Transaktioner
 ====================================
 
+[WARNING]
+
+**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
+
+Detta kursmoment är inte uppdaterat inför VT22.
+
+[/WARNING]
+
 Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Vi skapar SQL-kod som kan skapa databasens schema.
 
 Kursmomenten introducerar begreppet transaktioner i en databas och vi tränar på SQL-kod för att hantera COMMIT och ROLLBACK i transaktioner.

@@ -14,6 +14,14 @@ revision:
 Kmom02: SQL
 ====================================
 
+[WARNING]
+
+**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
+
+Detta kursmoment är inte uppdaterat inför VT22.
+
+[/WARNING]
+
 Vi jobbar vidare med SQL och tränar på enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
 Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Detta innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm samt att du kommer igång med grunderna i programmeringsspråket JavaScript och specifikt hur JavaScript används tillsammans med Node.js.

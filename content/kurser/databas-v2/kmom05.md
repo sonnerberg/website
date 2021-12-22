@@ -15,6 +15,14 @@ revision:
 Kmom05: Procedur och trigger
 ====================================
 
+[WARNING]
+
+**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
+
+Detta kursmoment är inte uppdaterat inför VT22.
+
+[/WARNING]
+
 Vi går vidare och nu handlar det om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod i mer avancerade programmeringskonstruktioner och automatiserande hantering av datat i databasen.
 
 Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen. Detta gör att databaskoden och dess interna representation kan skyddas från klienterna som enbart jobbar mot databasen via ett API bestående av lagrade procedurer.

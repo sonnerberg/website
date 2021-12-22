@@ -17,6 +17,14 @@ revision:
 Kmom03: ER-modellering
 ====================================
 
+[WARNING]
+
+**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
+
+Detta kursmoment är inte uppdaterat inför VT22.
+
+[/WARNING]
+
 Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering. Vi börjar med att fokusera på den konceptuella delen av modelleringen.
 
 Vi jobbar vidare med SQL och tränar mer på utmanande saker som subqueries, JOIN och LEFT/RIGHT OUTER JOIN.

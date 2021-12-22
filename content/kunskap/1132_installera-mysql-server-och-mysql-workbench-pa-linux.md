@@ -14,7 +14,7 @@ Installera MySQL Server och MySQL WorkBench på Linux
 
 [FIGURE src=image/snapvt19/debian-service-mysql-status.png?w=c5 class="right"]
 
-Vi skapar en egen lokal utvecklingsmiljö för databasen MySQL tillsammans med desktopklienten MySQL Workbench på Debian/Linux.
+Vi skapar en egen lokal utvecklingsmiljö för databasen MySQL (eller MariaDB) tillsammans med desktopklienten MySQL Workbench på Debian/Linux.
 
 Vi använder också terminalklienten `mysql` för att koppla oss mot databasen.
 
@@ -51,7 +51,7 @@ Installera MySQL Server {#server}
 
 På Debian/Linux installerar jag databasen via pakethanteraren apt-get.
 
-Du kan även välja att installera alternativet MariaDB. Välj mysql-server om du är osäker.
+Du kan även välja att installera alternativet MariaDB. Välj mysql-server om du är osäker så väljer pakethanteraren en rekommenderad databas.
 
 ```text
 sudo apt-get install mysql-server
@@ -90,7 +90,7 @@ Terminalprogrammen för MySQL hamnar automatiskt i din PATH.
 För att testa att databasservern fungerar, så kan du öppna terminalklienten och koppla upp dig mot databasen.
 
 ```text
-sudo mysql -uroot -p
+mysql -uroot -p
 ```
 
 För att logga in med root-användaren behöver man köra kommandot som unix-användaren root, det verkar vara en ny sak för senare versioner av MySQL/MariaDB ([se stack overflow](https://stackoverflow.com/a/35748657)).

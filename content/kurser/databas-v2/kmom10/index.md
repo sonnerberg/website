@@ -25,6 +25,14 @@ revision:
 Kmom10: Examination och redovisning
 ====================================
 
+[WARNING]
+
+**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
+
+Detta kursmoment är inte uppdaterat inför VT22.
+
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Alla delar i detta kursmoment skall utföras individuellt och självständigt. Respektera det.
