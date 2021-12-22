@@ -80,6 +80,12 @@ Du kan även kolla vilka rättigheter användaren har med följande kommando.
 SHOW GRANTS;
 ```
 
+Vill du kontrollera en specifik användare så går det också bra.
+
+```text
+SHOW GRANTS FOR 'dbadm'@'localhost';
+```
+
 Det kan vara bra att kontrollera sådant om man råkar ut för behörighetsproblem.
 
 

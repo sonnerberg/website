@@ -17,7 +17,7 @@ SQL statements {#sql}
 
 Här följer en snabb översikt över de vanligaste SQL-kommandona.
 
-För att välja och presentera data:
+För att välja och presentera data från tabeller:
 
 ```sql
 SELECT
@@ -27,7 +27,7 @@ SELECT
   [ORDER BY]
 ```
 
-För att skapa, uppdatera och radera data:
+För att skapa, uppdatera och radera data i tabeller:
 
 ```sql
 INSERT INTO VALUES
@@ -35,19 +35,22 @@ UPDATE SET
 DELETE
 ```
 
-Man brukar benämna SELECT, INSERT och UPDATE som SQL Data Manipulation Language (DML), eller SQL DML, då de manipulerar en data i en befintlig databas.
+Man brukar benämna SELECT, INSERT och UPDATE som SQL Data Manipulation Language (DML), eller SQL DML, då de manipulerar en data i en befintlig databas. Detta kan även se som databasens innehåll.
 
-För att skapa objekt (databaser, tabeller, vyer, etc) i en databas:
+För att skapa objekt (databaser, tabeller, vyer, etc) i en databas, även kallat "databasens schema":
 
 ```sql
 CREATE
 ALTER
 DROP
+SHOW
 ```
 
-Konstruktionerna CREATE, ALTER, DROP brukar benämnas SQL Data Definition Language (DDL), eller SQL DDL, då de definierar databasens schema och struktur.
+Konstruktionerna CREATE, ALTER, DROP, SHOW brukar benämnas SQL Data Definition Language (DDL), eller SQL DDL, då de definierar databasens schema och struktur.
 
 Pröva att finna informationen om dessa SQL-kommandon i refmanualen. Ju bättre du blir på det desto enklare och snabbare kommer du igenom övningen.
+
+Förutom SQL DML och SQL DDL finns det i en databashanterare extra kommandon som är av mer administrativ art. Dessa kan skilja mellan olika databashanterare och är inte nödvändigtvis en del av de SQL standarder som finns.
 
 
 
@@ -75,6 +78,4 @@ De första övningarna är enkla för att sedan bli svårare och svårare. Ju l�
 Referensmanualen {#ref}
 ----------------------------------
 
-I referensmanualen för MySQL finns ett stycke som beskriver syntax för de grundläggande SQL-uttrycken, "[SQL Statement](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)". Det är en riktigt god idé att bekanta sig med den delen av referensmanualen.
-
-Motsvarande referensmanual för MariaDB finns under "[SQL Statements & Structure](https://mariadb.com/kb/en/library/sql-statements-structure/)".
+I referensmanualen för MariaDB finns ett stycke som beskriver syntax för de grundläggande SQL-uttrycken, "[SQL Statements](https://mariadb.com/kb/en/sql-statements/)". Det är en riktigt god idé att bekanta sig med den delen av referensmanualen.
