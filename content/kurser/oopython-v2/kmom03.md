@@ -17,6 +17,13 @@ Kom igång med _UML_ och _unittest_. Det är kraftfulla verktyg som används i "
 Du kommer att skapa ett UML-diagram utifrån en färdig kodbas och skriva unittester.
 
 <!--more-->
+[WARNING]
+
+**ARBETE PÅGÅR**
+
+Avvakta kursstarten eller att denna gula rutan försvinner.
+
+[/WARNING]
 
 [INFO]
 Gör `dbwebb update` och `dbwebb init` innan du startar med kursmomentet.

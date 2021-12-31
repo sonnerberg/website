@@ -17,6 +17,13 @@ Gör `dbwebb update` innan du startar med kursmomentet.
 Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla på träd strukturer. Mer specifikt ska vi lära oss skapa ett Binärt sökträd och skapa algoritmer som kan traversera trädet rekursivt. 
 
 <!--more-->
+[WARNING]
+
+**ARBETE PÅGÅR**
+
+Avvakta kursstarten eller att denna gula rutan försvinner.
+
+[/WARNING]
 
 [FIGURE src=/image/oopython/kmom06/bst.svg caption="Ett binärt sökträd."]
 

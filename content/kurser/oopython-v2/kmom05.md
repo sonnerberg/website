@@ -10,6 +10,13 @@ Kmom05: Sorteringsalgoritmer och datastrukturer
 Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Samtidigt ska vi lära oss hur man skriver rekursiva funktioner.
 
 <!--more-->
+[WARNING]
+
+**ARBETE PÅGÅR**
+
+Avvakta kursstarten eller att denna gula rutan försvinner.
+
+[/WARNING]
 
 [FIGURE src=/image/oopython/kmom05/index_top.png?w=w2 caption="Bild på algoritmen Merge-sort."]
 

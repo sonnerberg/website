@@ -11,6 +11,15 @@ Kmom01: Kom igång med objekt och Flask
 Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask", där vi skriver redovisningstexten och en kort presentation om oss själva. Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objektorienterad programmering.
 
 <!--more-->
+[WARNING]
+
+**ARBETE PÅGÅR**
+
+Du kan påbörja att installera labbmiljön.
+
+I övrigt är det klokt att avvakta kursstarten eller att denna gula rutan försvinner.
+
+[/WARNING]
 
 [FIGURE src=/image/oopython/kmom01/flask1.png?w=w2 caption="En enkel me-sida med Flask."]
 
