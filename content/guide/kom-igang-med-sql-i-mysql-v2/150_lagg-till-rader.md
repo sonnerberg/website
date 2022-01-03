@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-03": "(D, mos) Genomgången inför v2 och MariaDB."
     "2019-01-11": "(C, mos) Lade till asciinema."
     "2018-03-20": "(B, mos) Indelad i kapitel och varning om safe mode update."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -10,30 +11,28 @@ Lägg till rader
 
 Vi lägger till lärare i tabellen.
 
-Lägg SQL-koden i filen `dml_insert.sql`.
+Lägg SQL-koden i filen `dml-insert-larare.sql`.
 
 
 
 En fil för att lägga till rader {#insert}
 ----------------------------------
 
-Lägg SQL-koden, som handlar om att lägga in rader i tabellen, i filen och inled filen med en header som berättar vem du är.
+Lägg SQL-koden, som handlar om att lägga in rader i tabellen, i filen och inled filen med en header.
 
 ```sql
 --
 -- Insert values into table larare.
--- By mos for course databas.
--- 2017-12-27
 --
 ```
 
-Vi skall skapa 10 lärare och lägg in dem i tabellen med `INSERT`. Du kan använda `SELECT * FROM Larare` för att se  och kontrollera vad tabellen innehåller.
+Skapa 10 lärare och lägg in dem i tabellen med `INSERT`. Du kan använda `SELECT * FROM Larare` för att se  och kontrollera vad tabellen innehåller.
 
 Först lägger vi in ett par lärare med varsin INSERT sats. Vi omringar strängar med enkelfnutt. Även datum hanterar vi här som en sträng, databasen kan översätta strängen till rätt datum.
 
 ```sql
 --
--- Add teacher staff 
+-- Add teacher staff
 --
 INSERT INTO larare VALUES ('sna', 'DIPT', 'Severus', 'Snape', 'M', 40000, '1951-05-01');
 INSERT INTO larare VALUES ('dum', 'ADM', 'Albus', 'Dumbledore', 'M', 80000, '1941-04-01');
@@ -114,6 +113,10 @@ mysql> SELECT akronym, avdelning, fornamn, efternamn, kon, lon, fodd FROM larare
 
 Du behöver ha samma innehåll i din databas som jag har, då kommer du att få samma resultat i kommande uppgifter och du får ett facit att kontrollera mot.
 
+Du bör nu kunna köra alla kommandon i din fil och få samma utfall efter varje körning.
+
+<!--
 Så här ser det ut när jag kör skriptet via terminalklienten.
 
 [ASCIINEMA src=220808 caption="Det är smidigt att köra ett SQL-skript via terminalen."]
+-->

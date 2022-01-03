@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-03": "(B, mos) Genomgången inför v2 och MariaDB, bort med bash."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
 Skapa rapporter från tabellen
@@ -8,7 +9,7 @@ Skapa rapporter från tabellen
 
 Vi vill välja ut och presentera innehållet i tabellen via konstruktionen SELECT.
 
-Spara dina konstruktioner i filen `dml_select.sql`.
+Spara dina konstruktioner i filen `dml-select.sql`.
 
 
 
@@ -82,7 +83,7 @@ LIMIT är bra att använda om man vill begränsa antalet rader som visas i svare
 Alias med AS {#as}
 ----------------------------------
 
-Alias är bra att använda när man jobbar med många tabeller och behöver ändra namn på kolumnerna i SELECT-satsen, eller när man vill ge en kolumn ett alternativt namn, eller när man vill korta ned ett långt kolumnnamn så att SELECT-satsen blir enklare att skriva. 
+Alias är bra att använda när man jobbar med många tabeller och behöver ändra namn på kolumnerna i SELECT-satsen, eller när man vill ge en kolumn ett alternativt namn, eller när man vill korta ned ett långt kolumnnamn så att SELECT-satsen blir enklare att skriva.
 
 Studera nedanstående exempel och testkör dem.
 

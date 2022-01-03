@@ -3,16 +3,8 @@ sectionHeader: true
 linkable: true
 author: mos
 ...
-Grunderna
+Bygg en databas
 =======================
-
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Guiden håller på att omarbetas i en version 2 som fokuserar på MariaDB som databas. Artiklar kommer att uppdateras och ändra ordning.
-
-[/WARNING]
 
 Kom igång med grunderna i att skapa en databas och jobba med SQL mot den, i MariaDB.
 

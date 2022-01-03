@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-03": "(F, mos) Genomgången inför v2 och MariaDB."
     "2019-01-11": "(E, mos) Lade till asciinema och körning av skriptet."
     "2018-03-27": "(D, mos) Sluttabellen skall inte ha NULL i lön, uppdaterad."
     "2018-03-22": "(C, mos) Delade i två delar och flyttade lönerevision till egen del."
@@ -12,7 +13,7 @@ Uppdatera värden i rader
 
 Vi skall använda `UPDATE` för att uppdatera värden i rader och kolumner. Bekanta dig med refman för UPDATE.
 
-Spara det du nu gör i filen `dml_update.sql`.
+Spara det du nu gör i filen `dml-update.sql`.
 
 Vi skall göra en lönerevision för lärarna och höja deras löner.
 
@@ -30,7 +31,7 @@ Så här kan en UPDATE se ut.
 UPDATE larare SET lon = 30000 WHERE akronym = 'gyl';
 ```
 
-Börja med att se till så att alla lärare har en lön. De som inte har en lön skall ha 30000 i startlön.
+Börja med att se till så att alla lärare har en lön. De som inte har en lön skall ha 30000 i ingångslön.
 
 Låt mig visa hur du kan göra det. Ovan ser du hur du uppdaterar en lärares lön. Du kan också uppdatera två lärares lön om du vinklar WHERE-delen på följande sätt.
 
@@ -112,11 +113,5 @@ mysql> SELECT akronym, avdelning, fornamn, kon, lon, kompetens
 Dubbelkolla att du kan köra skriptet med samtliga SQL-kommandon.
 
 ```text
-mysql -uuser -p skolan < dml_update.sql
+mariadb skolan < dml-update.sql
 ```
-
-Så här kan det se ut.
-
-[ASCIINEMA src=220811 caption="Alla SQL-kommandon för att uppdatera är samlade i filen."]
-
-Då är vi redo för en övning.
