@@ -56,6 +56,12 @@ dbwebb test kmom01
 
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
+Du kan även testa enskilda uppgifter.
+
+```text
+dbwebb test skolan1
+```
+
 Den som rättar och kontrollerar din inlämning utgår delvis från ovan kommando.
 
 Du kan själv provköra och se samma resultat som rättaren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att själv upptäcka eventuella slarvfel.

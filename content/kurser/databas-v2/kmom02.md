@@ -138,7 +138,7 @@ Båda uppgifterna bygger på att du klarat av första delen av SQL-guiden från 
 1. Lös uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)". Spara alla filer i `me/kmom02/terminal1`.
 
 1. Fortsätt jobba igenom nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql-v2)". Spara filerna i katalogen `me/skolan` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
-    * [Tredje delen: Mer SQL](guide/kom-igang-med-sql-i-mysql-v2/mer-sql)
+    * [Delen: Mer SQL](guide/kom-igang-med-sql-i-mysql-v2/mer-sql)
 
 
 

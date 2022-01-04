@@ -33,7 +33,7 @@ Du har tidigare löst uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgif
 
 Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js (v2)](kunskap/gor-en-kommandoradsklient-i-node-js-v2)" vilken gav dig upplägget om hur du gör ett menysystem i terminalklienten tillsammans med en oändlig loop som läser in kommandon från terminalen.
 
-Du har jobbat igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Här står bland annat hur du löser en backup av din databas.
+Du har jobbat igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql-v2/mer-sql)".
 
 
 
@@ -57,25 +57,22 @@ Provkörning {#prov}
 
 Ditt program testkörs mot din egen databas som återskapas via backup-filen `me/skolan/skolan.sql`.
 
-Instruktioner för hur du skapar en sådan backupfil finns i del 3 av guiden "[Ta backup av databasen](guide/kom-igang-med-sql-i-mysql/ta-backup-av-databasen)"
+Instruktioner för hur du skapar en sådan backupfil finns i guiden "[Ta backup av databasen](guide/kom-igang-med-sql-i-mysql-v2/ta-backup-av-databasen)"
 
 Var därför noggrann att gör en databasdump med den allra senaste versionen av din databas, innan du lämnar in uppgiften.
 
 Tänk på att stora och små bokstäver hanteras olika på Windows, Mac och Linux. Det är av den anledningen som vi följer en SQL-kodstandard som enbart använder sig av små bokstäver på tabeller och kolumner.
 
-Du kan själv verifiera att det fungerar, genom att läsa in din databasdump. Tänk på att detta kommando rensar allt innehåll i din nuvarande databas och ersätter med innehållet från backup-filen.
-
-```text
-# Stå i roten av kursrepot
-mysql -udbwebb skolan < me/skolan/skolan.sql
-```
+Ett av de vanligaste problemen med rättningen är att man varit inkonsekvent med att hantera stora och små bokstäver i SQL-koden och i JavaScript-koden. Av den enkla anledningen är det smidigast att alltid följa [SQL-kodstandardens rekommendationer](https://www.sqlstyle.guide/) och enbart använda små bokstäver.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Skapa din main-funktion för programmet i filen `index.js`. Dela in koden i funktioner så att main-funktionen inte innehåller all kod.
+1. Skapa din main-funktion för programmet i filen `index.js`. Detta är ditt mainprogram och det skall vara så litet som möjligt, resten av koden fördelar du i moduler eller klasser som du importerar till mainprogrammet.
+
+1. Skapa katalogen `src/` och placera där de moduler/klasser du använder i ditt program. Du skall minst använda en modul, gärna flera.
 
 1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av programmet.
 
@@ -85,19 +82,21 @@ Krav {#krav}
 
 1. I din meny, skapa kommandot `larare` som visar all information om lärare, inklusive deras ålder. Minns att du har en vy för detta.
 
-1. Skapa kommandot `kompetens` som visar en rapport hur kompetensen ändrats i senaste lönerevisionen ([se rapporten](guide/kom-igang-med-sql-i-mysql/joina-tabell#proc)).
- 
-1. Skapa kommandot `lon` som visar en rapport hur lönen ändrats i senaste lönerevisionen ([se rapporten](guide/kom-igang-med-sql-i-mysql/joina-tabell#proc)).
+1. Skapa kommandot `kompetens` som visar en rapport hur kompetensen ändrats i senaste lönerevisionen.
+
+1. Skapa kommandot `lon` som visar en rapport hur lönen ändrats i senaste lönerevisionen.
 
 1. Skapa kommandot `sok <sokstrang>` som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
 
 1. Skapa kommandot `nylon <akronym> <lon>` som tar argumenten för lärarens akronym samt den nya lönen och uppdaterar lärarens lön.
 
-1. Validera din kod.
+1. Validera din kod och testa din inlämning.
 
-```bash
+```text
 # Flytta till kurskatalogen
 dbwebb validate terminal2
+
+dbwebb test terminal2
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
@@ -110,5 +109,3 @@ Tips från coachen {#tips}
 I forumet kan du se hur man kan [dela in en sträng i delar](t/8263) och göra varje del till en variabel, det kan vara en lösning på att hantera kommando som `nylon <akronym> <lon>`.
 
 En UPDATE-sats returnerar inte ett resultset likt SELECT, lär om vad som returneras i tipset "[Vad returnerar en SQL UPDATE i Node.js och MySQL/MariaDB?](coachen/vad-returnerar-en-sql-update-i-node-js-och-mysql)".
-
-Lycka till och hojta till i forumet om du behöver hjälp!

@@ -25,11 +25,11 @@ Detta kursmoment är inte uppdaterat inför VT22.
 
 [/WARNING]
 
-Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering. Vi börjar med att fokusera på den konceptuella delen av modelleringen.
-
 Vi jobbar vidare med SQL och tränar mer på utmanande saker som subqueries, JOIN och LEFT/RIGHT OUTER JOIN.
 
 Vi bygger vidare på våra terminalskript i JavaScript och Node.js och bygger en menydriven klient som kan utföra olika saker mot databasen.
+
+Vi övar i hur man modellerar och bygger upp en databas, det som kallas Entity-Relationship modelling, ER-modellering, eller bara databasmodellering. Vi delar in modelleringen i konceptuell, logisk och fysisk modellering. Vi börjar med att fokusera på den konceptuella delen av modelleringen.
 
 <!--more-->
 
@@ -69,32 +69,24 @@ Titta på följande inspelade föreläsningar.
 * Lägg till guide om modellering.
     * https://dbwebb.se/guide/er-modellering-med-databaser
     * Lägg till videoserie om hur man modellerar vissa övningar
+    * Osäker på hur detta förslag förhåller sig till deinspelningar som gjordes 2021, men det behövs några övningar som visar hur man tänker när man modellerar en databas, kanske räcker det att man spelar in några modelleringsövningar.
 -->
 
 
 
 ### Databasteknik {#dbteknik}
 
-Läs följande:
+Läs följande i kursboken:
 
-1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 8: (repetera) Mer om SQL: Aggregatfunktioner, null-värden, yttre join
+1. [Databasteknik](kunskap/boken-databasteknik) repetera om avancerad SQL.
+    * Kap 8: Mer om SQL: Aggregatfunktioner, null-värden, yttre join
+
+1. [Databasteknik](kunskap/boken-databasteknik) om ER modellering.
     * Kap 2: ER-modellering
-    * Kap 4: Designpocessen
+    * Kap 4: Designprocessen
 
-En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa mer om [ER-modellering i webbkursen](http://www.databasteknik.se/webbkursen/er/).
-
-
-
-### ER-modellering {#ermodellering}
-
-Läs igenom följande artiklar.
-
-1. Läs igenom igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig en metod för att modellera databaser i olika faser. Du kommer jobba enligt denna modellen i uppgiften. I detta kmom läser du först och främst delen om "Konceptuell modellering".
-
-<!--
-1. Som ett komplement till kokboken kan du titta på [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter, startar 15 minuter in och avslutas 1:18). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
--->
+1. [Boken har även en webbplats](http://www.databasteknik.se/webbkursen/) och vissa utdrag från boken finns där. Relevant för detta kmom är följande:
+    * [ER-modellering i webbkursen](http://www.databasteknik.se/webbkursen/er/)
 
 
 
@@ -106,20 +98,11 @@ Läs gärna vidare på egen hand, i "[Boken: JavaScript for impatient programmer
 
 
 
-<!--
-###Lästips {#tips}
+### ER-modellering {#ermodellering}
 
-Följande kan du använda för att fördjupa dig i ER-modellering, läs som överkurs vid intresse.
+Läs igenom följande artiklar.
 
-1. [IBM Entity Relationship Modeling with UML](http://www.ibm.com/developerworks/rational/library/319.html).
--->
-
-<!--
-Modelleringsövningsuppgifter
-https://docs.google.com/document/d/1kKoSO2BQL5T2cnzshpM_hnk5JbqT0_00khfGJKZQ2Fo/edit
-
-Gjort modelleringsövning i sal med draw.io: https://goo.gl/vNRvKt
--->
+1. Läs igenom igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig en metod för att modellera databaser i olika faser. Du kommer jobba enligt denna modellen i uppgiften. I detta kmom läser du först och främst delen om "Konceptuell modellering".
 
 
 
@@ -137,18 +120,10 @@ Genomför följande för att förbereda inför uppgifter.
 1. Jobba igenom artikeln "[Gör en kommandoradsklient i Node.js (v2)](kunskap/gor-en-kommandoradsklient-i-node-js-v2)". Spara alla filer du gör i `me/kmom03/cli`.
 
 <!--
+Modelleringsövningsuppgifter
+https://docs.google.com/document/d/1kKoSO2BQL5T2cnzshpM_hnk5JbqT0_00khfGJKZQ2Fo/edit
 
-Till 2020, gör ny övning som går igenom hur man kapslar in all databashantering i en modul (löser delar av kmom04).
-
-Se till att det står tydligt i uppgiften att man skall ha en sådan modul.
-
--->
-
-<!--
-1. ER-modellering. Gör några extra övningar från övningsfilen (skall redovisas isåfall uppgift).
-Svårt göra övning per distans.
-
-1. Normalisering
+Gjort modelleringsövning i sal med draw.io: https://goo.gl/vNRvKt
 -->
 
 
@@ -159,18 +134,10 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Node.js terminalprogram mot MySQL med kommandoloop](uppgift/nodejs-terminalprogram-mot-mysql-med-kommandoloop)". Spara alla filer i `me/kmom03/terminal2`.
 
-1. Jobba igenom delen "Koppla tabeller" av guiden "[Kom igång med SQL i MySQL (Koppla tabeller)](guide/kom-igang-med-sql-i-mysql/koppla-tabeller)". Fortsätt spara all SQL-kod i filer i katalogen `me/skolan`.
+1. Fortsätt jobba igenom nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql-v2)". Spara filerna i katalogen `me/skolan` som din redovisning. Detta är sista delen av guiden som vi kommer jobba med.
+    * [Delen: Koppla tabeller](guide/kom-igang-med-sql-i-mysql-v2/koppla-tabeller)
 
 1. Gör uppgiften "[Skapa ER-modell för en databas (konceptuell)](uppgift/skapa-er-modell-for-en-databas-konceptuell)". Visa att du kan jobba enligt en metod för att skapa en databasmodell och redovisa i ett dokument. Detta är första delen av uppgiften som slutförs i kommande kursmoment. Spara allt du gör i `me/kmom03/er1`.
-
-
-<!--
-1. Gör laborationen "[Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler)" för att träna på inbyggda moduler i Node.js. Spara koden i `me/kmom04/node2`.
-
-1. Enkel SQL laboration som visar att studenten kan göra joins/subquery.
-
-1. SQL injections (terminal)
--->
 
 
 

@@ -142,11 +142,13 @@ Krav {#krav}
 
 1. Skapa filen `between.js` som visar samma information som `search.js`, men man kan söka/filtrera och visa alla värden mellan två värden. Man låter användaren mata in `min` och `max` och visar sedan alla löner och kompetenser som är mellan dessa två värden.
 
-1. Validera din kod.
+1. Validera din kod och testa din inlämning.
 
-```bash
+```text
 # Flytta till kurskatalogen
 dbwebb validate terminal1
+
+dbwebb test terminal1
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
