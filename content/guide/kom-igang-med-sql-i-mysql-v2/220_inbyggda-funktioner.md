@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(E, mos) Genomgången inför v2 och MariaDB."
     "2019-01-15": "(B, mos) Manuallänken går nu till 8.0."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -9,16 +10,16 @@ Inbyggda funktioner
 
 Vi tittar på en del av de inbyggda funktioner som finns och hur vi kan använda dem när vi skapar rapporter från databasen.
 
-I referensmanualen finns en sektion som bland annat hanterar de [inbyggda funktionerna](https://dev.mysql.com/doc/refman/8.0/en/functions.html).
+I referensmanualen finns en sektion som bland annat hanterar de [inbyggda funktionerna](https://mariadb.com/kb/en/built-in-functions/).
 
-Spara dina konstruktioner i filen `dml_func.sql`.
+Spara dina konstruktioner i filen `dml-func.sql`.
 
 
 
 Strängfunktioner {#string}
 ----------------------------------
 
-Leta reda på stycket som hanterar [strängfunktioner](http://dev.mysql.com/doc/refman/8.0/en/string-functions.html).
+Leta reda på stycket som hanterar [strängfunktioner](https://mariadb.com/kb/en/string-functions/).
 
 1. Skriv en SELECT-sats som skriver ut förnamn + efternamn + avdelning i samma kolumn enligt följande struktur: `förnamn efternamn (avdelning)`. (Tips: Att slå ihop strängar kallas att konkatenera/concatenate).
 2. Gör om samma sak men skriv ut avdelningens namn med små bokstäver och begränsa utskriften till 3 rader.
@@ -41,10 +42,10 @@ I sista steget kan det se ut så här.
 Datum och tid {#datum}
 ----------------------------------
 
-Titta i stycket med funktioner för [datum och tid](http://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html).
+Titta i stycket med funktioner för [datum och tid](https://mariadb.com/kb/en/date-time-functions/).
 
 1. Skriv en SELECT-sats som endast visar dagens datum.
-3. Gör en SELECT-sats som visar samtliga lärare, deras födelseår samt dagens datum och klockslag.
+2. Gör en SELECT-sats som visar samtliga lärare, deras födelseår samt dagens datum och klockslag.
 
 Det kan se ut så här i sista uppgiften.
 
@@ -73,7 +74,7 @@ Vi vill nu beräkna och visa lärarnas ålder, kan du hitta en inbyggd funktion 
 
 1. Skriv en SELECT-sats som beräknar lärarens ålder, sortera rapporten för att visa vem som är äldst och yngst.
 
-Så här kan svaret se ut.
+Så här kan svaret se ut. Tänk på att åldern ökar med ett varje år och nedanstående facit gjordes för ett par år sedan.
 
 ```sql
 +-----------+------------+--------+

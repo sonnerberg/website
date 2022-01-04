@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(E, mos) Genomgången inför v2 och MariaDB."
     "2019-01-15": "(B, mos) Genomgången och bytte namn på vyn."
     "2017-12-29": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -9,7 +10,7 @@ Joina tabell
 
 Vi jobbar vidare med lönerevisionen och joinar två tabeller för att kontrollera hur många % löneökning respektive individ har fått.
 
-Spara den SQL-kod du skriver i filen `dml_join.sql`.
+Spara den SQL-kod du skriver i filen `dml-join.sql`.
 
 De frågorna vi vill besvara är alltså följande.
 
@@ -18,7 +19,7 @@ De frågorna vi vill besvara är alltså följande.
 
 Låt oss nu lösa dem.
 
-Som en introduktion så kikar du snabbt i [refmanualen om JOIN](https://dev.mysql.com/doc/refman/8.0/en/join.html).
+Som en introduktion så kikar du snabbt i [refmanualen om JOIN](https://mariadb.com/kb/en/join-syntax/).
 
 
 
@@ -79,12 +80,14 @@ mysql> SELECT
 
 Vi kopplar ihop informationen från två tabeller och matchar de raderna där JOIN-villkoret för ON stämmer. Det ger oss rapporten där läraren visas med sin nya och gamla lön på en och samma rad.
 
+Om vi missar att skriva ett ON villkor så får man en cross-join som innehåller lika många rader som om man multiplicerar antalet rader i de tabeller man joinar.
+
 
 
 Rapport från lönerevisionen {#proc}
 ----------------------------------
 
-Nu är det egentligen rätt enkelt. Nu behöver vi bara jämföra och räkna ut förhållandet mellan den gamla och den nya lönen. Det vore trevligt att se både den procentuella höjningen och höjningen i kronor samt ett varningstecken om löneökningen inte uppnår lägsta nivån om 3%.
+Nu kan vi jämföra och räkna ut förhållandet mellan den gamla och den nya lönen. Det vore trevligt att se både den procentuella höjningen och höjningen i kronor samt ett varningstecken om löneökningen inte uppnår lägsta nivån om 3%.
 
 Dessutom vill man kunna se nuvarande och gamla kompetensen samt skillnaden mellan dem.
 
@@ -137,7 +140,7 @@ mysql> SELECT
 8 rows in set (0.01 sec)
 ```
 
-Se till att din rapport ser exakt likadan ut som min. Ta det som en utmaning. 
+Se till att din rapport ser exakt likadan ut som min. Ta det som en utmaning.
 
 Det kan finnas någon extra svårighet i att lyckas, sök i manualen efter lösningar, kanske handlar det om hur man skriver ett IF-statement inuti en SELECT-sats för att hantera utskriften av "ok/nok", kanske är det något annat du upplever som utmanande. Kämpa.
 

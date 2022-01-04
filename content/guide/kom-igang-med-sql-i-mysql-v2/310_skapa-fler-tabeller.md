@@ -13,14 +13,14 @@ Låt oss bygga vidare på vår databas. Följande är önskemålen för vår dat
 
 Låt oss skapa tabellerna för kurs och kurstillfalle.
 
-Spara den SQL-kod du skriver i filen `ddl_more_tables.sql`.
+Spara den SQL-kod du skriver i filen `ddl-more-tables.sql`.
 
 
 
 Tabell för kurs {#kurs}
 ----------------------------------
 
-Låt oss börja med att skapa tabellen för kurs.
+Börja med att skapa tabellen för kurs.
 
 > En kurs har en kod som är unik för varje kurs. Kursen har ett namn och poäng som visar hur lång/stor kursen är. Kurser delas in i en nivå som motsvarar dess svårighetsgrad.
 
@@ -38,7 +38,7 @@ Skriv SQL-koden för att skapa tabellen.
 Tabell för kurstillfalle {#kurstillfalle}
 ----------------------------------
 
-Vi fortsätter att skapa tabellen kurstillfalle.
+Skapa nu tabellen kurstillfalle.
 
 > Varje kurs ges vid ett kurstillfälle. Ett kurstillfälle har en kursansvarig lärare och kursen ges i en viss läsperiod.
 

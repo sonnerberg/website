@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(E, mos) Genomgången inför v2 och MariaDB."
     "2021-01-26": "(E, mos) Formulering på uppgift 4."
     "2019-02-03": "(D, mos) Två rader bör bli svaret på 2)."
     "2019-02-01": "(C, mos) Omskriven för att bli tydligare."
@@ -12,7 +13,7 @@ Aggregerande funktioner HAVING
 
 Vi jobbar med inbyggda aggregerande funktioner som kan beräkna värdet över många rader och vi ser hur vi kan göra urval av de rader som beräknas (WHERE) och urval av de rader som visas i rapporten (HAVING).
 
-Fortsätt spara dina konstruktioner i filen `dml_agg.sql`.
+Fortsätt spara dina konstruktioner i filen `dml-agg.sql`.
 
 
 
@@ -335,7 +336,7 @@ Här är ett par minnesregler.
 
 > "WHERE kommer innan GROUP BY och HAVING kommer efter".
 
-> "HAVING är för aggregerade värde.".
+> "HAVING är för aggregerade värden.".
 
 
 

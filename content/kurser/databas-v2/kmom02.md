@@ -22,7 +22,7 @@ Detta kursmoment är inte uppdaterat inför VT22.
 
 [/WARNING]
 
-Vi jobbar vidare med SQL och tränar på enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
+Vi jobbar vidare med SQL och tränar på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
 Du kommer även börja jobba med JavaScript och Node.js för att se hur du kan koppla dig till en MySQL databas via ett applikationsspråk. Detta innebär att du behöver installera en labbmiljö med Node.js och pakethanteraren npm samt att du kommer igång med grunderna i programmeringsspråket JavaScript och specifikt hur JavaScript används tillsammans med Node.js.
 
@@ -72,15 +72,13 @@ Titta på följande inspelade föreläsningar.
 
 ### Databasteknik {#dbteknik}
 
-Läs följande som är relaterat till databaser och SQL.
+Läs i kursboken följande som är relaterat till databaser och SQL.
 
 1. [Databasteknik](kunskap/boken-databasteknik) om mer SQL.
     * Kap 8: Mer om SQL: Aggregatfunktioner, null-värden, yttre join
     * Kap 21: SQL inuti ett program
 
-Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
-
-Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går utanför kursens ram men läs vid intresse.
+Det finns ytterligare ett kapitel i boken som är relaterat till bakgrunden av SQL, det går utanför kursens ram men läs vid intresse.
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 11: Relationsalgebra
@@ -89,9 +87,9 @@ Det finns ytterligare ett kapitel i boken som är relaterat till SQL, det går u
 
 ### JavaScript {#javascript}
 
-Läs följande som är relaterat till programmeringsspråket JavaScript och Node.js.
+Gå igenom följande läsanvisningar som är relaterade till programmeringsspråket JavaScript och Node.js.
 
-1. Bekanta dig med boken "[Boken: JavaScript for impatient programmers](https://dbwebb.se/kunskap/boken-javascript-for-impatient-programmers)" och se den som en resurs och uppslagsverk för programmeringsspråket JavaScript. Använd dina kunskaper om programmeringsspråk i allmänhet och se hur det relaterar till programmeringsspråket JavaScript.
+1. Bekanta dig översiktligt med boken "[Boken: JavaScript for impatient programmers](https://dbwebb.se/kunskap/boken-javascript-for-impatient-programmers)" och se den som en resurs och uppslagsverk för programmeringsspråket JavaScript. Använd dina kunskaper om programmeringsspråk i allmänhet och se hur det relaterar till programmeringsspråket JavaScript.
 
 1. Webbplatsen "Mozilla Developers Network (MDN)" är en allmän resurs för webbutveckling och där finns en referensmanual för språket JavaScript. För en snabb introduktion till konstruktionerna i språket JavaScript kan jag rekommendera dokumentet "[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)" och följande inledande kapitel.
     * Introduction
@@ -100,7 +98,7 @@ Läs följande som är relaterat till programmeringsspråket JavaScript och Node
 
 1. Node.js låter dig köra JavaScript utan en webbläsare. Via webbplatsen för Node.js finner du [referensdokumentationen](https://nodejs.org/en/docs/) till de delar och moduler som är specifika för Node.js/JavaScript. Node.js innehåller ett API som bland annat ger dig tillgång till operativsystemets resurser och låter dig skriva terminalprogram.
 
-1. Som ett alternativ kan du kika på guiden "[Programmering med grunderna i JavaScript](https://dbwebb.se/guide/javascript1/introduktion)". Guiden är på svenska och främst skriven för JavaScript i webbläsaren, men den kan ge dig viss grundläggande kunskap i språket JavaScript som hjälper dig att komma igång med språkets byggstenar.
+1. Som ett alternativ kan du kika på guiden "[Programmering med grunderna i JavaScript](guide/javascript1/introduktion)". Guiden är på svenska och främst skriven för JavaScript i webbläsaren, men den kan ge dig viss grundläggande kunskap i språket JavaScript som hjälper dig att komma igång med språkets byggstenar.
 
 
 
@@ -108,7 +106,7 @@ Läs följande som är relaterat till programmeringsspråket JavaScript och Node
 
 Läs följande:
 
-1. I kursen används validatorer och en kodstandard för att testa att du skriver kod på ett, enligt kodstandarden, acceptabelt sätt. Du kan läsa kort om dbwebb-kodstandarden på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide). Du kan diskutera [kodstandarden i forumet](t/6327).
+1. I kursen används validatorer och en kodstandard för att testa att du skriver kod på ett, enligt kodstandarden, acceptabelt sätt. Du kan läsa kort om dbwebb-kodstandarden på [npm javascript-code-style](https://www.npmjs.com/package/javascript-style-guide).
 
 
 
@@ -139,25 +137,8 @@ Båda uppgifterna bygger på att du klarat av första delen av SQL-guiden från 
 
 1. Lös uppgiften "[Node.js terminalprogram mot MySQL (v2)](uppgift/nodejs-terminalprogram-mot-mysql-v2)". Spara alla filer i `me/kmom02/terminal1`.
 
-1. Jobba igenom delen "Mer SQL" av guiden "[Kom igång med SQL i MySQL (Mer SQL)](guide/kom-igang-med-sql-i-mysql/mer-sql)". Fortsätt spara all SQL-kod i filer i katalogen `me/skolan`.
-
-
-<!--
-Enkel SQL laboration som visar att studenten kan göra joins/subquery.
-
-1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
-
-1. Gör laborationen "[Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs)" för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
-
--->
-
-
-
-### Extra {#extra}
-
-Gör följande extrauppgifter om du har tid och lust.
-
-1. Jobba igenom guiden "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)" för att lära dig hur du jobbar mer effektivt i terminalen med tmux. Tmux ger dig möjlighet att dela in din terminal i olika flikar och varje flik i olika delar.
+1. Fortsätt jobba igenom nästa del av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql-v2)". Spara filerna i katalogen `me/skolan` som din redovisning. I nästa kmom fortsätter du med nästa del i guiden.
+    * [Tredje delen: Mer SQL](guide/kom-igang-med-sql-i-mysql-v2/mer-sql)
 
 
 

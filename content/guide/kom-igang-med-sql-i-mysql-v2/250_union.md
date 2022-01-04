@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(E, mos) Genomgången inför v2 och MariaDB."
     "2019-01-15": "(C, mos) Uppdaterade SQL-koden med namngivning."
     "2018-02-09": "(B, mos) Genomgången, mindre typo."
     "2017-12-29": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -10,11 +11,11 @@ UNION och slå samman tabeller
 
 Vi skall slå samman raderna från två tabeller i ett resultset.
 
-Spara den SQL-kod du skriver i filen `dml_union.sql`.
+Spara den SQL-kod du skriver i filen `dml-union.sql`.
 
 Vi jobbar vidare med lönerevisionen och vi vill granska utfallet.
 
-Som en inledningen så kikar du i [refmanualen om UNION](https://dev.mysql.com/doc/refman/8.0/en/union.html).
+Som en inledningen så kikar du i [refmanualen om UNION](https://mariadb.com/kb/en/union/).
 
 
 
@@ -46,7 +47,7 @@ Fråga mig inte varför jag nu använder engelska benämningar ovan. Troligen ä
 
 I ovan så slår jag samman resultatet från två källor, med källans namn som extra kolumn, och sorterar per akronym. Jag behöver källans namn som en extra kolumn för att kunna skapa rapporter som jämför ny och gammal lön, jag behöver veta vilken lön som är gammal och vilken som är ny.
 
-Säg att jag bara vill skriva ut delar av resultatet, och kanske begränsa vilka rader som skrivs ut, då kan jag omringa frågan med `()` och använda resultatet som ett implicit resultset, eller [_derived table_](https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html) som är en form av _subquery_, en fråga i en fråga.
+Säg att jag bara vill skriva ut delar av resultatet, och kanske begränsa vilka rader som skrivs ut, då kan jag omringa frågan med `()` och använda resultatet som ett implicit resultset, eller [_derived table_](https://mariadb.com/kb/en/derived-table-with-key-optimization/) som är en form av _subquery_, en fråga i en fråga.
 
 Jag kan då skapa en fråga som ser ut så här. I mitt fall blir min UNION ett resultset, ett derived table, som jag omringar med `()` och ger namnet `lon` och då kan använda som en vanlig tabell.
 

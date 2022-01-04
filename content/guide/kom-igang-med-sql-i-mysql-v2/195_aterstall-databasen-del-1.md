@@ -11,7 +11,7 @@ revision:
 Återställ databasen (del 1)
 ==================================
 
-Jag vet att jag tjatar om att återställa databasen med dina skriptfiler. Men det är en viktig självkontroll som du kan göra. Om du kan köra alla dina skript i sekvens, och få samma resultat som jag, så visar det att du har "rätt" så här långt i övningen. Det blir en självkontroll som visar att man är på rätt väg.
+Låt oss slutligen gå igenom det här med återställning av databasen en gång till. Det är en viktig självkontroll som du kan göra. Om du kan köra alla dina skript i sekvens, och få samma resultat som jag, så visar det att du har "rätt" så här långt i övningen. Det blir en självkontroll som visar att man är på rätt väg.
 
 I denna delen skall du skapa skriptet `reset-part-1.sql`.
 
@@ -89,6 +89,8 @@ FROM larare;
 ```
 
 Gå igenom vad som händer i skriptet och försök förklara för dig själv hur det fungerar.
+
+När du kör skriptet måste du stå i samma katalog där filerna finns. Det är enklast att göra detta i terminalen, det blir svårare att jobba med sökvägar i Workbench, man behöver då jobba mer med absoluta sökvägar. Rekommendationen är att göra liknande saker i terminalen för att det blir enklare med sökvägarna till skripten.
 
 Det skall vara enkelt att jobba med databaser. Det blir enkelt om man har ordning på sina filer och vet hur man kan jobba med dem.
 

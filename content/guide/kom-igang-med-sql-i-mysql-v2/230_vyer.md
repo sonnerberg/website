@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(E, mos) Genomgången inför v2 och MariaDB."
     "2019-01-15": "(B, mos) Manuallänkar till 8.0 och bytte namn på vyerna."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -9,9 +10,9 @@ Vyer
 
 Vyer är smidiga när SELECT-satserna blir lite väl stora. Vi kan se på vyer som ett alias eller kortkommando för en SELECT-sats.
 
-I referensmanualen kan du läsa [om vyer](https://dev.mysql.com/doc/refman/8.0/en/create-view.html).
+I referensmanualen kan du läsa [om vyer](https://mariadb.com/kb/en/create-view/).
 
-Spara dina konstruktioner i filen `dml_view.sql`.
+Spara dina konstruktioner i filen `dml-view.sql`.
 
 
 
@@ -44,7 +45,7 @@ Nu skapar vi en vy av samma SELECT.
 
 ```sql
 -- Skapa vyn
-CREATE VIEW v_name_alder
+CREATE VIEW v_namn_alder
 AS
 SELECT
 	CONCAT(fornamn, ' ', efternamn, ' (', LOWER(avdelning), ')') AS Namn,
@@ -52,7 +53,7 @@ SELECT
 FROM larare;
 
 -- Använd vyn
-SELECT * FROM v_name_alder;
+SELECT * FROM v_namn_alder;
 ```
 
 Jag använder `v_` som prefix för mina vyer. Jag använder små bokstäver för vy-namnet separerar med underscore.
@@ -64,7 +65,7 @@ När jag gör en SELECT mot vyn så blir det samma sak som att göra en SELECT d
 Som vanligt kan vi begränsa urvalet med WHERE, ORDER BY och LIMIT.
 
 ```sql
-mysql> SELECT * FROM v_name_alder
+mysql> SELECT * FROM v_namn_alder
     -> WHERE Namn LIKE '%di%'
     -> ORDER BY Ålder DESC
     -> LIMIT 3;
@@ -112,4 +113,4 @@ Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser,
 
 Se till att du har ordning på CREATE/DROP och IF EXISTS så att filen går att köra oavsett om vyn från början finns eller inte.
 
-Tänk också på att vi nu har ett par DDL-konstruktioner i denna filen som vi döpt med prefixet `dml_`. Vi behöver alltså köra denna filen när vi återskapar databasen. Normalt hade vi troligen lagt samtliga DDL i en egen fil, men för att guiden skall flyta på så fortsätter vi att ha konstruktionerna uppdelade i olika filer.
+Tänk också på att vi nu har ett par DDL-konstruktioner i denna filen som vi döpt med prefixet `dml-`. Vi behöver alltså köra denna filen när vi återskapar databasen. Normalt hade vi troligen lagt samtliga DDL i en egen fil, men för att guiden skall flyta på så fortsätter vi att ha konstruktionerna uppdelade i olika filer.

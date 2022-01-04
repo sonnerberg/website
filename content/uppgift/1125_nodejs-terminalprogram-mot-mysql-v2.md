@@ -24,7 +24,7 @@ Du skall bygga terminalprogram med JavaScript i Node.js som skapar rapporter och
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom första delarna av guiden "[Kom igång med SQL i MySQL](guide/kom-igang-med-sql-i-mysql/grunderna)".
+Du har jobbat igenom första delarna av guiden "[Kom igång med SQL i MySQL (v2)](guide/kom-igang-med-sql-i-mysql-v2/mer-sql)".
 
 Du har jobbat igenom artikeln "[MySQL och Node.js (v2)](kunskap/mysql-och-nodejs-v2)".
 
@@ -76,13 +76,13 @@ Searching for: 7
 $ node search.js
 What to search for? al
 Searching for: al
-+-----------+---------------------+-----------+----------+------+------------+ 
-| Akronym   | Namn                | Avdelning |   Lön    | Komp | Född       | 
-|-----------|---------------------|-----------|----------|------+------------+ 
-| ala       | Alastor Moody       | DIPT      |     27594|     1| 1943-04-03 | 
-| dum       | Albus Dumbledore    | ADM       |     85000|     7| 1941-04-01 | 
-| min       | Minerva McGonagall  | DIDD      |     49880|     2| 1955-05-05 | 
-+-----------+---------------------+-----------+----------+------+------------+ 
++-----------+---------------------+-----------+----------+------+------------+
+| Akronym   | Namn                | Avdelning |   Lön    | Komp | Född       |
+|-----------|---------------------|-----------|----------|------+------------+
+| ala       | Alastor Moody       | DIPT      |     27594|     1| 1943-04-03 |
+| dum       | Albus Dumbledore    | ADM       |     85000|     7| 1941-04-01 |
+| min       | Minerva McGonagall  | DIDD      |     49880|     2| 1955-05-05 |
++-----------+---------------------+-----------+----------+------+------------+
 ```
 
 Liksom dessa jämförelser.
@@ -113,11 +113,13 @@ Searching for values between 3 - 7
 +-----------+---------------------+-----------+----------+------+------------+
 ```
 
+
+
 ### Strukturera i modul {#modul}
 
 I uppgiften finns det ett krav om att du skall strukturera din kod i minst en modul. Tanken är att lägga funktioner i externa moduler och göra require på dem in i main-modulen.
 
-Vi vill ha små main-moduler och lyfta ut de funktioner som är möjliga. De är potentiellt kandidater till att dela mellan olika main-moduler.
+Vi vill ha små mainprogram och vi vill lyfta ut funktioner till moduler som kan delas mellan olika mainprogram.
 
 Du lärde dig om hur man skapar moduler i stycket "[Skapa funktioner i filer i artikeln JavaScript och Node.js](https://dbwebb.se/kunskap/javascript-och-nodejs#funcfil)". Gå tillbaka dit och läs om du behöver stöd för att skapa dina moduler.
 
@@ -128,11 +130,11 @@ Krav {#krav}
 
 1. Varje fil du skapar skall innehålla ett filhuvud med ett kommentarsstycke där du anger dig själv som författare.
 
-1. Du får inte använda någon extra extern npm-modul för att lösa uppgiften, förutom de moduler som krävs för databasen MySQL.
+1. Du är tillåtet att använda externa npm moduler för att till exempel skapa en bättre tabellutskrift när man skriver ut resultatet.
 
-1. Du skall strukturera din kod i egna moduler och använda funktioner och/eller klasser. Main-filerna skall vara så små som möjligt och göra anrop till klasser/funktioner som i sin tur anropar databasen och skapar rapporterna. Du måste ha minst en modul som du inkluderar och använder i respektive main-program.
+1. Du skall strukturera din kod i egna moduler och använda funktioner och/eller klasser. Mainprogrammen skall vara så små som möjligt och göra anrop till klasser/funktioner som i sin tur anropar databasen och skapar rapporterna. Du måste ha minst en modul som du inkluderar och använder i respektive mainprogram.
 
-1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av respektive fil/main-program.
+1. Inloggningsdetaljer till databasen skall sparas i `config.json` och läsas in av respektive fil- och/eller mainprogram.
 
 1. Skapa filen `teacher.js` som skall visa information om lärare, inklusive akronym, namn, avdelning, lön, kompetens och födelsedatum (YYYY-MM-DD).
 
@@ -158,6 +160,8 @@ Gör följande om du har tid och lust.
 
 1. Kan du göra en mer flexibel utskrift av textabellen, så att man kan skriva ut godtyckligt antal kolumner och där kolumner har olika bredd? Det hade gjort att din tabellutskrift kan användas i andra sammanhang.
 
+1. Det finns färdiga npm-paket som kan hjälpa dig att skriva ut resultatet i tabeller. Pröva gärna något av dem och se om det blir enklare.
+
 
 
 Tips från coachen {#tips}
@@ -166,5 +170,3 @@ Tips från coachen {#tips}
 [Hur formatterar man ett datum i JavaScript?](t/8220)
 
 [Formattera datum i (My)SQL](t/8222)
-
-Lycka till och hojta till i forumet om du behöver hjälp!

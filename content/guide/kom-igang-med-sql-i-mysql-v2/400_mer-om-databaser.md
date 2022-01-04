@@ -2,7 +2,7 @@
 sectionHeader: true
 linkable: true
 ...
-Koppla tabeller
+Mer om databaser
 =======================
 
 [WARNING]

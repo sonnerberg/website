@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(E, mos) Genomgången inför v2 och MariaDB."
     "2020-01-28": "(E, nik) La till notis om 'GROUP BY clause and contains nonaggregated column'"
     "2019-02-07": "(D, mos) Uppdaterade rubriker för sista uppgiften."
     "2019-02-01": "(C, mos) Genomgången efter feedback från studenter."
@@ -12,14 +13,14 @@ Aggregerande funktioner
 
 Vi jobbar med inbyggda aggregerande funktioner som kan beräkna värdet över många rader.
 
-Spara dina konstruktioner i filen `dml_agg.sql`.
+Spara dina konstruktioner i filen `dml-agg.sql`.
 
 
 
 Om aggregerande funktioner {#om}
 ----------------------------------
 
-Vi kan se vilken lärare som har högst eller minst lön. För att göra det behöver vi gå igenom alla rader i tabellen och se vilken rad som innehåller det minsta respektive det högsta värdet.
+Vi kan se vilken lärare som har högst och  minst lön. För att göra det behöver vi gå igenom alla rader i tabellen och se vilken rad som innehåller det minsta respektive det högsta värdet.
 
 Med aggregerande funktioner kan vi lösa detta. Du har tidigare summerat lönesumman med den aggregerande funktionen `SUM()` som summerar lönesumman för alla rader.
 
@@ -30,10 +31,9 @@ mysql> SELECT SUM(lon) FROM larare;
 +----------+
 |   330242 |
 +----------+
-1 row in set (0.00 sec)
 ```
 
-Du kan läsa om [aggregerande funktioner i MySQL manualen](https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.html).
+Du kan läsa om [aggregerande funktioner i manualen](https://mariadb.com/kb/en/group-by/).
 
 
 
@@ -59,7 +59,6 @@ mysql> SELECT AVG(kompetens) FROM larare;
 +----------------+
 |         2.3750 |
 +----------------+
-1 row in set (0.00 sec)
 ```
 
 Men, om vi vill se kompetensen per avdelning, så behöver vi gruppera den aggregerande funktionen per avdelning. Det gör vi med GROUP BY.
@@ -89,7 +88,6 @@ mysql> SELECT
 | ADM       |         4.0000 |
 | DIDD      |         1.5000 |
 +-----------+----------------+
-3 rows in set (0.00 sec)
 ```
 
 Nu ser vi medelkompetensen per avdelning och kan till exempel se vilken avdelning där vi främst behöver höja kompetensen.
@@ -140,6 +138,10 @@ Använd de inbyggda aggregerande funktionerna `SUM()`, `COUNT()`, och `AVG()` ti
 
 Aggregerande betyder att de räknar samman värden baserat på många rader i tabellen. Dubbelkolla alltid mot din värdemängd, innehållet i tabellerna, om dina svar känns rimliga.
 
+<!--
+
+Troligen MySQL specifikt.
+
 [INFO]
 
 Följande felmeddelande kan uppstå:
@@ -149,6 +151,7 @@ Följande felmeddelande kan uppstå:
 Se följande forumtråd för mer information: [GROUP BY clause and contains nonaggregated column](https://dbwebb.se/forum/viewtopic.php?f=13&t=8909)
 
 [/INFO]
+-->
 
 Gör nu följande rapport.
 
@@ -162,7 +165,6 @@ Ditt svar kan se ut så här.
 +-----------+-----------+
 | ADM       |    4.0000 |
 +-----------+-----------+
-1 row in set (0.00 sec)
 ```
 
 Gör ytterligare en rapport.
@@ -180,7 +182,7 @@ Gör ytterligare en rapport.
 | DIDD      |         2 |    49880 |        1 |
 | DIPT      |         1 |    27594 |        2 |
 | DIPT      |         2 |    45000 |        1 |
-+-----------+-----------+-----------------+----------+
++-----------+-----------+----------+----------+
 7 rows in set (0.00 sec)
 ```
 
