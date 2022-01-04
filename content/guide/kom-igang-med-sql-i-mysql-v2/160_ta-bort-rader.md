@@ -40,4 +40,4 @@ Det sista kommandot bör ha raderat 2 lärare (2 rader i tabellen).
 
 När du raderar rader så kan det vara bra att lägga till en `LIMIT` klausul som säger hur många rader du raderar. Annars finns risken att en liten felskrivning i satsen gör att du raderar hela innehållet i tabellen. Ta för vana att alltid använda LIMIT.
 
-När du är klar, återskapa alla lärare genom att köra SQL-kommandon från filen `dml-insert-larare.sql`. Du skall nu återigen ha en tabell med samtliga lärare.
+När du är klar, återskapa alla lärare genom att köra SQL-kommandon från filen `insert-larare.sql`. Du skall nu återigen ha en tabell med samtliga lärare.

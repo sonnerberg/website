@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(C, mos) Genomgången inför v2 och MariaDB."
     "2019-01-28": "(B, mos) Uppdaterad och flyttade reset till nästa artikel."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -13,7 +14,7 @@ Låt oss bygga vidare på vår databas. Följande är önskemålen för vår dat
 
 Låt oss skapa tabellerna för kurs och kurstillfalle.
 
-Spara den SQL-kod du skriver i filen `ddl-more-tables.sql`.
+Spara den SQL-kod du skriver i filen `ddl.sql`.
 
 
 
@@ -64,7 +65,7 @@ En primärnyckel är den kolumn, eller en kombination av två eller fler kolumne
 
 Man börjar med att använda de kolumner som finns i tabellen, ibland räcker de inte och man kan då skapa en surrogatnyckel som man använder till primärnyckel.
 
-I tabellen kurstillfalle finns kolumnen "id", det är en kolumn som egentligen inte behövs enligt vår databasmodell eller beskrivningen som finns för tabellen, men den är bra att ha och kan förenkla hanteringen och låter oss få en enkel primärnyckel till tabellen.
+I tabellen kurstillfalle finns kolumnen "id", det är en kolumn som egentligen inte behövs enligt beskrivningen som finns för tabellen, men den är bra att ha och kan förenkla hanteringen och låter oss få en enkel primärnyckel till tabellen.
 
 
 
@@ -96,7 +97,7 @@ CREATE TABLE kurstillfalle
 );
 ```
 
-Uppdatera hur du skapar tabellen så att du anger främmande nycklar som en constraint, ett integritetsvillkor.
+Uppdatera hur du skapar tabellen så att du anger främmande nycklar som en constraint, ett integritetsvillkor. Det gör det tydligt hur du har valt att koppla (länka) dina tabeller med varandra.
 
 
 
@@ -121,61 +122,69 @@ DROP TABLE IF EXISTS kurstillfalle;
 DROP TABLE IF EXISTS kurs;
 ```
 
+Tänk att tabellerna är länkade tillsammans och du måste börja droppa den som inte har någon annan tabell länkad till sig. Om man visualiserar tabellernas koppling som en trädstruktur så börjar man droppa de tabeller som är löven längst ut.
+
 Uppdatera så att din fil kan köra alla SQL-kommandon i sekvens.
 
 
 
-Storage engines {#storage}
+Visa SQL-koden för CREATE TABLE {#showcreate}
 ----------------------------------
 
-I MySQL finns det olika lagringssätt för tabeller, så kallade "storage engines". De säger hur tabellerna lagras och styr vilka algoritmer som gäller för sökning i tabellerna. De vanligaste är MyISAM och InnoDB.
+Du kan visa hur en tabell är skapad med kommandot SHOW CREATE TABLE. Det ger dig detaljer för tabellen och visar den SQL CREATE TABLE som användes för att skapa tabellen.
 
-MyISAM tar inte hänsyn till den integritetskoll som 'FOREIGN KEY' antyder. Det gör dock InnoDB.
-
-Man anger vilket lagringssätt som skall användas när man skapar tabellen, om man inte anger det så används det som är standard för databasen, eller standard för installationen av databasmotorn. Vilken lagringsmotor som är standard kan skilja mellan installation så det är alltid bäst att ange den för att vara säker. Vid intresse kan du läsa kort om [MySQL och Storage Engines](http://dev.mysql.com/doc/refman/8.0/en/storage-engines.html).
+Så här ser det nu ut.
 
 ```sql
---
--- Ange vilket sätt som tabeller skall lagras på
---
-CREATE TABLE t1 (i INT) ENGINE MYISAM;
-CREATE TABLE t2 (i INT) ENGINE INNODB;
+MariaDB [skolan]> SHOW CREATE TABLE kurs \G
+*************************** 1. row ***************************
+       Table: kurs
+Create Table: CREATE TABLE `kurs` (
+  `kod` char(6) NOT NULL,
+  `namn` varchar(40) DEFAULT NULL,
+  `poang` float DEFAULT NULL,
+  `niva` char(3) DEFAULT NULL,
+  PRIMARY KEY (`kod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+1 row in set (0.001 sec)
 ```
 
-Vi använder INNODB som är den senaste versionen av storage engines och normalt är den standard vid nyinstallationer.
+Jag använder `\G` för att låta MySQL skriva ut resultatet rad för rad, istället för den vanliga med kolumn för kolumn.
 
-Uppdatera din fil så att du explicit anger INNODB som storage engine.
+```sql
+MariaDB [skolan]> SHOW CREATE TABLE kurstillfalle \G
+*************************** 1. row ***************************
+       Table: kurstillfalle
+Create Table: CREATE TABLE `kurstillfalle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kurskod` char(6) NOT NULL,
+  `kursansvarig` char(3) NOT NULL,
+  `lasperiod` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `kurskod` (`kurskod`),
+  KEY `kursansvarig` (`kursansvarig`),
+  CONSTRAINT `kurstillfalle_ibfk_1` FOREIGN KEY (`kurskod`) REFERENCES `kurs` (`kod`),
+  CONSTRAINT `kurstillfalle_ibfk_2` FOREIGN KEY (`kursansvarig`) REFERENCES `larare` (`akronym`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+1 row in set (0.001 sec)
+```
+
+Kommandot SHOW TABLE är bra när man inspekterar en databas, när man vill se hur tabellerna är uppbyggda.
+
+Vissa saker är automatiskt tillagda i CREATE ovan, det kan till exempel vara ENGINE och DEFAULT CHARSET och namngivningarna på CONSTRAINT. Dessa kan alltså skilja mellan min utskrift ovan och din egen utskrift. Liknande saker kommer från databasens defaultinställningar. Det kan alltså vara ett bra verktyg att göra SHOW CREATE TABLE när man felsöker.
 
 
 
-Specificera teckenkodning {#ddlcharset}
+Kontrollera filen {#filen}
 ----------------------------------
 
-Uppdatera hur du skapar tabellerna och ange explicit charset till `utf8` och collation till `utf8_swedish_ci` för hela tabellerna.
-
-Du kan ange charset och collation i slutet av dina CREATE statement.
-
-```sql
---
--- Ange teckenkodning för en tabell
---
-CREATE TABLE t1 (i INT) CHARSET utf8 COLLATE utf8_swedish_ci;
-CREATE TABLE t2 (
-    i INT
-)
-ENGINE INNODB
-CHARSET utf8
-COLLATE utf8_swedish_ci
-;
-```
-
-Lägg även denna konstruktion överst i filen, så vet vi att kopplingen mella klient och databas sker med UTF-8 som teckenkodning.
-
-```sql
-SET NAMES 'utf8';
-```
+Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser, i en och samma sekvens, i filen du jobbar i.
 
 
+
+<!--
+
+Detta bör numer inte hända.
 
 Foreign key mellan tabeller {#fklink}
 ----------------------------------
@@ -200,54 +209,4 @@ ALTER TABLE larare_pre CONVERT TO CHARSET utf8 COLLATE utf8_swedish_ci;
 ```
 
 Nu går det åter att skapa ett foreign key constraint mellan tabellerna.
-
-
-
-Visa SQL-koden för CREATE TABLE {#showcreate}
-----------------------------------
-
-Du kan visa hur en tabell är skapad med kommandot SHOW CREATE TABLE. Det ger dig detaljer för tabellen.
-
-Så här ser det nu ut.
-
-```sql
-mysql> SHOW CREATE TABLE kurs \G;
-*************************** 1. row ***************************
-       Table: kurs
-Create Table: CREATE TABLE `kurs` (
-  `kod` char(6) COLLATE utf8_swedish_ci NOT NULL,
-  `namn` varchar(40) COLLATE utf8_swedish_ci DEFAULT NULL,
-  `poang` float DEFAULT NULL,
-  PRIMARY KEY (`kod`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci
-1 row in set (0.00 sec)
-```
-
-Jag använder `\G` för att låta MySQL skriva ut resultatet rad för rad, istället för den vanliga med kolumn för kolumn.
-
-```sql
-mysql> SHOW CREATE TABLE kurstillfalle \G;
-*************************** 1. row ***************************
-       Table: kurstillfalle
-Create Table: CREATE TABLE `kurstillfalle` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `kurskod` char(6) COLLATE utf8_swedish_ci NOT NULL,
-  `kursansvarig` char(3) COLLATE utf8_swedish_ci NOT NULL,
-  `lasperiod` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `kurskod` (`kurskod`),
-  KEY `kursansvarig` (`kursansvarig`),
-  CONSTRAINT `kurstillfalle_ibfk_1` FOREIGN KEY (`kurskod`) REFERENCES `kurs` (`kod`),
-  CONSTRAINT `kurstillfalle_ibfk_2` FOREIGN KEY (`kursansvarig`) REFERENCES `larare` (`akronym`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci
-1 row in set (0.00 sec)
-```
-
-Kommandot SHOW TABLE är bra när man inspekterar en databas, när man vill se hur tabellerna är uppbyggda.
-
-
-
-Kontrollera filen {#filen}
-----------------------------------
-
-Innan du är helt klar så kontrollerar du att du kan köra samtliga SQL-satser, i en och samma sekvens, i filen du jobbar i.
+-->

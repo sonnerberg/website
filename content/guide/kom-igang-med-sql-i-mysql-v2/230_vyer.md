@@ -23,11 +23,11 @@ Låt se på ett exempel där vi jobbar med en vy. Vi vill ha en översikt av lä
 
 ```sql
 mysql> SELECT
-    -> CONCAT(fornamn, ' ', efternamn, ' (', LOWER(avdelning), ')') AS Namn,
-    ->     TIMESTAMPDIFF(YEAR, fodd, CURDATE()) AS Ålder
+    -> CONCAT(fornamn, ' ', efternamn, ' (', LOWER(avdelning), ')') AS namn,
+    ->     TIMESTAMPDIFF(YEAR, fodd, CURDATE()) AS alder
     -> FROM larare;
 +---------------------------+--------+
-| Namn                      | Ålder  |
+| namn                      | alder  |
 +---------------------------+--------+
 | Alastor Moody (dipt)      |     74 |
 | Albus Dumbledore (adm)    |     76 |
@@ -48,8 +48,8 @@ Nu skapar vi en vy av samma SELECT.
 CREATE VIEW v_namn_alder
 AS
 SELECT
-	CONCAT(fornamn, ' ', efternamn, ' (', LOWER(avdelning), ')') AS Namn,
-    TIMESTAMPDIFF(YEAR, fodd, CURDATE()) AS Ålder
+	CONCAT(fornamn, ' ', efternamn, ' (', LOWER(avdelning), ')') AS namn,
+    TIMESTAMPDIFF(YEAR, fodd, CURDATE()) AS alder
 FROM larare;
 
 -- Använd vyn
@@ -67,10 +67,10 @@ Som vanligt kan vi begränsa urvalet med WHERE, ORDER BY och LIMIT.
 ```sql
 mysql> SELECT * FROM v_namn_alder
     -> WHERE Namn LIKE '%di%'
-    -> ORDER BY Ålder DESC
+    -> ORDER BY alder DESC
     -> LIMIT 3;
 +----------------------+--------+
-| Namn                 | Ålder  |
+| namn                 | alder  |
 +----------------------+--------+
 | Alastor Moody (dipt) |     74 |
 | Madam Hooch (didd)   |     69 |
@@ -95,7 +95,7 @@ Resultatet kan se ut så här.
 
 ```sql
 +-----------+-------------+
-| avdelning | Snittålder  |
+| avdelning | Snittalder  |
 +-----------+-------------+
 | ADM       |          69 |
 | DIPT      |          68 |

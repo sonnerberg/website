@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(C, mos) Genomgången inför v2 och MariaDB."
     "2019-01-30": "(B, mos) Genomgång och mindre förtydliganden."
     "2018-01-03": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -9,10 +10,12 @@ Outer join, rader som inte matchar
 
 Vi har joinat tabeller och visat de rader som kan matchas mellan tabellerna. Men hur kan vi se de rader som inte har en matchning. Hur kan vi se de lärare som inte undervisar på kurser och hur kan vi se de kurser som inte har ett kurstillfälle?
 
-Spara den SQL-kod du skriver i filen `dml_outer_join.sql`.
+Spara den SQL-kod du skriver i filen `dml-outer-join.sql`.
 
 [INFO]
-En `JOIN`, eller `INNER JOIN` som den också kallas, visar de rader som kan matchas mellan tabellerna, där ON-villkoret kan uppfyllas. Finns det ingen matchning så visas inte raden.
+En JOIN, eller INNER JOIN som den också kallas, visar de rader som kan matchas mellan tabellerna, där ON-villkoret kan uppfyllas. Finns det ingen matchning så visas inte raden.
+
+En OUTER JOIN kan visa rader där ON villkoret har en matchning i ena tabellen men inte i den andra tabellen.
 [/INFO]
 
 
@@ -72,13 +75,13 @@ Så här kan vi ta reda på vilka lärare som inte undervisar, det är de lärar
 -- Outer join, inkludera lärare utan undervisning
 --
 SELECT DISTINCT
-	l.akronym AS Akronym,
+    l.akronym AS Akronym,
     CONCAT(l.fornamn, " ", l.efternamn) AS Namn,
-	l.avdelning AS Avdelning,
+    l.avdelning AS Avdelning,
     kt.kurskod AS Kurskod
 FROM larare AS l
-	LEFT OUTER JOIN kurstillfalle AS kt
-		ON l.akronym = kt.kursansvarig
+    LEFT OUTER JOIN kurstillfalle AS kt
+        ON l.akronym = kt.kursansvarig
 ;
 ```
 
@@ -179,11 +182,11 @@ För att summera vad vi sagt.
 
 Om INNER JOIN.
 
-> En `JOIN`, eller `INNER JOIN`, visar de rader som kan matchas mellan tabellerna. Finns det ingen matchning så visas inte raden.
+> En JOIN, eller INNER JOIN, visar de rader som kan matchas mellan tabellerna. Finns det ingen matchning så visas inte raden.
 
 Om OUTER JOIN.
 
-> `OUTER JOIN` visar resultat för alla rader i en tabell, även om det inte finns en matchande rad i den andra tabellen.
+> OUTER JOIN visar resultat för alla rader i en tabell, även om det inte finns en matchande rad i den andra tabellen.
 
 LEFT/RIGHT bestämmer vilken tabell som OUTER JOIN utgår från.
 

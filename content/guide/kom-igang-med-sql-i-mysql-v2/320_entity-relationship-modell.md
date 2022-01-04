@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(C, mos) Genomgången inför v2 och MariaDB."
     "2019-01-28": "(B, mos) Genomgången inför vt19."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -9,7 +10,7 @@ Entity Relationship (ER) modell
 
 Låt oss använda MySQL Workbench för att rita ett ER-diagram över de tabeller vi har hittills. Det kan hjälpa oss att få en mental överblick av vilka delar som finns i vår databas.
 
-Entity motsvarar tabellerna och Relationship motsvara de kopplingar som finns mellan tabellerna.
+Entity (entitet) motsvarar tabellerna och Relationship (koppling/relation) motsvara de kopplingar som finns mellan tabellerna.
 
 
 
@@ -39,15 +40,17 @@ Ur diagrammet ovan kan vi utläsa att "kurser har ett eller flera kurstillfälle
 
 Rent strikt är det så att en kurs kan ha 0 eller flera kurstillfällen `0..N` och en lärare kan vara kursansvarig för 0 eller flera kurstillfällen `0..N`. En kurs behöver inte ha kurstillfällen och det finns lärare som inte är kursansvariga. Sådant kategoriserar vi som nyanser i en ER-modell och vi är nöjda med de stora begreppen, den större bilden som ger oss en översikt av tabellerna och dess kopplingar.
 
-Att [modellera och rita ER-diagram från början](kunskap/kokbok-for-databasmodellering), är en egen historia i sig. För tillfället nöjer vi oss med att konstatera att det finns denna typen av diagram och framförallt ser vi att det går bra att skapa diagrammen från en befintlig databas. 
+Att modellera och rita ER-diagram är en egen historia i sig. För tillfället nöjer vi oss med att konstatera att det finns denna typen av diagram och framförallt ser vi att det går bra att skapa diagrammen från en befintlig databas.
 
 
 
 Olika sätt att rita {#rita}
 ----------------------------------
 
-Det finns olika notationer att använda när man ritar ett ER-diagram. Vilken notation man väljer behöver inte spela någon större roll. Välj en som passar i den arbetsgruppen du är medlem i.
+Det finns olika notationer att använda när man ritar ett ER-diagram "för hand". Vilken notation man väljer behöver inte spela någon större roll. Välj en som passar i den arbetsgruppen du är medlem i.
 
 Här är några exempel på vanliga notationer.
 
 [FIGURE src=image/snapvt18/er-notation.png?w=w3 caption="Olika notationer att använda när du ritar ER-diagram."]
+
+Vill du läsa mer om ER-modellering så finns artikeln "[Kokbok för databasmodellering](https://dbwebb.se/kunskap/kokbok-for-databasmodellering)".

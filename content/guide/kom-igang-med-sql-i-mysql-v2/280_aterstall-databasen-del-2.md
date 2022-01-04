@@ -30,7 +30,7 @@ Här är filerna som behövs, och ordningen de körs i. Ordningen är viktig. Ma
 |-------------------------|----------------------|
 | `create-database.sql`   | Skapa om en tom databas. |
 | `ddl-larare.sql`        | Skapa tabellen för lärare. |
-| `dml-insert-larare.sql` | Lägg till rader i tabellen lärare. |
+| `insert-larare.sql` | Lägg till rader i tabellen lärare. |
 | `ddl-alter.sql`         | Uppdatera tabellen lärare och lägg till kompetensen. |
 | `dml-update.sql`        | Förbered lönerevisionen, alla lärare har grundlön. |
 | `ddl-copy.sql`          | Kopiera till larare_pre innan lönerevisionen. |

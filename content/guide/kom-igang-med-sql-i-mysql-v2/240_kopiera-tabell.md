@@ -35,7 +35,7 @@ Du kan göra det genom att köra följande kommandon.
 
 ```text
 mariadb --table skolan < ddl-larare.sql
-mariadb --table skolan < dml-insert-larare.sql
+mariadb --table skolan < insert-larare.sql
 mariadb --table skolan < ddl-alter.sql
 mariadb --table skolan < dml-update.sql
 mariadb skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
@@ -131,7 +131,7 @@ Du kan göra det genom att köra följande kommandon.
 
 ```text
 mariadb --table skolan < ddl-larare.sql
-mariadb --table skolan < dml-insert-larare.sql
+mariadb --table skolan < insert-larare.sql
 mariadb --table skolan < ddl-alter.sql
 mariadb --table skolan < dml-update.sql
 mariadb --table skolan < dml-copy.sql

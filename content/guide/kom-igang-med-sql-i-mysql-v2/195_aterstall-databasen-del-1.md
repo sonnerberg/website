@@ -28,7 +28,7 @@ Följande är de filer som behöver köras för att återställa databasen från
 |-------------------------|----------------------|
 | `create-database.sql`   | Skapa om en tom databas. |
 | `ddl-larare.sql`        | Skapa tabellen för lärare. |
-| `dml-insert-larare.sql` | Lägg till rader i tabellen lärare. |
+| `insert-larare.sql`     | Lägg till rader i tabellen lärare. |
 | `ddl-alter.sql`         | Uppdatera tabellen lärare och lägg till kompetensen. |
 | `dml-update.sql`        | Förbered lönerevisionen, alla lärare har grundlön. |
 | `dml-update-lonerevision.sql`  | Utför lönerevisionen. |
@@ -38,7 +38,7 @@ Här är de skript du behöver köra för att återställa databasen. Du kan mar
 ```text
 mariadb --table < create-database.sql
 mariadb --table skolan < ddl-larare.sql
-mariadb --table skolan < dml-insert-larare.sql
+mariadb --table skolan < insert-larare.sql
 mariadb --table skolan < ddl-alter.sql
 mariadb --table skolan < dml-update.sql
 mariadb --table skolan < dml-update-lonerevision.sql
@@ -77,7 +77,7 @@ source create-database.sql;
 use skolan;
 
 source ddl-larare.sql
-source dml-insert-larare.sql
+source insert-larare.sql
 source ddl-alter.sql
 source dml-update.sql
 source dml-update-lonerevision.sql

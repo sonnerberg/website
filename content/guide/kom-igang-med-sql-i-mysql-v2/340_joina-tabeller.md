@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(F, mos) Genomgången inför v2 och MariaDB."
     "2020-02-17": "(E, mos) Förtydligande om hur sista tabellen skulle formatteras."
     "2019-02-08": "(D, mos) Länk till forumtråd för mer tips om join med kurser och ålder."
     "2019-02-07": "(C, mos) Förtydligande om uppgift med kurser och ålder."
@@ -12,7 +13,7 @@ Joina tabeller
 
 Nu har vi tre tabeller och möjligheten att koppla ihop dem för att se vilka lärare som ansvarar för vilka kurser och när kurserna är planerade i tiden enligt de kurstillfällen som erbjuds.
 
-Spara den SQL-kod du skriver i filen `dml_join2.sql`.
+Spara den SQL-kod du skriver i filen `dml-join2.sql`. I den mån du uppdaterar databasens schema (vyer) så placerar du den koden i `ddl.sql`.
 
 
 
@@ -29,7 +30,7 @@ Gör en SELECT där du anger både kurs och kurstillfalle. Pröva med följande 
 --
 -- A crossjoin
 --
-SELECT * FROM kurs, kurstillfalle; 
+SELECT * FROM kurs, kurstillfalle;
 ```
 
 Du får väldigt många rader. Lika många rader som du har rader i Kurs (11 stycken) multiplicerat med antalet rader i Kurstillfälle (10 stycken). Totalt blir det 110 rader, varje rad i kurs matchas mot alla rader i kurstillfalle.
@@ -54,7 +55,7 @@ Om du testar den så får du en utskrift so är lättare att tyda. Ser rapporten
 Så här.
 
 ```sql
-mysql> SELECT *
+MariaDB> SELECT *
     -> FROM kurs AS k, kurstillfalle AS kt
     -> WHERE k.kod = kt.kurskod;
 +--------+------------------------------------+-------+------+----+---------+--------------+-----------+
@@ -96,7 +97,7 @@ FROM kurs AS k
 Det ser ut så här.
 
 ```text
-MySQL [skolan]> SELECT *
+MariaDB [skolan]> SELECT *
     -> FROM kurs AS k
     ->     JOIN kurstillfalle AS kt
     ->         ON k.kod = kt.kurskod;
@@ -138,7 +139,7 @@ Vi får fortfarande fram 10 rader men nu inklusive alla kolumner från tabellen 
 Så här ser det ut, många kolumner är det.
 
 ```text
-MySQL [skolan]> SELECT *
+MariaDB [skolan]> SELECT *
     -> FROM kurs AS k
     ->         JOIN kurstillfalle AS kt
     ->     ON k.kod = kt.kurskod
@@ -166,12 +167,11 @@ MySQL [skolan]> SELECT *
 Vy för att förenkla {#vy}
 ----------------------------------
 
+Det verkar som rapportunderlaget vi använder är bra, låt oss skapa en vy av grundrapporten. Den kanske kan komma tillhanda lite senare.
+
 Ovanstående trippel join kan du nu använda för att skapa en vy och sedan bygga anpassade rapport.
 
-Döp vyn till `v_planering`.
-
-Det verkar som rapportunderlaget vi använder är bra, låt oss skapa en vy av grundrapporten. Den kanske kan komma tillhanda lite senare. 
-
+Döp vyn till `v_planering` och placera koden för att skapa vyn i din `ddl.sql`.
 
 
 
@@ -220,7 +220,7 @@ Skolan är orolig för att lärarna börjar närma sig pensionen och behöver "b
 
 Förslagsvis så börjar du att ta reda på vilka lärare som har högst ålder, bara för att kontrollera vilka lärare det skulle kunna handla om.
 
-Kanske ser ditt resultat ut så här. Du vill bara se de äldsta lärarna.
+Kanske ser ditt resultat ut så här. Du vill bara se de äldsta lärarna. Tänk på att åldern ökar med ett för varje år och facit nedan är skapat för ett par år sedan.
 
 ```text
 +---------+---------+------------+------------+--------+
@@ -237,7 +237,7 @@ Så. Där har du lärarens ålder. Men det hjälper dig inte så mycket, egentli
 
 **Du behöver de tre äldsta lärarna som också undervisar på kurser.**
 
-Du har deras planering där du ser vilka kurser de är ansvariga för. Du vet hur gammal lärarna är. Slå samman informationen och finn _de kurser där som har de tre äldsta lärarna som ansvariga_.
+Du har deras planering där du ser vilka kurser de är ansvariga för. Du vet hur gamla lärarna är. Slå samman informationen och finn _de kurser som har någon av de tre äldsta lärarna som ansvariga_.
 
 Kan du nu joina, sortera och på något sätt begränsa så att du kan få fram följande rapport?
 

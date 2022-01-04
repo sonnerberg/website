@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(C, mos) Borttagen från del 3 i samband med v2."
     "2019-01-15": "(B, mos) Manuallänk till 8.0 samt flyttad från 'Mer SQL'."
     "2018-01-02": "(A, mos) Första versionen, uppdelad av större dokument."
 ...

@@ -11,7 +11,7 @@ Lägg till rader
 
 Vi lägger till lärare i tabellen.
 
-Lägg SQL-koden i filen `dml-insert-larare.sql`.
+Lägg SQL-koden i filen `insert-larare.sql`.
 
 
 

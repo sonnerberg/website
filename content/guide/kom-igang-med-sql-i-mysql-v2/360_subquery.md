@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-04": "(C, mos) Genomgången inför v2 och MariaDB."
     "2019-01-30": "(B, mos) Genomgången och ny uppgift om subqueries."
     "2018-01-03": "(A, mos) Första versionen, uppdelad av större dokument."
 ...
@@ -13,9 +14,9 @@ Att använda subqueries i en fråga kan vara ett alternativ till att göra JOIN 
 
 Låt oss träna på subqueries och se vad de kan hjälpa oss med.
 
-Spara den SQL-kod du skriver i filen `dml_subquery.sql`.
+Spara den SQL-kod du skriver i filen `dml-subquery.sql`.
 
-I manualen kan vi läsa om [konceptet subquery och dess syntax](https://dev.mysql.com/doc/refman/8.0/en/subqueries.html) och vilka möjligheter som erbjuds.
+I manualen kan vi läsa om [konceptet subquery och dess syntax](https://mariadb.com/kb/en/subqueries/) och vilka möjligheter som erbjuds.
 
 
 
@@ -40,7 +41,7 @@ Låt oss ta det stegvis. Först skriver vi satsen som ger oss alla lärare på a
 
 ```sql
 SELECT
-    akronym 
+    akronym
 FROM larare
 WHERE
     avdelning = 'DIDD'
@@ -65,7 +66,7 @@ FROM kurstillfalle
 WHERE
     kursansvarig IN (
         SELECT
-            akronym 
+            akronym
         FROM larare
         WHERE
             avdelning = 'DIDD'
@@ -84,7 +85,7 @@ mysql> SELECT
     -> WHERE
     ->     kursansvarig IN (
     ->         SELECT
-    ->             akronym 
+    ->             akronym
     ->         FROM larare
     ->         WHERE
     ->             avdelning = 'DIDD'
@@ -166,18 +167,20 @@ mysql> SELECT
     ->     akronym,
     ->     fornamn,
     ->     efternamn,
-    ->     Ålder
+    ->     alder
     -> FROM v_larare
     -> WHERE
-    ->     Ålder = (... här skriver du din subquery ...)
+    ->     alder = (... här skriver du din subquery ...)
     -> ;
 +---------+---------+------------+--------+
-| akronym | fornamn | efternamn  | Ålder  |
+| akronym | fornamn | efternamn  | alder  |
 +---------+---------+------------+--------+
 | dum     | Albus   | Dumbledore |     77 |
 +---------+---------+------------+--------+
 1 row in set (0.00 sec)
 ```
+
+Fundera gärna hur du kunde löst detta annorlunda. Ibland finns andra enklare lösningar och ibland är en subquery mycket användbar.
 
 
 

@@ -29,7 +29,7 @@ Du kan döpa din användare till vad du vill, men jag kör på "maria".
 
 ```text
 CREATE USER 'maria'@'localhost'
-IDENTIFIED BY 'P@ssw0rd!'
+IDENTIFIED BY 'P@ssw0rd'
 ;
 ```
 

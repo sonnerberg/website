@@ -20,7 +20,7 @@ Kontrollera att du att du kan återskapa din struktur genom att åteskapa tabell
 Det är alltså följande åtgärder du skall göra.
 
 1. Skapa tabellen larare med `ddl-larare.sql`.
-1. Lägg in rader i tabellen larare med `dml-insert-larare.sql`.
+1. Lägg in rader i tabellen larare med `insert-larare.sql`.
 1. Lägg till kolumnen kompetens med `ddl-alter.sql`.
 
 Du skall därefter ha en tabell med samtliga lärare och de skall ha kompetensen 1.
@@ -29,7 +29,7 @@ Det är alltså följande kommandon du skall köra.
 
 ```text
 mariadb --table skolan < ddl-larare.sql
-mariadb --table skolan < dml-insert-larare.sql
+mariadb --table skolan < insert-larare.sql
 mariadb --table skolan < ddl-alter.sql
 ```
 
