@@ -7,8 +7,8 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
-    "2021-02-10": "(E, mos) lade till inspelade föreläsningar."
-    "2019-02-13": "(D, mos) lade till läsanvisning om EJS."
+    "2021-02-10": "(E, mos) Lade till inspelade föreläsningar."
+    "2019-02-13": "(D, mos) Lade till läsanvisning om EJS."
     "2019-02-08": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-09": "(A, mos) Första utgåvan."
@@ -26,9 +26,9 @@ Detta kursmoment är inte uppdaterat inför VT22.
 
 Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Vi skapar SQL-kod som kan skapa databasens schema.
 
-Kursmomenten introducerar begreppet transaktioner i en databas och vi tränar på SQL-kod för att hantera COMMIT och ROLLBACK i transaktioner.
+Vi tittar på hur transaktioner i en databas fungerar och vi tränar på SQL-kod för att hantera COMMIT och ROLLBACK i så kallade ACID transaktioner.
 
-I kursmomentet får vi också möta en webbserver för Node.js i form av Express.js. Du kommer igång med Express och ser hur du kan bygga upp grunderna i en webbtjänst och hur du kan skriva din applikationskod för att komma åt en databas och visa rapporter från den och uppdatera databasens innehåll via webbplatsen.
+I kursmomentet blir vi också introducerade till en webbserver för Node.js i form av Express.js. Du kommer igång med Express och ser hur du kan bygga upp grunderna i en webbtjänst och hur du kan skriva din applikationskod för att komma åt en databas och visa rapporter från den och uppdatera databasens innehåll via webbplatsen.
 
 
 <!--more-->
@@ -54,7 +54,7 @@ Läs &amp; Studera  {#lasanvisningar}
 
 Titta på följande inspelade föreläsningar.
 
-1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till ett diagram som matchar relationsmodellen i den logisk modelleringsfasen.
+1. [Databasmodellering - Översätt till relationsmodellen](./../forelasning/oversatt-till-relationsmodellen) ger en översikt till hur du kan översätta en ER-modell från den konceptuella fasen till en databasmodell som matchar relationsmodellen i den logisk modelleringsfasen.
 
 1. [Transaktioner i databaser - ACID](./../forelasning/transaktioner) ger en översikt till begreppet transaktioner i databasen och vad ACID innebär samt en liten utläggning om låsning, prestanda och tillförlitlighet i databasen.
 
@@ -62,12 +62,13 @@ Titta på följande inspelade föreläsningar.
 
 ### Databasteknik: Transaktioner {#databasteknik-trans}
 
-Läs följande:
+Läs följande i kursboken:
 
-1. [Databasteknik](kunskap/boken-databasteknik)
+1. [Databasteknik](kunskap/boken-databasteknik) om transaktioner.
     * Kap 24: Transaktioner
 
-Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2. Det finns ett kapitel om transaktioner.
+1. [Boken har även en webbplats](http://www.databasteknik.se/webbkursen/) och vissa utdrag från boken finns där. Relevant för detta kmom är följande:
+    * [Transaktioner](http://www.databasteknik.se/webbkursen/transaktioner/index.html)
 
 Det finns ytterligare ett kapitel i boken som är relaterat till transaktioner, det går utanför kursens ram men läs vid intresse.
 
@@ -88,13 +89,14 @@ Läs följande som är relaterat till att bygga en webbserver i Node.js med appl
 
 ### Databasteknik: ER-modellering {#databasteknik-er}
 
-Läs följande:
+Läs följande i kursboken:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 5: Relationsmodellen
     * Kap 6: Översättning från ER-modellen till relationsmodellen
 
-En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1. Du kan till exempel läsa om hur du [översätter ER-modellen till relationsmodellen](http://www.databasteknik.se/webbkursen/er2relationer/index.html).
+1. [Boken har även en webbplats](http://www.databasteknik.se/webbkursen/) och vissa utdrag från boken finns där. Relevant för detta kmom är följande:
+    * [Översättning från ER-modellen till relationsmodellen](http://www.databasteknik.se/webbkursen/er2relationer/index.html)
 
 Det finns ytterligare kapitel i boken som är relaterat till modellering. De går utanför kursens omfattning men läs vid intresse.
 
@@ -109,10 +111,6 @@ Det finns ytterligare kapitel i boken som är relaterat till modellering. De gå
 Följande är samma resurser som används i kmom03. Fortsätt läsa och repetera vid behov. Det ger dig stöd för uppgiften om ER-modellering.
 
 1. Jobba igenom artikeln "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)", den ger dig processen du skall följa. I detta kmom handlar det främst om att fokusera på logisk och fysisk modellering.
-
-<!--
-1. Reptera videon, vid behov, [föreläsningen om ER-modellering och implementation av en e-shop](https://youtu.be/fqC_VQh_E74?start=886&end=4065) (längd 53 minuter). Det sätter ord på kokboken och ger dig träning inför ER-uppgiften där du skall modellera en e-shop.
--->
 
 
 
@@ -135,7 +133,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 
 <!--
-1. Update transaktions (new article) with document on Isolation levels and Dirty reads and Deadlock. Eventuell klient för att testa låsning? https://docs.google.com/document/d/15k4XbQxNOpJp-sqxwWX-FmG8UyerGSF36YDerSelbBc/preview
+1. Update transaktions (new article) with document on Isolation levels and Dirty reads and Deadlock. Eventuell klient för att testa låsning? https://docs.google.com/document/d/15k4XbQxNOpJp-sqxwWX-FmG8UyerGSF36YDerSelbBc/preview (nja, lite överkurs, bättre att förenkla kursen lite)
 
 1. SQL injections (web)
 -->

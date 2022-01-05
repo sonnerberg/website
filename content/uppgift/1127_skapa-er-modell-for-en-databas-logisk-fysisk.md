@@ -63,9 +63,9 @@ Krav {#krav}
 
 1. Berätta i dokumentet hur du gjorde för att skapa SQL DDL (per hand eller genererade). SQL DDL lägger du som ett Appendix i ditt dokument, för information, använd ett rimligt typsnitt.
 
-1. Din SQL DDL sparar du även som egen fil i `ddl.sql`. Denna filen skall innehålla SQL för att skapa själva databasen.
+1. Din SQL DDL sparar du även som egen fil i `ddl.sql`. Denna filen skall innehålla SQL för att skapa databasens schema.
 
-1. Skapa en separat fil `setup.sql` som skapar databasen `eshop` (CREATE DATABASE) och lägger till en användare `user` med lösenordet `pass` som har fulla rättigheter på databasen.
+1. Skapa en fil `setup.sql` som skapar databasen `eshop` (CREATE DATABASE).
 
 1. Försäkra dig om att din SQL DDL (`setup.sql`, `ddl.sql`) fungerar och skapar den databasen och de tabellerna du vill ha. Du behöver inte lägga in någon data i tabellerna, eller provköra databasen, det gör vi senare.
 
@@ -73,9 +73,11 @@ Krav {#krav}
 
 1. När du är klar så publicerar du ditt kursrepo.
 
-```bash
+```text
 # Ställ dig i kurskatalogen
 dbwebb publish me
+
+dbwebb test er2
 ```
 
 

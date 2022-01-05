@@ -6,7 +6,7 @@ revision:
 Logiskt databasmodellering - Översätt till relationsmodellen
 ====================
 
-En genomgång av hur man översätter konstruktioner från den koncepuella modelleringsfasen till den logiska modelleringsfasen. Det handlar om att överföre ER-modellen till relationsmodellen och hur man modellerar de delar som inte stöds i relationsmodellen.
+En genomgång av hur man översätter konstruktioner från den koncepuella modelleringsfasen till den logiska modelleringsfasen. Det handlar om att överföra ER-modellen till relationsmodellen och hur man modellerar de delar som inte stöds i relationsmodellen.
 
 Denna föreläsning är bra att se på som en del i förberedelserna inför att jobba med kmom04.
 

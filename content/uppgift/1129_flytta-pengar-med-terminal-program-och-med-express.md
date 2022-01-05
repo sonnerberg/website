@@ -7,6 +7,7 @@ category:
     - express
     - kursen databas
 revision:
+    "2022-01-05": "(F, mos) Genomgången inför vt22."
     "2021-01-18": "(E, mos) Specificera tydligare vilken databas som gäller."
     "2020-03-03": "(D, mos) Kommandot move även på terminalklienten."
     "2019-02-12": "(C, mos) Förtydliga hur konfigurationsfilen uppdateras."
@@ -48,8 +49,6 @@ Du skall nu utföra funktionen att flytta pengar mellan två konton och man skal
 
 I båda klienterna så hårdkodar vi att 1.5 pengar flyttas från ena kontot till det andra. Användaren kan i detta läget inte bestämma hur mycket pengar som flyttas eller från vilket konto och till vilket konto.
 
-I nästa kmom gör vi flytten mer flexibel så man kan bestämma konto och antal pengar.
-
 Utseendet på webbklienten kan vara så här. Varje gång du laddar om sidan så flyttas mer pengar.
 
 [FIGURE src=image/snapvt18/bank-move-to-adam.png caption="Adam har precis fått 1.5 pengar."]
@@ -58,7 +57,7 @@ Utseendet på terminalklienten kan vara så här.
 
 [FIGURE src=image/snapvt18/bank-terminal-move.png caption="Via terminalklienten kan du flytta pengar till Eva, i skydd av en transaktion."]
 
-Tänk på din kodstruktur, här finns kod som går att återanvända och dela mellan klienterna. Ett visst fokus i uppgiften är att finna en struktur där du kan dela kod mellan de båda klienterna.
+Tänk på din kodstruktur, här finns kod som går att återanvända och dela mellan klienterna. Ett visst fokus i uppgiften är att finna en struktur där du kan dela kod mellan de båda klienterna. Här är en bra möjlighet att vara [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) i sin kod genom att använda moduler/funktioner för kod som kan delas mellan webbklienten och terminalklienten.
 
 
 
@@ -94,11 +93,13 @@ Din konfigurationsfil kan alltså se ut så här.
 Krav {#krav}
 -----------------------
 
-1. Inloggningsdetaljer till databasen skall sparas i `config/db/bank.json` och delas mellan webbklient och terminalklient.
-
 1. Dina klienter kommer att testas mot den databas som finns i exemplet "[Transaktioner i databas](kunskap/transaktioner-i-databas)". Du kan alltså inte göra ändringar i databasens struktur.
 
 1. Flytten av pengar skall alltid utföras inom ramen för en transaktion.
+
+1. Din webbklient skall startas utifrån skriptet `index.js` med `node index.js`.
+
+1. Inloggningsdetaljer till databasen skall sparas i `config/db/bank.json` och delas mellan webbklient och terminalklient.
 
 1. Din webbklient har en sida `bank/index` som hälsar välkommen till banken och visar en meny över de saker man kan göra.
 
@@ -110,19 +111,23 @@ Krav {#krav}
 
 1. Det skall finnas en meny i header som ger en navigeringsmöjlighet mellan de sidor som är relaterade till banken.
 
-1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Övrig kod lägger du i moduler under katalogen `src/`. Terminalprogrammet skall startas med `node cli.js`.
+1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Terminalprogrammet skall startas med `node cli.js`.
+
+1. Kod, funktioner, moduler och klasser som delas mellan webbklienten och terminalklienten placerar du i katalogen `src/` och de skall sedan importeras till de mainprogram som använder dem.
 
 1. Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas.
 
-1. I terminalprogrammet, skapa kommandot `move` som flyttar 1.5 pengar från Adam till Eva. TIPS: se första extrauppgiften nedan, det kan förenkla din implementation.
+1. I terminalprogrammet, skapa kommandot `move` som flyttar 1.5 pengar från Adam till Eva (notera att webbklienten flyttar pengar i motsatt riktning). TIPS: se första extrauppgiften nedan, det kan förenkla din implementation.
 
 1. I terminalprogrammet, skapa kommandot `balance` som visar en översikt av de konton som finns och kontobehållningen.
 
 1. Validera din kod.
 
-```bash
+```text
 # Flytta till kurskatalogen
 dbwebb validate express-sql
+
+dbwebb test express-sql
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
@@ -145,4 +150,4 @@ Gör följande om du har tid och ro.
 Tips från coachen {#tips}
 -----------------------
 
-Lycka till och hojta till i forumet om du behöver hjälp!
+Lycka till och hojta till i chatt eller forum om du behöver hjälp!

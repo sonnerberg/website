@@ -374,7 +374,7 @@ Sedan bygger vi en footer i `view/bank/footer.ejs`.
 <script type="text/javascript" src="/js/main.js"></script>
 ```
 
-I footern skriver vi ut ett enkelt meddelande och vi inkluderar en JavaScript för klientsidan. 
+I footern skriver vi ut ett enkelt meddelande och vi inkluderar en JavaScript för klientsidan.
 
 Nu kan vi inkludera headern överst och footern underst i vår respektive sidor och vips har en en gemensam sidlayout för alla sidor.
 
@@ -405,4 +405,6 @@ Detta var en introduktion för att komma igång Express och MySQL. Vi byggde vid
 
 Du har nu grunderna för att skriva din egen webb/applikationsserver som kopplar sig mot en databas och presenterar innehåll i rapporter.
 
+<!--
 Denna artikel har en [egen forumtråd](t/7218) som du kan ställa frågor i, eller ge tips.
+-->

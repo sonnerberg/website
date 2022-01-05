@@ -10,7 +10,7 @@ revision:
     "2018-02-13": "(B, mos) Uppdaterad routeIndex istället för index."
     "2018-01-08": "(A, mos) Uppdaterad utgåva, omskriven från annan artikel, att användas till dbjs och databas."
 ...
-Grunderna i Express.js med Node.js 
+Grunderna i Express.js med Node.js
 ==================================
 
 [FIGURE src=image/snapvt17/npm-express.png?w=c5&a=0,30,20,0&cf class="right"]
@@ -30,7 +30,7 @@ Förutsättning {#pre}
 
 Du kan grunderna i Node.js och JavaScript på serversidan.
 
-Det är bra om du har grundläggande kunskap i HTML och CSS (samt JavaScript på klientsidan). Dessa tekniker används i artikeln men gås inte igenom i detalj. 
+Det är bra om du har grundläggande kunskap i HTML och CSS (samt JavaScript på klientsidan). Dessa tekniker används i artikeln men gås inte igenom i detalj.
 
 De exempelprogram som används i artikeln finns i ditt kursrepo databas under `example/express`.
 
@@ -291,7 +291,7 @@ function logStartUpDetailsToConsole() {
             // Routes registered directly on the app
             routes.push(middleware.route);
         } else if(middleware.name === "router") {
-            // Routes added as router middleware 
+            // Routes added as router middleware
             middleware.handle.stack.forEach((handler) => {
                 let route;
 
@@ -571,4 +571,6 @@ Detta var en introduktion för att komma igång med webb- och applikationsserver
 
 Du har nu grunderna för att skriva din egen webb/applikationsserver.
 
+<!--
 Denna artikel har en [egen forumtråd](t/7216) som du kan ställa frågor i, eller ge tips.
+-->

@@ -131,9 +131,11 @@ Krav {#krav}
 
 1. När du är klar så publicerar du ditt kursrepo.
 
-```bash
+```text
 # Ställ dig i kurskatalogen
 dbwebb publish me
+
+dbwebb test er1
 ```
 
 

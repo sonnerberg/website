@@ -31,6 +31,8 @@ Förutsättning {#pre}
 
 Exemplet visar hur du jobbar med transaktioner i MySQL. Ett avslutande stycke visar hur samma kod ser ut i SQLite.
 
+Du kan läsa om [transaktioner i manualen för MariaDB](https://mariadb.com/kb/en/transactions/).
+
 Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/refman/8.0/en/sql-transactional-statements.html).
 
 Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.org/transactional.html).
@@ -99,7 +101,7 @@ VALUES
 SELECT * FROM account;
 ```
 
-Bra, då har vi en tabell att ugå ifrån. Adam har 10 bitcoins och Eva har 7.
+Bra, då har vi en tabell att utgå ifrån. Adam har 10 bitcoins och Eva har 7.
 
 Det kan se ut så här.
 
@@ -208,4 +210,6 @@ Avslutningsvis {#avslutning}
 
 Detta var grunderna i databastransaktioner. Så fort du gör flera satser där samtliga satser behöver utföras för att bevara konsistensen i databasen så kan transaktioner vara verktyget.
 
+<!--
 Har du [tips, förslag eller frågor om artikeln](t/6291) så finns det en specifik forumtråd för det.
+-->
