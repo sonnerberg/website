@@ -103,12 +103,11 @@ Läs gärna följande för att förkovra dig.
 
 *(ca: 6-10 studietimmar)*
 
+### Övningar {#ovningar}
 
+1. Arbete igenom övningen [Strukturera JavaScript med klasser](strukturera-javascript-med-klasser) för att träna på några av de nyare JavaScript konstruktionerna som tillkommit senaste åren.
 
 <!--
-###Övningar {#ovningar}
-
-Gör följande övningar för att träna inför uppgifterna.
 
 1. **Gammal måste uppdateras** Läs igenom artiklen "[Programmering med grunderna i JavaScript](kunskap/programmering-med-grunderna-i-javascript)". Om du gör exempelprogrammen så kan du spara dem i kursrepot under `me/kmom02/core`.
 -->
@@ -119,7 +118,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 
 
-###Uppgifter {#uppgifter}
+### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
@@ -140,7 +139,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur är din syn på programmeringsspråket JavaScript så här långt? jämför med andra programmeringsspråk som du känner till.
+* Hur är din syn på programmeringsspråket JavaScript så här långt? Jämför med andra programmeringsspråk som du känner till.
 * Hur känner du inför WebGL kontra de 3D-tekniker du är van vid?
 * Gjorde du något speciellt med kodstrukturen i din sandbox?
 * Gjorde du något speciellt med triangel-uppgiften?
