@@ -17,6 +17,7 @@ Checklista proposal {#check}
 |------------------|------------------------------|
 | The research question shall be focused on investigating something unknown. Not that the students shall learn something by for example reading about it in the literature or implementing an algorithm in a specific programming language. Are the characteristics defined in the research question(s) of interest to explore?  |             |
 | Are the research methods defined? Especially concerning each step in the process of empirical research, but also search criteria for literature search. |              |
+| Are the sources suitable and cited/referenced correctly? Are the number of sources sufficient for starting the work with the thesis? |              |
 | Is the extent and scope of the empirical study reasonable, i.e. not too big and not too small? |              |
 | Is the analysis of the empirical data to be collected described in sufficient detail/extent? |              |
 | Is the approach for collecting data reasonable? Is there a realistic approach for collecting enough data, considering the research questions defined? |              |
