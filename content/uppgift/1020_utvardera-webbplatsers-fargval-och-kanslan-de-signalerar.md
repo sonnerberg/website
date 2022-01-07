@@ -43,7 +43,7 @@ Jobba igenom denna introduktion för att förberda inför uppgiften.
 
 ### Skapa rapportfilen {#create}
 
-Skapa en struktur för din rapport, det kommer fler sådana här uppgifter. Du kan kopiera samma grundläggande struktur som du har i din `content/redovisning`. 
+Skapa en struktur för din rapport, det kommer fler sådana här uppgifter. Du kan kopiera samma grundläggande struktur som du har i din `content/redovisning`.
 
 ```bash
 # Gå till kursrepot
@@ -137,7 +137,7 @@ Strukturen är inte absolut nödvändig, se den som en möjlighet att träna på
 Krav {#krav}
 -----------------------
 
-1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet (urval). Tänk att ditt urval påverkar vad du kan komma fram till i din rapport. Gör ditt urval fråen en kategori av webbplatser, eller välj helt olika kategorier för att jämföra. 
+1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet (urval). Tänk att ditt urval påverkar vad du kan komma fram till i din rapport. Gör ditt urval från en kategori av webbplatser, eller välj helt olika kategorier för att jämföra.
 
 1. Berätta om du använda något särskilt verktyg för att göra färganalysen (metod).
 

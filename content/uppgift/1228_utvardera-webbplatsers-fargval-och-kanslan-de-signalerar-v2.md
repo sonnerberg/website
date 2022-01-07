@@ -135,9 +135,13 @@ Krav {#krav}
 
 1. Välj ut 3 webbplatser som skall analyseras, berätta hur du gjorde urvalet (urval). Tänk att ditt urval påverkar vad du kan komma fram till i din rapport. Gör ditt urval från en kategori av webbplatser, eller välj helt olika kategorier för att jämföra.
 
-1. Berätta om du använde något särskilt verktyg för att göra färganalysen (metod).
+[INFO]
+Vi kommer göra analyser i kmom04, kmom05 och kmom06. Om du vill analysera samma sidor i alla kmom välj då personsidor, mer finns beskrivit i [kmom06](uppgift/utvardera-webbplatsers-designprinciper-v2).
+[/INFO]
 
-1. För varje webbplats, gör följande (resultat):
+2. Berätta om du använde något särskilt verktyg för att göra färganalysen (metod).
+
+3. För varje webbplats, gör följande (resultat):
     1. Ta en snapshot (bild) på webbplats.
     1. Dokumentera och visualisera färgpaletten som används.
     1. Notera vilken typ av färgschema som använts.
@@ -145,9 +149,9 @@ Krav {#krav}
     1. Notera val av typsnitt för H1-H3 samt brödtext, kommentera om det är serif eller sans-serif.
     1. Notera i en mening om du anser att webbplatsens färgval och typografi motsvarar den profil du tror att webbplatsen vill ha.
 
-1. Skriv ett stycke om dina samlade intryck från resultatet, finns det något värt att nämna, diskutera, att analysera (analys), fick du fram något bra med din studie?
+4. Skriv ett stycke om dina samlade intryck från resultatet, finns det något värt att nämna, diskutera, att analysera (analys), fick du fram något bra med din studie?
 
-1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
+5. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
 
 
 
