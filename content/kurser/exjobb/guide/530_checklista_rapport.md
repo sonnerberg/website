@@ -10,7 +10,7 @@ Som ett nytt tilltag inför vårterminen 2022 har kursledningen introducerat tv�
 
 
 
-Checklista proposal {#check}
+Checklista rapport {#check}
 -----------------------
 
 | Checkpoint   | Checked |
