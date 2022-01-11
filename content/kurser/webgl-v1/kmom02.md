@@ -33,7 +33,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 4-8 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+### Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
@@ -50,7 +50,7 @@ I kapitlen finns en del exempelprogram som du kan testa direkt i ditt kursrepo `
 
 
 
-###MDN {#mdn}
+### MDN {#mdn}
 
 Läs igenom följande.
 
@@ -67,7 +67,7 @@ Läs igenom följande.
 
 
 
-###Artiklar {#artiklar}
+### Artiklar {#artiklar}
 
 Läs följande artiklar.
 
@@ -75,7 +75,7 @@ Läs följande artiklar.
 
 
 
-###Video  {#video}
+### Video  {#video}
 
 Titta på följande:
 
@@ -85,7 +85,7 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
+### Lästips {#lastips}
 
 Läs gärna följande för att förkovra dig.
 
@@ -105,7 +105,7 @@ Läs gärna följande för att förkovra dig.
 
 ### Övningar {#ovningar}
 
-1. Arbete igenom övningen [Strukturera JavaScript med klasser](strukturera-javascript-med-klasser) för att träna på några av de nyare JavaScript konstruktionerna som tillkommit senaste åren.
+1. Arbete igenom övningen [Strukturera JavaScript med klasser](kunskap/strukturera-javascript-med-klasser) för att träna på några av de nyare JavaScript konstruktionerna som tillkommit senaste åren.
 
 <!--
 
