@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2022-01-12": (C, grm) Lägga till bild i flask, bytte px till em.
     "2018-11-21": (B, aar) La till att installera moduler i venv.
     "2017-11-10": (A, lew) Updated version for VT18.
 category:
@@ -78,9 +79,9 @@ if __name__ == "__main__":
 
 Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat innehåll, i det här fallet strängen "Välkommen!".
 
-Routen / är roten, start eller index om man så vill. En route kan ses som en trafikpolis som dirigerar om trafiken. Om vi har en route `@app.route('/telefon')` kan vi nå den via `http://example.com/telefon`. Funktionen som definieras under behöver inte ha samma namn som routen. Det underlättar dock då Flask bland annat använder funktionsnamnet för att hänvisa till dess sökväg. Flask kan använda till exempel `url_for('main')`, och hade i detta fallet hänvisat till routen `/` (roten). Men mer om det senare, nu går vi vidare.
+Routen "/" är roten, start eller index om man så vill. En route kan ses som en trafikpolis som dirigerar om trafiken. Om vi har en route `@app.route('/telefon')` kan vi nå den via `http://example.com/telefon`. Funktionen som definieras under behöver inte ha samma namn som routen. Det underlättar dock då Flask bland annat använder funktionsnamnet för att hänvisa till dess sökväg. Flask kan använda till exempel `url_for('main')`, och hade i detta fallet hänvisat till routen `/` (roten). Men mer om det senare, nu går vi vidare.
 
-Vi lägger också in två "routes" för felhantering, det behövs för att felmeddelanden ska skriva ut på studentservern.
+Vi lägger också in två "routes" för felhantering, vilket behövs för att felmeddelanden ska skriva ut på studentservern.
 
 ```python
 #!/usr/bin/env python3
@@ -146,7 +147,7 @@ Du får självklart använda ett annat tema om du vill. De flesta teman har bara
 
 Nu kör vi.
 
-Först stänger vi ner servern (ctrl-c) och skapar vi filerna som behövs.
+Först stänger vi ner servern (ctrl-c) och skapar de filerna som behövs.
 
 Använd terminalen och ställ dig i "my_app":
 ```bash
@@ -174,7 +175,7 @@ Allt har sin plats. Struktur. Det finns såklart andra resurser att tillgå som 
 
 ###header.html {#header}
 
-För Bootstrap's filer använder vi oss av [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). Det krävs att man har åtkomst till internet, då Bootstraps filer laddas in via `http`. Det blir färre filer lokalt. Smidigt!  
+För Bootstraps filer använder vi oss av [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). Det krävs att man har åtkomst till internet, då Bootstraps filer laddas in via `http`. Det blir färre filer lokalt. Smidigt!  
 
 Öppna header.html i editorn och kopiera in följande kod:
 
@@ -244,7 +245,7 @@ Här hämtas sökvägen till routen `main`, `def main():` från `app.py`. Jämf�
 
 ###footer.html {#footer}
 
-Här behöver vi stänga alla öppna taggar och ladda in det sista. Bootstrap använder ett externt bibliotek, JQuery, så vi behöver även ladda in det via CDN. Ta nu följande kod och lägg i footer.html:
+Här behöver vi ladda in det sista och stänga alla öppna taggar. Bootstrap använder ett externt bibliotek, JQuery, så vi behöver även ladda in det via CDN. Ta nu följande kod och lägg i footer.html:
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -276,14 +277,14 @@ Vi hoppar över till index.html och använder Jinja2 för att inkludera header.h
 
 ###style.css {#style}
 
-Vi har som sagt vår egna stylesheet att tillgå. [Bootstrap's dokumentation](https://getbootstrap.com/docs/3.3/components/#navbar-component-alignment) talar om för oss att *"The fixed navbar will overlay your other content, unless you add padding to the top of the \<body\>"* och *"The fixed navbar will overlay your other content, unless you add padding to the bottom of the \<body\>"*.
+Vi har som sagt vår egna stylesheet att tillgå. [Bootstraps dokumentation](https://getbootstrap.com/docs/3.3/components/#navbar-component-alignment) talar om för oss att *"The fixed navbar will overlay your other content, unless you add padding to the top of the \<body\>"* och *"The fixed navbar will overlay your other content, unless you add padding to the bottom of the \<body\>"*.
 
 Vi lägger till det i vår egna stylesheet style.css:
 
 ```css
 body {
-  padding-top: 70px;
-  padding-bottom: 30px;
+    padding-top: 4em;
+    padding-bottom: 2em;
 }
 ```
 
@@ -291,7 +292,7 @@ body {
 
 ###app.py {#app}
 
-Vi måste ju ändra så vi servar en html-fil istället för en sträng. För att kunna rendera html filer behöver vi importera metoden "render_template" och använda den.
+Vi måste ju ändra så vi servar en html-fil istället för en sträng. För att kunna rendera html-filer så behöver vi importera metoden "render_template" och använda den.
 
 ```python
 from flask import Flask, render_template
@@ -312,7 +313,7 @@ Underbart! Testa nu att kicka igång servern med `python3 app.py` och öppna `lo
 
 [FIGURE src=/image/oopython/kmom01/app1.png?w=w2 caption="En fungerande applikation."]
 
-För att se responsiviteten kan du prova att förminska fönstret så kommer menyn ändras när fönstret blir tillräckligt litet.
+För att prova responsiviteten kan du förminska fönstret (webbläsaren) och ser då att menyn ändras när fönstret blir tillräckligt litet.
 
 
 
@@ -321,7 +322,7 @@ Utöka applikationen {#utoka}
 
 Det är ju lite tråkigt att bara ha en sida. Vi tittar på hur man utökar med en sida till.
 
-Vi kommer behöva skapa en ny sida i /templates-mappen lägga till en route i `app.py` samt uppdatera header.html med ett nytt menyval. Inte krångligare än så.
+Vi kommer att behöva skapa en ny sida i /templates-mappen lägga till en route i `app.py` samt uppdatera header.html med ett nytt menyval. Inte krångligare än så.
 
 
 
@@ -336,6 +337,7 @@ $ cp templates/index.html templates/about.html
 
 Öppna filen och ändra texten i den så du kan se när vi byter vilken som ska visas.
 
+
 ###Lägg till ett menyval {#lagg-till-ett-menyval}
 
 Om vi kikar i header.html så ser vi raden:
@@ -344,7 +346,7 @@ Om vi kikar i header.html så ser vi raden:
 <li class="active"><a href="{{ url_for('main') }}">Hem</a></li>
 ```
 
-Notera `class="active"`, den css klassen avgör vilket menyval i navbaren som ska visas som aktiv, alltså vilken sida vi är på. Nu har vi hårdkodat att "Hem" menyvalet alltid är aktivt men nu när vi ska lägga till ett nytt menyval behöver båda kunna vara aktiva och bara en av dem ska vara det åtgången. Vi behöver lägga till ett nytt \<li\> element för den nya sidan:
+Notera `class="active"`, den css-klassen avgör vilket menyval i navbaren som ska visas som aktiv, alltså vilken sida vi är på. Nu har vi hårdkodat att "Hem" menyvalet alltid är aktivt men nu när vi ska lägga till ett nytt menyval behöver båda kunna vara aktiva och bara en av dem ska vara det åtgången. Vi behöver lägga till ett nytt \<li\> element för den nya sidan:
 
 ```html
 <li class="active"><a href="{{ url_for('main') }}">Hem</a></li>
@@ -360,8 +362,7 @@ Innan vi går vidare till routen ordnar vi så att bara det aktiva menyvalet få
 </ul>
 ```
 
-Med modulen Jinja2 kan vi använda if-satser i vår html template kod, även for-loopar, och med modulen request kan vi få ut vilken path vi är på. Vi kombinerar det för att kolla om vi är på pathen "/" eller "/about" och sätter klassen "active" på rätt menyval. På detta sätta kan vi dynamiskt sätta "activ" på korrekt menyal. Studera koden ovan så du är med på vad som händer.
-
+Med modulen Jinja2 kan vi använda if-satser i vår html template-kod, även for-loopar, och med modulen request kan vi få ut vilken path vi är på. Vi kombinerar det för att kolla om vi är på pathen "/" eller "/about" och sätter klassen "active" på rätt menyval. På detta sätta kan vi dynamiskt sätta "activ" på korrekt menyal. Studera koden ovan så du är med på vad som händer.
 
 
 ###Lägg till en route {#lagg-till-en-route}
@@ -375,12 +376,12 @@ def about():
     return render_template("about.html")
 ```
 
-
+<!-- Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about` -->
 
 Skicka med parametrar {#skicka-med-parametrar}
 ------------------------------
 
-För att göra vår app lite mer användbar kan vi skicka med data vid routingen i app.py till template filerna. Det gör att vi kan skicka med data från vår python kod till html koden och presentera den.
+För att göra vår app lite mer användbar kan vi skicka med data vid routingen i app.py till templatefilerna. Det gör att vi kan skicka med data från vår python kod till html koden och presentera den.
 
 Vi kikar på hur det går till i app.py. Vi lägger till ett par variabler i det globala scopet:
 
@@ -410,6 +411,23 @@ about.html tar emot de skickade variablerna och placerar ut dem.
 Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
 
 [FIGURE src=/image/oopython/kmom01/jinja2_result.png?w=w2 caption="Utskrift via variabler."]
+
+
+Lägg till en bild på en sida {#lagg-till-en-bild}
+------------------------------
+
+Vi lägger till en bild på vår nya sida, `about.html`. Skapa katalogen /static/images och kopiera in en bild under
+katalogen /static/images.
+
+Jag använder leaf_256x256.png och sätter bredden till 256 pixlar. Uppdatera about.html med följande rad.
+
+```html
+<img src="{{ url_for('static',filename='images/leaf_256x256.png') }}" width="256">
+```
+
+Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
+
+[FIGURE src=/image/oopython/kmom01/jinja2_result_image.png?w=w2 caption="Bild tillagd på sidan."]
 
 
 Flask i debug-läge {#debug}
