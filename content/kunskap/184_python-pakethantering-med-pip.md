@@ -2,6 +2,7 @@
 author: mos
 category: labbmiljo
 revision:
+  "2022-01-12": (E, aar) Uppdaterade hur installerar pip.
   "2021-01-16": (D, aar) La till stycke om gcc problem i cygwin.
   "2021-01-07": (C, aar) Flyttade runt stycken då pip kommer för installerat i nyare versioner av python.
   "2016-03-07": (B, mos) Ändrade paketnamn på Debian till python3-pip.
@@ -55,9 +56,22 @@ pip3 --version
 
 Vi kör python 3 och därför använder vi `pip3` som kommando.
 
+Om du inte har pip3 installerat kan du installera det med `python3 -m ensurepip --upgrade".
 
 
-###Installera moduler {#pip2}
+
+###Uppdatera pip och setuptools {#pip2}
+
+Innan ni börjar använda pip är det bra att uppdatera det och en modul som används för att installera andra moduler.
+
+```bash
+pip3 install --upgrade pip
+pip3 install --upgrade setuptools
+```
+
+
+
+###Installera moduler {#pip3}
 
 När du har installerat PIP kan du installera moduler. I exemplet installeras Python-modulen `request`.
 
@@ -88,43 +102,10 @@ Du kan kolla upp vilken version du har av en viss modul.
 pip3 show requests
 ```
 
+Du kan även se alla moduler som är installerade.
 
-
-Installera PIP för Python 3 {#installera}
---------------------------------------
-
-På webbplatsen finns det instruktioner [hur man installerar PIP](https://pip.pypa.io/en/latest/installing.html#install-pip) generellt sätt. 
-
-Jag vill dock använda PIP tillsammans med Python 3 så det blir lite annorlunda.
-
-
-
-###Installera i Windows och Cygwin {#cygwin}
-
-I Cygwin installerar `pip3` jag enligt beskrivningen på PIPs webbplats. Bortsett från att jag använder `python3` istället för `python`.
-
-```bash
-# Ladda ned installationsfilen
-wget https://bootstrap.pypa.io/get-pip.py
-
-# Använd python3 för att installera pip
-python3 get-pip.py
 ```
-
-
-
-###Installera i MacOS {#mac}
-
-Jag installerade `python3` med pakethanteraren Brew. Då fick jag också med pakethanteraren `pip3`.
-
-
-
-###Installera i Linux {#linux}
-
-För att installera `pip3` i Debian Linux gör jag så här.
-
-```bash
-apt-get install python3-pip
+pip3 list
 ```
 
 
