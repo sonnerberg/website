@@ -35,7 +35,6 @@ Jag använder paketen från kursen OOPython som exempel.
 
 ###Installera venv {#venv_install}
 
-
 ####Cygwin {#cygwin_install}
 
 Installera med `apt-cyg install python3-virtualenv`.
@@ -52,21 +51,23 @@ Ni behöver inte installera något på Mac.
 
 ###Skapa venv {#create}
 
-För att skapa en virtuell miljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt.
+För att skapa en virtuell miljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt/kursrepo.
 
 ```bash
-# stå i roten av ditt projekt
+# stå i roten av ditt projekt/kursrepo
 # på linux och mac kör
 python3 -m venv .venv
-# på cygwin kör istället
+# på cygwin är det antingen samma som ovanför eller den nedanför, det varierar. Om den ena inte funkar testa med den andra
 python3 -m virtualenv .venv
+
+# det är ingen utskrift om det fungerade
 ```
 
 Nu har det skapats en ny mapp som heter `.venv` i roten och det har lagts till en mängd filer och mappar i den.
 
 [FIGURE src=/image/oopython/venv_dir.png caption="Mapp strukturen i mappen '.venv'."]
 
-I .venv mappen skapas en liten avskalad python miljö med länkar till den globala installationen av python. Vi kan se det i bilden där det står "python3 -> /usr/bin/python3" (kör inte detta som ett kommando).
+I .venv mappen skapas en liten avskalad python miljö med länkar till den globala installationen av python. Vi kan se det i bilden där det står `python3 -> /usr/bin/python3` (kör **inte** detta som ett kommando).
 
 
 
