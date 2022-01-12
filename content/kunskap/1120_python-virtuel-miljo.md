@@ -46,7 +46,7 @@ Installera med `apt-get install python3-venv`.
 
 ####Brew {#mac_install}
 
-Installera med `brew install python3-venv`.
+Ni behöver inte installera något på Mac.
 
 
 
