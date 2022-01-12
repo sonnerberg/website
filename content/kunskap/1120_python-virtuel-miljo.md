@@ -2,6 +2,7 @@
 author: aar
 category: labbmiljo
 revision:
+  "2022-01-12": (D, aar) La till sektion om att installera venv.
   "2019-01-12": (C, aar) La till varning om python länk inte är ett kommando.
   "2019-01-12": (B, aar) Tog bort dbwebb venv kommandot.
   "2018-11-21": (A, aar) första utgåva för oopython kursen.
@@ -25,42 +26,51 @@ Installera moduler i Python {#modules}
 Virtual environment {#venv}
 --------------------------------------
 
-När man använder pip installeras paket globalt vilket bl.a. innebär att om vi har flera olika Python projekt på datorn måste alla dem använda samma version av ett paket. T.ex. Proj1 kan inte använda requests 1.3 medan proj2 använder requests 1.3. Utan virtual environments kan request modulen bara installeras en gång och då används den överallt.
+När man använder pip installeras paket globalt vilket bl.a. innebär att om vi har flera olika Python projekt på datorn måste alla dem använda samma version av ett paket. T.ex. Proj1 kan inte använda requests 1.3 medan proj2 använder requests 1.7. Utan virtual environments kan request modulen bara installeras en gång och då används den överallt.
 
 Lösningen på detta är [Virtual environment](https://docs.python.org/3/tutorial/venv.html) även kallat **venv**. Venv är ett sätt att isolera paket från övriga paket installerade på resten av ett system. Detta gör att vi kan installera paket för specifika projekt utan att det krockar med globala installationer eller andra projekts installationer.
 
 Jag använder paketen från kursen OOPython som exempel.
 
 
+###Installera venv {#venv_install}
 
-###Skapa virtuell miljö {#venv_install}
 
-För att skapa en virtuell miljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt. Sen använder vi modulen `venv` för att skapa den virtuella miljön. Modulen ska följa med när man installerar Python3.
+####Cygwin {#cygwin_install}
+
+Installera med `apt-cyg install python3-virtualenv`.
+
+####Linux {#linux_install}
+
+Installera med `apt-get install python3-venv`.
+
+####Brew {#mac_install}
+
+Installera med `brew install python3-venv`.
+
+
+
+###Skapa venv {#create}
+
+För att skapa en virtuell miljö behöver man bestämma var man vill placera den. Vi har som standard att lägga den i roten för ett projekt.
 
 ```bash
-# Stå i roten av kursrepot
-$ python3 -m venv .venv
+# stå i roten av ditt projekt
+# på linux och mac kör
+python3 -m venv .venv
+# på cygwin kör istället
+python3 -m virtualenv .venv
 ```
-
-Om man inte har `venv` installerat på Linux kan man få upp följande meddelande:
-```bash
-The virtual environment was not created successfully because ensurepip is not
-available.  On Debian/Ubuntu systems, you need to install the python3-venv
-package using the following command.
-
-    apt-get install python3-venv
-```
-Gör som står och installerar `venv` och kör sen kommandot igen.
 
 Nu har det skapats en ny mapp som heter `.venv` i roten och det har lagts till en mängd filer och mappar i den.
 
-[FIGURE src=/image/oopython/venv_dir.png caption="Mapp struktur i mappen '.venv'."]
+[FIGURE src=/image/oopython/venv_dir.png caption="Mapp strukturen i mappen '.venv'."]
 
 I .venv mappen skapas en liten avskalad python miljö med länkar till den globala installationen av python. Vi kan se det i bilden där det står "python3 -> /usr/bin/python3" (kör inte detta som ett kommando).
 
 
 
-###Aktivera den virtuella miljön {#venv_activate}
+### Aktivera den virtuella miljön {#venv_activate}
 
 När vi har en virtuell miljö skapad behöver vi aktivera den för att använda den. Att aktivera den virtuella miljön innebär att när vi använder pip/python3 kommer det jobba mot filerna som ligger i `.venv` mappen. När vi t.ex. installerar paket med pip läggs det i en undermapp till `.venv`. 
 

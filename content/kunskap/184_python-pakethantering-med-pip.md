@@ -101,7 +101,7 @@ Jag vill dock använda PIP tillsammans med Python 3 så det blir lite annorlunda
 
 ###Installera i Windows och Cygwin {#cygwin}
 
-I Cygwin installerar `pip3` jag enligt beskrivningen på PIPs webbplats. Bortsett från att jag använder `pyton3` istället för `python`.
+I Cygwin installerar `pip3` jag enligt beskrivningen på PIPs webbplats. Bortsett från att jag använder `python3` istället för `python`.
 
 ```bash
 # Ladda ned installationsfilen
