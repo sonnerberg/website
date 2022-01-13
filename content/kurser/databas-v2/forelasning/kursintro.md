@@ -1,18 +1,25 @@
 ---
 author: mos
 revision:
+    "2022-01-13": "(B, mos) Uppdaterad inför databas-v2 och VT2022."
     "2021-01-14": "(A, mos) Första utgåva inför kursstart VT2021."
 ...
 Kursintroduktion
 ==========================
 
-I denna kursintroduktion får du en introduktion till vad kursen handlar om och hur den är strukturerad och planerad. Du får även en översikt av kursens innehåll tillsammans med lite tips och trix om vanliga fallgropar i kursen.
+Det finns två videor för kursintron. Den första handlar generellt om kursens innehåll och syfte. Den andra handlar specifikt om den aktuella kursrundans upplägg och planering.
 
-Videon är 23 minuter lång.
+Första videon "Kursintroduktion databas-v2" är 23 minuter lång.
 
-[YOUTUBE src="ia-CE0mxcZI" width=700 caption="Kursintroduktion till kursen databas med Mikael."]
+[YOUTUBE src="CpI5aiI2vSM" width=700 caption="Kursintroduktion databas-v2."]
 
-Du kan själv bläddra igenom [de HTML slides som används i presentationen](kursmaterial/databas/forelasning/v1/f01-kursintro/slide.html).
+Bläddra igenom [de HTML slides som används i presentationen](https://mikael-roos.gitlab.io/database/lecture/kursintro-databas-v2/slide.html).
+
+Andra videon "Kursen databas - Introduktion till kursrundan vårterminen 2022" är 30 minuter lång.
+
+[YOUTUBE src="dqOwHbPYvyQ" width=700 caption="Kursen databas - Introduktion till kursrundan vårterminen 2022."]
+
+Bläddra igenom [de HTML slides som används i presentationen](https://mikael-roos.gitlab.io/database/lecture/kursupplagg-2022/slide.html).
 
 
 

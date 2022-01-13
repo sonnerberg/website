@@ -34,17 +34,9 @@ Läs vidare för en översikt för kursens innehåll, struktur och planering.
 Kursintro {#pres}
 ------------------------
 
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Denna video gällde för våren 2021. Det kan tillkomma ändringar av kursen inför våren 2022.
-
-[/WARNING]
-
 Här är en video som "pratar" dig igenom kursens upplägg och delar av innehållet i detta dokumentet.
 
-[YOUTUBE src="ia-CE0mxcZI" width=700 caption="Kursintroduktion till kursen databas med Mikael."]
+[YOUTUBE src="CpI5aiI2vSM" width=700 caption="Kursintroduktion till kursen databas med Mikael."]
 
 
 
