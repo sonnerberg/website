@@ -220,7 +220,7 @@ Avslutningsvis {#avslutning}
 Nu har du tillgång till databasen MariaDB och du kan koppla upp dig mot databasservern med en terminalklient och du kan logga in med din egenskapade "dbadm" användare.
 
 
-
+<!--stop-->
 
 
 
