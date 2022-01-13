@@ -14,7 +14,7 @@ En metod är en funktion som är definierad inuti en klass. Det finns tre typer:
 Instansmetoder {#instansmetoder}
 ----------------------------------
 
-Instansmetoder identifieras på att den första parametern heter `self`. I instansmetoder använder man sig av instansattributen. Om man vill ha en metod i en klass där man inte använder instansattributen skapar men en statisk metod istället.
+Instansmetoder identifieras på att den första parametern heter `self`. I instansmetoder använder man sig av instansattributen. Om man vill ha en metod i en klass där man inte använder instansattributen skapar man en statisk metod istället.
 
 
 
@@ -55,27 +55,25 @@ This car is of model volvo v40, costs 40000$ and is car number 1 of 2.
 This car is of model BMW, costs 50000$ and is car number 2 of 2.
 ```
 
-Notera att vi inte skickade med något argument till metoden i anropet. Detta är vad som utgör en instansmetod, Python skickar automatiskt objektet, som metoden anropades på, som första argument till metoden. I koden ovanför när vi kör `volvo.present_car()`, i `present_car(self)` metoden är `self` vårt `volvo` objekt.
+Notera att vi inte skickade med något argument till metoden i anropet. Detta är vad som utgör en instansmetod, Python skickar automatiskt en referens till instansen via `self` parametern. I koden ovanför när vi kör `volvo.present_car()`, i `present_car(self)` metoden är `self` vårt `volvo` objekt.
 
 Precis som vi såg i förra delen, att vi inte kan komma åt ett instansattribut från klassen kan vi inte komma åt en instansmetod från klassen heller. Man måste anropa metoden på ett objekt av en klass.
 
 ```
->>> car = Car("volvo v40", 40000)
->>> Car.present_car
-    print(car.present_car()
+>>> print(Car.present_car())
     TypeError: unbound method present_car() must be called with Car instance as first argument (got str instance instead)
 ```
 
 Om ni tycker att felmeddelandet låter konstigt kan ni fråga på föreläsningen varför vi får det felet.
 
-Testa runt själv med klassen, lägg till egna attribut, försöka ändra på dess värden och skriva ut dem. Skapa egna metoder och ändra attribut i dem. Lek med koden och testa era funderingar!
+Testa runt själv med klassen, lägg till egna attribut, försöka ändra på dess värden och skriva ut dem. Skapa egna metoder och ändra attribut i dem. Lek med koden och testa era funderingar! T.ex. ska ett attribut för färg och sen en metod där ni kan ändra färgen på ett bil objekt.
 
 
 
 Self {#self}
 -----------------------------
 
-Self hanteras av Python, det är som sagt inget vi behöver skicka med som argument när vi anropar en instansmetod. Men vi kan egentligen döpa om `self` till vad vi vill, det är bara ett parameternamn. Men i Python är det standard att döpa den till self. I många andra språk kallar man den `this`. Testa byt namn på `self` i metoden och kör koden igen för att se att den fortfarande fungerar.
+Self hanteras av Python, det är som sagt inget vi behöver skicka med som argument när vi anropar en instansmetod. Men vi kan egentligen döpa om `self` till vad vi vill, det är bara ett parameternamn. Men i Python är det standard att döpa den till self. I många andra språk kallas det `this` istället. Testa byt namn på `self` i metoden och kör koden igen för att se att den fortfarande fungerar.
 
 Det som sker när vi anropar en instans metod är att python tar instansen som metoden anropas på och skickar som första argumentet. Om vi tar `present_car()`på volvo variabeln som exempel.
 
@@ -90,7 +88,7 @@ Här skickar vi inget argument men vi har ändå `self` parametern. Det python g
 volvo.present_car(volvo)
 ```
 
-Så i metoden är self objekt som variabeln volvo pekar på.
+Så i metoden är `self` objektet som variabeln `volvo` pekar på.
 
 ```
 def present_car(volvo):

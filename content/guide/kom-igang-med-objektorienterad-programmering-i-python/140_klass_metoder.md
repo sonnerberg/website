@@ -7,7 +7,7 @@ revision:
 Klassmetoder
 ==================================
 
-Nästa typ av metod vi ska kolla på heter [klassmetod](https://docs.python.org/3/library/functions.html#classmethod) och som namnet antyder är det metoder som är koppla till klassen och inte instansen. I en instansmetod skickas automatiskt en instans som första argument och för en klassmetod skickas automatiskt klassen som första argument. I en klassmetod kan vi inte modifiera instansattribut utan bara statiska attribut.
+Nästa typ av metod vi ska kolla på heter [klassmetod](https://docs.python.org/3/library/functions.html#classmethod) och som namnet antyder är det metoder som är kopplade till klassen och inte instansen. I en instansmetod skickas automatiskt en instans som första argument och för en klassmetod skickas automatiskt klassen som första argument. I en klassmetod kan vi inte modifiera instansattribut utan bara statiska attribut.
 
 
 
@@ -74,7 +74,7 @@ Jag la även in en `print(self)` i "present_car" så vi kan se vad det är för 
 Factory method {#factory}
 ======================
 
-Ett vanligt användningsområde för klassmetoder är så kallade factory methods. En factory method är en metod som skapar ett objekt, precis som en konstruktor (`__init__()`). I Python kan man bara ha en konstruktor per klass, till skillnad från vissa andra språk där man kan ha flera med olika parameter listor. Därför är det vanligt att man skapar klassmetoder som alternativa konstruktorer och detta kallas factory methods. Ni kan hitta exempel och mer förklaring [här](https://www.programiz.com/python-programming/methods/built-in/classmethod).
+Ett vanligt användningsområde för klassmetoder är så kallade factory methods. En factory method är en metod som skapar ett objekt, precis som en konstruktor (`__init__()`). I Python kan man bara ha en konstruktor per klass, till skillnad från vissa andra språk där man kan ha flera med olika parameterlistor. Därför är det vanligt att man skapar klassmetoder som alternativa konstruktorer och detta kallas factory methods. Ni kan hitta exempel och mer förklaring [här](https://www.programiz.com/python-programming/methods/built-in/classmethod).
 
-Det finns också ett design pattern som heter [Factory](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) men det syftar oftast på lite större factories där man har klasser och objekt enbart för att skapa objekt av andra klasser.
+<!-- Det finns också ett design pattern som heter [Factory](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) men det syftar oftast på lite större factories där man har klasser och objekt enbart för att skapa objekt av andra klasser. -->
 

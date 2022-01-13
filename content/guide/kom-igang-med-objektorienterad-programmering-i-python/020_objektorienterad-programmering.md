@@ -22,18 +22,18 @@ Om vi vill skapa ett eget bil objekt utgår vi från en ritning som specificerar
 
 Vi tänker oss att du får alla tre bil objekt och för att kunna identifiera dem namnger du dem till "gamle bettan", "röda faran" och "spitfire". Alla tre är bil objekt men också individuella instanser av bilar.
 
-Vad har detta med OO (objektorienterad) programmering att göra? Jo, inom OO försöker vi återskapa konceptet av objekt i verkligheten till kod. Om vi ska programmera ett bil spel behöver vi skapa en ritning som definierar vilken data och funktionalitet en bil består utav. Detta kallar vi en "klass" och den skriver vi i vår kod. Ett objekt däremot är inte kod, vi skapar först ett objekt när vi har startat vårt program och använder klass koden för att skapa ett objekt. Ett objekt lever i minner på datorn.
+Vad har detta med OO (objektorienterad) programmering att göra? Jo, inom OO försöker vi återskapa konceptet av objekt i verkligheten till kod. Om vi ska programmera ett bilspel behöver vi skapa en ritning som definierar vilken data och funktionalitet en bil består utav. Detta kallar vi en "klass" och den skriver vi i vår kod. Ett objekt däremot är inte kod, vi skapar först ett objekt när vi har startat vårt program och använder klass koden för att skapa ett objekt. Ett objekt lever i minnet på datorn.
 
-I datorn har vi inte metall eller bensin, vi kan inte bygga faktiska bilar utan allt är "konceptuellt". Vi behöver representera informationen och funktionaliteten i en riktig bil med kod och i kod har vi variabler, datatyper och funktioner att jobba med. Klasser och objekt är ett annat sätt att programmera men det är fortfarande variabler, datatyper och funktioner fast skrivet på ett speciellt sätt och med några fler keywords i Python att använda. Detta är vad du ska lära dig i denna guiden, att kunna skriva en klass som definierar konceptet av en bil och sen skapa bil objekt med klassen.
+I datorn har vi inte metall eller bensin, vi kan inte bygga faktiska bilar utan allt är "konceptuellt". Vi behöver representera informationen och funktionaliteten i en riktig bil med kod och i kod har vi variabler, datatyper och funktioner att jobba med. Klasser och objekt är ett annat sätt att programmera men det är fortfarande variabler, datatyper och funktioner fast skrivet på ett speciellt sätt och med några fler keywords i Python att använda. Detta är vad du ska lära dig i denna guiden, att kunna skriva en klass som definierar konceptet av en bil och sen skapa bil objekt från klassen.
 
 
 
 Klass {#klass}
 ----------------------------------
 
-Ett objekt skapas utifrån en klass. En klass är en mall utifrån vilken man kan skapa nya objekt. När man skapat ett objekt kallas det en instans av klassen. Att skapa ett objekt kan kallas att [instansiera](http://en.wikipedia.org/wiki/Instance_(computer_science)) klassen till ett objekt, eller att instansiera ett objekt av klassen.
+Ett objekt skapas utifrån en klass. En klass är en mall utifrån vilken man kan skapa nya objekt. När man har skapat ett objekt kallas det en instans av klassen. Att skapa ett objekt kan kallas att [instansiera](http://en.wikipedia.org/wiki/Instance_(computer_science)) klassen till ett objekt, eller att instansiera ett objekt av klassen.
 
-Klassen skrivs i kod och definierar vilka attribut och metoder som finns i ett objekt av den klassen.
+Klassen skrivs i kod och definierar vilka attribut (variabler) och metoder (funktioner) som finns i ett objekt av den klassen.
 
 
 

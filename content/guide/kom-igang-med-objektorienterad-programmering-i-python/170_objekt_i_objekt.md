@@ -22,7 +22,7 @@ Målet är att ha två klasser, en klass för bilar och en klass för tävlingsb
 
 Vi börjar med att skapa en klass som är tävlingsbanan och ger den ett attribut för att hålla bilarna och skapar en metod som skapar fyra Car objekt.
 
-[FIGURE src=/image/oopython/guide/rt_init.png? class="right" caption="Klassdiagram över RaceTrack."]
+[FIGURE src=/image/oopython/guide/rt_init.png? class="right" caption="Klassdiagram över RaceTrack. `List<Car>` betyder att `cars` är en lista med Car objekt."]
 
 ```python
 from car import Car

@@ -39,7 +39,7 @@ class Car():
     car_count = 0
 ```
 
-Sådär ja, vad fint det blev. Vi går vidare till att lägga till instansattribut som ska innehålla data som vi vill ska vara unika för varje objekt.
+Sådär ja, vad fint det blev. Vi går vidare till att lägga till instansattribut som ska innehålla data som vi vill ska vara individuellt för varje objekt.
 
 
 
@@ -64,7 +64,7 @@ class Car():
         self.car_nr = Car.car_count
 ```
 
-För att vi ska kunna initiera objekten med individuella värden har vi en parameter för varje instansattribut och tilldelar de argumenten som skickas med till våra instansattribut. I början av konstruktorn kan vi se `self` som ett nytt tomt objekt, det innehåller bara en koppling till att det tillhör klassen Car. Inne i `__init__` konstruerar vi vad objektet ska innehålla och vilken data som ska finns i objektet. Raden `self.model = model` gör att objektet (self) får ett attribut som heter "model" och det attributet tilldelas ett värde som har skickats med, parametern model. Raden under gör samma sak fast med ett attribut som heter "price". Sist i konstruktorn ökar vi det statiska attributet `car_count` med 1 och tilldelar det värdet till ett instansattribut. På så sätt kan vi hålla reda på vilket nummer i ordningen varje Car objekt har och hur många som skapats.
+För att vi ska kunna initiera objekten med individuella värden har vi en parameter för varje instansattribut och tilldelar de argumenten som skickas med till våra instansattribut. I början av konstruktorn kan vi se `self` som ett nytt tomt objekt, det innehåller bara en koppling till att det tillhör klassen Car. Inne i `__init__` konstruerar vi vad objektet ska innehålla och vilken data som ska finns i objektet. Raden `self.model = model` gör att objektet (self) får ett attribut som heter "model" och det attributet tilldelas ett värde som har skickats med parametern `model`. Raden under gör samma sak fast med ett attribut som heter `price`. Sist i konstruktorn ökar vi det statiska attributet `car_count` med 1 och tilldelar det värdet till ett instansattribut. På så sätt kan vi hålla reda på vilket nummer i ordningen varje Car objekt har och hur många som skapats.
 
 Nu har vi en klass som innehåller ett statisk attribut och tre instansattribut. Vi kollar hur det ser ut när vi anropar konstruktorn och skapar vårt första objekt.
 
@@ -100,8 +100,13 @@ Vi testar att skriva ut objekten:
 >>> print(volvo)
 <__main__.Car object at 0x7f824cc7b4a8>
 
->>> print("Antal bilar: {antal}".format(antal=Car.car_count))
+>>> print(f"Antal bilar: {Car.car_count}")
 Antal bilar: 2
+>>> print(f"Antal bilar: {bmw.car_count}")
+Antal bilar: 2
+>>> print(f"Antal bilar: {volvo.car_count}")
+Antal bilar: 2
+
 >>> print(bmw.car_nr)
 1
 >>> print(volvo.car_nr)

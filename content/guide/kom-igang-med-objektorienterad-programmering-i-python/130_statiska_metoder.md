@@ -9,7 +9,7 @@ Statiska metoder
 
 I förra delen lärde vi oss att Python alltid skickar med den egna instansen som argument till metoder i en klass (som vi döper till _self_ i parameterlistan). Detta är för att när man jobbar objektorienterat behöver man oftast använda instansen som en metod anropas på. Men ibland vill man ha metoder som inte använder en instans av en klass i en metod. Detta är oftast "hjälp" funktioner som man vill ha kopplade till en klass.
 
-Om vi bara skapar en vanlig instansmetod fast vi använder bara inte `self` parametern i metoden skulle det fungera men då kommer valideringen klaga med felet `Method could be a function (no-self-use)`. Här kommer _statiska metoder_ in i bilden. Det är en metod som ligger i en klass där Python inte automatisk skickar med instansen som första argumentet. Till statiska metoder skickas argument till metoden likadant som det fungerar för vanliga funktioner. 
+Om vi bara skapar en vanlig instansmetod fast vi använder inte `self` parametern i metoden skulle det fungera men då kommer valideringen klaga med felet `Method could be a function (no-self-use)`. Här kommer _statiska metoder_ in i bilden. Det är en metod som ligger i en klass där Python inte automatisk skickar med instansen som första argumentet. Till statiska metoder skickas argument till metoden likadant som det fungerar för vanliga funktioner. 
 
 
 
@@ -98,4 +98,4 @@ Som vi kan förväntas oss kraschar programmet för att vi inte skickade med nå
 This car is of model BMW, costs 100000$ and is car number 1 of 1.
 ```
 
-Så här ska vi inte ska metoder egentligen med staticmethod och sen skicka in instansen manuellt. Jag gjorde bara detta för att försöka visa på hur det fungerar.
+Så här ska vi inte skriva metoder egentligen med staticmethod och sen skicka in instansen manuellt. Jag gjorde bara detta för att försöka visa på hur det fungerar.
