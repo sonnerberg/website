@@ -11,7 +11,7 @@ revision:
 Kom igång med SQLite och PHP PDO
 ==================================
 
-[FIGURE src=image/snapvt15/pdo-select-table.png?w=c5&a=0,50,50,0 class="right" caption="PHP PDO och SQLite."]
+[FIGURE src=image/snapvt15/pdo-select-table.png?w=c10&a=0,50,50,0 class="right" caption="PHP PDO och SQLite."]
 
 Att bygga webbplatser innebär ofta kopplingar mot databaser och när det gäller PHP så är det numer gränssnittet PDO som är det som främst används. Detta är en guide för att stegvis komma igång med PHP PDO tillsammans med databasen SQLite.
 
@@ -646,11 +646,11 @@ if ($position) {
 
     // Get the results as an array with column names as array keys
     $res = $stmt->fetchAll(PDO::FETCH_BOTH);
-    
+
     if (empty($res)) {
         die("No such position.");
     }
-    
+
     // Move content of array to individual variables, for ease of use.
     list($position, $boatType, $boatEngine, $boatLength, $boatWidth, $ownerName) = $res[0];
 }
@@ -749,7 +749,7 @@ Sen är det så klart SQL-koden för att radera raden ur tabellen, men det är m
 ```php
 // Prepare SQL statement to DELETE a row in the table
 $sql = <<<EOD
-DELETE FROM jetty 
+DELETE FROM jetty
 WHERE
     position = ?
 EOD;

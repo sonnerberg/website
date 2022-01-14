@@ -14,8 +14,8 @@ UML står för Unified Modeling Language, det är ett visuellt modelleringssprå
 Det brukar användas på tre sätt:
 
 1. Som en sketch: Informell och ofta inte fullständig, hand sketch eller på whiteboard. Används för att utforska problem.
-2. Som en ritning: Används för: 
-    * reverse engineering, för att förstå existerande kod. 
+2. Som en ritning: Används för:
+    * reverse engineering, för att förstå existerande kod.
     * För att se hur ny kod ska genereras.
 3. Som ett programmeringsspråk: Det finns färdiga verktyg som genererar kod baserat på UML.
 
@@ -29,23 +29,23 @@ Terminologi {#terminologi}
 
 * **UML**: Unified modeling language.
 
-* **Struktur diagram**: Structure diagram på engelska. Statisk representation av strukturen i ett system.
+* **Strukturdiagram**: Structure diagram på engelska. Statisk representation av strukturen i ett system.
 
-* **Klass diagram**: Statisk representation av den objektorienterade vyn av ett system. Visar vilka klasser systemet består av.
+* **Klassdiagram**: Statisk representation av den objektorienterade vyn av ett system. Visar vilka klasser systemet består av.
 
 
 
-Struktur diagram {#struktur_diagram}
+Strukturdiagram {#struktur_diagram}
 -------------------------------
 
-Struktur diagram representerar strukturen, de statiska aspekterna, i ett system och visar upp artefakter som måste existera i systemet och hur de relaterar till varandra.
+Strukturdiagram representerar strukturen, de statiska aspekterna, i ett system och visar upp artefakter som måste existera i systemet och hur de relaterar till varandra.
 De statiska delarna representeras av klasser, gränssnitt, komponenter och noder. Det är ett sätt att dokumentera arkitekturen. Med arkitektur menar vi hur koden är uppbyggd.  
-Det vanligaste struktur diagrammet är _Klassdiagram_.
+Det vanligaste strukturdiagrammet är _Klassdiagram_.
 
 
 ###Klassdiagram {#klass}
 
-Klassdiagram representerar den objektorienterade vyn av ett system. I objektorienterad programmering försöker vi se allt som objekt, det är lätt att göra kopplingar till saker i verkligheten. T.ex. kan vi ta ett bankkonto som exempel. Om vi ska definiera vad ett bankkonto är kan vi identifiera information och funktionalitet som finns kopplat till ett bankkonto. Inte helt olikt programmering, vi har information/data i variabler och funktionalitet i funktioner.
+Klassdiagram representerar den objektorienterade vyn av ett system. I objektorienterad programmering försöker vi se allt som objekt, det är lätt att göra kopplingar till saker i verkligheten. Vi kan ta ett bankkonto som exempel. Om vi ska definiera vad ett bankkonto är kan vi identifiera information och funktionalitet som finns kopplat till ett bankkonto. Inte helt olikt programmering, vi har information/data i variabler och funktionalitet i funktioner.
 
 Till ett bankkonto kan vi förvänta oss att följande data finns, namnet på ägaren, hur mycket pengar som finns på kontot och vad banken heter som kontot tillhör. Vanlig funktionalitet är att kunna sätta in och ta ut pengar.
 
@@ -65,11 +65,11 @@ Nu har vi en statiskt bild som visar samma sak som texten ovanför. Det som vi k
 
 #### Ordentligt klassdiagram {#proper}
 
-Ett riktigt klassdiagram innehåller mer information än det simplifierade. Där visas också datatypen på informationen och retur värdet från funktionerna. De olika informationsnamnen som finns kopplad till saken vi modelera kallar vi **attribut** och funktionaliteten kallar vi **metoder**. Bankkontot har tre attribut och två metoder.
+Ett riktigt klassdiagram innehåller mer information än det simplifierade. Där visas också datatypen på informationen och returvärdet från funktionerna. De olika informationsnamnen som finns kopplad till saken vi modellerar kallar vi **attribut** och funktionaliteten kallar vi **metoder**. Bankkontot har tre attribut och två metoder.
 
 Vi kan också visa om något i strukturen ska vara dolt från utanför objektet. T.ex. så kan summan pengar som finns på kontot anses vara känsligt och vi vill skydda det, det ska inte gå att ändra eller läsa det värdet hur som helst. Då säger vi att det attributet ska vara **privat**. De andra attributen är **publika**.
 
-Det finns också viss typ av data som vi vill ska vara samma för all konton som finns. T.ex. om vi tänker oss att alla konton vi ska skapa/jobba med tillhör samma bank, då kan vi markera att det värdet som finns i det attributet ska vara samma för alla bankkonton. För ägare och summa vill vi att de ska vara individuella för varje konto, såna attribut kallas **instansattribut**. Attribut som innehåller ett värde som är samma för alla objekt kallas **statiska attribut**.
+Det finns också viss typ av data som vi vill ska vara samma för all konton som finns. T.ex. om vi tänker oss att alla konton vi ska skapa/jobba med tillhör samma bank, då kan vi markera att det värdet som finns i det attributet ska vara samma för alla bankkonton. För ägare och summa vill vi att de ska vara individuella attribut för varje konto, såna attribut kallas **instansattribut**. Attribut som innehåller ett värde som är samma för alla objekt, som bankens namn, kallas **statiska attribut**.
 
 Vi använder följande symboler för att visualisera ovanstående:
 
@@ -105,7 +105,7 @@ class BankAccount:
 
     def __init__(self, owner, balance):
         self.owner = owner # publikt instansattribut
-        self._balance = balance # privat instansattribut 
+        self._balance = balance # privat instansattribut
 
     def deposit(self, amount): # publik metod
         """

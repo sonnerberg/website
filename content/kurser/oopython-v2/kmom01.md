@@ -108,7 +108,7 @@ Titta på följande:
 Om du känner att du har tid och lust.
 
 1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
-    * Ch 4 - Expecting the Unexpected. 
+    * Ch 4 - Expecting the Unexpected.
 
 1. Bekanta dig med debugger-verktyget [PDB](https://docs.python.org/3.2/library/pdb.html).
 
@@ -142,6 +142,8 @@ Genomför följande övning för att träna dig.
 1. Läs på om "[UML och klassdiagram](kunskap/intro_till_klassdiagram)".
 
 1. Läs igenom "Intro till guiden" och "Objekt och klasser" i guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".
+
+1. Läs igenom artikeln om enhetstester "[Introduktion till enhetstester](kunskap/unittest-i-python_1)".
 
 1. Introducera dig själv med pip och venv, "[Python pakethantering med venv](kunskap/python-virtuel-miljo)".
 
