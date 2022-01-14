@@ -160,7 +160,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser2)" (lab 1)
 
-2. Gör uppgiften "[Grunden för ett Yahtzee spel](uppgift/uppgift/yahtzee1)".
+2. Gör uppgiften "[Grunden för ett Yahtzee spel](uppgift/yahtzee1)".
 
 
 
