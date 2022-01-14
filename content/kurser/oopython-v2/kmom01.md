@@ -1,6 +1,7 @@
 ---
-author: lew
+author: aar
 revision:
+    "2022-01-14": (C, aar, grm) Bytt uppgift och lagt till övningar.
     "2018-11-16": (B, aar) Uppdaterat länkar och redv. frågor.
     "2017-11-10": (PB1, mos) Utkast till v2.
     "2017-01-06": (A, mos) Lade till CGI på studentservern.
@@ -8,7 +9,7 @@ revision:
 Kmom01: Kom igång med objekt och Flask
 ====================================
 
-Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask", där vi skriver redovisningstexten och en kort presentation om oss själva. Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objektorienterad programmering.
+Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask". Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objektorienterad programmering.
 
 <!--more-->
 [WARNING]
@@ -110,8 +111,6 @@ Om du känner att du har tid och lust.
 1. [Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
     * Ch 4 - Expecting the Unexpected.
 
-1. Bekanta dig med debugger-verktyget [PDB](https://docs.python.org/3.2/library/pdb.html).
-
 1. Kika på [Jinja2's dokumentation](http://jinja.pocoo.org/).
 
 
@@ -141,15 +140,17 @@ Genomför följande övning för att träna dig.
 
 1. Läs på om "[UML och klassdiagram](kunskap/intro_till_klassdiagram)".
 
-1. Läs igenom "Intro till guiden" och "Objekt och klasser" i guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".
+2. Läs igenom "Intro till guiden" och "Objekt och klasser" i guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".
 
-1. Läs igenom artikeln om enhetstester "[Introduktion till enhetstester](kunskap/unittest-i-python_1)".
+3. Läs igenom artikeln om enhetstester "[Introduktion till enhetstester](kunskap/unittest-i-python_1)".
 
-1. Introducera dig själv med pip och venv, "[Python pakethantering med venv](kunskap/python-virtuel-miljo)".
+**Tips** från coachen, gör lab1 innan ni fortsätter med resten av övningarna.
 
-1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
+4. Introducera dig själv med pip och venv, "[Python pakethantering med venv](kunskap/python-virtuel-miljo)".
 
-1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`. Ni behöver inte göra sista delen `Lägg till CGI i Apache webbserver` för detta behöver bara fungera på studentservern, **alltså inte lokalt**.
+5. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
+
+6. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`. Ni behöver inte göra sista delen `Lägg till CGI i Apache webbserver` för detta behöver bara fungera på studentservern, **alltså inte lokalt**.
 
 
 
@@ -159,13 +160,12 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser2)" (lab 1)
 
-2. Gör uppgiften "[En me-sida med Python och Flask](uppgift/en-me-sida-med-flask)".
+2. Gör uppgiften "[Grunden för ett Yahtzee spel](uppgift/uppgift/yahtzee1)".
 
 
 
 ###Extra {#extra}
 
-<!-- 1. Gör uppgiften "[Återställ trasigt objekt](uppgift/aterstall-trasigt-objekt)" -->
 Det finns inga extrauppgifter.
 
 
