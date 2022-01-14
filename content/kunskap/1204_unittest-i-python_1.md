@@ -36,7 +36,7 @@ Använd terminalen och ställ dig i "kmom01":
 $ mkdir unittest
 $ mkdir unittest/src
 $ mkdir unittest/tests
-$ touch unittest/src/car.py
+$ touch unittest/src/__init__.py unittest/src/car.py
 $ touch unittest/test.py
 $ touch unittest/tests/__init__.py unittest/tests/test_car.py
 ```
@@ -178,6 +178,22 @@ def test_present_car_ok(self):
 Aj, då det blev fel! Ändra från "bike" till "car" och testa igen.
 
 [FIGURE src=/image/oopython/kmom01/result_2_testcases.png caption="Resultat från python3 test.py."]
+
+###Testa med slumptal {#testa-med_slumptal}
+
+När vi enhetstestar med slumptal, så vill vi inte behöva ändra i testfallet varje gång vi kör testen. Med hjälp av "random.seed()" så får vi samma slumpvärde varje gång vi kör testen.
+
+```python
+import random
+
+random.seed("car")
+print("First number: ", random.randint(1, 100))
+print("Second number: ", random.randint(1, 100))
+
+```
+
+Här blir första slumptalet 11 och andra slumptalet 46 varje gång. Testa gärna!
+
 
 Avslutningsvis {#avslutning}
 ------------------------------

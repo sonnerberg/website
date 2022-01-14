@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2022-01-12": (C, grm) Lägga till bild i flask, bytte px till em.
+    "2022-01-14": (C, grm) Lägga till bild och kod i flask, bytte px till em.
     "2018-11-21": (B, aar) La till att installera moduler i venv.
     "2017-11-10": (A, lew) Updated version for VT18.
 category:
@@ -381,24 +381,22 @@ def about():
 Skicka med parametrar {#skicka-med-parametrar}
 ------------------------------
 
-För att göra vår app lite mer användbar kan vi skicka med data vid routingen i app.py till templatefilerna. Det gör att vi kan skicka med data från vår python kod till html koden och presentera den.
+För att göra vår app lite mer användbar kan vi skicka med data vid routingen i app.py till templatefilerna. Det gör att vi kan skicka med data från vår pythonkod till htmlkoden och presentera den.
 
-Vi kikar på hur det går till i app.py. Vi lägger till ett par variabler i det globala scopet:
-
-```python
-my_name = "Kenneth Lewenhagen"
-my_course = "OOPython"
-```
-
-Låt säga att vi vill skicka med variablerna till `about.html`. Om du kommer ihåg [strängformatering](https://www.youtube.com/watch?v=BkMm0lX-Ytc&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd&index=18) från förra Pythonkursen kan du nog lista ut hur det fungerar.  
-
-I app.py:
+Vi kikar på hur det går till i app.py. Vi lägger till ett par variabler i routen för "about".
 
 ```python
 @app.route("/about")
 def about():
+    """ About route """
+    my_name = "Marie Grahn"
+    my_course = "OOPython"
+
     return render_template("about.html", name=my_name, course=my_course)
+
 ```
+
+Låt säga att vi vill skicka med variablerna till `about.html`. Om du kommer ihåg [strängformatering](https://www.youtube.com/watch?v=BkMm0lX-Ytc&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd&index=18) från förra Pythonkursen kan du nog lista ut hur det fungerar.  
 
 Nu fattas det bara att använda variablerna i about.html. Vi lägger till placeholders med hjälp av `{{ }}`. Det är modulen Jinja2 som låter oss använda `{{}}` och köra "kod" i dem.
 
@@ -413,13 +411,13 @@ Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
 [FIGURE src=/image/oopython/kmom01/jinja2_result.png?w=w2 caption="Utskrift via variabler."]
 
 
-Lägg till en bild på en sida {#lagg-till-en-bild}
+Lägg till en bild {#lagg-till-en-bild}
 ------------------------------
 
 Vi lägger till en bild på vår nya sida, `about.html`. Skapa katalogen /static/images och kopiera in en bild under
 katalogen /static/images.
 
-Jag använder leaf_256x256.png och sätter bredden till 256 pixlar. Uppdatera about.html med följande rad.
+Jag använder leaf_256x256.png från "[leaf_256x256](https://dbwebb.se/image/theme/leaf_256x256.png)" och sätter bredden till 256 pixlar. Uppdatera about.html med följande rad.
 
 ```html
 <img src="{{ url_for('static',filename='images/leaf_256x256.png') }}" width="256">
@@ -430,10 +428,47 @@ Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
 [FIGURE src=/image/oopython/kmom01/jinja2_result_image.png?w=w2 caption="Bild tillagd på sidan."]
 
 
+Lägg till kod i routen {#lagg_till_kod_i_routen}
+------------------------------
+
+Hur gör vi då för att skapa en instans av en klass och visa den infon i vår app? Vi använder oss av klassen Car från övningen "[Introduktion till enhetstester](kunskap/unittest-i-python_1)". Kopiera car.py till "my_app" så att den ligger i samma katalog som app.py.
+
+Använd terminalen och ställ dig i "my_app":
+```bash
+$ cp ../unittest/src/car.py .
+
+```
+
+Nu uppdaterar vi `app.cy` och lägger in kod i metoden under route "/about".
+
+```python
+@app.route("/about")
+def about():
+    """ About route """
+    my_car = Car("BMW", 90000)
+    my_name = "Marie Grahn"
+    my_course = "OOPython"
+
+    return render_template("about.html", name=my_name, course=my_course,
+        car_info=my_car.present_car())
+
+```
+
+Därefter uppdaterar vi templatefilen `about.html` med följande rad.
+
+```html
+<p>Bil info: {{ car_info }} </p>
+```
+
+Om vi nu uppdaterar servern och pekar webbläsaren på `localhost:5000/about`:
+
+[FIGURE src=/image/oopython/kmom01/jinja2_result_car.png?w=w2 caption="Information från kod i routen /about tillagd på sidan."]
+
+
 Flask i debug-läge {#debug}
 ------------------------------
 
-Det finns ett [debug-läge](http://flask.pocoo.org/docs/0.12/quickstart/#debug-mode) inbyggt i Flask som automatiskt startar om Python servern när du ändrar din Python kod. Det funkar inte när du ändrat i någon template kod, ex. html filerna, utan bara när du ändrat på din Python kod. Nedanför kan du se hur man startar Flask i debug-läge. Obs! Tanken är att man bara kör med debug-läge i utvecklingsfasen då att ha det aktiverat är en säkerhetsrisk.
+Det finns ett [debug-läge](http://flask.pocoo.org/docs/0.12/quickstart/#debug-mode) inbyggt i Flask som automatiskt startar om Python servern när du ändrar din Pythonkod. Det funkar inte när du ändrat i någon template kod, ex. html filerna, utan bara när du ändrat på din Pythonkod. Nedanför kan du se hur man startar Flask i debug-läge. Obs! Tanken är att man bara kör med debug-läge i utvecklingsfasen då att ha det aktiverat är en säkerhetsrisk.
 
 ```python
 if __name__ == "__main__":
