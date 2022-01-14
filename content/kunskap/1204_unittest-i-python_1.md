@@ -57,16 +57,19 @@ Lägg koden för klassen Car i /src/car.py.
 ```python
 #!/usr/bin/env python3
 """
-Class Car with model and price.
+Contains the Car class.
 """
 class Car():
+    """ Car class that handles cars with model and price. """
     wheels = 4
 
     def __init__(self, model, price):
+        """ Constuctor """
         self.model = model
         self.price = price
 
     def present_car(self):
+        """ Returns a string presenting the car """
         return "This car is of model {m} and costs {p}$.".format(
             m=self.model, p=self.price)
 
@@ -166,7 +169,8 @@ Då ska vi lägga till en ny metod i testklassen TestCar i /tests/test_car.py so
 def test_present_car_ok(self):
     """ Test if the string is correct from present_car """
     my_car = Car("Volvo", 50000) # Act
-    self.assertEqual(my_car.present_car(), "This bike is of model Volvo and costs 50000$.")# Assert
+    self.assertEqual(my_car.present_car(),
+        "This bike is of model Volvo and costs 50000$.")# Assert
 
 ```
 [FIGURE src=/image/oopython/kmom01/result_error.png caption="Resultat från python3 test.py."]
