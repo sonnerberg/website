@@ -14,7 +14,7 @@ I denna uppgiften ska ni börja lite smått med att skapa ett Yahtzee spel.
 
 <!--more-->
 
-Ni kommer fotsätta utveckla spelet igenom flera kursmoment. I denna uppgiften skapar vi grunden med en tärningsklass och en hand (hållare för flera tärningar). 
+Ni kommer att fortsätta utveckla spelet igenom flera kursmoment. I denna uppgiften skapar vi grunden med en tärningsklass och en hand (hållare för flera tärningar).
 
 
 
@@ -23,26 +23,26 @@ Förkunskaper {#forkunskaper}
 
 Ni har gått igenom delarna “Intro till guiden” och “Objekt och klasser” i guiden "[Kom igång med objekt](guide/kom-igang-med-objektorienterad-programmering-i-python)".
 
-Ni har jobbat igenom övningen [Introduktion till enhetstester](https://dbwebb.se/kunskap/unittest-i-python_1)
+Ni har jobbat igenom övningen "[Introduktion till enhetstester](https://dbwebb.se/kunskap/unittest-i-python_1)".
 
 Ni har jobbat igenom övningen "[Flask och Jinja2](kunskap/flask-med-jinja2)".
 
-ni har också gjort din [Flask applikation körbar via CGI](coachen/flask-som-cgi-script).
+Ni har också gjort din "[Flask applikation körbar via CGI](coachen/flask-som-cgi-script)".
 
-Har ni gjort övningarna har ni nästan kommit i mål med uppgiften.
+Om ni har gjort övningarna så har ni nästan kommit i mål med uppgiften.
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Ni ska som sagt utveckla ett Yahtzee spel över flera kursmoment. För er som jobbar ensamma ska utveckla spelet för terminalen medans ni som jobbar i grupp ska utveckla spelet för webbläsaren med hjälp av Flask.
+Ni ska som sagt utveckla ett Yahtzee spel över flera kursmoment. Ni som jobbar ensamma ska utveckla spelet för terminalen medan ni som jobbar i grupp ska utveckla spelet för webbläsaren med hjälp av Flask.
 
-Spelet ska följa de internationella reglerna och inte svenska regler. Här kan ni hitta [reglerna](https://gamerules.com/rules/yahtzee-dice-game/). I denna uppgiften kommer ni inte skapa någon logik för reglerna det kommer i senare uppgifter.
+Spelet ska följa de internationella reglerna och inte svenska reglerna. Här kan ni hitta [reglerna](https://gamerules.com/rules/yahtzee-dice-game/). I denna uppgiften kommer ni inte skapa någon logik för reglerna det kommer i senare uppgifter.
 
 I denna uppgiften ska ni bara skrapa grunden, vilket är tärningar, något att hålla tärningarna i (en hand) och visa upp vilka tärningar som har slagits.
 
-Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som måste finnas, ni får och är **rekommenderade** att skapa ytterligare metoder och attribut där ni tycker det behövs.
+Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som måste finnas, ni får och är **rekommenderade** att skapa ytterligare metoder och attribut där ni tycker att det behövs.
 
 
 
@@ -60,7 +60,7 @@ Denna klassen ska representera tärning.
 
 #### Metoderna {#die-met}
 
-- `__init__(value)` - `value` parametern ska ha ett default värde. Om man skickar med ett argument till `value` parametern i konstruktorn ska tärning få det värdet. Om man inte skickar med ett argument ska det slumpas fram ett värde till träningen.
+- `__init__(value)` - `value` parametern ska ha ett default värde. Om man skickar med ett argument till `value` parametern i konstruktorn ska tärningen få det värdet. Om man inte skickar med ett argument ska det slumpas fram ett värde till tärningen.
 - `get_name()` - ska returnera namnet på värdet tärningen har. En tärning med värdet 1 har namnet "one", värdet 2 har namnet "two" osv.
 - `get_value()` - ska returnera värdet på tärningen.
 - `roll()` - slumpa fram ett nytt värde på tärningen. Använd funktionen `randint` i modulen `random`.
@@ -76,13 +76,13 @@ Denna klassen ska representera en spelhand som ska ha fem tärningar den kan spe
 
 #### Attributen {#hand-attr}
 
-- `dice` - en lista som ska innehålla fem Die objekt.
+- `dice` - en lista som ska innehålla fem Die objekten.
 
 #### Metoderna {#hand-met}
 
-- `__init__(values)` - `values` parametern ska ha ett default värde. Om man skickar in ett argument till parmetern i konstruktorn, så ska argumentet vara en lista som innehåller fem heltal. De heltalen ska användas för att skapa en tärning med varje heltal. Om man inte skickar med ett argument så `dice` listan få fem Die objekt med slumpade värden.
+- `__init__(values)` - `values` parametern ska ha ett default värde. Om man skickar in ett argument till parmetern i konstruktorn, så ska argumentet vara en lista som innehåller fem heltal. De heltalen ska användas för att skapa en tärning med varje heltal. Om man inte skickar med ett argument så ska `dice` listan få fem Die objekt med slumpade värden.
 - `roll(indexes`) - `indexes` ska ha ett default värde. Om man inte skickar med ett argument till parametern ska metoden kasta om alla tärningar som finns i `dice` attributet. Om man skicka in ett argument till parametern ska det vara en lista med heltalen, heltalen ska vara index position för tärningar i `dice` listan. Då ska bara tärningarna med de index positionerna kastas om, de andra ska ha kvar sina värden.
-- `__str__` - ska returnera en komma separerad sträng med värdet på alla tärningar i handen, t.ex. `2,4,1,5,1`.
+- `__str__` - ska returnera en komma separerad sträng med värdet på alla tärningar i handen, t.ex. `[2,4,1,5,1]`.
 
 
 
