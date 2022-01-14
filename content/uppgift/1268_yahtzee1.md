@@ -60,7 +60,7 @@ Denna klassen ska representera tärning.
 
 #### Metoderna {#die-met}
 
-- `__init__(value)` - `value` parametern ska ha ett default värde. Om man skickar med ett argument till `value` parametern i konstruktorn ska tärningen få det värdet. Om man inte skickar med ett argument ska det slumpas fram ett värde till tärningen.
+- `__init__(value)` - `value` parametern ska ha ett default värde. Om man skickar med ett argument till `value` parametern i konstruktorn ska tärningen få det värdet. Om argumentet innehåller ett heltal som är större än `MAX_ROLL_VALUE`, tilldela `MAX_ROLL_VALUE` som värde på tärningen. Om argumentet innehåller ett heltal som är mindre än `MIN_ROLL_VALUE`, tilldela `MIN_ROLL_VALUE` som värde på tärningen. Om man **inte** skickar med ett argument ska det slumpas fram ett värde till tärningen.
 - `get_name()` - ska returnera namnet på värdet tärningen har. En tärning med värdet 1 har namnet "one", värdet 2 har namnet "two" osv.
 - `get_value()` - ska returnera värdet på tärningen.
 - `roll()` - slumpa fram ett nytt värde på tärningen. Använd funktionen `randint` i modulen `random`.
