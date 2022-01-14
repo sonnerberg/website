@@ -1,7 +1,7 @@
 ---
 author: aar
 revision:
-    "2022-01-36": "(A, aar) Första versionen."
+    "2022-01-13": "(A, aar) Första versionen."
 ...
 Mer magi
 ==================================
