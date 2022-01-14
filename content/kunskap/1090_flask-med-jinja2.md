@@ -408,19 +408,19 @@ about.html tar emot de skickade variablerna och placerar ut dem.
 
 Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
 
-[FIGURE src=/image/oopython/kmom01/jinja2_result.png?w=w2 caption="Utskrift via variabler."]
+[FIGURE src=/image/oopython/kmom01/jinja2_result_attributes.png?w=w2 caption="Utskrift via variabler."]
 
 
 Lägg till en bild {#lagg-till-en-bild}
 ------------------------------
 
-Vi lägger till en bild på vår nya sida, `about.html`. Skapa katalogen /static/images och kopiera in en bild under
-katalogen /static/images.
+Vi lägger till en bild på vår nya sida, `about.html`. Skapa katalogen /static/img och kopiera in en bild under
+katalogen /static/img.
 
 Jag använder leaf_256x256.png från "[leaf_256x256](https://dbwebb.se/image/theme/leaf_256x256.png)" och sätter bredden till 256 pixlar. Uppdatera about.html med följande rad.
 
 ```html
-<img src="{{ url_for('static',filename='images/leaf_256x256.png') }}" width="256">
+<img src="{{ url_for('static',filename='img/leaf_256x256.png') }}" width="256">
 ```
 
 Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:

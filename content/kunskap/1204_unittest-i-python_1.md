@@ -41,7 +41,7 @@ $ touch unittest/test.py
 $ touch unittest/tests/__init__.py unittest/tests/test_car.py
 ```
 
-[FIGURE src=/image/oopython/kmom01/tree_test.png caption="Filstruktur."]
+[FIGURE src=/image/oopython/kmom01/tree_structure.png caption="Filstruktur."]
 
 Kodstrukturen:
 

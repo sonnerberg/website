@@ -100,6 +100,7 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 1. Skriv tester för Die klassen i `me/kmom01/yahtzee1/tests/test_die.py`. Testa följande saker i Die klassen:
     1. Att skapa ett objekt utan skicka argument till konstruktorn.
     1. Att skapa ett objekt och skicka värde på tärningen till konstruktorn.
+    1. Att skapa ett objekt och skicka ett otillåtet värde på tärningen, som till exempel 100, till konstruktorn. 
     1. Att `roll()` slumpar nytt värde.
     1. Att `get_name()` returnerar korrekt namn.
     1. Att `__str__()` returnerar rätt värde som en sträng.
