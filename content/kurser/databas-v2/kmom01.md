@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
+    "2022-01-15": "(K, mos) Uppdaterad inför version 2 och vt22."
     "2021-01-14": "(J, mos) Lade till länkar till föreläsningar."
     "2021-01-13": "(I, mos) Uppdaterade länk till streams vt21."
     "2020-01-29": "(H, mos) Uppdaterade länk till streams vt20."
@@ -20,18 +21,6 @@ revision:
 ...
 Kmom01: Databas
 ====================================
-
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Du kan påbörja att installera labbmiljön som är uppdaterad inför VT22. Rekommendationen är att använda databasen MariaDB i år.
-
-Läsrekommendationer (exklusive föreläsningarna som kan komma att uppdateras) är också ok att börja med.
-
-I övrigt är det klokt att avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
 
 Vi börjar med att installera en labbmiljö som består av en databas och ett par databas-klienter. Vi skall jobba med databasen MySQL/MariaDB som är en relationsdatabas. Som klienter använder vi en terminalbaserad klient och en fönsterbaserad grafisk klient. Klienterna har båda sin plats i vår verktygslåda och de är bra att använda vid olika typer av tillfällen.
 
@@ -87,7 +76,9 @@ Titta på följande inspelade föreläsningar.
 
 1. [Kursintro](./../forelasning/kursintro) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
 
-1. [Databasteknik, relationsdatabaser och SQL](./../forelasning/databasteknik-relationsdatabaser-och-sql) ger dig en introduktion till databaser och SQL.
+1. [Databaser och relationsdatabaser, introduktion](./../forelasning/databas-relationsdatabas-introduktion) ger dig en introduktion till begrepp som databas och relationsdatabas.
+
+1. [SQL introduktion och exempel](./../forelasning/sql-introduktion-och-exempel) ger dig en introduktion till frågespråket SQL.
 
 <!--
 * Emils introföreläsning i HTML, CSS, JavaScript.
