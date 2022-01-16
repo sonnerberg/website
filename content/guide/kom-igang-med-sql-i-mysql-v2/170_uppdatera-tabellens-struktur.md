@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-16": "(D, mos) Ändra namn till ddl-alter.sql."
     "2022-01-03": "(C, mos) Genomgången inför v2 och MariaDB."
     "2018-02-09": "(B, mos) Mer text om hur återskapa."
     "2017-12-28": "(A, mos) Första versionen, uppdelad av större dokument."
@@ -10,7 +11,7 @@ Uppdatera tabellens struktur
 
 _Oops_, vi glömde ett fält i tabellen lärare. Vi vill nämligen lagra lärarens kompetens som en siffra mellan 1-10.
 
-Spara det du nu gör i filen `ddl-migrate.sql`.
+Spara det du nu gör i filen `ddl-alter.sql`.
 
 
 
