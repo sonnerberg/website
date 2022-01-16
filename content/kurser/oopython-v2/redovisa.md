@@ -1,67 +1,73 @@
 ---
-author: mos
+author: aar
 revision:
+    "2022-01-16": (D, aar) Gjort om för quiz och grupparbete.
     "2018-12-19": (C, aar) Bytte från It Learning till Canvas och gjorde forumet valfritt.
     "2017-01-20": (B, aar) Uppdaterade vilken fil som skrivs i och ändrade från python till oopython.
     "2016-04-12": (A, lew) Första versionen.
 ...
-Resultat och redovisning
+Lämna in och redovisa uppgift
 ====================================
 
-Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
+Som ett sista steg i varje kursmoment skall ni lämna in veckan uppgifter. Gör så här.
 
 <!--more-->
 
 
-
-Skriv redovisningstext {#text}
+Jobbar ensam {#ensam}
 ---------------------------------------
 
-I filen `me/flask/templates/redovisning.html` skall du [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc. Skriv minst 15 meningar.
+Även om du jobbar ensam behöver du ha gå med i en grupp på Canvas innan du gör första inlämningen. Gör sen följande när du ska lämna in ett kursmoment.
 
-Besvara även de specifika frågor som finns för varje kursmoment.
+### steg 1 {#e_1}
 
-När du är klar med kursen innehåller filen `me/flask/templates/redovisning.html` redovisningstexter från samtliga kursmoment.
-
-
-
-Ladda upp och publicera din kurskatalog {#repo}
----------------------------------------
-
-Ladda upp ditt kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
+Ladda upp din kurskatalog med alla dina uppgifter genom att göra följande kommandon i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb publish me
 ```
 
-Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt.
+### steg 2 {#e_2}
 
-Den länken som dyker upp längst ned är länken till din me-sida. Där kan du se ditt publicerade resultat.
+Svara på quizet som finns för kursmomentet du lämnar in.
+
+
+### steg 3 {#e_3}
+
+Gör inlämning på uppgiften med namnet för kursmomentet. I texten skicka med länk till din användare på studentservern.
 
 
 
-Kopiera redovisningstexten till forumet, Valfri {#forum}
+Jobbar i grupp {#grupp}
 ---------------------------------------
 
-Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/oopython).
 
-Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-sida.
+Innan ni gör första inlämningen på Canvas behöver ni ha gå med i samma grupp på Canvas. Gör sen följande när ni ska lämna in ett kursmoment.
+
+### steg 1 {#g_1}
+
+**Båda** behöver ladda upp koden till studentservern, det räcker inte med att en av er har koden.
+
+```bash
+# Ställ dig i kurskatalogen
+dbwebb publish me
+```
+
+### steg 2 {#g_2}
+
+**Båda** ska svara på quizet som finns för kursmomentet. Quizet är inte en del av grupparbetet utan ska utföras individuellt.
 
 
+### steg 3 {#g_3}
 
-Kopiera redovisningstexten till Canvas {#canvas}
----------------------------------------
+Bara **en** av er ska lämna in uppgiften som finns för kursmomentet. Glöm **inte** att klicka i `"Skicka kommentar till hela gruppen"`.
 
-Kopiera redovisningstexten och lämna in den på redovisningen [Canvas](bth#canvas) tillsammans med en länk till din me-sida.
-
-Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
+I texten skriv namn på båda gruppmedlemmarna och skicka med länk till bådas användare på studentservern.
 
 
 
 Klart! {#klar}
 ---------------------------------------
 
-Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade. Skapa alltid en tråd i forumet om du funderar på något.
-
-Ta en kort mental paus innan du ger dig på nästa kursmoment.
+Ta en kort mental paus innan ni ger dig på nästa kursmoment.

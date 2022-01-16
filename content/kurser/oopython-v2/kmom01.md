@@ -12,15 +12,11 @@ Kmom01: Kom igång med objekt och Flask
 Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask". Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objektorienterad programmering.
 
 <!--more-->
-[WARNING]
+[INFO]
 
-**ARBETE PÅGÅR**
+Gör `dbwebb update` och `dbwebb init` innan ni börjar jobba med kursmomentet.
 
-Du kan påbörja att installera labbmiljön.
-
-I övrigt är det klokt att avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
+[/INFO]
 
 [FIGURE src=/image/oopython/kmom01/flask1.png?w=w2 caption="En enkel me-sida med Flask."]
 
@@ -169,19 +165,8 @@ Dessa uppgifter skall utföras och redovisas.
 Det finns inga extrauppgifter.
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Lämna in  {#resultat}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
+Läs [Lämna in och redovisa uppgift](./../redovisa) för att ta reda på hur ni lämna in era uppgifter när ni är klara.
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Var det några problem med att venv och installera Flask?
-* Är du bekant med objekt och klasser sedan tidigare?
-* Vad är en klass/objekt?
-* Vad är skillnaden på instans- och statiska attribut/metoder?
-* Vilka programmeringsparadigmer känner du till?
-* Har du någon erfarenhet av Bootstrap sedan tidigare?
-* Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
