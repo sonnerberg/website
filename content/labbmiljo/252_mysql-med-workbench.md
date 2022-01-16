@@ -25,7 +25,7 @@ Installation {#installation}
 Om du jobbar på Windows så vill du troligen även jobba igenom den av följande artiklar som hanterar den terminalen du vill jobba i. Det kan förenkla och spara dig tid i kursen.
 
 * [MariaDB klient och Windows med cmd terminalen](coachen/mariadb-och-windows-cmd-terminal)
-* [MariaDB klient och Windows med cygwn terminalen](coachen/mariadb-och-windows-cygwin-terminal)
+* [MariaDB klient och Windows med cygwin terminalen](coachen/mariadb-och-windows-cygwin-terminal)
 * [MariaDB klient och Windows med WSL2 bash terminal](coachen/mariadb-och-windows-wsl2-bash-terminal)
 
 2\. Du kan nu gå vidare och [installera MySQL WorkBench](kunskap/installera-mysql-workbench).
