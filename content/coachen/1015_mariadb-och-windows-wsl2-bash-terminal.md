@@ -5,6 +5,7 @@ category:
     - mysql
     - windows
 revision:
+    "2021-01-16": "(B, mos) Förtydliga att även -h127.0.0.1 är ett alternativ som fungerar."
     "2021-12-21": "(A, mos) Flyttat till eget dokument."
 ...
 MariaDB klient och Windows med WSL2 bash terminal
@@ -75,7 +76,14 @@ Starta terminalklienten {#starta}
 
 Du kan starta terminalklienten, ungefär som vanligt, och koppla dig mot din databasserver som kör på din Windows.
 
+Pröva nu en av följande sätt att koppla upp dig mot databasen. Anledningen att det är två olika beror på hur olika versioner av WSL/WSL2 hanterar kopplingen till Windows localhost.
+
 ```text
+# Prova denna först
+mariadb -udbadm -pP@ssw0rd -h127.0.0.1
+
+# Prova sedan denna om ovan inte fungerar
+# (du kan få ett felmeddelande om "host")
 mariadb -udbadm -pP@ssw0rd -h$( hostname ).local
 ```
 
