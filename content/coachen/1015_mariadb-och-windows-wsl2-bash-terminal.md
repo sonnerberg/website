@@ -76,7 +76,7 @@ Starta terminalklienten {#starta}
 
 Du kan starta terminalklienten, ungefär som vanligt, och koppla dig mot din databasserver som kör på din Windows.
 
-Pröva nu en av följande sätt att koppla upp dig mot databasen. Anledningen att det är två olika beror på hur olika versioner av WSL/WSL2 hanterar kopplingen till Windows localhost.
+Pröva följande sätt att koppla upp dig mot databasen och välj det som fungerar. Anledningen att det är två olika beror på hur olika versioner av WSL/WSL2 hanterar kopplingen till Windows localhost.
 
 ```text
 # Prova denna först
