@@ -100,7 +100,7 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 1. Skriv tester för Die klassen i `me/kmom01/yahtzee1/tests/test_die.py`. Testa följande saker i Die klassen:
     1. Att skapa ett objekt utan skicka argument till konstruktorn.
     1. Att skapa ett objekt och skicka värde på tärningen till konstruktorn.
-    1. Att skapa ett objekt och skicka ett otillåtet värde på tärningen, som till exempel 100, till konstruktorn. 
+    1. Att skapa ett objekt och skicka ett otillåtet värde på tärningen, som till exempel 100, till konstruktorn.
     1. Att `roll()` slumpar nytt värde.
     1. Att `get_name()` returnerar korrekt namn.
     1. Att `__str__()` returnerar rätt värde som en sträng.
@@ -109,11 +109,11 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 
 ### Krav ensam {#krav1}
 
-Ni ska lägga grunden för ett Yahtzee spel i terminal. När ni är klara ska ni ha följande filstruktur.
+Du ska lägga grunden för ett Yahtzee spel i terminal. När du är klar ska du ha följande filstruktur.
 
-[FIGURE src="/image/oopython/kmom01/yahtzee-term-files.png" caption="Filer för yahtzee i temrinalen"]
+[FIGURE src="/image/oopython/kmom01/yahtzee-term-files.png" caption="Filer för Yahtzee i terminalen"]
 
-1. Skapa ett terminalprogram med en evighetsloop. När programmet startas ska det automatiskt skapas ett nytt Hand objekt med slumpade tärningar. Skriv ut värdet på alla tärningar.
+1. Skapa ett terminalprogram med en evighetsloop. När programmet startas ska det automatiskt skapas ett nytt Handobjekt med slumpade tärningar. Skriv ut värdet på alla tärningarna.
 
 1. Startfilen ska heta `main.py`.
 
@@ -127,9 +127,9 @@ Ni ska lägga grunden för ett Yahtzee spel i terminal. När ni är klara ska ni
 
 ### Krav grupp {#krav2}
 
-Ni ska lägga grunden för ett Yahtzee spel i webbläsaren med hjälp av Flask. När ni är klara ska ni ha följande filstruktur.
+Ni ska lägga grunden för ett Yahtzee spel i webbläsaren med hjälp av Flask. När ni är klara ska ni ha följande filstruktur. OBS! Bilderna på tärningarna ska ligga under `static/img`.
 
-[FIGURE src="/image/oopython/kmom01/yahtzee-flask-files.png" caption="Filer för yahtzee i webbläsaren"]
+[FIGURE src="/image/oopython/kmom01/yahtzee-flask-files.png" caption="Filer för Yahtzee i webbläsaren"]
 
 1. Startfilen ska heta `app.py` och vara körbar via `app.cgi`. `app.cgi` behöver bara fungera på studentservern.
 
