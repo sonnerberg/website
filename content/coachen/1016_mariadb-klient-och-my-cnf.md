@@ -4,6 +4,7 @@ category:
     - databas
     - mysql
 revision:
+    "2022-01-16": "(B, mos) Uppdatera så att Cygwin blir tydlig att den använder Windowsklienten."
     "2021-12-21": "(A, mos) Flyttat till eget dokument."
 ...
 MariaDB klienten och filen .my.cnf
@@ -31,10 +32,10 @@ Du kan läsa om hur det fungerar i artikeln "[Configuring MariaDB with Option Fi
 
 
 
-Ett exempel på filen .my.cnf {#exempel}
+Ett exempel på filen my.cnf {#exempel}
 --------------------------------------
 
-Med tanke på hur vi installerar databasen MariaDB i kursen databas så kan följande exempel fungera som en mall för filen `.my.cnf`.
+Med tanke på hur vi installerar databasen MariaDB i kursen databas så kan följande exempel fungera som en mall för filen `my.cnf`.
 
 ```text
 # Template config file for databas-v2
@@ -43,7 +44,7 @@ Med tanke på hur vi installerar databasen MariaDB i kursen databas så kan föl
 user=dbadm
 password=P@ssw0rd
 
-# host for cygwin
+# host for cygwin och äldre WSL
 #host=127.0.0.1
 
 # host for WSL2 bash, change <hostname> to its real value
@@ -56,18 +57,63 @@ password=P@ssw0rd
 loose-local-infile = 1
 ```
 
-Du behöver eventuellt anpassa filen till ditt system. Du kan också ha en sådan här fil i varje terminal du använder.
+Du behöver eventuellt anpassa filen till ditt system med till exempel inställningar för hosten ovan. Du kan också ha en sådan här fil i varje terminal (Windows: CMD, Cygwin, WSL) du använder.
 
 
 
-Spara filen .my.cnf {#spara}
+Spara filen my.cnf {#spara}
 --------------------------------------
 
-Normalt sett kan du placera file `.my.cnf` i din hemmakatalog i den terminal du använder.
+Filen heter `my.cnf` och behöver sparas på en plats där din terminalklient kan läsa den.
 
-I alla bash-terminal (Linux, macOS, Cygwin, WSL2 bash) innebär det att du skall placera filen i `$HOME/.my.cnf`.
+Exakt var detta är beror på din installation, din terminalklient och din terminal.
 
-I windows cmd terminal kan du placera filen som `C:\my.ini`.
+Vi kan dock fråga din terminalklient på vilka platser som den läser konfigurationsfilen.
+
+
+
+### Windowsklienten mariadb {#win}
+
+I din terminalklient, kör kommandot `mariadb --help`, det kommer en hel del utskrift och sedan skrollar du tillbaka till början av utskriften.
+
+Om du använder en terminalklient som är installerade i Windows kan du hitta följande sökvägar. Detta gäller i terminalen `cmd.exe`. Detta gäller också oftast i Cygwin där du kan använda den terminalklient som installerades i Windows.
+
+```text
+$ mariadb --help
+
+Default options are read from the following files in the given order:
+C:\WINDOWS\my.ini
+C:\WINDOWS\my.cnf
+C:\my.ini
+C:\my.cnf
+C:\Program Files\MariaDB 10.6\my.ini
+C:\Program Files\MariaDB 10.6\my.cnf
+C:\Program Files\MariaDB 10.6\data\my.ini
+C:\Program Files\MariaDB 10.6\data\my.cnf
+
+The following groups are read:
+mysql mariadb-client client client-server client-mariadb
+```
+
+Här kan du alltså placera filen i till exempel `C:\my.cnf`.
+
+
+
+### Unixklienten mariadb {#unix}
+
+Normalt sett kan du placera file `.my.cnf` i din hemmakatalog i den terminal du använder. En punkt framför filnamnet gör filen till en "dold fil", det är så de kallas när man sätter punkten framför.
+
+För att kontrollera vilka filer som terminalklienten läser så kör du kommandot `mariadb --help`, det kommer en hel del utskrift och sedan skrollar du tillbaka till början av utskriften.
+
+```text
+Default options are read from the following files in the given order:
+/etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf
+
+The following groups are read:
+mysql client client-server client-mariadb
+```
+
+I alla bash-terminal (Linux, macOS, WSL2 bash) innebär det att du enklast placerar filen i `$HOME/.my.cnf` vilket är samma sak som `~/.my.cnf`.
 
 Du kan kontrollera att du lagt filen på rätt plats så här.
 
@@ -94,25 +140,7 @@ Felmeddelandet kan säga följande.
 Testa om konfigurationsfilen används {#test}
 --------------------------------------
 
-Du kan alltid kontrollera var din terminalklient letar efter konfigurationsfilern genom att skriva följande kommando.
-
-```text
-mariadb --help --verbose
-```
-
-I inledningen av texten som skrivs ut kan du läsa något i stil med följande.
-
-```text
-Default options are read from the following files in the given order:
-/etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf
-
-The following groups are read:
-mysql client client-server client-mariadb
-```
-
-Det är detaljer om hur klienten läser konfigurationsfilerna, i vilken ordning och vilka grupper som läses.
-
-Du kan också testa och se exakt vilka detaljer från konfigurationsfilen som används.
+Du kan testa och se exakt vilka detaljer från konfigurationsfilen som används.
 
 Det kan till exempel se ut så här med en konfigurationsfil som enbart anger user och password.
 
@@ -121,6 +149,9 @@ $ mariadb --print-defaults
 mariadb would have been started with the following arguments:
 --user=dbadm --password=P@ssw0rd!
 ```
+
+Om du inte får fram önskat resultat så provar du att kontrollera att du verkligen lagt din `my.cnf` på en plats som stöds av just din terminalklient.
+
 
 
 Avslutningsvis {#avslut}
