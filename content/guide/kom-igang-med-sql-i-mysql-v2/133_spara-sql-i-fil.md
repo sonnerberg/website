@@ -1,26 +1,32 @@
 ---
 author: mos
 revision:
+    "2022-01-17": "(C, mos) Städade bort gamla saker och gav mer struktur med rubriker."
     "2022-01-03": "(B, mos) Genomgången inför v2 och MariaDB."
     "2021-01-14": "(A, mos) Uppdatead från ett större artikel."
 ...
 Spara SQL i fil
 ==================================
 
-Du har nu sparat SQL-koden från föregående artiklar i en fil. Låt oss gå igenom hur den filen kan se ut.
+Du har nu sparat SQL-koden från föregående artiklar i filer. Låt oss gå igenom hur dessa filer kan se ut och hur vi kan tänka när vi strukturerar dem.
 
 
 
-Filen setup.sql {#fil}
+Om att spara SQL-koden i fil {#om}
 ----------------------------------
 
-Det som är bra med att spara all sin SQL kod är att det är enkelt att skapa om hela databasen från början om det blir något fel. Du kan köra en sådan här SQL-fil i godtycklig klient, det går lika bra i Workbench som i terminalen.
+Det som är bra med att spara all sin SQL kod är att det är enkelt att skapa om hela databasen från början om det blir något fel. Du kan köra en SQL-fil i godtycklig klient, det går lika bra i Workbench som i terminalklienten.
 
-Tänk tanken att du skall kunna köra hela denna övningen på en ny dator som du tidigare inte använt. Du behöver skapa databasen och användaren, kanske vill du droppa databasen om den finns, kanske inte, där kan du välja väg. Du kan se hur jag gjorde nedan, jag valde att alltid droppa och skapa om databasen.
+Tänk tanken att du skall kunna köra hela denna övningen på en ny dator som du tidigare inte använt. Du behöver skapa databasen och användaren, kanske vill du droppa databasen om den finns, kanske inte, där kan du välja väg. Du kan se hur jag gjorde nedan  mitt skript för att skapa databasen, jag valde att alltid droppa och skapa om databasen.
 
 Jag väljer att ta med alla kommandon jag jobbat med. Jag ser det som en möjlighet att göra anteckningar tillsammans med koden. Jag kommenterar bort de kommandon som inte skall köras.
 
-Så här kan filen se ut. Du kan jämföra min fil med din egen men koden behöver inte se likadan ut. Det viktigaste är att dubbelkolla att du kan köra alla kommandon i filen i en sekvens (på en gång), om och om igen. Då fungerar det.
+
+
+Filens struktur med kommentarer {#kom}
+----------------------------------
+
+Så här kan filen för att skapa databasen se ut. Du kan jämföra min fil nedan med din egen men koden behöver inte se likadan ut. Det viktigaste är att dubbelkolla att du alltid kan köra alla kommandon i filen i en sekvens (på en gång), om och om igen. Då fungerar det.
 
 ```sql
 -- Börja med att radera databasen om den finns
@@ -46,14 +52,19 @@ USE skolan;
 SHOW DATABASES LIKE "%skolan%";
 ```
 
-Använd kommentarer för att beskriva vad du gör. Rätt använd blir dessa filer en värdefull tillgång efter kursen, eller inför kursens examination.
+Använd kommentarer för att beskriva vad du gör. Kommentarer inleds med dubbla minustecken `-- `.
 
-Nu är trixet att du inte kan återskapa databasen när du är inloggad som användaren "user", den användaren har inte rättigheter att skapa en databas. För att köra hela skriptet på en gång måste du alltså vara inloggad som en användare (root) som har behörighet att skapa en databas.
+Rätt använd blir dessa filer en värdefull tillgång efter kursen, eller inför kursens examination.
+
+
+
+Köra en SQL fil {#kor}
+----------------------------------
 
 Pröva nu återigen att återskapa databasen, genom att köra SQL-filen med kommandoradsklienten.
 
 ```text
-$ mariadb --table < setup.sql
+mariadb --table < create-database.sql
 ```
 
 Kommandot fungerar när inga felmeddelanden visas.
