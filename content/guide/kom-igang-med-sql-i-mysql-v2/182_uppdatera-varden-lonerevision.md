@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-17": "(F, mos) Filen heter insert-larare.sql."
     "2022-01-03": "(E, mos) Genomgången inför v2 och MariaDB."
     "2019-01-11": "(D, mos) Uppdaterade om återställning av databasen."
     "2018-03-22": "(C, mos) Delade i två delar och flyttade lönerevision till egen del."
@@ -25,7 +26,7 @@ Innan vi gör denna övningen så prövar vi att återställa databasen genom at
 
 ```text
 mariadb --table skolan < ddl-larare.sql
-mariadb --table skolan < dml-insert-larare.sql
+mariadb --table skolan < insert-larare.sql
 mariadb --table skolan < ddl-alter.sql
 mariadb --table skolan < dml-update.sql
 mariadb skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
