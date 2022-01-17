@@ -69,4 +69,6 @@ mariadb --table < create-database.sql
 
 Kommandot fungerar när inga felmeddelanden visas.
 
+Kommandot ovan säger att "kör terminalklienten mariadb och formattera fina utskrifter via `--table` och exekvera samtliga kommandon som kan läsas in från filen `create-database.sql`". Tecknet `<` är en operator som hämtar allt innehåll från en fil så det kan läsas in i terminalklienten.
+
 Prova gärna även att köra din fil i Workbench, så har du olika alternativ när du jobbar med databaserna. Ibland är det smidigt att jobba i Workbench och ibland är det smidigt att jobba i terminalen.
