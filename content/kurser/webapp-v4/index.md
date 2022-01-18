@@ -105,7 +105,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ### kmom01: Vår första React Native app {#kmom01}
 
-Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript. Vi ser hur vi kan utnyttja dessa tekniker för att ändra innehållet utan att ladda om applikationen. Som ett första steg så läser vi på om grunderna, bygger en me-sida med fokus på mindre terminaler och börjar så smått med det löpande projektet för alla sex kursmoment.
+Vi ska i detta kursmomentet ta en titt på hur vi utvecklar appar med hjälp av ramverken React Native och Expo. Vi tar en titt på båda ramverken och hur vi utvecklar med hjälp av TypeScript i React Native. Dessutom introduceras Lager-API:t som är med oss i kmom01-kmom06 och hur vi hämtar data från det API:t.
 
 [Instruktion till kursmoment 01](kurser/webapp-v4/kmom01).
 

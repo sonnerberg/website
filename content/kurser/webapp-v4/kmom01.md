@@ -15,16 +15,6 @@ Vi ska i detta kursmomentet ta en titt på hur vi utvecklar appar med hjälp av 
 
 
 
-Vi har i tidigare kurser sett hur vi man kan skapa applikationer i webbläsaren där vi aldrig laddar om sidan. Vi ska fortsätta på det spåret och bygga vidare på detta med webbens inbyggda teknologier för till exempel hämtning av data från ett API.
-
-Som ett första steg skapar vi en me-app anpassat främst för mobilen, men som även fungerar klockrent på en större enhet. På en av sidorna i vår me-app hämtar vi data från Github för att visa upp våra repon. Det är även här vi skriver redovisningstexten så vi ska titta på hur vi gör mycket text lättläst på små och stora enheter.
-
-Som en sista del av kursmomentet ska vi börja med en löpande uppgift där vi i detta kursmoment skapar början till en lagerhanteringsapp. Nedan finns en liten video som visar hur det kan se ut när man är klar med Lager appen del 1.
-
-[YOUTUBE src=xp8blJ060XM width=630 caption="Lager appen del 1."]
-
-
-
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
@@ -61,13 +51,15 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
+Läs artiklarna [Core Components and Native Components](https://reactnative.dev/docs/intro-react-native-components) och [React Fundamentals](https://reactnative.dev/docs/intro-react) för att bekanta dig med grunderna för React och React Native.
 
+Läs dessutom [Walkthrough](https://docs.expo.dev/introduction/walkthrough/) för att utforska flödet för utveckling och driftsättning i Expo.
 
 
 
 ### Video  {#video}
 
-1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 0 och 1.
+1. Det finns en [videoserie](https://youtube.com/playlist?list=PLKtP9l5q3ce8Akmp6hSW78cDuHHNylpRG) kopplat till kursen, titta på videos som börjar på 0 och 1.
 
 
 
@@ -90,9 +82,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Spara koden i `me/kmom01/typography`.
 
-1. Gör övningen "[En Single Page Application](kunskap/en-single-page-application-me-app)". Spara resultatet i `me/redovisa`.
-
-
+1. Gör övningen "[En app i Expo och React Native](kunskap/en-app-i-expo-och-react-native)". Spara resultatet i `me/lager`.
 
 
 
@@ -100,7 +90,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i `me/kmom01/lager1-v2`.
+1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1-v2)". Spara din kod i `me/lager`.
 
 
 
