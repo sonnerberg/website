@@ -248,6 +248,8 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
+Från VT22 är [kurskoden DV1660)](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1660).
+
 Från vårterminen 2020 så heter kursen kursen "Algoritmer och datastrukturer med objektorienterad Python" med [kurskoden DV1618)](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1618).
 
 Tidigare hette kursen "Objektorienterad design och programmering med Python".
