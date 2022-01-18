@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-18": "(D, mos) Förtydliga att < inte fungerar i cmd."
     "2022-01-17": "(C, mos) Städade bort gamla saker och gav mer struktur med rubriker."
     "2022-01-03": "(B, mos) Genomgången inför v2 och MariaDB."
     "2021-01-14": "(A, mos) Uppdatead från ett större artikel."
@@ -63,11 +64,11 @@ Köra en SQL fil {#kor}
 
 Pröva nu återigen att återskapa databasen, genom att köra SQL-filen med kommandoradsklienten.
 
+Kommandot fungerar när inga felmeddelanden visas. Kommandot förutsätter en bash-terminal (Cygwin, WSL2 eller liknande) då operatorn `<` inte fungerar i Windowsterminalen cmd.
+
 ```text
 mariadb --table < create-database.sql
 ```
-
-Kommandot fungerar när inga felmeddelanden visas.
 
 Kommandot ovan säger att "kör terminalklienten mariadb och formattera fina utskrifter via `--table` och exekvera samtliga kommandon som kan läsas in från filen `create-database.sql`". Tecknet `<` är en operator som hämtar allt innehåll från en fil så det kan läsas in i terminalklienten.
 
