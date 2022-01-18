@@ -7,20 +7,13 @@ views:
             src: "image/snapvt18/nodejs-mysql-search.png?w=1100&h=300&cf&a=0,0,55,0&f=grayscale"
 author: mos
 revision:
+    "2022-01-18": "(D, mos) Genomgången och uppdaterad inför version 2 och vt2022."
     "2019-01-21": "(C, mos) Genomgången och uppdaterad, ny kodstruktur på js-programmen."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-01-02": "(A, mos) Första utgåvan."
 ...
 Kmom02: SQL
 ====================================
-
-[WARNING]
-
-**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
-
-Detta kursmoment är inte uppdaterat inför VT22.
-
-[/WARNING]
 
 Vi jobbar vidare med SQL och tränar på både enklare konstruktionerna och mer utmanande saker som vyer, subqueries, UNION och JOIN.
 
