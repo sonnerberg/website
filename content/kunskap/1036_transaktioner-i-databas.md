@@ -8,6 +8,7 @@ category:
     - kurs oophp
     - kurs databas
 revision:
+    "2022-01-18": "(E, mos) Lade till länk till video."
     "2019-02-08": "(D, mos) Genomgången och fokus mot kursen databas."
     "2018-01-05": "(C, mos) Genomgången och nu även i kursen databas."
     "2017-04-25": "(B, mos) Nu även i kursen oophp."
@@ -38,6 +39,13 @@ Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/
 Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.org/transactional.html).
 
 [SQL-koden som visas i exemplet](https://github.com/dbwebb-se/databas/blob/master/example/sql/transaction.sql) finner du på GitHub eller i ditt kursrepo databas under `example/sql/transaction.sql`.
+
+
+
+Video {#video}
+--------------------------------------
+
+Det finns en inspelad föreläsning "[Transaktioner i databaser - ACID](kurser/databas-v2/forelasning/transaktioner)" som berör samma ämne som denna artikel hanterar. Du kan välja att titta på den för att komplettera den bilden du får från artikeln, eller som en introduktion till ämnet, innan du börjar jobba med artikeln.
 
 
 
