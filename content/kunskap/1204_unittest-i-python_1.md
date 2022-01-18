@@ -47,7 +47,7 @@ Kodstrukturen:
 
 * /src med källkoden, filen med klassen Car
 * /tests med koden för enhetstester, alla börjar med test_
-* test.py är en testprogrammet som kör alla testfilerna i katalogen /tests tack vare filen "/tests/__init__.py" som gör att alla testfilerna hittas i /tests. Vill du läsa mer om "__init__.py" kan du kika på [docs.python.org](https://docs.python.org/3/reference/import.html#regular-packages).
+* test.py är en testprogrammet som kör alla testfilerna i katalogen /tests tack vare filen "/tests/\_\_init\_\_.py" som gör att alla testfilerna hittas i /tests. Vill du läsa mer om "\_\_init\_\_.py" kan du kika på [docs.python.org](https://docs.python.org/3/reference/import.html#regular-packages).
 
 
 ###Klassen som ska testas {#klassen-som-ska-testas}
