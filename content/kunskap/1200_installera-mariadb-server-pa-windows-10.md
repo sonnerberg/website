@@ -5,6 +5,7 @@ category:
     - mysql
     - windows
 revision:
+    "2022-01-18": "(I, mos) Förtydliga att MSI Package är rekommenderat."
     "2021-12-21": "(H, mos) Bytte från MySQL till MariaDB och flyttade MySQL Workbench till en egen artikel."
     "2020-01-20": "(G, nik) Förtydligande kring lösenord"
     "2019-01-23": "(F, mos) Alternativ användare heter dbwebb, inte mos."
@@ -48,7 +49,7 @@ MariaDB Server innehåller databasservern och terminalbaserade klientprogram.
 Installera MariaDB på Windows 10 {#server-wb}
 --------------------------------------
 
-Ladda ned installationsprogrammet till din miljö via [MariaDB download](https://mariadb.org/download).
+Ladda ned installationsprogrammet till din miljö via [MariaDB download](https://mariadb.org/download). Välj den variant som passar ditt system och välj varianten "MSI Package" som är ett isntallationsprogram du kan starta och köra.
 
 Här är ett par bilder från installationsförfarandet. I första bilden kan du se var programvaran installeras, det kan vara bra att veta.
 
