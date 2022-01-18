@@ -6,6 +6,7 @@ category:
     - mysql
     - kursen databas
 revision:
+    "2022-01-18": "(E, mos) Länka till ny resurs om formattera datum."
     "2019-02-14": "(D, mos) Mindre förtydligande om att det är flera main-program."
     "2019-01-29": "(C, mos) Förtydliga modulkravet samt tydligare om förväntade utskrifter."
     "2019-01-21": "(B, mos) Genomgången och uppdaterad inför vt19, aningen nya uppgifter."
@@ -169,6 +170,4 @@ Gör följande om du har tid och lust.
 Tips från coachen {#tips}
 -----------------------
 
-[Hur formatterar man ett datum i JavaScript?](t/8220)
-
-[Formattera datum i (My)SQL](t/8222)
+[Formattera datum i JavaScript och i SQL ](https://github.com/dbwebb-se/databas/issues/28)
