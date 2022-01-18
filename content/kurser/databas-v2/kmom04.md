@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image00.jpg?w=1100&h=300&cf&a=20,0,0,0&f=grayscale"
 author: mos
 revision:
+    "2022-01-18": "(F, mos) Genomgången och uppdaterad inför version 2 och vt2022."
     "2021-02-10": "(E, mos) Lade till inspelade föreläsningar."
     "2019-02-13": "(D, mos) Lade till läsanvisning om EJS."
     "2019-02-08": "(C, mos) Uppdaterat inför vt19."
@@ -15,14 +16,6 @@ revision:
 ...
 Kmom04: Transaktioner
 ====================================
-
-[WARNING]
-
-**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
-
-Detta kursmoment är inte uppdaterat inför VT22.
-
-[/WARNING]
 
 Vi sluför ER-modellen med fokus på logisk och fysisk modellering. Vi skapar SQL-kod som kan skapa databasens schema.
 
