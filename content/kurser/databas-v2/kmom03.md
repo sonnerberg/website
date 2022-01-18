@@ -7,6 +7,7 @@ views:
             src: "image/kunskap/kokbok-databasmodellering/image02.jpg?w=1100&h=300&cf&a=0,0,16,0&f=grayscale"
 author: mos
 revision:
+    "2022-01-18": "(G, mos) Genomgången och uppdaterad inför version 2 och vt2022."
     "2021-01-31": "(F, mos) Lade till inspelade föreläsningar."
     "2020-02-07": "(E, mos) Uppdaterat från 20h till 40h."
     "2019-02-08": "(D, mos) Flyttade vissa läsanvisningar om ER modellering till kmom04."
@@ -16,14 +17,6 @@ revision:
 ...
 Kmom03: ER-modellering
 ====================================
-
-[WARNING]
-
-**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
-
-Detta kursmoment är inte uppdaterat inför VT22.
-
-[/WARNING]
 
 Vi jobbar vidare med SQL och tränar mer på utmanande saker som subqueries, JOIN och LEFT/RIGHT OUTER JOIN.
 
