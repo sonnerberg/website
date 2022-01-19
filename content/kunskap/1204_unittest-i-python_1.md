@@ -94,7 +94,7 @@ if __name__ == '__main__':
 
 Flytta dig till unittest och kör följande
 ```bash
-$ python3 tests.py
+$ python3 test.py
 ```
 
 [FIGURE src=/image/oopython/kmom01/result_no_testcases.png caption="Resultat från python3 test.py."]
@@ -118,7 +118,7 @@ class TestCar(unittest.TestCase):
 
 Kör enhetstesterna igen.
 ```bash
-$ python3 tests.py
+$ python3 test.py
 ```
 
 [FIGURE src=/image/oopython/kmom01/result_no_testcases.png caption="Resultat från python3 test.py."]
