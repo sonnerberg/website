@@ -1,8 +1,9 @@
 ---
-author: 
+author:
     - aar
     - lew
 revision:
+    "2022-01-19": (E, grm) La till session, kommenterade ut Json.
     "2021-01-18": (D, moc) La till date modul och json.
     "2018-12-12": (C, aar) La till session.
     "2018-11-26": (B, aar) Skrev om handler koden till en klass.
@@ -15,23 +16,25 @@ Flask, POST och GET
 
 [FIGURE src=/image/oopython/kmom02/topimage-art1.png?w=c5 class="right"]
 
-Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Målet är att vi ska med hjälp av ett formulär, en tabell, GET och POST, presentera innehåll i vår Flask-applikation. Vi behöver även blanda in json filer för att spara data mellan requests på studentservern.
+Vi ska titta närmare på hur man kan jobba med POST och GET i Flask. Målet är att vi, med hjälp av ett formulär, en tabell, GET och POST, ska presentera innehåll i vår Flask-applikation. Vi behöver även blanda in jsonfiler för att spara data mellan requests på studentservern.
 
 <!--more-->  
 
 Intro {#intro}
 -------------------------------
-När vi hämtar en webbsida används HTTP-metoden GET. Det man skickar hamnar då synligt i adressfältet, t.ex.: `http://localhost:5000?id=2&car=volvo`.
+När vi hämtar en webbsida används HTTP-metoden GET. Det man skickar med hamnar då synligt i adressfältet, t.ex.: `http://localhost:5000?id=2&car=volvo`.
 
-Vill vi däremot inte att datan, eller informationen vi skickar, ska synas, så kan vi använda metoden POST. POST kan bland annat inte bokmärkas, cachas eller sparas i historiken till skillnad från GET-metoden. POST-data skickas i headern, så den är ej synlig i URL:en.  
+Vill vi däremot inte att datan, eller informationen vi skickar, ska synas, så kan vi använda metoden POST. POST kan bland annat inte bokmärkas, cachas eller sparas i historiken till skillnad från GET-metoden. POST-data skickas i headern, så den är ej synlig i URL:en (adressfältet).  
 
 [Läs mer om POST och GET](http://www.w3schools.com/tags/ref_httpmethods.asp).
 
-Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans med Python och Flask. Vill du hänga med och koda själv redan nu kan du skapa filerna som används i artikeln:
+Vi ska gå igenom GET och POST och se hur de kan användas tillsammans med Python och Flask. Vill du hänga med och koda själv redan nu kan du skapa filerna som används i artikeln. Använd terminalen och ställ dig i “my_app2”. Om “my_app2” inte finns under din "kmom02" så skapar du den först:
 
 [FIGURE src=/image/oopython/kmom02/tree_flask2.png]
 
 ```bash
+mkdir my_app2
+cd my_app2
 mkdir static templates static/styles templates/forms templates/tables
 touch app.py employee.py handler.py static/styles/style.css templates/{about.html,company.html,footer.html,header.html,index.html,forms/add_employee.html,tables/show_employees.html}
 ```
@@ -63,6 +66,7 @@ Vi börjar med att snabbt gå igenom app.py som påminner om hur den såg ut i f
 
 ```python
 #!/usr/bin/env python3
+import traceback
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -87,7 +91,6 @@ def internal_server_error(e):
     Handler for internal server error 500
     """
     #pylint: disable=unused-argument
-    import traceback
     return "<p>Flask 500<pre>" + traceback.format_exc()
 
 if __name__ == "__main__":
@@ -180,7 +183,7 @@ class Employee():
         return difference.days
 ```
 
-I `get_days_hired` använder vi pythons inbyggda [`datatime` modul](https://docs.python.org/3/library/datetime.html#) för att dynamiskt hålla koll på hur många dagar en persone har varit anställd. 
+I `get_days_hired` använder vi pythons inbyggda [`datatime` modul](https://docs.python.org/3/library/datetime.html#) för att dynamiskt hålla koll på hur många dagar en persone har varit anställd.
 
 Nästa steg blir att skapa Handler klassen så vi kan använda Employee.
 
@@ -188,7 +191,7 @@ Nästa steg blir att skapa Handler klassen så vi kan använda Employee.
 
 ###handler.py {#handler-py}
 
-Handler klassen ska vara bryggan mellan app.py och Employee objekten. Vi börjar med en lista som innehåller alla skapade objekt och en metod som skapar några hårdkodade Employee objekt. 
+Handler klassen ska vara bryggan mellan app.py och Employee objekten. Vi börjar med en lista som innehåller alla skapade objekt och en metod som skapar några hårdkodade Employee objekt.
 
 ```python
 #!/usr/bin/env python3
@@ -254,7 +257,7 @@ Magin händer i `<tbody>`, vi använder en [for-loop](http://jinja.pocoo.org/doc
 </table>
 ```
 
-Vi passar även på att inkludera tabellen i index.html 
+Vi passar även på att inkludera tabellen i index.html
 
 ```
 {% include 'header.html' %}
@@ -335,7 +338,7 @@ Vi bygger upp company.html på liknande sätt som index.html.
     </div>
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-            <h3>Add employee</h3>
+            <h3>Fyll i följande:</h3>
             {% include 'forms/add_employee.html' %}
         </div>
     </div>
@@ -354,15 +357,15 @@ Mallen för formuläret, templates/forms/add_employee.html, ser ut på följande
 ```html
 <form role="form" method="POST" action="{{ url_for('company') }}">
     <div class="form-group">
-        <label for="firstname">First name: </label>
+        <label for="firstname">Förnamn: </label>
         <input type="text" name="firstname" class="form-control" />
     </div>
     <div class="form-group">
-        <label for="lastname">Last name: </label>
+        <label for="lastname">Efternamn: </label>
         <input type="text" name="lastname" class="form-control" />
     </div>
     <div class="form-group">
-        <label for="salary">Salary: </label>
+        <label for="salary">Lön: </label>
         <input type="text" name="salary" class="form-control" />
     </div>
     <div class="form-group row">
@@ -386,7 +389,7 @@ Bootstrap gör att vi får lite mer rader än vad som egentligen behövs. De vik
     <button type="submit" class="btn btn-default">Lägg till</button>
 ```
 
-Vi sätter metoden till POST och action till sökvägen för `company.html`. Attributet `name` är nyckeln vi når formulärets data med i Python koden.
+Vi sätter metoden till POST och action till sökvägen för `company.html`. Attributet `name` är nyckeln vi når formulärets data med i Pythonkoden.
 
 
 
@@ -432,6 +435,8 @@ class Handler():
 
 Notera, om man har ett formulär som innehåller t.ex. checkboxes kan man använda [getlist(key)](http://werkzeug.pocoo.org/docs/0.14/datastructures/#werkzeug.datastructures.MultiDict.getlist), `form.getlist("key")`, för att hämta ut dess värden.
 
+Om ni vill kunna nå routen "company" från navbaren så lägger till ny rad i header.html, liknande den du la till för routen "about" i "[Flask med Jinja2](kunskap/flask-med-jinja2)".
+
 Om ni startar upp servern borde ni kunna gå till company.html och lägga till en employee. Sen kan ni gå tillbaka till index.html och se den i tabellen med all personal.
 
 
@@ -439,15 +444,126 @@ Om ni startar upp servern borde ni kunna gå till company.html och lägga till e
 Flask i produktion {#produktion}
 -------------------------------
 
-Det vi har gjort än så länge fungerar bra lokalt men om vi publicerar sidan till studentservern, lägger till en anställd och går till index.html för att kolla på alla fina anställda kommer vi bara se de som är hårdkodade. När ni testar publicera glöm inte [app.cgi](coachen/flask-som-cgi-script) filen. 
+Det vi har gjort än så länge fungerar bra lokalt men om vi publicerar sidan till studentservern, lägger till en anställd och går till index.html för att kolla på alla fina anställda kommer vi bara se de som är hårdkodade. När ni testar publicera glöm inte [app.cgi](coachen/flask-som-cgi-script) filen.
 
-När vi kör sidan lokalt med Flasks inbyggda server är vårt program i app.py igång hela tiden och vi använder dens minne för att komma ihåg alla anställda vi lägger till i formuläret vid varje request. Men Flask själva skriver att deras webbserver inte säker nog för att användas i produktion, den ska bara användas för utveckling. På studentservern kör vi istället en Apache webbserver som inte fungerar med Flask naturligt. Detta är varför vi behöver `app.cgi` filen, den gör att Apache kan startar vårt app.py program varje gång någon gör ett request. I och med detta stängs vårt program av när ett request är färdigt och när vi får ett nytt request, och programmet startas igen, har programmet inget minne av vad vi gjort tidigare. Vid varje request, när vi byter från index.html till company.html eller när vi submit:ar ett formulär, utgår vi bara från det som finns hårdkodat i koden. I bilden nedanför är "Gateway program" app.py och "Web server" Apache på studentservern.
+När vi kör sidan lokalt med Flasks inbyggda server är vårt program i app.py igång hela tiden och vi använder dens minne för att komma ihåg alla anställda vi lägger till i formuläret vid varje request. Men Flask själva skriver att deras webbserver inte är säker nog för att användas i produktion, den ska bara användas för utveckling. På studentservern kör vi istället en Apache webbserver som inte fungerar med Flask naturligt. Detta är varför vi behöver `app.cgi` filen, den gör att Apache startar vårt app.py program varje gång någon gör ett request. I och med detta stängs vårt program av när ett request är färdigt och när vi får ett nytt request, och programmet startas igen, har programmet inget minne av vad vi gjort tidigare. Vid varje request, när vi byter från index.html till company.html eller när vi submit:ar ett formulär, utgår vi bara från det som finns hårdkodat i koden. I bilden nedanför är "Gateway program" app.py och "Web server" Apache på studentservern.
 
 [FIGURE src=/image/oopython/kmom02/cgi.png caption="Hur CGI fungerar på en webbserver."]
 
-Vi behöver ett externt minne som vårt program kan använda för att spara data mellan requests. Om vi hade skapat en större applikation där vi vill ha persistent data hade vi implementerat en databas. Ett annat alternativ är att spara allt i en session, det finns ett exempel för detta i [example/flask/session](https://github.com/dbwebb-se/oopython/tree/master/example/flask/session). Men vi ska använda [JSON filer](https://docs.python.org/3/library/json.html) istället.
+Vi behöver ett externt minne som vårt program kan använda för att spara data mellan requests. Om vi hade skapat en större applikation där vi vill ha persistent data hade vi implementerat en databas. Ett annat alternativ är att spara allt i en session, det finns ett exempel för detta i [example/flask/session](https://github.com/dbwebb-se/oopython/tree/master/example/flask/session). Men vi ska använda [jsonfiler](https://docs.python.org/3/library/json.html) istället.
 
-### Json {#json}
+
+### Session {#session}
+
+För att skapa en unik session till vår applikation och använda den behöver vi skapa en hemlig nyckel som bara vi ska veta om, där av namnet hemlig. I app.py skapar vi en hemlig nyckel baserat på pathen till filen.
+
+```bash
+# app.py
+import os
+import re
+from flask import Flask, render_template, request, session
+from handler import Handler
+
+app = Flask(__name__)
+app.secret_key = re.sub(r"[^a-z\d]", "", os.path.realpath(__file__))
+...
+```
+
+Session är i princip en vanlig dictionary vilket betyder att om vi vill spara data behöver datan vara av datatypen Dict. Men vår data ligger i Employee objekt vilket inte översätts automatiskt till dictionary så vi kan inte spara datan som den är utan vi behöver [serialisera datan](https://sv.wikipedia.org/wiki/Serialisering). Serialisering är processen att formatera data/objekt till ett format som kan sparas och sedan deserialiseras för att återskapa det tidigare objektet/datan. Vi behöver skapa två nya metoder i Employee klassen för detta. En metod som tar datan från en instans och lägger i en Dict, serialisering, och en som skapar ett nytt Employee objekt av data från en Dict, deserialisering.
+
+```python
+class Employee():
+    def __init__(self, firstname, lastname, salary, hired, id_number=None):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.salary = salary
+        self.hired = hired
+        self.id_number = id_number if id_number else random.sample(range(10), 4)
+
+    def to_json(self):
+        return {
+            "fname": self.firstname,
+            "lname": self.lastname,
+            "salary": self.salary,
+            "hired": self.hired,
+            "id": self.id_number,
+        }
+    # factory method
+    @classmethod
+    def from_json(cls, json):
+        return cls(json["fname"], json["lname"], json["salary"], json["hired"], json["id"])
+    ...
+```
+
+Inget speciellt i metoderna, `to_json` returnerar en Dict med all data och `from_json` är en klassmetod som skapar en ny instans av klassen, typ som `__init__()`. Klassmetoder som fungerar som `__init__()` brukar kallas "factory methods". Vi lägger även till ett default värde på `id_number` parametern i konstruktorn, så vi kan skicka med id_number när vi skapar objekt från json filen. Då fortsätter vi med att lägga till två metoder i Handler, en för att skriva ner data till filen och en för att läsa data den.
+
+```python
+import json
+
+class Handler():
+    ...
+    def write_session(self, session):
+        session["Employees"] = [e.to_json() for e in self.people]
+        # Samma kod fast utan list comprehension
+        # people = []
+        # for e in self.people:
+        #    people.append(e.to_json()
+        # session["Employees"] = people
+
+    def read_session(self, session):
+        # first check if session has values, otherwise will crash if try get values
+        if session.get("Employees", []):
+            self.people = [Employee.from_json(e) for e in session["Employees"]]
+            # Samma kod fast utan list comprehension
+            # self.people = []
+            # for e in session["Employees"]:
+            #    self.people.append(Employee.from_json(e))
+    ...
+```
+
+I write_session använder vi to_json() för att serialisera varje objekt och lägga i en lista. I read_session använder vi from_json() för att deserialisera datan från session. Nu behöver vi bara anropas dessa två metoder på rätt ställe i app.py.
+
+```python
+# app.py
+from flask import Flask, render_template, request, session, redirect, url_for
+...
+
+@app.route("/")
+def main():
+    """ Main route """
+    handler.read_session(session)
+    return render_template("index.html", people=handler.get_people())
+
+@app.route("/company", methods=["POST", "GET"])
+def company():
+    """ Company route """
+    if request.method == "POST":
+        handler.read_session(session)
+        handler.add_employee(request.form)
+        handler.write_session(session)        
+
+    return render_template("company.html", persons=handler.get_people())
+...
+```
+
+Vi ser till att alltid läsa från session när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till session efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från session innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till.
+
+Vi har en liten sak kvar, vi har inget sätt att tömma session om vi vill glömma allt vi har lagt till. Det löser vi genom att lägga till en route där vi bara tömmer session och redirect:ar till index.html
+
+```python
+@app.route("/reset")
+def reset():
+    """ Route for reset session """
+    handler.people = []
+    handler.add_predefined_employees()
+    _ = [session.pop(key) for key in list(session.keys())]
+
+    return redirect(url_for('main'))
+```
+
+Nu kan ni lägga till /reset i slutet av url:en för att tömma session, om man är lat kan man även lägga till en länk i header.html som går dit.
+
+<!-- ### Json {#json}
 
 Vi behöver först skapa en ny fil `employees.json` som vi lägger i `static/data` mappen. Efter det så uppdaterar vi även rättigheterna så att vi både kan läsa och skriva till den.
 ```bash
@@ -485,16 +601,19 @@ class Employee():
 Inget jätte speciellt i metoderna, `to_json` returnerar en Dict med all data och `from_json` är en klassmetod som skapar en ny instans av klassen, typ som `__init__()`. Klassmetoder som fungerar som `__init__()` brukar kallas "factory methods". Vi lägger även till ett default värde på `id_number` parametern i konstruktorn, så vi kan skicka med id_number när vi skapar objekt från json filen. Då fortsätter vi med att lägga till två metoder i Handler, en för att skriva ner data till filen och en för att läsa data den.
 
 ```python
+#!/usr/bin/env python3 pylint: disable=broad-except
 import json
 
 class Handler():
     filename = "static/data/employees.json"
-    
+
     def __init__(self):
         self.people = []
         try:
             self.load_data()
         except FileNotFoundError:
+            self.add_predefined_employees()
+        except Exception:
             self.add_predefined_employees()
 
     # ...
@@ -523,7 +642,7 @@ class Handler():
     #...
 ```
 
-Först importerar vi modulen `json` och sätter en klassvariabel med filnamnet. I `save_data()` använder vi `to_json()` för att serialisera varje objekt och lägga i en lista. Efter det öppnar vi filen i skrivläge och dumpar den, `indent` är inte nödvändigt, den säger bara hur filen skall formatera sitt innehåll.
+Först importerar vi modulen `json` och sätter en klassvariabel med filnamnet. I konstruktorn försöker vi läsa in data från filen men om filen saknas eller är tom, så kastas exception och då använder vi data från `add_predefined_employees()`. I `save_data()` använder vi `to_json()` för att serialisera varje objekt och lägga i en lista. Efter det öppnar vi filen i skrivläge och dumpar den, `indent` är inte nödvändigt, den säger bara hur filen skall formatera sitt innehåll.
 
 I `load_data` läser vi filen och använder `from_json()` för att deserialisera datan från filen. Filen kan vi läsa in redan i konstruktorn, men om vi inte redan har skapat den kommer programmet krascha. Därför lägger vi en try except runt, om vi inte kan läsa in filen lägg til default datan.
 
@@ -557,10 +676,10 @@ def company():
 ...
 ```
 
-Vi ser till att alltid läsa från filen när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till json filer efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från filen innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till.
+Vi ser till att alltid läsa från filen när vi ska visa index.html, så vi kan populera tabellen, och vi skriver till jsonfiler efter att vi har lagt till ett nytt Employee objekt. Nu ska vi ha en fungerande webbsida där vi kan lägga till anställda och visa upp dem i en tabell, som även fungerar på studentservern. Publicera övningen och testa. Notera att vi läser från filen innan vi lägger till ett nytt konto. Annars kommer inte programmet ihåg de konto vi redan lagt till. -->
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Nu har vi kommit fram till slutet, det blev mycket information. Vi har lärt oss POST/GET, for-loop i template, CGI, Json och Serialisering bland annat.
+Nu har vi kommit fram till slutet, det blev mycket information. Vi har lärt oss POST/GET, for-loop i template, CGI, session, Json och Serialisering bland annat.
