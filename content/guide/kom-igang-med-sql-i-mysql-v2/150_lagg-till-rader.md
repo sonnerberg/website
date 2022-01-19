@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-19": "(E, mos) Ta bort 10."
     "2022-01-03": "(D, mos) Genomgången inför v2 och MariaDB."
     "2019-01-11": "(C, mos) Lade till asciinema."
     "2018-03-20": "(B, mos) Indelad i kapitel och varning om safe mode update."
@@ -26,7 +27,7 @@ Lägg SQL-koden, som handlar om att lägga in rader i tabellen, i filen och inle
 --
 ```
 
-Skapa 10 lärare och lägg in dem i tabellen med `INSERT`. Du kan använda `SELECT * FROM Larare` för att se  och kontrollera vad tabellen innehåller.
+Skapa ett antal lärare och lägga in dem i tabellen med `INSERT`, använd `SELECT * FROM Larare` för att se  och kontrollera vad tabellen innehåller.
 
 Först lägger vi in ett par lärare med varsin INSERT sats. Vi omringar strängar med enkelfnutt. Även datum hanterar vi här som en sträng, databasen kan översätta strängen till rätt datum.
 
