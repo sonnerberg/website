@@ -90,9 +90,11 @@ Titta på följande:
 
 Genomför följande övning för att träna dig.
 
-1. Läs igenom artikeln som handlar om "[GET, POST i Flask](kunskap/flask-get-post)".
+1. Läs igenom "Klass relationer" i guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".
 
-1. Läs igenom "Klass relationer" i guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".  
+1. Jobba igenom artikeln "[Hur vi visar olika relationer mellan klasser i ett klassdiagram](kunskap/relationer_klassdiagram)".
+
+1. Läs igenom artikeln som handlar om "[GET, POST i Flask](kunskap/flask-get-post)".
 
 
 
