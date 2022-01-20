@@ -24,18 +24,18 @@ Installation {#installation}
     * [Installera MariaDB Server på Linux](kunskap/installera-mariadb-server-pa-linux)
 
 
-2\. **[Endast Windowsanvändare]** Om du jobbar på Windows så kan du fortsätta med följande artikel så att du kan köra terminalklienten i godtycklig katalog.
+1. **[Endast Windowsanvändare]** Om du jobbar på Windows så skall du fortsätta med följande artikel så att du kan köra terminalklienten i godtycklig katalog.
 
     * [MariaDB klient och Windows med cmd terminalen](coachen/mariadb-och-windows-cmd-terminal)
 
-3\. **[Endast Windowsanvändare]** Du behöver också se till att du kan jobba med terminalklienten i en Bash-terminal. Enklast att komma igång med är troligen Cygwin.
+1. **[Endast Windowsanvändare]** Du behöver också se till att du kan jobba med terminalklienten i en Bash-terminal. Enklast är nog Cygwin men WSL2 är också trevligt.
 
     * [MariaDB klient och Windows med Cygwin terminalen](coachen/mariadb-och-windows-cygwin-terminal)
     * [MariaDB klient och Windows med WSL2 bash terminal](coachen/mariadb-och-windows-wsl2-bash-terminal)
 
-4\. Förutsatt att du kan logga in på databasen med din terminalklient så kan du nu gå vidare och [installera MySQL WorkBench](kunskap/installera-mysql-workbench).
+1. Förutsatt att du kan logga in på databasen med din terminalklient så kan du nu gå vidare och [installera MySQL WorkBench](kunskap/installera-mysql-workbench).
 
-5\. Ett tips till dig som vill slippa skriva användare, lösenord och eventuellt hostnamnet är att skapa din egen konfigurationsfil `.my.cnf`, i artikeln "[MariaDB klienten och filen .my.cnf](coachen/mariadb-klient-och-my-cnf)" får du se hur man gör det.
+1. Ett tips till dig som vill slippa skriva användare, lösenord och eventuellt hostnamnet är att skapa din egen konfigurationsfil `.my.cnf`, i artikeln "[MariaDB klienten och filen .my.cnf](coachen/mariadb-klient-och-my-cnf)" får du se hur man gör det.
 
 
 
