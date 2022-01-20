@@ -6,7 +6,7 @@ revision:
 Överskuggning av metoder
 ==================================
 
-Överskuggning är att skriva över en metod från en basklass i en subklass för att anpassa funktionaliteten för subklassen. I vårt fall, skapa en metod som heter `print_info` i Movie som tar med `director` och `rating`.
+Överskuggning är att skriva över en metod från en basklass i en subklass för att anpassa funktionaliteten för subklassen. I vårt fall, skapa en metod som heter `print_info` i Movie och WebVideo. Där de metoderna tar med datan som är specifik för de subklasserna.
 
 
 
@@ -16,17 +16,6 @@ revision:
 Vi kopierar `print_info()` från Video, klistar in den i Movie klassen och lägger till director och rating i utskriften.
 
 ```python
-class Video():
-
-    def __init__(self, title, length):
-        self.title = title
-        self.length = length
-
-    def print_info(self):
-        print("{title} is {length} minute(s) long".format(
-                title=self.title,
-                length=self.length,
-        ))
 
 class Movie(Video):
 
@@ -48,18 +37,21 @@ class Movie(Video):
                 rating=self.rating
             ))
 
->>> charlie = Video("Charlie bit my finger", 1)
+>>> home = Video("Home video 2", 5)
 >>> dogs = Movie("Isle of Dogs", 101, "Wes Anderson", 8.0)
+>>> charlie = WebVideo("Charlie bit my finger", 1, 100000, 0, ["What a funny clip", "Amazing"])
 
->>> charlie.print_info()
-Charlie bit my finger is 1 minutes long
+>>> home.print_info()
+Home video 2 is 5 minutes long
 >>> dogs.print_info()
 Isle of Dogs is 101 minute(s) long, has the director Wes Anderson and a rating of 8.0
+>>> charlie.print_info()
+Charlie bit my finger is 1 minutes long
 ```
 
-Som vi ser, när `charlie.print_info()` anropas körs metoden `print_info()` i Video klassen och när `dogs.print_info()` anropas körs `print_info()` i Movie klassen. Detta är effekten av att överskugga en metod i en subklass.
+Som vi ser, när `charlie.print_info()` och `home.print_info()` anropas körs metoden `print_info()` i Video klassen och när `dogs.print_info()` anropas körs `print_info()` i Movie klassen. Detta är effekten av att **överskugga** en metod i en subklass.
 
-Men nu har vi lite kod som är samma på två ställen. Det hade varit snyggare om vi inte behöver ha med `title` och `lenght` i `print_info` i subklassen utan istället återanvända metoden från basklassen. Det kan vi såklart göra. Vi kan använda `super()` för att komma åt basklassens metoder, så det vi kan göra är att anropa `print_info()` i Video från `print_info()` i Movie. 
+Vi kan göra likadant i WebVideo för att specialisera den klassen. Men vi väntar med det för att nu har vi lite kod som är samma på två ställen och om vi gör likadant i WebVideo kommer vi få likadan kod på tre ställen. Det hade varit snyggare om vi inte behöver ha med `title` och `lenght` i `print_info` i subklassen utan istället återanvända metoden från basklassen. Det kan vi såklart göra. Vi kan använda `super()` för att komma åt basklassens metoder, så det vi kan göra är att anropa `print_info()` i Video från `print_info()` i Movie. 
 
 ```python
 class Movie(Video):
@@ -73,8 +65,8 @@ class Movie(Video):
                 rating=self.rating
         ))
 
->>> charlie.print_info()
-Charlie bit my finger is 1 minutes long
+>>> home.print_info()
+Home video 2 is 5 minutes long
 >>> dogs.print_info()
 Isle of Dogs is 101 minute(s) long
 , has the director Wes Anderson and a rating of 8.0
@@ -112,15 +104,21 @@ class Movie(Video):
     def print_info(self):
         print(self.to_string())
 
->>> charlie.print_info()
-Charlie bit my finger is 1 minutes long
+>>> home = Video("Home video 2", 5)
+>>> dogs = Movie("Isle of Dogs", 101, "Wes Anderson", 8.0)
+>>> charlie = WebVideo("Charlie bit my finger", 1, 100000, 0, ["What a funny clip", "Amazing"])
+
+>>> home.print_info()
+Home video 2 is 5 minutes long
 >>> dogs.print_info()
 Isle of Dogs is 101 minute(s) long, has the director Wes Anderson and a rating of 8.0
+>>> charlie.print_info()
+Charlie bit my finger is 1 minutes long
 ```
 
 Vi har lagt till metoden `to_string()` i båda klasserna. I subklassen Movie använder vi `super().to_string()` för att anropa `to_string()` i basklassen och på så sätt få strängen med title och length.
 
-Nu har vi två metoder som ser exakt likadana ut, `print_info()`. Den anropar bara `to_string()` och skriver ut strängen som returneras. Vi kan faktiskt ta bort metoden i subklassen, Movie, så vi bara har den i Video. Om vi gör det, när man anropar `dogs.print_info()` anropas metoden som ligger i basklassen och i metoden när `self.to_string()` anropas är `self` ett Movie objekt och har därför en reference till `to_string()` i Movie och inte i Video när det anropas. 
+Nu har vi två metoder som ser exakt likadana ut, `print_info()`. Den anropar bara `to_string()` och skriver ut strängen som returneras. Vi kan faktiskt ta bort metoden i subklassen, Movie, så vi bara har den i Video. Om vi gör det, när man anropar `dogs.print_info()` anropas metoden som ligger i basklassen (Video) och i den metoden när `self.to_string()` exekveras är `self` ett Movie objekt och har därför en reference till `to_string()` i Movie och inte i Video när det anropas. Om det är otydligt hur exekveringen går till, försök rita upp det alternativt kör det i debuggern i Thonny
 
 Vi tar en snabb kik på hur hela koden för båda klasserna ser ut och att utskrifterna fungerar som de ska.
 ```python
@@ -154,21 +152,68 @@ class Movie(Video):
             rating=self.rating
         )
 
->>> charlie = Video("Charlie bit my finger", 1)
+>>> home = Video("Home video 2", 5)
 >>> dogs = Movie("Isle of Dogs", 101, "Wes Anderson", 8.0)
+>>> charlie = WebVideo("Charlie bit my finger", 1, 100000, 0, ["What a funny clip", "Amazing"])
 
->>> charlie.print_info()
-Charlie bit my finger is 1 minute(s) long
+>>> home.print_info()
+Home video 2 is 5 minutes long
 >>> dogs.print_info()
 Isle of Dogs is 101 minute(s) long, has the director Wes Anderson and a rating of 8.0
+>>> charlie.print_info()
+Charlie bit my finger is 1 minutes long
 ```
+
+
+
+### to_string() i WebVideo {#to_web}
+
+Vi fixar samma struktur i WebVideo.
+
+```python
+class WebVideo(Video):
+    def __init__(self, title, length, likes, dislikes, comments):
+        super().__init__(title, length)
+        self.likes = likes
+        self.dislikes = dislikes
+        self.comments = comments
+
+    def to_string(self):
+        """
+        Return object as string
+        """
+        return  "{base_msg}, has {likes} likes, {dislikes}\
+         and the following comments:\n{comments}".format(
+             base_msg=super().to_string(),
+             likes=self.likes,
+             dislikes=self.dislikes,
+             comments="\n".join(self.comments)
+         )
+
+>>> home = Video("Home video 2", 5)
+>>> dogs = Movie("Isle of Dogs", 101, "Wes Anderson", 8.0)
+>>> charlie = WebVideo("Charlie bit my finger", 1, 100000, 0, ["What a funny clip", "Amazing"])
+
+>>> home.print_info()
+Home video 2 is 5 minutes long
+>>> dogs.print_info()
+Isle of Dogs is 101 minute(s) long, has the director Wes Anderson and a rating of 8.0
+>>> charlie.print_info()
+Charlie bit my finger is 1 minutes long, has 100000 likes, 0 and the following comments:
+What a funny clip
+Amazing
+```
+
+Vad snygg och DRY koden blev, så vill vi att det ska se ut. Återanvändning och specialisering i subklasserna.
+
+[FIGURE src=/image/oopython/guide/vid_mov_web_shadow.png caption="Klassdiagram över Video, Movie och WebVideo med överskuggning."]
 
 
 
 Abstract Method {#abstract_method}
 --------------------------------------------------
 
-Ibland vill man tvinga en subklass att överskugga en metod från basklassen. Det kan vara för att man vill påminna någon att metoden behöver implementeras, en så kallad TO-DO, eller kan metoden vara en så kallad *abstract method*. En abstrakt metod är en metod som är deklarerad men innehåller inte någon implementation. Den är tillför att skapa en struktur eller mall som subklassen behöver uppfylla.
+Ibland vill man tvinga en subklass att överskugga en metod från basklassen. Det kan vara för att man vill påminna någon att metoden behöver implementeras, en så kallad TO-DO, eller kan metoden vara en så kallad *abstract method*. En abstrakt metod är en metod som är deklarerad men innehåller inte någon implementation. Den är tillför att skapa en struktur eller mall som subklassen måste uppfylla.
 
 Vi kan skapa en abstrakt metod med `_NotImplementedError_`. För att testa detta lägger vi till en metod i Video klassen, där vi lyfter ett `_NotImplementedError_`, och överskuggar inte metoden i Movie:
 
