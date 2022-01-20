@@ -5,6 +5,7 @@ category:
     - mysql
     - windows
 revision:
+    "2022-01-20": "(B, mos) Mindre förtydligande om hur man startar klienten."
     "2021-12-21": "(A, mos) Flyttat till eget dokument."
 ...
 MariaDB klient och Windows med cmd terminalen
@@ -79,6 +80,12 @@ Nu bör du kunna starta `mariadb` direkt i terminalen via följande kommando.
 
 ```text
 mariadb -udbadm -pP@ssw0rd
+```
+
+Prova även att köra följande variant där du får mata in lösenordet för hand.
+
+```text
+mariadb -udbadm -p
 ```
 
 Nu har du en fungerande terminalklient `mariadb` som du enkelt kan öppna oavsett vilken katalog du står i.
