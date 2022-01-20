@@ -64,7 +64,7 @@ Troligen får du bekymmer med krav på SSL uppkoppling men det kan du lösa geno
 
 Pröva med knappen "Test Connection" för att se om uppkopplingen lyckas. Workbench försöker då koppla upp sig mot din databasserver med de detaljer du angett.
 
-Om du får en varning att du kopplar upp dig mot en "osupportad MariaDB" så är det bara att ignorera den. MySQL Workbench är främst en MySQL-produkt med det fungerar bra även mot MariaDB.
+Om du får en varning att du kopplar upp dig mot en "osupportad MariaDB" så är det bara att ignorera den. MySQL Workbench är främst en MySQL-produkt men det fungerar bra även mot MariaDB.
 
 Spara uppkopplingen när den fungerar.
 
