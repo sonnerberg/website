@@ -5,6 +5,7 @@ category:
     - mariadb
     - mysql workbench
 revision:
+    "2022-01-20": "(B, mos) Förtydligande om fel med lösenord."
     "2021-12-21": "(A, mos) Första utgåvan, sammanslagen från flera andra artiklar."
 ...
 Installera MySQL WorkBench
@@ -63,7 +64,24 @@ Troligen får du bekymmer med krav på SSL uppkoppling men det kan du lösa geno
 
 Pröva med knappen "Test Connection" för att se om uppkopplingen lyckas. Workbench försöker då koppla upp sig mot din databasserver med de detaljer du angett.
 
+Om du får en varning att du kopplar upp dig mot en "osupportad MariaDB" så är det bara att ignorera den. MySQL Workbench är främst en MySQL-produkt med det fungerar bra även mot MariaDB.
+
 Spara uppkopplingen när den fungerar.
+
+
+
+Problem att logga in? {#problem}
+--------------------------------------
+
+Om du får problem att logga in och användaren eller lösenordet inte stämmer, då kan du dubbelkolla att du verkligen kan logga in med terminalklienten med din användare dbadm.
+
+Öppna en terminal.
+
+```text
+mariadb -udbadm -p
+```
+
+Du bör kunna köra ovan kommando, skriva in ditt lösenord, och sedan logga in med terminalklienten. När det fungerar så vet du vilket lösenord du kan använda tillsammans med användaren dbadm. Det bör även fungera i Workbench.
 
 
 
