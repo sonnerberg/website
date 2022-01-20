@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-01-20": "(F, mos) Förtydligade strukturen vilka artiklar man skall jobba i."
     "2021-12-21": "(E, mos) Bort med referens till forum och ändra från MySQL till MariaDB och workbench i egen artikel samt flytta Windows terminaler till egna artiklar."
     "2019-01-09": "(C, mos) Lade till Docker."
     "2019-01-08": "(B, mos) Delade in artikeln i delar, beroende på operativsystem."
@@ -18,19 +19,23 @@ Installation {#installation}
 
 1. Välj rätt artikel beroende på vilket operativsystem du använder.
 
-* [Installera MariaDB Server på Windows 10](kunskap/installera-mariadb-server-pa-windows-10)
-* [Installera MariaDB Server på macOS](kunskap/installera-mariadb-server-pa-macos)
-* [Installera MariaDB Server på Linux](kunskap/installera-mariadb-server-pa-linux)
+    * [Installera MariaDB Server på Windows 10](kunskap/installera-mariadb-server-pa-windows-10)
+    * [Installera MariaDB Server på macOS](kunskap/installera-mariadb-server-pa-macos)
+    * [Installera MariaDB Server på Linux](kunskap/installera-mariadb-server-pa-linux)
 
-Om du jobbar på Windows så vill du troligen även jobba igenom den av följande artiklar som hanterar den terminalen du vill jobba i. Det kan förenkla och spara dig tid i kursen.
 
-* [MariaDB klient och Windows med cmd terminalen](coachen/mariadb-och-windows-cmd-terminal)
-* [MariaDB klient och Windows med cygwin terminalen](coachen/mariadb-och-windows-cygwin-terminal)
-* [MariaDB klient och Windows med WSL2 bash terminal](coachen/mariadb-och-windows-wsl2-bash-terminal)
+2\. **[Endast Windowsanvändare]** Om du jobbar på Windows så kan du fortsätta med följande artikel så att du kan köra terminalklienten i godtycklig katalog.
 
-2\. Du kan nu gå vidare och [installera MySQL WorkBench](kunskap/installera-mysql-workbench).
+    * [MariaDB klient och Windows med cmd terminalen](coachen/mariadb-och-windows-cmd-terminal)
 
-3\. Ett tips till dig som vill slippa skriva användare, lösenord och eventuellt hostnamnet är att skapa din egen konfigurationsfil `.my.cnf`, i artikeln "[MariaDB klienten och filen .my.cnf](coachen/mariadb-klient-och-my-cnf)" får du se hur man gör det.
+3\. **[Endast Windowsanvändare]** Du behöver också se till att du kan jobba med terminalklienten i en Bash-terminal. Enklast att komma igång med är troligen Cygwin.
+
+    * [MariaDB klient och Windows med Cygwin terminalen](coachen/mariadb-och-windows-cygwin-terminal)
+    * [MariaDB klient och Windows med WSL2 bash terminal](coachen/mariadb-och-windows-wsl2-bash-terminal)
+
+4\. Förutsatt att du kan logga in på databasen med din terminalklient så kan du nu gå vidare och [installera MySQL WorkBench](kunskap/installera-mysql-workbench).
+
+5\. Ett tips till dig som vill slippa skriva användare, lösenord och eventuellt hostnamnet är att skapa din egen konfigurationsfil `.my.cnf`, i artikeln "[MariaDB klienten och filen .my.cnf](coachen/mariadb-klient-och-my-cnf)" får du se hur man gör det.
 
 
 
