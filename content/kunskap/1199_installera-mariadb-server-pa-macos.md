@@ -5,6 +5,7 @@ category:
     - mariadb
     - macOS
 revision:
+    "2022-01-20": "(E, mos) Förtydligande om att logga in med lösenord."
     "2021-12-21": "(D, mos) Bytte från MySQL till MariaDB och flyttade MySQL Workbench till en egen artikel."
     "2019-01-17": "(C, mos) Bytte från .bash_profile till .bash_profile."
     "2019-01-09": "(B, mos) Nu enbart för macOS."
@@ -212,6 +213,12 @@ Prova nu om du kan logga in med din nya användare. Avsluta din nuvarande databa
 
 ```text
 mariadb -udbadm -pP@ssw0rd
+```
+
+Prova även att öppna den så här genom att skriva in lösenordet direkt i terminalen.
+
+```text
+mariadb -udbadm -p
 ```
 
 Du kan kontrollera att du nu är inloggad som din "dbadm" användare.
