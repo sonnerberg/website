@@ -5,6 +5,7 @@ category:
     - mysql
     - windows
 revision:
+    "2022-01-20": "(B, mos) Förtydligande om vilket alternativ som rekommenderas."
     "2021-12-21": "(A, mos) Flyttat till eget dokument."
 ...
 MariaDB klient och Windows med cygwin terminalen
@@ -23,7 +24,13 @@ Förberedelse {#prep}
 
 Du har installerat databasen MariaDB i Windows 10 och du kan koppla upp dig mot den med en terminalklient.
 
-Du kan hantera Cygwin terminalen och du använder pakethanteraren apt-cyg.
+Du kan hantera Cygwin terminalen.
+
+Det finns två olika alternativ att installera.
+
+Alternativ 1 innebär att du redan har lagt terminalklienten i din PATH.
+
+Alternativ 2 innebär att du använder pakethanteraren apt-cyg.
 
 
 
@@ -41,10 +48,18 @@ Eller så installerar du en separat klient direkt i Cygwin och då kan du instal
 Alternativ 1: Använd terminalklienten mariadb i Cygwin {#mariadb}
 --------------------------------------
 
-Förutsatt att du har placerat installationskatalogen i din PATH så kan du starta terminalklienten på samma sätt som du gör i cmd terminalen.
+_I kursen databas är detta det rekommenderade alternativet eftersom du redan kan köra terminalklienten i Windowsklienten cmd._
+
+Förutsatt att du har placerat installationskatalogen för MariaDB i din PATH så kan du starta terminalklienten på samma sätt som du gör i Windows cmd terminal.
 
 ```text
 mariadb -udbadm -pP@ssw0rd
+```
+
+Du kan även prova så här.
+
+```text
+mariadb -udbadm -p
 ```
 
 Det kan se ut så här.
