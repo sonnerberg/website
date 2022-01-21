@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2022-01-21": (D, aar) Bytt ut bank omt yahtzee2.
     "2021-01-18": (C, moc) Bytt ut frågorsport uppgift mot bank.
     "2018-12-18": (B, aar) Bytt ut form uppgift mot frågorsport.
     "2017-11-24": (A, lew) oopython v2.
@@ -11,9 +12,9 @@ Kmom02: Arv och andra klassrelationer
 
 [FIGURE src=/image/oopython/kmom02/kmom02-class-relations.png class="right"]
 
-Kom igång med _arv_ och andra klassrelationer. Vi ska titta närmare på klassrelationer och hur de kan implementeras. Vi tar även ett steg till med Flaskapplikationen och ser hur vi hanterar fomulär med _GET_ och _POST_.
+Kom igång med _arv_ och andra klassrelationer. Vi ska titta närmare på klassrelationer och hur de kan implementeras. När vi lär oss mer om klassrelationer behöver vi också lära oss hur vi visar det i klassdiagram. Vi tar även ett steg till med Flaskapplikationen och ser hur vi hanterar fomulär med _GET_ och _POST_.
 
-Vi ska skapa en basklass och subklasser som får sin data från ett formulär och sedan ritas ut i Flaskapplikationen.
+Vi ska fortsätta med Yahtzee uppgiften, i detta kursmomentet ska ni skapa klasser för att få poäng baserat på vilka tärningar som finns i en hand.
 
 <!--more-->
 [WARNING]
@@ -104,10 +105,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med klass relationer](uppgift/python-med-klass-relationer)" (lab 2)
 
-1. Gör uppgiften "[Bank med Flask](uppgift/bank_med_flask)". Spara koden i mappen `me/kmom02/bank/`.
+1. Gör uppgiften "[Yahtzee2](uppgift/yahtzee2)". Spara koden i mappen `me/kmom02/yahtzee2/`.
 
-1. Fyll på redovisning.html med kursmomentets redovisningstext.
-
+<!-- 1. Gör uppgiften "[Bank med Flask](uppgift/bank_med_flask)". Spara koden i mappen `me/kmom02/bank/`. -->
 <!-- 1. Gör uppgiften "[Frågesport med Flask](uppgift/fragesport_med_flask)". Spara koden i mappen `me/kmom02/bank/`. -->
 <!-- 1. Gör uppgiften "[Skapa former](uppgift/skapa-former)". Spara koden i mappen `me/flask/`. -->
 
@@ -115,7 +115,7 @@ Dessa uppgifter skall utföras och redovisas.
 ```bash
 # Ställ dig i kurskatalogen
 # dbwebb validate flask
-dbwebb publish flask
+dbwebb publish kmom02
 ```
 
 
@@ -125,18 +125,7 @@ dbwebb publish flask
 Det finns inga extrauppgifter.
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Lämna in  {#resultat}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Kan du ge exempel på något användningsområde där objektorientering och arv hade passat bra?
-* Förstod du de olika relationerna och skillnaden på dem?
-* Vad innebär polymorfism inom objektorienterad programmering?
-* Vad innebär inkapsling och publika interface inom objektorienterad programmering?
-* Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Vad tycker du om den typen av uppgift (bank)?
+Läs [Lämna in och redovisa uppgift](./../redovisa) för att ta reda på hur ni lämna in era uppgifter när ni är klara.
