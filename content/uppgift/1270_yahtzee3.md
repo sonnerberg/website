@@ -3,18 +3,18 @@ author:
     - aar
     - grm
 revision:
-    "2022-01-20": (A, grm) Första upplagan.
+    "2022-01-21": (A, grm) Första upplagan.
 category:
     - oopython
 ...
-Yahtzee spelet del 2
+Fortsättning på Yahtzee spelet
 ===================================
 
 I denna uppgiften ska ni fortsätta med Yahtzee spelet ni började på i kmom01.
 
 <!--more-->
 
-Ni kommer att fortsätta utveckla spelet igenom flera kursmoment. I denna uppgiften skapar vi alla regler och anger vilken regel som ska användas. Poängsumman sparar vi och visar liksom föregående tärningsslag.
+Ni kommer att fortsätta utveckla spelet igenom flera kursmoment. I denna uppgiften skapar vi ett formulär där vi väljer vilka tärningar som ska slås om och vilken regel som ska användas.
 
 
 
@@ -36,7 +36,9 @@ Introduktion {#intro}
 
 Ni ska som sagt utveckla ett Yahtzee spel över flera kursmoment. Ni som jobbar ensamma ska utveckla spelet för terminalen medan ni som jobbar i grupp ska utveckla spelet för webbläsaren med hjälp av Flask.
 
-Spelet ska följa de internationella reglerna och inte svenska reglerna. Här kan ni hitta [reglerna](https://gamerules.com/rules/yahtzee-dice-game/). Denna veckan ska vi skapa klasserna för reglerna. Vi ska kunna välja regel och visa dess poängsumman. Vi ska dessutom visa föregående tärningsslag.
+Spelet ska följa de internationella reglerna och inte svenska reglerna. Här kan ni hitta [reglerna](https://gamerules.com/rules/yahtzee-dice-game/). Denna veckan ska vi skapa klasserna för reglerna. Vi ska kunna välja regel och se dess poängsumma.
+
+Vi ska lägga till checkboxar bredvid tärningarna för att på så sätt visa vilka som ska slås om. När vi slagit om tärningarna vill vi också se föregående tärningsslag.
 
 Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som måste finnas, ni får och är **rekommenderade** att skapa ytterligare metoder och attribut där ni tycker att det behövs.
 
@@ -61,7 +63,7 @@ Lägg till en ny metod.
 
 Denna klassen är en abstrakt klass och representerar en regel.
 
-[FIGURE src="/image/oopython/kmom02/uml_rules2.png" caption="Klassen Rule och dess subklasser"]
+[FIGURE src="/image/oopython/kmom02/uml_rules.png" caption="Klasserna Rule, SameValueRule, Ones och ThreeOfAKind"]
 
 #### Attributen {#rule-attr}
 
@@ -69,12 +71,13 @@ Inga.
 
 #### Metoderna {#rule-met}
 
-- `points(hand)` - metoden är abstrakt och innehåller `pass` vilket innebär att metoden `points` för subklasserna körs istället.
-
+- `points(hand)` - metoden är tom och innehåller `pass` vilket innebär att metoden `points` för underklasserna körs istället.
 
 ### SameValueRule {#same-value-rule}
 
-Denna klassen ärver från `Rule` och representerar reglerna i övre delen, antalet 1:or, 2:or etc. Se klassdiagrammet "Klassen Rule och dess subklasser" ovan.
+Denna klassen representerar reglerna i övre delen, antalet 1:or, 2:or etc.
+
+[FIGURE src="/image/oopython/kmom02/same_value_rule.png" caption="SameValueRule klass"]
 
 #### Attributen {#same-value-rule-attr}
 
@@ -86,49 +89,39 @@ Denna klassen ärver från `Rule` och representerar reglerna i övre delen, anta
 - `__init__(value, name)` - inga defaultvärden
 - `points(hand)` - ska returna poängsumman för regeln, t.ex. 3 för 3 stycken 1:or.
 
-
 ### Ones {#ones}
 
-Denna klassen ärver från `SameValueRule` och representerar regeln med 1:or. Se klassdiagrammet "Klassen Rule och dess subklasser" ovan.
+Denna klassen representerar regeln med 1:or.
+
+[FIGURE src="/image/oopython/kmom02/ones.png" caption="Ones klass"]
 
 #### Attributen {#ones-attr}
 
-Inga.
+- `value` - Ska innehålla värdet för regeln, t.ex. 1 för 1:or.
+- `name` - Ska innehålla namnet på regeln, t.ex. Ones() för ettor.
 
 #### Metoderna {#ones-met}
 
-- `__init__()` - anropar basklassens konstruktor. Se kodexempel.
-```python
-...
-def __init__(self):
-    super().__init__(1, "Ones")
-...       
-```
+- `__init__()` - anropar basklassens konstruktor.
 
 Klasserna Twos, Threes, Fours, Fives och Sixes är uppbyggda på samma sätt.
 
-
 ### ThreeOfAKind {#three-of-a-kind}
 
-Denna klassen representerar regeln summan minst 3 likadana tärningar. Se klassdiagrammet "Klassen Rule och dess subklasser" ovan.
+Denna klassen representerar regeln med 1:or.
+
+[FIGURE src="/image/oopython/kmom02/ones.png" caption="Ones klass"]
 
 #### Attributen {#three-of-a-kind-attr}
 
-- `name` - Ska innehålla namnet på regeln, t.ex. "Three of a kind".
+- `name` - Ska innehålla namnet på regeln "Three of a kind".
 
 #### Metoderna {#three-of-a-kind-met}
 
-- `__init__()` - sätter namnet på regeln. Se kodexempel.
-```python
-...
-def __init__(self):
-    self.name = "Three of a kind"
-...       
-```
-- `points(hand)` - ska returnera poängsumman för regeln. I detta fallet kolla att det finns minst 3 likadana tärningar och returnera dess poängsumma, t.ex. 9 för 3 stycken 3:or.
+- `__init__()` - sätter namnet på regeln.
+- `points(hand)` - ska returna poängsumman för regeln. I detta fallet kolla att det finns minst 3 likadana tärningar och returnera dess poängsumma, t.ex. 9 för 3 stycken 3:or.
 
 De andra reglerna FourOfAKind, FullHouse, SmallStraight, LargeStraight, Yahtzee och Chance är uppbyggda på samma sätt som ThreeOfAKind.
-
 
 Krav {#krav}
 -----------------------
@@ -160,7 +153,11 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 
 Du ska lägga till följande funktionalitet till ditt terminalprogram.
 
-1. Vid menyval "r" efter att tärningarna visats, så ska användaren kunna välja regel och då ska poängsumman visas.
+1. Vid menyval "r" efter att användaren valt vilka tärningar som ska slås om så ska regel väljas. Då ska terminalprogrammet svara med poängsumman för den regeln.
+
+1. Vid menyval "r" så ska användaren kunna välja vilka tärningar som ska slås om. Slå om de tärningarna och visa användaren.
+
+1. Tänk på att varje omgång består av 3 slag. När regel för 3:e gången så bör loopen startas om. Poängsumman nollställs inför nästa runda.
 
 1. Testa, validera och publicera applikationen på studentservern.
 
@@ -170,17 +167,23 @@ Du ska lägga till följande funktionalitet till ditt terminalprogram.
 
 När ni är färdiga kan det se ut så här:
 
-[FIGURE src="/image/oopython/kmom02/yahtzee2.png" caption="Bild efter 1 slag och regeln Twos vald"]
+[FIGURE src="/image/oopython/kmom02/yahtzee2.png" caption="Bild på slag 3"]
 
-1. Lägg till radiobuttons för de olika reglerna i ett formulär med en submit-knapp. Bredvid en radiobutton för en viss regel ska namnet på regeln skrivas ut, t.ex. "Three of a kind". Testa.
+1. Lägg till checkboxar bredvid tärningarna för att visa vilka vilka tärningar som ska slås om. Gör en knapp för att submit:a resultatet. Testa.
 
-1. Lägg till så att poängsumman för respektive regel visas bredvid regelns radiobutton. Testa.
-
-1. Spara poängsumman i session och visa upp den. Testa.
+1. Håll reda på antalet slag och spara det som heltal i session. Presentera vilket slag det är i rubriken. Testa att rubriken ändrar sig och räknar upp när du slår tärningarna. Gör gärna print(session) och kolla att det stämmer.
 
 1. Lägg till "Last die rolls" överst. Spara nuvarande värde på tärningarna med `to_list()` till sessionen innan du slår om tärningarna. Testa.
 
 1. Lägg till en route `reset` som nollställer sessionen och därmed startar om spelet. Lägg till den i navbaren om du vill. Testa.
+
+1. Lägg till radiobuttons för de olika reglerna i samma formulär. Bredvid en radiobutton för en viss regel ska namnet på regeln skrivas ut. Testa.
+
+1. Lägg till så att poängsumman för respektive regel visas bredvid regeln radiobutton. Testa.
+
+1. Spara poängsumman i session och visa upp den under knappen. Testa.
+
+1. Tänk på att varje omgång består av 3 slag. När du klickar på knappen på 3:e slaget så bör spelet startas om. Poängsumman nollställs inför nästa runda.
 
 1. Testa, validera och publicera applikationen på studentservern.
 
