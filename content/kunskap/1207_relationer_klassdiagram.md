@@ -97,6 +97,15 @@ Ett exempel på arv och komposition:
 Nu har vi ett ordentligt diagram utan någon kod kopplade till det. För att träna, försök föreställ er hur koden för detta diagrammet ser ut. En Customer kan ha noll till oändligt många Orders. En Order kan bara tillhöra en Customer. Order är en basklass för specialOrder och NormalOrder.
 
 
+####Abstrakta klasser och metoder {#abstrakt}
+
+Att kunna visa om en metod eller klass är abstrakt behöver vi också kunna göra. Det är väldigt simpelt. Klassnamnet och metoderna ska formateras med *italics*. Nedanför kan ni se ett klassdiagram för filtyper. Det finns många olika filtyper på en dator men alla olika typer måste ha viss gemensam funktionalitet. Då passar det utmärkt att ha en abstrakt basklass som definierar vilken funktionalitet en fil måste ha.
+
+[FIGURE src=/image/oopython/kmom02/diagrams/abstract_inherit.png caption="Arvs-hierarki med abstrakt klass för filtyper."]
+
+Klassen `FileType` är abstrakt och har tre abstrakta metoder. De är alla i *italics*. Subklasserna `PNG` och `PDF` är inte abstrakta och de ska implementera metoderna, därför är metoderna inte i *italics* i subklasserna.
+
+
 
 ##Association vs Aggregation vs Komposition {#Association_vs_Aggregation_vs_Komposition}
 
