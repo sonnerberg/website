@@ -76,3 +76,27 @@ const styles = StyleSheet.create({
   },
 });
 ```
+
+De två första raderna är import av först en `StatusBar` komponent från Expo. Den visas längst ner i appen och är till för att vi ska kunna se vad som händer när vi utvecklar appen. Sedan importerar vi två [Core Components](https://reactnative.dev/docs/intro-react-native-components#core-components) `View` och `Text`, samt StyleSheet för att kunna ge stil till vår app.
+
+Alla delar av appar vi gör i React Native är uppbyggda av olika sorters Views. När vi bygger appen med hjälp av Expo och React Native görs dessa om till Views i det mobila operativsystem vi bygger för. Som exempel blir en `Text`-View till en `UITextView` på iOS och till en `TextView` på Android.
+
+
+
+Komponenter {#komponenter}
+--------------------------------------
+
+Komponenter är ett oerhört viktigt begrepp inom JavaScript-ramverk som till exempel Angular, React och Vue. Tanken med en komponent är att det oberoende och återanvändbara delar av vår kod. För att förstå komponenter är artikeln [React Fundamentals](https://reactnative.dev/docs/intro-react).
+
+I kodexemplet ovan (och inklistrat nedan med) ser vi ett första exempel på en komponent `App`. `App` i sig är en funktion, sedan exporterar vi den som `default` export från filen `App.tsx`. Från funktionen returnerar vi något som ser ut som upphottat HTML. Det kallas JSX och är ett tillägg till JavaScript syntaxen, så det är mer än bara ett `template` language. För att lära sig mer om bakgrunden och grunderna i JSX rekommenderar jag artikeln [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) från Reacts dokumentation. För den som vill gå på djupet kan artikeln [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) läsas efteråt.
+
+```javascript
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+```
