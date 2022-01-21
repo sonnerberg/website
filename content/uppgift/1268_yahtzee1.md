@@ -105,6 +105,7 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
     1. Att `get_name()` returnerar korrekt namn.
     1. Att `__str__()` returnerar rätt värde som en sträng.
 
+1. Använd er av `random.seed()` när ni testar funktionalitet som slumpar värden.
 
 
 ### Krav ensam {#krav1}
