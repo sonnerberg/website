@@ -17,14 +17,6 @@ Kom igång med _arv_ och andra klassrelationer. Vi ska titta närmare på klassr
 Vi ska fortsätta med Yahtzee uppgiften, i detta kursmomentet ska ni skapa klasser för att få poäng baserat på vilka tärningar som finns i en hand.
 
 <!--more-->
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
-
 [INFO]
 Ni behöver göra `dbwebb update` och `dbwebb init` i kursrepot innan ni startar med kursmomentet!
 [/INFO]
