@@ -47,7 +47,7 @@ Man kan också skriva så att databasen skapas eller droppas, men bara om den in
 CREATE DATABASE IF NOT EXISTS skolan;
 
 -- DROP DATABASE skolan;
-DROP DATABASE IF NOT EXISTS skolan;
+DROP DATABASE IF EXISTS skolan;
 ```
 
 För att se vilka databaser som finns använder vi kommandot SHOW.
