@@ -46,7 +46,7 @@ Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som 
 
 Lägg till en ny metod.
 
-- `__eq__(die)` ska ta emot ett Die objekt och kolla om värdet på båda objekten är samma. Om tärningarna innehåller samma värde ska `True` returneras, annars `False`.
+- `__eq__(die/value)` ska kunna ta emot ett Die objekt eller ett heltal. Om tärningarna innehåller samma värde ska `True` returneras, annars `False`. Samma gäller om heltaltet är samma som tärningens värde.
 
 
 
@@ -117,7 +117,7 @@ Denna klassen representerar regeln minst 3 likadana tärningar. Se klassdiagramm
 
 #### Attributen {#three-of-a-kind-attr}
 
-- `name` - Ska innehålla namnet på regeln, t.ex. "Three of a kind".
+- `name` - Ska innehålla namnet på regeln, t.ex. "Three Of A Kind".
 
 #### Metoderna {#three-of-a-kind-met}
 
