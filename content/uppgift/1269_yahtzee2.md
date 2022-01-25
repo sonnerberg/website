@@ -187,7 +187,7 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
     1. Att `roll()` utan argument slår om alla tärningar.
     1. Att `to_list()` returnerar en lista med tärningarnas värde.
 
-1. Implementera koden för Rule enligt klassdiagrammen ovanför. Spara filen i `me/kmom02/yahtzee2/src`.
+1. Implementera koden för Rule enligt klassdiagrammen ovanför. Spara klasserna i filen `me/kmom02/yahtzee2/src/rules.py`.
 
 
 ### Krav ensam {#krav1}
