@@ -175,7 +175,7 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 
 1. Implementera de nya metoderna för Die och Hand.
 
-1. Gör nya klassdiagram för Die och Hand, inkludera relation och kardinalitet. Spara dem som uml.png och rita gärna i [draw.io](https://www.draw.io/)
+1. Gör nya klassdiagram för Die och Hand, inkludera relation och kardinalitet. Spara dem som `uml.png` i `yahtzee2` mappen. Rita gärna i [draw.io](https://www.draw.io/).
 
 1. Lägg till ett test för Die klassen i `me/kmom02/yahtzee2/tests/test_die.py`. Testa följande saker i Die klassen:
     1. Att `__eq__()` returnerar rätt vi jämförelse med ett annat Die objekt.
