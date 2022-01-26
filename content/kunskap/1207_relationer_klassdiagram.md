@@ -43,11 +43,15 @@ Terminologi {#terminologi}
 
 * **Beteende diagram**: Behavior diagram på engelska. Dynamisk bild av systemet som visar vad som händer i systemet.
 
-* **Reverse engineering**: att ta fram detaljerade ritningar och specifikationer på hur en produkt fungerar.
+* **Reverse engineering**: Att ta fram detaljerade ritningar och specifikationer på hur en produkt fungerar.
+
+* **Kardinalitet** : Antalet objekt som är involverade i en relation.
+
+
 
 ##Relationer {#relationer}
 
-Klasser har relationer, t.ex. arv, komposition och aggregation, detta ska visas i diagrammet. För att visa relationer används olika sorters "pilar" mellan klasserna. Tillsammans med de pilarna kan vi även förtydliga antalet objekt av klasserna som är en del av relationen. T.ex. om vi har ett Car objekt använder det troligen fyra Tire objekt, det kan vi också specificera. Det gör vi med positiva tal och
+Klasser har relationer, t.ex. arv, komposition och aggregation, detta ska visas i diagrammet. För att visa relationer används olika sorters "pilar" mellan klasserna. Tillsammans med de pilarna kan vi även förtydliga antalet objekt av klasserna som är en del av relationen, även kallat kardinalitet. T.ex. om vi har ett Car objekt använder det troligen fyra Tire objekt, det kan vi också specificera. Det gör vi med positiva tal och
 asterisks(**\***, betyder oändligt), för att visa antalet instanser av varje klass som kan vara sammankopplade. Antalet visas som en intervall [minimum..maximum].
 
 Innan vi går vidare, bekanta dig med koden som finns i [example/classes/flight](https://github.com/dbwebb-se/oopython/tree/master/example/classes/flight) så ska vi se hur ett klassdiagram för koden kan se ut.
