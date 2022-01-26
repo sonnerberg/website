@@ -100,3 +100,7 @@ export default function App() {
   );
 }
 ```
+
+I denna komponenten returnerar vi en `View`-Core Component som i sin tur innehåller en `Text`-Core Component, samt en Expo komponent som visar status för appen. Vi kommer senare i kursen att göra egna komponenter, som vi kan använda på liknande sätt som denna `StatusBar` komponent.
+
+Vi ändrar lite

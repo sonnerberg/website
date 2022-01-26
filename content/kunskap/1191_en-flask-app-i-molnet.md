@@ -284,6 +284,35 @@ Eftersom denna PAAS-tjänsten använder Linux i botten så finns BASH för att g
 
 
 
+Troubleshooting {#troubls}
+--------------------------------------
+
+Ibland vill inte det sig inte med modulen `requests` och då kan nedanstående vara lösningen.
+
+För att få det att funka så kan du behöva låta projektet bygga i Azure istället för lokalt. Det gör du genom att gå in i din webapp i portal.azure.com, välja fliken Configuration -> Application settings -> + New application setting:
+
+Name: SCM_DO_BUILD_DURING_DEPLOYMENT
+
+Value: true
+
+Spara sedan ändringen.
+
+![Build on Azure](image/moln/build_on_azure.png)
+
+Därefter behöver du sannolikt deploya ditt projekt igen. Eftersom bygget nu sker i Azure istället för lokalt så tar det ett tag efter deployment innan bygget är klart och dina ändringar är fullständigt deployade. För mer information se: [Configure a Linux Python app for Azure App Service](https://docs.microsoft.com/en-gb/azure/app-service/configure-language-python).
+
+
+
+### Annat namn än app.py {#apppy}
+
+En annan lurig sak som är värt att känna till. Om du döper din apps uppstarts-.py fil till något annat än app.py så behöver du definiera i konfiguration vilken fil som ska köras.Det görs i webappens application settings.
+
+Name: FLASK_APP
+
+Value: {ditt filnamn}.py
+
+
+
 Avslutningsvis {#avslut}
 --------------------------------------
 
