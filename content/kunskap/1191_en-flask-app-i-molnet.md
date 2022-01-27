@@ -252,11 +252,11 @@ Vi öppnar upp Visual Studio Code och säkerställer att vi har öppnat den i ka
 
 Klicka på Sign in to Azure och logga in med ditt studentkonto (xxxx99@student.bth.se).
 
-![Sign in](vsc_azure_signin.png)
+![Sign in](image/moln/vsc_azure_signin.png)
 
 Du ska nu se texten Select subscription där din prenumeration ska finnas, välj den.
 
-![Sign in](vsc_azure_select_sub.png)
+![Sign in](image/moln/vsc_azure_select_sub.png)
 
 Du har nu genom Visual Studio Code tillgång till de Azuretjänster som du har skapat upp i din prenumeration.
 
@@ -264,17 +264,17 @@ Om man av någon anledning valt fel konto eller vill växla mellan konton så an
 
 Vi ska nu driftsätta vårt API. Välj den WebApp som du skapat i portalen och högerklicka. Välj sedan Deploy to Web App...
 
-![Deploy](vsc_azure_deploy.png)
+![Deploy](image/moln/vsc_azure_deploy.png)
 
 Välj den folder som appen ligger i lokalt, välj att inte bygga i molnet utan kör det lokalt, och klicka på Deploy.
 
 När Deployment completed visas så kan du klicka på Browse Website och verifiera att det funkar som det ska.
 
-![Completed](vsc_azure_completed.png)
+![Completed](image/moln/vsc_azure_completed.png)
 
 I Azure App Service Extension i Visual Studio Code kan man se hur deployment har gått och vilka filer som överförts.
 
-![Content](vsc_azure_content.png)
+![Content](image/moln/vsc_azure_content.png)
 
 Det går också att använda Kudu genom att lägga till .scm efter namnet på din tjänst.
 
