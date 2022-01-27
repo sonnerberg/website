@@ -103,7 +103,7 @@ Genomför följande övningar för att träna dig.
 
 1. Läs igenom artikeln om sekvensdiagram "[Introduktion till sekvensdiagram](kunskap/intro_till_sekvensdiagram)".
 
-2. Läs igenom artikeln som handlar om enhetstester "[Att skriva unittester](kunskap/unittest-i-python)".
+2. Läs igenom artikeln som handlar om enhetstester "[Att skriva unittester](kunskap/unittest-i-python_2)".
 
 
 
