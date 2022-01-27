@@ -101,9 +101,11 @@ Titta på följande video:
 
 Genomför följande övningar för att träna dig.
 
-1. Läs igenom artikeln om sekvensdiagram "[Introduktion till sekvensdiagram](kunskap/intro_till_sekvensdiagram)".
+1. "Mer objektorientering" i guiden "[Kom igång med objektorienterad programmering i Python](guide/kom-igang-med-objektorienterad-programmering-i-python)".
 
-2. Läs igenom artikeln som handlar om enhetstester "[Att skriva unittester](kunskap/unittest-i-python_2)".
+1. "[Introduktion till sekvensdiagram](kunskap/intro_till_sekvensdiagram)".
+
+2. "[Mer om enhetstester](kunskap/unittest-i-python_2)".
 
 
 
