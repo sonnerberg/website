@@ -38,9 +38,9 @@ Introduktion {#intro}
 
 Ni ska som sagt utveckla ett Yahtzee spel över flera kursmoment. Ni som jobbar ensamma ska utveckla spelet för terminalen medan ni som jobbar i grupp ska utveckla spelet för webbläsaren med hjälp av Flask.
 
-Spelet ska följa de internationella reglerna och inte svenska reglerna. Här kan ni hitta [reglerna](https://gamerules.com/rules/yahtzee-dice-game/). Denna veckan ska vi skapa klasserna för reglerna. Vi ska kunna välja regel och se dess poängsumma.
+Spelet ska följa de internationella reglerna och inte svenska reglerna. Här kan ni hitta [reglerna](https://gamerules.com/rules/yahtzee-dice-game/).
 
-Vi ska lägga till checkboxar bredvid tärningarna för att på så sätt visa vilka som ska slås om. När vi slagit om tärningarna vill vi också se föregående tärningsslag.
+Vi ska lägga till checkboxar bredvid tärningarna för att på så sätt visa vilka som ska slås om. Vi vill också se en resultattavla med regler och poäng enligt bilden nedan. Vi vill kunna välja regel Om du använder samma regel 2 gånger vill vi se ett felmeddelande. När du är klar, så vill vi se ett meddelande för det.
 
 Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som måste finnas, ni får och är **rekommenderade** att skapa ytterligare metoder och attribut där ni tycker att det behövs.
 
@@ -49,7 +49,7 @@ Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som 
 
 ### Scoreboard {#scoreboard}
 
-Denna klassen ska innehålla hur många poäng spelaren har samlat på sig och vilka regler som spelaren har fått poäng för. Hur ni implementerar denna klasser är inte lika reglerat som i tidigare uppgifter. Ni får göra lite egna val.
+Denna klassen ska innehålla hur många poäng spelaren har samlat på sig och vilka regler som spelaren har fått poäng för. Hur ni implementerar denna klassen är inte lika reglerat som i tidigare uppgifter. Ni får göra lite egna val.
 
 [FIGURE src="/image/oopython/kmom03/uml_scoreboard.png" caption="Klassen Scoreboard"]
 
