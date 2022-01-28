@@ -14,6 +14,8 @@ I denna uppgiften ska ni fortsätta med Yahtzee spelet ni började på i kmom01.
 
 <!--more-->
 
+[FIGURE src="/image/oopython/kmom03/yahtzee3.png" caption="Färdigt Yahtzee3"]
+
 Ni kommer att fortsätta utveckla spelet igenom flera kursmoment. I denna uppgiften skapar vi ett formulär där vi väljer vilka tärningar som ska slås om och vilken regel som ska användas.
 
 
@@ -42,86 +44,38 @@ Vi ska lägga till checkboxar bredvid tärningarna för att på så sätt visa v
 
 Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som måste finnas, ni får och är **rekommenderade** att skapa ytterligare metoder och attribut där ni tycker att det behövs.
 
+[YOUTUBE src="dO_o01YomTM" caption="Andreas visar hur en färdig lösning kan se ut i Flask."]
 
 
-### Die {#die}
+### Scoreboard {#scoreboard}
 
-Lägg till en ny metod.
+Denna klassen ska innehålla hur många poäng spelaren har samlat på sig och vilka regler som spelaren har fått poäng för. Hur ni implementerar denna klasser är inte lika reglerat som i tidigare uppgifter. Ni får göra lite egna val.
 
-- `__eg__()` ska returnera värdet som tärningen har som en sträng.
+[FIGURE src="/image/oopython/kmom03/uml_scoreboard.png" caption="Klassen Scoreboard"]
+
+Metoderna i diagrammet **måste** finnas, i övrigt får ni själva bestämma hur klassen ska implementeras. Konstruktorn får ni själva bestämma vad som behövs för att skapa ett nytt objekt. Ni kan också lägga till fler metoder och attribut.
+
+#### Attribut {#attr}
+
+Det är upp till er själva vilka attribut ni vill ha. Datan som ska finnas i ett objekt är de olika reglerna och hur många poäng spelaren har fått för de olika reglerna.
+
+Attributet ni väljer att använda för att hålla poängen, ska vara **privat**.
 
 
 
-#### Hand {#hand}
+#### Metoder {#met}
 
-Lägg till en ny metod.
+- `get_total_points()` - Metoden ska returnera hur många poäng spelaren har samlat på sig än så länge.
 
-- `to_list()` ska returnera en lista som innehåller värdet på tärningarna.
+- `add_points(rule_name, hand)` - Metoden ska lägga till poäng för en hand för en specifik regel. **Om** spelaren redan har fått poäng för den regeln ska ett `ValueError` lyftas och inga poäng ges.
+
+- `get_points(rule_name)` - Metoden ska returnera hur många poäng spelaren har fått för en regel. Om regeln inte har använts för att ge poäng, returnera `-1`.
+
+- `finished()` - Metoden ska returnera `True` om alla regler har använts en gång för att få poäng, annars `False`.
+
+- `from_dict(points)` - Det ska vara en **classmethod** som används för att skapa ett nytt Scoreboard objekt. Metoden ska ta emot en dictionary där nycklarna är namn på regler och värdena är hur många poäng som de reglerna har fått. Värdet `-1` används för att markera att en regel inte har använts för att få några poäng.
 
 
-### Rule {#rule}
-
-Denna klassen är en abstrakt klass och representerar en regel.
-
-[FIGURE src="/image/oopython/kmom02/uml_rules.png" caption="Klasserna Rule, SameValueRule, Ones och ThreeOfAKind"]
-
-#### Attributen {#rule-attr}
-
-Inga.
-
-#### Metoderna {#rule-met}
-
-- `points(hand)` - metoden är tom och innehåller `pass` vilket innebär att metoden `points` för underklasserna körs istället.
-
-### SameValueRule {#same-value-rule}
-
-Denna klassen representerar reglerna i övre delen, antalet 1:or, 2:or etc.
-
-[FIGURE src="/image/oopython/kmom02/same_value_rule.png" caption="SameValueRule klass"]
-
-#### Attributen {#same-value-rule-attr}
-
-- `value` - Ska innehålla värdet för regeln, t.ex. 1 för 1:or.
-- `name` - Ska innehålla namnet på regeln, t.ex. Ones() för ettor.
-
-#### Metoderna {#same-value-rule-met}
-
-- `__init__(value, name)` - inga defaultvärden
-- `points(hand)` - ska returna poängsumman för regeln, t.ex. 3 för 3 stycken 1:or.
-
-### Ones {#ones}
-
-Denna klassen representerar regeln med 1:or.
-
-[FIGURE src="/image/oopython/kmom02/ones.png" caption="Ones klass"]
-
-#### Attributen {#ones-attr}
-
-- `value` - Ska innehålla värdet för regeln, t.ex. 1 för 1:or.
-- `name` - Ska innehålla namnet på regeln, t.ex. Ones() för ettor.
-
-#### Metoderna {#ones-met}
-
-- `__init__()` - anropar basklassens konstruktor.
-
-Klasserna Twos, Threes, Fours, Fives och Sixes är uppbyggda på samma sätt.
-
-### ThreeOfAKind {#three-of-a-kind}
-
-Denna klassen representerar regeln med 1:or.
-
-[FIGURE src="/image/oopython/kmom02/ones.png" caption="Ones klass"]
-
-#### Attributen {#three-of-a-kind-attr}
-
-- `name` - Ska innehålla namnet på regeln "Three of a kind".
-
-#### Metoderna {#three-of-a-kind-met}
-
-- `__init__()` - sätter namnet på regeln.
-- `points(hand)` - ska returna poängsumman för regeln. I detta fallet kolla att det finns minst 3 likadana tärningar och returnera dess poängsumma, t.ex. 9 för 3 stycken 3:or.
-
-De andra reglerna FourOfAKind, FullHouse, SmallStraight, LargeStraight, Yahtzee och Chance är uppbyggda på samma sätt som ThreeOfAKind.
 
 Krav {#krav}
 -----------------------
@@ -130,60 +84,45 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 
 ### Krav för alla {#krav-alla}
 
-1. Kopiera er kod från `me/kmom01/yahtzee1` till `me/kmom02/yahtzee2`.
+1. Kopiera er kod från `me/kmom02/yahtzee2` till `me/kmom03/yahtzee3`.
 
-1. Implementera de nya metoderna för Die och Hand.
+1. Ni ska inte längre visa föregående tärningar.
 
-1. Gör nya klassdiagram för Die och Hand. Spara dem som uml.pdf och rita gärna i [draw.io](https://www.draw.io/)
+1. Implementera `Scoreboard` klassen.
 
-1. Lägg till ett test för Die klassen i `me/kmom02/yahtzee2/tests/test_die.py`. Testa följande saker i Die klassen:
-    1. Att `__eg__()` returnerar rätt värde som en sträng.
+1. När spelaren har använt alla regler en gång ska ni skriva ut en text där det står att spelet är slut och hur många poäng spelaren fick.
 
-1. Skapa tester för Hand klassen i `me/kmom02/yahtzee2/tests/test_hand.py`. Testa följande saker i Hand klassen:
-    1. Att skapa ett objekt utan skicka argument till konstruktorn.
-    1. Att skapa ett objekt och skicka lista med tärningar till konstruktorn.
-    1. Att `roll()` slår om rätt tärningar.
-    1. Att `roll()` utan indata inte slår om några tärningar.
-    1. Att `to_list()` returnerar en lista med tärningarnas värde.
+1. Det ska gå att kasta om specifika tärningar. T.ex. kasta om tärning 1 och 3, då ska tärningarna 2, 4 och 5 inte kastas om.
 
-1. Implementera koden för Rule enligt klassdiagrammen ovanför. Spara filen i `me/kmom02/yahtzee2/src`.
+1. Begränsa hur många gånger man kan slå om tärningarna innan man väljer en regel.
+    - Man får max kasta om tärningarna **två** gånger, sen måste man välja en regel att få poäng för med nuvarande hand. Man kan få 0 som poäng med en Hand.
+
+1. I terminalen/webbsidan ska ni visa vilka regler som finns, hur många poäng nuvarande hand är värde för varje regel och om spelaren redan har använt regeln för att få poäng ska den poängen visas. Kolla på bilden för att se exempel på hur det kan se ut.
+
+1. Om användaren väljer en regel som redan har använts för att få poäng ska ni skriva ut ett meddelande där det står att regeln redan är använd.
+
+1. tester
+- hitta bra sak att mocka
+
+1. Skapa ett sekvensdiagram för flödet när spelaren har valt en regel att få poäng för. Ni kan utgå från bilden nedanför och bygga ut det.
+
+[FIGURE src="/image/oopython/kmom03/sequence.png" caption="Början av ett sekvensdiagram"]
+
 
 
 ### Krav ensam {#krav1}
 
-Du ska lägga till följande funktionalitet till ditt terminalprogram.
-
-1. Vid menyval "r" efter att användaren valt vilka tärningar som ska slås om så ska regel väljas. Då ska terminalprogrammet svara med poängsumman för den regeln.
-
-1. Vid menyval "r" så ska användaren kunna välja vilka tärningar som ska slås om. Slå om de tärningarna och visa användaren.
-
-1. Tänk på att varje omgång består av 3 slag. När regel för 3:e gången så bör loopen startas om. Poängsumman nollställs inför nästa runda.
-
-1. Testa, validera och publicera applikationen på studentservern.
+Inga specifika krav.
 
 
 
 ### Krav grupp {#krav2}
 
-När ni är färdiga kan det se ut så här:
+1. Lägg till checkboxar bredvid tärningarna för att visa vilka vilka tärningar som ska slås om. Gör en knapp för att submit:a resultatet.
 
-[FIGURE src="/image/oopython/kmom02/yahtzee2.png" caption="Bild på slag 3"]
+1. Spara Scoreboard i session.
 
-1. Lägg till checkboxar bredvid tärningarna för att visa vilka vilka tärningar som ska slås om. Gör en knapp för att submit:a resultatet. Testa.
-
-1. Håll reda på antalet slag och spara det som heltal i session. Presentera vilket slag det är i rubriken. Testa att rubriken ändrar sig och räknar upp när du slår tärningarna. Gör gärna print(session) och kolla att det stämmer.
-
-1. Lägg till "Last die rolls" överst. Spara nuvarande värde på tärningarna med `to_list()` till sessionen innan du slår om tärningarna. Testa.
-
-1. Lägg till en route `reset` som nollställer sessionen och därmed startar om spelet. Lägg till den i navbaren om du vill. Testa.
-
-1. Lägg till radiobuttons för de olika reglerna i samma formulär. Bredvid en radiobutton för en viss regel ska namnet på regeln skrivas ut. Testa.
-
-1. Lägg till så att poängsumman för respektive regel visas bredvid regeln radiobutton. Testa.
-
-1. Spara poängsumman i session och visa upp den under knappen. Testa.
-
-1. Tänk på att varje omgång består av 3 slag. När du klickar på knappen på 3:e slaget så bör spelet startas om. Poängsumman nollställs inför nästa runda.
+1. Använd ett formulär för att välja vilken regel som ska ge poäng.
 
 1. Testa, validera och publicera applikationen på studentservern.
 
@@ -191,8 +130,8 @@ När ni är färdiga kan det se ut så här:
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb test yahtzee2
-dbwebb publish yahtzee2
+dbwebb test yahtzee3
+dbwebb publish yahtzee3
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
