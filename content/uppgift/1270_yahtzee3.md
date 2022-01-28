@@ -10,26 +10,24 @@ category:
 Fortsättning på Yahtzee spelet
 ===================================
 
-I denna uppgiften ska ni fortsätta med Yahtzee spelet ni började på i kmom01.
+I denna uppgiften ska ni bida ihop med Yahtzee spelet så att ni får ett fungerade Yahtzee för en spelare.
 
 <!--more-->
 
 [FIGURE src="/image/oopython/kmom03/yahtzee3.png" caption="Färdigt Yahtzee3"]
 
-Ni kommer att fortsätta utveckla spelet igenom flera kursmoment. I denna uppgiften skapar vi ett formulär där vi väljer vilka tärningar som ska slås om och vilken regel som ska användas.
+I denna uppgiften vi styra upp hur många gånger man får kasta om tärningar och avgöra när spelet är slut.
 
 
 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Ni har gått igenom delarna “Intro till guiden” och “Klass relationer” i guiden "[Kom igång med objekt](guide/kom-igang-med-objektorienterad-programmering-i-python)".
+Ni har gått igenom hela guiden "[Kom igång med objekt](guide/kom-igang-med-objektorienterad-programmering-i-python)".
 
 Ni har jobbat igenom övningen "[Flask, POST och GET](kunskap/flask-get-post)".
 
-Ni har jobbat igenom övningen med UML del 2.
-
-Om ni har gjort övningarna så har ni nästan kommit i mål med uppgiften.
+Ni har jobbat igenom övningen "[Introduktion till sekvensdiagram](kunskap/intro_till_sekvensdiagram)" och "[Mer om enhetstester](kunskap/unittest-i-python_2)".
 
 
 
@@ -40,7 +38,7 @@ Ni ska som sagt utveckla ett Yahtzee spel över flera kursmoment. Ni som jobbar 
 
 Spelet ska följa de internationella reglerna och inte svenska reglerna. Här kan ni hitta [reglerna](https://gamerules.com/rules/yahtzee-dice-game/).
 
-Vi ska lägga till checkboxar bredvid tärningarna för att på så sätt visa vilka som ska slås om. Vi vill också se en resultattavla med regler och poäng enligt bilden nedan. Vi vill kunna välja regel Om du använder samma regel 2 gånger vill vi se ett felmeddelande. När du är klar, så vill vi se ett meddelande för det.
+Vi ska lägga till checkboxar bredvid tärningarna för att på så sätt visa vilka som ska slås om. Vi vill också se en resultattavla med regler och poäng enligt bilden ovanför. Vi vill kunna välja regel, om du använder samma regel 2 gånger vill vi se ett felmeddelande. När du är klar, så vill vi se ett meddelande för det.
 
 Era klasser ska uppfylla beskrivningarna nedanför. Beskrivningarna är vad som måste finnas, ni får och är **rekommenderade** att skapa ytterligare metoder och attribut där ni tycker att det behövs.
 
@@ -73,7 +71,7 @@ Attributet ni väljer att använda för att hålla poängen, ska vara **privat**
 
 - `finished()` - Metoden ska returnera `True` om alla regler har använts en gång för att få poäng, annars `False`.
 
-- `from_dict(points)` - Det ska vara en **classmethod** som används för att skapa ett nytt Scoreboard objekt. Metoden ska ta emot en dictionary där nycklarna är namn på regler och värdena är hur många poäng som de reglerna har fått. Värdet `-1` används för att markera att en regel inte har använts för att få några poäng.
+- `from_dict(points)` - Det ska vara en **classmethod** som används för att skapa ett nytt Scoreboard objekt. Metoden ska ta emot en dictionary där nycklarna är namn på regler och värdena är hur många poäng som de reglerna har fått. Värdet `-1` används för att markera att en regel inte har använts för att få några poäng. **Tips** skapa denna metoden tidigt, testerna använder sig av den för att skapa objekt att testa på.
 
 
 
@@ -107,11 +105,10 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
     - Scoreboard klassen:
         - `add_points` - Lägg till poäng för en regel och kolla att blir rätt poäng.
         - `add_points` - Lägg till poäng för en regel som redan har poäng, kolla att exception lyfts.
-        - `get_total_points` - Kolla att returnerar rätt antal poäng.
 
-1. Skapa ett sekvensdiagram för flödet när spelaren har valt en regel att få poäng för. Ni kan utgå från bilden nedanför och bygga ut det.
+1. Skapa ett sekvensdiagram för flödet när spelaren har valt att få poäng för regeln Fives. Ni kan utgå från bilden nedanför och bygga ut det. Glöm inte visa loopar och if-satser.
 
-[FIGURE src="/image/oopython/kmom03/sequence.png" caption="Början av ett sekvensdiagram"]
+[FIGURE src="/image/oopython/kmom03/sequence_add_points.png" caption="Början av ett sekvensdiagram"]
 
 
 
