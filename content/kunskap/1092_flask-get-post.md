@@ -3,7 +3,7 @@ author:
     - aar
     - lew
 revision:
-    "2022-01-25": (F, grm) La Json igen.
+    "2022-01-25": (F, grm) La till Json igen.
     "2022-01-19": (E, grm) La till session, kommenterade ut Json.
     "2021-01-18": (D, moc) La till date modul och json.
     "2018-12-12": (C, aar) La till session.
@@ -220,6 +220,12 @@ class Handler():
         self.people.append(mikael)
         self.people.append(kenneth)
         self.people.append(andreas)
+
+    def get_list_of_names(self):
+        list_names = []
+        for employee in self.employees:
+            list_names.append(employee.get_name())
+        return list_names
 ```
 
 Nu har vi två klasser som vi kan skapa objekt av för att spara data och jobba med den. Innan vi bygger ihop det i app.py skapar vi html koden för att visa upp de anställda.
