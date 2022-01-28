@@ -101,8 +101,13 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 
 1. Om användaren väljer en regel som redan har använts för att få poäng ska ni skriva ut ett meddelande där det står att regeln redan är använd.
 
-1. tester
-- hitta bra sak att mocka
+1. Lägg till tester för följande saker:
+    - Hand klassen:
+        - `roll` - använd er av mockning för att bli av med på beroendet `random.randint()` i Die klassen. Gör så att `randint` alltid returnerar 100. Kolla att handen innehåller fem tärningar med värdet 100.
+    - Scoreboard klassen:
+        - `add_points` - Lägg till poäng för en regel och kolla att blir rätt poäng.
+        - `add_points` - Lägg till poäng för en regel som redan har poäng, kolla att exception lyfts.
+        - `get_total_points` - Kolla att returnerar rätt antal poäng.
 
 1. Skapa ett sekvensdiagram för flödet när spelaren har valt en regel att få poäng för. Ni kan utgå från bilden nedanför och bygga ut det.
 
