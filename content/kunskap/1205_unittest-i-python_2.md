@@ -333,6 +333,16 @@ OK
 För de som vill ha mer info om Mock modulen kan jag rekommendera artikeln [An Introduction to Mocking in Python](https://www.toptal.com/python/an-introduction-to-mocking-in-python).
 
 
+Testning i arbetslivet {#testning-i-arbetslivet}
+------------------------------
+
+Maries erfarenheter av testning i arbetslivet:
+Ute i arbetslivet är programmen eller systemen ni jobbar med mycket större och det är fler personer inblandade. Då är testningen jätteviktig. Testningen är ett sätt att verifiera att kraven på systemet fortfarande hålls när det läggs till eller tas bort funktionalitet eller när koden skrivs om.
+
+I testdriven utveckling eller TDD (Test Driven Development) så översätts kraven på programmet till testfall. Dessa utvecklas först och därefter skrivs koden. Likadant görs när det kommer nya krav på programmet. Då vet du att det alltid fungerar som tänkt. Det har du säkert märkt själv att du fixar en sak och då slutar något annat att fungera.
+
+Enhetstester är bra för att testa delar av koden, en enskild del. För att testa hur olika delar fungerar tillsammans använder vi integrationstester och med systemtester så testar hur ett komplett system eller program fungerar.
+
 
 Avslutningsvis {#avslutning}
 ------------------------------
