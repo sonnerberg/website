@@ -1,7 +1,10 @@
 ---
-author: aar
+author:
+    - aar
+    - grm
 revision:
-    "2022-01-27": (A, aar) Kopiera från intro-till-enhetstester.
+    "2022-01-29": (B, grm) Lagt till kodstruktur.
+    "2022-01-27": (A, aar) Kopierat från intro-till-enhetstester.
 category:
     - oopython
 ...
@@ -28,7 +31,7 @@ Varför ska man skriva enhetstester? {#varfor-ska-man-skriva-enhetstester}
 
 Enhetstester skrivs som sagt av anledningen att minimera risken för "trasig" kod och för att validera funktionaliteten. I många lägen handlar det inte enbart om att du ska förstå koden, utan det kan finnas andra utvecklare som tar över ditt projekt eller bara ska hjälpa till. Då är det bra om det är testat ordentligt. Om man har svårt att förstå vad en funktion gör enbart av att läsa koden hjälper det ofta om det finns tester man kan köra och kolla vad olika inputs får för output.
 
-Du vill även skriva tester för din egna skull, att ha bra tester på plats gör att när du skriver om kod eller lägger till ny kan du försäkra dig om att den gamla koden fortfarande gör vad vi förväntar oss. Det är också ett bra sätt att ha koll på buggar, varje gång du hittar en bugg i din kod skapar du ett testfall so kollar att buggen inte introduceras på nytt.
+Du vill även skriva tester för din egna skull, att ha bra tester på plats gör att när du skriver om kod eller lägger till ny kan du försäkra dig om att den gamla koden fortfarande gör vad vi förväntar oss. Det är också ett bra sätt att ha koll på buggar, varje gång du hittar en bugg i din kod skapar du ett testfall som kollar att buggen inte introduceras på nytt.
 
 
 
@@ -53,17 +56,25 @@ Artikeln utgår från filerna som vi hittar i [exempelmappen](https://github.com
 
 Nu är det dags att titta på hur vi skriver några enhetstester för vår klass, _Phone_. Klassen ligger i filen `phone.py`.
 
-Kopiera `phone.py` och skapa `test.py`, lägg till `#pylint: disable=protected-access` i början av filen, då vi kommer använda privata attribut utanför instansen.
+Skapa kodtrukturen du gjorde i [Introduktion till enhetstester](kunskap/unittest-i-python_1). Använd terminalen och ställ dig i "kmom03":
+```bash
+$ mkdir unittest/src
+$ mkdir unittest/tests
+$ touch unittest/src/__init__.py
+$ touch unittest/tests/__init__.py unittest/tests/test_phone.py
+```
+
+Kopiera `phone.py` och lägg under `unittest/src`, lägg till `#pylint: disable=protected-access` i början av filen, då vi kommer använda privata attribut utanför instansen. Kopiera `test.py` från [Introduktion till enhetstester](kunskap/unittest-i-python_1) och lägg i `unittest`. I vår `test.py` satte vi `verbosity=2` så att vi information om testerna vi kör.
 
 En viktig del av att skriva enhetstester är att olika tester inte ska vara beroende av varandra. Med vetskapen att testerna exekverar i bokstavsordning vill vi *inte* döpa tester till specifika namn för att få dem att exekveras i en viss ordning. T.ex. att i ett test lägga till en kontakt och i nästa test testa en annan metod som har ett beroende på kontakten från förra testet. Då är testerna inte oberoende av varandra, vilket vi vill att de ska vara. Om vi vill att något ska ha skett innan ett test ska vi använda "arrange" fasen för att skapa rätt förutsättningar för testet. I exemplet med Phone klassen behöver vi t.ex. alltid ha ett Phone objekt skapat innan vi kan testa dess metoder. Istället för att skapa ett Phone objekt överst i test filen och låta alla tester använda det objektet ska vi skapa ett nytt Phone objekt till varje testfall.
 
 När det finns gemensamma steg för alla testfall kan vi använda en `setUp()` metod som körs före varje testmetod exekveras. I den kan vi utföra de steg som alla har gemensamt, i vårt fall skapa ett Phone objekt. Sen kan vi använda metoden `tearDown()`, som exekveras efter varje testmetod, för att städa upp efter varje test så det inte finns något kvar från ett tidigare test som kan påverka nästa.
 
-Vi förbereder för att skriva tester i `test.py`. Importera moduler, skapa test klass och en setUp och tearDown metod.
+Vi förbereder för att skriva tester i `test_phone.py`. Importera moduler, skapa testklass och en setUp och tearDown metod.
 
 ```python
 import unittest
-from phone import Phone
+from src.phone import Phone
 
 class TestPhone(unittest.TestCase):
     """Submodule for unittests, derives from unittest.TestCase"""
@@ -80,7 +91,7 @@ class TestPhone(unittest.TestCase):
 
 ### Första testet {#first}
 
-Då ska vi skriva vårt första test. Vi behöver något att test, något i koden som vi förutsätter ska funka på ett specifikt sätt. T.ex. kan vi verifiera att attributet `owner` har värdet "No owner yet" i ett ny skapat objekt. I testet vill vi jämföra två strängar, då passar det att använda `assertEqual`.
+Då ska vi skriva vårt första test. Vi behöver något att testa, något i koden som vi förutsätter ska funka på ett specifikt sätt. T.ex. kan vi verifiera att attributet `owner` har värdet "No owner yet" i ett ny skapat objekt. I testet vill vi jämföra två strängar, då passar det att använda `assertEqual`.
 
 ```python
     def test_default_owner(self):
@@ -89,7 +100,7 @@ Då ska vi skriva vårt första test. Vi behöver något att test, något i kode
         self.assertEqual(self.phone.owner, "No owner yet")
 ```
 
-Om vi vill vara riktigt säkra på att inget är fel i konstruktorn kan vi skapa en test metod som verifierar alla attribut i ett ny skapat objekt. Döp om metoden till `test_init` och i den verifiera att alla attributen i Phone klassen har förväntat värde i `self.phone` objektet. Det går att ha flera assert anrop i en metod. Försök själv innan du kollar på koden nedanför.
+Om vi vill vara riktigt säkra på att inget är fel i konstruktorn kan vi skapa en test metod som verifierar alla attribut i ett nyskapat objekt. Döp metoden till `test_init` och i den verifiera att alla attributen i Phone klassen har förväntat värde i `self.phone` objektet. Det går att ha flera assert anrop i en metod. Försök själv innan du kollar på koden nedanför.
 
 ```python
     def test_init(self):
@@ -102,9 +113,9 @@ Om vi vill vara riktigt säkra på att inget är fel i konstruktorn kan vi skapa
         self.assertEqual(self.phone._phonebook, [])
 
 >>> python3 test.py
-.
+...
 ----------------------------------------------------------------------
-Ran 1 test in 0.010s
+Ran 2 test in 0.010s
 
 OK
 ```
@@ -132,16 +143,18 @@ Nu vill vi testa metoden när den returnerar True, men då blir det lite jobbiga
         self.assertTrue(self.phone.has_contacts()) # Assert
 
 
->>> python3 test.py  -v
-test_empty_phonebook (__main__.TestPhone)
+>>> python3 test.py
+test_default_owner (test_phone.TestPhone)
+Test that default value if correct for owner ... ok
+test_empty_phonebook (test_phone.TestPhone)
 Test that has_contacts return False when phonebook is empty ... ok
-test_has_contact_true (__main__.TestPhone)
+test_has_contact_true (test_phone.TestPhone)
 Test that has_contacts return True when phonebook is has a contact ... ok
-test_init (__main__.TestPhone)
+test_init (test_phone.TestPhone)
 Test that init works as expected ... ok
 
 ----------------------------------------------------------------------
-Ran 3 tests in 0.002s
+Ran 4 tests in 0.000s
 
 OK
 ```
@@ -152,7 +165,7 @@ OK
 
 Vi går vidare till en lite större och svårare metod, `validate_number`. Den innehåller 2,5 if-satser (första if-satsen har ett `and` vilket jag räknar som en halv) och en for-loop. Här kommer vi in på [edge cases](https://en.wikipedia.org/wiki/Edge_case), t.ex. om listan som itereras över i for-loopen är tom, verifiera vad som händer då. Eller om ett av villkoren i if-satser med `and` blir True, vad händer om båda är False och vad händer när båda är True. Det blir snabbt många olika vägar som koden kan ta och där vi vill säkerställa att koden gör som vi förväntar oss.
 
-Vi börjar enkelt och testar med ett nummer som ska validera, "070-354 78 00". Det är giltigt om det är 13 karaktärer långt och har bindestreck och spaces på tre ställen.
+Vi börjar enkelt och testar med ett nummer som ska validera, "070-354 78 00". Det är giltigt om det är 13 tecken långt och har bindestreck eller mellanslag på tre ställen.
 
 ```python
     def test_validate_valid_number(self):
@@ -160,7 +173,7 @@ Vi börjar enkelt och testar med ett nummer som ska validera, "070-354 78 00". D
         self.assertTrue(self.phone.validate_number("070-354 78 00"))
 ```
 
-Nu till det jobbiga, alla fall som kan ge false. T.ex. om det finns en bokstav, saknar ett space eller bindestreck. Vi börjar med en metod som testar där numret innehåller en bokstav.
+Nu till det jobbiga, alla fall som kan ge false. T.ex. om det finns en bokstav, saknar ett mellanslag eller bindestreck. Vi börjar med en metod som testar där numret innehåller en bokstav.
 
 ```python
     def test_validate_number_with_letter(self):
@@ -183,7 +196,7 @@ Ran 6 tests in 0.017s
 OK
 ```
 
-OK, vi nöjer oss med tester för den metoden. Det finns givetvis flera fall som våra tester inte täcker men jag tänker att ni kan komma dem själva.
+OK, vi nöjer oss med tester för den metoden. Det finns givetvis fler fall som våra tester inte täcker men jag tänker att ni kan komma dem själva.
 
 
 
@@ -204,8 +217,12 @@ Hur gör vi med metoder som lyfter exceptions? De behöver vi också verifiera a
 Vi använder `with` för att skapa en [context manager](https://www.geeksforgeeks.org/context-manager-in-python/) som fångar undantaget. Om koden som ligger inom blocket inte lyfter ett exception så kommer testet fallera och säga att inte exception har lyfts. Ni kan testa det genom att kommentera ut `get_contact` anropet och skriva `pass` istället och sen köra koden. Då ser det ut som följande.
 
 ```bash
-  File "test.py", line 79, in test_get_contact_fail
-    self.phone.get_contact("Zeldah")
+FAIL: test_get_contact_empty (test_phone.TestPhone)
+Test that error is raised when list is empty
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ".../kmom03/unittest/tests/test_phone.py", line 60, in test_get_contact_empty
+    pass
 AssertionError: ValueError not raised
 ```
 
@@ -238,7 +255,7 @@ Vi lägger till ett test som lyckas också.
 
 ### Testa metoder som anropar andra metoder eller övriga beroenden {#dependencies}
 
-Än så länge har vi inte haft några direkta beroenden i metoderna vi testar. När metoder börjar använda installerade moduler eller saker som beror på externa saker som vilket OS programmet körs på eller koppling mot en databas för att få tillbaka ett värde, då blir det genast jobbigare. Då behöver vi bli av med det beroendet när vi kör testerna, så metoderna kan testas i en miljö som inte har hela produktions miljön. Det är poängen med enhetstester, de ska gå snabbt att köra dem och man ska kunna köra dem i sin utvecklings miljö utan databaser och andra dependencies.
+Än så länge har vi inte haft några direkta beroenden i metoderna vi testar. När metoder börjar använda installerade moduler eller saker som beror på externa saker som vilket OS programmet körs på eller koppling mot en databas för att få tillbaka ett värde, då blir det genast jobbigare. Då behöver vi bli av med det beroendet när vi kör testerna, så metoderna kan testas i en miljö som inte har hela produktionsmiljön. Det är poängen med enhetstester, de ska gå snabbt att köra dem och man ska kunna köra dem i sin utvecklingsmiljö utan databaser och andra dependencies.
 
 Vi kan fejka beroenden med hjälp av [mockning/fakes/stubs](https://en.wikipedia.org/wiki/Mock_object). I unittest verktyget finns det kraftfulla verktyg [Mock](https://docs.python.org/3.8/library/unittest.mock.html).
 
@@ -247,9 +264,13 @@ I `add_contact` är vi beroende av vad metoden `validate_number` returnerar, den
 Vi kan skapa ett Mock objekt som ersätter `validate_number` metoden. Vi kan då bestämma att metoden ska returnera ett specifikt värde oberoende av vad man skicka in som argument. Det går dessutom att verifiera vilka argument som skickas in till metoden. Vi kollar på ett test där vi lyckas lägga in en användare.
 
 ```python
+...
+from unittest import mock
+...
+
     def test_add_contact_success(self):
         """
-        Test we can add contact. Mock validation method.
+        Test if we can add contact. Mock validation method.
         """
         # Arrange
         contact = ("Andreas", "079-244 07 80")
@@ -268,9 +289,9 @@ Vi kan skapa ett Mock objekt som ersätter `validate_number` metoden. Vi kan då
 
 Vi börjar med att "patcha" metoden `validate_number` i objektet `self.phone` i en context manager. Så för all kod som exekverar i det scopet är metoden ersätt med mock objektet. Efter det bestämmer vi vad som ska returneras när metoden anropas, i detta fallet True.
 
-I act fasen anropar vi vår metod och använder list unpacking för att dela upp tuplen `contact` så varje element skickas in som separat argument.
+I act fasen anropar vi vår metod och använder list unpacking för att dela upp tuplen `contact` så att varje element skickas in som separata argument.
 
-När metoden är klar ska vi verifiera att allt skett som vi vill. Vi kollar att den mocka metoden anropas exakt en gång med telefonnumret som argument. Sen kollar vi att det bara finns ett element i phonebook och att det är vår kontakt.
+När metoden är klar ska vi verifiera att allt skett som vi vill. Vi kollar att mock metoden anropas exakt en gång med telefonnumret som argument. Sen kollar vi att det bara finns ett element i phonebook och att det är vår kontakt.
 
 Oftast använder man inte Mock på såna här enkla metoder utan det är mer på externa beroenden, men det visar upp exempel på hur det används. Mock är extremt kraftfullt och enkelt att använda så fort man greppar konceptet.
 
@@ -279,30 +300,32 @@ Testa lägg till ett test där `validate_number` returnerar False istället.
 Om vi kör test filen borde ni minst få denna utskriften:
 
 ```bash
->>> python3 test.py -v
-test_add_contact_success (__main__.TestPhone)
-Test we can add contat. Mock validation method. ... ok
-test_empty_phonebook (__main__.TestPhone)
+>>> python3 test.py
+test_add_contact_failure (test_phone.TestPhone)
+Test failure when we add contact. Mock validation method. ... ok
+test_add_contact_success (test_phone.TestPhone)
+Test if we can add contact. Mock validation method. ... ok
+test_default_owner (test_phone.TestPhone)
+Test that default value if correct for owner ... ok
+test_empty_phonebook (test_phone.TestPhone)
 Test that has_contacts return False when phonebook is empty ... ok
-test_get_contact (__main__.TestPhone)
+test_get_contact (test_phone.TestPhone)
 Test that can get added contact ... ok
-test_get_contact_empty (__main__.TestPhone)
+test_get_contact_empty (test_phone.TestPhone)
 Test that error is raised when list is empty ... ok
-test_get_contact_fail (__main__.TestPhone)
+test_get_contact_fail (test_phone.TestPhone)
 Test that correct value is returned ... ok
-test_has_contact_true (__main__.TestPhone)
+test_has_contact_true (test_phone.TestPhone)
 Test that has_contacts return True when phonebook is has a contact ... ok
-test_init (__main__.TestPhone)
+test_init (test_phone.TestPhone)
 Test that init works as expected ... ok
-test_valid_number_with_missing_space (__main__.TestPhone)
+test_valid_number_with_missing_space (test_phone.TestPhone)
 Test validating number with a space missing ... ok
-test_validate_number_with_letter (__main__.TestPhone)
-Test validating number with a letter init ... ok
-test_validate_valid_number (__main__.TestPhone)
+test_validate_valid_number (test_phone.TestPhone)
 Test validating valid number ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.017s
+Ran 11 tests in 0.001s
 
 OK
 ```
@@ -314,7 +337,7 @@ För de som vill ha mer info om Mock modulen kan jag rekommendera artikeln [An I
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Vi vill bara skriva värdefulla tester. Metoder som bara returnerar ett attribut, där det egentligen inte utförs någon logik och vi kan inte påverka vad som sker i metoden på något sätt finns det inget jätte stort värde i att ha ett test för. Phone innehåller tre metoder av större värde att testa, det är `add_contact()`, `validate_number()` och `get_contact()`. Det är i dem vi har kod som faktiskt utför något.
+Vi vill bara skriva värdefulla tester. Metoder som bara returnerar ett attribut utan någon logik eller metoder där vi inte kan påverka vad som sker, finns det inget jättestort värde att ha ett test för. Phone innehåller tre metoder av större värde att testa, det är `add_contact()`, `validate_number()` och `get_contact()`. Det är i dem vi har kod som faktiskt utför något.
 
 Många tycker att det är tråkigt och mycket tid. Jag känner ofta likadant när jag sitter med olika projekt, man vill ju bara skriva kod för ny funktionalitet, inte testa koden man redan har skrivit. Men nedanför hittar ni några tankar kring hur man ska prioritera sin tester. Om man verkligen ska testa all kod, då tar det längre tid att skriva testerna än själva koden.
 

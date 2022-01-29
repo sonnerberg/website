@@ -1,5 +1,7 @@
 ---
-author: grm
+author:
+    - aar
+    - grm
 revision:
     "2022-01-12": (A, grm) Första versionen, utgått från "unittest_i_python".
 category:
