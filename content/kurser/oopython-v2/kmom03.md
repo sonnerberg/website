@@ -16,13 +16,6 @@ Kmom03: UML och unittest
 Ni har redan tittat lite på UML och enhetstester men nu ska vi gräva lite djupare. Ni ska lära er ett nytt typ av diagram, Sekvensdiagram, och lära er med om enhetstester. Samtidigt som ni utvecklar vidare Yahtzee3.
 
 <!--more-->
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
 
 [INFO]
 Gör `dbwebb update` och `dbwebb init` innan du startar med kursmomentet.
