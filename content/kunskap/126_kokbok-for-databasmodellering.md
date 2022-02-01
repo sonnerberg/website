@@ -2,6 +2,7 @@
 author: mos
 category: artikel
 revision:
+    "2022-02-01": "(F, mos) Förtydligande om att det finns tre föreläsningar totalt."
     "2021-02-10": "(E, mos) Kompletterad med inspelade föreläsningar om ER-modellering och översättning till relationsmdoellen."
     "2021-01-31": "(D, mos) Kompletterad med inspelad föreläsning."
     "2012-09-20": "(C, mos) Flyttad från googledocs till dbwebb."
@@ -32,6 +33,13 @@ Inspelad föreläsning {#flas}
 Det finns en inspelad föreläsning som grundar sig på information i denna artikeln. Se den gärna som ett komplement till att läsa artikeln.
 
 [YOUTUBE src="Zdx40jc2lrk" width=700 caption="Modellera databas - faser och steg (med Mikael) (39 min)."]
+
+Det finns också ytterligare två föreläsningar som hanterar artikelns innehåll och modellering av databaser.
+
+* "ER modellering - konceptuell modellering (med Mikael) (24 min)"
+* "ER-modellering - översätt till relationsmodellen aka Logisk modellering (med Mikael) (26 min)"
+
+Du finner dessa föreläsningar [längst ned i artikeln](#inspel).
 
 
 
