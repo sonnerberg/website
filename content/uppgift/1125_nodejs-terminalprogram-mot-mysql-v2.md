@@ -6,6 +6,7 @@ category:
     - mysql
     - kursen databas
 revision:
+    "2022-02-01": "(F, mos) Förtydligande om att me/package.json måste finnas."
     "2022-01-18": "(E, mos) Länka till ny resurs om formattera datum."
     "2019-02-14": "(D, mos) Mindre förtydligande om att det är flera main-program."
     "2019-01-29": "(C, mos) Förtydliga modulkravet samt tydligare om förväntade utskrifter."
@@ -130,6 +131,8 @@ Krav {#krav}
 -----------------------
 
 1. Varje fil du skapar skall innehålla ett filhuvud med ett kommentarsstycke där du anger dig själv som författare.
+
+1. Se till att du har en fil `me/package.json` där alla externa npm moduler lagras som du installerar med npm.
 
 1. Du är tillåtet att använda externa npm moduler för att till exempel skapa en bättre tabellutskrift när man skriver ut resultatet.
 
