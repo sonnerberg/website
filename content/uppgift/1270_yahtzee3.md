@@ -99,6 +99,8 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 
 1. Om användaren väljer en regel som redan har använts för att få poäng ska ni skriva ut ett meddelande där det står att regeln redan är använd.
 
+1. I Die klassen, gör om metoden `get_value()` till en get property med namnet `value`.
+
 1. Lägg till tester för följande saker:
     - Hand klassen:
         - `roll` - använd er av mockning för att bli av med på beroendet `random.randint()` i Die klassen. Gör så att `randint` alltid returnerar 100. Kolla att handen innehåller fem tärningar med värdet 100.
