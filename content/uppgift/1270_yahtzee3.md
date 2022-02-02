@@ -84,8 +84,6 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
 
 1. Kopiera er kod från `me/kmom02/yahtzee2` till `me/kmom03/yahtzee3`.
 
-1. Ni ska inte längre visa föregående tärningar.
-
 1. Implementera `Scoreboard` klassen.
 
 1. När spelaren har använt alla regler en gång ska ni skriva ut en text där det står att spelet är slut och hur många poäng spelaren fick.
@@ -121,6 +119,8 @@ Inga specifika krav.
 
 
 ### Krav grupp {#krav2}
+
+1. Ni ska inte längre visa föregående tärningar.
 
 1. Lägg till checkboxar bredvid tärningarna för att visa vilka vilka tärningar som ska slås om. Gör en knapp för att submit:a resultatet.
 
