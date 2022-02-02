@@ -44,13 +44,31 @@ FROM python:3.8
 # Sätt vilken folder som är working directory i containern
 WORKDIR /code
 COPY . .
-RUN pip install flask
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
 
 # Command att köra när containern startar
 CMD [ "python", "./app.py" ]
 ```
 
+I ditt API lägger du även till att vi vill starta igång appen längst ner. Vi gör det med `if __name__ == "__main__":` konstruktionen enligt:
+
+```python
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+```
+
 När detta är gjort hoppar vi över punkt 1 men följer punkt 2-5 enligt Docker Hub's instruktion [Steg 4](https://docs.docker.com/docker-hub/#step-4-build-and-push-a-container-image-to-docker-hub-from-your-computer) - Bygg och publicera en Docker image till Docker Hub från din dator.
+
+Innan du går vidare försäkrar du dig om att `docker run` fungerar lokalt på din dator. Är svårt att felsöka på Azure så smidigare att göra lokalt. Du kan göra det med följande kommandon.
+
+```shell
+$ docker build -t <docker hub användarenamn>/<image namn du väljer själv> .
+$ docker run -p 5050:5000 <docker hub användarenamn>/<image namn du väljer själv>
+```
+
+Du bör nu kunna komma åt ditt Flask API på url'n `http://localhost:5050`. Konstruktionen `-p 5050:5000` gör så att vi mappar port 5000 inne i docker containern till port 5050 utanför.
 
 Steg 5: Skapa en Azure Web App för Docker image
 
