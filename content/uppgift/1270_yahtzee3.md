@@ -108,7 +108,7 @@ Kraven är uppdelade i tre sektioner nedanför. Ni som jobbar i grupp måste upp
         - `add_points` - Lägg till poäng för en regel och kolla att blir rätt poäng.
         - `add_points` - Lägg till poäng för en regel som redan har poäng, kolla att exception lyfts.
 
-1. Skapa ett sekvensdiagram för flödet när spelaren har valt att få poäng för regeln Fives. Ni kan utgå från bilden nedanför och bygga ut det. Glöm inte visa loopar och if-satser.
+1. Skapa ett sekvensdiagram för flödet när spelaren har valt att få poäng för regeln Fives. Ni kan utgå från bilden nedanför och bygga ut det. Glöm inte visa loopar och if-satser. Spara bilden i mappen `yahtzee3`.
 
 [FIGURE src="/image/oopython/kmom03/sequence_add_points.png" caption="Början av ett sekvensdiagram"]
 
