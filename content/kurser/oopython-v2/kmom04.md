@@ -10,20 +10,13 @@ Kmom04: Datastrukturer
 
 [FIGURE src=/image/oopython/kmom04/index_list.png?w=c8 class="right"]
 
-I det här kursmomentet övar vi oss på datastrukturer och felhantering med exceptions. En datastruktur är en struktur för organisering av datan.
+I det här kursmomentet övar vi oss på datastrukturer och felhantering med exceptions. En datastruktur är en struktur för organisering av data.
 
 Vi ska titta närmare på några av de vanligaste datastrukturerna och hur de fungerar. Vi avslutar med att skapa egna strukturer.
 
 Exceptions hjälper oss med att få reda på vad som gått fel. Det finns en hel del inbyggda exceptions som vi säkert stött på tidigare. Nu ska vi se hur vi skapar egna exceptions och på så sätt ta ett steg till mot att ha full kontroll över hur programmet ska fungera.
 
 <!--more-->
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
 [INFO]
 Gör `dbwebb update` och `dbwebb init` innan du startar med kursmomentet.
 [/INFO]
@@ -108,13 +101,11 @@ TIPS! När ni gör uppgifterna kan ni använda [Treevizer](https://pypi.org/proj
 
 1. Gör uppgiften "[Skapa lista](uppgift/skapa-lista)". Spara din kod i mappen `list`.
 
-1. Fyll på redovisning.html med kursmomentets redovisningstext.
-
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish flask
+dbwebb test kmom04
+dbwebb publish kmom04
 ```
-
 
 
 ###Extra {#extra}
@@ -122,19 +113,7 @@ dbwebb publish flask
 Det finns inga extrauppgifter.
 
 
-
-Resultat & Redovisning  {#resultat_redovisning}
+Lämna in  {#resultat}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Har du skapat egna datastrukturer förut?
-* Vilken typ av lista valde du att göra och varför (enkel- dubbellänkad, cirkulär)?
-* Vilka exceptions skapade du? Hur gör man för att de ska kastas i listan?
-* Gjorde du någon extrauppgiften?
-* Vad är en länkad lista kontra en array?
-* Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
+Läs [Lämna in och redovisa uppgift](./../redovisa) för att ta reda på hur ni lämna in era uppgifter när ni är klara.

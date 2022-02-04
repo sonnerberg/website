@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2022-02-04": (G, aar) Minskade storlek och definierade hur menyn ska fungera.
     "2020-02-04": (F, aar) Minskade storlek för VT20.
     "2019-02-15": (E, aar) Ändrade test kravet, ska testa insert istället för add.
     "2019-02-13": (D, aar) Uppdaterade klassdiagram och metod förklaringar.
@@ -23,15 +24,16 @@ Förkunskaper {#forkunskaper}
 
 Du har läst artikeln "[Exceptions](kunskap/exceptions)".  
 Du har läst artikeln "[Datastrukturer](kunskap/datastrukturer)".  
+Du har gjort uppgiften "[Skapa kö](uppgift/skapa-queue)".
 
 
 
 Unordered list {#unordered-list}
 -----------------------  
 
-Vi ska skapa en egen datastruktur, en "Unordered list", som en klass. Unordered list kan liknas vid en vanlig lista i Python. Det ska gå att lagra element i den. En representation av en unordered list kan se ut såhär:  
+Vi ska skapa en egen datastruktur, en "Unordered list", som en klass. Unordered list kan liknas vid en vanlig lista i Python. Det ska gå att lagra element i den. En representation av en unordered list kan se ut såhär:
 
-[FIGURE src=/image/oopython/kmom05/list1.png]  
+[FIGURE src=/image/oopython/kmom05/list1.png]
 
 <!-- För att kika på koden till uppgiften, kan du [klicka här](https://github.com/dbwebb-se/oopython/blob/master/example/unorderedlist/unorderedlist.py)  -->
 
@@ -39,41 +41,56 @@ Nedanför ser vi ett klassdiagram för en UnorderedList klass. Under diagrammet 
 
 [FIGURE src=/image/oopython/kmom04/UnorderedList_klass_v2.png caption="klassdiagram för UnorderedList"]
 
+* `__init__`: Lägg till nytt element/nod sist i listan.
 * `append`: Lägg till nytt element/nod sist i listan.
-* `set`: Skriv över element med ny data som finns på index. Om index inte finns lyft exception.
-* `size`: Returnera antalet element i listan.
-* `get`: Returnera värde på index. Om index inte finns lyft exception.
-* `index_of`: Om data finns i listan returnera dess index. Om nod med data inte finns lyft exception.
+* `set`: Skriv över element med ny data som finns på index. Om index inte finns lyft `MissingIndex` exception.
+* `size`: Returnera antalet element i listan. En tom lista har storleken 0.
+* `get`: Returnera värde på index. Om index inte finns lyft `MissingIndex` exception.
+* `index_of`: Om data finns i listan returnera dess index. Om värdet inte finns lyft `MissingValue` exception.
 * `print_list`: Skriv ut listans innehåll.
-* `remove`: Ta bort nod med samma data. Om nod med data inte finns lyft exception.
+* `remove`: Ta bort nod med samma data. Om nod med data inte finns lyft exception.  Om värdet inte finns lyft `MissingValue` exception.
 
+**TIPS** skapa `append` och `get` tidigt, de behövs för testerna.
 
 
 Krav {#krav}
 -----------------------
+
+Alla kraven är för de som jobbar i grupp och ensamma. Det är inga specifika krav för de som jobbar i grupp.
 
 Ställ dig i mappen `list/`.
 
 ```bash
 # Ställ dig i kurskatalogen
 cd me/kmom04/list
+mkdir src tests
 ```
 
-1. Skapa en fil med namnet `node.py` i "list" mappen. Kopiera koden [för en Node](kunskap/datastrukturer#node) och klistra in i node.py filen.  
+1. Skapa en fil med namnet `src/node.py`. Kopiera koden [för en Node](kunskap/datastrukturer#node) och klistra in i node.py filen.
 
-1. Skapa en fil med namnet `unorderedlist.py` i "list" mappen. Den ska innehålla klassen UnorderedList.  
+1. Skapa en fil med namnet `src/unorderedlist.py`. Den ska innehålla klassen UnorderedList.
 
 1. UnorderedList klassen ska följa klassdiagrammet ovanför. Minst de metoderna och attributen måste finnas i din implementation. Det är Ok att lägga till mer.
 
 1. Implementera UnorderedList med noder för att bygga listan.
 
-1. Välj själv om listan ska vara cirkulär, dubbellänkad eller enkellänkad.  
+1. Välj själv om listan ska vara cirkulär, dubbellänkad eller enkellänkad.
 
-1. Skapa filen `errors.py` i "list" mappen. Den ska innehålla minst 2 egna exceptions. Använd dig av dem i UnorderedList klassen. T.ex. ett för Value error och ett för Index error. Skriv i redovisningstexten vilka det är och hur man får dem.
+1. Skapa filen `src/errors.py` i "list" mappen. Den ska innehålla 2 egna exceptions. Använd dig av dem i UnorderedList klassen. Skapa `MissingValue` och `MissingIndex`.
 
-1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en handler klass med en evighets loop (tänk marvin i python kursen). I loopen ska det finnas input alternativ för alla metoder i UnorderedList klassen.
+1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en klass med namnet `Hander`, den ska innehålla metoden `main` (tänk marvin i python kursen). Klassens konstruktor ska inte ta några argument (utom `self`), i konstruktorn skapa en tom UnorderedList och tilldela till instans attributet `self.list`. Meny I loopen ska följande menyval finnas:
 
-1. Skapa en fil med namnet `test.py` i "list" mappen. Skriv enhetstester för metoderna i UnorderedList klassen. Det ska finnas tester för metoderna, append, set, get, index_of och remove. Kolla på [Testa exceptions](https://youtu.be/ePkZEOHhk-s) för att se hur man fångar exceptions i ett test.
+    1. Tar ett `input()` värde och använder `append` för att lägga till värdet sist i listan.
+    2. Tar ett `input()` värde som index och använder `get()` för att hämta värdet på det index. Skriv ut värdet. Om indexet inte finns ska det skrivas ut `Missing index`.
+    3. Skriv ut hur många element som finns i listan, använd `size()`.
+    4. Använder ett `input()`anrop för att ta två värden, i formatet `"value, index"`. Använder `set()` för att skriva över ett värde i listan. Om indexet inte finns ska det skrivas ut `Missing index`.
+    5. Använd `print_list()` för att skriva ut alla värden i listan.
+    6. Tar ett `input()` värde och använder `index_of()` för att hämta och skriva ut värdet som finns på den index platsen. Om värdet inte finns ska det skrivas ut `Missing value`.
+    7. Tar ett `input()` värde och använder `remove()` för att ta bort det värdet från listan. Om värdet inte finns ska det skrivas ut `Missing value`.
+    8. Avsluta programmet.
+
+
+1. Skapa en fil med namnet `test.py` som kör testerna ni lägger i `tests/`. Skriv enhetstester för metoderna i UnorderedList klassen. Det ska finnas tester för metoderna, `get`, `index_of` och `remove`. Kolla på [Testa exceptions](https://youtu.be/ePkZEOHhk-s) för att se hur man fångar exceptions i ett test.
 
 
 

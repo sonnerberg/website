@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2022-02-04": (E, aar) Anpassade filstruktur efter nya upplägget.
     "2021-02-02": (D, moc) Uppdaterade kraven till att gå igenom tester.
     "2019-02-01": (C, aar) Tog bort extrauppgiften om sekvensdiagram.
     "2018-01-25": (B, aar) Added requirements.
@@ -30,8 +31,9 @@ Du har läst artikeln "[Datastrukturer](kunskap/datastrukturer)".
 Krav {#krav}
 -----------------------
 
-1. Börja med att kopiera koden som ligger i [example/queue](https://github.com/dbwebb-se/oopython/tree/master/example/queue). Mappen innehåller två filer, den **viktiga** är `tests.py` där alla tester behöver passera för att uppgiften skall bli godkänd.  
-Filen `main.py` är ett färdigt cli program som kan användas för att hjälpa till med felsökningen, det är **ingenting** vi kommer att kolla på under rättningen. 
+Alla kraven är för de som jobbar i grupp och ensamma. Det är inga specifika krav för de som jobbar i grupp.
+
+1. Börja med att kopiera koden som ligger i [example/queue](https://github.com/dbwebb-se/oopython/tree/master/example/queue). Filen `main.py` är ett färdigt cli program som redan är implementerat och använder Pythons inbyggda kö. För att förstå hur programmet är uppbyggt kan ni kolla på [Skapa en menu loop utan if-satser](https://www.youtube.com/watch?v=7JSIjlAo9l4).
 
 
 ```bash
@@ -40,20 +42,21 @@ Filen `main.py` är ett färdigt cli program som kan användas för att hjälpa 
 dbwebb update
 cp -ri example/queue me/kmom04/
 cd me/kmom04/queue
+mkdir src
 ```
 
-2. Skapa en fil med namnet `queue.py` i "queue" mappen. Kopiera koden [för en Queue](kunskap/datastrukturer#queue) och klistra in i queue.py filen.  
+2. Skapa en fil med namnet `src/queue.py` i "queue" mappen. Kopiera koden [för en Queue](kunskap/datastrukturer#queue) och klistra in i queue.py filen.
 
-1. Skapa en fil med namnet `node.py` i "queue" mappen. Kopiera koden [för en Node](kunskap/datastrukturer#nod) och klistra in i node.py filen.  
+1. Skapa en fil med namnet `src/node.py` i "queue" mappen. Kopiera koden [för en Node](kunskap/datastrukturer#nod) och klistra in i node.py filen.
 
-1. Pythons inbyggda lista ska inte användas längre. Varje element i kön ska ligga i ett Node objekt och bilda en list struktur.  
-Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `head` för att referera till första noden i kön.  
+1. Pythons inbyggda lista ska inte användas längre. Varje element i kön ska ligga i ett Node objekt och bilda en liststruktur.  
+Byt namn på instans attributet `items` till `head` i Queue klassen. Använd `head` för att referera till första noden i kön.
 
 1. Det är helt OK att lägga till fler metoder/attribut om man vill det i Queue klassen.
 
-1. Skapa en fil med namnet `errors.py` i "queue" mappen. Här skall du skapa ett eget exception med namnet `EmptyQueueException`. Denna skall lyftas när man använder `peek()` eller `dequeue()` på en tom kö.
+1. Skapa en fil med namnet `src/errors.py` i "queue" mappen. Här skall du skapa ett eget exception med namnet `EmptyQueueException`. Denna skall lyftas när man använder `peek()` eller `dequeue()` på en tom kö.
 
-1. Se till att `Queue` klassen passerar alla tester.
+1. Byt ut så att `main.py` använder er egna Queue istället för Pythons.
 
 
 ```bash
