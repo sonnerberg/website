@@ -78,7 +78,7 @@ mkdir src tests
 
 1. Skapa filen `src/errors.py` i "list" mappen. Den ska innehålla 2 egna exceptions. Använd dig av dem i UnorderedList klassen. Skapa `MissingValue` och `MissingIndex`.
 
-1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en klass med namnet `Hander`, den ska innehålla metoden `main` (tänk marvin i python kursen). Klassens konstruktor ska inte ta några argument (utom `self`), i konstruktorn skapa en tom UnorderedList och tilldela till instans attributet `self.list`. Meny I loopen ska följande menyval finnas:
+1. Skapa filen `main.py` i "list" mappen. Den ska innehålla en klass med namnet `Handler`, den ska innehålla metoden `main` (tänk marvin i python kursen). Klassens konstruktor ska inte ta några argument (utom `self`), i konstruktorn skapas en tom UnorderedList och tilldelas till instans attributet `self.list`. Menyn i loopen ska ha följande menyval:
 
     1. Tar ett `input()` värde och använder `append` för att lägga till värdet sist i listan.
     2. Tar ett `input()` värde som index och använder `get()` för att hämta värdet på det index. Skriv ut värdet. Om indexet inte finns ska det skrivas ut `Missing index`.
