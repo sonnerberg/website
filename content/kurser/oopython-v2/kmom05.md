@@ -100,7 +100,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish flask
+dbwebb publish kmom05
 ```
 
 ###Extra {#extra}
