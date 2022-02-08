@@ -48,7 +48,7 @@ Nedanför ser vi ett klassdiagram för en UnorderedList klass. Under diagrammet 
 * `get`: Returnera värde på index. Om index inte finns lyft `MissingIndex` exception.
 * `index_of`: Om data finns i listan returnera dess index. Om värdet inte finns lyft `MissingValue` exception.
 * `print_list`: Skriv ut listans innehåll.
-* `remove`: Ta bort nod med samma data. Om värdet inte finns lyft `MissingValue` exception.
+* `remove`: Ta bort nod med samma data. Om värdet inte finns lyft `MissingValue` exception. Om det finns flera noder med värdet, ta bara bort första.
 
 **TIPS** skapa `append` och `get` tidigt, de behövs för testerna.
 
