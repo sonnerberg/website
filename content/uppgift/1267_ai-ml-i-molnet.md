@@ -42,9 +42,9 @@ Krav {#krav}
 
 1. Webappen ska vara robust och på ett användarvänligt sätt presentera för användaren om någonting går fel, till exempel om resultatet från Cognitive Services genererar en StatusCode 429.
 
-1. Webappen ska lämnas in i Canvas som en .zip-fil.
+1. Webappen ska lämnas in i Canvas som en .zip-fil och driftsättas i Azure molnet.
 
-1. Du ska deploya Lager-appen som en Docker container, och den ska användas av din WebApp.
+1. Du ska deploya Lager-API:t som en Docker container i Azures moln enligt "[Deployment av Lager-API:t i en Docker Container](kunskap/lager-apit-i-docker)". Den driftsatta containern ska användas av din WebApp.
 
 
 
