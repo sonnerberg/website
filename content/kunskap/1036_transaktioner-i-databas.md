@@ -8,6 +8,7 @@ category:
     - kurs oophp
     - kurs databas
 revision:
+    "2022-02-09": "(F, mos) Bort fererens till dbwebb databas."
     "2022-01-18": "(E, mos) Lade till länk till video."
     "2019-02-08": "(D, mos) Genomgången och fokus mot kursen databas."
     "2018-01-05": "(C, mos) Genomgången och nu även i kursen databas."
@@ -70,9 +71,7 @@ En transaktion innebär att en eller flera SQL-satser utförs i sin helhet, elle
 En testdatabas {#dbexempel}
 --------------------------------------
 
-Artikeln förutsätter att du har en testdatabas `dbwebb` som du kan använda och att du kan logga in med användaren `user` med lösenordet `pass`.
-
-Rent krasst kan du dock köra koden nedan mot godtycklig databas.
+I artikeln förväntas du skapa ett par tabeller. Du kan använda godtycklig databas för att skapa dem eller så skapar du en egen databas för detta exempel.
 
 
 
