@@ -41,7 +41,7 @@ Nedanför ser vi ett klassdiagram för en UnorderedList klass. Under diagrammet 
 
 [FIGURE src=/image/oopython/kmom04/UnorderedList_klass_v2.png caption="klassdiagram för UnorderedList"]
 
-* `__init__`: Lägg till nytt element/nod sist i listan.
+* `__init__`: Skapa en tom lista.
 * `append`: Lägg till nytt element/nod sist i listan.
 * `set`: Skriv över element med ny data som finns på index. Om index inte finns lyft `MissingIndex` exception.
 * `size`: Returnera antalet element i listan. En tom lista har storleken 0.
