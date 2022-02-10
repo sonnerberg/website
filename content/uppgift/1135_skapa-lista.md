@@ -83,11 +83,11 @@ mkdir src tests
     1. Tar ett `input()` värde och använder `append` för att lägga till värdet sist i listan.
     2. Tar ett `input()` värde som index och använder `get()` för att hämta värdet på det index. Skriv ut värdet. Om indexet inte finns ska det skrivas ut `Missing index`.
     3. Skriv ut hur många element som finns i listan, använd `size()`.
-    4. Använder ett `input()`anrop för att ta två värden, i formatet `"value, index"`. Använder `set()` för att skriva över ett värde i listan. Om indexet inte finns ska det skrivas ut `Missing index`.
+    4. Använder ett `input()`anrop för att ta två värden, i formatet `"index, value"`. Använder `set()` för att skriva över ett värde i listan. Om indexet inte finns ska det skrivas ut `Missing index`.
     5. Använd `print_list()` för att skriva ut alla värden i listan.
     6. Tar ett `input()` värde och använder `index_of()` för att hämta och skriva ut värdet som finns på den index platsen. Om värdet inte finns ska det skrivas ut `Missing value`.
-    7. Tar ett `input()` värde och använder `remove()` för att ta bort det värdet från listan. Om värdet inte finns ska det skrivas ut `Missing value`.
-    8. Avsluta programmet.
+    7. Tar ett `input()` värde och använder `remove()` för att ta bort det värdet från listan. Om värdet inte finns ska det skrivas ut `Missing value`.  
+       `q`. Avsluta programmet.
 
 
 1. Skapa en fil med namnet `test.py` som kör testerna ni lägger i `tests/`. Skriv enhetstester för metoderna i UnorderedList klassen. Det ska finnas tester för metoderna, `get`, `index_of` och `remove`. Kolla på [Testa exceptions](https://youtu.be/ePkZEOHhk-s) för att se hur man fångar exceptions i ett test.
