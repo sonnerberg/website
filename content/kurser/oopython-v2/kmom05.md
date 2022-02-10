@@ -10,13 +10,6 @@ Kmom05: Sorteringsalgoritmer och datastrukturer
 Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Samtidigt ska vi lära oss hur man skriver rekursiva funktioner.
 
 <!--more-->
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
 
 [FIGURE src=/image/oopython/kmom05/index_top.png?w=w2 caption="Bild på algoritmen Merge-sort."]
 
@@ -94,7 +87,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Python med rekursiva funktioner](uppgift/python-med-rekursiva-funktioner-v2)" (lab 3)
 
-1. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/sortering-av-egen-lista)". Spara din kod i mappen `sort`.  
+1. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/sortering-av-egen-lista)". Spara din kod i mappen `sort`.
 
 1. Fyll på redovisning.html med kursmomentets redovisningstext.
 
@@ -105,22 +98,10 @@ dbwebb publish kmom05
 
 ###Extra {#extra}
 
-1. Det finns ingen extrauppgift.
+Det finns inga extrauppgifter.
 
 
-
-Resultat & Redovisning  {#resultat_redovisning}
+Lämna in  {#resultat}
 -----------------------------------------------
 
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Vad är rekursion?  
-* Känner du att du har förståelse för hur sorteringsalgoritmerna fungerar?  
-* Vad tycker du om [VisuAlgo](https://visualgo.net/en/sorting)?
-* Vad är big-O?
-* Gjorde du någon av extrauppgift?
-* Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
+Läs [Lämna in och redovisa uppgift](./../redovisa) för att ta reda på hur ni lämna in era uppgifter när ni är klara.
