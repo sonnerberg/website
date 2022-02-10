@@ -33,8 +33,7 @@ Kopiera UnorderedList filerna från kmom04.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-mkdir kmom05/sort/src
-cp -i kmom04/list/src/*.py kmom05/sort/src
+cp -i kmom04/list/* kmom05/sort/
 cd kmom05/sort
 mkdir tests
 ```
@@ -44,14 +43,14 @@ mkdir tests
 
 1. Justera din Insertion sort så den kan sortera din UnorderedList. PS! När ni skapar sorterings algoritmerna ska ni använda er av listans metoder för att flytta på element. Ni ska **inte** hämta head och traversera noder med den i era algoritmer.
 
-1. Lägg till ett menyval i `main.py` som sorterar listan med din Insertion sort.
+1. Lägg till menyvalet `10` i `main.py` som sorterar listan med din Insertion sort.
 
-1. I `src/sort.py` skapa en rekursiv insertion sort algoritm som kan sortera din lista.
+1. I `src/sort.py` skapa en rekursiv insertion sort algoritm som kan sortera din lista. Döp den till `recursive_insertion`.
 
-1. Lägg till ett menyval i `main.py` som sorterar listan med din rekursiva insertion sort.
+1. Lägg till menyvalet `11` i `main.py` som sorterar listan med din rekursiva insertion sort.
 
 1. Skapa en fil med namnet `test.py` som kör testerna ni lägger i `tests/test_sort.py`.
-Lägg till minst två tester för din rekursiva insertion sort i `tests/test_sort.py`.
+Lägg till minst två "värdefulla" tester för din rekursiva insertion sort i `tests/test_sort.py`.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -66,9 +65,9 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. Gör en implementation av Bubbel sort med rekursion. Gör ett eget menyval i main.py för att sortera med den.
+1. Gör en implementation av Bubbel sort med rekursion, skapa funktionen `recursive_bubble` i `src/sort.py`. Lägg till menyval `12` i main.py för att sortera med den.
 
-1. I sortering stöd att särskilja på heltal och strängar. Om en lista innehåller strängar och heltal ska heltalen sorteras till vänster och strängarna till höger, för sig.  
+1. I funktionen `insertion_sort` stöd att särskilja på heltal och strängar. Om en lista innehåller strängar och heltal ska heltalen sorteras till vänster och strängarna till höger, för sig.  
 Exempel `[3, "b", 1, "a", 2]` --> `[1, 2, 3, "a", "b"]`.
 
 
