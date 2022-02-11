@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2022-02-11": "(E, mos) Genomgången och justerad inför v2."
     "2019-03-13": "(D, mos) Tips om optionella argument."
     "2019-03-11": "(C, mos) Förtydligande och hjälptext om kodstandard, backup och tips till hur testa."
     "2019-02-25": "(B, mos) Tips om GROUP_CONCAT och dump av procedurer."
@@ -93,8 +94,10 @@ I terminalklienten.
 
 1. Visa hyllor på lagret.
 1. Visa vilka produkter som finns på hyllorna.
+1. Visa produkterna så att den nya produkten syns
 1. Lägg till den nya produkten på en godtycklig lagerhylla.
 1. Se att produkten finns på lagret med rätt antal på rätt hylla.
+1. Ta bort antalet produkter som du nyss lade till, men lämna kvar en.
 
 
 
@@ -111,15 +114,17 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 1. Inloggningsdetaljer till databasen skall sparas i `config/db/eshop.json`.
 
-1. SQL-filer lägger du i `sql/eshop`. Skapa filen `setup.sql` för att skapa databasen och användaren. Låt din databas heta `eshop` och ge användaren `user` full tillgång till databasen.
+1. SQL-filer lägger du i `sql/eshop`. Skapa filen `setup.sql` för att skapa databasen. Låt din databas heta `eshop`.
 
 1. Skapa filen `sql/eshop/ddl.sql` där du samlar all kod som skapar tabeller, vyer, procedurer, triggers och liknande. Använd den filen för att skapa databasens schema.
 
-1. Skapa filen `insert.sql` med SQL-kod för att lägga in minst 5 vardera, av följande: kunder, produkter, produktkategorier, lagerhyllor som du läser in från CSV-filer som du själv skapat. CSV-filerna sparar du i samma katalog som sql-filerna.
+1. Skapa filen `sql/eshop/insert.sql` med SQL-kod för att lägga in minst 5 vardera, av följande: kunder, produkter, produktkategorier, lagerhyllor som du läser in från CSV-filer som du själv skapat. CSV-filerna sparar du i samma katalog som sql-filerna. Använd inte absoluta filvägar till CSV-filerna.
 
 1. Försäkra dig om att samtliga produkter tillhör minst en produktkategori. Försäkra dig om att minst tre av produkterna tillhör två eller fler produktkategorier. Skriv kod i `insert.sql`, om det krävs.
 
 1. Försäkra dig om att samtliga produkter finns på lagret, i någon omfattning. Skriv kod i `insert.sql`, om det krävs.
+
+1. Skapa en SQL-fil som du kan använda för att återskapa hela databasen från början till slut, kalla den för `sql/eshop/reset.sql`.
 
 1. Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör INSERT, UPDATE och DELETE på tabellen produkt. Du loggar tiden då något hände och en textsträng som beskriver händelsen och det objekt som var inblandat i händelsen. Till exempel så här.
 
@@ -139,6 +144,8 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 1. Alla sidor skall ha samma sidlayout med gemensam header, footer och det skall gå att klicka sig fram mellan sidorna, via navigeringen.
 
+1. Skapa en om-sida på `eshop/about` som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften.
+
 1. I webbklienten, skapa routen `/eshop/index` som visar en välkomstssida till din eshop. Välj själv vad du visar på förstasidan.
 
 1. I webbklienten, skapa en sida `/eshop/category` som visar en tabell över de produktkategorier som finns.
@@ -150,16 +157,14 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 1. Se till att det är smidigt att navigera i din produkt CRUD, via länkar och/eller formulär, man skall kunna klicka sig fram till det man vill göra.
 
 <!--
-1. Skapa en om-sida på `eshop/about` som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften.
+OKLART?
 
 Skapa sida som visar alla kunder (likt produktöversikten) (eshop2 gör CRUD kunder).
 
 (ev extra) radera produkt med soft delete (kan återkomma i projektet)
 
 (ev extra) Klicka på kategori och se alla produkter som är av den kategorin?
-
-KOMMENTAR "Mängden uppgifter var ganska stor"
-* -->
+-->
 
 
 
@@ -171,25 +176,21 @@ KOMMENTAR "Mängden uppgifter var ganska stor"
 
 1. Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas.
 
+1. Skapa kommandot `about` som visar namnen på de som jobbat (i grupp) för att lösa uppgiften.
+
 1. Skapa kommandot `log <number>` som visar de `<number>` senaste raderna i loggtabellen.
+
+1. Skapa kommandot `product` som visar alla producter som finns, inklusive produkternas id.
 
 1. Skapa kommandot `shelf` som visar vilka lagerhyllor som finns på lagret.
 
-1. Skapa kommandot `inventory` som visar en tabell över vilka produkter som finns var i lagret. Visa produktid, produktnamn, lagerhylla och antal.
+1. Skapa kommandot `inv` (inventory) som visar en tabell över vilka produkter som finns var i lagret. Visa produktid, produktnamn, lagerhylla och antal.
 
-1. Skapa kommandot `inventory <str>` där det optionella argumentet `<str>` används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla.
+1. Skapa kommandot `inv <str>` där det optionella argumentet `<str>` används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla.
 
 1. Skapa kommandot `invadd <productid> <shelf> <number>` som lägger till ett visst antal produkter på en lagerhylla.
 
-1. Skapa kommandot `invdel <productid> <shelf> <number>` som plockar bort ett visst antal produkter från en viss lagerhylla.
-
-<!--
-1. Skapa kommandot `about` som visar namnen på de som jobbat (i grupp) för att lösa uppgiften.
-
-Ändra `inventory` till `inv`.
-
-Visa lista med de produkter som finns, inkl produktid.
-* -->
+1. Skapa kommandot `invdel <productid> <shelf> <number>` som plockar bort ett visst antal produkter från en viss lagerhylla. Det behöver inte finnas någon kontroll om antalet produkter fortfarande är positivt.
 
 
 
@@ -197,10 +198,11 @@ Visa lista med de produkter som finns, inkl produktid.
 
 1. När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i `sql/eshop/backup.sql`. Använd optionen `--routines` så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system.
 
-1. Validera din kod.
+1. Testa och validera din kod.
 
-```bash
+```text
 # Flytta till kurskatalogen
+dbwebb test eshop1
 dbwebb validate eshop1
 ```
 
