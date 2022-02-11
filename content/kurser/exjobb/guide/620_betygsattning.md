@@ -15,3 +15,5 @@ Det kan finnas fall där enstaka studenter är missnöjda med svarstiderna och f
 För godkänt betyg på kursen krävs, förutom godkänt proposal, även godkänd presentation och godkänd skriftlig opposition. Eventuella kompletteringar avseende detta hanteras från fall till fall.
 
 I de fall ni ligger på gränsen avseende betygsskala för er slutrapport, så kan presentation och oppositionen påverka slutbetyget på kursen positivt.
+
+Examinator använder [excel-dokumentet](https://docs.google.com/spreadsheets/d/1yWW61CdltsdZ8X7sZxBIgQ4skRhU2hkW/edit?usp=sharing&ouid=100665185796179333519&rtpof=true&sd=true) som bedömnningsunderlag. Välj Högskoleingenjör för att se de viktar som gäller för Högskoleexamen.

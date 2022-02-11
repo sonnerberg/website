@@ -20,7 +20,7 @@ Planen med projektet är att du ska bygga funktionalitet så att man i din WebAp
 
 Denna bild ska tolkas med hjälp av [Azure Cognitive Services](kunskap/cognitive-services-i-azure) för att få en uppfattning vad bilden representerar.
 
-Varje tolkning bygger på en viss sannolikhet, dvs hur säker tjänsten är att tolkningen är korrekt. Tolkningar med en sannolikhet under 99% är inte intressanta i detta projektet och ska filtreras bort.
+Varje tolkning bygger på en viss sannolikhet, dvs hur säker tjänsten är att tolkningen är korrekt. Tolkningar med en sannolikhet under 97% är inte intressanta i detta projektet och ska filtreras bort.
 
 Du ska nu söka ut de produkter i ditt lager vars [name] eller [description] innehåller någon tolkning av bilden - men tolkningarna är på engelska och lagret är på svenska och därför behöver du översätta tolkningarna innan du jämför dom med lagerprodukterna.
 
