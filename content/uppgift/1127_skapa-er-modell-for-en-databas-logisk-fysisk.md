@@ -57,6 +57,8 @@ Varje steg du gör (enligt kokboken) skall du dokumentera i ett dokument som du 
 Krav {#krav}
 -----------------------
 
+Läs igenom samtliga krav innan du börjar jobba.
+
 1. Bygg vidare på din konceptuella modell som du dokumenterat i ett befintligt dokument.
 
 1. Skapa en ny sida med rubrik "Logisk modell" och utför och dokumentera alla delsteg för den logiska modelleringsfasen, enligt kokboken.
