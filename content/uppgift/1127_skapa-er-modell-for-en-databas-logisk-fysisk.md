@@ -5,6 +5,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2022-02-11": "(E, mos) Förtydligande om att enbart SQL DDL skall skapas."
     "2022-02-11": "(D, mos) Lade till tips om reset.sql."
     "2020-01-29": "(C, mos) Stycke om föreläsningen om e-shop."
     "2019-02-08": "(B, mos) Genomgången och mindre justeringar i text."
@@ -60,7 +61,7 @@ Krav {#krav}
 
 1. Skapa en ny sida med rubrik "Logisk modell" och utför och dokumentera alla delsteg för den logiska modelleringsfasen, enligt kokboken.
 
-1. Skapa en ny sida med rubrik "Fysisk modell" och utför och dokumentera alla delsteg för den fysiska modelleringsfasen.
+1. Skapa en ny sida med rubrik "Fysisk modell" och utför och dokumentera alla delsteg för den fysiska modelleringsfasen. Du skall skapa SQL DDL men du skall inte skapa INSERT, UPDATE, DELETE eller SELECT.
 
 1. Berätta i dokumentet hur du gjorde för att skapa SQL DDL (per hand eller genererade). SQL DDL lägger du som ett Appendix i ditt dokument, för information, använd ett rimligt typsnitt.
 
