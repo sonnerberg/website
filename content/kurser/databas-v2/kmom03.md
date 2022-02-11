@@ -141,6 +141,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
+Redovisningstexten skrivs alltid individuellt.
+
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Några generella reflektioner på att skriva och jobba med menydrivna terminalprogram i JavaScript och Node.js?

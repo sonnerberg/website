@@ -150,6 +150,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
+Redovisningstexten skrivs alltid individuellt.
+
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur gick det att förstå konceptet transaktioner i databas?

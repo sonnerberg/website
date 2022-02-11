@@ -66,6 +66,20 @@ Kanske även förtydliga att det krävs mer för att nå högre betyg,
 
 Förtydliga också att man inte kan göra tentan om man inte klarat/lämnat in kmom05.
 
+
+---
+1. I webbklienten, gör så att man kan klicka på en kategori och sedan visas de produkter som finns i kategorin.
+
+1. I webbklienten, gör så att man kan koppla en produkt till en eller flera produktkategorier (överkurs).
+
+
+---
+Skapa sida som visar alla kunder (likt produktöversikten) (eshop2 gör CRUD kunder).
+
+(ev extra) radera produkt med soft delete (kan återkomma i projektet)
+
+(ev extra) Klicka på kategori och se alla produkter som är av den kategorin?
+
 -->
 
 

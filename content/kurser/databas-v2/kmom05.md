@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,5,0&f=grayscale&f1=pixelate,3,1"
 author: mos
 revision:
+    "2022-02-11": "(E, mos) Genomgången inför v2."
     "2019-02-18": "(D, mos) Uppdaterat och ny uppgift inför vt19."
     "2018-12-19": "(C, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
     "2018-02-13": "(B, mos) Ny uppgift, skapa grunden till eshop, flyttad från kmom04."
@@ -15,15 +16,7 @@ revision:
 Kmom05: Procedur och trigger
 ====================================
 
-[WARNING]
-
-**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
-
-Detta kursmoment är inte uppdaterat inför VT22.
-
-[/WARNING]
-
-Vi går vidare och nu handlar det om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod i mer avancerade programmeringskonstruktioner och automatiserande hantering av datat i databasen.
+Nu handlar det om att programmera en databas med <!--inbyggda integritetsregler, -->lagrade procedurer och triggers. Dessa konstruktioner ger oss ökade möjligheter att formulera vår SQL-kod i mer avancerade programmeringskonstruktioner och automatiserande hantering av datat i databasen.
 
 Det ger oss också möjligheten till inkapsling av SQL-koden och publicera ett API som kan användas av de klienter som vill åt databasen. Detta gör att databaskoden och dess interna representation kan skyddas från klienterna som enbart jobbar mot databasen via ett API bestående av lagrade procedurer.
 
@@ -62,41 +55,55 @@ Titta på följande inspelade föreläsningar.
 <!--
 
 Föreläsning om JS hur koppla lagrad procedur.
-
 Föreläsning om normalisering? (flytta läsanvisningen från kmom04)
+Kort föreläsning om hur man väljer primärnyckel?
+    [Vad välja som primärnyckel till en databastabell](t/6439)
+Inbyggda integritetsregler?
 
-menyklienten command "product" to show all products.
+--
+BEHÖVS VERKLIGEN?
 
 Förtydliga mer hur invadd skall fungera.
 
 Förtydliga om invdel skall fungera, eventuellt byt till invremove och plocka bort item tills 0, eller minus kanske. Jobba med softdelete och inte delete.
 
 Gör det jättetydligt vad som skall fungera.
+
+--
+* Loop i compound statement
+* Sp anropa annan Sp.
+* Hantera SP med INOUT/OUT variabler i JS
+* Hantera SQL variabler in till JS
+* Hantera SP med flera resultsets
+
 -->
 
 
 
 ### Kurslitteratur {#kurslitteratur}
 
-Läs följande:
+Läs följande i kursboken:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 13. Integritetsvillkor
     * Kap 15: Lagrade procedurer
     * Kap 16: Aktiva databaser och triggers
 
-Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
+1. [Boken har även en webbplats](http://www.databasteknik.se/webbkursen/) och vissa utdrag från boken finns där. Relevant för detta kmom är följande:
+    * [Integritetsvillkor](http://www.databasteknik.se/webbkursen/integritet/index.html)
 
 
 
-### MySQL dokumentation {#mysqldoc}
+### MariaDB dokumentation {#mariadbdoc}
 
 Bekanta dig med följande:
 
-1. I manualen för MySQL kan du läsa om lagrade procedurer (stored procedures) och triggers, det är främst följande kapitel som är relevanta, bekanta dig med dem, du kommer att träna på begreppen i kommande övningar.
-    * [24.1 Defining Stored Programs](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)
-    * [24.2 Using Stored Routines (Procedures and Functions)](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
-    * [24.3 Using Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html)
+1. I manualen för MariaDB kan du läsa om lagrade procedurer (stored procedures) och triggers, det är främst följande kapitel som är relevanta, bekanta dig med dem, du kommer att träna på begreppen i kommande övningar.
+    * [Stored Procedures](https://mariadb.com/kb/en/stored-procedures/)
+    * [Stored Procedure Overview](https://mariadb.com/kb/en/stored-procedure-overview/)
+    * [Triggers](https://mariadb.com/kb/en/triggers/)
+    * [Trigger Overview](https://mariadb.com/kb/en/trigger-overview/)
+    * [TIMESTAMP](https://mariadb.com/kb/en/timestamp/)
 
 
 
@@ -126,15 +133,6 @@ Genomför följande övning för att förbereda inför uppgifterna.
 1. Jobba igenom "[CRUD med Express, MySQL och lagrade procedurer](kunskap/crud-med-express-mysql-och-lagrade-procedurer)" som visar hur ett webbgränssnitt kan se ut där du kan lägga till, uppdatera och ta bort rader i en tabell. Spara de exempelprogram du gör i `me/kmom05/crud`.
 
 
-<!--
-* Loop i compound statement
-* Sp anropa annan Sp.
-* Hantera SP med INOUT/OUT variabler i JS
-* Hantera SQL variabler in till JS
-* Hantera SP med flera resultsets
--->
-
-
 
 ### Uppgifter {#uppgifter}
 
@@ -150,6 +148,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 *(ca: 1-2 studietimmar)*
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
+
+Redovisningstexten skrivs alltid individuellt.
 
 Se till att följande frågor besvaras i redovisningstexten.
 

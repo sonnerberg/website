@@ -204,6 +204,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
+Redovisningstexten skrivs alltid individuellt.
+
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Förklara begreppet index i databas för en nybörjare, berätta varför index är viktigt. Skriv ett kort stycke (3-7 rader).
