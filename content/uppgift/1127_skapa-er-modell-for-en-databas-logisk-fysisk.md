@@ -5,6 +5,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2022-02-11": "(D, mos) Lade till tips om reset.sql."
     "2020-01-29": "(C, mos) Stycke om föreläsningen om e-shop."
     "2019-02-08": "(B, mos) Genomgången och mindre justeringar i text."
     "2018-01-05": "(A, mos) Första utgåvan."
@@ -70,6 +71,8 @@ Krav {#krav}
 1. Försäkra dig om att din SQL DDL (`setup.sql`, `ddl.sql`) fungerar och skapar den databasen och de tabellerna du vill ha. Du behöver inte lägga in någon data i tabellerna, eller provköra databasen, det gör vi senare.
 
 1. Spara ditt orginal dokument i katalogen du jobbar. Generera även en PDF som `er.pdf`.
+
+1. Tips. Skapa även en `reset.sql` så du snabbt och enkelt kan återskapa och återställa din databas.
 
 1. När du är klar så publicerar du ditt kursrepo.
 
