@@ -20,7 +20,7 @@ Du har utfört en ER-modellering av en databas för en Eshop och nu skall du på
 
 Du skall fylla databasen med visst innehåll och du skall skapa två klienter, en webbaserad klient och en terminalklient, som jobbar mot databasen.
 
-Du kan utföra denna uppgift enskilt, eller i samma grupp som utförde ER-modelleringen. 
+Du kan utföra denna uppgift enskilt, eller i samma grupp som utförde ER-modelleringen.
 
 <!--more-->
 
@@ -46,7 +46,7 @@ Du skall bygga en webbklient och en terminalklient. Du har tidigare kod som du k
 
 Börja med att kopiera din fil `ddl.sql` från modelleringsuppgiften, till nuvarande katalog och utgå från den. Var redo på att du kan behöva modifiera tabellstrukturen för din databas, så att du kan lösa uppgiften.
 
-När du fyller databasen med innehåll så kan du utgå från följande Excelark, "[Databasen eshop, del 1, innehåll till tabeller](https://docs.google.com/spreadsheets/d/1yz0-C1SFYvNw_mN5CrZd9QrjKUXqKv3OhSlGUci8Mls/edit?usp=sharing)". Ta en egen kopia av arket och därefter kan du fritt modifiera innehållet i tabellerna och vilka kolumner som finns.
+När du fyller databasen med innehåll så kan du utgå från följande Excelark (om du vill), "[Databasen eshop, del 1, innehåll till tabeller](https://docs.google.com/spreadsheets/d/1yz0-C1SFYvNw_mN5CrZd9QrjKUXqKv3OhSlGUci8Mls/edit?usp=sharing)". Ta en egen kopia av arket och därefter kan du fritt modifiera innehållet i tabellerna och vilka kolumner som finns.
 
 
 
@@ -54,15 +54,27 @@ När du fyller databasen med innehåll så kan du utgå från följande Excelark
 
 Kom ihåg att vi använder en kodstandard som säger små bokstäver på tabeller, vyer, procedurer, triggers och kolumnnamn.
 
-Du kan läsa om "[Kodstandard i SQL, små bokstäver och underscore _](t/8379)" i forumet.
+Ett av de vanligaste felen som ger komplettering är att man mixat stora och små bokstäver i namngivningen av databasobjekten och man är sedan inte konsikvent när man använder databasen i skript eller i JavaScript koden.
 
 
 
 ### Backup med lagrade procedurer {#backproc}
 
-När du tar din backup måste du ange `--routines` så att dina lagrade procedurer följer med. Om du har sätter CHARSET/COLLATION på databasen så behöver du även se till att den informationen kommer med i backupfilen.
+När du tar din backup måste du ange `--routines` så att dina lagrade procedurer följer med.
 
-Du kan läsa mer i forumet på "[Backup av databasen inklusive lagrade procedurer](t/8371)".
+```text
+# Utan lagrade procedurer
+mysqldump --result-file=eshop.sql eshop
+
+# Med lagrade procedurer
+mysqldump --routines --result-file=eshop.sql eshop
+```
+
+Ett vanligt fel som leder till komplettering är att man missat skicka med de lagrade procedurerna i sin backupfil. Du kan alltid verifiera din backupfil mot en annan databas eller öppna den i texteditorn och skrolla längst ned i filen för att se att de lagrade procedurerna följde med.
+
+<!--
+Om du har sätter CHARSET/COLLATION på databasen så behöver du även se till att den informationen kommer med i backupfilen.
+-->
 
 
 
@@ -103,7 +115,7 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 1. Skapa filen `sql/eshop/ddl.sql` där du samlar all kod som skapar tabeller, vyer, procedurer, triggers och liknande. Använd den filen för att skapa databasens schema.
 
-1. Skapa filen `insert.sql` med SQL-kod för att lägga in minst 5 vardera, av följande: kunder, produkter, produktkategorier, lagerhyllor som du läser in från CSV-filer som du själv skapat. CSV-filerna sparar du i samma katalog som sql-filerna. 
+1. Skapa filen `insert.sql` med SQL-kod för att lägga in minst 5 vardera, av följande: kunder, produkter, produktkategorier, lagerhyllor som du läser in från CSV-filer som du själv skapat. CSV-filerna sparar du i samma katalog som sql-filerna.
 
 1. Försäkra dig om att samtliga produkter tillhör minst en produktkategori. Försäkra dig om att minst tre av produkterna tillhör två eller fler produktkategorier. Skriv kod i `insert.sql`, om det krävs.
 
@@ -210,7 +222,7 @@ Gör följande om du har tid och energi.
 Tips från coachen {#tips}
 -----------------------
 
-Läs gärna på om **GROUP_CONCAT** som kan vara smidigt att använda när man vill göra en rapport som till exempel visar vilka kategorier som en produkt tillhör. Det finns ett [tips i forumet om GROUP_CONCAT](t/8366). 
+Läs gärna på om **GROUP_CONCAT** som kan vara smidigt att använda när man vill göra en rapport som till exempel visar vilka kategorier som en produkt tillhör. Det finns ett [tips i forumet om GROUP_CONCAT](t/8366).
 
 Du kan med GROUP_CONCAT skapa följande rapport, se kategorierna.
 
