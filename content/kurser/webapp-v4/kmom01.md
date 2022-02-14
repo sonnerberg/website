@@ -69,6 +69,18 @@ Läs dessutom [Walkthrough](https://docs.expo.dev/introduction/walkthrough/) fö
 
 
 
+### Git & GitHub {#git}
+
+För kurspaketare introduceras Git och GitHub i denna kursen. Git är ett versionshanteringssystem för kod och GitHub är en webbplats där man kan ladda upp sitt Git-repo och använda extra tjänster. Om du inte har ett konto på GitHub gör följande steg nedan.
+
+1. Bekanta dig kort med [dokumentation på Gits hemsida](https://git-scm.com/doc). Där finner du referensinformation, en onlinebok om Git och ett antal korta videor som ger dig grunderna till vad Git och versionshantering handlar om.
+
+1. Skaffa dig ett konto på [GitHub](https://github.com/). Du behöver det för att ladda upp och publicera ditt Git-repo. Det är gratis med konto och att ladda upp publika repon.
+
+1. Ägna en stund åt att bekanta dig med webbplatser för GitHub. Du kan även kort och översiktligt kika på de guider och videor som finns för GitHub. Notera att de täcker så mycket mer än vad vi kommer jobba med i kursen så det kan räcka att du endast noterar att det existerar [guider för hur man jobbar med GitHub](https://guides.github.com/).
+
+
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
@@ -79,6 +91,8 @@ Läs dessutom [Walkthrough](https://docs.expo.dev/introduction/walkthrough/) fö
 ### Övningar {#ovningar}
 
 Gör följande övningar för att träna inför uppgifterna.
+
+1. För att introduceras eller repetera Git och Github jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)". Denna guide introducerar dig till Git/GitHub, ett verktyg som är branchstandard för att versionshantera kod.
 
 1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Spara koden i `me/kmom01/typography`.
 
@@ -106,7 +120,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du sedan tidigare bekant med utveckling av mobila appar?
 * Vad tycker du om utvecklingsmiljön med React Native och Expo jämfört med utvecklingsmiljön i tidigare dbwebb-kurser?
 * Vilket är den viktigaste lärdomen du gjort om typografi för mobila enheter?
-* Du har i kursmomentet hämtat data från två stycken API. Hur kändes detta?
+* Du har i kursmomentet hämtat data från ett API. Hur kändes detta?
 
 TIL är en akronym för “Today I Learned” vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
 
