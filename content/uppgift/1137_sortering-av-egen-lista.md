@@ -33,9 +33,8 @@ Kopiera UnorderedList filerna från kmom04.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -i kmom04/list/* kmom05/sort/
+cp -ir kmom04/list/* kmom05/sort/
 cd kmom05/sort
-mkdir tests
 ```
 
 1. Skapa filen `src/sort.py` och kopiera in insertion sort från [artikeln](kunskap/sorteringsalgoritmer-v2#insertion-sort).  

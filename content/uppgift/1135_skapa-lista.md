@@ -85,7 +85,7 @@ mkdir src tests
     3. Skriv ut hur många element som finns i listan, använd `size()`.
     4. Använder ett `input()`anrop för att ta två värden, i formatet `"index, value"`. Använder `set()` för att skriva över ett värde i listan. Om indexet inte finns ska det skrivas ut `Missing index`.
     5. Använd `print_list()` för att skriva ut alla värden i listan.
-    6. Tar ett `input()` värde och använder `index_of()` för att hämta och skriva ut värdet som finns på den index platsen. Om värdet inte finns ska det skrivas ut `Missing value`.
+    6. Tar ett `input()` värde och använder `index_of()` för att hämta och skriva ut index för det inmatade värdet. Om värdet inte finns ska det skrivas ut `Missing value`.
     7. Tar ett `input()` värde och använder `remove()` för att ta bort det värdet från listan. Om värdet inte finns ska det skrivas ut `Missing value`.  
        `q`. Avsluta programmet.
 
