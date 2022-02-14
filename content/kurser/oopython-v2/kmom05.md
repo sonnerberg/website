@@ -89,8 +89,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/sortering-av-egen-lista)". Spara din kod i mappen `sort`.
 
-1. Fyll på redovisning.html med kursmomentets redovisningstext.
-
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb publish kmom05
