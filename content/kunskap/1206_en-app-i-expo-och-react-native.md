@@ -86,9 +86,9 @@ Alla delar av appar vi gör i React Native är uppbyggda av olika sorters Views.
 Komponenter {#komponenter}
 --------------------------------------
 
-Komponenter är ett oerhört viktigt begrepp inom JavaScript-ramverk som till exempel Angular, React och Vue. Tanken med en komponent är att det oberoende och återanvändbara delar av vår kod. För att förstå komponenter är artikeln [React Fundamentals](https://reactnative.dev/docs/intro-react).
+Komponenter är ett oerhört viktigt begrepp inom JavaScript-ramverk som till exempel Angular, React och Vue. Tanken med en komponent är att det är oberoende och återanvändbara delar av vår kod. För att förstå komponenter är artikeln [React Fundamentals](https://reactnative.dev/docs/intro-react).
 
-I kodexemplet ovan (och inklistrat nedan med) ser vi ett första exempel på en komponent `App`. `App` i sig är en funktion, sedan exporterar vi den som `default` export från filen `App.tsx`. Från funktionen returnerar vi något som ser ut som upphottat HTML. Det kallas JSX och är ett tillägg till JavaScript syntaxen, så det är mer än bara ett `template` language. För att lära sig mer om bakgrunden och grunderna i JSX rekommenderar jag artikeln [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) från Reacts dokumentation. För den som vill gå på djupet kan artikeln [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) läsas efteråt.
+I kodexemplet ovan (och inklistrat nedan med) ser vi ett första exempel på en komponent `App`. `App` i sig är en funktion som vi exporterar som `default export` från filen `App.tsx`. Från funktionen returnerar vi något som ser ut som upphottat HTML. Det kallas JSX och är en utökning av JavaScript-syntaxen, så det är mer än bara ett `template` language. För att lära oss mer om bakgrunden och grunderna i JSX rekommenderar jag artikeln [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) från Reacts dokumentation. För den som vill gå på djupet kan artikeln [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) läsas efteråt.
 
 ```javascript
 export default function App() {
@@ -103,4 +103,26 @@ export default function App() {
 
 I denna komponenten returnerar vi en `View`-Core Component som i sin tur innehåller en `Text`-Core Component, samt en Expo komponent som visar status för appen. Vi kommer senare i kursen att göra egna komponenter, som vi kan använda på liknande sätt som denna `StatusBar` komponent.
 
-Vi ändrar lite
+Vi ändrar lite i `App.tsx` för att se hur komponenterna fungerar och hur vi kan använda oss av styling. Vi börjar med `Text` komponenten som vi ändrar till blå och gör lite större. Notera att vi inte anger en enhet efter `fontSize` som vi i vanliga fall hade gjort i CSS. Alla storlekar anges i pixlar i React Native så därför anger vi storlek utan enhet.
+
+```javascript
+<Text style={{color: '#33c', fontSize: 42}}>Lager-Appen</Text>
+```
+
+Vi fortsätter med att lägga till en bild till appen. Jag har lagt till denna [bilden](https://raw.githubusercontent.com/dbwebb-se/webapp-v4/v1.0.0/example/assets/warehouse.jpg). Vi gör det genom att först importera bilden, ungefär som vi gör när vi importerar JavaScript objekt eller funktioner. Sedan använder vi ett `Image` element för att visa upp bilden. Viktigt att sätta både höjd och bredd på bilden, annars kommer den inte synas.
+
+```javascript
+import { StatusBar } from 'expo-status-bar';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import warehouse from './assets/warehouse.jpg';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={{color: '#33c', fontSize: 42}}>Lager-Appen</Text>
+      <Image source={warehouse} style={{ width: 320, height: 240 }} />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+```
