@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-02-15": "(D, mos) Förtydliga vilken användare som skall användas."
     "2021-12-20": "(C, mos) Omskriven inför v2 och MariaDB."
     "2019-01-24": "(B, mos) Bort med överflödigt ;."
     "2019-01-21": "(A, mos) Första versionen."
@@ -21,11 +22,9 @@ Skapa en ny användare {#createuser}
 
 Dokumentationen för att skapa en ny användare finns i [CREATE USER](https://mariadb.com/kb/en/create-user/).
 
-Jag tänker skapa användaren `maria@localhost` och ge användaren fulla rättigheter. Att ge fulla rättigheter gör saker enklare när vi jobbar i kursen. Normalt sett hade man troligen begränsat vilka rättigheter som användaren har, vilka databaser och tabeller som den kan använda och från vilka maskiner den kan ansluta.
+Vi skapar användaren `maria@localhost` och ger användaren fulla rättigheter. Att ge fulla rättigheter gör saker enklare när vi jobbar i kursen. Normalt sett hade man troligen begränsat vilka rättigheter som användaren har, vilka databaser och tabeller som den kan använda och från vilka maskiner den kan ansluta.
 
 Öppna terminalklienten och skriv följande SQL-kod för att skapa en användare som kan ansluta från localhost vilket innebär att databasservern måste finnas på din localhost.
-
-Du kan döpa din användare till vad du vill, men jag kör på "maria".
 
 ```text
 CREATE USER 'maria'@'localhost'
@@ -41,6 +40,8 @@ ON *.* TO 'maria'@'localhost'
 WITH GRANT OPTION
 ;
 ```
+
+Om du vill att användaren skall kunna ansluta från fler platser än bara 'localhost' så behöver du skapa ytterligare en användare för 'maria'@'%' där '%' anger att användaren kan ansluta från godtycklig host.
 
 Kommandot [GRANT finns beskrivet i manualen](https://mariadb.com/kb/en/grant/).
 
@@ -126,7 +127,7 @@ Kontrollera alltid att det inte skrivs ut felmeddelande i skriptet, då behöver
 Vilken användare skall jag använda? {#vilkenanv}
 --------------------------------------
 
-Du kan nu jobba vidare med vilken användare du vill. Du har troligen två att välja på, "dbadm" eller "maria" (eller vad du nu döpte din användar till).
+Du kan nu jobba vidare med antingen "maria" eller "dbadm". Du kan inte använda en annan godtycklig användare då det kan bli bekymmer vid rättningen längre fram i kursen.
 
 Vill du växla användare så bör det gå bra så här.
 
