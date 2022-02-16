@@ -127,7 +127,52 @@ export default function App() {
 }
 ```
 
+Appen bör nu se ut ungefär så här:
+
+![Centrerad](image/webapp/v4/lager-centrerad.png)
+
+Vi vill kanske inte alltid ha våra element centrerade på telefonen så om vi ändrar till följande stylesheet flytts elementen upp till toppen av skärmen.
+
+```javascript
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
+```
+
+![Notch](image/webapp/v4/lager-notch.png)
+
+På vissa nya telefonen kommer vårt innehåll nu gå upp i den såkallade notch. Det vill kanske inte och därför kan vi ersätta vår root `View`-komponent med en `SafeAreaView`-komponent istället som visar upp våra element inom ett område på telefonen som är nedanför notchen.
+
+Vår kod ser alltså nu ut på detta sättet.
+
+```javascript
+import { StatusBar } from 'expo-status-bar';
+import { Image, StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import warehouse from './assets/warehouse.jpg';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={{color: '#33c', fontSize: 42}}>Lager-Appen</Text>
+      <Image source={warehouse} style={{ width: 320, height: 240 }} />
+      <StatusBar style="auto" />
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
+```
 
 
 Git {#git}
 --------------------------------------
+
+Expo skapar ett Git-repo för oss per automatik och har med en `.gitignore` som tar bort de filerna vi inte vill ha som en del av repot.
