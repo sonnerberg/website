@@ -6,6 +6,7 @@ category:
     - sql
     - kursen databas
 revision:
+    "2022-02-17": "(B, mos) Uppdaterad bort med DEFAULT NULL och fungerar både på MySQL och MariaDB."
     "2019-03-20": "(A, mos) Första versionen"
 ...
 Använd TIMESTAMP för status i databastabellen
@@ -24,6 +25,8 @@ Förutsättning {#pre}
 
 Vi använder MySQL 8.0.
 
+Artikeln är även testad på MariaDB 10.6.5.
+
 
 
 En tabell för user {#ddl}
@@ -37,16 +40,17 @@ CREATE TABLE user (
     `acronym` CHAR(5) PRIMARY KEY,
     `name` VARCHAR(20),
     `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `updated` TIMESTAMP DEFAULT NULL
-                ON UPDATE CURRENT_TIMESTAMP,
-    `activated` TIMESTAMP DEFAULT NULL,
-    `deleted` TIMESTAMP DEFAULT NULL
+    `updated` TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
+    `activated` TIMESTAMP NULL,
+    `deleted` TIMESTAMP NULL
 );
 ```
 
-Alla tidsstämplarna är av datatypen [TIMESTAMP](https://dev.mysql.com/doc/refman/8.0/en/datetime.html).
+Alla tidsstämplarna är av datatypen TIMESTAMP.
 
-Alla tidsstämplar har DEFAULT NULL, förutom `created` som har defaultvärdet av [CURRENT_TIMESTAMP](https://dev.mysql.com/doc/refman/8.0/en/timestamp-initialization.html).
+Kolumnen `created` har defaultvärdet av CURRENT_TIMESTAMP som ger nuvarande tid.
+
+Öriga tidsstämplar har (DEFAULT) NULL så de får ett NULL värde som initialt värde.
 
 Kolumnen `updated` har konstruktionen `ON UPDATE CURRENT_TIMESTAMP` som ger ett nytt värde varje gång som något värde i raden uppdateras.
 
@@ -317,5 +321,3 @@ Avslutningsvis {#avslutning}
 Du har fått ett exempel på hur man kan använda tidsstämplar i en databastabell för att införa status på raderna i tabellen. Baserat på tidsstämpeln kan man betrakta raden som att den har olika "status" som påverkar hur raden används i andra sammanhang i applikationerna.
 
 Källkoden till detta exempel ligger i kursrepot databas under [`example/sql/user_timestamp.sql`](https://github.com/dbwebb-se/databas/blob/master/example/sql/user_timestamp.sql).
-
-Har du frågor eller funderingar, eller vill bidra med tips, så finns en [forumtråd för detta tips](t/8448).
