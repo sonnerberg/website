@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
 
 ![Notch](image/webapp/v4/lager-notch.png)
 
-På vissa nya telefonen kommer vårt innehåll nu gå upp i den såkallade notch. Det vill kanske inte och därför kan vi ersätta vår root `View`-komponent med en `SafeAreaView`-komponent istället som visar upp våra element inom ett område på telefonen som är nedanför notchen.
+På vissa nya telefonen kommer vårt innehåll nu gå upp i den såkallade notch. Det vill vi kanske inte och därför kan vi ersätta vår root `View`-komponent med en `SafeAreaView`-komponent istället som visar upp våra element inom ett område på telefonen som är nedanför notchen.
 
 Vår kod ser alltså nu ut på detta sättet.
 
@@ -170,6 +170,62 @@ const styles = StyleSheet.create({
   },
 });
 ```
+
+
+
+Vår första egna komponent {#component}
+--------------------------------------
+
+För att vår app ska bli till en Lager-app behöver vi en lagerförteckning. Vi skapar en egen komponent som klarar av att visa upp lagret. Först skapar vi en katalog `components` och sedan filen filen `components/Stock.tsx`.
+
+Vi börjar enkelt med att skriva ut "Lagerförteckning" och tittar på hur vi kan skapa en egen komponent. I filen `Stock.tsx` börjar vi med att definiera funktionen Stock som vi exporterar som `default export` från filen.
+
+```javascript
+export default function Stock() {
+
+}
+```
+
+Vi anger komponent-funktioners namn med stor bokstav enligt namnkonventionen då det blir lättare att överskåda i jsx-syntaxen. Vi kan nu göra en `import` i `App.tsx` och använda komponenten med hjälp av jsx enligt `<Stock/>`.
+
+```javascript
+import Stock from './components/Stock.tsx';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={{color: '#33c', fontSize: 42}}>Lager-Appen</Text>
+      <Image source={warehouse} style={{ width: 320, height: 240 }} />
+      <Stock/>
+      <StatusBar style="auto" />
+    </SafeAreaView>
+  );
+}
+```
+
+Detta bör iinnte göra nån skillnad i appen, då vi inte returnerar något från komponenten. Så låt oss göra det.
+
+```javascript
+import { Text } from 'react-native';
+
+export default function Stock() {
+  return (
+    <Text style={{color: '#333', fontSize: 24}}>Lagerförteckning</Text>
+  );
+}
+```
+
+Först importerar vi Core-komponenten `Text` som vi sedan använder för att skriva ut texten "Lagerförteckning" i storlek 24 med färgen `#333`.
+
+
+
+Hämta data från API {#fetch}
+--------------------------------------
+
+[INFO]
+Om du inte gjort övningen "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)" än, är det läge nu.
+[/INFO]
+
 
 
 Git {#git}

@@ -92,9 +92,11 @@ För kurspaketare introduceras Git och GitHub i denna kursen. Git är ett versio
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. För att introduceras eller repetera Git och Github jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)". Denna guide introducerar dig till Git/GitHub, ett verktyg som är branchstandard för att versionshantera kod.
+1. För att introduceras till eller repetera Git och Github jobba igenom guiden "[Kom igång med Git och GitHub](guide/git)". Denna guide introducerar dig till Git/GitHub, ett verktyg som är branchstandard för att versionshantera kod.
 
 1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Spara koden i `me/kmom01/typography`.
+
+1. Gör övningen "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)" för att bekanta dig med Lager-API:t som vi kommer använda i kursen.
 
 1. Gör övningen "[En app i Expo och React Native](kunskap/en-app-i-expo-och-react-native)". Spara resultatet i `me/lager`.
 
