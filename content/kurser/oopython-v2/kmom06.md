@@ -102,3 +102,9 @@ dbwebb publish kmom06
 Det finns inga extrauppgifter.
 
 <!--Big O analys av deras kod!!!! kanske som vanlig uppgift om det går snabbt för dem med den smo finns -->
+
+
+Lämna in  {#resultat}
+-----------------------------------------------
+
+Läs [Lämna in och redovisa uppgift](./../redovisa) för att ta reda på hur ni lämna in era uppgifter när ni är klara.
