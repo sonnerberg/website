@@ -84,7 +84,7 @@ Vi noterar att nyckel-värde paren skrivs ut i en konstig ordning, inte alls som
 [INFO]
 Från och med python 3.6 är dictionaries ["insertion ordered"](https://docs.python.org/3.6/whatsnew/3.6.html#new-dict-implementation). Det betyder att nyckel-paren är sparade i ordningen de läggs in i dictionaryn. Som när man gör append() på en lista för att lägga till nya värden.
 
-Om någon är intresserad av hur det är implementerat kan ni läsa en [överskådlig förkling](https://stackoverflow.com/a/39980744).
+Om någon är intresserad av hur det är implementerat kan ni läsa en [överskådlig förklaring](https://stackoverflow.com/a/39980744).
 [/INFO]
 
 
@@ -258,7 +258,7 @@ Det funkar likadan om vi förser loopen men en lista som innehåller tupler. Om 
 dict_items([
     ('köttfärs', {'stock': 20, 'price': 50, 'ids': (1234, 'K14')}),
     ('grädde', {'stock': 80, 'price': 20, 'ids': (3141, 'L12')}),
-    ('krossade tomater', {'stock': 33, 'price': 10, 'ids': (4224, 'E13')}), 
+    ('krossade tomater', {'stock': 33, 'price': 10, 'ids': (4224, 'E13')}),
     ('gul lök', {'stock': 42, 'price': 5, 'ids': (2742, 'D02')})
 ])
 ```

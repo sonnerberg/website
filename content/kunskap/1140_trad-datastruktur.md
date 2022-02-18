@@ -11,7 +11,7 @@ Träd Datastrukturer
 
 [FIGURE src=/image/oopython/kmom05/datastructure_top.png?w=c5 class="right"]
 
-Träd är en vanlig abstrakt datatyp eller datastruktur som lagrar element i en hierarkisk träd struktur, liknar ett arvsträd.
+Träd är en vanlig abstrakt datatyp eller datastruktur som lagrar element i en hierarkisk träd struktur, som liknar ett arvsträd.
 
 <!--more-->
 

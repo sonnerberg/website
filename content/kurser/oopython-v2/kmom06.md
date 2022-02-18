@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2022-02-18": (E, grm) Tog bort kapitlet om redovisning.
     "2020-02-21": (D, aar) Added optional dictionary material.
     "2019-02-22": (C, aar) Changed to be about Binary Search Tree.
     "2018-02-12": (B, aar) First version v2.
@@ -14,7 +15,7 @@ Kmom06: Datastrukturen träd
 Gör `dbwebb update` innan du startar med kursmomentet.
 [/INFO]
 
-Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla på träd strukturer. Mer specifikt ska vi lära oss skapa ett Binärt sökträd och skapa algoritmer som kan traversera trädet rekursivt. 
+Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla på träd strukturer. Mer specifikt ska vi lära oss skapa ett Binärt sökträd och skapa algoritmer som kan traversera trädet rekursivt.
 
 <!--more-->
 [WARNING]
@@ -27,7 +28,7 @@ Avvakta kursstarten eller att denna gula rutan försvinner.
 
 [FIGURE src=/image/oopython/kmom06/bst.svg caption="Ett binärt sökträd."]
 
-Det finns två valfria delar i detta kmom som är repetition av Dictionaries från den första Python kursen. Detta är för att uppfriska minnet av hur man jobbar med key/value par i datastrukturer och för projektet i kmom10 kan man välja mellan att använda sig av listor eller dictionaries. Tidigare år har det framkommit att många inte känner sig säkra på Dictionaries och därför valde alla att använda listor. Därför har jag lagt till material så man kan friska upp sitt minne av dictionaries, vilket förhoppningsvis gör att ni kan välja den metod som ni tycker verkar bäst/lättast och inte bara välja listor för att ni inte kommer ihåg dictionaries. 
+Det finns två valfria delar i detta kmom som är repetition av Dictionaries från den första Pythonkursen. Detta är för att friska upp minnet av hur man jobbar med key/value par i datastrukturer och för projektet i kmom10 kan man välja mellan att använda sig av listor eller dictionaries. Tidigare år har det framkommit att många inte känner sig säkra på Dictionaries och därför valde alla att använda listor. Därför har jag lagt till material så man kan friska upp sitt minne av dictionaries, vilket förhoppningsvis gör att ni kan välja den metod som ni tycker verkar bäst/lättast och inte bara välja listor för att ni inte kommer ihåg dictionaries.
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -98,7 +99,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish flask
+dbwebb publish kmom06
 ```
 
 
@@ -108,20 +109,3 @@ dbwebb publish flask
 Det finns inga extrauppgifter.
 
 <!--Big O analys av deras kod!!!! kanske som vanlig uppgift om det går snabbt för dem med den smo finns -->
-
-
-Resultat & Redovisning  {#resultat_redovisning}
------------------------------------------------
-
-*(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Vad är ett Binärt sökträd?
-* Hur gick det att skriva de rekursiva funktionerna?
-* Vad är Inorder, Preorder och Postorder när man pratar om traversera träd? 
-* Vad är en Hash table?
-* Kan du jämföra och resonera kring de olika datastrukturerna vi gått igenom i kursen? Vilken passar till vad?
-* Gick det bra att utföra kursmomentet?
