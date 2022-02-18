@@ -18,13 +18,6 @@ Gör `dbwebb update` innan du startar med kursmomentet.
 Vi jobbar vidare med datastrukturer, algoritmer och rekursion genom att kolla på träd strukturer. Mer specifikt ska vi lära oss skapa ett Binärt sökträd och skapa algoritmer som kan traversera trädet rekursivt.
 
 <!--more-->
-[WARNING]
-
-**ARBETE PÅGÅR**
-
-Avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
 
 [FIGURE src=/image/oopython/kmom06/bst.svg caption="Ett binärt sökträd."]
 
@@ -66,7 +59,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-1. [Förra årets föreläsning](https://youtu.be/9NMhvR3jY6w?t=1951). Pratar allmänt om programmering, bl.a. att plugga programmering VS. jobba med programmering.
+1. [Förra tidigare års föreläsning](https://youtu.be/9NMhvR3jY6w?t=1951). Pratar allmänt om programmering, bl.a. att plugga programmering VS. jobba med programmering.
 
 1. [How to use the Python debugger](https://www.digitalocean.com/community/tutorials/how-to-use-the-python-debugger). Lär er använda Pythons debugger för att stega igenom koden.
 
