@@ -33,7 +33,7 @@ BinarySearchTree:
 
 * `__init__`: Skapa ett objekt, sätt root till None.
 * `insert`: Skapar en ny nod med key och value. Lägger till en noden på rätt plats i trädet, baserat på key. Om nod med key redan finns i trädet skriv över värdet i noden.
-* `inorder_traversal_print`: Skriver ut en noderna i trädet i rätt ordning, lågt till högt.
+* `inorder_traversal_print`: Skriver ut värdet i noderna i trädet i rätt ordning, lågt till högt. En rad per värde, t.ex. "1\n4\n2\n".
 * `get`: Returnera value från noden med nyckeln key. Om key inte finns i trädet lyft ett KeyError exception (det inbyggda).
 * `remove`: Ta bort nod med samma key, returnera värdet från noden. Om nod med key inte finns lyft KeyError exception (det inbyggda).
 
@@ -57,13 +57,9 @@ Node:
 Krav {#krav}
 -----------------------
 
-Ställ dig i mappen `me/` och kopiera filer från exempel mappen.
-
 ```bash
 # Ställ dig i kurskatalogen
-cd me/
-cp ../example/tree/*.py kmom06/tree
-cd kmom06/tree
+cd me/kmom06/tree
 ```
 
 1. Skapa en fil med namnet `node.py` i "tree" mappen. Skriv koden för din Node klass här.
@@ -76,11 +72,10 @@ cd kmom06/tree
 
 1. Metoderna för Insert/Get/Print/Remove ska jobba rekursivt för att traversera noderna. De metoderna som anropas för det operationerna måste inte jobba rekursivt men då ska de anropa andra metoder som jobbar rekursivt. Kolla på genomgången för exempel.
 
-1. Kör test filen `test.py` för att se att ditt BST är korrekt implementerat innan du gör publish
-
 
 ```bash
 # Ställ dig i kurskatalogen
+dbwebb test tree
 dbwebb publish tree
 ```
 
@@ -97,7 +92,7 @@ Extrauppgift {#extra}
 
 1. Implementera den [magiska metoden __setitem__](https://docs.python.org/3/reference/datamodel.html#object.__setitem__) för ditt BST. Gör så `bst[0] = 4` fungerar.
 
-1. Implementera den [magiska metoden __contains__](https://docs.python.org/3/reference/datamodel.html#object.__contains__) för ditt BST. Gör så `0 in bst` fungerar.
+1. Implementera den [magiska metoden __contains__](https://docs.python.org/3/reference/datamodel.html#object.__contains__) för ditt BST. Gör så `0 in bst` fungerar. `0` är en nyckel.
 
 
 Tips från coachen {#tips}
