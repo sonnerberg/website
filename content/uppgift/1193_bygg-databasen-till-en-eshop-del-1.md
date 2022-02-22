@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2022-02-22": "(F, mos) Uppdaterade skrivningen om kravet invadd."
     "2022-02-11": "(E, mos) Genomgången och justerad inför v2."
     "2019-03-13": "(D, mos) Tips om optionella argument."
     "2019-03-11": "(C, mos) Förtydligande och hjälptext om kodstandard, backup och tips till hur testa."
@@ -188,7 +189,7 @@ Skapa sida som visar alla kunder (likt produktöversikten) (eshop2 gör CRUD kun
 
 1. Skapa kommandot `inv <str>` där det optionella argumentet `<str>` används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla.
 
-1. Skapa kommandot `invadd <productid> <shelf> <number>` som lägger till ett visst antal produkter på en lagerhylla.
+1. Skapa kommandot `invadd <productid> <shelf> <number>` som lägger till ett visst antal av en produkt på en lagerhylla. Om det redan finns samma produkt på lagerhyllan så kan man öka på antalet. (Tips: det finns en konstruktion som heter INSERT ON DUPLICATE KEY UPDATE.)
 
 1. Skapa kommandot `invdel <productid> <shelf> <number>` som plockar bort ett visst antal produkter från en viss lagerhylla. Det behöver inte finnas någon kontroll om antalet produkter fortfarande är positivt.
 
