@@ -19,6 +19,14 @@ Kursen webapp (v3)
 
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med HTML, CSS och JavaScript.
 
+[WARNING]
+
+**Ny version av kursen webapp VT22**.
+
+Påbörja inte arbete med denna versionen om du ska gå kurstillfället VT22.
+
+[/WARNING]
+
 
 
 <!--more-->
