@@ -71,28 +71,40 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 Skriv din kod i katalogen `me/kmom10/spellchecker`. Filen som startar programmet skall heta `spellchecker.py` och ska innehålla klassen SpellChecker.
 
-Implementera en Trie datastruktur, i filen `trie.py`, som använder Node objekt, `node.py`. Varje Node objekt behöver innehålla vilken bokstav noden representerar, en dictionary eller lista som ska hålla barn noderna och en boolean för att markera om det är en slut nod. Om du gör krav fyra måste du använda dictionary, annars kan du välja själv mellan dictionary och lista.
-I Trie:n ska det gå att lägga till nya ord, kolla om ett ord finns i datastrukturen och få ut alla ord baserat på ett prefix.
+Implementera en Trie datastruktur, i filen `src/trie.py`, som använder Node objekt, `src/node.py`. Varje Node objekt behöver innehålla vilken bokstav noden representerar, en dictionary eller lista som ska hålla barn noderna och en boolean för att markera om det är en slut nod. Om du gör krav **fyra** måste du använda dictionary, annars kan du välja själv mellan dictionary och lista. Er Trie får **inte** innehålla en lista eller dict som innehåller hela orden som har lagts till. Orden ska byggas upp av strukturen i trädet.  
+I er Trie ska det gå att lägga till nya ord, kolla om ett ord finns i datastrukturen och få ut alla ord baserat på ett prefix.
 
-När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser in en fil med rättstavade engelska ord (välj själv vilken fil som ska läsas upp vid start). Lägg in alla orden i ett Trie objekt. Starta sen ett klassiskt while-loop terminal program (Marvin meny). Följande menyval ska finnas:
+När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser in en fil med rättstavade engelska ord. Starta sen ett klassiskt while-loop terminal program (Marvin meny, Handler exemplet är OK att använda). Följande menyval ska finnas:
 
-1. Ta ett ord som input och kolla om det finns i ordlistan (Trie objektet). Om ordet inte finns lyft felet SearchMiss, ni behöver också skapa det Exception själva. Det ska inte krasha programmet! Fånga felet i meny koden.
+1. Ta ett ord som input och kolla om det finns i ordlistan (Trie objektet). Om ordet inte finns lyft felet `SearchMiss`, ni behöver också skapa det Exception själva. Skapa felet i filen `src/exceptions.py`. Det ska inte krascha programmet! Fånga felet i meny koden.
 
-1. En prefix sökning (auto-complete), användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. Du kan begränsa utskriften av ord till max 10 åt gången. Se video ovan för exempel.
+1. En prefix sökning (auto-complete), användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. För att avsluta sökningen kan användaren skriva in `quit` som ett ord. Du kan begränsa utskriften av ord till max 10 åt gången. Se video ovan för exempel.
 
 1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från den nya filen.
 
 1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. Ett tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden.
 
-1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska SearchMiss lyftas som error. Det ska inte krasha programmet! Det ärcker inte med att bara avmarkera noder när du tar bort ett ord. Om noderna i ordet inte används till ett annat ord ska du ta bort dem från datastrukturen.
+1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska `SearchMiss` lyftas som error. Det ska inte krascha programmet! Det räcker inte med att bara avmarkera noder när du tar bort ett ord. Om noderna i ordet inte används till ett annat ord ska du ta bort dem från datastrukturen.
 
 1. Exit
 
 I SpellChecker klassen, lägg inte all kod i while-loopen, dela upp koden i metoder. T.ex. en metod/menyval åtminstone.
 
+I koden ni lämnar in ska filen `dictionary.txt` läsas in vid start.
 
 
-###Krav 2: Klassdiagram {#k2}
+
+#### Testning {#test}
+
+Skriv enhetstester för dina klasser. Spara testerna i filen `tests/test_trie.py`.
+
+Minst 6 tester för Trie klassen. Testa inte bara positiva utfall, göra så att något går fel och testa hur det hanteras. Ni behöver också testa att `SearchMiss` exception:et lyfts.
+
+
+
+###Krav 2: UML {#k2}
+
+#### Klassdiagram {#klass}
 
 **Innan du börjar programmera** ska du analyser och planera vad du ska koda. Dokumentera  med klassdiagram vilka klasser, attribut, metoder och relationer som du tror att du kommer skapa när du utvecklar programmet.
 
@@ -108,11 +120,15 @@ Spara som `classdiagrams.png`. Ladda upp filen på Canvas inlämningsuppgiften.
 
 
 
+#### Sekvensdiagram {#sekvens}
+
+När du är färdigt med din kod, gör ett sekvensdiagram. Välj ett av menyvalen 1, 2 eller 5 att göra diagrammet för. Start punkten på digrammet ska vara en input från användaren till SpellChecker klassen.
+
+Lägg bilden i `spellchecker` mappen och döp den till `sequencediagram.png`.
+
+
+
 ###Krav 3: Testning {#k3}
-
-Skriv enhetstester för dina klasser. Spara testerna i filen `test.py`.
-
-Minst 6 tester för Trie klassen. Testa inte bara positiva utfall, försök även göra så att något går fel och testa hur det hanteras. Ni behöver också testa att SearchMiss exception:et lyfts.
 
 
 
@@ -120,6 +136,7 @@ Se till att din kod validerar.
 
 ```bash
 # Ställ dig i kurskatalogen
+dbwebb test kmom10 # --extra för att också testa extrauppgifterna
 dbwebb publish kmom10
 ```
 
@@ -138,6 +155,8 @@ Om du gör detta kravet ska du använda en dictionary för att hålla barn noder
 I detta kravet ska du använda filerna `frequency.txt` och `tiny_frequency.txt` för ordlistan. De filerna innehåller rättstavade engelska ord och hur vanliga de är. Varje rad innehåller ett ord och hur vanligt ordet är (ett float tal), separat med space. Ju högre siffra desto vanligare är ordet. Bygg ut din Node klass med ett attribut för frequency. I din metod för att lägga till ord, när du markera en slut nod behöver du också lägga in frekvensen för ordet som noden marker.
 
 Nu för menyval 2, när programmet skriver ut 10 ord som finns baserat på prefixet ska programmet sortera alla orden baserat på frekvens och begränsa utskriften till att max skriva ut de 10 med högst frekvens.
+
+I koden ni lämnar in ska filen `frequency.txt` läsas in vid start.
 
 
 
