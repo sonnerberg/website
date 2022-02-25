@@ -38,12 +38,8 @@ Krav {#krav}
 
 1. Appen ska ha en egen stil och anpassas till ditt valda tema för de produkter du har i ditt lager.
 
-1. Commit:a dina ändringar och lägg till en ny tagg (v1.0.*).
+1. Säkerställ att du har filen `expo.txt` i roten på din lager katalog och att den enbart innehåller länken till din publiserade expo-app.
 
-1. Push:a repot till GitHub, inklusive taggarna.
+1. Commit:a dina ändringar och lägg till en ny tagg (v1.0.*). Du taggar repot med hjälp av kommandot `git tag -a v1.0.0 -m "lager1 done"`
 
-
-
-Extrauppgift {#extra}
------------------------
-Det finns inga extrauppgifter.
+1. Push:a repot till GitHub, inklusive taggarna. Du pushar taggarna i ett separat kommando `git push origin --tags`.

@@ -7,7 +7,7 @@ revision:
 Introduktion till Lager-API:t
 ==================================
 
-Vi ska i denna övning bekanta oss med Lager-API:t. Vi installerar först Postman som är ett utmärkt verktyg för att testa och använda API:er utan att behöva använda oss av en klient.
+Vi ska i denna övning bekanta oss med [Lager-API:t](https://lager.emilfolino.se). Vi installerar först Postman som är ett utmärkt verktyg för att testa och använda API:er utan att behöva använda oss av en klient.
 
 
 
