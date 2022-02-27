@@ -18,13 +18,7 @@ Upplägget är enligt följande:
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
-[WARNING]
 
-**ARBETE PÅGÅR**
-
-Avvakta kursstarten eller att denna gula rutan försvinner.
-
-[/WARNING]
 
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
@@ -78,11 +72,11 @@ När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser
 
 1. Ta ett ord som input och kolla om det finns i ordlistan (Trie objektet). Om ordet inte finns lyft felet `SearchMiss`, ni behöver också skapa det Exception själva. Skapa felet i filen `src/exceptions.py`. Det ska inte krascha programmet! Fånga felet i meny koden.
 
-1. En prefix sökning (auto-complete), användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. För att avsluta sökningen kan användaren skriva in `quit` som ett ord. Du kan begränsa utskriften av ord till max 10 åt gången. Se video ovan för exempel.
+1. En prefix sökning (auto-complete), användaren skriver in de tre första bokstäverna av ett ord. Programmet ska då skriva ut ord från ordlistan som har de bokstäverna som prefix, användaren ska kunna fortsätta att skriva in en bokstav åt gången och få ut orden som finns baserat på det prefixet. För att avsluta sökningen kan användaren skriva in `quit` som ett ord. Du kan begränsa utskriften av ord till max 10 åt gången, skriv ut ett ord per rad. Se video ovan för exempel.
 
 1. Byta ut ordlistan, användaren ska skriva in ett filnamn. Programmet ska då skapa ett nytt Trie objekt och läsa in orden från den nya filen.
 
-1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. Ett tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden.
+1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. Skriv ut ett ord per rad. Ett tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden.
 
 1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska `SearchMiss` lyftas som error. Det ska inte krascha programmet! Det räcker inte med att bara avmarkera noder när du tar bort ett ord. Om noderna i ordet inte används till ett annat ord ska du ta bort dem från datastrukturen.
 
@@ -91,15 +85,6 @@ När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser
 I SpellChecker klassen, lägg inte all kod i while-loopen, dela upp koden i metoder. T.ex. en metod/menyval åtminstone.
 
 I koden ni lämnar in ska filen `dictionary.txt` läsas in vid start.
-
-
-
-#### Testning {#test}
-
-Skriv enhetstester för dina klasser. Spara testerna i filen `tests/test_trie.py`.
-
-Minst 6 tester för Trie klassen. Testa inte bara positiva utfall, göra så att något går fel och testa hur det hanteras. Ni behöver också testa att `SearchMiss` exception:et lyfts.
-
 
 
 ###Krav 2: UML {#k2}
@@ -128,21 +113,23 @@ Lägg bilden i `spellchecker` mappen och döp den till `sequencediagram.png`.
 
 
 
-###Krav 3: Testning {#k3}
+### Krav 3: Testning {#k3}
 
+Skriv enhetstester för dina klasser. Spara testerna i filen `tests/test_trie.py`.
 
+Minst 7 tester för Trie klassen. Testa inte bara positiva utfall, göra så att något går fel och testa hur det hanteras. Ni behöver också testa att `SearchMiss` exception:et lyfts.
 
 Se till att din kod validerar.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb test kmom10 # --extra för att också testa extrauppgifterna
+dbwebb test kmom10
 dbwebb publish kmom10
 ```
 
 
 
-###Krav 4: Sortera utskriften (optionell) {#k4}
+### Krav 4: Sortera utskriften (optionell) {#k4}
 
 För menyval 4 sortera alla orden innan de skrivs ut. Implementera en [Merge Sort](kunskap/sorteringsalgoritmer-v2#merge-sort) algoritm som metod i SpellChecker klassen. Hämta ut alla ord från Trie objektet, lägg dem i en lista, sortera listan med Merge sort och skriv ut listan.
 <!-- (https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)-->
@@ -150,7 +137,7 @@ Om du gör detta kravet ska du använda en dictionary för att hålla barn noder
 
 
 
-###Krav 5: Baser utskrift för menyval 2 på word frequency (optionell) {#k5}
+### Krav 5: Baser utskrift för menyval 2 på word frequency (optionell) {#k5}
 
 I detta kravet ska du använda filerna `frequency.txt` och `tiny_frequency.txt` för ordlistan. De filerna innehåller rättstavade engelska ord och hur vanliga de är. Varje rad innehåller ett ord och hur vanligt ordet är (ett float tal), separat med space. Ju högre siffra desto vanligare är ordet. Bygg ut din Node klass med ett attribut för frequency. I din metod för att lägga till ord, när du markera en slut nod behöver du också lägga in frekvensen för ordet som noden marker.
 
@@ -160,7 +147,7 @@ I koden ni lämnar in ska filen `frequency.txt` läsas in vid start.
 
 
 
-###Krav 6: Grafiskt gränssnitt på webben (optionell) {#k6}
+### Krav 6: Grafiskt gränssnitt på webben (optionell) {#k6}
 
 Gör ett grafiskt gränssnitt för att kolla om ett ord är rättstavat. Skapa en webbsida med Flask som innehåller två undersidor, en sida för att kolla om ett ord finns i ordlistan och en sida som skriver ut alla orden som finns i ordlistan.
 <!--
