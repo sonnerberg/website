@@ -7,6 +7,7 @@ views:
             src: "image/snapvt17/mysql-optimize.png?c=350,100,10,11&w=1100&h=300&cf&f=grayscale"
 author: mos
 revision:
+    "2022-02-27": "(E, mos) Genomgången inför v2."
     "2019-03-20": "(D, mos) Övning om TIMESTAMP."
     "2019-02-25": "(C, mos) Uppdaterat inför vt19."
     "2018-12-19": "(B, mos) Uppdaterat läsanvisning utgåva 2 av kursbok."
@@ -14,14 +15,6 @@ revision:
 ...
 Kmom06: Prestanda
 ====================================
-
-[WARNING]
-
-**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
-
-Detta kursmoment är inte uppdaterat inför VT22.
-
-[/WARNING]
 
 Vi fortsätter med programmering i databasen, denna gången med "funktioner" som har en liknande struktur som lagrade procedurer och triggers.
 
@@ -76,13 +69,14 @@ https://dbwebb.se/kunskap/kokbok-for-databasmodellering#dd
 
 ### Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
+Läs följande i kursboken:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 9: Sammanfattning av SQL-kommandon
     * Kap 22: Index och prestanda
 
-Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
+1. [Boken har även en webbplats](http://www.databasteknik.se/webbkursen/) och vissa utdrag från boken finns där. Relevant för detta kmom är följande:
+    * [Index och prestanda](http://www.databasteknik.se/webbkursen/prestanda/index.html)
 
 Det finns ytterligare ett kapitel i boken som är relaterat till prestanda, det går utanför kursens ram men läs vid intresse.
 
@@ -99,29 +93,16 @@ Saker vi inte hanterat:
 -->
 
 
-### MySQL dokumentation {#mysqldoc}
+### MariaDB dokumentation {#mariadbdoc}
 
 Bekanta dig med följande:
 
-1. I manualen för MySQL kan du läsa om optimering och i vilka olika nivåer som optimering kan utföras. Kika på nedanstående kapitel för att skaffa dig en översikt om möjligheter för optimering.
-    * [Chapter 8 Optimization](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+1. I manualen kan du läsa om optimering och i vilka olika nivåer som optimering kan utföras. Kika snabbt och översiktligt på nedanstående kapitel för att skaffa dig en grov känsla för olika möjligheter för optimering.
+    * [Optimization and Tuning](https://mariadb.com/kb/en/optimization-and-tuning/)
 
 
-1. Du har tidigare läst i MySQL manualen om lagrade procedurer (stored procedures), triggers och compound statements. Komplettera det med att nu läsa (i samma kapitel) om "funktioner" som skapas med CREATE FUNCTION. Läs översiktligt följande i manualen.
-    * [24.1 Defining Stored Programs](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)
-    * [24.2 Using Stored Routines (Procedures and Functions)](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
-
-
-
-### Modellering {#model}
-
-Läs följande.
-
-1. Läs igenom foruminlägget om "[Vad välja som primärnyckel till en databastabell](t/6439)?", det ger en snabb orientering i hur man kan tänka när man väljer primärnyckel i en tabell (eventuellt har du redan läst om detta i kmom05).
-
-<!--
-Ta bort till 2020, artikeln är flyttad till kmom05.
--->
+1. Du har tidigare läst i manualen om lagrade procedurer (stored procedures), triggers och compound statements. Komplettera det med att nu läsa (i samma kapitel) om "funktioner" som skapas med CREATE FUNCTION. Läs översiktligt följande i manualen.
+    * [Stored Functions](https://mariadb.com/kb/en/stored-functions/)
 
 
 
@@ -144,7 +125,11 @@ Gör följande som ren överkurs, om du har tid, energi och lust.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
+<!--
+Borttagen 2022 då det fanns en video om detta i kmom05, oklart om artikeln behövs eller inte. Jag flyttar den till kmom05 inför 2023.
+
 1. Läs (och jobba) igenom artikeln "[Använd TIMESTAMP för status i databastabellen](coachen/anvand-timestamp-for-status-i-databastabellen)" som visar hur du kan använda tidsstämplar för att ge olika status till rader i en databastabell. Du behöver inte spara de exempelprogram du gör.
+-->
 
 1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom06/func`.
 
@@ -157,10 +142,6 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Usability with messages on what happens.
 
-1. Faktureringsmotor?
-
-1. Exportera data från webben till csv?
-
 1. Visualisering i tabeller via JavaScript libs.
 -->
 
@@ -171,29 +152,6 @@ Genomför följande övning för att förbereda inför uppgifterna.
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bygg databasen till en Eshop (del 2)](uppgift/bygg-databasen-till-en-eshop-del-2)" där du slutför implementationen av din databas. Spara all kod under `me/kmom06/eshop2`.
-
-
-<!--
-1. Jobba igenom följande del i guiden "[Kom igång med SQL i MySQL (Programmera i databasen)](guide/kom-igang-med-sql-i-mysql/programmera-i-databasen)". Fortsätt spara SQL-koden i filer i katalogen `me/skolan`.
-
-1. Lös uppgiften "[Bygg kursbeställningsverktyg till skolan](uppgift/bygg-bestallningsverktyg-till-skolan)". Spara all kod i katalogen `me/kmom06/bestall`.
-
--->
-
-
-
-<!--
-1. Lös (minst) en av följande uppgifter (den första är troligen aningen enklare):
-    * Lös uppgiften "[Bygg klienter till en Eshop med CRUD mot lagrade procedurer](uppgift/bygg-klienter-till-en-eshop-med-crud-mot-lagrade-procedurer)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för tabellerna kund och produkt.
-
-    * Lös uppgiften "[Bygg orderhantering till en Eshop](uppgift/bygg-orderhantering-till-en-eshop)". Jobba vidare på föregående uppgift i `me/kmom05/eshop2`. Du skapar CRUD för orderhantering.
--->
-
-<!--
-från kmom04, borttagen
-
-1. Gör uppgiften "[Skapa en Eshop med två klienter](uppgift/skapa-eshop-med-tva-klienter)" som bygger vidare på din ER-modell och låter dig skapa databasen tillsammans med en terminalklient och en webbklient. Spara all kod under `me/kmom04/eshop1`. (En liknande uppgift kommer i nästa kursmoment).
--->
 
 
 

@@ -48,6 +48,14 @@ Titta på följande inspelade föreläsningar.
 
 1. [Tidstämplar i databastabell](./../forelasning/tidstamplar) visar hur tidstämplar kan fungera i en databastabell och hur de kan få sitt värde per automatik.
 
+<!--
+Borttagen från kmom06 2022 då det fanns en video om detta i kmom05, oklart om artikeln behövs eller inte. Jag flyttar den till kmom05 inför 2023.
+
+1. Läs (och jobba) igenom artikeln "[Använd TIMESTAMP för status i databastabellen](coachen/anvand-timestamp-for-status-i-databastabellen)" som visar hur du kan använda tidsstämplar för att ge olika status till rader i en databastabell. Du behöver inte spara de exempelprogram du gör.
+
+Räcker kanske att artikeln anges som läskälla i föreläsningen?
+-->
+
 1. [Lagrade procedurer och programmera i databasen](./../forelasning/lagrade-procedurer) introducerar framförallt hur man jobbar med lagrade procedurer i databasen för att kombinera variabel, SQL och mer sedvanliga programmeringskonstruktioner.
 
 1. [Trigger i databasen](./../forelasning/trigger) om konceptet "programmera i databasen" och hur triggers passar in i den möjligheten.

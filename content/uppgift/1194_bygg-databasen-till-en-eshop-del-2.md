@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2022-02-27": "(G, mos) Genomgången inför v2."
     "2019-03-20": "(F, mos) Tips om order_status via foruminlägg."
     "2019-03-20": "(E, mos) Tips om TIMESTAMPS går nu till artikel."
     "2019-03-12": "(D, mos) Stycke om karaktäristik på funktioner."
@@ -58,7 +59,7 @@ Här kan du se ett exempel på en studentinlämning.
 
 Kom ihåg att vi använder en kodstandard som säger små bokstäver på tabeller, vyer, procedurer, triggers och kolumnnamn.
 
-Du kan läsa om "[Kodstandard i SQL, små bokstäver och underscore _](t/8379)" i forumet.
+Ett av de vanligaste felen som ger komplettering är att man mixat stora och små bokstäver i namngivningen av databasobjekten och man är sedan inte konsikvent när man använder databasen i skript eller i JavaScript koden.
 
 
 
@@ -75,9 +76,17 @@ Får du detta felet så har dina databas-funktioner inte karaktäristik angiven.
 
 ### Backup med lagrade procedurer {#backproc}
 
-När du tar din backup måste du ange `--routines` så att dina lagrade procedurer följer med. Om du har sätter CHARSET/COLLATION på databasen så behöver du även se till att den informationen kommer med i backupfilen.
+När du tar din backup måste du ange `--routines` så att dina lagrade procedurer följer med.
 
-Du kan läsa mer i forumet på "[Backup av databasen inklusive lagrade procedurer](t/8371)".
+```text
+# Utan lagrade procedurer
+mysqldump --result-file=eshop.sql eshop
+
+# Med lagrade procedurer
+mysqldump --routines --result-file=eshop.sql eshop
+```
+
+Ett vanligt fel som leder till komplettering är att man missat skicka med de lagrade procedurerna i sin backupfil. Du kan alltid verifiera din backupfil mot en annan databas eller öppna den i texteditorn och skrolla längst ned i filen för att se att de lagrade procedurerna följde med.
 
 
 
@@ -134,6 +143,8 @@ Och produkter på lagret.
 
 1. Databasen skall innehålla egenskapade INDEX på minst ytterligare två platser, förutom primärnycklar och främmande nycklar. Analysera var INDEX kan passa in och inför dem.
 
+1. Databasen måste innehålla grunddata med en handfull kunder och produkter som finns på lagret. Du behöver även lägga in ett antal ordrar som har olika status. Dessa grunddata underlättar när man testar din lösning.
+
 
 
 ### Webbklient {#webb}
@@ -178,10 +189,11 @@ Och produkter på lagret.
 
 1. När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i `sql/eshop/backup.sql`. Använd optionen `--routines` så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system.
 
-1. Validera din kod.
+1. Testa och validera din kod.
 
-```bash
+```text
 # Flytta till kurskatalogen
+dbwebb test eshop2
 dbwebb validate eshop2
 ```
 

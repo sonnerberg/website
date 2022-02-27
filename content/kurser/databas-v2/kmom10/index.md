@@ -80,6 +80,13 @@ Skapa sida som visar alla kunder (likt produktöversikten) (eshop2 gör CRUD kun
 
 (ev extra) Klicka på kategori och se alla produkter som är av den kategorin?
 
+---
+
+1. Faktureringsmotor?
+
+1. Exportera data från webben till csv?
+
+
 -->
 
 
