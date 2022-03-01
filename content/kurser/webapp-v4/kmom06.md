@@ -8,8 +8,17 @@ revision:
   "2017-03-17": (B, efo) Förberedelser för webapp-v2.
   "2015-12-11": (A, mos) Första utgåvan för kursen.
 ...
-Kmom06: Mobila enheters styrkor
+Kmom06: GraphQL
 ==================================
+
+[WARNING]
+
+**Kursutveckling pågår**.
+
+Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
+
+[/WARNING]
+
 I detta kursmoment fortsätter vi att utnyttja styrkorna i våra mobila enheter. Vi kopplar in kamera och GPS för att skapa en fulländad applikation, som utnyttjar alla möjligheter vi har på en mobil plattform.
 
 

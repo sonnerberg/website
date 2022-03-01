@@ -11,6 +11,14 @@ Kursen webapp (v4)
 
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med webbteknologier.
 
+[WARNING]
+
+**Kursutveckling pågår**.
+
+Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
+
+[/WARNING]
+
 
 
 <!--more-->
@@ -143,7 +151,7 @@ När man skapar en faktura är det bra att ha snygga och responsiva tabeller. S�
 
 
 
-### kmom05: Native {#kmom05}
+### kmom05: Mobila enheters styrkor {#kmom05}
 
 Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på 'riktigt' för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
 
@@ -151,7 +159,7 @@ När man skapar en faktura är det bra att ha snygga och responsiva tabeller. S�
 
 
 
-### kmom06: Mobila enheters styrkor {#kmom06}
+### kmom06: GraphQL {#kmom06}
 
 I detta kursmoment fortsätter vi att utnyttja styrkorna i våra mobila enheter. Vi kopplar in kamera och GPS för att skapa en fulländad applikation, som utnyttjar alla möjligheter vi har på en mobil plattform.
 

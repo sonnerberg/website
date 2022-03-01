@@ -7,11 +7,23 @@ revision:
 kmom01: Vår första React Native app
 ==================================
 
+[WARNING]
+
+**Kursutveckling pågår**.
+
+Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
+
+[/WARNING]
+
 Vi ska i detta kursmomentet ta en titt på hur vi utvecklar appar med hjälp av ramverken React Native och Expo. Vi tar en titt på båda ramverken och hur vi utvecklar med hjälp av TypeScript i React Native. Dessutom introduceras Lager-API:t som är med oss i kmom01-kmom06 och hur vi hämtar data från det API:t.
 
 
 
 <!--more-->
+
+
+
+
 
 
 

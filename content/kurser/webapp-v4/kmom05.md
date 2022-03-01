@@ -7,8 +7,16 @@ revision:
   "2017-03-14": (B, aar) Tagit bort JQuery mobile.
   "2015-12-04": (A, mos) Första utgåvan för kursen.
 ...
-Kmom05: Native
+Kmom05: Mobila enheters styrkor
 ==================================
+
+[WARNING]
+
+**Kursutveckling pågår**.
+
+Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
+
+[/WARNING]
 
 Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på riktigt för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
 

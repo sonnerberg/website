@@ -8,8 +8,17 @@ revision:
   "2016-02-08": (B, mos) Lade till extrauppgift om detect-swipe-event.
   "2015-10-26": (A, mos) Första utgåvan för kursen.
 ...
-Kmom02: Mobila enheters begränsningar
+Kmom02: Mobila begränsningar
 ==================================
+
+[WARNING]
+
+**Kursutveckling pågår**.
+
+Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
+
+[/WARNING]
+
 Vi tar en titt på vilka begränsningar och utmaningar man står inför som användare av en mobil enhet. Vi bryter ut CSS koden från kmom01 till ett GUI komponentbaserad ramverk och lägger till fler GUI komponenter till vårt ramverk.
 
 Vi fortsätter med vår applikation från kmom01 och använder tekniker för att strukturera JavaScript koden på ett bättre sätt.

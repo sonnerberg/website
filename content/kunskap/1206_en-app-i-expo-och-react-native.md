@@ -385,7 +385,7 @@ För att möjliggöra testning och rättning i denna lite annorlunda utvecklings
 
 ```shell
 # Stå i me/lager
-$ rsync -av ../../example/config/dbwebb-conf.json .
+$ rsync -av ../../example/config/.dbwebb-conf.json .
 ```
 
 Filen innehåller följande:
@@ -414,4 +414,4 @@ An Expo user account is required to proceed.
     Cancel
 ```
 
-Välj "Make a new Expo Account" och följ stegen för att skapa ett nytt konto. När du har skapat kontot börjar Expo att bygga appen och skicka den till Expo's webbplats. Efter ett tag ska du få en länk i terminalen och du kan gå till den länken. Där syns en QR-kod och en länk. Kopiera länken och klistra in länken i `dbwebb-conf.json` under `expo`-attributet. Se till att göra ytterligare en `commit` i ditt repo och en `push` till ditt GitHub repo så `dbwebb-conf.json` laddas upp där.
+Välj "Make a new Expo Account" och följ stegen för att skapa ett nytt konto. När du har skapat kontot börjar Expo att bygga appen och skicka den till Expo's webbplats. Efter ett tag ska du få en länk i terminalen och du kan gå till den länken. Där syns en QR-kod och en länk. Kopiera länken och klistra in länken i `.dbwebb-conf.json` under `expo`-attributet. Se till att göra ytterligare en `commit` i ditt repo och en `push` till ditt GitHub repo så `.dbwebb-conf.json` laddas upp där.
