@@ -300,11 +300,12 @@ Vi har i tidigare kurser sett hur vi kan hämta data med hjälp av [Fetch API](h
 
 ```javascript
 fetch("https://lager.emilfolino.se/v2/products?api_key=[YOUR_API_KEY]")
-.then(function (response) {
-    return response.json();
-}).then(function(result) {
-
-});
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function(result) {
+        // result.data innehåller produkterna kopplat till din API-nyckel
+    });
 ```
 
 I exemplet ovan hämtar vi data från den URL som vi har skrivit in. Vi får tillbaka ett svar från servern och vi gör om det till JSON med hjälp av ett Promise. I första `.then()` används funktionen `response.json()` för att returnera JSON. I nästa `.then()` har vi sedan JSON data tillgängligt i `result` variabeln.
@@ -358,7 +359,7 @@ Den inre delen av `useEffect` känner vi igen sen ovan. Den stora skillnaden är
       .then(result => setProducts(result.data));
 ```
 
-Jag har bytt ut URL'n från det tidigare kodexemplet mot användandet av en konfig fil `config` genom "template literals". `config` är en JSON fil som jag har lagt i katalogen config. Jag importerar den med `import config from "../config/config.json";` och filen innehåller:
+Jag har bytt ut URL'n från det tidigare kodexemplet mot användandet av en konfig fil `config` genom "[template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)". `config` är en JSON fil som jag har lagt i katalogen config. Jag importerar den med `import config from "../config/config.json";` och filen innehåller:
 
 ```json
 {
@@ -380,6 +381,24 @@ Vi kan börja med `git status` för att se vilka ändringar som gjorts i repot. 
 
 Nu är det dags att skapa ett GitHub "remote repository" enligt [Skapa GitHub repo](https://dbwebb.se/guide/git/skapa-github-repo). Jag hade rekommenderat "lager" som namn för repot på GitHub. Efter att du har skapat ett tomt repo på GitHub kopplar du ihop ditt lokala repo med det på GitHub enligt [Koppla lokalt till remote](https://dbwebb.se/guide/git/koppla-git-github).
 
+För att möjliggöra testning och rättning i denna lite annorlunda utvecklingsmiljö behöver vi ytterligare en fil i vårt repo. I kursrepot finns en förberett konfigurationsfil som vi kopierar till vår lager katalog.
+
+```shell
+# Stå i me/lager
+$ rsync -av ../../example/config/dbwebb-conf.json .
+```
+
+Filen innehåller följande:
+
+```json
+{
+    "expo": "",
+    "github": "https://github.com/dbwebb-se/webapp-v4.git"
+}
+```
+
+Ändra så att GitHub länken är till ditt repo du skapade ovan.
+
 
 
 expo publish {#publish}
@@ -395,4 +414,4 @@ An Expo user account is required to proceed.
     Cancel
 ```
 
-Välj "Make a new Expo Account" och följ stegen för att skapa ett nytt konto. När du har skapat kontot börjar Expo att bygga appen och skicka den till Expo's webbplats. Efter ett tag ska du få en länk i terminalen och du kan gå till den länken. Där syns en QR-kod och en länk. Kopiera länken och skapa filen `expo.txt` i roten på ditt repo, klistra in länken i den filen och inget annat innehåll. Se till att göra ytterligare en `commit` i ditt repo och en `push` till ditt GitHub repo så `expo.txt` laddas upp där.
+Välj "Make a new Expo Account" och följ stegen för att skapa ett nytt konto. När du har skapat kontot börjar Expo att bygga appen och skicka den till Expo's webbplats. Efter ett tag ska du få en länk i terminalen och du kan gå till den länken. Där syns en QR-kod och en länk. Kopiera länken och klistra in länken i `dbwebb-conf.json` under `expo`-attributet. Se till att göra ytterligare en `commit` i ditt repo och en `push` till ditt GitHub repo så `dbwebb-conf.json` laddas upp där.
