@@ -10,6 +10,10 @@ Detta kursmoment avslutar och examinerar kursen.
 
 Vi ska i projektet fortsätta utveckla vår befintliga applikation, men vi ska dessutom kolla på hur vi kan använda oss av Azure molnets AI och ML resurser.
 
+![Projekt skiss](image/moln/projekt-skiss.jpg)
+
+
+
 <!--more-->
 
 
