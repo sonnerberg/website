@@ -123,7 +123,7 @@ Se till att din kod validerar.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb test kmom10
+dbwebb test kmom10 # --extra för att testa krav 5
 dbwebb publish kmom10
 ```
 
