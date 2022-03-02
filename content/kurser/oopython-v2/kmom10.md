@@ -78,7 +78,7 @@ När man exekverar spellchecker.py ska ett SpellChecker objekt skapas som läser
 
 1. Skriv ut alla ord som finns i ordlistan, i bokstavsordning. Skriv ut ett ord per rad. Ett tips, för att göra denna metoden testbar kan ni skapa en som letar upp alla orden, lägger dem i en lista och returnerar listan. Sen låter ni en annan metod skriva ut orden.
 
-1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska `SearchMiss` lyftas som error. Det ska inte krascha programmet! Det räcker inte med att bara avmarkera noder när du tar bort ett ord. Om noderna i ordet inte används till ett annat ord ska du ta bort dem från datastrukturen.
+1. Ta bort ett ord, programmet ska be användaren om ett ord som input och ta bort bort det ordet från Trien. Om ordet inte finns ska `SearchMiss` lyftas som error och skriv ut `"word is missing"`. Det ska inte krascha programmet! Det räcker inte med att bara avmarkera noder när du tar bort ett ord. Om noderna i ordet inte används till ett annat ord ska du ta bort dem från datastrukturen.
 
 1. Exit
 
