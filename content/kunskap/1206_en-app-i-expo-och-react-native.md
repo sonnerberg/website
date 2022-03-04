@@ -52,7 +52,70 @@ I meny har vi möjligheten att välja `Connection` mellan Tunnel, LAN eller Loca
 
 Nu ska det vara möjligt att öppna appen med hjälp av QR-koden och Expo Go appen som du installerade som en del av labbmiljön. Om du har en iOS enhet använder du kamera appen för att använda QR-koden. På Android går det direkt i Expo Go appen.
 
-Efter nerladdning av appen till telefonen ska det nu vara möjligt att se hälsningen "Open up App.tsx to start working on your app!". Så låt oss göra det. `App.tsx` är en TypeScript fil och utgångspunkten för vår app.
+Efter nerladdning av appen till telefonen ska det nu vara möjligt att se hälsningen "Open up App.tsx to start working on your app!".
+
+
+
+Test {#tests}
+--------------------------------------
+
+Vi ska senare i kursen använda os av test-ramverket Jest för att säkerställa att vår applikation gör det den ska. Samma test ramverk används för rättning av applikationen igenom hela kursen. För att det ska fungera behöver vi installera några få paket till och lägga till en rad i `package.json`.
+
+Vi börjar med paketen:
+
+```shell
+$ expo install jest-expo jest
+```
+
+Dessutom behövs en "test renderer" kopplat till React. Vi använder oss av senaste versionen (17) av React, men i detta fallet är det viktigt att paketet `react-test-renderer` är samma som React. Därför skriver vi ut innehållet av `package.json` med hjälp `cat package.json`. Här letar vi reda på `dependencies` delen av `package.json` och tar reda på React versionen. När jag installerar ser det ut på följande sätt.
+
+```json
+// package.json
+"dependencies": {
+  "expo": "~44.0.0",
+  "expo-status-bar": "~1.2.0",
+  "jest": "^26.6.3",
+  "jest-expo": "^44.0.1",
+  "react": "17.0.1",
+  "react-dom": "17.0.1",
+  "react-native": "0.64.3",
+  "react-native-web": "0.17.1"
+},
+```
+
+Vi vill alltså installera version 17.0.1 av `react-test-renderer` vilket vi gör med följande kommando. Har du en annan version av React i din `package.json` installerar du motsvarande version av `react-test-renderer`.
+
+```shell
+$ npm i react-test-renderer@17.0.1 --save-dev
+```
+
+Vi lägger sedan till ett `test`-script under `scripts`-delen i `package.json`, som nu ser ut som nedan. Precis efter `scripts`-delen lägger vi till en `jest`-del.
+
+```json
+// package.json
+"scripts": {
+  "start": "expo start",
+  "android": "expo start --android",
+  "ios": "expo start --ios",
+  "web": "expo start --web",
+  "eject": "expo eject",
+  "test": "jest"
+},
+"jest": {
+  "preset": "jest-expo"
+},
+```
+
+Vi bör nu kunna köra kommandot `npm test` i terminalen och får då upp ett meddelande om att vi inte har några test. Det tar vi som sagt senare i kursen.
+
+
+
+Ändra i appen {#changes}
+--------------------------------------
+
+Nu så bör allt vara på plats, låt oss börja ändra i appen.
+
+`App.tsx` är en TypeScript fil och utgångspunkten för vår app.
 
 ```javascript
 import { StatusBar } from 'expo-status-bar';
@@ -415,3 +478,10 @@ An Expo user account is required to proceed.
 ```
 
 Välj "Make a new Expo Account" och följ stegen för att skapa ett nytt konto. När du har skapat kontot börjar Expo att bygga appen och skicka den till Expo's webbplats. Efter ett tag ska du få en länk i terminalen och du kan gå till den länken. Där syns en QR-kod och en länk. Kopiera länken och klistra in länken i `.dbwebb-conf.json` under `expo`-attributet. Se till att göra ytterligare en `commit` i ditt repo och en `push` till ditt GitHub repo så `.dbwebb-conf.json` laddas upp där.
+
+
+
+Avslutningsvis {#theend}
+--------------------------------------
+
+Vi har i denna artikel tittat på hur vi med hjälp av Expo, React Native och React kan skapa en app för mobiltelefonen. Vi har tittat på komponenter och hur vi kan använda State för att hantera vår data och Effect för att hantera hämtning av data och andra sido-effekter.
