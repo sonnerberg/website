@@ -4,7 +4,7 @@ category: javascript
 revision:
   "2022-02-16": (A, efo) Första utgåvan i samband med kursen webapp v4.
 ...
-Lager appen del 1
+Lager appen del 1 (v2)
 ==================================
 
 [FIGURE src=image/webapp/warehouse.jpg?w=c5 class="right"]
