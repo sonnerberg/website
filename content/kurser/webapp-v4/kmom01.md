@@ -67,6 +67,8 @@ Läs artiklarna [Core Components and Native Components](https://reactnative.dev/
 
 Läs dessutom [Walkthrough](https://docs.expo.dev/introduction/walkthrough/) för att utforska flödet för utveckling och driftsättning i Expo.
 
+För att förstå ett viktigt begrepp inom JavaScript-ramverk komponenter är artikeln [React Fundamentals](https://reactnative.dev/docs/intro-react) en bra start.
+
 
 
 ### Video  {#video}

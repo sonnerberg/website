@@ -46,3 +46,14 @@ Vi behöver ett sista paket för att kunna skapa vår tab-navigation så vi inst
 ```shell
 $ npm install @react-navigation/bottom-tabs
 ```
+
+Vi börjar med att titta på hur strukturen för en tab-navigation ser ut och sen kommer vi anpassa vår applikation från kmom01. I kodexemplet nedan ser vi ett exempel på tab-navigation med två olika sidor, som är kopplat till var sin komponent.
+
+```javascript
+<NavigationContainer>
+  <Tab.Navigator>
+    <Tab.Screen name="Home" component={Home} />
+    <Tab.Screen name="Settings" component={Settings} />
+  </Tab.Navigator>
+</NavigationContainer>
+```

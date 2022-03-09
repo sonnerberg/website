@@ -149,7 +149,7 @@ Alla delar av appar vi gör i React Native är uppbyggda av olika sorters Views.
 Komponenter {#komponenter}
 --------------------------------------
 
-Komponenter är ett oerhört viktigt begrepp inom JavaScript-ramverk som till exempel Angular, React och Vue. Tanken med en komponent är att det är oberoende och återanvändbara delar av vår kod. För att förstå komponenter är artikeln [React Fundamentals](https://reactnative.dev/docs/intro-react).
+Komponenter är ett oerhört viktigt begrepp inom JavaScript-ramverk som till exempel Angular, React och Vue. Tanken med en komponent är att det är oberoende och återanvändbara delar av vår kod. För att förstå komponenter är artikeln [React Fundamentals](https://reactnative.dev/docs/intro-react) en bra start.
 
 I kodexemplet ovan (och inklistrat nedan med) ser vi ett första exempel på en komponent `App`. `App` i sig är en funktion som vi exporterar som `default export` från filen `App.tsx`. Från funktionen returnerar vi något som ser ut som upphottat HTML. Det kallas JSX och är en utökning av JavaScript-syntaxen, så det är mer än bara ett `template` language. För att lära oss mer om bakgrunden och grunderna i JSX rekommenderar jag artikeln [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) från Reacts dokumentation. För den som vill gå på djupet kan artikeln [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) läsas efteråt.
 
@@ -209,11 +209,20 @@ const styles = StyleSheet.create({
 
 På vissa nya telefonen kommer vårt innehåll nu gå upp i den såkallade notch i toppen av telefonen. Det vill vi kanske inte och därför kan vi utanför vår root `View`-komponent lägga en `SafeAreaView`-komponent, som visar upp våra element inom ett område på telefonen som är nedanför notchen.
 
+För att detta ska fungera på både iOS och Android behöver vi installera ytterligare ett paket.
+
+```shell
+$ expo install react-native-safe-area-context
+```
+
+Vi hämtar sedan
+
 Vår kod ser alltså nu ut på detta sättet.
 
 ```javascript
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import warehouse from './assets/warehouse.jpg';
 
 export default function App() {
@@ -438,11 +447,21 @@ Vi bör nu kunna ladda om appen och se att en lista på produkter laddas.
 Git {#git}
 --------------------------------------
 
-Expo skapar ett Git-repo för oss per automatik och har med en `.gitignore` som tar bort de filerna vi inte vill ha som en del av repot. Vi utnyttjar därför repot som redan skapats.
+Expo har med en `.gitignore` som tar bort de filerna vi inte vill ha som en del av repot. Vi behöver därför initiera ett git repo i vår `me/lager` katalog.
 
-Vi kan börja med `git status` för att se vilka ändringar som gjorts i repot. Vi kan sedan lägga till ändringar med hjälp av `git add`. Denna första gången kan vi lägga till alla ändringar som gjorts med hjälp av `git add .` om vi står i roten av repot. Vi kan senare i projektet göra det individuellt för varje fil. Vi gör sen en `git commit` för att versionshantera filerna och förbereda för att skicka de till vårt "remote repository" på GitHub. För att lägga till ett meddelande direkt på kommandoraden använder vi oss av `git commit -m "Finished exercises for kmom01"`.
+```shell
+# stå i me/lager
+$ git init
+```
+
+Vi kan nu testa `git status` för att se vilka ändringar som gjorts i repot. Vi kan sedan lägga till ändringar med hjälp av `git add`. Denna första gången kan vi lägga till alla ändringar som gjorts med hjälp av `git add .` om vi står i roten av repot. Vi kan senare i projektet göra det individuellt för varje fil. Vi gör sen en `git commit` för att versionshantera filerna och förbereda för att skicka de till vårt "remote repository" på GitHub. För att lägga till ett meddelande direkt på kommandoraden använder vi oss av `git commit -m "Finished exercises for kmom01"`.
 
 Nu är det dags att skapa ett GitHub "remote repository" enligt [Skapa GitHub repo](https://dbwebb.se/guide/git/skapa-github-repo). Jag hade rekommenderat "lager" som namn för repot på GitHub. Efter att du har skapat ett tomt repo på GitHub kopplar du ihop ditt lokala repo med det på GitHub enligt [Koppla lokalt till remote](https://dbwebb.se/guide/git/koppla-git-github).
+
+
+
+Test-miljö {#testing}
+--------------------------------------
 
 För att möjliggöra testning och rättning i denna lite annorlunda utvecklingsmiljö behöver vi ytterligare en fil i vårt repo. I kursrepot finns en förberett konfigurationsfil som vi kopierar till vår lager katalog.
 
