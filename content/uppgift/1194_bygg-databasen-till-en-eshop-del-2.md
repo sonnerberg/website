@@ -8,6 +8,7 @@ category:
     - er-modellering
     - kursen databas
 revision:
+    "2022-03-09": "(H, mos) Man måste inte kunna beställa fler produkter än det finns på lagret."
     "2022-02-27": "(G, mos) Genomgången inför v2."
     "2019-03-20": "(F, mos) Tips om order_status via foruminlägg."
     "2019-03-20": "(E, mos) Tips om TIMESTAMPS går nu till artikel."
@@ -101,7 +102,7 @@ I webbklienten:
 1. Kolla översikt av kunder.
 1. Skapa en order till en kund.
 1. Beställ ett par befintliga/nyskapade produkter.
-1. Beställ fler än det finns i lagret, av någon produkt.
+1. Försök beställ fler än det finns i lagret, av någon produkt (och se om det går eller inte).
 1. Beställ ordern.
 1. Kolla orderns status.
 1. Se en översikt av alla ordrar.
