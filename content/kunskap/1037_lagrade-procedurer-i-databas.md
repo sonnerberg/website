@@ -6,6 +6,7 @@ category:
     - sql
     - kurs databas
 revision:
+    "2022-03-09": "(F, mos) Delvis länka till manual i MariaDb om comp stat."
     "2019-02-11": "(E, mos) Genomgången, fler exempel och ny kodstandard."
     "2018-01-11": "(D, mos) Nytt stycke SHOW WARNINGS."
     "2018-01-09": "(C, mos) Genomgången inför kursen databas."
@@ -32,7 +33,7 @@ Förutsättning {#pre}
 
 Artiklen bygger löst vidare på det exemplet som beskrevs i artikeln "[Transaktioner i databas](kunskap/transaktioner-i-databas)".
 
-Exemplet visar hur du jobbar med lagrade procedurer i MySQL.
+Exemplet visar hur du jobbar med lagrade procedurer i MySQL (och MariaDB).
 
 SQLite stödjer inte lagrade procedurer.
 
@@ -43,7 +44,7 @@ SQLite stödjer inte lagrade procedurer.
 Att skriva små program i databasen {#prog}
 --------------------------------------
 
-Databasen MySQL stödjer något de kallar [compound statements i MySQL](https://dev.mysql.com/doc/refman/8.0/en/begin-end.html) som är det "programmeringsspråk" som används för att skriva lagrade procedurer och liknande konstruktioner (egen-definierade funktioner och trigger). Compound statements kan liknas med traditionell programmeringskod med variabler och loopar som kan interagera med ren SQL-kod.
+Databasen MariaDB stödjer något de kallar [Compound Statements](https://mariadb.com/kb/en/programmatic-compound-statements/) som är det "programmeringsspråk" som används för att skriva lagrade procedurer och liknande konstruktioner (egen-definierade funktioner och trigger). Compound statements kan liknas med traditionell programmeringskod med variabler och loopar som kan interagera med ren SQL-kod.
 
 Detta ger oss en möjlighet att skriva små program i databasen. Dessa program lagras i databasen, de blir till en del av själva databasen.
 
@@ -59,7 +60,7 @@ Vi tar samma exempel vi använde i "[Transaktioner i databas](kunskap/transaktio
 ```sql
 --
 -- Example transactions
--- 
+--
 DROP TABLE IF EXISTS account;
 CREATE TABLE account
 (
@@ -99,18 +100,18 @@ Adam skall ge 1.5 pengar till Eva.
 --
 START TRANSACTION;
 
-UPDATE account 
+UPDATE account
 SET
     balance = balance + 1.5
 WHERE
     id = '2222';
 
-UPDATE account 
+UPDATE account
 SET
     balance = balance - 1.5
 WHERE
     id = '1111';
-    
+
 COMMIT;
 
 SELECT * FROM account;
@@ -150,7 +151,7 @@ DROP PROCEDURE IF EXISTS move_money;
 DELIMITER ;;
 
 CREATE PROCEDURE move_money(
-    -- Here comes the definition of the parameters 
+    -- Here comes the definition of the parameters
 )
     -- Here comes SQL and compund statements
 ;;
@@ -236,18 +237,18 @@ CREATE PROCEDURE move_money(
 BEGIN
     START TRANSACTION;
 
-    UPDATE account 
+    UPDATE account
     SET
         balance = balance + amount
     WHERE
         id = to_account;
 
-    UPDATE account 
+    UPDATE account
     SET
         balance = balance - amount
     WHERE
         id = from_account;
-        
+
     COMMIT;
 
     SELECT * FROM account;
@@ -314,13 +315,13 @@ BEGIN
         ROLLBACK;
         SELECT 'Amount on the account is not enough to make transaction.' AS message;
     ELSE
-        UPDATE account 
+        UPDATE account
             SET
                 balance = balance + amount
             WHERE
                 id = to_account;
 
-        UPDATE account 
+        UPDATE account
             SET
                 balance = balance - amount
             WHERE
