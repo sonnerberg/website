@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2022-03-09": "(P, mos) Ny video för 2022 och v2."
     "2022-03-09": "(O, mos) Genomgången inför v2 och uppdaterade projektkrav."
     "2021-03-29": "(N, mos) Förtydliga självtest på krav 1 projektet."
     "2021-03-10": "(M, mos) Lade till genomgångsvideo."
@@ -59,11 +60,9 @@ Förtydliga minsta möjliga krav för att klara av tentan.
 Inspelad genomgång {#flas}
 --------------------------------------------------------------------
 
-Det finns en inspelad genomgång som går igenom hur kmom10 och examinationen är upplagd. Se den gärna som ett komplement till att läsa informationen nedan.
+Det finns en inspelad genomgång som går igenom hur kmom10 och examinationen är upplagd. Se den som ett komplement till att läsa informationen i detta dokumentet.
 
-__(Inspelningen skall uppdateras till 2022, men innehållet är grovt det samma, skillnaden är främst de olika kraven för projektet)__
-
-[YOUTUBE src="I2f-tzp3k0Q" width=700 caption="Genomgång av kmom10 - examination med programmeringstenta, projekt och redovisning (med Mikael) (17 min)."]
+[YOUTUBE src="RC11mh4HRKc" width=700 caption="Genomgång av examinerande moment med programmeringstenta, projekt och redovisning (18 min)."]
 
 
 
