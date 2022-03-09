@@ -7,6 +7,7 @@ views:
             src: "image/snapvt18/bank2-account-actions.png?w=1100&h=300&cf&c=600,270,0,0&f=edgedetect"
 author: mos
 revision:
+    "2022-03-09": "(O, mos) Genomgången inför v2 och uppdaterade projektkrav."
     "2021-03-29": "(N, mos) Förtydliga självtest på krav 1 projektet."
     "2021-03-10": "(M, mos) Lade till genomgångsvideo."
     "2021-03-10": "(L, mos) Uppdaterad med tillfällen för kursrunda vt2021."
@@ -25,14 +26,6 @@ revision:
 Kmom10: Examination och redovisning
 ====================================
 
-[WARNING]
-
-**ARBETE PÅGÅR - DU KAN INTE PÅBÖRJA DETTA KMOM**
-
-Detta kursmoment är inte uppdaterat inför VT22.
-
-[/WARNING]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Alla delar i detta kursmoment skall utföras individuellt och självständigt. Respektera det.
@@ -43,13 +36,11 @@ Upplägget är enligt följande:
 * [Projekt "eshop3" (optionell)](#projekt)
 * [Redovisning (obligatorisk)](#redovisning)
 
-Totalt omfattar kursmoment 07/10 i storleksordningen 20--40 studietimmar.
+Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 
 <!--
 
-Förtydliga kraven så att det inte känns som "man har redan löst dem".
-
-Men, använd optionella krav i 05/06 och låt dem återfinnas i projektet.
+Använd optionella krav i 05/06 och låt dem återfinnas i projektet. Kan streamlinas mer.
 
 Kanske enbart fokusera på faktureringen i projektet. Kanske fokusera på att göra nåt snyggare i webbklienten.
 
@@ -62,31 +53,6 @@ Förtydliga minsta möjliga krav för att klara av tentan.
 * Lagrade procedurer
 * LEFT/RIGHT JOIN
 
-Kanske även förtydliga att det krävs mer för att nå högre betyg,
-
-Förtydliga också att man inte kan göra tentan om man inte klarat/lämnat in kmom05.
-
-
----
-1. I webbklienten, gör så att man kan klicka på en kategori och sedan visas de produkter som finns i kategorin.
-
-1. I webbklienten, gör så att man kan koppla en produkt till en eller flera produktkategorier (överkurs).
-
-
----
-Skapa sida som visar alla kunder (likt produktöversikten) (eshop2 gör CRUD kunder).
-
-(ev extra) radera produkt med soft delete (kan återkomma i projektet)
-
-(ev extra) Klicka på kategori och se alla produkter som är av den kategorin?
-
----
-
-1. Faktureringsmotor?
-
-1. Exportera data från webben till csv?
-
-
 -->
 
 
@@ -94,6 +60,8 @@ Inspelad genomgång {#flas}
 --------------------------------------------------------------------
 
 Det finns en inspelad genomgång som går igenom hur kmom10 och examinationen är upplagd. Se den gärna som ett komplement till att läsa informationen nedan.
+
+__(Inspelningen skall uppdateras till 2022, men innehållet är grovt det samma, skillnaden är främst de olika kraven för projektet)__
 
 [YOUTUBE src="I2f-tzp3k0Q" width=700 caption="Genomgång av kmom10 - examination med programmeringstenta, projekt och redovisning (med Mikael) (17 min)."]
 
@@ -106,7 +74,7 @@ Tentamen rättas och bedöms när den lämnats in.
 
 När du lämnar in redovisningstexten slutbedöms din insats på kursen och du får ett slutbetyg på kursen.
 
-Inlämning av projektet måste ske samtidigt som du lämnar in redovisningstexten, annars kommer projektet ej att bedömas.
+Inlämning av projektet måste ske samtidigt som du lämnar in redovisningstexten. Redovisnignstexten är det sista du lämnar in i kursen och det "stänger" kursen och ger dig slutbetyget.
 
 Läs hur betyget sätts i [grunder för bedömning och betygsättning (tentamen + projekt)](kurser/faq/bedomning-och-betygsattning-tentamen-och-projekt).
 
@@ -117,7 +85,9 @@ Tentamen "programmeringstenta" (obligatorisk) {#tentamen}
 
 Du måste nå ett godkänt betyg på tentamen. Om du missar tentamen så kan du göra omtentamen eller resttentamen vid senare tillfälle alternativt omregistrera dig på nästa kurstillfälle.
 
-Du kan få maximalt 30 poäng om du löser alla uppgifter på tentamen. Du behöver minst 60% för att bli godkänd.
+Du måste gjort minst kmom05 för att göra tentan. I tentan finns krav på lösningar som använder tekniker som introduceras i kmom05. Utan dem kan man inte klara godkänt på tentan.
+
+Du kan få maximalt 30 poäng om du löser alla uppgifter på tentamen. Du behöver minst 60% (18 poäng) för att bli godkänd.
 
 Med en godkänd tentamen kan du nå ett slutbetyg om E-C.
 
@@ -125,11 +95,11 @@ Med en godkänd tentamen kan du nå ett slutbetyg om E-C.
 
 ### Planerade tentamen {#planerade}
 
-Följande tentamen är planerade ([se även kursens planering](./../#planering)).
+Följande tentamen är planerade för kursomgången våren 2022.
 
-* Tenta (kmom10/try1): Onsdagen den 24:e mars, 2021.
-* Omtenta (kmom10/try2): Fredagen den 28:e maj, 2021.
-* Resttenta (kmom10/try3): Fredagen den 27:e augusti, 2021.
+* Tenta (kmom10/try1): Torsdagen den 24:e mars, 2022.
+* Omtenta (kmom10/try2): Fredagen den 27:e maj, 2022.
+* Resttenta (kmom10/try3): Fredagen den 26:e augusti, 2022.
 
 Tentamen är distans och online. Ingen anmälan krävs.
 
@@ -137,7 +107,7 @@ Tentamen är distans och online. Ingen anmälan krävs.
 För campus mellan 9-14 i sal H430/H429. För distans 9-24. Ingen anmälan krävs.
 -->
 
-Nästkommande tillfällen för examination sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2022.
+Nästkommande tillfällen för examination sker i samband med kurstillfället som är planerat till läsperiod 3, vårterminen 2023. Du kan omregistrera dig på det kurstillfället för att delta.
 
 Du kan även se planeringen för tentamen via `dbwebb exam ls` i kursrepot.
 
@@ -171,13 +141,11 @@ Du kan träna på tidigare tentamen för att få övning och en känsla av vilke
 
 Det finns ingen garanti för att nya tentamen kommer att följa exakt samma upplägg som tidigare tentamen. Oavsett det så bedömer läraren att de tidigare tentamen som finns tillgängliga nedan är relevanta övningsobjekt.
 
-Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest relevanta.
+Följande gamla tentor finns tillgängliga.
 
-<!--
 * 2021
-    * Hund
-    * Vaccin
--->
+    * [Hund](./tentamen/hund)
+    * [Vaccin](./tentamen/vaccin)
 
 * 2020
     * [Vapen](./tentamen/vapen)
@@ -188,6 +156,7 @@ Följande gamla tentor finns tillgängliga, de senaste tentorna är ofta mest re
     * [Bibliotek](./tentamen/bibliotek)
     * [Säkerhetspolisens (SÄPO)](./tentamen/sapo)
 
+<!--
 Här följer en del äldre tentor från 2017-18. De är relevanta som övningstentor, även om de delvis skiljer sig i det upplägg som används från 2019 och framåt. Observera att poängfördelningen är olika för nedan tentor.
 
 * [En japansk smakresa, 31 augusti 2018](./tentamen/en-japansk-smakresa)
@@ -197,9 +166,11 @@ Här följer en del äldre tentor från 2017-18. De är relevanta som övningste
 * [Hotel Paradise, 5 maj 2017](kurser/dbjs-v1/examination/paradise)
 * [Mannsmandel, 12 april 2017](kurser/dbjs-v1/examination/mannsmandel)
 
-Du kan checka ut en delmängd av ovan tentamen via `dbwebb exam checkout prep`, de sparas då i katalogen `me/kmom10/prep` och du kan använda `dbwebb exam` som vid en vanlig tentamen.
+-->
 
-Förbered dig till tentorna genom att läsa om [hur du checkar ut och lämnar in din tentamen med `dbwebb exam`](./tentamen). Pröva sedan att göra en eller flera övningstentor för att se vad som väntar dig.
+Du kan checka ut övningstentor via `dbwebb exam checkout prep`, de sparas då i katalogen `me/kmom10/prep` och du kan använda `dbwebb exam` som vid en vanlig tentamen.
+
+Förbered dig till tentorna genom att läsa om [hur du checkar ut och lämnar in din tentamen med `dbwebb exam`](./tentamen). Pröva sedan att göra en eller flera övningstentor för att se vad som väntar dig. Rekommendationen är att göra minst två övningstentor.
 
 
 
@@ -208,42 +179,27 @@ Projekt "eshop3" (optionell) {#projekt}
 
 Projektet är optionellt och kan hjälpa dig att nå ett högre betyg (D-A) på kursen.
 
-Projektet skall lösas individuellt och självständigt, oavsett om du tidigare jobbat i grupp när du löst `eshop1` och `eshop2`.
+Projektet skall lösas individuellt och självständigt, oavsett om du tidigare jobbat i grupp när du löst databasmodelleringen, `eshop1` och/eller `eshop2`.
 
 Varje krav är värt maximalt 10 poäng om kravet är löst till fullo utan brister. Totalt omfattar projektet maximalt 30 poäng.
 
 Spara alla filer i `me/kmom10/eshop3`.
 
-Du måste lösa krav 1 innan du kan lösa krav2 eller 3.
+Du måste lösa krav 1 innan du kan lösa krav 2. Du måste lösa krav 2 innan du kan lösa krav 3.
 
 
 
 ### Krav 1 {#k1}
 
-Följande krav måste vara uppfyllda.
-
 Ditt eshop3 skall uppfylla de krav som finns för ehop1 och eshop2.
 
-Du har följande filer med relevant innehåll:
+I webbklienten skall man kunna lägga till en ny produkt och koppla den till en eller flera kategorier.
 
-* `package.json`
-* `config/db/eshop.json`
-* `sql/eshop/{backup,setup,ddl,insert}.sql`
-* `{index,cli}.js`
+Samtliga produkter skall synas i översikten och det skall synas om de är kopplade till kategorier.
 
-Webbklienten innehåller en sida `eshop/about` som visar namnen på de som jobbat på projektet i eshop1 och eshop2 samt vem som utfört uppgiften i eshop3. Terminalklienten har kommandot `about` som visar samma information.
+I webbklienten kan man visa vad som finns på lagret och respektive lagerhylla.
 
-I webbklienten skall `eshop/log` visa de 20 senaste händelserna i loggtabellen. Det skall finnas ett formulärelement där användaren kan skriva in en söksträng som filtrerar vilka rader som visas i utskriften.
-
-I terminalklienten skall kommandot `logsearch <str>` ge samma svar som ovan.
-
-I webbklienten, gör så att man kan klicka på en kategori och sedan visas de produkter som finns i kategorin.
-
-I webbklienten, gör så att man kan koppla en produkt till en eller flera produktkategorier.
-
-<!--
-Se till att du kan lägga till och ta bort saker från lagret i menyklienten.
--->
+I webbklienten skall man kunna lägga till en ny produkt på en lagerhylla. Man skall sedan kunna uppdatera antalet produkter som ligger på lagerhyllan.
 
 
 
@@ -253,20 +209,18 @@ Följande är förslag till hur du själv kan testa delar av kravet.
 
 Lägg till och hantera en produkt i webbklienten.
 
-1. Lägg till, redigera en produkt.
-2. Lägg produkt i flera kategorier.
-3. Se produktöversikten och produkten skall synas med sina kategorier.
-4. Visa kategorier, klicka på en kategori, produkterna skall synas.
-5. Kollas så att `eshop/about` fungerar.
-6. Kollas så att `eshop/log` fungerar.
+1. Lägg till och redigera detaljer för en produkt.
+1. Se produktöversikten och produkten skall visas.
+1. Lägg produkt i en kategori.
+1. Se produktöversikten och produkten skall visas med detaljer om kategori.
+1. Lägg produkt i flera kategori.
+1. Se produktöversikten och produkten skall visas med detaljer om kategorier.
 
-I terminalklienten.
+Hantera lagret från webbklienten.
 
-1. Lägg till den nyskapade produkten på ett par hyllor i lagret.
-2. Se att produkten finns i lagret på rätt hyllor med rätt antal.
-3. Plocka bort ett visst antal av produkten från någon av lagerhyllorna.
-4. Kolla så att `about` fungerar.
-5. Kolla så att `logsearch <str>` fungerar.
+1. Visa innehållet i lagret på de olika lagerhyllorna.
+1. Lägg till en ny produkt på en lagerhylla med ett visst antal.
+1. Uppdatera antalet produkter som ligger på lagerhyllan.
 
 
 
@@ -274,13 +228,17 @@ I terminalklienten.
 
 I webbklienten kan man hantera sin order och dess orderrader och "beställa" sin order.
 
-Det skall finnas en webbsida som visar en komplett order, inklusive orderstatus, kunddetaljer och orderrader.
+Det skall finnas en webbsida som visar en komplett order, inklusive orderstatus, kunddetaljer och orderrader. Visa även en summa som säger antalet orderrader.
 
-I terminalklienten kan man skapa en plocklistan som visar att respektive beställd produkt finns i lagret.
+I terminalklienten kan man skapa en plocklista som visar att respektive beställd produkt finns i lagret (eller inte).
 
 Gör en webbsida som visar plocklistan för ordern. Visa tydligt om det finns tillräckligt med produkter på lagret och vilka hyllor de finns på.
 
 I terminalklienten kan man skicka en order, ange att den är skickad. När ordern skeppas iväg så minskas innehållet i lagret med de produkter som skickas till kund.
+
+Gör så att man kan skicka ordern från webbklienten. Det kan vara lämpligt att "skicka/skeppa ordern" när plocklistan visas.
+
+Lagret skall inte kunna bli negativt när en order/plocklista "skickas/skeppas".
 
 
 
@@ -288,11 +246,11 @@ I terminalklienten kan man skicka en order, ange att den är skickad. När order
 
 Följande är förslag till hur du själv kan testa delar av kravet.
 
-1. Skapa en order, lägg till orderrader (med din nya produkt, och befintliga produkter).
-2. Visa översyn av order inklusive information om orderstatus, orderrader och kunddetaljer på en webbsida.
+1. Skapa en order, lägg till orderrader (med nya/befintliga produkter).
+2. Visa översyn av order i webbklienten.
 3. Visa/skapa en plocklista i terminalklienten.
 4. Visa samma plocklista i webbklienten och se tydligt om det finns tillräckligt med produkter i lagret, för varje orderrad.
-5. Ändra status på ordern till skickad, via terminalklienten.
+5. Ändra status på ordern till skickad, via webbklienten.
 6. Dubbelkolla att lagret har minskat med motsvarande antal produkter.
 
 
@@ -301,7 +259,9 @@ Följande är förslag till hur du själv kan testa delar av kravet.
 
 När en leverans skickas, så genereras automatiskt en faktura som innehåller pris per orderrad och ett totalpris på ordern.
 
-I webbklienten kan man få se alla detaljer om fakturan, dess fakturarader, priset per fakturarad och det summerade priset samt datum då ordern skickades. Man kan också se status på fakturan, om den är betald eller ej.
+Fakturan innehåller bara de delar som kunde skeppas från plocklistan.
+
+I webbklienten kan man få se alla detaljer om fakturan, dess id, alla fakturarader, priset per fakturarad och det summerade priset samt datum då ordern skickades. Man kan också se status på fakturan, om den är betald eller ej.
 
 I terminalklienten finns ett kommando `payed <invoiceid> <date>` där man kan ange en faktura som betald.
 
@@ -311,55 +271,11 @@ I terminalklienten finns ett kommando `payed <invoiceid> <date>` där man kan an
 
 Följande är förslag till hur du själv kan testa delar av kravet.
 
-1. Skapa och skeppa en order.
-2. I webbklienten, kontrollera att fakturan innehåller samma saker som ordern inklusive prisdetaljer och fakturastatus.
+1. Skapa en order och skeppa en plocklista.
+2. I webbklienten, kontrollera att fakturan innehåller rätt detaljer.
 3. I terminalklienten, ange fakturan som betald.
 4. I webbklienten, visa att fakturans status är uppdaterad till "betald".
 
-
-
-
-<!--
-
-Styr upp så redovsiningstexten är separat för projektet och för examinationen samt slutrapporten för hela kursen. Eller hur det nu skall vara. Man måste i texten se hur många poäng som de fick för projektet.
-
-Egentligen borde det finnas ytterligare ett ladokmoment för projektet (kanske).
-
-Använd HAVING i examinationsuppgiften, samt union.
-
--->
-
-<!--
-
-Eventuellt krav till projektet.
-
-* Jobba med kategorierna i webbklienten, lägg till kategorier, koppla produkt till kategorier
-
-* Lös restnoteringar i lagret.
-* Snygg samlad utskrift av order, plocklista, faktura
-* Skapa fakturor
-* Tänk streckkod där lagerpersonal läser av att en produkt flyttas från leverans inkommande till lager och från lager till kundorder för leverans utgående.
-
--->
-
-
-<!--
-
-Svara på följande frågor i redovisningstexten.
-Man kan skriva redovisningstexten innan man utför tentan.
-
-* Nu när kursen närmar sig slutet, hur är din relation till:
-    * SQL, ER, MySQL/MariaDB
-    * JavaScript, Node och Express?
-* Se tillbaka på de kmom du gjort, känner du att du har koll på databas nu, eller känner du att något saknas eller finns något du vill lära dig mer om?
-
--->
-
-<!--
-
-Gör megavalidering som avslutning, påverka betyget.
-
--->
 
 
 Redovisning (obligatorisk) {#redovisning}
