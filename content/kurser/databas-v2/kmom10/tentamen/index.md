@@ -6,6 +6,7 @@ category:
     - tentamen
     - dbwebb exam
 revision:
+    "2022-03-09": "(C, mos) Ny video för 2022 och v2."
     "2020-03-10": "(B, mos) Genomgången och mindre justeringar i text inför våren 2021."
     "2019-03-06": "(A, mos) Omskriven inför våren 2019."
 ...
@@ -19,6 +20,15 @@ Tentamen "programmeringstenta" och dbwebb exam
 Här presenteras en beskrivning hur du checkar ut och lämnar in en tentamen via verktyget `dbwebb exam`.
 
 Inför tentemen bör du förvissa dig om att du har jobbat igenom dokumentet så att du väl känner till hur tentamen fungerar.
+
+
+
+Inspelad genomgång {#flas}
+--------------------------------------------------------------------
+
+Det finns en inspelad genomgång som går igenom hur tentaverktyget `dbwebb exam` fungerar. Se den som ett komplement till att läsa informationen i detta dokumentet.
+
+[YOUTUBE src="C4AvZdV4p44" width=700 caption="Genomgång av tentaverktyget 'dbwebb exam' (15 min)."]
 
 
 
