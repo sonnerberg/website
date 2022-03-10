@@ -4,7 +4,7 @@ category: javascript
 revision:
   "2022-03-07": (A, efo) Första utgåvan inför kursen webapp-v4 VT22.
 ...
-Routing och navigation i React
+Komponenter och struktur i React
 ==================================
 
 Vi ska i denna övning titta på ett sätt att skapa flera olika vyer så vår app kan göra mer än att vara en lagerförteckning.
@@ -120,9 +120,7 @@ Expo har redan varit så snälla att [installera en hel del ikoner](https://docs
 import { Ionicons } from '@expo/vector-icons';
 ```
 
-Vi ska nu titta på koden för att välja ut en ikon per screen i vår applikation. I nedanstående kodexempel använder vi oss av `props`, som är en viktigt beståndsdel i komponenter i React. Vi kommer i övningen [Komponenter och struktur i React](kunskap/komponenter-och-struktur-i-react) titta vidare på komponenter så nu ser vi bara `props` som ett sätt att skicka data ner i komponent-trädet.
-
-`screenOptions` är ett exempel på `props` där vi skickar med data till de underliggande komponenterna. I detta fallet skickar vi med en ikon per route. Vi använder `route.name` för att sätta en ikon för varje route. Sedan returnerar vi en `Ionicons`-komponent för att lägga till i navigationen. Vi sätter även färgen för aktiva och inaktiva ikoner.
+Vi ska nu titta på koden för att välja ut en ikon per screen i vår applikation.
 
 ```javascript
 <Tab.Navigator screenOptions={({ route }) => ({
@@ -148,38 +146,4 @@ Vi ska nu titta på koden för att välja ut en ikon per screen i vår applikati
 </Tab.Navigator>
 ```
 
-Testa att ladda om i Expo appen och nu ser vi att ikonerna är lite snyggare. Men vi kan göra detta ännu bättre och bättre förberedd för framtiden. Vi börjar med att definiera ett objekt med vår ikoner.
-
-```javascript
-const routeIcons = {
-  "Lager": "home",
-  "Plock": "list",
-};
-```
-
-Och sen använder vi oss av detta objekt och `route.name` tillsammans för att tilldela värde till `iconName` variabeln. Vi använder oss av `||` för att tilldela ett värde om nyckeln inte finns i `routeIcons`-objektet. Nu kan vi lägga till nya ikoner genom att lägga till i objektet.
-
-```javascript
-<Tab.Navigator screenOptions={({ route }) => ({
-    tabBarIcon: ({ focused, color, size }) => {
-      let iconName = routeIcons[route.name] || "alert";
-
-      return <Ionicons name={iconName} size={size} color={color} />;
-    },
-    tabBarActiveTintColor: 'tomato',
-    tabBarInactiveTintColor: 'gray',
-  })}
->
-  <Tab.Screen name="Lager" component={Home} />
-  <Tab.Screen name="Plock" component={Pick} />
-</Tab.Navigator>
-```
-
 Om du vill välja andra ikoner i detta kmom eller längre fram i kurser är denna [översikt över alla installerade ikoner](https://icons.expo.fyi/) ett bra ställe att börja. Se till att filtrera på Ionicons då det är de som redan importerats. Går att använda de andra ikoner också, men då måste du importera de biblioteken.
-
-
-
-Avslutningsvis {#theend}
---------------------------------------
-
-Vi har i denna övningen tittat på hur vi kan skapa tab-navigation med ikoner för vår applikation. Vi fortsätter i detta kmomet med att titta vidare på komponenter och hur vi kan använda de för att bygga vidare på vår Lager-App.
