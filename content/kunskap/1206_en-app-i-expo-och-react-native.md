@@ -56,6 +56,13 @@ Efter nerladdning av appen till telefonen ska det nu vara möjligt att se hälsn
 
 
 
+TypeScript {#typescript}
+--------------------------------------
+
+[TypeScript](https://www.typescriptlang.org/) är en utökning av JavaScript där vi i vår utvecklingsmiljö för hjälp med typer. Vi kommer inte i denna övningen titta på TypeScript, men från och med kmom02 och övningen [Komponenter och struktur i React](kunskap/komponenter-och-struktur-react) kommer vi titta på de fördelar som finns med TypeScript.
+
+
+
 Test {#tests}
 --------------------------------------
 

@@ -13,6 +13,8 @@ Vi ska i denna övning titta på ett sätt att skapa flera olika vyer så vår a
 
 <!--more-->
 
+Du kan med fördel göra nedanstående ändringar och förbättringar i din Lager-App och koden kommer utgå från kmom01.
+
 
 
 Navigation {#navigation}
@@ -166,7 +168,7 @@ Och sen använder vi oss av detta objekt och `route.name` tillsammans för att t
 
       return <Ionicons name={iconName} size={size} color={color} />;
     },
-    tabBarActiveTintColor: 'tomato',
+    tabBarActiveTintColor: 'blue',
     tabBarInactiveTintColor: 'gray',
   })}
 >

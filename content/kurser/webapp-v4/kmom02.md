@@ -68,6 +68,8 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Gör övningen "[Routing och navigation i React](kunskap/routing-och-navigation-i-react)".
 
+1. Gör övningen "[Komponenter och struktur i React](kunskap/komponenter-och-struktur-i-react)".
+
 
 
 ### Uppgifter {#uppgifter}
@@ -91,5 +93,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka fördelar ser du med verktyg som Postman, curl och jq?
 * Fick du till en bra struktur i din kod för styling av din app?
-* Valda du flat design eller ej för dina knappar? Varför?
+* Vad är din uppfattning så här långt av TypeScript? Ser du några fördelar?
 * Vilken är din TIL för detta kmom?

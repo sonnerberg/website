@@ -23,10 +23,6 @@ Vi ska i detta kursmomentet ta en titt på hur vi utvecklar appar med hjälp av 
 
 
 
-
-
-
-
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
@@ -74,6 +70,10 @@ För att förstå ett viktigt begrepp inom JavaScript-ramverk komponenter är ar
 ### Video  {#video}
 
 1. Det finns en [videoserie](https://youtube.com/playlist?list=PLKtP9l5q3ce8Akmp6hSW78cDuHHNylpRG) kopplat till kursen, titta på videos som börjar på 0 och 1.
+
+Dessutom är detta en bra introduktion till JavaScript ramverket React:
+
+[YOUTUBE src=Tn6-PIqc4UM width=630 caption="Fireship React in 100 seconds."]
 
 
 
