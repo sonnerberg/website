@@ -1,7 +1,7 @@
 ####[webapp (v4)](kurser/webapp-v4)
 
 * [01: Vår första React Native app](kurser/webapp-v4/kmom01)
-* [02: Mobila begränsningar](kurser/webapp-v4/kmom02)
+* [02:  Struktur, struktur, struktur](kurser/webapp-v4/kmom02)
 * [03: Formulär och CRUD](kurser/webapp-v4/kmom03)
 * [04: Autentisering med JWT](kurser/webapp-v4/kmom04)
 * [05: Mobila enheters styrkor](kurser/webapp-v4/kmom05)

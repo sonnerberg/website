@@ -4,7 +4,7 @@ author:
 revision:
   "2022-03-07": (A, efo) Första utgåvan för webapp-v4.
 ...
-Kmom02: Mobila begränsningar
+Kmom02: Struktur, struktur, struktur
 ==================================
 
 [WARNING]
@@ -32,14 +32,13 @@ Läsanvisningar  {#lasanvisningar}
 
 
 
+### Referensmanualer {#manuals}
+
+Ta en översiktlig titt på [TypeScript](https://www.typescriptlang.org/) manualen. Vi kommer ta en titt på TypeScript i övningen "[Komponenter och struktur i React](kunskap/komponenter-och-struktur-i-react)".
 
 
 
-
-
-
-
-###Video  {#video}
+### Video  {#video}
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 2.
 
@@ -64,7 +63,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
 
-1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `me/kmom02/buttons`.
+<!-- 1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `me/kmom02/buttons`. -->
 
 1. Gör övningen "[Routing och navigation i React](kunskap/routing-och-navigation-i-react)".
 
@@ -92,6 +91,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka fördelar ser du med verktyg som Postman, curl och jq?
-* Fick du till en bra struktur i din kod för styling av din app?
+* Beskriv din struktur i koden? Blev den bra?
 * Vad är din uppfattning så här långt av TypeScript? Ser du några fördelar?
 * Vilken är din TIL för detta kmom?
