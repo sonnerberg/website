@@ -34,6 +34,8 @@ Kurserna är uppdelade i kursmoment. Ofta är det sex kursmoment (kmom01-06) dä
 
 Sista kmomet brukar heta kmom07/10 och är kursens examination som kan vara projekt eller programmeringstenta. Första året förekommer (normalt sett) ingen fysisk salstentamen. För tillfället examineras majoriteten av kurserna med någon form av projektinlämning.
 
+Ofta är inlämnignar individuella men det förekommer också grupparbeten. Det kan hända att man kan välja att jobba själv när det är grupparbeten.
+
 
 
 Veckoschema {#vschema}
