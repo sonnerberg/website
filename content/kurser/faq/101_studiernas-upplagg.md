@@ -2,14 +2,28 @@
 author: mos
 baseurl: null
 revision:
+    "2022-03-16": "(B, mos) Uppdaterad inför antagningsomgången hösten 2022."
     "2021-08-09": "(A, mos) Första utgåva."
 ...
 Studiernas upplägg
 ==================================
 
+Detta gäller för de båda utbildningarna Webbprogrammering 180/120 samt de två kurspaketen inom webb. Undervisningen bedrivs samtidigt till båda campus och distansstudenter.
+
 Upplägget för studierna skiftar per kurs då varje lärare kan välja sitt eget upplägg.
 
-Alla kurser under första året och cirka 75% av kurserna under det andra året på programmet Webbprogrammering har ett liknande upplägg. Här nedan beskrivs detta "standardupplägg".
+Alla kurser under första året har ett liknande upplägg. Här nedan beskrivs detta "standardupplägg".
+
+
+
+Termin, läsperiod och kurser {#kurser}
+---------------------------------
+
+Läsåret är indelat i höstterminen och vårterminen. Höstterminen är indelad i läsperiod 1 (aug-okt) och läsperiod 2 (nov-jan). Vårterminen fortsätter med läsperiod 3 (jan-mar) och läsperiod 4 (apr-maj).
+
+Läsåret inleds med en introvecka sista veckan i augusti. Det är för att nya studenter skall få en extra vecka att komma igång och bekanta sig med studiemiljön.
+
+Läsåret avslutas första veckan i juni.
 
 
 
@@ -25,7 +39,7 @@ Sista kmomet brukar heta kmom07/10 och är kursens examination som kan vara proj
 Veckoschema {#vschema}
 ---------------------------------
 
-Kurserna har ofta ett standardschema.
+Kurserna har ofta ett standardschema där träffarna är på dagtid.
 
 * Veckan inleds med att du själv sätter dig in i det kursmoment som skall genomföras. Det finns säkert saker att läsa och videor att titta på. Det finns även uppgifter och övningar som du själv kan komma igång med.
 
@@ -37,9 +51,11 @@ Kurserna har ofta ett standardschema.
 
 * Fredagen är ofta fri för egna studier.
 
-Genomgångar och föreläsningar brukar hållas i verktyg likt Zoom eller streamas på YouTube. De spelas ofta in och publiceras på [spellistor i dbwebb-kanalen på YouTube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg).
+Genomgångar och föreläsningar brukar hållas i verktyg likt Zoom eller streamas på YouTube. Ibland förekommer även föreläsningar och videomaterial som är förinspelade. Inspelningar publiceras på [spellistor i dbwebb-kanalen på YouTube](https://www.youtube.com/channel/UCxX3bcidovf5MDLeXMcbDyg).
 
-Du läser två kurser parallellt.
+Träffarna är normalt sett inte obligatoriska och man kan därför ta del av undervisningsmaterialet i efterhand.
+
+Det finns möjlighet att chatta med lärare på bestämda tider och ibland svaras det även utanför dessa schemalagda tider.
 
 
 
@@ -54,7 +70,7 @@ Kurserna har planeringsdokument som hjälper dig att planera din insats i kursen
 
 Denna typen av dokument hjälper dig alltså att få en överblick av kursens planering.
 
-Om och när en lärare har koll på läget så finns hela kursens planering tillgänglig tre veckor innan kursstart.
+Kursens planering finns normalt sett tillgänglig tre veckor innan kursstart.
 
 
 
@@ -83,11 +99,11 @@ För tillfället finns ytterst få obligatoriska tillfällen där närvaro kräv
 
 Grundupplägget är att man skall kunna studera på programmet oavsett tid och plats, det fungerar för det mesta men inte alltid. Finns det obligatoriska träffar så bör det annonseras av läraren när kursen startar.
 
-Om du försöker jobba heltid och studera så kan du läsa forumtråden "[Läsa distansprogrammet och jobba heltid? (ge tips)](/t/7232)" som ger dig viss insyn i hur det kan vara.
+Om du försöker jobba heltid och studera så kan du läsa forumtråden "[Läsa distansprogrammet och jobba heltid? (ge tips)](http://bth1.dbwebb.se/t/7232)" som ger dig viss insyn i hur det kan vara.
 
 
 
 Mer om upplägget på studierna {#mer}
 ---------------------------------
 
-I forumet finns en tråd som sammanställer lite vanliga frågor och svar kring upplägget på utbildningen, kika där för fler svar - [Jag vill söka BTH Webbprogrammering 2020](/t/8849).
+I forumet finns en tråd som sammanställer lite vanliga frågor och svar kring upplägget på utbildningen, kika där för fler svar - [Jag vill söka BTH Webbprogrammering 2020](http://bth1.dbwebb.se/t/8849).
