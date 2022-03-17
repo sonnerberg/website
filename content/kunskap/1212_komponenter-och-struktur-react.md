@@ -115,10 +115,13 @@ Här ser vi att vi skapar en knapp samt ger den ett värde som visas upp (title)
 Detalj-vyn {#details}
 --------------------------------------
 
-I plocklista-vyn vill vi visa upp information om ordern och sedan vilka produkter som ingår i ordern. Vi kan från `route` objektet som per automatik skickas med som parameter till vår komponent när komponenten är en del av en navigation. Vi ritar sedan ut 
+I plocklista-vyn vill vi visa upp information om ordern och sedan vilka produkter som ingår i ordern. Vi kan från `route` objektet som per automatik skickas med som parameter till vår komponent när komponenten är en del av en navigation hämta ut `order`. Vi ritar sedan ut information om ordern och de orderrader som finns för ordern. Sista delen av komponenten är att rita ut knappen för att plocka ordern. Vi skapar sedan en funktion i vår komponent som vi vill ska anropas när vi trycker på knappen. Vi lägger funktionen i komponenten för att vi vill att funktionen ska göra mer än en sak.
+
+I nästa stycke ska vi titta på hur vi kan flytta logiken för att kommunicera med Lager-API:t till en egen fil - en modell i frontend. Det är det som gör att vi kan göra `await orderModel.pickOrder(order);`. Efter att vi har kommunicerat klart med API:t navigerar vi sedan tillbaka till `List`-vyn.
 
 ```javascript
 import { View, Text, Button } from "react-native";
+import orderModel from "../models/orders.ts";
 
 export default function PickList({ route, navigation }) {
     const { order } = route.params;
@@ -137,7 +140,7 @@ export default function PickList({ route, navigation }) {
     });
 
     return (
-        <View style={{...Base.base}}>
+        <View>
             <Text>{order.name}</Text>
             <Text>{order.address}</Text>
             <Text>{order.zip} {order.city}</Text>
@@ -157,6 +160,94 @@ export default function PickList({ route, navigation }) {
 En modell i frontend {#modell}
 --------------------------------------
 
+För att separera koden som kommunicerar med Lager-API:t och vår kod som ritar upp de olika komponenterna vill vi ska modeller i frontend. Vi använder oss av att vi har satt upp vår app som ett TypeScript projekt. Vi kan då skapa en fil `lager/models/orders.ts` som tar hand om kommunikationen med Lager-API:t och mer specifikt då order delen av API:t.
+
+```javascript
+import config from "../config/config.json";
+
+const orders = {
+    getOrders: async function getOrders() {
+        const response = await fetch(`${config.base_url}/orders?api_key=${config.api_key}`);
+        const result = await response.json();
+
+        return result.data;
+    },
+};
+
+export default orders;
+```
+
+Vi har nu möjlighet för att på ett enkelt sätt hämta alla ordrar med hjälp av anropet `const orders = await orderModel.getOrders();` i de filer där vi har importerat modellen. En rekommendation är att utnyttja denna möjligheten och hålla all kommunikation med API:t i modeller. Dessutom kan det vara fördelaktigt att skapa modeller för alla de olika delarna av API:t, så att det hålls uppdelat på ett bra sätt.
+
+
+
+TypeScript {#typescript}
+--------------------------------------
+
+[TypeScript](https://www.typescriptlang.org) är en utökning av JavaScript syntaxen och en infrastruktur runt språket som gör att vi kan skriva typat JavaScript. Det som TypeScript gör är att ge oss ett stöd under utvecklingsprocessen, men det som produceras i slutändan är helt vanlig JavaScript som webbläsaren kan förstå.
+
+Anledningarna till att vi använder TypeScript i denna kursen är främst för att det underlättar vid utveckling och refaktorering, samt att det skapar en säkrare applikation genom att vi upptäcker problem under utveckling. Samtidigt är det en teknik i stark växt och vi vill ge er möjligheten att få bekanta er med en teknik som våra alumni från kurspaketen och programmen rekommenderar starkt.
+
+Vi kommer använda TypeScript på ett "opt-in"-sätt, så vi kommer långsamt men säkert bekanta oss med möjligheterna i TypeScript under kursens gång.
+
+
+
+### Typade variabler {#typed-variables}
+
+I vanliga fall när vi skapar en variabel i JavaScript skapas den med nyckelorder `let` (eller `var` om gamla vaner hänger i).
+
+```javascript
+let myVariable = "elephant";
+```
+
+Har vi TypeScript som en del av vår utvecklingsmiljö kommer TypeScript automatiskt förstå att denna variabeln är av typen sträng. Men för att förtydliga både för datorn men i minst lika hög grad för oss själva eller andra utvecklare kan vi ange explicit vilken typ vi vill att en variabel ska ha. Vi gör det genom att skriva typen efter variabel namnet så i vårt exempel:
+
+```javascript
+let myVariable: string = "elephant";
+```
+
+
+
+### Typade parametrar {#parameters}
+
+Ett annat användningsområde är för funktioner där vi vill ta emot argument och vi vill ha kontroll på datatypen för argumenten som funktionen anropas med. Vi kan då ange typen för argumenten i funktionsdefinitionen och TypeScript kommer lyfta ett fel i vår utvecklingsmiljö om vi skickar in fel typade argument.
+
+```javascript
+function birthdayGreeter(name: string, day: Date) {
+    return `${name} has birthday on ${day.toDateString()}`;
+}
+```
+
+Vi kan förbättra detta ytterligare genom att också definiera vilken datatyp vi vill att funktionen har som returvärde på följande sätt.
+
+```javascript
+function birthdayGreeter(name: string, day: Date): string {
+    return `${name} has birthday on ${day.toDateString()}`;
+}
+```
+
+
+
+### Interfaces {#interfaces}
+
+Den sista saken vi ska titta på i denna övningen är [Interfaces](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces). Ett interface är ett sätt för oss att definiera egna typer och de underliggande datatyper för objektens attribut ska definieras. Låt oss utgå från ett exempel med ordrar i Lager-API:t och skapa en order-datatyp i TypeScript. Vi definierar det som ett interface och sedan listar vi de ingående attribut för ordrarna. Nedanstående kodexempel utgår ifrån att vi har definierat ett `OrderItem` interface med som vi har importerat in i filen där vi definierar `Order`.
+
+```javascript
+interface Order {
+    id: number,
+    name: string,
+    address: string,
+    zip: number,
+    city: string,
+    country: string,
+    status: string,
+    status_id: number,
+    order_items: Array<OrderItem>,
+}
+```
+
+Vi kan nu när vi hämtar ordrar från Lager-API:t specificera att data ska uppfylla vårt interface. Det kan vara bra att skapa lite ytterligare struktur i våra projekt genom att till exempel skapa en katalog interfaces och där spara alla interfaces, så kan vi på ett lätt sätt komma åt de i de olika modeller vi skapar under kursens gång.
+
 
 
 Struktur för vår styling {#styling}
@@ -164,9 +255,8 @@ Struktur för vår styling {#styling}
 
 
 
-TypeScript {#typescript}
---------------------------------------
-
 
 Avslutningsvis {#theend}
 --------------------------------------
+
+Vi har i denna övningen förbättrat strukturen i vår kod med hjälp av olika konstruktioner. Vi tar med oss modeller i frontend, TypeScript och Strukturen för styling som de viktigaste lärdomarna.
