@@ -246,13 +246,105 @@ interface Order {
 }
 ```
 
-Vi kan nu när vi hämtar ordrar från Lager-API:t specificera att data ska uppfylla vårt interface. Det kan vara bra att skapa lite ytterligare struktur i våra projekt genom att till exempel skapa en katalog interfaces och där spara alla interfaces, så kan vi på ett lätt sätt komma åt de i de olika modeller vi skapar under kursens gång.
+Vi kan nu när vi hämtar ordrar från Lager-API:t eller skickar med en order som argument till en funktion specificera att data ska uppfylla vårt interface. Ibland vill vi bara skicka med en del av ett objekt/interface och det kan vi göra med nyckelorder `Partial<Order>`. Då sätts alla attribut till optional och vi kan till exempel bara skicka med namn, id och status.
+
+```javascript
+async function pickOrder(order: Partial<Order>) {
+
+}
+```
+
+Det kan vara bra att skapa lite ytterligare struktur i våra projekt genom att till exempel skapa en katalog interfaces och där spara alla interfaces, så kan vi på ett lätt sätt komma åt de i de olika modeller vi skapar under kursens gång.
 
 
 
 Struktur för vår styling {#styling}
 --------------------------------------
 
+Den sista delen i denna övningen är att strukturera upp styling. Just nu är det spritt ut över hela applikation och vi har säkert redan skrivit samma styling kod ett flera antal gånger. Vi kommer utnyttja möjligheten för att importera och exportera JavaScript filer till en `index.js`.
+
+```javascript
+import * as Base from './base.js';
+import * as Typography from './typography';
+
+export { Base, Typography };
+```
+
+Vi kan nu i våra komponenter importera all stil med `import { Base, Typography } from '../styles';` sedan kan vi använda både `Base` och `Typography` i våra komponenter på följande sätt.
+
+```javascript
+<Text style={{...Typography.header2}}>Lagerförteckning</Text>
+```
+
+I ovanstående kodexempel använder vi en rubrik på nivå 2 ungefär som ett `<h2>`-element som vi är vana vid från HTML.
+
+I `styles/typography.js` har vi definierat de olika stilarna vi vill ha för vår applikation.
+
+```javascript
+export const header1 = {
+    fontSize: 42,
+    marginBottom: 28,
+};
+
+export const header2 = {
+    fontSize: 34,
+    marginBottom: 28,
+};
+
+export const header3 = {
+    fontSize: 28,
+    marginBottom: 28,
+};
+
+export const normal = {
+    fontSize: 20,
+    marginBottom: 28,
+};
+```
+
+
+
+Struktur överblick {#overview}
+--------------------------------------
+
+För att få en överblick över strukturen som den kan se ut syns min katalog-struktur nedan:
+
+```shell
+BTHMAC0169:lager efo$ tree -L 2 .
+.
+├── App.tsx
+├── app.json
+├── assets
+│   ├── adaptive-icon.png
+│   ├── favicon.png
+│   ├── icon.png
+│   ├── splash.png
+│   └── warehouse.jpg
+├── babel.config.js
+├── components
+│   ├── Home.tsx
+│   ├── OrderList.tsx
+│   ├── Pick.tsx
+│   ├── PickList.tsx
+│   └── Stock.tsx
+├── config
+│   └── config.json
+├── interfaces
+│   ├── order.ts
+│   └── order_item.ts
+├── models
+│   ├── orders.ts
+│   └── products.ts
+├── node_modules
+├── package-lock.json
+├── package.json
+├── styles
+│   ├── base.js
+│   ├── index.js
+│   └── typography.js
+├── tsconfig.json
+└── yarn.lock
+```
 
 
 
