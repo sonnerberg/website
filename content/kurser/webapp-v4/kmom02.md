@@ -4,7 +4,7 @@ author:
 revision:
   "2022-03-07": (A, efo) Första utgåvan för webapp-v4.
 ...
-Kmom02: Struktur, struktur, struktur
+kmom02: Struktur, struktur, struktur
 ==================================
 
 [WARNING]
@@ -40,7 +40,7 @@ Ta en översiktlig titt på [TypeScript](https://www.typescriptlang.org/) manual
 
 ### Video  {#video}
 
-1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 2.
+1. Det finns en [videoserie](https://youtube.com/playlist?list=PLKtP9l5q3ce8Akmp6hSW78cDuHHNylpRG) kopplat till kursen, titta på videos som börjar på 2.
 
 
 
