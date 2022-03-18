@@ -67,7 +67,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Gör övningen "[Routing och navigation i React](kunskap/routing-och-navigation-i-react)".
 
-1. Gör övningen "[Komponenter och struktur i React](kunskap/komponenter-och-struktur-i-react)".
+1. Gör övningen "[Komponenter och struktur i React](kunskap/komponenter-och-struktur-react)".
 
 
 
