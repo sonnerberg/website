@@ -131,7 +131,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i redovisningstexten.
+Se till att följande frågor besvaras i redovisningstexten. __Redovisningstexten ska enbart lämnas in via Canvas.__
 
 * Är du sedan tidigare bekant med utveckling av mobila appar?
 * Vad tycker du om utvecklingsmiljön med React Native och Expo jämfört med utvecklingsmiljön i tidigare dbwebb-kurser?
