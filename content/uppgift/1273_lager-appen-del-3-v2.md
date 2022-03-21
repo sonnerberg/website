@@ -2,11 +2,13 @@
 author: efo
 category: javascript
 revision:
+  "2022-03-21": (C, efo) Uppdaterade uppgiften för att passa webapp-v4.
   "2019-03-04": (B, efo) Uppdaterade uppgiften för att passa API v2.
   "2018-01-17": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ...
 Lager appen del 3
 ==================================
+
 [FIGURE src=image/webapp/truck.jpg?w=c5 class="right"]
 
 I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskapen från övningarna. Vi använder vår kunskap om att skapa lättanvända formulär för att snabbt kunna göra inleveranser på produkter.
@@ -42,22 +44,15 @@ Krav {#krav}
 
 1. Formuläret ska innehålla alla attribut för en inleverans förutom Leverans ID (id) dvs.:
 
-* Produkt (product_id)
-* Antal (amount)
-* Leveransdatum (delivery_date)
-* Kommentar (comment)
+    * Produkt (product_id)
+    * Antal (amount)
+    * Leveransdatum (delivery_date)
+    * Kommentar (comment)
+
+5. Använd en `Picker`-komponent för att välja produkten som har levererats.
+
+6. Använd en `DatePicker`-komponent för att välja leveransdatum.
 
 7. När formuläret skickas ska det skapas en inleverans i API:t.
 
 8. Lagersaldot för produkten ska ökas med den levererade mängden.
-
-9. Använd ett `select`-element för att välja produkten som har levererats. Designa `select`-elementet så det passar in i resten av stilen för formuläret.
-
-
-
-Extrauppgift {#extra}
------------------------
-
-* Gör det möjligt att skapa en ny produkt i inleverans formuläret.
-
-* Gör ett autocomplete-formulärfält, som fyller i befintliga produkter under tiden användaren skriver.

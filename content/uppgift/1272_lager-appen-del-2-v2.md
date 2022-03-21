@@ -6,6 +6,7 @@ revision:
 ...
 Lager appen del 2 (v2)
 ==================================
+
 [FIGURE src=image/webapp/pick-list.png?w=c4 class="right"]
 
 I kursmoment 1 skapade vi grunden för vår lager app. Vi ska i detta kmom bygga en plocklista vy där lagerarbetarna får en bra översikt över vart produkterna från en order finns. När varorna är plockade ska status ändras för ordern och lagersaldo ska minskas.
@@ -34,10 +35,6 @@ Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och specie
 Krav {#krav}
 -----------------------
 
-1. Strukturera dina JavaScript filer med webpack, så bara en JavaScript fil inkluderas i `index.html`.
-
-1. Strukturera din style kod, så vi inte längre har styling direkt i komponenterna, men i egna filer.
-
 1. Skapa en vy där lagerarbetarna ser alla ordrar redo för att packas, dvs. ordrar med status ny. Från order-vyn kan man ta sig till plocklista vyn.
 
 1. Plocklista vyn visar alla varor i en order, hur många som ska plockas och vart varan finns.
@@ -52,10 +49,6 @@ Krav {#krav}
 
 1. Navigationen ska tydligt visa vilken vy användaren är i.
 
+1. Strukturera din style kod, så vi inte längre har styling direkt i komponenterna, men i egna filer.
+
 1. Se till att det går att testa din app. Lägg till minst en order med en produkt som går att packa.
-
-
-
-Extrauppgift {#extra}
------------------------
-* Använd en checkbox för varje produkt, ska bara gå att klicka på knappen om alla checkboxar är iklickade.
