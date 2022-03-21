@@ -1,11 +1,12 @@
 ---
-title: mvc (v1)
+title: mvc (v2)
 author:
     - mos
 revision:
-    "2021-03-25": "(PA2, mos) Första utgåva vt21, kopierad från oophp-v5."
+    "2022-03-21": "(PB, mos) Första utgåva vt22, kopierad från mvc-v1."
+    "2021-03-25": "(A, mos) Första utgåva vt21, kopierad från oophp-v5."
 ...
-Kursen mvc (v1)
+Kursen mvc (v2)
 ==================================
 
 Kursen **Objektorienterade webbteknologier**, a.k.a. *mvc*, fokuserar på objektorienterade programmeringstekniker i programmeringsspråket PHP. Klassiska objektorienterade konstruktioner hanteras tillsammans med objektorienterad programmering i webbaserat ramverk tillsammans med databaser samt enhetstestning.
@@ -13,6 +14,14 @@ Kursen **Objektorienterade webbteknologier**, a.k.a. *mvc*, fokuserar på objekt
 <!--more-->
 
 Läs vidare för en översikt för kursens innehåll, struktur och planering.
+
+[WARNING]
+
+**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+
+Större ändringar kan komma att ske i materialet.
+
+[/WARNING]
 
 
 
@@ -359,7 +368,9 @@ Versioner av kursen {#versioner}
 
 Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start). Alternativt rådgör du med den som är kursansvarig.
 
-Från och med vårterminen 2021 finns kursmaterialet i [mvc (v1)](kurser/mvc-v1).
+Från och med vårterminen 2022 finns kursmaterialet i [mvc (v2)](kurser/mvc-v2).
+
+Från vårterminen 2021 finns kursmaterialet i [mvc (v1)](kurser/mvc-v1).
 
 Från vårterminen 2019 -- 2020 finns kursmaterialet i [oophp (v5)](kurser/oophp-v5).
 

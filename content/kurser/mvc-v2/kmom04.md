@@ -8,6 +8,15 @@ revision:
 Kmom04: Ramverk
 ==================================
 
+[WARNING]
+
+**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+
+Större ändringar kan komma att ske i materialet.
+
+[/WARNING]
+
+
 Vi skall nu göra en liten miniundersökning av några av de mest populära ramverken inom PHP. Du skall själv välja ett av dem och installera det och komma igång och använda det samt porta en del av din kod och utvecklingsmiljö till ramverket.
 
 Ramverk inom PHP är numer uppbyggda enligt liknande modulära strukturer. Men varje ramverk kan ha sin egen lilla nish och vinkel. Även om det finns standardiseringsorgan som PHP-FIG så behöver det inte betyda att ramverken inte tar möjligheten att visa upp sina personliga förmågor.

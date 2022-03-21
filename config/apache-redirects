@@ -171,7 +171,7 @@ Redirect /javascript/kmom06/forelasning.pdf     https://dl.dropbox.com/u/2431521
 Redirect /mvc                       /kurser/mvc
 Redirect /kurser/mvc/studieplan     https://docs.google.com/spreadsheets/d/1a2tVndtZuqzx0113MtlI1hgM_JtxQrl3aN8sbd00ng8/edit?usp=sharing
 Redirect /kurser/mvc/lektionsplan   https://docs.google.com/spreadsheets/d/13nsNIJ6HmngTFQEDdDEMnb8e1kCPuhZx0vlYGtVA54c/edit?usp=sharing
-Redirect /kurser/mvc                /kurser/mvc-v1
+Redirect /kurser/mvc                /kurser/mvc-v2
 
 # webtec
 Redirect /webtec                       /kurser/webtec

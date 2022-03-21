@@ -8,6 +8,15 @@ revision:
 Kmom05: ORM / Databas
 ==================================
 
+[WARNING]
+
+**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+
+Större ändringar kan komma att ske i materialet.
+
+[/WARNING]
+
+
 När databasdrivna applikationer byggs i ramverk finns olika taktiker för att integrera applikationskoden med databasen. Ett sätt är att jobba mot ett databas API som är uppbyggt av lagrade procedurer (jämför med databas-kursen). Ett annat sätt, som är vanligt i de ramverk vi har studerat, är att använda sig av ett ORM lager (Object Relational Mapping), vars syfte är att objektifiera relationsdatabasen och accessen till databasen. Det handlar alltså om att göra relationsdatabasen mer objektorienterad.
 
 Själva grundtanken med ORM-moduler är att ge programmeraren möjlighet att jobba mot databasen med vanlig objektorienterad PHP kod via metoder, klasser och objekt. Det gränssnitt som ORM erbjuder döljer själva databasen och programmeraren behöver inte vara speciellt bevandrad i varken SQL eller hur en relationsdatabas fungerar.

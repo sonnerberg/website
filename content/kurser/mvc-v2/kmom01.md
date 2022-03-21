@@ -8,6 +8,14 @@ revision:
 Kmom01: Objektorientering
 ==================================
 
+[WARNING]
+
+**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+
+Större ändringar kan komma att ske i materialet.
+
+[/WARNING]
+
 <!--
 [INFO]
 

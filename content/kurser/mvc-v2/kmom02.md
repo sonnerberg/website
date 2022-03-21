@@ -8,6 +8,15 @@ revision:
 Kmom02: Controller
 ==================================
 
+[WARNING]
+
+**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+
+Större ändringar kan komma att ske i materialet.
+
+[/WARNING]
+
+
 Vi skall introducera C:et i MVC, Controller. Vi bygger om vår befintliga kod så att den använder sig av controllers och sedan bygger vi vidare med fler klasser för att konstruera ett tärningsspel Yatzy.
 
 I samband med att vi börjar med controllers så inkluderar vi ett par externa moduler till vårt miniramverk. Det handlar om en router och klasser för att hantera request och response. Detta blir en insyn i hur man kan bygga upp ett ramverk via standardiserade moduler där varje modul kan vara utbytbar förutsatt att den uppfyller ett visst interface.

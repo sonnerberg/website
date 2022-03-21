@@ -7,6 +7,15 @@ revision:
 Kmom07/10: Projekt och examination
 ==================================
 
+[WARNING]
+
+**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+
+Större ändringar kan komma att ske i materialet.
+
+[/WARNING]
+
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Alla delar i detta kursmoment skall utföras individuellt och självständigt.
