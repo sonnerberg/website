@@ -89,6 +89,8 @@ En viktig del av att designa ett formulär är att ge återkoppling till använd
 
 I HTML5 finns fyra olika attribut vi kan använda på våra formulärfält för att validera innehållet.
 
+
+
 ### required
 
 Om vi vill att ett specifikt fält måste vara ifyllt kan vi använda `required` på följande sätt. Om fältet är tomt när vi skickar formuläret, får vi upp en varning om detta.
@@ -214,6 +216,12 @@ Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots ol
 
 Ett formulär i React Native {#rn}
 --------------------------------------
+
+När vi bygger ett formulär i React Native är det tre saker vi vill få på plats. Formulärfält för att fylla i data, ett objekt som en del av `state` som håller koll på data i fälten och en funktion som tar hand om att skicka data till vårt API.
+
+expo install @react-native-picker/picker
+
+expo install @react-native-community/datetimepicker
 
 
 

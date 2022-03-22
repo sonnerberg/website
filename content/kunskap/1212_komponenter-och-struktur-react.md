@@ -16,6 +16,11 @@ Vi tar även en titt på TypeScript och hur vi kan använde det för att skapa e
 <!--more-->
 
 
+[INFO]
+Koden som skrivs i denna övning är inte fullständig och vissa delar behövs fyllas i av er som studenter i uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2-v2)".
+[/INFO]
+
+
 
 Förkunskaper {#prereqs}
 --------------------------------------
@@ -27,7 +32,13 @@ Du har gjort uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1-v2)" och �
 List-Details {#listdetails}
 --------------------------------------
 
-I många sammanhang vill vi kunna gå från en lista med till exempel ordrar till den enskilda ordern och eventuellt tillbaka igen. För att vi ska kunna göra detta i React Native vi behöver en `StackNavigator`. Vi lägger den i vår `Pick`-komponent, som blir som nedanstående.
+I många sammanhang vill vi kunna gå från en lista med till exempel ordrar till den enskilda ordern och eventuellt tillbaka igen. För att vi ska kunna göra detta i React Native vi behöver en `StackNavigator`. Så vi börjar med att installera den:
+
+```shell
+npm install @react-navigation/native-stack
+```
+
+Vi lägger den i vår `Pick`-komponent, som blir som nedanstående.
 
 ```javascript
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -94,7 +105,7 @@ export default function OrderList({ navigation }) {
 }
 ```
 
-Återigen importerar vi `useState` och `useEffect`. Vi hämtar alla ordrar från Lager-API:t och sparar de som en del av `state` i `allOrders` arrayen. Sedan använder vi ytterligare en av `Array.prototype` funktionerna `filter`. `filter` itererar över alla element i en array och returneras `true` från funktionen läggs elementet i den resulterande array annars läggs den inte till. Vi filtrerar på `order.status` i detta fallet och vill bara ha med de som har status "Ny". Sedan gör vi på samma sätt som tidigare att vi använder `map` för att iterera över alla order med status "Ny". För varje order ritar vi ut en knapp `Button`-komponent.
+Återigen importerar vi `useState` och `useEffect`. Vi hämtar alla ordrar från Lager-API:t och sparar de som en del av `state` i `allOrders` arrayen. Sedan använder vi ytterligare en av `Array.prototype` funktionerna `filter`. `filter` itererar över alla element i en array och returneras `true` från funktionen läggs elementet i den resulterande array annars läggs den inte till. Vi filtrerar på `order.status` i detta fallet och vill bara ha med de som har status "Ny". Sedan gör vi på samma sätt som tidigare att vi använder `map` för att iterera över alla ordrar med status "Ny". För varje order ritar vi ut en knapp `Button`-komponent.
 
 ```javascript
 return <Button
@@ -115,7 +126,7 @@ Här ser vi att vi skapar en knapp samt ger den ett värde som visas upp (title)
 Detalj-vyn {#details}
 --------------------------------------
 
-I plocklista-vyn vill vi visa upp information om ordern och sedan vilka produkter som ingår i ordern. Vi kan från `route` objektet som per automatik skickas med som parameter till vår komponent när komponenten är en del av en navigation hämta ut `order`. Vi ritar sedan ut information om ordern och de orderrader som finns för ordern. Sista delen av komponenten är att rita ut knappen för att plocka ordern. Vi skapar sedan en funktion i vår komponent som vi vill ska anropas när vi trycker på knappen. Vi lägger funktionen i komponenten för att vi vill att funktionen ska göra mer än en sak.
+I plocklista-vyn vill vi visa upp information om ordern och sedan vilka produkter som ingår i ordern. Vi kan från `route` objektet som per automatik skickas med som parameter till vår komponent när komponenten är en del av en navigationen hämta ut `order`. Vi ritar sedan ut information om ordern och de orderrader som finns för ordern. Sista delen av komponenten är att rita ut knappen för att plocka ordern. Vi skapar sedan en funktion i vår komponent som vi vill ska anropas när vi trycker på knappen. Vi lägger funktionen i komponenten för att vi vill att funktionen ska göra mer än en sak.
 
 I nästa stycke ska vi titta på hur vi kan flytta logiken för att kommunicera med Lager-API:t till en egen fil - en modell i frontend. Det är det som gör att vi kan göra `await orderModel.pickOrder(order);`. Efter att vi har kommunicerat klart med API:t navigerar vi sedan tillbaka till `List`-vyn.
 
@@ -172,19 +183,27 @@ const orders = {
 
         return result.data;
     },
+    pickOrder: async function pickOrder() {
+        // TODO: Minska lagersaldo för de
+        // orderrader som finns i ordern
+
+        // TODO: Ändra status för ordern till packad
+    }
 };
 
 export default orders;
 ```
 
-Vi har nu möjlighet för att på ett enkelt sätt hämta alla ordrar med hjälp av anropet `const orders = await orderModel.getOrders();` i de filer där vi har importerat modellen. En rekommendation är att utnyttja denna möjligheten och hålla all kommunikation med API:t i modeller. Dessutom kan det vara fördelaktigt att skapa modeller för alla de olika delarna av API:t, så att det hålls uppdelat på ett bra sätt.
+Vi har nu möjlighet för att på ett enkelt sätt hämta alla ordrar med hjälp av anropet `const orders = await orderModel.getOrders();` eller `await orderModel.pickOrder()` i de filer där vi har importerat modellen.
+
+En rekommendation är att utnyttja denna möjligheten och hålla all kommunikation med API:t i modeller. Dessutom kan det vara fördelaktigt att skapa modeller för alla de olika delarna av API:t, så att det hålls uppdelat på ett bra sätt.
 
 
 
 TypeScript {#typescript}
 --------------------------------------
 
-[TypeScript](https://www.typescriptlang.org) är en utökning av JavaScript syntaxen och en infrastruktur runt språket som gör att vi kan skriva typat JavaScript. Det som TypeScript gör är att ge oss ett stöd under utvecklingsprocessen, men det som produceras i slutändan är helt vanlig JavaScript som webbläsaren kan förstå.
+[TypeScript](https://www.typescriptlang.org) är en utökning av JavaScript syntaxen och en infrastruktur runt språket som gör att vi kan skriva typat JavaScript. Det som TypeScript gör är att ge oss ett stöd under utvecklingsprocessen, men det som produceras i slutändan är helt vanlig JavaScript som webbläsaren kan förstå och exekvera.
 
 Anledningarna till att vi använder TypeScript i denna kursen är främst för att det underlättar vid utveckling och refaktorering, samt att det skapar en säkrare applikation genom att vi upptäcker problem under utveckling. Samtidigt är det en teknik i stark växt och vi vill ge er möjligheten att få bekanta er med en teknik som våra alumni från kurspaketen och programmen rekommenderar starkt.
 
@@ -351,4 +370,4 @@ BTHMAC0169:lager efo$ tree -L 2 .
 Avslutningsvis {#theend}
 --------------------------------------
 
-Vi har i denna övningen förbättrat strukturen i vår kod med hjälp av olika konstruktioner. Vi tar med oss modeller i frontend, TypeScript och Strukturen för styling som de viktigaste lärdomarna.
+Vi har i denna övning förbättrat strukturen i vår kod med hjälp av olika konstruktioner. Vi tar med oss modeller i frontend, TypeScript och Strukturen för styling som de viktigaste lärdomarna.
