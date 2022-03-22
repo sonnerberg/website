@@ -99,11 +99,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-### Extra {#extra}
+#### Kontrollera din inlämning {#kontrollera}
 
-Det finns inga extrauppgifter.
-
-<!-- Med hjälp av övningen "[GPS och kamera i samarbete](kunskap/gps-och-kamera-i-samarbete)" skapa möjlighet för att den som levererar paketet kan ta en geolokaliserad bild som sparas till telefonen för bevis att paketet har lämnats på rätt plats. -->
+Se till så att en länk till ditt GitHub-repo ingår som en del av din inlämning på Canvas. Länken ska vara på formen: https://github.com/emilfolino/lager-v4.git
 
 
 

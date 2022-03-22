@@ -56,3 +56,5 @@ Krav {#krav}
 7. När formuläret skickas ska det skapas en inleverans i API:t.
 
 8. Lagersaldot för produkten ska ökas med den levererade mängden.
+
+9. Länka till ditt GitHub-repo som en del av din inlämning på Canvas. Länken ska vara på formen: https://github.com/emilfolino/lager-v4.git

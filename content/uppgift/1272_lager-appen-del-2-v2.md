@@ -52,3 +52,5 @@ Krav {#krav}
 1. Strukturera din style kod, så vi inte längre har styling direkt i komponenterna, men i egna filer.
 
 1. Se till att det går att testa din app. Lägg till minst en order med en produkt som går att packa.
+
+1. Länka till ditt GitHub-repo som en del av din inlämning på Canvas. Länken ska vara på formen: https://github.com/emilfolino/lager-v4.git

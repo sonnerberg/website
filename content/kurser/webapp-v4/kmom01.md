@@ -124,6 +124,16 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
+#### Kontrollera din inlämning {#kontrollera}
+
+Se till så att en länk till ditt GitHub-repo ingår som en del av din inlämning på Canvas. Länken ska vara på formen: https://github.com/emilfolino/lager-v4.git
+
+Emil visar i nedanstående video hur man gör en inlämning i webapp kursen.
+
+
+
+
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 

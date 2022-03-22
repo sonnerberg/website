@@ -99,9 +99,13 @@ Det finns inga extra lästips.
 
 Dessa uppgifter skall utföras och redovisas.
 
-
-
 1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)". Spara dina filer i `me/kmom05/lager5`.
+
+
+
+#### Kontrollera din inlämning {#kontrollera}
+
+Se till så att en länk till ditt GitHub-repo ingår som en del av din inlämning på Canvas. Länken ska vara på formen: https://github.com/emilfolino/lager-v4.git
 
 
 
