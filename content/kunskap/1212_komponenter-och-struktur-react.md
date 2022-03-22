@@ -295,7 +295,18 @@ Vi kan nu i våra komponenter importera all stil med `import { Base, Typography 
 <Text style={{...Typography.header2}}>Lagerförteckning</Text>
 ```
 
-I ovanstående kodexempel använder vi en rubrik på nivå 2 ungefär som ett `<h2>`-element som vi är vana vid från HTML.
+I ovanstående kodexempel använder vi en rubrik på nivå 2 ungefär som ett `<h2>`-element som vi är vana vid från HTML. Vi använder oss av [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) i kodexemplet ovan `{...Typography.header2}`. Spread Operator kan användas på både arrayer och objekt. För arrayer delas varje element ut som argument som en funktion, så `...[1, 2, 3] => 1, 2, 3`. För ett objekt spridas nyckel-värde paren ut på följande sätt:
+
+```javascript
+let person = {
+    name: "Emil",
+    age: 35,
+};
+
+let concatenatedPerson = {...person, lastName: "Folino"};
+
+// secondPerson: {name: "Emil", age: 35, lastName: "Folino"}
+```
 
 I `styles/typography.js` har vi definierat de olika stilarna vi vill ha för vår applikation.
 
