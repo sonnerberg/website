@@ -1,42 +1,27 @@
 ---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "image/kurs/mvc/kmom01-symfony.png?w=1100&h=300&cf"
 author:
     - mos
 revision:
+    "2022-03-23": "(C, mos) Nytt kmom inför mvc-v2 och vt22."
     "2021-03-29": "(B, mos) Lade till läsresurs om Templating."
     "2021-03-25": "(A, mos) Första versionen släppt för mvc-v1."
 ...
-Kmom01: Objektorientering
+Kmom01: Ramverk
 ==================================
 
-[WARNING]
+I denna kursen skall vi lära oss programmera webbapplikationer på ett objektorienterat sätt med fokus på det arkitekturella designmönstret MVC. För att komma igång behöver vi en bas och där har vi valt ramverket Symfony som är ett av de mer kända ramverken inom PHP.
 
-**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+Vi börjar med att installera Symfony och bygger en webbplats med en kontroller (C:et i MVC) som ger oss grunden för kursens me-sida som skall innehålla detaljer om dig själv, kursen och dina redovisningstexter. Du använder vyer för att rendera webbsidorna (V:et i MVC). Vi provar även att skapa en sida som genererats med JSON, det blir ett embryo till att se hur man kan bygga en webbtjänst med ett så kallat RESTful API.
 
-Större ändringar kan komma att ske i materialet.
+Vi skall också börja lära oss om grunderna med objektorientering och dess konstruktioner i PHP.
 
-[/WARNING]
-
-<!--
-[INFO]
-
-**Publicerat - men inte komplett**
-
-Detta kmom är publicerat men ännu inte komplett. Om du är en "early user" med relativt höga förkunskaper kan du gärna pröva att genomföra kursmomentet. Annars bör du avvakta tills denna blå ruta försvinner.
-
-[/INFO]
--->
-
-I denna kursen skall vi lära oss programmera webbapplikationer på ett objektorienterat sätt med fokus på det arkitekturella designmönstret MVC.
-
-I kurserna htmlphp och design använde vi oss av begreppet vyer, det är V:et i MVC. Vyer är något vi fortsätter använda i detta kursmomentet.
-
-I nästa kursmoment skall vi introducera C:et i MVC, Controller. Men för att lära oss bygga Controllers så behöver vi någorlunda koll på hur klasser och objektorienterad programmering fungerar i PHP. Det får alltså bli huvudsyftet för detta inledande kursmoment.
-
-Vi prövar därför att komma igång med grunderna i objektorienterad programmering i PHP genom att bygga ett antal enklare klasser som vi använder och visar upp i form av ett enklare tärningsspel via ett par webbsidor.
-
-Vi får även möjlighet att repetera begrepp som GET, POST och SESSION som är bra att ha koll på när vi bygger webbapplikationer.
-
-<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 <!-- more -->
 
@@ -49,36 +34,7 @@ Labbmiljö  {#labbmiljo}
 
 Se till att du har kursens labbmiljö installerad.
 
-1. En [översikt av labbmiljön som krävs för att genomföra första kursmomentet](./../installera-labbmiljo).
-
-
-
-Uppgifter & Övningar {#uppgifter_ovningar}
--------------------------------------------
-
-*(ca: 8-12 studietimmar)*
-
-Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas.
-
-1. Lös uppgiften "[Objektorientering med klasser i PHP](uppgift/objektorientering-med-klasser-i-php)".
-
-
-<!--
-Borde rita ett klassdiagram enligt UML? Ta vidare kunskap från databaskursen i modellering.
--->
-
-
-### Övningar {#ovningar}
-
-Det finns inga övningar i detta kursmoment.
-
-<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
+1. En översikt av [labbmiljön som krävs för att genomföra första kursmomentet](./../installera-labbmiljo).
 
 
 
@@ -87,49 +43,65 @@ Läs & Studera  {#lasanvisningar}
 
 *(ca: 2-4 studietimmar)*
 
-För att lösa uppgifterna och redovisningen bör du studera enligt följande.
-
 
 
 ### Föreläsning {#flas}
 
 Titta igenom följande föreläsningar.
 
+1. [Kursintro](./../forelasning/kursintroduktion) som ger en introduktion till kursens struktur och upplägg samt en översikt av kursens innehåll.
 
-
-#### Kursintroduktion {#f1}
-
-Introduktion till kursen mvc med kursformalia, innehåll och labbmiljö ([slides](https://dbwebb-se.github.io/mvc/lecture/L00-kursintro/slide.html)).
-
-[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Kursintroduktion (med Mikael)."]
-
-
-
-#### Klasser och objekt i PHP {#f2}
-
-Introduktion till klasser och objekt i PHP, för att komma igång med grunderna i hur man skapar en klass och instansierar ett objekt. Koncept som objekt i sessioner, namespace och autoloader hanteras ([slides](https://dbwebb-se.github.io/mvc/lecture/L01-klasser-i-php/slide.html)).
-
-[YOUTUBE src="MV4eC2yKgOE" width=700 caption="Klasser och objekt i PHP (med Mikael)."]
+1. [Introduktion till klasser och objekt i PHP](./../forelasning/klasser-och-objekt-i-php), för att komma igång med grunderna i hur man skapar en klass och instansierar ett objekt. Koncept som objekt i sessioner, namespace och autoloader hanteras.
 
 
 
 ### Litteratur  {#litteratur}
 
-1. Bekanta dig snabbt och översiktligt med innehållet i PHP-manualen om de delar som är extra relevant i detta kursmoment.
+Studera enligt följande.
 
-    * [Classes and Objects](https://www.php.net/manual/en/language.oop5.php)
-    * [Namespaces](https://www.php.net/manual/en/language.namespaces.php)
+1. Bekanta dig översiktligt med dokumentet [PHP The Right Way](http://www.phptherightway.com/). Det är skrivet av PHP communityn och ger en översikt över PHP som språk och de verktyg och processer man normalt arbetar med. Vi kommer att återkomma till dokumentet under kursens gång. Du kan se dokumentet som en innehållsförteckning till vad en god PHP-programmerare bör ha koll på.
+
+1. Kika kort på webbplatsen för [PHP ramverket Symfony](https://symfony.com/). Fortsätt sedan att snabbt skapa dig en uppfattning om hur man installerar och kommer igång med ramverket (det finns även tips om videor som lärresurs).
+
+    * [Installing & Setting up the Symfony Framework](https://symfony.com/doc/current/setup.html)
 
 1. Titta i guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" och se om den kan hjälpa dig med att förstå grunderna till klassbegreppet i PHP. Välj själv om du enbart använder guiden som läsresurs eller om du kodar dess övningsprogram.
 
     * [Intro till guiden](guide/kom-igang-med-objektorienterad-programmering-i-php/intro-till-guiden)
     * [Objekt och Klass](guide/kom-igang-med-objektorienterad-programmering-i-php/objekt-och-klass)
 
-1. Bekanta dig översiktligt med dokumentet [PHP The Right Way](http://www.phptherightway.com/). Det är skrivet av PHP communityn och ger en översikt över PHP som språk och de verktyg och processer man normalt arbetar med. Vi kommer att återkomma till dokumentet under kursens gång. Du kan se dokumentet som en innehållsförteckning till vad en god PHP-programmerare bör ha koll på.
+
+
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 8-12 studietimmar)*
+
+Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna. Uppgifter skall utföras och redovisas.
+
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+
+
+
+### Övningar {#ovningar}
+
+Jobba igenom övningarna, de förbereder dig inför uppgifterna.
+
+1. Kom igång med att "[Installera och bygga en webbapplikation i Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony)". Spara din kod i `me/kmom01/symfony`.
 
 <!--
-1. Läs igenom den korta artikeln "[Martin Fowler: Tell Dont Ask](https://martinfowler.com/bliki/TellDontAsk.html)" som ger en insikt i objektorienterat tänkade och hur man delvis kan tänka när man strukturerar sina objekt och var man väljer att lägga sin kod.
+* Visa hur man jobbar med Markdown.
+* Visa hur man gör en enhetlig stylesheet (header, footer, navbar).
+* Versionshantering
 -->
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Utför uppgiften "[Bygg en me-sida till mvc-kursen](uppgift/bygg-en-me-sida-till-mvc)". Spara din kod i `me/report`.
 
 
 
@@ -142,15 +114,13 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denn
 
 Se till att följande frågor besvaras i texten i din rapport:
 
-* Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering. Kanske har du redan nu en uppfattning om det är bra eller ej?
+* Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering.
 
 * Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?
 
-* Reflektera kort över den kodbas som användes till uppgiften, hur uppfattar du den?
+* Reflektera kort över den kodbas, koden, strukturen som användes till uppgiften `me/report`, hur uppfattar du den?
 
-* Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
-
-* Med tanke på artikeln "PHP The Right Way", vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om?
+* Med tanke på artikeln "PHP The Right Way", vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om? Lyft fram några delar av artikeln som du känner mer värdefulla.
 
 * Vilken är din TIL för detta kmom?
 
@@ -158,18 +128,14 @@ TIL är en akronym för "Today I Learned" vilket leksamt anspelar på att det fi
 
 
 
+<!--stop-->
+
+
+
 Resurser bra-att-ha {#resurser}
 ---------------------------------
 
 Här anges övriga resurser som kan användas för vidare studier i det som kursmomentet omfattar.
-
-
-
-### Videor och spellista {#playlist}
-
-Kursen innehåller genomgångar och föreläsningar som spelas in eller streamas och därefter läggs i en spellista.
-
-Du kan nå spellistan på "[mvc streams v21](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_cbYbdnzKKF8-4igef73u6)".
 
 
 

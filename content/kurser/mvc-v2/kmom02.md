@@ -2,10 +2,11 @@
 author:
     - mos
 revision:
+    "2022-03-22": "(PC, mos) Nytt kmom inför mvc-v2 och vt22."
     "2021-05-26": "(B, mos) Läsresurs om semantisk versionshantering."
     "2021-04-02": "(A, mos) Första utgåvan i mvc-v1."
 ...
-Kmom02: Controller
+Kmom02: Objektorientering
 ==================================
 
 [WARNING]
@@ -25,34 +26,9 @@ Apropå interface så kikar vi mer på objektorienterade konstruktioner i PHP d�
 
 Vi tar också hjälp av allmän problemlösning i form av top-down/bottom-up, pseudokod och flödesdiagram och använder det för att bygga upp och designa flödet i vårt Yatsy-spel.
 
-<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 <!-- more -->
-
-
-
-Uppgifter & Övningar {#uppgifter_ovningar}
--------------------------------------------
-
-*(ca: 10-14 studietimmar)*
-
-Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas.
-
-1. Lös uppgiften "[Bygg Controller i PHP enligt MVC](uppgift/bygg-controller-i-php-enligt-mvc)".
-
-
-
-### Övningar {#ovningar}
-
-Det finns inga övningar i detta kursmoment.
-
-<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
 
 
 
@@ -104,6 +80,50 @@ Slides till föreläsningen "[Classes and Objects (PHP) - Inheritance, compositi
     * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
     * [Trait och Interface](guide/kom-igang-med-objektorienterad-programmering-i-php/trait-och-interface)
 
+<!--
+
+1. Objektorienterade principer, fixa en bra läsresurs.
+
+1. (njae) Läs igenom den korta artikeln "[Martin Fowler: Tell Dont Ask](https://martinfowler.com/bliki/TellDontAsk.html)" som ger en insikt i objektorienterat tänkade och hur man delvis kan tänka när man strukturerar sina objekt och var man väljer att lägga sin kod.
+-->
+
+
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 10-14 studietimmar)*
+
+Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna. Uppgifter skall utföras och redovisas.
+
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+
+
+
+### Övningar {#ovningar}
+
+Det finns inga övningar i detta kursmoment.
+
+<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
+
+<!-- Gör egen klass i Symfony? Eller avvakta till nästa kmom? -->
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Lös uppgiften "[Bygg Controller i PHP enligt MVC](uppgift/bygg-controller-i-php-enligt-mvc)".
+
+<!--
+1. Lös uppgiften "[Objektorientering med klasser i PHP](uppgift/objektorientering-med-klasser-i-php)".
+
+<!--
+Borde rita ett klassdiagram enligt UML? Ta vidare kunskap från databaskursen i modellering.
+-->
+
+<!-- Skapa en klass/route som visar dagens namn, quote eller liknande, både som sida och som rest api, bara get, ingen post eller session, eventuellt filer eller databasen sqlite -->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -115,6 +135,17 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denn
 
 Se till att följande frågor besvaras i texten i din rapport:
 
+<!--
+* Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
+-->
+
+<!--
+    * Vad är PHP FIG och finns det standarder i PHP?
+
+* Berätta och förklara MVC med en bild.
+-->
+
+
 * Berätta på vilket sätt du drog nytta, eller inte, av att modellera din lösning med flödesdiagram och psuedokod. Använder du dig av top-down eller bottom-up när du planerar din kod?
 
 * Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.
@@ -124,6 +155,10 @@ Se till att följande frågor besvaras i texten i din rapport:
 * Hur känner du för den kodstruktur som växer fram, tycker du det blev snyggare kod med modulerna router och request och hur vi jobbade med controllers eller vad är din syn på det?
 
 * Vilken är din TIL för detta kmom?
+
+
+
+<!--stop-->
 
 
 

@@ -25,42 +25,7 @@ Det kan alltså kräva att du läser på lite om varje ramverk och deras nisch, 
 
 <!-- more -->
 
-<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
-
-
-
-Uppgifter & Övningar {#uppgifter_ovningar}
--------------------------------------------
-
-*(ca: 10-14 studietimmar)*
-
-Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas.
-
-1. Lös uppgiften "[Analysera PHP ramverk och välj ut ett att använda](uppgift/analysera-php-ramverk-och-valj-ut-ett-att-anvanda)".
-
-
-
-### Övningar {#ovningar}
-
-Följande övningar kan förbereda dig inför uppgiften.
-
-1. I kursrepot under [`example/framework`](https://github.com/dbwebb-se/mvc/tree/main/example/framework) ligger exempelkod som visar hur du kommer igång med de olika ramverken och skapar egna vyer, routes och hur du publicerar till studentservern. Jobba igenom valda exempel, när du har valt vilket ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
-
-<!--
-
-Pusha för övningen, exempelkoden som finns, gör den till en mer enhetlig applikation som skall fungera i varje ramverk och inkludera session, post, form, post/get, exception, , views, url, redirect, flash
-
-Spela in video om hur man jobbar igenom övningen.
-
-Lägg till Slim.
-
--->
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -87,6 +52,43 @@ Läsresurserna är samlade längst ned i detta dokumentet under rubriken "Resurs
 
 
 
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 10-14 studietimmar)*
+
+Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna. Uppgifter skall utföras och redovisas.
+
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+
+
+
+### Övningar {#ovningar}
+
+Följande övningar kan förbereda dig inför uppgiften.
+
+1. I kursrepot under [`example/framework`](https://github.com/dbwebb-se/mvc/tree/main/example/framework) ligger exempelkod som visar hur du kommer igång med de olika ramverken och skapar egna vyer, routes och hur du publicerar till studentservern. Jobba igenom valda exempel, när du har valt vilket ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
+
+<!--
+
+Pusha för övningen, exempelkoden som finns, gör den till en mer enhetlig applikation som skall fungera i varje ramverk och inkludera session, post, form, post/get, exception, , views, url, redirect, flash
+
+Spela in video om hur man jobbar igenom övningen.
+
+Lägg till Slim.
+
+-->
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Lös uppgiften "[Analysera PHP ramverk och välj ut ett att använda](uppgift/analysera-php-ramverk-och-valj-ut-ett-att-anvanda)".
+
+
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -105,6 +107,10 @@ Se till att följande frågor besvaras i texten i din rapport:
 * Vilka är dina viktigaste lärdomar från det ramverket du valde? Fundera gärna på dokumentationen, hur det gick att installera och komma igång och om det krävdes en högs tröskel innan du kunde skapa din första webbsida.
 
 * Vilken är din TIL för detta kmom?
+
+
+
+<!--stop-->
 
 
 

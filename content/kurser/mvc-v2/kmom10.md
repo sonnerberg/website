@@ -22,14 +22,13 @@ Alla delar i detta kursmoment skall utföras individuellt och självständigt.
 
 Upplägget är enligt följande:
 
-* Projekt/applikation (obligatoriskt med optionella krav)
+* Quiz (obligatoriskt)
+* Projekt (obligatoriskt med optionella krav)
 * Redovisning (obligatoriskt)
-* Fristående Rapport (optionell)
-* Quiz (optionell)
 * Videopresentation (optionell)
 
 
-Totalt omfattar kursmoment 07/10 i storleksordningen 20--50 studietimmar.
+Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 
 <!--more-->
 

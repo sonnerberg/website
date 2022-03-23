@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-    "2021-03-17": (A, mos) Första utgåvan.
+    "2022-03-22": "(B, mos) Genomgången inför mvc-v2 och vt22."
+    "2021-03-17": "(A, mos) Första utgåvan."
 ...
 Installera kursens labbmiljö
 ==================================
@@ -15,9 +16,9 @@ Version av PHP {#phpversion}
 
 Labbmiljön bygger på att du har tillgång till en webbserver med PHP och att du har PHP tillgängligt i din terminal.
 
-Det rekommenderas att du använder PHP 7.4 till denna kursen. Eventuellt kan det fungera även med PHP 7.3 och PHP 7.2, men rekommendationen är att uppgradera till 7.4.
+Det rekommenderas att du använder PHP 8.1 till denna kursen. Eventuellt kan det fungera även med PHP 8.0, men rekommendationen är att uppgradera till senaste versionen.
 
-Studentservern kör för tillfället på PHP 7.4, så försök att undvika PHP 8.0 då det eventuellt kan ge dig kompabilitetsproblem när du publicerar till studentservern.
+Här kan du se vilken [version som körs på studentservern](http://www.student.bth.se/~mosstud/test/info.php).
 
 Kika gärna vilka som är [aktiva PHP releaser](https://www.php.net/supported-versions.php).
 
@@ -36,16 +37,16 @@ Så här ser det ut för mig, utskriften hos dig kan skilja beroende av vilka ve
 
 ```
 $ php --version
-PHP 7.4.15 (cli) (built: Feb 12 2021 14:48:10) ( NTS )
+PHP 8.1.4 (cli) (built: Mar 18 2022 18:10:55) (NTS)
 
 $ composer --version
-Composer version 1.10.15 2020-10-13 15:59:09
+Composer version 2.2.9 2022-03-15 22:13:37
 
 $ make --version
 GNU Make 4.2.1
 
 $ git --version
-git version 2.20.1                                 
+git version 2.20.1
 ```
 
 Det är inte nödvändigt att du har exakt samma version av PHP i terminalen som du har i webbservern, men det bör ligga rätt nära för att undvika eventuella bekymmer med att PHP-versionen i terminalen påverkar vilka övriga paket som installeras med pakethanteraren composer.

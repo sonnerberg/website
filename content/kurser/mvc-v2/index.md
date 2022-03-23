@@ -28,6 +28,8 @@ Större ändringar kan komma att ske i materialet.
 Kursintro {#pres}
 ------------------------
 
+**Nedan följer kursintro för 2021, den kommer att uppdateras inför 2022.**
+
 Här är en video som "pratar" dig igenom kursens upplägg och delar av innehållet i detta dokumentet.
 
 [YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Kursintroduktion till kursen mvc med Mikael."]
@@ -102,9 +104,9 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 
 
-### Kmom01: Objektorientering {#kmom01}
+### Kmom01: Ramverk {#kmom01}
 
-To Be Defined.
+Vi börjar med att installera Symfony och bygger en webbplats med en kontroller (C:et i MVC) som ger oss grunden för kursens me-sida som skall innehålla detaljer om dig själv, kursen och dina redovisningstexter. Du använder vyer för att rendera webbsidorna (V:et i MVC).
 
 <!--
 Vi börjar med grunderna i objektorienterad PHP, det blir objekt och klasser med inkapsling, konstruktorer och destruktorer, setters och getters, egenskapade exceptions och vi ser hur man kan lagra ett objekt i sessionen.
@@ -120,7 +122,7 @@ Läs [instruktionen till kursmoment 01](./kmom01).
 
 
 
-### Kmom02: Controller {#kmom02}
+### Kmom02: Objektorientering {#kmom02}
 
 To Be Defined.
 
@@ -150,7 +152,7 @@ Läs [instruktionen till kursmoment 03](./kmom03).
 
 
 
-### Kmom04: Ramverk {#kmom04}
+### Kmom04: XXX {#kmom04}
 
 To Be Defined.
 
@@ -298,6 +300,10 @@ Här kan du se en översikt av hur kurstillfället har valt att strukturera lär
 
 Här finner du även länkar till aktuella video streams och spellistor samt chatter och forum för handledning.
 
+* [Läromaterial vt22, lp4](./laromaterial-vt22lp4)
+
+Arkivet.
+
 * [Läromaterial vt21, lp4](./laromaterial-vt21lp4)
 
 
@@ -307,7 +313,29 @@ Lärarteam och intressenter {#team}
 
 Här kan du hitta detaljer om ett kurstillfälle och se lärarteamet som utför kurstillfället, deras roller och kontaktuppgifter tillsammans med de som "äger" kursen och kurstillfället och vilka studentgrupper som läser kursen samt övriga intressenter till kurstillfället.
 
+* [Lärarteam och intressenter vt22, lp4](./team-vt22lp4)
+
+Arkivet.
+
 * [Lärarteam och intressenter vt21, lp4](./team-vt21lp4)
+
+
+
+Dialog & Samarbete {#samarbete}
+---------------------------------
+
+Kursen främjar att studenter för dialog och samarbeter. Diskutera med studiekollegor kring problem och lösningar på de övningar och uppgifter som finns. Använd de möjligheter som finns inom kursen för att samverka och hjälpa varandra. Tveka inte att starta egna studiegrupper där ni kan stödja varandra.
+
+
+
+Fusk & Disciplinnämnden {#fusk}
+---------------------------------
+
+Läs om skolans syn och hantering av "[Fusk och medveten vilseledning](https://dbwebb.se/kurser/faq/fusk-och-disciplinarende)" samt var gränserna går mellan samarbete och fusk.
+
+> "Hjälp varandra och diskutera, men kopiera inte och skriv all kod/text själv."
+
+Misstanke om fusk anmäls alltid till Discplinnämnden.
 
 
 
@@ -331,7 +359,7 @@ Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [grunderna för bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning-projekt-quiz-rapport-video).
+Det finns ett särskilt dokument som beskriver [grunderna för bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning).
 
 
 

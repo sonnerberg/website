@@ -27,7 +27,7 @@ Du skall nu läsa på om ORM och välja ett ORM att jobba med samt koppla din ap
 
 <!-- more -->
 
-<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -45,35 +45,6 @@ Du kan använda databaserna MySQL, MariaDB eller SQLite för att genomföra uppg
 1. Väljer du SQLite så bör du vara bekant med den databasen sedan tidigare och du vet hur den kan publiceras till studentservern (htmlphp-kursen).
 
 En rekommendation är att i övningarna nedan börja jobba med SQLite och när man är bekväm med att det fungerar så kan man byta över till MySQL/MariaDB då de databaserna kräver lite mer administration och hantering för att komma igång.
-
-
-
-Uppgifter & Övningar {#uppgifter_ovningar}
--------------------------------------------
-
-*(ca: 10-14 studietimmar)*
-
-Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas.
-
-1. Lös uppgiften "[Kom igång med ett ORM i ditt PHP-ramverk](uppgift/kom-igang-med-ett-orm-i-ditt-php-ramverk)".
-
-
-
-### Övningar {#ovningar}
-
-Följande övningar kan förbereda dig inför uppgiften.
-
-1. I kursrepot under [`example/orm`](https://github.com/dbwebb-se/mvc/tree/main/example/orm) ligger exempelkod som visar hur du kommer igång med olika ORM och ramverk. Jobba igenom valda exempel, när du har valt vilket ORM/ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
-
-<!--
-Bygg ut exemplet så de visar mer samt inkludera MySQL och .env.student.
--->
 
 
 
@@ -121,6 +92,37 @@ Läsanvisningarna berör implementationer av fristående ORM som kan användas o
 
 
 
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 10-14 studietimmar)*
+
+Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna. Uppgifter skall utföras och redovisas.
+
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+
+
+
+### Övningar {#ovningar}
+
+Följande övningar kan förbereda dig inför uppgiften.
+
+1. I kursrepot under [`example/orm`](https://github.com/dbwebb-se/mvc/tree/main/example/orm) ligger exempelkod som visar hur du kommer igång med olika ORM och ramverk. Jobba igenom valda exempel, när du har valt vilket ORM/ramverk du tänker jobba med eller testa ett par olika för att utvärdera.
+
+<!--
+Bygg ut exemplet så de visar mer samt inkludera MySQL och .env.student.
+-->
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Lös uppgiften "[Kom igång med ett ORM i ditt PHP-ramverk](uppgift/kom-igang-med-ett-orm-i-ditt-php-ramverk)".
+
+
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -139,6 +141,10 @@ Se till att följande frågor besvaras i texten i din rapport:
 * Vad är din uppfattning om ORM så här långt och relatera gärna till andra sätt att jobba med applikationskod mot databaser?
 
 * Vilken är din TIL för detta kmom?
+
+
+
+<!--stop-->
 
 
 

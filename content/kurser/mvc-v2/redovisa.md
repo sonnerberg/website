@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-03-23": "(B, mos) Uppdaterad inför mvc v2 vt22."
     "2021-03-29": "(A, mos) Ny inför mvc vt21."
 ...
 Resultat och redovisning
@@ -12,60 +13,72 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 
 
 
-Rapport i LaTeX {#latex}
----------------------------------------
-
-Du skall skriva din redovisningstext i ett LaTeX dokument. När du är klar genererar du en pdf-kopia av rapporten och laddar upp på Canvas.
-
-LaTeX är en form av markup där man skriver texten och lägger till hur texten skall formatteras (typsättas) vid utskriften till ett slutligt dokument. Du kan läsa [om LaTeX i Wikibooks](https://en.wikibooks.org/wiki/LaTeX) för att få en kort introduktion till systemet.
-
-Verktyget [OverLeaf](https://www.overleaf.com/) är ett sätt att skriva LaTeX dokument via webbläsaren. Det verktyget erbjuder också en god [manual och lärresurs](https://www.overleaf.com/learn) för en nybörjare till LaTeX.
-
-Det finns en [mall till rapporten](https://www.overleaf.com/read/crczvvdxvwxp
-) som du kan utgå ifrån. Börja med att ta en egen kopia av den mallen och börja skriva.
-
-Vi kallar nu detta dokument för kursrapporten, eller bara "rapporten".
-
-
-
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-Skriv din redovisningstext i rapporten.
+Skriv en redovisningstext och [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från kursmomentet.
 
 Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Skriv ett stycke om totalt cirka 1-2 sidor. Försök väva in frågorna i löpande text. Använd rubriker för att dela in din text.
-
-Det ser bra ut i rapporten om du kan koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare.
+Det ser bra ut om du kan koppla och jämföra (reflektera) dina lärdomar från nuvarande kursmoment mot andra kursmoment, kurser eller andra lärdomar du har sedan tidigare.
 
 Använd gärna referenser, det är bra att öva på det och dessutom blir det en bra samling av läsvärda resurser som du kan ha nytta av även efter kursen.
 
-Här kan du läsa om [tips att skriva bra redovisningstexter](kurser/faq/att-skriva-en-bra-redovisningstext).
+Skriv ett stycke om 15-30 meningar under respektive kursmoment i din webbplats `me/report`.
+
+När du är klar innehåller webbplatsen `me/report` redovisningstexter från samtliga kursmoment.
 
 
 
-Lämna in din redovisning {#submit}
+Ladda upp och publicera din kurskatalog {#repo}
 ---------------------------------------
 
-Gör följande steg för att lämna in din redovisning.
+Ladda upp din kurskatalog med alla dina övningar genom att göra följande kommandon i terminalen.
 
-1. Git repon, se till att du har committat, taggat och pushat.
+```bash
+# Gå till din kurskatalog
+dbwebb publishpure me
+```
 
-1. Gör `dbwebb publish me`.
+Den länken som visas i utskriften av kommandot, är länken till din me-sida. Där kan du se ditt publicerade resultat.
 
-1. Ladda upp en pdf av din rapport till Canvas.
-
-1. På Canvas, lägg en länk till ditt kursrepo på studentservern.
+Rätta eventuella fel som dyker upp. Det som du laddar upp skall vara felfritt.
 
 
 
-Bedömning och betygsättning {#bedom}
+Testa din inlämning {#testa}
 ---------------------------------------
 
-Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att dina uppgifter är utförda enligt instruktionerna.
+Du kan själv testköra delar av rättningsprocessen via följande kommando.
+
+```text
+dbwebb test kmom01
+```
+
+Byt ut kmom01 mot det kursmoment du vill inspektera.
+
+Du kan även testa enskilda uppgifter.
+
+```text
+dbwebb test report
+```
+
+Den som rättar och kontrollerar din inlämning utgår delvis från ovan kommando.
+
+Du kan själv provköra och se samma resultat som rättaren ser. Det är en mycket god idé att alltid testköra sin inlämning på samma sätt som rättaren gör. Du sparar tid genom att själv upptäcka eventuella slarvfel.
+
+
+
+Lämna in på Canvas {#canvas}
+---------------------------------------
+
+Lämna in en länk till din rapport-sida på Canvas. Länken innehåller din studentakronym och på det viset hittar rättaren din inlämning.
+
+Det är bra om du också kopierar in din redovisningstext in i Canvas, det kan vara bra att ha som backup om något händer.
+
+Läraren kommer snabbt kolla igenom din redovisningstext och uppgifterna. Betyg är G (godkänd) eller U/komplettera (komplettera → gör om → gör bättre). Bedömningen baseras på din redovisningstext samt att du har fullgjort kursmomentets uppgifter.
 
 
 

@@ -29,48 +29,7 @@ När vi är klara så kommer vi framförallt att bättre förstå innebörden av
 
 <!-- more -->
 
-<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
-
-
-
-Uppgifter & Övningar {#uppgifter_ovningar}
--------------------------------------------
-
-*(ca: 10-14 studietimmar)*
-
-Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas.
-
-1. Utför uppgiften "[Integrera din applikation med en CI kedja](uppgift/integrera-din-applikation-med-en-ci-kedja)".
-
-1. Utför uppgiften "[Analysera PHP kod ur kvalitetsaspekter](uppgift/analysera-kodkvalitet-i-tre-php-moduler)"
-
-<!--
-Städa så att man jobbar vidare i en och samma katalog samt "färdigställer" sitt Yatzy så det är spelbart.
-
-Om test mot databas använd .env.test
--->
-
-
-
-### Övningar {#ovningar}
-
-Följande övningar kan förbereda dig inför uppgiften.
-
-* I kursrepot under [`example/ci`](https://github.com/dbwebb-se/mvc/tree/main/example/ci) ligger ett kort exempel som ger en översikt till de steg som krävs för att integrera med byggtjänsterna Travis CI och Scrutinizer CI. Eventuellt vill du läsa igenom det innan du påbörjar den större övningen som ligger nedan.
-
-* Artikeln "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1. Du behöver inte utföra det som står i artikeln utan den är mer tänkt som exempel för att visa hur det fungerar så det räcker med att lsäa igenom artikeln och fokusera på Travis och Scrutinizer samt se på de videorna vid behov.
-
-<!-- Eventuellt byt ut ovan äldre artikel. Kanske spela in nya videor eller nåt annat... -->
-
-<!-- Lägg till övning om phpmetrics enligt:
-https://github.com/dbwebb-se/mvc/issues/38
--->
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -110,6 +69,49 @@ Om du känner att du behöver en introduktion till "varför vi sysslar med detta
 
 
 
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 10-14 studietimmar)*
+
+Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna. Uppgifter skall utföras och redovisas.
+
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+
+
+
+### Övningar {#ovningar}
+
+Följande övningar kan förbereda dig inför uppgiften.
+
+* I kursrepot under [`example/ci`](https://github.com/dbwebb-se/mvc/tree/main/example/ci) ligger ett kort exempel som ger en översikt till de steg som krävs för att integrera med byggtjänsterna Travis CI och Scrutinizer CI. Eventuellt vill du läsa igenom det innan du påbörjar den större övningen som ligger nedan.
+
+* Artikeln "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1. Du behöver inte utföra det som står i artikeln utan den är mer tänkt som exempel för att visa hur det fungerar så det räcker med att lsäa igenom artikeln och fokusera på Travis och Scrutinizer samt se på de videorna vid behov.
+
+<!-- Eventuellt byt ut ovan äldre artikel. Kanske spela in nya videor eller nåt annat... -->
+
+<!-- Lägg till övning om phpmetrics enligt:
+https://github.com/dbwebb-se/mvc/issues/38
+-->
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Utför uppgiften "[Integrera din applikation med en CI kedja](uppgift/integrera-din-applikation-med-en-ci-kedja)".
+
+1. Utför uppgiften "[Analysera PHP kod ur kvalitetsaspekter](uppgift/analysera-kodkvalitet-i-tre-php-moduler)"
+
+<!--
+Städa så att man jobbar vidare i en och samma katalog samt "färdigställer" sitt Yatzy så det är spelbart.
+
+Om test mot databas använd .env.test
+-->
+
+
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -128,6 +130,10 @@ Se till att följande frågor besvaras i texten i din rapport:
 * Något annat som du anser är värt att nämna, "För övrigt anser jag att..."?
 
 * Vilken är din TIL för detta kmom?
+
+
+
+<!--stop-->
 
 
 

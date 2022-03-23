@@ -30,7 +30,7 @@ Liknande begrepp använder vi i enhetstestning. Vi ser varje klass som en enhet 
 
 [FIGURE src=image/snapvt18/code-coverage-detail.png?w=w3 caption="Detaljerad kodtäckning rad för rad i en enhet (klass)."]
 
-<small><i>Detta är instruktionen för kursmomentet och omfattar cirka **20 studietimmar**. Fokus ligger på uppgifter som du skall lösa och redovisa. För att lösa uppgifterna behöver du normalt jobba igenom övningar och läsanvisningar för att skaffa dig rätt kunskap och förståelse av uppgiftens alla delar. Läs igenom hela kursmomentet innan du börjar jobba.</i></small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -44,33 +44,6 @@ Installera följande som en del av din labbmiljö.
 1. Installera [Xdebug](labbmiljo/xdebug) för att kunna köra enhetstester med kodtäckning på din lokala maskin.
 
     1. Om du är på Mac kan du vara behjälpt av att installera "PHP i terminalen" och "Xdebug" via pakethanterare Brew, för detaljer se "[Installera Xdebug på Mac OS med XAMPP/brew](t/8514)".
-
-
-
-Uppgifter & Övningar {#uppgifter_ovningar}
--------------------------------------------
-
-*(ca: 10-14 studietimmar)*
-
-Uppgifter skall utföras och redovisas, övningar är träning inför uppgifterna.
-
-
-
-### Uppgifter {#uppgifter}
-
-Följande uppgifter skall utföras och resultatet skall redovisas.
-
-1. Lös uppgiften "[Enhetstesta dina klasser med PHPUnit](uppgift/enhetstesta-dina-klasser-med-phpunit)".
-
-
-
-### Övningar {#ovningar}
-
-<!-- Det finns inga övningar i detta kursmoment. -->
-
-Jobba igenom övningarna, de förbereder dig inför uppgifterna.
-
-1. Det finns en tutorial "[Get going with phpunit](https://github.com/dbwebb-se/mvc/tree/main/example/phpunit)" i ditt kursrepo under `example/phpunit` som hjälper dig att komma igång med phpunit och enhetstestning. Jobba igenom den och försök nå 100% kodtäckning och samtidigt lära dig grunderna i enhetstestning.
 
 
 
@@ -134,6 +107,35 @@ Slides till föreläsningen "[Introduktion till området 'Software Unit Testing'
 
 
 
+Övningar & Uppgifter  {#ovningar_uppgifter}
+-------------------------------------------
+
+*(ca: 10-14 studietimmar)*
+
+Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna. Uppgifter skall utföras och redovisas.
+
+Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+
+
+
+### Övningar {#ovningar}
+
+<!-- Det finns inga övningar i detta kursmoment. -->
+
+Jobba igenom övningarna, de förbereder dig inför uppgifterna.
+
+1. Det finns en tutorial "[Get going with phpunit](https://github.com/dbwebb-se/mvc/tree/main/example/phpunit)" i ditt kursrepo under `example/phpunit` som hjälper dig att komma igång med phpunit och enhetstestning. Jobba igenom den och försök nå 100% kodtäckning och samtidigt lära dig grunderna i enhetstestning.
+
+
+
+### Uppgifter {#uppgifter}
+
+Följande uppgifter skall utföras och resultatet skall redovisas.
+
+1. Lös uppgiften "[Enhetstesta dina klasser med PHPUnit](uppgift/enhetstesta-dina-klasser-med-phpunit)".
+
+
+
 Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
@@ -154,6 +156,10 @@ Se till att följande frågor besvaras i texten i din rapport:
 * Fundera över om du anser att testbar kod är något som kan identifiera "snygg och ren kod".
 
 * Vilken är din TIL för detta kmom?
+
+
+
+<!--stop-->
 
 
 
