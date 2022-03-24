@@ -11,6 +11,8 @@ Tabeller i mobila enheter
 
 Tabeller används i stor utsträckning i affärssystem och andra administrationsgränssnitt. Ofta är dessa applikationer för desktop användare, men med tanke på i hur stor utsträckning mobila enheter används är det bra om tabeller även designas för små enheter. Det stora problemet med tabeller är ofta att det är mycket data på liten yta, som blir än mindre på en mobil enhet. Vi ska i denna övning titta på två sätt för att designa tabeller för mobila enheter.
 
+Vi kommer avsluta övningen med att titta på hur vi skapar tabeller i React Native precis som vi gjorde med formulären i övningen "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular-v2)".
+
 
 
 <!--more-->
@@ -19,6 +21,7 @@ Tabeller används i stor utsträckning i affärssystem och andra administrations
 
 En tabell att börja med {#tabell}
 --------------------------------------
+
 Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet. Det finns inte tillräckligt mycket plats för att visa tabellen utan radbrytningar i cellerna.
 
 <table>
@@ -39,7 +42,7 @@ Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet.
 </tbody>
 </table>
 
-Jag har gjort i ordning en enkel hemsida som endast innehåller samma `main.container`, som vi använder i tidigare kursmoment och tabellen. Om vi tittar på denna sida i mobilen ser vi ännu mindre av tabellen. Vi noterar även att det nu går att scrolla hela sidan i sidled något vi vill försöka undvika på mobiler då det försvårar navigation. Så målet för de två designs vi gör är **inga radbrytningar i celler** och **tabellen får inte vara bredare än skärmen på mobila enheter**.
+Jag har gjort i ordning en enkel hemsida med en tabell och tittar vi på denna sida i mobilen ser vi ännu mindre av tabellen. Vi noterar även att det nu går att scrolla hela sidan i sidled något vi vill försöka undvika på mobiler då det försvårar navigation. Så målet för de två designs vi gör är **inga radbrytningar i celler** och **tabellen får inte vara bredare än skärmen på mobila enheter**.
 
 [FIGURE src=/image/webapp/screenshot-table-no-style.png?w=c7 caption="Tabellen i en mobil enhet."]
 
@@ -47,6 +50,7 @@ Jag har gjort i ordning en enkel hemsida som endast innehåller samma `main.cont
 
 Metod 1: Scroll i sidled för tabellen {#sidled}
 --------------------------------------
+
 Vi börjar med radbrytningarna då det är enkelt att åtgärda. Vi definierar klassen `.table` och använder oss av möjligheten för att skriva 'nested' SASS kod, se [dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_rules) för mer information. Vi använder attributet `white-space` med värdet `nowrap`, detta gör att vi inte får radbrytningar i `th` och `td` elementen.
 
 ```scss
@@ -287,7 +291,7 @@ Tabellen `table.table.table-striped.table-stacked` ser nu ut som nedanstående t
 
 
 
-Bonus {#bonus}
+Mellanspel {#bonus}
 --------------------------------------
 Istället för att visa all data i tabellen kan du som utvecklare/designer göra ett medvetet val att bara visa en del av data. Att helt enkelt välja att fokusera på de kolumner som är viktiga för precis denna vy istället för att alltid bara göra en spegling av databasen.
 
@@ -295,10 +299,12 @@ Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagers
 
 
 
+En tabell i React Native {#rn}
+--------------------------------------
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt som underlättar när vi gör responsiv design för mobila enheter.
 
-Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7318) om denna artikeln.
-
-Exempelprogrammet från denna övning finns i kursrepot [example/sass-examples](https://github.com/dbwebb-se/webapp/tree/master/example/sass-examples) och i `example/sass-examples`.
+Vi har dessutom tittat på hur vi åstadkommar bra tabeller i React Native.
