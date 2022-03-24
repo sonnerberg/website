@@ -21,6 +21,10 @@ Vi ska i detta kursmomentet ta en titt på hur vi utvecklar appar med hjälp av 
 
 <!--more-->
 
+Såhär kan det se ut när vi är klara med kmom01:
+
+[YOUTUBE src=MqZQssrFMDQ width=630 caption="Lager appen del 1."]
+
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>

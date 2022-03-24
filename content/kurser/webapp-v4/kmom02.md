@@ -21,6 +21,14 @@ Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och vis
 
 <!--more-->
 
+
+
+Såhär kan det se ut när vi är klara med kmom02:
+
+[YOUTUBE src=CWmLf0kbFjk width=630 caption="Lager appen del 2."]
+
+
+
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
@@ -62,8 +70,6 @@ Ta en översiktlig titt på [TypeScript](https://www.typescriptlang.org/) manual
 Gör följande övningar för att träna inför uppgifterna.
 
 1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
-
-<!-- 1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `me/kmom02/buttons`. -->
 
 1. Gör övningen "[Routing och navigation i React](kunskap/routing-och-navigation-i-react)".
 
