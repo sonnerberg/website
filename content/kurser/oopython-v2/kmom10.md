@@ -183,7 +183,7 @@ Redovisning {#redovisning}
 
     3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? På en skala 1-10, vilket betyg ger du kursen?
 
-1. Kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i projektet. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas. Visa ditt ansikte och en giltig ID handling, t.ex. körkot eller pass, i videon.
+1. Kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i projektet. Ladda upp videon i din inlämning på Canvas. Visa ditt ansikte och en giltig ID handling, t.ex. körkot eller pass, i videon. **OBS** Ladda inte upp er video på Youtube, studenter har fått sina kanaler blockerade på youtube för att de laddade upp video som visar ID.
 
 
 <!-- 1. <u><b>Distansprogram- och Kurspaket studenter</b></u> kompletterar redovisningstexten med att spela in en kort video där de visar kod och berättar om de tekniska implementationerna de gjorde i projektet. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas. -->
