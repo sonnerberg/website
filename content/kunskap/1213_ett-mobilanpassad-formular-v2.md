@@ -433,11 +433,53 @@ expo install @react-native-community/datetimepicker
 
 Sedan skapar vi på samma sätt som tidigare en egen komponent för att kapsla in `state`.
 
+```javascript
+// Del av components/DeliveryForm.tsx
+import DateTimePicker from '@react-native-community/datetimepicker';
+
+function DateDropDown(props) {
+    const [dropDownDate, setDropDownDate] = useState<Date>(new Date());
+
+    return (
+        <DateTimePicker
+            onChange={(event, date) => {
+                setDropDownDate(date);
+
+                props.setDelivery({
+                    ...props.delivery,
+                    delivery_date: date.toLocaleDateString('se-SV'),
+                });
+            }}
+            value={dropDownDate}
+        />
+    );
+}
+```
+
+Vi skapar först en variabel som vi har som en del av `state`, vi gör detta då Lager-API vill ha datum som en sträng på formatet "YYYY-MM-DD", men `DateTimePicker` vill ha ett JavaScript `Date` objekt. Varje gång vi ändrar i vår Picker sätter vi både vår `state`-variabel och ändrar i vårt `props.delivery` objekt. Vi använder `date.toLocaleDateString('se-SV')` för att få ut en sträng på rätt format för att sedan kunna spara i API:t.
+
 
 
 ### Att göra en inleverans {#function}
 
+Den sista delen av övningen är den funktion som gör själva inleveransen när vi trycker på knappen för inleverans.
 
+```javascript
+    async function addDelivery() {
+        await deliveryModel.addDelivery(delivery);
+
+        const updatedProduct = {
+            ...currentProduct,
+            stock: (currentProduct.stock || 0) + (delivery.amount || 0)
+        };
+
+        await productModel.updateProduct(updatedProduct);
+
+        navigation.navigate("List", { reload: true });
+    }
+```
+
+I funktionen utnyttjar vi vår struktur från tidigare kmom och använder våra modeller i frontend. Vi utnyttjar återigen spread-operatorn `...` och skapar ett objekt med rätt uppdaterad lagersaldo. Sedan navigerar vi tillbaka till "List" vyn.
 
 
 
