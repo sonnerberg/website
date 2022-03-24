@@ -205,13 +205,13 @@ Ett tips är att kopiera tabellen nedan till ett eget dokument så att du kan se
 +----------------+------------+------------+-------+------------+-----------+-----------------------------------------------------+-------------------------+----------+--------------+
 | NULL           | NULL       | NULL       |  NULL |       NULL |           | Niltilapia (Oreochomis niloticus)                   | ciklider (Cichlidae)    |        6 | 21-36        |
 | Hönshuset/304  | NULL       | NULL       |  NULL |       NULL |           | NULL                                                | NULL                    |     NULL | NULL         |
-| Svinstian/202  | NULL       | NULL       |  NULL |       NULL |           | NULL                                                | NULL                    |     NULL | NULL         |
 | Ladan/102      | 2021-10-01 | 2022-04-01 | 11000 |         23 |           | Tilapia (Oreochromis sp)                            | ciklider (Cichlidae)    |        6 | 21-36        |
 | Svinstian/201  | 2021-11-15 | 2022-05-15 | 24400 |         20 | Låg temp  | Clariasmal (afrikansk ålmal) (Clarias gariepinus)   | clariidae (Clariidae)   |        6 | 21-34        |
+| Svinstian/202  | 2021-11-15 | 2022-05-15 | 16500 |         24 |           | Clariasmal (afrikansk ålmal) (Clarias gariepinus)   | clariidae (Clariidae)   |        6 | 21-34        |
 | Ladan/101      | 2021-10-01 | 2022-10-01 |  5500 |         24 | Hög temp  | Regnbåge (Onchorhynchus mykiss)                     | laxfiskar (Salmonidae)  |       12 | 10-20        |
 | Hönshuset/303  | 2021-12-01 | 2022-12-01 |  2300 |         18 |           | Sibirisk stör (Acipenser baeri)                     | störar (Acipenseridae)  |       12 | 1-26         |
 +----------------+------------+------------+-------+------------+-----------+-----------------------------------------------------+-------------------------+----------+--------------+
-7 rows in set (0.001 sec)
+7 rows in set (0.000 sec)
 ```
 
 1. I terminalklienten, skapa kommandot `report` som visar ovan rapport.
