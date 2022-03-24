@@ -29,12 +29,14 @@ Du kan installera och använda ramverket Symfony för att skapa en controller oc
 
 
 
-<!--
 Introduktion och förberedelse {#intro}
 -----------------------
 
 Följande steg hjälper dig att komma igång med uppgiften.
--->
+
+* Om du behöver hjälp med Git och GitHub så kikar du på videoserien "[Git, GitHub and GitLab - Learn and practice](https://www.youtube.com/playlist?list=PLEtyhUSKTK3iTFcdLANJq0TkKo246XAlv)".
+
+* Du bör ha jobbat igenom övningen "[Installera och bygga en webbapplikation i Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony)". Den ger dig grunden för att lösa uppgiften.
 
 
 
