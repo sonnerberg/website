@@ -217,11 +217,225 @@ Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots ol
 Ett formulär i React Native {#rn}
 --------------------------------------
 
-När vi bygger ett formulär i React Native är det tre saker vi vill få på plats. Formulärfält för att fylla i data, ett objekt som en del av `state` som håller koll på data i fälten och en funktion som tar hand om att skicka data till vårt API.
+När vi bygger ett formulär i React Native är det tre saker vi vill få på plats. Formulärfält för att fylla i data, ett objekt som en del av `state` som håller koll på data i fälten och en funktion som tar hand om att skicka data till vårt API. Så låt oss börja med formulärfälten.
 
+[INFO]
+Koden som skrivs i denna övning är inte fullständig och vissa delar behövs fyllas i av er som studenter i uppgiften "[Lager appen del 3](uppgift/lager-appen-del-3-v3)".
+[/INFO]
+
+Som en del av React Natives Core Components finns [TextInput](https://reactnative.dev/docs/textinput). Vi kommer använda den för text och siffror och sedan kommer vi installera två olika sorters pickers för att ta hand om en dropdown och en datum väljare.
+
+Precis som för Plocklista-vyn i kmom02 vill vi lägga till en ny vy i vår Tab-navigation. Denna nya vy innehåller i sin tur en StackNavigation precis som i kmom02.
+
+```javascript
+// components/Deliveries.tsx
+
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import DeliveriesList from './DeliveriesList';
+import DeliveryForm from './DeliveryForm';
+
+const Stack = createNativeStackNavigator();
+
+export default function Deliveries() {
+    return (
+        <Stack.Navigator initialRouteName="List">
+            <Stack.Screen name="List" component={DeliveriesList} />
+            <Stack.Screen name="Form" component={DeliveryForm} />
+        </Stack.Navigator>
+    );
+};
+```
+
+I Deliveries-komponenten vill lista alla tidigare inleveranser ungefär som vi gjort tidigare, med den skillnaden att vi inte behöver kunna gå till en detalj-vy och se mer om inleveranser. Däremot vill vi ha en knapp som tar oss till inleverans-formuläret.
+
+```javascript
+// del av components/DeliveriesList.tsx
+
+return (
+    <View style={{...Base.base}}>
+        <Text style={{ ...Typography.header2 }}>Inleveranser</Text>
+        {listOfDeliveries}
+        <Button
+            title="Skapa ny inleverans"
+            onPress={() => {
+                navigation.navigate('Form');
+            }}
+        />
+    </View>
+);
+```
+
+
+
+### Formulär-komponent {#form-component}
+
+Vi skapar nu vår formulär komponent `DeliveryForm`. Vi börjar ganska enkelt med bara ett fält för att kunna fylla i kommentaren.
+
+Nedan importerar vi först de olika hooks, Core Components, style och ett interface som behövs. Vi skapar sedan det objekt vi ska använda för att hålla den inleverans vi håller på att skapa i formuläret i `state`. Vi använder oss av möjligheten för att använda [Partial](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype), det gör att vi inte behöver ett fullständigt objekt av typen `Delivery`. Det gör att vi i detta fallet kan fylla på objektet med data under tiden som användare fyller i.
+
+```javascript
+// components/DeliveryForm.tsx
+import { useState } from 'react';
+import { ScrollView, Text, TextInput, Button } from "react-native";
+import { Base, Typography, Forms } from '../styles';
+
+import Delivery from '../interfaces/delivery';
+
+export default function DeliveryForm({ navigation }) {
+    const [delivery, setDelivery] = useState<Partial<Delivery>>({});
+
+    return (
+        <ScrollView style={{ ...Base.base }}>
+            <Text style={{ ...Typography.header2 }}>Ny inleverans</Text>
+
+            <Text style={{ ...Typography.label }}>Kommentar</Text>
+            <TextInput
+                style={{ ...Forms.input }}
+                onChangeText={(content: string) => {
+                    setDelivery({ ...delivery, comment: content})
+                }}
+                value={delivery?.comment}
+            />
+
+            <Button
+                title="Gör inleverans"
+                onPress={() => {
+                    console.log(delivery);
+                }}
+            />
+        </ScrollView>
+    );
+};
+```
+
+Vi tar nu en titt på formulärfältet för kommentaren. Vi sätter värdet på formulär fältet till att spegla värdet som finns i `state`. Vi använder [Optional Chaining operatorn ?.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) för att kolla om `delivery` är definierat innan vi efterfrågar `comment` attributet. Detta gör att vi inte får problem med `undefined`. Varje gång vi ändrar texten anropas `onChangeText`-eventhanteraren. Den funktionen får argumentet `content`, som är innehållet av formulärfältet. Vi vill nu ändra i `delivery.comment`, men för att `setDelivery` förväntar sig hela objektet använder vi spread operatorn `...` och skriver sedan över `comment` attributet genom att lägga till den i slutet av objektet.
+
+```javascript
+<TextInput
+    style={{ ...Forms.input }}
+    onChangeText={(content: string) => {
+        setDelivery({ ...delivery, comment: content})
+    }}
+    value={delivery?.comment}
+/>
+```
+
+Stilen vi vill ha på fältet har jag definierat i en ny stil-fil, kallat `Forms` som innehåller nedanstående. Kom ihåg att importera och exportera `Forms` i `style/index.js`.
+
+```javascript
+export const input = {
+    fontSize: 20,
+    marginBottom: 28,
+    borderWidth: 1,
+    padding: 10,
+    borderColor: "#ccc",
+    borderRadius: 3,
+};
+```
+
+
+
+### Numerisk data {#numeric}
+
+Vi fortsätter med formulärfältet för att lägga in antal av varorna som vi gör en inleverans på. Den stora skillnaden på textfältet ovan är vi sätter `keyboardType="numeric`, detta motsvarar det vi gjorde ovan när vi satte `<input type="number">`. Sedan sätter vi återigen värdet på fältet genom att spegla `delivery`-objektet. Här använder vi funktionen `toString()` (som finns på alla objekt i JavaScript) för att göra om siffran till en sträng för att kunna visa upp den i fältet. I `onChangeText` gör vi sedan tvärtom att vi förvandlar strängen vi får in till en siffra med `parseInt(content)`.
+
+```javascript
+<Text style={{ ...Typography.label }}>Antal</Text>
+<TextInput
+    style={{ ...Forms.input }}
+    onChangeText={(content: string) => {
+        setDelivery({ ...delivery, amount: parseInt(content) })
+    }}
+    value={delivery?.amount?.toString()}
+    keyboardType="numeric"
+/>
+```
+
+
+### Dropdown {#dropdown}
+
+För att underlätta för våra användare att välja en produkt använder vi oss av en dropdown där vi visar upp produkternas namn. Vi kommer använda oss ett paket för att hantera detta och den installeras på följande sätt.
+
+```shell
 expo install @react-native-picker/picker
+```
 
+Jag har valt att kapsla in dropdownen/pickern i en egen fristående komponent då det skapar lite bättre struktur och vi kan hålla pickerns state för sig själv. Jag har valt att döpa den till `ProductDropDown`. Vi skickar med tre attribut `props` med till komponenten då vi vill kunna påverka `delivery` objektet. `setCurrentProduct` är en `useState` funktion som jag definierar som `const [currentProduct, setCurrentProduct] = useState<Partial<Product>>({});` i min `DeliveryForm`-komponent. Vi använder den för att sätta produkten som väljs, så att när vi gör inleveransen sätter vi även en hel produkt som `currentProduct` för att underlätta när vi vid ett senare tillfälle ska öka produktens lagersaldo.
+
+```javascript
+<Text style={{ ...Typography.label }}>Produkt</Text>
+<ProductDropDown
+    delivery={delivery}
+    setDelivery={setDelivery}
+    setCurrentProduct={setCurrentProduct}
+/>
+```
+
+Låt oss nu ta en titt på `ProductDropDown`-komponenten.
+
+```javascript
+// del av components/DeliveryForm.tsx
+
+import { Picker } from '@react-native-picker/picker';
+import productModel from "../models/products";
+
+function ProductDropDown(props) {
+    const [products, setProducts] = useState<Product[]>([]);
+    let productsHash: any = {};
+
+    useEffect(async () => {
+        setProducts(await productModel.getProducts());
+    }, []);
+
+    const itemsList = products.map((prod, index) => {
+        productsHash[prod.id] = prod;
+        return <Picker.Item key={index} label={prod.name} value={prod.id} />;
+    });
+
+    return (
+        <Picker
+            selectedValue={props.delivery?.product_id}
+            onValueChange={(itemValue) => {
+                props.setDelivery({ ...props.delivery, product_id: itemValue });
+                props.setCurrentProduct(productsHash[itemValue]);
+            }}>
+            {itemsList}
+        </Picker>
+    );
+}
+```
+
+Jag har `ProductDropDown`-komponenten i filen `DeliveryFrom.tsx`, om man vill lägga den i en egen fil går det lika bra, men då behövs några importer till. I ovanstående kodexempel importerar vi först `Picker`-komponenten och Produkt-modellen. Vi hämtar sedan alla produkter från Lagret. Vi skapar en `itemsList` som innehåller de val vi vill ha i dropdownen och ett `productsHash` objekt som innehåller alla produkter där index är produkt-id. Vi kommer använda `productsHash`-objektet tillsammans med `setCurrentProduct` funktionen vi skickade med som en `props` till komponenten.
+
+I nedanstående kod sätter vi först värdet på dropdownen med `product_id` från `props`. Varje gång vi ändrar värde i dropdownen vill vi att två saker ska hända. Först sätter vi `product_id` attributet på samma sätt som för de andra fälten och vi utnyttjar sedan `props.setCurrentProduct` för att tilldela hela produkt objektet till `currentProduct` i `DeliveryForm`-komponenten. Slutligen skriver vi ut alla valen med hjälp av `itemsList`-variabeln.
+
+```javascript
+    <Picker
+        selectedValue={props.delivery?.product_id}
+        onValueChange={(itemValue) => {
+            props.setDelivery({ ...props.delivery, product_id: itemValue });
+            props.setCurrentProduct(productsHash[itemValue]);
+        }}>
+        {itemsList}
+    </Picker>
+```
+
+
+
+### Datum-väljare {#date-picker}
+
+På samma sätt som för `Picker` installerar vi en väljare för datum med följande kommando:
+
+```shell
 expo install @react-native-community/datetimepicker
+```
+
+Sedan skapar vi på samma sätt som tidigare en egen komponent för att kapsla in `state`.
+
+
+
+### Att göra en inleverans {#function}
 
 
 
