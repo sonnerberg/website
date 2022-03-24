@@ -72,6 +72,7 @@ Vi vill börja med att rita ut en rubrik och sedan en lista med alla ordrar som 
 ```javascript
 import { useState, useEffect } from 'react';
 import { View, Text, Button } from "react-native";
+import config from "./../config/config.json";
 
 export default function OrderList({ navigation }) {
     const [allOrders, setAllOrders] = useState([]);
