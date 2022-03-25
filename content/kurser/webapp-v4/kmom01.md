@@ -7,14 +7,6 @@ revision:
 kmom01: Vår första React Native app
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**.
-
-Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
-
-[/WARNING]
-
 Vi ska i detta kursmomentet ta en titt på hur vi utvecklar appar med hjälp av ramverken React Native och Expo. Vi tar en titt på båda ramverken och hur vi utvecklar med hjälp av TypeScript i React Native. Dessutom introduceras Lager-API:t som är med oss i kmom01-kmom06 och hur vi hämtar data från det API:t.
 
 
@@ -73,7 +65,7 @@ För att förstå ett viktigt begrepp inom JavaScript-ramverk komponenter är ar
 
 ### Video  {#video}
 
-1. Det finns en [videoserie](https://youtube.com/playlist?list=PLKtP9l5q3ce8Akmp6hSW78cDuHHNylpRG) kopplat till kursen, titta på videos som börjar på 0 och 1.
+1. Det finns en [videoserie](https://youtube.com/playlist?list=PLKtP9l5q3ce8Akmp6hSW78cDuHHNylpRG) kopplat till kursen, titta på videos som börjar på 1.
 
 Dessutom är detta en bra introduktion till JavaScript ramverket React:
 
@@ -134,7 +126,7 @@ Se till så att en länk till ditt GitHub-repo ingår som en del av din inlämni
 
 Emil visar i nedanstående video hur man gör en inlämning i webapp kursen.
 
-
+[YOUTUBE src=vgMwce6zhVs width=630 caption="En inlämning i webapp"]
 
 
 

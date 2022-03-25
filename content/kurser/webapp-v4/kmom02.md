@@ -7,14 +7,6 @@ revision:
 kmom02: Struktur, struktur, struktur
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**.
-
-Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
-
-[/WARNING]
-
 Vi tar en titt på vilka begränsningar och utmaningar man står inför som användare av en mobil enhet. Vi fortsätter med vår applikation från kmom01 där vi ska lägga till en plocklista vy.
 
 Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och visa information i JSON-filer.
