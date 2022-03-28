@@ -71,7 +71,7 @@ Ta en titt på dokumentationen för [Core Component TextInput](https://reactnati
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". Spara eventuella testfiler i `me/kmom03/formular`.
+1. Läs igenom artikeln i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular-v2)". Spara eventuella testfiler i `me/kmom03/formular`.
 
 
 
