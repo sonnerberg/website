@@ -283,8 +283,10 @@ Struktur för vår styling {#styling}
 
 Den sista delen i denna övningen är att strukturera upp styling. Just nu är det spritt ut över hela applikation och vi har säkert redan skrivit samma styling kod ett flera antal gånger. Vi kommer utnyttja möjligheten för att importera och exportera JavaScript filer till en `index.js`.
 
+Först skapa en katalog `styles` och i den ligger du en fil `index.js` som du fyller med nedanstående innehåll.
+
 ```javascript
-import * as Base from './base.js';
+import * as Base from './base';
 import * as Typography from './typography';
 
 export { Base, Typography };
@@ -293,23 +295,12 @@ export { Base, Typography };
 Vi kan nu i våra komponenter importera all stil med `import { Base, Typography } from '../styles';` sedan kan vi använda både `Base` och `Typography` i våra komponenter på följande sätt.
 
 ```javascript
-<Text style={{...Typography.header2}}>Lagerförteckning</Text>
+<Text style={Typography.header2}>Lagerförteckning</Text>
 ```
 
-I ovanstående kodexempel använder vi en rubrik på nivå 2 ungefär som ett `<h2>`-element som vi är vana vid från HTML. Vi använder oss av [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) i kodexemplet ovan `{...Typography.header2}`. Spread Operator kan användas på både arrayer och objekt. För arrayer delas varje element ut som argument som en funktion, så `...[1, 2, 3] => 1, 2, 3`. För ett objekt spridas nyckel-värde paren ut på följande sätt:
+I ovanstående kodexempel använder vi en rubrik på nivå 2 ungefär som ett `<h2>`-element som vi är vana vid från HTML.
 
-```javascript
-let person = {
-    name: "Emil",
-    age: 35,
-};
-
-let concatenatedPerson = {...person, lastName: "Folino"};
-
-// secondPerson: {name: "Emil", age: 35, lastName: "Folino"}
-```
-
-I `styles/typography.js` har vi definierat de olika stilarna vi vill ha för vår applikation.
+I `styles/typography.js` har vi definierat de olika stilarna vi vill ha för vår applikation. Det förväntas att ni skapar `styles/base.js` själva, ett förslag är att använda attributen från kmom01.
 
 ```javascript
 export const header1 = {

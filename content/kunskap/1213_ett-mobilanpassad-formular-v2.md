@@ -253,8 +253,8 @@ I Deliveries-komponenten vill lista alla tidigare inleveranser ungefär som vi g
 // del av components/DeliveriesList.tsx
 
 return (
-    <View style={{...Base.base}}>
-        <Text style={{ ...Typography.header2 }}>Inleveranser</Text>
+    <View style={Base.base}>
+        <Text style={Typography.header2}>Inleveranser</Text>
         {listOfDeliveries}
         <Button
             title="Skapa ny inleverans"
@@ -293,7 +293,7 @@ export default function DeliveryForm({ navigation }) {
             <TextInput
                 style={{ ...Forms.input }}
                 onChangeText={(content: string) => {
-                    setDelivery({ ...delivery, comment: content})
+                    setDelivery({ ...delivery, comment: content })
                 }}
                 value={delivery?.comment}
             />
@@ -309,7 +309,9 @@ export default function DeliveryForm({ navigation }) {
 };
 ```
 
-Vi tar nu en titt på formulärfältet för kommentaren. Vi sätter värdet på formulär fältet till att spegla värdet som finns i `state`. Vi använder [Optional Chaining operatorn ?.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) för att kolla om `delivery` är definierat innan vi efterfrågar `comment` attributet. Detta gör att vi inte får problem med `undefined`. Varje gång vi ändrar texten anropas `onChangeText`-eventhanteraren. Den funktionen får argumentet `content`, som är innehållet av formulärfältet. Vi vill nu ändra i `delivery.comment`, men för att `setDelivery` förväntar sig hela objektet använder vi spread operatorn `...` och skriver sedan över `comment` attributet genom att lägga till den i slutet av objektet.
+Vi tar nu en titt på formulärfältet för kommentaren. Vi sätter värdet på formulär fältet till att spegla värdet som finns i `state`. Vi använder [Optional Chaining operatorn ?.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) för att kolla om `delivery` är definierat innan vi efterfrågar `comment` attributet. Detta gör att vi inte får problem med `undefined`. Varje gång vi ändrar texten anropas `onChangeText`-eventhanteraren. Den funktionen får argumentet `content`, som är innehållet av formulärfältet.
+
+Vi vill nu ändra i `delivery.comment`, men för att `setDelivery` förväntar sig hela objektet använder vi spread operatorn `...` och skriver sedan över `comment` attributet genom att lägga till den i slutet av objektet.
 
 ```javascript
 <TextInput
@@ -319,6 +321,19 @@ Vi tar nu en titt på formulärfältet för kommentaren. Vi sätter värdet på 
     }}
     value={delivery?.comment}
 />
+```
+
+Vi använder oss av [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) i kodexemplet ovan `{ ...delivery, comment: content }`. Spread Operator kan användas på både arrayer och objekt. För arrayer delas varje element ut som argument som en funktion, så `...[1, 2, 3] => 1, 2, 3`. För ett objekt spridas nyckel-värde paren ut på följande sätt:
+
+```javascript
+let person = {
+    name: "Emil",
+    age: 35,
+};
+
+let concatenatedPerson = {...person, lastName: "Folino"};
+
+// secondPerson: {name: "Emil", age: 35, lastName: "Folino"}
 ```
 
 Stilen vi vill ha på fältet har jag definierat i en ny stil-fil, kallat `Forms` som innehåller nedanstående. Kom ihåg att importera och exportera `Forms` i `style/index.js`.

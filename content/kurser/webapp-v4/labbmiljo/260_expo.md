@@ -10,6 +10,7 @@ Vi installerar `expo-cli` som ett globalt npm-paket i vår terminal. Vi installe
 ```shell
 npm install --global expo-cli
 ```
+
 [INFO]
 När du kör detta kommando kan det hända att du får ganska många varningar om paket som är föråldrade (deprecated) eller utgör en säkerhetsrisk (vulnerabilities). Tyvärr är det så med Expo då det beror på väldigt många andra paket.
 [/INFO]
