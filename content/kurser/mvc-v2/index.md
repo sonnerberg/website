@@ -28,11 +28,9 @@ Större ändringar kan komma att ske i materialet.
 Kursintro {#pres}
 ------------------------
 
-**Nedan följer kursintro för 2021, den kommer att uppdateras inför 2022.**
-
 Här är en video som "pratar" dig igenom kursens upplägg och delar av innehållet i detta dokumentet.
 
-[YOUTUBE src="jJZ7pQGeaOI" width=700 caption="Kursintroduktion till kursen mvc med Mikael."]
+[YOUTUBE src="sIcNSzkR82o" width=700 caption="Kursintroduktion till kursen mvc v2."]
 
 
 
