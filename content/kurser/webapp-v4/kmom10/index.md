@@ -38,6 +38,8 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
+<!-- TODO: Anpassa redovisningstexten för varje krav. -->
+
 1. På din [redovisningssida](./../redovisa), skriv följande:
 
     1. För varje krav du implementerat skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
