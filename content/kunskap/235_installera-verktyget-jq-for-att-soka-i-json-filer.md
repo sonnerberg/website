@@ -1,7 +1,10 @@
 ---
-author: mos
+author:
+    - mos
+    - efo
 category: webbprogrammering
 revision:
+    "2022-03-29": (C, efo) Uppdaterade af läkn.
     "2016-10-18": (B, mos) Fel i exempel om hitta sista länet.
     "2015-11-23": (A, mos) Första utgåvan inför kurs webapp.
 updated: "2015-11-23 16:06:17"
@@ -73,10 +76,10 @@ Det finns ett inlägg i forumet som visar hur jag [installerar Chocolatey och jq
 Använd verktyget vid terminalen {#terminalen}
 --------------------------------------
 
-När du installerat verktyget behöver du en JSON-fil för att komma igång. Här är en [JSON-fil](webapp/repo/example/arbetsformedlingen/soklista_lan.json) som innehåller en översikt av lediga jobb i Sveriges alla län. Ladda ned den och börja testa.
+När du installerat verktyget behöver du en JSON-fil för att komma igång. Här är en [JSON-fil](https://raw.githubusercontent.com/dbwebb-se/webapp/60ab93653ab2d4d26316f4585c79a93d79de3501/example/arbetsformedlingen/soklista_lan.json) som innehåller en översikt av lediga jobb i Sveriges alla län. Ladda ned den och börja testa.
 
 ```bash
-$ wget -O af.json http://dbwebb.se/webapp/repo/example/arbetsformedlingen/soklista_lan.json
+$ wget -O af.json https://raw.githubusercontent.com/dbwebb-se/webapp/60ab93653ab2d4d26316f4585c79a93d79de3501/example/arbetsformedlingen/soklista_lan.json
 ```
 
 Börja med att visa hjälptexten om jq samt dess manualsida.
@@ -148,7 +151,7 @@ $ jq 'keys' af.json
 Vill man sedan se vilka nycklar det objektet innehåller så tittar man vidare.
 
 ```bash
-$ jq '.soklista | keys' af.json 
+$ jq '.soklista | keys' af.json
 [
   "listnamn",
   "sokdata",
@@ -181,13 +184,13 @@ $ jq '.soklista.sokdata[21]' af.json
 Låt oss lista samtliga id som finns i arrayens respektive objekt. Det är ett id för varje län.
 
 ```bash
-$ jq '.soklista.sokdata[].id' af.json 
+$ jq '.soklista.sokdata[].id' af.json
 ```
 
 Välj ut alla län vars id är större än 30.
 
 ```bash
-$ jq '.soklista.sokdata[] | select(.id > 30) ' af.json 
+$ jq '.soklista.sokdata[] | select(.id > 30) ' af.json
 {
     "antal_ledigajobb": 1040,
     "antal_platsannonser": 293,
@@ -199,7 +202,7 @@ $ jq '.soklista.sokdata[] | select(.id > 30) ' af.json
 Välj ut det län som har ett id som är lika med 6.
 
 ```bash
-$ jq '.soklista.sokdata[] | select(.id == 6) ' af.json 
+$ jq '.soklista.sokdata[] | select(.id == 6) ' af.json
 {
     "antal_ledigajobb": 2556,
     "antal_platsannonser": 1396,
@@ -218,4 +221,3 @@ Avslutningsvis {#avslutning}
 Ett verktyg likt jq kan vara behändigt när du jobbar med stora JSON filer och när du testar dina egna filer för att se vad de innehåller och hur du kan söka ut data ur dem.
 
 Har du [tips, förslag eller frågor om artikeln](t/4861) så finns det en specifik forumtråd för det.
- 
