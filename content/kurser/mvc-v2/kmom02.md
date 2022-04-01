@@ -2,29 +2,18 @@
 author:
     - mos
 revision:
-    "2022-03-22": "(PC, mos) Nytt kmom inför mvc-v2 och vt22."
+    "2022-04-01": "(C, mos) Nytt kmom inför mvc-v2 och vt22."
     "2021-05-26": "(B, mos) Läsresurs om semantisk versionshantering."
     "2021-04-02": "(A, mos) Första utgåvan i mvc-v1."
 ...
 Kmom02: Objektorientering
 ==================================
 
-[WARNING]
+Vi skall bygga grunderna till ett kortspel i vår webbplats för att träna på objektorientering och hur man skapar egna klasser och applikationer i ramverket Symfony.
 
-**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
+Vi skall programmera med objektorienterade konstruktioner för att bygga ett antal klasser som samverkar. Det handlar om klasser i PHP med metoder och medlemsvariabler. Vi försöker använda både arv och komposition så vi ser skillnader och likheter mellan dessa konstruktioner. Lyckas vi även få in konstruktioner som interface och traits så är det bonus.
 
-Större ändringar kan komma att ske i materialet.
-
-[/WARNING]
-
-
-Vi skall introducera C:et i MVC, Controller. Vi bygger om vår befintliga kod så att den använder sig av controllers och sedan bygger vi vidare med fler klasser för att konstruera ett tärningsspel Yatzy.
-
-I samband med att vi börjar med controllers så inkluderar vi ett par externa moduler till vårt miniramverk. Det handlar om en router och klasser för att hantera request och response. Detta blir en insyn i hur man kan bygga upp ett ramverk via standardiserade moduler där varje modul kan vara utbytbar förutsatt att den uppfyller ett visst interface.
-
-Apropå interface så kikar vi mer på objektorienterade konstruktioner i PHP där vi tar upp arv, komposition, interface och trait.
-
-Vi tar också hjälp av allmän problemlösning i form av top-down/bottom-up, pseudokod och flödesdiagram och använder det för att bygga upp och designa flödet i vårt Yatsy-spel.
+Vi tar hjälp av allmän problemlösning i form av top-down/bottom-up, pseudokod och flödesdiagram och använder det för att bygga upp och designa flödet i vårt blivande kortspel.
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -35,7 +24,7 @@ Vi tar också hjälp av allmän problemlösning i form av top-down/bottom-up, ps
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 4-6 studietimmar)*
 
 För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
@@ -45,40 +34,28 @@ För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
 Titta igenom följande föreläsningar.
 
+1. [Problemlösning och design av algoritmer för programmerare](./../forelasning/problemlosning-och-design-av-algoritmer) som visar på olika arbetssätt i hur man kan jobba med problemlösning innan man sätter igång och programmerar.
 
-
-#### Problemlösning och design av algoritmer för programmerare {#f1}
-
-Om modeller och representation av algoritmer samt generellt om problemlösning. Vi tittar på olika metoder för att lösa problem och strukturera algoritmer när vi bygger program och applikationer. Begrepp som hanteras är bland annat Polya problem solving, top-down, bottom-up, flowchart och pseudocode.
-
-Slides till föreläsningen "[Problemlösning och design av algoritmer för programmerare](https://dbwebb-se.github.io/mvc/lecture/L02-algorithms/slide.html)".
-
-[YOUTUBE src="RJ5HKgZZs6w" width=700 caption="Problemlösning och design av algoritmer för programmerare (med Mikael)."]
-
-
-
-#### Klasser och objekt i PHP - arv, komposition, interface och trait {#f2}
-
-Fortsättning med objekt och klasser i PHP. Vi studerar konstrukturer för arv, komposition, interface och trait. Vi pratar också om hur man skall tänka när man kodar objektorienterat och vad som är god kodsed och riktlinjer när man designar och implementerar sina klasser.
-
-Slides till föreläsningen "[Classes and Objects (PHP) - Inheritance, composition, interface, trait](https://dbwebb-se.github.io/mvc/lecture/L02-arv-och-komposition/slide.html)".
-
-[YOUTUBE src="n3dC2E4zACM" width=700 caption="Arv, komposition, interface, trait i PHP (med Mikael)."]
+1. [Klasser och objekt i PHP - arv, komposition, interface och trait](./../forelasning/klasser-och-objekt-i-php-arv-komposition-interface-trait) där vi studerar konstrukturer för arv, komposition, interface och trait. Vi pratar också om hur man skall tänka när man kodar objektorienterat och vad som är god kodsed och riktlinjer när man designar och implementerar sina klasser.
 
 
 
 ### Litteratur  {#litteratur}
 
-1. I detta kursmoment behandlas bland annat följande delar utifrån manualen om "[Classes and Objects](https://www.php.net/manual/en/language.oop5.php)".
+Läs enligt följande.
+
+1. Jobba igenom guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" för att främst lära dig hur arv och komposition fungerar. Trait och interface kan du göra som överkurs. Välj själv om du enbart använder guiden som läsresurs eller om du kodar dess övningsprogram.
+
+    * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
+    * [Trait och Interface](guide/kom-igang-med-objektorienterad-programmering-i-php/trait-och-interface)
+
+1. Komplettera med att översiktligt titta igenom referensmanualen där dessa ämnen hanteras, "[Classes and Objects](https://www.php.net/manual/en/language.oop5.php)".
 
     * [Object Inheritance](https://www.php.net/manual/en/language.oop5.inheritance.php)
     * [Object Interfaces](https://www.php.net/manual/en/language.oop5.interfaces.php)
     * [Traits](https://www.php.net/manual/en/language.oop5.traits.php)
 
-1. I guiden "[Kom igång med Objektorienterad programmering i PHP](guide/kom-igang-med-objektorienterad-programmering-i-php)" finns följande stycke att studera (du behöver inte görea exempelprogrammen i guiden).
-
-    * [Arv och Komposition](guide/kom-igang-med-objektorienterad-programmering-i-php/arv-och-komposition)
-    * [Trait och Interface](guide/kom-igang-med-objektorienterad-programmering-i-php/trait-och-interface)
+1. Titta översiktligt på någon av de guider som ligger i dokumentationen för Symfony "[The Symfony Framework Best Practices](https://symfony.com/doc/current/best_practices.html)". När du tittar så bör du ha i åtanke att "best practice" ibland behöver sättas in i sammanhanget av just den webbplats man själv bygger och den kunskapsnivå man själv står på. Det kan finnas alternativa lösningar som är mer lämpliga för just din specifika applikation.
 
 <!--
 
@@ -91,21 +68,39 @@ Slides till föreläsningen "[Classes and Objects (PHP) - Inheritance, compositi
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 10-14 studietimmar)*
+*(ca: 8-14 studietimmar)*
 
-Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna. Uppgifter skall utföras och redovisas.
-
-Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för hand. Även om du tjuvkikar för att hitta bra lösningar så är det en stor skillnad att skriva koden själv jämfört med att kopiera från någon.
+Jobba igenom övningar för att träna. Uppgifterna skall utföras och redovisas.
 
 
 
 ### Övningar {#ovningar}
 
-Det finns inga övningar i detta kursmoment.
+<!--
+Det finns inga övningar i detta kursmoment, bortsett från guiden som anges i läsanvisningarna ovan.
+-->
 
-<!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
+Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-<!-- Gör egen klass i Symfony? Eller avvakta till nästa kmom? -->
+[WARNING]
+
+**Övning är under utveckling.**
+
+[/WARNING]
+
+<!--
+makefile med utvecklingsmiljö
+phpcs-fixer
+-->
+
+<!--
+Gör egen klass i Symfony? Min första klass i Symfony?
+Hur fördela koden i controlelr versus egna klasser?
+MVC-begreppet.
+Posta formulär, sessionen (plussa på en siffra).
+-->
+
+<!-- Skapa en klass/route som visar dagens namn, quote eller liknande, både som sida och som rest api, bara get, ingen post eller session, eventuellt filer eller databasen sqlite -->
 
 
 
@@ -113,16 +108,24 @@ Det finns inga övningar i detta kursmoment.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Lös uppgiften "[Bygg Controller i PHP enligt MVC](uppgift/bygg-controller-i-php-enligt-mvc)".
+[WARNING]
+
+**Uppgift är under utveckling.**
+
+[/WARNING]
+
+<!--
+1. Lös uppgiften "[Bygg kortspel i PHP och Symfony enligt MVC](uppgift/bygg-kortspel-i-php-och-symfony-enligt-mvc)". Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
+-->
 
 <!--
 1. Lös uppgiften "[Objektorientering med klasser i PHP](uppgift/objektorientering-med-klasser-i-php)".
 
 <!--
 Borde rita ett klassdiagram enligt UML? Ta vidare kunskap från databaskursen i modellering.
--->
 
-<!-- Skapa en klass/route som visar dagens namn, quote eller liknande, både som sida och som rest api, bara get, ingen post eller session, eventuellt filer eller databasen sqlite -->
+Generera UML diagram.
+-->
 
 
 
@@ -131,9 +134,9 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denna kursen skiljer sig från hur du normalt sett lämnar in din redovisningstext.
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i texten i din rapport:
+Se till att följande frågor besvaras i din redovisningstext.
 
 <!--
 * Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
@@ -150,9 +153,7 @@ Se till att följande frågor besvaras i texten i din rapport:
 
 * Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.
 
-* Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
-
-* Hur känner du för den kodstruktur som växer fram, tycker du det blev snyggare kod med modulerna router och request och hur vi jobbade med controllers eller vad är din syn på det?
+* Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?
 
 * Vilken är din TIL för detta kmom?
 

@@ -63,9 +63,9 @@ Krav {#krav}
 
 1. Committa alla filer och lägg till en tagg 1.0.0. Om du gör uppdateringar så ökar du taggen till 1.0.1, 1.0.2, 1.1.0 eller liknande.
 
-1. Pusha upp repot till GitHub, inklusive taggarna.
-
 1. Kör `dbwebb test kmom01` för att kolla att du inte har några fel.
+
+1. Pusha upp repot till GitHub, inklusive taggarna.
 
 1. Gör en `dbwebb publishpure report` för att kolla att det fungerar på studentservern.
 

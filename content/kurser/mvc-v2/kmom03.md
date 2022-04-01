@@ -158,6 +158,9 @@ Se till att följande frågor besvaras i texten i din rapport:
 * Vilken är din TIL för detta kmom?
 
 
+<!--
+* Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
+-->
 
 <!--stop-->
 
