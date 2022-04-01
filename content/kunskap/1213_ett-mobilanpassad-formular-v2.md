@@ -301,7 +301,7 @@ export default function DeliveryForm({ navigation }) {
             <Button
                 title="Gör inleverans"
                 onPress={() => {
-                    console.log(delivery);
+                    addDelivery();
                 }}
             />
         </ScrollView>
@@ -376,7 +376,9 @@ För att underlätta för våra användare att välja en produkt använder vi os
 expo install @react-native-picker/picker
 ```
 
-Jag har valt att kapsla in dropdownen/pickern i en egen fristående komponent då det skapar lite bättre struktur och vi kan hålla pickerns state för sig själv. Jag har valt att döpa den till `ProductDropDown`. Vi skickar med tre attribut `props` med till komponenten då vi vill kunna påverka `delivery` objektet. `setCurrentProduct` är en `useState` funktion som jag definierar som `const [currentProduct, setCurrentProduct] = useState<Partial<Product>>({});` i min `DeliveryForm`-komponent. Vi använder den för att sätta produkten som väljs, så att när vi gör inleveransen sätter vi även en hel produkt som `currentProduct` för att underlätta när vi vid ett senare tillfälle ska öka produktens lagersaldo.
+Jag har valt att kapsla in dropdownen/pickern i en egen fristående komponent då det skapar lite bättre struktur och vi kan hålla pickerns state för sig själv. Jag har valt att döpa den till `ProductDropDown`. Jag har i nedanstående kodexempel lagt komponenten`ProductDropDown` i `components/DeliveryForm.tsx`, men går lika bra att lägga `ProductDropDown` i en egen fil. Då behövs dock några moduler importeras.
+
+Vi skickar med tre attribut (`props`) med till komponenten då vi vill kunna påverka `delivery` objektet. `setCurrentProduct` är en `useState` funktion som jag definierar som `const [currentProduct, setCurrentProduct] = useState<Partial<Product>>({});` i min `DeliveryForm`-komponent. Vi använder den för att sätta produkten som väljs, så att när vi gör inleveransen sätter vi även en hel produkt som `currentProduct` för att underlätta när vi vid ett senare tillfälle ska öka produktens lagersaldo.
 
 ```javascript
 <Text style={{ ...Typography.label }}>Produkt</Text>
@@ -421,7 +423,7 @@ function ProductDropDown(props) {
 }
 ```
 
-Jag har `ProductDropDown`-komponenten i filen `DeliveryFrom.tsx`, om man vill lägga den i en egen fil går det lika bra, men då behövs några importer till. I ovanstående kodexempel importerar vi först `Picker`-komponenten och Produkt-modellen. Vi hämtar sedan alla produkter från Lagret. Vi skapar en `itemsList` som innehåller de val vi vill ha i dropdownen och ett `productsHash` objekt som innehåller alla produkter där index är produkt-id. Vi kommer använda `productsHash`-objektet tillsammans med `setCurrentProduct` funktionen vi skickade med som en `props` till komponenten.
+I ovanstående kodexempel importerar vi först `Picker`-komponenten och Produkt-modellen. Vi hämtar sedan alla produkter från Lagret. Vi skapar en `itemsList` som innehåller de val vi vill ha i dropdownen och ett `productsHash` objekt som innehåller alla produkter där index är produkt-id. Vi kommer använda `productsHash`-objektet tillsammans med `setCurrentProduct` funktionen vi skickade med som en `props` till komponenten.
 
 I nedanstående kod sätter vi först värdet på dropdownen med `product_id` från `props`. Varje gång vi ändrar värde i dropdownen vill vi att två saker ska hända. Först sätter vi `product_id` attributet på samma sätt som för de andra fälten och vi utnyttjar sedan `props.setCurrentProduct` för att tilldela hela produkt objektet till `currentProduct` i `DeliveryForm`-komponenten. Slutligen skriver vi ut alla valen med hjälp av `itemsList`-variabeln.
 
@@ -446,36 +448,63 @@ På samma sätt som för `Picker` installerar vi en väljare för datum med föl
 expo install @react-native-community/datetimepicker
 ```
 
-Sedan skapar vi på samma sätt som tidigare en egen komponent för att kapsla in `state`.
+Sedan skapar vi på samma sätt som tidigare en egen komponent för att kapsla in `state`. Även denna komponenten har jag i `components/DeliveryForm.tsx`, men går lika bra att ha den i en egen fil.
+
+`datatimepicker` fungerar tyvärr inte likadant på iOS och på Android vilket beror på de underliggande "native"-komponenter vi använder. Så därför kommer vi använda oss av en konstant som finns som en del av React Native [Platform.OS](https://docs.expo.dev/versions/v43.0.0/react-native/platform/#os). Vi importerar den från React Native precis som vi har gjort med våra Core Components tidigare. Vi kommer använda `DateTimePicker` komponenten som den är för iOS och sedan gör vi bara ändringen om vi är på en Android telefon.
 
 ```javascript
 // Del av components/DeliveryForm.tsx
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { Platform, ScrollView, Text, TextInput, Button, View } from "react-native";
 
 function DateDropDown(props) {
     const [dropDownDate, setDropDownDate] = useState<Date>(new Date());
+    const [show, setShow] = useState<Boolean>(false);
+
+    const showDatePicker = () => {
+        setShow(true);
+    };
 
     return (
-        <DateTimePicker
-            onChange={(event, date) => {
-                setDropDownDate(date);
+        <View>
+            {Platform.OS === "android" && (
+                <Button onPress={showDatePicker} title="Visa datumväljare" />
+            )}
+            {(show || Platform.OS === "ios") && (
+                <DateTimePicker
+                    onChange={(event, date) => {
+                        setDropDownDate(date);
 
-                props.setDelivery({
-                    ...props.delivery,
-                    delivery_date: date.toLocaleDateString('se-SV'),
-                });
-            }}
-            value={dropDownDate}
-        />
+                        props.setDelivery({
+                            ...props.delivery,
+                            delivery_date: date.toLocaleDateString('se-SV'),
+                        });
+
+                        setShow(false);
+                    }}
+                    value={dropDownDate}
+                />
+            )}
+        </View>
     );
 }
 ```
 
-Vi skapar först en variabel som vi har som en del av `state`, vi gör detta då Lager-API vill ha datum som en sträng på formatet "YYYY-MM-DD", men `DateTimePicker` vill ha ett JavaScript `Date` objekt. Varje gång vi ändrar i vår Picker sätter vi både vår `state`-variabel och ändrar i vårt `props.delivery` objekt. Vi använder `date.toLocaleDateString('se-SV')` för att få ut en sträng på rätt format för att sedan kunna spara i API:t.
+Vi skapar först en variabel som vi har som en del av `state`, vi gör detta då Lager-API vill ha datum som en sträng på formatet "YYYY-MM-DD", men `DateTimePicker` vill ha ett JavaScript `Date` objekt. Varje gång vi ändrar i vår Picker sätter vi både vår `state`-variabel och ändrar i vårt `props.delivery` objekt.
+
+Vi skapar dessutom en `state`-variabel `show` för att hålla koll på om datumväljaren syns. Vi använder en knapp för att visa upp datumväljaren och den anropar funktionen `showDatePicker` som i sin tur sätter `true` som värde för `show` `state` variabeln.
+
+För att knappen för att visa datumväljaren bara ska visas på Android telefoner använder vi oss `Platform.OS === "android"` och om det evalueras till sant visas knapp-komponenten.
+
+För att datumväljare-komponenten alltid ska visas på iOS och bara när `show` är satt till sant använder vi oss av `(show || Platform.OS === "ios")`.
+
+I `onChange` använder vi `date.toLocaleDateString('se-SV')` för att få ut en sträng på rätt format för att sedan kunna spara i API:t. Det sista vi gör där är att stänga datumväljaren genom att sätta `show` till falskt.
 
 
 
 ### Att göra en inleverans {#function}
+
+Som jag nämnde ovan är det tre saker vi behöver ha på plats för vårt formulär: Formulärfält för att fylla i data, ett objekt som en del av `state` som håller koll på data i fälten och en funktion som tar hand om att skicka data till vårt API.
 
 Den sista delen av övningen är den funktion som gör själva inleveransen när vi trycker på knappen för inleverans.
 
