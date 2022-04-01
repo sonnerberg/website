@@ -57,7 +57,7 @@ Titta igenom följande föreläsningar.
 
 ### Litteratur  {#litteratur}
 
-Studera enligt följande.
+Läs enligt följande.
 
 1. Bekanta dig översiktligt med dokumentet [PHP The Right Way](http://www.phptherightway.com/). Det är skrivet av PHP communityn och ger en översikt över PHP som språk och de verktyg och processer man normalt arbetar med. Vi kommer att återkomma till dokumentet under kursens gång. Du kan se dokumentet som en innehållsförteckning till vad en god PHP-programmerare bör ha koll på.
 
@@ -110,9 +110,9 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denna kursen skiljer sig från hur du normalt sett lämnar in din redovisningstext.
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i texten i din rapport:
+Se till att följande frågor besvaras i din redovisningstext.
 
 * Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering.
 
