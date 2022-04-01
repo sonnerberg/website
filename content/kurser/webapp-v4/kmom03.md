@@ -11,14 +11,6 @@ revision:
 kmom03: Formulär och CRUD
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**.
-
-Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
-
-[/WARNING]
-
 I detta kursmoment skapar lättanvända formulärfält med hjälp av först HTML5 och sedan tittar vi på hur vi gör i React Native. Vi kopplar ihop fälten i formulär som är lätta att använda på små skärmar där kontext och möjligheten att skriva snabbt och enkelt saknas. I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort data via formulär.
 
 
@@ -86,6 +78,8 @@ Dessa uppgifter skall utföras och redovisas.
 #### Kontrollera din inlämning {#kontrollera}
 
 Se till så att en länk till ditt GitHub-repo ingår som en del av din inlämning på Canvas. Länken ska vara på formen: https://github.com/emilfolino/lager-v4.git
+
+Se dessutom till att du har gjort `expo publish` i din lager katalog.
 
 
 
