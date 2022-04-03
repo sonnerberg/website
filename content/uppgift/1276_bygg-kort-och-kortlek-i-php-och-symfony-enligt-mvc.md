@@ -3,9 +3,9 @@ author: mos
 category:
     - kurs mvc
 revision:
-    "2021-04-01": "(A, mos) Första utgåvan i mvc-v1."
+    "2021-04-03": "(A, mos) Första utgåvan i mvc-v1."
 ...
-Bygg kortspel i PHP och Symfony enligt MVC
+Bygg kort och kortlek i PHP och Symfony enligt MVC
 ===================================
 
 Du skall skapa ett antal klasser i PHP. Dessa klasser skall du sedan använda i ett par webbsidor och visa upp att de fungerar. Tanken är att du bygger grunden till någon form av enklare kortspel med objektorienterade tekniker i ramverket Symfony.
@@ -30,8 +30,11 @@ Introduktion och förberedelse {#intro}
 
 Läs och förbered dig.
 
+Om du är osäker på hur en kortlek ser ut så kan du kontrollera med [Wikipedia Kortlek](https://sv.wikipedia.org/wiki/Kortlek). Eftersom vi skall spela kort så kan det vara bra att välja en klassisk Fransk-engelsk kortlek.
 
+Försök göra många små commits. När du är klar med en "feature" i din kod så kan det vara lämpligt att också göra en commit. Detta skapar dig en bra historik över ändringarna i din kod. Läs gärna igenom artikeln "[How to Write a Git Commit Message](https://cbea.ms/git-commit/)" för att få tips om hur du kan skriva bra commit-meddelanden.
 
+<!--
 ### Välj ett kortspel att implementera {#kortspel}
 
 Du skall bygga ett kortspel i din webbplats. Tanken är att göra ett enkelt kortspel men du kan själv välja vilket kortspel du försöker bygga. Du kommer få möjlighet att bygga vidare på ditt kortspel i de kommande kursmomenten.
@@ -66,6 +69,22 @@ Detta är en kurs i backend PHP så tanken är att du implementerar spelet på d
 Får man göra spelets frontend i JavaScript?
 
 Det är inget som rekommenderas inom ramen för denna kursen.
+-->
+
+<!--
+* Game, Player, ComputerPlayer, Card, Deck, CardHand, Histogram, Intelligence, HighScore
+
+Optionellt 21, black jack.
+Optionellt korträkning, histogram.
+Optionellt någon form av patiens.
+Game
+
+Nästa kmom kan vara spel med logik och higscorelista i sessionen.
+Problemlösning.Jobba med samma klasser men bygg ut dem.
+Cohesion, Coupling, CC, Interface.
+Intelligens med trait?
+Krav på interface?
+-->
 
 
 
@@ -74,11 +93,13 @@ Krav {#krav}
 
 Kraven är uppdelade i sektioner.
 
+Placera din kod i `me/report`.
 
 
-### Skapa klasser och använd dem {#skapa}
 
-Börja med att utveckla dina klasser och testa dem.
+### Skapa klasser och använd dem i webbsidor {#webb}
+
+Börja med att utveckla dina klasser och testa dem i webbsidor enligt följande.
 
 1. Skapa en kontroller i Symfony där du kan skapa webbsidor för denna delen av uppgiften.
 
@@ -100,33 +121,49 @@ Börja med att utveckla dina klasser och testa dem.
 
 Optionellt krav.
 
-1. Fundera på om du kan använda konstruktionen "interface" för att bygga din kod förberedd för återanvändning. Tänk att din kod jobbar mot ett interface `DeckInterface` istället för en hård implementation av `Deck` alternativt `DeckWith2Jokers`. Se om du kan uppdatera din kod och din sida så den blir mer flexibel för implementationen av själva kortleken. Spelaren, korthanden, och utdelningen av korten samt blandningen bör ju inte behöva bry sig om vilka kort som ligger i kortleken.
+1. Fundera på om du kan använda konstruktionen "interface" för att bygga din kod förberedd för återanvändning. Tänk att din kod jobbar mot ett interface `DeckInterface` istället för en hård implementation av `Deck` alternativt `DeckWith2Jokers`. Se om du kan uppdatera din kod och dina sidor så applikationen blir mer flexibel för implementationen av själva kortleken. Spelaren, korthanden, och utdelningen av korten samt blandningen bör ju inte behöva bry sig om vilka kort som ligger i kortleken.
 
 
-* Game, Player, ComputerPlayer, Card, Deck, CardHand, Histogram, Intelligence, HighScore
 
-Optionellt 21, black jack.
-Optionellt korträkning, histogram.
-Optionellt någon form av patiens.
-Game
+### Bygg JSON API {#json}
 
-Nästa kmom kan vara spel med logik och higscorelista i sessionen.
-Problemlösning.Jobba med samma klasser men bygg ut dem.
-Cohesion, Coupling, CC, Interface.
-Intelligens med trait?
+Börja med att utveckla dina klasser och testa dem i webbsidor enligt följande.
+
+1. Skapa en kontroller i Symfony där du kan skapa ett JSON API för denna delen av uppgiften.
+
+1. Skapa en vanlig webbsida som landningssida `card/json` där du kan länka till samtliga JSON sidor.
+
+1. Skapa en route `GET card/api/deck` som returnerar en JSON struktur med hela kortleken sorterad per färg och värde.
+
+1. Skapa en route `POST card/api/deck/shuffle` som blandar kortleken och därefter returnerar en JSON struktur med kortleken.
+
+1. Skapa route `POST card/api/deck/draw` och `card/api/deck/draw/:number` som drar 1 eller `:number` kort från kortleken och visar upp dem i en JSON struktur samt antalet kort som är kvar i kortleken. Kortleken sparas i sessionen så om man anropar dem flera gånger så minskas antalet kort i kortleken.
+
+1. Skapa en sida `card/api/deck/deal/:players/:cards` som delar ut ett antal  `:cards` från kortleken till ett antal `:players` och visar upp de korten som respektive spelare har fått i en JSON struktur. Visa även antalet kort som är kvar i kortleken.
 
 
 
 ### Problemlösning {#problemlos}
 
-Gör ett försök att designa din spellösning innan du börjar koda.
+Du skall försöka problemlösa ett spel med flödesschema och pseudokod.
 
-1. Skapa ett flödesschema som representerar hur du tänker lösa grunderna i spelet. Resultatet skall du senare placera i en webbsida så du kan spara det som en bild.
+1. Välj ett kortspel som du vill problemlösa (och implementera i nästa kmom). Är du osäker så väljer du [kortspelet 21](https://sv.wikipedia.org/wiki/Tjugoett_(kortspel)) eller [kortspelet Black Jack](https://en.wikipedia.org/wiki/Blackjack) där en spelare kan spela mot datorn som är bank. Du kan även välja olika spelvarianter på dessa kortspel eller ett annat kortspel eller en [patiens](https://sv.wikipedia.org/wiki/Patiens) (se [exempel på olika kort patienser](https://www.123patiens.se/)).
 
-1. Skapa psudokod som visar hur du tänker lösa delar av spelet.  Resultatet skall du senare placera i en webbsida så du kan spara det som en bild eller ren text.
+1. Samla all din dokumentation i en webbsida under routen `game/card` och placera en länk till sidan i din navbar.
+
+1. Inled med en kort beskrivning av ditt kortspel och hur du valt att det skall fungera.
+
+1. Skapa ett flödesschema som representerar hur du tänker lösa grunderna i spelet. Resultatet kan du placera som en bild i webbsidan.
+
+1. Skapa psuedokod som visar hur du tänker lösa delar av spelet. Du kan spara resultatet som text eller bild men visa upp det i webbsidan.
+
+1. Fundera igenom vilka klasser du behöver för att implementera spelet. Beskriv klasserna i text med klassens namn och en mening som beskriver vad klassens syfte är.
+
+1. Om du vill kan du komplettera med att rita ett UML klass diagram (optionellt).
 
 
 
+<!--
 ### Spel i Symfony {#symfony}
 
 1. Gör en kontroller med routes i Symfony som hanterar flödet i ditt kortspel. Din kontroller skall innehålla så lite kod som möjligt. All applikationskod placerar du i andra klasser som din kontroller använder.
@@ -156,6 +193,7 @@ Om du har valt ett annat spel än "War" så kan du behöva modifiera och tolka n
 1. När spelet är slut räknas korten och du visar vem som vann. Bygg in stöd för att spela med färre kort så det blir enklare att testa slutdelen av spelet.
 
 1. Under spelets gång skall man när som helst kunna "Ge upp" och komma till en slutscen som visar aktuell ställning med korten.
+-->
 
 
 

@@ -91,6 +91,12 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 <!--
 makefile med utvecklingsmiljö
 phpcs-fixer
+phpmd?
+phpcs med symfony code style?
+phpfig about codestyle
+phpcbf
+make cs
+https://symfony.com/doc/current/contributing/code/standards.html#making-your-code-follow-the-coding-standards
 -->
 
 <!--
@@ -98,6 +104,8 @@ Gör egen klass i Symfony? Min första klass i Symfony?
 Hur fördela koden i controlelr versus egna klasser?
 MVC-begreppet.
 Posta formulär, sessionen (plussa på en siffra).
+
+Dice övning med kod, inkl get, post, session?
 -->
 
 <!-- Skapa en klass/route som visar dagens namn, quote eller liknande, både som sida och som rest api, bara get, ingen post eller session, eventuellt filer eller databasen sqlite -->
@@ -108,24 +116,9 @@ Posta formulär, sessionen (plussa på en siffra).
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-[WARNING]
+1. Lös uppgiften "[Bygg kort och kortlek i PHP och Symfony enligt MVC](uppgift/bygg-kort-och-kortlek-i-php-och-symfony-enligt-mvc)". Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
 
-**Uppgift är under utveckling.**
-
-[/WARNING]
-
-<!--
-1. Lös uppgiften "[Bygg kortspel i PHP och Symfony enligt MVC](uppgift/bygg-kortspel-i-php-och-symfony-enligt-mvc)". Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
--->
-
-<!--
-1. Lös uppgiften "[Objektorientering med klasser i PHP](uppgift/objektorientering-med-klasser-i-php)".
-
-<!--
-Borde rita ett klassdiagram enligt UML? Ta vidare kunskap från databaskursen i modellering.
-
-Generera UML diagram.
--->
+<!-- generera UML diagram -->
 
 
 
@@ -149,11 +142,11 @@ Se till att följande frågor besvaras i din redovisningstext.
 -->
 
 
-* Berätta på vilket sätt du drog nytta, eller inte, av att modellera din lösning med flödesdiagram och psuedokod. Använder du dig av top-down eller bottom-up när du planerar din kod?
-
 * Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.
 
 * Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?
+
+* Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. Var det något som stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
 
 * Vilken är din TIL för detta kmom?
 

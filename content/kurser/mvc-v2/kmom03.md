@@ -134,6 +134,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Lös uppgiften "[Enhetstesta dina klasser med PHPUnit](uppgift/enhetstesta-dina-klasser-med-phpunit)".
 
+<!-- generera dokumentation, phpdoc, uml -->
+<!-- phpmd, phpstan, copy-paste-detector -->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
