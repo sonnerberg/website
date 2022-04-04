@@ -103,7 +103,7 @@ Börja med att utveckla dina klasser och testa dem i webbsidor enligt följande.
 
 1. Skapa en kontroller i Symfony där du kan skapa webbsidor för denna delen av uppgiften.
 
-1. Gör en förstasida `card` som länkar till samtliga undersidor för denna delen av uppgiften. Placera sidan i din navbar.
+1. Gör en förstasida `card` som länkar till samtliga undersidor för denna uppgiften. Detta är din "landningssida" för denna uppgiften. Placera länken till sidan i din navbar så den är lätt att nå.
 
 1. Skapa klasser för att hantera kort (card) och kortlek (deck). Skapa en sida `card/deck` som visar samtliga kort i kortleken sorterade per färg och värde. Ess kan vara antingen 1 eller 14 beroende av vilket kortspel man spelar.
 
@@ -131,7 +131,7 @@ Börja med att utveckla dina klasser och testa dem i webbsidor enligt följande.
 
 1. Skapa en kontroller i Symfony där du kan skapa ett JSON API för denna delen av uppgiften.
 
-1. Skapa en vanlig webbsida som landningssida `card/json` där du kan länka till samtliga JSON sidor.
+1. I din landningssida för `card/` fortsätter du att länka till alla JSON routes som finns i denna delen av uppgiften.
 
 1. Skapa en route `GET card/api/deck` som returnerar en JSON struktur med hela kortleken sorterad per färg och värde.
 
@@ -149,7 +149,7 @@ Du skall försöka problemlösa ett spel med flödesschema och pseudokod.
 
 1. Välj ett kortspel som du vill problemlösa (och implementera i nästa kmom). Är du osäker så väljer du [kortspelet 21](https://sv.wikipedia.org/wiki/Tjugoett_(kortspel)) eller [kortspelet Black Jack](https://en.wikipedia.org/wiki/Blackjack) där en spelare kan spela mot datorn som är bank. Du kan även välja olika spelvarianter på dessa kortspel eller ett annat kortspel eller en [patiens](https://sv.wikipedia.org/wiki/Patiens) (se [exempel på olika kort patienser](https://www.123patiens.se/)).
 
-1. Samla all din dokumentation i en webbsida under routen `game/card` och placera en länk till sidan i din navbar.
+1. Samla all din dokumentation i en webbsida under routen `game/card` och länka till dokumentationssidan från din landdningssida `card/`.
 
 1. Inled med en kort beskrivning av ditt kortspel och hur du valt att det skall fungera.
 
