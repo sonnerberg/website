@@ -76,28 +76,16 @@ Jobba igenom övningar för att träna. Uppgifterna skall utföras och redovisas
 
 ### Övningar {#ovningar}
 
-<!--
-Det finns inga övningar i detta kursmoment, bortsett från guiden som anges i läsanvisningarna ovan.
--->
-
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-[WARNING]
+1. Jobba genom övningen "[Symfony with GET, POST, SESSION](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-get-post-session)" för att träna på hur du kan jobba med GET, POST, SESSION och formulär i Symfony.
 
-**Övning är under utveckling.**
-
-[/WARNING]
+1. Jobba igenom övningen "[Kodstil med Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-codestyle)" för att skriva koden på rätt sätt.
 
 <!--
-makefile med utvecklingsmiljö
-phpcs-fixer
-phpmd?
-phpcs med symfony code style?
-phpfig about codestyle
-phpcbf
-make cs
-https://symfony.com/doc/current/contributing/code/standards.html#making-your-code-follow-the-coding-standards
+1. Jobba igenom övningen "[Mina egna klasser i Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-write-your-own-class)" för att komma igång och se hur du kan skriva dina egna klasser och integrera dem med en kontroller i Symfony.
 -->
+
 
 <!--
 Gör egen klass i Symfony? Min första klass i Symfony?
@@ -146,7 +134,7 @@ Se till att följande frågor besvaras i din redovisningstext.
 
 * Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?
 
-* Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. Var det något som stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
+* Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. Var det något som du tror stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
 
 * Vilken är din TIL för detta kmom?
 
