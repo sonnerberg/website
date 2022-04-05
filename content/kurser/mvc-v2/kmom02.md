@@ -78,6 +78,8 @@ Jobba igenom övningar för att träna. Uppgifterna skall utföras och redovisas
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
+Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
+
 1. Jobba genom övningen "[Symfony with GET, POST, SESSION](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-get-post-session)" för att träna på hur du kan jobba med GET, POST, SESSION och formulär i Symfony.
 
 1. Jobba igenom övningen "[Kodstil med Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-codestyle)" för att skriva koden på rätt sätt.

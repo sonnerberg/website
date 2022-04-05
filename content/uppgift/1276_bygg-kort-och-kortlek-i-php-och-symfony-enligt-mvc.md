@@ -93,8 +93,6 @@ Krav {#krav}
 
 Kraven är uppdelade i sektioner.
 
-Placera din kod i `me/report`.
-
 
 
 ### Skapa klasser och använd dem i webbsidor {#webb}
@@ -135,6 +133,8 @@ Börja med att utveckla dina klasser och testa dem i webbsidor enligt följande.
 
 1. Skapa en route `GET card/api/deck` som returnerar en JSON struktur med hela kortleken sorterad per färg och värde.
 
+Följande 3 krav är optionella. Gör dem om du känner att du har tid. Det är bra övning och träning.
+
 1. Skapa en route `POST card/api/deck/shuffle` som blandar kortleken och därefter returnerar en JSON struktur med kortleken.
 
 1. Skapa route `POST card/api/deck/draw` och `card/api/deck/draw/:number` som drar 1 eller `:number` kort från kortleken och visar upp dem i en JSON struktur samt antalet kort som är kvar i kortleken. Kortleken sparas i sessionen så om man anropar dem flera gånger så minskas antalet kort i kortleken.
@@ -153,11 +153,11 @@ Du skall försöka problemlösa ett spel med flödesschema och pseudokod.
 
 1. Inled med en kort beskrivning av ditt kortspel och hur du valt att det skall fungera.
 
-1. Skapa ett flödesschema som representerar hur du tänker lösa grunderna i spelet. Resultatet kan du placera som en bild i webbsidan.
+1. Skapa ett flödesschema som representerar hur du tänker lösa grunderna i spelet. Resultatet kan du placera som en bild i webbsidan. Det behöver inte vara en komplett lösning, en dellösning räcker bra.
 
-1. Skapa psuedokod som visar hur du tänker lösa delar av spelet. Du kan spara resultatet som text eller bild men visa upp det i webbsidan.
+1. Skapa psuedokod som visar hur du tänker lösa delar av spelet. Du kan spara resultatet som text eller bild men visa upp det i webbsidan. Det behöver inte vara en komplett lösning, en dellösning räcker bra.
 
-1. Fundera igenom vilka klasser du behöver för att implementera spelet. Beskriv klasserna i text med klassens namn och en mening som beskriver vad klassens syfte är.
+1. Fundera igenom vilka klasser du behöver för att implementera spelet. Beskriv klasserna i text med klassens namn och en mening som beskriver vad klassens syfte är. Håll det kort och enkelt.
 
 1. Om du vill kan du komplettera med att rita ett UML klass diagram (optionellt).
 
