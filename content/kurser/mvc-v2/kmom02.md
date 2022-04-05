@@ -2,7 +2,7 @@
 author:
     - mos
 revision:
-    "2022-04-01": "(C, mos) Nytt kmom inför mvc-v2 och vt22."
+    "2022-04-05": "(C, mos) Nytt kmom inför mvc-v2 och vt22."
     "2021-05-26": "(B, mos) Läsresurs om semantisk versionshantering."
     "2021-04-02": "(A, mos) Första utgåvan i mvc-v1."
 ...
