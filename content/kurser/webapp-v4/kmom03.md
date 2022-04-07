@@ -19,6 +19,12 @@ I detta kursmoment skapar lättanvända formulärfält med hjälp av först HTML
 
 
 
+Så här kan det se ut när man är klar med kmom03.
+
+[YOUTUBE src=eqoYpBarBeE width=630 caption="Lager appen del 3."]
+
+
+
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
