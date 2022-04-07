@@ -370,6 +370,125 @@ BTHMAC0169:lager efo$ tree -L 2 .
 
 
 
+Uppdatering av state i andra komponenter {#state}
+--------------------------------------
+
+Vi har vid det här laget förstått att React komponenter uppdateras när `state` ändras i vyn. Det är det som har gjort React till ett så populärt ramverk, men kan också vara lite väl auto-**magiskt** ibland. Det som däremot inte händer är att ny eller uppdaterad data hämtas från servern eller att `state` i andra komponenter uppdateras per automatik.
+
+Vi ska i följande stycken titta på två sätt att få en komponent att uppdatera en annan komponent. Först tittar vi på hur vi kan använda inbyggda sättet i navigations-komponenten och sedan tittar vi på konceptet "Lifting state up".
+
+
+
+### Navigations-attribut {#navigation-attribute}
+
+I funktionen `pick` som vi använder oss av när vi vill plocka en order använder vi oss av `navigation.navigate` för att navigera tillbaka till listan med ordrar.
+
+```javascript
+async function pick() {
+    await orderModel.pickOrder(order);
+    navigation.navigate("List", { reload: true });
+}
+```
+
+Vi kan i denna funktionen skicka med ett andra argument som är parameter till den vyn vi kommer till. I det här fallet skickar vi med `reload: true`. I List-vyn kan vi sen fånga upp denna parameter och använda den för att hämta ordrarna från API:t på nytt enligt nedan.
+
+```javascript
+export default function OrderList({ route, navigation }) {
+    const { reload } = route.params || false;
+    const [allOrders, setAllOrders] = useState([]);
+
+    if (reload) {
+        reloadOrders();
+    }
+
+    async function reloadOrders() {
+        setAllOrders(await orderModel.getOrders());
+    }
+
+    useEffect(() => {
+        reloadOrders();
+    }, []);
+
+    // resten av komponenten
+}
+```
+
+
+
+### Lifting State Up {#lifting-state-up}
+
+I exemplet ovan går vi från en vy till en annan och vill uppdatera `state` i den vyn vi kommer till. Ibland vill vi dock uppdatera `state` i en komponent som finns någon annanstans i appen. I React kan vi enbart skicka `props` (till exempel attribut och funktioner) neråt i komponent trädet.
+
+Konceptet vi kommer använda oss heter i React sammanhang "[Lifting state up](https://reactjs.org/docs/lifting-state-up.html)". Konceptet handlar om att istället för att `state` placeras i komponenten där vi vill använda oss av den specifika data flyttar vi upp `state` till första gemensamma förälder komponent.
+
+I exemplet med plocklistan från ovan vill vi uppdatera lagersaldot i `Home`-komponenten när vi har plockat en order i `PickList`. Den närmaste gemensamma föräldern för `Home`-komponenten och `PickList`-komponenten är `App`-komponenten.
+
+Vi tar och flyttar upp `const [products, setProducts] = useState([]);` från `StockList` till `App.tsx`. Sedan skickar vi med `products` och `setProducts` som `props` ner igenom komponent-trädet. Vi börjar i `App.tsx` där vi tidigare har haft `<Tab.Screen name="Lager" component={Home} />`. För att vi ska kunna skicka med egna props till komponenten använder vi oss av [`children`-callbacken](https://reactnavigation.org/docs/screen/#children).
+
+```javascript
+<Tab.Screen name="Lager">
+    {() => <Home products={products} setProducts={setProducts} />}
+</Tab.Screen>
+```
+
+Vi kan nu i `Home`-komponenten komma åt `products` och `setProducts` med hjälp av `props`.
+
+```javascript
+export default function Home({products, setProducts}) {
+    return (
+        <ScrollView style={styles.base}>
+            <Text style={styles.header}>Lager-Appen</Text>
+            <Image source={warehouse} style={{ width: 320, height: 240, marginBottom: 28 }} />
+            <Stock products={products} setProducts={setProducts} />
+        </ScrollView>
+    );
+}
+```
+
+Vi vidarebefordrar sen `products` och `setProducts` ner i komponent trädet två gånger först till `Stock` och sedan till `StockList`. I `StockList` tar vi emot `props` på samma sätt som i `Home` och kan använda de precis som vi gjort tidigare i komponenten.
+
+```javascript
+function StockList({products, setProducts}) {
+  useEffect(async () => {
+    setProducts(await productModel.getProducts());
+  }, []);
+
+  const list = products.map((product, index) => {
+    return <Text
+            key={index}
+            style={{ ...Typography.normal }}
+            >
+              { product.name } - { product.stock }
+            </Text>
+  });
+  // resten av komponenten.
+}
+```
+
+Om vi gör samma sak ner i komponentträdet men istället till komponenten `PickList` kan vi uppdatera vår `pick`-funktion till följande.
+
+```javascript
+export default function PickList({ route, navigation, setProducts }) {
+    const { order } = route.params;
+    const [productsList, setProductsList] = useState([]);
+
+    useEffect(async () => {
+        setProductsList(await productModel.getProducts());
+    }, []);
+
+    async function pick() {
+        await orderModel.pickOrder(order);
+        setProducts(await productModel.getProducts());
+        navigation.navigate("List", { reload: true });
+    }
+    // resten av komponenten
+}
+```
+
+`setProducts` uppdaterar då `products` i `App.tsx` och med det ritas `StockList` om med nya data.
+
+
+
 Avslutningsvis {#theend}
 --------------------------------------
 
