@@ -487,6 +487,23 @@ export default function PickList({ route, navigation, setProducts }) {
 
 `setProducts` uppdaterar då `products` i `App.tsx` och med det ritas `StockList` om med nya data.
 
+För att det ska fungera med `route` och `navigation` som tidigare skickades med automatisk till komponenten `PickList` behöver vi explicit skicka med de till `PickList`. I `Pick`-komponenten lägger vi följande.
+
+```javascript
+export default function Pick(props) {
+    return (
+        <Stack.Navigator initialRouteName="List">
+            <Stack.Screen name="List" component={OrderList} />
+            <Stack.Screen name="Details">
+                {(screenProps) => <PickList {...screenProps} setProducts={props.setProducts} />}
+            </Stack.Screen>
+        </Stack.Navigator>
+    );
+}
+```
+
+Till `children`-callbacken fångar vi upp argumentet `screenProps` som innehåller `route` och `navigation` och med hjälp av `...`-spread operatorn lägger vi till `props` till `PickList` komponent.
+
 
 
 Avslutningsvis {#theend}
