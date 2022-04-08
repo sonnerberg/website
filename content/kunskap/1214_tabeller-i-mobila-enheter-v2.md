@@ -302,9 +302,55 @@ Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagers
 En tabell i React Native {#rn}
 --------------------------------------
 
+I React Native gör vi våra tabeller på ett litet annat sätt än vad vi är vana vid från HTML och som vi har sett ovan. Vi kommer använda oss av ytterligare en komponent som vi installerar.
+
+Vi kommer i detta fallet installera ett paket som kan lite mer än bara tabeller och det är fritt fram att längre fram i kursen använda sig av de andra delarna av detta paketet. Paketet heter [React Native Paper](https://callstack.github.io/react-native-paper/index.html) och använder sig av "[Material Design](https://material.io/design/introduction)" som är Googles design system.
+
+```shell
+expo install react-native-paper
+```
+
+Om vi tänker oss en komponent med en array med data som vill rita upp en tabell med den data kan vi då göra på följande sätt:
+
+```javascript
+export default function AnimalsTable() {
+    const animals = [
+        { name: "elephant", legs: 4, color: "grey"},
+        { name: "kangaroo", legs: 2, color: "brown"},
+        { name: "spider", legs: 8, color: "black"},
+    ];
+
+    const table = animals.map((animal, index) => {
+        return (
+            <DataTable.Row>
+              <DataTable.Cell>{animal.name}</DataTable.Cell>
+              <DataTable.Cell numeric>{animal.legs}</DataTable.Cell>
+              <DataTable.Cell>{animal.color}</DataTable.Cell>
+            </DataTable.Row>
+        );
+    });
+
+    return (
+        <DataTable>
+            <DataTable.Header>
+                <DataTable.Title>Animal</DataTable.Title>
+                <DataTable.Title numeric># of legs</DataTable.Title>
+                <DataTable.Title>Color</DataTable.Title>
+            </DataTable.Header>
+            {table}
+        </DataTable>
+    );
+}
+```
+
+Vi har alltså längst ut `DataTable` och i det vill vi först ha `DataTable.Header` vilket motsvarar `<thead></thead>` i en HTML tabell. I header har vi kolumn rubrikerna, som vi i detta fallet har skrivit in hårdkodat.
+
+Vi skapar en rad i tabellen per djur i vår `animals` array. Vi gör det som vi gjort tidigare med hjälp av `map`. I detta fallet returnerar vi dock en `DataTable.Row` per djur, som i sin tur innehåller 3 stycken `DataTable.Cell` med data från djur arrayen.
+
+
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt som underlättar när vi gör responsiv design för mobila enheter.
 
-Vi har dessutom tittat på hur vi åstadkommar bra tabeller i React Native.
+Vi har dessutom tittat på hur vi åstadkommer bra tabeller i React Native.
