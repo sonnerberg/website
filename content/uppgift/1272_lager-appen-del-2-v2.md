@@ -45,8 +45,6 @@ Krav {#krav}
 
 1. När status för ordern ändras måste även lagersaldot för de packade varorna minskas.
 
-1. Gör ett medvetet val om du vill använda flat design eller ej.
-
 1. Navigationen ska tydligt visa vilken vy användaren är i.
 
 1. Strukturera din style kod, så vi inte längre har styling direkt i komponenterna, men i egna filer.
