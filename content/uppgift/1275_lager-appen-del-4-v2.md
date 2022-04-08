@@ -45,7 +45,3 @@ Krav {#krav}
 5. Det ska inte gå att fakturera en order två gånger.
 
 6. Skapa en tabell med information om befintliga fakturor.
-
-7. Tabellen ska fungera på alla enheter, gör ett medvetet val av design.
-
-8. Från tabellen ska man kunna ta sig till en faktura där all information från fakturan visas.

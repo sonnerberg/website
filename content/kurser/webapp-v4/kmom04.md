@@ -12,14 +12,6 @@ revision:
 Kmom04: Autentisering med JWT
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**.
-
-Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
-
-[/WARNING]
-
 Vi fortsätter med Lager appen och lägger till en funktion för att skapa fakturor utifrån en order. Alla ska inte kunna skapa fakturor så innan vi skapar faktura funktionen skapar vi inloggning och tittar på JSON Web Tokens för autentisering.
 
 
@@ -101,6 +93,6 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilka utmaningar finns med tabeller i mobila enheter?
-* Hur upplevde du att jobba med med JWT ?
+* Hur upplevde du att jobba med med JWT?
 * Hur använde du din kunskap från tidigare kursmoment för att göra inloggningsformuläret?
 * Vilken är din TIL för detta kmom?
