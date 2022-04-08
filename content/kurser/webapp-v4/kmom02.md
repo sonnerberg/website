@@ -48,6 +48,8 @@ Ta en översiktlig titt på [TypeScript](https://www.typescriptlang.org/) manual
 
 * Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
 
+* Läs artikeln "[Knappar för mobilen](kunskap/knappar-for-mobilen)" för att förstå utmaningarna med att skapa bra knappar för mobila enheter.
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
