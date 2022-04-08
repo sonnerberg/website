@@ -12,7 +12,7 @@ Kmom10: Individuell examination
 
 Detta kursmoment avslutar och examinerar kursen.
 
-<!-- ctr+d efter "try2" och "2022-01-07" för ny examination -->
+<!-- ctr+d efter "try3" och "2022-06-01" för ny examination -->
 
 Upplägg {#upplagg}
 --------------------------------------------------------------------
@@ -49,7 +49,7 @@ Examination sker på valfri plats, det går att ladda ner examination från kl 8
 
 
 
-Hämta examinationstillfälle 2022-01-07 (try2) {#hamta}
+Hämta examinationstillfälle 2022-06-01 (try3) {#hamta}
 ----------------------------------------------------------------------
 
 I [Om examination med dbwebb exam](kurser/python-v4/kmom10/om) finns mer information om `dbwebb exam`-verktyget.
@@ -67,10 +67,10 @@ dbwebb init
 För att skapa din individuella examination skriv in följande kommando.
 
 ```
-dbwebb exam checkout try2
+dbwebb exam checkout try3
 ```
 
-Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try2` enligt följande.
+Materialet till din individuella examination ligger nu i din kurskatalog i `me/kmom10/try3` enligt följande.
 
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
@@ -79,13 +79,13 @@ Materialet till din individuella examination ligger nu i din kurskatalog i `me/k
 
 
 
-Rätta din examination (try2) {#ratta}
+Rätta din examination (try3) {#ratta}
 ----------------------------------------------------------------------
 
 För att rätta din individuella examination och visa hur många uppgifter du har klarat och dina poäng använd följande kommando.
 
 ```bash
-dbwebb test try2
+dbwebb test try3
 ```
 
 Längst ner i utskriften finns en sammanfattning av vilka uppgifter du har löst och hur många poäng du har.
@@ -94,20 +94,20 @@ Under sammanfattningen finns en utskrift från testprogrammet som körs när exa
 Du kan ignorera fel från uppgifter du inte utfört.
 
 
-Validera din examination (try2) {#validera}
+Validera din examination (try3) {#validera}
 ----------------------------------------------------------------------
 
-Precis som tidigare inlämningar i kursen ska koden validera. `dbwebb validate try2` validerar din individuella examination och visar vilka valideringsfel du har i koden. Din individuella examination skall validera när den lämnas in inom tidsramen för den individuella examinationen.
+Precis som tidigare inlämningar i kursen ska koden validera. `dbwebb validate try3` validerar din individuella examination och visar vilka valideringsfel du har i koden. Din individuella examination skall validera när den lämnas in inom tidsramen för den individuella examinationen.
 
 
 
-Lämna in din examination (try2) {#lamna}
+Lämna in din examination (try3) {#lamna}
 ----------------------------------------------------------------------
 
 För att  lämna in din individuella examination använd följande kommando.
 
 ```bash
-dbwebb exam seal try2
+dbwebb exam seal try3
 ```
 
 Kommandot publicerar hela din me-katalog till studentservern.
@@ -115,7 +115,7 @@ Kommandot publicerar hela din me-katalog till studentservern.
 Du kan när som helst hämta ett kvitto på din pågående examination och se detaljer om den, till exempel hur länge du hållit på.
 
 ```bash
-dbwebb exam receipt try2
+dbwebb exam receipt try3
 ```
 
 
@@ -125,7 +125,7 @@ Bedömning och betygsättning {#bedomning}
 
 Det finns ett särskilt dokument som beskriver hur [bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning-individuell).
 
-Under hela examinationen kan du köra kommandot `dbwebb test try2` för att rätta dina lösningar och se hur många poäng du har uppnått. <!-- Sista try2 raden att ändra-->
+Under hela examinationen kan du köra kommandot `dbwebb test try3` för att rätta dina lösningar och se hur många poäng du har uppnått. <!-- Sista try3 raden att ändra-->
 
 
 
@@ -215,7 +215,7 @@ Inga genomförda än för HT21.
 
 `try1` genomfördes 2021-10-27, uppgifter och lösningsförslag finns tillgängligt i exempel-mappen, `example/old_exams/lp1-2021`.
 
-<!-- `try2` genomfördes 2021-01-07. -->
+`try2` genomfördes 2022-01-07.
 <!--
 
 `try3` genomfördes 2022-01-07. -->
@@ -225,8 +225,8 @@ Inga genomförda än för HT21.
 Omexamination {#omexamination}
 ----------------------------------------------------------------------
 Som student har du rätt till tre examinationstillfällen med andra ord om du inte klarar första har du två försök till på dig.
-Följande tillfällen erbjuds efter 2020-10-27. **Obs** datumen är preliminära!
+Följande tillfällen erbjuds efter 2021-10-27. **Obs** datumen är preliminära!
 
 Omexaminationstillfälle fredagen den 2022-01-07.
 
-Restexaminationstillfälle onsdagen den 2022-06-02.
+Restexaminationstillfälle onsdagen den 2022-06-01.
