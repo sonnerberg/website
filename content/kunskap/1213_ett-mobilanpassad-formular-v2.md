@@ -220,7 +220,7 @@ Ett formulär i React Native {#rn}
 När vi bygger ett formulär i React Native är det tre saker vi vill få på plats. Formulärfält för att fylla i data, ett objekt som en del av `state` som håller koll på data i fälten och en funktion som tar hand om att skicka data till vårt API. Så låt oss börja med formulärfälten.
 
 [INFO]
-Koden som skrivs i denna övning är inte fullständig och vissa delar behövs fyllas i av er som studenter i uppgiften "[Lager appen del 3](uppgift/lager-appen-del-3-v3)".
+Koden som skrivs i denna övning är inte fullständig och vissa delar behövs fyllas i av er som studenter i uppgiften "[Lager appen del 3](uppgift/lager-appen-del-3-v2)".
 [/INFO]
 
 Som en del av React Natives Core Components finns [TextInput](https://reactnative.dev/docs/textinput). Vi kommer använda den för text och siffror och sedan kommer vi installera två olika sorters pickers för att ta hand om en dropdown och en datum väljare.
