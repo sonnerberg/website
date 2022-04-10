@@ -3,6 +3,7 @@ author: mos
 category:
     - kurs mvc
 revision:
+    "2021-04-10": "(B, mos) Problemlösning blir optionell."
     "2021-04-03": "(A, mos) Första utgåvan i mvc-v1."
 ...
 Bygg kort och kortlek i PHP och Symfony enligt MVC
@@ -144,6 +145,14 @@ Följande 3 krav är optionella. Gör dem om du känner att du har tid. Det är 
 
 
 ### Problemlösning {#problemlos}
+
+[INFO]
+
+Denna delen av uppgiften kan med fördel göras i nästa kmom. Du kan alltså se den som optionell i detta kmom.
+
+Välj om du vill göra den i detta kmom eller avvakta och gör den i nästa kmom.
+
+[/INFO]
 
 Du skall försöka problemlösa ett spel med flödesschema och pseudokod.
 
