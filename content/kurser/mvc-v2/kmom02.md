@@ -57,6 +57,10 @@ Läs enligt följande.
 
 1. Titta översiktligt på någon av de guider som ligger i dokumentationen för Symfony "[The Symfony Framework Best Practices](https://symfony.com/doc/current/best_practices.html)". När du tittar så bör du ha i åtanke att "best practice" ibland behöver sättas in i sammanhanget av just den webbplats man själv bygger och den kunskapsnivå man själv står på. Det kan finnas alternativa lösningar som är mer lämpliga för just din specifika applikation.
 
+1. I dokumentet [PHP The Right Way](http://www.phptherightway.com/), finns en sektion som berör kodstil i PHP. Läs igenom den.
+
+    * [PHP The Right Way: Code Style Guide](https://phptherightway.com/#code_style_guide)
+
 <!--
 
 1. Objektorienterade principer, fixa en bra läsresurs.
@@ -84,6 +88,8 @@ Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
 
 1. Jobba igenom övningen "[Kodstil med Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-codestyle)" för att skriva koden på rätt sätt.
 
+<!-- Flytta kodstil till uppgift -->
+
 1. Jobba igenom övningen "[Mina egna klasser i Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-write-your-own-class)" för att komma igång och se hur du kan skriva dina egna klasser inklusive arv och komposition samt integrera dem med en kontroller i Symfony.
 
 
@@ -97,6 +103,8 @@ Dice övning med kod, inkl get, post, session?
 -->
 
 <!-- Skapa en klass/route som visar dagens namn, quote eller liknande, både som sida och som rest api, bara get, ingen post eller session, eventuellt filer eller databasen sqlite -->
+
+<!-- generera dokumentation, phpdoc, uml -->
 
 
 
@@ -131,6 +139,10 @@ Se till att följande frågor besvaras i din redovisningstext.
 
 
 * Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.
+
+<!--
+* Berätta kort om din syn på kodstandarder och om det kan bidra till att erhålla snyggare kod.
+-->
 
 * Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?
 

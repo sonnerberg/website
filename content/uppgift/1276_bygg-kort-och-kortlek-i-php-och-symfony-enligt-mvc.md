@@ -35,57 +35,7 @@ Om du är osäker på hur en kortlek ser ut så kan du kontrollera med [Wikipedi
 
 Försök göra många små commits. När du är klar med en "feature" i din kod så kan det vara lämpligt att också göra en commit. Detta skapar dig en bra historik över ändringarna i din kod. Läs gärna igenom artikeln "[How to Write a Git Commit Message](https://cbea.ms/git-commit/)" för att få tips om hur du kan skriva bra commit-meddelanden.
 
-<!--
-### Välj ett kortspel att implementera {#kortspel}
-
-Du skall bygga ett kortspel i din webbplats. Tanken är att göra ett enkelt kortspel men du kan själv välja vilket kortspel du försöker bygga. Du kommer få möjlighet att bygga vidare på ditt kortspel i de kommande kursmomenten.
-
-Börja med att bekanta dig med det spelet du skall bygga. Förslaget är kortspelet "War".
-
-* [Wikipedia om kortspelet War (card game)](https://en.wikipedia.org/wiki/War_(card_game))
-* [Provspela en variant av kortspelet War](https://cardgames.io/war/)
-
-Läs igenom reglerna och om det finna olika variationer att spela spelet. Bestäm dig för den varianten du vill köra på. Det är fritt fram att hitta på en egen variant.
-
-Förslaget är att du börjar med enklaste möjliga variant av spelet. Använd principen KISS och "Keep it simple stupid". Det kan vara en utmaning i uppgiften att verkligen försöka hålla det enkelt och avgränsat. Glöm inte bort det.
-
-Här följer ett par förslag till klasser som du eventuellt kan tänkas behöva implementera.
-
-* Game, Player, ComputerPlayer, Card, Deck, CardHand, Histogram, Intelligence, HighScore
-
-Du har möjlighet att bygga vidare på spelet i nästa kursmoment så börja med något enkelt som fortfarande leder fram till ett spelbart spel.
-
-
-
-### Alternativa kortspel {#alt}
-
-Några alternativa varianter på kortspel kan vara 21, black jack, poker.
-
-
-
-### Är JavaScript en möjlighet? {#js}
-
-Detta är en kurs i backend PHP så tanken är att du implementerar spelet på det viset. Man klickar på länkar eller knappar som postar någon form av formulärdata till servern som via sessionen har koll på spelets ställning.
-
-Får man göra spelets frontend i JavaScript?
-
-Det är inget som rekommenderas inom ramen för denna kursen.
--->
-
-<!--
-* Game, Player, ComputerPlayer, Card, Deck, CardHand, Histogram, Intelligence, HighScore
-
-Optionellt 21, black jack.
-Optionellt korträkning, histogram.
-Optionellt någon form av patiens.
-Game
-
-Nästa kmom kan vara spel med logik och higscorelista i sessionen.
-Problemlösning.Jobba med samma klasser men bygg ut dem.
-Cohesion, Coupling, CC, Interface.
-Intelligens med trait?
-Krav på interface?
--->
+<!-- Eentuellt flytta stycket ovan till läsanvisningar i kmom02 istället. -->
 
 
 
@@ -152,13 +102,15 @@ Denna delen av uppgiften kan med fördel göras i nästa kmom. Du kan alltså se
 
 Välj om du vill göra den i detta kmom eller avvakta och gör den i nästa kmom.
 
+Rekommendationen är att avvakta och göra denna delen i kmom03.
+
 [/INFO]
 
 Du skall försöka problemlösa ett spel med flödesschema och pseudokod.
 
 1. Välj ett kortspel som du vill problemlösa (och implementera i nästa kmom). Är du osäker så väljer du [kortspelet 21](https://sv.wikipedia.org/wiki/Tjugoett_(kortspel)) eller [kortspelet Black Jack](https://en.wikipedia.org/wiki/Blackjack) där en spelare kan spela mot datorn som är bank. Du kan även välja olika spelvarianter på dessa kortspel eller ett annat kortspel eller en [patiens](https://sv.wikipedia.org/wiki/Patiens) (se [exempel på olika kort patienser](https://www.123patiens.se/)).
 
-1. Samla all din dokumentation i en webbsida under routen `game/card` och länka till dokumentationssidan från din landdningssida `card/`.
+1. Samla all din dokumentation i en webbsida under routen `game/card` och länka till dokumentationssidan från din landningssida `card/`.
 
 1. Inled med en kort beskrivning av ditt kortspel och hur du valt att det skall fungera.
 
@@ -173,35 +125,9 @@ Du skall försöka problemlösa ett spel med flödesschema och pseudokod.
 
 
 <!--
-### Spel i Symfony {#symfony}
+### Kodvalidering {#validera}
 
-1. Gör en kontroller med routes i Symfony som hanterar flödet i ditt kortspel. Din kontroller skall innehålla så lite kod som möjligt. All applikationskod placerar du i andra klasser som din kontroller använder.
-
-1. Använd templatefiler för att rendera webbsidorna.
-
-1. Du bygger detta som en del i din report-sida. Lägg till ett menyval i din navbar som man kan klicka på för att komma till spelet.
-
-1. Landningsidan på spelet ger information om vilket spel det är och dess regler. Här skall det även finnas en länk som leder till en sida med spelets dokumentation. Det skall finnas en knapp/länk där man kan starta spelet.
-
-1. Skapa en sida som dokumenterar spelet genom att du kort för varje klass (en mening) beskriver klassens syfte och dess relationer till varandra (arv, komposition). Beskrivningen kan vara i text och det är valfritt om du vill komplettera med ett UML klassdiagram.
-
-1. Sidan för dokumentation skall även innehålla resultatet från ditt flödesschema och din pseudokod.
-
-
-
-### Kortspel {#spel}
-
-Om du har valt ett annat spel än "War" så kan du behöva modifiera och tolka något av kraven.
-
-1. Skapa klasser för att skapa en webbsida där man kan spela kortspelet. Din kontroller i Symfony skall använda dina klasser. Kontrollern skall innehålla så lite kod som möjligt. Din kod skall ligga i "modellagret" som är M i MVC. Förenklat är det de klasser som inte tillhör ramverket utan är mer applikationens klasser.
-
-1. I första versionen av ditt spel räcker det om man kan spela spelet mot 1 spelare (datorn) och det kan sakna stöd för "war-delen".
-
-1. Spelets ställning kan du lagra i sessionen.
-
-1. När spelet är slut räknas korten och du visar vem som vann. Bygg in stöd för att spela med färre kort så det blir enklare att testa slutdelen av spelet.
-
-1. Under spelets gång skall man när som helst kunna "Ge upp" och komma till en slutscen som visar aktuell ställning med korten.
+1. Fixa till din kod enligt den kodstil du kör genom att köra `composer csfix`.
 -->
 
 
@@ -214,16 +140,7 @@ Om du har valt ett annat spel än "War" så kan du behöva modifiera och tolka n
 
 1. Pusha upp repot till GitHub, inklusive taggarna.
 
-1. Gör en `dbwebb publishpure report` för att kolla att det fungerar på studentservern.
-
-
-<!--
-
-php-cs-fixer via composer.json
-
-1. När du är klar, kör `make test` för att köra alla testerna mot ditt repo. När man kör `make test` så bör det passera utan allvarliga felmeddelanden.
-
--->
+1. Gör en `dbwebb publishpure report` och kontrollera att att det fungerar på studentservern.
 
 
 

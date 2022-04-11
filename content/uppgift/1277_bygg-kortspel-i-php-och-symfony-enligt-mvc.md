@@ -3,12 +3,12 @@ author: mos
 category:
     - kurs mvc
 revision:
-    "2021-04-01": "(A, mos) Första utgåvan i mvc-v1."
+    "2022-04-11": "(A, mos) Första utgåvan i mvc-v2."
 ...
 Bygg kortspel i PHP och Symfony enligt MVC
 ===================================
 
-Du skall skapa ett antal klasser i PHP. Dessa klasser skall du sedan använda i ett par webbsidor och visa upp att de fungerar. Tanken är att du bygger ett enklare kortspel med objektorienterade tekniker i ramverket Symfony.
+Du skall skapa ett kortspel i PHP med objektorienterade konstruktioner. Applikationen bygger du i Symfony.
 
 <!--more-->
 
@@ -17,9 +17,11 @@ Du skall skapa ett antal klasser i PHP. Dessa klasser skall du sedan använda i 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har grundläggande kunskap i hur man skapar en klass i PHP och hur arv och komposition fungerar.
+Du har god kunskap i hur man skapar en klass i PHP och hur arv och komposition fungerar.
 
-Du kan bygga webbsidor via kontroller och vyer i Symfony.
+Du kan bygga webbsidor via kontroller och templatefiler i Symfony.
+
+Du vet hur man använder GET, POST och SESSION i Symfony.
 
 
 
@@ -32,38 +34,43 @@ Läs och förbered dig.
 
 ### Välj ett kortspel att implementera {#kortspel}
 
-Du skall bygga ett kortspel i din webbplats. Tanken är att göra ett enkelt kortspel men du kan själv välja vilket kortspel du försöker bygga. Du kommer få möjlighet att bygga vidare på ditt kortspel i de kommande kursmomenten.
+Du skall implementera ett kortspel som en applikation. Du kan välja ett godtyckligt kortspel men standardrekommendationen är att välja spelet 21.
 
-Börja med att bekanta dig med det spelet du skall bygga. Förslaget är kortspelet "War".
+Implementera [kortspelet 21](https://sv.wikipedia.org/wiki/Tjugoett_(kortspel)) så att det går att spela i din webbplats.
 
-* [Wikipedia om kortspelet War (card game)](https://en.wikipedia.org/wiki/War_(card_game))
-* [Provspela en variant av kortspelet War](https://cardgames.io/war/)
+Återanvänd de klasser du redan har. Om du modifierar klasserna så kan du behöva tänka på att du inte förstör något som redan fungerar.
 
-Läs igenom reglerna och om det finna olika variationer att spela spelet. Bestäm dig för den varianten du vill köra på. Det är fritt fram att hitta på en egen variant.
+Spelets idé är att med två eller flera kort försöka uppnå det sammanlagda värdet 21, eller komma så nära som möjligt utan att överskrida 21.
+
+En spelrunda kan se ut så här när en spelare spelar mot banken.
+
+* Spelet leder till en landdningssida där man kan läsa spelregler och se dokumentation om spelet samt påbörja ett spel.
+* Spelplanen visas och spelaren och banken har inte tagit några kort.
+* Spelaren tar ett kort. Kortet visas.
+* Spelaren kan bestämma att stanna eller ta ytterligare ett kort.
+    * Om spelaren får över 21 vinner banken.
+* När spelaren stannarså är det bankens tur.
+* Banken är inte medveten om spelarens korthand.
+* Banken plockar kort tills den stannar eller har över 21.
+    * Banken vinner vid lika eller om banken har mer än spelaren.
+    * Spelaren vinner om banken får över 21.
+* Därefter kan man påbörja en ny omgång.
+
+Standardrekommendationen är att göra enligt ovan. Det är dock fritt fram att hitta på en egen variant av hur man spelar spelet.
 
 Förslaget är att du börjar med enklaste möjliga variant av spelet. Använd principen KISS och "Keep it simple stupid". Det kan vara en utmaning i uppgiften att verkligen försöka hålla det enkelt och avgränsat. Glöm inte bort det.
-
-Här följer ett par förslag till klasser som du eventuellt kan tänkas behöva implementera.
-
-* Game, Player, ComputerPlayer, Card, Deck, CardHand, Histogram, Intelligence, HighScore
-
-Du har möjlighet att bygga vidare på spelet i nästa kursmoment så börja med något enkelt som fortfarande leder fram till ett spelbart spel.
 
 
 
 ### Alternativa kortspel {#alt}
 
-Några alternativa varianter på kortspel kan vara 21, black jack, poker.
+Några alternativa varianter på kortspel kan till exempel vara [Black Jack](https://en.wikipedia.org/wiki/Blackjack), poker eller någon form av [patiens](https://sv.wikipedia.org/wiki/Patiens) (se [exempel på olika kort patienser](https://www.123patiens.se/)).
 
 
 
-### Är JavaScript en möjlighet? {#js}
-
-Detta är en kurs i backend PHP så tanken är att du implementerar spelet på det viset. Man klickar på länkar eller knappar som postar någon form av formulärdata till servern som via sessionen har koll på spelets ställning.
-
-Får man göra spelets frontend i JavaScript?
-
-Det är inget som rekommenderas inom ramen för denna kursen.
+<!--
+* Game, Player, ComputerPlayer, Card, Deck, CardHand, Histogram, Intelligence, HighScore, Statistics, CardCounter
+-->
 
 
 
@@ -74,66 +81,88 @@ Kraven är uppdelade i sektioner.
 
 
 
+### Landdningssida och intro {#landa}
+
+1. Skapa en landdningssida för spelet `game/` där du samlar information om spelet och kan starta spelet. Placera länken i webbplatsens navbar.
+
+1. I din landningssida, inled med en kort beskrivning av ditt kortspel och reglerna för hur det fungerar.
+
+
+
 ### Problemlösning {#problemlos}
 
-Gör ett försök att designa din lösning innan du börjar koda.
+[INFO]
 
-1. Skapa ett flödesschema som representerar hur du tänker lösa grunderna i spelet. Resultatet skall du senare placera i en webbsida så du kan spara det som en bild.
+Denna delen av uppgiften kan du eventuellt redan ha löst i kmom02. Annars får du göra den nu.
 
-1. Skapa psudokod som visar hur du tänker lösa delar av spelet.  Resultatet skall du senare placera i en webbsida så du kan spara det som en bild eller ren text.
+[/INFO]
+
+Du skall problemlösa det spelet du valt med flödesschema och pseudokod. Gör din problemlösning innan du påbörjar att implementera spelet.
+
+1. Samla all din dokumentation i en webbsida under routen `game/doc` och länka till dokumentationssidan från din landningssida.
+
+1. Skapa ett flödesschema som representerar hur du tänker lösa grunderna i spelet. Resultatet kan du placera som en bild i webbsidan för dokumentationen. Det behöver inte vara en komplett lösning, en dellösning räcker bra.
+
+1. Skapa psuedokod som visar hur du tänker lösa delar av spelet. Du kan spara resultatet som text eller bild men visa upp det i webbsidan för dokumentationen. Det behöver inte vara en komplett lösning, en dellösning räcker bra.
+
+1. Fundera igenom vilka klasser du behöver för att implementera spelet. Beskriv klasserna i text med klassens namn och en mening som beskriver vad klassens syfte är. Håll det kort och enkelt.
+
+Följande krav är optionella och du gör dem om du har tid och lust.
+
+1. Rita ett UML klass diagram som du också visar i webbsidan för dokumentationen.
 
 
 
-### Spel i Symfony {#symfony}
+### Kortspel {#kortspel}
 
-1. Gör en kontroller med routes i Symfony som hanterar flödet i ditt kortspel. Din kontroller skall innehålla så lite kod som möjligt. All applikationskod placerar du i andra klasser som din kontroller använder.
+Bygg ditt kortspel i Symfony med objektorienterade konstruktioner i PHP och försök tänka till så att du får "snygg kod".
+
+1. All applikationskod placerar du i klasser som din kontroller använder. Se till att du har så lite kod som möjligt i din kontroller. Om du har mycket kod där så flyttar du den till en egen klass. Tänk att kontrollern skall vara tunn (lite kod) och modellerna (applikationens klasser) kan vara tjocka (mycket kod).
 
 1. Använd templatefiler för att rendera webbsidorna.
 
-1. Du bygger detta som en del i din report-sida. Lägg till ett menyval i din navbar som man kan klicka på för att komma till spelet.
+1. Bygg spelet så att det fungerar minst enligt [de regler som visas i introduktionen ovan](#kortspel).
 
-1. Landninggsidan på spelet ger information om vilket spel det är och dess regler. Här skall det även finnas en länk som leder till en sida med spelets dokumentation. Det skall finnas en knapp/länk där man kan starta spelet.
+1. Banken behöver inte vara speciellt intelligent i sitt kortspel. Det räcker att den kan utföra sin uppgift och spela spelet. En enkel variant är att banken alltid plockar kort tills den har 17 eller mer, sedan stannar den.
 
-1. Skapa en sida som dokumenterar spelet genom att du kort för varje klass (en mening) beskriver klassens syfte och dess relationer till varandra (arv, komposition). Beskrivningen kan vara i text och det är valfritt om du vill komplettera med ett UML klassdiagram.
+Följande krav är optionella och du gör dem om du har tid och lust.
 
-1. Sidan för dokumentation skall även innehålla resultatet från ditt flödesschema och din pseudokod.
+1. Gör så att spelaren kan satsa pengar. Man kan satsa en viss summa vid varje spel. Håll koll på hur mycket pengar som spelaren och banken har.
+
+1. Låt banken och spelaren börja med 100 pengar var. När någon har 0 pengar har den spelaren förlorat.
+
+1. Gör så att man kan vara två spelare och banken.
+
+1. Korträkning med sannolikhet att få högt/lågt kort. Låt bli att blanda kortleken inför varje ny runda och spela tills kortleken är slut. Visa statistik som berättar sannolikheten för att få ett visst kort. Visa statistiken så att spelaren kan ha hjälp av den. Tex om spelaren har 15, visa sannolikheten för att spelaren inte skall bli tjock om nytt kort tas.
+
+1. Bygg en smartare bank som spelar på ett "intelligent sätt". Låt banken ta hjälp av statistiken.
+
+1. Bygg flera varianter av intelligens och låt spelaren och banken spela automatiskt enligt olika typer av intelligenser och se vilken intelligens/strategi som är bäst.
+
+<!--
+Fundera på att bygga vidare på konceptet med JSON.
+Fuska på något sätt?
+-->
 
 
 
-### Kortspel {#spel}
+### Kodvalidering {#validera}
 
-Om du har valt ett annat spel än "War" så kan du behöva modifiera och tolka något av kraven.
+1. Fixa till din kod enligt den kodstil du kör genom att köra `composer csfix`.
 
-1. Skapa klasser för att skapa en webbsida där man kan spela kortspelet. Din kontroller i Symfony skall använda dina klasser. Kontrollern skall innehålla så lite kod som möjligt. Din kod skall ligga i "modellagret" som är M i MVC. Förenklat är det de klasser som inte tillhör ramverket utan är mer applikationens klasser.
-
-1. I första versionen av ditt spel räcker det om man kan spela spelet mot 1 spelare (datorn) och det kan sakna stöd för "war-delen".
-
-1. Spelets ställning kan du lagra i sessionen.
-
-1. När spelet är slut räknas korten och du visar vem som vann. Bygg in stöd för att spela med färre kort så det blir enklare att testa slutdelen av spelet.
-
-1. Under spelets gång skall man när som helst kunna "Ge upp" och komma till en slutscen som visar aktuell ställning med korten.
+1. Kolla din kod hur den matchar dina linters genom att köra `composer linters`. Får du fel så kollar du vad det är och rättar de sakerna du anser rimliga.
 
 
 
 ### Publicera {#publicera}
 
-1. Committa alla filer och lägg till en tagg 2.0.0. Om du gör uppdateringar så ökar du taggen till 2.0.1, 2.0.2, 2.1.0 eller liknande.
+1. Committa alla filer och lägg till en tagg 3.0.0. Om du gör uppdateringar så ökar du taggen till 3.0.1, 3.0.2, 3.1.0 eller liknande.
 
-1. Kör `dbwebb test kmom02` för att kolla att du inte har några fel.
+1. Kör `dbwebb test kmom03` för att kolla att du inte har några fel.
 
 1. Pusha upp repot till GitHub, inklusive taggarna.
 
-1. Gör en `dbwebb publishpure report` för att kolla att det fungerar på studentservern.
-
-
-<!--
-
-php-cs-fixer via composer.json
-
-1. När du är klar, kör `make test` för att köra alla testerna mot ditt repo. När man kör `make test` så bör det passera utan allvarliga felmeddelanden.
-
--->
+1. Gör en `dbwebb publishpure report` och kontrollera att att det fungerar på studentservern.
 
 
 
