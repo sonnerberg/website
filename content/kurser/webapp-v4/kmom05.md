@@ -7,7 +7,7 @@ revision:
   "2017-03-14": (B, aar) Tagit bort JQuery mobile.
   "2015-12-04": (A, mos) Första utgåvan för kursen.
 ...
-Kmom05: Mobila enheters styrkor
+Kmom05: Karta och GPS
 ==================================
 
 [WARNING]
@@ -18,7 +18,7 @@ Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändra
 
 [/WARNING]
 
-Än så länge har vi skapat applikationer för webbläsaren, men i detta och nästa kursmoment skapar vi applikationer på riktigt för våra mobila enheter. Vi ska se vilka fördelar detta kan ge och hur vi maximerar styrkorna för våra mobila enheter. Vi lägger till ikoner och splash screens och fokuserar på att anpassa applikationernas design för de olika plattformarna och skärmstorlekar.
+Vi ska i detta kursmoment använda oss av hårdvaran i våra mobila enheter för att visa upp nuvarande position på karta. På kartan ritar vi även upp placering av en order så det blir lätt att leverera ordern till kunden.
 
 
 
@@ -26,26 +26,7 @@ Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändra
 
 
 
-[FIGURE src=/image/snapht15/Strip-dileme-appli-mobile-650-Finalenglish3.jpg caption="Så här kan man ibland känna när man väljer mellan native app och hybrid app." href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/"]
-
-Bilden ovan ger en vy av hur man kan känna när man väljer mellan native app och hybrid webapp. Men om man tänker igenom sitt projekt och målgrupp så kommer nog det ena eller andra alternativet framstå som bästa vägen att gå. För vår del gäller hybrid webapp, vi har redan investerat tid och kraft i HTML, CSS och JavaScript och vår webapp är inte speciellt avancerad eller krävande och dessutom är det väldigt lockande att stödja flera plattformar med en kodbas.
-
-Så här kan det se ut när vi är klara med lager appen i kmom05.
-
-[YOUTUBE src=CElOXw35_WU width=630 caption="Lager appen i kursmoment 5."]
-
-
-
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
-
-
-
-Labbmiljön  {#labbmiljo}
----------------------------------
-
-*(ca: 3 studietimmar)*
-
-Från [labbmiljö](./../labbmiljo) börja med att installera 'Apache Cordova' och skapa Hello World exemplet. Efter det följ rekommendationerna i 'Emulator och fysisk enhet'.
 
 
 
@@ -53,18 +34,6 @@ Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 4 studietimmar)*
-
-
-### Kurslitteratur  {#kurslitteratur}
-
-1. [Mobile HTML5](kunskap/boken-mobile-html5).
-    * Ch 14: Mobile Performance
-
-
-
-### Artiklar {#artiklar}
-
-1. Läs igenom artikeln "[GUI ramverk](kunskap/gui-ramverk)".
 
 
 
@@ -76,7 +45,9 @@ Läsanvisningar  {#lasanvisningar}
 
 ### Lästips {#lastips}
 
-Det finns inga extra lästips.
+Ta en titt på dokumentationen för modulerna [expo-location](https://docs.expo.dev/versions/latest/sdk/location/) och [react-native-maps](https://github.com/react-native-maps/react-native-maps).
+
+När vi använder oss av GPS och annan hårdvara i mobila enheter behöver vi ofta fråga användaren. I artikeln "[Permissions](https://docs.expo.dev/guides/permissions/)" beskrivs översiktligt hur vi kan göra detta.
 
 
 
@@ -89,9 +60,7 @@ Det finns inga extra lästips.
 
 ### Övningar {#ovningar}
 
-1. Jobba igenom övningen "[Kom igång med Cordova](kunskap/kom-igang-med-cordova)". Spara dina filer i `me/kmom05/hello`.
-
-1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)". Spara dina filer i `me/kmom05/hello`.
+1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta-v2)" för att träna på GPS och karthantering i React Native.
 
 
 
@@ -99,7 +68,7 @@ Det finns inga extra lästips.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)". Spara dina filer i `me/kmom05/lager5`.
+1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)".
 
 
 
@@ -107,11 +76,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 Se till så att en länk till ditt GitHub-repo ingår som en del av din inlämning på Canvas. Länken ska vara på formen: https://github.com/emilfolino/lager-v4.git
 
-
-
-### Extra {#extra}
-
-* Skapa ett offline-läge för din app med hjälp artikeln "[Filer i Cordova](kunskap/filer-i-cordova)" och Cordova pluginen "[Network information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/)". Du behöver inte göra om så hela appen fungerar, men kan välja ut specifika vyer och specifik data att göra offline. Skriv en rad eller tre i din redovisningstext om hur det gick om du valde att göra offline-läget.
+Se dessutom till att du har gjort `expo publish` i din lager katalog.
 
 
 
@@ -124,8 +89,5 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilka fördelar ser du med att göra appar med Cordova om du jämför med rena webbapplikationer?
-* Har du möjligheten att köra dina appar på en fysisk enhet? Vilka testmöjligheter ger detta?
-* Gick det bra att skapa en logga och splashscreen?
-* Beskriv designprocessen för att efterlikna den mobila plattformen du bygger din app för?
+* Fick du till ett bra gränssnitt med kartan?
 * Vilken är din TIL för detta kmom?

@@ -5,5 +5,5 @@
 * [03: Formulär och CRUD](kurser/webapp-v4/kmom03)
 * [04: Autentisering med JWT](kurser/webapp-v4/kmom04)
 * [05: Mobila enheters styrkor](kurser/webapp-v4/kmom05)
-* [06: GraphQL](kurser/webapp-v4/kmom06)
+* [06: Fel och Test](kurser/webapp-v4/kmom06)
 * [07/10: Projekt och examination](kurser/webapp-v4/kmom10)
