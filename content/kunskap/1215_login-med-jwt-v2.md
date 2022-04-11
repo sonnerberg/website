@@ -119,6 +119,7 @@ Låt oss börja med att skapa Login och Registrera komponenterna. Har börjat bl
 Jag skapar först en `Auth`-komponent där vi har en `Stack` som vi har sett tidigare. Så vi har möjlighet för att växla mellan Logga in och Registrera.
 
 ```javascript
+// auth/Auth.tsx
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from './Login';
@@ -145,6 +146,7 @@ Vi tar en titt på `Login` komponenten, men samma princip gäller för `Register
 Sedan skapar vi funktionen `doLogin` som vi vill ska anropas när vi har fyllt i formuläret. Från `Login` komponenten returnerar vi en annan komponent `AuthFields` och här fyller vi i de `props` vi vill skicka med vidare till den komponenten.
 
 ```javascript
+// auth/Login.tsx
 import Auth from '../../interfaces/auth';
 import { useState } from 'react';
 import AuthModel from '../../models/auth';
@@ -177,6 +179,7 @@ export default function Login({navigation, setIsLoggedIn}) {
 Vi ser ovan att vi skickar med `state` och funktionen, samt en titel, men även `navigation` objektet så vi kan lägga till en knapp för att gå mellan `Login` och `Register`. Låt oss ta en titt på hur vi utformar en återanvändbar komponent för inloggning och registrering.
 
 ```javascript
+// auth/AuthFields.tsx
 import { View, Text, TextInput, Button } from "react-native";
 import { Typography, Forms, Base } from '../../styles';
 
@@ -236,6 +239,7 @@ Nu har vi sett den dyka upp i lite olika sammanhang så låt oss ta en titt på 
 I modellen har vi fyra funktioner: `isLoggedIn` för att kolla om vi är inloggade, `login` för att logga in, `register` för att registrera en användare och `logout` för att logga ut.
 
 ```javascript
+// models/auth.ts
 import config from "../config/config.json";
 
 import storage from "./storage";
@@ -294,6 +298,7 @@ export default auth;
 Vi ser här ganska omedelbart att vi importerar och använder oss av ytterligare en modell `storage`. Denna modellen sparar vår token i `AsyncStorage` som är ett säkert ställe som bara vår app kommer åt. Modulen istalleras med kommandot `expo install @react-native-async-storage/async-storage`. Vi väljer att spara vår token tillsammans med en tidstämpel som en JSON-sträng. Vi har då möjlighet för att kolla om vår token har gått ut (I Lager-API:t går en token ut efter 24 timmar).
 
 ```javascript
+// models/storage.ts
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const storage = {
