@@ -10,14 +10,6 @@ revision:
 Kmom05: Karta och GPS
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**.
-
-Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
-
-[/WARNING]
-
 Vi ska i detta kursmoment använda oss av hårdvaran i våra mobila enheter för att visa upp nuvarande position på karta. På kartan ritar vi även upp placering av en order så det blir lätt att leverera ordern till kunden.
 
 
@@ -68,7 +60,7 @@ När vi använder oss av GPS och annan hårdvara i mobila enheter behöver vi of
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)".
+1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5-v2)".
 
 
 
@@ -90,4 +82,5 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Fick du till ett bra gränssnitt med kartan?
+* Hur upplever du ramverken React och React Native nu efter ett antal veckor?
 * Vilken är din TIL för detta kmom?
