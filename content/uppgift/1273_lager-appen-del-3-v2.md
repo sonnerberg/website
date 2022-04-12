@@ -22,7 +22,7 @@ I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskap
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har gjort övningen "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)".
+Du har gjort övningen "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular-v2)".
 
 
 
