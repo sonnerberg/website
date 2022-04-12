@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2022-04-12": "(B, mos) Länk till linters och not om problemlösning till kmom03."
     "2022-04-11": "(A, mos) Första utgåvan i mvc-v2."
 ...
 Kmom03: Applikation
@@ -82,7 +83,7 @@ Det finns inga övningar.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Det finns en tutorial "[Get going with code linters in PHP](https://github.com/dbwebb-se/mvc/tree/main/example/example/php-linter-and-mess-detection)" i ditt kursrepo under `example/example/php-linter-and-mess-detection` som hjälper dig att komma igång med ett par verktyg för "code linting and mess detection" som ger dig råd om hur du kan städa upp din kod.
+1. Det finns en tutorial "[Get going with code linters in PHP](https://github.com/dbwebb-se/mvc/tree/main/example/php-linter-and-mess-detection)" i ditt kursrepo under `example/example/php-linter-and-mess-detection` som hjälper dig att komma igång med ett par verktyg för "code linting and mess detection" som ger dig råd om hur du kan städa upp din kod.
 
 1. Lös uppgiften "[Bygg kortspel i PHP och Symfony enligt MVC](uppgift/bygg-kortspel-i-php-och-symfony-enligt-mvc)". Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
 
