@@ -34,7 +34,7 @@ För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
 Titta igenom följande föreläsningar.
 
-1. [Problemlösning och design av algoritmer för programmerare](./../forelasning/problemlosning-och-design-av-algoritmer) som visar på olika arbetssätt i hur man kan jobba med problemlösning innan man sätter igång och programmerar.
+1. PS. Enligt dialog i chatten så är denna föreläsning flyttad till kmom03 pga av upplevd arbetsbelastning. Det går dock bra att välja om man tittar på den i detta eller nästa kmom. [Problemlösning och design av algoritmer för programmerare](./../forelasning/problemlosning-och-design-av-algoritmer) som visar på olika arbetssätt i hur man kan jobba med problemlösning innan man sätter igång och programmerar.
 
 1. [Klasser och objekt i PHP - arv, komposition, interface och trait](./../forelasning/klasser-och-objekt-i-php-arv-komposition-interface-trait) där vi studerar konstrukturer för arv, komposition, interface och trait. Vi pratar också om hur man skall tänka när man kodar objektorienterat och vad som är god kodsed och riktlinjer när man designar och implementerar sina klasser.
 

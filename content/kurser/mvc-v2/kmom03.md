@@ -27,17 +27,13 @@ För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
 
 
-<!--
-
 ### Föreläsning {#flas}
 
 Titta igenom följande föreläsningar.
 
-1. [Problemlösning och design av algoritmer för programmerare](./../forelasning/problemlosning-och-design-av-algoritmer) som visar på olika arbetssätt i hur man kan jobba med problemlösning innan man sätter igång och programmerar.
+1. [Problemlösning och design av algoritmer för programmerare](./../forelasning/problemlosning-och-design-av-algoritmer) som visar på olika arbetssätt i hur man kan jobba med problemlösning innan man sätter igång och programmerar. (Flyttad från kmom02 till kmom03).
 
-Nåt om snygg kod och riktlinjer? Basera på "Clean Code PHP"?
-
--->
+1. [Hur tänka kring objektorientering och principer om snygg kod?](./../forelasning/hur-tanka-kring-objectorientering-och-snygg-kod) som visar på designprinciper och terminologi som hjälper oss att tänka kring hur vi skapar bra och snygg kod. Inspelad från veckans tisdags-zoom.
 
 
 
