@@ -132,10 +132,15 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
+1. Det finns en tutorial "[Document your PHP code](https://github.com/dbwebb-se/mvc/tree/main/example/example/phpdoc)" i ditt kursrepo under `example/example/phpdoc` som hjälper dig att komma igång med att automatiskt skapa dokumentation för din kod.
+
 1. Lös uppgiften "[Enhetstesta dina klasser med PHPUnit](uppgift/enhetstesta-dina-klasser-med-phpunit)".
 
-<!-- generera dokumentation, phpdoc, uml -->
-<!-- phpmd, phpstan, copy-paste-detector -->
+<!--
+generera dokumentation, phpdoc, uml  hur fixa uml klassdiagram?
+Kanske flytta det till kmom03 i fortsättningen?
+Samt kräva att det läggs till i Git-repot
+-->
 
 
 

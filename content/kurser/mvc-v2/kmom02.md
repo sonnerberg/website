@@ -88,7 +88,7 @@ Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
 
 1. Jobba igenom övningen "[Kodstil med Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-codestyle)" för att skriva koden på rätt sätt.
 
-<!-- Flytta kodstil till uppgift -->
+<!-- Flytta kodstil till uppgift och placera i dbwebb test -->
 
 1. Jobba igenom övningen "[Mina egna klasser i Symfony](https://github.com/dbwebb-se/mvc/tree/main/example/symfony-write-your-own-class)" för att komma igång och se hur du kan skriva dina egna klasser inklusive arv och komposition samt integrera dem med en kontroller i Symfony.
 

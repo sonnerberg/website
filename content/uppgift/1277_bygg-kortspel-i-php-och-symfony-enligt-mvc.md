@@ -142,6 +142,7 @@ Följande krav är optionella och du gör dem om du har tid och lust.
 <!--
 Fundera på att bygga vidare på konceptet med JSON.
 Fuska på något sätt?
+Visa spelets hela ställning med alla detaljer?
 -->
 
 
@@ -150,7 +151,7 @@ Fuska på något sätt?
 
 1. Fixa till din kod enligt den kodstil du kör genom att köra `composer csfix`.
 
-1. Kolla din kod hur den matchar dina linters genom att köra `composer linters`. Får du fel så kollar du vad det är och rättar de sakerna du anser rimliga.
+1. Kolla din kod hur den matchar dina linters genom att köra `composer lint`. Får du fel så kollar du vad det är och rättar de sakerna du anser rimliga.
 
 
 

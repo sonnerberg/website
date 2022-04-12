@@ -108,6 +108,8 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 Städa så att man jobbar vidare i en och samma katalog samt "färdigställer" sitt Yatzy så det är spelbart.
 
 Om test mot databas använd .env.test
+
+CI flöde, composer phpdoc, GitHub Actions
 -->
 
 

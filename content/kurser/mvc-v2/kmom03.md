@@ -80,8 +80,6 @@ Det finns inga övningar.
 
 <!-- Jobba igenom övningarna, de förbereder dig inför uppgifterna. -->
 
-<!-- generera dokumentation, phpdoc, uml -->
-
 
 
 ### Uppgifter {#uppgifter}
