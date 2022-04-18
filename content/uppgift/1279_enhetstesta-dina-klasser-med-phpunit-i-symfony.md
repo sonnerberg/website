@@ -63,7 +63,7 @@ Kraven är uppdelade i sektioner.
 
 
 
-### Utvecklingsmiljö {#miljö}
+### Utvecklingsmiljö {#miljo}
 
 <!-- Skall man linta koden i test? -->
 
