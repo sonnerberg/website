@@ -105,6 +105,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 1. Utför uppgiften "[Analysera PHP kod ur kvalitetsaspekter](uppgift/analysera-kodkvalitet-i-tre-php-moduler)"
 
 <!--
+Fixa test mot din Symfony Controller och din Symfony Application.
+
+
 Städa så att man jobbar vidare i en och samma katalog samt "färdigställer" sitt Yatzy så det är spelbart.
 
 Om test mot databas använd .env.test

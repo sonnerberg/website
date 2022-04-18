@@ -106,79 +106,37 @@ Kursen avslutas med ett större avslutande moment som examinerar kursen.
 
 Vi börjar med att installera Symfony och bygger en webbplats med en kontroller (C:et i MVC) som ger oss grunden för kursens me-sida som skall innehålla detaljer om dig själv, kursen och dina redovisningstexter. Du använder vyer för att rendera webbsidorna (V:et i MVC).
 
-<!--
-Vi börjar med grunderna i objektorienterad PHP, det blir objekt och klasser med inkapsling, konstruktorer och destruktorer, setters och getters, egenskapade exceptions och vi ser hur man kan lagra ett objekt i sessionen.
-
-Vi jobbar i en guide och bygger små grundläggande testprogram för att testa och se hur objektorienterade konstruktionerna fungerar i PHP.
-
-För att repetera våra PHP-kunskaper och samtidigt komma igång med klasser och objekt så bygger vi en variant av spelet "Gissa vilket nummer jag tänker på".
-
-Vi bygger en me-sida (redovisa-sida) med PHP-ramverket Anax. Det ger oss möjligheten att bekanta oss med en färdig webbplats i eet PHP-ramverk. Senare i kursen kommer vi att flytta in spelet "Gissa mitt nummer" in i ramverkets struktur.
--->
-
 Läs [instruktionen till kursmoment 01](./kmom01).
 
 
 
 ### Kmom02: Objektorientering {#kmom02}
 
-To Be Defined.
-
-<!--
-Vi jobbar vidare med programmering av klasser och objekt. Vi tar fler grundkonstruktioner i objektorientering och PHP. Vi tittar på arv och komposition för att se hur klasser kan samverka och bygga på varandra. Vi använder namespace för att strukturera koden och vi använder en autoloader enligt PSR-4.
-
-Vi ser hur ett klassdiagram kan ritas i UML, för att skissa på relationerna mellan klasserna. Vi ser också hur man kan bygga upp automatisk dokumentation från koden via docblock-kommentarer.
-
-Vi börjar koda inuti ramverket och använder oss av konstruktioner som routes, vyer och placerar klasserna inuti ramverket med givna namespaces och använder oss av ramverkets autoloader. Som övning tar vi och flyttar vårt spel "Gissa mitt nummer" in i ramverket.
--->
+Vi skall bygga grunderna till ett kortspel i vår webbplats för att träna på objektorientering och hur man skapar egna klasser och applikationer i ramverket Symfony.
 
 Läs [instruktionen till kursmoment 02](./kmom02).
 
 
 
-### Kmom03: Enhetstestning {#kmom03}
+### Kmom03: Applikation {#kmom03}
 
-Vi jobbar vidare med klasser och objekt och denna gången tittar vi på hur klasser kan enhetstestas med verktyget PHPUnit. PHPUnit är ett av de verktyg som vanligen används inom PHP för att utföra enhetstestning av koden.
-
-<!--
-Vi har tidigare pratat om begreppet inkapsling och att klasserna skall erbjuda ett publikt API, ett gränssnitt för användaren av klassen. Samtidigt vill vi skydda den interna implementationen inuti klassen. Vi vill låta användaren av vår klass ha ett tydligt gränssnitt, men inuti klassen vill vi själva bestämma hur vi implementerar klassens detaljer, utan att påverka/påverkas av det publika gränssnittet.
-
-Liknande begrepp använder vi i enhetstestning. Vi ser varje klass som en enhet som skall testas och vi testar klassen via dess publika gränssnitt vilket är de metoder vi når som användare av klassen, dess publika metoder. När vi testar så är vi fullt medvetna om hur klassen är uppbyggd. Vi kallar det för _white box testing_, vi har tillgång till klassens källkod när vi skriver testfallen och vi vet exakt den källkod vi skall testa. Målet är att testa alla varianter av användning mot klassen, även felfall.
--->
+Vi jobbar vidare med klasser och objekt i PHP och bygger en applikation i ramverket Symfony. Detta kursmomentet blir som ett litet miniprojekt där vi problemlöser, designar och implementerar en applikation med objektorienterade konstruktioner enligt MVC.
 
 Läs [instruktionen till kursmoment 03](./kmom03).
 
 
 
-### Kmom04: XXX {#kmom04}
+### Kmom04: Enhetstestning {#kmom04}
 
-To Be Defined.
-
-<!--
-Med hjälp av ramverkets struktur flyttar vi vårt 100-spel in i en kontroller-klass som bildar ett gränssnitt mellan ramverkets kärna (klienten) och applikationens kod (100-spelet).
-
-Med en kontroller-klass vinner vi en bättre struktur av våra routes och dessutom hamnar de i en klass som är enklare att testa än de routes med callbacks vi haft tidigare.
-
-Vi jobbar mer och mer att integrera oss i de möjligheter som ramverket ger. Vi använder ramverkets klasser för att få tillgång till GET, POST och SESSION. Tanken är att vi inte skall ha tillgång till dessa globala variabler på ett godtyckligt sätt i varje klass, istället knyter vi accessen till dessa globala PHP systemvariabler via ramverkets klasser. En tanke är att göra det enklare att testa koden genom att mocka värden i dessa globala variabler.
-
-Trait och interface är två objektorienterade konstruktioner som kan användas för att strukturera sin kod på ett objektorienterat sätt. Det ger oss två nya verktyg för att tänka när vi implementerar koden. När vi tittar på hur kontroller-klassen är specificerad så ser vi hur ramverket använder sig av dessa konstruktioner.
--->
+Vi jobbar vidare med klasser och objekt och denna gången tittar vi på hur klasser kan enhetstestas med verktyget PHPUnit. PHPUnit är ett av de verktyg som vanligen används inom PHP för att utföra enhetstestning av koden.
 
 Läs [instruktionen till kursmoment 04](./kmom04).
 
 
 
-### Kmom05: Autentisering {#kmom05}
+### Kmom05: ORM / Databas {#kmom05}
 
 To Be Defined.
-
-<!--
-Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar i ett sammanhang och därefter får du på egen hand koda motsvarande funktionalitet in i din redovisa sida och in i ramverkets struktur.
-
-Du får en utmaning som innebär att tänka igenom koden som serveras i övningen och hur den kan struktureras när den skall in i ramverket. Går det att göra objekt av allt eller har funktioner fortfarande en plats i kodstrukturen? Du väljer väg. Det blir en övning i refactoring.
-
-Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read) för en webbapplikation mot en databas, närmare specifikt en filmdatabas.
--->
 
 Läs [instruktionen till kursmoment 05](./kmom05).
 
@@ -186,14 +144,6 @@ Läs [instruktionen till kursmoment 05](./kmom05).
 ### Kmom06: Automatiserad test {#kmom06}
 
 To Be Defined.
-
-<!--
-Detta kursmoment har ett liknande upplägg som föregående och vi fortsätter att jobba med databasen där vi nu fokuserar på att hantera "innehåll" i databasen. Innehåll kan till exempel vara texten till de sidor som bygger upp en webbplats eller innehållet i bloggsidor.
-
-Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras (CRUD) av användaren. Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
-
-Det vi bygger är i grunden ett enkelt Content Mangement System (CMS) där användaren kan redigera webbplatsens innehåll och texter via ett webbaserat gränssnitt.
--->
 
 Läs [instruktionen till kursmoment 06](./kmom06).
 

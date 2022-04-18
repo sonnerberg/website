@@ -44,7 +44,7 @@ Spelets idé är att med två eller flera kort försöka uppnå det sammanlagda 
 
 En spelrunda kan se ut så här när en spelare spelar mot banken.
 
-* Spelet leder till en landdningssida där man kan läsa spelregler och se dokumentation om spelet samt påbörja ett spel.
+* Spelet leder till en landningssida där man kan läsa spelregler och se dokumentation om spelet samt påbörja ett spel.
 * Spelplanen visas och spelaren och banken har inte tagit några kort.
 * Spelaren tar ett kort. Kortet visas.
 * Spelaren kan bestämma att stanna eller ta ytterligare ett kort.
@@ -81,7 +81,7 @@ Kraven är uppdelade i sektioner.
 
 
 
-### Landdningssida och intro {#landa}
+### Landningssida och intro {#landa}
 
 1. Skapa en landdningssida för spelet `game/` där du samlar information om spelet och kan starta spelet. Placera länken i webbplatsens navbar.
 

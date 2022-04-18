@@ -7,20 +7,15 @@ revision:
 Kmom04: Enhetstestning
 ==================================
 
-[WARNING]
-
-**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
-
-Större ändringar kan komma att ske i materialet.
-
-[/WARNING]
-
-
-Vi jobbar vidare med klasser och objekt och denna gången tittar vi på hur klasser kan enhetstestas med verktyget PHPUnit. PHPUnit är ett av de verktyg som vanligen används inom PHP för att utföra enhetstestning av koden.
+Vi jobbar vidare med klasser och objekt och nu tittar vi på hur klasser kan enhetstestas med verktyget PHPUnit. PHPUnit är ett av de verktyg som vanligen används inom PHP för att utföra enhetstestning av kod.
 
 Vi har tidigare pratat om begreppet inkapsling och att klasserna skall erbjuda ett publikt API, ett gränssnitt för användaren av klassen. Samtidigt vill vi skydda den interna implementationen inuti klassen. Vi vill låta användaren av vår klass ha ett tydligt gränssnitt, men inuti klassen vill vi själva bestämma hur vi implementerar klassens detaljer, utan att påverka/påverkas av det publika gränssnittet.
 
-Liknande begrepp använder vi i enhetstestning. Vi ser varje klass som en enhet som skall testas och vi testar klassen via dess publika gränssnitt vilket är de metoder vi når som användare av klassen, dess publika metoder. När vi testar så är vi fullt medvetna om hur klassen är uppbyggd. Vi kallar det för _white box testing_, vi har tillgång till klassens källkod när vi skriver testfallen och vi vet exakt den källkod vi skall testa. Målet är att testa alla varianter av användning mot klassen, även felfall.
+Liknande begrepp använder vi i enhetstestning. Vi ser varje klass som en enhet som skall testas och vi testar klassen via dess publika gränssnitt vilket är de metoder vi når som användare av klassen, klassens publika metoder. När vi testar så är vi fullt medvetna om hur klassen är uppbyggd. Vi kallar det för _white box testing_, vi har tillgång till klassens källkod när vi skriver testfallen och vi vet exakt den källkod vi skall testa. Målet är att testa alla varianter av användning mot klassen, även felfall.
+
+Vi försöker även nå en så kod kodtäckning som möjligt och rimligt. 100% kodtäckning handlar om att testfallen exekverar samtliga kodrader minst en gång. Ibland är det inte möjligt att nå 100% och man kan nöja sig med en siffra som kanske når 70%. Det är något man får "känna efter" och se hur testbar ens kod är.
+
+Som ett litet sidospår tittar vi även på hur man kan automatisera dokumentationen av sin kod.
 
 <!-- more -->
 
@@ -45,6 +40,8 @@ Installera följande som en del av din labbmiljö.
 
     1. Om du är på Mac kan du vara behjälpt av att installera "PHP i terminalen" och "Xdebug" via pakethanterare Brew, för detaljer se "[Installera Xdebug på Mac OS med XAMPP/brew](t/8514)".
 
+<!-- Fixa installationsinstruktionen på Mac -->
+
 
 
 Läs & Studera  {#lasanvisningar}
@@ -60,25 +57,9 @@ För att lösa uppgifterna och redovisningen bör du studera enligt följande.
 
 Titta igenom följande föreläsningar.
 
+1. [Introduktion till området "Software Testing"](./../forelasning/software-testing) om ingenjörsprocessen att utföra testning med mjukvara.
 
-
-#### Introduktion till området "Software Testing" {#f1}
-
-Om "software testing" och ingenjörsprocessen att utföra testning.
-
-Slides till föreläsningen "[Introduktion till området 'Software Testing'](https://dbwebb-se.github.io/mvc/lecture/L03-software-testing/slide.html)".
-
-[YOUTUBE src="OouC3mBVOhU" width=700 caption="Introduktion till området 'Software Testing' (med Mikael)."]
-
-
-
-#### Introduktion till området "Software Unit Testing" {#f2}
-
-Fortsättning med objekt och klasser i PHP. Vi studerar konstrukturer för arv, komposition, interface och trait. Vi pratar också om hur man skall tänka när man kodar objektorienterat och vad som är god kodsed och riktlinjer när man designar och implementerar sina klasser.
-
-Slides till föreläsningen "[Introduktion till området 'Software Unit Testing'](https://dbwebb-se.github.io/mvc/lecture/L03-software-unit-testing/slide.html)".
-
-[YOUTUBE src="LgFHTPEu6BI" width=700 caption="Introduktion till området 'Software Unit Testing' (med Mikael)."]
+1. [Introduktion till området "Software Unit Testing"](./../forelasning/software-unit-testing) och rollen för enhetstestning i testprocessen av mjukvara.
 
 
 
@@ -100,6 +81,8 @@ Slides till föreläsningen "[Introduktion till området 'Software Unit Testing'
 
 
 <!--
+Kanske bra när man kan lite mer om enhetstestning och vill elaborera om det.
+
 1. På StackOverflow/StackExchange finns följande funderingar och frågor om enhetstestning besvarade, läs frågorna och de olika svaren för att skapa dig en bild av vad programmerare generellt anser om enhetstestning.
     * "[Is Unit Testing worth the effort?](https://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort)"
     * "[Why would you write unit-tests for controllers?](https://softwareengineering.stackexchange.com/questions/338420/why-would-you-write-unit-tests-for-controllers)"
@@ -120,11 +103,9 @@ Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för
 
 ### Övningar {#ovningar}
 
-<!-- Det finns inga övningar i detta kursmoment. -->
-
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-1. Det finns en tutorial "[Get going with phpunit](https://github.com/dbwebb-se/mvc/tree/main/example/phpunit)" i ditt kursrepo under `example/phpunit` som hjälper dig att komma igång med phpunit och enhetstestning. Jobba igenom den och försök nå 100% kodtäckning och samtidigt lära dig grunderna i enhetstestning.
+1. Det finns en övning "[Get going with phpunit](https://github.com/dbwebb-se/mvc/tree/main/example/phpunit)" i ditt kursrepo under `example/phpunit` som hjälper dig att komma igång med phpunit och enhetstestning. Jobba igenom den och försök nå 100% kodtäckning samtidigt som du lär dig grunderna i enhetstestning.
 
 
 
@@ -132,9 +113,9 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Det finns en tutorial "[Document your PHP code](https://github.com/dbwebb-se/mvc/tree/main/example/example/phpdoc)" i ditt kursrepo under `example/example/phpdoc` som hjälper dig att komma igång med att automatiskt skapa dokumentation för din kod.
+1. Det finns en övning "[Document your PHP code](https://github.com/dbwebb-se/mvc/tree/main/example/phpdoc)" i ditt kursrepo under `example/example/phpdoc` som hjälper dig att komma igång med att automatiskt skapa dokumentation för din kod. Jobba igenom den och integrera `composer phpdoc` i ditt `me/report`.
 
-1. Lös uppgiften "[Enhetstesta dina klasser med PHPUnit](uppgift/enhetstesta-dina-klasser-med-phpunit)".
+1. Lös uppgiften "[Enhetstesta dina klasser med PHPUnit i Symfony](uppgift/enhetstesta-dina-klasser-med-phpunit-i-symfony)".
 
 <!--
 generera dokumentation, phpdoc, uml  hur fixa uml klassdiagram?
@@ -172,47 +153,6 @@ Se till att följande frågor besvaras i texten i din rapport:
 
 <!--stop-->
 
-
-
-Resurser bra-att-ha {#resurser}
----------------------------------
-
-Här anges övriga resurser som kan användas för vidare studier i det som kursmomentet omfattar.
-
-
-
-### Om Software Testing {#test}
-
-Följande resurser används i olika omfattning i samband med föreläsningen "Introduktion till området "Software Testing"".
-
-För att läsa mer allmänt om test av mjukvara så kan Wikipedia vara en grov startpunkt via följande sidor.
-
-* "[Software testing](https://en.wikipedia.org/wiki/Software_testing)"
-* "[Software bug](https://en.wikipedia.org/wiki/Software_bug)"
-* "[Software verification and validation](https://en.wikipedia.org/wiki/Software_verification_and_validation)"
-
-Om du fattade intresse för SWEBOK så finns resurserna här.
-
-* Wikipedia om [SWEBOK](https://en.wikipedia.org/wiki/Software_Engineering_Body_of_Knowledge)
-* IEEE Computer Society med "[The Guide to the Software Engineering Body of Knowledge (SWEBOK Guide)](https://www.computer.org/education/bodies-of-knowledge/software-engineering)"
-
-
-
-### Om Software Unit Testing {#unittest}
-
-Följande resurser används i olika omfattning i samband med föreläsningen "Introduktion till området "Software Unit Testing"".
-
-* Kika på Wikipedia artikeln om "[List of software bugs](https://en.wikipedia.org/wiki/List_of_software_bugs)" för att lära sig om kända buggar och deras konsekvenser.
-
-* Läs om "[Side effect (computer science)](https://en.wikipedia.org/wiki/Side_effect_(computer_science))" och lära sig om referens transparens, idempotens och deterministisk.
-
-    * Läs om den relaterade termen "[Pure function](https://en.wikipedia.org/wiki/Pure_function)".
-    * Läs om den relaterade termen "[Deterministic algorithm](https://en.wikipedia.org/wiki/Deterministic_algorithm)".
-
-* Försök få en förståelse för begreppet "[False positives and false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives)" och hur det hänger ihop med enhetstester.
-
-
-
 ### PHPUnit {#phpunit}
 
 När det gäller phpunit så är bland annat följande resurser intressanta att ha koll på.
@@ -225,22 +165,3 @@ När det gäller phpunit så är bland annat följande resurser intressanta att 
 För att kodtäckningen skall fungera behöver du installera Xdebug.
 
 * [Hemsidan för Xdebug](https://xdebug.org/)
-
-
-
-### Arkiv {#arkiv}
-
-En introduktionen till enhetstester och enhetstestning ges i artikeln "[Enhetstestningens roll i test av mjukvara](kunskap/enhetstestningens-roll-i-test-av-mjukvara)". Denna artikeln kan anses ersatt av de båda föreläsningarna om test och ligger med här enbart av kuriosa skäl.
-
-
-
-### Git och skriva bra commits {#gitcommit}
-
-Det kan vara en konst att skriva bra commit-meddelande så att man får en bra historik när man tittar på koden via ens commits.
-
-* Läs artikeln "[How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)" för att få sju gyllene regler som kan hjälpa dig till bättre commit-meddelanden.
-
-I artikeln ovan refereras till Linux kärnan och repon skrivna av Tim Pope som bra exempel på commit-historik. Följande länkar leder till den typen av exempel.
-
-* StackOverflow "[Git Commit Messages: 50/72 Formatting](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting)" men ett histogram över längden på commit-meddelanden från Linux kärnan.
-* Tim Pope "[A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)" som är en äldra artikel som ofta refereras till i sammanhanget.
