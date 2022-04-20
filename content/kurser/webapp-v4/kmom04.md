@@ -21,7 +21,7 @@ Vi fortsätter med Lager appen och lägger till en funktion för att skapa faktu
 
 
 
-[YOUTUBE src=9yrgftTwVDw width=630 caption="Lager appen i kursmoment 4."]
+[YOUTUBE src=6gSpXD2vx9c width=630 caption="Lager appen i kursmoment 4."]
 
 
 
