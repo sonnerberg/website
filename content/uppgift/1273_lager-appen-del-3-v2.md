@@ -36,11 +36,11 @@ En inleverans är när lagret får varor levererade och vi ska underlätta för 
 Krav {#krav}
 -----------------------
 
-1. Lista alla tidigare inleveranser, om det inte finns inleveranser visa upp ett meddelande om detta.
+1. Lista alla tidigare inleveranser. Om det inte finns inleveranser, visa upp ett meddelande om detta.
 
-1. Gör en knapp för 'Ny inleverans' i list-vyn denna ska ta användaren till ett formulär.
+1. Gör en knapp för 'Ny inleverans' i list-vyn, denna ska ta användaren till ett formulär.
 
-1. Använd dina kunskapar i att göra ett lättanvänd formulär där man kan göra inleverans av en produkt.
+1. Använd dina kunskaper i att göra ett lättanvänt formulär där man kan göra inleverans av en produkt.
 
 1. Formuläret ska innehålla alla attribut för en inleverans förutom Leverans ID (id) dvs.:
 
