@@ -2,19 +2,14 @@
 author: lew
 category: labbmiljo
 revision:
+    "2022-04-11": (B, lew) Uppdatering för Windows och ht22.
     "2019-03-08": (A, lew) Första utgåvan.
 created: "2019-03-08 10:49:30"
 ...
 Installera virtualiseringsmiljön Docker
 ==================================
 
-Vi lutar oss mot Dockers egna dokumentation för installationsanvisningar, [https://docs.docker.com/](https://docs.docker.com/). Fortsätt läsa för att se hur du går vidare.
-
-[INFO]
-Ett tips för Windows 10 Home är att installera Docker för Linux i din VirtualBox. Det kommer underlätta framöver och vi håller oss kvar i Linuxmiljön. I dagsläget finns det inget stöd för Hyper-V i Windows Home 10 (2019-03-08).
-[/INFO]
-
-<!--more-->
+Docker kommer utgöra grunden för kursens labbmiljö. Vi kommer få en unixmiljö där vi kan exekvera alla uppgifter och program samt träna på terminalkommandon. Vi lutar oss mot Dockers egna dokumentation för installationsanvisningar, [https://docs.docker.com/](https://docs.docker.com/). Fortsätt läsa för att se hur du går vidare.
 
 
 
@@ -23,8 +18,9 @@ Hämta installationsprogrammet {#download}
 
 Webbplatsen för Docker innehåller en del där du kan ladda hem och installera Docker. Det finns en Community Edition (CE) versioner för Windows, Mac och Linux. Kör igenom installationen enligt anvisningarna.
 
-* [Windows](https://docs.docker.com/docker-for-windows/install/)
-    - Om ni använder WSL kan ni läsa [Setting up docker for windows and wsl to work flawlessly]( https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly).
+* Windows
+    - [Installera WSL2](https://docs.microsoft.com/en-us/windows/wsl/install)
+    - [Installera Docker](https://docs.docker.com/docker-for-windows/install/) 
 
 * [MacOs](https://docs.docker.com/docker-for-mac/install/)
 
@@ -45,31 +41,6 @@ Nu har du förhoppningsvis installerat Docker CE. Det kan såklart krångla med 
 
 
 
-### Windows, VirtualBox och Hyper-V {#win-vb-hyper-v}
-
-Att tänka på är att Docker till Windows använder *Hyper-V* för virtualiseringen, vilket inte VirtualBox gör så det går inte att ha båda teknikerna fungerande samtidigt. Hyper-V är Microsofts egna system för virtualisering av servrar. Antingen får du aktivera Hyper-V. Klicka på startmenyn och skriv "Hyper-v" så dyker det upp ett resultat "Turn Windows features on or off" (eller motsvarigheten på svenska). Däri finns möjligheten att aktivera/avaktivera Hyper-V. Det kräver en omstart.
-
-Ett annat alternativ är att installera Docker i din VM från tidigare kursmoment. Du installerar då Docker för Linux. Om VirtualBox fungerar fint bör det inte vara några problem. Det kommer att kräva en port forward till i kommande kursmoment, men det ger sig nog.
-
-I skrivande stund är Docker i VirtualBox testat på Windows 10 Pro med 8GB RAM.
-
-[INFO]
-Ha koll på: [Docker, Win10/WSL och Hyper-V](https://engineering.docker.com/2019/06/docker-hearts-wsl-2/)
-[/INFO]
-
-
-
-### Windows, Docker och bcrypt {#dockerbcrypt}
-
-
-Ibland kan kombinationen av Windows, Docker och npm modulen bcrypt ställa till med stora problem. Ett tips hämtat från [installationsmanualen för bcrypt](https://github.com/kelektiv/node.bcrypt.js/wiki/Installation-Instructions#microsoft-windows) är att installara npm paketet `windows-build-tools` med kommandot nedan. Installera det i kommandotolken (cmd) eller Powershell så Windows har tillgång till det.
-
-```bash
-npm install --global --production windows-build-tools
-```
-
-
-
 Verifiera installationen {#verify}
 ---------------------------------
 
@@ -77,7 +48,7 @@ Nu är Docker (förhoppningsvis) installerat. Det är lika bra att dubbelkolla..
 
 ```bash
 $ docker --version
-Docker version 17.09.0-ce, build afdb6d4
+Docker version 20.10.13, build a224086
 ```
 
 ```bash
@@ -85,7 +56,7 @@ $ which docker
 /usr/bin/docker
 ```
 
-Bra då vet vi var vi har det installerat och att kommandot `docker` fungerar. Vi kör vår första kontainer:
+Bra då vet vi var vi har det installerat och att kommandot `docker` fungerar. Vi kör vår första container:
 
 ```bash
 $ docker run hello-world
@@ -117,7 +88,7 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-Vad som hände ovan är att Docker letar lokalt efter en image `hello-world` med taggen `latest`. Om den inte hittar den lokalt laddas den ned från Docker Hub och kontainern startas. Just den här kontainern är inte så spännande men nu vet vi att det fungerar!
+Vad som hände ovan är att Docker letar lokalt efter en image `hello-world` med taggen `latest`. Om den inte hittar den lokalt laddas den ned från Docker Hub och containern startas. Just den här containern är inte så spännande men nu vet vi att det fungerar!
 
 
 

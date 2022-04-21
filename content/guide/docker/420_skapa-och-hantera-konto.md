@@ -1,7 +1,8 @@
 ---
 author: lew
 revision:
-    "2019-03-14": "(A, lew) Första versionen."
+    "2022-04-13": "(B, lew) Uppdatering inför HT22."
+    "2019-03-14": "(A, lew) Första versionen."  
 ...
 Skapa och hantera konto
 =======================
@@ -25,10 +26,13 @@ Vi vill ju hantera kontot på terminalnivå så vi kör följande för att logga
 Knappa in användarnamnet och lösenordet när du ombeds göra det. Om allt går bra ser du följande utskrift:
 
 ```
-WARNING: login credentials saved in /home/username/.docker/config.json
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: <username>
+Password: <pass>
 Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
 ```
 
 
@@ -40,16 +44,16 @@ Vi kan även publicera en image till Docker Hub. Vi kan med fördel då även ta
 ```
 $ docker images
 REPOSITORY                  TAG                  IMAGE ID            CREATED             SIZE
-debian                      stretch-slim         b805107aed7b        2 weeks ago         55.3MB
+ubuntu                      22.04                f0b07b45d05b        7 days ago          77.9MB
 ```
 
 Låt säga att jag vill ha den här versionen på Docker Hub. Jag kan då tagga den så jag vet vilken version det är:
 
 ```
-$ docker tag b805107aed7b username/imagename:mytag
+$ docker tag f0b07b45d05b username/imagename:mytag
 ```
 
-*b805107aed7b*, *username*, *imagename* och *mytag* byter du ut mot dina egna uppgifter. Sedan kan vi pusha den:
+*f0b07b45d05b*, *username*, *imagename* och *mytag* byter du ut mot dina egna uppgifter. Sedan kan vi pusha den:
 
 ```
 $ docker push username/imagename:mytag

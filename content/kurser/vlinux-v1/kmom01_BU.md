@@ -2,23 +2,22 @@
 author:
     - lew
 revision:
-    "2022-03-11": (C, lew) Inför HT22.
     "2020-03-11": (B, lew) Inför HT20.
     "2019-03-19": (A, lew) Inför HT19.
 
 ...
-Kmom01: Docker och en linuxmiljö
+Kmom01: Linux som server
 ==================================
 
 [WARNING]
 Kursen uppdateras inför HT22. Är "gula rutan" borta är det fritt fram att börja.
 [/WARNING]
 
-Det första vi behöver är en Linuxmiljö. På något sätt.
+Det första vi behöver är en Linux-server. På något sätt.
 
-Vi har alla redan tillgång till en unixmiljö i form av Cygwin eller WSL för windows, terminalen på en Mac, eller kanske har du rent av redan Linux som operativsystem. För att förutsättningarna ska vara lika oberoende av underliggande operativsystem så kommer vi installera Docker och köra linuxdistributionen Ubuntu och versionen 22.04.
+Jag kommer visa hur du installerar Linux i VirtualBox, en virtualiseringsmiljö. Det första kursmomentet går ut på att installera Debian/Linux och logga in på maskinen som en server, via SSH.
 
-För att lyckas med kursmomentet så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
+För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
 
 Vid sidan av studierna kan du välja att installera på en annan server också. Kanske har du en gammal dator till övers, eller är du bekväm med virtuella servrar, eller investerar du i en Raspberry Pi för ett par hundralappar.
 
@@ -26,7 +25,7 @@ Vid sidan av studierna kan du välja att installera på en annan server också. 
 
 <!--more-->
 
-[FIGURE src=/image/vlinux/kmom01_top.png?w=w2 caption="Okey, terminalen, och nu då?"]
+[FIGURE src=/image/snapht15/linux-what-now.png?w=w2 caption="Okey, terminalen, och nu då?"]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -68,28 +67,21 @@ Läs följande:
     * Ch3 Exploring The System (översiktligt)
     * Ch4 Manipulating Files And Directories (översiktligt)
 
-<!-- I referenslitteraturen, är följande kapitel relevanta.
+I referenslitteraturen, är följande kapitel relevanta.
 
 1. [The Debian Administrator's Handbook](kunskap/boken-the-debian-administrator-s-handbook).
     * Ch 1: The Debian Project (översiktligt)
-    * Ch 4: Installation (översiktligt, detaljerat vid behov) -->
-
-
-### Lästips {#lastips}
-
-1. Bekanta dig med [dokumentationen för Docker](https://docs.docker.com/).
-
-1. Interaktiv förklaring till kommandon: [Explain shell](https://explainshell.com/).
+    * Ch 4: Installation (översiktligt, detaljerat vid behov)
 
 
 
-### Video  TBD -> Ny spellista {#video}
+### Video  {#video}
 
 Titta på följande:
 
-<!-- Det finns videos kopplade till installationsanvisningarna.
+Det finns videos kopplade till installationsanvisningarna.
 
-1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_oeXQlDtKv51tVM4Y8UtkF)", kika på de videor som börjar på 01. -->
+1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_oeXQlDtKv51tVM4Y8UtkF)", kika på de videor som börjar på 01.
 
 
 
@@ -102,13 +94,13 @@ Titta på följande:
 
 ### Övningar {#ovningar}
 
-1. Installera Docker som en del av [labbmiljön](kunskap/installera-virtualiseringsmiljon-docker).
+1. Som en del av labbmiljön har du redan [installerat Debian](guide/virtualbox/installera-os) i en VirtualBox. Det, tillsammans med installationen av VirtualBox är den stora biten i detta kursmomentet.
 
-1. Det finns en [guide för Docker](guide/docker) där vissa relevanta delar tas upp. För detta kursmoment klarar du dig på de första två delarna:
+1. Installera [Guest Additions](guide/virtualbox/guest-additions) om du inte gjorde det under labbmiljön. Det kommer underlätta arbetet framöver.
 
-    * [Introduktion](guide/docker/introduktion)
-    * [Kom igång](guide/docker/kom-igang)
+1. I kursen kommer vi använda en guide ["unix-tools"](guide/unix-tools). För detta kursmoment gör du delen [Kom igång med SSH](guide/unix-tools/ssh).  
 
+[INFO]SSH-nycklar tar vi i nästa kursmoment så det kan du vänta med.[/INFO]
 
 
 
@@ -116,14 +108,11 @@ Titta på följande:
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Vanliga kommandon](uppgift/vanliga-kommandon)" för att komma igång med terminalen och linuxmiljön. Spara filerna i mappen `kmom01/`.
+1. Gör uppgiften "[Installera Debian som server](uppgift/installera-debian-som-server)".
 
-1. Gör uppgiften "[Struktur](uppgift/struktur)" för att känna på lite fler kommandon i terminalen. Spara filerna i mappen `kmom01/`.
+1. Gör uppgiften "[Skapa en me-sida till linux-kursen](uppgift/skapa-en-me-sida-till-vlinux-kursen)". Här fyller du på din redovisningstext efter varje kursmoment.
 
-1. Gör uppgiften "[Skapa en me-sida till vlinux-kursen](uppgift/skapa-en-me-sida-till-vlinux-kursen)". Här fyller du på din redovisningstext efter varje kursmoment.
-
-
-TBD: Dubbelkolla med [videon](#) så du fått med alla delar.
+Dubbelkolla med [videon](https://youtu.be/6a_q5YojE0s) så du fått med alla delar.
 <!-- [YOUTUBE src=6a_q5YojE0s width=639 caption="Har du fått med alla delar?"] -->
 
 
@@ -132,8 +121,7 @@ TBD: Dubbelkolla med [videon](#) så du fått med alla delar.
 
 Du kan köra vissa tester på din inlämning och se om de delarna uppfyller kraven. Rättningen kommer endast genomföras om testerna går igenom.
 
-```bash
-#stå i kursroten
+```console
 $ dbwebb test kmom01
 ```
 
@@ -150,11 +138,13 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-<!-- Läs [instruktionen om hur du skall redovisa](./../redovisa). -->
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du sedan tidigare bekant med Unix, Linux, Ubuntu och/eller terminalen?
-* Hur känns det med Unix-kommandon i terminalen, är det udda eller bekvämt?
+* Är du sedan tidigare bekant med Unix, Linux, Debian och/eller terminalen?
+* Hur känns det med Unix-kommandon på terminalen, är det udda eller bekvämt?
+* Valde du att köra standard med VirtualBox och Debian eller hur gjorde du?
+* Hur kändes det att jobba med VirtualBox och ser du fördelar med det arbetssättet?
+* Hur gick det att installera Guest Additions?
 * Var det något som krånglade eller tog extra mycket tid?
-* Vilken är din [TIL](https://dictionary.cambridge.org/dictionary/english/til) för veckan?

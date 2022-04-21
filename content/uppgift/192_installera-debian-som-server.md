@@ -3,9 +3,7 @@ author: mos
 category:
     - unix
 revision:
-    "2017-01-05": (C, mos) Notis om små bokstäver på filerna.
-    "2016-01-20": (B, mos) Notis om att logg-filen är skyddad och inte kan öppnas via webbläsaren.
-    "2015-06-24": (A, mos) Första utgåvan i samband med kursen linux.
+    "2021-12-10": (A, lew) Uppdatering inför ht22
 ...
 Installera Debian som server
 ==================================

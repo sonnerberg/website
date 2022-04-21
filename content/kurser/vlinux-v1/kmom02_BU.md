@@ -1,24 +1,32 @@
 ---
 author:
     - lew
+    - mos
 revision:
-    "2022-04-11": (A, lew) Ny inför HT22.
+    "2017-12-21": (D, lew) Genomgången inför HT19.
+    "2017-12-21": (C, mos) Genomgången inför vt17.
+    "2017-01-16": (B, efo/mos) Genomgången och ändring av länk till ny bash lab.
+    "2015-07-03": (A, mos) Första utgåvan för kursen.
 ...
-Kmom02: Dockerfile
+Kmom02: Apache Virtual Hosts
 ==================================
 
 [WARNING]
 Kursen uppdateras inför HT22. Är "gula rutan" borta är det fritt fram att börja.
 [/WARNING]
 
-Nu har vi fått Dockermiljön på plats och vi vet hur vi startar en container samt tar oss runt i den. Vi ska nu titta på hur vi kan skapa en egen image utifrån en så kallad Dockerfile så vi slipper installera om allt varje gång vi stänger ner containern.
+Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
+
+Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med.
+
+Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hemma i terminalen, SSH och att jobba med Linux som en server.
 
 
 <!--more-->
 
 [FIGURE src=/image/snapht15/tmux-create-windows.png caption="Jobba med fönster i terminalen med tmux."]
 
-
+[FIGURE src=/image/snapht15/vhosts.png caption="Låt oss skapa en webbplats som en Apache Name-based Virtual Host."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
