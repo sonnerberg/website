@@ -98,7 +98,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilka fördelar ser du med verktyg som Postman, curl och jq?
+* Vilka fördelar ser du med verktyg som Postman och jq?
 * Beskriv din struktur i koden? Blev den bra?
 * Vad är din uppfattning så här långt av TypeScript? Ser du några fördelar?
 * Vilken är din TIL för detta kmom?
