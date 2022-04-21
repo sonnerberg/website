@@ -128,9 +128,9 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa). Observera att denna kursen skiljer sig från hur du normalt sett lämnar in din redovisningstext.
+Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
-Se till att följande frågor besvaras i texten i din rapport:
+Se till att följande frågor besvaras i din redovisningstext.
 
 * Berätta hur du tog dig an uppgiften och valde ditt ORM och den kodbas du valde att bygga uppgiften på, vad lät du styra dina val, vad valde du och vad gjorde att du slutligen valde det du gjorde?
 
