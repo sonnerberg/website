@@ -70,6 +70,7 @@ I vår `OrderList`-vy vill vi skriva ut alla ordrar och sedan ha möjligheten f�
 Vi vill börja med att rita ut en rubrik och sedan en lista med alla ordrar som har den specifika statusen "Ny". Vi behöver alltså hämta alla ordrar från lagret och filtrera ut de med rätt status. Från kmom01 vet vi hur vi hämtar och sparar en lista med data som en del av `state` i vår app. Så vi utnyttjar den kunskapen för att göra likadant med ordrar.
 
 ```javascript
+// OrderList.tsx
 import { useState, useEffect } from 'react';
 import { View, Text, Button } from "react-native";
 import config from "./../config/config.json";
