@@ -66,7 +66,7 @@ TypeScript {#typescript}
 Test {#tests}
 --------------------------------------
 
-Vi ska senare i kursen använda os av test-ramverket Jest för att säkerställa att vår applikation gör det den ska. Samma test ramverk används för rättning av applikationen igenom hela kursen. För att det ska fungera behöver vi installera några få paket till och lägga till en rad i `package.json`.
+Vi ska senare i kursen använda oss av test-ramverket Jest för att säkerställa att vår applikation gör det den ska. Samma test ramverk används för rättning av applikationen igenom hela kursen. För att det ska fungera behöver vi installera några få paket till och lägga till en rad i `package.json`.
 
 Vi börjar med paketen:
 
