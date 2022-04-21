@@ -18,6 +18,10 @@ Vi ska i detta kursmoment använda oss av hårdvaran i våra mobila enheter för
 
 
 
+[YOUTUBE src=jmRFQ4n-nBY width=630 caption="Lager appen i kursmoment 5."]
+
+
+
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
@@ -31,7 +35,7 @@ Läsanvisningar  {#lasanvisningar}
 
 ### Video  {#video}
 
-1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 5.
+1. Det finns en [videoserie](https://youtube.com/playlist?list=PLKtP9l5q3ce8Akmp6hSW78cDuHHNylpRG) kopplat till kursen, titta på videos som börjar på 5.
 
 
 

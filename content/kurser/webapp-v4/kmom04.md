@@ -48,7 +48,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 Se följande videor.
 
-1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-1cVPTFJ_Zw9b7N2Y4_ANI) kopplat till kursen, titta på videos som börjar på 4.
+1. Det finns en [videoserie](https://youtube.com/playlist?list=PLKtP9l5q3ce8Akmp6hSW78cDuHHNylpRG) kopplat till kursen, titta på videos som börjar på 4.
 
 
 
