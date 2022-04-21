@@ -7,7 +7,9 @@ revision:
 Kmom04: En webbserver i Docker
 ==================================
 
-<!--more-->
+[WARNING]
+Kursen uppdateras inför HT22. Är "gula rutan" borta är det fritt fram att börja.
+[/WARNING]
 
 Nu vet vi hur vi bygger en egen image med hjälp av Docker. Vi har också gått igenom hur vi kan strukturera ett Bash-script som även exekveras inuti en kontainer. Vi tar ett steg till och tittar på hur vi kör en webbserver inuti Docker. I det här kursmomentet får du välja om du vill leka med Apache/php, Flask/Python eller Nodejs/JavaScript. Huvudsaken är att du får igång en server med en router som kan serva en JSON-fil. Vi jobbar även vidare med Bash - såklart.
 
@@ -64,6 +66,16 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Bash-script som testar serverns routes](uppgift/bash-script-testa-routes)". Spara arbetet i mappen `client/`.
 
 1. Lägg till redovisningstexten i din me-sida.
+
+
+
+### Testa din inlämning {#test}
+
+Du kan köra vissa tester på din inlämning och se om de delarna uppfyller kraven. Rättningen kommer endast genomföras om testerna går igenom.
+
+```console
+$ dbwebb test kmom04
+```
 
 
 

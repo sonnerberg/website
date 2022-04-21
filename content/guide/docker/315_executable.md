@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2022-04-13": "(B, lew) Uppdatering inför HT22."
     "2020-06-23": "(A, lew) Första versionen."
 ...
 Göra containern exekverbar
@@ -23,9 +24,9 @@ De olika instruktionerna kan skrivas på två olika sätt: *shell form* eller *e
 När vi använder shell form kommer kommandot exekveras i `/bin/sh -c`.
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
-RUN apt-get update
+RUN apt update
 
 CMD echo "Hello dbwebb"
 
@@ -41,9 +42,9 @@ ENTRYPOINT echo "Hello dbwebb"
 Den här formen är att föredra för CMD och ENTRYPOINT. Om vi inte specificerar ett shell med exec form kommer inget shell att användas då vi kallar på det exekverbara programmet direkt.
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
-RUN apt-get update
+RUN apt update
 
 CMD ["/bin/echo", "Hello dbwebb"]
 
@@ -53,9 +54,9 @@ ENTRYPOINT ["/bin/echo", "Hello dbwebb"]
 Vill vi använda till exempel bash som shell kan vi specificera det:
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
-RUN apt-get update
+RUN apt update
 
 ENTRYPOINT ["/bin/bash", "-c", "echo Hello dbwebb"]
 ```
@@ -67,9 +68,9 @@ ENTRYPOINT ["/bin/bash", "-c", "echo Hello dbwebb"]
 Vi kan även kombinera formerna och via CMD ge parametrar till ENTRYPOINT.
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
-RUN apt-get update
+RUN apt update
 
 ENTRYPOINT ["/bin/echo", "Hello"]
 

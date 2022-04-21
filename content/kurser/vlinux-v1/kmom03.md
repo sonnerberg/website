@@ -7,6 +7,10 @@ revision:
 Kmom03: Introduktion till Docker
 ==================================
 
+[WARNING]
+Kursen uppdateras inför HT22. Är "gula rutan" borta är det fritt fram att börja.
+[/WARNING]
+
 Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med en annan teknik för virtualisering: Docker. Vi kommer även bekanta oss med skriptprogrammering i Bash.
 
 Mycket handlar om att förenkla vardagen, som programmerare, genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
@@ -105,6 +109,14 @@ Dessa uppgifter skall utföras och redovisas.
 1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
 -->
 <!-- 1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)". -->
+
+### Testa din inlämning {#test}
+
+Du kan köra vissa tester på din inlämning och se om de delarna uppfyller kraven. Rättningen kommer endast genomföras om testerna går igenom.
+
+```console
+$ dbwebb test kmom03
+```
 
 
 

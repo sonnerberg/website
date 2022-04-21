@@ -3,13 +3,17 @@ title: vlinux (v1)
 
 author:
     - lew
-    - mos
 revision:
+    "2022-04-20": (C, lew) Uppdaterad inför HT22
     "2018-12-21": (B, lew)
     "2018-12-21": (A, mos) Inför skapandet av linux v3, nytt namn, syfte, förkunskaper och kurskod.
 ...
 Kursen vlinux (v1)
 ==================================
+
+[WARNING]
+Kursen uppdateras inför HT22. Är "gula rutan" borta är det fritt fram att börja.
+[/WARNING]
 
 Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *vlinux*, och syftet med kursen är att studenten ska lära sig operativsystemet Linux och dess beståndsdelar såsom processer, filsystemet och terminalen. Kursens fokusområden ligger även i operativsystemets uppbyggnad, programhantering och serverhantering samt att programmera i språket Bash. Studenten ska även lära sig hantera virtualiseringstekniken Docker.
 
@@ -17,7 +21,8 @@ Kursen **Operativsystemet Linux och virtualiseringstekniker**, a.k.a. *vlinux*, 
 
 Kursen har tre fokus. Det ena är att lära ut grunder och beståndsdelar i operativsystemet Linux. Det andra är att lära ut programmeringsspråket Bash och dess funktionalitet. Det tredje är att introducera virtualiseringsmiljöer och visa på hur man kan använda dem. Kursen är för de som skall jobba med webbprogrammering.
 
-Kursen börjar med att du installerar virtualiseringsmiljön VirtualBox med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker samt hur vi jobbar med flera Docker-containrar som kommunicerar med varandra.
+Kursen börjar med att du installerar virtualiseringsmiljön Docker och varianter på operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du flera Docker-containrar som kommunicerar med varandra.
+<!-- Kursen börjar med att du installerar virtualiseringsmiljön VirtualBox med ett operativsystemet Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Senare i kursen får du lära dig hur du installerar och hanterar virtualiseringsmiljön Docker samt hur vi jobbar med flera Docker-containrar som kommunicerar med varandra. -->
 
 Samtidigt skriver du skript-program i programspråket Bash.
 
@@ -28,7 +33,7 @@ I slutet av kursen får du visa dina färdigheter i ett praktiskt programmerings
 Krav på labbmiljö {#labb}
 ------------------------
 
-I kursen installerar du virtualiseringssystemen VirtualBox och Docker. Du behöver ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
+I kursen installerar du virtualiseringssystemet Docker. Du behöver ha en dator med minst 4GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
 
 Kort och gott, du skall installera en linux-server och du behöver ha en tillräckligt bra miljö för att det skall fungera utan bekymmer.
 
@@ -53,7 +58,7 @@ Kursen omfattar följande områden:
 * Linux med terminal (Bash), ssh, nano, och systemkommandon.
 * Operativsystemets olika delar såsom filsystemet, processer och processhantering.
 * Skriptprogrammering i Bash.
-* Virtualiseringmiljöerna VirtualBox och Docker.
+* Virtualiseringmiljön Docker.
 
 
 
@@ -98,31 +103,34 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 
 
-### Kmom01: Linux som server {#kmom01}
+<!-- ### Kmom01: Linux som server {#kmom01} -->
 
-Det första kursmomentet går ut på att installera Debian/Linux i Virtualiseringsmilön VirtualBox och logga in på maskinen som en server, via SSH.
+<!-- Det första kursmomentet går ut på att installera Debian/Linux i Virtualiseringsmilön VirtualBox och logga in på maskinen som en server, via SSH.
 
-För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
+För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen. -->
+### Kmom01: Docker och en linuxmiljö {#kmom01}
+
+Det första kursmomentet går ut på att installera Docker och bekanta sig med miljön. Vi ska titta på hur det ser ut i terminalen och träna på några vanliga kommandon som hjälper oss på olika sätt.
 
 [Instruktion till kursmoment 01](kurser/vlinux-v1/kmom01).
 
 
 
-### Kmom02: Apache Virtual Hosts {#kmom02}
+### Kmom02: Dockerfile {#kmom02}
 
-Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
+<!-- Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 
 Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med.
 
-Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hemma i terminalen, SSH och att jobba med Linux som en server.
+Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hemma i terminalen, SSH och att jobba med Linux som en server. -->
 
 [Instruktion till kursmoment 02](kurser/vlinux-v1/kmom02).
 
 
 
-### Kmom03: Introduktion till Docker {#kmom03}
+### Kmom03: Virtual Hosts {#kmom03}
 
-Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker. En del kanske stannar i VirtualBox och installerar Docker däri.
+<!-- Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i Bash. Vi lämnar även VirtualBox och tittar närmare på virtualisering med Docker. En del kanske stannar i VirtualBox och installerar Docker däri. -->
 
 [Instruktion till kursmoment 03](kurser/vlinux-v1/kmom03).
 
@@ -173,7 +181,7 @@ Kurslitteratur {#litteratur}
 
 Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet.
 
-Det finns läsanvisningar i samband med varje kursmoment.
+<!-- Det finns läsanvisningar i samband med varje kursmoment. -->
 
 
 * **[The Linux Command Line](kunskap/boken-the-linux-command-line)** -- William Shotts

@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2022-04-13": "(B, lew) Uppdatering inför HT22."
     "2019-03-14": "(A, lew) Första versionen."
 ...
 Kopiera in filer
@@ -9,7 +10,7 @@ Kopiera in filer
 Vi kan kopiera in egna filer och mappar till en Docker container. Om vi har ett program vi vill kunna köra i containern behöver de kunna nås inifrån containern. Ett sätt är att använda `COPY` kommandot i Dockerfile.
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
 WORKDIR scripts
 

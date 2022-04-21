@@ -7,6 +7,10 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+Kursen uppdateras inför HT22. Är "gula rutan" borta är det fritt fram att börja.
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
