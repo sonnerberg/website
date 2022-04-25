@@ -40,7 +40,10 @@ Installera följande som en del av din labbmiljö.
 
     1. Om du är på Mac kan du vara behjälpt av att installera "PHP i terminalen" och "Xdebug" via pakethanterare Brew, för detaljer se "[Installera Xdebug på Mac OS med XAMPP/brew](t/8514)".
 
-<!-- Fixa installationsinstruktionen på Mac -->
+<!--
+Fixa installationsinstruktionen på Mac
+https://xdebug.org/docs/install#pecl
+-->
 
 
 
@@ -64,6 +67,8 @@ Titta igenom följande föreläsningar.
 
 
 ### Litteratur  {#litteratur}
+
+Läs enligt följande.
 
 1. I dokumentet [PHP The Right Way](http://www.phptherightway.com/), finns en sektion som berör testning i PHP. Läs igenom den.
 

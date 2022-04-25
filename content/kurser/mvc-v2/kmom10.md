@@ -36,6 +36,13 @@ Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 <!--
 (Skippa krav om flowchart & pseudocode)
 
+Skapa användare, login, registrera.
+
+Ny applikation med inloggning, databas med pengar.
+
+Search engine
+https://symfony.com/blog/the-new-symfony-documentation-search-engine
+
 För svår och komplex att rätta. Förenkla och förtydliga.
 Förenkla, förenkla, förenkla.
 
