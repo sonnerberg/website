@@ -108,7 +108,7 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Lös uppgiften "[Kom igång med Doctrine ORM i Symfony](uppgift/kom-igang-med-doctrine-orm-i-symfony)".
+1. Lös uppgiften "[Kom igång med Doctrine ORM i Symfony](uppgift/kom-igang-med-doctrine-orm-i-symfony)". Alla filer sparar du i `me/report`.
 
 
 
