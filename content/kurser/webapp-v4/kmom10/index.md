@@ -22,9 +22,15 @@ Projektidéer och upplägg {#upplagg}
 
 I detta projektet kan du välja mellan två upplägg.
 
-Ett [fritt upplägg](./fritt) där du väljer vilka datakällor du vill hämta data ifrån och inom vissa ramer bestämmer du själv vilken app du vill göra.
+Ett [fritt upplägg](./fritt) där du väljer vilka datakällor du vill hämta data ifrån och inom vissa ramar bestämmer du själv vilken app du vill göra.
 
-Ett [uppstyrd upplägg](./trafik) där du användar data om tåg från Trafikverkets API och skapar en app som visualiserar tågförseningar i Sverige.
+Ett [uppstyrd upplägg](./trafik) där du använder data om tåg från Trafikverkets API och skapar en app som visualiserar tågförseningar i Sverige.
+
+
+
+### Git/GitHub-repo
+
+Skapa ett Git-repo som du skickar upp till GitHub. Lämna in en länk till ditt repo i din inlämning på Canvas.
 
 
 
@@ -36,11 +42,9 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 
 
 Redovisning {#redovisning}
---------------------------------------------------------------------
+----------------------------------
 
-<!-- TODO: Anpassa redovisningstexten för varje krav. -->
-
-1. På din [redovisningssida](./../redovisa), skriv följande:
+1. Som en del av din inlämning på Canvas skriver du följande text:
 
     1. För varje krav du implementerat skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
@@ -48,22 +52,13 @@ Redovisning {#redovisning}
 
     1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
-
-3. Se till att samtliga kursmoment validerar.
-
-På grund av Corona ska alla spela in en redovisningsvideo som ska lämnas in tillsammans med redovisningstexten.
-
-1. Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
-
-2. Visa ditt ansikte och en giltig ID handling, t.ex. körkot eller pass, i videon.
 
 
-[INFO]
-Se till att göra en `dbwebb update` innan `dbwebb publish me` så du får senaste versionen av kursrepot och konfiguration för kursrepot.
-[/INFO]
+Presentation {#presentation}
+----------------------------------
 
-```bash
-# Ställ dig i kursrepot
-dbwebb publish me
-```
+Som en del av slutinlämningen ska du göra en presentation. Presentation bör ta 4-8 minuter och bör handla om din applikation och hur du har implementerat den.
+
+**Campusstudenter:** Presenterar på plats i H430 torsdagen den 2:a juni 2022.
+
+**Distansstudenter:** Spelar in en video med samma presentation som ovan. Videon lämnas in som en del av inlämningen på Canvas. Se till att **inte** visa din legitimation om du laddar om videon på YouTube.

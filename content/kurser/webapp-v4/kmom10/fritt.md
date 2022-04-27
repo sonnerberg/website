@@ -49,25 +49,20 @@ Varje krav ger maximalt 10 poäng, totalt är det 60 poäng.
 
 Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10/proj`.
 
-Skapa ditt Cordova projekt med följande kommando:
+Skapa ditt Expo projekt med följande kommando:
 
 ```bash
 # stå i me/kmom10/proj
-cordova create . se.dbwebb.<valfritt namn> <Valfritt namn>
+expo init .
 ```
 
-Redovisningstexten skriver du i `me/redovisa`.
+Redovisningstexten skriver du som en del av din inlämning på Canvas.
 
 
 
 ### Krav 1: Specifikation, datakällor och arkitektur {#k1}
 
-Din webapp ska använda följande teknologier:
-
-* Mithril eller vanilla JavaScript
-* Cordova
-* Stödja Android eller iOS samt webbläsare
-* Innehålla en egen ikon och splashscreen
+Din webapp ska använda de teknologier vi har använt under kursens gång.
 
 Välj ut de datakällor du skall använda och vilken data du behöver ur varje datakälla. Berätta om ditt val. Du ska använda minst två API:er. API:erna måste inte vara från Hack for Sweden, det är enbart ett tips.
 
@@ -83,7 +78,7 @@ Din inlämning för krav 1 ska innehålla en beskrivning uppdelat i följande st
 
 ### Krav 2: En webapp {#k2}
 
-Bygg en så gott som felfri webapp, i enlighet med din spec.
+Bygg en så gott som felfri webapp, i enlighet med din specifikation.
 
 Fick du göra prioriteringar under arbetets gång eller nådde du din fulla ambitionsnivå med din webapp? Berätta.
 
@@ -95,7 +90,7 @@ Berätta om någon av de möjligheter som finns för att förbättra din lösnin
 
 ### Krav 3: Native design (optionellt) {#k3}
 
-Välj ut en befintlig app på den plattform du utvecklar mot. Den valda appen ska ha ungefär samma typ av vyer som din app har. Försök att så gott det går matcha designen på din app pixel-för-pixel med den befintliga appen.
+Välj ut en befintlig app på den plattform (iOS eller Android) där du har tillgång till en mobil enhet. Den valda appen ska ha ungefär samma typ av vyer som din app har. Försök att så gott det går matcha designen på din app pixel-för-pixel med den befintliga appen.
 
 Beskriv i ett textstycke om 15-20 meningar designprocessen att efterlikna en befintlig app och vilka verktyg och tekniker du använde. Bifoga tre (3) relevanta skärmdumpar av den befintliga appen.
 
@@ -109,48 +104,14 @@ Du kan inte räkna autentiseringstjänsten som en av dina två API:er.
 
 
 
-### Krav 5: Offline-läge (optionellt) {#k5}
+### Krav 5: Karta och GPS (optionellt) {#k5}
 
-Använd dina kunskaper om Cordova plugins från kursmoment 5 & 6 och pluginen [cordova-plugin-file](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html) för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
-
-När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling. Cordova pluginen [cordova-plugin-network-information](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/) kan användas för att kolla status om internetuppkoppling
-
-Övningen [Filer i Cordova](kunskap/filer-i-cordova) och exempel programmet `example/file` ([repo](https://github.com/dbwebb-se/webapp/tree/master/example/file)) hjälper en bit på vägen.
+Använd positionsdata (Koordinater eller adresser) från en av dina valda API:er och visa upp denna data i en karta med hjälp av de tekniker vi använde i kursmoment 5. Använd Expo Location för att visa upp användarens position på kartan.
 
 
 
-### Krav 6: Karta och GPS (optionellt) {#k6}
+### Krav 6: Test (optionellt) {#k6}
 
-Använd positionsdata (Koordinater eller adresser) från en av dina valda API:er och visa upp denna data i en karta med hjälp av de tekniker vi använde i kursmoment 6. Använd Cordova pluginen [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation) för att visa upp användarens position på kartan.
+Använd dina kunskaper om test från kursmoment 6. Skriv fem (5) stycken use-cases för din applikation och testa sedan dessa med hjälp av Jest och React Native Testing Library. Se till att kommandot `npm test` fungerar och att testerna går igenom.
 
-
-
-Redovisning {#redovisning}
---------------------------------------------------------------------
-
-1. På din [redovisningssida](./../redovisa), skriv följande:
-
-    1. För varje krav du implementerat skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
-
-    1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
-
-    1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
-
-2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte länka till din me-sida och projektet.
-
-3. Se till att samtliga kursmoment validerar.
-
-På grund av Corona ska alla spela in en redovisningsvideo som ska lämnas in tillsammans med redovisningstexten.
-
-1. Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
-
-2. Visa ditt ansikte och en giltig ID handling, t.ex. körkort eller pass, i videon.
-
-[INFO]
-Se till att göra en `dbwebb update` innan `dbwebb publish me` så du får senaste versionen av kursrepot och konfiguration för kursrepot.
-[/INFO]
-
-```bash
-# Ställ dig i kursrepot
-dbwebb publish me
-```
+Lämna in dina 5 use-cases som en del av din redovisningstext i Canvas.
