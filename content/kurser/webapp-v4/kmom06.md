@@ -11,25 +11,11 @@ revision:
 Kmom06: Fel och Test
 ==================================
 
-[WARNING]
-
-**Kursutveckling pågår**.
-
-Påbörja inte arbete med kursen, då moment, uppgifter och övningar kan ändras.
-
-[/WARNING]
-
 I detta kursmoment knyter vi ihop säcken för vår app. Vi skapar användarvänliga meddelanden när saker går eller blir fel i vår app. Som en avslutning på kursen tar vi en titt på hur vi kan använda test-ramverket Jest för att säkerställa att vår app gör som tänkt.
 
 
 
 <!--more-->
-
-
-
-Så här kan det se ut när vi är klara med kursmoment 06.
-
-[YOUTUBE src=SXZFj8itb7M width=630 caption="Lager appen i kursmoment 6."]
 
 
 
@@ -48,7 +34,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Kolla översiktligt på dokumentationen för modulen [react-native-flash-message](https://www.npmjs.com/package/react-native-flash-message).
 
-Kolla dessutom på dokumentationen för test-ramverket [Jest](https://jestjs.io/).
+Kolla dessutom på dokumentationen för test-ramverket [Jest](https://jestjs.io/) och hur det hänger ihop med [Testning i Expo](https://docs.expo.dev/guides/testing-with-jest/)
 
 
 

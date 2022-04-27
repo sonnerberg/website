@@ -28,10 +28,10 @@ Du har gjort uppgiften [Lager appen del 5](uppgift/lager-appen-del-5). Du har jo
 Krav {#krav}
 -----------------------
 
-1. Använd meddelanden i din app för Login och Registrera delarna, samt för validering i formulär vyerna.
+1. Använd meddelanden i din app för Login och Registrera delarna, samt för validering i Delivery formuläret.
 
 1. Beskriv som en del av din inlämning i Canvas tre (3) enkla use-cases.
 
-1. Skriv sedan funktionstester med hjälp av Jest för dina tre use-cases.
+1. Skriv sedan tester med hjälp av Jest och React Native Testing Library för dina tre use-cases.
 
 1. Se till att kommandot `npm test` fungerar och går igenom för dina tester.
