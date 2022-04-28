@@ -17,7 +17,7 @@ Förkunskaper {#forkunskaper}
 
 Du har [installerat Docker](kunskap/installera-virtualiseringsmiljon-docker) som en del av labbmiljön. Du har även skapat ett konto på Docker Hub.
 
-Du har gjort uppgifterna "[Lab2](uppgift/linux-lab-2-sok-i-en-logg-fil)" och [Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments).
+Du har gjort uppgifterna "[Lab1](uppgift/linux-lab-1-introduktion-till-bash)" och [Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments).
 
 Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash.
 
@@ -26,7 +26,7 @@ Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash.
 Introduktion {#intro}
 -----------------------
 
-Du ska skapa en Docker image där det ska gå att köra scriptet som ligger i mappen `script`. Imagen ska sedan publiceras på Docker Hub.
+Du ska skapa en Docker image där det ska gå att köra scriptet som ligger i mappen `script/`. Imagen ska sedan publiceras på Docker Hub.
 
 
 [INFO]
@@ -39,27 +39,27 @@ Du ska skapa en Docker image där det ska gå att köra scriptet som ligger i ma
 Krav {#krav}
 -----------------------
 
-1. Skapa en Dockerfile `script/Dockerfile` som använder sig av imagen `debian:stretch-slim`.
+1. Skapa en Dockerfile `ex2/Dockerfile` som använder sig av imagen `ubuntu:22.04`.
 
-1. Kopiera in ditt egna `commands.bash` in i kontainern, till arbetsmappen `kmom03`.
+1. Kopiera in ditt egna `ex1/commands.bash` in i containern, till arbetsmappen `kmom02`.
 
 1. Dubbelkolla så scriptet är körbart inuti kontainern.
 
-1. Vid uppstart ska kommandot `commands.bash all` köras. Det är inte säkert att kommandot `cal` finns installerat från start. Du kan då installera det med `apt-get install bsdmainutils` i din Dockerfile.
+1. Vid uppstart ska kommandot `commands.bash all` köras. Dubbelkolla så alla program är installerade.
 
 1. Bygg din image med namnet *username/vlinux-commands:latest* där du använder ditt egna användarnamn.
 
-1. Publicera imagen till Docker Hub.
+1. Publicera imagen till Docker Hub och se till så den är publik.
 
-1. Skapa en fil `script/dockerhub.txt` som ENDAST innehåller *username/imagename:tag*.
+1. Skapa en fil `ex2/dockerhub.txt` som ENDAST innehåller *username/imagename:tag*.
 
 <!-- 1. Skapa ett script `script/kmom03.bash` som kör din kontainer med rätt namn och tagg. -->
 
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb validate kmom03
-$ dbwebb publish kmom03
+$ dbwebb validate kmom02
+$ dbwebb publish kmom02
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  

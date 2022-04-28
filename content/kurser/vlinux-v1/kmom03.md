@@ -83,11 +83,11 @@ Genomför följande övningar.
 
 1. Installera Docker som en del av [labbmiljön](kunskap/installera-virtualiseringsmiljon-docker).
 
-1. Jobba igenom artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-skript.
+<!-- 1. Jobba igenom artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-skript. -->
 
-1. Läs stycket om verktyget "grep" i artikeln ["Text processering"](kunskap/text-processering#grep).
+<!-- 1. Läs stycket om verktyget "grep" i artikeln ["Text processering"](kunskap/text-processering#grep).
 
-1. Kika i guiden [kom igång med Bash](guide/kom-igang-med-bash), där du hittar beskrivningar om de vanligaste konstruktionerna.
+1. Kika i guiden [kom igång med Bash](guide/kom-igang-med-bash), där du hittar beskrivningar om de vanligaste konstruktionerna. -->
 
 1. Det finns även en [guide för Docker](guide/docker). Luta dig mot den när det är installerat.
 
@@ -99,9 +99,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) för att öva på kommandon som underlättar vid sökning i logg-filar.
 
-1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)". Spara arbetet i mappen `script`.
+<!-- 1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)". Spara arbetet i mappen `script`.
 
-1. Gör uppgiften "[Skapa Docker image](uppgift/skapa-docker-image)". Du fortsätter arbeta i mappen `script`.
+1. Gör uppgiften "[Skapa Docker image](uppgift/skapa-docker-image)". Du fortsätter arbeta i mappen `script`. -->
 
 1. Lägg till redovisningstexten i din me-sida.
 
@@ -141,3 +141,9 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Var det något som var extra svårt eller utmanande i uppgifterna?
 * Har du arbetat med Docker innan?
 * Anser du att det är någon fördel/nackdel med Docker om du jämför med VirtualBox?
+<!-- från kmom02 -->
+* Hur känns konceptet med Apache name-based Virtual Hosts? Känner du igen det sedan tidigare?
+* Det blir allt fler kommandon i terminalen, hur känns det med terminalen och dess kommandon?
+* Gick det bra med ssh-nycklar och rsync över ssh?
+* Hur kändes det att jobba med tmux?
+* Reflektera över hur du känner inför Unix som operativsystem så här långt?

@@ -11,7 +11,7 @@ revision:
 Vanliga kommandon
 ==================================
 
-Vi ska träna på vanliga kommandon i unixmiljön. Vi ska installera några program och se hur vi kan använda dem och skapa ett par filer med diverse information och kommandon.
+Vi ska träna på några kommandon i unixmiljön. Vi ska installera några program och se hur vi kan använda dem och dess "options" och skapa ett par filer med diverse information och kommandon.
 
 <!--more-->
 
@@ -27,7 +27,7 @@ Du har installerat [Docker](kunskap/installera-virtualiseringsmiljon-docker).
 Introduktion {#intro}
 -----------------------
 
-Varje krav ska resultera i en rad i respektive fil. Du ska lägga till det kommando du använt dig av för att lösa kravet. Ett krav per rad. Till din hjälp har du `man`-sidorna. Och hela internet såklart.
+Varje krav ska resultera i en rad i filen. Du ska lägga till det kommando du använt dig av för att lösa kravet. Ett krav per rad. Till din hjälp har du `man`-sidorna. Och hela internet såklart.
 
 
 
@@ -44,11 +44,11 @@ Krav {#krav}
 
     1. Skriv ut dagens datum i formatet `yyyy/mm/dd`. (`date`)
 
-    1. Hur stor är mappen `/usr/bin` i mb? (`du`)
+    1. Hur mycket utrymme tar mappen `/usr/bin` i mb? (`du`)
 
 
 
-När du är klar så kopierar du filerna från containern in till den lokala mappen `kmom01/`.
+När du är klar så kopierar du filerna från containern in till den lokala mappen `kmom01/commands`.
 
 
 
@@ -58,7 +58,7 @@ Publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
-$ dbwebb publish kmom01
+$ dbwebb publish commands
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.

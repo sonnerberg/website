@@ -60,9 +60,9 @@ Krav {#krav}
 
 1. Varje kommando du kör lägger du även i filen `answers`. Ett kommando per rad och filen ska inte innehålla något annat. Alla kommandon ska utgå ifrån att du står i den kopierade mappen.
 
-Tips: Installera kommandot `tree`. Det används för att lista innehåll i en mappstruktur på ett överskådligt sätt. Kommandot `tree .` listar strukturen med utgångspunkt i den nuvarande mappen.
+Tips: Installera programmet `tree`. Det används för att lista innehåll i en mappstruktur på ett överskådligt sätt. Kommandot `tree .` listar strukturen med utgångspunkt i den nuvarande mappen. Se även `man tree`.
 
-När du är klar så kopierar du filen `answers` från containern in till den lokala mappen `kmom01/`.
+När du är klar så kopierar du filen `answers` från containern in till den lokala mappen `kmom01/structure`.
 
 
 
@@ -86,7 +86,7 @@ Publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
-$ dbwebb publish kmom01
+$ dbwebb publish structure
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.

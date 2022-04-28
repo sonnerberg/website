@@ -111,14 +111,13 @@ Titta på följande:
 
 
 
-
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Vanliga kommandon](uppgift/vanliga-kommandon)" för att komma igång med terminalen och linuxmiljön. Spara filerna i mappen `kmom01/`.
+1. Gör uppgiften "[Vanliga kommandon](uppgift/vanliga-kommandon)" för att komma igång med terminalen och linuxmiljön. Spara filerna i mappen `kmom01/commands`.
 
-1. Gör uppgiften "[Struktur](uppgift/struktur)" för att känna på lite fler kommandon i terminalen. Spara filerna i mappen `kmom01/`.
+1. Gör uppgiften "[Struktur](uppgift/struktur)" för att känna på lite fler kommandon i terminalen. Spara filerna i mappen `kmom01/structure`.
 
 1. Gör uppgiften "[Skapa en me-sida till vlinux-kursen](uppgift/skapa-en-me-sida-till-vlinux-kursen)". Här fyller du på din redovisningstext efter varje kursmoment.
 
@@ -156,5 +155,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Är du sedan tidigare bekant med Unix, Linux, Ubuntu och/eller terminalen?
 * Hur känns det med Unix-kommandon i terminalen, är det udda eller bekvämt?
+* Gick det bra med installationen av Docker?
 * Var det något som krånglade eller tog extra mycket tid?
 * Vilken är din [TIL](https://dictionary.cambridge.org/dictionary/english/til) för veckan?

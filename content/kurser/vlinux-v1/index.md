@@ -33,9 +33,9 @@ I slutet av kursen får du visa dina färdigheter i ett praktiskt programmerings
 Krav på labbmiljö {#labb}
 ------------------------
 
-I kursen installerar du virtualiseringssystemet Docker. Du behöver ha en dator med minst 4GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
+I kursen installerar du virtualiseringssystemet Docker. Du bör ha en dator med minst 8GB internminne för att det skall fungera bra. Med mindre internminne tar det längre tid att genomföra övningarna och det kan kännas trögt.
 
-Kort och gott, du skall installera en linux-server och du behöver ha en tillräckligt bra miljö för att det skall fungera utan bekymmer.
+Kort och gott, du skall installera Docker och du behöver ha en tillräckligt bra miljö för att det skall fungera utan bekymmer.
 
 
 
@@ -116,7 +116,7 @@ Det första kursmomentet går ut på att installera Docker och bekanta sig med m
 
 
 
-### Kmom02: Dockerfile {#kmom02}
+### Kmom02: Dockerfile och Bash {#kmom02}
 
 <!-- Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 

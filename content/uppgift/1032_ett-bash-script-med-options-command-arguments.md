@@ -38,7 +38,7 @@ Lär dig använda manualen `man`.
 Krav {#krav}
 -----------------------
 
-1. Skapa ett bash-script `script/commands.bash` som kan ta emot options och argument. Anropas ditt script utan options eller argument, skall scriptet skriva ut att man kan få hjälp genom att använda `--help, -h`.
+1. Skapa ett bash-script `ex1/commands.bash` som kan ta emot options och argument. Anropas ditt script utan options eller argument, skall scriptet skriva ut att man kan få hjälp genom att använda `--help, -h`.
 
 1. Ändra rättigheter för scriptet genom kommandot `chmod 755 script/commands.bash`
 
@@ -60,6 +60,7 @@ Krav {#krav}
 | Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Vad skall hända |
 |-----------------------|-----------------|
 | `cal`          | Skriv ut en kalender. |
+| `uptime`      | Visa resultatet av systemets inbyggda uptime.|
 | `greet`       | Skriv ut en hälsningsfras till den nuvarande användaren.|
 | `loop <min> <max>`| Skriv ut siffrorna mellan &lt;min&gt; och &lt;max&gt; med hjälp av en forloop. |
 | `lower <n n n...>`| Skriv ut alla siffror som är mindre än 42. Antalet inskickade tal ska inte spela någon roll.|
@@ -73,7 +74,7 @@ Validera ditt `commands.bash` script genom att göra följande kommandon i kursk
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb validate script
+$ dbwebb validate kmom02
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  
@@ -94,4 +95,4 @@ OBS! Om du har cygwin i Windows kan du behöva installera `telnet` genom att kö
 Tips från coachen {#tips}
 -----------------------
 
-Lycka till och hojta till i forumet om du behöver hjälp!
+Lycka till och hojta till i Discord om du behöver hjälp!
