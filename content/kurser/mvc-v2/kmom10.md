@@ -34,6 +34,8 @@ Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 
 
 <!--
+Gör en uppgift som kräver att man tittar och opponerar på varandras kod utifrån phpmetrics och scrutinizer, eller som del av examinationen?
+
 (Skippa krav om flowchart & pseudocode)
 
 Skapa användare, login, registrera.

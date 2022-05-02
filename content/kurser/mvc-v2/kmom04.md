@@ -64,6 +64,21 @@ Titta igenom följande föreläsningar.
 
 1. [Introduktion till området "Software Unit Testing"](./../forelasning/software-unit-testing) och rollen för enhetstestning i testprocessen av mjukvara.
 
+<!--
+Föreläsning om phpunit? Eller räcker med övningen? Kanske en kort föreläsning som bara visar projektet?
+
+När det gäller phpunit så är bland annat följande resurser intressanta att ha koll på.
+
+* [PHPUnits hemsida](https://phpunit.de/)
+* [Manualen](https://phpunit.readthedocs.io) (dubbelkolla så att du läser rätt version av manualen som mappas mot den version av phpunit du använder).
+* [PHPUnit och PHP supportade versioner](https://phpunit.de/supported-versions.html), se vilka versioner som är aktiva för tillfället.
+* [PHPUnit på GitHub](https://github.com/sebastianbergmann/phpunit), följ utvecklingen och läs om vilka issues som finns.
+
+För att kodtäckningen skall fungera behöver du installera Xdebug.
+
+* [Hemsidan för Xdebug](https://xdebug.org/)
+-->
+
 
 
 ### Litteratur  {#litteratur}
@@ -125,7 +140,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 <!--
 generera dokumentation, phpdoc, uml  hur fixa uml klassdiagram?
 Kanske flytta det till kmom03 i fortsättningen?
-Samt kräva att det läggs till i Git-repot
+Samt kräva att det läggs till i Git-repot, tex doc/coverage
 -->
 
 
@@ -155,18 +170,3 @@ Se till att följande frågor besvaras i din redovisningstext.
 <!--
 * Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
 -->
-
-<!--stop-->
-
-### PHPUnit {#phpunit}
-
-När det gäller phpunit så är bland annat följande resurser intressanta att ha koll på.
-
-* [PHPUnits hemsida](https://phpunit.de/)
-* [Manualen](https://phpunit.readthedocs.io) (dubbelkolla så att du läser rätt version av manualen som mappas mot den version av phpunit du använder).
-* [PHPUnit och PHP supportade versioner](https://phpunit.de/supported-versions.html), se vilka versioner som är aktiva för tillfället.
-* [PHPUnit på GitHub](https://github.com/sebastianbergmann/phpunit), följ utvecklingen och läs om vilka issues som finns.
-
-För att kodtäckningen skall fungera behöver du installera Xdebug.
-
-* [Hemsidan för Xdebug](https://xdebug.org/)

@@ -3,7 +3,7 @@ title: mvc (v2)
 author:
     - mos
 revision:
-    "2022-03-21": "(PB, mos) Första utgåva vt22, kopierad från mvc-v1."
+    "2022-05-02": "(B, mos) Första utgåva vt22, kopierad från mvc-v1, nu mvc-v2."
     "2021-03-25": "(A, mos) Första utgåva vt21, kopierad från oophp-v5."
 ...
 Kursen mvc (v2)
@@ -14,14 +14,6 @@ Kursen **Objektorienterade webbteknologier**, a.k.a. *mvc*, fokuserar på objekt
 <!--more-->
 
 Läs vidare för en översikt för kursens innehåll, struktur och planering.
-
-[WARNING]
-
-**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
-
-Större ändringar kan komma att ske i materialet.
-
-[/WARNING]
 
 
 
@@ -136,14 +128,14 @@ Läs [instruktionen till kursmoment 04](./kmom04).
 
 ### Kmom05: ORM / Databas {#kmom05}
 
-To Be Defined.
+Vi integrerar vår applikation med en databas genom att använda ett ramverk för Object Relational Mapping (ORM). Vi kan välja mellan databaserna SQLite och MariaDB.
 
 Läs [instruktionen till kursmoment 05](./kmom05).
 
 
 ### Kmom06: Automatiserad test {#kmom06}
 
-To Be Defined.
+Vi kopplar vort Git repo till en tjänst som checkar ut och testar vår application. Varje gång vi gör en commit till GitHub/GitLab så checkas vår kod ut av det externa systemet och vår testsuit körs tillsammans med alla linters. Tanken är att få hjälp att visa upp och övervaka kvaliteten på vårt system.
 
 Läs [instruktionen till kursmoment 06](./kmom06).
 
