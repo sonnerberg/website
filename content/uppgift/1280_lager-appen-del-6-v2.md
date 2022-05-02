@@ -28,7 +28,7 @@ Du har gjort uppgiften [Lager appen del 5](uppgift/lager-appen-del-5). Du har jo
 Krav {#krav}
 -----------------------
 
-1. Använd meddelanden i din app för Login och Registrera delarna, samt för validering i Delivery formuläret.
+1. Använd meddelanden i din app för Login och Registrera delarna, samt för validering i Delivery formuläret. (Validering är att se till att den data som fylls i uppfyller de krav vi som utvecklare ställer på den.)
 
 1. Beskriv som en del av din inlämning i Canvas tre (3) enkla use-cases.
 
