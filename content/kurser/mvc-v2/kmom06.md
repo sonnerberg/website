@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2022-05-03": "(D, mos) Lade till övning om software metrics."
     "2022-05-02": "(C, mos) Uppdaterad inför vt22 och mvc-v2."
     "2021-05-04": "(B, mos) Kompletterade med läsanvisningar."
     "2021-04-30": "(A, mos) Första utgåvan."
@@ -71,6 +72,10 @@ Läs enligt följande.
 
 1. Bekanta dig snabbt och översiktligt med byggtjänsten [Scrutinizer CI](https://scrutinizer-ci.com/), du kommer använda den i uppgifterna.
 
+<!--
+1. Wikipedia har en översikt om "[Software metric](https://en.wikipedia.org/wiki/Software_metric)" som visar en lista med olika mätvärden som finns för programvara. Kika snabbt på listan för att få en känsla av olika mättal.
+-->
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -86,10 +91,11 @@ Jobba gärna i grupp med dina studiekompisar, men skriv alltid din egen kod för
 
 ### Övningar {#ovningar}
 
-Det finns inga övningar.
+Jobba igenom övningarna, de förbereder dig inför uppgifterna.
+
+1. En guide/övning "[Software Quality Metrics](https://github.com/dbwebb-se/mvc/tree/main/example/metrics)" som visar hur du kan jobba med analys av din kod i Scrutinizer och phpmetrics. Det finns även en videoinspelning där Mikael visar hur du kan jobba med verktygen och de metrics de visar. Det kan vara bra att jobba igenom denna för att få ett par tips inför uppgiften samt att ha mätvärden från fler projekt att relatera till.
 
 <!--
-Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 * Artikeln "[Integrera din packagist modul med verktyg för automatisk test och validering](kunskap/integrera-din-packagist-modul-med-verktyg-for-automatisk-test-och-validering)" visar hur man kan integrera en PHP modul eller applikation mot ett par externa bygg och kvalitetstjänster, däribland Travis CI och Scrutinizer CI. Artikeln innehåller även videomaterial. Artikeln har ett par år på nacken men användes senaste hösten 2020 i undervisningen i kursen ramverk1. Du behöver inte utföra det som står i artikeln utan den är mer tänkt som exempel för att visa hur det fungerar så det räcker med att lsäa igenom artikeln och fokusera på Travis och Scrutinizer samt se på de videorna vid behov.
 
