@@ -36,6 +36,11 @@ Titta igenom följande föreläsningar.
 
 1. [Hur tänka kring objektorientering och principer om snygg kod?](./../forelasning/hur-tanka-kring-objectorientering-och-snygg-kod) som visar på designprinciper och terminologi som hjälper oss att tänka kring hur vi skapar bra och snygg kod. Inspelad från veckans tisdags-zoom.
 
+<!--
+https://blog.ndepend.com/lack-of-cohesion-methods/
+software hierarchy of needs
+-->
+
 
 
 ### Litteratur  {#litteratur}

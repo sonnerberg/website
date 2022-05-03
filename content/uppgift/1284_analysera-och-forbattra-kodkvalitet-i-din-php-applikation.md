@@ -50,6 +50,25 @@ Kraven är uppdelade i sektioner.
 
 ### Kodkvalitet {#kvalitet}
 
+<!--
+Ge process till hur man kan analyser programvaran och komma med förbättringsförslag.
+
+Samla rå mätdata som en deluppgift
+
+Länka till övning som ger förslag på metrics att jobba med
+
+Relatera till övning som visar hur man kan analysera tre exempelprojekt
+Jämför ditt egna projekt med exempelprojekten
+
+Fixa så att phpunit kan integreras med phpmetrics
+
+Föreslå tre olika standardsätt att förbättra mätvärden.
+    * Fixa issues
+    * Öka kodtäckning
+    * Fokusera på kvalitetsindex i Scrutinizer
+    * Minska komplexiteten i class/metod
+-->
+
 1. Skapa en landningssida för din "Metrics" som handlar om kodkvalitet. Placera landningssidan i din navbar. Du skriver din rapport i denna landningssidan.
 
 1. Börja med en rubrik "Introduktion" där du förklarar de fyra C:na och hur de kan påverka kodens kvalitet. Exemplifiera med några mätvärden för de fyra C:na som är kopplade till din egen kod och ge en kort förklaring relaterad till kodkvalitet.
