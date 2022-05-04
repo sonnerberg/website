@@ -313,6 +313,8 @@ expo install react-native-paper
 Om vi tänker oss en komponent med en array med data som vill rita upp en tabell med den data kan vi då göra på följande sätt:
 
 ```javascript
+import { DataTable } from "react-native-paper";
+
 export default function AnimalsTable() {
     const animals = [
         { name: "elephant", legs: 4, color: "grey"},
@@ -322,7 +324,7 @@ export default function AnimalsTable() {
 
     const table = animals.map((animal, index) => {
         return (
-            <DataTable.Row>
+            <DataTable.Row key={index}>
               <DataTable.Cell>{animal.name}</DataTable.Cell>
               <DataTable.Cell numeric>{animal.legs}</DataTable.Cell>
               <DataTable.Cell>{animal.color}</DataTable.Cell>
