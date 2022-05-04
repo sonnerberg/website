@@ -325,7 +325,7 @@ export default function AnimalsTable() {
             <DataTable.Row>
               <DataTable.Cell>{animal.name}</DataTable.Cell>
               <DataTable.Cell numeric>{animal.legs}</DataTable.Cell>
-              <DataTable.Cell>{animal.color}</DataTable.Cell>
+              <DataTable.Cell> {animal.color}</DataTable.Cell>
             </DataTable.Row>
         );
     });
