@@ -1,4 +1,4 @@
-Uppdatera
+Uppdatera dbwebb-cli
 ==================================
 
 Du kan alltid uppdatera till senaste versionen av `dbwebb` genom att köra följande kommando.
