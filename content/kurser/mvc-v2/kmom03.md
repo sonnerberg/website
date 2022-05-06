@@ -92,6 +92,12 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Lös uppgiften "[Bygg kortspel i PHP och Symfony enligt MVC](uppgift/bygg-kortspel-i-php-och-symfony-enligt-mvc)". Spara dina filer under `me/report` och bygg vidare på den webbplatsen.
 
+<!--
+* Cards in 5x5 (Poker square)
+* Dice 5x5 (Dice square) (inkl highscore och histogram)
+
+Jobba mer med histogram och statistik för att få fler klasser och fler konstruktioner (trait, interface) samt jobba med visuella diagram.
+-->
 
 
 Resultat & Redovisning  {#resultat_redovisning}

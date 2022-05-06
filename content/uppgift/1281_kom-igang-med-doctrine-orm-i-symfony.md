@@ -65,6 +65,8 @@ Kraven är uppdelade i sektioner.
 
 1. Använd GET och POST. Kom ihåg att alltid använda POST när du gör en uppdatering i databasen.
 
+<!-- Inkludera möjlighet att återställa databasen till ursprungsläget -->
+
 
 
 ### Användare och login {#anv}

@@ -2,19 +2,10 @@
 author:
     - mos
 revision:
-    "2021-05-11": "(A, mos) Första utgåvan."
+    "2022-05-06": "(A, mos) Första utgåvan mvc-v2."
 ...
 Kmom07/10: Projekt och examination
 ==================================
-
-[WARNING]
-
-**En genomgång och uppdatering av kursmaterialet pågår inför kursomgången VT22.**
-
-Större ändringar kan komma att ske i materialet.
-
-[/WARNING]
-
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -22,11 +13,8 @@ Alla delar i detta kursmoment skall utföras individuellt och självständigt.
 
 Upplägget är enligt följande:
 
-* Quiz (obligatoriskt)
-* Projekt (obligatoriskt med optionella krav)
-* Redovisning (obligatoriskt)
-* Videopresentation (optionell)
-
+* Projekt
+* Redovisning med videopresentation
 
 Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 
@@ -34,93 +22,24 @@ Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 
 
 <!--
+Projekt med olika fokus
+
+* Spel site.
+* Adventurespel som projekt kan tillåta fokus på Ux.
+* Hållbarhetsfokus.
+* Cards in 5x5 (Poker square)
+* Dice 5x5 (Dice square) (inkl highscore och histogram)
+* Blog
+
+Ett optionellt krav är inloggningen, man kan logga in och redigera uppgifterna som ligger i databasen.
+
 Gör en uppgift som kräver att man tittar och opponerar på varandras kod utifrån phpmetrics och scrutinizer, eller som del av examinationen?
-
-(Skippa krav om flowchart & pseudocode)
-
-Skapa användare, login, registrera.
-
-Ny applikation med inloggning, databas med pengar.
-
-Search engine
-https://symfony.com/blog/the-new-symfony-documentation-search-engine
-
-För svår och komplex att rätta. Förenkla och förtydliga.
-Förenkla, förenkla, förenkla.
-
-Alla kan göra quizzen, den behöver inte vara optionell.
-Sätt som fristående assignment i Canvas och bedöm bara som G.
-
-Alla gör en fristående rapport som leder till G? Eller ladda upp rapporten separat och gör en bedömning G/VG på rapporten enbart? Med feedback om hur man skriver en rapport bättre? Eller låt rapporten mer vara en del av 01-06 och en bra sådan ger bonus till slutbetyget?
-Rapporten borde ha en annan template? Kanske mer som en artikel och skippa kapitelindelningen? Fundera på det. Kan vara lättare att ge feedback på att strukturen följs.
-Kanske en rapport mer artikel-lik för redovisningstexten. Sen kan man ha en separat rapport för extra.
-Eller en artikel-typ för varje kmom, istället för kapitel-grejen? Nja, troligen inte men bra att fundera på.
-
-Extrarapporten kan fokusera även på Symfony/Laravel och dess features.
-
-Extrarapporten kan ha högre höjd och kräva referenser. Hmm, men såna saker kanske alla borde lära sig...
-
-Redovisningstexten kanske kan vara i kursrapporten och extrarapporten i ett eget dokument?
-
-Ett upplägg på projektet som leder till E-C alt E-D.
-Ett upplägg på projektet som leder till C-A eller BA.
-Projektet kan rättas av tas?
-
-Friheten kontra Uppstyrdhet i kraven. Kanske ToDo ger en nivå. En blog ger en annan nivå. Helt fritt ger ytterligare en nivå. Vissa gillar tydlighet och andra gillar frihet och kreativitet.
-
-Eventuellt ett skarpt projekt, samma för alla?
-Eller ett tydligt projekt som majoriteten gör och ett som är mer valbart?
-Ett projekt som har kopplingar till näringslivet eller forskning?
-
-Kanske borde kmom ORM göra en CRUD eller inloggning. Kanske oauth trots allt?
-
-Kanske projekt som blog med inloggning och admin kontra besökare.
-
-Om inloggning, använd doe:doe som default användare.
-
-Lägg in class diagram i inledningen.
-
-Fixa phpdoc generering så vi kan fokusera delvis på dokumentationen.
-
-Fixa phpmetrics så man kan reflektera över kodkvalitet på ett bättre sätt.
-
-Adventurespel som projekt kan tillåta fokus på Ux.
-
-Videon vad ska den ta upp, enbart projektet? Eller infoga även de saker man skrev i rapporten (tips från coachen, egen analys)?
-
-Lös nedladdningstiden.
 
 Ge poäng för den statiska valideringen för att uppmuntra att den biten blir rätt (dbwebb test kmom10).
 
-Jobba i grupp?
-
-Projekt:
-
-* ToDo
-* Blog
-    * Wordpress
-    * Travelblogg
-    * Hemnet
-    * Blocket
-    * Fotoblogg
-* CMS
-* Cards
-* Cards in 5x5 (Poker square)
-* Dice 5x5 (Dice square) (inkl highscore och histogram)
-
-* Yatzy var väldigt svårt att få ett bra gränssnitt.
-
-Spel fram till kmom04, sen login & db i valfritt ramverk?
-    * Proj mer spel, eller adventure eller blog/ToDo (inkl inlogg)
-
 Gör tydligt att repot skall se bra ut, så det kan användas för att länka till.
 
-Repot kan använda GitHub/GitLab Pages visa upp sin dokumentation och kodtäckning samt metrics.
-
-Mer tydligt vad histogram och stats skall innehålla. Kanske även visa hur man kan göra mer grafiskt representativt. Dels med enkla medel och dels med Google diagrams (eller annan tredjepartare).
-
 Inloggning på Game kan erbjuda möjlighet att reinitiera databasen eller andra admin-saker.
-
 
 -->
 
@@ -129,155 +48,256 @@ Inloggning på Game kan erbjuda möjlighet att reinitiera databasen eller andra 
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-Läs först igenom [grunderna för bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning-projekt-quiz-rapport-video). Dokumentet berättar för dig hur kraven mappas mot betygsnivåerna.
+Det finns ett särskilt dokument som beskriver [grunderna för bedömning och betygsättning](kurser/faq/bedomning-och-betygsattning).
 
 
 
-Krav 1: Projekt/Applikation {#proj}
+Projektidé {#ide}
 --------------------------------------------------------------------
 
-Kraven är indelade i ett antal grundkrav samt en del med optionella krav.
+Du skall fortsätta bygga vidare på din kodbas i `me/report` och där lägger du till en ny landningssida för projektets webbplats.
 
-Se till att du är uppdaterad innan du påbörjar projektet.
+Du behöver göra ett aktivt val om vilket projekt du vill utveckla. Här är förslagen till projektidéer.
 
-```
-dbwebb update
-```
+* Casino med kortspel (poker)
+* Äventyrsspel (adventure)
+* Visualisera indikatorer för hållbarhet (sustainability)
+* Eget fokus (eget)
 
+Tänk till så att du inte väljer ett alltför stort och komplext projekt som tar allt för mycket tid. Välj ett projekt där du kan slutföra grundkraven inom 20-40h.
 
-
-### Struktur {#struktur}
-
-* Välj ramverk från de som vi tidigare pratat om i kursen.
-* Välj ORM från de som vi tidigare pratat om i kursen.
-* Placera koden i `me/proj`.
-* Initiera som nytt repo och publicera på GitHub eller GitLab.
-* Tagga som v7.0.0 eller högre (men lägre än v8.0.0).
-* Applikationen skall fungera på studentservern.
-* En lokal utvecklingsmiljö skall finnas på plats med validatorer och enhetstester.
-* Integrera mot Travis och Scutinizer med badges i din README.
-* Inkludera minst ett flödesschema och ett dokument för pseudokod och placera i katalogen `doc/design` (omfattningen på dokumenten är valfri).
-* Se till att `dbwebb test kmom10` passerar grönt. Här kan fler detaljkrav uppenbara sig.
+Här följer en utökad beskrivning av varje projektidé.
 
 
 
-### Projekt/Applikation {#applikation}
+### Casino med kortspel (poker) {#proj1}
 
-Kraven på själva applikationen du bygger är fria och det är upp till din egen bedömning om vad som är rimligt och ej. Tolka kraven och tolka de bedömningskriterier som finns.
-
-* Färdigställ ditt Yatzy alternativt ditt 21-spel inklusive vadslagning.
-* Förbättra din highscorelista med fler features.
-* Gör en visuell statistik på histogram, tärningar och/eller resultat (sparas i databas)
-* Applikationen skall var lätt att använda.
-* Webbplatsen skall vara snygg och tilltalande, lägg kraft på stil och utseende.
-* Webbplatsen skall ha en tilltalande header, navbar och footer.
-* Förklara din applikation projekt i en README.md, dels vad applikationen handlar om, som en liten manual. Dels hur man kan installera den utifrån dess GitHub/GitLab repo. Gör din README snygg och lägg till en representativ bild.
+Mikael håller på och skriver.
 
 
 
-### Optionellt {#projopt}
+### Äventyrsspel (adventure) {#proj2}
 
-Gör ett "svårare" och lite mer utmanande projekt med tanke på implementation och arbetsinsats.
-
-Till exempel kan du göra något av följande.
-
-* Gör en applikation som kräver att du jobbar mer med klasser (skapa fler klasser) och objektorienterade konstruktioner som arv, "använder", interface, trait.
-* Använd en mer avancerad databasmodell med flera tabeller.
-* Börja på nytt och välj ett annat ramverk och ORM.
-* Fokusera på kodkvalitet, enhetstester och kodtäckning.
-* Gör en ny applikation, tex något av följande:
-    * Ett klassiskt äventyrsspel där man går från rum till rum och löser gåtor.
-    * En enkel blogg eller en todo applikation.
-    * Ett nytt spel, tex ett kortspel eller ett nytt tärningsspel (behåll dina gamla spel eller ta bort dem).
-
-Det är fritt val och du behöver i slutändan argumentera i din redovisning vad det är som gör att ditt projekt kvalificerar sig som "svårare".
-
-Tänk till så att du inte väljer ett alltför stort och komplext projekt som tar allt för mycket tid. Välj ett projekt som du kan slutföra grundkraven på inom 15-30h.
+Mikael håller på och skriver.
 
 
 
-Krav 2: Redovisningstext {#redovisa}
+### Visualisera indikatorer för hållbarhet (sustainability) {#proj3}
+
+Mikael håller på och skriver.
+
+
+
+### Eget fokus (eget) {#proj4}
+
+Mikael håller på och skriver.
+
+
+
+Krav {#krav}
 --------------------------------------------------------------------
 
-Kravet är obligatoriskt.
+Det finns 3 grundläggande krav (1, 2, 3) du måste lösa för att få godkänt på denna uppgiften.
 
-1. I din kursrapport, skapa ett nytt kapitel för "Projekt" och besvara följande frågeställningar.
-
-    1. Beskriv arbetet med ditt projekt/applikation i ett textstycke om ca 7-20 meningar där du beskriver vad du gjort, vilka val du gjorde, hur du tänkte inledningsvis och hur du betraktar ditt resultat. Nämn gärna problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, med mera. Fundera över tidsaspekten, tog projektet mer eller midre tid än vad du först trodde?
-
-    1. Om du valde att göra ett "svårare" projekt, beskriv ett textstycke om ca 7-20 meningar vad som gör just ditt projekt till "svårare".
-
-    1. Avsluta med ett stycke med dina tankar om kursen och dess innehåll, genomförande, upplägg och material (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
-
-Om du väljer att skriva en fristående rapport så lägger du ovan text i den rapporten istället.
+Det finns 3 optionella krav (4, 5, 6) som du kan välja att utföra om du har tid, lust, energi och förmåga. Varje komplett utfört optionellt krav kan höja ditt slutbetyg ett steg.
 
 
 
-Krav 3: Fristående Rapport {#rapport}
+Krav 1, 2, 3: Webbplats {#k123}
 --------------------------------------------------------------------
 
-Kravet är optionellt i sin helhet. Om man väljer att utföra kravet finns det obligatoriska och optionella delkrav.
+Din nya webbplats skall minst uppfylla följande krav.
+
+
+### Projektfokus {#p}
+
+Välj ditt fokus för ditt projekt.
+
+Implementera det i din webbplats.
 
 
 
-### Obligatoriskt {#rapportobl}
+### Struktur och innehåll {#s}
 
-* Gör en helt ny rapport utifrån samma mall du använt för kursen. Dokumentet innehåller nu enbart saker relaterat till ditt projekt.
-
-* Redovisningstext enligt Krav 2 ovan skall finnas som ett eget inledande kapitel döpt till "Projekt".
-
-* Skriv ett nytt kapitel "Tips från coachen" om ca 1-2 sidor där du kort riktar dig till nybörjare på ramverk och du ger dina egna råd om vad som är viktigt att tänka på när man tar sig an ramverk och ORM. Du kan till exempel rikta dig till "ditt gamla jag som du var i kmom01" och ge dig själv tips och råd som hade varit viktiga för att nå dit du är nu.
-
-
-
-### Optionellt {#rapportopt}
-
-* Skriv ett nytt kapitel "Analys av [valfritt]" om ca 1-2 sidor där du gör en analys av ditt projekt/applikation ur någon aspekt som du själv väljer. Det kan röra objektorienterad kodstruktur, kodkvalitet, enhetstester med kodtäckning, testbar kod, ramverk/ORM, reflektioner kring manualer och dokumentation eller något annat som känns intressant och relevant för dig inom området som projektet och kursen omfattar.
-
-* Lägg till referenser och använd dem i texten. lista alla referenser som ett eget appendix längst bak i rapporten.
+* En landningssida `/proj` som syns i navbaren på din report-sida.
+* En sida `/proj/about` som berättar utförligt om ditt projekt och vad det handlar om.
+* Din about-sida skall innehålla en sektion om dokumentation av ditt projekt där följande är inkluderat.
+    * Länk till dokumentationen som är genererad via phpdoc.
+    * Länk till rapporten från phpmetrics.
+    * Länk till ditt GitHub repo.
+    * Länk till Scrutinizer för ditt repo.
+        * Inkludera dina badges i sidan.
+* Din about-sida skall innehålla en summering där du berättar om projektets kodkvalitet. Berätta vilka åtgärder du gjort för att kvalitetssäkra projektet och hur du jobbat med kodkvaliteten och vilka verktyg du använt. Har du fokuserat på vissa saker, verktyg eller metrics, så kan du berätta om dem.
 
 
 
-Krav 4: Quiz {#quiz}
+### Databas med ORM {#o}
+
+* Din webbplats skall använda databas via ORM.
+* Det skall finnas en route `/proj/reset` som återställer databasen till dess ursprungliga läge. Placera en länk till denna routen i din about-sida.
+
+
+
+### Utseende och användbarhet {#u}
+
+* Din webbplats skall ha en stil och utseende som tydligt skiljer sig från din report-sida. Det skall utseendemässigt se ut som en ny webbplats så bygg en "ny" stylesheet eller modifiera din befintliga. Modifiera minst färg, typsnitt och utseende på header och footer.
+* Användbarhet är viktigt, så fokusera på att din webbplats känns lätt att använda. Använd det du lärt dig om detta hittills.
+
+
+
+### Kodstil {#k}
+
+* Din kod i `me/report` skall passera phpcs utan anmärkning.
+
+
+
+### Linters {#l}
+
+* Din kod i `me/report` skall passera phpmd och phpstan (valfri level) utan anmärkning. Det är okey att disabla varningar med kommentarer i koden.
+
+
+
+### Enhetstestning & Kodtäckning {#e}
+
+* Alla delar (klasser) av din kod i `me/report` skall täckas av testfall och assertions. Du kan exkludera  katalogerna `Controller`, `Entity`, `Repository` och filen `Kernel.php` samt de filer som är relaterade till övningar du gjort.
+* Nå en kodtäckning om minst 70%.
+
+
+
+### Dokumentation {#d}
+
+* Använd DocBlock kommentarer när du gör projektet.
+* Generera dokumentation med phpdoc och spara i `docs/api`.
+* Din about-sida skall innehålla en länk till dokumentationen.
+
+
+
+### Metrics {#m}
+
+* Använd phpmetrics för att generera en rapport. Spara den i `docs/metrics`.
+* Din about-sida skall innehålla en länk till din metrics rapport.
+
+
+
+### Git repo och GitHub/Lab {#g}
+
+* Din kod skall vara ett Git repo och den skall ligga publicerad på GitHub/GitLab eller liknande webbtjänst.
+* Ditt git repo skall ha en `README.md` som beskriver innehållet i någon omfattning.
+* Din about-sida skall innehålla en länk till GitHub (eller motsvarande).
+
+
+
+### Scrutinizer {#s}
+
+* Ditt repo skall vara kopplat till Scrutinizer.
+* Din about-sida skall innehålla:
+    * Länk till Scrutnizer.
+    * Inkludera badges.
+
+
+
+Krav 4: Snygg kod (optionellt) {#k4}
 --------------------------------------------------------------------
 
-Kravet är optionellt.
+För att visa dina goda förmågor i att relatera till konceptet "Snygg och god kod" så presenterar du din egen syn på detta i en artikel eller presentation.
 
-Lös och få godkänt på en Quiz (på Canvas) med teori och bakgrundsfrågor. Quizen är tidsbegränsad, automaträttande och du har oändligt med försök att nå godkänt. Frågor slumpas fram vid varje nytt försök.
+Du kan inleda så här:
+
+> "Finns det verkligen ett begrepp som är 'Snygg och god kod'? Kan en programmerare uppfatta kod som 'snygg' och vad innebär det och hur producerar man 'snygg kod'?"
+
+Använd och relatera till de begrepp, verktyg och mätvärden som kursen hanterat.
+
+Visa gärna något exempel.
+
+Avsluta med din egen personliga syn.
 
 
 
-Krav 5: Inspelad video presentation {#video}
---------------------------------------------------------------------
+### Artikel {#k4a}
 
-Kravet är optionellt och kan endast utföras om samtliga krav ovan är utförda.
+Du skriver din artikel på routen `proj/cleancode` och länkar till den från din about-sida.
 
-Baserat på informationen i din rapport, gör en "professionell" presentation med slides och spela in den. Din cam skall synas i bilden tillsammans med dina slides.
+Din artikel bör vara omfångsmässigt som 1.5-2.0 A4 sidor. Det är ungefär som 1.5 - 2 x en normalbra redovisningstext. Vi pratar alltså om cirka 40-60 meningar text, cirka 4-5000 ord.
+
+
+
+### Presentation {#k4p}
+
+Du gör en "powerpoint" presentation och spelar in på video.
+
+Länka till presentationen, en pdf-variant, via din about-sida.
+
+Nämn videon på din about-sida, länka till den via din about-sida eller via Canvas.
+
+Presentationen skall vara "exakt" 3 minuter lång.
 
 Försök göra en så "professionell" presentation du kan. Tänk på inledning,  avslutning och "energinivå".
 
-Håll tiden och försök göra presentationen till "exakt 5 minuter". Ett "proffs" kan alltid avsluta en presentation när tiden är slut.
+Håll tiden och försök göra presentationen till "exakt 3 minuter". Ett "proffs" kan alltid avsluta en presentation när tiden är slut.
 
 Det är fritt fram att klippa och redigera din video i efterhand liksom att lägga till intro och outro.
 
 
 
-Lämna in {#lamnain}
+Krav 5: Inloggning (optionellt) {#k5}
 --------------------------------------------------------------------
 
-1. Lämna in ditt resultat på Canvas med länk till ditt studentrepo, bifoga rapporter som PDF. Länka till optionell redovisningsvideo.
+Ditt projekt skall innehålla en möjlighet att logga in. Man skall kunna logga in med följande två användare.
 
-2\. Se till att ditt repo är taggar och klart samt pushat till GitHub/GitLab.
+* akronym doe, lösenord doe
+* akronym admin, lösenord admin
 
-3\. Se till att du testar att din inlämning motsvarar grundkraven för `me/proj`.
+En användare kan ha en roll som vanlig användare eller som administratör.
 
-```text
-dbwebb update
-dbwebb test kmom10
-```
+Användaren doe är en vanlig användare som inte har tillgång till administratörsfunktioner.
 
-4\. Ladda upp och publicera på studentservern.
+Användaren admin har tillgång till administratörsfunktioner.
 
-```text
-dbwebb publishpure proj
-```
+Användare har en profilsida med detaljer om användaren. Någon av detaljerna skall kunna redigeras av användaren.
+
+En användare skall ha en profilbild.
+
+Man skall kunna registrera en ny användare genom att ange en akronym och ett lösenord.
+
+När administratören är inloggad kan den se en översikt av samtliga användare i databasen. Administratören kan även lägga till, uppdatera och ta bort en användare.
+
+
+
+Krav 6: ORM (optionellt) {#k6}
+--------------------------------------------------------------------
+
+Du har valt att göra en större databas där du har fler än 3 tabeller och du har minst två tabeller som har en relation mellan varandra. Du har alltså minst två tabeller som behöver joinas.
+
+Du använder ORM för att jobba mot tabellerna.
+
+Du kan använda SQL för att joina eller så lär du dig mer om Symfony och Doctrine och "[How to Work with Doctrine Associations / Relations](https://symfony.com/doc/current/doctrine/associations.html)".
+
+Du har gjort ett logiskt ER-diagram över din databas och sparat som en bild.
+
+* I din about-sida, skriv ett stycke "ORM" och lista vilka tabeller du har och ge en beskrivning av dina tabeller (en rad räcker). Berätta även vilka tabeller som är kopplade (har en relation).
+* I din about-sida, inkludera bilden på ditt ER diagram.
+
+
+
+Redovisning {#redovisning}
+--------------------------------------------------------------------
+
+Avsluta och redovisa din projektinlämning enligt följande.
+
+1. Testa ditt projekt med `dbwebb test kmom10`. Se till att alla delar passerar grönt.
+
+1. Tagga som v10.0.0, pusha till GitHub/Lab.
+
+1. Driftsätt din applikation på studentservern. Dubbelkolla att alla delar fungerar, inklusive nollställningen av databasen.
+
+1. På din me/report sida, skriv följande:
+
+    1. För varje krav du implementerat, dvs 1-3, 4, 5, 6, skriver du ett textstycke om ca 5-10 meningar där du beskriver hur du löste kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+
+    2. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+
+    3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på Canvas. Glöm inte att bifoga länken till projektet på studentservern.
+
+3. Spela in en redovisningsvideo för projektet och lägg länken till videon i en kommentar på din inlämning i Canvas. Detta kan du göra dagen efter projektets deadline. Läs mer om hur du kan [spela in en redovisningsvideo](kurser/faq/slutpresentation).

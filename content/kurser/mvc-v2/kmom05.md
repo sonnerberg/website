@@ -110,6 +110,14 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Lös uppgiften "[Kom igång med Doctrine ORM i Symfony](uppgift/kom-igang-med-doctrine-orm-i-symfony)". Alla filer sparar du i `me/report`.
 
+<!--
+
+* Re-init databasen i uppgiften.
+
+Search engine
+https://symfony.com/blog/the-new-symfony-documentation-search-engine
+-->
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
