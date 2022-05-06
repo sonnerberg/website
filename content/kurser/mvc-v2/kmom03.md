@@ -96,6 +96,8 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 * Cards in 5x5 (Poker square)
 * Dice 5x5 (Dice square) (inkl highscore och histogram)
 
+Poker i en 5x1 ish patiens? Mer logik krävs?
+
 Jobba mer med histogram och statistik för att få fler klasser och fler konstruktioner (trait, interface) samt jobba med visuella diagram.
 -->
 

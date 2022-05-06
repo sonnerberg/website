@@ -21,28 +21,6 @@ Totalt omfattar kursmoment 07/10 i storleksordningen 20--60 studietimmar.
 <!--more-->
 
 
-<!--
-Projekt med olika fokus
-
-* Spel site.
-* Adventurespel som projekt kan tillåta fokus på Ux.
-* Hållbarhetsfokus.
-* Cards in 5x5 (Poker square)
-* Dice 5x5 (Dice square) (inkl highscore och histogram)
-* Blog
-
-Ett optionellt krav är inloggningen, man kan logga in och redigera uppgifterna som ligger i databasen.
-
-Gör en uppgift som kräver att man tittar och opponerar på varandras kod utifrån phpmetrics och scrutinizer, eller som del av examinationen?
-
-Ge poäng för den statiska valideringen för att uppmuntra att den biten blir rätt (dbwebb test kmom10).
-
-Gör tydligt att repot skall se bra ut, så det kan användas för att länka till.
-
-Inloggning på Game kan erbjuda möjlighet att reinitiera databasen eller andra admin-saker.
-
--->
-
 
 
 Bedömning och betygsättning {#bedomning}
@@ -72,25 +50,57 @@ Här följer en utökad beskrivning av varje projektidé.
 
 ### Casino med kortspel (poker) {#proj1}
 
-Mikael håller på och skriver.
+Gör en webbplats där du kan spela poker om låtsaspengar. Du kan välja mellan följande olika upplägg på poker.
 
+Utmaningen generellt i denna uppgiften är att bestämma vilken hand man har och om den handen vinner över motspelaren. Det bör bli en del logiskt kodande kring det.
+
+Utmaningen ligger också i Ux biten att få ett trevligt spel där användaren trivs.
+
+Det finns olika varianter du kan implementera. [Läs mer om Poker](https://sv.wikipedia.org/wiki/Poker).
+
+* Du spelar traditionell femkortspoker mot datorn. Här är utmaning att låta datorn få en bästa hand. Men du kan naturligtvis göra det relativt enkelt.
+* Samma som ovan men kör på sjukortspoker och [Texas hold'em](https://en.wikipedia.org/wiki/Texas_hold_%27em) istället.
+
+Ett något enklare alternativ är patiensen "[Poker Square](https://en.wikipedia.org/wiki/Poker_squares)". Här kan man spela mot sig själv och samla poängen i en highscorelista.
+
+Denna uppgiften handlar inte om att promota spel i allmänhet, det är bara en trivsam och utmanande kodningsuppgift. Det finns [stödgrupper och hjälp att få för spelberoende](https://spelberoende.se/).
 
 
 ### Äventyrsspel (adventure) {#proj2}
 
-Mikael håller på och skriver.
+Ett klassiskt äventyrsspel, så som jag tänker mig det i denna uppgiften, är ett spel där man börjar i ett rum och en bild visas. I rummet kan man ta saker och lägga i sin ryggsäck, man kan peta på saker i rummet och något kan hända eller visa sig. Man kan förflytta sig åt öster, väster, norr och söder, förutsatt att det finns öppningar åt de hållen.
+
+Målet är att ta sig till sista rummet och ha med sig någon viktig sak man kan använda för att nå till skatten/målet.
+
+Varje gång man klickar på något så sker en request till servern och sidan renderas om.
+
+Här är utmaningen att göra en bra struktur bakom spelet så att man kan lägga till rum, saker och utmaningar på ett generellt sätt och inte hårdkoda saker.
+
+Håll det enkelt. Visa en bild för varje rum, implementera ryggsäck där man kan ta med sig saker, implementera att man kan navigera mellan rummen och se dolda saker genom att agera med dem, eventuellt via något man har i sin ryggsäck.
+
+Spelet kan var 3-5 rum stort och det måste finnas en fusklapp som visar läraren hur man spelar igenom spelet.
+
+Här finns en lista med "[Top 100 All-Time Adventure Games](https://adventuregamers.com/articles/view/18643)" och kanske känner du igen något spel där. Ett spel jag själv växte upp med var första varianterna av Larry. Men jag kom aldrig i mål.
 
 
 
 ### Visualisera indikatorer för hållbarhet (sustainability) {#proj3}
 
-Mikael håller på och skriver.
+Du har blivit uppmanad att marknadsföra en del av konceptet "Hållbar utveckling". Din uppgift är att välja ett av de 17 områdena som är definierade som "[17 globala målen](https://www.globalamalen.se/om-globala-malen/)".
+
+När du har valt ett område så skall du samla på dig statistik och mätvärden för det området. Du kan hitta mätvärden bland annat via "[SCB Indikatorer för hållbar utveckling](https://www.scb.se/hitta-statistik/statistik-efter-amne/miljo/miljoekonomi-och-hallbar-utveckling/indikatorer-for-hallbar-utveckling/)". Det finns också en förklaring till dessa indikatorer på "[Fakta om Indikatorer för hållbar utveckling](https://www.scb.se/hitta-statistik/statistik-efter-amne/miljo/miljoekonomi-och-hallbar-utveckling/indikatorer-for-hallbar-utveckling/produktrelaterat/Fordjupad-information/fakta-om-indikatorer-for-hallbar-utveckling/)".
+
+Utmaningen i detta projektet är att samla in mätvärden, samla dem i databasen och därefter presentera mätvärden i en sida för att visa områdets nuvarande status.
+
+Detta projekt kan vara spännande om du vill lära dig mer om ett område inom hållbarhet och få möjlighet att gräva ner dig i siffror och träna på hur du kan visualisera dessa siffor. Du bör skapa några diagram för att representera siffrorna.
+
+Det räcker om du gör en sida för detta projektet, du kan samla allt på en sida men du bör visa på flera aspekter och mätvärden för området och du bör lägga till egen text, eller citera andra som uttalar sig om området.
 
 
 
 ### Eget fokus (eget) {#proj4}
 
-Mikael håller på och skriver.
+Du har en helt egen idé om vad du vill göra som projekt. Ok, kör på det. Men du måste börja med att skriva ned din projektidé i text, ungefär som är gjort ovan, och du bör (inget krav) visa texten för en lärare innan du sätter igång och kodar loss.
 
 
 
