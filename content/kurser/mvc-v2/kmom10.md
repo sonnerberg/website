@@ -42,9 +42,11 @@ Du behöver göra ett aktivt val om vilket projekt du vill utveckla. Här är f�
 * Visualisera indikatorer för hållbarhet (sustainability)
 * Eget fokus (eget)
 
-Tänk till så att du inte väljer ett alltför stort och komplext projekt som tar allt för mycket tid. Välj ett projekt där du kan slutföra grundkraven inom 20-40h.
+Tänk till så att du inte väljer ett alltför stort och komplext projekt som tar alltför mycket tid. Välj ett projekt där du kan slutföra grundkraven inom 20-40h beroende på din ambitionsnivå.
 
-Här följer en utökad beskrivning av varje projektidé.
+Letar du efter enklaste projektet så är det troligen "sustainability" projektet.
+
+Här följer en beskrivning av varje projektidé.
 
 
 
@@ -52,18 +54,19 @@ Här följer en utökad beskrivning av varje projektidé.
 
 Gör en webbplats där du kan spela poker om låtsaspengar. Du kan välja mellan följande olika upplägg på poker.
 
-Utmaningen generellt i denna uppgiften är att bestämma vilken hand man har och om den handen vinner över motspelaren. Det bör bli en del logiskt kodande kring det.
+Utmaningen i denna uppgiften är att bestämma vilken hand man har och om den handen vinner över motspelaren. Det bör bli en del logiskt kodande kring det och där kan man ha nytta av enhetstester.
 
-Utmaningen ligger också i Ux biten att få ett trevligt spel där användaren trivs.
+Utmaningen ligger också i Ux för att få ett trevligt spel där användaren uppfattar det som enkelt att spela.
 
 Det finns olika varianter du kan implementera. [Läs mer om Poker](https://sv.wikipedia.org/wiki/Poker).
 
-* Du spelar traditionell femkortspoker mot datorn. Här är utmaning att låta datorn få en bästa hand. Men du kan naturligtvis göra det relativt enkelt.
+* Du spelar traditionell femkortspoker mot datorn. Här är utmaning att skriva kod så att datorn kan få en bra hand. Men du kan naturligtvis göra det relativt enkelt och slumpmässigt.
 * Samma som ovan men kör på sjukortspoker och [Texas hold'em](https://en.wikipedia.org/wiki/Texas_hold_%27em) istället.
 
 Ett något enklare alternativ är patiensen "[Poker Square](https://en.wikipedia.org/wiki/Poker_squares)". Här kan man spela mot sig själv och samla poängen i en highscorelista.
 
 Denna uppgiften handlar inte om att promota spel i allmänhet, det är bara en trivsam och utmanande kodningsuppgift. Det finns [stödgrupper och hjälp att få för spelberoende](https://spelberoende.se/).
+
 
 
 ### Äventyrsspel (adventure) {#proj2}
@@ -74,11 +77,11 @@ Målet är att ta sig till sista rummet och ha med sig någon viktig sak man kan
 
 Varje gång man klickar på något så sker en request till servern och sidan renderas om.
 
-Här är utmaningen att göra en bra struktur bakom spelet så att man kan lägga till rum, saker och utmaningar på ett generellt sätt och inte hårdkoda saker.
+Här är utmaningen att göra en bra struktur bakom spelet så att man kan lägga till rum, saker och händelser i rummen på ett generellt sätt och undvika att hårdkoda spelets logik.
 
 Håll det enkelt. Visa en bild för varje rum, implementera ryggsäck där man kan ta med sig saker, implementera att man kan navigera mellan rummen och se dolda saker genom att agera med dem, eventuellt via något man har i sin ryggsäck.
 
-Spelet kan var 3-5 rum stort och det måste finnas en fusklapp som visar läraren hur man spelar igenom spelet.
+Spelet kan var 3-5 rum stort (inte större) och det måste finnas en fusklapp som visar läraren hur man spelar igenom spelet snabbaste vägen.
 
 Här finns en lista med "[Top 100 All-Time Adventure Games](https://adventuregamers.com/articles/view/18643)" och kanske känner du igen något spel där. Ett spel jag själv växte upp med var första varianterna av Larry. Men jag kom aldrig i mål.
 
@@ -86,30 +89,34 @@ Här finns en lista med "[Top 100 All-Time Adventure Games](https://adventuregam
 
 ### Visualisera indikatorer för hållbarhet (sustainability) {#proj3}
 
-Du har blivit uppmanad att marknadsföra en del av konceptet "Hållbar utveckling". Din uppgift är att välja ett av de 17 områdena som är definierade som "[17 globala målen](https://www.globalamalen.se/om-globala-malen/)".
+Du har blivit uppmanad att marknadsföra en del av konceptet "Hållbar utveckling". Din uppgift är att välja ett av de 17 områdena som är definierade som "[de 17 globala målen](https://www.globalamalen.se/om-globala-malen/)" och berätta om det på en webbsida.
 
-När du har valt ett område så skall du samla på dig statistik och mätvärden för det området. Du kan hitta mätvärden bland annat via "[SCB Indikatorer för hållbar utveckling](https://www.scb.se/hitta-statistik/statistik-efter-amne/miljo/miljoekonomi-och-hallbar-utveckling/indikatorer-for-hallbar-utveckling/)". Det finns också en förklaring till dessa indikatorer på "[Fakta om Indikatorer för hållbar utveckling](https://www.scb.se/hitta-statistik/statistik-efter-amne/miljo/miljoekonomi-och-hallbar-utveckling/indikatorer-for-hallbar-utveckling/produktrelaterat/Fordjupad-information/fakta-om-indikatorer-for-hallbar-utveckling/)".
+När du har valt ett område så skall du samla på dig statistik och mätvärden för det området. Du kan hitta mätvärden bland annat via "[SCB Indikatorer för hållbar utveckling](https://www.scb.se/hitta-statistik/statistik-efter-amne/miljo/miljoekonomi-och-hallbar-utveckling/indikatorer-for-hallbar-utveckling/)". Det finns också en förklaring till dessa indikatorer på "[Fakta om Indikatorer för hållbar utveckling](https://www.scb.se/hitta-statistik/statistik-efter-amne/miljo/miljoekonomi-och-hallbar-utveckling/indikatorer-for-hallbar-utveckling/produktrelaterat/Fordjupad-information/fakta-om-indikatorer-for-hallbar-utveckling/)". Dessa mätvärden placerar du i din databas och du läser dem via ditt ORM.
 
-Utmaningen i detta projektet är att samla in mätvärden, samla dem i databasen och därefter presentera mätvärden i en sida för att visa områdets nuvarande status.
+Utmaningen i detta projektet är att samla in mätvärden, organisera dem i databasen och därefter presentera mätvärden i en webbsida för att visa områdets nuvarande status.
 
-Detta projekt kan vara spännande om du vill lära dig mer om ett område inom hållbarhet och få möjlighet att gräva ner dig i siffror och träna på hur du kan visualisera dessa siffor. Du bör skapa några diagram för att representera siffrorna.
+Detta projekt kan vara spännande om du vill lära dig mer om ett område inom hållbarhet och få möjlighet att gräva ner dig i siffror och träna på hur du kan visualisera dessa siffor. Du bör skapa några diagram för att representera siffrorna. Du bör ha 2 eller fler indikatorer vilket leder till 2 eller fler tabeller i databasen.
 
-Det räcker om du gör en sida för detta projektet, du kan samla allt på en sida men du bör visa på flera aspekter och mätvärden för området och du bör lägga till egen text, eller citera andra som uttalar sig om området.
+Det räcker om du gör en webbsida för detta projektet, du kan alltså samla allt på en sida men du bör visa på flera aspekter och mätvärden för området och du bör lägga till egen text samt citera andra som uttalar sig om området.
+
+Välj själv om du vill hålla en neutral och objektiv ton eller om du vill vara mer tydlig och ta en egen ställning. Det kan du välja genom sättet du skriver och presenterar indikatorerna.
 
 
 
 ### Eget fokus (eget) {#proj4}
 
-Du har en helt egen idé om vad du vill göra som projekt. Ok, kör på det. Men du måste börja med att skriva ned din projektidé i text, ungefär som är gjort ovan, och du bör (inget krav) visa texten för en lärare innan du sätter igång och kodar loss.
+Du har en helt egen idé om vad du vill göra som projekt. Ok, kör på det. Men du måste börja med att skriva ner din projektidé i text, ungefär som är gjort ovan, och du bör (inget krav) visa texten för en lärare innan du sätter igång och kodar loss.
+
+Ditt projekt måste omfatta någon form av databas och ORM.
 
 
 
 Krav {#krav}
 --------------------------------------------------------------------
 
-Det finns 3 grundläggande krav (1, 2, 3) du måste lösa för att få godkänt på denna uppgiften.
+Det finns 3 grundläggande krav (1, 2, 3) du måste lösa för att få godkänt. Normalt leder de till betyg D/E.
 
-Det finns 3 optionella krav (4, 5, 6) som du kan välja att utföra om du har tid, lust, energi och förmåga. Varje komplett utfört optionellt krav kan höja ditt slutbetyg ett steg.
+Det finns 3 optionella krav (4, 5, 6) som du kan välja att utföra om du har tid, lust, energi och förmåga. Varje komplett utfört optionellt krav kan höja ditt slutbetyg en nivå (C, B, A).
 
 
 
@@ -130,14 +137,13 @@ Implementera det i din webbplats.
 ### Struktur och innehåll {#s}
 
 * En landningssida `/proj` som syns i navbaren på din report-sida.
-* En sida `/proj/about` som berättar utförligt om ditt projekt och vad det handlar om.
+* En sida `/proj/about` som berättar någorlunda utförligt om ditt projekt och vad det handlar om.
 * Din about-sida skall innehålla en sektion om dokumentation av ditt projekt där följande är inkluderat.
     * Länk till dokumentationen som är genererad via phpdoc.
     * Länk till rapporten från phpmetrics.
     * Länk till ditt GitHub repo.
     * Länk till Scrutinizer för ditt repo.
-        * Inkludera dina badges i sidan.
-* Din about-sida skall innehålla en summering där du berättar om projektets kodkvalitet. Berätta vilka åtgärder du gjort för att kvalitetssäkra projektet och hur du jobbat med kodkvaliteten och vilka verktyg du använt. Har du fokuserat på vissa saker, verktyg eller metrics, så kan du berätta om dem.
+* Din about-sida skall innehålla en summering där du berättar om projektets kodkvalitet. Berätta vilka eventuella åtgärder du gjort för att kvalitetssäkra projektet och hur du jobbat med kodkvaliteten och vilka verktyg du använt. Har du fokuserat på några speciella saker, verktyg eller metrics, så kan du berätta om dem.
 
 
 
@@ -150,7 +156,7 @@ Implementera det i din webbplats.
 
 ### Utseende och användbarhet {#u}
 
-* Din webbplats skall ha en stil och utseende som tydligt skiljer sig från din report-sida. Det skall utseendemässigt se ut som en ny webbplats så bygg en "ny" stylesheet eller modifiera din befintliga. Modifiera minst färg, typsnitt och utseende på header och footer.
+* Din webbplats skall ha en stil och ett utseende som tydligt skiljer sig från din report-sida. Det skall utseendemässigt se ut som en ny webbplats så bygg en "ny" stylesheet eller modifiera din befintliga. Modifiera i någon omfattning färg, typsnitt och utseende på header och footer.
 * Användbarhet är viktigt, så fokusera på att din webbplats känns lätt att använda. Använd det du lärt dig om detta hittills.
 
 
@@ -165,12 +171,14 @@ Implementera det i din webbplats.
 
 * Din kod i `me/report` skall passera phpmd och phpstan (valfri level) utan anmärkning. Det är okey att disabla varningar med kommentarer i koden.
 
+Om du inte uppfyller detta kravet till fullo kan du berätta om varför i din redovisningstext och ge en förklaring.
+
 
 
 ### Enhetstestning & Kodtäckning {#e}
 
 * Alla delar (klasser) av din kod i `me/report` skall täckas av testfall och assertions. Du kan exkludera  katalogerna `Controller`, `Entity`, `Repository` och filen `Kernel.php` samt de filer som är relaterade till övningar du gjort.
-* Nå en kodtäckning om minst 70%.
+* Nå en kodtäckning om minst 50-70%, gärna högre.
 
 
 
@@ -191,7 +199,7 @@ Implementera det i din webbplats.
 
 ### Git repo och GitHub/Lab {#g}
 
-* Din kod skall vara ett Git repo och den skall ligga publicerad på GitHub/GitLab eller liknande webbtjänst.
+* Din kod skall vara ett Git repo och den skall ligga publicerad på GitHub/GitLab eller liknande webbtjänst. Detta kravet bör redan vara uppfyllt för din `me/redovisa`.
 * Ditt git repo skall ha en `README.md` som beskriver innehållet i någon omfattning.
 * Din about-sida skall innehålla en länk till GitHub (eller motsvarande).
 
@@ -202,14 +210,13 @@ Implementera det i din webbplats.
 * Ditt repo skall vara kopplat till Scrutinizer.
 * Din about-sida skall innehålla:
     * Länk till Scrutnizer.
-    * Inkludera badges.
 
 
 
 Krav 4: Snygg kod (optionellt) {#k4}
 --------------------------------------------------------------------
 
-För att visa dina goda förmågor i att relatera till konceptet "Snygg och god kod" så presenterar du din egen syn på detta i en artikel eller presentation.
+För att visa dina goda förmågor i att relatera till konceptet "Snygg och god kod" så presenterar du din egen syn på detta i en (A) artikel eller (B) presentation.
 
 Du kan inleda så här:
 
@@ -219,19 +226,21 @@ Använd och relatera till de begrepp, verktyg och mätvärden som kursen hantera
 
 Visa gärna något exempel.
 
+Du behöver inte ha ett komplett svar på frågan, det räcker om du diskuterar kring frågan och kopplar det till saker vi gjort i kursen.
+
 Avsluta med din egen personliga syn.
 
 
 
-### Artikel {#k4a}
+### (A) Artikel {#k4a}
 
 Du skriver din artikel på routen `proj/cleancode` och länkar till den från din about-sida.
 
-Din artikel bör vara omfångsmässigt som 1.5-2.0 A4 sidor. Det är ungefär som 1.5 - 2 x en normalbra redovisningstext. Vi pratar alltså om cirka 40-60 meningar text, cirka 4-5000 ord.
+Din artikel bör vara omfångsmässigt som en extra stor redovisningstext. Vi pratar alltså om cirka 30-60 meningar text, cirka 3.500-5000 ord, 1-2 A4-sidor.
 
 
 
-### Presentation {#k4p}
+### (B) Presentation {#k4p}
 
 Du gör en "powerpoint" presentation och spelar in på video.
 
@@ -265,7 +274,7 @@ Användaren admin har tillgång till administratörsfunktioner.
 
 Användare har en profilsida med detaljer om användaren. Någon av detaljerna skall kunna redigeras av användaren.
 
-En användare skall ha en profilbild.
+En användare skall ha en profilbild som användaren själv kan byta länken till.
 
 Man skall kunna registrera en ny användare genom att ange en akronym och ett lösenord.
 
@@ -276,16 +285,16 @@ När administratören är inloggad kan den se en översikt av samtliga användar
 Krav 6: ORM (optionellt) {#k6}
 --------------------------------------------------------------------
 
-Du har valt att göra en större databas där du har fler än 3 tabeller och du har minst två tabeller som har en relation mellan varandra. Du har alltså minst två tabeller som behöver joinas.
+Du har valt att göra en större databas där du har minst två tabeller som har en relation mellan varandra. Du har alltså minst två tabeller som behöver joinas.
 
 Du använder ORM för att jobba mot tabellerna.
 
 Du kan använda SQL för att joina eller så lär du dig mer om Symfony och Doctrine och "[How to Work with Doctrine Associations / Relations](https://symfony.com/doc/current/doctrine/associations.html)".
 
-Du har gjort ett logiskt ER-diagram över din databas och sparat som en bild.
+Du har även gjort ett logiskt ER-diagram över din databas och sparat som en bild.
 
 * I din about-sida, skriv ett stycke "ORM" och lista vilka tabeller du har och ge en beskrivning av dina tabeller (en rad räcker). Berätta även vilka tabeller som är kopplade (har en relation).
-* I din about-sida, inkludera bilden på ditt ER diagram.
+* Inkludera och visa bilden på ditt ER diagram.
 
 
 
