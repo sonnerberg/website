@@ -244,7 +244,7 @@ Avsluta med din egen personliga syn.
 
 Du skriver din artikel på routen `proj/cleancode` och länkar till den från din about-sida.
 
-Din artikel bör vara omfångsmässigt som en extra stor redovisningstext. Vi pratar alltså om cirka 30-60 meningar text, cirka 3.500-5000 ord, 1-2 A4-sidor.
+Din artikel bör vara omfångsmässigt som en extra stor redovisningstext. Vi pratar alltså om cirka 30-60 meningar text, cirka 3.500-5000 tecken, 1-2 A4-sidor.
 
 
 
