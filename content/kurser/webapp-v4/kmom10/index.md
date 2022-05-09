@@ -34,6 +34,12 @@ Skapa ett Git-repo som du skickar upp till GitHub. Lämna in en länk till ditt 
 
 
 
+### Expo
+
+När du är klar med projektet gör du en `expo publish`. Längst ner i den utskrift som kommer i terminalen finns en "Project page" länk. Lämna in länken till din "Project page" webbplats som en del av din inlämning.
+
+
+
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
@@ -59,6 +65,6 @@ Presentation {#presentation}
 
 Som en del av slutinlämningen ska du göra en presentation. Presentation bör ta 4-8 minuter och bör handla om din applikation och hur du har implementerat den.
 
-**Campusstudenter:** Presenterar på plats i H430 torsdagen den 2:a juni 2022.
+**Campusstudenter:** Presenterar på plats i H430 torsdagen den **2:a juni 2022 kl 9**.
 
-**Distansstudenter:** Spelar in en video med samma presentation som ovan. Videon lämnas in som en del av inlämningen på Canvas. Se till att **inte** visa din legitimation om du laddar om videon på YouTube.
+**Distansstudenter:** Spelar in en video med samma presentation som ovan. Videon lämnas in som en del av inlämningen på Canvas. Se till att **inte** visa din legitimation om du laddar upp videon på YouTube.
