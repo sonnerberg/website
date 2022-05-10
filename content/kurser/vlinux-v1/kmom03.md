@@ -86,7 +86,9 @@ Titta på följande:
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden om "[Apache Name-based Virtual Hosts](guide/unix-tools/apache)".
+1. Jobba igenom artikeln "[Kom igång med Apache](kunskap/kom-igang-med-apache)".
+
+1. Ha lite koll på [Docker guiden](guide/docker). Framförallt delarna om Dockerfile och volymer.
 
 <!-- 1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/unix-tools/kom-igang-med-ssh-nycklar)".
 

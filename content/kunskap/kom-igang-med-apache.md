@@ -34,7 +34,7 @@ I standardinstallationen så lägger Apache sina configfiler i `/etc/apache2/` o
 
 
 
-### Eventuella warningar och fel {#warnings}
+### Eventuella varningar och fel {#warnings}
 
 När du kör `$ apachectl start` kan du få varningen:
 
