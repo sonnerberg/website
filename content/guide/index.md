@@ -45,7 +45,7 @@ Guider under utveckling till våren 2019.
 
 Guider under utveckling till hösten 2020.
 
-* [Unix tools](guide/unix-tools)
+<!-- * [Unix tools](guide/unix-tools) -->
 
 Guider under utveckling till hösten 2021.
 

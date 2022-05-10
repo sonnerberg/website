@@ -2,24 +2,29 @@
 author:
     - lew
 revision:
+    "2022-05-09": (B, lew) Uppdaterad inför HT22.
     "2019-03-25": (A, lew) Ny inför HT19.
 ...
-Kmom03: Introduktion till Docker
+Kmom03: Virtual Hosts
 ==================================
 
 [WARNING]
 Kursen uppdateras inför HT22. Är "gula rutan" borta är det fritt fram att börja.
 [/WARNING]
 
-Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med en annan teknik för virtualisering: Docker. Vi kommer även bekanta oss med skriptprogrammering i Bash.
+Nu kan vi enkelt snurra igång en Linuxmiljö så låt oss se hur vi kan använda containern som en server och installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
+
+Ett bra sätt att installera många webbplatser på en och samma maskin är Apache Virtual Hosts och det är något vi skall bekanta oss med. Vi ska skapa namnbaserade webbplatser som ligger på samma domän med hjälp av webbservern Apache.
+
+<!-- Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med en annan teknik för virtualisering: Docker. Vi kommer även bekanta oss med skriptprogrammering i Bash.
 
 Mycket handlar om att förenkla vardagen, som programmerare, genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
 
-Man behöver också ha en rätt bra koll på vanliga kommandon i Linux-terminalen. Det finns kommandon som är kraftfulla och om vi bara lära oss ett par av dessa kommandon så kan de spara en hel del tid åt oss.
+Man behöver också ha en rätt bra koll på vanliga kommandon i Linux-terminalen. Det finns kommandon som är kraftfulla och om vi bara lära oss ett par av dessa kommandon så kan de spara en hel del tid åt oss. -->
 
 <!--more-->
 
-[FIGURE src=/image/snapht15/vim-solutions.png caption="Låt oss komma igång med skriptprogrammering i Bash."]
+[FIGURE src=/image/vlinux/apache.svg.png caption="Apache2."]
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
@@ -36,15 +41,15 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [The Linux Command Line](kunskap/boken-the-linux-command-line)
+<!-- 1. [The Linux Command Line](kunskap/boken-the-linux-command-line)
     * Kapitel 6 Redirection
-    * Kapitel 24 Writing Your First Script
+    * Kapitel 24 Writing Your First Script -->
 
 
 
 ### Artiklar {#artiklar}
 
-1. Boken "The Linux Command Line" har en webbplats där det finns [ett stycke med fokus på att skriva shell scripts](http://linuxcommand.org/lc3_writing_shell_scripts.php). Ta det som ett komplement till boken.
+<!-- 1. Boken "The Linux Command Line" har en webbplats där det finns [ett stycke med fokus på att skriva shell scripts](http://linuxcommand.org/lc3_writing_shell_scripts.php). Ta det som ett komplement till boken. -->
 
 
 
@@ -54,19 +59,19 @@ Titta på följande:
 
 1. Till kursen finns en videoserie, "[vlinux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_oeXQlDtKv51tVM4Y8UtkF)", kika på de videor som börjar på 3.
 
-1. Kris Occhipinti har en serie om [skriptprogrammering med Bash på YouTube](https://www.youtube.com/playlist?list=PLcUid3OP_4OXOUqYTDGjq-iEwtBf-3l2E). Det är många avsnitt och du kan välja vilka du vill titta på. Videorna ger dig bra bas-kunskaper i Bash.
+<!-- 1. Kris Occhipinti har en serie om [skriptprogrammering med Bash på YouTube](https://www.youtube.com/playlist?list=PLcUid3OP_4OXOUqYTDGjq-iEwtBf-3l2E). Det är många avsnitt och du kan välja vilka du vill titta på. Videorna ger dig bra bas-kunskaper i Bash. -->
 
 
 
-### Lästips {#lastips}
+<!-- ### Lästips {#lastips} -->
 
-1. Det finns en [referensmanual till Bash](http://www.gnu.org/software/bash/manual/bashref.html). Kika gärna i den.
+<!-- 1. Det finns en [referensmanual till Bash](http://www.gnu.org/software/bash/manual/bashref.html). Kika gärna i den.
 
 1. Det finns en populär guide för att [komma igång med Bash och programmering i Bash](http://mywiki.wooledge.org/BashGuide). Samma webbplats har en [FAQ om Bash](http://mywiki.wooledge.org/BashFAQ).
 
 1. Bekanta dig med dokumentationen [för Docker](https://docs.docker.com/).
 
-1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om.
+1. [Reddit har en kanal om Bash](https://www.reddit.com/r/bash/) där man kan se både nybörjare och erfarna prata om Bash. Det kan vara intressant att läsa igenom ett par inlägg i kanalen för att få en känsla om vad Bash handlar om. -->
 
 
 
@@ -81,15 +86,13 @@ Titta på följande:
 
 Genomför följande övningar.
 
-1. Installera Docker som en del av [labbmiljön](kunskap/installera-virtualiseringsmiljon-docker).
+1. Jobba igenom guiden om "[Apache Name-based Virtual Hosts](guide/unix-tools/apache)".
 
-<!-- 1. Jobba igenom artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-skript. -->
+<!-- 1. Jobba igenom guiden "[Kom igång med SSH-nycklar](guide/unix-tools/kom-igang-med-ssh-nycklar)".
 
-<!-- 1. Läs stycket om verktyget "grep" i artikeln ["Text processering"](kunskap/text-processering#grep).
+1. Jobba igenom guiden om "[rsync](guide/unix-tools/rsync)".
 
-1. Kika i guiden [kom igång med Bash](guide/kom-igang-med-bash), där du hittar beskrivningar om de vanligaste konstruktionerna. -->
-
-1. Det finns även en [guide för Docker](guide/docker). Luta dig mot den när det är installerat.
+1. Jobba igenom guiden om "[tmux](guide/unix-tools/tmux)". -->
 
 
 
@@ -97,18 +100,11 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) för att öva på kommandon som underlättar vid sökning i logg-filar.
-
-<!-- 1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)". Spara arbetet i mappen `script`.
-
-1. Gör uppgiften "[Skapa Docker image](uppgift/skapa-docker-image)". Du fortsätter arbeta i mappen `script`. -->
+Gör uppgiften "[Skapa en webbplats på en Apache Virtual Host](uppgift/skapa-en-webbplats-pa-en-apache-virtual-host)".
 
 1. Lägg till redovisningstexten i din me-sida.
 
-<!--
-1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
--->
-<!-- 1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)". -->
+
 
 ### Testa din inlämning {#test}
 

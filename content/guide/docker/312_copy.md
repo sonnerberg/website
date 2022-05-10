@@ -14,11 +14,11 @@ FROM ubuntu:22.04
 
 WORKDIR scripts
 
-COPY scripts/ /scripts/
+COPY scripts/ .
 
-RUN chmod +x /scripts/*.bash
+RUN chmod +x ./*.bash
 ```
 
 **WORKDIR** beskriver *arbetsmappen* för kommande kommandon i Dockerfile. Om mappen inte finns så skapas den. Om vi ger relativa sökvägar till WORKDIR kommer de relatera till föregående WORKDIR's mapp.  
-**COPY** kopierar in den lokala mappen *scripts* in i imagen och kallar den *scripts* även där. Notera det begynnande `/` i målet.  
+**COPY** kopierar in innehållet i den lokala mappen *script* in i imagen till arbetsmappen */script*.  
 **RUN** används för att köra kommandon i byggskedet av imagen. Här gör vi filerna exekverbara.

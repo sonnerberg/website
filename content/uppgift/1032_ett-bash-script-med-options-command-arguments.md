@@ -17,7 +17,7 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom övningen "[Skapa Bash-skript med options, command och arguments](kunskap/skapa-bash-skript-med-options-command-och-arguments)".
 
-Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash. Du har gjort uppgifterna "[Lab2](uppgift/linux-lab-2-sok-i-en-logg-fil)".
+<!-- Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash. Du har gjort uppgifterna "[Lab2](uppgift/linux-lab-2-sok-i-en-logg-fil)". -->
 
 
 
@@ -38,7 +38,7 @@ Lär dig använda manualen `man`.
 Krav {#krav}
 -----------------------
 
-1. Skapa ett bash-script `ex1/commands.bash` som kan ta emot options och argument. Anropas ditt script utan options eller argument, skall scriptet skriva ut att man kan få hjälp genom att använda `--help, -h`.
+1. Skapa ett bash-script `script/commands.bash` som kan ta emot options och argument. Anropas ditt script utan options eller argument, skall scriptet skriva ut att man kan få hjälp genom att använda `--help, -h`.
 
 1. Ändra rättigheter för scriptet genom kommandot `chmod 755 script/commands.bash`
 
@@ -64,7 +64,7 @@ Krav {#krav}
 | `greet`       | Skriv ut en hälsningsfras till den nuvarande användaren.|
 | `loop <min> <max>`| Skriv ut siffrorna mellan &lt;min&gt; och &lt;max&gt; med hjälp av en forloop. |
 | `lower <n n n...>`| Skriv ut alla siffror som är mindre än 42. Antalet inskickade tal ska inte spela någon roll.|
-| `reverse <random sentence>`| Skriv ut en mening baklänges (ecnetnes modnar).|
+| `reverse <random sentence>`| Skriv ut argumentet baklänges (ecnetnes modnar).|
 | `all`| Kör samtliga funktioner i följd. Värdena väljer du själv. Jobba gärna på att få till en trevlig presentation.|
 
 
@@ -74,7 +74,7 @@ Validera ditt `commands.bash` script genom att göra följande kommandon i kursk
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb validate kmom02
+$ dbwebb validate script
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  

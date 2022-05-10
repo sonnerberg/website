@@ -1,12 +1,13 @@
 ---
 author: lew
 revision:
+    "2022-05-04": (B, lew) Uppdaterad inför HT22.
     "2019-04-11": (A, lew) Första utgåvan inför HT19.
 ...
 Skapa en Docker image
 ===================================
 
-Du skall skapa en Docker image och publicera den till Docker Hub.
+Du skall skapa en Docker image och publicera den till Docker Hub. Du ska även använda ditt script från föregående övning och kopiera in det i din image.
 
 <!--more-->
 
@@ -26,7 +27,7 @@ Du har läst kurslitteraturen och skaffat dig grundläggande kunskaper om bash.
 Introduktion {#intro}
 -----------------------
 
-Du ska skapa en Docker image där det ska gå att köra scriptet som ligger i mappen `script/`. Imagen ska sedan publiceras på Docker Hub.
+Du ska skapa en Docker image där scriptet som ligger i mappen `kmom02/script` ska köras. Imagen ska sedan publiceras på Docker Hub.
 
 
 [INFO]
@@ -39,27 +40,25 @@ Du ska skapa en Docker image där det ska gå att köra scriptet som ligger i ma
 Krav {#krav}
 -----------------------
 
-1. Skapa en Dockerfile `ex2/Dockerfile` som använder sig av imagen `ubuntu:22.04`.
+1. Skapa en Dockerfile `script/Dockerfile` som använder sig av imagen `ubuntu:22.04`.
 
-1. Kopiera in ditt egna `ex1/commands.bash` in i containern, till arbetsmappen `kmom02`.
+1. Kopiera in ditt egna `script/commands.bash` in i containern, till arbetsmappen `kmom02`.
 
-1. Dubbelkolla så scriptet är körbart inuti kontainern.
+1. Se till så scriptet är körbart inuti containern.
 
-1. Vid uppstart ska kommandot `commands.bash all` köras. Dubbelkolla så alla program är installerade.
+1. Vid uppstart ska kommandot `commands.bash all` köras och sedan ska containern stängas ned. Dubbelkolla så alla program, tex `cal` är installerade.
 
-1. Bygg din image med namnet *username/vlinux-commands:latest* där du använder ditt egna användarnamn.
+1. Bygg din image med namnet *username/vlinux-commands:1.0* där du använder ditt egna användarnamn.
 
 1. Publicera imagen till Docker Hub och se till så den är publik.
 
-1. Skapa en fil `ex2/dockerhub.txt` som ENDAST innehåller *username/imagename:tag*.
-
-<!-- 1. Skapa ett script `script/kmom03.bash` som kör din kontainer med rätt namn och tagg. -->
+1. Skapa ett script `script/dockerhub.bash` som vid exekvering kör din publicerade image. Se till så filen är exekverbar.
 
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb validate kmom02
-$ dbwebb publish kmom02
+$ dbwebb validate script
+$ dbwebb publish script
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.  
@@ -76,4 +75,4 @@ Det finns inga extrauppgifter.
 Tips från coachen {#tips}
 -----------------------
 
-Lycka till och hojta till i forumet om du behöver hjälp!
+Lycka till och hojta till på Discord om du behöver hjälp!

@@ -51,6 +51,7 @@ För att hantera alla paket och pakethanteraren använder vi kommandot `apt`. De
 | apt install     | Installera mjukvara     |
 | apt search      | Sök efter mjukvara      |
 | apt upgrade     | Uppgradera mjukvara     |
+| apt list --upgradable     | Se vilka program som kan upgraderas     |
 
 
 

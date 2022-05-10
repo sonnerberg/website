@@ -48,7 +48,9 @@ Läs följande:
 
 ### Artiklar {#artiklar}
 
-1. Boken "The Linux Command Line" har en webbplats där det finns [ett stycke med fokus på att lära sig terminalen](http://linuxcommand.org/lc3_learning_the_shell.php). Ta det som ett lättläst komplement till boken.
+1. [The Linux Command Line](kunskap/boken-the-linux-command-line)
+    * Kapitel 6 Redirection
+    * Kapitel 24 Writing Your First Script
 
 
 
@@ -71,11 +73,14 @@ Läs följande:
 
 Genomför följande övningar.
 
-1. Jobba igenom artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-skript.
+1. Gå igenom guiden och de delar som handlar om [Volymer](guide/docker/volymer), [Dockerfile](guide/docker//bygga-image) och [Docker Hub](guide/docker/docker-hub).
+
+1. Jobba igenom artikeln ["Skapa script med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments). Den ger dig en struktur till hur du kan skapa Bash-script.
 
 1. Läs stycket om verktyget "grep" i artikeln ["Text processering"](kunskap/text-processering#grep).
 
 1. Kika i guiden [kom igång med Bash](guide/kom-igang-med-bash), där du hittar beskrivningar om de vanligaste konstruktionerna.
+
 
 <!-- 1. Jobba igenom guiden om "[Apache Name-based Virtual Hosts](guide/unix-tools/apache)".
 
@@ -93,11 +98,11 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 1](uppgift/linux-lab-1-introduktion-till-bash) för att träna upp grundläggande färdigheter i bash och hantering av filsystem.
+1. Gör uppgiften [Lab 1](uppgift/linux-lab-1-introduktion-till-bash) för att träna upp grundläggande färdigheter i bash och hantering av filsystem. Här jobbar du i mappen `kmom02/bash1`.
 
-1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)". Spara arbetet i mappen `kmom02/ex1`.
+1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)". Spara arbetet i mappen `kmom02/script`.
 
-1. Gör uppgiften "[Skapa Docker image](uppgift/skapa-docker-image)". Du fortsätter arbeta i mappen `kmom02/ex2`.
+1. Gör uppgiften "[Skapa Docker image](uppgift/skapa-docker-image)". Du fortsätter arbeta i mappen `kmom02/script`.
 
 <!-- 1. Gör uppgiften "[Skapa en webbplats på en Apache Virtual Host](uppgift/skapa-en-webbplats-pa-en-apache-virtual-host)". -->
 
@@ -125,8 +130,8 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är detta din första bekantskap med skriptprogrammering i Bash?
+* Är detta din första bekantskap med scriptprogrammering i Bash?
 * Berätta om din uppfattning om Bash som programmeringsmiljö, relatera till andra programspråk du kan.
-* Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?
+* Vilka möjligheter/utmaningar ser du med denna typen av scriptprogrammering?
 * Var det något som var extra svårt eller utmanande i uppgifterna?
 * Reflektera över hur du känner inför ett Unix-liknande operativsystem så här långt?
