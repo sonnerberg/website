@@ -6,7 +6,7 @@ revision:
 Om opponeringen
 =======================
 
-Det finns [riktlinjer om hur opponeringen skall ske](https://goo.gl/u3aFxc).
+Det finns [riktlinjer om hur opponeringen skall ske](https://drive.google.com/file/d/0ByJ-Zb8R9RVmcGdsak5EQ2R2eEJPX0YtTzhpdGNHYmJhUUZV/view?usp=sharing&resourcekey=0-El9DnnOqRHK2vau9w3EBig).
 
 Det finns en forumtråd som diskuterar [riktlinjer vid opponering](t/7420).
 
