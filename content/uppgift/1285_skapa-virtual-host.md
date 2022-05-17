@@ -17,7 +17,7 @@ Fixa iordning en webbplats med en Apache Virtual Host. Du får dels konfigurera 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Kom igång med Apache](kunskap/kom-igang-med-apache)" och du har koll på guiden "[Docker](guide/docker)".
+Du har jobbat igenom artikeln "[Kom igång med Apache](kunskap/kom-igang-med-apache)" och guiden om "[Apache och virtual hosts](guide/docker/apache-vh)".
 
 
 
@@ -31,15 +31,25 @@ De filer du skapar och använder i denna uppgiften skall du spara i ditt kursrep
 Krav {#krav}
 -----------------------
 
-1. Skapa `me.vlinux.se.conf`. Filen ska använda sig av variabler och peka mot en namngiven virtuell host `me.vlinux.se`.
+1. Skapa `mysite.vlinux.se.conf`. Använd variabler för sökvägarna.
 
-1. Skapa en `Dockerfile` enligt guiden som kör Apache2 och använder sig utav din egna configfil.
+1. Skapa en `Dockerfile` som installerar Apache2, kopierar in configfilen till rätt plats och startar Apache2 utan felmeddelanden eller varningar.
 
 1. Ta en skärmdump på terminalen som visar när du använder `w3m` för att komma åt webbplatsen inifrån containern med hjälp av ett host-namn. Spara den som `dump.png`. Spara bilden i formatet .png och använd små bokstäver i filnamnet.
 
-1. Skapa ett Bash-script, `dockerhub.bash` som kör din publicerade image och servar filer via en volym på sökvägen `$(pwd)/mysite` som mappas mot din valda sökväg i config-filen. Kika i guiden om [Apache Virtual Hosts](docker/apache-vh) för inspiration.
+1. Publicera din image med namnet *username/vlinux-vhost:1.0* där du använder ditt egna användarnamn. Se till så imagen är publik.
 
-1. Publicera dina svar enligt följande.
+1. Skapa ett Bash-script, `dockerhub.bash` som kör din publicerade image. Filerna ska servas via en volym där  sökvägen tas emot som argument. Utgå alltid från den egna kontexten (`$(pwd)`). Mappa sökvägen mot din valda sökväg i config-filen.
+
+1. Containern ska kunna nås via port 8080 (-p).
+
+1. Containern ska köras i bakgrunden (-d).
+
+1. Ccontainern ska ha namnet "mysite" (--name).
+
+1. Lägg till hosten via `docker run`. Den ska heta `mysite.vlinux.se`.
+
+1. Publicera uppgiften enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
