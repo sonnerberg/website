@@ -2,8 +2,10 @@
 author:
     - lew
     - nik
+    - grm
 category: itsec
 revision:
+    "2022-05-17": (C, grm) Uppdaterad för ht22, tog bort krav om publicera på studentservern.
     "2020-10-13": (B, nik) Uppdaterad för ht20, tog bort krav om specifik font.
     "2019-10-11": (A, lew, aurora) First edition.
 ...
@@ -13,7 +15,7 @@ Skriv ett referat {#referat}
 
 Uppgiften går ut på att skriva ett referat på en text, alltså att sammanfatta en längre text på ett begränsat utrymme. Texten ska, med era egna ord, sammanfatta och presentera relevant information samt de viktigaste punkterna från artikeln. Det handlar därmed både om att förstå texten och kunna förmedla den vidare till läsaren med egna ord. Texten är på engelska men skriv referatet på svenska.
 
-Referatet ska vara på max 1 A4 sida (ca 600 ord). Ert referat ska vara objektivt, det är artikelförfattarens synpunkter som ska redovisas. Tänk på att det begränsade utrymmet gör att ni måste fokusera på det väsentliga i texten, den röda tråden.
+Referatet ska vara på max 1 A4 sida (ca 500-600 ord). Ert referat ska vara objektivt, det är artikelförfattarens synpunkter som ska redovisas. Tänk på att det begränsade utrymmet gör att ni måste fokusera på det väsentliga i texten, den röda tråden.
 
 <!--more-->
 
@@ -33,8 +35,8 @@ Uppgiften kommer bedömas utifrån tre delar:
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har deltagit i föreläsningarna som tillhör kursmomentet.  
-Du har läst de angivna kapitlen i kurslitteraturen.
+* Föreläsningarna som tillhör kursmomentet.  
+* Kurslitteraturen.
 
 
 
@@ -47,11 +49,11 @@ Krav {#krav}
 
 1. Använd storlek 11 för brödtexten. Rubriker får markeras med större storlek men tänk på att ert referat ska få plats på en A4 sida.
 
-1. Referatet ska sparas som `me/kmom01/xxxx.pdf` där xxxx står för er akronym.
+<!-- 1. Referatet ska sparas som `me/kmom01/xxxx.pdf` där xxxx står för er akronym.
 
 
 
 ```bash
 # Flytta till kurskatalogen
 $ dbwebb publish kmom01
-```
+``` -->

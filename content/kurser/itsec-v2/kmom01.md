@@ -6,6 +6,7 @@ author:
     - nik
     - grm
 revision:
+    "2022-05-17": "(E, grm) Komplettering HT22."
     "2021-11-10": "(D, grm) Komplettering HT21."
     "2021-10-01": "(C, lew) Uppdaterad inför LP2 HT21."
     "2020-05-27": "(B, nik) Uppdaterad inför LP2 HT20."
@@ -31,7 +32,7 @@ I kursen tillkommer det inget nytt till labbmiljö, men studenten förväntas ha
 
 * PHP (tillsammans med Composer)
 * Node/npm
-* MySQL (eller MariaDB)
+* MySQL eller MariaDB
 
 Det går även att göra uppgifterna med hjälp utav Docker.
 
@@ -40,9 +41,7 @@ Föreläsningar  {#forelasningar}
 
 *(ca: 4 studietimmar)*
 
-Du ska medverka på föreläsningarna:
-
-* 10:00 (2021-11-01) H430, med Martin om introduktion till säkerhet del 1.
+* 10:00 (2021-10-31) H430, med Martin om introduktion till säkerhet del 1.
 
 * 10:00 (2021-11-04) H430, med Martin om introduktion till säkerhet del 2.
 
@@ -93,8 +92,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Publicera dina filer till studentservern och svara på följande frågor i textfältet på Canvas:
+På Canvas finns det ett Quiz för varje kursmoment. För att du ska kunna lämna in kursmomentet måste du ha besvarat quizen.
 
-* Vad har du för förväntningar inför kursen?
-* Kursen kommer nudda områden som etik, integritet på internet, OWASP och sårbarhetsanalyser. Tycker du det är viktigt att en webbutvecklare har en viss förståelse inom dessa områden även om hen kanske inte kommer jobba med det?
-* Vilken är din TIL för detta kmom?
+1. Gör kursmomentets quiz.
+2. Ladda upp din fil på Canvas.
