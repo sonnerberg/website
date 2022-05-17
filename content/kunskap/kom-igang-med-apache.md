@@ -8,6 +8,23 @@ revision:
 Kom igång med Apache
 =======================
 
+[FIGURE src=/image/snapht15/vhosts.png?w=c5&a=0,50,50,0 class="right" caption="En virtuell host."]
+
+När man bygger många webbplatser så vill man ha möjligheten att köra dem i en och samma installation av Apache, på en och samma server. En så kallad virtualisering av webbplatser, om begreppet passar.
+
+Apache har en konstruktion som heter Apache Virtual Hosts och en variant av den är Apache Name-based Virtual Hosts. Det är den namn-baserade varianter vi nu skall se hur man använder.
+
+
+
+Om Apache Virtual Hosts {#om}
+-------------------------------------------
+
+Apache Virtual Hosts innebär att man kan köra många webbplatser på en och samma installation av Apache. Det finns en variant som heter Apache Name-based Virtual Hosts som innebär att samma installation av Apache kan husera två (eller fler) webbplatser med helt olika domännamn.
+
+Du kan kika kort på [Apaches dokumentation av Virtual Host](http://httpd.apache.org/docs/current/vhosts/) och på den [delen som handlar om Name-based Virtual Hosts](http://httpd.apache.org/docs/current/vhosts/name-based.html).
+
+Låt oss nu sätta tänderna i detta och konfigurera upp en namnbaserad virtuell host.
+
 
 
 ### Installera Apache {#install}
@@ -56,7 +73,7 @@ ServerName 127.0.0.1
 
 Ipadressen pekar på `localhost`.
 
-När du kör `$ apachectl status` kan du felet:
+När du kör `$ apachectl status` kan du stöta på felet:
 
 ```console
 /usr/sbin/apachectl: 113: www-browser: not found
@@ -69,7 +86,7 @@ Det handlar om att det inte finns en webbläsare för terminalen installerad. De
 
 ```console
 $ apt install w3m
-# Alternativt:
+// Alternativt:
 $ apt install lynx
 ```
 
@@ -130,8 +147,8 @@ $ mkdir -p /var/www/vhosts/vlinux.dbwebb.se
 Nu är det bara att *enabla* den virtuella hosten och låta Apache ladda om configurationen.
 
 ```bash
-sudo a2ensite vlinux.dbwebb.se
-sudo apachectl restart
+$ sudo a2ensite vlinux.dbwebb.se
+$ sudo apachectl restart
 ```
 
 
@@ -159,27 +176,27 @@ Om vi nu har några filer i `/var/www/vhosts/vlinux.dbwebb.se/` kan vi förhoppn
 Om du får problem med configfilen så kan du titta i error-loggen för felutskrifter. Titta både i `/var/log/apache2` och i loggilerna för den virtuella hosten.
 
 ```bash
-sudo tail -f /var/log/apache2/error.log
-tail -f /var/www/vhosts/vlinux.dbwebb.se/error.log
+$ sudo tail -f /var/log/apache2/error.log
+$ tail -f /var/www/vhosts/vlinux.dbwebb.se/error.log
 ```
 
 Du kan också köra följande kommandon för att se status på apache och dess configfil.
 
 ```bash
 # Check status of apache
-sudo apachectl status
+$ sudo apachectl status
 
 # Check configuration file for errors
-apachectl configtest
-apachectl -t
+$ apachectl configtest
+$ apachectl -t
 
 # List virtual hosts with settings
-apachectl -S
+$ apachectl -S
 
 # Stop and start the service
-sudo apachectl start
+$ sudo apachectl start
 
-sudo apachectl stop
+$ sudo apachectl stop
 ```
 
 
@@ -245,9 +262,9 @@ Sitter du på Windows så heter filen följande. Glöm inte att du måste vara a
 C:\Windows\system32\drivers\etc\hosts
 ```
 
-Nu kan jag komma åt den lokala maskinen via namnet istället. Adressen `http://vlinux.dbwebb.se:8080` är numer samma som att skriva `http://localhost:8080` eller `http://127.0.0.1:8080`. Det är precis detta som Apache tittar på när den identifierar den namnbaserade virtuella hosten.
+Nu kan jag komma åt den lokala maskinen via namnet istället. Adressen `http://vlinux.dbwebb.se` är numer samma som att skriva `http://localhost` eller `http://127.0.0.1`. Det är precis detta som Apache tittar på när den identifierar den namnbaserade virtuella hosten.
 
-När jag nu använder `http://vlinux.dbwebb.se:8080` så kommer jag till Apache som identifierar namnet som en virtuell host och använder den DocumentRoot som är specificerad.
+När jag nu använder `http://vlinux.dbwebb.se` så kommer jag till Apache som identifierar namnet som en virtuell host och använder den DocumentRoot som är specificerad.
 
 Klart. Magiskt. Så vida det inte strular förstås. Då får man felsöka och göra om - göra rätt. Det är en hård värld vi lever i.
 

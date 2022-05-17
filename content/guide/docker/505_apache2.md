@@ -1,12 +1,13 @@
 ---
 author: lew
 revision:
+    "2022-05-11": "(B, lew) Uppdatering inför HT22."
     "2019-03-14": "(A, lew) Första versionen."
 ...
 Apache2
 =======================
 
-Vi har redan sett hur vi installerar Apache i Debian. För att få igång det i Docker gör vi i stort sett likadant, fast med hjälp av kommandot `RUN`.
+Vi har redan sett hur vi installerar Apache i Ubuntu. För att få igång det i Docker via en Dockerfile gör vi i stort sett likadant, fast med hjälp av kommandot `RUN`.
 
 
 
@@ -15,7 +16,7 @@ Vi har redan sett hur vi installerar Apache i Debian. För att få igång det i 
 Vi börjar med att kika på hur vi installerar Apache.
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
 RUN apt-get update && \
     apt-get -y install apache2
@@ -42,7 +43,7 @@ Vi har dock inga filer att visa eller tillgång till några. Vi tittar på hur v
 Som bekant servar Apache filerna från `/var/www/html/`. Om vi inte vill ändra i konfigurationsfilen kan vi enbart lägga vår kod i den mappen, förutsatt att vi har mappen `example-site` lokalt:
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
 RUN apt-get update && \
     apt-get -y install apache2
@@ -66,7 +67,7 @@ I exempelmappen finns en mall för en [konfigurationsfil](https://github.com/dbw
 Dockerfile:
 
 ```
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
 RUN apt-get update && \
     apt-get -y install apache2

@@ -4,7 +4,7 @@ revision:
     "2022-05-03": "(B, lew) Uppdatering inför ht22."
     "2019-04-12": "(A, lew) Första versionen."
 ...
-Volymer
+Hantera volymer
 =======================
 
 Istället för att kopiera datan fram och tillbaka kan vi använda volymer. En lokal mapp kan då mappas mot en virtuell mapp inuti containern.
