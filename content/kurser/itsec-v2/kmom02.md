@@ -6,6 +6,7 @@ author:
     - nik
     - grm
 revision:
+    "2022-05-17": "(E, grm) Komplettering HT22."
     "2021-11-10": "(D, grm) Komplettering HT21."
     "2021-10-01": "(C, lew) Uppdaterad inför LP2 HT21."
     "2020-10-13": "(B, nik) Uppdaterad inför HT20, me-sida borttagen."
@@ -25,17 +26,17 @@ Kursmomentet ger en introduktion till konceptet privacy genom att förklara cent
 Föreläsningar & Seminarium {#forelasningar}
 ---------------------------------
 
-*(ca: 2 studietimmar)*
+*(ca: 4 studietimmar)*
 
-Du ska medverka på föreläsningen:
+Föreläsningen:
 
-* 10:00 (2021-11-08) H430, med Martin om etik och privacy.
+* 10:00 (2021-11-07) H430, med Martin om etik och privacy.
 
 <!-- * 10:00 (2021-11-08) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633)) -->
 
-Du ska även medverka i seminariet kring privacy:
+Obligatoriskt seminarie kring privacy:
 
-* 10:00-12:00 (2021-11-12) H430
+* 10:00-12:00 (2021-11-11) H430
 
 <!-- * 10:00-12:00 (2021-11-12) via Zoom ([Kenneth, Marie](https://bth.zoom.us/j/6772303809)) -->
 
@@ -70,8 +71,13 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Publicera dina filer till studentservern och svara på följande frågor i textfältet på Canvas:
+På Canvas finns det ett Quiz för varje kursmoment. För att du ska kunna lämna in kursmomentet måste du ha besvarat quizen.
+
+1. Gör kursmomentets quiz.
+2. Ladda upp din fil på Canvas.
+
+<!-- Publicera dina filer till studentservern och svara på följande frågor i textfältet på Canvas:
 
 * Är privacy något du kommer tänka på/argumentera för när du kommer ut i arbetslivet? Varför/varför inte?
 * När du väljer tjänster eller mjukvara, är privacy något du tänker på? Varför/varför inte?
-* Vilken är din TIL för detta kmom?
+* Vilken är din TIL för detta kmom? -->
