@@ -154,7 +154,7 @@ Om vi nu har några filer i `/var/www/vhosts/vlinux.dbwebb.se/` kan vi förhoppn
 
 
 
-#### Felsök configfilen {#felsok}
+### Felsök configfilen {#felsok}
 
 Om du får problem med configfilen så kan du titta i error-loggen för felutskrifter. Titta både i `/var/log/apache2` och i loggilerna för den virtuella hosten.
 
@@ -227,7 +227,7 @@ Men nu har vi en utvecklingsmiljö med en server i Docker som kan exponera en va
 
 Vi behöver uppdatera hosts filen även på vår "riktiga" dator. På Linux finns filen på följande sökväg:
 
-```text
+```console
 $ sudo nano /etc/hosts
 ```
 
@@ -245,7 +245,7 @@ Sitter du på Windows så heter filen följande. Glöm inte att du måste vara a
 C:\Windows\system32\drivers\etc\hosts
 ```
 
-Nu kan jag komma åt den lokala maskinen via namnet istället. Adressen `http://vlinux.dbwebb.se:8080` är numer samma som att skriva `http://localhost:8080` eller `http://127.0.0.1:8080`. Det är precis detta som Apache tittar på när den identifierar den namnbaserade virtuella hosten.
+Nu kan jag komma åt den lokala maskinen via namnet istället. Låt säga att servern exponerar port 8080. Adressen `http://vlinux.dbwebb.se:8080` är numer samma som att skriva `http://localhost:8080` eller `http://127.0.0.1:8080`. Det är precis detta som Apache tittar på när den identifierar den namnbaserade virtuella hosten.
 
 När jag nu använder `http://vlinux.dbwebb.se:8080` så kommer jag till Apache som identifierar namnet som en virtuell host och använder den DocumentRoot som är specificerad.
 
