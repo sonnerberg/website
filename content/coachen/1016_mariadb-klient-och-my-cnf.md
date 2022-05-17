@@ -4,6 +4,7 @@ category:
     - databas
     - mysql
 revision:
+    "2022-05-17": "(C, mos) Fixa problem med mysqldump och my.cnf."
     "2022-01-16": "(B, mos) Uppdatera så att Cygwin blir tydlig att den använder Windowsklienten."
     "2021-12-21": "(A, mos) Flyttat till eget dokument."
 ...
@@ -53,6 +54,7 @@ password=P@ssw0rd
 #port=3306
 #protocol=tcp
 
+[mysql]
 # To allow for using LOAD DATA INFILE
 loose-local-infile = 1
 ```
