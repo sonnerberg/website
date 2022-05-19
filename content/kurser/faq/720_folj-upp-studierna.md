@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2022-05-19": "(B, mos) Lade till antagningsomgångar för 22 och 23."
     "2020-08-11": "(A, mos) Kopierad från forumet inför ht20."
 ...
 Följ upp dina studier
@@ -43,6 +44,8 @@ Här är dokumenten per antagningsomgång, man följer normalt alltid en antagni
 
 ### Webbprogrammering 120hp distans {#followup120}
 
+* [Antagen 2023](https://docs.google.com/spreadsheets/d/1IRQ0GarDvuhwAv0VFsX1cvDCr9Pky-NY6lQ91bh1S4w/edit?usp=sharing)
+* [Antagen 2022](https://docs.google.com/spreadsheets/d/1zMFVSC1VN2zzvngc0Y03VK4luoDqJsq7JOjbcenqRno/)
 * [Antagen 2021](https://docs.google.com/spreadsheets/d/1pKlRPVwqxpAyfaDdi-ERQC_jq5bxxdjEgEh1FPLC6Zo/edit?usp=sharing)
 * [Antagen 2020](https://docs.google.com/spreadsheets/d/1mIseONfKc2mM0u__o2-bOXY5zEnvcAtk5KjXPWqxLj4/edit?usp=sharing)
 * [Antagen 2019](https://docs.google.com/spreadsheets/d/1N4zZNRkPcaOH7a4Eco_kUpXymJF3s9Z6C3TFbbufajE/edit?usp=sharing)
@@ -54,6 +57,8 @@ Här är dokumenten per antagningsomgång, man följer normalt alltid en antagni
 
 ### Webbprogrammering 180hp campus {#followup180}
 
+* [Antagen 2023](https://docs.google.com/spreadsheets/d/12sUvPNI97dfuF9jzuBWHs-4uj2-U9Bq7izvzsY8VaGo/edit?usp=sharing)
+* [Antagen 2022](https://docs.google.com/spreadsheets/d/1-j2Tg90kRGwCN97wqljachAyZDsN6ct-9l6an1D2ehg/edit?usp=sharing)
 * [Antagen 2021](https://docs.google.com/spreadsheets/d/1SiiXMBWIxBRUIBW7y56qEccrVZBOxLyWwaibyScB87Y/edit?usp=sharing)
 * [Antagen 2020](https://docs.google.com/spreadsheets/d/1-j2Tg90kRGwCN97wqljachAyZDsN6ct-9l6an1D2ehg/edit?usp=sharing)
 * [Antagen 2019](https://docs.google.com/spreadsheets/d/1Q9hQuoQ2J6cfZ0JGiGUU-mDr9iHZXgIN3qG5mRcNGxo/edit?usp=sharing)
