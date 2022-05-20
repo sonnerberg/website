@@ -85,6 +85,28 @@ Efter genomförd kurs skall studenten:
 * ha god praktisk förmåga att hantera de tekniker, verktyg och miljöer som används för att designa och göra en webbplats användbar.
 
 
+
+BTH's perspektiv i utbildningen {#perspektiv}
+------------------------
+
+Blekinge Tekniska Högskola har de senaste åren utvecklat en vision som ska genomsyra hela verksamheten:
+
+> En bättre värld genom kunskap, kompetens och innovation inom digitalisering och hållbarhet.
+
+Som en del av visionen och strategin för att tillämpa vision har BTH definierat fem perspektiv på utbildning:
+
+* Samverkan​
+* Hållbarhetsarbete
+* Jämställdhetsarbete
+* Internationalisering
+* Forskningsanknytning
+
+Vi kommer i denna kurs fokusera på perspektivet hållbarhet och sedan får ni även en introduktion till perspektivet forskningsanknytning.
+
+I början av kursen introduceras vi till perspektivet hållbarhet för att i slutet av kursen ha förutsättningar för att kunna analysera hur vi som utvecklare kan arbeta hållbart.
+
+
+
 Kursmoment {#kursmoment}
 ------------------------
 
