@@ -5,7 +5,7 @@ author:
     - grm
 category: itsec
 revision:
-    "2022-05-17": (C, grm) Uppdaterad för ht22, tog bort krav om publicera på studentservern.
+    "2022-05-20": (C, grm) Uppdaterad för ht22.
     "2020-10-13": (B, nik) Uppdaterad för ht20, tog bort krav om specifik font.
     "2019-10-11": (A, lew, aurora) First edition.
 ...
@@ -37,6 +37,7 @@ Förkunskaper {#forkunskaper}
 
 * Föreläsningarna som tillhör kursmomentet.  
 * Kurslitteraturen.
+* [Läs mer om referat i Skrivguiden](https://skrivguiden.se/referenshantering/referera-med-mera/).
 
 
 
@@ -48,6 +49,11 @@ Krav {#krav}
 1. Dokumentformatet ska vara PDF, men skriv gärna i LaTeX eller Word.
 
 1. Använd storlek 11 för brödtexten. Rubriker får markeras med större storlek men tänk på att ert referat ska få plats på en A4 sida.
+
+Inlämning
+-----------------------
+
+Spara ditt referat i pdf format och lämna in på Canvas.
 
 <!-- 1. Referatet ska sparas som `me/kmom01/xxxx.pdf` där xxxx står för er akronym.
 

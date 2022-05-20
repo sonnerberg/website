@@ -6,7 +6,7 @@ author:
     - nik
     - grm
 revision:
-    "2022-05-17": "(E, grm) Komplettering HT22."
+    "2022-05-20": "(E, grm) Komplettering HT22."
     "2021-11-10": "(D, grm) Komplettering HT21."
     "2021-10-01": "(C, lew) Uppdaterad inför LP2 HT21."
     "2020-10-13": "(B, nik) Uppdaterad inför HT20, me-sida borttagen."
@@ -30,13 +30,13 @@ Föreläsningar & Seminarium {#forelasningar}
 
 Föreläsningen:
 
-* 10:00 (2021-11-07) H430, med Martin om etik och privacy.
+* 10:00 (2022-11-07) H430, med Martin om etik och privacy.
 
 <!-- * 10:00 (2021-11-08) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633)) -->
 
 Obligatoriskt seminarie kring privacy:
 
-* 10:00-12:00 (2021-11-11) H430
+* 10:00-12:00 (2022-11-11) H430
 
 <!-- * 10:00-12:00 (2021-11-12) via Zoom ([Kenneth, Marie](https://bth.zoom.us/j/6772303809)) -->
 
@@ -46,6 +46,8 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 4-6 studietimmar)*
 
+* Läs i boken [Computer Security](/kunskap/boken-computer-security)
+    * Kapitel 1-3
 * Läs vidare i boken [Beyond Fear](/kunskap/boken-beyond-fear).
 
 * Läs mer om GDPR på [EUs sida](https://gdpr.eu/) eller hos [Datainspektionen](https://www.datainspektionen.se/lagar--regler/dataskyddsforordningen/).
@@ -61,7 +63,8 @@ Uppgifter  {#uppgifter}
 
 *(ca: 6-10 studietimmar)*
 
-1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal (eller virtuellt). Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. Spara allt i me/redovisa.
+1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal (eller virtuellt). Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. 
+1. Gör Kmom02 quiz.
 
 <!-- 1. Fyll på med redovisningstexten i din me-sida. -->
 

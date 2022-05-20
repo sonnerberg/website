@@ -1,10 +1,12 @@
 ---
 author:
     - nik
+    - grm
     - programutvecklingsprojekt
 category:
     - kurs/itsec
 revision:
+    "2022-05-20": "(E, grm) Komplettering HT22."
     "2021-11-10": "(D, grm) Komplettering HT21."
     "2020-05-27": (C, nik) Uppdaterad med bland annat LaTeX mall
     "2019-11-13": (B, nik) Fler frågor, tydligare struktur på reflektion.
@@ -15,7 +17,7 @@ Vad är privat egentligen?
 
 Ni skall fundera och diskutera kring vilken information som klassas som privat samt argumentera varför just den informationen borde vara privat. Som utmaning, ställ er gärna i företagens skor och fundera på varför de *"behöver"* den informationen de frågar efter.
 
-Ni skall jobba i grupp (2-4 personer) när ni löser diskussionsuppgiften. Reflektionen är självständig.
+Ni skall jobba i grupp (2-4 personer) när ni löser diskussionsuppgiften. Reflektionen ska göras individuellt.
 
 Nice-to-have länkar {#nice-to-have}
 -----------------------
@@ -64,7 +66,7 @@ Skriv en egen reflektion där du tänker igenom över vad ni diskuterat i gruppe
 Det finns en LaTeX mall tillgänglig [här](https://www.overleaf.com/read/qfdtffsgbspf) som ni kan använda. Länken är till en read-only version, för att skapa er egna så trycker ni "Menu" och sen "Copy Project". Det går givetvis att använda valfritt program, så länge man uppfyller kraven ovan.
 
 
-Publicera {#publicera}
+<!-- Publicera {#publicera}
 -----------------------
 
 Spara din reflektion som `me/kmom02/reflektion.pdf` och kör på!
@@ -72,7 +74,13 @@ Spara din reflektion som `me/kmom02/reflektion.pdf` och kör på!
 ```bash
 # Flytta till kurskatalogen
 $ dbwebb publish kmom02
-```
+```-->
+
+Inlämning
+-----------------------
+
+Spara din reflektion i pdf format och lämna in på Canvas.
+
 
 Bedömning
 -----------------------

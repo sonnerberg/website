@@ -6,7 +6,7 @@ author:
     - nik
     - grm
 revision:
-    "2022-05-17": "(E, grm) Komplettering HT22."
+    "2022-05-20": "(E, grm) Komplettering HT22."
     "2021-11-10": "(D, grm) Komplettering HT21."
     "2021-10-01": "(C, lew) Uppdaterad inför LP2 HT21."
     "2020-05-27": "(B, nik) Uppdaterad inför LP2 HT20."
@@ -41,9 +41,9 @@ Föreläsningar  {#forelasningar}
 
 *(ca: 4 studietimmar)*
 
-* 10:00 (2021-10-31) H430, med Martin om introduktion till säkerhet del 1.
+* 10:00 (2022-10-31) H430, med Martin om introduktion till säkerhet del 1.
 
-* 10:00 (2021-11-04) H430, med Martin om introduktion till säkerhet del 2.
+* 10:00 (2022-11-04) H430, med Martin om introduktion till säkerhet del 2.
 
 <!--
 * 10:00 (2021-11-01) via Zoom ([Martin Boldt](https://bth.zoom.us/j/67269425633))
@@ -83,7 +83,8 @@ Uppgifter {#uppgifter}
 *(ca: 4-6 studietimmar)*
 
 <!-- 1. Gör uppgiften "[Skapa en me-sida till itsec-kursen](uppgift/skapa-en-me-sida-till-itsec-kursen)". -->
-1. Gör uppgiften "[Skriv ett referat](uppgift/skriv-ett-referat)".
+1. Gör uppgiften "[Skriv ett referat](uppgift/skriv-ett-referat)".   
+1. Gör Kmom01 quiz.
 
 
 
@@ -92,7 +93,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-På Canvas finns det ett Quiz för varje kursmoment. För att du ska kunna lämna in kursmomentet måste du ha besvarat quizen.
+På Canvas finns det ett Quiz för varje kursmoment. För att du ska kunna lämna in uppgiften till kursmomentet måste du ha besvarat quizen.
 
+1. Gör uppgiften.
 1. Gör kursmomentets quiz.
-2. Ladda upp din fil på Canvas.
+1. Ladda upp din fil på Canvas.
