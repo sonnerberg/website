@@ -20,6 +20,14 @@ Vi tar hjälp av allmän problemlösning i form av top-down/bottom-up, pseudokod
 <!-- more -->
 
 
+<!--
+
+Till våren 2023 jobba igenom detta kmom som stoppar upp många.
+Eventuellt ge 10/20 h ytterligare?
+
+-->
+
+
 
 Läs & Studera  {#lasanvisningar}
 ---------------------------------
@@ -61,12 +69,6 @@ Läs enligt följande.
 
     * [PHP The Right Way: Code Style Guide](https://phptherightway.com/#code_style_guide)
 
-<!--
-
-1. Objektorienterade principer, fixa en bra läsresurs.
-
-1. (njae) Läs igenom den korta artikeln "[Martin Fowler: Tell Dont Ask](https://martinfowler.com/bliki/TellDontAsk.html)" som ger en insikt i objektorienterat tänkade och hur man delvis kan tänka när man strukturerar sina objekt och var man väljer att lägga sin kod.
--->
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -127,22 +129,7 @@ Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i din redovisningstext.
 
-<!--
-* Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
--->
-
-<!--
-    * Vad är PHP FIG och finns det standarder i PHP?
-
-* Berätta och förklara MVC med en bild.
--->
-
-
 * Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.
-
-<!--
-* Berätta kort om din syn på kodstandarder och om det kan bidra till att erhålla snyggare kod.
--->
 
 * Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?
 
@@ -151,8 +138,19 @@ Se till att följande frågor besvaras i din redovisningstext.
 * Vilken är din TIL för detta kmom?
 
 
+<!--
+* Berätta kort om din syn på kodstandarder och om det kan bidra till att erhålla snyggare kod.
+
+* Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i koden/spelet, var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?
+
+* Vad är PHP FIG och finns det standarder i PHP?
+
+* Berätta och förklara MVC med en bild.
+-->
 
 <!--stop-->
+
+
 
 
 

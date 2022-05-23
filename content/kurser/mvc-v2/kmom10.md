@@ -145,7 +145,7 @@ Implementera det i din webbplats.
 ### Struktur och innehåll {#s}
 
 * En landningssida `/proj` som syns i navbaren på din report-sida.
-* En sida `/proj/about` som berättar någorlunda utförligt om ditt projekt och vad det handlar om.
+* En sida `/proj/about` som ger en kort introduktion till ditt projekt och vad det handlar om.
 * Din about-sida skall innehålla en sektion om dokumentation av ditt projekt där följande är inkluderat.
     * Länk till dokumentationen som är genererad via phpdoc.
     * Länk till rapporten från phpmetrics.

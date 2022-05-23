@@ -47,6 +47,10 @@ Kraven är uppdelade i sektioner.
 
 1. Gör så att kodtäckningsrapport för HTML genereras till katalogen `build/coverage`.
 
+<!--
+Ändra katalog till doc/coverage så man kan använda den för att kolla kodtäckning
+-->
+
 
 
 ### Bygg en test suite {#testsuite}
