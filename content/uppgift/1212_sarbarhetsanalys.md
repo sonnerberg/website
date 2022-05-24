@@ -3,6 +3,7 @@ author:
     - nik
 category: itsec
 revision:
+    "2022-05-24": (C, grm) Uppdaterad inför ht22
     "2020-12-02": (B, nik) Uppdaterad inför ht20
     "2019-10-11": (A, lew, aurora) First edition.
 ...
@@ -65,10 +66,10 @@ Starta applikationen med `docker-compose up -d`. Du kan också välja att köra 
 
 1. Döp analysen till `me/kmom04/analys.pdf`.
 
-```bash
+<!-- ```bash
 # Flytta till kurskatalogen
 $ dbwebb publish me
-```
+``` -->
 
 Tips från coachen {#tips}
 -----------------------

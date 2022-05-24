@@ -4,6 +4,7 @@ author:
     - nik
     - grm
 revision:
+    "2022-05-24": "(E, grm) Komplettering HT22."
     "2021-11-10": "(D, grm) Komplettering HT21."
     "2021-10-01": "(C, lew) Uppdaterad inför HT21"
     "2020-12-10": "(B, nik) Uppdaterad inför HT20"
@@ -26,6 +27,15 @@ Föreläsningar  {#forelasningar}
 Du ska medverka på föreläsningen:
 
 * 10.00 (2021-12-06) H430, med Anton om säkerhetstänket vid testning.
+
+
+Läs &amp; Studera  {#lasanvisningar}
+---------------------------------
+
+*(ca: 1-2 studietimmar)*
+
+* Läs i boken [Computer Security](/kunskap/boken-computer-security)
+    * Kapitel 10
 
 
 Förkunskapskrav {#forkunskapskrav}

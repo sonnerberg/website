@@ -47,7 +47,7 @@ Läs &amp; Studera  {#lasanvisningar}
 *(ca: 4-6 studietimmar)*
 
 * Läs i boken [Computer Security](/kunskap/boken-computer-security)
-    * Kapitel 1-3
+    * Kapitel 18
 * Läs vidare i boken [Beyond Fear](/kunskap/boken-beyond-fear).
 
 * Läs mer om GDPR på [EUs sida](https://gdpr.eu/) eller hos [Datainspektionen](https://www.datainspektionen.se/lagar--regler/dataskyddsforordningen/).
@@ -63,7 +63,7 @@ Uppgifter  {#uppgifter}
 
 *(ca: 6-10 studietimmar)*
 
-1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal (eller virtuellt). Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till. 
+1. Gör uppgiften "[Vad är privat egentligen?](uppgift/diskussion-vad-ar-privat-egentligen)" i sal (eller virtuellt). Ni ska i grupp diskutera frågorna och anteckna vad ni kommer fram till.
 1. Gör Kmom02 quiz.
 
 <!-- 1. Fyll på med redovisningstexten i din me-sida. -->

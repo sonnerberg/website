@@ -4,6 +4,7 @@ author:
     - nik
     - grm
 revision:
+    "2022-05-24": "(D, grm) Komplettering HT22."
     "2021-11-10": "(C, grm) Komplettering HT21."
     "2021-10-01": "(B, lew) Uppdatering för ht21"
     "2020-11-02": "(A, nik) Uppdatering för ht20"
@@ -26,6 +27,14 @@ Kör en `dbwebb update` så att allt är på plats.
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
+Föreläsningar  {#forelasningar}
+---------------------------------
+
+*(ca: 2 studietimmar)*
+
+* 10:00 (2022-11-28) H430, med Anton om sårbarhetsanalys.
+
+
 Labbmiljö  {#labbmiljo}
 ---------------------------------
 
@@ -41,8 +50,6 @@ Laboration  {#laboration}
 
 *(ca: 2 studietimmar)*
 
-Du ska medverka på laborationen:
-
 * 10.00 (2021-12-03) H430 Sårbarhetsanalys, se uppgiften nedan
 
 <!-- * 10.00 (2021-12-03) via Zoom (länk på Canvas) -->
@@ -53,6 +60,8 @@ Läs &amp; Studera  {#lasanvisningar}
 
 *(ca: 8-10 studietimmar)*
 
+* Läs i boken [Computer Security](/kunskap/boken-computer-security)
+    * Kapitel 9
 * Läs artikeln om riskanalys, [Texten hittar du här](/kursmaterial/itsec/doc/riskanalys.pdf).
 * Material kring Penetration Studies finns tillgängligt på Canvas [här](https://bth.instructure.com/courses/3047/files/364211)
 
@@ -74,6 +83,12 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 Publicera dina filer till studentservern och svara på följande frågor i textfältet på Canvas:
 
-* Har du hört talas om begreppet sårbarhetsanalys tidigare?
+<!-- * Har du hört talas om begreppet sårbarhetsanalys tidigare?
 * Kan du se nyttan av att ha grundläggande koll på hur en sårbarhetsanalys fungerar?
-* Vilken är din TIL för detta kmom?
+* Vilken är din TIL för detta kmom? -->
+
+På Canvas finns det ett Quiz för varje kursmoment. För att du ska kunna lämna in uppgiften till kursmomentet måste du ha besvarat quizen.
+
+1. Gör uppgiften.
+1. Gör kursmomentets quiz.
+1. Ladda upp din fil, analys.pdf, på Canvas.
