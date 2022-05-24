@@ -65,7 +65,14 @@ Kraven är uppdelade i sektioner.
 
 1. Använd GET och POST. Kom ihåg att alltid använda POST när du gör en uppdatering i databasen.
 
-<!-- Inkludera möjlighet att återställa databasen till ursprungsläget -->
+<!--
+
+* Inkludera möjlighet att återställa databasen till ursprungsläget
+
+* Förtydliga att man skall kunna länka till alla delar flexibelt och ingen del skall vara hårdkodad.
+
+-->
+
 
 
 
