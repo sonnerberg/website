@@ -1,6 +1,7 @@
 ---
 author:
     - nik
+    - grm
 category: itsec
 revision:
     "2022-05-24": (C, grm) Uppdaterad inför ht22
@@ -22,7 +23,7 @@ Förkunskaper {#forkunskaper}
 
 Du har deltagit i föreläsningarna som tillhör kursmomentet.
 
-Du har deltagit i föreläsningarna om OWASP och föreläsningen "Fantastiska sårbarheter och var man hittar dem".
+Du har deltagit i föreläsningarna om Hot och Attacker i förra kursmomentet samt gjort övat på attacker på OWASP Juice shop.
 
 Analys {#analys}
 -----------------------
@@ -37,7 +38,7 @@ Det finns en LaTeX mall tillgänglig [här](https://www.overleaf.com/read/jmbktj
 1. Innehållsförteckning.
 1. Sammanfattning av innehållet i analysen.
 1. Målet med analysen.
-1. En beskrivning av systemet och dess funktionalitet/flöde (kan uppfyllas i nästkommande del).
+1. En beskrivning av systemet och dess funktionalitet/flöde (mycket kort, ska utökas nästa vecka när du tittar på koden).
 1. En metodbeskrivning av hur ni gått tillväga för att identifiera sårbarheter.
 1. En lista med de sårbarheter ni identifierat
     * Risk/sårbarhet (namn)
@@ -62,7 +63,7 @@ Starta applikationen med `docker-compose up -d`. Du kan också välja att köra 
 
 ### Lämna in
 
-1. Analysera applikationen efter sårbarheter enligt de metoder som nämndes under föreläsningen ([se här](https://bth.instructure.com/courses/3047/files/402543)).
+1. Analysera applikationen efter sårbarheter enligt de metoder som nämndes under föreläsningen ([se här](https://bth.instructure.com/courses/3047/files/402543)). Du bör hitta minst 3 sårbarheter med väldigt god förståelse eller 5–6 med god förståelse.
 
 1. Döp analysen till `me/kmom04/analys.pdf`.
 
