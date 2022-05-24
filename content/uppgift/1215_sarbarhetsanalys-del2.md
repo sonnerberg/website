@@ -1,16 +1,18 @@
 ---
 author:
     - lew
-    - nik
+    - duk
+    - grm
 category: itsec
 revision:
+    "2022-05-24": (B, grm) Uppdaterad inför HT22.
     "2019-12-06": (A, lew, aurora) First edition.
 ...
 
 Sårbarhetsanalys - Del 2 {#analys}
 ========================================
 
-Uppgiften går ut på att ni ska, utifrån eran tidigare sårbarhetsanalys och dess prioritering, välja ut sårbarheter och åtgärda dem i den mån av tid som finns för kursmomentet.
+Uppgiften går ut på att du ska, utifrån eran tidigare sårbarhetsanalys och dess prioritering, välja ut sårbarheter och åtgärda dem i den mån av tid som finns för kursmomentet.
 
 <!--more-->
 
@@ -23,9 +25,9 @@ Installation {#installation}
 ---------------------------------
 
 [INFO]
-**Innan ni börjar**
+**Innan du börjar**
 
-Tänk på att återställa er databas om ni tagit sönder den i kmom04 (gäller enbart om ni kör applikationen utanför Docker)
+Tänk på att återställa din databas om du tagit sönder den i kmom04 (gäller enbart om du kör applikationen utanför Docker)
 [/INFO]
 
 ```bash
@@ -33,28 +35,38 @@ Tänk på att återställa er databas om ni tagit sönder den i kmom04 (gäller 
 $ rsync -ravd example/bank-app me/kmom05/
 ```
 
-*Det går bra att ta bort applikationen från er kmom04 mapp, så slipper ni att den tar plats på studentservern*
+*Det går bra att ta bort applikationen från din kmom04 mapp, så slipper du att den tar plats på studentservern*
 
 Uppgifter {#uppgifter}
 ---------------------------------
 
-Utifrån er rapport, välj ut en sårbarhet och lös följande delar. Återupprepa tills ni antingen har löst de sårbarheter ni noterat eller tills tiden för kursmomentet tar slut.
+Utifrån din rapport, välj ut en sårbarhet och lös följande delar. Återupprepa tills du antingen har löst de sårbarheter du noterat eller tills tiden för kursmomentet tar slut.
+
+### Systemets funktionalitet {#funktionalitet}
+
+Genom att titta igenom koden tar du reda på funktionaliteten/flödet i systemet, Bankappen, och fyller i kapitel 3 i rapporten. Gör gärna ett flödesschema eller någon annan bild som beskriver funktionaliteten/flödet. Fortsätt att jobba med din analysfil från kmom04.
+
 
 ### Skriv testfall {#testfall}
 
-Skriv godtyckligt antal testfall (3+) per sårbarhet som demonstrerar hur man kan utnyttja sårbarheten och hur beteendet borde vara när det det fungerar som det ska. Dessa testfall ska vara gröna när ni åtgärdat sårbarheten.
+Skriv godtyckligt antal testfall (3+) per sårbarhet som demonstrerar hur man kan utnyttja sårbarheten och hur beteendet borde vara när det det fungerar som det ska. Först ska testfallen gå fel, visa rött, och det redovisar du med en skärmdump eller liknande i Appendix. Dessa testfall ska vara gröna när du sedan har åtgärdat sårbarheten. Redovisa även testfallen när de går rätt med en skärmdump eller liknande i Appendix. Minimum 9–10 testfall totalt.
 
-Testerna ska gå att köras via `npm test`.
+Testerna ska gå att köras via `npm test`. Om testerna körs på ett annat sätt så dokumenterar du det så att det enkel går att köra dina tester.
+
+### Uppdatera rapport med testmetod {#uppdatera_metod}
+
+I kapitlet Metod lägger du ett stycke eller ett underkapitel där du beskriver din testmetod, vilken eller vilka testtekniker du använt. Berätta vilka testfall du gjorde och varför.
 
 ### Åtgärda sårbarheterna {#atgarda}
 
-Börja åtgärda sårbarheten och se till att era tester blir gröna. Om ni märker av att det behövs fler tester så skriver ni dit fler testfall.
+Börja åtgärda sårbarheten och se till att dina tester blir gröna. Om du märker av att det behövs fler tester så skriver du dit fler testfall. Glöm inte att dokumentera åtgärderna under tiden du åtgärdar sårbarheterna, för då blir det enklare att fylla i rapporten.
 
 Se till att era tester blir gröna med `npm test`.
 
-### Uppdatera rapport {#uppdatera}
+### Uppdatera rapport med åtgärder {#uppdatera_atgarder}
 
-Lägg till ett nytt kapitel i er rapport ifrån kmom04 där ni noterar vilka ändringar ni gör och i vilka filer. Skapa en ny tabell som noterar vilka sårbarheter ni åtgärdat, vad er ursprungliga estimation var och hur lång tid det faktiskt tog att åtgärda.
+Lägg till ett nytt kapitel i din rapport ifrån kmom04 där du noterar vilka ändringar du gör och i vilka filer. Inled med ett kort stycke där du berättar hur många sårbarheter du åtgärdade. Var det någon sårbarhet som var svår att lösa antingen att testa eller åtgärda? Skriv en kommentar om det.   
+Skapa en ny tabell som noterar vilka sårbarheter du åtgärdat, vad din ursprungliga estimation var och hur lång tid det faktiskt tog att åtgärda. Kommentera dina estimat. 
 
 Publicera {#Publicera}
 ---------------------------------

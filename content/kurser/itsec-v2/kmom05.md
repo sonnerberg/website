@@ -80,10 +80,17 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Svara på följande frågor i textfältet på Canvas.
+På Canvas finns det ett Quiz för varje kursmoment. För att du ska kunna lämna in uppgiften till kursmomentet måste du ha besvarat quizen.
+
+1. Gör uppgiften.
+1. Gör kursmomentets quiz.
+1. Ladda upp din fil, analys.pdf, på Canvas.
+1. Publicera på studentservern, så att dina åtgärder kan ses och testerna köras.
+
+<!-- Svara på följande frågor i textfältet på Canvas.
 
 * Vilka tekniker använde du för testning?
 * Vilka testfall gjorde du? Och varför?
 * Hur många av era sårbarheter åtgärdade ni?
 * Var det svårt att lösa någon av sårbarheterna? Kanske valde ni att skippa någon pga tidsbrist?
-* Stämde de estimeringar ni gjorde överens med den slutgiltiga tiden?
+* Stämde de estimeringar ni gjorde överens med den slutgiltiga tiden? -->
