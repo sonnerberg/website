@@ -1,9 +1,11 @@
 ---
 author:
     - nik
+    - grm
 category: itsec
 revision:
-    "2019-11-24": (B, aurora) Improved structure, reworked assignments
+    "2022-05-25": (C, grm) Removed OAuth2.
+    "2019-11-24": (B, aurora) Improved structure, reworked assignments.
     "2019-11-22": (A, aurora) Initial release.
 ...
 
@@ -26,7 +28,7 @@ Börja med att kopiera in mappen med applikationen till er me-katalog:
 
 ```bash
 # Flytta till kurskatalogen
-$ rsync -ravd example/kmom04-app/ me/kmom04/app/
+$ rsync -ravd example/password-app/ me/kmom03/password-app/
 ```
 
 #### Docker
@@ -60,7 +62,7 @@ I er redovisningstext, skriv vilka "krav" på lösenordet ni väljer att sätta.
 Utöver ovanstående krav gäller följande:
 
 * Konfigurera så att det inte går att chansa på lösenord hur många gånger som helst (timeout etc)
-* Applikationen ska fungera i Docker
+<!--* Applikationen ska fungera i Docker
 
 OAuth2 via GitHub (Optionellt) {#oauth}
 -----------------------------
@@ -84,7 +86,7 @@ $ rsync -ravd me/kmom04/app/ me/kmom04/oauth/
     * Användare inloggade via GitHub
 * Applikationen ska fungera i Docker
 
-<!--
+
 
 John the Ripper {#john}
 -----------------------------
@@ -97,9 +99,9 @@ Fråga Kenneth
 Redovisa {#redovisa}
 -----------------------
 
-Publicera dina uppgifter:
+Skriv ihop hur du gjorde, vilka lösenordsregler du använde och hur du löste dem i koden. Gärna med kodexempel. Spara i en pdf och redovisa på Canvas. Om du vill ha feedback på din kod, så publicerar din kod:
 
 ```bash
 # Flytta till kurskatalogen
-$ dbwebb publish me
+$ dbwebb publish kmom03
 ```

@@ -5,6 +5,7 @@ author:
     - nik
     - grm
 revision:
+    "2022-05-25": "(F, grm) Komplettering HT22."
     "2021-11-10": "(G, grm) Komplettering HT21."
     "2021-10-01": "(F, lew Uppdatering inför HT21."
     "2020-11-25": "(E, mos) Förtydliga om redovisningen."
@@ -33,17 +34,15 @@ Låt oss i detta kmom kika in i olika typer av attacker som vi kan förvänta os
 
 
 
-Föreläsningar &amp; Seminarier {#forelasningar}
+Föreläsningar &amp; Laborationer {#forelasningar}
 ---------------------------------
 
 *(ca: 8-10 studietimmar)*
 
-Du ska medverka på föreläsningarna:
+Kursvecka 3 (Fokus på teori):
 
-Kursvecka 3:
-
-* 14:00 (2021-11-15) H430, med Victor om hot.
-* 10:00 (2021-11-19) H430, med Victor om attacker.
+* 14:00 (2021-11-14) H430, med Victor om hot.
+* 10:00 (2021-11-18) H430, med Victor om attacker.
 
 <!--
 Hur hantera attaker när de är ett faktum?
@@ -55,15 +54,10 @@ Snabb på att rätta felen?
 klick, ransomware, social attacks
 -->
 
-Kursvecka 4:
+Kursvecka 4 (Fokus på praktik/attacker):
 
-* 10:00 (2021-11-26) H430, med Anton om Sårbarhetsanalys
-
-Frivilligt att delta:
-
-Kursvecka 4:
-
-* 10:00 (2021-11-22) H430. Frågor, eget arbete
+* 10:00 (2021-11-21) H430, med Marie laboration, attacker
+* 10:00 (2021-11-25) H430, med Marie. Frågor, eget arbete
 
 
 Läs &amp; Studera  {#lasanvisningar}
@@ -75,6 +69,9 @@ Läs &amp; Studera  {#lasanvisningar}
 ### Artiklar och studiematerial {#las}
 
 Läs och studera följande.
+
+* Läs i boken [Computer Security](/kunskap/boken-computer-security)
+    * Kapitel 4-5
 
 * Läs artikeln "[Grundregel 1A i Cross Site Scripting (XSS) - Lita inte på någon](https://dbwebb.se/blogg/grundregel-1a-i-cross-site-scripting-xss-lita-inte-pa-nagon)" som ett enklare exempel på hur saker kan hända när man litar på någon.
 
@@ -145,7 +142,7 @@ https://github.com/dbwebb-se/itsec
 Det finns en hel del skrivuppgifter i kursen, tycker inte att det är ett problem med fler. Jag ger mall i Overleaf, https://dbwebb.se/uppgift/diskussion-vad-ar-privat-egentligen#reflektion (https://www.overleaf.com/project/5ece574fac1a6400011cbaf2) för kmom02. Så känns rimligt att fortsätta vara snäll där
 -->
 
-Det finns två uppgifter, en skrivuppgift och en "titta på en film"-uppgift.
+Det finns tre uppgifter, en skrivuppgift, en "lär dig attacker"-uppgift och en "titta på en film"-uppgift.
 
 1) Skrivuppgift är inom området attacker. Ni kan jobba i grupper om 2 och 2, eller individuellt. Rapportmall finns att tillgå för LaTeX/Overleaf i kursrepot under [`example/report-template-latex`](https://github.com/dbwebb-se/itsec/tree/master/example/report-template-latex). Det är inte ett krav att skriva i det formatet, men en bra övning. Kanske vill du skriva exjobbet i LaTeX?
 
@@ -155,10 +152,18 @@ Upplägget är enligt följande:
 
 Skriv en rapport på två till fyra sidor text, exklusive försättssida och exklusive referenssida. Det går bra att avgränsa och bara svara på delar av ledningens fråga. Tid och utrymme i rapporten är begränsat så det är okey att utelämna vissa delar. Men se till att rapporten hänger ihop som en helhet och innehåller minst 5 relevanta referenser. Vill ni dyka ned i en specifik fråga så går det bra, vill ni täcka flera frågor mer översiktligt så går det också bra.
 
-2) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?" Du skriver svaret på Canvas i samband med din inlämning. Välj att titta på filmen individuellt, eller tillsammans med din gruppkompis för rapporten.
+2) Lär dig göra attacker med hjälp av "[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)". Ladda ner, installera och kör lokalt. Välj gärna "From Sources". Gör alla "hacking tutorials" och ta en skärmdump på din scoreboard när du har gjort alla 12 utmaningarna.
+
+3) Film-uppgiften är inom ämnet "hur tänker en hacker/cracker/attacker"? I spellistan "[Internet - kultur och historia](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-NLQecGIdq3LnATTn0gKal)" finns ett antal filmer/dokumentärer som berör olika händelser inom Internet. Välj en av dessa filmer, eller en som du själv anser liknande, titta på filmen och försök sedan svara på frågan "Vad driver en hacker och hur tänker en hacker?" Du skriver svaret på Canvas i samband med din inlämning. Välj att titta på filmen individuellt, eller tillsammans med din gruppkompis för rapporten.
 
 <!-- mer videor till denna spellistan? -->
 
+Extrauppgifter  {#extra}
+-------------------------------------------
+
+1) Fortsätt gör utmaningar in Juice shop. Redovisa dina framgångar med en ny skärmdump.
+
+2) Träna på lösenordshantering genom att förbättra lösenordshanteringen i appen [Super Secure User Storage](/uppgift/losenordshantering). Redovisa dina framgångar genom att berätta om dem i en fil.
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -166,7 +171,15 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Gör en gruppinlämning på Canvas, om ni jobbade i grupp och ladda upp rapporten som pdf, senast fredagen veckan efter att kmomet är avslutat. Svara på följande frågor i textfältet på Canvas (ge ett svar som grupp, såg ni olika filmer så ger ni två svar på den delen):
+På Canvas finns det ett Quiz för varje kursmoment. För att du ska kunna lämna in uppgiften till kursmomentet måste du ha besvarat quizen.
+
+1. Gör uppgifterna.
+1. Gör kursmomentets quiz. Här redovisar du Hackeruppgiften.
+1. Ladda upp din fil, report.pdf, på Canvas Kmom03 Rapport.
+1. Resultatet (skärmdump) från utmaningarna i Juice shop laddar du upp på Canvas Kmom03.
+1. Resultatet (filerna) från extra uppgifterna laddar du upp på Canvas Kmom03. (OBS valfritt)
+
+<!-- Gör en gruppinlämning på Canvas, om ni jobbade i grupp och ladda upp rapporten som pdf, senast fredagen veckan efter att kmomet är avslutat. Svara på följande frågor i textfältet på Canvas (ge ett svar som grupp, såg ni olika filmer så ger ni två svar på den delen):
 
 * Berätta vilken film du såg, lämna en länk till filmen om den finns på nätet och inte är med i spellistan ovan. Svara på "Vad driver en hacker och hur tänker en hacker?" och koppla till vad filmen berättade för dig. Skriv kortfattat om max 15 rader.
-* Summera, vilken är din/er TIL för detta kmom?
+* Summera, vilken är din/er TIL för detta kmom? -->
